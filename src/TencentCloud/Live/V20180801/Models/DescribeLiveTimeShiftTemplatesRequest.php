@@ -14,32 +14,20 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Gme\V20180711\Models;
+namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Result of voice moderation
+ * DescribeLiveTimeShiftTemplates request structure.
  *
- * @method string getDataId() Obtain Data ID
- * @method void setDataId(string $DataId) Set Data ID
- * @method string getTaskId() Obtain Task ID
- * @method void setTaskId(string $TaskId) Set Task ID
+
  */
-class ScanVoiceResult extends AbstractModel
+class DescribeLiveTimeShiftTemplatesRequest extends AbstractModel
 {
-    /**
-     * @var string Data ID
-     */
-    public $DataId;
+
 
     /**
-     * @var string Task ID
-     */
-    public $TaskId;
 
-    /**
-     * @param string $DataId Data ID
-     * @param string $TaskId Task ID
      */
     function __construct()
     {
@@ -54,12 +42,6 @@ class ScanVoiceResult extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DataId",$param) and $param["DataId"] !== null) {
-            $this->DataId = $param["DataId"];
-        }
 
-        if (array_key_exists("TaskId",$param) and $param["TaskId"] !== null) {
-            $this->TaskId = $param["TaskId"];
-        }
     }
 }

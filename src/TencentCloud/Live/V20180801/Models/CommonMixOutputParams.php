@@ -32,10 +32,10 @@ If this parameter is left empty, 0 will be used by default.
 If the output stream is a stream in the input stream list, enter 0.
 If you want the stream mix result to be a new stream, enter 1.
 If this value is 1, `output_stream_id` cannot appear in `input_stram_list`, and there cannot be a stream with the same ID on the LVB backend.
- * @method integer getOutputStreamBitRate() Obtain Output stream bitrate. Value range: [1,50000].
-If this parameter is left empty, the system will automatically determine.
- * @method void setOutputStreamBitRate(integer $OutputStreamBitRate) Set Output stream bitrate. Value range: [1,50000].
-If this parameter is left empty, the system will automatically determine.
+ * @method integer getOutputStreamBitRate() Obtain The output bitrate. Value range: 1-10000.
+If you do not specify this, the system will select a bitrate automatically.
+ * @method void setOutputStreamBitRate(integer $OutputStreamBitRate) Set The output bitrate. Value range: 1-10000.
+If you do not specify this, the system will select a bitrate automatically.
  * @method integer getOutputStreamGop() Obtain Output stream GOP size. Value range: [1,10].
 If this parameter is left empty, the system will automatically determine.
  * @method void setOutputStreamGop(integer $OutputStreamGop) Set Output stream GOP size. Value range: [1,10].
@@ -76,8 +76,8 @@ If this value is 1, `output_stream_id` cannot appear in `input_stram_list`, and 
     public $OutputStreamType;
 
     /**
-     * @var integer Output stream bitrate. Value range: [1,50000].
-If this parameter is left empty, the system will automatically determine.
+     * @var integer The output bitrate. Value range: 1-10000.
+If you do not specify this, the system will select a bitrate automatically.
      */
     public $OutputStreamBitRate;
 
@@ -123,8 +123,8 @@ If this parameter is left empty, 0 will be used by default.
 If the output stream is a stream in the input stream list, enter 0.
 If you want the stream mix result to be a new stream, enter 1.
 If this value is 1, `output_stream_id` cannot appear in `input_stram_list`, and there cannot be a stream with the same ID on the LVB backend.
-     * @param integer $OutputStreamBitRate Output stream bitrate. Value range: [1,50000].
-If this parameter is left empty, the system will automatically determine.
+     * @param integer $OutputStreamBitRate The output bitrate. Value range: 1-10000.
+If you do not specify this, the system will select a bitrate automatically.
      * @param integer $OutputStreamGop Output stream GOP size. Value range: [1,10].
 If this parameter is left empty, the system will automatically determine.
      * @param integer $OutputStreamFrameRate Output stream frame rate. Value range: [1,60].

@@ -14,26 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Gme\V20180711\Models;
+namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * ScanVoice response structure.
+ * DescribeLiveTimeShiftRules response structure.
  *
- * @method array getData() Obtain Voice moderation result. <li>`DataId`: Corresponding `DataId` in request.</li>
-<li>`TaskID`: Moderation task ID, which is used to poll the voice detection result.</li>
- * @method void setData(array $Data) Set Voice moderation result. <li>`DataId`: Corresponding `DataId` in request.</li>
-<li>`TaskID`: Moderation task ID, which is used to poll the voice detection result.</li>
+ * @method array getRules() Obtain The information of the rules.
+ * @method void setRules(array $Rules) Set The information of the rules.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
-class ScanVoiceResponse extends AbstractModel
+class DescribeLiveTimeShiftRulesResponse extends AbstractModel
 {
     /**
-     * @var array Voice moderation result. <li>`DataId`: Corresponding `DataId` in request.</li>
-<li>`TaskID`: Moderation task ID, which is used to poll the voice detection result.</li>
+     * @var array The information of the rules.
      */
-    public $Data;
+    public $Rules;
 
     /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -41,8 +38,7 @@ class ScanVoiceResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $Data Voice moderation result. <li>`DataId`: Corresponding `DataId` in request.</li>
-<li>`TaskID`: Moderation task ID, which is used to poll the voice detection result.</li>
+     * @param array $Rules The information of the rules.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -58,12 +54,12 @@ class ScanVoiceResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Data",$param) and $param["Data"] !== null) {
-            $this->Data = [];
-            foreach ($param["Data"] as $key => $value){
-                $obj = new ScanVoiceResult();
+        if (array_key_exists("Rules",$param) and $param["Rules"] !== null) {
+            $this->Rules = [];
+            foreach ($param["Rules"] as $key => $value){
+                $obj = new RuleInfo();
                 $obj->deserialize($value);
-                array_push($this->Data, $obj);
+                array_push($this->Rules, $obj);
             }
         }
 

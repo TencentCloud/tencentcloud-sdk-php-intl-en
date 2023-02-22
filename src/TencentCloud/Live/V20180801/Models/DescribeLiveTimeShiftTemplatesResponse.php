@@ -14,26 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Gme\V20180711\Models;
+namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeScanResultList response structure.
+ * DescribeLiveTimeShiftTemplates response structure.
  *
- * @method array getData() Obtain Result of the voice detection task to be queried
-Note: This field may return `null`, indicating that no valid values can be obtained.
- * @method void setData(array $Data) Set Result of the voice detection task to be queried
-Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method array getTemplates() Obtain The information of the templates.
+ * @method void setTemplates(array $Templates) Set The information of the templates.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
-class DescribeScanResultListResponse extends AbstractModel
+class DescribeLiveTimeShiftTemplatesResponse extends AbstractModel
 {
     /**
-     * @var array Result of the voice detection task to be queried
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @var array The information of the templates.
      */
-    public $Data;
+    public $Templates;
 
     /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -41,8 +38,7 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     public $RequestId;
 
     /**
-     * @param array $Data Result of the voice detection task to be queried
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param array $Templates The information of the templates.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -58,12 +54,12 @@ Note: This field may return `null`, indicating that no valid values can be obtai
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Data",$param) and $param["Data"] !== null) {
-            $this->Data = [];
-            foreach ($param["Data"] as $key => $value){
-                $obj = new DescribeScanResult();
+        if (array_key_exists("Templates",$param) and $param["Templates"] !== null) {
+            $this->Templates = [];
+            foreach ($param["Templates"] as $key => $value){
+                $obj = new TimeShiftTemplate();
                 $obj->deserialize($value);
-                array_push($this->Data, $obj);
+                array_push($this->Templates, $obj);
             }
         }
 
