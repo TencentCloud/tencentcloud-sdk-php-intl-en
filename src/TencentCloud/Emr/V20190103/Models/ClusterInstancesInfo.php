@@ -238,6 +238,10 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
  * @method void setIsMultiZoneCluster(boolean $IsMultiZoneCluster) Set Multi-AZ cluster
 Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method boolean getIsCvmReplace() Obtain Whether the feature of automatic abnormal node replacement is enabled.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setIsCvmReplace(boolean $IsCvmReplace) Set Whether the feature of automatic abnormal node replacement is enabled.
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class ClusterInstancesInfo extends AbstractModel
 {
@@ -515,6 +519,12 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     public $IsMultiZoneCluster;
 
     /**
+     * @var boolean Whether the feature of automatic abnormal node replacement is enabled.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $IsCvmReplace;
+
+    /**
      * @param integer $Id ID
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $ClusterId Cluster ID
@@ -624,6 +634,8 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
      * @param boolean $IsMultiZoneCluster Multi-AZ cluster
 Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param boolean $IsCvmReplace Whether the feature of automatic abnormal node replacement is enabled.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -816,6 +828,10 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 
         if (array_key_exists("IsMultiZoneCluster",$param) and $param["IsMultiZoneCluster"] !== null) {
             $this->IsMultiZoneCluster = $param["IsMultiZoneCluster"];
+        }
+
+        if (array_key_exists("IsCvmReplace",$param) and $param["IsCvmReplace"] !== null) {
+            $this->IsCvmReplace = $param["IsCvmReplace"];
         }
     }
 }

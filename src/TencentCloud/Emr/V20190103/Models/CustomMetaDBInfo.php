@@ -27,12 +27,12 @@ use TencentCloud\Common\AbstractModel;
  * @method string getMetaDataPass() Obtain The custom metadatabase instance password.
  * @method void setMetaDataPass(string $MetaDataPass) Set The custom metadatabase instance password.
  * @method string getMetaType() Obtain The Hive-shared metadatabase type. Valid values:
-<li>`EMR_NEW_META`: The cluster creates a metadatabase by default.</li>
-<li>`EMR_EXIST_META`: The cluster uses a specified EMR-MetaDB instance.</li>
+<li>`EMR_DEFAULT_META`: The cluster creates one by default.</li>
+<li>`EMR_EXIST_META`: The cluster uses the specified EMR metadatabase instance.</li>
 <li>`USER_CUSTOM_META`: The cluster uses a custom metadatabase instance.</li>
  * @method void setMetaType(string $MetaType) Set The Hive-shared metadatabase type. Valid values:
-<li>`EMR_NEW_META`: The cluster creates a metadatabase by default.</li>
-<li>`EMR_EXIST_META`: The cluster uses a specified EMR-MetaDB instance.</li>
+<li>`EMR_DEFAULT_META`: The cluster creates one by default.</li>
+<li>`EMR_EXIST_META`: The cluster uses the specified EMR metadatabase instance.</li>
 <li>`USER_CUSTOM_META`: The cluster uses a custom metadatabase instance.</li>
  * @method string getUnifyMetaInstanceId() Obtain The EMR-MetaDB instance.
  * @method void setUnifyMetaInstanceId(string $UnifyMetaInstanceId) Set The EMR-MetaDB instance.
@@ -56,8 +56,8 @@ class CustomMetaDBInfo extends AbstractModel
 
     /**
      * @var string The Hive-shared metadatabase type. Valid values:
-<li>`EMR_NEW_META`: The cluster creates a metadatabase by default.</li>
-<li>`EMR_EXIST_META`: The cluster uses a specified EMR-MetaDB instance.</li>
+<li>`EMR_DEFAULT_META`: The cluster creates one by default.</li>
+<li>`EMR_EXIST_META`: The cluster uses the specified EMR metadatabase instance.</li>
 <li>`USER_CUSTOM_META`: The cluster uses a custom metadatabase instance.</li>
      */
     public $MetaType;
@@ -72,8 +72,8 @@ class CustomMetaDBInfo extends AbstractModel
      * @param string $MetaDataUser The custom metadatabase instance username.
      * @param string $MetaDataPass The custom metadatabase instance password.
      * @param string $MetaType The Hive-shared metadatabase type. Valid values:
-<li>`EMR_NEW_META`: The cluster creates a metadatabase by default.</li>
-<li>`EMR_EXIST_META`: The cluster uses a specified EMR-MetaDB instance.</li>
+<li>`EMR_DEFAULT_META`: The cluster creates one by default.</li>
+<li>`EMR_EXIST_META`: The cluster uses the specified EMR metadatabase instance.</li>
 <li>`USER_CUSTOM_META`: The cluster uses a custom metadatabase instance.</li>
      * @param string $UnifyMetaInstanceId The EMR-MetaDB instance.
      */

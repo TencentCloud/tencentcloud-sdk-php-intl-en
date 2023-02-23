@@ -27,7 +27,12 @@ use TencentCloud\Gme\V20180711\Models as Models;
  * @method Models\DeleteRoomMemberResponse DeleteRoomMember(Models\DeleteRoomMemberRequest $req) This API is used to delete a room or remove members from the room.
  * @method Models\DescribeAppStatisticsResponse DescribeAppStatistics(Models\DescribeAppStatisticsRequest $req) This API is used to query the usage statistics of a GME application, including those of Voice Chat, Voice Message Service, Voice Analysis, etc. The maximum query period is the past 30 days.
  * @method Models\DescribeApplicationDataResponse DescribeApplicationData(Models\DescribeApplicationDataRequest $req) This API is used to query data details for up to the past 90 days.
+ * @method Models\DescribeRecordInfoResponse DescribeRecordInfo(Models\DescribeRecordInfoRequest $req) This API is used to query a recording task.
+ * @method Models\DescribeTaskInfoResponse DescribeTaskInfo(Models\DescribeTaskInfoRequest $req) This API is used to query the recording task in a room.
  * @method Models\ModifyAppStatusResponse ModifyAppStatus(Models\ModifyAppStatusRequest $req) This API is used to change the status of an application.
+ * @method Models\ModifyRecordInfoResponse ModifyRecordInfo(Models\ModifyRecordInfoRequest $req) This API is used to modify recording configurations.
+ * @method Models\StartRecordResponse StartRecord(Models\StartRecordRequest $req) This API is used to start recording.
+ * @method Models\StopRecordResponse StopRecord(Models\StopRecordRequest $req) This API is used to stop recording.
  */
 
 class GmeClient extends AbstractClient
