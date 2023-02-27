@@ -18,20 +18,28 @@ namespace TencentCloud\Monitor\V20180724\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeGrafanaEnvironments request structure.
+ * DescribePrometheusGlobalConfig request structure.
  *
- * @method string getInstanceId() Obtain ID of a TencentCloud Managed Service for Grafana instance, such as “grafana-abcdefgh”.
- * @method void setInstanceId(string $InstanceId) Set ID of a TencentCloud Managed Service for Grafana instance, such as “grafana-abcdefgh”.
+ * @method string getInstanceId() Obtain Instance-level scrape configuration
+ * @method void setInstanceId(string $InstanceId) Set Instance-level scrape configuration
+ * @method boolean getDisableStatistics() Obtain Whether to disable statistics
+ * @method void setDisableStatistics(boolean $DisableStatistics) Set Whether to disable statistics
  */
-class DescribeGrafanaEnvironmentsRequest extends AbstractModel
+class DescribePrometheusGlobalConfigRequest extends AbstractModel
 {
     /**
-     * @var string ID of a TencentCloud Managed Service for Grafana instance, such as “grafana-abcdefgh”.
+     * @var string Instance-level scrape configuration
      */
     public $InstanceId;
 
     /**
-     * @param string $InstanceId ID of a TencentCloud Managed Service for Grafana instance, such as “grafana-abcdefgh”.
+     * @var boolean Whether to disable statistics
+     */
+    public $DisableStatistics;
+
+    /**
+     * @param string $InstanceId Instance-level scrape configuration
+     * @param boolean $DisableStatistics Whether to disable statistics
      */
     function __construct()
     {
@@ -48,6 +56,10 @@ class DescribeGrafanaEnvironmentsRequest extends AbstractModel
         }
         if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
             $this->InstanceId = $param["InstanceId"];
+        }
+
+        if (array_key_exists("DisableStatistics",$param) and $param["DisableStatistics"] !== null) {
+            $this->DisableStatistics = $param["DisableStatistics"];
         }
     }
 }

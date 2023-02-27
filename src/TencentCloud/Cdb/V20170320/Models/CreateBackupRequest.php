@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() Obtain Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
  * @method void setInstanceId(string $InstanceId) Set Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
- * @method string getBackupMethod() Obtain Backup method of target instance. Value range: logical (logical cold backup), physical (physical cold backup).
- * @method void setBackupMethod(string $BackupMethod) Set Backup method of target instance. Value range: logical (logical cold backup), physical (physical cold backup).
+ * @method string getBackupMethod() Obtain Target backup method. Valid values: `logical` (logical cold backup), `physical` (physical cold backup), `snapshot` (snapshot backup). Basic Edition instances only support snapshot backups.
+ * @method void setBackupMethod(string $BackupMethod) Set Target backup method. Valid values: `logical` (logical cold backup), `physical` (physical cold backup), `snapshot` (snapshot backup). Basic Edition instances only support snapshot backups.
  * @method array getBackupDBTableList() Obtain Information of the table to be backed up. If this parameter is not set, the entire instance will be backed up by default. It can be set only in logical backup (i.e., BackupMethod = logical). The specified table must exist; otherwise, backup may fail.
 For example, if you want to backup tb1 and tb2 in db1 and the entire db2, you should set the parameter as [{"Db": "db1", "Table": "tb1"}, {"Db": "db1", "Table": "tb2"}, {"Db": "db2"} ].
  * @method void setBackupDBTableList(array $BackupDBTableList) Set Information of the table to be backed up. If this parameter is not set, the entire instance will be backed up by default. It can be set only in logical backup (i.e., BackupMethod = logical). The specified table must exist; otherwise, backup may fail.
@@ -39,7 +39,7 @@ class CreateBackupRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var string Backup method of target instance. Value range: logical (logical cold backup), physical (physical cold backup).
+     * @var string Target backup method. Valid values: `logical` (logical cold backup), `physical` (physical cold backup), `snapshot` (snapshot backup). Basic Edition instances only support snapshot backups.
      */
     public $BackupMethod;
 
@@ -56,7 +56,7 @@ For example, if you want to backup tb1 and tb2 in db1 and the entire db2, you sh
 
     /**
      * @param string $InstanceId Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
-     * @param string $BackupMethod Backup method of target instance. Value range: logical (logical cold backup), physical (physical cold backup).
+     * @param string $BackupMethod Target backup method. Valid values: `logical` (logical cold backup), `physical` (physical cold backup), `snapshot` (snapshot backup). Basic Edition instances only support snapshot backups.
      * @param array $BackupDBTableList Information of the table to be backed up. If this parameter is not set, the entire instance will be backed up by default. It can be set only in logical backup (i.e., BackupMethod = logical). The specified table must exist; otherwise, backup may fail.
 For example, if you want to backup tb1 and tb2 in db1 and the entire db2, you should set the parameter as [{"Db": "db1", "Table": "tb1"}, {"Db": "db1", "Table": "tb2"}, {"Db": "db2"} ].
      * @param string $ManualBackupName Manual backup alias

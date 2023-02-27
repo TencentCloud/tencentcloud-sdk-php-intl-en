@@ -18,20 +18,16 @@ namespace TencentCloud\Monitor\V20180724\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeGrafanaEnvironments request structure.
+ * Targets of a Prometheus job
  *
- * @method string getInstanceId() Obtain ID of a TencentCloud Managed Service for Grafana instance, such as “grafana-abcdefgh”.
- * @method void setInstanceId(string $InstanceId) Set ID of a TencentCloud Managed Service for Grafana instance, such as “grafana-abcdefgh”.
+
  */
-class DescribeGrafanaEnvironmentsRequest extends AbstractModel
+class PrometheusJobTargets extends AbstractModel
 {
-    /**
-     * @var string ID of a TencentCloud Managed Service for Grafana instance, such as “grafana-abcdefgh”.
-     */
-    public $InstanceId;
+
 
     /**
-     * @param string $InstanceId ID of a TencentCloud Managed Service for Grafana instance, such as “grafana-abcdefgh”.
+
      */
     function __construct()
     {
@@ -46,8 +42,6 @@ class DescribeGrafanaEnvironmentsRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
-            $this->InstanceId = $param["InstanceId"];
-        }
+
     }
 }

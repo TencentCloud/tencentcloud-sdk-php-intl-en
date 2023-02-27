@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() Obtain Instance ID.
  * @method void setInstanceId(string $InstanceId) Set Instance ID.
- * @method integer getStartTime() Obtain Start timestamp.
- * @method void setStartTime(integer $StartTime) Set Start timestamp.
- * @method integer getEndTime() Obtain End timestamp.
- * @method void setEndTime(integer $EndTime) Set End timestamp.
+ * @method integer getStartTime() Obtain Start timestamp, such as 1585142640.
+ * @method void setStartTime(integer $StartTime) Set Start timestamp, such as 1585142640.
+ * @method integer getEndTime() Obtain End timestamp, such as 1585142640.
+ * @method void setEndTime(integer $EndTime) Set End timestamp, such as 1585142640.
  * @method array getKeyWords() Obtain List of keywords to match. Up to 15 keywords are supported.
  * @method void setKeyWords(array $KeyWords) Set List of keywords to match. Up to 15 keywords are supported.
  * @method integer getLimit() Obtain The number of results per page in paginated queries. Default value: 100. Maximum value: 400.
@@ -43,12 +43,12 @@ class DescribeErrorLogDataRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var integer Start timestamp.
+     * @var integer Start timestamp, such as 1585142640.
      */
     public $StartTime;
 
     /**
-     * @var integer End timestamp.
+     * @var integer End timestamp, such as 1585142640.
      */
     public $EndTime;
 
@@ -74,8 +74,8 @@ class DescribeErrorLogDataRequest extends AbstractModel
 
     /**
      * @param string $InstanceId Instance ID.
-     * @param integer $StartTime Start timestamp.
-     * @param integer $EndTime End timestamp.
+     * @param integer $StartTime Start timestamp, such as 1585142640.
+     * @param integer $EndTime End timestamp, such as 1585142640.
      * @param array $KeyWords List of keywords to match. Up to 15 keywords are supported.
      * @param integer $Limit The number of results per page in paginated queries. Default value: 100. Maximum value: 400.
      * @param integer $Offset Offset. Default value: 0.

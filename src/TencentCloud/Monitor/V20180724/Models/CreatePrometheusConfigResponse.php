@@ -14,35 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cdb\V20170320\Models;
+namespace TencentCloud\Monitor\V20180724\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * UpgradeCDBProxy response structure.
+ * CreatePrometheusConfig response structure.
  *
- * @method string getAsyncRequestId() Obtain Async request ID
-Note: this field may return `null`, indicating that no valid value can be found.
- * @method void setAsyncRequestId(string $AsyncRequestId) Set Async request ID
-Note: this field may return `null`, indicating that no valid value can be found.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
-class UpgradeCDBProxyResponse extends AbstractModel
+class CreatePrometheusConfigResponse extends AbstractModel
 {
-    /**
-     * @var string Async request ID
-Note: this field may return `null`, indicating that no valid value can be found.
-     */
-    public $AsyncRequestId;
-
     /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
 
     /**
-     * @param string $AsyncRequestId Async request ID
-Note: this field may return `null`, indicating that no valid value can be found.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -58,10 +46,6 @@ Note: this field may return `null`, indicating that no valid value can be found.
         if ($param === null) {
             return;
         }
-        if (array_key_exists("AsyncRequestId",$param) and $param["AsyncRequestId"] !== null) {
-            $this->AsyncRequestId = $param["AsyncRequestId"];
-        }
-
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
             $this->RequestId = $param["RequestId"];
         }

@@ -26,6 +26,26 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) Set Offset
  * @method integer getLimit() Obtain The maximum entries per page
  * @method void setLimit(integer $Limit) Set The maximum entries per page
+ * @method string getNodeName() Obtain Node name for fuzzy search
+ * @method void setNodeName(string $NodeName) Set Node name for fuzzy search
+ * @method array getFilters() Obtain Name and value of a filter.
+Currently, only the `nodeStatus` filter is supported.
+Valid values: `running`, `down`.
+It is an array type and can contain multiple filters.
+
+ * @method void setFilters(array $Filters) Set Name and value of a filter.
+Currently, only the `nodeStatus` filter is supported.
+Valid values: `running`, `down`.
+It is an array type and can contain multiple filters.
+
+ * @method string getSortElement() Obtain Sorting by a specified element.
+Valid values: `cpuUsage`, `diskUsage`.
+ * @method void setSortElement(string $SortElement) Set Sorting by a specified element.
+Valid values: `cpuUsage`, `diskUsage`.
+ * @method string getSortOrder() Obtain Sorting order.
+Valid values: `ascend`, `descend`.
+ * @method void setSortOrder(string $SortOrder) Set Sorting order.
+Valid values: `ascend`, `descend`.
  */
 class DescribeRabbitMQNodeListRequest extends AbstractModel
 {
@@ -45,9 +65,45 @@ class DescribeRabbitMQNodeListRequest extends AbstractModel
     public $Limit;
 
     /**
+     * @var string Node name for fuzzy search
+     */
+    public $NodeName;
+
+    /**
+     * @var array Name and value of a filter.
+Currently, only the `nodeStatus` filter is supported.
+Valid values: `running`, `down`.
+It is an array type and can contain multiple filters.
+
+     */
+    public $Filters;
+
+    /**
+     * @var string Sorting by a specified element.
+Valid values: `cpuUsage`, `diskUsage`.
+     */
+    public $SortElement;
+
+    /**
+     * @var string Sorting order.
+Valid values: `ascend`, `descend`.
+     */
+    public $SortOrder;
+
+    /**
      * @param string $InstanceId TDMQ for RabbitMQ cluster ID
      * @param integer $Offset Offset
      * @param integer $Limit The maximum entries per page
+     * @param string $NodeName Node name for fuzzy search
+     * @param array $Filters Name and value of a filter.
+Currently, only the `nodeStatus` filter is supported.
+Valid values: `running`, `down`.
+It is an array type and can contain multiple filters.
+
+     * @param string $SortElement Sorting by a specified element.
+Valid values: `cpuUsage`, `diskUsage`.
+     * @param string $SortOrder Sorting order.
+Valid values: `ascend`, `descend`.
      */
     function __construct()
     {
@@ -72,6 +128,27 @@ class DescribeRabbitMQNodeListRequest extends AbstractModel
 
         if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
             $this->Limit = $param["Limit"];
+        }
+
+        if (array_key_exists("NodeName",$param) and $param["NodeName"] !== null) {
+            $this->NodeName = $param["NodeName"];
+        }
+
+        if (array_key_exists("Filters",$param) and $param["Filters"] !== null) {
+            $this->Filters = [];
+            foreach ($param["Filters"] as $key => $value){
+                $obj = new Filter();
+                $obj->deserialize($value);
+                array_push($this->Filters, $obj);
+            }
+        }
+
+        if (array_key_exists("SortElement",$param) and $param["SortElement"] !== null) {
+            $this->SortElement = $param["SortElement"];
+        }
+
+        if (array_key_exists("SortOrder",$param) and $param["SortOrder"] !== null) {
+            $this->SortOrder = $param["SortOrder"];
         }
     }
 }

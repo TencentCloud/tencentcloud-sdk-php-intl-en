@@ -18,20 +18,28 @@ namespace TencentCloud\Monitor\V20180724\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeGrafanaEnvironments request structure.
+ * ModifyPrometheusGlobalNotification request structure.
  *
- * @method string getInstanceId() Obtain ID of a TencentCloud Managed Service for Grafana instance, such as “grafana-abcdefgh”.
- * @method void setInstanceId(string $InstanceId) Set ID of a TencentCloud Managed Service for Grafana instance, such as “grafana-abcdefgh”.
+ * @method string getInstanceId() Obtain Instance ID
+ * @method void setInstanceId(string $InstanceId) Set Instance ID
+ * @method PrometheusNotificationItem getNotification() Obtain Alert notification channel
+ * @method void setNotification(PrometheusNotificationItem $Notification) Set Alert notification channel
  */
-class DescribeGrafanaEnvironmentsRequest extends AbstractModel
+class ModifyPrometheusGlobalNotificationRequest extends AbstractModel
 {
     /**
-     * @var string ID of a TencentCloud Managed Service for Grafana instance, such as “grafana-abcdefgh”.
+     * @var string Instance ID
      */
     public $InstanceId;
 
     /**
-     * @param string $InstanceId ID of a TencentCloud Managed Service for Grafana instance, such as “grafana-abcdefgh”.
+     * @var PrometheusNotificationItem Alert notification channel
+     */
+    public $Notification;
+
+    /**
+     * @param string $InstanceId Instance ID
+     * @param PrometheusNotificationItem $Notification Alert notification channel
      */
     function __construct()
     {
@@ -48,6 +56,11 @@ class DescribeGrafanaEnvironmentsRequest extends AbstractModel
         }
         if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
             $this->InstanceId = $param["InstanceId"];
+        }
+
+        if (array_key_exists("Notification",$param) and $param["Notification"] !== null) {
+            $this->Notification = new PrometheusNotificationItem();
+            $this->Notification->deserialize($param["Notification"]);
         }
     }
 }

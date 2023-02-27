@@ -18,20 +18,20 @@ namespace TencentCloud\Monitor\V20180724\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeGrafanaEnvironments request structure.
+ * DeletePrometheusAlertPolicy response structure.
  *
- * @method string getInstanceId() Obtain ID of a TencentCloud Managed Service for Grafana instance, such as “grafana-abcdefgh”.
- * @method void setInstanceId(string $InstanceId) Set ID of a TencentCloud Managed Service for Grafana instance, such as “grafana-abcdefgh”.
+ * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
-class DescribeGrafanaEnvironmentsRequest extends AbstractModel
+class DeletePrometheusAlertPolicyResponse extends AbstractModel
 {
     /**
-     * @var string ID of a TencentCloud Managed Service for Grafana instance, such as “grafana-abcdefgh”.
+     * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
-    public $InstanceId;
+    public $RequestId;
 
     /**
-     * @param string $InstanceId ID of a TencentCloud Managed Service for Grafana instance, such as “grafana-abcdefgh”.
+     * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
     {
@@ -46,8 +46,8 @@ class DescribeGrafanaEnvironmentsRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
-            $this->InstanceId = $param["InstanceId"];
+        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
+            $this->RequestId = $param["RequestId"];
         }
     }
 }

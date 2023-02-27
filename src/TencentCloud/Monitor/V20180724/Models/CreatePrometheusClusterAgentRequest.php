@@ -18,20 +18,28 @@ namespace TencentCloud\Monitor\V20180724\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeGrafanaEnvironments request structure.
+ * CreatePrometheusClusterAgent request structure.
  *
- * @method string getInstanceId() Obtain ID of a TencentCloud Managed Service for Grafana instance, such as “grafana-abcdefgh”.
- * @method void setInstanceId(string $InstanceId) Set ID of a TencentCloud Managed Service for Grafana instance, such as “grafana-abcdefgh”.
+ * @method string getInstanceId() Obtain Instance ID
+ * @method void setInstanceId(string $InstanceId) Set Instance ID
+ * @method array getAgents() Obtain Agent list
+ * @method void setAgents(array $Agents) Set Agent list
  */
-class DescribeGrafanaEnvironmentsRequest extends AbstractModel
+class CreatePrometheusClusterAgentRequest extends AbstractModel
 {
     /**
-     * @var string ID of a TencentCloud Managed Service for Grafana instance, such as “grafana-abcdefgh”.
+     * @var string Instance ID
      */
     public $InstanceId;
 
     /**
-     * @param string $InstanceId ID of a TencentCloud Managed Service for Grafana instance, such as “grafana-abcdefgh”.
+     * @var array Agent list
+     */
+    public $Agents;
+
+    /**
+     * @param string $InstanceId Instance ID
+     * @param array $Agents Agent list
      */
     function __construct()
     {
@@ -48,6 +56,15 @@ class DescribeGrafanaEnvironmentsRequest extends AbstractModel
         }
         if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
             $this->InstanceId = $param["InstanceId"];
+        }
+
+        if (array_key_exists("Agents",$param) and $param["Agents"] !== null) {
+            $this->Agents = [];
+            foreach ($param["Agents"] as $key => $value){
+                $obj = new PrometheusClusterAgentBasic();
+                $obj->deserialize($value);
+                array_push($this->Agents, $obj);
+            }
         }
     }
 }

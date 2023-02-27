@@ -18,20 +18,36 @@ namespace TencentCloud\Monitor\V20180724\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeGrafanaEnvironments request structure.
+ * DescribePrometheusClusterAgents request structure.
  *
- * @method string getInstanceId() Obtain ID of a TencentCloud Managed Service for Grafana instance, such as “grafana-abcdefgh”.
- * @method void setInstanceId(string $InstanceId) Set ID of a TencentCloud Managed Service for Grafana instance, such as “grafana-abcdefgh”.
+ * @method string getInstanceId() Obtain Instance ID
+ * @method void setInstanceId(string $InstanceId) Set Instance ID
+ * @method integer getOffset() Obtain Page offset
+ * @method void setOffset(integer $Offset) Set Page offset
+ * @method integer getLimit() Obtain Page limit
+ * @method void setLimit(integer $Limit) Set Page limit
  */
-class DescribeGrafanaEnvironmentsRequest extends AbstractModel
+class DescribePrometheusClusterAgentsRequest extends AbstractModel
 {
     /**
-     * @var string ID of a TencentCloud Managed Service for Grafana instance, such as “grafana-abcdefgh”.
+     * @var string Instance ID
      */
     public $InstanceId;
 
     /**
-     * @param string $InstanceId ID of a TencentCloud Managed Service for Grafana instance, such as “grafana-abcdefgh”.
+     * @var integer Page offset
+     */
+    public $Offset;
+
+    /**
+     * @var integer Page limit
+     */
+    public $Limit;
+
+    /**
+     * @param string $InstanceId Instance ID
+     * @param integer $Offset Page offset
+     * @param integer $Limit Page limit
      */
     function __construct()
     {
@@ -48,6 +64,14 @@ class DescribeGrafanaEnvironmentsRequest extends AbstractModel
         }
         if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
             $this->InstanceId = $param["InstanceId"];
+        }
+
+        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
+            $this->Offset = $param["Offset"];
+        }
+
+        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
+            $this->Limit = $param["Limit"];
         }
     }
 }

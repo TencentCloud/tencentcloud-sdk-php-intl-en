@@ -38,6 +38,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMaxRetentionTime(integer $MaxRetentionTime) Set Maximum message retention period in milliseconds
  * @method integer getMaxLatencyTime() Obtain Maximum message delay in milliseconds
  * @method void setMaxLatencyTime(integer $MaxLatencyTime) Set Maximum message delay in milliseconds
+ * @method integer getMaxQueuesPerTopic() Obtain The maximum number of queues in a single topic
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setMaxQueuesPerTopic(integer $MaxQueuesPerTopic) Set The maximum number of queues in a single topic
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class RocketMQClusterConfig extends AbstractModel
 {
@@ -87,6 +91,12 @@ class RocketMQClusterConfig extends AbstractModel
     public $MaxLatencyTime;
 
     /**
+     * @var integer The maximum number of queues in a single topic
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $MaxQueuesPerTopic;
+
+    /**
      * @param integer $MaxTpsPerNamespace Maximum TPS per namespace
      * @param integer $MaxNamespaceNum Maximum number of namespaces
      * @param integer $UsedNamespaceNum Number of used namespaces
@@ -96,6 +106,8 @@ class RocketMQClusterConfig extends AbstractModel
      * @param integer $UsedGroupNum Number of used groups
      * @param integer $MaxRetentionTime Maximum message retention period in milliseconds
      * @param integer $MaxLatencyTime Maximum message delay in milliseconds
+     * @param integer $MaxQueuesPerTopic The maximum number of queues in a single topic
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -144,6 +156,10 @@ class RocketMQClusterConfig extends AbstractModel
 
         if (array_key_exists("MaxLatencyTime",$param) and $param["MaxLatencyTime"] !== null) {
             $this->MaxLatencyTime = $param["MaxLatencyTime"];
+        }
+
+        if (array_key_exists("MaxQueuesPerTopic",$param) and $param["MaxQueuesPerTopic"] !== null) {
+            $this->MaxQueuesPerTopic = $param["MaxQueuesPerTopic"];
         }
     }
 }

@@ -67,6 +67,7 @@ This is an async API. You can also use the [DescribeDBInstances](https://intl.cl
  * @method Models\DescribeAuditRulesResponse DescribeAuditRules(Models\DescribeAuditRulesRequest $req) This API is used to query the audit rules in the current region.
  * @method Models\DescribeBackupConfigResponse DescribeBackupConfig(Models\DescribeBackupConfigRequest $req) This API (DescribeBackupConfig) is used to query the configuration information of a TencentDB instance backup.
  * @method Models\DescribeBackupDownloadRestrictionResponse DescribeBackupDownloadRestriction(Models\DescribeBackupDownloadRestrictionRequest $req) This API is used to query the restrictions of downloading backups in a region.
+ * @method Models\DescribeBackupEncryptionStatusResponse DescribeBackupEncryptionStatus(Models\DescribeBackupEncryptionStatusRequest $req) This API is used to query the default encryption status of an instance backup.
  * @method Models\DescribeBackupOverviewResponse DescribeBackupOverview(Models\DescribeBackupOverviewRequest $req) This API is used to query the backup overview of a user. It will return the user's current total number of backups, total capacity used by backups, capacity in the free tier, and paid capacity (all capacity values are in bytes).
  * @method Models\DescribeBackupSummariesResponse DescribeBackupSummaries(Models\DescribeBackupSummariesRequest $req) This API is used to query the statistics of backups. It will return the capacity used by backups at the instance level and the number and used capacity of data backups and log backups of each instance (all capacity values are in bytes).
  * @method Models\DescribeBackupsResponse DescribeBackups(Models\DescribeBackupsRequest $req) This API (DescribeBackups) is used to query the backups of a TencentDB instance.
@@ -129,6 +130,7 @@ Note that when modifying account permissions, you need to pass in the full permi
  * @method Models\ModifyAutoRenewFlagResponse ModifyAutoRenewFlag(Models\ModifyAutoRenewFlagRequest $req) This API is used to modify the auto-renewal flag of a TencentDB instance.
  * @method Models\ModifyBackupConfigResponse ModifyBackupConfig(Models\ModifyBackupConfigRequest $req) This API (ModifyBackupConfig) is used to modify the database backup configuration.
  * @method Models\ModifyBackupDownloadRestrictionResponse ModifyBackupDownloadRestriction(Models\ModifyBackupDownloadRestrictionRequest $req) This API is used to modify the restrictions of downloading backups in a region. You can specify which types of networks (private, or both private and public), VPCs, and IPs to download backups.
+ * @method Models\ModifyBackupEncryptionStatusResponse ModifyBackupEncryptionStatus(Models\ModifyBackupEncryptionStatusRequest $req) This API is used to set the default encryption status of an instance backup. 
  * @method Models\ModifyCDBProxyConnectionPoolResponse ModifyCDBProxyConnectionPool(Models\ModifyCDBProxyConnectionPoolRequest $req) This API is used to configure the connection pool of database proxy. You can use the `DescribeProxyConnectionPoolConf` API to query the supported connection pool configurations.
  * @method Models\ModifyCDBProxyDescResponse ModifyCDBProxyDesc(Models\ModifyCDBProxyDescRequest $req) This API is used to modify the description of database proxy.
  * @method Models\ModifyCDBProxyVipVPortResponse ModifyCDBProxyVipVPort(Models\ModifyCDBProxyVipVPortRequest $req) This API is used to modify the VIP or port of database proxy.
@@ -151,6 +153,17 @@ This is an asynchronous API. There may be a delay in repossessing some resources
 
 Note that once an instance is deactivated, its resources and data will not be recoverable. Please do so with caution.
  * @method Models\OpenAuditServiceResponse OpenAuditService(Models\OpenAuditServiceRequest $req) This API is used to enable the audit service.
+ * @method Models\OpenDBInstanceEncryptionResponse OpenDBInstanceEncryption(Models\OpenDBInstanceEncryptionRequest $req) This API is used to enable the encryption feature for instance data storage, and custom keys are supported.
+
+Note: Before enabling data storage encryption for an instance, you need to perform the following operations:
+
+1. [Initialize an instance](https://intl.cloud.tencent.com/document/api/236/15873?from_cn_redirect=1).
+
+2. Enable [KMS service](https://console.cloud.tencent.com/kms2)
+
+3. [Grant permission to access KMS](https://console.cloud.tencent.com/cam/role) for TencentDB for MySQL. The role name is `MySQL_QCSRole`, and the preset policy name is `QcloudAccessForMySQLRole`.
+
+This API calling may take up to 10 seconds, causing the client to time out. If it returns `InternalError`, call `DescribeDBInstanceInfo` to confirm whether the backend encryption is enabled successfully.
  * @method Models\OpenDBInstanceGTIDResponse OpenDBInstanceGTID(Models\OpenDBInstanceGTIDRequest $req) This API (OpenDBInstanceGTID) is used to enable GTID for a TencentDB instance. Only instances on or above version 5.6 are supported.
  * @method Models\OpenWanServiceResponse OpenWanService(Models\OpenWanServiceRequest $req) This API (OpenWanService) is used to enable public network access for an instance.
 
@@ -174,9 +187,6 @@ Note:
  * @method Models\SwitchDBInstanceMasterSlaveResponse SwitchDBInstanceMasterSlave(Models\SwitchDBInstanceMasterSlaveRequest $req) This API is used for source-to-replica switch.
  * @method Models\SwitchDrInstanceToMasterResponse SwitchDrInstanceToMaster(Models\SwitchDrInstanceToMasterRequest $req) This API is used to promote a disaster recovery instance to source instance. The request parameter `Region` must be the region of the disaster recovery instance.
  * @method Models\SwitchForUpgradeResponse SwitchForUpgrade(Models\SwitchForUpgradeRequest $req) This API (SwitchForUpgrade) is used to switch to a new instance. You can initiate this process when the primary instance being upgraded is pending switch.
- * @method Models\UpgradeCDBProxyResponse UpgradeCDBProxy(Models\UpgradeCDBProxyRequest $req) 接口已经废弃，请使用AdjustCdbProxy进行数据库代理的配置
-
-This API is used to upgrade the configuration of database proxy.
  * @method Models\UpgradeCDBProxyVersionResponse UpgradeCDBProxyVersion(Models\UpgradeCDBProxyVersionRequest $req) This API is used to upgrade the version of database proxy.
  * @method Models\UpgradeDBInstanceResponse UpgradeDBInstance(Models\UpgradeDBInstanceRequest $req) This API is used to upgrade or downgrade a TencentDB instance, which can be a primary instance, disaster recovery instance, or read-only instance.
  * @method Models\UpgradeDBInstanceEngineVersionResponse UpgradeDBInstanceEngineVersion(Models\UpgradeDBInstanceEngineVersionRequest $req) This API (UpgradeDBInstanceEngineVersion) is used to upgrade the version of a TencentDB instance, which can be a primary instance, disaster recovery instance, or read-only instance.

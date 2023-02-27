@@ -52,6 +52,10 @@ Note: This field may return null, indicating that no valid value can be obtained
 Note: This field may return null, indicating that no valid value can be obtained.
  * @method string getSpecName() Obtain Instance specification ID
  * @method void setSpecName(string $SpecName) Set Instance specification ID
+ * @method string getExceptionInformation() Obtain Cluster exception
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setExceptionInformation(string $ExceptionInformation) Set Cluster exception
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class RabbitMQVipInstance extends AbstractModel
 {
@@ -128,6 +132,12 @@ Note: This field may return null, indicating that no valid value can be obtained
     public $SpecName;
 
     /**
+     * @var string Cluster exception
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $ExceptionInformation;
+
+    /**
      * @param string $InstanceId Instance ID
      * @param string $InstanceName Instance name
      * @param string $InstanceVersion Instance version
@@ -144,6 +154,8 @@ Note: This field may return null, indicating that no valid value can be obtained
      * @param string $Remark Remarks
 Note: This field may return null, indicating that no valid value can be obtained.
      * @param string $SpecName Instance specification ID
+     * @param string $ExceptionInformation Cluster exception
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -212,6 +224,10 @@ Note: This field may return null, indicating that no valid value can be obtained
 
         if (array_key_exists("SpecName",$param) and $param["SpecName"] !== null) {
             $this->SpecName = $param["SpecName"];
+        }
+
+        if (array_key_exists("ExceptionInformation",$param) and $param["ExceptionInformation"] !== null) {
+            $this->ExceptionInformation = $param["ExceptionInformation"];
         }
     }
 }

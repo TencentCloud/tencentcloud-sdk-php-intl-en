@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setInstanceVersion(string $InstanceVersion) Set Instance version
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getStatus() Obtain Instance status. Valid values: `0` (Creating), `1` (Normal), `2` (Isolated), `3` (Terminated), `4` (Abnormal).
- * @method void setStatus(integer $Status) Set Instance status. Valid values: `0` (Creating), `1` (Normal), `2` (Isolated), `3` (Terminated), `4` (Abnormal).
+ * @method integer getStatus() Obtain Instance status. Valid values: `0` (Creating), `1` (Normal), `2` (Isolated), `3` (Terminated), `4` (Abnormal), `5` (Delivery failed).
+ * @method void setStatus(integer $Status) Set Instance status. Valid values: `0` (Creating), `1` (Normal), `2` (Isolated), `3` (Terminated), `4` (Abnormal), `5` (Delivery failed).
  * @method integer getNodeCount() Obtain Number of nodes
  * @method void setNodeCount(integer $NodeCount) Set Number of nodes
  * @method string getConfigDisplay() Obtain Instance specification name
@@ -72,7 +72,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $InstanceVersion;
 
     /**
-     * @var integer Instance status. Valid values: `0` (Creating), `1` (Normal), `2` (Isolated), `3` (Terminated), `4` (Abnormal).
+     * @var integer Instance status. Valid values: `0` (Creating), `1` (Normal), `2` (Isolated), `3` (Terminated), `4` (Abnormal), `5` (Delivery failed).
      */
     public $Status;
 
@@ -132,7 +132,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $InstanceName Instance name
      * @param string $InstanceVersion Instance version
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $Status Instance status. Valid values: `0` (Creating), `1` (Normal), `2` (Isolated), `3` (Terminated), `4` (Abnormal).
+     * @param integer $Status Instance status. Valid values: `0` (Creating), `1` (Normal), `2` (Isolated), `3` (Terminated), `4` (Abnormal), `5` (Delivery failed).
      * @param integer $NodeCount Number of nodes
      * @param string $ConfigDisplay Instance specification name
      * @param integer $MaxTps Peak TPS

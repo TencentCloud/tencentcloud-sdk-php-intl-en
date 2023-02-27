@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() Obtain Instance ID.
  * @method void setInstanceId(string $InstanceId) Set Instance ID.
- * @method integer getStartTime() Obtain Start timestamp.
- * @method void setStartTime(integer $StartTime) Set Start timestamp.
- * @method integer getEndTime() Obtain End timestamp.
- * @method void setEndTime(integer $EndTime) Set End timestamp.
+ * @method integer getStartTime() Obtain Start timestamp, such as 1585142640.
+ * @method void setStartTime(integer $StartTime) Set Start timestamp, such as 1585142640.
+ * @method integer getEndTime() Obtain End timestamp, such as 1585142640.
+ * @method void setEndTime(integer $EndTime) Set End timestamp, such as 1585142640.
  * @method array getUserHosts() Obtain Client `Host` list.
  * @method void setUserHosts(array $UserHosts) Set Client `Host` list.
  * @method array getUserNames() Obtain Client username list.
@@ -51,12 +51,12 @@ class DescribeSlowLogDataRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var integer Start timestamp.
+     * @var integer Start timestamp, such as 1585142640.
      */
     public $StartTime;
 
     /**
-     * @var integer End timestamp.
+     * @var integer End timestamp, such as 1585142640.
      */
     public $EndTime;
 
@@ -102,8 +102,8 @@ class DescribeSlowLogDataRequest extends AbstractModel
 
     /**
      * @param string $InstanceId Instance ID.
-     * @param integer $StartTime Start timestamp.
-     * @param integer $EndTime End timestamp.
+     * @param integer $StartTime Start timestamp, such as 1585142640.
+     * @param integer $EndTime End timestamp, such as 1585142640.
      * @param array $UserHosts Client `Host` list.
      * @param array $UserNames Client username list.
      * @param array $DataBases Accessed database list.

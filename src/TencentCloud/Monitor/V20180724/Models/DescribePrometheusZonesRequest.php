@@ -20,18 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribePrometheusZones request structure.
  *
- * @method integer getRegionId() Obtain Region ID
- * @method void setRegionId(integer $RegionId) Set Region ID
+ * @method integer getRegionId() Obtain Region ID. You only need to specify the value of either `RegionId` or `RegionName`.
+ * @method void setRegionId(integer $RegionId) Set Region ID. You only need to specify the value of either `RegionId` or `RegionName`.
+ * @method string getRegionName() Obtain Region name. You only need to specify the value of either `RegionId` or `RegionName`.
+ * @method void setRegionName(string $RegionName) Set Region name. You only need to specify the value of either `RegionId` or `RegionName`.
  */
 class DescribePrometheusZonesRequest extends AbstractModel
 {
     /**
-     * @var integer Region ID
+     * @var integer Region ID. You only need to specify the value of either `RegionId` or `RegionName`.
      */
     public $RegionId;
 
     /**
-     * @param integer $RegionId Region ID
+     * @var string Region name. You only need to specify the value of either `RegionId` or `RegionName`.
+     */
+    public $RegionName;
+
+    /**
+     * @param integer $RegionId Region ID. You only need to specify the value of either `RegionId` or `RegionName`.
+     * @param string $RegionName Region name. You only need to specify the value of either `RegionId` or `RegionName`.
      */
     function __construct()
     {
@@ -48,6 +56,10 @@ class DescribePrometheusZonesRequest extends AbstractModel
         }
         if (array_key_exists("RegionId",$param) and $param["RegionId"] !== null) {
             $this->RegionId = $param["RegionId"];
+        }
+
+        if (array_key_exists("RegionName",$param) and $param["RegionName"] !== null) {
+            $this->RegionName = $param["RegionName"];
         }
     }
 }

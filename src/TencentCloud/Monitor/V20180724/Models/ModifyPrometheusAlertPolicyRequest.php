@@ -18,20 +18,28 @@ namespace TencentCloud\Monitor\V20180724\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeGrafanaEnvironments request structure.
+ * ModifyPrometheusAlertPolicy request structure.
  *
- * @method string getInstanceId() Obtain ID of a TencentCloud Managed Service for Grafana instance, such as “grafana-abcdefgh”.
- * @method void setInstanceId(string $InstanceId) Set ID of a TencentCloud Managed Service for Grafana instance, such as “grafana-abcdefgh”.
+ * @method string getInstanceId() Obtain Instance ID
+ * @method void setInstanceId(string $InstanceId) Set Instance ID
+ * @method PrometheusAlertPolicyItem getAlertRule() Obtain Alert configuration
+ * @method void setAlertRule(PrometheusAlertPolicyItem $AlertRule) Set Alert configuration
  */
-class DescribeGrafanaEnvironmentsRequest extends AbstractModel
+class ModifyPrometheusAlertPolicyRequest extends AbstractModel
 {
     /**
-     * @var string ID of a TencentCloud Managed Service for Grafana instance, such as “grafana-abcdefgh”.
+     * @var string Instance ID
      */
     public $InstanceId;
 
     /**
-     * @param string $InstanceId ID of a TencentCloud Managed Service for Grafana instance, such as “grafana-abcdefgh”.
+     * @var PrometheusAlertPolicyItem Alert configuration
+     */
+    public $AlertRule;
+
+    /**
+     * @param string $InstanceId Instance ID
+     * @param PrometheusAlertPolicyItem $AlertRule Alert configuration
      */
     function __construct()
     {
@@ -48,6 +56,11 @@ class DescribeGrafanaEnvironmentsRequest extends AbstractModel
         }
         if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
             $this->InstanceId = $param["InstanceId"];
+        }
+
+        if (array_key_exists("AlertRule",$param) and $param["AlertRule"] !== null) {
+            $this->AlertRule = new PrometheusAlertPolicyItem();
+            $this->AlertRule->deserialize($param["AlertRule"]);
         }
     }
 }

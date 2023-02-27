@@ -14,24 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Monitor\V20180724\Models;
+namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeGrafanaEnvironments request structure.
+ * DescribeBackupEncryptionStatus request structure.
  *
- * @method string getInstanceId() Obtain ID of a TencentCloud Managed Service for Grafana instance, such as “grafana-abcdefgh”.
- * @method void setInstanceId(string $InstanceId) Set ID of a TencentCloud Managed Service for Grafana instance, such as “grafana-abcdefgh”.
+ * @method string getInstanceId() Obtain Instance ID in the format of cdb-XXXX, which is the same as that displayed in the TencentDB console.
+ * @method void setInstanceId(string $InstanceId) Set Instance ID in the format of cdb-XXXX, which is the same as that displayed in the TencentDB console.
  */
-class DescribeGrafanaEnvironmentsRequest extends AbstractModel
+class DescribeBackupEncryptionStatusRequest extends AbstractModel
 {
     /**
-     * @var string ID of a TencentCloud Managed Service for Grafana instance, such as “grafana-abcdefgh”.
+     * @var string Instance ID in the format of cdb-XXXX, which is the same as that displayed in the TencentDB console.
      */
     public $InstanceId;
 
     /**
-     * @param string $InstanceId ID of a TencentCloud Managed Service for Grafana instance, such as “grafana-abcdefgh”.
+     * @param string $InstanceId Instance ID in the format of cdb-XXXX, which is the same as that displayed in the TencentDB console.
      */
     function __construct()
     {

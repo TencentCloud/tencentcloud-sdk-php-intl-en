@@ -18,20 +18,36 @@ namespace TencentCloud\Monitor\V20180724\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeGrafanaEnvironments request structure.
+ * DeletePrometheusAlertPolicy request structure.
  *
- * @method string getInstanceId() Obtain ID of a TencentCloud Managed Service for Grafana instance, such as “grafana-abcdefgh”.
- * @method void setInstanceId(string $InstanceId) Set ID of a TencentCloud Managed Service for Grafana instance, such as “grafana-abcdefgh”.
+ * @method string getInstanceId() Obtain Instance ID
+ * @method void setInstanceId(string $InstanceId) Set Instance ID
+ * @method array getAlertIds() Obtain List of alerting rule IDs
+ * @method void setAlertIds(array $AlertIds) Set List of alerting rule IDs
+ * @method array getNames() Obtain Alerting rule name
+ * @method void setNames(array $Names) Set Alerting rule name
  */
-class DescribeGrafanaEnvironmentsRequest extends AbstractModel
+class DeletePrometheusAlertPolicyRequest extends AbstractModel
 {
     /**
-     * @var string ID of a TencentCloud Managed Service for Grafana instance, such as “grafana-abcdefgh”.
+     * @var string Instance ID
      */
     public $InstanceId;
 
     /**
-     * @param string $InstanceId ID of a TencentCloud Managed Service for Grafana instance, such as “grafana-abcdefgh”.
+     * @var array List of alerting rule IDs
+     */
+    public $AlertIds;
+
+    /**
+     * @var array Alerting rule name
+     */
+    public $Names;
+
+    /**
+     * @param string $InstanceId Instance ID
+     * @param array $AlertIds List of alerting rule IDs
+     * @param array $Names Alerting rule name
      */
     function __construct()
     {
@@ -48,6 +64,14 @@ class DescribeGrafanaEnvironmentsRequest extends AbstractModel
         }
         if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
             $this->InstanceId = $param["InstanceId"];
+        }
+
+        if (array_key_exists("AlertIds",$param) and $param["AlertIds"] !== null) {
+            $this->AlertIds = $param["AlertIds"];
+        }
+
+        if (array_key_exists("Names",$param) and $param["Names"] !== null) {
+            $this->Names = $param["Names"];
         }
     }
 }

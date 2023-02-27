@@ -38,6 +38,10 @@ Note that alert object and alert message are special fields of Prometheus Rule A
  * @method Models\CreateGrafanaNotificationChannelResponse CreateGrafanaNotificationChannel(Models\CreateGrafanaNotificationChannelRequest $req) This API is used to create a Grafana notification channel.
  * @method Models\CreatePolicyGroupResponse CreatePolicyGroup(Models\CreatePolicyGroupRequest $req) This API is used to add a policy group.
  * @method Models\CreatePrometheusAgentResponse CreatePrometheusAgent(Models\CreatePrometheusAgentRequest $req) This API is used to create a Prometheus CVM agent.
+ * @method Models\CreatePrometheusAlertPolicyResponse CreatePrometheusAlertPolicy(Models\CreatePrometheusAlertPolicyRequest $req) This API is used to create an alerting rule.
+ * @method Models\CreatePrometheusClusterAgentResponse CreatePrometheusClusterAgent(Models\CreatePrometheusClusterAgentRequest $req) This API is used to associate a Cloud Monitor (CM)-integrated Tencent Managed Service for Prometheus (TMP) 2.0 instance with a cluster.
+ * @method Models\CreatePrometheusConfigResponse CreatePrometheusConfig(Models\CreatePrometheusConfigRequest $req) This API is used to create Prometheus configurations.
+ * @method Models\CreatePrometheusGlobalNotificationResponse CreatePrometheusGlobalNotification(Models\CreatePrometheusGlobalNotificationRequest $req) This API is used to create a global alert notification channel.
  * @method Models\CreatePrometheusMultiTenantInstancePostPayModeResponse CreatePrometheusMultiTenantInstancePostPayMode(Models\CreatePrometheusMultiTenantInstancePostPayModeRequest $req) This API is used to create a pay-as-you-go Prometheus instance.
  * @method Models\CreatePrometheusRecordRuleYamlResponse CreatePrometheusRecordRuleYaml(Models\CreatePrometheusRecordRuleYamlRequest $req) This API is used to create a recording rule in the YAML way.
  * @method Models\CreatePrometheusScrapeJobResponse CreatePrometheusScrapeJob(Models\CreatePrometheusScrapeJobRequest $req) This API is used to create a Prometheus scrape task.
@@ -55,6 +59,9 @@ Note that alert object and alert message are special fields of Prometheus Rule A
  * @method Models\DeleteGrafanaIntegrationResponse DeleteGrafanaIntegration(Models\DeleteGrafanaIntegrationRequest $req) This API is used to delete a Grafana integration configuration.
  * @method Models\DeleteGrafanaNotificationChannelResponse DeleteGrafanaNotificationChannel(Models\DeleteGrafanaNotificationChannelRequest $req) This API is used to delete a Grafana notification channel.
  * @method Models\DeletePolicyGroupResponse DeletePolicyGroup(Models\DeletePolicyGroupRequest $req) This API is used to delete an alarm policy group.
+ * @method Models\DeletePrometheusAlertPolicyResponse DeletePrometheusAlertPolicy(Models\DeletePrometheusAlertPolicyRequest $req) This API is used to delete a TMP 2.0 instance alerting rule.
+ * @method Models\DeletePrometheusClusterAgentResponse DeletePrometheusClusterAgent(Models\DeletePrometheusClusterAgentRequest $req) This API is used to disassociate a TMP instance from a cluster.
+ * @method Models\DeletePrometheusConfigResponse DeletePrometheusConfig(Models\DeletePrometheusConfigRequest $req) This API is used to delete Prometheus configurations. If the target cluster does not exist, a result indicating success will be returned.
  * @method Models\DeletePrometheusRecordRuleYamlResponse DeletePrometheusRecordRuleYaml(Models\DeletePrometheusRecordRuleYamlRequest $req) This API is used to delete a recording instance.
  * @method Models\DeletePrometheusScrapeJobsResponse DeletePrometheusScrapeJobs(Models\DeletePrometheusScrapeJobsRequest $req) This API is used to delete a Prometheus scrape task.
  * @method Models\DeletePrometheusTempResponse DeletePrometheusTemp(Models\DeletePrometheusTempRequest $req) This API is used to delete a TMP template.
@@ -96,7 +103,10 @@ Note: **If you use a sub-account, you can only query the alarm records of author
  * @method Models\DescribePrometheusAgentInstancesResponse DescribePrometheusAgentInstances(Models\DescribePrometheusAgentInstancesRequest $req) This API is used to get the list of instances associated with the target cluster.
  * @method Models\DescribePrometheusAgentsResponse DescribePrometheusAgents(Models\DescribePrometheusAgentsRequest $req) This API is used to list Prometheus CVM agents.
  * @method Models\DescribePrometheusAlertPolicyResponse DescribePrometheusAlertPolicy(Models\DescribePrometheusAlertPolicyRequest $req) This API is used to get the list of v2.0 instance alerting rules.
+ * @method Models\DescribePrometheusClusterAgentsResponse DescribePrometheusClusterAgents(Models\DescribePrometheusClusterAgentsRequest $req) This API is used to get the list of clusters associated with the TMP instance.
  * @method Models\DescribePrometheusConfigResponse DescribePrometheusConfig(Models\DescribePrometheusConfigRequest $req) This API is used to get the Prometheus configuration.
+ * @method Models\DescribePrometheusGlobalConfigResponse DescribePrometheusGlobalConfig(Models\DescribePrometheusGlobalConfigRequest $req) This API is used to get the instance-level scrape configurations.
+ * @method Models\DescribePrometheusGlobalNotificationResponse DescribePrometheusGlobalNotification(Models\DescribePrometheusGlobalNotificationRequest $req) This API is used to query the global alert notification channel.
  * @method Models\DescribePrometheusInstanceDetailResponse DescribePrometheusInstanceDetail(Models\DescribePrometheusInstanceDetailRequest $req) This API is used to get the details of a TMP instance.
  * @method Models\DescribePrometheusInstanceInitStatusResponse DescribePrometheusInstanceInitStatus(Models\DescribePrometheusInstanceInitStatusRequest $req) This API is used to get the initialization task status of a v2.0 instance.
  * @method Models\DescribePrometheusInstanceUsageResponse DescribePrometheusInstanceUsage(Models\DescribePrometheusInstanceUsageRequest $req)  This API is used to query the usage of a pay-as-you-go Tencent Managed Service for Prometheus (TMP) instance.
@@ -109,6 +119,7 @@ Note: **If you use a sub-account, you can only query the alarm records of author
  * @method Models\DescribePrometheusRecordRuleYamlResponse DescribePrometheusRecordRuleYaml(Models\DescribePrometheusRecordRuleYamlRequest $req) This API is used to get the YAML list of Prometheus recording rules.
  * @method Models\DescribePrometheusRecordRulesResponse DescribePrometheusRecordRules(Models\DescribePrometheusRecordRulesRequest $req) This API is used to get the list of recording rules, including those created by CRD resources in the associated cluster.
  * @method Models\DescribePrometheusScrapeJobsResponse DescribePrometheusScrapeJobs(Models\DescribePrometheusScrapeJobsRequest $req) This API is used to list Prometheus scrape tasks.
+ * @method Models\DescribePrometheusTargetsTMPResponse DescribePrometheusTargetsTMP(Models\DescribePrometheusTargetsTMPRequest $req) This API is used to get the targets information.
  * @method Models\DescribePrometheusTempResponse DescribePrometheusTemp(Models\DescribePrometheusTempRequest $req) This API is used to get the list of templates, where the default template is always on top.
  * @method Models\DescribePrometheusTempSyncResponse DescribePrometheusTempSync(Models\DescribePrometheusTempSyncRequest $req) This API is used to get the information of instances associated with a template. It takes effect for v2 instances.
  * @method Models\DescribePrometheusZonesResponse DescribePrometheusZones(Models\DescribePrometheusZonesRequest $req) This API is used to list the AZs of Tencent Managed Service for Prometheus (TMP).
@@ -138,6 +149,10 @@ If you need to call a large number of APIs to pull metrics or objects at a time,
  * @method Models\ModifyAlarmReceiversResponse ModifyAlarmReceivers(Models\ModifyAlarmReceiversRequest $req) This API is used to modify alarm recipients.
  * @method Models\ModifyGrafanaInstanceResponse ModifyGrafanaInstance(Models\ModifyGrafanaInstanceRequest $req) This API is used to modify the attributes of a Grafana instance.
  * @method Models\ModifyPolicyGroupResponse ModifyPolicyGroup(Models\ModifyPolicyGroupRequest $req) This API is used to update policy group.
+ * @method Models\ModifyPrometheusAgentExternalLabelsResponse ModifyPrometheusAgentExternalLabels(Models\ModifyPrometheusAgentExternalLabelsRequest $req) This API is used to modify the external labels of the associated cluster.
+ * @method Models\ModifyPrometheusAlertPolicyResponse ModifyPrometheusAlertPolicy(Models\ModifyPrometheusAlertPolicyRequest $req) This API is used to modify a TMP 2.0 instance alerting rule.
+ * @method Models\ModifyPrometheusConfigResponse ModifyPrometheusConfig(Models\ModifyPrometheusConfigRequest $req) This API is used to modify the Prometheus configuration. If there are no configuration items, one will be added.
+ * @method Models\ModifyPrometheusGlobalNotificationResponse ModifyPrometheusGlobalNotification(Models\ModifyPrometheusGlobalNotificationRequest $req) This API is used to modify the global alert notification channel.
  * @method Models\ModifyPrometheusInstanceAttributesResponse ModifyPrometheusInstanceAttributes(Models\ModifyPrometheusInstanceAttributesRequest $req) This API is used to modify the attributes of a Prometheus instance.
  * @method Models\ModifyPrometheusRecordRuleYamlResponse ModifyPrometheusRecordRuleYaml(Models\ModifyPrometheusRecordRuleYamlRequest $req) This API is used to modify a Prometheus recording instance through YAML.
  * @method Models\ModifyPrometheusTempResponse ModifyPrometheusTemp(Models\ModifyPrometheusTempRequest $req) This API is used to modify a template.
