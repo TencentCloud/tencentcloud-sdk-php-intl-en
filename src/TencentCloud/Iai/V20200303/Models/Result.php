@@ -24,10 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCandidates(array $Candidates) Set Most matching candidate recognized
  * @method FaceRect getFaceRect() Obtain Position of detected face frame
  * @method void setFaceRect(FaceRect $FaceRect) Set Position of detected face frame
- * @method integer getRetCode() Obtain Status return code of detected face image. 0: normal. 
--1601: the image quality control requirement is not met; in this case, `Candidate` is empty.
- * @method void setRetCode(integer $RetCode) Set Status return code of detected face image. 0: normal. 
--1601: the image quality control requirement is not met; in this case, `Candidate` is empty.
+ * @method integer getRetCode() Obtain The status return code for the face image detected. Valid values: `0` - normal; `-1601` - the image does not meet the quality requirements, in which case `Candidate` is empty; `-1604` - the face similarity is not higher than `FaceMatchThreshold`.
+ * @method void setRetCode(integer $RetCode) Set The status return code for the face image detected. Valid values: `0` - normal; `-1601` - the image does not meet the quality requirements, in which case `Candidate` is empty; `-1604` - the face similarity is not higher than `FaceMatchThreshold`.
  */
 class Result extends AbstractModel
 {
@@ -42,16 +40,14 @@ class Result extends AbstractModel
     public $FaceRect;
 
     /**
-     * @var integer Status return code of detected face image. 0: normal. 
--1601: the image quality control requirement is not met; in this case, `Candidate` is empty.
+     * @var integer The status return code for the face image detected. Valid values: `0` - normal; `-1601` - the image does not meet the quality requirements, in which case `Candidate` is empty; `-1604` - the face similarity is not higher than `FaceMatchThreshold`.
      */
     public $RetCode;
 
     /**
      * @param array $Candidates Most matching candidate recognized
      * @param FaceRect $FaceRect Position of detected face frame
-     * @param integer $RetCode Status return code of detected face image. 0: normal. 
--1601: the image quality control requirement is not met; in this case, `Candidate` is empty.
+     * @param integer $RetCode The status return code for the face image detected. Valid values: `0` - normal; `-1601` - the image does not meet the quality requirements, in which case `Candidate` is empty; `-1604` - the face similarity is not higher than `FaceMatchThreshold`.
      */
     function __construct()
     {

@@ -14,43 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Kms\V20190118\Models;
+namespace TencentCloud\Rum\V20210622\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeWhiteBoxKeyDetails response structure.
+ * ResumeProject response structure.
  *
- * @method array getKeyInfos() Obtain White-box key information list
- * @method void setKeyInfos(array $KeyInfos) Set White-box key information list
- * @method integer getTotalCount() Obtain Total white-box keys.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setTotalCount(integer $TotalCount) Set Total white-box keys.
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
-class DescribeWhiteBoxKeyDetailsResponse extends AbstractModel
+class ResumeProjectResponse extends AbstractModel
 {
-    /**
-     * @var array White-box key information list
-     */
-    public $KeyInfos;
-
-    /**
-     * @var integer Total white-box keys.
-Note: This field may return null, indicating that no valid values can be obtained.
-     */
-    public $TotalCount;
-
     /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
 
     /**
-     * @param array $KeyInfos White-box key information list
-     * @param integer $TotalCount Total white-box keys.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -66,19 +46,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if ($param === null) {
             return;
         }
-        if (array_key_exists("KeyInfos",$param) and $param["KeyInfos"] !== null) {
-            $this->KeyInfos = [];
-            foreach ($param["KeyInfos"] as $key => $value){
-                $obj = new WhiteboxKeyInfo();
-                $obj->deserialize($value);
-                array_push($this->KeyInfos, $obj);
-            }
-        }
-
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
-        }
-
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
             $this->RequestId = $param["RequestId"];
         }

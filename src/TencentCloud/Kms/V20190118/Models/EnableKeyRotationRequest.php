@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getKeyId() Obtain Unique CMK ID
  * @method void setKeyId(string $KeyId) Set Unique CMK ID
+ * @method integer getRotateDays() Obtain The interval between each key rotation in days. Value range: 7 - 365 (default).
+ * @method void setRotateDays(integer $RotateDays) Set The interval between each key rotation in days. Value range: 7 - 365 (default).
  */
 class EnableKeyRotationRequest extends AbstractModel
 {
@@ -31,7 +33,13 @@ class EnableKeyRotationRequest extends AbstractModel
     public $KeyId;
 
     /**
+     * @var integer The interval between each key rotation in days. Value range: 7 - 365 (default).
+     */
+    public $RotateDays;
+
+    /**
      * @param string $KeyId Unique CMK ID
+     * @param integer $RotateDays The interval between each key rotation in days. Value range: 7 - 365 (default).
      */
     function __construct()
     {
@@ -48,6 +56,10 @@ class EnableKeyRotationRequest extends AbstractModel
         }
         if (array_key_exists("KeyId",$param) and $param["KeyId"] !== null) {
             $this->KeyId = $param["KeyId"];
+        }
+
+        if (array_key_exists("RotateDays",$param) and $param["RotateDays"] !== null) {
+            $this->RotateDays = $param["RotateDays"];
         }
     }
 }

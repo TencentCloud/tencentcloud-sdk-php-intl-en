@@ -29,10 +29,10 @@ This API is used to create a log download task.
 
 Default API request rate limit: 20 requests/sec.
  * @method Models\CreateOfflineLogConfigResponse CreateOfflineLogConfig(Models\CreateOfflineLogConfigRequest $req) This API is used to create an offline log listener to report offline logs of particular users.
- * @method Models\CreateProjectResponse CreateProject(Models\CreateProjectRequest $req) This API is used to create a project (owned by the specified team).
+ * @method Models\CreateProjectResponse CreateProject(Models\CreateProjectRequest $req) This API is used to create a RUM application which belongs to a specific team.
  * @method Models\CreateReleaseFileResponse CreateReleaseFile(Models\CreateReleaseFileRequest $req) This API is used to create a file record for the specified project.
  * @method Models\CreateStarProjectResponse CreateStarProject(Models\CreateStarProjectRequest $req) This API is used to add a starred project.
- * @method Models\CreateTawInstanceResponse CreateTawInstance(Models\CreateTawInstanceRequest $req) This API is used to create a RUM instance.
+ * @method Models\CreateTawInstanceResponse CreateTawInstance(Models\CreateTawInstanceRequest $req) This API is used to create a RUM business system.
  * @method Models\CreateWhitelistResponse CreateWhitelist(Models\CreateWhitelistRequest $req) This API is used to create an allowlist.
  * @method Models\DeleteInstanceResponse DeleteInstance(Models\DeleteInstanceRequest $req) This API is used to delete an instance. The deleted instance cannot be recovered.
  * @method Models\DeleteLogExportResponse DeleteLogExport(Models\DeleteLogExportRequest $req) API domain name: `rum.tencentcloudapi.com`.
@@ -71,26 +71,29 @@ It includes the Web Vitals metric for the page loading performance.
 This API is used to get the list of log download tasks.
 
 Default API request rate limit: 20 requests/sec.
- * @method Models\DescribeLogListResponse DescribeLogList(Models\DescribeLogListRequest $req) This API is used to get the list of logs in a project (created by an instance).
+ * @method Models\DescribeLogListResponse DescribeLogList(Models\DescribeLogListRequest $req) This API is used to get the log list. It has been deprecated. Use `DescribeRumLogList` instead.
  * @method Models\DescribeOfflineLogConfigsResponse DescribeOfflineLogConfigs(Models\DescribeOfflineLogConfigsRequest $req) This API is used to get the configuration of the set offline log listener and return the unique user ID.
  * @method Models\DescribeOfflineLogRecordsResponse DescribeOfflineLogRecords(Models\DescribeOfflineLogRecordsRequest $req) This API is used to get all (up to 100) offline log records.
  * @method Models\DescribeOfflineLogsResponse DescribeOfflineLogs(Models\DescribeOfflineLogsRequest $req) This API is used to get the specified offline log.
- * @method Models\DescribeProjectLimitsResponse DescribeProjectLimits(Models\DescribeProjectLimitsRequest $req) This API is used to get the list of project reporting rates.
+ * @method Models\DescribeProjectLimitsResponse DescribeProjectLimits(Models\DescribeProjectLimitsRequest $req) This API is used to get the sampling information of an application’s reporting APIs.
  * @method Models\DescribeProjectsResponse DescribeProjects(Models\DescribeProjectsRequest $req) This API is used to get the list of projects (under teams created by an instance).
  * @method Models\DescribePvListResponse DescribePvList(Models\DescribePvListRequest $req) This API is used to get the list of PVs under a project.
  * @method Models\DescribeReleaseFileSignResponse DescribeReleaseFileSign(Models\DescribeReleaseFileSignRequest $req) This API is used to get the temporary key for uploaded file storage.
- * @method Models\DescribeReleaseFilesResponse DescribeReleaseFiles(Models\DescribeReleaseFilesRequest $req) This API is used to get the list of sourcemap files of a project.
+ * @method Models\DescribeReleaseFilesResponse DescribeReleaseFiles(Models\DescribeReleaseFilesRequest $req) This API is used to get the list of source maps of an application.
  * @method Models\DescribeRumGroupLogResponse DescribeRumGroupLog(Models\DescribeRumGroupLogRequest $req) This API is used to get the log aggregation information under a project.
+ * @method Models\DescribeRumLogExportResponse DescribeRumLogExport(Models\DescribeRumLogExportRequest $req) This API is used to get the list of logs in a project (created by an instance).
+ * @method Models\DescribeRumLogExportsResponse DescribeRumLogExports(Models\DescribeRumLogExportsRequest $req) This API is used to get the list of exported logs in a project.
  * @method Models\DescribeRumLogListResponse DescribeRumLogList(Models\DescribeRumLogListRequest $req) This API is used to get the list of logs in a project (created by an instance).
  * @method Models\DescribeRumStatsLogListResponse DescribeRumStatsLogList(Models\DescribeRumStatsLogListRequest $req) This API is used to get the list of logs in a project every minute.
  * @method Models\DescribeScoresResponse DescribeScores(Models\DescribeScoresRequest $req) This API is used to get the list of homepage scores.
  * @method Models\DescribeTawAreasResponse DescribeTawAreas(Models\DescribeTawAreasRequest $req) This API is used to query region information.
  * @method Models\DescribeUvListResponse DescribeUvList(Models\DescribeUvListRequest $req) This API is used to get the list of UVs under a project.
  * @method Models\DescribeWhitelistsResponse DescribeWhitelists(Models\DescribeWhitelistsRequest $req) This API is used to get the list of allowlists.
- * @method Models\ModifyInstanceResponse ModifyInstance(Models\ModifyInstanceRequest $req) This API is used to modify an instance.
- * @method Models\ModifyProjectResponse ModifyProject(Models\ModifyProjectRequest $req) This API is used to modify a RUM project.
+ * @method Models\ModifyInstanceResponse ModifyInstance(Models\ModifyInstanceRequest $req) This API is used to modify a RUM business system.
+ * @method Models\ModifyProjectResponse ModifyProject(Models\ModifyProjectRequest $req) This API is used to modify the RUM application information.
  * @method Models\ModifyProjectLimitResponse ModifyProjectLimit(Models\ModifyProjectLimitRequest $req) This API is used to add or modify data reporting limit.
- * @method Models\ResumeInstanceResponse ResumeInstance(Models\ResumeInstanceRequest $req) This API is used to resume an instance.
+ * @method Models\ResumeInstanceResponse ResumeInstance(Models\ResumeInstanceRequest $req) This API is used to recover a RUM business system so that you can use the application to report data normally.
+ * @method Models\ResumeProjectResponse ResumeProject(Models\ResumeProjectRequest $req) This API is used to recover an application and resume data reporting.
  * @method Models\StopInstanceResponse StopInstance(Models\StopInstanceRequest $req) This API is used to stop an instance.
  * @method Models\StopProjectResponse StopProject(Models\StopProjectRequest $req) This API is used to stop a project from reporting data.
  */

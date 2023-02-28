@@ -22,16 +22,16 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getOrderBy() Obtain Sorting order (required). Valid values: `desc`, `asc`.
  * @method void setOrderBy(string $OrderBy) Set Sorting order (required). Valid values: `desc`, `asc`.
- * @method string getStartTime() Obtain Start time (required)
- * @method void setStartTime(string $StartTime) Set Start time (required)
+ * @method string getStartTime() Obtain Start time in milliseconds. It is in timestamp format and is required.
+ * @method void setStartTime(string $StartTime) Set Start time in milliseconds. It is in timestamp format and is required.
  * @method integer getLimit() Obtain The number of raw logs returned for a single query. This parameter is required. Maximum value: `100`.
  * @method void setLimit(integer $Limit) Set The number of raw logs returned for a single query. This parameter is required. Maximum value: `100`.
  * @method integer getPage() Obtain Page number
  * @method void setPage(integer $Page) Set Page number
  * @method string getQuery() Obtain Query statement, which is required and can contain up to 4,096 characters.
  * @method void setQuery(string $Query) Set Query statement, which is required and can contain up to 4,096 characters.
- * @method string getEndTime() Obtain End time (required)
- * @method void setEndTime(string $EndTime) Set End time (required)
+ * @method string getEndTime() Obtain End time in milliseconds. It is in timestamp format and is required.
+ * @method void setEndTime(string $EndTime) Set End time in milliseconds. It is in timestamp format and is required.
  * @method integer getID() Obtain Project ID (required)
  * @method void setID(integer $ID) Set Project ID (required)
  */
@@ -43,7 +43,7 @@ class DescribeRumLogListRequest extends AbstractModel
     public $OrderBy;
 
     /**
-     * @var string Start time (required)
+     * @var string Start time in milliseconds. It is in timestamp format and is required.
      */
     public $StartTime;
 
@@ -63,7 +63,7 @@ class DescribeRumLogListRequest extends AbstractModel
     public $Query;
 
     /**
-     * @var string End time (required)
+     * @var string End time in milliseconds. It is in timestamp format and is required.
      */
     public $EndTime;
 
@@ -74,11 +74,11 @@ class DescribeRumLogListRequest extends AbstractModel
 
     /**
      * @param string $OrderBy Sorting order (required). Valid values: `desc`, `asc`.
-     * @param string $StartTime Start time (required)
+     * @param string $StartTime Start time in milliseconds. It is in timestamp format and is required.
      * @param integer $Limit The number of raw logs returned for a single query. This parameter is required. Maximum value: `100`.
      * @param integer $Page Page number
      * @param string $Query Query statement, which is required and can contain up to 4,096 characters.
-     * @param string $EndTime End time (required)
+     * @param string $EndTime End time in milliseconds. It is in timestamp format and is required.
      * @param integer $ID Project ID (required)
      */
     function __construct()
