@@ -39,10 +39,9 @@ use TencentCloud\Common\AbstractModel;
 `Label` indicates the violation label. Valid values:
 <li>`Porn` (pornographic content)</li>
 <li>`Terror` (terrorist content)</li>
-<li>Polity (politically sensitive content)</li>
-<li>`Ad`</li>
+<li>`Polity` (politically sensitive content)</li>
+<li>`Ad` (advertisement)</li>
 <li>`Illegal` (illegal content)</li>
-<li>`Religion`</li>
 <li>`Abuse`</li>
 <li>`Moan`</li>
  * @method void setTypeSet(array $TypeSet) Set The moderation type in the format of `Form.Label`. This parameter is valid if `Suggestion` is `review` or `block`.
@@ -54,10 +53,9 @@ use TencentCloud\Common\AbstractModel;
 `Label` indicates the violation label. Valid values:
 <li>`Porn` (pornographic content)</li>
 <li>`Terror` (terrorist content)</li>
-<li>Polity (politically sensitive content)</li>
-<li>`Ad`</li>
+<li>`Polity` (politically sensitive content)</li>
+<li>`Ad` (advertisement)</li>
 <li>`Illegal` (illegal content)</li>
-<li>`Religion`</li>
 <li>`Abuse`</li>
 <li>`Moan`</li>
  * @method string getReviewTime() Obtain The moderation time in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
@@ -88,10 +86,9 @@ class ReviewInfo extends AbstractModel
 `Label` indicates the violation label. Valid values:
 <li>`Porn` (pornographic content)</li>
 <li>`Terror` (terrorist content)</li>
-<li>Polity (politically sensitive content)</li>
-<li>`Ad`</li>
+<li>`Polity` (politically sensitive content)</li>
+<li>`Ad` (advertisement)</li>
 <li>`Illegal` (illegal content)</li>
-<li>`Religion`</li>
 <li>`Abuse`</li>
 <li>`Moan`</li>
      */
@@ -117,10 +114,9 @@ class ReviewInfo extends AbstractModel
 `Label` indicates the violation label. Valid values:
 <li>`Porn` (pornographic content)</li>
 <li>`Terror` (terrorist content)</li>
-<li>Polity (politically sensitive content)</li>
-<li>`Ad`</li>
+<li>`Polity` (politically sensitive content)</li>
+<li>`Ad` (advertisement)</li>
 <li>`Illegal` (illegal content)</li>
-<li>`Religion`</li>
 <li>`Abuse`</li>
 <li>`Moan`</li>
      * @param string $ReviewTime The moderation time in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).

@@ -18,7 +18,7 @@ namespace TencentCloud\Sqlserver\V20180328\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Used in the `RestoreInstance`, `RollbackInstance`, `CreateMigration`, and `CloneDB` APIs to specify and rename the database to be restored, rolled back, migrated, or cloned.
+ * It is used to specify and rename the database to be restored through the `RestoreInstance`, `RollbackInstance`, `CreateMigration`, `CloneDB` or `ModifyBackupMigration` APIs.
  *
  * @method string getOldName() Obtain Database name. If the `OldName` database does not exist, a failure will be returned.
 It can be left empty in offline migration tasks.

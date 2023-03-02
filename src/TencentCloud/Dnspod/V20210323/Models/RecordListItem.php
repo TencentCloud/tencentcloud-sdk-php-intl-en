@@ -50,6 +50,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setMX(integer $MX) Set The MX value, applicable to the MX record only.
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method boolean getDefaultNS() Obtain Whether it is a default NS record.
+ * @method void setDefaultNS(boolean $DefaultNS) Set Whether it is a default NS record.
  */
 class RecordListItem extends AbstractModel
 {
@@ -121,6 +123,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $MX;
 
     /**
+     * @var boolean Whether it is a default NS record.
+     */
+    public $DefaultNS;
+
+    /**
      * @param integer $RecordId The record ID.
      * @param string $Value The record value.
      * @param string $Status The record status. Valid values: `ENABLE` (enabled), `DISABLE` (disabled).
@@ -136,6 +143,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param integer $TTL The record cache time.
      * @param integer $MX The MX value, applicable to the MX record only.
 Note: This field may return null, indicating that no valid values can be obtained.
+     * @param boolean $DefaultNS Whether it is a default NS record.
      */
     function __construct()
     {
@@ -200,6 +208,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("MX",$param) and $param["MX"] !== null) {
             $this->MX = $param["MX"];
+        }
+
+        if (array_key_exists("DefaultNS",$param) and $param["DefaultNS"] !== null) {
+            $this->DefaultNS = $param["DefaultNS"];
         }
     }
 }

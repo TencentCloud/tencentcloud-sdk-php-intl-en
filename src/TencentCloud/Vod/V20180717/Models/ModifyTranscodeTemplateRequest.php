@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDefinition(integer $Definition) Set Unique ID of transcoding template.
  * @method integer getSubAppId() Obtain <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
  * @method void setSubAppId(integer $SubAppId) Set <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
- * @method string getContainer() Obtain Container. Valid values: mp4; flv; hls; mp3; flac; ogg; m4a. Among them, mp3, flac, ogg, and m4a are for audio files.
- * @method void setContainer(string $Container) Set Container. Valid values: mp4; flv; hls; mp3; flac; ogg; m4a. Among them, mp3, flac, ogg, and m4a are for audio files.
+ * @method string getContainer() Obtain The container format. Valid values: `mp4`, `flv`, `hls`, `mp3`, `flac`, `ogg`, `m4a`, `wav` ( `mp3`, `flac`, `ogg`, `m4a`, and `wav` are audio file formats).
+ * @method void setContainer(string $Container) Set The container format. Valid values: `mp4`, `flv`, `hls`, `mp3`, `flac`, `ogg`, `m4a`, `wav` ( `mp3`, `flac`, `ogg`, `m4a`, and `wav` are audio file formats).
  * @method string getName() Obtain Transcoding template name. Length limit: 64 characters.
  * @method void setName(string $Name) Set Transcoding template name. Length limit: 64 characters.
  * @method string getComment() Obtain Template description. Length limit: 256 characters.
@@ -68,7 +68,7 @@ class ModifyTranscodeTemplateRequest extends AbstractModel
     public $SubAppId;
 
     /**
-     * @var string Container. Valid values: mp4; flv; hls; mp3; flac; ogg; m4a. Among them, mp3, flac, ogg, and m4a are for audio files.
+     * @var string The container format. Valid values: `mp4`, `flv`, `hls`, `mp3`, `flac`, `ogg`, `m4a`, `wav` ( `mp3`, `flac`, `ogg`, `m4a`, and `wav` are audio file formats).
      */
     public $Container;
 
@@ -121,7 +121,7 @@ class ModifyTranscodeTemplateRequest extends AbstractModel
     /**
      * @param integer $Definition Unique ID of transcoding template.
      * @param integer $SubAppId <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
-     * @param string $Container Container. Valid values: mp4; flv; hls; mp3; flac; ogg; m4a. Among them, mp3, flac, ogg, and m4a are for audio files.
+     * @param string $Container The container format. Valid values: `mp4`, `flv`, `hls`, `mp3`, `flac`, `ogg`, `m4a`, `wav` ( `mp3`, `flac`, `ogg`, `m4a`, and `wav` are audio file formats).
      * @param string $Name Transcoding template name. Length limit: 64 characters.
      * @param string $Comment Template description. Length limit: 256 characters.
      * @param integer $RemoveVideo Whether to remove video data. Valid values:

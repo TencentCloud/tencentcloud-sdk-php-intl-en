@@ -25,24 +25,26 @@ use TencentCloud\Common\AbstractModel;
 <li>`EditMedia`: Video editing</li>
 <li>`SplitMedia`: Video splitting</li>
 <li>`ComposeMedia`: Media file production</li>
-<li>`WechatPublish`: WeChat publishing</li>
-<li>`WechatMiniProgramPublish`: Publishing videos on WeChat Mini Program</li>
+<li>`WechatPublish`: Weixin publishing</li>
+<li>`WechatMiniProgramPublish`: Publishing videos on Weixin Mini Program</li>
 <li>`PullUpload`: Pulling media files for upload</li>
 <li>`FastClipMedia`: Quick clipping</li>
 <li>`RemoveWatermarkTask`: Watermark removal</li>
 <li>`DescribeFileAttributesTask`: Getting file attributes</li>
+<li>`RebuildMedia`; Remastering audio/video</li>
 <li> `ReviewAudioVideo`: Moderation</li>
  * @method void setTaskType(string $TaskType) Set The task type. Valid values:
 <li>`Procedure`: Video processing</li>
 <li>`EditMedia`: Video editing</li>
 <li>`SplitMedia`: Video splitting</li>
 <li>`ComposeMedia`: Media file production</li>
-<li>`WechatPublish`: WeChat publishing</li>
-<li>`WechatMiniProgramPublish`: Publishing videos on WeChat Mini Program</li>
+<li>`WechatPublish`: Weixin publishing</li>
+<li>`WechatMiniProgramPublish`: Publishing videos on Weixin Mini Program</li>
 <li>`PullUpload`: Pulling media files for upload</li>
 <li>`FastClipMedia`: Quick clipping</li>
 <li>`RemoveWatermarkTask`: Watermark removal</li>
 <li>`DescribeFileAttributesTask`: Getting file attributes</li>
+<li>`RebuildMedia`; Remastering audio/video</li>
 <li> `ReviewAudioVideo`: Moderation</li>
  * @method string getStatus() Obtain Task status. Valid values:
 <li>WAITING: waiting;</li>
@@ -110,6 +112,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setRemoveWatermarkTask(RemoveWatermarkTask $RemoveWatermarkTask) Set The information of a watermark removal task. This parameter is valid only if `TaskType` is `RemoveWatermark`.
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method RebuildMediaTask getRebuildMediaTask() Obtain The information of an audio/video remastering task. This parameter is valid only if `TaskType` is `RebuildMedia`.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setRebuildMediaTask(RebuildMediaTask $RebuildMediaTask) Set The information of an audio/video remastering task. This parameter is valid only if `TaskType` is `RebuildMedia`.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method ExtractTraceWatermarkTask getExtractTraceWatermarkTask() Obtain The information of a digital watermark extraction task. This parameter is valid only if `TaskType` is `ExtractTraceWatermark`.
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setExtractTraceWatermarkTask(ExtractTraceWatermarkTask $ExtractTraceWatermarkTask) Set The information of a digital watermark extraction task. This parameter is valid only if `TaskType` is `ExtractTraceWatermark`.
@@ -137,12 +143,13 @@ class DescribeTaskDetailResponse extends AbstractModel
 <li>`EditMedia`: Video editing</li>
 <li>`SplitMedia`: Video splitting</li>
 <li>`ComposeMedia`: Media file production</li>
-<li>`WechatPublish`: WeChat publishing</li>
-<li>`WechatMiniProgramPublish`: Publishing videos on WeChat Mini Program</li>
+<li>`WechatPublish`: Weixin publishing</li>
+<li>`WechatMiniProgramPublish`: Publishing videos on Weixin Mini Program</li>
 <li>`PullUpload`: Pulling media files for upload</li>
 <li>`FastClipMedia`: Quick clipping</li>
 <li>`RemoveWatermarkTask`: Watermark removal</li>
 <li>`DescribeFileAttributesTask`: Getting file attributes</li>
+<li>`RebuildMedia`; Remastering audio/video</li>
 <li> `ReviewAudioVideo`: Moderation</li>
      */
     public $TaskType;
@@ -249,6 +256,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $RemoveWatermarkTask;
 
     /**
+     * @var RebuildMediaTask The information of an audio/video remastering task. This parameter is valid only if `TaskType` is `RebuildMedia`.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $RebuildMediaTask;
+
+    /**
      * @var ExtractTraceWatermarkTask The information of a digital watermark extraction task. This parameter is valid only if `TaskType` is `ExtractTraceWatermark`.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
@@ -283,12 +296,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
 <li>`EditMedia`: Video editing</li>
 <li>`SplitMedia`: Video splitting</li>
 <li>`ComposeMedia`: Media file production</li>
-<li>`WechatPublish`: WeChat publishing</li>
-<li>`WechatMiniProgramPublish`: Publishing videos on WeChat Mini Program</li>
+<li>`WechatPublish`: Weixin publishing</li>
+<li>`WechatMiniProgramPublish`: Publishing videos on Weixin Mini Program</li>
 <li>`PullUpload`: Pulling media files for upload</li>
 <li>`FastClipMedia`: Quick clipping</li>
 <li>`RemoveWatermarkTask`: Watermark removal</li>
 <li>`DescribeFileAttributesTask`: Getting file attributes</li>
+<li>`RebuildMedia`; Remastering audio/video</li>
 <li> `ReviewAudioVideo`: Moderation</li>
      * @param string $Status Task status. Valid values:
 <li>WAITING: waiting;</li>
@@ -322,6 +336,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @param SnapshotByTimeOffsetTask2017 $SnapshotByTimeOffsetTask Time point screencapturing task information. This field has a value only when `TaskType` is `SnapshotByTimeOffset`.
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param RemoveWatermarkTask $RemoveWatermarkTask The information of a watermark removal task. This parameter is valid only if `TaskType` is `RemoveWatermark`.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param RebuildMediaTask $RebuildMediaTask The information of an audio/video remastering task. This parameter is valid only if `TaskType` is `RebuildMedia`.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param ExtractTraceWatermarkTask $ExtractTraceWatermarkTask The information of a digital watermark extraction task. This parameter is valid only if `TaskType` is `ExtractTraceWatermark`.
 Note: This field may return null, indicating that no valid values can be obtained.
@@ -429,6 +445,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (array_key_exists("RemoveWatermarkTask",$param) and $param["RemoveWatermarkTask"] !== null) {
             $this->RemoveWatermarkTask = new RemoveWatermarkTask();
             $this->RemoveWatermarkTask->deserialize($param["RemoveWatermarkTask"]);
+        }
+
+        if (array_key_exists("RebuildMediaTask",$param) and $param["RebuildMediaTask"] !== null) {
+            $this->RebuildMediaTask = new RebuildMediaTask();
+            $this->RebuildMediaTask->deserialize($param["RebuildMediaTask"]);
         }
 
         if (array_key_exists("ExtractTraceWatermarkTask",$param) and $param["ExtractTraceWatermarkTask"] !== null) {

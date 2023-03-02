@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setName(string $Name) Set 
  * @method string getComment() Obtain 
  * @method void setComment(string $Comment) Set 
- * @method array getLabels() Obtain The violation labels to use. Valid values: <li>`Porn`: Pornographic content</li> <li>`Terror`: Terrorist content</li> <li>Polity: Politically sensitive content</li> <li>`Moan`: Moaning</li>
- * @method void setLabels(array $Labels) Set The violation labels to use. Valid values: <li>`Porn`: Pornographic content</li> <li>`Terror`: Terrorist content</li> <li>Polity: Politically sensitive content</li> <li>`Moan`: Moaning</li>
+ * @method array getLabels() Obtain The violation labels to use. Valid values: <li>`Porn`: Pornographic content</li> <li>`Terror`: Terrorist content</li> <li>`Moan`: Moaning</li>
+ * @method void setLabels(array $Labels) Set The violation labels to use. Valid values: <li>`Porn`: Pornographic content</li> <li>`Terror`: Terrorist content</li> <li>`Moan`: Moaning</li>
  */
 class ModifyReviewTemplateRequest extends AbstractModel
 {
@@ -54,7 +54,7 @@ class ModifyReviewTemplateRequest extends AbstractModel
     public $Comment;
 
     /**
-     * @var array The violation labels to use. Valid values: <li>`Porn`: Pornographic content</li> <li>`Terror`: Terrorist content</li> <li>Polity: Politically sensitive content</li> <li>`Moan`: Moaning</li>
+     * @var array The violation labels to use. Valid values: <li>`Porn`: Pornographic content</li> <li>`Terror`: Terrorist content</li> <li>`Moan`: Moaning</li>
      */
     public $Labels;
 
@@ -63,7 +63,7 @@ class ModifyReviewTemplateRequest extends AbstractModel
      * @param integer $SubAppId 
      * @param string $Name 
      * @param string $Comment 
-     * @param array $Labels The violation labels to use. Valid values: <li>`Porn`: Pornographic content</li> <li>`Terror`: Terrorist content</li> <li>Polity: Politically sensitive content</li> <li>`Moan`: Moaning</li>
+     * @param array $Labels The violation labels to use. Valid values: <li>`Porn`: Pornographic content</li> <li>`Terror`: Terrorist content</li> <li>`Moan`: Moaning</li>
      */
     function __construct()
     {

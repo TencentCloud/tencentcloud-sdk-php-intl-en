@@ -22,8 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getUserName() Obtain Database username
  * @method void setUserName(string $UserName) Set Database username
- * @method string getPrivilege() Obtain Database permissions. ReadWrite: read/write, ReadOnly: read-only
- * @method void setPrivilege(string $Privilege) Set Database permissions. ReadWrite: read/write, ReadOnly: read-only
+ * @method string getPrivilege() Obtain Database permission. Valid values: `ReadWrite` (read-write), `ReadOnly` (read-only), `Delete` (delete the database permissions of this account), `DBOwner` (owner).
+ * @method void setPrivilege(string $Privilege) Set Database permission. Valid values: `ReadWrite` (read-write), `ReadOnly` (read-only), `Delete` (delete the database permissions of this account), `DBOwner` (owner).
+ * @method string getAccountType() Obtain Account name. Valid values: `L0` (admin account, only for basic edition), `L1` (privileged account), `L2` (designated account), `L3` (standard account).
+ * @method void setAccountType(string $AccountType) Set Account name. Valid values: `L0` (admin account, only for basic edition), `L1` (privileged account), `L2` (designated account), `L3` (standard account).
  */
 class AccountPrivilege extends AbstractModel
 {
@@ -33,13 +35,19 @@ class AccountPrivilege extends AbstractModel
     public $UserName;
 
     /**
-     * @var string Database permissions. ReadWrite: read/write, ReadOnly: read-only
+     * @var string Database permission. Valid values: `ReadWrite` (read-write), `ReadOnly` (read-only), `Delete` (delete the database permissions of this account), `DBOwner` (owner).
      */
     public $Privilege;
 
     /**
+     * @var string Account name. Valid values: `L0` (admin account, only for basic edition), `L1` (privileged account), `L2` (designated account), `L3` (standard account).
+     */
+    public $AccountType;
+
+    /**
      * @param string $UserName Database username
-     * @param string $Privilege Database permissions. ReadWrite: read/write, ReadOnly: read-only
+     * @param string $Privilege Database permission. Valid values: `ReadWrite` (read-write), `ReadOnly` (read-only), `Delete` (delete the database permissions of this account), `DBOwner` (owner).
+     * @param string $AccountType Account name. Valid values: `L0` (admin account, only for basic edition), `L1` (privileged account), `L2` (designated account), `L3` (standard account).
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class AccountPrivilege extends AbstractModel
 
         if (array_key_exists("Privilege",$param) and $param["Privilege"] !== null) {
             $this->Privilege = $param["Privilege"];
+        }
+
+        if (array_key_exists("AccountType",$param) and $param["AccountType"] !== null) {
+            $this->AccountType = $param["AccountType"];
         }
     }
 }

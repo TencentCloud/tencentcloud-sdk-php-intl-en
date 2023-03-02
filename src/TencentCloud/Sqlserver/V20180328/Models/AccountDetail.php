@@ -42,6 +42,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAuthentication(string $Authentication) Set Valid values: `win-windows authentication`, `sql-sqlserver authentication`.
  * @method string getHost() Obtain The host required for `win-windows authentication` account
  * @method void setHost(string $Host) Set The host required for `win-windows authentication` account
+ * @method string getAccountType() Obtain Account type. Valid values: `L0` (admin account, only for basic edition), `L1` (privileged account), `L2` (designated account), `L3` (standard account).
+ * @method void setAccountType(string $AccountType) Set Account type. Valid values: `L0` (admin account, only for basic edition), `L1` (privileged account), `L2` (designated account), `L3` (standard account).
  */
 class AccountDetail extends AbstractModel
 {
@@ -101,6 +103,11 @@ class AccountDetail extends AbstractModel
     public $Host;
 
     /**
+     * @var string Account type. Valid values: `L0` (admin account, only for basic edition), `L1` (privileged account), `L2` (designated account), `L3` (standard account).
+     */
+    public $AccountType;
+
+    /**
      * @param string $Name Account name
      * @param string $Remark Account remarks
      * @param string $CreateTime Account creation time
@@ -112,6 +119,7 @@ class AccountDetail extends AbstractModel
      * @param boolean $IsAdmin Whether it is an admin account
      * @param string $Authentication Valid values: `win-windows authentication`, `sql-sqlserver authentication`.
      * @param string $Host The host required for `win-windows authentication` account
+     * @param string $AccountType Account type. Valid values: `L0` (admin account, only for basic edition), `L1` (privileged account), `L2` (designated account), `L3` (standard account).
      */
     function __construct()
     {
@@ -173,6 +181,10 @@ class AccountDetail extends AbstractModel
 
         if (array_key_exists("Host",$param) and $param["Host"] !== null) {
             $this->Host = $param["Host"];
+        }
+
+        if (array_key_exists("AccountType",$param) and $param["AccountType"] !== null) {
+            $this->AccountType = $param["AccountType"];
         }
     }
 }

@@ -56,6 +56,10 @@ Note: this field may return ‘null’, indicating that no valid values can be o
 Note: this field may return ‘null’, indicating that no valid values can be obtained.
  * @method void setIsRecovery(string $IsRecovery) Set Whether this is the final restoration. For a full import task, this field will be left empty.
 Note: this field may return ‘null’, indicating that no valid values can be obtained.
+ * @method array getDBRename() Obtain Name set of renamed databases
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setDBRename(array $DBRename) Set Name set of renamed databases
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class Migration extends AbstractModel
 {
@@ -142,6 +146,12 @@ Note: this field may return ‘null’, indicating that no valid values can be o
     public $IsRecovery;
 
     /**
+     * @var array Name set of renamed databases
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $DBRename;
+
+    /**
      * @param string $MigrationId Backup import task ID or incremental import task ID
      * @param string $MigrationName Backup import task name. For an incremental import task, this field will be left empty.
 Note: this field may return ‘null’, indicating that no valid values can be obtained.
@@ -160,6 +170,8 @@ Note: this field may return ‘null’, indicating that no valid values can be o
      * @param MigrationAction $Action Operation allowed in the current status
      * @param string $IsRecovery Whether this is the final restoration. For a full import task, this field will be left empty.
 Note: this field may return ‘null’, indicating that no valid values can be obtained.
+     * @param array $DBRename Name set of renamed databases
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -238,6 +250,15 @@ Note: this field may return ‘null’, indicating that no valid values can be o
 
         if (array_key_exists("IsRecovery",$param) and $param["IsRecovery"] !== null) {
             $this->IsRecovery = $param["IsRecovery"];
+        }
+
+        if (array_key_exists("DBRename",$param) and $param["DBRename"] !== null) {
+            $this->DBRename = [];
+            foreach ($param["DBRename"] as $key => $value){
+                $obj = new DBRenameRes();
+                $obj->deserialize($value);
+                array_push($this->DBRename, $obj);
+            }
         }
     }
 }

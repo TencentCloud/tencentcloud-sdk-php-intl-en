@@ -58,6 +58,9 @@ This API is used to create a custom audio/video moderation template. Up to 50 te
  * @method Models\CreateProcedureTemplateResponse CreateProcedureTemplate(Models\CreateProcedureTemplateRequest $req) This API is used to create a custom task flow template. Up to 50 templates can be created.
  * @method Models\CreateReviewTemplateResponse CreateReviewTemplate(Models\CreateReviewTemplateRequest $req) This API is used to create a custom moderation template. Up to 50 templates can be created in total.
 > The templates can only be used by the APIs [ReviewAudioVideo](https://intl.cloud.tencent.com/document/api/266/80283?from_cn_redirect=1) and [ReviewImage](https://intl.cloud.tencent.com/document/api/266/73217?from_cn_redirect=1).
+ * @method Models\CreateRoundPlayResponse CreateRoundPlay(Models\CreateRoundPlayRequest $req) This API is used to create a playlist. You can create at most 100 playlists.
+For each video on the list, you can either use the original file or a transcoding file.
+The files must be in HLS format. Preferably, they should have the same bitrate and resolution.
  * @method Models\CreateSampleSnapshotTemplateResponse CreateSampleSnapshotTemplate(Models\CreateSampleSnapshotTemplateRequest $req) This API is used to create a custom sampled screencapturing template. Up to 16 templates can be created.
  * @method Models\CreateSnapshotByTimeOffsetTemplateResponse CreateSnapshotByTimeOffsetTemplate(Models\CreateSnapshotByTimeOffsetTemplateRequest $req) This API is used to create a custom time point screencapturing template. Up to 16 templates can be created.
  * @method Models\CreateStorageRegionResponse CreateStorageRegion(Models\CreateStorageRegionRequest $req) This API is used to enable storage in a region.
@@ -90,6 +93,7 @@ This API is used to delete a custom audio/video moderation template.
  * @method Models\DeleteProcedureTemplateResponse DeleteProcedureTemplate(Models\DeleteProcedureTemplateRequest $req) This API is used to delete a custom task flow template.  
  * @method Models\DeleteReviewTemplateResponse DeleteReviewTemplate(Models\DeleteReviewTemplateRequest $req) This API is used to delete a custom moderation template.
 > The templates can only be used by the APIs [ReviewAudioVideo](https://intl.cloud.tencent.com/document/api/266/80283?from_cn_redirect=1) and [ReviewImage](https://intl.cloud.tencent.com/document/api/266/73217?from_cn_redirect=1).
+ * @method Models\DeleteRoundPlayResponse DeleteRoundPlay(Models\DeleteRoundPlayRequest $req) This API is used to delete a playlist.
  * @method Models\DeleteSampleSnapshotTemplateResponse DeleteSampleSnapshotTemplate(Models\DeleteSampleSnapshotTemplateRequest $req) This API is used to delete a custom sampled screencapturing template.
  * @method Models\DeleteSnapshotByTimeOffsetTemplateResponse DeleteSnapshotByTimeOffsetTemplate(Models\DeleteSnapshotByTimeOffsetTemplateRequest $req) This API is used to delete a custom time point screencapturing template.
  * @method Models\DeleteSuperPlayerConfigResponse DeleteSuperPlayerConfig(Models\DeleteSuperPlayerConfigRequest $req) We have <font color='red'>stopped updating</font> this API. Currently, you no longer need a player configuration to use player signatures. For details, see [Player Signature](https://intl.cloud.tencent.com/document/product/266/45554?from_cn_redirect=1).
@@ -178,6 +182,7 @@ This API returns the video content duration for intelligent recognition in secon
 2. The query period is up to 90 days.
  * @method Models\DescribeReviewTemplatesResponse DescribeReviewTemplates(Models\DescribeReviewTemplatesRequest $req) This API is used to get the information of moderation templates.
 > The templates can only be used by the APIs [ReviewAudioVideo](https://intl.cloud.tencent.com/document/api/266/80283?from_cn_redirect=1) and [ReviewImage](https://intl.cloud.tencent.com/document/api/266/73217?from_cn_redirect=1).
+ * @method Models\DescribeRoundPlaysResponse DescribeRoundPlays(Models\DescribeRoundPlaysRequest $req) This API is used to query playlists.
  * @method Models\DescribeSampleSnapshotTemplatesResponse DescribeSampleSnapshotTemplates(Models\DescribeSampleSnapshotTemplatesRequest $req) This API is used to query the list of sampled screencapturing templates and supports paged queries by filters.
  * @method Models\DescribeSnapshotByTimeOffsetTemplatesResponse DescribeSnapshotByTimeOffsetTemplates(Models\DescribeSnapshotByTimeOffsetTemplatesRequest $req) This API is used to query the list of time point screencapturing templates and supports paged queries by filters.
  * @method Models\DescribeStorageDataResponse DescribeStorageData(Models\DescribeStorageDataRequest $req) This API is used to query the storage capacity usage and number of files.
@@ -257,6 +262,8 @@ If the current storage class is DEEP ARCHIVE, it can be changed to the following
  * @method Models\ModifyPersonSampleResponse ModifyPersonSample(Models\ModifyPersonSampleRequest $req) This API is used to modify sample information according to the sample ID. You can modify the name and description, add, delete, and reset facial features or tags. Leave at least one image after deleting facial features. To leave no image, please use the reset operation.
  * @method Models\ModifyReviewTemplateResponse ModifyReviewTemplate(Models\ModifyReviewTemplateRequest $req) This API is used to modify a custom moderation template.
 > The templates can only be used by the APIs [ReviewAudioVideo](https://intl.cloud.tencent.com/document/api/266/80283?from_cn_redirect=1) and [ReviewImage](https://intl.cloud.tencent.com/document/api/266/73217?from_cn_redirect=1).
+ * @method Models\ModifyRoundPlayResponse ModifyRoundPlay(Models\ModifyRoundPlayRequest $req) This API is used to modify a playlist.
+The modification will only take effect for new playback requests. For ongoing playback, the old playlist will be playable for seven days after the modification.
  * @method Models\ModifySampleSnapshotTemplateResponse ModifySampleSnapshotTemplate(Models\ModifySampleSnapshotTemplateRequest $req) This API is used to modify a custom sampled screencapturing template.
  * @method Models\ModifySnapshotByTimeOffsetTemplateResponse ModifySnapshotByTimeOffsetTemplate(Models\ModifySnapshotByTimeOffsetTemplateRequest $req) This API is used to modify a custom time point screencapturing template.
  * @method Models\ModifySubAppIdInfoResponse ModifySubAppIdInfo(Models\ModifySubAppIdInfoRequest $req) This API is used to modify subapplication information, but it is not allowed to modify primary application information.
@@ -302,6 +309,7 @@ If event notifications are used, the event type for moderation tasks is [ReviewA
 2. The URL domain names must have already been registered with VOD.
 3. Up to 20 URLs can be specified in one request.
 4. By default, the maximum number of URLs that can be refreshed per day is 10,000.
+ * @method Models\RebuildMediaResponse RebuildMedia(Models\RebuildMediaRequest $req) This API is used to remaster audio/video.
  * @method Models\RefreshUrlCacheResponse RefreshUrlCache(Models\RefreshUrlCacheRequest $req) 1. This API is used to purge URLs.
 2. The URL domain names must have already been registered with VOD.
 3. Up to 20 URLs can be specified in one request.

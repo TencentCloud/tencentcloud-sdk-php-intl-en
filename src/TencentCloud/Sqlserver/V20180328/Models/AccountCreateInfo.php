@@ -28,10 +28,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDBPrivileges(array $DBPrivileges) Set List of database permissions
  * @method string getRemark() Obtain Account remarks
  * @method void setRemark(string $Remark) Set Account remarks
- * @method boolean getIsAdmin() Obtain Whether it is an admin account. Default value: no
- * @method void setIsAdmin(boolean $IsAdmin) Set Whether it is an admin account. Default value: no
+ * @method boolean getIsAdmin() Obtain Whether it is an admin account. Valid values: `true` (Yes. It is an admin account when the instance is a basic edition type and `AccountType` is `L0`; it is a privileged account when the instance is a dual-server high availability edition type and `AccountType` is `L1`.), `false` (No. It is a standard account when `AccountType` is `L3`.)
+ * @method void setIsAdmin(boolean $IsAdmin) Set Whether it is an admin account. Valid values: `true` (Yes. It is an admin account when the instance is a basic edition type and `AccountType` is `L0`; it is a privileged account when the instance is a dual-server high availability edition type and `AccountType` is `L1`.), `false` (No. It is a standard account when `AccountType` is `L3`.)
  * @method string getAuthentication() Obtain Valid values: `win-windows authentication`, `sql-sqlserver authentication`. Default value: `sql-sqlserver authentication`
  * @method void setAuthentication(string $Authentication) Set Valid values: `win-windows authentication`, `sql-sqlserver authentication`. Default value: `sql-sqlserver authentication`
+ * @method string getAccountType() Obtain Account type, which is an extension field of `IsAdmin`. Valid values: `L0` (admin account, only for basic edition), `L1` (privileged account), `L2` (designated account), `L3` (standard account, default)
+ * @method void setAccountType(string $AccountType) Set Account type, which is an extension field of `IsAdmin`. Valid values: `L0` (admin account, only for basic edition), `L1` (privileged account), `L2` (designated account), `L3` (standard account, default)
  */
 class AccountCreateInfo extends AbstractModel
 {
@@ -56,7 +58,7 @@ class AccountCreateInfo extends AbstractModel
     public $Remark;
 
     /**
-     * @var boolean Whether it is an admin account. Default value: no
+     * @var boolean Whether it is an admin account. Valid values: `true` (Yes. It is an admin account when the instance is a basic edition type and `AccountType` is `L0`; it is a privileged account when the instance is a dual-server high availability edition type and `AccountType` is `L1`.), `false` (No. It is a standard account when `AccountType` is `L3`.)
      */
     public $IsAdmin;
 
@@ -66,12 +68,18 @@ class AccountCreateInfo extends AbstractModel
     public $Authentication;
 
     /**
+     * @var string Account type, which is an extension field of `IsAdmin`. Valid values: `L0` (admin account, only for basic edition), `L1` (privileged account), `L2` (designated account), `L3` (standard account, default)
+     */
+    public $AccountType;
+
+    /**
      * @param string $UserName Instance username
      * @param string $Password Instance password
      * @param array $DBPrivileges List of database permissions
      * @param string $Remark Account remarks
-     * @param boolean $IsAdmin Whether it is an admin account. Default value: no
+     * @param boolean $IsAdmin Whether it is an admin account. Valid values: `true` (Yes. It is an admin account when the instance is a basic edition type and `AccountType` is `L0`; it is a privileged account when the instance is a dual-server high availability edition type and `AccountType` is `L1`.), `false` (No. It is a standard account when `AccountType` is `L3`.)
      * @param string $Authentication Valid values: `win-windows authentication`, `sql-sqlserver authentication`. Default value: `sql-sqlserver authentication`
+     * @param string $AccountType Account type, which is an extension field of `IsAdmin`. Valid values: `L0` (admin account, only for basic edition), `L1` (privileged account), `L2` (designated account), `L3` (standard account, default)
      */
     function __construct()
     {
@@ -113,6 +121,10 @@ class AccountCreateInfo extends AbstractModel
 
         if (array_key_exists("Authentication",$param) and $param["Authentication"] !== null) {
             $this->Authentication = $param["Authentication"];
+        }
+
+        if (array_key_exists("AccountType",$param) and $param["AccountType"] !== null) {
+            $this->AccountType = $param["AccountType"];
         }
     }
 }

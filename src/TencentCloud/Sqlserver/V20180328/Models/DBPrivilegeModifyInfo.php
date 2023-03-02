@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getDBName() Obtain Database name
  * @method void setDBName(string $DBName) Set Database name
- * @method string getPrivilege() Obtain Permission change information. ReadWrite: read/write, ReadOnly: read-only, Delete: the account has the permission to delete this database
- * @method void setPrivilege(string $Privilege) Set Permission change information. ReadWrite: read/write, ReadOnly: read-only, Delete: the account has the permission to delete this database
+ * @method string getPrivilege() Obtain Permission modification information. Valid values: `ReadWrite` (read-write), `ReadOnly` (read-only), `Delete` (delete the account's permission to this database), `DBOwner` (owner).
+ * @method void setPrivilege(string $Privilege) Set Permission modification information. Valid values: `ReadWrite` (read-write), `ReadOnly` (read-only), `Delete` (delete the account's permission to this database), `DBOwner` (owner).
  */
 class DBPrivilegeModifyInfo extends AbstractModel
 {
@@ -33,13 +33,13 @@ class DBPrivilegeModifyInfo extends AbstractModel
     public $DBName;
 
     /**
-     * @var string Permission change information. ReadWrite: read/write, ReadOnly: read-only, Delete: the account has the permission to delete this database
+     * @var string Permission modification information. Valid values: `ReadWrite` (read-write), `ReadOnly` (read-only), `Delete` (delete the account's permission to this database), `DBOwner` (owner).
      */
     public $Privilege;
 
     /**
      * @param string $DBName Database name
-     * @param string $Privilege Permission change information. ReadWrite: read/write, ReadOnly: read-only, Delete: the account has the permission to delete this database
+     * @param string $Privilege Permission modification information. Valid values: `ReadWrite` (read-write), `ReadOnly` (read-only), `Delete` (delete the account's permission to this database), `DBOwner` (owner).
      */
     function __construct()
     {

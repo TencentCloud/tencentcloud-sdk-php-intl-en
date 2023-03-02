@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getDBName() Obtain Database name
  * @method void setDBName(string $DBName) Set Database name
- * @method string getPrivilege() Obtain Database permissions. ReadWrite: read/write, ReadOnly: read-only
- * @method void setPrivilege(string $Privilege) Set Database permissions. ReadWrite: read/write, ReadOnly: read-only
+ * @method string getPrivilege() Obtain Database permissions. Valid values: `ReadWrite` (read-write), `ReadOnly` (read-only), `DBOwner` (owner)
+ * @method void setPrivilege(string $Privilege) Set Database permissions. Valid values: `ReadWrite` (read-write), `ReadOnly` (read-only), `DBOwner` (owner)
  */
 class DBPrivilege extends AbstractModel
 {
@@ -33,13 +33,13 @@ class DBPrivilege extends AbstractModel
     public $DBName;
 
     /**
-     * @var string Database permissions. ReadWrite: read/write, ReadOnly: read-only
+     * @var string Database permissions. Valid values: `ReadWrite` (read-write), `ReadOnly` (read-only), `DBOwner` (owner)
      */
     public $Privilege;
 
     /**
      * @param string $DBName Database name
-     * @param string $Privilege Database permissions. ReadWrite: read/write, ReadOnly: read-only
+     * @param string $Privilege Database permissions. Valid values: `ReadWrite` (read-write), `ReadOnly` (read-only), `DBOwner` (owner)
      */
     function __construct()
     {

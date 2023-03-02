@@ -56,6 +56,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStateDesc(string $StateDesc) Set Database status
  * @method string getUserAccessDesc() Obtain User type
  * @method void setUserAccessDesc(string $UserAccessDesc) Set User type
+ * @method string getCreateTime() Obtain Database creation time
+ * @method void setCreateTime(string $CreateTime) Set Database creation time
  */
 class DbNormalDetail extends AbstractModel
 {
@@ -150,6 +152,11 @@ class DbNormalDetail extends AbstractModel
     public $UserAccessDesc;
 
     /**
+     * @var string Database creation time
+     */
+    public $CreateTime;
+
+    /**
      * @param string $IsSubscribed Whether it is subscribed. Valid values: `0` (no), `1` (yes)
      * @param string $CollationName Database collation
      * @param string $IsAutoCleanupOn Whether the cleanup task is enabled to automatically remove old change tracking information when CT is enabled. Valid values: `0` (no), `1` (yes)
@@ -168,6 +175,7 @@ class DbNormalDetail extends AbstractModel
      * @param string $RetentionPeriod Retention period (in days) of change tracking information
      * @param string $StateDesc Database status
      * @param string $UserAccessDesc User type
+     * @param string $CreateTime Database creation time
      */
     function __construct()
     {
@@ -252,6 +260,10 @@ class DbNormalDetail extends AbstractModel
 
         if (array_key_exists("UserAccessDesc",$param) and $param["UserAccessDesc"] !== null) {
             $this->UserAccessDesc = $param["UserAccessDesc"];
+        }
+
+        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
+            $this->CreateTime = $param["CreateTime"];
         }
     }
 }

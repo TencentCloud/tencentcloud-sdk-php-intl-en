@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUploadType(string $UploadType) Set COS_URL: the backup is stored in user’s Cloud Object Storage, with URL provided. COS_UPLOAD: the backup is stored in the application’s Cloud Object Storage and needs to be uploaded by the user.
  * @method array getBackupFiles() Obtain If the UploadType is COS_URL, fill in URL here. If the UploadType is COS_UPLOAD, fill in the name of the backup file here. Only 1 backup file is supported, but a backup file can involve multiple databases.
  * @method void setBackupFiles(array $BackupFiles) Set If the UploadType is COS_URL, fill in URL here. If the UploadType is COS_UPLOAD, fill in the name of the backup file here. Only 1 backup file is supported, but a backup file can involve multiple databases.
+ * @method array getDBRename() Obtain Name set of databases to be renamed
+ * @method void setDBRename(array $DBRename) Set Name set of databases to be renamed
  */
 class ModifyBackupMigrationRequest extends AbstractModel
 {
@@ -66,12 +68,18 @@ class ModifyBackupMigrationRequest extends AbstractModel
     public $BackupFiles;
 
     /**
+     * @var array Name set of databases to be renamed
+     */
+    public $DBRename;
+
+    /**
      * @param string $InstanceId ID of imported target instance
      * @param string $BackupMigrationId Backup import task ID, which is returned through the API CreateBackupMigration
      * @param string $MigrationName Task name
      * @param string $RecoveryType Migration task restoration type: FULL,FULL_LOG,FULL_DIFF
      * @param string $UploadType COS_URL: the backup is stored in user’s Cloud Object Storage, with URL provided. COS_UPLOAD: the backup is stored in the application’s Cloud Object Storage and needs to be uploaded by the user.
      * @param array $BackupFiles If the UploadType is COS_URL, fill in URL here. If the UploadType is COS_UPLOAD, fill in the name of the backup file here. Only 1 backup file is supported, but a backup file can involve multiple databases.
+     * @param array $DBRename Name set of databases to be renamed
      */
     function __construct()
     {
@@ -108,6 +116,15 @@ class ModifyBackupMigrationRequest extends AbstractModel
 
         if (array_key_exists("BackupFiles",$param) and $param["BackupFiles"] !== null) {
             $this->BackupFiles = $param["BackupFiles"];
+        }
+
+        if (array_key_exists("DBRename",$param) and $param["DBRename"] !== null) {
+            $this->DBRename = [];
+            foreach ($param["DBRename"] as $key => $value){
+                $obj = new RenameRestoreDatabase();
+                $obj->deserialize($value);
+                array_push($this->DBRename, $obj);
+            }
         }
     }
 }

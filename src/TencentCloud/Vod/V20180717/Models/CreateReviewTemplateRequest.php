@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateReviewTemplate request structure.
  *
- * @method array getLabels() Obtain The violation labels to use. Valid values: <li>`Porn`: Pornographic content</li> <li>`Terror`: Terrorist content</li> <li>Polity: Politically sensitive content</li> <li>`Moan`: Moaning</li>
- * @method void setLabels(array $Labels) Set The violation labels to use. Valid values: <li>`Porn`: Pornographic content</li> <li>`Terror`: Terrorist content</li> <li>Polity: Politically sensitive content</li> <li>`Moan`: Moaning</li>
+ * @method array getLabels() Obtain The violation labels to use. Valid values: <li>`Porn`: Pornographic content</li> <li>`Terror`: Terrorist content</li> <li>`Moan`: Moaning</li>
+ * @method void setLabels(array $Labels) Set The violation labels to use. Valid values: <li>`Porn`: Pornographic content</li> <li>`Terror`: Terrorist content</li> <li>`Moan`: Moaning</li>
  * @method string getSubAppId() Obtain 
  * @method void setSubAppId(string $SubAppId) Set 
  * @method string getName() Obtain 
@@ -32,7 +32,7 @@ use TencentCloud\Common\AbstractModel;
 class CreateReviewTemplateRequest extends AbstractModel
 {
     /**
-     * @var array The violation labels to use. Valid values: <li>`Porn`: Pornographic content</li> <li>`Terror`: Terrorist content</li> <li>Polity: Politically sensitive content</li> <li>`Moan`: Moaning</li>
+     * @var array The violation labels to use. Valid values: <li>`Porn`: Pornographic content</li> <li>`Terror`: Terrorist content</li> <li>`Moan`: Moaning</li>
      */
     public $Labels;
 
@@ -52,7 +52,7 @@ class CreateReviewTemplateRequest extends AbstractModel
     public $Comment;
 
     /**
-     * @param array $Labels The violation labels to use. Valid values: <li>`Porn`: Pornographic content</li> <li>`Terror`: Terrorist content</li> <li>Polity: Politically sensitive content</li> <li>`Moan`: Moaning</li>
+     * @param array $Labels The violation labels to use. Valid values: <li>`Porn`: Pornographic content</li> <li>`Terror`: Terrorist content</li> <li>`Moan`: Moaning</li>
      * @param string $SubAppId 
      * @param string $Name 
      * @param string $Comment 
