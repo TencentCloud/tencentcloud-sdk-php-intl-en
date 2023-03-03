@@ -118,10 +118,16 @@ Note: This field may return null, indicating that no valid value was found.
  * @method void setCreateTime(string $CreateTime) Set Creation time of the cloud disk.
  * @method integer getDeleteSnapshot() Obtain Delete the associated non-permanently reserved snapshots upon deletion of the source cloud disk. `0`: No (default). `1`: Yes. To check whether a snapshot is permanently reserved, refer to the `IsPermanent` field returned by the `DescribeSnapshots` API. 
  * @method void setDeleteSnapshot(integer $DeleteSnapshot) Set Delete the associated non-permanently reserved snapshots upon deletion of the source cloud disk. `0`: No (default). `1`: Yes. To check whether a snapshot is permanently reserved, refer to the `IsPermanent` field returned by the `DescribeSnapshots` API. 
+ * @method integer getDiskBackupQuota() Obtain Quota of cloud disk backup points, i.e., the maximum number of backup points that a cloud disk can have.
+ * @method void setDiskBackupQuota(integer $DiskBackupQuota) Set Quota of cloud disk backup points, i.e., the maximum number of backup points that a cloud disk can have.
  * @method integer getDiskBackupCount() Obtain Number of used cloud disk backups.
  * @method void setDiskBackupCount(integer $DiskBackupCount) Set Number of used cloud disk backups.
  * @method string getInstanceType() Obtain Type of the instance mounted to the cloud disk. Valid values: <br><li>CVM<br><li>EKS
  * @method void setInstanceType(string $InstanceType) Set Type of the instance mounted to the cloud disk. Valid values: <br><li>CVM<br><li>EKS
+ * @method string getLastAttachInsId() Obtain 
+ * @method void setLastAttachInsId(string $LastAttachInsId) Set 
+ * @method string getErrorPrompt() Obtain 
+ * @method void setErrorPrompt(string $ErrorPrompt) Set 
  */
 class Disk extends AbstractModel
 {
@@ -319,6 +325,11 @@ Note: This field may return null, indicating that no valid value was found.
     public $DeleteSnapshot;
 
     /**
+     * @var integer Quota of cloud disk backup points, i.e., the maximum number of backup points that a cloud disk can have.
+     */
+    public $DiskBackupQuota;
+
+    /**
      * @var integer Number of used cloud disk backups.
      */
     public $DiskBackupCount;
@@ -327,6 +338,16 @@ Note: This field may return null, indicating that no valid value was found.
      * @var string Type of the instance mounted to the cloud disk. Valid values: <br><li>CVM<br><li>EKS
      */
     public $InstanceType;
+
+    /**
+     * @var string 
+     */
+    public $LastAttachInsId;
+
+    /**
+     * @var string 
+     */
+    public $ErrorPrompt;
 
     /**
      * @param boolean $DeleteWithInstance Whether the cloud disk terminates along with the instance mounted to it. <br><li>true: Cloud disk will also be terminated when instance terminates, so only hourly postpaid cloud disk are supported.<br><li>false: Cloud disk does not terminate when instance terminates.
@@ -378,8 +399,11 @@ Note: This field may return null, indicating that no valid value was found.
      * @param boolean $Shareable Whether or not cloud disk is shareable cloud disk.
      * @param string $CreateTime Creation time of the cloud disk.
      * @param integer $DeleteSnapshot Delete the associated non-permanently reserved snapshots upon deletion of the source cloud disk. `0`: No (default). `1`: Yes. To check whether a snapshot is permanently reserved, refer to the `IsPermanent` field returned by the `DescribeSnapshots` API. 
+     * @param integer $DiskBackupQuota Quota of cloud disk backup points, i.e., the maximum number of backup points that a cloud disk can have.
      * @param integer $DiskBackupCount Number of used cloud disk backups.
      * @param string $InstanceType Type of the instance mounted to the cloud disk. Valid values: <br><li>CVM<br><li>EKS
+     * @param string $LastAttachInsId 
+     * @param string $ErrorPrompt 
      */
     function __construct()
     {
@@ -544,12 +568,24 @@ Note: This field may return null, indicating that no valid value was found.
             $this->DeleteSnapshot = $param["DeleteSnapshot"];
         }
 
+        if (array_key_exists("DiskBackupQuota",$param) and $param["DiskBackupQuota"] !== null) {
+            $this->DiskBackupQuota = $param["DiskBackupQuota"];
+        }
+
         if (array_key_exists("DiskBackupCount",$param) and $param["DiskBackupCount"] !== null) {
             $this->DiskBackupCount = $param["DiskBackupCount"];
         }
 
         if (array_key_exists("InstanceType",$param) and $param["InstanceType"] !== null) {
             $this->InstanceType = $param["InstanceType"];
+        }
+
+        if (array_key_exists("LastAttachInsId",$param) and $param["LastAttachInsId"] !== null) {
+            $this->LastAttachInsId = $param["LastAttachInsId"];
+        }
+
+        if (array_key_exists("ErrorPrompt",$param) and $param["ErrorPrompt"] !== null) {
+            $this->ErrorPrompt = $param["ErrorPrompt"];
         }
     }
 }

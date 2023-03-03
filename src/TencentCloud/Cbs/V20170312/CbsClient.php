@@ -49,6 +49,7 @@ use TencentCloud\Cbs\V20170312\Models as Models;
 
 * For the limits on the number of scheduled snapshot policies that can be created in each region, see [Scheduled Snapshots](https://intl.cloud.tencent.com/document/product/362/8191?from_cn_redirect=1).
 * The quantity and capacity of the snapshots that can be created in each region are limited. For more information, see the **Snapshots** page on the Tencent Cloud Console. If the number of snapshots exceeds the quota, the creation of the scheduled snapshots will fail.
+ * @method Models\CreateDiskBackupResponse CreateDiskBackup(Models\CreateDiskBackupRequest $req) This API is used to create a backup point for a cloud disk.
  * @method Models\CreateDisksResponse CreateDisks(Models\CreateDisksRequest $req) This API is used to create cloud disks.
 
 * This API supports creating a cloud disk with a data disk snapshot so that the snapshot data can be copied to the purchased cloud disk.
@@ -77,7 +78,9 @@ use TencentCloud\Cbs\V20170312\Models as Models;
 You can filter results by backup point ID. You can also look for certain backup points by specifying the ID or type of the cloud disk for which the backup points are created. The relationship between different filters is logical `AND`. For more information on filters, see `Filter`.
 If the parameter is empty, a certain number (as specified by `Limit` and 20 by default) of backup points will be returned.
  * @method Models\DescribeDiskConfigQuotaResponse DescribeDiskConfigQuota(Models\DescribeDiskConfigQuotaRequest $req) This API (DescribeDiskConfigQuota) is used to query the cloud disk quota.
- * @method Models\DescribeDiskOperationLogsResponse DescribeDiskOperationLogs(Models\DescribeDiskOperationLogsRequest $req) This API (DescribeDiskOperationLogs) is used to query a list of cloud disk operation logs.
+ * @method Models\DescribeDiskOperationLogsResponse DescribeDiskOperationLogs(Models\DescribeDiskOperationLogsRequest $req) 接口已废弃，切换至云审计接口。见https://tapd.woa.com/pro/prong/stories/view/1010114221880719007
+
+This API (DescribeDiskOperationLogs) is used to query a list of cloud disk operation logs.
 
 This can be filtered according to the cloud disk ID. The format of cloud disk IDs is as follows: disk-a1kmcp13.
 
@@ -88,9 +91,9 @@ This can be filtered according to the cloud disk ID. The format of cloud disk ID
  * @method Models\DescribeInstancesDiskNumResponse DescribeInstancesDiskNum(Models\DescribeInstancesDiskNumRequest $req) This API (DescribeInstancesDiskNum) is used to query the number of cloud disks mounted in the instance.
 
 * Batch operations are supported. If multiple CVM instance IDs are specified, the returned results will list the number of cloud disks mounted on each CVM.
- * @method Models\DescribeSnapshotOperationLogsResponse DescribeSnapshotOperationLogs(Models\DescribeSnapshotOperationLogsRequest $req) This API (DescribeSnapshotOperationLogs) is used to query a list of snapshot operation logs.
+ * @method Models\DescribeSnapshotOperationLogsResponse DescribeSnapshotOperationLogs(Models\DescribeSnapshotOperationLogsRequest $req) 接口已废弃，切换至云审计接口。见https://tapd.woa.com/pro/prong/stories/view/1010114221880719007
 
-You can filter according to the snapshot ID. The snapshot ID format is as follows: snap-a1kmcp13.
+This API is used to query the operation logs of a snapshot. It will be disused soon. Use [LookUpEvents](https://intl.cloud.tencent.com/document/product/629/12359?from_cn_redirect=1) instead.
 
  * @method Models\DescribeSnapshotSharePermissionResponse DescribeSnapshotSharePermission(Models\DescribeSnapshotSharePermissionRequest $req) This API is used to query the sharing information of snapshots.
  * @method Models\DescribeSnapshotsResponse DescribeSnapshots(Models\DescribeSnapshotsRequest $req) This API (DescribeSnapshots) is used to query the details of snapshots.

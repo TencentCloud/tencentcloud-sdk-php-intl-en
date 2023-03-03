@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSdkAppId(integer $SdkAppId) Set LCIC SdkAppId
  * @method string getCallback() Obtain Callback URL. Currently, only port 80 and port 443 are supported.
  * @method void setCallback(string $Callback) Set Callback URL. Currently, only port 80 and port 443 are supported.
+ * @method string getCallbackKey() Obtain The callback key.
+ * @method void setCallbackKey(string $CallbackKey) Set The callback key.
  */
 class ModifyAppRequest extends AbstractModel
 {
@@ -38,8 +40,14 @@ class ModifyAppRequest extends AbstractModel
     public $Callback;
 
     /**
+     * @var string The callback key.
+     */
+    public $CallbackKey;
+
+    /**
      * @param integer $SdkAppId LCIC SdkAppId
      * @param string $Callback Callback URL. Currently, only port 80 and port 443 are supported.
+     * @param string $CallbackKey The callback key.
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class ModifyAppRequest extends AbstractModel
 
         if (array_key_exists("Callback",$param) and $param["Callback"] !== null) {
             $this->Callback = $param["Callback"];
+        }
+
+        if (array_key_exists("CallbackKey",$param) and $param["CallbackKey"] !== null) {
+            $this->CallbackKey = $param["CallbackKey"];
         }
     }
 }

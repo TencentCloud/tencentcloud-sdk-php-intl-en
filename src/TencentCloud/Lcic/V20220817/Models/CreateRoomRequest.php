@@ -32,20 +32,22 @@ use TencentCloud\Common\AbstractModel;
  * @method void setResolution(integer $Resolution) Set Resolution. Valid values: `1`: SD; `2`: HD; `3`: FHD
  * @method integer getMaxMicNumber() Obtain Maximum number of mic-on users (excluding teachers). Value range: [0, 16]	
  * @method void setMaxMicNumber(integer $MaxMicNumber) Set Maximum number of mic-on users (excluding teachers). Value range: [0, 16]	
- * @method string getSubType() Obtain Room subtype. Valid values: `videodoc`: Document + Video; `video`: Video only; `coteaching`: Dual-teacher
- * @method void setSubType(string $SubType) Set Room subtype. Valid values: `videodoc`: Document + Video; `video`: Video only; `coteaching`: Dual-teacher
- * @method string getTeacherId() Obtain Teacher ID, which is the `UserId` obtained by the `RegisterUser` API.
- * @method void setTeacherId(string $TeacherId) Set Teacher ID, which is the `UserId` obtained by the `RegisterUser` API.
+ * @method string getSubType() Obtain The room subtype. Valid values: `videodoc`: Document + Video; `video`: Video only. 
+ * @method void setSubType(string $SubType) Set The room subtype. Valid values: `videodoc`: Document + Video; `video`: Video only. 
+ * @method string getTeacherId() Obtain The user ID of the teacher. User IDs are returned by the user registration APIs. The user specified will have teacher permissions in the room created.
+ * @method void setTeacherId(string $TeacherId) Set The user ID of the teacher. User IDs are returned by the user registration APIs. The user specified will have teacher permissions in the room created.
  * @method integer getAutoMic() Obtain Whether to automatically turn the mic on when the user enters a room. Valid values: `0`: No (default value); `1`: Yes.
  * @method void setAutoMic(integer $AutoMic) Set Whether to automatically turn the mic on when the user enters a room. Valid values: `0`: No (default value); `1`: Yes.
  * @method integer getAudioQuality() Obtain Whether to enable the high audio quality mode. Valid values: `0`: No (default value); `1`: Yes.
  * @method void setAudioQuality(integer $AudioQuality) Set Whether to enable the high audio quality mode. Valid values: `0`: No (default value); `1`: Yes.
  * @method integer getDisableRecord() Obtain Whether to disable auto recording. Valid values: `0`: No (default); `1`: Yes. If this parameter is `0`, recording will start when the class starts and stops when the class ends.
  * @method void setDisableRecord(integer $DisableRecord) Set Whether to disable auto recording. Valid values: `0`: No (default); `1`: Yes. If this parameter is `0`, recording will start when the class starts and stops when the class ends.
- * @method array getAssistants() Obtain Teacher assistant IDs, which are the `UserId` obtained by the `RegisterUser` API.
- * @method void setAssistants(array $Assistants) Set Teacher assistant IDs, which are the `UserId` obtained by the `RegisterUser` API.
+ * @method array getAssistants() Obtain The user IDs of the teaching assistants. User IDs are returned by the user registration APIs. The users specified will have teaching assistant permissions in the room created.
+ * @method void setAssistants(array $Assistants) Set The user IDs of the teaching assistants. User IDs are returned by the user registration APIs. The users specified will have teaching assistant permissions in the room created.
  * @method integer getRecordLayout() Obtain Recording layout
  * @method void setRecordLayout(integer $RecordLayout) Set Recording layout
+ * @method string getGroupId() Obtain The ID of the group to bind. If you specify this parameter, only members of the group can enter this room.
+ * @method void setGroupId(string $GroupId) Set The ID of the group to bind. If you specify this parameter, only members of the group can enter this room.
  */
 class CreateRoomRequest extends AbstractModel
 {
@@ -80,12 +82,12 @@ class CreateRoomRequest extends AbstractModel
     public $MaxMicNumber;
 
     /**
-     * @var string Room subtype. Valid values: `videodoc`: Document + Video; `video`: Video only; `coteaching`: Dual-teacher
+     * @var string The room subtype. Valid values: `videodoc`: Document + Video; `video`: Video only. 
      */
     public $SubType;
 
     /**
-     * @var string Teacher ID, which is the `UserId` obtained by the `RegisterUser` API.
+     * @var string The user ID of the teacher. User IDs are returned by the user registration APIs. The user specified will have teacher permissions in the room created.
      */
     public $TeacherId;
 
@@ -105,7 +107,7 @@ class CreateRoomRequest extends AbstractModel
     public $DisableRecord;
 
     /**
-     * @var array Teacher assistant IDs, which are the `UserId` obtained by the `RegisterUser` API.
+     * @var array The user IDs of the teaching assistants. User IDs are returned by the user registration APIs. The users specified will have teaching assistant permissions in the room created.
      */
     public $Assistants;
 
@@ -115,19 +117,25 @@ class CreateRoomRequest extends AbstractModel
     public $RecordLayout;
 
     /**
+     * @var string The ID of the group to bind. If you specify this parameter, only members of the group can enter this room.
+     */
+    public $GroupId;
+
+    /**
      * @param string $Name Room name
      * @param integer $StartTime Reserved room start time, in UNIX timestamp format
      * @param integer $EndTime Reserved room end time, in UNIX timestamp format
      * @param integer $SdkAppId LCIC SdkAppId
      * @param integer $Resolution Resolution. Valid values: `1`: SD; `2`: HD; `3`: FHD
      * @param integer $MaxMicNumber Maximum number of mic-on users (excluding teachers). Value range: [0, 16]	
-     * @param string $SubType Room subtype. Valid values: `videodoc`: Document + Video; `video`: Video only; `coteaching`: Dual-teacher
-     * @param string $TeacherId Teacher ID, which is the `UserId` obtained by the `RegisterUser` API.
+     * @param string $SubType The room subtype. Valid values: `videodoc`: Document + Video; `video`: Video only. 
+     * @param string $TeacherId The user ID of the teacher. User IDs are returned by the user registration APIs. The user specified will have teacher permissions in the room created.
      * @param integer $AutoMic Whether to automatically turn the mic on when the user enters a room. Valid values: `0`: No (default value); `1`: Yes.
      * @param integer $AudioQuality Whether to enable the high audio quality mode. Valid values: `0`: No (default value); `1`: Yes.
      * @param integer $DisableRecord Whether to disable auto recording. Valid values: `0`: No (default); `1`: Yes. If this parameter is `0`, recording will start when the class starts and stops when the class ends.
-     * @param array $Assistants Teacher assistant IDs, which are the `UserId` obtained by the `RegisterUser` API.
+     * @param array $Assistants The user IDs of the teaching assistants. User IDs are returned by the user registration APIs. The users specified will have teaching assistant permissions in the room created.
      * @param integer $RecordLayout Recording layout
+     * @param string $GroupId The ID of the group to bind. If you specify this parameter, only members of the group can enter this room.
      */
     function __construct()
     {
@@ -192,6 +200,10 @@ class CreateRoomRequest extends AbstractModel
 
         if (array_key_exists("RecordLayout",$param) and $param["RecordLayout"] !== null) {
             $this->RecordLayout = $param["RecordLayout"];
+        }
+
+        if (array_key_exists("GroupId",$param) and $param["GroupId"] !== null) {
+            $this->GroupId = $param["GroupId"];
         }
     }
 }

@@ -28,6 +28,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTotal(integer $Total) Set Total number of records, including members who entered the room and members who should attend the class but did not
  * @method array getMemberRecords() Obtain Member record list
  * @method void setMemberRecords(array $MemberRecords) Set Member record list
+ * @method integer getRealStartTime() Obtain The actual start time of the room, in Unix timestamp, accurate to seconds.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setRealStartTime(integer $RealStartTime) Set The actual start time of the room, in Unix timestamp, accurate to seconds.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getRealEndTime() Obtain The actual end time of the room, in Unix timestamp, accurate to seconds.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setRealEndTime(integer $RealEndTime) Set The actual end time of the room, in Unix timestamp, accurate to seconds.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getMessageCount() Obtain The total number of room messages.
+ * @method void setMessageCount(integer $MessageCount) Set The total number of room messages.
+ * @method integer getMicCount() Obtain The total number of mics in the room.
+ * @method void setMicCount(integer $MicCount) Set The total number of mics in the room.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -54,6 +66,28 @@ class DescribeRoomStatisticsResponse extends AbstractModel
     public $MemberRecords;
 
     /**
+     * @var integer The actual start time of the room, in Unix timestamp, accurate to seconds.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $RealStartTime;
+
+    /**
+     * @var integer The actual end time of the room, in Unix timestamp, accurate to seconds.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $RealEndTime;
+
+    /**
+     * @var integer The total number of room messages.
+     */
+    public $MessageCount;
+
+    /**
+     * @var integer The total number of mics in the room.
+     */
+    public $MicCount;
+
+    /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
@@ -63,6 +97,12 @@ class DescribeRoomStatisticsResponse extends AbstractModel
      * @param integer $MemberNumber Accumulated number of online members
      * @param integer $Total Total number of records, including members who entered the room and members who should attend the class but did not
      * @param array $MemberRecords Member record list
+     * @param integer $RealStartTime The actual start time of the room, in Unix timestamp, accurate to seconds.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $RealEndTime The actual end time of the room, in Unix timestamp, accurate to seconds.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $MessageCount The total number of room messages.
+     * @param integer $MicCount The total number of mics in the room.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -97,6 +137,22 @@ class DescribeRoomStatisticsResponse extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->MemberRecords, $obj);
             }
+        }
+
+        if (array_key_exists("RealStartTime",$param) and $param["RealStartTime"] !== null) {
+            $this->RealStartTime = $param["RealStartTime"];
+        }
+
+        if (array_key_exists("RealEndTime",$param) and $param["RealEndTime"] !== null) {
+            $this->RealEndTime = $param["RealEndTime"];
+        }
+
+        if (array_key_exists("MessageCount",$param) and $param["MessageCount"] !== null) {
+            $this->MessageCount = $param["MessageCount"];
+        }
+
+        if (array_key_exists("MicCount",$param) and $param["MicCount"] !== null) {
+            $this->MicCount = $param["MicCount"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
