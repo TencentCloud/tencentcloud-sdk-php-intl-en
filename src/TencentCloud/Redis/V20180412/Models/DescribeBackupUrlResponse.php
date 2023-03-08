@@ -28,9 +28,9 @@ use TencentCloud\Common\AbstractModel;
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setFilenames(array $Filenames) Set Filename. This field will be disused soon.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method array getBackupInfos() Obtain List of backup file information
+ * @method array getBackupInfos() Obtain List of backup file information.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setBackupInfos(array $BackupInfos) Set List of backup file information
+ * @method void setBackupInfos(array $BackupInfos) Set List of backup file information.
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -54,7 +54,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $Filenames;
 
     /**
-     * @var array List of backup file information
+     * @var array List of backup file information.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $BackupInfos;
@@ -69,7 +69,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param array $InnerDownloadUrl Private network download address (valid for six hours). This field will be disused soon.
      * @param array $Filenames Filename. This field will be disused soon.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param array $BackupInfos List of backup file information
+     * @param array $BackupInfos List of backup file information.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */

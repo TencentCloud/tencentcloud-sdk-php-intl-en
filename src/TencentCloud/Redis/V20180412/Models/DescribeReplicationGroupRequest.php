@@ -20,24 +20,24 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeReplicationGroup request structure.
  *
- * @method integer getLimit() Obtain Instance list size. Default value: 20
- * @method void setLimit(integer $Limit) Set Instance list size. Default value: 20
- * @method integer getOffset() Obtain Offset, which is an integral multiple of `Limit`
- * @method void setOffset(integer $Offset) Set Offset, which is an integral multiple of `Limit`
+ * @method integer getLimit() Obtain Number of instances returned per page. Default value: `20`.
+ * @method void setLimit(integer $Limit) Set Number of instances returned per page. Default value: `20`.
+ * @method integer getOffset() Obtain Pagination offset, which is an integral multiple of `Limit`. `offset` = `limit` * (page number - 1).
+ * @method void setOffset(integer $Offset) Set Pagination offset, which is an integral multiple of `Limit`. `offset` = `limit` * (page number - 1).
  * @method string getGroupId() Obtain Replication group ID
  * @method void setGroupId(string $GroupId) Set Replication group ID
- * @method string getSearchKey() Obtain Instance ID/name. Fuzzy query is supported.
- * @method void setSearchKey(string $SearchKey) Set Instance ID/name. Fuzzy query is supported.
+ * @method string getSearchKey() Obtain Keyword for fuzzy search, which can be an instance name or instance ID.
+ * @method void setSearchKey(string $SearchKey) Set Keyword for fuzzy search, which can be an instance name or instance ID.
  */
 class DescribeReplicationGroupRequest extends AbstractModel
 {
     /**
-     * @var integer Instance list size. Default value: 20
+     * @var integer Number of instances returned per page. Default value: `20`.
      */
     public $Limit;
 
     /**
-     * @var integer Offset, which is an integral multiple of `Limit`
+     * @var integer Pagination offset, which is an integral multiple of `Limit`. `offset` = `limit` * (page number - 1).
      */
     public $Offset;
 
@@ -47,15 +47,15 @@ class DescribeReplicationGroupRequest extends AbstractModel
     public $GroupId;
 
     /**
-     * @var string Instance ID/name. Fuzzy query is supported.
+     * @var string Keyword for fuzzy search, which can be an instance name or instance ID.
      */
     public $SearchKey;
 
     /**
-     * @param integer $Limit Instance list size. Default value: 20
-     * @param integer $Offset Offset, which is an integral multiple of `Limit`
+     * @param integer $Limit Number of instances returned per page. Default value: `20`.
+     * @param integer $Offset Pagination offset, which is an integral multiple of `Limit`. `offset` = `limit` * (page number - 1).
      * @param string $GroupId Replication group ID
-     * @param string $SearchKey Instance ID/name. Fuzzy query is supported.
+     * @param string $SearchKey Keyword for fuzzy search, which can be an instance name or instance ID.
      */
     function __construct()
     {

@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getAutoBackupType() Obtain Automatic backup type: 1 (scheduled rollback)
  * @method void setAutoBackupType(integer $AutoBackupType) Set Automatic backup type: 1 (scheduled rollback)
- * @method array getWeekDays() Obtain Date. Value range: Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday.
- * @method void setWeekDays(array $WeekDays) Set Date. Value range: Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday.
- * @method string getTimePeriod() Obtain Time period. Value range: 00:00-01:00, 01:00-02:00...... 23:00-00:00
- * @method void setTimePeriod(string $TimePeriod) Set Time period. Value range: 00:00-01:00, 01:00-02:00...... 23:00-00:00
+ * @method array getWeekDays() Obtain Automatic backup cycle. Valid values: `Monday`, `Tuesday`, `Wednesday`, `Thursday`, `Friday`, `Saturday`, `Sunday`.
+ * @method void setWeekDays(array $WeekDays) Set Automatic backup cycle. Valid values: `Monday`, `Tuesday`, `Wednesday`, `Thursday`, `Friday`, `Saturday`, `Sunday`.
+ * @method string getTimePeriod() Obtain Automatic backup time in the format of 00:00-01:00, 01:00-02:00... 23:00-00:00.
+ * @method void setTimePeriod(string $TimePeriod) Set Automatic backup time in the format of 00:00-01:00, 01:00-02:00... 23:00-00:00.
  * @method integer getBackupStorageDays() Obtain Retention time of full backup files in days
  * @method void setBackupStorageDays(integer $BackupStorageDays) Set Retention time of full backup files in days
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -39,12 +39,12 @@ class ModifyAutoBackupConfigResponse extends AbstractModel
     public $AutoBackupType;
 
     /**
-     * @var array Date. Value range: Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday.
+     * @var array Automatic backup cycle. Valid values: `Monday`, `Tuesday`, `Wednesday`, `Thursday`, `Friday`, `Saturday`, `Sunday`.
      */
     public $WeekDays;
 
     /**
-     * @var string Time period. Value range: 00:00-01:00, 01:00-02:00...... 23:00-00:00
+     * @var string Automatic backup time in the format of 00:00-01:00, 01:00-02:00... 23:00-00:00.
      */
     public $TimePeriod;
 
@@ -60,8 +60,8 @@ class ModifyAutoBackupConfigResponse extends AbstractModel
 
     /**
      * @param integer $AutoBackupType Automatic backup type: 1 (scheduled rollback)
-     * @param array $WeekDays Date. Value range: Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday.
-     * @param string $TimePeriod Time period. Value range: 00:00-01:00, 01:00-02:00...... 23:00-00:00
+     * @param array $WeekDays Automatic backup cycle. Valid values: `Monday`, `Tuesday`, `Wednesday`, `Thursday`, `Friday`, `Saturday`, `Sunday`.
+     * @param string $TimePeriod Automatic backup time in the format of 00:00-01:00, 01:00-02:00... 23:00-00:00.
      * @param integer $BackupStorageDays Retention time of full backup files in days
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */

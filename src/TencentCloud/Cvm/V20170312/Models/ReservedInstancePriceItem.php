@@ -34,10 +34,10 @@ use TencentCloud\Common\AbstractModel;
 Unit: second
  * @method void setDuration(integer $Duration) Set The **validity** of the reserved instance in seconds, which is the purchased usage period. For example, `31536000`.
 Unit: second
- * @method string getProductDescription() Obtain The operating system of the reserved instance, such as `linux`.
-Valid value: linux.
- * @method void setProductDescription(string $ProductDescription) Set The operating system of the reserved instance, such as `linux`.
-Valid value: linux.
+ * @method string getProductDescription() Obtain The operating system of the reserved instance, such as `Linux`.
+Valid value: `Linux`.
+ * @method void setProductDescription(string $ProductDescription) Set The operating system of the reserved instance, such as `Linux`.
+Valid value: `Linux`.
  */
 class ReservedInstancePriceItem extends AbstractModel
 {
@@ -73,8 +73,8 @@ Unit: second
     public $Duration;
 
     /**
-     * @var string The operating system of the reserved instance, such as `linux`.
-Valid value: linux.
+     * @var string The operating system of the reserved instance, such as `Linux`.
+Valid value: `Linux`.
      */
     public $ProductDescription;
 
@@ -86,8 +86,8 @@ Valid value: linux.
      * @param string $Zone The availability zone in which the reserved instance can be purchased.
      * @param integer $Duration The **validity** of the reserved instance in seconds, which is the purchased usage period. For example, `31536000`.
 Unit: second
-     * @param string $ProductDescription The operating system of the reserved instance, such as `linux`.
-Valid value: linux.
+     * @param string $ProductDescription The operating system of the reserved instance, such as `Linux`.
+Valid value: `Linux`.
      */
     function __construct()
     {

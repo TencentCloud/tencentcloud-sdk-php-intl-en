@@ -20,38 +20,45 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyNetworkConfig response structure.
  *
- * @method boolean getStatus() Obtain Execution status: true or false
- * @method void setStatus(boolean $Status) Set Execution status: true or false
- * @method string getSubnetId() Obtain Subnet ID
- * @method void setSubnetId(string $SubnetId) Set Subnet ID
- * @method string getVpcId() Obtain VPC ID
- * @method void setVpcId(string $VpcId) Set VPC ID
- * @method string getVip() Obtain VIP address
- * @method void setVip(string $Vip) Set VIP address
+ * @method boolean getStatus() Obtain Execution status. Ignore this parameter.
+ * @method void setStatus(boolean $Status) Set Execution status. Ignore this parameter.
+ * @method string getSubnetId() Obtain New subnet ID of the instance
+ * @method void setSubnetId(string $SubnetId) Set New subnet ID of the instance
+ * @method string getVpcId() Obtain New VPC ID of the instance
+ * @method void setVpcId(string $VpcId) Set New VPC ID of the instance
+ * @method string getVip() Obtain New private IPv4 address of the instance
+ * @method void setVip(string $Vip) Set New private IPv4 address of the instance
+ * @method integer getTaskId() Obtain Task ID, which can be used to query the task execution status through the `DescribeTaskInfo` API.
+ * @method void setTaskId(integer $TaskId) Set Task ID, which can be used to query the task execution status through the `DescribeTaskInfo` API.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 class ModifyNetworkConfigResponse extends AbstractModel
 {
     /**
-     * @var boolean Execution status: true or false
+     * @var boolean Execution status. Ignore this parameter.
      */
     public $Status;
 
     /**
-     * @var string Subnet ID
+     * @var string New subnet ID of the instance
      */
     public $SubnetId;
 
     /**
-     * @var string VPC ID
+     * @var string New VPC ID of the instance
      */
     public $VpcId;
 
     /**
-     * @var string VIP address
+     * @var string New private IPv4 address of the instance
      */
     public $Vip;
+
+    /**
+     * @var integer Task ID, which can be used to query the task execution status through the `DescribeTaskInfo` API.
+     */
+    public $TaskId;
 
     /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -59,10 +66,11 @@ class ModifyNetworkConfigResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param boolean $Status Execution status: true or false
-     * @param string $SubnetId Subnet ID
-     * @param string $VpcId VPC ID
-     * @param string $Vip VIP address
+     * @param boolean $Status Execution status. Ignore this parameter.
+     * @param string $SubnetId New subnet ID of the instance
+     * @param string $VpcId New VPC ID of the instance
+     * @param string $Vip New private IPv4 address of the instance
+     * @param integer $TaskId Task ID, which can be used to query the task execution status through the `DescribeTaskInfo` API.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -92,6 +100,10 @@ class ModifyNetworkConfigResponse extends AbstractModel
 
         if (array_key_exists("Vip",$param) and $param["Vip"] !== null) {
             $this->Vip = $param["Vip"];
+        }
+
+        if (array_key_exists("TaskId",$param) and $param["TaskId"] !== null) {
+            $this->TaskId = $param["TaskId"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

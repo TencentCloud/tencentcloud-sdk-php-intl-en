@@ -22,16 +22,34 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() Obtain Instance ID
  * @method void setInstanceId(string $InstanceId) Set Instance ID
- * @method string getOperation() Obtain Operation type. changeVip: modify the VIP of an instance; changeVpc: modify the subnet of an instance; changeBaseToVpc: change from classic network to VPC
- * @method void setOperation(string $Operation) Set Operation type. changeVip: modify the VIP of an instance; changeVpc: modify the subnet of an instance; changeBaseToVpc: change from classic network to VPC
- * @method string getVip() Obtain VIP address, which is required for the `changeVip` operation. If this parameter is left blank, a random one will be assigned by default.
- * @method void setVip(string $Vip) Set VIP address, which is required for the `changeVip` operation. If this parameter is left blank, a random one will be assigned by default.
- * @method string getVpcId() Obtain VPC ID, which is required for `changeVpc` and `changeBaseToVpc` operations.
- * @method void setVpcId(string $VpcId) Set VPC ID, which is required for `changeVpc` and `changeBaseToVpc` operations.
- * @method string getSubnetId() Obtain Subnet ID, which is required for `changeVpc` and `changeBaseToVpc` operations
- * @method void setSubnetId(string $SubnetId) Set Subnet ID, which is required for `changeVpc` and `changeBaseToVpc` operations
- * @method integer getRecycle() Obtain Retention time of the original VIP in days. Note that this parameter works only in the latest SDK. In earlier SDKs, the original VIP is released immediately. To view the SDK version, go to [SDK Center](https://intl.cloud.tencent.com/document/sdk?from_cn_redirect=1).
- * @method void setRecycle(integer $Recycle) Set Retention time of the original VIP in days. Note that this parameter works only in the latest SDK. In earlier SDKs, the original VIP is released immediately. To view the SDK version, go to [SDK Center](https://intl.cloud.tencent.com/document/sdk?from_cn_redirect=1).
+ * @method string getOperation() Obtain Network change type. Valid values:
+- `changeVip`: VPC change, including the private IPv4 address and port.
+- `changeVpc`: Subnet change.
+- `changeBaseToVpc`: Change from classic network to VPC.
+- `changeVPort`: Port change.
+ * @method void setOperation(string $Operation) Set Network change type. Valid values:
+- `changeVip`: VPC change, including the private IPv4 address and port.
+- `changeVpc`: Subnet change.
+- `changeBaseToVpc`: Change from classic network to VPC.
+- `changeVPort`: Port change.
+ * @method string getVip() Obtain Private IPv4 address of the instance, which is required if `Operation` is `changeVip`.
+ * @method void setVip(string $Vip) Set Private IPv4 address of the instance, which is required if `Operation` is `changeVip`.
+ * @method string getVpcId() Obtain VPC ID after the change, which is required if `Operation` is `changeVpc` or `changeBaseToVpc`.
+ * @method void setVpcId(string $VpcId) Set VPC ID after the change, which is required if `Operation` is `changeVpc` or `changeBaseToVpc`.
+ * @method string getSubnetId() Obtain Subnet ID after the change, which is required if `Operation` is `changeVpc` or `changeBaseToVpc`.
+ * @method void setSubnetId(string $SubnetId) Set Subnet ID after the change, which is required if `Operation` is `changeVpc` or `changeBaseToVpc`.
+ * @method integer getRecycle() Obtain Retention period of the original private IPv4 address
+- Unit: Days.
+- Valid values: `0`, `1`, `2`, `3`, `7`, `15`.
+
+**Note**: You can set the retention period of the original address only in the latest SDK. In earlier SDKs, the original address is released immediately. To view the SDK version, go to [SDK Center](https://intl.cloud.tencent.com/document/sdk?from_cn_redirect=1).
+ * @method void setRecycle(integer $Recycle) Set Retention period of the original private IPv4 address
+- Unit: Days.
+- Valid values: `0`, `1`, `2`, `3`, `7`, `15`.
+
+**Note**: You can set the retention period of the original address only in the latest SDK. In earlier SDKs, the original address is released immediately. To view the SDK version, go to [SDK Center](https://intl.cloud.tencent.com/document/sdk?from_cn_redirect=1).
+ * @method integer getVPort() Obtain Network port after the change, which is required if `Operation` is `changeVPort` or `changeVip`. Value range: [1024,65535].
+ * @method void setVPort(integer $VPort) Set Network port after the change, which is required if `Operation` is `changeVPort` or `changeVip`. Value range: [1024,65535].
  */
 class ModifyNetworkConfigRequest extends AbstractModel
 {
@@ -41,37 +59,59 @@ class ModifyNetworkConfigRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var string Operation type. changeVip: modify the VIP of an instance; changeVpc: modify the subnet of an instance; changeBaseToVpc: change from classic network to VPC
+     * @var string Network change type. Valid values:
+- `changeVip`: VPC change, including the private IPv4 address and port.
+- `changeVpc`: Subnet change.
+- `changeBaseToVpc`: Change from classic network to VPC.
+- `changeVPort`: Port change.
      */
     public $Operation;
 
     /**
-     * @var string VIP address, which is required for the `changeVip` operation. If this parameter is left blank, a random one will be assigned by default.
+     * @var string Private IPv4 address of the instance, which is required if `Operation` is `changeVip`.
      */
     public $Vip;
 
     /**
-     * @var string VPC ID, which is required for `changeVpc` and `changeBaseToVpc` operations.
+     * @var string VPC ID after the change, which is required if `Operation` is `changeVpc` or `changeBaseToVpc`.
      */
     public $VpcId;
 
     /**
-     * @var string Subnet ID, which is required for `changeVpc` and `changeBaseToVpc` operations
+     * @var string Subnet ID after the change, which is required if `Operation` is `changeVpc` or `changeBaseToVpc`.
      */
     public $SubnetId;
 
     /**
-     * @var integer Retention time of the original VIP in days. Note that this parameter works only in the latest SDK. In earlier SDKs, the original VIP is released immediately. To view the SDK version, go to [SDK Center](https://intl.cloud.tencent.com/document/sdk?from_cn_redirect=1).
+     * @var integer Retention period of the original private IPv4 address
+- Unit: Days.
+- Valid values: `0`, `1`, `2`, `3`, `7`, `15`.
+
+**Note**: You can set the retention period of the original address only in the latest SDK. In earlier SDKs, the original address is released immediately. To view the SDK version, go to [SDK Center](https://intl.cloud.tencent.com/document/sdk?from_cn_redirect=1).
      */
     public $Recycle;
 
     /**
+     * @var integer Network port after the change, which is required if `Operation` is `changeVPort` or `changeVip`. Value range: [1024,65535].
+     */
+    public $VPort;
+
+    /**
      * @param string $InstanceId Instance ID
-     * @param string $Operation Operation type. changeVip: modify the VIP of an instance; changeVpc: modify the subnet of an instance; changeBaseToVpc: change from classic network to VPC
-     * @param string $Vip VIP address, which is required for the `changeVip` operation. If this parameter is left blank, a random one will be assigned by default.
-     * @param string $VpcId VPC ID, which is required for `changeVpc` and `changeBaseToVpc` operations.
-     * @param string $SubnetId Subnet ID, which is required for `changeVpc` and `changeBaseToVpc` operations
-     * @param integer $Recycle Retention time of the original VIP in days. Note that this parameter works only in the latest SDK. In earlier SDKs, the original VIP is released immediately. To view the SDK version, go to [SDK Center](https://intl.cloud.tencent.com/document/sdk?from_cn_redirect=1).
+     * @param string $Operation Network change type. Valid values:
+- `changeVip`: VPC change, including the private IPv4 address and port.
+- `changeVpc`: Subnet change.
+- `changeBaseToVpc`: Change from classic network to VPC.
+- `changeVPort`: Port change.
+     * @param string $Vip Private IPv4 address of the instance, which is required if `Operation` is `changeVip`.
+     * @param string $VpcId VPC ID after the change, which is required if `Operation` is `changeVpc` or `changeBaseToVpc`.
+     * @param string $SubnetId Subnet ID after the change, which is required if `Operation` is `changeVpc` or `changeBaseToVpc`.
+     * @param integer $Recycle Retention period of the original private IPv4 address
+- Unit: Days.
+- Valid values: `0`, `1`, `2`, `3`, `7`, `15`.
+
+**Note**: You can set the retention period of the original address only in the latest SDK. In earlier SDKs, the original address is released immediately. To view the SDK version, go to [SDK Center](https://intl.cloud.tencent.com/document/sdk?from_cn_redirect=1).
+     * @param integer $VPort Network port after the change, which is required if `Operation` is `changeVPort` or `changeVip`. Value range: [1024,65535].
      */
     function __construct()
     {
@@ -108,6 +148,10 @@ class ModifyNetworkConfigRequest extends AbstractModel
 
         if (array_key_exists("Recycle",$param) and $param["Recycle"] !== null) {
             $this->Recycle = $param["Recycle"];
+        }
+
+        if (array_key_exists("VPort",$param) and $param["VPort"] !== null) {
+            $this->VPort = $param["VPort"];
         }
     }
 }

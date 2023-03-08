@@ -18,36 +18,36 @@ namespace TencentCloud\Cvm\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Supported operating systems are divided into two categories, Windows and Linux.
+ * Supported operating systems. They are divided into two categories, Windows and Linux.
  *
  * @method array getWindows() Obtain Supported Windows OS
-Note: This field may return null, indicating that no valid value is found.
+Note: This field may return `null`, indicating that no valid values can be obtained.
  * @method void setWindows(array $Windows) Set Supported Windows OS
-Note: This field may return null, indicating that no valid value is found.
+Note: This field may return `null`, indicating that no valid values can be obtained.
  * @method array getLinux() Obtain Supported Linux OS
-Note: This field may return null, indicating that no valid value is found.
+Note: This field may return `null`, indicating that no valid values can be obtained.
  * @method void setLinux(array $Linux) Set Supported Linux OS
-Note: This field may return null, indicating that no valid value is found.
+Note: This field may return `null`, indicating that no valid values can be obtained.
  */
 class ImageOsList extends AbstractModel
 {
     /**
      * @var array Supported Windows OS
-Note: This field may return null, indicating that no valid value is found.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public $Windows;
 
     /**
      * @var array Supported Linux OS
-Note: This field may return null, indicating that no valid value is found.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public $Linux;
 
     /**
      * @param array $Windows Supported Windows OS
-Note: This field may return null, indicating that no valid value is found.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      * @param array $Linux Supported Linux OS
-Note: This field may return null, indicating that no valid value is found.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
     {

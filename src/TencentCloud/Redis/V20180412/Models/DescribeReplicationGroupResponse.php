@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeReplicationGroup response structure.
  *
- * @method integer getTotalCount() Obtain Number of replication group
- * @method void setTotalCount(integer $TotalCount) Set Number of replication group
- * @method array getGroups() Obtain Replication group info
- * @method void setGroups(array $Groups) Set Replication group info
+ * @method integer getTotalCount() Obtain Number of replication groups
+ * @method void setTotalCount(integer $TotalCount) Set Number of replication groups
+ * @method array getGroups() Obtain Replication group information
+ * @method void setGroups(array $Groups) Set Replication group information
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 class DescribeReplicationGroupResponse extends AbstractModel
 {
     /**
-     * @var integer Number of replication group
+     * @var integer Number of replication groups
      */
     public $TotalCount;
 
     /**
-     * @var array Replication group info
+     * @var array Replication group information
      */
     public $Groups;
 
@@ -45,8 +45,8 @@ class DescribeReplicationGroupResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $TotalCount Number of replication group
-     * @param array $Groups Replication group info
+     * @param integer $TotalCount Number of replication groups
+     * @param array $Groups Replication group information
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()

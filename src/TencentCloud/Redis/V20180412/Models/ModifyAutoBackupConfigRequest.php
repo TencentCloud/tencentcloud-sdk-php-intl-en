@@ -22,12 +22,12 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() Obtain Instance ID
  * @method void setInstanceId(string $InstanceId) Set Instance ID
- * @method array getWeekDays() Obtain Date. Valid values: `Monday`, `Tuesday`, `Wednesday`, `Thursday`, `Friday`, `Saturday`, `Sunday`. This parameter cannot be modified for now.
- * @method void setWeekDays(array $WeekDays) Set Date. Valid values: `Monday`, `Tuesday`, `Wednesday`, `Thursday`, `Friday`, `Saturday`, `Sunday`. This parameter cannot be modified for now.
- * @method string getTimePeriod() Obtain Time period. Value range: 00:00-01:00, 01:00-02:00...... 23:00-00:00
- * @method void setTimePeriod(string $TimePeriod) Set Time period. Value range: 00:00-01:00, 01:00-02:00...... 23:00-00:00
- * @method integer getAutoBackupType() Obtain Automatic backup type: 1 (scheduled rollback)
- * @method void setAutoBackupType(integer $AutoBackupType) Set Automatic backup type: 1 (scheduled rollback)
+ * @method array getWeekDays() Obtain Automatic backup cycle. Valid values: `Monday`, `Tuesday`, `Wednesday`, `Thursday`, `Friday`, `Saturday`, `Sunday`. This parameter currently cannot be modified.
+ * @method void setWeekDays(array $WeekDays) Set Automatic backup cycle. Valid values: `Monday`, `Tuesday`, `Wednesday`, `Thursday`, `Friday`, `Saturday`, `Sunday`. This parameter currently cannot be modified.
+ * @method string getTimePeriod() Obtain Automatic backup time in the format of 00:00-01:00, 01:00-02:00... 23:00-00:00.
+ * @method void setTimePeriod(string $TimePeriod) Set Automatic backup time in the format of 00:00-01:00, 01:00-02:00... 23:00-00:00.
+ * @method integer getAutoBackupType() Obtain Automatic backup type. `1`: Scheduled rollback.
+ * @method void setAutoBackupType(integer $AutoBackupType) Set Automatic backup type. `1`: Scheduled rollback.
  */
 class ModifyAutoBackupConfigRequest extends AbstractModel
 {
@@ -37,25 +37,25 @@ class ModifyAutoBackupConfigRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var array Date. Valid values: `Monday`, `Tuesday`, `Wednesday`, `Thursday`, `Friday`, `Saturday`, `Sunday`. This parameter cannot be modified for now.
+     * @var array Automatic backup cycle. Valid values: `Monday`, `Tuesday`, `Wednesday`, `Thursday`, `Friday`, `Saturday`, `Sunday`. This parameter currently cannot be modified.
      */
     public $WeekDays;
 
     /**
-     * @var string Time period. Value range: 00:00-01:00, 01:00-02:00...... 23:00-00:00
+     * @var string Automatic backup time in the format of 00:00-01:00, 01:00-02:00... 23:00-00:00.
      */
     public $TimePeriod;
 
     /**
-     * @var integer Automatic backup type: 1 (scheduled rollback)
+     * @var integer Automatic backup type. `1`: Scheduled rollback.
      */
     public $AutoBackupType;
 
     /**
      * @param string $InstanceId Instance ID
-     * @param array $WeekDays Date. Valid values: `Monday`, `Tuesday`, `Wednesday`, `Thursday`, `Friday`, `Saturday`, `Sunday`. This parameter cannot be modified for now.
-     * @param string $TimePeriod Time period. Value range: 00:00-01:00, 01:00-02:00...... 23:00-00:00
-     * @param integer $AutoBackupType Automatic backup type: 1 (scheduled rollback)
+     * @param array $WeekDays Automatic backup cycle. Valid values: `Monday`, `Tuesday`, `Wednesday`, `Thursday`, `Friday`, `Saturday`, `Sunday`. This parameter currently cannot be modified.
+     * @param string $TimePeriod Automatic backup time in the format of 00:00-01:00, 01:00-02:00... 23:00-00:00.
+     * @param integer $AutoBackupType Automatic backup type. `1`: Scheduled rollback.
      */
     function __construct()
     {

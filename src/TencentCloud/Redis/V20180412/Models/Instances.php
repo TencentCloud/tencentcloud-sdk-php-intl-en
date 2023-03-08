@@ -20,55 +20,55 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Instances in replication group
  *
- * @method integer getAppId() Obtain User App ID
- * @method void setAppId(integer $AppId) Set User App ID
+ * @method integer getAppId() Obtain User AppID
+ * @method void setAppId(integer $AppId) Set User AppID
  * @method string getInstanceId() Obtain Instance ID
  * @method void setInstanceId(string $InstanceId) Set Instance ID
  * @method string getInstanceName() Obtain Instance name
  * @method void setInstanceName(string $InstanceName) Set Instance name
- * @method integer getRegionId() Obtain Region ID. 1: Guangzhou; 4: Shanghai; 5: Hong Kong (China); 6: Toronto; 7: Shanghai Finance; 8: Beijing; 9: Singapore; 11: Shenzhen Finance; 15: West US (Silicon Valley)
- * @method void setRegionId(integer $RegionId) Set Region ID. 1: Guangzhou; 4: Shanghai; 5: Hong Kong (China); 6: Toronto; 7: Shanghai Finance; 8: Beijing; 9: Singapore; 11: Shenzhen Finance; 15: West US (Silicon Valley)
+ * @method integer getRegionId() Obtain Region ID. <ul><li>`1`: Guangzhou. </li><li>`4`: Shanghai. </li><li>`5`: Hong Kong (China). </li> <li>`6`: Toronto. </li> <li>`7`: Shanghai Finance. </li> <li>`8`: Beijing. </li> <li>`9`: Singapore. </li> <li>`11`: Shenzhen Finance. </li> <li>`15`: West US (Silicon Valley). </li> </ul>
+ * @method void setRegionId(integer $RegionId) Set Region ID. <ul><li>`1`: Guangzhou. </li><li>`4`: Shanghai. </li><li>`5`: Hong Kong (China). </li> <li>`6`: Toronto. </li> <li>`7`: Shanghai Finance. </li> <li>`8`: Beijing. </li> <li>`9`: Singapore. </li> <li>`11`: Shenzhen Finance. </li> <li>`15`: West US (Silicon Valley). </li> </ul>
  * @method integer getZoneId() Obtain Region ID
  * @method void setZoneId(integer $ZoneId) Set Region ID
  * @method integer getRedisReplicasNum() Obtain Number of replicas
  * @method void setRedisReplicasNum(integer $RedisReplicasNum) Set Number of replicas
  * @method integer getRedisShardNum() Obtain Number of shards
  * @method void setRedisShardNum(integer $RedisShardNum) Set Number of shards
- * @method integer getRedisShardSize() Obtain Shard size
- * @method void setRedisShardSize(integer $RedisShardSize) Set Shard size
+ * @method integer getRedisShardSize() Obtain Shard memory size.
+ * @method void setRedisShardSize(integer $RedisShardSize) Set Shard memory size.
  * @method integer getDiskSize() Obtain Instance disk size
 Note: This field may return `null`, indicating that no valid values can be obtained.
  * @method void setDiskSize(integer $DiskSize) Set Instance disk size
 Note: This field may return `null`, indicating that no valid values can be obtained.
- * @method string getEngine() Obtain Engine: Redis community edition, Tencent Cloud CKV
- * @method void setEngine(string $Engine) Set Engine: Redis community edition, Tencent Cloud CKV
- * @method string getRole() Obtain Instance role. Valid values: `rw` (read-write), `r`( read-only)
- * @method void setRole(string $Role) Set Instance role. Valid values: `rw` (read-write), `r`( read-only)
+ * @method string getEngine() Obtain Engine: Redis Community Edition, Tencent Cloud CKV.
+ * @method void setEngine(string $Engine) Set Engine: Redis Community Edition, Tencent Cloud CKV.
+ * @method string getRole() Obtain Read-write permission of the instance. <ul><li>`rw`: Read/Write. </li><li>`r`: Read-only. </li></ul>
+ * @method void setRole(string $Role) Set Read-write permission of the instance. <ul><li>`rw`: Read/Write. </li><li>`r`: Read-only. </li></ul>
  * @method string getVip() Obtain Instance VIP
  * @method void setVip(string $Vip) Set Instance VIP
  * @method string getVip6() Obtain Internal parameter, which can be ignored.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setVip6(string $Vip6) Set Internal parameter, which can be ignored.
-Note: This field may return `null`, indicating that no valid values can be obtained.
- * @method integer getVpcID() Obtain VPC ID, such as 75101
- * @method void setVpcID(integer $VpcID) Set VPC ID, such as 75101
- * @method integer getVPort() Obtain Instance Port
- * @method void setVPort(integer $VPort) Set Instance Port
- * @method integer getStatus() Obtain Instance status. 0: to be initialized; 1: in process; 2: running; -2: isolated; -3: to be deleted
- * @method void setStatus(integer $Status) Set Instance status. 0: to be initialized; 1: in process; 2: running; -2: isolated; -3: to be deleted
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getVpcID() Obtain VPC ID, such as `75101`.
+ * @method void setVpcID(integer $VpcID) Set VPC ID, such as `75101`.
+ * @method integer getVPort() Obtain Instance port
+ * @method void setVPort(integer $VPort) Set Instance port
+ * @method integer getStatus() Obtain Instance status. <ul><li>`0`: Uninitialized. </li><li>`1`: In the process. </li><li>`2`: Running. </li><li>`-2`: Isolated. </li><li>`-3`: To be deleted. </li></ul>
+ * @method void setStatus(integer $Status) Set Instance status. <ul><li>`0`: Uninitialized. </li><li>`1`: In the process. </li><li>`2`: Running. </li><li>`-2`: Isolated. </li><li>`-3`: To be deleted. </li></ul>
  * @method integer getGrocerySysId() Obtain Repository ID
  * @method void setGrocerySysId(integer $GrocerySysId) Set Repository ID
- * @method integer getProductType() Obtain Instance type. Valid values: `1` (Redis 2.8 memory edition in cluster architecture), `2` (Redis 2.8 memory edition in standard architecture), `3` (CKV 3.2 memory edition in standard architecture), `4` (CKV 3.2 memory edition in cluster architecture), `5` (Redis 2.8 memory edition in standalone architecture), `6` (Redis 4.0 memory edition in standard architecture), `7` (Redis 4.0 memory edition in cluster architecture), `8` (Redis 5.0 memory edition in standard architecture), `9` (Redis 5.0 memory edition in cluster architecture)
- * @method void setProductType(integer $ProductType) Set Instance type. Valid values: `1` (Redis 2.8 memory edition in cluster architecture), `2` (Redis 2.8 memory edition in standard architecture), `3` (CKV 3.2 memory edition in standard architecture), `4` (CKV 3.2 memory edition in cluster architecture), `5` (Redis 2.8 memory edition in standalone architecture), `6` (Redis 4.0 memory edition in standard architecture), `7` (Redis 4.0 memory edition in cluster architecture), `8` (Redis 5.0 memory edition in standard architecture), `9` (Redis 5.0 memory edition in cluster architecture)
- * @method string getCreateTime() Obtain Creation time
- * @method void setCreateTime(string $CreateTime) Set Creation time
- * @method string getUpdateTime() Obtain Update time
- * @method void setUpdateTime(string $UpdateTime) Set Update time
+ * @method integer getProductType() Obtain Instance type. <ul><li>`1`: Redis 2.8 Memory Edition (Cluster Architecture). </li><li>`2`: Redis 2.8 Memory Edition (Standard Architecture). </li><li>`3`: CKV 3.2 Memory Edition (Standard Architecture). </li><li>`4`: CKV 3.2 Memory Edition (Cluster Architecture). </li><li>`5`: Redis 2.8 Standalone Edition. </li><li>`6`: Redis 4.0 Memory Edition (Standard Architecture). </li><li>`7`: Redis 4.0 Memory Edition (Cluster Architecture). </li><li>`8`: Redis 5.0 Memory Edition (Standard Architecture). </li><li>`9`: Redis 5.0 Memory Edition (Cluster Architecture). </li></ul>
+ * @method void setProductType(integer $ProductType) Set Instance type. <ul><li>`1`: Redis 2.8 Memory Edition (Cluster Architecture). </li><li>`2`: Redis 2.8 Memory Edition (Standard Architecture). </li><li>`3`: CKV 3.2 Memory Edition (Standard Architecture). </li><li>`4`: CKV 3.2 Memory Edition (Cluster Architecture). </li><li>`5`: Redis 2.8 Standalone Edition. </li><li>`6`: Redis 4.0 Memory Edition (Standard Architecture). </li><li>`7`: Redis 4.0 Memory Edition (Cluster Architecture). </li><li>`8`: Redis 5.0 Memory Edition (Standard Architecture). </li><li>`9`: Redis 5.0 Memory Edition (Cluster Architecture). </li></ul>
+ * @method string getCreateTime() Obtain The time when the instance was added to the replication group.
+ * @method void setCreateTime(string $CreateTime) Set The time when the instance was added to the replication group.
+ * @method string getUpdateTime() Obtain The time when instances in the replication group were updated.
+ * @method void setUpdateTime(string $UpdateTime) Set The time when instances in the replication group were updated.
  */
 class Instances extends AbstractModel
 {
     /**
-     * @var integer User App ID
+     * @var integer User AppID
      */
     public $AppId;
 
@@ -83,7 +83,7 @@ class Instances extends AbstractModel
     public $InstanceName;
 
     /**
-     * @var integer Region ID. 1: Guangzhou; 4: Shanghai; 5: Hong Kong (China); 6: Toronto; 7: Shanghai Finance; 8: Beijing; 9: Singapore; 11: Shenzhen Finance; 15: West US (Silicon Valley)
+     * @var integer Region ID. <ul><li>`1`: Guangzhou. </li><li>`4`: Shanghai. </li><li>`5`: Hong Kong (China). </li> <li>`6`: Toronto. </li> <li>`7`: Shanghai Finance. </li> <li>`8`: Beijing. </li> <li>`9`: Singapore. </li> <li>`11`: Shenzhen Finance. </li> <li>`15`: West US (Silicon Valley). </li> </ul>
      */
     public $RegionId;
 
@@ -103,7 +103,7 @@ class Instances extends AbstractModel
     public $RedisShardNum;
 
     /**
-     * @var integer Shard size
+     * @var integer Shard memory size.
      */
     public $RedisShardSize;
 
@@ -114,12 +114,12 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     public $DiskSize;
 
     /**
-     * @var string Engine: Redis community edition, Tencent Cloud CKV
+     * @var string Engine: Redis Community Edition, Tencent Cloud CKV.
      */
     public $Engine;
 
     /**
-     * @var string Instance role. Valid values: `rw` (read-write), `r`( read-only)
+     * @var string Read-write permission of the instance. <ul><li>`rw`: Read/Write. </li><li>`r`: Read-only. </li></ul>
      */
     public $Role;
 
@@ -130,22 +130,22 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 
     /**
      * @var string Internal parameter, which can be ignored.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Vip6;
 
     /**
-     * @var integer VPC ID, such as 75101
+     * @var integer VPC ID, such as `75101`.
      */
     public $VpcID;
 
     /**
-     * @var integer Instance Port
+     * @var integer Instance port
      */
     public $VPort;
 
     /**
-     * @var integer Instance status. 0: to be initialized; 1: in process; 2: running; -2: isolated; -3: to be deleted
+     * @var integer Instance status. <ul><li>`0`: Uninitialized. </li><li>`1`: In the process. </li><li>`2`: Running. </li><li>`-2`: Isolated. </li><li>`-3`: To be deleted. </li></ul>
      */
     public $Status;
 
@@ -155,43 +155,43 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     public $GrocerySysId;
 
     /**
-     * @var integer Instance type. Valid values: `1` (Redis 2.8 memory edition in cluster architecture), `2` (Redis 2.8 memory edition in standard architecture), `3` (CKV 3.2 memory edition in standard architecture), `4` (CKV 3.2 memory edition in cluster architecture), `5` (Redis 2.8 memory edition in standalone architecture), `6` (Redis 4.0 memory edition in standard architecture), `7` (Redis 4.0 memory edition in cluster architecture), `8` (Redis 5.0 memory edition in standard architecture), `9` (Redis 5.0 memory edition in cluster architecture)
+     * @var integer Instance type. <ul><li>`1`: Redis 2.8 Memory Edition (Cluster Architecture). </li><li>`2`: Redis 2.8 Memory Edition (Standard Architecture). </li><li>`3`: CKV 3.2 Memory Edition (Standard Architecture). </li><li>`4`: CKV 3.2 Memory Edition (Cluster Architecture). </li><li>`5`: Redis 2.8 Standalone Edition. </li><li>`6`: Redis 4.0 Memory Edition (Standard Architecture). </li><li>`7`: Redis 4.0 Memory Edition (Cluster Architecture). </li><li>`8`: Redis 5.0 Memory Edition (Standard Architecture). </li><li>`9`: Redis 5.0 Memory Edition (Cluster Architecture). </li></ul>
      */
     public $ProductType;
 
     /**
-     * @var string Creation time
+     * @var string The time when the instance was added to the replication group.
      */
     public $CreateTime;
 
     /**
-     * @var string Update time
+     * @var string The time when instances in the replication group were updated.
      */
     public $UpdateTime;
 
     /**
-     * @param integer $AppId User App ID
+     * @param integer $AppId User AppID
      * @param string $InstanceId Instance ID
      * @param string $InstanceName Instance name
-     * @param integer $RegionId Region ID. 1: Guangzhou; 4: Shanghai; 5: Hong Kong (China); 6: Toronto; 7: Shanghai Finance; 8: Beijing; 9: Singapore; 11: Shenzhen Finance; 15: West US (Silicon Valley)
+     * @param integer $RegionId Region ID. <ul><li>`1`: Guangzhou. </li><li>`4`: Shanghai. </li><li>`5`: Hong Kong (China). </li> <li>`6`: Toronto. </li> <li>`7`: Shanghai Finance. </li> <li>`8`: Beijing. </li> <li>`9`: Singapore. </li> <li>`11`: Shenzhen Finance. </li> <li>`15`: West US (Silicon Valley). </li> </ul>
      * @param integer $ZoneId Region ID
      * @param integer $RedisReplicasNum Number of replicas
      * @param integer $RedisShardNum Number of shards
-     * @param integer $RedisShardSize Shard size
+     * @param integer $RedisShardSize Shard memory size.
      * @param integer $DiskSize Instance disk size
 Note: This field may return `null`, indicating that no valid values can be obtained.
-     * @param string $Engine Engine: Redis community edition, Tencent Cloud CKV
-     * @param string $Role Instance role. Valid values: `rw` (read-write), `r`( read-only)
+     * @param string $Engine Engine: Redis Community Edition, Tencent Cloud CKV.
+     * @param string $Role Read-write permission of the instance. <ul><li>`rw`: Read/Write. </li><li>`r`: Read-only. </li></ul>
      * @param string $Vip Instance VIP
      * @param string $Vip6 Internal parameter, which can be ignored.
-Note: This field may return `null`, indicating that no valid values can be obtained.
-     * @param integer $VpcID VPC ID, such as 75101
-     * @param integer $VPort Instance Port
-     * @param integer $Status Instance status. 0: to be initialized; 1: in process; 2: running; -2: isolated; -3: to be deleted
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $VpcID VPC ID, such as `75101`.
+     * @param integer $VPort Instance port
+     * @param integer $Status Instance status. <ul><li>`0`: Uninitialized. </li><li>`1`: In the process. </li><li>`2`: Running. </li><li>`-2`: Isolated. </li><li>`-3`: To be deleted. </li></ul>
      * @param integer $GrocerySysId Repository ID
-     * @param integer $ProductType Instance type. Valid values: `1` (Redis 2.8 memory edition in cluster architecture), `2` (Redis 2.8 memory edition in standard architecture), `3` (CKV 3.2 memory edition in standard architecture), `4` (CKV 3.2 memory edition in cluster architecture), `5` (Redis 2.8 memory edition in standalone architecture), `6` (Redis 4.0 memory edition in standard architecture), `7` (Redis 4.0 memory edition in cluster architecture), `8` (Redis 5.0 memory edition in standard architecture), `9` (Redis 5.0 memory edition in cluster architecture)
-     * @param string $CreateTime Creation time
-     * @param string $UpdateTime Update time
+     * @param integer $ProductType Instance type. <ul><li>`1`: Redis 2.8 Memory Edition (Cluster Architecture). </li><li>`2`: Redis 2.8 Memory Edition (Standard Architecture). </li><li>`3`: CKV 3.2 Memory Edition (Standard Architecture). </li><li>`4`: CKV 3.2 Memory Edition (Cluster Architecture). </li><li>`5`: Redis 2.8 Standalone Edition. </li><li>`6`: Redis 4.0 Memory Edition (Standard Architecture). </li><li>`7`: Redis 4.0 Memory Edition (Cluster Architecture). </li><li>`8`: Redis 5.0 Memory Edition (Standard Architecture). </li><li>`9`: Redis 5.0 Memory Edition (Cluster Architecture). </li></ul>
+     * @param string $CreateTime The time when the instance was added to the replication group.
+     * @param string $UpdateTime The time when instances in the replication group were updated.
      */
     function __construct()
     {

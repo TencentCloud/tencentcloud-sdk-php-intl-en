@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDryRun(boolean $DryRun) Set Checks whether image synchronization can be initiated.
  * @method string getImageName() Obtain Destination image name.
  * @method void setImageName(string $ImageName) Set Destination image name.
+ * @method boolean getImageSetRequired() Obtain Whether to return the ID of image created in the destination region
+ * @method void setImageSetRequired(boolean $ImageSetRequired) Set Whether to return the ID of image created in the destination region
  */
 class SyncImagesRequest extends AbstractModel
 {
@@ -52,10 +54,16 @@ class SyncImagesRequest extends AbstractModel
     public $ImageName;
 
     /**
+     * @var boolean Whether to return the ID of image created in the destination region
+     */
+    public $ImageSetRequired;
+
+    /**
      * @param array $ImageIds List of image IDs. You can obtain the image IDs in two ways: <br><li>Call the [DescribeImages](https://intl.cloud.tencent.com/document/api/213/15715?from_cn_redirect=1) API and find the value of `ImageId` in the response. <br><li>Find the image IDs in the [Image Console](https://console.cloud.tencent.com/cvm/image). <br>The specified images must meet the following requirement: <br><li>the images must be in the `NORMAL` state. <br>For more information on image status, see [Image Data Table](https://intl.cloud.tencent.com/document/product/213/15753?from_cn_redirect=1#Image).
      * @param array $DestinationRegions List of destination regions for synchronization. Limits:<br><li>It must be a valid region.<br><li>For a custom image, the destination region cannot be the source region.<br><li>For a shared image, the destination region must be the source region, which indicates to create a copy of the image as a custom image in the same region.<br><li>Image synchronization is only available in limited regions.<br>See [Region](https://intl.cloud.tencent.com/document/product/213/6091?from_cn_redirect=1).
      * @param boolean $DryRun Checks whether image synchronization can be initiated.
      * @param string $ImageName Destination image name.
+     * @param boolean $ImageSetRequired Whether to return the ID of image created in the destination region
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class SyncImagesRequest extends AbstractModel
 
         if (array_key_exists("ImageName",$param) and $param["ImageName"] !== null) {
             $this->ImageName = $param["ImageName"];
+        }
+
+        if (array_key_exists("ImageSetRequired",$param) and $param["ImageSetRequired"] !== null) {
+            $this->ImageSetRequired = $param["ImageSetRequired"];
         }
     }
 }

@@ -36,8 +36,8 @@ Click [here](https://intl.cloud.tencent.com/document/product/213/43498?from_cn_r
 Valid values: `TRUE` and `FALSE`; default value: `FALSE`.
 
 Click [here](https://intl.cloud.tencent.com/document/product/213/43498?from_cn_redirect=1) to learn more about Sysprep.
- * @method array getDataDiskIds() Obtain Specified data disk ID included in the full image created from the instance.
- * @method void setDataDiskIds(array $DataDiskIds) Set Specified data disk ID included in the full image created from the instance.
+ * @method array getDataDiskIds() Obtain IDs of data disks included in the image. 
+ * @method void setDataDiskIds(array $DataDiskIds) Set IDs of data disks included in the image. 
  * @method array getSnapshotIds() Obtain Specified snapshot ID used to create an image. A system disk snapshot must be included. It cannot be passed together with `InstanceId`.
  * @method void setSnapshotIds(array $SnapshotIds) Set Specified snapshot ID used to create an image. A system disk snapshot must be included. It cannot be passed together with `InstanceId`.
  * @method boolean getDryRun() Obtain Success status of this request, without affecting the resources involved
@@ -76,7 +76,7 @@ Click [here](https://intl.cloud.tencent.com/document/product/213/43498?from_cn_r
     public $Sysprep;
 
     /**
-     * @var array Specified data disk ID included in the full image created from the instance.
+     * @var array IDs of data disks included in the image. 
      */
     public $DataDiskIds;
 
@@ -104,7 +104,7 @@ Click [here](https://intl.cloud.tencent.com/document/product/213/43498?from_cn_r
 Valid values: `TRUE` and `FALSE`; default value: `FALSE`.
 
 Click [here](https://intl.cloud.tencent.com/document/product/213/43498?from_cn_redirect=1) to learn more about Sysprep.
-     * @param array $DataDiskIds Specified data disk ID included in the full image created from the instance.
+     * @param array $DataDiskIds IDs of data disks included in the image. 
      * @param array $SnapshotIds Specified snapshot ID used to create an image. A system disk snapshot must be included. It cannot be passed together with `InstanceId`.
      * @param boolean $DryRun Success status of this request, without affecting the resources involved
      * @param array $TagSpecification Tag description list. This parameter is used to bind a tag to a custom image.

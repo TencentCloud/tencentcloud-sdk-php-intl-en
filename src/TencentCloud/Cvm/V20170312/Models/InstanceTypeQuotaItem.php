@@ -64,6 +64,10 @@ Note: this field may return null, indicating that no valid value is obtained.
  * @method void setFpga(integer $Fpga) Set Number of FPGAs of the instance.
  * @method string getRemark() Obtain Descriptive information of the instance.
  * @method void setRemark(string $Remark) Set Descriptive information of the instance.
+ * @method float getGpuCount() Obtain 
+ * @method void setGpuCount(float $GpuCount) Set 
+ * @method string getFrequency() Obtain CPU clock rate of the instance
+ * @method void setFrequency(string $Frequency) Set CPU clock rate of the instance
  */
 class InstanceTypeQuotaItem extends AbstractModel
 {
@@ -170,6 +174,16 @@ Note: this field may return null, indicating that no valid value is obtained.
     public $Remark;
 
     /**
+     * @var float 
+     */
+    public $GpuCount;
+
+    /**
+     * @var string CPU clock rate of the instance
+     */
+    public $Frequency;
+
+    /**
      * @param string $Zone Availability zone.
      * @param string $InstanceType Instance model.
      * @param string $InstanceChargeType Instance billing plan. Valid values: <br><li>POSTPAID_BY_HOUR: pay after use. You are billed for your traffic by the hour.<br><li>`CDHPAID`: [`CDH`](https://intl.cloud.tencent.com/document/product/416?from_cn_redirect=1) billing plan. Applicable to `CDH` only, not the instances on the host.
@@ -192,6 +206,8 @@ Note: this field may return null, indicating that no valid value is obtained.
      * @param integer $Gpu Number of GPUs of the instance.
      * @param integer $Fpga Number of FPGAs of the instance.
      * @param string $Remark Descriptive information of the instance.
+     * @param float $GpuCount 
+     * @param string $Frequency CPU clock rate of the instance
      */
     function __construct()
     {
@@ -291,6 +307,14 @@ Note: this field may return null, indicating that no valid value is obtained.
 
         if (array_key_exists("Remark",$param) and $param["Remark"] !== null) {
             $this->Remark = $param["Remark"];
+        }
+
+        if (array_key_exists("GpuCount",$param) and $param["GpuCount"] !== null) {
+            $this->GpuCount = $param["GpuCount"];
+        }
+
+        if (array_key_exists("Frequency",$param) and $param["Frequency"] !== null) {
+            $this->Frequency = $param["Frequency"];
         }
     }
 }

@@ -14,32 +14,32 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cvm\V20170312\Models;
+namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Image sync information
+ * VPC information of the custom backup file download address.
  *
- * @method string getImageId() Obtain Image ID
- * @method void setImageId(string $ImageId) Set Image ID
- * @method string getRegion() Obtain Region
- * @method void setRegion(string $Region) Set Region
+ * @method string getRegion() Obtain Region of the VPC of the custom backup file download address.
+ * @method void setRegion(string $Region) Set Region of the VPC of the custom backup file download address.
+ * @method array getVpcList() Obtain VPC list of the custom backup file download address.
+ * @method void setVpcList(array $VpcList) Set VPC list of the custom backup file download address.
  */
-class SyncImage extends AbstractModel
+class BackupLimitVpcItem extends AbstractModel
 {
     /**
-     * @var string Image ID
-     */
-    public $ImageId;
-
-    /**
-     * @var string Region
+     * @var string Region of the VPC of the custom backup file download address.
      */
     public $Region;
 
     /**
-     * @param string $ImageId Image ID
-     * @param string $Region Region
+     * @var array VPC list of the custom backup file download address.
+     */
+    public $VpcList;
+
+    /**
+     * @param string $Region Region of the VPC of the custom backup file download address.
+     * @param array $VpcList VPC list of the custom backup file download address.
      */
     function __construct()
     {
@@ -54,12 +54,12 @@ class SyncImage extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ImageId",$param) and $param["ImageId"] !== null) {
-            $this->ImageId = $param["ImageId"];
-        }
-
         if (array_key_exists("Region",$param) and $param["Region"] !== null) {
             $this->Region = $param["Region"];
+        }
+
+        if (array_key_exists("VpcList",$param) and $param["VpcList"] !== null) {
+            $this->VpcList = $param["VpcList"];
         }
     }
 }

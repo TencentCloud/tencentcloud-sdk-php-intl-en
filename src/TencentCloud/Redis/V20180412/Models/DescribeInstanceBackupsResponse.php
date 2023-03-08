@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeInstanceBackups response structure.
  *
- * @method integer getTotalCount() Obtain Total number of backups
- * @method void setTotalCount(integer $TotalCount) Set Total number of backups
- * @method array getBackupSet() Obtain Array of instance backups
- * @method void setBackupSet(array $BackupSet) Set Array of instance backups
+ * @method integer getTotalCount() Obtain Total number of backups.
+ * @method void setTotalCount(integer $TotalCount) Set Total number of backups.
+ * @method array getBackupSet() Obtain Array of instance backups.
+ * @method void setBackupSet(array $BackupSet) Set Array of instance backups.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 class DescribeInstanceBackupsResponse extends AbstractModel
 {
     /**
-     * @var integer Total number of backups
+     * @var integer Total number of backups.
      */
     public $TotalCount;
 
     /**
-     * @var array Array of instance backups
+     * @var array Array of instance backups.
      */
     public $BackupSet;
 
@@ -45,8 +45,8 @@ class DescribeInstanceBackupsResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $TotalCount Total number of backups
-     * @param array $BackupSet Array of instance backups
+     * @param integer $TotalCount Total number of backups.
+     * @param array $BackupSet Array of instance backups.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()

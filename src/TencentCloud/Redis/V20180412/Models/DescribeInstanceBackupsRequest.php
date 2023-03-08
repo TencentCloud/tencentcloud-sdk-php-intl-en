@@ -20,35 +20,49 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeInstanceBackups request structure.
  *
+ * @method integer getLimit() Obtain Number of backups returned per page. Default value: `20`. Maximum value: `100`.
+ * @method void setLimit(integer $Limit) Set Number of backups returned per page. Default value: `20`. Maximum value: `100`.
+ * @method integer getOffset() Obtain Pagination offset, which is an integral multiple of `Limit`. `offset` = `limit` * (page number - 1).
+ * @method void setOffset(integer $Offset) Set Pagination offset, which is an integral multiple of `Limit`. `offset` = `limit` * (page number - 1).
  * @method string getInstanceId() Obtain ID of the instance to be operated on, which can be obtained through the `InstanceId` field in the return value of the `DescribeInstance` API.
  * @method void setInstanceId(string $InstanceId) Set ID of the instance to be operated on, which can be obtained through the `InstanceId` field in the return value of the `DescribeInstance` API.
- * @method integer getLimit() Obtain Instance list size. Default value: 20
- * @method void setLimit(integer $Limit) Set Instance list size. Default value: 20
- * @method integer getOffset() Obtain Offset, which is an integral multiple of `Limit`.
- * @method void setOffset(integer $Offset) Set Offset, which is an integral multiple of `Limit`.
  * @method string getBeginTime() Obtain Start time in the format of yyyy-MM-dd HH:mm:ss, such as 2017-02-08 16:46:34. This parameter is used to query the list of instance backups started during the [beginTime, endTime] range.
  * @method void setBeginTime(string $BeginTime) Set Start time in the format of yyyy-MM-dd HH:mm:ss, such as 2017-02-08 16:46:34. This parameter is used to query the list of instance backups started during the [beginTime, endTime] range.
  * @method string getEndTime() Obtain End time in the format of yyyy-MM-dd HH:mm:ss, such as 2017-02-08 19:09:26. This parameter is used to query the list of instance backups started during the [beginTime, endTime] range.
  * @method void setEndTime(string $EndTime) Set End time in the format of yyyy-MM-dd HH:mm:ss, such as 2017-02-08 19:09:26. This parameter is used to query the list of instance backups started during the [beginTime, endTime] range.
- * @method array getStatus() Obtain 1: backup in process; 2: backing up normally; 3: converting from backup to RDB file; 4: RDB conversion completed; -1: backup expired; -2: backup deleted.
- * @method void setStatus(array $Status) Set 1: backup in process; 2: backing up normally; 3: converting from backup to RDB file; 4: RDB conversion completed; -1: backup expired; -2: backup deleted.
+ * @method array getStatus() Obtain Backup task status:
+`1`: The backup is in the process.
+`2`: The backup is normal.
+`3`: The backup is being converted to an RDB file.
+`4`: Conversion to RDB has been completed.
+`-1`: The backup expired.
+`-2`: The backup has been deleted.
+ * @method void setStatus(array $Status) Set Backup task status:
+`1`: The backup is in the process.
+`2`: The backup is normal.
+`3`: The backup is being converted to an RDB file.
+`4`: Conversion to RDB has been completed.
+`-1`: The backup expired.
+`-2`: The backup has been deleted.
+ * @method string getInstanceName() Obtain Instance name, which can be fuzzily searched.
+ * @method void setInstanceName(string $InstanceName) Set Instance name, which can be fuzzily searched.
  */
 class DescribeInstanceBackupsRequest extends AbstractModel
 {
     /**
-     * @var string ID of the instance to be operated on, which can be obtained through the `InstanceId` field in the return value of the `DescribeInstance` API.
-     */
-    public $InstanceId;
-
-    /**
-     * @var integer Instance list size. Default value: 20
+     * @var integer Number of backups returned per page. Default value: `20`. Maximum value: `100`.
      */
     public $Limit;
 
     /**
-     * @var integer Offset, which is an integral multiple of `Limit`.
+     * @var integer Pagination offset, which is an integral multiple of `Limit`. `offset` = `limit` * (page number - 1).
      */
     public $Offset;
+
+    /**
+     * @var string ID of the instance to be operated on, which can be obtained through the `InstanceId` field in the return value of the `DescribeInstance` API.
+     */
+    public $InstanceId;
 
     /**
      * @var string Start time in the format of yyyy-MM-dd HH:mm:ss, such as 2017-02-08 16:46:34. This parameter is used to query the list of instance backups started during the [beginTime, endTime] range.
@@ -61,17 +75,35 @@ class DescribeInstanceBackupsRequest extends AbstractModel
     public $EndTime;
 
     /**
-     * @var array 1: backup in process; 2: backing up normally; 3: converting from backup to RDB file; 4: RDB conversion completed; -1: backup expired; -2: backup deleted.
+     * @var array Backup task status:
+`1`: The backup is in the process.
+`2`: The backup is normal.
+`3`: The backup is being converted to an RDB file.
+`4`: Conversion to RDB has been completed.
+`-1`: The backup expired.
+`-2`: The backup has been deleted.
      */
     public $Status;
 
     /**
+     * @var string Instance name, which can be fuzzily searched.
+     */
+    public $InstanceName;
+
+    /**
+     * @param integer $Limit Number of backups returned per page. Default value: `20`. Maximum value: `100`.
+     * @param integer $Offset Pagination offset, which is an integral multiple of `Limit`. `offset` = `limit` * (page number - 1).
      * @param string $InstanceId ID of the instance to be operated on, which can be obtained through the `InstanceId` field in the return value of the `DescribeInstance` API.
-     * @param integer $Limit Instance list size. Default value: 20
-     * @param integer $Offset Offset, which is an integral multiple of `Limit`.
      * @param string $BeginTime Start time in the format of yyyy-MM-dd HH:mm:ss, such as 2017-02-08 16:46:34. This parameter is used to query the list of instance backups started during the [beginTime, endTime] range.
      * @param string $EndTime End time in the format of yyyy-MM-dd HH:mm:ss, such as 2017-02-08 19:09:26. This parameter is used to query the list of instance backups started during the [beginTime, endTime] range.
-     * @param array $Status 1: backup in process; 2: backing up normally; 3: converting from backup to RDB file; 4: RDB conversion completed; -1: backup expired; -2: backup deleted.
+     * @param array $Status Backup task status:
+`1`: The backup is in the process.
+`2`: The backup is normal.
+`3`: The backup is being converted to an RDB file.
+`4`: Conversion to RDB has been completed.
+`-1`: The backup expired.
+`-2`: The backup has been deleted.
+     * @param string $InstanceName Instance name, which can be fuzzily searched.
      */
     function __construct()
     {
@@ -86,16 +118,16 @@ class DescribeInstanceBackupsRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
-            $this->InstanceId = $param["InstanceId"];
-        }
-
         if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
             $this->Limit = $param["Limit"];
         }
 
         if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
             $this->Offset = $param["Offset"];
+        }
+
+        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
+            $this->InstanceId = $param["InstanceId"];
         }
 
         if (array_key_exists("BeginTime",$param) and $param["BeginTime"] !== null) {
@@ -108,6 +140,10 @@ class DescribeInstanceBackupsRequest extends AbstractModel
 
         if (array_key_exists("Status",$param) and $param["Status"] !== null) {
             $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("InstanceName",$param) and $param["InstanceName"] !== null) {
+            $this->InstanceName = $param["InstanceName"];
         }
     }
 }

@@ -18,44 +18,44 @@ namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Redis master or replica node information
+ * Master or replica node information of the TencentDB for Redis instance.
  *
- * @method integer getNodeType() Obtain Node type. 0: master node; 1: replica node
- * @method void setNodeType(integer $NodeType) Set Node type. 0: master node; 1: replica node
- * @method integer getNodeId() Obtain ID of the master or replica node, which is not required during instance creation
- * @method void setNodeId(integer $NodeId) Set ID of the master or replica node, which is not required during instance creation
- * @method integer getZoneId() Obtain AZ ID of the master or replica node
- * @method void setZoneId(integer $ZoneId) Set AZ ID of the master or replica node
- * @method string getZoneName() Obtain AZ name of the master or replica node
- * @method void setZoneName(string $ZoneName) Set AZ name of the master or replica node
+ * @method integer getNodeType() Obtain Node type. <ul><li>`0`: Master node.</li><li>`1`: Replica node.</li></ul>
+ * @method void setNodeType(integer $NodeType) Set Node type. <ul><li>`0`: Master node.</li><li>`1`: Replica node.</li></ul>
+ * @method integer getNodeId() Obtain Master or replica node ID. <ul><li>This parameter is optional when the [CreateInstances](https://intl.cloud.tencent.com/document/product/239/20026?from_cn_redirect=1) API is used to create a TencentDB for Redis instance, but it is required when the [UpgradeInstance](https://intl.cloud.tencent.com/document/product/239/20013?from_cn_redirect=1) API is used to adjust the configuration of an instance. </li><li>You can use the [DescribeInstances](https://intl.cloud.tencent.com/document/product/239/20018?from_cn_redirect=1) API to get the node ID of integer type. </li></ul>
+ * @method void setNodeId(integer $NodeId) Set Master or replica node ID. <ul><li>This parameter is optional when the [CreateInstances](https://intl.cloud.tencent.com/document/product/239/20026?from_cn_redirect=1) API is used to create a TencentDB for Redis instance, but it is required when the [UpgradeInstance](https://intl.cloud.tencent.com/document/product/239/20013?from_cn_redirect=1) API is used to adjust the configuration of an instance. </li><li>You can use the [DescribeInstances](https://intl.cloud.tencent.com/document/product/239/20018?from_cn_redirect=1) API to get the node ID of integer type. </li></ul>
+ * @method integer getZoneId() Obtain ID of the AZ of the master or replica node
+ * @method void setZoneId(integer $ZoneId) Set ID of the AZ of the master or replica node
+ * @method string getZoneName() Obtain Name of the AZ of the master or replica node
+ * @method void setZoneName(string $ZoneName) Set Name of the AZ of the master or replica node
  */
 class RedisNodeInfo extends AbstractModel
 {
     /**
-     * @var integer Node type. 0: master node; 1: replica node
+     * @var integer Node type. <ul><li>`0`: Master node.</li><li>`1`: Replica node.</li></ul>
      */
     public $NodeType;
 
     /**
-     * @var integer ID of the master or replica node, which is not required during instance creation
+     * @var integer Master or replica node ID. <ul><li>This parameter is optional when the [CreateInstances](https://intl.cloud.tencent.com/document/product/239/20026?from_cn_redirect=1) API is used to create a TencentDB for Redis instance, but it is required when the [UpgradeInstance](https://intl.cloud.tencent.com/document/product/239/20013?from_cn_redirect=1) API is used to adjust the configuration of an instance. </li><li>You can use the [DescribeInstances](https://intl.cloud.tencent.com/document/product/239/20018?from_cn_redirect=1) API to get the node ID of integer type. </li></ul>
      */
     public $NodeId;
 
     /**
-     * @var integer AZ ID of the master or replica node
+     * @var integer ID of the AZ of the master or replica node
      */
     public $ZoneId;
 
     /**
-     * @var string AZ name of the master or replica node
+     * @var string Name of the AZ of the master or replica node
      */
     public $ZoneName;
 
     /**
-     * @param integer $NodeType Node type. 0: master node; 1: replica node
-     * @param integer $NodeId ID of the master or replica node, which is not required during instance creation
-     * @param integer $ZoneId AZ ID of the master or replica node
-     * @param string $ZoneName AZ name of the master or replica node
+     * @param integer $NodeType Node type. <ul><li>`0`: Master node.</li><li>`1`: Replica node.</li></ul>
+     * @param integer $NodeId Master or replica node ID. <ul><li>This parameter is optional when the [CreateInstances](https://intl.cloud.tencent.com/document/product/239/20026?from_cn_redirect=1) API is used to create a TencentDB for Redis instance, but it is required when the [UpgradeInstance](https://intl.cloud.tencent.com/document/product/239/20013?from_cn_redirect=1) API is used to adjust the configuration of an instance. </li><li>You can use the [DescribeInstances](https://intl.cloud.tencent.com/document/product/239/20018?from_cn_redirect=1) API to get the node ID of integer type. </li></ul>
+     * @param integer $ZoneId ID of the AZ of the master or replica node
+     * @param string $ZoneName Name of the AZ of the master or replica node
      */
     function __construct()
     {

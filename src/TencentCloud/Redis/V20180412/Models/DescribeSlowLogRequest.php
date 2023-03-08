@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBeginTime(string $BeginTime) Set The start time
  * @method string getEndTime() Obtain The end time
  * @method void setEndTime(string $EndTime) Set The end time
- * @method integer getMinQueryTime() Obtain The average execution time threshold of slow query in microseconds
- * @method void setMinQueryTime(integer $MinQueryTime) Set The average execution time threshold of slow query in microseconds
+ * @method integer getMinQueryTime() Obtain The average execution time threshold of slow query in ms.
+ * @method void setMinQueryTime(integer $MinQueryTime) Set The average execution time threshold of slow query in ms.
  * @method integer getLimit() Obtain Number of slow queries displayed per page. Default value: `20`.
  * @method void setLimit(integer $Limit) Set Number of slow queries displayed per page. Default value: `20`.
  * @method integer getOffset() Obtain Slow query offset, which is an integral multiple of `Limit`.
@@ -53,7 +53,7 @@ class DescribeSlowLogRequest extends AbstractModel
     public $EndTime;
 
     /**
-     * @var integer The average execution time threshold of slow query in microseconds
+     * @var integer The average execution time threshold of slow query in ms.
      */
     public $MinQueryTime;
 
@@ -76,7 +76,7 @@ class DescribeSlowLogRequest extends AbstractModel
      * @param string $InstanceId Instance ID
      * @param string $BeginTime The start time
      * @param string $EndTime The end time
-     * @param integer $MinQueryTime The average execution time threshold of slow query in microseconds
+     * @param integer $MinQueryTime The average execution time threshold of slow query in ms.
      * @param integer $Limit Number of slow queries displayed per page. Default value: `20`.
      * @param integer $Offset Slow query offset, which is an integral multiple of `Limit`.
      * @param string $Role Node role. <ul><li>`Master`: Master node</li><li>`Slave`: Replica node</li></ul>

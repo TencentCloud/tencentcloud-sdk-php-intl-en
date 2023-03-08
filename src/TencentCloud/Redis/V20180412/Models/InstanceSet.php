@@ -24,18 +24,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceName(string $InstanceName) Set Instance name
  * @method string getInstanceId() Obtain Instance ID
  * @method void setInstanceId(string $InstanceId) Set Instance ID
- * @method integer getAppid() Obtain User's Appid
- * @method void setAppid(integer $Appid) Set User's Appid
+ * @method integer getAppid() Obtain User AppID
+ * @method void setAppid(integer $Appid) Set User AppID
  * @method integer getProjectId() Obtain Project ID
  * @method void setProjectId(integer $ProjectId) Set Project ID
- * @method integer getRegionId() Obtain Region ID. 1: Guangzhou; 4: Shanghai; 5: Hong Kong (China); 6: Toronto; 7: Shanghai Finance; 8: Beijing; 9: Singapore; 11: Shenzhen Finance; 15: West US (Silicon Valley); 16: Chengdu; 17: Germany; 18: South Korea; 19: Chongqing; 21: India; 22: East US (Virginia); 23: Thailand; 24: Russia; 25: Japan.
- * @method void setRegionId(integer $RegionId) Set Region ID. 1: Guangzhou; 4: Shanghai; 5: Hong Kong (China); 6: Toronto; 7: Shanghai Finance; 8: Beijing; 9: Singapore; 11: Shenzhen Finance; 15: West US (Silicon Valley); 16: Chengdu; 17: Germany; 18: South Korea; 19: Chongqing; 21: India; 22: East US (Virginia); 23: Thailand; 24: Russia; 25: Japan.
+ * @method integer getRegionId() Obtain Region ID. <ul><li>`1`: Guangzhou. </li><li>`4`: Shanghai. </li><li>`5`: Hong Kong (China). </li><li>`6`: Toronto. </li> <li>`7`: Shanghai Finance. </li> <li>`8`: Beijing. </li> <li>`9`: Singapore. </li> <li>`11`: Shenzhen Finance. </li> <li>`15`: West US (Silicon Valley). </li><li>`16`: Chengdu. </li><li>`17`: Frankfurt. </li><li>`18`: Seoul. </li><li>`19`: Chongqing. </li><li>`21`: Mumbai. </li><li>`22`: East US (Virginia). </li><li>`23`: Bangkok. </li><li>`24`: Moscow. </li><li>`25`: Tokyo. </li></ul>
+ * @method void setRegionId(integer $RegionId) Set Region ID. <ul><li>`1`: Guangzhou. </li><li>`4`: Shanghai. </li><li>`5`: Hong Kong (China). </li><li>`6`: Toronto. </li> <li>`7`: Shanghai Finance. </li> <li>`8`: Beijing. </li> <li>`9`: Singapore. </li> <li>`11`: Shenzhen Finance. </li> <li>`15`: West US (Silicon Valley). </li><li>`16`: Chengdu. </li><li>`17`: Frankfurt. </li><li>`18`: Seoul. </li><li>`19`: Chongqing. </li><li>`21`: Mumbai. </li><li>`22`: East US (Virginia). </li><li>`23`: Bangkok. </li><li>`24`: Moscow. </li><li>`25`: Tokyo. </li></ul>
  * @method integer getZoneId() Obtain Region ID
  * @method void setZoneId(integer $ZoneId) Set Region ID
- * @method integer getVpcId() Obtain VPC ID, such as 75101.
- * @method void setVpcId(integer $VpcId) Set VPC ID, such as 75101.
- * @method integer getSubnetId() Obtain VPC subnet ID, such as 46315.
- * @method void setSubnetId(integer $SubnetId) Set VPC subnet ID, such as 46315.
+ * @method integer getVpcId() Obtain VPC ID, such as `75101`.
+ * @method void setVpcId(integer $VpcId) Set VPC ID, such as `75101`.
+ * @method integer getSubnetId() Obtain Subnet ID, such as `46315`.
+ * @method void setSubnetId(integer $SubnetId) Set Subnet ID, such as `46315`.
  * @method integer getStatus() Obtain Current instance status. <ul><li>`0`: To be initialized. </li><li>`1`: In the process. </li><li>`2`: Running. </li><li>`-2`: Isolated. </li><li>`-3`: To be deleted. </li></ul>
  * @method void setStatus(integer $Status) Set Current instance status. <ul><li>`0`: To be initialized. </li><li>`1`: In the process. </li><li>`2`: Running. </li><li>`-2`: Isolated. </li><li>`-3`: To be deleted. </li></ul>
  * @method string getWanIp() Obtain Instance VIP
@@ -46,8 +46,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCreatetime(string $Createtime) Set Instance creation time
  * @method float getSize() Obtain Instance capacity in MB
  * @method void setSize(float $Size) Set Instance capacity in MB
- * @method float getSizeUsed() Obtain This field has been disused
- * @method void setSizeUsed(float $SizeUsed) Set This field has been disused
+ * @method float getSizeUsed() Obtain This field has been disused. You can use the [GetMonitorData](https://intl.cloud.tencent.com/document/product/248/31014?from_cn_redirect=1) API to query the capacity used by the instance.
+ * @method void setSizeUsed(float $SizeUsed) Set This field has been disused. You can use the [GetMonitorData](https://intl.cloud.tencent.com/document/product/248/31014?from_cn_redirect=1) API to query the capacity used by the instance.
  * @method integer getType() Obtain Instance type. <ul><li>`1`: Redis 2.8 memory edition in cluster architecture. </li><li>`2`: Redis 2.8 memory edition in standard architecture. </li><li>`3`: CKV 3.2 memory edition in standard architecture. </li><li>`4`: CKV 3.2 memory edition in cluster architecture. </li><li>`5`: Redis 2.8 memory edition in standalone architecture. </li></li><li>`6`: Redis 4.0 memory edition in standard architecture. </li></li><li>`7`: Redis 4.0 memory edition in cluster architecture. </li></li><li>`8`: Redis 5.0 memory edition in standard architecture. </li></li><li>`9`: Redis 5.0 memory edition in cluster architecture. </li></ul>
  * @method void setType(integer $Type) Set Instance type. <ul><li>`1`: Redis 2.8 memory edition in cluster architecture. </li><li>`2`: Redis 2.8 memory edition in standard architecture. </li><li>`3`: CKV 3.2 memory edition in standard architecture. </li><li>`4`: CKV 3.2 memory edition in cluster architecture. </li><li>`5`: Redis 2.8 memory edition in standalone architecture. </li></li><li>`6`: Redis 4.0 memory edition in standard architecture. </li></li><li>`7`: Redis 4.0 memory edition in cluster architecture. </li></li><li>`8`: Redis 5.0 memory edition in standard architecture. </li></li><li>`9`: Redis 5.0 memory edition in cluster architecture. </li></ul>
  * @method integer getAutoRenewFlag() Obtain Whether to set the auto-renewal flag for an instance. <ul><li>`1`: Auto-renewal set. </li><li>`0`: Auto-renewal not set.</li></ul>
@@ -130,10 +130,10 @@ Note: This field may return null, indicating that no valid value can be obtained
 Note: This field may return null, indicating that no valid value can be obtained.
  * @method void setDiskSize(integer $DiskSize) Set This parameter can be ignored for Redis instance.
 Note: This field may return null, indicating that no valid value can be obtained.
- * @method string getMonitorVersion() Obtain Monitoring granularity type. <ul><li>`1m`: Monitoring at 1-minute granularity). </li><li>`5s`: Monitoring at 5-second granularity. </li></ul>
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setMonitorVersion(string $MonitorVersion) Set Monitoring granularity type. <ul><li>`1m`: Monitoring at 1-minute granularity). </li><li>`5s`: Monitoring at 5-second granularity. </li></ul>
-Note: This field may return null, indicating that no valid value can be obtained.
+ * @method string getMonitorVersion() Obtain Monitoring granularity type. <ul><li>`1m`: Monitoring at 1-minute granularity. </li><li>`5s`: Monitoring at 5-second granularity. </li></ul>
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setMonitorVersion(string $MonitorVersion) Set Monitoring granularity type. <ul><li>`1m`: Monitoring at 1-minute granularity. </li><li>`5s`: Monitoring at 5-second granularity. </li></ul>
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method integer getClientLimitMin() Obtain The minimum number of max client connections
 Note: This field may return null, indicating that no valid value can be obtained.
  * @method void setClientLimitMin(integer $ClientLimitMin) Set The minimum number of max client connections
@@ -188,7 +188,7 @@ class InstanceSet extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var integer User's Appid
+     * @var integer User AppID
      */
     public $Appid;
 
@@ -198,7 +198,7 @@ class InstanceSet extends AbstractModel
     public $ProjectId;
 
     /**
-     * @var integer Region ID. 1: Guangzhou; 4: Shanghai; 5: Hong Kong (China); 6: Toronto; 7: Shanghai Finance; 8: Beijing; 9: Singapore; 11: Shenzhen Finance; 15: West US (Silicon Valley); 16: Chengdu; 17: Germany; 18: South Korea; 19: Chongqing; 21: India; 22: East US (Virginia); 23: Thailand; 24: Russia; 25: Japan.
+     * @var integer Region ID. <ul><li>`1`: Guangzhou. </li><li>`4`: Shanghai. </li><li>`5`: Hong Kong (China). </li><li>`6`: Toronto. </li> <li>`7`: Shanghai Finance. </li> <li>`8`: Beijing. </li> <li>`9`: Singapore. </li> <li>`11`: Shenzhen Finance. </li> <li>`15`: West US (Silicon Valley). </li><li>`16`: Chengdu. </li><li>`17`: Frankfurt. </li><li>`18`: Seoul. </li><li>`19`: Chongqing. </li><li>`21`: Mumbai. </li><li>`22`: East US (Virginia). </li><li>`23`: Bangkok. </li><li>`24`: Moscow. </li><li>`25`: Tokyo. </li></ul>
      */
     public $RegionId;
 
@@ -208,12 +208,12 @@ class InstanceSet extends AbstractModel
     public $ZoneId;
 
     /**
-     * @var integer VPC ID, such as 75101.
+     * @var integer VPC ID, such as `75101`.
      */
     public $VpcId;
 
     /**
-     * @var integer VPC subnet ID, such as 46315.
+     * @var integer Subnet ID, such as `46315`.
      */
     public $SubnetId;
 
@@ -243,7 +243,7 @@ class InstanceSet extends AbstractModel
     public $Size;
 
     /**
-     * @var float This field has been disused
+     * @var float This field has been disused. You can use the [GetMonitorData](https://intl.cloud.tencent.com/document/product/248/31014?from_cn_redirect=1) API to query the capacity used by the instance.
      */
     public $SizeUsed;
 
@@ -409,8 +409,8 @@ Note: This field may return null, indicating that no valid value can be obtained
     public $DiskSize;
 
     /**
-     * @var string Monitoring granularity type. <ul><li>`1m`: Monitoring at 1-minute granularity). </li><li>`5s`: Monitoring at 5-second granularity. </li></ul>
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @var string Monitoring granularity type. <ul><li>`1m`: Monitoring at 1-minute granularity. </li><li>`5s`: Monitoring at 5-second granularity. </li></ul>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $MonitorVersion;
 
@@ -477,18 +477,18 @@ Note: This field may return null, indicating that no valid value can be obtained
     /**
      * @param string $InstanceName Instance name
      * @param string $InstanceId Instance ID
-     * @param integer $Appid User's Appid
+     * @param integer $Appid User AppID
      * @param integer $ProjectId Project ID
-     * @param integer $RegionId Region ID. 1: Guangzhou; 4: Shanghai; 5: Hong Kong (China); 6: Toronto; 7: Shanghai Finance; 8: Beijing; 9: Singapore; 11: Shenzhen Finance; 15: West US (Silicon Valley); 16: Chengdu; 17: Germany; 18: South Korea; 19: Chongqing; 21: India; 22: East US (Virginia); 23: Thailand; 24: Russia; 25: Japan.
+     * @param integer $RegionId Region ID. <ul><li>`1`: Guangzhou. </li><li>`4`: Shanghai. </li><li>`5`: Hong Kong (China). </li><li>`6`: Toronto. </li> <li>`7`: Shanghai Finance. </li> <li>`8`: Beijing. </li> <li>`9`: Singapore. </li> <li>`11`: Shenzhen Finance. </li> <li>`15`: West US (Silicon Valley). </li><li>`16`: Chengdu. </li><li>`17`: Frankfurt. </li><li>`18`: Seoul. </li><li>`19`: Chongqing. </li><li>`21`: Mumbai. </li><li>`22`: East US (Virginia). </li><li>`23`: Bangkok. </li><li>`24`: Moscow. </li><li>`25`: Tokyo. </li></ul>
      * @param integer $ZoneId Region ID
-     * @param integer $VpcId VPC ID, such as 75101.
-     * @param integer $SubnetId VPC subnet ID, such as 46315.
+     * @param integer $VpcId VPC ID, such as `75101`.
+     * @param integer $SubnetId Subnet ID, such as `46315`.
      * @param integer $Status Current instance status. <ul><li>`0`: To be initialized. </li><li>`1`: In the process. </li><li>`2`: Running. </li><li>`-2`: Isolated. </li><li>`-3`: To be deleted. </li></ul>
      * @param string $WanIp Instance VIP
      * @param integer $Port Port number of an instance
      * @param string $Createtime Instance creation time
      * @param float $Size Instance capacity in MB
-     * @param float $SizeUsed This field has been disused
+     * @param float $SizeUsed This field has been disused. You can use the [GetMonitorData](https://intl.cloud.tencent.com/document/product/248/31014?from_cn_redirect=1) API to query the capacity used by the instance.
      * @param integer $Type Instance type. <ul><li>`1`: Redis 2.8 memory edition in cluster architecture. </li><li>`2`: Redis 2.8 memory edition in standard architecture. </li><li>`3`: CKV 3.2 memory edition in standard architecture. </li><li>`4`: CKV 3.2 memory edition in cluster architecture. </li><li>`5`: Redis 2.8 memory edition in standalone architecture. </li></li><li>`6`: Redis 4.0 memory edition in standard architecture. </li></li><li>`7`: Redis 4.0 memory edition in cluster architecture. </li></li><li>`8`: Redis 5.0 memory edition in standard architecture. </li></li><li>`9`: Redis 5.0 memory edition in cluster architecture. </li></ul>
      * @param integer $AutoRenewFlag Whether to set the auto-renewal flag for an instance. <ul><li>`1`: Auto-renewal set. </li><li>`0`: Auto-renewal not set.</li></ul>
      * @param string $DeadlineTime Instance expiration time
@@ -530,8 +530,8 @@ Note: This field may return null, indicating that no valid value can be obtained
 Note: This field may return null, indicating that no valid value can be obtained.
      * @param integer $DiskSize This parameter can be ignored for Redis instance.
 Note: This field may return null, indicating that no valid value can be obtained.
-     * @param string $MonitorVersion Monitoring granularity type. <ul><li>`1m`: Monitoring at 1-minute granularity). </li><li>`5s`: Monitoring at 5-second granularity. </li></ul>
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @param string $MonitorVersion Monitoring granularity type. <ul><li>`1m`: Monitoring at 1-minute granularity. </li><li>`5s`: Monitoring at 5-second granularity. </li></ul>
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $ClientLimitMin The minimum number of max client connections
 Note: This field may return null, indicating that no valid value can be obtained.
      * @param integer $ClientLimitMax The maximum number of max client connections

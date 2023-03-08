@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * SyncImages response structure.
  *
- * @method array getImageSet() Obtain 
- * @method void setImageSet(array $ImageSet) Set 
+ * @method array getImageSet() Obtain ID of the image created in the destination region
+ * @method void setImageSet(array $ImageSet) Set ID of the image created in the destination region
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 class SyncImagesResponse extends AbstractModel
 {
     /**
-     * @var array 
+     * @var array ID of the image created in the destination region
      */
     public $ImageSet;
 
@@ -38,7 +38,7 @@ class SyncImagesResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $ImageSet 
+     * @param array $ImageSet ID of the image created in the destination region
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()

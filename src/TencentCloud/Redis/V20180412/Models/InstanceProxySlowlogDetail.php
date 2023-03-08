@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Proxy slow query details
  *
- * @method integer getDuration() Obtain Slow query duration
- * @method void setDuration(integer $Duration) Set Slow query duration
+ * @method integer getDuration() Obtain Duration of the slow query in ms.
+ * @method void setDuration(integer $Duration) Set Duration of the slow query in ms.
  * @method string getClient() Obtain Client address
  * @method void setClient(string $Client) Set Client address
  * @method string getCommand() Obtain Command
@@ -34,7 +34,7 @@ use TencentCloud\Common\AbstractModel;
 class InstanceProxySlowlogDetail extends AbstractModel
 {
     /**
-     * @var integer Slow query duration
+     * @var integer Duration of the slow query in ms.
      */
     public $Duration;
 
@@ -59,7 +59,7 @@ class InstanceProxySlowlogDetail extends AbstractModel
     public $ExecuteTime;
 
     /**
-     * @param integer $Duration Slow query duration
+     * @param integer $Duration Duration of the slow query in ms.
      * @param string $Client Client address
      * @param string $Command Command
      * @param string $CommandLine Command line details

@@ -114,6 +114,14 @@ Note: this field may return null, indicating that no valid value was found.
  * @method void setLicenseType(string $LicenseType) Set Instance OS license type. Default value: `TencentCloud`
  * @method boolean getDisableApiTermination() Obtain Whether the termination protection is enabled. Values: <br><li>`TRUE`: Enable instance protection, which means that this instance can not be deleted by an API action.<br><li>`FALSE`: Do not enable the instance protection.<br><br>Default value: `FALSE`.
  * @method void setDisableApiTermination(boolean $DisableApiTermination) Set Whether the termination protection is enabled. Values: <br><li>`TRUE`: Enable instance protection, which means that this instance can not be deleted by an API action.<br><li>`FALSE`: Do not enable the instance protection.<br><br>Default value: `FALSE`.
+ * @method string getDefaultLoginUser() Obtain Default login user
+ * @method void setDefaultLoginUser(string $DefaultLoginUser) Set Default login user
+ * @method integer getDefaultLoginPort() Obtain Default login port
+ * @method void setDefaultLoginPort(integer $DefaultLoginPort) Set Default login port
+ * @method string getLatestOperationErrorMsg() Obtain Latest operation errors of the instance.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setLatestOperationErrorMsg(string $LatestOperationErrorMsg) Set Latest operation errors of the instance.
+Note: This field may return `null`, indicating that no valid values can be obtained.
  */
 class Instance extends AbstractModel
 {
@@ -313,6 +321,22 @@ Note: this field may return null, indicating that no valid value was found.
     public $DisableApiTermination;
 
     /**
+     * @var string Default login user
+     */
+    public $DefaultLoginUser;
+
+    /**
+     * @var integer Default login port
+     */
+    public $DefaultLoginPort;
+
+    /**
+     * @var string Latest operation errors of the instance.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $LatestOperationErrorMsg;
+
+    /**
      * @param Placement $Placement Location of the instance
      * @param string $InstanceId Instance `ID`
      * @param string $InstanceType Instance model
@@ -360,6 +384,10 @@ Note: this field may return null, indicating that no valid value was found.
 Note: this field may return null, indicating that no valid value was found.
      * @param string $LicenseType Instance OS license type. Default value: `TencentCloud`
      * @param boolean $DisableApiTermination Whether the termination protection is enabled. Values: <br><li>`TRUE`: Enable instance protection, which means that this instance can not be deleted by an API action.<br><li>`FALSE`: Do not enable the instance protection.<br><br>Default value: `FALSE`.
+     * @param string $DefaultLoginUser Default login user
+     * @param integer $DefaultLoginPort Default login port
+     * @param string $LatestOperationErrorMsg Latest operation errors of the instance.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -536,6 +564,18 @@ Note: this field may return null, indicating that no valid value was found.
 
         if (array_key_exists("DisableApiTermination",$param) and $param["DisableApiTermination"] !== null) {
             $this->DisableApiTermination = $param["DisableApiTermination"];
+        }
+
+        if (array_key_exists("DefaultLoginUser",$param) and $param["DefaultLoginUser"] !== null) {
+            $this->DefaultLoginUser = $param["DefaultLoginUser"];
+        }
+
+        if (array_key_exists("DefaultLoginPort",$param) and $param["DefaultLoginPort"] !== null) {
+            $this->DefaultLoginPort = $param["DefaultLoginPort"];
+        }
+
+        if (array_key_exists("LatestOperationErrorMsg",$param) and $param["LatestOperationErrorMsg"] !== null) {
+            $this->LatestOperationErrorMsg = $param["LatestOperationErrorMsg"];
         }
     }
 }

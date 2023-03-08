@@ -24,14 +24,38 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStartTime(string $StartTime) Set Backup start time
  * @method string getBackupId() Obtain Backup ID
  * @method void setBackupId(string $BackupId) Set Backup ID
- * @method string getBackupType() Obtain Backup type. 1: manual backup initiated by the user; 0: automatic backup in the early morning initiated by the system
- * @method void setBackupType(string $BackupType) Set Backup type. 1: manual backup initiated by the user; 0: automatic backup in the early morning initiated by the system
- * @method integer getStatus() Obtain Backup status. 1: backup is locked by another process; 2: backup is normal and not locked by any process; -1: backup has expired; 3: backup is being exported; 4: backup is exported successfully
- * @method void setStatus(integer $Status) Set Backup status. 1: backup is locked by another process; 2: backup is normal and not locked by any process; -1: backup has expired; 3: backup is being exported; 4: backup is exported successfully
+ * @method string getBackupType() Obtain Backup type
+
+- `1`: Manual backup initiated by the user.
+- `0`: Automatic backup in the early morning initiated by the system.
+ * @method void setBackupType(string $BackupType) Set Backup type
+
+- `1`: Manual backup initiated by the user.
+- `0`: Automatic backup in the early morning initiated by the system.
+ * @method integer getStatus() Obtain Backup status 
+
+- `1`: The backup is locked by another process.
+- `2`: The backup is normal and not locked by any process.
+- `-1`: The backup expired.
+- `3`: The backup is being exported.
+- `4`: The backup was exported successfully.
+ * @method void setStatus(integer $Status) Set Backup status 
+
+- `1`: The backup is locked by another process.
+- `2`: The backup is normal and not locked by any process.
+- `-1`: The backup expired.
+- `3`: The backup is being exported.
+- `4`: The backup was exported successfully.
  * @method string getRemark() Obtain Backup remarks
  * @method void setRemark(string $Remark) Set Backup remarks
- * @method integer getLocked() Obtain Whether a backup is locked. 0: no; 1: yes.
- * @method void setLocked(integer $Locked) Set Whether a backup is locked. 0: no; 1: yes.
+ * @method integer getLocked() Obtain Whether the backup is locked
+
+- `0`: Not locked.
+- `1`: Locked.
+ * @method void setLocked(integer $Locked) Set Whether the backup is locked
+
+- `0`: Not locked.
+- `1`: Locked.
  * @method integer getBackupSize() Obtain Internal field, which can be ignored.
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setBackupSize(integer $BackupSize) Set Internal field, which can be ignored.
@@ -44,6 +68,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setInstanceType(integer $InstanceType) Set Internal field, which can be ignored.
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getInstanceId() Obtain Instance ID
+ * @method void setInstanceId(string $InstanceId) Set Instance ID
+ * @method string getInstanceName() Obtain Instance name
+ * @method void setInstanceName(string $InstanceName) Set Instance name
+ * @method string getRegion() Obtain The region where the local backup resides.
+ * @method void setRegion(string $Region) Set The region where the local backup resides.
+ * @method string getEndTime() Obtain Backup end time
+ * @method void setEndTime(string $EndTime) Set Backup end time
+ * @method string getFileType() Obtain Backup file type
+ * @method void setFileType(string $FileType) Set Backup file type
+ * @method string getExpireTime() Obtain Backup file expiration time
+ * @method void setExpireTime(string $ExpireTime) Set Backup file expiration time
  */
 class RedisBackupSet extends AbstractModel
 {
@@ -58,12 +94,21 @@ class RedisBackupSet extends AbstractModel
     public $BackupId;
 
     /**
-     * @var string Backup type. 1: manual backup initiated by the user; 0: automatic backup in the early morning initiated by the system
+     * @var string Backup type
+
+- `1`: Manual backup initiated by the user.
+- `0`: Automatic backup in the early morning initiated by the system.
      */
     public $BackupType;
 
     /**
-     * @var integer Backup status. 1: backup is locked by another process; 2: backup is normal and not locked by any process; -1: backup has expired; 3: backup is being exported; 4: backup is exported successfully
+     * @var integer Backup status 
+
+- `1`: The backup is locked by another process.
+- `2`: The backup is normal and not locked by any process.
+- `-1`: The backup expired.
+- `3`: The backup is being exported.
+- `4`: The backup was exported successfully.
      */
     public $Status;
 
@@ -73,7 +118,10 @@ class RedisBackupSet extends AbstractModel
     public $Remark;
 
     /**
-     * @var integer Whether a backup is locked. 0: no; 1: yes.
+     * @var integer Whether the backup is locked
+
+- `0`: Not locked.
+- `1`: Locked.
      */
     public $Locked;
 
@@ -96,18 +144,66 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $InstanceType;
 
     /**
+     * @var string Instance ID
+     */
+    public $InstanceId;
+
+    /**
+     * @var string Instance name
+     */
+    public $InstanceName;
+
+    /**
+     * @var string The region where the local backup resides.
+     */
+    public $Region;
+
+    /**
+     * @var string Backup end time
+     */
+    public $EndTime;
+
+    /**
+     * @var string Backup file type
+     */
+    public $FileType;
+
+    /**
+     * @var string Backup file expiration time
+     */
+    public $ExpireTime;
+
+    /**
      * @param string $StartTime Backup start time
      * @param string $BackupId Backup ID
-     * @param string $BackupType Backup type. 1: manual backup initiated by the user; 0: automatic backup in the early morning initiated by the system
-     * @param integer $Status Backup status. 1: backup is locked by another process; 2: backup is normal and not locked by any process; -1: backup has expired; 3: backup is being exported; 4: backup is exported successfully
+     * @param string $BackupType Backup type
+
+- `1`: Manual backup initiated by the user.
+- `0`: Automatic backup in the early morning initiated by the system.
+     * @param integer $Status Backup status 
+
+- `1`: The backup is locked by another process.
+- `2`: The backup is normal and not locked by any process.
+- `-1`: The backup expired.
+- `3`: The backup is being exported.
+- `4`: The backup was exported successfully.
      * @param string $Remark Backup remarks
-     * @param integer $Locked Whether a backup is locked. 0: no; 1: yes.
+     * @param integer $Locked Whether the backup is locked
+
+- `0`: Not locked.
+- `1`: Locked.
      * @param integer $BackupSize Internal field, which can be ignored.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $FullBackup Internal field, which can be ignored.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $InstanceType Internal field, which can be ignored.
 Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $InstanceId Instance ID
+     * @param string $InstanceName Instance name
+     * @param string $Region The region where the local backup resides.
+     * @param string $EndTime Backup end time
+     * @param string $FileType Backup file type
+     * @param string $ExpireTime Backup file expiration time
      */
     function __construct()
     {
@@ -156,6 +252,30 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("InstanceType",$param) and $param["InstanceType"] !== null) {
             $this->InstanceType = $param["InstanceType"];
+        }
+
+        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
+            $this->InstanceId = $param["InstanceId"];
+        }
+
+        if (array_key_exists("InstanceName",$param) and $param["InstanceName"] !== null) {
+            $this->InstanceName = $param["InstanceName"];
+        }
+
+        if (array_key_exists("Region",$param) and $param["Region"] !== null) {
+            $this->Region = $param["Region"];
+        }
+
+        if (array_key_exists("EndTime",$param) and $param["EndTime"] !== null) {
+            $this->EndTime = $param["EndTime"];
+        }
+
+        if (array_key_exists("FileType",$param) and $param["FileType"] !== null) {
+            $this->FileType = $param["FileType"];
+        }
+
+        if (array_key_exists("ExpireTime",$param) and $param["ExpireTime"] !== null) {
+            $this->ExpireTime = $param["ExpireTime"];
         }
     }
 }

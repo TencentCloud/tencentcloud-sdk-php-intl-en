@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeInstances request structure.
  *
- * @method integer getLimit() Obtain Number of instances. Default value: 20. Maximum value: 1000.
- * @method void setLimit(integer $Limit) Set Number of instances. Default value: 20. Maximum value: 1000.
- * @method integer getOffset() Obtain Offset, which is an integral multiple of `Limit`.
- * @method void setOffset(integer $Offset) Set Offset, which is an integral multiple of `Limit`.
+ * @method integer getLimit() Obtain Number of instances returned per page. Default value: `20`. Maximum value: `1000`.
+ * @method void setLimit(integer $Limit) Set Number of instances returned per page. Default value: `20`. Maximum value: `1000`.
+ * @method integer getOffset() Obtain Pagination offset, which is an integral multiple of `Limit`.
+ * @method void setOffset(integer $Offset) Set Pagination offset, which is an integral multiple of `Limit`.
  * @method string getInstanceId() Obtain Instance ID, such as crs-6ubhgouj.
  * @method void setInstanceId(string $InstanceId) Set Instance ID, such as crs-6ubhgouj.
  * @method string getOrderBy() Obtain Instance sorting criteria. The enumerated values are as listed below: <ul><li>projectId: Project ID. </li><li>createtime: Instance creation time. </li><li>instancename: Instance name. </li><li>type: Instance type. </li><li>curDeadline: Instance expiration time. </li></ul>
@@ -78,12 +78,12 @@ use TencentCloud\Common\AbstractModel;
 class DescribeInstancesRequest extends AbstractModel
 {
     /**
-     * @var integer Number of instances. Default value: 20. Maximum value: 1000.
+     * @var integer Number of instances returned per page. Default value: `20`. Maximum value: `1000`.
      */
     public $Limit;
 
     /**
-     * @var integer Offset, which is an integral multiple of `Limit`.
+     * @var integer Pagination offset, which is an integral multiple of `Limit`.
      */
     public $Offset;
 
@@ -213,8 +213,8 @@ class DescribeInstancesRequest extends AbstractModel
     public $AzMode;
 
     /**
-     * @param integer $Limit Number of instances. Default value: 20. Maximum value: 1000.
-     * @param integer $Offset Offset, which is an integral multiple of `Limit`.
+     * @param integer $Limit Number of instances returned per page. Default value: `20`. Maximum value: `1000`.
+     * @param integer $Offset Pagination offset, which is an integral multiple of `Limit`.
      * @param string $InstanceId Instance ID, such as crs-6ubhgouj.
      * @param string $OrderBy Instance sorting criteria. The enumerated values are as listed below: <ul><li>projectId: Project ID. </li><li>createtime: Instance creation time. </li><li>instancename: Instance name. </li><li>type: Instance type. </li><li>curDeadline: Instance expiration time. </li></ul>
      * @param integer $OrderType Instance sorting order. <ul><li>`1`: Descending. </li><li>`0`: Ascending. Default value: `1`.</li></ul>
