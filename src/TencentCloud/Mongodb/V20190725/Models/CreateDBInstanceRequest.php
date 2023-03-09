@@ -46,8 +46,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVpcId(string $VpcId) Set VPC ID. If this parameter is not set, the classic network will be used. Please use the `DescribeVpcs` API to query the VPC list.
  * @method string getSubnetId() Obtain VPC subnet ID. If `UniqVpcId` is set, then `UniqSubnetId` will be required. Please use the `DescribeSubnets` API to query the subnet list.
  * @method void setSubnetId(string $SubnetId) Set VPC subnet ID. If `UniqVpcId` is set, then `UniqSubnetId` will be required. Please use the `DescribeSubnets` API to query the subnet list.
- * @method string getPassword() Obtain Instance password, which must contain 8 to 16 characters and comprise at least two of the following types: letters, digits, and symbols (!@#%^*()). If it is left empty, the password is in the format of "instance ID+@+root account UIN". For example, if the instance ID is "cmgo-higv73ed" and the root account UIN "100000001", the instance password will be "cmgo-higv73ed@100000001".
- * @method void setPassword(string $Password) Set Instance password, which must contain 8 to 16 characters and comprise at least two of the following types: letters, digits, and symbols (!@#%^*()). If it is left empty, the password is in the format of "instance ID+@+root account UIN". For example, if the instance ID is "cmgo-higv73ed" and the root account UIN "100000001", the instance password will be "cmgo-higv73ed@100000001".
+ * @method string getPassword() Obtain Instance password. If it is left empty, the password is in the default format of "instance ID+@+root account UIN". For example, if the instance ID is "cmgo-higv73ed" and the root account UIN "100000001", the instance password will be "cmgo-higv73ed@100000001". The custom password must contain 8-32 characters in at least two of the following types: letters, digits, and symbols (!@#%^*()_).
+ * @method void setPassword(string $Password) Set Instance password. If it is left empty, the password is in the default format of "instance ID+@+root account UIN". For example, if the instance ID is "cmgo-higv73ed" and the root account UIN "100000001", the instance password will be "cmgo-higv73ed@100000001". The custom password must contain 8-32 characters in at least two of the following types: letters, digits, and symbols (!@#%^*()_).
  * @method array getTags() Obtain Instance tag information.
  * @method void setTags(array $Tags) Set Instance tag information.
  * @method integer getAutoRenewFlag() Obtain Auto-renewal flag. Valid values: 0 (auto-renewal not enabled), 1 (auto-renewal enabled). Default value: 0.
@@ -72,6 +72,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMongosMemory(integer $MongosMemory) Set The size of mongos memory, which is required for a sharded cluster instance of MongoDB 4.2 WiredTiger. For the specific purchasable versions supported, please see the return result of the `DescribeSpecInfo` API.
  * @method integer getMongosNodeNum() Obtain The number of mongos routers, which is required for a sharded cluster instance of MongoDB 4.2 WiredTiger. For the specific purchasable versions supported, please see the return result of the `DescribeSpecInfo` API. Note: please purchase 3-32 mongos routers for high availability.
  * @method void setMongosNodeNum(integer $MongosNodeNum) Set The number of mongos routers, which is required for a sharded cluster instance of MongoDB 4.2 WiredTiger. For the specific purchasable versions supported, please see the return result of the `DescribeSpecInfo` API. Note: please purchase 3-32 mongos routers for high availability.
+ * @method integer getReadonlyNodeNum() Obtain Number of read-only nodes. Value range: 2-7.
+ * @method void setReadonlyNodeNum(integer $ReadonlyNodeNum) Set Number of read-only nodes. Value range: 2-7.
+ * @method array getReadonlyNodeAvailabilityZoneList() Obtain The AZ where the read-only node is deployed
+ * @method void setReadonlyNodeAvailabilityZoneList(array $ReadonlyNodeAvailabilityZoneList) Set The AZ where the read-only node is deployed
+ * @method string getHiddenZone() Obtain The AZ where the hidden node resides. It is required for cross-AZ instances.
+ * @method void setHiddenZone(string $HiddenZone) Set The AZ where the hidden node resides. It is required for cross-AZ instances.
  */
 class CreateDBInstanceRequest extends AbstractModel
 {
@@ -141,7 +147,7 @@ class CreateDBInstanceRequest extends AbstractModel
     public $SubnetId;
 
     /**
-     * @var string Instance password, which must contain 8 to 16 characters and comprise at least two of the following types: letters, digits, and symbols (!@#%^*()). If it is left empty, the password is in the format of "instance ID+@+root account UIN". For example, if the instance ID is "cmgo-higv73ed" and the root account UIN "100000001", the instance password will be "cmgo-higv73ed@100000001".
+     * @var string Instance password. If it is left empty, the password is in the default format of "instance ID+@+root account UIN". For example, if the instance ID is "cmgo-higv73ed" and the root account UIN "100000001", the instance password will be "cmgo-higv73ed@100000001". The custom password must contain 8-32 characters in at least two of the following types: letters, digits, and symbols (!@#%^*()_).
      */
     public $Password;
 
@@ -206,6 +212,21 @@ class CreateDBInstanceRequest extends AbstractModel
     public $MongosNodeNum;
 
     /**
+     * @var integer Number of read-only nodes. Value range: 2-7.
+     */
+    public $ReadonlyNodeNum;
+
+    /**
+     * @var array The AZ where the read-only node is deployed
+     */
+    public $ReadonlyNodeAvailabilityZoneList;
+
+    /**
+     * @var string The AZ where the hidden node resides. It is required for cross-AZ instances.
+     */
+    public $HiddenZone;
+
+    /**
      * @param integer $NodeNum The number of nodes in each replica set. The value range is subject to the response parameter of the `DescribeSpecInfo` API.
      * @param integer $Memory Instance memory size in GB.
      * @param integer $Volume Instance disk size in GB.
@@ -219,7 +240,7 @@ class CreateDBInstanceRequest extends AbstractModel
      * @param integer $ProjectId Project ID. If this parameter is not set, the default project will be used.
      * @param string $VpcId VPC ID. If this parameter is not set, the classic network will be used. Please use the `DescribeVpcs` API to query the VPC list.
      * @param string $SubnetId VPC subnet ID. If `UniqVpcId` is set, then `UniqSubnetId` will be required. Please use the `DescribeSubnets` API to query the subnet list.
-     * @param string $Password Instance password, which must contain 8 to 16 characters and comprise at least two of the following types: letters, digits, and symbols (!@#%^*()). If it is left empty, the password is in the format of "instance ID+@+root account UIN". For example, if the instance ID is "cmgo-higv73ed" and the root account UIN "100000001", the instance password will be "cmgo-higv73ed@100000001".
+     * @param string $Password Instance password. If it is left empty, the password is in the default format of "instance ID+@+root account UIN". For example, if the instance ID is "cmgo-higv73ed" and the root account UIN "100000001", the instance password will be "cmgo-higv73ed@100000001". The custom password must contain 8-32 characters in at least two of the following types: letters, digits, and symbols (!@#%^*()_).
      * @param array $Tags Instance tag information.
      * @param integer $AutoRenewFlag Auto-renewal flag. Valid values: 0 (auto-renewal not enabled), 1 (auto-renewal enabled). Default value: 0.
      * @param integer $AutoVoucher Whether to automatically use a voucher. Valid values: 1 (yes), 0 (no). Default value: 0.
@@ -232,6 +253,9 @@ class CreateDBInstanceRequest extends AbstractModel
      * @param integer $MongosCpu The number of mongos CPUs, which is required for a sharded cluster instance of MongoDB 4.2 WiredTiger. For the specific purchasable versions supported, please see the return result of the `DescribeSpecInfo` API.
      * @param integer $MongosMemory The size of mongos memory, which is required for a sharded cluster instance of MongoDB 4.2 WiredTiger. For the specific purchasable versions supported, please see the return result of the `DescribeSpecInfo` API.
      * @param integer $MongosNodeNum The number of mongos routers, which is required for a sharded cluster instance of MongoDB 4.2 WiredTiger. For the specific purchasable versions supported, please see the return result of the `DescribeSpecInfo` API. Note: please purchase 3-32 mongos routers for high availability.
+     * @param integer $ReadonlyNodeNum Number of read-only nodes. Value range: 2-7.
+     * @param array $ReadonlyNodeAvailabilityZoneList The AZ where the read-only node is deployed
+     * @param string $HiddenZone The AZ where the hidden node resides. It is required for cross-AZ instances.
      */
     function __construct()
     {
@@ -353,6 +377,18 @@ class CreateDBInstanceRequest extends AbstractModel
 
         if (array_key_exists("MongosNodeNum",$param) and $param["MongosNodeNum"] !== null) {
             $this->MongosNodeNum = $param["MongosNodeNum"];
+        }
+
+        if (array_key_exists("ReadonlyNodeNum",$param) and $param["ReadonlyNodeNum"] !== null) {
+            $this->ReadonlyNodeNum = $param["ReadonlyNodeNum"];
+        }
+
+        if (array_key_exists("ReadonlyNodeAvailabilityZoneList",$param) and $param["ReadonlyNodeAvailabilityZoneList"] !== null) {
+            $this->ReadonlyNodeAvailabilityZoneList = $param["ReadonlyNodeAvailabilityZoneList"];
+        }
+
+        if (array_key_exists("HiddenZone",$param) and $param["HiddenZone"] !== null) {
+            $this->HiddenZone = $param["HiddenZone"];
         }
     }
 }

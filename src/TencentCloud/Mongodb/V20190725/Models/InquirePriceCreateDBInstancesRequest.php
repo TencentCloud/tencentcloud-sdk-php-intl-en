@@ -22,24 +22,38 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getZone() Obtain Instance region name in the format of ap-guangzhou-2.
  * @method void setZone(string $Zone) Set Instance region name in the format of ap-guangzhou-2.
- * @method integer getNodeNum() Obtain The number of nodes in each replica set. The value range is subject to the response parameter of the `DescribeSpecInfo` API.
- * @method void setNodeNum(integer $NodeNum) Set The number of nodes in each replica set. The value range is subject to the response parameter of the `DescribeSpecInfo` API.
+ * @method integer getNodeNum() Obtain Number of primary and secondary nodes per shard. <br>Value range: It can be queried by the <a href="https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1">DescribeSpecInfo</a> API, and the `MinNodeNum` and `MaxNodeNum` parameters are the minimal and maximum value respectively.</li></ul>
+ * @method void setNodeNum(integer $NodeNum) Set Number of primary and secondary nodes per shard. <br>Value range: It can be queried by the <a href="https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1">DescribeSpecInfo</a> API, and the `MinNodeNum` and `MaxNodeNum` parameters are the minimal and maximum value respectively.</li></ul>
  * @method integer getMemory() Obtain Instance memory size in GB.
  * @method void setMemory(integer $Memory) Set Instance memory size in GB.
- * @method integer getVolume() Obtain Instance disk size in GB.
- * @method void setVolume(integer $Volume) Set Instance disk size in GB.
- * @method string getMongoVersion() Obtain Version number. For the specific purchasable versions supported, please see the return result of the `DescribeSpecInfo` API. The correspondences between parameters and versions are as follows: MONGO_3_WT: MongoDB 3.2 WiredTiger Edition; MONGO_3_ROCKS: MongoDB 3.2 RocksDB Edition; MONGO_36_WT: MongoDB 3.6 WiredTiger Edition; MONGO_40_WT: MongoDB 4.0 WiredTiger Edition.
- * @method void setMongoVersion(string $MongoVersion) Set Version number. For the specific purchasable versions supported, please see the return result of the `DescribeSpecInfo` API. The correspondences between parameters and versions are as follows: MONGO_3_WT: MongoDB 3.2 WiredTiger Edition; MONGO_3_ROCKS: MongoDB 3.2 RocksDB Edition; MONGO_36_WT: MongoDB 3.6 WiredTiger Edition; MONGO_40_WT: MongoDB 4.0 WiredTiger Edition.
+ * @method integer getVolume() Obtain  Instance disk size. <ul><li>Unit: GB</li><li>Value range: It can be queried by the <a href="https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1">DescribeSpecInfo</a> API, and `MinStorage` and `MaxStorage` parameters are the minimal and maximum value of the disk size respectively.</br>
+ * @method void setVolume(integer $Volume) Set  Instance disk size. <ul><li>Unit: GB</li><li>Value range: It can be queried by the <a href="https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1">DescribeSpecInfo</a> API, and `MinStorage` and `MaxStorage` parameters are the minimal and maximum value of the disk size respectively.</br>
+ * @method string getMongoVersion() Obtain Instance version information. <ul><li>For specific supported versions, query through the <a href="https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1">DescribeSpecInfo</a> API, the returned parameter `MongoVersionCode` in data structure `SpecItems` is the supported version information. </li><li>The correspondences between parameters and versions are as follows <ul><li>MONGO_3_WT: MongoDB 3.2 WiredTiger storage engine version. </li><li>MONGO_3_ROCKS: MongoDB 3.2 RocksDB storage engine version. </li><li>MONGO_36_WT: MongoDB 3.6 WiredTiger storage engine version. </li><li>MONGO_40_WT: MongoDB 4.0 WiredTiger storage engine version. </li><li>MONGO_42_WT: MongoDB 4.2 WiredTiger storage engine version. </li><li>MONGO_44_WT: MongoDB 4.4 WiredTiger storage engine version. </li></ul>
+ * @method void setMongoVersion(string $MongoVersion) Set Instance version information. <ul><li>For specific supported versions, query through the <a href="https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1">DescribeSpecInfo</a> API, the returned parameter `MongoVersionCode` in data structure `SpecItems` is the supported version information. </li><li>The correspondences between parameters and versions are as follows <ul><li>MONGO_3_WT: MongoDB 3.2 WiredTiger storage engine version. </li><li>MONGO_3_ROCKS: MongoDB 3.2 RocksDB storage engine version. </li><li>MONGO_36_WT: MongoDB 3.6 WiredTiger storage engine version. </li><li>MONGO_40_WT: MongoDB 4.0 WiredTiger storage engine version. </li><li>MONGO_42_WT: MongoDB 4.2 WiredTiger storage engine version. </li><li>MONGO_44_WT: MongoDB 4.4 WiredTiger storage engine version. </li></ul>
  * @method string getMachineCode() Obtain Server type. Valid values: `HIO` (high IO), `HIO10G` (ten-gigabit high IO)
  * @method void setMachineCode(string $MachineCode) Set Server type. Valid values: `HIO` (high IO), `HIO10G` (ten-gigabit high IO)
  * @method integer getGoodsNum() Obtain Number of instances. Minimum value: 1. Maximum value: 10.
  * @method void setGoodsNum(integer $GoodsNum) Set Number of instances. Minimum value: 1. Maximum value: 10.
- * @method integer getPeriod() Obtain Instance validity period in months. Valid values: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36.
- * @method void setPeriod(integer $Period) Set Instance validity period in months. Valid values: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36.
  * @method string getClusterType() Obtain Instance type. Valid values: REPLSET (replica set), SHARD (sharded cluster), STANDALONE (single-node).
  * @method void setClusterType(string $ClusterType) Set Instance type. Valid values: REPLSET (replica set), SHARD (sharded cluster), STANDALONE (single-node).
  * @method integer getReplicateSetNum() Obtain Number of replica sets. To create a replica set instance, set this parameter to 1; to create a shard instance, see the parameters returned by the `DescribeSpecInfo` API; to create a single-node instance, set this parameter to 0.
  * @method void setReplicateSetNum(integer $ReplicateSetNum) Set Number of replica sets. To create a replica set instance, set this parameter to 1; to create a shard instance, see the parameters returned by the `DescribeSpecInfo` API; to create a single-node instance, set this parameter to 0.
+ * @method integer getPeriod() Obtain Instance validity period in months. Valid values: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36.
+ * @method void setPeriod(integer $Period) Set Instance validity period in months. Valid values: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36.
+ * @method string getInstanceChargeType() Obtain 
+ * @method void setInstanceChargeType(string $InstanceChargeType) Set 
+ * @method integer getMongosCpu() Obtain 
+ * @method void setMongosCpu(integer $MongosCpu) Set 
+ * @method integer getMongosMemory() Obtain 
+ * @method void setMongosMemory(integer $MongosMemory) Set 
+ * @method integer getMongosNum() Obtain 
+ * @method void setMongosNum(integer $MongosNum) Set 
+ * @method integer getConfigServerCpu() Obtain 
+ * @method void setConfigServerCpu(integer $ConfigServerCpu) Set 
+ * @method integer getConfigServerMemory() Obtain 
+ * @method void setConfigServerMemory(integer $ConfigServerMemory) Set 
+ * @method integer getConfigServerVolume() Obtain 
+ * @method void setConfigServerVolume(integer $ConfigServerVolume) Set 
  */
 class InquirePriceCreateDBInstancesRequest extends AbstractModel
 {
@@ -49,7 +63,7 @@ class InquirePriceCreateDBInstancesRequest extends AbstractModel
     public $Zone;
 
     /**
-     * @var integer The number of nodes in each replica set. The value range is subject to the response parameter of the `DescribeSpecInfo` API.
+     * @var integer Number of primary and secondary nodes per shard. <br>Value range: It can be queried by the <a href="https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1">DescribeSpecInfo</a> API, and the `MinNodeNum` and `MaxNodeNum` parameters are the minimal and maximum value respectively.</li></ul>
      */
     public $NodeNum;
 
@@ -59,12 +73,12 @@ class InquirePriceCreateDBInstancesRequest extends AbstractModel
     public $Memory;
 
     /**
-     * @var integer Instance disk size in GB.
+     * @var integer  Instance disk size. <ul><li>Unit: GB</li><li>Value range: It can be queried by the <a href="https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1">DescribeSpecInfo</a> API, and `MinStorage` and `MaxStorage` parameters are the minimal and maximum value of the disk size respectively.</br>
      */
     public $Volume;
 
     /**
-     * @var string Version number. For the specific purchasable versions supported, please see the return result of the `DescribeSpecInfo` API. The correspondences between parameters and versions are as follows: MONGO_3_WT: MongoDB 3.2 WiredTiger Edition; MONGO_3_ROCKS: MongoDB 3.2 RocksDB Edition; MONGO_36_WT: MongoDB 3.6 WiredTiger Edition; MONGO_40_WT: MongoDB 4.0 WiredTiger Edition.
+     * @var string Instance version information. <ul><li>For specific supported versions, query through the <a href="https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1">DescribeSpecInfo</a> API, the returned parameter `MongoVersionCode` in data structure `SpecItems` is the supported version information. </li><li>The correspondences between parameters and versions are as follows <ul><li>MONGO_3_WT: MongoDB 3.2 WiredTiger storage engine version. </li><li>MONGO_3_ROCKS: MongoDB 3.2 RocksDB storage engine version. </li><li>MONGO_36_WT: MongoDB 3.6 WiredTiger storage engine version. </li><li>MONGO_40_WT: MongoDB 4.0 WiredTiger storage engine version. </li><li>MONGO_42_WT: MongoDB 4.2 WiredTiger storage engine version. </li><li>MONGO_44_WT: MongoDB 4.4 WiredTiger storage engine version. </li></ul>
      */
     public $MongoVersion;
 
@@ -79,11 +93,6 @@ class InquirePriceCreateDBInstancesRequest extends AbstractModel
     public $GoodsNum;
 
     /**
-     * @var integer Instance validity period in months. Valid values: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36.
-     */
-    public $Period;
-
-    /**
      * @var string Instance type. Valid values: REPLSET (replica set), SHARD (sharded cluster), STANDALONE (single-node).
      */
     public $ClusterType;
@@ -94,16 +103,63 @@ class InquirePriceCreateDBInstancesRequest extends AbstractModel
     public $ReplicateSetNum;
 
     /**
+     * @var integer Instance validity period in months. Valid values: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36.
+     */
+    public $Period;
+
+    /**
+     * @var string 
+     */
+    public $InstanceChargeType;
+
+    /**
+     * @var integer 
+     */
+    public $MongosCpu;
+
+    /**
+     * @var integer 
+     */
+    public $MongosMemory;
+
+    /**
+     * @var integer 
+     */
+    public $MongosNum;
+
+    /**
+     * @var integer 
+     */
+    public $ConfigServerCpu;
+
+    /**
+     * @var integer 
+     */
+    public $ConfigServerMemory;
+
+    /**
+     * @var integer 
+     */
+    public $ConfigServerVolume;
+
+    /**
      * @param string $Zone Instance region name in the format of ap-guangzhou-2.
-     * @param integer $NodeNum The number of nodes in each replica set. The value range is subject to the response parameter of the `DescribeSpecInfo` API.
+     * @param integer $NodeNum Number of primary and secondary nodes per shard. <br>Value range: It can be queried by the <a href="https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1">DescribeSpecInfo</a> API, and the `MinNodeNum` and `MaxNodeNum` parameters are the minimal and maximum value respectively.</li></ul>
      * @param integer $Memory Instance memory size in GB.
-     * @param integer $Volume Instance disk size in GB.
-     * @param string $MongoVersion Version number. For the specific purchasable versions supported, please see the return result of the `DescribeSpecInfo` API. The correspondences between parameters and versions are as follows: MONGO_3_WT: MongoDB 3.2 WiredTiger Edition; MONGO_3_ROCKS: MongoDB 3.2 RocksDB Edition; MONGO_36_WT: MongoDB 3.6 WiredTiger Edition; MONGO_40_WT: MongoDB 4.0 WiredTiger Edition.
+     * @param integer $Volume  Instance disk size. <ul><li>Unit: GB</li><li>Value range: It can be queried by the <a href="https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1">DescribeSpecInfo</a> API, and `MinStorage` and `MaxStorage` parameters are the minimal and maximum value of the disk size respectively.</br>
+     * @param string $MongoVersion Instance version information. <ul><li>For specific supported versions, query through the <a href="https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1">DescribeSpecInfo</a> API, the returned parameter `MongoVersionCode` in data structure `SpecItems` is the supported version information. </li><li>The correspondences between parameters and versions are as follows <ul><li>MONGO_3_WT: MongoDB 3.2 WiredTiger storage engine version. </li><li>MONGO_3_ROCKS: MongoDB 3.2 RocksDB storage engine version. </li><li>MONGO_36_WT: MongoDB 3.6 WiredTiger storage engine version. </li><li>MONGO_40_WT: MongoDB 4.0 WiredTiger storage engine version. </li><li>MONGO_42_WT: MongoDB 4.2 WiredTiger storage engine version. </li><li>MONGO_44_WT: MongoDB 4.4 WiredTiger storage engine version. </li></ul>
      * @param string $MachineCode Server type. Valid values: `HIO` (high IO), `HIO10G` (ten-gigabit high IO)
      * @param integer $GoodsNum Number of instances. Minimum value: 1. Maximum value: 10.
-     * @param integer $Period Instance validity period in months. Valid values: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36.
      * @param string $ClusterType Instance type. Valid values: REPLSET (replica set), SHARD (sharded cluster), STANDALONE (single-node).
      * @param integer $ReplicateSetNum Number of replica sets. To create a replica set instance, set this parameter to 1; to create a shard instance, see the parameters returned by the `DescribeSpecInfo` API; to create a single-node instance, set this parameter to 0.
+     * @param integer $Period Instance validity period in months. Valid values: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36.
+     * @param string $InstanceChargeType 
+     * @param integer $MongosCpu 
+     * @param integer $MongosMemory 
+     * @param integer $MongosNum 
+     * @param integer $ConfigServerCpu 
+     * @param integer $ConfigServerMemory 
+     * @param integer $ConfigServerVolume 
      */
     function __construct()
     {
@@ -146,16 +202,44 @@ class InquirePriceCreateDBInstancesRequest extends AbstractModel
             $this->GoodsNum = $param["GoodsNum"];
         }
 
-        if (array_key_exists("Period",$param) and $param["Period"] !== null) {
-            $this->Period = $param["Period"];
-        }
-
         if (array_key_exists("ClusterType",$param) and $param["ClusterType"] !== null) {
             $this->ClusterType = $param["ClusterType"];
         }
 
         if (array_key_exists("ReplicateSetNum",$param) and $param["ReplicateSetNum"] !== null) {
             $this->ReplicateSetNum = $param["ReplicateSetNum"];
+        }
+
+        if (array_key_exists("Period",$param) and $param["Period"] !== null) {
+            $this->Period = $param["Period"];
+        }
+
+        if (array_key_exists("InstanceChargeType",$param) and $param["InstanceChargeType"] !== null) {
+            $this->InstanceChargeType = $param["InstanceChargeType"];
+        }
+
+        if (array_key_exists("MongosCpu",$param) and $param["MongosCpu"] !== null) {
+            $this->MongosCpu = $param["MongosCpu"];
+        }
+
+        if (array_key_exists("MongosMemory",$param) and $param["MongosMemory"] !== null) {
+            $this->MongosMemory = $param["MongosMemory"];
+        }
+
+        if (array_key_exists("MongosNum",$param) and $param["MongosNum"] !== null) {
+            $this->MongosNum = $param["MongosNum"];
+        }
+
+        if (array_key_exists("ConfigServerCpu",$param) and $param["ConfigServerCpu"] !== null) {
+            $this->ConfigServerCpu = $param["ConfigServerCpu"];
+        }
+
+        if (array_key_exists("ConfigServerMemory",$param) and $param["ConfigServerMemory"] !== null) {
+            $this->ConfigServerMemory = $param["ConfigServerMemory"];
+        }
+
+        if (array_key_exists("ConfigServerVolume",$param) and $param["ConfigServerVolume"] !== null) {
+            $this->ConfigServerVolume = $param["ConfigServerVolume"];
         }
     }
 }

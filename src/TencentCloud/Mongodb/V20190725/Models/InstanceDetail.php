@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPayMode(integer $PayMode) Set Billing type. Valid value: 0 (pay-as-you-go)
  * @method integer getProjectId() Obtain Project ID
  * @method void setProjectId(integer $ProjectId) Set Project ID
- * @method integer getClusterType() Obtain Cluster type. Valid values: 0 (replica set instance), 1 (sharding instance),
- * @method void setClusterType(integer $ClusterType) Set Cluster type. Valid values: 0 (replica set instance), 1 (sharding instance),
+ * @method integer getClusterType() Obtain Cluster type. Valid values: `0` (replica set instance), `1` (sharded instance).
+ * @method void setClusterType(integer $ClusterType) Set Cluster type. Valid values: `0` (replica set instance), `1` (sharded instance).
  * @method string getRegion() Obtain Region information
  * @method void setRegion(string $Region) Set Region information
  * @method string getZone() Obtain AZ information
@@ -40,8 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVpcId(string $VpcId) Set VPC ID
  * @method string getSubnetId() Obtain Subnet ID of VPC
  * @method void setSubnetId(string $SubnetId) Set Subnet ID of VPC
- * @method integer getStatus() Obtain Instance status. Valid values: 0 (to be initialized), 1 (in process), 2 (running), -2 (expired)
- * @method void setStatus(integer $Status) Set Instance status. Valid values: 0 (to be initialized), 1 (in process), 2 (running), -2 (expired)
+ * @method integer getStatus() Obtain Instance status. Valid values: `0` (to be initialized), `1` (in process), `2` (running), `-2` (expired).
+ * @method void setStatus(integer $Status) Set Instance status. Valid values: `0` (to be initialized), `1` (in process), `2` (running), `-2` (expired).
  * @method string getVip() Obtain Instance IP
  * @method void setVip(string $Vip) Set Instance IP
  * @method integer getVport() Obtain Port number
@@ -64,14 +64,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSecondaryNum(integer $SecondaryNum) Set Number of secondary nodes of an instance
  * @method integer getReplicationSetNum() Obtain Number of instance shards
  * @method void setReplicationSetNum(integer $ReplicationSetNum) Set Number of instance shards
- * @method integer getAutoRenewFlag() Obtain Instance auto-renewal flag. Valid values: 0 (manual renewal), 1 (auto-renewal), 2 (no renewal upon expiration)
- * @method void setAutoRenewFlag(integer $AutoRenewFlag) Set Instance auto-renewal flag. Valid values: 0 (manual renewal), 1 (auto-renewal), 2 (no renewal upon expiration)
+ * @method integer getAutoRenewFlag() Obtain Instance auto-renewal flag. Valid values: `0` (manual renewal), `1` (auto-renewal), `2` (no renewal upon expiration)
+ * @method void setAutoRenewFlag(integer $AutoRenewFlag) Set Instance auto-renewal flag. Valid values: `0` (manual renewal), `1` (auto-renewal), `2` (no renewal upon expiration)
  * @method integer getUsedVolume() Obtain Used capacity in MB
  * @method void setUsedVolume(integer $UsedVolume) Set Used capacity in MB
- * @method string getMaintenanceStart() Obtain Start time of the maintenance time window
- * @method void setMaintenanceStart(string $MaintenanceStart) Set Start time of the maintenance time window
- * @method string getMaintenanceEnd() Obtain End time of the maintenance time window
- * @method void setMaintenanceEnd(string $MaintenanceEnd) Set End time of the maintenance time window
+ * @method string getMaintenanceStart() Obtain Start time of the maintenance time
+ * @method void setMaintenanceStart(string $MaintenanceStart) Set Start time of the maintenance time
+ * @method string getMaintenanceEnd() Obtain End time of the maintenance time
+ * @method void setMaintenanceEnd(string $MaintenanceEnd) Set End time of the maintenance time
  * @method array getReplicaSets() Obtain Shard information
  * @method void setReplicaSets(array $ReplicaSets) Set Shard information
  * @method array getReadonlyInstances() Obtain Information of read-only instances
@@ -80,22 +80,54 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStandbyInstances(array $StandbyInstances) Set Information of disaster recovery instances
  * @method array getCloneInstances() Obtain Information of temp instances
  * @method void setCloneInstances(array $CloneInstances) Set Information of temp instances
- * @method DBInstanceInfo getRelatedInstance() Obtain Information of associated instances. For a promoted instance, this field represents information of its temp instance; for a temp instance, this field represents information of its promoted instance; and for a read-only/disaster recovery instance, this field represents information of its primary instance
- * @method void setRelatedInstance(DBInstanceInfo $RelatedInstance) Set Information of associated instances. For a promoted instance, this field represents information of its temp instance; for a temp instance, this field represents information of its promoted instance; and for a read-only/disaster recovery instance, this field represents information of its primary instance
+ * @method DBInstanceInfo getRelatedInstance() Obtain Information of associated instances. For a regular instance, this field represents the information of its temp instance; for a temp instance, this field represents the information of its regular instance; and for a read-only instance or a disaster recovery instance, this field represents the information of its primary instance.
+ * @method void setRelatedInstance(DBInstanceInfo $RelatedInstance) Set Information of associated instances. For a regular instance, this field represents the information of its temp instance; for a temp instance, this field represents the information of its regular instance; and for a read-only instance or a disaster recovery instance, this field represents the information of its primary instance.
  * @method array getTags() Obtain Instance tag information set
  * @method void setTags(array $Tags) Set Instance tag information set
- * @method integer getInstanceVer() Obtain Instance version tag
- * @method void setInstanceVer(integer $InstanceVer) Set Instance version tag
- * @method integer getClusterVer() Obtain Instance version tag
- * @method void setClusterVer(integer $ClusterVer) Set Instance version tag
- * @method integer getProtocol() Obtain Protocol information. Valid values: 1 (mongodb), 2 (dynamodb)
- * @method void setProtocol(integer $Protocol) Set Protocol information. Valid values: 1 (mongodb), 2 (dynamodb)
+ * @method integer getInstanceVer() Obtain Instance version
+ * @method void setInstanceVer(integer $InstanceVer) Set Instance version
+ * @method integer getClusterVer() Obtain Instance version
+ * @method void setClusterVer(integer $ClusterVer) Set Instance version
+ * @method integer getProtocol() Obtain Protocol information. Valid values: `1` (mongodb), `2` (dynamodb).
+ * @method void setProtocol(integer $Protocol) Set Protocol information. Valid values: `1` (mongodb), `2` (dynamodb).
  * @method integer getInstanceType() Obtain Instance type. Valid values: 1 (promoted instance), 2 (temp instance), 3 (read-only instance), 4 (disaster recovery instance)
  * @method void setInstanceType(integer $InstanceType) Set Instance type. Valid values: 1 (promoted instance), 2 (temp instance), 3 (read-only instance), 4 (disaster recovery instance)
  * @method string getInstanceStatusDesc() Obtain Instance status description
  * @method void setInstanceStatusDesc(string $InstanceStatusDesc) Set Instance status description
  * @method string getRealInstanceId() Obtain Physical instance ID. For an instance that has been rolled back and replaced, its InstanceId and RealInstanceId are different. The physical instance ID is needed in such scenarios as getting monitoring data from Barad
  * @method void setRealInstanceId(string $RealInstanceId) Set Physical instance ID. For an instance that has been rolled back and replaced, its InstanceId and RealInstanceId are different. The physical instance ID is needed in such scenarios as getting monitoring data from Barad
+ * @method integer getMongosNodeNum() Obtain Number of mongos nodes
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setMongosNodeNum(integer $MongosNodeNum) Set Number of mongos nodes
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getMongosMemory() Obtain mongos node memory
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setMongosMemory(integer $MongosMemory) Set mongos node memory
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getMongosCpuNum() Obtain Number of mongos nodes
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setMongosCpuNum(integer $MongosCpuNum) Set Number of mongos nodes
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getConfigServerNodeNum() Obtain Number of ConfigServer nodes
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setConfigServerNodeNum(integer $ConfigServerNodeNum) Set Number of ConfigServer nodes
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getConfigServerMemory() Obtain Memory of ConfigServer node
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setConfigServerMemory(integer $ConfigServerMemory) Set Memory of ConfigServer node
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getConfigServerVolume() Obtain Disk size of ConfigServer node
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setConfigServerVolume(integer $ConfigServerVolume) Set Disk size of ConfigServer node
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getConfigServerCpuNum() Obtain CPU number of ConfigServer node
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setConfigServerCpuNum(integer $ConfigServerCpuNum) Set CPU number of ConfigServer node
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getReadonlyNodeNum() Obtain Number of read-only nodes
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setReadonlyNodeNum(integer $ReadonlyNodeNum) Set Number of read-only nodes
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class InstanceDetail extends AbstractModel
 {
@@ -120,7 +152,7 @@ class InstanceDetail extends AbstractModel
     public $ProjectId;
 
     /**
-     * @var integer Cluster type. Valid values: 0 (replica set instance), 1 (sharding instance),
+     * @var integer Cluster type. Valid values: `0` (replica set instance), `1` (sharded instance).
      */
     public $ClusterType;
 
@@ -150,7 +182,7 @@ class InstanceDetail extends AbstractModel
     public $SubnetId;
 
     /**
-     * @var integer Instance status. Valid values: 0 (to be initialized), 1 (in process), 2 (running), -2 (expired)
+     * @var integer Instance status. Valid values: `0` (to be initialized), `1` (in process), `2` (running), `-2` (expired).
      */
     public $Status;
 
@@ -210,7 +242,7 @@ class InstanceDetail extends AbstractModel
     public $ReplicationSetNum;
 
     /**
-     * @var integer Instance auto-renewal flag. Valid values: 0 (manual renewal), 1 (auto-renewal), 2 (no renewal upon expiration)
+     * @var integer Instance auto-renewal flag. Valid values: `0` (manual renewal), `1` (auto-renewal), `2` (no renewal upon expiration)
      */
     public $AutoRenewFlag;
 
@@ -220,12 +252,12 @@ class InstanceDetail extends AbstractModel
     public $UsedVolume;
 
     /**
-     * @var string Start time of the maintenance time window
+     * @var string Start time of the maintenance time
      */
     public $MaintenanceStart;
 
     /**
-     * @var string End time of the maintenance time window
+     * @var string End time of the maintenance time
      */
     public $MaintenanceEnd;
 
@@ -250,7 +282,7 @@ class InstanceDetail extends AbstractModel
     public $CloneInstances;
 
     /**
-     * @var DBInstanceInfo Information of associated instances. For a promoted instance, this field represents information of its temp instance; for a temp instance, this field represents information of its promoted instance; and for a read-only/disaster recovery instance, this field represents information of its primary instance
+     * @var DBInstanceInfo Information of associated instances. For a regular instance, this field represents the information of its temp instance; for a temp instance, this field represents the information of its regular instance; and for a read-only instance or a disaster recovery instance, this field represents the information of its primary instance.
      */
     public $RelatedInstance;
 
@@ -260,17 +292,17 @@ class InstanceDetail extends AbstractModel
     public $Tags;
 
     /**
-     * @var integer Instance version tag
+     * @var integer Instance version
      */
     public $InstanceVer;
 
     /**
-     * @var integer Instance version tag
+     * @var integer Instance version
      */
     public $ClusterVer;
 
     /**
-     * @var integer Protocol information. Valid values: 1 (mongodb), 2 (dynamodb)
+     * @var integer Protocol information. Valid values: `1` (mongodb), `2` (dynamodb).
      */
     public $Protocol;
 
@@ -290,17 +322,65 @@ class InstanceDetail extends AbstractModel
     public $RealInstanceId;
 
     /**
+     * @var integer Number of mongos nodes
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $MongosNodeNum;
+
+    /**
+     * @var integer mongos node memory
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $MongosMemory;
+
+    /**
+     * @var integer Number of mongos nodes
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $MongosCpuNum;
+
+    /**
+     * @var integer Number of ConfigServer nodes
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $ConfigServerNodeNum;
+
+    /**
+     * @var integer Memory of ConfigServer node
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $ConfigServerMemory;
+
+    /**
+     * @var integer Disk size of ConfigServer node
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $ConfigServerVolume;
+
+    /**
+     * @var integer CPU number of ConfigServer node
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $ConfigServerCpuNum;
+
+    /**
+     * @var integer Number of read-only nodes
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $ReadonlyNodeNum;
+
+    /**
      * @param string $InstanceId Instance ID
      * @param string $InstanceName Instance name
      * @param integer $PayMode Billing type. Valid value: 0 (pay-as-you-go)
      * @param integer $ProjectId Project ID
-     * @param integer $ClusterType Cluster type. Valid values: 0 (replica set instance), 1 (sharding instance),
+     * @param integer $ClusterType Cluster type. Valid values: `0` (replica set instance), `1` (sharded instance).
      * @param string $Region Region information
      * @param string $Zone AZ information
      * @param integer $NetType Network type. Valid values: 0 (basic network), 1 (VPC)
      * @param string $VpcId VPC ID
      * @param string $SubnetId Subnet ID of VPC
-     * @param integer $Status Instance status. Valid values: 0 (to be initialized), 1 (in process), 2 (running), -2 (expired)
+     * @param integer $Status Instance status. Valid values: `0` (to be initialized), `1` (in process), `2` (running), `-2` (expired).
      * @param string $Vip Instance IP
      * @param integer $Vport Port number
      * @param string $CreateTime Instance creation time
@@ -312,22 +392,38 @@ class InstanceDetail extends AbstractModel
      * @param string $MachineType Instance machine type
      * @param integer $SecondaryNum Number of secondary nodes of an instance
      * @param integer $ReplicationSetNum Number of instance shards
-     * @param integer $AutoRenewFlag Instance auto-renewal flag. Valid values: 0 (manual renewal), 1 (auto-renewal), 2 (no renewal upon expiration)
+     * @param integer $AutoRenewFlag Instance auto-renewal flag. Valid values: `0` (manual renewal), `1` (auto-renewal), `2` (no renewal upon expiration)
      * @param integer $UsedVolume Used capacity in MB
-     * @param string $MaintenanceStart Start time of the maintenance time window
-     * @param string $MaintenanceEnd End time of the maintenance time window
+     * @param string $MaintenanceStart Start time of the maintenance time
+     * @param string $MaintenanceEnd End time of the maintenance time
      * @param array $ReplicaSets Shard information
      * @param array $ReadonlyInstances Information of read-only instances
      * @param array $StandbyInstances Information of disaster recovery instances
      * @param array $CloneInstances Information of temp instances
-     * @param DBInstanceInfo $RelatedInstance Information of associated instances. For a promoted instance, this field represents information of its temp instance; for a temp instance, this field represents information of its promoted instance; and for a read-only/disaster recovery instance, this field represents information of its primary instance
+     * @param DBInstanceInfo $RelatedInstance Information of associated instances. For a regular instance, this field represents the information of its temp instance; for a temp instance, this field represents the information of its regular instance; and for a read-only instance or a disaster recovery instance, this field represents the information of its primary instance.
      * @param array $Tags Instance tag information set
-     * @param integer $InstanceVer Instance version tag
-     * @param integer $ClusterVer Instance version tag
-     * @param integer $Protocol Protocol information. Valid values: 1 (mongodb), 2 (dynamodb)
+     * @param integer $InstanceVer Instance version
+     * @param integer $ClusterVer Instance version
+     * @param integer $Protocol Protocol information. Valid values: `1` (mongodb), `2` (dynamodb).
      * @param integer $InstanceType Instance type. Valid values: 1 (promoted instance), 2 (temp instance), 3 (read-only instance), 4 (disaster recovery instance)
      * @param string $InstanceStatusDesc Instance status description
      * @param string $RealInstanceId Physical instance ID. For an instance that has been rolled back and replaced, its InstanceId and RealInstanceId are different. The physical instance ID is needed in such scenarios as getting monitoring data from Barad
+     * @param integer $MongosNodeNum Number of mongos nodes
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $MongosMemory mongos node memory
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $MongosCpuNum Number of mongos nodes
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $ConfigServerNodeNum Number of ConfigServer nodes
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $ConfigServerMemory Memory of ConfigServer node
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $ConfigServerVolume Disk size of ConfigServer node
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $ConfigServerCpuNum CPU number of ConfigServer node
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $ReadonlyNodeNum Number of read-only nodes
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -518,6 +614,38 @@ class InstanceDetail extends AbstractModel
 
         if (array_key_exists("RealInstanceId",$param) and $param["RealInstanceId"] !== null) {
             $this->RealInstanceId = $param["RealInstanceId"];
+        }
+
+        if (array_key_exists("MongosNodeNum",$param) and $param["MongosNodeNum"] !== null) {
+            $this->MongosNodeNum = $param["MongosNodeNum"];
+        }
+
+        if (array_key_exists("MongosMemory",$param) and $param["MongosMemory"] !== null) {
+            $this->MongosMemory = $param["MongosMemory"];
+        }
+
+        if (array_key_exists("MongosCpuNum",$param) and $param["MongosCpuNum"] !== null) {
+            $this->MongosCpuNum = $param["MongosCpuNum"];
+        }
+
+        if (array_key_exists("ConfigServerNodeNum",$param) and $param["ConfigServerNodeNum"] !== null) {
+            $this->ConfigServerNodeNum = $param["ConfigServerNodeNum"];
+        }
+
+        if (array_key_exists("ConfigServerMemory",$param) and $param["ConfigServerMemory"] !== null) {
+            $this->ConfigServerMemory = $param["ConfigServerMemory"];
+        }
+
+        if (array_key_exists("ConfigServerVolume",$param) and $param["ConfigServerVolume"] !== null) {
+            $this->ConfigServerVolume = $param["ConfigServerVolume"];
+        }
+
+        if (array_key_exists("ConfigServerCpuNum",$param) and $param["ConfigServerCpuNum"] !== null) {
+            $this->ConfigServerCpuNum = $param["ConfigServerCpuNum"];
+        }
+
+        if (array_key_exists("ReadonlyNodeNum",$param) and $param["ReadonlyNodeNum"] !== null) {
+            $this->ReadonlyNodeNum = $param["ReadonlyNodeNum"];
         }
     }
 }
