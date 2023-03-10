@@ -32,8 +32,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setAdvancedObjects(array $AdvancedObjects) Set Advanced object type, such as function and procedure. If you need to sync advanced objects, the initialization type must include structure initialization; that is, `Options.InitType` must be `Structure` or `Full`.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method OnlineDDL getOnlineDDL() Obtain 
- * @method void setOnlineDDL(OnlineDDL $OnlineDDL) Set 
+ * @method OnlineDDL getOnlineDDL() Obtain A redundant field that specifies the online DDL type
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setOnlineDDL(OnlineDDL $OnlineDDL) Set A redundant field that specifies the online DDL type
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class Objects extends AbstractModel
 {
@@ -56,7 +58,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $AdvancedObjects;
 
     /**
-     * @var OnlineDDL 
+     * @var OnlineDDL A redundant field that specifies the online DDL type
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $OnlineDDL;
 
@@ -67,7 +70,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param array $AdvancedObjects Advanced object type, such as function and procedure. If you need to sync advanced objects, the initialization type must include structure initialization; that is, `Options.InitType` must be `Structure` or `Full`.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param OnlineDDL $OnlineDDL 
+     * @param OnlineDDL $OnlineDDL A redundant field that specifies the online DDL type
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

@@ -22,12 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getJobId() Obtain Sync task instance ID in the format of `sync-werwfs23`, which is used to identify a sync task.
  * @method void setJobId(string $JobId) Set Sync task instance ID in the format of `sync-werwfs23`, which is used to identify a sync task.
- * @method string getSrcAccessType() Obtain Source database access type. Valid values: `cdb` (database); `cvm` (self-build on CVM); `vpc` (VPC); `extranet` (public network); `vpncloud` (VPN access); `dcg` (Direct Connect); `ccn` (CCN); `intranet` (intranet); `noProxy`. Note that the valid values are subject to the current link.
- * @method void setSrcAccessType(string $SrcAccessType) Set Source database access type. Valid values: `cdb` (database); `cvm` (self-build on CVM); `vpc` (VPC); `extranet` (public network); `vpncloud` (VPN access); `dcg` (Direct Connect); `ccn` (CCN); `intranet` (intranet); `noProxy`. Note that the valid values are subject to the current link.
- * @method string getDstAccessType() Obtain Target database access type. Valid values: `cdb` (database); `cvm` (self-build on CVM); `vpc` (VPC); `extranet` (public network); `vpncloud` (VPN access); `dcg` (Direct Connect); `ccn` (CCN); `intranet` (intranet); `noProxy`. Note that the valid values are subject to the current link.
- * @method void setDstAccessType(string $DstAccessType) Set Target database access type. Valid values: `cdb` (database); `cvm` (self-build on CVM); `vpc` (VPC); `extranet` (public network); `vpncloud` (VPN access); `dcg` (Direct Connect); `ccn` (CCN); `intranet` (intranet); `noProxy`. Note that the valid values are subject to the current link.
- * @method Options getOptions() Obtain Sync task options
- * @method void setOptions(Options $Options) Set Sync task options
+ * @method string getSrcAccessType() Obtain Source database access type. Valid values: `cdb` (database); `cvm` (self-build on CVM); `vpc` (VPC); `extranet` (public network); `vpncloud` (VPN access); `dcg` (Direct Connect); `ccn` (CCN); `intranet` (intranet). Note that the valid values are subject to the current link.
+ * @method void setSrcAccessType(string $SrcAccessType) Set Source database access type. Valid values: `cdb` (database); `cvm` (self-build on CVM); `vpc` (VPC); `extranet` (public network); `vpncloud` (VPN access); `dcg` (Direct Connect); `ccn` (CCN); `intranet` (intranet). Note that the valid values are subject to the current link.
+ * @method string getDstAccessType() Obtain Target database access type. Valid values: `cdb` (database); `cvm` (self-build on CVM); `vpc` (VPC); `extranet` (public network); `vpncloud` (VPN access); `dcg` (Direct Connect); `ccn` (CCN); `intranet` (intranet); `ckafka` (CKafka instance). Note that the valid values are subject to the current link.
+ * @method void setDstAccessType(string $DstAccessType) Set Target database access type. Valid values: `cdb` (database); `cvm` (self-build on CVM); `vpc` (VPC); `extranet` (public network); `vpncloud` (VPN access); `dcg` (Direct Connect); `ccn` (CCN); `intranet` (intranet); `ckafka` (CKafka instance). Note that the valid values are subject to the current link.
  * @method Objects getObjects() Obtain Information of synced database/table objects
  * @method void setObjects(Objects $Objects) Set Information of synced database/table objects
  * @method string getJobName() Obtain Sync task name
@@ -38,10 +36,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRunMode(string $RunMode) Set Running mode. Valid values: `Immediate`, `Timed`. Default value: `Immediate`.
  * @method string getExpectRunTime() Obtain Expected start time in the format of "2006-01-02 15:04:05", which is required if `RunMode` is `Timed`.
  * @method void setExpectRunTime(string $ExpectRunTime) Set Expected start time in the format of "2006-01-02 15:04:05", which is required if `RunMode` is `Timed`.
- * @method Endpoint getSrcInfo() Obtain Source database information. This parameter is used by single-node databases.
- * @method void setSrcInfo(Endpoint $SrcInfo) Set Source database information. This parameter is used by single-node databases.
+ * @method Endpoint getSrcInfo() Obtain Source database information. This parameter only applies to single-node databases, and `SrcNodeType` must be `single`.
+ * @method void setSrcInfo(Endpoint $SrcInfo) Set Source database information. This parameter only applies to single-node databases, and `SrcNodeType` must be `single`.
  * @method Endpoint getDstInfo() Obtain Target database information. This parameter is used by single-node databases.
  * @method void setDstInfo(Endpoint $DstInfo) Set Target database information. This parameter is used by single-node databases.
+ * @method Options getOptions() Obtain Sync task options
+ * @method void setOptions(Options $Options) Set Sync task options
  * @method integer getAutoRetryTimeRangeMinutes() Obtain Automatic retry time, which can be set to 5-720 minutes. 0 indicates that retry is disabled.
  * @method void setAutoRetryTimeRangeMinutes(integer $AutoRetryTimeRangeMinutes) Set Automatic retry time, which can be set to 5-720 minutes. 0 indicates that retry is disabled.
  */
@@ -53,19 +53,14 @@ class ConfigureSyncJobRequest extends AbstractModel
     public $JobId;
 
     /**
-     * @var string Source database access type. Valid values: `cdb` (database); `cvm` (self-build on CVM); `vpc` (VPC); `extranet` (public network); `vpncloud` (VPN access); `dcg` (Direct Connect); `ccn` (CCN); `intranet` (intranet); `noProxy`. Note that the valid values are subject to the current link.
+     * @var string Source database access type. Valid values: `cdb` (database); `cvm` (self-build on CVM); `vpc` (VPC); `extranet` (public network); `vpncloud` (VPN access); `dcg` (Direct Connect); `ccn` (CCN); `intranet` (intranet). Note that the valid values are subject to the current link.
      */
     public $SrcAccessType;
 
     /**
-     * @var string Target database access type. Valid values: `cdb` (database); `cvm` (self-build on CVM); `vpc` (VPC); `extranet` (public network); `vpncloud` (VPN access); `dcg` (Direct Connect); `ccn` (CCN); `intranet` (intranet); `noProxy`. Note that the valid values are subject to the current link.
+     * @var string Target database access type. Valid values: `cdb` (database); `cvm` (self-build on CVM); `vpc` (VPC); `extranet` (public network); `vpncloud` (VPN access); `dcg` (Direct Connect); `ccn` (CCN); `intranet` (intranet); `ckafka` (CKafka instance). Note that the valid values are subject to the current link.
      */
     public $DstAccessType;
-
-    /**
-     * @var Options Sync task options
-     */
-    public $Options;
 
     /**
      * @var Objects Information of synced database/table objects
@@ -93,7 +88,7 @@ class ConfigureSyncJobRequest extends AbstractModel
     public $ExpectRunTime;
 
     /**
-     * @var Endpoint Source database information. This parameter is used by single-node databases.
+     * @var Endpoint Source database information. This parameter only applies to single-node databases, and `SrcNodeType` must be `single`.
      */
     public $SrcInfo;
 
@@ -103,22 +98,27 @@ class ConfigureSyncJobRequest extends AbstractModel
     public $DstInfo;
 
     /**
+     * @var Options Sync task options
+     */
+    public $Options;
+
+    /**
      * @var integer Automatic retry time, which can be set to 5-720 minutes. 0 indicates that retry is disabled.
      */
     public $AutoRetryTimeRangeMinutes;
 
     /**
      * @param string $JobId Sync task instance ID in the format of `sync-werwfs23`, which is used to identify a sync task.
-     * @param string $SrcAccessType Source database access type. Valid values: `cdb` (database); `cvm` (self-build on CVM); `vpc` (VPC); `extranet` (public network); `vpncloud` (VPN access); `dcg` (Direct Connect); `ccn` (CCN); `intranet` (intranet); `noProxy`. Note that the valid values are subject to the current link.
-     * @param string $DstAccessType Target database access type. Valid values: `cdb` (database); `cvm` (self-build on CVM); `vpc` (VPC); `extranet` (public network); `vpncloud` (VPN access); `dcg` (Direct Connect); `ccn` (CCN); `intranet` (intranet); `noProxy`. Note that the valid values are subject to the current link.
-     * @param Options $Options Sync task options
+     * @param string $SrcAccessType Source database access type. Valid values: `cdb` (database); `cvm` (self-build on CVM); `vpc` (VPC); `extranet` (public network); `vpncloud` (VPN access); `dcg` (Direct Connect); `ccn` (CCN); `intranet` (intranet). Note that the valid values are subject to the current link.
+     * @param string $DstAccessType Target database access type. Valid values: `cdb` (database); `cvm` (self-build on CVM); `vpc` (VPC); `extranet` (public network); `vpncloud` (VPN access); `dcg` (Direct Connect); `ccn` (CCN); `intranet` (intranet); `ckafka` (CKafka instance). Note that the valid values are subject to the current link.
      * @param Objects $Objects Information of synced database/table objects
      * @param string $JobName Sync task name
      * @param string $JobMode Enumerated values: `liteMode`: Lite mode; `fullMode`: Standard mode
      * @param string $RunMode Running mode. Valid values: `Immediate`, `Timed`. Default value: `Immediate`.
      * @param string $ExpectRunTime Expected start time in the format of "2006-01-02 15:04:05", which is required if `RunMode` is `Timed`.
-     * @param Endpoint $SrcInfo Source database information. This parameter is used by single-node databases.
+     * @param Endpoint $SrcInfo Source database information. This parameter only applies to single-node databases, and `SrcNodeType` must be `single`.
      * @param Endpoint $DstInfo Target database information. This parameter is used by single-node databases.
+     * @param Options $Options Sync task options
      * @param integer $AutoRetryTimeRangeMinutes Automatic retry time, which can be set to 5-720 minutes. 0 indicates that retry is disabled.
      */
     function __construct()
@@ -144,11 +144,6 @@ class ConfigureSyncJobRequest extends AbstractModel
 
         if (array_key_exists("DstAccessType",$param) and $param["DstAccessType"] !== null) {
             $this->DstAccessType = $param["DstAccessType"];
-        }
-
-        if (array_key_exists("Options",$param) and $param["Options"] !== null) {
-            $this->Options = new Options();
-            $this->Options->deserialize($param["Options"]);
         }
 
         if (array_key_exists("Objects",$param) and $param["Objects"] !== null) {
@@ -180,6 +175,11 @@ class ConfigureSyncJobRequest extends AbstractModel
         if (array_key_exists("DstInfo",$param) and $param["DstInfo"] !== null) {
             $this->DstInfo = new Endpoint();
             $this->DstInfo->deserialize($param["DstInfo"]);
+        }
+
+        if (array_key_exists("Options",$param) and $param["Options"] !== null) {
+            $this->Options = new Options();
+            $this->Options->deserialize($param["Options"]);
         }
 
         if (array_key_exists("AutoRetryTimeRangeMinutes",$param) and $param["AutoRetryTimeRangeMinutes"] !== null) {

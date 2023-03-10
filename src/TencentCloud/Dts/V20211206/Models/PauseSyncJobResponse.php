@@ -18,31 +18,19 @@ namespace TencentCloud\Dts\V20211206\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * SkipCheckItem response structure.
+ * PauseSyncJob response structure.
  *
- * @method string getMessage() Obtain Message prompted for skipping the check item
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setMessage(string $Message) Set Message prompted for skipping the check item
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
-class SkipCheckItemResponse extends AbstractModel
+class PauseSyncJobResponse extends AbstractModel
 {
-    /**
-     * @var string Message prompted for skipping the check item
-Note: This field may return null, indicating that no valid values can be obtained.
-     */
-    public $Message;
-
     /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
 
     /**
-     * @param string $Message Message prompted for skipping the check item
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -58,10 +46,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Message",$param) and $param["Message"] !== null) {
-            $this->Message = $param["Message"];
-        }
-
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
             $this->RequestId = $param["RequestId"];
         }

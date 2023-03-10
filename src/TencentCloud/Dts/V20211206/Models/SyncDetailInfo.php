@@ -52,6 +52,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setStepInfos(array $StepInfos) Set Step details
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getCauseOfCompareDisable() Obtain Cause of the failure of initiating data consistency check
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setCauseOfCompareDisable(string $CauseOfCompareDisable) Set Cause of the failure of initiating data consistency check
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class SyncDetailInfo extends AbstractModel
 {
@@ -104,6 +108,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $StepInfos;
 
     /**
+     * @var string Cause of the failure of initiating data consistency check
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $CauseOfCompareDisable;
+
+    /**
      * @param integer $StepAll Total number of steps
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $StepNow Current step
@@ -119,6 +129,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $Message Overall description
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param array $StepInfos Step details
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $CauseOfCompareDisable Cause of the failure of initiating data consistency check
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
@@ -169,6 +181,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 $obj->deserialize($value);
                 array_push($this->StepInfos, $obj);
             }
+        }
+
+        if (array_key_exists("CauseOfCompareDisable",$param) and $param["CauseOfCompareDisable"] !== null) {
+            $this->CauseOfCompareDisable = $param["CauseOfCompareDisable"];
         }
     }
 }

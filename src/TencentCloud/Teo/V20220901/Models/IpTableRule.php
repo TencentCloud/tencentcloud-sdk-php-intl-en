@@ -34,8 +34,24 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMatchFrom(string $MatchFrom) Set The matching dimension. Values:
 <li>`ip`: Match by IP.</li>
 <li>`area`: Match by IP region.</li>
- * @method string getMatchContent() Obtain The matching content.
- * @method void setMatchContent(string $MatchContent) Set The matching content.
+ * @method string getOperator() Obtain Matching method. It defaults to `equal` if it’s left empty.
+Values: 
+<li>`is_empty`: The field is empty.</li>
+<li>`not_exists`: The configuration item does not exist.</li>
+<li>`include`: Include</li>
+<li>`not_include`: Do not include</li>
+<li>`equal`: Equal to</li>
+<li>`not_equal`: Not equal to</li>
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setOperator(string $Operator) Set Matching method. It defaults to `equal` if it’s left empty.
+Values: 
+<li>`is_empty`: The field is empty.</li>
+<li>`not_exists`: The configuration item does not exist.</li>
+<li>`include`: Include</li>
+<li>`not_include`: Do not include</li>
+<li>`equal`: Equal to</li>
+<li>`not_equal`: Not equal to</li>
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method integer getRuleID() Obtain The rule ID, which is only used as an output parameter.
  * @method void setRuleID(integer $RuleID) Set The rule ID, which is only used as an output parameter.
  * @method string getUpdateTime() Obtain The update time, which is only used as an output parameter.
@@ -48,6 +64,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
 <li>`on`: Enabled</li>
 <li>`off`: Disabled</li>
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getRuleName() Obtain The rule name.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setRuleName(string $RuleName) Set The rule name.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getMatchContent() Obtain Matching content. It’s not required when `Operator` is `is_emty` or `not_exists`. 
+ * @method void setMatchContent(string $MatchContent) Set Matching content. It’s not required when `Operator` is `is_emty` or `not_exists`. 
  */
 class IpTableRule extends AbstractModel
 {
@@ -67,9 +89,17 @@ class IpTableRule extends AbstractModel
     public $MatchFrom;
 
     /**
-     * @var string The matching content.
+     * @var string Matching method. It defaults to `equal` if it’s left empty.
+Values: 
+<li>`is_empty`: The field is empty.</li>
+<li>`not_exists`: The configuration item does not exist.</li>
+<li>`include`: Include</li>
+<li>`not_include`: Do not include</li>
+<li>`equal`: Equal to</li>
+<li>`not_equal`: Not equal to</li>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
-    public $MatchContent;
+    public $Operator;
 
     /**
      * @var integer The rule ID, which is only used as an output parameter.
@@ -90,6 +120,17 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $Status;
 
     /**
+     * @var string The rule name.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $RuleName;
+
+    /**
+     * @var string Matching content. It’s not required when `Operator` is `is_emty` or `not_exists`. 
+     */
+    public $MatchContent;
+
+    /**
      * @param string $Action The action. Values:
 <li>`drop`: Block</li>
 <li>`trans`: Allow</li>
@@ -97,13 +138,24 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $MatchFrom The matching dimension. Values:
 <li>`ip`: Match by IP.</li>
 <li>`area`: Match by IP region.</li>
-     * @param string $MatchContent The matching content.
+     * @param string $Operator Matching method. It defaults to `equal` if it’s left empty.
+Values: 
+<li>`is_empty`: The field is empty.</li>
+<li>`not_exists`: The configuration item does not exist.</li>
+<li>`include`: Include</li>
+<li>`not_include`: Do not include</li>
+<li>`equal`: Equal to</li>
+<li>`not_equal`: Not equal to</li>
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $RuleID The rule ID, which is only used as an output parameter.
      * @param string $UpdateTime The update time, which is only used as an output parameter.
      * @param string $Status The rule status. A null value indicates that the rule is enabled. Values:
 <li>`on`: Enabled</li>
 <li>`off`: Disabled</li>
 Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $RuleName The rule name.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $MatchContent Matching content. It’s not required when `Operator` is `is_emty` or `not_exists`. 
      */
     function __construct()
     {
@@ -126,8 +178,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
             $this->MatchFrom = $param["MatchFrom"];
         }
 
-        if (array_key_exists("MatchContent",$param) and $param["MatchContent"] !== null) {
-            $this->MatchContent = $param["MatchContent"];
+        if (array_key_exists("Operator",$param) and $param["Operator"] !== null) {
+            $this->Operator = $param["Operator"];
         }
 
         if (array_key_exists("RuleID",$param) and $param["RuleID"] !== null) {
@@ -140,6 +192,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("Status",$param) and $param["Status"] !== null) {
             $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("RuleName",$param) and $param["RuleName"] !== null) {
+            $this->RuleName = $param["RuleName"];
+        }
+
+        if (array_key_exists("MatchContent",$param) and $param["MatchContent"] !== null) {
+            $this->MatchContent = $param["MatchContent"];
         }
     }
 }

@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAction(string $Action) Set Action to be executed. Values:
 <li>`monitor`: Observe</li>
 <li>`alg`: Challenge</li>
+ * @method integer getRuleId() Obtain The rule ID, which is only used as a response parameter.
+ * @method void setRuleId(integer $RuleId) Set The rule ID, which is only used as a response parameter.
  */
 class RateLimitIntelligence extends AbstractModel
 {
@@ -50,12 +52,18 @@ class RateLimitIntelligence extends AbstractModel
     public $Action;
 
     /**
+     * @var integer The rule ID, which is only used as a response parameter.
+     */
+    public $RuleId;
+
+    /**
      * @param string $Switch Whether to enable configuration. Values:
 <li>`on`: Enable</li>
 <li>`off`: Disable</li>
      * @param string $Action Action to be executed. Values:
 <li>`monitor`: Observe</li>
 <li>`alg`: Challenge</li>
+     * @param integer $RuleId The rule ID, which is only used as a response parameter.
      */
     function __construct()
     {
@@ -76,6 +84,10 @@ class RateLimitIntelligence extends AbstractModel
 
         if (array_key_exists("Action",$param) and $param["Action"] !== null) {
             $this->Action = $param["Action"];
+        }
+
+        if (array_key_exists("RuleId",$param) and $param["RuleId"] !== null) {
+            $this->RuleId = $param["RuleId"];
         }
     }
 }

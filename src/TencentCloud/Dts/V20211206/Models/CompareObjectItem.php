@@ -20,17 +20,17 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Database/Table objects for data consistency check
  *
- * @method string getDbName() Obtain The database to be migrated
+ * @method string getDbName() Obtain Database name
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setDbName(string $DbName) Set The database to be migrated
+ * @method void setDbName(string $DbName) Set Database name
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getDbMode() Obtain Database selection mode. Valid values: `all`, `partial`.
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setDbMode(string $DbMode) Set Database selection mode. Valid values: `all`, `partial`.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getSchemaName() Obtain The schema to be migrated
+ * @method string getSchemaName() Obtain Schema name
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setSchemaName(string $SchemaName) Set The schema to be migrated
+ * @method void setSchemaName(string $SchemaName) Set Schema name
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getTableMode() Obtain Schema selection mode. Valid values: `all`, `partial`.
 Note: This field may return null, indicating that no valid values can be obtained.
@@ -52,7 +52,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 class CompareObjectItem extends AbstractModel
 {
     /**
-     * @var string The database to be migrated
+     * @var string Database name
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $DbName;
@@ -64,7 +64,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $DbMode;
 
     /**
-     * @var string The schema to be migrated
+     * @var string Schema name
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $SchemaName;
@@ -94,11 +94,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $Views;
 
     /**
-     * @param string $DbName The database to be migrated
+     * @param string $DbName Database name
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $DbMode Database selection mode. Valid values: `all`, `partial`.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $SchemaName The schema to be migrated
+     * @param string $SchemaName Schema name
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $TableMode Schema selection mode. Valid values: `all`, `partial`.
 Note: This field may return null, indicating that no valid values can be obtained.

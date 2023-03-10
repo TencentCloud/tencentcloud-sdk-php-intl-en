@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getZoneId() Obtain ID of the site
  * @method void setZoneId(string $ZoneId) Set ID of the site
- * @method array getFilters() Obtain Filter criteria. Each filter criteria can have up to 20 entries.
-<li>`rule-id`:<br>   Filter by the <strong>rule ID</strong><br>   Type: string<br>   Required: No
- * @method void setFilters(array $Filters) Set Filter criteria. Each filter criteria can have up to 20 entries.
-<li>`rule-id`:<br>   Filter by the <strong>rule ID</strong><br>   Type: string<br>   Required: No
+ * @method array getFilters() Obtain Filter conditions. Each filter condition can have up to 20 entries. See below for details:
+<li>`rule-id`:<br>   Filter by the <strong>rule ID</strong><br>   Type: String<br>   Required: No</li>
+ * @method void setFilters(array $Filters) Set Filter conditions. Each filter condition can have up to 20 entries. See below for details:
+<li>`rule-id`:<br>   Filter by the <strong>rule ID</strong><br>   Type: String<br>   Required: No</li>
  */
 class DescribeRulesRequest extends AbstractModel
 {
@@ -35,15 +35,15 @@ class DescribeRulesRequest extends AbstractModel
     public $ZoneId;
 
     /**
-     * @var array Filter criteria. Each filter criteria can have up to 20 entries.
-<li>`rule-id`:<br>   Filter by the <strong>rule ID</strong><br>   Type: string<br>   Required: No
+     * @var array Filter conditions. Each filter condition can have up to 20 entries. See below for details:
+<li>`rule-id`:<br>   Filter by the <strong>rule ID</strong><br>   Type: String<br>   Required: No</li>
      */
     public $Filters;
 
     /**
      * @param string $ZoneId ID of the site
-     * @param array $Filters Filter criteria. Each filter criteria can have up to 20 entries.
-<li>`rule-id`:<br>   Filter by the <strong>rule ID</strong><br>   Type: string<br>   Required: No
+     * @param array $Filters Filter conditions. Each filter condition can have up to 20 entries. See below for details:
+<li>`rule-id`:<br>   Filter by the <strong>rule ID</strong><br>   Type: String<br>   Required: No</li>
      */
     function __construct()
     {

@@ -14,28 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Dts\V20211206\Models;
+namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Online DDL type
+ * UpdateOriginProtectionIPWhitelist request structure.
  *
- * @method string getStatus() Obtain Status
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setStatus(string $Status) Set Status
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getZoneId() Obtain ID of the site.
+ * @method void setZoneId(string $ZoneId) Set ID of the site.
  */
-class OnlineDDL extends AbstractModel
+class UpdateOriginProtectionIPWhitelistRequest extends AbstractModel
 {
     /**
-     * @var string Status
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string ID of the site.
      */
-    public $Status;
+    public $ZoneId;
 
     /**
-     * @param string $Status Status
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $ZoneId ID of the site.
      */
     function __construct()
     {
@@ -50,8 +46,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
-            $this->Status = $param["Status"];
+        if (array_key_exists("ZoneId",$param) and $param["ZoneId"] !== null) {
+            $this->ZoneId = $param["ZoneId"];
         }
     }
 }

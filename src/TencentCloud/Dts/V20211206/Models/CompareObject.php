@@ -20,33 +20,45 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Configuration of the data consistency check object
  *
- * @method string getObjectMode() Obtain Object migration mode. Valid values: `all`, `partial`.
+ * @method string getObjectMode() Obtain Data comparison object mode (`all`: Entire instance; `partial`: Some objects)
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setObjectMode(string $ObjectMode) Set Object migration mode. Valid values: `all`, `partial`.
+ * @method void setObjectMode(string $ObjectMode) Set Data comparison object mode (`all`: Entire instance; `partial`: Some objects)
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method array getObjectItems() Obtain Migration database/table configuration
+ * @method array getObjectItems() Obtain Object list
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setObjectItems(array $ObjectItems) Set Migration database/table configuration
+ * @method void setObjectItems(array $ObjectItems) Set Object list
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method array getAdvancedObjects() Obtain Advanced object type (`account`: Account; `index`: Index; `shardkey`: Shard key, which may be adjusted later; `schema`: Database/table structure)
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setAdvancedObjects(array $AdvancedObjects) Set Advanced object type (`account`: Account; `index`: Index; `shardkey`: Shard key, which may be adjusted later; `schema`: Database/table structure)
 Note: This field may return null, indicating that no valid values can be obtained.
  */
 class CompareObject extends AbstractModel
 {
     /**
-     * @var string Object migration mode. Valid values: `all`, `partial`.
+     * @var string Data comparison object mode (`all`: Entire instance; `partial`: Some objects)
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ObjectMode;
 
     /**
-     * @var array Migration database/table configuration
+     * @var array Object list
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ObjectItems;
 
     /**
-     * @param string $ObjectMode Object migration mode. Valid values: `all`, `partial`.
+     * @var array Advanced object type (`account`: Account; `index`: Index; `shardkey`: Shard key, which may be adjusted later; `schema`: Database/table structure)
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param array $ObjectItems Migration database/table configuration
+     */
+    public $AdvancedObjects;
+
+    /**
+     * @param string $ObjectMode Data comparison object mode (`all`: Entire instance; `partial`: Some objects)
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param array $ObjectItems Object list
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param array $AdvancedObjects Advanced object type (`account`: Account; `index`: Index; `shardkey`: Shard key, which may be adjusted later; `schema`: Database/table structure)
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
@@ -73,6 +85,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 $obj->deserialize($value);
                 array_push($this->ObjectItems, $obj);
             }
+        }
+
+        if (array_key_exists("AdvancedObjects",$param) and $param["AdvancedObjects"] !== null) {
+            $this->AdvancedObjects = $param["AdvancedObjects"];
         }
     }
 }

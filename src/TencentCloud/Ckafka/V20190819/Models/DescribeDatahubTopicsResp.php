@@ -14,27 +14,35 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Dts\V20211206\Models;
+namespace TencentCloud\Ckafka\V20190819\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Online DDL type
+ * DataHub topic list
  *
- * @method string getStatus() Obtain Status
+ * @method integer getTotalCount() Obtain Total count
+ * @method void setTotalCount(integer $TotalCount) Set Total count
+ * @method array getTopicList() Obtain Topic list
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setStatus(string $Status) Set Status
+ * @method void setTopicList(array $TopicList) Set Topic list
 Note: This field may return null, indicating that no valid values can be obtained.
  */
-class OnlineDDL extends AbstractModel
+class DescribeDatahubTopicsResp extends AbstractModel
 {
     /**
-     * @var string Status
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Total count
      */
-    public $Status;
+    public $TotalCount;
 
     /**
-     * @param string $Status Status
+     * @var array Topic list
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $TopicList;
+
+    /**
+     * @param integer $TotalCount Total count
+     * @param array $TopicList Topic list
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
@@ -50,8 +58,17 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
-            $this->Status = $param["Status"];
+        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
+            $this->TotalCount = $param["TotalCount"];
+        }
+
+        if (array_key_exists("TopicList",$param) and $param["TopicList"] !== null) {
+            $this->TopicList = [];
+            foreach ($param["TopicList"] as $key => $value){
+                $obj = new DatahubTopicDTO();
+                $obj->deserialize($value);
+                array_push($this->TopicList, $obj);
+            }
         }
     }
 }

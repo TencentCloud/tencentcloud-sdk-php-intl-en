@@ -27,13 +27,11 @@ use TencentCloud\Common\AbstractModel;
  * @method string getTargetName() Obtain The target domain name.
  * @method void setTargetName(string $TargetName) Set The target domain name.
  * @method string getCertType() Obtain Certificate configuration. Values:
-<li>`none`: Off</li>
+<li>`none`: (Default) Do not configure</li>
 <li>`hosting`: Managed SSL certificate</li>
-<li>`apply`: Free certificate</li>Default value: none
  * @method void setCertType(string $CertType) Set Certificate configuration. Values:
-<li>`none`: Off</li>
+<li>`none`: (Default) Do not configure</li>
 <li>`hosting`: Managed SSL certificate</li>
-<li>`apply`: Free certificate</li>Default value: none
  * @method array getCertId() Obtain The certificate ID. This field is required when `CertType=hosting`.
  * @method void setCertId(array $CertId) Set The certificate ID. This field is required when `CertType=hosting`.
  */
@@ -56,9 +54,8 @@ class CreateAliasDomainRequest extends AbstractModel
 
     /**
      * @var string Certificate configuration. Values:
-<li>`none`: Off</li>
+<li>`none`: (Default) Do not configure</li>
 <li>`hosting`: Managed SSL certificate</li>
-<li>`apply`: Free certificate</li>Default value: none
      */
     public $CertType;
 
@@ -72,9 +69,8 @@ class CreateAliasDomainRequest extends AbstractModel
      * @param string $AliasName The alias domain name.
      * @param string $TargetName The target domain name.
      * @param string $CertType Certificate configuration. Values:
-<li>`none`: Off</li>
+<li>`none`: (Default) Do not configure</li>
 <li>`hosting`: Managed SSL certificate</li>
-<li>`apply`: Free certificate</li>Default value: none
      * @param array $CertId The certificate ID. This field is required when `CertType=hosting`.
      */
     function __construct()

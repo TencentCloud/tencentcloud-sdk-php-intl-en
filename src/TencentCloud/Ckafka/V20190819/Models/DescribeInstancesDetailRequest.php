@@ -38,6 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceIds(string $InstanceIds) Set This parameter has been deprecated and replaced with `InstanceIdList`.
  * @method array getInstanceIdList() Obtain Filter by instance ID.
  * @method void setInstanceIdList(array $InstanceIdList) Set Filter by instance ID.
+ * @method array getTagList() Obtain Filter instances by a set of tags
+ * @method void setTagList(array $TagList) Set Filter instances by a set of tags
  */
 class DescribeInstancesDetailRequest extends AbstractModel
 {
@@ -87,6 +89,11 @@ class DescribeInstancesDetailRequest extends AbstractModel
     public $InstanceIdList;
 
     /**
+     * @var array Filter instances by a set of tags
+     */
+    public $TagList;
+
+    /**
      * @param string $InstanceId (Filter) filter by instance ID
      * @param string $SearchWord Filter by instance name, instance ID, AZ, VPC ID, or subnet ID. Fuzzy query is supported.
      * @param array $Status (Filter) instance status. 0: creating, 1: running, 2: deleting. If this parameter is left empty, all instances will be returned by default
@@ -96,6 +103,7 @@ class DescribeInstancesDetailRequest extends AbstractModel
      * @param array $Filters Filter. Valid values of `filter.Name` include `Ip`, `VpcId`, `SubNetId`, `InstanceType`, and `InstanceId`. Up to 10 values can be passed for `filter.Values`.
      * @param string $InstanceIds This parameter has been deprecated and replaced with `InstanceIdList`.
      * @param array $InstanceIdList Filter by instance ID.
+     * @param array $TagList Filter instances by a set of tags
      */
     function __construct()
     {
@@ -149,6 +157,15 @@ class DescribeInstancesDetailRequest extends AbstractModel
 
         if (array_key_exists("InstanceIdList",$param) and $param["InstanceIdList"] !== null) {
             $this->InstanceIdList = $param["InstanceIdList"];
+        }
+
+        if (array_key_exists("TagList",$param) and $param["TagList"] !== null) {
+            $this->TagList = [];
+            foreach ($param["TagList"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->TagList, $obj);
+            }
         }
     }
 }

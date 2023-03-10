@@ -26,6 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) Set Number of tasks to be displayed per page. Default value: `20`.
  * @method integer getOffset() Obtain Pagination offset
  * @method void setOffset(integer $Offset) Set Pagination offset
+ * @method string getCompareTaskId() Obtain Check task ID
+ * @method void setCompareTaskId(string $CompareTaskId) Set Check task ID
+ * @method array getStatus() Obtain Data consistency check task status. Valid values: `created`, `readyRun`, `running`, `success`, `stopping`, `failed`, `canceled`.
+ * @method void setStatus(array $Status) Set Data consistency check task status. Valid values: `created`, `readyRun`, `running`, `success`, `stopping`, `failed`, `canceled`.
  */
 class DescribeCompareTasksRequest extends AbstractModel
 {
@@ -45,9 +49,21 @@ class DescribeCompareTasksRequest extends AbstractModel
     public $Offset;
 
     /**
+     * @var string Check task ID
+     */
+    public $CompareTaskId;
+
+    /**
+     * @var array Data consistency check task status. Valid values: `created`, `readyRun`, `running`, `success`, `stopping`, `failed`, `canceled`.
+     */
+    public $Status;
+
+    /**
      * @param string $JobId Migration task ID
      * @param integer $Limit Number of tasks to be displayed per page. Default value: `20`.
      * @param integer $Offset Pagination offset
+     * @param string $CompareTaskId Check task ID
+     * @param array $Status Data consistency check task status. Valid values: `created`, `readyRun`, `running`, `success`, `stopping`, `failed`, `canceled`.
      */
     function __construct()
     {
@@ -72,6 +88,14 @@ class DescribeCompareTasksRequest extends AbstractModel
 
         if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
             $this->Offset = $param["Offset"];
+        }
+
+        if (array_key_exists("CompareTaskId",$param) and $param["CompareTaskId"] !== null) {
+            $this->CompareTaskId = $param["CompareTaskId"];
+        }
+
+        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
+            $this->Status = $param["Status"];
         }
     }
 }

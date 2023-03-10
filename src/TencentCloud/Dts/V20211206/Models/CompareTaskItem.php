@@ -20,9 +20,9 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Information of the data consistency check object
  *
- * @method string getJobId() Obtain Migration task ID
+ * @method string getJobId() Obtain Task ID
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setJobId(string $JobId) Set Migration task ID
+ * @method void setJobId(string $JobId) Set Task ID
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getCompareTaskId() Obtain Data consistency check task ID
 Note: This field may return null, indicating that no valid values can be obtained.
@@ -64,11 +64,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setFinishedAt(string $FinishedAt) Set Comparison end time
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getMethod() Obtain Comparison type: (`dataCheck`: Full data comparison; `sampleDataCheck`: Sampling data comparison; `rowsCount`: Row count comparison)
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setMethod(string $Method) Set Comparison type: (`dataCheck`: Full data comparison; `sampleDataCheck`: Sampling data comparison; `rowsCount`: Row count comparison)
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method CompareOptions getOptions() Obtain Configuration information of the comparison task
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setOptions(CompareOptions $Options) Set Configuration information of the comparison task
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getMessage() Obtain Consistency check prompt message
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setMessage(string $Message) Set Consistency check prompt message
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class CompareTaskItem extends AbstractModel
 {
     /**
-     * @var string Migration task ID
+     * @var string Task ID
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $JobId;
@@ -134,7 +146,25 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $FinishedAt;
 
     /**
-     * @param string $JobId Migration task ID
+     * @var string Comparison type: (`dataCheck`: Full data comparison; `sampleDataCheck`: Sampling data comparison; `rowsCount`: Row count comparison)
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $Method;
+
+    /**
+     * @var CompareOptions Configuration information of the comparison task
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $Options;
+
+    /**
+     * @var string Consistency check prompt message
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $Message;
+
+    /**
+     * @param string $JobId Task ID
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $CompareTaskId Data consistency check task ID
 Note: This field may return null, indicating that no valid values can be obtained.
@@ -155,6 +185,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $StartedAt Task start time
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $FinishedAt Comparison end time
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $Method Comparison type: (`dataCheck`: Full data comparison; `sampleDataCheck`: Sampling data comparison; `rowsCount`: Row count comparison)
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param CompareOptions $Options Configuration information of the comparison task
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $Message Consistency check prompt message
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
@@ -215,6 +251,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("FinishedAt",$param) and $param["FinishedAt"] !== null) {
             $this->FinishedAt = $param["FinishedAt"];
+        }
+
+        if (array_key_exists("Method",$param) and $param["Method"] !== null) {
+            $this->Method = $param["Method"];
+        }
+
+        if (array_key_exists("Options",$param) and $param["Options"] !== null) {
+            $this->Options = new CompareOptions();
+            $this->Options->deserialize($param["Options"]);
+        }
+
+        if (array_key_exists("Message",$param) and $param["Message"] !== null) {
+            $this->Message = $param["Message"];
         }
     }
 }

@@ -20,19 +20,21 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateCompareTask request structure.
  *
- * @method string getJobId() Obtain Migration task ID
- * @method void setJobId(string $JobId) Set Migration task ID
+ * @method string getJobId() Obtain Task ID
+ * @method void setJobId(string $JobId) Set Task ID
  * @method string getTaskName() Obtain Data consistency check task name. If this parameter is left empty, the value of `CompareTaskId` will be assigned to it.
  * @method void setTaskName(string $TaskName) Set Data consistency check task name. If this parameter is left empty, the value of `CompareTaskId` will be assigned to it.
  * @method string getObjectMode() Obtain Data comparison object mode. Valid values: `sameAsMigrate` (all migration objects); `custom` (custom mode). Default value: `sameAsMigrate`.
  * @method void setObjectMode(string $ObjectMode) Set Data comparison object mode. Valid values: `sameAsMigrate` (all migration objects); `custom` (custom mode). Default value: `sameAsMigrate`.
  * @method CompareObject getObjects() Obtain Configuration of the data consistency check object
  * @method void setObjects(CompareObject $Objects) Set Configuration of the data consistency check object
+ * @method CompareOptions getOptions() Obtain Consistency check options
+ * @method void setOptions(CompareOptions $Options) Set Consistency check options
  */
 class CreateCompareTaskRequest extends AbstractModel
 {
     /**
-     * @var string Migration task ID
+     * @var string Task ID
      */
     public $JobId;
 
@@ -52,10 +54,16 @@ class CreateCompareTaskRequest extends AbstractModel
     public $Objects;
 
     /**
-     * @param string $JobId Migration task ID
+     * @var CompareOptions Consistency check options
+     */
+    public $Options;
+
+    /**
+     * @param string $JobId Task ID
      * @param string $TaskName Data consistency check task name. If this parameter is left empty, the value of `CompareTaskId` will be assigned to it.
      * @param string $ObjectMode Data comparison object mode. Valid values: `sameAsMigrate` (all migration objects); `custom` (custom mode). Default value: `sameAsMigrate`.
      * @param CompareObject $Objects Configuration of the data consistency check object
+     * @param CompareOptions $Options Consistency check options
      */
     function __construct()
     {
@@ -85,6 +93,11 @@ class CreateCompareTaskRequest extends AbstractModel
         if (array_key_exists("Objects",$param) and $param["Objects"] !== null) {
             $this->Objects = new CompareObject();
             $this->Objects->deserialize($param["Objects"]);
+        }
+
+        if (array_key_exists("Options",$param) and $param["Options"] !== null) {
+            $this->Options = new CompareOptions();
+            $this->Options->deserialize($param["Options"]);
         }
     }
 }

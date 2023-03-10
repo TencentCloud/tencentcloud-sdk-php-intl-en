@@ -14,28 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Dts\V20211206\Models;
+namespace TencentCloud\Ckafka\V20190819\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Online DDL type
+ * DescribeDatahubTopic request structure.
  *
- * @method string getStatus() Obtain Status
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setStatus(string $Status) Set Status
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getName() Obtain Name
+ * @method void setName(string $Name) Set Name
  */
-class OnlineDDL extends AbstractModel
+class DescribeDatahubTopicRequest extends AbstractModel
 {
     /**
-     * @var string Status
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Name
      */
-    public $Status;
+    public $Name;
 
     /**
-     * @param string $Status Status
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $Name Name
      */
     function __construct()
     {
@@ -50,8 +46,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
-            $this->Status = $param["Status"];
+        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
+            $this->Name = $param["Name"];
         }
     }
 }

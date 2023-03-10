@@ -20,6 +20,14 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Summary information of data consistency check
  *
+ * @method CompareOptions getOptions() Obtain Configuration parameters of the check task
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setOptions(CompareOptions $Options) Set Configuration parameters of the check task
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method CompareObject getObjects() Obtain Consistency check objects
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setObjects(CompareObject $Objects) Set Consistency check objects
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getConclusion() Obtain Comparison conclusion. Valid values: `same`, `different`.
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setConclusion(string $Conclusion) Set Comparison conclusion. Valid values: `same`, `different`.
@@ -44,13 +52,45 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setSkippedTables(integer $SkippedTables) Set Number of skipped tables
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getNearlyTableCount() Obtain The estimated number of tables
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setNearlyTableCount(integer $NearlyTableCount) Set The estimated number of tables
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method integer getDifferentRows() Obtain Number of inconsistent data rows
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setDifferentRows(integer $DifferentRows) Set Number of inconsistent data rows
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getSrcSampleRows() Obtain Source database row count, which takes effect only when the comparison type is **Row count comparison**.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setSrcSampleRows(integer $SrcSampleRows) Set Source database row count, which takes effect only when the comparison type is **Row count comparison**.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getDstSampleRows() Obtain Target database row count, which takes effect only when the comparison type is **Row count comparison**.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setDstSampleRows(integer $DstSampleRows) Set Target database row count, which takes effect only when the comparison type is **Row count comparison**.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getStartedAt() Obtain Start time
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setStartedAt(string $StartedAt) Set Start time
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getFinishedAt() Obtain End time
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setFinishedAt(string $FinishedAt) Set End time
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class CompareAbstractInfo extends AbstractModel
 {
+    /**
+     * @var CompareOptions Configuration parameters of the check task
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $Options;
+
+    /**
+     * @var CompareObject Consistency check objects
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $Objects;
+
     /**
      * @var string Comparison conclusion. Valid values: `same`, `different`.
 Note: This field may return null, indicating that no valid values can be obtained.
@@ -88,12 +128,46 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $SkippedTables;
 
     /**
+     * @var integer The estimated number of tables
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $NearlyTableCount;
+
+    /**
      * @var integer Number of inconsistent data rows
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $DifferentRows;
 
     /**
+     * @var integer Source database row count, which takes effect only when the comparison type is **Row count comparison**.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $SrcSampleRows;
+
+    /**
+     * @var integer Target database row count, which takes effect only when the comparison type is **Row count comparison**.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $DstSampleRows;
+
+    /**
+     * @var string Start time
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $StartedAt;
+
+    /**
+     * @var string End time
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $FinishedAt;
+
+    /**
+     * @param CompareOptions $Options Configuration parameters of the check task
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param CompareObject $Objects Consistency check objects
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $Conclusion Comparison conclusion. Valid values: `same`, `different`.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $Status Task status. Valid values: `success`, `failed`.
@@ -106,7 +180,17 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $SkippedTables Number of skipped tables
 Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $NearlyTableCount The estimated number of tables
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $DifferentRows Number of inconsistent data rows
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $SrcSampleRows Source database row count, which takes effect only when the comparison type is **Row count comparison**.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $DstSampleRows Target database row count, which takes effect only when the comparison type is **Row count comparison**.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $StartedAt Start time
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $FinishedAt End time
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
@@ -122,6 +206,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if ($param === null) {
             return;
         }
+        if (array_key_exists("Options",$param) and $param["Options"] !== null) {
+            $this->Options = new CompareOptions();
+            $this->Options->deserialize($param["Options"]);
+        }
+
+        if (array_key_exists("Objects",$param) and $param["Objects"] !== null) {
+            $this->Objects = new CompareObject();
+            $this->Objects->deserialize($param["Objects"]);
+        }
+
         if (array_key_exists("Conclusion",$param) and $param["Conclusion"] !== null) {
             $this->Conclusion = $param["Conclusion"];
         }
@@ -146,8 +240,28 @@ Note: This field may return null, indicating that no valid values can be obtaine
             $this->SkippedTables = $param["SkippedTables"];
         }
 
+        if (array_key_exists("NearlyTableCount",$param) and $param["NearlyTableCount"] !== null) {
+            $this->NearlyTableCount = $param["NearlyTableCount"];
+        }
+
         if (array_key_exists("DifferentRows",$param) and $param["DifferentRows"] !== null) {
             $this->DifferentRows = $param["DifferentRows"];
+        }
+
+        if (array_key_exists("SrcSampleRows",$param) and $param["SrcSampleRows"] !== null) {
+            $this->SrcSampleRows = $param["SrcSampleRows"];
+        }
+
+        if (array_key_exists("DstSampleRows",$param) and $param["DstSampleRows"] !== null) {
+            $this->DstSampleRows = $param["DstSampleRows"];
+        }
+
+        if (array_key_exists("StartedAt",$param) and $param["StartedAt"] !== null) {
+            $this->StartedAt = $param["StartedAt"];
+        }
+
+        if (array_key_exists("FinishedAt",$param) and $param["FinishedAt"] !== null) {
+            $this->FinishedAt = $param["FinishedAt"];
         }
     }
 }

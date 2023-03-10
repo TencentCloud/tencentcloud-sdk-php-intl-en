@@ -14,28 +14,32 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Dts\V20211206\Models;
+namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Online DDL type
+ * Intermediate IPs
  *
- * @method string getStatus() Obtain Status
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setStatus(string $Status) Set Status
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method array getIPv4() Obtain List of IPv4 addresses
+ * @method void setIPv4(array $IPv4) Set List of IPv4 addresses
+ * @method array getIPv6() Obtain List of IPv6 addresses
+ * @method void setIPv6(array $IPv6) Set List of IPv6 addresses
  */
-class OnlineDDL extends AbstractModel
+class IPWhitelist extends AbstractModel
 {
     /**
-     * @var string Status
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array List of IPv4 addresses
      */
-    public $Status;
+    public $IPv4;
 
     /**
-     * @param string $Status Status
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array List of IPv6 addresses
+     */
+    public $IPv6;
+
+    /**
+     * @param array $IPv4 List of IPv4 addresses
+     * @param array $IPv6 List of IPv6 addresses
      */
     function __construct()
     {
@@ -50,8 +54,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
-            $this->Status = $param["Status"];
+        if (array_key_exists("IPv4",$param) and $param["IPv4"] !== null) {
+            $this->IPv4 = $param["IPv4"];
+        }
+
+        if (array_key_exists("IPv6",$param) and $param["IPv6"] !== null) {
+            $this->IPv6 = $param["IPv6"];
         }
     }
 }

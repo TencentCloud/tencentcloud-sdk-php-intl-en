@@ -20,21 +20,23 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyCompareTask request structure.
  *
- * @method string getJobId() Obtain Migration task ID
- * @method void setJobId(string $JobId) Set Migration task ID
+ * @method string getJobId() Obtain Task ID
+ * @method void setJobId(string $JobId) Set Task ID
  * @method string getCompareTaskId() Obtain Data consistency check task ID in the format of `dts-8yv4w2i1-cmp-37skmii9`
  * @method void setCompareTaskId(string $CompareTaskId) Set Data consistency check task ID in the format of `dts-8yv4w2i1-cmp-37skmii9`
  * @method string getTaskName() Obtain Task name
  * @method void setTaskName(string $TaskName) Set Task name
- * @method string getObjectMode() Obtain Data comparison object mode. Valid values: `sameAsMigrate` (all migration objects); `custom` (custom mode). Default value: `sameAsMigrate`.
- * @method void setObjectMode(string $ObjectMode) Set Data comparison object mode. Valid values: `sameAsMigrate` (all migration objects); `custom` (custom mode). Default value: `sameAsMigrate`.
+ * @method string getObjectMode() Obtain Data comparison object mode. Valid values: `sameAsMigrate` (All migration objects), `custom` (Custom mode. The custom comparison objects must be a subset of the migration objects). Default value: `sameAsMigrate`.
+ * @method void setObjectMode(string $ObjectMode) Set Data comparison object mode. Valid values: `sameAsMigrate` (All migration objects), `custom` (Custom mode. The custom comparison objects must be a subset of the migration objects). Default value: `sameAsMigrate`.
  * @method CompareObject getObjects() Obtain Compared object, which is required if `CompareObjectMode` is `custom`.
  * @method void setObjects(CompareObject $Objects) Set Compared object, which is required if `CompareObjectMode` is `custom`.
+ * @method CompareOptions getOptions() Obtain Consistency check options
+ * @method void setOptions(CompareOptions $Options) Set Consistency check options
  */
 class ModifyCompareTaskRequest extends AbstractModel
 {
     /**
-     * @var string Migration task ID
+     * @var string Task ID
      */
     public $JobId;
 
@@ -49,7 +51,7 @@ class ModifyCompareTaskRequest extends AbstractModel
     public $TaskName;
 
     /**
-     * @var string Data comparison object mode. Valid values: `sameAsMigrate` (all migration objects); `custom` (custom mode). Default value: `sameAsMigrate`.
+     * @var string Data comparison object mode. Valid values: `sameAsMigrate` (All migration objects), `custom` (Custom mode. The custom comparison objects must be a subset of the migration objects). Default value: `sameAsMigrate`.
      */
     public $ObjectMode;
 
@@ -59,11 +61,17 @@ class ModifyCompareTaskRequest extends AbstractModel
     public $Objects;
 
     /**
-     * @param string $JobId Migration task ID
+     * @var CompareOptions Consistency check options
+     */
+    public $Options;
+
+    /**
+     * @param string $JobId Task ID
      * @param string $CompareTaskId Data consistency check task ID in the format of `dts-8yv4w2i1-cmp-37skmii9`
      * @param string $TaskName Task name
-     * @param string $ObjectMode Data comparison object mode. Valid values: `sameAsMigrate` (all migration objects); `custom` (custom mode). Default value: `sameAsMigrate`.
+     * @param string $ObjectMode Data comparison object mode. Valid values: `sameAsMigrate` (All migration objects), `custom` (Custom mode. The custom comparison objects must be a subset of the migration objects). Default value: `sameAsMigrate`.
      * @param CompareObject $Objects Compared object, which is required if `CompareObjectMode` is `custom`.
+     * @param CompareOptions $Options Consistency check options
      */
     function __construct()
     {
@@ -97,6 +105,11 @@ class ModifyCompareTaskRequest extends AbstractModel
         if (array_key_exists("Objects",$param) and $param["Objects"] !== null) {
             $this->Objects = new CompareObject();
             $this->Objects->deserialize($param["Objects"]);
+        }
+
+        if (array_key_exists("Options",$param) and $param["Options"] !== null) {
+            $this->Options = new CompareOptions();
+            $this->Options->deserialize($param["Options"]);
         }
     }
 }

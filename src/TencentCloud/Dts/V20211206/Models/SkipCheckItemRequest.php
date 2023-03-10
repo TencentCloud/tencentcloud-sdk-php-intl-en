@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setJobId(string $JobId) Set Data migration task ID
  * @method array getStepIds() Obtain ID of the check step to be skipped, which is obtained in the `StepInfo[i].StepId` field returned by the `DescribeMigrationCheckJob` API, such as "OptimizeCheck".
  * @method void setStepIds(array $StepIds) Set ID of the check step to be skipped, which is obtained in the `StepInfo[i].StepId` field returned by the `DescribeMigrationCheckJob` API, such as "OptimizeCheck".
- * @method string getForeignKeyFlag() Obtain 
- * @method void setForeignKeyFlag(string $ForeignKeyFlag) Set 
+ * @method string getForeignKeyFlag() Obtain When the check fails due to foreign key dependency, you can use this field to specify whether to migrate the foreign key dependency. The foreign key dependency won’t be migrated when `StepIds` contains `ConstraintCheck` and the value of this field is `shield`, and will be migrated when `StepIds` contains `ConstraintCheck` and the value of this field is `migrate`.
+ * @method void setForeignKeyFlag(string $ForeignKeyFlag) Set When the check fails due to foreign key dependency, you can use this field to specify whether to migrate the foreign key dependency. The foreign key dependency won’t be migrated when `StepIds` contains `ConstraintCheck` and the value of this field is `shield`, and will be migrated when `StepIds` contains `ConstraintCheck` and the value of this field is `migrate`.
  */
 class SkipCheckItemRequest extends AbstractModel
 {
@@ -40,14 +40,14 @@ class SkipCheckItemRequest extends AbstractModel
     public $StepIds;
 
     /**
-     * @var string 
+     * @var string When the check fails due to foreign key dependency, you can use this field to specify whether to migrate the foreign key dependency. The foreign key dependency won’t be migrated when `StepIds` contains `ConstraintCheck` and the value of this field is `shield`, and will be migrated when `StepIds` contains `ConstraintCheck` and the value of this field is `migrate`.
      */
     public $ForeignKeyFlag;
 
     /**
      * @param string $JobId Data migration task ID
      * @param array $StepIds ID of the check step to be skipped, which is obtained in the `StepInfo[i].StepId` field returned by the `DescribeMigrationCheckJob` API, such as "OptimizeCheck".
-     * @param string $ForeignKeyFlag 
+     * @param string $ForeignKeyFlag When the check fails due to foreign key dependency, you can use this field to specify whether to migrate the foreign key dependency. The foreign key dependency won’t be migrated when `StepIds` contains `ConstraintCheck` and the value of this field is `shield`, and will be migrated when `StepIds` contains `ConstraintCheck` and the value of this field is `migrate`.
      */
     function __construct()
     {

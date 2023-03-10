@@ -31,6 +31,7 @@ use TencentCloud\Common\AbstractModel;
 <li>`accept`: Request content type</li>
 <li>`method`: Request method</li>
 <li>`header`: Request header</li>
+<li>`app_proto`: Application layer protocol</li>
 <li>`sip_proto`: Network layer protocol</li>
  * @method void setMatchFrom(string $MatchFrom) Set The field to match. Values:
 <li>`host`: Request domain name</li>
@@ -43,6 +44,7 @@ use TencentCloud\Common\AbstractModel;
 <li>`accept`: Request content type</li>
 <li>`method`: Request method</li>
 <li>`header`: Request header</li>
+<li>`app_proto`: Application layer protocol</li>
 <li>`sip_proto`: Network layer protocol</li>
  * @method string getMatchParam() Obtain The parameter of the field. When `MatchFrom = header`, the key contained in the header can be passed.
  * @method void setMatchParam(string $MatchParam) Set The parameter of the field. When `MatchFrom = header`, the key contained in the header can be passed.
@@ -97,6 +99,7 @@ class AclCondition extends AbstractModel
 <li>`accept`: Request content type</li>
 <li>`method`: Request method</li>
 <li>`header`: Request header</li>
+<li>`app_proto`: Application layer protocol</li>
 <li>`sip_proto`: Network layer protocol</li>
      */
     public $MatchFrom;
@@ -144,6 +147,7 @@ class AclCondition extends AbstractModel
 <li>`accept`: Request content type</li>
 <li>`method`: Request method</li>
 <li>`header`: Request header</li>
+<li>`app_proto`: Application layer protocol</li>
 <li>`sip_proto`: Network layer protocol</li>
      * @param string $MatchParam The parameter of the field. When `MatchFrom = header`, the key contained in the header can be passed.
      * @param string $Operator The logical operator. Values:

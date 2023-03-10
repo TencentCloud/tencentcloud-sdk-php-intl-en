@@ -22,30 +22,38 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getEventId() Obtain The attack event ID.
  * @method void setEventId(string $EventId) Set The attack event ID.
- * @method string getAttackIp() Obtain The attacker IP.
- * @method void setAttackIp(string $AttackIp) Set The attacker IP.
- * @method string getDomain() Obtain The attacked subdomain name.
- * @method void setDomain(string $Domain) Set The attacked subdomain name.
  * @method string getHttpLog() Obtain The HTTP log content.
  * @method void setHttpLog(string $HttpLog) Set The HTTP log content.
+ * @method string getDomain() Obtain The attacked subdomain name.
+ * @method void setDomain(string $Domain) Set The attacked subdomain name.
+ * @method string getAttackIp() Obtain The attacker IP.
+ * @method void setAttackIp(string $AttackIp) Set The attacker IP.
  * @method string getSipCountryCode() Obtain The country code of the attacker IP, which is defined in ISO-3166 alpha-2. For the list of country codes, see [ISO-3166](https://git.woa.com/edgeone/iso-3166/blob/master/all/all.json).
  * @method void setSipCountryCode(string $SipCountryCode) Set The country code of the attacker IP, which is defined in ISO-3166 alpha-2. For the list of country codes, see [ISO-3166](https://git.woa.com/edgeone/iso-3166/blob/master/all/all.json).
+ * @method string getRealClientIp() Obtain 
+ * @method void setRealClientIp(string $RealClientIp) Set 
+ * @method string getRealClientIpCountryCode() Obtain 
+ * @method void setRealClientIpCountryCode(string $RealClientIpCountryCode) Set 
  * @method integer getAttackTime() Obtain The attack time recorded in seconds using UNIX timestamp.
  * @method void setAttackTime(integer $AttackTime) Set The attack time recorded in seconds using UNIX timestamp.
  * @method string getRequestUri() Obtain The request address.
  * @method void setRequestUri(string $RequestUri) Set The request address.
- * @method string getAttackContent() Obtain The attack content.
+ * @method string getReqMethod() Obtain The request type.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setAttackContent(string $AttackContent) Set The attack content.
+ * @method void setReqMethod(string $ReqMethod) Set The request type.
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method array getRuleDetailList() Obtain The security rule information.
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setRuleDetailList(array $RuleDetailList) Set The security rule information.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getReqMethod() Obtain The request type.
+ * @method string getAttackContent() Obtain The attack content.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setReqMethod(string $ReqMethod) Set The request type.
+ * @method void setAttackContent(string $AttackContent) Set The attack content.
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getArea() Obtain Log region
+Note: This field may return `null`, indicating that no valid value was found.
+ * @method void setArea(string $Area) Set Log region
+Note: This field may return `null`, indicating that no valid value was found.
  */
 class WebLogs extends AbstractModel
 {
@@ -55,9 +63,9 @@ class WebLogs extends AbstractModel
     public $EventId;
 
     /**
-     * @var string The attacker IP.
+     * @var string The HTTP log content.
      */
-    public $AttackIp;
+    public $HttpLog;
 
     /**
      * @var string The attacked subdomain name.
@@ -65,14 +73,24 @@ class WebLogs extends AbstractModel
     public $Domain;
 
     /**
-     * @var string The HTTP log content.
+     * @var string The attacker IP.
      */
-    public $HttpLog;
+    public $AttackIp;
 
     /**
      * @var string The country code of the attacker IP, which is defined in ISO-3166 alpha-2. For the list of country codes, see [ISO-3166](https://git.woa.com/edgeone/iso-3166/blob/master/all/all.json).
      */
     public $SipCountryCode;
+
+    /**
+     * @var string 
+     */
+    public $RealClientIp;
+
+    /**
+     * @var string 
+     */
+    public $RealClientIpCountryCode;
 
     /**
      * @var integer The attack time recorded in seconds using UNIX timestamp.
@@ -85,10 +103,10 @@ class WebLogs extends AbstractModel
     public $RequestUri;
 
     /**
-     * @var string The attack content.
+     * @var string The request type.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
-    public $AttackContent;
+    public $ReqMethod;
 
     /**
      * @var array The security rule information.
@@ -97,25 +115,35 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $RuleDetailList;
 
     /**
-     * @var string The request type.
+     * @var string The attack content.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
-    public $ReqMethod;
+    public $AttackContent;
+
+    /**
+     * @var string Log region
+Note: This field may return `null`, indicating that no valid value was found.
+     */
+    public $Area;
 
     /**
      * @param string $EventId The attack event ID.
-     * @param string $AttackIp The attacker IP.
-     * @param string $Domain The attacked subdomain name.
      * @param string $HttpLog The HTTP log content.
+     * @param string $Domain The attacked subdomain name.
+     * @param string $AttackIp The attacker IP.
      * @param string $SipCountryCode The country code of the attacker IP, which is defined in ISO-3166 alpha-2. For the list of country codes, see [ISO-3166](https://git.woa.com/edgeone/iso-3166/blob/master/all/all.json).
+     * @param string $RealClientIp 
+     * @param string $RealClientIpCountryCode 
      * @param integer $AttackTime The attack time recorded in seconds using UNIX timestamp.
      * @param string $RequestUri The request address.
-     * @param string $AttackContent The attack content.
+     * @param string $ReqMethod The request type.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param array $RuleDetailList The security rule information.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $ReqMethod The request type.
+     * @param string $AttackContent The attack content.
 Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $Area Log region
+Note: This field may return `null`, indicating that no valid value was found.
      */
     function __construct()
     {
@@ -134,20 +162,28 @@ Note: This field may return null, indicating that no valid values can be obtaine
             $this->EventId = $param["EventId"];
         }
 
-        if (array_key_exists("AttackIp",$param) and $param["AttackIp"] !== null) {
-            $this->AttackIp = $param["AttackIp"];
+        if (array_key_exists("HttpLog",$param) and $param["HttpLog"] !== null) {
+            $this->HttpLog = $param["HttpLog"];
         }
 
         if (array_key_exists("Domain",$param) and $param["Domain"] !== null) {
             $this->Domain = $param["Domain"];
         }
 
-        if (array_key_exists("HttpLog",$param) and $param["HttpLog"] !== null) {
-            $this->HttpLog = $param["HttpLog"];
+        if (array_key_exists("AttackIp",$param) and $param["AttackIp"] !== null) {
+            $this->AttackIp = $param["AttackIp"];
         }
 
         if (array_key_exists("SipCountryCode",$param) and $param["SipCountryCode"] !== null) {
             $this->SipCountryCode = $param["SipCountryCode"];
+        }
+
+        if (array_key_exists("RealClientIp",$param) and $param["RealClientIp"] !== null) {
+            $this->RealClientIp = $param["RealClientIp"];
+        }
+
+        if (array_key_exists("RealClientIpCountryCode",$param) and $param["RealClientIpCountryCode"] !== null) {
+            $this->RealClientIpCountryCode = $param["RealClientIpCountryCode"];
         }
 
         if (array_key_exists("AttackTime",$param) and $param["AttackTime"] !== null) {
@@ -158,8 +194,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
             $this->RequestUri = $param["RequestUri"];
         }
 
-        if (array_key_exists("AttackContent",$param) and $param["AttackContent"] !== null) {
-            $this->AttackContent = $param["AttackContent"];
+        if (array_key_exists("ReqMethod",$param) and $param["ReqMethod"] !== null) {
+            $this->ReqMethod = $param["ReqMethod"];
         }
 
         if (array_key_exists("RuleDetailList",$param) and $param["RuleDetailList"] !== null) {
@@ -171,8 +207,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
             }
         }
 
-        if (array_key_exists("ReqMethod",$param) and $param["ReqMethod"] !== null) {
-            $this->ReqMethod = $param["ReqMethod"];
+        if (array_key_exists("AttackContent",$param) and $param["AttackContent"] !== null) {
+            $this->AttackContent = $param["AttackContent"];
+        }
+
+        if (array_key_exists("Area",$param) and $param["Area"] !== null) {
+            $this->Area = $param["Area"];
         }
     }
 }

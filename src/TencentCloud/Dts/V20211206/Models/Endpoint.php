@@ -120,6 +120,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setEncryptConn(string $EncryptConn) Set Whether to enable encrypted transfer (`UnEncrypted`: No; `Encrypted`: Yes). Default value: `UnEncrypted`.
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getDatabaseNetEnv() Obtain Network environment of the database. This parameter is required when `AccessType` is `ccn`. Valid values: `UserIDC` (user IDC), `TencentVPC` (Tencent Cloud VPC).
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setDatabaseNetEnv(string $DatabaseNetEnv) Set Network environment of the database. This parameter is required when `AccessType` is `ccn`. Valid values: `UserIDC` (user IDC), `TencentVPC` (Tencent Cloud VPC).
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class Endpoint extends AbstractModel
 {
@@ -274,6 +278,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $EncryptConn;
 
     /**
+     * @var string Network environment of the database. This parameter is required when `AccessType` is `ccn`. Valid values: `UserIDC` (user IDC), `TencentVPC` (Tencent Cloud VPC).
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $DatabaseNetEnv;
+
+    /**
      * @param string $Region Region name, such as `ap-guangzhou`.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $Role Node type of TDSQL for MySQL. Enumerated values: `proxy`, `set`.
@@ -323,6 +333,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $TmpToken Temporary token, which is required if the operation is performed across accounts.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $EncryptConn Whether to enable encrypted transfer (`UnEncrypted`: No; `Encrypted`: Yes). Default value: `UnEncrypted`.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $DatabaseNetEnv Network environment of the database. This parameter is required when `AccessType` is `ccn`. Valid values: `UserIDC` (user IDC), `TencentVPC` (Tencent Cloud VPC).
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
@@ -436,6 +448,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("EncryptConn",$param) and $param["EncryptConn"] !== null) {
             $this->EncryptConn = $param["EncryptConn"];
+        }
+
+        if (array_key_exists("DatabaseNetEnv",$param) and $param["DatabaseNetEnv"] !== null) {
+            $this->DatabaseNetEnv = $param["DatabaseNetEnv"];
         }
     }
 }

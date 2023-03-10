@@ -18,24 +18,20 @@ namespace TencentCloud\Dts\V20211206\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Online DDL type
+ * ContinueSyncJob request structure.
  *
- * @method string getStatus() Obtain Status
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setStatus(string $Status) Set Status
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getJobId() Obtain Sync task ID
+ * @method void setJobId(string $JobId) Set Sync task ID
  */
-class OnlineDDL extends AbstractModel
+class ContinueSyncJobRequest extends AbstractModel
 {
     /**
-     * @var string Status
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Sync task ID
      */
-    public $Status;
+    public $JobId;
 
     /**
-     * @param string $Status Status
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $JobId Sync task ID
      */
     function __construct()
     {
@@ -50,8 +46,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
-            $this->Status = $param["Status"];
+        if (array_key_exists("JobId",$param) and $param["JobId"] !== null) {
+            $this->JobId = $param["JobId"];
         }
     }
 }

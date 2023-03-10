@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getJobId() Obtain Data migration task ID
  * @method void setJobId(string $JobId) Set Data migration task ID
- * @method string getResumeOption() Obtain Task resumption mode. Valid values: `clearData` (clear the target instance data); `overwrite` (execute the task in overwrite mode); `normal` (follow the normal process without performing additional operations).
- * @method void setResumeOption(string $ResumeOption) Set Task resumption mode. Valid values: `clearData` (clear the target instance data); `overwrite` (execute the task in overwrite mode); `normal` (follow the normal process without performing additional operations).
+ * @method string getResumeOption() Obtain Task resumption mode. Valid values: `clearData` (Clearing the target instance data); `overwrite` (Executing the task in overwrite mode); `normal` (Following the normal process without additional operations). `clearData` and `overwrite` are only valid for Redis links and `normal` for non-Redis links.
+ * @method void setResumeOption(string $ResumeOption) Set Task resumption mode. Valid values: `clearData` (Clearing the target instance data); `overwrite` (Executing the task in overwrite mode); `normal` (Following the normal process without additional operations). `clearData` and `overwrite` are only valid for Redis links and `normal` for non-Redis links.
  */
 class ResumeMigrateJobRequest extends AbstractModel
 {
@@ -33,13 +33,13 @@ class ResumeMigrateJobRequest extends AbstractModel
     public $JobId;
 
     /**
-     * @var string Task resumption mode. Valid values: `clearData` (clear the target instance data); `overwrite` (execute the task in overwrite mode); `normal` (follow the normal process without performing additional operations).
+     * @var string Task resumption mode. Valid values: `clearData` (Clearing the target instance data); `overwrite` (Executing the task in overwrite mode); `normal` (Following the normal process without additional operations). `clearData` and `overwrite` are only valid for Redis links and `normal` for non-Redis links.
      */
     public $ResumeOption;
 
     /**
      * @param string $JobId Data migration task ID
-     * @param string $ResumeOption Task resumption mode. Valid values: `clearData` (clear the target instance data); `overwrite` (execute the task in overwrite mode); `normal` (follow the normal process without performing additional operations).
+     * @param string $ResumeOption Task resumption mode. Valid values: `clearData` (Clearing the target instance data); `overwrite` (Executing the task in overwrite mode); `normal` (Following the normal process without additional operations). `clearData` and `overwrite` are only valid for Redis links and `normal` for non-Redis links.
      */
     function __construct()
     {
