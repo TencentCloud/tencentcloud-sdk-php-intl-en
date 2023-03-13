@@ -20,19 +20,32 @@ use TencentCloud\Common\AbstractModel;
 /**
  * The information of the object to process.
  *
- * @method string getType() Obtain The input type, which can be `COS` or `URL`.
- * @method void setType(string $Type) Set The input type, which can be `COS` or `URL`.
+ * @method string getType() Obtain The input type. Valid values:
+<li>`COS`: A COS bucket address.</li>
+<li> `URL`: A URL.</li>
+<li> `AWS-S3`: An AWS S3 bucket address. Currently, this type is only supported for transcoding tasks.</li>
+ * @method void setType(string $Type) Set The input type. Valid values:
+<li>`COS`: A COS bucket address.</li>
+<li> `URL`: A URL.</li>
+<li> `AWS-S3`: An AWS S3 bucket address. Currently, this type is only supported for transcoding tasks.</li>
  * @method CosInputInfo getCosInputInfo() Obtain The information of the COS object to process. This parameter is valid and required when `Type` is `COS`.
  * @method void setCosInputInfo(CosInputInfo $CosInputInfo) Set The information of the COS object to process. This parameter is valid and required when `Type` is `COS`.
  * @method UrlInputInfo getUrlInputInfo() Obtain The URL of the object to process. This parameter is valid and required when `Type` is `URL`.
 Note: This field may return null, indicating that no valid value can be obtained.
  * @method void setUrlInputInfo(UrlInputInfo $UrlInputInfo) Set The URL of the object to process. This parameter is valid and required when `Type` is `URL`.
 Note: This field may return null, indicating that no valid value can be obtained.
+ * @method S3InputInfo getS3InputInfo() Obtain The information of the AWS S3 object processed. This parameter is required if `Type` is `AWS-S3`.
+Note: This field may return null, indicating that no valid value can be obtained.
+ * @method void setS3InputInfo(S3InputInfo $S3InputInfo) Set The information of the AWS S3 object processed. This parameter is required if `Type` is `AWS-S3`.
+Note: This field may return null, indicating that no valid value can be obtained.
  */
 class MediaInputInfo extends AbstractModel
 {
     /**
-     * @var string The input type, which can be `COS` or `URL`.
+     * @var string The input type. Valid values:
+<li>`COS`: A COS bucket address.</li>
+<li> `URL`: A URL.</li>
+<li> `AWS-S3`: An AWS S3 bucket address. Currently, this type is only supported for transcoding tasks.</li>
      */
     public $Type;
 
@@ -48,9 +61,20 @@ Note: This field may return null, indicating that no valid value can be obtained
     public $UrlInputInfo;
 
     /**
-     * @param string $Type The input type, which can be `COS` or `URL`.
+     * @var S3InputInfo The information of the AWS S3 object processed. This parameter is required if `Type` is `AWS-S3`.
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public $S3InputInfo;
+
+    /**
+     * @param string $Type The input type. Valid values:
+<li>`COS`: A COS bucket address.</li>
+<li> `URL`: A URL.</li>
+<li> `AWS-S3`: An AWS S3 bucket address. Currently, this type is only supported for transcoding tasks.</li>
      * @param CosInputInfo $CosInputInfo The information of the COS object to process. This parameter is valid and required when `Type` is `COS`.
      * @param UrlInputInfo $UrlInputInfo The URL of the object to process. This parameter is valid and required when `Type` is `URL`.
+Note: This field may return null, indicating that no valid value can be obtained.
+     * @param S3InputInfo $S3InputInfo The information of the AWS S3 object processed. This parameter is required if `Type` is `AWS-S3`.
 Note: This field may return null, indicating that no valid value can be obtained.
      */
     function __construct()
@@ -78,6 +102,11 @@ Note: This field may return null, indicating that no valid value can be obtained
         if (array_key_exists("UrlInputInfo",$param) and $param["UrlInputInfo"] !== null) {
             $this->UrlInputInfo = new UrlInputInfo();
             $this->UrlInputInfo->deserialize($param["UrlInputInfo"]);
+        }
+
+        if (array_key_exists("S3InputInfo",$param) and $param["S3InputInfo"] !== null) {
+            $this->S3InputInfo = new S3InputInfo();
+            $this->S3InputInfo->deserialize($param["S3InputInfo"]);
         }
     }
 }

@@ -35,15 +35,23 @@ use TencentCloud\Common\AbstractModel;
 <li>`TDMQ-CMQ`: Message queue</li>
 <li>`URL`: If `NotifyType` is set to `URL`, HTTP callbacks are sent to the URL specified by `NotifyUrl`. HTTP and JSON are used for the callbacks. The packet contains the response parameters of the `ParseNotification` API.</li>
 <li>`SCF`: This notification type is not recommended. You need to configure it in the SCF console.</li>
+<li>`AWS-SQS`: AWS queue. This type is only supported for AWS tasks, and the queue must be in the same region as the AWS bucket.</li>
 <font color="red">Note: If you do not pass this parameter or pass in an empty string, `CMQ` will be used. To use a different notification type, specify this parameter accordingly.</font>
  * @method void setNotifyType(string $NotifyType) Set The notification type. Valid values:
 <li>`CMQ`: This value is no longer used. Please use `TDMQ-CMQ` instead.</li>
 <li>`TDMQ-CMQ`: Message queue</li>
 <li>`URL`: If `NotifyType` is set to `URL`, HTTP callbacks are sent to the URL specified by `NotifyUrl`. HTTP and JSON are used for the callbacks. The packet contains the response parameters of the `ParseNotification` API.</li>
 <li>`SCF`: This notification type is not recommended. You need to configure it in the SCF console.</li>
+<li>`AWS-SQS`: AWS queue. This type is only supported for AWS tasks, and the queue must be in the same region as the AWS bucket.</li>
 <font color="red">Note: If you do not pass this parameter or pass in an empty string, `CMQ` will be used. To use a different notification type, specify this parameter accordingly.</font>
  * @method string getNotifyUrl() Obtain HTTP callback URL, required if `NotifyType` is set to `URL`
  * @method void setNotifyUrl(string $NotifyUrl) Set HTTP callback URL, required if `NotifyType` is set to `URL`
+ * @method AwsSQS getAwsSQS() Obtain The AWS SQS queue. This parameter is required if `NotifyType` is `AWS-SQS`.
+
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setAwsSQS(AwsSQS $AwsSQS) Set The AWS SQS queue. This parameter is required if `NotifyType` is `AWS-SQS`.
+
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class TaskNotifyConfig extends AbstractModel
 {
@@ -78,6 +86,7 @@ class TaskNotifyConfig extends AbstractModel
 <li>`TDMQ-CMQ`: Message queue</li>
 <li>`URL`: If `NotifyType` is set to `URL`, HTTP callbacks are sent to the URL specified by `NotifyUrl`. HTTP and JSON are used for the callbacks. The packet contains the response parameters of the `ParseNotification` API.</li>
 <li>`SCF`: This notification type is not recommended. You need to configure it in the SCF console.</li>
+<li>`AWS-SQS`: AWS queue. This type is only supported for AWS tasks, and the queue must be in the same region as the AWS bucket.</li>
 <font color="red">Note: If you do not pass this parameter or pass in an empty string, `CMQ` will be used. To use a different notification type, specify this parameter accordingly.</font>
      */
     public $NotifyType;
@@ -86,6 +95,13 @@ class TaskNotifyConfig extends AbstractModel
      * @var string HTTP callback URL, required if `NotifyType` is set to `URL`
      */
     public $NotifyUrl;
+
+    /**
+     * @var AwsSQS The AWS SQS queue. This parameter is required if `NotifyType` is `AWS-SQS`.
+
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $AwsSQS;
 
     /**
      * @param string $CmqModel The CMQ or TDMQ-CMQ model. Valid values: Queue, Topic.
@@ -98,8 +114,12 @@ class TaskNotifyConfig extends AbstractModel
 <li>`TDMQ-CMQ`: Message queue</li>
 <li>`URL`: If `NotifyType` is set to `URL`, HTTP callbacks are sent to the URL specified by `NotifyUrl`. HTTP and JSON are used for the callbacks. The packet contains the response parameters of the `ParseNotification` API.</li>
 <li>`SCF`: This notification type is not recommended. You need to configure it in the SCF console.</li>
+<li>`AWS-SQS`: AWS queue. This type is only supported for AWS tasks, and the queue must be in the same region as the AWS bucket.</li>
 <font color="red">Note: If you do not pass this parameter or pass in an empty string, `CMQ` will be used. To use a different notification type, specify this parameter accordingly.</font>
      * @param string $NotifyUrl HTTP callback URL, required if `NotifyType` is set to `URL`
+     * @param AwsSQS $AwsSQS The AWS SQS queue. This parameter is required if `NotifyType` is `AWS-SQS`.
+
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -140,6 +160,11 @@ class TaskNotifyConfig extends AbstractModel
 
         if (array_key_exists("NotifyUrl",$param) and $param["NotifyUrl"] !== null) {
             $this->NotifyUrl = $param["NotifyUrl"];
+        }
+
+        if (array_key_exists("AwsSQS",$param) and $param["AwsSQS"] !== null) {
+            $this->AwsSQS = new AwsSQS();
+            $this->AwsSQS->deserialize($param["AwsSQS"]);
         }
     }
 }
