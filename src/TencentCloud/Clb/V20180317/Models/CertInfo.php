@@ -24,10 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCertId(string $CertId) Set ID of the certificate. If it's not specified, `CertContent` and `CertKey` are required. For a server certificate, you also need to specify `CertName`. 
  * @method string getCertName() Obtain Name of the uploaded certificate. It's required if `CertId` is not specified.
  * @method void setCertName(string $CertName) Set Name of the uploaded certificate. It's required if `CertId` is not specified.
- * @method string getCertContent() Obtain Public key of the uploaded certificate. It's required if `CertId` is not specified.
- * @method void setCertContent(string $CertContent) Set Public key of the uploaded certificate. It's required if `CertId` is not specified.
- * @method string getCertKey() Obtain Private key of the uploaded server certificate. It's required if `CertId` is not specified.
- * @method void setCertKey(string $CertKey) Set Private key of the uploaded server certificate. It's required if `CertId` is not specified.
+ * @method string getCertContent() Obtain Public key of the uploaded certificate. This is required if `CertId` is not specified.
+ * @method void setCertContent(string $CertContent) Set Public key of the uploaded certificate. This is required if `CertId` is not specified.
+ * @method string getCertKey() Obtain Private key of the uploaded server certificate. This is required if `CertId` is not specified.
+ * @method void setCertKey(string $CertKey) Set Private key of the uploaded server certificate. This is required if `CertId` is not specified.
  */
 class CertInfo extends AbstractModel
 {
@@ -42,20 +42,20 @@ class CertInfo extends AbstractModel
     public $CertName;
 
     /**
-     * @var string Public key of the uploaded certificate. It's required if `CertId` is not specified.
+     * @var string Public key of the uploaded certificate. This is required if `CertId` is not specified.
      */
     public $CertContent;
 
     /**
-     * @var string Private key of the uploaded server certificate. It's required if `CertId` is not specified.
+     * @var string Private key of the uploaded server certificate. This is required if `CertId` is not specified.
      */
     public $CertKey;
 
     /**
      * @param string $CertId ID of the certificate. If it's not specified, `CertContent` and `CertKey` are required. For a server certificate, you also need to specify `CertName`. 
      * @param string $CertName Name of the uploaded certificate. It's required if `CertId` is not specified.
-     * @param string $CertContent Public key of the uploaded certificate. It's required if `CertId` is not specified.
-     * @param string $CertKey Private key of the uploaded server certificate. It's required if `CertId` is not specified.
+     * @param string $CertContent Public key of the uploaded certificate. This is required if `CertId` is not specified.
+     * @param string $CertKey Private key of the uploaded server certificate. This is required if `CertId` is not specified.
      */
     function __construct()
     {

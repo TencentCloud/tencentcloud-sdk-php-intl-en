@@ -30,6 +30,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceDetails(array $InstanceDetails) Set Information of the Anti-DDoS instance
  * @method array getInstanceDetailRule() Obtain Information of the Anti-DDoS instance configured
  * @method void setInstanceDetailRule(array $InstanceDetailRule) Set Information of the Anti-DDoS instance configured
+ * @method string getProtocol() Obtain Protocol
+ * @method void setProtocol(string $Protocol) Set Protocol
+ * @method integer getVport() Obtain Port number
+ * @method void setVport(integer $Vport) Set Port number
  */
 class Layer7Rule extends AbstractModel
 {
@@ -59,11 +63,23 @@ class Layer7Rule extends AbstractModel
     public $InstanceDetailRule;
 
     /**
+     * @var string Protocol
+     */
+    public $Protocol;
+
+    /**
+     * @var integer Port number
+     */
+    public $Vport;
+
+    /**
      * @param string $Domain Domain name
      * @param array $ProxyTypeList List of forwarding types
      * @param array $RealServers List of real servers
      * @param array $InstanceDetails Information of the Anti-DDoS instance
      * @param array $InstanceDetailRule Information of the Anti-DDoS instance configured
+     * @param string $Protocol Protocol
+     * @param integer $Vport Port number
      */
     function __construct()
     {
@@ -116,6 +132,14 @@ class Layer7Rule extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->InstanceDetailRule, $obj);
             }
+        }
+
+        if (array_key_exists("Protocol",$param) and $param["Protocol"] !== null) {
+            $this->Protocol = $param["Protocol"];
+        }
+
+        if (array_key_exists("Vport",$param) and $param["Vport"] !== null) {
+            $this->Vport = $param["Vport"];
         }
     }
 }

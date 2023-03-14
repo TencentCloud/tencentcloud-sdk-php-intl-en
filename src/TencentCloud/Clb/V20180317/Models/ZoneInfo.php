@@ -40,6 +40,10 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
  * @method void setLocalZone(boolean $LocalZone) Set Whether the AZ is the `LocalZone`, e.g., false.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method boolean getEdgeZone() Obtain Whether the AZ is an edge zone. Values: `true`, `false`.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setEdgeZone(boolean $EdgeZone) Set Whether the AZ is an edge zone. Values: `true`, `false`.
+Note: This field may return `null`, indicating that no valid values can be obtained.
  */
 class ZoneInfo extends AbstractModel
 {
@@ -74,6 +78,12 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     public $LocalZone;
 
     /**
+     * @var boolean Whether the AZ is an edge zone. Values: `true`, `false`.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $EdgeZone;
+
+    /**
      * @param integer $ZoneId Unique AZ ID in a numeric form, such as 100001
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $Zone Unique AZ ID in a string form, such as ap-guangzhou-1
@@ -83,6 +93,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $ZoneRegion AZ region, e.g., ap-guangzhou.
 Note: This field may return `null`, indicating that no valid values can be obtained.
      * @param boolean $LocalZone Whether the AZ is the `LocalZone`, e.g., false.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param boolean $EdgeZone Whether the AZ is an edge zone. Values: `true`, `false`.
 Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
@@ -116,6 +128,10 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 
         if (array_key_exists("LocalZone",$param) and $param["LocalZone"] !== null) {
             $this->LocalZone = $param["LocalZone"];
+        }
+
+        if (array_key_exists("EdgeZone",$param) and $param["EdgeZone"] !== null) {
+            $this->EdgeZone = $param["EdgeZone"];
         }
     }
 }

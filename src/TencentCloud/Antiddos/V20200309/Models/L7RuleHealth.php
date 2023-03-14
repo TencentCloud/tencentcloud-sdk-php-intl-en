@@ -50,6 +50,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFailedThreshold(integer $FailedThreshold) Set Unhealthy threshold in the passive detection configuration
  * @method integer getPassiveStatusCode() Obtain Status code that signals that the passive detection considers the status normal. Values: `1` (1xx), `2` (2xx), `4` (3xx), `8` (4xx), and `16` (5xx).
  * @method void setPassiveStatusCode(integer $PassiveStatusCode) Set Status code that signals that the passive detection considers the status normal. Values: `1` (1xx), `2` (2xx), `4` (3xx), `8` (4xx), and `16` (5xx).
+ * @method integer getPassiveStatus() Obtain Configuration status of the passive health check. Values: `0` (Normal), `1` (configuration in progress) and `2` (configuration failed).
+ * @method void setPassiveStatus(integer $PassiveStatus) Set Configuration status of the passive health check. Values: `0` (Normal), `1` (configuration in progress) and `2` (configuration failed).
  */
 class L7RuleHealth extends AbstractModel
 {
@@ -129,6 +131,11 @@ class L7RuleHealth extends AbstractModel
     public $PassiveStatusCode;
 
     /**
+     * @var integer Configuration status of the passive health check. Values: `0` (Normal), `1` (configuration in progress) and `2` (configuration failed).
+     */
+    public $PassiveStatus;
+
+    /**
      * @param integer $Status Configuration status. Values: `0` (normal), `1` (configuration in progress) and `2` (configuration failed).
      * @param integer $Enable Switch. Values: `1`: Enable; `0`: Disable.
      * @param string $RuleId ID of the rule
@@ -144,6 +151,7 @@ class L7RuleHealth extends AbstractModel
      * @param integer $FailedCountInter Time interval between passive detections
      * @param integer $FailedThreshold Unhealthy threshold in the passive detection configuration
      * @param integer $PassiveStatusCode Status code that signals that the passive detection considers the status normal. Values: `1` (1xx), `2` (2xx), `4` (3xx), `8` (4xx), and `16` (5xx).
+     * @param integer $PassiveStatus Configuration status of the passive health check. Values: `0` (Normal), `1` (configuration in progress) and `2` (configuration failed).
      */
     function __construct()
     {
@@ -216,6 +224,10 @@ class L7RuleHealth extends AbstractModel
 
         if (array_key_exists("PassiveStatusCode",$param) and $param["PassiveStatusCode"] !== null) {
             $this->PassiveStatusCode = $param["PassiveStatusCode"];
+        }
+
+        if (array_key_exists("PassiveStatus",$param) and $param["PassiveStatus"] !== null) {
+            $this->PassiveStatus = $param["PassiveStatus"];
         }
     }
 }

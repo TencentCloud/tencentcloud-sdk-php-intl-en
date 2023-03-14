@@ -86,6 +86,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: This field may return `null`, indicating that no valid values can be obtained.
  * @method void setDomains(array $Domains) Set List of domain names associated with the forwarding rule
 Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method array getTargetGroupList() Obtain List of bound target groups
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setTargetGroupList(array $TargetGroupList) Set List of bound target groups
+Note: This field may return `null`, indicating that no valid values can be obtained.
  */
 class RuleOutput extends AbstractModel
 {
@@ -211,6 +215,12 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     public $Domains;
 
     /**
+     * @var array List of bound target groups
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $TargetGroupList;
+
+    /**
      * @param string $LocationId Forwarding rule ID
      * @param string $Domain Domain name of the forwarding rule.
 Note: This field may return null, indicating that no valid values can be obtained.
@@ -243,6 +253,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @param string $QuicStatus QUIC status
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param array $Domains List of domain names associated with the forwarding rule
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param array $TargetGroupList List of bound target groups
 Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
@@ -348,6 +360,15 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 
         if (array_key_exists("Domains",$param) and $param["Domains"] !== null) {
             $this->Domains = $param["Domains"];
+        }
+
+        if (array_key_exists("TargetGroupList",$param) and $param["TargetGroupList"] !== null) {
+            $this->TargetGroupList = [];
+            foreach ($param["TargetGroupList"] as $key => $value){
+                $obj = new BasicTargetGroupInfo();
+                $obj->deserialize($value);
+                array_push($this->TargetGroupList, $obj);
+            }
         }
     }
 }

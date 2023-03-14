@@ -24,6 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setType(array $Type) Set Specific ISP resource information, Vaules: `CMCC`, `CUCC`, `CTCC`, `BGP`, and `INTERNAL`.
  * @method string getIsp() Obtain ISP information, such as `CMCC`, `CUCC`, `CTCC`, `BGP`, and `INTERNAL`.
  * @method void setIsp(string $Isp) Set ISP information, such as `CMCC`, `CUCC`, `CTCC`, `BGP`, and `INTERNAL`.
+ * @method array getAvailabilitySet() Obtain Available resources
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setAvailabilitySet(array $AvailabilitySet) Set Available resources
+Note: This field may return `null`, indicating that no valid values can be obtained.
  */
 class Resource extends AbstractModel
 {
@@ -38,8 +42,16 @@ class Resource extends AbstractModel
     public $Isp;
 
     /**
+     * @var array Available resources
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $AvailabilitySet;
+
+    /**
      * @param array $Type Specific ISP resource information, Vaules: `CMCC`, `CUCC`, `CTCC`, `BGP`, and `INTERNAL`.
      * @param string $Isp ISP information, such as `CMCC`, `CUCC`, `CTCC`, `BGP`, and `INTERNAL`.
+     * @param array $AvailabilitySet Available resources
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -60,6 +72,15 @@ class Resource extends AbstractModel
 
         if (array_key_exists("Isp",$param) and $param["Isp"] !== null) {
             $this->Isp = $param["Isp"];
+        }
+
+        if (array_key_exists("AvailabilitySet",$param) and $param["AvailabilitySet"] !== null) {
+            $this->AvailabilitySet = [];
+            foreach ($param["AvailabilitySet"] as $key => $value){
+                $obj = new ResourceAvailability();
+                $obj->deserialize($value);
+                array_push($this->AvailabilitySet, $obj);
+            }
         }
     }
 }

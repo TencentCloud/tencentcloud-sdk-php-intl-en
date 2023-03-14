@@ -36,6 +36,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
  * @method void setZoneRegion(string $ZoneRegion) Set Region of the AZ, such as `ap-guangzhou`.
  * @method boolean getLocalZone() Obtain Whether the AZ is a `LocalZone`. Values: `true`, `false`.
  * @method void setLocalZone(boolean $LocalZone) Set Whether the AZ is a `LocalZone`. Values: `true`, `false`.
+ * @method string getZoneResourceType() Obtain Type of resources in the zone. Values: `SHARED`, `EXCLUSIVE`
+ * @method void setZoneResourceType(string $ZoneResourceType) Set Type of resources in the zone. Values: `SHARED`, `EXCLUSIVE`
+ * @method boolean getEdgeZone() Obtain Whether the AZ is an edge zone. Values: `true`, `false`.
+ * @method void setEdgeZone(boolean $EdgeZone) Set Whether the AZ is an edge zone. Values: `true`, `false`.
  */
 class ZoneResource extends AbstractModel
 {
@@ -72,6 +76,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $LocalZone;
 
     /**
+     * @var string Type of resources in the zone. Values: `SHARED`, `EXCLUSIVE`
+     */
+    public $ZoneResourceType;
+
+    /**
+     * @var boolean Whether the AZ is an edge zone. Values: `true`, `false`.
+     */
+    public $EdgeZone;
+
+    /**
      * @param string $MasterZone Primary AZ, such as "ap-guangzhou-1".
      * @param array $ResourceSet List of resources
 Note: This field may return null, indicating that no valid values can be obtained.
@@ -80,6 +94,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $IPVersion IP version. Values: `IPv4`, `IPv6`, and `IPv6_Nat`.
      * @param string $ZoneRegion Region of the AZ, such as `ap-guangzhou`.
      * @param boolean $LocalZone Whether the AZ is a `LocalZone`. Values: `true`, `false`.
+     * @param string $ZoneResourceType Type of resources in the zone. Values: `SHARED`, `EXCLUSIVE`
+     * @param boolean $EdgeZone Whether the AZ is an edge zone. Values: `true`, `false`.
      */
     function __construct()
     {
@@ -121,6 +137,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("LocalZone",$param) and $param["LocalZone"] !== null) {
             $this->LocalZone = $param["LocalZone"];
+        }
+
+        if (array_key_exists("ZoneResourceType",$param) and $param["ZoneResourceType"] !== null) {
+            $this->ZoneResourceType = $param["ZoneResourceType"];
+        }
+
+        if (array_key_exists("EdgeZone",$param) and $param["EdgeZone"] !== null) {
+            $this->EdgeZone = $param["EdgeZone"];
         }
     }
 }

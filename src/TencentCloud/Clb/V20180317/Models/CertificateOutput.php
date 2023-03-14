@@ -28,6 +28,10 @@ use TencentCloud\Common\AbstractModel;
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setCertCaId(string $CertCaId) Set Client certificate ID.
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method array getExtCertIds() Obtain IDs of extra server certificates
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setExtCertIds(array $ExtCertIds) Set IDs of extra server certificates
+Note: This field may return `null`, indicating that no valid values can be obtained.
  */
 class CertificateOutput extends AbstractModel
 {
@@ -48,10 +52,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $CertCaId;
 
     /**
+     * @var array IDs of extra server certificates
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $ExtCertIds;
+
+    /**
      * @param string $SSLMode Authentication type. Value range: UNIDIRECTIONAL (unidirectional authentication), MUTUAL (mutual authentication)
      * @param string $CertId Server certificate ID.
      * @param string $CertCaId Client certificate ID.
 Note: This field may return null, indicating that no valid values can be obtained.
+     * @param array $ExtCertIds IDs of extra server certificates
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -76,6 +88,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("CertCaId",$param) and $param["CertCaId"] !== null) {
             $this->CertCaId = $param["CertCaId"];
+        }
+
+        if (array_key_exists("ExtCertIds",$param) and $param["ExtCertIds"] !== null) {
+            $this->ExtCertIds = $param["ExtCertIds"];
         }
     }
 }

@@ -90,6 +90,18 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
  * @method void setAttrFlags(array $AttrFlags) Set Attribute of listener
 Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method array getTargetGroupList() Obtain List of bound target groups
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setTargetGroupList(array $TargetGroupList) Set List of bound target groups
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method integer getMaxConn() Obtain Maximum number of concurrent listener connections. If it’s set to `-1`, the listener speed is not limited. 
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setMaxConn(integer $MaxConn) Set Maximum number of concurrent listener connections. If it’s set to `-1`, the listener speed is not limited. 
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method integer getMaxCps() Obtain Maximum number of new listener connections. If it’s set to `-1`, the listener speed is not limited. 
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setMaxCps(integer $MaxCps) Set Maximum number of new listener connections. If it’s set to `-1`, the listener speed is not limited. 
+Note: This field may return `null`, indicating that no valid values can be obtained.
  */
 class Listener extends AbstractModel
 {
@@ -205,6 +217,24 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     public $AttrFlags;
 
     /**
+     * @var array List of bound target groups
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $TargetGroupList;
+
+    /**
+     * @var integer Maximum number of concurrent listener connections. If it’s set to `-1`, the listener speed is not limited. 
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $MaxConn;
+
+    /**
+     * @var integer Maximum number of new listener connections. If it’s set to `-1`, the listener speed is not limited. 
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $MaxCps;
+
+    /**
      * @param string $ListenerId CLB listener ID
      * @param string $Protocol Listener protocol
      * @param integer $Port Listener port
@@ -239,6 +269,12 @@ Note: this field may return `null`, indicating that no valid values can be obtai
      * @param boolean $DeregisterTargetRst Whether to send the TCP RST packet to the client when unbinding a real server. This parameter is applicable to TCP listeners only.
 Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param array $AttrFlags Attribute of listener
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param array $TargetGroupList List of bound target groups
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param integer $MaxConn Maximum number of concurrent listener connections. If it’s set to `-1`, the listener speed is not limited. 
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param integer $MaxCps Maximum number of new listener connections. If it’s set to `-1`, the listener speed is not limited. 
 Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
@@ -336,6 +372,23 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 
         if (array_key_exists("AttrFlags",$param) and $param["AttrFlags"] !== null) {
             $this->AttrFlags = $param["AttrFlags"];
+        }
+
+        if (array_key_exists("TargetGroupList",$param) and $param["TargetGroupList"] !== null) {
+            $this->TargetGroupList = [];
+            foreach ($param["TargetGroupList"] as $key => $value){
+                $obj = new BasicTargetGroupInfo();
+                $obj->deserialize($value);
+                array_push($this->TargetGroupList, $obj);
+            }
+        }
+
+        if (array_key_exists("MaxConn",$param) and $param["MaxConn"] !== null) {
+            $this->MaxConn = $param["MaxConn"];
+        }
+
+        if (array_key_exists("MaxCps",$param) and $param["MaxCps"] !== null) {
+            $this->MaxCps = $param["MaxCps"];
         }
     }
 }

@@ -82,6 +82,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method integer getElasticServiceBandwidth() Obtain Whether to enable elastic bandwidth
  * @method void setElasticServiceBandwidth(integer $ElasticServiceBandwidth) Set Whether to enable elastic bandwidth
+ * @method integer getGiftServiceBandWidth() Obtain Bandwidth quota given away by Tencent Cloud
+ * @method void setGiftServiceBandWidth(integer $GiftServiceBandWidth) Set Bandwidth quota given away by Tencent Cloud
  */
 class BGPInstance extends AbstractModel
 {
@@ -189,6 +191,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $ElasticServiceBandwidth;
 
     /**
+     * @var integer Bandwidth quota given away by Tencent Cloud
+     */
+    public $GiftServiceBandWidth;
+
+    /**
      * @param InstanceRelation $InstanceDetail Details of the Anti-DDoS Pro instance
      * @param BGPInstanceSpecification $SpecificationLimit Specifications of the Anti-DDoS Pro instance
      * @param BGPInstanceUsages $Usage Usage statistics of the Anti-DDoS Pro instance
@@ -220,6 +227,7 @@ Note: This field may return `null`, indicating that no valid value can be obtain
      * @param integer $Line Network line
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $ElasticServiceBandwidth Whether to enable elastic bandwidth
+     * @param integer $GiftServiceBandWidth Bandwidth quota given away by Tencent Cloud
      */
     function __construct()
     {
@@ -319,6 +327,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("ElasticServiceBandwidth",$param) and $param["ElasticServiceBandwidth"] !== null) {
             $this->ElasticServiceBandwidth = $param["ElasticServiceBandwidth"];
+        }
+
+        if (array_key_exists("GiftServiceBandWidth",$param) and $param["GiftServiceBandWidth"] !== null) {
+            $this->GiftServiceBandWidth = $param["GiftServiceBandWidth"];
         }
     }
 }

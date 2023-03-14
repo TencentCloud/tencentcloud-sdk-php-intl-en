@@ -156,6 +156,20 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
  * @method void setDomains(string $Domains) Set List o domain names associated with the forwarding rule
 Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method array getSlaveZone() Obtain The secondary zone of multi-AZ CLB instance
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setSlaveZone(array $SlaveZone) Set The secondary zone of multi-AZ CLB instance
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method array getZones() Obtain The AZ of private CLB instance. This is only available for beta users.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setZones(array $Zones) Set The AZ of private CLB instance. This is only available for beta users.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method integer getSniSwitch() Obtain Whether SNI is enabled. This parameter is only meaningful for HTTPS listeners.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setSniSwitch(integer $SniSwitch) Set Whether SNI is enabled. This parameter is only meaningful for HTTPS listeners.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method string getLoadBalancerDomain() Obtain 
+ * @method void setLoadBalancerDomain(string $LoadBalancerDomain) Set 
  */
 class LoadBalancerDetail extends AbstractModel
 {
@@ -364,6 +378,29 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     public $Domains;
 
     /**
+     * @var array The secondary zone of multi-AZ CLB instance
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $SlaveZone;
+
+    /**
+     * @var array The AZ of private CLB instance. This is only available for beta users.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $Zones;
+
+    /**
+     * @var integer Whether SNI is enabled. This parameter is only meaningful for HTTPS listeners.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $SniSwitch;
+
+    /**
+     * @var string 
+     */
+    public $LoadBalancerDomain;
+
+    /**
      * @param string $LoadBalancerId CLB instance ID.
      * @param string $LoadBalancerName CLB instance name.
      * @param string $LoadBalancerType CLB instance network type:
@@ -432,6 +469,13 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param string $Domains List o domain names associated with the forwarding rule
 Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param array $SlaveZone The secondary zone of multi-AZ CLB instance
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param array $Zones The AZ of private CLB instance. This is only available for beta users.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param integer $SniSwitch Whether SNI is enabled. This parameter is only meaningful for HTTPS listeners.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param string $LoadBalancerDomain 
      */
     function __construct()
     {
@@ -588,6 +632,22 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 
         if (array_key_exists("Domains",$param) and $param["Domains"] !== null) {
             $this->Domains = $param["Domains"];
+        }
+
+        if (array_key_exists("SlaveZone",$param) and $param["SlaveZone"] !== null) {
+            $this->SlaveZone = $param["SlaveZone"];
+        }
+
+        if (array_key_exists("Zones",$param) and $param["Zones"] !== null) {
+            $this->Zones = $param["Zones"];
+        }
+
+        if (array_key_exists("SniSwitch",$param) and $param["SniSwitch"] !== null) {
+            $this->SniSwitch = $param["SniSwitch"];
+        }
+
+        if (array_key_exists("LoadBalancerDomain",$param) and $param["LoadBalancerDomain"] !== null) {
+            $this->LoadBalancerDomain = $param["LoadBalancerDomain"];
         }
     }
 }
