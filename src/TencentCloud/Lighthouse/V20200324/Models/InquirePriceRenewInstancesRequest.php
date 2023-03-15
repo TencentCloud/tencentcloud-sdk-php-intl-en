@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getInstanceIds() Obtain IDs of the instances to be renewed. Each request can contain up to 50 instances at a time. You can get an instance ID from the `InstanceId` returned by the [DescribeInstances](https://intl.cloud.tencent.com/document/api/1207/47573?from_cn_redirect=1) API.
  * @method void setInstanceIds(array $InstanceIds) Set IDs of the instances to be renewed. Each request can contain up to 50 instances at a time. You can get an instance ID from the `InstanceId` returned by the [DescribeInstances](https://intl.cloud.tencent.com/document/api/1207/47573?from_cn_redirect=1) API.
- * @method InstanceChargePrepaid getInstanceChargePrepaid() Obtain Prepaid mode, i.e., monthly subscription. This parameter can specify the purchase period and other attributes such as auto-renewal. It is required for prepaid instances.
- * @method void setInstanceChargePrepaid(InstanceChargePrepaid $InstanceChargePrepaid) Set Prepaid mode, i.e., monthly subscription. This parameter can specify the purchase period and other attributes such as auto-renewal. It is required for prepaid instances.
+ * @method InstanceChargePrepaid getInstanceChargePrepaid() Obtain Parameter setting for prepaid mode. This parameter can specify the renewal period, whether to enable auto-renewal, and other attributes of the monthly subscribed instances.
+ * @method void setInstanceChargePrepaid(InstanceChargePrepaid $InstanceChargePrepaid) Set Parameter setting for prepaid mode. This parameter can specify the renewal period, whether to enable auto-renewal, and other attributes of the monthly subscribed instances.
  * @method boolean getRenewDataDisk() Obtain Whether to renew the data disk. Default: `false`.
  * @method void setRenewDataDisk(boolean $RenewDataDisk) Set Whether to renew the data disk. Default: `false`.
  * @method boolean getAlignInstanceExpiredTime() Obtain Whether to align the data disk expiration with the instance expiration time. Default: `false`.
@@ -37,7 +37,7 @@ class InquirePriceRenewInstancesRequest extends AbstractModel
     public $InstanceIds;
 
     /**
-     * @var InstanceChargePrepaid Prepaid mode, i.e., monthly subscription. This parameter can specify the purchase period and other attributes such as auto-renewal. It is required for prepaid instances.
+     * @var InstanceChargePrepaid Parameter setting for prepaid mode. This parameter can specify the renewal period, whether to enable auto-renewal, and other attributes of the monthly subscribed instances.
      */
     public $InstanceChargePrepaid;
 
@@ -53,7 +53,7 @@ class InquirePriceRenewInstancesRequest extends AbstractModel
 
     /**
      * @param array $InstanceIds IDs of the instances to be renewed. Each request can contain up to 50 instances at a time. You can get an instance ID from the `InstanceId` returned by the [DescribeInstances](https://intl.cloud.tencent.com/document/api/1207/47573?from_cn_redirect=1) API.
-     * @param InstanceChargePrepaid $InstanceChargePrepaid Prepaid mode, i.e., monthly subscription. This parameter can specify the purchase period and other attributes such as auto-renewal. It is required for prepaid instances.
+     * @param InstanceChargePrepaid $InstanceChargePrepaid Parameter setting for prepaid mode. This parameter can specify the renewal period, whether to enable auto-renewal, and other attributes of the monthly subscribed instances.
      * @param boolean $RenewDataDisk Whether to renew the data disk. Default: `false`.
      * @param boolean $AlignInstanceExpiredTime Whether to align the data disk expiration with the instance expiration time. Default: `false`.
      */

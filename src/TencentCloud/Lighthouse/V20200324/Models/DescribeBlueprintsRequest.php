@@ -26,12 +26,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) Set Offset. Default value: 0. For more information on `Offset`, please see the relevant section in [Overview](https://intl.cloud.tencent.com/document/product/1207/47578?from_cn_redirect=1).
  * @method integer getLimit() Obtain Number of returned results. Default value: 20. Maximum value: 100. For more information on `Limit`, please see the relevant section in the API [Overview](https://intl.cloud.tencent.com/document/product/1207/47578?from_cn_redirect=1).
  * @method void setLimit(integer $Limit) Set Number of returned results. Default value: 20. Maximum value: 100. For more information on `Limit`, please see the relevant section in the API [Overview](https://intl.cloud.tencent.com/document/product/1207/47578?from_cn_redirect=1).
- * @method array getFilters() Obtain Filter list
+ * @method array getFilters() Obtain Filter list.
 <li>blueprint-id</li>Filter by the **image ID**.
 Type: String
 Required: no
 <li>blueprint-type</li>Filter by the **image type**.
-Valid values: `APP_OS` (application image); `PURE_OS` (system image); `PRIVATE` (custom image) and `SHARED` (shared image)
+Valid values: `APP_OS` (application image), `PURE_OS` (system image), `DOCKER` (Docker container image), `PRIVATE` (custom image), `SHARED` (shared image)
 Type: String
 Required: no
 <li>platform-type</li>Filter by the **image operating system**.
@@ -48,13 +48,13 @@ Required: no
 Type: String
 Required: no
 
-Each request can contain up to 10 `Filters`, each of which can contain up to 00 `Filter.Values`. `BlueprintIds` and `Filters` cannot be specified at the same time.
- * @method void setFilters(array $Filters) Set Filter list
+Each request can contain up to 10 `Filters`, each of which can contain up to 100 `Filter.Values`. `BlueprintIds` and `Filters` cannot be specified at the same time.
+ * @method void setFilters(array $Filters) Set Filter list.
 <li>blueprint-id</li>Filter by the **image ID**.
 Type: String
 Required: no
 <li>blueprint-type</li>Filter by the **image type**.
-Valid values: `APP_OS` (application image); `PURE_OS` (system image); `PRIVATE` (custom image) and `SHARED` (shared image)
+Valid values: `APP_OS` (application image), `PURE_OS` (system image), `DOCKER` (Docker container image), `PRIVATE` (custom image), `SHARED` (shared image)
 Type: String
 Required: no
 <li>platform-type</li>Filter by the **image operating system**.
@@ -71,7 +71,7 @@ Required: no
 Type: String
 Required: no
 
-Each request can contain up to 10 `Filters`, each of which can contain up to 00 `Filter.Values`. `BlueprintIds` and `Filters` cannot be specified at the same time.
+Each request can contain up to 10 `Filters`, each of which can contain up to 100 `Filter.Values`. `BlueprintIds` and `Filters` cannot be specified at the same time.
  */
 class DescribeBlueprintsRequest extends AbstractModel
 {
@@ -91,12 +91,12 @@ class DescribeBlueprintsRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @var array Filter list
+     * @var array Filter list.
 <li>blueprint-id</li>Filter by the **image ID**.
 Type: String
 Required: no
 <li>blueprint-type</li>Filter by the **image type**.
-Valid values: `APP_OS` (application image); `PURE_OS` (system image); `PRIVATE` (custom image) and `SHARED` (shared image)
+Valid values: `APP_OS` (application image), `PURE_OS` (system image), `DOCKER` (Docker container image), `PRIVATE` (custom image), `SHARED` (shared image)
 Type: String
 Required: no
 <li>platform-type</li>Filter by the **image operating system**.
@@ -113,7 +113,7 @@ Required: no
 Type: String
 Required: no
 
-Each request can contain up to 10 `Filters`, each of which can contain up to 00 `Filter.Values`. `BlueprintIds` and `Filters` cannot be specified at the same time.
+Each request can contain up to 10 `Filters`, each of which can contain up to 100 `Filter.Values`. `BlueprintIds` and `Filters` cannot be specified at the same time.
      */
     public $Filters;
 
@@ -121,12 +121,12 @@ Each request can contain up to 10 `Filters`, each of which can contain up to 00 
      * @param array $BlueprintIds Image ID list.
      * @param integer $Offset Offset. Default value: 0. For more information on `Offset`, please see the relevant section in [Overview](https://intl.cloud.tencent.com/document/product/1207/47578?from_cn_redirect=1).
      * @param integer $Limit Number of returned results. Default value: 20. Maximum value: 100. For more information on `Limit`, please see the relevant section in the API [Overview](https://intl.cloud.tencent.com/document/product/1207/47578?from_cn_redirect=1).
-     * @param array $Filters Filter list
+     * @param array $Filters Filter list.
 <li>blueprint-id</li>Filter by the **image ID**.
 Type: String
 Required: no
 <li>blueprint-type</li>Filter by the **image type**.
-Valid values: `APP_OS` (application image); `PURE_OS` (system image); `PRIVATE` (custom image) and `SHARED` (shared image)
+Valid values: `APP_OS` (application image), `PURE_OS` (system image), `DOCKER` (Docker container image), `PRIVATE` (custom image), `SHARED` (shared image)
 Type: String
 Required: no
 <li>platform-type</li>Filter by the **image operating system**.
@@ -143,7 +143,7 @@ Required: no
 Type: String
 Required: no
 
-Each request can contain up to 10 `Filters`, each of which can contain up to 00 `Filter.Values`. `BlueprintIds` and `Filters` cannot be specified at the same time.
+Each request can contain up to 10 `Filters`, each of which can contain up to 100 `Filter.Values`. `BlueprintIds` and `Filters` cannot be specified at the same time.
      */
     function __construct()
     {

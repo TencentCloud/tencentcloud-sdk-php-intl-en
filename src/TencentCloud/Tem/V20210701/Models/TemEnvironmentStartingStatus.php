@@ -28,6 +28,10 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
  * @method void setStartedApplicationNum(integer $StartedApplicationNum) Set Number of started applictions
 Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method integer getStartFailedApplicationNum() Obtain Number of applications failed to be started
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setStartFailedApplicationNum(integer $StartFailedApplicationNum) Set Number of applications failed to be started
+Note: This field may return `null`, indicating that no valid values can be obtained.
  */
 class TemEnvironmentStartingStatus extends AbstractModel
 {
@@ -44,9 +48,17 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     public $StartedApplicationNum;
 
     /**
+     * @var integer Number of applications failed to be started
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $StartFailedApplicationNum;
+
+    /**
      * @param integer $ApplicationNumNeedToStart Number of applications to start
 Note: This field may return `null`, indicating that no valid values can be obtained.
      * @param integer $StartedApplicationNum Number of started applictions
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param integer $StartFailedApplicationNum Number of applications failed to be started
 Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
@@ -68,6 +80,10 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 
         if (array_key_exists("StartedApplicationNum",$param) and $param["StartedApplicationNum"] !== null) {
             $this->StartedApplicationNum = $param["StartedApplicationNum"];
+        }
+
+        if (array_key_exists("StartFailedApplicationNum",$param) and $param["StartFailedApplicationNum"] !== null) {
+            $this->StartFailedApplicationNum = $param["StartFailedApplicationNum"];
         }
     }
 }

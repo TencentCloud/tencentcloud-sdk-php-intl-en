@@ -54,8 +54,8 @@ use TencentCloud\Common\AbstractModel;
 1: Substream
  * @method integer getImageLayer() Obtain The image layer. 0 is the default value and means the bottommost layer.
  * @method void setImageLayer(integer $ImageLayer) Set The image layer. 0 is the default value and means the bottommost layer.
- * @method string getSubBackgroundImage() Obtain The download URL of the background image for a window. The image must be in JPG or PNG format and cannot be larger than 5 MB. If the image’s aspect ratio is different from that of the window, the image will be rendered according to the value of `RenderMode`.
- * @method void setSubBackgroundImage(string $SubBackgroundImage) Set The download URL of the background image for a window. The image must be in JPG or PNG format and cannot be larger than 5 MB. If the image’s aspect ratio is different from that of the window, the image will be rendered according to the value of `RenderMode`.
+ * @method string getSubBackgroundImage() Obtain The URL of the background image for a window. The image must be in JPG or PNG format and cannot be larger than 5 MB. If the image’s aspect ratio is different from that of the window, the image will be rendered according to the value of `RenderMode`.
+ * @method void setSubBackgroundImage(string $SubBackgroundImage) Set The URL of the background image for a window. The image must be in JPG or PNG format and cannot be larger than 5 MB. If the image’s aspect ratio is different from that of the window, the image will be rendered according to the value of `RenderMode`.
  */
 class MixLayout extends AbstractModel
 {
@@ -113,7 +113,7 @@ class MixLayout extends AbstractModel
     public $ImageLayer;
 
     /**
-     * @var string The download URL of the background image for a window. The image must be in JPG or PNG format and cannot be larger than 5 MB. If the image’s aspect ratio is different from that of the window, the image will be rendered according to the value of `RenderMode`.
+     * @var string The URL of the background image for a window. The image must be in JPG or PNG format and cannot be larger than 5 MB. If the image’s aspect ratio is different from that of the window, the image will be rendered according to the value of `RenderMode`.
      */
     public $SubBackgroundImage;
 
@@ -135,7 +135,7 @@ class MixLayout extends AbstractModel
 0: Primary stream (default)
 1: Substream
      * @param integer $ImageLayer The image layer. 0 is the default value and means the bottommost layer.
-     * @param string $SubBackgroundImage The download URL of the background image for a window. The image must be in JPG or PNG format and cannot be larger than 5 MB. If the image’s aspect ratio is different from that of the window, the image will be rendered according to the value of `RenderMode`.
+     * @param string $SubBackgroundImage The URL of the background image for a window. The image must be in JPG or PNG format and cannot be larger than 5 MB. If the image’s aspect ratio is different from that of the window, the image will be rendered according to the value of `RenderMode`.
      */
     function __construct()
     {

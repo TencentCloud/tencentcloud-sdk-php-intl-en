@@ -56,6 +56,14 @@ Note: This field may return `null`, indicating that no valid value was found.
 Note: This field may return `null`, indicating that no valid value was found.
  * @method void setUnMatchedKey(string $UnMatchedKey) Set Key of log failed to be parsed
 Note: This field may return `null`, indicating that no valid value was found.
+ * @method string getBacktracking() Obtain tracking
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setBacktracking(string $Backtracking) Set tracking
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getDelimiter() Obtain Separator
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setDelimiter(string $Delimiter) Set Separator
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class LogConfigExtractRule extends AbstractModel
 {
@@ -114,6 +122,18 @@ Note: This field may return `null`, indicating that no valid value was found.
     public $UnMatchedKey;
 
     /**
+     * @var string tracking
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $Backtracking;
+
+    /**
+     * @var string Separator
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $Delimiter;
+
+    /**
      * @param string $BeginningRegex First line regex
 Note: This field may return `null`, indicating that no valid value was found.
      * @param array $Keys Withdrawl result
@@ -132,6 +152,10 @@ Note: This field may return `null`, indicating that no valid value was found.
 Note: This field may return `null`, indicating that no valid value was found.
      * @param string $UnMatchedKey Key of log failed to be parsed
 Note: This field may return `null`, indicating that no valid value was found.
+     * @param string $Backtracking tracking
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $Delimiter Separator
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -180,6 +204,14 @@ Note: This field may return `null`, indicating that no valid value was found.
 
         if (array_key_exists("UnMatchedKey",$param) and $param["UnMatchedKey"] !== null) {
             $this->UnMatchedKey = $param["UnMatchedKey"];
+        }
+
+        if (array_key_exists("Backtracking",$param) and $param["Backtracking"] !== null) {
+            $this->Backtracking = $param["Backtracking"];
+        }
+
+        if (array_key_exists("Delimiter",$param) and $param["Delimiter"] !== null) {
+            $this->Delimiter = $param["Delimiter"];
         }
     }
 }

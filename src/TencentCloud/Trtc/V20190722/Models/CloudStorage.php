@@ -21,9 +21,9 @@ use TencentCloud\Common\AbstractModel;
  * The cloud storage information.
  *
  * @method integer getVendor() Obtain The cloud storage provider.
-0: Tencent Cloud COS. The storage services of other providers are not supported currently.
+`0`: Tencent Cloud COS; `1`: AWS storage. Other vendors are not supported currently.
  * @method void setVendor(integer $Vendor) Set The cloud storage provider.
-0: Tencent Cloud COS. The storage services of other providers are not supported currently.
+`0`: Tencent Cloud COS; `1`: AWS storage. Other vendors are not supported currently.
  * @method string getRegion() Obtain The region of cloud storage.
  * @method void setRegion(string $Region) Set The region of cloud storage.
  * @method string getBucket() Obtain The storage bucket.
@@ -39,7 +39,7 @@ class CloudStorage extends AbstractModel
 {
     /**
      * @var integer The cloud storage provider.
-0: Tencent Cloud COS. The storage services of other providers are not supported currently.
+`0`: Tencent Cloud COS; `1`: AWS storage. Other vendors are not supported currently.
      */
     public $Vendor;
 
@@ -70,7 +70,7 @@ class CloudStorage extends AbstractModel
 
     /**
      * @param integer $Vendor The cloud storage provider.
-0: Tencent Cloud COS. The storage services of other providers are not supported currently.
+`0`: Tencent Cloud COS; `1`: AWS storage. Other vendors are not supported currently.
      * @param string $Region The region of cloud storage.
      * @param string $Bucket The storage bucket.
      * @param string $AccessKey The access_key of the cloud storage account.

@@ -22,12 +22,12 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getEnvironmentName() Obtain Environment name
  * @method void setEnvironmentName(string $EnvironmentName) Set Environment name
+ * @method string getDescription() Obtain Environment description
+ * @method void setDescription(string $Description) Set Environment description
  * @method string getVpc() Obtain VPC name
  * @method void setVpc(string $Vpc) Set VPC name
  * @method array getSubnetIds() Obtain List of subnets
  * @method void setSubnetIds(array $SubnetIds) Set List of subnets
- * @method string getDescription() Obtain Environment description
- * @method void setDescription(string $Description) Set Environment description
  * @method string getK8sVersion() Obtain Kubernetes version
  * @method void setK8sVersion(string $K8sVersion) Set Kubernetes version
  * @method integer getSourceChannel() Obtain Source channel
@@ -40,6 +40,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEnvType(string $EnvType) Set Environment type. Values: `test`, `pre`, `prod`
  * @method string getCreateRegion() Obtain The region to create the environment
  * @method void setCreateRegion(string $CreateRegion) Set The region to create the environment
+ * @method boolean getSetupVpc() Obtain Whether to create a VPC
+ * @method void setSetupVpc(boolean $SetupVpc) Set Whether to create a VPC
+ * @method boolean getSetupPrometheus() Obtain Whether to create a TMP instance
+ * @method void setSetupPrometheus(boolean $SetupPrometheus) Set Whether to create a TMP instance
+ * @method string getPrometheusId() Obtain TMP instance ID
+ * @method void setPrometheusId(string $PrometheusId) Set TMP instance ID
+ * @method string getApmId() Obtain APM ID
+ * @method void setApmId(string $ApmId) Set APM ID
  */
 class CreateEnvironmentRequest extends AbstractModel
 {
@@ -47,6 +55,11 @@ class CreateEnvironmentRequest extends AbstractModel
      * @var string Environment name
      */
     public $EnvironmentName;
+
+    /**
+     * @var string Environment description
+     */
+    public $Description;
 
     /**
      * @var string VPC name
@@ -57,11 +70,6 @@ class CreateEnvironmentRequest extends AbstractModel
      * @var array List of subnets
      */
     public $SubnetIds;
-
-    /**
-     * @var string Environment description
-     */
-    public $Description;
 
     /**
      * @var string Kubernetes version
@@ -94,16 +102,40 @@ class CreateEnvironmentRequest extends AbstractModel
     public $CreateRegion;
 
     /**
+     * @var boolean Whether to create a VPC
+     */
+    public $SetupVpc;
+
+    /**
+     * @var boolean Whether to create a TMP instance
+     */
+    public $SetupPrometheus;
+
+    /**
+     * @var string TMP instance ID
+     */
+    public $PrometheusId;
+
+    /**
+     * @var string APM ID
+     */
+    public $ApmId;
+
+    /**
      * @param string $EnvironmentName Environment name
+     * @param string $Description Environment description
      * @param string $Vpc VPC name
      * @param array $SubnetIds List of subnets
-     * @param string $Description Environment description
      * @param string $K8sVersion Kubernetes version
      * @param integer $SourceChannel Source channel
      * @param boolean $EnableTswTraceService Whether to enable the TSW service
      * @param array $Tags Tag
      * @param string $EnvType Environment type. Values: `test`, `pre`, `prod`
      * @param string $CreateRegion The region to create the environment
+     * @param boolean $SetupVpc Whether to create a VPC
+     * @param boolean $SetupPrometheus Whether to create a TMP instance
+     * @param string $PrometheusId TMP instance ID
+     * @param string $ApmId APM ID
      */
     function __construct()
     {
@@ -122,16 +154,16 @@ class CreateEnvironmentRequest extends AbstractModel
             $this->EnvironmentName = $param["EnvironmentName"];
         }
 
+        if (array_key_exists("Description",$param) and $param["Description"] !== null) {
+            $this->Description = $param["Description"];
+        }
+
         if (array_key_exists("Vpc",$param) and $param["Vpc"] !== null) {
             $this->Vpc = $param["Vpc"];
         }
 
         if (array_key_exists("SubnetIds",$param) and $param["SubnetIds"] !== null) {
             $this->SubnetIds = $param["SubnetIds"];
-        }
-
-        if (array_key_exists("Description",$param) and $param["Description"] !== null) {
-            $this->Description = $param["Description"];
         }
 
         if (array_key_exists("K8sVersion",$param) and $param["K8sVersion"] !== null) {
@@ -161,6 +193,22 @@ class CreateEnvironmentRequest extends AbstractModel
 
         if (array_key_exists("CreateRegion",$param) and $param["CreateRegion"] !== null) {
             $this->CreateRegion = $param["CreateRegion"];
+        }
+
+        if (array_key_exists("SetupVpc",$param) and $param["SetupVpc"] !== null) {
+            $this->SetupVpc = $param["SetupVpc"];
+        }
+
+        if (array_key_exists("SetupPrometheus",$param) and $param["SetupPrometheus"] !== null) {
+            $this->SetupPrometheus = $param["SetupPrometheus"];
+        }
+
+        if (array_key_exists("PrometheusId",$param) and $param["PrometheusId"] !== null) {
+            $this->PrometheusId = $param["PrometheusId"];
+        }
+
+        if (array_key_exists("ApmId",$param) and $param["ApmId"] !== null) {
+            $this->ApmId = $param["ApmId"];
         }
     }
 }

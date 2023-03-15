@@ -90,6 +90,10 @@ Note: This field may return `null`, indicating that no valid value was found.
 Note: This field may return `null`, indicating that no valid value was found.
  * @method void setCreateDate(string $CreateDate) Set Creation time
 Note: This field may return `null`, indicating that no valid value was found.
+ * @method string getRegionId() Obtain Region ID
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setRegionId(string $RegionId) Set Region ID
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class ServiceVersionBrief extends AbstractModel
 {
@@ -209,6 +213,12 @@ Note: This field may return `null`, indicating that no valid value was found.
     public $CreateDate;
 
     /**
+     * @var string Region ID
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $RegionId;
+
+    /**
      * @param string $VersionName Version name
      * @param string $Status Status of version
      * @param integer $EnableEs (Disused) Whether to enable elastic scaling
@@ -244,6 +254,8 @@ Note: This field may return `null`, indicating that no valid value was found.
 Note: This field may return `null`, indicating that no valid value was found.
      * @param string $CreateDate Creation time
 Note: This field may return `null`, indicating that no valid value was found.
+     * @param string $RegionId Region ID
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -344,6 +356,10 @@ Note: This field may return `null`, indicating that no valid value was found.
 
         if (array_key_exists("CreateDate",$param) and $param["CreateDate"] !== null) {
             $this->CreateDate = $param["CreateDate"];
+        }
+
+        if (array_key_exists("RegionId",$param) and $param["RegionId"] !== null) {
+            $this->RegionId = $param["RegionId"];
         }
     }
 }

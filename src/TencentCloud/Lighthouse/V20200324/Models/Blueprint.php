@@ -27,7 +27,9 @@ use TencentCloud\Common\AbstractModel;
  * @method string getDisplayVersion() Obtain Image version to be displayed.
  * @method void setDisplayVersion(string $DisplayVersion) Set Image version to be displayed.
  * @method string getDescription() Obtain Image description information.
+Note: This field may return `null`, indicating that no valid values can be obtained.
  * @method void setDescription(string $Description) Set Image description information.
+Note: This field may return `null`, indicating that no valid values can be obtained.
  * @method string getOsName() Obtain OS name.
  * @method void setOsName(string $OsName) Set OS name.
  * @method string getPlatform() Obtain OS type.
@@ -66,6 +68,10 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
  * @method void setSceneIdSet(array $SceneIdSet) Set Array of IDs of scenes associated with an image
 Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method string getDockerVersion() Obtain Docker version.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setDockerVersion(string $DockerVersion) Set Docker version.
+Note: This field may return `null`, indicating that no valid values can be obtained.
  */
 class Blueprint extends AbstractModel
 {
@@ -86,6 +92,7 @@ class Blueprint extends AbstractModel
 
     /**
      * @var string Image description information.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public $Description;
 
@@ -169,10 +176,17 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     public $SceneIdSet;
 
     /**
+     * @var string Docker version.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $DockerVersion;
+
+    /**
      * @param string $BlueprintId Image ID, which is the unique identifier of `Blueprint`.
      * @param string $DisplayTitle Image title to be displayed.
      * @param string $DisplayVersion Image version to be displayed.
      * @param string $Description Image description information.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      * @param string $OsName OS name.
      * @param string $Platform OS type.
      * @param string $PlatformType OS type, such as LINUX_UNIX and WINDOWS.
@@ -191,6 +205,8 @@ Note: this field may return `null`, indicating that no valid values can be obtai
      * @param string $CommunityUrl URL of official website of the open-source project
      * @param string $GuideUrl Guide documentation URL
      * @param array $SceneIdSet Array of IDs of scenes associated with an image
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param string $DockerVersion Docker version.
 Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
@@ -280,6 +296,10 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 
         if (array_key_exists("SceneIdSet",$param) and $param["SceneIdSet"] !== null) {
             $this->SceneIdSet = $param["SceneIdSet"];
+        }
+
+        if (array_key_exists("DockerVersion",$param) and $param["DockerVersion"] !== null) {
+            $this->DockerVersion = $param["DockerVersion"];
         }
     }
 }

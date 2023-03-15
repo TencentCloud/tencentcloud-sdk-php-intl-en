@@ -30,6 +30,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setWorkingDirectory(string $WorkingDirectory) Set Execution path.
  * @method string getUsername() Obtain The user who executes the command.
  * @method void setUsername(string $Username) Set The user who executes the command.
+ * @method string getOutputCOSBucketUrl() Obtain URL of the COS bucket to store the output
+ * @method void setOutputCOSBucketUrl(string $OutputCOSBucketUrl) Set URL of the COS bucket to store the output
+ * @method string getOutputCOSKeyPrefix() Obtain Prefix of the output file name 
+ * @method void setOutputCOSKeyPrefix(string $OutputCOSKeyPrefix) Set Prefix of the output file name 
  */
 class CommandDocument extends AbstractModel
 {
@@ -59,11 +63,23 @@ class CommandDocument extends AbstractModel
     public $Username;
 
     /**
+     * @var string URL of the COS bucket to store the output
+     */
+    public $OutputCOSBucketUrl;
+
+    /**
+     * @var string Prefix of the output file name 
+     */
+    public $OutputCOSKeyPrefix;
+
+    /**
      * @param string $Content Base64-encoded command.
      * @param string $CommandType Command type.
      * @param integer $Timeout Timeout period.
      * @param string $WorkingDirectory Execution path.
      * @param string $Username The user who executes the command.
+     * @param string $OutputCOSBucketUrl URL of the COS bucket to store the output
+     * @param string $OutputCOSKeyPrefix Prefix of the output file name 
      */
     function __construct()
     {
@@ -96,6 +112,14 @@ class CommandDocument extends AbstractModel
 
         if (array_key_exists("Username",$param) and $param["Username"] !== null) {
             $this->Username = $param["Username"];
+        }
+
+        if (array_key_exists("OutputCOSBucketUrl",$param) and $param["OutputCOSBucketUrl"] !== null) {
+            $this->OutputCOSBucketUrl = $param["OutputCOSBucketUrl"];
+        }
+
+        if (array_key_exists("OutputCOSKeyPrefix",$param) and $param["OutputCOSKeyPrefix"] !== null) {
+            $this->OutputCOSKeyPrefix = $param["OutputCOSKeyPrefix"];
         }
     }
 }

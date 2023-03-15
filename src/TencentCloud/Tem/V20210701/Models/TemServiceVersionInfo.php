@@ -328,6 +328,14 @@ Note: This field may return `null`, indicating that no valid value was found.
 Note: This field may return `null`, indicating that no valid value was found.
  * @method void setTags(array $Tags) Set Tag
 Note: This field may return `null`, indicating that no valid value was found.
+ * @method string getPreStopEncoded() Obtain Whether to encode
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setPreStopEncoded(string $PreStopEncoded) Set Whether to encode
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getPostStartEncoded() Obtain Whether to encode
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setPostStartEncoded(string $PostStartEncoded) Set Whether to encode
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class TemServiceVersionInfo extends AbstractModel
 {
@@ -830,6 +838,18 @@ Note: This field may return `null`, indicating that no valid value was found.
     public $Tags;
 
     /**
+     * @var string Whether to encode
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $PreStopEncoded;
+
+    /**
+     * @var string Whether to encode
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $PostStartEncoded;
+
+    /**
      * @param string $VersionId Version ID
      * @param string $ApplicationId Application ID
      * @param string $DeployMode Deployment mode
@@ -984,6 +1004,10 @@ Note: This field may return `null`, indicating that no valid value was found.
 Note: This field may return `null`, indicating that no valid value was found.
      * @param array $Tags Tag
 Note: This field may return `null`, indicating that no valid value was found.
+     * @param string $PreStopEncoded Whether to encode
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $PostStartEncoded Whether to encode
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -1395,6 +1419,14 @@ Note: This field may return `null`, indicating that no valid value was found.
                 $obj->deserialize($value);
                 array_push($this->Tags, $obj);
             }
+        }
+
+        if (array_key_exists("PreStopEncoded",$param) and $param["PreStopEncoded"] !== null) {
+            $this->PreStopEncoded = $param["PreStopEncoded"];
+        }
+
+        if (array_key_exists("PostStartEncoded",$param) and $param["PostStartEncoded"] !== null) {
+            $this->PostStartEncoded = $param["PostStartEncoded"];
         }
     }
 }

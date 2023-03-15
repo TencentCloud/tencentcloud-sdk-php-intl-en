@@ -24,10 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRoomId(string $RoomId) Set The room ID.
  * @method integer getRoomIdType() Obtain The ID type of the room to which streams are relayed. `0` indicates integer, and `1` indicates string.
  * @method void setRoomIdType(integer $RoomIdType) Set The ID type of the room to which streams are relayed. `0` indicates integer, and `1` indicates string.
- * @method string getUserId() Obtain The [user ID](https://intl.cloud.tencent.com/document/product/647/37714) of the relaying robot in the TRTC room, which cannot be the same as a user ID already in use. We recommend you include the room ID in this user ID.
- * @method void setUserId(string $UserId) Set The [user ID](https://intl.cloud.tencent.com/document/product/647/37714) of the relaying robot in the TRTC room, which cannot be the same as a user ID already in use. We recommend you include the room ID in this user ID.
- * @method string getUserSig() Obtain The signature (similar to login password) required for the relaying robot to enter the room. For information on how to calculate the signature, see [What is UserSig?](https://intl.cloud.tencent.com/document/product/647/38104).
- * @method void setUserSig(string $UserSig) Set The signature (similar to login password) required for the relaying robot to enter the room. For information on how to calculate the signature, see [What is UserSig?](https://intl.cloud.tencent.com/document/product/647/38104).
+ * @method string getUserId() Obtain The [user ID](https://www.tencentcloud.com/document/product/647/37714) of the relaying robot in the TRTC room, which cannot be the same as a user ID already in use. We recommend you include the room ID in this user ID.
+ * @method void setUserId(string $UserId) Set The [user ID](https://www.tencentcloud.com/document/product/647/37714) of the relaying robot in the TRTC room, which cannot be the same as a user ID already in use. We recommend you include the room ID in this user ID.
+ * @method string getUserSig() Obtain The signature (similar to login password) required for the relaying robot to enter the room. For information on how to calculate the signature, see [What is UserSig?](https://www.tencentcloud.com/document/product/647/38104).
+ * @method void setUserSig(string $UserSig) Set The signature (similar to login password) required for the relaying robot to enter the room. For information on how to calculate the signature, see [What is UserSig?](https://www.tencentcloud.com/document/product/647/38104).
  */
 class McuFeedBackRoomParams extends AbstractModel
 {
@@ -42,20 +42,20 @@ class McuFeedBackRoomParams extends AbstractModel
     public $RoomIdType;
 
     /**
-     * @var string The [user ID](https://intl.cloud.tencent.com/document/product/647/37714) of the relaying robot in the TRTC room, which cannot be the same as a user ID already in use. We recommend you include the room ID in this user ID.
+     * @var string The [user ID](https://www.tencentcloud.com/document/product/647/37714) of the relaying robot in the TRTC room, which cannot be the same as a user ID already in use. We recommend you include the room ID in this user ID.
      */
     public $UserId;
 
     /**
-     * @var string The signature (similar to login password) required for the relaying robot to enter the room. For information on how to calculate the signature, see [What is UserSig?](https://intl.cloud.tencent.com/document/product/647/38104).
+     * @var string The signature (similar to login password) required for the relaying robot to enter the room. For information on how to calculate the signature, see [What is UserSig?](https://www.tencentcloud.com/document/product/647/38104).
      */
     public $UserSig;
 
     /**
      * @param string $RoomId The room ID.
      * @param integer $RoomIdType The ID type of the room to which streams are relayed. `0` indicates integer, and `1` indicates string.
-     * @param string $UserId The [user ID](https://intl.cloud.tencent.com/document/product/647/37714) of the relaying robot in the TRTC room, which cannot be the same as a user ID already in use. We recommend you include the room ID in this user ID.
-     * @param string $UserSig The signature (similar to login password) required for the relaying robot to enter the room. For information on how to calculate the signature, see [What is UserSig?](https://intl.cloud.tencent.com/document/product/647/38104).
+     * @param string $UserId The [user ID](https://www.tencentcloud.com/document/product/647/37714) of the relaying robot in the TRTC room, which cannot be the same as a user ID already in use. We recommend you include the room ID in this user ID.
+     * @param string $UserSig The signature (similar to login password) required for the relaying robot to enter the room. For information on how to calculate the signature, see [What is UserSig?](https://www.tencentcloud.com/document/product/647/38104).
      */
     function __construct()
     {

@@ -19,7 +19,6 @@ use TencentCloud\Common\AbstractModel;
 
 /**
  * The layout parameters for mixed-stream recording.
-
  *
  * @method integer getMixLayoutMode() Obtain Layout mode:
 1: Floating
@@ -61,8 +60,8 @@ This parameter specifies the type of the stream displayed in the big window. If 
 0: Primary stream (default)
 1: Substream (screen sharing stream)
 This parameter specifies the type of the stream displayed in the big window. If it appears in `MixLayoutList`, it indicates the type of the stream of a specified user.
- * @method string getBackgroundImageUrl() Obtain The download URL of the background image for the canvas, which must be in JPG or PNG format and cannot be larger than 5 MB.
- * @method void setBackgroundImageUrl(string $BackgroundImageUrl) Set The download URL of the background image for the canvas, which must be in JPG or PNG format and cannot be larger than 5 MB.
+ * @method string getBackgroundImageUrl() Obtain The URL of the background image, which cannot contain Chinese characters. The image must be in JPG or PNG format and cannot be larger than 5 MB.
+ * @method void setBackgroundImageUrl(string $BackgroundImageUrl) Set The URL of the background image, which cannot contain Chinese characters. The image must be in JPG or PNG format and cannot be larger than 5 MB.
  * @method integer getPlaceHolderMode() Obtain `1` means to use placeholders, and `0` (default) means to not use placeholders. If this parameter is set to `1`, when a user is not publishing video, a placeholder image will be displayed in the window reserved for the user.
  * @method void setPlaceHolderMode(integer $PlaceHolderMode) Set `1` means to use placeholders, and `0` (default) means to not use placeholders. If this parameter is set to `1`, when a user is not publishing video, a placeholder image will be displayed in the window reserved for the user.
  * @method integer getBackgroundImageRenderMode() Obtain The render mode to use when the aspect ratio of a video is different from that of the window. This parameter is defined the same as `RenderMode` in `MixLayoufList`.
@@ -119,7 +118,7 @@ This parameter specifies the type of the stream displayed in the big window. If 
     public $MediaId;
 
     /**
-     * @var string The download URL of the background image for the canvas, which must be in JPG or PNG format and cannot be larger than 5 MB.
+     * @var string The URL of the background image, which cannot contain Chinese characters. The image must be in JPG or PNG format and cannot be larger than 5 MB.
      */
     public $BackgroundImageUrl;
 
@@ -174,7 +173,7 @@ Custom: Specify the layout of videos by using the `MixLayoutList` parameter.
 0: Primary stream (default)
 1: Substream (screen sharing stream)
 This parameter specifies the type of the stream displayed in the big window. If it appears in `MixLayoutList`, it indicates the type of the stream of a specified user.
-     * @param string $BackgroundImageUrl The download URL of the background image for the canvas, which must be in JPG or PNG format and cannot be larger than 5 MB.
+     * @param string $BackgroundImageUrl The URL of the background image, which cannot contain Chinese characters. The image must be in JPG or PNG format and cannot be larger than 5 MB.
      * @param integer $PlaceHolderMode `1` means to use placeholders, and `0` (default) means to not use placeholders. If this parameter is set to `1`, when a user is not publishing video, a placeholder image will be displayed in the window reserved for the user.
      * @param integer $BackgroundImageRenderMode The render mode to use when the aspect ratio of a video is different from that of the window. This parameter is defined the same as `RenderMode` in `MixLayoufList`.
      * @param string $DefaultSubBackgroundImage The URL of the background image for a window. The image must be in JPG or PNG format and cannot be larger than 5 MB. If the image’s aspect ratio is different from that of the window, the image will be rendered according to the value of `RenderMode`.

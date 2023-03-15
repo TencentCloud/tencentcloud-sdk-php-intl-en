@@ -63,7 +63,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
  * @method void setLatestOperationRequestId(string $LatestOperationRequestId) Set Unique request ID for the last snapshot operation. It is recorded only during snapshot creation and rollback.
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method string getCreatedTime() Obtain Snapshot creation time.
+Note: This field may return `null`, indicating that no valid values can be obtained.
  * @method void setCreatedTime(string $CreatedTime) Set Snapshot creation time.
+Note: This field may return `null`, indicating that no valid values can be obtained.
  */
 class Snapshot extends AbstractModel
 {
@@ -130,6 +132,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * @var string Snapshot creation time.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public $CreatedTime;
 
@@ -156,6 +159,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @param string $LatestOperationRequestId Unique request ID for the last snapshot operation. It is recorded only during snapshot creation and rollback.
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $CreatedTime Snapshot creation time.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
     {

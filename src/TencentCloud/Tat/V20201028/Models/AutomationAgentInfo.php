@@ -38,6 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEnvironment(string $Environment) Set Agent runtime environment. Valid values:
 <li> `Linux`: Linux instance
 <li> `Windows`: Windows instance
+ * @method array getSupportFeatures() Obtain Features supported by the TAT agent.
+ * @method void setSupportFeatures(array $SupportFeatures) Set Features supported by the TAT agent.
  */
 class AutomationAgentInfo extends AbstractModel
 {
@@ -71,6 +73,11 @@ class AutomationAgentInfo extends AbstractModel
     public $Environment;
 
     /**
+     * @var array Features supported by the TAT agent.
+     */
+    public $SupportFeatures;
+
+    /**
      * @param string $InstanceId Instance ID.
      * @param string $Version Agent version.
      * @param string $LastHeartbeatTime Last heartbeat time
@@ -80,6 +87,7 @@ class AutomationAgentInfo extends AbstractModel
      * @param string $Environment Agent runtime environment. Valid values:
 <li> `Linux`: Linux instance
 <li> `Windows`: Windows instance
+     * @param array $SupportFeatures Features supported by the TAT agent.
      */
     function __construct()
     {
@@ -112,6 +120,10 @@ class AutomationAgentInfo extends AbstractModel
 
         if (array_key_exists("Environment",$param) and $param["Environment"] !== null) {
             $this->Environment = $param["Environment"];
+        }
+
+        if (array_key_exists("SupportFeatures",$param) and $param["SupportFeatures"] !== null) {
+            $this->SupportFeatures = $param["SupportFeatures"];
         }
     }
 }

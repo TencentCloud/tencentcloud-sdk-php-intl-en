@@ -28,6 +28,10 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
  * @method void setStoppedApplicationNum(integer $StoppedApplicationNum) Set Number of stopped applications
 Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method integer getStopFailedApplicationNum() Obtain Number of applications failed to be stopped
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setStopFailedApplicationNum(integer $StopFailedApplicationNum) Set Number of applications failed to be stopped
+Note: This field may return `null`, indicating that no valid values can be obtained.
  */
 class TemEnvironmentStoppingStatus extends AbstractModel
 {
@@ -44,9 +48,17 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     public $StoppedApplicationNum;
 
     /**
+     * @var integer Number of applications failed to be stopped
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $StopFailedApplicationNum;
+
+    /**
      * @param integer $ApplicationNumNeedToStop Number of applications to stop
 Note: This field may return `null`, indicating that no valid values can be obtained.
      * @param integer $StoppedApplicationNum Number of stopped applications
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param integer $StopFailedApplicationNum Number of applications failed to be stopped
 Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
@@ -68,6 +80,10 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 
         if (array_key_exists("StoppedApplicationNum",$param) and $param["StoppedApplicationNum"] !== null) {
             $this->StoppedApplicationNum = $param["StoppedApplicationNum"];
+        }
+
+        if (array_key_exists("StopFailedApplicationNum",$param) and $param["StopFailedApplicationNum"] !== null) {
+            $this->StopFailedApplicationNum = $param["StopFailedApplicationNum"];
         }
     }
 }

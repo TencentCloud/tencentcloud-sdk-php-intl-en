@@ -72,8 +72,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLatestOperationRequestId(string $LatestOperationRequestId) Set Last request ID
  * @method string getCreatedTime() Obtain Creation time according to ISO 8601 standard. UTC time is used. 
 Format: YYYY-MM-DDThh:mm:ssZ.
+Note: This field may return `null`, indicating that no valid values can be obtained.
  * @method void setCreatedTime(string $CreatedTime) Set Creation time according to ISO 8601 standard. UTC time is used. 
 Format: YYYY-MM-DDThh:mm:ssZ.
+Note: This field may return `null`, indicating that no valid values can be obtained.
  * @method string getExpiredTime() Obtain Expiration time according to ISO 8601 standard. UTC time is used. 
 Format: YYYY-MM-DDThh:mm:ssZ.
 Note: This field may return null, indicating that no valid values can be obtained.
@@ -181,6 +183,7 @@ class Disk extends AbstractModel
     /**
      * @var string Creation time according to ISO 8601 standard. UTC time is used. 
 Format: YYYY-MM-DDThh:mm:ssZ.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public $CreatedTime;
 
@@ -236,6 +239,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $LatestOperationRequestId Last request ID
      * @param string $CreatedTime Creation time according to ISO 8601 standard. UTC time is used. 
 Format: YYYY-MM-DDThh:mm:ssZ.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      * @param string $ExpiredTime Expiration time according to ISO 8601 standard. UTC time is used. 
 Format: YYYY-MM-DDThh:mm:ssZ.
 Note: This field may return null, indicating that no valid values can be obtained.
