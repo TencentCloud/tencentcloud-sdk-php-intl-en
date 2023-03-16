@@ -20,9 +20,9 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Description of synced database objects
  *
- * @method string getMode() Obtain Migration object type, such as `Partial`.
+ * @method string getMode() Obtain Sync object type. Valid value: `Partial` (default).
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setMode(string $Mode) Set Migration object type, such as `Partial`.
+ * @method void setMode(string $Mode) Set Sync object type. Valid value: `Partial` (default).
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method array getDatabases() Obtain Sync object, which is required if `Mode` is `Partial`.
 Note: This field may return null, indicating that no valid values can be obtained.
@@ -40,7 +40,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 class Objects extends AbstractModel
 {
     /**
-     * @var string Migration object type, such as `Partial`.
+     * @var string Sync object type. Valid value: `Partial` (default).
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Mode;
@@ -64,7 +64,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $OnlineDDL;
 
     /**
-     * @param string $Mode Migration object type, such as `Partial`.
+     * @param string $Mode Sync object type. Valid value: `Partial` (default).
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param array $Databases Sync object, which is required if `Mode` is `Partial`.
 Note: This field may return null, indicating that no valid values can be obtained.

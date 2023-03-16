@@ -128,6 +128,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setResourceTags(array $ResourceTags) Set The resource tag
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getMasterZone() Obtain Source AZ
+Note: This field may return null, indicating that no valid value can be obtained.
+ * @method void setMasterZone(string $MasterZone) Set Source AZ
+Note: This field may return null, indicating that no valid value can be obtained.
+ * @method array getSlaveZones() Obtain Replica AZ
+Note: This field may return null, indicating that no valid value can be obtained.
+ * @method void setSlaveZones(array $SlaveZones) Set Replica AZ
+Note: This field may return null, indicating that no valid value can be obtained.
+ * @method array getInstanceNetInfo() Obtain 
+ * @method void setInstanceNetInfo(array $InstanceNetInfo) Set 
  */
 class CynosdbInstance extends AbstractModel
 {
@@ -374,6 +384,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $ResourceTags;
 
     /**
+     * @var string Source AZ
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public $MasterZone;
+
+    /**
+     * @var array Replica AZ
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public $SlaveZones;
+
+    /**
+     * @var array 
+     */
+    public $InstanceNetInfo;
+
+    /**
      * @param string $Uin User `Uin`
      * @param integer $AppId User `AppId`
      * @param string $ClusterId Cluster ID
@@ -428,6 +455,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param array $ResourceTags The resource tag
 Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $MasterZone Source AZ
+Note: This field may return null, indicating that no valid value can be obtained.
+     * @param array $SlaveZones Replica AZ
+Note: This field may return null, indicating that no valid value can be obtained.
+     * @param array $InstanceNetInfo 
      */
     function __construct()
     {
@@ -637,6 +669,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 $obj = new Tag();
                 $obj->deserialize($value);
                 array_push($this->ResourceTags, $obj);
+            }
+        }
+
+        if (array_key_exists("MasterZone",$param) and $param["MasterZone"] !== null) {
+            $this->MasterZone = $param["MasterZone"];
+        }
+
+        if (array_key_exists("SlaveZones",$param) and $param["SlaveZones"] !== null) {
+            $this->SlaveZones = $param["SlaveZones"];
+        }
+
+        if (array_key_exists("InstanceNetInfo",$param) and $param["InstanceNetInfo"] !== null) {
+            $this->InstanceNetInfo = [];
+            foreach ($param["InstanceNetInfo"] as $key => $value){
+                $obj = new InstanceNetInfo();
+                $obj->deserialize($value);
+                array_push($this->InstanceNetInfo, $obj);
             }
         }
     }

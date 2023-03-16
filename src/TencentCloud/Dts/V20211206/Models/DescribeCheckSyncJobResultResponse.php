@@ -20,9 +20,9 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeCheckSyncJobResult response structure.
  *
- * @method string getStatus() Obtain Check result
+ * @method string getStatus() Obtain Execution status of the check task. Valid values: `notStarted`, `running`, `failed`, `success`.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setStatus(string $Status) Set Check result
+ * @method void setStatus(string $Status) Set Execution status of the check task. Valid values: `notStarted`, `running`, `failed`, `success`.
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method integer getStepCount() Obtain Total number of steps
 Note: This field may return null, indicating that no valid values can be obtained.
@@ -32,9 +32,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setStepCur(integer $StepCur) Set The current step
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getProgress() Obtain Overall progress
+ * @method integer getProgress() Obtain Overall progress. Value range: 0-100.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setProgress(integer $Progress) Set Overall progress
+ * @method void setProgress(integer $Progress) Set Overall progress. Value range: 0-100.
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method array getStepInfos() Obtain Step information
 Note: This field may return null, indicating that no valid values can be obtained.
@@ -46,7 +46,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 class DescribeCheckSyncJobResultResponse extends AbstractModel
 {
     /**
-     * @var string Check result
+     * @var string Execution status of the check task. Valid values: `notStarted`, `running`, `failed`, `success`.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Status;
@@ -64,7 +64,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $StepCur;
 
     /**
-     * @var integer Overall progress
+     * @var integer Overall progress. Value range: 0-100.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Progress;
@@ -81,13 +81,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $RequestId;
 
     /**
-     * @param string $Status Check result
+     * @param string $Status Execution status of the check task. Valid values: `notStarted`, `running`, `failed`, `success`.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $StepCount Total number of steps
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $StepCur The current step
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $Progress Overall progress
+     * @param integer $Progress Overall progress. Value range: 0-100.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param array $StepInfos Step information
 Note: This field may return null, indicating that no valid values can be obtained.

@@ -32,13 +32,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setStepId(string $StepId) Set Step ID
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getStatus() Obtain Current status
+ * @method string getStatus() Obtain Status of the current step. Valid values: `notStarted`, `running`, `failed`, `finished, `skipped`, `paused`.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setStatus(string $Status) Set Current status
+ * @method void setStatus(string $Status) Set Status of the current step. Valid values: `notStarted`, `running`, `failed`, `finished, `skipped`, `paused`.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getStartTime() Obtain Step start time
+ * @method string getStartTime() Obtain Step start time, which may be null.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setStartTime(string $StartTime) Set Step start time
+ * @method void setStartTime(string $StartTime) Set Step start time, which may be null.
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method array getErrors() Obtain Error message
 Note: This field may return null, indicating that no valid values can be obtained.
@@ -48,9 +48,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setWarnings(array $Warnings) Set Warning message
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getProgress() Obtain Progress of the current step
+ * @method integer getProgress() Obtain Progress of the current step. Value range: 0-100.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setProgress(integer $Progress) Set Progress of the current step
+ * @method void setProgress(integer $Progress) Set Progress of the current step. Value range: 0-100.
 Note: This field may return null, indicating that no valid values can be obtained.
  */
 class StepInfo extends AbstractModel
@@ -74,13 +74,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $StepId;
 
     /**
-     * @var string Current status
+     * @var string Status of the current step. Valid values: `notStarted`, `running`, `failed`, `finished, `skipped`, `paused`.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Status;
 
     /**
-     * @var string Step start time
+     * @var string Step start time, which may be null.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $StartTime;
@@ -98,7 +98,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $Warnings;
 
     /**
-     * @var integer Progress of the current step
+     * @var integer Progress of the current step. Value range: 0-100.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Progress;
@@ -110,15 +110,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $StepId Step ID
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Status Current status
+     * @param string $Status Status of the current step. Valid values: `notStarted`, `running`, `failed`, `finished, `skipped`, `paused`.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $StartTime Step start time
+     * @param string $StartTime Step start time, which may be null.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param array $Errors Error message
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param array $Warnings Warning message
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $Progress Progress of the current step
+     * @param integer $Progress Progress of the current step. Value range: 0-100.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()

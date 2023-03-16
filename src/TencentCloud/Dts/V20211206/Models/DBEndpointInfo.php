@@ -50,6 +50,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
  * @method void setExtraAttr(array $ExtraAttr) Set For MongoDB, you can define the following parameters: 	['AuthDatabase':'admin', 
 'AuthFlag': "1",	'AuthMechanism':"SCRAM-SHA-1"]
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getDatabaseNetEnv() Obtain Network environment of the database. This parameter is required when `AccessType` is `ccn`. Valid values: `UserIDC` (user IDC), `TencentVPC` (Tencent Cloud VPC).
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setDatabaseNetEnv(string $DatabaseNetEnv) Set Network environment of the database. This parameter is required when `AccessType` is `ccn`. Valid values: `UserIDC` (user IDC), `TencentVPC` (Tencent Cloud VPC).
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class DBEndpointInfo extends AbstractModel
 {
@@ -97,6 +101,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $ExtraAttr;
 
     /**
+     * @var string Network environment of the database. This parameter is required when `AccessType` is `ccn`. Valid values: `UserIDC` (user IDC), `TencentVPC` (Tencent Cloud VPC).
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $DatabaseNetEnv;
+
+    /**
      * @param string $Region Instance region
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $AccessType Instances network access type. Valid values: `extranet` (public network); `ipv6` (public IPv6); `cvm` (self-build on CVM); `dcg` (Direct Connect); `vpncloud` (VPN access); `cdb` (database); `ccn` (CCN); `intranet` (intranet); `vpc` (VPC). Note that the valid values are subject to the current link.
@@ -111,6 +121,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param array $ExtraAttr For MongoDB, you can define the following parameters: 	['AuthDatabase':'admin', 
 'AuthFlag': "1",	'AuthMechanism':"SCRAM-SHA-1"]
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $DatabaseNetEnv Network environment of the database. This parameter is required when `AccessType` is `ccn`. Valid values: `UserIDC` (user IDC), `TencentVPC` (Tencent Cloud VPC).
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
@@ -162,6 +174,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 $obj->deserialize($value);
                 array_push($this->ExtraAttr, $obj);
             }
+        }
+
+        if (array_key_exists("DatabaseNetEnv",$param) and $param["DatabaseNetEnv"] !== null) {
+            $this->DatabaseNetEnv = $param["DatabaseNetEnv"];
         }
     }
 }

@@ -32,6 +32,10 @@ Note: this field may return `null`, indicating that no valid value is obtained.
 Note: this field may return `null`, indicating that no valid value is obtained.
  * @method void setTotal(integer $Total) Set Total number
 Note: this field may return `null`, indicating that no valid value is obtained.
+ * @method array getUnavailableVersionReason() Obtain Reason why the upgrade is not available
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setUnavailableVersionReason(array $UnavailableVersionReason) Set Reason why the upgrade is not available
+Note: This field may return `null`, indicating that no valid values can be obtained.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -60,6 +64,12 @@ Note: this field may return `null`, indicating that no valid value is obtained.
     public $Total;
 
     /**
+     * @var array Reason why the upgrade is not available
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $UnavailableVersionReason;
+
+    /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
@@ -71,6 +81,8 @@ Note: this field may return `null`, indicating that no valid value is obtained.
 Note: this field may return `null`, indicating that no valid value is obtained.
      * @param integer $Total Total number
 Note: this field may return `null`, indicating that no valid value is obtained.
+     * @param array $UnavailableVersionReason Reason why the upgrade is not available
+Note: This field may return `null`, indicating that no valid values can be obtained.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -105,6 +117,15 @@ Note: this field may return `null`, indicating that no valid value is obtained.
 
         if (array_key_exists("Total",$param) and $param["Total"] !== null) {
             $this->Total = $param["Total"];
+        }
+
+        if (array_key_exists("UnavailableVersionReason",$param) and $param["UnavailableVersionReason"] !== null) {
+            $this->UnavailableVersionReason = [];
+            foreach ($param["UnavailableVersionReason"] as $key => $value){
+                $obj = new UnavailableReason();
+                $obj->deserialize($value);
+                array_push($this->UnavailableVersionReason, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

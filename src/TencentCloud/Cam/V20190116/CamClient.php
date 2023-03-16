@@ -53,7 +53,7 @@ Calling this API is a high-risk operation because the key cannot be recovered on
  * @method Models\DeleteUserPermissionsBoundaryResponse DeleteUserPermissionsBoundary(Models\DeleteUserPermissionsBoundaryRequest $req) This API is used to delete a user permission boundary.
  * @method Models\DescribeOIDCConfigResponse DescribeOIDCConfig(Models\DescribeOIDCConfigRequest $req) This API is used to query role OIDC configurations.
  * @method Models\DescribeRoleListResponse DescribeRoleList(Models\DescribeRoleListRequest $req) This API (DescribeRoleList) is used to get the role list under the account.
- * @method Models\DescribeSafeAuthFlagCollResponse DescribeSafeAuthFlagColl(Models\DescribeSafeAuthFlagCollRequest $req) This API is used to query security settings.
+ * @method Models\DescribeSafeAuthFlagCollResponse DescribeSafeAuthFlagColl(Models\DescribeSafeAuthFlagCollRequest $req) This API is used to get a sub-account’s security settings.
  * @method Models\DescribeSafeAuthFlagIntlResponse DescribeSafeAuthFlagIntl(Models\DescribeSafeAuthFlagIntlRequest $req) This API is used to query security settings.
  * @method Models\DescribeSubAccountsResponse DescribeSubAccounts(Models\DescribeSubAccountsRequest $req) This API is used to query sub-users through the sub-user UIN list.
  * @method Models\DescribeUserOIDCConfigResponse DescribeUserOIDCConfig(Models\DescribeUserOIDCConfigRequest $req) This API is used to query the user OIDC configuration.

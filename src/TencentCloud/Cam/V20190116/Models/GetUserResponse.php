@@ -38,6 +38,14 @@ Note: This field may return `null`, indicating that no valid values can be obtai
  * @method void setCountryCode(string $CountryCode) Set Country/Area code
  * @method string getEmail() Obtain Email
  * @method void setEmail(string $Email) Set Email
+ * @method string getRecentlyLoginIP() Obtain Last login IP
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setRecentlyLoginIP(string $RecentlyLoginIP) Set Last login IP
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getRecentlyLoginTime() Obtain Last login time
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setRecentlyLoginTime(string $RecentlyLoginTime) Set Last login time
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -85,6 +93,18 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     public $Email;
 
     /**
+     * @var string Last login IP
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $RecentlyLoginIP;
+
+    /**
+     * @var string Last login time
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $RecentlyLoginTime;
+
+    /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
@@ -99,6 +119,10 @@ Note: This field may return `null`, indicating that no valid values can be obtai
      * @param string $PhoneNum Mobile number
      * @param string $CountryCode Country/Area code
      * @param string $Email Email
+     * @param string $RecentlyLoginIP Last login IP
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $RecentlyLoginTime Last login time
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -144,6 +168,14 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 
         if (array_key_exists("Email",$param) and $param["Email"] !== null) {
             $this->Email = $param["Email"];
+        }
+
+        if (array_key_exists("RecentlyLoginIP",$param) and $param["RecentlyLoginIP"] !== null) {
+            $this->RecentlyLoginIP = $param["RecentlyLoginIP"];
+        }
+
+        if (array_key_exists("RecentlyLoginTime",$param) and $param["RecentlyLoginTime"] !== null) {
+            $this->RecentlyLoginTime = $param["RecentlyLoginTime"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

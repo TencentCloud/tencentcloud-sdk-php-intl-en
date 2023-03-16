@@ -28,6 +28,10 @@ use TencentCloud\Common\AbstractModel;
 Note: this field may return `null`, indicating that no valid value is obtained.
  * @method void setLatestVersion(string $LatestVersion) Set The latest minor version of the current version
 Note: this field may return `null`, indicating that no valid value is obtained.
+ * @method string getRuntimeVersion() Obtain RuntimeVersion
+ * @method void setRuntimeVersion(string $RuntimeVersion) Set RuntimeVersion
+ * @method string getRuntimeLatestVersion() Obtain RuntimeLatestVersion
+ * @method void setRuntimeLatestVersion(string $RuntimeLatestVersion) Set RuntimeLatestVersion
  */
 class UpgradeAbleInstancesItem extends AbstractModel
 {
@@ -48,10 +52,22 @@ Note: this field may return `null`, indicating that no valid value is obtained.
     public $LatestVersion;
 
     /**
+     * @var string RuntimeVersion
+     */
+    public $RuntimeVersion;
+
+    /**
+     * @var string RuntimeLatestVersion
+     */
+    public $RuntimeLatestVersion;
+
+    /**
      * @param string $InstanceId Node ID
      * @param string $Version The current version of the node
      * @param string $LatestVersion The latest minor version of the current version
 Note: this field may return `null`, indicating that no valid value is obtained.
+     * @param string $RuntimeVersion RuntimeVersion
+     * @param string $RuntimeLatestVersion RuntimeLatestVersion
      */
     function __construct()
     {
@@ -76,6 +92,14 @@ Note: this field may return `null`, indicating that no valid value is obtained.
 
         if (array_key_exists("LatestVersion",$param) and $param["LatestVersion"] !== null) {
             $this->LatestVersion = $param["LatestVersion"];
+        }
+
+        if (array_key_exists("RuntimeVersion",$param) and $param["RuntimeVersion"] !== null) {
+            $this->RuntimeVersion = $param["RuntimeVersion"];
+        }
+
+        if (array_key_exists("RuntimeLatestVersion",$param) and $param["RuntimeLatestVersion"] !== null) {
+            $this->RuntimeLatestVersion = $param["RuntimeLatestVersion"];
         }
     }
 }

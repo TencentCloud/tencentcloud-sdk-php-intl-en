@@ -48,16 +48,8 @@ The current purchasable AZ needs be pulled through `DescribeDCDBSaleInfo` API.
  * @method void setVpcId(string $VpcId) Set VPC ID. If this parameter is left empty or not passed in, the instance will be created on the classic network.
  * @method string getSubnetId() Obtain VPC subnet ID, which is required when `VpcId` is specified.
  * @method void setSubnetId(string $SubnetId) Set VPC subnet ID, which is required when `VpcId` is specified.
- * @method string getDbVersionId() Obtain Database engine version. Valid values: 8.0.18, 10.1.9, 5.7.17.
-8.0.18 - MySQL 8.0.18；
-10.1.9: MariaDB 10.1.9;
-5.7.17: Percona 5.7.17.
-If this parameter is left empty, `5.7.17` will be used.
- * @method void setDbVersionId(string $DbVersionId) Set Database engine version. Valid values: 8.0.18, 10.1.9, 5.7.17.
-8.0.18 - MySQL 8.0.18；
-10.1.9: MariaDB 10.1.9;
-5.7.17: Percona 5.7.17.
-If this parameter is left empty, `5.7.17` will be used.
+ * @method string getDbVersionId() Obtain Database engine version. Valid values: `5.7`, `8.0`, `10.0`, `10.1`.
+ * @method void setDbVersionId(string $DbVersionId) Set Database engine version. Valid values: `5.7`, `8.0`, `10.0`, `10.1`.
  * @method boolean getAutoVoucher() Obtain Whether to automatically use vouchers. This option is disabled by default.
  * @method void setAutoVoucher(boolean $AutoVoucher) Set Whether to automatically use vouchers. This option is disabled by default.
  * @method array getVoucherIds() Obtain Voucher ID list. Currently, you can specify only one voucher.
@@ -138,11 +130,7 @@ The current purchasable AZ needs be pulled through `DescribeDCDBSaleInfo` API.
     public $SubnetId;
 
     /**
-     * @var string Database engine version. Valid values: 8.0.18, 10.1.9, 5.7.17.
-8.0.18 - MySQL 8.0.18；
-10.1.9: MariaDB 10.1.9;
-5.7.17: Percona 5.7.17.
-If this parameter is left empty, `5.7.17` will be used.
+     * @var string Database engine version. Valid values: `5.7`, `8.0`, `10.0`, `10.1`.
      */
     public $DbVersionId;
 
@@ -216,11 +204,7 @@ The current purchasable AZ needs be pulled through `DescribeDCDBSaleInfo` API.
      * @param integer $ProjectId Project ID, which can be obtained through the `DescribeProjects` API. If this parameter is not passed in, the instance will be associated with the default project.
      * @param string $VpcId VPC ID. If this parameter is left empty or not passed in, the instance will be created on the classic network.
      * @param string $SubnetId VPC subnet ID, which is required when `VpcId` is specified.
-     * @param string $DbVersionId Database engine version. Valid values: 8.0.18, 10.1.9, 5.7.17.
-8.0.18 - MySQL 8.0.18；
-10.1.9: MariaDB 10.1.9;
-5.7.17: Percona 5.7.17.
-If this parameter is left empty, `5.7.17` will be used.
+     * @param string $DbVersionId Database engine version. Valid values: `5.7`, `8.0`, `10.0`, `10.1`.
      * @param boolean $AutoVoucher Whether to automatically use vouchers. This option is disabled by default.
      * @param array $VoucherIds Voucher ID list. Currently, you can specify only one voucher.
      * @param string $SecurityGroupId Security group ID

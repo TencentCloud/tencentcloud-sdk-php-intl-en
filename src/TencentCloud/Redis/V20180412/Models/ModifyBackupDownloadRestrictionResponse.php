@@ -14,24 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Dts\V20211206\Models;
+namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeCheckSyncJobResult request structure.
+ * ModifyBackupDownloadRestriction response structure.
  *
- * @method string getJobId() Obtain Sync task instance ID in the format of `sync-werwfs23`, which is used to identify a sync task. This parameter is required.
- * @method void setJobId(string $JobId) Set Sync task instance ID in the format of `sync-werwfs23`, which is used to identify a sync task. This parameter is required.
+ * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
-class DescribeCheckSyncJobResultRequest extends AbstractModel
+class ModifyBackupDownloadRestrictionResponse extends AbstractModel
 {
     /**
-     * @var string Sync task instance ID in the format of `sync-werwfs23`, which is used to identify a sync task. This parameter is required.
+     * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
-    public $JobId;
+    public $RequestId;
 
     /**
-     * @param string $JobId Sync task instance ID in the format of `sync-werwfs23`, which is used to identify a sync task. This parameter is required.
+     * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
     {
@@ -46,8 +46,8 @@ class DescribeCheckSyncJobResultRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("JobId",$param) and $param["JobId"] !== null) {
-            $this->JobId = $param["JobId"];
+        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
+            $this->RequestId = $param["RequestId"];
         }
     }
 }

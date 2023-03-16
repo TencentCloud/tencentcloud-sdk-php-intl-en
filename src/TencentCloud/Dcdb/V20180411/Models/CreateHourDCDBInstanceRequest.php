@@ -46,16 +46,8 @@ use TencentCloud\Common\AbstractModel;
   
  * @method void setShardCpu(integer $ShardCpu) Set The number of CPU cores per shard, which can be obtained through the `DescribeShardSpec` API.
   
- * @method string getDbVersionId() Obtain Database engine version. Valid values:
-10.0.10: MariaDB 10.0.10;
-10.1.9: MariaDB 10.1.9;
-5.7.17: Percona 5.7.17.
-If this parameter is left empty, `10.1.9` will be used.
- * @method void setDbVersionId(string $DbVersionId) Set Database engine version. Valid values:
-10.0.10: MariaDB 10.0.10;
-10.1.9: MariaDB 10.1.9;
-5.7.17: Percona 5.7.17.
-If this parameter is left empty, `10.1.9` will be used.
+ * @method string getDbVersionId() Obtain Database engine version. Valid values: `5.7`, `8.0`, `10.0`, `10.1`.
+ * @method void setDbVersionId(string $DbVersionId) Set Database engine version. Valid values: `5.7`, `8.0`, `10.0`, `10.1`.
  * @method array getZones() Obtain AZs to deploy shard nodes. You can specify up to two AZs.
  * @method void setZones(array $Zones) Set AZs to deploy shard nodes. You can specify up to two AZs.
  * @method string getSecurityGroupId() Obtain Security group ID
@@ -131,11 +123,7 @@ class CreateHourDCDBInstanceRequest extends AbstractModel
     public $ShardCpu;
 
     /**
-     * @var string Database engine version. Valid values:
-10.0.10: MariaDB 10.0.10;
-10.1.9: MariaDB 10.1.9;
-5.7.17: Percona 5.7.17.
-If this parameter is left empty, `10.1.9` will be used.
+     * @var string Database engine version. Valid values: `5.7`, `8.0`, `10.0`, `10.1`.
      */
     public $DbVersionId;
 
@@ -208,11 +196,7 @@ If this parameter is left empty, `10.1.9` will be used.
      * @param string $SubnetId VPC subnet ID, which is required when `VpcId` is specified
      * @param integer $ShardCpu The number of CPU cores per shard, which can be obtained through the `DescribeShardSpec` API.
   
-     * @param string $DbVersionId Database engine version. Valid values:
-10.0.10: MariaDB 10.0.10;
-10.1.9: MariaDB 10.1.9;
-5.7.17: Percona 5.7.17.
-If this parameter is left empty, `10.1.9` will be used.
+     * @param string $DbVersionId Database engine version. Valid values: `5.7`, `8.0`, `10.0`, `10.1`.
      * @param array $Zones AZs to deploy shard nodes. You can specify up to two AZs.
      * @param string $SecurityGroupId Security group ID
      * @param string $InstanceName Custom name of the instance
