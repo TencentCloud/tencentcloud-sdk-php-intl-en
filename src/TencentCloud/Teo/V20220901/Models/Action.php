@@ -20,7 +20,7 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Rule engine feature operation. A feature can be of only one of the following three types, so each item in the `RuleAction` array can be of only one of the following types. You can call the [DescribeRulesSetting](https://tcloud4api.woa.com/document/product/1657/79433?!preview&!document=1) API to view more requirements for entering feature items.
  *
- * @method NormalAction getNormalAction() Obtain Common feature operation. Features of this type include:
+ * @method NormalAction getNormalAction() Obtain Common feature operation. Values:
 <li>`AccessUrlRedirect`: Access URL rewrite</li>
 <li>`UpstreamUrlRedirect`: Origin-pull URL rewrite</li>
 <li>`QUIC`: QUIC</li>
@@ -44,9 +44,10 @@ use TencentCloud\Common\AbstractModel;
 <li>`TlsVersion`</li>
 <li>`OcspStapling`</li>
 <li>`Http2`: HTTP/2 access</li>
-<li>`UpstreamFollowRedirect: Follow origin redirect</li>
+<li>`UpstreamFollowRedirect`: Follow origin redirect</li>
+<li>`Origin`: Origin</li>
 Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method void setNormalAction(NormalAction $NormalAction) Set Common feature operation. Features of this type include:
+ * @method void setNormalAction(NormalAction $NormalAction) Set Common feature operation. Values:
 <li>`AccessUrlRedirect`: Access URL rewrite</li>
 <li>`UpstreamUrlRedirect`: Origin-pull URL rewrite</li>
 <li>`QUIC`: QUIC</li>
@@ -70,7 +71,8 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 <li>`TlsVersion`</li>
 <li>`OcspStapling`</li>
 <li>`Http2`: HTTP/2 access</li>
-<li>`UpstreamFollowRedirect: Follow origin redirect</li>
+<li>`UpstreamFollowRedirect`: Follow origin redirect</li>
+<li>`Origin`: Origin</li>
 Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method RewriteAction getRewriteAction() Obtain Feature operation with a request/response header. Features of this type include:
 <li>`RequestHeader`: HTTP request header modification.</li>
@@ -92,7 +94,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 class Action extends AbstractModel
 {
     /**
-     * @var NormalAction Common feature operation. Features of this type include:
+     * @var NormalAction Common feature operation. Values:
 <li>`AccessUrlRedirect`: Access URL rewrite</li>
 <li>`UpstreamUrlRedirect`: Origin-pull URL rewrite</li>
 <li>`QUIC`: QUIC</li>
@@ -116,7 +118,8 @@ class Action extends AbstractModel
 <li>`TlsVersion`</li>
 <li>`OcspStapling`</li>
 <li>`Http2`: HTTP/2 access</li>
-<li>`UpstreamFollowRedirect: Follow origin redirect</li>
+<li>`UpstreamFollowRedirect`: Follow origin redirect</li>
+<li>`Origin`: Origin</li>
 Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public $NormalAction;
@@ -138,7 +141,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $CodeAction;
 
     /**
-     * @param NormalAction $NormalAction Common feature operation. Features of this type include:
+     * @param NormalAction $NormalAction Common feature operation. Values:
 <li>`AccessUrlRedirect`: Access URL rewrite</li>
 <li>`UpstreamUrlRedirect`: Origin-pull URL rewrite</li>
 <li>`QUIC`: QUIC</li>
@@ -162,7 +165,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
 <li>`TlsVersion`</li>
 <li>`OcspStapling`</li>
 <li>`Http2`: HTTP/2 access</li>
-<li>`UpstreamFollowRedirect: Follow origin redirect</li>
+<li>`UpstreamFollowRedirect`: Follow origin redirect</li>
+<li>`Origin`: Origin</li>
 Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param RewriteAction $RewriteAction Feature operation with a request/response header. Features of this type include:
 <li>`RequestHeader`: HTTP request header modification.</li>

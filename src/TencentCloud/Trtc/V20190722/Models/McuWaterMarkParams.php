@@ -20,15 +20,19 @@ use TencentCloud\Common\AbstractModel;
 /**
  * The Watermark information.
  *
- * @method integer getWaterMarkType() Obtain The watermark type. The default is 0, which indicates an image watermark.
- * @method void setWaterMarkType(integer $WaterMarkType) Set The watermark type. The default is 0, which indicates an image watermark.
+ * @method integer getWaterMarkType() Obtain The watermark type. Valid values: `0` (default): Image; `1`: Text.
+ * @method void setWaterMarkType(integer $WaterMarkType) Set The watermark type. Valid values: `0` (default): Image; `1`: Text.
  * @method McuWaterMarkImage getWaterMarkImage() Obtain The watermark image information. This parameter is required if `WaterMarkType` is 0.
  * @method void setWaterMarkImage(McuWaterMarkImage $WaterMarkImage) Set The watermark image information. This parameter is required if `WaterMarkType` is 0.
+ * @method McuWaterMarkText getWaterMarkText() Obtain The text watermark configuration. This parameter is required if `WaterMarkType` is `1`.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setWaterMarkText(McuWaterMarkText $WaterMarkText) Set The text watermark configuration. This parameter is required if `WaterMarkType` is `1`.
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class McuWaterMarkParams extends AbstractModel
 {
     /**
-     * @var integer The watermark type. The default is 0, which indicates an image watermark.
+     * @var integer The watermark type. Valid values: `0` (default): Image; `1`: Text.
      */
     public $WaterMarkType;
 
@@ -38,8 +42,16 @@ class McuWaterMarkParams extends AbstractModel
     public $WaterMarkImage;
 
     /**
-     * @param integer $WaterMarkType The watermark type. The default is 0, which indicates an image watermark.
+     * @var McuWaterMarkText The text watermark configuration. This parameter is required if `WaterMarkType` is `1`.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $WaterMarkText;
+
+    /**
+     * @param integer $WaterMarkType The watermark type. Valid values: `0` (default): Image; `1`: Text.
      * @param McuWaterMarkImage $WaterMarkImage The watermark image information. This parameter is required if `WaterMarkType` is 0.
+     * @param McuWaterMarkText $WaterMarkText The text watermark configuration. This parameter is required if `WaterMarkType` is `1`.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -61,6 +73,11 @@ class McuWaterMarkParams extends AbstractModel
         if (array_key_exists("WaterMarkImage",$param) and $param["WaterMarkImage"] !== null) {
             $this->WaterMarkImage = new McuWaterMarkImage();
             $this->WaterMarkImage->deserialize($param["WaterMarkImage"]);
+        }
+
+        if (array_key_exists("WaterMarkText",$param) and $param["WaterMarkText"] !== null) {
+            $this->WaterMarkText = new McuWaterMarkText();
+            $this->WaterMarkText->deserialize($param["WaterMarkText"]);
         }
     }
 }

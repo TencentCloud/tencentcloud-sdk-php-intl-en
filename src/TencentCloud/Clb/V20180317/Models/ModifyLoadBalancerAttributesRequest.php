@@ -24,14 +24,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLoadBalancerId(string $LoadBalancerId) Set Unique CLB ID
  * @method string getLoadBalancerName() Obtain CLB instance name
  * @method void setLoadBalancerName(string $LoadBalancerName) Set CLB instance name
- * @method TargetRegionInfo getTargetRegionInfo() Obtain Region information of the real server bound to a CLB.
- * @method void setTargetRegionInfo(TargetRegionInfo $TargetRegionInfo) Set Region information of the real server bound to a CLB.
+ * @method TargetRegionInfo getTargetRegionInfo() Obtain The backend service information of cross-region binding 1.0
+ * @method void setTargetRegionInfo(TargetRegionInfo $TargetRegionInfo) Set The backend service information of cross-region binding 1.0
  * @method InternetAccessible getInternetChargeInfo() Obtain Network billing parameter
  * @method void setInternetChargeInfo(InternetAccessible $InternetChargeInfo) Set Network billing parameter
  * @method boolean getLoadBalancerPassToTarget() Obtain Whether the target opens traffic from CLB to the internet. If yes (true), only security groups on CLB will be verified; if no (false), security groups on both CLB and backend instance need to be verified.
  * @method void setLoadBalancerPassToTarget(boolean $LoadBalancerPassToTarget) Set Whether the target opens traffic from CLB to the internet. If yes (true), only security groups on CLB will be verified; if no (false), security groups on both CLB and backend instance need to be verified.
- * @method boolean getSnatPro() Obtain Whether to enable SnatPro
- * @method void setSnatPro(boolean $SnatPro) Set Whether to enable SnatPro
+ * @method boolean getSnatPro() Obtain Whether to enable cross-region binding 2.0
+ * @method void setSnatPro(boolean $SnatPro) Set Whether to enable cross-region binding 2.0
  * @method boolean getDeleteProtect() Obtain Specifies whether to enable deletion protection.
  * @method void setDeleteProtect(boolean $DeleteProtect) Set Specifies whether to enable deletion protection.
  */
@@ -48,7 +48,7 @@ class ModifyLoadBalancerAttributesRequest extends AbstractModel
     public $LoadBalancerName;
 
     /**
-     * @var TargetRegionInfo Region information of the real server bound to a CLB.
+     * @var TargetRegionInfo The backend service information of cross-region binding 1.0
      */
     public $TargetRegionInfo;
 
@@ -63,7 +63,7 @@ class ModifyLoadBalancerAttributesRequest extends AbstractModel
     public $LoadBalancerPassToTarget;
 
     /**
-     * @var boolean Whether to enable SnatPro
+     * @var boolean Whether to enable cross-region binding 2.0
      */
     public $SnatPro;
 
@@ -75,10 +75,10 @@ class ModifyLoadBalancerAttributesRequest extends AbstractModel
     /**
      * @param string $LoadBalancerId Unique CLB ID
      * @param string $LoadBalancerName CLB instance name
-     * @param TargetRegionInfo $TargetRegionInfo Region information of the real server bound to a CLB.
+     * @param TargetRegionInfo $TargetRegionInfo The backend service information of cross-region binding 1.0
      * @param InternetAccessible $InternetChargeInfo Network billing parameter
      * @param boolean $LoadBalancerPassToTarget Whether the target opens traffic from CLB to the internet. If yes (true), only security groups on CLB will be verified; if no (false), security groups on both CLB and backend instance need to be verified.
-     * @param boolean $SnatPro Whether to enable SnatPro
+     * @param boolean $SnatPro Whether to enable cross-region binding 2.0
      * @param boolean $DeleteProtect Specifies whether to enable deletion protection.
      */
     function __construct()

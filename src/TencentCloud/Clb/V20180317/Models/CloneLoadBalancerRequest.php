@@ -56,8 +56,8 @@ Note: A secondary AZ will load traffic if the primary AZ is faulty. You can use 
  * @method void setSnatIps(array $SnatIps) Set Creates `SnatIp` when the binding IPs of other VPCs feature is enabled
  * @method array getClusterIds() Obtain ID of the public network CLB dedicated cluster
  * @method void setClusterIds(array $ClusterIds) Set ID of the public network CLB dedicated cluster
- * @method string getSlaType() Obtain Guaranteed performance specification.
- * @method void setSlaType(string $SlaType) Set Guaranteed performance specification.
+ * @method string getSlaType() Obtain Specification of the LCU-supported instance.
+ * @method void setSlaType(string $SlaType) Set Specification of the LCU-supported instance.
  * @method string getClusterTag() Obtain Tag of the STGW dedicated cluster
  * @method void setClusterTag(string $ClusterTag) Set Tag of the STGW dedicated cluster
  * @method array getZones() Obtain Availability zones for nearby access of private network CLB instances to distribute traffic
@@ -146,7 +146,7 @@ Note: A secondary AZ will load traffic if the primary AZ is faulty. You can use 
     public $ClusterIds;
 
     /**
-     * @var string Guaranteed performance specification.
+     * @var string Specification of the LCU-supported instance.
      */
     public $SlaType;
 
@@ -184,7 +184,7 @@ Note: A secondary AZ will load traffic if the primary AZ is faulty. You can use 
      * @param boolean $SnatPro Whether to support binding cross-VPC IPs or cross-region IPs
      * @param array $SnatIps Creates `SnatIp` when the binding IPs of other VPCs feature is enabled
      * @param array $ClusterIds ID of the public network CLB dedicated cluster
-     * @param string $SlaType Guaranteed performance specification.
+     * @param string $SlaType Specification of the LCU-supported instance.
      * @param string $ClusterTag Tag of the STGW dedicated cluster
      * @param array $Zones Availability zones for nearby access of private network CLB instances to distribute traffic
      * @param string $EipAddressId Unique ID of an EIP, which can only be used when binding the EIP of a private network CLB instance (e.g., `eip-11112222`)

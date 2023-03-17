@@ -30,6 +30,10 @@ use TencentCloud\Common\AbstractModel;
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setTargets(array $Targets) Set Real server information
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method array getFunctionTargets() Obtain Information about backend SCF functions.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setFunctionTargets(array $FunctionTargets) Set Information about backend SCF functions.
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class RuleTargets extends AbstractModel
 {
@@ -55,10 +59,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $Targets;
 
     /**
+     * @var array Information about backend SCF functions.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $FunctionTargets;
+
+    /**
      * @param string $LocationId Forwarding rule ID
      * @param string $Domain Domain name of the forwarding rule
      * @param string $Url Forwarding rule path.
      * @param array $Targets Real server information
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param array $FunctionTargets Information about backend SCF functions.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
@@ -92,6 +104,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 $obj = new Backend();
                 $obj->deserialize($value);
                 array_push($this->Targets, $obj);
+            }
+        }
+
+        if (array_key_exists("FunctionTargets",$param) and $param["FunctionTargets"] !== null) {
+            $this->FunctionTargets = [];
+            foreach ($param["FunctionTargets"] as $key => $value){
+                $obj = new FunctionTarget();
+                $obj->deserialize($value);
+                array_push($this->FunctionTargets, $obj);
             }
         }
     }

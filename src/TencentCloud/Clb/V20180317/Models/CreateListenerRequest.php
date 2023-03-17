@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLoadBalancerId(string $LoadBalancerId) Set CLB instance ID
  * @method array getPorts() Obtain Specifies for which ports to create listeners. Each port corresponds to a new listener.
  * @method void setPorts(array $Ports) Set Specifies for which ports to create listeners. Each port corresponds to a new listener.
- * @method string getProtocol() Obtain Listener protocol: TCP, UDP, HTTP, HTTPS, or TCP_SSL (which is currently in beta test. If you want to use it, please submit a ticket for application).
- * @method void setProtocol(string $Protocol) Set Listener protocol: TCP, UDP, HTTP, HTTPS, or TCP_SSL (which is currently in beta test. If you want to use it, please submit a ticket for application).
+ * @method string getProtocol() Obtain Listener protocol. Values: TCP | UDP | HTTP | HTTPS | TCP_SSL | QUIC
+ * @method void setProtocol(string $Protocol) Set Listener protocol. Values: TCP | UDP | HTTP | HTTPS | TCP_SSL | QUIC
  * @method array getListenerNames() Obtain List of names of the listeners to be created. The array of names and array of ports are in one-to-one correspondence. If you do not want to name them now, you do not need to provide this parameter.
  * @method void setListenerNames(array $ListenerNames) Set List of names of the listeners to be created. The array of names and array of ports are in one-to-one correspondence. If you do not want to name them now, you do not need to provide this parameter.
  * @method HealthCheck getHealthCheck() Obtain Health check parameter, which is applicable only to TCP, UDP, and TCP_SSL listeners.
@@ -70,7 +70,7 @@ class CreateListenerRequest extends AbstractModel
     public $Ports;
 
     /**
-     * @var string Listener protocol: TCP, UDP, HTTP, HTTPS, or TCP_SSL (which is currently in beta test. If you want to use it, please submit a ticket for application).
+     * @var string Listener protocol. Values: TCP | UDP | HTTP | HTTPS | TCP_SSL | QUIC
      */
     public $Protocol;
 
@@ -148,7 +148,7 @@ They represent weighted round robin and least connections, respectively. Default
     /**
      * @param string $LoadBalancerId CLB instance ID
      * @param array $Ports Specifies for which ports to create listeners. Each port corresponds to a new listener.
-     * @param string $Protocol Listener protocol: TCP, UDP, HTTP, HTTPS, or TCP_SSL (which is currently in beta test. If you want to use it, please submit a ticket for application).
+     * @param string $Protocol Listener protocol. Values: TCP | UDP | HTTP | HTTPS | TCP_SSL | QUIC
      * @param array $ListenerNames List of names of the listeners to be created. The array of names and array of ports are in one-to-one correspondence. If you do not want to name them now, you do not need to provide this parameter.
      * @param HealthCheck $HealthCheck Health check parameter, which is applicable only to TCP, UDP, and TCP_SSL listeners.
      * @param CertificateInput $Certificate Certificate information. This parameter is only applicable to TCP_SSL listeners and HTTPS listeners with the SNI feature not enabled. `Certificate` and `MultiCertInfo` cannot be specified at the same time. 

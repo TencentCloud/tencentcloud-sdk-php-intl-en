@@ -56,6 +56,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method void setTemplateConfig(TemplateConfig $TemplateConfig) Set Security template settings
 Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method SlowPostConfig getSlowPostConfig() Obtain Slow attack defense configuration. If it is `null`, the previous setting is used.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method void setSlowPostConfig(SlowPostConfig $SlowPostConfig) Set Slow attack defense configuration. If it is `null`, the previous setting is used.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  */
 class SecurityConfig extends AbstractModel
 {
@@ -114,6 +118,12 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     public $TemplateConfig;
 
     /**
+     * @var SlowPostConfig Slow attack defense configuration. If it is `null`, the previous setting is used.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public $SlowPostConfig;
+
+    /**
      * @param WafConfig $WafConfig The settings of the managed rule. If it is null, the settings that were last configured will be used.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param RateLimitConfig $RateLimitConfig The settings of the rate limiting rule. If it is null, the settings that were last configured will be used.
@@ -131,6 +141,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param DropPageConfig $DropPageConfig The settings of the custom block page. If it is null, the settings that were last configured will be used.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param TemplateConfig $TemplateConfig Security template settings
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param SlowPostConfig $SlowPostConfig Slow attack defense configuration. If it is `null`, the previous setting is used.
 Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     function __construct()
@@ -189,6 +201,11 @@ Note: This field may return `null`, indicating that no valid value can be obtain
         if (array_key_exists("TemplateConfig",$param) and $param["TemplateConfig"] !== null) {
             $this->TemplateConfig = new TemplateConfig();
             $this->TemplateConfig->deserialize($param["TemplateConfig"]);
+        }
+
+        if (array_key_exists("SlowPostConfig",$param) and $param["SlowPostConfig"] !== null) {
+            $this->SlowPostConfig = new SlowPostConfig();
+            $this->SlowPostConfig->deserialize($param["SlowPostConfig"]);
         }
     }
 }

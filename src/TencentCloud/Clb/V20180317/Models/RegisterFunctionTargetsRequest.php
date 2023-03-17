@@ -20,58 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * RegisterFunctionTargets request structure.
  *
- * @method string getLoadBalancerId() Obtain 
- * @method void setLoadBalancerId(string $LoadBalancerId) Set 
- * @method string getListenerId() Obtain 
- * @method void setListenerId(string $ListenerId) Set 
- * @method array getFunctionTargets() Obtain 
- * @method void setFunctionTargets(array $FunctionTargets) Set 
- * @method string getLocationId() Obtain 
- * @method void setLocationId(string $LocationId) Set 
- * @method string getDomain() Obtain 
- * @method void setDomain(string $Domain) Set 
- * @method string getUrl() Obtain 
- * @method void setUrl(string $Url) Set 
+ * @method string getLoadBalancerId() Obtain CLB instance ID.
+ * @method void setLoadBalancerId(string $LoadBalancerId) Set CLB instance ID.
+ * @method string getListenerId() Obtain CLB listener ID.
+ * @method void setListenerId(string $ListenerId) Set CLB listener ID.
+ * @method array getFunctionTargets() Obtain SCF functions to be bound.
+ * @method void setFunctionTargets(array $FunctionTargets) Set SCF functions to be bound.
+ * @method string getLocationId() Obtain ID of the target forwarding rule. To bind an SCF function to a L7 forwarding rule, this parameter or `Domain+Url` is required.
+ * @method void setLocationId(string $LocationId) Set ID of the target forwarding rule. To bind an SCF function to a L7 forwarding rule, this parameter or `Domain+Url` is required.
+ * @method string getDomain() Obtain Domain name of the target forwarding rule. It is ignored if `LocationId` is specified.
+ * @method void setDomain(string $Domain) Set Domain name of the target forwarding rule. It is ignored if `LocationId` is specified.
+ * @method string getUrl() Obtain URL of the target forwarding rule. It is ignored if `LocationId` is specified.
+ * @method void setUrl(string $Url) Set URL of the target forwarding rule. It is ignored if `LocationId` is specified.
  */
 class RegisterFunctionTargetsRequest extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string CLB instance ID.
      */
     public $LoadBalancerId;
 
     /**
-     * @var string 
+     * @var string CLB listener ID.
      */
     public $ListenerId;
 
     /**
-     * @var array 
+     * @var array SCF functions to be bound.
      */
     public $FunctionTargets;
 
     /**
-     * @var string 
+     * @var string ID of the target forwarding rule. To bind an SCF function to a L7 forwarding rule, this parameter or `Domain+Url` is required.
      */
     public $LocationId;
 
     /**
-     * @var string 
+     * @var string Domain name of the target forwarding rule. It is ignored if `LocationId` is specified.
      */
     public $Domain;
 
     /**
-     * @var string 
+     * @var string URL of the target forwarding rule. It is ignored if `LocationId` is specified.
      */
     public $Url;
 
     /**
-     * @param string $LoadBalancerId 
-     * @param string $ListenerId 
-     * @param array $FunctionTargets 
-     * @param string $LocationId 
-     * @param string $Domain 
-     * @param string $Url 
+     * @param string $LoadBalancerId CLB instance ID.
+     * @param string $ListenerId CLB listener ID.
+     * @param array $FunctionTargets SCF functions to be bound.
+     * @param string $LocationId ID of the target forwarding rule. To bind an SCF function to a L7 forwarding rule, this parameter or `Domain+Url` is required.
+     * @param string $Domain Domain name of the target forwarding rule. It is ignored if `LocationId` is specified.
+     * @param string $Url URL of the target forwarding rule. It is ignored if `LocationId` is specified.
      */
     function __construct()
     {

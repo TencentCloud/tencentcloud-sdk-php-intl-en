@@ -28,6 +28,10 @@ use TencentCloud\Common\AbstractModel;
 <li>`off`: Disable</li>
  * @method array getAclUserRules() Obtain The custom rule.
  * @method void setAclUserRules(array $AclUserRules) Set The custom rule.
+ * @method array getCustomizes() Obtain Custom managed rules
+Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method void setCustomizes(array $Customizes) Set Custom managed rules
+Note: This field may return `null`, indicating that no valid value can be obtained.
  */
 class AclConfig extends AbstractModel
 {
@@ -44,10 +48,18 @@ class AclConfig extends AbstractModel
     public $AclUserRules;
 
     /**
+     * @var array Custom managed rules
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public $Customizes;
+
+    /**
      * @param string $Switch Switch. Values:
 <li>`on`: Enable</li>
 <li>`off`: Disable</li>
      * @param array $AclUserRules The custom rule.
+     * @param array $Customizes Custom managed rules
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     function __construct()
     {
@@ -72,6 +84,15 @@ class AclConfig extends AbstractModel
                 $obj = new AclUserRule();
                 $obj->deserialize($value);
                 array_push($this->AclUserRules, $obj);
+            }
+        }
+
+        if (array_key_exists("Customizes",$param) and $param["Customizes"] !== null) {
+            $this->Customizes = [];
+            foreach ($param["Customizes"] as $key => $value){
+                $obj = new AclUserRule();
+                $obj->deserialize($value);
+                array_push($this->Customizes, $obj);
             }
         }
     }

@@ -52,6 +52,22 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setInstanceIdSet(array $InstanceIdSet) Set List of IDs of the instances associated with the scheduled snapshot policy.
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getRetentionMonths() Obtain The number of months for which the snapshots created by this scheduled snapshot policy can be retained.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setRetentionMonths(integer $RetentionMonths) Set The number of months for which the snapshots created by this scheduled snapshot policy can be retained.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getRetentionAmount() Obtain The maximum number of snapshots created by this scheduled snapshot policy that can be retained.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setRetentionAmount(integer $RetentionAmount) Set The maximum number of snapshots created by this scheduled snapshot policy that can be retained.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method AdvancedRetentionPolicy getAdvancedRetentionPolicy() Obtain Retention policy for scheduled snapshots.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setAdvancedRetentionPolicy(AdvancedRetentionPolicy $AdvancedRetentionPolicy) Set Retention policy for scheduled snapshots.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getCopyFromAccountUin() Obtain 
+ * @method void setCopyFromAccountUin(string $CopyFromAccountUin) Set 
+ * @method array getTags() Obtain 
+ * @method void setTags(array $Tags) Set 
  */
 class AutoSnapshotPolicy extends AbstractModel
 {
@@ -124,6 +140,34 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $InstanceIdSet;
 
     /**
+     * @var integer The number of months for which the snapshots created by this scheduled snapshot policy can be retained.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $RetentionMonths;
+
+    /**
+     * @var integer The maximum number of snapshots created by this scheduled snapshot policy that can be retained.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $RetentionAmount;
+
+    /**
+     * @var AdvancedRetentionPolicy Retention policy for scheduled snapshots.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $AdvancedRetentionPolicy;
+
+    /**
+     * @var string 
+     */
+    public $CopyFromAccountUin;
+
+    /**
+     * @var array 
+     */
+    public $Tags;
+
+    /**
      * @param array $DiskIdSet The list of cloud disk IDs that the current scheduled snapshot policy is bound to.
      * @param boolean $IsActivated Whether scheduled snapshot policy is activated.
      * @param string $AutoSnapshotPolicyState Scheduled snapshot policy state. Value range:<br><li>NORMAL: Normal<br><li>ISOLATED: Isolated.
@@ -140,6 +184,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param array $InstanceIdSet List of IDs of the instances associated with the scheduled snapshot policy.
 Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $RetentionMonths The number of months for which the snapshots created by this scheduled snapshot policy can be retained.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $RetentionAmount The maximum number of snapshots created by this scheduled snapshot policy that can be retained.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param AdvancedRetentionPolicy $AdvancedRetentionPolicy Retention policy for scheduled snapshots.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $CopyFromAccountUin 
+     * @param array $Tags 
      */
     function __construct()
     {
@@ -209,6 +261,32 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("InstanceIdSet",$param) and $param["InstanceIdSet"] !== null) {
             $this->InstanceIdSet = $param["InstanceIdSet"];
+        }
+
+        if (array_key_exists("RetentionMonths",$param) and $param["RetentionMonths"] !== null) {
+            $this->RetentionMonths = $param["RetentionMonths"];
+        }
+
+        if (array_key_exists("RetentionAmount",$param) and $param["RetentionAmount"] !== null) {
+            $this->RetentionAmount = $param["RetentionAmount"];
+        }
+
+        if (array_key_exists("AdvancedRetentionPolicy",$param) and $param["AdvancedRetentionPolicy"] !== null) {
+            $this->AdvancedRetentionPolicy = new AdvancedRetentionPolicy();
+            $this->AdvancedRetentionPolicy->deserialize($param["AdvancedRetentionPolicy"]);
+        }
+
+        if (array_key_exists("CopyFromAccountUin",$param) and $param["CopyFromAccountUin"] !== null) {
+            $this->CopyFromAccountUin = $param["CopyFromAccountUin"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }

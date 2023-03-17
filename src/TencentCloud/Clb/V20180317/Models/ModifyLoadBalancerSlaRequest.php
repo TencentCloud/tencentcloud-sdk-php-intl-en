@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyLoadBalancerSla request structure.
  *
- * @method array getLoadBalancerSla() Obtain CLB instance information
- * @method void setLoadBalancerSla(array $LoadBalancerSla) Set CLB instance information
+ * @method array getLoadBalancerSla() Obtain CLB instance information.
+ * @method void setLoadBalancerSla(array $LoadBalancerSla) Set CLB instance information.
  */
 class ModifyLoadBalancerSlaRequest extends AbstractModel
 {
     /**
-     * @var array CLB instance information
+     * @var array CLB instance information.
      */
     public $LoadBalancerSla;
 
     /**
-     * @param array $LoadBalancerSla CLB instance information
+     * @param array $LoadBalancerSla CLB instance information.
      */
     function __construct()
     {

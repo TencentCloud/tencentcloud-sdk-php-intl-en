@@ -28,8 +28,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setHealthStatus(boolean $HealthStatus) Set Current health status. true: healthy; false: unhealthy.
  * @method string getTargetId() Obtain Instance ID of the target, such as ins-12345678
  * @method void setTargetId(string $TargetId) Set Instance ID of the target, such as ins-12345678
- * @method string getHealthStatusDetial() Obtain Detailed information of the current health status. Alive: healthy; Dead: exceptional; Unknown: check not started/checking/unknown status.
- * @method void setHealthStatusDetial(string $HealthStatusDetial) Set Detailed information of the current health status. Alive: healthy; Dead: exceptional; Unknown: check not started/checking/unknown status.
+ * @method string getHealthStatusDetail() Obtain Detailed information about the current health status. Alive: healthy; Dead: exceptional; Unknown: check not started/checking/unknown status.
+ * @method void setHealthStatusDetail(string $HealthStatusDetail) Set Detailed information about the current health status. Alive: healthy; Dead: exceptional; Unknown: check not started/checking/unknown status.
+ * @method string getHealthStatusDetial() Obtain Detailed information about the current health status. Alive: healthy; Dead: exceptional; Unknown: check not started/checking/unknown status. This parameter will be discarded soon. We recommend that you use the HealthStatusDetail parameter.
+ * @method void setHealthStatusDetial(string $HealthStatusDetial) Set Detailed information about the current health status. Alive: healthy; Dead: exceptional; Unknown: check not started/checking/unknown status. This parameter will be discarded soon. We recommend that you use the HealthStatusDetail parameter.
  */
 class TargetHealth extends AbstractModel
 {
@@ -54,7 +56,12 @@ class TargetHealth extends AbstractModel
     public $TargetId;
 
     /**
-     * @var string Detailed information of the current health status. Alive: healthy; Dead: exceptional; Unknown: check not started/checking/unknown status.
+     * @var string Detailed information about the current health status. Alive: healthy; Dead: exceptional; Unknown: check not started/checking/unknown status.
+     */
+    public $HealthStatusDetail;
+
+    /**
+     * @var string Detailed information about the current health status. Alive: healthy; Dead: exceptional; Unknown: check not started/checking/unknown status. This parameter will be discarded soon. We recommend that you use the HealthStatusDetail parameter.
      */
     public $HealthStatusDetial;
 
@@ -63,7 +70,8 @@ class TargetHealth extends AbstractModel
      * @param integer $Port Port bound to the target
      * @param boolean $HealthStatus Current health status. true: healthy; false: unhealthy.
      * @param string $TargetId Instance ID of the target, such as ins-12345678
-     * @param string $HealthStatusDetial Detailed information of the current health status. Alive: healthy; Dead: exceptional; Unknown: check not started/checking/unknown status.
+     * @param string $HealthStatusDetail Detailed information about the current health status. Alive: healthy; Dead: exceptional; Unknown: check not started/checking/unknown status.
+     * @param string $HealthStatusDetial Detailed information about the current health status. Alive: healthy; Dead: exceptional; Unknown: check not started/checking/unknown status. This parameter will be discarded soon. We recommend that you use the HealthStatusDetail parameter.
      */
     function __construct()
     {
@@ -92,6 +100,10 @@ class TargetHealth extends AbstractModel
 
         if (array_key_exists("TargetId",$param) and $param["TargetId"] !== null) {
             $this->TargetId = $param["TargetId"];
+        }
+
+        if (array_key_exists("HealthStatusDetail",$param) and $param["HealthStatusDetail"] !== null) {
+            $this->HealthStatusDetail = $param["HealthStatusDetail"];
         }
 
         if (array_key_exists("HealthStatusDetial",$param) and $param["HealthStatusDetial"] !== null) {

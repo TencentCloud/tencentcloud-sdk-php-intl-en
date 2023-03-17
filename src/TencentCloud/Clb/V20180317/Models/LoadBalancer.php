@@ -30,9 +30,9 @@ OPEN: public network; INTERNAL: private network.
 OPEN: public network; INTERNAL: private network.
  * @method integer getForward() Obtain CLB type identifier. Value range: 1 (CLB); 0 (classic CLB).
  * @method void setForward(integer $Forward) Set CLB type identifier. Value range: 1 (CLB); 0 (classic CLB).
- * @method string getDomain() Obtain CLB instance domain name. This field is provided only to public network classic CLB instance.
+ * @method string getDomain() Obtain Domain name of the CLB instance. It is only available for public classic CLBs. This parameter will be discontinued soon. Please use `LoadBalancerDomain` instead.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setDomain(string $Domain) Set CLB instance domain name. This field is provided only to public network classic CLB instance.
+ * @method void setDomain(string $Domain) Set Domain name of the CLB instance. It is only available for public classic CLBs. This parameter will be discontinued soon. Please use `LoadBalancerDomain` instead.
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method array getLoadBalancerVips() Obtain List of VIPs of a CLB instance.
 Note: This field may return null, indicating that no valid values can be obtained.
@@ -178,10 +178,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setSnatIps(array $SnatIps) Set `SnatIp` list after SnatPro load balancing is enabled.
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getSlaType() Obtain Performance guarantee specification
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setSlaType(string $SlaType) Set Performance guarantee specification
-Note: this field may return null, indicating that no valid values can be obtained.
+ * @method string getSlaType() Obtain Specification of the LCU-supported instance.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setSlaType(string $SlaType) Set Specification of the LCU-supported instance.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method boolean getIsBlock() Obtain Whether VIP is blocked
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setIsBlock(boolean $IsBlock) Set Whether VIP is blocked
@@ -216,12 +216,18 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method void setHealthLogTopicId(string $HealthLogTopicId) Set Health check log topic ID of CLB CLS
 Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method array getClusterIds() Obtain 
- * @method void setClusterIds(array $ClusterIds) Set 
+ * @method array getClusterIds() Obtain Cluster ID.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setClusterIds(array $ClusterIds) Set Cluster ID.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method array getAttributeFlags() Obtain CLB attribute
 Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method void setAttributeFlags(array $AttributeFlags) Set CLB attribute
 Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method string getLoadBalancerDomain() Obtain Domain name of the CLB instance.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setLoadBalancerDomain(string $LoadBalancerDomain) Set Domain name of the CLB instance.
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class LoadBalancer extends AbstractModel
 {
@@ -247,7 +253,7 @@ OPEN: public network; INTERNAL: private network.
     public $Forward;
 
     /**
-     * @var string CLB instance domain name. This field is provided only to public network classic CLB instance.
+     * @var string Domain name of the CLB instance. It is only available for public classic CLBs. This parameter will be discontinued soon. Please use `LoadBalancerDomain` instead.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Domain;
@@ -469,8 +475,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $SnatIps;
 
     /**
-     * @var string Performance guarantee specification
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string Specification of the LCU-supported instance.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $SlaType;
 
@@ -528,7 +534,8 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     public $HealthLogTopicId;
 
     /**
-     * @var array 
+     * @var array Cluster ID.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ClusterIds;
 
@@ -539,12 +546,18 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     public $AttributeFlags;
 
     /**
+     * @var string Domain name of the CLB instance.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $LoadBalancerDomain;
+
+    /**
      * @param string $LoadBalancerId CLB instance ID.
      * @param string $LoadBalancerName CLB instance name.
      * @param string $LoadBalancerType CLB instance network type:
 OPEN: public network; INTERNAL: private network.
      * @param integer $Forward CLB type identifier. Value range: 1 (CLB); 0 (classic CLB).
-     * @param string $Domain CLB instance domain name. This field is provided only to public network classic CLB instance.
+     * @param string $Domain Domain name of the CLB instance. It is only available for public classic CLBs. This parameter will be discontinued soon. Please use `LoadBalancerDomain` instead.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param array $LoadBalancerVips List of VIPs of a CLB instance.
 Note: This field may return null, indicating that no valid values can be obtained.
@@ -618,8 +631,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param array $SnatIps `SnatIp` list after SnatPro load balancing is enabled.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $SlaType Performance guarantee specification
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @param string $SlaType Specification of the LCU-supported instance.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param boolean $IsBlock Whether VIP is blocked
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $IsBlockTime Time blocked or unblocked
@@ -637,9 +650,12 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param string $HealthLogTopicId Health check log topic ID of CLB CLS
 Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param array $ClusterIds 
+     * @param array $ClusterIds Cluster ID.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param array $AttributeFlags CLB attribute
 Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param string $LoadBalancerDomain Domain name of the CLB instance.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -885,6 +901,10 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
         if (array_key_exists("AttributeFlags",$param) and $param["AttributeFlags"] !== null) {
             $this->AttributeFlags = $param["AttributeFlags"];
+        }
+
+        if (array_key_exists("LoadBalancerDomain",$param) and $param["LoadBalancerDomain"] !== null) {
+            $this->LoadBalancerDomain = $param["LoadBalancerDomain"];
         }
     }
 }

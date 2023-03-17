@@ -88,10 +88,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setExtraInfo(ExtraInfo $ExtraInfo) Set Reserved field, which can be ignored generally.
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getConfigId() Obtain Custom configuration ID at the CLB instance level.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setConfigId(string $ConfigId) Set Custom configuration ID at the CLB instance level.
-Note: this field may return null, indicating that no valid values can be obtained.
+ * @method string getConfigId() Obtain Custom configuration IDs of CLB instances. Multiple IDs must be separated by commas (,).
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setConfigId(string $ConfigId) Set Custom configuration IDs of CLB instances. Multiple IDs must be separated by commas (,).
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method array getTags() Obtain CLB instance tag information.
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setTags(array $Tags) Set CLB instance tag information.
@@ -168,8 +168,10 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
  * @method void setSniSwitch(integer $SniSwitch) Set Whether SNI is enabled. This parameter is only meaningful for HTTPS listeners.
 Note: This field may return `null`, indicating that no valid values can be obtained.
- * @method string getLoadBalancerDomain() Obtain 
- * @method void setLoadBalancerDomain(string $LoadBalancerDomain) Set 
+ * @method string getLoadBalancerDomain() Obtain Domain name of the CLB instance.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setLoadBalancerDomain(string $LoadBalancerDomain) Set Domain name of the CLB instance.
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class LoadBalancerDetail extends AbstractModel
 {
@@ -276,8 +278,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $ExtraInfo;
 
     /**
-     * @var string Custom configuration ID at the CLB instance level.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string Custom configuration IDs of CLB instances. Multiple IDs must be separated by commas (,).
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ConfigId;
 
@@ -396,7 +398,8 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     public $SniSwitch;
 
     /**
-     * @var string 
+     * @var string Domain name of the CLB instance.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $LoadBalancerDomain;
 
@@ -435,8 +438,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param ExtraInfo $ExtraInfo Reserved field, which can be ignored generally.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $ConfigId Custom configuration ID at the CLB instance level.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @param string $ConfigId Custom configuration IDs of CLB instances. Multiple IDs must be separated by commas (,).
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param array $Tags CLB instance tag information.
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $ListenerId CLB listener ID.
@@ -475,7 +478,8 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
      * @param integer $SniSwitch Whether SNI is enabled. This parameter is only meaningful for HTTPS listeners.
 Note: This field may return `null`, indicating that no valid values can be obtained.
-     * @param string $LoadBalancerDomain 
+     * @param string $LoadBalancerDomain Domain name of the CLB instance.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

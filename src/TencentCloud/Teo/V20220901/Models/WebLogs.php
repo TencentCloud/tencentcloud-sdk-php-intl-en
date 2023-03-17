@@ -30,10 +30,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAttackIp(string $AttackIp) Set The attacker IP.
  * @method string getSipCountryCode() Obtain The country code of the attacker IP, which is defined in ISO-3166 alpha-2. For the list of country codes, see [ISO-3166](https://git.woa.com/edgeone/iso-3166/blob/master/all/all.json).
  * @method void setSipCountryCode(string $SipCountryCode) Set The country code of the attacker IP, which is defined in ISO-3166 alpha-2. For the list of country codes, see [ISO-3166](https://git.woa.com/edgeone/iso-3166/blob/master/all/all.json).
- * @method string getRealClientIp() Obtain 
- * @method void setRealClientIp(string $RealClientIp) Set 
- * @method string getRealClientIpCountryCode() Obtain 
- * @method void setRealClientIpCountryCode(string $RealClientIpCountryCode) Set 
+ * @method string getRealClientIp() Obtain The real client IP.
+ * @method void setRealClientIp(string $RealClientIp) Set The real client IP.
+ * @method string getRealClientIpCountryCode() Obtain The ISO-3166 alpha-2 country code of the real client IP.
+ * @method void setRealClientIpCountryCode(string $RealClientIpCountryCode) Set The ISO-3166 alpha-2 country code of the real client IP.
  * @method integer getAttackTime() Obtain The attack time recorded in seconds using UNIX timestamp.
  * @method void setAttackTime(integer $AttackTime) Set The attack time recorded in seconds using UNIX timestamp.
  * @method string getRequestUri() Obtain The request address.
@@ -83,12 +83,12 @@ class WebLogs extends AbstractModel
     public $SipCountryCode;
 
     /**
-     * @var string 
+     * @var string The real client IP.
      */
     public $RealClientIp;
 
     /**
-     * @var string 
+     * @var string The ISO-3166 alpha-2 country code of the real client IP.
      */
     public $RealClientIpCountryCode;
 
@@ -132,8 +132,8 @@ Note: This field may return `null`, indicating that no valid value was found.
      * @param string $Domain The attacked subdomain name.
      * @param string $AttackIp The attacker IP.
      * @param string $SipCountryCode The country code of the attacker IP, which is defined in ISO-3166 alpha-2. For the list of country codes, see [ISO-3166](https://git.woa.com/edgeone/iso-3166/blob/master/all/all.json).
-     * @param string $RealClientIp 
-     * @param string $RealClientIpCountryCode 
+     * @param string $RealClientIp The real client IP.
+     * @param string $RealClientIpCountryCode The ISO-3166 alpha-2 country code of the real client IP.
      * @param integer $AttackTime The attack time recorded in seconds using UNIX timestamp.
      * @param string $RequestUri The request address.
      * @param string $ReqMethod The request type.

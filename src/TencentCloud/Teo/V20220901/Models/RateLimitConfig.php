@@ -18,7 +18,7 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Rate limiting configuration
+ * Rate limiting rules
  *
  * @method string getSwitch() Obtain Switch. Values:
 <li>`on`: Enable</li>
@@ -36,6 +36,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setRateLimitIntelligence(RateLimitIntelligence $RateLimitIntelligence) Set The client filtering settings. If it is null, the settings that were last configured will be used.
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method array getRateLimitCustomizes() Obtain The custom rate limiting rules. If it is `null`, the previous settings is used.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method void setRateLimitCustomizes(array $RateLimitCustomizes) Set The custom rate limiting rules. If it is `null`, the previous settings is used.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  */
 class RateLimitConfig extends AbstractModel
 {
@@ -64,6 +68,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $RateLimitIntelligence;
 
     /**
+     * @var array The custom rate limiting rules. If it is `null`, the previous settings is used.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public $RateLimitCustomizes;
+
+    /**
      * @param string $Switch Switch. Values:
 <li>`on`: Enable</li>
 <li>`off`: Disable</li>
@@ -72,6 +82,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param RateLimitIntelligence $RateLimitIntelligence The client filtering settings. If it is null, the settings that were last configured will be used.
 Note: This field may return null, indicating that no valid values can be obtained.
+     * @param array $RateLimitCustomizes The custom rate limiting rules. If it is `null`, the previous settings is used.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     function __construct()
     {
@@ -107,6 +119,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (array_key_exists("RateLimitIntelligence",$param) and $param["RateLimitIntelligence"] !== null) {
             $this->RateLimitIntelligence = new RateLimitIntelligence();
             $this->RateLimitIntelligence->deserialize($param["RateLimitIntelligence"]);
+        }
+
+        if (array_key_exists("RateLimitCustomizes",$param) and $param["RateLimitCustomizes"] !== null) {
+            $this->RateLimitCustomizes = [];
+            foreach ($param["RateLimitCustomizes"] as $key => $value){
+                $obj = new RateLimitUserRule();
+                $obj->deserialize($value);
+                array_push($this->RateLimitCustomizes, $obj);
+            }
         }
     }
 }

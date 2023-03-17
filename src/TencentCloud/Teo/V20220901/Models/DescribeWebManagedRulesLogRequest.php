@@ -32,30 +32,32 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) Set Limit on paginated queries. Default value: 20. Maximum value: 1000.
  * @method integer getOffset() Obtain The page offset. Default value: 0.
  * @method void setOffset(integer $Offset) Set The page offset. Default value: 0.
- * @method array getQueryCondition() Obtain The key of the parameter QueryCondition, which is used to specify a filter. Values:
-<li>`attackType`: Attack type;</li>
-<li>`riskLevel`: Risk level;</li>
-<li>`action`: Action;</li>
-<li>`ruleId`: Rule ID;</li>
-<li>`sipCountryCode`: Country code of the attacker IP;</li>
-<li>`attackIp`: Attacker IP;</li>
-<li>`oriDomain`: Attacked subdomain name;</li>
-<li>`eventId`: Event ID;</li>
-<li>`ua`: User agent;</li>
-<li>`requestMethod`: Request method;</li>
-<li>`uri`: Uniform resource identifier.</li>
- * @method void setQueryCondition(array $QueryCondition) Set The key of the parameter QueryCondition, which is used to specify a filter. Values:
-<li>`attackType`: Attack type;</li>
-<li>`riskLevel`: Risk level;</li>
-<li>`action`: Action;</li>
-<li>`ruleId`: Rule ID;</li>
-<li>`sipCountryCode`: Country code of the attacker IP;</li>
-<li>`attackIp`: Attacker IP;</li>
-<li>`oriDomain`: Attacked subdomain name;</li>
-<li>`eventId`: Event ID;</li>
-<li>`ua`: User agent;</li>
-<li>`requestMethod`: Request method;</li>
-<li>`uri`: Uniform resource identifier.</li>
+ * @method array getQueryCondition() Obtain Filters for the query. Values:
+<li>`attackType`: Attack type</li>
+<li>`riskLevel`: Risk level</li>
+<li>`action`: Action</li>
+<li>`ruleId`: Rule ID</li>
+<li>`sipCountryCode`: Country code of the attacker IP</li>
+<li>`attackIp`: Attacker IP</li>
+<li>`realClientIp`: Real client IP</li>
+<li>`oriDomain`: Attacked subdomain name</li>
+<li>`eventId`: Event ID</li>
+<li>`ua`: User agent</li>
+<li>`requestMethod`: Request method</li>
+<li>`uri`: Uniform resource identifier</li>
+ * @method void setQueryCondition(array $QueryCondition) Set Filters for the query. Values:
+<li>`attackType`: Attack type</li>
+<li>`riskLevel`: Risk level</li>
+<li>`action`: Action</li>
+<li>`ruleId`: Rule ID</li>
+<li>`sipCountryCode`: Country code of the attacker IP</li>
+<li>`attackIp`: Attacker IP</li>
+<li>`realClientIp`: Real client IP</li>
+<li>`oriDomain`: Attacked subdomain name</li>
+<li>`eventId`: Event ID</li>
+<li>`ua`: User agent</li>
+<li>`requestMethod`: Request method</li>
+<li>`uri`: Uniform resource identifier</li>
  * @method string getArea() Obtain Data storage region. Values:
 <li>`overseas`: Global (outside the Chinese mainland);</li>
 <li>`mainland`: Chinese mainland.</li>If this field is not specified, the data storage region will be determined based on the user’s location.
@@ -96,18 +98,19 @@ class DescribeWebManagedRulesLogRequest extends AbstractModel
     public $Offset;
 
     /**
-     * @var array The key of the parameter QueryCondition, which is used to specify a filter. Values:
-<li>`attackType`: Attack type;</li>
-<li>`riskLevel`: Risk level;</li>
-<li>`action`: Action;</li>
-<li>`ruleId`: Rule ID;</li>
-<li>`sipCountryCode`: Country code of the attacker IP;</li>
-<li>`attackIp`: Attacker IP;</li>
-<li>`oriDomain`: Attacked subdomain name;</li>
-<li>`eventId`: Event ID;</li>
-<li>`ua`: User agent;</li>
-<li>`requestMethod`: Request method;</li>
-<li>`uri`: Uniform resource identifier.</li>
+     * @var array Filters for the query. Values:
+<li>`attackType`: Attack type</li>
+<li>`riskLevel`: Risk level</li>
+<li>`action`: Action</li>
+<li>`ruleId`: Rule ID</li>
+<li>`sipCountryCode`: Country code of the attacker IP</li>
+<li>`attackIp`: Attacker IP</li>
+<li>`realClientIp`: Real client IP</li>
+<li>`oriDomain`: Attacked subdomain name</li>
+<li>`eventId`: Event ID</li>
+<li>`ua`: User agent</li>
+<li>`requestMethod`: Request method</li>
+<li>`uri`: Uniform resource identifier</li>
      */
     public $QueryCondition;
 
@@ -125,18 +128,19 @@ class DescribeWebManagedRulesLogRequest extends AbstractModel
      * @param array $Domains List of subdomain names to be queried. All subdomain names will be selected if this field is not specified.
      * @param integer $Limit Limit on paginated queries. Default value: 20. Maximum value: 1000.
      * @param integer $Offset The page offset. Default value: 0.
-     * @param array $QueryCondition The key of the parameter QueryCondition, which is used to specify a filter. Values:
-<li>`attackType`: Attack type;</li>
-<li>`riskLevel`: Risk level;</li>
-<li>`action`: Action;</li>
-<li>`ruleId`: Rule ID;</li>
-<li>`sipCountryCode`: Country code of the attacker IP;</li>
-<li>`attackIp`: Attacker IP;</li>
-<li>`oriDomain`: Attacked subdomain name;</li>
-<li>`eventId`: Event ID;</li>
-<li>`ua`: User agent;</li>
-<li>`requestMethod`: Request method;</li>
-<li>`uri`: Uniform resource identifier.</li>
+     * @param array $QueryCondition Filters for the query. Values:
+<li>`attackType`: Attack type</li>
+<li>`riskLevel`: Risk level</li>
+<li>`action`: Action</li>
+<li>`ruleId`: Rule ID</li>
+<li>`sipCountryCode`: Country code of the attacker IP</li>
+<li>`attackIp`: Attacker IP</li>
+<li>`realClientIp`: Real client IP</li>
+<li>`oriDomain`: Attacked subdomain name</li>
+<li>`eventId`: Event ID</li>
+<li>`ua`: User agent</li>
+<li>`requestMethod`: Request method</li>
+<li>`uri`: Uniform resource identifier</li>
      * @param string $Area Data storage region. Values:
 <li>`overseas`: Global (outside the Chinese mainland);</li>
 <li>`mainland`: Chinese mainland.</li>If this field is not specified, the data storage region will be determined based on the user’s location.

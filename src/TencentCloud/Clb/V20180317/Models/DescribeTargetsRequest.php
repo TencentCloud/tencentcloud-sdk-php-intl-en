@@ -28,6 +28,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProtocol(string $Protocol) Set Listener protocol type
  * @method integer getPort() Obtain Listener port
  * @method void setPort(integer $Port) Set Listener port
+ * @method array getFilters() Obtain Query the list of backend services associated with a load balancer
+<li> `location-id` - String - Optional - Rule ID, such as "loc-12345678".</li>
+<li> `private-ip-address` - String - Optional - Backend service private IP, such as `172.16.1.1`</li>
+ * @method void setFilters(array $Filters) Set Query the list of backend services associated with a load balancer
+<li> `location-id` - String - Optional - Rule ID, such as "loc-12345678".</li>
+<li> `private-ip-address` - String - Optional - Backend service private IP, such as `172.16.1.1`</li>
  */
 class DescribeTargetsRequest extends AbstractModel
 {
@@ -52,10 +58,20 @@ class DescribeTargetsRequest extends AbstractModel
     public $Port;
 
     /**
+     * @var array Query the list of backend services associated with a load balancer
+<li> `location-id` - String - Optional - Rule ID, such as "loc-12345678".</li>
+<li> `private-ip-address` - String - Optional - Backend service private IP, such as `172.16.1.1`</li>
+     */
+    public $Filters;
+
+    /**
      * @param string $LoadBalancerId CLB instance ID.
      * @param array $ListenerIds List of listener IDs (20 IDs at most).
      * @param string $Protocol Listener protocol type
      * @param integer $Port Listener port
+     * @param array $Filters Query the list of backend services associated with a load balancer
+<li> `location-id` - String - Optional - Rule ID, such as "loc-12345678".</li>
+<li> `private-ip-address` - String - Optional - Backend service private IP, such as `172.16.1.1`</li>
      */
     function __construct()
     {
@@ -84,6 +100,15 @@ class DescribeTargetsRequest extends AbstractModel
 
         if (array_key_exists("Port",$param) and $param["Port"] !== null) {
             $this->Port = $param["Port"];
+        }
+
+        if (array_key_exists("Filters",$param) and $param["Filters"] !== null) {
+            $this->Filters = [];
+            foreach ($param["Filters"] as $key => $value){
+                $obj = new Filter();
+                $obj->deserialize($value);
+                array_push($this->Filters, $obj);
+            }
         }
     }
 }

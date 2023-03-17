@@ -36,6 +36,12 @@ use TencentCloud\Common\AbstractModel;
 <li>`web-attack`: Web security logs;</li>
 <li>`web-rule`: Custom rule logs;</li>
 <li>`web-bot`: Bot management logs.</li>
+ * @method string getArea() Obtain The service region. Values:
+<li>`mainland`: Chinese mainland.</li>
+<li>`overseas`: Regions outside the Chinese mainland.</li>For an account registered on the Chinese site, it defaults to `mainland`. For an account registered on the international site, it defaults to `overseas`.
+ * @method void setArea(string $Area) Set The service region. Values:
+<li>`mainland`: Chinese mainland.</li>
+<li>`overseas`: Regions outside the Chinese mainland.</li>For an account registered on the Chinese site, it defaults to `mainland`. For an account registered on the international site, it defaults to `overseas`.
  */
 class DescribeAddableEntityListRequest extends AbstractModel
 {
@@ -56,6 +62,13 @@ class DescribeAddableEntityListRequest extends AbstractModel
     public $EntityType;
 
     /**
+     * @var string The service region. Values:
+<li>`mainland`: Chinese mainland.</li>
+<li>`overseas`: Regions outside the Chinese mainland.</li>For an account registered on the Chinese site, it defaults to `mainland`. For an account registered on the international site, it defaults to `overseas`.
+     */
+    public $Area;
+
+    /**
      * @param string $ZoneId ID of the site.
      * @param string $EntityType Type of the shipping entity. Values:
 <li>`domain`: L7 acceleration logs;</li>
@@ -64,6 +77,9 @@ class DescribeAddableEntityListRequest extends AbstractModel
 <li>`web-attack`: Web security logs;</li>
 <li>`web-rule`: Custom rule logs;</li>
 <li>`web-bot`: Bot management logs.</li>
+     * @param string $Area The service region. Values:
+<li>`mainland`: Chinese mainland.</li>
+<li>`overseas`: Regions outside the Chinese mainland.</li>For an account registered on the Chinese site, it defaults to `mainland`. For an account registered on the international site, it defaults to `overseas`.
      */
     function __construct()
     {
@@ -84,6 +100,10 @@ class DescribeAddableEntityListRequest extends AbstractModel
 
         if (array_key_exists("EntityType",$param) and $param["EntityType"] !== null) {
             $this->EntityType = $param["EntityType"];
+        }
+
+        if (array_key_exists("Area",$param) and $param["Area"] !== null) {
+            $this->Area = $param["Area"];
         }
     }
 }

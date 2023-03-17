@@ -38,6 +38,30 @@ Key concepts:
  * @method Models\DeleteCloudRecordingResponse DeleteCloudRecording(Models\DeleteCloudRecordingRequest $req) This API is used to stop a recording task. If a task is stopped successfully, but the uploading of recording files has not completed, the backend will continue to upload the files and will notify you via a callback when the upload is completed.
  * @method Models\DescribeCloudRecordingResponse DescribeCloudRecording(Models\DescribeCloudRecordingRequest $req) This API is used to query the status of a recording task after it starts. It works only when a task is in progress. If the task has already ended when this API is called, an error will be returned.
 If a recording file is being uploaded to VOD, the response parameter `StorageFileList` will not contain the information of the recording file. Please listen for the recording file callback to get the information.
+ * @method Models\DescribeMixTranscodingUsageResponse DescribeMixTranscodingUsage(Models\DescribeMixTranscodingUsageRequest $req) This API is used to query your usage of TRTC’s On-Cloud MixTranscoding service.
+- If the period queried is one day or shorter, the statistics returned are on a five-minute basis. If the period queried is longer than one day, the statistics returned are on a daily basis.
+- The period queried per request cannot be longer than 31 days.
+- If you query the statistics of the current day, the statistics returned may be inaccurate due to the delay in data collection.
+- You can use this API to query your historical usage or to reconcile data, but we do not recommend you use it for crucial business logic.
+- The rate limit of this API is five calls per second.
+ * @method Models\DescribeRecordingUsageResponse DescribeRecordingUsage(Models\DescribeRecordingUsageRequest $req) This API is used to query your TRTC recording usage.
+- If the period queried is one day or shorter, the statistics returned are on a five-minute basis. If the period queried is longer than one day, the statistics returned are on a daily basis.
+- The period queried per request cannot be longer than 31 days.
+- If you query the statistics of the current day, the statistics returned may be inaccurate due to the delay in data collection.
+- You can use this API to query your historical usage or to reconcile data, but we do not recommend you use it for crucial business logic.
+- The rate limit of this API is five calls per second.
+ * @method Models\DescribeRelayUsageResponse DescribeRelayUsage(Models\DescribeRelayUsageRequest $req) This API is used to query your usage of TRTC’s relay to CDN service.
+- If the period queried is one day or shorter, the statistics returned are on a five-minute basis. If the period queried is longer than one day, the statistics returned are on a daily basis.
+- The period queried per request cannot be longer than 31 days.
+- If you query the statistics of the current day, the statistics returned may be inaccurate due to the delay in data collection.
+- You can use this API to query your historical usage or to reconcile data, but we do not recommend you use it for crucial business logic.
+- The rate limit of this API is five calls per second.
+ * @method Models\DescribeTrtcUsageResponse DescribeTrtcUsage(Models\DescribeTrtcUsageRequest $req) This API is used to query your TRTC audio/video duration.
+- If the period queried is one day or shorter, the statistics returned are on a five-minute basis. If the period queried is longer than one day, the statistics returned are on a daily basis.
+- The period queried per request cannot be longer than 31 days.
+- If you query the statistics of the current day, the statistics returned may be inaccurate due to the delay in data collection.
+- You can use this API to query your historical usage or to reconcile data, but we do not recommend you use it for crucial business logic.
+- The rate limit of this API is five calls per second.
  * @method Models\DismissRoomResponse DismissRoom(Models\DismissRoomRequest $req) This API is used to remove all users from a room and dismiss the room. It supports all platforms. For Android, iOS, Windows, and macOS, the TRTC SDK needs to be upgraded to v6.6 or above.
  * @method Models\DismissRoomByStrRoomIdResponse DismissRoomByStrRoomId(Models\DismissRoomByStrRoomIdRequest $req) This API is used to remove all users from a room and close the room. It works on all platforms. For Android, iOS, Windows, and macOS, you need to update the TRTC SDK to version 6.6 or above.
  * @method Models\ModifyCloudRecordingResponse ModifyCloudRecording(Models\ModifyCloudRecordingRequest $req) This API is used to modify a recording task. It works only when a task is in progress. If the task has already ended when this API is called, an error will be returned. You need to specify all the parameters for each request instead of just the ones you want to modify.
