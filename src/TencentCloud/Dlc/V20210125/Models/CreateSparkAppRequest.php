@@ -66,6 +66,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIsLocalArchives(string $IsLocalArchives) Set Archives: Dependency upload method. 1: cos; 2: lakefs (this method needs to be used in the console but cannot be called through APIs).
  * @method string getAppArchives() Obtain Archives: Dependency resources
  * @method void setAppArchives(string $AppArchives) Set Archives: Dependency resources
+ * @method string getSparkImage() Obtain The Spark image version.
+ * @method void setSparkImage(string $SparkImage) Set The Spark image version.
+ * @method string getSparkImageVersion() Obtain The Spark image version name.
+ * @method void setSparkImageVersion(string $SparkImageVersion) Set The Spark image version name.
+ * @method integer getAppExecutorMaxNumbers() Obtain The specified executor count (max), which defaults to 1. This parameter applies if the "Dynamic" mode is selected. If the "Dynamic" mode is not selected, the executor count is equal to `AppExecutorNums`.
+ * @method void setAppExecutorMaxNumbers(integer $AppExecutorMaxNumbers) Set The specified executor count (max), which defaults to 1. This parameter applies if the "Dynamic" mode is selected. If the "Dynamic" mode is not selected, the executor count is equal to `AppExecutorNums`.
  */
 class CreateSparkAppRequest extends AbstractModel
 {
@@ -185,6 +191,21 @@ class CreateSparkAppRequest extends AbstractModel
     public $AppArchives;
 
     /**
+     * @var string The Spark image version.
+     */
+    public $SparkImage;
+
+    /**
+     * @var string The Spark image version name.
+     */
+    public $SparkImageVersion;
+
+    /**
+     * @var integer The specified executor count (max), which defaults to 1. This parameter applies if the "Dynamic" mode is selected. If the "Dynamic" mode is not selected, the executor count is equal to `AppExecutorNums`.
+     */
+    public $AppExecutorMaxNumbers;
+
+    /**
      * @param string $AppName Spark application name
      * @param integer $AppType 1: Spark JAR application; 2: Spark streaming application
      * @param string $DataEngine The data engine executing the Spark job
@@ -208,6 +229,9 @@ class CreateSparkAppRequest extends AbstractModel
      * @param string $AppPythonFiles PySpark: Python dependency, which can be in .py, .zip, or .egg format. Multiple files should be separated by comma.
      * @param string $IsLocalArchives Archives: Dependency upload method. 1: cos; 2: lakefs (this method needs to be used in the console but cannot be called through APIs).
      * @param string $AppArchives Archives: Dependency resources
+     * @param string $SparkImage The Spark image version.
+     * @param string $SparkImageVersion The Spark image version name.
+     * @param integer $AppExecutorMaxNumbers The specified executor count (max), which defaults to 1. This parameter applies if the "Dynamic" mode is selected. If the "Dynamic" mode is not selected, the executor count is equal to `AppExecutorNums`.
      */
     function __construct()
     {
@@ -312,6 +336,18 @@ class CreateSparkAppRequest extends AbstractModel
 
         if (array_key_exists("AppArchives",$param) and $param["AppArchives"] !== null) {
             $this->AppArchives = $param["AppArchives"];
+        }
+
+        if (array_key_exists("SparkImage",$param) and $param["SparkImage"] !== null) {
+            $this->SparkImage = $param["SparkImage"];
+        }
+
+        if (array_key_exists("SparkImageVersion",$param) and $param["SparkImageVersion"] !== null) {
+            $this->SparkImageVersion = $param["SparkImageVersion"];
+        }
+
+        if (array_key_exists("AppExecutorMaxNumbers",$param) and $param["AppExecutorMaxNumbers"] !== null) {
+            $this->AppExecutorMaxNumbers = $param["AppExecutorMaxNumbers"];
         }
     }
 }

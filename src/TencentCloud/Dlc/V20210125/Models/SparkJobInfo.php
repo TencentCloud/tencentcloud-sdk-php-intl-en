@@ -92,6 +92,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setJobArchives(string $JobArchives) Set Archives: Dependency resources
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getSparkImage() Obtain The Spark image version.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setSparkImage(string $SparkImage) Set The Spark image version.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getJobPythonFiles() Obtain PySpark: Python dependency, which can be in .py, .zip, or .egg format. Multiple files should be separated by comma.
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setJobPythonFiles(string $JobPythonFiles) Set PySpark: Python dependency, which can be in .py, .zip, or .egg format. Multiple files should be separated by comma.
@@ -103,6 +107,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
  * @method integer getDataEngineStatus() Obtain Engine status. -100 (default value): unknown; -2–11: normal.
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setDataEngineStatus(integer $DataEngineStatus) Set Engine status. -100 (default value): unknown; -2–11: normal.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getJobExecutorMaxNumbers() Obtain The specified executor count (max), which defaults to 1. This parameter applies if the "Dynamic" mode is selected. If the "Dynamic" mode is not selected, the executor count is equal to `JobExecutorNums`.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setJobExecutorMaxNumbers(integer $JobExecutorMaxNumbers) Set The specified executor count (max), which defaults to 1. This parameter applies if the "Dynamic" mode is selected. If the "Dynamic" mode is not selected, the executor count is equal to `JobExecutorNums`.
 Note: This field may return null, indicating that no valid values can be obtained.
  */
 class SparkJobInfo extends AbstractModel
@@ -264,6 +272,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $JobArchives;
 
     /**
+     * @var string The Spark image version.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $SparkImage;
+
+    /**
      * @var string PySpark: Python dependency, which can be in .py, .zip, or .egg format. Multiple files should be separated by comma.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
@@ -280,6 +294,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $DataEngineStatus;
+
+    /**
+     * @var integer The specified executor count (max), which defaults to 1. This parameter applies if the "Dynamic" mode is selected. If the "Dynamic" mode is not selected, the executor count is equal to `JobExecutorNums`.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $JobExecutorMaxNumbers;
 
     /**
      * @param string $JobId Spark job ID
@@ -318,11 +338,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $JobArchives Archives: Dependency resources
 Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $SparkImage The Spark image version.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $JobPythonFiles PySpark: Python dependency, which can be in .py, .zip, or .egg format. Multiple files should be separated by comma.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $TaskNum Number of tasks running or ready to run under the current job
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $DataEngineStatus Engine status. -100 (default value): unknown; -2–11: normal.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $JobExecutorMaxNumbers The specified executor count (max), which defaults to 1. This parameter applies if the "Dynamic" mode is selected. If the "Dynamic" mode is not selected, the executor count is equal to `JobExecutorNums`.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
@@ -459,6 +483,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
             $this->JobArchives = $param["JobArchives"];
         }
 
+        if (array_key_exists("SparkImage",$param) and $param["SparkImage"] !== null) {
+            $this->SparkImage = $param["SparkImage"];
+        }
+
         if (array_key_exists("JobPythonFiles",$param) and $param["JobPythonFiles"] !== null) {
             $this->JobPythonFiles = $param["JobPythonFiles"];
         }
@@ -469,6 +497,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("DataEngineStatus",$param) and $param["DataEngineStatus"] !== null) {
             $this->DataEngineStatus = $param["DataEngineStatus"];
+        }
+
+        if (array_key_exists("JobExecutorMaxNumbers",$param) and $param["JobExecutorMaxNumbers"] !== null) {
+            $this->JobExecutorMaxNumbers = $param["JobExecutorMaxNumbers"];
         }
     }
 }

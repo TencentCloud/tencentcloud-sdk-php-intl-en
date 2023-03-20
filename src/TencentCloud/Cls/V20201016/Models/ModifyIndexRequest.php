@@ -26,10 +26,20 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStatus(boolean $Status) Set It does not take effect by default
  * @method RuleInfo getRule() Obtain Index rule
  * @method void setRule(RuleInfo $Rule) Set Index rule
- * @method boolean getIncludeInternalFields() Obtain Internal field marker of full-text index. Default value: `false`. Valid value: `false`: excluding internal fields; `true`: including internal fields
- * @method void setIncludeInternalFields(boolean $IncludeInternalFields) Set Internal field marker of full-text index. Default value: `false`. Valid value: `false`: excluding internal fields; `true`: including internal fields
- * @method integer getMetadataFlag() Obtain Metadata flag. Default value: `0`. Valid value: `0`: full-text index (including the metadata field with key-value index enabled); `1`: full-text index (including all metadata fields); `2`: full-text index (excluding metadata fields).
- * @method void setMetadataFlag(integer $MetadataFlag) Set Metadata flag. Default value: `0`. Valid value: `0`: full-text index (including the metadata field with key-value index enabled); `1`: full-text index (including all metadata fields); `2`: full-text index (excluding metadata fields).
+ * @method boolean getIncludeInternalFields() Obtain Whether full-text indexing includes internal fields (`__FILENAME__`, `__HOSTNAME__`, and `__SOURCE__`). Default value: `false`. Recommended value: `true`.
+* `false`: Full-text indexing does not include internal fields.
+* `true`: Full-text indexing includes internal fields.
+ * @method void setIncludeInternalFields(boolean $IncludeInternalFields) Set Whether full-text indexing includes internal fields (`__FILENAME__`, `__HOSTNAME__`, and `__SOURCE__`). Default value: `false`. Recommended value: `true`.
+* `false`: Full-text indexing does not include internal fields.
+* `true`: Full-text indexing includes internal fields.
+ * @method integer getMetadataFlag() Obtain Whether full-text indexing includes metadata fields (which are prefixed with `__TAG__`). Default value: `0`. Recommended value: `1`.
+* `0`: Full-text indexing includes only metadata fields with key-value indexing enabled.
+* `1`: Full-text indexing includes all metadata fields.
+* `2`: Full-text indexing does not include metadata fields.
+ * @method void setMetadataFlag(integer $MetadataFlag) Set Whether full-text indexing includes metadata fields (which are prefixed with `__TAG__`). Default value: `0`. Recommended value: `1`.
+* `0`: Full-text indexing includes only metadata fields with key-value indexing enabled.
+* `1`: Full-text indexing includes all metadata fields.
+* `2`: Full-text indexing does not include metadata fields.
  */
 class ModifyIndexRequest extends AbstractModel
 {
@@ -49,12 +59,17 @@ class ModifyIndexRequest extends AbstractModel
     public $Rule;
 
     /**
-     * @var boolean Internal field marker of full-text index. Default value: `false`. Valid value: `false`: excluding internal fields; `true`: including internal fields
+     * @var boolean Whether full-text indexing includes internal fields (`__FILENAME__`, `__HOSTNAME__`, and `__SOURCE__`). Default value: `false`. Recommended value: `true`.
+* `false`: Full-text indexing does not include internal fields.
+* `true`: Full-text indexing includes internal fields.
      */
     public $IncludeInternalFields;
 
     /**
-     * @var integer Metadata flag. Default value: `0`. Valid value: `0`: full-text index (including the metadata field with key-value index enabled); `1`: full-text index (including all metadata fields); `2`: full-text index (excluding metadata fields).
+     * @var integer Whether full-text indexing includes metadata fields (which are prefixed with `__TAG__`). Default value: `0`. Recommended value: `1`.
+* `0`: Full-text indexing includes only metadata fields with key-value indexing enabled.
+* `1`: Full-text indexing includes all metadata fields.
+* `2`: Full-text indexing does not include metadata fields.
      */
     public $MetadataFlag;
 
@@ -62,8 +77,13 @@ class ModifyIndexRequest extends AbstractModel
      * @param string $TopicId Log topic ID
      * @param boolean $Status It does not take effect by default
      * @param RuleInfo $Rule Index rule
-     * @param boolean $IncludeInternalFields Internal field marker of full-text index. Default value: `false`. Valid value: `false`: excluding internal fields; `true`: including internal fields
-     * @param integer $MetadataFlag Metadata flag. Default value: `0`. Valid value: `0`: full-text index (including the metadata field with key-value index enabled); `1`: full-text index (including all metadata fields); `2`: full-text index (excluding metadata fields).
+     * @param boolean $IncludeInternalFields Whether full-text indexing includes internal fields (`__FILENAME__`, `__HOSTNAME__`, and `__SOURCE__`). Default value: `false`. Recommended value: `true`.
+* `false`: Full-text indexing does not include internal fields.
+* `true`: Full-text indexing includes internal fields.
+     * @param integer $MetadataFlag Whether full-text indexing includes metadata fields (which are prefixed with `__TAG__`). Default value: `0`. Recommended value: `1`.
+* `0`: Full-text indexing includes only metadata fields with key-value indexing enabled.
+* `1`: Full-text indexing includes all metadata fields.
+* `2`: Full-text indexing does not include metadata fields.
      */
     function __construct()
     {

@@ -19,47 +19,48 @@ use TencentCloud\Common\AbstractModel;
 
 /**
  * Index rule. At least one of the `FullText`, `KeyValue`, and `Tag` parameters must be valid.
+
  *
- * @method FullTextInfo getFullText() Obtain Full-Text index configuration
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setFullText(FullTextInfo $FullText) Set Full-Text index configuration
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method RuleKeyValueInfo getKeyValue() Obtain Key-Value index configuration
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setKeyValue(RuleKeyValueInfo $KeyValue) Set Key-Value index configuration
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method RuleTagInfo getTag() Obtain Metafield index configuration
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setTag(RuleTagInfo $Tag) Set Metafield index configuration
-Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method FullTextInfo getFullText() Obtain Full-text index configuration. If the configuration is left empty, full-text indexing is not enabled.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setFullText(FullTextInfo $FullText) Set Full-text index configuration. If the configuration is left empty, full-text indexing is not enabled.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method RuleKeyValueInfo getKeyValue() Obtain Key-value index configuration. If the configuration is left empty, key-value indexing is not enabled.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setKeyValue(RuleKeyValueInfo $KeyValue) Set Key-value index configuration. If the configuration is left empty, key-value indexing is not enabled.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method RuleTagInfo getTag() Obtain Metadata field index configuration. If the configuration is left empty, metadata field indexing is not enabled.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setTag(RuleTagInfo $Tag) Set Metadata field index configuration. If the configuration is left empty, metadata field indexing is not enabled.
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class RuleInfo extends AbstractModel
 {
     /**
-     * @var FullTextInfo Full-Text index configuration
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @var FullTextInfo Full-text index configuration. If the configuration is left empty, full-text indexing is not enabled.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $FullText;
 
     /**
-     * @var RuleKeyValueInfo Key-Value index configuration
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @var RuleKeyValueInfo Key-value index configuration. If the configuration is left empty, key-value indexing is not enabled.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $KeyValue;
 
     /**
-     * @var RuleTagInfo Metafield index configuration
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @var RuleTagInfo Metadata field index configuration. If the configuration is left empty, metadata field indexing is not enabled.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Tag;
 
     /**
-     * @param FullTextInfo $FullText Full-Text index configuration
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param RuleKeyValueInfo $KeyValue Key-Value index configuration
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param RuleTagInfo $Tag Metafield index configuration
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param FullTextInfo $FullText Full-text index configuration. If the configuration is left empty, full-text indexing is not enabled.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param RuleKeyValueInfo $KeyValue Key-value index configuration. If the configuration is left empty, key-value indexing is not enabled.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param RuleTagInfo $Tag Metadata field index configuration. If the configuration is left empty, metadata field indexing is not enabled.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

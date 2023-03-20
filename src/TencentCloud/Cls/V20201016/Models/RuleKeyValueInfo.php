@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method boolean getCaseSensitive() Obtain Case sensitivity
  * @method void setCaseSensitive(boolean $CaseSensitive) Set Case sensitivity
- * @method array getKeyValues() Obtain Key-Value pair information of the index to be created. Up to 100 key-value pairs can be configured.
- * @method void setKeyValues(array $KeyValues) Set Key-Value pair information of the index to be created. Up to 100 key-value pairs can be configured.
+ * @method array getKeyValues() Obtain Key-value pair information of the index to be created
+ * @method void setKeyValues(array $KeyValues) Set Key-value pair information of the index to be created
  */
 class RuleKeyValueInfo extends AbstractModel
 {
@@ -33,13 +33,13 @@ class RuleKeyValueInfo extends AbstractModel
     public $CaseSensitive;
 
     /**
-     * @var array Key-Value pair information of the index to be created. Up to 100 key-value pairs can be configured.
+     * @var array Key-value pair information of the index to be created
      */
     public $KeyValues;
 
     /**
      * @param boolean $CaseSensitive Case sensitivity
-     * @param array $KeyValues Key-Value pair information of the index to be created. Up to 100 key-value pairs can be configured.
+     * @param array $KeyValues Key-value pair information of the index to be created
      */
     function __construct()
     {

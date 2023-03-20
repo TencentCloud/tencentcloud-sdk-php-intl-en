@@ -20,15 +20,33 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Field information of key value or metafield index
  *
- * @method string getKey() Obtain When a key value or metafield index needs to be configured for a field, the metafield `Key` does not need to be prefixed with `__TAG__.` and is consistent with the one when logs are uploaded. `__TAG__.` will be prefixed automatically for display in the console.
- * @method void setKey(string $Key) Set When a key value or metafield index needs to be configured for a field, the metafield `Key` does not need to be prefixed with `__TAG__.` and is consistent with the one when logs are uploaded. `__TAG__.` will be prefixed automatically for display in the console.
+ * @method string getKey() Obtain Name of the field for which you want to configure a key-value or metadata field index. The name can contain letters, digits, underscores, and symbols -./@ and cannot start with an underscore.
+
+Note:
+For a metadata field, set its `Key` to be consistent with the one for log uploading, without prefixing it with `__TAG__.`. `__TAG__.` will be prefixed automatically for display in the console.
+2. The total number of keys in key-value indexes (`KeyValue`) and metadata field indexes (`Tag`) cannot exceed 300.
+3. The number of levels in `Key` cannot exceed 10. Example: a.b.c.d.e.f.g.h.j.k
+4. JSON parent and child fields (such as “a” and “a.b”) cannot be contained at the same time.
+ * @method void setKey(string $Key) Set Name of the field for which you want to configure a key-value or metadata field index. The name can contain letters, digits, underscores, and symbols -./@ and cannot start with an underscore.
+
+Note:
+For a metadata field, set its `Key` to be consistent with the one for log uploading, without prefixing it with `__TAG__.`. `__TAG__.` will be prefixed automatically for display in the console.
+2. The total number of keys in key-value indexes (`KeyValue`) and metadata field indexes (`Tag`) cannot exceed 300.
+3. The number of levels in `Key` cannot exceed 10. Example: a.b.c.d.e.f.g.h.j.k
+4. JSON parent and child fields (such as “a” and “a.b”) cannot be contained at the same time.
  * @method ValueInfo getValue() Obtain Field index description information
  * @method void setValue(ValueInfo $Value) Set Field index description information
  */
 class KeyValueInfo extends AbstractModel
 {
     /**
-     * @var string When a key value or metafield index needs to be configured for a field, the metafield `Key` does not need to be prefixed with `__TAG__.` and is consistent with the one when logs are uploaded. `__TAG__.` will be prefixed automatically for display in the console.
+     * @var string Name of the field for which you want to configure a key-value or metadata field index. The name can contain letters, digits, underscores, and symbols -./@ and cannot start with an underscore.
+
+Note:
+For a metadata field, set its `Key` to be consistent with the one for log uploading, without prefixing it with `__TAG__.`. `__TAG__.` will be prefixed automatically for display in the console.
+2. The total number of keys in key-value indexes (`KeyValue`) and metadata field indexes (`Tag`) cannot exceed 300.
+3. The number of levels in `Key` cannot exceed 10. Example: a.b.c.d.e.f.g.h.j.k
+4. JSON parent and child fields (such as “a” and “a.b”) cannot be contained at the same time.
      */
     public $Key;
 
@@ -38,7 +56,13 @@ class KeyValueInfo extends AbstractModel
     public $Value;
 
     /**
-     * @param string $Key When a key value or metafield index needs to be configured for a field, the metafield `Key` does not need to be prefixed with `__TAG__.` and is consistent with the one when logs are uploaded. `__TAG__.` will be prefixed automatically for display in the console.
+     * @param string $Key Name of the field for which you want to configure a key-value or metadata field index. The name can contain letters, digits, underscores, and symbols -./@ and cannot start with an underscore.
+
+Note:
+For a metadata field, set its `Key` to be consistent with the one for log uploading, without prefixing it with `__TAG__.`. `__TAG__.` will be prefixed automatically for display in the console.
+2. The total number of keys in key-value indexes (`KeyValue`) and metadata field indexes (`Tag`) cannot exceed 300.
+3. The number of levels in `Key` cannot exceed 10. Example: a.b.c.d.e.f.g.h.j.k
+4. JSON parent and child fields (such as “a” and “a.b”) cannot be contained at the same time.
      * @param ValueInfo $Value Field index description information
      */
     function __construct()

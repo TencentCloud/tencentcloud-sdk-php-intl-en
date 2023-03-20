@@ -18,31 +18,19 @@ namespace TencentCloud\Dlc\V20210125\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * CreateSparkApp response structure.
+ * ModifyGovernEventRule response structure.
  *
- * @method string getSparkAppId() Obtain The unique ID of the application.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setSparkAppId(string $SparkAppId) Set The unique ID of the application.
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
-class CreateSparkAppResponse extends AbstractModel
+class ModifyGovernEventRuleResponse extends AbstractModel
 {
-    /**
-     * @var string The unique ID of the application.
-Note: This field may return null, indicating that no valid values can be obtained.
-     */
-    public $SparkAppId;
-
     /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
 
     /**
-     * @param string $SparkAppId The unique ID of the application.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -58,10 +46,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if ($param === null) {
             return;
         }
-        if (array_key_exists("SparkAppId",$param) and $param["SparkAppId"] !== null) {
-            $this->SparkAppId = $param["SparkAppId"];
-        }
-
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
             $this->RequestId = $param["RequestId"];
         }

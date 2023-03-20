@@ -20,16 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * SearchLog request structure.
  *
- * @method string getTopicId() Obtain ID of the log topic to be searched
- * @method void setTopicId(string $TopicId) Set ID of the log topic to be searched
  * @method integer getFrom() Obtain Start time of the log to be searched, which is a Unix timestamp in milliseconds
  * @method void setFrom(integer $From) Set Start time of the log to be searched, which is a Unix timestamp in milliseconds
  * @method integer getTo() Obtain End time of the log to be searched, which is a Unix timestamp in milliseconds
  * @method void setTo(integer $To) Set End time of the log to be searched, which is a Unix timestamp in milliseconds
- * @method string getQuery() Obtain Statement for search and analysis. Maximum length: 12 KB
-A statement is in the format of <a href="https://intl.cloud.tencent.com/document/product/614/47044?from_cn_redirect=1" target="_blank">[search rule]</a> | <a href="https://intl.cloud.tencent.com/document/product/614/44061?from_cn_redirect=1" target="_blank">[SQL statement]</a>. You can omit the pipe symbol <code> | </code> and SQL statement when log analysis is not required.
- * @method void setQuery(string $Query) Set Statement for search and analysis. Maximum length: 12 KB
-A statement is in the format of <a href="https://intl.cloud.tencent.com/document/product/614/47044?from_cn_redirect=1" target="_blank">[search rule]</a> | <a href="https://intl.cloud.tencent.com/document/product/614/44061?from_cn_redirect=1" target="_blank">[SQL statement]</a>. You can omit the pipe symbol <code> | </code> and SQL statement when log analysis is not required.
+ * @method string getQuery() Obtain Search and analysis statement. Maximum length: 12 KB
+A statement is in the format of <a href="https://intl.cloud.tencent.com/document/product/614/47044?from_cn_redirect=1" target="_blank">[search criteria]</a> | <a href="https://intl.cloud.tencent.com/document/product/614/44061?from_cn_redirect=1" target="_blank">[SQL statement]</a>. You can omit the pipe symbol <code> | </code> and SQL statement when log analysis is not required.
+Queries all logs using * or an empty string
+ * @method void setQuery(string $Query) Set Search and analysis statement. Maximum length: 12 KB
+A statement is in the format of <a href="https://intl.cloud.tencent.com/document/product/614/47044?from_cn_redirect=1" target="_blank">[search criteria]</a> | <a href="https://intl.cloud.tencent.com/document/product/614/44061?from_cn_redirect=1" target="_blank">[SQL statement]</a>. You can omit the pipe symbol <code> | </code> and SQL statement when log analysis is not required.
+Queries all logs using * or an empty string
+ * @method string getTopicId() Obtain ID of the log topic to be searched
+ * @method void setTopicId(string $TopicId) Set ID of the log topic to be searched
  * @method integer getLimit() Obtain The number of raw logs returned by a single query. Maximum value: 1000. You need to use `Context` to continue to get logs.
 Notes:
 * This parameter is valid only when the query statement (`Query`) does not contain an SQL statement.
@@ -76,11 +78,6 @@ Default value: `1`
 class SearchLogRequest extends AbstractModel
 {
     /**
-     * @var string ID of the log topic to be searched
-     */
-    public $TopicId;
-
-    /**
      * @var integer Start time of the log to be searched, which is a Unix timestamp in milliseconds
      */
     public $From;
@@ -91,10 +88,16 @@ class SearchLogRequest extends AbstractModel
     public $To;
 
     /**
-     * @var string Statement for search and analysis. Maximum length: 12 KB
-A statement is in the format of <a href="https://intl.cloud.tencent.com/document/product/614/47044?from_cn_redirect=1" target="_blank">[search rule]</a> | <a href="https://intl.cloud.tencent.com/document/product/614/44061?from_cn_redirect=1" target="_blank">[SQL statement]</a>. You can omit the pipe symbol <code> | </code> and SQL statement when log analysis is not required.
+     * @var string Search and analysis statement. Maximum length: 12 KB
+A statement is in the format of <a href="https://intl.cloud.tencent.com/document/product/614/47044?from_cn_redirect=1" target="_blank">[search criteria]</a> | <a href="https://intl.cloud.tencent.com/document/product/614/44061?from_cn_redirect=1" target="_blank">[SQL statement]</a>. You can omit the pipe symbol <code> | </code> and SQL statement when log analysis is not required.
+Queries all logs using * or an empty string
      */
     public $Query;
+
+    /**
+     * @var string ID of the log topic to be searched
+     */
+    public $TopicId;
 
     /**
      * @var integer The number of raw logs returned by a single query. Maximum value: 1000. You need to use `Context` to continue to get logs.
@@ -138,11 +141,12 @@ Default value: `1`
     public $SamplingRate;
 
     /**
-     * @param string $TopicId ID of the log topic to be searched
      * @param integer $From Start time of the log to be searched, which is a Unix timestamp in milliseconds
      * @param integer $To End time of the log to be searched, which is a Unix timestamp in milliseconds
-     * @param string $Query Statement for search and analysis. Maximum length: 12 KB
-A statement is in the format of <a href="https://intl.cloud.tencent.com/document/product/614/47044?from_cn_redirect=1" target="_blank">[search rule]</a> | <a href="https://intl.cloud.tencent.com/document/product/614/44061?from_cn_redirect=1" target="_blank">[SQL statement]</a>. You can omit the pipe symbol <code> | </code> and SQL statement when log analysis is not required.
+     * @param string $Query Search and analysis statement. Maximum length: 12 KB
+A statement is in the format of <a href="https://intl.cloud.tencent.com/document/product/614/47044?from_cn_redirect=1" target="_blank">[search criteria]</a> | <a href="https://intl.cloud.tencent.com/document/product/614/44061?from_cn_redirect=1" target="_blank">[SQL statement]</a>. You can omit the pipe symbol <code> | </code> and SQL statement when log analysis is not required.
+Queries all logs using * or an empty string
+     * @param string $TopicId ID of the log topic to be searched
      * @param integer $Limit The number of raw logs returned by a single query. Maximum value: 1000. You need to use `Context` to continue to get logs.
 Notes:
 * This parameter is valid only when the query statement (`Query`) does not contain an SQL statement.
@@ -178,10 +182,6 @@ Default value: `1`
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TopicId",$param) and $param["TopicId"] !== null) {
-            $this->TopicId = $param["TopicId"];
-        }
-
         if (array_key_exists("From",$param) and $param["From"] !== null) {
             $this->From = $param["From"];
         }
@@ -192,6 +192,10 @@ Default value: `1`
 
         if (array_key_exists("Query",$param) and $param["Query"] !== null) {
             $this->Query = $param["Query"];
+        }
+
+        if (array_key_exists("TopicId",$param) and $param["TopicId"] !== null) {
+            $this->TopicId = $param["TopicId"];
         }
 
         if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {

@@ -30,14 +30,24 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method string getModifyTime() Obtain Index modification time. The default value is the index creation time.
  * @method void setModifyTime(string $ModifyTime) Set Index modification time. The default value is the index creation time.
- * @method boolean getIncludeInternalFields() Obtain Internal field marker of full-text index. Default value: `false`. Valid value: `false`: excluding internal fields; `true`: including internal fields
-Note: This field may return `null`, indicating that no valid value was found.
- * @method void setIncludeInternalFields(boolean $IncludeInternalFields) Set Internal field marker of full-text index. Default value: `false`. Valid value: `false`: excluding internal fields; `true`: including internal fields
-Note: This field may return `null`, indicating that no valid value was found.
- * @method integer getMetadataFlag() Obtain Metadata flag. Default value: `0`. Valid value: `0`: full-text index (including the metadata field with key-value index enabled); `1`: full-text index (including all metadata fields); `2`: full-text index (excluding metadata fields).
-Note: This field may return `null`, indicating that no valid value was found.
- * @method void setMetadataFlag(integer $MetadataFlag) Set Metadata flag. Default value: `0`. Valid value: `0`: full-text index (including the metadata field with key-value index enabled); `1`: full-text index (including all metadata fields); `2`: full-text index (excluding metadata fields).
-Note: This field may return `null`, indicating that no valid value was found.
+ * @method boolean getIncludeInternalFields() Obtain Whether full-text indexing includes internal fields (`__FILENAME__`, `__HOSTNAME__`, and `__SOURCE__`)
+* `false`: Full-text indexing does not include internal fields.
+* `true`: Full-text indexing includes internal fields.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setIncludeInternalFields(boolean $IncludeInternalFields) Set Whether full-text indexing includes internal fields (`__FILENAME__`, `__HOSTNAME__`, and `__SOURCE__`)
+* `false`: Full-text indexing does not include internal fields.
+* `true`: Full-text indexing includes internal fields.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getMetadataFlag() Obtain Whether full-text indexing includes metadata fields (which are prefixed with `__TAG__`)
+* `0`: Full-text indexing includes only the metadata fields with key-value indexing enabled.
+* `1`: Full-text indexing includes all metadata fields.
+* `2`: Full-text indexing does not include metadata fields.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setMetadataFlag(integer $MetadataFlag) Set Whether full-text indexing includes metadata fields (which are prefixed with `__TAG__`)
+* `0`: Full-text indexing includes only the metadata fields with key-value indexing enabled.
+* `1`: Full-text indexing includes all metadata fields.
+* `2`: Full-text indexing does not include metadata fields.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -65,14 +75,19 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     public $ModifyTime;
 
     /**
-     * @var boolean Internal field marker of full-text index. Default value: `false`. Valid value: `false`: excluding internal fields; `true`: including internal fields
-Note: This field may return `null`, indicating that no valid value was found.
+     * @var boolean Whether full-text indexing includes internal fields (`__FILENAME__`, `__HOSTNAME__`, and `__SOURCE__`)
+* `false`: Full-text indexing does not include internal fields.
+* `true`: Full-text indexing includes internal fields.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $IncludeInternalFields;
 
     /**
-     * @var integer Metadata flag. Default value: `0`. Valid value: `0`: full-text index (including the metadata field with key-value index enabled); `1`: full-text index (including all metadata fields); `2`: full-text index (excluding metadata fields).
-Note: This field may return `null`, indicating that no valid value was found.
+     * @var integer Whether full-text indexing includes metadata fields (which are prefixed with `__TAG__`)
+* `0`: Full-text indexing includes only the metadata fields with key-value indexing enabled.
+* `1`: Full-text indexing includes all metadata fields.
+* `2`: Full-text indexing does not include metadata fields.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $MetadataFlag;
 
@@ -87,10 +102,15 @@ Note: This field may return `null`, indicating that no valid value was found.
      * @param RuleInfo $Rule Index configuration information
 Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param string $ModifyTime Index modification time. The default value is the index creation time.
-     * @param boolean $IncludeInternalFields Internal field marker of full-text index. Default value: `false`. Valid value: `false`: excluding internal fields; `true`: including internal fields
-Note: This field may return `null`, indicating that no valid value was found.
-     * @param integer $MetadataFlag Metadata flag. Default value: `0`. Valid value: `0`: full-text index (including the metadata field with key-value index enabled); `1`: full-text index (including all metadata fields); `2`: full-text index (excluding metadata fields).
-Note: This field may return `null`, indicating that no valid value was found.
+     * @param boolean $IncludeInternalFields Whether full-text indexing includes internal fields (`__FILENAME__`, `__HOSTNAME__`, and `__SOURCE__`)
+* `false`: Full-text indexing does not include internal fields.
+* `true`: Full-text indexing includes internal fields.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $MetadataFlag Whether full-text indexing includes metadata fields (which are prefixed with `__TAG__`)
+* `0`: Full-text indexing includes only the metadata fields with key-value indexing enabled.
+* `1`: Full-text indexing includes all metadata fields.
+* `2`: Full-text indexing does not include metadata fields.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()

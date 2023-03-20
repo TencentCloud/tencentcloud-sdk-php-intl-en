@@ -32,10 +32,10 @@ Only symbols, \n\t\r, and escape character \ are supported.
 Note: \n\t\r can be directly enclosed in double quotes as the input parameter without escaping.
  * @method boolean getSqlFlag() Obtain Whether the analysis feature is enabled for the field
  * @method void setSqlFlag(boolean $SqlFlag) Set Whether the analysis feature is enabled for the field
- * @method boolean getContainZH() Obtain Whether Chinese characters are contained
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setContainZH(boolean $ContainZH) Set Whether Chinese characters are contained
-Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method boolean getContainZH() Obtain Whether Chinese characters are contained. For `long` and `double` fields, set them to `false`.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setContainZH(boolean $ContainZH) Set Whether Chinese characters are contained. For `long` and `double` fields, set them to `false`.
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class ValueInfo extends AbstractModel
 {
@@ -58,8 +58,8 @@ Note: \n\t\r can be directly enclosed in double quotes as the input parameter wi
     public $SqlFlag;
 
     /**
-     * @var boolean Whether Chinese characters are contained
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @var boolean Whether Chinese characters are contained. For `long` and `double` fields, set them to `false`.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ContainZH;
 
@@ -70,8 +70,8 @@ Only symbols, \n\t\r, and escape character \ are supported.
 `long` and `double` fields need to be null.
 Note: \n\t\r can be directly enclosed in double quotes as the input parameter without escaping.
      * @param boolean $SqlFlag Whether the analysis feature is enabled for the field
-     * @param boolean $ContainZH Whether Chinese characters are contained
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param boolean $ContainZH Whether Chinese characters are contained. For `long` and `double` fields, set them to `false`.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
