@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAlarmNotifyType(integer $AlarmNotifyType) Set Alarm sending and converging type. The value 0 indicates that alarms are sent consecutively. The value 1 indicates that alarms are sent exponentially.
  * @method integer getAlarmNotifyPeriod() Obtain Alarm sending period in seconds. The value <0 indicates that no alarm will be triggered. The value 0 indicates that an alarm is triggered only once. The value >0 indicates that an alarm is triggered at the interval of triggerTime.
  * @method void setAlarmNotifyPeriod(integer $AlarmNotifyPeriod) Set Alarm sending period in seconds. The value <0 indicates that no alarm will be triggered. The value 0 indicates that an alarm is triggered only once. The value >0 indicates that an alarm is triggered at the interval of triggerTime.
- * @method integer getRuleId() Obtain If a metric is created based on a template, the RuleId of the metric in the template must be passed in.
- * @method void setRuleId(integer $RuleId) Set If a metric is created based on a template, the RuleId of the metric in the template must be passed in.
+ * @method integer getRuleId() Obtain If a metric is created based on a template, the `RuleId` of the metric in the template must be passed in.
+ * @method void setRuleId(integer $RuleId) Set If a metric is created based on a template, the `RuleId` of the metric in the template must be passed in.
  */
 class CreatePolicyGroupEventCondition extends AbstractModel
 {
@@ -47,7 +47,7 @@ class CreatePolicyGroupEventCondition extends AbstractModel
     public $AlarmNotifyPeriod;
 
     /**
-     * @var integer If a metric is created based on a template, the RuleId of the metric in the template must be passed in.
+     * @var integer If a metric is created based on a template, the `RuleId` of the metric in the template must be passed in.
      */
     public $RuleId;
 
@@ -55,7 +55,7 @@ class CreatePolicyGroupEventCondition extends AbstractModel
      * @param integer $EventId Alarm event ID.
      * @param integer $AlarmNotifyType Alarm sending and converging type. The value 0 indicates that alarms are sent consecutively. The value 1 indicates that alarms are sent exponentially.
      * @param integer $AlarmNotifyPeriod Alarm sending period in seconds. The value <0 indicates that no alarm will be triggered. The value 0 indicates that an alarm is triggered only once. The value >0 indicates that an alarm is triggered at the interval of triggerTime.
-     * @param integer $RuleId If a metric is created based on a template, the RuleId of the metric in the template must be passed in.
+     * @param integer $RuleId If a metric is created based on a template, the `RuleId` of the metric in the template must be passed in.
      */
     function __construct()
     {

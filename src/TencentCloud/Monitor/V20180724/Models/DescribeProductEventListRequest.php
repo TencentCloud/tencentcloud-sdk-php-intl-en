@@ -22,12 +22,12 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getModule() Obtain API component name. It is fixed to monitor.
  * @method void setModule(string $Module) Set API component name. It is fixed to monitor.
- * @method array getProductName() Obtain Filter by product type. For example, 'cvm' indicates Cloud Virtual Machine.
- * @method void setProductName(array $ProductName) Set Filter by product type. For example, 'cvm' indicates Cloud Virtual Machine.
- * @method array getEventName() Obtain Filter by product name. For example, "guest_reboot" indicates server restart.
- * @method void setEventName(array $EventName) Set Filter by product name. For example, "guest_reboot" indicates server restart.
- * @method array getInstanceId() Obtain Affected object, such as "ins-19708ino"
- * @method void setInstanceId(array $InstanceId) Set Affected object, such as "ins-19708ino"
+ * @method array getProductName() Obtain Filter by product type. For example, "cvm" indicates Cloud Virtual Machine.
+ * @method void setProductName(array $ProductName) Set Filter by product type. For example, "cvm" indicates Cloud Virtual Machine.
+ * @method array getEventName() Obtain Filter by event name. For example, "guest_reboot" indicates instance restart.
+ * @method void setEventName(array $EventName) Set Filter by event name. For example, "guest_reboot" indicates instance restart.
+ * @method array getInstanceId() Obtain Affected object, such as "ins-19708ino".
+ * @method void setInstanceId(array $InstanceId) Set Affected object, such as "ins-19708ino".
  * @method array getDimensions() Obtain Filter by dimension, such as by public IP: 10.0.0.1.
  * @method void setDimensions(array $Dimensions) Set Filter by dimension, such as by public IP: 10.0.0.1.
  * @method array getRegionList() Obtain Region filter parameter for service events.
@@ -59,17 +59,17 @@ class DescribeProductEventListRequest extends AbstractModel
     public $Module;
 
     /**
-     * @var array Filter by product type. For example, 'cvm' indicates Cloud Virtual Machine.
+     * @var array Filter by product type. For example, "cvm" indicates Cloud Virtual Machine.
      */
     public $ProductName;
 
     /**
-     * @var array Filter by product name. For example, "guest_reboot" indicates server restart.
+     * @var array Filter by event name. For example, "guest_reboot" indicates instance restart.
      */
     public $EventName;
 
     /**
-     * @var array Affected object, such as "ins-19708ino"
+     * @var array Affected object, such as "ins-19708ino".
      */
     public $InstanceId;
 
@@ -130,9 +130,9 @@ class DescribeProductEventListRequest extends AbstractModel
 
     /**
      * @param string $Module API component name. It is fixed to monitor.
-     * @param array $ProductName Filter by product type. For example, 'cvm' indicates Cloud Virtual Machine.
-     * @param array $EventName Filter by product name. For example, "guest_reboot" indicates server restart.
-     * @param array $InstanceId Affected object, such as "ins-19708ino"
+     * @param array $ProductName Filter by product type. For example, "cvm" indicates Cloud Virtual Machine.
+     * @param array $EventName Filter by event name. For example, "guest_reboot" indicates instance restart.
+     * @param array $InstanceId Affected object, such as "ins-19708ino".
      * @param array $Dimensions Filter by dimension, such as by public IP: 10.0.0.1.
      * @param array $RegionList Region filter parameter for service events.
      * @param array $Type Filter by event type. Valid values: ["status_change","abnormal"], which indicate events whose statuses have changed and events with exceptions respectively.

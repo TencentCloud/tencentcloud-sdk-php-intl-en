@@ -34,8 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCalcPeriod(integer $CalcPeriod) Set Data aggregation period in seconds. This parameter is optional if the metric has a default value.
  * @method integer getContinuePeriod() Obtain Number of consecutive periods after which an alarm will be triggered.
  * @method void setContinuePeriod(integer $ContinuePeriod) Set Number of consecutive periods after which an alarm will be triggered.
- * @method integer getRuleId() Obtain If a metric is created based on a template, the RuleId of the metric in the template must be passed in.
- * @method void setRuleId(integer $RuleId) Set If a metric is created based on a template, the RuleId of the metric in the template must be passed in.
+ * @method integer getRuleId() Obtain If a metric is created based on a template, the `RuleId` of the metric in the template must be passed in.
+ * @method void setRuleId(integer $RuleId) Set If a metric is created based on a template, the `RuleId` of the metric in the template must be passed in.
  */
 class CreatePolicyGroupCondition extends AbstractModel
 {
@@ -75,7 +75,7 @@ class CreatePolicyGroupCondition extends AbstractModel
     public $ContinuePeriod;
 
     /**
-     * @var integer If a metric is created based on a template, the RuleId of the metric in the template must be passed in.
+     * @var integer If a metric is created based on a template, the `RuleId` of the metric in the template must be passed in.
      */
     public $RuleId;
 
@@ -87,7 +87,7 @@ class CreatePolicyGroupCondition extends AbstractModel
      * @param float $CalcValue Comparative value. This parameter is optional if the metric has no requirement.
      * @param integer $CalcPeriod Data aggregation period in seconds. This parameter is optional if the metric has a default value.
      * @param integer $ContinuePeriod Number of consecutive periods after which an alarm will be triggered.
-     * @param integer $RuleId If a metric is created based on a template, the RuleId of the metric in the template must be passed in.
+     * @param integer $RuleId If a metric is created based on a template, the `RuleId` of the metric in the template must be passed in.
      */
     function __construct()
     {

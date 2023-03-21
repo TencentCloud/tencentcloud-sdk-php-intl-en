@@ -42,6 +42,10 @@ Note: This field may return null, indicating that no valid value was found.
 Note: This field may return null, indicating that no valid value was found.
  * @method void setSupportRegions(array $SupportRegions) Set List of regions that support this policy type.
 Note: This field may return null, indicating that no valid value was found.
+ * @method DescribePolicyConditionListResponseDeprecatingInfo getDeprecatingInfo() Obtain Deprecated information
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setDeprecatingInfo(DescribePolicyConditionListResponseDeprecatingInfo $DeprecatingInfo) Set Deprecated information
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class DescribePolicyConditionListCondition extends AbstractModel
 {
@@ -89,6 +93,12 @@ Note: This field may return null, indicating that no valid value was found.
     public $SupportRegions;
 
     /**
+     * @var DescribePolicyConditionListResponseDeprecatingInfo Deprecated information
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $DeprecatingInfo;
+
+    /**
      * @param string $PolicyViewName Policy view name.
      * @param array $EventMetrics Event alarm conditions.
 Note: This field may return null, indicating that no valid value was found.
@@ -100,6 +110,8 @@ Note: This field may return null, indicating that no valid value was found.
      * @param boolean $SupportDefault Whether to support default policies.
      * @param array $SupportRegions List of regions that support this policy type.
 Note: This field may return null, indicating that no valid value was found.
+     * @param DescribePolicyConditionListResponseDeprecatingInfo $DeprecatingInfo Deprecated information
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -154,6 +166,11 @@ Note: This field may return null, indicating that no valid value was found.
 
         if (array_key_exists("SupportRegions",$param) and $param["SupportRegions"] !== null) {
             $this->SupportRegions = $param["SupportRegions"];
+        }
+
+        if (array_key_exists("DeprecatingInfo",$param) and $param["DeprecatingInfo"] !== null) {
+            $this->DeprecatingInfo = new DescribePolicyConditionListResponseDeprecatingInfo();
+            $this->DeprecatingInfo->deserialize($param["DeprecatingInfo"]);
         }
     }
 }

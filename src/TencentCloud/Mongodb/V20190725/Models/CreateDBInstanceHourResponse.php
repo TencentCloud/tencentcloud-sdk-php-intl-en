@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getDealId() Obtain Order ID
  * @method void setDealId(string $DealId) Set Order ID
- * @method array getInstanceIds() Obtain List of IDs of created instances
- * @method void setInstanceIds(array $InstanceIds) Set List of IDs of created instances
+ * @method array getInstanceIds() Obtain List of IDs of the created instances
+ * @method void setInstanceIds(array $InstanceIds) Set List of IDs of the created instances
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -35,7 +35,7 @@ class CreateDBInstanceHourResponse extends AbstractModel
     public $DealId;
 
     /**
-     * @var array List of IDs of created instances
+     * @var array List of IDs of the created instances
      */
     public $InstanceIds;
 
@@ -46,7 +46,7 @@ class CreateDBInstanceHourResponse extends AbstractModel
 
     /**
      * @param string $DealId Order ID
-     * @param array $InstanceIds List of IDs of created instances
+     * @param array $InstanceIds List of IDs of the created instances
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()

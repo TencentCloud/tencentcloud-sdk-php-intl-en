@@ -40,8 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setConditions(array $Conditions) Set Alarm threshold rules in the policy group.
  * @method array getEventConditions() Obtain Event alarm rules in the policy group.
  * @method void setEventConditions(array $EventConditions) Set Event alarm rules in the policy group.
- * @method integer getBackEndCall() Obtain Whether it is a backend call. If the value is 1, rules from the policy template will be used to fill in the `Conditions` and `EventConditions` fields.
- * @method void setBackEndCall(integer $BackEndCall) Set Whether it is a backend call. If the value is 1, rules from the policy template will be used to fill in the `Conditions` and `EventConditions` fields.
+ * @method integer getBackEndCall() Obtain Whether it is a backend call. Rules pulled from the policy template will be used to fill in the `Conditions` and `EventConditions` fields only when the value of this parameter is `1`.
+ * @method void setBackEndCall(integer $BackEndCall) Set Whether it is a backend call. Rules pulled from the policy template will be used to fill in the `Conditions` and `EventConditions` fields only when the value of this parameter is `1`.
  * @method integer getIsUnionRule() Obtain The 'AND' and 'OR' rules for alarm metrics. The value 0 indicates 'OR', which means that an alarm will be triggered when any rule is met. The value 1 indicates 'AND', which means that an alarm will be triggered only when all rules are met.
  * @method void setIsUnionRule(integer $IsUnionRule) Set The 'AND' and 'OR' rules for alarm metrics. The value 0 indicates 'OR', which means that an alarm will be triggered when any rule is met. The value 1 indicates 'AND', which means that an alarm will be triggered only when all rules are met.
  */
@@ -98,7 +98,7 @@ class CreatePolicyGroupRequest extends AbstractModel
     public $EventConditions;
 
     /**
-     * @var integer Whether it is a backend call. If the value is 1, rules from the policy template will be used to fill in the `Conditions` and `EventConditions` fields.
+     * @var integer Whether it is a backend call. Rules pulled from the policy template will be used to fill in the `Conditions` and `EventConditions` fields only when the value of this parameter is `1`.
      */
     public $BackEndCall;
 
@@ -118,7 +118,7 @@ class CreatePolicyGroupRequest extends AbstractModel
      * @param integer $InsertTime Insertion time in the format of Unix timestamp. If this parameter is not configured, the backend processing time is used.
      * @param array $Conditions Alarm threshold rules in the policy group.
      * @param array $EventConditions Event alarm rules in the policy group.
-     * @param integer $BackEndCall Whether it is a backend call. If the value is 1, rules from the policy template will be used to fill in the `Conditions` and `EventConditions` fields.
+     * @param integer $BackEndCall Whether it is a backend call. Rules pulled from the policy template will be used to fill in the `Conditions` and `EventConditions` fields only when the value of this parameter is `1`.
      * @param integer $IsUnionRule The 'AND' and 'OR' rules for alarm metrics. The value 0 indicates 'OR', which means that an alarm will be triggered when any rule is met. The value 1 indicates 'AND', which means that an alarm will be triggered only when all rules are met.
      */
     function __construct()
