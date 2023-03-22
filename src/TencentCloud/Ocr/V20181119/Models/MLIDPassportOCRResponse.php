@@ -66,6 +66,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCodeSet(string $CodeSet) Set The first row of the machine-readable zone (MRZ) at the bottom
  * @method string getCodeCrc() Obtain The second row of the MRZ at the bottom
  * @method void setCodeCrc(string $CodeCrc) Set The second row of the MRZ at the bottom
+ * @method string getSurname() Obtain The surname.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setSurname(string $Surname) Set The surname.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getGivenName() Obtain The given name.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setGivenName(string $GivenName) Set The given name.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -143,6 +151,18 @@ class MLIDPassportOCRResponse extends AbstractModel
     public $CodeCrc;
 
     /**
+     * @var string The surname.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $Surname;
+
+    /**
+     * @var string The given name.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $GivenName;
+
+    /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
@@ -171,6 +191,10 @@ class MLIDPassportOCRResponse extends AbstractModel
 }
      * @param string $CodeSet The first row of the machine-readable zone (MRZ) at the bottom
      * @param string $CodeCrc The second row of the MRZ at the bottom
+     * @param string $Surname The surname.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $GivenName The given name.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -232,6 +256,14 @@ class MLIDPassportOCRResponse extends AbstractModel
 
         if (array_key_exists("CodeCrc",$param) and $param["CodeCrc"] !== null) {
             $this->CodeCrc = $param["CodeCrc"];
+        }
+
+        if (array_key_exists("Surname",$param) and $param["Surname"] !== null) {
+            $this->Surname = $param["Surname"];
+        }
+
+        if (array_key_exists("GivenName",$param) and $param["GivenName"] !== null) {
+            $this->GivenName = $param["GivenName"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
