@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPodMonitors(array $PodMonitors) Set PodMonitor configuration
  * @method array getRawJobs() Obtain Raw jobs
  * @method void setRawJobs(array $RawJobs) Set Raw jobs
- * @method array getProbes() Obtain 
- * @method void setProbes(array $Probes) Set 
+ * @method array getProbes() Obtain Probes
+ * @method void setProbes(array $Probes) Set Probes
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -56,7 +56,7 @@ class DescribePrometheusConfigResponse extends AbstractModel
     public $RawJobs;
 
     /**
-     * @var array 
+     * @var array Probes
      */
     public $Probes;
 
@@ -70,7 +70,7 @@ class DescribePrometheusConfigResponse extends AbstractModel
      * @param array $ServiceMonitors ServiceMonitor configuration
      * @param array $PodMonitors PodMonitor configuration
      * @param array $RawJobs Raw jobs
-     * @param array $Probes 
+     * @param array $Probes Probes
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()

@@ -50,6 +50,10 @@ Note: This field may return null, indicating that no valid value was found.
  * @method void setMinDiskSize(integer $MinDiskSize) Set The minimum configurable cloud disk size (in GB).
  * @method integer getMaxDiskSize() Obtain The maximum configurable cloud disk size (in GB).
  * @method void setMaxDiskSize(integer $MaxDiskSize) Set The maximum configurable cloud disk size (in GB).
+ * @method Price getPrice() Obtain Price of a monthly subscribed or pay-as-you-go cloud disk.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setPrice(Price $Price) Set Price of a monthly subscribed or pay-as-you-go cloud disk.
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class DiskConfig extends AbstractModel
 {
@@ -113,6 +117,12 @@ Note: This field may return null, indicating that no valid value was found.
     public $MaxDiskSize;
 
     /**
+     * @var Price Price of a monthly subscribed or pay-as-you-go cloud disk.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $Price;
+
+    /**
      * @param boolean $Available Whether the configuration is available.
      * @param string $DiskChargeType Billing method. Value range: <br><li>PREPAID: Prepaid, that is, monthly subscription<br><li>POSTPAID_BY_HOUR: Postpaid, that is, pay as you go.
      * @param string $Zone The [Availability Region](https://intl.cloud.tencent.com/document/product/213/15753?from_cn_redirect=1#ZoneInfo) of the cloud drive.
@@ -128,6 +138,8 @@ Note: This field may return null, indicating that no valid value was found.
      * @param string $DiskUsage Cloud disk type. Value range: <br><li>SYSTEM_DISK: System disk <br><li>DATA_DISK: Data disk.
      * @param integer $MinDiskSize The minimum configurable cloud disk size (in GB).
      * @param integer $MaxDiskSize The maximum configurable cloud disk size (in GB).
+     * @param Price $Price Price of a monthly subscribed or pay-as-you-go cloud disk.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -184,6 +196,11 @@ Note: This field may return null, indicating that no valid value was found.
 
         if (array_key_exists("MaxDiskSize",$param) and $param["MaxDiskSize"] !== null) {
             $this->MaxDiskSize = $param["MaxDiskSize"];
+        }
+
+        if (array_key_exists("Price",$param) and $param["Price"] !== null) {
+            $this->Price = new Price();
+            $this->Price->deserialize($param["Price"]);
         }
     }
 }

@@ -64,10 +64,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setAdvancedRetentionPolicy(AdvancedRetentionPolicy $AdvancedRetentionPolicy) Set Retention policy for scheduled snapshots.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getCopyFromAccountUin() Obtain 
- * @method void setCopyFromAccountUin(string $CopyFromAccountUin) Set 
- * @method array getTags() Obtain 
- * @method void setTags(array $Tags) Set 
+ * @method string getCopyFromAccountUin() Obtain Source account ID of the copied snapshot policy
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setCopyFromAccountUin(string $CopyFromAccountUin) Set Source account ID of the copied snapshot policy
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method array getTags() Obtain Tag.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setTags(array $Tags) Set Tag.
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class AutoSnapshotPolicy extends AbstractModel
 {
@@ -158,12 +162,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $AdvancedRetentionPolicy;
 
     /**
-     * @var string 
+     * @var string Source account ID of the copied snapshot policy
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $CopyFromAccountUin;
 
     /**
-     * @var array 
+     * @var array Tag.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Tags;
 
@@ -190,8 +196,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param AdvancedRetentionPolicy $AdvancedRetentionPolicy Retention policy for scheduled snapshots.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $CopyFromAccountUin 
-     * @param array $Tags 
+     * @param string $CopyFromAccountUin Source account ID of the copied snapshot policy
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param array $Tags Tag.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

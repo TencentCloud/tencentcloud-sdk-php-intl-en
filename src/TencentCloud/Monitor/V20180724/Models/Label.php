@@ -20,14 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Tags in K8s, which generally exist in the form of an array.
  *
-
+ * @method string getName() Obtain Label name
+ * @method void setName(string $Name) Set Label name
+ * @method string getValue() Obtain Label value
+ * @method void setValue(string $Value) Set Label value
  */
 class Label extends AbstractModel
 {
-
+    /**
+     * @var string Label name
+     */
+    public $Name;
 
     /**
+     * @var string Label value
+     */
+    public $Value;
 
+    /**
+     * @param string $Name Label name
+     * @param string $Value Label value
      */
     function __construct()
     {
@@ -42,6 +54,12 @@ class Label extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
+            $this->Name = $param["Name"];
+        }
 
+        if (array_key_exists("Value",$param) and $param["Value"] !== null) {
+            $this->Value = $param["Value"];
+        }
     }
 }

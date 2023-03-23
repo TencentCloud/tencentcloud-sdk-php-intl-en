@@ -58,6 +58,10 @@ Note: `null` may be returned for this field, indicating that no valid values can
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
  * @method void setStatus(integer $Status) Set `0`: normal, `1`: deleted, `2`: deleting
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+ * @method array getTags() Obtain Tag list
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setTags(array $Tags) Set Tag list
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class TopicDetail extends AbstractModel
 {
@@ -137,6 +141,12 @@ Note: `null` may be returned for this field, indicating that no valid values can
     public $Status;
 
     /**
+     * @var array Tag list
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $Tags;
+
+    /**
      * @param string $TopicName Topic name
      * @param string $TopicId Topic ID
      * @param integer $PartitionNum Number of partitions
@@ -156,6 +166,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
      * @param integer $Status `0`: normal, `1`: deleted, `2`: deleting
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     * @param array $Tags Tag list
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -226,6 +238,15 @@ Note: `null` may be returned for this field, indicating that no valid values can
 
         if (array_key_exists("Status",$param) and $param["Status"] !== null) {
             $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }

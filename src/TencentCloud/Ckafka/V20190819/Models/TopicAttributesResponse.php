@@ -50,6 +50,10 @@ Note: `null` may be returned for this field, indicating that no valid values can
 Note: This field may return `null`, indicating that no valid values can be obtained.
  * @method void setQuotaConfig(InstanceQuotaConfigResp $QuotaConfig) Set Traffic throttling policy in topic dimension.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method integer getReplicaNum() Obtain Number of replicas
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setReplicaNum(integer $ReplicaNum) Set Number of replicas
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class TopicAttributesResponse extends AbstractModel
 {
@@ -113,6 +117,12 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     public $QuotaConfig;
 
     /**
+     * @var integer Number of replicas
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $ReplicaNum;
+
+    /**
      * @param string $TopicId Topic ID
      * @param integer $CreateTime Creation time
      * @param string $Note Topic remarks
@@ -128,6 +138,8 @@ Note: `null` may be returned for this field, indicating that no valid values can
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
      * @param InstanceQuotaConfigResp $QuotaConfig Traffic throttling policy in topic dimension.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param integer $ReplicaNum Number of replicas
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -196,6 +208,10 @@ Note: This field may return `null`, indicating that no valid values can be obtai
         if (array_key_exists("QuotaConfig",$param) and $param["QuotaConfig"] !== null) {
             $this->QuotaConfig = new InstanceQuotaConfigResp();
             $this->QuotaConfig->deserialize($param["QuotaConfig"]);
+        }
+
+        if (array_key_exists("ReplicaNum",$param) and $param["ReplicaNum"] !== null) {
+            $this->ReplicaNum = $param["ReplicaNum"];
         }
     }
 }

@@ -124,10 +124,14 @@ Note: This field may return null, indicating that no valid value was found.
  * @method void setDiskBackupCount(integer $DiskBackupCount) Set Number of used cloud disk backups.
  * @method string getInstanceType() Obtain Type of the instance mounted to the cloud disk. Valid values: <br><li>CVM<br><li>EKS
  * @method void setInstanceType(string $InstanceType) Set Type of the instance mounted to the cloud disk. Valid values: <br><li>CVM<br><li>EKS
- * @method string getLastAttachInsId() Obtain 
- * @method void setLastAttachInsId(string $LastAttachInsId) Set 
- * @method string getErrorPrompt() Obtain 
- * @method void setErrorPrompt(string $ErrorPrompt) Set 
+ * @method string getLastAttachInsId() Obtain ID of the last instance to which the cloud disk is attached
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setLastAttachInsId(string $LastAttachInsId) Set ID of the last instance to which the cloud disk is attached
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getErrorPrompt() Obtain Error message for the last operation of the cloud disk
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setErrorPrompt(string $ErrorPrompt) Set Error message for the last operation of the cloud disk
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class Disk extends AbstractModel
 {
@@ -340,12 +344,14 @@ Note: This field may return null, indicating that no valid value was found.
     public $InstanceType;
 
     /**
-     * @var string 
+     * @var string ID of the last instance to which the cloud disk is attached
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $LastAttachInsId;
 
     /**
-     * @var string 
+     * @var string Error message for the last operation of the cloud disk
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ErrorPrompt;
 
@@ -402,8 +408,10 @@ Note: This field may return null, indicating that no valid value was found.
      * @param integer $DiskBackupQuota Quota of cloud disk backup points, i.e., the maximum number of backup points that a cloud disk can have.
      * @param integer $DiskBackupCount Number of used cloud disk backups.
      * @param string $InstanceType Type of the instance mounted to the cloud disk. Valid values: <br><li>CVM<br><li>EKS
-     * @param string $LastAttachInsId 
-     * @param string $ErrorPrompt 
+     * @param string $LastAttachInsId ID of the last instance to which the cloud disk is attached
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $ErrorPrompt Error message for the last operation of the cloud disk
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

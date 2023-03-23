@@ -50,6 +50,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setFailedReason(string $FailedReason) Set Recorded information of failed operations, such as association.
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getName() Obtain Agent name
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setName(string $Name) Set Agent name
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class PrometheusAgentOverview extends AbstractModel
 {
@@ -101,6 +105,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $FailedReason;
 
     /**
+     * @var string Agent name
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $Name;
+
+    /**
      * @param string $ClusterType Cluster type
      * @param string $ClusterId Cluster ID
      * @param string $Status Agent status. Valid values: 
@@ -115,6 +125,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $VpcId ID of the VPC where the cluster resides
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $FailedReason Recorded information of failed operations, such as association.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $Name Agent name
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
@@ -165,6 +177,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("FailedReason",$param) and $param["FailedReason"] !== null) {
             $this->FailedReason = $param["FailedReason"];
+        }
+
+        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
+            $this->Name = $param["Name"];
         }
     }
 }

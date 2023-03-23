@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getModule() Obtain Module, whose value is fixed at `monitor`
  * @method void setModule(string $Module) Set Module, whose value is fixed at `monitor`
- * @method string getNamespace() Obtain Namespace. Valid values: QCE/TKE
- * @method void setNamespace(string $Namespace) Set Namespace. Valid values: QCE/TKE
+ * @method string getNamespace() Obtain Namespace. Valid values: `QCE`, `TKE2`.
+ * @method void setNamespace(string $Namespace) Set Namespace. Valid values: `QCE`, `TKE2`.
  * @method array getMetricNames() Obtain Metric name list
  * @method void setMetricNames(array $MetricNames) Set Metric name list
  * @method array getConditions() Obtain Dimension condition. The `=` and `in` operators are supported
@@ -55,7 +55,7 @@ class DescribeStatisticDataRequest extends AbstractModel
     public $Module;
 
     /**
-     * @var string Namespace. Valid values: QCE/TKE
+     * @var string Namespace. Valid values: `QCE`, `TKE2`.
      */
     public $Namespace;
 
@@ -96,7 +96,7 @@ Due to the storage period limit, the statistical period is subject to the time r
 
     /**
      * @param string $Module Module, whose value is fixed at `monitor`
-     * @param string $Namespace Namespace. Valid values: QCE/TKE
+     * @param string $Namespace Namespace. Valid values: `QCE`, `TKE2`.
      * @param array $MetricNames Metric name list
      * @param array $Conditions Dimension condition. The `=` and `in` operators are supported
      * @param integer $Period Statistical period in seconds. Default value: 300. Optional values: 60, 300, 3,600, and 86,400.

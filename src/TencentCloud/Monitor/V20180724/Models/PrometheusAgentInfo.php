@@ -20,14 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Information of managed Prometheus agent
  *
-
+ * @method string getClusterType() Obtain Cluster type
+ * @method void setClusterType(string $ClusterType) Set Cluster type
+ * @method string getClusterId() Obtain Cluster ID
+ * @method void setClusterId(string $ClusterId) Set Cluster ID
+ * @method string getDescribe() Obtain Remarks
+ * @method void setDescribe(string $Describe) Set Remarks
  */
 class PrometheusAgentInfo extends AbstractModel
 {
-
+    /**
+     * @var string Cluster type
+     */
+    public $ClusterType;
 
     /**
+     * @var string Cluster ID
+     */
+    public $ClusterId;
 
+    /**
+     * @var string Remarks
+     */
+    public $Describe;
+
+    /**
+     * @param string $ClusterType Cluster type
+     * @param string $ClusterId Cluster ID
+     * @param string $Describe Remarks
      */
     function __construct()
     {
@@ -42,6 +62,16 @@ class PrometheusAgentInfo extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("ClusterType",$param) and $param["ClusterType"] !== null) {
+            $this->ClusterType = $param["ClusterType"];
+        }
 
+        if (array_key_exists("ClusterId",$param) and $param["ClusterId"] !== null) {
+            $this->ClusterId = $param["ClusterId"];
+        }
+
+        if (array_key_exists("Describe",$param) and $param["Describe"] !== null) {
+            $this->Describe = $param["Describe"];
+        }
     }
 }
