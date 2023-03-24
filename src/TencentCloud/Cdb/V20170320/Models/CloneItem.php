@@ -36,6 +36,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEndTime(string $EndTime) Set Task end time
  * @method string getTaskStatus() Obtain Task status. Valid values: `initial`, `running`, `wait_complete`, `success`, `failed`.
  * @method void setTaskStatus(string $TaskStatus) Set Task status. Valid values: `initial`, `running`, `wait_complete`, `success`, `failed`.
+ * @method integer getNewRegionId() Obtain Clone instance region ID
+ * @method void setNewRegionId(integer $NewRegionId) Set Clone instance region ID
+ * @method integer getSrcRegionId() Obtain Source instance region ID
+ * @method void setSrcRegionId(integer $SrcRegionId) Set Source instance region ID
  */
 class CloneItem extends AbstractModel
 {
@@ -80,6 +84,16 @@ class CloneItem extends AbstractModel
     public $TaskStatus;
 
     /**
+     * @var integer Clone instance region ID
+     */
+    public $NewRegionId;
+
+    /**
+     * @var integer Source instance region ID
+     */
+    public $SrcRegionId;
+
+    /**
      * @param string $SrcInstanceId ID of the original instance in a clone task
      * @param string $DstInstanceId ID of the cloned instance in a clone task
      * @param integer $CloneJobId Clone task ID
@@ -88,6 +102,8 @@ class CloneItem extends AbstractModel
      * @param string $StartTime Task start time
      * @param string $EndTime Task end time
      * @param string $TaskStatus Task status. Valid values: `initial`, `running`, `wait_complete`, `success`, `failed`.
+     * @param integer $NewRegionId Clone instance region ID
+     * @param integer $SrcRegionId Source instance region ID
      */
     function __construct()
     {
@@ -132,6 +148,14 @@ class CloneItem extends AbstractModel
 
         if (array_key_exists("TaskStatus",$param) and $param["TaskStatus"] !== null) {
             $this->TaskStatus = $param["TaskStatus"];
+        }
+
+        if (array_key_exists("NewRegionId",$param) and $param["NewRegionId"] !== null) {
+            $this->NewRegionId = $param["NewRegionId"];
+        }
+
+        if (array_key_exists("SrcRegionId",$param) and $param["SrcRegionId"] !== null) {
+            $this->SrcRegionId = $param["SrcRegionId"];
         }
     }
 }
