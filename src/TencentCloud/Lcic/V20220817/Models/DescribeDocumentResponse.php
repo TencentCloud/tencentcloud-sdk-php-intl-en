@@ -38,8 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTranscodeType(integer $TranscodeType) Set The transcoding type.
  * @method integer getTranscodeProgress() Obtain The transcoding progress. Value range: 0-100.
  * @method void setTranscodeProgress(integer $TranscodeProgress) Set The transcoding progress. Value range: 0-100.
- * @method integer getTranscodeState() Obtain The transcoding status. `0`: The file is not transcoded. `1`: The file is being transcoded. `2`: Transcoding failed. `3`: Transcoding is successful.
- * @method void setTranscodeState(integer $TranscodeState) Set The transcoding status. `0`: The file is not transcoded. `1`: The file is being transcoded. `2`: Transcoding failed. `3`: Transcoding is successful.
+ * @method integer getTranscodeState() Obtain The transcoding status. 0: The file is not transcoded. 1: The file is being transcoded. 2: Transcoding failed. 3: Transcoding is successful.
+ * @method void setTranscodeState(integer $TranscodeState) Set The transcoding status. 0: The file is not transcoded. 1: The file is being transcoded. 2: Transcoding failed. 3: Transcoding is successful.
  * @method string getTranscodeInfo() Obtain The error message for failed transcoding.
  * @method void setTranscodeInfo(string $TranscodeInfo) Set The error message for failed transcoding.
  * @method string getDocumentType() Obtain The document type.
@@ -99,7 +99,7 @@ class DescribeDocumentResponse extends AbstractModel
     public $TranscodeProgress;
 
     /**
-     * @var integer The transcoding status. `0`: The file is not transcoded. `1`: The file is being transcoded. `2`: Transcoding failed. `3`: Transcoding is successful.
+     * @var integer The transcoding status. 0: The file is not transcoded. 1: The file is being transcoded. 2: Transcoding failed. 3: Transcoding is successful.
      */
     public $TranscodeState;
 
@@ -138,7 +138,7 @@ class DescribeDocumentResponse extends AbstractModel
      * @param string $TranscodeResult The transcoding result. If the file is not transcoded, this parameter will be empty. If it is successfully transcoded, this parameter will be the URL of the transcoded file. If transcoding fails, this parameter will indicate the error code.
      * @param integer $TranscodeType The transcoding type.
      * @param integer $TranscodeProgress The transcoding progress. Value range: 0-100.
-     * @param integer $TranscodeState The transcoding status. `0`: The file is not transcoded. `1`: The file is being transcoded. `2`: Transcoding failed. `3`: Transcoding is successful.
+     * @param integer $TranscodeState The transcoding status. 0: The file is not transcoded. 1: The file is being transcoded. 2: Transcoding failed. 3: Transcoding is successful.
      * @param string $TranscodeInfo The error message for failed transcoding.
      * @param string $DocumentType The document type.
      * @param integer $DocumentSize The document size (bytes).

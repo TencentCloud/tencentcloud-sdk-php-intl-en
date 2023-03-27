@@ -66,6 +66,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setDescribes(string $Describes) Set Log topic description
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getHotPeriod() Obtain The lifecycle of hot storage when log transitioning is enabled. The value of `hotPeriod` is smaller than that of `Period`.
+The hot storage period is the value of `hotPeriod`, and the cold storage period is the value of `Period` minus the value of `hotPeriod`.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setHotPeriod(integer $HotPeriod) Set The lifecycle of hot storage when log transitioning is enabled. The value of `hotPeriod` is smaller than that of `Period`.
+The hot storage period is the value of `hotPeriod`, and the cold storage period is the value of `Period` minus the value of `hotPeriod`.
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class TopicInfo extends AbstractModel
 {
@@ -153,6 +159,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $Describes;
 
     /**
+     * @var integer The lifecycle of hot storage when log transitioning is enabled. The value of `hotPeriod` is smaller than that of `Period`.
+The hot storage period is the value of `hotPeriod`, and the cold storage period is the value of `Period` minus the value of `hotPeriod`.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $HotPeriod;
+
+    /**
      * @param string $LogsetId Logset ID
      * @param string $TopicId Log topic ID
      * @param string $TopicName Log topic name
@@ -175,6 +188,9 @@ Note: This field may return `null`, indicating that no valid value was found.
      * @param string $SubAssumerName Cloud product sub-identifier. If the log topic is created by another cloud product, this field returns the name of the cloud product and its log type, such as `TKE-Audit` or `TKE-Event`. Some products only return the cloud product identifier (`AssumerName`), without this field.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $Describes Log topic description
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $HotPeriod The lifecycle of hot storage when log transitioning is enabled. The value of `hotPeriod` is smaller than that of `Period`.
+The hot storage period is the value of `hotPeriod`, and the cold storage period is the value of `Period` minus the value of `hotPeriod`.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
@@ -253,6 +269,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("Describes",$param) and $param["Describes"] !== null) {
             $this->Describes = $param["Describes"];
+        }
+
+        if (array_key_exists("HotPeriod",$param) and $param["HotPeriod"] !== null) {
+            $this->HotPeriod = $param["HotPeriod"];
         }
     }
 }

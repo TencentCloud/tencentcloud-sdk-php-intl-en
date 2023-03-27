@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * BatchDeleteRecord request structure.
  *
- * @method array getRoomIds() Obtain The room IDs.	
- * @method void setRoomIds(array $RoomIds) Set The room IDs.	
- * @method integer getSdkAppId() Obtain The SDKAppID assigned by LCIC.	
- * @method void setSdkAppId(integer $SdkAppId) Set The SDKAppID assigned by LCIC.	
+ * @method array getRoomIds() Obtain The room IDs.
+ * @method void setRoomIds(array $RoomIds) Set The room IDs.
+ * @method integer getSdkAppId() Obtain The SDKAppID assigned by LCIC.
+ * @method void setSdkAppId(integer $SdkAppId) Set The SDKAppID assigned by LCIC.
  */
 class BatchDeleteRecordRequest extends AbstractModel
 {
     /**
-     * @var array The room IDs.	
+     * @var array The room IDs.
      */
     public $RoomIds;
 
     /**
-     * @var integer The SDKAppID assigned by LCIC.	
+     * @var integer The SDKAppID assigned by LCIC.
      */
     public $SdkAppId;
 
     /**
-     * @param array $RoomIds The room IDs.	
-     * @param integer $SdkAppId The SDKAppID assigned by LCIC.	
+     * @param array $RoomIds The room IDs.
+     * @param integer $SdkAppId The SDKAppID assigned by LCIC.
      */
     function __construct()
     {

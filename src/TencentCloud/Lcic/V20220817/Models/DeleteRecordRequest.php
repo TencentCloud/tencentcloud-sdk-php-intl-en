@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteRecord request structure.
  *
- * @method integer getRoomId() Obtain The room ID.	
- * @method void setRoomId(integer $RoomId) Set The room ID.	
+ * @method integer getRoomId() Obtain The room ID.
+ * @method void setRoomId(integer $RoomId) Set The room ID.
  * @method integer getSdkAppId() Obtain The SDKAppID assigned by LCIC.
  * @method void setSdkAppId(integer $SdkAppId) Set The SDKAppID assigned by LCIC.
  */
 class DeleteRecordRequest extends AbstractModel
 {
     /**
-     * @var integer The room ID.	
+     * @var integer The room ID.
      */
     public $RoomId;
 
@@ -38,7 +38,7 @@ class DeleteRecordRequest extends AbstractModel
     public $SdkAppId;
 
     /**
-     * @param integer $RoomId The room ID.	
+     * @param integer $RoomId The room ID.
      * @param integer $SdkAppId The SDKAppID assigned by LCIC.
      */
     function __construct()

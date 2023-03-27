@@ -24,20 +24,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setGroupId(string $GroupId) Set The group ID.
  * @method string getGroupName() Obtain The group name.
  * @method void setGroupName(string $GroupName) Set The group name.
- * @method string getTeacherId() Obtain The user ID of the group’s teacher.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setTeacherId(string $TeacherId) Set The user ID of the group’s teacher.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getGroupType() Obtain The group type.
-`0`: Ordinary group.
-`1`: Merged group. If the group queried is a merged group, the IDs of the sub-groups will be returned.
- * @method void setGroupType(integer $GroupType) Set The group type.
-`0`: Ordinary group.
-`1`: Merged group. If the group queried is a merged group, the IDs of the sub-groups will be returned.
- * @method array getSubGroupIds() Obtain The IDs of the sub-groups.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setSubGroupIds(array $SubGroupIds) Set The IDs of the sub-groups.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getTeacherId() Obtain The user ID of the group’s teacher. Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setTeacherId(string $TeacherId) Set The user ID of the group’s teacher. Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getGroupType() Obtain The group type. 0: Ordinary group. 1: Merged group. If the group queried is a merged group, the IDs of the sub-groups will be returned.
+ * @method void setGroupType(integer $GroupType) Set The group type. 0: Ordinary group. 1: Merged group. If the group queried is a merged group, the IDs of the sub-groups will be returned.
+ * @method array getSubGroupIds() Obtain The IDs of the sub-groups. Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setSubGroupIds(array $SubGroupIds) Set The IDs of the sub-groups. Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -54,21 +46,17 @@ class DescribeGroupResponse extends AbstractModel
     public $GroupName;
 
     /**
-     * @var string The user ID of the group’s teacher.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string The user ID of the group’s teacher. Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $TeacherId;
 
     /**
-     * @var integer The group type.
-`0`: Ordinary group.
-`1`: Merged group. If the group queried is a merged group, the IDs of the sub-groups will be returned.
+     * @var integer The group type. 0: Ordinary group. 1: Merged group. If the group queried is a merged group, the IDs of the sub-groups will be returned.
      */
     public $GroupType;
 
     /**
-     * @var array The IDs of the sub-groups.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array The IDs of the sub-groups. Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $SubGroupIds;
 
@@ -80,13 +68,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     /**
      * @param string $GroupId The group ID.
      * @param string $GroupName The group name.
-     * @param string $TeacherId The user ID of the group’s teacher.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $GroupType The group type.
-`0`: Ordinary group.
-`1`: Merged group. If the group queried is a merged group, the IDs of the sub-groups will be returned.
-     * @param array $SubGroupIds The IDs of the sub-groups.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $TeacherId The user ID of the group’s teacher. Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $GroupType The group type. 0: Ordinary group. 1: Merged group. If the group queried is a merged group, the IDs of the sub-groups will be returned.
+     * @param array $SubGroupIds The IDs of the sub-groups. Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()

@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRoomId(integer $RoomId) Set The room ID.
  * @method integer getPage() Obtain The page to return records from. Pagination starts from 1.
  * @method void setPage(integer $Page) Set The page to return records from. Pagination starts from 1.
- * @method integer getLimit() Obtain The maximum number of records per page. The value of this parameter cannot exceed `1000`.
- * @method void setLimit(integer $Limit) Set The maximum number of records per page. The value of this parameter cannot exceed `1000`.
+ * @method integer getLimit() Obtain The maximum number of records per page. The value of this parameter cannot exceed 1000.
+ * @method void setLimit(integer $Limit) Set The maximum number of records per page. The value of this parameter cannot exceed 1000.
  */
 class DescribeCurrentMemberListRequest extends AbstractModel
 {
@@ -40,14 +40,14 @@ class DescribeCurrentMemberListRequest extends AbstractModel
     public $Page;
 
     /**
-     * @var integer The maximum number of records per page. The value of this parameter cannot exceed `1000`.
+     * @var integer The maximum number of records per page. The value of this parameter cannot exceed 1000.
      */
     public $Limit;
 
     /**
      * @param integer $RoomId The room ID.
      * @param integer $Page The page to return records from. Pagination starts from 1.
-     * @param integer $Limit The maximum number of records per page. The value of this parameter cannot exceed `1000`.
+     * @param integer $Limit The maximum number of records per page. The value of this parameter cannot exceed 1000.
      */
     function __construct()
     {

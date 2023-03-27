@@ -24,12 +24,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSdkAppId(integer $SdkAppId) Set The SDKAppID assigned by LCIC.
  * @method integer getPage() Obtain The page to return records from. Pagination starts from 1.
  * @method void setPage(integer $Page) Set The page to return records from. Pagination starts from 1.
- * @method integer getLimit() Obtain The maximum number of records per page. The value of this parameter cannot exceed `1000` and is `20` by default.
- * @method void setLimit(integer $Limit) Set The maximum number of records per page. The value of this parameter cannot exceed `1000` and is `20` by default.
- * @method string getTeacherId() Obtain The user ID of the teacher, which is used as the filter. This parameter and `MemberId` are mutually exclusive. If both are specified, only this parameter will take effect.
- * @method void setTeacherId(string $TeacherId) Set The user ID of the teacher, which is used as the filter. This parameter and `MemberId` are mutually exclusive. If both are specified, only this parameter will take effect.
- * @method string getMemberId() Obtain The user ID of a member, which is used as the filter. This parameter and `TeacherId` are mutually exclusive.
- * @method void setMemberId(string $MemberId) Set The user ID of a member, which is used as the filter. This parameter and `TeacherId` are mutually exclusive.
+ * @method integer getLimit() Obtain The maximum number of records per page. The value of this parameter cannot exceed 1000 and is 20 by default.
+ * @method void setLimit(integer $Limit) Set The maximum number of records per page. The value of this parameter cannot exceed 1000 and is 20 by default.
+ * @method string getTeacherId() Obtain The user ID of the teacher, which is used as the filter. This parameter and MemberId are mutually exclusive. If both are specified, only this parameter will take effect.
+ * @method void setTeacherId(string $TeacherId) Set The user ID of the teacher, which is used as the filter. This parameter and MemberId are mutually exclusive. If both are specified, only this parameter will take effect.
+ * @method string getMemberId() Obtain The user ID of a member, which is used as the filter. This parameter and TeacherId are mutually exclusive.
+ * @method void setMemberId(string $MemberId) Set The user ID of a member, which is used as the filter. This parameter and TeacherId are mutually exclusive.
  */
 class DescribeGroupListRequest extends AbstractModel
 {
@@ -44,26 +44,26 @@ class DescribeGroupListRequest extends AbstractModel
     public $Page;
 
     /**
-     * @var integer The maximum number of records per page. The value of this parameter cannot exceed `1000` and is `20` by default.
+     * @var integer The maximum number of records per page. The value of this parameter cannot exceed 1000 and is 20 by default.
      */
     public $Limit;
 
     /**
-     * @var string The user ID of the teacher, which is used as the filter. This parameter and `MemberId` are mutually exclusive. If both are specified, only this parameter will take effect.
+     * @var string The user ID of the teacher, which is used as the filter. This parameter and MemberId are mutually exclusive. If both are specified, only this parameter will take effect.
      */
     public $TeacherId;
 
     /**
-     * @var string The user ID of a member, which is used as the filter. This parameter and `TeacherId` are mutually exclusive.
+     * @var string The user ID of a member, which is used as the filter. This parameter and TeacherId are mutually exclusive.
      */
     public $MemberId;
 
     /**
      * @param integer $SdkAppId The SDKAppID assigned by LCIC.
      * @param integer $Page The page to return records from. Pagination starts from 1.
-     * @param integer $Limit The maximum number of records per page. The value of this parameter cannot exceed `1000` and is `20` by default.
-     * @param string $TeacherId The user ID of the teacher, which is used as the filter. This parameter and `MemberId` are mutually exclusive. If both are specified, only this parameter will take effect.
-     * @param string $MemberId The user ID of a member, which is used as the filter. This parameter and `TeacherId` are mutually exclusive.
+     * @param integer $Limit The maximum number of records per page. The value of this parameter cannot exceed 1000 and is 20 by default.
+     * @param string $TeacherId The user ID of the teacher, which is used as the filter. This parameter and MemberId are mutually exclusive. If both are specified, only this parameter will take effect.
+     * @param string $MemberId The user ID of a member, which is used as the filter. This parameter and TeacherId are mutually exclusive.
      */
     function __construct()
     {

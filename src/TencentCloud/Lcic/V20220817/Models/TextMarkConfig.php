@@ -19,35 +19,28 @@ use TencentCloud\Common\AbstractModel;
 
 /**
  * The watermark text.
+Used by actions: GetWatermark.
  *
- * @method string getText() Obtain The watermark text.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setText(string $Text) Set The watermark text.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getColor() Obtain The watermark text color.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setColor(string $Color) Set The watermark text color.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getText() Obtain The watermark text. Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setText(string $Text) Set The watermark text. Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getColor() Obtain The watermark text color. Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setColor(string $Color) Set The watermark text color. Note: This field may return null, indicating that no valid values can be obtained.
  */
 class TextMarkConfig extends AbstractModel
 {
     /**
-     * @var string The watermark text.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string The watermark text. Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Text;
 
     /**
-     * @var string The watermark text color.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string The watermark text color. Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Color;
 
     /**
-     * @param string $Text The watermark text.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Color The watermark text color.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $Text The watermark text. Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $Color The watermark text color. Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

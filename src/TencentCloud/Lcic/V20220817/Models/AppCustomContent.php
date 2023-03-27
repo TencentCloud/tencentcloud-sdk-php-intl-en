@@ -19,6 +19,7 @@ use TencentCloud\Common\AbstractModel;
 
 /**
  * Custom application content
+Used by actions: SetAppCustomContent.
  *
  * @method string getScene() Obtain Multiple scenarios can be set for an application.
  * @method void setScene(string $Scene) Set Multiple scenarios can be set for an application.

@@ -52,6 +52,14 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
  * @method void setLevel(string $Level) Set TKE edge cluster level
 Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method boolean getAutoUpgradeClusterLevel() Obtain Whether to support auto upgrade of cluster spec level
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setAutoUpgradeClusterLevel(boolean $AutoUpgradeClusterLevel) Set Whether to support auto upgrade of cluster spec level
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method string getChargeType() Obtain Cluster billing mode. Valid values: `POSTPAID_BY_HOUR`, `PREPAID`
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setChargeType(string $ChargeType) Set Cluster billing mode. Valid values: `POSTPAID_BY_HOUR`, `PREPAID`
+Note: This field may return `null`, indicating that no valid values can be obtained.
  */
 class EdgeCluster extends AbstractModel
 {
@@ -124,6 +132,18 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     public $Level;
 
     /**
+     * @var boolean Whether to support auto upgrade of cluster spec level
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $AutoUpgradeClusterLevel;
+
+    /**
+     * @var string Cluster billing mode. Valid values: `POSTPAID_BY_HOUR`, `PREPAID`
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $ChargeType;
+
+    /**
      * @param string $ClusterId Cluster ID
      * @param string $ClusterName Cluster name
      * @param string $VpcId VPC ID
@@ -139,6 +159,10 @@ Note: This field may return `null`, indicating that no valid values can be obtai
      * @param EdgeClusterAdvancedSettings $ClusterAdvancedSettings Cluster advanced settings
 Note: This field may return `null`, indicating that no valid values can be obtained.
      * @param string $Level TKE edge cluster level
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param boolean $AutoUpgradeClusterLevel Whether to support auto upgrade of cluster spec level
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param string $ChargeType Cluster billing mode. Valid values: `POSTPAID_BY_HOUR`, `PREPAID`
 Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
@@ -205,6 +229,14 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 
         if (array_key_exists("Level",$param) and $param["Level"] !== null) {
             $this->Level = $param["Level"];
+        }
+
+        if (array_key_exists("AutoUpgradeClusterLevel",$param) and $param["AutoUpgradeClusterLevel"] !== null) {
+            $this->AutoUpgradeClusterLevel = $param["AutoUpgradeClusterLevel"];
+        }
+
+        if (array_key_exists("ChargeType",$param) and $param["ChargeType"] !== null) {
+            $this->ChargeType = $param["ChargeType"];
         }
     }
 }

@@ -19,6 +19,7 @@ use TencentCloud\Common\AbstractModel;
 
 /**
  * Member record information
+Used by actions: DescribeCurrentMemberList, DescribeRoomStatistics.
  *
  * @method string getUserId() Obtain User ID
  * @method void setUserId(string $UserId) Set User ID
@@ -46,12 +47,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIPAddress(string $IPAddress) Set The user’s IP address.
  * @method string getLocation() Obtain The user’s location.
  * @method void setLocation(string $Location) Set The user’s location.
- * @method integer getDevice() Obtain The user’s device type. `0`: Unknown; `1`: Windows; `2`: macOS; `3`: Android; `4`: iOS; `5`: Web; `6`: Mobile webpage; `7`: Weixin Mini Program.
- * @method void setDevice(integer $Device) Set The user’s device type. `0`: Unknown; `1`: Windows; `2`: macOS; `3`: Android; `4`: iOS; `5`: Web; `6`: Mobile webpage; `7`: Weixin Mini Program.
- * @method integer getPerMemberMicCount() Obtain The number of times each member mics.
- * @method void setPerMemberMicCount(integer $PerMemberMicCount) Set The number of times each member mics.
- * @method integer getPerMemberMessageCount() Obtain The number of messages sent by each member.
- * @method void setPerMemberMessageCount(integer $PerMemberMessageCount) Set The number of messages sent by each member.
+ * @method integer getDevice() Obtain The user’s device type. 0: Unknown; 1: Windows; 2: macOS; 3: Android; 4: iOS; 5: Web; 6: Mobile webpage; 7: Weixin Mini Program.
+ * @method void setDevice(integer $Device) Set The user’s device type. 0: Unknown; 1: Windows; 2: macOS; 3: Android; 4: iOS; 5: Web; 6: Mobile webpage; 7: Weixin Mini Program.
+ * @method integer getPerMemberMicCount() Obtain The number of times a user turned their mic on.
+ * @method void setPerMemberMicCount(integer $PerMemberMicCount) Set The number of times a user turned their mic on.
+ * @method integer getPerMemberMessageCount() Obtain The number of messages sent by a user.
+ * @method void setPerMemberMessageCount(integer $PerMemberMessageCount) Set The number of messages sent by a user.
  */
 class MemberRecord extends AbstractModel
 {
@@ -121,17 +122,17 @@ class MemberRecord extends AbstractModel
     public $Location;
 
     /**
-     * @var integer The user’s device type. `0`: Unknown; `1`: Windows; `2`: macOS; `3`: Android; `4`: iOS; `5`: Web; `6`: Mobile webpage; `7`: Weixin Mini Program.
+     * @var integer The user’s device type. 0: Unknown; 1: Windows; 2: macOS; 3: Android; 4: iOS; 5: Web; 6: Mobile webpage; 7: Weixin Mini Program.
      */
     public $Device;
 
     /**
-     * @var integer The number of times each member mics.
+     * @var integer The number of times a user turned their mic on.
      */
     public $PerMemberMicCount;
 
     /**
-     * @var integer The number of messages sent by each member.
+     * @var integer The number of messages sent by a user.
      */
     public $PerMemberMessageCount;
 
@@ -149,9 +150,9 @@ class MemberRecord extends AbstractModel
      * @param integer $Rewords Number of rewards received
      * @param string $IPAddress The user’s IP address.
      * @param string $Location The user’s location.
-     * @param integer $Device The user’s device type. `0`: Unknown; `1`: Windows; `2`: macOS; `3`: Android; `4`: iOS; `5`: Web; `6`: Mobile webpage; `7`: Weixin Mini Program.
-     * @param integer $PerMemberMicCount The number of times each member mics.
-     * @param integer $PerMemberMessageCount The number of messages sent by each member.
+     * @param integer $Device The user’s device type. 0: Unknown; 1: Windows; 2: macOS; 3: Android; 4: iOS; 5: Web; 6: Mobile webpage; 7: Weixin Mini Program.
+     * @param integer $PerMemberMicCount The number of times a user turned their mic on.
+     * @param integer $PerMemberMessageCount The number of messages sent by a user.
      */
     function __construct()
     {

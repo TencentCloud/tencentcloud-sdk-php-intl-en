@@ -19,35 +19,28 @@ use TencentCloud\Common\AbstractModel;
 
 /**
  * The information of the groups to create.
+Used by actions: BatchCreateGroupWithMembers.
  *
- * @method string getGroupName() Obtain The group names.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setGroupName(string $GroupName) Set The group names.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getTeacherId() Obtain The user ID of the teacher.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setTeacherId(string $TeacherId) Set The user ID of the teacher.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getGroupName() Obtain The group names. Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setGroupName(string $GroupName) Set The group names. Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getTeacherId() Obtain The user ID of the teacher. Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setTeacherId(string $TeacherId) Set The user ID of the teacher. Note: This field may return null, indicating that no valid values can be obtained.
  */
 class GroupBaseInfo extends AbstractModel
 {
     /**
-     * @var string The group names.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string The group names. Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $GroupName;
 
     /**
-     * @var string The user ID of the teacher.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string The user ID of the teacher. Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $TeacherId;
 
     /**
-     * @param string $GroupName The group names.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $TeacherId The user ID of the teacher.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $GroupName The group names. Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $TeacherId The user ID of the teacher. Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

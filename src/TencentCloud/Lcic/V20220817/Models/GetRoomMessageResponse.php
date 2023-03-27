@@ -18,26 +18,19 @@ namespace TencentCloud\Lcic\V20220817\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeSdkAppIdUsers response structure.
+ * GetRoomMessage response structure.
  *
- * @method integer getTotal() Obtain The total number of users.
- * @method void setTotal(integer $Total) Set The total number of users.
- * @method array getUsers() Obtain The information of the users. Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setUsers(array $Users) Set The information of the users. Note: This field may return null, indicating that no valid values can be obtained.
+ * @method array getMessages() Obtain The message list.
+ * @method void setMessages(array $Messages) Set The message list.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
-class DescribeSdkAppIdUsersResponse extends AbstractModel
+class GetRoomMessageResponse extends AbstractModel
 {
     /**
-     * @var integer The total number of users.
+     * @var array The message list.
      */
-    public $Total;
-
-    /**
-     * @var array The information of the users. Note: This field may return null, indicating that no valid values can be obtained.
-     */
-    public $Users;
+    public $Messages;
 
     /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -45,8 +38,7 @@ class DescribeSdkAppIdUsersResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $Total The total number of users.
-     * @param array $Users The information of the users. Note: This field may return null, indicating that no valid values can be obtained.
+     * @param array $Messages The message list.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -62,16 +54,12 @@ class DescribeSdkAppIdUsersResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Total",$param) and $param["Total"] !== null) {
-            $this->Total = $param["Total"];
-        }
-
-        if (array_key_exists("Users",$param) and $param["Users"] !== null) {
-            $this->Users = [];
-            foreach ($param["Users"] as $key => $value){
-                $obj = new UserInfo();
+        if (array_key_exists("Messages",$param) and $param["Messages"] !== null) {
+            $this->Messages = [];
+            foreach ($param["Messages"] as $key => $value){
+                $obj = new MessageList();
                 $obj->deserialize($value);
-                array_push($this->Users, $obj);
+                array_push($this->Messages, $obj);
             }
         }
 

@@ -19,75 +19,44 @@ use TencentCloud\Common\AbstractModel;
 
 /**
  * The information of the users to register.
+Used by actions: BatchRegister.
  *
- * @method integer getSdkAppId() Obtain The SDKAppID assigned by LCIC.
-
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setSdkAppId(integer $SdkAppId) Set The SDKAppID assigned by LCIC.
-
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getName() Obtain The username.
-
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setName(string $Name) Set The username.
-
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getOriginId() Obtain The user’s ID in your system, which must be unique across the same application.
-
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setOriginId(string $OriginId) Set The user’s ID in your system, which must be unique across the same application.
-
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getAvatar() Obtain The user’s profile photo.
-
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setAvatar(string $Avatar) Set The user’s profile photo.
-
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getSdkAppId() Obtain The SDKAppID assigned by LCIC.  Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setSdkAppId(integer $SdkAppId) Set The SDKAppID assigned by LCIC.  Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getName() Obtain The username.  Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setName(string $Name) Set The username.  Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getOriginId() Obtain The user’s ID in your system, which must be unique across the same application.  Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setOriginId(string $OriginId) Set The user’s ID in your system, which must be unique across the same application.  Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getAvatar() Obtain The user’s profile photo.  Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setAvatar(string $Avatar) Set The user’s profile photo.  Note: This field may return null, indicating that no valid values can be obtained.
  */
 class BatchUserRequest extends AbstractModel
 {
     /**
-     * @var integer The SDKAppID assigned by LCIC.
-
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer The SDKAppID assigned by LCIC.  Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $SdkAppId;
 
     /**
-     * @var string The username.
-
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string The username.  Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Name;
 
     /**
-     * @var string The user’s ID in your system, which must be unique across the same application.
-
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string The user’s ID in your system, which must be unique across the same application.  Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $OriginId;
 
     /**
-     * @var string The user’s profile photo.
-
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string The user’s profile photo.  Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Avatar;
 
     /**
-     * @param integer $SdkAppId The SDKAppID assigned by LCIC.
-
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Name The username.
-
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $OriginId The user’s ID in your system, which must be unique across the same application.
-
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Avatar The user’s profile photo.
-
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $SdkAppId The SDKAppID assigned by LCIC.  Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $Name The username.  Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $OriginId The user’s ID in your system, which must be unique across the same application.  Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $Avatar The user’s profile photo.  Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

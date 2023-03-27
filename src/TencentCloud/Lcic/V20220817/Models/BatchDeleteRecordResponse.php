@@ -20,18 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * BatchDeleteRecord response structure.
  *
- * @method array getRoomIds() Obtain The IDs of the rooms whose recordings are deleted.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setRoomIds(array $RoomIds) Set The IDs of the rooms whose recordings are deleted.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method array getRoomIds() Obtain The IDs of the rooms whose recordings are deleted. Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setRoomIds(array $RoomIds) Set The IDs of the rooms whose recordings are deleted. Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 class BatchDeleteRecordResponse extends AbstractModel
 {
     /**
-     * @var array The IDs of the rooms whose recordings are deleted.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array The IDs of the rooms whose recordings are deleted. Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $RoomIds;
 
@@ -41,8 +38,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $RequestId;
 
     /**
-     * @param array $RoomIds The IDs of the rooms whose recordings are deleted.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param array $RoomIds The IDs of the rooms whose recordings are deleted. Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()

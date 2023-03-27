@@ -19,59 +19,44 @@ use TencentCloud\Common\AbstractModel;
 
 /**
  * The user information.
+Used by actions: DescribeSdkAppIdUsers.
  *
- * @method integer getSdkAppId() Obtain The application ID.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setSdkAppId(integer $SdkAppId) Set The application ID.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getUserId() Obtain The user ID.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setUserId(string $UserId) Set The user ID.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getName() Obtain The username.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setName(string $Name) Set The username.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getAvatar() Obtain The URL of profile photo.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setAvatar(string $Avatar) Set The URL of profile photo.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getSdkAppId() Obtain The application ID. Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setSdkAppId(integer $SdkAppId) Set The application ID. Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getUserId() Obtain The user ID. Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setUserId(string $UserId) Set The user ID. Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getName() Obtain The username. Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setName(string $Name) Set The username. Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getAvatar() Obtain The URL of profile photo. Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setAvatar(string $Avatar) Set The URL of profile photo. Note: This field may return null, indicating that no valid values can be obtained.
  */
 class UserInfo extends AbstractModel
 {
     /**
-     * @var integer The application ID.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer The application ID. Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $SdkAppId;
 
     /**
-     * @var string The user ID.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string The user ID. Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $UserId;
 
     /**
-     * @var string The username.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string The username. Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Name;
 
     /**
-     * @var string The URL of profile photo.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string The URL of profile photo. Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Avatar;
 
     /**
-     * @param integer $SdkAppId The application ID.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $UserId The user ID.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Name The username.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Avatar The URL of profile photo.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $SdkAppId The application ID. Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $UserId The user ID. Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $Name The username. Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $Avatar The URL of profile photo. Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

@@ -33,6 +33,7 @@ use TencentCloud\Common\AbstractModel;
 <li>`DescribeFileAttributesTask`: Getting file attributes</li>
 <li>`RebuildMedia`; Remastering audio/video</li>
 <li> `ReviewAudioVideo`: Moderation</li>
+<li>`ExtractTraceWatermark`: Digital watermark extraction</li>
  * @method void setTaskType(string $TaskType) Set The task type. Valid values:
 <li>`Procedure`: Video processing</li>
 <li>`EditMedia`: Video editing</li>
@@ -46,6 +47,7 @@ use TencentCloud\Common\AbstractModel;
 <li>`DescribeFileAttributesTask`: Getting file attributes</li>
 <li>`RebuildMedia`; Remastering audio/video</li>
 <li> `ReviewAudioVideo`: Moderation</li>
+<li>`ExtractTraceWatermark`: Digital watermark extraction</li>
  * @method string getStatus() Obtain Task status. Valid values:
 <li>WAITING: waiting;</li>
 <li>PROCESSING: processing;</li>
@@ -151,6 +153,7 @@ class DescribeTaskDetailResponse extends AbstractModel
 <li>`DescribeFileAttributesTask`: Getting file attributes</li>
 <li>`RebuildMedia`; Remastering audio/video</li>
 <li> `ReviewAudioVideo`: Moderation</li>
+<li>`ExtractTraceWatermark`: Digital watermark extraction</li>
      */
     public $TaskType;
 
@@ -304,6 +307,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 <li>`DescribeFileAttributesTask`: Getting file attributes</li>
 <li>`RebuildMedia`; Remastering audio/video</li>
 <li> `ReviewAudioVideo`: Moderation</li>
+<li>`ExtractTraceWatermark`: Digital watermark extraction</li>
      * @param string $Status Task status. Valid values:
 <li>WAITING: waiting;</li>
 <li>PROCESSING: processing;</li>

@@ -22,8 +22,12 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getDefinition() Obtain Adaptive bitrate streaming specification.
  * @method void setDefinition(integer $Definition) Set Adaptive bitrate streaming specification.
- * @method string getPackage() Obtain Container format. Valid values: hls, dash.
- * @method void setPackage(string $Package) Set Container format. Valid values: hls, dash.
+ * @method string getPackage() Obtain The packaging format. Valid values:
+<li>`HLS`</li>
+<li>`DASH`</li>
+ * @method void setPackage(string $Package) Set The packaging format. Valid values:
+<li>`HLS`</li>
+<li>`DASH`</li>
  * @method string getDrmType() Obtain Encryption type.
  * @method void setDrmType(string $DrmType) Set Encryption type.
  * @method string getUrl() Obtain Playback address.
@@ -42,6 +46,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDigitalWatermarkType(string $DigitalWatermarkType) Set The watermark type. Valid values:
 <li>Trace: Digital watermark</li>
 <li>None: Regular watermark</li>
+ * @method array getSubStreamSet() Obtain The information of the streams.
+ * @method void setSubStreamSet(array $SubStreamSet) Set The information of the streams.
  */
 class AdaptiveDynamicStreamingInfoItem extends AbstractModel
 {
@@ -51,7 +57,9 @@ class AdaptiveDynamicStreamingInfoItem extends AbstractModel
     public $Definition;
 
     /**
-     * @var string Container format. Valid values: hls, dash.
+     * @var string The packaging format. Valid values:
+<li>`HLS`</li>
+<li>`DASH`</li>
      */
     public $Package;
 
@@ -81,8 +89,15 @@ class AdaptiveDynamicStreamingInfoItem extends AbstractModel
     public $DigitalWatermarkType;
 
     /**
+     * @var array The information of the streams.
+     */
+    public $SubStreamSet;
+
+    /**
      * @param integer $Definition Adaptive bitrate streaming specification.
-     * @param string $Package Container format. Valid values: hls, dash.
+     * @param string $Package The packaging format. Valid values:
+<li>`HLS`</li>
+<li>`DASH`</li>
      * @param string $DrmType Encryption type.
      * @param string $Url Playback address.
      * @param integer $Size File size (bytes)
@@ -92,6 +107,7 @@ class AdaptiveDynamicStreamingInfoItem extends AbstractModel
      * @param string $DigitalWatermarkType The watermark type. Valid values:
 <li>Trace: Digital watermark</li>
 <li>None: Regular watermark</li>
+     * @param array $SubStreamSet The information of the streams.
      */
     function __construct()
     {
@@ -128,6 +144,15 @@ class AdaptiveDynamicStreamingInfoItem extends AbstractModel
 
         if (array_key_exists("DigitalWatermarkType",$param) and $param["DigitalWatermarkType"] !== null) {
             $this->DigitalWatermarkType = $param["DigitalWatermarkType"];
+        }
+
+        if (array_key_exists("SubStreamSet",$param) and $param["SubStreamSet"] !== null) {
+            $this->SubStreamSet = [];
+            foreach ($param["SubStreamSet"] as $key => $value){
+                $obj = new MediaSubStreamInfoItem();
+                $obj->deserialize($value);
+                array_push($this->SubStreamSet, $obj);
+            }
         }
     }
 }

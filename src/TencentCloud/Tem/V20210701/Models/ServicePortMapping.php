@@ -60,6 +60,10 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
  * @method void setPortMappingItemList(array $PortMappingItemList) Set Port mapping array 
 Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method string getExternalDomain() Obtain CLB domain name
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setExternalDomain(string $ExternalDomain) Set CLB domain name
+Note: This field may return `null`, indicating that no valid values can be obtained.
  */
 class ServicePortMapping extends AbstractModel
 {
@@ -124,6 +128,12 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     public $PortMappingItemList;
 
     /**
+     * @var string CLB domain name
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $ExternalDomain;
+
+    /**
      * @param string $Type Specifies how a layer-4 proxy is created.
 Note: This field may return `null`, indicating that no valid values can be obtained.
      * @param string $ServiceName Application name
@@ -143,6 +153,8 @@ Note: This field may return `null`, indicating that no valid values can be obtai
      * @param array $Ports List of exposed ports
 Note: This field may return `null`, indicating that no valid values can be obtained.
      * @param array $PortMappingItemList Port mapping array 
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param string $ExternalDomain CLB domain name
 Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
@@ -201,6 +213,10 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                 $obj->deserialize($value);
                 array_push($this->PortMappingItemList, $obj);
             }
+        }
+
+        if (array_key_exists("ExternalDomain",$param) and $param["ExternalDomain"] !== null) {
+            $this->ExternalDomain = $param["ExternalDomain"];
         }
     }
 }

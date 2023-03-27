@@ -20,30 +20,30 @@ use TencentCloud\Common\AbstractModel;
 /**
  * SetWatermark request structure.
  *
- * @method integer getSdkAppId() Obtain The SDKAppID assigned by LCIC.	
- * @method void setSdkAppId(integer $SdkAppId) Set The SDKAppID assigned by LCIC.	
+ * @method integer getSdkAppId() Obtain The SDKAppID assigned by LCIC.
+ * @method void setSdkAppId(integer $SdkAppId) Set The SDKAppID assigned by LCIC.
  * @method string getTeacherUrl() Obtain The URL of the watermark for the teacher’s video. If you pass in an empty string, the teacher’s video will not have a watermark.
  * @method void setTeacherUrl(string $TeacherUrl) Set The URL of the watermark for the teacher’s video. If you pass in an empty string, the teacher’s video will not have a watermark.
  * @method string getBoardUrl() Obtain The URL of the watermark for the whiteboard. If you pass in an empty string, the whiteboard video will not have a watermark.
  * @method void setBoardUrl(string $BoardUrl) Set The URL of the watermark for the whiteboard. If you pass in an empty string, the whiteboard video will not have a watermark.
  * @method string getVideoUrl() Obtain The image displayed when there is no video. If you pass in an empty string, no images will be displayed.
  * @method void setVideoUrl(string $VideoUrl) Set The image displayed when there is no video. If you pass in an empty string, no images will be displayed.
- * @method float getBoardW() Obtain The width of the whiteboard’s watermark, which is expressed as a percentage of the video width. The value range is 0-100, and the default value is `0`.
- * @method void setBoardW(float $BoardW) Set The width of the whiteboard’s watermark, which is expressed as a percentage of the video width. The value range is 0-100, and the default value is `0`.
- * @method float getBoardH() Obtain The height of the whiteboard’s watermark, which is expressed as a percentage of the video height. The value range is 0-100, and the default value is `0`.
- * @method void setBoardH(float $BoardH) Set The height of the whiteboard’s watermark, which is expressed as a percentage of the video height. The value range is 0-100, and the default value is `0`.
- * @method float getBoardX() Obtain The horizontal offset of the whiteboard’s watermark, which is expressed as a percentage of the video width. For example, `50` indicates that the watermark will appear in the middle horizontally. Value range: 0-100.
- * @method void setBoardX(float $BoardX) Set The horizontal offset of the whiteboard’s watermark, which is expressed as a percentage of the video width. For example, `50` indicates that the watermark will appear in the middle horizontally. Value range: 0-100.
- * @method float getBoardY() Obtain The vertical offset of the whiteboard’s watermark, which is expressed as a percentage of the video width. For example, `50` indicates that the watermark will appear in the middle vertically. Value range: 0-100.
- * @method void setBoardY(float $BoardY) Set The vertical offset of the whiteboard’s watermark, which is expressed as a percentage of the video width. For example, `50` indicates that the watermark will appear in the middle vertically. Value range: 0-100.
- * @method float getTeacherW() Obtain The width of the watermark for the teacher’s video, which is expressed as a percentage of the video width. The value range is 0-100, and the default value is `0`.
- * @method void setTeacherW(float $TeacherW) Set The width of the watermark for the teacher’s video, which is expressed as a percentage of the video width. The value range is 0-100, and the default value is `0`.
- * @method float getTeacherH() Obtain The height of the watermark for the teacher’s video, which is expressed as a percentage of the video height. The value range is 0-100, and the default value is `0`.
- * @method void setTeacherH(float $TeacherH) Set The height of the watermark for the teacher’s video, which is expressed as a percentage of the video height. The value range is 0-100, and the default value is `0`.
- * @method float getTeacherX() Obtain The horizontal offset of the watermark for the teacher’s video, which is expressed as a percentage of the video width. For example, `50` indicates that the watermark will appear in the middle horizontally. Value range: 0-100.
- * @method void setTeacherX(float $TeacherX) Set The horizontal offset of the watermark for the teacher’s video, which is expressed as a percentage of the video width. For example, `50` indicates that the watermark will appear in the middle horizontally. Value range: 0-100.
- * @method float getTeacherY() Obtain The vertical offset of the watermark for the teacher’s video, which is expressed as a percentage of the video width. For example, `50` indicates that the watermark will appear in the middle vertically. Value range: 0-100.
- * @method void setTeacherY(float $TeacherY) Set The vertical offset of the watermark for the teacher’s video, which is expressed as a percentage of the video width. For example, `50` indicates that the watermark will appear in the middle vertically. Value range: 0-100.
+ * @method float getBoardW() Obtain The width of the whiteboard’s watermark, which is expressed as a percentage of the video width. The value range is 0-100, and the default value is 0.
+ * @method void setBoardW(float $BoardW) Set The width of the whiteboard’s watermark, which is expressed as a percentage of the video width. The value range is 0-100, and the default value is 0.
+ * @method float getBoardH() Obtain The height of the whiteboard’s watermark, which is expressed as a percentage of the video height. The value range is 0-100, and the default value is 0.
+ * @method void setBoardH(float $BoardH) Set The height of the whiteboard’s watermark, which is expressed as a percentage of the video height. The value range is 0-100, and the default value is 0.
+ * @method float getBoardX() Obtain The horizontal offset of the whiteboard’s watermark, which is expressed as a percentage of the video width. For example, 50 indicates that the watermark will appear in the middle horizontally. Value range: 0-100.
+ * @method void setBoardX(float $BoardX) Set The horizontal offset of the whiteboard’s watermark, which is expressed as a percentage of the video width. For example, 50 indicates that the watermark will appear in the middle horizontally. Value range: 0-100.
+ * @method float getBoardY() Obtain The vertical offset of the whiteboard’s watermark, which is expressed as a percentage of the video width. For example, 50 indicates that the watermark will appear in the middle vertically. Value range: 0-100.
+ * @method void setBoardY(float $BoardY) Set The vertical offset of the whiteboard’s watermark, which is expressed as a percentage of the video width. For example, 50 indicates that the watermark will appear in the middle vertically. Value range: 0-100.
+ * @method float getTeacherW() Obtain The width of the watermark for the teacher’s video, which is expressed as a percentage of the video width. The value range is 0-100, and the default value is 0.
+ * @method void setTeacherW(float $TeacherW) Set The width of the watermark for the teacher’s video, which is expressed as a percentage of the video width. The value range is 0-100, and the default value is 0.
+ * @method float getTeacherH() Obtain The height of the watermark for the teacher’s video, which is expressed as a percentage of the video height. The value range is 0-100, and the default value is 0.
+ * @method void setTeacherH(float $TeacherH) Set The height of the watermark for the teacher’s video, which is expressed as a percentage of the video height. The value range is 0-100, and the default value is 0.
+ * @method float getTeacherX() Obtain The horizontal offset of the watermark for the teacher’s video, which is expressed as a percentage of the video width. For example, 50 indicates that the watermark will appear in the middle horizontally. Value range: 0-100.
+ * @method void setTeacherX(float $TeacherX) Set The horizontal offset of the watermark for the teacher’s video, which is expressed as a percentage of the video width. For example, 50 indicates that the watermark will appear in the middle horizontally. Value range: 0-100.
+ * @method float getTeacherY() Obtain The vertical offset of the watermark for the teacher’s video, which is expressed as a percentage of the video width. For example, 50 indicates that the watermark will appear in the middle vertically. Value range: 0-100.
+ * @method void setTeacherY(float $TeacherY) Set The vertical offset of the watermark for the teacher’s video, which is expressed as a percentage of the video width. For example, 50 indicates that the watermark will appear in the middle vertically. Value range: 0-100.
  * @method string getText() Obtain The watermark text. If you pass in an empty string, there will be no text.
  * @method void setText(string $Text) Set The watermark text. If you pass in an empty string, there will be no text.
  * @method string getTextColor() Obtain The watermark text color.
@@ -52,7 +52,7 @@ use TencentCloud\Common\AbstractModel;
 class SetWatermarkRequest extends AbstractModel
 {
     /**
-     * @var integer The SDKAppID assigned by LCIC.	
+     * @var integer The SDKAppID assigned by LCIC.
      */
     public $SdkAppId;
 
@@ -72,42 +72,42 @@ class SetWatermarkRequest extends AbstractModel
     public $VideoUrl;
 
     /**
-     * @var float The width of the whiteboard’s watermark, which is expressed as a percentage of the video width. The value range is 0-100, and the default value is `0`.
+     * @var float The width of the whiteboard’s watermark, which is expressed as a percentage of the video width. The value range is 0-100, and the default value is 0.
      */
     public $BoardW;
 
     /**
-     * @var float The height of the whiteboard’s watermark, which is expressed as a percentage of the video height. The value range is 0-100, and the default value is `0`.
+     * @var float The height of the whiteboard’s watermark, which is expressed as a percentage of the video height. The value range is 0-100, and the default value is 0.
      */
     public $BoardH;
 
     /**
-     * @var float The horizontal offset of the whiteboard’s watermark, which is expressed as a percentage of the video width. For example, `50` indicates that the watermark will appear in the middle horizontally. Value range: 0-100.
+     * @var float The horizontal offset of the whiteboard’s watermark, which is expressed as a percentage of the video width. For example, 50 indicates that the watermark will appear in the middle horizontally. Value range: 0-100.
      */
     public $BoardX;
 
     /**
-     * @var float The vertical offset of the whiteboard’s watermark, which is expressed as a percentage of the video width. For example, `50` indicates that the watermark will appear in the middle vertically. Value range: 0-100.
+     * @var float The vertical offset of the whiteboard’s watermark, which is expressed as a percentage of the video width. For example, 50 indicates that the watermark will appear in the middle vertically. Value range: 0-100.
      */
     public $BoardY;
 
     /**
-     * @var float The width of the watermark for the teacher’s video, which is expressed as a percentage of the video width. The value range is 0-100, and the default value is `0`.
+     * @var float The width of the watermark for the teacher’s video, which is expressed as a percentage of the video width. The value range is 0-100, and the default value is 0.
      */
     public $TeacherW;
 
     /**
-     * @var float The height of the watermark for the teacher’s video, which is expressed as a percentage of the video height. The value range is 0-100, and the default value is `0`.
+     * @var float The height of the watermark for the teacher’s video, which is expressed as a percentage of the video height. The value range is 0-100, and the default value is 0.
      */
     public $TeacherH;
 
     /**
-     * @var float The horizontal offset of the watermark for the teacher’s video, which is expressed as a percentage of the video width. For example, `50` indicates that the watermark will appear in the middle horizontally. Value range: 0-100.
+     * @var float The horizontal offset of the watermark for the teacher’s video, which is expressed as a percentage of the video width. For example, 50 indicates that the watermark will appear in the middle horizontally. Value range: 0-100.
      */
     public $TeacherX;
 
     /**
-     * @var float The vertical offset of the watermark for the teacher’s video, which is expressed as a percentage of the video width. For example, `50` indicates that the watermark will appear in the middle vertically. Value range: 0-100.
+     * @var float The vertical offset of the watermark for the teacher’s video, which is expressed as a percentage of the video width. For example, 50 indicates that the watermark will appear in the middle vertically. Value range: 0-100.
      */
     public $TeacherY;
 
@@ -122,18 +122,18 @@ class SetWatermarkRequest extends AbstractModel
     public $TextColor;
 
     /**
-     * @param integer $SdkAppId The SDKAppID assigned by LCIC.	
+     * @param integer $SdkAppId The SDKAppID assigned by LCIC.
      * @param string $TeacherUrl The URL of the watermark for the teacher’s video. If you pass in an empty string, the teacher’s video will not have a watermark.
      * @param string $BoardUrl The URL of the watermark for the whiteboard. If you pass in an empty string, the whiteboard video will not have a watermark.
      * @param string $VideoUrl The image displayed when there is no video. If you pass in an empty string, no images will be displayed.
-     * @param float $BoardW The width of the whiteboard’s watermark, which is expressed as a percentage of the video width. The value range is 0-100, and the default value is `0`.
-     * @param float $BoardH The height of the whiteboard’s watermark, which is expressed as a percentage of the video height. The value range is 0-100, and the default value is `0`.
-     * @param float $BoardX The horizontal offset of the whiteboard’s watermark, which is expressed as a percentage of the video width. For example, `50` indicates that the watermark will appear in the middle horizontally. Value range: 0-100.
-     * @param float $BoardY The vertical offset of the whiteboard’s watermark, which is expressed as a percentage of the video width. For example, `50` indicates that the watermark will appear in the middle vertically. Value range: 0-100.
-     * @param float $TeacherW The width of the watermark for the teacher’s video, which is expressed as a percentage of the video width. The value range is 0-100, and the default value is `0`.
-     * @param float $TeacherH The height of the watermark for the teacher’s video, which is expressed as a percentage of the video height. The value range is 0-100, and the default value is `0`.
-     * @param float $TeacherX The horizontal offset of the watermark for the teacher’s video, which is expressed as a percentage of the video width. For example, `50` indicates that the watermark will appear in the middle horizontally. Value range: 0-100.
-     * @param float $TeacherY The vertical offset of the watermark for the teacher’s video, which is expressed as a percentage of the video width. For example, `50` indicates that the watermark will appear in the middle vertically. Value range: 0-100.
+     * @param float $BoardW The width of the whiteboard’s watermark, which is expressed as a percentage of the video width. The value range is 0-100, and the default value is 0.
+     * @param float $BoardH The height of the whiteboard’s watermark, which is expressed as a percentage of the video height. The value range is 0-100, and the default value is 0.
+     * @param float $BoardX The horizontal offset of the whiteboard’s watermark, which is expressed as a percentage of the video width. For example, 50 indicates that the watermark will appear in the middle horizontally. Value range: 0-100.
+     * @param float $BoardY The vertical offset of the whiteboard’s watermark, which is expressed as a percentage of the video width. For example, 50 indicates that the watermark will appear in the middle vertically. Value range: 0-100.
+     * @param float $TeacherW The width of the watermark for the teacher’s video, which is expressed as a percentage of the video width. The value range is 0-100, and the default value is 0.
+     * @param float $TeacherH The height of the watermark for the teacher’s video, which is expressed as a percentage of the video height. The value range is 0-100, and the default value is 0.
+     * @param float $TeacherX The horizontal offset of the watermark for the teacher’s video, which is expressed as a percentage of the video width. For example, 50 indicates that the watermark will appear in the middle horizontally. Value range: 0-100.
+     * @param float $TeacherY The vertical offset of the watermark for the teacher’s video, which is expressed as a percentage of the video width. For example, 50 indicates that the watermark will appear in the middle vertically. Value range: 0-100.
      * @param string $Text The watermark text. If you pass in an empty string, there will be no text.
      * @param string $TextColor The watermark text color.
      */

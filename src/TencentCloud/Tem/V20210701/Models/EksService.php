@@ -84,6 +84,10 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
  * @method void setAllIpDone(boolean $AllIpDone) Set Whether all the application IPs are ready
 Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method string getExternalDomain() Obtain CLB domain name
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setExternalDomain(string $ExternalDomain) Set CLB domain name
+Note: This field may return `null`, indicating that no valid values can be obtained.
  */
 class EksService extends AbstractModel
 {
@@ -184,6 +188,12 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     public $AllIpDone;
 
     /**
+     * @var string CLB domain name
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $ExternalDomain;
+
+    /**
      * @param string $Name Service name
      * @param array $Ports Available ports
      * @param string $Yaml Yaml contents
@@ -215,6 +225,8 @@ Note: This field may return `null`, indicating that no valid values can be obtai
      * @param string $ApplicationId The application ID returned.
 Note: This field may return `null`, indicating that no valid values can be obtained.
      * @param boolean $AllIpDone Whether all the application IPs are ready
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param string $ExternalDomain CLB domain name
 Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
@@ -302,6 +314,10 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 
         if (array_key_exists("AllIpDone",$param) and $param["AllIpDone"] !== null) {
             $this->AllIpDone = $param["AllIpDone"];
+        }
+
+        if (array_key_exists("ExternalDomain",$param) and $param["ExternalDomain"] !== null) {
+            $this->ExternalDomain = $param["ExternalDomain"];
         }
     }
 }

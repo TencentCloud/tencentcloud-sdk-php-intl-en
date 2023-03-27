@@ -24,10 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setGroupId(string $GroupId) Set The group ID.
  * @method integer getSdkAppId() Obtain The SDKAppID assigned by LCIC.
  * @method void setSdkAppId(integer $SdkAppId) Set The SDKAppID assigned by LCIC.
- * @method integer getPage() Obtain The page to return records from. The default value is `1`.
- * @method void setPage(integer $Page) Set The page to return records from. The default value is `1`.
- * @method integer getLimit() Obtain The maximum number of records per page. The value of this parameter cannot exceed `1000` and is `20` by default.
- * @method void setLimit(integer $Limit) Set The maximum number of records per page. The value of this parameter cannot exceed `1000` and is `20` by default.
+ * @method integer getPage() Obtain The page to return records from. The default value is 1.
+ * @method void setPage(integer $Page) Set The page to return records from. The default value is 1.
+ * @method integer getLimit() Obtain The maximum number of records per page. The value of this parameter cannot exceed 1000 and is 20 by default.
+ * @method void setLimit(integer $Limit) Set The maximum number of records per page. The value of this parameter cannot exceed 1000 and is 20 by default.
  */
 class DescribeGroupMemberListRequest extends AbstractModel
 {
@@ -42,20 +42,20 @@ class DescribeGroupMemberListRequest extends AbstractModel
     public $SdkAppId;
 
     /**
-     * @var integer The page to return records from. The default value is `1`.
+     * @var integer The page to return records from. The default value is 1.
      */
     public $Page;
 
     /**
-     * @var integer The maximum number of records per page. The value of this parameter cannot exceed `1000` and is `20` by default.
+     * @var integer The maximum number of records per page. The value of this parameter cannot exceed 1000 and is 20 by default.
      */
     public $Limit;
 
     /**
      * @param string $GroupId The group ID.
      * @param integer $SdkAppId The SDKAppID assigned by LCIC.
-     * @param integer $Page The page to return records from. The default value is `1`.
-     * @param integer $Limit The maximum number of records per page. The value of this parameter cannot exceed `1000` and is `20` by default.
+     * @param integer $Page The page to return records from. The default value is 1.
+     * @param integer $Limit The maximum number of records per page. The value of this parameter cannot exceed 1000 and is 20 by default.
      */
     function __construct()
     {

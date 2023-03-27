@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateShipper response structure.
  *
- * @method string getShipperId() Obtain Shipping rule ID
- * @method void setShipperId(string $ShipperId) Set Shipping rule ID
+ * @method string getShipperId() Obtain Shipping task ID.
+ * @method void setShipperId(string $ShipperId) Set Shipping task ID.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 class CreateShipperResponse extends AbstractModel
 {
     /**
-     * @var string Shipping rule ID
+     * @var string Shipping task ID.
      */
     public $ShipperId;
 
@@ -38,7 +38,7 @@ class CreateShipperResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $ShipperId Shipping rule ID
+     * @param string $ShipperId Shipping task ID.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()

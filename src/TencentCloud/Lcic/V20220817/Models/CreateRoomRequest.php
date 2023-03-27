@@ -28,20 +28,20 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEndTime(integer $EndTime) Set Reserved room end time, in UNIX timestamp format
  * @method integer getSdkAppId() Obtain LCIC SdkAppId
  * @method void setSdkAppId(integer $SdkAppId) Set LCIC SdkAppId
- * @method integer getResolution() Obtain Resolution. Valid values: `1`: SD; `2`: HD; `3`: FHD
- * @method void setResolution(integer $Resolution) Set Resolution. Valid values: `1`: SD; `2`: HD; `3`: FHD
- * @method integer getMaxMicNumber() Obtain Maximum number of mic-on users (excluding teachers). Value range: [0, 16]	
- * @method void setMaxMicNumber(integer $MaxMicNumber) Set Maximum number of mic-on users (excluding teachers). Value range: [0, 16]	
- * @method string getSubType() Obtain The room subtype. Valid values: `videodoc`: Document + Video; `video`: Video only. 
- * @method void setSubType(string $SubType) Set The room subtype. Valid values: `videodoc`: Document + Video; `video`: Video only. 
+ * @method integer getResolution() Obtain 	Resolution. Valid values: 1: SD; 2: HD; 3: FHD
+ * @method void setResolution(integer $Resolution) Set 	Resolution. Valid values: 1: SD; 2: HD; 3: FHD
+ * @method integer getMaxMicNumber() Obtain Maximum number of mic-on users (excluding teachers). Value range: [0, 16]
+ * @method void setMaxMicNumber(integer $MaxMicNumber) Set Maximum number of mic-on users (excluding teachers). Value range: [0, 16]
+ * @method string getSubType() Obtain The room subtype. Valid values: videodoc: Document + Video; video: Video only.
+ * @method void setSubType(string $SubType) Set The room subtype. Valid values: videodoc: Document + Video; video: Video only.
  * @method string getTeacherId() Obtain The user ID of the teacher. User IDs are returned by the user registration APIs. The user specified will have teacher permissions in the room created.
  * @method void setTeacherId(string $TeacherId) Set The user ID of the teacher. User IDs are returned by the user registration APIs. The user specified will have teacher permissions in the room created.
- * @method integer getAutoMic() Obtain Whether to automatically turn the mic on when the user enters a room. Valid values: `0`: No (default value); `1`: Yes.
- * @method void setAutoMic(integer $AutoMic) Set Whether to automatically turn the mic on when the user enters a room. Valid values: `0`: No (default value); `1`: Yes.
- * @method integer getAudioQuality() Obtain Whether to enable the high audio quality mode. Valid values: `0`: No (default value); `1`: Yes.
- * @method void setAudioQuality(integer $AudioQuality) Set Whether to enable the high audio quality mode. Valid values: `0`: No (default value); `1`: Yes.
- * @method integer getDisableRecord() Obtain Whether to disable auto recording. Valid values: `0`: No (default); `1`: Yes. If this parameter is `0`, recording will start when the class starts and stops when the class ends.
- * @method void setDisableRecord(integer $DisableRecord) Set Whether to disable auto recording. Valid values: `0`: No (default); `1`: Yes. If this parameter is `0`, recording will start when the class starts and stops when the class ends.
+ * @method integer getAutoMic() Obtain Whether to automatically turn the mic on when the user enters a room. Valid values: 0: No (default value); 1: Yes.
+ * @method void setAutoMic(integer $AutoMic) Set Whether to automatically turn the mic on when the user enters a room. Valid values: 0: No (default value); 1: Yes.
+ * @method integer getAudioQuality() Obtain Whether to enable the high audio quality mode. Valid values: 0: No (default value); 1: Yes.
+ * @method void setAudioQuality(integer $AudioQuality) Set Whether to enable the high audio quality mode. Valid values: 0: No (default value); 1: Yes.
+ * @method integer getDisableRecord() Obtain Whether to disable auto recording. Valid values: 0: No (default); 1: Yes. If this parameter is 0, recording will start when the class starts and stops when the class ends.
+ * @method void setDisableRecord(integer $DisableRecord) Set Whether to disable auto recording. Valid values: 0: No (default); 1: Yes. If this parameter is 0, recording will start when the class starts and stops when the class ends.
  * @method array getAssistants() Obtain The user IDs of the teaching assistants. User IDs are returned by the user registration APIs. The users specified will have teaching assistant permissions in the room created.
  * @method void setAssistants(array $Assistants) Set The user IDs of the teaching assistants. User IDs are returned by the user registration APIs. The users specified will have teaching assistant permissions in the room created.
  * @method integer getRecordLayout() Obtain Recording layout
@@ -72,17 +72,17 @@ class CreateRoomRequest extends AbstractModel
     public $SdkAppId;
 
     /**
-     * @var integer Resolution. Valid values: `1`: SD; `2`: HD; `3`: FHD
+     * @var integer 	Resolution. Valid values: 1: SD; 2: HD; 3: FHD
      */
     public $Resolution;
 
     /**
-     * @var integer Maximum number of mic-on users (excluding teachers). Value range: [0, 16]	
+     * @var integer Maximum number of mic-on users (excluding teachers). Value range: [0, 16]
      */
     public $MaxMicNumber;
 
     /**
-     * @var string The room subtype. Valid values: `videodoc`: Document + Video; `video`: Video only. 
+     * @var string The room subtype. Valid values: videodoc: Document + Video; video: Video only.
      */
     public $SubType;
 
@@ -92,17 +92,17 @@ class CreateRoomRequest extends AbstractModel
     public $TeacherId;
 
     /**
-     * @var integer Whether to automatically turn the mic on when the user enters a room. Valid values: `0`: No (default value); `1`: Yes.
+     * @var integer Whether to automatically turn the mic on when the user enters a room. Valid values: 0: No (default value); 1: Yes.
      */
     public $AutoMic;
 
     /**
-     * @var integer Whether to enable the high audio quality mode. Valid values: `0`: No (default value); `1`: Yes.
+     * @var integer Whether to enable the high audio quality mode. Valid values: 0: No (default value); 1: Yes.
      */
     public $AudioQuality;
 
     /**
-     * @var integer Whether to disable auto recording. Valid values: `0`: No (default); `1`: Yes. If this parameter is `0`, recording will start when the class starts and stops when the class ends.
+     * @var integer Whether to disable auto recording. Valid values: 0: No (default); 1: Yes. If this parameter is 0, recording will start when the class starts and stops when the class ends.
      */
     public $DisableRecord;
 
@@ -126,13 +126,13 @@ class CreateRoomRequest extends AbstractModel
      * @param integer $StartTime Reserved room start time, in UNIX timestamp format
      * @param integer $EndTime Reserved room end time, in UNIX timestamp format
      * @param integer $SdkAppId LCIC SdkAppId
-     * @param integer $Resolution Resolution. Valid values: `1`: SD; `2`: HD; `3`: FHD
-     * @param integer $MaxMicNumber Maximum number of mic-on users (excluding teachers). Value range: [0, 16]	
-     * @param string $SubType The room subtype. Valid values: `videodoc`: Document + Video; `video`: Video only. 
+     * @param integer $Resolution 	Resolution. Valid values: 1: SD; 2: HD; 3: FHD
+     * @param integer $MaxMicNumber Maximum number of mic-on users (excluding teachers). Value range: [0, 16]
+     * @param string $SubType The room subtype. Valid values: videodoc: Document + Video; video: Video only.
      * @param string $TeacherId The user ID of the teacher. User IDs are returned by the user registration APIs. The user specified will have teacher permissions in the room created.
-     * @param integer $AutoMic Whether to automatically turn the mic on when the user enters a room. Valid values: `0`: No (default value); `1`: Yes.
-     * @param integer $AudioQuality Whether to enable the high audio quality mode. Valid values: `0`: No (default value); `1`: Yes.
-     * @param integer $DisableRecord Whether to disable auto recording. Valid values: `0`: No (default); `1`: Yes. If this parameter is `0`, recording will start when the class starts and stops when the class ends.
+     * @param integer $AutoMic Whether to automatically turn the mic on when the user enters a room. Valid values: 0: No (default value); 1: Yes.
+     * @param integer $AudioQuality Whether to enable the high audio quality mode. Valid values: 0: No (default value); 1: Yes.
+     * @param integer $DisableRecord Whether to disable auto recording. Valid values: 0: No (default); 1: Yes. If this parameter is 0, recording will start when the class starts and stops when the class ends.
      * @param array $Assistants The user IDs of the teaching assistants. User IDs are returned by the user registration APIs. The users specified will have teaching assistant permissions in the room created.
      * @param integer $RecordLayout Recording layout
      * @param string $GroupId The ID of the group to bind. If you specify this parameter, only members of the group can enter this room.

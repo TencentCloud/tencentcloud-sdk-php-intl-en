@@ -19,19 +19,16 @@ use TencentCloud\Common\AbstractModel;
 
 /**
  * The information of registered users.
+Used by actions: BatchRegister.
  *
  * @method integer getSdkAppId() Obtain The SDKAppID assigned by LCIC.
 
  * @method void setSdkAppId(integer $SdkAppId) Set The SDKAppID assigned by LCIC.
 
- * @method string getUserId() Obtain The user ID.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setUserId(string $UserId) Set The user ID.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getOriginId() Obtain The user’s ID in your system. If the same request parameter is not specified, the value of this parameter will be the same as `UserId`.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setOriginId(string $OriginId) Set The user’s ID in your system. If the same request parameter is not specified, the value of this parameter will be the same as `UserId`.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getUserId() Obtain The user ID. Note: This field may return null, indicating that no valid values can be obtained
+ * @method void setUserId(string $UserId) Set The user ID. Note: This field may return null, indicating that no valid values can be obtained
+ * @method string getOriginId() Obtain The user’s ID in your system. If the same request parameter is not specified, the value of this parameter will be the same as UserId. Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setOriginId(string $OriginId) Set The user’s ID in your system. If the same request parameter is not specified, the value of this parameter will be the same as UserId. Note: This field may return null, indicating that no valid values can be obtained.
  */
 class BatchUserInfo extends AbstractModel
 {
@@ -42,24 +39,20 @@ class BatchUserInfo extends AbstractModel
     public $SdkAppId;
 
     /**
-     * @var string The user ID.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string The user ID. Note: This field may return null, indicating that no valid values can be obtained
      */
     public $UserId;
 
     /**
-     * @var string The user’s ID in your system. If the same request parameter is not specified, the value of this parameter will be the same as `UserId`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string The user’s ID in your system. If the same request parameter is not specified, the value of this parameter will be the same as UserId. Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $OriginId;
 
     /**
      * @param integer $SdkAppId The SDKAppID assigned by LCIC.
 
-     * @param string $UserId The user ID.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $OriginId The user’s ID in your system. If the same request parameter is not specified, the value of this parameter will be the same as `UserId`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $UserId The user ID. Note: This field may return null, indicating that no valid values can be obtained
+     * @param string $OriginId The user’s ID in your system. If the same request parameter is not specified, the value of this parameter will be the same as UserId. Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

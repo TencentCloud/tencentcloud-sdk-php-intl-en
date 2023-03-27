@@ -62,6 +62,10 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 - `AUTO` (automatically redirect HTTP to HTTPS)
 - `NONE` (no redirection)
 Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method string getDomain() Obtain CLB domain name
+Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method void setDomain(string $Domain) Set CLB domain name
+Note: This field may return `null`, indicating that no valid value can be obtained.
  */
 class IngressInfo extends AbstractModel
 {
@@ -135,6 +139,12 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     public $RewriteType;
 
     /**
+     * @var string CLB domain name
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public $Domain;
+
+    /**
      * @param string $EnvironmentId Environment ID
 Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param string $ClusterNamespace Environment namespace
@@ -155,6 +165,8 @@ Note: this field may return `null`, indicating that no valid values can be obtai
      * @param string $RewriteType Redirection mode. Values:
 - `AUTO` (automatically redirect HTTP to HTTPS)
 - `NONE` (no redirection)
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param string $Domain CLB domain name
 Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     function __construct()
@@ -226,6 +238,10 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 
         if (array_key_exists("RewriteType",$param) and $param["RewriteType"] !== null) {
             $this->RewriteType = $param["RewriteType"];
+        }
+
+        if (array_key_exists("Domain",$param) and $param["Domain"] !== null) {
+            $this->Domain = $param["Domain"];
         }
     }
 }

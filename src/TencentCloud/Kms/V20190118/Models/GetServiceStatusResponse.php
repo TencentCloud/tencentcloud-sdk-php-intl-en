@@ -46,6 +46,10 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method void setExclusiveHSMEnabled(boolean $ExclusiveHSMEnabled) Set Whether to activate Exclusive KMS
 Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method string getSubscriptionInfo() Obtain KMS subscription information.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setSubscriptionInfo(string $SubscriptionInfo) Set KMS subscription information.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -97,6 +101,12 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     public $ExclusiveHSMEnabled;
 
     /**
+     * @var string KMS subscription information.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $SubscriptionInfo;
+
+    /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
@@ -115,6 +125,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param boolean $ExclusiveHSMEnabled Whether to activate Exclusive KMS
 Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param string $SubscriptionInfo KMS subscription information.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -160,6 +172,10 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 
         if (array_key_exists("ExclusiveHSMEnabled",$param) and $param["ExclusiveHSMEnabled"] !== null) {
             $this->ExclusiveHSMEnabled = $param["ExclusiveHSMEnabled"];
+        }
+
+        if (array_key_exists("SubscriptionInfo",$param) and $param["SubscriptionInfo"] !== null) {
+            $this->SubscriptionInfo = $param["SubscriptionInfo"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

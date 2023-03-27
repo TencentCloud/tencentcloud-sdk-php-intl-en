@@ -26,20 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSdkAppId(integer $SdkAppId) Set The SDKAppID assigned by LCIC.
  * @method integer getPage() Obtain The page to return records from. Pagination starts from 1, which is also the default value of this parameter.
  * @method void setPage(integer $Page) Set The page to return records from. Pagination starts from 1, which is also the default value of this parameter.
- * @method integer getLimit() Obtain The maximum number of records to return per page. The maximum value can be `1000`. The default value is `100`.
- * @method void setLimit(integer $Limit) Set The maximum number of records to return per page. The maximum value can be `1000`. The default value is `100`.
- * @method array getPermission() Obtain The document access type.
-[0]: The private documents of the owner.
-[1]: The public documents of the owner.
-[0,1]: The private and public documents of the owner.
-[2]: The private and public documents of all users (including the owner).
-Default value: [2].
- * @method void setPermission(array $Permission) Set The document access type.
-[0]: The private documents of the owner.
-[1]: The public documents of the owner.
-[0,1]: The private and public documents of the owner.
-[2]: The private and public documents of all users (including the owner).
-Default value: [2].
+ * @method integer getLimit() Obtain The maximum number of records to return per page. The maximum value can be 1000. The default value is 100.
+ * @method void setLimit(integer $Limit) Set The maximum number of records to return per page. The maximum value can be 1000. The default value is 100.
+ * @method array getPermission() Obtain The document access type. [0]: The private documents of the owner. [1]: The public documents of the owner. [0,1]: The private and public documents of the owner. [2]: The private and public documents of all users (including the owner). Default value: [2].
+ * @method void setPermission(array $Permission) Set The document access type. [0]: The private documents of the owner. [1]: The public documents of the owner. [0,1]: The private and public documents of the owner. [2]: The private and public documents of all users (including the owner). Default value: [2].
  * @method string getOwner() Obtain The user ID of the document owner. If you do not specify this, the information of all documents under the application will be returned.
  * @method void setOwner(string $Owner) Set The user ID of the document owner. If you do not specify this, the information of all documents under the application will be returned.
  */
@@ -61,17 +51,12 @@ class DescribeDocumentsByRoomRequest extends AbstractModel
     public $Page;
 
     /**
-     * @var integer The maximum number of records to return per page. The maximum value can be `1000`. The default value is `100`.
+     * @var integer The maximum number of records to return per page. The maximum value can be 1000. The default value is 100.
      */
     public $Limit;
 
     /**
-     * @var array The document access type.
-[0]: The private documents of the owner.
-[1]: The public documents of the owner.
-[0,1]: The private and public documents of the owner.
-[2]: The private and public documents of all users (including the owner).
-Default value: [2].
+     * @var array The document access type. [0]: The private documents of the owner. [1]: The public documents of the owner. [0,1]: The private and public documents of the owner. [2]: The private and public documents of all users (including the owner). Default value: [2].
      */
     public $Permission;
 
@@ -84,13 +69,8 @@ Default value: [2].
      * @param integer $RoomId The room ID.
      * @param integer $SdkAppId The SDKAppID assigned by LCIC.
      * @param integer $Page The page to return records from. Pagination starts from 1, which is also the default value of this parameter.
-     * @param integer $Limit The maximum number of records to return per page. The maximum value can be `1000`. The default value is `100`.
-     * @param array $Permission The document access type.
-[0]: The private documents of the owner.
-[1]: The public documents of the owner.
-[0,1]: The private and public documents of the owner.
-[2]: The private and public documents of all users (including the owner).
-Default value: [2].
+     * @param integer $Limit The maximum number of records to return per page. The maximum value can be 1000. The default value is 100.
+     * @param array $Permission The document access type. [0]: The private documents of the owner. [1]: The public documents of the owner. [0,1]: The private and public documents of the owner. [2]: The private and public documents of all users (including the owner). Default value: [2].
      * @param string $Owner The user ID of the document owner. If you do not specify this, the information of all documents under the application will be returned.
      */
     function __construct()

@@ -20,48 +20,36 @@ use TencentCloud\Common\AbstractModel;
 /**
  * GetWatermark response structure.
  *
- * @method WatermarkConfig getTeacherLogo() Obtain The watermark settings for the teacher’s video.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setTeacherLogo(WatermarkConfig $TeacherLogo) Set The watermark settings for the teacher’s video.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method WatermarkConfig getBoardLogo() Obtain The watermark settings for the whiteboard.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setBoardLogo(WatermarkConfig $BoardLogo) Set The watermark settings for the whiteboard.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method BackgroundPictureConfig getBackgroundPicture() Obtain The background image.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setBackgroundPicture(BackgroundPictureConfig $BackgroundPicture) Set The background image.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method TextMarkConfig getText() Obtain The watermark text.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setText(TextMarkConfig $Text) Set The watermark text.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method WatermarkConfig getTeacherLogo() Obtain The watermark settings for the teacher’s video. Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setTeacherLogo(WatermarkConfig $TeacherLogo) Set The watermark settings for the teacher’s video. Note: This field may return null, indicating that no valid values can be obtained.
+ * @method WatermarkConfig getBoardLogo() Obtain The watermark settings for the whiteboard. Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setBoardLogo(WatermarkConfig $BoardLogo) Set The watermark settings for the whiteboard. Note: This field may return null, indicating that no valid values can be obtained.
+ * @method BackgroundPictureConfig getBackgroundPicture() Obtain The background image. Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setBackgroundPicture(BackgroundPictureConfig $BackgroundPicture) Set The background image. Note: This field may return null, indicating that no valid values can be obtained.
+ * @method TextMarkConfig getText() Obtain The watermark text. Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setText(TextMarkConfig $Text) Set The watermark text. Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 class GetWatermarkResponse extends AbstractModel
 {
     /**
-     * @var WatermarkConfig The watermark settings for the teacher’s video.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var WatermarkConfig The watermark settings for the teacher’s video. Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $TeacherLogo;
 
     /**
-     * @var WatermarkConfig The watermark settings for the whiteboard.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var WatermarkConfig The watermark settings for the whiteboard. Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $BoardLogo;
 
     /**
-     * @var BackgroundPictureConfig The background image.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var BackgroundPictureConfig The background image. Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $BackgroundPicture;
 
     /**
-     * @var TextMarkConfig The watermark text.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var TextMarkConfig The watermark text. Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Text;
 
@@ -71,14 +59,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $RequestId;
 
     /**
-     * @param WatermarkConfig $TeacherLogo The watermark settings for the teacher’s video.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param WatermarkConfig $BoardLogo The watermark settings for the whiteboard.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param BackgroundPictureConfig $BackgroundPicture The background image.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param TextMarkConfig $Text The watermark text.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param WatermarkConfig $TeacherLogo The watermark settings for the teacher’s video. Note: This field may return null, indicating that no valid values can be obtained.
+     * @param WatermarkConfig $BoardLogo The watermark settings for the whiteboard. Note: This field may return null, indicating that no valid values can be obtained.
+     * @param BackgroundPictureConfig $BackgroundPicture The background image. Note: This field may return null, indicating that no valid values can be obtained.
+     * @param TextMarkConfig $Text The watermark text. Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()

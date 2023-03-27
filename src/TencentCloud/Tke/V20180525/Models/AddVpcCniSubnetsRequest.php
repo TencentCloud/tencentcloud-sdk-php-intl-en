@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSubnetIds(array $SubnetIds) Set The subnets added for the cluster container network
  * @method string getVpcId() Obtain ID of the VPC where the cluster resides
  * @method void setVpcId(string $VpcId) Set ID of the VPC where the cluster resides
+ * @method boolean getSkipAddingNonMasqueradeCIDRs() Obtain Whether to skip adding the VPC IP range to `NonMasqueradeCIDRs` field of `ip-masq-agent-config`. Default value: `false`
+ * @method void setSkipAddingNonMasqueradeCIDRs(boolean $SkipAddingNonMasqueradeCIDRs) Set Whether to skip adding the VPC IP range to `NonMasqueradeCIDRs` field of `ip-masq-agent-config`. Default value: `false`
  */
 class AddVpcCniSubnetsRequest extends AbstractModel
 {
@@ -45,9 +47,15 @@ class AddVpcCniSubnetsRequest extends AbstractModel
     public $VpcId;
 
     /**
+     * @var boolean Whether to skip adding the VPC IP range to `NonMasqueradeCIDRs` field of `ip-masq-agent-config`. Default value: `false`
+     */
+    public $SkipAddingNonMasqueradeCIDRs;
+
+    /**
      * @param string $ClusterId Cluster ID
      * @param array $SubnetIds The subnets added for the cluster container network
      * @param string $VpcId ID of the VPC where the cluster resides
+     * @param boolean $SkipAddingNonMasqueradeCIDRs Whether to skip adding the VPC IP range to `NonMasqueradeCIDRs` field of `ip-masq-agent-config`. Default value: `false`
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class AddVpcCniSubnetsRequest extends AbstractModel
 
         if (array_key_exists("VpcId",$param) and $param["VpcId"] !== null) {
             $this->VpcId = $param["VpcId"];
+        }
+
+        if (array_key_exists("SkipAddingNonMasqueradeCIDRs",$param) and $param["SkipAddingNonMasqueradeCIDRs"] !== null) {
+            $this->SkipAddingNonMasqueradeCIDRs = $param["SkipAddingNonMasqueradeCIDRs"];
         }
     }
 }

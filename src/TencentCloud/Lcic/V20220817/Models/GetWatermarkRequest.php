@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * GetWatermark request structure.
  *
- * @method integer getSdkAppId() Obtain The SDKAppID assigned by LCIC.	
- * @method void setSdkAppId(integer $SdkAppId) Set The SDKAppID assigned by LCIC.	
+ * @method integer getSdkAppId() Obtain The SDKAppID assigned by LCIC.
+ * @method void setSdkAppId(integer $SdkAppId) Set The SDKAppID assigned by LCIC.
  */
 class GetWatermarkRequest extends AbstractModel
 {
     /**
-     * @var integer The SDKAppID assigned by LCIC.	
+     * @var integer The SDKAppID assigned by LCIC.
      */
     public $SdkAppId;
 
     /**
-     * @param integer $SdkAppId The SDKAppID assigned by LCIC.	
+     * @param integer $SdkAppId The SDKAppID assigned by LCIC.
      */
     function __construct()
     {
