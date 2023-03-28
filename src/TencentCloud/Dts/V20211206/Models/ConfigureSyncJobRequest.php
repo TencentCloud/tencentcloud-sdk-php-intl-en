@@ -38,8 +38,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setExpectRunTime(string $ExpectRunTime) Set Expected start time in the format of "2006-01-02 15:04:05", which is required if `RunMode` is `Timed`.
  * @method Endpoint getSrcInfo() Obtain Source database information. This parameter only applies to single-node databases, and `SrcNodeType` must be `single`.
  * @method void setSrcInfo(Endpoint $SrcInfo) Set Source database information. This parameter only applies to single-node databases, and `SrcNodeType` must be `single`.
+ * @method SyncDBEndpointInfos getSrcInfos() Obtain Source database information. This parameter is valid for multi-node databases, and the value of `SrcNodeType` must be `cluster`.
+ * @method void setSrcInfos(SyncDBEndpointInfos $SrcInfos) Set Source database information. This parameter is valid for multi-node databases, and the value of `SrcNodeType` must be `cluster`.
+ * @method string getSrcNodeType() Obtain Enumerated values: `single` (for single-node source database), `cluster` (for multi-node source database).
+ * @method void setSrcNodeType(string $SrcNodeType) Set Enumerated values: `single` (for single-node source database), `cluster` (for multi-node source database).
  * @method Endpoint getDstInfo() Obtain Target database information. This parameter is used by single-node databases.
  * @method void setDstInfo(Endpoint $DstInfo) Set Target database information. This parameter is used by single-node databases.
+ * @method SyncDBEndpointInfos getDstInfos() Obtain Target database information. This parameter is valid for multi-node databases, and the value of `DstNodeType` must be `cluster`.
+ * @method void setDstInfos(SyncDBEndpointInfos $DstInfos) Set Target database information. This parameter is valid for multi-node databases, and the value of `DstNodeType` must be `cluster`.
+ * @method string getDstNodeType() Obtain Enumerated values: `single` (for single-node target database), `cluster` (for multi-node target database).
+ * @method void setDstNodeType(string $DstNodeType) Set Enumerated values: `single` (for single-node target database), `cluster` (for multi-node target database).
  * @method Options getOptions() Obtain Sync task options
  * @method void setOptions(Options $Options) Set Sync task options
  * @method integer getAutoRetryTimeRangeMinutes() Obtain Automatic retry time, which can be set to 5-720 minutes. 0 indicates that retry is disabled.
@@ -93,9 +101,29 @@ class ConfigureSyncJobRequest extends AbstractModel
     public $SrcInfo;
 
     /**
+     * @var SyncDBEndpointInfos Source database information. This parameter is valid for multi-node databases, and the value of `SrcNodeType` must be `cluster`.
+     */
+    public $SrcInfos;
+
+    /**
+     * @var string Enumerated values: `single` (for single-node source database), `cluster` (for multi-node source database).
+     */
+    public $SrcNodeType;
+
+    /**
      * @var Endpoint Target database information. This parameter is used by single-node databases.
      */
     public $DstInfo;
+
+    /**
+     * @var SyncDBEndpointInfos Target database information. This parameter is valid for multi-node databases, and the value of `DstNodeType` must be `cluster`.
+     */
+    public $DstInfos;
+
+    /**
+     * @var string Enumerated values: `single` (for single-node target database), `cluster` (for multi-node target database).
+     */
+    public $DstNodeType;
 
     /**
      * @var Options Sync task options
@@ -117,7 +145,11 @@ class ConfigureSyncJobRequest extends AbstractModel
      * @param string $RunMode Running mode. Valid values: `Immediate`, `Timed`. Default value: `Immediate`.
      * @param string $ExpectRunTime Expected start time in the format of "2006-01-02 15:04:05", which is required if `RunMode` is `Timed`.
      * @param Endpoint $SrcInfo Source database information. This parameter only applies to single-node databases, and `SrcNodeType` must be `single`.
+     * @param SyncDBEndpointInfos $SrcInfos Source database information. This parameter is valid for multi-node databases, and the value of `SrcNodeType` must be `cluster`.
+     * @param string $SrcNodeType Enumerated values: `single` (for single-node source database), `cluster` (for multi-node source database).
      * @param Endpoint $DstInfo Target database information. This parameter is used by single-node databases.
+     * @param SyncDBEndpointInfos $DstInfos Target database information. This parameter is valid for multi-node databases, and the value of `DstNodeType` must be `cluster`.
+     * @param string $DstNodeType Enumerated values: `single` (for single-node target database), `cluster` (for multi-node target database).
      * @param Options $Options Sync task options
      * @param integer $AutoRetryTimeRangeMinutes Automatic retry time, which can be set to 5-720 minutes. 0 indicates that retry is disabled.
      */
@@ -172,9 +204,27 @@ class ConfigureSyncJobRequest extends AbstractModel
             $this->SrcInfo->deserialize($param["SrcInfo"]);
         }
 
+        if (array_key_exists("SrcInfos",$param) and $param["SrcInfos"] !== null) {
+            $this->SrcInfos = new SyncDBEndpointInfos();
+            $this->SrcInfos->deserialize($param["SrcInfos"]);
+        }
+
+        if (array_key_exists("SrcNodeType",$param) and $param["SrcNodeType"] !== null) {
+            $this->SrcNodeType = $param["SrcNodeType"];
+        }
+
         if (array_key_exists("DstInfo",$param) and $param["DstInfo"] !== null) {
             $this->DstInfo = new Endpoint();
             $this->DstInfo->deserialize($param["DstInfo"]);
+        }
+
+        if (array_key_exists("DstInfos",$param) and $param["DstInfos"] !== null) {
+            $this->DstInfos = new SyncDBEndpointInfos();
+            $this->DstInfos->deserialize($param["DstInfos"]);
+        }
+
+        if (array_key_exists("DstNodeType",$param) and $param["DstNodeType"] !== null) {
+            $this->DstNodeType = $param["DstNodeType"];
         }
 
         if (array_key_exists("Options",$param) and $param["Options"] !== null) {

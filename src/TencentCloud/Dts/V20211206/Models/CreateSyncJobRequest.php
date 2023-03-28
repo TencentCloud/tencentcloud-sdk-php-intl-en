@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSrcDatabaseType(string $SrcDatabaseType) Set Source database type, such as `mysql`, `cynosdbmysql`, `tdapg`, `tdpg`, and `tdsqlmysql`.
  * @method string getSrcRegion() Obtain Source database region, such as `ap-guangzhou`.
  * @method void setSrcRegion(string $SrcRegion) Set Source database region, such as `ap-guangzhou`.
- * @method string getDstDatabaseType() Obtain Target database type, such as `mysql`, `cynosdbmysql`, `tdapg`, `tdpg`, and `tdsqlmysql`.
- * @method void setDstDatabaseType(string $DstDatabaseType) Set Target database type, such as `mysql`, `cynosdbmysql`, `tdapg`, `tdpg`, and `tdsqlmysql`.
+ * @method string getDstDatabaseType() Obtain Target database type, such as `mysql`, `cynosdbmysql`, `tdapg`, `tdpg`, `tdsqlmysql`, and `kafka`.
+ * @method void setDstDatabaseType(string $DstDatabaseType) Set Target database type, such as `mysql`, `cynosdbmysql`, `tdapg`, `tdpg`, `tdsqlmysql`, and `kafka`.
  * @method string getDstRegion() Obtain Target database region, such as `ap-guangzhou`.
  * @method void setDstRegion(string $DstRegion) Set Target database region, such as `ap-guangzhou`.
  * @method string getSpecification() Obtain Sync task specification, such as `Standard`.
@@ -63,7 +63,7 @@ class CreateSyncJobRequest extends AbstractModel
     public $SrcRegion;
 
     /**
-     * @var string Target database type, such as `mysql`, `cynosdbmysql`, `tdapg`, `tdpg`, and `tdsqlmysql`.
+     * @var string Target database type, such as `mysql`, `cynosdbmysql`, `tdapg`, `tdpg`, `tdsqlmysql`, and `kafka`.
      */
     public $DstDatabaseType;
 
@@ -111,7 +111,7 @@ class CreateSyncJobRequest extends AbstractModel
      * @param string $PayMode Billing mode. Valid values: `PrePay` (monthly subscription); `PostPay` (pay-as-you-go). Currently, DTS at Tencent Cloud International is free of charge.
      * @param string $SrcDatabaseType Source database type, such as `mysql`, `cynosdbmysql`, `tdapg`, `tdpg`, and `tdsqlmysql`.
      * @param string $SrcRegion Source database region, such as `ap-guangzhou`.
-     * @param string $DstDatabaseType Target database type, such as `mysql`, `cynosdbmysql`, `tdapg`, `tdpg`, and `tdsqlmysql`.
+     * @param string $DstDatabaseType Target database type, such as `mysql`, `cynosdbmysql`, `tdapg`, `tdpg`, `tdsqlmysql`, and `kafka`.
      * @param string $DstRegion Target database region, such as `ap-guangzhou`.
      * @param string $Specification Sync task specification, such as `Standard`.
      * @param array $Tags Tag information

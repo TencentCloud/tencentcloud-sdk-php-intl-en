@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Scheduled tasks.
  *
- * @method Externals getExternals() Obtain Additional data
- * @method void setExternals(Externals $Externals) Set Additional data
  * @method string getTimerAction() Obtain Timer name. Currently `TerminateInstances` is the only supported value.
  * @method void setTimerAction(string $TimerAction) Set Timer name. Currently `TerminateInstances` is the only supported value.
- * @method string getActionTime() Obtain Execution time, which must be at least 5 minutes later than the current time. For example, 2018-5-29 11:26:40.
- * @method void setActionTime(string $ActionTime) Set Execution time, which must be at least 5 minutes later than the current time. For example, 2018-5-29 11:26:40.
+ * @method string getActionTime() Obtain Execution time, which follows the ISO8601 standard and uses UTC time. It must be at least 5 minutes later than the current time. Format: YYYY-MM-DDThh:mm:ssZ. For example: 2018-05-29T11:26:40Z.
+ * @method void setActionTime(string $ActionTime) Set Execution time, which follows the ISO8601 standard and uses UTC time. It must be at least 5 minutes later than the current time. Format: YYYY-MM-DDThh:mm:ssZ. For example: 2018-05-29T11:26:40Z.
+ * @method Externals getExternals() Obtain Additional data
+ * @method void setExternals(Externals $Externals) Set Additional data
  */
 class ActionTimer extends AbstractModel
 {
-    /**
-     * @var Externals Additional data
-     */
-    public $Externals;
-
     /**
      * @var string Timer name. Currently `TerminateInstances` is the only supported value.
      */
     public $TimerAction;
 
     /**
-     * @var string Execution time, which must be at least 5 minutes later than the current time. For example, 2018-5-29 11:26:40.
+     * @var string Execution time, which follows the ISO8601 standard and uses UTC time. It must be at least 5 minutes later than the current time. Format: YYYY-MM-DDThh:mm:ssZ. For example: 2018-05-29T11:26:40Z.
      */
     public $ActionTime;
 
     /**
-     * @param Externals $Externals Additional data
+     * @var Externals Additional data
+     */
+    public $Externals;
+
+    /**
      * @param string $TimerAction Timer name. Currently `TerminateInstances` is the only supported value.
-     * @param string $ActionTime Execution time, which must be at least 5 minutes later than the current time. For example, 2018-5-29 11:26:40.
+     * @param string $ActionTime Execution time, which follows the ISO8601 standard and uses UTC time. It must be at least 5 minutes later than the current time. Format: YYYY-MM-DDThh:mm:ssZ. For example: 2018-05-29T11:26:40Z.
+     * @param Externals $Externals Additional data
      */
     function __construct()
     {
@@ -62,17 +62,17 @@ class ActionTimer extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Externals",$param) and $param["Externals"] !== null) {
-            $this->Externals = new Externals();
-            $this->Externals->deserialize($param["Externals"]);
-        }
-
         if (array_key_exists("TimerAction",$param) and $param["TimerAction"] !== null) {
             $this->TimerAction = $param["TimerAction"];
         }
 
         if (array_key_exists("ActionTime",$param) and $param["ActionTime"] !== null) {
             $this->ActionTime = $param["ActionTime"];
+        }
+
+        if (array_key_exists("Externals",$param) and $param["Externals"] !== null) {
+            $this->Externals = new Externals();
+            $this->Externals->deserialize($param["Externals"]);
         }
     }
 }

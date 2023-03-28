@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getInstanceIds() Obtain Instance ID(s). To obtain the instance IDs, you can call [`DescribeInstances`](https://intl.cloud.tencent.com/document/api/213/15728?from_cn_redirect=1) and look for `InstanceId` in the response. The maximum number of instances in each request is 100.
  * @method void setInstanceIds(array $InstanceIds) Set Instance ID(s). To obtain the instance IDs, you can call [`DescribeInstances`](https://intl.cloud.tencent.com/document/api/213/15728?from_cn_redirect=1) and look for `InstanceId` in the response. The maximum number of instances in each request is 100.
+ * @method boolean getReleasePrepaidDataDisks() Obtain Release the monthly subscribed data disks attached to the instance
+ * @method void setReleasePrepaidDataDisks(boolean $ReleasePrepaidDataDisks) Set Release the monthly subscribed data disks attached to the instance
  */
 class TerminateInstancesRequest extends AbstractModel
 {
@@ -31,7 +33,13 @@ class TerminateInstancesRequest extends AbstractModel
     public $InstanceIds;
 
     /**
+     * @var boolean Release the monthly subscribed data disks attached to the instance
+     */
+    public $ReleasePrepaidDataDisks;
+
+    /**
      * @param array $InstanceIds Instance ID(s). To obtain the instance IDs, you can call [`DescribeInstances`](https://intl.cloud.tencent.com/document/api/213/15728?from_cn_redirect=1) and look for `InstanceId` in the response. The maximum number of instances in each request is 100.
+     * @param boolean $ReleasePrepaidDataDisks Release the monthly subscribed data disks attached to the instance
      */
     function __construct()
     {
@@ -48,6 +56,10 @@ class TerminateInstancesRequest extends AbstractModel
         }
         if (array_key_exists("InstanceIds",$param) and $param["InstanceIds"] !== null) {
             $this->InstanceIds = $param["InstanceIds"];
+        }
+
+        if (array_key_exists("ReleasePrepaidDataDisks",$param) and $param["ReleasePrepaidDataDisks"] !== null) {
+            $this->ReleasePrepaidDataDisks = $param["ReleasePrepaidDataDisks"];
         }
     }
 }

@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRegistryChargePrepaid(RegistryChargePrepaid $RegistryChargePrepaid) Set Auto-renewal setting and purchase period
  * @method boolean getSyncTag() Obtain Whether to sync TCR cloud tags to the COS bucket
  * @method void setSyncTag(boolean $SyncTag) Set Whether to sync TCR cloud tags to the COS bucket
+ * @method boolean getEnableCosMAZ() Obtain Whether to enable the COS Multi-AZ feature
+ * @method void setEnableCosMAZ(boolean $EnableCosMAZ) Set Whether to enable the COS Multi-AZ feature
  */
 class CreateInstanceRequest extends AbstractModel
 {
@@ -66,12 +68,18 @@ class CreateInstanceRequest extends AbstractModel
     public $SyncTag;
 
     /**
+     * @var boolean Whether to enable the COS Multi-AZ feature
+     */
+    public $EnableCosMAZ;
+
+    /**
      * @param string $RegistryName Enterprise Edition instance name
      * @param string $RegistryType Enterprise Edition instance type. Valid values: basic: Basic; standard: Standard; premium: Premium.
      * @param TagSpecification $TagSpecification Cloud tag description
      * @param integer $RegistryChargeType Instance billing mode. Valid values: 0: Pay-as-you-go billing; 1: Prepaid. Default value: 0.
      * @param RegistryChargePrepaid $RegistryChargePrepaid Auto-renewal setting and purchase period
      * @param boolean $SyncTag Whether to sync TCR cloud tags to the COS bucket
+     * @param boolean $EnableCosMAZ Whether to enable the COS Multi-AZ feature
      */
     function __construct()
     {
@@ -110,6 +118,10 @@ class CreateInstanceRequest extends AbstractModel
 
         if (array_key_exists("SyncTag",$param) and $param["SyncTag"] !== null) {
             $this->SyncTag = $param["SyncTag"];
+        }
+
+        if (array_key_exists("EnableCosMAZ",$param) and $param["EnableCosMAZ"] !== null) {
+            $this->EnableCosMAZ = $param["EnableCosMAZ"];
         }
     }
 }

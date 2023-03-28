@@ -48,6 +48,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setDdlOptions(array $DdlOptions) Set DDL statements to be synced
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method KafkaOption getKafkaOption() Obtain Kafka sync options
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setKafkaOption(KafkaOption $KafkaOption) Set Kafka sync options
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class Options extends AbstractModel
 {
@@ -94,6 +98,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $DdlOptions;
 
     /**
+     * @var KafkaOption Kafka sync options
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $KafkaOption;
+
+    /**
      * @param string $InitType Sync initialization option. Valid values: `data` (full data initialization); `Structure` (structure initialization); `Full` (full data and structure initialization); `None` (incremental data only). Default value: `Full`.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $DealOfExistSameTable Processing method for duplicate tables. Valid values: `ReportErrorAfterCheck`, `InitializeAfterDelete`, `ExecuteAfterIgnore`. Default value: `ReportErrorAfterCheck`.
@@ -107,6 +117,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param ConflictHandleOption $ConflictHandleOption Detailed option for conflict processing, such as condition rows and operations in conditional overwrite.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param array $DdlOptions DDL statements to be synced
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param KafkaOption $KafkaOption Kafka sync options
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
@@ -154,6 +166,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 $obj->deserialize($value);
                 array_push($this->DdlOptions, $obj);
             }
+        }
+
+        if (array_key_exists("KafkaOption",$param) and $param["KafkaOption"] !== null) {
+            $this->KafkaOption = new KafkaOption();
+            $this->KafkaOption->deserialize($param["KafkaOption"]);
         }
     }
 }
