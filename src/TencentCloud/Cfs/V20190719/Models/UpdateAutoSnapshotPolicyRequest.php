@@ -32,6 +32,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAliveDays(integer $AliveDays) Set Snapshot retention period
  * @method integer getIsActivated() Obtain Whether to activate the scheduled snapshot feature
  * @method void setIsActivated(integer $IsActivated) Set Whether to activate the scheduled snapshot feature
+ * @method string getDayOfMonth() Obtain The specific day of the month on which to create a snapshot. This parameter is mutually exclusive with `DayOfWeek`.
+ * @method void setDayOfMonth(string $DayOfMonth) Set The specific day of the month on which to create a snapshot. This parameter is mutually exclusive with `DayOfWeek`.
+ * @method integer getIntervalDays() Obtain The snapshot interval. This parameter is mutually exclusive with `DayOfWeek` and `DayOfMonth`.
+ * @method void setIntervalDays(integer $IntervalDays) Set The snapshot interval. This parameter is mutually exclusive with `DayOfWeek` and `DayOfMonth`.
  */
 class UpdateAutoSnapshotPolicyRequest extends AbstractModel
 {
@@ -66,12 +70,24 @@ class UpdateAutoSnapshotPolicyRequest extends AbstractModel
     public $IsActivated;
 
     /**
+     * @var string The specific day of the month on which to create a snapshot. This parameter is mutually exclusive with `DayOfWeek`.
+     */
+    public $DayOfMonth;
+
+    /**
+     * @var integer The snapshot interval. This parameter is mutually exclusive with `DayOfWeek` and `DayOfMonth`.
+     */
+    public $IntervalDays;
+
+    /**
      * @param string $AutoSnapshotPolicyId Snapshot policy ID
      * @param string $PolicyName Snapshot policy name
      * @param string $DayOfWeek The day of the week on which to regularly back up the snapshot
      * @param string $Hour The hour of a day at which to regularly back up the snapshot
      * @param integer $AliveDays Snapshot retention period
      * @param integer $IsActivated Whether to activate the scheduled snapshot feature
+     * @param string $DayOfMonth The specific day of the month on which to create a snapshot. This parameter is mutually exclusive with `DayOfWeek`.
+     * @param integer $IntervalDays The snapshot interval. This parameter is mutually exclusive with `DayOfWeek` and `DayOfMonth`.
      */
     function __construct()
     {
@@ -108,6 +124,14 @@ class UpdateAutoSnapshotPolicyRequest extends AbstractModel
 
         if (array_key_exists("IsActivated",$param) and $param["IsActivated"] !== null) {
             $this->IsActivated = $param["IsActivated"];
+        }
+
+        if (array_key_exists("DayOfMonth",$param) and $param["DayOfMonth"] !== null) {
+            $this->DayOfMonth = $param["DayOfMonth"];
+        }
+
+        if (array_key_exists("IntervalDays",$param) and $param["IntervalDays"] !== null) {
+            $this->IntervalDays = $param["IntervalDays"];
         }
     }
 }

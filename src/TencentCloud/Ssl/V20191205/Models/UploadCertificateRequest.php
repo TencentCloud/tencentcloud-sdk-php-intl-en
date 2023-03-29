@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProjectId(integer $ProjectId) Set Project ID
  * @method string getCertificateUse() Obtain 
  * @method void setCertificateUse(string $CertificateUse) Set 
+ * @method boolean getRepeatable() Obtain Whether a certificate can be repeatedly uploaded.
+ * @method void setRepeatable(boolean $Repeatable) Set Whether a certificate can be repeatedly uploaded.
  */
 class UploadCertificateRequest extends AbstractModel
 {
@@ -66,12 +68,18 @@ class UploadCertificateRequest extends AbstractModel
     public $CertificateUse;
 
     /**
+     * @var boolean Whether a certificate can be repeatedly uploaded.
+     */
+    public $Repeatable;
+
+    /**
      * @param string $CertificatePublicKey Public key of the certificate
      * @param string $CertificatePrivateKey Private key content. This parameter is required when the certificate type is SVR, and not required when the certificate type is CA.
      * @param string $CertificateType Certificate type. `CA`: client certificate; `SVR`: server certificate. The default value is SVR.
      * @param string $Alias Alias
      * @param integer $ProjectId Project ID
      * @param string $CertificateUse 
+     * @param boolean $Repeatable Whether a certificate can be repeatedly uploaded.
      */
     function __construct()
     {
@@ -108,6 +116,10 @@ class UploadCertificateRequest extends AbstractModel
 
         if (array_key_exists("CertificateUse",$param) and $param["CertificateUse"] !== null) {
             $this->CertificateUse = $param["CertificateUse"];
+        }
+
+        if (array_key_exists("Repeatable",$param) and $param["Repeatable"] !== null) {
+            $this->Repeatable = $param["Repeatable"];
         }
     }
 }

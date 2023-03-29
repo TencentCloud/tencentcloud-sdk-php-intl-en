@@ -20,22 +20,21 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateAutoSnapshotPolicy request structure.
  *
- * @method string getDayOfWeek() Obtain The day of the week on which to repeat the snapshot operation
- * @method void setDayOfWeek(string $DayOfWeek) Set The day of the week on which to repeat the snapshot operation
  * @method string getHour() Obtain The time point when to repeat the snapshot operation
  * @method void setHour(string $Hour) Set The time point when to repeat the snapshot operation
  * @method string getPolicyName() Obtain Policy name
  * @method void setPolicyName(string $PolicyName) Set Policy name
+ * @method string getDayOfWeek() Obtain The day of the week on which to repeat the snapshot operation
+ * @method void setDayOfWeek(string $DayOfWeek) Set The day of the week on which to repeat the snapshot operation
  * @method integer getAliveDays() Obtain Snapshot retention period
  * @method void setAliveDays(integer $AliveDays) Set Snapshot retention period
+ * @method string getDayOfMonth() Obtain The specific day (day 1 to day 31) of the month on which to create a snapshot.
+ * @method void setDayOfMonth(string $DayOfMonth) Set The specific day (day 1 to day 31) of the month on which to create a snapshot.
+ * @method integer getIntervalDays() Obtain The snapshot interval, in days.
+ * @method void setIntervalDays(integer $IntervalDays) Set The snapshot interval, in days.
  */
 class CreateAutoSnapshotPolicyRequest extends AbstractModel
 {
-    /**
-     * @var string The day of the week on which to repeat the snapshot operation
-     */
-    public $DayOfWeek;
-
     /**
      * @var string The time point when to repeat the snapshot operation
      */
@@ -47,15 +46,32 @@ class CreateAutoSnapshotPolicyRequest extends AbstractModel
     public $PolicyName;
 
     /**
+     * @var string The day of the week on which to repeat the snapshot operation
+     */
+    public $DayOfWeek;
+
+    /**
      * @var integer Snapshot retention period
      */
     public $AliveDays;
 
     /**
-     * @param string $DayOfWeek The day of the week on which to repeat the snapshot operation
+     * @var string The specific day (day 1 to day 31) of the month on which to create a snapshot.
+     */
+    public $DayOfMonth;
+
+    /**
+     * @var integer The snapshot interval, in days.
+     */
+    public $IntervalDays;
+
+    /**
      * @param string $Hour The time point when to repeat the snapshot operation
      * @param string $PolicyName Policy name
+     * @param string $DayOfWeek The day of the week on which to repeat the snapshot operation
      * @param integer $AliveDays Snapshot retention period
+     * @param string $DayOfMonth The specific day (day 1 to day 31) of the month on which to create a snapshot.
+     * @param integer $IntervalDays The snapshot interval, in days.
      */
     function __construct()
     {
@@ -70,10 +86,6 @@ class CreateAutoSnapshotPolicyRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DayOfWeek",$param) and $param["DayOfWeek"] !== null) {
-            $this->DayOfWeek = $param["DayOfWeek"];
-        }
-
         if (array_key_exists("Hour",$param) and $param["Hour"] !== null) {
             $this->Hour = $param["Hour"];
         }
@@ -82,8 +94,20 @@ class CreateAutoSnapshotPolicyRequest extends AbstractModel
             $this->PolicyName = $param["PolicyName"];
         }
 
+        if (array_key_exists("DayOfWeek",$param) and $param["DayOfWeek"] !== null) {
+            $this->DayOfWeek = $param["DayOfWeek"];
+        }
+
         if (array_key_exists("AliveDays",$param) and $param["AliveDays"] !== null) {
             $this->AliveDays = $param["AliveDays"];
+        }
+
+        if (array_key_exists("DayOfMonth",$param) and $param["DayOfMonth"] !== null) {
+            $this->DayOfMonth = $param["DayOfMonth"];
+        }
+
+        if (array_key_exists("IntervalDays",$param) and $param["IntervalDays"] !== null) {
+            $this->IntervalDays = $param["IntervalDays"];
         }
     }
 }

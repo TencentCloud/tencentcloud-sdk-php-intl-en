@@ -60,6 +60,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCapacity(integer $Capacity) Set Total capacity of the file system
  * @method array getTags() Obtain File system tag list
  * @method void setTags(array $Tags) Set File system tag list
+ * @method string getTieringState() Obtain The lifecycle management status of a file system.
+ * @method void setTieringState(string $TieringState) Set The lifecycle management status of a file system.
+ * @method TieringDetailInfo getTieringDetail() Obtain The details about tiered storage.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setTieringDetail(TieringDetailInfo $TieringDetail) Set The details about tiered storage.
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class FileSystemInfo extends AbstractModel
 {
@@ -164,6 +170,17 @@ class FileSystemInfo extends AbstractModel
     public $Tags;
 
     /**
+     * @var string The lifecycle management status of a file system.
+     */
+    public $TieringState;
+
+    /**
+     * @var TieringDetailInfo The details about tiered storage.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $TieringDetail;
+
+    /**
      * @param string $CreationTime Creation time
      * @param string $CreationToken Custom name
      * @param string $FileSystemId File system ID
@@ -184,6 +201,9 @@ class FileSystemInfo extends AbstractModel
      * @param float $BandwidthLimit The upper limit on the file system’s throughput, which is determined based on its current usage, and bound resource packs for both storage and throughput
      * @param integer $Capacity Total capacity of the file system
      * @param array $Tags File system tag list
+     * @param string $TieringState The lifecycle management status of a file system.
+     * @param TieringDetailInfo $TieringDetail The details about tiered storage.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -282,6 +302,15 @@ class FileSystemInfo extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Tags, $obj);
             }
+        }
+
+        if (array_key_exists("TieringState",$param) and $param["TieringState"] !== null) {
+            $this->TieringState = $param["TieringState"];
+        }
+
+        if (array_key_exists("TieringDetail",$param) and $param["TieringDetail"] !== null) {
+            $this->TieringDetail = new TieringDetailInfo();
+            $this->TieringDetail->deserialize($param["TieringDetail"]);
         }
     }
 }

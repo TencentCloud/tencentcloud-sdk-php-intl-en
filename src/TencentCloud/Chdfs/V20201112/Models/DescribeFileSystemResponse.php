@@ -38,6 +38,14 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid value was found.
  * @method void setDegradeCapacityUsed(integer $DegradeCapacityUsed) Set Used STANDARD_IA capacity of COS, in bytes
 Note: this field may return `null`, indicating that no valid value was found.
+ * @method integer getDeepArchiveCapacityUsed() Obtain COS DEEP ARCHIVE storage usage, in bytes
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setDeepArchiveCapacityUsed(integer $DeepArchiveCapacityUsed) Set COS DEEP ARCHIVE storage usage, in bytes
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getIntelligentCapacityUsed() Obtain COS INTELLIGENT TIERING storage usage, in bytes
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setIntelligentCapacityUsed(integer $IntelligentCapacityUsed) Set COS INTELLIGENT TIERING storage usage, in bytes
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -73,6 +81,18 @@ Note: this field may return `null`, indicating that no valid value was found.
     public $DegradeCapacityUsed;
 
     /**
+     * @var integer COS DEEP ARCHIVE storage usage, in bytes
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $DeepArchiveCapacityUsed;
+
+    /**
+     * @var integer COS INTELLIGENT TIERING storage usage, in bytes
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $IntelligentCapacityUsed;
+
+    /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
@@ -87,6 +107,10 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param integer $DegradeCapacityUsed Used STANDARD_IA capacity of COS, in bytes
 Note: this field may return `null`, indicating that no valid value was found.
+     * @param integer $DeepArchiveCapacityUsed COS DEEP ARCHIVE storage usage, in bytes
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $IntelligentCapacityUsed COS INTELLIGENT TIERING storage usage, in bytes
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -121,6 +145,14 @@ Note: this field may return `null`, indicating that no valid value was found.
 
         if (array_key_exists("DegradeCapacityUsed",$param) and $param["DegradeCapacityUsed"] !== null) {
             $this->DegradeCapacityUsed = $param["DegradeCapacityUsed"];
+        }
+
+        if (array_key_exists("DeepArchiveCapacityUsed",$param) and $param["DeepArchiveCapacityUsed"] !== null) {
+            $this->DeepArchiveCapacityUsed = $param["DeepArchiveCapacityUsed"];
+        }
+
+        if (array_key_exists("IntelligentCapacityUsed",$param) and $param["IntelligentCapacityUsed"] !== null) {
+            $this->IntelligentCapacityUsed = $param["IntelligentCapacityUsed"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

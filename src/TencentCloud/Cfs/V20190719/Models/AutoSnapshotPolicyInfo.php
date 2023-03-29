@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCreationTime(string $CreationTime) Set Snapshot policy creation time
  * @method integer getFileSystemNums() Obtain Number of bound file systems
  * @method void setFileSystemNums(integer $FileSystemNums) Set Number of bound file systems
- * @method string getDayOfWeek() Obtain The day of the week on which to regularly back up the snapshot
- * @method void setDayOfWeek(string $DayOfWeek) Set The day of the week on which to regularly back up the snapshot
+ * @method string getDayOfWeek() Obtain The specific day of the week on which to create a snapshot. This parameter is mutually exclusive with `DayOfMonth` and `IntervalDays`.
+ * @method void setDayOfWeek(string $DayOfWeek) Set The specific day of the week on which to create a snapshot. This parameter is mutually exclusive with `DayOfMonth` and `IntervalDays`.
  * @method string getHour() Obtain The hour of a day at which to regularly back up the snapshot
  * @method void setHour(string $Hour) Set The hour of a day at which to regularly back up the snapshot
  * @method integer getIsActivated() Obtain Whether to activate the scheduled snapshot feature
@@ -46,6 +46,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRegionName(string $RegionName) Set Region
  * @method array getFileSystems() Obtain File system information
  * @method void setFileSystems(array $FileSystems) Set File system information
+ * @method string getDayOfMonth() Obtain The specific day of the month on which to create a snapshot. This parameter is mutually exclusive with `DayOfWeek` and `IntervalDays`.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setDayOfMonth(string $DayOfMonth) Set The specific day of the month on which to create a snapshot. This parameter is mutually exclusive with `DayOfWeek` and `IntervalDays`.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getIntervalDays() Obtain The snapshot interval (1 to 365 days). This parameter is mutually exclusive with `DayOfWeek` and `DayOfMonth`.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setIntervalDays(integer $IntervalDays) Set The snapshot interval (1 to 365 days). This parameter is mutually exclusive with `DayOfWeek` and `DayOfMonth`.
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class AutoSnapshotPolicyInfo extends AbstractModel
 {
@@ -70,7 +78,7 @@ class AutoSnapshotPolicyInfo extends AbstractModel
     public $FileSystemNums;
 
     /**
-     * @var string The day of the week on which to regularly back up the snapshot
+     * @var string The specific day of the week on which to create a snapshot. This parameter is mutually exclusive with `DayOfMonth` and `IntervalDays`.
      */
     public $DayOfWeek;
 
@@ -115,11 +123,23 @@ class AutoSnapshotPolicyInfo extends AbstractModel
     public $FileSystems;
 
     /**
+     * @var string The specific day of the month on which to create a snapshot. This parameter is mutually exclusive with `DayOfWeek` and `IntervalDays`.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $DayOfMonth;
+
+    /**
+     * @var integer The snapshot interval (1 to 365 days). This parameter is mutually exclusive with `DayOfWeek` and `DayOfMonth`.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $IntervalDays;
+
+    /**
      * @param string $AutoSnapshotPolicyId Snapshot policy ID
      * @param string $PolicyName Snapshot policy name
      * @param string $CreationTime Snapshot policy creation time
      * @param integer $FileSystemNums Number of bound file systems
-     * @param string $DayOfWeek The day of the week on which to regularly back up the snapshot
+     * @param string $DayOfWeek The specific day of the week on which to create a snapshot. This parameter is mutually exclusive with `DayOfMonth` and `IntervalDays`.
      * @param string $Hour The hour of a day at which to regularly back up the snapshot
      * @param integer $IsActivated Whether to activate the scheduled snapshot feature
      * @param string $NextActiveTime Next time to trigger snapshot
@@ -128,6 +148,10 @@ class AutoSnapshotPolicyInfo extends AbstractModel
      * @param integer $AliveDays Retention period
      * @param string $RegionName Region
      * @param array $FileSystems File system information
+     * @param string $DayOfMonth The specific day of the month on which to create a snapshot. This parameter is mutually exclusive with `DayOfWeek` and `IntervalDays`.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $IntervalDays The snapshot interval (1 to 365 days). This parameter is mutually exclusive with `DayOfWeek` and `DayOfMonth`.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -197,6 +221,14 @@ class AutoSnapshotPolicyInfo extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->FileSystems, $obj);
             }
+        }
+
+        if (array_key_exists("DayOfMonth",$param) and $param["DayOfMonth"] !== null) {
+            $this->DayOfMonth = $param["DayOfMonth"];
+        }
+
+        if (array_key_exists("IntervalDays",$param) and $param["IntervalDays"] !== null) {
+            $this->IntervalDays = $param["IntervalDays"];
         }
     }
 }

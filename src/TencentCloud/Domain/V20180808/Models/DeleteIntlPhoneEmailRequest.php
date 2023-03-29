@@ -14,32 +14,32 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Chdfs\V20201112\Models;
+namespace TencentCloud\Domain\V20180808\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Lifecycle rule transition attribute
+ * DeleteIntlPhoneEmail request structure.
  *
- * @method integer getDays() Obtain Trigger time (in days)
- * @method void setDays(integer $Days) Set Trigger time (in days)
- * @method integer getType() Obtain Transition type (`1`: ARCHIVE; `2`: Delete; `3`: STANDARD_IA; `4`: DEEP ARCHIVE; `5`: INTELLIGENT TIERING)
- * @method void setType(integer $Type) Set Transition type (`1`: ARCHIVE; `2`: Delete; `3`: STANDARD_IA; `4`: DEEP ARCHIVE; `5`: INTELLIGENT TIERING)
+ * @method integer getType() Obtain The type. Valid values: `1` (mobile number), `2` (email address).
+ * @method void setType(integer $Type) Set The type. Valid values: `1` (mobile number), `2` (email address).
+ * @method string getCode() Obtain The mobile number or email address.
+ * @method void setCode(string $Code) Set The mobile number or email address.
  */
-class Transition extends AbstractModel
+class DeleteIntlPhoneEmailRequest extends AbstractModel
 {
     /**
-     * @var integer Trigger time (in days)
-     */
-    public $Days;
-
-    /**
-     * @var integer Transition type (`1`: ARCHIVE; `2`: Delete; `3`: STANDARD_IA; `4`: DEEP ARCHIVE; `5`: INTELLIGENT TIERING)
+     * @var integer The type. Valid values: `1` (mobile number), `2` (email address).
      */
     public $Type;
 
     /**
-     * @param integer $Days Trigger time (in days)
-     * @param integer $Type Transition type (`1`: ARCHIVE; `2`: Delete; `3`: STANDARD_IA; `4`: DEEP ARCHIVE; `5`: INTELLIGENT TIERING)
+     * @var string The mobile number or email address.
+     */
+    public $Code;
+
+    /**
+     * @param integer $Type The type. Valid values: `1` (mobile number), `2` (email address).
+     * @param string $Code The mobile number or email address.
      */
     function __construct()
     {
@@ -54,12 +54,12 @@ class Transition extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Days",$param) and $param["Days"] !== null) {
-            $this->Days = $param["Days"];
-        }
-
         if (array_key_exists("Type",$param) and $param["Type"] !== null) {
             $this->Type = $param["Type"];
+        }
+
+        if (array_key_exists("Code",$param) and $param["Code"] !== null) {
+            $this->Code = $param["Code"];
         }
     }
 }

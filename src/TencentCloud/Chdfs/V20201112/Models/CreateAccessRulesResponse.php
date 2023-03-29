@@ -20,17 +20,29 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateAccessRules response structure.
  *
+ * @method array getAccessRules() Obtain List of permission rules
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setAccessRules(array $AccessRules) Set List of permission rules
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 class CreateAccessRulesResponse extends AbstractModel
 {
     /**
+     * @var array List of permission rules
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $AccessRules;
+
+    /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
 
     /**
+     * @param array $AccessRules List of permission rules
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -46,6 +58,15 @@ class CreateAccessRulesResponse extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("AccessRules",$param) and $param["AccessRules"] !== null) {
+            $this->AccessRules = [];
+            foreach ($param["AccessRules"] as $key => $value){
+                $obj = new AccessRule();
+                $obj->deserialize($value);
+                array_push($this->AccessRules, $obj);
+            }
+        }
+
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
             $this->RequestId = $param["RequestId"];
         }

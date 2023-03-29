@@ -14,33 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Ssl\V20191205\Models;
+namespace TencentCloud\Domain\V20180808\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * UploadCertificate response structure.
+ * DescribeIntlBatchDetailStatus response structure.
  *
- * @method string getCertificateId() Obtain Certificate ID
- * @method void setCertificateId(string $CertificateId) Set Certificate ID
- * @method string getRepeatCertId() Obtain The ID of the repeatedly uploaded certificate.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setRepeatCertId(string $RepeatCertId) Set The ID of the repeatedly uploaded certificate.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method array getDetails() Obtain The details.
+ * @method void setDetails(array $Details) Set The details.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
-class UploadCertificateResponse extends AbstractModel
+class DescribeIntlBatchDetailStatusResponse extends AbstractModel
 {
     /**
-     * @var string Certificate ID
+     * @var array The details.
      */
-    public $CertificateId;
-
-    /**
-     * @var string The ID of the repeatedly uploaded certificate.
-Note: This field may return null, indicating that no valid values can be obtained.
-     */
-    public $RepeatCertId;
+    public $Details;
 
     /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -48,9 +38,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $RequestId;
 
     /**
-     * @param string $CertificateId Certificate ID
-     * @param string $RepeatCertId The ID of the repeatedly uploaded certificate.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param array $Details The details.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -66,12 +54,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if ($param === null) {
             return;
         }
-        if (array_key_exists("CertificateId",$param) and $param["CertificateId"] !== null) {
-            $this->CertificateId = $param["CertificateId"];
-        }
-
-        if (array_key_exists("RepeatCertId",$param) and $param["RepeatCertId"] !== null) {
-            $this->RepeatCertId = $param["RepeatCertId"];
+        if (array_key_exists("Details",$param) and $param["Details"] !== null) {
+            $this->Details = [];
+            foreach ($param["Details"] as $key => $value){
+                $obj = new IntlBatchDetails();
+                $obj->deserialize($value);
+                array_push($this->Details, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

@@ -14,33 +14,33 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Ssl\V20191205\Models;
+namespace TencentCloud\Domain\V20180808\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * UploadCertificate response structure.
+ * DescribeIntlBatchOperationLogs response structure.
  *
- * @method string getCertificateId() Obtain Certificate ID
- * @method void setCertificateId(string $CertificateId) Set Certificate ID
- * @method string getRepeatCertId() Obtain The ID of the repeatedly uploaded certificate.
+ * @method integer getTotalCount() Obtain The total count.
+ * @method void setTotalCount(integer $TotalCount) Set The total count.
+ * @method array getDomainBatchLogSet() Obtain The log list.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setRepeatCertId(string $RepeatCertId) Set The ID of the repeatedly uploaded certificate.
+ * @method void setDomainBatchLogSet(array $DomainBatchLogSet) Set The log list.
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
-class UploadCertificateResponse extends AbstractModel
+class DescribeIntlBatchOperationLogsResponse extends AbstractModel
 {
     /**
-     * @var string Certificate ID
+     * @var integer The total count.
      */
-    public $CertificateId;
+    public $TotalCount;
 
     /**
-     * @var string The ID of the repeatedly uploaded certificate.
+     * @var array The log list.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
-    public $RepeatCertId;
+    public $DomainBatchLogSet;
 
     /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -48,8 +48,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $RequestId;
 
     /**
-     * @param string $CertificateId Certificate ID
-     * @param string $RepeatCertId The ID of the repeatedly uploaded certificate.
+     * @param integer $TotalCount The total count.
+     * @param array $DomainBatchLogSet The log list.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
@@ -66,12 +66,17 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if ($param === null) {
             return;
         }
-        if (array_key_exists("CertificateId",$param) and $param["CertificateId"] !== null) {
-            $this->CertificateId = $param["CertificateId"];
+        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
+            $this->TotalCount = $param["TotalCount"];
         }
 
-        if (array_key_exists("RepeatCertId",$param) and $param["RepeatCertId"] !== null) {
-            $this->RepeatCertId = $param["RepeatCertId"];
+        if (array_key_exists("DomainBatchLogSet",$param) and $param["DomainBatchLogSet"] !== null) {
+            $this->DomainBatchLogSet = [];
+            foreach ($param["DomainBatchLogSet"] as $key => $value){
+                $obj = new BatchDomainBuyLog();
+                $obj->deserialize($value);
+                array_push($this->DomainBatchLogSet, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
