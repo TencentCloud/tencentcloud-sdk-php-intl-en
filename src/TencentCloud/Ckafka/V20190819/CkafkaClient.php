@@ -28,6 +28,7 @@ use TencentCloud\Ckafka\V20190819\Models as Models;
  * @method Models\BatchModifyTopicAttributesResponse BatchModifyTopicAttributes(Models\BatchModifyTopicAttributesRequest $req) This API is used to batch set topic attributes.
  * @method Models\CreateAclResponse CreateAcl(Models\CreateAclRequest $req) This API is used to add an ACL policy.
  * @method Models\CreateConsumerResponse CreateConsumer(Models\CreateConsumerRequest $req) This API is used to create a consumer group.
+ * @method Models\CreateDatahubTopicResponse CreateDatahubTopic(Models\CreateDatahubTopicRequest $req) This API is used to create a DataHub topic.
  * @method Models\CreateInstancePostResponse CreateInstancePost(Models\CreateInstancePostRequest $req) This API is used to create a pay-as-you-go instance.
  * @method Models\CreatePartitionResponse CreatePartition(Models\CreatePartitionRequest $req) This API is used to add a partition in a topic.
  * @method Models\CreateTopicResponse CreateTopic(Models\CreateTopicRequest $req) This API is used to create a CKafka topic.

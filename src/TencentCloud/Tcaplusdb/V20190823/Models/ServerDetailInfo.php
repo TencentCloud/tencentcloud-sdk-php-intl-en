@@ -32,6 +32,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setReadNum(integer $ReadNum) Set The number of reads
  * @method integer getWriteNum() Obtain The number of writes
  * @method void setWriteNum(integer $WriteNum) Set The number of writes
+ * @method string getVersion() Obtain Version
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setVersion(string $Version) Set Version
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class ServerDetailInfo extends AbstractModel
 {
@@ -66,12 +70,20 @@ class ServerDetailInfo extends AbstractModel
     public $WriteNum;
 
     /**
+     * @var string Version
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $Version;
+
+    /**
      * @param string $ServerUid The unique ID of the storage layer (tcapsvr)
      * @param string $MachineType Machine type
      * @param integer $MemoryRate Memory utilization
      * @param integer $DiskRate Disk utilization
      * @param integer $ReadNum The number of reads
      * @param integer $WriteNum The number of writes
+     * @param string $Version Version
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -108,6 +120,10 @@ class ServerDetailInfo extends AbstractModel
 
         if (array_key_exists("WriteNum",$param) and $param["WriteNum"] !== null) {
             $this->WriteNum = $param["WriteNum"];
+        }
+
+        if (array_key_exists("Version",$param) and $param["Version"] !== null) {
+            $this->Version = $param["Version"];
         }
     }
 }

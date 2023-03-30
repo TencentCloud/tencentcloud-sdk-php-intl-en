@@ -54,14 +54,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setApiAccessIpv6(string $ApiAccessIpv6) Set TcaplusDB SDK connection parameter for accessing IPv6 addresses
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method integer getClusterType() Obtain Cluster type
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setClusterType(integer $ClusterType) Set Cluster type
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method integer getClusterStatus() Obtain Cluster status
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setClusterStatus(integer $ClusterStatus) Set Cluster status
-Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method integer getClusterType() Obtain Cluster type. Valid values: `0` and `1` (shared cluster), `2` (dedicated cluster).
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setClusterType(integer $ClusterType) Set Cluster type. Valid values: `0` and `1` (shared cluster), `2` (dedicated cluster).
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getClusterStatus() Obtain Cluster status. Valid values: `0` (Running), `1` (Isolated. This status is caused by overdue payments), `2` (To be repossessed. This status is caused when the cluster is actively deleted.),·`3` (To be released. The resources occupied by the table can be released in this status.), `4` (Modifying).
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setClusterStatus(integer $ClusterStatus) Set Cluster status. Valid values: `0` (Running), `1` (Isolated. This status is caused by overdue payments), `2` (To be repossessed. This status is caused when the cluster is actively deleted.),·`3` (To be released. The resources occupied by the table can be released in this status.), `4` (Modifying).
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method integer getReadCapacityUnit() Obtain Read CU
 Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method void setReadCapacityUnit(integer $ReadCapacityUnit) Set Read CU
@@ -108,6 +108,10 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
  * @method void setIsReadOnlyUlogBackupExpireDay(integer $IsReadOnlyUlogBackupExpireDay) Set Whether the expiration policy of cluster Ulog backup file is read-only. `0`: Yes; `1`: No.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method integer getRestProxyStatus() Obtain restproxy Status
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setRestProxyStatus(integer $RestProxyStatus) Set restproxy Status
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class ClusterInfo extends AbstractModel
 {
@@ -189,14 +193,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $ApiAccessIpv6;
 
     /**
-     * @var integer Cluster type
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @var integer Cluster type. Valid values: `0` and `1` (shared cluster), `2` (dedicated cluster).
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ClusterType;
 
     /**
-     * @var integer Cluster status
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @var integer Cluster status. Valid values: `0` (Running), `1` (Isolated. This status is caused by overdue payments), `2` (To be repossessed. This status is caused when the cluster is actively deleted.),·`3` (To be released. The resources occupied by the table can be released in this status.), `4` (Modifying).
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ClusterStatus;
 
@@ -272,6 +276,12 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     public $IsReadOnlyUlogBackupExpireDay;
 
     /**
+     * @var integer restproxy Status
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $RestProxyStatus;
+
+    /**
      * @param string $ClusterName Cluster name
      * @param string $ClusterId Cluster ID
      * @param string $Region Cluster region
@@ -289,10 +299,10 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $ApiAccessIpv6 TcaplusDB SDK connection parameter for accessing IPv6 addresses
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param integer $ClusterType Cluster type
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param integer $ClusterStatus Cluster status
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param integer $ClusterType Cluster type. Valid values: `0` and `1` (shared cluster), `2` (dedicated cluster).
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $ClusterStatus Cluster status. Valid values: `0` (Running), `1` (Isolated. This status is caused by overdue payments), `2` (To be repossessed. This status is caused when the cluster is actively deleted.),·`3` (To be released. The resources occupied by the table can be released in this status.), `4` (Modifying).
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $ReadCapacityUnit Read CU
 Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param integer $WriteCapacityUnit Write CU
@@ -316,6 +326,8 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
      * @param integer $IsReadOnlyUlogBackupExpireDay Whether the expiration policy of cluster Ulog backup file is read-only. `0`: Yes; `1`: No.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param integer $RestProxyStatus restproxy Status
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -455,6 +467,10 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 
         if (array_key_exists("IsReadOnlyUlogBackupExpireDay",$param) and $param["IsReadOnlyUlogBackupExpireDay"] !== null) {
             $this->IsReadOnlyUlogBackupExpireDay = $param["IsReadOnlyUlogBackupExpireDay"];
+        }
+
+        if (array_key_exists("RestProxyStatus",$param) and $param["RestProxyStatus"] !== null) {
+            $this->RestProxyStatus = $param["RestProxyStatus"];
         }
     }
 }

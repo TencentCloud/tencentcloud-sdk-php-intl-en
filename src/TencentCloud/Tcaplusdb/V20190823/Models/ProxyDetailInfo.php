@@ -30,6 +30,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAverageProcessDelay(integer $AverageProcessDelay) Set Request packet delay
  * @method integer getSlowProcessSpeed() Obtain The speed of processing delayed request packets
  * @method void setSlowProcessSpeed(integer $SlowProcessSpeed) Set The speed of processing delayed request packets
+ * @method string getVersion() Obtain Version
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setVersion(string $Version) Set Version
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class ProxyDetailInfo extends AbstractModel
 {
@@ -59,11 +63,19 @@ class ProxyDetailInfo extends AbstractModel
     public $SlowProcessSpeed;
 
     /**
+     * @var string Version
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $Version;
+
+    /**
      * @param string $ProxyUid The unique ID of the access layer (tcaproxy)
      * @param string $MachineType Machine type
      * @param integer $ProcessSpeed The speed of processing request packets
      * @param integer $AverageProcessDelay Request packet delay
      * @param integer $SlowProcessSpeed The speed of processing delayed request packets
+     * @param string $Version Version
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -96,6 +108,10 @@ class ProxyDetailInfo extends AbstractModel
 
         if (array_key_exists("SlowProcessSpeed",$param) and $param["SlowProcessSpeed"] !== null) {
             $this->SlowProcessSpeed = $param["SlowProcessSpeed"];
+        }
+
+        if (array_key_exists("Version",$param) and $param["Version"] !== null) {
+            $this->Version = $param["Version"];
         }
     }
 }

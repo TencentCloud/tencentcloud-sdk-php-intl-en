@@ -30,6 +30,20 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTableCount(integer $TableCount) Set Number of tables in table group
  * @method integer getTotalSize() Obtain Total table storage capacity in MB in table group
  * @method void setTotalSize(integer $TotalSize) Set Total table storage capacity in MB in table group
+ * @method integer getTxhBackupExpireDay() Obtain The number of days before the backup files of the Txh tables expire and are deleted.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setTxhBackupExpireDay(integer $TxhBackupExpireDay) Set The number of days before the backup files of the Txh tables expire and are deleted.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getEnableMysql() Obtain Whether MySQL load rebalancing is enabled. Valid values: `0` (Disabled), `1` (Enabling), `2` (Enabled).
+ * @method void setEnableMysql(integer $EnableMysql) Set Whether MySQL load rebalancing is enabled. Valid values: `0` (Disabled), `1` (Enabling), `2` (Enabled).
+ * @method string getMysqlConnIp() Obtain MySQL load rebalancing vip
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setMysqlConnIp(string $MysqlConnIp) Set MySQL load rebalancing vip
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getMysqlConnPort() Obtain MySQL load rebalancing vport
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setMysqlConnPort(integer $MysqlConnPort) Set MySQL load rebalancing vport
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class TableGroupInfo extends AbstractModel
 {
@@ -59,11 +73,41 @@ class TableGroupInfo extends AbstractModel
     public $TotalSize;
 
     /**
+     * @var integer The number of days before the backup files of the Txh tables expire and are deleted.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $TxhBackupExpireDay;
+
+    /**
+     * @var integer Whether MySQL load rebalancing is enabled. Valid values: `0` (Disabled), `1` (Enabling), `2` (Enabled).
+     */
+    public $EnableMysql;
+
+    /**
+     * @var string MySQL load rebalancing vip
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $MysqlConnIp;
+
+    /**
+     * @var integer MySQL load rebalancing vport
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $MysqlConnPort;
+
+    /**
      * @param string $TableGroupId Table group ID
      * @param string $TableGroupName Table group name
      * @param string $CreatedTime Table group creation time
      * @param integer $TableCount Number of tables in table group
      * @param integer $TotalSize Total table storage capacity in MB in table group
+     * @param integer $TxhBackupExpireDay The number of days before the backup files of the Txh tables expire and are deleted.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $EnableMysql Whether MySQL load rebalancing is enabled. Valid values: `0` (Disabled), `1` (Enabling), `2` (Enabled).
+     * @param string $MysqlConnIp MySQL load rebalancing vip
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $MysqlConnPort MySQL load rebalancing vport
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -96,6 +140,22 @@ class TableGroupInfo extends AbstractModel
 
         if (array_key_exists("TotalSize",$param) and $param["TotalSize"] !== null) {
             $this->TotalSize = $param["TotalSize"];
+        }
+
+        if (array_key_exists("TxhBackupExpireDay",$param) and $param["TxhBackupExpireDay"] !== null) {
+            $this->TxhBackupExpireDay = $param["TxhBackupExpireDay"];
+        }
+
+        if (array_key_exists("EnableMysql",$param) and $param["EnableMysql"] !== null) {
+            $this->EnableMysql = $param["EnableMysql"];
+        }
+
+        if (array_key_exists("MysqlConnIp",$param) and $param["MysqlConnIp"] !== null) {
+            $this->MysqlConnIp = $param["MysqlConnIp"];
+        }
+
+        if (array_key_exists("MysqlConnPort",$param) and $param["MysqlConnPort"] !== null) {
+            $this->MysqlConnPort = $param["MysqlConnPort"];
         }
     }
 }

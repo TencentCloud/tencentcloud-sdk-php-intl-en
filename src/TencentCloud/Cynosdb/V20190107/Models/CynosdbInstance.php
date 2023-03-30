@@ -136,8 +136,10 @@ Note: This field may return null, indicating that no valid value can be obtained
 Note: This field may return null, indicating that no valid value can be obtained.
  * @method void setSlaveZones(array $SlaveZones) Set Replica AZ
 Note: This field may return null, indicating that no valid value can be obtained.
- * @method array getInstanceNetInfo() Obtain 
- * @method void setInstanceNetInfo(array $InstanceNetInfo) Set 
+ * @method array getInstanceNetInfo() Obtain Instance network information
+Note: This field may return null, indicating that no valid value can be obtained.
+ * @method void setInstanceNetInfo(array $InstanceNetInfo) Set Instance network information
+Note: This field may return null, indicating that no valid value can be obtained.
  */
 class CynosdbInstance extends AbstractModel
 {
@@ -396,7 +398,8 @@ Note: This field may return null, indicating that no valid value can be obtained
     public $SlaveZones;
 
     /**
-     * @var array 
+     * @var array Instance network information
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public $InstanceNetInfo;
 
@@ -459,7 +462,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid value can be obtained.
      * @param array $SlaveZones Replica AZ
 Note: This field may return null, indicating that no valid value can be obtained.
-     * @param array $InstanceNetInfo 
+     * @param array $InstanceNetInfo Instance network information
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     function __construct()
     {

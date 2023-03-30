@@ -28,12 +28,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMemory(integer $Memory) Set Memory in GB
  * @method integer getReadOnlyCount() Obtain Number of added read-only instances. Value range: (0,16].
  * @method void setReadOnlyCount(integer $ReadOnlyCount) Set Number of added read-only instances. Value range: (0,16].
- * @method string getInstanceGrpId() Obtain Instance group ID, which is used when you add an instance to an existing RO group. If this parameter is left empty, an RO group will be created. We recommend you not pass in this value on the current version.
- * @method void setInstanceGrpId(string $InstanceGrpId) Set Instance group ID, which is used when you add an instance to an existing RO group. If this parameter is left empty, an RO group will be created. We recommend you not pass in this value on the current version.
- * @method string getVpcId() Obtain VPC ID. This parameter has been disused.
- * @method void setVpcId(string $VpcId) Set VPC ID. This parameter has been disused.
- * @method string getSubnetId() Obtain Subnet ID. If `VpcId` is set, `SubnetId` is required. This parameter has been disused.
- * @method void setSubnetId(string $SubnetId) Set Subnet ID. If `VpcId` is set, `SubnetId` is required. This parameter has been disused.
+ * @method string getInstanceGrpId() Obtain Instance group ID, which will be used when you add an instance in an existing RO group. If this parameter is left empty, an RO group will be created. But it is not recommended to pass in this parameter for the current version, as this version has been disused.
+ * @method void setInstanceGrpId(string $InstanceGrpId) Set Instance group ID, which will be used when you add an instance in an existing RO group. If this parameter is left empty, an RO group will be created. But it is not recommended to pass in this parameter for the current version, as this version has been disused.
+ * @method string getVpcId() Obtain VPC ID
+ * @method void setVpcId(string $VpcId) Set VPC ID
+ * @method string getSubnetId() Obtain Subnet ID. If `VpcId` is set, `SubnetId` is required.
+ * @method void setSubnetId(string $SubnetId) Set Subnet ID. If `VpcId` is set, `SubnetId` is required.
  * @method integer getPort() Obtain The port used when adding an RO group. Value range: [0,65535).
  * @method void setPort(integer $Port) Set The port used when adding an RO group. Value range: [0,65535).
  * @method string getInstanceName() Obtain Instance name. String length range: [0,64).
@@ -52,6 +52,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setParamTemplateId(integer $ParamTemplateId) Set Parameter template ID
  * @method array getInstanceParams() Obtain Parameter list, which is valid only if `InstanceParams` is passed in to `ParamTemplateId`.
  * @method void setInstanceParams(array $InstanceParams) Set Parameter list, which is valid only if `InstanceParams` is passed in to `ParamTemplateId`.
+ * @method array getSecurityGroupIds() Obtain Security group ID. You can specify an security group when creating a read-only instance.
+ * @method void setSecurityGroupIds(array $SecurityGroupIds) Set Security group ID. You can specify an security group when creating a read-only instance.
  */
 class AddInstancesRequest extends AbstractModel
 {
@@ -76,17 +78,17 @@ class AddInstancesRequest extends AbstractModel
     public $ReadOnlyCount;
 
     /**
-     * @var string Instance group ID, which is used when you add an instance to an existing RO group. If this parameter is left empty, an RO group will be created. We recommend you not pass in this value on the current version.
+     * @var string Instance group ID, which will be used when you add an instance in an existing RO group. If this parameter is left empty, an RO group will be created. But it is not recommended to pass in this parameter for the current version, as this version has been disused.
      */
     public $InstanceGrpId;
 
     /**
-     * @var string VPC ID. This parameter has been disused.
+     * @var string VPC ID
      */
     public $VpcId;
 
     /**
-     * @var string Subnet ID. If `VpcId` is set, `SubnetId` is required. This parameter has been disused.
+     * @var string Subnet ID. If `VpcId` is set, `SubnetId` is required.
      */
     public $SubnetId;
 
@@ -132,13 +134,18 @@ class AddInstancesRequest extends AbstractModel
     public $InstanceParams;
 
     /**
+     * @var array Security group ID. You can specify an security group when creating a read-only instance.
+     */
+    public $SecurityGroupIds;
+
+    /**
      * @param string $ClusterId Cluster ID
      * @param integer $Cpu Number of CPU cores
      * @param integer $Memory Memory in GB
      * @param integer $ReadOnlyCount Number of added read-only instances. Value range: (0,16].
-     * @param string $InstanceGrpId Instance group ID, which is used when you add an instance to an existing RO group. If this parameter is left empty, an RO group will be created. We recommend you not pass in this value on the current version.
-     * @param string $VpcId VPC ID. This parameter has been disused.
-     * @param string $SubnetId Subnet ID. If `VpcId` is set, `SubnetId` is required. This parameter has been disused.
+     * @param string $InstanceGrpId Instance group ID, which will be used when you add an instance in an existing RO group. If this parameter is left empty, an RO group will be created. But it is not recommended to pass in this parameter for the current version, as this version has been disused.
+     * @param string $VpcId VPC ID
+     * @param string $SubnetId Subnet ID. If `VpcId` is set, `SubnetId` is required.
      * @param integer $Port The port used when adding an RO group. Value range: [0,65535).
      * @param string $InstanceName Instance name. String length range: [0,64).
      * @param integer $AutoVoucher Whether to automatically select a voucher. 1: yes; 0: no. Default value: 0
@@ -148,6 +155,7 @@ class AddInstancesRequest extends AbstractModel
      * @param integer $DealMode Transaction mode. Valid values: `0` (place and pay for an order), `1` (place an order)
      * @param integer $ParamTemplateId Parameter template ID
      * @param array $InstanceParams Parameter list, which is valid only if `InstanceParams` is passed in to `ParamTemplateId`.
+     * @param array $SecurityGroupIds Security group ID. You can specify an security group when creating a read-only instance.
      */
     function __construct()
     {
@@ -225,6 +233,10 @@ class AddInstancesRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->InstanceParams, $obj);
             }
+        }
+
+        if (array_key_exists("SecurityGroupIds",$param) and $param["SecurityGroupIds"] !== null) {
+            $this->SecurityGroupIds = $param["SecurityGroupIds"];
         }
     }
 }
