@@ -26,8 +26,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setZoneName(string $ZoneName) Set AZ name
  * @method integer getZoneId() Obtain AZ number
  * @method void setZoneId(integer $ZoneId) Set AZ number
- * @method string getZoneState() Obtain Availability status. Valid values: `UNAVAILABLE`, `AVAILABLE`, `SELLOUT`
- * @method void setZoneState(string $ZoneState) Set Availability status. Valid values: `UNAVAILABLE`, `AVAILABLE`, `SELLOUT`
+ * @method string getZoneState() Obtain Availability status. Valid values:
+`UNAVAILABLE`.
+`AVAILABLE`.
+`SELLOUT`.
+`SUPPORTMODIFYONLY` (supports configuration adjustment).
+ * @method void setZoneState(string $ZoneState) Set Availability status. Valid values:
+`UNAVAILABLE`.
+`AVAILABLE`.
+`SELLOUT`.
+`SUPPORTMODIFYONLY` (supports configuration adjustment).
  * @method integer getZoneSupportIpv6() Obtain Whether the AZ supports IPv6 address access
  * @method void setZoneSupportIpv6(integer $ZoneSupportIpv6) Set Whether the AZ supports IPv6 address access
  * @method array getStandbyZoneSet() Obtain AZs that can be used as standby when this AZ is primary
@@ -53,7 +61,11 @@ class ZoneInfo extends AbstractModel
     public $ZoneId;
 
     /**
-     * @var string Availability status. Valid values: `UNAVAILABLE`, `AVAILABLE`, `SELLOUT`
+     * @var string Availability status. Valid values:
+`UNAVAILABLE`.
+`AVAILABLE`.
+`SELLOUT`.
+`SUPPORTMODIFYONLY` (supports configuration adjustment).
      */
     public $ZoneState;
 
@@ -72,7 +84,11 @@ Note: this field may return `null`, indicating that no valid values can be obtai
      * @param string $Zone AZ abbreviation
      * @param string $ZoneName AZ name
      * @param integer $ZoneId AZ number
-     * @param string $ZoneState Availability status. Valid values: `UNAVAILABLE`, `AVAILABLE`, `SELLOUT`
+     * @param string $ZoneState Availability status. Valid values:
+`UNAVAILABLE`.
+`AVAILABLE`.
+`SELLOUT`.
+`SUPPORTMODIFYONLY` (supports configuration adjustment).
      * @param integer $ZoneSupportIpv6 Whether the AZ supports IPv6 address access
      * @param array $StandbyZoneSet AZs that can be used as standby when this AZ is primary
 Note: this field may return `null`, indicating that no valid values can be obtained.

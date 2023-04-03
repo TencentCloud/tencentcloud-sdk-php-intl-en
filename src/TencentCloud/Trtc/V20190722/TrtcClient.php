@@ -39,28 +39,28 @@ Key concepts:
  * @method Models\DescribeCloudRecordingResponse DescribeCloudRecording(Models\DescribeCloudRecordingRequest $req) This API is used to query the status of a recording task after it starts. It works only when a task is in progress. If the task has already ended when this API is called, an error will be returned.
 If a recording file is being uploaded to VOD, the response parameter `StorageFileList` will not contain the information of the recording file. Please listen for the recording file callback to get the information.
  * @method Models\DescribeMixTranscodingUsageResponse DescribeMixTranscodingUsage(Models\DescribeMixTranscodingUsageRequest $req) This API is used to query your usage of TRTC’s On-Cloud MixTranscoding service.
-Note: This API is not available for applications whose SDKAppID starts with `14`.
 - If the period queried is one day or shorter, the statistics returned are on a five-minute basis. If the period queried is longer than one day, the statistics returned are on a daily basis.
 - The period queried per request cannot be longer than 31 days.
 - If you query the statistics of the current day, the statistics returned may be inaccurate due to the delay in data collection.
 - You can use this API to query your historical usage or to reconcile data, but we do not recommend you use it for crucial business logic.
 - The rate limit of this API is five calls per second.
  * @method Models\DescribeRecordingUsageResponse DescribeRecordingUsage(Models\DescribeRecordingUsageRequest $req) This API is used to query your TRTC recording usage.
-Note: This API is not available for applications whose SDKAppID starts with `14`.
 - If the period queried is one day or shorter, the statistics returned are on a five-minute basis. If the period queried is longer than one day, the statistics returned are on a daily basis.
 - The period queried per request cannot be longer than 31 days.
 - If you query the statistics of the current day, the statistics returned may be inaccurate due to the delay in data collection.
 - You can use this API to query your historical usage or to reconcile data, but we do not recommend you use it for crucial business logic.
 - The rate limit of this API is five calls per second.
  * @method Models\DescribeRelayUsageResponse DescribeRelayUsage(Models\DescribeRelayUsageRequest $req) This API is used to query your usage of TRTC’s relay to CDN service.
-Note: This API is not available for applications whose SDKAppID starts with `14`.
 - If the period queried is one day or shorter, the statistics returned are on a five-minute basis. If the period queried is longer than one day, the statistics returned are on a daily basis.
 - The period queried per request cannot be longer than 31 days.
 - If you query the statistics of the current day, the statistics returned may be inaccurate due to the delay in data collection.
 - You can use this API to query your historical usage or to reconcile data, but we do not recommend you use it for crucial business logic.
 - The rate limit of this API is five calls per second.
+ * @method Models\DescribeTrtcRoomUsageResponse DescribeTrtcRoomUsage(Models\DescribeTrtcRoomUsageRequest $req) This API is used to query usage data grouped by room.
+- The queried period cannot exceed 24 hours. If the period spans two different days, the data returned may not be accurate due to a delay in data collection. You can make multiple calls to query the usage on different days.
+- You can use this API to query your historical usage or to reconcile data, but we do not recommend you use it for crucial business logic.
+- The rate limit of this API is one call every 15 seconds.
  * @method Models\DescribeTrtcUsageResponse DescribeTrtcUsage(Models\DescribeTrtcUsageRequest $req) This API is used to query your TRTC audio/video duration.
-Note: This API is not available for applications whose SDKAppID starts with `14`.
 - If the period queried is one day or shorter, the statistics returned are on a five-minute basis. If the period queried is longer than one day, the statistics returned are on a daily basis.
 - The period queried per request cannot be longer than 31 days.
 - If you query the statistics of the current day, the statistics returned may be inaccurate due to the delay in data collection.
