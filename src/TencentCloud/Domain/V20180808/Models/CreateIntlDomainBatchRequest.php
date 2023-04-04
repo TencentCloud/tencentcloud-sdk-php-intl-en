@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTransferProhibition(boolean $TransferProhibition) Set Whether to enable the transfer prohibition lock.
  * @method boolean getUpdateProhibition() Obtain Whether to enable the update prohibition lock.
  * @method void setUpdateProhibition(boolean $UpdateProhibition) Set Whether to enable the update prohibition lock.
+ * @method array getCustomDns() Obtain The custom DNS servers
+ * @method void setCustomDns(array $CustomDns) Set The custom DNS servers
  */
 class CreateIntlDomainBatchRequest extends AbstractModel
 {
@@ -73,6 +75,11 @@ class CreateIntlDomainBatchRequest extends AbstractModel
     public $UpdateProhibition;
 
     /**
+     * @var array The custom DNS servers
+     */
+    public $CustomDns;
+
+    /**
      * @param string $TemplateId The profile ID.
      * @param integer $Period The purchase period (years) of the domain. Value range: [1-10]
      * @param array $Domains The domains (maximum 4,000) to purchase.
@@ -80,6 +87,7 @@ class CreateIntlDomainBatchRequest extends AbstractModel
      * @param boolean $AutoRenewFlag Whether to enable auto-renewal.
      * @param boolean $TransferProhibition Whether to enable the transfer prohibition lock.
      * @param boolean $UpdateProhibition Whether to enable the update prohibition lock.
+     * @param array $CustomDns The custom DNS servers
      */
     function __construct()
     {
@@ -120,6 +128,10 @@ class CreateIntlDomainBatchRequest extends AbstractModel
 
         if (array_key_exists("UpdateProhibition",$param) and $param["UpdateProhibition"] !== null) {
             $this->UpdateProhibition = $param["UpdateProhibition"];
+        }
+
+        if (array_key_exists("CustomDns",$param) and $param["CustomDns"] !== null) {
+            $this->CustomDns = $param["CustomDns"];
         }
     }
 }

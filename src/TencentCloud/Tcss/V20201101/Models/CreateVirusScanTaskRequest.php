@@ -34,6 +34,15 @@ use TencentCloud\Common\AbstractModel;
  * @method void setScanIds(array $ScanIds) Set ID of the specified container or server to be scanned, which is based on `ScanRangeType`.
  * @method array getScanPath() Obtain Specified path to be excluded or scanned
  * @method void setScanPath(array $ScanPath) Set Specified path to be excluded or scanned
+ * @method string getScanPathMode() Obtain Path scanning mode: 
+`SCAN_PATH_ALL`: Scan all paths
+`SCAN_PATH_DEFAULT`: Scan the default path
+`SCAN_PATH_USER_DEFINE`: Scan the custom path
+
+ * @method void setScanPathMode(string $ScanPathMode) Set Path scanning mode: 
+`SCAN_PATH_ALL`: Scan all paths
+`SCAN_PATH_DEFAULT`: Scan the default path
+`SCAN_PATH_USER_DEFINE`: Scan the custom path
  */
 class CreateVirusScanTaskRequest extends AbstractModel
 {
@@ -73,6 +82,15 @@ class CreateVirusScanTaskRequest extends AbstractModel
     public $ScanPath;
 
     /**
+     * @var string Path scanning mode: 
+`SCAN_PATH_ALL`: Scan all paths
+`SCAN_PATH_DEFAULT`: Scan the default path
+`SCAN_PATH_USER_DEFINE`: Scan the custom path
+
+     */
+    public $ScanPathMode;
+
+    /**
      * @param boolean $ScanPathAll Whether to scan all paths
      * @param integer $ScanRangeType Scanning scope. Valid values: `0` (container); `1` (server).
      * @param boolean $ScanRangeAll Valid values: `true` (all); `false` (specified).
@@ -80,6 +98,10 @@ class CreateVirusScanTaskRequest extends AbstractModel
      * @param integer $ScanPathType Valid when `ScanPathAll` is `false`. Valid values: `0` (scan the following paths); `1` (scan all paths except the following).
      * @param array $ScanIds ID of the specified container or server to be scanned, which is based on `ScanRangeType`.
      * @param array $ScanPath Specified path to be excluded or scanned
+     * @param string $ScanPathMode Path scanning mode: 
+`SCAN_PATH_ALL`: Scan all paths
+`SCAN_PATH_DEFAULT`: Scan the default path
+`SCAN_PATH_USER_DEFINE`: Scan the custom path
      */
     function __construct()
     {
@@ -120,6 +142,10 @@ class CreateVirusScanTaskRequest extends AbstractModel
 
         if (array_key_exists("ScanPath",$param) and $param["ScanPath"] !== null) {
             $this->ScanPath = $param["ScanPath"];
+        }
+
+        if (array_key_exists("ScanPathMode",$param) and $param["ScanPathMode"] !== null) {
+            $this->ScanPathMode = $param["ScanPathMode"];
         }
     }
 }

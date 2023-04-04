@@ -34,6 +34,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setScanPath(array $ScanPath) Set Specified path to be excluded or scanned
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getScanPathMode() Obtain Path scanning mode: 
+`SCAN_PATH_ALL`: Scan all paths
+`SCAN_PATH_DEFAULT`: Scan the default path
+`SCAN_PATH_USER_DEFINE`: Scan the custom path
+
+ * @method void setScanPathMode(string $ScanPathMode) Set Path scanning mode: 
+`SCAN_PATH_ALL`: Scan all paths
+`SCAN_PATH_DEFAULT`: Scan the default path
+`SCAN_PATH_USER_DEFINE`: Scan the custom path
+
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -63,6 +73,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $ScanPath;
 
     /**
+     * @var string Path scanning mode: 
+`SCAN_PATH_ALL`: Scan all paths
+`SCAN_PATH_DEFAULT`: Scan the default path
+`SCAN_PATH_USER_DEFINE`: Scan the custom path
+
+     */
+    public $ScanPathMode;
+
+    /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
@@ -75,6 +94,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param array $ScanPath Specified path to be excluded or scanned
 Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $ScanPathMode Path scanning mode: 
+`SCAN_PATH_ALL`: Scan all paths
+`SCAN_PATH_DEFAULT`: Scan the default path
+`SCAN_PATH_USER_DEFINE`: Scan the custom path
+
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -104,6 +128,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("ScanPath",$param) and $param["ScanPath"] !== null) {
             $this->ScanPath = $param["ScanPath"];
+        }
+
+        if (array_key_exists("ScanPathMode",$param) and $param["ScanPathMode"] !== null) {
+            $this->ScanPathMode = $param["ScanPathMode"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

@@ -28,6 +28,15 @@ use TencentCloud\Common\AbstractModel;
  * @method void setScanPathType(integer $ScanPathType) Set Valid when `ScanPathAll` is `true`. Valid values of `ScanPathAll`: `0` (scan the following paths); `1` (scan all paths except the following; the scope cannot be greater than `1`).
  * @method array getScanPath() Obtain Specified path to be excluded or scanned
  * @method void setScanPath(array $ScanPath) Set Specified path to be excluded or scanned
+ * @method string getScanPathMode() Obtain Path scanning mode: 
+`SCAN_PATH_ALL`: Scan all paths
+`SCAN_PATH_DEFAULT`: Scan the default path
+`SCAN_PATH_USER_DEFINE`: Scan the custom path
+
+ * @method void setScanPathMode(string $ScanPathMode) Set Path scanning mode: 
+`SCAN_PATH_ALL`: Scan all paths
+`SCAN_PATH_DEFAULT`: Scan the default path
+`SCAN_PATH_USER_DEFINE`: Scan the custom path
  */
 class ModifyVirusMonitorSettingRequest extends AbstractModel
 {
@@ -52,10 +61,23 @@ class ModifyVirusMonitorSettingRequest extends AbstractModel
     public $ScanPath;
 
     /**
+     * @var string Path scanning mode: 
+`SCAN_PATH_ALL`: Scan all paths
+`SCAN_PATH_DEFAULT`: Scan the default path
+`SCAN_PATH_USER_DEFINE`: Scan the custom path
+
+     */
+    public $ScanPathMode;
+
+    /**
      * @param boolean $EnableScan Whether to enable scheduled scan
      * @param boolean $ScanPathAll Scan all paths
      * @param integer $ScanPathType Valid when `ScanPathAll` is `true`. Valid values of `ScanPathAll`: `0` (scan the following paths); `1` (scan all paths except the following; the scope cannot be greater than `1`).
      * @param array $ScanPath Specified path to be excluded or scanned
+     * @param string $ScanPathMode Path scanning mode: 
+`SCAN_PATH_ALL`: Scan all paths
+`SCAN_PATH_DEFAULT`: Scan the default path
+`SCAN_PATH_USER_DEFINE`: Scan the custom path
      */
     function __construct()
     {
@@ -84,6 +106,10 @@ class ModifyVirusMonitorSettingRequest extends AbstractModel
 
         if (array_key_exists("ScanPath",$param) and $param["ScanPath"] !== null) {
             $this->ScanPath = $param["ScanPath"];
+        }
+
+        if (array_key_exists("ScanPathMode",$param) and $param["ScanPathMode"] !== null) {
+            $this->ScanPathMode = $param["ScanPathMode"];
         }
     }
 }

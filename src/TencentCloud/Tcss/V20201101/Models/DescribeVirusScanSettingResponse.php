@@ -44,6 +44,16 @@ use TencentCloud\Common\AbstractModel;
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setClickTimeout(integer $ClickTimeout) Set Timeout settings of quick check
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getScanPathMode() Obtain Path scanning mode: 
+`SCAN_PATH_ALL`: Scan all paths
+`SCAN_PATH_DEFAULT`: Scan the default path
+`SCAN_PATH_USER_DEFINE`: Scan the custom path
+
+ * @method void setScanPathMode(string $ScanPathMode) Set Path scanning mode: 
+`SCAN_PATH_ALL`: Scan all paths
+`SCAN_PATH_DEFAULT`: Scan the default path
+`SCAN_PATH_USER_DEFINE`: Scan the custom path
+
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -106,6 +116,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $ClickTimeout;
 
     /**
+     * @var string Path scanning mode: 
+`SCAN_PATH_ALL`: Scan all paths
+`SCAN_PATH_DEFAULT`: Scan the default path
+`SCAN_PATH_USER_DEFINE`: Scan the custom path
+
+     */
+    public $ScanPathMode;
+
+    /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
@@ -123,6 +142,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param array $ScanPath Specified path to be excluded or scanned
      * @param integer $ClickTimeout Timeout settings of quick check
 Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $ScanPathMode Path scanning mode: 
+`SCAN_PATH_ALL`: Scan all paths
+`SCAN_PATH_DEFAULT`: Scan the default path
+`SCAN_PATH_USER_DEFINE`: Scan the custom path
+
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -180,6 +204,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("ClickTimeout",$param) and $param["ClickTimeout"] !== null) {
             $this->ClickTimeout = $param["ClickTimeout"];
+        }
+
+        if (array_key_exists("ScanPathMode",$param) and $param["ScanPathMode"] !== null) {
+            $this->ScanPathMode = $param["ScanPathMode"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

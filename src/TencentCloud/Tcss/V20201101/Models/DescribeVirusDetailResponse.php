@@ -246,6 +246,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 `4`: Unusual behavior.
 `5`: Threat intelligence.
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getFileAccessTime() Obtain File accessed time
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setFileAccessTime(string $FileAccessTime) Set File accessed time
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getFileModifyTime() Obtain File modified time
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setFileModifyTime(string $FileModifyTime) Set File modified time
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -553,6 +561,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $CheckPlatform;
 
     /**
+     * @var string File accessed time
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $FileAccessTime;
+
+    /**
+     * @var string File modified time
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $FileModifyTime;
+
+    /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
@@ -670,6 +690,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 `3`: binaryAi.
 `4`: Unusual behavior.
 `5`: Threat intelligence.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $FileAccessTime File accessed time
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $FileModifyTime File modified time
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
@@ -872,6 +896,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("CheckPlatform",$param) and $param["CheckPlatform"] !== null) {
             $this->CheckPlatform = $param["CheckPlatform"];
+        }
+
+        if (array_key_exists("FileAccessTime",$param) and $param["FileAccessTime"] !== null) {
+            $this->FileAccessTime = $param["FileAccessTime"];
+        }
+
+        if (array_key_exists("FileModifyTime",$param) and $param["FileModifyTime"] !== null) {
+            $this->FileModifyTime = $param["FileModifyTime"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
