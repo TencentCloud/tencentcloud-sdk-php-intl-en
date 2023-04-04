@@ -20,15 +20,17 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeDefaultParams request structure.
  *
- * @method string getEngineVersion() Obtain MySQL version. Currently, the supported versions are ["5.1", "5.5", "5.6", "5.7"].
- * @method void setEngineVersion(string $EngineVersion) Set MySQL version. Currently, the supported versions are ["5.1", "5.5", "5.6", "5.7"].
+ * @method string getEngineVersion() Obtain Engine version. Currently, the supported versions are `5.1`, `5.5`, `5.6`, `5.7`, and `8.0`.
+ * @method void setEngineVersion(string $EngineVersion) Set Engine version. Currently, the supported versions are `5.1`, `5.5`, `5.6`, `5.7`, and `8.0`.
  * @method string getTemplateType() Obtain Type of the default parameter template. Valid values: `HIGH_STABILITY` (high-stability template), `HIGH_PERFORMANCE` (high-performance template).
  * @method void setTemplateType(string $TemplateType) Set Type of the default parameter template. Valid values: `HIGH_STABILITY` (high-stability template), `HIGH_PERFORMANCE` (high-performance template).
+ * @method string getEngineType() Obtain Parameter template engine. Default value: `InnoDB`.
+ * @method void setEngineType(string $EngineType) Set Parameter template engine. Default value: `InnoDB`.
  */
 class DescribeDefaultParamsRequest extends AbstractModel
 {
     /**
-     * @var string MySQL version. Currently, the supported versions are ["5.1", "5.5", "5.6", "5.7"].
+     * @var string Engine version. Currently, the supported versions are `5.1`, `5.5`, `5.6`, `5.7`, and `8.0`.
      */
     public $EngineVersion;
 
@@ -38,8 +40,14 @@ class DescribeDefaultParamsRequest extends AbstractModel
     public $TemplateType;
 
     /**
-     * @param string $EngineVersion MySQL version. Currently, the supported versions are ["5.1", "5.5", "5.6", "5.7"].
+     * @var string Parameter template engine. Default value: `InnoDB`.
+     */
+    public $EngineType;
+
+    /**
+     * @param string $EngineVersion Engine version. Currently, the supported versions are `5.1`, `5.5`, `5.6`, `5.7`, and `8.0`.
      * @param string $TemplateType Type of the default parameter template. Valid values: `HIGH_STABILITY` (high-stability template), `HIGH_PERFORMANCE` (high-performance template).
+     * @param string $EngineType Parameter template engine. Default value: `InnoDB`.
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class DescribeDefaultParamsRequest extends AbstractModel
 
         if (array_key_exists("TemplateType",$param) and $param["TemplateType"] !== null) {
             $this->TemplateType = $param["TemplateType"];
+        }
+
+        if (array_key_exists("EngineType",$param) and $param["EngineType"] !== null) {
+            $this->EngineType = $param["EngineType"];
         }
     }
 }

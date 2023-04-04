@@ -74,6 +74,12 @@ Default value: `1`
 `0–1`: Sample by the specified sample rate, such as `0.02`.
 `1`: Precise analysis without sampling.
 Default value: `1`
+ * @method integer getSyntaxRule() Obtain Search syntax.
+`0` (default): Lucene; `1`: CQL.
+For more information, visit https://intl.cloud.tencent.com/document/product/614/47044?from_cn_redirect=1#RetrievesConditionalRules.
+ * @method void setSyntaxRule(integer $SyntaxRule) Set Search syntax.
+`0` (default): Lucene; `1`: CQL.
+For more information, visit https://intl.cloud.tencent.com/document/product/614/47044?from_cn_redirect=1#RetrievesConditionalRules.
  */
 class SearchLogRequest extends AbstractModel
 {
@@ -141,6 +147,13 @@ Default value: `1`
     public $SamplingRate;
 
     /**
+     * @var integer Search syntax.
+`0` (default): Lucene; `1`: CQL.
+For more information, visit https://intl.cloud.tencent.com/document/product/614/47044?from_cn_redirect=1#RetrievesConditionalRules.
+     */
+    public $SyntaxRule;
+
+    /**
      * @param integer $From Start time of the log to be searched, which is a Unix timestamp in milliseconds
      * @param integer $To End time of the log to be searched, which is a Unix timestamp in milliseconds
      * @param string $Query Search and analysis statement. Maximum length: 12 KB
@@ -168,6 +181,9 @@ The two response methods differ slightly in terms of encoding format. You are ad
 `0–1`: Sample by the specified sample rate, such as `0.02`.
 `1`: Precise analysis without sampling.
 Default value: `1`
+     * @param integer $SyntaxRule Search syntax.
+`0` (default): Lucene; `1`: CQL.
+For more information, visit https://intl.cloud.tencent.com/document/product/614/47044?from_cn_redirect=1#RetrievesConditionalRules.
      */
     function __construct()
     {
@@ -216,6 +232,10 @@ Default value: `1`
 
         if (array_key_exists("SamplingRate",$param) and $param["SamplingRate"] !== null) {
             $this->SamplingRate = $param["SamplingRate"];
+        }
+
+        if (array_key_exists("SyntaxRule",$param) and $param["SyntaxRule"] !== null) {
+            $this->SyntaxRule = $param["SyntaxRule"];
         }
     }
 }

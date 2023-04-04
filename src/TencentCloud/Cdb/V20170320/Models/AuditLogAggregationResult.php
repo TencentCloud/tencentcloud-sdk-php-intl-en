@@ -14,52 +14,39 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Lcic\V20220817\Models;
+namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * The information of registered users.
-Used by actions: BatchRegister.
+ * Analysis result of an audit log
  *
- * @method integer getSdkAppId() Obtain The SDKAppID assigned by LCIC.
-
- * @method void setSdkAppId(integer $SdkAppId) Set The SDKAppID assigned by LCIC.
-
- * @method string getUserId() Obtain 
+ * @method string getAggregationField() Obtain Aggregation dimension
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setUserId(string $UserId) Set 
+ * @method void setAggregationField(string $AggregationField) Set Aggregation dimension
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getOriginId() Obtain 
+ * @method array getBuckets() Obtain Result set of an aggregation bucket
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setOriginId(string $OriginId) Set 
+ * @method void setBuckets(array $Buckets) Set Result set of an aggregation bucket
 Note: This field may return null, indicating that no valid values can be obtained.
  */
-class BatchUserInfo extends AbstractModel
+class AuditLogAggregationResult extends AbstractModel
 {
     /**
-     * @var integer The SDKAppID assigned by LCIC.
-
-     */
-    public $SdkAppId;
-
-    /**
-     * @var string 
+     * @var string Aggregation dimension
 Note: This field may return null, indicating that no valid values can be obtained.
      */
-    public $UserId;
+    public $AggregationField;
 
     /**
-     * @var string 
+     * @var array Result set of an aggregation bucket
 Note: This field may return null, indicating that no valid values can be obtained.
      */
-    public $OriginId;
+    public $Buckets;
 
     /**
-     * @param integer $SdkAppId The SDKAppID assigned by LCIC.
-
-     * @param string $UserId 
+     * @param string $AggregationField Aggregation dimension
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $OriginId 
+     * @param array $Buckets Result set of an aggregation bucket
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
@@ -75,16 +62,17 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if ($param === null) {
             return;
         }
-        if (array_key_exists("SdkAppId",$param) and $param["SdkAppId"] !== null) {
-            $this->SdkAppId = $param["SdkAppId"];
+        if (array_key_exists("AggregationField",$param) and $param["AggregationField"] !== null) {
+            $this->AggregationField = $param["AggregationField"];
         }
 
-        if (array_key_exists("UserId",$param) and $param["UserId"] !== null) {
-            $this->UserId = $param["UserId"];
-        }
-
-        if (array_key_exists("OriginId",$param) and $param["OriginId"] !== null) {
-            $this->OriginId = $param["OriginId"];
+        if (array_key_exists("Buckets",$param) and $param["Buckets"] !== null) {
+            $this->Buckets = [];
+            foreach ($param["Buckets"] as $key => $value){
+                $obj = new Bucket();
+                $obj->deserialize($value);
+                array_push($this->Buckets, $obj);
+            }
         }
     }
 }

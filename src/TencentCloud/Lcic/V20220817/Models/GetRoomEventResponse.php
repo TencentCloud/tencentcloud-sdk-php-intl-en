@@ -18,29 +18,29 @@ namespace TencentCloud\Lcic\V20220817\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeGroupList response structure.
+ * GetRoomEvent response structure.
  *
- * @method integer getTotal() Obtain The total number of groups that meet the conditions.
- * @method void setTotal(integer $Total) Set The total number of groups that meet the conditions.
- * @method array getGroupInfos() Obtain 
+ * @method integer getTotal() Obtain The total number of events for the room. The value of this parameter is not affected by `keyword`.
+ * @method void setTotal(integer $Total) Set The total number of events for the room. The value of this parameter is not affected by `keyword`.
+ * @method array getEvents() Obtain The event details, including the type and time.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setGroupInfos(array $GroupInfos) Set 
+ * @method void setEvents(array $Events) Set The event details, including the type and time.
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
-class DescribeGroupListResponse extends AbstractModel
+class GetRoomEventResponse extends AbstractModel
 {
     /**
-     * @var integer The total number of groups that meet the conditions.
+     * @var integer The total number of events for the room. The value of this parameter is not affected by `keyword`.
      */
     public $Total;
 
     /**
-     * @var array 
+     * @var array The event details, including the type and time.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
-    public $GroupInfos;
+    public $Events;
 
     /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -48,8 +48,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $RequestId;
 
     /**
-     * @param integer $Total The total number of groups that meet the conditions.
-     * @param array $GroupInfos 
+     * @param integer $Total The total number of events for the room. The value of this parameter is not affected by `keyword`.
+     * @param array $Events The event details, including the type and time.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
@@ -70,12 +70,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
             $this->Total = $param["Total"];
         }
 
-        if (array_key_exists("GroupInfos",$param) and $param["GroupInfos"] !== null) {
-            $this->GroupInfos = [];
-            foreach ($param["GroupInfos"] as $key => $value){
-                $obj = new GroupInfo();
+        if (array_key_exists("Events",$param) and $param["Events"] !== null) {
+            $this->Events = [];
+            foreach ($param["Events"] as $key => $value){
+                $obj = new EventInfo();
                 $obj->deserialize($value);
-                array_push($this->GroupInfos, $obj);
+                array_push($this->Events, $obj);
             }
         }
 

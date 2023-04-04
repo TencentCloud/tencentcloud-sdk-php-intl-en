@@ -24,10 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCaseSensitive(boolean $CaseSensitive) Set Case sensitivity
  * @method string getTokenizer() Obtain Separator of the full-text index. Each character represents a separator.
 Only symbols, \n\t\r, and escape character \ are supported.
-Note: \n\t\r can be directly enclosed in double quotes as the input parameter without escaping.
+Note: \n\t\r can be directly enclosed in double quotes as the input parameter without escaping. When debugging with API Explorer, use the JSON parameter input method to avoid repeated escaping of \n\t\r.
  * @method void setTokenizer(string $Tokenizer) Set Separator of the full-text index. Each character represents a separator.
 Only symbols, \n\t\r, and escape character \ are supported.
-Note: \n\t\r can be directly enclosed in double quotes as the input parameter without escaping.
+Note: \n\t\r can be directly enclosed in double quotes as the input parameter without escaping. When debugging with API Explorer, use the JSON parameter input method to avoid repeated escaping of \n\t\r.
  * @method boolean getContainZH() Obtain Whether Chinese characters are contained
 Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method void setContainZH(boolean $ContainZH) Set Whether Chinese characters are contained
@@ -43,7 +43,7 @@ class FullTextInfo extends AbstractModel
     /**
      * @var string Separator of the full-text index. Each character represents a separator.
 Only symbols, \n\t\r, and escape character \ are supported.
-Note: \n\t\r can be directly enclosed in double quotes as the input parameter without escaping.
+Note: \n\t\r can be directly enclosed in double quotes as the input parameter without escaping. When debugging with API Explorer, use the JSON parameter input method to avoid repeated escaping of \n\t\r.
      */
     public $Tokenizer;
 
@@ -57,7 +57,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
      * @param boolean $CaseSensitive Case sensitivity
      * @param string $Tokenizer Separator of the full-text index. Each character represents a separator.
 Only symbols, \n\t\r, and escape character \ are supported.
-Note: \n\t\r can be directly enclosed in double quotes as the input parameter without escaping.
+Note: \n\t\r can be directly enclosed in double quotes as the input parameter without escaping. When debugging with API Explorer, use the JSON parameter input method to avoid repeated escaping of \n\t\r.
      * @param boolean $ContainZH Whether Chinese characters are contained
 Note: this field may return `null`, indicating that no valid values can be obtained.
      */

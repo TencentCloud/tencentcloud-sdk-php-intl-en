@@ -20,8 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeDocumentsByRoom response structure.
  *
- * @method array getDocuments() Obtain The information of the documents. Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setDocuments(array $Documents) Set The information of the documents. Note: This field may return null, indicating that no valid values can be obtained.
+ * @method array getDocuments() Obtain 
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setDocuments(array $Documents) Set 
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method integer getTotal() Obtain The total number of records that meet the conditions.
  * @method void setTotal(integer $Total) Set The total number of records that meet the conditions.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -30,7 +32,8 @@ use TencentCloud\Common\AbstractModel;
 class DescribeDocumentsByRoomResponse extends AbstractModel
 {
     /**
-     * @var array The information of the documents. Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array 
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Documents;
 
@@ -45,7 +48,8 @@ class DescribeDocumentsByRoomResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $Documents The information of the documents. Note: This field may return null, indicating that no valid values can be obtained.
+     * @param array $Documents 
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $Total The total number of records that meet the conditions.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */

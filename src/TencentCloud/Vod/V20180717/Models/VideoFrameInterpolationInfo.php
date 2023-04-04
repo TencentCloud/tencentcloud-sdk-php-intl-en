@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSwitch(string $Switch) Set Whether to enable smart frame interpolation. Valid values:
 <li>`ON`</li>
 <li>`OFF`</li>
- * @method integer getFps() Obtain The frame rate. Value range: (0, 60]. This parameter is valid only if `Switch` is `ON`. By default, the original frame rate will be used.
- * @method void setFps(integer $Fps) Set The frame rate. Value range: (0, 60]. This parameter is valid only if `Switch` is `ON`. By default, the original frame rate will be used.
+ * @method integer getFps() Obtain The frame rate. Value range: (0, 100]. This parameter is valid only if `Switch` is `ON`. By default, the original frame rate will be used.
+ * @method void setFps(integer $Fps) Set The frame rate. Value range: (0, 100]. This parameter is valid only if `Switch` is `ON`. By default, the original frame rate will be used.
  */
 class VideoFrameInterpolationInfo extends AbstractModel
 {
@@ -39,7 +39,7 @@ class VideoFrameInterpolationInfo extends AbstractModel
     public $Switch;
 
     /**
-     * @var integer The frame rate. Value range: (0, 60]. This parameter is valid only if `Switch` is `ON`. By default, the original frame rate will be used.
+     * @var integer The frame rate. Value range: (0, 100]. This parameter is valid only if `Switch` is `ON`. By default, the original frame rate will be used.
      */
     public $Fps;
 
@@ -47,7 +47,7 @@ class VideoFrameInterpolationInfo extends AbstractModel
      * @param string $Switch Whether to enable smart frame interpolation. Valid values:
 <li>`ON`</li>
 <li>`OFF`</li>
-     * @param integer $Fps The frame rate. Value range: (0, 60]. This parameter is valid only if `Switch` is `ON`. By default, the original frame rate will be used.
+     * @param integer $Fps The frame rate. Value range: (0, 100]. This parameter is valid only if `Switch` is `ON`. By default, the original frame rate will be used.
      */
     function __construct()
     {

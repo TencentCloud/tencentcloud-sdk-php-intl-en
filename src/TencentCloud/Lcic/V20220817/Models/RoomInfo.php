@@ -21,116 +21,113 @@ use TencentCloud\Common\AbstractModel;
  * The information of the room to create.
 Used by actions: BatchCreateRoom.
  *
- * @method string getName() Obtain The room name. Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setName(string $Name) Set The room name. Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getStartTime() Obtain The room start time (Unix timestamp). Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setStartTime(integer $StartTime) Set The room start time (Unix timestamp). Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getEndTime() Obtain The room end time (Unix timestamp). Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setEndTime(integer $EndTime) Set The room end time (Unix timestamp). Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getResolution() Obtain The resolution. Valid values: 1: SD; 2: HD; 3: FHD. Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setResolution(integer $Resolution) Set The resolution. Valid values: 1: SD; 2: HD; 3: FHD. Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getMaxMicNumber() Obtain The maximum number of mic-on users (excluding the teacher). Value range: 0-16. Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setMaxMicNumber(integer $MaxMicNumber) Set The maximum number of mic-on users (excluding the teacher). Value range: 0-16. Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getName() Obtain The room name.
+ * @method void setName(string $Name) Set The room name.
+ * @method integer getStartTime() Obtain The room start time (Unix timestamp).
+ * @method void setStartTime(integer $StartTime) Set The room start time (Unix timestamp).
+ * @method integer getEndTime() Obtain The room end time (Unix timestamp).
+ * @method void setEndTime(integer $EndTime) Set The room end time (Unix timestamp).
+ * @method integer getResolution() Obtain The resolution. Valid values: `1`: SD; `2`: HD; `3`: FHD.
+ * @method void setResolution(integer $Resolution) Set The resolution. Valid values: `1`: SD; `2`: HD; `3`: FHD.
+ * @method integer getMaxMicNumber() Obtain The maximum number of mic-on users (excluding the teacher). Value range: 0-16.
+ * @method void setMaxMicNumber(integer $MaxMicNumber) Set The maximum number of mic-on users (excluding the teacher). Value range: 0-16.
  * @method string getSubType() Obtain The room subtype. Valid values: `videodoc`: Document + Video; `video`: Video only; `coteaching`: Dual-teacher.
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setSubType(string $SubType) Set The room subtype. Valid values: `videodoc`: Document + Video; `video`: Video only; `coteaching`: Dual-teacher.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getTeacherId() Obtain The user ID of the teacher. User IDs are returned by the user registration APIs. Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setTeacherId(string $TeacherId) Set The user ID of the teacher. User IDs are returned by the user registration APIs. Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getAutoMic() Obtain Whether to automatically turn the mic on when a user enters the room. Valid values: 0: No (default value); 1: Yes. Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setAutoMic(integer $AutoMic) Set Whether to automatically turn the mic on when a user enters the room. Valid values: 0: No (default value); 1: Yes. Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getTurnOffMic() Obtain Whether to disconnect communication after audio/video permissions are revoked. Valid values: 0: Yes (default value); 1: No. Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setTurnOffMic(integer $TurnOffMic) Set Whether to disconnect communication after audio/video permissions are revoked. Valid values: 0: Yes (default value); 1: No. Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getAudioQuality() Obtain Whether to enable the high audio quality mode. Valid values: 0: No (default value); 1: Yes. Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setAudioQuality(integer $AudioQuality) Set Whether to enable the high audio quality mode. Valid values: 0: No (default value); 1: Yes. Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getDisableRecord() Obtain Whether to disable auto recording. Valid values: 0: No (default); 1: Yes. If this parameter is 0, recording will start when the class starts and stops when the class ends. Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setDisableRecord(integer $DisableRecord) Set Whether to disable auto recording. Valid values: 0: No (default); 1: Yes. If this parameter is 0, recording will start when the class starts and stops when the class ends. Note: This field may return null, indicating that no valid values can be obtained.
- * @method array getAssistants() Obtain The user IDs of the teacher assistants. User IDs are returned by the user registration APIs. Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setAssistants(array $Assistants) Set The user IDs of the teacher assistants. User IDs are returned by the user registration APIs. Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getRTCAudienceNumber() Obtain The number of RTC users. Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setRTCAudienceNumber(integer $RTCAudienceNumber) Set The number of RTC users. Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getAudienceType() Obtain The audience type. Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setAudienceType(integer $AudienceType) Set The audience type. Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getRecordLayout() Obtain The recording layout. Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setRecordLayout(integer $RecordLayout) Set The recording layout. Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getTeacherId() Obtain The user ID of the teacher. User IDs are returned by the user registration APIs.
+ * @method void setTeacherId(string $TeacherId) Set The user ID of the teacher. User IDs are returned by the user registration APIs.
+ * @method integer getAutoMic() Obtain Whether to automatically turn the mic on when a user enters the room. Valid values: `0` (default): No; `1`: Yes.
+ * @method void setAutoMic(integer $AutoMic) Set Whether to automatically turn the mic on when a user enters the room. Valid values: `0` (default): No; `1`: Yes.
+ * @method integer getTurnOffMic() Obtain Whether to disconnect communication after audio/video permissions are revoked. Valid values: `0` (default): Yes; `1`: No.
+ * @method void setTurnOffMic(integer $TurnOffMic) Set Whether to disconnect communication after audio/video permissions are revoked. Valid values: `0` (default): Yes; `1`: No.
+ * @method integer getAudioQuality() Obtain Whether to enable the high audio quality mode. Valid values: `0` (default): No; `1`: Yes.
+ * @method void setAudioQuality(integer $AudioQuality) Set Whether to enable the high audio quality mode. Valid values: `0` (default): No; `1`: Yes.
+ * @method integer getDisableRecord() Obtain Whether to disable auto recording. Valid values: `0` (default): No; `1`: Yes. If this parameter is `0`, recording will start when the class starts and stops when the class ends.
+ * @method void setDisableRecord(integer $DisableRecord) Set Whether to disable auto recording. Valid values: `0` (default): No; `1`: Yes. If this parameter is `0`, recording will start when the class starts and stops when the class ends.
+ * @method array getAssistants() Obtain The user IDs of the teacher assistants. User IDs are returned by the user registration APIs.
+ * @method void setAssistants(array $Assistants) Set The user IDs of the teacher assistants. User IDs are returned by the user registration APIs.
+ * @method integer getRTCAudienceNumber() Obtain The number of RTC users.
+ * @method void setRTCAudienceNumber(integer $RTCAudienceNumber) Set The number of RTC users.
+ * @method integer getAudienceType() Obtain The audience type.
+ * @method void setAudienceType(integer $AudienceType) Set The audience type.
+ * @method integer getRecordLayout() Obtain The recording layout.
+ * @method void setRecordLayout(integer $RecordLayout) Set The recording layout.
  * @method string getGroupId() Obtain The ID of the group to bind. Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setGroupId(string $GroupId) Set The ID of the group to bind. Note: This field may return null, indicating that no valid values can be obtained.
  */
 class RoomInfo extends AbstractModel
 {
     /**
-     * @var string The room name. Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string The room name.
      */
     public $Name;
 
     /**
-     * @var integer The room start time (Unix timestamp). Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer The room start time (Unix timestamp).
      */
     public $StartTime;
 
     /**
-     * @var integer The room end time (Unix timestamp). Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer The room end time (Unix timestamp).
      */
     public $EndTime;
 
     /**
-     * @var integer The resolution. Valid values: 1: SD; 2: HD; 3: FHD. Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer The resolution. Valid values: `1`: SD; `2`: HD; `3`: FHD.
      */
     public $Resolution;
 
     /**
-     * @var integer The maximum number of mic-on users (excluding the teacher). Value range: 0-16. Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer The maximum number of mic-on users (excluding the teacher). Value range: 0-16.
      */
     public $MaxMicNumber;
 
     /**
      * @var string The room subtype. Valid values: `videodoc`: Document + Video; `video`: Video only; `coteaching`: Dual-teacher.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $SubType;
 
     /**
-     * @var string The user ID of the teacher. User IDs are returned by the user registration APIs. Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string The user ID of the teacher. User IDs are returned by the user registration APIs.
      */
     public $TeacherId;
 
     /**
-     * @var integer Whether to automatically turn the mic on when a user enters the room. Valid values: 0: No (default value); 1: Yes. Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Whether to automatically turn the mic on when a user enters the room. Valid values: `0` (default): No; `1`: Yes.
      */
     public $AutoMic;
 
     /**
-     * @var integer Whether to disconnect communication after audio/video permissions are revoked. Valid values: 0: Yes (default value); 1: No. Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Whether to disconnect communication after audio/video permissions are revoked. Valid values: `0` (default): Yes; `1`: No.
      */
     public $TurnOffMic;
 
     /**
-     * @var integer Whether to enable the high audio quality mode. Valid values: 0: No (default value); 1: Yes. Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Whether to enable the high audio quality mode. Valid values: `0` (default): No; `1`: Yes.
      */
     public $AudioQuality;
 
     /**
-     * @var integer Whether to disable auto recording. Valid values: 0: No (default); 1: Yes. If this parameter is 0, recording will start when the class starts and stops when the class ends. Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Whether to disable auto recording. Valid values: `0` (default): No; `1`: Yes. If this parameter is `0`, recording will start when the class starts and stops when the class ends.
      */
     public $DisableRecord;
 
     /**
-     * @var array The user IDs of the teacher assistants. User IDs are returned by the user registration APIs. Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array The user IDs of the teacher assistants. User IDs are returned by the user registration APIs.
      */
     public $Assistants;
 
     /**
-     * @var integer The number of RTC users. Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer The number of RTC users.
      */
     public $RTCAudienceNumber;
 
     /**
-     * @var integer The audience type. Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer The audience type.
      */
     public $AudienceType;
 
     /**
-     * @var integer The recording layout. Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer The recording layout.
      */
     public $RecordLayout;
 
@@ -140,22 +137,21 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $GroupId;
 
     /**
-     * @param string $Name The room name. Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $StartTime The room start time (Unix timestamp). Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $EndTime The room end time (Unix timestamp). Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $Resolution The resolution. Valid values: 1: SD; 2: HD; 3: FHD. Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $MaxMicNumber The maximum number of mic-on users (excluding the teacher). Value range: 0-16. Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $Name The room name.
+     * @param integer $StartTime The room start time (Unix timestamp).
+     * @param integer $EndTime The room end time (Unix timestamp).
+     * @param integer $Resolution The resolution. Valid values: `1`: SD; `2`: HD; `3`: FHD.
+     * @param integer $MaxMicNumber The maximum number of mic-on users (excluding the teacher). Value range: 0-16.
      * @param string $SubType The room subtype. Valid values: `videodoc`: Document + Video; `video`: Video only; `coteaching`: Dual-teacher.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $TeacherId The user ID of the teacher. User IDs are returned by the user registration APIs. Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $AutoMic Whether to automatically turn the mic on when a user enters the room. Valid values: 0: No (default value); 1: Yes. Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $TurnOffMic Whether to disconnect communication after audio/video permissions are revoked. Valid values: 0: Yes (default value); 1: No. Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $AudioQuality Whether to enable the high audio quality mode. Valid values: 0: No (default value); 1: Yes. Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $DisableRecord Whether to disable auto recording. Valid values: 0: No (default); 1: Yes. If this parameter is 0, recording will start when the class starts and stops when the class ends. Note: This field may return null, indicating that no valid values can be obtained.
-     * @param array $Assistants The user IDs of the teacher assistants. User IDs are returned by the user registration APIs. Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $RTCAudienceNumber The number of RTC users. Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $AudienceType The audience type. Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $RecordLayout The recording layout. Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $TeacherId The user ID of the teacher. User IDs are returned by the user registration APIs.
+     * @param integer $AutoMic Whether to automatically turn the mic on when a user enters the room. Valid values: `0` (default): No; `1`: Yes.
+     * @param integer $TurnOffMic Whether to disconnect communication after audio/video permissions are revoked. Valid values: `0` (default): Yes; `1`: No.
+     * @param integer $AudioQuality Whether to enable the high audio quality mode. Valid values: `0` (default): No; `1`: Yes.
+     * @param integer $DisableRecord Whether to disable auto recording. Valid values: `0` (default): No; `1`: Yes. If this parameter is `0`, recording will start when the class starts and stops when the class ends.
+     * @param array $Assistants The user IDs of the teacher assistants. User IDs are returned by the user registration APIs.
+     * @param integer $RTCAudienceNumber The number of RTC users.
+     * @param integer $AudienceType The audience type.
+     * @param integer $RecordLayout The recording layout.
      * @param string $GroupId The ID of the group to bind. Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()

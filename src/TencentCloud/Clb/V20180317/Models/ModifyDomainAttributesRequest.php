@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setHttp2(boolean $Http2) Set Whether to enable HTTP/2. Note: HTTP/2 can be enabled only for HTTPS domain names.
  * @method boolean getDefaultServer() Obtain Whether to set this domain name as the default domain name. Note: Only one default domain name can be set under one listener.
  * @method void setDefaultServer(boolean $DefaultServer) Set Whether to set this domain name as the default domain name. Note: Only one default domain name can be set under one listener.
+ * @method boolean getQuic() Obtain Whether to enable QUIC. Note: QUIC can be enabled only for HTTPS domain names.
+ * @method void setQuic(boolean $Quic) Set Whether to enable QUIC. Note: QUIC can be enabled only for HTTPS domain names.
  * @method string getNewDefaultServerDomain() Obtain Specifies a new default domain name for the listener. This field is used when the original default domain name is disabled. If there are multiple domain names, specify one of them.
  * @method void setNewDefaultServerDomain(string $NewDefaultServerDomain) Set Specifies a new default domain name for the listener. This field is used when the original default domain name is disabled. If there are multiple domain names, specify one of them.
  * @method array getNewDomains() Obtain The new domain names to modify. `NewDomain` and `NewDomains` can not be both specified.
@@ -79,6 +81,11 @@ class ModifyDomainAttributesRequest extends AbstractModel
     public $DefaultServer;
 
     /**
+     * @var boolean Whether to enable QUIC. Note: QUIC can be enabled only for HTTPS domain names.
+     */
+    public $Quic;
+
+    /**
      * @var string Specifies a new default domain name for the listener. This field is used when the original default domain name is disabled. If there are multiple domain names, specify one of them.
      */
     public $NewDefaultServerDomain;
@@ -101,6 +108,7 @@ class ModifyDomainAttributesRequest extends AbstractModel
      * @param CertificateInput $Certificate Certificate information of the domain name. It is only applicable to listeners with SNI enabled. `Certificate` and `MultiCertInfo` cannot be specified at the same time. 
      * @param boolean $Http2 Whether to enable HTTP/2. Note: HTTP/2 can be enabled only for HTTPS domain names.
      * @param boolean $DefaultServer Whether to set this domain name as the default domain name. Note: Only one default domain name can be set under one listener.
+     * @param boolean $Quic Whether to enable QUIC. Note: QUIC can be enabled only for HTTPS domain names.
      * @param string $NewDefaultServerDomain Specifies a new default domain name for the listener. This field is used when the original default domain name is disabled. If there are multiple domain names, specify one of them.
      * @param array $NewDomains The new domain names to modify. `NewDomain` and `NewDomains` can not be both specified.
      * @param MultiCertInfo $MultiCertInfo Certificate information of the domain name. It is only applicable to listeners with SNI enabled. You can specify multiple server-side certificates with different algorithm types. `Certificate` and `MultiCertInfo` cannot be specified at the same time. 
@@ -145,6 +153,10 @@ class ModifyDomainAttributesRequest extends AbstractModel
 
         if (array_key_exists("DefaultServer",$param) and $param["DefaultServer"] !== null) {
             $this->DefaultServer = $param["DefaultServer"];
+        }
+
+        if (array_key_exists("Quic",$param) and $param["Quic"] !== null) {
+            $this->Quic = $param["Quic"];
         }
 
         if (array_key_exists("NewDefaultServerDomain",$param) and $param["NewDefaultServerDomain"] !== null) {

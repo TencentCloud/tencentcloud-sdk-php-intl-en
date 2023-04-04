@@ -20,9 +20,9 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeOrganizationMemberAuthIdentities response structure.
  *
- * @method array getItems() Obtain List.
+ * @method array getItems() Obtain List of authorizable identities
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setItems(array $Items) Set List.
+ * @method void setItems(array $Items) Set List of authorizable identities
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method integer getTotal() Obtain Total number.
 Note: This field may return null, indicating that no valid values can be obtained.
@@ -34,7 +34,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 class DescribeOrganizationMemberAuthIdentitiesResponse extends AbstractModel
 {
     /**
-     * @var array List.
+     * @var array List of authorizable identities
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Items;
@@ -51,7 +51,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $RequestId;
 
     /**
-     * @param array $Items List.
+     * @param array $Items List of authorizable identities
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $Total Total number.
 Note: This field may return null, indicating that no valid values can be obtained.

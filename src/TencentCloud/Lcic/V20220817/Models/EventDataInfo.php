@@ -18,48 +18,35 @@ namespace TencentCloud\Lcic\V20220817\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * The information of registered users.
-Used by actions: BatchRegister.
+ * The information of a room event.
  *
- * @method integer getSdkAppId() Obtain The SDKAppID assigned by LCIC.
-
- * @method void setSdkAppId(integer $SdkAppId) Set The SDKAppID assigned by LCIC.
-
- * @method string getUserId() Obtain 
+ * @method integer getRoomId() Obtain The room ID.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setUserId(string $UserId) Set 
+ * @method void setRoomId(integer $RoomId) Set The room ID.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getOriginId() Obtain 
+ * @method string getUserId() Obtain The ID of the user to whom the event occurred.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setOriginId(string $OriginId) Set 
+ * @method void setUserId(string $UserId) Set The ID of the user to whom the event occurred.
 Note: This field may return null, indicating that no valid values can be obtained.
  */
-class BatchUserInfo extends AbstractModel
+class EventDataInfo extends AbstractModel
 {
     /**
-     * @var integer The SDKAppID assigned by LCIC.
-
+     * @var integer The room ID.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
-    public $SdkAppId;
+    public $RoomId;
 
     /**
-     * @var string 
+     * @var string The ID of the user to whom the event occurred.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $UserId;
 
     /**
-     * @var string 
+     * @param integer $RoomId The room ID.
 Note: This field may return null, indicating that no valid values can be obtained.
-     */
-    public $OriginId;
-
-    /**
-     * @param integer $SdkAppId The SDKAppID assigned by LCIC.
-
-     * @param string $UserId 
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $OriginId 
+     * @param string $UserId The ID of the user to whom the event occurred.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
@@ -75,16 +62,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if ($param === null) {
             return;
         }
-        if (array_key_exists("SdkAppId",$param) and $param["SdkAppId"] !== null) {
-            $this->SdkAppId = $param["SdkAppId"];
+        if (array_key_exists("RoomId",$param) and $param["RoomId"] !== null) {
+            $this->RoomId = $param["RoomId"];
         }
 
         if (array_key_exists("UserId",$param) and $param["UserId"] !== null) {
             $this->UserId = $param["UserId"];
-        }
-
-        if (array_key_exists("OriginId",$param) and $param["OriginId"] !== null) {
-            $this->OriginId = $param["OriginId"];
         }
     }
 }

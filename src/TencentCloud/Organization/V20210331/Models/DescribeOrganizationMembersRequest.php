@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeOrganizationMembers request structure.
  *
- * @method integer getOffset() Obtain Offset.
- * @method void setOffset(integer $Offset) Set Offset.
- * @method integer getLimit() Obtain Maximum number of returned results. Maximum value: `50`.
- * @method void setLimit(integer $Limit) Set Maximum number of returned results. Maximum value: `50`.
+ * @method integer getOffset() Obtain Offset, which is an integer multiple of the value of `Limit`. Default value: `0`.
+ * @method void setOffset(integer $Offset) Set Offset, which is an integer multiple of the value of `Limit`. Default value: `0`.
+ * @method integer getLimit() Obtain Limit, which defaults to `10`. Value range: 1-50.
+ * @method void setLimit(integer $Limit) Set Limit, which defaults to `10`. Value range: 1-50.
  * @method string getLang() Obtain Valid values: `en` (Tencent Cloud International); `zh` (Tencent Cloud).
  * @method void setLang(string $Lang) Set Valid values: `en` (Tencent Cloud International); `zh` (Tencent Cloud).
  * @method string getSearchKey() Obtain Search by member name or ID.
@@ -36,12 +36,12 @@ use TencentCloud\Common\AbstractModel;
 class DescribeOrganizationMembersRequest extends AbstractModel
 {
     /**
-     * @var integer Offset.
+     * @var integer Offset, which is an integer multiple of the value of `Limit`. Default value: `0`.
      */
     public $Offset;
 
     /**
-     * @var integer Maximum number of returned results. Maximum value: `50`.
+     * @var integer Limit, which defaults to `10`. Value range: 1-50.
      */
     public $Limit;
 
@@ -66,8 +66,8 @@ class DescribeOrganizationMembersRequest extends AbstractModel
     public $Product;
 
     /**
-     * @param integer $Offset Offset.
-     * @param integer $Limit Maximum number of returned results. Maximum value: `50`.
+     * @param integer $Offset Offset, which is an integer multiple of the value of `Limit`. Default value: `0`.
+     * @param integer $Limit Limit, which defaults to `10`. Value range: 1-50.
      * @param string $Lang Valid values: `en` (Tencent Cloud International); `zh` (Tencent Cloud).
      * @param string $SearchKey Search by member name or ID.
      * @param string $AuthName Entity name.

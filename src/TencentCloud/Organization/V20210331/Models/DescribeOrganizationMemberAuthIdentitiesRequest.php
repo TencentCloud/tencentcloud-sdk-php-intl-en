@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeOrganizationMemberAuthIdentities request structure.
  *
- * @method integer getOffset() Obtain Offset.
- * @method void setOffset(integer $Offset) Set Offset.
- * @method integer getLimit() Obtain Maximum number of returned results. Maximum value: `50`.
- * @method void setLimit(integer $Limit) Set Maximum number of returned results. Maximum value: `50`.
+ * @method integer getOffset() Obtain Offset, which is an integer multiple of the value of `Limit`. Default value: `0`.
+ * @method void setOffset(integer $Offset) Set Offset, which is an integer multiple of the value of `Limit`. Default value: `0`.
+ * @method integer getLimit() Obtain Limit, which defaults to `10`. Value range: 1-50.
+ * @method void setLimit(integer $Limit) Set Limit, which defaults to `10`. Value range: 1-50.
  * @method integer getMemberUin() Obtain Organization member UIN.
  * @method void setMemberUin(integer $MemberUin) Set Organization member UIN.
  */
 class DescribeOrganizationMemberAuthIdentitiesRequest extends AbstractModel
 {
     /**
-     * @var integer Offset.
+     * @var integer Offset, which is an integer multiple of the value of `Limit`. Default value: `0`.
      */
     public $Offset;
 
     /**
-     * @var integer Maximum number of returned results. Maximum value: `50`.
+     * @var integer Limit, which defaults to `10`. Value range: 1-50.
      */
     public $Limit;
 
@@ -45,8 +45,8 @@ class DescribeOrganizationMemberAuthIdentitiesRequest extends AbstractModel
     public $MemberUin;
 
     /**
-     * @param integer $Offset Offset.
-     * @param integer $Limit Maximum number of returned results. Maximum value: `50`.
+     * @param integer $Offset Offset, which is an integer multiple of the value of `Limit`. Default value: `0`.
+     * @param integer $Limit Limit, which defaults to `10`. Value range: 1-50.
      * @param integer $MemberUin Organization member UIN.
      */
     function __construct()

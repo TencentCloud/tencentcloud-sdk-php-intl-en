@@ -25,11 +25,11 @@ use TencentCloud\Common\AbstractModel;
  * @method string getTokenizer() Obtain Separator of fields. Each character represents a separator.
 Only symbols, \n\t\r, and escape character \ are supported.
 `long` and `double` fields need to be null.
-Note: \n\t\r can be directly enclosed in double quotes as the input parameter without escaping.
+Note: \n\t\r can be directly enclosed in double quotes as the input parameter without escaping. When debugging with API Explorer, use the JSON parameter input method to avoid repeated escaping of \n\t\r.
  * @method void setTokenizer(string $Tokenizer) Set Separator of fields. Each character represents a separator.
 Only symbols, \n\t\r, and escape character \ are supported.
 `long` and `double` fields need to be null.
-Note: \n\t\r can be directly enclosed in double quotes as the input parameter without escaping.
+Note: \n\t\r can be directly enclosed in double quotes as the input parameter without escaping. When debugging with API Explorer, use the JSON parameter input method to avoid repeated escaping of \n\t\r.
  * @method boolean getSqlFlag() Obtain Whether the analysis feature is enabled for the field
  * @method void setSqlFlag(boolean $SqlFlag) Set Whether the analysis feature is enabled for the field
  * @method boolean getContainZH() Obtain Whether Chinese characters are contained. For `long` and `double` fields, set them to `false`.
@@ -48,7 +48,7 @@ class ValueInfo extends AbstractModel
      * @var string Separator of fields. Each character represents a separator.
 Only symbols, \n\t\r, and escape character \ are supported.
 `long` and `double` fields need to be null.
-Note: \n\t\r can be directly enclosed in double quotes as the input parameter without escaping.
+Note: \n\t\r can be directly enclosed in double quotes as the input parameter without escaping. When debugging with API Explorer, use the JSON parameter input method to avoid repeated escaping of \n\t\r.
      */
     public $Tokenizer;
 
@@ -68,7 +68,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $Tokenizer Separator of fields. Each character represents a separator.
 Only symbols, \n\t\r, and escape character \ are supported.
 `long` and `double` fields need to be null.
-Note: \n\t\r can be directly enclosed in double quotes as the input parameter without escaping.
+Note: \n\t\r can be directly enclosed in double quotes as the input parameter without escaping. When debugging with API Explorer, use the JSON parameter input method to avoid repeated escaping of \n\t\r.
      * @param boolean $SqlFlag Whether the analysis feature is enabled for the field
      * @param boolean $ContainZH Whether Chinese characters are contained. For `long` and `double` fields, set them to `false`.
 Note: This field may return null, indicating that no valid values can be obtained.

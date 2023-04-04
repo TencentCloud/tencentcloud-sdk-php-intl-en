@@ -18,28 +18,16 @@ namespace TencentCloud\Lcic\V20220817\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * CreateSupervisor request structure.
+ * DescribeDeveloper request structure.
  *
- * @method integer getSdkAppId() Obtain The application ID.
- * @method void setSdkAppId(integer $SdkAppId) Set The application ID.
- * @method array getUsers() Obtain The user IDs.
- * @method void setUsers(array $Users) Set The user IDs.
+
  */
-class CreateSupervisorRequest extends AbstractModel
+class DescribeDeveloperRequest extends AbstractModel
 {
-    /**
-     * @var integer The application ID.
-     */
-    public $SdkAppId;
+
 
     /**
-     * @var array The user IDs.
-     */
-    public $Users;
 
-    /**
-     * @param integer $SdkAppId The application ID.
-     * @param array $Users The user IDs.
      */
     function __construct()
     {
@@ -54,12 +42,6 @@ class CreateSupervisorRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("SdkAppId",$param) and $param["SdkAppId"] !== null) {
-            $this->SdkAppId = $param["SdkAppId"];
-        }
 
-        if (array_key_exists("Users",$param) and $param["Users"] !== null) {
-            $this->Users = $param["Users"];
-        }
     }
 }

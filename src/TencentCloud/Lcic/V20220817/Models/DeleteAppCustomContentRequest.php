@@ -18,14 +18,14 @@ namespace TencentCloud\Lcic\V20220817\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * CreateSupervisor request structure.
+ * DeleteAppCustomContent request structure.
  *
  * @method integer getSdkAppId() Obtain The application ID.
  * @method void setSdkAppId(integer $SdkAppId) Set The application ID.
- * @method array getUsers() Obtain The user IDs.
- * @method void setUsers(array $Users) Set The user IDs.
+ * @method array getScenes() Obtain The custom elements (for which a scene has been configured) to delete. If this is empty, all custom elements will be deleted.
+ * @method void setScenes(array $Scenes) Set The custom elements (for which a scene has been configured) to delete. If this is empty, all custom elements will be deleted.
  */
-class CreateSupervisorRequest extends AbstractModel
+class DeleteAppCustomContentRequest extends AbstractModel
 {
     /**
      * @var integer The application ID.
@@ -33,13 +33,13 @@ class CreateSupervisorRequest extends AbstractModel
     public $SdkAppId;
 
     /**
-     * @var array The user IDs.
+     * @var array The custom elements (for which a scene has been configured) to delete. If this is empty, all custom elements will be deleted.
      */
-    public $Users;
+    public $Scenes;
 
     /**
      * @param integer $SdkAppId The application ID.
-     * @param array $Users The user IDs.
+     * @param array $Scenes The custom elements (for which a scene has been configured) to delete. If this is empty, all custom elements will be deleted.
      */
     function __construct()
     {
@@ -58,8 +58,8 @@ class CreateSupervisorRequest extends AbstractModel
             $this->SdkAppId = $param["SdkAppId"];
         }
 
-        if (array_key_exists("Users",$param) and $param["Users"] !== null) {
-            $this->Users = $param["Users"];
+        if (array_key_exists("Scenes",$param) and $param["Scenes"] !== null) {
+            $this->Scenes = $param["Scenes"];
         }
     }
 }

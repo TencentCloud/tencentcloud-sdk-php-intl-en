@@ -18,29 +18,19 @@ namespace TencentCloud\Lcic\V20220817\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeGroupList response structure.
+ * DescribeDeveloper response structure.
  *
- * @method integer getTotal() Obtain The total number of groups that meet the conditions.
- * @method void setTotal(integer $Total) Set The total number of groups that meet the conditions.
- * @method array getGroupInfos() Obtain 
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setGroupInfos(array $GroupInfos) Set 
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getDeveloperId() Obtain 
+ * @method void setDeveloperId(string $DeveloperId) Set 
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
-class DescribeGroupListResponse extends AbstractModel
+class DescribeDeveloperResponse extends AbstractModel
 {
     /**
-     * @var integer The total number of groups that meet the conditions.
+     * @var string 
      */
-    public $Total;
-
-    /**
-     * @var array 
-Note: This field may return null, indicating that no valid values can be obtained.
-     */
-    public $GroupInfos;
+    public $DeveloperId;
 
     /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -48,9 +38,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $RequestId;
 
     /**
-     * @param integer $Total The total number of groups that meet the conditions.
-     * @param array $GroupInfos 
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $DeveloperId 
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -66,17 +54,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Total",$param) and $param["Total"] !== null) {
-            $this->Total = $param["Total"];
-        }
-
-        if (array_key_exists("GroupInfos",$param) and $param["GroupInfos"] !== null) {
-            $this->GroupInfos = [];
-            foreach ($param["GroupInfos"] as $key => $value){
-                $obj = new GroupInfo();
-                $obj->deserialize($value);
-                array_push($this->GroupInfos, $obj);
-            }
+        if (array_key_exists("DeveloperId",$param) and $param["DeveloperId"] !== null) {
+            $this->DeveloperId = $param["DeveloperId"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

@@ -36,6 +36,14 @@ use TencentCloud\Common\AbstractModel;
 Note: This field may return `null`, indicating that no valid value was found.
  * @method void setHostName(string $HostName) Set Source host name of logs
 Note: This field may return `null`, indicating that no valid value was found.
+ * @method string getRawLog() Obtain Raw log (this parameter has a value only when an exception occurred while creating indexes for logs).
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setRawLog(string $RawLog) Set Raw log (this parameter has a value only when an exception occurred while creating indexes for logs).
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getIndexStatus() Obtain The cause of index creation exception (this parameter has a value only when an exception occurred while creating indexes for logs).
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setIndexStatus(string $IndexStatus) Set The cause of index creation exception (this parameter has a value only when an exception occurred while creating indexes for logs).
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class LogContextInfo extends AbstractModel
 {
@@ -76,6 +84,18 @@ Note: This field may return `null`, indicating that no valid value was found.
     public $HostName;
 
     /**
+     * @var string Raw log (this parameter has a value only when an exception occurred while creating indexes for logs).
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $RawLog;
+
+    /**
+     * @var string The cause of index creation exception (this parameter has a value only when an exception occurred while creating indexes for logs).
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $IndexStatus;
+
+    /**
      * @param string $Source Log source device
      * @param string $Filename Collection path
      * @param string $Content Log content
@@ -84,6 +104,10 @@ Note: This field may return `null`, indicating that no valid value was found.
      * @param integer $BTime Log timestamp
      * @param string $HostName Source host name of logs
 Note: This field may return `null`, indicating that no valid value was found.
+     * @param string $RawLog Raw log (this parameter has a value only when an exception occurred while creating indexes for logs).
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $IndexStatus The cause of index creation exception (this parameter has a value only when an exception occurred while creating indexes for logs).
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -124,6 +148,14 @@ Note: This field may return `null`, indicating that no valid value was found.
 
         if (array_key_exists("HostName",$param) and $param["HostName"] !== null) {
             $this->HostName = $param["HostName"];
+        }
+
+        if (array_key_exists("RawLog",$param) and $param["RawLog"] !== null) {
+            $this->RawLog = $param["RawLog"];
+        }
+
+        if (array_key_exists("IndexStatus",$param) and $param["IndexStatus"] !== null) {
+            $this->IndexStatus = $param["IndexStatus"];
         }
     }
 }

@@ -22,8 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getTotal() Obtain The total number of records that meet the conditions.
  * @method void setTotal(integer $Total) Set The total number of records that meet the conditions.
- * @method array getMemberIds() Obtain The user IDs of the members. Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setMemberIds(array $MemberIds) Set The user IDs of the members. Note: This field may return null, indicating that no valid values can be obtained.
+ * @method array getMemberIds() Obtain 
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setMemberIds(array $MemberIds) Set 
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -35,7 +37,8 @@ class DescribeGroupMemberListResponse extends AbstractModel
     public $Total;
 
     /**
-     * @var array The user IDs of the members. Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array 
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $MemberIds;
 
@@ -46,7 +49,8 @@ class DescribeGroupMemberListResponse extends AbstractModel
 
     /**
      * @param integer $Total The total number of records that meet the conditions.
-     * @param array $MemberIds The user IDs of the members. Note: This field may return null, indicating that no valid values can be obtained.
+     * @param array $MemberIds 
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()

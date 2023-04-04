@@ -88,6 +88,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProxyVips(array $ProxyVips) Set Database proxy IP
  * @method array getProxyIds() Obtain Database proxy ID
  * @method void setProxyIds(array $ProxyIds) Set Database proxy ID
+ * @method array getEngineTypes() Obtain Database engine type
+ * @method void setEngineTypes(array $EngineTypes) Set Database engine type
  */
 class DescribeDBInstancesRequest extends AbstractModel
 {
@@ -262,6 +264,11 @@ class DescribeDBInstancesRequest extends AbstractModel
     public $ProxyIds;
 
     /**
+     * @var array Database engine type
+     */
+    public $EngineTypes;
+
+    /**
      * @param integer $ProjectId Project ID.
      * @param array $InstanceTypes Instance type. Value range: 1 (primary), 2 (disaster recovery), 3 (read-only).
      * @param array $Vips Private IP address of the instance.
@@ -296,6 +303,7 @@ class DescribeDBInstancesRequest extends AbstractModel
      * @param array $Tags Tag key value
      * @param array $ProxyVips Database proxy IP
      * @param array $ProxyIds Database proxy ID
+     * @param array $EngineTypes Database engine type
      */
     function __construct()
     {
@@ -449,6 +457,10 @@ class DescribeDBInstancesRequest extends AbstractModel
 
         if (array_key_exists("ProxyIds",$param) and $param["ProxyIds"] !== null) {
             $this->ProxyIds = $param["ProxyIds"];
+        }
+
+        if (array_key_exists("EngineTypes",$param) and $param["EngineTypes"] !== null) {
+            $this->EngineTypes = $param["EngineTypes"];
         }
     }
 }

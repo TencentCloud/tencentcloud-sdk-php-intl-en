@@ -40,9 +40,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setBucket(string $Bucket) Set COS bucket.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getBucketRegion() Obtain COS bucket region.
+ * @method string getBucketRegion() Obtain Region where the COS bucket is located.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setBucketRegion(string $BucketRegion) Set COS bucket region.
+ * @method void setBucketRegion(string $BucketRegion) Set Region where the COS bucket is located.
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getPrefix() Obtain The prefix of the folder where COS files are located.
 Note: This field may return null, indicating that no valid values can be obtained.
@@ -116,7 +116,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $Bucket;
 
     /**
-     * @var string COS bucket region.
+     * @var string Region where the COS bucket is located.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $BucketRegion;
@@ -187,7 +187,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $Bucket COS bucket.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $BucketRegion COS bucket region.
+     * @param string $BucketRegion Region where the COS bucket is located.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $Prefix The prefix of the folder where COS files are located.
 Note: This field may return null, indicating that no valid values can be obtained.

@@ -132,6 +132,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setMaxDelayTime(integer $MaxDelayTime) Set Maximum delay threshold
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getDiskType() Obtain Instance disk type, which is returned only for the instances of cloud disk edition. Valid values: `CLOUD_SSD` (SSD), `CLOUD_HSSD` (Enhanced SSD).
+ * @method void setDiskType(string $DiskType) Set Instance disk type, which is returned only for the instances of cloud disk edition. Valid values: `CLOUD_SSD` (SSD), `CLOUD_HSSD` (Enhanced SSD).
  */
 class InstanceInfo extends AbstractModel
 {
@@ -372,6 +374,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $MaxDelayTime;
 
     /**
+     * @var string Instance disk type, which is returned only for the instances of cloud disk edition. Valid values: `CLOUD_SSD` (SSD), `CLOUD_HSSD` (Enhanced SSD).
+     */
+    public $DiskType;
+
+    /**
      * @param integer $WanStatus Public network access status. Value range: 0 (not enabled), 1 (enabled), 2 (disabled)
      * @param string $Zone AZ information
      * @param integer $InitFlag Initialization flag. Value range: 0 (not initialized), 1 (initialized)
@@ -428,6 +435,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $MaxDelayTime Maximum delay threshold
 Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $DiskType Instance disk type, which is returned only for the instances of cloud disk edition. Valid values: `CLOUD_SSD` (SSD), `CLOUD_HSSD` (Enhanced SSD).
      */
     function __construct()
     {
@@ -638,6 +646,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("MaxDelayTime",$param) and $param["MaxDelayTime"] !== null) {
             $this->MaxDelayTime = $param["MaxDelayTime"];
+        }
+
+        if (array_key_exists("DiskType",$param) and $param["DiskType"] !== null) {
+            $this->DiskType = $param["DiskType"];
         }
     }
 }

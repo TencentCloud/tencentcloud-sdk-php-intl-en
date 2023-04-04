@@ -132,6 +132,14 @@ use TencentCloud\Common\AbstractModel;
 <li>STANDARD_IA</li>
 <li>ARCHIVE</li>
 <li>DEEP_ARCHIVE</li>
+ * @method array getMediaTypes() Obtain The file formats.
+<li>Array length limit: 10</li>
+ * @method void setMediaTypes(array $MediaTypes) Set The file formats.
+<li>Array length limit: 10</li>
+ * @method array getStatus() Obtain 
+ * @method void setStatus(array $Status) Set 
+ * @method array getReviewResults() Obtain 
+ * @method void setReviewResults(array $ReviewResults) Set 
  * @method array getTrtcSdkAppIds() Obtain The TRTC application IDs. Any file that matches one of the application IDs will be returned.
 <li>Array length limit: 10</li>
  * @method void setTrtcSdkAppIds(array $TrtcSdkAppIds) Set The TRTC application IDs. Any file that matches one of the application IDs will be returned.
@@ -310,6 +318,22 @@ class SearchMediaRequest extends AbstractModel
     public $StorageClasses;
 
     /**
+     * @var array The file formats.
+<li>Array length limit: 10</li>
+     */
+    public $MediaTypes;
+
+    /**
+     * @var array 
+     */
+    public $Status;
+
+    /**
+     * @var array 
+     */
+    public $ReviewResults;
+
+    /**
      * @var array The TRTC application IDs. Any file that matches one of the application IDs will be returned.
 <li>Array length limit: 10</li>
      */
@@ -425,6 +449,10 @@ End time in the creation time range.
 <li>STANDARD_IA</li>
 <li>ARCHIVE</li>
 <li>DEEP_ARCHIVE</li>
+     * @param array $MediaTypes The file formats.
+<li>Array length limit: 10</li>
+     * @param array $Status 
+     * @param array $ReviewResults 
      * @param array $TrtcSdkAppIds The TRTC application IDs. Any file that matches one of the application IDs will be returned.
 <li>Array length limit: 10</li>
      * @param array $TrtcRoomIds The TRTC room IDs. Any file that matches one of the room IDs will be returned.
@@ -535,6 +563,18 @@ End time in the creation time range.
 
         if (array_key_exists("StorageClasses",$param) and $param["StorageClasses"] !== null) {
             $this->StorageClasses = $param["StorageClasses"];
+        }
+
+        if (array_key_exists("MediaTypes",$param) and $param["MediaTypes"] !== null) {
+            $this->MediaTypes = $param["MediaTypes"];
+        }
+
+        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
+            $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("ReviewResults",$param) and $param["ReviewResults"] !== null) {
+            $this->ReviewResults = $param["ReviewResults"];
         }
 
         if (array_key_exists("TrtcSdkAppIds",$param) and $param["TrtcSdkAppIds"] !== null) {

@@ -30,7 +30,6 @@ A maximum of 20 requests can be initiated per second for this API.
  * @method Models\BatchCreateGroupWithMembersResponse BatchCreateGroupWithMembers(Models\BatchCreateGroupWithMembersRequest $req) This API is used to create multiple groups at a time.
 A maximum of 20 requests can be initiated per second for this API.
  * @method Models\BatchCreateRoomResponse BatchCreateRoom(Models\BatchCreateRoomRequest $req) This API is used to create multiple rooms at a time.
-A maximum of 20 requests can be initiated per second for this API.
  * @method Models\BatchDeleteGroupMemberResponse BatchDeleteGroupMember(Models\BatchDeleteGroupMemberRequest $req) This API is used to remove users from multiple groups at a time.
 A maximum of 20 requests can be initiated per second for this API.
  * @method Models\BatchDeleteRecordResponse BatchDeleteRecord(Models\BatchDeleteRecordRequest $req) This API is used to delete the recordings of multiple rooms.
@@ -46,6 +45,7 @@ A maximum of 20 requests can be initiated per second for this API.
  * @method Models\CreateRoomResponse CreateRoom(Models\CreateRoomRequest $req) This API is used to create a room.
 A maximum of 20 requests can be initiated per second for this API.
  * @method Models\CreateSupervisorResponse CreateSupervisor(Models\CreateSupervisorRequest $req) This API is used to create a spectator.
+ * @method Models\DeleteAppCustomContentResponse DeleteAppCustomContent(Models\DeleteAppCustomContentRequest $req) This API is used to delete the custom elements. The `Scenes` parameter specifies the custom elements to delete. If `Scenes` is empty, all custom elements will be deleted.
  * @method Models\DeleteDocumentResponse DeleteDocument(Models\DeleteDocumentRequest $req) This API is used to delete a document.
 A maximum of 20 requests can be initiated per second for this API.
  * @method Models\DeleteGroupResponse DeleteGroup(Models\DeleteGroupRequest $req) This API is used to delete one or multiple groups.
@@ -57,6 +57,7 @@ A maximum of 20 requests can be initiated per second for this API.
  * @method Models\DeleteRoomResponse DeleteRoom(Models\DeleteRoomRequest $req) This API is used to delete a room.
  * @method Models\DescribeCurrentMemberListResponse DescribeCurrentMemberList(Models\DescribeCurrentMemberListRequest $req) This API is used to get the user list of a room. This API will not work if a room has ended or expired.
 A maximum of 20 requests can be initiated per second for this API.
+ * @method Models\DescribeDeveloperResponse DescribeDeveloper(Models\DescribeDeveloperRequest $req) This API is used to get the developer information.
  * @method Models\DescribeDocumentResponse DescribeDocument(Models\DescribeDocumentRequest $req) This API is used to get the information of a specific document.
 A maximum of 20 requests can be initiated per second for this API.
  * @method Models\DescribeDocumentsByRoomResponse DescribeDocumentsByRoom(Models\DescribeDocumentsByRoomRequest $req) This API is used to get the document list of a specific room.
@@ -74,6 +75,7 @@ A maximum of 20 requests can be initiated per second for this API.
  * @method Models\DescribeSdkAppIdUsersResponse DescribeSdkAppIdUsers(Models\DescribeSdkAppIdUsersRequest $req) This API is used to get the user list of a specific application.
 A maximum of 20 requests can be initiated per second for this API.
  * @method Models\DescribeUserResponse DescribeUser(Models\DescribeUserRequest $req) This API is used to obtain user profile.
+ * @method Models\GetRoomEventResponse GetRoomEvent(Models\GetRoomEventRequest $req) This API is used to get the events of a room. It only works within one hour after a class ends.
  * @method Models\GetRoomMessageResponse GetRoomMessage(Models\GetRoomMessageRequest $req) This API is used to get the message history of a room (room messages are retained for seven days).
  * @method Models\GetWatermarkResponse GetWatermark(Models\GetWatermarkRequest $req) This API is used to get watermark settings.
 A maximum of 20 requests can be initiated per second for this API.

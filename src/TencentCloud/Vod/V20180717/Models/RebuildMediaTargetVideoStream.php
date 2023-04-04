@@ -46,28 +46,28 @@ Default value: `open`.
 <li>`close`: Disable. When resolution adaption is disabled, `Width` indicates the width of a video, while `Height` indicates the height.</li>
 
 Default value: `open`.
- * @method integer getWidth() Obtain The maximum video width (or long side), in pixels. Value range: 0 and 128-8192.
+ * @method integer getWidth() Obtain The maximum video width (or long side) in pixels. Value range: 0 and 128-4096.
 <li>If both `Width` and `Height` are `0`, the original resolution will be used.</li>
 <li>If `Width` is 0 and `Height` is not, the video width will be proportionally scaled.</li>
 <li>If `Width` is not 0 and `Height` is, the video height will be proportionally scaled.</li>
 <li>If neither `Width` nor `Height` is 0, the specified width and height will be used.</li>
 
 Default value: `0`.
- * @method void setWidth(integer $Width) Set The maximum video width (or long side), in pixels. Value range: 0 and 128-8192.
+ * @method void setWidth(integer $Width) Set The maximum video width (or long side) in pixels. Value range: 0 and 128-4096.
 <li>If both `Width` and `Height` are `0`, the original resolution will be used.</li>
 <li>If `Width` is 0 and `Height` is not, the video width will be proportionally scaled.</li>
 <li>If `Width` is not 0 and `Height` is, the video height will be proportionally scaled.</li>
 <li>If neither `Width` nor `Height` is 0, the specified width and height will be used.</li>
 
 Default value: `0`.
- * @method integer getHeight() Obtain The maximum video height (or short side), in pixels. Value range: 0 and 128-8192.
+ * @method integer getHeight() Obtain The maximum video width (or short side) in pixels. Value range: 0 and [128, 4096].
 <li>If both `Width` and `Height` are `0`, the original resolution will be used.</li>
 <li>If `Width` is 0 and `Height` is not, the video width will be proportionally scaled.</li>
 <li>If `Width` is not 0 and `Height` is, the video height will be proportionally scaled.</li>
 <li>If neither `Width` nor `Height` is 0, the specified width and height will be used.</li>
 
 Default value: `0`.
- * @method void setHeight(integer $Height) Set The maximum video height (or short side), in pixels. Value range: 0 and 128-8192.
+ * @method void setHeight(integer $Height) Set The maximum video width (or short side) in pixels. Value range: 0 and [128, 4096].
 <li>If both `Width` and `Height` are `0`, the original resolution will be used.</li>
 <li>If `Width` is 0 and `Height` is not, the video width will be proportionally scaled.</li>
 <li>If `Width` is not 0 and `Height` is, the video height will be proportionally scaled.</li>
@@ -121,7 +121,7 @@ Default value: `open`.
     public $ResolutionAdaptive;
 
     /**
-     * @var integer The maximum video width (or long side), in pixels. Value range: 0 and 128-8192.
+     * @var integer The maximum video width (or long side) in pixels. Value range: 0 and 128-4096.
 <li>If both `Width` and `Height` are `0`, the original resolution will be used.</li>
 <li>If `Width` is 0 and `Height` is not, the video width will be proportionally scaled.</li>
 <li>If `Width` is not 0 and `Height` is, the video height will be proportionally scaled.</li>
@@ -132,7 +132,7 @@ Default value: `0`.
     public $Width;
 
     /**
-     * @var integer The maximum video height (or short side), in pixels. Value range: 0 and 128-8192.
+     * @var integer The maximum video width (or short side) in pixels. Value range: 0 and [128, 4096].
 <li>If both `Width` and `Height` are `0`, the original resolution will be used.</li>
 <li>If `Width` is 0 and `Height` is not, the video width will be proportionally scaled.</li>
 <li>If `Width` is not 0 and `Height` is, the video height will be proportionally scaled.</li>
@@ -171,14 +171,14 @@ If the value is `0`, the original video bitrate will be used.
 <li>`close`: Disable. When resolution adaption is disabled, `Width` indicates the width of a video, while `Height` indicates the height.</li>
 
 Default value: `open`.
-     * @param integer $Width The maximum video width (or long side), in pixels. Value range: 0 and 128-8192.
+     * @param integer $Width The maximum video width (or long side) in pixels. Value range: 0 and 128-4096.
 <li>If both `Width` and `Height` are `0`, the original resolution will be used.</li>
 <li>If `Width` is 0 and `Height` is not, the video width will be proportionally scaled.</li>
 <li>If `Width` is not 0 and `Height` is, the video height will be proportionally scaled.</li>
 <li>If neither `Width` nor `Height` is 0, the specified width and height will be used.</li>
 
 Default value: `0`.
-     * @param integer $Height The maximum video height (or short side), in pixels. Value range: 0 and 128-8192.
+     * @param integer $Height The maximum video width (or short side) in pixels. Value range: 0 and [128, 4096].
 <li>If both `Width` and `Height` are `0`, the original resolution will be used.</li>
 <li>If `Width` is 0 and `Height` is not, the video width will be proportionally scaled.</li>
 <li>If `Width` is not 0 and `Height` is, the video height will be proportionally scaled.</li>

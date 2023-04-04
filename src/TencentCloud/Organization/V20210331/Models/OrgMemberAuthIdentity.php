@@ -24,13 +24,13 @@ use TencentCloud\Common\AbstractModel;
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setIdentityId(integer $IdentityId) Set Identity ID.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getIdentityRoleName() Obtain Identity role name.
+ * @method string getIdentityRoleName() Obtain Role name of an identity
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setIdentityRoleName(string $IdentityRoleName) Set Identity role name.
+ * @method void setIdentityRoleName(string $IdentityRoleName) Set Role name of an identity
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getIdentityRoleAliasName() Obtain Identity role alias.
+ * @method string getIdentityRoleAliasName() Obtain Role alias of an identity
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setIdentityRoleAliasName(string $IdentityRoleAliasName) Set Identity role alias.
+ * @method void setIdentityRoleAliasName(string $IdentityRoleAliasName) Set Role alias of an identity
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getDescription() Obtain Description
 Note: This field may return null, indicating that no valid values can be obtained.
@@ -44,6 +44,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setUpdateTime(string $UpdateTime) Set Update time.
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getIdentityType() Obtain Identity type (`1`: Preset; `2`: Custom)
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setIdentityType(integer $IdentityType) Set Identity type (`1`: Preset; `2`: Custom)
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class OrgMemberAuthIdentity extends AbstractModel
 {
@@ -54,13 +58,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $IdentityId;
 
     /**
-     * @var string Identity role name.
+     * @var string Role name of an identity
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $IdentityRoleName;
 
     /**
-     * @var string Identity role alias.
+     * @var string Role alias of an identity
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $IdentityRoleAliasName;
@@ -84,17 +88,25 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $UpdateTime;
 
     /**
+     * @var integer Identity type (`1`: Preset; `2`: Custom)
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $IdentityType;
+
+    /**
      * @param integer $IdentityId Identity ID.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $IdentityRoleName Identity role name.
+     * @param string $IdentityRoleName Role name of an identity
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $IdentityRoleAliasName Identity role alias.
+     * @param string $IdentityRoleAliasName Role alias of an identity
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $Description Description
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $CreateTime Creation time.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $UpdateTime Update time.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $IdentityType Identity type (`1`: Preset; `2`: Custom)
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
@@ -132,6 +144,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("UpdateTime",$param) and $param["UpdateTime"] !== null) {
             $this->UpdateTime = $param["UpdateTime"];
+        }
+
+        if (array_key_exists("IdentityType",$param) and $param["IdentityType"] !== null) {
+            $this->IdentityType = $param["IdentityType"];
         }
     }
 }
