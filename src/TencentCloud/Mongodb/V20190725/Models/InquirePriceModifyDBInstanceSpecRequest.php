@@ -20,21 +20,21 @@ use TencentCloud\Common\AbstractModel;
 /**
  * InquirePriceModifyDBInstanceSpec request structure.
  *
- * @method string getInstanceId() Obtain Instance ID in the format of cmgo-p8vnipr5. It is the same as the instance ID displayed in the TencentDB Console.
- * @method void setInstanceId(string $InstanceId) Set Instance ID in the format of cmgo-p8vnipr5. It is the same as the instance ID displayed in the TencentDB Console.
+ * @method string getInstanceId() Obtain Instance ID in the format of cmgo-p8vn****. It is the same as the instance ID displayed in the TencentDB console.
+ * @method void setInstanceId(string $InstanceId) Set Instance ID in the format of cmgo-p8vn****. It is the same as the instance ID displayed in the TencentDB console.
  * @method integer getMemory() Obtain Instance memory size in GB after specification adjustment.
  * @method void setMemory(integer $Memory) Set Instance memory size in GB after specification adjustment.
  * @method integer getVolume() Obtain Instance disk size in GB after specification adjustment.
  * @method void setVolume(integer $Volume) Set Instance disk size in GB after specification adjustment.
- * @method integer getNodeNum() Obtain Node quantity after configuration modification. The value range is subject to the response parameter of the `DescribeSpecInfo` API. If this parameter is left empty, the node quantity remains unchanged.
- * @method void setNodeNum(integer $NodeNum) Set Node quantity after configuration modification. The value range is subject to the response parameter of the `DescribeSpecInfo` API. If this parameter is left empty, the node quantity remains unchanged.
- * @method integer getReplicateSetNum() Obtain Shard quantity after configuration modification, which can only be increased rather than decreased. The value range is subject to the response parameter of the `DescribeSpecInfo` API. If this parameter is left empty, the shard quantity remains unchanged.
- * @method void setReplicateSetNum(integer $ReplicateSetNum) Set Shard quantity after configuration modification, which can only be increased rather than decreased. The value range is subject to the response parameter of the `DescribeSpecInfo` API. If this parameter is left empty, the shard quantity remains unchanged.
+ * @method integer getNodeNum() Obtain Number of instance nodes. The number of nodes is left unchanged by default and cannot be changed currently.
+ * @method void setNodeNum(integer $NodeNum) Set Number of instance nodes. The number of nodes is left unchanged by default and cannot be changed currently.
+ * @method integer getReplicateSetNum() Obtain Number of instance shards. The number of shards is left unchanged by default and cannot be changed currently.
+ * @method void setReplicateSetNum(integer $ReplicateSetNum) Set Number of instance shards. The number of shards is left unchanged by default and cannot be changed currently.
  */
 class InquirePriceModifyDBInstanceSpecRequest extends AbstractModel
 {
     /**
-     * @var string Instance ID in the format of cmgo-p8vnipr5. It is the same as the instance ID displayed in the TencentDB Console.
+     * @var string Instance ID in the format of cmgo-p8vn****. It is the same as the instance ID displayed in the TencentDB console.
      */
     public $InstanceId;
 
@@ -49,21 +49,21 @@ class InquirePriceModifyDBInstanceSpecRequest extends AbstractModel
     public $Volume;
 
     /**
-     * @var integer Node quantity after configuration modification. The value range is subject to the response parameter of the `DescribeSpecInfo` API. If this parameter is left empty, the node quantity remains unchanged.
+     * @var integer Number of instance nodes. The number of nodes is left unchanged by default and cannot be changed currently.
      */
     public $NodeNum;
 
     /**
-     * @var integer Shard quantity after configuration modification, which can only be increased rather than decreased. The value range is subject to the response parameter of the `DescribeSpecInfo` API. If this parameter is left empty, the shard quantity remains unchanged.
+     * @var integer Number of instance shards. The number of shards is left unchanged by default and cannot be changed currently.
      */
     public $ReplicateSetNum;
 
     /**
-     * @param string $InstanceId Instance ID in the format of cmgo-p8vnipr5. It is the same as the instance ID displayed in the TencentDB Console.
+     * @param string $InstanceId Instance ID in the format of cmgo-p8vn****. It is the same as the instance ID displayed in the TencentDB console.
      * @param integer $Memory Instance memory size in GB after specification adjustment.
      * @param integer $Volume Instance disk size in GB after specification adjustment.
-     * @param integer $NodeNum Node quantity after configuration modification. The value range is subject to the response parameter of the `DescribeSpecInfo` API. If this parameter is left empty, the node quantity remains unchanged.
-     * @param integer $ReplicateSetNum Shard quantity after configuration modification, which can only be increased rather than decreased. The value range is subject to the response parameter of the `DescribeSpecInfo` API. If this parameter is left empty, the shard quantity remains unchanged.
+     * @param integer $NodeNum Number of instance nodes. The number of nodes is left unchanged by default and cannot be changed currently.
+     * @param integer $ReplicateSetNum Number of instance shards. The number of shards is left unchanged by default and cannot be changed currently.
      */
     function __construct()
     {

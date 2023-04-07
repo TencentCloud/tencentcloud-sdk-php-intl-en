@@ -20,64 +20,64 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeDBInstances request structure.
  *
- * @method array getInstanceIds() Obtain List of instance IDs in the format of cmgo-p8vnipr5. It is the same as the instance ID displayed on the TencentDB Console page
- * @method void setInstanceIds(array $InstanceIds) Set List of instance IDs in the format of cmgo-p8vnipr5. It is the same as the instance ID displayed on the TencentDB Console page
- * @method integer getInstanceType() Obtain Instance type. Valid values: 0 (all instances), 1 (promoted), 2 (temp), 3 (read-only), -1 (promoted + read-only + disaster recovery)
- * @method void setInstanceType(integer $InstanceType) Set Instance type. Valid values: 0 (all instances), 1 (promoted), 2 (temp), 3 (read-only), -1 (promoted + read-only + disaster recovery)
- * @method integer getClusterType() Obtain Cluster type. Valid values: 0 (replica set instance), 1 (sharding instance), -1 (all instances)
- * @method void setClusterType(integer $ClusterType) Set Cluster type. Valid values: 0 (replica set instance), 1 (sharding instance), -1 (all instances)
- * @method array getStatus() Obtain Instance status. Valid values: `0` (to be initialized), `1` (executing task), `2` (running), `-2` (isolated monthly-subscribed instance), `-3` (isolated pay-as-you-go instance)
- * @method void setStatus(array $Status) Set Instance status. Valid values: `0` (to be initialized), `1` (executing task), `2` (running), `-2` (isolated monthly-subscribed instance), `-3` (isolated pay-as-you-go instance)
- * @method string getVpcId() Obtain VPC ID. This parameter can be left empty for the basic network
- * @method void setVpcId(string $VpcId) Set VPC ID. This parameter can be left empty for the basic network
- * @method string getSubnetId() Obtain Subnet ID of VPC. This parameter can be left empty for the basic network. If it is passed in as an input parameter, the corresponding VpcId must be set
- * @method void setSubnetId(string $SubnetId) Set Subnet ID of VPC. This parameter can be left empty for the basic network. If it is passed in as an input parameter, the corresponding VpcId must be set
+ * @method array getInstanceIds() Obtain List of instance IDs in the format of cmgo-p8vnipr5. It is the same as the instance ID displayed on the TencentDB console page.
+ * @method void setInstanceIds(array $InstanceIds) Set List of instance IDs in the format of cmgo-p8vnipr5. It is the same as the instance ID displayed on the TencentDB console page.
+ * @method integer getInstanceType() Obtain Instance type. Valid values: <ul><li>`0`: All instances. </li><li>`1`: Regular instances. </li><li>`2`: Temp instances. </li><li>`3`: Read-only instances. </li><li>`-1`: Regular instances, read-only instances, disaster recovery instances.</li></ul>
+ * @method void setInstanceType(integer $InstanceType) Set Instance type. Valid values: <ul><li>`0`: All instances. </li><li>`1`: Regular instances. </li><li>`2`: Temp instances. </li><li>`3`: Read-only instances. </li><li>`-1`: Regular instances, read-only instances, disaster recovery instances.</li></ul>
+ * @method integer getClusterType() Obtain Cluster type. Valid values: <ul><li>`0`: Replica set instances. </li><li>`1`: Sharded cluster instances. </li><li>`-1`: All instances.</li></ul>
+ * @method void setClusterType(integer $ClusterType) Set Cluster type. Valid values: <ul><li>`0`: Replica set instances. </li><li>`1`: Sharded cluster instances. </li><li>`-1`: All instances.</li></ul>
+ * @method array getStatus() Obtain Instance status. Valid values: <ul><li>`0`: To be initialized. </li><li>`1`: In process. </li><li>`2`: Valid. </li><li>`-2`: Isolated (for monthly subscribed instances). </li><li>`-3`: Isolated (for pay-as-you-go instances).</li></ul>
+ * @method void setStatus(array $Status) Set Instance status. Valid values: <ul><li>`0`: To be initialized. </li><li>`1`: In process. </li><li>`2`: Valid. </li><li>`-2`: Isolated (for monthly subscribed instances). </li><li>`-3`: Isolated (for pay-as-you-go instances).</li></ul>
+ * @method string getVpcId() Obtain VPC ID. This parameter can be left empty for the classic network.
+ * @method void setVpcId(string $VpcId) Set VPC ID. This parameter can be left empty for the classic network.
+ * @method string getSubnetId() Obtain Subnet ID of VPC. This parameter can be left empty for the classic network. If it is passed in as an input parameter, the corresponding VpcId must be set.
+ * @method void setSubnetId(string $SubnetId) Set Subnet ID of VPC. This parameter can be left empty for the classic network. If it is passed in as an input parameter, the corresponding VpcId must be set.
  * @method integer getPayMode() Obtain Billing type. Valid value: 0 (pay-as-you-go)
  * @method void setPayMode(integer $PayMode) Set Billing type. Valid value: 0 (pay-as-you-go)
- * @method integer getLimit() Obtain Number of results to be returned for a single request. Valid values: 1-100. Default value: 20
- * @method void setLimit(integer $Limit) Set Number of results to be returned for a single request. Valid values: 1-100. Default value: 20
- * @method integer getOffset() Obtain Offset. Default value: 0
- * @method void setOffset(integer $Offset) Set Offset. Default value: 0
- * @method string getOrderBy() Obtain Sort by field of the returned result set. Currently, supported values include "ProjectId", "InstanceName", and "CreateTime". The return results are sorted in ascending order by default.
- * @method void setOrderBy(string $OrderBy) Set Sort by field of the returned result set. Currently, supported values include "ProjectId", "InstanceName", and "CreateTime". The return results are sorted in ascending order by default.
- * @method string getOrderByType() Obtain Sorting method of the return result set. Currently, "ASC" or "DESC" is supported
- * @method void setOrderByType(string $OrderByType) Set Sorting method of the return result set. Currently, "ASC" or "DESC" is supported
+ * @method integer getLimit() Obtain Number of results returned per request. Default value: `20`. Value range: [1,100].
+ * @method void setLimit(integer $Limit) Set Number of results returned per request. Default value: `20`. Value range: [1,100].
+ * @method integer getOffset() Obtain Offset. Default value: `0`.
+ * @method void setOffset(integer $Offset) Set Offset. Default value: `0`.
+ * @method string getOrderBy() Obtain Sort by field of the returned result set. Valid values: `ProjectId`, `InstanceName`, `CreateTime`. The return results are sorted in ascending order by default.
+ * @method void setOrderBy(string $OrderBy) Set Sort by field of the returned result set. Valid values: `ProjectId`, `InstanceName`, `CreateTime`. The return results are sorted in ascending order by default.
+ * @method string getOrderByType() Obtain Sorting method of the return result set. Valid values: `ASC`, `DESC`.
+ * @method void setOrderByType(string $OrderByType) Set Sorting method of the return result set. Valid values: `ASC`, `DESC`.
  * @method array getProjectIds() Obtain Project ID
  * @method void setProjectIds(array $ProjectIds) Set Project ID
- * @method string getSearchKey() Obtain Search keyword, which can be instance ID, instance name, or complete IP
- * @method void setSearchKey(string $SearchKey) Set Search keyword, which can be instance ID, instance name, or complete IP
- * @method TagInfo getTags() Obtain Tag information
- * @method void setTags(TagInfo $Tags) Set Tag information
+ * @method string getSearchKey() Obtain Search keyword, which can be instance ID, instance name, or complete IP.
+ * @method void setSearchKey(string $SearchKey) Set Search keyword, which can be instance ID, instance name, or complete IP.
+ * @method array getTags() Obtain Tag information
+ * @method void setTags(array $Tags) Set Tag information
  */
 class DescribeDBInstancesRequest extends AbstractModel
 {
     /**
-     * @var array List of instance IDs in the format of cmgo-p8vnipr5. It is the same as the instance ID displayed on the TencentDB Console page
+     * @var array List of instance IDs in the format of cmgo-p8vnipr5. It is the same as the instance ID displayed on the TencentDB console page.
      */
     public $InstanceIds;
 
     /**
-     * @var integer Instance type. Valid values: 0 (all instances), 1 (promoted), 2 (temp), 3 (read-only), -1 (promoted + read-only + disaster recovery)
+     * @var integer Instance type. Valid values: <ul><li>`0`: All instances. </li><li>`1`: Regular instances. </li><li>`2`: Temp instances. </li><li>`3`: Read-only instances. </li><li>`-1`: Regular instances, read-only instances, disaster recovery instances.</li></ul>
      */
     public $InstanceType;
 
     /**
-     * @var integer Cluster type. Valid values: 0 (replica set instance), 1 (sharding instance), -1 (all instances)
+     * @var integer Cluster type. Valid values: <ul><li>`0`: Replica set instances. </li><li>`1`: Sharded cluster instances. </li><li>`-1`: All instances.</li></ul>
      */
     public $ClusterType;
 
     /**
-     * @var array Instance status. Valid values: `0` (to be initialized), `1` (executing task), `2` (running), `-2` (isolated monthly-subscribed instance), `-3` (isolated pay-as-you-go instance)
+     * @var array Instance status. Valid values: <ul><li>`0`: To be initialized. </li><li>`1`: In process. </li><li>`2`: Valid. </li><li>`-2`: Isolated (for monthly subscribed instances). </li><li>`-3`: Isolated (for pay-as-you-go instances).</li></ul>
      */
     public $Status;
 
     /**
-     * @var string VPC ID. This parameter can be left empty for the basic network
+     * @var string VPC ID. This parameter can be left empty for the classic network.
      */
     public $VpcId;
 
     /**
-     * @var string Subnet ID of VPC. This parameter can be left empty for the basic network. If it is passed in as an input parameter, the corresponding VpcId must be set
+     * @var string Subnet ID of VPC. This parameter can be left empty for the classic network. If it is passed in as an input parameter, the corresponding VpcId must be set.
      */
     public $SubnetId;
 
@@ -87,22 +87,22 @@ class DescribeDBInstancesRequest extends AbstractModel
     public $PayMode;
 
     /**
-     * @var integer Number of results to be returned for a single request. Valid values: 1-100. Default value: 20
+     * @var integer Number of results returned per request. Default value: `20`. Value range: [1,100].
      */
     public $Limit;
 
     /**
-     * @var integer Offset. Default value: 0
+     * @var integer Offset. Default value: `0`.
      */
     public $Offset;
 
     /**
-     * @var string Sort by field of the returned result set. Currently, supported values include "ProjectId", "InstanceName", and "CreateTime". The return results are sorted in ascending order by default.
+     * @var string Sort by field of the returned result set. Valid values: `ProjectId`, `InstanceName`, `CreateTime`. The return results are sorted in ascending order by default.
      */
     public $OrderBy;
 
     /**
-     * @var string Sorting method of the return result set. Currently, "ASC" or "DESC" is supported
+     * @var string Sorting method of the return result set. Valid values: `ASC`, `DESC`.
      */
     public $OrderByType;
 
@@ -112,30 +112,30 @@ class DescribeDBInstancesRequest extends AbstractModel
     public $ProjectIds;
 
     /**
-     * @var string Search keyword, which can be instance ID, instance name, or complete IP
+     * @var string Search keyword, which can be instance ID, instance name, or complete IP.
      */
     public $SearchKey;
 
     /**
-     * @var TagInfo Tag information
+     * @var array Tag information
      */
     public $Tags;
 
     /**
-     * @param array $InstanceIds List of instance IDs in the format of cmgo-p8vnipr5. It is the same as the instance ID displayed on the TencentDB Console page
-     * @param integer $InstanceType Instance type. Valid values: 0 (all instances), 1 (promoted), 2 (temp), 3 (read-only), -1 (promoted + read-only + disaster recovery)
-     * @param integer $ClusterType Cluster type. Valid values: 0 (replica set instance), 1 (sharding instance), -1 (all instances)
-     * @param array $Status Instance status. Valid values: `0` (to be initialized), `1` (executing task), `2` (running), `-2` (isolated monthly-subscribed instance), `-3` (isolated pay-as-you-go instance)
-     * @param string $VpcId VPC ID. This parameter can be left empty for the basic network
-     * @param string $SubnetId Subnet ID of VPC. This parameter can be left empty for the basic network. If it is passed in as an input parameter, the corresponding VpcId must be set
+     * @param array $InstanceIds List of instance IDs in the format of cmgo-p8vnipr5. It is the same as the instance ID displayed on the TencentDB console page.
+     * @param integer $InstanceType Instance type. Valid values: <ul><li>`0`: All instances. </li><li>`1`: Regular instances. </li><li>`2`: Temp instances. </li><li>`3`: Read-only instances. </li><li>`-1`: Regular instances, read-only instances, disaster recovery instances.</li></ul>
+     * @param integer $ClusterType Cluster type. Valid values: <ul><li>`0`: Replica set instances. </li><li>`1`: Sharded cluster instances. </li><li>`-1`: All instances.</li></ul>
+     * @param array $Status Instance status. Valid values: <ul><li>`0`: To be initialized. </li><li>`1`: In process. </li><li>`2`: Valid. </li><li>`-2`: Isolated (for monthly subscribed instances). </li><li>`-3`: Isolated (for pay-as-you-go instances).</li></ul>
+     * @param string $VpcId VPC ID. This parameter can be left empty for the classic network.
+     * @param string $SubnetId Subnet ID of VPC. This parameter can be left empty for the classic network. If it is passed in as an input parameter, the corresponding VpcId must be set.
      * @param integer $PayMode Billing type. Valid value: 0 (pay-as-you-go)
-     * @param integer $Limit Number of results to be returned for a single request. Valid values: 1-100. Default value: 20
-     * @param integer $Offset Offset. Default value: 0
-     * @param string $OrderBy Sort by field of the returned result set. Currently, supported values include "ProjectId", "InstanceName", and "CreateTime". The return results are sorted in ascending order by default.
-     * @param string $OrderByType Sorting method of the return result set. Currently, "ASC" or "DESC" is supported
+     * @param integer $Limit Number of results returned per request. Default value: `20`. Value range: [1,100].
+     * @param integer $Offset Offset. Default value: `0`.
+     * @param string $OrderBy Sort by field of the returned result set. Valid values: `ProjectId`, `InstanceName`, `CreateTime`. The return results are sorted in ascending order by default.
+     * @param string $OrderByType Sorting method of the return result set. Valid values: `ASC`, `DESC`.
      * @param array $ProjectIds Project ID
-     * @param string $SearchKey Search keyword, which can be instance ID, instance name, or complete IP
-     * @param TagInfo $Tags Tag information
+     * @param string $SearchKey Search keyword, which can be instance ID, instance name, or complete IP.
+     * @param array $Tags Tag information
      */
     function __construct()
     {
@@ -203,8 +203,12 @@ class DescribeDBInstancesRequest extends AbstractModel
         }
 
         if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
-            $this->Tags = new TagInfo();
-            $this->Tags->deserialize($param["Tags"]);
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new TagInfo();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }

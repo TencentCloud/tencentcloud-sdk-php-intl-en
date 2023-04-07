@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeDBInstances response structure.
  *
- * @method integer getTotalCount() Obtain Number of eligible instances.
- * @method void setTotalCount(integer $TotalCount) Set Number of eligible instances.
+ * @method integer getTotalCount() Obtain Number of eligible instances
+ * @method void setTotalCount(integer $TotalCount) Set Number of eligible instances
  * @method array getInstanceDetails() Obtain List of instance details
  * @method void setInstanceDetails(array $InstanceDetails) Set List of instance details
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeDBInstancesResponse extends AbstractModel
 {
     /**
-     * @var integer Number of eligible instances.
+     * @var integer Number of eligible instances
      */
     public $TotalCount;
 
@@ -45,7 +45,7 @@ class DescribeDBInstancesResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $TotalCount Number of eligible instances.
+     * @param integer $TotalCount Number of eligible instances
      * @param array $InstanceDetails List of instance details
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */

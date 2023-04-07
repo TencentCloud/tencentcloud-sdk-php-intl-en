@@ -32,8 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) Set Offset. Minimum value: 0. Maximum value: 10000. Default value: 0.
  * @method integer getLimit() Obtain Number of entries per page. Minimum value: 1. Maximum value: 100. Default value: 20.
  * @method void setLimit(integer $Limit) Set Number of entries per page. Minimum value: 1. Maximum value: 100. Default value: 20.
- * @method string getFormat() Obtain Slow log format, which can be JSON. If this parameter is left empty, the slow log will be returned in its native format.
- * @method void setFormat(string $Format) Set Slow log format, which can be JSON. If this parameter is left empty, the slow log will be returned in its native format.
+ * @method string getFormat() Obtain Return format of slow log. The original slow log format is returned by default, and the format can be set to JSON on versions 4.4 and later.
+ * @method void setFormat(string $Format) Set Return format of slow log. The original slow log format is returned by default, and the format can be set to JSON on versions 4.4 and later.
  */
 class DescribeSlowLogsRequest extends AbstractModel
 {
@@ -68,7 +68,7 @@ class DescribeSlowLogsRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @var string Slow log format, which can be JSON. If this parameter is left empty, the slow log will be returned in its native format.
+     * @var string Return format of slow log. The original slow log format is returned by default, and the format can be set to JSON on versions 4.4 and later.
      */
     public $Format;
 
@@ -79,7 +79,7 @@ class DescribeSlowLogsRequest extends AbstractModel
      * @param integer $SlowMS Threshold of slow log execution time in milliseconds. Minimum value: 100. Slow logs whose execution time exceeds the threshold will be returned.
      * @param integer $Offset Offset. Minimum value: 0. Maximum value: 10000. Default value: 0.
      * @param integer $Limit Number of entries per page. Minimum value: 1. Maximum value: 100. Default value: 20.
-     * @param string $Format Slow log format, which can be JSON. If this parameter is left empty, the slow log will be returned in its native format.
+     * @param string $Format Return format of slow log. The original slow log format is returned by default, and the format can be set to JSON on versions 4.4 and later.
      */
     function __construct()
     {
