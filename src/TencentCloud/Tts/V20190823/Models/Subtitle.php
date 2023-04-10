@@ -30,6 +30,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBeginIndex(integer $BeginIndex) Set The start index of the character in the whole sentence, starting from 0.
  * @method integer getEndIndex() Obtain The end index of the character in the whole sentence, starting from 0.
  * @method void setEndIndex(integer $EndIndex) Set The end index of the character in the whole sentence, starting from 0.
+ * @method string getPhoneme() Obtain The phonemes of the word.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setPhoneme(string $Phoneme) Set The phonemes of the word.
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class Subtitle extends AbstractModel
 {
@@ -59,11 +63,19 @@ class Subtitle extends AbstractModel
     public $EndIndex;
 
     /**
+     * @var string The phonemes of the word.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $Phoneme;
+
+    /**
      * @param string $Text The word in the text that is sent.
      * @param integer $BeginTime The start timestamp of the word in the synthesized audio data, in milliseconds.
      * @param integer $EndTime The end timestamp of the word in the synthesized audio data, in milliseconds.
      * @param integer $BeginIndex The start index of the character in the whole sentence, starting from 0.
      * @param integer $EndIndex The end index of the character in the whole sentence, starting from 0.
+     * @param string $Phoneme The phonemes of the word.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -96,6 +108,10 @@ class Subtitle extends AbstractModel
 
         if (array_key_exists("EndIndex",$param) and $param["EndIndex"] !== null) {
             $this->EndIndex = $param["EndIndex"];
+        }
+
+        if (array_key_exists("Phoneme",$param) and $param["Phoneme"] !== null) {
+            $this->Phoneme = $param["Phoneme"];
         }
     }
 }

@@ -116,6 +116,10 @@ Note: This field may return null, indicating that no valid value can be obtained
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setOutSideSoftInfo(array $OutSideSoftInfo) Set Client component information.
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method boolean getIsSupportOutsideCluster() Obtain Whether the current cluster supports external clients.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setIsSupportOutsideCluster(boolean $IsSupportOutsideCluster) Set Whether the current cluster supports external clients.
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class EmrListInstance extends AbstractModel
 {
@@ -284,6 +288,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $OutSideSoftInfo;
 
     /**
+     * @var boolean Whether the current cluster supports external clients.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $IsSupportOutsideCluster;
+
+    /**
      * @param string $ClusterId Cluster ID
      * @param string $StatusDesc Status description
 Note: This field may return `null`, indicating that no valid value can be obtained.
@@ -331,6 +341,8 @@ Note: This field may return `null`, indicating that no valid value can be obtain
      * @param boolean $IsHandsCluster Whether it is a manually deployed cluster
 Note: This field may return null, indicating that no valid value can be obtained. 
      * @param array $OutSideSoftInfo Client component information.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param boolean $IsSupportOutsideCluster Whether the current cluster supports external clients.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
@@ -470,6 +482,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 $obj->deserialize($value);
                 array_push($this->OutSideSoftInfo, $obj);
             }
+        }
+
+        if (array_key_exists("IsSupportOutsideCluster",$param) and $param["IsSupportOutsideCluster"] !== null) {
+            $this->IsSupportOutsideCluster = $param["IsSupportOutsideCluster"];
         }
     }
 }
