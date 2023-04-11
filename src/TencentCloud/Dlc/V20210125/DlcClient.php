@@ -24,6 +24,7 @@ use TencentCloud\Dlc\V20210125\Models as Models;
 
 /**
  * @method Models\CancelTaskResponse CancelTask(Models\CancelTaskRequest $req) This API is used to cancel a task.
+ * @method Models\CreateDataEngineResponse CreateDataEngine(Models\CreateDataEngineRequest $req) This API is used to create a data engine.
  * @method Models\CreateInternalTableResponse CreateInternalTable(Models\CreateInternalTableRequest $req) This API is used to create a managed internal table. It has been disused.
  * @method Models\CreateResultDownloadResponse CreateResultDownload(Models\CreateResultDownloadRequest $req) This API is used to create a query result download task.
  * @method Models\CreateSparkAppResponse CreateSparkApp(Models\CreateSparkAppRequest $req) This API is used to create a Spark application.
@@ -31,6 +32,10 @@ use TencentCloud\Dlc\V20210125\Models as Models;
  * @method Models\CreateTaskResponse CreateTask(Models\CreateTaskRequest $req) This API is used to create a SQL query task. (We recommend you use the `CreateTasks` API instead.)
  * @method Models\CreateTasksResponse CreateTasks(Models\CreateTasksRequest $req) This API is used to create tasks in batches.
  * @method Models\DeleteSparkAppResponse DeleteSparkApp(Models\DeleteSparkAppRequest $req) This API is used to delete a Spark application.
+ * @method Models\DescribeEngineUsageInfoResponse DescribeEngineUsageInfo(Models\DescribeEngineUsageInfoRequest $req) This API is used to query the resource usage of a data engine based on its ID.
+ * @method Models\DescribeForbiddenTableProResponse DescribeForbiddenTablePro(Models\DescribeForbiddenTableProRequest $req) This API is used to get the list of disabled table attributes.
+ * @method Models\DescribeLakeFsDirSummaryResponse DescribeLakeFsDirSummary(Models\DescribeLakeFsDirSummaryRequest $req) This API is used to query the summary of a specified directory in a managed storage.
+ * @method Models\DescribeLakeFsInfoResponse DescribeLakeFsInfo(Models\DescribeLakeFsInfoRequest $req) This API is used to query managed storage information.
  * @method Models\DescribeResultDownloadResponse DescribeResultDownload(Models\DescribeResultDownloadRequest $req) This API is used to get a query result download task.
  * @method Models\DescribeSparkAppJobResponse DescribeSparkAppJob(Models\DescribeSparkAppJobRequest $req) This API is used to query a specific Spark application.
  * @method Models\DescribeSparkAppJobsResponse DescribeSparkAppJobs(Models\DescribeSparkAppJobsRequest $req) This API is used to get the list of Spark applications.
@@ -41,6 +46,8 @@ use TencentCloud\Dlc\V20210125\Models as Models;
  * @method Models\ModifyGovernEventRuleResponse ModifyGovernEventRule(Models\ModifyGovernEventRuleRequest $req) This API is used to change data governance event thresholds.
  * @method Models\ModifySparkAppResponse ModifySparkApp(Models\ModifySparkAppRequest $req) This API is used to update a Spark application.
  * @method Models\SuspendResumeDataEngineResponse SuspendResumeDataEngine(Models\SuspendResumeDataEngineRequest $req) This API is used to suspend or resume a data engine.
+ * @method Models\SwitchDataEngineResponse SwitchDataEngine(Models\SwitchDataEngineRequest $req) This API is used to switch between the primary and standby clusters.
+ * @method Models\UpdateRowFilterResponse UpdateRowFilter(Models\UpdateRowFilterRequest $req) This API is used to update row filters. Please note that it updates filters only but not catalogs, databases, or tables.
  */
 
 class DlcClient extends AbstractClient
