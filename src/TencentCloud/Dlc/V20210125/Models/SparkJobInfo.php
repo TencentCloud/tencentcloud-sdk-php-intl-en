@@ -112,6 +112,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setJobExecutorMaxNumbers(integer $JobExecutorMaxNumbers) Set The specified executor count (max), which defaults to 1. This parameter applies if the "Dynamic" mode is selected. If the "Dynamic" mode is not selected, the executor count is equal to `JobExecutorNums`.
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getSparkImageVersion() Obtain The image version.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setSparkImageVersion(string $SparkImageVersion) Set The image version.
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class SparkJobInfo extends AbstractModel
 {
@@ -302,6 +306,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $JobExecutorMaxNumbers;
 
     /**
+     * @var string The image version.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $SparkImageVersion;
+
+    /**
      * @param string $JobId Spark job ID
      * @param string $JobName Spark job name
      * @param integer $JobType Spark job type. Valid values: `1` (batch job), `2` (streaming job).
@@ -347,6 +357,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param integer $DataEngineStatus Engine status. -100 (default value): unknown; -2–11: normal.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $JobExecutorMaxNumbers The specified executor count (max), which defaults to 1. This parameter applies if the "Dynamic" mode is selected. If the "Dynamic" mode is not selected, the executor count is equal to `JobExecutorNums`.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $SparkImageVersion The image version.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
@@ -501,6 +513,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("JobExecutorMaxNumbers",$param) and $param["JobExecutorMaxNumbers"] !== null) {
             $this->JobExecutorMaxNumbers = $param["JobExecutorMaxNumbers"];
+        }
+
+        if (array_key_exists("SparkImageVersion",$param) and $param["SparkImageVersion"] !== null) {
+            $this->SparkImageVersion = $param["SparkImageVersion"];
         }
     }
 }
