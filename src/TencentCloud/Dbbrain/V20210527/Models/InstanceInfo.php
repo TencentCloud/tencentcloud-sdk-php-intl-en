@@ -76,6 +76,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAuditPolicyStatus(string $AuditPolicyStatus) Set Status of instance audit log. Valid values: ALL_AUDIT (full audit is enabled), RULE_AUDIT (rule audit is enabled), UNBOUND (audit is disabled).
  * @method string getAuditRunningStatus() Obtain Running status of instance audit log. Valid values: normal (running), paused (suspension due to overdue payment).
  * @method void setAuditRunningStatus(string $AuditRunningStatus) Set Running status of instance audit log. Valid values: normal (running), paused (suspension due to overdue payment).
+ * @method string getInternalVip() Obtain Private VIP
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setInternalVip(string $InternalVip) Set Private VIP
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getInternalVport() Obtain Private network port
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setInternalVport(integer $InternalVport) Set Private network port
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getCreateTime() Obtain Creation time
+ * @method void setCreateTime(string $CreateTime) Set Creation time
  */
 class InstanceInfo extends AbstractModel
 {
@@ -220,6 +230,23 @@ class InstanceInfo extends AbstractModel
     public $AuditRunningStatus;
 
     /**
+     * @var string Private VIP
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $InternalVip;
+
+    /**
+     * @var integer Private network port
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $InternalVport;
+
+    /**
+     * @var string Creation time
+     */
+    public $CreateTime;
+
+    /**
      * @param string $InstanceId Instance ID.
      * @param string $InstanceName Instance name.
      * @param string $Region Instance region.
@@ -248,6 +275,11 @@ class InstanceInfo extends AbstractModel
      * @param string $SecAuditStatus Status of instance security audit log. Valid values: ON (enabled), OFF (disabled).
      * @param string $AuditPolicyStatus Status of instance audit log. Valid values: ALL_AUDIT (full audit is enabled), RULE_AUDIT (rule audit is enabled), UNBOUND (audit is disabled).
      * @param string $AuditRunningStatus Running status of instance audit log. Valid values: normal (running), paused (suspension due to overdue payment).
+     * @param string $InternalVip Private VIP
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $InternalVport Private network port
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $CreateTime Creation time
      */
     function __construct()
     {
@@ -373,6 +405,18 @@ class InstanceInfo extends AbstractModel
 
         if (array_key_exists("AuditRunningStatus",$param) and $param["AuditRunningStatus"] !== null) {
             $this->AuditRunningStatus = $param["AuditRunningStatus"];
+        }
+
+        if (array_key_exists("InternalVip",$param) and $param["InternalVip"] !== null) {
+            $this->InternalVip = $param["InternalVip"];
+        }
+
+        if (array_key_exists("InternalVport",$param) and $param["InternalVport"] !== null) {
+            $this->InternalVport = $param["InternalVport"];
+        }
+
+        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
+            $this->CreateTime = $param["CreateTime"];
         }
     }
 }

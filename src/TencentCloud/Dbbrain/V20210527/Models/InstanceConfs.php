@@ -24,6 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDailyInspection(string $DailyInspection) Set Whether to enable database inspection. Valid values: Yes, No.
  * @method string getOverviewDisplay() Obtain Whether to enable instance overview. Valid values: Yes, No.
  * @method void setOverviewDisplay(string $OverviewDisplay) Set Whether to enable instance overview. Valid values: Yes, No.
+ * @method array getKeyDelimiters() Obtain Custom big key analysis separator for Redis only
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setKeyDelimiters(array $KeyDelimiters) Set Custom big key analysis separator for Redis only
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class InstanceConfs extends AbstractModel
 {
@@ -38,8 +42,16 @@ class InstanceConfs extends AbstractModel
     public $OverviewDisplay;
 
     /**
+     * @var array Custom big key analysis separator for Redis only
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $KeyDelimiters;
+
+    /**
      * @param string $DailyInspection Whether to enable database inspection. Valid values: Yes, No.
      * @param string $OverviewDisplay Whether to enable instance overview. Valid values: Yes, No.
+     * @param array $KeyDelimiters Custom big key analysis separator for Redis only
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -60,6 +72,10 @@ class InstanceConfs extends AbstractModel
 
         if (array_key_exists("OverviewDisplay",$param) and $param["OverviewDisplay"] !== null) {
             $this->OverviewDisplay = $param["OverviewDisplay"];
+        }
+
+        if (array_key_exists("KeyDelimiters",$param) and $param["KeyDelimiters"] !== null) {
+            $this->KeyDelimiters = $param["KeyDelimiters"];
         }
     }
 }
