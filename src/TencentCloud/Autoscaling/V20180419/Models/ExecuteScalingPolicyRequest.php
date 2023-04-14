@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ExecuteScalingPolicy request structure.
  *
- * @method string getAutoScalingPolicyId() Obtain Alarm-based scaling policy ID
- * @method void setAutoScalingPolicyId(string $AutoScalingPolicyId) Set Alarm-based scaling policy ID
+ * @method string getAutoScalingPolicyId() Obtain Auto-scaling policy ID. This parameter is not available to a target tracking policy.
+ * @method void setAutoScalingPolicyId(string $AutoScalingPolicyId) Set Auto-scaling policy ID. This parameter is not available to a target tracking policy.
  * @method boolean getHonorCooldown() Obtain Whether to check if the auto scaling group is in the cooldown period. Default value: false
  * @method void setHonorCooldown(boolean $HonorCooldown) Set Whether to check if the auto scaling group is in the cooldown period. Default value: false
  * @method string getTriggerSource() Obtain Source that triggers the scaling policy. Valid values: API and CLOUD_MONITOR. Default value: API. The value `CLOUD_MONITOR` is specific to the Cloud Monitor service.
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class ExecuteScalingPolicyRequest extends AbstractModel
 {
     /**
-     * @var string Alarm-based scaling policy ID
+     * @var string Auto-scaling policy ID. This parameter is not available to a target tracking policy.
      */
     public $AutoScalingPolicyId;
 
@@ -45,7 +45,7 @@ class ExecuteScalingPolicyRequest extends AbstractModel
     public $TriggerSource;
 
     /**
-     * @param string $AutoScalingPolicyId Alarm-based scaling policy ID
+     * @param string $AutoScalingPolicyId Auto-scaling policy ID. This parameter is not available to a target tracking policy.
      * @param boolean $HonorCooldown Whether to check if the auto scaling group is in the cooldown period. Default value: false
      * @param string $TriggerSource Source that triggers the scaling policy. Valid values: API and CLOUD_MONITOR. Default value: API. The value `CLOUD_MONITOR` is specific to the Cloud Monitor service.
      */

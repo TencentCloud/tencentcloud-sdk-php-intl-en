@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) Set Pagination offset, which is an integral multiple of `Limit`. `offset` = `limit` * (page number - 1).
  * @method string getGroupId() Obtain Replication group ID
  * @method void setGroupId(string $GroupId) Set Replication group ID
- * @method string getSearchKey() Obtain Keyword for fuzzy search, which can be an instance name or instance ID.
- * @method void setSearchKey(string $SearchKey) Set Keyword for fuzzy search, which can be an instance name or instance ID.
+ * @method string getSearchKey() Obtain Key words for fuzzy query, which can be set as the ID or name of a replication group.
+ * @method void setSearchKey(string $SearchKey) Set Key words for fuzzy query, which can be set as the ID or name of a replication group.
  */
 class DescribeReplicationGroupRequest extends AbstractModel
 {
@@ -47,7 +47,7 @@ class DescribeReplicationGroupRequest extends AbstractModel
     public $GroupId;
 
     /**
-     * @var string Keyword for fuzzy search, which can be an instance name or instance ID.
+     * @var string Key words for fuzzy query, which can be set as the ID or name of a replication group.
      */
     public $SearchKey;
 
@@ -55,7 +55,7 @@ class DescribeReplicationGroupRequest extends AbstractModel
      * @param integer $Limit Number of instances returned per page. Default value: `20`.
      * @param integer $Offset Pagination offset, which is an integral multiple of `Limit`. `offset` = `limit` * (page number - 1).
      * @param string $GroupId Replication group ID
-     * @param string $SearchKey Keyword for fuzzy search, which can be an instance name or instance ID.
+     * @param string $SearchKey Key words for fuzzy query, which can be set as the ID or name of a replication group.
      */
     function __construct()
     {

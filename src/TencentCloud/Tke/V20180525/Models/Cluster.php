@@ -40,8 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProjectId(integer $ProjectId) Set ID of the project to which the cluster belongs
  * @method array getTagSpecification() Obtain Tag description list.
  * @method void setTagSpecification(array $TagSpecification) Set Tag description list.
- * @method string getClusterStatus() Obtain Cluster status (`Running`, `Creating`, `Idling` or `Abnormal`)
- * @method void setClusterStatus(string $ClusterStatus) Set Cluster status (`Running`, `Creating`, `Idling` or `Abnormal`)
+ * @method string getClusterStatus() Obtain Cluster status. Values: `Trading` (Preparing), `Creating`, `Running`, `Deleting`, `Idling` (Idle), `Recovering`, `Scaling`, `Upgrading` (Upgrading the cluster), `WaittingForConnect` (Pending registration), `Pause` (Cluster upgrade paused), `NodeUpgrading` (Upgrading the node), `RuntimeUpgrading` (Upgrading the node runtime), `MasterScaling` (Scaling Master), `ClusterLevelUpgrading` (Adjusting cluster specification level), `ResourceIsolate` (Isolating), `ResourceIsolated` (Isolated), `ResourceReverse` (Overdue payment made. Recovering the cluster), and `Abnormal`.
+ * @method void setClusterStatus(string $ClusterStatus) Set Cluster status. Values: `Trading` (Preparing), `Creating`, `Running`, `Deleting`, `Idling` (Idle), `Recovering`, `Scaling`, `Upgrading` (Upgrading the cluster), `WaittingForConnect` (Pending registration), `Pause` (Cluster upgrade paused), `NodeUpgrading` (Upgrading the node), `RuntimeUpgrading` (Upgrading the node runtime), `MasterScaling` (Scaling Master), `ClusterLevelUpgrading` (Adjusting cluster specification level), `ResourceIsolate` (Isolating), `ResourceIsolated` (Isolated), `ResourceReverse` (Overdue payment made. Recovering the cluster), and `Abnormal`.
  * @method string getProperty() Obtain Cluster attributes (including a map of different cluster attributes, with attribute fields including NodeNameType (lan-ip mode and hostname mode, with lan-ip mode as default))
  * @method void setProperty(string $Property) Set Cluster attributes (including a map of different cluster attributes, with attribute fields including NodeNameType (lan-ip mode and hostname mode, with lan-ip mode as default))
  * @method integer getClusterMaterNodeNum() Obtain Number of primary nodes currently in the cluster
@@ -86,6 +86,10 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method void setRuntimeVersion(string $RuntimeVersion) Set Runtime version
 Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method integer getClusterEtcdNodeNum() Obtain Number of current etcd in the cluster
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setClusterEtcdNodeNum(integer $ClusterEtcdNodeNum) Set Number of current etcd in the cluster
+Note: This field may return `null`, indicating that no valid values can be obtained.
  */
 class Cluster extends AbstractModel
 {
@@ -140,7 +144,7 @@ class Cluster extends AbstractModel
     public $TagSpecification;
 
     /**
-     * @var string Cluster status (`Running`, `Creating`, `Idling` or `Abnormal`)
+     * @var string Cluster status. Values: `Trading` (Preparing), `Creating`, `Running`, `Deleting`, `Idling` (Idle), `Recovering`, `Scaling`, `Upgrading` (Upgrading the cluster), `WaittingForConnect` (Pending registration), `Pause` (Cluster upgrade paused), `NodeUpgrading` (Upgrading the node), `RuntimeUpgrading` (Upgrading the node runtime), `MasterScaling` (Scaling Master), `ClusterLevelUpgrading` (Adjusting cluster specification level), `ResourceIsolate` (Isolating), `ResourceIsolated` (Isolated), `ResourceReverse` (Overdue payment made. Recovering the cluster), and `Abnormal`.
      */
     public $ClusterStatus;
 
@@ -215,6 +219,12 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     public $RuntimeVersion;
 
     /**
+     * @var integer Number of current etcd in the cluster
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $ClusterEtcdNodeNum;
+
+    /**
      * @param string $ClusterId Cluster ID
      * @param string $ClusterName Cluster name
      * @param string $ClusterDescription Cluster description
@@ -225,7 +235,7 @@ Note: This field may return `null`, indicating that no valid value can be obtain
      * @param integer $ClusterNodeNum Current number of nodes in the cluster
      * @param integer $ProjectId ID of the project to which the cluster belongs
      * @param array $TagSpecification Tag description list.
-     * @param string $ClusterStatus Cluster status (`Running`, `Creating`, `Idling` or `Abnormal`)
+     * @param string $ClusterStatus Cluster status. Values: `Trading` (Preparing), `Creating`, `Running`, `Deleting`, `Idling` (Idle), `Recovering`, `Scaling`, `Upgrading` (Upgrading the cluster), `WaittingForConnect` (Pending registration), `Pause` (Cluster upgrade paused), `NodeUpgrading` (Upgrading the node), `RuntimeUpgrading` (Upgrading the node runtime), `MasterScaling` (Scaling Master), `ClusterLevelUpgrading` (Adjusting cluster specification level), `ResourceIsolate` (Isolating), `ResourceIsolated` (Isolated), `ResourceReverse` (Overdue payment made. Recovering the cluster), and `Abnormal`.
      * @param string $Property Cluster attributes (including a map of different cluster attributes, with attribute fields including NodeNameType (lan-ip mode and hostname mode, with lan-ip mode as default))
      * @param integer $ClusterMaterNodeNum Number of primary nodes currently in the cluster
      * @param string $ImageId ID of the image used by the cluster
@@ -248,6 +258,8 @@ Note: this field may return null, indicating that no valid value is obtained.
 Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param string $RuntimeVersion Runtime version
 Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param integer $ClusterEtcdNodeNum Number of current etcd in the cluster
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -358,6 +370,10 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 
         if (array_key_exists("RuntimeVersion",$param) and $param["RuntimeVersion"] !== null) {
             $this->RuntimeVersion = $param["RuntimeVersion"];
+        }
+
+        if (array_key_exists("ClusterEtcdNodeNum",$param) and $param["ClusterEtcdNodeNum"] !== null) {
+            $this->ClusterEtcdNodeNum = $param["ClusterEtcdNodeNum"];
         }
     }
 }

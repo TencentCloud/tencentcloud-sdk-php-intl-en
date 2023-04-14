@@ -20,23 +20,35 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeSSLStatus response structure.
  *
- * @method string getCertDownloadUrl() Obtain Certificate download address
- * @method void setCertDownloadUrl(string $CertDownloadUrl) Set Certificate download address
+ * @method string getCertDownloadUrl() Obtain Download address for SSL certificate
+ * @method void setCertDownloadUrl(string $CertDownloadUrl) Set Download address for SSL certificate
  * @method string getUrlExpiredTime() Obtain Expiration time of the certificate download address
  * @method void setUrlExpiredTime(string $UrlExpiredTime) Set Expiration time of the certificate download address
- * @method boolean getSSLConfig() Obtain SSL configuration status of an instance. Valid values: `true` (enable), `false` (disable).
- * @method void setSSLConfig(boolean $SSLConfig) Set SSL configuration status of an instance. Valid values: `true` (enable), `false` (disable).
- * @method boolean getFeatureSupport() Obtain Whether the instance supports SSL. Valid values: `true` (Yes. When minor version is upgraded.), `false` (No).
- * @method void setFeatureSupport(boolean $FeatureSupport) Set Whether the instance supports SSL. Valid values: `true` (Yes. When minor version is upgraded.), `false` (No).
- * @method integer getStatus() Obtain SSL configuration status. Valid values: `1`(Configuring), `2` (Configured).
- * @method void setStatus(integer $Status) Set SSL configuration status. Valid values: `1`(Configuring), `2` (Configured).
+ * @method boolean getSSLConfig() Obtain Whether the SSL is enabled for the identified instance.
+- `true`: Enabled
+- `false`: Disabled
+ * @method void setSSLConfig(boolean $SSLConfig) Set Whether the SSL is enabled for the identified instance.
+- `true`: Enabled
+- `false`: Disabled
+ * @method boolean getFeatureSupport() Obtain Whether SSL is supported for the identified instance.
+-`true`: Supported
+-`false`: Not supported
+ * @method void setFeatureSupport(boolean $FeatureSupport) Set Whether SSL is supported for the identified instance.
+-`true`: Supported
+-`false`: Not supported
+ * @method integer getStatus() Obtain Status of SSL configuration
+- `1`: Configuring
+- `2`: Configured successfully
+ * @method void setStatus(integer $Status) Set Status of SSL configuration
+- `1`: Configuring
+- `2`: Configured successfully
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 class DescribeSSLStatusResponse extends AbstractModel
 {
     /**
-     * @var string Certificate download address
+     * @var string Download address for SSL certificate
      */
     public $CertDownloadUrl;
 
@@ -46,17 +58,23 @@ class DescribeSSLStatusResponse extends AbstractModel
     public $UrlExpiredTime;
 
     /**
-     * @var boolean SSL configuration status of an instance. Valid values: `true` (enable), `false` (disable).
+     * @var boolean Whether the SSL is enabled for the identified instance.
+- `true`: Enabled
+- `false`: Disabled
      */
     public $SSLConfig;
 
     /**
-     * @var boolean Whether the instance supports SSL. Valid values: `true` (Yes. When minor version is upgraded.), `false` (No).
+     * @var boolean Whether SSL is supported for the identified instance.
+-`true`: Supported
+-`false`: Not supported
      */
     public $FeatureSupport;
 
     /**
-     * @var integer SSL configuration status. Valid values: `1`(Configuring), `2` (Configured).
+     * @var integer Status of SSL configuration
+- `1`: Configuring
+- `2`: Configured successfully
      */
     public $Status;
 
@@ -66,11 +84,17 @@ class DescribeSSLStatusResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $CertDownloadUrl Certificate download address
+     * @param string $CertDownloadUrl Download address for SSL certificate
      * @param string $UrlExpiredTime Expiration time of the certificate download address
-     * @param boolean $SSLConfig SSL configuration status of an instance. Valid values: `true` (enable), `false` (disable).
-     * @param boolean $FeatureSupport Whether the instance supports SSL. Valid values: `true` (Yes. When minor version is upgraded.), `false` (No).
-     * @param integer $Status SSL configuration status. Valid values: `1`(Configuring), `2` (Configured).
+     * @param boolean $SSLConfig Whether the SSL is enabled for the identified instance.
+- `true`: Enabled
+- `false`: Disabled
+     * @param boolean $FeatureSupport Whether SSL is supported for the identified instance.
+-`true`: Supported
+-`false`: Not supported
+     * @param integer $Status Status of SSL configuration
+- `1`: Configuring
+- `2`: Configured successfully
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()

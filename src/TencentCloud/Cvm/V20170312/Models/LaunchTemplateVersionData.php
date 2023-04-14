@@ -112,6 +112,20 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
  * @method void setTagSpecification(array $TagSpecification) Set List of tag description. By specifying this parameter, the tag can be bound to the corresponding CVM and CBS instances at the same time.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method boolean getDisableApiTermination() Obtain Whether to enable termination protection. Valid values:
+
+TRUE: Termination protection is enabled.
+FALSE: Termination protection is disabled.
+
+Default value: `FALSE`.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setDisableApiTermination(boolean $DisableApiTermination) Set Whether to enable termination protection. Valid values:
+
+TRUE: Termination protection is enabled.
+FALSE: Termination protection is disabled.
+
+Default value: `FALSE`.
+Note: This field may return `null`, indicating that no valid values can be obtained.
  */
 class LaunchTemplateVersionData extends AbstractModel
 {
@@ -254,6 +268,17 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     public $TagSpecification;
 
     /**
+     * @var boolean Whether to enable termination protection. Valid values:
+
+TRUE: Termination protection is enabled.
+FALSE: Termination protection is disabled.
+
+Default value: `FALSE`.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $DisableApiTermination;
+
+    /**
      * @param Placement $Placement Location of the instance.
 Note: This field may return `null`, indicating that no valid values can be obtained.
      * @param string $InstanceType Instance model.
@@ -299,6 +324,13 @@ Note: This field may return `null`, indicating that no valid values can be obtai
      * @param InstanceChargePrepaid $InstanceChargePrepaid Prepaid mode. This parameter indicates relevant parameter settings for monthly-subscribed instances.
 Note: This field may return `null`, indicating that no valid values can be obtained.
      * @param array $TagSpecification List of tag description. By specifying this parameter, the tag can be bound to the corresponding CVM and CBS instances at the same time.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param boolean $DisableApiTermination Whether to enable termination protection. Valid values:
+
+TRUE: Termination protection is enabled.
+FALSE: Termination protection is disabled.
+
+Default value: `FALSE`.
 Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
@@ -423,6 +455,10 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                 $obj->deserialize($value);
                 array_push($this->TagSpecification, $obj);
             }
+        }
+
+        if (array_key_exists("DisableApiTermination",$param) and $param["DisableApiTermination"] !== null) {
+            $this->DisableApiTermination = $param["DisableApiTermination"];
         }
     }
 }

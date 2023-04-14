@@ -20,34 +20,46 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Scheduled tasks.
  *
- * @method string getTimerAction() Obtain Timer name. Currently `TerminateInstances` is the only supported value.
- * @method void setTimerAction(string $TimerAction) Set Timer name. Currently `TerminateInstances` is the only supported value.
- * @method string getActionTime() Obtain Execution time, which follows the ISO8601 standard and uses UTC time. It must be at least 5 minutes later than the current time. Format: YYYY-MM-DDThh:mm:ssZ. For example: 2018-05-29T11:26:40Z.
- * @method void setActionTime(string $ActionTime) Set Execution time, which follows the ISO8601 standard and uses UTC time. It must be at least 5 minutes later than the current time. Format: YYYY-MM-DDThh:mm:ssZ. For example: 2018-05-29T11:26:40Z.
- * @method Externals getExternals() Obtain Additional data
- * @method void setExternals(Externals $Externals) Set Additional data
+ * @method string getTimerAction() Obtain Timer action. Valid value: `TerminateInstances`.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setTimerAction(string $TimerAction) Set Timer action. Valid value: `TerminateInstances`.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method string getActionTime() Obtain Action time, which follows the ISO8601 standard and uses UTC time. It must be 5 minutes later than the current time. Format: YYYY-MM-DDThh:mm:ssZ. For example: 2018-05-29T11:26:40Z.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setActionTime(string $ActionTime) Set Action time, which follows the ISO8601 standard and uses UTC time. It must be 5 minutes later than the current time. Format: YYYY-MM-DDThh:mm:ssZ. For example: 2018-05-29T11:26:40Z.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method Externals getExternals() Obtain Extended data
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setExternals(Externals $Externals) Set Extended data
+Note: This field may return `null`, indicating that no valid values can be obtained.
  */
 class ActionTimer extends AbstractModel
 {
     /**
-     * @var string Timer name. Currently `TerminateInstances` is the only supported value.
+     * @var string Timer action. Valid value: `TerminateInstances`.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public $TimerAction;
 
     /**
-     * @var string Execution time, which follows the ISO8601 standard and uses UTC time. It must be at least 5 minutes later than the current time. Format: YYYY-MM-DDThh:mm:ssZ. For example: 2018-05-29T11:26:40Z.
+     * @var string Action time, which follows the ISO8601 standard and uses UTC time. It must be 5 minutes later than the current time. Format: YYYY-MM-DDThh:mm:ssZ. For example: 2018-05-29T11:26:40Z.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public $ActionTime;
 
     /**
-     * @var Externals Additional data
+     * @var Externals Extended data
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public $Externals;
 
     /**
-     * @param string $TimerAction Timer name. Currently `TerminateInstances` is the only supported value.
-     * @param string $ActionTime Execution time, which follows the ISO8601 standard and uses UTC time. It must be at least 5 minutes later than the current time. Format: YYYY-MM-DDThh:mm:ssZ. For example: 2018-05-29T11:26:40Z.
-     * @param Externals $Externals Additional data
+     * @param string $TimerAction Timer action. Valid value: `TerminateInstances`.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param string $ActionTime Action time, which follows the ISO8601 standard and uses UTC time. It must be 5 minutes later than the current time. Format: YYYY-MM-DDThh:mm:ssZ. For example: 2018-05-29T11:26:40Z.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param Externals $Externals Extended data
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
     {

@@ -20,26 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Options related to bidding requests
  *
- * @method SpotMarketOptions getSpotOptions() Obtain Options related to bidding
- * @method void setSpotOptions(SpotMarketOptions $SpotOptions) Set Options related to bidding
- * @method string getMarketType() Obtain Market option type. Currently `spot` is the only supported value.
- * @method void setMarketType(string $MarketType) Set Market option type. Currently `spot` is the only supported value.
+ * @method SpotMarketOptions getSpotOptions() Obtain Spot-related options
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setSpotOptions(SpotMarketOptions $SpotOptions) Set Spot-related options
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method string getMarketType() Obtain Market type. Valid value: `spot`.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setMarketType(string $MarketType) Set Market type. Valid value: `spot`.
+Note: This field may return `null`, indicating that no valid values can be obtained.
  */
 class InstanceMarketOptionsRequest extends AbstractModel
 {
     /**
-     * @var SpotMarketOptions Options related to bidding
+     * @var SpotMarketOptions Spot-related options
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public $SpotOptions;
 
     /**
-     * @var string Market option type. Currently `spot` is the only supported value.
+     * @var string Market type. Valid value: `spot`.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public $MarketType;
 
     /**
-     * @param SpotMarketOptions $SpotOptions Options related to bidding
-     * @param string $MarketType Market option type. Currently `spot` is the only supported value.
+     * @param SpotMarketOptions $SpotOptions Spot-related options
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param string $MarketType Market type. Valid value: `spot`.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
     {

@@ -24,8 +24,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceId(string $InstanceId) Set Instance ID
  * @method string getOldPassword() Obtain Old password of an instance
  * @method void setOldPassword(string $OldPassword) Set Old password of an instance
- * @method string getPassword() Obtain New password of an instance
- * @method void setPassword(string $Password) Set New password of an instance
+ * @method string getPassword() Obtain New instance password, which has the following requirements:
+- It must contain 8-30 characters, preferably 12 or more.
+- It cannot start with a slash (/)
+- It must contain two of the following three types: lowercase letters, uppercase letters, and symbols (()~!@#$%^&*-+=_|{}[]:;<>,.?/)
+ * @method void setPassword(string $Password) Set New instance password, which has the following requirements:
+- It must contain 8-30 characters, preferably 12 or more.
+- It cannot start with a slash (/)
+- It must contain two of the following three types: lowercase letters, uppercase letters, and symbols (()~!@#$%^&*-+=_|{}[]:;<>,.?/)
  */
 class ModfiyInstancePasswordRequest extends AbstractModel
 {
@@ -40,14 +46,20 @@ class ModfiyInstancePasswordRequest extends AbstractModel
     public $OldPassword;
 
     /**
-     * @var string New password of an instance
+     * @var string New instance password, which has the following requirements:
+- It must contain 8-30 characters, preferably 12 or more.
+- It cannot start with a slash (/)
+- It must contain two of the following three types: lowercase letters, uppercase letters, and symbols (()~!@#$%^&*-+=_|{}[]:;<>,.?/)
      */
     public $Password;
 
     /**
      * @param string $InstanceId Instance ID
      * @param string $OldPassword Old password of an instance
-     * @param string $Password New password of an instance
+     * @param string $Password New instance password, which has the following requirements:
+- It must contain 8-30 characters, preferably 12 or more.
+- It cannot start with a slash (/)
+- It must contain two of the following three types: lowercase letters, uppercase letters, and symbols (()~!@#$%^&*-+=_|{}[]:;<>,.?/)
      */
     function __construct()
     {

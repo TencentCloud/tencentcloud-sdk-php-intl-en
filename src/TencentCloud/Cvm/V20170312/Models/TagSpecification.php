@@ -20,26 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Description of tags associated with resource instances during instance creation.
  *
- * @method string getResourceType() Obtain The type of resource that the tag is bound to. Valid values: `instance` (for CVM), `host` (for CDH), `image` (for image), and `keypair` (for key).
- * @method void setResourceType(string $ResourceType) Set The type of resource that the tag is bound to. Valid values: `instance` (for CVM), `host` (for CDH), `image` (for image), and `keypair` (for key).
- * @method array getTags() Obtain List of tags
- * @method void setTags(array $Tags) Set List of tags
+ * @method string getResourceType() Obtain Resource type. Valid values: `instance` (CVM), `host` (CDH), `image` (for image), and `keypair` (for key).
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setResourceType(string $ResourceType) Set Resource type. Valid values: `instance` (CVM), `host` (CDH), `image` (for image), and `keypair` (for key).
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method array getTags() Obtain Tag pairs
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setTags(array $Tags) Set Tag pairs
+Note: This field may return `null`, indicating that no valid values can be obtained.
  */
 class TagSpecification extends AbstractModel
 {
     /**
-     * @var string The type of resource that the tag is bound to. Valid values: `instance` (for CVM), `host` (for CDH), `image` (for image), and `keypair` (for key).
+     * @var string Resource type. Valid values: `instance` (CVM), `host` (CDH), `image` (for image), and `keypair` (for key).
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public $ResourceType;
 
     /**
-     * @var array List of tags
+     * @var array Tag pairs
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public $Tags;
 
     /**
-     * @param string $ResourceType The type of resource that the tag is bound to. Valid values: `instance` (for CVM), `host` (for CDH), `image` (for image), and `keypair` (for key).
-     * @param array $Tags List of tags
+     * @param string $ResourceType Resource type. Valid values: `instance` (CVM), `host` (CDH), `image` (for image), and `keypair` (for key).
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param array $Tags Tag pairs
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
     {

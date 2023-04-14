@@ -20,6 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ServiceAccount authentication configuration
  *
+ * @method boolean getUseTKEDefault() Obtain Use TKE default issuer and jwksuri
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setUseTKEDefault(boolean $UseTKEDefault) Set Use TKE default issuer and jwksuri
+Note: This field may return `null`, indicating that no valid values can be obtained.
  * @method string getIssuer() Obtain service-account-issuer
 Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method void setIssuer(string $Issuer) Set service-account-issuer
@@ -35,6 +39,12 @@ Note: this field may return `null`, indicating that no valid values can be obtai
  */
 class ServiceAccountAuthenticationOptions extends AbstractModel
 {
+    /**
+     * @var boolean Use TKE default issuer and jwksuri
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $UseTKEDefault;
+
     /**
      * @var string service-account-issuer
 Note: this field may return `null`, indicating that no valid values can be obtained.
@@ -54,6 +64,8 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     public $AutoCreateDiscoveryAnonymousAuth;
 
     /**
+     * @param boolean $UseTKEDefault Use TKE default issuer and jwksuri
+Note: This field may return `null`, indicating that no valid values can be obtained.
      * @param string $Issuer service-account-issuer
 Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param string $JWKSURI service-account-jwks-uri
@@ -74,6 +86,10 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         if ($param === null) {
             return;
         }
+        if (array_key_exists("UseTKEDefault",$param) and $param["UseTKEDefault"] !== null) {
+            $this->UseTKEDefault = $param["UseTKEDefault"];
+        }
+
         if (array_key_exists("Issuer",$param) and $param["Issuer"] !== null) {
             $this->Issuer = $param["Issuer"];
         }

@@ -48,14 +48,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVpcId(string $VpcId) Set VPC ID. This field is left empty for basic networks. You need to specify SubnetIds when modifying the network of the auto scaling group to a VPC with a specified VPC ID. Specify Zones when modifying the network to a basic network.
  * @method array getZones() Obtain List of availability zones
  * @method void setZones(array $Zones) Set List of availability zones
- * @method string getRetryPolicy() Obtain Retry policy. Value range: IMMEDIATE_RETRY, INCREMENTAL_INTERVALS, and NO_RETRY. Default value: IMMEDIATE_RETRY.
-<br><li> IMMEDIATE_RETRY: Retrying immediately in a short period of time and stopping after a number of consecutive failures (5).
-<br><li> INCREMENTAL_INTERVALS: Retrying at incremental intervals, i.e., as the number of consecutive failures increases, the retry interval gradually increases, ranging from one second to one day.
-<br><li> NO_RETRY: No retry until a user call or alarm message is received again.
- * @method void setRetryPolicy(string $RetryPolicy) Set Retry policy. Value range: IMMEDIATE_RETRY, INCREMENTAL_INTERVALS, and NO_RETRY. Default value: IMMEDIATE_RETRY.
-<br><li> IMMEDIATE_RETRY: Retrying immediately in a short period of time and stopping after a number of consecutive failures (5).
-<br><li> INCREMENTAL_INTERVALS: Retrying at incremental intervals, i.e., as the number of consecutive failures increases, the retry interval gradually increases, ranging from one second to one day.
-<br><li> NO_RETRY: No retry until a user call or alarm message is received again.
+ * @method string getRetryPolicy() Obtain Retry policy. Valid values: `IMMEDIATE_RETRY` (default), `INCREMENTAL_INTERVALS`, `NO_RETRY`. A partially successful scaling is judged as a failed one.
+<br><li>
+`IMMEDIATE_RETRY`: Retrying immediately in a short period of time and stopping after five consecutive failures.
+<br><li>
+`INCREMENTAL_INTERVALS`: Retrying at incremental intervals. As the number of consecutive failures increases, the retry interval gradually increases, ranging from seconds to one day.
+<br><li>`NO_RETRY`: Do not retry. Actions are taken when the next call or alarm message comes.
+ * @method void setRetryPolicy(string $RetryPolicy) Set Retry policy. Valid values: `IMMEDIATE_RETRY` (default), `INCREMENTAL_INTERVALS`, `NO_RETRY`. A partially successful scaling is judged as a failed one.
+<br><li>
+`IMMEDIATE_RETRY`: Retrying immediately in a short period of time and stopping after five consecutive failures.
+<br><li>
+`INCREMENTAL_INTERVALS`: Retrying at incremental intervals. As the number of consecutive failures increases, the retry interval gradually increases, ranging from seconds to one day.
+<br><li>`NO_RETRY`: Do not retry. Actions are taken when the next call or alarm message comes.
  * @method string getZonesCheckPolicy() Obtain Availability zone verification policy. Value range: ALL, ANY. Default value: ANY. This will work when the resource-related fields (launch configuration, availability zone, or subnet) of the auto scaling group are actually modified.
 <br><li> ALL: The verification will succeed only if all availability zones (Zone) or subnets (SubnetId) are available; otherwise, an error will be reported.
 <br><li> ANY: The verification will success if any availability zone (Zone) or subnet (SubnetId) is available; otherwise, an error will be reported.
@@ -174,10 +178,12 @@ class ModifyAutoScalingGroupRequest extends AbstractModel
     public $Zones;
 
     /**
-     * @var string Retry policy. Value range: IMMEDIATE_RETRY, INCREMENTAL_INTERVALS, and NO_RETRY. Default value: IMMEDIATE_RETRY.
-<br><li> IMMEDIATE_RETRY: Retrying immediately in a short period of time and stopping after a number of consecutive failures (5).
-<br><li> INCREMENTAL_INTERVALS: Retrying at incremental intervals, i.e., as the number of consecutive failures increases, the retry interval gradually increases, ranging from one second to one day.
-<br><li> NO_RETRY: No retry until a user call or alarm message is received again.
+     * @var string Retry policy. Valid values: `IMMEDIATE_RETRY` (default), `INCREMENTAL_INTERVALS`, `NO_RETRY`. A partially successful scaling is judged as a failed one.
+<br><li>
+`IMMEDIATE_RETRY`: Retrying immediately in a short period of time and stopping after five consecutive failures.
+<br><li>
+`INCREMENTAL_INTERVALS`: Retrying at incremental intervals. As the number of consecutive failures increases, the retry interval gradually increases, ranging from seconds to one day.
+<br><li>`NO_RETRY`: Do not retry. Actions are taken when the next call or alarm message comes.
      */
     public $RetryPolicy;
 
@@ -258,10 +264,12 @@ This parameter is valid only when `InstanceAllocationPolicy` is set to `SPOT_MIX
 <br><li> NEWEST_INSTANCE: The newest instance in the auto scaling group will be terminated first.
      * @param string $VpcId VPC ID. This field is left empty for basic networks. You need to specify SubnetIds when modifying the network of the auto scaling group to a VPC with a specified VPC ID. Specify Zones when modifying the network to a basic network.
      * @param array $Zones List of availability zones
-     * @param string $RetryPolicy Retry policy. Value range: IMMEDIATE_RETRY, INCREMENTAL_INTERVALS, and NO_RETRY. Default value: IMMEDIATE_RETRY.
-<br><li> IMMEDIATE_RETRY: Retrying immediately in a short period of time and stopping after a number of consecutive failures (5).
-<br><li> INCREMENTAL_INTERVALS: Retrying at incremental intervals, i.e., as the number of consecutive failures increases, the retry interval gradually increases, ranging from one second to one day.
-<br><li> NO_RETRY: No retry until a user call or alarm message is received again.
+     * @param string $RetryPolicy Retry policy. Valid values: `IMMEDIATE_RETRY` (default), `INCREMENTAL_INTERVALS`, `NO_RETRY`. A partially successful scaling is judged as a failed one.
+<br><li>
+`IMMEDIATE_RETRY`: Retrying immediately in a short period of time and stopping after five consecutive failures.
+<br><li>
+`INCREMENTAL_INTERVALS`: Retrying at incremental intervals. As the number of consecutive failures increases, the retry interval gradually increases, ranging from seconds to one day.
+<br><li>`NO_RETRY`: Do not retry. Actions are taken when the next call or alarm message comes.
      * @param string $ZonesCheckPolicy Availability zone verification policy. Value range: ALL, ANY. Default value: ANY. This will work when the resource-related fields (launch configuration, availability zone, or subnet) of the auto scaling group are actually modified.
 <br><li> ALL: The verification will succeed only if all availability zones (Zone) or subnets (SubnetId) are available; otherwise, an error will be reported.
 <br><li> ANY: The verification will success if any availability zone (Zone) or subnet (SubnetId) is available; otherwise, an error will be reported.

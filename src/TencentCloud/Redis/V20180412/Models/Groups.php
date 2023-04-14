@@ -22,26 +22,72 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getAppId() Obtain User App ID
  * @method void setAppId(integer $AppId) Set User App ID
- * @method integer getRegionId() Obtain Region ID. 1: Guangzhou; 4: Shanghai; 5: Hong Kong (China); 6: Toronto; 7: Shanghai Finance; 8: Beijing; 9: Singapore; 11: Shenzhen Finance; 15: West US (Silicon Valley); 16: Chengdu; 17: Germany; 18: South Korea; 19: Chongqing; 21: India; 22: East US (Virginia); 23: Thailand; 24: Russia; 25: Japan
- * @method void setRegionId(integer $RegionId) Set Region ID. 1: Guangzhou; 4: Shanghai; 5: Hong Kong (China); 6: Toronto; 7: Shanghai Finance; 8: Beijing; 9: Singapore; 11: Shenzhen Finance; 15: West US (Silicon Valley); 16: Chengdu; 17: Germany; 18: South Korea; 19: Chongqing; 21: India; 22: East US (Virginia); 23: Thailand; 24: Russia; 25: Japan
- * @method string getGroupId() Obtain Replication group info
- * @method void setGroupId(string $GroupId) Set Replication group info
+ * @method integer getRegionId() Obtain Region ID
+- `1`: Guangzhou 
+- `4`: Shanghai 
+- `5`: Hong Kong (China) 
+- `6`: Toronto 
+- `7`: Shanghai Finance 
+- `8`: Beijing 
+- `9`: Singapore
+- `11`: Shenzhen Finance
+- `15`: Silicon Valley (West US)
+- `16`: Chengdu 
+- `17`: Germany 
+- `18`: South Korea 
+- `19`: Chongqing 
+- `21`: India 
+- `22`: Virginia (East US)
+- `23`: Thailand 
+- `24`: Russia 
+- `25`: Japan
+ * @method void setRegionId(integer $RegionId) Set Region ID
+- `1`: Guangzhou 
+- `4`: Shanghai 
+- `5`: Hong Kong (China) 
+- `6`: Toronto 
+- `7`: Shanghai Finance 
+- `8`: Beijing 
+- `9`: Singapore
+- `11`: Shenzhen Finance
+- `15`: Silicon Valley (West US)
+- `16`: Chengdu 
+- `17`: Germany 
+- `18`: South Korea 
+- `19`: Chongqing 
+- `21`: India 
+- `22`: Virginia (East US)
+- `23`: Thailand 
+- `24`: Russia 
+- `25`: Japan
+ * @method string getGroupId() Obtain Replication group ID
+ * @method void setGroupId(string $GroupId) Set Replication group ID
  * @method string getGroupName() Obtain Replication group name
-Note: This field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setGroupName(string $GroupName) Set Replication group name
-Note: This field may return `null`, indicating that no valid values can be obtained.
- * @method integer getStatus() Obtain Replication group status. Valid values: 37 (Associating replication group), 38 (Reconnecting to replication group), 51 (Disassociating the replication group), 52 (Switching primary instance in the replication group), 53 (Modifying roles)
- * @method void setStatus(integer $Status) Set Replication group status. Valid values: 37 (Associating replication group), 38 (Reconnecting to replication group), 51 (Disassociating the replication group), 52 (Switching primary instance in the replication group), 53 (Modifying roles)
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getStatus() Obtain Status of replication group
+- `37`: Associating replication group
+- `38`: Reconnecting to replication group
+- `51`: Disassociating replication group
+- `52`: Switching with master instance in replication group
+- `53`: Modifying the roles
+ * @method void setStatus(integer $Status) Set Status of replication group
+- `37`: Associating replication group
+- `38`: Reconnecting to replication group
+- `51`: Disassociating replication group
+- `52`: Switching with master instance in replication group
+- `53`: Modifying the roles
  * @method integer getInstanceCount() Obtain Number of replication groups
  * @method void setInstanceCount(integer $InstanceCount) Set Number of replication groups
- * @method array getInstances() Obtain Instances in replication group
-Note: This field may return `null`, indicating that no valid values can be obtained.
- * @method void setInstances(array $Instances) Set Instances in replication group
-Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method array getInstances() Obtain Instance information in replication groups
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setInstances(array $Instances) Set Instance information in replication groups
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getRemark() Obtain Remarks
-Note: This field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setRemark(string $Remark) Set Remarks
-Note: This field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class Groups extends AbstractModel
 {
@@ -51,23 +97,46 @@ class Groups extends AbstractModel
     public $AppId;
 
     /**
-     * @var integer Region ID. 1: Guangzhou; 4: Shanghai; 5: Hong Kong (China); 6: Toronto; 7: Shanghai Finance; 8: Beijing; 9: Singapore; 11: Shenzhen Finance; 15: West US (Silicon Valley); 16: Chengdu; 17: Germany; 18: South Korea; 19: Chongqing; 21: India; 22: East US (Virginia); 23: Thailand; 24: Russia; 25: Japan
+     * @var integer Region ID
+- `1`: Guangzhou 
+- `4`: Shanghai 
+- `5`: Hong Kong (China) 
+- `6`: Toronto 
+- `7`: Shanghai Finance 
+- `8`: Beijing 
+- `9`: Singapore
+- `11`: Shenzhen Finance
+- `15`: Silicon Valley (West US)
+- `16`: Chengdu 
+- `17`: Germany 
+- `18`: South Korea 
+- `19`: Chongqing 
+- `21`: India 
+- `22`: Virginia (East US)
+- `23`: Thailand 
+- `24`: Russia 
+- `25`: Japan
      */
     public $RegionId;
 
     /**
-     * @var string Replication group info
+     * @var string Replication group ID
      */
     public $GroupId;
 
     /**
      * @var string Replication group name
-Note: This field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $GroupName;
 
     /**
-     * @var integer Replication group status. Valid values: 37 (Associating replication group), 38 (Reconnecting to replication group), 51 (Disassociating the replication group), 52 (Switching primary instance in the replication group), 53 (Modifying roles)
+     * @var integer Status of replication group
+- `37`: Associating replication group
+- `38`: Reconnecting to replication group
+- `51`: Disassociating replication group
+- `52`: Switching with master instance in replication group
+- `53`: Modifying the roles
      */
     public $Status;
 
@@ -77,29 +146,52 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     public $InstanceCount;
 
     /**
-     * @var array Instances in replication group
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @var array Instance information in replication groups
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Instances;
 
     /**
      * @var string Remarks
-Note: This field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Remark;
 
     /**
      * @param integer $AppId User App ID
-     * @param integer $RegionId Region ID. 1: Guangzhou; 4: Shanghai; 5: Hong Kong (China); 6: Toronto; 7: Shanghai Finance; 8: Beijing; 9: Singapore; 11: Shenzhen Finance; 15: West US (Silicon Valley); 16: Chengdu; 17: Germany; 18: South Korea; 19: Chongqing; 21: India; 22: East US (Virginia); 23: Thailand; 24: Russia; 25: Japan
-     * @param string $GroupId Replication group info
+     * @param integer $RegionId Region ID
+- `1`: Guangzhou 
+- `4`: Shanghai 
+- `5`: Hong Kong (China) 
+- `6`: Toronto 
+- `7`: Shanghai Finance 
+- `8`: Beijing 
+- `9`: Singapore
+- `11`: Shenzhen Finance
+- `15`: Silicon Valley (West US)
+- `16`: Chengdu 
+- `17`: Germany 
+- `18`: South Korea 
+- `19`: Chongqing 
+- `21`: India 
+- `22`: Virginia (East US)
+- `23`: Thailand 
+- `24`: Russia 
+- `25`: Japan
+     * @param string $GroupId Replication group ID
      * @param string $GroupName Replication group name
-Note: This field may return `null`, indicating that no valid values can be obtained.
-     * @param integer $Status Replication group status. Valid values: 37 (Associating replication group), 38 (Reconnecting to replication group), 51 (Disassociating the replication group), 52 (Switching primary instance in the replication group), 53 (Modifying roles)
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $Status Status of replication group
+- `37`: Associating replication group
+- `38`: Reconnecting to replication group
+- `51`: Disassociating replication group
+- `52`: Switching with master instance in replication group
+- `53`: Modifying the roles
      * @param integer $InstanceCount Number of replication groups
-     * @param array $Instances Instances in replication group
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param array $Instances Instance information in replication groups
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $Remark Remarks
-Note: This field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
