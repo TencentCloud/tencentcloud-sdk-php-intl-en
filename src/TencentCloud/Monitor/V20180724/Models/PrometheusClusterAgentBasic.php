@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNotInstallBasicScrape(boolean $NotInstallBasicScrape) Set Whether to install the default collection configuration.
  * @method boolean getNotScrape() Obtain Whether to collect metrics (`true`: Drop all metrics; `false`: Collect default metrics)
  * @method void setNotScrape(boolean $NotScrape) Set Whether to collect metrics (`true`: Drop all metrics; `false`: Collect default metrics)
+ * @method boolean getOpenDefaultRecord() Obtain Whether to enable the default recording rule
+ * @method void setOpenDefaultRecord(boolean $OpenDefaultRecord) Set Whether to enable the default recording rule
  */
 class PrometheusClusterAgentBasic extends AbstractModel
 {
@@ -80,6 +82,11 @@ class PrometheusClusterAgentBasic extends AbstractModel
     public $NotScrape;
 
     /**
+     * @var boolean Whether to enable the default recording rule
+     */
+    public $OpenDefaultRecord;
+
+    /**
      * @param string $Region Cluster ID
      * @param string $ClusterType Cluster type
      * @param string $ClusterId Cluster ID
@@ -88,6 +95,7 @@ class PrometheusClusterAgentBasic extends AbstractModel
      * @param array $ExternalLabels External labels, which will be attached to all metrics collected by this cluster
      * @param boolean $NotInstallBasicScrape Whether to install the default collection configuration.
      * @param boolean $NotScrape Whether to collect metrics (`true`: Drop all metrics; `false`: Collect default metrics)
+     * @param boolean $OpenDefaultRecord Whether to enable the default recording rule
      */
     function __construct()
     {
@@ -138,6 +146,10 @@ class PrometheusClusterAgentBasic extends AbstractModel
 
         if (array_key_exists("NotScrape",$param) and $param["NotScrape"] !== null) {
             $this->NotScrape = $param["NotScrape"];
+        }
+
+        if (array_key_exists("OpenDefaultRecord",$param) and $param["OpenDefaultRecord"] !== null) {
+            $this->OpenDefaultRecord = $param["OpenDefaultRecord"];
         }
     }
 }

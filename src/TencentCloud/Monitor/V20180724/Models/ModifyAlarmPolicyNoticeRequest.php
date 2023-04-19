@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNoticeIds(array $NoticeIds) Set List of alarm notification template IDs.
  * @method array getPolicyIds() Obtain Alarm policy ID array, which can be used to associate notification templates with multiple alarm policies. Max value: 30.
  * @method void setPolicyIds(array $PolicyIds) Set Alarm policy ID array, which can be used to associate notification templates with multiple alarm policies. Max value: 30.
+ * @method array getHierarchicalNotices() Obtain Notification rules for different alarm levels
+ * @method void setHierarchicalNotices(array $HierarchicalNotices) Set Notification rules for different alarm levels
  */
 class ModifyAlarmPolicyNoticeRequest extends AbstractModel
 {
@@ -52,10 +54,16 @@ class ModifyAlarmPolicyNoticeRequest extends AbstractModel
     public $PolicyIds;
 
     /**
+     * @var array Notification rules for different alarm levels
+     */
+    public $HierarchicalNotices;
+
+    /**
      * @param string $Module Module name, which is specified as `monitor`.
      * @param string $PolicyId Alarm policy ID. If both `PolicyIds` and this parameter are returned, only `PolicyIds` takes effect.
      * @param array $NoticeIds List of alarm notification template IDs.
      * @param array $PolicyIds Alarm policy ID array, which can be used to associate notification templates with multiple alarm policies. Max value: 30.
+     * @param array $HierarchicalNotices Notification rules for different alarm levels
      */
     function __construct()
     {
@@ -84,6 +92,15 @@ class ModifyAlarmPolicyNoticeRequest extends AbstractModel
 
         if (array_key_exists("PolicyIds",$param) and $param["PolicyIds"] !== null) {
             $this->PolicyIds = $param["PolicyIds"];
+        }
+
+        if (array_key_exists("HierarchicalNotices",$param) and $param["HierarchicalNotices"] !== null) {
+            $this->HierarchicalNotices = [];
+            foreach ($param["HierarchicalNotices"] as $key => $value){
+                $obj = new AlarmHierarchicalNotice();
+                $obj->deserialize($value);
+                array_push($this->HierarchicalNotices, $obj);
+            }
         }
     }
 }

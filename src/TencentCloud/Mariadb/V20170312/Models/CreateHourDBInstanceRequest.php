@@ -36,10 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVpcId(string $VpcId) Set Unique ID of the network. If this parameter is not passed in, the classic network will be used.
  * @method string getSubnetId() Obtain Unique ID of the subnet. If `VpcId` is specified, this parameter is required.
  * @method void setSubnetId(string $SubnetId) Set Unique ID of the subnet. If `VpcId` is specified, this parameter is required.
- * @method string getDbVersionId() Obtain Database engine version. Valid values: 10.0.10, 10.1.9, 5.7.17.
-If this parameter is left empty, `10.1.9` will be used.
- * @method void setDbVersionId(string $DbVersionId) Set Database engine version. Valid values: 10.0.10, 10.1.9, 5.7.17.
-If this parameter is left empty, `10.1.9` will be used.
+ * @method string getDbVersionId() Obtain Database engine version. Valid values: `5.7`, `8.0`, `10.0`, `10.1`.
+ * @method void setDbVersionId(string $DbVersionId) Set Database engine version. Valid values: `5.7`, `8.0`, `10.0`, `10.1`.
  * @method string getInstanceName() Obtain Custom name of the instance.
  * @method void setInstanceName(string $InstanceName) Set Custom name of the instance.
  * @method array getSecurityGroupIds() Obtain Security group ID. If this parameter is not passed in, no security groups will be associated when the instance is created.
@@ -106,8 +104,7 @@ class CreateHourDBInstanceRequest extends AbstractModel
     public $SubnetId;
 
     /**
-     * @var string Database engine version. Valid values: 10.0.10, 10.1.9, 5.7.17.
-If this parameter is left empty, `10.1.9` will be used.
+     * @var string Database engine version. Valid values: `5.7`, `8.0`, `10.0`, `10.1`.
      */
     public $DbVersionId;
 
@@ -167,8 +164,7 @@ If this parameter is left empty, `10.1.9` will be used.
      * @param integer $ProjectId Project ID. If this parameter is not passed in, the default project will be used.
      * @param string $VpcId Unique ID of the network. If this parameter is not passed in, the classic network will be used.
      * @param string $SubnetId Unique ID of the subnet. If `VpcId` is specified, this parameter is required.
-     * @param string $DbVersionId Database engine version. Valid values: 10.0.10, 10.1.9, 5.7.17.
-If this parameter is left empty, `10.1.9` will be used.
+     * @param string $DbVersionId Database engine version. Valid values: `5.7`, `8.0`, `10.0`, `10.1`.
      * @param string $InstanceName Custom name of the instance.
      * @param array $SecurityGroupIds Security group ID. If this parameter is not passed in, no security groups will be associated when the instance is created.
      * @param integer $Ipv6Flag Whether IPv6 is supported.

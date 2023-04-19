@@ -48,8 +48,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSubnetId(string $SubnetId) Set VPC subnet ID, which is required when `VpcId` is specified.
  * @method integer getProjectId() Obtain Project ID, which can be obtained through the `DescribeProjects` API. If this parameter is not passed in, the instance will be associated with the default project.
  * @method void setProjectId(integer $ProjectId) Set Project ID, which can be obtained through the `DescribeProjects` API. If this parameter is not passed in, the instance will be associated with the default project.
- * @method string getDbVersionId() Obtain Database engine version. Valid values: `8.0.18`, `10.1.9`, `5.7.17`. Default value: `5.7.17`.
- * @method void setDbVersionId(string $DbVersionId) Set Database engine version. Valid values: `8.0.18`, `10.1.9`, `5.7.17`. Default value: `5.7.17`.
+ * @method string getDbVersionId() Obtain Database engine version. Valid values: `5.7`, `8.0`, `10.0`, `10.1`.
+ * @method void setDbVersionId(string $DbVersionId) Set Database engine version. Valid values: `5.7`, `8.0`, `10.0`, `10.1`.
  * @method string getInstanceName() Obtain Name of the instance, which can be customized.
  * @method void setInstanceName(string $InstanceName) Set Name of the instance, which can be customized.
  * @method array getSecurityGroupIds() Obtain List of security group IDs
@@ -128,7 +128,7 @@ class CreateDBInstanceRequest extends AbstractModel
     public $ProjectId;
 
     /**
-     * @var string Database engine version. Valid values: `8.0.18`, `10.1.9`, `5.7.17`. Default value: `5.7.17`.
+     * @var string Database engine version. Valid values: `5.7`, `8.0`, `10.0`, `10.1`.
      */
     public $DbVersionId;
 
@@ -187,7 +187,7 @@ class CreateDBInstanceRequest extends AbstractModel
      * @param string $VpcId VPC ID. If this parameter is not passed in, the instance will be created on the classic network.
      * @param string $SubnetId VPC subnet ID, which is required when `VpcId` is specified.
      * @param integer $ProjectId Project ID, which can be obtained through the `DescribeProjects` API. If this parameter is not passed in, the instance will be associated with the default project.
-     * @param string $DbVersionId Database engine version. Valid values: `8.0.18`, `10.1.9`, `5.7.17`. Default value: `5.7.17`.
+     * @param string $DbVersionId Database engine version. Valid values: `5.7`, `8.0`, `10.0`, `10.1`.
      * @param string $InstanceName Name of the instance, which can be customized.
      * @param array $SecurityGroupIds List of security group IDs
      * @param integer $AutoRenewFlag Auto-renewal flag. Valid values: `1` (auto-renewal), `2` (no renewal upon expiration).

@@ -14,40 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Monitor\V20180724\Models;
+namespace TencentCloud\Mariadb\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * CreatePrometheusRecordRuleYaml request structure.
+ * DescribeDBInstanceDetail request structure.
  *
- * @method string getInstanceId() Obtain Instance ID
- * @method void setInstanceId(string $InstanceId) Set Instance ID
- * @method string getContent() Obtain YAML content
- * @method void setContent(string $Content) Set YAML content
- * @method string getName() Obtain Rule name
- * @method void setName(string $Name) Set Rule name
+ * @method string getInstanceId() Obtain Instance ID in the format of `tdsql-ow728lmc`
+ * @method void setInstanceId(string $InstanceId) Set Instance ID in the format of `tdsql-ow728lmc`
  */
-class CreatePrometheusRecordRuleYamlRequest extends AbstractModel
+class DescribeDBInstanceDetailRequest extends AbstractModel
 {
     /**
-     * @var string Instance ID
+     * @var string Instance ID in the format of `tdsql-ow728lmc`
      */
     public $InstanceId;
 
     /**
-     * @var string YAML content
-     */
-    public $Content;
-
-    /**
-     * @var string Rule name
-     */
-    public $Name;
-
-    /**
-     * @param string $InstanceId Instance ID
-     * @param string $Content YAML content
-     * @param string $Name Rule name
+     * @param string $InstanceId Instance ID in the format of `tdsql-ow728lmc`
      */
     function __construct()
     {
@@ -64,14 +48,6 @@ class CreatePrometheusRecordRuleYamlRequest extends AbstractModel
         }
         if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
             $this->InstanceId = $param["InstanceId"];
-        }
-
-        if (array_key_exists("Content",$param) and $param["Content"] !== null) {
-            $this->Content = $param["Content"];
-        }
-
-        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
-            $this->Name = $param["Name"];
         }
     }
 }
