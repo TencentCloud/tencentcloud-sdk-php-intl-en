@@ -102,6 +102,10 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
  * @method void setMaxCps(integer $MaxCps) Set Maximum number of new listener connections. If it’s set to `-1`, the listener speed is not limited. 
 Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method integer getIdleConnectTimeout() Obtain Connection idle timeout period (in seconds). It’s only available to TCP listeners. Value range: 300-900 for shared and dedicated instances; 300-2000 for LCU-supported CLB instances. It defaults to 900.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setIdleConnectTimeout(integer $IdleConnectTimeout) Set Connection idle timeout period (in seconds). It’s only available to TCP listeners. Value range: 300-900 for shared and dedicated instances; 300-2000 for LCU-supported CLB instances. It defaults to 900.
+Note: This field may return `null`, indicating that no valid values can be obtained.
  */
 class Listener extends AbstractModel
 {
@@ -235,6 +239,12 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     public $MaxCps;
 
     /**
+     * @var integer Connection idle timeout period (in seconds). It’s only available to TCP listeners. Value range: 300-900 for shared and dedicated instances; 300-2000 for LCU-supported CLB instances. It defaults to 900.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $IdleConnectTimeout;
+
+    /**
      * @param string $ListenerId CLB listener ID
      * @param string $Protocol Listener protocol
      * @param integer $Port Listener port
@@ -275,6 +285,8 @@ Note: This field may return `null`, indicating that no valid values can be obtai
      * @param integer $MaxConn Maximum number of concurrent listener connections. If it’s set to `-1`, the listener speed is not limited. 
 Note: This field may return `null`, indicating that no valid values can be obtained.
      * @param integer $MaxCps Maximum number of new listener connections. If it’s set to `-1`, the listener speed is not limited. 
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param integer $IdleConnectTimeout Connection idle timeout period (in seconds). It’s only available to TCP listeners. Value range: 300-900 for shared and dedicated instances; 300-2000 for LCU-supported CLB instances. It defaults to 900.
 Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
@@ -389,6 +401,10 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 
         if (array_key_exists("MaxCps",$param) and $param["MaxCps"] !== null) {
             $this->MaxCps = $param["MaxCps"];
+        }
+
+        if (array_key_exists("IdleConnectTimeout",$param) and $param["IdleConnectTimeout"] !== null) {
+            $this->IdleConnectTimeout = $param["IdleConnectTimeout"];
         }
     }
 }

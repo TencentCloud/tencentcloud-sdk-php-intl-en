@@ -27,6 +27,7 @@ use TencentCloud\Ckafka\V20190819\Models as Models;
  * @method Models\BatchModifyGroupOffsetsResponse BatchModifyGroupOffsets(Models\BatchModifyGroupOffsetsRequest $req) This API is used to batch modify consumer group offsets.
  * @method Models\BatchModifyTopicAttributesResponse BatchModifyTopicAttributes(Models\BatchModifyTopicAttributesRequest $req) This API is used to batch set topic attributes.
  * @method Models\CreateAclResponse CreateAcl(Models\CreateAclRequest $req) This API is used to add an ACL policy.
+ * @method Models\CreateAclRuleResponse CreateAclRule(Models\CreateAclRuleRequest $req) This API shows you how to create an ACL rule.
  * @method Models\CreateConsumerResponse CreateConsumer(Models\CreateConsumerRequest $req) This API is used to create a consumer group.
  * @method Models\CreateDatahubTopicResponse CreateDatahubTopic(Models\CreateDatahubTopicRequest $req) This API is used to create a DataHub topic.
  * @method Models\CreateInstancePostResponse CreateInstancePost(Models\CreateInstancePostRequest $req) This API is used to create a pay-as-you-go instance.
@@ -42,6 +43,7 @@ use TencentCloud\Ckafka\V20190819\Models as Models;
  * @method Models\DeleteTopicIpWhiteListResponse DeleteTopicIpWhiteList(Models\DeleteTopicIpWhiteListRequest $req) This API is used to delete a topic IP allowlist.
  * @method Models\DeleteUserResponse DeleteUser(Models\DeleteUserRequest $req) This API is used to delete a user.
  * @method Models\DescribeACLResponse DescribeACL(Models\DescribeACLRequest $req) This API is used to enumerate ACLs.
+ * @method Models\DescribeAclRuleResponse DescribeAclRule(Models\DescribeAclRuleRequest $req) This API is used to query the ACL rule list.
  * @method Models\DescribeAppInfoResponse DescribeAppInfo(Models\DescribeAppInfoRequest $req) This API is used to query the user list.
  * @method Models\DescribeCkafkaZoneResponse DescribeCkafkaZone(Models\DescribeCkafkaZoneRequest $req) This API is used to view the AZ list of Ckafka.
  * @method Models\DescribeConsumerGroupResponse DescribeConsumerGroup(Models\DescribeConsumerGroupRequest $req) This API is used to query consumer group information.
@@ -67,6 +69,8 @@ This API is used to get the list of topics in a CKafka instance of a user.
  * @method Models\FetchMessageByOffsetResponse FetchMessageByOffset(Models\FetchMessageByOffsetRequest $req) This API is used to query messages based on a specified offset position.
  * @method Models\FetchMessageListByOffsetResponse FetchMessageListByOffset(Models\FetchMessageListByOffsetRequest $req) This API is used to query the message list based on an offset.
  * @method Models\InquireCkafkaPriceResponse InquireCkafkaPrice(Models\InquireCkafkaPriceRequest $req) This API is used to purchase a CKafka instance or query the instance renewal price.
+ * @method Models\ModifyAclRuleResponse ModifyAclRule(Models\ModifyAclRuleRequest $req) This API is used to modify an ACL policy, and currently only supports specifying whether to apply the preset rule to new topics.
+ * @method Models\ModifyDatahubTopicResponse ModifyDatahubTopic(Models\ModifyDatahubTopicRequest $req) This API is used to modify the DataHub topic attributes.
  * @method Models\ModifyGroupOffsetsResponse ModifyGroupOffsets(Models\ModifyGroupOffsetsRequest $req) This API is used to set the consumer group (Groups) offset.
  * @method Models\ModifyInstanceAttributesResponse ModifyInstanceAttributes(Models\ModifyInstanceAttributesRequest $req) This API is used to set instance attributes.
  * @method Models\ModifyInstancePreResponse ModifyInstancePre(Models\ModifyInstancePreRequest $req) This API is used to change the configurations of a prepaid instance, such as disk capacity and bandwidth.

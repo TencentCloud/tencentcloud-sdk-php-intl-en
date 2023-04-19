@@ -56,6 +56,8 @@ They represent weighted round robin and least connections, respectively. Default
  * @method void setMaxConn(integer $MaxConn) Set Maximum number of concurrent listener connections. It’s available for TCP/UDP/TCP_SSL/QUIC listeners. If it’s set to `-1` or not specified, the listener speed is not limited. 
  * @method integer getMaxCps() Obtain Maximum number of new listener connections. It’s available for TCP/UDP/TCP_SSL/QUIC listeners. If it’s set to `-1` or not specified, the listener speed is not limited. 
  * @method void setMaxCps(integer $MaxCps) Set Maximum number of new listener connections. It’s available for TCP/UDP/TCP_SSL/QUIC listeners. If it’s set to `-1` or not specified, the listener speed is not limited. 
+ * @method integer getIdleConnectTimeout() Obtain Connection idle timeout period (in seconds). It’s only available to TCP listeners. Value range: 300-900 for shared and dedicated instances; 300-2000 for LCU-supported CLB instances. It defaults to 900. To set a period longer than 2000 seconds (up to 3600 seconds), please submit a [submit](https://console.cloud.tencent.com/workorder/category). 
+ * @method void setIdleConnectTimeout(integer $IdleConnectTimeout) Set Connection idle timeout period (in seconds). It’s only available to TCP listeners. Value range: 300-900 for shared and dedicated instances; 300-2000 for LCU-supported CLB instances. It defaults to 900. To set a period longer than 2000 seconds (up to 3600 seconds), please submit a [submit](https://console.cloud.tencent.com/workorder/category). 
  */
 class CreateListenerRequest extends AbstractModel
 {
@@ -146,6 +148,11 @@ They represent weighted round robin and least connections, respectively. Default
     public $MaxCps;
 
     /**
+     * @var integer Connection idle timeout period (in seconds). It’s only available to TCP listeners. Value range: 300-900 for shared and dedicated instances; 300-2000 for LCU-supported CLB instances. It defaults to 900. To set a period longer than 2000 seconds (up to 3600 seconds), please submit a [submit](https://console.cloud.tencent.com/workorder/category). 
+     */
+    public $IdleConnectTimeout;
+
+    /**
      * @param string $LoadBalancerId CLB instance ID
      * @param array $Ports Specifies for which ports to create listeners. Each port corresponds to a new listener.
      * @param string $Protocol Listener protocol. Values: TCP | UDP | HTTP | HTTPS | TCP_SSL | QUIC
@@ -164,6 +171,7 @@ They represent weighted round robin and least connections, respectively. Default
      * @param MultiCertInfo $MultiCertInfo Certificate information. You can specify multiple server-side certificates with different algorithm types. This parameter is only applicable to HTTPS listeners with the SNI feature not enabled. `Certificate` and `MultiCertInfo` cannot be specified at the same time. 
      * @param integer $MaxConn Maximum number of concurrent listener connections. It’s available for TCP/UDP/TCP_SSL/QUIC listeners. If it’s set to `-1` or not specified, the listener speed is not limited. 
      * @param integer $MaxCps Maximum number of new listener connections. It’s available for TCP/UDP/TCP_SSL/QUIC listeners. If it’s set to `-1` or not specified, the listener speed is not limited. 
+     * @param integer $IdleConnectTimeout Connection idle timeout period (in seconds). It’s only available to TCP listeners. Value range: 300-900 for shared and dedicated instances; 300-2000 for LCU-supported CLB instances. It defaults to 900. To set a period longer than 2000 seconds (up to 3600 seconds), please submit a [submit](https://console.cloud.tencent.com/workorder/category). 
      */
     function __construct()
     {
@@ -247,6 +255,10 @@ They represent weighted round robin and least connections, respectively. Default
 
         if (array_key_exists("MaxCps",$param) and $param["MaxCps"] !== null) {
             $this->MaxCps = $param["MaxCps"];
+        }
+
+        if (array_key_exists("IdleConnectTimeout",$param) and $param["IdleConnectTimeout"] !== null) {
+            $this->IdleConnectTimeout = $param["IdleConnectTimeout"];
         }
     }
 }
