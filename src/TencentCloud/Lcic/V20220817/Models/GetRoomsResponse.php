@@ -18,19 +18,26 @@ namespace TencentCloud\Lcic\V20220817\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeDeveloper response structure.
+ * GetRooms response structure.
  *
- * @method string getDeveloperId() Obtain The developer ID.
- * @method void setDeveloperId(string $DeveloperId) Set The developer ID.
+ * @method integer getTotal() Obtain The total number of rooms.
+ * @method void setTotal(integer $Total) Set The total number of rooms.
+ * @method array getRooms() Obtain The room list.
+ * @method void setRooms(array $Rooms) Set The room list.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
-class DescribeDeveloperResponse extends AbstractModel
+class GetRoomsResponse extends AbstractModel
 {
     /**
-     * @var string The developer ID.
+     * @var integer The total number of rooms.
      */
-    public $DeveloperId;
+    public $Total;
+
+    /**
+     * @var array The room list.
+     */
+    public $Rooms;
 
     /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -38,7 +45,8 @@ class DescribeDeveloperResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $DeveloperId The developer ID.
+     * @param integer $Total The total number of rooms.
+     * @param array $Rooms The room list.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -54,8 +62,17 @@ class DescribeDeveloperResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DeveloperId",$param) and $param["DeveloperId"] !== null) {
-            $this->DeveloperId = $param["DeveloperId"];
+        if (array_key_exists("Total",$param) and $param["Total"] !== null) {
+            $this->Total = $param["Total"];
+        }
+
+        if (array_key_exists("Rooms",$param) and $param["Rooms"] !== null) {
+            $this->Rooms = [];
+            foreach ($param["Rooms"] as $key => $value){
+                $obj = new RoomItem();
+                $obj->deserialize($value);
+                array_push($this->Rooms, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

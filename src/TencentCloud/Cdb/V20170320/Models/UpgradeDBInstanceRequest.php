@@ -42,16 +42,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceRole(string $InstanceRole) Set Instance type. Valid values: master (primary instance), dr (disaster recovery instance), ro (read-only instance). Default value: master.
  * @method string getDeviceType() Obtain The resource isolation type after the instance is upgraded. Valid values: `UNIVERSAL` (general instance), `EXCLUSIVE` (dedicated instance), `BASIC` (basic instance). If this parameter is left empty, the resource isolation type will be the same as the original one.
  * @method void setDeviceType(string $DeviceType) Set The resource isolation type after the instance is upgraded. Valid values: `UNIVERSAL` (general instance), `EXCLUSIVE` (dedicated instance), `BASIC` (basic instance). If this parameter is left empty, the resource isolation type will be the same as the original one.
- * @method integer getCpu() Obtain The number of CPU cores after the instance is upgraded. If this parameter is left empty, the number of CPU cores will be automatically filled in according to the `Memory` value.
- * @method void setCpu(integer $Cpu) Set The number of CPU cores after the instance is upgraded. If this parameter is left empty, the number of CPU cores will be automatically filled in according to the `Memory` value.
- * @method integer getFastUpgrade() Obtain Whether to enable QuickChange. Valid values: `0` (no), `1` (yes), `2` (QuickChange preferred). After QuickChange is enabled, the required resources will be checked. QuickChange is performed only when the required resources support the feature; otherwise, an error message will be returned.
- * @method void setFastUpgrade(integer $FastUpgrade) Set Whether to enable QuickChange. Valid values: `0` (no), `1` (yes), `2` (QuickChange preferred). After QuickChange is enabled, the required resources will be checked. QuickChange is performed only when the required resources support the feature; otherwise, an error message will be returned.
+ * @method integer getCpu() Obtain The number of CPU cores after the instance is upgraded. If this parameter is left empty, it will be subject to the `Memory` value.
+ * @method void setCpu(integer $Cpu) Set The number of CPU cores after the instance is upgraded. If this parameter is left empty, it will be subject to the `Memory` value.
+ * @method integer getFastUpgrade() Obtain QuickChange options. Valid values: `0` (common upgrade), `1` (QuickChange), `2` (QuickChange first). After QuickChange is enabled, the required resources will be checked. QuickChange will be performed only when the required resources support the feature; otherwise, an error message will be returned.
+ * @method void setFastUpgrade(integer $FastUpgrade) Set QuickChange options. Valid values: `0` (common upgrade), `1` (QuickChange), `2` (QuickChange first). After QuickChange is enabled, the required resources will be checked. QuickChange will be performed only when the required resources support the feature; otherwise, an error message will be returned.
  * @method integer getMaxDelayTime() Obtain Delay threshold. Value range: 1-10. Default value: `10`.
  * @method void setMaxDelayTime(integer $MaxDelayTime) Set Delay threshold. Value range: 1-10. Default value: `10`.
  * @method integer getCrossCluster() Obtain Whether to migrate the source node across AZs. Valid values: `0` (no), `1`(yes). Default value: `0`. If it is `1`, you can modify the source node AZ.
  * @method void setCrossCluster(integer $CrossCluster) Set Whether to migrate the source node across AZs. Valid values: `0` (no), `1`(yes). Default value: `0`. If it is `1`, you can modify the source node AZ.
  * @method string getZoneId() Obtain New AZ of the source node. This field is only valid when `CrossCluster` is `1`. Only migration across AZs in the same region is supported.
  * @method void setZoneId(string $ZoneId) Set New AZ of the source node. This field is only valid when `CrossCluster` is `1`. Only migration across AZs in the same region is supported.
+ * @method string getRoTransType() Obtain Processing logic of the intra-AZ read-only instance for cross-cluster migration. Valid values: `together` (intra-AZ read-only instances will be migrated to the target AZ with the source instance by default.), `severally` (intra-AZ read-only instances will maintain the original deployment mode and will not be migrated to the target AZ.).
+ * @method void setRoTransType(string $RoTransType) Set Processing logic of the intra-AZ read-only instance for cross-cluster migration. Valid values: `together` (intra-AZ read-only instances will be migrated to the target AZ with the source instance by default.), `severally` (intra-AZ read-only instances will maintain the original deployment mode and will not be migrated to the target AZ.).
  */
 class UpgradeDBInstanceRequest extends AbstractModel
 {
@@ -111,12 +113,12 @@ class UpgradeDBInstanceRequest extends AbstractModel
     public $DeviceType;
 
     /**
-     * @var integer The number of CPU cores after the instance is upgraded. If this parameter is left empty, the number of CPU cores will be automatically filled in according to the `Memory` value.
+     * @var integer The number of CPU cores after the instance is upgraded. If this parameter is left empty, it will be subject to the `Memory` value.
      */
     public $Cpu;
 
     /**
-     * @var integer Whether to enable QuickChange. Valid values: `0` (no), `1` (yes), `2` (QuickChange preferred). After QuickChange is enabled, the required resources will be checked. QuickChange is performed only when the required resources support the feature; otherwise, an error message will be returned.
+     * @var integer QuickChange options. Valid values: `0` (common upgrade), `1` (QuickChange), `2` (QuickChange first). After QuickChange is enabled, the required resources will be checked. QuickChange will be performed only when the required resources support the feature; otherwise, an error message will be returned.
      */
     public $FastUpgrade;
 
@@ -136,6 +138,11 @@ class UpgradeDBInstanceRequest extends AbstractModel
     public $ZoneId;
 
     /**
+     * @var string Processing logic of the intra-AZ read-only instance for cross-cluster migration. Valid values: `together` (intra-AZ read-only instances will be migrated to the target AZ with the source instance by default.), `severally` (intra-AZ read-only instances will maintain the original deployment mode and will not be migrated to the target AZ.).
+     */
+    public $RoTransType;
+
+    /**
      * @param string $InstanceId Instance ID in the format of `cdb-c1nl9rpv` or `cdbro-c1nl9rpv`. It is the same as the instance ID displayed on the TencentDB Console page. You can use the [DescribeDBInstances](https://intl.cloud.tencent.com/document/api/236/15872?from_cn_redirect=1) API to query the ID, whose value is the `InstanceId` value in output parameters.
      * @param integer $Memory Memory size in MB after upgrade. To ensure that the `Memory` value to be passed in is valid, please use the [DescribeDBZoneConfig](https://intl.cloud.tencent.com/document/product/236/17229?from_cn_redirect=1) API to query the specifications of the memory that can be upgraded to.
      * @param integer $Volume Disk size in GB after upgrade. To ensure that the `Volume` value to be passed in is valid, please use the [DescribeDBZoneConfig](https://intl.cloud.tencent.com/document/product/236/17229?from_cn_redirect=1) API to query the specifications of the disk that can be upgraded to.
@@ -147,11 +154,12 @@ class UpgradeDBInstanceRequest extends AbstractModel
      * @param string $BackupZone AZ information of secondary database 2, which is empty by default. This parameter can be specified when upgrading primary instances and is meaningless for read-only or disaster recovery instances.
      * @param string $InstanceRole Instance type. Valid values: master (primary instance), dr (disaster recovery instance), ro (read-only instance). Default value: master.
      * @param string $DeviceType The resource isolation type after the instance is upgraded. Valid values: `UNIVERSAL` (general instance), `EXCLUSIVE` (dedicated instance), `BASIC` (basic instance). If this parameter is left empty, the resource isolation type will be the same as the original one.
-     * @param integer $Cpu The number of CPU cores after the instance is upgraded. If this parameter is left empty, the number of CPU cores will be automatically filled in according to the `Memory` value.
-     * @param integer $FastUpgrade Whether to enable QuickChange. Valid values: `0` (no), `1` (yes), `2` (QuickChange preferred). After QuickChange is enabled, the required resources will be checked. QuickChange is performed only when the required resources support the feature; otherwise, an error message will be returned.
+     * @param integer $Cpu The number of CPU cores after the instance is upgraded. If this parameter is left empty, it will be subject to the `Memory` value.
+     * @param integer $FastUpgrade QuickChange options. Valid values: `0` (common upgrade), `1` (QuickChange), `2` (QuickChange first). After QuickChange is enabled, the required resources will be checked. QuickChange will be performed only when the required resources support the feature; otherwise, an error message will be returned.
      * @param integer $MaxDelayTime Delay threshold. Value range: 1-10. Default value: `10`.
      * @param integer $CrossCluster Whether to migrate the source node across AZs. Valid values: `0` (no), `1`(yes). Default value: `0`. If it is `1`, you can modify the source node AZ.
      * @param string $ZoneId New AZ of the source node. This field is only valid when `CrossCluster` is `1`. Only migration across AZs in the same region is supported.
+     * @param string $RoTransType Processing logic of the intra-AZ read-only instance for cross-cluster migration. Valid values: `together` (intra-AZ read-only instances will be migrated to the target AZ with the source instance by default.), `severally` (intra-AZ read-only instances will maintain the original deployment mode and will not be migrated to the target AZ.).
      */
     function __construct()
     {
@@ -228,6 +236,10 @@ class UpgradeDBInstanceRequest extends AbstractModel
 
         if (array_key_exists("ZoneId",$param) and $param["ZoneId"] !== null) {
             $this->ZoneId = $param["ZoneId"];
+        }
+
+        if (array_key_exists("RoTransType",$param) and $param["RoTransType"] !== null) {
+            $this->RoTransType = $param["RoTransType"];
         }
     }
 }

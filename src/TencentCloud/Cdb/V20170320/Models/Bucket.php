@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setKey(string $Key) Set None
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getCount() Obtain Number of keys in the statistic report
- * @method void setCount(integer $Count) Set Number of keys in the statistic report
+ * @method integer getCount() Obtain Number of occurrences of the key value
+ * @method void setCount(integer $Count) Set Number of occurrences of the key value
  */
 class Bucket extends AbstractModel
 {
@@ -36,14 +36,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $Key;
 
     /**
-     * @var integer Number of keys in the statistic report
+     * @var integer Number of occurrences of the key value
      */
     public $Count;
 
     /**
      * @param string $Key None
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $Count Number of keys in the statistic report
+     * @param integer $Count Number of occurrences of the key value
      */
     function __construct()
     {

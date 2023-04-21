@@ -18,19 +18,29 @@ namespace TencentCloud\Lcic\V20220817\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeDeveloper response structure.
+ * DescribeAnswerList response structure.
  *
- * @method string getDeveloperId() Obtain The developer ID.
- * @method void setDeveloperId(string $DeveloperId) Set The developer ID.
+ * @method integer getTotal() Obtain The total number of answers.
+ * @method void setTotal(integer $Total) Set The total number of answers.
+ * @method array getAnswerInfo() Obtain A list of the answers.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setAnswerInfo(array $AnswerInfo) Set A list of the answers.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
-class DescribeDeveloperResponse extends AbstractModel
+class DescribeAnswerListResponse extends AbstractModel
 {
     /**
-     * @var string The developer ID.
+     * @var integer The total number of answers.
      */
-    public $DeveloperId;
+    public $Total;
+
+    /**
+     * @var array A list of the answers.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $AnswerInfo;
 
     /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -38,7 +48,9 @@ class DescribeDeveloperResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $DeveloperId The developer ID.
+     * @param integer $Total The total number of answers.
+     * @param array $AnswerInfo A list of the answers.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -54,8 +66,17 @@ class DescribeDeveloperResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DeveloperId",$param) and $param["DeveloperId"] !== null) {
-            $this->DeveloperId = $param["DeveloperId"];
+        if (array_key_exists("Total",$param) and $param["Total"] !== null) {
+            $this->Total = $param["Total"];
+        }
+
+        if (array_key_exists("AnswerInfo",$param) and $param["AnswerInfo"] !== null) {
+            $this->AnswerInfo = [];
+            foreach ($param["AnswerInfo"] as $key => $value){
+                $obj = new AnswerInfo();
+                $obj->deserialize($value);
+                array_push($this->AnswerInfo, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

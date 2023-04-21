@@ -40,8 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIsAllowArrears(boolean $IsAllowArrears) Set Whether overdue payments are allowed. Currently, this field is not applied.
  * @method boolean getIsCreditLimited() Obtain Whether you have a credit limit. Currently, this field is not applied.
  * @method void setIsCreditLimited(boolean $IsCreditLimited) Set Whether you have a credit limit. Currently, this field is not applied.
- * @method float getCreditAmount() Obtain Credit limit. Credit limit－available credit balance = consumption amount
- * @method void setCreditAmount(float $CreditAmount) Set Credit limit. Credit limit－available credit balance = consumption amount
+ * @method float getCreditAmount() Obtain Credit limit in cents. Credit limit－available credit balance = consumption amount
+ * @method void setCreditAmount(float $CreditAmount) Set Credit limit in cents. Credit limit－available credit balance = consumption amount
  * @method float getCreditBalance() Obtain Available credit balance in cents, which takes the same calculation rules as `Balance`, `RealBalance`, and `RealCreditBalance`.
  * @method void setCreditBalance(float $CreditBalance) Set Available credit balance in cents, which takes the same calculation rules as `Balance`, `RealBalance`, and `RealCreditBalance`.
  * @method float getRealCreditBalance() Obtain Available account balance in cents, which takes the same calculation rules as `Balance`, `RealBalance`, and `CreditBalance`.
@@ -102,7 +102,7 @@ class DescribeAccountBalanceResponse extends AbstractModel
     public $IsCreditLimited;
 
     /**
-     * @var float Credit limit. Credit limit－available credit balance = consumption amount
+     * @var float Credit limit in cents. Credit limit－available credit balance = consumption amount
      */
     public $CreditAmount;
 
@@ -132,7 +132,7 @@ class DescribeAccountBalanceResponse extends AbstractModel
      * @param float $OweAmount Overdue amount in cents, which is when the available credit balance is negative.
      * @param boolean $IsAllowArrears Whether overdue payments are allowed. Currently, this field is not applied.
      * @param boolean $IsCreditLimited Whether you have a credit limit. Currently, this field is not applied.
-     * @param float $CreditAmount Credit limit. Credit limit－available credit balance = consumption amount
+     * @param float $CreditAmount Credit limit in cents. Credit limit－available credit balance = consumption amount
      * @param float $CreditBalance Available credit balance in cents, which takes the same calculation rules as `Balance`, `RealBalance`, and `RealCreditBalance`.
      * @param float $RealCreditBalance Available account balance in cents, which takes the same calculation rules as `Balance`, `RealBalance`, and `CreditBalance`.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.

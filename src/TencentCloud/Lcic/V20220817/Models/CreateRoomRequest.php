@@ -38,12 +38,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTeacherId(string $TeacherId) Set The user ID of the teacher. User IDs are returned by the user registration APIs. The user specified will have teacher permissions in the room created.
  * @method integer getAutoMic() Obtain Whether to automatically turn the mic on when the user enters a room. Valid values: 0: No (default value); 1: Yes.
  * @method void setAutoMic(integer $AutoMic) Set Whether to automatically turn the mic on when the user enters a room. Valid values: 0: No (default value); 1: Yes.
+ * @method integer getTurnOffMic() Obtain Whether to disconnect communication after audio/video permissions are revoked. Valid values: `0` (default): Yes; `1`: No.
+ * @method void setTurnOffMic(integer $TurnOffMic) Set Whether to disconnect communication after audio/video permissions are revoked. Valid values: `0` (default): Yes; `1`: No.
  * @method integer getAudioQuality() Obtain Whether to enable the high audio quality mode. Valid values: 0: No (default value); 1: Yes.
  * @method void setAudioQuality(integer $AudioQuality) Set Whether to enable the high audio quality mode. Valid values: 0: No (default value); 1: Yes.
  * @method integer getDisableRecord() Obtain Whether to disable auto recording. Valid values: 0: No (default); 1: Yes. If this parameter is 0, recording will start when the class starts and stops when the class ends.
  * @method void setDisableRecord(integer $DisableRecord) Set Whether to disable auto recording. Valid values: 0: No (default); 1: Yes. If this parameter is 0, recording will start when the class starts and stops when the class ends.
  * @method array getAssistants() Obtain The user IDs of the teaching assistants. User IDs are returned by the user registration APIs. The users specified will have teaching assistant permissions in the room created.
  * @method void setAssistants(array $Assistants) Set The user IDs of the teaching assistants. User IDs are returned by the user registration APIs. The users specified will have teaching assistant permissions in the room created.
+ * @method integer getRTCAudienceNumber() Obtain The number of RTC users.
+ * @method void setRTCAudienceNumber(integer $RTCAudienceNumber) Set The number of RTC users.
+ * @method integer getAudienceType() Obtain The audience type.
+ * @method void setAudienceType(integer $AudienceType) Set The audience type.
  * @method integer getRecordLayout() Obtain Recording layout
  * @method void setRecordLayout(integer $RecordLayout) Set Recording layout
  * @method string getGroupId() Obtain The ID of the group to bind. If you specify this parameter, only members of the group can enter this room.
@@ -97,6 +103,11 @@ class CreateRoomRequest extends AbstractModel
     public $AutoMic;
 
     /**
+     * @var integer Whether to disconnect communication after audio/video permissions are revoked. Valid values: `0` (default): Yes; `1`: No.
+     */
+    public $TurnOffMic;
+
+    /**
      * @var integer Whether to enable the high audio quality mode. Valid values: 0: No (default value); 1: Yes.
      */
     public $AudioQuality;
@@ -110,6 +121,16 @@ class CreateRoomRequest extends AbstractModel
      * @var array The user IDs of the teaching assistants. User IDs are returned by the user registration APIs. The users specified will have teaching assistant permissions in the room created.
      */
     public $Assistants;
+
+    /**
+     * @var integer The number of RTC users.
+     */
+    public $RTCAudienceNumber;
+
+    /**
+     * @var integer The audience type.
+     */
+    public $AudienceType;
 
     /**
      * @var integer Recording layout
@@ -131,9 +152,12 @@ class CreateRoomRequest extends AbstractModel
      * @param string $SubType The room subtype. Valid values: videodoc: Document + Video; video: Video only.
      * @param string $TeacherId The user ID of the teacher. User IDs are returned by the user registration APIs. The user specified will have teacher permissions in the room created.
      * @param integer $AutoMic Whether to automatically turn the mic on when the user enters a room. Valid values: 0: No (default value); 1: Yes.
+     * @param integer $TurnOffMic Whether to disconnect communication after audio/video permissions are revoked. Valid values: `0` (default): Yes; `1`: No.
      * @param integer $AudioQuality Whether to enable the high audio quality mode. Valid values: 0: No (default value); 1: Yes.
      * @param integer $DisableRecord Whether to disable auto recording. Valid values: 0: No (default); 1: Yes. If this parameter is 0, recording will start when the class starts and stops when the class ends.
      * @param array $Assistants The user IDs of the teaching assistants. User IDs are returned by the user registration APIs. The users specified will have teaching assistant permissions in the room created.
+     * @param integer $RTCAudienceNumber The number of RTC users.
+     * @param integer $AudienceType The audience type.
      * @param integer $RecordLayout Recording layout
      * @param string $GroupId The ID of the group to bind. If you specify this parameter, only members of the group can enter this room.
      */
@@ -186,6 +210,10 @@ class CreateRoomRequest extends AbstractModel
             $this->AutoMic = $param["AutoMic"];
         }
 
+        if (array_key_exists("TurnOffMic",$param) and $param["TurnOffMic"] !== null) {
+            $this->TurnOffMic = $param["TurnOffMic"];
+        }
+
         if (array_key_exists("AudioQuality",$param) and $param["AudioQuality"] !== null) {
             $this->AudioQuality = $param["AudioQuality"];
         }
@@ -196,6 +224,14 @@ class CreateRoomRequest extends AbstractModel
 
         if (array_key_exists("Assistants",$param) and $param["Assistants"] !== null) {
             $this->Assistants = $param["Assistants"];
+        }
+
+        if (array_key_exists("RTCAudienceNumber",$param) and $param["RTCAudienceNumber"] !== null) {
+            $this->RTCAudienceNumber = $param["RTCAudienceNumber"];
+        }
+
+        if (array_key_exists("AudienceType",$param) and $param["AudienceType"] !== null) {
+            $this->AudienceType = $param["AudienceType"];
         }
 
         if (array_key_exists("RecordLayout",$param) and $param["RecordLayout"] !== null) {

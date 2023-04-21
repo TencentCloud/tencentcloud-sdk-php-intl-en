@@ -55,6 +55,7 @@ A maximum of 20 requests can be initiated per second for this API.
  * @method Models\DeleteRecordResponse DeleteRecord(Models\DeleteRecordRequest $req) This example shows you how to delete the recording files of a specific room.
 A maximum of 20 requests can be initiated per second for this API.
  * @method Models\DeleteRoomResponse DeleteRoom(Models\DeleteRoomRequest $req) This API is used to delete a room.
+ * @method Models\DescribeAnswerListResponse DescribeAnswerList(Models\DescribeAnswerListRequest $req) This API is used to get the answers to a quiz question in a room.
  * @method Models\DescribeCurrentMemberListResponse DescribeCurrentMemberList(Models\DescribeCurrentMemberListRequest $req) This API is used to get the user list of a room. This API will not work if a room has ended or expired.
 A maximum of 20 requests can be initiated per second for this API.
  * @method Models\DescribeDeveloperResponse DescribeDeveloper(Models\DescribeDeveloperRequest $req) This API is used to get the developer information.
@@ -68,15 +69,18 @@ A maximum of 20 requests can be initiated per second for this API.
 A maximum of 20 requests can be initiated per second for this API.
  * @method Models\DescribeGroupMemberListResponse DescribeGroupMemberList(Models\DescribeGroupMemberListRequest $req) This API is used to get the members of a group.
 A maximum of 20 requests can be initiated per second for this API.
+ * @method Models\DescribeQuestionListResponse DescribeQuestionList(Models\DescribeQuestionListRequest $req) This API is used to get the quiz details of a room.
  * @method Models\DescribeRoomResponse DescribeRoom(Models\DescribeRoomRequest $req) This API is used to get room information.
 A maximum of 20 requests can be initiated per second for this API.
  * @method Models\DescribeRoomStatisticsResponse DescribeRoomStatistics(Models\DescribeRoomStatisticsRequest $req) This API is used to obtain the statistics of a room. It can be called only after the room is ended.
 A maximum of 20 requests can be initiated per second for this API.
  * @method Models\DescribeSdkAppIdUsersResponse DescribeSdkAppIdUsers(Models\DescribeSdkAppIdUsersRequest $req) This API is used to get the user list of a specific application.
 A maximum of 20 requests can be initiated per second for this API.
+ * @method Models\DescribeSupervisorsResponse DescribeSupervisors(Models\DescribeSupervisorsRequest $req) This API is used to get the spectators of a room.
  * @method Models\DescribeUserResponse DescribeUser(Models\DescribeUserRequest $req) This API is used to obtain user profile.
  * @method Models\GetRoomEventResponse GetRoomEvent(Models\GetRoomEventRequest $req) This API is used to get the events of a room. It only works within one hour after a class ends.
  * @method Models\GetRoomMessageResponse GetRoomMessage(Models\GetRoomMessageRequest $req) This API is used to get the message history of a room (room messages are retained for seven days).
+ * @method Models\GetRoomsResponse GetRooms(Models\GetRoomsRequest $req) This API is used to get the room list.
  * @method Models\GetWatermarkResponse GetWatermark(Models\GetWatermarkRequest $req) This API is used to get watermark settings.
 A maximum of 20 requests can be initiated per second for this API.
  * @method Models\LoginOriginIdResponse LoginOriginId(Models\LoginOriginIdRequest $req) This API is used to log in with an origin account, which is the `originId` entered during registration.
