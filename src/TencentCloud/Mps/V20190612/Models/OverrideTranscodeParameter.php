@@ -42,6 +42,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTEHDConfig(TEHDConfigForUpdate $TEHDConfig) Set TESHD transcoding parameter.
  * @method SubtitleTemplate getSubtitleTemplate() Obtain The subtitle settings.
  * @method void setSubtitleTemplate(SubtitleTemplate $SubtitleTemplate) Set The subtitle settings.
+ * @method array getAddonAudioStream() Obtain The information of the external audio track to add.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setAddonAudioStream(array $AddonAudioStream) Set The information of the external audio track to add.
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class OverrideTranscodeParameter extends AbstractModel
 {
@@ -85,6 +89,12 @@ class OverrideTranscodeParameter extends AbstractModel
     public $SubtitleTemplate;
 
     /**
+     * @var array The information of the external audio track to add.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $AddonAudioStream;
+
+    /**
      * @param string $Container Container format. Valid values: mp4, flv, hls, mp3, flac, ogg, and m4a; mp3, flac, ogg, and m4a are formats of audio files.
      * @param integer $RemoveVideo Whether to remove video data. Valid values:
 <li>0: retain</li>
@@ -96,6 +106,8 @@ class OverrideTranscodeParameter extends AbstractModel
      * @param AudioTemplateInfoForUpdate $AudioTemplate Audio stream configuration parameter.
      * @param TEHDConfigForUpdate $TEHDConfig TESHD transcoding parameter.
      * @param SubtitleTemplate $SubtitleTemplate The subtitle settings.
+     * @param array $AddonAudioStream The information of the external audio track to add.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -140,6 +152,15 @@ class OverrideTranscodeParameter extends AbstractModel
         if (array_key_exists("SubtitleTemplate",$param) and $param["SubtitleTemplate"] !== null) {
             $this->SubtitleTemplate = new SubtitleTemplate();
             $this->SubtitleTemplate->deserialize($param["SubtitleTemplate"]);
+        }
+
+        if (array_key_exists("AddonAudioStream",$param) and $param["AddonAudioStream"] !== null) {
+            $this->AddonAudioStream = [];
+            foreach ($param["AddonAudioStream"] as $key => $value){
+                $obj = new MediaInputInfo();
+                $obj->deserialize($value);
+                array_push($this->AddonAudioStream, $obj);
+            }
         }
     }
 }

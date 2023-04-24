@@ -40,6 +40,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTagTask(AiAnalysisTaskTagResult $TagTask) Set Query result of intelligent tagging task in video content analysis, which is valid if task type is `Tag`.
  * @method AiAnalysisTaskFrameTagResult getFrameTagTask() Obtain Query result of intelligent frame-specific tagging task in video content analysis, which is valid if task type is `FrameTag`.
  * @method void setFrameTagTask(AiAnalysisTaskFrameTagResult $FrameTagTask) Set Query result of intelligent frame-specific tagging task in video content analysis, which is valid if task type is `FrameTag`.
+ * @method AiAnalysisTaskHighlightResult getHighlightTask() Obtain The result of a highlight generation task. This parameter is valid if `Type` is `Highlight`.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setHighlightTask(AiAnalysisTaskHighlightResult $HighlightTask) Set The result of a highlight generation task. This parameter is valid if `Type` is `Highlight`.
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class AiAnalysisResult extends AbstractModel
 {
@@ -74,6 +78,12 @@ class AiAnalysisResult extends AbstractModel
     public $FrameTagTask;
 
     /**
+     * @var AiAnalysisTaskHighlightResult The result of a highlight generation task. This parameter is valid if `Type` is `Highlight`.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $HighlightTask;
+
+    /**
      * @param string $Type Task type. Valid values:
 <li>Classification: intelligent categorization</li>
 <li>Cover: intelligent cover generating</li>
@@ -84,6 +94,8 @@ class AiAnalysisResult extends AbstractModel
      * @param AiAnalysisTaskCoverResult $CoverTask Query result of intelligent cover generating task in video content analysis, which is valid if task type is `Cover`.
      * @param AiAnalysisTaskTagResult $TagTask Query result of intelligent tagging task in video content analysis, which is valid if task type is `Tag`.
      * @param AiAnalysisTaskFrameTagResult $FrameTagTask Query result of intelligent frame-specific tagging task in video content analysis, which is valid if task type is `FrameTag`.
+     * @param AiAnalysisTaskHighlightResult $HighlightTask The result of a highlight generation task. This parameter is valid if `Type` is `Highlight`.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -120,6 +132,11 @@ class AiAnalysisResult extends AbstractModel
         if (array_key_exists("FrameTagTask",$param) and $param["FrameTagTask"] !== null) {
             $this->FrameTagTask = new AiAnalysisTaskFrameTagResult();
             $this->FrameTagTask->deserialize($param["FrameTagTask"]);
+        }
+
+        if (array_key_exists("HighlightTask",$param) and $param["HighlightTask"] !== null) {
+            $this->HighlightTask = new AiAnalysisTaskHighlightResult();
+            $this->HighlightTask->deserialize($param["HighlightTask"]);
         }
     }
 }

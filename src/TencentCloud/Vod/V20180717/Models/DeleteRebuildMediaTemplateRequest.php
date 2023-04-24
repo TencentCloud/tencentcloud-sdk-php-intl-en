@@ -18,26 +18,19 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * CreateImageProcessingTemplate request structure.
+ * DeleteRebuildMediaTemplate request structure.
  *
- * @method array getOperations() Obtain An array of image processing operations. The operations will be performed in the specified order.
-<li>Length limit: 10.</li>
- * @method void setOperations(array $Operations) Set An array of image processing operations. The operations will be performed in the specified order.
-<li>Length limit: 10.</li>
+ * @method integer getDefinition() Obtain The remaster template ID.
+ * @method void setDefinition(integer $Definition) Set The remaster template ID.
  * @method integer getSubAppId() Obtain <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
  * @method void setSubAppId(integer $SubAppId) Set <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
- * @method string getName() Obtain The name of the image processing template. Length limit: 64 characters.
- * @method void setName(string $Name) Set The name of the image processing template. Length limit: 64 characters.
- * @method string getComment() Obtain The template description. Length limit: 256 characters.
- * @method void setComment(string $Comment) Set The template description. Length limit: 256 characters.
  */
-class CreateImageProcessingTemplateRequest extends AbstractModel
+class DeleteRebuildMediaTemplateRequest extends AbstractModel
 {
     /**
-     * @var array An array of image processing operations. The operations will be performed in the specified order.
-<li>Length limit: 10.</li>
+     * @var integer The remaster template ID.
      */
-    public $Operations;
+    public $Definition;
 
     /**
      * @var integer <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
@@ -45,21 +38,8 @@ class CreateImageProcessingTemplateRequest extends AbstractModel
     public $SubAppId;
 
     /**
-     * @var string The name of the image processing template. Length limit: 64 characters.
-     */
-    public $Name;
-
-    /**
-     * @var string The template description. Length limit: 256 characters.
-     */
-    public $Comment;
-
-    /**
-     * @param array $Operations An array of image processing operations. The operations will be performed in the specified order.
-<li>Length limit: 10.</li>
+     * @param integer $Definition The remaster template ID.
      * @param integer $SubAppId <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
-     * @param string $Name The name of the image processing template. Length limit: 64 characters.
-     * @param string $Comment The template description. Length limit: 256 characters.
      */
     function __construct()
     {
@@ -74,25 +54,12 @@ class CreateImageProcessingTemplateRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Operations",$param) and $param["Operations"] !== null) {
-            $this->Operations = [];
-            foreach ($param["Operations"] as $key => $value){
-                $obj = new ImageOperation();
-                $obj->deserialize($value);
-                array_push($this->Operations, $obj);
-            }
+        if (array_key_exists("Definition",$param) and $param["Definition"] !== null) {
+            $this->Definition = $param["Definition"];
         }
 
         if (array_key_exists("SubAppId",$param) and $param["SubAppId"] !== null) {
             $this->SubAppId = $param["SubAppId"];
-        }
-
-        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
-            $this->Name = $param["Name"];
-        }
-
-        if (array_key_exists("Comment",$param) and $param["Comment"] !== null) {
-            $this->Comment = $param["Comment"];
         }
     }
 }

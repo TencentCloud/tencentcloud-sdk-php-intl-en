@@ -20,33 +20,33 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Result of AI-based live stream audit
  *
- * @method string getType() Obtain The type of the moderation result. Valid values:
+ * @method string getType() Obtain The type of moderation result. Valid values:
 <li>ImagePorn</li>
 <li>ImageTerrorism</li>
 <li>ImagePolitical</li>
-<li>PornVoice (pornographic content in speech)</li>
- * @method void setType(string $Type) Set The type of the moderation result. Valid values:
+<li>VoicePorn</li>
+ * @method void setType(string $Type) Set The type of moderation result. Valid values:
 <li>ImagePorn</li>
 <li>ImageTerrorism</li>
 <li>ImagePolitical</li>
-<li>PornVoice (pornographic content in speech)</li>
+<li>VoicePorn</li>
  * @method array getImagePornResultSet() Obtain Result of porn information detection in image, which is valid when `Type` is `ImagePorn`.
  * @method void setImagePornResultSet(array $ImagePornResultSet) Set Result of porn information detection in image, which is valid when `Type` is `ImagePorn`.
  * @method array getImageTerrorismResultSet() Obtain The result of detecting sensitive information in images, which is valid if `Type` is `ImageTerrorism`.
  * @method void setImageTerrorismResultSet(array $ImageTerrorismResultSet) Set The result of detecting sensitive information in images, which is valid if `Type` is `ImageTerrorism`.
  * @method array getImagePoliticalResultSet() Obtain The result of detecting sensitive information in images, which is valid if `Type` is `ImagePolitical`.
  * @method void setImagePoliticalResultSet(array $ImagePoliticalResultSet) Set The result of detecting sensitive information in images, which is valid if `Type` is `ImagePolitical`.
- * @method array getVoicePornResultSet() Obtain Result of porn information detection in speech, which is valid when `Type` is `PornVoice`.
- * @method void setVoicePornResultSet(array $VoicePornResultSet) Set Result of porn information detection in speech, which is valid when `Type` is `PornVoice`.
+ * @method array getVoicePornResultSet() Obtain The result for moderation of pornographic content in audio. This parameter is valid if `Type` is `VoicePorn`.
+ * @method void setVoicePornResultSet(array $VoicePornResultSet) Set The result for moderation of pornographic content in audio. This parameter is valid if `Type` is `VoicePorn`.
  */
 class LiveStreamAiReviewResultItem extends AbstractModel
 {
     /**
-     * @var string The type of the moderation result. Valid values:
+     * @var string The type of moderation result. Valid values:
 <li>ImagePorn</li>
 <li>ImageTerrorism</li>
 <li>ImagePolitical</li>
-<li>PornVoice (pornographic content in speech)</li>
+<li>VoicePorn</li>
      */
     public $Type;
 
@@ -66,20 +66,20 @@ class LiveStreamAiReviewResultItem extends AbstractModel
     public $ImagePoliticalResultSet;
 
     /**
-     * @var array Result of porn information detection in speech, which is valid when `Type` is `PornVoice`.
+     * @var array The result for moderation of pornographic content in audio. This parameter is valid if `Type` is `VoicePorn`.
      */
     public $VoicePornResultSet;
 
     /**
-     * @param string $Type The type of the moderation result. Valid values:
+     * @param string $Type The type of moderation result. Valid values:
 <li>ImagePorn</li>
 <li>ImageTerrorism</li>
 <li>ImagePolitical</li>
-<li>PornVoice (pornographic content in speech)</li>
+<li>VoicePorn</li>
      * @param array $ImagePornResultSet Result of porn information detection in image, which is valid when `Type` is `ImagePorn`.
      * @param array $ImageTerrorismResultSet The result of detecting sensitive information in images, which is valid if `Type` is `ImageTerrorism`.
      * @param array $ImagePoliticalResultSet The result of detecting sensitive information in images, which is valid if `Type` is `ImagePolitical`.
-     * @param array $VoicePornResultSet Result of porn information detection in speech, which is valid when `Type` is `PornVoice`.
+     * @param array $VoicePornResultSet The result for moderation of pornographic content in audio. This parameter is valid if `Type` is `VoicePorn`.
      */
     function __construct()
     {

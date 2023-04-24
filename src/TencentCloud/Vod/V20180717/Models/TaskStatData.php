@@ -21,151 +21,156 @@ use TencentCloud\Common\AbstractModel;
  * Video processing task statistics.
  *
  * @method string getTaskType() Obtain The task type.
-<li>Transcoding: General transcoding</li>
-<li>Transcoding-TESHD: Top Speed Codec transcoding</li>
-<li>Editing: Video editing</li>
-<li>Editing-TESHD: Top Speed Codec editing</li>
-<li>AdaptiveBitrateStreaming: Adaptive bitrate streaming</li>
+<li>`Transcoding`: General transcoding</li>
+<li>`Transcoding-TESHD`: Top Speed Codec transcoding</li>
+<li>`Editing`: Video editing</li>
+<li>`Editing-TESHD`: Top Speed Codec editing</li>
+<li>`AdaptiveBitrateStreaming`: Adaptive bitrate streaming</li>
 <li>ContentAudit: Content moderation</li>
-<li> ContentRecognition: Content recognition</li>
+<li>`ContentRecognition`: Content recognition</li>
 <li>RemoveWatermark: Watermark removal</li>
-<li> ExtractTraceWatermark: Digital watermark extraction</li>
-<li> AddTraceWatermark: Digital watermarking</li>
-<li>Transcode: Transcoding, including general transcoding, Top Speed Codec transcoding, and video editing. This value is not recommended.</li>
+<li>`ExtractTraceWatermark`: Digital watermark extraction</li>
+<li>`AddTraceWatermark`: Digital watermarking</li>
+<li>`RebuildMedia`: Remaster</li>
+<li>`Transcode` Transcoding, including general transcoding, Top Speed Codec transcoding, and video editing. This value is not recommended.</li>
  * @method void setTaskType(string $TaskType) Set The task type.
-<li>Transcoding: General transcoding</li>
-<li>Transcoding-TESHD: Top Speed Codec transcoding</li>
-<li>Editing: Video editing</li>
-<li>Editing-TESHD: Top Speed Codec editing</li>
-<li>AdaptiveBitrateStreaming: Adaptive bitrate streaming</li>
+<li>`Transcoding`: General transcoding</li>
+<li>`Transcoding-TESHD`: Top Speed Codec transcoding</li>
+<li>`Editing`: Video editing</li>
+<li>`Editing-TESHD`: Top Speed Codec editing</li>
+<li>`AdaptiveBitrateStreaming`: Adaptive bitrate streaming</li>
 <li>ContentAudit: Content moderation</li>
-<li> ContentRecognition: Content recognition</li>
+<li>`ContentRecognition`: Content recognition</li>
 <li>RemoveWatermark: Watermark removal</li>
-<li> ExtractTraceWatermark: Digital watermark extraction</li>
-<li> AddTraceWatermark: Digital watermarking</li>
-<li>Transcode: Transcoding, including general transcoding, Top Speed Codec transcoding, and video editing. This value is not recommended.</li>
+<li>`ExtractTraceWatermark`: Digital watermark extraction</li>
+<li>`AddTraceWatermark`: Digital watermarking</li>
+<li>`RebuildMedia`: Remaster</li>
+<li>`Transcode` Transcoding, including general transcoding, Top Speed Codec transcoding, and video editing. This value is not recommended.</li>
  * @method array getSummary() Obtain Task statistics overview (usage unit: second).
  * @method void setSummary(array $Summary) Set Task statistics overview (usage unit: second).
- * @method array getDetails() Obtain The detailed statistics of different tasks.
+ * @method array getDetails() Obtain The usage statistics for different task types.
 Transcoding:
-<li>Remuxing</li>
-<li>Audio</li>
-<li>Standard.H264.SD</li>
-<li>Standard.H264.HD</li>
-<li>Standard.H264.FHD</li>
-<li>Standard.H264.2K</li>
-<li>Standard.H264.4K</li>
-<li>Standard.H265.SD</li>
-<li>Standard.H265.HD</li>
-<li>Standard.H265.FHD</li>
-<li>Standard.H265.2K</li>
-<li>Standard.H265.4K</li>
-<li>TESHD-10.H264.SD</li>
-<li>TESHD-10.H264.HD</li>
-<li>TESHD-10.H264.FHD</li>
-<li>TESHD-10.H264.2K</li>
-<li>TESHD-10.H264.4K</li>
-<li>TESHD-10.H265.SD</li>
-<li>TESHD-10.H265.HD</li>
-<li>TESHD-10.H265.FHD</li>
-<li>TESHD-10.H265.2K</li>
-<li>TESHD-10.H265.4K</li>
-<li>Edit.Audio</li>
-<li>Edit.H264.SD</li>
-<li>Edit.H264.HD</li>
-<li>Edit.H264.FHD</li>
-<li>Edit.H264.2K</li>
-<li>Edit.H264.4K</li>
-<li>Edit.H265.SD</li>
-<li>Edit.H265.HD</li>
-<li>Edit.H265.FHD</li>
-<li>Edit.H265.2K</li>
-<li>Edit.H265.4K</li>
-<li>Edit.TESHD-10.H264.SD</li>
-<li>Edit.TESHD-10.H264.HD</li>
-<li>Edit.TESHD-10.H264.FHD</li>
-<li>Edit.TESHD-10.H264.2K</li>
-<li>Edit.TESHD-10.H264.4K</li>
-<li>Edit.TESHD-10.H265.SD</li>
-<li>Edit.TESHD-10.H265.HD</li>
-<li>Edit.TESHD-10.H265.FHD</li>
-<li>Edit.TESHD-10.H265.2K</li>
-<li>Edit.TESHD-10.H265.4K</li>
-Watermark removal:
-<li>480P: 640 x 480 and below</li>
-<li>720P: 1280 x 720 and below</li>
-<li>1080P: 1920 x 1080 and below</li>
-<li>2K: 2560 x 1440 and below</li>
-<li>4K: 3840 x 2160 and below</li>
-<li>8K: 7680 x 4320 and below</li>
- * @method void setDetails(array $Details) Set The detailed statistics of different tasks.
+<li>`Remuxing`</li>
+<li>`Audio` (audio transcoding)</li>
+<li>`Standard.H264.SD`</li>
+<li>`Standard.H264.HD`</li>
+<li>`Standard.H264.FHD`</li>
+<li>`Standard.H264.2K`</li>
+<li>`Standard.H264.4K`</li>
+<li>`Standard.H265.SD`</li>
+<li>`Standard.H265.HD`</li>
+<li>`Standard.H265.FHD`</li>
+<li>`Standard.H265.2K`</li>
+<li>`Standard.H265.4K`</li>
+<li>`TESHD-10.H264.SD` (H.264 SD Top Speed Codec transcoding)</li>
+<li>`TESHD-10.H264.HD` (H.264 HD Top Speed Codec transcoding)</li>
+<li>`TESHD-10.H264.FHD` (H.264 FHD Top Speed Codec transcoding)</li>
+<li>`TESHD-10.H264.2K` (H.264 2K Top Speed Codec transcoding)</li>
+<li>`TESHD-10.H264.4K` (H.264 4K Top Speed Codec transcoding)</li>
+<li>`TESHD-10.H265.SD` (H.265 SD Top Speed Codec transcoding)</li>
+<li>`TESHD-10.H265.HD` (H.265 HD Top Speed Codec transcoding)</li>
+<li>`TESHD-10.H265.FHD` (H.265 FHD Top Speed Codec transcoding)</li>
+<li>`TESHD-10.H265.2K` (H.265 2K Top Speed Codec transcoding)</li>
+<li>`TESHD-10.H265.4K` (H.265 4K Top Speed Codec transcoding)</li>
+<li>`Edit.Audio`</li>
+<li>`Edit.H264.SD` (H.264 SD video editing)</li>
+<li>`Edit.H264.HD` (H.264 HD video editing)</li>
+<li>`Edit.H264.FHD` (H.264 FHD video editing)</li>
+<li>`Edit.H264.2K` (H.264 2K video editing)</li>
+<li>`Edit.H264.4K` (H.264 4K video editing)</li>
+<li>`Edit.H265.SD` (H.265 SD video editing)</li>
+<li>`Edit.H265.HD` (H.265 HD video editing)</li>
+<li>`Edit.H265.FHD` (H.265 FHD video editing)</li>
+<li>`Edit.H265.2K` (H.265 2K video editing)</li>
+<li>`Edit.H265.4K` (H.265 4K video editing)</li>
+<li>`Edit.TESHD-10.H264.SD` (H.264 SD Top Speed Codec video editing)</li>
+<li>`Edit.TESHD-10.H264.HD` (H.264 HD Top Speed Codec video editing)</li>
+<li>`Edit.TESHD-10.H264.FHD` (H.264 FHD Top Speed Codec video editing)</li>
+<li>`Edit.TESHD-10.H264.2K` (H.264 2K Top Speed Codec video editing)</li>
+<li>`Edit.TESHD-10.H264.4K` (H.264 4K Top Speed Codec video editing)</li>
+<li>`Edit.TESHD-10.H265.SD` (H.265 SD Top Speed Codec video editing)</li>
+<li>`Edit.TESHD-10.H265.HD` (H.265 HD Top Speed Codec video editing)</li>
+<li>`Edit.TESHD-10.H265.FHD` (H.265 FHD Top Speed Codec video editing)</li>
+<li>`Edit.TESHD-10.H265.2K` (H.265 2K Top Speed Codec video editing)</li>
+<li>`Edit.TESHD-10.H265.4K` (H.265 4K Top Speed Codec video editing)</li>
+The watermark removal/remaster specifications. Valid values:
+<li>`480P` (short side ≤ 480 px)</li>
+<li>`720P` (short side ≤ 720 px)</li>
+<li>`1080P` (short side ≤ 1080 px)</li>
+<li>`2K` (short side ≤ 1440 px)</li>
+<li>`4K` (short side ≤ 2160 px)</li>
+<li>`8K` (short side ≤ 4320 px)</li>
+<li>`audio`</li>
+ * @method void setDetails(array $Details) Set The usage statistics for different task types.
 Transcoding:
-<li>Remuxing</li>
-<li>Audio</li>
-<li>Standard.H264.SD</li>
-<li>Standard.H264.HD</li>
-<li>Standard.H264.FHD</li>
-<li>Standard.H264.2K</li>
-<li>Standard.H264.4K</li>
-<li>Standard.H265.SD</li>
-<li>Standard.H265.HD</li>
-<li>Standard.H265.FHD</li>
-<li>Standard.H265.2K</li>
-<li>Standard.H265.4K</li>
-<li>TESHD-10.H264.SD</li>
-<li>TESHD-10.H264.HD</li>
-<li>TESHD-10.H264.FHD</li>
-<li>TESHD-10.H264.2K</li>
-<li>TESHD-10.H264.4K</li>
-<li>TESHD-10.H265.SD</li>
-<li>TESHD-10.H265.HD</li>
-<li>TESHD-10.H265.FHD</li>
-<li>TESHD-10.H265.2K</li>
-<li>TESHD-10.H265.4K</li>
-<li>Edit.Audio</li>
-<li>Edit.H264.SD</li>
-<li>Edit.H264.HD</li>
-<li>Edit.H264.FHD</li>
-<li>Edit.H264.2K</li>
-<li>Edit.H264.4K</li>
-<li>Edit.H265.SD</li>
-<li>Edit.H265.HD</li>
-<li>Edit.H265.FHD</li>
-<li>Edit.H265.2K</li>
-<li>Edit.H265.4K</li>
-<li>Edit.TESHD-10.H264.SD</li>
-<li>Edit.TESHD-10.H264.HD</li>
-<li>Edit.TESHD-10.H264.FHD</li>
-<li>Edit.TESHD-10.H264.2K</li>
-<li>Edit.TESHD-10.H264.4K</li>
-<li>Edit.TESHD-10.H265.SD</li>
-<li>Edit.TESHD-10.H265.HD</li>
-<li>Edit.TESHD-10.H265.FHD</li>
-<li>Edit.TESHD-10.H265.2K</li>
-<li>Edit.TESHD-10.H265.4K</li>
-Watermark removal:
-<li>480P: 640 x 480 and below</li>
-<li>720P: 1280 x 720 and below</li>
-<li>1080P: 1920 x 1080 and below</li>
-<li>2K: 2560 x 1440 and below</li>
-<li>4K: 3840 x 2160 and below</li>
-<li>8K: 7680 x 4320 and below</li>
+<li>`Remuxing`</li>
+<li>`Audio` (audio transcoding)</li>
+<li>`Standard.H264.SD`</li>
+<li>`Standard.H264.HD`</li>
+<li>`Standard.H264.FHD`</li>
+<li>`Standard.H264.2K`</li>
+<li>`Standard.H264.4K`</li>
+<li>`Standard.H265.SD`</li>
+<li>`Standard.H265.HD`</li>
+<li>`Standard.H265.FHD`</li>
+<li>`Standard.H265.2K`</li>
+<li>`Standard.H265.4K`</li>
+<li>`TESHD-10.H264.SD` (H.264 SD Top Speed Codec transcoding)</li>
+<li>`TESHD-10.H264.HD` (H.264 HD Top Speed Codec transcoding)</li>
+<li>`TESHD-10.H264.FHD` (H.264 FHD Top Speed Codec transcoding)</li>
+<li>`TESHD-10.H264.2K` (H.264 2K Top Speed Codec transcoding)</li>
+<li>`TESHD-10.H264.4K` (H.264 4K Top Speed Codec transcoding)</li>
+<li>`TESHD-10.H265.SD` (H.265 SD Top Speed Codec transcoding)</li>
+<li>`TESHD-10.H265.HD` (H.265 HD Top Speed Codec transcoding)</li>
+<li>`TESHD-10.H265.FHD` (H.265 FHD Top Speed Codec transcoding)</li>
+<li>`TESHD-10.H265.2K` (H.265 2K Top Speed Codec transcoding)</li>
+<li>`TESHD-10.H265.4K` (H.265 4K Top Speed Codec transcoding)</li>
+<li>`Edit.Audio`</li>
+<li>`Edit.H264.SD` (H.264 SD video editing)</li>
+<li>`Edit.H264.HD` (H.264 HD video editing)</li>
+<li>`Edit.H264.FHD` (H.264 FHD video editing)</li>
+<li>`Edit.H264.2K` (H.264 2K video editing)</li>
+<li>`Edit.H264.4K` (H.264 4K video editing)</li>
+<li>`Edit.H265.SD` (H.265 SD video editing)</li>
+<li>`Edit.H265.HD` (H.265 HD video editing)</li>
+<li>`Edit.H265.FHD` (H.265 FHD video editing)</li>
+<li>`Edit.H265.2K` (H.265 2K video editing)</li>
+<li>`Edit.H265.4K` (H.265 4K video editing)</li>
+<li>`Edit.TESHD-10.H264.SD` (H.264 SD Top Speed Codec video editing)</li>
+<li>`Edit.TESHD-10.H264.HD` (H.264 HD Top Speed Codec video editing)</li>
+<li>`Edit.TESHD-10.H264.FHD` (H.264 FHD Top Speed Codec video editing)</li>
+<li>`Edit.TESHD-10.H264.2K` (H.264 2K Top Speed Codec video editing)</li>
+<li>`Edit.TESHD-10.H264.4K` (H.264 4K Top Speed Codec video editing)</li>
+<li>`Edit.TESHD-10.H265.SD` (H.265 SD Top Speed Codec video editing)</li>
+<li>`Edit.TESHD-10.H265.HD` (H.265 HD Top Speed Codec video editing)</li>
+<li>`Edit.TESHD-10.H265.FHD` (H.265 FHD Top Speed Codec video editing)</li>
+<li>`Edit.TESHD-10.H265.2K` (H.265 2K Top Speed Codec video editing)</li>
+<li>`Edit.TESHD-10.H265.4K` (H.265 4K Top Speed Codec video editing)</li>
+The watermark removal/remaster specifications. Valid values:
+<li>`480P` (short side ≤ 480 px)</li>
+<li>`720P` (short side ≤ 720 px)</li>
+<li>`1080P` (short side ≤ 1080 px)</li>
+<li>`2K` (short side ≤ 1440 px)</li>
+<li>`4K` (short side ≤ 2160 px)</li>
+<li>`8K` (short side ≤ 4320 px)</li>
+<li>`audio`</li>
  */
 class TaskStatData extends AbstractModel
 {
     /**
      * @var string The task type.
-<li>Transcoding: General transcoding</li>
-<li>Transcoding-TESHD: Top Speed Codec transcoding</li>
-<li>Editing: Video editing</li>
-<li>Editing-TESHD: Top Speed Codec editing</li>
-<li>AdaptiveBitrateStreaming: Adaptive bitrate streaming</li>
+<li>`Transcoding`: General transcoding</li>
+<li>`Transcoding-TESHD`: Top Speed Codec transcoding</li>
+<li>`Editing`: Video editing</li>
+<li>`Editing-TESHD`: Top Speed Codec editing</li>
+<li>`AdaptiveBitrateStreaming`: Adaptive bitrate streaming</li>
 <li>ContentAudit: Content moderation</li>
-<li> ContentRecognition: Content recognition</li>
+<li>`ContentRecognition`: Content recognition</li>
 <li>RemoveWatermark: Watermark removal</li>
-<li> ExtractTraceWatermark: Digital watermark extraction</li>
-<li> AddTraceWatermark: Digital watermarking</li>
-<li>Transcode: Transcoding, including general transcoding, Top Speed Codec transcoding, and video editing. This value is not recommended.</li>
+<li>`ExtractTraceWatermark`: Digital watermark extraction</li>
+<li>`AddTraceWatermark`: Digital watermarking</li>
+<li>`RebuildMedia`: Remaster</li>
+<li>`Transcode` Transcoding, including general transcoding, Top Speed Codec transcoding, and video editing. This value is not recommended.</li>
      */
     public $TaskType;
 
@@ -175,127 +180,130 @@ class TaskStatData extends AbstractModel
     public $Summary;
 
     /**
-     * @var array The detailed statistics of different tasks.
+     * @var array The usage statistics for different task types.
 Transcoding:
-<li>Remuxing</li>
-<li>Audio</li>
-<li>Standard.H264.SD</li>
-<li>Standard.H264.HD</li>
-<li>Standard.H264.FHD</li>
-<li>Standard.H264.2K</li>
-<li>Standard.H264.4K</li>
-<li>Standard.H265.SD</li>
-<li>Standard.H265.HD</li>
-<li>Standard.H265.FHD</li>
-<li>Standard.H265.2K</li>
-<li>Standard.H265.4K</li>
-<li>TESHD-10.H264.SD</li>
-<li>TESHD-10.H264.HD</li>
-<li>TESHD-10.H264.FHD</li>
-<li>TESHD-10.H264.2K</li>
-<li>TESHD-10.H264.4K</li>
-<li>TESHD-10.H265.SD</li>
-<li>TESHD-10.H265.HD</li>
-<li>TESHD-10.H265.FHD</li>
-<li>TESHD-10.H265.2K</li>
-<li>TESHD-10.H265.4K</li>
-<li>Edit.Audio</li>
-<li>Edit.H264.SD</li>
-<li>Edit.H264.HD</li>
-<li>Edit.H264.FHD</li>
-<li>Edit.H264.2K</li>
-<li>Edit.H264.4K</li>
-<li>Edit.H265.SD</li>
-<li>Edit.H265.HD</li>
-<li>Edit.H265.FHD</li>
-<li>Edit.H265.2K</li>
-<li>Edit.H265.4K</li>
-<li>Edit.TESHD-10.H264.SD</li>
-<li>Edit.TESHD-10.H264.HD</li>
-<li>Edit.TESHD-10.H264.FHD</li>
-<li>Edit.TESHD-10.H264.2K</li>
-<li>Edit.TESHD-10.H264.4K</li>
-<li>Edit.TESHD-10.H265.SD</li>
-<li>Edit.TESHD-10.H265.HD</li>
-<li>Edit.TESHD-10.H265.FHD</li>
-<li>Edit.TESHD-10.H265.2K</li>
-<li>Edit.TESHD-10.H265.4K</li>
-Watermark removal:
-<li>480P: 640 x 480 and below</li>
-<li>720P: 1280 x 720 and below</li>
-<li>1080P: 1920 x 1080 and below</li>
-<li>2K: 2560 x 1440 and below</li>
-<li>4K: 3840 x 2160 and below</li>
-<li>8K: 7680 x 4320 and below</li>
+<li>`Remuxing`</li>
+<li>`Audio` (audio transcoding)</li>
+<li>`Standard.H264.SD`</li>
+<li>`Standard.H264.HD`</li>
+<li>`Standard.H264.FHD`</li>
+<li>`Standard.H264.2K`</li>
+<li>`Standard.H264.4K`</li>
+<li>`Standard.H265.SD`</li>
+<li>`Standard.H265.HD`</li>
+<li>`Standard.H265.FHD`</li>
+<li>`Standard.H265.2K`</li>
+<li>`Standard.H265.4K`</li>
+<li>`TESHD-10.H264.SD` (H.264 SD Top Speed Codec transcoding)</li>
+<li>`TESHD-10.H264.HD` (H.264 HD Top Speed Codec transcoding)</li>
+<li>`TESHD-10.H264.FHD` (H.264 FHD Top Speed Codec transcoding)</li>
+<li>`TESHD-10.H264.2K` (H.264 2K Top Speed Codec transcoding)</li>
+<li>`TESHD-10.H264.4K` (H.264 4K Top Speed Codec transcoding)</li>
+<li>`TESHD-10.H265.SD` (H.265 SD Top Speed Codec transcoding)</li>
+<li>`TESHD-10.H265.HD` (H.265 HD Top Speed Codec transcoding)</li>
+<li>`TESHD-10.H265.FHD` (H.265 FHD Top Speed Codec transcoding)</li>
+<li>`TESHD-10.H265.2K` (H.265 2K Top Speed Codec transcoding)</li>
+<li>`TESHD-10.H265.4K` (H.265 4K Top Speed Codec transcoding)</li>
+<li>`Edit.Audio`</li>
+<li>`Edit.H264.SD` (H.264 SD video editing)</li>
+<li>`Edit.H264.HD` (H.264 HD video editing)</li>
+<li>`Edit.H264.FHD` (H.264 FHD video editing)</li>
+<li>`Edit.H264.2K` (H.264 2K video editing)</li>
+<li>`Edit.H264.4K` (H.264 4K video editing)</li>
+<li>`Edit.H265.SD` (H.265 SD video editing)</li>
+<li>`Edit.H265.HD` (H.265 HD video editing)</li>
+<li>`Edit.H265.FHD` (H.265 FHD video editing)</li>
+<li>`Edit.H265.2K` (H.265 2K video editing)</li>
+<li>`Edit.H265.4K` (H.265 4K video editing)</li>
+<li>`Edit.TESHD-10.H264.SD` (H.264 SD Top Speed Codec video editing)</li>
+<li>`Edit.TESHD-10.H264.HD` (H.264 HD Top Speed Codec video editing)</li>
+<li>`Edit.TESHD-10.H264.FHD` (H.264 FHD Top Speed Codec video editing)</li>
+<li>`Edit.TESHD-10.H264.2K` (H.264 2K Top Speed Codec video editing)</li>
+<li>`Edit.TESHD-10.H264.4K` (H.264 4K Top Speed Codec video editing)</li>
+<li>`Edit.TESHD-10.H265.SD` (H.265 SD Top Speed Codec video editing)</li>
+<li>`Edit.TESHD-10.H265.HD` (H.265 HD Top Speed Codec video editing)</li>
+<li>`Edit.TESHD-10.H265.FHD` (H.265 FHD Top Speed Codec video editing)</li>
+<li>`Edit.TESHD-10.H265.2K` (H.265 2K Top Speed Codec video editing)</li>
+<li>`Edit.TESHD-10.H265.4K` (H.265 4K Top Speed Codec video editing)</li>
+The watermark removal/remaster specifications. Valid values:
+<li>`480P` (short side ≤ 480 px)</li>
+<li>`720P` (short side ≤ 720 px)</li>
+<li>`1080P` (short side ≤ 1080 px)</li>
+<li>`2K` (short side ≤ 1440 px)</li>
+<li>`4K` (short side ≤ 2160 px)</li>
+<li>`8K` (short side ≤ 4320 px)</li>
+<li>`audio`</li>
      */
     public $Details;
 
     /**
      * @param string $TaskType The task type.
-<li>Transcoding: General transcoding</li>
-<li>Transcoding-TESHD: Top Speed Codec transcoding</li>
-<li>Editing: Video editing</li>
-<li>Editing-TESHD: Top Speed Codec editing</li>
-<li>AdaptiveBitrateStreaming: Adaptive bitrate streaming</li>
+<li>`Transcoding`: General transcoding</li>
+<li>`Transcoding-TESHD`: Top Speed Codec transcoding</li>
+<li>`Editing`: Video editing</li>
+<li>`Editing-TESHD`: Top Speed Codec editing</li>
+<li>`AdaptiveBitrateStreaming`: Adaptive bitrate streaming</li>
 <li>ContentAudit: Content moderation</li>
-<li> ContentRecognition: Content recognition</li>
+<li>`ContentRecognition`: Content recognition</li>
 <li>RemoveWatermark: Watermark removal</li>
-<li> ExtractTraceWatermark: Digital watermark extraction</li>
-<li> AddTraceWatermark: Digital watermarking</li>
-<li>Transcode: Transcoding, including general transcoding, Top Speed Codec transcoding, and video editing. This value is not recommended.</li>
+<li>`ExtractTraceWatermark`: Digital watermark extraction</li>
+<li>`AddTraceWatermark`: Digital watermarking</li>
+<li>`RebuildMedia`: Remaster</li>
+<li>`Transcode` Transcoding, including general transcoding, Top Speed Codec transcoding, and video editing. This value is not recommended.</li>
      * @param array $Summary Task statistics overview (usage unit: second).
-     * @param array $Details The detailed statistics of different tasks.
+     * @param array $Details The usage statistics for different task types.
 Transcoding:
-<li>Remuxing</li>
-<li>Audio</li>
-<li>Standard.H264.SD</li>
-<li>Standard.H264.HD</li>
-<li>Standard.H264.FHD</li>
-<li>Standard.H264.2K</li>
-<li>Standard.H264.4K</li>
-<li>Standard.H265.SD</li>
-<li>Standard.H265.HD</li>
-<li>Standard.H265.FHD</li>
-<li>Standard.H265.2K</li>
-<li>Standard.H265.4K</li>
-<li>TESHD-10.H264.SD</li>
-<li>TESHD-10.H264.HD</li>
-<li>TESHD-10.H264.FHD</li>
-<li>TESHD-10.H264.2K</li>
-<li>TESHD-10.H264.4K</li>
-<li>TESHD-10.H265.SD</li>
-<li>TESHD-10.H265.HD</li>
-<li>TESHD-10.H265.FHD</li>
-<li>TESHD-10.H265.2K</li>
-<li>TESHD-10.H265.4K</li>
-<li>Edit.Audio</li>
-<li>Edit.H264.SD</li>
-<li>Edit.H264.HD</li>
-<li>Edit.H264.FHD</li>
-<li>Edit.H264.2K</li>
-<li>Edit.H264.4K</li>
-<li>Edit.H265.SD</li>
-<li>Edit.H265.HD</li>
-<li>Edit.H265.FHD</li>
-<li>Edit.H265.2K</li>
-<li>Edit.H265.4K</li>
-<li>Edit.TESHD-10.H264.SD</li>
-<li>Edit.TESHD-10.H264.HD</li>
-<li>Edit.TESHD-10.H264.FHD</li>
-<li>Edit.TESHD-10.H264.2K</li>
-<li>Edit.TESHD-10.H264.4K</li>
-<li>Edit.TESHD-10.H265.SD</li>
-<li>Edit.TESHD-10.H265.HD</li>
-<li>Edit.TESHD-10.H265.FHD</li>
-<li>Edit.TESHD-10.H265.2K</li>
-<li>Edit.TESHD-10.H265.4K</li>
-Watermark removal:
-<li>480P: 640 x 480 and below</li>
-<li>720P: 1280 x 720 and below</li>
-<li>1080P: 1920 x 1080 and below</li>
-<li>2K: 2560 x 1440 and below</li>
-<li>4K: 3840 x 2160 and below</li>
-<li>8K: 7680 x 4320 and below</li>
+<li>`Remuxing`</li>
+<li>`Audio` (audio transcoding)</li>
+<li>`Standard.H264.SD`</li>
+<li>`Standard.H264.HD`</li>
+<li>`Standard.H264.FHD`</li>
+<li>`Standard.H264.2K`</li>
+<li>`Standard.H264.4K`</li>
+<li>`Standard.H265.SD`</li>
+<li>`Standard.H265.HD`</li>
+<li>`Standard.H265.FHD`</li>
+<li>`Standard.H265.2K`</li>
+<li>`Standard.H265.4K`</li>
+<li>`TESHD-10.H264.SD` (H.264 SD Top Speed Codec transcoding)</li>
+<li>`TESHD-10.H264.HD` (H.264 HD Top Speed Codec transcoding)</li>
+<li>`TESHD-10.H264.FHD` (H.264 FHD Top Speed Codec transcoding)</li>
+<li>`TESHD-10.H264.2K` (H.264 2K Top Speed Codec transcoding)</li>
+<li>`TESHD-10.H264.4K` (H.264 4K Top Speed Codec transcoding)</li>
+<li>`TESHD-10.H265.SD` (H.265 SD Top Speed Codec transcoding)</li>
+<li>`TESHD-10.H265.HD` (H.265 HD Top Speed Codec transcoding)</li>
+<li>`TESHD-10.H265.FHD` (H.265 FHD Top Speed Codec transcoding)</li>
+<li>`TESHD-10.H265.2K` (H.265 2K Top Speed Codec transcoding)</li>
+<li>`TESHD-10.H265.4K` (H.265 4K Top Speed Codec transcoding)</li>
+<li>`Edit.Audio`</li>
+<li>`Edit.H264.SD` (H.264 SD video editing)</li>
+<li>`Edit.H264.HD` (H.264 HD video editing)</li>
+<li>`Edit.H264.FHD` (H.264 FHD video editing)</li>
+<li>`Edit.H264.2K` (H.264 2K video editing)</li>
+<li>`Edit.H264.4K` (H.264 4K video editing)</li>
+<li>`Edit.H265.SD` (H.265 SD video editing)</li>
+<li>`Edit.H265.HD` (H.265 HD video editing)</li>
+<li>`Edit.H265.FHD` (H.265 FHD video editing)</li>
+<li>`Edit.H265.2K` (H.265 2K video editing)</li>
+<li>`Edit.H265.4K` (H.265 4K video editing)</li>
+<li>`Edit.TESHD-10.H264.SD` (H.264 SD Top Speed Codec video editing)</li>
+<li>`Edit.TESHD-10.H264.HD` (H.264 HD Top Speed Codec video editing)</li>
+<li>`Edit.TESHD-10.H264.FHD` (H.264 FHD Top Speed Codec video editing)</li>
+<li>`Edit.TESHD-10.H264.2K` (H.264 2K Top Speed Codec video editing)</li>
+<li>`Edit.TESHD-10.H264.4K` (H.264 4K Top Speed Codec video editing)</li>
+<li>`Edit.TESHD-10.H265.SD` (H.265 SD Top Speed Codec video editing)</li>
+<li>`Edit.TESHD-10.H265.HD` (H.265 HD Top Speed Codec video editing)</li>
+<li>`Edit.TESHD-10.H265.FHD` (H.265 FHD Top Speed Codec video editing)</li>
+<li>`Edit.TESHD-10.H265.2K` (H.265 2K Top Speed Codec video editing)</li>
+<li>`Edit.TESHD-10.H265.4K` (H.265 4K Top Speed Codec video editing)</li>
+The watermark removal/remaster specifications. Valid values:
+<li>`480P` (short side ≤ 480 px)</li>
+<li>`720P` (short side ≤ 720 px)</li>
+<li>`1080P` (short side ≤ 1080 px)</li>
+<li>`2K` (short side ≤ 1440 px)</li>
+<li>`4K` (short side ≤ 2160 px)</li>
+<li>`8K` (short side ≤ 4320 px)</li>
+<li>`audio`</li>
      */
     function __construct()
     {

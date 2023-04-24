@@ -52,10 +52,11 @@ The output file is in MP4 or MP3 format. In the callback for media composition, 
 * One category can have up to 500 subcategories under it.
  * @method Models\CreateContentReviewTemplateResponse CreateContentReviewTemplate(Models\CreateContentReviewTemplateRequest $req) We have <font color=red>stopped updating</font> this API. Our new moderation templates can moderate audio/video as well as images. For details, see [CreateReviewTemplate](https://intl.cloud.tencent.com/document/api/266/84391?from_cn_redirect=1).
 This API is used to create a custom audio/video moderation template. Up to 50 templates can be created in total.
- * @method Models\CreateImageProcessingTemplateResponse CreateImageProcessingTemplate(Models\CreateImageProcessingTemplateRequest $req) This API is used to create a custom image processing template. You can create up to 16 templates, and each template can contain up to three operations, for example, cropping, scaling, and cropping again.
+ * @method Models\CreateImageProcessingTemplateResponse CreateImageProcessingTemplate(Models\CreateImageProcessingTemplateRequest $req) This API is used to create a custom image processing template. A template can include at most 10 operations, for example, crop-scale-crop-blur-scale-crop-scale-crop-blur-scale. You can have up to 16 image processing templates.
  * @method Models\CreateImageSpriteTemplateResponse CreateImageSpriteTemplate(Models\CreateImageSpriteTemplateRequest $req) This API is used to create a custom image sprite generating template. Up to 16 templates can be created.
  * @method Models\CreatePersonSampleResponse CreatePersonSample(Models\CreatePersonSampleRequest $req) This API is used to create samples for using facial features positioning and other technologies to perform video processing operations such as content recognition and inappropriate information recognition.
  * @method Models\CreateProcedureTemplateResponse CreateProcedureTemplate(Models\CreateProcedureTemplateRequest $req) This API is used to create a custom task flow template. Up to 50 templates can be created.
+ * @method Models\CreateRebuildMediaTemplateResponse CreateRebuildMediaTemplate(Models\CreateRebuildMediaTemplateRequest $req) This API is used to create a remaster template.
  * @method Models\CreateReviewTemplateResponse CreateReviewTemplate(Models\CreateReviewTemplateRequest $req) This API is used to create a custom moderation template. Up to 50 templates can be created in total.
 > The templates can only be used by the APIs [ReviewAudioVideo](https://intl.cloud.tencent.com/document/api/266/80283?from_cn_redirect=1) and [ReviewImage](https://intl.cloud.tencent.com/document/api/266/73217?from_cn_redirect=1).
  * @method Models\CreateRoundPlayResponse CreateRoundPlay(Models\CreateRoundPlayRequest $req) This API is used to create a playlist. You can create at most 100 playlists.
@@ -91,6 +92,7 @@ This API is used to delete a custom audio/video moderation template.
 * Note: after the original file of a video is deleted, you cannot transcode the video, publish it on WeChat, or perform other operations on it.
  * @method Models\DeletePersonSampleResponse DeletePersonSample(Models\DeletePersonSampleRequest $req) This API is used to delete samples according to sample IDs.
  * @method Models\DeleteProcedureTemplateResponse DeleteProcedureTemplate(Models\DeleteProcedureTemplateRequest $req) This API is used to delete a custom task flow template.  
+ * @method Models\DeleteRebuildMediaTemplateResponse DeleteRebuildMediaTemplate(Models\DeleteRebuildMediaTemplateRequest $req) This API is used to delete a remaster template.
  * @method Models\DeleteReviewTemplateResponse DeleteReviewTemplate(Models\DeleteReviewTemplateRequest $req) This API is used to delete a custom moderation template.
 > The templates can only be used by the APIs [ReviewAudioVideo](https://intl.cloud.tencent.com/document/api/266/80283?from_cn_redirect=1) and [ReviewImage](https://intl.cloud.tencent.com/document/api/266/73217?from_cn_redirect=1).
  * @method Models\DeleteRoundPlayResponse DeleteRoundPlay(Models\DeleteRoundPlayRequest $req) This API is used to delete a playlist.
@@ -174,6 +176,7 @@ This API is used to get the information of custom and [preset](https://intl.clou
    2. The query time range cannot be more than 90 days.
  * @method Models\DescribePersonSamplesResponse DescribePersonSamples(Models\DescribePersonSamplesRequest $req) This API is used to query the information of samples and supports paginated queries by sample ID, name, and tag.
  * @method Models\DescribeProcedureTemplatesResponse DescribeProcedureTemplates(Models\DescribeProcedureTemplatesRequest $req) This API is used to get the list of task flow template details by task flow template name.
+ * @method Models\DescribeRebuildMediaTemplatesResponse DescribeRebuildMediaTemplates(Models\DescribeRebuildMediaTemplatesRequest $req) This API is used to query remaster templates.
  * @method Models\DescribeReviewDetailsResponse DescribeReviewDetails(Models\DescribeReviewDetailsRequest $req) <b>This API is disused and replaced by [DescribeMediaProcessUsageData](https://intl.cloud.tencent.com/document/product/266/41464?from_cn_redirect=1).</b>
 
 This API returns the video content duration for intelligent recognition in seconds per day within the queried period.
@@ -260,6 +263,7 @@ If the current storage class is ARCHIVE, it can be changed to the following clas
 If the current storage class is DEEP ARCHIVE, it can be changed to the following class:
 <li>STANDARD</li>
  * @method Models\ModifyPersonSampleResponse ModifyPersonSample(Models\ModifyPersonSampleRequest $req) This API is used to modify sample information according to the sample ID. You can modify the name and description, add, delete, and reset facial features or tags. Leave at least one image after deleting facial features. To leave no image, please use the reset operation.
+ * @method Models\ModifyRebuildMediaTemplateResponse ModifyRebuildMediaTemplate(Models\ModifyRebuildMediaTemplateRequest $req) This API is used to modify a remaster template.
  * @method Models\ModifyReviewTemplateResponse ModifyReviewTemplate(Models\ModifyReviewTemplateRequest $req) This API is used to modify a custom moderation template.
 > The templates can only be used by the APIs [ReviewAudioVideo](https://intl.cloud.tencent.com/document/api/266/80283?from_cn_redirect=1) and [ReviewImage](https://intl.cloud.tencent.com/document/api/266/73217?from_cn_redirect=1).
  * @method Models\ModifyRoundPlayResponse ModifyRoundPlay(Models\ModifyRoundPlayRequest $req) This API is used to modify a playlist.
@@ -310,6 +314,7 @@ If event notifications are used, the event type for moderation tasks is [ReviewA
 3. Up to 20 URLs can be specified in one request.
 4. By default, the maximum number of URLs that can be refreshed per day is 10,000.
  * @method Models\RebuildMediaResponse RebuildMedia(Models\RebuildMediaRequest $req) This API is used to remaster audio/video.
+ * @method Models\RebuildMediaByTemplateResponse RebuildMediaByTemplate(Models\RebuildMediaByTemplateRequest $req) This API is used to start a remaster task using a template.
  * @method Models\RefreshUrlCacheResponse RefreshUrlCache(Models\RefreshUrlCacheRequest $req) 1. This API is used to purge URLs.
 2. The URL domain names must have already been registered with VOD.
 3. Up to 20 URLs can be specified in one request.
@@ -330,6 +335,8 @@ If event notifications are used, the event type is [ReviewAudioVideoComplete](ht
 - Specify the types (`Categories`) of media files. Any file that matches one of the types will be returned. There are three file types: `Video`, `Audio`, and `Image`. If `Categories` is set to `Video` and `Audio`, all audio and video files will be returned.
 - Specify the source types (`SourceTypes`). Any file that matches one of the source types specified will be returned. For example, if you set `SourceTypes` to `Record` (live recording) and `Upload` (upload), all recording files and uploaded files will be returned.
 - Specify the file formats (`MediaTypes`), such as MP4, AVI, and MP3. All files in the specified formats will be returned. For example, if you set `MediaTypes` to MP4 and MP3, all files in these two formats will be returned.
+- Specify the file statuses (`Status`). Files in the specified statuses will be returned. Valid values: `Normal`, `SystemForbidden` (blocked by VOD), `Forbidden` (blocked by you). If you set `Status` to `Normal` and `Forbidden`, files in either status will be returned.
+- Specify the types of moderation results (`ReviewResults`). Files that have the specified types of moderation results will be returned. Valid values include `pass`, `block`, and more. If you set `ReviewResults` to `pass` and `block`, files whose moderation result is "pass" or "block" will be returned.
 - Specify the stream IDs (`StreamIds`) of live recording files.
 - Specify a time range for search by file creation time.
 - Specify the TRTC application IDs.

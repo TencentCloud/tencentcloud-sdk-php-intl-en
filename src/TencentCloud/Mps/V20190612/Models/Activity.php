@@ -32,6 +32,7 @@ use TencentCloud\Common\AbstractModel;
 <li>`action-image-sprite`: Image sprite generation.</li>
 <li>`action-snapshotByTimeOffset`: Time point screencapturing.</li>
 <li>`action-adaptive-substream`: Adaptive bitrate streaming.</li>
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setActivityType(string $ActivityType) Set The subtask type.
 <li>`input`: The start.</li>
 <li>`output`: The end.</li>
@@ -44,10 +45,15 @@ use TencentCloud\Common\AbstractModel;
 <li>`action-image-sprite`: Image sprite generation.</li>
 <li>`action-snapshotByTimeOffset`: Time point screencapturing.</li>
 <li>`action-adaptive-substream`: Adaptive bitrate streaming.</li>
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method array getReardriveIndex() Obtain The indexes of the subsequent actions.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setReardriveIndex(array $ReardriveIndex) Set The indexes of the subsequent actions.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method ActivityPara getActivityPara() Obtain The parameters of a subtask.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setActivityPara(ActivityPara $ActivityPara) Set The parameters of a subtask.
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class Activity extends AbstractModel
 {
@@ -64,16 +70,19 @@ class Activity extends AbstractModel
 <li>`action-image-sprite`: Image sprite generation.</li>
 <li>`action-snapshotByTimeOffset`: Time point screencapturing.</li>
 <li>`action-adaptive-substream`: Adaptive bitrate streaming.</li>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ActivityType;
 
     /**
      * @var array The indexes of the subsequent actions.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ReardriveIndex;
 
     /**
      * @var ActivityPara The parameters of a subtask.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ActivityPara;
 
@@ -90,8 +99,11 @@ class Activity extends AbstractModel
 <li>`action-image-sprite`: Image sprite generation.</li>
 <li>`action-snapshotByTimeOffset`: Time point screencapturing.</li>
 <li>`action-adaptive-substream`: Adaptive bitrate streaming.</li>
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param array $ReardriveIndex The indexes of the subsequent actions.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param ActivityPara $ActivityPara The parameters of a subtask.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

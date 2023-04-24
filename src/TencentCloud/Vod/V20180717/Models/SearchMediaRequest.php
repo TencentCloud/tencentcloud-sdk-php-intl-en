@@ -136,10 +136,24 @@ use TencentCloud\Common\AbstractModel;
 <li>Array length limit: 10</li>
  * @method void setMediaTypes(array $MediaTypes) Set The file formats.
 <li>Array length limit: 10</li>
- * @method array getStatus() Obtain 
- * @method void setStatus(array $Status) Set 
- * @method array getReviewResults() Obtain 
- * @method void setReviewResults(array $ReviewResults) Set 
+ * @method array getStatus() Obtain The file statuses.
+<li>`Normal`</li>
+<li>`SystemForbidden` (blocked by VOD)</li>
+<li>`Forbidden` (blocked by you)</li>
+ * @method void setStatus(array $Status) Set The file statuses.
+<li>`Normal`</li>
+<li>`SystemForbidden` (blocked by VOD)</li>
+<li>`Forbidden` (blocked by you)</li>
+ * @method array getReviewResults() Obtain The types of moderation result.
+<li>`pass`</li>
+<li>`review` (the content may be non-compliant and needs to be reviewed)</li>
+<li>`block` (the content is non-compliant and should be blocked)</li>
+<li>`notModerated` (the file hasn't been moderated yet)</li>
+ * @method void setReviewResults(array $ReviewResults) Set The types of moderation result.
+<li>`pass`</li>
+<li>`review` (the content may be non-compliant and needs to be reviewed)</li>
+<li>`block` (the content is non-compliant and should be blocked)</li>
+<li>`notModerated` (the file hasn't been moderated yet)</li>
  * @method array getTrtcSdkAppIds() Obtain The TRTC application IDs. Any file that matches one of the application IDs will be returned.
 <li>Array length limit: 10</li>
  * @method void setTrtcSdkAppIds(array $TrtcSdkAppIds) Set The TRTC application IDs. Any file that matches one of the application IDs will be returned.
@@ -324,12 +338,19 @@ class SearchMediaRequest extends AbstractModel
     public $MediaTypes;
 
     /**
-     * @var array 
+     * @var array The file statuses.
+<li>`Normal`</li>
+<li>`SystemForbidden` (blocked by VOD)</li>
+<li>`Forbidden` (blocked by you)</li>
      */
     public $Status;
 
     /**
-     * @var array 
+     * @var array The types of moderation result.
+<li>`pass`</li>
+<li>`review` (the content may be non-compliant and needs to be reviewed)</li>
+<li>`block` (the content is non-compliant and should be blocked)</li>
+<li>`notModerated` (the file hasn't been moderated yet)</li>
      */
     public $ReviewResults;
 
@@ -451,8 +472,15 @@ End time in the creation time range.
 <li>DEEP_ARCHIVE</li>
      * @param array $MediaTypes The file formats.
 <li>Array length limit: 10</li>
-     * @param array $Status 
-     * @param array $ReviewResults 
+     * @param array $Status The file statuses.
+<li>`Normal`</li>
+<li>`SystemForbidden` (blocked by VOD)</li>
+<li>`Forbidden` (blocked by you)</li>
+     * @param array $ReviewResults The types of moderation result.
+<li>`pass`</li>
+<li>`review` (the content may be non-compliant and needs to be reviewed)</li>
+<li>`block` (the content is non-compliant and should be blocked)</li>
+<li>`notModerated` (the file hasn't been moderated yet)</li>
      * @param array $TrtcSdkAppIds The TRTC application IDs. Any file that matches one of the application IDs will be returned.
 <li>Array length limit: 10</li>
      * @param array $TrtcRoomIds The TRTC room IDs. Any file that matches one of the room IDs will be returned.

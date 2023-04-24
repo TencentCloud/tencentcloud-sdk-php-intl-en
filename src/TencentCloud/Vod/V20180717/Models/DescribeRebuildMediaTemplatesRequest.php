@@ -18,26 +18,29 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * CreateImageProcessingTemplate request structure.
+ * DescribeRebuildMediaTemplates request structure.
  *
- * @method array getOperations() Obtain An array of image processing operations. The operations will be performed in the specified order.
-<li>Length limit: 10.</li>
- * @method void setOperations(array $Operations) Set An array of image processing operations. The operations will be performed in the specified order.
-<li>Length limit: 10.</li>
+ * @method array getDefinitions() Obtain The remaster template IDs.
+ * @method void setDefinitions(array $Definitions) Set The remaster template IDs.
  * @method integer getSubAppId() Obtain <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
  * @method void setSubAppId(integer $SubAppId) Set <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
- * @method string getName() Obtain The name of the image processing template. Length limit: 64 characters.
- * @method void setName(string $Name) Set The name of the image processing template. Length limit: 64 characters.
- * @method string getComment() Obtain The template description. Length limit: 256 characters.
- * @method void setComment(string $Comment) Set The template description. Length limit: 256 characters.
+ * @method string getType() Obtain The template type. Valid values:
+<li>`Preset`</li>
+<li>`Custom`</li>
+ * @method void setType(string $Type) Set The template type. Valid values:
+<li>`Preset`</li>
+<li>`Custom`</li>
+ * @method integer getOffset() Obtain The pagination offset. Default value: 0.
+ * @method void setOffset(integer $Offset) Set The pagination offset. Default value: 0.
+ * @method integer getLimit() Obtain The maximum number of records to return. Default value: 10. Maximum value: 100.
+ * @method void setLimit(integer $Limit) Set The maximum number of records to return. Default value: 10. Maximum value: 100.
  */
-class CreateImageProcessingTemplateRequest extends AbstractModel
+class DescribeRebuildMediaTemplatesRequest extends AbstractModel
 {
     /**
-     * @var array An array of image processing operations. The operations will be performed in the specified order.
-<li>Length limit: 10.</li>
+     * @var array The remaster template IDs.
      */
-    public $Operations;
+    public $Definitions;
 
     /**
      * @var integer <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
@@ -45,21 +48,30 @@ class CreateImageProcessingTemplateRequest extends AbstractModel
     public $SubAppId;
 
     /**
-     * @var string The name of the image processing template. Length limit: 64 characters.
+     * @var string The template type. Valid values:
+<li>`Preset`</li>
+<li>`Custom`</li>
      */
-    public $Name;
+    public $Type;
 
     /**
-     * @var string The template description. Length limit: 256 characters.
+     * @var integer The pagination offset. Default value: 0.
      */
-    public $Comment;
+    public $Offset;
 
     /**
-     * @param array $Operations An array of image processing operations. The operations will be performed in the specified order.
-<li>Length limit: 10.</li>
+     * @var integer The maximum number of records to return. Default value: 10. Maximum value: 100.
+     */
+    public $Limit;
+
+    /**
+     * @param array $Definitions The remaster template IDs.
      * @param integer $SubAppId <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
-     * @param string $Name The name of the image processing template. Length limit: 64 characters.
-     * @param string $Comment The template description. Length limit: 256 characters.
+     * @param string $Type The template type. Valid values:
+<li>`Preset`</li>
+<li>`Custom`</li>
+     * @param integer $Offset The pagination offset. Default value: 0.
+     * @param integer $Limit The maximum number of records to return. Default value: 10. Maximum value: 100.
      */
     function __construct()
     {
@@ -74,25 +86,24 @@ class CreateImageProcessingTemplateRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Operations",$param) and $param["Operations"] !== null) {
-            $this->Operations = [];
-            foreach ($param["Operations"] as $key => $value){
-                $obj = new ImageOperation();
-                $obj->deserialize($value);
-                array_push($this->Operations, $obj);
-            }
+        if (array_key_exists("Definitions",$param) and $param["Definitions"] !== null) {
+            $this->Definitions = $param["Definitions"];
         }
 
         if (array_key_exists("SubAppId",$param) and $param["SubAppId"] !== null) {
             $this->SubAppId = $param["SubAppId"];
         }
 
-        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
-            $this->Name = $param["Name"];
+        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
+            $this->Type = $param["Type"];
         }
 
-        if (array_key_exists("Comment",$param) and $param["Comment"] !== null) {
-            $this->Comment = $param["Comment"];
+        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
+            $this->Offset = $param["Offset"];
+        }
+
+        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
+            $this->Limit = $param["Limit"];
         }
     }
 }

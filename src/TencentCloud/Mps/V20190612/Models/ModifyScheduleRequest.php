@@ -32,9 +32,9 @@ Note: You need to pass in the full list of subtasks even if you want to change o
 Note: You need to pass in the full list of subtasks even if you want to change only some of the subtasks.
  * @method TaskOutputStorage getOutputStorage() Obtain The bucket to save the output file.
  * @method void setOutputStorage(TaskOutputStorage $OutputStorage) Set The bucket to save the output file.
- * @method string getOutputDir() Obtain The directory to save the output file.
+ * @method string getOutputDir() Obtain The directory to save the media processing output file, which must start and end with `/`.
 Note: If this parameter is left empty, the current `OutputDir` value will be invalidated.
- * @method void setOutputDir(string $OutputDir) Set The directory to save the output file.
+ * @method void setOutputDir(string $OutputDir) Set The directory to save the media processing output file, which must start and end with `/`.
 Note: If this parameter is left empty, the current `OutputDir` value will be invalidated.
  * @method TaskNotifyConfig getTaskNotifyConfig() Obtain The notification configuration.
  * @method void setTaskNotifyConfig(TaskNotifyConfig $TaskNotifyConfig) Set The notification configuration.
@@ -68,7 +68,7 @@ Note: You need to pass in the full list of subtasks even if you want to change o
     public $OutputStorage;
 
     /**
-     * @var string The directory to save the output file.
+     * @var string The directory to save the media processing output file, which must start and end with `/`.
 Note: If this parameter is left empty, the current `OutputDir` value will be invalidated.
      */
     public $OutputDir;
@@ -85,7 +85,7 @@ Note: If this parameter is left empty, the current `OutputDir` value will be inv
      * @param array $Activities The subtasks of the scheme.
 Note: You need to pass in the full list of subtasks even if you want to change only some of the subtasks.
      * @param TaskOutputStorage $OutputStorage The bucket to save the output file.
-     * @param string $OutputDir The directory to save the output file.
+     * @param string $OutputDir The directory to save the media processing output file, which must start and end with `/`.
 Note: If this parameter is left empty, the current `OutputDir` value will be invalidated.
      * @param TaskNotifyConfig $TaskNotifyConfig The notification configuration.
      */

@@ -27,29 +27,31 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getSubAppId() Obtain [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
  * @method void setSubAppId(integer $SubAppId) Set [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
  * @method string getType() Obtain The type of media processing task. Valid values:
-<li>Transcoding: General transcoding</li>
-<li>Transcoding-TESHD: Top Speed Codec transcoding</li>
-<li>Editing: Video editing</li>
-<li>Editing-TESHD: Top Speed Codec editing</li>
-<li>AdaptiveBitrateStreaming: Adaptive bitrate streaming</li>
-<li>ContentAudit: Content moderation</li>
-<li> ContentRecognition: Content recognition</li>
-<li>RemoveWatermark: Watermark removal</li>
-<li> ExtractTraceWatermark: Digital watermark extraction</li>
-<li> AddTraceWatermark: Digital watermarking</li>
-<li>Transcode: Transcoding, including general transcoding, Top Speed Codec transcoding, and video editing. This value is not recommended.</li>
+<li>`Transcoding`: General transcoding</li>
+<li>`Transcoding-TESHD`: Top Speed Codec transcoding</li>
+<li>`Editing`: Video editing</li>
+<li>`Editing-TESHD`: Top Speed Codec editing</li>
+<li>`AdaptiveBitrateStreaming`: Adaptive bitrate streaming</li>
+<li>`ContentAudit`: Content moderation</li>
+<li>`ContentRecognition`: Content recognition</li>
+<li>`RemoveWatermark`: Watermark removal</li>
+<li>`ExtractTraceWatermark`: Digital watermark extraction</li>
+<li>`AddTraceWatermark`: Digital watermarking</li>
+<li>`RebuildMedia`: Remaster</li>
+<li>`Transcode` Transcoding, including general transcoding, Top Speed Codec transcoding, and video editing. This value is not recommended.</li>
  * @method void setType(string $Type) Set The type of media processing task. Valid values:
-<li>Transcoding: General transcoding</li>
-<li>Transcoding-TESHD: Top Speed Codec transcoding</li>
-<li>Editing: Video editing</li>
-<li>Editing-TESHD: Top Speed Codec editing</li>
-<li>AdaptiveBitrateStreaming: Adaptive bitrate streaming</li>
-<li>ContentAudit: Content moderation</li>
-<li> ContentRecognition: Content recognition</li>
-<li>RemoveWatermark: Watermark removal</li>
-<li> ExtractTraceWatermark: Digital watermark extraction</li>
-<li> AddTraceWatermark: Digital watermarking</li>
-<li>Transcode: Transcoding, including general transcoding, Top Speed Codec transcoding, and video editing. This value is not recommended.</li>
+<li>`Transcoding`: General transcoding</li>
+<li>`Transcoding-TESHD`: Top Speed Codec transcoding</li>
+<li>`Editing`: Video editing</li>
+<li>`Editing-TESHD`: Top Speed Codec editing</li>
+<li>`AdaptiveBitrateStreaming`: Adaptive bitrate streaming</li>
+<li>`ContentAudit`: Content moderation</li>
+<li>`ContentRecognition`: Content recognition</li>
+<li>`RemoveWatermark`: Watermark removal</li>
+<li>`ExtractTraceWatermark`: Digital watermark extraction</li>
+<li>`AddTraceWatermark`: Digital watermarking</li>
+<li>`RebuildMedia`: Remaster</li>
+<li>`Transcode` Transcoding, including general transcoding, Top Speed Codec transcoding, and video editing. This value is not recommended.</li>
  */
 class DescribeMediaProcessUsageDataRequest extends AbstractModel
 {
@@ -70,17 +72,18 @@ class DescribeMediaProcessUsageDataRequest extends AbstractModel
 
     /**
      * @var string The type of media processing task. Valid values:
-<li>Transcoding: General transcoding</li>
-<li>Transcoding-TESHD: Top Speed Codec transcoding</li>
-<li>Editing: Video editing</li>
-<li>Editing-TESHD: Top Speed Codec editing</li>
-<li>AdaptiveBitrateStreaming: Adaptive bitrate streaming</li>
-<li>ContentAudit: Content moderation</li>
-<li> ContentRecognition: Content recognition</li>
-<li>RemoveWatermark: Watermark removal</li>
-<li> ExtractTraceWatermark: Digital watermark extraction</li>
-<li> AddTraceWatermark: Digital watermarking</li>
-<li>Transcode: Transcoding, including general transcoding, Top Speed Codec transcoding, and video editing. This value is not recommended.</li>
+<li>`Transcoding`: General transcoding</li>
+<li>`Transcoding-TESHD`: Top Speed Codec transcoding</li>
+<li>`Editing`: Video editing</li>
+<li>`Editing-TESHD`: Top Speed Codec editing</li>
+<li>`AdaptiveBitrateStreaming`: Adaptive bitrate streaming</li>
+<li>`ContentAudit`: Content moderation</li>
+<li>`ContentRecognition`: Content recognition</li>
+<li>`RemoveWatermark`: Watermark removal</li>
+<li>`ExtractTraceWatermark`: Digital watermark extraction</li>
+<li>`AddTraceWatermark`: Digital watermarking</li>
+<li>`RebuildMedia`: Remaster</li>
+<li>`Transcode` Transcoding, including general transcoding, Top Speed Codec transcoding, and video editing. This value is not recommended.</li>
      */
     public $Type;
 
@@ -89,17 +92,18 @@ class DescribeMediaProcessUsageDataRequest extends AbstractModel
      * @param string $EndTime End date in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F). The end date must be on or after the start date.
      * @param integer $SubAppId [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
      * @param string $Type The type of media processing task. Valid values:
-<li>Transcoding: General transcoding</li>
-<li>Transcoding-TESHD: Top Speed Codec transcoding</li>
-<li>Editing: Video editing</li>
-<li>Editing-TESHD: Top Speed Codec editing</li>
-<li>AdaptiveBitrateStreaming: Adaptive bitrate streaming</li>
-<li>ContentAudit: Content moderation</li>
-<li> ContentRecognition: Content recognition</li>
-<li>RemoveWatermark: Watermark removal</li>
-<li> ExtractTraceWatermark: Digital watermark extraction</li>
-<li> AddTraceWatermark: Digital watermarking</li>
-<li>Transcode: Transcoding, including general transcoding, Top Speed Codec transcoding, and video editing. This value is not recommended.</li>
+<li>`Transcoding`: General transcoding</li>
+<li>`Transcoding-TESHD`: Top Speed Codec transcoding</li>
+<li>`Editing`: Video editing</li>
+<li>`Editing-TESHD`: Top Speed Codec editing</li>
+<li>`AdaptiveBitrateStreaming`: Adaptive bitrate streaming</li>
+<li>`ContentAudit`: Content moderation</li>
+<li>`ContentRecognition`: Content recognition</li>
+<li>`RemoveWatermark`: Watermark removal</li>
+<li>`ExtractTraceWatermark`: Digital watermark extraction</li>
+<li>`AddTraceWatermark`: Digital watermarking</li>
+<li>`RebuildMedia`: Remaster</li>
+<li>`Transcode` Transcoding, including general transcoding, Top Speed Codec transcoding, and video editing. This value is not recommended.</li>
      */
     function __construct()
     {

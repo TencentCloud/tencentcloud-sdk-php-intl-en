@@ -22,14 +22,22 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getScheduleIds() Obtain The IDs of the schemes to query. Array length limit: 100.
  * @method void setScheduleIds(array $ScheduleIds) Set The IDs of the schemes to query. Array length limit: 100.
+ * @method string getTriggerType() Obtain The trigger type. Valid values:
+<li>`CosFileUpload`: The scheme is triggered when a file is uploaded to Tencent Cloud Object Storage (COS).</li>
+<li>`AwsS3FileUpload`: The scheme is triggered when a file is uploaded to AWS S3.</li>
+If you do not specify this parameter or leave it empty, all schemes will be returned regardless of the trigger type.
+ * @method void setTriggerType(string $TriggerType) Set The trigger type. Valid values:
+<li>`CosFileUpload`: The scheme is triggered when a file is uploaded to Tencent Cloud Object Storage (COS).</li>
+<li>`AwsS3FileUpload`: The scheme is triggered when a file is uploaded to AWS S3.</li>
+If you do not specify this parameter or leave it empty, all schemes will be returned regardless of the trigger type.
  * @method string getStatus() Obtain The scheme status. Valid values:
 <li>`Enabled`</li>
 <li>`Disabled`</li>
-If you do not specify this parameter, schemes in both statuses will be returned.
+If you do not specify this parameter, all schemes will be returned regardless of the status.
  * @method void setStatus(string $Status) Set The scheme status. Valid values:
 <li>`Enabled`</li>
 <li>`Disabled`</li>
-If you do not specify this parameter, schemes in both statuses will be returned.
+If you do not specify this parameter, all schemes will be returned regardless of the status.
  * @method integer getOffset() Obtain The pagination offset. Default value: 0.
  * @method void setOffset(integer $Offset) Set The pagination offset. Default value: 0.
  * @method integer getLimit() Obtain The maximum number of records to return. Default value: 10. Maximum value: 100.
@@ -43,10 +51,18 @@ class DescribeSchedulesRequest extends AbstractModel
     public $ScheduleIds;
 
     /**
+     * @var string The trigger type. Valid values:
+<li>`CosFileUpload`: The scheme is triggered when a file is uploaded to Tencent Cloud Object Storage (COS).</li>
+<li>`AwsS3FileUpload`: The scheme is triggered when a file is uploaded to AWS S3.</li>
+If you do not specify this parameter or leave it empty, all schemes will be returned regardless of the trigger type.
+     */
+    public $TriggerType;
+
+    /**
      * @var string The scheme status. Valid values:
 <li>`Enabled`</li>
 <li>`Disabled`</li>
-If you do not specify this parameter, schemes in both statuses will be returned.
+If you do not specify this parameter, all schemes will be returned regardless of the status.
      */
     public $Status;
 
@@ -62,10 +78,14 @@ If you do not specify this parameter, schemes in both statuses will be returned.
 
     /**
      * @param array $ScheduleIds The IDs of the schemes to query. Array length limit: 100.
+     * @param string $TriggerType The trigger type. Valid values:
+<li>`CosFileUpload`: The scheme is triggered when a file is uploaded to Tencent Cloud Object Storage (COS).</li>
+<li>`AwsS3FileUpload`: The scheme is triggered when a file is uploaded to AWS S3.</li>
+If you do not specify this parameter or leave it empty, all schemes will be returned regardless of the trigger type.
      * @param string $Status The scheme status. Valid values:
 <li>`Enabled`</li>
 <li>`Disabled`</li>
-If you do not specify this parameter, schemes in both statuses will be returned.
+If you do not specify this parameter, all schemes will be returned regardless of the status.
      * @param integer $Offset The pagination offset. Default value: 0.
      * @param integer $Limit The maximum number of records to return. Default value: 10. Maximum value: 100.
      */
@@ -84,6 +104,10 @@ If you do not specify this parameter, schemes in both statuses will be returned.
         }
         if (array_key_exists("ScheduleIds",$param) and $param["ScheduleIds"] !== null) {
             $this->ScheduleIds = $param["ScheduleIds"];
+        }
+
+        if (array_key_exists("TriggerType",$param) and $param["TriggerType"] !== null) {
+            $this->TriggerType = $param["TriggerType"];
         }
 
         if (array_key_exists("Status",$param) and $param["Status"] !== null) {

@@ -18,148 +18,144 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * The input parameters of an audio/video remastering task.
+ * The video remaster parameters.
  *
- * @method string getFileId() Obtain The file ID.
- * @method void setFileId(string $FileId) Set The file ID.
- * @method float getStartTimeOffset() Obtain The start offset (seconds). If you do not specify this, the segment will start from the beginning of the video.
- * @method void setStartTimeOffset(float $StartTimeOffset) Set The start offset (seconds). If you do not specify this, the segment will start from the beginning of the video.
- * @method float getEndTimeOffset() Obtain The end offset (seconds). If you do not specify this, the segment will end at the end of the video.
- * @method void setEndTimeOffset(float $EndTimeOffset) Set The end offset (seconds). If you do not specify this, the segment will end at the end of the video.
- * @method integer getDefinition() Obtain The ID of the remaster template.
- * @method void setDefinition(integer $Definition) Set The ID of the remaster template.
- * @method RepairInfo getRepairInfo() Obtain The video quality remastering parameters.
- * @method void setRepairInfo(RepairInfo $RepairInfo) Set The video quality remastering parameters.
+ * @method RepairInfo getRepairInfo() Obtain The image restoration parameters.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setRepairInfo(RepairInfo $RepairInfo) Set The image restoration parameters.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method VideoFrameInterpolationInfo getVideoFrameInterpolationInfo() Obtain The smart frame interpolation parameters.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setVideoFrameInterpolationInfo(VideoFrameInterpolationInfo $VideoFrameInterpolationInfo) Set The smart frame interpolation parameters.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method SuperResolutionInfo getSuperResolutionInfo() Obtain The super resolution parameters.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setSuperResolutionInfo(SuperResolutionInfo $SuperResolutionInfo) Set The super resolution parameters.
- * @method HDRInfo getHDRInfo() Obtain The high dynamic range (HDR) parameters.
- * @method void setHDRInfo(HDRInfo $HDRInfo) Set The high dynamic range (HDR) parameters.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method HDRInfo getHDRInfo() Obtain The high dynamic range (HDR) configuration.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setHDRInfo(HDRInfo $HDRInfo) Set The high dynamic range (HDR) configuration.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method VideoDenoiseInfo getVideoDenoiseInfo() Obtain The image noise removal parameters.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setVideoDenoiseInfo(VideoDenoiseInfo $VideoDenoiseInfo) Set The image noise removal parameters.
- * @method AudioDenoiseInfo getAudioDenoiseInfo() Obtain The noise removal parameters.
- * @method void setAudioDenoiseInfo(AudioDenoiseInfo $AudioDenoiseInfo) Set The noise removal parameters.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method ColorEnhanceInfo getColorInfo() Obtain The color enhancement parameters.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setColorInfo(ColorEnhanceInfo $ColorInfo) Set The color enhancement parameters.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method SharpEnhanceInfo getSharpInfo() Obtain The detail enhancement parameters.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setSharpInfo(SharpEnhanceInfo $SharpInfo) Set The detail enhancement parameters.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method FaceEnhanceInfo getFaceInfo() Obtain The face enhancement parameters.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setFaceInfo(FaceEnhanceInfo $FaceInfo) Set The face enhancement parameters.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method LowLightEnhanceInfo getLowLightInfo() Obtain The low-light enhancement parameters.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setLowLightInfo(LowLightEnhanceInfo $LowLightInfo) Set The low-light enhancement parameters.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method ScratchRepairInfo getScratchRepairInfo() Obtain The banding removal parameters.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setScratchRepairInfo(ScratchRepairInfo $ScratchRepairInfo) Set The banding removal parameters.
- * @method ArtifactRepairInfo getArtifactRepairInfo() Obtain The artifact removal (smoothing) parameters.
- * @method void setArtifactRepairInfo(ArtifactRepairInfo $ArtifactRepairInfo) Set The artifact removal (smoothing) parameters.
- * @method RebuildMediaTargetInfo getTargetInfo() Obtain The output parameters of the file.
- * @method void setTargetInfo(RebuildMediaTargetInfo $TargetInfo) Set The output parameters of the file.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method ArtifactRepairInfo getArtifactRepairInfo() Obtain The artifact removal parameters.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setArtifactRepairInfo(ArtifactRepairInfo $ArtifactRepairInfo) Set The artifact removal parameters.
+Note: This field may return null, indicating that no valid values can be obtained.
  */
-class RebuildMediaTaskInput extends AbstractModel
+class RebuildVideoInfo extends AbstractModel
 {
     /**
-     * @var string The file ID.
-     */
-    public $FileId;
-
-    /**
-     * @var float The start offset (seconds). If you do not specify this, the segment will start from the beginning of the video.
-     */
-    public $StartTimeOffset;
-
-    /**
-     * @var float The end offset (seconds). If you do not specify this, the segment will end at the end of the video.
-     */
-    public $EndTimeOffset;
-
-    /**
-     * @var integer The ID of the remaster template.
-     */
-    public $Definition;
-
-    /**
-     * @var RepairInfo The video quality remastering parameters.
+     * @var RepairInfo The image restoration parameters.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $RepairInfo;
 
     /**
      * @var VideoFrameInterpolationInfo The smart frame interpolation parameters.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $VideoFrameInterpolationInfo;
 
     /**
      * @var SuperResolutionInfo The super resolution parameters.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $SuperResolutionInfo;
 
     /**
-     * @var HDRInfo The high dynamic range (HDR) parameters.
+     * @var HDRInfo The high dynamic range (HDR) configuration.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $HDRInfo;
 
     /**
      * @var VideoDenoiseInfo The image noise removal parameters.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $VideoDenoiseInfo;
 
     /**
-     * @var AudioDenoiseInfo The noise removal parameters.
-     */
-    public $AudioDenoiseInfo;
-
-    /**
      * @var ColorEnhanceInfo The color enhancement parameters.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ColorInfo;
 
     /**
      * @var SharpEnhanceInfo The detail enhancement parameters.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $SharpInfo;
 
     /**
      * @var FaceEnhanceInfo The face enhancement parameters.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $FaceInfo;
 
     /**
      * @var LowLightEnhanceInfo The low-light enhancement parameters.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $LowLightInfo;
 
     /**
      * @var ScratchRepairInfo The banding removal parameters.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ScratchRepairInfo;
 
     /**
-     * @var ArtifactRepairInfo The artifact removal (smoothing) parameters.
+     * @var ArtifactRepairInfo The artifact removal parameters.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ArtifactRepairInfo;
 
     /**
-     * @var RebuildMediaTargetInfo The output parameters of the file.
-     */
-    public $TargetInfo;
-
-    /**
-     * @param string $FileId The file ID.
-     * @param float $StartTimeOffset The start offset (seconds). If you do not specify this, the segment will start from the beginning of the video.
-     * @param float $EndTimeOffset The end offset (seconds). If you do not specify this, the segment will end at the end of the video.
-     * @param integer $Definition The ID of the remaster template.
-     * @param RepairInfo $RepairInfo The video quality remastering parameters.
+     * @param RepairInfo $RepairInfo The image restoration parameters.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param VideoFrameInterpolationInfo $VideoFrameInterpolationInfo The smart frame interpolation parameters.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param SuperResolutionInfo $SuperResolutionInfo The super resolution parameters.
-     * @param HDRInfo $HDRInfo The high dynamic range (HDR) parameters.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param HDRInfo $HDRInfo The high dynamic range (HDR) configuration.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param VideoDenoiseInfo $VideoDenoiseInfo The image noise removal parameters.
-     * @param AudioDenoiseInfo $AudioDenoiseInfo The noise removal parameters.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param ColorEnhanceInfo $ColorInfo The color enhancement parameters.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param SharpEnhanceInfo $SharpInfo The detail enhancement parameters.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param FaceEnhanceInfo $FaceInfo The face enhancement parameters.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param LowLightEnhanceInfo $LowLightInfo The low-light enhancement parameters.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param ScratchRepairInfo $ScratchRepairInfo The banding removal parameters.
-     * @param ArtifactRepairInfo $ArtifactRepairInfo The artifact removal (smoothing) parameters.
-     * @param RebuildMediaTargetInfo $TargetInfo The output parameters of the file.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param ArtifactRepairInfo $ArtifactRepairInfo The artifact removal parameters.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -174,22 +170,6 @@ class RebuildMediaTaskInput extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("FileId",$param) and $param["FileId"] !== null) {
-            $this->FileId = $param["FileId"];
-        }
-
-        if (array_key_exists("StartTimeOffset",$param) and $param["StartTimeOffset"] !== null) {
-            $this->StartTimeOffset = $param["StartTimeOffset"];
-        }
-
-        if (array_key_exists("EndTimeOffset",$param) and $param["EndTimeOffset"] !== null) {
-            $this->EndTimeOffset = $param["EndTimeOffset"];
-        }
-
-        if (array_key_exists("Definition",$param) and $param["Definition"] !== null) {
-            $this->Definition = $param["Definition"];
-        }
-
         if (array_key_exists("RepairInfo",$param) and $param["RepairInfo"] !== null) {
             $this->RepairInfo = new RepairInfo();
             $this->RepairInfo->deserialize($param["RepairInfo"]);
@@ -213,11 +193,6 @@ class RebuildMediaTaskInput extends AbstractModel
         if (array_key_exists("VideoDenoiseInfo",$param) and $param["VideoDenoiseInfo"] !== null) {
             $this->VideoDenoiseInfo = new VideoDenoiseInfo();
             $this->VideoDenoiseInfo->deserialize($param["VideoDenoiseInfo"]);
-        }
-
-        if (array_key_exists("AudioDenoiseInfo",$param) and $param["AudioDenoiseInfo"] !== null) {
-            $this->AudioDenoiseInfo = new AudioDenoiseInfo();
-            $this->AudioDenoiseInfo->deserialize($param["AudioDenoiseInfo"]);
         }
 
         if (array_key_exists("ColorInfo",$param) and $param["ColorInfo"] !== null) {
@@ -248,11 +223,6 @@ class RebuildMediaTaskInput extends AbstractModel
         if (array_key_exists("ArtifactRepairInfo",$param) and $param["ArtifactRepairInfo"] !== null) {
             $this->ArtifactRepairInfo = new ArtifactRepairInfo();
             $this->ArtifactRepairInfo->deserialize($param["ArtifactRepairInfo"]);
-        }
-
-        if (array_key_exists("TargetInfo",$param) and $param["TargetInfo"] !== null) {
-            $this->TargetInfo = new RebuildMediaTargetInfo();
-            $this->TargetInfo->deserialize($param["TargetInfo"]);
         }
     }
 }

@@ -28,8 +28,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setActivities(array $Activities) Set The subtasks of the scheme.
  * @method TaskOutputStorage getOutputStorage() Obtain The bucket to save the output file. If you do not specify this parameter, the bucket in `Trigger` will be used.
  * @method void setOutputStorage(TaskOutputStorage $OutputStorage) Set The bucket to save the output file. If you do not specify this parameter, the bucket in `Trigger` will be used.
- * @method string getOutputDir() Obtain The directory to save the output file, such as `/movie/201907/`. If you do not specify this parameter, the directory of the source file will be used.
- * @method void setOutputDir(string $OutputDir) Set The directory to save the output file, such as `/movie/201907/`. If you do not specify this parameter, the directory of the source file will be used.
+ * @method string getOutputDir() Obtain The directory to save the media processing output file, which must start and end with `/`, such as `/movie/201907/`.
+If you do not specify this, the file will be saved to the trigger directory.
+ * @method void setOutputDir(string $OutputDir) Set The directory to save the media processing output file, which must start and end with `/`, such as `/movie/201907/`.
+If you do not specify this, the file will be saved to the trigger directory.
  * @method TaskNotifyConfig getTaskNotifyConfig() Obtain The notification configuration. If you do not specify this parameter, notifications will not be sent.
  * @method void setTaskNotifyConfig(TaskNotifyConfig $TaskNotifyConfig) Set The notification configuration. If you do not specify this parameter, notifications will not be sent.
  */
@@ -56,7 +58,8 @@ class CreateScheduleRequest extends AbstractModel
     public $OutputStorage;
 
     /**
-     * @var string The directory to save the output file, such as `/movie/201907/`. If you do not specify this parameter, the directory of the source file will be used.
+     * @var string The directory to save the media processing output file, which must start and end with `/`, such as `/movie/201907/`.
+If you do not specify this, the file will be saved to the trigger directory.
      */
     public $OutputDir;
 
@@ -70,7 +73,8 @@ class CreateScheduleRequest extends AbstractModel
      * @param WorkflowTrigger $Trigger The trigger of the scheme. If a file is uploaded to the specified bucket, the scheme will be triggered.
      * @param array $Activities The subtasks of the scheme.
      * @param TaskOutputStorage $OutputStorage The bucket to save the output file. If you do not specify this parameter, the bucket in `Trigger` will be used.
-     * @param string $OutputDir The directory to save the output file, such as `/movie/201907/`. If you do not specify this parameter, the directory of the source file will be used.
+     * @param string $OutputDir The directory to save the media processing output file, which must start and end with `/`, such as `/movie/201907/`.
+If you do not specify this, the file will be saved to the trigger directory.
      * @param TaskNotifyConfig $TaskNotifyConfig The notification configuration. If you do not specify this parameter, notifications will not be sent.
      */
     function __construct()

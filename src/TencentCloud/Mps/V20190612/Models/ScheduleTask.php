@@ -28,6 +28,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStatus(string $Status) Set The scheme status. Valid values:
 <li>PROCESSING</li>
 <li>FINISH</li>
+ * @method integer getErrCode() Obtain If the value returned is not 0, there was a source error. If 0 is returned, refer to the error codes of the corresponding task type.
+ * @method void setErrCode(integer $ErrCode) Set If the value returned is not 0, there was a source error. If 0 is returned, refer to the error codes of the corresponding task type.
+ * @method string getMessage() Obtain If there was a source error, this parameter is the error message. For other errors, refer to the error messages of the corresponding task type.
+ * @method void setMessage(string $Message) Set If there was a source error, this parameter is the error message. For other errors, refer to the error messages of the corresponding task type.
  * @method MediaInputInfo getInputInfo() Obtain The information of the file processed.
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setInputInfo(MediaInputInfo $InputInfo) Set The information of the file processed.
@@ -56,6 +60,16 @@ class ScheduleTask extends AbstractModel
     public $Status;
 
     /**
+     * @var integer If the value returned is not 0, there was a source error. If 0 is returned, refer to the error codes of the corresponding task type.
+     */
+    public $ErrCode;
+
+    /**
+     * @var string If there was a source error, this parameter is the error message. For other errors, refer to the error messages of the corresponding task type.
+     */
+    public $Message;
+
+    /**
      * @var MediaInputInfo The information of the file processed.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
@@ -78,6 +92,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $Status The scheme status. Valid values:
 <li>PROCESSING</li>
 <li>FINISH</li>
+     * @param integer $ErrCode If the value returned is not 0, there was a source error. If 0 is returned, refer to the error codes of the corresponding task type.
+     * @param string $Message If there was a source error, this parameter is the error message. For other errors, refer to the error messages of the corresponding task type.
      * @param MediaInputInfo $InputInfo The information of the file processed.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param MediaMetaData $MetaData The metadata of the source video.
@@ -104,6 +120,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("Status",$param) and $param["Status"] !== null) {
             $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("ErrCode",$param) and $param["ErrCode"] !== null) {
+            $this->ErrCode = $param["ErrCode"];
+        }
+
+        if (array_key_exists("Message",$param) and $param["Message"] !== null) {
+            $this->Message = $param["Message"];
         }
 
         if (array_key_exists("InputInfo",$param) and $param["InputInfo"] !== null) {

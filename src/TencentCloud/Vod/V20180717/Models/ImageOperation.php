@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setScale(ImageScale $Scale) Set The scaling details. This parameter is valid only if `Type` is `Scale`.
  * @method ImageCenterCut getCenterCut() Obtain The cropping details. This parameter is valid only if `Type` is `CenterCut`.
  * @method void setCenterCut(ImageCenterCut $CenterCut) Set The cropping details. This parameter is valid only if `Type` is `CenterCut`.
+ * @method ImageBlur getBlur() Obtain Image blurring. This parameter is valid only if `Type` is `Blur`.
+ * @method void setBlur(ImageBlur $Blur) Set Image blurring. This parameter is valid only if `Type` is `Blur`.
  */
 class ImageOperation extends AbstractModel
 {
@@ -51,11 +53,17 @@ class ImageOperation extends AbstractModel
     public $CenterCut;
 
     /**
+     * @var ImageBlur Image blurring. This parameter is valid only if `Type` is `Blur`.
+     */
+    public $Blur;
+
+    /**
      * @param string $Type The image processing type. Valid values:
 <li>`Scale`: Scaling</li>
 <li>`CenterCut`: Cropping</li>
      * @param ImageScale $Scale The scaling details. This parameter is valid only if `Type` is `Scale`.
      * @param ImageCenterCut $CenterCut The cropping details. This parameter is valid only if `Type` is `CenterCut`.
+     * @param ImageBlur $Blur Image blurring. This parameter is valid only if `Type` is `Blur`.
      */
     function __construct()
     {
@@ -82,6 +90,11 @@ class ImageOperation extends AbstractModel
         if (array_key_exists("CenterCut",$param) and $param["CenterCut"] !== null) {
             $this->CenterCut = new ImageCenterCut();
             $this->CenterCut->deserialize($param["CenterCut"]);
+        }
+
+        if (array_key_exists("Blur",$param) and $param["Blur"] !== null) {
+            $this->Blur = new ImageBlur();
+            $this->Blur->deserialize($param["Blur"]);
         }
     }
 }

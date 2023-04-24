@@ -24,6 +24,10 @@ use TencentCloud\Common\AbstractModel;
 For more information about supported extensions, see [Media types](https://intl.cloud.tencent.com/document/product/266/9760#media-types). Please make sure the URL is accessible.
  * @method void setMediaUrl(string $MediaUrl) Set The URL of the media to pull, which can be in HLS format, but not DASH format.
 For more information about supported extensions, see [Media types](https://intl.cloud.tencent.com/document/product/266/9760#media-types). Please make sure the URL is accessible.
+ * @method string getMediaType() Obtain The file format (extension). For information about supported extensions, see [Media Types](https://intl.cloud.tencent.com/document/product/266/9760?from_cn_redirect=1#.E5.AA.92.E4.BD.93.E7.B1.BB.E5.9E.8B).
+If you do not specify this parameter or pass in an empty string, the file obtained will have the same extension as `MediaUrl`.
+ * @method void setMediaType(string $MediaType) Set The file format (extension). For information about supported extensions, see [Media Types](https://intl.cloud.tencent.com/document/product/266/9760?from_cn_redirect=1#.E5.AA.92.E4.BD.93.E7.B1.BB.E5.9E.8B).
+If you do not specify this parameter or pass in an empty string, the file obtained will have the same extension as `MediaUrl`.
  * @method integer getSubAppId() Obtain <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
  * @method void setSubAppId(integer $SubAppId) Set <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
  * @method string getMediaName() Obtain Media name.
@@ -58,6 +62,12 @@ class PullUploadRequest extends AbstractModel
 For more information about supported extensions, see [Media types](https://intl.cloud.tencent.com/document/product/266/9760#media-types). Please make sure the URL is accessible.
      */
     public $MediaUrl;
+
+    /**
+     * @var string The file format (extension). For information about supported extensions, see [Media Types](https://intl.cloud.tencent.com/document/product/266/9760?from_cn_redirect=1#.E5.AA.92.E4.BD.93.E7.B1.BB.E5.9E.8B).
+If you do not specify this parameter or pass in an empty string, the file obtained will have the same extension as `MediaUrl`.
+     */
+    public $MediaType;
 
     /**
      * @var integer <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
@@ -119,6 +129,8 @@ For more information about supported extensions, see [Media types](https://intl.
     /**
      * @param string $MediaUrl The URL of the media to pull, which can be in HLS format, but not DASH format.
 For more information about supported extensions, see [Media types](https://intl.cloud.tencent.com/document/product/266/9760#media-types). Please make sure the URL is accessible.
+     * @param string $MediaType The file format (extension). For information about supported extensions, see [Media Types](https://intl.cloud.tencent.com/document/product/266/9760?from_cn_redirect=1#.E5.AA.92.E4.BD.93.E7.B1.BB.E5.9E.8B).
+If you do not specify this parameter or pass in an empty string, the file obtained will have the same extension as `MediaUrl`.
      * @param integer $SubAppId <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
      * @param string $MediaName Media name.
      * @param string $CoverUrl The URL of the video to pull. Supported formats include GIF, JPEG (JPG), and PNG.
@@ -148,6 +160,10 @@ For more information about supported extensions, see [Media types](https://intl.
         }
         if (array_key_exists("MediaUrl",$param) and $param["MediaUrl"] !== null) {
             $this->MediaUrl = $param["MediaUrl"];
+        }
+
+        if (array_key_exists("MediaType",$param) and $param["MediaType"] !== null) {
+            $this->MediaType = $param["MediaType"];
         }
 
         if (array_key_exists("SubAppId",$param) and $param["SubAppId"] !== null) {

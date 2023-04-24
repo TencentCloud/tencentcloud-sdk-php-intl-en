@@ -48,6 +48,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
  * @method void setAiAnalysisResultSet(array $AiAnalysisResultSet) Set Execution status and result of video content analysis task.
  * @method array getAiRecognitionResultSet() Obtain Execution status and result of a video content recognition task.
  * @method void setAiRecognitionResultSet(array $AiRecognitionResultSet) Set Execution status and result of a video content recognition task.
+ * @method ScheduleQualityControlTaskResult getAiQualityControlTaskResult() Obtain The execution status and result of a quality control task.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setAiQualityControlTaskResult(ScheduleQualityControlTaskResult $AiQualityControlTaskResult) Set The execution status and result of a quality control task.
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class WorkflowTask extends AbstractModel
 {
@@ -106,6 +110,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $AiRecognitionResultSet;
 
     /**
+     * @var ScheduleQualityControlTaskResult The execution status and result of a quality control task.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $AiQualityControlTaskResult;
+
+    /**
      * @param string $TaskId The media processing task ID.
      * @param string $Status Task flow status. Valid values:
 <li>PROCESSING: Processing;</li>
@@ -120,6 +130,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param array $AiContentReviewResultSet Execution status and result of a video content audit task.
      * @param array $AiAnalysisResultSet Execution status and result of video content analysis task.
      * @param array $AiRecognitionResultSet Execution status and result of a video content recognition task.
+     * @param ScheduleQualityControlTaskResult $AiQualityControlTaskResult The execution status and result of a quality control task.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -194,6 +206,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 $obj->deserialize($value);
                 array_push($this->AiRecognitionResultSet, $obj);
             }
+        }
+
+        if (array_key_exists("AiQualityControlTaskResult",$param) and $param["AiQualityControlTaskResult"] !== null) {
+            $this->AiQualityControlTaskResult = new ScheduleQualityControlTaskResult();
+            $this->AiQualityControlTaskResult->deserialize($param["AiQualityControlTaskResult"]);
         }
     }
 }
