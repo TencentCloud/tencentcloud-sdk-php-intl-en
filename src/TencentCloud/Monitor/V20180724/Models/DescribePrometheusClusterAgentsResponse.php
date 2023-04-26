@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAgents(array $Agents) Set Information of the associated cluster
  * @method integer getTotal() Obtain The total number of the associated clusters
  * @method void setTotal(integer $Total) Set The total number of the associated clusters
+ * @method boolean getIsFirstBind() Obtain Whether the TMP instance is associated with the cluster for the first time. If so, you need to configure recording rules for it. This also applies if it has no default recording rule.
+ * @method void setIsFirstBind(boolean $IsFirstBind) Set Whether the TMP instance is associated with the cluster for the first time. If so, you need to configure recording rules for it. This also applies if it has no default recording rule.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -40,6 +42,11 @@ class DescribePrometheusClusterAgentsResponse extends AbstractModel
     public $Total;
 
     /**
+     * @var boolean Whether the TMP instance is associated with the cluster for the first time. If so, you need to configure recording rules for it. This also applies if it has no default recording rule.
+     */
+    public $IsFirstBind;
+
+    /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
@@ -47,6 +54,7 @@ class DescribePrometheusClusterAgentsResponse extends AbstractModel
     /**
      * @param array $Agents Information of the associated cluster
      * @param integer $Total The total number of the associated clusters
+     * @param boolean $IsFirstBind Whether the TMP instance is associated with the cluster for the first time. If so, you need to configure recording rules for it. This also applies if it has no default recording rule.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -73,6 +81,10 @@ class DescribePrometheusClusterAgentsResponse extends AbstractModel
 
         if (array_key_exists("Total",$param) and $param["Total"] !== null) {
             $this->Total = $param["Total"];
+        }
+
+        if (array_key_exists("IsFirstBind",$param) and $param["IsFirstBind"] !== null) {
+            $this->IsFirstBind = $param["IsFirstBind"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

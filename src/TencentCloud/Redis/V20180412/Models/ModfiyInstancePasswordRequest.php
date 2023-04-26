@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModfiyInstancePassword request structure.
  *
- * @method string getInstanceId() Obtain Instance ID
- * @method void setInstanceId(string $InstanceId) Set Instance ID
+ * @method string getInstanceId() Obtain Instance ID, such as "crs-xjhsdj****". Log in to the [Redis console](https://console.cloud.tencent.com/redis) and copy the instance ID in the instance list.
+ * @method void setInstanceId(string $InstanceId) Set Instance ID, such as "crs-xjhsdj****". Log in to the [Redis console](https://console.cloud.tencent.com/redis) and copy the instance ID in the instance list.
  * @method string getOldPassword() Obtain Old password of an instance
  * @method void setOldPassword(string $OldPassword) Set Old password of an instance
  * @method string getPassword() Obtain New instance password, which has the following requirements:
@@ -36,7 +36,7 @@ use TencentCloud\Common\AbstractModel;
 class ModfiyInstancePasswordRequest extends AbstractModel
 {
     /**
-     * @var string Instance ID
+     * @var string Instance ID, such as "crs-xjhsdj****". Log in to the [Redis console](https://console.cloud.tencent.com/redis) and copy the instance ID in the instance list.
      */
     public $InstanceId;
 
@@ -54,7 +54,7 @@ class ModfiyInstancePasswordRequest extends AbstractModel
     public $Password;
 
     /**
-     * @param string $InstanceId Instance ID
+     * @param string $InstanceId Instance ID, such as "crs-xjhsdj****". Log in to the [Redis console](https://console.cloud.tencent.com/redis) and copy the instance ID in the instance list.
      * @param string $OldPassword Old password of an instance
      * @param string $Password New instance password, which has the following requirements:
 - It must contain 8-30 characters, preferably 12 or more.

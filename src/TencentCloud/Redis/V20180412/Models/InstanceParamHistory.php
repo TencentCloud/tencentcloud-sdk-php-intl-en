@@ -22,12 +22,18 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getParamName() Obtain Parameter name
  * @method void setParamName(string $ParamName) Set Parameter name
- * @method string getPreValue() Obtain Value before modification
- * @method void setPreValue(string $PreValue) Set Value before modification
- * @method string getNewValue() Obtain Value after modification
- * @method void setNewValue(string $NewValue) Set Value after modification
- * @method integer getStatus() Obtain Status. 1: modifying the parameter configuration; 2: modified the parameter configuration successfully; 3: failed to modify the parameter configuration
- * @method void setStatus(integer $Status) Set Status. 1: modifying the parameter configuration; 2: modified the parameter configuration successfully; 3: failed to modify the parameter configuration
+ * @method string getPreValue() Obtain The value of the parameter before modification
+ * @method void setPreValue(string $PreValue) Set The value of the parameter before modification
+ * @method string getNewValue() Obtain The value of the parameter after modification
+ * @method void setNewValue(string $NewValue) Set The value of the parameter after modification
+ * @method integer getStatus() Obtain Parameter configuration status
+- `1`: The parameter configuration is being modified.
+- `2`: The parameter configuration has been modified successfully.
+- `3`: Failed to modify the parameter configuration.
+ * @method void setStatus(integer $Status) Set Parameter configuration status
+- `1`: The parameter configuration is being modified.
+- `2`: The parameter configuration has been modified successfully.
+- `3`: Failed to modify the parameter configuration.
  * @method string getModifyTime() Obtain Modification time
  * @method void setModifyTime(string $ModifyTime) Set Modification time
  */
@@ -39,17 +45,20 @@ class InstanceParamHistory extends AbstractModel
     public $ParamName;
 
     /**
-     * @var string Value before modification
+     * @var string The value of the parameter before modification
      */
     public $PreValue;
 
     /**
-     * @var string Value after modification
+     * @var string The value of the parameter after modification
      */
     public $NewValue;
 
     /**
-     * @var integer Status. 1: modifying the parameter configuration; 2: modified the parameter configuration successfully; 3: failed to modify the parameter configuration
+     * @var integer Parameter configuration status
+- `1`: The parameter configuration is being modified.
+- `2`: The parameter configuration has been modified successfully.
+- `3`: Failed to modify the parameter configuration.
      */
     public $Status;
 
@@ -60,9 +69,12 @@ class InstanceParamHistory extends AbstractModel
 
     /**
      * @param string $ParamName Parameter name
-     * @param string $PreValue Value before modification
-     * @param string $NewValue Value after modification
-     * @param integer $Status Status. 1: modifying the parameter configuration; 2: modified the parameter configuration successfully; 3: failed to modify the parameter configuration
+     * @param string $PreValue The value of the parameter before modification
+     * @param string $NewValue The value of the parameter after modification
+     * @param integer $Status Parameter configuration status
+- `1`: The parameter configuration is being modified.
+- `2`: The parameter configuration has been modified successfully.
+- `3`: Failed to modify the parameter configuration.
      * @param string $ModifyTime Modification time
      */
     function __construct()

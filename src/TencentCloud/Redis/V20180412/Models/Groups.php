@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Replication group info
  *
- * @method integer getAppId() Obtain User App ID
- * @method void setAppId(integer $AppId) Set User App ID
+ * @method integer getAppId() Obtain User APPID, which is the unique application ID that matches an account. Some Tencent Cloud products use this APPID.
+ * @method void setAppId(integer $AppId) Set User APPID, which is the unique application ID that matches an account. Some Tencent Cloud products use this APPID.
  * @method integer getRegionId() Obtain Region ID
 - `1`: Guangzhou 
 - `4`: Shanghai 
@@ -60,8 +60,8 @@ use TencentCloud\Common\AbstractModel;
 - `23`: Thailand 
 - `24`: Russia 
 - `25`: Japan
- * @method string getGroupId() Obtain Replication group ID
- * @method void setGroupId(string $GroupId) Set Replication group ID
+ * @method string getGroupId() Obtain Replication group ID in the format of "crs-rpl-deind****"
+ * @method void setGroupId(string $GroupId) Set Replication group ID in the format of "crs-rpl-deind****"
  * @method string getGroupName() Obtain Replication group name
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setGroupName(string $GroupName) Set Replication group name
@@ -92,7 +92,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 class Groups extends AbstractModel
 {
     /**
-     * @var integer User App ID
+     * @var integer User APPID, which is the unique application ID that matches an account. Some Tencent Cloud products use this APPID.
      */
     public $AppId;
 
@@ -120,7 +120,7 @@ class Groups extends AbstractModel
     public $RegionId;
 
     /**
-     * @var string Replication group ID
+     * @var string Replication group ID in the format of "crs-rpl-deind****"
      */
     public $GroupId;
 
@@ -158,7 +158,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $Remark;
 
     /**
-     * @param integer $AppId User App ID
+     * @param integer $AppId User APPID, which is the unique application ID that matches an account. Some Tencent Cloud products use this APPID.
      * @param integer $RegionId Region ID
 - `1`: Guangzhou 
 - `4`: Shanghai 
@@ -178,7 +178,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 - `23`: Thailand 
 - `24`: Russia 
 - `25`: Japan
-     * @param string $GroupId Replication group ID
+     * @param string $GroupId Replication group ID in the format of "crs-rpl-deind****"
      * @param string $GroupName Replication group name
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $Status Status of replication group

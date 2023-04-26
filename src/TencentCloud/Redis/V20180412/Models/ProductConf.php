@@ -20,42 +20,84 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Product information
  *
- * @method integer getType() Obtain Product type. Valid values: `2` (Redis 2.8 Memory Edition in standard architecture), `3` (CKV 3.2 Memory Edition in standard architecture), `4` (CKV 3.2 Memory Edition in cluster architecture), `5` (Redis 2.8 Memory Edition in standalone architecture), `6` (Redis 4.0 Memory Edition in standard architecture), `7` (Redis 4.0 Memory Edition in cluster architecture), `8` (Redis 5.0 Memory Edition in standard architecture), `9` (Redis 5.0 Memory Edition in cluster architecture), `10` (Redis 4.0 Hybrid Storage Edition (Tendis)).
- * @method void setType(integer $Type) Set Product type. Valid values: `2` (Redis 2.8 Memory Edition in standard architecture), `3` (CKV 3.2 Memory Edition in standard architecture), `4` (CKV 3.2 Memory Edition in cluster architecture), `5` (Redis 2.8 Memory Edition in standalone architecture), `6` (Redis 4.0 Memory Edition in standard architecture), `7` (Redis 4.0 Memory Edition in cluster architecture), `8` (Redis 5.0 Memory Edition in standard architecture), `9` (Redis 5.0 Memory Edition in cluster architecture), `10` (Redis 4.0 Hybrid Storage Edition (Tendis)).
- * @method string getTypeName() Obtain Product name: Redis Master-Replica Edition, CKV Master-Replica Edition, CKV Cluster Edition, Redis Standalone Edition, Redis Cluster Edition, Tendis Hybrid Storage Edition
- * @method void setTypeName(string $TypeName) Set Product name: Redis Master-Replica Edition, CKV Master-Replica Edition, CKV Cluster Edition, Redis Standalone Edition, Redis Cluster Edition, Tendis Hybrid Storage Edition
+ * @method integer getType() Obtain Product type
+- `2`: Redis 2.8 Memory Edition (Standard Architecture).
+- `3`: CKV 3.2 Memory Edition (Standard Architecture).
+- `4`: CKV 3.2 Memory Edition (Cluster Architecture).
+- `5`: Redis 2.8 Memory Edition (Standalone).
+- `6`: Redis 4.0 Memory Edition (Standard Architecture).
+- `7`: Redis 4.0 Memory Edition (Cluster Architecture).
+- `8`: Redis 5.0 Memory Edition (Standard Architecture).
+- `9`: Redis 5.0 Memory Edition (Cluster Architecture).
+- `15`: Redis 6.2 Memory Edition (Standard Architecture).
+- `16`: Redis 6.2 Memory Edition (Cluster Architecture).
+ * @method void setType(integer $Type) Set Product type
+- `2`: Redis 2.8 Memory Edition (Standard Architecture).
+- `3`: CKV 3.2 Memory Edition (Standard Architecture).
+- `4`: CKV 3.2 Memory Edition (Cluster Architecture).
+- `5`: Redis 2.8 Memory Edition (Standalone).
+- `6`: Redis 4.0 Memory Edition (Standard Architecture).
+- `7`: Redis 4.0 Memory Edition (Cluster Architecture).
+- `8`: Redis 5.0 Memory Edition (Standard Architecture).
+- `9`: Redis 5.0 Memory Edition (Cluster Architecture).
+- `15`: Redis 6.2 Memory Edition (Standard Architecture).
+- `16`: Redis 6.2 Memory Edition (Cluster Architecture).
+ * @method string getTypeName() Obtain Product names, including Redis Master-Replica Edition, Redis Standalone Edition, Redis 4.0 Cluster Edition, CKV Master-Replica Edition, and CKV Standalone Edition.
+ * @method void setTypeName(string $TypeName) Set Product names, including Redis Master-Replica Edition, Redis Standalone Edition, Redis 4.0 Cluster Edition, CKV Master-Replica Edition, and CKV Standalone Edition.
  * @method integer getMinBuyNum() Obtain Minimum purchasable quantity
  * @method void setMinBuyNum(integer $MinBuyNum) Set Minimum purchasable quantity
  * @method integer getMaxBuyNum() Obtain Maximum purchasable quantity
  * @method void setMaxBuyNum(integer $MaxBuyNum) Set Maximum purchasable quantity
  * @method boolean getSaleout() Obtain Whether a product is sold out
+- `true`: Sold out.
+- `false`: Not sold out.
  * @method void setSaleout(boolean $Saleout) Set Whether a product is sold out
- * @method string getEngine() Obtain Product engine: Tencent Cloud CKV or Redis community edition
- * @method void setEngine(string $Engine) Set Product engine: Tencent Cloud CKV or Redis community edition
- * @method string getVersion() Obtain Compatible version: Redis 2.8, Redis 3.2, or Redis 4.0
- * @method void setVersion(string $Version) Set Compatible version: Redis 2.8, Redis 3.2, or Redis 4.0
+- `true`: Sold out.
+- `false`: Not sold out.
+ * @method string getEngine() Obtain Product engines, including Tencent Cloud CKV and Redis Community Edition.
+ * @method void setEngine(string $Engine) Set Product engines, including Tencent Cloud CKV and Redis Community Edition.
+ * @method string getVersion() Obtain Compatible versions, including Redis 2.8, 3.2, 4.0, 5.0, and 6.2.
+ * @method void setVersion(string $Version) Set Compatible versions, including Redis 2.8, 3.2, 4.0, 5.0, and 6.2.
  * @method array getTotalSize() Obtain Total capacity in GB
  * @method void setTotalSize(array $TotalSize) Set Total capacity in GB
  * @method array getShardSize() Obtain Shard size in GB
  * @method void setShardSize(array $ShardSize) Set Shard size in GB
- * @method array getReplicaNum() Obtain Number of replicas
- * @method void setReplicaNum(array $ReplicaNum) Set Number of replicas
- * @method array getShardNum() Obtain Number of shards
- * @method void setShardNum(array $ShardNum) Set Number of shards
- * @method string getPayMode() Obtain Supported billing method. 1: monthly subscription; 0: pay-as-you-go
- * @method void setPayMode(string $PayMode) Set Supported billing method. 1: monthly subscription; 0: pay-as-you-go
+ * @method array getReplicaNum() Obtain Quantity of replicas
+ * @method void setReplicaNum(array $ReplicaNum) Set Quantity of replicas
+ * @method array getShardNum() Obtain Quantity of shards
+ * @method void setShardNum(array $ShardNum) Set Quantity of shards
+ * @method string getPayMode() Obtain Supported billing modes
+- `1`: Monthly subscription.
+- `0`: Pay-as-you-go.
+ * @method void setPayMode(string $PayMode) Set Supported billing modes
+- `1`: Monthly subscription.
+- `0`: Pay-as-you-go.
  * @method boolean getEnableRepicaReadOnly() Obtain Whether to support read-only replicas
+- `true`: Supported.
+-`false`: Not supported.
  * @method void setEnableRepicaReadOnly(boolean $EnableRepicaReadOnly) Set Whether to support read-only replicas
+- `true`: Supported.
+-`false`: Not supported.
  */
 class ProductConf extends AbstractModel
 {
     /**
-     * @var integer Product type. Valid values: `2` (Redis 2.8 Memory Edition in standard architecture), `3` (CKV 3.2 Memory Edition in standard architecture), `4` (CKV 3.2 Memory Edition in cluster architecture), `5` (Redis 2.8 Memory Edition in standalone architecture), `6` (Redis 4.0 Memory Edition in standard architecture), `7` (Redis 4.0 Memory Edition in cluster architecture), `8` (Redis 5.0 Memory Edition in standard architecture), `9` (Redis 5.0 Memory Edition in cluster architecture), `10` (Redis 4.0 Hybrid Storage Edition (Tendis)).
+     * @var integer Product type
+- `2`: Redis 2.8 Memory Edition (Standard Architecture).
+- `3`: CKV 3.2 Memory Edition (Standard Architecture).
+- `4`: CKV 3.2 Memory Edition (Cluster Architecture).
+- `5`: Redis 2.8 Memory Edition (Standalone).
+- `6`: Redis 4.0 Memory Edition (Standard Architecture).
+- `7`: Redis 4.0 Memory Edition (Cluster Architecture).
+- `8`: Redis 5.0 Memory Edition (Standard Architecture).
+- `9`: Redis 5.0 Memory Edition (Cluster Architecture).
+- `15`: Redis 6.2 Memory Edition (Standard Architecture).
+- `16`: Redis 6.2 Memory Edition (Cluster Architecture).
      */
     public $Type;
 
     /**
-     * @var string Product name: Redis Master-Replica Edition, CKV Master-Replica Edition, CKV Cluster Edition, Redis Standalone Edition, Redis Cluster Edition, Tendis Hybrid Storage Edition
+     * @var string Product names, including Redis Master-Replica Edition, Redis Standalone Edition, Redis 4.0 Cluster Edition, CKV Master-Replica Edition, and CKV Standalone Edition.
      */
     public $TypeName;
 
@@ -71,16 +113,18 @@ class ProductConf extends AbstractModel
 
     /**
      * @var boolean Whether a product is sold out
+- `true`: Sold out.
+- `false`: Not sold out.
      */
     public $Saleout;
 
     /**
-     * @var string Product engine: Tencent Cloud CKV or Redis community edition
+     * @var string Product engines, including Tencent Cloud CKV and Redis Community Edition.
      */
     public $Engine;
 
     /**
-     * @var string Compatible version: Redis 2.8, Redis 3.2, or Redis 4.0
+     * @var string Compatible versions, including Redis 2.8, 3.2, 4.0, 5.0, and 6.2.
      */
     public $Version;
 
@@ -95,39 +139,59 @@ class ProductConf extends AbstractModel
     public $ShardSize;
 
     /**
-     * @var array Number of replicas
+     * @var array Quantity of replicas
      */
     public $ReplicaNum;
 
     /**
-     * @var array Number of shards
+     * @var array Quantity of shards
      */
     public $ShardNum;
 
     /**
-     * @var string Supported billing method. 1: monthly subscription; 0: pay-as-you-go
+     * @var string Supported billing modes
+- `1`: Monthly subscription.
+- `0`: Pay-as-you-go.
      */
     public $PayMode;
 
     /**
      * @var boolean Whether to support read-only replicas
+- `true`: Supported.
+-`false`: Not supported.
      */
     public $EnableRepicaReadOnly;
 
     /**
-     * @param integer $Type Product type. Valid values: `2` (Redis 2.8 Memory Edition in standard architecture), `3` (CKV 3.2 Memory Edition in standard architecture), `4` (CKV 3.2 Memory Edition in cluster architecture), `5` (Redis 2.8 Memory Edition in standalone architecture), `6` (Redis 4.0 Memory Edition in standard architecture), `7` (Redis 4.0 Memory Edition in cluster architecture), `8` (Redis 5.0 Memory Edition in standard architecture), `9` (Redis 5.0 Memory Edition in cluster architecture), `10` (Redis 4.0 Hybrid Storage Edition (Tendis)).
-     * @param string $TypeName Product name: Redis Master-Replica Edition, CKV Master-Replica Edition, CKV Cluster Edition, Redis Standalone Edition, Redis Cluster Edition, Tendis Hybrid Storage Edition
+     * @param integer $Type Product type
+- `2`: Redis 2.8 Memory Edition (Standard Architecture).
+- `3`: CKV 3.2 Memory Edition (Standard Architecture).
+- `4`: CKV 3.2 Memory Edition (Cluster Architecture).
+- `5`: Redis 2.8 Memory Edition (Standalone).
+- `6`: Redis 4.0 Memory Edition (Standard Architecture).
+- `7`: Redis 4.0 Memory Edition (Cluster Architecture).
+- `8`: Redis 5.0 Memory Edition (Standard Architecture).
+- `9`: Redis 5.0 Memory Edition (Cluster Architecture).
+- `15`: Redis 6.2 Memory Edition (Standard Architecture).
+- `16`: Redis 6.2 Memory Edition (Cluster Architecture).
+     * @param string $TypeName Product names, including Redis Master-Replica Edition, Redis Standalone Edition, Redis 4.0 Cluster Edition, CKV Master-Replica Edition, and CKV Standalone Edition.
      * @param integer $MinBuyNum Minimum purchasable quantity
      * @param integer $MaxBuyNum Maximum purchasable quantity
      * @param boolean $Saleout Whether a product is sold out
-     * @param string $Engine Product engine: Tencent Cloud CKV or Redis community edition
-     * @param string $Version Compatible version: Redis 2.8, Redis 3.2, or Redis 4.0
+- `true`: Sold out.
+- `false`: Not sold out.
+     * @param string $Engine Product engines, including Tencent Cloud CKV and Redis Community Edition.
+     * @param string $Version Compatible versions, including Redis 2.8, 3.2, 4.0, 5.0, and 6.2.
      * @param array $TotalSize Total capacity in GB
      * @param array $ShardSize Shard size in GB
-     * @param array $ReplicaNum Number of replicas
-     * @param array $ShardNum Number of shards
-     * @param string $PayMode Supported billing method. 1: monthly subscription; 0: pay-as-you-go
+     * @param array $ReplicaNum Quantity of replicas
+     * @param array $ShardNum Quantity of shards
+     * @param string $PayMode Supported billing modes
+- `1`: Monthly subscription.
+- `0`: Pay-as-you-go.
      * @param boolean $EnableRepicaReadOnly Whether to support read-only replicas
+- `true`: Supported.
+-`false`: Not supported.
      */
     function __construct()
     {

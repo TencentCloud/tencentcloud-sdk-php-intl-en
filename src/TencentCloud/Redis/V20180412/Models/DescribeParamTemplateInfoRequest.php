@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeParamTemplateInfo request structure.
  *
- * @method string getTemplateId() Obtain Parameter template ID.
- * @method void setTemplateId(string $TemplateId) Set Parameter template ID.
+ * @method string getTemplateId() Obtain The parameter template ID for query. Get parameter template list information through the [DescribeParamTemplates](https://intl.cloud.tencent.com/document/product/239/58750?from_cn_redirect=1) API.
+ * @method void setTemplateId(string $TemplateId) Set The parameter template ID for query. Get parameter template list information through the [DescribeParamTemplates](https://intl.cloud.tencent.com/document/product/239/58750?from_cn_redirect=1) API.
  */
 class DescribeParamTemplateInfoRequest extends AbstractModel
 {
     /**
-     * @var string Parameter template ID.
+     * @var string The parameter template ID for query. Get parameter template list information through the [DescribeParamTemplates](https://intl.cloud.tencent.com/document/product/239/58750?from_cn_redirect=1) API.
      */
     public $TemplateId;
 
     /**
-     * @param string $TemplateId Parameter template ID.
+     * @param string $TemplateId The parameter template ID for query. Get parameter template list information through the [DescribeParamTemplates](https://intl.cloud.tencent.com/document/product/239/58750?from_cn_redirect=1) API.
      */
     function __construct()
     {

@@ -24,30 +24,48 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceName(string $InstanceName) Set Instance name
  * @method string getInstanceId() Obtain Instance ID
  * @method void setInstanceId(string $InstanceId) Set Instance ID
- * @method integer getAppId() Obtain User ID
- * @method void setAppId(integer $AppId) Set User ID
- * @method integer getProjectId() Obtain Instance project ID
- * @method void setProjectId(integer $ProjectId) Set Instance project ID
+ * @method integer getAppId() Obtain User APPID, which is the unique application ID that matches an account. Some Tencent Cloud products use this APPID.
+ * @method void setAppId(integer $AppId) Set User APPID, which is the unique application ID that matches an account. Some Tencent Cloud products use this APPID.
+ * @method integer getProjectId() Obtain Project ID of the instance
+ * @method void setProjectId(integer $ProjectId) Set Project ID of the instance
  * @method string getRegion() Obtain Instance region
  * @method void setRegion(string $Region) Set Instance region
  * @method string getZone() Obtain Instance AZ
  * @method void setZone(string $Zone) Set Instance AZ
- * @method string getVpcId() Obtain Instance network ID
- * @method void setVpcId(string $VpcId) Set Instance network ID
- * @method string getSubnetId() Obtain Subnet ID
- * @method void setSubnetId(string $SubnetId) Set Subnet ID
- * @method string getStatus() Obtain Instance status. 1: task running; 2: instance running; -2: instance isolated; -3: instance being eliminated; -4: instance eliminated
- * @method void setStatus(string $Status) Set Instance status. 1: task running; 2: instance running; -2: instance isolated; -3: instance being eliminated; -4: instance eliminated
- * @method array getVips() Obtain Instance network IP
- * @method void setVips(array $Vips) Set Instance network IP
+ * @method string getVpcId() Obtain Instance VPC ID
+ * @method void setVpcId(string $VpcId) Set Instance VPC ID
+ * @method string getSubnetId() Obtain VPC subnet ID
+ * @method void setSubnetId(string $SubnetId) Set VPC subnet ID
+ * @method string getStatus() Obtain Instance status information
+- `1`: Task running.
+- `2`: Instance running.
+- `-2`: Instance isolated.
+- `-3`: Instance being eliminated.
+- `-4`: Instance eliminated.
+ * @method void setStatus(string $Status) Set Instance status information
+- `1`: Task running.
+- `2`: Instance running.
+- `-2`: Instance isolated.
+- `-3`: Instance being eliminated.
+- `-4`: Instance eliminated.
+ * @method array getVips() Obtain Private network IP address of an instance
+ * @method void setVips(array $Vips) Set Private network IP address of an instance
  * @method integer getVport() Obtain Instance network port
  * @method void setVport(integer $Vport) Set Instance network port
  * @method string getCreatetime() Obtain Instance creation time
  * @method void setCreatetime(string $Createtime) Set Instance creation time
- * @method integer getPayMode() Obtain Billing mode. 0: pay-as-you-go; 1: monthly subscription
- * @method void setPayMode(integer $PayMode) Set Billing mode. 0: pay-as-you-go; 1: monthly subscription
- * @method integer getNetType() Obtain Network type. Valid values: 0 (classic network); 1 (VPC).
- * @method void setNetType(integer $NetType) Set Network type. Valid values: 0 (classic network); 1 (VPC).
+ * @method integer getPayMode() Obtain Billing type
+- `0`: Pay-as-you-go.
+- `1`: Monthly subscription.
+ * @method void setPayMode(integer $PayMode) Set Billing type
+- `0`: Pay-as-you-go.
+- `1`: Monthly subscription.
+ * @method integer getNetType() Obtain Network Type
+- `0`: Classic network.
+- `1`: VPC.
+ * @method void setNetType(integer $NetType) Set Network Type
+- `0`: Classic network.
+- `1`: VPC.
  */
 class RedisCommonInstanceList extends AbstractModel
 {
@@ -62,12 +80,12 @@ class RedisCommonInstanceList extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var integer User ID
+     * @var integer User APPID, which is the unique application ID that matches an account. Some Tencent Cloud products use this APPID.
      */
     public $AppId;
 
     /**
-     * @var integer Instance project ID
+     * @var integer Project ID of the instance
      */
     public $ProjectId;
 
@@ -82,22 +100,27 @@ class RedisCommonInstanceList extends AbstractModel
     public $Zone;
 
     /**
-     * @var string Instance network ID
+     * @var string Instance VPC ID
      */
     public $VpcId;
 
     /**
-     * @var string Subnet ID
+     * @var string VPC subnet ID
      */
     public $SubnetId;
 
     /**
-     * @var string Instance status. 1: task running; 2: instance running; -2: instance isolated; -3: instance being eliminated; -4: instance eliminated
+     * @var string Instance status information
+- `1`: Task running.
+- `2`: Instance running.
+- `-2`: Instance isolated.
+- `-3`: Instance being eliminated.
+- `-4`: Instance eliminated.
      */
     public $Status;
 
     /**
-     * @var array Instance network IP
+     * @var array Private network IP address of an instance
      */
     public $Vips;
 
@@ -112,30 +135,43 @@ class RedisCommonInstanceList extends AbstractModel
     public $Createtime;
 
     /**
-     * @var integer Billing mode. 0: pay-as-you-go; 1: monthly subscription
+     * @var integer Billing type
+- `0`: Pay-as-you-go.
+- `1`: Monthly subscription.
      */
     public $PayMode;
 
     /**
-     * @var integer Network type. Valid values: 0 (classic network); 1 (VPC).
+     * @var integer Network Type
+- `0`: Classic network.
+- `1`: VPC.
      */
     public $NetType;
 
     /**
      * @param string $InstanceName Instance name
      * @param string $InstanceId Instance ID
-     * @param integer $AppId User ID
-     * @param integer $ProjectId Instance project ID
+     * @param integer $AppId User APPID, which is the unique application ID that matches an account. Some Tencent Cloud products use this APPID.
+     * @param integer $ProjectId Project ID of the instance
      * @param string $Region Instance region
      * @param string $Zone Instance AZ
-     * @param string $VpcId Instance network ID
-     * @param string $SubnetId Subnet ID
-     * @param string $Status Instance status. 1: task running; 2: instance running; -2: instance isolated; -3: instance being eliminated; -4: instance eliminated
-     * @param array $Vips Instance network IP
+     * @param string $VpcId Instance VPC ID
+     * @param string $SubnetId VPC subnet ID
+     * @param string $Status Instance status information
+- `1`: Task running.
+- `2`: Instance running.
+- `-2`: Instance isolated.
+- `-3`: Instance being eliminated.
+- `-4`: Instance eliminated.
+     * @param array $Vips Private network IP address of an instance
      * @param integer $Vport Instance network port
      * @param string $Createtime Instance creation time
-     * @param integer $PayMode Billing mode. 0: pay-as-you-go; 1: monthly subscription
-     * @param integer $NetType Network type. Valid values: 0 (classic network); 1 (VPC).
+     * @param integer $PayMode Billing type
+- `0`: Pay-as-you-go.
+- `1`: Monthly subscription.
+     * @param integer $NetType Network Type
+- `0`: Classic network.
+- `1`: VPC.
      */
     function __construct()
     {

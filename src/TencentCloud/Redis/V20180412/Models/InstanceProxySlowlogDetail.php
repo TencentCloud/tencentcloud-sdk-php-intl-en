@@ -20,21 +20,21 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Proxy slow query details
  *
- * @method integer getDuration() Obtain Duration of the slow query in ms.
- * @method void setDuration(integer $Duration) Set Duration of the slow query in ms.
+ * @method integer getDuration() Obtain Slow query duration in milliseconds
+ * @method void setDuration(integer $Duration) Set Slow query duration in milliseconds
  * @method string getClient() Obtain Client address
  * @method void setClient(string $Client) Set Client address
- * @method string getCommand() Obtain Command
- * @method void setCommand(string $Command) Set Command
- * @method string getCommandLine() Obtain Command line details
- * @method void setCommandLine(string $CommandLine) Set Command line details
+ * @method string getCommand() Obtain Slow query command
+ * @method void setCommand(string $Command) Set Slow query command
+ * @method string getCommandLine() Obtain Detailed command line information of slow query
+ * @method void setCommandLine(string $CommandLine) Set Detailed command line information of slow query
  * @method string getExecuteTime() Obtain Execution time
  * @method void setExecuteTime(string $ExecuteTime) Set Execution time
  */
 class InstanceProxySlowlogDetail extends AbstractModel
 {
     /**
-     * @var integer Duration of the slow query in ms.
+     * @var integer Slow query duration in milliseconds
      */
     public $Duration;
 
@@ -44,12 +44,12 @@ class InstanceProxySlowlogDetail extends AbstractModel
     public $Client;
 
     /**
-     * @var string Command
+     * @var string Slow query command
      */
     public $Command;
 
     /**
-     * @var string Command line details
+     * @var string Detailed command line information of slow query
      */
     public $CommandLine;
 
@@ -59,10 +59,10 @@ class InstanceProxySlowlogDetail extends AbstractModel
     public $ExecuteTime;
 
     /**
-     * @param integer $Duration Duration of the slow query in ms.
+     * @param integer $Duration Slow query duration in milliseconds
      * @param string $Client Client address
-     * @param string $Command Command
-     * @param string $CommandLine Command line details
+     * @param string $Command Slow query command
+     * @param string $CommandLine Detailed command line information of slow query
      * @param string $ExecuteTime Execution time
      */
     function __construct()

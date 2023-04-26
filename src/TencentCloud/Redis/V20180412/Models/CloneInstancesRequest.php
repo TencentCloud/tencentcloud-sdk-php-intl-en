@@ -20,10 +20,14 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CloneInstances request structure.
  *
- * @method string getInstanceId() Obtain ID of the current instance
- * @method void setInstanceId(string $InstanceId) Set ID of the current instance
- * @method integer getGoodsNum() Obtain Number of instance to be cloned each time. You can purchase up to 100 monthly subscribed instances or up to 30 pay-as-you-go instances at a time. You can purchase up to 100 instances in each region.
- * @method void setGoodsNum(integer $GoodsNum) Set Number of instance to be cloned each time. You can purchase up to 100 monthly subscribed instances or up to 30 pay-as-you-go instances at a time. You can purchase up to 100 instances in each region.
+ * @method string getInstanceId() Obtain The ID of the source instance to be cloned, such as "crs-xjhsdj****". Log in to the [Redis console](https://console.cloud.tencent.com/redis) and copy the instance ID in the instance list.
+ * @method void setInstanceId(string $InstanceId) Set The ID of the source instance to be cloned, such as "crs-xjhsdj****". Log in to the [Redis console](https://console.cloud.tencent.com/redis) and copy the instance ID in the instance list.
+ * @method integer getGoodsNum() Obtain The number of clone instances at a time
+- The maximum number of monthly subscribed instances is 100 for each purchase.
+- The maximum number of pay-as-you-go instances is 30 for each purchase.
+ * @method void setGoodsNum(integer $GoodsNum) Set The number of clone instances at a time
+- The maximum number of monthly subscribed instances is 100 for each purchase.
+- The maximum number of pay-as-you-go instances is 30 for each purchase.
  * @method integer getZoneId() Obtain ID of the AZ where the clone instance resides. For more information, see [Regions and AZs](https://intl.cloud.tencent.com/document/product/239/4106?from_cn_redirect=1).
  * @method void setZoneId(integer $ZoneId) Set ID of the AZ where the clone instance resides. For more information, see [Regions and AZs](https://intl.cloud.tencent.com/document/product/239/4106?from_cn_redirect=1).
  * @method integer getBillingMode() Obtain Billing mode. Valid values: <ul><li>`0` (Pay-as-you-go) </li><li>`1` (Monthly subscription) </li></ul>
@@ -36,38 +40,44 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBackupId(string $BackupId) Set Backup ID of the clone instance, which can be obtained through the [DescribeInstanceBackups](https://intl.cloud.tencent.com/document/product/239/20011?from_cn_redirect=1) API.
  * @method boolean getNoAuth() Obtain Whether the clone instance supports password-free access. Valid values: <ul><li>`true` (Yes)</li><li>`false` (No. When SSL or public network is enabled). Default value: `false`.</li></ul>
  * @method void setNoAuth(boolean $NoAuth) Set Whether the clone instance supports password-free access. Valid values: <ul><li>`true` (Yes)</li><li>`false` (No. When SSL or public network is enabled). Default value: `false`.</li></ul>
- * @method string getVpcId() Obtain VPC ID. If this parameter is not passed in, the classic network will be selected by default.
- * @method void setVpcId(string $VpcId) Set VPC ID. If this parameter is not passed in, the classic network will be selected by default.
- * @method string getSubnetId() Obtain VPC subnet ID, which is not required for the classic network.
- * @method void setSubnetId(string $SubnetId) Set VPC subnet ID, which is not required for the classic network.
+ * @method string getVpcId() Obtain The VPC ID of the clone instance. If this parameter is not passed in, the classic network will be selected by default.
+ * @method void setVpcId(string $VpcId) Set The VPC ID of the clone instance. If this parameter is not passed in, the classic network will be selected by default.
+ * @method string getSubnetId() Obtain The VPC subnet ID to which the clone instance belongs, which is not required for the classic network.
+ * @method void setSubnetId(string $SubnetId) Set The VPC subnet ID to which the clone instance belongs, which is not required for the classic network.
  * @method string getInstanceName() Obtain Name of the clone instance. <br>Enter up to 60 letters, digits, hyphens, and underscores.</br>
  * @method void setInstanceName(string $InstanceName) Set Name of the clone instance. <br>Enter up to 60 letters, digits, hyphens, and underscores.</br>
  * @method string getPassword() Obtain The access password of the clone instance. <ul><li>When the input parameter <b>NoAuth</b> is <b>true</b>, this parameter is not required. </li><li>When the instance is Redis 2.8, 4.0, or 5.0, the password must contain 8–30 characters in at least two of the following types: lowercase letters, uppercase letters, digits, and special characters `()`~!@#$%^&*-+=_|{}[]:;<>,.?/` and cannot start with `/`.</li><li>When the instance is CKV 3.2, the password must and can only contain 8–30 letters and digits.</li></ul>
  * @method void setPassword(string $Password) Set The access password of the clone instance. <ul><li>When the input parameter <b>NoAuth</b> is <b>true</b>, this parameter is not required. </li><li>When the instance is Redis 2.8, 4.0, or 5.0, the password must contain 8–30 characters in at least two of the following types: lowercase letters, uppercase letters, digits, and special characters `()`~!@#$%^&*-+=_|{}[]:;<>,.?/` and cannot start with `/`.</li><li>When the instance is CKV 3.2, the password must and can only contain 8–30 letters and digits.</li></ul>
- * @method integer getAutoRenew() Obtain The auto-renewal flag. Valid values <ul><li>`0`: Manual renewal (default) </li><li>`1`: Auto-renewal. </li><li>`2`: Not auto-renewal (set by user)</ul>
- * @method void setAutoRenew(integer $AutoRenew) Set The auto-renewal flag. Valid values <ul><li>`0`: Manual renewal (default) </li><li>`1`: Auto-renewal. </li><li>`2`: Not auto-renewal (set by user)</ul>
+ * @method integer getAutoRenew() Obtain The auto-renewal flag. Valid values <ul><li>`0`: Manual renewal (default). </li><li>`1`: Auto-renewal. </li><li>`2`: Not auto-renewal (set by user).</ul>
+ * @method void setAutoRenew(integer $AutoRenew) Set The auto-renewal flag. Valid values <ul><li>`0`: Manual renewal (default). </li><li>`1`: Auto-renewal. </li><li>`2`: Not auto-renewal (set by user).</ul>
  * @method integer getVPort() Obtain Customized port. Valid range: 1024-65535. Default value: `6379`.
  * @method void setVPort(integer $VPort) Set Customized port. Valid range: 1024-65535. Default value: `6379`.
  * @method array getNodeSet() Obtain Node information of an instance. <ul><li>Currently supported type and AZ information of a node to be configured (master node or replica node) For more information, see [RedisNodeInfo](https://intl.cloud.tencent.com/document/product/239/20022?from_cn_redirect=1#RedisNodeInfo).</li><li>This parameter is not required for single-AZ deployment.</li></ul>
  * @method void setNodeSet(array $NodeSet) Set Node information of an instance. <ul><li>Currently supported type and AZ information of a node to be configured (master node or replica node) For more information, see [RedisNodeInfo](https://intl.cloud.tencent.com/document/product/239/20022?from_cn_redirect=1#RedisNodeInfo).</li><li>This parameter is not required for single-AZ deployment.</li></ul>
- * @method integer getProjectId() Obtain Project ID, which can be obtained in <b>Account Center</b> > <b>Project Management</b> in the upper-right corner in the console.
- * @method void setProjectId(integer $ProjectId) Set Project ID, which can be obtained in <b>Account Center</b> > <b>Project Management</b> in the upper-right corner in the console.
+ * @method integer getProjectId() Obtain Project ID. Log in to the [Redis console](https://console.cloud.tencent.com/redis#/), and find the project ID in <b>Account Center</b> > <b>Project Management</b> in the top-right corner.
+ * @method void setProjectId(integer $ProjectId) Set Project ID. Log in to the [Redis console](https://console.cloud.tencent.com/redis#/), and find the project ID in <b>Account Center</b> > <b>Project Management</b> in the top-right corner.
  * @method array getResourceTags() Obtain Tag to be bound for the clone instance
  * @method void setResourceTags(array $ResourceTags) Set Tag to be bound for the clone instance
- * @method string getTemplateId() Obtain The ID of a parameter template to be applied to the clone instance, which can be obtained on <b>Parameter Template</b> page in the console. If this parameter is not configured, the default parameter template will be applied.
- * @method void setTemplateId(string $TemplateId) Set The ID of a parameter template to be applied to the clone instance, which can be obtained on <b>Parameter Template</b> page in the console. If this parameter is not configured, the default parameter template will be applied.
- * @method array getAlarmPolicyList() Obtain Alarm policy ID of the specified clone instance, which can be obtained on <b>Cloud Monitor</b> > <b>Alarm Configuration</b> > <b>Alarm Policy</b> in the console.
- * @method void setAlarmPolicyList(array $AlarmPolicyList) Set Alarm policy ID of the specified clone instance, which can be obtained on <b>Cloud Monitor</b> > <b>Alarm Configuration</b> > <b>Alarm Policy</b> in the console.
+ * @method string getTemplateId() Obtain The parameter template ID associated with the clone instance
+- If this parameter is not configured, the system will automatically adapt the corresponding default template based on the selected compatible version and architecture.
+- You can query the parameter template list of the instance to get the template ID through the [DescribeParamTemplates](https://intl.cloud.tencent.com/document/product/239/58750?from_cn_redirect=1) API.
+ * @method void setTemplateId(string $TemplateId) Set The parameter template ID associated with the clone instance
+- If this parameter is not configured, the system will automatically adapt the corresponding default template based on the selected compatible version and architecture.
+- You can query the parameter template list of the instance to get the template ID through the [DescribeParamTemplates](https://intl.cloud.tencent.com/document/product/239/58750?from_cn_redirect=1) API.
+ * @method array getAlarmPolicyList() Obtain The alarm policy ID of the instance to be cloned. Log in to the [Tencent Cloud Observable Platform console](https://console.cloud.tencent.com/monitor/alarm2/policy), and get the policy ID in <b>Alarm Management</b> > <b>Policy Management</b>.
+ * @method void setAlarmPolicyList(array $AlarmPolicyList) Set The alarm policy ID of the instance to be cloned. Log in to the [Tencent Cloud Observable Platform console](https://console.cloud.tencent.com/monitor/alarm2/policy), and get the policy ID in <b>Alarm Management</b> > <b>Policy Management</b>.
  */
 class CloneInstancesRequest extends AbstractModel
 {
     /**
-     * @var string ID of the current instance
+     * @var string The ID of the source instance to be cloned, such as "crs-xjhsdj****". Log in to the [Redis console](https://console.cloud.tencent.com/redis) and copy the instance ID in the instance list.
      */
     public $InstanceId;
 
     /**
-     * @var integer Number of instance to be cloned each time. You can purchase up to 100 monthly subscribed instances or up to 30 pay-as-you-go instances at a time. You can purchase up to 100 instances in each region.
+     * @var integer The number of clone instances at a time
+- The maximum number of monthly subscribed instances is 100 for each purchase.
+- The maximum number of pay-as-you-go instances is 30 for each purchase.
      */
     public $GoodsNum;
 
@@ -102,12 +112,12 @@ class CloneInstancesRequest extends AbstractModel
     public $NoAuth;
 
     /**
-     * @var string VPC ID. If this parameter is not passed in, the classic network will be selected by default.
+     * @var string The VPC ID of the clone instance. If this parameter is not passed in, the classic network will be selected by default.
      */
     public $VpcId;
 
     /**
-     * @var string VPC subnet ID, which is not required for the classic network.
+     * @var string The VPC subnet ID to which the clone instance belongs, which is not required for the classic network.
      */
     public $SubnetId;
 
@@ -122,7 +132,7 @@ class CloneInstancesRequest extends AbstractModel
     public $Password;
 
     /**
-     * @var integer The auto-renewal flag. Valid values <ul><li>`0`: Manual renewal (default) </li><li>`1`: Auto-renewal. </li><li>`2`: Not auto-renewal (set by user)</ul>
+     * @var integer The auto-renewal flag. Valid values <ul><li>`0`: Manual renewal (default). </li><li>`1`: Auto-renewal. </li><li>`2`: Not auto-renewal (set by user).</ul>
      */
     public $AutoRenew;
 
@@ -137,7 +147,7 @@ class CloneInstancesRequest extends AbstractModel
     public $NodeSet;
 
     /**
-     * @var integer Project ID, which can be obtained in <b>Account Center</b> > <b>Project Management</b> in the upper-right corner in the console.
+     * @var integer Project ID. Log in to the [Redis console](https://console.cloud.tencent.com/redis#/), and find the project ID in <b>Account Center</b> > <b>Project Management</b> in the top-right corner.
      */
     public $ProjectId;
 
@@ -147,35 +157,41 @@ class CloneInstancesRequest extends AbstractModel
     public $ResourceTags;
 
     /**
-     * @var string The ID of a parameter template to be applied to the clone instance, which can be obtained on <b>Parameter Template</b> page in the console. If this parameter is not configured, the default parameter template will be applied.
+     * @var string The parameter template ID associated with the clone instance
+- If this parameter is not configured, the system will automatically adapt the corresponding default template based on the selected compatible version and architecture.
+- You can query the parameter template list of the instance to get the template ID through the [DescribeParamTemplates](https://intl.cloud.tencent.com/document/product/239/58750?from_cn_redirect=1) API.
      */
     public $TemplateId;
 
     /**
-     * @var array Alarm policy ID of the specified clone instance, which can be obtained on <b>Cloud Monitor</b> > <b>Alarm Configuration</b> > <b>Alarm Policy</b> in the console.
+     * @var array The alarm policy ID of the instance to be cloned. Log in to the [Tencent Cloud Observable Platform console](https://console.cloud.tencent.com/monitor/alarm2/policy), and get the policy ID in <b>Alarm Management</b> > <b>Policy Management</b>.
      */
     public $AlarmPolicyList;
 
     /**
-     * @param string $InstanceId ID of the current instance
-     * @param integer $GoodsNum Number of instance to be cloned each time. You can purchase up to 100 monthly subscribed instances or up to 30 pay-as-you-go instances at a time. You can purchase up to 100 instances in each region.
+     * @param string $InstanceId The ID of the source instance to be cloned, such as "crs-xjhsdj****". Log in to the [Redis console](https://console.cloud.tencent.com/redis) and copy the instance ID in the instance list.
+     * @param integer $GoodsNum The number of clone instances at a time
+- The maximum number of monthly subscribed instances is 100 for each purchase.
+- The maximum number of pay-as-you-go instances is 30 for each purchase.
      * @param integer $ZoneId ID of the AZ where the clone instance resides. For more information, see [Regions and AZs](https://intl.cloud.tencent.com/document/product/239/4106?from_cn_redirect=1).
      * @param integer $BillingMode Billing mode. Valid values: <ul><li>`0` (Pay-as-you-go) </li><li>`1` (Monthly subscription) </li></ul>
      * @param integer $Period Purchase duration of an instance. <ul><li>Unit: Month</li><li>Valid values: `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `24`, `36`, `48`, `60` (for monthly subscription mode).</li><li> Valid value: `1` (for pay-as-you-go mode).</li></ul>
      * @param array $SecurityGroupIdList Security group ID, which can be obtained on the <b>Security Group</b> page in the console.
      * @param string $BackupId Backup ID of the clone instance, which can be obtained through the [DescribeInstanceBackups](https://intl.cloud.tencent.com/document/product/239/20011?from_cn_redirect=1) API.
      * @param boolean $NoAuth Whether the clone instance supports password-free access. Valid values: <ul><li>`true` (Yes)</li><li>`false` (No. When SSL or public network is enabled). Default value: `false`.</li></ul>
-     * @param string $VpcId VPC ID. If this parameter is not passed in, the classic network will be selected by default.
-     * @param string $SubnetId VPC subnet ID, which is not required for the classic network.
+     * @param string $VpcId The VPC ID of the clone instance. If this parameter is not passed in, the classic network will be selected by default.
+     * @param string $SubnetId The VPC subnet ID to which the clone instance belongs, which is not required for the classic network.
      * @param string $InstanceName Name of the clone instance. <br>Enter up to 60 letters, digits, hyphens, and underscores.</br>
      * @param string $Password The access password of the clone instance. <ul><li>When the input parameter <b>NoAuth</b> is <b>true</b>, this parameter is not required. </li><li>When the instance is Redis 2.8, 4.0, or 5.0, the password must contain 8–30 characters in at least two of the following types: lowercase letters, uppercase letters, digits, and special characters `()`~!@#$%^&*-+=_|{}[]:;<>,.?/` and cannot start with `/`.</li><li>When the instance is CKV 3.2, the password must and can only contain 8–30 letters and digits.</li></ul>
-     * @param integer $AutoRenew The auto-renewal flag. Valid values <ul><li>`0`: Manual renewal (default) </li><li>`1`: Auto-renewal. </li><li>`2`: Not auto-renewal (set by user)</ul>
+     * @param integer $AutoRenew The auto-renewal flag. Valid values <ul><li>`0`: Manual renewal (default). </li><li>`1`: Auto-renewal. </li><li>`2`: Not auto-renewal (set by user).</ul>
      * @param integer $VPort Customized port. Valid range: 1024-65535. Default value: `6379`.
      * @param array $NodeSet Node information of an instance. <ul><li>Currently supported type and AZ information of a node to be configured (master node or replica node) For more information, see [RedisNodeInfo](https://intl.cloud.tencent.com/document/product/239/20022?from_cn_redirect=1#RedisNodeInfo).</li><li>This parameter is not required for single-AZ deployment.</li></ul>
-     * @param integer $ProjectId Project ID, which can be obtained in <b>Account Center</b> > <b>Project Management</b> in the upper-right corner in the console.
+     * @param integer $ProjectId Project ID. Log in to the [Redis console](https://console.cloud.tencent.com/redis#/), and find the project ID in <b>Account Center</b> > <b>Project Management</b> in the top-right corner.
      * @param array $ResourceTags Tag to be bound for the clone instance
-     * @param string $TemplateId The ID of a parameter template to be applied to the clone instance, which can be obtained on <b>Parameter Template</b> page in the console. If this parameter is not configured, the default parameter template will be applied.
-     * @param array $AlarmPolicyList Alarm policy ID of the specified clone instance, which can be obtained on <b>Cloud Monitor</b> > <b>Alarm Configuration</b> > <b>Alarm Policy</b> in the console.
+     * @param string $TemplateId The parameter template ID associated with the clone instance
+- If this parameter is not configured, the system will automatically adapt the corresponding default template based on the selected compatible version and architecture.
+- You can query the parameter template list of the instance to get the template ID through the [DescribeParamTemplates](https://intl.cloud.tencent.com/document/product/239/58750?from_cn_redirect=1) API.
+     * @param array $AlarmPolicyList The alarm policy ID of the instance to be cloned. Log in to the [Tencent Cloud Observable Platform console](https://console.cloud.tencent.com/monitor/alarm2/policy), and get the policy ID in <b>Alarm Management</b> > <b>Policy Management</b>.
      */
     function __construct()
     {

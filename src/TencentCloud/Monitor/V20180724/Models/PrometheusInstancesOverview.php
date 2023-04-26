@@ -62,6 +62,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
  * @method void setBoundTotal(integer $BoundTotal) Set Total number of bound clusters
  * @method integer getBoundNormal() Obtain Total number of bound clusters in the normal status
  * @method void setBoundNormal(integer $BoundNormal) Set Total number of bound clusters in the normal status
+ * @method integer getResourcePackageStatus() Obtain Resource pack status (`0`: Unavailable; `1`: Available)
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setResourcePackageStatus(integer $ResourcePackageStatus) Set Resource pack status (`0`: Unavailable; `1`: Available)
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getResourcePackageSpecName() Obtain Resource pack specification name
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setResourcePackageSpecName(string $ResourcePackageSpecName) Set Resource pack specification name
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class PrometheusInstancesOverview extends AbstractModel
 {
@@ -147,6 +155,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $BoundNormal;
 
     /**
+     * @var integer Resource pack status (`0`: Unavailable; `1`: Available)
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $ResourcePackageStatus;
+
+    /**
+     * @var string Resource pack specification name
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $ResourcePackageSpecName;
+
+    /**
      * @param string $InstanceId Instance ID
      * @param string $InstanceName Instance name
      * @param string $VpcId VPC ID
@@ -168,6 +188,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $BoundTotal Total number of bound clusters
      * @param integer $BoundNormal Total number of bound clusters in the normal status
+     * @param integer $ResourcePackageStatus Resource pack status (`0`: Unavailable; `1`: Available)
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $ResourcePackageSpecName Resource pack specification name
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -240,6 +264,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("BoundNormal",$param) and $param["BoundNormal"] !== null) {
             $this->BoundNormal = $param["BoundNormal"];
+        }
+
+        if (array_key_exists("ResourcePackageStatus",$param) and $param["ResourcePackageStatus"] !== null) {
+            $this->ResourcePackageStatus = $param["ResourcePackageStatus"];
+        }
+
+        if (array_key_exists("ResourcePackageSpecName",$param) and $param["ResourcePackageSpecName"] !== null) {
+            $this->ResourcePackageSpecName = $param["ResourcePackageSpecName"];
         }
     }
 }

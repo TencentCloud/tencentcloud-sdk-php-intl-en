@@ -18,28 +18,20 @@ namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Tag bound to the instance purchased via API
+ * DescribeBandwidthRange request structure.
  *
- * @method string getTagKey() Obtain Tag key
- * @method void setTagKey(string $TagKey) Set Tag key
- * @method string getTagValue() Obtain The value corresponding to the tag key
- * @method void setTagValue(string $TagValue) Set The value corresponding to the tag key
+ * @method string getInstanceId() Obtain Instance ID
+ * @method void setInstanceId(string $InstanceId) Set Instance ID
  */
-class ResourceTag extends AbstractModel
+class DescribeBandwidthRangeRequest extends AbstractModel
 {
     /**
-     * @var string Tag key
+     * @var string Instance ID
      */
-    public $TagKey;
+    public $InstanceId;
 
     /**
-     * @var string The value corresponding to the tag key
-     */
-    public $TagValue;
-
-    /**
-     * @param string $TagKey Tag key
-     * @param string $TagValue The value corresponding to the tag key
+     * @param string $InstanceId Instance ID
      */
     function __construct()
     {
@@ -54,12 +46,8 @@ class ResourceTag extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TagKey",$param) and $param["TagKey"] !== null) {
-            $this->TagKey = $param["TagKey"];
-        }
-
-        if (array_key_exists("TagValue",$param) and $param["TagValue"] !== null) {
-            $this->TagValue = $param["TagValue"];
+        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
+            $this->InstanceId = $param["InstanceId"];
         }
     }
 }

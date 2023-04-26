@@ -18,28 +18,28 @@ namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * VPC information of the custom backup file download address.
+ * The VPC that corresponds to the configured download address of the backup file
  *
- * @method string getRegion() Obtain Region of the VPC of the custom backup file download address.
- * @method void setRegion(string $Region) Set Region of the VPC of the custom backup file download address.
- * @method array getVpcList() Obtain VPC list of the custom backup file download address.
- * @method void setVpcList(array $VpcList) Set VPC list of the custom backup file download address.
+ * @method string getRegion() Obtain The region of the VPC that corresponds to the download address of the backup file
+ * @method void setRegion(string $Region) Set The region of the VPC that corresponds to the download address of the backup file
+ * @method array getVpcList() Obtain The list of VPCs that correspond to the download addresses of the backup files
+ * @method void setVpcList(array $VpcList) Set The list of VPCs that correspond to the download addresses of the backup files
  */
 class BackupLimitVpcItem extends AbstractModel
 {
     /**
-     * @var string Region of the VPC of the custom backup file download address.
+     * @var string The region of the VPC that corresponds to the download address of the backup file
      */
     public $Region;
 
     /**
-     * @var array VPC list of the custom backup file download address.
+     * @var array The list of VPCs that correspond to the download addresses of the backup files
      */
     public $VpcList;
 
     /**
-     * @param string $Region Region of the VPC of the custom backup file download address.
-     * @param array $VpcList VPC list of the custom backup file download address.
+     * @param string $Region The region of the VPC that corresponds to the download address of the backup file
+     * @param array $VpcList The list of VPCs that correspond to the download addresses of the backup files
      */
     function __construct()
     {

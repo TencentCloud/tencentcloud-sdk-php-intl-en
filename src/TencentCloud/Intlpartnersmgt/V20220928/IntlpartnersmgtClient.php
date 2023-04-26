@@ -33,6 +33,9 @@ use TencentCloud\Intlpartnersmgt\V20220928\Models as Models;
 Notes:<br>
 1. The partner should verify the entered email address and mobile number for creating a Tencent Cloud account.<br>
 2. The customer needs to complete personal information after the first login.
+ * @method Models\DescribeBillSummaryByPayModeResponse DescribeBillSummaryByPayMode(Models\DescribeBillSummaryByPayModeRequest $req) This API is used to obtain the total amount of customer bills by payment mode.
+ * @method Models\DescribeBillSummaryByProductResponse DescribeBillSummaryByProduct(Models\DescribeBillSummaryByProductRequest $req) This API is used to obtain the total amount of customer bills by product.
+ * @method Models\DescribeBillSummaryByRegionResponse DescribeBillSummaryByRegion(Models\DescribeBillSummaryByRegionRequest $req) This API is used to obtain the total amount of customer bills by region.
  * @method Models\DescribeCustomerBillDetailResponse DescribeCustomerBillDetail(Models\DescribeCustomerBillDetailRequest $req) This API is used to query the customer bill details.
  * @method Models\DescribeCustomerBillSummaryResponse DescribeCustomerBillSummary(Models\DescribeCustomerBillSummaryRequest $req) This API is used to query the total amount of customer bills.
  * @method Models\GetCountryCodesResponse GetCountryCodes(Models\GetCountryCodesRequest $req) This API is used to obtain country/region codes.

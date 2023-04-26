@@ -24,8 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceName(string $InstanceName) Set Instance name
  * @method string getInstanceId() Obtain Instance ID
  * @method void setInstanceId(string $InstanceId) Set Instance ID
- * @method integer getAppid() Obtain User AppID
- * @method void setAppid(integer $Appid) Set User AppID
+ * @method integer getAppid() Obtain User APPID, which is the unique application ID that matches an account. Some Tencent Cloud products use this APPID.
+
+ * @method void setAppid(integer $Appid) Set User APPID, which is the unique application ID that matches an account. Some Tencent Cloud products use this APPID.
+
  * @method integer getProjectId() Obtain Project ID
  * @method void setProjectId(integer $ProjectId) Set Project ID
  * @method integer getRegionId() Obtain Region ID. <ul><li>`1`: Guangzhou. </li><li>`4`: Shanghai. </li><li>`5`: Hong Kong (China). </li><li>`6`: Toronto. </li> <li>`7`: Shanghai Finance. </li> <li>`8`: Beijing. </li> <li>`9`: Singapore. </li> <li>`11`: Shenzhen Finance. </li> <li>`15`: West US (Silicon Valley). </li><li>`16`: Chengdu. </li><li>`17`: Frankfurt. </li><li>`18`: Seoul. </li><li>`19`: Chongqing. </li><li>`21`: Mumbai. </li><li>`22`: East US (Virginia). </li><li>`23`: Bangkok. </li><li>`24`: Moscow. </li><li>`25`: Tokyo. </li></ul>
@@ -42,18 +44,38 @@ use TencentCloud\Common\AbstractModel;
  * @method void setWanIp(string $WanIp) Set Instance VIP
  * @method integer getPort() Obtain Port number of an instance
  * @method void setPort(integer $Port) Set Port number of an instance
- * @method string getCreatetime() Obtain Instance creation time
- * @method void setCreatetime(string $Createtime) Set Instance creation time
- * @method float getSize() Obtain Instance capacity in MB
- * @method void setSize(float $Size) Set Instance capacity in MB
- * @method float getSizeUsed() Obtain This field has been disused. You can use the [GetMonitorData](https://intl.cloud.tencent.com/document/product/248/31014?from_cn_redirect=1) API to query the capacity used by the instance.
- * @method void setSizeUsed(float $SizeUsed) Set This field has been disused. You can use the [GetMonitorData](https://intl.cloud.tencent.com/document/product/248/31014?from_cn_redirect=1) API to query the capacity used by the instance.
- * @method integer getType() Obtain Instance type. <ul><li>`1`: Redis 2.8 memory edition in cluster architecture. </li><li>`2`: Redis 2.8 memory edition in standard architecture. </li><li>`3`: CKV 3.2 memory edition in standard architecture. </li><li>`4`: CKV 3.2 memory edition in cluster architecture. </li><li>`5`: Redis 2.8 memory edition in standalone architecture. </li></li><li>`6`: Redis 4.0 memory edition in standard architecture. </li></li><li>`7`: Redis 4.0 memory edition in cluster architecture. </li></li><li>`8`: Redis 5.0 memory edition in standard architecture. </li></li><li>`9`: Redis 5.0 memory edition in cluster architecture. </li></ul>
- * @method void setType(integer $Type) Set Instance type. <ul><li>`1`: Redis 2.8 memory edition in cluster architecture. </li><li>`2`: Redis 2.8 memory edition in standard architecture. </li><li>`3`: CKV 3.2 memory edition in standard architecture. </li><li>`4`: CKV 3.2 memory edition in cluster architecture. </li><li>`5`: Redis 2.8 memory edition in standalone architecture. </li></li><li>`6`: Redis 4.0 memory edition in standard architecture. </li></li><li>`7`: Redis 4.0 memory edition in cluster architecture. </li></li><li>`8`: Redis 5.0 memory edition in standard architecture. </li></li><li>`9`: Redis 5.0 memory edition in cluster architecture. </li></ul>
+ * @method string getCreatetime() Obtain Instance creation time in the format of "2020-01-15 10:20:00"
+ * @method void setCreatetime(string $Createtime) Set Instance creation time in the format of "2020-01-15 10:20:00"
+ * @method float getSize() Obtain Instance memory capacity in MB (1 MB = 1024 KB)
+ * @method void setSize(float $Size) Set Instance memory capacity in MB (1 MB = 1024 KB)
+ * @method float getSizeUsed() Obtain This field has been disused. You can use the TCOP’s [GetMonitorData](https://intl.cloud.tencent.com/document/product/248/31014?from_cn_redirect=1) API to query the capacity used by the instance.
+ * @method void setSizeUsed(float $SizeUsed) Set This field has been disused. You can use the TCOP’s [GetMonitorData](https://intl.cloud.tencent.com/document/product/248/31014?from_cn_redirect=1) API to query the capacity used by the instance.
+ * @method integer getType() Obtain Instance type
+- `2`: Redis 2.8 Memory Edition (Standard Architecture).
+- `3`: CKV 3.2 Memory Edition (Standard Architecture).
+- `4`: CKV 3.2 Memory Edition (Cluster Architecture).
+- `5`: Redis 2.8 Memory Edition (Standalone).
+- `6`: Redis 4.0 Memory Edition (Standard Architecture).
+- `7`: Redis 4.0 Memory Edition (Cluster Architecture).
+- `8`: Redis 5.0 Memory Edition (Standard Architecture).
+- `9`: Redis 5.0 Memory Edition (Cluster Architecture).
+- `15`: Redis 6.2 Memory Edition (Standard Architecture).
+- `16`: Redis 6.2 Memory Edition (Cluster Architecture).
+ * @method void setType(integer $Type) Set Instance type
+- `2`: Redis 2.8 Memory Edition (Standard Architecture).
+- `3`: CKV 3.2 Memory Edition (Standard Architecture).
+- `4`: CKV 3.2 Memory Edition (Cluster Architecture).
+- `5`: Redis 2.8 Memory Edition (Standalone).
+- `6`: Redis 4.0 Memory Edition (Standard Architecture).
+- `7`: Redis 4.0 Memory Edition (Cluster Architecture).
+- `8`: Redis 5.0 Memory Edition (Standard Architecture).
+- `9`: Redis 5.0 Memory Edition (Cluster Architecture).
+- `15`: Redis 6.2 Memory Edition (Standard Architecture).
+- `16`: Redis 6.2 Memory Edition (Cluster Architecture).
  * @method integer getAutoRenewFlag() Obtain Whether to set the auto-renewal flag for an instance. <ul><li>`1`: Auto-renewal set. </li><li>`0`: Auto-renewal not set.</li></ul>
  * @method void setAutoRenewFlag(integer $AutoRenewFlag) Set Whether to set the auto-renewal flag for an instance. <ul><li>`1`: Auto-renewal set. </li><li>`0`: Auto-renewal not set.</li></ul>
- * @method string getDeadlineTime() Obtain Instance expiration time
- * @method void setDeadlineTime(string $DeadlineTime) Set Instance expiration time
+ * @method string getDeadlineTime() Obtain The time when a monthly subscribed instance expires
+ * @method void setDeadlineTime(string $DeadlineTime) Set The time when a monthly subscribed instance expires
  * @method string getEngine() Obtain Engine: Redis community edition, Tencent Cloud CKV
  * @method void setEngine(string $Engine) Set Engine: Redis community edition, Tencent Cloud CKV
  * @method string getProductType() Obtain Product type. <ul><li>`standalone`: Standard edition. </li><li>`cluster`: Cluster edition. </li></ul>
@@ -66,8 +88,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBillingMode(integer $BillingMode) Set Billing mode. Only pay-as-you-go billing is supported.
  * @method string getInstanceTitle() Obtain Description of an instance status, such as "Running".
  * @method void setInstanceTitle(string $InstanceTitle) Set Description of an instance status, such as "Running".
- * @method string getOfflineTime() Obtain Scheduled deactivation time
- * @method void setOfflineTime(string $OfflineTime) Set Scheduled deactivation time
+ * @method string getOfflineTime() Obtain The default termination time for isolated instances in the format of "2020-02-15 10:20:00". By default, a pay-as-you-go instance will be terminated after two hours of isolation, and a monthly subscribed instance will be terminated after seven days by default.
+ * @method void setOfflineTime(string $OfflineTime) Set The default termination time for isolated instances in the format of "2020-02-15 10:20:00". By default, a pay-as-you-go instance will be terminated after two hours of isolation, and a monthly subscribed instance will be terminated after seven days by default.
  * @method integer getSubStatus() Obtain Sub-status returned for an instance in process
  * @method void setSubStatus(integer $SubStatus) Set Sub-status returned for an instance in process
  * @method array getTags() Obtain Anti-affinity tag
@@ -82,8 +104,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRedisReplicasNum(integer $RedisReplicasNum) Set Number of replicas
  * @method integer getPriceId() Obtain Billing ID
  * @method void setPriceId(integer $PriceId) Set Billing ID
- * @method string getCloseTime() Obtain Isolation time
- * @method void setCloseTime(string $CloseTime) Set Isolation time
+ * @method string getCloseTime() Obtain The time when an instance start to be isolated
+ * @method void setCloseTime(string $CloseTime) Set The time when an instance start to be isolated
  * @method integer getSlaveReadWeight() Obtain Read weight of a replica node
  * @method void setSlaveReadWeight(integer $SlaveReadWeight) Set Read weight of a replica node
  * @method array getInstanceTags() Obtain Instance tag information
@@ -130,9 +152,9 @@ Note: This field may return null, indicating that no valid value can be obtained
 Note: This field may return null, indicating that no valid value can be obtained.
  * @method void setDiskSize(integer $DiskSize) Set This parameter can be ignored for Redis instance.
 Note: This field may return null, indicating that no valid value can be obtained.
- * @method string getMonitorVersion() Obtain Monitoring granularity type. <ul><li>`1m`: Monitoring at 1-minute granularity. </li><li>`5s`: Monitoring at 5-second granularity. </li></ul>
+ * @method string getMonitorVersion() Obtain Monitoring granularity. <ul><li>`1m`: Monitoring at one-minute granularity. This granularity has been disused. For more information, see [1-Minute Granularity Will Be Disused](https://www.tencentcloud.com/document/product/239/50440).</li><li>`5s`: Monitoring at five-second granularity.</li></ul>
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setMonitorVersion(string $MonitorVersion) Set Monitoring granularity type. <ul><li>`1m`: Monitoring at 1-minute granularity. </li><li>`5s`: Monitoring at 5-second granularity. </li></ul>
+ * @method void setMonitorVersion(string $MonitorVersion) Set Monitoring granularity. <ul><li>`1m`: Monitoring at one-minute granularity. This granularity has been disused. For more information, see [1-Minute Granularity Will Be Disused](https://www.tencentcloud.com/document/product/239/50440).</li><li>`5s`: Monitoring at five-second granularity.</li></ul>
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method integer getClientLimitMin() Obtain The minimum number of max client connections
 Note: This field may return null, indicating that no valid value can be obtained.
@@ -154,10 +176,10 @@ Note: This field may return null, indicating that no valid value can be obtained
 Note: This field may return null, indicating that no valid value can be obtained.
  * @method void setWanAddress(string $WanAddress) Set Public IP
 Note: This field may return null, indicating that no valid value can be obtained.
- * @method string getPolarisServer() Obtain Polaris service address
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setPolarisServer(string $PolarisServer) Set Polaris service address
-Note: This field may return null, indicating that no valid value can be obtained.
+ * @method string getPolarisServer() Obtain Polaris service address, which is for internal use.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setPolarisServer(string $PolarisServer) Set Polaris service address, which is for internal use.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getCurrentProxyVersion() Obtain The current proxy version of an instance
 Note: This field may return null, indicating that no valid value can be obtained.
  * @method void setCurrentProxyVersion(string $CurrentProxyVersion) Set The current proxy version of an instance
@@ -188,7 +210,8 @@ class InstanceSet extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var integer User AppID
+     * @var integer User APPID, which is the unique application ID that matches an account. Some Tencent Cloud products use this APPID.
+
      */
     public $Appid;
 
@@ -233,22 +256,32 @@ class InstanceSet extends AbstractModel
     public $Port;
 
     /**
-     * @var string Instance creation time
+     * @var string Instance creation time in the format of "2020-01-15 10:20:00"
      */
     public $Createtime;
 
     /**
-     * @var float Instance capacity in MB
+     * @var float Instance memory capacity in MB (1 MB = 1024 KB)
      */
     public $Size;
 
     /**
-     * @var float This field has been disused. You can use the [GetMonitorData](https://intl.cloud.tencent.com/document/product/248/31014?from_cn_redirect=1) API to query the capacity used by the instance.
+     * @var float This field has been disused. You can use the TCOP’s [GetMonitorData](https://intl.cloud.tencent.com/document/product/248/31014?from_cn_redirect=1) API to query the capacity used by the instance.
      */
     public $SizeUsed;
 
     /**
-     * @var integer Instance type. <ul><li>`1`: Redis 2.8 memory edition in cluster architecture. </li><li>`2`: Redis 2.8 memory edition in standard architecture. </li><li>`3`: CKV 3.2 memory edition in standard architecture. </li><li>`4`: CKV 3.2 memory edition in cluster architecture. </li><li>`5`: Redis 2.8 memory edition in standalone architecture. </li></li><li>`6`: Redis 4.0 memory edition in standard architecture. </li></li><li>`7`: Redis 4.0 memory edition in cluster architecture. </li></li><li>`8`: Redis 5.0 memory edition in standard architecture. </li></li><li>`9`: Redis 5.0 memory edition in cluster architecture. </li></ul>
+     * @var integer Instance type
+- `2`: Redis 2.8 Memory Edition (Standard Architecture).
+- `3`: CKV 3.2 Memory Edition (Standard Architecture).
+- `4`: CKV 3.2 Memory Edition (Cluster Architecture).
+- `5`: Redis 2.8 Memory Edition (Standalone).
+- `6`: Redis 4.0 Memory Edition (Standard Architecture).
+- `7`: Redis 4.0 Memory Edition (Cluster Architecture).
+- `8`: Redis 5.0 Memory Edition (Standard Architecture).
+- `9`: Redis 5.0 Memory Edition (Cluster Architecture).
+- `15`: Redis 6.2 Memory Edition (Standard Architecture).
+- `16`: Redis 6.2 Memory Edition (Cluster Architecture).
      */
     public $Type;
 
@@ -258,7 +291,7 @@ class InstanceSet extends AbstractModel
     public $AutoRenewFlag;
 
     /**
-     * @var string Instance expiration time
+     * @var string The time when a monthly subscribed instance expires
      */
     public $DeadlineTime;
 
@@ -293,7 +326,7 @@ class InstanceSet extends AbstractModel
     public $InstanceTitle;
 
     /**
-     * @var string Scheduled deactivation time
+     * @var string The default termination time for isolated instances in the format of "2020-02-15 10:20:00". By default, a pay-as-you-go instance will be terminated after two hours of isolation, and a monthly subscribed instance will be terminated after seven days by default.
      */
     public $OfflineTime;
 
@@ -333,7 +366,7 @@ class InstanceSet extends AbstractModel
     public $PriceId;
 
     /**
-     * @var string Isolation time
+     * @var string The time when an instance start to be isolated
      */
     public $CloseTime;
 
@@ -409,7 +442,7 @@ Note: This field may return null, indicating that no valid value can be obtained
     public $DiskSize;
 
     /**
-     * @var string Monitoring granularity type. <ul><li>`1m`: Monitoring at 1-minute granularity. </li><li>`5s`: Monitoring at 5-second granularity. </li></ul>
+     * @var string Monitoring granularity. <ul><li>`1m`: Monitoring at one-minute granularity. This granularity has been disused. For more information, see [1-Minute Granularity Will Be Disused](https://www.tencentcloud.com/document/product/239/50440).</li><li>`5s`: Monitoring at five-second granularity.</li></ul>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $MonitorVersion;
@@ -445,8 +478,8 @@ Note: This field may return null, indicating that no valid value can be obtained
     public $WanAddress;
 
     /**
-     * @var string Polaris service address
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @var string Polaris service address, which is for internal use.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $PolarisServer;
 
@@ -477,7 +510,8 @@ Note: This field may return null, indicating that no valid value can be obtained
     /**
      * @param string $InstanceName Instance name
      * @param string $InstanceId Instance ID
-     * @param integer $Appid User AppID
+     * @param integer $Appid User APPID, which is the unique application ID that matches an account. Some Tencent Cloud products use this APPID.
+
      * @param integer $ProjectId Project ID
      * @param integer $RegionId Region ID. <ul><li>`1`: Guangzhou. </li><li>`4`: Shanghai. </li><li>`5`: Hong Kong (China). </li><li>`6`: Toronto. </li> <li>`7`: Shanghai Finance. </li> <li>`8`: Beijing. </li> <li>`9`: Singapore. </li> <li>`11`: Shenzhen Finance. </li> <li>`15`: West US (Silicon Valley). </li><li>`16`: Chengdu. </li><li>`17`: Frankfurt. </li><li>`18`: Seoul. </li><li>`19`: Chongqing. </li><li>`21`: Mumbai. </li><li>`22`: East US (Virginia). </li><li>`23`: Bangkok. </li><li>`24`: Moscow. </li><li>`25`: Tokyo. </li></ul>
      * @param integer $ZoneId Region ID
@@ -486,19 +520,29 @@ Note: This field may return null, indicating that no valid value can be obtained
      * @param integer $Status Current instance status. <ul><li>`0`: To be initialized. </li><li>`1`: In the process. </li><li>`2`: Running. </li><li>`-2`: Isolated. </li><li>`-3`: To be deleted. </li></ul>
      * @param string $WanIp Instance VIP
      * @param integer $Port Port number of an instance
-     * @param string $Createtime Instance creation time
-     * @param float $Size Instance capacity in MB
-     * @param float $SizeUsed This field has been disused. You can use the [GetMonitorData](https://intl.cloud.tencent.com/document/product/248/31014?from_cn_redirect=1) API to query the capacity used by the instance.
-     * @param integer $Type Instance type. <ul><li>`1`: Redis 2.8 memory edition in cluster architecture. </li><li>`2`: Redis 2.8 memory edition in standard architecture. </li><li>`3`: CKV 3.2 memory edition in standard architecture. </li><li>`4`: CKV 3.2 memory edition in cluster architecture. </li><li>`5`: Redis 2.8 memory edition in standalone architecture. </li></li><li>`6`: Redis 4.0 memory edition in standard architecture. </li></li><li>`7`: Redis 4.0 memory edition in cluster architecture. </li></li><li>`8`: Redis 5.0 memory edition in standard architecture. </li></li><li>`9`: Redis 5.0 memory edition in cluster architecture. </li></ul>
+     * @param string $Createtime Instance creation time in the format of "2020-01-15 10:20:00"
+     * @param float $Size Instance memory capacity in MB (1 MB = 1024 KB)
+     * @param float $SizeUsed This field has been disused. You can use the TCOP’s [GetMonitorData](https://intl.cloud.tencent.com/document/product/248/31014?from_cn_redirect=1) API to query the capacity used by the instance.
+     * @param integer $Type Instance type
+- `2`: Redis 2.8 Memory Edition (Standard Architecture).
+- `3`: CKV 3.2 Memory Edition (Standard Architecture).
+- `4`: CKV 3.2 Memory Edition (Cluster Architecture).
+- `5`: Redis 2.8 Memory Edition (Standalone).
+- `6`: Redis 4.0 Memory Edition (Standard Architecture).
+- `7`: Redis 4.0 Memory Edition (Cluster Architecture).
+- `8`: Redis 5.0 Memory Edition (Standard Architecture).
+- `9`: Redis 5.0 Memory Edition (Cluster Architecture).
+- `15`: Redis 6.2 Memory Edition (Standard Architecture).
+- `16`: Redis 6.2 Memory Edition (Cluster Architecture).
      * @param integer $AutoRenewFlag Whether to set the auto-renewal flag for an instance. <ul><li>`1`: Auto-renewal set. </li><li>`0`: Auto-renewal not set.</li></ul>
-     * @param string $DeadlineTime Instance expiration time
+     * @param string $DeadlineTime The time when a monthly subscribed instance expires
      * @param string $Engine Engine: Redis community edition, Tencent Cloud CKV
      * @param string $ProductType Product type. <ul><li>`standalone`: Standard edition. </li><li>`cluster`: Cluster edition. </li></ul>
      * @param string $UniqVpcId VPC ID, such as vpc-fk33jsf43kgv.
      * @param string $UniqSubnetId VPC subnet ID, such as subnet-fd3j6l35mm0.
      * @param integer $BillingMode Billing mode. Only pay-as-you-go billing is supported.
      * @param string $InstanceTitle Description of an instance status, such as "Running".
-     * @param string $OfflineTime Scheduled deactivation time
+     * @param string $OfflineTime The default termination time for isolated instances in the format of "2020-02-15 10:20:00". By default, a pay-as-you-go instance will be terminated after two hours of isolation, and a monthly subscribed instance will be terminated after seven days by default.
      * @param integer $SubStatus Sub-status returned for an instance in process
      * @param array $Tags Anti-affinity tag
      * @param array $InstanceNode Instance node information
@@ -506,7 +550,7 @@ Note: This field may return null, indicating that no valid value can be obtained
      * @param integer $RedisShardNum Number of shards
      * @param integer $RedisReplicasNum Number of replicas
      * @param integer $PriceId Billing ID
-     * @param string $CloseTime Isolation time
+     * @param string $CloseTime The time when an instance start to be isolated
      * @param integer $SlaveReadWeight Read weight of a replica node
      * @param array $InstanceTags Instance tag information
 Note: This field may return null, indicating that no valid value can be obtained.
@@ -530,7 +574,7 @@ Note: This field may return null, indicating that no valid value can be obtained
 Note: This field may return null, indicating that no valid value can be obtained.
      * @param integer $DiskSize This parameter can be ignored for Redis instance.
 Note: This field may return null, indicating that no valid value can be obtained.
-     * @param string $MonitorVersion Monitoring granularity type. <ul><li>`1m`: Monitoring at 1-minute granularity. </li><li>`5s`: Monitoring at 5-second granularity. </li></ul>
+     * @param string $MonitorVersion Monitoring granularity. <ul><li>`1m`: Monitoring at one-minute granularity. This granularity has been disused. For more information, see [1-Minute Granularity Will Be Disused](https://www.tencentcloud.com/document/product/239/50440).</li><li>`5s`: Monitoring at five-second granularity.</li></ul>
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $ClientLimitMin The minimum number of max client connections
 Note: This field may return null, indicating that no valid value can be obtained.
@@ -542,8 +586,8 @@ Note: This field may return null, indicating that no valid value can be obtained
 Note: This field may return null, indicating that no valid value can be obtained.
      * @param string $WanAddress Public IP
 Note: This field may return null, indicating that no valid value can be obtained.
-     * @param string $PolarisServer Polaris service address
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @param string $PolarisServer Polaris service address, which is for internal use.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $CurrentProxyVersion The current proxy version of an instance
 Note: This field may return null, indicating that no valid value can be obtained.
      * @param string $CurrentRedisVersion The current cache minor version of an instance

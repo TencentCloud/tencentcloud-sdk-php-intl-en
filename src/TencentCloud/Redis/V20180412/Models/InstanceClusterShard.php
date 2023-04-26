@@ -20,39 +20,49 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Information list of instance shards
  *
- * @method string getShardName() Obtain Shard node name
- * @method void setShardName(string $ShardName) Set Shard node name
- * @method string getShardId() Obtain Shard node ID
- * @method void setShardId(string $ShardId) Set Shard node ID
- * @method integer getRole() Obtain Role
- * @method void setRole(integer $Role) Set Role
+ * @method string getShardName() Obtain The name of a shard node
+ * @method void setShardName(string $ShardName) Set The name of a shard node
+ * @method string getShardId() Obtain The serial number of a shard node
+ * @method void setShardId(string $ShardId) Set The serial number of a shard node
+ * @method integer getRole() Obtain The role of a shard node
+- `0`: Master node.
+- `1`: Replica node.
+ * @method void setRole(integer $Role) Set The role of a shard node
+- `0`: Master node.
+- `1`: Replica node.
  * @method integer getKeys() Obtain Number of keys
  * @method void setKeys(integer $Keys) Set Number of keys
  * @method string getSlots() Obtain Slot information
  * @method void setSlots(string $Slots) Set Slot information
- * @method integer getStorage() Obtain Storage capacity
- * @method void setStorage(integer $Storage) Set Storage capacity
+ * @method integer getStorage() Obtain Used Capacity
+ * @method void setStorage(integer $Storage) Set Used Capacity
  * @method float getStorageSlope() Obtain Capacity slope
  * @method void setStorageSlope(float $StorageSlope) Set Capacity slope
- * @method string getRunid() Obtain ID of the runtime node of the instance
- * @method void setRunid(string $Runid) Set ID of the runtime node of the instance
- * @method integer getConnected() Obtain Service status. 0: down; 1: on
- * @method void setConnected(integer $Connected) Set Service status. 0: down; 1: on
+ * @method string getRunid() Obtain Instance runtime node ID
+ * @method void setRunid(string $Runid) Set Instance runtime node ID
+ * @method integer getConnected() Obtain Service status
+- `0`: Down.
+- `1`: On.
+ * @method void setConnected(integer $Connected) Set Service status
+- `0`: Down.
+- `1`: On.
  */
 class InstanceClusterShard extends AbstractModel
 {
     /**
-     * @var string Shard node name
+     * @var string The name of a shard node
      */
     public $ShardName;
 
     /**
-     * @var string Shard node ID
+     * @var string The serial number of a shard node
      */
     public $ShardId;
 
     /**
-     * @var integer Role
+     * @var integer The role of a shard node
+- `0`: Master node.
+- `1`: Replica node.
      */
     public $Role;
 
@@ -67,7 +77,7 @@ class InstanceClusterShard extends AbstractModel
     public $Slots;
 
     /**
-     * @var integer Storage capacity
+     * @var integer Used Capacity
      */
     public $Storage;
 
@@ -77,25 +87,31 @@ class InstanceClusterShard extends AbstractModel
     public $StorageSlope;
 
     /**
-     * @var string ID of the runtime node of the instance
+     * @var string Instance runtime node ID
      */
     public $Runid;
 
     /**
-     * @var integer Service status. 0: down; 1: on
+     * @var integer Service status
+- `0`: Down.
+- `1`: On.
      */
     public $Connected;
 
     /**
-     * @param string $ShardName Shard node name
-     * @param string $ShardId Shard node ID
-     * @param integer $Role Role
+     * @param string $ShardName The name of a shard node
+     * @param string $ShardId The serial number of a shard node
+     * @param integer $Role The role of a shard node
+- `0`: Master node.
+- `1`: Replica node.
      * @param integer $Keys Number of keys
      * @param string $Slots Slot information
-     * @param integer $Storage Storage capacity
+     * @param integer $Storage Used Capacity
      * @param float $StorageSlope Capacity slope
-     * @param string $Runid ID of the runtime node of the instance
-     * @param integer $Connected Service status. 0: down; 1: on
+     * @param string $Runid Instance runtime node ID
+     * @param integer $Connected Service status
+- `0`: Down.
+- `1`: On.
      */
     function __construct()
     {

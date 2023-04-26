@@ -26,6 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setKey(string $Key) Set Filter dimension name
  * @method string getValue() Obtain Filter value. For the `in` filter method, separate multiple values by comma.
  * @method void setValue(string $Value) Set Filter value. For the `in` filter method, separate multiple values by comma.
+ * @method string getName() Obtain Filter name
+ * @method void setName(string $Name) Set Filter name
+ * @method array getValues() Obtain Filter value range
+ * @method void setValues(array $Values) Set Filter value range
  */
 class Filter extends AbstractModel
 {
@@ -45,9 +49,21 @@ class Filter extends AbstractModel
     public $Value;
 
     /**
+     * @var string Filter name
+     */
+    public $Name;
+
+    /**
+     * @var array Filter value range
+     */
+    public $Values;
+
+    /**
      * @param string $Type Filter method. Valid values: `=`, `!=`, `in`.
      * @param string $Key Filter dimension name
      * @param string $Value Filter value. For the `in` filter method, separate multiple values by comma.
+     * @param string $Name Filter name
+     * @param array $Values Filter value range
      */
     function __construct()
     {
@@ -72,6 +88,14 @@ class Filter extends AbstractModel
 
         if (array_key_exists("Value",$param) and $param["Value"] !== null) {
             $this->Value = $param["Value"];
+        }
+
+        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
+            $this->Name = $param["Name"];
+        }
+
+        if (array_key_exists("Values",$param) and $param["Values"] !== null) {
+            $this->Values = $param["Values"];
         }
     }
 }

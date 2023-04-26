@@ -115,7 +115,7 @@ Note: **If you use a sub-account, you can only query the alarm records of author
 <li>You can query the details of an instance by its ID, name, or status.</li>
 <li>If this parameter is empty, the information of a certain number of instances under the current account will be returned. The number is specified by `Limit` and is 20 by default.</li>
 </ul>
- * @method Models\DescribePrometheusInstancesOverviewResponse DescribePrometheusInstancesOverview(Models\DescribePrometheusInstancesOverviewRequest $req) This API is used to get the list of CM-integrated instances.
+ * @method Models\DescribePrometheusInstancesOverviewResponse DescribePrometheusInstancesOverview(Models\DescribePrometheusInstancesOverviewRequest $req) This API is used to obtain the list of Tencent Managed Service for Prometheus (TMP) instances and the clusters associated with them.
  * @method Models\DescribePrometheusRecordRuleYamlResponse DescribePrometheusRecordRuleYaml(Models\DescribePrometheusRecordRuleYamlRequest $req) This API is used to get the YAML list of Prometheus recording rules.
  * @method Models\DescribePrometheusRecordRulesResponse DescribePrometheusRecordRules(Models\DescribePrometheusRecordRulesRequest $req) This API is used to get the list of recording rules, including those created by CRD resources in the associated cluster.
  * @method Models\DescribePrometheusScrapeJobsResponse DescribePrometheusScrapeJobs(Models\DescribePrometheusScrapeJobsRequest $req) This API is used to list Prometheus scrape tasks.
@@ -157,6 +157,8 @@ If you need to call a large number of APIs to pull metrics or objects at a time,
  * @method Models\ModifyPrometheusRecordRuleYamlResponse ModifyPrometheusRecordRuleYaml(Models\ModifyPrometheusRecordRuleYamlRequest $req) This API is used to modify a Prometheus recording instance through YAML.
  * @method Models\ModifyPrometheusTempResponse ModifyPrometheusTemp(Models\ModifyPrometheusTempRequest $req) This API is used to modify a template.
  * @method Models\PutMonitorDataResponse PutMonitorData(Models\PutMonitorDataRequest $req) 对应的功能控制台及后端服务已于2年前下线，剩余该API接口未下线。
+
+This API is not deprecated, but its related console features and backend services were deactivated two years ago.
 
 The default API request rate limit is 50 requests/sec.
 The default upper limit on metrics of a single tenant is 100.
