@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeAssetHostDetail response structure.
  *
- * @method string getUUID() Obtain CWPP UUID
- * @method void setUUID(string $UUID) Set CWPP UUID
+ * @method string getUUID() Obtain TCSS UUID
+ * @method void setUUID(string $UUID) Set TCSS UUID
  * @method string getUpdateTime() Obtain Update time
  * @method void setUpdateTime(string $UpdateTime) Set Update time
  * @method string getHostName() Obtain Server name
@@ -78,7 +78,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeAssetHostDetailResponse extends AbstractModel
 {
     /**
-     * @var string CWPP UUID
+     * @var string TCSS UUID
      */
     public $UUID;
 
@@ -213,7 +213,7 @@ class DescribeAssetHostDetailResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $UUID CWPP UUID
+     * @param string $UUID TCSS UUID
      * @param string $UpdateTime Update time
      * @param string $HostName Server name
      * @param string $Group Server group

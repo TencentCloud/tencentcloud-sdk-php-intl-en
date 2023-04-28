@@ -36,6 +36,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStorageType(string $StorageType) Set Log topic storage type. Valid values: `hot` (STANDARD storage); `cold` (IA storage). Default value: `hot`.
  * @method integer getPeriod() Obtain Lifecycle in days. Value range: 1–3600 (STANDARD storage); 7–3600 (IA storage). `3640` indicates permanent retention.
  * @method void setPeriod(integer $Period) Set Lifecycle in days. Value range: 1–3600 (STANDARD storage); 7–3600 (IA storage). `3640` indicates permanent retention.
+ * @method string getDescribes() Obtain Log topic description
+ * @method void setDescribes(string $Describes) Set Log topic description
+ * @method integer getHotPeriod() Obtain `0`: Disable log transitioning.
+A value other than `0`: The number of STANDARD storage days after log transitioning is enabled (valid only if `StorageType` is `hot`). Note: `HotPeriod` should be greater than or equal to `7` and less than `Period`.
+ * @method void setHotPeriod(integer $HotPeriod) Set `0`: Disable log transitioning.
+A value other than `0`: The number of STANDARD storage days after log transitioning is enabled (valid only if `StorageType` is `hot`). Note: `HotPeriod` should be greater than or equal to `7` and less than `Period`.
+ * @method boolean getIsWebTracking() Obtain Whether to enable web tracking. Valid values: `false` (disable); `true` (enable)
+ * @method void setIsWebTracking(boolean $IsWebTracking) Set Whether to enable web tracking. Valid values: `false` (disable); `true` (enable)
  */
 class CreateTopicRequest extends AbstractModel
 {
@@ -80,6 +88,22 @@ class CreateTopicRequest extends AbstractModel
     public $Period;
 
     /**
+     * @var string Log topic description
+     */
+    public $Describes;
+
+    /**
+     * @var integer `0`: Disable log transitioning.
+A value other than `0`: The number of STANDARD storage days after log transitioning is enabled (valid only if `StorageType` is `hot`). Note: `HotPeriod` should be greater than or equal to `7` and less than `Period`.
+     */
+    public $HotPeriod;
+
+    /**
+     * @var boolean Whether to enable web tracking. Valid values: `false` (disable); `true` (enable)
+     */
+    public $IsWebTracking;
+
+    /**
      * @param string $LogsetId Logset ID
      * @param string $TopicName Log topic name
      * @param integer $PartitionCount Number of log topic partitions. Default value: 1. Maximum value: 10
@@ -88,6 +112,10 @@ class CreateTopicRequest extends AbstractModel
      * @param integer $MaxSplitPartitions Maximum number of partitions to split into for this topic if automatic split is enabled. Default value: 50
      * @param string $StorageType Log topic storage type. Valid values: `hot` (STANDARD storage); `cold` (IA storage). Default value: `hot`.
      * @param integer $Period Lifecycle in days. Value range: 1–3600 (STANDARD storage); 7–3600 (IA storage). `3640` indicates permanent retention.
+     * @param string $Describes Log topic description
+     * @param integer $HotPeriod `0`: Disable log transitioning.
+A value other than `0`: The number of STANDARD storage days after log transitioning is enabled (valid only if `StorageType` is `hot`). Note: `HotPeriod` should be greater than or equal to `7` and less than `Period`.
+     * @param boolean $IsWebTracking Whether to enable web tracking. Valid values: `false` (disable); `true` (enable)
      */
     function __construct()
     {
@@ -137,6 +165,18 @@ class CreateTopicRequest extends AbstractModel
 
         if (array_key_exists("Period",$param) and $param["Period"] !== null) {
             $this->Period = $param["Period"];
+        }
+
+        if (array_key_exists("Describes",$param) and $param["Describes"] !== null) {
+            $this->Describes = $param["Describes"];
+        }
+
+        if (array_key_exists("HotPeriod",$param) and $param["HotPeriod"] !== null) {
+            $this->HotPeriod = $param["HotPeriod"];
+        }
+
+        if (array_key_exists("IsWebTracking",$param) and $param["IsWebTracking"] !== null) {
+            $this->IsWebTracking = $param["IsWebTracking"];
         }
     }
 }

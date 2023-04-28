@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDosageBeginTime(string $DosageBeginTime) Set The start time of the usage
  * @method string getDosageEndTime() Obtain The end time of the usage
  * @method void setDosageEndTime(string $DosageEndTime) Set The end time of the usage
- * @method string getSubProductCodeName() Obtain Sub-product name
- * @method void setSubProductCodeName(string $SubProductCodeName) Set Sub-product name
+ * @method string getSubProductCodeName() Obtain Subproduct name
+ * @method void setSubProductCodeName(string $SubProductCodeName) Set Subproduct name
  * @method string getBillingItemCodeName() Obtain Billable item name
  * @method void setBillingItemCodeName(string $BillingItemCodeName) Set Billable item name
  * @method string getDosageValue() Obtain Usage
@@ -53,7 +53,7 @@ class CosDetailSets extends AbstractModel
     public $DosageEndTime;
 
     /**
-     * @var string Sub-product name
+     * @var string Subproduct name
      */
     public $SubProductCodeName;
 
@@ -76,7 +76,7 @@ class CosDetailSets extends AbstractModel
      * @param string $BucketName Bucket name
      * @param string $DosageBeginTime The start time of the usage
      * @param string $DosageEndTime The end time of the usage
-     * @param string $SubProductCodeName Sub-product name
+     * @param string $SubProductCodeName Subproduct name
      * @param string $BillingItemCodeName Billable item name
      * @param string $DosageValue Usage
      * @param string $Unit Unit of the billable item

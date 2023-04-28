@@ -14,63 +14,63 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cls\V20201016\Models;
+namespace TencentCloud\Monitor\V20180724\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Multi-Dimensional analysis dimension
+ * Number of scrape targets
  *
- * @method string getName() Obtain Analysis name
+ * @method integer getTotal() Obtain The total count
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setName(string $Name) Set Analysis name
+ * @method void setTotal(integer $Total) Set The total count
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getType() Obtain Type of data being analyzed. Valid values: `query`, `field`, `original`
+ * @method integer getUp() Obtain Number of online targets
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setType(string $Type) Set Type of data being analyzed. Valid values: `query`, `field`, `original`
+ * @method void setUp(integer $Up) Set Number of online targets
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getContent() Obtain Analysis content
+ * @method integer getDown() Obtain Number of offline targets
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setContent(string $Content) Set Analysis content
+ * @method void setDown(integer $Down) Set Number of offline targets
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method array getConfigInfo() Obtain Configuration
+ * @method integer getUnknown() Obtain Number of unknown status
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setConfigInfo(array $ConfigInfo) Set Configuration
+ * @method void setUnknown(integer $Unknown) Set Number of unknown status
 Note: This field may return null, indicating that no valid values can be obtained.
  */
-class AnalysisDimensional extends AbstractModel
+class Targets extends AbstractModel
 {
     /**
-     * @var string Analysis name
+     * @var integer The total count
 Note: This field may return null, indicating that no valid values can be obtained.
      */
-    public $Name;
+    public $Total;
 
     /**
-     * @var string Type of data being analyzed. Valid values: `query`, `field`, `original`
+     * @var integer Number of online targets
 Note: This field may return null, indicating that no valid values can be obtained.
      */
-    public $Type;
+    public $Up;
 
     /**
-     * @var string Analysis content
+     * @var integer Number of offline targets
 Note: This field may return null, indicating that no valid values can be obtained.
      */
-    public $Content;
+    public $Down;
 
     /**
-     * @var array Configuration
+     * @var integer Number of unknown status
 Note: This field may return null, indicating that no valid values can be obtained.
      */
-    public $ConfigInfo;
+    public $Unknown;
 
     /**
-     * @param string $Name Analysis name
+     * @param integer $Total The total count
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Type Type of data being analyzed. Valid values: `query`, `field`, `original`
+     * @param integer $Up Number of online targets
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Content Analysis content
+     * @param integer $Down Number of offline targets
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param array $ConfigInfo Configuration
+     * @param integer $Unknown Number of unknown status
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
@@ -86,25 +86,20 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
-            $this->Name = $param["Name"];
+        if (array_key_exists("Total",$param) and $param["Total"] !== null) {
+            $this->Total = $param["Total"];
         }
 
-        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
-            $this->Type = $param["Type"];
+        if (array_key_exists("Up",$param) and $param["Up"] !== null) {
+            $this->Up = $param["Up"];
         }
 
-        if (array_key_exists("Content",$param) and $param["Content"] !== null) {
-            $this->Content = $param["Content"];
+        if (array_key_exists("Down",$param) and $param["Down"] !== null) {
+            $this->Down = $param["Down"];
         }
 
-        if (array_key_exists("ConfigInfo",$param) and $param["ConfigInfo"] !== null) {
-            $this->ConfigInfo = [];
-            foreach ($param["ConfigInfo"] as $key => $value){
-                $obj = new AlarmAnalysisConfig();
-                $obj->deserialize($value);
-                array_push($this->ConfigInfo, $obj);
-            }
+        if (array_key_exists("Unknown",$param) and $param["Unknown"] !== null) {
+            $this->Unknown = $param["Unknown"];
         }
     }
 }

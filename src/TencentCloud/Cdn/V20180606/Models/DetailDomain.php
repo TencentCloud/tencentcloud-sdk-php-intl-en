@@ -33,11 +33,13 @@ Note: this field may return `null`, indicating that no valid values can be obtai
  * @method string getStatus() Obtain Acceleration service status
 `rejected`: The domain name is rejected due to expiration/deregistration of its ICP filing
 `processing`: Deploying
+`closing`: Disabling
 `online`: Enabled
 `offline`: Disabled
  * @method void setStatus(string $Status) Set Acceleration service status
 `rejected`: The domain name is rejected due to expiration/deregistration of its ICP filing
 `processing`: Deploying
+`closing`: Disabling
 `online`: Enabled
 `offline`: Disabled
  * @method integer getProjectId() Obtain Project ID, which can be viewed on the Tencent Cloud project management page
@@ -310,10 +312,14 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method void setQnPrivateAccess(QnPrivateAccess $QnPrivateAccess) Set Access authentication for QiNiu Cloud Kodo origin
 Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method HttpsBilling getHttpsBilling() Obtain HTTPS service
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setHttpsBilling(HttpsBilling $HttpsBilling) Set HTTPS service
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method HttpsBilling getHttpsBilling() Obtain HTTPS (enabled by default)
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setHttpsBilling(HttpsBilling $HttpsBilling) Set HTTPS (enabled by default)
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method OthersPrivateAccess getOthersPrivateAccess() Obtain Origin-pull authentication for other origins
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setOthersPrivateAccess(OthersPrivateAccess $OthersPrivateAccess) Set Origin-pull authentication for other origins
+Note: this field may return `null`, indicating that no valid values can be obtained.
  */
 class DetailDomain extends AbstractModel
 {
@@ -342,6 +348,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
      * @var string Acceleration service status
 `rejected`: The domain name is rejected due to expiration/deregistration of its ICP filing
 `processing`: Deploying
+`closing`: Disabling
 `online`: Enabled
 `offline`: Disabled
      */
@@ -719,10 +726,16 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     public $QnPrivateAccess;
 
     /**
-     * @var HttpsBilling HTTPS service
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var HttpsBilling HTTPS (enabled by default)
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public $HttpsBilling;
+
+    /**
+     * @var OthersPrivateAccess Origin-pull authentication for other origins
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $OthersPrivateAccess;
 
     /**
      * @param string $ResourceId Domain name ID
@@ -733,6 +746,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
      * @param string $Status Acceleration service status
 `rejected`: The domain name is rejected due to expiration/deregistration of its ICP filing
 `processing`: Deploying
+`closing`: Disabling
 `online`: Enabled
 `offline`: Disabled
      * @param integer $ProjectId Project ID, which can be viewed on the Tencent Cloud project management page
@@ -870,8 +884,10 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param QnPrivateAccess $QnPrivateAccess Access authentication for QiNiu Cloud Kodo origin
 Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param HttpsBilling $HttpsBilling HTTPS service
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param HttpsBilling $HttpsBilling HTTPS (enabled by default)
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param OthersPrivateAccess $OthersPrivateAccess Origin-pull authentication for other origins
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -1202,6 +1218,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (array_key_exists("HttpsBilling",$param) and $param["HttpsBilling"] !== null) {
             $this->HttpsBilling = new HttpsBilling();
             $this->HttpsBilling->deserialize($param["HttpsBilling"]);
+        }
+
+        if (array_key_exists("OthersPrivateAccess",$param) and $param["OthersPrivateAccess"] !== null) {
+            $this->OthersPrivateAccess = new OthersPrivateAccess();
+            $this->OthersPrivateAccess->deserialize($param["OthersPrivateAccess"]);
         }
     }
 }

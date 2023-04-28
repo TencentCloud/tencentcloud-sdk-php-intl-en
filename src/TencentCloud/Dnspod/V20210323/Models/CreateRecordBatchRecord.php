@@ -58,6 +58,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setMX(integer $MX) Set MX weight of the record
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getWeight() Obtain The record weight.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setWeight(integer $Weight) Set The record weight.
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class CreateRecordBatchRecord extends AbstractModel
 {
@@ -121,6 +125,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $MX;
 
     /**
+     * @var integer The record weight.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $Weight;
+
+    /**
      * @param string $SubDomain Subdomain (host record).
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $RecordType Record type. For more information, see the `DescribeRecordType` API.
@@ -139,6 +149,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $Id ID of the record in the list
      * @param integer $MX MX weight of the record
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $Weight The record weight.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
@@ -192,6 +204,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("MX",$param) and $param["MX"] !== null) {
             $this->MX = $param["MX"];
+        }
+
+        if (array_key_exists("Weight",$param) and $param["Weight"] !== null) {
+            $this->Weight = $param["Weight"];
         }
     }
 }

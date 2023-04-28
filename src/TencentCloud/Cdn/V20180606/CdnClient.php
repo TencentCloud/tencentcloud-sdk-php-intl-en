@@ -24,6 +24,7 @@ use TencentCloud\Cdn\V20180606\Models as Models;
 
 /**
  * @method Models\AddCLSTopicDomainsResponse AddCLSTopicDomains(Models\AddCLSTopicDomainsRequest $req) This API is used to add one or more domains to a specified log topic.
+ * @method Models\AddCdnDomainResponse AddCdnDomain(Models\AddCdnDomainRequest $req) This API is used to add a CDN acceleration domain name. Up to 100 domain names can be added per minute.
  * @method Models\CreateClsLogTopicResponse CreateClsLogTopic(Models\CreateClsLogTopicRequest $req) This API is used to create a log topic. Up to 10 log topics can be created under one logset.
  * @method Models\CreateScdnFailedLogTaskResponse CreateScdnFailedLogTask(Models\CreateScdnFailedLogTaskRequest $req) This API is used to recreate a failed event log task.
  * @method Models\DeleteCdnDomainResponse DeleteCdnDomain(Models\DeleteCdnDomainRequest $req) This API is used to delete a specified acceleration domain name.

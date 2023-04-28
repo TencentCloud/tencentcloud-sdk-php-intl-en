@@ -40,6 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setManualCheckClusterCount(integer $ManualCheckClusterCount) Set Number of clusters manually checked
  * @method integer getFailedClusterCount() Obtain Number of clusters that failed the check
  * @method void setFailedClusterCount(integer $FailedClusterCount) Set Number of clusters that failed the check
+ * @method integer getNotImportedClusterCount() Obtain Number of clusters not imported
+ * @method void setNotImportedClusterCount(integer $NotImportedClusterCount) Set Number of clusters not imported
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -96,6 +98,11 @@ class DescribeClusterSummaryResponse extends AbstractModel
     public $FailedClusterCount;
 
     /**
+     * @var integer Number of clusters not imported
+     */
+    public $NotImportedClusterCount;
+
+    /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
@@ -111,6 +118,7 @@ class DescribeClusterSummaryResponse extends AbstractModel
      * @param integer $AutoCheckClusterCount Number of clusters automatically checked
      * @param integer $ManualCheckClusterCount Number of clusters manually checked
      * @param integer $FailedClusterCount Number of clusters that failed the check
+     * @param integer $NotImportedClusterCount Number of clusters not imported
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -164,6 +172,10 @@ class DescribeClusterSummaryResponse extends AbstractModel
 
         if (array_key_exists("FailedClusterCount",$param) and $param["FailedClusterCount"] !== null) {
             $this->FailedClusterCount = $param["FailedClusterCount"];
+        }
+
+        if (array_key_exists("NotImportedClusterCount",$param) and $param["NotImportedClusterCount"] !== null) {
+            $this->NotImportedClusterCount = $param["NotImportedClusterCount"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

@@ -31,12 +31,14 @@ use TencentCloud\Common\AbstractModel;
  * @method string getStatus() Obtain Acceleration service status
 `rejected`: The domain name is rejected due to expiration/deregistration of its ICP filing
 `processing`: Deploying
-`online`: Activated
+`closing`: Disabling
+`online`: Enabled
 `offline`: Disabled
  * @method void setStatus(string $Status) Set Acceleration service status
 `rejected`: The domain name is rejected due to expiration/deregistration of its ICP filing
 `processing`: Deploying
-`online`: Activated
+`closing`: Disabling
+`online`: Enabled
 `offline`: Disabled
  * @method integer getProjectId() Obtain Project ID, which can be viewed on the Tencent Cloud project management page
  * @method void setProjectId(integer $ProjectId) Set Project ID, which can be viewed on the Tencent Cloud project management page
@@ -121,7 +123,8 @@ class BriefDomain extends AbstractModel
      * @var string Acceleration service status
 `rejected`: The domain name is rejected due to expiration/deregistration of its ICP filing
 `processing`: Deploying
-`online`: Activated
+`closing`: Disabling
+`online`: Enabled
 `offline`: Disabled
      */
     public $Status;
@@ -202,7 +205,8 @@ global: Locked globally
      * @param string $Status Acceleration service status
 `rejected`: The domain name is rejected due to expiration/deregistration of its ICP filing
 `processing`: Deploying
-`online`: Activated
+`closing`: Disabling
+`online`: Enabled
 `offline`: Disabled
      * @param integer $ProjectId Project ID, which can be viewed on the Tencent Cloud project management page
      * @param string $ServiceType Domain name service type

@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getTimeout() Obtain Timeout period. If it is not set, it will be 5 minutes by default
  * @method void setTimeout(integer $Timeout) Set Timeout period. If it is not set, it will be 5 minutes by default
+ * @method integer getFileType() Obtain Bucket type. Valid values: `1`: (Web, which is the default value), `2` (Application).
+ * @method void setFileType(integer $FileType) Set Bucket type. Valid values: `1`: (Web, which is the default value), `2` (Application).
  */
 class DescribeReleaseFileSignRequest extends AbstractModel
 {
@@ -31,7 +33,13 @@ class DescribeReleaseFileSignRequest extends AbstractModel
     public $Timeout;
 
     /**
+     * @var integer Bucket type. Valid values: `1`: (Web, which is the default value), `2` (Application).
+     */
+    public $FileType;
+
+    /**
      * @param integer $Timeout Timeout period. If it is not set, it will be 5 minutes by default
+     * @param integer $FileType Bucket type. Valid values: `1`: (Web, which is the default value), `2` (Application).
      */
     function __construct()
     {
@@ -48,6 +56,10 @@ class DescribeReleaseFileSignRequest extends AbstractModel
         }
         if (array_key_exists("Timeout",$param) and $param["Timeout"] !== null) {
             $this->Timeout = $param["Timeout"];
+        }
+
+        if (array_key_exists("FileType",$param) and $param["FileType"] !== null) {
+            $this->FileType = $param["FileType"];
         }
     }
 }

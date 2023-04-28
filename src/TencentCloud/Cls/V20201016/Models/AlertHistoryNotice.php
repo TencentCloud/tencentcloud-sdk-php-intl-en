@@ -14,24 +14,32 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cdn\V20180606\Models;
+namespace TencentCloud\Cls\V20201016\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * HTTPS. When it’s disabled, HTTPS requests are blocked.
+ * Details about an alarm notification group
  *
- * @method string getSwitch() Obtain HTTPS (enabled by default), which will incur charges.
- * @method void setSwitch(string $Switch) Set HTTPS (enabled by default), which will incur charges.
+ * @method string getName() Obtain Notification group name
+ * @method void setName(string $Name) Set Notification group name
+ * @method string getAlarmNoticeId() Obtain Notification group ID
+ * @method void setAlarmNoticeId(string $AlarmNoticeId) Set Notification group ID
  */
-class HttpsBilling extends AbstractModel
+class AlertHistoryNotice extends AbstractModel
 {
     /**
-     * @var string HTTPS (enabled by default), which will incur charges.
+     * @var string Notification group name
      */
-    public $Switch;
+    public $Name;
 
     /**
-     * @param string $Switch HTTPS (enabled by default), which will incur charges.
+     * @var string Notification group ID
+     */
+    public $AlarmNoticeId;
+
+    /**
+     * @param string $Name Notification group name
+     * @param string $AlarmNoticeId Notification group ID
      */
     function __construct()
     {
@@ -46,8 +54,12 @@ class HttpsBilling extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Switch",$param) and $param["Switch"] !== null) {
-            $this->Switch = $param["Switch"];
+        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
+            $this->Name = $param["Name"];
+        }
+
+        if (array_key_exists("AlarmNoticeId",$param) and $param["AlarmNoticeId"] !== null) {
+            $this->AlarmNoticeId = $param["AlarmNoticeId"];
         }
     }
 }

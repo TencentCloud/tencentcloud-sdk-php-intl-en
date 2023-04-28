@@ -19,7 +19,6 @@ use TencentCloud\Common\AbstractModel;
 
 /**
  * Index rule. At least one of the `FullText`, `KeyValue`, and `Tag` parameters must be valid.
-
  *
  * @method FullTextInfo getFullText() Obtain Full-text index configuration. If the configuration is left empty, full-text indexing is not enabled.
 Note: This field may return null, indicating that no valid values can be obtained.
@@ -32,6 +31,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
  * @method RuleTagInfo getTag() Obtain Metadata field index configuration. If the configuration is left empty, metadata field indexing is not enabled.
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setTag(RuleTagInfo $Tag) Set Metadata field index configuration. If the configuration is left empty, metadata field indexing is not enabled.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method DynamicIndex getDynamicIndex() Obtain Dynamic index configuration. If the configuration is empty, dynamic indexing is not enabled.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setDynamicIndex(DynamicIndex $DynamicIndex) Set Dynamic index configuration. If the configuration is empty, dynamic indexing is not enabled.
 Note: This field may return null, indicating that no valid values can be obtained.
  */
 class RuleInfo extends AbstractModel
@@ -55,11 +58,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $Tag;
 
     /**
+     * @var DynamicIndex Dynamic index configuration. If the configuration is empty, dynamic indexing is not enabled.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $DynamicIndex;
+
+    /**
      * @param FullTextInfo $FullText Full-text index configuration. If the configuration is left empty, full-text indexing is not enabled.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param RuleKeyValueInfo $KeyValue Key-value index configuration. If the configuration is left empty, key-value indexing is not enabled.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param RuleTagInfo $Tag Metadata field index configuration. If the configuration is left empty, metadata field indexing is not enabled.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param DynamicIndex $DynamicIndex Dynamic index configuration. If the configuration is empty, dynamic indexing is not enabled.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
@@ -88,6 +99,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (array_key_exists("Tag",$param) and $param["Tag"] !== null) {
             $this->Tag = new RuleTagInfo();
             $this->Tag->deserialize($param["Tag"]);
+        }
+
+        if (array_key_exists("DynamicIndex",$param) and $param["DynamicIndex"] !== null) {
+            $this->DynamicIndex = new DynamicIndex();
+            $this->DynamicIndex->deserialize($param["DynamicIndex"]);
         }
     }
 }

@@ -18,7 +18,7 @@ namespace TencentCloud\Monitor\V20180724\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Cloud Monitor alarm notification template - user notification details
+ * Alarm notification template – user notification details
  *
  * @method string getReceiverType() Obtain Recipient type. Valid values: USER (user), GROUP (user group)
 Note: this field may return null, indicating that no valid values can be obtained.

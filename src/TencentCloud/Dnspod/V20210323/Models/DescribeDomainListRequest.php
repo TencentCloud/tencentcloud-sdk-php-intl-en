@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeDomainList request structure.
  *
- * @method string getType() Obtain Domain group type. Valid values: `ALL`, `MINE`, `SHARE`, `ISMARK`, `PAUSE`, `VIP`, `RECENT`, `SHARE_OUT`. Default value: `ALL`.
- * @method void setType(string $Type) Set Domain group type. Valid values: `ALL`, `MINE`, `SHARE`, `ISMARK`, `PAUSE`, `VIP`, `RECENT`, `SHARE_OUT`. Default value: `ALL`.
+ * @method string getType() Obtain The domain group type. Valid values: `ALL` (default), `MINE`, `SHARE`, `ISMARK`, `PAUSE`, `VIP`, `RECENT`, `SHARE_OUT`, and `FREE`.
+ * @method void setType(string $Type) Set The domain group type. Valid values: `ALL` (default), `MINE`, `SHARE`, `ISMARK`, `PAUSE`, `VIP`, `RECENT`, `SHARE_OUT`, and `FREE`.
  * @method integer getOffset() Obtain Record offset starting from `0`. Default value: `0`.
  * @method void setOffset(integer $Offset) Set Record offset starting from `0`. Default value: `0`.
  * @method integer getLimit() Obtain Number of domains to be obtained. For example, `20` indicates to obtain 20 domains. Default value: `3000`.
@@ -34,7 +34,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeDomainListRequest extends AbstractModel
 {
     /**
-     * @var string Domain group type. Valid values: `ALL`, `MINE`, `SHARE`, `ISMARK`, `PAUSE`, `VIP`, `RECENT`, `SHARE_OUT`. Default value: `ALL`.
+     * @var string The domain group type. Valid values: `ALL` (default), `MINE`, `SHARE`, `ISMARK`, `PAUSE`, `VIP`, `RECENT`, `SHARE_OUT`, and `FREE`.
      */
     public $Type;
 
@@ -59,7 +59,7 @@ class DescribeDomainListRequest extends AbstractModel
     public $Keyword;
 
     /**
-     * @param string $Type Domain group type. Valid values: `ALL`, `MINE`, `SHARE`, `ISMARK`, `PAUSE`, `VIP`, `RECENT`, `SHARE_OUT`. Default value: `ALL`.
+     * @param string $Type The domain group type. Valid values: `ALL` (default), `MINE`, `SHARE`, `ISMARK`, `PAUSE`, `VIP`, `RECENT`, `SHARE_OUT`, and `FREE`.
      * @param integer $Offset Record offset starting from `0`. Default value: `0`.
      * @param integer $Limit Number of domains to be obtained. For example, `20` indicates to obtain 20 domains. Default value: `3000`.
      * @param integer $GroupId Group ID, which can be passed in to get all domains in the specified group

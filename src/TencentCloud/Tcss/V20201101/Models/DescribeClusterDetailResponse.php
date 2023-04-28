@@ -68,6 +68,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setServiceCount(integer $ServiceCount) Set Number of Services
  * @method integer getIngressCount() Obtain Number of Ingresses
  * @method void setIngressCount(integer $IngressCount) Set Number of Ingresses
+ * @method string getMasterIps() Obtain IPs of the primary nodes
+ * @method void setMasterIps(string $MasterIps) Set IPs of the primary nodes
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -194,6 +196,11 @@ class DescribeClusterDetailResponse extends AbstractModel
     public $IngressCount;
 
     /**
+     * @var string IPs of the primary nodes
+     */
+    public $MasterIps;
+
+    /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
@@ -223,6 +230,7 @@ class DescribeClusterDetailResponse extends AbstractModel
      * @param integer $PodCount Number of Pods
      * @param integer $ServiceCount Number of Services
      * @param integer $IngressCount Number of Ingresses
+     * @param string $MasterIps IPs of the primary nodes
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -332,6 +340,10 @@ class DescribeClusterDetailResponse extends AbstractModel
 
         if (array_key_exists("IngressCount",$param) and $param["IngressCount"] !== null) {
             $this->IngressCount = $param["IngressCount"];
+        }
+
+        if (array_key_exists("MasterIps",$param) and $param["MasterIps"] !== null) {
+            $this->MasterIps = $param["MasterIps"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

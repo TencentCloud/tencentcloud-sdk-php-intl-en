@@ -28,6 +28,10 @@ use TencentCloud\Common\AbstractModel;
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setTemplateId(string $TemplateId) Set If the configuration comes from a template, this parameter is the template ID, which is used as an output parameter.
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method Targets getTargets() Obtain Number of targets
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setTargets(Targets $Targets) Set Number of targets
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class PrometheusConfigItem extends AbstractModel
 {
@@ -48,9 +52,17 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $TemplateId;
 
     /**
+     * @var Targets Number of targets
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $Targets;
+
+    /**
      * @param string $Name Name
      * @param string $Config Configuration content
      * @param string $TemplateId If the configuration comes from a template, this parameter is the template ID, which is used as an output parameter.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Targets $Targets Number of targets
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
@@ -76,6 +88,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("TemplateId",$param) and $param["TemplateId"] !== null) {
             $this->TemplateId = $param["TemplateId"];
+        }
+
+        if (array_key_exists("Targets",$param) and $param["Targets"] !== null) {
+            $this->Targets = new Targets();
+            $this->Targets->deserialize($param["Targets"]);
         }
     }
 }

@@ -56,6 +56,10 @@ Note: This field may return `null`, indicating that no valid value was found.
  * @method void setColumns(array $Columns) Set Column attributes of log analysis
 This parameter is valid only when `UseNewAnalysis` is `true`.
 Note: This field may return `null`, indicating that no valid value was found.
+ * @method float getSamplingRate() Obtain Sample rate used in this statistical analysis
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setSamplingRate(float $SamplingRate) Set Sample rate used in this statistical analysis
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -112,6 +116,12 @@ Note: This field may return `null`, indicating that no valid value was found.
     public $Columns;
 
     /**
+     * @var float Sample rate used in this statistical analysis
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $SamplingRate;
+
+    /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
@@ -135,6 +145,8 @@ Note: This field may return `null`, indicating that no valid value was found.
      * @param array $Columns Column attributes of log analysis
 This parameter is valid only when `UseNewAnalysis` is `true`.
 Note: This field may return `null`, indicating that no valid value was found.
+     * @param float $SamplingRate Sample rate used in this statistical analysis
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -195,6 +207,10 @@ Note: This field may return `null`, indicating that no valid value was found.
                 $obj->deserialize($value);
                 array_push($this->Columns, $obj);
             }
+        }
+
+        if (array_key_exists("SamplingRate",$param) and $param["SamplingRate"] !== null) {
+            $this->SamplingRate = $param["SamplingRate"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeDosageCosDetailByDate request structure.
  *
- * @method string getStartDate() Obtain The start date of the usage query
- * @method void setStartDate(string $StartDate) Set The start date of the usage query
- * @method string getEndDate() Obtain The end date of the usage query (end date must be in the same month as the start date)
- * @method void setEndDate(string $EndDate) Set The end date of the usage query (end date must be in the same month as the start date)
+ * @method string getStartDate() Obtain The start date of the usage query, such as `2020-09-01`.
+ * @method void setStartDate(string $StartDate) Set The start date of the usage query, such as `2020-09-01`.
+ * @method string getEndDate() Obtain The end date of the usage query (end date must be in the same month as the start date), such as `2020-09-30`.
+ * @method void setEndDate(string $EndDate) Set The end date of the usage query (end date must be in the same month as the start date), such as `2020-09-30`.
  * @method string getBucketName() Obtain Bucket name. You can use `Get Service` to query the list of all buckets under a requester account. For details, see [GET Service (List Buckets)](https://www.tencentcloud.com/document/product/436/8291).
  * @method void setBucketName(string $BucketName) Set Bucket name. You can use `Get Service` to query the list of all buckets under a requester account. For details, see [GET Service (List Buckets)](https://www.tencentcloud.com/document/product/436/8291).
  */
 class DescribeDosageCosDetailByDateRequest extends AbstractModel
 {
     /**
-     * @var string The start date of the usage query
+     * @var string The start date of the usage query, such as `2020-09-01`.
      */
     public $StartDate;
 
     /**
-     * @var string The end date of the usage query (end date must be in the same month as the start date)
+     * @var string The end date of the usage query (end date must be in the same month as the start date), such as `2020-09-30`.
      */
     public $EndDate;
 
@@ -45,8 +45,8 @@ class DescribeDosageCosDetailByDateRequest extends AbstractModel
     public $BucketName;
 
     /**
-     * @param string $StartDate The start date of the usage query
-     * @param string $EndDate The end date of the usage query (end date must be in the same month as the start date)
+     * @param string $StartDate The start date of the usage query, such as `2020-09-01`.
+     * @param string $EndDate The end date of the usage query (end date must be in the same month as the start date), such as `2020-09-30`.
      * @param string $BucketName Bucket name. You can use `Get Service` to query the list of all buckets under a requester account. For details, see [GET Service (List Buckets)](https://www.tencentcloud.com/document/product/436/8291).
      */
     function __construct()

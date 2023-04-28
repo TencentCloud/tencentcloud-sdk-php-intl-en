@@ -46,10 +46,10 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method void setFilterRules(array $FilterRules) Set IP blocklist/allowlist path-based configuration. This feature is only available to selected beta customers.
 Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method integer getReturnCode() Obtain [Unavailable soon] The code returned when the IP blocklist/allowlist verification fails.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setReturnCode(integer $ReturnCode) Set [Unavailable soon] The code returned when the IP blocklist/allowlist verification fails.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getReturnCode() Obtain (Disused) Expected HTTP code to return when the IP allowlist/blocklist verification fails. <br><font color=red>The 514 code is used instead.</font>
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setReturnCode(integer $ReturnCode) Set (Disused) Expected HTTP code to return when the IP allowlist/blocklist verification fails. <br><font color=red>The 514 code is used instead.</font>
+Note: this field may return `null`, indicating that no valid values can be obtained.
  */
 class IpFilter extends AbstractModel
 {
@@ -83,8 +83,8 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     public $FilterRules;
 
     /**
-     * @var integer [Unavailable soon] The code returned when the IP blocklist/allowlist verification fails.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer (Disused) Expected HTTP code to return when the IP allowlist/blocklist verification fails. <br><font color=red>The 514 code is used instead.</font>
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public $ReturnCode;
 
@@ -102,8 +102,8 @@ Up to 50 whitelists or blacklists can be entered
 Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param array $FilterRules IP blocklist/allowlist path-based configuration. This feature is only available to selected beta customers.
 Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param integer $ReturnCode [Unavailable soon] The code returned when the IP blocklist/allowlist verification fails.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $ReturnCode (Disused) Expected HTTP code to return when the IP allowlist/blocklist verification fails. <br><font color=red>The 514 code is used instead.</font>
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
     {

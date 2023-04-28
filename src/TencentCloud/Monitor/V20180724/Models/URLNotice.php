@@ -18,7 +18,7 @@ namespace TencentCloud\Monitor\V20180724\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Cloud Monitor alarm notification template - callback notification details
+ * Alarm notification template – callback notification details
  *
  * @method string getURL() Obtain Callback URL, which can contain up to 256 characters
 Note: this field may return null, indicating that no valid values can be obtained.

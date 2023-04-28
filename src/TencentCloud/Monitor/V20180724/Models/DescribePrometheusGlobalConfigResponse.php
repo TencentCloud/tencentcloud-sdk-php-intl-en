@@ -34,6 +34,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setRawJobs(array $RawJobs) Set List of raw jobs and the corresponding targets information
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method array getProbes() Obtain List of probes and the corresponding targets information
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setProbes(array $Probes) Set List of probes and the corresponding targets information
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -63,6 +67,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $RawJobs;
 
     /**
+     * @var array List of probes and the corresponding targets information
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $Probes;
+
+    /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
@@ -74,6 +84,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param array $PodMonitors List of pod monitors and the corresponding targets information
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param array $RawJobs List of raw jobs and the corresponding targets information
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param array $Probes List of probes and the corresponding targets information
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
@@ -118,6 +130,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 $obj = new PrometheusConfigItem();
                 $obj->deserialize($value);
                 array_push($this->RawJobs, $obj);
+            }
+        }
+
+        if (array_key_exists("Probes",$param) and $param["Probes"] !== null) {
+            $this->Probes = [];
+            foreach ($param["Probes"] as $key => $value){
+                $obj = new PrometheusConfigItem();
+                $obj->deserialize($value);
+                array_push($this->Probes, $obj);
             }
         }
 

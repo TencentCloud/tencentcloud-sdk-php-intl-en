@@ -51,6 +51,7 @@ use TencentCloud\Cls\V20201016\Models as Models;
  * @method Models\DeleteTopicResponse DeleteTopic(Models\DeleteTopicRequest $req) This API is used to delete a log topic.
  * @method Models\DescribeAlarmNoticesResponse DescribeAlarmNotices(Models\DescribeAlarmNoticesRequest $req) This API is used to get the notification group list.
  * @method Models\DescribeAlarmsResponse DescribeAlarms(Models\DescribeAlarmsRequest $req) This API is used to get the alarm policy list.
+ * @method Models\DescribeAlertRecordHistoryResponse DescribeAlertRecordHistory(Models\DescribeAlertRecordHistoryRequest $req) This API is used to get alarm records, such as today's uncleared alarms.
  * @method Models\DescribeConfigMachineGroupsResponse DescribeConfigMachineGroups(Models\DescribeConfigMachineGroupsRequest $req) This API is used to get the machine group bound to a collection rule configuration.
  * @method Models\DescribeConfigsResponse DescribeConfigs(Models\DescribeConfigsRequest $req) This API is used to get a collection rule configuration.
  * @method Models\DescribeConsumerResponse DescribeConsumer(Models\DescribeConsumerRequest $req) This API is used to query a shipping task.

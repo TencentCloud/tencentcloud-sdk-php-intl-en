@@ -74,12 +74,12 @@ Default value: `1`
 `0–1`: Sample by the specified sample rate, such as `0.02`.
 `1`: Precise analysis without sampling.
 Default value: `1`
- * @method integer getSyntaxRule() Obtain Search syntax.
+ * @method integer getSyntaxRule() Obtain Search syntax
 `0` (default): Lucene; `1`: CQL.
-For more information, visit https://intl.cloud.tencent.com/document/product/614/47044?from_cn_redirect=1#RetrievesConditionalRules.
- * @method void setSyntaxRule(integer $SyntaxRule) Set Search syntax.
+For more information, see <a href="https://intl.cloud.tencent.com/document/product/614/47044?from_cn_redirect=1#RetrievesConditionalRules" target="_blank">Syntax Rules</a>
+ * @method void setSyntaxRule(integer $SyntaxRule) Set Search syntax
 `0` (default): Lucene; `1`: CQL.
-For more information, visit https://intl.cloud.tencent.com/document/product/614/47044?from_cn_redirect=1#RetrievesConditionalRules.
+For more information, see <a href="https://intl.cloud.tencent.com/document/product/614/47044?from_cn_redirect=1#RetrievesConditionalRules" target="_blank">Syntax Rules</a>
  */
 class SearchLogRequest extends AbstractModel
 {
@@ -147,9 +147,9 @@ Default value: `1`
     public $SamplingRate;
 
     /**
-     * @var integer Search syntax.
+     * @var integer Search syntax
 `0` (default): Lucene; `1`: CQL.
-For more information, visit https://intl.cloud.tencent.com/document/product/614/47044?from_cn_redirect=1#RetrievesConditionalRules.
+For more information, see <a href="https://intl.cloud.tencent.com/document/product/614/47044?from_cn_redirect=1#RetrievesConditionalRules" target="_blank">Syntax Rules</a>
      */
     public $SyntaxRule;
 
@@ -181,9 +181,9 @@ The two response methods differ slightly in terms of encoding format. You are ad
 `0–1`: Sample by the specified sample rate, such as `0.02`.
 `1`: Precise analysis without sampling.
 Default value: `1`
-     * @param integer $SyntaxRule Search syntax.
+     * @param integer $SyntaxRule Search syntax
 `0` (default): Lucene; `1`: CQL.
-For more information, visit https://intl.cloud.tencent.com/document/product/614/47044?from_cn_redirect=1#RetrievesConditionalRules.
+For more information, see <a href="https://intl.cloud.tencent.com/document/product/614/47044?from_cn_redirect=1#RetrievesConditionalRules" target="_blank">Syntax Rules</a>
      */
     function __construct()
     {

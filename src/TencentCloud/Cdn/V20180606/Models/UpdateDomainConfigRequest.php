@@ -130,8 +130,10 @@ After switching to global acceleration, configurations of the domain name will b
  * @method void setHwPrivateAccess(HwPrivateAccess $HwPrivateAccess) Set Access authentication for Huawei Cloud OBS origin
  * @method QnPrivateAccess getQnPrivateAccess() Obtain Access authentication for QiNiu Cloud Kodo origin
  * @method void setQnPrivateAccess(QnPrivateAccess $QnPrivateAccess) Set Access authentication for QiNiu Cloud Kodo origin
- * @method HttpsBilling getHttpsBilling() Obtain HTTPS service
- * @method void setHttpsBilling(HttpsBilling $HttpsBilling) Set HTTPS service
+ * @method OthersPrivateAccess getOthersPrivateAccess() Obtain Origin-pull authentication for other origins
+ * @method void setOthersPrivateAccess(OthersPrivateAccess $OthersPrivateAccess) Set Origin-pull authentication for other origins
+ * @method HttpsBilling getHttpsBilling() Obtain HTTPS, which is a paid service. You can check the product document and Billing Overview for more information.
+ * @method void setHttpsBilling(HttpsBilling $HttpsBilling) Set HTTPS, which is a paid service. You can check the product document and Billing Overview for more information.
  */
 class UpdateDomainConfigRequest extends AbstractModel
 {
@@ -379,7 +381,12 @@ After switching to global acceleration, configurations of the domain name will b
     public $QnPrivateAccess;
 
     /**
-     * @var HttpsBilling HTTPS service
+     * @var OthersPrivateAccess Origin-pull authentication for other origins
+     */
+    public $OthersPrivateAccess;
+
+    /**
+     * @var HttpsBilling HTTPS, which is a paid service. You can check the product document and Billing Overview for more information.
      */
     public $HttpsBilling;
 
@@ -439,7 +446,8 @@ After switching to global acceleration, configurations of the domain name will b
      * @param ShareCname $ShareCname Shared CNAME configuration (only available to beta users)
      * @param HwPrivateAccess $HwPrivateAccess Access authentication for Huawei Cloud OBS origin
      * @param QnPrivateAccess $QnPrivateAccess Access authentication for QiNiu Cloud Kodo origin
-     * @param HttpsBilling $HttpsBilling HTTPS service
+     * @param OthersPrivateAccess $OthersPrivateAccess Origin-pull authentication for other origins
+     * @param HttpsBilling $HttpsBilling HTTPS, which is a paid service. You can check the product document and Billing Overview for more information.
      */
     function __construct()
     {
@@ -682,6 +690,11 @@ After switching to global acceleration, configurations of the domain name will b
         if (array_key_exists("QnPrivateAccess",$param) and $param["QnPrivateAccess"] !== null) {
             $this->QnPrivateAccess = new QnPrivateAccess();
             $this->QnPrivateAccess->deserialize($param["QnPrivateAccess"]);
+        }
+
+        if (array_key_exists("OthersPrivateAccess",$param) and $param["OthersPrivateAccess"] !== null) {
+            $this->OthersPrivateAccess = new OthersPrivateAccess();
+            $this->OthersPrivateAccess->deserialize($param["OthersPrivateAccess"]);
         }
 
         if (array_key_exists("HttpsBilling",$param) and $param["HttpsBilling"] !== null) {

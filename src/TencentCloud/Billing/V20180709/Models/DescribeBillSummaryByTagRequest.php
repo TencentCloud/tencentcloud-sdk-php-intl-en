@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBeginTime(string $BeginTime) Set The value must be of the same month as `EndTime`. Query period must start and end on the same month and the query result returned will be of the entire month. For example, if both `BeginTime` and `EndTime` are `2018-09`, the data returned will be for the entire month of September 2018.
  * @method string getEndTime() Obtain The value must be of the same month as `BeginTime`. Query period must start and end on the same month and the query result returned will be of the entire month. For example, if both `BeginTime` and `EndTime` are `2018-09`, the data returned will be for the entire month of September 2018.
  * @method void setEndTime(string $EndTime) Set The value must be of the same month as `BeginTime`. Query period must start and end on the same month and the query result returned will be of the entire month. For example, if both `BeginTime` and `EndTime` are `2018-09`, the data returned will be for the entire month of September 2018.
- * @method string getTagKey() Obtain Cost allocation tag key
- * @method void setTagKey(string $TagKey) Set Cost allocation tag key
+ * @method string getTagKey() Obtain Cost allocation tag key, which can be customized.
+ * @method void setTagKey(string $TagKey) Set Cost allocation tag key, which can be customized.
  * @method string getPayerUin() Obtain Payer UIN
  * @method void setPayerUin(string $PayerUin) Set Payer UIN
  * @method string getTagValue() Obtain Resource tag value
@@ -44,7 +44,7 @@ class DescribeBillSummaryByTagRequest extends AbstractModel
     public $EndTime;
 
     /**
-     * @var string Cost allocation tag key
+     * @var string Cost allocation tag key, which can be customized.
      */
     public $TagKey;
 
@@ -61,7 +61,7 @@ class DescribeBillSummaryByTagRequest extends AbstractModel
     /**
      * @param string $BeginTime The value must be of the same month as `EndTime`. Query period must start and end on the same month and the query result returned will be of the entire month. For example, if both `BeginTime` and `EndTime` are `2018-09`, the data returned will be for the entire month of September 2018.
      * @param string $EndTime The value must be of the same month as `BeginTime`. Query period must start and end on the same month and the query result returned will be of the entire month. For example, if both `BeginTime` and `EndTime` are `2018-09`, the data returned will be for the entire month of September 2018.
-     * @param string $TagKey Cost allocation tag key
+     * @param string $TagKey Cost allocation tag key, which can be customized.
      * @param string $PayerUin Payer UIN
      * @param string $TagValue Resource tag value
      */

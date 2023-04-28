@@ -18,7 +18,7 @@ namespace TencentCloud\Monitor\V20180724\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Basic information of the cluster associated with a CM-integrated TMP instance.
+ * Basic information of the cluster associated with a Tencent Cloud Observability Platform (TCOP)-integrated TMP instance.
  *
  * @method string getRegion() Obtain Cluster ID
  * @method void setRegion(string $Region) Set Cluster ID

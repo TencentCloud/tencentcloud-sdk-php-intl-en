@@ -76,6 +76,10 @@ Note: This field may return `null`, indicating that no valid value can be found.
  * @method void setRegionId(string $RegionId) Set 
  * @method integer getProjectId() Obtain Project ID: ID of the project to which the resource belongs
  * @method void setProjectId(integer $ProjectId) Set Project ID: ID of the project to which the resource belongs
+ * @method array getPriceInfo() Obtain Price attribute
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setPriceInfo(array $PriceInfo) Set Price attribute
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class BillDetail extends AbstractModel
 {
@@ -204,6 +208,12 @@ Note: This field may return `null`, indicating that no valid value can be found.
     public $ProjectId;
 
     /**
+     * @var array Price attribute
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $PriceInfo;
+
+    /**
      * @param string $BusinessCodeName Product name: major categories of Tencent Cloud services, e.g. CVM and TencentDB for MySQL
      * @param string $ProductCodeName Sub-product name: sub-categories of Tencent Cloud services, such as CVM-Standard S1
      * @param string $PayModeName Billing mode
@@ -232,6 +242,8 @@ Note: This field may return `null`, indicating that no valid value can be found.
 Note: This field may return `null`, indicating that no valid value can be found.
      * @param string $RegionId 
      * @param integer $ProjectId Project ID: ID of the project to which the resource belongs
+     * @param array $PriceInfo Price attribute
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -350,6 +362,10 @@ Note: This field may return `null`, indicating that no valid value can be found.
 
         if (array_key_exists("ProjectId",$param) and $param["ProjectId"] !== null) {
             $this->ProjectId = $param["ProjectId"];
+        }
+
+        if (array_key_exists("PriceInfo",$param) and $param["PriceInfo"] !== null) {
+            $this->PriceInfo = $param["PriceInfo"];
         }
     }
 }

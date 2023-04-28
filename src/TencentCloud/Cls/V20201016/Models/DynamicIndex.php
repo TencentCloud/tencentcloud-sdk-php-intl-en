@@ -14,24 +14,28 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cdn\V20180606\Models;
+namespace TencentCloud\Cls\V20201016\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * HTTPS. When it’s disabled, HTTPS requests are blocked.
+ * Dynamic index configuration
  *
- * @method string getSwitch() Obtain HTTPS (enabled by default), which will incur charges.
- * @method void setSwitch(string $Switch) Set HTTPS (enabled by default), which will incur charges.
+ * @method boolean getStatus() Obtain Dynamic index configuration status
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setStatus(boolean $Status) Set Dynamic index configuration status
+Note: This field may return null, indicating that no valid values can be obtained.
  */
-class HttpsBilling extends AbstractModel
+class DynamicIndex extends AbstractModel
 {
     /**
-     * @var string HTTPS (enabled by default), which will incur charges.
+     * @var boolean Dynamic index configuration status
+Note: This field may return null, indicating that no valid values can be obtained.
      */
-    public $Switch;
+    public $Status;
 
     /**
-     * @param string $Switch HTTPS (enabled by default), which will incur charges.
+     * @param boolean $Status Dynamic index configuration status
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -46,8 +50,8 @@ class HttpsBilling extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Switch",$param) and $param["Switch"] !== null) {
-            $this->Switch = $param["Switch"];
+        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
+            $this->Status = $param["Status"];
         }
     }
 }

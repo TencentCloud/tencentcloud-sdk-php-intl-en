@@ -30,10 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRecordLine(string $RecordLine) Set Split zone of the DNS record. For more information, see the `DescribeRecordLineList` API. If neither `RecordLine` nor `RecordLineId` is specified, the default split zone will be used.
  * @method string getRecordLineId() Obtain Split zone ID of the DNS record. If both `RecordLine` and `RecordLineId` are specified, `RecordLineId` will be used.
  * @method void setRecordLineId(string $RecordLineId) Set Split zone ID of the DNS record. If both `RecordLine` and `RecordLineId` are specified, `RecordLineId` will be used.
- * @method integer getWeight() Obtain Record weight (not supported).
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setWeight(integer $Weight) Set Record weight (not supported).
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getWeight() Obtain The record weight (not supported).
+ * @method void setWeight(integer $Weight) Set The record weight (not supported).
  * @method integer getMX() Obtain MX record value. It is `0` by default for non-MX records and required for MX records.
  * @method void setMX(integer $MX) Set MX record value. It is `0` by default for non-MX records and required for MX records.
  * @method integer getTTL() Obtain TTL value of the record, which is `600` by default.
@@ -71,8 +69,7 @@ class AddRecordBatch extends AbstractModel
     public $RecordLineId;
 
     /**
-     * @var integer Record weight (not supported).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer The record weight (not supported).
      */
     public $Weight;
 
@@ -102,8 +99,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $SubDomain Subdomain (host record), which is `@` by default.
      * @param string $RecordLine Split zone of the DNS record. For more information, see the `DescribeRecordLineList` API. If neither `RecordLine` nor `RecordLineId` is specified, the default split zone will be used.
      * @param string $RecordLineId Split zone ID of the DNS record. If both `RecordLine` and `RecordLineId` are specified, `RecordLineId` will be used.
-     * @param integer $Weight Record weight (not supported).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $Weight The record weight (not supported).
      * @param integer $MX MX record value. It is `0` by default for non-MX records and required for MX records.
      * @param integer $TTL TTL value of the record, which is `600` by default.
      * @param integer $Enabled Record status (not supported). Valid values: `0` (disabled); `1` (enabled). Default value: `1`.

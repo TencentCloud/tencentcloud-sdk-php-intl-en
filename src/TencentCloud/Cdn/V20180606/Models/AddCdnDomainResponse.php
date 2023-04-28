@@ -18,20 +18,20 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * HTTPS. When it’s disabled, HTTPS requests are blocked.
+ * AddCdnDomain response structure.
  *
- * @method string getSwitch() Obtain HTTPS (enabled by default), which will incur charges.
- * @method void setSwitch(string $Switch) Set HTTPS (enabled by default), which will incur charges.
+ * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
-class HttpsBilling extends AbstractModel
+class AddCdnDomainResponse extends AbstractModel
 {
     /**
-     * @var string HTTPS (enabled by default), which will incur charges.
+     * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
-    public $Switch;
+    public $RequestId;
 
     /**
-     * @param string $Switch HTTPS (enabled by default), which will incur charges.
+     * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
     {
@@ -46,8 +46,8 @@ class HttpsBilling extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Switch",$param) and $param["Switch"] !== null) {
-            $this->Switch = $param["Switch"];
+        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
+            $this->RequestId = $param["RequestId"];
         }
     }
 }

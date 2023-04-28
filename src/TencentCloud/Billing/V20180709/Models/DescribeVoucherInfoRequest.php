@@ -36,10 +36,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setActivityId(string $ActivityId) Set The campaign ID.
  * @method string getVoucherName() Obtain The voucher name.
  * @method void setVoucherName(string $VoucherName) Set The voucher name.
- * @method string getTimeFrom() Obtain The start time of the promotional campaign.
- * @method void setTimeFrom(string $TimeFrom) Set The start time of the promotional campaign.
- * @method string getTimeTo() Obtain The end time of the promotional campaign.
- * @method void setTimeTo(string $TimeTo) Set The end time of the promotional campaign.
+ * @method string getTimeFrom() Obtain The start date of the voucher issuance, such as `2021-01-01`.
+ * @method void setTimeFrom(string $TimeFrom) Set The start date of the voucher issuance, such as `2021-01-01`.
+ * @method string getTimeTo() Obtain The end date of the voucher issuance, such as `2021-01-01`.
+ * @method void setTimeTo(string $TimeTo) Set The end date of the voucher issuance, such as `2021-01-01`.
  * @method string getSortField() Obtain The field used to sort the records. Valid values: BeginTime, EndTime, CreateTime.
  * @method void setSortField(string $SortField) Set The field used to sort the records. Valid values: BeginTime, EndTime, CreateTime.
  * @method string getSortOrder() Obtain Whether to sort the records in ascending or descending order. Valid values: desc, asc.
@@ -94,12 +94,12 @@ class DescribeVoucherInfoRequest extends AbstractModel
     public $VoucherName;
 
     /**
-     * @var string The start time of the promotional campaign.
+     * @var string The start date of the voucher issuance, such as `2021-01-01`.
      */
     public $TimeFrom;
 
     /**
-     * @var string The end time of the promotional campaign.
+     * @var string The end date of the voucher issuance, such as `2021-01-01`.
      */
     public $TimeTo;
 
@@ -137,8 +137,8 @@ class DescribeVoucherInfoRequest extends AbstractModel
      * @param string $ProductCode The product code.
      * @param string $ActivityId The campaign ID.
      * @param string $VoucherName The voucher name.
-     * @param string $TimeFrom The start time of the promotional campaign.
-     * @param string $TimeTo The end time of the promotional campaign.
+     * @param string $TimeFrom The start date of the voucher issuance, such as `2021-01-01`.
+     * @param string $TimeTo The end date of the voucher issuance, such as `2021-01-01`.
      * @param string $SortField The field used to sort the records. Valid values: BeginTime, EndTime, CreateTime.
      * @param string $SortOrder Whether to sort the records in ascending or descending order. Valid values: desc, asc.
      * @param string $PayMode The payment mode. Valid values: `postPay`: pay-as-you-go; `prePay`: prepaid; `riPay`: reserved instance; empty or `*`: all. If this parameter is empty or `*`, `productCode` and `subProductCode` must also be empty.

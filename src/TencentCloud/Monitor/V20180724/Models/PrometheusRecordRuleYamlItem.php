@@ -34,6 +34,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setClusterId(string $ClusterId) Set If the recording rule comes from the user cluster CRD resource definition, `ClusterId` is the cluster ID.
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getStatus() Obtain Status
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setStatus(integer $Status) Set Status
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getId() Obtain id
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setId(string $Id) Set id
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getCount() Obtain Number of rules
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setCount(integer $Count) Set Number of rules
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class PrometheusRecordRuleYamlItem extends AbstractModel
 {
@@ -65,12 +77,36 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $ClusterId;
 
     /**
+     * @var integer Status
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $Status;
+
+    /**
+     * @var string id
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $Id;
+
+    /**
+     * @var integer Number of rules
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $Count;
+
+    /**
      * @param string $Name Instance name
      * @param string $UpdateTime Last update time
      * @param string $TemplateId YAML content
      * @param string $Content If the recording rule comes from a template, `TemplateId` is the template ID.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $ClusterId If the recording rule comes from the user cluster CRD resource definition, `ClusterId` is the cluster ID.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $Status Status
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $Id id
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $Count Number of rules
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
@@ -104,6 +140,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("ClusterId",$param) and $param["ClusterId"] !== null) {
             $this->ClusterId = $param["ClusterId"];
+        }
+
+        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
+            $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("Id",$param) and $param["Id"] !== null) {
+            $this->Id = $param["Id"];
+        }
+
+        if (array_key_exists("Count",$param) and $param["Count"] !== null) {
+            $this->Count = $param["Count"];
         }
     }
 }
