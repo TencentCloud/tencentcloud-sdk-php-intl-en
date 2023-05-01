@@ -53,6 +53,18 @@ Used by actions: DescribeCurrentMemberList, DescribeRoomStatistics.
  * @method void setPerMemberMicCount(integer $PerMemberMicCount) Set The number of times a user turned their mic on.
  * @method integer getPerMemberMessageCount() Obtain The number of messages sent by a user.
  * @method void setPerMemberMessageCount(integer $PerMemberMessageCount) Set The number of messages sent by a user.
+ * @method integer getRole() Obtain The user role. `0`: Student; `1`: Teacher; `2`: Teaching Assistant; `3`: Spectator.
+ * @method void setRole(integer $Role) Set The user role. `0`: Student; `1`: Teacher; `2`: Teaching Assistant; `3`: Spectator.
+ * @method string getGroupId() Obtain The class number.
+ * @method void setGroupId(string $GroupId) Set The class number.
+ * @method array getSubGroupId() Obtain The sub-class number.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setSubGroupId(array $SubGroupId) Set The sub-class number.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getStage() Obtain Whether the user is on the stage.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setStage(integer $Stage) Set Whether the user is on the stage.
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class MemberRecord extends AbstractModel
 {
@@ -137,6 +149,28 @@ class MemberRecord extends AbstractModel
     public $PerMemberMessageCount;
 
     /**
+     * @var integer The user role. `0`: Student; `1`: Teacher; `2`: Teaching Assistant; `3`: Spectator.
+     */
+    public $Role;
+
+    /**
+     * @var string The class number.
+     */
+    public $GroupId;
+
+    /**
+     * @var array The sub-class number.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $SubGroupId;
+
+    /**
+     * @var integer Whether the user is on the stage.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $Stage;
+
+    /**
      * @param string $UserId User ID
      * @param string $UserName Username
      * @param integer $PresentTime Online duration, in seconds
@@ -153,6 +187,12 @@ class MemberRecord extends AbstractModel
      * @param integer $Device The user’s device type. 0: Unknown; 1: Windows; 2: macOS; 3: Android; 4: iOS; 5: Web; 6: Mobile webpage; 7: Weixin Mini Program.
      * @param integer $PerMemberMicCount The number of times a user turned their mic on.
      * @param integer $PerMemberMessageCount The number of messages sent by a user.
+     * @param integer $Role The user role. `0`: Student; `1`: Teacher; `2`: Teaching Assistant; `3`: Spectator.
+     * @param string $GroupId The class number.
+     * @param array $SubGroupId The sub-class number.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $Stage Whether the user is on the stage.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -229,6 +269,22 @@ class MemberRecord extends AbstractModel
 
         if (array_key_exists("PerMemberMessageCount",$param) and $param["PerMemberMessageCount"] !== null) {
             $this->PerMemberMessageCount = $param["PerMemberMessageCount"];
+        }
+
+        if (array_key_exists("Role",$param) and $param["Role"] !== null) {
+            $this->Role = $param["Role"];
+        }
+
+        if (array_key_exists("GroupId",$param) and $param["GroupId"] !== null) {
+            $this->GroupId = $param["GroupId"];
+        }
+
+        if (array_key_exists("SubGroupId",$param) and $param["SubGroupId"] !== null) {
+            $this->SubGroupId = $param["SubGroupId"];
+        }
+
+        if (array_key_exists("Stage",$param) and $param["Stage"] !== null) {
+            $this->Stage = $param["Stage"];
         }
     }
 }

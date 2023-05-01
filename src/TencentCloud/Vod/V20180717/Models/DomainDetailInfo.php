@@ -50,6 +50,10 @@ Note: this field may return `null`, indicating that no valid value is obtained.
 <li>The time is in [ISO 8601 date format](https://intl.cloud.tencent.com/document/product/266/11732).</li>
  * @method void setCreateTime(string $CreateTime) Set The time when the domain name was added in the VOD system
 <li>The time is in [ISO 8601 date format](https://intl.cloud.tencent.com/document/product/266/11732).</li>
+ * @method DomainQUICConfig getQUICConfig() Obtain The QUIC configuration for the domain.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setQUICConfig(DomainQUICConfig $QUICConfig) Set The QUIC configuration for the domain.
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class DomainDetailInfo extends AbstractModel
 {
@@ -97,6 +101,12 @@ Note: this field may return `null`, indicating that no valid value is obtained.
     public $CreateTime;
 
     /**
+     * @var DomainQUICConfig The QUIC configuration for the domain.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $QUICConfig;
+
+    /**
      * @param string $Domain Domain name
      * @param array $AccelerateAreaInfos Acceleration region information
 Note: this field may return `null`, indicating that no valid value is obtained.
@@ -112,6 +122,8 @@ Note: this field may return `null`, indicating that no valid value is obtained.
 Note: this field may return `null`, indicating that no valid value is obtained.
      * @param string $CreateTime The time when the domain name was added in the VOD system
 <li>The time is in [ISO 8601 date format](https://intl.cloud.tencent.com/document/product/266/11732).</li>
+     * @param DomainQUICConfig $QUICConfig The QUIC configuration for the domain.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -160,6 +172,11 @@ Note: this field may return `null`, indicating that no valid value is obtained.
 
         if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
             $this->CreateTime = $param["CreateTime"];
+        }
+
+        if (array_key_exists("QUICConfig",$param) and $param["QUICConfig"] !== null) {
+            $this->QUICConfig = new DomainQUICConfig();
+            $this->QUICConfig->deserialize($param["QUICConfig"]);
         }
     }
 }

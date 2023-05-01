@@ -49,6 +49,22 @@ Used by actions: DescribeDocumentsByRoom.
  * @method void setDocumentSize(integer $DocumentSize) Set The document size (bytes). Note: This field may return null, indicating that no valid values can be obtained.
  * @method integer getUpdateTime() Obtain The time (Unix timestamp) when the document was last updated. Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setUpdateTime(integer $UpdateTime) Set The time (Unix timestamp) when the document was last updated. Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getPages() Obtain The number of pages.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setPages(integer $Pages) Set The number of pages.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getWidth() Obtain The width. This parameter is valid only if static document transcoding is used.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setWidth(integer $Width) Set The width. This parameter is valid only if static document transcoding is used.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getHeight() Obtain The height. This parameter is valid only if static document transcoding is used.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setHeight(integer $Height) Set The height. This parameter is valid only if static document transcoding is used.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getCover() Obtain The thumbnail. Only transcoded courseware has thumbnails.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setCover(string $Cover) Set The thumbnail. Only transcoded courseware has thumbnails.
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class DocumentInfo extends AbstractModel
 {
@@ -123,6 +139,30 @@ class DocumentInfo extends AbstractModel
     public $UpdateTime;
 
     /**
+     * @var integer The number of pages.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $Pages;
+
+    /**
+     * @var integer The width. This parameter is valid only if static document transcoding is used.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $Width;
+
+    /**
+     * @var integer The height. This parameter is valid only if static document transcoding is used.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $Height;
+
+    /**
+     * @var string The thumbnail. Only transcoded courseware has thumbnails.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $Cover;
+
+    /**
      * @param string $DocumentId The document ID. Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $DocumentUrl The document’s original URL. Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $DocumentName The document title. Note: This field may return null, indicating that no valid values can be obtained.
@@ -137,6 +177,14 @@ class DocumentInfo extends AbstractModel
      * @param string $DocumentType The document type. Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $DocumentSize The document size (bytes). Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $UpdateTime The time (Unix timestamp) when the document was last updated. Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $Pages The number of pages.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $Width The width. This parameter is valid only if static document transcoding is used.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $Height The height. This parameter is valid only if static document transcoding is used.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $Cover The thumbnail. Only transcoded courseware has thumbnails.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -205,6 +253,22 @@ class DocumentInfo extends AbstractModel
 
         if (array_key_exists("UpdateTime",$param) and $param["UpdateTime"] !== null) {
             $this->UpdateTime = $param["UpdateTime"];
+        }
+
+        if (array_key_exists("Pages",$param) and $param["Pages"] !== null) {
+            $this->Pages = $param["Pages"];
+        }
+
+        if (array_key_exists("Width",$param) and $param["Width"] !== null) {
+            $this->Width = $param["Width"];
+        }
+
+        if (array_key_exists("Height",$param) and $param["Height"] !== null) {
+            $this->Height = $param["Height"];
+        }
+
+        if (array_key_exists("Cover",$param) and $param["Cover"] !== null) {
+            $this->Cover = $param["Cover"];
         }
     }
 }

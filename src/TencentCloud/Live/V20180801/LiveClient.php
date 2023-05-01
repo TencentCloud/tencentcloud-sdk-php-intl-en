@@ -75,8 +75,8 @@ Note: only one screencapturing template can be associated with one domain name.
  * @method Models\CreateLiveTimeShiftRuleResponse CreateLiveTimeShiftRule(Models\CreateLiveTimeShiftRuleRequest $req) This API is used to create a time shifting rule. You need to first call the [CreateLiveTranscodeTemplate](https://intl.cloud.tencent.com/document/product/267/86169?from_cn_redirect=1) API to create a time shifting template, and then call this API to bind the template ID returned to a stream.
 <br>More about time shifting: [Time Shifting](https://intl.cloud.tencent.com/document/product/267/86134?from_cn_redirect=1).
  * @method Models\CreateLiveTimeShiftTemplateResponse CreateLiveTimeShiftTemplate(Models\CreateLiveTimeShiftTemplateRequest $req) This API is used to create a time shifting template.
- * @method Models\CreateLiveTranscodeRuleResponse CreateLiveTranscodeRule(Models\CreateLiveTranscodeRuleRequest $req) To create a transcoding rule, you need to first call the [CreateLiveTranscodeTemplate](https://intl.cloud.tencent.com/document/product/267/32646?from_cn_redirect=1) API to create a transcoding template and bind the returned template ID to the stream.
-<br>Transcoding-related document: [LVB Remuxing and Transcoding](https://intl.cloud.tencent.com/document/product/267/32736?from_cn_redirect=1).
+ * @method Models\CreateLiveTranscodeRuleResponse CreateLiveTranscodeRule(Models\CreateLiveTranscodeRuleRequest $req) This API is used to create a transcoding rule that binds a template ID to a stream. Up to 50 transcoding rules can be created in total. Before you call this API, you need to first call [CreateLiveTranscodeTemplate](https://intl.cloud.tencent.com/document/product/267/32646?from_cn_redirect=1) to get the template ID.
+<br>Related document: [Live Remuxing and Transcoding](https://intl.cloud.tencent.com/document/product/267/32736?from_cn_redirect=1).
  * @method Models\CreateLiveTranscodeTemplateResponse CreateLiveTranscodeTemplate(Models\CreateLiveTranscodeTemplateRequest $req) This API is used to create a transcoding template. Up to 50 transcoding templates can be created in total. To use a template, you need to call [CreateLiveTranscodeRule](https://intl.cloud.tencent.com/document/product/267/32647?from_cn_redirect=1) to bind the template ID returned by this API to a stream.
 <br>For more information about transcoding, see [Live Remuxing and Transcoding](https://intl.cloud.tencent.com/document/product/267/32736?from_cn_redirect=1).
  * @method Models\CreateLiveWatermarkRuleResponse CreateLiveWatermarkRule(Models\CreateLiveWatermarkRuleRequest $req) To create a watermarking rule, you need to first call the [AddLiveWatermark](https://intl.cloud.tencent.com/document/product/267/30154?from_cn_redirect=1) API to add a watermark and bind the returned watermark ID to the stream.
@@ -90,6 +90,13 @@ Note: only one screencapturing template can be associated with one domain name.
 3. Task records are kept for three months by the platform.
 4. Do not use the new [CreateRecordTask](https://intl.cloud.tencent.com/document/product/267/45983?from_cn_redirect=1), [StopRecordTask](https://intl.cloud.tencent.com/document/product/267/45981?from_cn_redirect=1), and [DeleteRecordTask] APIs together with the old `CreateLiveRecord`, `StopLiveRecord`, and `DeleteLiveRecord` APIs.
 5. Do not create recording tasks and push streams at the same time. After creating a recording task, we recommend you wait at least three seconds before pushing streams.
+ * @method Models\CreateScreenshotTaskResponse CreateScreenshotTask(Models\CreateScreenshotTaskRequest $req) This API is used to create a screencapturing task that has a specific start and end time and takes screenshots according to the template configured.
+- Note
+1. If the stream is interrupted, screencapturing will stop. However, the task will still be valid before the specified end time, and screencapturing will be performed as required after the stream is resumed.
+2. Avoid creating screencapturing tasks with overlapping time periods. The system will execute at most three screencapturing tasks on the same stream at a time.
+3. Task records are only kept for three months.
+4. The new screencapturing APIs (CreateScreenshotTask/StopScreenshotTask/DeleteScreenshotTask) are not compatible with the legacy ones (CreateLiveInstantSnapshot/StopLiveInstantSnapshot). Do not mix them when you call APIs to manage screencapturing tasks.
+5. If you create a screencapturing task and publish the stream at the same time, the task may fail to be executed at the specified time. After creating a screencapturing task, we recommend you wait at least three seconds before publishing the stream.
  * @method Models\DeleteLiveCallbackRuleResponse DeleteLiveCallbackRule(Models\DeleteLiveCallbackRuleRequest $req) This API is used to delete a callback rule.
  * @method Models\DeleteLiveCallbackTemplateResponse DeleteLiveCallbackTemplate(Models\DeleteLiveCallbackTemplateRequest $req) This API deletes a callback template.
  * @method Models\DeleteLiveDomainResponse DeleteLiveDomain(Models\DeleteLiveDomainRequest $req) This API is used to delete an added LVB domain name.
@@ -199,7 +206,11 @@ Note: to query by `AppName`, you need to submit a ticket first. After your appli
 Note: If you call this API to pause an inactive stream, the request will be considered successful.
  * @method Models\EnableLiveDomainResponse EnableLiveDomain(Models\EnableLiveDomainRequest $req) This API is used to enable a disabled LVB domain name.
  * @method Models\ForbidLiveDomainResponse ForbidLiveDomain(Models\ForbidLiveDomainRequest $req) This API is used to disable an LVB domain name.
- * @method Models\ForbidLiveStreamResponse ForbidLiveStream(Models\ForbidLiveStreamRequest $req) This API is used to forbid the push of a specific stream. You can preset a time point to resume the stream.
+ * @method Models\ForbidLiveStreamResponse ForbidLiveStream(Models\ForbidLiveStreamRequest $req) This API is used to disable a stream. You can set a time to resume the stream.
+Note:
+1. As long as the correct stream name is passed in, the stream will be disabled successfully.
+2. If you want a stream to be disabled only if the push domain, push path, and stream name match, please submit a ticket.
+3. If you have configured domain groups, you must pass in the correct push domain in order to disable a stream.
  * @method Models\ModifyLiveCallbackTemplateResponse ModifyLiveCallbackTemplate(Models\ModifyLiveCallbackTemplateRequest $req) This API is used to modify a callback template.
  * @method Models\ModifyLiveDomainCertBindingsResponse ModifyLiveDomainCertBindings(Models\ModifyLiveDomainCertBindingsRequest $req) This API is used to bind a certificate to multiple playback domains and update the HTTPS configuration of the domains.
 If a self-owned certificate is used, it will be automatically uploaded to Tencent Cloud’s SSL Certificate Service.
@@ -213,7 +224,7 @@ Referer information is included in HTTP requests. After you enable referer confi
  * @method Models\ModifyLivePushAuthKeyResponse ModifyLivePushAuthKey(Models\ModifyLivePushAuthKeyRequest $req) This API is used to modify the LVB push authentication key.
  * @method Models\ModifyLiveRecordTemplateResponse ModifyLiveRecordTemplate(Models\ModifyLiveRecordTemplateRequest $req) This API is used to modify the recording template configuration.
  * @method Models\ModifyLiveSnapshotTemplateResponse ModifyLiveSnapshotTemplate(Models\ModifyLiveSnapshotTemplateRequest $req) This API is used to modify the screencapturing template configuration.
- * @method Models\ModifyLiveTimeShiftTemplateResponse ModifyLiveTimeShiftTemplate(Models\ModifyLiveTimeShiftTemplateRequest $req) This API is used to modify a standby stream template.
+ * @method Models\ModifyLiveTimeShiftTemplateResponse ModifyLiveTimeShiftTemplate(Models\ModifyLiveTimeShiftTemplateRequest $req) This API is used to modify a time shifting template.
  * @method Models\ModifyLiveTranscodeTemplateResponse ModifyLiveTranscodeTemplate(Models\ModifyLiveTranscodeTemplateRequest $req) This API is used to modify the transcoding template configuration.
  * @method Models\ResumeDelayLiveStreamResponse ResumeDelayLiveStream(Models\ResumeDelayLiveStreamRequest $req) This API is used to cancel the delay setting and recover the real-time display of the live streaming image.
  * @method Models\ResumeLiveStreamResponse ResumeLiveStream(Models\ResumeLiveStreamRequest $req) This API is used to resume the push of a specific stream.

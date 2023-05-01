@@ -18,7 +18,7 @@ namespace TencentCloud\Lcic\V20220817\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * The answers to a quiz question in a room.
+ * The answer to a quiz question.
  *
  * @method string getName() Obtain The username.
  * @method void setName(string $Name) Set The username.

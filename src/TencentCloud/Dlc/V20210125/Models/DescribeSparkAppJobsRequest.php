@@ -26,14 +26,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSorting(string $Sorting) Set Descending or ascending order, such as `desc`.
  * @method array getFilters() Obtain Filter by this parameter, which can be `spark-job-name`.
  * @method void setFilters(array $Filters) Set Filter by this parameter, which can be `spark-job-name`.
- * @method string getStartTime() Obtain Update start time
- * @method void setStartTime(string $StartTime) Set Update start time
- * @method string getEndTime() Obtain Update end time
- * @method void setEndTime(string $EndTime) Set Update end time
- * @method integer getOffset() Obtain Query list offset
- * @method void setOffset(integer $Offset) Set Query list offset
- * @method integer getLimit() Obtain Query list limit
- * @method void setLimit(integer $Limit) Set Query list limit
+ * @method string getStartTime() Obtain The update start time in the format of yyyy-mm-dd HH:MM:SS.
+ * @method void setStartTime(string $StartTime) Set The update start time in the format of yyyy-mm-dd HH:MM:SS.
+ * @method string getEndTime() Obtain The update end time in the format of yyyy-mm-dd HH:MM:SS.
+ * @method void setEndTime(string $EndTime) Set The update end time in the format of yyyy-mm-dd HH:MM:SS.
+ * @method integer getOffset() Obtain The query list offset, which defaults to 0.
+ * @method void setOffset(integer $Offset) Set The query list offset, which defaults to 0.
+ * @method integer getLimit() Obtain The maximum number of queries allowed in the list, which defaults to 100.
+ * @method void setLimit(integer $Limit) Set The maximum number of queries allowed in the list, which defaults to 100.
  */
 class DescribeSparkAppJobsRequest extends AbstractModel
 {
@@ -53,22 +53,22 @@ class DescribeSparkAppJobsRequest extends AbstractModel
     public $Filters;
 
     /**
-     * @var string Update start time
+     * @var string The update start time in the format of yyyy-mm-dd HH:MM:SS.
      */
     public $StartTime;
 
     /**
-     * @var string Update end time
+     * @var string The update end time in the format of yyyy-mm-dd HH:MM:SS.
      */
     public $EndTime;
 
     /**
-     * @var integer Query list offset
+     * @var integer The query list offset, which defaults to 0.
      */
     public $Offset;
 
     /**
-     * @var integer Query list limit
+     * @var integer The maximum number of queries allowed in the list, which defaults to 100.
      */
     public $Limit;
 
@@ -76,10 +76,10 @@ class DescribeSparkAppJobsRequest extends AbstractModel
      * @param string $SortBy The returned results are sorted by this field.
      * @param string $Sorting Descending or ascending order, such as `desc`.
      * @param array $Filters Filter by this parameter, which can be `spark-job-name`.
-     * @param string $StartTime Update start time
-     * @param string $EndTime Update end time
-     * @param integer $Offset Query list offset
-     * @param integer $Limit Query list limit
+     * @param string $StartTime The update start time in the format of yyyy-mm-dd HH:MM:SS.
+     * @param string $EndTime The update end time in the format of yyyy-mm-dd HH:MM:SS.
+     * @param integer $Offset The query list offset, which defaults to 0.
+     * @param integer $Limit The maximum number of queries allowed in the list, which defaults to 100.
      */
     function __construct()
     {

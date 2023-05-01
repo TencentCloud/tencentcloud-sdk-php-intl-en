@@ -34,6 +34,7 @@ A maximum of 20 requests can be initiated per second for this API.
 A maximum of 20 requests can be initiated per second for this API.
  * @method Models\BatchDeleteRecordResponse BatchDeleteRecord(Models\BatchDeleteRecordRequest $req) This API is used to delete the recordings of multiple rooms.
 A maximum of 20 requests can be initiated per second for this API.
+ * @method Models\BatchDescribeDocumentResponse BatchDescribeDocument(Models\BatchDescribeDocumentRequest $req) This API is used to get courseware information.
  * @method Models\BatchRegisterResponse BatchRegister(Models\BatchRegisterRequest $req) This API is used to register multiple users (up to 1,000) at a time. If a user ID already exists, the existing one will be overwritten.
 A maximum of 20 requests can be initiated per second for this API.
  * @method Models\BindDocumentToRoomResponse BindDocumentToRoom(Models\BindDocumentToRoomRequest $req) This API is used to bind a document to a room.
@@ -55,12 +56,18 @@ A maximum of 20 requests can be initiated per second for this API.
  * @method Models\DeleteRecordResponse DeleteRecord(Models\DeleteRecordRequest $req) This example shows you how to delete the recording files of a specific room.
 A maximum of 20 requests can be initiated per second for this API.
  * @method Models\DeleteRoomResponse DeleteRoom(Models\DeleteRoomRequest $req) This API is used to delete a room.
+ * @method Models\DeleteSupervisorResponse DeleteSupervisor(Models\DeleteSupervisorRequest $req) This API is used to delete spectators.
  * @method Models\DescribeAnswerListResponse DescribeAnswerList(Models\DescribeAnswerListRequest $req) This API is used to get the answers to a quiz question in a room.
  * @method Models\DescribeCurrentMemberListResponse DescribeCurrentMemberList(Models\DescribeCurrentMemberListRequest $req) This API is used to get the user list of a room. This API will not work if a room has ended or expired.
 A maximum of 20 requests can be initiated per second for this API.
  * @method Models\DescribeDeveloperResponse DescribeDeveloper(Models\DescribeDeveloperRequest $req) This API is used to get the developer information.
  * @method Models\DescribeDocumentResponse DescribeDocument(Models\DescribeDocumentRequest $req) This API is used to get the information of a specific document.
 A maximum of 20 requests can be initiated per second for this API.
+ * @method Models\DescribeDocumentsResponse DescribeDocuments(Models\DescribeDocumentsRequest $req) 有新接口替换
+
+A new API is offered for this action now.
+
+This API is used to query courseware. It has been deprecated. Please use `BatchDescribeDocument` instead.
  * @method Models\DescribeDocumentsByRoomResponse DescribeDocumentsByRoom(Models\DescribeDocumentsByRoomRequest $req) This API is used to get the document list of a specific room.
 A maximum of 20 requests can be initiated per second for this API.
  * @method Models\DescribeGroupResponse DescribeGroup(Models\DescribeGroupRequest $req) This API is used to get the details of a group.
@@ -78,6 +85,7 @@ A maximum of 20 requests can be initiated per second for this API.
 A maximum of 20 requests can be initiated per second for this API.
  * @method Models\DescribeSupervisorsResponse DescribeSupervisors(Models\DescribeSupervisorsRequest $req) This API is used to get the spectators of a room.
  * @method Models\DescribeUserResponse DescribeUser(Models\DescribeUserRequest $req) This API is used to obtain user profile.
+ * @method Models\EndRoomResponse EndRoom(Models\EndRoomRequest $req) This API is used to end a room.
  * @method Models\GetRoomEventResponse GetRoomEvent(Models\GetRoomEventRequest $req) This API is used to get the events of a room. It only works within one hour after a class ends.
  * @method Models\GetRoomMessageResponse GetRoomMessage(Models\GetRoomMessageRequest $req) This API is used to get the message history of a room (room messages are retained for seven days).
  * @method Models\GetRoomsResponse GetRooms(Models\GetRoomsRequest $req) This API is used to get the room list.
@@ -97,6 +105,7 @@ A maximum of 20 requests can be initiated per second for this API.
  * @method Models\SetAppCustomContentResponse SetAppCustomContent(Models\SetAppCustomContentRequest $req) This API is used to set or update the custom content of an application, including the application icon and custom code. After you update JS and CSS content, you also need to call this API for the updates to take effect.
  * @method Models\SetWatermarkResponse SetWatermark(Models\SetWatermarkRequest $req) This API is used to configure watermarks.
 A maximum of 20 requests can be initiated per second for this API.
+ * @method Models\StartRoomResponse StartRoom(Models\StartRoomRequest $req) This API is used to start a room. Before you call this API, make sure a user has entered the room so that the class is initialized.
  * @method Models\UnbindDocumentFromRoomResponse UnbindDocumentFromRoom(Models\UnbindDocumentFromRoomRequest $req) This API is used to unbind a document from a room.
  */
 

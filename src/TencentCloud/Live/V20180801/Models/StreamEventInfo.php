@@ -38,8 +38,10 @@ In UTC format, such as 2019-01-07T15:00:00Z.
  * @method void setStopReason(string $StopReason) Set Stop reason.
  * @method integer getDuration() Obtain Push duration in seconds.
  * @method void setDuration(integer $Duration) Set Push duration in seconds.
- * @method string getClientIp() Obtain Host IP.
- * @method void setClientIp(string $ClientIp) Set Host IP.
+ * @method string getClientIp() Obtain The IP address of the host.
+If the stream is published from a private network, this parameter will be `-`.
+ * @method void setClientIp(string $ClientIp) Set The IP address of the host.
+If the stream is published from a private network, this parameter will be `-`.
  * @method string getResolution() Obtain Resolution.
  * @method void setResolution(string $Resolution) Set Resolution.
  */
@@ -83,7 +85,8 @@ In UTC format, such as 2019-01-07T15:00:00Z.
     public $Duration;
 
     /**
-     * @var string Host IP.
+     * @var string The IP address of the host.
+If the stream is published from a private network, this parameter will be `-`.
      */
     public $ClientIp;
 
@@ -102,7 +105,8 @@ In UTC format, such as 2019-01-07T12:00:00Z.
 In UTC format, such as 2019-01-07T15:00:00Z.
      * @param string $StopReason Stop reason.
      * @param integer $Duration Push duration in seconds.
-     * @param string $ClientIp Host IP.
+     * @param string $ClientIp The IP address of the host.
+If the stream is published from a private network, this parameter will be `-`.
      * @param string $Resolution Resolution.
      */
     function __construct()

@@ -44,6 +44,10 @@ use TencentCloud\Common\AbstractModel;
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setPushExceptionNotifyUrl(string $PushExceptionNotifyUrl) Set The push error callback URL.
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getAudioAuditNotifyUrl() Obtain The audio/video moderation callback URL.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setAudioAuditNotifyUrl(string $AudioAuditNotifyUrl) Set The audio/video moderation callback URL.
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class CallBackTemplateInfo extends AbstractModel
 {
@@ -104,6 +108,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $PushExceptionNotifyUrl;
 
     /**
+     * @var string The audio/video moderation callback URL.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $AudioAuditNotifyUrl;
+
+    /**
      * @param integer $TemplateId Template ID.
      * @param string $TemplateName Template name.
      * @param string $Description Description.
@@ -115,6 +125,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $PornCensorshipNotifyUrl Porn detection callback URL.
      * @param string $CallbackKey Callback authentication key.
      * @param string $PushExceptionNotifyUrl The push error callback URL.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $AudioAuditNotifyUrl The audio/video moderation callback URL.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
@@ -172,6 +184,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("PushExceptionNotifyUrl",$param) and $param["PushExceptionNotifyUrl"] !== null) {
             $this->PushExceptionNotifyUrl = $param["PushExceptionNotifyUrl"];
+        }
+
+        if (array_key_exists("AudioAuditNotifyUrl",$param) and $param["AudioAuditNotifyUrl"] !== null) {
+            $this->AudioAuditNotifyUrl = $param["AudioAuditNotifyUrl"];
         }
     }
 }

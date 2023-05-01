@@ -74,10 +74,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setImageVersionName(string $ImageVersionName) Set The version name of cluster image, such as SuperSQL-P 1.1 and SuperSQL-S 3.2. If no value is passed in, a cluster is created using the latest image version.
  * @method string getMainClusterName() Obtain The name of the primary cluster.
  * @method void setMainClusterName(string $MainClusterName) Set The name of the primary cluster.
- * @method boolean getElasticSwitch() Obtain 
- * @method void setElasticSwitch(boolean $ElasticSwitch) Set 
- * @method integer getElasticLimit() Obtain 
- * @method void setElasticLimit(integer $ElasticLimit) Set 
+ * @method boolean getElasticSwitch() Obtain Whether to enable the scaling feature for a monthly subscribed Spark job cluster.
+ * @method void setElasticSwitch(boolean $ElasticSwitch) Set Whether to enable the scaling feature for a monthly subscribed Spark job cluster.
+ * @method integer getElasticLimit() Obtain The upper limit (in CUs) for scaling of the monthly subscribed Spark job cluster.
+ * @method void setElasticLimit(integer $ElasticLimit) Set The upper limit (in CUs) for scaling of the monthly subscribed Spark job cluster.
  */
 class CreateDataEngineRequest extends AbstractModel
 {
@@ -217,12 +217,12 @@ class CreateDataEngineRequest extends AbstractModel
     public $MainClusterName;
 
     /**
-     * @var boolean 
+     * @var boolean Whether to enable the scaling feature for a monthly subscribed Spark job cluster.
      */
     public $ElasticSwitch;
 
     /**
-     * @var integer 
+     * @var integer The upper limit (in CUs) for scaling of the monthly subscribed Spark job cluster.
      */
     public $ElasticLimit;
 
@@ -254,8 +254,8 @@ class CreateDataEngineRequest extends AbstractModel
      * @param array $DataEngineConfigPairs The advanced configurations of clusters.
      * @param string $ImageVersionName The version name of cluster image, such as SuperSQL-P 1.1 and SuperSQL-S 3.2. If no value is passed in, a cluster is created using the latest image version.
      * @param string $MainClusterName The name of the primary cluster.
-     * @param boolean $ElasticSwitch 
-     * @param integer $ElasticLimit 
+     * @param boolean $ElasticSwitch Whether to enable the scaling feature for a monthly subscribed Spark job cluster.
+     * @param integer $ElasticLimit The upper limit (in CUs) for scaling of the monthly subscribed Spark job cluster.
      */
     function __construct()
     {

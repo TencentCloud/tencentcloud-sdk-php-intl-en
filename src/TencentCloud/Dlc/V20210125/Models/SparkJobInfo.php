@@ -116,6 +116,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setSparkImageVersion(string $SparkImageVersion) Set The image version.
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getSessionId() Obtain The ID of the associated Data Lake Compute query script.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setSessionId(string $SessionId) Set The ID of the associated Data Lake Compute query script.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getDataEngineClusterType() Obtain 
+ * @method void setDataEngineClusterType(string $DataEngineClusterType) Set 
+ * @method string getDataEngineImageVersion() Obtain 
+ * @method void setDataEngineImageVersion(string $DataEngineImageVersion) Set 
  */
 class SparkJobInfo extends AbstractModel
 {
@@ -312,6 +320,22 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $SparkImageVersion;
 
     /**
+     * @var string The ID of the associated Data Lake Compute query script.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $SessionId;
+
+    /**
+     * @var string 
+     */
+    public $DataEngineClusterType;
+
+    /**
+     * @var string 
+     */
+    public $DataEngineImageVersion;
+
+    /**
      * @param string $JobId Spark job ID
      * @param string $JobName Spark job name
      * @param integer $JobType Spark job type. Valid values: `1` (batch job), `2` (streaming job).
@@ -360,6 +384,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $SparkImageVersion The image version.
 Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $SessionId The ID of the associated Data Lake Compute query script.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $DataEngineClusterType 
+     * @param string $DataEngineImageVersion 
      */
     function __construct()
     {
@@ -517,6 +545,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("SparkImageVersion",$param) and $param["SparkImageVersion"] !== null) {
             $this->SparkImageVersion = $param["SparkImageVersion"];
+        }
+
+        if (array_key_exists("SessionId",$param) and $param["SessionId"] !== null) {
+            $this->SessionId = $param["SessionId"];
+        }
+
+        if (array_key_exists("DataEngineClusterType",$param) and $param["DataEngineClusterType"] !== null) {
+            $this->DataEngineClusterType = $param["DataEngineClusterType"];
+        }
+
+        if (array_key_exists("DataEngineImageVersion",$param) and $param["DataEngineImageVersion"] !== null) {
+            $this->DataEngineImageVersion = $param["DataEngineImageVersion"];
         }
     }
 }

@@ -18,7 +18,7 @@ namespace TencentCloud\Lcic\V20220817\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * The details of a quiz question.
+ * A quiz question in a room.
  *
  * @method string getQuestionId() Obtain The question ID.
  * @method void setQuestionId(string $QuestionId) Set The question ID.

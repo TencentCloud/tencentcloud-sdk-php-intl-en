@@ -72,6 +72,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSparkImageVersion(string $SparkImageVersion) Set The Spark image version name.
  * @method integer getAppExecutorMaxNumbers() Obtain The specified executor count (max), which defaults to 1. This parameter applies if the "Dynamic" mode is selected. If the "Dynamic" mode is not selected, the executor count is equal to `AppExecutorNums`.
  * @method void setAppExecutorMaxNumbers(integer $AppExecutorMaxNumbers) Set The specified executor count (max), which defaults to 1. This parameter applies if the "Dynamic" mode is selected. If the "Dynamic" mode is not selected, the executor count is equal to `AppExecutorNums`.
+ * @method string getSessionId() Obtain The ID of the associated Data Lake Compute query script.
+ * @method void setSessionId(string $SessionId) Set The ID of the associated Data Lake Compute query script.
  */
 class CreateSparkAppRequest extends AbstractModel
 {
@@ -206,6 +208,11 @@ class CreateSparkAppRequest extends AbstractModel
     public $AppExecutorMaxNumbers;
 
     /**
+     * @var string The ID of the associated Data Lake Compute query script.
+     */
+    public $SessionId;
+
+    /**
      * @param string $AppName Spark application name
      * @param integer $AppType 1: Spark JAR application; 2: Spark streaming application
      * @param string $DataEngine The data engine executing the Spark job
@@ -232,6 +239,7 @@ class CreateSparkAppRequest extends AbstractModel
      * @param string $SparkImage The Spark image version.
      * @param string $SparkImageVersion The Spark image version name.
      * @param integer $AppExecutorMaxNumbers The specified executor count (max), which defaults to 1. This parameter applies if the "Dynamic" mode is selected. If the "Dynamic" mode is not selected, the executor count is equal to `AppExecutorNums`.
+     * @param string $SessionId The ID of the associated Data Lake Compute query script.
      */
     function __construct()
     {
@@ -348,6 +356,10 @@ class CreateSparkAppRequest extends AbstractModel
 
         if (array_key_exists("AppExecutorMaxNumbers",$param) and $param["AppExecutorMaxNumbers"] !== null) {
             $this->AppExecutorMaxNumbers = $param["AppExecutorMaxNumbers"];
+        }
+
+        if (array_key_exists("SessionId",$param) and $param["SessionId"] !== null) {
+            $this->SessionId = $param["SessionId"];
         }
     }
 }
