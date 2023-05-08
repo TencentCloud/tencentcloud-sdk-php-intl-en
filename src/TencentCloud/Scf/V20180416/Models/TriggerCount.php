@@ -42,6 +42,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCm(integer $Cm) Set Number of CM triggers
  * @method integer getVod() Obtain Number of VOD triggers
  * @method void setVod(integer $Vod) Set Number of VOD triggers
+ * @method integer getEb() Obtain Number of EventBridge triggers
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setEb(integer $Eb) Set Number of EventBridge triggers
+Note: This field may return `null`, indicating that no valid values can be obtained.
  */
 class TriggerCount extends AbstractModel
 {
@@ -101,6 +105,12 @@ class TriggerCount extends AbstractModel
     public $Vod;
 
     /**
+     * @var integer Number of EventBridge triggers
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $Eb;
+
+    /**
      * @param integer $Cos Number of COS triggers
      * @param integer $Timer Number of timer triggers
      * @param integer $Cmq Number of CMQ triggers
@@ -112,6 +122,8 @@ class TriggerCount extends AbstractModel
      * @param integer $Mps Number of MPS triggers
      * @param integer $Cm Number of CM triggers
      * @param integer $Vod Number of VOD triggers
+     * @param integer $Eb Number of EventBridge triggers
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -168,6 +180,10 @@ class TriggerCount extends AbstractModel
 
         if (array_key_exists("Vod",$param) and $param["Vod"] !== null) {
             $this->Vod = $param["Vod"];
+        }
+
+        if (array_key_exists("Eb",$param) and $param["Eb"] !== null) {
+            $this->Eb = $param["Eb"];
         }
     }
 }

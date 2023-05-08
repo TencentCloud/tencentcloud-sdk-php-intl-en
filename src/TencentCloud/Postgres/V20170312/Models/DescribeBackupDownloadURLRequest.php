@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBackupId(string $BackupId) Set Unique backup ID.
  * @method integer getURLExpireTime() Obtain Validity period of a URL, which is 12 hours by default.
  * @method void setURLExpireTime(integer $URLExpireTime) Set Validity period of a URL, which is 12 hours by default.
+ * @method BackupDownloadRestriction getBackupDownloadRestriction() Obtain Backup download restriction
+ * @method void setBackupDownloadRestriction(BackupDownloadRestriction $BackupDownloadRestriction) Set Backup download restriction
  */
 class DescribeBackupDownloadURLRequest extends AbstractModel
 {
@@ -52,10 +54,16 @@ class DescribeBackupDownloadURLRequest extends AbstractModel
     public $URLExpireTime;
 
     /**
+     * @var BackupDownloadRestriction Backup download restriction
+     */
+    public $BackupDownloadRestriction;
+
+    /**
      * @param string $DBInstanceId Instance ID.
      * @param string $BackupType Backup type. Valid values: `LogBackup`, `BaseBackup`.
      * @param string $BackupId Unique backup ID.
      * @param integer $URLExpireTime Validity period of a URL, which is 12 hours by default.
+     * @param BackupDownloadRestriction $BackupDownloadRestriction Backup download restriction
      */
     function __construct()
     {
@@ -84,6 +92,11 @@ class DescribeBackupDownloadURLRequest extends AbstractModel
 
         if (array_key_exists("URLExpireTime",$param) and $param["URLExpireTime"] !== null) {
             $this->URLExpireTime = $param["URLExpireTime"];
+        }
+
+        if (array_key_exists("BackupDownloadRestriction",$param) and $param["BackupDownloadRestriction"] !== null) {
+            $this->BackupDownloadRestriction = new BackupDownloadRestriction();
+            $this->BackupDownloadRestriction->deserialize($param["BackupDownloadRestriction"]);
         }
     }
 }

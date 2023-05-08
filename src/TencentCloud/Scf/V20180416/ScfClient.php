@@ -71,6 +71,7 @@ An alias must point to a master version and can point to an additional version a
  * @method Models\UpdateFunctionCodeResponse UpdateFunctionCode(Models\UpdateFunctionCodeRequest $req) This API is used to update the function code based on the input parameters.
  * @method Models\UpdateFunctionEventInvokeConfigResponse UpdateFunctionEventInvokeConfig(Models\UpdateFunctionEventInvokeConfigRequest $req) This API is used to update the async retry configuration of a function, including the number of retry attempts and message retention period.
  * @method Models\UpdateNamespaceResponse UpdateNamespace(Models\UpdateNamespaceRequest $req) This API is used to update a namespace.
+ * @method Models\UpdateTriggerStatusResponse UpdateTriggerStatus(Models\UpdateTriggerStatusRequest $req) This API is used to update the trigger status.
  */
 
 class ScfClient extends AbstractClient

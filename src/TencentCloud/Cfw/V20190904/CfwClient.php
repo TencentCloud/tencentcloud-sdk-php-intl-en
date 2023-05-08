@@ -25,7 +25,8 @@ use TencentCloud\Cfw\V20190904\Models as Models;
 /**
  * @method Models\AddAcRuleResponse AddAcRule(Models\AddAcRuleRequest $req) This API is used to add edge firewall rules.
  * @method Models\AddEnterpriseSecurityGroupRulesResponse AddEnterpriseSecurityGroupRules(Models\AddEnterpriseSecurityGroupRulesRequest $req) This API is used to create enterprise security group rules (new).
- * @method Models\CreateAcRulesResponse CreateAcRules(Models\CreateAcRulesRequest $req) This API is used to create rules.
+ * @method Models\AddNatAcRuleResponse AddNatAcRule(Models\AddNatAcRuleRequest $req) This API is used to add NAT access control rules.
+ * @method Models\CreateAcRulesResponse CreateAcRules(Models\CreateAcRulesRequest $req) This API is used to create access control rules.
  * @method Models\CreateNatFwInstanceResponse CreateNatFwInstance(Models\CreateNatFwInstanceRequest $req) This API is used to create a NAT firewall instance (The Region parameter is required).
  * @method Models\CreateNatFwInstanceWithDomainResponse CreateNatFwInstanceWithDomain(Models\CreateNatFwInstanceWithDomainRequest $req) This API is used to create a firewall instance with domain name (The Region parameter is required).
  * @method Models\CreateSecurityGroupRulesResponse CreateSecurityGroupRules(Models\CreateSecurityGroupRulesRequest $req) This API is used to create enterprise security group rules.
@@ -38,12 +39,14 @@ use TencentCloud\Cfw\V20190904\Models as Models;
  * @method Models\DescribeAssociatedInstanceListResponse DescribeAssociatedInstanceList(Models\DescribeAssociatedInstanceListRequest $req) This API is used to get the list of instances associated with a security group.
  * @method Models\DescribeBlockByIpTimesListResponse DescribeBlockByIpTimesList(Models\DescribeBlockByIpTimesListRequest $req) This API is used to get blocked IP data.
 
+ * @method Models\DescribeBlockIgnoreListResponse DescribeBlockIgnoreList(Models\DescribeBlockIgnoreListRequest $req) This API is used to get allowlists or blocklists for intrusion prevention.
  * @method Models\DescribeBlockStaticListResponse DescribeBlockStaticList(Models\DescribeBlockStaticListRequest $req) This API is used to get the most frequent attacker.
 
  * @method Models\DescribeDefenseSwitchResponse DescribeDefenseSwitch(Models\DescribeDefenseSwitchRequest $req) This API is used to query the list of firewall toggles with Intrusion Defense enabled.
  * @method Models\DescribeEnterpriseSecurityGroupRuleResponse DescribeEnterpriseSecurityGroupRule(Models\DescribeEnterpriseSecurityGroupRuleRequest $req) This API is used to get enterprise security group rules (new).
  * @method Models\DescribeGuideScanInfoResponse DescribeGuideScanInfo(Models\DescribeGuideScanInfoRequest $req) This API is used to get the scan interface information in Get Started.
  * @method Models\DescribeIPStatusListResponse DescribeIPStatusList(Models\DescribeIPStatusListRequest $req) This API is used to get the IP protection status.
+ * @method Models\DescribeNatAcRuleResponse DescribeNatAcRule(Models\DescribeNatAcRuleRequest $req) This API is used to get the NAT access control list.
  * @method Models\DescribeNatFwInfoCountResponse DescribeNatFwInfoCount(Models\DescribeNatFwInfoCountRequest $req) This API is used to get the number of a user's subnets connected to NAT firewall and the number of NAT firewall instances.
  * @method Models\DescribeNatFwInstanceResponse DescribeNatFwInstance(Models\DescribeNatFwInstanceRequest $req) This API is used to get all NAT instances of a tenant.
  * @method Models\DescribeNatFwInstanceWithRegionResponse DescribeNatFwInstanceWithRegion(Models\DescribeNatFwInstanceWithRegionRequest $req) This API is used to get the NAT instance with the region that is newly maintained by the tenant.
@@ -68,14 +71,18 @@ use TencentCloud\Cfw\V20190904\Models as Models;
  * @method Models\ModifyAllRuleStatusResponse ModifyAllRuleStatus(Models\ModifyAllRuleStatusRequest $req) This API is used to enable or disable all rules.
  * @method Models\ModifyAllVPCSwitchStatusResponse ModifyAllVPCSwitchStatus(Models\ModifyAllVPCSwitchStatusRequest $req) This API is used to enable or disable one or multiple VPC firewalls.
  * @method Models\ModifyAssetScanResponse ModifyAssetScan(Models\ModifyAssetScanRequest $req) This API is used to modify asset scan settings.
- * @method Models\ModifyBlockIgnoreListResponse ModifyBlockIgnoreList(Models\ModifyBlockIgnoreListRequest $req) This API is used to:
-add IPs/domains in the blocklist or ignored list
-delete IPs/domains in the blocklist or ignored list
-modify IPs/domains in the blocklist or ignored list
+ * @method Models\ModifyBlockIgnoreListResponse ModifyBlockIgnoreList(Models\ModifyBlockIgnoreListRequest $req) This API is used to manage blocked/allowed IPs and domains.
+Add IPs/domains to the blocked/allowed list
+Remove IPs/domains from the blocked/allowed list
+Modify events related with the IPs/domains in the blocked/allowed list
  * @method Models\ModifyBlockTopResponse ModifyBlockTop(Models\ModifyBlockTopRequest $req) This API is used to pin or unpin a blocking log.
+ * @method Models\ModifyEnterpriseSecurityDispatchStatusResponse ModifyEnterpriseSecurityDispatchStatus(Models\ModifyEnterpriseSecurityDispatchStatusRequest $req) This API is used to modify the publishing status of an enterprise security group.
+ * @method Models\ModifyEnterpriseSecurityGroupRuleResponse ModifyEnterpriseSecurityGroupRule(Models\ModifyEnterpriseSecurityGroupRuleRequest $req) This API is used to modify a new enterprise security group rule.
+ * @method Models\ModifyNatAcRuleResponse ModifyNatAcRule(Models\ModifyNatAcRuleRequest $req) This API is used to modify NAT access control rules.
  * @method Models\ModifyNatFwReSelectResponse ModifyNatFwReSelect(Models\ModifyNatFwReSelectRequest $req) This API is used to get the VPC or NAT list for changing associated firewall instances.
  * @method Models\ModifyNatFwSwitchResponse ModifyNatFwSwitch(Models\ModifyNatFwSwitchRequest $req) This API is used to enable or disable a NAT firewall.
  * @method Models\ModifyNatFwVpcDnsSwitchResponse ModifyNatFwVpcDnsSwitch(Models\ModifyNatFwVpcDnsSwitchRequest $req) This API is used to modify the VPC DNS status of NAT firewall instances.
+ * @method Models\ModifyNatSequenceRulesResponse ModifyNatSequenceRules(Models\ModifyNatSequenceRulesRequest $req) This API is used to change the sequence number of NAT firewall rules.
  * @method Models\ModifyPublicIPSwitchStatusResponse ModifyPublicIPSwitchStatus(Models\ModifyPublicIPSwitchStatusRequest $req) This API is used to enable or disable an edge firewall.
  * @method Models\ModifyResourceGroupResponse ModifyResourceGroup(Models\ModifyResourceGroupRequest $req) This API is used to modify the asset group information in Asset Management.
 
@@ -84,9 +91,11 @@ modify IPs/domains in the blocklist or ignored list
  * @method Models\ModifySecurityGroupItemRuleStatusResponse ModifySecurityGroupItemRuleStatus(Models\ModifySecurityGroupItemRuleStatusRequest $req) This API is used to enable or disable an enterprise security group rule.
  * @method Models\ModifySecurityGroupSequenceRulesResponse ModifySecurityGroupSequenceRules(Models\ModifySecurityGroupSequenceRulesRequest $req) This API is used to sort enterprise security group rules.
  * @method Models\ModifySequenceRulesResponse ModifySequenceRules(Models\ModifySequenceRulesRequest $req) This API is used to modify rule priority.
+ * @method Models\ModifyStorageSettingResponse ModifyStorageSetting(Models\ModifyStorageSettingRequest $req) This API is used to modify the log retention period or to clear logs.
  * @method Models\ModifyTableStatusResponse ModifyTableStatus(Models\ModifyTableStatusRequest $req) This API is used to modify rule list status.
  * @method Models\RemoveAcRuleResponse RemoveAcRule(Models\RemoveAcRuleRequest $req) This API is used to delete edge firewall rules.
  * @method Models\RemoveEnterpriseSecurityGroupRuleResponse RemoveEnterpriseSecurityGroupRule(Models\RemoveEnterpriseSecurityGroupRuleRequest $req) This API is used to delete enterprise security group rules (new).
+ * @method Models\RemoveNatAcRuleResponse RemoveNatAcRule(Models\RemoveNatAcRuleRequest $req) This API is used to delete NAT access control rules.
  * @method Models\SetNatFwDnatRuleResponse SetNatFwDnatRule(Models\SetNatFwDnatRuleRequest $req) This API is used to configure firewall DNAT rules.
  * @method Models\SetNatFwEipResponse SetNatFwEip(Models\SetNatFwEipRequest $req) This API is used to set the firewall instance EIP. (Available for firewall instances in the "Create new" mode. only)
  * @method Models\StopSecurityGroupRuleDispatchResponse StopSecurityGroupRuleDispatch(Models\StopSecurityGroupRuleDispatchRequest $req) This API is used to stop publishing security group rules.

@@ -30,6 +30,7 @@ use TencentCloud\Tcaplusdb\V20190823\Models as Models;
  * @method Models\CreateSnapshotsResponse CreateSnapshots(Models\CreateSnapshotsRequest $req) This API is used to create one or more table snapshots at a specified past time point.
  * @method Models\CreateTableGroupResponse CreateTableGroup(Models\CreateTableGroupRequest $req) This API is used to create a table group in a TcaplusDB cluster.
  * @method Models\CreateTablesResponse CreateTables(Models\CreateTablesRequest $req) This API is used to create tables in batches based on the selected IDL file list.
+ * @method Models\DeleteBackupRecordsResponse DeleteBackupRecords(Models\DeleteBackupRecordsRequest $req) This API is used to delete a manual backup.
  * @method Models\DeleteClusterResponse DeleteCluster(Models\DeleteClusterRequest $req) This API is used to delete a TcaplusDB cluster, which will succeed only after all resources (including table groups and tables) in the cluster are released.
  * @method Models\DeleteIdlFilesResponse DeleteIdlFiles(Models\DeleteIdlFilesRequest $req) This API is used to delete a target IDL file by specifying the cluster ID and information of the file to be deleted. If the file is associated with a table, deletion will fail.
  * @method Models\DeleteSnapshotsResponse DeleteSnapshots(Models\DeleteSnapshotsRequest $req) This API is used to delete one or more table snapshots.
@@ -37,6 +38,11 @@ use TencentCloud\Tcaplusdb\V20190823\Models as Models;
  * @method Models\DeleteTableGroupResponse DeleteTableGroup(Models\DeleteTableGroupRequest $req) This API is used to delete a table group.
  * @method Models\DeleteTableIndexResponse DeleteTableIndex(Models\DeleteTableIndexRequest $req) This API is used to delete the global index from a table.
  * @method Models\DeleteTablesResponse DeleteTables(Models\DeleteTablesRequest $req) This API is used to drop a specified table. Calling this API for the first time means to move the table to the recycle bin, while calling it again means to drop the table completely from the recycle bin.
+ * @method Models\DescribeBackupRecordsResponse DescribeBackupRecords(Models\DescribeBackupRecordsRequest $req) This API is used to query backup records.
+
+When querying the cluster level, set `TableGroupId` to `-1` and `TableName` to `-1`.
+When querying the cluster and table group levels, set `TableName` to `-1`.
+When querying the cluster, table group, and table levels, both `TableGroupId` and `TableName` cannot be set to `-1`.
  * @method Models\DescribeClusterTagsResponse DescribeClusterTags(Models\DescribeClusterTagsRequest $req) This API is used to get the associated tag list of a cluster.
  * @method Models\DescribeClustersResponse DescribeClusters(Models\DescribeClustersRequest $req) This API is used to query the TcaplusDB cluster list, including cluster details.
  * @method Models\DescribeIdlFileInfosResponse DescribeIdlFileInfos(Models\DescribeIdlFileInfosRequest $req) This API is used to query table description file details.
@@ -68,6 +74,7 @@ use TencentCloud\Tcaplusdb\V20190823\Models as Models;
  * @method Models\ModifyTablesResponse ModifyTables(Models\ModifyTablesRequest $req) This API is used to modify specified tables in batches based on the selected table definition IDL file.
  * @method Models\RecoverRecycleTablesResponse RecoverRecycleTables(Models\RecoverRecycleTablesRequest $req) This API is used to recover a dropped table from the recycle bin. It will not work for tables to be released due to arrears.
  * @method Models\RollbackTablesResponse RollbackTables(Models\RollbackTablesRequest $req) This API is used to roll back table data.
+ * @method Models\SetBackupExpireRuleResponse SetBackupExpireRule(Models\SetBackupExpireRuleRequest $req) This API is used to add/delete/modify backup expiration policy. `ClusterId` must be a specific cluster ID (appid).
  * @method Models\SetTableDataFlowResponse SetTableDataFlow(Models\SetTableDataFlowRequest $req) This API is used to enable data subscription for tables or modify the feature's configurations.
  * @method Models\SetTableIndexResponse SetTableIndex(Models\SetTableIndexRequest $req) This API is used to create a global index for a table.
  * @method Models\UpdateApplyResponse UpdateApply(Models\UpdateApplyRequest $req) This API is used to update the application status.

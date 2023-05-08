@@ -28,8 +28,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTargetInstanceId(string $TargetInstanceId) Set ID of the target instance to which the backup is restored. The target instance should be under the same `APPID`. If this parameter is left empty, ID of the source instance will be used.
  * @method array getRenameRestore() Obtain Restore the databases listed in `ReNameRestoreDatabase` and rename them after restoration. If this parameter is left empty, all databases will be restored and renamed in the default format.
  * @method void setRenameRestore(array $RenameRestore) Set Restore the databases listed in `ReNameRestoreDatabase` and rename them after restoration. If this parameter is left empty, all databases will be restored and renamed in the default format.
- * @method string getGroupId() Obtain Group ID of unarchived backup files grouped by backup task. This parameter is returned by the [DescribeBackups](https://intl.cloud.tencent.com/document/product/238/19943?from_cn_redirect=1) API.
- * @method void setGroupId(string $GroupId) Set Group ID of unarchived backup files grouped by backup task. This parameter is returned by the [DescribeBackups](https://intl.cloud.tencent.com/document/product/238/19943?from_cn_redirect=1) API.
+ * @method integer getType() Obtain Rollback type. Valid values: `0` (overwriting), `1` (renaming).
+ * @method void setType(integer $Type) Set Rollback type. Valid values: `0` (overwriting), `1` (renaming).
+ * @method array getDBList() Obtain Database to be overwritten, which is required when overwriting a rollback database.
+ * @method void setDBList(array $DBList) Set Database to be overwritten, which is required when overwriting a rollback database.
+ * @method string getGroupId() Obtain Group ID of unarchived backup files grouped by backup task
+ * @method void setGroupId(string $GroupId) Set Group ID of unarchived backup files grouped by backup task
  */
 class RestoreInstanceRequest extends AbstractModel
 {
@@ -54,7 +58,17 @@ class RestoreInstanceRequest extends AbstractModel
     public $RenameRestore;
 
     /**
-     * @var string Group ID of unarchived backup files grouped by backup task. This parameter is returned by the [DescribeBackups](https://intl.cloud.tencent.com/document/product/238/19943?from_cn_redirect=1) API.
+     * @var integer Rollback type. Valid values: `0` (overwriting), `1` (renaming).
+     */
+    public $Type;
+
+    /**
+     * @var array Database to be overwritten, which is required when overwriting a rollback database.
+     */
+    public $DBList;
+
+    /**
+     * @var string Group ID of unarchived backup files grouped by backup task
      */
     public $GroupId;
 
@@ -63,7 +77,9 @@ class RestoreInstanceRequest extends AbstractModel
      * @param integer $BackupId Backup file ID, which can be obtained through the `Id` field in the returned value of the `DescribeBackups` API
      * @param string $TargetInstanceId ID of the target instance to which the backup is restored. The target instance should be under the same `APPID`. If this parameter is left empty, ID of the source instance will be used.
      * @param array $RenameRestore Restore the databases listed in `ReNameRestoreDatabase` and rename them after restoration. If this parameter is left empty, all databases will be restored and renamed in the default format.
-     * @param string $GroupId Group ID of unarchived backup files grouped by backup task. This parameter is returned by the [DescribeBackups](https://intl.cloud.tencent.com/document/product/238/19943?from_cn_redirect=1) API.
+     * @param integer $Type Rollback type. Valid values: `0` (overwriting), `1` (renaming).
+     * @param array $DBList Database to be overwritten, which is required when overwriting a rollback database.
+     * @param string $GroupId Group ID of unarchived backup files grouped by backup task
      */
     function __construct()
     {
@@ -97,6 +113,14 @@ class RestoreInstanceRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->RenameRestore, $obj);
             }
+        }
+
+        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
+            $this->Type = $param["Type"];
+        }
+
+        if (array_key_exists("DBList",$param) and $param["DBList"] !== null) {
+            $this->DBList = $param["DBList"];
         }
 
         if (array_key_exists("GroupId",$param) and $param["GroupId"] !== null) {

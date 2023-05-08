@@ -64,6 +64,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setZoneZhBak(string $ZoneZhBak) Set Availability zone of the instance
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getRuleUsed() Obtain Number of used rules.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setRuleUsed(integer $RuleUsed) Set Number of used rules.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getRuleMax() Obtain The maximum number of rules allowed in the instance.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setRuleMax(integer $RuleMax) Set The maximum number of rules allowed in the instance.
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class NatInstanceInfo extends AbstractModel
 {
@@ -150,6 +158,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $ZoneZhBak;
 
     /**
+     * @var integer Number of used rules.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $RuleUsed;
+
+    /**
+     * @var integer The maximum number of rules allowed in the instance.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $RuleMax;
+
+    /**
      * @param string $NatinsId NAT instance ID
      * @param string $NatinsName NAT instance name
      * @param string $Region Instance region
@@ -171,6 +191,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $ZoneZh Availability zone of the instance
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $ZoneZhBak Availability zone of the instance
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $RuleUsed Number of used rules.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $RuleMax The maximum number of rules allowed in the instance.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
@@ -244,6 +268,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("ZoneZhBak",$param) and $param["ZoneZhBak"] !== null) {
             $this->ZoneZhBak = $param["ZoneZhBak"];
+        }
+
+        if (array_key_exists("RuleUsed",$param) and $param["RuleUsed"] !== null) {
+            $this->RuleUsed = $param["RuleUsed"];
+        }
+
+        if (array_key_exists("RuleMax",$param) and $param["RuleMax"] !== null) {
+            $this->RuleMax = $param["RuleMax"];
         }
     }
 }

@@ -40,6 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIsCreateDomain(integer $IsCreateDomain) Set 0: not create; 1: create
  * @method string getDomain() Obtain Required for creating a domain name
  * @method void setDomain(string $Domain) Set Required for creating a domain name
+ * @method FwCidrInfo getFwCidrInfo() Obtain IP range of the firewall
+ * @method void setFwCidrInfo(FwCidrInfo $FwCidrInfo) Set IP range of the firewall
  */
 class CreateNatFwInstanceWithDomainRequest extends AbstractModel
 {
@@ -94,6 +96,11 @@ class CreateNatFwInstanceWithDomainRequest extends AbstractModel
     public $Domain;
 
     /**
+     * @var FwCidrInfo IP range of the firewall
+     */
+    public $FwCidrInfo;
+
+    /**
      * @param string $Name Firewall instance name
      * @param integer $Width Bandwidth
      * @param integer $Mode Mode. 1: use existing; 0: create new
@@ -104,6 +111,7 @@ class CreateNatFwInstanceWithDomainRequest extends AbstractModel
      * @param integer $CrossAZone Remote disaster recovery. 1: enable; 0: disable; empty: disable by default
      * @param integer $IsCreateDomain 0: not create; 1: create
      * @param string $Domain Required for creating a domain name
+     * @param FwCidrInfo $FwCidrInfo IP range of the firewall
      */
     function __construct()
     {
@@ -157,6 +165,11 @@ class CreateNatFwInstanceWithDomainRequest extends AbstractModel
 
         if (array_key_exists("Domain",$param) and $param["Domain"] !== null) {
             $this->Domain = $param["Domain"];
+        }
+
+        if (array_key_exists("FwCidrInfo",$param) and $param["FwCidrInfo"] !== null) {
+            $this->FwCidrInfo = new FwCidrInfo();
+            $this->FwCidrInfo->deserialize($param["FwCidrInfo"]);
         }
     }
 }

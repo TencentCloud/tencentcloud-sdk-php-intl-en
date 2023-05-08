@@ -34,8 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBillDuration(integer $BillDuration) Set It indicates the billing duration (in milliseconds) for the function. Null is returned for asynchronous invocations.
  * @method string getFunctionRequestId() Obtain ID of the executed function
  * @method void setFunctionRequestId(string $FunctionRequestId) Set ID of the executed function
- * @method integer getInvokeResult() Obtain `0` indicates successful execution. Null is returned for asynchronous invocations.
- * @method void setInvokeResult(integer $InvokeResult) Set `0` indicates successful execution. Null is returned for asynchronous invocations.
+ * @method integer getInvokeResult() Obtain The [status code](https://intl.cloud.tencent.com/document/product/583/42611?from_cn_redirect=1) of the request. It’s not available for `Invoke` API. 
+ * @method void setInvokeResult(integer $InvokeResult) Set The [status code](https://intl.cloud.tencent.com/document/product/583/42611?from_cn_redirect=1) of the request. It’s not available for `Invoke` API. 
  */
 class Result extends AbstractModel
 {
@@ -75,7 +75,7 @@ class Result extends AbstractModel
     public $FunctionRequestId;
 
     /**
-     * @var integer `0` indicates successful execution. Null is returned for asynchronous invocations.
+     * @var integer The [status code](https://intl.cloud.tencent.com/document/product/583/42611?from_cn_redirect=1) of the request. It’s not available for `Invoke` API. 
      */
     public $InvokeResult;
 
@@ -87,7 +87,7 @@ class Result extends AbstractModel
      * @param float $Duration It indicates the duration (in milliseconds) required for running the function. Null is returned for asynchronous invocations.
      * @param integer $BillDuration It indicates the billing duration (in milliseconds) for the function. Null is returned for asynchronous invocations.
      * @param string $FunctionRequestId ID of the executed function
-     * @param integer $InvokeResult `0` indicates successful execution. Null is returned for asynchronous invocations.
+     * @param integer $InvokeResult The [status code](https://intl.cloud.tencent.com/document/product/583/42611?from_cn_redirect=1) of the request. It’s not available for `Invoke` API. 
      */
     function __construct()
     {

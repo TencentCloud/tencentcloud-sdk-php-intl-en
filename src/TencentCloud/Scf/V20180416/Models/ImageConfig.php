@@ -40,6 +40,20 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid value can be found.
  * @method void setArgs(string $Args) Set The parameters to start up the container. Separate parameters with spaces, such as `u app.py`. If it’s not specified, `CMD in Dockerfile is used.
 Note: This field may return `null`, indicating that no valid value can be found.
+ * @method boolean getContainerImageAccelerate() Obtain Whether to enable image acceleration. It defaults to `False`.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setContainerImageAccelerate(boolean $ContainerImageAccelerate) Set Whether to enable image acceleration. It defaults to `False`.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method integer getImagePort() Obtain Image function port settings
+`-1`: No port-specific image functions
+`0`: Default port (Port 9000)
+Others: Special ports
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setImagePort(integer $ImagePort) Set Image function port settings
+`-1`: No port-specific image functions
+`0`: Default port (Port 9000)
+Others: Special ports
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class ImageConfig extends AbstractModel
 {
@@ -78,6 +92,21 @@ Note: This field may return `null`, indicating that no valid value can be found.
     public $Args;
 
     /**
+     * @var boolean Whether to enable image acceleration. It defaults to `False`.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $ContainerImageAccelerate;
+
+    /**
+     * @var integer Image function port settings
+`-1`: No port-specific image functions
+`0`: Default port (Port 9000)
+Others: Special ports
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $ImagePort;
+
+    /**
      * @param string $ImageType Image repository type, which can be `personal` or `enterprise`
      * @param string $ImageUri {domain}/{namespace}/{imageName}:{tag}@{digest}
      * @param string $RegistryId The temp token that a TCR Enterprise instance uses to obtain an image. It’s required when `ImageType` is `enterprise`.
@@ -88,6 +117,13 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param string $Args The parameters to start up the container. Separate parameters with spaces, such as `u app.py`. If it’s not specified, `CMD in Dockerfile is used.
 Note: This field may return `null`, indicating that no valid value can be found.
+     * @param boolean $ContainerImageAccelerate Whether to enable image acceleration. It defaults to `False`.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param integer $ImagePort Image function port settings
+`-1`: No port-specific image functions
+`0`: Default port (Port 9000)
+Others: Special ports
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -124,6 +160,14 @@ Note: This field may return `null`, indicating that no valid value can be found.
 
         if (array_key_exists("Args",$param) and $param["Args"] !== null) {
             $this->Args = $param["Args"];
+        }
+
+        if (array_key_exists("ContainerImageAccelerate",$param) and $param["ContainerImageAccelerate"] !== null) {
+            $this->ContainerImageAccelerate = $param["ContainerImageAccelerate"];
+        }
+
+        if (array_key_exists("ImagePort",$param) and $param["ImagePort"] !== null) {
+            $this->ImagePort = $param["ImagePort"];
         }
     }
 }

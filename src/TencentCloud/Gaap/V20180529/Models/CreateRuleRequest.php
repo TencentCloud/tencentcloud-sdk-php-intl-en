@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPath(string $Path) Set Path of the forwarding rule
  * @method string getRealServerType() Obtain The origin server type of the forwarding rule, which supports IP and DOMAIN types.
  * @method void setRealServerType(string $RealServerType) Set The origin server type of the forwarding rule, which supports IP and DOMAIN types.
- * @method string getScheduler() Obtain The strategy used by the listener to access the origin server. Values: `rr` (round-robin), `wrr` (weighted round-robin), `lc` (the least-connections strategy), `lrtt` (the least-response-time strategy).
- * @method void setScheduler(string $Scheduler) Set The strategy used by the listener to access the origin server. Values: `rr` (round-robin), `wrr` (weighted round-robin), `lc` (the least-connections strategy), `lrtt` (the least-response-time strategy).
+ * @method string getScheduler() Obtain The strategy used by the listener to access the origin server. Values: `rr` (round-robin), `wrr` (weighted round-robin), `lc` (the least-connections strategy).
+ * @method void setScheduler(string $Scheduler) Set The strategy used by the listener to access the origin server. Values: `rr` (round-robin), `wrr` (weighted round-robin), `lc` (the least-connections strategy).
  * @method integer getHealthCheck() Obtain Whether the health check is enabled for rules. 1: enabled; 0: disabled.
  * @method void setHealthCheck(integer $HealthCheck) Set Whether the health check is enabled for rules. 1: enabled; 0: disabled.
  * @method RuleCheckParams getCheckParams() Obtain Parameters related to origin server health check
@@ -40,8 +40,8 @@ If this field is not passed in, it indicates that the ForwardProtocol of the cor
 If this field is not passed in, it indicates that the ForwardProtocol of the corresponding listener will be used.
  * @method string getForwardHost() Obtain The host to which the acceleration connection forwards. If this parameter is not specified, the default host will be used, i.e., the host with which the client initiates HTTP requests.
  * @method void setForwardHost(string $ForwardHost) Set The host to which the acceleration connection forwards. If this parameter is not specified, the default host will be used, i.e., the host with which the client initiates HTTP requests.
- * @method string getServerNameIndicationSwitch() Obtain Specifies whether to enable Server Name Indication (SNI). Valid values: `ON` (enable) and `OFF` (disable).
- * @method void setServerNameIndicationSwitch(string $ServerNameIndicationSwitch) Set Specifies whether to enable Server Name Indication (SNI). Valid values: `ON` (enable) and `OFF` (disable).
+ * @method string getServerNameIndicationSwitch() Obtain Whether to enable SNI. Values: `on` (enable), `off` (disable). For creation of HTTP listener forwarding rules, SNI is disabled by default.
+ * @method void setServerNameIndicationSwitch(string $ServerNameIndicationSwitch) Set Whether to enable SNI. Values: `on` (enable), `off` (disable). For creation of HTTP listener forwarding rules, SNI is disabled by default.
  * @method string getServerNameIndication() Obtain Server Name Indication (SNI). This field is required when `ServerNameIndicationSwitch` is `ON`.
  * @method void setServerNameIndication(string $ServerNameIndication) Set Server Name Indication (SNI). This field is required when `ServerNameIndicationSwitch` is `ON`.
  * @method string getForcedRedirect() Obtain Enables HTTP-to-HTTPS force redirect for a forwarding rule. Enter a hostname and path of the current forwarding rule.
@@ -70,7 +70,7 @@ class CreateRuleRequest extends AbstractModel
     public $RealServerType;
 
     /**
-     * @var string The strategy used by the listener to access the origin server. Values: `rr` (round-robin), `wrr` (weighted round-robin), `lc` (the least-connections strategy), `lrtt` (the least-response-time strategy).
+     * @var string The strategy used by the listener to access the origin server. Values: `rr` (round-robin), `wrr` (weighted round-robin), `lc` (the least-connections strategy).
      */
     public $Scheduler;
 
@@ -96,7 +96,7 @@ If this field is not passed in, it indicates that the ForwardProtocol of the cor
     public $ForwardHost;
 
     /**
-     * @var string Specifies whether to enable Server Name Indication (SNI). Valid values: `ON` (enable) and `OFF` (disable).
+     * @var string Whether to enable SNI. Values: `on` (enable), `off` (disable). For creation of HTTP listener forwarding rules, SNI is disabled by default.
      */
     public $ServerNameIndicationSwitch;
 
@@ -115,13 +115,13 @@ If this field is not passed in, it indicates that the ForwardProtocol of the cor
      * @param string $Domain Domain name of the forwarding rule
      * @param string $Path Path of the forwarding rule
      * @param string $RealServerType The origin server type of the forwarding rule, which supports IP and DOMAIN types.
-     * @param string $Scheduler The strategy used by the listener to access the origin server. Values: `rr` (round-robin), `wrr` (weighted round-robin), `lc` (the least-connections strategy), `lrtt` (the least-response-time strategy).
+     * @param string $Scheduler The strategy used by the listener to access the origin server. Values: `rr` (round-robin), `wrr` (weighted round-robin), `lc` (the least-connections strategy).
      * @param integer $HealthCheck Whether the health check is enabled for rules. 1: enabled; 0: disabled.
      * @param RuleCheckParams $CheckParams Parameters related to origin server health check
      * @param string $ForwardProtocol Protocol types of the forwarding from acceleration connection to origin server, which supports HTTP or HTTPS.
 If this field is not passed in, it indicates that the ForwardProtocol of the corresponding listener will be used.
      * @param string $ForwardHost The host to which the acceleration connection forwards. If this parameter is not specified, the default host will be used, i.e., the host with which the client initiates HTTP requests.
-     * @param string $ServerNameIndicationSwitch Specifies whether to enable Server Name Indication (SNI). Valid values: `ON` (enable) and `OFF` (disable).
+     * @param string $ServerNameIndicationSwitch Whether to enable SNI. Values: `on` (enable), `off` (disable). For creation of HTTP listener forwarding rules, SNI is disabled by default.
      * @param string $ServerNameIndication Server Name Indication (SNI). This field is required when `ServerNameIndicationSwitch` is `ON`.
      * @param string $ForcedRedirect Enables HTTP-to-HTTPS force redirect for a forwarding rule. Enter a hostname and path of the current forwarding rule.
      */

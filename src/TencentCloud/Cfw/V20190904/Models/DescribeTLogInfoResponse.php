@@ -20,15 +20,30 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeTLogInfo response structure.
  *
- * @method TLogInfo getData() Obtain None
- * @method void setData(TLogInfo $Data) Set None
+ * @method TLogInfo getData() Obtain `NetworkNum`: Number of detected network scans
+ `HandleNum`: Number of pending processing events
+"BanNum": 
+  `VulNum`: Number of vulnerability exploits
+  "OutNum`: Number of compromised servers
+"BruteForceNum": 0
+ * @method void setData(TLogInfo $Data) Set `NetworkNum`: Number of detected network scans
+ `HandleNum`: Number of pending processing events
+"BanNum": 
+  `VulNum`: Number of vulnerability exploits
+  "OutNum`: Number of compromised servers
+"BruteForceNum": 0
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 class DescribeTLogInfoResponse extends AbstractModel
 {
     /**
-     * @var TLogInfo None
+     * @var TLogInfo `NetworkNum`: Number of detected network scans
+ `HandleNum`: Number of pending processing events
+"BanNum": 
+  `VulNum`: Number of vulnerability exploits
+  "OutNum`: Number of compromised servers
+"BruteForceNum": 0
      */
     public $Data;
 
@@ -38,7 +53,12 @@ class DescribeTLogInfoResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param TLogInfo $Data None
+     * @param TLogInfo $Data `NetworkNum`: Number of detected network scans
+ `HandleNum`: Number of pending processing events
+"BanNum": 
+  `VulNum`: Number of vulnerability exploits
+  "OutNum`: Number of compromised servers
+"BruteForceNum": 0
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()

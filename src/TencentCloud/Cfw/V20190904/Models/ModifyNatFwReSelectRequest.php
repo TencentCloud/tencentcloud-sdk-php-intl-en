@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNatGwList(array $NatGwList) Set List of NAT gateways reconnected for the Using Existing mode. Only one of NatGwList and VpcList can be passed.
  * @method array getVpcList() Obtain List of VPCs reconnected for the Create New mode. Only one of NatGwList and VpcList can be passed.
  * @method void setVpcList(array $VpcList) Set List of VPCs reconnected for the Create New mode. Only one of NatGwList and VpcList can be passed.
+ * @method FwCidrInfo getFwCidrInfo() Obtain IP range of the firewall
+ * @method void setFwCidrInfo(FwCidrInfo $FwCidrInfo) Set IP range of the firewall
  */
 class ModifyNatFwReSelectRequest extends AbstractModel
 {
@@ -52,10 +54,16 @@ class ModifyNatFwReSelectRequest extends AbstractModel
     public $VpcList;
 
     /**
+     * @var FwCidrInfo IP range of the firewall
+     */
+    public $FwCidrInfo;
+
+    /**
      * @param integer $Mode Mode. 1: use existing; 0: create new
      * @param string $CfwInstance Firewall instance ID
      * @param array $NatGwList List of NAT gateways reconnected for the Using Existing mode. Only one of NatGwList and VpcList can be passed.
      * @param array $VpcList List of VPCs reconnected for the Create New mode. Only one of NatGwList and VpcList can be passed.
+     * @param FwCidrInfo $FwCidrInfo IP range of the firewall
      */
     function __construct()
     {
@@ -84,6 +92,11 @@ class ModifyNatFwReSelectRequest extends AbstractModel
 
         if (array_key_exists("VpcList",$param) and $param["VpcList"] !== null) {
             $this->VpcList = $param["VpcList"];
+        }
+
+        if (array_key_exists("FwCidrInfo",$param) and $param["FwCidrInfo"] !== null) {
+            $this->FwCidrInfo = new FwCidrInfo();
+            $this->FwCidrInfo->deserialize($param["FwCidrInfo"]);
         }
     }
 }

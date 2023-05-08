@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setZoneBak(string $ZoneBak) Set Secondary zone. The default zone is selected if it is empty.
  * @method integer getCrossAZone() Obtain Remote disaster recovery. 1: enable; 0: disable; empty: disable by default
  * @method void setCrossAZone(integer $CrossAZone) Set Remote disaster recovery. 1: enable; 0: disable; empty: disable by default
+ * @method FwCidrInfo getFwCidrInfo() Obtain IP range of the firewall
+ * @method void setFwCidrInfo(FwCidrInfo $FwCidrInfo) Set IP range of the firewall
  */
 class CreateNatFwInstanceRequest extends AbstractModel
 {
@@ -80,6 +82,11 @@ class CreateNatFwInstanceRequest extends AbstractModel
     public $CrossAZone;
 
     /**
+     * @var FwCidrInfo IP range of the firewall
+     */
+    public $FwCidrInfo;
+
+    /**
      * @param string $Name Firewall instance name
      * @param integer $Width Bandwidth
      * @param integer $Mode Mode. 1: use existing; 0: create new
@@ -88,6 +95,7 @@ class CreateNatFwInstanceRequest extends AbstractModel
      * @param string $Zone Primary zone. The default zone is selected if it is empty.
      * @param string $ZoneBak Secondary zone. The default zone is selected if it is empty.
      * @param integer $CrossAZone Remote disaster recovery. 1: enable; 0: disable; empty: disable by default
+     * @param FwCidrInfo $FwCidrInfo IP range of the firewall
      */
     function __construct()
     {
@@ -133,6 +141,11 @@ class CreateNatFwInstanceRequest extends AbstractModel
 
         if (array_key_exists("CrossAZone",$param) and $param["CrossAZone"] !== null) {
             $this->CrossAZone = $param["CrossAZone"];
+        }
+
+        if (array_key_exists("FwCidrInfo",$param) and $param["FwCidrInfo"] !== null) {
+            $this->FwCidrInfo = new FwCidrInfo();
+            $this->FwCidrInfo->deserialize($param["FwCidrInfo"]);
         }
     }
 }

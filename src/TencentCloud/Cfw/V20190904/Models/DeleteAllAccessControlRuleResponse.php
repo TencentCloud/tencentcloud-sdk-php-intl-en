@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteAllAccessControlRule response structure.
  *
- * @method integer getStatus() Obtain Status value. 0: modified successfully; !0: modification failed
- * @method void setStatus(integer $Status) Set Status value. 0: modified successfully; !0: modification failed
+ * @method integer getStatus() Obtain Status of the task. `0`: Modified successfully; Others: Modification failed
+ * @method void setStatus(integer $Status) Set Status of the task. `0`: Modified successfully; Others: Modification failed
  * @method integer getInfo() Obtain Number of access control rules deleted.
 Note: This field may return `null`, indicating that no valid value was found.
  * @method void setInfo(integer $Info) Set Number of access control rules deleted.
@@ -32,7 +32,7 @@ Note: This field may return `null`, indicating that no valid value was found.
 class DeleteAllAccessControlRuleResponse extends AbstractModel
 {
     /**
-     * @var integer Status value. 0: modified successfully; !0: modification failed
+     * @var integer Status of the task. `0`: Modified successfully; Others: Modification failed
      */
     public $Status;
 
@@ -48,7 +48,7 @@ Note: This field may return `null`, indicating that no valid value was found.
     public $RequestId;
 
     /**
-     * @param integer $Status Status value. 0: modified successfully; !0: modification failed
+     * @param integer $Status Status of the task. `0`: Modified successfully; Others: Modification failed
      * @param integer $Info Number of access control rules deleted.
 Note: This field may return `null`, indicating that no valid value was found.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.

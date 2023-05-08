@@ -140,6 +140,14 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setSlaveZones(SlaveZones $SlaveZones) Set Replica AZ information
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getArchitecture() Obtain Architecture type. Valid values: `SINGLE` (single-node), `DOUBLE` (two-node), `TRIPLE` (three-node).
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setArchitecture(string $Architecture) Set Architecture type. Valid values: `SINGLE` (single-node), `DOUBLE` (two-node), `TRIPLE` (three-node).
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getStyle() Obtain Instance type. Valid values: `EXCLUSIVE` (dedicated), `SHARED` (shared)
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setStyle(string $Style) Set Instance type. Valid values: `EXCLUSIVE` (dedicated), `SHARED` (shared)
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class DBInstance extends AbstractModel
 {
@@ -412,6 +420,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $SlaveZones;
 
     /**
+     * @var string Architecture type. Valid values: `SINGLE` (single-node), `DOUBLE` (two-node), `TRIPLE` (three-node).
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $Architecture;
+
+    /**
+     * @var string Instance type. Valid values: `EXCLUSIVE` (dedicated), `SHARED` (shared)
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $Style;
+
+    /**
      * @param string $InstanceId Instance ID
      * @param string $Name Instance name
      * @param integer $ProjectId Project ID of instance
@@ -471,6 +491,10 @@ Note: This field may return `null`, indicating that no valid values can be obtai
      * @param string $TimeZone System time zone. Default value: `China Standard Time`.
      * @param boolean $IsDrZone Whether the instance is deployed across AZs
      * @param SlaveZones $SlaveZones Replica AZ information
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $Architecture Architecture type. Valid values: `SINGLE` (single-node), `DOUBLE` (two-node), `TRIPLE` (three-node).
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $Style Instance type. Valid values: `EXCLUSIVE` (dedicated), `SHARED` (shared)
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
@@ -698,6 +722,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (array_key_exists("SlaveZones",$param) and $param["SlaveZones"] !== null) {
             $this->SlaveZones = new SlaveZones();
             $this->SlaveZones->deserialize($param["SlaveZones"]);
+        }
+
+        if (array_key_exists("Architecture",$param) and $param["Architecture"] !== null) {
+            $this->Architecture = $param["Architecture"];
+        }
+
+        if (array_key_exists("Style",$param) and $param["Style"] !== null) {
+            $this->Style = $param["Style"];
         }
     }
 }

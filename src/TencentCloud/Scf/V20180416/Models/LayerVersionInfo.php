@@ -40,6 +40,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
  * @method void setLayerName(string $LayerName) Set Layer name
  * @method string getStatus() Obtain Current status of specific layer version. For valid values, please see [here](https://intl.cloud.tencent.com/document/product/583/47175?from_cn_redirect=1#.E5.B1.82.EF.BC.88layer.EF.BC.89.E7.8A.B6.E6.80.81)
  * @method void setStatus(string $Status) Set Current status of specific layer version. For valid values, please see [here](https://intl.cloud.tencent.com/document/product/583/47175?from_cn_redirect=1#.E5.B1.82.EF.BC.88layer.EF.BC.89.E7.8A.B6.E6.80.81)
+ * @method string getStamp() Obtain Stamp
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setStamp(string $Stamp) Set Stamp
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class LayerVersionInfo extends AbstractModel
 {
@@ -82,6 +86,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $Status;
 
     /**
+     * @var string Stamp
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $Stamp;
+
+    /**
      * @param array $CompatibleRuntimes Runtime applicable to a version
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $AddTime Creation time
@@ -92,6 +102,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param integer $LayerVersion Version number
      * @param string $LayerName Layer name
      * @param string $Status Current status of specific layer version. For valid values, please see [here](https://intl.cloud.tencent.com/document/product/583/47175?from_cn_redirect=1#.E5.B1.82.EF.BC.88layer.EF.BC.89.E7.8A.B6.E6.80.81)
+     * @param string $Stamp Stamp
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -132,6 +144,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("Status",$param) and $param["Status"] !== null) {
             $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("Stamp",$param) and $param["Stamp"] !== null) {
+            $this->Stamp = $param["Stamp"];
         }
     }
 }

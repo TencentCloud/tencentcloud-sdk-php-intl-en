@@ -32,10 +32,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCaptchaAppId(integer $CaptchaAppId) Set CAPTCHA's app ID. Log in to the [Captcha console](https://console.cloud.tencent.com/captcha/graphical) and you can view the CaptchaAppId in the "Key" column of the CAPTCHA list.
  * @method string getAppSecretKey() Obtain CAPTCHA's app key. Log in to the [Captcha console](https://console.cloud.tencent.com/captcha/graphical) and you can view the AppSecretKey in the "Key" column of the CAPTCHA list. AppSecretKey is the key for CAPTCHA ticket verification performed by the server. Please keep it confidential and do not disclose it to any third parties.
  * @method void setAppSecretKey(string $AppSecretKey) Set CAPTCHA's app key. Log in to the [Captcha console](https://console.cloud.tencent.com/captcha/graphical) and you can view the AppSecretKey in the "Key" column of the CAPTCHA list. AppSecretKey is the key for CAPTCHA ticket verification performed by the server. Please keep it confidential and do not disclose it to any third parties.
- * @method integer getBusinessId() Obtain Business ID, which is used to differentiate statistical data when this service is used in multiple businesses of a website or an app.
- * @method void setBusinessId(integer $BusinessId) Set Business ID, which is used to differentiate statistical data when this service is used in multiple businesses of a website or an app.
- * @method integer getSceneId() Obtain Scenario ID, which is used to differentiate statistical data when this service is used in multiple scenarios of a website or an app.
- * @method void setSceneId(integer $SceneId) Set Scenario ID, which is used to differentiate statistical data when this service is used in multiple scenarios of a website or an app.
+ * @method integer getBusinessId() Obtain Reserved field.
+ * @method void setBusinessId(integer $BusinessId) Set Reserved field.
+ * @method integer getSceneId() Obtain Reserved field.
+ * @method void setSceneId(integer $SceneId) Set Reserved field.
  * @method string getMacAddress() Obtain MAC address or unique identifier of a device
  * @method void setMacAddress(string $MacAddress) Set MAC address or unique identifier of a device
  * @method string getImei() Obtain Mobile equipment identity number
@@ -76,12 +76,12 @@ class DescribeCaptchaResultRequest extends AbstractModel
     public $AppSecretKey;
 
     /**
-     * @var integer Business ID, which is used to differentiate statistical data when this service is used in multiple businesses of a website or an app.
+     * @var integer Reserved field.
      */
     public $BusinessId;
 
     /**
-     * @var integer Scenario ID, which is used to differentiate statistical data when this service is used in multiple scenarios of a website or an app.
+     * @var integer Reserved field.
      */
     public $SceneId;
 
@@ -107,8 +107,8 @@ class DescribeCaptchaResultRequest extends AbstractModel
      * @param string $Randstr A random string returned by the frontend callback function
      * @param integer $CaptchaAppId CAPTCHA's app ID. Log in to the [Captcha console](https://console.cloud.tencent.com/captcha/graphical) and you can view the CaptchaAppId in the "Key" column of the CAPTCHA list.
      * @param string $AppSecretKey CAPTCHA's app key. Log in to the [Captcha console](https://console.cloud.tencent.com/captcha/graphical) and you can view the AppSecretKey in the "Key" column of the CAPTCHA list. AppSecretKey is the key for CAPTCHA ticket verification performed by the server. Please keep it confidential and do not disclose it to any third parties.
-     * @param integer $BusinessId Business ID, which is used to differentiate statistical data when this service is used in multiple businesses of a website or an app.
-     * @param integer $SceneId Scenario ID, which is used to differentiate statistical data when this service is used in multiple scenarios of a website or an app.
+     * @param integer $BusinessId Reserved field.
+     * @param integer $SceneId Reserved field.
      * @param string $MacAddress MAC address or unique identifier of a device
      * @param string $Imei Mobile equipment identity number
      * @param integer $NeedGetCaptchaTime Indicates whether to return the time when the frontend obtains the CAPTCHA. Valid values: 1 (return the time) and others.

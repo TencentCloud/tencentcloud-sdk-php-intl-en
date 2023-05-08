@@ -36,16 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLayerVersion(integer $LayerVersion) Set Version number
  * @method string getLayerName() Obtain Layer name
  * @method void setLayerName(string $LayerName) Set Layer name
- * @method string getStatus() Obtain Current status of specific layer version. Valid values:
-Active: normal
-Publishing: publishing
-PublishFailed: publishing failed
-Deleted: deleted
- * @method void setStatus(string $Status) Set Current status of specific layer version. Valid values:
-Active: normal
-Publishing: publishing
-PublishFailed: publishing failed
-Deleted: deleted
+ * @method string getStatus() Obtain Current status of specific layer version. For the status values, [see here](https://intl.cloud.tencent.com/document/product/583/47175?from_cn_redirect=1#.E5.B1.82.EF.BC.88layer.EF.BC.89.E7.8A.B6.E6.80.81)
+ * @method void setStatus(string $Status) Set Current status of specific layer version. For the status values, [see here](https://intl.cloud.tencent.com/document/product/583/47175?from_cn_redirect=1#.E5.B1.82.EF.BC.88layer.EF.BC.89.E7.8A.B6.E6.80.81)
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -92,11 +84,7 @@ class GetLayerVersionResponse extends AbstractModel
     public $LayerName;
 
     /**
-     * @var string Current status of specific layer version. Valid values:
-Active: normal
-Publishing: publishing
-PublishFailed: publishing failed
-Deleted: deleted
+     * @var string Current status of specific layer version. For the status values, [see here](https://intl.cloud.tencent.com/document/product/583/47175?from_cn_redirect=1#.E5.B1.82.EF.BC.88layer.EF.BC.89.E7.8A.B6.E6.80.81)
      */
     public $Status;
 
@@ -114,11 +102,7 @@ Deleted: deleted
      * @param string $LicenseInfo License information
      * @param integer $LayerVersion Version number
      * @param string $LayerName Layer name
-     * @param string $Status Current status of specific layer version. Valid values:
-Active: normal
-Publishing: publishing
-PublishFailed: publishing failed
-Deleted: deleted
+     * @param string $Status Current status of specific layer version. For the status values, [see here](https://intl.cloud.tencent.com/document/product/583/47175?from_cn_redirect=1#.E5.B1.82.EF.BC.88layer.EF.BC.89.E7.8A.B6.E6.80.81)
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()

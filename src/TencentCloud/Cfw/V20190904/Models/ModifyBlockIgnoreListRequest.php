@@ -20,21 +20,21 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyBlockIgnoreList request structure.
  *
- * @method integer getRuleType() Obtain 1: blocklist; 2: ignore list
- * @method void setRuleType(integer $RuleType) Set 1: blocklist; 2: ignore list
+ * @method integer getRuleType() Obtain Type of the rule. Values: `1` (Blocklist); `2` (Allowlist)
+ * @method void setRuleType(integer $RuleType) Set Type of the rule. Values: `1` (Blocklist); `2` (Allowlist)
  * @method array getIOC() Obtain Either IP or Domain is required
  * @method void setIOC(array $IOC) Set Either IP or Domain is required
  * @method string getIocAction() Obtain Optional values: delete, edit, and add
  * @method void setIocAction(string $IocAction) Set Optional values: delete, edit, and add
  * @method string getStartTime() Obtain Time format: yyyy-MM-dd HH:mm:ss. Required when IocAction is edit or add
  * @method void setStartTime(string $StartTime) Set Time format: yyyy-MM-dd HH:mm:ss. Required when IocAction is edit or add
- * @method string getEndTime() Obtain Time format: yyyy-MM-dd HH:mm:ss. Required when IocAction is edit or add
- * @method void setEndTime(string $EndTime) Set Time format: yyyy-MM-dd HH:mm:ss. Required when IocAction is edit or add
+ * @method string getEndTime() Obtain End time of the period in the format of yyyy-MM-dd HH:mm:ss. It must be later than both the start time and the current time. It’s required when `IocAction` is `edit` or `add`. 
+ * @method void setEndTime(string $EndTime) Set End time of the period in the format of yyyy-MM-dd HH:mm:ss. It must be later than both the start time and the current time. It’s required when `IocAction` is `edit` or `add`. 
  */
 class ModifyBlockIgnoreListRequest extends AbstractModel
 {
     /**
-     * @var integer 1: blocklist; 2: ignore list
+     * @var integer Type of the rule. Values: `1` (Blocklist); `2` (Allowlist)
      */
     public $RuleType;
 
@@ -54,16 +54,16 @@ class ModifyBlockIgnoreListRequest extends AbstractModel
     public $StartTime;
 
     /**
-     * @var string Time format: yyyy-MM-dd HH:mm:ss. Required when IocAction is edit or add
+     * @var string End time of the period in the format of yyyy-MM-dd HH:mm:ss. It must be later than both the start time and the current time. It’s required when `IocAction` is `edit` or `add`. 
      */
     public $EndTime;
 
     /**
-     * @param integer $RuleType 1: blocklist; 2: ignore list
+     * @param integer $RuleType Type of the rule. Values: `1` (Blocklist); `2` (Allowlist)
      * @param array $IOC Either IP or Domain is required
      * @param string $IocAction Optional values: delete, edit, and add
      * @param string $StartTime Time format: yyyy-MM-dd HH:mm:ss. Required when IocAction is edit or add
-     * @param string $EndTime Time format: yyyy-MM-dd HH:mm:ss. Required when IocAction is edit or add
+     * @param string $EndTime End time of the period in the format of yyyy-MM-dd HH:mm:ss. It must be later than both the start time and the current time. It’s required when `IocAction` is `edit` or `add`. 
      */
     function __construct()
     {
