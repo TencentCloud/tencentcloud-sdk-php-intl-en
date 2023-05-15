@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * The storage parameters.
  *
- * @method CloudStorage getCloudStorage() Obtain The account information for third-party cloud storage. This parameter is not available currently. Please use `CloudVod` instead to save files to Tencent Cloud VOD.
- * @method void setCloudStorage(CloudStorage $CloudStorage) Set The account information for third-party cloud storage. This parameter is not available currently. Please use `CloudVod` instead to save files to Tencent Cloud VOD.
- * @method CloudVod getCloudVod() Obtain The account information for saving files to Tencent Cloud VOD. This parameter is required. Currently, you can only save files to Tencent Cloud VOD.
- * @method void setCloudVod(CloudVod $CloudVod) Set The account information for saving files to Tencent Cloud VOD. This parameter is required. Currently, you can only save files to Tencent Cloud VOD.
+ * @method CloudStorage getCloudStorage() Obtain The account information for third-party storage. Please note that if you save files to COS, a recording-to-COS fee will be incurred. For details, see the document "Billing of On-Cloud Recording". If you save files to VOD, there won't be such a fee.
+ * @method void setCloudStorage(CloudStorage $CloudStorage) Set The account information for third-party storage. Please note that if you save files to COS, a recording-to-COS fee will be incurred. For details, see the document "Billing of On-Cloud Recording". If you save files to VOD, there won't be such a fee.
+ * @method CloudVod getCloudVod() Obtain The account information for VOD storage.
+ * @method void setCloudVod(CloudVod $CloudVod) Set The account information for VOD storage.
  */
 class StorageParams extends AbstractModel
 {
     /**
-     * @var CloudStorage The account information for third-party cloud storage. This parameter is not available currently. Please use `CloudVod` instead to save files to Tencent Cloud VOD.
+     * @var CloudStorage The account information for third-party storage. Please note that if you save files to COS, a recording-to-COS fee will be incurred. For details, see the document "Billing of On-Cloud Recording". If you save files to VOD, there won't be such a fee.
      */
     public $CloudStorage;
 
     /**
-     * @var CloudVod The account information for saving files to Tencent Cloud VOD. This parameter is required. Currently, you can only save files to Tencent Cloud VOD.
+     * @var CloudVod The account information for VOD storage.
      */
     public $CloudVod;
 
     /**
-     * @param CloudStorage $CloudStorage The account information for third-party cloud storage. This parameter is not available currently. Please use `CloudVod` instead to save files to Tencent Cloud VOD.
-     * @param CloudVod $CloudVod The account information for saving files to Tencent Cloud VOD. This parameter is required. Currently, you can only save files to Tencent Cloud VOD.
+     * @param CloudStorage $CloudStorage The account information for third-party storage. Please note that if you save files to COS, a recording-to-COS fee will be incurred. For details, see the document "Billing of On-Cloud Recording". If you save files to VOD, there won't be such a fee.
+     * @param CloudVod $CloudVod The account information for VOD storage.
      */
     function __construct()
     {

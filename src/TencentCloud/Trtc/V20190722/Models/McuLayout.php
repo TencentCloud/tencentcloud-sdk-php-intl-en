@@ -34,22 +34,22 @@ use TencentCloud\Common\AbstractModel;
  * @method void setZOrder(integer $ZOrder) Set The image layer of the video. If you do not pass this parameter, 0 will be used.
  * @method integer getRenderMode() Obtain The rendering mode of the video. 0 (the video is scaled and the excess parts are cropped), 1 (the video is scaled), 2 (the video is scaled and the blank spaces are filled with black bars). If you do not pass this parameter, 0 will be used.
  * @method void setRenderMode(integer $RenderMode) Set The rendering mode of the video. 0 (the video is scaled and the excess parts are cropped), 1 (the video is scaled), 2 (the video is scaled and the blank spaces are filled with black bars). If you do not pass this parameter, 0 will be used.
- * @method string getBackGroundColor() Obtain The background color of the video. Below are the values for some common colors:
-Red: 0xcc0033
-Yellow: 0xcc9900
-Green: 0xcccc33
-Blue: 0x99CCFF
-Black: 0x000000
-White: 0xFFFFFF
-Grey: 0x999999
- * @method void setBackGroundColor(string $BackGroundColor) Set The background color of the video. Below are the values for some common colors:
-Red: 0xcc0033
-Yellow: 0xcc9900
-Green: 0xcccc33
-Blue: 0x99CCFF
-Black: 0x000000
-White: 0xFFFFFF
-Grey: 0x999999
+ * @method string getBackGroundColor() Obtain (Not supported yet) The background color of a video. Below are the values for some commonly used colors:
+Red: `0xcc0033`
+Yellow: `0xcc9900`
+Green: `0xcccc33`
+Blue: `0x99CCFF`
+Black: `0x000000`
+White: `0xFFFFFF`
+Grey: `0x999999`
+ * @method void setBackGroundColor(string $BackGroundColor) Set (Not supported yet) The background color of a video. Below are the values for some commonly used colors:
+Red: `0xcc0033`
+Yellow: `0xcc9900`
+Green: `0xcccc33`
+Blue: `0x99CCFF`
+Black: `0x000000`
+White: `0xFFFFFF`
+Grey: `0x999999`
  * @method string getBackgroundImageUrl() Obtain The URL of the background image for the video. This parameter allows you to specify an image to display when the user’s camera is turned off or before the user enters the room. If the dimensions of the image specified are different from those of the video window, the image will be stretched to fit the space. This parameter has a higher priority than `BackGroundColor`.
  * @method void setBackgroundImageUrl(string $BackgroundImageUrl) Set The URL of the background image for the video. This parameter allows you to specify an image to display when the user’s camera is turned off or before the user enters the room. If the dimensions of the image specified are different from those of the video window, the image will be stretched to fit the space. This parameter has a higher priority than `BackGroundColor`.
  * @method McuCustomCrop getCustomCrop() Obtain Custom cropping.
@@ -93,14 +93,14 @@ class McuLayout extends AbstractModel
     public $RenderMode;
 
     /**
-     * @var string The background color of the video. Below are the values for some common colors:
-Red: 0xcc0033
-Yellow: 0xcc9900
-Green: 0xcccc33
-Blue: 0x99CCFF
-Black: 0x000000
-White: 0xFFFFFF
-Grey: 0x999999
+     * @var string (Not supported yet) The background color of a video. Below are the values for some commonly used colors:
+Red: `0xcc0033`
+Yellow: `0xcc9900`
+Green: `0xcccc33`
+Blue: `0x99CCFF`
+Black: `0x000000`
+White: `0xFFFFFF`
+Grey: `0x999999`
      */
     public $BackGroundColor;
 
@@ -122,14 +122,14 @@ Grey: 0x999999
      * @param integer $LocationY The vertical offset of the video. The sum of `LocationY` and `ImageHeight` cannot exceed the height of the canvas. If you do not pass this parameter, 0 will be used.
      * @param integer $ZOrder The image layer of the video. If you do not pass this parameter, 0 will be used.
      * @param integer $RenderMode The rendering mode of the video. 0 (the video is scaled and the excess parts are cropped), 1 (the video is scaled), 2 (the video is scaled and the blank spaces are filled with black bars). If you do not pass this parameter, 0 will be used.
-     * @param string $BackGroundColor The background color of the video. Below are the values for some common colors:
-Red: 0xcc0033
-Yellow: 0xcc9900
-Green: 0xcccc33
-Blue: 0x99CCFF
-Black: 0x000000
-White: 0xFFFFFF
-Grey: 0x999999
+     * @param string $BackGroundColor (Not supported yet) The background color of a video. Below are the values for some commonly used colors:
+Red: `0xcc0033`
+Yellow: `0xcc9900`
+Green: `0xcccc33`
+Blue: `0x99CCFF`
+Black: `0x000000`
+White: `0xFFFFFF`
+Grey: `0x999999`
      * @param string $BackgroundImageUrl The URL of the background image for the video. This parameter allows you to specify an image to display when the user’s camera is turned off or before the user enters the room. If the dimensions of the image specified are different from those of the video window, the image will be stretched to fit the space. This parameter has a higher priority than `BackGroundColor`.
      * @param McuCustomCrop $CustomCrop Custom cropping.
      */

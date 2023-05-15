@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDisplayName(string $DisplayName) Set Node display name
  * @method string getSubnetId() Obtain Subnet ID
  * @method void setSubnetId(string $SubnetId) Set Subnet ID
+ * @method array getTags() Obtain Tencent Cloud tags
+ * @method void setTags(array $Tags) Set Tencent Cloud tags
  */
 class VirtualNodeSpec extends AbstractModel
 {
@@ -38,8 +40,14 @@ class VirtualNodeSpec extends AbstractModel
     public $SubnetId;
 
     /**
+     * @var array Tencent Cloud tags
+     */
+    public $Tags;
+
+    /**
      * @param string $DisplayName Node display name
      * @param string $SubnetId Subnet ID
+     * @param array $Tags Tencent Cloud tags
      */
     function __construct()
     {
@@ -60,6 +68,15 @@ class VirtualNodeSpec extends AbstractModel
 
         if (array_key_exists("SubnetId",$param) and $param["SubnetId"] !== null) {
             $this->SubnetId = $param["SubnetId"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }

@@ -60,6 +60,12 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
  * @method void setChargeType(string $ChargeType) Set Cluster billing mode. Valid values: `POSTPAID_BY_HOUR`, `PREPAID`
 Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method string getEdgeVersion() Obtain Edge cluster component version 
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setEdgeVersion(string $EdgeVersion) Set Edge cluster component version 
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method TagSpecification getTagSpecification() Obtain 
+ * @method void setTagSpecification(TagSpecification $TagSpecification) Set 
  */
 class EdgeCluster extends AbstractModel
 {
@@ -144,6 +150,17 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     public $ChargeType;
 
     /**
+     * @var string Edge cluster component version 
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $EdgeVersion;
+
+    /**
+     * @var TagSpecification 
+     */
+    public $TagSpecification;
+
+    /**
      * @param string $ClusterId Cluster ID
      * @param string $ClusterName Cluster name
      * @param string $VpcId VPC ID
@@ -164,6 +181,9 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
      * @param string $ChargeType Cluster billing mode. Valid values: `POSTPAID_BY_HOUR`, `PREPAID`
 Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param string $EdgeVersion Edge cluster component version 
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param TagSpecification $TagSpecification 
      */
     function __construct()
     {
@@ -237,6 +257,15 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 
         if (array_key_exists("ChargeType",$param) and $param["ChargeType"] !== null) {
             $this->ChargeType = $param["ChargeType"];
+        }
+
+        if (array_key_exists("EdgeVersion",$param) and $param["EdgeVersion"] !== null) {
+            $this->EdgeVersion = $param["EdgeVersion"];
+        }
+
+        if (array_key_exists("TagSpecification",$param) and $param["TagSpecification"] !== null) {
+            $this->TagSpecification = new TagSpecification();
+            $this->TagSpecification->deserialize($param["TagSpecification"]);
         }
     }
 }

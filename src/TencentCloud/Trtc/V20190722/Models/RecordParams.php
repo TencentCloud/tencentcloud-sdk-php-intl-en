@@ -46,10 +46,8 @@ use TencentCloud\Common\AbstractModel;
 This parameter is invalid if the output format is HLS.
  * @method void setMaxMediaFileDuration(integer $MaxMediaFileDuration) Set The maximum file duration allowed (minutes). If the output format is AAC or MP4, and the maximum file duration is exceeded, the file will be segmented. Value range: 1-1440. Default value: 1440 (24 hours). The maximum file size allowed is 2 GB. If the file size exceeds 2 GB, or the file duration exceeds 24 hours, the file will also be segmented.
 This parameter is invalid if the output format is HLS.
- * @method integer getMediaId() Obtain The type of stream to record. `0`: The primary stream and substream; `1`: The primary stream; `2`: The substream.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setMediaId(integer $MediaId) Set The type of stream to record. `0`: The primary stream and substream; `1`: The primary stream; `2`: The substream.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getMediaId() Obtain The type of stream to record. `0` (default): The primary stream and substream; `1`: The primary stream; `2`: The substream.
+ * @method void setMediaId(integer $MediaId) Set The type of stream to record. `0` (default): The primary stream and substream; `1`: The primary stream; `2`: The substream.
  */
 class RecordParams extends AbstractModel
 {
@@ -95,8 +93,7 @@ This parameter is invalid if the output format is HLS.
     public $MaxMediaFileDuration;
 
     /**
-     * @var integer The type of stream to record. `0`: The primary stream and substream; `1`: The primary stream; `2`: The substream.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer The type of stream to record. `0` (default): The primary stream and substream; `1`: The primary stream; `2`: The substream.
      */
     public $MediaId;
 
@@ -114,8 +111,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param integer $AvMerge Whether to merge the audio and video of a user in the single-stream recording mode. 0 (default): Do not mix the audio and video; 1: Mix the audio and video into one TS file. You don’t need to specify this parameter for mixed-stream recording, which merges audios and videos by default.
      * @param integer $MaxMediaFileDuration The maximum file duration allowed (minutes). If the output format is AAC or MP4, and the maximum file duration is exceeded, the file will be segmented. Value range: 1-1440. Default value: 1440 (24 hours). The maximum file size allowed is 2 GB. If the file size exceeds 2 GB, or the file duration exceeds 24 hours, the file will also be segmented.
 This parameter is invalid if the output format is HLS.
-     * @param integer $MediaId The type of stream to record. `0`: The primary stream and substream; `1`: The primary stream; `2`: The substream.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $MediaId The type of stream to record. `0` (default): The primary stream and substream; `1`: The primary stream; `2`: The substream.
      */
     function __construct()
     {

@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMixLayoutList(array $MixLayoutList) Set The details of a custom layout.
  * @method MaxVideoUser getMaxVideoUser() Obtain The information of the large video in screen sharing or floating layout mode.
  * @method void setMaxVideoUser(MaxVideoUser $MaxVideoUser) Set The information of the large video in screen sharing or floating layout mode.
+ * @method integer getRenderMode() Obtain The image fill mode. This parameter is valid if the layout mode is screen sharing, floating, or grid. `0`: The image will be cropped. `1`: The image will be scaled. `2`: The image will be scaled and there may be black bars.
+ * @method void setRenderMode(integer $RenderMode) Set The image fill mode. This parameter is valid if the layout mode is screen sharing, floating, or grid. `0`: The image will be cropped. `1`: The image will be scaled. `2`: The image will be scaled and there may be black bars.
  */
 class McuLayoutParams extends AbstractModel
 {
@@ -52,10 +54,16 @@ class McuLayoutParams extends AbstractModel
     public $MaxVideoUser;
 
     /**
+     * @var integer The image fill mode. This parameter is valid if the layout mode is screen sharing, floating, or grid. `0`: The image will be cropped. `1`: The image will be scaled. `2`: The image will be scaled and there may be black bars.
+     */
+    public $RenderMode;
+
+    /**
      * @param integer $MixLayoutMode The layout mode. Valid values: 1 (floating), 2 (screen sharing), 3 (grid), 4 (custom). Floating, screen sharing, and grid are dynamic layouts. Custom layouts are static layouts.
      * @param integer $PureAudioHoldPlaceMode Whether to display users who publish only audio. 0: No; 1: Yes. This parameter is valid only if a dynamic layout is used. If you do not pass this parameter, 0 will be used.
      * @param array $MixLayoutList The details of a custom layout.
      * @param MaxVideoUser $MaxVideoUser The information of the large video in screen sharing or floating layout mode.
+     * @param integer $RenderMode The image fill mode. This parameter is valid if the layout mode is screen sharing, floating, or grid. `0`: The image will be cropped. `1`: The image will be scaled. `2`: The image will be scaled and there may be black bars.
      */
     function __construct()
     {
@@ -90,6 +98,10 @@ class McuLayoutParams extends AbstractModel
         if (array_key_exists("MaxVideoUser",$param) and $param["MaxVideoUser"] !== null) {
             $this->MaxVideoUser = new MaxVideoUser();
             $this->MaxVideoUser->deserialize($param["MaxVideoUser"]);
+        }
+
+        if (array_key_exists("RenderMode",$param) and $param["RenderMode"] !== null) {
+            $this->RenderMode = $param["RenderMode"];
         }
     }
 }

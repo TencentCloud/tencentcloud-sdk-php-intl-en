@@ -25,9 +25,7 @@ use TencentCloud\Common\AbstractModel;
  * @method McuWaterMarkImage getWaterMarkImage() Obtain The watermark image information. This parameter is required if `WaterMarkType` is 0.
  * @method void setWaterMarkImage(McuWaterMarkImage $WaterMarkImage) Set The watermark image information. This parameter is required if `WaterMarkType` is 0.
  * @method McuWaterMarkText getWaterMarkText() Obtain The text watermark configuration. This parameter is required if `WaterMarkType` is `1`.
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setWaterMarkText(McuWaterMarkText $WaterMarkText) Set The text watermark configuration. This parameter is required if `WaterMarkType` is `1`.
-Note: This field may return null, indicating that no valid values can be obtained.
  */
 class McuWaterMarkParams extends AbstractModel
 {
@@ -43,7 +41,6 @@ class McuWaterMarkParams extends AbstractModel
 
     /**
      * @var McuWaterMarkText The text watermark configuration. This parameter is required if `WaterMarkType` is `1`.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $WaterMarkText;
 
@@ -51,7 +48,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param integer $WaterMarkType The watermark type. Valid values: `0` (default): Image; `1`: Text.
      * @param McuWaterMarkImage $WaterMarkImage The watermark image information. This parameter is required if `WaterMarkType` is 0.
      * @param McuWaterMarkText $WaterMarkText The text watermark configuration. This parameter is required if `WaterMarkType` is `1`.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

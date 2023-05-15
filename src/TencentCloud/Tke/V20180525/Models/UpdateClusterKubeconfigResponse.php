@@ -14,23 +14,26 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Trtc\V20190722\Models;
+namespace TencentCloud\Tke\V20180525\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeTrtcRoomUsage response structure.
+ * UpdateClusterKubeconfig response structure.
  *
- * @method string getData() Obtain The usage data grouped by room, in CSV format.
- * @method void setData(string $Data) Set The usage data grouped by room, in CSV format.
+ * @method array getUpdatedSubAccounts() Obtain List of updated sub-account UINs 
+Note: This parameter may return null, indicating that no valid values can be obtained.
+ * @method void setUpdatedSubAccounts(array $UpdatedSubAccounts) Set List of updated sub-account UINs 
+Note: This parameter may return null, indicating that no valid values can be obtained.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
-class DescribeTrtcRoomUsageResponse extends AbstractModel
+class UpdateClusterKubeconfigResponse extends AbstractModel
 {
     /**
-     * @var string The usage data grouped by room, in CSV format.
+     * @var array List of updated sub-account UINs 
+Note: This parameter may return null, indicating that no valid values can be obtained.
      */
-    public $Data;
+    public $UpdatedSubAccounts;
 
     /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -38,7 +41,8 @@ class DescribeTrtcRoomUsageResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $Data The usage data grouped by room, in CSV format.
+     * @param array $UpdatedSubAccounts List of updated sub-account UINs 
+Note: This parameter may return null, indicating that no valid values can be obtained.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -54,8 +58,8 @@ class DescribeTrtcRoomUsageResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Data",$param) and $param["Data"] !== null) {
-            $this->Data = $param["Data"];
+        if (array_key_exists("UpdatedSubAccounts",$param) and $param["UpdatedSubAccounts"] !== null) {
+            $this->UpdatedSubAccounts = $param["UpdatedSubAccounts"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

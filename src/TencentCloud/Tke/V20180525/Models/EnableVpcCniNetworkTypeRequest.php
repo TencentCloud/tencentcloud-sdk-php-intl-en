@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSubnets(array $Subnets) Set The container subnet being used
  * @method integer getExpiredSeconds() Obtain Specifies when to release the IP after the Pod termination in static IP mode. It must be longer than 300 seconds. If this parameter is left empty, the IP address will never be released.
  * @method void setExpiredSeconds(integer $ExpiredSeconds) Set Specifies when to release the IP after the Pod termination in static IP mode. It must be longer than 300 seconds. If this parameter is left empty, the IP address will never be released.
+ * @method boolean getSkipAddingNonMasqueradeCIDRs() Obtain Whether to skip adding the VPC IP range to `NonMasqueradeCIDRs` field of `ip-masq-agent-config`. Default value: `false`
+ * @method void setSkipAddingNonMasqueradeCIDRs(boolean $SkipAddingNonMasqueradeCIDRs) Set Whether to skip adding the VPC IP range to `NonMasqueradeCIDRs` field of `ip-masq-agent-config`. Default value: `false`
  */
 class EnableVpcCniNetworkTypeRequest extends AbstractModel
 {
@@ -59,11 +61,17 @@ class EnableVpcCniNetworkTypeRequest extends AbstractModel
     public $ExpiredSeconds;
 
     /**
+     * @var boolean Whether to skip adding the VPC IP range to `NonMasqueradeCIDRs` field of `ip-masq-agent-config`. Default value: `false`
+     */
+    public $SkipAddingNonMasqueradeCIDRs;
+
+    /**
      * @param string $ClusterId Cluster ID
      * @param string $VpcCniType The VPC-CNI mode. `tke-route-eni`: Multi-IP ENI, `tke-direct-eni`: Independent ENI
      * @param boolean $EnableStaticIp Whether to enable static IP address
      * @param array $Subnets The container subnet being used
      * @param integer $ExpiredSeconds Specifies when to release the IP after the Pod termination in static IP mode. It must be longer than 300 seconds. If this parameter is left empty, the IP address will never be released.
+     * @param boolean $SkipAddingNonMasqueradeCIDRs Whether to skip adding the VPC IP range to `NonMasqueradeCIDRs` field of `ip-masq-agent-config`. Default value: `false`
      */
     function __construct()
     {
@@ -96,6 +104,10 @@ class EnableVpcCniNetworkTypeRequest extends AbstractModel
 
         if (array_key_exists("ExpiredSeconds",$param) and $param["ExpiredSeconds"] !== null) {
             $this->ExpiredSeconds = $param["ExpiredSeconds"];
+        }
+
+        if (array_key_exists("SkipAddingNonMasqueradeCIDRs",$param) and $param["SkipAddingNonMasqueradeCIDRs"] !== null) {
+            $this->SkipAddingNonMasqueradeCIDRs = $param["SkipAddingNonMasqueradeCIDRs"];
         }
     }
 }

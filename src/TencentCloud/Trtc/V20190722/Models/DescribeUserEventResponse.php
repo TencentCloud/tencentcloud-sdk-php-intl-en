@@ -18,17 +18,17 @@ namespace TencentCloud\Trtc\V20190722\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeTrtcRoomUsage response structure.
+ * DescribeUserEvent response structure.
  *
- * @method string getData() Obtain The usage data grouped by room, in CSV format.
- * @method void setData(string $Data) Set The usage data grouped by room, in CSV format.
+ * @method array getData() Obtain The event list. An empty array will be returned if no data is obtained.
+ * @method void setData(array $Data) Set The event list. An empty array will be returned if no data is obtained.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
-class DescribeTrtcRoomUsageResponse extends AbstractModel
+class DescribeUserEventResponse extends AbstractModel
 {
     /**
-     * @var string The usage data grouped by room, in CSV format.
+     * @var array The event list. An empty array will be returned if no data is obtained.
      */
     public $Data;
 
@@ -38,7 +38,7 @@ class DescribeTrtcRoomUsageResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $Data The usage data grouped by room, in CSV format.
+     * @param array $Data The event list. An empty array will be returned if no data is obtained.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -55,7 +55,12 @@ class DescribeTrtcRoomUsageResponse extends AbstractModel
             return;
         }
         if (array_key_exists("Data",$param) and $param["Data"] !== null) {
-            $this->Data = $param["Data"];
+            $this->Data = [];
+            foreach ($param["Data"] as $key => $value){
+                $obj = new EventList();
+                $obj->deserialize($value);
+                array_push($this->Data, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

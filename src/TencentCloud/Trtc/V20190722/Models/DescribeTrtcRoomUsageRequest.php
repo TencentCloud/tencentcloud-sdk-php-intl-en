@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeTrtcRoomUsage request structure.
  *
- * @method integer getSdkAppid() Obtain 
- * @method void setSdkAppid(integer $SdkAppid) Set 
- * @method string getStartTime() Obtain 
- * @method void setStartTime(string $StartTime) Set 
- * @method string getEndTime() Obtain 
- * @method void setEndTime(string $EndTime) Set 
+ * @method integer getSdkAppid() Obtain The `SDKAppID` of the room.
+ * @method void setSdkAppid(integer $SdkAppid) Set The `SDKAppID` of the room.
+ * @method string getStartTime() Obtain The start time in the format of `YYYY-MM-DD HH:MM` (accurate to the minute).
+ * @method void setStartTime(string $StartTime) Set The start time in the format of `YYYY-MM-DD HH:MM` (accurate to the minute).
+ * @method string getEndTime() Obtain The end time in the format of `YYYY-MM-DD HH:MM`. The start and end time cannot be more than 24 hours apart.
+ * @method void setEndTime(string $EndTime) Set The end time in the format of `YYYY-MM-DD HH:MM`. The start and end time cannot be more than 24 hours apart.
  */
 class DescribeTrtcRoomUsageRequest extends AbstractModel
 {
     /**
-     * @var integer 
+     * @var integer The `SDKAppID` of the room.
      */
     public $SdkAppid;
 
     /**
-     * @var string 
+     * @var string The start time in the format of `YYYY-MM-DD HH:MM` (accurate to the minute).
      */
     public $StartTime;
 
     /**
-     * @var string 
+     * @var string The end time in the format of `YYYY-MM-DD HH:MM`. The start and end time cannot be more than 24 hours apart.
      */
     public $EndTime;
 
     /**
-     * @param integer $SdkAppid 
-     * @param string $StartTime 
-     * @param string $EndTime 
+     * @param integer $SdkAppid The `SDKAppID` of the room.
+     * @param string $StartTime The start time in the format of `YYYY-MM-DD HH:MM` (accurate to the minute).
+     * @param string $EndTime The end time in the format of `YYYY-MM-DD HH:MM`. The start and end time cannot be more than 24 hours apart.
      */
     function __construct()
     {

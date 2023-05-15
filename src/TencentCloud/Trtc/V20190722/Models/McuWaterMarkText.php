@@ -31,17 +31,11 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getLocationY() Obtain The vertical offset (pixels) of the watermark.
  * @method void setLocationY(integer $LocationY) Set The vertical offset (pixels) of the watermark.
  * @method integer getFontSize() Obtain The font size.
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setFontSize(integer $FontSize) Set The font size.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getFontColor() Obtain The text color. The default color is white. Values for some commonly used colors: Red: 0xcc0033; yellow: 0xcc9900; green: 0xcccc33; blue: 0x99CCFF; black: 0x000000; white: 0xFFFFFF; gray: 0x999999.	
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setFontColor(string $FontColor) Set The text color. The default color is white. Values for some commonly used colors: Red: 0xcc0033; yellow: 0xcc9900; green: 0xcccc33; blue: 0x99CCFF; black: 0x000000; white: 0xFFFFFF; gray: 0x999999.	
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getBackGroundColor() Obtain The text fill color. If you do not specify this parameter, the fill color will be transparent. Values for some commonly used colors: Red: 0xcc0033; yellow: 0xcc9900; green: 0xcccc33; blue: 0x99CCFF; black: 0x000000; white: 0xFFFFFF; gray: 0x999999.	
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setBackGroundColor(string $BackGroundColor) Set The text fill color. If you do not specify this parameter, the fill color will be transparent. Values for some commonly used colors: Red: 0xcc0033; yellow: 0xcc9900; green: 0xcccc33; blue: 0x99CCFF; black: 0x000000; white: 0xFFFFFF; gray: 0x999999.	
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getFontColor() Obtain The text color. The default color is white. Values for some commonly used colors: Red: `0xcc0033`; yellow: `0xcc9900`; green: `0xcccc33`; blue: `0x99CCFF`; black: `0x000000`; white: `0xFFFFFF`; gray: `0x999999`.	
+ * @method void setFontColor(string $FontColor) Set The text color. The default color is white. Values for some commonly used colors: Red: `0xcc0033`; yellow: `0xcc9900`; green: `0xcccc33`; blue: `0x99CCFF`; black: `0x000000`; white: `0xFFFFFF`; gray: `0x999999`.	
+ * @method string getBackGroundColor() Obtain The text fill color. If you do not specify this parameter, the fill color will be transparent. Values for some commonly used colors: Red: `0xcc0033`; yellow: `0xcc9900`; green: `0xcccc33`; blue: `0x99CCFF`; black: `0x000000`; white: `0xFFFFFF`; gray: `0x999999`.	
+ * @method void setBackGroundColor(string $BackGroundColor) Set The text fill color. If you do not specify this parameter, the fill color will be transparent. Values for some commonly used colors: Red: `0xcc0033`; yellow: `0xcc9900`; green: `0xcccc33`; blue: `0x99CCFF`; black: `0x000000`; white: `0xFFFFFF`; gray: `0x999999`.	
  */
 class McuWaterMarkText extends AbstractModel
 {
@@ -72,19 +66,16 @@ class McuWaterMarkText extends AbstractModel
 
     /**
      * @var integer The font size.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $FontSize;
 
     /**
-     * @var string The text color. The default color is white. Values for some commonly used colors: Red: 0xcc0033; yellow: 0xcc9900; green: 0xcccc33; blue: 0x99CCFF; black: 0x000000; white: 0xFFFFFF; gray: 0x999999.	
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string The text color. The default color is white. Values for some commonly used colors: Red: `0xcc0033`; yellow: `0xcc9900`; green: `0xcccc33`; blue: `0x99CCFF`; black: `0x000000`; white: `0xFFFFFF`; gray: `0x999999`.	
      */
     public $FontColor;
 
     /**
-     * @var string The text fill color. If you do not specify this parameter, the fill color will be transparent. Values for some commonly used colors: Red: 0xcc0033; yellow: 0xcc9900; green: 0xcccc33; blue: 0x99CCFF; black: 0x000000; white: 0xFFFFFF; gray: 0x999999.	
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string The text fill color. If you do not specify this parameter, the fill color will be transparent. Values for some commonly used colors: Red: `0xcc0033`; yellow: `0xcc9900`; green: `0xcccc33`; blue: `0x99CCFF`; black: `0x000000`; white: `0xFFFFFF`; gray: `0x999999`.	
      */
     public $BackGroundColor;
 
@@ -95,11 +86,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param integer $LocationX The horizontal offset (pixels) of the watermark.
      * @param integer $LocationY The vertical offset (pixels) of the watermark.
      * @param integer $FontSize The font size.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $FontColor The text color. The default color is white. Values for some commonly used colors: Red: 0xcc0033; yellow: 0xcc9900; green: 0xcccc33; blue: 0x99CCFF; black: 0x000000; white: 0xFFFFFF; gray: 0x999999.	
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $BackGroundColor The text fill color. If you do not specify this parameter, the fill color will be transparent. Values for some commonly used colors: Red: 0xcc0033; yellow: 0xcc9900; green: 0xcccc33; blue: 0x99CCFF; black: 0x000000; white: 0xFFFFFF; gray: 0x999999.	
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $FontColor The text color. The default color is white. Values for some commonly used colors: Red: `0xcc0033`; yellow: `0xcc9900`; green: `0xcccc33`; blue: `0x99CCFF`; black: `0x000000`; white: `0xFFFFFF`; gray: `0x999999`.	
+     * @param string $BackGroundColor The text fill color. If you do not specify this parameter, the fill color will be transparent. Values for some commonly used colors: Red: `0xcc0033`; yellow: `0xcc9900`; green: `0xcccc33`; blue: `0x99CCFF`; black: `0x000000`; white: `0xFFFFFF`; gray: `0x999999`.	
      */
     function __construct()
     {

@@ -18,19 +18,29 @@ namespace TencentCloud\Trtc\V20190722\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeTrtcRoomUsage response structure.
+ * DescribeUserInfo response structure.
  *
- * @method string getData() Obtain The usage data grouped by room, in CSV format.
- * @method void setData(string $Data) Set The usage data grouped by room, in CSV format.
+ * @method integer getTotal() Obtain The number of records returned.
+ * @method void setTotal(integer $Total) Set The number of records returned.
+ * @method array getUserList() Obtain The user information.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setUserList(array $UserList) Set The user information.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
-class DescribeTrtcRoomUsageResponse extends AbstractModel
+class DescribeUserInfoResponse extends AbstractModel
 {
     /**
-     * @var string The usage data grouped by room, in CSV format.
+     * @var integer The number of records returned.
      */
-    public $Data;
+    public $Total;
+
+    /**
+     * @var array The user information.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $UserList;
 
     /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -38,7 +48,9 @@ class DescribeTrtcRoomUsageResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $Data The usage data grouped by room, in CSV format.
+     * @param integer $Total The number of records returned.
+     * @param array $UserList The user information.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -54,8 +66,17 @@ class DescribeTrtcRoomUsageResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Data",$param) and $param["Data"] !== null) {
-            $this->Data = $param["Data"];
+        if (array_key_exists("Total",$param) and $param["Total"] !== null) {
+            $this->Total = $param["Total"];
+        }
+
+        if (array_key_exists("UserList",$param) and $param["UserList"] !== null) {
+            $this->UserList = [];
+            foreach ($param["UserList"] as $key => $value){
+                $obj = new UserInformation();
+                $obj->deserialize($value);
+                array_push($this->UserList, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

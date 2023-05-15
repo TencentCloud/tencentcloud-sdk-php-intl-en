@@ -26,13 +26,9 @@ This parameter may be empty, in which case the default SEI parameters for audio 
  * @method integer getPayloadType() Obtain The payload type of the SEI message. The default is 100. Value range: 100-254 (244 is used internally by Tencent Cloud for timestamps).
  * @method void setPayloadType(integer $PayloadType) Set The payload type of the SEI message. The default is 100. Value range: 100-254 (244 is used internally by Tencent Cloud for timestamps).
  * @method integer getInterval() Obtain The SEI sending interval (milliseconds). The default value is 1000.
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setInterval(integer $Interval) Set The SEI sending interval (milliseconds). The default value is 1000.
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method integer getFollowIdr() Obtain Valid values: `1`: SEI is guaranteed when keyframes are sent; `0` (default): SEI is not guaranteed when keyframes are sent.
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setFollowIdr(integer $FollowIdr) Set Valid values: `1`: SEI is guaranteed when keyframes are sent; `0` (default): SEI is not guaranteed when keyframes are sent.
-Note: This field may return null, indicating that no valid values can be obtained.
  */
 class McuLayoutVolume extends AbstractModel
 {
@@ -48,13 +44,11 @@ class McuLayoutVolume extends AbstractModel
 
     /**
      * @var integer The SEI sending interval (milliseconds). The default value is 1000.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Interval;
 
     /**
      * @var integer Valid values: `1`: SEI is guaranteed when keyframes are sent; `0` (default): SEI is not guaranteed when keyframes are sent.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $FollowIdr;
 
@@ -62,9 +56,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $AppData The application data, which will be embedded in the `app_data` field of the custom SEI. It must be shorter than 4,096 characters.
      * @param integer $PayloadType The payload type of the SEI message. The default is 100. Value range: 100-254 (244 is used internally by Tencent Cloud for timestamps).
      * @param integer $Interval The SEI sending interval (milliseconds). The default value is 1000.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $FollowIdr Valid values: `1`: SEI is guaranteed when keyframes are sent; `0` (default): SEI is not guaranteed when keyframes are sent.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

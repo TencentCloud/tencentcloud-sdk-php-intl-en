@@ -24,6 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setWaterMarkType(integer $WaterMarkType) Set The watermark type. 0 (default): image; 1: text (not supported yet).
  * @method WaterMarkImage getWaterMarkImage() Obtain The information of watermark images. This parameter is required if the watermark type is image.
  * @method void setWaterMarkImage(WaterMarkImage $WaterMarkImage) Set The information of watermark images. This parameter is required if the watermark type is image.
+ * @method WaterMarkChar getWaterMarkChar() Obtain The information of the text watermark. This parameter is required if `WaterMarkType` is `1`.
+ * @method void setWaterMarkChar(WaterMarkChar $WaterMarkChar) Set The information of the text watermark. This parameter is required if `WaterMarkType` is `1`.
+ * @method WaterMarkTimestamp getWaterMarkTimestamp() Obtain The information of the timestamp watermark. This parameter is required if `WaterMarkType` is `2`.
+ * @method void setWaterMarkTimestamp(WaterMarkTimestamp $WaterMarkTimestamp) Set The information of the timestamp watermark. This parameter is required if `WaterMarkType` is `2`.
  */
 class WaterMark extends AbstractModel
 {
@@ -38,8 +42,20 @@ class WaterMark extends AbstractModel
     public $WaterMarkImage;
 
     /**
+     * @var WaterMarkChar The information of the text watermark. This parameter is required if `WaterMarkType` is `1`.
+     */
+    public $WaterMarkChar;
+
+    /**
+     * @var WaterMarkTimestamp The information of the timestamp watermark. This parameter is required if `WaterMarkType` is `2`.
+     */
+    public $WaterMarkTimestamp;
+
+    /**
      * @param integer $WaterMarkType The watermark type. 0 (default): image; 1: text (not supported yet).
      * @param WaterMarkImage $WaterMarkImage The information of watermark images. This parameter is required if the watermark type is image.
+     * @param WaterMarkChar $WaterMarkChar The information of the text watermark. This parameter is required if `WaterMarkType` is `1`.
+     * @param WaterMarkTimestamp $WaterMarkTimestamp The information of the timestamp watermark. This parameter is required if `WaterMarkType` is `2`.
      */
     function __construct()
     {
@@ -61,6 +77,16 @@ class WaterMark extends AbstractModel
         if (array_key_exists("WaterMarkImage",$param) and $param["WaterMarkImage"] !== null) {
             $this->WaterMarkImage = new WaterMarkImage();
             $this->WaterMarkImage->deserialize($param["WaterMarkImage"]);
+        }
+
+        if (array_key_exists("WaterMarkChar",$param) and $param["WaterMarkChar"] !== null) {
+            $this->WaterMarkChar = new WaterMarkChar();
+            $this->WaterMarkChar->deserialize($param["WaterMarkChar"]);
+        }
+
+        if (array_key_exists("WaterMarkTimestamp",$param) and $param["WaterMarkTimestamp"] !== null) {
+            $this->WaterMarkTimestamp = new WaterMarkTimestamp();
+            $this->WaterMarkTimestamp->deserialize($param["WaterMarkTimestamp"]);
         }
     }
 }
