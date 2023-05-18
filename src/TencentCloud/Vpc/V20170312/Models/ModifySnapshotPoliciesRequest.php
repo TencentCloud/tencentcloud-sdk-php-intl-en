@@ -18,20 +18,20 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * ReturnNormalAddresses request structure.
+ * ModifySnapshotPolicies request structure.
  *
- * @method array getAddressIps() Obtain EIP addresses. Example: 101.35.139.183
- * @method void setAddressIps(array $AddressIps) Set EIP addresses. Example: 101.35.139.183
+ * @method array getSnapshotPoliciesInfo() Obtain Modify snapshot policies
+ * @method void setSnapshotPoliciesInfo(array $SnapshotPoliciesInfo) Set Modify snapshot policies
  */
-class ReturnNormalAddressesRequest extends AbstractModel
+class ModifySnapshotPoliciesRequest extends AbstractModel
 {
     /**
-     * @var array EIP addresses. Example: 101.35.139.183
+     * @var array Modify snapshot policies
      */
-    public $AddressIps;
+    public $SnapshotPoliciesInfo;
 
     /**
-     * @param array $AddressIps EIP addresses. Example: 101.35.139.183
+     * @param array $SnapshotPoliciesInfo Modify snapshot policies
      */
     function __construct()
     {
@@ -46,8 +46,13 @@ class ReturnNormalAddressesRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("AddressIps",$param) and $param["AddressIps"] !== null) {
-            $this->AddressIps = $param["AddressIps"];
+        if (array_key_exists("SnapshotPoliciesInfo",$param) and $param["SnapshotPoliciesInfo"] !== null) {
+            $this->SnapshotPoliciesInfo = [];
+            foreach ($param["SnapshotPoliciesInfo"] as $key => $value){
+                $obj = new BatchModifySnapshotPolicy();
+                $obj->deserialize($value);
+                array_push($this->SnapshotPoliciesInfo, $obj);
+            }
         }
     }
 }

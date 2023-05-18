@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getBandwidthPackageId() Obtain The unique ID of the bandwidth package.
  * @method void setBandwidthPackageId(string $BandwidthPackageId) Set The unique ID of the bandwidth package.
- * @method string getNetworkType() Obtain The bandwidth package type. Valid values: 'BGP', 'SINGLEISP', and 'ANYCAST'
- * @method void setNetworkType(string $NetworkType) Set The bandwidth package type. Valid values: 'BGP', 'SINGLEISP', and 'ANYCAST'
+ * @method string getNetworkType() Obtain Bandwidth package type. Values: `BGP`, `SINGLEISP`, `ANYCAST`, `SINGLEISP_CMCC`, `SINGLEISP_CTCC`, `SINGLEISP_CUCC`
+ * @method void setNetworkType(string $NetworkType) Set Bandwidth package type. Values: `BGP`, `SINGLEISP`, `ANYCAST`, `SINGLEISP_CMCC`, `SINGLEISP_CTCC`, `SINGLEISP_CUCC`
  * @method string getChargeType() Obtain The bandwidth package billing mode. Valid values: 'TOP5_POSTPAID_BY_MONTH' and 'PERCENT95_POSTPAID_BY_MONTH'
  * @method void setChargeType(string $ChargeType) Set The bandwidth package billing mode. Valid values: 'TOP5_POSTPAID_BY_MONTH' and 'PERCENT95_POSTPAID_BY_MONTH'
  * @method string getBandwidthPackageName() Obtain The name of the bandwidth package.
@@ -45,7 +45,7 @@ class BandwidthPackage extends AbstractModel
     public $BandwidthPackageId;
 
     /**
-     * @var string The bandwidth package type. Valid values: 'BGP', 'SINGLEISP', and 'ANYCAST'
+     * @var string Bandwidth package type. Values: `BGP`, `SINGLEISP`, `ANYCAST`, `SINGLEISP_CMCC`, `SINGLEISP_CTCC`, `SINGLEISP_CUCC`
      */
     public $NetworkType;
 
@@ -81,7 +81,7 @@ class BandwidthPackage extends AbstractModel
 
     /**
      * @param string $BandwidthPackageId The unique ID of the bandwidth package.
-     * @param string $NetworkType The bandwidth package type. Valid values: 'BGP', 'SINGLEISP', and 'ANYCAST'
+     * @param string $NetworkType Bandwidth package type. Values: `BGP`, `SINGLEISP`, `ANYCAST`, `SINGLEISP_CMCC`, `SINGLEISP_CTCC`, `SINGLEISP_CUCC`
      * @param string $ChargeType The bandwidth package billing mode. Valid values: 'TOP5_POSTPAID_BY_MONTH' and 'PERCENT95_POSTPAID_BY_MONTH'
      * @param string $BandwidthPackageName The name of the bandwidth package.
      * @param string $CreatedTime The creation time of the bandwidth package, which follows the `ISO8601` standard and uses `UTC` time in the format of `YYYY-MM-DDThh:mm:ssZ`.

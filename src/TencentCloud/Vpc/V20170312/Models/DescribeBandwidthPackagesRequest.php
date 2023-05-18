@@ -44,10 +44,10 @@ use TencentCloud\Common\AbstractModel;
 <li> tag-key - String - Required: No - (Filter condition) Filter by tag key.</li>
 <li> tag-value - String - Required: No - (Filter condition) Filter by tag value.</li>
 <li> tag:tag-key - String - Required: No - (Filter condition) Filter by tag key-value pair. Use a specific tag key to replace `tag-key`.</li>
- * @method integer getOffset() Obtain Offset of the query results
- * @method void setOffset(integer $Offset) Set Offset of the query results
- * @method integer getLimit() Obtain Max number of the bandwidth packages to be returned.
- * @method void setLimit(integer $Limit) Set Max number of the bandwidth packages to be returned.
+ * @method integer getOffset() Obtain Offset. This value defaults to 0. For more information, see the relevant sections in API [Overview](https://intl.cloud.tencent.com/document/api/213/15688?from_cn_redirect=1).
+ * @method void setOffset(integer $Offset) Set Offset. This value defaults to 0. For more information, see the relevant sections in API [Overview](https://intl.cloud.tencent.com/document/api/213/15688?from_cn_redirect=1).
+ * @method integer getLimit() Obtain Number of bandwidth packages returned. This value defaults to 20. The maximum is 100. For more information, see the relevant sections in API [Overview](https://intl.cloud.tencent.com/document/api/213/15688?from_cn_redirect=1).
+ * @method void setLimit(integer $Limit) Set Number of bandwidth packages returned. This value defaults to 20. The maximum is 100. For more information, see the relevant sections in API [Overview](https://intl.cloud.tencent.com/document/api/213/15688?from_cn_redirect=1).
  */
 class DescribeBandwidthPackagesRequest extends AbstractModel
 {
@@ -72,12 +72,12 @@ class DescribeBandwidthPackagesRequest extends AbstractModel
     public $Filters;
 
     /**
-     * @var integer Offset of the query results
+     * @var integer Offset. This value defaults to 0. For more information, see the relevant sections in API [Overview](https://intl.cloud.tencent.com/document/api/213/15688?from_cn_redirect=1).
      */
     public $Offset;
 
     /**
-     * @var integer Max number of the bandwidth packages to be returned.
+     * @var integer Number of bandwidth packages returned. This value defaults to 20. The maximum is 100. For more information, see the relevant sections in API [Overview](https://intl.cloud.tencent.com/document/api/213/15688?from_cn_redirect=1).
      */
     public $Limit;
 
@@ -94,8 +94,8 @@ class DescribeBandwidthPackagesRequest extends AbstractModel
 <li> tag-key - String - Required: No - (Filter condition) Filter by tag key.</li>
 <li> tag-value - String - Required: No - (Filter condition) Filter by tag value.</li>
 <li> tag:tag-key - String - Required: No - (Filter condition) Filter by tag key-value pair. Use a specific tag key to replace `tag-key`.</li>
-     * @param integer $Offset Offset of the query results
-     * @param integer $Limit Max number of the bandwidth packages to be returned.
+     * @param integer $Offset Offset. This value defaults to 0. For more information, see the relevant sections in API [Overview](https://intl.cloud.tencent.com/document/api/213/15688?from_cn_redirect=1).
+     * @param integer $Limit Number of bandwidth packages returned. This value defaults to 20. The maximum is 100. For more information, see the relevant sections in API [Overview](https://intl.cloud.tencent.com/document/api/213/15688?from_cn_redirect=1).
      */
     function __construct()
     {

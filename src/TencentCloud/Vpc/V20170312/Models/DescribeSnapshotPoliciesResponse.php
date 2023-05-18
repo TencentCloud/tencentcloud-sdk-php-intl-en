@@ -18,26 +18,26 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * TransformAddress response structure.
+ * DescribeSnapshotPolicies response structure.
  *
- * @method integer getTaskId() Obtain The async task ID. You can use the [DescribeTaskResult](https://intl.cloud.tencent.com/document/api/215/36271?from_cn_redirect=1) API to query the task status.
- * @method void setTaskId(integer $TaskId) Set The async task ID. You can use the [DescribeTaskResult](https://intl.cloud.tencent.com/document/api/215/36271?from_cn_redirect=1) API to query the task status.
- * @method string getAddressId() Obtain The unique ID after converting to EIP
- * @method void setAddressId(string $AddressId) Set The unique ID after converting to EIP
+ * @method array getSnapshotPolicySet() Obtain Snapshot policies
+ * @method void setSnapshotPolicySet(array $SnapshotPolicySet) Set Snapshot policies
+ * @method integer getTotalCount() Obtain The number of eligible objects.
+ * @method void setTotalCount(integer $TotalCount) Set The number of eligible objects.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
-class TransformAddressResponse extends AbstractModel
+class DescribeSnapshotPoliciesResponse extends AbstractModel
 {
     /**
-     * @var integer The async task ID. You can use the [DescribeTaskResult](https://intl.cloud.tencent.com/document/api/215/36271?from_cn_redirect=1) API to query the task status.
+     * @var array Snapshot policies
      */
-    public $TaskId;
+    public $SnapshotPolicySet;
 
     /**
-     * @var string The unique ID after converting to EIP
+     * @var integer The number of eligible objects.
      */
-    public $AddressId;
+    public $TotalCount;
 
     /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -45,8 +45,8 @@ class TransformAddressResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $TaskId The async task ID. You can use the [DescribeTaskResult](https://intl.cloud.tencent.com/document/api/215/36271?from_cn_redirect=1) API to query the task status.
-     * @param string $AddressId The unique ID after converting to EIP
+     * @param array $SnapshotPolicySet Snapshot policies
+     * @param integer $TotalCount The number of eligible objects.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -62,12 +62,17 @@ class TransformAddressResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TaskId",$param) and $param["TaskId"] !== null) {
-            $this->TaskId = $param["TaskId"];
+        if (array_key_exists("SnapshotPolicySet",$param) and $param["SnapshotPolicySet"] !== null) {
+            $this->SnapshotPolicySet = [];
+            foreach ($param["SnapshotPolicySet"] as $key => $value){
+                $obj = new SnapshotPolicy();
+                $obj->deserialize($value);
+                array_push($this->SnapshotPolicySet, $obj);
+            }
         }
 
-        if (array_key_exists("AddressId",$param) and $param["AddressId"] !== null) {
-            $this->AddressId = $param["AddressId"];
+        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
+            $this->TotalCount = $param["TotalCount"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

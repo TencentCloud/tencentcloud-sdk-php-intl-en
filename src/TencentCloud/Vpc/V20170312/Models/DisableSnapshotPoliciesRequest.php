@@ -18,20 +18,20 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * ReturnNormalAddresses request structure.
+ * DisableSnapshotPolicies request structure.
  *
- * @method array getAddressIps() Obtain EIP addresses. Example: 101.35.139.183
- * @method void setAddressIps(array $AddressIps) Set EIP addresses. Example: 101.35.139.183
+ * @method array getSnapshotPolicyIds() Obtain Snapshot policy IDs
+ * @method void setSnapshotPolicyIds(array $SnapshotPolicyIds) Set Snapshot policy IDs
  */
-class ReturnNormalAddressesRequest extends AbstractModel
+class DisableSnapshotPoliciesRequest extends AbstractModel
 {
     /**
-     * @var array EIP addresses. Example: 101.35.139.183
+     * @var array Snapshot policy IDs
      */
-    public $AddressIps;
+    public $SnapshotPolicyIds;
 
     /**
-     * @param array $AddressIps EIP addresses. Example: 101.35.139.183
+     * @param array $SnapshotPolicyIds Snapshot policy IDs
      */
     function __construct()
     {
@@ -46,8 +46,8 @@ class ReturnNormalAddressesRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("AddressIps",$param) and $param["AddressIps"] !== null) {
-            $this->AddressIps = $param["AddressIps"];
+        if (array_key_exists("SnapshotPolicyIds",$param) and $param["SnapshotPolicyIds"] !== null) {
+            $this->SnapshotPolicyIds = $param["SnapshotPolicyIds"];
         }
     }
 }

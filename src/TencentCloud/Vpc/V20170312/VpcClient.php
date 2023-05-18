@@ -75,6 +75,7 @@ The number of network instances that each CCN can be associated with is limited.
 * An ENI can only be bound to a VPC-based CVM under the same availability zone as the ENI subnet.
 
 This API is completed asynchronously. If you need to query the execution result of an async task, please use the `RequestId` returned by this API to poll the `DescribeVpcTaskResult` API.
+ * @method Models\AttachSnapshotInstancesResponse AttachSnapshotInstances(Models\AttachSnapshotInstancesRequest $req) This API is used to associate a snapshot policy with specified instances.
  * @method Models\AuditCrossBorderComplianceResponse AuditCrossBorderCompliance(Models\AuditCrossBorderComplianceRequest $req) This API is used by the service provider to perform a compliance audit.
 * This API is only provided for service providers to audit compliance review requests received. Tencent Cloud will verify the identity of the service provider by the `APPID`. 
 * The status of the review request can be changed between `APPROVED` and `DENY`.
@@ -170,6 +171,7 @@ Description:
 * Only policies in one direction can be created in each request. If you need to specify the `PolicyIndex` parameter, the indexes of policies must be consistent.
  * @method Models\CreateServiceTemplateResponse CreateServiceTemplate(Models\CreateServiceTemplateRequest $req) This API (CreateServiceTemplate) is used to create a protocol port template.
  * @method Models\CreateServiceTemplateGroupResponse CreateServiceTemplateGroup(Models\CreateServiceTemplateGroupRequest $req) This API (CreateServiceTemplateGroup) is used to create a protocol port template group.
+ * @method Models\CreateSnapshotPoliciesResponse CreateSnapshotPolicies(Models\CreateSnapshotPoliciesRequest $req) This API is used to create snapshot policies.
  * @method Models\CreateSubnetResponse CreateSubnet(Models\CreateSubnetRequest $req) This API is used to create a subnet.
 * You must create a VPC instance before creating a subnet.
 * After the subnet is successfully created, its IP address range cannot be modified. The subnet IP address range must fall within the VPC IP address range. They can be the same if the VPC instance has only one subnet. We recommend that you keep the subnet IP address range within the VPC IP address range to reserve IP address ranges for other subnets.
@@ -236,6 +238,7 @@ This API is completed asynchronously. If you need to query the execution result 
 * SecurityGroupPolicySet.Version is used to specify the version of the security group you are operating. If the specified Version number differs from the latest version of the current security group, a failure will be returned. If Version is not specified, the policy of the specified PolicyIndex will be deleted directly.
  * @method Models\DeleteServiceTemplateResponse DeleteServiceTemplate(Models\DeleteServiceTemplateRequest $req) This API (DeleteServiceTemplate) is used to delete a protocol port template.
  * @method Models\DeleteServiceTemplateGroupResponse DeleteServiceTemplateGroup(Models\DeleteServiceTemplateGroupRequest $req) This API (DeleteServiceTemplateGroup) is used to delete a protocol port template group.
+ * @method Models\DeleteSnapshotPoliciesResponse DeleteSnapshotPolicies(Models\DeleteSnapshotPoliciesRequest $req) This API is used to delete snapshot policies.
  * @method Models\DeleteSubnetResponse DeleteSubnet(Models\DeleteSubnetRequest $req) This API (DeleteSubnet) is used to delete subnets.
 Before deleting a subnet, you need to remove all resources in the subnet, including CVMs, load balancers, cloud data, NoSQL databases, and ENIs.
  * @method Models\DeleteVpcResponse DeleteVpc(Models\DeleteVpcRequest $req) This API (DeleteVpc) is used to delete VPCs.
@@ -300,6 +303,10 @@ This API is only available for existing customers. For any questions, please [su
  * @method Models\DescribeSecurityGroupsResponse DescribeSecurityGroups(Models\DescribeSecurityGroupsRequest $req) This API (DescribeSecurityGroups) is used to query security groups.
  * @method Models\DescribeServiceTemplateGroupsResponse DescribeServiceTemplateGroups(Models\DescribeServiceTemplateGroupsRequest $req) This API (DescribeServiceTemplateGroups) is used to query a protocol port template group.
  * @method Models\DescribeServiceTemplatesResponse DescribeServiceTemplates(Models\DescribeServiceTemplatesRequest $req) This API (DescribeServiceTemplates) is used to query protocol port templates.
+ * @method Models\DescribeSgSnapshotFileContentResponse DescribeSgSnapshotFileContent(Models\DescribeSgSnapshotFileContentRequest $req) This API is used to query the snapshot file contents.
+ * @method Models\DescribeSnapshotAttachedInstancesResponse DescribeSnapshotAttachedInstances(Models\DescribeSnapshotAttachedInstancesRequest $req) This API is used to query instances associated with a snapshot policy.
+ * @method Models\DescribeSnapshotFilesResponse DescribeSnapshotFiles(Models\DescribeSnapshotFilesRequest $req) This API is used to query snapshot files.
+ * @method Models\DescribeSnapshotPoliciesResponse DescribeSnapshotPolicies(Models\DescribeSnapshotPoliciesRequest $req) This API is used to query snapshot policies.
  * @method Models\DescribeSubnetsResponse DescribeSubnets(Models\DescribeSubnetsRequest $req) This API (DescribeSubnets) is used to query the list of subnets.
  * @method Models\DescribeTaskResultResponse DescribeTaskResult(Models\DescribeTaskResultRequest $req) This API is used to query the EIP async job execution results.
  * @method Models\DescribeTrafficPackagesResponse DescribeTrafficPackages(Models\DescribeTrafficPackagesRequest $req) This API is used to query the details of shared traffic packages.
@@ -325,9 +332,11 @@ After unbinding the network instance, the corresponding routing policy will also
 >
  * @method Models\DetachNetworkInterfaceResponse DetachNetworkInterface(Models\DetachNetworkInterfaceRequest $req) This API is used to unbind an ENI from a CVM.
 This API is completed asynchronously. If you need to query the execution result of an async task, please use the `RequestId` returned by this API to poll the `DescribeVpcTaskResult` API.
+ * @method Models\DetachSnapshotInstancesResponse DetachSnapshotInstances(Models\DetachSnapshotInstancesRequest $req) This API is used to disassociate a snapshot policy with instances.
  * @method Models\DisableCcnRoutesResponse DisableCcnRoutes(Models\DisableCcnRoutesRequest $req) This API (DisableCcnRoutes) is used to disable CCN routes that are already enabled.
  * @method Models\DisableFlowLogsResponse DisableFlowLogs(Models\DisableFlowLogsRequest $req) This API is used to disable flow log.
  * @method Models\DisableGatewayFlowMonitorResponse DisableGatewayFlowMonitor(Models\DisableGatewayFlowMonitorRequest $req) This API is used to disable gateway traffic monitor.
+ * @method Models\DisableSnapshotPoliciesResponse DisableSnapshotPolicies(Models\DisableSnapshotPoliciesRequest $req) This API is used to disable specified snapshot policies.
  * @method Models\DisassociateAddressResponse DisassociateAddress(Models\DisassociateAddressRequest $req) This API is used to unbind an [Elastic IP](https://intl.cloud.tencent.com/document/product/213/1941?from_cn_redirect=1) (EIP for short).
 * This API supports unbinding an EIP from CVM instances and ENIs.
 * This API does not support unbinding an EIP from a NAT Gateway. To unbind an EIP from a NAT Gateway, use the [`DisassociateNatGatewayAddress`](https://intl.cloud.tencent.com/document/api/215/36716?from_cn_redirect=1) API.
@@ -343,6 +352,7 @@ This API is completed asynchronously. If you need to query the execution result 
 This API is used to verify whether there will be conflict with an existing route after a CCN route is enabled. If there is a conflict, the route will not be enabled, and the process will fail. When a conflict occurs, you must disable the conflicting route before you can enable the desired route.
  * @method Models\EnableFlowLogsResponse EnableFlowLogs(Models\EnableFlowLogsRequest $req) This API is used to enable flow log.
  * @method Models\EnableGatewayFlowMonitorResponse EnableGatewayFlowMonitor(Models\EnableGatewayFlowMonitorRequest $req) This API is used to enable gateway traffic monitor.
+ * @method Models\EnableSnapshotPoliciesResponse EnableSnapshotPolicies(Models\EnableSnapshotPoliciesRequest $req) This API is used to enable specified snapshot policies. 
  * @method Models\EnableVpcEndPointConnectResponse EnableVpcEndPointConnect(Models\EnableVpcEndPointConnectRequest $req) This API is used to determine whether to accept the request of connecting with an endpoint.
  * @method Models\GetCcnRegionBandwidthLimitsResponse GetCcnRegionBandwidthLimits(Models\GetCcnRegionBandwidthLimitsRequest $req) This API is used to query the bandwidth limits of a CCN instance. Monthly-subscribed CCNs only support Inter-region Bandwidth Limits, while the pay-as-you-go CCNs support both the Inter-region Bandwidth Limits and Region Outbound Bandwidth Limits. 
  * @method Models\HaVipAssociateAddressIpResponse HaVipAssociateAddressIp(Models\HaVipAssociateAddressIpRequest $req) This API is used to bind an EIP to an HAVIP. <br />
@@ -410,6 +420,7 @@ This API is completed asynchronously. If you need to query the execution result 
 </ul>
  * @method Models\ModifyServiceTemplateAttributeResponse ModifyServiceTemplateAttribute(Models\ModifyServiceTemplateAttributeRequest $req) This API (ModifyServiceTemplateAttribute) is used to modify a protocol port template.
  * @method Models\ModifyServiceTemplateGroupAttributeResponse ModifyServiceTemplateGroupAttribute(Models\ModifyServiceTemplateGroupAttributeRequest $req) This API (ModifyServiceTemplateGroupAttribute) is used to modify a protocol port template group.
+ * @method Models\ModifySnapshotPoliciesResponse ModifySnapshotPolicies(Models\ModifySnapshotPoliciesRequest $req) This API is used to modify specified snapshot policies.
  * @method Models\ModifySubnetAttributeResponse ModifySubnetAttribute(Models\ModifySubnetAttributeRequest $req) This API (ModifySubnetAttribute) is used to modify subnet attributes.
  * @method Models\ModifyVpcAttributeResponse ModifyVpcAttribute(Models\ModifyVpcAttributeRequest $req) This API (ModifyVpcAttribute) is used to modify VPC attributes.
  * @method Models\ModifyVpcEndPointAttributeResponse ModifyVpcEndPointAttribute(Models\ModifyVpcEndPointAttributeRequest $req) This API is used to modify endpoint attributes.
@@ -442,6 +453,7 @@ Only one policy in a single direction can be replaced in each request, and the P
 Note: When this API is called, all routing policies in the current route table are deleted before new routing policies are saved, which may incur network interruption.
  * @method Models\ResetVpnConnectionResponse ResetVpnConnection(Models\ResetVpnConnectionRequest $req) The API (ResetVpnConnection) is used to reset VPN tunnels.
  * @method Models\ResetVpnGatewayInternetMaxBandwidthResponse ResetVpnGatewayInternetMaxBandwidth(Models\ResetVpnGatewayInternetMaxBandwidthRequest $req) This API (ResetVpnGatewayInternetMaxBandwidth) is used to adjust the bandwidth cap of VPN gateways. Currently, only configuration upgrade is supported. VPN gateways with monthly subscription must be within the validity period.
+ * @method Models\ResumeSnapshotInstanceResponse ResumeSnapshotInstance(Models\ResumeSnapshotInstanceRequest $req) This API is used to restore security group policies with a backup.
  * @method Models\ReturnNormalAddressesResponse ReturnNormalAddresses(Models\ReturnNormalAddressesRequest $req) This API is used to unbind and release public IPs. 
 Note: Starting from Dec 15, 2022, CAM authorization is required for a sub-account to call this API. For more details, see [Authorization Guide](https://intl.cloud.tencent.com/document/product/598/34545?from_cn_redirect=1).
  * @method Models\SetCcnRegionBandwidthLimitsResponse SetCcnRegionBandwidthLimits(Models\SetCcnRegionBandwidthLimitsRequest $req) This API (SetCcnRegionBandwidthLimits) is used to set the outbound bandwidth cap for CCNs in each region. This API can only set the outbound bandwidth cap for regions in the network instances that have already been associated.

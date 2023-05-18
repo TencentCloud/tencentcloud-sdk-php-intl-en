@@ -40,10 +40,10 @@ Default value: `4`.
 `3`: Reflection-based liveness detection.
 `4`: Motion- and reflection-based liveness detection.
 Default value: `4`.
- * @method string getImage() Obtain The image for comparison in the `compare` (liveness detection and face comparison) mode. This parameter is required when the value of `CheckMode` is `compare`.
- * @method void setImage(string $Image) Set The image for comparison in the `compare` (liveness detection and face comparison) mode. This parameter is required when the value of `CheckMode` is `compare`.
- * @method string getExtra() Obtain The pass-through parameter.
- * @method void setExtra(string $Extra) Set The pass-through parameter.
+ * @method string getImage() Obtain The photo (in Base64) to compare. This parameter is required when the value of `CheckMode` is `compare`.
+ * @method void setImage(string $Image) Set The photo (in Base64) to compare. This parameter is required when the value of `CheckMode` is `compare`.
+ * @method string getExtra() Obtain The pass-through parameter, which can be omitted if there are no special requirements.
+ * @method void setExtra(string $Extra) Set The pass-through parameter, which can be omitted if there are no special requirements.
  */
 class GetFaceIdTokenIntlRequest extends AbstractModel
 {
@@ -66,12 +66,12 @@ Default value: `4`.
     public $SecureLevel;
 
     /**
-     * @var string The image for comparison in the `compare` (liveness detection and face comparison) mode. This parameter is required when the value of `CheckMode` is `compare`.
+     * @var string The photo (in Base64) to compare. This parameter is required when the value of `CheckMode` is `compare`.
      */
     public $Image;
 
     /**
-     * @var string The pass-through parameter.
+     * @var string The pass-through parameter, which can be omitted if there are no special requirements.
      */
     public $Extra;
 
@@ -86,8 +86,8 @@ Default value: `liveness`.
 `3`: Reflection-based liveness detection.
 `4`: Motion- and reflection-based liveness detection.
 Default value: `4`.
-     * @param string $Image The image for comparison in the `compare` (liveness detection and face comparison) mode. This parameter is required when the value of `CheckMode` is `compare`.
-     * @param string $Extra The pass-through parameter.
+     * @param string $Image The photo (in Base64) to compare. This parameter is required when the value of `CheckMode` is `compare`.
+     * @param string $Extra The pass-through parameter, which can be omitted if there are no special requirements.
      */
     function __construct()
     {

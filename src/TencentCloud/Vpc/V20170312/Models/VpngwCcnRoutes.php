@@ -28,6 +28,8 @@ DISABLE: do not enable the route
  * @method void setStatus(string $Status) Set Enable the route or not
 ENABLE: enable the route
 DISABLE: do not enable the route
+ * @method string getDestinationCidrBlock() Obtain Route CIDR block
+ * @method void setDestinationCidrBlock(string $DestinationCidrBlock) Set Route CIDR block
  */
 class VpngwCcnRoutes extends AbstractModel
 {
@@ -44,10 +46,16 @@ DISABLE: do not enable the route
     public $Status;
 
     /**
+     * @var string Route CIDR block
+     */
+    public $DestinationCidrBlock;
+
+    /**
      * @param string $RouteId Route ID
      * @param string $Status Enable the route or not
 ENABLE: enable the route
 DISABLE: do not enable the route
+     * @param string $DestinationCidrBlock Route CIDR block
      */
     function __construct()
     {
@@ -68,6 +76,10 @@ DISABLE: do not enable the route
 
         if (array_key_exists("Status",$param) and $param["Status"] !== null) {
             $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("DestinationCidrBlock",$param) and $param["DestinationCidrBlock"] !== null) {
+            $this->DestinationCidrBlock = $param["DestinationCidrBlock"];
         }
     }
 }

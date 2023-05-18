@@ -54,6 +54,12 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method void setRouteTableFlag(boolean $RouteTableFlag) Set Whether the multiple route tables feature is enabled for the CCN instance. Valid values: `False`: no; `True`: yes. Default value: `False`.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method boolean getIsSecurityLock() Obtain 
+ * @method void setIsSecurityLock(boolean $IsSecurityLock) Set 
+ * @method boolean getRouteBroadcastPolicyFlag() Obtain Status of CCN route broadcasting policy. Values: `False` (Disabled), `True` (Enabled)
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setRouteBroadcastPolicyFlag(boolean $RouteBroadcastPolicyFlag) Set Status of CCN route broadcasting policy. Values: `False` (Disabled), `True` (Enabled)
+Note: This field may return `null`, indicating that no valid values can be obtained.
  */
 class CCN extends AbstractModel
 {
@@ -127,6 +133,17 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     public $RouteTableFlag;
 
     /**
+     * @var boolean 
+     */
+    public $IsSecurityLock;
+
+    /**
+     * @var boolean Status of CCN route broadcasting policy. Values: `False` (Disabled), `True` (Enabled)
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $RouteBroadcastPolicyFlag;
+
+    /**
      * @param string $CcnId The unique ID of the CCN
      * @param string $CcnName The name of the CCN
      * @param string $CcnDescription The detailed information of the CCN
@@ -144,6 +161,9 @@ Note: This field may return null, indicating no valid value.
 Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param boolean $RouteTableFlag Whether the multiple route tables feature is enabled for the CCN instance. Valid values: `False`: no; `True`: yes. Default value: `False`.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param boolean $IsSecurityLock 
+     * @param boolean $RouteBroadcastPolicyFlag Status of CCN route broadcasting policy. Values: `False` (Disabled), `True` (Enabled)
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -213,6 +233,14 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
         if (array_key_exists("RouteTableFlag",$param) and $param["RouteTableFlag"] !== null) {
             $this->RouteTableFlag = $param["RouteTableFlag"];
+        }
+
+        if (array_key_exists("IsSecurityLock",$param) and $param["IsSecurityLock"] !== null) {
+            $this->IsSecurityLock = $param["IsSecurityLock"];
+        }
+
+        if (array_key_exists("RouteBroadcastPolicyFlag",$param) and $param["RouteBroadcastPolicyFlag"] !== null) {
+            $this->RouteBroadcastPolicyFlag = $param["RouteBroadcastPolicyFlag"];
         }
     }
 }

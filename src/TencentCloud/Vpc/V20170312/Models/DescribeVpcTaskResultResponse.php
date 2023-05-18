@@ -24,6 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStatus(string $Status) Set The execution results of an async task. Valid values: `SUCCESS`(task executed successfully), `FAILED` (task execution failed), and `RUNNING` (task in progress). 
  * @method string getOutput() Obtain Output of the async task execution result
  * @method void setOutput(string $Output) Set Output of the async task execution result
+ * @method array getResult() Obtain Detailed result of an async task, such as the result of batch deleting ENIs.
+Note: this field may return `null`, indicating that no valid value can be obtained.
+ * @method void setResult(array $Result) Set Detailed result of an async task, such as the result of batch deleting ENIs.
+Note: this field may return `null`, indicating that no valid value can be obtained.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -40,6 +44,12 @@ class DescribeVpcTaskResultResponse extends AbstractModel
     public $Output;
 
     /**
+     * @var array Detailed result of an async task, such as the result of batch deleting ENIs.
+Note: this field may return `null`, indicating that no valid value can be obtained.
+     */
+    public $Result;
+
+    /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
@@ -47,6 +57,8 @@ class DescribeVpcTaskResultResponse extends AbstractModel
     /**
      * @param string $Status The execution results of an async task. Valid values: `SUCCESS`(task executed successfully), `FAILED` (task execution failed), and `RUNNING` (task in progress). 
      * @param string $Output Output of the async task execution result
+     * @param array $Result Detailed result of an async task, such as the result of batch deleting ENIs.
+Note: this field may return `null`, indicating that no valid value can be obtained.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -68,6 +80,15 @@ class DescribeVpcTaskResultResponse extends AbstractModel
 
         if (array_key_exists("Output",$param) and $param["Output"] !== null) {
             $this->Output = $param["Output"];
+        }
+
+        if (array_key_exists("Result",$param) and $param["Result"] !== null) {
+            $this->Result = [];
+            foreach ($param["Result"] as $key => $value){
+                $obj = new VpcTaskResultDetailInfo();
+                $obj->deserialize($value);
+                array_push($this->Result, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
