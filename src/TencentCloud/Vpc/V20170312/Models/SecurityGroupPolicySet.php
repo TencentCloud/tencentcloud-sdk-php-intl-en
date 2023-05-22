@@ -20,34 +20,46 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Security group policy set
  *
- * @method string getVersion() Obtain The version of the security group policy. The version number is automatically increased by one each time users update the security policy, to prevent the expiration of updated routing policies. Conflict is ignored if it is left empty.
- * @method void setVersion(string $Version) Set The version of the security group policy. The version number is automatically increased by one each time users update the security policy, to prevent the expiration of updated routing policies. Conflict is ignored if it is left empty.
- * @method array getEgress() Obtain Outbound policy.
- * @method void setEgress(array $Egress) Set Outbound policy.
- * @method array getIngress() Obtain Inbound policy.
- * @method void setIngress(array $Ingress) Set Inbound policy.
+ * @method string getVersion() Obtain The version number of the security group policy, which will automatically increase by one each time you update the security group policy, so as to prevent expiration of the updated routing policies. If it is left empty, any conflicts will be ignored. 
+Note: This parameter may return null, indicating that no valid values can be obtained.
+ * @method void setVersion(string $Version) Set The version number of the security group policy, which will automatically increase by one each time you update the security group policy, so as to prevent expiration of the updated routing policies. If it is left empty, any conflicts will be ignored. 
+Note: This parameter may return null, indicating that no valid values can be obtained.
+ * @method array getEgress() Obtain Outbound rule. 
+Note: This parameter may return null, indicating that no valid values can be obtained.
+ * @method void setEgress(array $Egress) Set Outbound rule. 
+Note: This parameter may return null, indicating that no valid values can be obtained.
+ * @method array getIngress() Obtain Inbound rule. 
+Note: This parameter may return null, indicating that no valid values can be obtained.
+ * @method void setIngress(array $Ingress) Set Inbound rule. 
+Note: This parameter may return null, indicating that no valid values can be obtained.
  */
 class SecurityGroupPolicySet extends AbstractModel
 {
     /**
-     * @var string The version of the security group policy. The version number is automatically increased by one each time users update the security policy, to prevent the expiration of updated routing policies. Conflict is ignored if it is left empty.
+     * @var string The version number of the security group policy, which will automatically increase by one each time you update the security group policy, so as to prevent expiration of the updated routing policies. If it is left empty, any conflicts will be ignored. 
+Note: This parameter may return null, indicating that no valid values can be obtained.
      */
     public $Version;
 
     /**
-     * @var array Outbound policy.
+     * @var array Outbound rule. 
+Note: This parameter may return null, indicating that no valid values can be obtained.
      */
     public $Egress;
 
     /**
-     * @var array Inbound policy.
+     * @var array Inbound rule. 
+Note: This parameter may return null, indicating that no valid values can be obtained.
      */
     public $Ingress;
 
     /**
-     * @param string $Version The version of the security group policy. The version number is automatically increased by one each time users update the security policy, to prevent the expiration of updated routing policies. Conflict is ignored if it is left empty.
-     * @param array $Egress Outbound policy.
-     * @param array $Ingress Inbound policy.
+     * @param string $Version The version number of the security group policy, which will automatically increase by one each time you update the security group policy, so as to prevent expiration of the updated routing policies. If it is left empty, any conflicts will be ignored. 
+Note: This parameter may return null, indicating that no valid values can be obtained.
+     * @param array $Egress Outbound rule. 
+Note: This parameter may return null, indicating that no valid values can be obtained.
+     * @param array $Ingress Inbound rule. 
+Note: This parameter may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

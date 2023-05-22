@@ -59,6 +59,9 @@ The API request rate is limited to 20 requests/sec by default.
  * @method Models\RecognizePhilippinesVoteIDOCRResponse RecognizePhilippinesVoteIDOCR(Models\RecognizePhilippinesVoteIDOCRRequest $req) This API is used to recognize a Philippine voters ID card. It can recognize fields such as first name, family name, date of birth, civil status, citizenship, address, precinct, and voter's identification number (VIN).
 
 The API request rate is limited to 20 requests/sec by default.
+ * @method Models\SmartStructuralOCRV2Response SmartStructuralOCRV2(Models\SmartStructuralOCRV2Request $req) This API is used to recognize fields from cards, documents, bills, forms, contracts, and other structured information. It is flexible and efficient to use, without any configuration required. This API is suitable for recognizing structured information.
+
+A maximum of 10 requests can be initiated per second for this API.
  * @method Models\TableOCRResponse TableOCR(Models\TableOCRRequest $req) This API is used to detect and recognize Chinese and English forms in images. It can return the text content of each cell and save the recognition result as Excel.
 
 This API is not fully available for the time being. For more information, please contact your [Tencent Cloud sales rep](https://intl.cloud.tencent.com/contact-sales).

@@ -14,32 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Vpc\V20170312\Models;
+namespace TencentCloud\Ocr\V20181119\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeFlowLog request structure.
+ * The sequence number of an element group in the image
  *
- * @method string getVpcId() Obtain ID of the VPC instance.
- * @method void setVpcId(string $VpcId) Set ID of the VPC instance.
- * @method string getFlowLogId() Obtain The unique ID of the flow log.
- * @method void setFlowLogId(string $FlowLogId) Set The unique ID of the flow log.
+ * @method array getGroups() Obtain The elements in each line.
+ * @method void setGroups(array $Groups) Set The elements in each line.
  */
-class DescribeFlowLogRequest extends AbstractModel
+class GroupInfo extends AbstractModel
 {
     /**
-     * @var string ID of the VPC instance.
+     * @var array The elements in each line.
      */
-    public $VpcId;
+    public $Groups;
 
     /**
-     * @var string The unique ID of the flow log.
-     */
-    public $FlowLogId;
-
-    /**
-     * @param string $VpcId ID of the VPC instance.
-     * @param string $FlowLogId The unique ID of the flow log.
+     * @param array $Groups The elements in each line.
      */
     function __construct()
     {
@@ -54,12 +46,13 @@ class DescribeFlowLogRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("VpcId",$param) and $param["VpcId"] !== null) {
-            $this->VpcId = $param["VpcId"];
-        }
-
-        if (array_key_exists("FlowLogId",$param) and $param["FlowLogId"] !== null) {
-            $this->FlowLogId = $param["FlowLogId"];
+        if (array_key_exists("Groups",$param) and $param["Groups"] !== null) {
+            $this->Groups = [];
+            foreach ($param["Groups"] as $key => $value){
+                $obj = new LineInfo();
+                $obj->deserialize($value);
+                array_push($this->Groups, $obj);
+            }
         }
     }
 }

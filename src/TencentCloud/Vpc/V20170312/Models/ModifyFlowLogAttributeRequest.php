@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFlowLogId(string $FlowLogId) Set The unique ID of the flow log.
  * @method string getVpcId() Obtain The VPC ID or unique ID of the resource. We recommend using the unique ID. This parameter is required unless the attributes of a CCN flow log is modified.
  * @method void setVpcId(string $VpcId) Set The VPC ID or unique ID of the resource. We recommend using the unique ID. This parameter is required unless the attributes of a CCN flow log is modified.
- * @method string getFlowLogName() Obtain The name of the flow log.
- * @method void setFlowLogName(string $FlowLogName) Set The name of the flow log.
+ * @method string getFlowLogName() Obtain The name of the flow log instance.
+ * @method void setFlowLogName(string $FlowLogName) Set The name of the flow log instance.
  * @method string getFlowLogDescription() Obtain The description of the flow log.
  * @method void setFlowLogDescription(string $FlowLogDescription) Set The description of the flow log.
  */
@@ -42,7 +42,7 @@ class ModifyFlowLogAttributeRequest extends AbstractModel
     public $VpcId;
 
     /**
-     * @var string The name of the flow log.
+     * @var string The name of the flow log instance.
      */
     public $FlowLogName;
 
@@ -54,7 +54,7 @@ class ModifyFlowLogAttributeRequest extends AbstractModel
     /**
      * @param string $FlowLogId The unique ID of the flow log.
      * @param string $VpcId The VPC ID or unique ID of the resource. We recommend using the unique ID. This parameter is required unless the attributes of a CCN flow log is modified.
-     * @param string $FlowLogName The name of the flow log.
+     * @param string $FlowLogName The name of the flow log instance.
      * @param string $FlowLogDescription The description of the flow log.
      */
     function __construct()

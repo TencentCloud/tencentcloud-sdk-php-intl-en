@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyCustomerGatewayAttribute request structure.
  *
- * @method string getCustomerGatewayId() Obtain The ID of the customer gateway, such as `cgw-2wqq41m9`. You can query the customer gateway by using the `DescribeCustomerGateways` API.
- * @method void setCustomerGatewayId(string $CustomerGatewayId) Set The ID of the customer gateway, such as `cgw-2wqq41m9`. You can query the customer gateway by using the `DescribeCustomerGateways` API.
+ * @method string getCustomerGatewayId() Obtain The ID of the customer gateway, such as `cgw-2wqq41m9`. You can query the customer gateway by using the [DescribeCustomerGateways](https://intl.cloud.tencent.com/document/api/215/17516?from_cn_redirect=1) API.
+ * @method void setCustomerGatewayId(string $CustomerGatewayId) Set The ID of the customer gateway, such as `cgw-2wqq41m9`. You can query the customer gateway by using the [DescribeCustomerGateways](https://intl.cloud.tencent.com/document/api/215/17516?from_cn_redirect=1) API.
  * @method string getCustomerGatewayName() Obtain Customer gateway can be named freely, but the maximum length is 60 characters.
  * @method void setCustomerGatewayName(string $CustomerGatewayName) Set Customer gateway can be named freely, but the maximum length is 60 characters.
  */
 class ModifyCustomerGatewayAttributeRequest extends AbstractModel
 {
     /**
-     * @var string The ID of the customer gateway, such as `cgw-2wqq41m9`. You can query the customer gateway by using the `DescribeCustomerGateways` API.
+     * @var string The ID of the customer gateway, such as `cgw-2wqq41m9`. You can query the customer gateway by using the [DescribeCustomerGateways](https://intl.cloud.tencent.com/document/api/215/17516?from_cn_redirect=1) API.
      */
     public $CustomerGatewayId;
 
@@ -38,7 +38,7 @@ class ModifyCustomerGatewayAttributeRequest extends AbstractModel
     public $CustomerGatewayName;
 
     /**
-     * @param string $CustomerGatewayId The ID of the customer gateway, such as `cgw-2wqq41m9`. You can query the customer gateway by using the `DescribeCustomerGateways` API.
+     * @param string $CustomerGatewayId The ID of the customer gateway, such as `cgw-2wqq41m9`. You can query the customer gateway by using the [DescribeCustomerGateways](https://intl.cloud.tencent.com/document/api/215/17516?from_cn_redirect=1) API.
      * @param string $CustomerGatewayName Customer gateway can be named freely, but the maximum length is 60 characters.
      */
     function __construct()

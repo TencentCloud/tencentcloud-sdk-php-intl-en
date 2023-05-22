@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getVpnGatewayId() Obtain The ID of the VPN gateway instance.
  * @method void setVpnGatewayId(string $VpnGatewayId) Set The ID of the VPN gateway instance.
- * @method string getCustomerGatewayId() Obtain The ID of the customer gateway, such as `cgw-2wqq41m9`. You can query the customer gateway by using the `DescribeCustomerGateways` API.
- * @method void setCustomerGatewayId(string $CustomerGatewayId) Set The ID of the customer gateway, such as `cgw-2wqq41m9`. You can query the customer gateway by using the `DescribeCustomerGateways` API.
+ * @method string getCustomerGatewayId() Obtain The ID of the customer gateway, such as `cgw-2wqq41m9`. You can query the customer gateway by using the [DescribeCustomerGateways](https://intl.cloud.tencent.com/document/product/215/17516?from_cn_redirect=1) API.
+ * @method void setCustomerGatewayId(string $CustomerGatewayId) Set The ID of the customer gateway, such as `cgw-2wqq41m9`. You can query the customer gateway by using the [DescribeCustomerGateways](https://intl.cloud.tencent.com/document/product/215/17516?from_cn_redirect=1) API.
  * @method string getVpnConnectionName() Obtain Gateway can be named freely, but the maximum length is 60 characters.
  * @method void setVpnConnectionName(string $VpnConnectionName) Set Gateway can be named freely, but the maximum length is 60 characters.
  * @method string getPreShareKey() Obtain The pre-shared key.
@@ -40,12 +40,12 @@ This parameter is optional for a CCN-based VPN tunnel.
  * @method void setIPSECOptionsSpecification(IPSECOptionsSpecification $IPSECOptionsSpecification) Set IPSec configuration. The IPSec secure session configuration is provided by Tencent Cloud.
  * @method array getTags() Obtain Bound tags, such as [{"Key": "city", "Value": "shanghai"}].
  * @method void setTags(array $Tags) Set Bound tags, such as [{"Key": "city", "Value": "shanghai"}].
- * @method boolean getEnableHealthCheck() Obtain Whether the tunnel health check is supported.
- * @method void setEnableHealthCheck(boolean $EnableHealthCheck) Set Whether the tunnel health check is supported.
- * @method string getHealthCheckLocalIp() Obtain Local IP address for the health check
- * @method void setHealthCheckLocalIp(string $HealthCheckLocalIp) Set Local IP address for the health check
- * @method string getHealthCheckRemoteIp() Obtain Peer IP address for the health check
- * @method void setHealthCheckRemoteIp(string $HealthCheckRemoteIp) Set Peer IP address for the health check
+ * @method boolean getEnableHealthCheck() Obtain Whether the tunnel health check is supported. The default value is `False`.
+ * @method void setEnableHealthCheck(boolean $EnableHealthCheck) Set Whether the tunnel health check is supported. The default value is `False`.
+ * @method string getHealthCheckLocalIp() Obtain Local IP of health check. It defaults to a random IP within 169.254.128.0/17.
+ * @method void setHealthCheckLocalIp(string $HealthCheckLocalIp) Set Local IP of health check. It defaults to a random IP within 169.254.128.0/17.
+ * @method string getHealthCheckRemoteIp() Obtain Peer IP of health check. It defaults to a random IP within 169.254.128.0/17.
+ * @method void setHealthCheckRemoteIp(string $HealthCheckRemoteIp) Set Peer IP of health check. It defaults to a random IP within 169.254.128.0/17.
  * @method string getRouteType() Obtain Tunnel type. Valid values: `STATIC`, `StaticRoute`, and `Policy`.
  * @method void setRouteType(string $RouteType) Set Tunnel type. Valid values: `STATIC`, `StaticRoute`, and `Policy`.
  * @method string getNegotiationType() Obtain Negotiation type. Valid values: `active` (default value), `passive` and `flowTrigger`.
@@ -65,7 +65,7 @@ class CreateVpnConnectionRequest extends AbstractModel
     public $VpnGatewayId;
 
     /**
-     * @var string The ID of the customer gateway, such as `cgw-2wqq41m9`. You can query the customer gateway by using the `DescribeCustomerGateways` API.
+     * @var string The ID of the customer gateway, such as `cgw-2wqq41m9`. You can query the customer gateway by using the [DescribeCustomerGateways](https://intl.cloud.tencent.com/document/product/215/17516?from_cn_redirect=1) API.
      */
     public $CustomerGatewayId;
 
@@ -106,17 +106,17 @@ This parameter is optional for a CCN-based VPN tunnel.
     public $Tags;
 
     /**
-     * @var boolean Whether the tunnel health check is supported.
+     * @var boolean Whether the tunnel health check is supported. The default value is `False`.
      */
     public $EnableHealthCheck;
 
     /**
-     * @var string Local IP address for the health check
+     * @var string Local IP of health check. It defaults to a random IP within 169.254.128.0/17.
      */
     public $HealthCheckLocalIp;
 
     /**
-     * @var string Peer IP address for the health check
+     * @var string Peer IP of health check. It defaults to a random IP within 169.254.128.0/17.
      */
     public $HealthCheckRemoteIp;
 
@@ -147,7 +147,7 @@ This parameter is optional for a CCN-based VPN tunnel.
 
     /**
      * @param string $VpnGatewayId The ID of the VPN gateway instance.
-     * @param string $CustomerGatewayId The ID of the customer gateway, such as `cgw-2wqq41m9`. You can query the customer gateway by using the `DescribeCustomerGateways` API.
+     * @param string $CustomerGatewayId The ID of the customer gateway, such as `cgw-2wqq41m9`. You can query the customer gateway by using the [DescribeCustomerGateways](https://intl.cloud.tencent.com/document/product/215/17516?from_cn_redirect=1) API.
      * @param string $VpnConnectionName Gateway can be named freely, but the maximum length is 60 characters.
      * @param string $PreShareKey The pre-shared key.
      * @param string $VpcId VPC instance ID, which can be obtained from the `VpcId` field in the response of the [`DescribeVpcs`](https://intl.cloud.tencent.com/document/product/215/15778?from_cn_redirect=1) API.
@@ -156,9 +156,9 @@ This parameter is optional for a CCN-based VPN tunnel.
      * @param IKEOptionsSpecification $IKEOptionsSpecification Internet Key Exchange (IKE) configuration. IKE has a self-protection mechanism. The network security protocol is configured by the user.
      * @param IPSECOptionsSpecification $IPSECOptionsSpecification IPSec configuration. The IPSec secure session configuration is provided by Tencent Cloud.
      * @param array $Tags Bound tags, such as [{"Key": "city", "Value": "shanghai"}].
-     * @param boolean $EnableHealthCheck Whether the tunnel health check is supported.
-     * @param string $HealthCheckLocalIp Local IP address for the health check
-     * @param string $HealthCheckRemoteIp Peer IP address for the health check
+     * @param boolean $EnableHealthCheck Whether the tunnel health check is supported. The default value is `False`.
+     * @param string $HealthCheckLocalIp Local IP of health check. It defaults to a random IP within 169.254.128.0/17.
+     * @param string $HealthCheckRemoteIp Peer IP of health check. It defaults to a random IP within 169.254.128.0/17.
      * @param string $RouteType Tunnel type. Valid values: `STATIC`, `StaticRoute`, and `Policy`.
      * @param string $NegotiationType Negotiation type. Valid values: `active` (default value), `passive` and `flowTrigger`.
      * @param integer $DpdEnable Specifies whether to enable DPD. Valid values: `0` (disable) and `1` (enable)

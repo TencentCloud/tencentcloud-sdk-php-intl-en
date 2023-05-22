@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPrivateIpAddresses(array $PrivateIpAddresses) Set The information of the specified private IPs. You can specify a maximum of 10 IPs each time.
  * @method integer getSecondaryPrivateIpAddressCount() Obtain The number of private IP addresses you can apply for. The total number of private IP addresses cannot exceed the quota.
  * @method void setSecondaryPrivateIpAddressCount(integer $SecondaryPrivateIpAddressCount) Set The number of private IP addresses you can apply for. The total number of private IP addresses cannot exceed the quota.
+ * @method string getQosLevel() Obtain IP service level. It’s used in combination with `SecondaryPrivateIpAddressCount`. Values: `PT` (Gold), `AU` (Silver), `AG` (Bronze) and `DEFAULT`
+ * @method void setQosLevel(string $QosLevel) Set IP service level. It’s used in combination with `SecondaryPrivateIpAddressCount`. Values: `PT` (Gold), `AU` (Silver), `AG` (Bronze) and `DEFAULT`
  * @method array getSecurityGroupIds() Obtain The security group to be bound with, such as ['sg-1dd51d'].
  * @method void setSecurityGroupIds(array $SecurityGroupIds) Set The security group to be bound with, such as ['sg-1dd51d'].
  * @method string getNetworkInterfaceDescription() Obtain The ENI description. You can enter any information within 60 characters.
@@ -74,6 +76,11 @@ class CreateAndAttachNetworkInterfaceRequest extends AbstractModel
     public $SecondaryPrivateIpAddressCount;
 
     /**
+     * @var string IP service level. It’s used in combination with `SecondaryPrivateIpAddressCount`. Values: `PT` (Gold), `AU` (Silver), `AG` (Bronze) and `DEFAULT`
+     */
+    public $QosLevel;
+
+    /**
      * @var array The security group to be bound with, such as ['sg-1dd51d'].
      */
     public $SecurityGroupIds;
@@ -100,6 +107,7 @@ class CreateAndAttachNetworkInterfaceRequest extends AbstractModel
      * @param string $InstanceId CVM instance ID.
      * @param array $PrivateIpAddresses The information of the specified private IPs. You can specify a maximum of 10 IPs each time.
      * @param integer $SecondaryPrivateIpAddressCount The number of private IP addresses you can apply for. The total number of private IP addresses cannot exceed the quota.
+     * @param string $QosLevel IP service level. It’s used in combination with `SecondaryPrivateIpAddressCount`. Values: `PT` (Gold), `AU` (Silver), `AG` (Bronze) and `DEFAULT`
      * @param array $SecurityGroupIds The security group to be bound with, such as ['sg-1dd51d'].
      * @param string $NetworkInterfaceDescription The ENI description. You can enter any information within 60 characters.
      * @param array $Tags Bound tags, such as [{"Key": "city", "Value": "shanghai"}].
@@ -145,6 +153,10 @@ class CreateAndAttachNetworkInterfaceRequest extends AbstractModel
 
         if (array_key_exists("SecondaryPrivateIpAddressCount",$param) and $param["SecondaryPrivateIpAddressCount"] !== null) {
             $this->SecondaryPrivateIpAddressCount = $param["SecondaryPrivateIpAddressCount"];
+        }
+
+        if (array_key_exists("QosLevel",$param) and $param["QosLevel"] !== null) {
+            $this->QosLevel = $param["QosLevel"];
         }
 
         if (array_key_exists("SecurityGroupIds",$param) and $param["SecurityGroupIds"] !== null) {

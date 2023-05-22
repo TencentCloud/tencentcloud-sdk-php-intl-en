@@ -134,8 +134,8 @@ Before taking actions on a NAT gateway, ensure that it has been successfully cre
  * @method Models\CreateRouteTableResponse CreateRouteTable(Models\CreateRouteTableRequest $req) This API is used to create a route table.
 * After the VPC instance has been created, the system creates a default route table with which all newly created subnets will be associated. By default, you can use this route table to manage your routing policies. If you have multiple routing policies, you can call the API for creating route tables to create more route tables to manage these routing policies.
 * You can bind a tag when creating a route table. The tag list in the response indicates the tags that have been successfully added.
- * @method Models\CreateRoutesResponse CreateRoutes(Models\CreateRoutesRequest $req) This API (CreateRoutes) is used to create a routing policy.
-* You can create routing policies in batch for a specified route table.
+ * @method Models\CreateRoutesResponse CreateRoutes(Models\CreateRoutesRequest $req) This API is used to create routes. 
+* You can batch add routes to a specified route table.
  * @method Models\CreateSecurityGroupResponse CreateSecurityGroup(Models\CreateSecurityGroupRequest $req) This API is used to create a security group (SecurityGroup).
 * Note the <a href="https://intl.cloud.tencent.com/document/product/213/12453?from_cn_redirect=1">maximum number of security groups</a> per project in each region under each account.
 * Both the inbound and outbound rules for a newly created security group are "Deny All" by default. You need to call CreateSecurityGroupPolicies to set security group rules based on your needs.
@@ -249,7 +249,7 @@ Before deleting a subnet, you need to remove all resources in the subnet, includ
 
 
  * @method Models\DeleteVpcEndPointServiceWhiteListResponse DeleteVpcEndPointServiceWhiteList(Models\DeleteVpcEndPointServiceWhiteListRequest $req) This API is used to delete the endpoint service allowlist.
- * @method Models\DeleteVpnConnectionResponse DeleteVpnConnection(Models\DeleteVpnConnectionRequest $req) This API (DeleteVpnConnection) is used to delete VPN tunnels.
+ * @method Models\DeleteVpnConnectionResponse DeleteVpnConnection(Models\DeleteVpnConnectionRequest $req) This API is used to delete a VPN tunnel.
  * @method Models\DeleteVpnGatewayResponse DeleteVpnGateway(Models\DeleteVpnGatewayRequest $req) This API (DeleteVpnGateway) is used to delete a VPN gateway. Currently, only deletion of pay-as-you-go IPSEC gateway instances in running status is supported.
  * @method Models\DeleteVpnGatewayRoutesResponse DeleteVpnGatewayRoutes(Models\DeleteVpnGatewayRoutesRequest $req) This API is used to delete routes of a VPN gateway.
  * @method Models\DescribeAccountAttributesResponse DescribeAccountAttributes(Models\DescribeAccountAttributesRequest $req) This API (DescribeAccountAttributes) is used to query your account attributes.
@@ -307,9 +307,12 @@ This API is only available for existing customers. For any questions, please [su
  * @method Models\DescribeSnapshotAttachedInstancesResponse DescribeSnapshotAttachedInstances(Models\DescribeSnapshotAttachedInstancesRequest $req) This API is used to query instances associated with a snapshot policy.
  * @method Models\DescribeSnapshotFilesResponse DescribeSnapshotFiles(Models\DescribeSnapshotFilesRequest $req) This API is used to query snapshot files.
  * @method Models\DescribeSnapshotPoliciesResponse DescribeSnapshotPolicies(Models\DescribeSnapshotPoliciesRequest $req) This API is used to query snapshot policies.
+ * @method Models\DescribeSubnetResourceDashboardResponse DescribeSubnetResourceDashboard(Models\DescribeSubnetResourceDashboardRequest $req) This API is used to query the subnet resource.
  * @method Models\DescribeSubnetsResponse DescribeSubnets(Models\DescribeSubnetsRequest $req) This API (DescribeSubnets) is used to query the list of subnets.
  * @method Models\DescribeTaskResultResponse DescribeTaskResult(Models\DescribeTaskResultRequest $req) This API is used to query the EIP async job execution results.
  * @method Models\DescribeTrafficPackagesResponse DescribeTrafficPackages(Models\DescribeTrafficPackagesRequest $req) This API is used to query the details of shared traffic packages.
+ * @method Models\DescribeUsedIpAddressResponse DescribeUsedIpAddress(Models\DescribeUsedIpAddressRequest $req) This API is used to query IP usage of a subnet or VPC. 
+If the IP is taken, the associated resource type and ID are returned. Otherwise it returns null.
  * @method Models\DescribeVpcEndPointResponse DescribeVpcEndPoint(Models\DescribeVpcEndPointRequest $req) This API is used to query the endpoint list.
  * @method Models\DescribeVpcEndPointServiceResponse DescribeVpcEndPointService(Models\DescribeVpcEndPointServiceRequest $req) This API is used to query the endpoint service list.
  * @method Models\DescribeVpcEndPointServiceWhiteListResponse DescribeVpcEndPointServiceWhiteList(Models\DescribeVpcEndPointServiceWhiteListRequest $req) This API is used to query the endpoint service allowlist.
@@ -321,7 +324,7 @@ This API is used to query only the information of IP addresses that are already 
  * @method Models\DescribeVpcResourceDashboardResponse DescribeVpcResourceDashboard(Models\DescribeVpcResourceDashboardRequest $req) View VPC resources.
  * @method Models\DescribeVpcTaskResultResponse DescribeVpcTaskResult(Models\DescribeVpcTaskResultRequest $req) This API is used to query the execution result of a VPC task.
  * @method Models\DescribeVpcsResponse DescribeVpcs(Models\DescribeVpcsRequest $req) This API (DescribeVpcs) is used to query the VPC list.
- * @method Models\DescribeVpnConnectionsResponse DescribeVpnConnections(Models\DescribeVpnConnectionsRequest $req)  This API (DescribeVpnConnections) is used to query the VPN tunnel list.
+ * @method Models\DescribeVpnConnectionsResponse DescribeVpnConnections(Models\DescribeVpnConnectionsRequest $req) This API is used to used to query the list of VPN tunnels.
  * @method Models\DescribeVpnGatewayCcnRoutesResponse DescribeVpnGatewayCcnRoutes(Models\DescribeVpnGatewayCcnRoutesRequest $req) This API (DescribeVpnGatewayCcnRoutes) is used to query VPN gateway-based CCN routes.
  * @method Models\DescribeVpnGatewayRoutesResponse DescribeVpnGatewayRoutes(Models\DescribeVpnGatewayRoutesRequest $req) This API is used to query destination routes of a route-based VPN gateway.
  * @method Models\DescribeVpnGatewaysResponse DescribeVpnGateways(Models\DescribeVpnGatewaysRequest $req) This API (DescribeVpnGateways) is used to query the VPN gateway list.
@@ -364,9 +367,9 @@ This API is completed asynchronously. If you need to query the execution result 
  * @method Models\InquiryPriceResetVpnGatewayInternetMaxBandwidthResponse InquiryPriceResetVpnGatewayInternetMaxBandwidth(Models\InquiryPriceResetVpnGatewayInternetMaxBandwidthRequest $req) This API (InquiryPriceResetVpnGatewayInternetMaxBandwidth) is used to query the price for adjusting the bandwidth cap of a VPN gateway.
  * @method Models\MigrateNetworkInterfaceResponse MigrateNetworkInterface(Models\MigrateNetworkInterfaceRequest $req) This API is used to migrate ENIs.
 This API is completed asynchronously. If you need to query the execution result of an async task, please use the `RequestId` returned by this API to poll the `DescribeVpcTaskResult` API.
- * @method Models\MigratePrivateIpAddressResponse MigratePrivateIpAddress(Models\MigratePrivateIpAddressRequest $req)  This API is used to migrate the private IPs between ENIs.
-* This API is used to migrate a private IP from one ENI to another. Primary IPs cannot be migrated.
-* The source and destination ENIs must be in the same subnet.  
+ * @method Models\MigratePrivateIpAddressResponse MigratePrivateIpAddress(Models\MigratePrivateIpAddressRequest $req) This API is used to migrate the private IPs between ENIs. 
+* Note that primary IPs cannot be migrated. 
+* The source and destination ENI must be within the same subnet.  
 
 This API is completed asynchronously. If you need to query the execution result of an async task, please use the `RequestId` returned by this API to poll the `DescribeVpcTaskResult` API.
  * @method Models\ModifyAddressAttributeResponse ModifyAddressAttribute(Models\ModifyAddressAttributeRequest $req) This API (ModifyAddressAttribute) is used to modify the name of an [Elastic IP](https://intl.cloud.tencent.com/document/product/213/1941?from_cn_redirect=1).
@@ -451,8 +454,8 @@ Only one policy in a single direction can be replaced in each request, and the P
  * @method Models\ResetNatGatewayConnectionResponse ResetNatGatewayConnection(Models\ResetNatGatewayConnectionRequest $req) This API is used to adjust concurrent connection cap for the NAT gateway.
  * @method Models\ResetRoutesResponse ResetRoutes(Models\ResetRoutesRequest $req) This API (ResetRoutes) is used to reset the name of a route table and all its routing policies.<br />
 Note: When this API is called, all routing policies in the current route table are deleted before new routing policies are saved, which may incur network interruption.
- * @method Models\ResetVpnConnectionResponse ResetVpnConnection(Models\ResetVpnConnectionRequest $req) The API (ResetVpnConnection) is used to reset VPN tunnels.
- * @method Models\ResetVpnGatewayInternetMaxBandwidthResponse ResetVpnGatewayInternetMaxBandwidth(Models\ResetVpnGatewayInternetMaxBandwidthRequest $req) This API (ResetVpnGatewayInternetMaxBandwidth) is used to adjust the bandwidth cap of VPN gateways. Currently, only configuration upgrade is supported. VPN gateways with monthly subscription must be within the validity period.
+ * @method Models\ResetVpnConnectionResponse ResetVpnConnection(Models\ResetVpnConnectionRequest $req) The API is used to reset a VPN tunnel.
+ * @method Models\ResetVpnGatewayInternetMaxBandwidthResponse ResetVpnGatewayInternetMaxBandwidth(Models\ResetVpnGatewayInternetMaxBandwidthRequest $req) This API is used to adjust the bandwidth cap of a VPN gateway. The adjustment of the VPN gateway bandwidth is limited to [5,100] Mbps and [200,1000] Mbps. 
  * @method Models\ResumeSnapshotInstanceResponse ResumeSnapshotInstance(Models\ResumeSnapshotInstanceRequest $req) This API is used to restore security group policies with a backup.
  * @method Models\ReturnNormalAddressesResponse ReturnNormalAddresses(Models\ReturnNormalAddressesRequest $req) This API is used to unbind and release public IPs. 
 Note: Starting from Dec 15, 2022, CAM authorization is required for a sub-account to call this API. For more details, see [Authorization Guide](https://intl.cloud.tencent.com/document/product/598/34545?from_cn_redirect=1).

@@ -18,28 +18,20 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeFlowLog request structure.
+ * DescribeSubnetResourceDashboard request structure.
  *
- * @method string getVpcId() Obtain ID of the VPC instance.
- * @method void setVpcId(string $VpcId) Set ID of the VPC instance.
- * @method string getFlowLogId() Obtain The unique ID of the flow log.
- * @method void setFlowLogId(string $FlowLogId) Set The unique ID of the flow log.
+ * @method array getSubnetIds() Obtain Subnet instance ID, such as `subnet-f1xjkw1b`.
+ * @method void setSubnetIds(array $SubnetIds) Set Subnet instance ID, such as `subnet-f1xjkw1b`.
  */
-class DescribeFlowLogRequest extends AbstractModel
+class DescribeSubnetResourceDashboardRequest extends AbstractModel
 {
     /**
-     * @var string ID of the VPC instance.
+     * @var array Subnet instance ID, such as `subnet-f1xjkw1b`.
      */
-    public $VpcId;
+    public $SubnetIds;
 
     /**
-     * @var string The unique ID of the flow log.
-     */
-    public $FlowLogId;
-
-    /**
-     * @param string $VpcId ID of the VPC instance.
-     * @param string $FlowLogId The unique ID of the flow log.
+     * @param array $SubnetIds Subnet instance ID, such as `subnet-f1xjkw1b`.
      */
     function __construct()
     {
@@ -54,12 +46,8 @@ class DescribeFlowLogRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("VpcId",$param) and $param["VpcId"] !== null) {
-            $this->VpcId = $param["VpcId"];
-        }
-
-        if (array_key_exists("FlowLogId",$param) and $param["FlowLogId"] !== null) {
-            $this->FlowLogId = $param["FlowLogId"];
+        if (array_key_exists("SubnetIds",$param) and $param["SubnetIds"] !== null) {
+            $this->SubnetIds = $param["SubnetIds"];
         }
     }
 }

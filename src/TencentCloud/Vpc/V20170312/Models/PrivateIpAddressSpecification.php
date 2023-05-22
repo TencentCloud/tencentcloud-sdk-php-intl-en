@@ -42,6 +42,8 @@ PENDING: Creating
 MIGRATING: Migrating
 DELETING: Deleting
 AVAILABLE: Available
+ * @method string getQosLevel() Obtain IP service level. Values: `PT` (Gold), `AU` (Silver), `AG` (Bronze) and `DEFAULT`
+ * @method void setQosLevel(string $QosLevel) Set IP service level. Values: `PT` (Gold), `AU` (Silver), `AG` (Bronze) and `DEFAULT`
  */
 class PrivateIpAddressSpecification extends AbstractModel
 {
@@ -85,6 +87,11 @@ AVAILABLE: Available
     public $State;
 
     /**
+     * @var string IP service level. Values: `PT` (Gold), `AU` (Silver), `AG` (Bronze) and `DEFAULT`
+     */
+    public $QosLevel;
+
+    /**
      * @param string $PrivateIpAddress Private IP address.
      * @param boolean $Primary Whether it is a primary IP.
      * @param string $PublicIpAddress Public IP address.
@@ -96,6 +103,7 @@ PENDING: Creating
 MIGRATING: Migrating
 DELETING: Deleting
 AVAILABLE: Available
+     * @param string $QosLevel IP service level. Values: `PT` (Gold), `AU` (Silver), `AG` (Bronze) and `DEFAULT`
      */
     function __construct()
     {
@@ -136,6 +144,10 @@ AVAILABLE: Available
 
         if (array_key_exists("State",$param) and $param["State"] !== null) {
             $this->State = $param["State"];
+        }
+
+        if (array_key_exists("QosLevel",$param) and $param["QosLevel"] !== null) {
+            $this->QosLevel = $param["QosLevel"];
         }
     }
 }

@@ -30,8 +30,8 @@ Note: If the `Protocol` value is set to `ALL`, the `Port` value also needs to be
 Note: If the `Protocol` value is set to `ALL`, the `Port` value also needs to be set to `all`.
  * @method ServiceTemplateSpecification getServiceTemplate() Obtain Protocol port ID or protocol port group ID. ServiceTemplate and Protocol+Port are mutually exclusive.
  * @method void setServiceTemplate(ServiceTemplateSpecification $ServiceTemplate) Set Protocol port ID or protocol port group ID. ServiceTemplate and Protocol+Port are mutually exclusive.
- * @method string getCidrBlock() Obtain IP range or IP (mutually exclusive).
- * @method void setCidrBlock(string $CidrBlock) Set IP range or IP (mutually exclusive).
+ * @method string getCidrBlock() Obtain Either `CidrBlock` or `Ipv6CidrBlock can be specified. Note that if `0.0.0.0/n` is entered, it is mapped to 0.0.0.0/0.
+ * @method void setCidrBlock(string $CidrBlock) Set Either `CidrBlock` or `Ipv6CidrBlock can be specified. Note that if `0.0.0.0/n` is entered, it is mapped to 0.0.0.0/0.
  * @method string getIpv6CidrBlock() Obtain The CIDR block or IPv6 (mutually exclusive).
  * @method void setIpv6CidrBlock(string $Ipv6CidrBlock) Set The CIDR block or IPv6 (mutually exclusive).
  * @method string getSecurityGroupId() Obtain The security group instance ID, such as `sg-ohuuioma`.
@@ -69,7 +69,7 @@ Note: If the `Protocol` value is set to `ALL`, the `Port` value also needs to be
     public $ServiceTemplate;
 
     /**
-     * @var string IP range or IP (mutually exclusive).
+     * @var string Either `CidrBlock` or `Ipv6CidrBlock can be specified. Note that if `0.0.0.0/n` is entered, it is mapped to 0.0.0.0/0.
      */
     public $CidrBlock;
 
@@ -109,7 +109,7 @@ Note: If the `Protocol` value is set to `ALL`, the `Port` value also needs to be
      * @param string $Port Port (`all`, a single port, or a port range).
 Note: If the `Protocol` value is set to `ALL`, the `Port` value also needs to be set to `all`.
      * @param ServiceTemplateSpecification $ServiceTemplate Protocol port ID or protocol port group ID. ServiceTemplate and Protocol+Port are mutually exclusive.
-     * @param string $CidrBlock IP range or IP (mutually exclusive).
+     * @param string $CidrBlock Either `CidrBlock` or `Ipv6CidrBlock can be specified. Note that if `0.0.0.0/n` is entered, it is mapped to 0.0.0.0/0.
      * @param string $Ipv6CidrBlock The CIDR block or IPv6 (mutually exclusive).
      * @param string $SecurityGroupId The security group instance ID, such as `sg-ohuuioma`.
      * @param AddressTemplateSpecification $AddressTemplate IP address ID or IP address group ID.

@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method ItemPrice getInstancePrice() Obtain Instance price.
  * @method void setInstancePrice(ItemPrice $InstancePrice) Set Instance price.
- * @method ItemPrice getBandwidthPrice() Obtain Network price.
- * @method void setBandwidthPrice(ItemPrice $BandwidthPrice) Set Network price.
+ * @method ItemPrice getBandwidthPrice() Obtain Bandwidth price
+ * @method void setBandwidthPrice(ItemPrice $BandwidthPrice) Set Bandwidth price
  */
 class Price extends AbstractModel
 {
@@ -33,13 +33,13 @@ class Price extends AbstractModel
     public $InstancePrice;
 
     /**
-     * @var ItemPrice Network price.
+     * @var ItemPrice Bandwidth price
      */
     public $BandwidthPrice;
 
     /**
      * @param ItemPrice $InstancePrice Instance price.
-     * @param ItemPrice $BandwidthPrice Network price.
+     * @param ItemPrice $BandwidthPrice Bandwidth price
      */
     function __construct()
     {

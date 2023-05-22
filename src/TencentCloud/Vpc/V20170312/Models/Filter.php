@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getName() Obtain The attribute name. If more than one Filter exists, the logical relation between these Filters is `AND`.
  * @method void setName(string $Name) Set The attribute name. If more than one Filter exists, the logical relation between these Filters is `AND`.
- * @method array getValues() Obtain The attribute value. If there are multiple Values for one Filter, the logical relation between these Values under the same Filter is `OR`.
- * @method void setValues(array $Values) Set The attribute value. If there are multiple Values for one Filter, the logical relation between these Values under the same Filter is `OR`.
+ * @method array getValues() Obtain Attribute value. If multiple values exist in one filter, the logical relationship between these values is `OR`. For a `bool` parameter, the valid values include `TRUE` and `FALSE`.
+ * @method void setValues(array $Values) Set Attribute value. If multiple values exist in one filter, the logical relationship between these values is `OR`. For a `bool` parameter, the valid values include `TRUE` and `FALSE`.
  */
 class Filter extends AbstractModel
 {
@@ -33,13 +33,13 @@ class Filter extends AbstractModel
     public $Name;
 
     /**
-     * @var array The attribute value. If there are multiple Values for one Filter, the logical relation between these Values under the same Filter is `OR`.
+     * @var array Attribute value. If multiple values exist in one filter, the logical relationship between these values is `OR`. For a `bool` parameter, the valid values include `TRUE` and `FALSE`.
      */
     public $Values;
 
     /**
      * @param string $Name The attribute name. If more than one Filter exists, the logical relation between these Filters is `AND`.
-     * @param array $Values The attribute value. If there are multiple Values for one Filter, the logical relation between these Values under the same Filter is `OR`.
+     * @param array $Values Attribute value. If multiple values exist in one filter, the logical relationship between these values is `OR`. For a `bool` parameter, the valid values include `TRUE` and `FALSE`.
      */
     function __construct()
     {
