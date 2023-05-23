@@ -24,6 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEventBusName(string $EventBusName) Set Event bus name: it can contain 2-60 letters, digits, underscores, and hyphens and must start with a letter and end with a digit or letter.
  * @method string getDescription() Obtain Event bus description, which can contain up to 200 characters of any type.
  * @method void setDescription(string $Description) Set Event bus description, which can contain up to 200 characters of any type.
+ * @method integer getSaveDays() Obtain Log retention period
+ * @method void setSaveDays(integer $SaveDays) Set Log retention period
+ * @method boolean getEnableStore() Obtain Whether to enable log storage
+ * @method void setEnableStore(boolean $EnableStore) Set Whether to enable log storage
  */
 class CreateEventBusRequest extends AbstractModel
 {
@@ -38,8 +42,20 @@ class CreateEventBusRequest extends AbstractModel
     public $Description;
 
     /**
+     * @var integer Log retention period
+     */
+    public $SaveDays;
+
+    /**
+     * @var boolean Whether to enable log storage
+     */
+    public $EnableStore;
+
+    /**
      * @param string $EventBusName Event bus name: it can contain 2-60 letters, digits, underscores, and hyphens and must start with a letter and end with a digit or letter.
      * @param string $Description Event bus description, which can contain up to 200 characters of any type.
+     * @param integer $SaveDays Log retention period
+     * @param boolean $EnableStore Whether to enable log storage
      */
     function __construct()
     {
@@ -60,6 +76,14 @@ class CreateEventBusRequest extends AbstractModel
 
         if (array_key_exists("Description",$param) and $param["Description"] !== null) {
             $this->Description = $param["Description"];
+        }
+
+        if (array_key_exists("SaveDays",$param) and $param["SaveDays"] !== null) {
+            $this->SaveDays = $param["SaveDays"];
+        }
+
+        if (array_key_exists("EnableStore",$param) and $param["EnableStore"] !== null) {
+            $this->EnableStore = $param["EnableStore"];
         }
     }
 }

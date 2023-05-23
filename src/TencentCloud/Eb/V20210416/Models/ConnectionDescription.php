@@ -30,6 +30,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setCkafkaParams(CkafkaParams $CkafkaParams) Set CKafka parameters
 Note: this field may return null, indicating that no valid values can be obtained.
+ * @method DTSParams getDTSParams() Obtain Data Transfer Service (DTS) connector information
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setDTSParams(DTSParams $DTSParams) Set Data Transfer Service (DTS) connector information
+Note: This field may return `null`, indicating that no valid values can be obtained.
  */
 class ConnectionDescription extends AbstractModel
 {
@@ -51,11 +55,19 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $CkafkaParams;
 
     /**
+     * @var DTSParams Data Transfer Service (DTS) connector information
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $DTSParams;
+
+    /**
      * @param string $ResourceDescription Six-Segment QCS resource description. For more information, see [Resource Description Method](https://intl.cloud.tencent.com/document/product/598/10606?from_cn_redirect=1)
      * @param APIGWParams $APIGWParams API Gateway parameters
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param CkafkaParams $CkafkaParams CKafka parameters
 Note: this field may return null, indicating that no valid values can be obtained.
+     * @param DTSParams $DTSParams Data Transfer Service (DTS) connector information
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -82,6 +94,11 @@ Note: this field may return null, indicating that no valid values can be obtaine
         if (array_key_exists("CkafkaParams",$param) and $param["CkafkaParams"] !== null) {
             $this->CkafkaParams = new CkafkaParams();
             $this->CkafkaParams->deserialize($param["CkafkaParams"]);
+        }
+
+        if (array_key_exists("DTSParams",$param) and $param["DTSParams"] !== null) {
+            $this->DTSParams = new DTSParams();
+            $this->DTSParams->deserialize($param["DTSParams"]);
         }
     }
 }

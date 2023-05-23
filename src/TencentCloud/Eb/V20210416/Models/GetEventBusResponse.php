@@ -36,6 +36,24 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEventBusId(string $EventBusId) Set Event bus ID
  * @method string getType() Obtain (Disused) Event bus type
  * @method void setType(string $Type) Set (Disused) Event bus type
+ * @method string getPayMode() Obtain Billing mode
+ * @method void setPayMode(string $PayMode) Set Billing mode
+ * @method integer getSaveDays() Obtain EventBridge log storage period
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setSaveDays(integer $SaveDays) Set EventBridge log storage period
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method string getLogTopicId() Obtain EventBridge log topic ID
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setLogTopicId(string $LogTopicId) Set EventBridge log topic ID
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method boolean getEnableStore() Obtain Whether to enable log storage
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setEnableStore(boolean $EnableStore) Set Whether to enable log storage
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method string getLinkMode() Obtain Whether to sort the message
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setLinkMode(string $LinkMode) Set Whether to sort the message
+Note: This field may return `null`, indicating that no valid values can be obtained.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -82,6 +100,35 @@ class GetEventBusResponse extends AbstractModel
     public $Type;
 
     /**
+     * @var string Billing mode
+     */
+    public $PayMode;
+
+    /**
+     * @var integer EventBridge log storage period
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $SaveDays;
+
+    /**
+     * @var string EventBridge log topic ID
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $LogTopicId;
+
+    /**
+     * @var boolean Whether to enable log storage
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $EnableStore;
+
+    /**
+     * @var string Whether to sort the message
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $LinkMode;
+
+    /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
@@ -95,6 +142,15 @@ class GetEventBusResponse extends AbstractModel
      * @param string $EventBusName Event bus name
      * @param string $EventBusId Event bus ID
      * @param string $Type (Disused) Event bus type
+     * @param string $PayMode Billing mode
+     * @param integer $SaveDays EventBridge log storage period
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param string $LogTopicId EventBridge log topic ID
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param boolean $EnableStore Whether to enable log storage
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param string $LinkMode Whether to sort the message
+Note: This field may return `null`, indicating that no valid values can be obtained.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -140,6 +196,26 @@ class GetEventBusResponse extends AbstractModel
 
         if (array_key_exists("Type",$param) and $param["Type"] !== null) {
             $this->Type = $param["Type"];
+        }
+
+        if (array_key_exists("PayMode",$param) and $param["PayMode"] !== null) {
+            $this->PayMode = $param["PayMode"];
+        }
+
+        if (array_key_exists("SaveDays",$param) and $param["SaveDays"] !== null) {
+            $this->SaveDays = $param["SaveDays"];
+        }
+
+        if (array_key_exists("LogTopicId",$param) and $param["LogTopicId"] !== null) {
+            $this->LogTopicId = $param["LogTopicId"];
+        }
+
+        if (array_key_exists("EnableStore",$param) and $param["EnableStore"] !== null) {
+            $this->EnableStore = $param["EnableStore"];
+        }
+
+        if (array_key_exists("LinkMode",$param) and $param["LinkMode"] !== null) {
+            $this->LinkMode = $param["LinkMode"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

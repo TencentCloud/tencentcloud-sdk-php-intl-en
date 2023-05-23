@@ -26,6 +26,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDescription(string $Description) Set Event bus description, which can contain up to 200 characters of any type.
  * @method string getEventBusName() Obtain Event bus name: it can contain 2-60 letters, digits, underscores, and hyphens and must start with a letter and end with a digit or letter.
  * @method void setEventBusName(string $EventBusName) Set Event bus name: it can contain 2-60 letters, digits, underscores, and hyphens and must start with a letter and end with a digit or letter.
+ * @method integer getSaveDays() Obtain Log retention period
+ * @method void setSaveDays(integer $SaveDays) Set Log retention period
+ * @method string getLogTopicId() Obtain EventBridge log topic ID
+ * @method void setLogTopicId(string $LogTopicId) Set EventBridge log topic ID
+ * @method boolean getEnableStore() Obtain Whether to enable log retention
+ * @method void setEnableStore(boolean $EnableStore) Set Whether to enable log retention
  */
 class UpdateEventBusRequest extends AbstractModel
 {
@@ -45,9 +51,27 @@ class UpdateEventBusRequest extends AbstractModel
     public $EventBusName;
 
     /**
+     * @var integer Log retention period
+     */
+    public $SaveDays;
+
+    /**
+     * @var string EventBridge log topic ID
+     */
+    public $LogTopicId;
+
+    /**
+     * @var boolean Whether to enable log retention
+     */
+    public $EnableStore;
+
+    /**
      * @param string $EventBusId Event bus ID
      * @param string $Description Event bus description, which can contain up to 200 characters of any type.
      * @param string $EventBusName Event bus name: it can contain 2-60 letters, digits, underscores, and hyphens and must start with a letter and end with a digit or letter.
+     * @param integer $SaveDays Log retention period
+     * @param string $LogTopicId EventBridge log topic ID
+     * @param boolean $EnableStore Whether to enable log retention
      */
     function __construct()
     {
@@ -72,6 +96,18 @@ class UpdateEventBusRequest extends AbstractModel
 
         if (array_key_exists("EventBusName",$param) and $param["EventBusName"] !== null) {
             $this->EventBusName = $param["EventBusName"];
+        }
+
+        if (array_key_exists("SaveDays",$param) and $param["SaveDays"] !== null) {
+            $this->SaveDays = $param["SaveDays"];
+        }
+
+        if (array_key_exists("LogTopicId",$param) and $param["LogTopicId"] !== null) {
+            $this->LogTopicId = $param["LogTopicId"];
+        }
+
+        if (array_key_exists("EnableStore",$param) and $param["EnableStore"] !== null) {
+            $this->EnableStore = $param["EnableStore"];
         }
     }
 }

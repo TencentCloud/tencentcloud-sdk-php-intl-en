@@ -127,6 +127,11 @@ https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F
  * @method Models\InquirePriceCreateInstancesResponse InquirePriceCreateInstances(Models\InquirePriceCreateInstancesRequest $req) This API is used to query the price of a created instance.
  * @method Models\InquirePriceRenewDisksResponse InquirePriceRenewDisks(Models\InquirePriceRenewDisksRequest $req) This API is used to query the price of renewing cloud disks.
  * @method Models\InquirePriceRenewInstancesResponse InquirePriceRenewInstances(Models\InquirePriceRenewInstancesRequest $req) This API is used to query the price of renewing one or more instances.
+ * @method Models\IsolateInstancesResponse IsolateInstances(Models\IsolateInstancesRequest $req) This API is used to return one or more Lighthouse instances. 
+* Only `RUNNING` and `STOPPED` instances can be returned. 
+* The instance status goes to `SHUTDOWN` after the API is called successfully. 
+* Batch operations are supported. Up to 20 resources (including instances and data disks) can be returned in each request. 
+* This API is async. After the request is sent successfully, a `RequestId` will be returned. At this time, the operation is not completed immediately. The result of the instance operation can be queried by calling the `DescribeInstances` API. If the latest operation status (LatestOperationState) of the instance is `SUCCESS`, the operation is successful.
  * @method Models\ModifyBlueprintAttributeResponse ModifyBlueprintAttribute(Models\ModifyBlueprintAttributeRequest $req) This API is used to modify an image attribute.
  * @method Models\ModifyDisksAttributeResponse ModifyDisksAttribute(Models\ModifyDisksAttributeRequest $req) This API is used to modify cloud disk attributes.
  * @method Models\ModifyDisksRenewFlagResponse ModifyDisksRenewFlag(Models\ModifyDisksRenewFlagRequest $req) This API is used to modify the configuration of auto-renewal of cloud disks.
@@ -152,18 +157,20 @@ In the `FirewallRules` parameter:
 * For the `CidrBlock` field, you can enter any string that conforms to the CIDR format standard. Multi-Tenant network isolation rules take precedence over private network rules in the firewall.
 * For the `Action` field, you can enter only `ACCEPT` or `DROP`.
 * The length of the `FirewallRuleDescription` field cannot exceed 64 characters.
- * @method Models\ModifyInstancesAttributeResponse ModifyInstancesAttribute(Models\ModifyInstancesAttributeRequest $req) This API is used to modify the attributes of instances.
-* The instance name is used only for users’ convenience.
-* Batch operations are supported. Each request can contain up to 100 instances at a time.
-* This API is async. A successful request will return a `RequestId`, it does not mean the operation is completed. You can call the `DescribeInstances` API to query the operation result. If the latest operation status (LatestOperationState) of the instance is `SUCCESS`, the operation is successful.
+ * @method Models\ModifyInstancesAttributeResponse ModifyInstancesAttribute(Models\ModifyInstancesAttributeRequest $req) This API is used to modify an instance attribute. 
+* The instance name is used only for users’ convenience. 
+* Batch operations are supported. The maximum number of instances in each request is 100.
+ * @method Models\ModifyInstancesBundleResponse ModifyInstancesBundle(Models\ModifyInstancesBundleRequest $req) This API is used change one or more Lighthouse instance bundles. 
+* Only `RUNNING` and `STOPPED` instances can be changed. 
+* Batch operations are supported. The maximum number of instances in each request is 30. 
+* This API is async. After the request is sent successfully, a `RequestId` will be returned. At this time, the operation is not completed immediately. The result of the instance operation can be queried by calling the `DescribeInstances` API. If the latest operation status (LatestOperationState) of the instance is `SUCCESS`, the operation is successful.
  * @method Models\ModifyInstancesLoginKeyPairAttributeResponse ModifyInstancesLoginKeyPairAttribute(Models\ModifyInstancesLoginKeyPairAttributeRequest $req) This API is used to set the attributes of the default login key pair of an instance.
 
 
- * @method Models\ModifyInstancesRenewFlagResponse ModifyInstancesRenewFlag(Models\ModifyInstancesRenewFlagRequest $req) This API is used to modify the renewal flags of monthly subscribed instances.
+ * @method Models\ModifyInstancesRenewFlagResponse ModifyInstancesRenewFlag(Models\ModifyInstancesRenewFlagRequest $req) This API is used to change the auto-renewal setting of monthly-subscribed instances. 
 
-* Instances marked with "auto-renewal" will be automatically renewed for one month when they expire.
-* Batch operations are supported. The maximum number of instances in each request is 100.
-* The result of the instance operation can be queried by calling the `DescribeInstances` API. If the latest operation status (LatestOperationState) of the instance is `SUCCESS`, the operation is successful.
+* Instances with auto-renewal enabled are automatically renewed on a monthly basis upon the expiration. 
+* Batch operations are supported. Up to 100 instances per request is allowed.
  * @method Models\ModifySnapshotAttributeResponse ModifySnapshotAttribute(Models\ModifySnapshotAttributeRequest $req) This API is used to modify the attributes of a snapshot.
 <li>The snapshot name is used only for users’ convenience.</li>
  * @method Models\RebootInstancesResponse RebootInstances(Models\RebootInstancesRequest $req) This API is used to restart instances.

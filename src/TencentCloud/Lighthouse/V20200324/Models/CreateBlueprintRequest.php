@@ -26,6 +26,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDescription(string $Description) Set Image description, which can contain up to 60 characters.
  * @method string getInstanceId() Obtain ID of the instance for which to make an image.
  * @method void setInstanceId(string $InstanceId) Set ID of the instance for which to make an image.
+ * @method boolean getForcePowerOff() Obtain Whether to forcibly shut down the instance before creating the image 
+Valid values: 
+`True`: Shut down and instance first 
+`False`: Create the image when the instance is running 
+Default: `True` 
+Note that if you create an image when the instance is running, there might be data loss.
+ * @method void setForcePowerOff(boolean $ForcePowerOff) Set Whether to forcibly shut down the instance before creating the image 
+Valid values: 
+`True`: Shut down and instance first 
+`False`: Create the image when the instance is running 
+Default: `True` 
+Note that if you create an image when the instance is running, there might be data loss.
  */
 class CreateBlueprintRequest extends AbstractModel
 {
@@ -45,9 +57,25 @@ class CreateBlueprintRequest extends AbstractModel
     public $InstanceId;
 
     /**
+     * @var boolean Whether to forcibly shut down the instance before creating the image 
+Valid values: 
+`True`: Shut down and instance first 
+`False`: Create the image when the instance is running 
+Default: `True` 
+Note that if you create an image when the instance is running, there might be data loss.
+     */
+    public $ForcePowerOff;
+
+    /**
      * @param string $BlueprintName Image name, which can contain up to 60 characters.
      * @param string $Description Image description, which can contain up to 60 characters.
      * @param string $InstanceId ID of the instance for which to make an image.
+     * @param boolean $ForcePowerOff Whether to forcibly shut down the instance before creating the image 
+Valid values: 
+`True`: Shut down and instance first 
+`False`: Create the image when the instance is running 
+Default: `True` 
+Note that if you create an image when the instance is running, there might be data loss.
      */
     function __construct()
     {
@@ -72,6 +100,10 @@ class CreateBlueprintRequest extends AbstractModel
 
         if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
             $this->InstanceId = $param["InstanceId"];
+        }
+
+        if (array_key_exists("ForcePowerOff",$param) and $param["ForcePowerOff"] !== null) {
+            $this->ForcePowerOff = $param["ForcePowerOff"];
         }
     }
 }

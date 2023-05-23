@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateInstances request structure.
  *
- * @method string getBundleId() Obtain Bundle ID.
- * @method void setBundleId(string $BundleId) Set Bundle ID.
- * @method string getBlueprintId() Obtain Image ID
- * @method void setBlueprintId(string $BlueprintId) Set Image ID
+ * @method string getBundleId() Obtain Bundle ID. You can get it via the [DescribeBundles](https://intl.cloud.tencent.com/document/api/1207/47575?from_cn_redirect=1) API.
+ * @method void setBundleId(string $BundleId) Set Bundle ID. You can get it via the [DescribeBundles](https://intl.cloud.tencent.com/document/api/1207/47575?from_cn_redirect=1) API.
+ * @method string getBlueprintId() Obtain Image ID. You can get it via the [DescribeBlueprints](https://intl.cloud.tencent.com/document/api/1207/47689?from_cn_redirect=1) API.
+ * @method void setBlueprintId(string $BlueprintId) Set Image ID. You can get it via the [DescribeBlueprints](https://intl.cloud.tencent.com/document/api/1207/47689?from_cn_redirect=1) API.
  * @method InstanceChargePrepaid getInstanceChargePrepaid() Obtain Monthly subscription information for the instance, including the purchase period, setting of auto-renewal, etc.
  * @method void setInstanceChargePrepaid(InstanceChargePrepaid $InstanceChargePrepaid) Set Monthly subscription information for the instance, including the purchase period, setting of auto-renewal, etc.
  * @method string getInstanceName() Obtain Instance display name.
@@ -54,12 +54,12 @@ If the dry run succeeds, the RequestId will be returned.
 class CreateInstancesRequest extends AbstractModel
 {
     /**
-     * @var string Bundle ID.
+     * @var string Bundle ID. You can get it via the [DescribeBundles](https://intl.cloud.tencent.com/document/api/1207/47575?from_cn_redirect=1) API.
      */
     public $BundleId;
 
     /**
-     * @var string Image ID
+     * @var string Image ID. You can get it via the [DescribeBlueprints](https://intl.cloud.tencent.com/document/api/1207/47689?from_cn_redirect=1) API.
      */
     public $BlueprintId;
 
@@ -113,8 +113,8 @@ If the dry run succeeds, the RequestId will be returned.
     public $AutoVoucher;
 
     /**
-     * @param string $BundleId Bundle ID.
-     * @param string $BlueprintId Image ID
+     * @param string $BundleId Bundle ID. You can get it via the [DescribeBundles](https://intl.cloud.tencent.com/document/api/1207/47575?from_cn_redirect=1) API.
+     * @param string $BlueprintId Image ID. You can get it via the [DescribeBlueprints](https://intl.cloud.tencent.com/document/api/1207/47689?from_cn_redirect=1) API.
      * @param InstanceChargePrepaid $InstanceChargePrepaid Monthly subscription information for the instance, including the purchase period, setting of auto-renewal, etc.
      * @param string $InstanceName Instance display name.
      * @param integer $InstanceCount Number of the instances to purchase. For monthly subscribed instances, the value can be 1 to 30. The default value is `1`. Note that this number can not exceed the remaining quota under the current account.

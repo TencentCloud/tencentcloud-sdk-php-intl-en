@@ -48,12 +48,30 @@ Valid values:
  * @method void setInternetChargeType(string $InternetChargeType) Set Network billing mode.
  * @method string getBundleSalesState() Obtain Package sale status. Valid values: AVAILABLE, SOLD_OUT
  * @method void setBundleSalesState(string $BundleSalesState) Set Package sale status. Valid values: AVAILABLE, SOLD_OUT
- * @method string getBundleType() Obtain Package type.
-Valid values:
-<li> GENERAL_BUNDLE: general</li><li> STORAGE_BUNDLE: Storage</li>
- * @method void setBundleType(string $BundleType) Set Package type.
-Valid values:
-<li> GENERAL_BUNDLE: general</li><li> STORAGE_BUNDLE: Storage</li>
+ * @method string getBundleType() Obtain Bundle type. 
+Valid values: 
+<li>STARTER_BUNDLE: Starter bundle</li>
+<li>GENERAL_BUNDLE: General bundle</li>
+<li>ENTERPRISE_BUNDLE: Enterprise bundle</li>
+<li>STORAGE_BUNDLE: Storage-optimized bundle</li>
+<li>EXCLUSIVE_BUNDLE: Dedicated bundle</li>
+<li>HK_EXCLUSIVE_BUNDLE: Hong Kong-dedicated bundle </li>
+<li>CAREFREE_BUNDLE: Lighthouse Care bundle</li>
+<li>BEFAST_BUNDLE: BeFast bundle </li>
+ * @method void setBundleType(string $BundleType) Set Bundle type. 
+Valid values: 
+<li>STARTER_BUNDLE: Starter bundle</li>
+<li>GENERAL_BUNDLE: General bundle</li>
+<li>ENTERPRISE_BUNDLE: Enterprise bundle</li>
+<li>STORAGE_BUNDLE: Storage-optimized bundle</li>
+<li>EXCLUSIVE_BUNDLE: Dedicated bundle</li>
+<li>HK_EXCLUSIVE_BUNDLE: Hong Kong-dedicated bundle </li>
+<li>CAREFREE_BUNDLE: Lighthouse Care bundle</li>
+<li>BEFAST_BUNDLE: BeFast bundle </li>
+ * @method string getBundleTypeDescription() Obtain Bundle type description 
+Note: This parameter may return null, indicating that no valid values can be obtained.
+ * @method void setBundleTypeDescription(string $BundleTypeDescription) Set Bundle type description 
+Note: This parameter may return null, indicating that no valid values can be obtained.
  * @method string getBundleDisplayLabel() Obtain Package tag.
 Valid values:
 "ACTIVITY": promotional package
@@ -130,11 +148,24 @@ Valid values:
     public $BundleSalesState;
 
     /**
-     * @var string Package type.
-Valid values:
-<li> GENERAL_BUNDLE: general</li><li> STORAGE_BUNDLE: Storage</li>
+     * @var string Bundle type. 
+Valid values: 
+<li>STARTER_BUNDLE: Starter bundle</li>
+<li>GENERAL_BUNDLE: General bundle</li>
+<li>ENTERPRISE_BUNDLE: Enterprise bundle</li>
+<li>STORAGE_BUNDLE: Storage-optimized bundle</li>
+<li>EXCLUSIVE_BUNDLE: Dedicated bundle</li>
+<li>HK_EXCLUSIVE_BUNDLE: Hong Kong-dedicated bundle </li>
+<li>CAREFREE_BUNDLE: Lighthouse Care bundle</li>
+<li>BEFAST_BUNDLE: BeFast bundle </li>
      */
     public $BundleType;
+
+    /**
+     * @var string Bundle type description 
+Note: This parameter may return null, indicating that no valid values can be obtained.
+     */
+    public $BundleTypeDescription;
 
     /**
      * @var string Package tag.
@@ -160,9 +191,18 @@ Valid values:
      * @param integer $InternetMaxBandwidthOut Peak bandwidth in Mbps.
      * @param string $InternetChargeType Network billing mode.
      * @param string $BundleSalesState Package sale status. Valid values: AVAILABLE, SOLD_OUT
-     * @param string $BundleType Package type.
-Valid values:
-<li> GENERAL_BUNDLE: general</li><li> STORAGE_BUNDLE: Storage</li>
+     * @param string $BundleType Bundle type. 
+Valid values: 
+<li>STARTER_BUNDLE: Starter bundle</li>
+<li>GENERAL_BUNDLE: General bundle</li>
+<li>ENTERPRISE_BUNDLE: Enterprise bundle</li>
+<li>STORAGE_BUNDLE: Storage-optimized bundle</li>
+<li>EXCLUSIVE_BUNDLE: Dedicated bundle</li>
+<li>HK_EXCLUSIVE_BUNDLE: Hong Kong-dedicated bundle </li>
+<li>CAREFREE_BUNDLE: Lighthouse Care bundle</li>
+<li>BEFAST_BUNDLE: BeFast bundle </li>
+     * @param string $BundleTypeDescription Bundle type description 
+Note: This parameter may return null, indicating that no valid values can be obtained.
      * @param string $BundleDisplayLabel Package tag.
 Valid values:
 "ACTIVITY": promotional package
@@ -233,6 +273,10 @@ Valid values:
 
         if (array_key_exists("BundleType",$param) and $param["BundleType"] !== null) {
             $this->BundleType = $param["BundleType"];
+        }
+
+        if (array_key_exists("BundleTypeDescription",$param) and $param["BundleTypeDescription"] !== null) {
+            $this->BundleTypeDescription = $param["BundleTypeDescription"];
         }
 
         if (array_key_exists("BundleDisplayLabel",$param) and $param["BundleDisplayLabel"] !== null) {
