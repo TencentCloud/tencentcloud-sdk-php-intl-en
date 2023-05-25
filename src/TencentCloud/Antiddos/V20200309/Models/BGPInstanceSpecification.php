@@ -58,6 +58,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setElasticLimit(integer $ElasticLimit) Set Elastic bandwidth threshold of the Anti-DDoS Pro Enterprise edition.
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getDownGradeProtect() Obtain Protection bandwidth after the plan downgrade, in Gbps. 
+Note: This field may return `null`, indicating that no valid value was found.
+ * @method void setDownGradeProtect(integer $DownGradeProtect) Set Protection bandwidth after the plan downgrade, in Gbps. 
+Note: This field may return `null`, indicating that no valid value was found.
  */
 class BGPInstanceSpecification extends AbstractModel
 {
@@ -121,6 +125,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $ElasticLimit;
 
     /**
+     * @var integer Protection bandwidth after the plan downgrade, in Gbps. 
+Note: This field may return `null`, indicating that no valid value was found.
+     */
+    public $DownGradeProtect;
+
+    /**
      * @param integer $ProtectBandwidth Base protection bandwidth (in Gbps)
      * @param integer $ProtectCountLimit Number of protection chances
      * @param integer $ProtectIPNumberLimit Number of protected IPs
@@ -140,6 +150,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $ElasticLimit Elastic bandwidth threshold of the Anti-DDoS Pro Enterprise edition.
 Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $DownGradeProtect Protection bandwidth after the plan downgrade, in Gbps. 
+Note: This field may return `null`, indicating that no valid value was found.
      */
     function __construct()
     {
@@ -192,6 +204,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("ElasticLimit",$param) and $param["ElasticLimit"] !== null) {
             $this->ElasticLimit = $param["ElasticLimit"];
+        }
+
+        if (array_key_exists("DownGradeProtect",$param) and $param["DownGradeProtect"] !== null) {
+            $this->DownGradeProtect = $param["DownGradeProtect"];
         }
     }
 }
