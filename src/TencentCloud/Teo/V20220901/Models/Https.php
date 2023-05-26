@@ -64,6 +64,16 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 <li>`apply`: Managed by EdgeOne.</li>
 <li>`none`: Not managed by EdgeOne.</li>If it is left empty, the default value `none` is used.
 Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method string getCipherSuite() Obtain Cipher suite. Values:
+<li>`loose-v2023`: Offer the highest compatibility but relatively lower security. It supports TLS 1.0-1.3.</li>
+<li>`general-v2023`: Keep a balance between the compatibility and security. It supports TLS 1.2-1.3.</li>
+<li>`strict-v2023`: Provides high security, disabling all insecure cipher suites. It supports TLS 1.2-1.3.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method void setCipherSuite(string $CipherSuite) Set Cipher suite. Values:
+<li>`loose-v2023`: Offer the highest compatibility but relatively lower security. It supports TLS 1.0-1.3.</li>
+<li>`general-v2023`: Keep a balance between the compatibility and security. It supports TLS 1.2-1.3.</li>
+<li>`strict-v2023`: Provides high security, disabling all insecure cipher suites. It supports TLS 1.2-1.3.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  */
 class Https extends AbstractModel
 {
@@ -114,6 +124,15 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     public $ApplyType;
 
     /**
+     * @var string Cipher suite. Values:
+<li>`loose-v2023`: Offer the highest compatibility but relatively lower security. It supports TLS 1.0-1.3.</li>
+<li>`general-v2023`: Keep a balance between the compatibility and security. It supports TLS 1.2-1.3.</li>
+<li>`strict-v2023`: Provides high security, disabling all insecure cipher suites. It supports TLS 1.2-1.3.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public $CipherSuite;
+
+    /**
      * @param string $Http2 Whether to enable HTTP2. Values:
 <li>`on`: Enable</li>
 <li>`off`: Disable</li>
@@ -135,6 +154,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $ApplyType Whether the certificate is managed by EdgeOne. Values:
 <li>`apply`: Managed by EdgeOne.</li>
 <li>`none`: Not managed by EdgeOne.</li>If it is left empty, the default value `none` is used.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param string $CipherSuite Cipher suite. Values:
+<li>`loose-v2023`: Offer the highest compatibility but relatively lower security. It supports TLS 1.0-1.3.</li>
+<li>`general-v2023`: Keep a balance between the compatibility and security. It supports TLS 1.2-1.3.</li>
+<li>`strict-v2023`: Provides high security, disabling all insecure cipher suites. It supports TLS 1.2-1.3.
 Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     function __construct()
@@ -178,6 +202,10 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 
         if (array_key_exists("ApplyType",$param) and $param["ApplyType"] !== null) {
             $this->ApplyType = $param["ApplyType"];
+        }
+
+        if (array_key_exists("CipherSuite",$param) and $param["CipherSuite"] !== null) {
+            $this->CipherSuite = $param["CipherSuite"];
         }
     }
 }

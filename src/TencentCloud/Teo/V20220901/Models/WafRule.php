@@ -26,10 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSwitch(string $Switch) Set Whether to enable managed rules. Values:
 <li>`on`: Enable</li>
 <li>`off`: Disable</li>
- * @method array getBlockRuleIDs() Obtain IDs of the managed rules in the Block mode. You can obtain more details from [DescribeSecurityGroupManagedRules](https://tcloud4api.woa.com/document/product/1657/80807?!preview&!document=1).
- * @method void setBlockRuleIDs(array $BlockRuleIDs) Set IDs of the managed rules in the Block mode. You can obtain more details from [DescribeSecurityGroupManagedRules](https://tcloud4api.woa.com/document/product/1657/80807?!preview&!document=1).
- * @method array getObserveRuleIDs() Obtain IDs of the managed rules in the Observe mode. You can obtain more details from [DescribeSecurityGroupManagedRules](https://tcloud4api.woa.com/document/product/1657/80807?!preview&!document=1).
- * @method void setObserveRuleIDs(array $ObserveRuleIDs) Set IDs of the managed rules in the Observe mode. You can obtain more details from [DescribeSecurityGroupManagedRules](https://tcloud4api.woa.com/document/product/1657/80807?!preview&!document=1).
+ * @method array getBlockRuleIDs() Obtain IDs of the rules to be disabled.
+ * @method void setBlockRuleIDs(array $BlockRuleIDs) Set IDs of the rules to be disabled.
+ * @method array getObserveRuleIDs() Obtain IDs of the rules to be executed in Observe mode.
+ * @method void setObserveRuleIDs(array $ObserveRuleIDs) Set IDs of the rules to be executed in Observe mode.
  */
 class WafRule extends AbstractModel
 {
@@ -41,12 +41,12 @@ class WafRule extends AbstractModel
     public $Switch;
 
     /**
-     * @var array IDs of the managed rules in the Block mode. You can obtain more details from [DescribeSecurityGroupManagedRules](https://tcloud4api.woa.com/document/product/1657/80807?!preview&!document=1).
+     * @var array IDs of the rules to be disabled.
      */
     public $BlockRuleIDs;
 
     /**
-     * @var array IDs of the managed rules in the Observe mode. You can obtain more details from [DescribeSecurityGroupManagedRules](https://tcloud4api.woa.com/document/product/1657/80807?!preview&!document=1).
+     * @var array IDs of the rules to be executed in Observe mode.
      */
     public $ObserveRuleIDs;
 
@@ -54,8 +54,8 @@ class WafRule extends AbstractModel
      * @param string $Switch Whether to enable managed rules. Values:
 <li>`on`: Enable</li>
 <li>`off`: Disable</li>
-     * @param array $BlockRuleIDs IDs of the managed rules in the Block mode. You can obtain more details from [DescribeSecurityGroupManagedRules](https://tcloud4api.woa.com/document/product/1657/80807?!preview&!document=1).
-     * @param array $ObserveRuleIDs IDs of the managed rules in the Observe mode. You can obtain more details from [DescribeSecurityGroupManagedRules](https://tcloud4api.woa.com/document/product/1657/80807?!preview&!document=1).
+     * @param array $BlockRuleIDs IDs of the rules to be disabled.
+     * @param array $ObserveRuleIDs IDs of the rules to be executed in Observe mode.
      */
     function __construct()
     {

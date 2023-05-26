@@ -34,6 +34,14 @@ use TencentCloud\Common\AbstractModel;
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setIntelligenceRule(IntelligenceRule $IntelligenceRule) Set The bot intelligence settings. If it is null, the settings that were last configured will be used.
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method array getBotUserRules() Obtain Settings of the custom bot rule. If it is null, the settings that were last configured will be used.
+ * @method void setBotUserRules(array $BotUserRules) Set Settings of the custom bot rule. If it is null, the settings that were last configured will be used.
+ * @method array getAlgDetectRule() Obtain Active bot detection rule.
+ * @method void setAlgDetectRule(array $AlgDetectRule) Set Active bot detection rule.
+ * @method array getCustomizes() Obtain Settings of the bot managed rule. It is only used for output.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setCustomizes(array $Customizes) Set Settings of the bot managed rule. It is only used for output.
+Note: This field may return `null`, indicating that no valid values can be obtained.
  */
 class BotConfig extends AbstractModel
 {
@@ -61,6 +69,22 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $IntelligenceRule;
 
     /**
+     * @var array Settings of the custom bot rule. If it is null, the settings that were last configured will be used.
+     */
+    public $BotUserRules;
+
+    /**
+     * @var array Active bot detection rule.
+     */
+    public $AlgDetectRule;
+
+    /**
+     * @var array Settings of the bot managed rule. It is only used for output.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $Customizes;
+
+    /**
      * @param string $Switch Whether to enable bot security. Values:
 <li>`on`: Enable</li>
 <li>`off`: Disable</li>
@@ -68,6 +92,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param BotPortraitRule $BotPortraitRule The settings of the client reputation rule. If it is null, the settings that were last configured will be used.
      * @param IntelligenceRule $IntelligenceRule The bot intelligence settings. If it is null, the settings that were last configured will be used.
 Note: This field may return null, indicating that no valid values can be obtained.
+     * @param array $BotUserRules Settings of the custom bot rule. If it is null, the settings that were last configured will be used.
+     * @param array $AlgDetectRule Active bot detection rule.
+     * @param array $Customizes Settings of the bot managed rule. It is only used for output.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -99,6 +127,33 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (array_key_exists("IntelligenceRule",$param) and $param["IntelligenceRule"] !== null) {
             $this->IntelligenceRule = new IntelligenceRule();
             $this->IntelligenceRule->deserialize($param["IntelligenceRule"]);
+        }
+
+        if (array_key_exists("BotUserRules",$param) and $param["BotUserRules"] !== null) {
+            $this->BotUserRules = [];
+            foreach ($param["BotUserRules"] as $key => $value){
+                $obj = new BotUserRule();
+                $obj->deserialize($value);
+                array_push($this->BotUserRules, $obj);
+            }
+        }
+
+        if (array_key_exists("AlgDetectRule",$param) and $param["AlgDetectRule"] !== null) {
+            $this->AlgDetectRule = [];
+            foreach ($param["AlgDetectRule"] as $key => $value){
+                $obj = new AlgDetectRule();
+                $obj->deserialize($value);
+                array_push($this->AlgDetectRule, $obj);
+            }
+        }
+
+        if (array_key_exists("Customizes",$param) and $param["Customizes"] !== null) {
+            $this->Customizes = [];
+            foreach ($param["Customizes"] as $key => $value){
+                $obj = new BotUserRule();
+                $obj->deserialize($value);
+                array_push($this->Customizes, $obj);
+            }
         }
     }
 }

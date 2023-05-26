@@ -22,6 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getZoneName() Obtain The site name.
  * @method void setZoneName(string $ZoneName) Set The site name.
+ * @method string getDomain() Obtain The subdomain name to be verified. To verify the ownership of a site, leave it blank.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setDomain(string $Domain) Set The subdomain name to be verified. To verify the ownership of a site, leave it blank.
+Note: This field may return `null`, indicating that no valid values can be obtained.
  * @method string getStatus() Obtain The verification status. Values:
 <li>`pending`: The verification is ongoing.</li>
 <li>`finished`: The verification completed.</li>
@@ -43,6 +47,12 @@ class Identification extends AbstractModel
      * @var string The site name.
      */
     public $ZoneName;
+
+    /**
+     * @var string The subdomain name to be verified. To verify the ownership of a site, leave it blank.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $Domain;
 
     /**
      * @var string The verification status. Values:
@@ -69,6 +79,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * @param string $ZoneName The site name.
+     * @param string $Domain The subdomain name to be verified. To verify the ownership of a site, leave it blank.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      * @param string $Status The verification status. Values:
 <li>`pending`: The verification is ongoing.</li>
 <li>`finished`: The verification completed.</li>
@@ -92,6 +104,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
         }
         if (array_key_exists("ZoneName",$param) and $param["ZoneName"] !== null) {
             $this->ZoneName = $param["ZoneName"];
+        }
+
+        if (array_key_exists("Domain",$param) and $param["Domain"] !== null) {
+            $this->Domain = $param["Domain"];
         }
 
         if (array_key_exists("Status",$param) and $param["Status"] !== null) {

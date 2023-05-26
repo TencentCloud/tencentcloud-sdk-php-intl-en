@@ -22,16 +22,20 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getZoneId() Obtain Site ID of the accelerated domain name. If it’s not specified, all accelerated domain names under the site are returned.
  * @method void setZoneId(string $ZoneId) Set Site ID of the accelerated domain name. If it’s not specified, all accelerated domain names under the site are returned.
- * @method array getFilters() Obtain Filter criteria. Each filter criteria can have up to 20 entries. Values:
-<li>`domain-name`:<br>   <strong>Accelerated domain name</strong><br>   Type: String<br>Required: No
-<li>`origin-type`:<br>   <strong>Type of the origin</strong><br>   Type: String<br>   Required: No
-<li>`origin`:<br>   <strong>Primary origin</strong><br>   Type: String<br>   Required: No
-<li>`backup-origin`<br>   <strong>Secondary origin</strong><br>   Type: String<br>   Required: No
- * @method void setFilters(array $Filters) Set Filter criteria. Each filter criteria can have up to 20 entries. Values:
-<li>`domain-name`:<br>   <strong>Accelerated domain name</strong><br>   Type: String<br>Required: No
-<li>`origin-type`:<br>   <strong>Type of the origin</strong><br>   Type: String<br>   Required: No
-<li>`origin`:<br>   <strong>Primary origin</strong><br>   Type: String<br>   Required: No
-<li>`backup-origin`<br>   <strong>Secondary origin</strong><br>   Type: String<br>   Required: No
+ * @method array getFilters() Obtain Filters. Each filter can have up to 20 entries. See below for details: 
+<li>`domain-name`:<br>   <strong>Accelerated domain name</strong><br>   Type: String<br>Required: No 
+<li>`origin-type`:<br>   <strong>Type of the origin</strong><br>   Type: String<br>   Required: No 
+<li>`origin`:<br>   <strong>Primary origin</strong><br>   Type: String<br>   Required: No 
+<li>`backup-origin`:<br>   <strong>Secondary origin</strong><br>   Type: String<br>   Required: No 
+<li>`domain-cname`:<br>   <strong>Accelerated CNAME</strong><br>   Type: String<br>   Required: No 
+<li>`share-cname`:<br>   <strong> Shared CNAME</strong><br>   Type: String<br>   Required: No
+ * @method void setFilters(array $Filters) Set Filters. Each filter can have up to 20 entries. See below for details: 
+<li>`domain-name`:<br>   <strong>Accelerated domain name</strong><br>   Type: String<br>Required: No 
+<li>`origin-type`:<br>   <strong>Type of the origin</strong><br>   Type: String<br>   Required: No 
+<li>`origin`:<br>   <strong>Primary origin</strong><br>   Type: String<br>   Required: No 
+<li>`backup-origin`:<br>   <strong>Secondary origin</strong><br>   Type: String<br>   Required: No 
+<li>`domain-cname`:<br>   <strong>Accelerated CNAME</strong><br>   Type: String<br>   Required: No 
+<li>`share-cname`:<br>   <strong> Shared CNAME</strong><br>   Type: String<br>   Required: No
  * @method string getDirection() Obtain The sorting order. Values:
 <li>`asc`: Ascending order.</li>
 <li>`desc`: Descending order.</li>Default value: `asc`.
@@ -65,11 +69,13 @@ class DescribeAccelerationDomainsRequest extends AbstractModel
     public $ZoneId;
 
     /**
-     * @var array Filter criteria. Each filter criteria can have up to 20 entries. Values:
-<li>`domain-name`:<br>   <strong>Accelerated domain name</strong><br>   Type: String<br>Required: No
-<li>`origin-type`:<br>   <strong>Type of the origin</strong><br>   Type: String<br>   Required: No
-<li>`origin`:<br>   <strong>Primary origin</strong><br>   Type: String<br>   Required: No
-<li>`backup-origin`<br>   <strong>Secondary origin</strong><br>   Type: String<br>   Required: No
+     * @var array Filters. Each filter can have up to 20 entries. See below for details: 
+<li>`domain-name`:<br>   <strong>Accelerated domain name</strong><br>   Type: String<br>Required: No 
+<li>`origin-type`:<br>   <strong>Type of the origin</strong><br>   Type: String<br>   Required: No 
+<li>`origin`:<br>   <strong>Primary origin</strong><br>   Type: String<br>   Required: No 
+<li>`backup-origin`:<br>   <strong>Secondary origin</strong><br>   Type: String<br>   Required: No 
+<li>`domain-cname`:<br>   <strong>Accelerated CNAME</strong><br>   Type: String<br>   Required: No 
+<li>`share-cname`:<br>   <strong> Shared CNAME</strong><br>   Type: String<br>   Required: No
      */
     public $Filters;
 
@@ -107,11 +113,13 @@ class DescribeAccelerationDomainsRequest extends AbstractModel
 
     /**
      * @param string $ZoneId Site ID of the accelerated domain name. If it’s not specified, all accelerated domain names under the site are returned.
-     * @param array $Filters Filter criteria. Each filter criteria can have up to 20 entries. Values:
-<li>`domain-name`:<br>   <strong>Accelerated domain name</strong><br>   Type: String<br>Required: No
-<li>`origin-type`:<br>   <strong>Type of the origin</strong><br>   Type: String<br>   Required: No
-<li>`origin`:<br>   <strong>Primary origin</strong><br>   Type: String<br>   Required: No
-<li>`backup-origin`<br>   <strong>Secondary origin</strong><br>   Type: String<br>   Required: No
+     * @param array $Filters Filters. Each filter can have up to 20 entries. See below for details: 
+<li>`domain-name`:<br>   <strong>Accelerated domain name</strong><br>   Type: String<br>Required: No 
+<li>`origin-type`:<br>   <strong>Type of the origin</strong><br>   Type: String<br>   Required: No 
+<li>`origin`:<br>   <strong>Primary origin</strong><br>   Type: String<br>   Required: No 
+<li>`backup-origin`:<br>   <strong>Secondary origin</strong><br>   Type: String<br>   Required: No 
+<li>`domain-cname`:<br>   <strong>Accelerated CNAME</strong><br>   Type: String<br>   Required: No 
+<li>`share-cname`:<br>   <strong> Shared CNAME</strong><br>   Type: String<br>   Required: No
      * @param string $Direction The sorting order. Values:
 <li>`asc`: Ascending order.</li>
 <li>`desc`: Descending order.</li>Default value: `asc`.

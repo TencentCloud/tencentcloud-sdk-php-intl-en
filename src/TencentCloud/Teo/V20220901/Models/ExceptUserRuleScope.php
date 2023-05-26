@@ -27,15 +27,19 @@ use TencentCloud\Common\AbstractModel;
 <li>`complete`: Skip the exception rule for full requests.</li>
 <li>`partial`: Skip the exception rule for partial requests.</li>
  * @method array getModules() Obtain The module to be activated. Values:
-<li>`waf`: Managed rules</li>
-<li>`cc`: Rate limiting rules</li>
-<li>`bot`: bot protection</li>
-Note: This field may return `null`, indicating that no valid value can be obtained.
+<li>`waf`: Tencent Cloud-managed rules</li>
+<li>`rate`: Rate limiting rules</li>
+<li>`acl`: Custom rule</li>
+<li>`cc`: CC attack defense</li>
+<li>`bot`: Bot protection</li>
+Note: this field may return `null`, indicating that no valid value is obtained.
  * @method void setModules(array $Modules) Set The module to be activated. Values:
-<li>`waf`: Managed rules</li>
-<li>`cc`: Rate limiting rules</li>
-<li>`bot`: bot protection</li>
-Note: This field may return `null`, indicating that no valid value can be obtained.
+<li>`waf`: Tencent Cloud-managed rules</li>
+<li>`rate`: Rate limiting rules</li>
+<li>`acl`: Custom rule</li>
+<li>`cc`: CC attack defense</li>
+<li>`bot`: Bot protection</li>
+Note: this field may return `null`, indicating that no valid value is obtained.
  * @method array getPartialModules() Obtain Module settings of the exception rule. If it is null, the settings that were last configured will be used.
 Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method void setPartialModules(array $PartialModules) Set Module settings of the exception rule. If it is null, the settings that were last configured will be used.
@@ -56,10 +60,12 @@ class ExceptUserRuleScope extends AbstractModel
 
     /**
      * @var array The module to be activated. Values:
-<li>`waf`: Managed rules</li>
-<li>`cc`: Rate limiting rules</li>
-<li>`bot`: bot protection</li>
-Note: This field may return `null`, indicating that no valid value can be obtained.
+<li>`waf`: Tencent Cloud-managed rules</li>
+<li>`rate`: Rate limiting rules</li>
+<li>`acl`: Custom rule</li>
+<li>`cc`: CC attack defense</li>
+<li>`bot`: Bot protection</li>
+Note: this field may return `null`, indicating that no valid value is obtained.
      */
     public $Modules;
 
@@ -80,10 +86,12 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 <li>`complete`: Skip the exception rule for full requests.</li>
 <li>`partial`: Skip the exception rule for partial requests.</li>
      * @param array $Modules The module to be activated. Values:
-<li>`waf`: Managed rules</li>
-<li>`cc`: Rate limiting rules</li>
-<li>`bot`: bot protection</li>
-Note: This field may return `null`, indicating that no valid value can be obtained.
+<li>`waf`: Tencent Cloud-managed rules</li>
+<li>`rate`: Rate limiting rules</li>
+<li>`acl`: Custom rule</li>
+<li>`cc`: CC attack defense</li>
+<li>`bot`: Bot protection</li>
+Note: this field may return `null`, indicating that no valid value is obtained.
      * @param array $PartialModules Module settings of the exception rule. If it is null, the settings that were last configured will be used.
 Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param array $SkipConditions Condition settings of the exception rule. If it is null, the settings that were last configured will be used.

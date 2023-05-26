@@ -20,7 +20,7 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Rule engine feature operation. A feature can be of only one of the following three types, so each item in the `RuleAction` array can be of only one of the following types. You can call the [DescribeRulesSetting](https://tcloud4api.woa.com/document/product/1657/79433?!preview&!document=1) API to view more requirements for entering feature items.
  *
- * @method NormalAction getNormalAction() Obtain Common feature operation. Values:
+ * @method NormalAction getNormalAction() Obtain Common operation. Values:
 <li>`AccessUrlRedirect`: Access URL rewrite</li>
 <li>`UpstreamUrlRedirect`: Origin-pull URL rewrite</li>
 <li>`QUIC`: QUIC</li>
@@ -41,13 +41,13 @@ use TencentCloud\Common\AbstractModel;
 <li>`Compression`: Smart compression</li>
 <li>`Hsts`</li>
 <li>`ClientIpHeader`</li>
-<li>`TlsVersion`</li>
+<li>`SslTlsSecureConf`</li>
 <li>`OcspStapling`</li>
 <li>`Http2`: HTTP/2 access</li>
 <li>`UpstreamFollowRedirect`: Follow origin redirect</li>
 <li>`Origin`: Origin</li>
 Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method void setNormalAction(NormalAction $NormalAction) Set Common feature operation. Values:
+ * @method void setNormalAction(NormalAction $NormalAction) Set Common operation. Values:
 <li>`AccessUrlRedirect`: Access URL rewrite</li>
 <li>`UpstreamUrlRedirect`: Origin-pull URL rewrite</li>
 <li>`QUIC`: QUIC</li>
@@ -68,7 +68,7 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 <li>`Compression`: Smart compression</li>
 <li>`Hsts`</li>
 <li>`ClientIpHeader`</li>
-<li>`TlsVersion`</li>
+<li>`SslTlsSecureConf`</li>
 <li>`OcspStapling`</li>
 <li>`Http2`: HTTP/2 access</li>
 <li>`UpstreamFollowRedirect`: Follow origin redirect</li>
@@ -94,7 +94,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 class Action extends AbstractModel
 {
     /**
-     * @var NormalAction Common feature operation. Values:
+     * @var NormalAction Common operation. Values:
 <li>`AccessUrlRedirect`: Access URL rewrite</li>
 <li>`UpstreamUrlRedirect`: Origin-pull URL rewrite</li>
 <li>`QUIC`: QUIC</li>
@@ -115,7 +115,7 @@ class Action extends AbstractModel
 <li>`Compression`: Smart compression</li>
 <li>`Hsts`</li>
 <li>`ClientIpHeader`</li>
-<li>`TlsVersion`</li>
+<li>`SslTlsSecureConf`</li>
 <li>`OcspStapling`</li>
 <li>`Http2`: HTTP/2 access</li>
 <li>`UpstreamFollowRedirect`: Follow origin redirect</li>
@@ -141,7 +141,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $CodeAction;
 
     /**
-     * @param NormalAction $NormalAction Common feature operation. Values:
+     * @param NormalAction $NormalAction Common operation. Values:
 <li>`AccessUrlRedirect`: Access URL rewrite</li>
 <li>`UpstreamUrlRedirect`: Origin-pull URL rewrite</li>
 <li>`QUIC`: QUIC</li>
@@ -162,7 +162,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 <li>`Compression`: Smart compression</li>
 <li>`Hsts`</li>
 <li>`ClientIpHeader`</li>
-<li>`TlsVersion`</li>
+<li>`SslTlsSecureConf`</li>
 <li>`OcspStapling`</li>
 <li>`Http2`: HTTP/2 access</li>
 <li>`UpstreamFollowRedirect`: Follow origin redirect</li>

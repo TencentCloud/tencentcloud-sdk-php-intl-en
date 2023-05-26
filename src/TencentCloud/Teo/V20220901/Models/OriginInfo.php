@@ -20,94 +20,74 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Details of the origin.
  *
- * @method string getOriginType() Obtain The origin type. Values:
+ * @method string getOriginType() Obtain The origin type. Values: 
 <li>`IP_DOMAIN`: IPv4/IPv6 address or domain name</li>
 <li>`COS`: COS bucket address</li>
 <li>`ORIGIN_GROUP`: Origin group</li>
 <li>`AWS_S3`: AWS S3 bucket address</li>
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setOriginType(string $OriginType) Set The origin type. Values:
+ * @method void setOriginType(string $OriginType) Set The origin type. Values: 
 <li>`IP_DOMAIN`: IPv4/IPv6 address or domain name</li>
 <li>`COS`: COS bucket address</li>
 <li>`ORIGIN_GROUP`: Origin group</li>
 <li>`AWS_S3`: AWS S3 bucket address</li>
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getOrigin() Obtain The origin address. Enter the origin group ID if `OriginType=ORIGIN_GROUP`.
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setOrigin(string $Origin) Set The origin address. Enter the origin group ID if `OriginType=ORIGIN_GROUP`.
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getBackupOrigin() Obtain ID of the secondary origin group (valid when `OriginType=ORIGIN_GROUP`). If it’s not specified, it indicates that secondary origins are not used.
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setBackupOrigin(string $BackupOrigin) Set ID of the secondary origin group (valid when `OriginType=ORIGIN_GROUP`). If it’s not specified, it indicates that secondary origins are not used.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getPrivateAccess() Obtain Whether to authenticate access to the private object storage origin (valid when `OriginType=COS/AWS_S3`). Values:
+ * @method string getPrivateAccess() Obtain Whether to authenticate access to the private object storage origin (valid when `OriginType=COS/AWS_S3`). Values: 
 <li>`on`: Enable private authentication.</li>
 <li>`off`: Disable private authentication.</li>If this field is not specified, the default value `off` is used.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setPrivateAccess(string $PrivateAccess) Set Whether to authenticate access to the private object storage origin (valid when `OriginType=COS/AWS_S3`). Values:
+ * @method void setPrivateAccess(string $PrivateAccess) Set Whether to authenticate access to the private object storage origin (valid when `OriginType=COS/AWS_S3`). Values: 
 <li>`on`: Enable private authentication.</li>
 <li>`off`: Disable private authentication.</li>If this field is not specified, the default value `off` is used.
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method array getPrivateParameters() Obtain The private authentication parameters. This field is valid when `PrivateAccess=on`.
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setPrivateParameters(array $PrivateParameters) Set The private authentication parameters. This field is valid when `PrivateAccess=on`.
-Note: This field may return null, indicating that no valid values can be obtained.
  */
 class OriginInfo extends AbstractModel
 {
     /**
-     * @var string The origin type. Values:
+     * @var string The origin type. Values: 
 <li>`IP_DOMAIN`: IPv4/IPv6 address or domain name</li>
 <li>`COS`: COS bucket address</li>
 <li>`ORIGIN_GROUP`: Origin group</li>
 <li>`AWS_S3`: AWS S3 bucket address</li>
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $OriginType;
 
     /**
      * @var string The origin address. Enter the origin group ID if `OriginType=ORIGIN_GROUP`.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Origin;
 
     /**
      * @var string ID of the secondary origin group (valid when `OriginType=ORIGIN_GROUP`). If it’s not specified, it indicates that secondary origins are not used.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $BackupOrigin;
 
     /**
-     * @var string Whether to authenticate access to the private object storage origin (valid when `OriginType=COS/AWS_S3`). Values:
+     * @var string Whether to authenticate access to the private object storage origin (valid when `OriginType=COS/AWS_S3`). Values: 
 <li>`on`: Enable private authentication.</li>
 <li>`off`: Disable private authentication.</li>If this field is not specified, the default value `off` is used.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $PrivateAccess;
 
     /**
      * @var array The private authentication parameters. This field is valid when `PrivateAccess=on`.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $PrivateParameters;
 
     /**
-     * @param string $OriginType The origin type. Values:
+     * @param string $OriginType The origin type. Values: 
 <li>`IP_DOMAIN`: IPv4/IPv6 address or domain name</li>
 <li>`COS`: COS bucket address</li>
 <li>`ORIGIN_GROUP`: Origin group</li>
 <li>`AWS_S3`: AWS S3 bucket address</li>
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $Origin The origin address. Enter the origin group ID if `OriginType=ORIGIN_GROUP`.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $BackupOrigin ID of the secondary origin group (valid when `OriginType=ORIGIN_GROUP`). If it’s not specified, it indicates that secondary origins are not used.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $PrivateAccess Whether to authenticate access to the private object storage origin (valid when `OriginType=COS/AWS_S3`). Values:
+     * @param string $PrivateAccess Whether to authenticate access to the private object storage origin (valid when `OriginType=COS/AWS_S3`). Values: 
 <li>`on`: Enable private authentication.</li>
 <li>`off`: Disable private authentication.</li>If this field is not specified, the default value `off` is used.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param array $PrivateParameters The private authentication parameters. This field is valid when `PrivateAccess=on`.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

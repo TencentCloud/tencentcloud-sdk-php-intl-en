@@ -24,16 +24,24 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStartTime(string $StartTime) Set The start time.
  * @method string getEndTime() Obtain The end time.
  * @method void setEndTime(string $EndTime) Set The end time.
- * @method array getMetricNames() Obtain The query metric. Values:
-<li>`l7Flow_outFlux`: Access traffic;</li>
-<li>`l7Flow_request`: Access requests;</li>
-<li>`l7Flow_outBandwidth`: Access bandwidth.</li>
-<li>`l7Flow_hit_outFlux`: Cache hit traffic.</li>
- * @method void setMetricNames(array $MetricNames) Set The query metric. Values:
-<li>`l7Flow_outFlux`: Access traffic;</li>
-<li>`l7Flow_request`: Access requests;</li>
-<li>`l7Flow_outBandwidth`: Access bandwidth.</li>
-<li>`l7Flow_hit_outFlux`: Cache hit traffic.</li>
+ * @method array getMetricNames() Obtain The metric to query. Values:
+<li>`l7Flow_outFlux`: Traffic used for EdegOne responses</li>
+<li>`l7Flow_inFlux`: Traffic used for EdegOne requests</li>
+<li>`l7Flow_outBandwidth`: Bandwidth used for EdegOne responses</li>
+<li>`l7Flow_inBandwidth`: Bandwidth used for EdegOne requests</li>
+<li>`l7Flow_hit_outFlux`: Traffic used for cache hit</li>
+<li>`l7Flow_request`: Access requests</li>
+<li>`l7Flow_flux`: Upstream and downstream traffic used for client access</li>
+<li>`l7Flow_bandwidth`: Upstream and downstream bandwidth used for client access</li>
+ * @method void setMetricNames(array $MetricNames) Set The metric to query. Values:
+<li>`l7Flow_outFlux`: Traffic used for EdegOne responses</li>
+<li>`l7Flow_inFlux`: Traffic used for EdegOne requests</li>
+<li>`l7Flow_outBandwidth`: Bandwidth used for EdegOne responses</li>
+<li>`l7Flow_inBandwidth`: Bandwidth used for EdegOne requests</li>
+<li>`l7Flow_hit_outFlux`: Traffic used for cache hit</li>
+<li>`l7Flow_request`: Access requests</li>
+<li>`l7Flow_flux`: Upstream and downstream traffic used for client access</li>
+<li>`l7Flow_bandwidth`: Upstream and downstream bandwidth used for client access</li>
  * @method array getZoneIds() Obtain List of sites
 Enter the IDs of sites to query. The maximum query period is determined by the <a href="https://intl.cloud.tencent.com/document/product/1552/77380?from_cn_redirect=1#edgeone-.E5.A5.97.E9.A4.90">max data query period</a> of the bound plan. If it’s not specified, all sites are selected by default, and the query period must be within the last 30 days. 
  * @method void setZoneIds(array $ZoneIds) Set List of sites
@@ -61,11 +69,13 @@ Enter the IDs of sites to query. The maximum query period is determined by the <
 <li>`hour`: 1 hour;</li>
 <li>`day`: One day</li>If this field is not specified, the granularity will be determined based on the query period. <br>Period ≤ 1 hour: `min`; <br>1 hour < Period ≤ 2 days: `5min`; <br>2 days < period ≤ 7 days: `hour`; <br>Period > 7 days: `day`.
  * @method array getFilters() Obtain Filters
-<li>tagKey<br>   Filter by the specified <strong>tag key</strong></li>
-<li>tagValue<br>   Filter by the specified <strong>tag value</strong></li>
+<li>`socket`:<br>u2003u2003 Filter by the specified <strong>HTTP protocol type</strong><br>u2003u2003 Values:<br>u2003u2003 `HTTP`: HTTP protocol;<br>u2003u2003 `HTTPS`: HTTPS protocol;<br>u2003u2003 `QUIC`: QUIC protocol.</li>
+<li>`tagKey`:<br>u2003u2003 Filter by the specified <strong>tag key</strong></li>
+<li>`tagValue`<br>u2003u2003 Filter by the specified <strong>tag value</strong></li>
  * @method void setFilters(array $Filters) Set Filters
-<li>tagKey<br>   Filter by the specified <strong>tag key</strong></li>
-<li>tagValue<br>   Filter by the specified <strong>tag value</strong></li>
+<li>`socket`:<br>u2003u2003 Filter by the specified <strong>HTTP protocol type</strong><br>u2003u2003 Values:<br>u2003u2003 `HTTP`: HTTP protocol;<br>u2003u2003 `HTTPS`: HTTPS protocol;<br>u2003u2003 `QUIC`: QUIC protocol.</li>
+<li>`tagKey`:<br>u2003u2003 Filter by the specified <strong>tag key</strong></li>
+<li>`tagValue`<br>u2003u2003 Filter by the specified <strong>tag value</strong></li>
  * @method string getArea() Obtain Geolocation scope. Values:
 <li>`overseas`: Regions outside the Chinese mainland</li>
 <li>`mainland`: Chinese mainland</li>
@@ -88,11 +98,15 @@ class DescribeOverviewL7DataRequest extends AbstractModel
     public $EndTime;
 
     /**
-     * @var array The query metric. Values:
-<li>`l7Flow_outFlux`: Access traffic;</li>
-<li>`l7Flow_request`: Access requests;</li>
-<li>`l7Flow_outBandwidth`: Access bandwidth.</li>
-<li>`l7Flow_hit_outFlux`: Cache hit traffic.</li>
+     * @var array The metric to query. Values:
+<li>`l7Flow_outFlux`: Traffic used for EdegOne responses</li>
+<li>`l7Flow_inFlux`: Traffic used for EdegOne requests</li>
+<li>`l7Flow_outBandwidth`: Bandwidth used for EdegOne responses</li>
+<li>`l7Flow_inBandwidth`: Bandwidth used for EdegOne requests</li>
+<li>`l7Flow_hit_outFlux`: Traffic used for cache hit</li>
+<li>`l7Flow_request`: Access requests</li>
+<li>`l7Flow_flux`: Upstream and downstream traffic used for client access</li>
+<li>`l7Flow_bandwidth`: Upstream and downstream bandwidth used for client access</li>
      */
     public $MetricNames;
 
@@ -127,8 +141,9 @@ Enter the IDs of sites to query. The maximum query period is determined by the <
 
     /**
      * @var array Filters
-<li>tagKey<br>   Filter by the specified <strong>tag key</strong></li>
-<li>tagValue<br>   Filter by the specified <strong>tag value</strong></li>
+<li>`socket`:<br>u2003u2003 Filter by the specified <strong>HTTP protocol type</strong><br>u2003u2003 Values:<br>u2003u2003 `HTTP`: HTTP protocol;<br>u2003u2003 `HTTPS`: HTTPS protocol;<br>u2003u2003 `QUIC`: QUIC protocol.</li>
+<li>`tagKey`:<br>u2003u2003 Filter by the specified <strong>tag key</strong></li>
+<li>`tagValue`<br>u2003u2003 Filter by the specified <strong>tag value</strong></li>
      */
     public $Filters;
 
@@ -143,11 +158,15 @@ Enter the IDs of sites to query. The maximum query period is determined by the <
     /**
      * @param string $StartTime The start time.
      * @param string $EndTime The end time.
-     * @param array $MetricNames The query metric. Values:
-<li>`l7Flow_outFlux`: Access traffic;</li>
-<li>`l7Flow_request`: Access requests;</li>
-<li>`l7Flow_outBandwidth`: Access bandwidth.</li>
-<li>`l7Flow_hit_outFlux`: Cache hit traffic.</li>
+     * @param array $MetricNames The metric to query. Values:
+<li>`l7Flow_outFlux`: Traffic used for EdegOne responses</li>
+<li>`l7Flow_inFlux`: Traffic used for EdegOne requests</li>
+<li>`l7Flow_outBandwidth`: Bandwidth used for EdegOne responses</li>
+<li>`l7Flow_inBandwidth`: Bandwidth used for EdegOne requests</li>
+<li>`l7Flow_hit_outFlux`: Traffic used for cache hit</li>
+<li>`l7Flow_request`: Access requests</li>
+<li>`l7Flow_flux`: Upstream and downstream traffic used for client access</li>
+<li>`l7Flow_bandwidth`: Upstream and downstream bandwidth used for client access</li>
      * @param array $ZoneIds List of sites
 Enter the IDs of sites to query. The maximum query period is determined by the <a href="https://intl.cloud.tencent.com/document/product/1552/77380?from_cn_redirect=1#edgeone-.E5.A5.97.E9.A4.90">max data query period</a> of the bound plan. If it’s not specified, all sites are selected by default, and the query period must be within the last 30 days. 
      * @param array $Domains List of subdomain names to be queried. All subdomain names will be selected if this field is not specified.
@@ -162,8 +181,9 @@ Enter the IDs of sites to query. The maximum query period is determined by the <
 <li>`hour`: 1 hour;</li>
 <li>`day`: One day</li>If this field is not specified, the granularity will be determined based on the query period. <br>Period ≤ 1 hour: `min`; <br>1 hour < Period ≤ 2 days: `5min`; <br>2 days < period ≤ 7 days: `hour`; <br>Period > 7 days: `day`.
      * @param array $Filters Filters
-<li>tagKey<br>   Filter by the specified <strong>tag key</strong></li>
-<li>tagValue<br>   Filter by the specified <strong>tag value</strong></li>
+<li>`socket`:<br>u2003u2003 Filter by the specified <strong>HTTP protocol type</strong><br>u2003u2003 Values:<br>u2003u2003 `HTTP`: HTTP protocol;<br>u2003u2003 `HTTPS`: HTTPS protocol;<br>u2003u2003 `QUIC`: QUIC protocol.</li>
+<li>`tagKey`:<br>u2003u2003 Filter by the specified <strong>tag key</strong></li>
+<li>`tagValue`<br>u2003u2003 Filter by the specified <strong>tag value</strong></li>
      * @param string $Area Geolocation scope. Values:
 <li>`overseas`: Regions outside the Chinese mainland</li>
 <li>`mainland`: Chinese mainland</li>

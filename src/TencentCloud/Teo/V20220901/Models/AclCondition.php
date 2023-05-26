@@ -33,6 +33,11 @@ use TencentCloud\Common\AbstractModel;
 <li>`header`: Request header</li>
 <li>`app_proto`: Application layer protocol</li>
 <li>`sip_proto`: Network layer protocol</li>
+<li>`uabot`: UA rules (only available in custom bot rules)</li>
+<li>`idcid`: IDC rules (only available in custom bot rules)</li>
+<li>`sipbot`: Search engine rules (only available in custom bot rules)</li>
+<li>`portrait`: Client reputation (only available in custom bot rules)</li>
+<li>`header_seq`: Header sequence (only available in custom bot rules)</li>
  * @method void setMatchFrom(string $MatchFrom) Set The field to match. Values:
 <li>`host`: Request domain name</li>
 <li>`sip`: Client IP</li>
@@ -46,6 +51,11 @@ use TencentCloud\Common\AbstractModel;
 <li>`header`: Request header</li>
 <li>`app_proto`: Application layer protocol</li>
 <li>`sip_proto`: Network layer protocol</li>
+<li>`uabot`: UA rules (only available in custom bot rules)</li>
+<li>`idcid`: IDC rules (only available in custom bot rules)</li>
+<li>`sipbot`: Search engine rules (only available in custom bot rules)</li>
+<li>`portrait`: Client reputation (only available in custom bot rules)</li>
+<li>`header_seq`: Header sequence (only available in custom bot rules)</li>
  * @method string getMatchParam() Obtain The parameter of the field. When `MatchFrom = header`, the key contained in the header can be passed.
  * @method void setMatchParam(string $MatchParam) Set The parameter of the field. When `MatchFrom = header`, the key contained in the header can be passed.
  * @method string getOperator() Obtain The logical operator. Values:
@@ -101,6 +111,11 @@ class AclCondition extends AbstractModel
 <li>`header`: Request header</li>
 <li>`app_proto`: Application layer protocol</li>
 <li>`sip_proto`: Network layer protocol</li>
+<li>`uabot`: UA rules (only available in custom bot rules)</li>
+<li>`idcid`: IDC rules (only available in custom bot rules)</li>
+<li>`sipbot`: Search engine rules (only available in custom bot rules)</li>
+<li>`portrait`: Client reputation (only available in custom bot rules)</li>
+<li>`header_seq`: Header sequence (only available in custom bot rules)</li>
      */
     public $MatchFrom;
 
@@ -149,6 +164,11 @@ class AclCondition extends AbstractModel
 <li>`header`: Request header</li>
 <li>`app_proto`: Application layer protocol</li>
 <li>`sip_proto`: Network layer protocol</li>
+<li>`uabot`: UA rules (only available in custom bot rules)</li>
+<li>`idcid`: IDC rules (only available in custom bot rules)</li>
+<li>`sipbot`: Search engine rules (only available in custom bot rules)</li>
+<li>`portrait`: Client reputation (only available in custom bot rules)</li>
+<li>`header_seq`: Header sequence (only available in custom bot rules)</li>
      * @param string $MatchParam The parameter of the field. When `MatchFrom = header`, the key contained in the header can be passed.
      * @param string $Operator The logical operator. Values:
 <li>`equal`: Value equals</li>

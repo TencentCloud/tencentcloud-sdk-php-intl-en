@@ -46,8 +46,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 <li>`init`: Pending activation</li>
  * @method string getCname() Obtain The CNAME address.
  * @method void setCname(string $Cname) Set The CNAME address.
- * @method string getIdentificationStatus() Obtain 
- * @method void setIdentificationStatus(string $IdentificationStatus) Set 
+ * @method string getIdentificationStatus() Obtain Ownership verification status. Values: <li>`pending`: Pending verification</li> <li>`finished`: Verified</li>	
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setIdentificationStatus(string $IdentificationStatus) Set Ownership verification status. Values: <li>`pending`: Pending verification</li> <li>`finished`: Verified</li>	
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class AccelerationDomain extends AbstractModel
 {
@@ -93,7 +95,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $Cname;
 
     /**
-     * @var string 
+     * @var string Ownership verification status. Values: <li>`pending`: Pending verification</li> <li>`finished`: Verified</li>	
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $IdentificationStatus;
 
@@ -111,7 +114,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
 <li>`forbidden`: Blocked</li>
 <li>`init`: Pending activation</li>
      * @param string $Cname The CNAME address.
-     * @param string $IdentificationStatus 
+     * @param string $IdentificationStatus Ownership verification status. Values: <li>`pending`: Pending verification</li> <li>`finished`: Verified</li>	
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

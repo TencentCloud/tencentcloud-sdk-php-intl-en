@@ -22,6 +22,9 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getZoneName() Obtain The site name.
  * @method void setZoneName(string $ZoneName) Set The site name.
+ * @method string getDomain() Obtain A subdomain name under the site. Specify this field if you want to verify the ownership of a subdomain name. Otherwise you can leave it blank.
+
+ * @method void setDomain(string $Domain) Set A subdomain name under the site. Specify this field if you want to verify the ownership of a subdomain name. Otherwise you can leave it blank.
  */
 class IdentifyZoneRequest extends AbstractModel
 {
@@ -31,7 +34,14 @@ class IdentifyZoneRequest extends AbstractModel
     public $ZoneName;
 
     /**
+     * @var string A subdomain name under the site. Specify this field if you want to verify the ownership of a subdomain name. Otherwise you can leave it blank.
+
+     */
+    public $Domain;
+
+    /**
      * @param string $ZoneName The site name.
+     * @param string $Domain A subdomain name under the site. Specify this field if you want to verify the ownership of a subdomain name. Otherwise you can leave it blank.
      */
     function __construct()
     {
@@ -48,6 +58,10 @@ class IdentifyZoneRequest extends AbstractModel
         }
         if (array_key_exists("ZoneName",$param) and $param["ZoneName"] !== null) {
             $this->ZoneName = $param["ZoneName"];
+        }
+
+        if (array_key_exists("Domain",$param) and $param["Domain"] !== null) {
+            $this->Domain = $param["Domain"];
         }
     }
 }

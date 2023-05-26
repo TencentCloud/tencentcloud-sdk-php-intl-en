@@ -100,6 +100,12 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method void setGrpc(Grpc $Grpc) Set Configuration of gRPC support
 Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method ImageOptimize getImageOptimize() Obtain Image optimization configuration. 
+Note: This field may return `null`, indicating that no valid value was found.
+ * @method void setImageOptimize(ImageOptimize $ImageOptimize) Set Image optimization configuration. 
+Note: This field may return `null`, indicating that no valid value was found.
+ * @method AccelerateMainland getAccelerateMainland() Obtain 
+ * @method void setAccelerateMainland(AccelerateMainland $AccelerateMainland) Set 
  */
 class ZoneSetting extends AbstractModel
 {
@@ -224,6 +230,17 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     public $Grpc;
 
     /**
+     * @var ImageOptimize Image optimization configuration. 
+Note: This field may return `null`, indicating that no valid value was found.
+     */
+    public $ImageOptimize;
+
+    /**
+     * @var AccelerateMainland 
+     */
+    public $AccelerateMainland;
+
+    /**
      * @param string $ZoneName Name of the site
      * @param string $Area Site acceleration region. Values:
 <li>`mainland`: Acceleration in the Chinese mainland.</li>
@@ -264,6 +281,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param Grpc $Grpc Configuration of gRPC support
 Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param ImageOptimize $ImageOptimize Image optimization configuration. 
+Note: This field may return `null`, indicating that no valid value was found.
+     * @param AccelerateMainland $AccelerateMainland 
      */
     function __construct()
     {
@@ -374,6 +394,16 @@ Note: This field may return `null`, indicating that no valid value can be obtain
         if (array_key_exists("Grpc",$param) and $param["Grpc"] !== null) {
             $this->Grpc = new Grpc();
             $this->Grpc->deserialize($param["Grpc"]);
+        }
+
+        if (array_key_exists("ImageOptimize",$param) and $param["ImageOptimize"] !== null) {
+            $this->ImageOptimize = new ImageOptimize();
+            $this->ImageOptimize->deserialize($param["ImageOptimize"]);
+        }
+
+        if (array_key_exists("AccelerateMainland",$param) and $param["AccelerateMainland"] !== null) {
+            $this->AccelerateMainland = new AccelerateMainland();
+            $this->AccelerateMainland->deserialize($param["AccelerateMainland"]);
         }
     }
 }
