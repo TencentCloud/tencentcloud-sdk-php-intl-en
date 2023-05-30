@@ -21,13 +21,15 @@ use TencentCloud\Common\AbstractModel;
  * DescribeOnlineRecord response structure.
  *
  * @method string getFinishReason() Obtain Recording stop reason
-- AUTO: recording automatically stops because no upstream audio/video or whiteboard operation occurs in the room for a long time.
-- USER_CALL: the API for stopping recording is called.
-- EXCEPTION: an exception occurred during recording.
+- AUTO: Recording automatically stops because no upstream audio/video or whiteboard operation occurs in the room for a long time.
+- USER_CALL: The API for stopping recording is called.
+- EXCEPTION: An exception occurred.
+- FORCE_STOP: Recording is forcibly stopped, which is usually because the recording has been paused for more than 90 minutes or has lasted for more than 24 hours.
  * @method void setFinishReason(string $FinishReason) Set Recording stop reason
-- AUTO: recording automatically stops because no upstream audio/video or whiteboard operation occurs in the room for a long time.
-- USER_CALL: the API for stopping recording is called.
-- EXCEPTION: an exception occurred during recording.
+- AUTO: Recording automatically stops because no upstream audio/video or whiteboard operation occurs in the room for a long time.
+- USER_CALL: The API for stopping recording is called.
+- EXCEPTION: An exception occurred.
+- FORCE_STOP: Recording is forcibly stopped, which is usually because the recording has been paused for more than 90 minutes or has lasted for more than 24 hours.
  * @method string getTaskId() Obtain ID of the recording task to be queried.
  * @method void setTaskId(string $TaskId) Set ID of the recording task to be queried.
  * @method string getStatus() Obtain Recording task status
@@ -60,6 +62,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOmittedDurations(array $OmittedDurations) Set Duration to be deleted in the spliced video. This parameter is valid only when the video splicing feature is enabled.
  * @method array getVideoInfos() Obtain List of recorded videos
  * @method void setVideoInfos(array $VideoInfos) Set List of recorded videos
+ * @method string getReplayUrl() Obtain 
+ * @method void setReplayUrl(string $ReplayUrl) Set 
+ * @method array getInterrupts() Obtain Number of video stream interruptions during recording.
+Note: This parameter may return null, indicating that no valid values can be obtained.
+ * @method void setInterrupts(array $Interrupts) Set Number of video stream interruptions during recording.
+Note: This parameter may return null, indicating that no valid values can be obtained.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -67,9 +75,10 @@ class DescribeOnlineRecordResponse extends AbstractModel
 {
     /**
      * @var string Recording stop reason
-- AUTO: recording automatically stops because no upstream audio/video or whiteboard operation occurs in the room for a long time.
-- USER_CALL: the API for stopping recording is called.
-- EXCEPTION: an exception occurred during recording.
+- AUTO: Recording automatically stops because no upstream audio/video or whiteboard operation occurs in the room for a long time.
+- USER_CALL: The API for stopping recording is called.
+- EXCEPTION: An exception occurred.
+- FORCE_STOP: Recording is forcibly stopped, which is usually because the recording has been paused for more than 90 minutes or has lasted for more than 24 hours.
      */
     public $FinishReason;
 
@@ -134,15 +143,27 @@ class DescribeOnlineRecordResponse extends AbstractModel
     public $VideoInfos;
 
     /**
+     * @var string 
+     */
+    public $ReplayUrl;
+
+    /**
+     * @var array Number of video stream interruptions during recording.
+Note: This parameter may return null, indicating that no valid values can be obtained.
+     */
+    public $Interrupts;
+
+    /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
 
     /**
      * @param string $FinishReason Recording stop reason
-- AUTO: recording automatically stops because no upstream audio/video or whiteboard operation occurs in the room for a long time.
-- USER_CALL: the API for stopping recording is called.
-- EXCEPTION: an exception occurred during recording.
+- AUTO: Recording automatically stops because no upstream audio/video or whiteboard operation occurs in the room for a long time.
+- USER_CALL: The API for stopping recording is called.
+- EXCEPTION: An exception occurred.
+- FORCE_STOP: Recording is forcibly stopped, which is usually because the recording has been paused for more than 90 minutes or has lasted for more than 24 hours.
      * @param string $TaskId ID of the recording task to be queried.
      * @param string $Status Recording task status
 - PREPARED: preparing
@@ -159,6 +180,9 @@ class DescribeOnlineRecordResponse extends AbstractModel
      * @param integer $ExceptionCnt Number of exceptions during recording
      * @param array $OmittedDurations Duration to be deleted in the spliced video. This parameter is valid only when the video splicing feature is enabled.
      * @param array $VideoInfos List of recorded videos
+     * @param string $ReplayUrl 
+     * @param array $Interrupts Number of video stream interruptions during recording.
+Note: This parameter may return null, indicating that no valid values can be obtained.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -229,6 +253,19 @@ class DescribeOnlineRecordResponse extends AbstractModel
                 $obj = new VideoInfo();
                 $obj->deserialize($value);
                 array_push($this->VideoInfos, $obj);
+            }
+        }
+
+        if (array_key_exists("ReplayUrl",$param) and $param["ReplayUrl"] !== null) {
+            $this->ReplayUrl = $param["ReplayUrl"];
+        }
+
+        if (array_key_exists("Interrupts",$param) and $param["Interrupts"] !== null) {
+            $this->Interrupts = [];
+            foreach ($param["Interrupts"] as $key => $value){
+                $obj = new Interrupt();
+                $obj->deserialize($value);
+                array_push($this->Interrupts, $obj);
             }
         }
 

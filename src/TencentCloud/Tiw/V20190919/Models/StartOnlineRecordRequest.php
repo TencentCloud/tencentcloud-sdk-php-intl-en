@@ -24,10 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSdkAppId(integer $SdkAppId) Set SdkAppId of the customer
  * @method integer getRoomId() Obtain ID of the room for recording. Value range: (1, 4294967295)
  * @method void setRoomId(integer $RoomId) Set ID of the room for recording. Value range: (1, 4294967295)
- * @method string getRecordUserId() Obtain User ID used by the real-time recording service for entering a room. Its format is `tic_record_user_${RoomId}_${Random}`, where `${RoomId}` indicates the ID of the room for recording and `${Random}` is a random string.
-The ID must be an unused ID in the SDK. The real-time recording service uses the user ID to enter the room for audio, video, and whiteboard recording. If this ID is already used in the SDK, the SDK and recording service will conflict, affecting the recording operation.
- * @method void setRecordUserId(string $RecordUserId) Set User ID used by the real-time recording service for entering a room. Its format is `tic_record_user_${RoomId}_${Random}`, where `${RoomId}` indicates the ID of the room for recording and `${Random}` is a random string.
-The ID must be an unused ID in the SDK. The real-time recording service uses the user ID to enter the room for audio, video, and whiteboard recording. If this ID is already used in the SDK, the SDK and recording service will conflict, affecting the recording operation.
+ * @method string getRecordUserId() Obtain User ID used by the recording service for entering a room. The ID cannot exceed 60 bytes in length. Its format is `tic_record_user_${RoomId}_${Random}`, where `${RoomId}` indicates the ID of the room for recording and `${Random}` is a random string.
+The ID must be an unused ID in the SDK. The recording service uses the user ID to enter the room for audio, video, and whiteboard recording. If this ID is already used in the SDK, the SDK and recording service will conflict, affecting the recording operation.
+ * @method void setRecordUserId(string $RecordUserId) Set User ID used by the recording service for entering a room. The ID cannot exceed 60 bytes in length. Its format is `tic_record_user_${RoomId}_${Random}`, where `${RoomId}` indicates the ID of the room for recording and `${Random}` is a random string.
+The ID must be an unused ID in the SDK. The recording service uses the user ID to enter the room for audio, video, and whiteboard recording. If this ID is already used in the SDK, the SDK and recording service will conflict, affecting the recording operation.
  * @method string getRecordUserSig() Obtain Signature corresponding to RecordUserId
  * @method void setRecordUserSig(string $RecordUserSig) Set Signature corresponding to RecordUserId
  * @method string getGroupId() Obtain (Disused) IM group ID of the whiteboard. By default, it is the same as the room ID.
@@ -54,6 +54,18 @@ MIX_STREAM - Stream mixing feature
  * @method void setAudioFileNeeded(boolean $AudioFileNeeded) Set Whether to return the audio-only recording file of different streams in the result callback. The file format is mp3.
  * @method RecordControl getRecordControl() Obtain A group of real-time recording parameters. It specifies the streams to be recorded, whether to disable the audio recording, and whether to record only low-resolution videos, etc.
  * @method void setRecordControl(RecordControl $RecordControl) Set A group of real-time recording parameters. It specifies the streams to be recorded, whether to disable the audio recording, and whether to record only low-resolution videos, etc.
+ * @method string getRecordMode() Obtain 
+ * @method void setRecordMode(string $RecordMode) Set 
+ * @method string getChatGroupId() Obtain 
+ * @method void setChatGroupId(string $ChatGroupId) Set 
+ * @method integer getAutoStopTimeout() Obtain Recording timeout. Unit: seconds. Valid range: [300,86400]. Default value: 300.
+
+If no upstream audio/video exists or no operation is performed on the whiteboard for the specified period of time, the recording service automatically stops the recording task.
+ * @method void setAutoStopTimeout(integer $AutoStopTimeout) Set Recording timeout. Unit: seconds. Valid range: [300,86400]. Default value: 300.
+
+If no upstream audio/video exists or no operation is performed on the whiteboard for the specified period of time, the recording service automatically stops the recording task.
+ * @method string getExtraData() Obtain Internal parameter. You can ignore this parameter.
+ * @method void setExtraData(string $ExtraData) Set Internal parameter. You can ignore this parameter.
  */
 class StartOnlineRecordRequest extends AbstractModel
 {
@@ -68,8 +80,8 @@ class StartOnlineRecordRequest extends AbstractModel
     public $RoomId;
 
     /**
-     * @var string User ID used by the real-time recording service for entering a room. Its format is `tic_record_user_${RoomId}_${Random}`, where `${RoomId}` indicates the ID of the room for recording and `${Random}` is a random string.
-The ID must be an unused ID in the SDK. The real-time recording service uses the user ID to enter the room for audio, video, and whiteboard recording. If this ID is already used in the SDK, the SDK and recording service will conflict, affecting the recording operation.
+     * @var string User ID used by the recording service for entering a room. The ID cannot exceed 60 bytes in length. Its format is `tic_record_user_${RoomId}_${Random}`, where `${RoomId}` indicates the ID of the room for recording and `${Random}` is a random string.
+The ID must be an unused ID in the SDK. The recording service uses the user ID to enter the room for audio, video, and whiteboard recording. If this ID is already used in the SDK, the SDK and recording service will conflict, affecting the recording operation.
      */
     public $RecordUserId;
 
@@ -119,10 +131,32 @@ MIX_STREAM - Stream mixing feature
     public $RecordControl;
 
     /**
+     * @var string 
+     */
+    public $RecordMode;
+
+    /**
+     * @var string 
+     */
+    public $ChatGroupId;
+
+    /**
+     * @var integer Recording timeout. Unit: seconds. Valid range: [300,86400]. Default value: 300.
+
+If no upstream audio/video exists or no operation is performed on the whiteboard for the specified period of time, the recording service automatically stops the recording task.
+     */
+    public $AutoStopTimeout;
+
+    /**
+     * @var string Internal parameter. You can ignore this parameter.
+     */
+    public $ExtraData;
+
+    /**
      * @param integer $SdkAppId SdkAppId of the customer
      * @param integer $RoomId ID of the room for recording. Value range: (1, 4294967295)
-     * @param string $RecordUserId User ID used by the real-time recording service for entering a room. Its format is `tic_record_user_${RoomId}_${Random}`, where `${RoomId}` indicates the ID of the room for recording and `${Random}` is a random string.
-The ID must be an unused ID in the SDK. The real-time recording service uses the user ID to enter the room for audio, video, and whiteboard recording. If this ID is already used in the SDK, the SDK and recording service will conflict, affecting the recording operation.
+     * @param string $RecordUserId User ID used by the recording service for entering a room. The ID cannot exceed 60 bytes in length. Its format is `tic_record_user_${RoomId}_${Random}`, where `${RoomId}` indicates the ID of the room for recording and `${Random}` is a random string.
+The ID must be an unused ID in the SDK. The recording service uses the user ID to enter the room for audio, video, and whiteboard recording. If this ID is already used in the SDK, the SDK and recording service will conflict, affecting the recording operation.
      * @param string $RecordUserSig Signature corresponding to RecordUserId
      * @param string $GroupId (Disused) IM group ID of the whiteboard. By default, it is the same as the room ID.
      * @param Concat $Concat Real-time recording video splicing parameter
@@ -136,6 +170,12 @@ List of possible values:
 MIX_STREAM - Stream mixing feature
      * @param boolean $AudioFileNeeded Whether to return the audio-only recording file of different streams in the result callback. The file format is mp3.
      * @param RecordControl $RecordControl A group of real-time recording parameters. It specifies the streams to be recorded, whether to disable the audio recording, and whether to record only low-resolution videos, etc.
+     * @param string $RecordMode 
+     * @param string $ChatGroupId 
+     * @param integer $AutoStopTimeout Recording timeout. Unit: seconds. Valid range: [300,86400]. Default value: 300.
+
+If no upstream audio/video exists or no operation is performed on the whiteboard for the specified period of time, the recording service automatically stops the recording task.
+     * @param string $ExtraData Internal parameter. You can ignore this parameter.
      */
     function __construct()
     {
@@ -196,6 +236,22 @@ MIX_STREAM - Stream mixing feature
         if (array_key_exists("RecordControl",$param) and $param["RecordControl"] !== null) {
             $this->RecordControl = new RecordControl();
             $this->RecordControl->deserialize($param["RecordControl"]);
+        }
+
+        if (array_key_exists("RecordMode",$param) and $param["RecordMode"] !== null) {
+            $this->RecordMode = $param["RecordMode"];
+        }
+
+        if (array_key_exists("ChatGroupId",$param) and $param["ChatGroupId"] !== null) {
+            $this->ChatGroupId = $param["ChatGroupId"];
+        }
+
+        if (array_key_exists("AutoStopTimeout",$param) and $param["AutoStopTimeout"] !== null) {
+            $this->AutoStopTimeout = $param["AutoStopTimeout"];
+        }
+
+        if (array_key_exists("ExtraData",$param) and $param["ExtraData"] !== null) {
+            $this->ExtraData = $param["ExtraData"];
         }
     }
 }

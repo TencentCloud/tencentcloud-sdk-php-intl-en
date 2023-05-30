@@ -58,6 +58,14 @@ If the document transcoding request carries the ThumbnailResolution parameter an
  * @method void setThumbnailResolution(string $ThumbnailResolution) Set Resolution of the thumbnail generated for dynamic transcoding
  * @method string getCompressFileUrl() Obtain URL for downloading the transcoded and compressed file. If `CompressFileType` carried in the document transcoding request is null or is not a supported compression format, this parameter is null.
  * @method void setCompressFileUrl(string $CompressFileUrl) Set URL for downloading the transcoded and compressed file. If `CompressFileType` carried in the document transcoding request is null or is not a supported compression format, this parameter is null.
+ * @method string getResourceListUrl() Obtain Download URL (for trial) of the resource list.
+Note: This parameter may return null, indicating that no valid values can be obtained.
+ * @method void setResourceListUrl(string $ResourceListUrl) Set Download URL (for trial) of the resource list.
+Note: This parameter may return null, indicating that no valid values can be obtained.
+ * @method string getExt() Obtain Document generation mode (for trial).
+Note: This parameter may return null, indicating that no valid values can be obtained.
+ * @method void setExt(string $Ext) Set Document generation mode (for trial).
+Note: This parameter may return null, indicating that no valid values can be obtained.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -123,6 +131,18 @@ If the document transcoding request carries the ThumbnailResolution parameter an
     public $CompressFileUrl;
 
     /**
+     * @var string Download URL (for trial) of the resource list.
+Note: This parameter may return null, indicating that no valid values can be obtained.
+     */
+    public $ResourceListUrl;
+
+    /**
+     * @var string Document generation mode (for trial).
+Note: This parameter may return null, indicating that no valid values can be obtained.
+     */
+    public $Ext;
+
+    /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
@@ -147,6 +167,10 @@ Static transcoding: URL prefix of the image transcoded for each document page. F
 If the document transcoding request carries the ThumbnailResolution parameter and the transcoding type is dynamic transcoding, this parameter is not null. In other cases, this parameter is null.
      * @param string $ThumbnailResolution Resolution of the thumbnail generated for dynamic transcoding
      * @param string $CompressFileUrl URL for downloading the transcoded and compressed file. If `CompressFileType` carried in the document transcoding request is null or is not a supported compression format, this parameter is null.
+     * @param string $ResourceListUrl Download URL (for trial) of the resource list.
+Note: This parameter may return null, indicating that no valid values can be obtained.
+     * @param string $Ext Document generation mode (for trial).
+Note: This parameter may return null, indicating that no valid values can be obtained.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -200,6 +224,14 @@ If the document transcoding request carries the ThumbnailResolution parameter an
 
         if (array_key_exists("CompressFileUrl",$param) and $param["CompressFileUrl"] !== null) {
             $this->CompressFileUrl = $param["CompressFileUrl"];
+        }
+
+        if (array_key_exists("ResourceListUrl",$param) and $param["ResourceListUrl"] !== null) {
+            $this->ResourceListUrl = $param["ResourceListUrl"];
+        }
+
+        if (array_key_exists("Ext",$param) and $param["Ext"] !== null) {
+            $this->Ext = $param["Ext"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

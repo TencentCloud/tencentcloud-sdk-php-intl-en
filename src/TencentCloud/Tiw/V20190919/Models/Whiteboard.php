@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Real-time recording whiteboard parameter, such as the whiteboard width and height
  *
- * @method integer getWidth() Obtain Whiteboard video width in the real-time recording result. The default value is 1280.
- * @method void setWidth(integer $Width) Set Whiteboard video width in the real-time recording result. The default value is 1280.
- * @method integer getHeight() Obtain Whiteboard video height in the real-time recording result. The default value is 960.
- * @method void setHeight(integer $Height) Set Whiteboard video height in the real-time recording result. The default value is 960.
+ * @method integer getWidth() Obtain Whiteboard video width in the real-time recording result. The value must be equal to or greater than 2. Default value: 1280.
+ * @method void setWidth(integer $Width) Set Whiteboard video width in the real-time recording result. The value must be equal to or greater than 2. Default value: 1280.
+ * @method integer getHeight() Obtain Whiteboard video height in the real-time recording result. The value must be equal to or greater than 2. Default value: 960.
+ * @method void setHeight(integer $Height) Set Whiteboard video height in the real-time recording result. The value must be equal to or greater than 2. Default value: 960.
  * @method string getInitParam() Obtain Whiteboard initialization parameter, which is passed through to the whiteboard SDK
  * @method void setInitParam(string $InitParam) Set Whiteboard initialization parameter, which is passed through to the whiteboard SDK
  */
 class Whiteboard extends AbstractModel
 {
     /**
-     * @var integer Whiteboard video width in the real-time recording result. The default value is 1280.
+     * @var integer Whiteboard video width in the real-time recording result. The value must be equal to or greater than 2. Default value: 1280.
      */
     public $Width;
 
     /**
-     * @var integer Whiteboard video height in the real-time recording result. The default value is 960.
+     * @var integer Whiteboard video height in the real-time recording result. The value must be equal to or greater than 2. Default value: 960.
      */
     public $Height;
 
@@ -45,8 +45,8 @@ class Whiteboard extends AbstractModel
     public $InitParam;
 
     /**
-     * @param integer $Width Whiteboard video width in the real-time recording result. The default value is 1280.
-     * @param integer $Height Whiteboard video height in the real-time recording result. The default value is 960.
+     * @param integer $Width Whiteboard video width in the real-time recording result. The value must be equal to or greater than 2. Default value: 1280.
+     * @param integer $Height Whiteboard video height in the real-time recording result. The value must be equal to or greater than 2. Default value: 960.
      * @param string $InitParam Whiteboard initialization parameter, which is passed through to the whiteboard SDK
      */
     function __construct()

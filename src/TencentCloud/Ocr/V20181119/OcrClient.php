@@ -53,6 +53,8 @@ This API is not fully available for the time being. For more information, please
  * @method Models\RecognizeIndonesiaIDCardOCRResponse RecognizeIndonesiaIDCardOCR(Models\RecognizeIndonesiaIDCardOCRRequest $req) This API is used to recognize an Indonesian identity card.
 
 The API request rate is limited to 20 requests/sec by default.
+ * @method Models\RecognizeKoreanDrivingLicenseOCRResponse RecognizeKoreanDrivingLicenseOCR(Models\RecognizeKoreanDrivingLicenseOCRRequest $req) This API is used to recognize a South Korean driver's license.
+ * @method Models\RecognizeKoreanIDCardOCRResponse RecognizeKoreanIDCardOCR(Models\RecognizeKoreanIDCardOCRRequest $req) This API is used to recognize a South Korean ID card.
  * @method Models\RecognizePhilippinesDrivingLicenseOCRResponse RecognizePhilippinesDrivingLicenseOCR(Models\RecognizePhilippinesDrivingLicenseOCRRequest $req) This API is used to recognize a Philippine driver's license.
  * @method Models\RecognizePhilippinesSssIDOCRResponse RecognizePhilippinesSssIDOCR(Models\RecognizePhilippinesSssIDOCRRequest $req) This API is used to recognize a Philippine SSSID/UMID card.
  * @method Models\RecognizePhilippinesTinIDOCRResponse RecognizePhilippinesTinIDOCR(Models\RecognizePhilippinesTinIDOCRRequest $req) This API is used to recognize a Philippine TIN ID card.
