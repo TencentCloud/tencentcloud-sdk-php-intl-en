@@ -21,9 +21,9 @@ use TencentCloud\Common\AbstractModel;
  * SendSms request structure.
  *
  * @method array getPhoneNumberSet() Obtain Target mobile number in the E.164 standard in the format of +[country/region code][mobile number]. Up to 200 mobile numbers are supported in one request (which should be all Chinese mainland mobile numbers or all global mobile numbers).
-For example, +8613711112222, which has a + sign followed by 86 (country/region code) and then by 13711112222 (mobile number).
+For example, +60198890000, which has a + sign followed by 60 (country/region code) and then by 198890000 (mobile number).
  * @method void setPhoneNumberSet(array $PhoneNumberSet) Set Target mobile number in the E.164 standard in the format of +[country/region code][mobile number]. Up to 200 mobile numbers are supported in one request (which should be all Chinese mainland mobile numbers or all global mobile numbers).
-For example, +8613711112222, which has a + sign followed by 86 (country/region code) and then by 13711112222 (mobile number).
+For example, +60198890000, which has a + sign followed by 60 (country/region code) and then by 198890000 (mobile number).
  * @method string getSmsSdkAppId() Obtain The SMS `SdkAppId` generated after an application is added in the [SMS console](https://console.cloud.tencent.com/smsv2/app-manage), such as 1400006666.
  * @method void setSmsSdkAppId(string $SmsSdkAppId) Set The SMS `SdkAppId` generated after an application is added in the [SMS console](https://console.cloud.tencent.com/smsv2/app-manage), such as 1400006666.
  * @method string getTemplateId() Obtain Template ID, which can be viewed on the **Body Templates** page in [Global SMS](https://console.cloud.tencent.com/smsv2/isms-template). You must enter the ID of an approved template.
@@ -47,7 +47,7 @@ class SendSmsRequest extends AbstractModel
 {
     /**
      * @var array Target mobile number in the E.164 standard in the format of +[country/region code][mobile number]. Up to 200 mobile numbers are supported in one request (which should be all Chinese mainland mobile numbers or all global mobile numbers).
-For example, +8613711112222, which has a + sign followed by 86 (country/region code) and then by 13711112222 (mobile number).
+For example, +60198890000, which has a + sign followed by 60 (country/region code) and then by 198890000 (mobile number).
      */
     public $PhoneNumberSet;
 
@@ -90,7 +90,7 @@ Note: If your monthly usage reaches the specified threshold, you can apply for a
 
     /**
      * @param array $PhoneNumberSet Target mobile number in the E.164 standard in the format of +[country/region code][mobile number]. Up to 200 mobile numbers are supported in one request (which should be all Chinese mainland mobile numbers or all global mobile numbers).
-For example, +8613711112222, which has a + sign followed by 86 (country/region code) and then by 13711112222 (mobile number).
+For example, +60198890000, which has a + sign followed by 60 (country/region code) and then by 198890000 (mobile number).
      * @param string $SmsSdkAppId The SMS `SdkAppId` generated after an application is added in the [SMS console](https://console.cloud.tencent.com/smsv2/app-manage), such as 1400006666.
      * @param string $TemplateId Template ID, which can be viewed on the **Body Templates** page in [Global SMS](https://console.cloud.tencent.com/smsv2/isms-template). You must enter the ID of an approved template.
      * @param string $SignName SMS signature information which is encoded in UTF-8. You must enter an approved signature (such as Tencent Cloud). The signing information can be viewed on the **Signatures** page in [Global SMS](https://console.cloud.tencent.com/smsv2/isms-sign).
