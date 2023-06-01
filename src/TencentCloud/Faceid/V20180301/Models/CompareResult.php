@@ -20,36 +20,74 @@ use TencentCloud\Common\AbstractModel;
 /**
  * The description of a single comparison result.
  *
- * @method string getErrorCode() Obtain The final comparison result.
- * @method void setErrorCode(string $ErrorCode) Set The final comparison result.
- * @method string getErrorMsg() Obtain The description of the final comparison result.
- * @method void setErrorMsg(string $ErrorMsg) Set The description of the final comparison result.
+ * @method string getErrorCode() Obtain The final verification result code.
+0: Success.
+1001: Failed to call the liveness detection engine.
+1004: Face detection failed.
+2004: The uploaded face image is too large or too small.
+2012: The face is not fully exposed.
+2013: No face is detected.
+2014: The resolution of the uploaded image is too low . Please upload a new one.
+2015: Face comparison failed.
+2016: The similarity did not reach the passing standard.
+ * @method void setErrorCode(string $ErrorCode) Set The final verification result code.
+0: Success.
+1001: Failed to call the liveness detection engine.
+1004: Face detection failed.
+2004: The uploaded face image is too large or too small.
+2012: The face is not fully exposed.
+2013: No face is detected.
+2014: The resolution of the uploaded image is too low . Please upload a new one.
+2015: Face comparison failed.
+2016: The similarity did not reach the passing standard.
+ * @method string getErrorMsg() Obtain The description of the final verification result.
+ * @method void setErrorMsg(string $ErrorMsg) Set The description of the final verification result.
  * @method FileInfo getLiveData() Obtain 
  * @method void setLiveData(FileInfo $LiveData) Set 
- * @method FileInfo getLiveVideo() Obtain The video for this liveness detection process. The URL is valid for 10 minutes.
- * @method void setLiveVideo(FileInfo $LiveVideo) Set The video for this liveness detection process. The URL is valid for 10 minutes.
- * @method string getLiveErrorCode() Obtain The code of the liveness detection result.
- * @method void setLiveErrorCode(string $LiveErrorCode) Set The code of the liveness detection result.
+ * @method FileInfo getLiveVideo() Obtain The download URL of the video used for verification, which is valid for 10 minutes.
+ * @method void setLiveVideo(FileInfo $LiveVideo) Set The download URL of the video used for verification, which is valid for 10 minutes.
+ * @method string getLiveErrorCode() Obtain The liveness detection result code.
+0: Success.
+1001: Failed to call the liveness detection engine.
+1004: Face detection failed.
+ * @method void setLiveErrorCode(string $LiveErrorCode) Set The liveness detection result code.
+0: Success.
+1001: Failed to call the liveness detection engine.
+1004: Face detection failed.
  * @method string getLiveErrorMsg() Obtain The description of the liveness detection result.
  * @method void setLiveErrorMsg(string $LiveErrorMsg) Set The description of the liveness detection result.
- * @method FileInfo getBestFrame() Obtain The best face screenshot in this liveness detection. The URL is valid for 10 minutes.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setBestFrame(FileInfo $BestFrame) Set The best face screenshot in this liveness detection. The URL is valid for 10 minutes.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method FileInfo getProfileImage() Obtain The profile photo screenshot from the identity document. The URL is valid for 10 minutes.
- * @method void setProfileImage(FileInfo $ProfileImage) Set The profile photo screenshot from the identity document. The URL is valid for 10 minutes.
- * @method string getCompareErrorCode() Obtain The code of the face comparison result.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setCompareErrorCode(string $CompareErrorCode) Set The code of the face comparison result.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method FileInfo getBestFrame() Obtain The download URL of the face screenshot during verification, which is valid for 10 minutes.
+Note: This field may return null, indicating that no valid value can be obtained.
+ * @method void setBestFrame(FileInfo $BestFrame) Set The download URL of the face screenshot during verification, which is valid for 10 minutes.
+Note: This field may return null, indicating that no valid value can be obtained.
+ * @method FileInfo getProfileImage() Obtain The download URL of the profile photo screenshot from the identity document, which is valid for 10 minutes.
+ * @method void setProfileImage(FileInfo $ProfileImage) Set The download URL of the profile photo screenshot from the identity document, which is valid for 10 minutes.
+ * @method string getCompareErrorCode() Obtain The face comparison result code.
+0: Success.
+2004: The uploaded face image is too large or too small.
+2012: The face is not fully exposed.
+2013: No face is detected.
+2014: The resolution of the uploaded image is too low . Please upload a new one.
+2015: Face comparison failed.
+2016: The similarity did not reach the passing standard.
+Note: This field may return null, indicating that no valid value can be obtained.
+ * @method void setCompareErrorCode(string $CompareErrorCode) Set The face comparison result code.
+0: Success.
+2004: The uploaded face image is too large or too small.
+2012: The face is not fully exposed.
+2013: No face is detected.
+2014: The resolution of the uploaded image is too low . Please upload a new one.
+2015: Face comparison failed.
+2016: The similarity did not reach the passing standard.
+Note: This field may return null, indicating that no valid value can be obtained.
  * @method string getCompareErrorMsg() Obtain The description of the face comparison result.
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setCompareErrorMsg(string $CompareErrorMsg) Set The description of the face comparison result.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method float getSim() Obtain Similarity
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setSim(float $Sim) Set Similarity
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method float getSim() Obtain The similarity score of face comparison.
+Note: This field may return null, indicating that no valid value can be obtained.
+ * @method void setSim(float $Sim) Set The similarity score of face comparison.
+Note: This field may return null, indicating that no valid value can be obtained.
  * @method boolean getIsNeedCharge() Obtain This field is disused.
  * @method void setIsNeedCharge(boolean $IsNeedCharge) Set This field is disused.
  * @method FileInfo getCardInfoInputJson() Obtain The identity document photo info edited by the user in JSON. If the value of `DisableChangeOcrResult` is `true`, the editing feature is disabled and this field does not exist. The URL is valid for 10 minutes.
@@ -100,12 +138,21 @@ Note: This field may return null, indicating that no valid values can be obtaine
 class CompareResult extends AbstractModel
 {
     /**
-     * @var string The final comparison result.
+     * @var string The final verification result code.
+0: Success.
+1001: Failed to call the liveness detection engine.
+1004: Face detection failed.
+2004: The uploaded face image is too large or too small.
+2012: The face is not fully exposed.
+2013: No face is detected.
+2014: The resolution of the uploaded image is too low . Please upload a new one.
+2015: Face comparison failed.
+2016: The similarity did not reach the passing standard.
      */
     public $ErrorCode;
 
     /**
-     * @var string The description of the final comparison result.
+     * @var string The description of the final verification result.
      */
     public $ErrorMsg;
 
@@ -115,12 +162,15 @@ class CompareResult extends AbstractModel
     public $LiveData;
 
     /**
-     * @var FileInfo The video for this liveness detection process. The URL is valid for 10 minutes.
+     * @var FileInfo The download URL of the video used for verification, which is valid for 10 minutes.
      */
     public $LiveVideo;
 
     /**
-     * @var string The code of the liveness detection result.
+     * @var string The liveness detection result code.
+0: Success.
+1001: Failed to call the liveness detection engine.
+1004: Face detection failed.
      */
     public $LiveErrorCode;
 
@@ -130,19 +180,26 @@ class CompareResult extends AbstractModel
     public $LiveErrorMsg;
 
     /**
-     * @var FileInfo The best face screenshot in this liveness detection. The URL is valid for 10 minutes.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var FileInfo The download URL of the face screenshot during verification, which is valid for 10 minutes.
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public $BestFrame;
 
     /**
-     * @var FileInfo The profile photo screenshot from the identity document. The URL is valid for 10 minutes.
+     * @var FileInfo The download URL of the profile photo screenshot from the identity document, which is valid for 10 minutes.
      */
     public $ProfileImage;
 
     /**
-     * @var string The code of the face comparison result.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string The face comparison result code.
+0: Success.
+2004: The uploaded face image is too large or too small.
+2012: The face is not fully exposed.
+2013: No face is detected.
+2014: The resolution of the uploaded image is too low . Please upload a new one.
+2015: Face comparison failed.
+2016: The similarity did not reach the passing standard.
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public $CompareErrorCode;
 
@@ -153,8 +210,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $CompareErrorMsg;
 
     /**
-     * @var float Similarity
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var float The similarity score of face comparison.
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public $Sim;
 
@@ -194,21 +251,40 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $RequestId;
 
     /**
-     * @param string $ErrorCode The final comparison result.
-     * @param string $ErrorMsg The description of the final comparison result.
+     * @param string $ErrorCode The final verification result code.
+0: Success.
+1001: Failed to call the liveness detection engine.
+1004: Face detection failed.
+2004: The uploaded face image is too large or too small.
+2012: The face is not fully exposed.
+2013: No face is detected.
+2014: The resolution of the uploaded image is too low . Please upload a new one.
+2015: Face comparison failed.
+2016: The similarity did not reach the passing standard.
+     * @param string $ErrorMsg The description of the final verification result.
      * @param FileInfo $LiveData 
-     * @param FileInfo $LiveVideo The video for this liveness detection process. The URL is valid for 10 minutes.
-     * @param string $LiveErrorCode The code of the liveness detection result.
+     * @param FileInfo $LiveVideo The download URL of the video used for verification, which is valid for 10 minutes.
+     * @param string $LiveErrorCode The liveness detection result code.
+0: Success.
+1001: Failed to call the liveness detection engine.
+1004: Face detection failed.
      * @param string $LiveErrorMsg The description of the liveness detection result.
-     * @param FileInfo $BestFrame The best face screenshot in this liveness detection. The URL is valid for 10 minutes.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param FileInfo $ProfileImage The profile photo screenshot from the identity document. The URL is valid for 10 minutes.
-     * @param string $CompareErrorCode The code of the face comparison result.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param FileInfo $BestFrame The download URL of the face screenshot during verification, which is valid for 10 minutes.
+Note: This field may return null, indicating that no valid value can be obtained.
+     * @param FileInfo $ProfileImage The download URL of the profile photo screenshot from the identity document, which is valid for 10 minutes.
+     * @param string $CompareErrorCode The face comparison result code.
+0: Success.
+2004: The uploaded face image is too large or too small.
+2012: The face is not fully exposed.
+2013: No face is detected.
+2014: The resolution of the uploaded image is too low . Please upload a new one.
+2015: Face comparison failed.
+2016: The similarity did not reach the passing standard.
+Note: This field may return null, indicating that no valid value can be obtained.
      * @param string $CompareErrorMsg The description of the face comparison result.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param float $Sim Similarity
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param float $Sim The similarity score of face comparison.
+Note: This field may return null, indicating that no valid value can be obtained.
      * @param boolean $IsNeedCharge This field is disused.
      * @param FileInfo $CardInfoInputJson The identity document photo info edited by the user in JSON. If the value of `DisableChangeOcrResult` is `true`, the editing feature is disabled and this field does not exist. The URL is valid for 10 minutes.
 When the value of `IdCardType` is `HK`:
