@@ -44,8 +44,8 @@ Tencent Cloud team &lt;noreply@mail.qcloud.com&gt;
  * @method void setCycleParam(CycleEmailParam $CycleParam) Set Parameter required for a recurring sending task
  * @method TimedEmailParam getTimedParam() Obtain Parameter required for a scheduled sending task
  * @method void setTimedParam(TimedEmailParam $TimedParam) Set Parameter required for a scheduled sending task
- * @method string getUnsubscribe() Obtain Unsubscribe link option. `0`: Do not add unsubscribe link; `1`: English `2`: Simplified Chinese; `3`: Traditional Chinese; `4`: Spanish; `5`: French; `6`: German; `7`: Japanese; `8`: Korean; `9`: Arabic
- * @method void setUnsubscribe(string $Unsubscribe) Set Unsubscribe link option. `0`: Do not add unsubscribe link; `1`: English `2`: Simplified Chinese; `3`: Traditional Chinese; `4`: Spanish; `5`: French; `6`: German; `7`: Japanese; `8`: Korean; `9`: Arabic
+ * @method string getUnsubscribe() Obtain Unsubscribe link option. `0`: Do not add unsubscribe link; `1`: English `2`: Simplified Chinese; `3`: Traditional Chinese; `4`: Spanish; `5`: French; `6`: German; `7`: Japanese; `8`: Korean; `9`: Arabic; `10`: Thai
+ * @method void setUnsubscribe(string $Unsubscribe) Set Unsubscribe link option. `0`: Do not add unsubscribe link; `1`: English `2`: Simplified Chinese; `3`: Traditional Chinese; `4`: Spanish; `5`: French; `6`: German; `7`: Japanese; `8`: Korean; `9`: Arabic; `10`: Thai
  * @method integer getADLocation() Obtain Whether to add an ad tag. `0`: Add no tag; `1`: Add before the subject; `2`: Add after the subject.
  * @method void setADLocation(integer $ADLocation) Set Whether to add an ad tag. `0`: Add no tag; `1`: Add before the subject; `2`: Add after the subject.
  */
@@ -104,7 +104,7 @@ Tencent Cloud team &lt;noreply@mail.qcloud.com&gt;
     public $TimedParam;
 
     /**
-     * @var string Unsubscribe link option. `0`: Do not add unsubscribe link; `1`: English `2`: Simplified Chinese; `3`: Traditional Chinese; `4`: Spanish; `5`: French; `6`: German; `7`: Japanese; `8`: Korean; `9`: Arabic
+     * @var string Unsubscribe link option. `0`: Do not add unsubscribe link; `1`: English `2`: Simplified Chinese; `3`: Traditional Chinese; `4`: Spanish; `5`: French; `6`: German; `7`: Japanese; `8`: Korean; `9`: Arabic; `10`: Thai
      */
     public $Unsubscribe;
 
@@ -126,7 +126,7 @@ Tencent Cloud team &lt;noreply@mail.qcloud.com&gt;
      * @param array $Attachments Attachment parameters to set when you need to send attachments. This parameter is currently unavailable.
      * @param CycleEmailParam $CycleParam Parameter required for a recurring sending task
      * @param TimedEmailParam $TimedParam Parameter required for a scheduled sending task
-     * @param string $Unsubscribe Unsubscribe link option. `0`: Do not add unsubscribe link; `1`: English `2`: Simplified Chinese; `3`: Traditional Chinese; `4`: Spanish; `5`: French; `6`: German; `7`: Japanese; `8`: Korean; `9`: Arabic
+     * @param string $Unsubscribe Unsubscribe link option. `0`: Do not add unsubscribe link; `1`: English `2`: Simplified Chinese; `3`: Traditional Chinese; `4`: Spanish; `5`: French; `6`: German; `7`: Japanese; `8`: Korean; `9`: Arabic; `10`: Thai
      * @param integer $ADLocation Whether to add an ad tag. `0`: Add no tag; `1`: Add before the subject; `2`: Add after the subject.
      */
     function __construct()

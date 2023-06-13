@@ -32,14 +32,18 @@ Sender <email address>
  * @method void setSubject(string $Subject) Set Email subject.
  * @method string getReplyToAddresses() Obtain Reply-to address. You can enter a valid personal email address that can receive emails. If this parameter is left empty, reply emails will fail to be sent.
  * @method void setReplyToAddresses(string $ReplyToAddresses) Set Reply-to address. You can enter a valid personal email address that can receive emails. If this parameter is left empty, reply emails will fail to be sent.
+ * @method array getCc() Obtain 
+ * @method void setCc(array $Cc) Set 
+ * @method array getBcc() Obtain 
+ * @method void setBcc(array $Bcc) Set 
  * @method Template getTemplate() Obtain Template parameters for template-based sending. As `Simple` has been disused, `Template` is required.
  * @method void setTemplate(Template $Template) Set Template parameters for template-based sending. As `Simple` has been disused, `Template` is required.
  * @method Simple getSimple() Obtain Disused
  * @method void setSimple(Simple $Simple) Set Disused
  * @method array getAttachments() Obtain Parameters for the attachments to be sent. The TencentCloud API supports a request packet of up to 8 MB in size, and the size of the attachment content will increase by 1.5 times after Base64 encoding. Therefore, you need to keep the total size of all attachments below 4 MB. If the entire request exceeds 8 MB, the API will return an error.
  * @method void setAttachments(array $Attachments) Set Parameters for the attachments to be sent. The TencentCloud API supports a request packet of up to 8 MB in size, and the size of the attachment content will increase by 1.5 times after Base64 encoding. Therefore, you need to keep the total size of all attachments below 4 MB. If the entire request exceeds 8 MB, the API will return an error.
- * @method string getUnsubscribe() Obtain Unsubscribe link option. `0`: Do not add unsubscribe link; `1`: English `2`: Simplified Chinese; `3`: Traditional Chinese; `4`: Spanish; `5`: French; `6`: German; `7`: Japanese; `8`: Korean; `9`: Arabic
- * @method void setUnsubscribe(string $Unsubscribe) Set Unsubscribe link option. `0`: Do not add unsubscribe link; `1`: English `2`: Simplified Chinese; `3`: Traditional Chinese; `4`: Spanish; `5`: French; `6`: German; `7`: Japanese; `8`: Korean; `9`: Arabic
+ * @method string getUnsubscribe() Obtain Unsubscribe link option. `0`: Do not add unsubscribe link; `1`: English `2`: Simplified Chinese; `3`: Traditional Chinese; `4`: Spanish; `5`: French; `6`: German; `7`: Japanese; `8`: Korean; `9`: Arabic; `10`: Thai
+ * @method void setUnsubscribe(string $Unsubscribe) Set Unsubscribe link option. `0`: Do not add unsubscribe link; `1`: English `2`: Simplified Chinese; `3`: Traditional Chinese; `4`: Spanish; `5`: French; `6`: German; `7`: Japanese; `8`: Korean; `9`: Arabic; `10`: Thai
  * @method integer getTriggerType() Obtain Email triggering type. `0` (default): non-trigger-based, suitable for marketing emails and non-immediate emails; `1`: trigger-based, suitable for immediate emails such as emails containing verification codes. If the size of an email exceeds a specified value, the system will automatically choose the non-trigger-based type.
  * @method void setTriggerType(integer $TriggerType) Set Email triggering type. `0` (default): non-trigger-based, suitable for marketing emails and non-immediate emails; `1`: trigger-based, suitable for immediate emails such as emails containing verification codes. If the size of an email exceeds a specified value, the system will automatically choose the non-trigger-based type.
  */
@@ -68,6 +72,16 @@ Sender <email address>
     public $ReplyToAddresses;
 
     /**
+     * @var array 
+     */
+    public $Cc;
+
+    /**
+     * @var array 
+     */
+    public $Bcc;
+
+    /**
      * @var Template Template parameters for template-based sending. As `Simple` has been disused, `Template` is required.
      */
     public $Template;
@@ -83,7 +97,7 @@ Sender <email address>
     public $Attachments;
 
     /**
-     * @var string Unsubscribe link option. `0`: Do not add unsubscribe link; `1`: English `2`: Simplified Chinese; `3`: Traditional Chinese; `4`: Spanish; `5`: French; `6`: German; `7`: Japanese; `8`: Korean; `9`: Arabic
+     * @var string Unsubscribe link option. `0`: Do not add unsubscribe link; `1`: English `2`: Simplified Chinese; `3`: Traditional Chinese; `4`: Spanish; `5`: French; `6`: German; `7`: Japanese; `8`: Korean; `9`: Arabic; `10`: Thai
      */
     public $Unsubscribe;
 
@@ -99,10 +113,12 @@ Sender <email address>
      * @param array $Destination Recipient email addresses. You can send an email to up to 50 recipients at a time. Note: the email content will display all recipient addresses. To send one-to-one emails to several recipients, please call the API multiple times to send the emails.
      * @param string $Subject Email subject.
      * @param string $ReplyToAddresses Reply-to address. You can enter a valid personal email address that can receive emails. If this parameter is left empty, reply emails will fail to be sent.
+     * @param array $Cc 
+     * @param array $Bcc 
      * @param Template $Template Template parameters for template-based sending. As `Simple` has been disused, `Template` is required.
      * @param Simple $Simple Disused
      * @param array $Attachments Parameters for the attachments to be sent. The TencentCloud API supports a request packet of up to 8 MB in size, and the size of the attachment content will increase by 1.5 times after Base64 encoding. Therefore, you need to keep the total size of all attachments below 4 MB. If the entire request exceeds 8 MB, the API will return an error.
-     * @param string $Unsubscribe Unsubscribe link option. `0`: Do not add unsubscribe link; `1`: English `2`: Simplified Chinese; `3`: Traditional Chinese; `4`: Spanish; `5`: French; `6`: German; `7`: Japanese; `8`: Korean; `9`: Arabic
+     * @param string $Unsubscribe Unsubscribe link option. `0`: Do not add unsubscribe link; `1`: English `2`: Simplified Chinese; `3`: Traditional Chinese; `4`: Spanish; `5`: French; `6`: German; `7`: Japanese; `8`: Korean; `9`: Arabic; `10`: Thai
      * @param integer $TriggerType Email triggering type. `0` (default): non-trigger-based, suitable for marketing emails and non-immediate emails; `1`: trigger-based, suitable for immediate emails such as emails containing verification codes. If the size of an email exceeds a specified value, the system will automatically choose the non-trigger-based type.
      */
     function __construct()
@@ -132,6 +148,14 @@ Sender <email address>
 
         if (array_key_exists("ReplyToAddresses",$param) and $param["ReplyToAddresses"] !== null) {
             $this->ReplyToAddresses = $param["ReplyToAddresses"];
+        }
+
+        if (array_key_exists("Cc",$param) and $param["Cc"] !== null) {
+            $this->Cc = $param["Cc"];
+        }
+
+        if (array_key_exists("Bcc",$param) and $param["Bcc"] !== null) {
+            $this->Bcc = $param["Bcc"];
         }
 
         if (array_key_exists("Template",$param) and $param["Template"] !== null) {
