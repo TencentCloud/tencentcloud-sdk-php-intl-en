@@ -18,52 +18,52 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Referer blacklist/whitelist configuration rules, which is effective for specific resources.
  *
- * @method string getRuleType() Obtain 
- * @method void setRuleType(string $RuleType) Set 
- * @method array getRulePaths() Obtain 
- * @method void setRulePaths(array $RulePaths) Set 
- * @method string getRefererType() Obtain 
- * @method void setRefererType(string $RefererType) Set 
- * @method array getReferers() Obtain 
- * @method void setReferers(array $Referers) Set 
- * @method boolean getAllowEmpty() Obtain 
- * @method void setAllowEmpty(boolean $AllowEmpty) Set 
+ * @method string getRuleType() Obtain Rule types: <li>all: Apply to all files.</li> <li>file: Apply to files with the specified suffixes.</li> <li>directory: Apply to specified paths.</li> <li>path: Apply to specified absolute paths.</li>
+ * @method void setRuleType(string $RuleType) Set Rule types: <li>all: Apply to all files.</li> <li>file: Apply to files with the specified suffixes.</li> <li>directory: Apply to specified paths.</li> <li>path: Apply to specified absolute paths.</li>
+ * @method array getRulePaths() Obtain Content for each RuleType:<li>For all, enter a wildcard *.</li> <li>For file, enter a suffix, e.g., jpg or txt.</li> <li>For directory, enter a path, e.g., /xxx/test/.</li> <li>For path, enter an absolute path, e.g., /xxx/test.html.</li>
+ * @method void setRulePaths(array $RulePaths) Set Content for each RuleType:<li>For all, enter a wildcard *.</li> <li>For file, enter a suffix, e.g., jpg or txt.</li> <li>For directory, enter a path, e.g., /xxx/test/.</li> <li>For path, enter an absolute path, e.g., /xxx/test.html.</li>
+ * @method string getRefererType() Obtain Referer configuration types:<li>whitelist：Allowlist;</li> <li>blacklist:Blocklist.</li>
+ * @method void setRefererType(string $RefererType) Set Referer configuration types:<li>whitelist：Allowlist;</li> <li>blacklist:Blocklist.</li>
+ * @method array getReferers() Obtain Referer content list
+ * @method void setReferers(array $Referers) Set Referer content list
+ * @method boolean getAllowEmpty() Obtain Whether to allow empty referer：true: Allow empty referer when RefererType = whitelist; false: Reject empty refer when RefererType = blacklist.
+ * @method void setAllowEmpty(boolean $AllowEmpty) Set Whether to allow empty referer：true: Allow empty referer when RefererType = whitelist; false: Reject empty refer when RefererType = blacklist.
  */
 class RefererRule extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Rule types: <li>all: Apply to all files.</li> <li>file: Apply to files with the specified suffixes.</li> <li>directory: Apply to specified paths.</li> <li>path: Apply to specified absolute paths.</li>
      */
     public $RuleType;
 
     /**
-     * @var array 
+     * @var array Content for each RuleType:<li>For all, enter a wildcard *.</li> <li>For file, enter a suffix, e.g., jpg or txt.</li> <li>For directory, enter a path, e.g., /xxx/test/.</li> <li>For path, enter an absolute path, e.g., /xxx/test.html.</li>
      */
     public $RulePaths;
 
     /**
-     * @var string 
+     * @var string Referer configuration types:<li>whitelist：Allowlist;</li> <li>blacklist:Blocklist.</li>
      */
     public $RefererType;
 
     /**
-     * @var array 
+     * @var array Referer content list
      */
     public $Referers;
 
     /**
-     * @var boolean 
+     * @var boolean Whether to allow empty referer：true: Allow empty referer when RefererType = whitelist; false: Reject empty refer when RefererType = blacklist.
      */
     public $AllowEmpty;
 
     /**
-     * @param string $RuleType 
-     * @param array $RulePaths 
-     * @param string $RefererType 
-     * @param array $Referers 
-     * @param boolean $AllowEmpty 
+     * @param string $RuleType Rule types: <li>all: Apply to all files.</li> <li>file: Apply to files with the specified suffixes.</li> <li>directory: Apply to specified paths.</li> <li>path: Apply to specified absolute paths.</li>
+     * @param array $RulePaths Content for each RuleType:<li>For all, enter a wildcard *.</li> <li>For file, enter a suffix, e.g., jpg or txt.</li> <li>For directory, enter a path, e.g., /xxx/test/.</li> <li>For path, enter an absolute path, e.g., /xxx/test.html.</li>
+     * @param string $RefererType Referer configuration types:<li>whitelist：Allowlist;</li> <li>blacklist:Blocklist.</li>
+     * @param array $Referers Referer content list
+     * @param boolean $AllowEmpty Whether to allow empty referer：true: Allow empty referer when RefererType = whitelist; false: Reject empty refer when RefererType = blacklist.
      */
     function __construct()
     {

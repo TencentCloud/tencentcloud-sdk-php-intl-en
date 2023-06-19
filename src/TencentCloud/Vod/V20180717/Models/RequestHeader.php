@@ -18,28 +18,28 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Custom request header configuration. This is disabled by default.
  *
- * @method string getSwitch() Obtain 
- * @method void setSwitch(string $Switch) Set 
- * @method array getHeaderRules() Obtain 
- * @method void setHeaderRules(array $HeaderRules) Set 
+ * @method string getSwitch() Obtain Custom request header configuration switch: <li>on：Enable;</li> <li>off：Disable.</li>
+ * @method void setSwitch(string $Switch) Set Custom request header configuration switch: <li>on：Enable;</li> <li>off：Disable.</li>
+ * @method array getHeaderRules() Obtain Custom request header configuration rules
+ * @method void setHeaderRules(array $HeaderRules) Set Custom request header configuration rules
  */
 class RequestHeader extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Custom request header configuration switch: <li>on：Enable;</li> <li>off：Disable.</li>
      */
     public $Switch;
 
     /**
-     * @var array 
+     * @var array Custom request header configuration rules
      */
     public $HeaderRules;
 
     /**
-     * @param string $Switch 
-     * @param array $HeaderRules 
+     * @param string $Switch Custom request header configuration switch: <li>on：Enable;</li> <li>off：Disable.</li>
+     * @param array $HeaderRules Custom request header configuration rules
      */
     function __construct()
     {

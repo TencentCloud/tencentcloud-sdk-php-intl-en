@@ -18,28 +18,28 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Heuristic cache configuration
  *
- * @method string getHeuristicCacheTimeSwitch() Obtain 
- * @method void setHeuristicCacheTimeSwitch(string $HeuristicCacheTimeSwitch) Set 
- * @method integer getHeuristicCacheTime() Obtain 
- * @method void setHeuristicCacheTime(integer $HeuristicCacheTime) Set 
+ * @method string getHeuristicCacheTimeSwitch() Obtain Heuristic cache configuration switch:<li>on:Enable.</li> <li>off: Disable.</li>
+ * @method void setHeuristicCacheTimeSwitch(string $HeuristicCacheTimeSwitch) Set Heuristic cache configuration switch:<li>on:Enable.</li> <li>off: Disable.</li>
+ * @method integer getHeuristicCacheTime() Obtain Unit: seconds.
+ * @method void setHeuristicCacheTime(integer $HeuristicCacheTime) Set Unit: seconds.
  */
 class HeuristicCacheConfig extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Heuristic cache configuration switch:<li>on:Enable.</li> <li>off: Disable.</li>
      */
     public $HeuristicCacheTimeSwitch;
 
     /**
-     * @var integer 
+     * @var integer Unit: seconds.
      */
     public $HeuristicCacheTime;
 
     /**
-     * @param string $HeuristicCacheTimeSwitch 
-     * @param integer $HeuristicCacheTime 
+     * @param string $HeuristicCacheTimeSwitch Heuristic cache configuration switch:<li>on:Enable.</li> <li>off: Disable.</li>
+     * @param integer $HeuristicCacheTime Unit: seconds.
      */
     function __construct()
     {

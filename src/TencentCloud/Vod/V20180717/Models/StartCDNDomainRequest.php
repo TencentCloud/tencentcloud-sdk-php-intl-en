@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * StartCDNDomain request structure.
  *
- * @method string getDomain() Obtain Domain name.
- * @method void setDomain(string $Domain) Set Domain name.
- * @method string getOperation() Obtain Domain name operation, value: <li>start: enable;</li> <li>stop: disable. </li>
- * @method void setOperation(string $Operation) Set Domain name operation, value: <li>start: enable;</li> <li>stop: disable. </li>
+ * @method string getDomain() Obtain Domain.
+ * @method void setDomain(string $Domain) Set Domain.
+ * @method string getOperation() Obtain Domain operation, value: <li>start: enable;</li> <li>stop: disable. </li>
+ * @method void setOperation(string $Operation) Set Domain operation, value: <li>start: enable;</li> <li>stop: disable. </li>
  * @method integer getSubAppId() Obtain VOD[Subapplication](/document/product/266/14574) ID。If you want to access resources in a Subapplication, fill this field with the Subapplication ID; otherwise, you don't need to fill in this field.
  * @method void setSubAppId(integer $SubAppId) Set VOD[Subapplication](/document/product/266/14574) ID。If you want to access resources in a Subapplication, fill this field with the Subapplication ID; otherwise, you don't need to fill in this field.
  */
 class StartCDNDomainRequest extends AbstractModel
 {
     /**
-     * @var string Domain name.
+     * @var string Domain.
      */
     public $Domain;
 
     /**
-     * @var string Domain name operation, value: <li>start: enable;</li> <li>stop: disable. </li>
+     * @var string Domain operation, value: <li>start: enable;</li> <li>stop: disable. </li>
      */
     public $Operation;
 
@@ -45,8 +45,8 @@ class StartCDNDomainRequest extends AbstractModel
     public $SubAppId;
 
     /**
-     * @param string $Domain Domain name.
-     * @param string $Operation Domain name operation, value: <li>start: enable;</li> <li>stop: disable. </li>
+     * @param string $Domain Domain.
+     * @param string $Operation Domain operation, value: <li>start: enable;</li> <li>stop: disable. </li>
      * @param integer $SubAppId VOD[Subapplication](/document/product/266/14574) ID。If you want to access resources in a Subapplication, fill this field with the Subapplication ID; otherwise, you don't need to fill in this field.
      */
     function __construct()

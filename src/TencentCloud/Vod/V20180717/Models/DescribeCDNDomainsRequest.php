@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeCDNDomains request structure.
  *
- * @method array getDomains() Obtain List of domain names. If this field is left blank, all domain name information will be listed by default.
- * @method void setDomains(array $Domains) Set List of domain names. If this field is left blank, all domain name information will be listed by default.
+ * @method array getDomains() Obtain List of domain. If this field is left blank, all domain information will be listed by default.
+ * @method void setDomains(array $Domains) Set List of domain. If this field is left blank, all domain information will be listed by default.
  * @method integer getLimit() Obtain The maximum number of returned results for pagination fetching. Default value: 20.
  * @method void setLimit(integer $Limit) Set The maximum number of returned results for pagination fetching. Default value: 20.
  * @method integer getOffset() Obtain The starting offset for page fetching. Default value: 0.
@@ -32,7 +32,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeCDNDomainsRequest extends AbstractModel
 {
     /**
-     * @var array List of domain names. If this field is left blank, all domain name information will be listed by default.
+     * @var array List of domain. If this field is left blank, all domain information will be listed by default.
      */
     public $Domains;
 
@@ -52,7 +52,7 @@ class DescribeCDNDomainsRequest extends AbstractModel
     public $SubAppId;
 
     /**
-     * @param array $Domains List of domain names. If this field is left blank, all domain name information will be listed by default.
+     * @param array $Domains List of domain. If this field is left blank, all domain information will be listed by default.
      * @param integer $Limit The maximum number of returned results for pagination fetching. Default value: 20.
      * @param integer $Offset The starting offset for page fetching. Default value: 0.
      * @param integer $SubAppId VOD[Subapplication](/document/product/266/14574) ID。If you want to access resources in a Subapplication, fill this field with the Subapplication ID; otherwise, you don't need to fill in this field.

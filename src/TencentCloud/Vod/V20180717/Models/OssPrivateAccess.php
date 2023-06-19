@@ -18,52 +18,52 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Access authentication configuration for OSS origin
  *
- * @method string getSwitch() Obtain 
- * @method void setSwitch(string $Switch) Set 
- * @method string getAccessKey() Obtain 
- * @method void setAccessKey(string $AccessKey) Set 
- * @method string getSecretKey() Obtain 
- * @method void setSecretKey(string $SecretKey) Set 
- * @method string getRegion() Obtain 
- * @method void setRegion(string $Region) Set 
- * @method string getBucket() Obtain 
- * @method void setBucket(string $Bucket) Set 
+ * @method string getSwitch() Obtain Alibaba Cloud OSS back-to-origin authentication configuration switch, the values are:<li>on:Enable;</li> <li>off: Disable.</li>
+ * @method void setSwitch(string $Switch) Set Alibaba Cloud OSS back-to-origin authentication configuration switch, the values are:<li>on:Enable;</li> <li>off: Disable.</li>
+ * @method string getAccessKey() Obtain Access ID.
+ * @method void setAccessKey(string $AccessKey) Set Access ID.
+ * @method string getSecretKey() Obtain Key.
+ * @method void setSecretKey(string $SecretKey) Set Key.
+ * @method string getRegion() Obtain Region.
+ * @method void setRegion(string $Region) Set Region.
+ * @method string getBucket() Obtain BucketName.
+ * @method void setBucket(string $Bucket) Set BucketName.
  */
 class OssPrivateAccess extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Alibaba Cloud OSS back-to-origin authentication configuration switch, the values are:<li>on:Enable;</li> <li>off: Disable.</li>
      */
     public $Switch;
 
     /**
-     * @var string 
+     * @var string Access ID.
      */
     public $AccessKey;
 
     /**
-     * @var string 
+     * @var string Key.
      */
     public $SecretKey;
 
     /**
-     * @var string 
+     * @var string Region.
      */
     public $Region;
 
     /**
-     * @var string 
+     * @var string BucketName.
      */
     public $Bucket;
 
     /**
-     * @param string $Switch 
-     * @param string $AccessKey 
-     * @param string $SecretKey 
-     * @param string $Region 
-     * @param string $Bucket 
+     * @param string $Switch Alibaba Cloud OSS back-to-origin authentication configuration switch, the values are:<li>on:Enable;</li> <li>off: Disable.</li>
+     * @param string $AccessKey Access ID.
+     * @param string $SecretKey Key.
+     * @param string $Region Region.
+     * @param string $Bucket BucketName.
      */
     function __construct()
     {

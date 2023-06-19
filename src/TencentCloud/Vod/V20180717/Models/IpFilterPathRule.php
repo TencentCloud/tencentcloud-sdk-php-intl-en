@@ -18,44 +18,44 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * IP blocklist/allowlist path-based configuration
  *
- * @method string getFilterType() Obtain 
- * @method void setFilterType(string $FilterType) Set 
- * @method array getFilters() Obtain 
- * @method void setFilters(array $Filters) Set 
- * @method string getRuleType() Obtain 
- * @method void setRuleType(string $RuleType) Set 
- * @method array getRulePaths() Obtain 
- * @method void setRulePaths(array $RulePaths) Set 
+ * @method string getFilterType() Obtain IP blocklist/allowlist type: <li>whitelist: allowlist IPs;</li> <li>blacklist: blocklist IPs.</li>
+ * @method void setFilterType(string $FilterType) Set IP blocklist/allowlist type: <li>whitelist: allowlist IPs;</li> <li>blacklist: blocklist IPs.</li>
+ * @method array getFilters() Obtain IP blocklist/allowlist list Supports IPs in X.X.X.X format, or /8, /16, /24 format IP ranges. Up to 50 allowlists or blocklists can be entered.
+ * @method void setFilters(array $Filters) Set IP blocklist/allowlist list Supports IPs in X.X.X.X format, or /8, /16, /24 format IP ranges. Up to 50 allowlists or blocklists can be entered.
+ * @method string getRuleType() Obtain Rule types: <li>all: Effective for all files;</li> <li>file: Effective for specified file suffixes;</li> <li>directory: Effective for specified paths;</li> <li>path: Effective for specified absolute paths.</li>
+ * @method void setRuleType(string $RuleType) Set Rule types: <li>all: Effective for all files;</li> <li>file: Effective for specified file suffixes;</li> <li>directory: Effective for specified paths;</li> <li>path: Effective for specified absolute paths.</li>
+ * @method array getRulePaths() Obtain Content for each RuleType: <li>For all, enter an asterisk (*).</li> <li>For file, enter the suffix, such as jpg, txt.</li> <li>For directory, enter the path, such as /xxx/test/.</li> <li>For path, enter the corresponding absolute path, such as /xxx/test.html.</li>
+ * @method void setRulePaths(array $RulePaths) Set Content for each RuleType: <li>For all, enter an asterisk (*).</li> <li>For file, enter the suffix, such as jpg, txt.</li> <li>For directory, enter the path, such as /xxx/test/.</li> <li>For path, enter the corresponding absolute path, such as /xxx/test.html.</li>
  */
 class IpFilterPathRule extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string IP blocklist/allowlist type: <li>whitelist: allowlist IPs;</li> <li>blacklist: blocklist IPs.</li>
      */
     public $FilterType;
 
     /**
-     * @var array 
+     * @var array IP blocklist/allowlist list Supports IPs in X.X.X.X format, or /8, /16, /24 format IP ranges. Up to 50 allowlists or blocklists can be entered.
      */
     public $Filters;
 
     /**
-     * @var string 
+     * @var string Rule types: <li>all: Effective for all files;</li> <li>file: Effective for specified file suffixes;</li> <li>directory: Effective for specified paths;</li> <li>path: Effective for specified absolute paths.</li>
      */
     public $RuleType;
 
     /**
-     * @var array 
+     * @var array Content for each RuleType: <li>For all, enter an asterisk (*).</li> <li>For file, enter the suffix, such as jpg, txt.</li> <li>For directory, enter the path, such as /xxx/test/.</li> <li>For path, enter the corresponding absolute path, such as /xxx/test.html.</li>
      */
     public $RulePaths;
 
     /**
-     * @param string $FilterType 
-     * @param array $Filters 
-     * @param string $RuleType 
-     * @param array $RulePaths 
+     * @param string $FilterType IP blocklist/allowlist type: <li>whitelist: allowlist IPs;</li> <li>blacklist: blocklist IPs.</li>
+     * @param array $Filters IP blocklist/allowlist list Supports IPs in X.X.X.X format, or /8, /16, /24 format IP ranges. Up to 50 allowlists or blocklists can be entered.
+     * @param string $RuleType Rule types: <li>all: Effective for all files;</li> <li>file: Effective for specified file suffixes;</li> <li>directory: Effective for specified paths;</li> <li>path: Effective for specified absolute paths.</li>
+     * @param array $RulePaths Content for each RuleType: <li>For all, enter an asterisk (*).</li> <li>For file, enter the suffix, such as jpg, txt.</li> <li>For directory, enter the path, such as /xxx/test/.</li> <li>For path, enter the corresponding absolute path, such as /xxx/test.html.</li>
      */
     function __construct()
     {

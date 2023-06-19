@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyCDNDomainConfig request structure.
  *
- * @method string getDomain() Obtain Domain name.
- * @method void setDomain(string $Domain) Set Domain name.
+ * @method string getDomain() Obtain Domain.
+ * @method void setDomain(string $Domain) Set Domain.
  * @method CDNDomainConfigForUpdate getConfig() Obtain Domain configuration.
  * @method void setConfig(CDNDomainConfigForUpdate $Config) Set Domain configuration.
  * @method integer getSubAppId() Obtain VOD[Subapplication](/document/product/266/14574) ID。If you want to access resources in a Subapplication, fill this field with the Subapplication ID; otherwise, you don't need to fill in this field.
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class ModifyCDNDomainConfigRequest extends AbstractModel
 {
     /**
-     * @var string Domain name.
+     * @var string Domain.
      */
     public $Domain;
 
@@ -45,7 +45,7 @@ class ModifyCDNDomainConfigRequest extends AbstractModel
     public $SubAppId;
 
     /**
-     * @param string $Domain Domain name.
+     * @param string $Domain Domain.
      * @param CDNDomainConfigForUpdate $Config Domain configuration.
      * @param integer $SubAppId VOD[Subapplication](/document/product/266/14574) ID。If you want to access resources in a Subapplication, fill this field with the Subapplication ID; otherwise, you don't need to fill in this field.
      */

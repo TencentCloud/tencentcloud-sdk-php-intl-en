@@ -18,44 +18,44 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * IP blocklist/allowlist configuration. This is disabled by default.
  *
- * @method string getSwitch() Obtain 
- * @method void setSwitch(string $Switch) Set 
- * @method string getFilterType() Obtain 
- * @method void setFilterType(string $FilterType) Set 
- * @method array getFilters() Obtain 
- * @method void setFilters(array $Filters) Set 
- * @method array getFilterRules() Obtain 
- * @method void setFilterRules(array $FilterRules) Set 
+ * @method string getSwitch() Obtain IP blocklist/allowlist configuration switch :<li>on：Enable;</li> <li>off：Disable.</li>
+ * @method void setSwitch(string $Switch) Set IP blocklist/allowlist configuration switch :<li>on：Enable;</li> <li>off：Disable.</li>
+ * @method string getFilterType() Obtain IP blocklist/allowlist type <li>whitelist: IP allowlist;</li> <li>blacklist:IP blocklist.</li>
+ * @method void setFilterType(string $FilterType) Set IP blocklist/allowlist type <li>whitelist: IP allowlist;</li> <li>blacklist:IP blocklist.</li>
+ * @method array getFilters() Obtain IP blocklist/allowlist Supports IPs in X.X.X.X format, or IP ranges in /8, /16, /24 format. Up to 50 whitelists or blacklists can be entered
+ * @method void setFilters(array $Filters) Set IP blocklist/allowlist Supports IPs in X.X.X.X format, or IP ranges in /8, /16, /24 format. Up to 50 whitelists or blacklists can be entered
+ * @method array getFilterRules() Obtain IP blocklist/allowlist path-based configuration. This feature is only available to selected beta customers.
+ * @method void setFilterRules(array $FilterRules) Set IP blocklist/allowlist path-based configuration. This feature is only available to selected beta customers.
  */
 class IpFilter extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string IP blocklist/allowlist configuration switch :<li>on：Enable;</li> <li>off：Disable.</li>
      */
     public $Switch;
 
     /**
-     * @var string 
+     * @var string IP blocklist/allowlist type <li>whitelist: IP allowlist;</li> <li>blacklist:IP blocklist.</li>
      */
     public $FilterType;
 
     /**
-     * @var array 
+     * @var array IP blocklist/allowlist Supports IPs in X.X.X.X format, or IP ranges in /8, /16, /24 format. Up to 50 whitelists or blacklists can be entered
      */
     public $Filters;
 
     /**
-     * @var array 
+     * @var array IP blocklist/allowlist path-based configuration. This feature is only available to selected beta customers.
      */
     public $FilterRules;
 
     /**
-     * @param string $Switch 
-     * @param string $FilterType 
-     * @param array $Filters 
-     * @param array $FilterRules 
+     * @param string $Switch IP blocklist/allowlist configuration switch :<li>on：Enable;</li> <li>off：Disable.</li>
+     * @param string $FilterType IP blocklist/allowlist type <li>whitelist: IP allowlist;</li> <li>blacklist:IP blocklist.</li>
+     * @param array $Filters IP blocklist/allowlist Supports IPs in X.X.X.X format, or IP ranges in /8, /16, /24 format. Up to 50 whitelists or blacklists can be entered
+     * @param array $FilterRules IP blocklist/allowlist path-based configuration. This feature is only available to selected beta customers.
      */
     function __construct()
     {

@@ -18,52 +18,52 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * CDN DomainInfo
  *
- * @method string getDomain() Obtain 
- * @method void setDomain(string $Domain) Set 
- * @method string getDeployStatus() Obtain 
- * @method void setDeployStatus(string $DeployStatus) Set 
- * @method string getCname() Obtain 
- * @method void setCname(string $Cname) Set 
- * @method string getCreateTime() Obtain 
- * @method void setCreateTime(string $CreateTime) Set 
- * @method CDNDomainConfig getConfig() Obtain 
- * @method void setConfig(CDNDomainConfig $Config) Set 
+ * @method string getDomain() Obtain Domain.
+ * @method void setDomain(string $Domain) Set Domain.
+ * @method string getDeployStatus() Obtain Deployment status.
+ * @method void setDeployStatus(string $DeployStatus) Set Deployment status.
+ * @method string getCname() Obtain CNAME record.
+ * @method void setCname(string $Cname) Set CNAME record.
+ * @method string getCreateTime() Obtain Creation time.
+ * @method void setCreateTime(string $CreateTime) Set Creation time.
+ * @method CDNDomainConfig getConfig() Obtain CDN domain configuration information.
+ * @method void setConfig(CDNDomainConfig $Config) Set CDN domain configuration information.
  */
 class CDNDomainInfo extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Domain.
      */
     public $Domain;
 
     /**
-     * @var string 
+     * @var string Deployment status.
      */
     public $DeployStatus;
 
     /**
-     * @var string 
+     * @var string CNAME record.
      */
     public $Cname;
 
     /**
-     * @var string 
+     * @var string Creation time.
      */
     public $CreateTime;
 
     /**
-     * @var CDNDomainConfig 
+     * @var CDNDomainConfig CDN domain configuration information.
      */
     public $Config;
 
     /**
-     * @param string $Domain 
-     * @param string $DeployStatus 
-     * @param string $Cname 
-     * @param string $CreateTime 
-     * @param CDNDomainConfig $Config 
+     * @param string $Domain Domain.
+     * @param string $DeployStatus Deployment status.
+     * @param string $Cname CNAME record.
+     * @param string $CreateTime Creation time.
+     * @param CDNDomainConfig $Config CDN domain configuration information.
      */
     function __construct()
     {
