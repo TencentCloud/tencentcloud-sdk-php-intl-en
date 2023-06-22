@@ -48,6 +48,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAssistants(array $Assistants) Set The user IDs of the teacher assistants. User IDs are returned by the user registration APIs.
  * @method string getGroupId() Obtain The ID of the group to bind.
  * @method void setGroupId(string $GroupId) Set The ID of the group to bind.
+ * @method integer getEnableDirectControl() Obtain Whether the students' consent is required to control their cameras/microphones.
+ * @method void setEnableDirectControl(integer $EnableDirectControl) Set Whether the students' consent is required to control their cameras/microphones.
  */
 class ModifyRoomRequest extends AbstractModel
 {
@@ -122,6 +124,11 @@ class ModifyRoomRequest extends AbstractModel
     public $GroupId;
 
     /**
+     * @var integer Whether the students' consent is required to control their cameras/microphones.
+     */
+    public $EnableDirectControl;
+
+    /**
      * @param integer $RoomId The room ID.
      * @param integer $SdkAppId The SDKAppID assigned by LCIC.
      * @param integer $StartTime The room start time (Unix timestamp).
@@ -136,6 +143,7 @@ class ModifyRoomRequest extends AbstractModel
      * @param integer $DisableRecord Whether to disable auto recording. Valid values: 0: No (default); 1: Yes. If this parameter is 0, recording will start when the class starts and stops when the class ends.
      * @param array $Assistants The user IDs of the teacher assistants. User IDs are returned by the user registration APIs.
      * @param string $GroupId The ID of the group to bind.
+     * @param integer $EnableDirectControl Whether the students' consent is required to control their cameras/microphones.
      */
     function __construct()
     {
@@ -204,6 +212,10 @@ class ModifyRoomRequest extends AbstractModel
 
         if (array_key_exists("GroupId",$param) and $param["GroupId"] !== null) {
             $this->GroupId = $param["GroupId"];
+        }
+
+        if (array_key_exists("EnableDirectControl",$param) and $param["EnableDirectControl"] !== null) {
+            $this->EnableDirectControl = $param["EnableDirectControl"];
         }
     }
 }

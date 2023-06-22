@@ -38,6 +38,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method integer getSlaveConst() Obtain Whether to specify a replica server for read-only account. Valid values: `0` (No replica server is specified, which means that the proxy will select another available replica server to keep connection with the client if the current replica server doesn’t meet the requirement). `1` (The replica server is specified, which means that the connection will be disconnected if the specified replica server doesn’t meet the requirement.)
  * @method void setSlaveConst(integer $SlaveConst) Set Whether to specify a replica server for read-only account. Valid values: `0` (No replica server is specified, which means that the proxy will select another available replica server to keep connection with the client if the current replica server doesn’t meet the requirement). `1` (The replica server is specified, which means that the connection will be disconnected if the specified replica server doesn’t meet the requirement.)
+ * @method integer getMaxUserConnections() Obtain Maximum number of connections. `0` indicates no limit.
+ * @method void setMaxUserConnections(integer $MaxUserConnections) Set Maximum number of connections. `0` indicates no limit.
  */
 class DBAccount extends AbstractModel
 {
@@ -83,6 +85,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $SlaveConst;
 
     /**
+     * @var integer Maximum number of connections. `0` indicates no limit.
+     */
+    public $MaxUserConnections;
+
+    /**
      * @param string $UserName Username
      * @param string $Host Host from which a user can log in (corresponding to the `host` field for a MySQL user; a user is uniquely identified by username and host; this parameter is in IP format and ends with % for IP range; % can be entered; if this parameter is left empty, % will be used by default).
      * @param string $Description User remarks
@@ -92,6 +99,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param integer $DelayThresh This field is meaningful for read-only accounts, indicating that a replica should be selected if its delay from the primary is less than this value.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $SlaveConst Whether to specify a replica server for read-only account. Valid values: `0` (No replica server is specified, which means that the proxy will select another available replica server to keep connection with the client if the current replica server doesn’t meet the requirement). `1` (The replica server is specified, which means that the connection will be disconnected if the specified replica server doesn’t meet the requirement.)
+     * @param integer $MaxUserConnections Maximum number of connections. `0` indicates no limit.
      */
     function __construct()
     {
@@ -136,6 +144,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("SlaveConst",$param) and $param["SlaveConst"] !== null) {
             $this->SlaveConst = $param["SlaveConst"];
+        }
+
+        if (array_key_exists("MaxUserConnections",$param) and $param["MaxUserConnections"] !== null) {
+            $this->MaxUserConnections = $param["MaxUserConnections"];
         }
     }
 }

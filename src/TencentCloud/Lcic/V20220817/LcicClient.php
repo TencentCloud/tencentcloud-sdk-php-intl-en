@@ -60,7 +60,7 @@ A maximum of 20 requests can be initiated per second for this API.
  * @method Models\DescribeAnswerListResponse DescribeAnswerList(Models\DescribeAnswerListRequest $req) This API is used to get the answers to a quiz question in a room.
  * @method Models\DescribeCurrentMemberListResponse DescribeCurrentMemberList(Models\DescribeCurrentMemberListRequest $req) This API is used to get the user list of a room. This API will not work if a room has ended or expired.
 A maximum of 20 requests can be initiated per second for this API.
- * @method Models\DescribeDeveloperResponse DescribeDeveloper(Models\DescribeDeveloperRequest $req) This API is used to get the developer information.
+ * @method Models\DescribeDeveloperResponse DescribeDeveloper(Models\DescribeDeveloperRequest $req) This API is used to get developer information.
  * @method Models\DescribeDocumentResponse DescribeDocument(Models\DescribeDocumentRequest $req) This API is used to get the information of a specific document.
 A maximum of 20 requests can be initiated per second for this API.
  * @method Models\DescribeDocumentsResponse DescribeDocuments(Models\DescribeDocumentsRequest $req) 有新接口替换
@@ -91,6 +91,7 @@ A maximum of 20 requests can be initiated per second for this API.
  * @method Models\GetRoomsResponse GetRooms(Models\GetRoomsRequest $req) This API is used to get the room list.
  * @method Models\GetWatermarkResponse GetWatermark(Models\GetWatermarkRequest $req) This API is used to get watermark settings.
 A maximum of 20 requests can be initiated per second for this API.
+ * @method Models\KickUserFromRoomResponse KickUserFromRoom(Models\KickUserFromRoomRequest $req) This API is used to remove a user from the room.
  * @method Models\LoginOriginIdResponse LoginOriginId(Models\LoginOriginIdRequest $req) This API is used to log in with an origin account, which is the `originId` entered during registration.
  * @method Models\LoginUserResponse LoginUser(Models\LoginUserRequest $req) This API is used to log in.
  * @method Models\ModifyAppResponse ModifyApp(Models\ModifyAppRequest $req) This API is used to modify an application.

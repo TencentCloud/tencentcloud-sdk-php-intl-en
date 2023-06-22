@@ -40,8 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setKey(array $Key) Set Keyword
  * @method array getUser() Obtain User
  * @method void setUser(array $User) Set User
- * @method array getIp() Obtain ip
- * @method void setIp(array $Ip) Set ip
+ * @method array getIp() Obtain IP
+ * @method void setIp(array $Ip) Set IP
  * @method array getTime() Obtain Duration range. The left and right borders of the range are the zeroth and first element of the array, respectively.
  * @method void setTime(array $Time) Set Duration range. The left and right borders of the range are the zeroth and first element of the array, respectively.
  */
@@ -98,7 +98,7 @@ class DescribeSlowLogsRequest extends AbstractModel
     public $User;
 
     /**
-     * @var array ip
+     * @var array IP
      */
     public $Ip;
 
@@ -118,7 +118,7 @@ class DescribeSlowLogsRequest extends AbstractModel
      * @param array $DB Database list
      * @param array $Key Keyword
      * @param array $User User
-     * @param array $Ip ip
+     * @param array $Ip IP
      * @param array $Time Duration range. The left and right borders of the range are the zeroth and first element of the array, respectively.
      */
     function __construct()

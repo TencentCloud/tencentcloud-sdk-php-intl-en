@@ -132,6 +132,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setErrorPrompt(string $ErrorPrompt) Set Error message for the last operation of the cloud disk
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method boolean getBurstPerformance() Obtain Whether the cloud disk has enabled disk bursting. Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setBurstPerformance(boolean $BurstPerformance) Set Whether the cloud disk has enabled disk bursting. Note: This field may return null, indicating that no valid values can be obtained.
  */
 class Disk extends AbstractModel
 {
@@ -356,6 +358,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $ErrorPrompt;
 
     /**
+     * @var boolean Whether the cloud disk has enabled disk bursting. Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $BurstPerformance;
+
+    /**
      * @param boolean $DeleteWithInstance Whether the cloud disk terminates along with the instance mounted to it. <br><li>true: Cloud disk will also be terminated when instance terminates, so only hourly postpaid cloud disk are supported.<br><li>false: Cloud disk does not terminate when instance terminates.
 Note: This field may return null, indicating that no valid value was found.
      * @param string $RenewFlag Auto renewal flag. Supported values:<br><li>NOTIFY_AND_AUTO_RENEW: Notify expiry and renew automatically<br><li>NOTIFY_AND_MANUAL_RENEW: Notify expiry but not renew automatically<br><li>DISABLE_NOTIFY_AND_MANUAL_RENEW: Neither notify expiry nor renew automatically.
@@ -412,6 +419,7 @@ Note: This field may return null, indicating that no valid value was found.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $ErrorPrompt Error message for the last operation of the cloud disk
 Note: This field may return null, indicating that no valid values can be obtained.
+     * @param boolean $BurstPerformance Whether the cloud disk has enabled disk bursting. Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -594,6 +602,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("ErrorPrompt",$param) and $param["ErrorPrompt"] !== null) {
             $this->ErrorPrompt = $param["ErrorPrompt"];
+        }
+
+        if (array_key_exists("BurstPerformance",$param) and $param["BurstPerformance"] !== null) {
+            $this->BurstPerformance = $param["BurstPerformance"];
         }
     }
 }

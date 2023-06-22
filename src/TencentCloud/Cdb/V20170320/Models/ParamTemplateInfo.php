@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEngineVersion(string $EngineVersion) Set Instance engine version
  * @method string getTemplateType() Obtain Parameter template type
  * @method void setTemplateType(string $TemplateType) Set Parameter template type
+ * @method string getEngineType() Obtain Parameter template engine Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setEngineType(string $EngineType) Set Parameter template engine Note: This field may return null, indicating that no valid values can be obtained.
  */
 class ParamTemplateInfo extends AbstractModel
 {
@@ -59,11 +61,17 @@ class ParamTemplateInfo extends AbstractModel
     public $TemplateType;
 
     /**
+     * @var string Parameter template engine Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $EngineType;
+
+    /**
      * @param integer $TemplateId Parameter template ID
      * @param string $Name Parameter template name
      * @param string $Description Parameter template description
      * @param string $EngineVersion Instance engine version
      * @param string $TemplateType Parameter template type
+     * @param string $EngineType Parameter template engine Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -96,6 +104,10 @@ class ParamTemplateInfo extends AbstractModel
 
         if (array_key_exists("TemplateType",$param) and $param["TemplateType"] !== null) {
             $this->TemplateType = $param["TemplateType"];
+        }
+
+        if (array_key_exists("EngineType",$param) and $param["EngineType"] !== null) {
+            $this->EngineType = $param["EngineType"];
         }
     }
 }

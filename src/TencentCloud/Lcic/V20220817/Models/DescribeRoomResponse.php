@@ -50,6 +50,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStatus(integer $Status) Set The class status. 0: The class has not started. 1: The class has started. 2: The class ended. 3: The class expired. Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getGroupId() Obtain Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setGroupId(string $GroupId) Set Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getEnableDirectControl() Obtain Whether the students' consent is required to control their cameras/microphones.
+ * @method void setEnableDirectControl(integer $EnableDirectControl) Set Whether the students' consent is required to control their cameras/microphones.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -131,6 +133,11 @@ class DescribeRoomResponse extends AbstractModel
     public $GroupId;
 
     /**
+     * @var integer Whether the students' consent is required to control their cameras/microphones.
+     */
+    public $EnableDirectControl;
+
+    /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
@@ -151,6 +158,7 @@ class DescribeRoomResponse extends AbstractModel
      * @param string $RecordUrl Recording URL. This parameter exists only after a room is ended. Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $Status The class status. 0: The class has not started. 1: The class has started. 2: The class ended. 3: The class expired. Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $GroupId Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $EnableDirectControl Whether the students' consent is required to control their cameras/microphones.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -224,6 +232,10 @@ class DescribeRoomResponse extends AbstractModel
 
         if (array_key_exists("GroupId",$param) and $param["GroupId"] !== null) {
             $this->GroupId = $param["GroupId"];
+        }
+
+        if (array_key_exists("EnableDirectControl",$param) and $param["EnableDirectControl"] !== null) {
+            $this->EnableDirectControl = $param["EnableDirectControl"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

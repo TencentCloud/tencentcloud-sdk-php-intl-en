@@ -53,6 +53,8 @@ Used by actions: BatchCreateRoom.
  * @method void setRecordLayout(integer $RecordLayout) Set The recording layout.
  * @method string getGroupId() Obtain The ID of the group to bind. Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setGroupId(string $GroupId) Set The ID of the group to bind. Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getEnableDirectControl() Obtain Whether the students' consent is required to control their cameras/microphones.
+ * @method void setEnableDirectControl(integer $EnableDirectControl) Set Whether the students' consent is required to control their cameras/microphones.
  */
 class RoomInfo extends AbstractModel
 {
@@ -137,6 +139,11 @@ class RoomInfo extends AbstractModel
     public $GroupId;
 
     /**
+     * @var integer Whether the students' consent is required to control their cameras/microphones.
+     */
+    public $EnableDirectControl;
+
+    /**
      * @param string $Name The room name.
      * @param integer $StartTime The room start time (Unix timestamp).
      * @param integer $EndTime The room end time (Unix timestamp).
@@ -153,6 +160,7 @@ class RoomInfo extends AbstractModel
      * @param integer $AudienceType The audience type.
      * @param integer $RecordLayout The recording layout.
      * @param string $GroupId The ID of the group to bind. Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $EnableDirectControl Whether the students' consent is required to control their cameras/microphones.
      */
     function __construct()
     {
@@ -229,6 +237,10 @@ class RoomInfo extends AbstractModel
 
         if (array_key_exists("GroupId",$param) and $param["GroupId"] !== null) {
             $this->GroupId = $param["GroupId"];
+        }
+
+        if (array_key_exists("EnableDirectControl",$param) and $param["EnableDirectControl"] !== null) {
+            $this->EnableDirectControl = $param["EnableDirectControl"];
         }
     }
 }

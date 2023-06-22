@@ -48,10 +48,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setBriefMsg(string $BriefMsg) Set Migration task error message
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getStatus() Obtain Task status. Valid values: `creating`, `created`, `checking`, `checkPass`, `checkNotPass`, `readyRun`, `running`, `readyComplete`, `success`, `failed`, `stopping`, `completing`.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setStatus(string $Status) Set Task status. Valid values: `creating`, `created`, `checking`, `checkPass`, `checkNotPass`, `readyRun`, `running`, `readyComplete`, `success`, `failed`, `stopping`, `completing`.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getStatus() Obtain Task status. Valid values: `creating` (Creating), `created`(Created), `checking` (Checking), `checkPass` (Check passed), `checkNotPass` (Check not passed), `readyRun` (Ready for running), `running` (Running), `readyComplete` (Preparation completed), `success` (Successful), `failed` (Failed), `stopping` (Stopping), `completing` (Completing), `pausing` (Pausing), `manualPaused` (Paused). Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setStatus(string $Status) Set Task status. Valid values: `creating` (Creating), `created`(Created), `checking` (Checking), `checkPass` (Check passed), `checkNotPass` (Check not passed), `readyRun` (Ready for running), `running` (Running), `readyComplete` (Preparation completed), `success` (Successful), `failed` (Failed), `stopping` (Stopping), `completing` (Completing), `pausing` (Pausing), `manualPaused` (Paused). Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getRunMode() Obtain Task running mode. Valid values: `immediate`, `timed`.
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setRunMode(string $RunMode) Set Task running mode. Valid values: `immediate`, `timed`.
@@ -138,8 +136,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $BriefMsg;
 
     /**
-     * @var string Task status. Valid values: `creating`, `created`, `checking`, `checkPass`, `checkNotPass`, `readyRun`, `running`, `readyComplete`, `success`, `failed`, `stopping`, `completing`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Task status. Valid values: `creating` (Creating), `created`(Created), `checking` (Checking), `checkPass` (Check passed), `checkNotPass` (Check not passed), `readyRun` (Ready for running), `running` (Running), `readyComplete` (Preparation completed), `success` (Successful), `failed` (Failed), `stopping` (Stopping), `completing` (Completing), `pausing` (Pausing), `manualPaused` (Paused). Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Status;
 
@@ -218,8 +215,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $BriefMsg Migration task error message
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Status Task status. Valid values: `creating`, `created`, `checking`, `checkPass`, `checkNotPass`, `readyRun`, `running`, `readyComplete`, `success`, `failed`, `stopping`, `completing`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $Status Task status. Valid values: `creating` (Creating), `created`(Created), `checking` (Checking), `checkPass` (Check passed), `checkNotPass` (Check not passed), `readyRun` (Ready for running), `running` (Running), `readyComplete` (Preparation completed), `success` (Successful), `failed` (Failed), `stopping` (Stopping), `completing` (Completing), `pausing` (Pausing), `manualPaused` (Paused). Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $RunMode Task running mode. Valid values: `immediate`, `timed`.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $ExpectRunTime Expected start time in the format of "2022-07-11 16:20:49", which is required if `RunMode` is `timed`.

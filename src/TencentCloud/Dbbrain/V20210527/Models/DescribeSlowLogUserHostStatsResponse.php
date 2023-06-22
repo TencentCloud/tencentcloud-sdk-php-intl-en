@@ -24,6 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTotalCount(integer $TotalCount) Set Total number of source addresses.
  * @method array getItems() Obtain Detailed list of the proportion of slow logs from each source address.
  * @method void setItems(array $Items) Set Detailed list of the proportion of slow logs from each source address.
+ * @method array getUserNameItems() Obtain Detailed list of the percentages of slow logs from different source usernames
+ * @method void setUserNameItems(array $UserNameItems) Set Detailed list of the percentages of slow logs from different source usernames
+ * @method integer getUserTotalCount() Obtain The number of source users
+ * @method void setUserTotalCount(integer $UserTotalCount) Set The number of source users
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -40,6 +44,16 @@ class DescribeSlowLogUserHostStatsResponse extends AbstractModel
     public $Items;
 
     /**
+     * @var array Detailed list of the percentages of slow logs from different source usernames
+     */
+    public $UserNameItems;
+
+    /**
+     * @var integer The number of source users
+     */
+    public $UserTotalCount;
+
+    /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
@@ -47,6 +61,8 @@ class DescribeSlowLogUserHostStatsResponse extends AbstractModel
     /**
      * @param integer $TotalCount Total number of source addresses.
      * @param array $Items Detailed list of the proportion of slow logs from each source address.
+     * @param array $UserNameItems Detailed list of the percentages of slow logs from different source usernames
+     * @param integer $UserTotalCount The number of source users
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -73,6 +89,19 @@ class DescribeSlowLogUserHostStatsResponse extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Items, $obj);
             }
+        }
+
+        if (array_key_exists("UserNameItems",$param) and $param["UserNameItems"] !== null) {
+            $this->UserNameItems = [];
+            foreach ($param["UserNameItems"] as $key => $value){
+                $obj = new SlowLogUser();
+                $obj->deserialize($value);
+                array_push($this->UserNameItems, $obj);
+            }
+        }
+
+        if (array_key_exists("UserTotalCount",$param) and $param["UserTotalCount"] !== null) {
+            $this->UserTotalCount = $param["UserTotalCount"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

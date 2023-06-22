@@ -76,16 +76,24 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAuditPolicyStatus(string $AuditPolicyStatus) Set Status of instance audit log. Valid values: ALL_AUDIT (full audit is enabled), RULE_AUDIT (rule audit is enabled), UNBOUND (audit is disabled).
  * @method string getAuditRunningStatus() Obtain Running status of instance audit log. Valid values: normal (running), paused (suspension due to overdue payment).
  * @method void setAuditRunningStatus(string $AuditRunningStatus) Set Running status of instance audit log. Valid values: normal (running), paused (suspension due to overdue payment).
- * @method string getInternalVip() Obtain Private VIP
+ * @method string getInternalVip() Obtain Private VIP 
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setInternalVip(string $InternalVip) Set Private VIP
+ * @method void setInternalVip(string $InternalVip) Set Private VIP 
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getInternalVport() Obtain Private network port
+ * @method integer getInternalVport() Obtain Private network port 
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setInternalVport(integer $InternalVport) Set Private network port
+ * @method void setInternalVport(integer $InternalVport) Set Private network port 
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getCreateTime() Obtain Creation time
  * @method void setCreateTime(string $CreateTime) Set Creation time
+ * @method string getClusterId() Obtain Cluster ID. This field is only required for cluster database products like TDSQL-C. 
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setClusterId(string $ClusterId) Set Cluster ID. This field is only required for cluster database products like TDSQL-C. 
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getClusterName() Obtain Cluster name. This field is only required for cluster database products like TDSQL-C. 
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setClusterName(string $ClusterName) Set Cluster name. This field is only required for cluster database products like TDSQL-C. 
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class InstanceInfo extends AbstractModel
 {
@@ -230,13 +238,13 @@ class InstanceInfo extends AbstractModel
     public $AuditRunningStatus;
 
     /**
-     * @var string Private VIP
+     * @var string Private VIP 
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $InternalVip;
 
     /**
-     * @var integer Private network port
+     * @var integer Private network port 
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $InternalVport;
@@ -245,6 +253,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @var string Creation time
      */
     public $CreateTime;
+
+    /**
+     * @var string Cluster ID. This field is only required for cluster database products like TDSQL-C. 
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $ClusterId;
+
+    /**
+     * @var string Cluster name. This field is only required for cluster database products like TDSQL-C. 
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $ClusterName;
 
     /**
      * @param string $InstanceId Instance ID.
@@ -275,11 +295,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $SecAuditStatus Status of instance security audit log. Valid values: ON (enabled), OFF (disabled).
      * @param string $AuditPolicyStatus Status of instance audit log. Valid values: ALL_AUDIT (full audit is enabled), RULE_AUDIT (rule audit is enabled), UNBOUND (audit is disabled).
      * @param string $AuditRunningStatus Running status of instance audit log. Valid values: normal (running), paused (suspension due to overdue payment).
-     * @param string $InternalVip Private VIP
+     * @param string $InternalVip Private VIP 
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $InternalVport Private network port
+     * @param integer $InternalVport Private network port 
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $CreateTime Creation time
+     * @param string $ClusterId Cluster ID. This field is only required for cluster database products like TDSQL-C. 
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $ClusterName Cluster name. This field is only required for cluster database products like TDSQL-C. 
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -417,6 +441,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
             $this->CreateTime = $param["CreateTime"];
+        }
+
+        if (array_key_exists("ClusterId",$param) and $param["ClusterId"] !== null) {
+            $this->ClusterId = $param["ClusterId"];
+        }
+
+        if (array_key_exists("ClusterName",$param) and $param["ClusterName"] !== null) {
+            $this->ClusterName = $param["ClusterName"];
         }
     }
 }

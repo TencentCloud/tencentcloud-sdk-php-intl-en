@@ -42,8 +42,8 @@ use TencentCloud\Common\AbstractModel;
 2016: The similarity did not reach the passing standard.
  * @method string getErrorMsg() Obtain The description of the final verification result.
  * @method void setErrorMsg(string $ErrorMsg) Set The description of the final verification result.
- * @method FileInfo getLiveData() Obtain 
- * @method void setLiveData(FileInfo $LiveData) Set 
+ * @method FileInfo getLiveData() Obtain The liveness algorithm package generated during this SDK-based liveness detection.
+ * @method void setLiveData(FileInfo $LiveData) Set The liveness algorithm package generated during this SDK-based liveness detection.
  * @method FileInfo getLiveVideo() Obtain The download URL of the video used for verification, which is valid for 10 minutes.
  * @method void setLiveVideo(FileInfo $LiveVideo) Set The download URL of the video used for verification, which is valid for 10 minutes.
  * @method string getLiveErrorCode() Obtain The liveness detection result code.
@@ -85,52 +85,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
  * @method void setCompareErrorMsg(string $CompareErrorMsg) Set The description of the face comparison result.
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method float getSim() Obtain The similarity score of face comparison.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setSim(float $Sim) Set The similarity score of face comparison.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method boolean getIsNeedCharge() Obtain This field is disused.
- * @method void setIsNeedCharge(boolean $IsNeedCharge) Set This field is disused.
- * @method FileInfo getCardInfoInputJson() Obtain The identity document photo info edited by the user in JSON. If the value of `DisableChangeOcrResult` is `true`, the editing feature is disabled and this field does not exist. The URL is valid for 10 minutes.
-When the value of `IdCardType` is `HK`:
-- CnName string: Chinese name
-- EnName string: English name
-- TelexCode string: The code corresponding to the Chinese name
-- Sex string: Gender. Valid values: `M` (male) and `F` (female).
-- Birthday string: Date of birth.
-- Permanent int: Whether it is a permanent residence identity card. Valid values: `0` (non-permanent), `1` (permanent), and `-1` (unknown).
-- IdNum string: ID number.
-- Symbol string: The ID symbol below the date of birth, such as "***AZ".
-- FirstIssueDate string: The date of first issuance.
-- CurrentIssueDate string: The date of latest issuance.
-
-When the value of `IdCardType` is `ML`:
-- Sex string: `LELAKI` (male) and `PEREMPUAN` (female).
-- Birthday string
-- ID string
-- Name string
-- Address string
-- Type string: Identity document type.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setCardInfoInputJson(FileInfo $CardInfoInputJson) Set The identity document photo info edited by the user in JSON. If the value of `DisableChangeOcrResult` is `true`, the editing feature is disabled and this field does not exist. The URL is valid for 10 minutes.
-When the value of `IdCardType` is `HK`:
-- CnName string: Chinese name
-- EnName string: English name
-- TelexCode string: The code corresponding to the Chinese name
-- Sex string: Gender. Valid values: `M` (male) and `F` (female).
-- Birthday string: Date of birth.
-- Permanent int: Whether it is a permanent residence identity card. Valid values: `0` (non-permanent), `1` (permanent), and `-1` (unknown).
-- IdNum string: ID number.
-- Symbol string: The ID symbol below the date of birth, such as "***AZ".
-- FirstIssueDate string: The date of first issuance.
-- CurrentIssueDate string: The date of latest issuance.
-
-When the value of `IdCardType` is `ML`:
-- Sex string: `LELAKI` (male) and `PEREMPUAN` (female).
-- Birthday string
-- ID string
-- Name string
-- Address string
-- Type string: Identity document type.
+ * @method void setSim(float $Sim) Set The similarity score of face comparison.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method boolean getIsNeedCharge() Obtain This parameter is disused.
+ * @method void setIsNeedCharge(boolean $IsNeedCharge) Set This parameter is disused.
+ * @method FileInfo getCardInfoInputJson() Obtain The identity document photo info edited by the user. Currently, this parameter is not applied.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setCardInfoInputJson(FileInfo $CardInfoInputJson) Set The identity document photo info edited by the user. Currently, this parameter is not applied.
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getRequestId() Obtain The request ID of this verification process.
  * @method void setRequestId(string $RequestId) Set The request ID of this verification process.
@@ -157,7 +119,7 @@ class CompareResult extends AbstractModel
     public $ErrorMsg;
 
     /**
-     * @var FileInfo 
+     * @var FileInfo The liveness algorithm package generated during this SDK-based liveness detection.
      */
     public $LiveData;
 
@@ -211,36 +173,17 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * @var float The similarity score of face comparison.
-Note: This field may return null, indicating that no valid value can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Sim;
 
     /**
-     * @var boolean This field is disused.
+     * @var boolean This parameter is disused.
      */
     public $IsNeedCharge;
 
     /**
-     * @var FileInfo The identity document photo info edited by the user in JSON. If the value of `DisableChangeOcrResult` is `true`, the editing feature is disabled and this field does not exist. The URL is valid for 10 minutes.
-When the value of `IdCardType` is `HK`:
-- CnName string: Chinese name
-- EnName string: English name
-- TelexCode string: The code corresponding to the Chinese name
-- Sex string: Gender. Valid values: `M` (male) and `F` (female).
-- Birthday string: Date of birth.
-- Permanent int: Whether it is a permanent residence identity card. Valid values: `0` (non-permanent), `1` (permanent), and `-1` (unknown).
-- IdNum string: ID number.
-- Symbol string: The ID symbol below the date of birth, such as "***AZ".
-- FirstIssueDate string: The date of first issuance.
-- CurrentIssueDate string: The date of latest issuance.
-
-When the value of `IdCardType` is `ML`:
-- Sex string: `LELAKI` (male) and `PEREMPUAN` (female).
-- Birthday string
-- ID string
-- Name string
-- Address string
-- Type string: Identity document type.
+     * @var FileInfo The identity document photo info edited by the user. Currently, this parameter is not applied.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $CardInfoInputJson;
@@ -262,7 +205,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 2015: Face comparison failed.
 2016: The similarity did not reach the passing standard.
      * @param string $ErrorMsg The description of the final verification result.
-     * @param FileInfo $LiveData 
+     * @param FileInfo $LiveData The liveness algorithm package generated during this SDK-based liveness detection.
      * @param FileInfo $LiveVideo The download URL of the video used for verification, which is valid for 10 minutes.
      * @param string $LiveErrorCode The liveness detection result code.
 0: Success.
@@ -284,28 +227,9 @@ Note: This field may return null, indicating that no valid value can be obtained
      * @param string $CompareErrorMsg The description of the face comparison result.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param float $Sim The similarity score of face comparison.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param boolean $IsNeedCharge This field is disused.
-     * @param FileInfo $CardInfoInputJson The identity document photo info edited by the user in JSON. If the value of `DisableChangeOcrResult` is `true`, the editing feature is disabled and this field does not exist. The URL is valid for 10 minutes.
-When the value of `IdCardType` is `HK`:
-- CnName string: Chinese name
-- EnName string: English name
-- TelexCode string: The code corresponding to the Chinese name
-- Sex string: Gender. Valid values: `M` (male) and `F` (female).
-- Birthday string: Date of birth.
-- Permanent int: Whether it is a permanent residence identity card. Valid values: `0` (non-permanent), `1` (permanent), and `-1` (unknown).
-- IdNum string: ID number.
-- Symbol string: The ID symbol below the date of birth, such as "***AZ".
-- FirstIssueDate string: The date of first issuance.
-- CurrentIssueDate string: The date of latest issuance.
-
-When the value of `IdCardType` is `ML`:
-- Sex string: `LELAKI` (male) and `PEREMPUAN` (female).
-- Birthday string
-- ID string
-- Name string
-- Address string
-- Type string: Identity document type.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param boolean $IsNeedCharge This parameter is disused.
+     * @param FileInfo $CardInfoInputJson The identity document photo info edited by the user. Currently, this parameter is not applied.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $RequestId The request ID of this verification process.
      */

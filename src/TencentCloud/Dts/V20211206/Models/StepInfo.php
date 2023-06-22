@@ -48,10 +48,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setWarnings(array $Warnings) Set Warning message
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getProgress() Obtain Progress of the current step. Value range: 0-100.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setProgress(integer $Progress) Set Progress of the current step. Value range: 0-100.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getProgress() Obtain Current step progress. Value range: 0-100. The value `-1` indicates that the progress of the current step is unavailable. Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setProgress(integer $Progress) Set Current step progress. Value range: 0-100. The value `-1` indicates that the progress of the current step is unavailable. Note: This field may return null, indicating that no valid values can be obtained.
  */
 class StepInfo extends AbstractModel
 {
@@ -98,8 +96,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $Warnings;
 
     /**
-     * @var integer Progress of the current step. Value range: 0-100.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Current step progress. Value range: 0-100. The value `-1` indicates that the progress of the current step is unavailable. Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Progress;
 
@@ -118,8 +115,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param array $Warnings Warning message
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $Progress Progress of the current step. Value range: 0-100.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $Progress Current step progress. Value range: 0-100. The value `-1` indicates that the progress of the current step is unavailable. Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

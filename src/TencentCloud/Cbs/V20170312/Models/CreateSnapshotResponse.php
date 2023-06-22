@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateSnapshot response structure.
  *
- * @method string getSnapshotId() Obtain ID of the new snapshot.
- * @method void setSnapshotId(string $SnapshotId) Set ID of the new snapshot.
+ * @method string getSnapshotId() Obtain ID of the created snapshot <br/>Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setSnapshotId(string $SnapshotId) Set ID of the created snapshot <br/>Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 class CreateSnapshotResponse extends AbstractModel
 {
     /**
-     * @var string ID of the new snapshot.
+     * @var string ID of the created snapshot <br/>Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $SnapshotId;
 
@@ -38,7 +38,7 @@ class CreateSnapshotResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $SnapshotId ID of the new snapshot.
+     * @param string $SnapshotId ID of the created snapshot <br/>Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()

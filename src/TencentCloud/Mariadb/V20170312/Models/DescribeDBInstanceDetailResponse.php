@@ -168,6 +168,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setRsAccessStrategy(integer $RsAccessStrategy) Set Nearby VPC access
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method array getReservedNetResources() Obtain Unclaimed network resource
+ * @method void setReservedNetResources(array $ReservedNetResources) Set Unclaimed network resource
+ * @method boolean getIsPhysicalReplicationSupported() Obtain 
+ * @method void setIsPhysicalReplicationSupported(boolean $IsPhysicalReplicationSupported) Set 
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -468,6 +472,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $RsAccessStrategy;
 
     /**
+     * @var array Unclaimed network resource
+     */
+    public $ReservedNetResources;
+
+    /**
+     * @var boolean 
+     */
+    public $IsPhysicalReplicationSupported;
+
+    /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
@@ -547,6 +561,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $RsAccessStrategy Nearby VPC access
 Note: This field may return null, indicating that no valid values can be obtained.
+     * @param array $ReservedNetResources Unclaimed network resource
+     * @param boolean $IsPhysicalReplicationSupported 
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -792,6 +808,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("RsAccessStrategy",$param) and $param["RsAccessStrategy"] !== null) {
             $this->RsAccessStrategy = $param["RsAccessStrategy"];
+        }
+
+        if (array_key_exists("ReservedNetResources",$param) and $param["ReservedNetResources"] !== null) {
+            $this->ReservedNetResources = [];
+            foreach ($param["ReservedNetResources"] as $key => $value){
+                $obj = new ReservedNetResource();
+                $obj->deserialize($value);
+                array_push($this->ReservedNetResources, $obj);
+            }
+        }
+
+        if (array_key_exists("IsPhysicalReplicationSupported",$param) and $param["IsPhysicalReplicationSupported"] !== null) {
+            $this->IsPhysicalReplicationSupported = $param["IsPhysicalReplicationSupported"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

@@ -42,8 +42,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceName(string $InstanceName) Set Custom name of the instance.
  * @method array getSecurityGroupIds() Obtain Security group ID. If this parameter is not passed in, no security groups will be associated when the instance is created.
  * @method void setSecurityGroupIds(array $SecurityGroupIds) Set Security group ID. If this parameter is not passed in, no security groups will be associated when the instance is created.
- * @method integer getIpv6Flag() Obtain Whether IPv6 is supported.
- * @method void setIpv6Flag(integer $Ipv6Flag) Set Whether IPv6 is supported.
+ * @method integer getIpv6Flag() Obtain Whether IPv6 is supported. Valid values: `0` (unsupported), `1` (supported).
+ * @method void setIpv6Flag(integer $Ipv6Flag) Set Whether IPv6 is supported. Valid values: `0` (unsupported), `1` (supported).
  * @method array getResourceTags() Obtain Array of tag key-value pairs.
  * @method void setResourceTags(array $ResourceTags) Set Array of tag key-value pairs.
  * @method string getDcnRegion() Obtain If you create a disaster recovery instance, you need to use this parameter to specify the region of the associated primary instance so that the disaster recovery instance can sync data with the primary instance over the Data Communication Network (DCN).
@@ -56,8 +56,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInitParams(array $InitParams) Set List of parameters. Valid values: 
 `character_set_server` (character set; required); `lower_case_table_names` (table name case sensitivity; required; 0: case-sensitive; 1: case-insensitive);
 `innodb_page_size` (innoDB data page size; default size: 16 KB); `sync_mode` (sync mode; 0: async; 1: strong sync; 2: downgradable strong sync; default value: 2).
- * @method string getRollbackInstanceId() Obtain ID of the instance whose backup data will be rolled back to the new instance you create.
- * @method void setRollbackInstanceId(string $RollbackInstanceId) Set ID of the instance whose backup data will be rolled back to the new instance you create.
+ * @method string getRollbackInstanceId() Obtain ID of the instance to be rolled back, such as “2021-11-22 00:00:00”.
+ * @method void setRollbackInstanceId(string $RollbackInstanceId) Set ID of the instance to be rolled back, such as “2021-11-22 00:00:00”.
  * @method string getRollbackTime() Obtain Rollback time.
  * @method void setRollbackTime(string $RollbackTime) Set Rollback time.
  */
@@ -119,7 +119,7 @@ class CreateHourDBInstanceRequest extends AbstractModel
     public $SecurityGroupIds;
 
     /**
-     * @var integer Whether IPv6 is supported.
+     * @var integer Whether IPv6 is supported. Valid values: `0` (unsupported), `1` (supported).
      */
     public $Ipv6Flag;
 
@@ -146,7 +146,7 @@ class CreateHourDBInstanceRequest extends AbstractModel
     public $InitParams;
 
     /**
-     * @var string ID of the instance whose backup data will be rolled back to the new instance you create.
+     * @var string ID of the instance to be rolled back, such as “2021-11-22 00:00:00”.
      */
     public $RollbackInstanceId;
 
@@ -167,14 +167,14 @@ class CreateHourDBInstanceRequest extends AbstractModel
      * @param string $DbVersionId Database engine version. Valid values: `5.7`, `8.0`, `10.0`, `10.1`.
      * @param string $InstanceName Custom name of the instance.
      * @param array $SecurityGroupIds Security group ID. If this parameter is not passed in, no security groups will be associated when the instance is created.
-     * @param integer $Ipv6Flag Whether IPv6 is supported.
+     * @param integer $Ipv6Flag Whether IPv6 is supported. Valid values: `0` (unsupported), `1` (supported).
      * @param array $ResourceTags Array of tag key-value pairs.
      * @param string $DcnRegion If you create a disaster recovery instance, you need to use this parameter to specify the region of the associated primary instance so that the disaster recovery instance can sync data with the primary instance over the Data Communication Network (DCN).
      * @param string $DcnInstanceId If you create a disaster recovery instance, you need to use this parameter to specify the ID of the associated primary instance so that the disaster recovery instance can sync data with the primary instance over the Data Communication Network (DCN).
      * @param array $InitParams List of parameters. Valid values: 
 `character_set_server` (character set; required); `lower_case_table_names` (table name case sensitivity; required; 0: case-sensitive; 1: case-insensitive);
 `innodb_page_size` (innoDB data page size; default size: 16 KB); `sync_mode` (sync mode; 0: async; 1: strong sync; 2: downgradable strong sync; default value: 2).
-     * @param string $RollbackInstanceId ID of the instance whose backup data will be rolled back to the new instance you create.
+     * @param string $RollbackInstanceId ID of the instance to be rolled back, such as “2021-11-22 00:00:00”.
      * @param string $RollbackTime Rollback time.
      */
     function __construct()

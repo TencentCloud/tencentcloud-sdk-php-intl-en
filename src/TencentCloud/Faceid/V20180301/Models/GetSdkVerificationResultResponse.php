@@ -20,30 +20,30 @@ use TencentCloud\Common\AbstractModel;
 /**
  * GetSdkVerificationResult response structure.
  *
- * @method string getResult() Obtain The result of the entire verification process.
- * @method void setResult(string $Result) Set The result of the entire verification process.
- * @method string getDescription() Obtain The result description.
- * @method void setDescription(string $Description) Set The result description.
+ * @method string getResult() Obtain The result code of the verification result.
+ * @method void setResult(string $Result) Set The result code of the verification result.
+ * @method string getDescription() Obtain The verification result description.
+ * @method void setDescription(string $Description) Set The verification result description.
  * @method integer getChargeCount() Obtain The charge count.
  * @method void setChargeCount(integer $ChargeCount) Set The charge count.
- * @method array getCardVerifyResults() Obtain The results of multiple OCR processes (in order). The result of the final process is taken as the valid result.
- * @method void setCardVerifyResults(array $CardVerifyResults) Set The results of multiple OCR processes (in order). The result of the final process is taken as the valid result.
- * @method array getCompareResults() Obtain The results of multiple liveness detection processes (in order). The result of the final process is taken as the valid result.
- * @method void setCompareResults(array $CompareResults) Set The results of multiple liveness detection processes (in order). The result of the final process is taken as the valid result.
- * @method string getExtra() Obtain Info passed in the process of getting the token.
- * @method void setExtra(string $Extra) Set Info passed in the process of getting the token.
+ * @method array getCardVerifyResults() Obtain The results of multiple OCR processes (in order). The result of the final process is used as the valid result.
+ * @method void setCardVerifyResults(array $CardVerifyResults) Set The results of multiple OCR processes (in order). The result of the final process is used as the valid result.
+ * @method array getCompareResults() Obtain The results of multiple liveness detection processes (in order). The result of the final process is used as the valid result.
+ * @method void setCompareResults(array $CompareResults) Set The results of multiple liveness detection processes (in order). The result of the final process is used as the valid result.
+ * @method string getExtra() Obtain Data passed through in the process of getting the token.
+ * @method void setExtra(string $Extra) Set Data passed through in the process of getting the token.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 class GetSdkVerificationResultResponse extends AbstractModel
 {
     /**
-     * @var string The result of the entire verification process.
+     * @var string The result code of the verification result.
      */
     public $Result;
 
     /**
-     * @var string The result description.
+     * @var string The verification result description.
      */
     public $Description;
 
@@ -53,17 +53,17 @@ class GetSdkVerificationResultResponse extends AbstractModel
     public $ChargeCount;
 
     /**
-     * @var array The results of multiple OCR processes (in order). The result of the final process is taken as the valid result.
+     * @var array The results of multiple OCR processes (in order). The result of the final process is used as the valid result.
      */
     public $CardVerifyResults;
 
     /**
-     * @var array The results of multiple liveness detection processes (in order). The result of the final process is taken as the valid result.
+     * @var array The results of multiple liveness detection processes (in order). The result of the final process is used as the valid result.
      */
     public $CompareResults;
 
     /**
-     * @var string Info passed in the process of getting the token.
+     * @var string Data passed through in the process of getting the token.
      */
     public $Extra;
 
@@ -73,12 +73,12 @@ class GetSdkVerificationResultResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $Result The result of the entire verification process.
-     * @param string $Description The result description.
+     * @param string $Result The result code of the verification result.
+     * @param string $Description The verification result description.
      * @param integer $ChargeCount The charge count.
-     * @param array $CardVerifyResults The results of multiple OCR processes (in order). The result of the final process is taken as the valid result.
-     * @param array $CompareResults The results of multiple liveness detection processes (in order). The result of the final process is taken as the valid result.
-     * @param string $Extra Info passed in the process of getting the token.
+     * @param array $CardVerifyResults The results of multiple OCR processes (in order). The result of the final process is used as the valid result.
+     * @param array $CompareResults The results of multiple liveness detection processes (in order). The result of the final process is used as the valid result.
+     * @param string $Extra Data passed through in the process of getting the token.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()

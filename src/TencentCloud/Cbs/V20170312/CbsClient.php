@@ -124,9 +124,9 @@ This API is used to query the operation logs of a snapshot. It will be disused s
 * "Cloud disk name" is only used by users for their management. Tencent Cloud does not use the name as the basis for ticket submission or cloud disk management.
 * Batch operations are supported. If multiple cloud disk IDs are specified, all the specified cloud disks must have the same attribute. If there is a cloud disk that does not allow this operation, the operation is not performed and a specific error code is returned.
  * @method Models\ModifyDiskBackupQuotaResponse ModifyDiskBackupQuota(Models\ModifyDiskBackupQuotaRequest $req) This API is used to modify the cloud disk backup point quota.
- * @method Models\ModifyDiskExtraPerformanceResponse ModifyDiskExtraPerformance(Models\ModifyDiskExtraPerformanceRequest $req) This API is used to adjust the cloud disk’s extra performance.
+ * @method Models\ModifyDiskExtraPerformanceResponse ModifyDiskExtraPerformance(Models\ModifyDiskExtraPerformanceRequest $req) This API is used to adjust extra performance for Enhanced SSD (CLOUD_HSSD) and ulTra SSD. 
 
-* Currently, only Tremendous SSD (CLOUD_TSSD) and Enhanced SSD (CLOUD_HSSD) support extra performance adjustment.
+*This API only supports adjust extra performance for Enhanced SSD and ulTra SSD. 
  * @method Models\ModifySnapshotAttributeResponse ModifySnapshotAttribute(Models\ModifySnapshotAttributeRequest $req) This API (ModifySnapshotAttribute) is used to modify the attributes of a specified snapshot.
 
 * Currently, you can only modify snapshot name and change non-permanent snapshots into permanent snapshots.
@@ -138,10 +138,9 @@ After snapshots are shared, the accounts they are shared to can use the snapshot
 * You can use a shared snapshot to create cloud disks, but you cannot change its name or description.
 * Snapshots can only be shared with accounts in the same region.
 * Only data disk snapshots can be shared.
- * @method Models\ResizeDiskResponse ResizeDisk(Models\ResizeDiskRequest $req) This API is used to expand the capacity of a cloud disk.
+ * @method Models\ResizeDiskResponse ResizeDisk(Models\ResizeDiskRequest $req) This API is used to expand cloud disks. 
 
-* This API supports only the expansion of elastic cloud disks. To query the type of a cloud disk, you can call the [DescribeDisks](https://intl.cloud.tencent.comhttps://intl.cloud.tencent.com/document/product/362/16315?from_cn_redirect=1?from_cn_redirect=1) API and check the `Portable` field in the response. To expand non-elastic cloud disks, you can call the [ResizeInstanceDisks](https://intl.cloud.tencent.com/document/product/213/15731?from_cn_redirect=1) API.
-* This is an async API. A successful return of this API does not mean that the cloud disk has been expanded successfully. You can call the [DescribeDisks](https://intl.cloud.tencent.comhttps://intl.cloud.tencent.com/document/product/362/16315?from_cn_redirect=1?from_cn_redirect=1) API to query the status of a cloud disk. `EXPANDING` indicates that the expansion is in process. 
+*This API supports only the expansion of elastic cloud disks. To query the type of a cloud disk, you can call the [DescribeDisks](https://intl.cloud.tencent.comhttps://intl.cloud.tencent.com/document/product/362/16315?from_cn_redirect=1?from_cn_redirect=1) API and check the `Portable` field in the response. To expand non-elastic cloud disks, you can call the [ResizeInstanceDisks](https://intl.cloud.tencent.com/document/product/213/15731?from_cn_redirect=1) API. *This is an async API. A successful return of this API does not mean that the cloud disk has been expanded successfully. You can call the [DescribeDisks](https://intl.cloud.tencent.comhttps://intl.cloud.tencent.com/document/product/362/16315?from_cn_redirect=1?from_cn_redirect=1) API to query the status of a cloud disk. `EXPANDING` indicates that the expansion is in process.
  * @method Models\TerminateDisksResponse TerminateDisks(Models\TerminateDisksRequest $req) This API is used to return cloud disks.
 
 * You can use this API to return cloud disks you no longer need.

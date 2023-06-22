@@ -54,6 +54,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIoWaitTimeSection(string $IoWaitTimeSection) Set IO wait time in the format of M-N, such as 10-200.
  * @method string getTransactionLivingTimeSection() Obtain Transaction duration in the format of M-N, such as 10-200.
  * @method void setTransactionLivingTimeSection(string $TransactionLivingTimeSection) Set Transaction duration in the format of M-N, such as 10-200.
+ * @method array getThreadId() Obtain Thread ID
+ * @method void setThreadId(array $ThreadId) Set Thread ID
+ * @method integer getSentRows() Obtain Number of returned rows,  which is used to filter the audit log with affected rows greater than this value.
+ * @method void setSentRows(integer $SentRows) Set Number of returned rows,  which is used to filter the audit log with affected rows greater than this value.
+ * @method array getErrCode() Obtain MySQL error codes
+ * @method void setErrCode(array $ErrCode) Set MySQL error codes
  */
 class AuditLogFilter extends AbstractModel
 {
@@ -143,6 +149,21 @@ class AuditLogFilter extends AbstractModel
     public $TransactionLivingTimeSection;
 
     /**
+     * @var array Thread ID
+     */
+    public $ThreadId;
+
+    /**
+     * @var integer Number of returned rows,  which is used to filter the audit log with affected rows greater than this value.
+     */
+    public $SentRows;
+
+    /**
+     * @var array MySQL error codes
+     */
+    public $ErrCode;
+
+    /**
      * @param array $Host Client address
      * @param array $User Username
      * @param array $DBName 
@@ -160,6 +181,9 @@ class AuditLogFilter extends AbstractModel
      * @param string $LockWaitTimeSection Lock wait time in the format of M-N, such as 10-200.
      * @param string $IoWaitTimeSection IO wait time in the format of M-N, such as 10-200.
      * @param string $TransactionLivingTimeSection Transaction duration in the format of M-N, such as 10-200.
+     * @param array $ThreadId Thread ID
+     * @param integer $SentRows Number of returned rows,  which is used to filter the audit log with affected rows greater than this value.
+     * @param array $ErrCode MySQL error codes
      */
     function __construct()
     {
@@ -240,6 +264,18 @@ class AuditLogFilter extends AbstractModel
 
         if (array_key_exists("TransactionLivingTimeSection",$param) and $param["TransactionLivingTimeSection"] !== null) {
             $this->TransactionLivingTimeSection = $param["TransactionLivingTimeSection"];
+        }
+
+        if (array_key_exists("ThreadId",$param) and $param["ThreadId"] !== null) {
+            $this->ThreadId = $param["ThreadId"];
+        }
+
+        if (array_key_exists("SentRows",$param) and $param["SentRows"] !== null) {
+            $this->SentRows = $param["SentRows"];
+        }
+
+        if (array_key_exists("ErrCode",$param) and $param["ErrCode"] !== null) {
+            $this->ErrCode = $param["ErrCode"];
         }
     }
 }

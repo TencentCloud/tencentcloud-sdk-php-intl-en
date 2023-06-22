@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSqlExecId(string $SqlExecId) Set Execution ID. This parameter is used in the `Commit` stage.
  * @method string getProduct() Obtain Service type. Valid values: `mysql` (TencentDB for MySQL), `cynosdb` (TDSQL-C for MySQL). Default value: `mysql`.
  * @method void setProduct(string $Product) Set Service type. Valid values: `mysql` (TencentDB for MySQL), `cynosdb` (TDSQL-C for MySQL). Default value: `mysql`.
+ * @method boolean getRecordHistory() Obtain Whether to record the thread killing history. The default value is `true`, indicating “yes”. You can set it to `false` (“no”) to speed up the killing process.
+ * @method void setRecordHistory(boolean $RecordHistory) Set Whether to record the thread killing history. The default value is `true`, indicating “yes”. You can set it to `false` (“no”) to speed up the killing process.
  */
 class KillMySqlThreadsRequest extends AbstractModel
 {
@@ -59,11 +61,17 @@ class KillMySqlThreadsRequest extends AbstractModel
     public $Product;
 
     /**
+     * @var boolean Whether to record the thread killing history. The default value is `true`, indicating “yes”. You can set it to `false` (“no”) to speed up the killing process.
+     */
+    public $RecordHistory;
+
+    /**
      * @param string $InstanceId Instance ID.
      * @param string $Stage The stage of a session killing task. Valid values: `Prepare` (preparation stage), `Commit` (commit stage).
      * @param array $Threads List of IDs of the MySQL sessions to be killed. This parameter is used in the `Prepare` stage.
      * @param string $SqlExecId Execution ID. This parameter is used in the `Commit` stage.
      * @param string $Product Service type. Valid values: `mysql` (TencentDB for MySQL), `cynosdb` (TDSQL-C for MySQL). Default value: `mysql`.
+     * @param boolean $RecordHistory Whether to record the thread killing history. The default value is `true`, indicating “yes”. You can set it to `false` (“no”) to speed up the killing process.
      */
     function __construct()
     {
@@ -96,6 +104,10 @@ class KillMySqlThreadsRequest extends AbstractModel
 
         if (array_key_exists("Product",$param) and $param["Product"] !== null) {
             $this->Product = $param["Product"];
+        }
+
+        if (array_key_exists("RecordHistory",$param) and $param["RecordHistory"] !== null) {
+            $this->RecordHistory = $param["RecordHistory"];
         }
     }
 }

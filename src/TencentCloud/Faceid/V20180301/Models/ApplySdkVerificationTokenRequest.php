@@ -22,12 +22,56 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method boolean getNeedVerifyIdCard() Obtain Whether ID card authentication is required. If not, only document OCR will be performed. Currently, authentication is available only when the value of `IdCardType` is `HK`.
  * @method void setNeedVerifyIdCard(boolean $NeedVerifyIdCard) Set Whether ID card authentication is required. If not, only document OCR will be performed. Currently, authentication is available only when the value of `IdCardType` is `HK`.
- * @method string getIdCardType() Obtain The identity document type. Valid values: `HK` (identity card of Hong Kong (China)) (default), `ML` (Malaysian identity card), `IndonesiaIDCard` (Indonesian identity card), `PhilippinesVoteID` (Philippine voters ID card), `PhilippinesDrivingLicense` (Philippine driver's license), `PhilippinesTinID` (Philippine TIN ID card), `PhilippinesSSSID` (Philippine SSS ID card), and `MLIDPassport` (passport issued in Hong Kong/Macao/Taiwan (China) or other countries/regions).
- * @method void setIdCardType(string $IdCardType) Set The identity document type. Valid values: `HK` (identity card of Hong Kong (China)) (default), `ML` (Malaysian identity card), `IndonesiaIDCard` (Indonesian identity card), `PhilippinesVoteID` (Philippine voters ID card), `PhilippinesDrivingLicense` (Philippine driver's license), `PhilippinesTinID` (Philippine TIN ID card), `PhilippinesSSSID` (Philippine SSS ID card), and `MLIDPassport` (passport issued in Hong Kong/Macao/Taiwan (China) or other countries/regions).
- * @method boolean getDisableChangeOcrResult() Obtain Whether to forbid the modification of the OCR result by users. Default value: `false` (modification allowed).
- * @method void setDisableChangeOcrResult(boolean $DisableChangeOcrResult) Set Whether to forbid the modification of the OCR result by users. Default value: `false` (modification allowed).
- * @method boolean getDisableCheckOcrWarnings() Obtain Whether to disable the OCR warnings. Default value: `false` (not disable), where OCR warnings are enabled and the OCR result will not be returned if there is a warning. If `NeedVerifyIdCard` is set to `true`, this parameter must also be set to `true`.
- * @method void setDisableCheckOcrWarnings(boolean $DisableCheckOcrWarnings) Set Whether to disable the OCR warnings. Default value: `false` (not disable), where OCR warnings are enabled and the OCR result will not be returned if there is a warning. If `NeedVerifyIdCard` is set to `true`, this parameter must also be set to `true`.
+ * @method integer getCheckMode() Obtain The verification mode. Valid values:
+1: OCR + liveness detection + face comparison
+2: Liveness detection + face comparison
+3: Liveness detection
+Default value: 1
+ * @method void setCheckMode(integer $CheckMode) Set The verification mode. Valid values:
+1: OCR + liveness detection + face comparison
+2: Liveness detection + face comparison
+3: Liveness detection
+Default value: 1
+ * @method integer getSecurityLevel() Obtain The security level of the verification. Valid values:
+1: Video-based liveness detection
+2: Motion-based liveness detection
+3: Reflection-based liveness detection
+4: Motion- and reflection-based liveness detection
+Default value: 4
+ * @method void setSecurityLevel(integer $SecurityLevel) Set The security level of the verification. Valid values:
+1: Video-based liveness detection
+2: Motion-based liveness detection
+3: Reflection-based liveness detection
+4: Motion- and reflection-based liveness detection
+Default value: 4
+ * @method string getIdCardType() Obtain The identity document type. Valid values: 
+1. `HK` (default): Identity card of Hong Kong (China)
+2. `ML`: Malaysian identity card
+3. `IndonesiaIDCard`: Indonesian identity card
+4. `PhilippinesVoteID`: Philippine voters ID card
+5. `PhilippinesDrivingLicense`: Philippine driver's license
+6. `PhilippinesTinID`: Philippine TIN ID card
+7. `PhilippinesSSSID`: Philippine SSS ID card
+8. `PhilippinesUMID`: Philippine UMID card
+9. `MLIDPassport`: Passport issued in Hong Kong/Macao/Taiwan (China) or other countries/regions
+ * @method void setIdCardType(string $IdCardType) Set The identity document type. Valid values: 
+1. `HK` (default): Identity card of Hong Kong (China)
+2. `ML`: Malaysian identity card
+3. `IndonesiaIDCard`: Indonesian identity card
+4. `PhilippinesVoteID`: Philippine voters ID card
+5. `PhilippinesDrivingLicense`: Philippine driver's license
+6. `PhilippinesTinID`: Philippine TIN ID card
+7. `PhilippinesSSSID`: Philippine SSS ID card
+8. `PhilippinesUMID`: Philippine UMID card
+9. `MLIDPassport`: Passport issued in Hong Kong/Macao/Taiwan (China) or other countries/regions
+ * @method string getCompareImage() Obtain The Base64-encoded value of the photo to compare, which is required only when `CheckMode` is set to `2`.
+ * @method void setCompareImage(string $CompareImage) Set The Base64-encoded value of the photo to compare, which is required only when `CheckMode` is set to `2`.
+ * @method boolean getDisableChangeOcrResult() Obtain Whether to forbid the modification of the OCR result by users. Default value: `false` (modification allowed). (Currently, this parameter is not applied.)
+ * @method void setDisableChangeOcrResult(boolean $DisableChangeOcrResult) Set Whether to forbid the modification of the OCR result by users. Default value: `false` (modification allowed). (Currently, this parameter is not applied.)
+ * @method boolean getDisableCheckOcrWarnings() Obtain Whether to disable the OCR warnings. Default value: `false` (not disable), where OCR warnings are enabled and the OCR result will not be returned if there is a warning.
+This feature applies only to Hong Kong (China) identity cards, Malaysian identity cards, and passports.
+ * @method void setDisableCheckOcrWarnings(boolean $DisableCheckOcrWarnings) Set Whether to disable the OCR warnings. Default value: `false` (not disable), where OCR warnings are enabled and the OCR result will not be returned if there is a warning.
+This feature applies only to Hong Kong (China) identity cards, Malaysian identity cards, and passports.
  * @method string getExtra() Obtain A passthrough field, which is returned together with the verification result and can contain up to 1,024 bits.
  * @method void setExtra(string $Extra) Set A passthrough field, which is returned together with the verification result and can contain up to 1,024 bits.
  */
@@ -39,17 +83,51 @@ class ApplySdkVerificationTokenRequest extends AbstractModel
     public $NeedVerifyIdCard;
 
     /**
-     * @var string The identity document type. Valid values: `HK` (identity card of Hong Kong (China)) (default), `ML` (Malaysian identity card), `IndonesiaIDCard` (Indonesian identity card), `PhilippinesVoteID` (Philippine voters ID card), `PhilippinesDrivingLicense` (Philippine driver's license), `PhilippinesTinID` (Philippine TIN ID card), `PhilippinesSSSID` (Philippine SSS ID card), and `MLIDPassport` (passport issued in Hong Kong/Macao/Taiwan (China) or other countries/regions).
+     * @var integer The verification mode. Valid values:
+1: OCR + liveness detection + face comparison
+2: Liveness detection + face comparison
+3: Liveness detection
+Default value: 1
+     */
+    public $CheckMode;
+
+    /**
+     * @var integer The security level of the verification. Valid values:
+1: Video-based liveness detection
+2: Motion-based liveness detection
+3: Reflection-based liveness detection
+4: Motion- and reflection-based liveness detection
+Default value: 4
+     */
+    public $SecurityLevel;
+
+    /**
+     * @var string The identity document type. Valid values: 
+1. `HK` (default): Identity card of Hong Kong (China)
+2. `ML`: Malaysian identity card
+3. `IndonesiaIDCard`: Indonesian identity card
+4. `PhilippinesVoteID`: Philippine voters ID card
+5. `PhilippinesDrivingLicense`: Philippine driver's license
+6. `PhilippinesTinID`: Philippine TIN ID card
+7. `PhilippinesSSSID`: Philippine SSS ID card
+8. `PhilippinesUMID`: Philippine UMID card
+9. `MLIDPassport`: Passport issued in Hong Kong/Macao/Taiwan (China) or other countries/regions
      */
     public $IdCardType;
 
     /**
-     * @var boolean Whether to forbid the modification of the OCR result by users. Default value: `false` (modification allowed).
+     * @var string The Base64-encoded value of the photo to compare, which is required only when `CheckMode` is set to `2`.
+     */
+    public $CompareImage;
+
+    /**
+     * @var boolean Whether to forbid the modification of the OCR result by users. Default value: `false` (modification allowed). (Currently, this parameter is not applied.)
      */
     public $DisableChangeOcrResult;
 
     /**
-     * @var boolean Whether to disable the OCR warnings. Default value: `false` (not disable), where OCR warnings are enabled and the OCR result will not be returned if there is a warning. If `NeedVerifyIdCard` is set to `true`, this parameter must also be set to `true`.
+     * @var boolean Whether to disable the OCR warnings. Default value: `false` (not disable), where OCR warnings are enabled and the OCR result will not be returned if there is a warning.
+This feature applies only to Hong Kong (China) identity cards, Malaysian identity cards, and passports.
      */
     public $DisableCheckOcrWarnings;
 
@@ -60,9 +138,31 @@ class ApplySdkVerificationTokenRequest extends AbstractModel
 
     /**
      * @param boolean $NeedVerifyIdCard Whether ID card authentication is required. If not, only document OCR will be performed. Currently, authentication is available only when the value of `IdCardType` is `HK`.
-     * @param string $IdCardType The identity document type. Valid values: `HK` (identity card of Hong Kong (China)) (default), `ML` (Malaysian identity card), `IndonesiaIDCard` (Indonesian identity card), `PhilippinesVoteID` (Philippine voters ID card), `PhilippinesDrivingLicense` (Philippine driver's license), `PhilippinesTinID` (Philippine TIN ID card), `PhilippinesSSSID` (Philippine SSS ID card), and `MLIDPassport` (passport issued in Hong Kong/Macao/Taiwan (China) or other countries/regions).
-     * @param boolean $DisableChangeOcrResult Whether to forbid the modification of the OCR result by users. Default value: `false` (modification allowed).
-     * @param boolean $DisableCheckOcrWarnings Whether to disable the OCR warnings. Default value: `false` (not disable), where OCR warnings are enabled and the OCR result will not be returned if there is a warning. If `NeedVerifyIdCard` is set to `true`, this parameter must also be set to `true`.
+     * @param integer $CheckMode The verification mode. Valid values:
+1: OCR + liveness detection + face comparison
+2: Liveness detection + face comparison
+3: Liveness detection
+Default value: 1
+     * @param integer $SecurityLevel The security level of the verification. Valid values:
+1: Video-based liveness detection
+2: Motion-based liveness detection
+3: Reflection-based liveness detection
+4: Motion- and reflection-based liveness detection
+Default value: 4
+     * @param string $IdCardType The identity document type. Valid values: 
+1. `HK` (default): Identity card of Hong Kong (China)
+2. `ML`: Malaysian identity card
+3. `IndonesiaIDCard`: Indonesian identity card
+4. `PhilippinesVoteID`: Philippine voters ID card
+5. `PhilippinesDrivingLicense`: Philippine driver's license
+6. `PhilippinesTinID`: Philippine TIN ID card
+7. `PhilippinesSSSID`: Philippine SSS ID card
+8. `PhilippinesUMID`: Philippine UMID card
+9. `MLIDPassport`: Passport issued in Hong Kong/Macao/Taiwan (China) or other countries/regions
+     * @param string $CompareImage The Base64-encoded value of the photo to compare, which is required only when `CheckMode` is set to `2`.
+     * @param boolean $DisableChangeOcrResult Whether to forbid the modification of the OCR result by users. Default value: `false` (modification allowed). (Currently, this parameter is not applied.)
+     * @param boolean $DisableCheckOcrWarnings Whether to disable the OCR warnings. Default value: `false` (not disable), where OCR warnings are enabled and the OCR result will not be returned if there is a warning.
+This feature applies only to Hong Kong (China) identity cards, Malaysian identity cards, and passports.
      * @param string $Extra A passthrough field, which is returned together with the verification result and can contain up to 1,024 bits.
      */
     function __construct()
@@ -82,8 +182,20 @@ class ApplySdkVerificationTokenRequest extends AbstractModel
             $this->NeedVerifyIdCard = $param["NeedVerifyIdCard"];
         }
 
+        if (array_key_exists("CheckMode",$param) and $param["CheckMode"] !== null) {
+            $this->CheckMode = $param["CheckMode"];
+        }
+
+        if (array_key_exists("SecurityLevel",$param) and $param["SecurityLevel"] !== null) {
+            $this->SecurityLevel = $param["SecurityLevel"];
+        }
+
         if (array_key_exists("IdCardType",$param) and $param["IdCardType"] !== null) {
             $this->IdCardType = $param["IdCardType"];
+        }
+
+        if (array_key_exists("CompareImage",$param) and $param["CompareImage"] !== null) {
+            $this->CompareImage = $param["CompareImage"];
         }
 
         if (array_key_exists("DisableChangeOcrResult",$param) and $param["DisableChangeOcrResult"] !== null) {

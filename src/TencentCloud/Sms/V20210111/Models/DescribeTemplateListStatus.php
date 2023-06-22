@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTemplateId(integer $TemplateId) Set Template ID.
  * @method integer getInternational() Obtain Whether it is Global SMS. 0: Mainland China SMS; 1: Global SMS.
  * @method void setInternational(integer $International) Set Whether it is Global SMS. 0: Mainland China SMS; 1: Global SMS.
- * @method integer getStatusCode() Obtain Template application status. Valid values: 0: approved; 1: under review; -1: application rejected or failed.
- * @method void setStatusCode(integer $StatusCode) Set Template application status. Valid values: 0: approved; 1: under review; -1: application rejected or failed.
+ * @method integer getStatusCode() Obtain Template application status. Valid values: 0: approved and effective; 1: under review; 2: approved but to be effective; -1: application rejected or failed.
+ * @method void setStatusCode(integer $StatusCode) Set Template application status. Valid values: 0: approved and effective; 1: under review; 2: approved but to be effective; -1: application rejected or failed.
  * @method string getReviewReply() Obtain Review reply, i.e., response given by the reviewer, which is usually the reason for rejection.
  * @method void setReviewReply(string $ReviewReply) Set Review reply, i.e., response given by the reviewer, which is usually the reason for rejection.
  * @method string getTemplateName() Obtain Template name.
@@ -48,7 +48,7 @@ class DescribeTemplateListStatus extends AbstractModel
     public $International;
 
     /**
-     * @var integer Template application status. Valid values: 0: approved; 1: under review; -1: application rejected or failed.
+     * @var integer Template application status. Valid values: 0: approved and effective; 1: under review; 2: approved but to be effective; -1: application rejected or failed.
      */
     public $StatusCode;
 
@@ -75,7 +75,7 @@ class DescribeTemplateListStatus extends AbstractModel
     /**
      * @param integer $TemplateId Template ID.
      * @param integer $International Whether it is Global SMS. 0: Mainland China SMS; 1: Global SMS.
-     * @param integer $StatusCode Template application status. Valid values: 0: approved; 1: under review; -1: application rejected or failed.
+     * @param integer $StatusCode Template application status. Valid values: 0: approved and effective; 1: under review; 2: approved but to be effective; -1: application rejected or failed.
      * @param string $ReviewReply Review reply, i.e., response given by the reviewer, which is usually the reason for rejection.
      * @param string $TemplateName Template name.
      * @param integer $CreateTime Application submission time in the format of UNIX timestamp in seconds.

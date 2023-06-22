@@ -52,6 +52,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAutoMountConfiguration(AutoMountConfiguration $AutoMountConfiguration) Set Specifies whether to automatically attach and initialize the newly created data disk.
  * @method integer getDiskBackupQuota() Obtain Specifies the cloud disk backup point quota.
  * @method void setDiskBackupQuota(integer $DiskBackupQuota) Set Specifies the cloud disk backup point quota.
+ * @method boolean getBurstPerformance() Obtain Specifies whether to enable disk bursting.
+ * @method void setBurstPerformance(boolean $BurstPerformance) Set Specifies whether to enable disk bursting.
  */
 class CreateDisksRequest extends AbstractModel
 {
@@ -136,6 +138,11 @@ class CreateDisksRequest extends AbstractModel
     public $DiskBackupQuota;
 
     /**
+     * @var boolean Specifies whether to enable disk bursting.
+     */
+    public $BurstPerformance;
+
+    /**
      * @param Placement $Placement Location of the instance. You can use this parameter to specify the attributes of the instance, such as its availability zone and project. If no project is specified, the default project will be used.
      * @param string $DiskChargeType Cloud disk billing mode. POSTPAID_BY_HOUR: Pay-as-you-go by hour<br><li>CDCPAID: Billed together with the bound dedicated cluster<br>For more information on the pricing in each mode, see [Pricing Overview](https://intl.cloud.tencent.com/document/product/362/2413?from_cn_redirect=1).
      * @param string $DiskType Cloud disk media type. Valid values: <br><li>CLOUD_BASIC: HDD Cloud Storage<br><li>CLOUD_PREMIUM: Premium Cloud Disk<br><li>CLOUD_BSSD: Balanced SSD<br><li>CLOUD_SSD: SSD<br><li>CLOUD_HSSD: Enhanced SSD<br><li>CLOUD_TSSD: ulTra SSD.
@@ -152,6 +159,7 @@ class CreateDisksRequest extends AbstractModel
      * @param integer $DeleteSnapshot Whether to delete the associated non-permanently reserved snapshots upon deletion of the source cloud disk. `0`: No (default value). `1`: Yes. To check whether a snapshot is permanently reserved, see the `IsPermanent` field returned by the `DescribeSnapshots` API.
      * @param AutoMountConfiguration $AutoMountConfiguration Specifies whether to automatically attach and initialize the newly created data disk.
      * @param integer $DiskBackupQuota Specifies the cloud disk backup point quota.
+     * @param boolean $BurstPerformance Specifies whether to enable disk bursting.
      */
     function __construct()
     {
@@ -236,6 +244,10 @@ class CreateDisksRequest extends AbstractModel
 
         if (array_key_exists("DiskBackupQuota",$param) and $param["DiskBackupQuota"] !== null) {
             $this->DiskBackupQuota = $param["DiskBackupQuota"];
+        }
+
+        if (array_key_exists("BurstPerformance",$param) and $param["BurstPerformance"] !== null) {
+            $this->BurstPerformance = $param["BurstPerformance"];
         }
     }
 }

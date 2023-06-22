@@ -24,10 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAsyncRequestIds(array $AsyncRequestIds) Set List of IDs of tasks to be deleted
  * @method string getInstanceId() Obtain Instance ID
  * @method void setInstanceId(string $InstanceId) Set Instance ID
- * @method string getProduct() Obtain Service type. Valid values: `mysql` (TencentDB for MySQL), `cynosdb` (TDSQL-C for MySQL).
-Default value: `mysql`.
- * @method void setProduct(string $Product) Set Service type. Valid values: `mysql` (TencentDB for MySQL), `cynosdb` (TDSQL-C for MySQL).
-Default value: `mysql`.
+ * @method string getProduct() Obtain Service type. Valid values: `mysql` (TencentDB for MySQL), `cynosdb` (TDSQL-C for MySQL). Default value: `mysql`.
+ * @method void setProduct(string $Product) Set Service type. Valid values: `mysql` (TencentDB for MySQL), `cynosdb` (TDSQL-C for MySQL). Default value: `mysql`.
  */
 class DeleteDBDiagReportTasksRequest extends AbstractModel
 {
@@ -42,16 +40,14 @@ class DeleteDBDiagReportTasksRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var string Service type. Valid values: `mysql` (TencentDB for MySQL), `cynosdb` (TDSQL-C for MySQL).
-Default value: `mysql`.
+     * @var string Service type. Valid values: `mysql` (TencentDB for MySQL), `cynosdb` (TDSQL-C for MySQL). Default value: `mysql`.
      */
     public $Product;
 
     /**
      * @param array $AsyncRequestIds List of IDs of tasks to be deleted
      * @param string $InstanceId Instance ID
-     * @param string $Product Service type. Valid values: `mysql` (TencentDB for MySQL), `cynosdb` (TDSQL-C for MySQL).
-Default value: `mysql`.
+     * @param string $Product Service type. Valid values: `mysql` (TencentDB for MySQL), `cynosdb` (TDSQL-C for MySQL). Default value: `mysql`.
      */
     function __construct()
     {

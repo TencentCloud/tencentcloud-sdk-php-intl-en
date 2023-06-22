@@ -22,6 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getInstanceIds() Obtain Instance ID list. An instance ID is in the format of cdb-c1nl9rpv, which is the same as the instance ID displayed on the TencentDB Console page.
  * @method void setInstanceIds(array $InstanceIds) Set Instance ID list. An instance ID is in the format of cdb-c1nl9rpv, which is the same as the instance ID displayed on the TencentDB Console page.
+ * @method string getIsRemoteZone() Obtain Whether the clone instance and the source instance are in one AZ. Valid values: `true` (yes), `false` (no).
+ * @method void setIsRemoteZone(string $IsRemoteZone) Set Whether the clone instance and the source instance are in one AZ. Valid values: `true` (yes), `false` (no).
+ * @method string getBackupRegion() Obtain The region of the clone instance, such as `ap-guangzhou`.
+ * @method void setBackupRegion(string $BackupRegion) Set The region of the clone instance, such as `ap-guangzhou`.
  */
 class DescribeRollbackRangeTimeRequest extends AbstractModel
 {
@@ -31,7 +35,19 @@ class DescribeRollbackRangeTimeRequest extends AbstractModel
     public $InstanceIds;
 
     /**
+     * @var string Whether the clone instance and the source instance are in one AZ. Valid values: `true` (yes), `false` (no).
+     */
+    public $IsRemoteZone;
+
+    /**
+     * @var string The region of the clone instance, such as `ap-guangzhou`.
+     */
+    public $BackupRegion;
+
+    /**
      * @param array $InstanceIds Instance ID list. An instance ID is in the format of cdb-c1nl9rpv, which is the same as the instance ID displayed on the TencentDB Console page.
+     * @param string $IsRemoteZone Whether the clone instance and the source instance are in one AZ. Valid values: `true` (yes), `false` (no).
+     * @param string $BackupRegion The region of the clone instance, such as `ap-guangzhou`.
      */
     function __construct()
     {
@@ -48,6 +64,14 @@ class DescribeRollbackRangeTimeRequest extends AbstractModel
         }
         if (array_key_exists("InstanceIds",$param) and $param["InstanceIds"] !== null) {
             $this->InstanceIds = $param["InstanceIds"];
+        }
+
+        if (array_key_exists("IsRemoteZone",$param) and $param["IsRemoteZone"] !== null) {
+            $this->IsRemoteZone = $param["IsRemoteZone"];
+        }
+
+        if (array_key_exists("BackupRegion",$param) and $param["BackupRegion"] !== null) {
+            $this->BackupRegion = $param["BackupRegion"];
         }
     }
 }

@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateMigrationService request structure.
  *
- * @method string getSrcDatabaseType() Obtain Source database type. Valid values: `mysql`, `redis`, `percona`, `mongodb`, `postgresql`, `sqlserver`, `mariadb`.
- * @method void setSrcDatabaseType(string $SrcDatabaseType) Set Source database type. Valid values: `mysql`, `redis`, `percona`, `mongodb`, `postgresql`, `sqlserver`, `mariadb`.
- * @method string getDstDatabaseType() Obtain Target database type. Valid values: `mysql`, `redis`, `percona`, `mongodb`, `postgresql`, `sqlserver`, `mariadb`.
- * @method void setDstDatabaseType(string $DstDatabaseType) Set Target database type. Valid values: `mysql`, `redis`, `percona`, `mongodb`, `postgresql`, `sqlserver`, `mariadb`.
+ * @method string getSrcDatabaseType() Obtain Source database type. Valid values: `mysql`, `redis`, `percona`, `mongodb`, `postgresql`, `sqlserver`, `mariadb`, and `cynosdbmysql`.
+ * @method void setSrcDatabaseType(string $SrcDatabaseType) Set Source database type. Valid values: `mysql`, `redis`, `percona`, `mongodb`, `postgresql`, `sqlserver`, `mariadb`, and `cynosdbmysql`.
+ * @method string getDstDatabaseType() Obtain Target database type. Valid values: `mysql`, `redis`, `percona`, `mongodb` ,`postgresql`, `sqlserver`, `mariadb`, and `cynosdbmysql`.
+ * @method void setDstDatabaseType(string $DstDatabaseType) Set Target database type. Valid values: `mysql`, `redis`, `percona`, `mongodb` ,`postgresql`, `sqlserver`, `mariadb`, and `cynosdbmysql`.
  * @method string getSrcRegion() Obtain Source instance region, such as `ap-guangzhou`.
  * @method void setSrcRegion(string $SrcRegion) Set Source instance region, such as `ap-guangzhou`.
  * @method string getDstRegion() Obtain Target instance region, such as `ap-guangzhou`. Note that it must be the same as the API request region.
@@ -40,12 +40,12 @@ use TencentCloud\Common\AbstractModel;
 class CreateMigrationServiceRequest extends AbstractModel
 {
     /**
-     * @var string Source database type. Valid values: `mysql`, `redis`, `percona`, `mongodb`, `postgresql`, `sqlserver`, `mariadb`.
+     * @var string Source database type. Valid values: `mysql`, `redis`, `percona`, `mongodb`, `postgresql`, `sqlserver`, `mariadb`, and `cynosdbmysql`.
      */
     public $SrcDatabaseType;
 
     /**
-     * @var string Target database type. Valid values: `mysql`, `redis`, `percona`, `mongodb`, `postgresql`, `sqlserver`, `mariadb`.
+     * @var string Target database type. Valid values: `mysql`, `redis`, `percona`, `mongodb` ,`postgresql`, `sqlserver`, `mariadb`, and `cynosdbmysql`.
      */
     public $DstDatabaseType;
 
@@ -80,8 +80,8 @@ class CreateMigrationServiceRequest extends AbstractModel
     public $Tags;
 
     /**
-     * @param string $SrcDatabaseType Source database type. Valid values: `mysql`, `redis`, `percona`, `mongodb`, `postgresql`, `sqlserver`, `mariadb`.
-     * @param string $DstDatabaseType Target database type. Valid values: `mysql`, `redis`, `percona`, `mongodb`, `postgresql`, `sqlserver`, `mariadb`.
+     * @param string $SrcDatabaseType Source database type. Valid values: `mysql`, `redis`, `percona`, `mongodb`, `postgresql`, `sqlserver`, `mariadb`, and `cynosdbmysql`.
+     * @param string $DstDatabaseType Target database type. Valid values: `mysql`, `redis`, `percona`, `mongodb` ,`postgresql`, `sqlserver`, `mariadb`, and `cynosdbmysql`.
      * @param string $SrcRegion Source instance region, such as `ap-guangzhou`.
      * @param string $DstRegion Target instance region, such as `ap-guangzhou`. Note that it must be the same as the API request region.
      * @param string $InstanceClass Instance specification. Valid values: `small`, `medium`, `large`, `xlarge`, `2xlarge`.

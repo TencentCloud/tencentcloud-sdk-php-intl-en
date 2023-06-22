@@ -34,8 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMinRoInGroup(integer $MinRoInGroup) Set Minimum number of instances to be retained. If the number of the purchased read-only instances is smaller than the set value, they will not be removed.
  * @method string getWeightMode() Obtain Read/write weight distribution mode. Valid values: `system` (weights are assigned by the system automatically), `custom` (weights are customized)
  * @method void setWeightMode(string $WeightMode) Set Read/write weight distribution mode. Valid values: `system` (weights are assigned by the system automatically), `custom` (weights are customized)
- * @method integer getWeight() Obtain Weight value.
- * @method void setWeight(integer $Weight) Set Weight value.
+ * @method integer getWeight() Obtain This field has been disused. To view the weight of a read-only instance, check the `Weight` value in the `RoInstances` field.
+ * @method void setWeight(integer $Weight) Set This field has been disused. To view the weight of a read-only instance, check the `Weight` value in the `RoInstances` field.
  * @method array getRoInstances() Obtain Details of read-only instances in read-only group
  * @method void setRoInstances(array $RoInstances) Set Details of read-only instances in read-only group
  * @method string getVip() Obtain Private IP of read-only group.
@@ -101,7 +101,7 @@ class RoGroup extends AbstractModel
     public $WeightMode;
 
     /**
-     * @var integer Weight value.
+     * @var integer This field has been disused. To view the weight of a read-only instance, check the `Weight` value in the `RoInstances` field.
      */
     public $Weight;
 
@@ -158,7 +158,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
      * @param integer $RoMaxDelayTime Latency threshold
      * @param integer $MinRoInGroup Minimum number of instances to be retained. If the number of the purchased read-only instances is smaller than the set value, they will not be removed.
      * @param string $WeightMode Read/write weight distribution mode. Valid values: `system` (weights are assigned by the system automatically), `custom` (weights are customized)
-     * @param integer $Weight Weight value.
+     * @param integer $Weight This field has been disused. To view the weight of a read-only instance, check the `Weight` value in the `RoInstances` field.
      * @param array $RoInstances Details of read-only instances in read-only group
      * @param string $Vip Private IP of read-only group.
      * @param integer $Vport Private network port number of read-only group.

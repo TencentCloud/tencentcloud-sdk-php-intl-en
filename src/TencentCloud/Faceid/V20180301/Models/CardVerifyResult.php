@@ -89,6 +89,15 @@ When the value of `IdCardType` is `PhilippinesSSSID`:
 - FullName (string): Full name.
 - Birthday (string): Date of birth.
 
+When the value of `IdCardType` is `PhilippinesUMID`:
+- Surname (string): Surname.
+- MiddleName (string):Middle name.
+- GivenName (string): Given name.
+- Sex (string): Gender.
+- Birthday (string): Date of birth.
+- Address (string): Address.
+- CRN (string): Common reference number (CRN).
+
 (4) Indonesian identity card
 When the value of `IdCardType` is `IndonesiaIDCard`:
 - NIK (string): Single Identity Number.
@@ -117,7 +126,7 @@ When the value of `IdCardType` is `MLIDPassport`:
 - DateOfExpiration (string): Expiration date.
 - IssuingCountry (string): Issuing country.
 - NationalityCode (string): Country/region code.
-Note: This field may return null, indicating that no valid value can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setCardInfoOcrJson(FileInfo $CardInfoOcrJson) Set The OCR result (in JSON) of the identity document image. If verification or OCR fails, this parameter is left empty. The URL is valid for 10 minutes.
 (1) Hong Kong (China) identity card
 When the value of `IdCardType` is `HK`:
@@ -177,6 +186,15 @@ When the value of `IdCardType` is `PhilippinesSSSID`:
 - FullName (string): Full name.
 - Birthday (string): Date of birth.
 
+When the value of `IdCardType` is `PhilippinesUMID`:
+- Surname (string): Surname.
+- MiddleName (string):Middle name.
+- GivenName (string): Given name.
+- Sex (string): Gender.
+- Birthday (string): Date of birth.
+- Address (string): Address.
+- CRN (string): Common reference number (CRN).
+
 (4) Indonesian identity card
 When the value of `IdCardType` is `IndonesiaIDCard`:
 - NIK (string): Single Identity Number.
@@ -205,7 +223,7 @@ When the value of `IdCardType` is `MLIDPassport`:
 - DateOfExpiration (string): Expiration date.
 - IssuingCountry (string): Issuing country.
 - NationalityCode (string): Country/region code.
-Note: This field may return null, indicating that no valid value can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getRequestId() Obtain The request ID of a single process.
  * @method void setRequestId(string $RequestId) Set The request ID of a single process.
  */
@@ -288,6 +306,15 @@ When the value of `IdCardType` is `PhilippinesSSSID`:
 - FullName (string): Full name.
 - Birthday (string): Date of birth.
 
+When the value of `IdCardType` is `PhilippinesUMID`:
+- Surname (string): Surname.
+- MiddleName (string):Middle name.
+- GivenName (string): Given name.
+- Sex (string): Gender.
+- Birthday (string): Date of birth.
+- Address (string): Address.
+- CRN (string): Common reference number (CRN).
+
 (4) Indonesian identity card
 When the value of `IdCardType` is `IndonesiaIDCard`:
 - NIK (string): Single Identity Number.
@@ -316,7 +343,7 @@ When the value of `IdCardType` is `MLIDPassport`:
 - DateOfExpiration (string): Expiration date.
 - IssuingCountry (string): Issuing country.
 - NationalityCode (string): Country/region code.
-Note: This field may return null, indicating that no valid value can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $CardInfoOcrJson;
 
@@ -390,6 +417,15 @@ When the value of `IdCardType` is `PhilippinesSSSID`:
 - FullName (string): Full name.
 - Birthday (string): Date of birth.
 
+When the value of `IdCardType` is `PhilippinesUMID`:
+- Surname (string): Surname.
+- MiddleName (string):Middle name.
+- GivenName (string): Given name.
+- Sex (string): Gender.
+- Birthday (string): Date of birth.
+- Address (string): Address.
+- CRN (string): Common reference number (CRN).
+
 (4) Indonesian identity card
 When the value of `IdCardType` is `IndonesiaIDCard`:
 - NIK (string): Single Identity Number.
@@ -418,7 +454,7 @@ When the value of `IdCardType` is `MLIDPassport`:
 - DateOfExpiration (string): Expiration date.
 - IssuingCountry (string): Issuing country.
 - NationalityCode (string): Country/region code.
-Note: This field may return null, indicating that no valid value can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $RequestId The request ID of a single process.
      */
     function __construct()

@@ -22,10 +22,26 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getTimestamp() Obtain The Unix timestamp (seconds) when the event occurred.
  * @method void setTimestamp(integer $Timestamp) Set The Unix timestamp (seconds) when the event occurred.
- * @method string getEventType() Obtain The event type. Valid values:
+ * @method string getEventType() Obtain The event type. Valid values: 
 `RoomStart`: The class started. `RoomEnd`: The class ended. `MemberJoin`: A user joined. `MemberQuit`: A user left. `RecordFinish`: Recording is finished.
- * @method void setEventType(string $EventType) Set The event type. Valid values:
+·Camera0n·: The camera is turned on.
+`Camera0ff`: The camera is turned off.
+`MicOn`: The mic is turned on.
+`MicOff`: The mic is turned off.
+`ScreenOn`: Screen sharing is enabled.
+`ScreenOff`: Screen sharing is disabled.
+`VisibleOn`: The page is visible.
+`VisibleOff`: The page is invisible.
+ * @method void setEventType(string $EventType) Set The event type. Valid values: 
 `RoomStart`: The class started. `RoomEnd`: The class ended. `MemberJoin`: A user joined. `MemberQuit`: A user left. `RecordFinish`: Recording is finished.
+·Camera0n·: The camera is turned on.
+`Camera0ff`: The camera is turned off.
+`MicOn`: The mic is turned on.
+`MicOff`: The mic is turned off.
+`ScreenOn`: Screen sharing is enabled.
+`ScreenOff`: Screen sharing is disabled.
+`VisibleOn`: The page is visible.
+`VisibleOff`: The page is invisible.
  * @method EventDataInfo getEventData() Obtain The details of the event, including the room ID and the user to whom the event occurred.
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setEventData(EventDataInfo $EventData) Set The details of the event, including the room ID and the user to whom the event occurred.
@@ -39,8 +55,16 @@ class EventInfo extends AbstractModel
     public $Timestamp;
 
     /**
-     * @var string The event type. Valid values:
+     * @var string The event type. Valid values: 
 `RoomStart`: The class started. `RoomEnd`: The class ended. `MemberJoin`: A user joined. `MemberQuit`: A user left. `RecordFinish`: Recording is finished.
+·Camera0n·: The camera is turned on.
+`Camera0ff`: The camera is turned off.
+`MicOn`: The mic is turned on.
+`MicOff`: The mic is turned off.
+`ScreenOn`: Screen sharing is enabled.
+`ScreenOff`: Screen sharing is disabled.
+`VisibleOn`: The page is visible.
+`VisibleOff`: The page is invisible.
      */
     public $EventType;
 
@@ -52,8 +76,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * @param integer $Timestamp The Unix timestamp (seconds) when the event occurred.
-     * @param string $EventType The event type. Valid values:
+     * @param string $EventType The event type. Valid values: 
 `RoomStart`: The class started. `RoomEnd`: The class ended. `MemberJoin`: A user joined. `MemberQuit`: A user left. `RecordFinish`: Recording is finished.
+·Camera0n·: The camera is turned on.
+`Camera0ff`: The camera is turned off.
+`MicOn`: The mic is turned on.
+`MicOff`: The mic is turned off.
+`ScreenOn`: Screen sharing is enabled.
+`ScreenOff`: Screen sharing is disabled.
+`VisibleOn`: The page is visible.
+`VisibleOff`: The page is invisible.
      * @param EventDataInfo $EventData The details of the event, including the room ID and the user to whom the event occurred.
 Note: This field may return null, indicating that no valid values can be obtained.
      */

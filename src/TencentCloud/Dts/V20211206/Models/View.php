@@ -24,10 +24,8 @@ use TencentCloud\Common\AbstractModel;
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setViewName(string $ViewName) Set View name
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getNewViewName() Obtain New view name
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setNewViewName(string $NewViewName) Set New view name
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getNewViewName() Obtain Reserved field. Currently, a view cannot be renamed. Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setNewViewName(string $NewViewName) Set Reserved field. Currently, a view cannot be renamed. Note: This field may return null, indicating that no valid values can be obtained.
  */
 class View extends AbstractModel
 {
@@ -38,16 +36,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $ViewName;
 
     /**
-     * @var string New view name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Reserved field. Currently, a view cannot be renamed. Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $NewViewName;
 
     /**
      * @param string $ViewName View name
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $NewViewName New view name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $NewViewName Reserved field. Currently, a view cannot be renamed. Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

@@ -54,6 +54,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRecordLayout(integer $RecordLayout) Set Recording layout
  * @method string getGroupId() Obtain The ID of the group to bind. If you specify this parameter, only members of the group can enter this room.
  * @method void setGroupId(string $GroupId) Set The ID of the group to bind. If you specify this parameter, only members of the group can enter this room.
+ * @method integer getEnableDirectControl() Obtain Whether the teacher/teaching assistant can control students' cameras/microphones without the students' consent. Valid values: 
+`0` (default): No (consent required)
+`1`: Yes (no consent required)
+ * @method void setEnableDirectControl(integer $EnableDirectControl) Set Whether the teacher/teaching assistant can control students' cameras/microphones without the students' consent. Valid values: 
+`0` (default): No (consent required)
+`1`: Yes (no consent required)
  */
 class CreateRoomRequest extends AbstractModel
 {
@@ -143,6 +149,13 @@ class CreateRoomRequest extends AbstractModel
     public $GroupId;
 
     /**
+     * @var integer Whether the teacher/teaching assistant can control students' cameras/microphones without the students' consent. Valid values: 
+`0` (default): No (consent required)
+`1`: Yes (no consent required)
+     */
+    public $EnableDirectControl;
+
+    /**
      * @param string $Name Room name
      * @param integer $StartTime Reserved room start time, in UNIX timestamp format
      * @param integer $EndTime Reserved room end time, in UNIX timestamp format
@@ -160,6 +173,9 @@ class CreateRoomRequest extends AbstractModel
      * @param integer $AudienceType The audience type.
      * @param integer $RecordLayout Recording layout
      * @param string $GroupId The ID of the group to bind. If you specify this parameter, only members of the group can enter this room.
+     * @param integer $EnableDirectControl Whether the teacher/teaching assistant can control students' cameras/microphones without the students' consent. Valid values: 
+`0` (default): No (consent required)
+`1`: Yes (no consent required)
      */
     function __construct()
     {
@@ -240,6 +256,10 @@ class CreateRoomRequest extends AbstractModel
 
         if (array_key_exists("GroupId",$param) and $param["GroupId"] !== null) {
             $this->GroupId = $param["GroupId"];
+        }
+
+        if (array_key_exists("EnableDirectControl",$param) and $param["EnableDirectControl"] !== null) {
+            $this->EnableDirectControl = $param["EnableDirectControl"];
         }
     }
 }

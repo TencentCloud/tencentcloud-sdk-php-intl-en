@@ -68,6 +68,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setRecordUrl(string $RecordUrl) Set The recording URL (HTTPS), which is generated only after a room ends.
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getMaxMicNumber() Obtain The maximum number of users allowed (including teachers) in the room. The default value is `0`, which indicates that no limit is set. 
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setMaxMicNumber(integer $MaxMicNumber) Set The maximum number of users allowed (including teachers) in the room. The default value is `0`, which indicates that no limit is set. 
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getEnableDirectControl() Obtain Whether the students' consent is required to control their cameras/microphones.
+Note: This field may return null, indicating that no valid value was found.
+ * @method void setEnableDirectControl(integer $EnableDirectControl) Set Whether the students' consent is required to control their cameras/microphones.
+Note: This field may return null, indicating that no valid value was found.
  */
 class RoomItem extends AbstractModel
 {
@@ -140,6 +148,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $RecordUrl;
 
     /**
+     * @var integer The maximum number of users allowed (including teachers) in the room. The default value is `0`, which indicates that no limit is set. 
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $MaxMicNumber;
+
+    /**
+     * @var integer Whether the students' consent is required to control their cameras/microphones.
+Note: This field may return null, indicating that no valid value was found.
+     */
+    public $EnableDirectControl;
+
+    /**
      * @param string $Name The name.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $RoomId The room ID.
@@ -164,6 +184,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $RecordUrl The recording URL (HTTPS), which is generated only after a room ends.
 Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $MaxMicNumber The maximum number of users allowed (including teachers) in the room. The default value is `0`, which indicates that no limit is set. 
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $EnableDirectControl Whether the students' consent is required to control their cameras/microphones.
+Note: This field may return null, indicating that no valid value was found.
      */
     function __construct()
     {
@@ -220,6 +244,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("RecordUrl",$param) and $param["RecordUrl"] !== null) {
             $this->RecordUrl = $param["RecordUrl"];
+        }
+
+        if (array_key_exists("MaxMicNumber",$param) and $param["MaxMicNumber"] !== null) {
+            $this->MaxMicNumber = $param["MaxMicNumber"];
+        }
+
+        if (array_key_exists("EnableDirectControl",$param) and $param["EnableDirectControl"] !== null) {
+            $this->EnableDirectControl = $param["EnableDirectControl"];
         }
     }
 }

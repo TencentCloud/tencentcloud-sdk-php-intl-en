@@ -40,8 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMasterInstanceId(string $MasterInstanceId) Set Instance ID, which is required and the same as the primary instance ID when purchasing read-only or disaster recovery instances. Please use the [DescribeDBInstances](https://intl.cloud.tencent.com/document/api/236/15872?from_cn_redirect=1) API to query the instance IDs.
  * @method string getInstanceRole() Obtain Instance type. Valid values: master (primary instance), dr (disaster recovery instance), ro (read-only instance). Default value: master.
  * @method void setInstanceRole(string $InstanceRole) Set Instance type. Valid values: master (primary instance), dr (disaster recovery instance), ro (read-only instance). Default value: master.
- * @method string getMasterRegion() Obtain AZ information of the source instance, which is required for purchasing disaster recovery instances and read-only instances.
- * @method void setMasterRegion(string $MasterRegion) Set AZ information of the source instance, which is required for purchasing disaster recovery instances and read-only instances.
+ * @method string getMasterRegion() Obtain Region information of the source instance, which is required when purchasing a read-only or disaster recovery instance.
+ * @method void setMasterRegion(string $MasterRegion) Set Region information of the source instance, which is required when purchasing a read-only or disaster recovery instance.
  * @method integer getPort() Obtain Custom port. Value range: [1024-65535].
  * @method void setPort(integer $Port) Set Custom port. Value range: [1024-65535].
  * @method string getPassword() Obtain Sets the root account password. Rule: the password can contain 8-64 characters and must contain at least two of the following types of characters: letters, digits, and special symbols (_+-&=!@#$%^*()). This parameter can be specified when purchasing primary instances and is meaningless for read-only or disaster recovery instances.
@@ -62,8 +62,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRoGroup(RoGroup $RoGroup) Set Read-only instance information. This parameter must be passed in when purchasing read-only instances.
  * @method integer getAutoRenewFlag() Obtain This field is meaningless when purchasing pay-as-you-go instances.
  * @method void setAutoRenewFlag(integer $AutoRenewFlag) Set This field is meaningless when purchasing pay-as-you-go instances.
- * @method string getInstanceName() Obtain Instance name. For multiple instances purchased at one time, they will be distinguished by the name suffix number, such as instnaceName=db and goodsNum=3, their instance name is db1, db2 respectively.
- * @method void setInstanceName(string $InstanceName) Set Instance name. For multiple instances purchased at one time, they will be distinguished by the name suffix number, such as instnaceName=db and goodsNum=3, their instance name is db1, db2 respectively.
+ * @method string getInstanceName() Obtain Instance name For multiple instances purchased at one time, they will be distinguished by the name suffix number, such as instnaceName=db and goodsNum=3, and their instance names are db1, db2, and db3, respectively.
+ * @method void setInstanceName(string $InstanceName) Set Instance name For multiple instances purchased at one time, they will be distinguished by the name suffix number, such as instnaceName=db and goodsNum=3, and their instance names are db1, db2, and db3, respectively.
  * @method array getResourceTags() Obtain Instance tag information.
  * @method void setResourceTags(array $ResourceTags) Set Instance tag information.
  * @method string getDeployGroupId() Obtain Placement group ID.
@@ -74,8 +74,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDeviceType(string $DeviceType) Set Instance resource isolation type. Valid values: `UNIVERSAL` (general instance), `EXCLUSIVE` (dedicated instance), `BASIC` (basic instance). Default value: `UNIVERSAL`.
  * @method integer getParamTemplateId() Obtain Parameter template ID.
  * @method void setParamTemplateId(integer $ParamTemplateId) Set Parameter template ID.
- * @method array getAlarmPolicyList() Obtain Array of alarm policy IDs, which is `OriginId` obtained through the `DescribeAlarmPolicy` API.
- * @method void setAlarmPolicyList(array $AlarmPolicyList) Set Array of alarm policy IDs, which is `OriginId` obtained through the `DescribeAlarmPolicy` API.
+ * @method array getAlarmPolicyList() Obtain Array of alarm policy IDs,  which is `OriginId` obtained through the `DescribeAlarmPolicy` API.
+ * @method void setAlarmPolicyList(array $AlarmPolicyList) Set Array of alarm policy IDs,  which is `OriginId` obtained through the `DescribeAlarmPolicy` API.
  * @method integer getInstanceNodes() Obtain The number of nodes of the instance. To purchase a read-only replica or a basic instance, set this parameter to `1` or leave it empty. To purchase a three-node instance, set this parameter to `3` or specify the `BackupZone` parameter. If the instance to be purchased is a source instance and both `BackupZone` and this parameter are left empty, the value `2` will be used, which indicates the source instance will have two nodes.
  * @method void setInstanceNodes(integer $InstanceNodes) Set The number of nodes of the instance. To purchase a read-only replica or a basic instance, set this parameter to `1` or leave it empty. To purchase a three-node instance, set this parameter to `3` or specify the `BackupZone` parameter. If the instance to be purchased is a source instance and both `BackupZone` and this parameter are left empty, the value `2` will be used, which indicates the source instance will have two nodes.
  * @method integer getCpu() Obtain The number of CPU cores of the instance. If this parameter is left empty, the number of CPU cores depends on the `Memory` value.
@@ -148,7 +148,7 @@ class CreateDBInstanceHourRequest extends AbstractModel
     public $InstanceRole;
 
     /**
-     * @var string AZ information of the source instance, which is required for purchasing disaster recovery instances and read-only instances.
+     * @var string Region information of the source instance, which is required when purchasing a read-only or disaster recovery instance.
      */
     public $MasterRegion;
 
@@ -203,7 +203,7 @@ class CreateDBInstanceHourRequest extends AbstractModel
     public $AutoRenewFlag;
 
     /**
-     * @var string Instance name. For multiple instances purchased at one time, they will be distinguished by the name suffix number, such as instnaceName=db and goodsNum=3, their instance name is db1, db2 respectively.
+     * @var string Instance name For multiple instances purchased at one time, they will be distinguished by the name suffix number, such as instnaceName=db and goodsNum=3, and their instance names are db1, db2, and db3, respectively.
      */
     public $InstanceName;
 
@@ -233,7 +233,7 @@ class CreateDBInstanceHourRequest extends AbstractModel
     public $ParamTemplateId;
 
     /**
-     * @var array Array of alarm policy IDs, which is `OriginId` obtained through the `DescribeAlarmPolicy` API.
+     * @var array Array of alarm policy IDs,  which is `OriginId` obtained through the `DescribeAlarmPolicy` API.
      */
     public $AlarmPolicyList;
 
@@ -293,7 +293,7 @@ class CreateDBInstanceHourRequest extends AbstractModel
      * @param string $Zone AZ information. By default, the system will automatically select an AZ. Please use the [DescribeDBZoneConfig](https://intl.cloud.tencent.com/document/api/236/17229?from_cn_redirect=1) API to query the supported AZs.
      * @param string $MasterInstanceId Instance ID, which is required and the same as the primary instance ID when purchasing read-only or disaster recovery instances. Please use the [DescribeDBInstances](https://intl.cloud.tencent.com/document/api/236/15872?from_cn_redirect=1) API to query the instance IDs.
      * @param string $InstanceRole Instance type. Valid values: master (primary instance), dr (disaster recovery instance), ro (read-only instance). Default value: master.
-     * @param string $MasterRegion AZ information of the source instance, which is required for purchasing disaster recovery instances and read-only instances.
+     * @param string $MasterRegion Region information of the source instance, which is required when purchasing a read-only or disaster recovery instance.
      * @param integer $Port Custom port. Value range: [1024-65535].
      * @param string $Password Sets the root account password. Rule: the password can contain 8-64 characters and must contain at least two of the following types of characters: letters, digits, and special symbols (_+-&=!@#$%^*()). This parameter can be specified when purchasing primary instances and is meaningless for read-only or disaster recovery instances.
      * @param array $ParamList List of parameters in the format of `ParamList.0.Name=auto_increment&ParamList.0.Value=1`. You can use the [DescribeDefaultParams](https://intl.cloud.tencent.com/document/api/236/32662?from_cn_redirect=1) API to query the configurable parameters.
@@ -304,13 +304,13 @@ class CreateDBInstanceHourRequest extends AbstractModel
      * @param array $SecurityGroup Security group parameter. You can use the [DescribeProjectSecurityGroups](https://intl.cloud.tencent.com/document/api/236/15850?from_cn_redirect=1) API to query the security group details of a project.
      * @param RoGroup $RoGroup Read-only instance information. This parameter must be passed in when purchasing read-only instances.
      * @param integer $AutoRenewFlag This field is meaningless when purchasing pay-as-you-go instances.
-     * @param string $InstanceName Instance name. For multiple instances purchased at one time, they will be distinguished by the name suffix number, such as instnaceName=db and goodsNum=3, their instance name is db1, db2 respectively.
+     * @param string $InstanceName Instance name For multiple instances purchased at one time, they will be distinguished by the name suffix number, such as instnaceName=db and goodsNum=3, and their instance names are db1, db2, and db3, respectively.
      * @param array $ResourceTags Instance tag information.
      * @param string $DeployGroupId Placement group ID.
      * @param string $ClientToken A unique string supplied by the client to ensure that the request is idempotent. Its maximum length is 64 ASCII characters. If this parameter is not specified, the idempotency of the request cannot be guaranteed.
      * @param string $DeviceType Instance resource isolation type. Valid values: `UNIVERSAL` (general instance), `EXCLUSIVE` (dedicated instance), `BASIC` (basic instance). Default value: `UNIVERSAL`.
      * @param integer $ParamTemplateId Parameter template ID.
-     * @param array $AlarmPolicyList Array of alarm policy IDs, which is `OriginId` obtained through the `DescribeAlarmPolicy` API.
+     * @param array $AlarmPolicyList Array of alarm policy IDs,  which is `OriginId` obtained through the `DescribeAlarmPolicy` API.
      * @param integer $InstanceNodes The number of nodes of the instance. To purchase a read-only replica or a basic instance, set this parameter to `1` or leave it empty. To purchase a three-node instance, set this parameter to `3` or specify the `BackupZone` parameter. If the instance to be purchased is a source instance and both `BackupZone` and this parameter are left empty, the value `2` will be used, which indicates the source instance will have two nodes.
      * @param integer $Cpu The number of CPU cores of the instance. If this parameter is left empty, the number of CPU cores depends on the `Memory` value.
      * @param integer $AutoSyncFlag Whether to automatically start disaster recovery synchronization. This parameter takes effect only for disaster recovery instances. Valid values: `0` (no), `1` (yes). Default value: `0`.

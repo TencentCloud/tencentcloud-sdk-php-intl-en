@@ -56,8 +56,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSecurityGroupIds(array $SecurityGroupIds) Set List of security group IDs
  * @method integer getAutoRenewFlag() Obtain Auto-renewal flag. Valid values: `1` (auto-renewal), `2` (no renewal upon expiration).
  * @method void setAutoRenewFlag(integer $AutoRenewFlag) Set Auto-renewal flag. Valid values: `1` (auto-renewal), `2` (no renewal upon expiration).
- * @method integer getIpv6Flag() Obtain Whether IPv6 is supported.
- * @method void setIpv6Flag(integer $Ipv6Flag) Set Whether IPv6 is supported.
+ * @method integer getIpv6Flag() Obtain Whether IPv6 is supported. Valid values: `0` (unsupported), `1` (supported).
+ * @method void setIpv6Flag(integer $Ipv6Flag) Set Whether IPv6 is supported. Valid values: `0` (unsupported), `1` (supported).
  * @method array getResourceTags() Obtain Array of tag key-value pairs
  * @method void setResourceTags(array $ResourceTags) Set Array of tag key-value pairs
  * @method array getInitParams() Obtain List of parameters. Valid values: `character_set_server` (character set; required); `lower_case_table_names` (table name case sensitivity; required; `0`: case-sensitive; `1`: case-insensitive); `innodb_page_size` (InnoDB data page size; default size: 16 KB); `sync_mode` (sync mode; `0`: async; `1`: strong sync; `2`: downgradable strong sync; default value: `2`).
@@ -148,7 +148,7 @@ class CreateDBInstanceRequest extends AbstractModel
     public $AutoRenewFlag;
 
     /**
-     * @var integer Whether IPv6 is supported.
+     * @var integer Whether IPv6 is supported. Valid values: `0` (unsupported), `1` (supported).
      */
     public $Ipv6Flag;
 
@@ -191,7 +191,7 @@ class CreateDBInstanceRequest extends AbstractModel
      * @param string $InstanceName Name of the instance, which can be customized.
      * @param array $SecurityGroupIds List of security group IDs
      * @param integer $AutoRenewFlag Auto-renewal flag. Valid values: `1` (auto-renewal), `2` (no renewal upon expiration).
-     * @param integer $Ipv6Flag Whether IPv6 is supported.
+     * @param integer $Ipv6Flag Whether IPv6 is supported. Valid values: `0` (unsupported), `1` (supported).
      * @param array $ResourceTags Array of tag key-value pairs
      * @param array $InitParams List of parameters. Valid values: `character_set_server` (character set; required); `lower_case_table_names` (table name case sensitivity; required; `0`: case-sensitive; `1`: case-insensitive); `innodb_page_size` (InnoDB data page size; default size: 16 KB); `sync_mode` (sync mode; `0`: async; `1`: strong sync; `2`: downgradable strong sync; default value: `2`).
      * @param string $DcnRegion DCN source region

@@ -22,34 +22,14 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() Obtain TencentDB for MySQL instance ID
  * @method void setInstanceId(string $InstanceId) Set TencentDB for MySQL instance ID
- * @method integer getLogExpireDay() Obtain Retention period of audit logs. Valid values:
-7: seven days (a week);
-30: 30 days (a month);
-180: 180 days (six months);
-365: 365 days (a year);
-1095: 1095 days (three years);
-1825: 1825 days (five years).
- * @method void setLogExpireDay(integer $LogExpireDay) Set Retention period of audit logs. Valid values:
-7: seven days (a week);
-30: 30 days (a month);
-180: 180 days (six months);
-365: 365 days (a year);
-1095: 1095 days (three years);
-1825: 1825 days (five years).
- * @method integer getHighLogExpireDay() Obtain Retention period of high-frequency audit logs. Valid values:
-7: seven days (a week);
-30: 30 days (a month);
-180: 180 days (six months);
-365: 365 days (a year);
-1095: 1095 days (three years);
-1825: 1825 days (five years).
- * @method void setHighLogExpireDay(integer $HighLogExpireDay) Set Retention period of high-frequency audit logs. Valid values:
-7: seven days (a week);
-30: 30 days (a month);
-180: 180 days (six months);
-365: 365 days (a year);
-1095: 1095 days (three years);
-1825: 1825 days (five years).
+ * @method integer getLogExpireDay() Obtain Retention period of the audit log. Valid values:  `7` (one week), `30` (one month), `90` (three months), `180` (six months), `365` (one year), `1095` (three years), `1825` (five years).
+ * @method void setLogExpireDay(integer $LogExpireDay) Set Retention period of the audit log. Valid values:  `7` (one week), `30` (one month), `90` (three months), `180` (six months), `365` (one year), `1095` (three years), `1825` (five years).
+ * @method integer getHighLogExpireDay() Obtain Retention period of high-frequency audit logs. Valid values:  `7` (one week), `30` (one month).
+ * @method void setHighLogExpireDay(integer $HighLogExpireDay) Set Retention period of high-frequency audit logs. Valid values:  `7` (one week), `30` (one month).
+ * @method array getAuditRuleFilters() Obtain Audit rule If both this parameter and `RuleTemplateIds` are left empty, full audit will be applied.
+ * @method void setAuditRuleFilters(array $AuditRuleFilters) Set Audit rule If both this parameter and `RuleTemplateIds` are left empty, full audit will be applied.
+ * @method array getRuleTemplateIds() Obtain Rule template ID If both this parameter and `AuditRuleFilters` are left empty, full audit will be applied.
+ * @method void setRuleTemplateIds(array $RuleTemplateIds) Set Rule template ID If both this parameter and `AuditRuleFilters` are left empty, full audit will be applied.
  */
 class OpenAuditServiceRequest extends AbstractModel
 {
@@ -59,43 +39,31 @@ class OpenAuditServiceRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var integer Retention period of audit logs. Valid values:
-7: seven days (a week);
-30: 30 days (a month);
-180: 180 days (six months);
-365: 365 days (a year);
-1095: 1095 days (three years);
-1825: 1825 days (five years).
+     * @var integer Retention period of the audit log. Valid values:  `7` (one week), `30` (one month), `90` (three months), `180` (six months), `365` (one year), `1095` (three years), `1825` (five years).
      */
     public $LogExpireDay;
 
     /**
-     * @var integer Retention period of high-frequency audit logs. Valid values:
-7: seven days (a week);
-30: 30 days (a month);
-180: 180 days (six months);
-365: 365 days (a year);
-1095: 1095 days (three years);
-1825: 1825 days (five years).
+     * @var integer Retention period of high-frequency audit logs. Valid values:  `7` (one week), `30` (one month).
      */
     public $HighLogExpireDay;
 
     /**
+     * @var array Audit rule If both this parameter and `RuleTemplateIds` are left empty, full audit will be applied.
+     */
+    public $AuditRuleFilters;
+
+    /**
+     * @var array Rule template ID If both this parameter and `AuditRuleFilters` are left empty, full audit will be applied.
+     */
+    public $RuleTemplateIds;
+
+    /**
      * @param string $InstanceId TencentDB for MySQL instance ID
-     * @param integer $LogExpireDay Retention period of audit logs. Valid values:
-7: seven days (a week);
-30: 30 days (a month);
-180: 180 days (six months);
-365: 365 days (a year);
-1095: 1095 days (three years);
-1825: 1825 days (five years).
-     * @param integer $HighLogExpireDay Retention period of high-frequency audit logs. Valid values:
-7: seven days (a week);
-30: 30 days (a month);
-180: 180 days (six months);
-365: 365 days (a year);
-1095: 1095 days (three years);
-1825: 1825 days (five years).
+     * @param integer $LogExpireDay Retention period of the audit log. Valid values:  `7` (one week), `30` (one month), `90` (three months), `180` (six months), `365` (one year), `1095` (three years), `1825` (five years).
+     * @param integer $HighLogExpireDay Retention period of high-frequency audit logs. Valid values:  `7` (one week), `30` (one month).
+     * @param array $AuditRuleFilters Audit rule If both this parameter and `RuleTemplateIds` are left empty, full audit will be applied.
+     * @param array $RuleTemplateIds Rule template ID If both this parameter and `AuditRuleFilters` are left empty, full audit will be applied.
      */
     function __construct()
     {
@@ -120,6 +88,19 @@ class OpenAuditServiceRequest extends AbstractModel
 
         if (array_key_exists("HighLogExpireDay",$param) and $param["HighLogExpireDay"] !== null) {
             $this->HighLogExpireDay = $param["HighLogExpireDay"];
+        }
+
+        if (array_key_exists("AuditRuleFilters",$param) and $param["AuditRuleFilters"] !== null) {
+            $this->AuditRuleFilters = [];
+            foreach ($param["AuditRuleFilters"] as $key => $value){
+                $obj = new AuditRuleFilters();
+                $obj->deserialize($value);
+                array_push($this->AuditRuleFilters, $obj);
+            }
+        }
+
+        if (array_key_exists("RuleTemplateIds",$param) and $param["RuleTemplateIds"] !== null) {
+            $this->RuleTemplateIds = $param["RuleTemplateIds"];
         }
     }
 }

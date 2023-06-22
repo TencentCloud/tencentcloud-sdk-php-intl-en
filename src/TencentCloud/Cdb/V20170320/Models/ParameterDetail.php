@@ -42,6 +42,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMaxFunc(string $MaxFunc) Set Maximum parameter value, which is valid only when `ParamType` is set to `func`
  * @method string getMinFunc() Obtain Minimum parameter value, which is valid only when `ParamType` is set to `func`
  * @method void setMinFunc(string $MinFunc) Set Minimum parameter value, which is valid only when `ParamType` is set to `func`
+ * @method boolean getIsNotSupportEdit() Obtain Whether the parameter can be modified Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setIsNotSupportEdit(boolean $IsNotSupportEdit) Set Whether the parameter can be modified Note: This field may return null, indicating that no valid values can be obtained.
  */
 class ParameterDetail extends AbstractModel
 {
@@ -101,6 +103,11 @@ class ParameterDetail extends AbstractModel
     public $MinFunc;
 
     /**
+     * @var boolean Whether the parameter can be modified Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $IsNotSupportEdit;
+
+    /**
      * @param string $Name Parameter name
      * @param string $ParamType Parameter type. Valid values: `integer`, `enum`, `float`, `string`, `func`
      * @param string $Default Default value of the parameter
@@ -112,6 +119,7 @@ class ParameterDetail extends AbstractModel
      * @param array $EnumValue Enumerated values of the parameter. It is null if the parameter is non-enumerated
      * @param string $MaxFunc Maximum parameter value, which is valid only when `ParamType` is set to `func`
      * @param string $MinFunc Minimum parameter value, which is valid only when `ParamType` is set to `func`
+     * @param boolean $IsNotSupportEdit Whether the parameter can be modified Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -168,6 +176,10 @@ class ParameterDetail extends AbstractModel
 
         if (array_key_exists("MinFunc",$param) and $param["MinFunc"] !== null) {
             $this->MinFunc = $param["MinFunc"];
+        }
+
+        if (array_key_exists("IsNotSupportEdit",$param) and $param["IsNotSupportEdit"] !== null) {
+            $this->IsNotSupportEdit = $param["IsNotSupportEdit"];
         }
     }
 }

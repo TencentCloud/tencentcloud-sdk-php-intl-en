@@ -34,6 +34,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDescription(string $Description) Set Parameter template description
  * @method string getTemplateType() Obtain Type of the parameter template. Valid values: `HIGH_STABILITY` (high-stability template), `HIGH_PERFORMANCE` (high-performance template).
  * @method void setTemplateType(string $TemplateType) Set Type of the parameter template. Valid values: `HIGH_STABILITY` (high-stability template), `HIGH_PERFORMANCE` (high-performance template).
+ * @method string getEngineType() Obtain Parameter template engine.  Valid values: `InnoDB`, `RocksDB`. 
+Note:  This field may return null, indicating that no valid values can be obtained.
+ * @method void setEngineType(string $EngineType) Set Parameter template engine.  Valid values: `InnoDB`, `RocksDB`. 
+Note:  This field may return null, indicating that no valid values can be obtained.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -75,6 +79,12 @@ class DescribeParamTemplateInfoResponse extends AbstractModel
     public $TemplateType;
 
     /**
+     * @var string Parameter template engine.  Valid values: `InnoDB`, `RocksDB`. 
+Note:  This field may return null, indicating that no valid values can be obtained.
+     */
+    public $EngineType;
+
+    /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
@@ -87,6 +97,8 @@ class DescribeParamTemplateInfoResponse extends AbstractModel
      * @param array $Items Parameter details
      * @param string $Description Parameter template description
      * @param string $TemplateType Type of the parameter template. Valid values: `HIGH_STABILITY` (high-stability template), `HIGH_PERFORMANCE` (high-performance template).
+     * @param string $EngineType Parameter template engine.  Valid values: `InnoDB`, `RocksDB`. 
+Note:  This field may return null, indicating that no valid values can be obtained.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -133,6 +145,10 @@ class DescribeParamTemplateInfoResponse extends AbstractModel
 
         if (array_key_exists("TemplateType",$param) and $param["TemplateType"] !== null) {
             $this->TemplateType = $param["TemplateType"];
+        }
+
+        if (array_key_exists("EngineType",$param) and $param["EngineType"] !== null) {
+            $this->EngineType = $param["EngineType"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
