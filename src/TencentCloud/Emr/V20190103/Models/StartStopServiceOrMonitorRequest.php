@@ -23,19 +23,21 @@ use TencentCloud\Common\AbstractModel;
  * @method string getInstanceId() Obtain The cluster ID.
  * @method void setInstanceId(string $InstanceId) Set The cluster ID.
  * @method string getOpType() Obtain The operation type. Valid values:
-<li>`StartService`: Start services.</li>
-<li>`StopService`: Stop services.</li>
-<li>`StartMonitor`: Start the monitor.</li>
-<li>`StopMonitor`: Stop the monitor.</li>
-
+<li>StartService: Start service</li>
+<li>StopService: Stop service</li>
+<li>StartMonitor: Start maintenance</li>
+<li>StopMonitor: Stop maintenance</li>
+<li>RestartService: Restart service. If this type is selected, "StrategyConfig" is required.</li>
  * @method void setOpType(string $OpType) Set The operation type. Valid values:
-<li>`StartService`: Start services.</li>
-<li>`StopService`: Stop services.</li>
-<li>`StartMonitor`: Start the monitor.</li>
-<li>`StopMonitor`: Stop the monitor.</li>
-
+<li>StartService: Start service</li>
+<li>StopService: Stop service</li>
+<li>StartMonitor: Start maintenance</li>
+<li>StopMonitor: Stop maintenance</li>
+<li>RestartService: Restart service. If this type is selected, "StrategyConfig" is required.</li>
  * @method OpScope getOpScope() Obtain The operation scope.
  * @method void setOpScope(OpScope $OpScope) Set The operation scope.
+ * @method StrategyConfig getStrategyConfig() Obtain The operation policy.
+ * @method void setStrategyConfig(StrategyConfig $StrategyConfig) Set The operation policy.
  */
 class StartStopServiceOrMonitorRequest extends AbstractModel
 {
@@ -46,11 +48,11 @@ class StartStopServiceOrMonitorRequest extends AbstractModel
 
     /**
      * @var string The operation type. Valid values:
-<li>`StartService`: Start services.</li>
-<li>`StopService`: Stop services.</li>
-<li>`StartMonitor`: Start the monitor.</li>
-<li>`StopMonitor`: Stop the monitor.</li>
-
+<li>StartService: Start service</li>
+<li>StopService: Stop service</li>
+<li>StartMonitor: Start maintenance</li>
+<li>StopMonitor: Stop maintenance</li>
+<li>RestartService: Restart service. If this type is selected, "StrategyConfig" is required.</li>
      */
     public $OpType;
 
@@ -60,14 +62,20 @@ class StartStopServiceOrMonitorRequest extends AbstractModel
     public $OpScope;
 
     /**
+     * @var StrategyConfig The operation policy.
+     */
+    public $StrategyConfig;
+
+    /**
      * @param string $InstanceId The cluster ID.
      * @param string $OpType The operation type. Valid values:
-<li>`StartService`: Start services.</li>
-<li>`StopService`: Stop services.</li>
-<li>`StartMonitor`: Start the monitor.</li>
-<li>`StopMonitor`: Stop the monitor.</li>
-
+<li>StartService: Start service</li>
+<li>StopService: Stop service</li>
+<li>StartMonitor: Start maintenance</li>
+<li>StopMonitor: Stop maintenance</li>
+<li>RestartService: Restart service. If this type is selected, "StrategyConfig" is required.</li>
      * @param OpScope $OpScope The operation scope.
+     * @param StrategyConfig $StrategyConfig The operation policy.
      */
     function __construct()
     {
@@ -93,6 +101,11 @@ class StartStopServiceOrMonitorRequest extends AbstractModel
         if (array_key_exists("OpScope",$param) and $param["OpScope"] !== null) {
             $this->OpScope = new OpScope();
             $this->OpScope->deserialize($param["OpScope"]);
+        }
+
+        if (array_key_exists("StrategyConfig",$param) and $param["StrategyConfig"] !== null) {
+            $this->StrategyConfig = new StrategyConfig();
+            $this->StrategyConfig->deserialize($param["StrategyConfig"]);
         }
     }
 }

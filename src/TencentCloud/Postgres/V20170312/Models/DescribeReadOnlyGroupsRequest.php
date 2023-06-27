@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeReadOnlyGroups request structure.
  *
- * @method array getFilters() Obtain Filter condition. The primary ID must be specified in the format of `db-master-instance-id` to filter results, or else `null` will be returned.
- * @method void setFilters(array $Filters) Set Filter condition. The primary ID must be specified in the format of `db-master-instance-id` to filter results, or else `null` will be returned.
+ * @method array getFilters() Obtain Filter instances by using one or more filters. Valid values:  `db-master-instance-id` (filter by the primary instance ID in string), `read-only-group-id` (filter by the read-only group ID in string),
+ * @method void setFilters(array $Filters) Set Filter instances by using one or more filters. Valid values:  `db-master-instance-id` (filter by the primary instance ID in string), `read-only-group-id` (filter by the read-only group ID in string),
  * @method integer getPageSize() Obtain The number of results per page. Default value: 10.
  * @method void setPageSize(integer $PageSize) Set The number of results per page. Default value: 10.
  * @method integer getPageNumber() Obtain Specify which page is displayed. Default value: 1 (the first page).
@@ -34,7 +34,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeReadOnlyGroupsRequest extends AbstractModel
 {
     /**
-     * @var array Filter condition. The primary ID must be specified in the format of `db-master-instance-id` to filter results, or else `null` will be returned.
+     * @var array Filter instances by using one or more filters. Valid values:  `db-master-instance-id` (filter by the primary instance ID in string), `read-only-group-id` (filter by the read-only group ID in string),
      */
     public $Filters;
 
@@ -59,7 +59,7 @@ class DescribeReadOnlyGroupsRequest extends AbstractModel
     public $OrderByType;
 
     /**
-     * @param array $Filters Filter condition. The primary ID must be specified in the format of `db-master-instance-id` to filter results, or else `null` will be returned.
+     * @param array $Filters Filter instances by using one or more filters. Valid values:  `db-master-instance-id` (filter by the primary instance ID in string), `read-only-group-id` (filter by the read-only group ID in string),
      * @param integer $PageSize The number of results per page. Default value: 10.
      * @param integer $PageNumber Specify which page is displayed. Default value: 1 (the first page).
      * @param string $OrderBy Sorting criterion. Valid values: `ROGroupId`, `CreateTime`, `Name`.

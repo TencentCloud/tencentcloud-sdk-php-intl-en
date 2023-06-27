@@ -18,20 +18,20 @@ namespace TencentCloud\Dcdb\V20180411\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * IsolateHourDCDBInstance request structure.
+ * DescribeDBEncryptAttributes request structure.
  *
- * @method array getInstanceIds() Obtain ID list of the instances to be upgraded  in the format of  `dcdbt-ow728lmc`, which can be obtained through the `DescribeDCDBInstances` API.
- * @method void setInstanceIds(array $InstanceIds) Set ID list of the instances to be upgraded  in the format of  `dcdbt-ow728lmc`, which can be obtained through the `DescribeDCDBInstances` API.
+ * @method string getInstanceId() Obtain Instance ID in the format of  `tdsqlshard-ow728lmc`
+ * @method void setInstanceId(string $InstanceId) Set Instance ID in the format of  `tdsqlshard-ow728lmc`
  */
-class IsolateHourDCDBInstanceRequest extends AbstractModel
+class DescribeDBEncryptAttributesRequest extends AbstractModel
 {
     /**
-     * @var array ID list of the instances to be upgraded  in the format of  `dcdbt-ow728lmc`, which can be obtained through the `DescribeDCDBInstances` API.
+     * @var string Instance ID in the format of  `tdsqlshard-ow728lmc`
      */
-    public $InstanceIds;
+    public $InstanceId;
 
     /**
-     * @param array $InstanceIds ID list of the instances to be upgraded  in the format of  `dcdbt-ow728lmc`, which can be obtained through the `DescribeDCDBInstances` API.
+     * @param string $InstanceId Instance ID in the format of  `tdsqlshard-ow728lmc`
      */
     function __construct()
     {
@@ -46,8 +46,8 @@ class IsolateHourDCDBInstanceRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InstanceIds",$param) and $param["InstanceIds"] !== null) {
-            $this->InstanceIds = $param["InstanceIds"];
+        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
+            $this->InstanceId = $param["InstanceId"];
         }
     }
 }

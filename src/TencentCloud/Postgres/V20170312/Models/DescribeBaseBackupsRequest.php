@@ -24,14 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMinFinishTime(string $MinFinishTime) Set Minimum end time of a backup in the format of `2018-01-01 00:00:00`. It is 7 days ago by default.
  * @method string getMaxFinishTime() Obtain Maximum end time of a backup in the format of `2018-01-01 00:00:00`. It is the current time by default.
  * @method void setMaxFinishTime(string $MaxFinishTime) Set Maximum end time of a backup in the format of `2018-01-01 00:00:00`. It is the current time by default.
- * @method array getFilters() Obtain Filter instances using one or more criteria. Valid filter names:
-db-instance-id: Filter by instance ID (in string format).
-db-instance-name: Filter by instance name (in string format).
-db-instance-ip: Filter by instance VPC IP (in string format).
- * @method void setFilters(array $Filters) Set Filter instances using one or more criteria. Valid filter names:
-db-instance-id: Filter by instance ID (in string format).
-db-instance-name: Filter by instance name (in string format).
-db-instance-ip: Filter by instance VPC IP (in string format).
+ * @method array getFilters() Obtain Filter instances by using one or more filters. Valid values:  `db-instance-idFilter` (filter by instance ID in string),  `db-instance-name` (filter by instance name in string),  `db-instance-ip` (filter by instance VPC IP address in string),  `base-backup-id` (filter by backup set ID in string), 
+ * @method void setFilters(array $Filters) Set Filter instances by using one or more filters. Valid values:  `db-instance-idFilter` (filter by instance ID in string),  `db-instance-name` (filter by instance name in string),  `db-instance-ip` (filter by instance VPC IP address in string),  `base-backup-id` (filter by backup set ID in string), 
  * @method integer getLimit() Obtain The maximum number of results returned per page. Value range: 1-100. Default: `10`
  * @method void setLimit(integer $Limit) Set The maximum number of results returned per page. Value range: 1-100. Default: `10`
  * @method integer getOffset() Obtain Data offset, which starts from 0.
@@ -54,10 +48,7 @@ class DescribeBaseBackupsRequest extends AbstractModel
     public $MaxFinishTime;
 
     /**
-     * @var array Filter instances using one or more criteria. Valid filter names:
-db-instance-id: Filter by instance ID (in string format).
-db-instance-name: Filter by instance name (in string format).
-db-instance-ip: Filter by instance VPC IP (in string format).
+     * @var array Filter instances by using one or more filters. Valid values:  `db-instance-idFilter` (filter by instance ID in string),  `db-instance-name` (filter by instance name in string),  `db-instance-ip` (filter by instance VPC IP address in string),  `base-backup-id` (filter by backup set ID in string), 
      */
     public $Filters;
 
@@ -84,10 +75,7 @@ db-instance-ip: Filter by instance VPC IP (in string format).
     /**
      * @param string $MinFinishTime Minimum end time of a backup in the format of `2018-01-01 00:00:00`. It is 7 days ago by default.
      * @param string $MaxFinishTime Maximum end time of a backup in the format of `2018-01-01 00:00:00`. It is the current time by default.
-     * @param array $Filters Filter instances using one or more criteria. Valid filter names:
-db-instance-id: Filter by instance ID (in string format).
-db-instance-name: Filter by instance name (in string format).
-db-instance-ip: Filter by instance VPC IP (in string format).
+     * @param array $Filters Filter instances by using one or more filters. Valid values:  `db-instance-idFilter` (filter by instance ID in string),  `db-instance-name` (filter by instance name in string),  `db-instance-ip` (filter by instance VPC IP address in string),  `base-backup-id` (filter by backup set ID in string), 
      * @param integer $Limit The maximum number of results returned per page. Value range: 1-100. Default: `10`
      * @param integer $Offset Data offset, which starts from 0.
      * @param string $OrderBy Sorting field. Valid values: `StartTime`, `FinishTime`, `Size`.

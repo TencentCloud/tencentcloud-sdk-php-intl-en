@@ -38,6 +38,8 @@ Set this parameter to a value above 10. This parameter takes effect when `ReadOn
 Set this parameter to a value above 10. This parameter takes effect when `ReadOnly` is 1 or 2.
  * @method integer getSlaveConst() Obtain Whether to specify a replica server for read-only account. Valid values: `0` (No replica server is specified, which means that the proxy will select another available replica server to keep connection with the client if the current replica server doesn’t meet the requirement). `1` (The replica server is specified, which means that the connection will be disconnected if the specified replica server doesn’t meet the requirement.)
  * @method void setSlaveConst(integer $SlaveConst) Set Whether to specify a replica server for read-only account. Valid values: `0` (No replica server is specified, which means that the proxy will select another available replica server to keep connection with the client if the current replica server doesn’t meet the requirement). `1` (The replica server is specified, which means that the connection will be disconnected if the specified replica server doesn’t meet the requirement.)
+ * @method integer getMaxUserConnections() Obtain Maximum number of connections. `0` indicates no limit.	
+ * @method void setMaxUserConnections(integer $MaxUserConnections) Set Maximum number of connections. `0` indicates no limit.	
  */
 class DBAccount extends AbstractModel
 {
@@ -83,6 +85,11 @@ Set this parameter to a value above 10. This parameter takes effect when `ReadOn
     public $SlaveConst;
 
     /**
+     * @var integer Maximum number of connections. `0` indicates no limit.	
+     */
+    public $MaxUserConnections;
+
+    /**
      * @param string $UserName Username
      * @param string $Host Host from which a user can log in (corresponding to the `host` field for a MySQL user; a user is uniquely identified by username and host; this parameter is in IP format and ends with % for IP range; % can be entered; if this parameter is left empty, % will be used by default).
      * @param string $Description User remarks
@@ -92,6 +99,7 @@ Set this parameter to a value above 10. This parameter takes effect when `ReadOn
      * @param integer $DelayThresh If the replica delay exceeds the set value of this parameter, the replica will be considered to have failed.
 Set this parameter to a value above 10. This parameter takes effect when `ReadOnly` is 1 or 2.
      * @param integer $SlaveConst Whether to specify a replica server for read-only account. Valid values: `0` (No replica server is specified, which means that the proxy will select another available replica server to keep connection with the client if the current replica server doesn’t meet the requirement). `1` (The replica server is specified, which means that the connection will be disconnected if the specified replica server doesn’t meet the requirement.)
+     * @param integer $MaxUserConnections Maximum number of connections. `0` indicates no limit.	
      */
     function __construct()
     {
@@ -136,6 +144,10 @@ Set this parameter to a value above 10. This parameter takes effect when `ReadOn
 
         if (array_key_exists("SlaveConst",$param) and $param["SlaveConst"] !== null) {
             $this->SlaveConst = $param["SlaveConst"];
+        }
+
+        if (array_key_exists("MaxUserConnections",$param) and $param["MaxUserConnections"] !== null) {
+            $this->MaxUserConnections = $param["MaxUserConnections"];
         }
     }
 }

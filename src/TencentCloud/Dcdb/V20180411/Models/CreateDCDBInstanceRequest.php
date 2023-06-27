@@ -58,8 +58,8 @@ The current purchasable AZ needs be pulled through `DescribeDCDBSaleInfo` API.
  * @method void setSecurityGroupId(string $SecurityGroupId) Set Security group ID
  * @method string getInstanceName() Obtain Custom name of the instance
  * @method void setInstanceName(string $InstanceName) Set Custom name of the instance
- * @method integer getIpv6Flag() Obtain Whether IPv6 is supported
- * @method void setIpv6Flag(integer $Ipv6Flag) Set Whether IPv6 is supported
+ * @method integer getIpv6Flag() Obtain Whether IPv6 is supported. Valid values: `0` (unsupported), `1` (supported).
+ * @method void setIpv6Flag(integer $Ipv6Flag) Set Whether IPv6 is supported. Valid values: `0` (unsupported), `1` (supported).
  * @method array getResourceTags() Obtain Array of tag key-value pairs
  * @method void setResourceTags(array $ResourceTags) Set Array of tag key-value pairs
  * @method array getInitParams() Obtain List of parameters. Valid values: `character_set_server` (character set; required); `lower_case_table_names` (table name case sensitivity; required; `0`: case-sensitive; `1`: case-insensitive); `innodb_page_size` (InnoDB data page size; default size: 16 KB); `sync_mode` (sync mode; `0`: async; `1`: strong sync; `2`: downgradable strong sync; default value: `2`).
@@ -68,8 +68,8 @@ The current purchasable AZ needs be pulled through `DescribeDCDBSaleInfo` API.
  * @method void setDcnRegion(string $DcnRegion) Set DCN source region
  * @method string getDcnInstanceId() Obtain DCN source instance ID
  * @method void setDcnInstanceId(string $DcnInstanceId) Set DCN source instance ID
- * @method integer getAutoRenewFlag() Obtain Renewal mode. Valid values: `0` (Manual renewal, which is the default mode), `1` (Auto-renewal), `2` (Manual renewal, which is specified by users). If no renewal is required, set it to `0`.
- * @method void setAutoRenewFlag(integer $AutoRenewFlag) Set Renewal mode. Valid values: `0` (Manual renewal, which is the default mode), `1` (Auto-renewal), `2` (Manual renewal, which is specified by users). If no renewal is required, set it to `0`.
+ * @method integer getAutoRenewFlag() Obtain Renewal mode. Valid values: `0` (manual renewal, which is the default mode), `1` (auto-renewal), `2` (manual renewal, which is specified by users).  If no renewal is required, set it to `0`.
+ * @method void setAutoRenewFlag(integer $AutoRenewFlag) Set Renewal mode. Valid values: `0` (manual renewal, which is the default mode), `1` (auto-renewal), `2` (manual renewal, which is specified by users).  If no renewal is required, set it to `0`.
  * @method array getSecurityGroupIds() Obtain Security group IDs in array. This parameter is compatible with the old parameter `SecurityGroupId`.
  * @method void setSecurityGroupIds(array $SecurityGroupIds) Set Security group IDs in array. This parameter is compatible with the old parameter `SecurityGroupId`.
  */
@@ -155,7 +155,7 @@ The current purchasable AZ needs be pulled through `DescribeDCDBSaleInfo` API.
     public $InstanceName;
 
     /**
-     * @var integer Whether IPv6 is supported
+     * @var integer Whether IPv6 is supported. Valid values: `0` (unsupported), `1` (supported).
      */
     public $Ipv6Flag;
 
@@ -180,7 +180,7 @@ The current purchasable AZ needs be pulled through `DescribeDCDBSaleInfo` API.
     public $DcnInstanceId;
 
     /**
-     * @var integer Renewal mode. Valid values: `0` (Manual renewal, which is the default mode), `1` (Auto-renewal), `2` (Manual renewal, which is specified by users). If no renewal is required, set it to `0`.
+     * @var integer Renewal mode. Valid values: `0` (manual renewal, which is the default mode), `1` (auto-renewal), `2` (manual renewal, which is specified by users).  If no renewal is required, set it to `0`.
      */
     public $AutoRenewFlag;
 
@@ -209,12 +209,12 @@ The current purchasable AZ needs be pulled through `DescribeDCDBSaleInfo` API.
      * @param array $VoucherIds Voucher ID list. Currently, you can specify only one voucher.
      * @param string $SecurityGroupId Security group ID
      * @param string $InstanceName Custom name of the instance
-     * @param integer $Ipv6Flag Whether IPv6 is supported
+     * @param integer $Ipv6Flag Whether IPv6 is supported. Valid values: `0` (unsupported), `1` (supported).
      * @param array $ResourceTags Array of tag key-value pairs
      * @param array $InitParams List of parameters. Valid values: `character_set_server` (character set; required); `lower_case_table_names` (table name case sensitivity; required; `0`: case-sensitive; `1`: case-insensitive); `innodb_page_size` (InnoDB data page size; default size: 16 KB); `sync_mode` (sync mode; `0`: async; `1`: strong sync; `2`: downgradable strong sync; default value: `2`).
      * @param string $DcnRegion DCN source region
      * @param string $DcnInstanceId DCN source instance ID
-     * @param integer $AutoRenewFlag Renewal mode. Valid values: `0` (Manual renewal, which is the default mode), `1` (Auto-renewal), `2` (Manual renewal, which is specified by users). If no renewal is required, set it to `0`.
+     * @param integer $AutoRenewFlag Renewal mode. Valid values: `0` (manual renewal, which is the default mode), `1` (auto-renewal), `2` (manual renewal, which is specified by users).  If no renewal is required, set it to `0`.
      * @param array $SecurityGroupIds Security group IDs in array. This parameter is compatible with the old parameter `SecurityGroupId`.
      */
     function __construct()

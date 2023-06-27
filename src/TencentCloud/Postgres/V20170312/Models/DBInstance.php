@@ -34,8 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDBInstanceId(string $DBInstanceId) Set Instance ID
  * @method string getDBInstanceName() Obtain Instance name
  * @method void setDBInstanceName(string $DBInstanceName) Set Instance name
- * @method string getDBInstanceStatus() Obtain Instance status. Valid values: `applying`, `init` (to be initialized), `initing` (initializing), `running`, `limited run`, `isolated`, `recycling`, `recycled`, `job running`, `offline`, `migrating`, `expanding`, `waitSwitch` (waiting for switch), `switching`, `readonly`, `restarting`, `network changing`, upgrading (upgrading kernel version).
- * @method void setDBInstanceStatus(string $DBInstanceStatus) Set Instance status. Valid values: `applying`, `init` (to be initialized), `initing` (initializing), `running`, `limited run`, `isolated`, `recycling`, `recycled`, `job running`, `offline`, `migrating`, `expanding`, `waitSwitch` (waiting for switch), `switching`, `readonly`, `restarting`, `network changing`, upgrading (upgrading kernel version).
+ * @method string getDBInstanceStatus() Obtain Instance status.  Valid values: `applying`, `init` (to be initialized), `initing` (initializing), `running`, `limited run`, `isolating`, `isolated`, `recycling`, `recycled`, `job running`, `offline`, `migrating`, `expanding`, `waitSwitch` (waiting for switch), `switching`, `readonly`, `restarting`, `network changing`, `upgrading` (upgrading kernel version).
+ * @method void setDBInstanceStatus(string $DBInstanceStatus) Set Instance status.  Valid values: `applying`, `init` (to be initialized), `initing` (initializing), `running`, `limited run`, `isolating`, `isolated`, `recycling`, `recycled`, `job running`, `offline`, `migrating`, `expanding`, `waitSwitch` (waiting for switch), `switching`, `readonly`, `restarting`, `network changing`, `upgrading` (upgrading kernel version).
  * @method integer getDBInstanceMemory() Obtain Assigned instance memory size in GB
  * @method void setDBInstanceMemory(integer $DBInstanceMemory) Set Assigned instance memory size in GB
  * @method integer getDBInstanceStorage() Obtain Assigned instance storage capacity in GB
@@ -159,7 +159,7 @@ class DBInstance extends AbstractModel
     public $DBInstanceName;
 
     /**
-     * @var string Instance status. Valid values: `applying`, `init` (to be initialized), `initing` (initializing), `running`, `limited run`, `isolated`, `recycling`, `recycled`, `job running`, `offline`, `migrating`, `expanding`, `waitSwitch` (waiting for switch), `switching`, `readonly`, `restarting`, `network changing`, upgrading (upgrading kernel version).
+     * @var string Instance status.  Valid values: `applying`, `init` (to be initialized), `initing` (initializing), `running`, `limited run`, `isolating`, `isolated`, `recycling`, `recycled`, `job running`, `offline`, `migrating`, `expanding`, `waitSwitch` (waiting for switch), `switching`, `readonly`, `restarting`, `network changing`, `upgrading` (upgrading kernel version).
      */
     public $DBInstanceStatus;
 
@@ -337,7 +337,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $SubnetId SubnetId
      * @param string $DBInstanceId Instance ID
      * @param string $DBInstanceName Instance name
-     * @param string $DBInstanceStatus Instance status. Valid values: `applying`, `init` (to be initialized), `initing` (initializing), `running`, `limited run`, `isolated`, `recycling`, `recycled`, `job running`, `offline`, `migrating`, `expanding`, `waitSwitch` (waiting for switch), `switching`, `readonly`, `restarting`, `network changing`, upgrading (upgrading kernel version).
+     * @param string $DBInstanceStatus Instance status.  Valid values: `applying`, `init` (to be initialized), `initing` (initializing), `running`, `limited run`, `isolating`, `isolated`, `recycling`, `recycled`, `job running`, `offline`, `migrating`, `expanding`, `waitSwitch` (waiting for switch), `switching`, `readonly`, `restarting`, `network changing`, `upgrading` (upgrading kernel version).
      * @param integer $DBInstanceMemory Assigned instance memory size in GB
      * @param integer $DBInstanceStorage Assigned instance storage capacity in GB
      * @param integer $DBInstanceCpu Number of assigned CPUs

@@ -20,14 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * The data governance rules.
  *
-
+ * @method string getRuleType() Obtain Governance rule type. Valid values: `Customize` (custom) and `Intelligence` (intelligent).
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setRuleType(string $RuleType) Set Governance rule type. Valid values: `Customize` (custom) and `Intelligence` (intelligent).
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getGovernEngine() Obtain The governance engine.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setGovernEngine(string $GovernEngine) Set The governance engine.
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class DataGovernPolicy extends AbstractModel
 {
-
+    /**
+     * @var string Governance rule type. Valid values: `Customize` (custom) and `Intelligence` (intelligent).
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $RuleType;
 
     /**
+     * @var string The governance engine.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $GovernEngine;
 
+    /**
+     * @param string $RuleType Governance rule type. Valid values: `Customize` (custom) and `Intelligence` (intelligent).
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $GovernEngine The governance engine.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -42,6 +62,12 @@ class DataGovernPolicy extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("RuleType",$param) and $param["RuleType"] !== null) {
+            $this->RuleType = $param["RuleType"];
+        }
 
+        if (array_key_exists("GovernEngine",$param) and $param["GovernEngine"] !== null) {
+            $this->GovernEngine = $param["GovernEngine"];
+        }
     }
 }

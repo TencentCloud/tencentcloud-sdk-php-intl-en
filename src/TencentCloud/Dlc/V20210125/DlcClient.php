@@ -23,12 +23,14 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Dlc\V20210125\Models as Models;
 
 /**
+ * @method Models\CancelSparkSessionBatchSQLResponse CancelSparkSessionBatchSQL(Models\CancelSparkSessionBatchSQLRequest $req) This API is used to cancel a Spark SQL batch task.
  * @method Models\CancelTaskResponse CancelTask(Models\CancelTaskRequest $req) This API is used to cancel a task.
  * @method Models\CreateDataEngineResponse CreateDataEngine(Models\CreateDataEngineRequest $req) This API is used to create a data engine.
  * @method Models\CreateInternalTableResponse CreateInternalTable(Models\CreateInternalTableRequest $req) This API is used to create a managed internal table. It has been disused.
  * @method Models\CreateResultDownloadResponse CreateResultDownload(Models\CreateResultDownloadRequest $req) This API is used to create a query result download task.
  * @method Models\CreateSparkAppResponse CreateSparkApp(Models\CreateSparkAppRequest $req) This API is used to create a Spark application.
  * @method Models\CreateSparkAppTaskResponse CreateSparkAppTask(Models\CreateSparkAppTaskRequest $req) This API is used to create a Spark task.
+ * @method Models\CreateSparkSessionBatchSQLResponse CreateSparkSessionBatchSQL(Models\CreateSparkSessionBatchSQLRequest $req) This API is used to submit a Spark SQL batch task.
  * @method Models\CreateTaskResponse CreateTask(Models\CreateTaskRequest $req) This API is used to create a SQL query task. (We recommend you use the `CreateTasks` API instead.)
  * @method Models\CreateTasksResponse CreateTasks(Models\CreateTasksRequest $req) This API is used to create tasks in batches.
  * @method Models\DeleteSparkAppResponse DeleteSparkApp(Models\DeleteSparkAppRequest $req) This API is used to delete a Spark application.
@@ -40,11 +42,13 @@ use TencentCloud\Dlc\V20210125\Models as Models;
  * @method Models\DescribeSparkAppJobResponse DescribeSparkAppJob(Models\DescribeSparkAppJobRequest $req) This API is used to query a specific Spark application.
  * @method Models\DescribeSparkAppJobsResponse DescribeSparkAppJobs(Models\DescribeSparkAppJobsRequest $req) This API is used to get the list of Spark applications.
  * @method Models\DescribeSparkAppTasksResponse DescribeSparkAppTasks(Models\DescribeSparkAppTasksRequest $req) This API is used to query the list of running task instances of a Spark application.
+ * @method Models\DescribeSparkSessionBatchSqlLogResponse DescribeSparkSessionBatchSqlLog(Models\DescribeSparkSessionBatchSqlLogRequest $req) This API is used to obtain the logs of a Spark SQL batch task.
  * @method Models\DescribeTaskResultResponse DescribeTaskResult(Models\DescribeTaskResultRequest $req) This API is used to query the result of a task.
  * @method Models\DescribeTasksResponse DescribeTasks(Models\DescribeTasksRequest $req) This API is used to query the list of tasks.
  * @method Models\GenerateCreateMangedTableSqlResponse GenerateCreateMangedTableSql(Models\GenerateCreateMangedTableSqlRequest $req) This API is used to generate SQL statements for creating a managed table.
  * @method Models\ModifyGovernEventRuleResponse ModifyGovernEventRule(Models\ModifyGovernEventRuleRequest $req) This API is used to change data governance event thresholds.
  * @method Models\ModifySparkAppResponse ModifySparkApp(Models\ModifySparkAppRequest $req) This API is used to update a Spark application.
+ * @method Models\ModifySparkAppBatchResponse ModifySparkAppBatch(Models\ModifySparkAppBatchRequest $req) This API is used to modify Spark job parameters in batches.
  * @method Models\SuspendResumeDataEngineResponse SuspendResumeDataEngine(Models\SuspendResumeDataEngineRequest $req) This API is used to suspend or resume a data engine.
  * @method Models\SwitchDataEngineResponse SwitchDataEngine(Models\SwitchDataEngineRequest $req) This API is used to switch between the primary and standby clusters.
  * @method Models\UpdateRowFilterResponse UpdateRowFilter(Models\UpdateRowFilterRequest $req) This API is used to update row filters. Please note that it updates filters only but not catalogs, databases, or tables.

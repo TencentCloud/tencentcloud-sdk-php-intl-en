@@ -18,20 +18,28 @@ namespace TencentCloud\Dcdb\V20180411\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * IsolateHourDCDBInstance request structure.
+ * Configuration information,  which contains `Config` and `Value`.
  *
- * @method array getInstanceIds() Obtain ID list of the instances to be upgraded  in the format of  `dcdbt-ow728lmc`, which can be obtained through the `DescribeDCDBInstances` API.
- * @method void setInstanceIds(array $InstanceIds) Set ID list of the instances to be upgraded  in the format of  `dcdbt-ow728lmc`, which can be obtained through the `DescribeDCDBInstances` API.
+ * @method string getConfig() Obtain Configuration name, which supports `max_user_connections`.
+ * @method void setConfig(string $Config) Set Configuration name, which supports `max_user_connections`.
+ * @method string getValue() Obtain Configuration value
+ * @method void setValue(string $Value) Set Configuration value
  */
-class IsolateHourDCDBInstanceRequest extends AbstractModel
+class ConfigValue extends AbstractModel
 {
     /**
-     * @var array ID list of the instances to be upgraded  in the format of  `dcdbt-ow728lmc`, which can be obtained through the `DescribeDCDBInstances` API.
+     * @var string Configuration name, which supports `max_user_connections`.
      */
-    public $InstanceIds;
+    public $Config;
 
     /**
-     * @param array $InstanceIds ID list of the instances to be upgraded  in the format of  `dcdbt-ow728lmc`, which can be obtained through the `DescribeDCDBInstances` API.
+     * @var string Configuration value
+     */
+    public $Value;
+
+    /**
+     * @param string $Config Configuration name, which supports `max_user_connections`.
+     * @param string $Value Configuration value
      */
     function __construct()
     {
@@ -46,8 +54,12 @@ class IsolateHourDCDBInstanceRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InstanceIds",$param) and $param["InstanceIds"] !== null) {
-            $this->InstanceIds = $param["InstanceIds"];
+        if (array_key_exists("Config",$param) and $param["Config"] !== null) {
+            $this->Config = $param["Config"];
+        }
+
+        if (array_key_exists("Value",$param) and $param["Value"] !== null) {
+            $this->Value = $param["Value"];
         }
     }
 }

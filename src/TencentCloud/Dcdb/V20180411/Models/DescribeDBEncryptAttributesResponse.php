@@ -14,23 +14,37 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Postgres\V20170312\Models;
+namespace TencentCloud\Dcdb\V20180411\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * CreateBaseBackup response structure.
+ * DescribeDBEncryptAttributes response structure.
  *
- * @method string getBaseBackupId() Obtain Full backup set ID
- * @method void setBaseBackupId(string $BaseBackupId) Set Full backup set ID
+ * @method integer getEncryptStatus() Obtain Whether encryption is enabled. Valid values: `1` (enabled), `2` (disabled).
+ * @method void setEncryptStatus(integer $EncryptStatus) Set Whether encryption is enabled. Valid values: `1` (enabled), `2` (disabled).
+ * @method string getCipherText() Obtain DEK
+ * @method void setCipherText(string $CipherText) Set DEK
+ * @method string getExpireDate() Obtain DEK expiration date
+ * @method void setExpireDate(string $ExpireDate) Set DEK expiration date
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
-class CreateBaseBackupResponse extends AbstractModel
+class DescribeDBEncryptAttributesResponse extends AbstractModel
 {
     /**
-     * @var string Full backup set ID
+     * @var integer Whether encryption is enabled. Valid values: `1` (enabled), `2` (disabled).
      */
-    public $BaseBackupId;
+    public $EncryptStatus;
+
+    /**
+     * @var string DEK
+     */
+    public $CipherText;
+
+    /**
+     * @var string DEK expiration date
+     */
+    public $ExpireDate;
 
     /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -38,7 +52,9 @@ class CreateBaseBackupResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $BaseBackupId Full backup set ID
+     * @param integer $EncryptStatus Whether encryption is enabled. Valid values: `1` (enabled), `2` (disabled).
+     * @param string $CipherText DEK
+     * @param string $ExpireDate DEK expiration date
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -54,8 +70,16 @@ class CreateBaseBackupResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("BaseBackupId",$param) and $param["BaseBackupId"] !== null) {
-            $this->BaseBackupId = $param["BaseBackupId"];
+        if (array_key_exists("EncryptStatus",$param) and $param["EncryptStatus"] !== null) {
+            $this->EncryptStatus = $param["EncryptStatus"];
+        }
+
+        if (array_key_exists("CipherText",$param) and $param["CipherText"] !== null) {
+            $this->CipherText = $param["CipherText"];
+        }
+
+        if (array_key_exists("ExpireDate",$param) and $param["ExpireDate"] !== null) {
+            $this->ExpireDate = $param["ExpireDate"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

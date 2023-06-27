@@ -14,23 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Postgres\V20170312\Models;
+namespace TencentCloud\Dlc\V20210125\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * CreateBaseBackup response structure.
+ * CreateSparkSessionBatchSQL response structure.
  *
- * @method string getBaseBackupId() Obtain Full backup set ID
- * @method void setBaseBackupId(string $BaseBackupId) Set Full backup set ID
+ * @method string getBatchId() Obtain The unique identifier of a batch task.
+ * @method void setBatchId(string $BatchId) Set The unique identifier of a batch task.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
-class CreateBaseBackupResponse extends AbstractModel
+class CreateSparkSessionBatchSQLResponse extends AbstractModel
 {
     /**
-     * @var string Full backup set ID
+     * @var string The unique identifier of a batch task.
      */
-    public $BaseBackupId;
+    public $BatchId;
 
     /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -38,7 +38,7 @@ class CreateBaseBackupResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $BaseBackupId Full backup set ID
+     * @param string $BatchId The unique identifier of a batch task.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -54,8 +54,8 @@ class CreateBaseBackupResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("BaseBackupId",$param) and $param["BaseBackupId"] !== null) {
-            $this->BaseBackupId = $param["BaseBackupId"];
+        if (array_key_exists("BatchId",$param) and $param["BatchId"] !== null) {
+            $this->BatchId = $param["BatchId"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

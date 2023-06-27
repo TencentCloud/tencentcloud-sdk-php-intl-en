@@ -18,20 +18,20 @@ namespace TencentCloud\Dcdb\V20180411\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * IsolateHourDCDBInstance request structure.
+ * IsolateDCDBInstance request structure.
  *
- * @method array getInstanceIds() Obtain ID list of the instances to be upgraded  in the format of  `dcdbt-ow728lmc`, which can be obtained through the `DescribeDCDBInstances` API.
- * @method void setInstanceIds(array $InstanceIds) Set ID list of the instances to be upgraded  in the format of  `dcdbt-ow728lmc`, which can be obtained through the `DescribeDCDBInstances` API.
+ * @method array getInstanceIds() Obtain Instance ID in the format of `tdsqlshard-avw0207d`,  which is the same as the instance ID displayed on the TencentDB console and can be queried through the `DescribeDBInstances` API.
+ * @method void setInstanceIds(array $InstanceIds) Set Instance ID in the format of `tdsqlshard-avw0207d`,  which is the same as the instance ID displayed on the TencentDB console and can be queried through the `DescribeDBInstances` API.
  */
-class IsolateHourDCDBInstanceRequest extends AbstractModel
+class IsolateDCDBInstanceRequest extends AbstractModel
 {
     /**
-     * @var array ID list of the instances to be upgraded  in the format of  `dcdbt-ow728lmc`, which can be obtained through the `DescribeDCDBInstances` API.
+     * @var array Instance ID in the format of `tdsqlshard-avw0207d`,  which is the same as the instance ID displayed on the TencentDB console and can be queried through the `DescribeDBInstances` API.
      */
     public $InstanceIds;
 
     /**
-     * @param array $InstanceIds ID list of the instances to be upgraded  in the format of  `dcdbt-ow728lmc`, which can be obtained through the `DescribeDCDBInstances` API.
+     * @param array $InstanceIds Instance ID in the format of `tdsqlshard-avw0207d`,  which is the same as the instance ID displayed on the TencentDB console and can be queried through the `DescribeDBInstances` API.
      */
     function __construct()
     {

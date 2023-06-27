@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPartitions(array $Partitions) Set The table partitions.
  * @method array getProperties() Obtain The table properties.
  * @method void setProperties(array $Properties) Set The table properties.
+ * @method array getUpsertKeys() Obtain The Upsert key for a v2 table (in Upsert mode).
+ * @method void setUpsertKeys(array $UpsertKeys) Set The Upsert key for a v2 table (in Upsert mode).
  */
 class GenerateCreateMangedTableSqlRequest extends AbstractModel
 {
@@ -52,10 +54,16 @@ class GenerateCreateMangedTableSqlRequest extends AbstractModel
     public $Properties;
 
     /**
+     * @var array The Upsert key for a v2 table (in Upsert mode).
+     */
+    public $UpsertKeys;
+
+    /**
      * @param TableBaseInfo $TableBaseInfo The basic table information.
      * @param array $Columns The table fields.
      * @param array $Partitions The table partitions.
      * @param array $Properties The table properties.
+     * @param array $UpsertKeys The Upsert key for a v2 table (in Upsert mode).
      */
     function __construct()
     {
@@ -100,6 +108,10 @@ class GenerateCreateMangedTableSqlRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Properties, $obj);
             }
+        }
+
+        if (array_key_exists("UpsertKeys",$param) and $param["UpsertKeys"] !== null) {
+            $this->UpsertKeys = $param["UpsertKeys"];
         }
     }
 }

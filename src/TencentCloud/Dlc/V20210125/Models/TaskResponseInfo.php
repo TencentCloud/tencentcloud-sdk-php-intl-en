@@ -118,6 +118,40 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setCmdArgs(string $CmdArgs) Set The program entry parameter for running a task under a Spark job.
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getImageVersion() Obtain The image version of the cluster.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setImageVersion(string $ImageVersion) Set The image version of the cluster.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getDriverSize() Obtain The driver size.
+Valid values for the standard resource type: `small`, `medium`, `large`, and `xlarge`.
+Valid values for the memory resource type: `m.small`, `m.medium`, `m.large`, and `m.xlarge`.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setDriverSize(string $DriverSize) Set The driver size.
+Valid values for the standard resource type: `small`, `medium`, `large`, and `xlarge`.
+Valid values for the memory resource type: `m.small`, `m.medium`, `m.large`, and `m.xlarge`.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getExecutorSize() Obtain The executor size.
+Valid values for the standard resource type: `small`, `medium`, `large`, and `xlarge`.
+Valid values for the memory resource type: `m.small`, `m.medium`, `m.large`, and `m.xlarge`.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setExecutorSize(string $ExecutorSize) Set The executor size.
+Valid values for the standard resource type: `small`, `medium`, `large`, and `xlarge`.
+Valid values for the memory resource type: `m.small`, `m.medium`, `m.large`, and `m.xlarge`.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getExecutorNums() Obtain The executor count. The minimum value is 1 and the maximum value is less than the cluster specification.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setExecutorNums(integer $ExecutorNums) Set The executor count. The minimum value is 1 and the maximum value is less than the cluster specification.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getExecutorMaxNumbers() Obtain The maximum executor count (in dynamic mode). The minimum value is 1 and the maximum value is less than the cluster specification. If you set `ExecutorMaxNumbers` to a value smaller than that of `ExecutorNums`, the value of `ExecutorMaxNumbers` is automatically changed to that of `ExecutorNums`.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setExecutorMaxNumbers(integer $ExecutorMaxNumbers) Set The maximum executor count (in dynamic mode). The minimum value is 1 and the maximum value is less than the cluster specification. If you set `ExecutorMaxNumbers` to a value smaller than that of `ExecutorNums`, the value of `ExecutorMaxNumbers` is automatically changed to that of `ExecutorNums`.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method CommonMetrics getCommonMetrics() Obtain 
+ * @method void setCommonMetrics(CommonMetrics $CommonMetrics) Set 
+ * @method SparkMonitorMetrics getSparkMonitorMetrics() Obtain 
+ * @method void setSparkMonitorMetrics(SparkMonitorMetrics $SparkMonitorMetrics) Set 
+ * @method PrestoMonitorMetrics getPrestoMonitorMetrics() Obtain 
+ * @method void setPrestoMonitorMetrics(PrestoMonitorMetrics $PrestoMonitorMetrics) Set 
  */
 class TaskResponseInfo extends AbstractModel
 {
@@ -299,6 +333,55 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $CmdArgs;
 
     /**
+     * @var string The image version of the cluster.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $ImageVersion;
+
+    /**
+     * @var string The driver size.
+Valid values for the standard resource type: `small`, `medium`, `large`, and `xlarge`.
+Valid values for the memory resource type: `m.small`, `m.medium`, `m.large`, and `m.xlarge`.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $DriverSize;
+
+    /**
+     * @var string The executor size.
+Valid values for the standard resource type: `small`, `medium`, `large`, and `xlarge`.
+Valid values for the memory resource type: `m.small`, `m.medium`, `m.large`, and `m.xlarge`.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $ExecutorSize;
+
+    /**
+     * @var integer The executor count. The minimum value is 1 and the maximum value is less than the cluster specification.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $ExecutorNums;
+
+    /**
+     * @var integer The maximum executor count (in dynamic mode). The minimum value is 1 and the maximum value is less than the cluster specification. If you set `ExecutorMaxNumbers` to a value smaller than that of `ExecutorNums`, the value of `ExecutorMaxNumbers` is automatically changed to that of `ExecutorNums`.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $ExecutorMaxNumbers;
+
+    /**
+     * @var CommonMetrics 
+     */
+    public $CommonMetrics;
+
+    /**
+     * @var SparkMonitorMetrics 
+     */
+    public $SparkMonitorMetrics;
+
+    /**
+     * @var PrestoMonitorMetrics 
+     */
+    public $PrestoMonitorMetrics;
+
+    /**
      * @param string $DatabaseName Database name of the task
      * @param integer $DataAmount Data volume of the task
      * @param string $Id Task ID
@@ -348,6 +431,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $CmdArgs The program entry parameter for running a task under a Spark job.
 Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $ImageVersion The image version of the cluster.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $DriverSize The driver size.
+Valid values for the standard resource type: `small`, `medium`, `large`, and `xlarge`.
+Valid values for the memory resource type: `m.small`, `m.medium`, `m.large`, and `m.xlarge`.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $ExecutorSize The executor size.
+Valid values for the standard resource type: `small`, `medium`, `large`, and `xlarge`.
+Valid values for the memory resource type: `m.small`, `m.medium`, `m.large`, and `m.xlarge`.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $ExecutorNums The executor count. The minimum value is 1 and the maximum value is less than the cluster specification.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $ExecutorMaxNumbers The maximum executor count (in dynamic mode). The minimum value is 1 and the maximum value is less than the cluster specification. If you set `ExecutorMaxNumbers` to a value smaller than that of `ExecutorNums`, the value of `ExecutorMaxNumbers` is automatically changed to that of `ExecutorNums`.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param CommonMetrics $CommonMetrics 
+     * @param SparkMonitorMetrics $SparkMonitorMetrics 
+     * @param PrestoMonitorMetrics $PrestoMonitorMetrics 
      */
     function __construct()
     {
@@ -488,6 +588,41 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("CmdArgs",$param) and $param["CmdArgs"] !== null) {
             $this->CmdArgs = $param["CmdArgs"];
+        }
+
+        if (array_key_exists("ImageVersion",$param) and $param["ImageVersion"] !== null) {
+            $this->ImageVersion = $param["ImageVersion"];
+        }
+
+        if (array_key_exists("DriverSize",$param) and $param["DriverSize"] !== null) {
+            $this->DriverSize = $param["DriverSize"];
+        }
+
+        if (array_key_exists("ExecutorSize",$param) and $param["ExecutorSize"] !== null) {
+            $this->ExecutorSize = $param["ExecutorSize"];
+        }
+
+        if (array_key_exists("ExecutorNums",$param) and $param["ExecutorNums"] !== null) {
+            $this->ExecutorNums = $param["ExecutorNums"];
+        }
+
+        if (array_key_exists("ExecutorMaxNumbers",$param) and $param["ExecutorMaxNumbers"] !== null) {
+            $this->ExecutorMaxNumbers = $param["ExecutorMaxNumbers"];
+        }
+
+        if (array_key_exists("CommonMetrics",$param) and $param["CommonMetrics"] !== null) {
+            $this->CommonMetrics = new CommonMetrics();
+            $this->CommonMetrics->deserialize($param["CommonMetrics"]);
+        }
+
+        if (array_key_exists("SparkMonitorMetrics",$param) and $param["SparkMonitorMetrics"] !== null) {
+            $this->SparkMonitorMetrics = new SparkMonitorMetrics();
+            $this->SparkMonitorMetrics->deserialize($param["SparkMonitorMetrics"]);
+        }
+
+        if (array_key_exists("PrestoMonitorMetrics",$param) and $param["PrestoMonitorMetrics"] !== null) {
+            $this->PrestoMonitorMetrics = new PrestoMonitorMetrics();
+            $this->PrestoMonitorMetrics->deserialize($param["PrestoMonitorMetrics"]);
         }
     }
 }

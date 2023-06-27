@@ -52,6 +52,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setGovernPolicy(DataGovernPolicy $GovernPolicy) Set The data governance configuration.
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getDbGovernPolicyIsDisable() Obtain Whether database data governance is disabled. Valid values: `true` (disabled) and `false` (not disabled).
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setDbGovernPolicyIsDisable(string $DbGovernPolicyIsDisable) Set Whether database data governance is disabled. Valid values: `true` (disabled) and `false` (not disabled).
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class TableBaseInfo extends AbstractModel
 {
@@ -108,6 +112,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $GovernPolicy;
 
     /**
+     * @var string Whether database data governance is disabled. Valid values: `true` (disabled) and `false` (not disabled).
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $DbGovernPolicyIsDisable;
+
+    /**
      * @param string $DatabaseName The database name.
      * @param string $TableName The table name.
      * @param string $DatasourceConnectionName The data source name.
@@ -123,6 +133,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $UserSubUin The table creator ID.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param DataGovernPolicy $GovernPolicy The data governance configuration.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $DbGovernPolicyIsDisable Whether database data governance is disabled. Valid values: `true` (disabled) and `false` (not disabled).
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
@@ -173,6 +185,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (array_key_exists("GovernPolicy",$param) and $param["GovernPolicy"] !== null) {
             $this->GovernPolicy = new DataGovernPolicy();
             $this->GovernPolicy->deserialize($param["GovernPolicy"]);
+        }
+
+        if (array_key_exists("DbGovernPolicyIsDisable",$param) and $param["DbGovernPolicyIsDisable"] !== null) {
+            $this->DbGovernPolicyIsDisable = $param["DbGovernPolicyIsDisable"];
         }
     }
 }

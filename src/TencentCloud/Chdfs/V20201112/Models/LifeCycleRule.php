@@ -32,6 +32,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStatus(integer $Status) Set Lifecycle rule status (1: enabled; 2: disabled)
  * @method string getCreateTime() Obtain Creation time
  * @method void setCreateTime(string $CreateTime) Set Creation time
+ * @method Summary getSummary() Obtain Detailed storage usage of the current lifecycle rule path
+ * @method void setSummary(Summary $Summary) Set Detailed storage usage of the current lifecycle rule path
+ * @method string getLastSummaryTime() Obtain Update time of `Summary`
+ * @method void setLastSummaryTime(string $LastSummaryTime) Set Update time of `Summary`
  */
 class LifeCycleRule extends AbstractModel
 {
@@ -66,12 +70,24 @@ class LifeCycleRule extends AbstractModel
     public $CreateTime;
 
     /**
+     * @var Summary Detailed storage usage of the current lifecycle rule path
+     */
+    public $Summary;
+
+    /**
+     * @var string Update time of `Summary`
+     */
+    public $LastSummaryTime;
+
+    /**
      * @param integer $LifeCycleRuleId Lifecycle rule ID
      * @param string $LifeCycleRuleName Lifecycle rule name
      * @param string $Path Lifecycle rule path (directory or file)
      * @param array $Transitions List of lifecycle rule transitions
      * @param integer $Status Lifecycle rule status (1: enabled; 2: disabled)
      * @param string $CreateTime Creation time
+     * @param Summary $Summary Detailed storage usage of the current lifecycle rule path
+     * @param string $LastSummaryTime Update time of `Summary`
      */
     function __construct()
     {
@@ -113,6 +129,15 @@ class LifeCycleRule extends AbstractModel
 
         if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
             $this->CreateTime = $param["CreateTime"];
+        }
+
+        if (array_key_exists("Summary",$param) and $param["Summary"] !== null) {
+            $this->Summary = new Summary();
+            $this->Summary->deserialize($param["Summary"]);
+        }
+
+        if (array_key_exists("LastSummaryTime",$param) and $param["LastSummaryTime"] !== null) {
+            $this->LastSummaryTime = $param["LastSummaryTime"];
         }
     }
 }

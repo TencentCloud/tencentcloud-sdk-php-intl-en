@@ -78,6 +78,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setElasticSwitch(boolean $ElasticSwitch) Set Whether to enable the scaling feature for a monthly subscribed Spark job cluster.
  * @method integer getElasticLimit() Obtain The upper limit (in CUs) for scaling of the monthly subscribed Spark job cluster.
  * @method void setElasticLimit(integer $ElasticLimit) Set The upper limit (in CUs) for scaling of the monthly subscribed Spark job cluster.
+ * @method SessionResourceTemplate getSessionResourceTemplate() Obtain The session resource configuration template for a Spark job cluster.
+ * @method void setSessionResourceTemplate(SessionResourceTemplate $SessionResourceTemplate) Set The session resource configuration template for a Spark job cluster.
  */
 class CreateDataEngineRequest extends AbstractModel
 {
@@ -227,6 +229,11 @@ class CreateDataEngineRequest extends AbstractModel
     public $ElasticLimit;
 
     /**
+     * @var SessionResourceTemplate The session resource configuration template for a Spark job cluster.
+     */
+    public $SessionResourceTemplate;
+
+    /**
      * @param string $EngineType The engine type. Valid values: `spark` and `presto`.
      * @param string $DataEngineName The name of the virtual cluster.
      * @param string $ClusterType The cluster type. Valid values: `spark_private`, `presto_private`, `presto_cu`, and `spark_cu`.
@@ -256,6 +263,7 @@ class CreateDataEngineRequest extends AbstractModel
      * @param string $MainClusterName The name of the primary cluster.
      * @param boolean $ElasticSwitch Whether to enable the scaling feature for a monthly subscribed Spark job cluster.
      * @param integer $ElasticLimit The upper limit (in CUs) for scaling of the monthly subscribed Spark job cluster.
+     * @param SessionResourceTemplate $SessionResourceTemplate The session resource configuration template for a Spark job cluster.
      */
     function __construct()
     {
@@ -395,6 +403,11 @@ class CreateDataEngineRequest extends AbstractModel
 
         if (array_key_exists("ElasticLimit",$param) and $param["ElasticLimit"] !== null) {
             $this->ElasticLimit = $param["ElasticLimit"];
+        }
+
+        if (array_key_exists("SessionResourceTemplate",$param) and $param["SessionResourceTemplate"] !== null) {
+            $this->SessionResourceTemplate = new SessionResourceTemplate();
+            $this->SessionResourceTemplate->deserialize($param["SessionResourceTemplate"]);
         }
     }
 }

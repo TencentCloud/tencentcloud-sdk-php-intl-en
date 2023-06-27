@@ -18,27 +18,19 @@ namespace TencentCloud\Postgres\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * CreateBaseBackup response structure.
+ * ModifyBackupDownloadRestriction response structure.
  *
- * @method string getBaseBackupId() Obtain Full backup set ID
- * @method void setBaseBackupId(string $BaseBackupId) Set Full backup set ID
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
-class CreateBaseBackupResponse extends AbstractModel
+class ModifyBackupDownloadRestrictionResponse extends AbstractModel
 {
-    /**
-     * @var string Full backup set ID
-     */
-    public $BaseBackupId;
-
     /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
 
     /**
-     * @param string $BaseBackupId Full backup set ID
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -54,10 +46,6 @@ class CreateBaseBackupResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("BaseBackupId",$param) and $param["BaseBackupId"] !== null) {
-            $this->BaseBackupId = $param["BaseBackupId"];
-        }
-
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
             $this->RequestId = $param["RequestId"];
         }

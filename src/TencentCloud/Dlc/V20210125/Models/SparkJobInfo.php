@@ -120,10 +120,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setSessionId(string $SessionId) Set The ID of the associated Data Lake Compute query script.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getDataEngineClusterType() Obtain 
- * @method void setDataEngineClusterType(string $DataEngineClusterType) Set 
- * @method string getDataEngineImageVersion() Obtain 
- * @method void setDataEngineImageVersion(string $DataEngineImageVersion) Set 
+ * @method string getDataEngineClusterType() Obtain `spark_emr_livy` indicates to create an EMR cluster.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setDataEngineClusterType(string $DataEngineClusterType) Set `spark_emr_livy` indicates to create an EMR cluster.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getDataEngineImageVersion() Obtain `Spark 3.2-EMR` indicates to use the Spark 3.2 image.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setDataEngineImageVersion(string $DataEngineImageVersion) Set `Spark 3.2-EMR` indicates to use the Spark 3.2 image.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getIsInherit() Obtain Whether the task resource configuration is inherited from the cluster template. Valid values: `0` (default): No; `1`: Yes.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setIsInherit(integer $IsInherit) Set Whether the task resource configuration is inherited from the cluster template. Valid values: `0` (default): No; `1`: Yes.
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class SparkJobInfo extends AbstractModel
 {
@@ -326,14 +334,22 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $SessionId;
 
     /**
-     * @var string 
+     * @var string `spark_emr_livy` indicates to create an EMR cluster.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $DataEngineClusterType;
 
     /**
-     * @var string 
+     * @var string `Spark 3.2-EMR` indicates to use the Spark 3.2 image.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $DataEngineImageVersion;
+
+    /**
+     * @var integer Whether the task resource configuration is inherited from the cluster template. Valid values: `0` (default): No; `1`: Yes.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $IsInherit;
 
     /**
      * @param string $JobId Spark job ID
@@ -386,8 +402,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $SessionId The ID of the associated Data Lake Compute query script.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $DataEngineClusterType 
-     * @param string $DataEngineImageVersion 
+     * @param string $DataEngineClusterType `spark_emr_livy` indicates to create an EMR cluster.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $DataEngineImageVersion `Spark 3.2-EMR` indicates to use the Spark 3.2 image.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $IsInherit Whether the task resource configuration is inherited from the cluster template. Valid values: `0` (default): No; `1`: Yes.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -557,6 +577,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("DataEngineImageVersion",$param) and $param["DataEngineImageVersion"] !== null) {
             $this->DataEngineImageVersion = $param["DataEngineImageVersion"];
+        }
+
+        if (array_key_exists("IsInherit",$param) and $param["IsInherit"] !== null) {
+            $this->IsInherit = $param["IsInherit"];
         }
     }
 }

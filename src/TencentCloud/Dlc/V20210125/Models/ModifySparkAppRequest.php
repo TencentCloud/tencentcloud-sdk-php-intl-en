@@ -76,6 +76,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAppExecutorMaxNumbers(integer $AppExecutorMaxNumbers) Set The specified executor count (max), which defaults to 1. This parameter applies if the "Dynamic" mode is selected. If the "Dynamic" mode is not selected, the executor count is equal to `AppExecutorNums`.
  * @method string getSessionId() Obtain The associated Data Lake Compute query script.
  * @method void setSessionId(string $SessionId) Set The associated Data Lake Compute query script.
+ * @method integer getIsInherit() Obtain Whether to inherit the task resource configuration from the cluster configuration template. Valid values: `0` (default): No; `1`: Yes.
+ * @method void setIsInherit(integer $IsInherit) Set Whether to inherit the task resource configuration from the cluster configuration template. Valid values: `0` (default): No; `1`: Yes.
  */
 class ModifySparkAppRequest extends AbstractModel
 {
@@ -220,6 +222,11 @@ class ModifySparkAppRequest extends AbstractModel
     public $SessionId;
 
     /**
+     * @var integer Whether to inherit the task resource configuration from the cluster configuration template. Valid values: `0` (default): No; `1`: Yes.
+     */
+    public $IsInherit;
+
+    /**
      * @param string $AppName Spark application name
      * @param integer $AppType 1: Spark JAR application; 2: Spark streaming application
      * @param string $DataEngine The data engine executing the Spark job
@@ -248,6 +255,7 @@ class ModifySparkAppRequest extends AbstractModel
      * @param string $SparkImageVersion The Spark image version name.
      * @param integer $AppExecutorMaxNumbers The specified executor count (max), which defaults to 1. This parameter applies if the "Dynamic" mode is selected. If the "Dynamic" mode is not selected, the executor count is equal to `AppExecutorNums`.
      * @param string $SessionId The associated Data Lake Compute query script.
+     * @param integer $IsInherit Whether to inherit the task resource configuration from the cluster configuration template. Valid values: `0` (default): No; `1`: Yes.
      */
     function __construct()
     {
@@ -372,6 +380,10 @@ class ModifySparkAppRequest extends AbstractModel
 
         if (array_key_exists("SessionId",$param) and $param["SessionId"] !== null) {
             $this->SessionId = $param["SessionId"];
+        }
+
+        if (array_key_exists("IsInherit",$param) and $param["IsInherit"] !== null) {
+            $this->IsInherit = $param["IsInherit"];
         }
     }
 }
