@@ -114,6 +114,10 @@ Monthly subscription refund
 Note: To query the product codes used in the current month, call <a href="https://intl.cloud.tencent.com/document/product/555/35761?from_cn_redirect=1">DescribeBillSummaryByProduct</a>.
  * @method void setBusinessCode(string $BusinessCode) Set Product code
 Note: To query the product codes used in the current month, call <a href="https://intl.cloud.tencent.com/document/product/555/35761?from_cn_redirect=1">DescribeBillSummaryByProduct</a>.
+ * @method string getContext() Obtain Context information returned by the last request. You can set `Month` to `2023-05` for query by page to accelerate queries. We recommend users whose data volume is over 100 thousand entries use the paginated query feature, which can help greatly speed up your queries.
+ * @method void setContext(string $Context) Set Context information returned by the last request. You can set `Month` to `2023-05` for query by page to accelerate queries. We recommend users whose data volume is over 100 thousand entries use the paginated query feature, which can help greatly speed up your queries.
+ * @method string getPayerUin() Obtain 
+ * @method void setPayerUin(string $PayerUin) Set 
  */
 class DescribeBillDetailRequest extends AbstractModel
 {
@@ -217,6 +221,16 @@ Note: To query the product codes used in the current month, call <a href="https:
     public $BusinessCode;
 
     /**
+     * @var string Context information returned by the last request. You can set `Month` to `2023-05` for query by page to accelerate queries. We recommend users whose data volume is over 100 thousand entries use the paginated query feature, which can help greatly speed up your queries.
+     */
+    public $Context;
+
+    /**
+     * @var string 
+     */
+    public $PayerUin;
+
+    /**
      * @param integer $Offset Offset
      * @param integer $Limit Quantity, maximum is 100
      * @param string $PeriodType The period type. byUsedTime: By usage period; byPayTime: By payment period. Must be the same as the period of the current monthly bill of the Billing Center. You can check your bill statistics period type at the top of the [Bill Overview](https://console.cloud.tencent.com/expense/bill/overview) page. 
@@ -264,6 +278,8 @@ Monthly subscription refund
      * @param integer $ProjectId Project ID: ID of the project to which the resource belongs
      * @param string $BusinessCode Product code
 Note: To query the product codes used in the current month, call <a href="https://intl.cloud.tencent.com/document/product/555/35761?from_cn_redirect=1">DescribeBillSummaryByProduct</a>.
+     * @param string $Context Context information returned by the last request. You can set `Month` to `2023-05` for query by page to accelerate queries. We recommend users whose data volume is over 100 thousand entries use the paginated query feature, which can help greatly speed up your queries.
+     * @param string $PayerUin 
      */
     function __construct()
     {
@@ -328,6 +344,14 @@ Note: To query the product codes used in the current month, call <a href="https:
 
         if (array_key_exists("BusinessCode",$param) and $param["BusinessCode"] !== null) {
             $this->BusinessCode = $param["BusinessCode"];
+        }
+
+        if (array_key_exists("Context",$param) and $param["Context"] !== null) {
+            $this->Context = $param["Context"];
+        }
+
+        if (array_key_exists("PayerUin",$param) and $param["PayerUin"] !== null) {
+            $this->PayerUin = $param["PayerUin"];
         }
     }
 }

@@ -24,34 +24,24 @@ use TencentCloud\Common\AbstractModel;
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setTagValue(string $TagValue) Set Tag value
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getRealTotalCost() Obtain Actual cost
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setRealTotalCost(string $RealTotalCost) Set Actual cost
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getRealTotalCostRatio() Obtain Cost percentage rounded to two decimal places
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setRealTotalCostRatio(string $RealTotalCostRatio) Set Cost percentage rounded to two decimal places
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getRealTotalCost() Obtain Total amount after discount. Note:  This field may return null, indicating that no valid values can be obtained.
+ * @method void setRealTotalCost(string $RealTotalCost) Set Total amount after discount. Note:  This field may return null, indicating that no valid values can be obtained.
+ * @method string getCashPayAmount() Obtain Cash credit:  The amount paid from the user’s cash account. Note:  This field may return null, indicating that no valid values can be obtained.
+ * @method void setCashPayAmount(string $CashPayAmount) Set Cash credit:  The amount paid from the user’s cash account. Note:  This field may return null, indicating that no valid values can be obtained.
+ * @method string getIncentivePayAmount() Obtain Free credit:  The amount paid by the user’s free credit. Note:  This field may return null, indicating that no valid values can be obtained.
+ * @method void setIncentivePayAmount(string $IncentivePayAmount) Set Free credit:  The amount paid by the user’s free credit. Note:  This field may return null, indicating that no valid values can be obtained.
+ * @method string getVoucherPayAmount() Obtain Voucher payment:  The voucher deduction amount. Note:  This field may return null, indicating that no valid values can be obtained.
+ * @method void setVoucherPayAmount(string $VoucherPayAmount) Set Voucher payment:  The voucher deduction amount. Note:  This field may return null, indicating that no valid values can be obtained.
+ * @method string getTransferPayAmount() Obtain Commission credit:  The amount paid by the user’s commission credit. Note:  This field may return null, indicating that no valid values can be obtained.
+ * @method void setTransferPayAmount(string $TransferPayAmount) Set Commission credit:  The amount paid by the user’s commission credit. Note:  This field may return null, indicating that no valid values can be obtained.
  * @method string getTotalCost() Obtain The original cost in USD. This parameter has become valid since v3.0 bills took effect in May 2021, and before that `-` was returned for this parameter. If a customer uses a contract price different from the published price, `-` will also be returned for this parameter.
 Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method void setTotalCost(string $TotalCost) Set The original cost in USD. This parameter has become valid since v3.0 bills took effect in May 2021, and before that `-` was returned for this parameter. If a customer uses a contract price different from the published price, `-` will also be returned for this parameter.
 Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method string getCashPayAmount() Obtain Payment by cash credits
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setCashPayAmount(string $CashPayAmount) Set Payment by cash credits
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getIncentivePayAmount() Obtain Payment by free credits
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setIncentivePayAmount(string $IncentivePayAmount) Set Payment by free credits
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getVoucherPayAmount() Obtain Payment by vouchers
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setVoucherPayAmount(string $VoucherPayAmount) Set Payment by vouchers
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getTransferPayAmount() Obtain Payment by commission credits
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setTransferPayAmount(string $TransferPayAmount) Set Payment by commission credits
-Note: This field may return null, indicating that no valid values can be obtained.
  */
 class TagSummaryOverviewItem extends AbstractModel
 {
@@ -62,16 +52,35 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $TagValue;
 
     /**
-     * @var string Actual cost
-Note: This field may return null, indicating that no valid values can be obtained.
-     */
-    public $RealTotalCost;
-
-    /**
      * @var string Cost percentage rounded to two decimal places
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $RealTotalCostRatio;
+
+    /**
+     * @var string Total amount after discount. Note:  This field may return null, indicating that no valid values can be obtained.
+     */
+    public $RealTotalCost;
+
+    /**
+     * @var string Cash credit:  The amount paid from the user’s cash account. Note:  This field may return null, indicating that no valid values can be obtained.
+     */
+    public $CashPayAmount;
+
+    /**
+     * @var string Free credit:  The amount paid by the user’s free credit. Note:  This field may return null, indicating that no valid values can be obtained.
+     */
+    public $IncentivePayAmount;
+
+    /**
+     * @var string Voucher payment:  The voucher deduction amount. Note:  This field may return null, indicating that no valid values can be obtained.
+     */
+    public $VoucherPayAmount;
+
+    /**
+     * @var string Commission credit:  The amount paid by the user’s commission credit. Note:  This field may return null, indicating that no valid values can be obtained.
+     */
+    public $TransferPayAmount;
 
     /**
      * @var string The original cost in USD. This parameter has become valid since v3.0 bills took effect in May 2021, and before that `-` was returned for this parameter. If a customer uses a contract price different from the published price, `-` will also be returned for this parameter.
@@ -80,46 +89,17 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     public $TotalCost;
 
     /**
-     * @var string Payment by cash credits
-Note: This field may return null, indicating that no valid values can be obtained.
-     */
-    public $CashPayAmount;
-
-    /**
-     * @var string Payment by free credits
-Note: This field may return null, indicating that no valid values can be obtained.
-     */
-    public $IncentivePayAmount;
-
-    /**
-     * @var string Payment by vouchers
-Note: This field may return null, indicating that no valid values can be obtained.
-     */
-    public $VoucherPayAmount;
-
-    /**
-     * @var string Payment by commission credits
-Note: This field may return null, indicating that no valid values can be obtained.
-     */
-    public $TransferPayAmount;
-
-    /**
      * @param string $TagValue Tag value
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $RealTotalCost Actual cost
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $RealTotalCostRatio Cost percentage rounded to two decimal places
 Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $RealTotalCost Total amount after discount. Note:  This field may return null, indicating that no valid values can be obtained.
+     * @param string $CashPayAmount Cash credit:  The amount paid from the user’s cash account. Note:  This field may return null, indicating that no valid values can be obtained.
+     * @param string $IncentivePayAmount Free credit:  The amount paid by the user’s free credit. Note:  This field may return null, indicating that no valid values can be obtained.
+     * @param string $VoucherPayAmount Voucher payment:  The voucher deduction amount. Note:  This field may return null, indicating that no valid values can be obtained.
+     * @param string $TransferPayAmount Commission credit:  The amount paid by the user’s commission credit. Note:  This field may return null, indicating that no valid values can be obtained.
      * @param string $TotalCost The original cost in USD. This parameter has become valid since v3.0 bills took effect in May 2021, and before that `-` was returned for this parameter. If a customer uses a contract price different from the published price, `-` will also be returned for this parameter.
 Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param string $CashPayAmount Payment by cash credits
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $IncentivePayAmount Payment by free credits
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $VoucherPayAmount Payment by vouchers
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $TransferPayAmount Payment by commission credits
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -138,16 +118,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
             $this->TagValue = $param["TagValue"];
         }
 
-        if (array_key_exists("RealTotalCost",$param) and $param["RealTotalCost"] !== null) {
-            $this->RealTotalCost = $param["RealTotalCost"];
-        }
-
         if (array_key_exists("RealTotalCostRatio",$param) and $param["RealTotalCostRatio"] !== null) {
             $this->RealTotalCostRatio = $param["RealTotalCostRatio"];
         }
 
-        if (array_key_exists("TotalCost",$param) and $param["TotalCost"] !== null) {
-            $this->TotalCost = $param["TotalCost"];
+        if (array_key_exists("RealTotalCost",$param) and $param["RealTotalCost"] !== null) {
+            $this->RealTotalCost = $param["RealTotalCost"];
         }
 
         if (array_key_exists("CashPayAmount",$param) and $param["CashPayAmount"] !== null) {
@@ -164,6 +140,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("TransferPayAmount",$param) and $param["TransferPayAmount"] !== null) {
             $this->TransferPayAmount = $param["TransferPayAmount"];
+        }
+
+        if (array_key_exists("TotalCost",$param) and $param["TotalCost"] !== null) {
+            $this->TotalCost = $param["TotalCost"];
         }
     }
 }

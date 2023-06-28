@@ -22,10 +22,12 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getDetailSet() Obtain Details list
  * @method void setDetailSet(array $DetailSet) Set Details list
- * @method integer getTotal() Obtain Total number of records
-Note: This field may return null, indicating that no valid value was found.
- * @method void setTotal(integer $Total) Set Total number of records
-Note: This field may return null, indicating that no valid value was found.
+ * @method integer getTotal() Obtain 
+Note:  This field may return null, indicating that no valid values can be obtained.
+ * @method void setTotal(integer $Total) Set 
+Note:  This field may return null, indicating that no valid values can be obtained.
+ * @method string getContext() Obtain Context information returned by this request, and the value can be passed in as the value of parameters in the next request to accelerate queries. Note:  This field may return null, indicating that no valid values can be obtained.
+ * @method void setContext(string $Context) Set Context information returned by this request, and the value can be passed in as the value of parameters in the next request to accelerate queries. Note:  This field may return null, indicating that no valid values can be obtained.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -37,10 +39,15 @@ class DescribeBillDetailResponse extends AbstractModel
     public $DetailSet;
 
     /**
-     * @var integer Total number of records
-Note: This field may return null, indicating that no valid value was found.
+     * @var integer 
+Note:  This field may return null, indicating that no valid values can be obtained.
      */
     public $Total;
+
+    /**
+     * @var string Context information returned by this request, and the value can be passed in as the value of parameters in the next request to accelerate queries. Note:  This field may return null, indicating that no valid values can be obtained.
+     */
+    public $Context;
 
     /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -49,8 +56,9 @@ Note: This field may return null, indicating that no valid value was found.
 
     /**
      * @param array $DetailSet Details list
-     * @param integer $Total Total number of records
-Note: This field may return null, indicating that no valid value was found.
+     * @param integer $Total 
+Note:  This field may return null, indicating that no valid values can be obtained.
+     * @param string $Context Context information returned by this request, and the value can be passed in as the value of parameters in the next request to accelerate queries. Note:  This field may return null, indicating that no valid values can be obtained.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -77,6 +85,10 @@ Note: This field may return null, indicating that no valid value was found.
 
         if (array_key_exists("Total",$param) and $param["Total"] !== null) {
             $this->Total = $param["Total"];
+        }
+
+        if (array_key_exists("Context",$param) and $param["Context"] !== null) {
+            $this->Context = $param["Context"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

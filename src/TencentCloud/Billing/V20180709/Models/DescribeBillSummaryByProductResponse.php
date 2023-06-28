@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeBillSummaryByProduct response structure.
  *
- * @method integer getReady() Obtain Indicates whether or not the data is ready. 0 = not ready, 1 = ready.
- * @method void setReady(integer $Ready) Set Indicates whether or not the data is ready. 0 = not ready, 1 = ready.
+ * @method integer getReady() Obtain Indicates whether the data is ready. `0`: Not ready. `1`: Ready. If `Ready` is `0`, it indicates the current UIN is initializing for the first billing. Wait for 5-10 minutes and try again.
+ * @method void setReady(integer $Ready) Set Indicates whether the data is ready. `0`: Not ready. `1`: Ready. If `Ready` is `0`, it indicates the current UIN is initializing for the first billing. Wait for 5-10 minutes and try again.
  * @method BusinessSummaryTotal getSummaryTotal() Obtain Total cost details
 Note: This field may return null, indicating that no valid value was found.
  * @method void setSummaryTotal(BusinessSummaryTotal $SummaryTotal) Set Total cost details
@@ -36,7 +36,7 @@ Note: This field may return null, indicating that no valid value was found.
 class DescribeBillSummaryByProductResponse extends AbstractModel
 {
     /**
-     * @var integer Indicates whether or not the data is ready. 0 = not ready, 1 = ready.
+     * @var integer Indicates whether the data is ready. `0`: Not ready. `1`: Ready. If `Ready` is `0`, it indicates the current UIN is initializing for the first billing. Wait for 5-10 minutes and try again.
      */
     public $Ready;
 
@@ -58,7 +58,7 @@ Note: This field may return null, indicating that no valid value was found.
     public $RequestId;
 
     /**
-     * @param integer $Ready Indicates whether or not the data is ready. 0 = not ready, 1 = ready.
+     * @param integer $Ready Indicates whether the data is ready. `0`: Not ready. `1`: Ready. If `Ready` is `0`, it indicates the current UIN is initializing for the first billing. Wait for 5-10 minutes and try again.
      * @param BusinessSummaryTotal $SummaryTotal Total cost details
 Note: This field may return null, indicating that no valid value was found.
      * @param array $SummaryOverview Cost distribution of all products

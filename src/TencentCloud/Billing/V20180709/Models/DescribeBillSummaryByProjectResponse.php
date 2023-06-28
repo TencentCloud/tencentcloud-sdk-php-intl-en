@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeBillSummaryByProject response structure.
  *
- * @method integer getReady() Obtain Indicates whether or not the data is ready. 0 = not ready, 1 = ready.
- * @method void setReady(integer $Ready) Set Indicates whether or not the data is ready. 0 = not ready, 1 = ready.
+ * @method integer getReady() Obtain Indicates whether the data is ready. `0`: Not ready. `1`: Ready. If `Ready` is `0`, it indicates the current UIN is initializing for the first billing. Wait for 5-10 minutes and try again.
+ * @method void setReady(integer $Ready) Set Indicates whether the data is ready. `0`: Not ready. `1`: Ready. If `Ready` is `0`, it indicates the current UIN is initializing for the first billing. Wait for 5-10 minutes and try again.
  * @method array getSummaryOverview() Obtain Detailed cost distribution for all projects
 Note: This field may return null, indicating that no valid value was found.
  * @method void setSummaryOverview(array $SummaryOverview) Set Detailed cost distribution for all projects
@@ -32,7 +32,7 @@ Note: This field may return null, indicating that no valid value was found.
 class DescribeBillSummaryByProjectResponse extends AbstractModel
 {
     /**
-     * @var integer Indicates whether or not the data is ready. 0 = not ready, 1 = ready.
+     * @var integer Indicates whether the data is ready. `0`: Not ready. `1`: Ready. If `Ready` is `0`, it indicates the current UIN is initializing for the first billing. Wait for 5-10 minutes and try again.
      */
     public $Ready;
 
@@ -48,7 +48,7 @@ Note: This field may return null, indicating that no valid value was found.
     public $RequestId;
 
     /**
-     * @param integer $Ready Indicates whether or not the data is ready. 0 = not ready, 1 = ready.
+     * @param integer $Ready Indicates whether the data is ready. `0`: Not ready. `1`: Ready. If `Ready` is `0`, it indicates the current UIN is initializing for the first billing. Wait for 5-10 minutes and try again.
      * @param array $SummaryOverview Detailed cost distribution for all projects
 Note: This field may return null, indicating that no valid value was found.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.

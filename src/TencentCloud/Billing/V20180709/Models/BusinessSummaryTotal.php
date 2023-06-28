@@ -20,40 +20,48 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Summarize total cost by product
  *
- * @method string getRealTotalCost() Obtain Total cost
- * @method void setRealTotalCost(string $RealTotalCost) Set Total cost
- * @method string getVoucherPayAmount() Obtain Voucher amount
- * @method void setVoucherPayAmount(string $VoucherPayAmount) Set Voucher amount
- * @method string getIncentivePayAmount() Obtain Trial credit amount
- * @method void setIncentivePayAmount(string $IncentivePayAmount) Set Trial credit amount
- * @method string getCashPayAmount() Obtain Cash amount
- * @method void setCashPayAmount(string $CashPayAmount) Set Cash amount
+ * @method string getRealTotalCost() Obtain Total amount after discount
+
+ * @method void setRealTotalCost(string $RealTotalCost) Set Total amount after discount
+
+ * @method string getVoucherPayAmount() Obtain Voucher payment:  The voucher deduction amount
+ * @method void setVoucherPayAmount(string $VoucherPayAmount) Set Voucher payment:  The voucher deduction amount
+ * @method string getIncentivePayAmount() Obtain Free credit:  The amount paid by the user’s free credit
+ * @method void setIncentivePayAmount(string $IncentivePayAmount) Set Free credit:  The amount paid by the user’s free credit
+ * @method string getCashPayAmount() Obtain Cash credit:  The amount paid from the user’s cash account
+ * @method void setCashPayAmount(string $CashPayAmount) Set Cash credit:  The amount paid from the user’s cash account
+ * @method string getTransferPayAmount() Obtain Commission credit:  The amount paid by the user’s commission credit.
+ * @method void setTransferPayAmount(string $TransferPayAmount) Set Commission credit:  The amount paid by the user’s commission credit.
  * @method string getTotalCost() Obtain The original cost in USD. This parameter has become valid since v3.0 bills took effect in May 2021, and before that `-` was returned for this parameter. If a customer uses a contract price different from the published price, `-` will also be returned for this parameter.
  * @method void setTotalCost(string $TotalCost) Set The original cost in USD. This parameter has become valid since v3.0 bills took effect in May 2021, and before that `-` was returned for this parameter. If a customer uses a contract price different from the published price, `-` will also be returned for this parameter.
- * @method string getTransferPayAmount() Obtain Payment by commission credits
- * @method void setTransferPayAmount(string $TransferPayAmount) Set Payment by commission credits
  */
 class BusinessSummaryTotal extends AbstractModel
 {
     /**
-     * @var string Total cost
+     * @var string Total amount after discount
+
      */
     public $RealTotalCost;
 
     /**
-     * @var string Voucher amount
+     * @var string Voucher payment:  The voucher deduction amount
      */
     public $VoucherPayAmount;
 
     /**
-     * @var string Trial credit amount
+     * @var string Free credit:  The amount paid by the user’s free credit
      */
     public $IncentivePayAmount;
 
     /**
-     * @var string Cash amount
+     * @var string Cash credit:  The amount paid from the user’s cash account
      */
     public $CashPayAmount;
+
+    /**
+     * @var string Commission credit:  The amount paid by the user’s commission credit.
+     */
+    public $TransferPayAmount;
 
     /**
      * @var string The original cost in USD. This parameter has become valid since v3.0 bills took effect in May 2021, and before that `-` was returned for this parameter. If a customer uses a contract price different from the published price, `-` will also be returned for this parameter.
@@ -61,17 +69,13 @@ class BusinessSummaryTotal extends AbstractModel
     public $TotalCost;
 
     /**
-     * @var string Payment by commission credits
-     */
-    public $TransferPayAmount;
+     * @param string $RealTotalCost Total amount after discount
 
-    /**
-     * @param string $RealTotalCost Total cost
-     * @param string $VoucherPayAmount Voucher amount
-     * @param string $IncentivePayAmount Trial credit amount
-     * @param string $CashPayAmount Cash amount
+     * @param string $VoucherPayAmount Voucher payment:  The voucher deduction amount
+     * @param string $IncentivePayAmount Free credit:  The amount paid by the user’s free credit
+     * @param string $CashPayAmount Cash credit:  The amount paid from the user’s cash account
+     * @param string $TransferPayAmount Commission credit:  The amount paid by the user’s commission credit.
      * @param string $TotalCost The original cost in USD. This parameter has become valid since v3.0 bills took effect in May 2021, and before that `-` was returned for this parameter. If a customer uses a contract price different from the published price, `-` will also be returned for this parameter.
-     * @param string $TransferPayAmount Payment by commission credits
      */
     function __construct()
     {
@@ -102,12 +106,12 @@ class BusinessSummaryTotal extends AbstractModel
             $this->CashPayAmount = $param["CashPayAmount"];
         }
 
-        if (array_key_exists("TotalCost",$param) and $param["TotalCost"] !== null) {
-            $this->TotalCost = $param["TotalCost"];
-        }
-
         if (array_key_exists("TransferPayAmount",$param) and $param["TransferPayAmount"] !== null) {
             $this->TransferPayAmount = $param["TransferPayAmount"];
+        }
+
+        if (array_key_exists("TotalCost",$param) and $param["TotalCost"] !== null) {
+            $this->TotalCost = $param["TotalCost"];
         }
     }
 }

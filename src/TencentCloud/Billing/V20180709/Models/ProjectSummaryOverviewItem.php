@@ -22,24 +22,24 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getProjectId() Obtain Project ID
  * @method void setProjectId(string $ProjectId) Set Project ID
- * @method string getProjectName() Obtain Project name
- * @method void setProjectName(string $ProjectName) Set Project name
- * @method string getRealTotalCost() Obtain Actual cost
- * @method void setRealTotalCost(string $RealTotalCost) Set Actual cost
+ * @method string getProjectName() Obtain Project name:  The project to which a resource belongs, which is user-designated. If a resource has not been assigned to a project, it will automatically belong to the default project.
+ * @method void setProjectName(string $ProjectName) Set Project name:  The project to which a resource belongs, which is user-designated. If a resource has not been assigned to a project, it will automatically belong to the default project.
  * @method string getRealTotalCostRatio() Obtain Cost ratio, to two decimal points
  * @method void setRealTotalCostRatio(string $RealTotalCostRatio) Set Cost ratio, to two decimal points
- * @method string getCashPayAmount() Obtain Cash amount
- * @method void setCashPayAmount(string $CashPayAmount) Set Cash amount
- * @method string getIncentivePayAmount() Obtain Trial credit amount
- * @method void setIncentivePayAmount(string $IncentivePayAmount) Set Trial credit amount
- * @method string getVoucherPayAmount() Obtain Voucher amount
- * @method void setVoucherPayAmount(string $VoucherPayAmount) Set Voucher amount
+ * @method string getRealTotalCost() Obtain Total amount after discount
+ * @method void setRealTotalCost(string $RealTotalCost) Set Total amount after discount
+ * @method string getCashPayAmount() Obtain Cash credit:  The amount paid from the user’s cash account
+ * @method void setCashPayAmount(string $CashPayAmount) Set Cash credit:  The amount paid from the user’s cash account
+ * @method string getIncentivePayAmount() Obtain Free credit:  The amount paid by the user’s free credit
+ * @method void setIncentivePayAmount(string $IncentivePayAmount) Set Free credit:  The amount paid by the user’s free credit
+ * @method string getVoucherPayAmount() Obtain Voucher payment:  The voucher deduction amount
+ * @method void setVoucherPayAmount(string $VoucherPayAmount) Set Voucher payment:  The voucher deduction amount
+ * @method string getTransferPayAmount() Obtain Commission credit:  The amount paid by the user’s commission credit.
+ * @method void setTransferPayAmount(string $TransferPayAmount) Set Commission credit:  The amount paid by the user’s commission credit.
  * @method string getBillMonth() Obtain Billing month, e.g. `2019-08`
  * @method void setBillMonth(string $BillMonth) Set Billing month, e.g. `2019-08`
  * @method string getTotalCost() Obtain The original cost in USD. This parameter has become valid since v3.0 bills took effect in May 2021, and before that `-` was returned for this parameter. If a customer uses a contract price different from the published price, `-` will also be returned for this parameter.
  * @method void setTotalCost(string $TotalCost) Set The original cost in USD. This parameter has become valid since v3.0 bills took effect in May 2021, and before that `-` was returned for this parameter. If a customer uses a contract price different from the published price, `-` will also be returned for this parameter.
- * @method string getTransferPayAmount() Obtain Payment by commission credits
- * @method void setTransferPayAmount(string $TransferPayAmount) Set Payment by commission credits
  */
 class ProjectSummaryOverviewItem extends AbstractModel
 {
@@ -49,14 +49,9 @@ class ProjectSummaryOverviewItem extends AbstractModel
     public $ProjectId;
 
     /**
-     * @var string Project name
+     * @var string Project name:  The project to which a resource belongs, which is user-designated. If a resource has not been assigned to a project, it will automatically belong to the default project.
      */
     public $ProjectName;
-
-    /**
-     * @var string Actual cost
-     */
-    public $RealTotalCost;
 
     /**
      * @var string Cost ratio, to two decimal points
@@ -64,19 +59,29 @@ class ProjectSummaryOverviewItem extends AbstractModel
     public $RealTotalCostRatio;
 
     /**
-     * @var string Cash amount
+     * @var string Total amount after discount
+     */
+    public $RealTotalCost;
+
+    /**
+     * @var string Cash credit:  The amount paid from the user’s cash account
      */
     public $CashPayAmount;
 
     /**
-     * @var string Trial credit amount
+     * @var string Free credit:  The amount paid by the user’s free credit
      */
     public $IncentivePayAmount;
 
     /**
-     * @var string Voucher amount
+     * @var string Voucher payment:  The voucher deduction amount
      */
     public $VoucherPayAmount;
+
+    /**
+     * @var string Commission credit:  The amount paid by the user’s commission credit.
+     */
+    public $TransferPayAmount;
 
     /**
      * @var string Billing month, e.g. `2019-08`
@@ -89,21 +94,16 @@ class ProjectSummaryOverviewItem extends AbstractModel
     public $TotalCost;
 
     /**
-     * @var string Payment by commission credits
-     */
-    public $TransferPayAmount;
-
-    /**
      * @param string $ProjectId Project ID
-     * @param string $ProjectName Project name
-     * @param string $RealTotalCost Actual cost
+     * @param string $ProjectName Project name:  The project to which a resource belongs, which is user-designated. If a resource has not been assigned to a project, it will automatically belong to the default project.
      * @param string $RealTotalCostRatio Cost ratio, to two decimal points
-     * @param string $CashPayAmount Cash amount
-     * @param string $IncentivePayAmount Trial credit amount
-     * @param string $VoucherPayAmount Voucher amount
+     * @param string $RealTotalCost Total amount after discount
+     * @param string $CashPayAmount Cash credit:  The amount paid from the user’s cash account
+     * @param string $IncentivePayAmount Free credit:  The amount paid by the user’s free credit
+     * @param string $VoucherPayAmount Voucher payment:  The voucher deduction amount
+     * @param string $TransferPayAmount Commission credit:  The amount paid by the user’s commission credit.
      * @param string $BillMonth Billing month, e.g. `2019-08`
      * @param string $TotalCost The original cost in USD. This parameter has become valid since v3.0 bills took effect in May 2021, and before that `-` was returned for this parameter. If a customer uses a contract price different from the published price, `-` will also be returned for this parameter.
-     * @param string $TransferPayAmount Payment by commission credits
      */
     function __construct()
     {
@@ -126,12 +126,12 @@ class ProjectSummaryOverviewItem extends AbstractModel
             $this->ProjectName = $param["ProjectName"];
         }
 
-        if (array_key_exists("RealTotalCost",$param) and $param["RealTotalCost"] !== null) {
-            $this->RealTotalCost = $param["RealTotalCost"];
-        }
-
         if (array_key_exists("RealTotalCostRatio",$param) and $param["RealTotalCostRatio"] !== null) {
             $this->RealTotalCostRatio = $param["RealTotalCostRatio"];
+        }
+
+        if (array_key_exists("RealTotalCost",$param) and $param["RealTotalCost"] !== null) {
+            $this->RealTotalCost = $param["RealTotalCost"];
         }
 
         if (array_key_exists("CashPayAmount",$param) and $param["CashPayAmount"] !== null) {
@@ -146,16 +146,16 @@ class ProjectSummaryOverviewItem extends AbstractModel
             $this->VoucherPayAmount = $param["VoucherPayAmount"];
         }
 
+        if (array_key_exists("TransferPayAmount",$param) and $param["TransferPayAmount"] !== null) {
+            $this->TransferPayAmount = $param["TransferPayAmount"];
+        }
+
         if (array_key_exists("BillMonth",$param) and $param["BillMonth"] !== null) {
             $this->BillMonth = $param["BillMonth"];
         }
 
         if (array_key_exists("TotalCost",$param) and $param["TotalCost"] !== null) {
             $this->TotalCost = $param["TotalCost"];
-        }
-
-        if (array_key_exists("TransferPayAmount",$param) and $param["TransferPayAmount"] !== null) {
-            $this->TransferPayAmount = $param["TransferPayAmount"];
         }
     }
 }

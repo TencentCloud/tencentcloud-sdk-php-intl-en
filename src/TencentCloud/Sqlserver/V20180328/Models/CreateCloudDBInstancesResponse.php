@@ -18,33 +18,19 @@ namespace TencentCloud\Sqlserver\V20180328\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * CreateBusinessDBInstances response structure.
+ * CreateCloudDBInstances response structure.
  *
  * @method string getDealName() Obtain Order name
  * @method void setDealName(string $DealName) Set Order name
- * @method integer getFlowId() Obtain Process ID Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setFlowId(integer $FlowId) Set Process ID Note: This field may return null, indicating that no valid values can be obtained.
- * @method array getInstanceIdSet() Obtain IDs of instances Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setInstanceIdSet(array $InstanceIdSet) Set IDs of instances Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
-class CreateBusinessDBInstancesResponse extends AbstractModel
+class CreateCloudDBInstancesResponse extends AbstractModel
 {
     /**
      * @var string Order name
      */
     public $DealName;
-
-    /**
-     * @var integer Process ID Note: This field may return null, indicating that no valid values can be obtained.
-     */
-    public $FlowId;
-
-    /**
-     * @var array IDs of instances Note: This field may return null, indicating that no valid values can be obtained.
-     */
-    public $InstanceIdSet;
 
     /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -53,8 +39,6 @@ class CreateBusinessDBInstancesResponse extends AbstractModel
 
     /**
      * @param string $DealName Order name
-     * @param integer $FlowId Process ID Note: This field may return null, indicating that no valid values can be obtained.
-     * @param array $InstanceIdSet IDs of instances Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -72,14 +56,6 @@ class CreateBusinessDBInstancesResponse extends AbstractModel
         }
         if (array_key_exists("DealName",$param) and $param["DealName"] !== null) {
             $this->DealName = $param["DealName"];
-        }
-
-        if (array_key_exists("FlowId",$param) and $param["FlowId"] !== null) {
-            $this->FlowId = $param["FlowId"];
-        }
-
-        if (array_key_exists("InstanceIdSet",$param) and $param["InstanceIdSet"] !== null) {
-            $this->InstanceIdSet = $param["InstanceIdSet"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

@@ -22,10 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getResourceSummarySet() Obtain Resource summary list
  * @method void setResourceSummarySet(array $ResourceSummarySet) Set Resource summary list
- * @method integer getTotal() Obtain Total number of resource summary lists
-Note: This field may return null, indicating that no valid value was found.
- * @method void setTotal(integer $Total) Set Total number of resource summary lists
-Note: This field may return null, indicating that no valid value was found.
+ * @method integer getTotal() Obtain Total number of resource summary lists, which will not be returned when `NeedRecordNum` is `0`. This field may return null, indicating that no valid values can be obtained.
+ * @method void setTotal(integer $Total) Set Total number of resource summary lists, which will not be returned when `NeedRecordNum` is `0`. This field may return null, indicating that no valid values can be obtained.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -37,8 +35,7 @@ class DescribeBillResourceSummaryResponse extends AbstractModel
     public $ResourceSummarySet;
 
     /**
-     * @var integer Total number of resource summary lists
-Note: This field may return null, indicating that no valid value was found.
+     * @var integer Total number of resource summary lists, which will not be returned when `NeedRecordNum` is `0`. This field may return null, indicating that no valid values can be obtained.
      */
     public $Total;
 
@@ -49,8 +46,7 @@ Note: This field may return null, indicating that no valid value was found.
 
     /**
      * @param array $ResourceSummarySet Resource summary list
-     * @param integer $Total Total number of resource summary lists
-Note: This field may return null, indicating that no valid value was found.
+     * @param integer $Total Total number of resource summary lists, which will not be returned when `NeedRecordNum` is `0`. This field may return null, indicating that no valid values can be obtained.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()

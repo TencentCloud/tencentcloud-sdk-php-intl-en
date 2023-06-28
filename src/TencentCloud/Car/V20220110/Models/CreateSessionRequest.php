@@ -24,14 +24,30 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUserId(string $UserId) Set The user’s unique ID. Tencent Cloud does not parse the ID. You need to manage your own user IDs. Based on your needs, you can either define unique IDs for users or use timestamps to generate random IDs. Make sure the same ID is used when a user reconnects to your application.
  * @method string getUserIp() Obtain Public IP of user’s application client, which is used for nearby scheduling.
  * @method void setUserIp(string $UserIp) Set Public IP of user’s application client, which is used for nearby scheduling.
- * @method string getClientSession() Obtain The client-side session data, which is obtained from the SDK.
- * @method void setClientSession(string $ClientSession) Set The client-side session data, which is obtained from the SDK.
+ * @method string getClientSession() Obtain The client-side session data, which is obtained from the SDK. If `RunMode` is `RunWithoutClient`, this parameter can be null.
+ * @method void setClientSession(string $ClientSession) Set The client-side session data, which is obtained from the SDK. If `RunMode` is `RunWithoutClient`, this parameter can be null.
  * @method string getRunMode() Obtain The on-cloud running mode.
 `RunWithoutClient`: Keep the application running on the cloud even when there are no client connections.
 Empty string (default): Keep the application running on the cloud only when there are client connections.
  * @method void setRunMode(string $RunMode) Set The on-cloud running mode.
 `RunWithoutClient`: Keep the application running on the cloud even when there are no client connections.
 Empty string (default): Keep the application running on the cloud only when there are client connections.
+ * @method string getApplicationParameters() Obtain Application startup parameter.
+If the user requests a multi-application project or a prelaunch-disabled single-application project, this parameter takes effect.
+If the user requests a prelaunch-enabled single-application project, this parameter is invalid.
+ * @method void setApplicationParameters(string $ApplicationParameters) Set Application startup parameter.
+If the user requests a multi-application project or a prelaunch-disabled single-application project, this parameter takes effect.
+If the user requests a prelaunch-enabled single-application project, this parameter is invalid.
+ * @method string getHostUserId() Obtain The user ID of the host in **multi-person interaction** scenarios, which is required.
+If the current user is the host, `HostUserId` must be the same as their `UserId`; otherwise, `HostUserId` should be the host's `UserId`.
+ * @method void setHostUserId(string $HostUserId) Set The user ID of the host in **multi-person interaction** scenarios, which is required.
+If the current user is the host, `HostUserId` must be the same as their `UserId`; otherwise, `HostUserId` should be the host's `UserId`.
+ * @method string getRole() Obtain The role in **multi-person interaction** scenarios. Valid values:
+`Player`: A user who can operate an application by using a keyboard and mouse
+`Viewer`: A user who can only watch the video in the room but cannot operate the application
+ * @method void setRole(string $Role) Set The role in **multi-person interaction** scenarios. Valid values:
+`Player`: A user who can operate an application by using a keyboard and mouse
+`Viewer`: A user who can only watch the video in the room but cannot operate the application
  */
 class CreateSessionRequest extends AbstractModel
 {
@@ -46,7 +62,7 @@ class CreateSessionRequest extends AbstractModel
     public $UserIp;
 
     /**
-     * @var string The client-side session data, which is obtained from the SDK.
+     * @var string The client-side session data, which is obtained from the SDK. If `RunMode` is `RunWithoutClient`, this parameter can be null.
      */
     public $ClientSession;
 
@@ -58,12 +74,40 @@ Empty string (default): Keep the application running on the cloud only when ther
     public $RunMode;
 
     /**
+     * @var string Application startup parameter.
+If the user requests a multi-application project or a prelaunch-disabled single-application project, this parameter takes effect.
+If the user requests a prelaunch-enabled single-application project, this parameter is invalid.
+     */
+    public $ApplicationParameters;
+
+    /**
+     * @var string The user ID of the host in **multi-person interaction** scenarios, which is required.
+If the current user is the host, `HostUserId` must be the same as their `UserId`; otherwise, `HostUserId` should be the host's `UserId`.
+     */
+    public $HostUserId;
+
+    /**
+     * @var string The role in **multi-person interaction** scenarios. Valid values:
+`Player`: A user who can operate an application by using a keyboard and mouse
+`Viewer`: A user who can only watch the video in the room but cannot operate the application
+     */
+    public $Role;
+
+    /**
      * @param string $UserId The user’s unique ID. Tencent Cloud does not parse the ID. You need to manage your own user IDs. Based on your needs, you can either define unique IDs for users or use timestamps to generate random IDs. Make sure the same ID is used when a user reconnects to your application.
      * @param string $UserIp Public IP of user’s application client, which is used for nearby scheduling.
-     * @param string $ClientSession The client-side session data, which is obtained from the SDK.
+     * @param string $ClientSession The client-side session data, which is obtained from the SDK. If `RunMode` is `RunWithoutClient`, this parameter can be null.
      * @param string $RunMode The on-cloud running mode.
 `RunWithoutClient`: Keep the application running on the cloud even when there are no client connections.
 Empty string (default): Keep the application running on the cloud only when there are client connections.
+     * @param string $ApplicationParameters Application startup parameter.
+If the user requests a multi-application project or a prelaunch-disabled single-application project, this parameter takes effect.
+If the user requests a prelaunch-enabled single-application project, this parameter is invalid.
+     * @param string $HostUserId The user ID of the host in **multi-person interaction** scenarios, which is required.
+If the current user is the host, `HostUserId` must be the same as their `UserId`; otherwise, `HostUserId` should be the host's `UserId`.
+     * @param string $Role The role in **multi-person interaction** scenarios. Valid values:
+`Player`: A user who can operate an application by using a keyboard and mouse
+`Viewer`: A user who can only watch the video in the room but cannot operate the application
      */
     function __construct()
     {
@@ -92,6 +136,18 @@ Empty string (default): Keep the application running on the cloud only when ther
 
         if (array_key_exists("RunMode",$param) and $param["RunMode"] !== null) {
             $this->RunMode = $param["RunMode"];
+        }
+
+        if (array_key_exists("ApplicationParameters",$param) and $param["ApplicationParameters"] !== null) {
+            $this->ApplicationParameters = $param["ApplicationParameters"];
+        }
+
+        if (array_key_exists("HostUserId",$param) and $param["HostUserId"] !== null) {
+            $this->HostUserId = $param["HostUserId"];
+        }
+
+        if (array_key_exists("Role",$param) and $param["Role"] !== null) {
+            $this->Role = $param["Role"];
         }
     }
 }

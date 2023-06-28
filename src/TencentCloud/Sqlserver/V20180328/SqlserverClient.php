@@ -30,6 +30,8 @@ use TencentCloud\Sqlserver\V20180328\Models as Models;
  * @method Models\CreateBackupMigrationResponse CreateBackupMigration(Models\CreateBackupMigrationRequest $req) This API is used to create a backup import task.
  * @method Models\CreateBusinessDBInstancesResponse CreateBusinessDBInstances(Models\CreateBusinessDBInstancesRequest $req) This API is used to create a business intelligence service instance.
  * @method Models\CreateBusinessIntelligenceFileResponse CreateBusinessIntelligenceFile(Models\CreateBusinessIntelligenceFileRequest $req) This API is used to add a business intelligence service file.
+ * @method Models\CreateCloudDBInstancesResponse CreateCloudDBInstances(Models\CreateCloudDBInstancesRequest $req) This API is used to create a high-availability instance of cloud disk edition.
+ * @method Models\CreateCloudReadOnlyDBInstancesResponse CreateCloudReadOnlyDBInstances(Models\CreateCloudReadOnlyDBInstancesRequest $req) This API is used to add a read-only replica instance of cloud disk edition.
  * @method Models\CreateDBResponse CreateDB(Models\CreateDBRequest $req) This API is used to create a database.
  * @method Models\CreateDBInstancesResponse CreateDBInstances(Models\CreateDBInstancesRequest $req) This API is used to create an instance.
  * @method Models\CreateIncrementalMigrationResponse CreateIncrementalMigration(Models\CreateIncrementalMigrationRequest $req) This API is used to create an incremental backup import task.

@@ -18,45 +18,40 @@ namespace TencentCloud\Billing\V20180709\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Detailed summary of purchases by billing mode
+ * Detailed summary of costs by billing mode
  *
- * @method string getPayMode() Obtain Billing mode
- * @method void setPayMode(string $PayMode) Set Billing mode
- * @method string getPayModeName() Obtain Billing mode name
- * @method void setPayModeName(string $PayModeName) Set Billing mode name
- * @method string getRealTotalCost() Obtain Actual cost
- * @method void setRealTotalCost(string $RealTotalCost) Set Actual cost
+ * @method string getPayMode() Obtain Billing mode code
+ * @method void setPayMode(string $PayMode) Set Billing mode code
+ * @method string getPayModeName() Obtain Billing mode,  which can be monthly subscription or pay-as-you-go.
+ * @method void setPayModeName(string $PayModeName) Set Billing mode,  which can be monthly subscription or pay-as-you-go.
  * @method string getRealTotalCostRatio() Obtain Cost ratio, to two decimal points
  * @method void setRealTotalCostRatio(string $RealTotalCostRatio) Set Cost ratio, to two decimal points
- * @method array getDetail() Obtain Detailed summary of purchases by transaction type
- * @method void setDetail(array $Detail) Set Detailed summary of purchases by transaction type
- * @method string getCashPayAmount() Obtain Cash amount
- * @method void setCashPayAmount(string $CashPayAmount) Set Cash amount
- * @method string getIncentivePayAmount() Obtain Trial credit amount
- * @method void setIncentivePayAmount(string $IncentivePayAmount) Set Trial credit amount
- * @method string getVoucherPayAmount() Obtain Voucher amount
- * @method void setVoucherPayAmount(string $VoucherPayAmount) Set Voucher amount
+ * @method string getRealTotalCost() Obtain Total amount after discount
+ * @method void setRealTotalCost(string $RealTotalCost) Set Total amount after discount
+ * @method string getCashPayAmount() Obtain Cash credit:  The amount paid from the user’s cash account
+ * @method void setCashPayAmount(string $CashPayAmount) Set Cash credit:  The amount paid from the user’s cash account
+ * @method string getIncentivePayAmount() Obtain Free credit:  The amount paid by the user’s free credit
+ * @method void setIncentivePayAmount(string $IncentivePayAmount) Set Free credit:  The amount paid by the user’s free credit
+ * @method string getVoucherPayAmount() Obtain Voucher payment:  The voucher deduction amount
+ * @method void setVoucherPayAmount(string $VoucherPayAmount) Set Voucher payment:  The voucher deduction amount
+ * @method string getTransferPayAmount() Obtain Commission credit:  The amount paid by the user’s commission credit.
+ * @method void setTransferPayAmount(string $TransferPayAmount) Set Commission credit:  The amount paid by the user’s commission credit.
  * @method string getTotalCost() Obtain The original cost in USD. This parameter has become valid since v3.0 bills took effect in May 2021, and before that `-` was returned for this parameter. If a customer uses a contract price different from the published price, `-` will also be returned for this parameter.
  * @method void setTotalCost(string $TotalCost) Set The original cost in USD. This parameter has become valid since v3.0 bills took effect in May 2021, and before that `-` was returned for this parameter. If a customer uses a contract price different from the published price, `-` will also be returned for this parameter.
- * @method string getTransferPayAmount() Obtain Payment by commission credits
- * @method void setTransferPayAmount(string $TransferPayAmount) Set Payment by commission credits
+ * @method array getDetail() Obtain Detailed summary of costs by transaction type
+ * @method void setDetail(array $Detail) Set Detailed summary of costs by transaction type
  */
 class PayModeSummaryOverviewItem extends AbstractModel
 {
     /**
-     * @var string Billing mode
+     * @var string Billing mode code
      */
     public $PayMode;
 
     /**
-     * @var string Billing mode name
+     * @var string Billing mode,  which can be monthly subscription or pay-as-you-go.
      */
     public $PayModeName;
-
-    /**
-     * @var string Actual cost
-     */
-    public $RealTotalCost;
 
     /**
      * @var string Cost ratio, to two decimal points
@@ -64,24 +59,29 @@ class PayModeSummaryOverviewItem extends AbstractModel
     public $RealTotalCostRatio;
 
     /**
-     * @var array Detailed summary of purchases by transaction type
+     * @var string Total amount after discount
      */
-    public $Detail;
+    public $RealTotalCost;
 
     /**
-     * @var string Cash amount
+     * @var string Cash credit:  The amount paid from the user’s cash account
      */
     public $CashPayAmount;
 
     /**
-     * @var string Trial credit amount
+     * @var string Free credit:  The amount paid by the user’s free credit
      */
     public $IncentivePayAmount;
 
     /**
-     * @var string Voucher amount
+     * @var string Voucher payment:  The voucher deduction amount
      */
     public $VoucherPayAmount;
+
+    /**
+     * @var string Commission credit:  The amount paid by the user’s commission credit.
+     */
+    public $TransferPayAmount;
 
     /**
      * @var string The original cost in USD. This parameter has become valid since v3.0 bills took effect in May 2021, and before that `-` was returned for this parameter. If a customer uses a contract price different from the published price, `-` will also be returned for this parameter.
@@ -89,21 +89,21 @@ class PayModeSummaryOverviewItem extends AbstractModel
     public $TotalCost;
 
     /**
-     * @var string Payment by commission credits
+     * @var array Detailed summary of costs by transaction type
      */
-    public $TransferPayAmount;
+    public $Detail;
 
     /**
-     * @param string $PayMode Billing mode
-     * @param string $PayModeName Billing mode name
-     * @param string $RealTotalCost Actual cost
+     * @param string $PayMode Billing mode code
+     * @param string $PayModeName Billing mode,  which can be monthly subscription or pay-as-you-go.
      * @param string $RealTotalCostRatio Cost ratio, to two decimal points
-     * @param array $Detail Detailed summary of purchases by transaction type
-     * @param string $CashPayAmount Cash amount
-     * @param string $IncentivePayAmount Trial credit amount
-     * @param string $VoucherPayAmount Voucher amount
+     * @param string $RealTotalCost Total amount after discount
+     * @param string $CashPayAmount Cash credit:  The amount paid from the user’s cash account
+     * @param string $IncentivePayAmount Free credit:  The amount paid by the user’s free credit
+     * @param string $VoucherPayAmount Voucher payment:  The voucher deduction amount
+     * @param string $TransferPayAmount Commission credit:  The amount paid by the user’s commission credit.
      * @param string $TotalCost The original cost in USD. This parameter has become valid since v3.0 bills took effect in May 2021, and before that `-` was returned for this parameter. If a customer uses a contract price different from the published price, `-` will also be returned for this parameter.
-     * @param string $TransferPayAmount Payment by commission credits
+     * @param array $Detail Detailed summary of costs by transaction type
      */
     function __construct()
     {
@@ -126,21 +126,12 @@ class PayModeSummaryOverviewItem extends AbstractModel
             $this->PayModeName = $param["PayModeName"];
         }
 
-        if (array_key_exists("RealTotalCost",$param) and $param["RealTotalCost"] !== null) {
-            $this->RealTotalCost = $param["RealTotalCost"];
-        }
-
         if (array_key_exists("RealTotalCostRatio",$param) and $param["RealTotalCostRatio"] !== null) {
             $this->RealTotalCostRatio = $param["RealTotalCostRatio"];
         }
 
-        if (array_key_exists("Detail",$param) and $param["Detail"] !== null) {
-            $this->Detail = [];
-            foreach ($param["Detail"] as $key => $value){
-                $obj = new ActionSummaryOverviewItem();
-                $obj->deserialize($value);
-                array_push($this->Detail, $obj);
-            }
+        if (array_key_exists("RealTotalCost",$param) and $param["RealTotalCost"] !== null) {
+            $this->RealTotalCost = $param["RealTotalCost"];
         }
 
         if (array_key_exists("CashPayAmount",$param) and $param["CashPayAmount"] !== null) {
@@ -155,12 +146,21 @@ class PayModeSummaryOverviewItem extends AbstractModel
             $this->VoucherPayAmount = $param["VoucherPayAmount"];
         }
 
+        if (array_key_exists("TransferPayAmount",$param) and $param["TransferPayAmount"] !== null) {
+            $this->TransferPayAmount = $param["TransferPayAmount"];
+        }
+
         if (array_key_exists("TotalCost",$param) and $param["TotalCost"] !== null) {
             $this->TotalCost = $param["TotalCost"];
         }
 
-        if (array_key_exists("TransferPayAmount",$param) and $param["TransferPayAmount"] !== null) {
-            $this->TransferPayAmount = $param["TransferPayAmount"];
+        if (array_key_exists("Detail",$param) and $param["Detail"] !== null) {
+            $this->Detail = [];
+            foreach ($param["Detail"] as $key => $value){
+                $obj = new ActionSummaryOverviewItem();
+                $obj->deserialize($value);
+                array_push($this->Detail, $obj);
+            }
         }
     }
 }

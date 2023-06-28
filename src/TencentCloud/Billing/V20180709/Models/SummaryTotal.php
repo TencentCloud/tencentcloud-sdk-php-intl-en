@@ -20,10 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Total cost
  *
- * @method string getRealTotalCost() Obtain Total cost
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setRealTotalCost(string $RealTotalCost) Set Total cost
-Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method string getRealTotalCost() Obtain Total amount after discount. Note:  This field may return null, indicating that no valid values can be obtained.
+ * @method void setRealTotalCost(string $RealTotalCost) Set Total amount after discount. Note:  This field may return null, indicating that no valid values can be obtained.
  * @method string getTotalCost() Obtain The original cost in USD. This parameter has become valid since v3.0 bills took effect in May 2021, and before that `-` was returned for this parameter. If a customer uses a contract price different from the published price, `-` will also be returned for this parameter.
 Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method void setTotalCost(string $TotalCost) Set The original cost in USD. This parameter has become valid since v3.0 bills took effect in May 2021, and before that `-` was returned for this parameter. If a customer uses a contract price different from the published price, `-` will also be returned for this parameter.
@@ -32,8 +30,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 class SummaryTotal extends AbstractModel
 {
     /**
-     * @var string Total cost
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @var string Total amount after discount. Note:  This field may return null, indicating that no valid values can be obtained.
      */
     public $RealTotalCost;
 
@@ -44,8 +41,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     public $TotalCost;
 
     /**
-     * @param string $RealTotalCost Total cost
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param string $RealTotalCost Total amount after discount. Note:  This field may return null, indicating that no valid values can be obtained.
      * @param string $TotalCost The original cost in USD. This parameter has become valid since v3.0 bills took effect in May 2021, and before that `-` was returned for this parameter. If a customer uses a contract price different from the published price, `-` will also be returned for this parameter.
 Note: this field may return `null`, indicating that no valid values can be obtained.
      */
