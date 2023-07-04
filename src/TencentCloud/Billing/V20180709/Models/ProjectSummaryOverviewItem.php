@@ -22,20 +22,20 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getProjectId() Obtain Project ID
  * @method void setProjectId(string $ProjectId) Set Project ID
- * @method string getProjectName() Obtain Project name:  The project to which a resource belongs, which is user-designated. If a resource has not been assigned to a project, it will automatically belong to the default project.
- * @method void setProjectName(string $ProjectName) Set Project name:  The project to which a resource belongs, which is user-designated. If a resource has not been assigned to a project, it will automatically belong to the default project.
+ * @method string getProjectName() Obtain Project name: The project to which a resource belongs, which is user-designated. If a resource has not been assigned to a project, it will automatically belong to the default project.
+ * @method void setProjectName(string $ProjectName) Set Project name: The project to which a resource belongs, which is user-designated. If a resource has not been assigned to a project, it will automatically belong to the default project.
  * @method string getRealTotalCostRatio() Obtain Cost ratio, to two decimal points
  * @method void setRealTotalCostRatio(string $RealTotalCostRatio) Set Cost ratio, to two decimal points
  * @method string getRealTotalCost() Obtain Total amount after discount
  * @method void setRealTotalCost(string $RealTotalCost) Set Total amount after discount
- * @method string getCashPayAmount() Obtain Cash credit:  The amount paid from the user’s cash account
- * @method void setCashPayAmount(string $CashPayAmount) Set Cash credit:  The amount paid from the user’s cash account
- * @method string getIncentivePayAmount() Obtain Free credit:  The amount paid by the user’s free credit
- * @method void setIncentivePayAmount(string $IncentivePayAmount) Set Free credit:  The amount paid by the user’s free credit
- * @method string getVoucherPayAmount() Obtain Voucher payment:  The voucher deduction amount
- * @method void setVoucherPayAmount(string $VoucherPayAmount) Set Voucher payment:  The voucher deduction amount
- * @method string getTransferPayAmount() Obtain Commission credit:  The amount paid by the user’s commission credit.
- * @method void setTransferPayAmount(string $TransferPayAmount) Set Commission credit:  The amount paid by the user’s commission credit.
+ * @method string getCashPayAmount() Obtain Cash credit: The amount paid from the user’s cash account
+ * @method void setCashPayAmount(string $CashPayAmount) Set Cash credit: The amount paid from the user’s cash account
+ * @method string getIncentivePayAmount() Obtain Free credit: The amount paid with the user’s free credit
+ * @method void setIncentivePayAmount(string $IncentivePayAmount) Set Free credit: The amount paid with the user’s free credit
+ * @method string getVoucherPayAmount() Obtain Voucher payment: The voucher deduction amount
+ * @method void setVoucherPayAmount(string $VoucherPayAmount) Set Voucher payment: The voucher deduction amount
+ * @method string getTransferPayAmount() Obtain Commission credit: The amount paid with the user’s commission credit.
+ * @method void setTransferPayAmount(string $TransferPayAmount) Set Commission credit: The amount paid with the user’s commission credit.
  * @method string getBillMonth() Obtain Billing month, e.g. `2019-08`
  * @method void setBillMonth(string $BillMonth) Set Billing month, e.g. `2019-08`
  * @method string getTotalCost() Obtain The original cost in USD. This parameter has become valid since v3.0 bills took effect in May 2021, and before that `-` was returned for this parameter. If a customer uses a contract price different from the published price, `-` will also be returned for this parameter.
@@ -49,7 +49,7 @@ class ProjectSummaryOverviewItem extends AbstractModel
     public $ProjectId;
 
     /**
-     * @var string Project name:  The project to which a resource belongs, which is user-designated. If a resource has not been assigned to a project, it will automatically belong to the default project.
+     * @var string Project name: The project to which a resource belongs, which is user-designated. If a resource has not been assigned to a project, it will automatically belong to the default project.
      */
     public $ProjectName;
 
@@ -64,22 +64,22 @@ class ProjectSummaryOverviewItem extends AbstractModel
     public $RealTotalCost;
 
     /**
-     * @var string Cash credit:  The amount paid from the user’s cash account
+     * @var string Cash credit: The amount paid from the user’s cash account
      */
     public $CashPayAmount;
 
     /**
-     * @var string Free credit:  The amount paid by the user’s free credit
+     * @var string Free credit: The amount paid with the user’s free credit
      */
     public $IncentivePayAmount;
 
     /**
-     * @var string Voucher payment:  The voucher deduction amount
+     * @var string Voucher payment: The voucher deduction amount
      */
     public $VoucherPayAmount;
 
     /**
-     * @var string Commission credit:  The amount paid by the user’s commission credit.
+     * @var string Commission credit: The amount paid with the user’s commission credit.
      */
     public $TransferPayAmount;
 
@@ -95,13 +95,13 @@ class ProjectSummaryOverviewItem extends AbstractModel
 
     /**
      * @param string $ProjectId Project ID
-     * @param string $ProjectName Project name:  The project to which a resource belongs, which is user-designated. If a resource has not been assigned to a project, it will automatically belong to the default project.
+     * @param string $ProjectName Project name: The project to which a resource belongs, which is user-designated. If a resource has not been assigned to a project, it will automatically belong to the default project.
      * @param string $RealTotalCostRatio Cost ratio, to two decimal points
      * @param string $RealTotalCost Total amount after discount
-     * @param string $CashPayAmount Cash credit:  The amount paid from the user’s cash account
-     * @param string $IncentivePayAmount Free credit:  The amount paid by the user’s free credit
-     * @param string $VoucherPayAmount Voucher payment:  The voucher deduction amount
-     * @param string $TransferPayAmount Commission credit:  The amount paid by the user’s commission credit.
+     * @param string $CashPayAmount Cash credit: The amount paid from the user’s cash account
+     * @param string $IncentivePayAmount Free credit: The amount paid with the user’s free credit
+     * @param string $VoucherPayAmount Voucher payment: The voucher deduction amount
+     * @param string $TransferPayAmount Commission credit: The amount paid with the user’s commission credit.
      * @param string $BillMonth Billing month, e.g. `2019-08`
      * @param string $TotalCost The original cost in USD. This parameter has become valid since v3.0 bills took effect in May 2021, and before that `-` was returned for this parameter. If a customer uses a contract price different from the published price, `-` will also be returned for this parameter.
      */

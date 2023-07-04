@@ -22,20 +22,20 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getPayMode() Obtain Billing mode code
  * @method void setPayMode(string $PayMode) Set Billing mode code
- * @method string getPayModeName() Obtain Billing mode,  which can be monthly subscription or pay-as-you-go.
- * @method void setPayModeName(string $PayModeName) Set Billing mode,  which can be monthly subscription or pay-as-you-go.
+ * @method string getPayModeName() Obtain Billing mode, which can be monthly subscription or pay-as-you-go.
+ * @method void setPayModeName(string $PayModeName) Set Billing mode, which can be monthly subscription or pay-as-you-go.
  * @method string getRealTotalCostRatio() Obtain Cost ratio, to two decimal points
  * @method void setRealTotalCostRatio(string $RealTotalCostRatio) Set Cost ratio, to two decimal points
  * @method string getRealTotalCost() Obtain Total amount after discount
  * @method void setRealTotalCost(string $RealTotalCost) Set Total amount after discount
- * @method string getCashPayAmount() Obtain Cash credit:  The amount paid from the user’s cash account
- * @method void setCashPayAmount(string $CashPayAmount) Set Cash credit:  The amount paid from the user’s cash account
- * @method string getIncentivePayAmount() Obtain Free credit:  The amount paid by the user’s free credit
- * @method void setIncentivePayAmount(string $IncentivePayAmount) Set Free credit:  The amount paid by the user’s free credit
- * @method string getVoucherPayAmount() Obtain Voucher payment:  The voucher deduction amount
- * @method void setVoucherPayAmount(string $VoucherPayAmount) Set Voucher payment:  The voucher deduction amount
- * @method string getTransferPayAmount() Obtain Commission credit:  The amount paid by the user’s commission credit.
- * @method void setTransferPayAmount(string $TransferPayAmount) Set Commission credit:  The amount paid by the user’s commission credit.
+ * @method string getCashPayAmount() Obtain Cash credit: The amount paid from the user’s cash balance
+ * @method void setCashPayAmount(string $CashPayAmount) Set Cash credit: The amount paid from the user’s cash balance
+ * @method string getIncentivePayAmount() Obtain Free credit: The amount paid with the user’s free credit
+ * @method void setIncentivePayAmount(string $IncentivePayAmount) Set Free credit: The amount paid with the user’s free credit
+ * @method string getVoucherPayAmount() Obtain Voucher payment: The voucher deduction amount
+ * @method void setVoucherPayAmount(string $VoucherPayAmount) Set Voucher payment: The voucher deduction amount
+ * @method string getTransferPayAmount() Obtain Commission credit: The amount paid with the user’s commission credit.
+ * @method void setTransferPayAmount(string $TransferPayAmount) Set Commission credit: The amount paid with the user’s commission credit.
  * @method string getTotalCost() Obtain The original cost in USD. This parameter has become valid since v3.0 bills took effect in May 2021, and before that `-` was returned for this parameter. If a customer uses a contract price different from the published price, `-` will also be returned for this parameter.
  * @method void setTotalCost(string $TotalCost) Set The original cost in USD. This parameter has become valid since v3.0 bills took effect in May 2021, and before that `-` was returned for this parameter. If a customer uses a contract price different from the published price, `-` will also be returned for this parameter.
  * @method array getDetail() Obtain Detailed summary of costs by transaction type
@@ -49,7 +49,7 @@ class PayModeSummaryOverviewItem extends AbstractModel
     public $PayMode;
 
     /**
-     * @var string Billing mode,  which can be monthly subscription or pay-as-you-go.
+     * @var string Billing mode, which can be monthly subscription or pay-as-you-go.
      */
     public $PayModeName;
 
@@ -64,22 +64,22 @@ class PayModeSummaryOverviewItem extends AbstractModel
     public $RealTotalCost;
 
     /**
-     * @var string Cash credit:  The amount paid from the user’s cash account
+     * @var string Cash credit: The amount paid from the user’s cash balance
      */
     public $CashPayAmount;
 
     /**
-     * @var string Free credit:  The amount paid by the user’s free credit
+     * @var string Free credit: The amount paid with the user’s free credit
      */
     public $IncentivePayAmount;
 
     /**
-     * @var string Voucher payment:  The voucher deduction amount
+     * @var string Voucher payment: The voucher deduction amount
      */
     public $VoucherPayAmount;
 
     /**
-     * @var string Commission credit:  The amount paid by the user’s commission credit.
+     * @var string Commission credit: The amount paid with the user’s commission credit.
      */
     public $TransferPayAmount;
 
@@ -95,13 +95,13 @@ class PayModeSummaryOverviewItem extends AbstractModel
 
     /**
      * @param string $PayMode Billing mode code
-     * @param string $PayModeName Billing mode,  which can be monthly subscription or pay-as-you-go.
+     * @param string $PayModeName Billing mode, which can be monthly subscription or pay-as-you-go.
      * @param string $RealTotalCostRatio Cost ratio, to two decimal points
      * @param string $RealTotalCost Total amount after discount
-     * @param string $CashPayAmount Cash credit:  The amount paid from the user’s cash account
-     * @param string $IncentivePayAmount Free credit:  The amount paid by the user’s free credit
-     * @param string $VoucherPayAmount Voucher payment:  The voucher deduction amount
-     * @param string $TransferPayAmount Commission credit:  The amount paid by the user’s commission credit.
+     * @param string $CashPayAmount Cash credit: The amount paid from the user’s cash balance
+     * @param string $IncentivePayAmount Free credit: The amount paid with the user’s free credit
+     * @param string $VoucherPayAmount Voucher payment: The voucher deduction amount
+     * @param string $TransferPayAmount Commission credit: The amount paid with the user’s commission credit.
      * @param string $TotalCost The original cost in USD. This parameter has become valid since v3.0 bills took effect in May 2021, and before that `-` was returned for this parameter. If a customer uses a contract price different from the published price, `-` will also be returned for this parameter.
      * @param array $Detail Detailed summary of costs by transaction type
      */

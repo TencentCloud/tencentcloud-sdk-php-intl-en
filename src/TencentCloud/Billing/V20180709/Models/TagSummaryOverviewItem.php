@@ -28,16 +28,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setRealTotalCostRatio(string $RealTotalCostRatio) Set Cost percentage rounded to two decimal places
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getRealTotalCost() Obtain Total amount after discount. Note:  This field may return null, indicating that no valid values can be obtained.
- * @method void setRealTotalCost(string $RealTotalCost) Set Total amount after discount. Note:  This field may return null, indicating that no valid values can be obtained.
- * @method string getCashPayAmount() Obtain Cash credit:  The amount paid from the user’s cash account. Note:  This field may return null, indicating that no valid values can be obtained.
- * @method void setCashPayAmount(string $CashPayAmount) Set Cash credit:  The amount paid from the user’s cash account. Note:  This field may return null, indicating that no valid values can be obtained.
- * @method string getIncentivePayAmount() Obtain Free credit:  The amount paid by the user’s free credit. Note:  This field may return null, indicating that no valid values can be obtained.
- * @method void setIncentivePayAmount(string $IncentivePayAmount) Set Free credit:  The amount paid by the user’s free credit. Note:  This field may return null, indicating that no valid values can be obtained.
- * @method string getVoucherPayAmount() Obtain Voucher payment:  The voucher deduction amount. Note:  This field may return null, indicating that no valid values can be obtained.
- * @method void setVoucherPayAmount(string $VoucherPayAmount) Set Voucher payment:  The voucher deduction amount. Note:  This field may return null, indicating that no valid values can be obtained.
- * @method string getTransferPayAmount() Obtain Commission credit:  The amount paid by the user’s commission credit. Note:  This field may return null, indicating that no valid values can be obtained.
- * @method void setTransferPayAmount(string $TransferPayAmount) Set Commission credit:  The amount paid by the user’s commission credit. Note:  This field may return null, indicating that no valid values can be obtained.
+ * @method string getRealTotalCost() Obtain Total amount after discount. Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setRealTotalCost(string $RealTotalCost) Set Total amount after discount. Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getCashPayAmount() Obtain Cash credit: The amount paid from the user’s cash account. Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setCashPayAmount(string $CashPayAmount) Set Cash credit: The amount paid from the user’s cash account. Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getIncentivePayAmount() Obtain Free credit: The amount paid with the user’s free credit. Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setIncentivePayAmount(string $IncentivePayAmount) Set Free credit: The amount paid with the user’s free credit. Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getVoucherPayAmount() Obtain Voucher payment: The amount deducted by using vouchers. Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setVoucherPayAmount(string $VoucherPayAmount) Set Voucher payment: The amount deducted by using vouchers. Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getTransferPayAmount() Obtain Commission credit: The amount paid with the user’s commission credit. Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setTransferPayAmount(string $TransferPayAmount) Set Commission credit: The amount paid with the user’s commission credit. Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getTotalCost() Obtain The original cost in USD. This parameter has become valid since v3.0 bills took effect in May 2021, and before that `-` was returned for this parameter. If a customer uses a contract price different from the published price, `-` will also be returned for this parameter.
 Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method void setTotalCost(string $TotalCost) Set The original cost in USD. This parameter has become valid since v3.0 bills took effect in May 2021, and before that `-` was returned for this parameter. If a customer uses a contract price different from the published price, `-` will also be returned for this parameter.
@@ -58,27 +58,27 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $RealTotalCostRatio;
 
     /**
-     * @var string Total amount after discount. Note:  This field may return null, indicating that no valid values can be obtained.
+     * @var string Total amount after discount. Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $RealTotalCost;
 
     /**
-     * @var string Cash credit:  The amount paid from the user’s cash account. Note:  This field may return null, indicating that no valid values can be obtained.
+     * @var string Cash credit: The amount paid from the user’s cash account. Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $CashPayAmount;
 
     /**
-     * @var string Free credit:  The amount paid by the user’s free credit. Note:  This field may return null, indicating that no valid values can be obtained.
+     * @var string Free credit: The amount paid with the user’s free credit. Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $IncentivePayAmount;
 
     /**
-     * @var string Voucher payment:  The voucher deduction amount. Note:  This field may return null, indicating that no valid values can be obtained.
+     * @var string Voucher payment: The amount deducted by using vouchers. Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $VoucherPayAmount;
 
     /**
-     * @var string Commission credit:  The amount paid by the user’s commission credit. Note:  This field may return null, indicating that no valid values can be obtained.
+     * @var string Commission credit: The amount paid with the user’s commission credit. Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $TransferPayAmount;
 
@@ -93,11 +93,11 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $RealTotalCostRatio Cost percentage rounded to two decimal places
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $RealTotalCost Total amount after discount. Note:  This field may return null, indicating that no valid values can be obtained.
-     * @param string $CashPayAmount Cash credit:  The amount paid from the user’s cash account. Note:  This field may return null, indicating that no valid values can be obtained.
-     * @param string $IncentivePayAmount Free credit:  The amount paid by the user’s free credit. Note:  This field may return null, indicating that no valid values can be obtained.
-     * @param string $VoucherPayAmount Voucher payment:  The voucher deduction amount. Note:  This field may return null, indicating that no valid values can be obtained.
-     * @param string $TransferPayAmount Commission credit:  The amount paid by the user’s commission credit. Note:  This field may return null, indicating that no valid values can be obtained.
+     * @param string $RealTotalCost Total amount after discount. Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $CashPayAmount Cash credit: The amount paid from the user’s cash account. Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $IncentivePayAmount Free credit: The amount paid with the user’s free credit. Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $VoucherPayAmount Voucher payment: The amount deducted by using vouchers. Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $TransferPayAmount Commission credit: The amount paid with the user’s commission credit. Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $TotalCost The original cost in USD. This parameter has become valid since v3.0 bills took effect in May 2021, and before that `-` was returned for this parameter. If a customer uses a contract price different from the published price, `-` will also be returned for this parameter.
 Note: this field may return `null`, indicating that no valid values can be obtained.
      */

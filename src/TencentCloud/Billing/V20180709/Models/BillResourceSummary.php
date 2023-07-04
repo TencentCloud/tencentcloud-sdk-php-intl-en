@@ -20,172 +20,172 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Information about resources charged in the bill
  *
- * @method string getBusinessCodeName() Obtain Product name:  The name of a Tencent Cloud product purchased by the user, such as  CVM.
- * @method void setBusinessCodeName(string $BusinessCodeName) Set Product name:  The name of a Tencent Cloud product purchased by the user, such as  CVM.
- * @method string getProductCodeName() Obtain Subproduct name:  The subcategory of a Tencent Cloud product purchased by the user, such as  CVM – Standard S1.
- * @method void setProductCodeName(string $ProductCodeName) Set Subproduct name:  The subcategory of a Tencent Cloud product purchased by the user, such as  CVM – Standard S1.
- * @method string getPayModeName() Obtain Billing mode,  which can be monthly subscription or pay-as-you-go.
- * @method void setPayModeName(string $PayModeName) Set Billing mode,  which can be monthly subscription or pay-as-you-go.
- * @method string getProjectName() Obtain Project name:  The project to which a resource belongs, which is user-designated. If a resource has not been assigned to a project, it will automatically belong to the default project.
- * @method void setProjectName(string $ProjectName) Set Project name:  The project to which a resource belongs, which is user-designated. If a resource has not been assigned to a project, it will automatically belong to the default project.
- * @method string getRegionName() Obtain Region:  The region to which a resource belongs, such as South China (Guangzhou).
- * @method void setRegionName(string $RegionName) Set Region:  The region to which a resource belongs, such as South China (Guangzhou).
- * @method string getZoneName() Obtain Availability zone:  The availability zone to which a resource belongs, such as Guangzhou Zone 3.
- * @method void setZoneName(string $ZoneName) Set Availability zone:  The availability zone to which a resource belongs, such as Guangzhou Zone 3.
- * @method string getResourceId() Obtain Instance ID:  The object ID of a billed resource, such as a CVM instance ID. This object ID may vary due to various forms and contents of resources in different products.	
- * @method void setResourceId(string $ResourceId) Set Instance ID:  The object ID of a billed resource, such as a CVM instance ID. This object ID may vary due to various forms and contents of resources in different products.	
- * @method string getResourceName() Obtain Instance name:  The resource name set by the user in the console. If it is not set, it will be empty by default.
- * @method void setResourceName(string $ResourceName) Set Instance name:  The resource name set by the user in the console. If it is not set, it will be empty by default.
- * @method string getActionTypeName() Obtain Transaction type,  which can be monthly subscription purchase, monthly subscription renewal, or pay-as-you-go deduction.
- * @method void setActionTypeName(string $ActionTypeName) Set Transaction type,  which can be monthly subscription purchase, monthly subscription renewal, or pay-as-you-go deduction.
- * @method string getOrderId() Obtain Order ID:  The order number for a monthly subscription purchase
- * @method void setOrderId(string $OrderId) Set Order ID:  The order number for a monthly subscription purchase
- * @method string getPayTime() Obtain Transaction time:  The time at which a payment was deducted
- * @method void setPayTime(string $PayTime) Set Transaction time:  The time at which a payment was deducted
- * @method string getFeeBeginTime() Obtain Usage start time:  The time at which product or service usage starts
- * @method void setFeeBeginTime(string $FeeBeginTime) Set Usage start time:  The time at which product or service usage starts
- * @method string getFeeEndTime() Obtain Usage end time:  The time at which product or service usage ends
- * @method void setFeeEndTime(string $FeeEndTime) Set Usage end time:  The time at which product or service usage ends
- * @method string getConfigDesc() Obtain Configuration description:  The billable item names and usage of a resource, which are displayed on the resource bill only.
- * @method void setConfigDesc(string $ConfigDesc) Set Configuration description:  The billable item names and usage of a resource, which are displayed on the resource bill only.
- * @method string getExtendField1() Obtain Extended field 1:  Extended attribute information of a product, which is displayed on the resource bill only.
- * @method void setExtendField1(string $ExtendField1) Set Extended field 1:  Extended attribute information of a product, which is displayed on the resource bill only.
- * @method string getExtendField2() Obtain Extended field 2:  Extended attribute information of a product, which is displayed on the resource bill only.
- * @method void setExtendField2(string $ExtendField2) Set Extended field 2:  Extended attribute information of a product, which is displayed on the resource bill only.
- * @method string getTotalCost() Obtain Original cost:  The original cost of a resource, which is "List price x Usage x Usage duration". If a customer has applied for a fixed preferential price or contract price or is in a refund scenario, this parameter will not be displayed by default.
- * @method void setTotalCost(string $TotalCost) Set Original cost:  The original cost of a resource, which is "List price x Usage x Usage duration". If a customer has applied for a fixed preferential price or contract price or is in a refund scenario, this parameter will not be displayed by default.
- * @method string getDiscount() Obtain Discount multiplier:  The discount multiplier applied to the cost of the resource. If a customer has applied for a fixed preferential price or contract price or is in a refund scenario, this parameter will not be displayed by default.
- * @method void setDiscount(string $Discount) Set Discount multiplier:  The discount multiplier applied to the cost of the resource. If a customer has applied for a fixed preferential price or contract price or is in a refund scenario, this parameter will not be displayed by default.
+ * @method string getBusinessCodeName() Obtain Product name: The name of a Tencent Cloud product purchased by the user, such as CVM.
+ * @method void setBusinessCodeName(string $BusinessCodeName) Set Product name: The name of a Tencent Cloud product purchased by the user, such as CVM.
+ * @method string getProductCodeName() Obtain Subproduct name: The subcategory of a Tencent Cloud product purchased by the user, such as CVM – Standard S1.
+ * @method void setProductCodeName(string $ProductCodeName) Set Subproduct name: The subcategory of a Tencent Cloud product purchased by the user, such as CVM – Standard S1.
+ * @method string getPayModeName() Obtain Billing mode, which can be monthly subscription or pay-as-you-go.
+ * @method void setPayModeName(string $PayModeName) Set Billing mode, which can be monthly subscription or pay-as-you-go.
+ * @method string getProjectName() Obtain Project name: The project to which a resource belongs, which is user-designated. If a resource has not been assigned to a project, it will automatically belong to the default project.
+ * @method void setProjectName(string $ProjectName) Set Project name: The project to which a resource belongs, which is user-designated. If a resource has not been assigned to a project, it will automatically belong to the default project.
+ * @method string getRegionName() Obtain Region: The region to which a resource belongs, such as South China (Guangzhou).
+ * @method void setRegionName(string $RegionName) Set Region: The region to which a resource belongs, such as South China (Guangzhou).
+ * @method string getZoneName() Obtain Availability zone: The availability zone to which a resource belongs, such as Guangzhou Zone 3.
+ * @method void setZoneName(string $ZoneName) Set Availability zone: The availability zone to which a resource belongs, such as Guangzhou Zone 3.
+ * @method string getResourceId() Obtain Instance ID: The object ID of a billed resource, such as a CVM instance ID. This object ID may vary due to various forms and contents of resources in different products.	
+ * @method void setResourceId(string $ResourceId) Set Instance ID: The object ID of a billed resource, such as a CVM instance ID. This object ID may vary due to various forms and contents of resources in different products.	
+ * @method string getResourceName() Obtain Instance name: The resource name set by the user in the console. If it is not set, it will be empty by default.
+ * @method void setResourceName(string $ResourceName) Set Instance name: The resource name set by the user in the console. If it is not set, it will be empty by default.
+ * @method string getActionTypeName() Obtain Transaction type, which can be monthly subscription purchase, monthly subscription renewal, or pay-as-you-go deduction.
+ * @method void setActionTypeName(string $ActionTypeName) Set Transaction type, which can be monthly subscription purchase, monthly subscription renewal, or pay-as-you-go deduction.
+ * @method string getOrderId() Obtain Order ID: The order number for a monthly subscription purchase
+ * @method void setOrderId(string $OrderId) Set Order ID: The order number for a monthly subscription purchase
+ * @method string getPayTime() Obtain Transaction time: The time at which a payment was deducted
+ * @method void setPayTime(string $PayTime) Set Transaction time: The time at which a payment was deducted
+ * @method string getFeeBeginTime() Obtain Usage start time: The time at which product or service usage starts
+ * @method void setFeeBeginTime(string $FeeBeginTime) Set Usage start time: The time at which product or service usage starts
+ * @method string getFeeEndTime() Obtain Usage end time: The time at which product or service usage ends
+ * @method void setFeeEndTime(string $FeeEndTime) Set Usage end time: The time at which product or service usage ends
+ * @method string getConfigDesc() Obtain Configuration description: The billable item names and usage of a resource, which are displayed on the resource bill only.
+ * @method void setConfigDesc(string $ConfigDesc) Set Configuration description: The billable item names and usage of a resource, which are displayed on the resource bill only.
+ * @method string getExtendField1() Obtain Extended field 1: Extended attribute information of a product, which is displayed on the resource bill only.
+ * @method void setExtendField1(string $ExtendField1) Set Extended field 1: Extended attribute information of a product, which is displayed on the resource bill only.
+ * @method string getExtendField2() Obtain Extended field 2: Extended attribute information of a product, which is displayed on the resource bill only.
+ * @method void setExtendField2(string $ExtendField2) Set Extended field 2: Extended attribute information of a product, which is displayed on the resource bill only.
+ * @method string getTotalCost() Obtain Original cost: The original cost of a resource, which is "List price x Usage x Usage duration". If a customer has applied for a fixed preferential price or contract price or applied for a refund, this parameter will not be displayed by default.
+ * @method void setTotalCost(string $TotalCost) Set Original cost: The original cost of a resource, which is "List price x Usage x Usage duration". If a customer has applied for a fixed preferential price or contract price or applied for a refund, this parameter will not be displayed by default.
+ * @method string getDiscount() Obtain Discount multiplier: The discount multiplier applied to the cost of the resource. If a customer has applied for a fixed preferential price or contract price or applied for a refund, this parameter will not be displayed by default.
+ * @method void setDiscount(string $Discount) Set Discount multiplier: The discount multiplier applied to the cost of the resource. If a customer has applied for a fixed preferential price or contract price or applied for a refund, this parameter will not be displayed by default.
  * @method string getReduceType() Obtain Offer type
  * @method void setReduceType(string $ReduceType) Set Offer type
  * @method string getRealTotalCost() Obtain Total amount after discount
  * @method void setRealTotalCost(string $RealTotalCost) Set Total amount after discount
- * @method string getVoucherPayAmount() Obtain Voucher payment:  The voucher deduction amount
- * @method void setVoucherPayAmount(string $VoucherPayAmount) Set Voucher payment:  The voucher deduction amount
- * @method string getCashPayAmount() Obtain Cash credit:  The amount paid from the user’s cash account
- * @method void setCashPayAmount(string $CashPayAmount) Set Cash credit:  The amount paid from the user’s cash account
- * @method string getIncentivePayAmount() Obtain Free credit:  The amount paid by the user’s free credit
- * @method void setIncentivePayAmount(string $IncentivePayAmount) Set Free credit:  The amount paid by the user’s free credit
- * @method string getTransferPayAmount() Obtain Commission credit:  The amount paid by the user’s commission credit. Note:  This field may return null, indicating that no valid values can be obtained.
- * @method void setTransferPayAmount(string $TransferPayAmount) Set Commission credit:  The amount paid by the user’s commission credit. Note:  This field may return null, indicating that no valid values can be obtained.
- * @method string getExtendField3() Obtain Extended field 3:  Extended attribute information of a product, which is displayed on the resource bill only.
- * @method void setExtendField3(string $ExtendField3) Set Extended field 3:  Extended attribute information of a product, which is displayed on the resource bill only.
- * @method string getExtendField4() Obtain Extended field 4:  Extended attribute information of a product, which is displayed on the resource bill only.
- * @method void setExtendField4(string $ExtendField4) Set Extended field 4:  Extended attribute information of a product, which is displayed on the resource bill only.
- * @method string getExtendField5() Obtain Extended field 5:  Extended attribute information of a product, which is displayed on the resource bill only.
- * @method void setExtendField5(string $ExtendField5) Set Extended field 5:  Extended attribute information of a product, which is displayed on the resource bill only.
- * @method array getTags() Obtain Tag information. Note:  This field may return null, indicating that no valid values can be obtained.
- * @method void setTags(array $Tags) Set Tag information. Note:  This field may return null, indicating that no valid values can be obtained.
- * @method string getPayerUin() Obtain Payer account ID:  The account ID of the payer, which is the unique identifier of a Tencent Cloud user.
- * @method void setPayerUin(string $PayerUin) Set Payer account ID:  The account ID of the payer, which is the unique identifier of a Tencent Cloud user.
- * @method string getOwnerUin() Obtain Owner account ID:  The account ID of the actual resource user
- * @method void setOwnerUin(string $OwnerUin) Set Owner account ID:  The account ID of the actual resource user
- * @method string getOperateUin() Obtain Operator account ID:  The account or role ID of the operator who purchases or activates a resource.
- * @method void setOperateUin(string $OperateUin) Set Operator account ID:  The account or role ID of the operator who purchases or activates a resource.
+ * @method string getVoucherPayAmount() Obtain Voucher payment: The voucher deduction amount
+ * @method void setVoucherPayAmount(string $VoucherPayAmount) Set Voucher payment: The voucher deduction amount
+ * @method string getCashPayAmount() Obtain Cash credit: The amount paid from the user’s cash account
+ * @method void setCashPayAmount(string $CashPayAmount) Set Cash credit: The amount paid from the user’s cash account
+ * @method string getIncentivePayAmount() Obtain Free credit: The amount paid with the user’s free credit
+ * @method void setIncentivePayAmount(string $IncentivePayAmount) Set Free credit: The amount paid with the user’s free credit
+ * @method string getTransferPayAmount() Obtain Commission credit: The amount paid with the user’s commission credit. Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setTransferPayAmount(string $TransferPayAmount) Set Commission credit: The amount paid with the user’s commission credit. Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getExtendField3() Obtain Extended field 3: Extended attribute information of a product, which is displayed on the resource bill only.
+ * @method void setExtendField3(string $ExtendField3) Set Extended field 3: Extended attribute information of a product, which is displayed on the resource bill only.
+ * @method string getExtendField4() Obtain Extended field 4: Extended attribute information of a product, which is displayed on the resource bill only.
+ * @method void setExtendField4(string $ExtendField4) Set Extended field 4: Extended attribute information of a product, which is displayed on the resource bill only.
+ * @method string getExtendField5() Obtain Extended field 5: Extended attribute information of a product, which is displayed on the resource bill only.
+ * @method void setExtendField5(string $ExtendField5) Set Extended field 5: Extended attribute information of a product, which is displayed on the resource bill only.
+ * @method array getTags() Obtain Tag information. Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setTags(array $Tags) Set Tag information. Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getPayerUin() Obtain Payer account ID: The account ID of the payer, which is the unique identifier of a Tencent Cloud user.
+ * @method void setPayerUin(string $PayerUin) Set Payer account ID: The account ID of the payer, which is the unique identifier of a Tencent Cloud user.
+ * @method string getOwnerUin() Obtain Owner account ID: The account ID of the actual resource user
+ * @method void setOwnerUin(string $OwnerUin) Set Owner account ID: The account ID of the actual resource user
+ * @method string getOperateUin() Obtain Operator account ID: The account or role ID of the operator who purchases or activates a resource.
+ * @method void setOperateUin(string $OperateUin) Set Operator account ID: The account or role ID of the operator who purchases or activates a resource.
  * @method string getBusinessCode() Obtain Product code
  * @method void setBusinessCode(string $BusinessCode) Set Product code
  * @method string getProductCode() Obtain Subproduct code
  * @method void setProductCode(string $ProductCode) Set Subproduct code
  * @method integer getRegionId() Obtain Region ID
  * @method void setRegionId(integer $RegionId) Set Region ID
- * @method string getInstanceType() Obtain Instance type:  The instance type of a product or service purchased, which can be resource package, RI, SP, or spot instance. Other instance types are not displayed by default.
- * @method void setInstanceType(string $InstanceType) Set Instance type:  The instance type of a product or service purchased, which can be resource package, RI, SP, or spot instance. Other instance types are not displayed by default.
- * @method string getOriginalCostWithRI() Obtain RI deduction (cost):  The amount deducted from the original cost by RI	
- * @method void setOriginalCostWithRI(string $OriginalCostWithRI) Set RI deduction (cost):  The amount deducted from the original cost by RI	
+ * @method string getInstanceType() Obtain Instance type: The instance type of a product or service purchased, which can be resource package, RI, SP, or spot instance. Other instance types are not displayed by default.
+ * @method void setInstanceType(string $InstanceType) Set Instance type: The instance type of a product or service purchased, which can be resource package, RI, SP, or spot instance. Other instance types are not displayed by default.
+ * @method string getOriginalCostWithRI() Obtain RI deduction (cost): The amount deducted from the original cost by RI	
+ * @method void setOriginalCostWithRI(string $OriginalCostWithRI) Set RI deduction (cost): The amount deducted from the original cost by RI	
  * @method string getSPDeduction() Obtain Cost deduction by SP. This parameter has been deprecated.
  * @method void setSPDeduction(string $SPDeduction) Set Cost deduction by SP. This parameter has been deprecated.
- * @method string getOriginalCostWithSP() Obtain SP deduction (cost):  SP deduction (cost) = Cost deduction by SP / SP deduction rate	
- * @method void setOriginalCostWithSP(string $OriginalCostWithSP) Set SP deduction (cost):  SP deduction (cost) = Cost deduction by SP / SP deduction rate	
+ * @method string getOriginalCostWithSP() Obtain SP deduction (cost): SP deduction (cost) = Cost deduction by SP / SP deduction rate	
+ * @method void setOriginalCostWithSP(string $OriginalCostWithSP) Set SP deduction (cost): SP deduction (cost) = Cost deduction by SP / SP deduction rate	
  */
 class BillResourceSummary extends AbstractModel
 {
     /**
-     * @var string Product name:  The name of a Tencent Cloud product purchased by the user, such as  CVM.
+     * @var string Product name: The name of a Tencent Cloud product purchased by the user, such as CVM.
      */
     public $BusinessCodeName;
 
     /**
-     * @var string Subproduct name:  The subcategory of a Tencent Cloud product purchased by the user, such as  CVM – Standard S1.
+     * @var string Subproduct name: The subcategory of a Tencent Cloud product purchased by the user, such as CVM – Standard S1.
      */
     public $ProductCodeName;
 
     /**
-     * @var string Billing mode,  which can be monthly subscription or pay-as-you-go.
+     * @var string Billing mode, which can be monthly subscription or pay-as-you-go.
      */
     public $PayModeName;
 
     /**
-     * @var string Project name:  The project to which a resource belongs, which is user-designated. If a resource has not been assigned to a project, it will automatically belong to the default project.
+     * @var string Project name: The project to which a resource belongs, which is user-designated. If a resource has not been assigned to a project, it will automatically belong to the default project.
      */
     public $ProjectName;
 
     /**
-     * @var string Region:  The region to which a resource belongs, such as South China (Guangzhou).
+     * @var string Region: The region to which a resource belongs, such as South China (Guangzhou).
      */
     public $RegionName;
 
     /**
-     * @var string Availability zone:  The availability zone to which a resource belongs, such as Guangzhou Zone 3.
+     * @var string Availability zone: The availability zone to which a resource belongs, such as Guangzhou Zone 3.
      */
     public $ZoneName;
 
     /**
-     * @var string Instance ID:  The object ID of a billed resource, such as a CVM instance ID. This object ID may vary due to various forms and contents of resources in different products.	
+     * @var string Instance ID: The object ID of a billed resource, such as a CVM instance ID. This object ID may vary due to various forms and contents of resources in different products.	
      */
     public $ResourceId;
 
     /**
-     * @var string Instance name:  The resource name set by the user in the console. If it is not set, it will be empty by default.
+     * @var string Instance name: The resource name set by the user in the console. If it is not set, it will be empty by default.
      */
     public $ResourceName;
 
     /**
-     * @var string Transaction type,  which can be monthly subscription purchase, monthly subscription renewal, or pay-as-you-go deduction.
+     * @var string Transaction type, which can be monthly subscription purchase, monthly subscription renewal, or pay-as-you-go deduction.
      */
     public $ActionTypeName;
 
     /**
-     * @var string Order ID:  The order number for a monthly subscription purchase
+     * @var string Order ID: The order number for a monthly subscription purchase
      */
     public $OrderId;
 
     /**
-     * @var string Transaction time:  The time at which a payment was deducted
+     * @var string Transaction time: The time at which a payment was deducted
      */
     public $PayTime;
 
     /**
-     * @var string Usage start time:  The time at which product or service usage starts
+     * @var string Usage start time: The time at which product or service usage starts
      */
     public $FeeBeginTime;
 
     /**
-     * @var string Usage end time:  The time at which product or service usage ends
+     * @var string Usage end time: The time at which product or service usage ends
      */
     public $FeeEndTime;
 
     /**
-     * @var string Configuration description:  The billable item names and usage of a resource, which are displayed on the resource bill only.
+     * @var string Configuration description: The billable item names and usage of a resource, which are displayed on the resource bill only.
      */
     public $ConfigDesc;
 
     /**
-     * @var string Extended field 1:  Extended attribute information of a product, which is displayed on the resource bill only.
+     * @var string Extended field 1: Extended attribute information of a product, which is displayed on the resource bill only.
      */
     public $ExtendField1;
 
     /**
-     * @var string Extended field 2:  Extended attribute information of a product, which is displayed on the resource bill only.
+     * @var string Extended field 2: Extended attribute information of a product, which is displayed on the resource bill only.
      */
     public $ExtendField2;
 
     /**
-     * @var string Original cost:  The original cost of a resource, which is "List price x Usage x Usage duration". If a customer has applied for a fixed preferential price or contract price or is in a refund scenario, this parameter will not be displayed by default.
+     * @var string Original cost: The original cost of a resource, which is "List price x Usage x Usage duration". If a customer has applied for a fixed preferential price or contract price or applied for a refund, this parameter will not be displayed by default.
      */
     public $TotalCost;
 
     /**
-     * @var string Discount multiplier:  The discount multiplier applied to the cost of the resource. If a customer has applied for a fixed preferential price or contract price or is in a refund scenario, this parameter will not be displayed by default.
+     * @var string Discount multiplier: The discount multiplier applied to the cost of the resource. If a customer has applied for a fixed preferential price or contract price or applied for a refund, this parameter will not be displayed by default.
      */
     public $Discount;
 
@@ -200,57 +200,57 @@ class BillResourceSummary extends AbstractModel
     public $RealTotalCost;
 
     /**
-     * @var string Voucher payment:  The voucher deduction amount
+     * @var string Voucher payment: The voucher deduction amount
      */
     public $VoucherPayAmount;
 
     /**
-     * @var string Cash credit:  The amount paid from the user’s cash account
+     * @var string Cash credit: The amount paid from the user’s cash account
      */
     public $CashPayAmount;
 
     /**
-     * @var string Free credit:  The amount paid by the user’s free credit
+     * @var string Free credit: The amount paid with the user’s free credit
      */
     public $IncentivePayAmount;
 
     /**
-     * @var string Commission credit:  The amount paid by the user’s commission credit. Note:  This field may return null, indicating that no valid values can be obtained.
+     * @var string Commission credit: The amount paid with the user’s commission credit. Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $TransferPayAmount;
 
     /**
-     * @var string Extended field 3:  Extended attribute information of a product, which is displayed on the resource bill only.
+     * @var string Extended field 3: Extended attribute information of a product, which is displayed on the resource bill only.
      */
     public $ExtendField3;
 
     /**
-     * @var string Extended field 4:  Extended attribute information of a product, which is displayed on the resource bill only.
+     * @var string Extended field 4: Extended attribute information of a product, which is displayed on the resource bill only.
      */
     public $ExtendField4;
 
     /**
-     * @var string Extended field 5:  Extended attribute information of a product, which is displayed on the resource bill only.
+     * @var string Extended field 5: Extended attribute information of a product, which is displayed on the resource bill only.
      */
     public $ExtendField5;
 
     /**
-     * @var array Tag information. Note:  This field may return null, indicating that no valid values can be obtained.
+     * @var array Tag information. Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Tags;
 
     /**
-     * @var string Payer account ID:  The account ID of the payer, which is the unique identifier of a Tencent Cloud user.
+     * @var string Payer account ID: The account ID of the payer, which is the unique identifier of a Tencent Cloud user.
      */
     public $PayerUin;
 
     /**
-     * @var string Owner account ID:  The account ID of the actual resource user
+     * @var string Owner account ID: The account ID of the actual resource user
      */
     public $OwnerUin;
 
     /**
-     * @var string Operator account ID:  The account or role ID of the operator who purchases or activates a resource.
+     * @var string Operator account ID: The account or role ID of the operator who purchases or activates a resource.
      */
     public $OperateUin;
 
@@ -270,12 +270,12 @@ class BillResourceSummary extends AbstractModel
     public $RegionId;
 
     /**
-     * @var string Instance type:  The instance type of a product or service purchased, which can be resource package, RI, SP, or spot instance. Other instance types are not displayed by default.
+     * @var string Instance type: The instance type of a product or service purchased, which can be resource package, RI, SP, or spot instance. Other instance types are not displayed by default.
      */
     public $InstanceType;
 
     /**
-     * @var string RI deduction (cost):  The amount deducted from the original cost by RI	
+     * @var string RI deduction (cost): The amount deducted from the original cost by RI	
      */
     public $OriginalCostWithRI;
 
@@ -286,49 +286,49 @@ class BillResourceSummary extends AbstractModel
     public $SPDeduction;
 
     /**
-     * @var string SP deduction (cost):  SP deduction (cost) = Cost deduction by SP / SP deduction rate	
+     * @var string SP deduction (cost): SP deduction (cost) = Cost deduction by SP / SP deduction rate	
      */
     public $OriginalCostWithSP;
 
     /**
-     * @param string $BusinessCodeName Product name:  The name of a Tencent Cloud product purchased by the user, such as  CVM.
-     * @param string $ProductCodeName Subproduct name:  The subcategory of a Tencent Cloud product purchased by the user, such as  CVM – Standard S1.
-     * @param string $PayModeName Billing mode,  which can be monthly subscription or pay-as-you-go.
-     * @param string $ProjectName Project name:  The project to which a resource belongs, which is user-designated. If a resource has not been assigned to a project, it will automatically belong to the default project.
-     * @param string $RegionName Region:  The region to which a resource belongs, such as South China (Guangzhou).
-     * @param string $ZoneName Availability zone:  The availability zone to which a resource belongs, such as Guangzhou Zone 3.
-     * @param string $ResourceId Instance ID:  The object ID of a billed resource, such as a CVM instance ID. This object ID may vary due to various forms and contents of resources in different products.	
-     * @param string $ResourceName Instance name:  The resource name set by the user in the console. If it is not set, it will be empty by default.
-     * @param string $ActionTypeName Transaction type,  which can be monthly subscription purchase, monthly subscription renewal, or pay-as-you-go deduction.
-     * @param string $OrderId Order ID:  The order number for a monthly subscription purchase
-     * @param string $PayTime Transaction time:  The time at which a payment was deducted
-     * @param string $FeeBeginTime Usage start time:  The time at which product or service usage starts
-     * @param string $FeeEndTime Usage end time:  The time at which product or service usage ends
-     * @param string $ConfigDesc Configuration description:  The billable item names and usage of a resource, which are displayed on the resource bill only.
-     * @param string $ExtendField1 Extended field 1:  Extended attribute information of a product, which is displayed on the resource bill only.
-     * @param string $ExtendField2 Extended field 2:  Extended attribute information of a product, which is displayed on the resource bill only.
-     * @param string $TotalCost Original cost:  The original cost of a resource, which is "List price x Usage x Usage duration". If a customer has applied for a fixed preferential price or contract price or is in a refund scenario, this parameter will not be displayed by default.
-     * @param string $Discount Discount multiplier:  The discount multiplier applied to the cost of the resource. If a customer has applied for a fixed preferential price or contract price or is in a refund scenario, this parameter will not be displayed by default.
+     * @param string $BusinessCodeName Product name: The name of a Tencent Cloud product purchased by the user, such as CVM.
+     * @param string $ProductCodeName Subproduct name: The subcategory of a Tencent Cloud product purchased by the user, such as CVM – Standard S1.
+     * @param string $PayModeName Billing mode, which can be monthly subscription or pay-as-you-go.
+     * @param string $ProjectName Project name: The project to which a resource belongs, which is user-designated. If a resource has not been assigned to a project, it will automatically belong to the default project.
+     * @param string $RegionName Region: The region to which a resource belongs, such as South China (Guangzhou).
+     * @param string $ZoneName Availability zone: The availability zone to which a resource belongs, such as Guangzhou Zone 3.
+     * @param string $ResourceId Instance ID: The object ID of a billed resource, such as a CVM instance ID. This object ID may vary due to various forms and contents of resources in different products.	
+     * @param string $ResourceName Instance name: The resource name set by the user in the console. If it is not set, it will be empty by default.
+     * @param string $ActionTypeName Transaction type, which can be monthly subscription purchase, monthly subscription renewal, or pay-as-you-go deduction.
+     * @param string $OrderId Order ID: The order number for a monthly subscription purchase
+     * @param string $PayTime Transaction time: The time at which a payment was deducted
+     * @param string $FeeBeginTime Usage start time: The time at which product or service usage starts
+     * @param string $FeeEndTime Usage end time: The time at which product or service usage ends
+     * @param string $ConfigDesc Configuration description: The billable item names and usage of a resource, which are displayed on the resource bill only.
+     * @param string $ExtendField1 Extended field 1: Extended attribute information of a product, which is displayed on the resource bill only.
+     * @param string $ExtendField2 Extended field 2: Extended attribute information of a product, which is displayed on the resource bill only.
+     * @param string $TotalCost Original cost: The original cost of a resource, which is "List price x Usage x Usage duration". If a customer has applied for a fixed preferential price or contract price or applied for a refund, this parameter will not be displayed by default.
+     * @param string $Discount Discount multiplier: The discount multiplier applied to the cost of the resource. If a customer has applied for a fixed preferential price or contract price or applied for a refund, this parameter will not be displayed by default.
      * @param string $ReduceType Offer type
      * @param string $RealTotalCost Total amount after discount
-     * @param string $VoucherPayAmount Voucher payment:  The voucher deduction amount
-     * @param string $CashPayAmount Cash credit:  The amount paid from the user’s cash account
-     * @param string $IncentivePayAmount Free credit:  The amount paid by the user’s free credit
-     * @param string $TransferPayAmount Commission credit:  The amount paid by the user’s commission credit. Note:  This field may return null, indicating that no valid values can be obtained.
-     * @param string $ExtendField3 Extended field 3:  Extended attribute information of a product, which is displayed on the resource bill only.
-     * @param string $ExtendField4 Extended field 4:  Extended attribute information of a product, which is displayed on the resource bill only.
-     * @param string $ExtendField5 Extended field 5:  Extended attribute information of a product, which is displayed on the resource bill only.
-     * @param array $Tags Tag information. Note:  This field may return null, indicating that no valid values can be obtained.
-     * @param string $PayerUin Payer account ID:  The account ID of the payer, which is the unique identifier of a Tencent Cloud user.
-     * @param string $OwnerUin Owner account ID:  The account ID of the actual resource user
-     * @param string $OperateUin Operator account ID:  The account or role ID of the operator who purchases or activates a resource.
+     * @param string $VoucherPayAmount Voucher payment: The voucher deduction amount
+     * @param string $CashPayAmount Cash credit: The amount paid from the user’s cash account
+     * @param string $IncentivePayAmount Free credit: The amount paid with the user’s free credit
+     * @param string $TransferPayAmount Commission credit: The amount paid with the user’s commission credit. Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $ExtendField3 Extended field 3: Extended attribute information of a product, which is displayed on the resource bill only.
+     * @param string $ExtendField4 Extended field 4: Extended attribute information of a product, which is displayed on the resource bill only.
+     * @param string $ExtendField5 Extended field 5: Extended attribute information of a product, which is displayed on the resource bill only.
+     * @param array $Tags Tag information. Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $PayerUin Payer account ID: The account ID of the payer, which is the unique identifier of a Tencent Cloud user.
+     * @param string $OwnerUin Owner account ID: The account ID of the actual resource user
+     * @param string $OperateUin Operator account ID: The account or role ID of the operator who purchases or activates a resource.
      * @param string $BusinessCode Product code
      * @param string $ProductCode Subproduct code
      * @param integer $RegionId Region ID
-     * @param string $InstanceType Instance type:  The instance type of a product or service purchased, which can be resource package, RI, SP, or spot instance. Other instance types are not displayed by default.
-     * @param string $OriginalCostWithRI RI deduction (cost):  The amount deducted from the original cost by RI	
+     * @param string $InstanceType Instance type: The instance type of a product or service purchased, which can be resource package, RI, SP, or spot instance. Other instance types are not displayed by default.
+     * @param string $OriginalCostWithRI RI deduction (cost): The amount deducted from the original cost by RI	
      * @param string $SPDeduction Cost deduction by SP. This parameter has been deprecated.
-     * @param string $OriginalCostWithSP SP deduction (cost):  SP deduction (cost) = Cost deduction by SP / SP deduction rate	
+     * @param string $OriginalCostWithSP SP deduction (cost): SP deduction (cost) = Cost deduction by SP / SP deduction rate	
      */
     function __construct()
     {

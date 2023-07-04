@@ -22,22 +22,22 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getBusinessCode() Obtain Product code
  * @method void setBusinessCode(string $BusinessCode) Set Product code
- * @method string getBusinessCodeName() Obtain Product name:  The name of a Tencent Cloud product purchased by the user, such as  CVM.
- * @method void setBusinessCodeName(string $BusinessCodeName) Set Product name:  The name of a Tencent Cloud product purchased by the user, such as  CVM.
- * @method string getTotalCost() Obtain Original cost in USD.  This parameter has become valid since Bill 3.0 took effect in May 2021, and before that `-` was returned for this parameter. If a customer has applied for a contract price different from the prices listed on the official website, `-` will also be returned for this parameter. 
+ * @method string getBusinessCodeName() Obtain Product name: The name of a Tencent Cloud product purchased by the user, such as CVM.
+ * @method void setBusinessCodeName(string $BusinessCodeName) Set Product name: The name of a Tencent Cloud product purchased by the user, such as CVM.
+ * @method string getTotalCost() Obtain Original cost in USD. This parameter became valid when Bill 3.0 took effect in May 2021. Before that, `-` was returned for this parameter. If a customer has applied for a contract price different from the prices listed on the official website, `-` will also be returned for this parameter. 
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setTotalCost(string $TotalCost) Set Original cost in USD.  This parameter has become valid since Bill 3.0 took effect in May 2021, and before that `-` was returned for this parameter. If a customer has applied for a contract price different from the prices listed on the official website, `-` will also be returned for this parameter. 
+ * @method void setTotalCost(string $TotalCost) Set Original cost in USD. This parameter became valid when Bill 3.0 took effect in May 2021. Before that, `-` was returned for this parameter. If a customer has applied for a contract price different from the prices listed on the official website, `-` will also be returned for this parameter. 
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getRealTotalCost() Obtain Total amount after discount
  * @method void setRealTotalCost(string $RealTotalCost) Set Total amount after discount
- * @method string getCashPayAmount() Obtain Cash credit:  The amount paid from the user’s cash account
- * @method void setCashPayAmount(string $CashPayAmount) Set Cash credit:  The amount paid from the user’s cash account
- * @method string getIncentivePayAmount() Obtain Free credit:  The amount paid by the user’s free credit
- * @method void setIncentivePayAmount(string $IncentivePayAmount) Set Free credit:  The amount paid by the user’s free credit
- * @method string getVoucherPayAmount() Obtain Voucher payment:  The voucher deduction amount
- * @method void setVoucherPayAmount(string $VoucherPayAmount) Set Voucher payment:  The voucher deduction amount
- * @method string getTransferPayAmount() Obtain Commission credit:  The amount paid by the user’s commission credit. Note:  This field may return null, indicating that no valid values can be obtained.
- * @method void setTransferPayAmount(string $TransferPayAmount) Set Commission credit:  The amount paid by the user’s commission credit. Note:  This field may return null, indicating that no valid values can be obtained.
+ * @method string getCashPayAmount() Obtain Cash credit: The amount paid from the user’s cash account
+ * @method void setCashPayAmount(string $CashPayAmount) Set Cash credit: The amount paid from the user’s cash account
+ * @method string getIncentivePayAmount() Obtain Free credit: The amount paid with the user’s free credit
+ * @method void setIncentivePayAmount(string $IncentivePayAmount) Set Free credit: The amount paid with the user’s free credit
+ * @method string getVoucherPayAmount() Obtain Voucher payment: The voucher deduction amount
+ * @method void setVoucherPayAmount(string $VoucherPayAmount) Set Voucher payment: The voucher deduction amount
+ * @method string getTransferPayAmount() Obtain Commission credit: The amount paid with the user’s commission credit. Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setTransferPayAmount(string $TransferPayAmount) Set Commission credit: The amount paid with the user’s commission credit. Note: This field may return null, indicating that no valid values can be obtained.
  */
 class BusinessSummaryInfo extends AbstractModel
 {
@@ -47,12 +47,12 @@ class BusinessSummaryInfo extends AbstractModel
     public $BusinessCode;
 
     /**
-     * @var string Product name:  The name of a Tencent Cloud product purchased by the user, such as  CVM.
+     * @var string Product name: The name of a Tencent Cloud product purchased by the user, such as CVM.
      */
     public $BusinessCodeName;
 
     /**
-     * @var string Original cost in USD.  This parameter has become valid since Bill 3.0 took effect in May 2021, and before that `-` was returned for this parameter. If a customer has applied for a contract price different from the prices listed on the official website, `-` will also be returned for this parameter. 
+     * @var string Original cost in USD. This parameter became valid when Bill 3.0 took effect in May 2021. Before that, `-` was returned for this parameter. If a customer has applied for a contract price different from the prices listed on the official website, `-` will also be returned for this parameter. 
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $TotalCost;
@@ -63,35 +63,35 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $RealTotalCost;
 
     /**
-     * @var string Cash credit:  The amount paid from the user’s cash account
+     * @var string Cash credit: The amount paid from the user’s cash account
      */
     public $CashPayAmount;
 
     /**
-     * @var string Free credit:  The amount paid by the user’s free credit
+     * @var string Free credit: The amount paid with the user’s free credit
      */
     public $IncentivePayAmount;
 
     /**
-     * @var string Voucher payment:  The voucher deduction amount
+     * @var string Voucher payment: The voucher deduction amount
      */
     public $VoucherPayAmount;
 
     /**
-     * @var string Commission credit:  The amount paid by the user’s commission credit. Note:  This field may return null, indicating that no valid values can be obtained.
+     * @var string Commission credit: The amount paid with the user’s commission credit. Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $TransferPayAmount;
 
     /**
      * @param string $BusinessCode Product code
-     * @param string $BusinessCodeName Product name:  The name of a Tencent Cloud product purchased by the user, such as  CVM.
-     * @param string $TotalCost Original cost in USD.  This parameter has become valid since Bill 3.0 took effect in May 2021, and before that `-` was returned for this parameter. If a customer has applied for a contract price different from the prices listed on the official website, `-` will also be returned for this parameter. 
+     * @param string $BusinessCodeName Product name: The name of a Tencent Cloud product purchased by the user, such as CVM.
+     * @param string $TotalCost Original cost in USD. This parameter became valid when Bill 3.0 took effect in May 2021. Before that, `-` was returned for this parameter. If a customer has applied for a contract price different from the prices listed on the official website, `-` will also be returned for this parameter. 
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $RealTotalCost Total amount after discount
-     * @param string $CashPayAmount Cash credit:  The amount paid from the user’s cash account
-     * @param string $IncentivePayAmount Free credit:  The amount paid by the user’s free credit
-     * @param string $VoucherPayAmount Voucher payment:  The voucher deduction amount
-     * @param string $TransferPayAmount Commission credit:  The amount paid by the user’s commission credit. Note:  This field may return null, indicating that no valid values can be obtained.
+     * @param string $CashPayAmount Cash credit: The amount paid from the user’s cash account
+     * @param string $IncentivePayAmount Free credit: The amount paid with the user’s free credit
+     * @param string $VoucherPayAmount Voucher payment: The voucher deduction amount
+     * @param string $TransferPayAmount Commission credit: The amount paid with the user’s commission credit. Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

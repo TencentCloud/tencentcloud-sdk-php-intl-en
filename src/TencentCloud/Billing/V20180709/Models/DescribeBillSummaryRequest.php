@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeBillSummary request structure.
  *
- * @method string getMonth() Obtain Bill month in the format of "2023-04"
- * @method void setMonth(string $Month) Set Bill month in the format of "2023-04"
- * @method string getGroupType() Obtain Bill dimension. Valid values:  `business`, `project`, `region`, `payMode`, and `tag`
- * @method void setGroupType(string $GroupType) Set Bill dimension. Valid values:  `business`, `project`, `region`, `payMode`, and `tag`
+ * @method string getMonth() Obtain Bill month in the format of "yyyy-mm"
+ * @method void setMonth(string $Month) Set Bill month in the format of "yyyy-mm"
+ * @method string getGroupType() Obtain Bill dimension. Valid values: `business`, `project`, `region`, `payMode`, and `tag`
+ * @method void setGroupType(string $GroupType) Set Bill dimension. Valid values: `business`, `project`, `region`, `payMode`, and `tag`
  * @method array getTagKey() Obtain Tag key, which is used when `GroupType` is `tag`.
  * @method void setTagKey(array $TagKey) Set Tag key, which is used when `GroupType` is `tag`.
  */
 class DescribeBillSummaryRequest extends AbstractModel
 {
     /**
-     * @var string Bill month in the format of "2023-04"
+     * @var string Bill month in the format of "yyyy-mm"
      */
     public $Month;
 
     /**
-     * @var string Bill dimension. Valid values:  `business`, `project`, `region`, `payMode`, and `tag`
+     * @var string Bill dimension. Valid values: `business`, `project`, `region`, `payMode`, and `tag`
      */
     public $GroupType;
 
@@ -45,8 +45,8 @@ class DescribeBillSummaryRequest extends AbstractModel
     public $TagKey;
 
     /**
-     * @param string $Month Bill month in the format of "2023-04"
-     * @param string $GroupType Bill dimension. Valid values:  `business`, `project`, `region`, `payMode`, and `tag`
+     * @param string $Month Bill month in the format of "yyyy-mm"
+     * @param string $GroupType Bill dimension. Valid values: `business`, `project`, `region`, `payMode`, and `tag`
      * @param array $TagKey Tag key, which is used when `GroupType` is `tag`.
      */
     function __construct()
