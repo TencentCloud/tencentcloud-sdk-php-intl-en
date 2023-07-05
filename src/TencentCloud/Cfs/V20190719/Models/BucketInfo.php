@@ -18,23 +18,31 @@ namespace TencentCloud\Cfs\V20190719\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * The details about tiered storage.
+ * Bucket information
  *
- * @method integer getTieringSizeInBytes() Obtain STANDARD_IA storage usage
+ * @method string getName() Obtain Bucket name
+ * @method void setName(string $Name) Set Bucket name
+ * @method string getRegion() Obtain Bucket region
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setTieringSizeInBytes(integer $TieringSizeInBytes) Set STANDARD_IA storage usage
+ * @method void setRegion(string $Region) Set Bucket region
 Note: This field may return null, indicating that no valid values can be obtained.
  */
-class TieringDetailInfo extends AbstractModel
+class BucketInfo extends AbstractModel
 {
     /**
-     * @var integer STANDARD_IA storage usage
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Bucket name
      */
-    public $TieringSizeInBytes;
+    public $Name;
 
     /**
-     * @param integer $TieringSizeInBytes STANDARD_IA storage usage
+     * @var string Bucket region
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $Region;
+
+    /**
+     * @param string $Name Bucket name
+     * @param string $Region Bucket region
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
@@ -50,8 +58,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TieringSizeInBytes",$param) and $param["TieringSizeInBytes"] !== null) {
-            $this->TieringSizeInBytes = $param["TieringSizeInBytes"];
+        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
+            $this->Name = $param["Name"];
+        }
+
+        if (array_key_exists("Region",$param) and $param["Region"] !== null) {
+            $this->Region = $param["Region"];
         }
     }
 }

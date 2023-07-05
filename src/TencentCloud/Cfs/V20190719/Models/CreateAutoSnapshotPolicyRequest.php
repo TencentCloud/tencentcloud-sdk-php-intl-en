@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDayOfWeek(string $DayOfWeek) Set The day of the week on which to repeat the snapshot operation
  * @method integer getAliveDays() Obtain Snapshot retention period
  * @method void setAliveDays(integer $AliveDays) Set Snapshot retention period
- * @method string getDayOfMonth() Obtain The specific day (day 1 to day 31) of the month on which to create a snapshot.
- * @method void setDayOfMonth(string $DayOfMonth) Set The specific day (day 1 to day 31) of the month on which to create a snapshot.
+ * @method string getDayOfMonth() Obtain The specific day (day 1 to day 31) of the month on which to automatically create a snapshot.
+ * @method void setDayOfMonth(string $DayOfMonth) Set The specific day (day 1 to day 31) of the month on which to automatically create a snapshot.
  * @method integer getIntervalDays() Obtain The snapshot interval, in days.
  * @method void setIntervalDays(integer $IntervalDays) Set The snapshot interval, in days.
  */
@@ -56,7 +56,7 @@ class CreateAutoSnapshotPolicyRequest extends AbstractModel
     public $AliveDays;
 
     /**
-     * @var string The specific day (day 1 to day 31) of the month on which to create a snapshot.
+     * @var string The specific day (day 1 to day 31) of the month on which to automatically create a snapshot.
      */
     public $DayOfMonth;
 
@@ -70,7 +70,7 @@ class CreateAutoSnapshotPolicyRequest extends AbstractModel
      * @param string $PolicyName Policy name
      * @param string $DayOfWeek The day of the week on which to repeat the snapshot operation
      * @param integer $AliveDays Snapshot retention period
-     * @param string $DayOfMonth The specific day (day 1 to day 31) of the month on which to create a snapshot.
+     * @param string $DayOfMonth The specific day (day 1 to day 31) of the month on which to automatically create a snapshot.
      * @param integer $IntervalDays The snapshot interval, in days.
      */
     function __construct()

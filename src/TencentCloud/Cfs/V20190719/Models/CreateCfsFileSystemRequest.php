@@ -22,14 +22,14 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getZone() Obtain AZ name, such as "ap-beijing-1". For the list of regions and AZs, please see [Overview](https://intl.cloud.tencent.com/document/product/582/13225?from_cn_redirect=1)
  * @method void setZone(string $Zone) Set AZ name, such as "ap-beijing-1". For the list of regions and AZs, please see [Overview](https://intl.cloud.tencent.com/document/product/582/13225?from_cn_redirect=1)
- * @method string getNetInterface() Obtain Network type. Valid values: `VPC` (private network), `BASIC` (classic network), `CCN` (Cloud Connect Network). You must set this parameter to `CCN` if you use the Turbo series. Classic network will be phased out and is not recommended.
- * @method void setNetInterface(string $NetInterface) Set Network type. Valid values: `VPC` (private network), `BASIC` (classic network), `CCN` (Cloud Connect Network). You must set this parameter to `CCN` if you use the Turbo series. Classic network will be phased out and is not recommended.
- * @method string getPGroupId() Obtain Permission group ID (required for Standard and High-Performance). For the Turbo series, set it to `pgroupbasic`.
- * @method void setPGroupId(string $PGroupId) Set Permission group ID (required for Standard and High-Performance). For the Turbo series, set it to `pgroupbasic`.
+ * @method string getNetInterface() Obtain Network type. Valid values: `VPC` and `CCN`. Select `VPC` for a Standard or High-Performance file system, and `CCN` for a Standard Turbo or High-Performance Turbo one.
+ * @method void setNetInterface(string $NetInterface) Set Network type. Valid values: `VPC` and `CCN`. Select `VPC` for a Standard or High-Performance file system, and `CCN` for a Standard Turbo or High-Performance Turbo one.
+ * @method string getPGroupId() Obtain Permission group ID
+ * @method void setPGroupId(string $PGroupId) Set Permission group ID
  * @method string getProtocol() Obtain File system protocol. Valid values: `NFS`, `CIFS`, `TURBO`. If this parameter is left empty, `NFS` is used by default. For the Turbo series, you must set this parameter to `TURBO`.
  * @method void setProtocol(string $Protocol) Set File system protocol. Valid values: `NFS`, `CIFS`, `TURBO`. If this parameter is left empty, `NFS` is used by default. For the Turbo series, you must set this parameter to `TURBO`.
- * @method string getStorageType() Obtain Storage class of the file system. Valid values: `SD` (Standard), `HP` (High-Performance), `TB` (Standard Turbo), `TP` (High-Performance Turbo)
- * @method void setStorageType(string $StorageType) Set Storage class of the file system. Valid values: `SD` (Standard), `HP` (High-Performance), `TB` (Standard Turbo), `TP` (High-Performance Turbo)
+ * @method string getStorageType() Obtain Storage type of the file system. Valid values: `SD` (Standard), `HP` (High-Performance), `TB` (Standard Turbo), and `TP` (High-Performance Turbo). Default value: `SD`.
+ * @method void setStorageType(string $StorageType) Set Storage type of the file system. Valid values: `SD` (Standard), `HP` (High-Performance), `TB` (Standard Turbo), and `TP` (High-Performance Turbo). Default value: `SD`.
  * @method string getVpcId() Obtain VPC ID. This field is required if network type is VPC.
  * @method void setVpcId(string $VpcId) Set VPC ID. This field is required if network type is VPC.
  * @method string getSubnetId() Obtain Subnet ID. This field is required if network type is VPC.
@@ -57,12 +57,12 @@ class CreateCfsFileSystemRequest extends AbstractModel
     public $Zone;
 
     /**
-     * @var string Network type. Valid values: `VPC` (private network), `BASIC` (classic network), `CCN` (Cloud Connect Network). You must set this parameter to `CCN` if you use the Turbo series. Classic network will be phased out and is not recommended.
+     * @var string Network type. Valid values: `VPC` and `CCN`. Select `VPC` for a Standard or High-Performance file system, and `CCN` for a Standard Turbo or High-Performance Turbo one.
      */
     public $NetInterface;
 
     /**
-     * @var string Permission group ID (required for Standard and High-Performance). For the Turbo series, set it to `pgroupbasic`.
+     * @var string Permission group ID
      */
     public $PGroupId;
 
@@ -72,7 +72,7 @@ class CreateCfsFileSystemRequest extends AbstractModel
     public $Protocol;
 
     /**
-     * @var string Storage class of the file system. Valid values: `SD` (Standard), `HP` (High-Performance), `TB` (Standard Turbo), `TP` (High-Performance Turbo)
+     * @var string Storage type of the file system. Valid values: `SD` (Standard), `HP` (High-Performance), `TB` (Standard Turbo), and `TP` (High-Performance Turbo). Default value: `SD`.
      */
     public $StorageType;
 
@@ -123,10 +123,10 @@ class CreateCfsFileSystemRequest extends AbstractModel
 
     /**
      * @param string $Zone AZ name, such as "ap-beijing-1". For the list of regions and AZs, please see [Overview](https://intl.cloud.tencent.com/document/product/582/13225?from_cn_redirect=1)
-     * @param string $NetInterface Network type. Valid values: `VPC` (private network), `BASIC` (classic network), `CCN` (Cloud Connect Network). You must set this parameter to `CCN` if you use the Turbo series. Classic network will be phased out and is not recommended.
-     * @param string $PGroupId Permission group ID (required for Standard and High-Performance). For the Turbo series, set it to `pgroupbasic`.
+     * @param string $NetInterface Network type. Valid values: `VPC` and `CCN`. Select `VPC` for a Standard or High-Performance file system, and `CCN` for a Standard Turbo or High-Performance Turbo one.
+     * @param string $PGroupId Permission group ID
      * @param string $Protocol File system protocol. Valid values: `NFS`, `CIFS`, `TURBO`. If this parameter is left empty, `NFS` is used by default. For the Turbo series, you must set this parameter to `TURBO`.
-     * @param string $StorageType Storage class of the file system. Valid values: `SD` (Standard), `HP` (High-Performance), `TB` (Standard Turbo), `TP` (High-Performance Turbo)
+     * @param string $StorageType Storage type of the file system. Valid values: `SD` (Standard), `HP` (High-Performance), `TB` (Standard Turbo), and `TP` (High-Performance Turbo). Default value: `SD`.
      * @param string $VpcId VPC ID. This field is required if network type is VPC.
      * @param string $SubnetId Subnet ID. This field is required if network type is VPC.
      * @param string $MountIP IP address (this parameter supports only the VPC network type, and the Turbo series is not supported). If this parameter is left empty, a random IP in the subnet will be assigned.

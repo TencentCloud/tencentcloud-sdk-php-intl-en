@@ -18,24 +18,20 @@ namespace TencentCloud\Cfs\V20190719\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * The details about tiered storage.
+ * DeleteMigrationTask response structure.
  *
- * @method integer getTieringSizeInBytes() Obtain STANDARD_IA storage usage
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setTieringSizeInBytes(integer $TieringSizeInBytes) Set STANDARD_IA storage usage
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
-class TieringDetailInfo extends AbstractModel
+class DeleteMigrationTaskResponse extends AbstractModel
 {
     /**
-     * @var integer STANDARD_IA storage usage
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
-    public $TieringSizeInBytes;
+    public $RequestId;
 
     /**
-     * @param integer $TieringSizeInBytes STANDARD_IA storage usage
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
     {
@@ -50,8 +46,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TieringSizeInBytes",$param) and $param["TieringSizeInBytes"] !== null) {
-            $this->TieringSizeInBytes = $param["TieringSizeInBytes"];
+        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
+            $this->RequestId = $param["RequestId"];
         }
     }
 }

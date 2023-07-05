@@ -26,8 +26,20 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCreationToken(string $CreationToken) Set Custom name
  * @method string getFileSystemId() Obtain File system ID
  * @method void setFileSystemId(string $FileSystemId) Set File system ID
- * @method string getLifeCycleState() Obtain File system status
- * @method void setLifeCycleState(string $LifeCycleState) Set File system status
+ * @method string getLifeCycleState() Obtain File system status. Valid values:
+- creating
+- mounting
+- create_failed
+- available
+- unserviced
+- upgrading
+ * @method void setLifeCycleState(string $LifeCycleState) Set File system status. Valid values:
+- creating
+- mounting
+- create_failed
+- available
+- unserviced
+- upgrading
  * @method integer getSizeByte() Obtain Used file system capacity
  * @method void setSizeByte(integer $SizeByte) Set Used file system capacity
  * @method integer getSizeLimit() Obtain Maximum storage limit of a file system
@@ -85,7 +97,13 @@ class FileSystemInfo extends AbstractModel
     public $FileSystemId;
 
     /**
-     * @var string File system status
+     * @var string File system status. Valid values:
+- creating
+- mounting
+- create_failed
+- available
+- unserviced
+- upgrading
      */
     public $LifeCycleState;
 
@@ -184,7 +202,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $CreationTime Creation time
      * @param string $CreationToken Custom name
      * @param string $FileSystemId File system ID
-     * @param string $LifeCycleState File system status
+     * @param string $LifeCycleState File system status. Valid values:
+- creating
+- mounting
+- create_failed
+- available
+- unserviced
+- upgrading
      * @param integer $SizeByte Used file system capacity
      * @param integer $SizeLimit Maximum storage limit of a file system
      * @param integer $ZoneId Region ID

@@ -18,24 +18,28 @@ namespace TencentCloud\Cfs\V20190719\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * The details about tiered storage.
+ * ScaleUpFileSystem request structure.
  *
- * @method integer getTieringSizeInBytes() Obtain STANDARD_IA storage usage
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setTieringSizeInBytes(integer $TieringSizeInBytes) Set STANDARD_IA storage usage
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getFileSystemId() Obtain File system ID
+ * @method void setFileSystemId(string $FileSystemId) Set File system ID
+ * @method integer getTargetCapacity() Obtain Target capacity after scaling
+ * @method void setTargetCapacity(integer $TargetCapacity) Set Target capacity after scaling
  */
-class TieringDetailInfo extends AbstractModel
+class ScaleUpFileSystemRequest extends AbstractModel
 {
     /**
-     * @var integer STANDARD_IA storage usage
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string File system ID
      */
-    public $TieringSizeInBytes;
+    public $FileSystemId;
 
     /**
-     * @param integer $TieringSizeInBytes STANDARD_IA storage usage
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Target capacity after scaling
+     */
+    public $TargetCapacity;
+
+    /**
+     * @param string $FileSystemId File system ID
+     * @param integer $TargetCapacity Target capacity after scaling
      */
     function __construct()
     {
@@ -50,8 +54,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TieringSizeInBytes",$param) and $param["TieringSizeInBytes"] !== null) {
-            $this->TieringSizeInBytes = $param["TieringSizeInBytes"];
+        if (array_key_exists("FileSystemId",$param) and $param["FileSystemId"] !== null) {
+            $this->FileSystemId = $param["FileSystemId"];
+        }
+
+        if (array_key_exists("TargetCapacity",$param) and $param["TargetCapacity"] !== null) {
+            $this->TargetCapacity = $param["TargetCapacity"];
         }
     }
 }

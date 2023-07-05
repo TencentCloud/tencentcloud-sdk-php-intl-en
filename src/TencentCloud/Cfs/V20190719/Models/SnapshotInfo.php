@@ -46,6 +46,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFsName(string $FsName) Set File system name
  * @method array getTags() Obtain Snapshot tag
  * @method void setTags(array $Tags) Set Snapshot tag
+ * @method string getSnapshotType() Obtain Snapshot type
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setSnapshotType(string $SnapshotType) Set Snapshot type
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class SnapshotInfo extends AbstractModel
 {
@@ -115,6 +119,12 @@ class SnapshotInfo extends AbstractModel
     public $Tags;
 
     /**
+     * @var string Snapshot type
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $SnapshotType;
+
+    /**
      * @param string $CreationTime Snapshot creation time
      * @param string $SnapshotName Snapshot name
      * @param string $SnapshotId Snapshot ID
@@ -128,6 +138,8 @@ class SnapshotInfo extends AbstractModel
      * @param string $DeleteTime Snapshot deletion time
      * @param string $FsName File system name
      * @param array $Tags Snapshot tag
+     * @param string $SnapshotType Snapshot type
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -197,6 +209,10 @@ class SnapshotInfo extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Tags, $obj);
             }
+        }
+
+        if (array_key_exists("SnapshotType",$param) and $param["SnapshotType"] !== null) {
+            $this->SnapshotType = $param["SnapshotType"];
         }
     }
 }

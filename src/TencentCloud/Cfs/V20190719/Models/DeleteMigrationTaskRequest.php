@@ -18,24 +18,20 @@ namespace TencentCloud\Cfs\V20190719\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * The details about tiered storage.
+ * DeleteMigrationTask request structure.
  *
- * @method integer getTieringSizeInBytes() Obtain STANDARD_IA storage usage
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setTieringSizeInBytes(integer $TieringSizeInBytes) Set STANDARD_IA storage usage
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getTaskId() Obtain Migration task ID
+ * @method void setTaskId(string $TaskId) Set Migration task ID
  */
-class TieringDetailInfo extends AbstractModel
+class DeleteMigrationTaskRequest extends AbstractModel
 {
     /**
-     * @var integer STANDARD_IA storage usage
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Migration task ID
      */
-    public $TieringSizeInBytes;
+    public $TaskId;
 
     /**
-     * @param integer $TieringSizeInBytes STANDARD_IA storage usage
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $TaskId Migration task ID
      */
     function __construct()
     {
@@ -50,8 +46,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TieringSizeInBytes",$param) and $param["TieringSizeInBytes"] !== null) {
-            $this->TieringSizeInBytes = $param["TieringSizeInBytes"];
+        if (array_key_exists("TaskId",$param) and $param["TaskId"] !== null) {
+            $this->TaskId = $param["TaskId"];
         }
     }
 }
