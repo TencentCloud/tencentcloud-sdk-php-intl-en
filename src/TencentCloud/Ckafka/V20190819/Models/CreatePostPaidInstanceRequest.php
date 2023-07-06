@@ -18,16 +18,14 @@ namespace TencentCloud\Ckafka\V20190819\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * CreateInstancePost request structure.
+ * CreatePostPaidInstance request structure.
  *
- * @method string getInstanceName() Obtain Instance name, which is a string of up to 64 characters. It can contain letters, digits, and hyphens (-) and must start with a letter.
- * @method void setInstanceName(string $InstanceName) Set Instance name, which is a string of up to 64 characters. It can contain letters, digits, and hyphens (-) and must start with a letter.
- * @method integer getBandWidth() Obtain Private network peak bandwidth of an instance  in MB/sec.  If you create a Standard Edition instance, pass in the corresponding peak bandwidth for the current instance specification.  If you create a Pro Edition instance, configure the peak bandwidth, partition count, and other parameters as required by Pro Edition.
- * @method void setBandWidth(integer $BandWidth) Set Private network peak bandwidth of an instance  in MB/sec.  If you create a Standard Edition instance, pass in the corresponding peak bandwidth for the current instance specification.  If you create a Pro Edition instance, configure the peak bandwidth, partition count, and other parameters as required by Pro Edition.
+ * @method string getInstanceName() Obtain Instance name, which is a string of up to 64 letters, digits, and hyphens (-). It must start with a letter.
+ * @method void setInstanceName(string $InstanceName) Set Instance name, which is a string of up to 64 letters, digits, and hyphens (-). It must start with a letter.
  * @method string getVpcId() Obtain ID of the VPC where the default access point of the created instance resides.  This parameter is required as instances cannot be created in the classic network currently.
  * @method void setVpcId(string $VpcId) Set ID of the VPC where the default access point of the created instance resides.  This parameter is required as instances cannot be created in the classic network currently.
- * @method string getSubnetId() Obtain ID of the subnet  where the default access point of the created instance resides. 
- * @method void setSubnetId(string $SubnetId) Set ID of the subnet  where the default access point of the created instance resides. 
+ * @method string getSubnetId() Obtain ID of the subnet  where the default access point of the created instance resides.
+ * @method void setSubnetId(string $SubnetId) Set ID of the subnet  where the default access point of the created instance resides.
  * @method integer getInstanceType() Obtain Instance specification.  This parameter is required for a Standard Edition instance but not for a Pro Edition instance.  Valid values:  `1` (Small),  `2` (Standard),  `3` (Advanced),  `4` (Large),  `5` (Xlarge L1),  `6` (Xlarge L2),  `7` (Xlarge L3),  `8` (Xlarge L4),  
  * @method void setInstanceType(integer $InstanceType) Set Instance specification.  This parameter is required for a Standard Edition instance but not for a Pro Edition instance.  Valid values:  `1` (Small),  `2` (Standard),  `3` (Advanced),  `4` (Large),  `5` (Xlarge L1),  `6` (Xlarge L2),  `7` (Xlarge L3),  `8` (Xlarge L4),  
  * @method integer getMsgRetentionTime() Obtain The maximum instance log retention period in minutes by default.  If this parameter is left empty, the default retention period is 1,440 minutes (1 day) to 30 days.  If the message retention period of the topic is explicitly set, it will prevail.
@@ -36,10 +34,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setClusterId(integer $ClusterId) Set Cluster ID, which can be selected when you create an instance.  You don’t need to pass in this parameter if the cluster where the instance resides is not specified.
  * @method string getKafkaVersion() Obtain Instance version.  Valid values: `0.10.2`, `1.1.1`, `2.4.2`, and `2.8.1`.
  * @method void setKafkaVersion(string $KafkaVersion) Set Instance version.  Valid values: `0.10.2`, `1.1.1`, `2.4.2`, and `2.8.1`.
- * @method string getSpecificationsType() Obtain Instance type. Valid values: `standard` (Standard Edition),  `profession`  (Pro Edition)
- * @method void setSpecificationsType(string $SpecificationsType) Set Instance type. Valid values: `standard` (Standard Edition),  `profession`  (Pro Edition)
- * @method string getDiskType() Obtain Instance disk type. Valid values:  `CLOUD_BASIC` (Premium Cloud Storage),  `CLOUD_SSD` (SSD).  If this parameter is left empty, the default value `CLOUD_BASIC` will be used.
- * @method void setDiskType(string $DiskType) Set Instance disk type. Valid values:  `CLOUD_BASIC` (Premium Cloud Storage),  `CLOUD_SSD` (SSD).  If this parameter is left empty, the default value `CLOUD_BASIC` will be used.
+ * @method string getSpecificationsType() Obtain Instance type. `standard` (Standard Edition),  `profession`  (Pro Edition)
+ * @method void setSpecificationsType(string $SpecificationsType) Set Instance type. `standard` (Standard Edition),  `profession`  (Pro Edition)
+ * @method string getDiskType() Obtain Instance disk type.  `CLOUD_BASIC` (Premium Cloud Storage),  `CLOUD_SSD` (SSD).  If this parameter is left empty, the default value `CLOUD_BASIC` will be used.
+ * @method void setDiskType(string $DiskType) Set Instance disk type.  `CLOUD_BASIC` (Premium Cloud Storage),  `CLOUD_SSD` (SSD).  If this parameter is left empty, the default value `CLOUD_BASIC` will be used.
+ * @method integer getBandWidth() Obtain Private network peak bandwidth of an instance  in MB/sec.  If you create a Standard Edition instance, pass in the corresponding peak bandwidth for the current instance specification.  If you create a Pro Edition instance, configure the peak bandwidth, partition count, and other parameters as required by Pro Edition.
+ * @method void setBandWidth(integer $BandWidth) Set Private network peak bandwidth of an instance  in MB/sec.  If you create a Standard Edition instance, pass in the corresponding peak bandwidth for the current instance specification.  If you create a Pro Edition instance, configure the peak bandwidth, partition count, and other parameters as required by Pro Edition.
  * @method integer getDiskSize() Obtain Instance disk size, which must meet the requirement of the instance’s specification.
  * @method void setDiskSize(integer $DiskSize) Set Instance disk size, which must meet the requirement of the instance’s specification.
  * @method integer getPartition() Obtain The maximum number of partitions of the instance, which must meet the requirement of the instance’s specification.
@@ -54,20 +54,15 @@ use TencentCloud\Common\AbstractModel;
  * @method void setZoneIds(array $ZoneIds) Set This parameter indicates the list of AZ IDs when the instance is deployed in multiple AZs.  Note that `ZoneId` must be included in the array of this parameter.
  * @method integer getInstanceNum() Obtain The number of purchased instances.  Default value: `1`. This parameter is optional.  If it is passed in, multiple instances will be created, with their names being `instanceName` plus different suffixes.
  * @method void setInstanceNum(integer $InstanceNum) Set The number of purchased instances.  Default value: `1`. This parameter is optional.  If it is passed in, multiple instances will be created, with their names being `instanceName` plus different suffixes.
- * @method integer getPublicNetworkMonthly() Obtain Public network bandwidth in Mbps.  The 3 Mbps of free bandwidth is not included here by default.  For example, if you need 3 Mbps of public network bandwidth, pass in `0`; if you need 6 Mbps, pass in `3`. The value must be an integer multiple of 3.
- * @method void setPublicNetworkMonthly(integer $PublicNetworkMonthly) Set Public network bandwidth in Mbps.  The 3 Mbps of free bandwidth is not included here by default.  For example, if you need 3 Mbps of public network bandwidth, pass in `0`; if you need 6 Mbps, pass in `3`. The value must be an integer multiple of 3.
+ * @method integer getPublicNetworkMonthly() Obtain Public network bandwidth in Mbps.  The 3 Mbps of free bandwidth is not included here by default.  For example, if you need 3 Mbps of public network bandwidth, pass in `0`; if you need 6 Mbps, pass in `3`.  The value must be an integer multiple of 3.
+ * @method void setPublicNetworkMonthly(integer $PublicNetworkMonthly) Set Public network bandwidth in Mbps.  The 3 Mbps of free bandwidth is not included here by default.  For example, if you need 3 Mbps of public network bandwidth, pass in `0`; if you need 6 Mbps, pass in `3`.  The value must be an integer multiple of 3.
  */
-class CreateInstancePostRequest extends AbstractModel
+class CreatePostPaidInstanceRequest extends AbstractModel
 {
     /**
-     * @var string Instance name, which is a string of up to 64 characters. It can contain letters, digits, and hyphens (-) and must start with a letter.
+     * @var string Instance name, which is a string of up to 64 letters, digits, and hyphens (-). It must start with a letter.
      */
     public $InstanceName;
-
-    /**
-     * @var integer Private network peak bandwidth of an instance  in MB/sec.  If you create a Standard Edition instance, pass in the corresponding peak bandwidth for the current instance specification.  If you create a Pro Edition instance, configure the peak bandwidth, partition count, and other parameters as required by Pro Edition.
-     */
-    public $BandWidth;
 
     /**
      * @var string ID of the VPC where the default access point of the created instance resides.  This parameter is required as instances cannot be created in the classic network currently.
@@ -75,7 +70,7 @@ class CreateInstancePostRequest extends AbstractModel
     public $VpcId;
 
     /**
-     * @var string ID of the subnet  where the default access point of the created instance resides. 
+     * @var string ID of the subnet  where the default access point of the created instance resides.
      */
     public $SubnetId;
 
@@ -100,14 +95,19 @@ class CreateInstancePostRequest extends AbstractModel
     public $KafkaVersion;
 
     /**
-     * @var string Instance type. Valid values: `standard` (Standard Edition),  `profession`  (Pro Edition)
+     * @var string Instance type. `standard` (Standard Edition),  `profession`  (Pro Edition)
      */
     public $SpecificationsType;
 
     /**
-     * @var string Instance disk type. Valid values:  `CLOUD_BASIC` (Premium Cloud Storage),  `CLOUD_SSD` (SSD).  If this parameter is left empty, the default value `CLOUD_BASIC` will be used.
+     * @var string Instance disk type.  `CLOUD_BASIC` (Premium Cloud Storage),  `CLOUD_SSD` (SSD).  If this parameter is left empty, the default value `CLOUD_BASIC` will be used.
      */
     public $DiskType;
+
+    /**
+     * @var integer Private network peak bandwidth of an instance  in MB/sec.  If you create a Standard Edition instance, pass in the corresponding peak bandwidth for the current instance specification.  If you create a Pro Edition instance, configure the peak bandwidth, partition count, and other parameters as required by Pro Edition.
+     */
+    public $BandWidth;
 
     /**
      * @var integer Instance disk size, which must meet the requirement of the instance’s specification.
@@ -145,21 +145,21 @@ class CreateInstancePostRequest extends AbstractModel
     public $InstanceNum;
 
     /**
-     * @var integer Public network bandwidth in Mbps.  The 3 Mbps of free bandwidth is not included here by default.  For example, if you need 3 Mbps of public network bandwidth, pass in `0`; if you need 6 Mbps, pass in `3`. The value must be an integer multiple of 3.
+     * @var integer Public network bandwidth in Mbps.  The 3 Mbps of free bandwidth is not included here by default.  For example, if you need 3 Mbps of public network bandwidth, pass in `0`; if you need 6 Mbps, pass in `3`.  The value must be an integer multiple of 3.
      */
     public $PublicNetworkMonthly;
 
     /**
-     * @param string $InstanceName Instance name, which is a string of up to 64 characters. It can contain letters, digits, and hyphens (-) and must start with a letter.
-     * @param integer $BandWidth Private network peak bandwidth of an instance  in MB/sec.  If you create a Standard Edition instance, pass in the corresponding peak bandwidth for the current instance specification.  If you create a Pro Edition instance, configure the peak bandwidth, partition count, and other parameters as required by Pro Edition.
+     * @param string $InstanceName Instance name, which is a string of up to 64 letters, digits, and hyphens (-). It must start with a letter.
      * @param string $VpcId ID of the VPC where the default access point of the created instance resides.  This parameter is required as instances cannot be created in the classic network currently.
-     * @param string $SubnetId ID of the subnet  where the default access point of the created instance resides. 
+     * @param string $SubnetId ID of the subnet  where the default access point of the created instance resides.
      * @param integer $InstanceType Instance specification.  This parameter is required for a Standard Edition instance but not for a Pro Edition instance.  Valid values:  `1` (Small),  `2` (Standard),  `3` (Advanced),  `4` (Large),  `5` (Xlarge L1),  `6` (Xlarge L2),  `7` (Xlarge L3),  `8` (Xlarge L4),  
      * @param integer $MsgRetentionTime The maximum instance log retention period in minutes by default.  If this parameter is left empty, the default retention period is 1,440 minutes (1 day) to 30 days.  If the message retention period of the topic is explicitly set, it will prevail.
      * @param integer $ClusterId Cluster ID, which can be selected when you create an instance.  You don’t need to pass in this parameter if the cluster where the instance resides is not specified.
      * @param string $KafkaVersion Instance version.  Valid values: `0.10.2`, `1.1.1`, `2.4.2`, and `2.8.1`.
-     * @param string $SpecificationsType Instance type. Valid values: `standard` (Standard Edition),  `profession`  (Pro Edition)
-     * @param string $DiskType Instance disk type. Valid values:  `CLOUD_BASIC` (Premium Cloud Storage),  `CLOUD_SSD` (SSD).  If this parameter is left empty, the default value `CLOUD_BASIC` will be used.
+     * @param string $SpecificationsType Instance type. `standard` (Standard Edition),  `profession`  (Pro Edition)
+     * @param string $DiskType Instance disk type.  `CLOUD_BASIC` (Premium Cloud Storage),  `CLOUD_SSD` (SSD).  If this parameter is left empty, the default value `CLOUD_BASIC` will be used.
+     * @param integer $BandWidth Private network peak bandwidth of an instance  in MB/sec.  If you create a Standard Edition instance, pass in the corresponding peak bandwidth for the current instance specification.  If you create a Pro Edition instance, configure the peak bandwidth, partition count, and other parameters as required by Pro Edition.
      * @param integer $DiskSize Instance disk size, which must meet the requirement of the instance’s specification.
      * @param integer $Partition The maximum number of partitions of the instance, which must meet the requirement of the instance’s specification.
      * @param integer $TopicNum The maximum number of topics of the instance, which must meet the requirement of the instance’s specification.
@@ -167,7 +167,7 @@ class CreateInstancePostRequest extends AbstractModel
      * @param boolean $MultiZoneFlag Whether the current instance is a multi-AZ instance
      * @param array $ZoneIds This parameter indicates the list of AZ IDs when the instance is deployed in multiple AZs.  Note that `ZoneId` must be included in the array of this parameter.
      * @param integer $InstanceNum The number of purchased instances.  Default value: `1`. This parameter is optional.  If it is passed in, multiple instances will be created, with their names being `instanceName` plus different suffixes.
-     * @param integer $PublicNetworkMonthly Public network bandwidth in Mbps.  The 3 Mbps of free bandwidth is not included here by default.  For example, if you need 3 Mbps of public network bandwidth, pass in `0`; if you need 6 Mbps, pass in `3`. The value must be an integer multiple of 3.
+     * @param integer $PublicNetworkMonthly Public network bandwidth in Mbps.  The 3 Mbps of free bandwidth is not included here by default.  For example, if you need 3 Mbps of public network bandwidth, pass in `0`; if you need 6 Mbps, pass in `3`.  The value must be an integer multiple of 3.
      */
     function __construct()
     {
@@ -184,10 +184,6 @@ class CreateInstancePostRequest extends AbstractModel
         }
         if (array_key_exists("InstanceName",$param) and $param["InstanceName"] !== null) {
             $this->InstanceName = $param["InstanceName"];
-        }
-
-        if (array_key_exists("BandWidth",$param) and $param["BandWidth"] !== null) {
-            $this->BandWidth = $param["BandWidth"];
         }
 
         if (array_key_exists("VpcId",$param) and $param["VpcId"] !== null) {
@@ -220,6 +216,10 @@ class CreateInstancePostRequest extends AbstractModel
 
         if (array_key_exists("DiskType",$param) and $param["DiskType"] !== null) {
             $this->DiskType = $param["DiskType"];
+        }
+
+        if (array_key_exists("BandWidth",$param) and $param["BandWidth"] !== null) {
+            $this->BandWidth = $param["BandWidth"];
         }
 
         if (array_key_exists("DiskSize",$param) and $param["DiskSize"] !== null) {

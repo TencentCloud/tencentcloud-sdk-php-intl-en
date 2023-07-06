@@ -18,7 +18,7 @@ namespace TencentCloud\Ckafka\V20190819\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Response structure of creating a prepaid instance
+ * Data structure returned by monthly subscribed instance APIs
  *
  * @method string getReturnCode() Obtain Returned code. 0: Normal; other values: Error.
  * @method void setReturnCode(string $ReturnCode) Set Returned code. 0: Normal; other values: Error.
@@ -28,10 +28,8 @@ use TencentCloud\Common\AbstractModel;
 Note: This field may return `null`, indicating that no valid values can be obtained.
  * @method void setData(CreateInstancePreData $Data) Set Data returned by the operation.
 Note: This field may return `null`, indicating that no valid values can be obtained.
- * @method string getDeleteRouteTimestamp() Obtain Deletion time.
-Note: This field may return `null`, indicating that no valid values can be obtained.
- * @method void setDeleteRouteTimestamp(string $DeleteRouteTimestamp) Set Deletion time.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method string getDeleteRouteTimestamp() Obtain Deletion time.  This parameter has been deprecated and will be deleted.  Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setDeleteRouteTimestamp(string $DeleteRouteTimestamp) Set Deletion time.  This parameter has been deprecated and will be deleted.  Note: This field may return null, indicating that no valid values can be obtained.
  */
 class CreateInstancePreResp extends AbstractModel
 {
@@ -52,8 +50,8 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     public $Data;
 
     /**
-     * @var string Deletion time.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @var string Deletion time.  This parameter has been deprecated and will be deleted.  Note: This field may return null, indicating that no valid values can be obtained.
+     * @deprecated
      */
     public $DeleteRouteTimestamp;
 
@@ -62,8 +60,7 @@ Note: This field may return `null`, indicating that no valid values can be obtai
      * @param string $ReturnMessage The message indicating whether the operation is successful.
      * @param CreateInstancePreData $Data Data returned by the operation.
 Note: This field may return `null`, indicating that no valid values can be obtained.
-     * @param string $DeleteRouteTimestamp Deletion time.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param string $DeleteRouteTimestamp Deletion time.  This parameter has been deprecated and will be deleted.  Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

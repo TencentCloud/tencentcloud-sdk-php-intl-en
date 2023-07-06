@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setFlowId(integer $FlowId) Set FlowId11
 Note: this field may return null, indicating that no valid values can be obtained.
+ * @method RouteDTO getRouteDTO() Obtain RouteIdDto Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setRouteDTO(RouteDTO $RouteDTO) Set RouteIdDto Note: This field may return null, indicating that no valid values can be obtained.
  */
 class OperateResponseData extends AbstractModel
 {
@@ -34,8 +36,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $FlowId;
 
     /**
+     * @var RouteDTO RouteIdDto Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $RouteDTO;
+
+    /**
      * @param integer $FlowId FlowId11
 Note: this field may return null, indicating that no valid values can be obtained.
+     * @param RouteDTO $RouteDTO RouteIdDto Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -52,6 +60,11 @@ Note: this field may return null, indicating that no valid values can be obtaine
         }
         if (array_key_exists("FlowId",$param) and $param["FlowId"] !== null) {
             $this->FlowId = $param["FlowId"];
+        }
+
+        if (array_key_exists("RouteDTO",$param) and $param["RouteDTO"] !== null) {
+            $this->RouteDTO = new RouteDTO();
+            $this->RouteDTO->deserialize($param["RouteDTO"]);
         }
     }
 }

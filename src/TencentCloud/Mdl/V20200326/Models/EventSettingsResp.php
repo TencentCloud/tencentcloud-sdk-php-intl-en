@@ -30,6 +30,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setManifestName(string $ManifestName) Set Name of the manifest file for timed recording, which ends with `.m3u8` for HLS and `.mpd` for DASH. This parameter is not empty if `EventType` is `TIMED_RECORD`.
  * @method array getDestinations() Obtain URL of the COS bucket where recording files are saved. This parameter is not empty if `EventType` is `TIMED_RECORD`. It may contain 1 or 2 URLs. The first URL corresponds to pipeline 0 and the second pipeline 1.
  * @method void setDestinations(array $Destinations) Set URL of the COS bucket where recording files are saved. This parameter is not empty if `EventType` is `TIMED_RECORD`. It may contain 1 or 2 URLs. The first URL corresponds to pipeline 0 and the second pipeline 1.
+ * @method array getSCTE35SegmentationDescriptor() Obtain SCTE-35 configuration information.
+ * @method void setSCTE35SegmentationDescriptor(array $SCTE35SegmentationDescriptor) Set SCTE-35 configuration information.
+ * @method integer getSpliceEventID() Obtain A 32-bit unique segmentation event identifier.Only one occurrence of a given segmentation_event_id value shall be active at any one time.
+ * @method void setSpliceEventID(integer $SpliceEventID) Set A 32-bit unique segmentation event identifier.Only one occurrence of a given segmentation_event_id value shall be active at any one time.
+ * @method string getSpliceDuration() Obtain The duration of the segment in 90kHz ticks.It used to  give the splicer an indication of when the break will be over and when the network In Point will occur. If not specifyed,the splice_insert will continue when enter a return_to_network to end the splice_insert at the appropriate time.
+ * @method void setSpliceDuration(string $SpliceDuration) Set The duration of the segment in 90kHz ticks.It used to  give the splicer an indication of when the break will be over and when the network In Point will occur. If not specifyed,the splice_insert will continue when enter a return_to_network to end the splice_insert at the appropriate time.
  */
 class EventSettingsResp extends AbstractModel
 {
@@ -59,11 +65,29 @@ class EventSettingsResp extends AbstractModel
     public $Destinations;
 
     /**
+     * @var array SCTE-35 configuration information.
+     */
+    public $SCTE35SegmentationDescriptor;
+
+    /**
+     * @var integer A 32-bit unique segmentation event identifier.Only one occurrence of a given segmentation_event_id value shall be active at any one time.
+     */
+    public $SpliceEventID;
+
+    /**
+     * @var string The duration of the segment in 90kHz ticks.It used to  give the splicer an indication of when the break will be over and when the network In Point will occur. If not specifyed,the splice_insert will continue when enter a return_to_network to end the splice_insert at the appropriate time.
+     */
+    public $SpliceDuration;
+
+    /**
      * @param string $EventType Only `INPUT_SWITCH` is supported currently.
      * @param string $InputAttachment ID of the input attached, which is not empty if `EventType` is `INPUT_SWITCH`
      * @param string $OutputGroupName Name of the output group attached. This parameter is not empty if `EventType` is `TIMED_RECORD`.
      * @param string $ManifestName Name of the manifest file for timed recording, which ends with `.m3u8` for HLS and `.mpd` for DASH. This parameter is not empty if `EventType` is `TIMED_RECORD`.
      * @param array $Destinations URL of the COS bucket where recording files are saved. This parameter is not empty if `EventType` is `TIMED_RECORD`. It may contain 1 or 2 URLs. The first URL corresponds to pipeline 0 and the second pipeline 1.
+     * @param array $SCTE35SegmentationDescriptor SCTE-35 configuration information.
+     * @param integer $SpliceEventID A 32-bit unique segmentation event identifier.Only one occurrence of a given segmentation_event_id value shall be active at any one time.
+     * @param string $SpliceDuration The duration of the segment in 90kHz ticks.It used to  give the splicer an indication of when the break will be over and when the network In Point will occur. If not specifyed,the splice_insert will continue when enter a return_to_network to end the splice_insert at the appropriate time.
      */
     function __construct()
     {
@@ -101,6 +125,23 @@ class EventSettingsResp extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Destinations, $obj);
             }
+        }
+
+        if (array_key_exists("SCTE35SegmentationDescriptor",$param) and $param["SCTE35SegmentationDescriptor"] !== null) {
+            $this->SCTE35SegmentationDescriptor = [];
+            foreach ($param["SCTE35SegmentationDescriptor"] as $key => $value){
+                $obj = new SegmentationDescriptorRespInfo();
+                $obj->deserialize($value);
+                array_push($this->SCTE35SegmentationDescriptor, $obj);
+            }
+        }
+
+        if (array_key_exists("SpliceEventID",$param) and $param["SpliceEventID"] !== null) {
+            $this->SpliceEventID = $param["SpliceEventID"];
+        }
+
+        if (array_key_exists("SpliceDuration",$param) and $param["SpliceDuration"] !== null) {
+            $this->SpliceDuration = $param["SpliceDuration"];
         }
     }
 }

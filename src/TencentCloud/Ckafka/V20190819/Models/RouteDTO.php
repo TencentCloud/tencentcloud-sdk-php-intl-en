@@ -18,28 +18,20 @@ namespace TencentCloud\Ckafka\V20190819\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeRoute request structure.
+ * RouteDTO
  *
- * @method string getInstanceId() Obtain Unique instance ID
- * @method void setInstanceId(string $InstanceId) Set Unique instance ID
- * @method integer getRouteId() Obtain Route ID
- * @method void setRouteId(integer $RouteId) Set Route ID
+ * @method integer getRouteId() Obtain RouteId11 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setRouteId(integer $RouteId) Set RouteId11 Note: This field may return null, indicating that no valid values can be obtained.
  */
-class DescribeRouteRequest extends AbstractModel
+class RouteDTO extends AbstractModel
 {
     /**
-     * @var string Unique instance ID
-     */
-    public $InstanceId;
-
-    /**
-     * @var integer Route ID
+     * @var integer RouteId11 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $RouteId;
 
     /**
-     * @param string $InstanceId Unique instance ID
-     * @param integer $RouteId Route ID
+     * @param integer $RouteId RouteId11 Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -54,10 +46,6 @@ class DescribeRouteRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
-            $this->InstanceId = $param["InstanceId"];
-        }
-
         if (array_key_exists("RouteId",$param) and $param["RouteId"] !== null) {
             $this->RouteId = $param["RouteId"];
         }
