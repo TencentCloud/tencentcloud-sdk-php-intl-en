@@ -42,6 +42,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStatus(string $Status) Set Instance status
  * @method string getStatusDesc() Obtain Instance status description
  * @method void setStatusDesc(string $StatusDesc) Set Instance status description
+ * @method string getDbMode() Obtain Instance type, which is used to indicate whether it is a serverless instance.
+ * @method void setDbMode(string $DbMode) Set Instance type, which is used to indicate whether it is a serverless instance.
  * @method string getDbType() Obtain Database type
  * @method void setDbType(string $DbType) Set Database type
  * @method string getDbVersion() Obtain Database version
@@ -140,6 +142,8 @@ Note: This field may return null, indicating that no valid value can be obtained
 Note: This field may return null, indicating that no valid value can be obtained.
  * @method void setInstanceNetInfo(array $InstanceNetInfo) Set Instance network information
 Note: This field may return null, indicating that no valid value can be obtained.
+ * @method array getResourcePackages() Obtain Information of the resource pack bound to an instance when `packageType` is `CCU`. Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setResourcePackages(array $ResourcePackages) Set Information of the resource pack bound to an instance when `packageType` is `CCU`. Note: This field may return null, indicating that no valid values can be obtained.
  */
 class CynosdbInstance extends AbstractModel
 {
@@ -197,6 +201,11 @@ class CynosdbInstance extends AbstractModel
      * @var string Instance status description
      */
     public $StatusDesc;
+
+    /**
+     * @var string Instance type, which is used to indicate whether it is a serverless instance.
+     */
+    public $DbMode;
 
     /**
      * @var string Database type
@@ -404,6 +413,11 @@ Note: This field may return null, indicating that no valid value can be obtained
     public $InstanceNetInfo;
 
     /**
+     * @var array Information of the resource pack bound to an instance when `packageType` is `CCU`. Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $ResourcePackages;
+
+    /**
      * @param string $Uin User `Uin`
      * @param integer $AppId User `AppId`
      * @param string $ClusterId Cluster ID
@@ -415,6 +429,7 @@ Note: This field may return null, indicating that no valid value can be obtained
      * @param string $Zone AZ
      * @param string $Status Instance status
      * @param string $StatusDesc Instance status description
+     * @param string $DbMode Instance type, which is used to indicate whether it is a serverless instance.
      * @param string $DbType Database type
      * @param string $DbVersion Database version
      * @param integer $Cpu Number of CPU cores
@@ -464,6 +479,7 @@ Note: This field may return null, indicating that no valid value can be obtained
 Note: This field may return null, indicating that no valid value can be obtained.
      * @param array $InstanceNetInfo Instance network information
 Note: This field may return null, indicating that no valid value can be obtained.
+     * @param array $ResourcePackages Information of the resource pack bound to an instance when `packageType` is `CCU`. Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -520,6 +536,10 @@ Note: This field may return null, indicating that no valid value can be obtained
 
         if (array_key_exists("StatusDesc",$param) and $param["StatusDesc"] !== null) {
             $this->StatusDesc = $param["StatusDesc"];
+        }
+
+        if (array_key_exists("DbMode",$param) and $param["DbMode"] !== null) {
+            $this->DbMode = $param["DbMode"];
         }
 
         if (array_key_exists("DbType",$param) and $param["DbType"] !== null) {
@@ -690,6 +710,15 @@ Note: This field may return null, indicating that no valid value can be obtained
                 $obj = new InstanceNetInfo();
                 $obj->deserialize($value);
                 array_push($this->InstanceNetInfo, $obj);
+            }
+        }
+
+        if (array_key_exists("ResourcePackages",$param) and $param["ResourcePackages"] !== null) {
+            $this->ResourcePackages = [];
+            foreach ($param["ResourcePackages"] as $key => $value){
+                $obj = new ResourcePackage();
+                $obj->deserialize($value);
+                array_push($this->ResourcePackages, $obj);
             }
         }
     }

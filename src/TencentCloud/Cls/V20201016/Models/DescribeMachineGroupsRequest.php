@@ -20,68 +20,48 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeMachineGroups request structure.
  *
- * @method array getFilters() Obtain <br><li> machineGroupName
+ * @method array getFilters() Obtain machineGroupName
+- Filter by **machine group name**
+- Type: String
+- Required: No
 
-Filter by **machine group name**.
-Type: String
+machineGroupId
+- Filter by **machine group ID**
+- Type: String
+- Required: No
 
-Required: no
+tagKey
+- Filter by **tag key**
+- Type: String
+- Required: No
 
-<br><li> machineGroupId
+tag:tagKey
+- Filter by **tag key-value pair**. The `tagKey` should be replaced with a specified tag key.
+- Type: String
+- Required: No
 
-Filter by **machine group ID**.
-Type: String
+Each request can have up to 10 `Filters` and 100 `Filter.Values`.
+ * @method void setFilters(array $Filters) Set machineGroupName
+- Filter by **machine group name**
+- Type: String
+- Required: No
 
-Required: no
+machineGroupId
+- Filter by **machine group ID**
+- Type: String
+- Required: No
 
-<br><li> tagKey
+tagKey
+- Filter by **tag key**
+- Type: String
+- Required: No
 
-Filter by **tag key**.
+tag:tagKey
+- Filter by **tag key-value pair**. The `tagKey` should be replaced with a specified tag key.
+- Type: String
+- Required: No
 
-Type: String
-
-Required: no
-
-<br><li> tag:tagKey
-
-Filter by **tag key-value pair**. The `tagKey` should be replaced with a specified tag key.
-Type: String
-
-Required: no
-
-
-Each request can contain up to 10 `Filters` and 5 `Filter.Values`.
- * @method void setFilters(array $Filters) Set <br><li> machineGroupName
-
-Filter by **machine group name**.
-Type: String
-
-Required: no
-
-<br><li> machineGroupId
-
-Filter by **machine group ID**.
-Type: String
-
-Required: no
-
-<br><li> tagKey
-
-Filter by **tag key**.
-
-Type: String
-
-Required: no
-
-<br><li> tag:tagKey
-
-Filter by **tag key-value pair**. The `tagKey` should be replaced with a specified tag key.
-Type: String
-
-Required: no
-
-
-Each request can contain up to 10 `Filters` and 5 `Filter.Values`.
+Each request can have up to 10 `Filters` and 100 `Filter.Values`.
  * @method integer getOffset() Obtain Page offset. Default value: 0
  * @method void setOffset(integer $Offset) Set Page offset. Default value: 0
  * @method integer getLimit() Obtain Maximum number of entries per page. Default value: 20. Maximum value: 100
@@ -90,37 +70,27 @@ Each request can contain up to 10 `Filters` and 5 `Filter.Values`.
 class DescribeMachineGroupsRequest extends AbstractModel
 {
     /**
-     * @var array <br><li> machineGroupName
+     * @var array machineGroupName
+- Filter by **machine group name**
+- Type: String
+- Required: No
 
-Filter by **machine group name**.
-Type: String
+machineGroupId
+- Filter by **machine group ID**
+- Type: String
+- Required: No
 
-Required: no
+tagKey
+- Filter by **tag key**
+- Type: String
+- Required: No
 
-<br><li> machineGroupId
+tag:tagKey
+- Filter by **tag key-value pair**. The `tagKey` should be replaced with a specified tag key.
+- Type: String
+- Required: No
 
-Filter by **machine group ID**.
-Type: String
-
-Required: no
-
-<br><li> tagKey
-
-Filter by **tag key**.
-
-Type: String
-
-Required: no
-
-<br><li> tag:tagKey
-
-Filter by **tag key-value pair**. The `tagKey` should be replaced with a specified tag key.
-Type: String
-
-Required: no
-
-
-Each request can contain up to 10 `Filters` and 5 `Filter.Values`.
+Each request can have up to 10 `Filters` and 100 `Filter.Values`.
      */
     public $Filters;
 
@@ -135,37 +105,27 @@ Each request can contain up to 10 `Filters` and 5 `Filter.Values`.
     public $Limit;
 
     /**
-     * @param array $Filters <br><li> machineGroupName
+     * @param array $Filters machineGroupName
+- Filter by **machine group name**
+- Type: String
+- Required: No
 
-Filter by **machine group name**.
-Type: String
+machineGroupId
+- Filter by **machine group ID**
+- Type: String
+- Required: No
 
-Required: no
+tagKey
+- Filter by **tag key**
+- Type: String
+- Required: No
 
-<br><li> machineGroupId
+tag:tagKey
+- Filter by **tag key-value pair**. The `tagKey` should be replaced with a specified tag key.
+- Type: String
+- Required: No
 
-Filter by **machine group ID**.
-Type: String
-
-Required: no
-
-<br><li> tagKey
-
-Filter by **tag key**.
-
-Type: String
-
-Required: no
-
-<br><li> tag:tagKey
-
-Filter by **tag key-value pair**. The `tagKey` should be replaced with a specified tag key.
-Type: String
-
-Required: no
-
-
-Each request can contain up to 10 `Filters` and 5 `Filter.Values`.
+Each request can have up to 10 `Filters` and 100 `Filter.Values`.
      * @param integer $Offset Page offset. Default value: 0
      * @param integer $Limit Maximum number of entries per page. Default value: 20. Maximum value: 100
      */

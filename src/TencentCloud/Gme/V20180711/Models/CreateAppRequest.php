@@ -24,16 +24,22 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAppName(string $AppName) Set Application name
  * @method integer getProjectId() Obtain Tencent Cloud project ID. Default value: 0, which means that the default project is used.
  * @method void setProjectId(integer $ProjectId) Set Tencent Cloud project ID. Default value: 0, which means that the default project is used.
- * @method array getEngineList() Obtain List of engines to be supported. All values are selected by default.
- * @method void setEngineList(array $EngineList) Set List of engines to be supported. All values are selected by default.
- * @method array getRegionList() Obtain Service region list. All values are selected by default.
- * @method void setRegionList(array $RegionList) Set Service region list. All values are selected by default.
+ * @method array getEngineList() Obtain List of engines to be supported.
+Valid values: `android`, `ios`, `unity`, `cocos`, `unreal`, `windows`. All values are selected by default.
+ * @method void setEngineList(array $EngineList) Set List of engines to be supported.
+Valid values: `android`, `ios`, `unity`, `cocos`, `unreal`, `windows`. All values are selected by default.
+ * @method array getRegionList() Obtain List of regions.
+Valid values: `mainland` (Chinese mainland), `hmt` (Hong Kong, Macao and Taiwan (China)), `sea` (Southeast Asia), `na` (North America), `eu` (Europe), `jpkr` (Japan, Korea and Asia Pacific), `sa` (South America), `oc` (Oceania), `me` (Middle East). All values are selected by default.
+ * @method void setRegionList(array $RegionList) Set List of regions.
+Valid values: `mainland` (Chinese mainland), `hmt` (Hong Kong, Macao and Taiwan (China)), `sea` (Southeast Asia), `na` (North America), `eu` (Europe), `jpkr` (Japan, Korea and Asia Pacific), `sa` (South America), `oc` (Oceania), `me` (Middle East). All values are selected by default.
  * @method RealtimeSpeechConf getRealtimeSpeechConf() Obtain Configuration information of Voice Chat
  * @method void setRealtimeSpeechConf(RealtimeSpeechConf $RealtimeSpeechConf) Set Configuration information of Voice Chat
- * @method VoiceMessageConf getVoiceMessageConf() Obtain Configuration information of Voice Message Service
- * @method void setVoiceMessageConf(VoiceMessageConf $VoiceMessageConf) Set Configuration information of Voice Message Service
+ * @method VoiceMessageConf getVoiceMessageConf() Obtain Configuration information of Voice Messaging
+ * @method void setVoiceMessageConf(VoiceMessageConf $VoiceMessageConf) Set Configuration information of Voice Messaging
  * @method VoiceFilterConf getVoiceFilterConf() Obtain Configuration information of Voice Analysis Service
  * @method void setVoiceFilterConf(VoiceFilterConf $VoiceFilterConf) Set Configuration information of Voice Analysis Service
+ * @method AsrConf getAsrConf() Obtain Configuration information of Speech-to-Text
+ * @method void setAsrConf(AsrConf $AsrConf) Set Configuration information of Speech-to-Text
  * @method array getTags() Obtain List of tags to be added
  * @method void setTags(array $Tags) Set List of tags to be added
  */
@@ -50,12 +56,14 @@ class CreateAppRequest extends AbstractModel
     public $ProjectId;
 
     /**
-     * @var array List of engines to be supported. All values are selected by default.
+     * @var array List of engines to be supported.
+Valid values: `android`, `ios`, `unity`, `cocos`, `unreal`, `windows`. All values are selected by default.
      */
     public $EngineList;
 
     /**
-     * @var array Service region list. All values are selected by default.
+     * @var array List of regions.
+Valid values: `mainland` (Chinese mainland), `hmt` (Hong Kong, Macao and Taiwan (China)), `sea` (Southeast Asia), `na` (North America), `eu` (Europe), `jpkr` (Japan, Korea and Asia Pacific), `sa` (South America), `oc` (Oceania), `me` (Middle East). All values are selected by default.
      */
     public $RegionList;
 
@@ -65,7 +73,7 @@ class CreateAppRequest extends AbstractModel
     public $RealtimeSpeechConf;
 
     /**
-     * @var VoiceMessageConf Configuration information of Voice Message Service
+     * @var VoiceMessageConf Configuration information of Voice Messaging
      */
     public $VoiceMessageConf;
 
@@ -75,6 +83,11 @@ class CreateAppRequest extends AbstractModel
     public $VoiceFilterConf;
 
     /**
+     * @var AsrConf Configuration information of Speech-to-Text
+     */
+    public $AsrConf;
+
+    /**
      * @var array List of tags to be added
      */
     public $Tags;
@@ -82,11 +95,14 @@ class CreateAppRequest extends AbstractModel
     /**
      * @param string $AppName Application name
      * @param integer $ProjectId Tencent Cloud project ID. Default value: 0, which means that the default project is used.
-     * @param array $EngineList List of engines to be supported. All values are selected by default.
-     * @param array $RegionList Service region list. All values are selected by default.
+     * @param array $EngineList List of engines to be supported.
+Valid values: `android`, `ios`, `unity`, `cocos`, `unreal`, `windows`. All values are selected by default.
+     * @param array $RegionList List of regions.
+Valid values: `mainland` (Chinese mainland), `hmt` (Hong Kong, Macao and Taiwan (China)), `sea` (Southeast Asia), `na` (North America), `eu` (Europe), `jpkr` (Japan, Korea and Asia Pacific), `sa` (South America), `oc` (Oceania), `me` (Middle East). All values are selected by default.
      * @param RealtimeSpeechConf $RealtimeSpeechConf Configuration information of Voice Chat
-     * @param VoiceMessageConf $VoiceMessageConf Configuration information of Voice Message Service
+     * @param VoiceMessageConf $VoiceMessageConf Configuration information of Voice Messaging
      * @param VoiceFilterConf $VoiceFilterConf Configuration information of Voice Analysis Service
+     * @param AsrConf $AsrConf Configuration information of Speech-to-Text
      * @param array $Tags List of tags to be added
      */
     function __construct()
@@ -131,6 +147,11 @@ class CreateAppRequest extends AbstractModel
         if (array_key_exists("VoiceFilterConf",$param) and $param["VoiceFilterConf"] !== null) {
             $this->VoiceFilterConf = new VoiceFilterConf();
             $this->VoiceFilterConf->deserialize($param["VoiceFilterConf"]);
+        }
+
+        if (array_key_exists("AsrConf",$param) and $param["AsrConf"] !== null) {
+            $this->AsrConf = new AsrConf();
+            $this->AsrConf->deserialize($param["AsrConf"]);
         }
 
         if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {

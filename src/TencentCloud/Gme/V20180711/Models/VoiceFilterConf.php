@@ -22,6 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getStatus() Obtain Phrase Filtering status. Valid values: `open`, `close`.
  * @method void setStatus(string $Status) Set Phrase Filtering status. Valid values: `open`, `close`.
+ * @method array getSceneInfos() Obtain Scenario configuration information, such as status and callback URL.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setSceneInfos(array $SceneInfos) Set Scenario configuration information, such as status and callback URL.
+Note: This field may return `null`, indicating that no valid values can be obtained.
  */
 class VoiceFilterConf extends AbstractModel
 {
@@ -31,7 +35,15 @@ class VoiceFilterConf extends AbstractModel
     public $Status;
 
     /**
+     * @var array Scenario configuration information, such as status and callback URL.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $SceneInfos;
+
+    /**
      * @param string $Status Phrase Filtering status. Valid values: `open`, `close`.
+     * @param array $SceneInfos Scenario configuration information, such as status and callback URL.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -48,6 +60,15 @@ class VoiceFilterConf extends AbstractModel
         }
         if (array_key_exists("Status",$param) and $param["Status"] !== null) {
             $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("SceneInfos",$param) and $param["SceneInfos"] !== null) {
+            $this->SceneInfos = [];
+            foreach ($param["SceneInfos"] as $key => $value){
+                $obj = new SceneInfo();
+                $obj->deserialize($value);
+                array_push($this->SceneInfos, $obj);
+            }
         }
     }
 }

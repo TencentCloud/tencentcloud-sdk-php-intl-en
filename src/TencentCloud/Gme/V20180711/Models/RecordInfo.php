@@ -19,7 +19,7 @@ use TencentCloud\Common\AbstractModel;
 
 /**
  * Information about the recording task in a room.
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
  *
  * @method string getUserId() Obtain User ID. The value is `0` in mixed streams recording mode.
  * @method void setUserId(string $UserId) Set User ID. The value is `0` in mixed streams recording mode.

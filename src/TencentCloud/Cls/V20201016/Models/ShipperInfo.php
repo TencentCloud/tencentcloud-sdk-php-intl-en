@@ -56,6 +56,36 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setFilenameMode(integer $FilenameMode) Set Shipping file naming configuration. Valid values: `0` (by random number); `1` (by shipping time). Default value: `0`.
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getStartTime() Obtain Start time for data shipping
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setStartTime(integer $StartTime) Set Start time for data shipping
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getEndTime() Obtain End time for data shipping
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setEndTime(integer $EndTime) Set End time for data shipping
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method float getProgress() Obtain Progress of historical data shipping (valid only when the selected data scope contains historical data)
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setProgress(float $Progress) Set Progress of historical data shipping (valid only when the selected data scope contains historical data)
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getRemainTime() Obtain Remaining time required for shipping all historical data (valid only when the selected data scope contains historical data)
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setRemainTime(integer $RemainTime) Set Remaining time required for shipping all historical data (valid only when the selected data scope contains historical data)
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getHistoryStatus() Obtain Status of historical data shipping. Valid values:
+0: Real-time data is being shipped.
+1: The system is preparing for historical data shipping.
+2: Historical data is being shipped.
+3: An error occurred while shipping historical data.
+4: Historical data shipping ended.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setHistoryStatus(integer $HistoryStatus) Set Status of historical data shipping. Valid values:
+0: Real-time data is being shipped.
+1: The system is preparing for historical data shipping.
+2: Historical data is being shipped.
+3: An error occurred while shipping historical data.
+4: Historical data shipping ended.
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class ShipperInfo extends AbstractModel
 {
@@ -134,6 +164,41 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $FilenameMode;
 
     /**
+     * @var integer Start time for data shipping
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $StartTime;
+
+    /**
+     * @var integer End time for data shipping
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $EndTime;
+
+    /**
+     * @var float Progress of historical data shipping (valid only when the selected data scope contains historical data)
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $Progress;
+
+    /**
+     * @var integer Remaining time required for shipping all historical data (valid only when the selected data scope contains historical data)
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $RemainTime;
+
+    /**
+     * @var integer Status of historical data shipping. Valid values:
+0: Real-time data is being shipped.
+1: The system is preparing for historical data shipping.
+2: Historical data is being shipped.
+3: An error occurred while shipping historical data.
+4: Historical data shipping ended.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $HistoryStatus;
+
+    /**
      * @param string $ShipperId Shipping rule ID
      * @param string $TopicId Log topic ID
      * @param string $Bucket Bucket address shipped to
@@ -151,6 +216,21 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param string $CreateTime Creation time of shipped log
      * @param integer $FilenameMode Shipping file naming configuration. Valid values: `0` (by random number); `1` (by shipping time). Default value: `0`.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $StartTime Start time for data shipping
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $EndTime End time for data shipping
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param float $Progress Progress of historical data shipping (valid only when the selected data scope contains historical data)
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $RemainTime Remaining time required for shipping all historical data (valid only when the selected data scope contains historical data)
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $HistoryStatus Status of historical data shipping. Valid values:
+0: Real-time data is being shipped.
+1: The system is preparing for historical data shipping.
+2: Historical data is being shipped.
+3: An error occurred while shipping historical data.
+4: Historical data shipping ended.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
@@ -227,6 +307,26 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("FilenameMode",$param) and $param["FilenameMode"] !== null) {
             $this->FilenameMode = $param["FilenameMode"];
+        }
+
+        if (array_key_exists("StartTime",$param) and $param["StartTime"] !== null) {
+            $this->StartTime = $param["StartTime"];
+        }
+
+        if (array_key_exists("EndTime",$param) and $param["EndTime"] !== null) {
+            $this->EndTime = $param["EndTime"];
+        }
+
+        if (array_key_exists("Progress",$param) and $param["Progress"] !== null) {
+            $this->Progress = $param["Progress"];
+        }
+
+        if (array_key_exists("RemainTime",$param) and $param["RemainTime"] !== null) {
+            $this->RemainTime = $param["RemainTime"];
+        }
+
+        if (array_key_exists("HistoryStatus",$param) and $param["HistoryStatus"] !== null) {
+            $this->HistoryStatus = $param["HistoryStatus"];
         }
     }
 }

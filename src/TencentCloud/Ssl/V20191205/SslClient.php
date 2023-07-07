@@ -26,6 +26,7 @@ use TencentCloud\Ssl\V20191205\Models as Models;
  * @method Models\ApplyCertificateResponse ApplyCertificate(Models\ApplyCertificateRequest $req) This API is used to apply for a free certificate.
  * @method Models\CancelCertificateOrderResponse CancelCertificateOrder(Models\CancelCertificateOrderRequest $req) This API is used to cancel a certificate order.
  * @method Models\CommitCertificateInformationResponse CommitCertificateInformation(Models\CommitCertificateInformationRequest $req) This API is used to submit a certificate order.
+ * @method Models\CreateCertificateResponse CreateCertificate(Models\CreateCertificateRequest $req) This API is used to purchase a certificate.
  * @method Models\DeleteCertificateResponse DeleteCertificate(Models\DeleteCertificateRequest $req) This API is used to delete a certificate.
  * @method Models\DescribeCertificateResponse DescribeCertificate(Models\DescribeCertificateRequest $req) This API is used to get certificate information.
  * @method Models\DescribeCertificateDetailResponse DescribeCertificateDetail(Models\DescribeCertificateDetailRequest $req) This API is used to get certificate details.
@@ -37,6 +38,7 @@ use TencentCloud\Ssl\V20191205\Models as Models;
  * @method Models\ReplaceCertificateResponse ReplaceCertificate(Models\ReplaceCertificateRequest $req) This API is used to reissue a certificate. Note that if you have applied for a free certificate, only an RSA-2048 certificate will be reissued, and the certificate can be reissued only once.
  * @method Models\SubmitCertificateInformationResponse SubmitCertificateInformation(Models\SubmitCertificateInformationRequest $req) This API is used to submit certificate information.
  * @method Models\UploadCertificateResponse UploadCertificate(Models\UploadCertificateRequest $req) This API is used to upload a certificate.
+ * @method Models\UploadConfirmLetterResponse UploadConfirmLetter(Models\UploadConfirmLetterRequest $req) This API is used to upload the confirmation letter for a certificate.
  */
 
 class SslClient extends AbstractClient

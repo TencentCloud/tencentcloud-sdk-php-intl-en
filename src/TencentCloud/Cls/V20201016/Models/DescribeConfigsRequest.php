@@ -20,50 +20,36 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeConfigs request structure.
  *
- * @method array getFilters() Obtain <br><li> configName
+ * @method array getFilters() Obtain configName
+- Filter by fuzzy match of **collection configuration name**
+- Type: String
+- Required: No
 
-Filter by fuzzy match of **collection configuration name**
-Type: String
+configId
+- Filter by **collection configuration ID**
+- Type: String
+- Required: No
 
-Required: no
-
-<br><li> configId
-
-Filter by **collection configuration ID**.
-Type: String
-
-Required: no
-
-<br><li> topicId
-
-Filter by **log topic**.
-
-Type: String
-
-Required: no
+topicId
+- Filter by **log topic**
+- Type: String
+- Required: No
 
 Each request can contain up to 10 `Filters` and 5 `Filter.Values`.
- * @method void setFilters(array $Filters) Set <br><li> configName
+ * @method void setFilters(array $Filters) Set configName
+- Filter by fuzzy match of **collection configuration name**
+- Type: String
+- Required: No
 
-Filter by fuzzy match of **collection configuration name**
-Type: String
+configId
+- Filter by **collection configuration ID**
+- Type: String
+- Required: No
 
-Required: no
-
-<br><li> configId
-
-Filter by **collection configuration ID**.
-Type: String
-
-Required: no
-
-<br><li> topicId
-
-Filter by **log topic**.
-
-Type: String
-
-Required: no
+topicId
+- Filter by **log topic**
+- Type: String
+- Required: No
 
 Each request can contain up to 10 `Filters` and 5 `Filter.Values`.
  * @method integer getOffset() Obtain Page offset. Default value: 0
@@ -74,27 +60,20 @@ Each request can contain up to 10 `Filters` and 5 `Filter.Values`.
 class DescribeConfigsRequest extends AbstractModel
 {
     /**
-     * @var array <br><li> configName
+     * @var array configName
+- Filter by fuzzy match of **collection configuration name**
+- Type: String
+- Required: No
 
-Filter by fuzzy match of **collection configuration name**
-Type: String
+configId
+- Filter by **collection configuration ID**
+- Type: String
+- Required: No
 
-Required: no
-
-<br><li> configId
-
-Filter by **collection configuration ID**.
-Type: String
-
-Required: no
-
-<br><li> topicId
-
-Filter by **log topic**.
-
-Type: String
-
-Required: no
+topicId
+- Filter by **log topic**
+- Type: String
+- Required: No
 
 Each request can contain up to 10 `Filters` and 5 `Filter.Values`.
      */
@@ -111,27 +90,20 @@ Each request can contain up to 10 `Filters` and 5 `Filter.Values`.
     public $Limit;
 
     /**
-     * @param array $Filters <br><li> configName
+     * @param array $Filters configName
+- Filter by fuzzy match of **collection configuration name**
+- Type: String
+- Required: No
 
-Filter by fuzzy match of **collection configuration name**
-Type: String
+configId
+- Filter by **collection configuration ID**
+- Type: String
+- Required: No
 
-Required: no
-
-<br><li> configId
-
-Filter by **collection configuration ID**.
-Type: String
-
-Required: no
-
-<br><li> topicId
-
-Filter by **log topic**.
-
-Type: String
-
-Required: no
+topicId
+- Filter by **log topic**
+- Type: String
+- Required: No
 
 Each request can contain up to 10 `Filters` and 5 `Filter.Values`.
      * @param integer $Offset Page offset. Default value: 0

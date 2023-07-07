@@ -34,10 +34,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setContactPhone(string $ContactPhone) Set Mobile number
  * @method string getValidityPeriod() Obtain Validity period. The default value is 12 months, which is the only supported value currently.
  * @method void setValidityPeriod(string $ValidityPeriod) Set Validity period. The default value is 12 months, which is the only supported value currently.
- * @method string getCsrEncryptAlgo() Obtain Encryption algorithm. Only RSA is supported.
- * @method void setCsrEncryptAlgo(string $CsrEncryptAlgo) Set Encryption algorithm. Only RSA is supported.
- * @method string getCsrKeyParameter() Obtain Key pair parameter. Only the 2048-bit key pair is supported.
- * @method void setCsrKeyParameter(string $CsrKeyParameter) Set Key pair parameter. Only the 2048-bit key pair is supported.
+ * @method string getCsrEncryptAlgo() Obtain Encryption algorithm. RSA and ECC are supported.
+ * @method void setCsrEncryptAlgo(string $CsrEncryptAlgo) Set Encryption algorithm. RSA and ECC are supported.
+ * @method string getCsrKeyParameter() Obtain Key pair parameter. RSA supports only the 2048-bit key and ECC supports only prime256v1.
+ * @method void setCsrKeyParameter(string $CsrKeyParameter) Set Key pair parameter. RSA supports only the 2048-bit key and ECC supports only prime256v1.
  * @method string getCsrKeyPassword() Obtain CSR encryption password
  * @method void setCsrKeyPassword(string $CsrKeyPassword) Set CSR encryption password
  * @method string getAlias() Obtain Alias
@@ -87,12 +87,12 @@ class ApplyCertificateRequest extends AbstractModel
     public $ValidityPeriod;
 
     /**
-     * @var string Encryption algorithm. Only RSA is supported.
+     * @var string Encryption algorithm. RSA and ECC are supported.
      */
     public $CsrEncryptAlgo;
 
     /**
-     * @var string Key pair parameter. Only the 2048-bit key pair is supported.
+     * @var string Key pair parameter. RSA supports only the 2048-bit key and ECC supports only prime256v1.
      */
     public $CsrKeyParameter;
 
@@ -129,8 +129,8 @@ class ApplyCertificateRequest extends AbstractModel
      * @param string $ContactEmail Email address
      * @param string $ContactPhone Mobile number
      * @param string $ValidityPeriod Validity period. The default value is 12 months, which is the only supported value currently.
-     * @param string $CsrEncryptAlgo Encryption algorithm. Only RSA is supported.
-     * @param string $CsrKeyParameter Key pair parameter. Only the 2048-bit key pair is supported.
+     * @param string $CsrEncryptAlgo Encryption algorithm. RSA and ECC are supported.
+     * @param string $CsrKeyParameter Key pair parameter. RSA supports only the 2048-bit key and ECC supports only prime256v1.
      * @param string $CsrKeyPassword CSR encryption password
      * @param string $Alias Alias
      * @param string $OldCertificateId Original certificate ID, which is used to apply for a new certificate.

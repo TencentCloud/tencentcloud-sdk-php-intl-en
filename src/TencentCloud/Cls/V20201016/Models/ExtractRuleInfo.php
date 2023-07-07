@@ -90,6 +90,22 @@ Note: This field may return null, indicating that no valid values can be obtaine
 `auto`: Automatically match either the RFC 3164 or RFC 5424 protocol.
 This field can be used when you create or modify collection rule configurations.
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getMetadataType() Obtain Metadata type. Valid values:
+0: Do not use metadata.
+1: Use machine group metadata.
+2: Use user-defined metadata.
+3: Use the collection path to extract metadata.
+ * @method void setMetadataType(integer $MetadataType) Set Metadata type. Valid values:
+0: Do not use metadata.
+1: Use machine group metadata.
+2: Use user-defined metadata.
+3: Use the collection path to extract metadata.
+ * @method string getPathRegex() Obtain Regular expression of the collection path, which is required when `MetadataType` is set to `3`.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setPathRegex(string $PathRegex) Set Regular expression of the collection path, which is required when `MetadataType` is set to `3`.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method array getMetaTags() Obtain User-defined metadata, which is required when `MetadataType` is set to `2`.
+ * @method void setMetaTags(array $MetaTags) Set User-defined metadata, which is required when `MetadataType` is set to `2`.
  */
 class ExtractRuleInfo extends AbstractModel
 {
@@ -189,6 +205,26 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $ParseProtocol;
 
     /**
+     * @var integer Metadata type. Valid values:
+0: Do not use metadata.
+1: Use machine group metadata.
+2: Use user-defined metadata.
+3: Use the collection path to extract metadata.
+     */
+    public $MetadataType;
+
+    /**
+     * @var string Regular expression of the collection path, which is required when `MetadataType` is set to `3`.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $PathRegex;
+
+    /**
+     * @var array User-defined metadata, which is required when `MetadataType` is set to `2`.
+     */
+    public $MetaTags;
+
+    /**
      * @param string $TimeKey Time field key name. `time_key` and `time_format` must appear in pairs
 Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param string $TimeFormat Time field format. For more information, please see the output parameters of the time format description of the `strftime` function in C language
@@ -224,6 +260,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 `auto`: Automatically match either the RFC 3164 or RFC 5424 protocol.
 This field can be used when you create or modify collection rule configurations.
 Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $MetadataType Metadata type. Valid values:
+0: Do not use metadata.
+1: Use machine group metadata.
+2: Use user-defined metadata.
+3: Use the collection path to extract metadata.
+     * @param string $PathRegex Regular expression of the collection path, which is required when `MetadataType` is set to `3`.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param array $MetaTags User-defined metadata, which is required when `MetadataType` is set to `2`.
      */
     function __construct()
     {
@@ -301,6 +345,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("ParseProtocol",$param) and $param["ParseProtocol"] !== null) {
             $this->ParseProtocol = $param["ParseProtocol"];
+        }
+
+        if (array_key_exists("MetadataType",$param) and $param["MetadataType"] !== null) {
+            $this->MetadataType = $param["MetadataType"];
+        }
+
+        if (array_key_exists("PathRegex",$param) and $param["PathRegex"] !== null) {
+            $this->PathRegex = $param["PathRegex"];
+        }
+
+        if (array_key_exists("MetaTags",$param) and $param["MetaTags"] !== null) {
+            $this->MetaTags = [];
+            foreach ($param["MetaTags"] as $key => $value){
+                $obj = new MetaTagInfo();
+                $obj->deserialize($value);
+                array_push($this->MetaTags, $obj);
+            }
         }
     }
 }

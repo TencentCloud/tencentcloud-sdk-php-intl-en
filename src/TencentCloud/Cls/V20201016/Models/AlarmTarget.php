@@ -32,6 +32,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEndTimeOffset(integer $EndTimeOffset) Set Offset of the query end time from the alarm execution time in minutes. The value cannot be positive and must be greater than `StartTimeOffset`. Value range: -1440–0.
  * @method string getLogsetId() Obtain Logset ID
  * @method void setLogsetId(string $LogsetId) Set Logset ID
+ * @method integer getSyntaxRule() Obtain Search syntax. Valid values:
+`0` (default): Lucene; `1`: CQL
+For more information, see <a href="https://intl.cloud.tencent.com/document/product/614/47044?from_cn_redirect=1#RetrievesConditionalRules" target="_blank">Search Syntax</a>.
+ * @method void setSyntaxRule(integer $SyntaxRule) Set Search syntax. Valid values:
+`0` (default): Lucene; `1`: CQL
+For more information, see <a href="https://intl.cloud.tencent.com/document/product/614/47044?from_cn_redirect=1#RetrievesConditionalRules" target="_blank">Search Syntax</a>.
  */
 class AlarmTarget extends AbstractModel
 {
@@ -66,12 +72,22 @@ class AlarmTarget extends AbstractModel
     public $LogsetId;
 
     /**
+     * @var integer Search syntax. Valid values:
+`0` (default): Lucene; `1`: CQL
+For more information, see <a href="https://intl.cloud.tencent.com/document/product/614/47044?from_cn_redirect=1#RetrievesConditionalRules" target="_blank">Search Syntax</a>.
+     */
+    public $SyntaxRule;
+
+    /**
      * @param string $TopicId Log topic ID
      * @param string $Query Query statement
      * @param integer $Number Monitoring object number, which is incremental from 1.
      * @param integer $StartTimeOffset Offset of the query start time from the alarm execution time in minutes. The value cannot be positive. Value range: -1440–0.
      * @param integer $EndTimeOffset Offset of the query end time from the alarm execution time in minutes. The value cannot be positive and must be greater than `StartTimeOffset`. Value range: -1440–0.
      * @param string $LogsetId Logset ID
+     * @param integer $SyntaxRule Search syntax. Valid values:
+`0` (default): Lucene; `1`: CQL
+For more information, see <a href="https://intl.cloud.tencent.com/document/product/614/47044?from_cn_redirect=1#RetrievesConditionalRules" target="_blank">Search Syntax</a>.
      */
     function __construct()
     {
@@ -108,6 +124,10 @@ class AlarmTarget extends AbstractModel
 
         if (array_key_exists("LogsetId",$param) and $param["LogsetId"] !== null) {
             $this->LogsetId = $param["LogsetId"];
+        }
+
+        if (array_key_exists("SyntaxRule",$param) and $param["SyntaxRule"] !== null) {
+            $this->SyntaxRule = $param["SyntaxRule"];
         }
     }
 }

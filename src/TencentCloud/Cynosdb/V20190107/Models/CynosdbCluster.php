@@ -194,6 +194,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setAbility(Ability $Ability) Set Capability
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method array getResourcePackages() Obtain Information of the resource pack bound to an instance when `packageType` is `DISK`. Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setResourcePackages(array $ResourcePackages) Set Information of the resource pack bound to an instance when `packageType` is `DISK`. Note: This field may return null, indicating that no valid values can be obtained.
  */
 class CynosdbCluster extends AbstractModel
 {
@@ -453,6 +455,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $Ability;
 
     /**
+     * @var array Information of the resource pack bound to an instance when `packageType` is `DISK`. Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $ResourcePackages;
+
+    /**
      * @param string $Status Cluster status. Valid values are as follows:
 creating
 running
@@ -540,6 +547,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param Ability $Ability Capability
 Note: This field may return null, indicating that no valid values can be obtained.
+     * @param array $ResourcePackages Information of the resource pack bound to an instance when `packageType` is `DISK`. Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -736,6 +744,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (array_key_exists("Ability",$param) and $param["Ability"] !== null) {
             $this->Ability = new Ability();
             $this->Ability->deserialize($param["Ability"]);
+        }
+
+        if (array_key_exists("ResourcePackages",$param) and $param["ResourcePackages"] !== null) {
+            $this->ResourcePackages = [];
+            foreach ($param["ResourcePackages"] as $key => $value){
+                $obj = new ResourcePackage();
+                $obj->deserialize($value);
+                array_push($this->ResourcePackages, $obj);
+            }
         }
     }
 }

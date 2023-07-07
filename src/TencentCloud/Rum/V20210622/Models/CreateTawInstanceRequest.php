@@ -42,6 +42,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setResourcePackageType(integer $ResourcePackageType) Set Type of prepaid resource pack (only required for prepaid mode)
  * @method integer getResourcePackageNum() Obtain The number of prepaid resource packs (only required for prepaid mode)
  * @method void setResourcePackageNum(integer $ResourcePackageNum) Set The number of prepaid resource packs (only required for prepaid mode)
+ * @method integer getInstanceType() Obtain Instance type. `1`: Web; `2`: Application
+ * @method void setInstanceType(integer $InstanceType) Set Instance type. `1`: Web; `2`: Application
  */
 class CreateTawInstanceRequest extends AbstractModel
 {
@@ -101,6 +103,11 @@ class CreateTawInstanceRequest extends AbstractModel
     public $ResourcePackageNum;
 
     /**
+     * @var integer Instance type. `1`: Web; `2`: Application
+     */
+    public $InstanceType;
+
+    /**
      * @param integer $AreaId Region ID (at least greater than 0)
      * @param integer $ChargeType Billing type (1: Pay-as-you-go).
      * @param integer $DataRetentionDays Data retention period (at least greater than 0)
@@ -112,6 +119,7 @@ class CreateTawInstanceRequest extends AbstractModel
      * @param string $BuyingChannel Instance purchase channel. Valid value: `cdn`.
      * @param integer $ResourcePackageType Type of prepaid resource pack (only required for prepaid mode)
      * @param integer $ResourcePackageNum The number of prepaid resource packs (only required for prepaid mode)
+     * @param integer $InstanceType Instance type. `1`: Web; `2`: Application
      */
     function __construct()
     {
@@ -173,6 +181,10 @@ class CreateTawInstanceRequest extends AbstractModel
 
         if (array_key_exists("ResourcePackageNum",$param) and $param["ResourcePackageNum"] !== null) {
             $this->ResourcePackageNum = $param["ResourcePackageNum"];
+        }
+
+        if (array_key_exists("InstanceType",$param) and $param["InstanceType"] !== null) {
+            $this->InstanceType = $param["InstanceType"];
         }
     }
 }

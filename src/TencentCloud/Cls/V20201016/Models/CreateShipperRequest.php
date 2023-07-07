@@ -42,6 +42,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setContent(ContentInfo $Content) Set Format configuration of shipped log content
  * @method integer getFilenameMode() Obtain Naming a shipping file. Valid values: `0` (by random number); `1` (by shipping time). Default value: `0`.
  * @method void setFilenameMode(integer $FilenameMode) Set Naming a shipping file. Valid values: `0` (by random number); `1` (by shipping time). Default value: `0`.
+ * @method integer getStartTime() Obtain Start time for data shipping, which cannot be earlier than the lifecycle start time of the log topic. If you do not specify this parameter, it will be set to the time when you create the data shipping task.
+ * @method void setStartTime(integer $StartTime) Set Start time for data shipping, which cannot be earlier than the lifecycle start time of the log topic. If you do not specify this parameter, it will be set to the time when you create the data shipping task.
+ * @method integer getEndTime() Obtain End time for data shipping, which cannot be set to a future time. If you do not specify this parameter, it indicates continuous data shipping.
+ * @method void setEndTime(integer $EndTime) Set End time for data shipping, which cannot be set to a future time. If you do not specify this parameter, it indicates continuous data shipping.
  */
 class CreateShipperRequest extends AbstractModel
 {
@@ -101,6 +105,16 @@ class CreateShipperRequest extends AbstractModel
     public $FilenameMode;
 
     /**
+     * @var integer Start time for data shipping, which cannot be earlier than the lifecycle start time of the log topic. If you do not specify this parameter, it will be set to the time when you create the data shipping task.
+     */
+    public $StartTime;
+
+    /**
+     * @var integer End time for data shipping, which cannot be set to a future time. If you do not specify this parameter, it indicates continuous data shipping.
+     */
+    public $EndTime;
+
+    /**
      * @param string $TopicId ID of the log topic to which the shipping rule to be created belongs
      * @param string $Bucket Destination bucket in the shipping rule to be created
      * @param string $Prefix Prefix of the shipping directory in the shipping rule to be created
@@ -112,6 +126,8 @@ class CreateShipperRequest extends AbstractModel
      * @param CompressInfo $Compress Compression configuration of shipped log
      * @param ContentInfo $Content Format configuration of shipped log content
      * @param integer $FilenameMode Naming a shipping file. Valid values: `0` (by random number); `1` (by shipping time). Default value: `0`.
+     * @param integer $StartTime Start time for data shipping, which cannot be earlier than the lifecycle start time of the log topic. If you do not specify this parameter, it will be set to the time when you create the data shipping task.
+     * @param integer $EndTime End time for data shipping, which cannot be set to a future time. If you do not specify this parameter, it indicates continuous data shipping.
      */
     function __construct()
     {
@@ -175,6 +191,14 @@ class CreateShipperRequest extends AbstractModel
 
         if (array_key_exists("FilenameMode",$param) and $param["FilenameMode"] !== null) {
             $this->FilenameMode = $param["FilenameMode"];
+        }
+
+        if (array_key_exists("StartTime",$param) and $param["StartTime"] !== null) {
+            $this->StartTime = $param["StartTime"];
+        }
+
+        if (array_key_exists("EndTime",$param) and $param["EndTime"] !== null) {
+            $this->EndTime = $param["EndTime"];
         }
     }
 }

@@ -20,24 +20,25 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeLogHistogram request structure.
  *
- * @method string getTopicId() Obtain ID of the log topic to be queried
- * @method void setTopicId(string $TopicId) Set ID of the log topic to be queried
  * @method integer getFrom() Obtain Start time of the log to be queried, which is a Unix timestamp in milliseconds
  * @method void setFrom(integer $From) Set Start time of the log to be queried, which is a Unix timestamp in milliseconds
  * @method integer getTo() Obtain End time of the log to be queried, which is a Unix timestamp in milliseconds
  * @method void setTo(integer $To) Set End time of the log to be queried, which is a Unix timestamp in milliseconds
  * @method string getQuery() Obtain Query statement
  * @method void setQuery(string $Query) Set Query statement
+ * @method string getTopicId() Obtain ID of the log topic to be queried
+ * @method void setTopicId(string $TopicId) Set ID of the log topic to be queried
  * @method integer getInterval() Obtain Interval in milliseconds. Condition: (To – From) / Interval ≤ 200
  * @method void setInterval(integer $Interval) Set Interval in milliseconds. Condition: (To – From) / Interval ≤ 200
+ * @method integer getSyntaxRule() Obtain Search syntax. Valid values:
+`0` (default): Lucene; `1`: CQL
+For more information, see <a href="https://intl.cloud.tencent.com/document/product/614/47044?from_cn_redirect=1#RetrievesConditionalRules" target="_blank">Search Syntax</a>.
+ * @method void setSyntaxRule(integer $SyntaxRule) Set Search syntax. Valid values:
+`0` (default): Lucene; `1`: CQL
+For more information, see <a href="https://intl.cloud.tencent.com/document/product/614/47044?from_cn_redirect=1#RetrievesConditionalRules" target="_blank">Search Syntax</a>.
  */
 class DescribeLogHistogramRequest extends AbstractModel
 {
-    /**
-     * @var string ID of the log topic to be queried
-     */
-    public $TopicId;
-
     /**
      * @var integer Start time of the log to be queried, which is a Unix timestamp in milliseconds
      */
@@ -54,16 +55,31 @@ class DescribeLogHistogramRequest extends AbstractModel
     public $Query;
 
     /**
+     * @var string ID of the log topic to be queried
+     */
+    public $TopicId;
+
+    /**
      * @var integer Interval in milliseconds. Condition: (To – From) / Interval ≤ 200
      */
     public $Interval;
 
     /**
-     * @param string $TopicId ID of the log topic to be queried
+     * @var integer Search syntax. Valid values:
+`0` (default): Lucene; `1`: CQL
+For more information, see <a href="https://intl.cloud.tencent.com/document/product/614/47044?from_cn_redirect=1#RetrievesConditionalRules" target="_blank">Search Syntax</a>.
+     */
+    public $SyntaxRule;
+
+    /**
      * @param integer $From Start time of the log to be queried, which is a Unix timestamp in milliseconds
      * @param integer $To End time of the log to be queried, which is a Unix timestamp in milliseconds
      * @param string $Query Query statement
+     * @param string $TopicId ID of the log topic to be queried
      * @param integer $Interval Interval in milliseconds. Condition: (To – From) / Interval ≤ 200
+     * @param integer $SyntaxRule Search syntax. Valid values:
+`0` (default): Lucene; `1`: CQL
+For more information, see <a href="https://intl.cloud.tencent.com/document/product/614/47044?from_cn_redirect=1#RetrievesConditionalRules" target="_blank">Search Syntax</a>.
      */
     function __construct()
     {
@@ -78,10 +94,6 @@ class DescribeLogHistogramRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TopicId",$param) and $param["TopicId"] !== null) {
-            $this->TopicId = $param["TopicId"];
-        }
-
         if (array_key_exists("From",$param) and $param["From"] !== null) {
             $this->From = $param["From"];
         }
@@ -94,8 +106,16 @@ class DescribeLogHistogramRequest extends AbstractModel
             $this->Query = $param["Query"];
         }
 
+        if (array_key_exists("TopicId",$param) and $param["TopicId"] !== null) {
+            $this->TopicId = $param["TopicId"];
+        }
+
         if (array_key_exists("Interval",$param) and $param["Interval"] !== null) {
             $this->Interval = $param["Interval"];
+        }
+
+        if (array_key_exists("SyntaxRule",$param) and $param["SyntaxRule"] !== null) {
+            $this->SyntaxRule = $param["SyntaxRule"];
         }
     }
 }

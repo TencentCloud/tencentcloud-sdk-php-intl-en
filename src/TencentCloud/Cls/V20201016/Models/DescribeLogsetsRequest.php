@@ -20,68 +20,48 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeLogsets request structure.
  *
- * @method array getFilters() Obtain <br><li> logsetName
+ * @method array getFilters() Obtain logsetName
+- Filter by **logset name**
+- Type: String
+- Required: No
 
-Filter by **logset name**.
-Type: String
+logsetId
+- Filter by **logset ID**
+- Type: String
+- Required: No
 
-Required: no
+tagKey
+- Filter by **tag key**
+- Type: String
+- Required: No
 
-<br><li> logsetId
+tag:tagKey
+- Filter by **tag key-value pair**. The `tagKey` should be replaced with a specified tag key.
+- Type: String
+- Required: No
 
-Filter by **logset ID**.
-Type: String
+Each request can have up to 10 `Filters` and 5 `Filter.Values`.
+ * @method void setFilters(array $Filters) Set logsetName
+- Filter by **logset name**
+- Type: String
+- Required: No
 
-Required: no
+logsetId
+- Filter by **logset ID**
+- Type: String
+- Required: No
 
-<br><li> tagKey
+tagKey
+- Filter by **tag key**
+- Type: String
+- Required: No
 
-Filter by **tag key**.
+tag:tagKey
+- Filter by **tag key-value pair**. The `tagKey` should be replaced with a specified tag key.
+- Type: String
+- Required: No
 
-Type: String
-
-Required: no
-
-<br><li> tag:tagKey
-
-Filter by **tag key-value pair**. The `tagKey` should be replaced with a specified tag key.
-Type: String
-
-Required: no
-
-
-Each request can contain up to 10 `Filters` and 5 `Filter.Values`.
- * @method void setFilters(array $Filters) Set <br><li> logsetName
-
-Filter by **logset name**.
-Type: String
-
-Required: no
-
-<br><li> logsetId
-
-Filter by **logset ID**.
-Type: String
-
-Required: no
-
-<br><li> tagKey
-
-Filter by **tag key**.
-
-Type: String
-
-Required: no
-
-<br><li> tag:tagKey
-
-Filter by **tag key-value pair**. The `tagKey` should be replaced with a specified tag key.
-Type: String
-
-Required: no
-
-
-Each request can contain up to 10 `Filters` and 5 `Filter.Values`.
+Each request can have up to 10 `Filters` and 5 `Filter.Values`.
  * @method integer getOffset() Obtain Page offset. Default value: 0
  * @method void setOffset(integer $Offset) Set Page offset. Default value: 0
  * @method integer getLimit() Obtain Maximum number of entries per page. Default value: 20. Maximum value: 100
@@ -90,37 +70,27 @@ Each request can contain up to 10 `Filters` and 5 `Filter.Values`.
 class DescribeLogsetsRequest extends AbstractModel
 {
     /**
-     * @var array <br><li> logsetName
+     * @var array logsetName
+- Filter by **logset name**
+- Type: String
+- Required: No
 
-Filter by **logset name**.
-Type: String
+logsetId
+- Filter by **logset ID**
+- Type: String
+- Required: No
 
-Required: no
+tagKey
+- Filter by **tag key**
+- Type: String
+- Required: No
 
-<br><li> logsetId
+tag:tagKey
+- Filter by **tag key-value pair**. The `tagKey` should be replaced with a specified tag key.
+- Type: String
+- Required: No
 
-Filter by **logset ID**.
-Type: String
-
-Required: no
-
-<br><li> tagKey
-
-Filter by **tag key**.
-
-Type: String
-
-Required: no
-
-<br><li> tag:tagKey
-
-Filter by **tag key-value pair**. The `tagKey` should be replaced with a specified tag key.
-Type: String
-
-Required: no
-
-
-Each request can contain up to 10 `Filters` and 5 `Filter.Values`.
+Each request can have up to 10 `Filters` and 5 `Filter.Values`.
      */
     public $Filters;
 
@@ -135,37 +105,27 @@ Each request can contain up to 10 `Filters` and 5 `Filter.Values`.
     public $Limit;
 
     /**
-     * @param array $Filters <br><li> logsetName
+     * @param array $Filters logsetName
+- Filter by **logset name**
+- Type: String
+- Required: No
 
-Filter by **logset name**.
-Type: String
+logsetId
+- Filter by **logset ID**
+- Type: String
+- Required: No
 
-Required: no
+tagKey
+- Filter by **tag key**
+- Type: String
+- Required: No
 
-<br><li> logsetId
+tag:tagKey
+- Filter by **tag key-value pair**. The `tagKey` should be replaced with a specified tag key.
+- Type: String
+- Required: No
 
-Filter by **logset ID**.
-Type: String
-
-Required: no
-
-<br><li> tagKey
-
-Filter by **tag key**.
-
-Type: String
-
-Required: no
-
-<br><li> tag:tagKey
-
-Filter by **tag key-value pair**. The `tagKey` should be replaced with a specified tag key.
-Type: String
-
-Required: no
-
-
-Each request can contain up to 10 `Filters` and 5 `Filter.Values`.
+Each request can have up to 10 `Filters` and 5 `Filter.Values`.
      * @param integer $Offset Page offset. Default value: 0
      * @param integer $Limit Maximum number of entries per page. Default value: 20. Maximum value: 100
      */

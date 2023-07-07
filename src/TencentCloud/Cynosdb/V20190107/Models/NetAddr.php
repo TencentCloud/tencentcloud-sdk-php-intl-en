@@ -60,6 +60,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setWanStatus(string $WanStatus) Set Public network status
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getInstanceGroupId() Obtain Instance group ID Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setInstanceGroupId(string $InstanceGroupId) Set Instance group ID Note: This field may return null, indicating that no valid values can be obtained.
  */
 class NetAddr extends AbstractModel
 {
@@ -124,6 +126,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $WanStatus;
 
     /**
+     * @var string Instance group ID Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $InstanceGroupId;
+
+    /**
      * @param string $Vip Private network IP
 Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param integer $Vport Private network port number
@@ -144,6 +151,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $WanStatus Public network status
 Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $InstanceGroupId Instance group ID Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -196,6 +204,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("WanStatus",$param) and $param["WanStatus"] !== null) {
             $this->WanStatus = $param["WanStatus"];
+        }
+
+        if (array_key_exists("InstanceGroupId",$param) and $param["InstanceGroupId"] !== null) {
+            $this->InstanceGroupId = $param["InstanceGroupId"];
         }
     }
 }

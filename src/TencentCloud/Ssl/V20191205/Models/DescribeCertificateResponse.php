@@ -148,6 +148,18 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method void setTags(array $Tags) Set List of tags
 Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method array getCAEncryptAlgorithms() Obtain All encryption algorithms of a CA certificate
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setCAEncryptAlgorithms(array $CAEncryptAlgorithms) Set All encryption algorithms of a CA certificate
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method array getCACommonNames() Obtain All common names of a CA certificate
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setCACommonNames(array $CACommonNames) Set All common names of a CA certificate
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method array getCAEndTimes() Obtain All expiration time of a CA certificate
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setCAEndTimes(array $CAEndTimes) Set All expiration time of a CA certificate
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -346,6 +358,24 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     public $Tags;
 
     /**
+     * @var array All encryption algorithms of a CA certificate
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $CAEncryptAlgorithms;
+
+    /**
+     * @var array All common names of a CA certificate
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $CACommonNames;
+
+    /**
+     * @var array All expiration time of a CA certificate
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $CAEndTimes;
+
+    /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
@@ -415,6 +445,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param array $Tags List of tags
 Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param array $CAEncryptAlgorithms All encryption algorithms of a CA certificate
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param array $CACommonNames All common names of a CA certificate
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param array $CAEndTimes All expiration time of a CA certificate
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -564,6 +600,18 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                 $obj->deserialize($value);
                 array_push($this->Tags, $obj);
             }
+        }
+
+        if (array_key_exists("CAEncryptAlgorithms",$param) and $param["CAEncryptAlgorithms"] !== null) {
+            $this->CAEncryptAlgorithms = $param["CAEncryptAlgorithms"];
+        }
+
+        if (array_key_exists("CACommonNames",$param) and $param["CACommonNames"] !== null) {
+            $this->CACommonNames = $param["CACommonNames"];
+        }
+
+        if (array_key_exists("CAEndTimes",$param) and $param["CAEndTimes"] !== null) {
+            $this->CAEndTimes = $param["CAEndTimes"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

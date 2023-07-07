@@ -20,17 +20,29 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateCosRecharge response structure.
  *
+ * @method string getId() Obtain cos_recharge record ID
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setId(string $Id) Set cos_recharge record ID
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 class CreateCosRechargeResponse extends AbstractModel
 {
     /**
+     * @var string cos_recharge record ID
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $Id;
+
+    /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
 
     /**
+     * @param string $Id cos_recharge record ID
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -46,6 +58,10 @@ class CreateCosRechargeResponse extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("Id",$param) and $param["Id"] !== null) {
+            $this->Id = $param["Id"];
+        }
+
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
             $this->RequestId = $param["RequestId"];
         }

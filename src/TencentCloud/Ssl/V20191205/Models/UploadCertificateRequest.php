@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCertificatePublicKey(string $CertificatePublicKey) Set Public key of the certificate
  * @method string getCertificatePrivateKey() Obtain Private key content. This parameter is required when the certificate type is SVR, and not required when the certificate type is CA.
  * @method void setCertificatePrivateKey(string $CertificatePrivateKey) Set Private key content. This parameter is required when the certificate type is SVR, and not required when the certificate type is CA.
- * @method string getCertificateType() Obtain Certificate type. `CA`: client certificate; `SVR`: server certificate. The default value is SVR.
- * @method void setCertificateType(string $CertificateType) Set Certificate type. `CA`: client certificate; `SVR`: server certificate. The default value is SVR.
+ * @method string getCertificateType() Obtain Certificate type. Valid values: `CA` (CA certificate) and `SVR` (server certificate). Default value: `SVR`
+ * @method void setCertificateType(string $CertificateType) Set Certificate type. Valid values: `CA` (CA certificate) and `SVR` (server certificate). Default value: `SVR`
  * @method string getAlias() Obtain Alias
  * @method void setAlias(string $Alias) Set Alias
  * @method integer getProjectId() Obtain Project ID
@@ -48,7 +48,7 @@ class UploadCertificateRequest extends AbstractModel
     public $CertificatePrivateKey;
 
     /**
-     * @var string Certificate type. `CA`: client certificate; `SVR`: server certificate. The default value is SVR.
+     * @var string Certificate type. Valid values: `CA` (CA certificate) and `SVR` (server certificate). Default value: `SVR`
      */
     public $CertificateType;
 
@@ -75,7 +75,7 @@ class UploadCertificateRequest extends AbstractModel
     /**
      * @param string $CertificatePublicKey Public key of the certificate
      * @param string $CertificatePrivateKey Private key content. This parameter is required when the certificate type is SVR, and not required when the certificate type is CA.
-     * @param string $CertificateType Certificate type. `CA`: client certificate; `SVR`: server certificate. The default value is SVR.
+     * @param string $CertificateType Certificate type. Valid values: `CA` (CA certificate) and `SVR` (server certificate). Default value: `SVR`
      * @param string $Alias Alias
      * @param integer $ProjectId Project ID
      * @param string $CertificateUse 

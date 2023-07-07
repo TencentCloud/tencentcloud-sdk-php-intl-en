@@ -26,6 +26,10 @@ use TencentCloud\Common\AbstractModel;
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setMetaFields(array $MetaFields) Set List of metadata. Supported metadata types: __SOURCE__, __FILENAME__, __TIMESTAMP__, __HOSTNAME__.
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getJsonType() Obtain JSON format for shipping. `0`: String format; `1`: Structured format.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setJsonType(integer $JsonType) Set JSON format for shipping. `0`: String format; `1`: Structured format.
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class JsonInfo extends AbstractModel
 {
@@ -41,8 +45,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $MetaFields;
 
     /**
+     * @var integer JSON format for shipping. `0`: String format; `1`: Structured format.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $JsonType;
+
+    /**
      * @param boolean $EnableTag Enablement flag
      * @param array $MetaFields List of metadata. Supported metadata types: __SOURCE__, __FILENAME__, __TIMESTAMP__, __HOSTNAME__.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $JsonType JSON format for shipping. `0`: String format; `1`: Structured format.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
@@ -64,6 +76,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("MetaFields",$param) and $param["MetaFields"] !== null) {
             $this->MetaFields = $param["MetaFields"];
+        }
+
+        if (array_key_exists("JsonType",$param) and $param["JsonType"] !== null) {
+            $this->JsonType = $param["JsonType"];
         }
     }
 }

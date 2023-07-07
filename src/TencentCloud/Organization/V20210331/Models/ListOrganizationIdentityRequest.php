@@ -20,24 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ListOrganizationIdentity request structure.
  *
- * @method integer getOffset() Obtain Offset.
- * @method void setOffset(integer $Offset) Set Offset.
- * @method integer getLimit() Obtain Maximum number of returned results. Maximum value: `50`.
- * @method void setLimit(integer $Limit) Set Maximum number of returned results. Maximum value: `50`.
+ * @method integer getOffset() Obtain Offset.  It must be an integer multiple of the value of `Limit`.  Default value: `0`.
+ * @method void setOffset(integer $Offset) Set Offset.  It must be an integer multiple of the value of `Limit`.  Default value: `0`.
+ * @method integer getLimit() Obtain The limit for the number of query results.  Value range:  1-50.  Default value:  `10`.
+ * @method void setLimit(integer $Limit) Set The limit for the number of query results.  Value range:  1-50.  Default value:  `10`.
  * @method string getSearchKey() Obtain Search by name.
  * @method void setSearchKey(string $SearchKey) Set Search by name.
  * @method integer getIdentityId() Obtain Search by identity ID.
  * @method void setIdentityId(integer $IdentityId) Set Search by identity ID.
+ * @method integer getIdentityType() Obtain Identity type.  Valid values: `1` (Preset), `2` (Custom).
+ * @method void setIdentityType(integer $IdentityType) Set Identity type.  Valid values: `1` (Preset), `2` (Custom).
  */
 class ListOrganizationIdentityRequest extends AbstractModel
 {
     /**
-     * @var integer Offset.
+     * @var integer Offset.  It must be an integer multiple of the value of `Limit`.  Default value: `0`.
      */
     public $Offset;
 
     /**
-     * @var integer Maximum number of returned results. Maximum value: `50`.
+     * @var integer The limit for the number of query results.  Value range:  1-50.  Default value:  `10`.
      */
     public $Limit;
 
@@ -52,10 +54,16 @@ class ListOrganizationIdentityRequest extends AbstractModel
     public $IdentityId;
 
     /**
-     * @param integer $Offset Offset.
-     * @param integer $Limit Maximum number of returned results. Maximum value: `50`.
+     * @var integer Identity type.  Valid values: `1` (Preset), `2` (Custom).
+     */
+    public $IdentityType;
+
+    /**
+     * @param integer $Offset Offset.  It must be an integer multiple of the value of `Limit`.  Default value: `0`.
+     * @param integer $Limit The limit for the number of query results.  Value range:  1-50.  Default value:  `10`.
      * @param string $SearchKey Search by name.
      * @param integer $IdentityId Search by identity ID.
+     * @param integer $IdentityType Identity type.  Valid values: `1` (Preset), `2` (Custom).
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class ListOrganizationIdentityRequest extends AbstractModel
 
         if (array_key_exists("IdentityId",$param) and $param["IdentityId"] !== null) {
             $this->IdentityId = $param["IdentityId"];
+        }
+
+        if (array_key_exists("IdentityType",$param) and $param["IdentityType"] !== null) {
+            $this->IdentityType = $param["IdentityType"];
         }
     }
 }

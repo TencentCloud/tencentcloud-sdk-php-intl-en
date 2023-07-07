@@ -62,6 +62,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: This field may return `null`, indicating that no valid values can be obtained.
  * @method void setProjectStatus(integer $ProjectStatus) Set Project status (`1`: Creating; `2`: Running; `3`: Abnormal; `4`: Restarting; `5`: Stopping; `6`: Stopped; `7`: Terminating; `8`: Terminated)
 Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method string getAccessPoint() Obtain Log access point, which can be ignored. 
+Note:  This field may return null, indicating that no valid values can be obtained.
+ * @method void setAccessPoint(string $AccessPoint) Set Log access point, which can be ignored. 
+Note:  This field may return null, indicating that no valid values can be obtained.
  */
 class RumProject extends AbstractModel
 {
@@ -151,6 +155,12 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     public $ProjectStatus;
 
     /**
+     * @var string Log access point, which can be ignored. 
+Note:  This field may return null, indicating that no valid values can be obtained.
+     */
+    public $AccessPoint;
+
+    /**
      * @param string $Name Project name
      * @param string $Creator Creator ID
      * @param string $InstanceID Instance ID
@@ -172,6 +182,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param integer $ProjectStatus Project status (`1`: Creating; `2`: Running; `3`: Abnormal; `4`: Restarting; `5`: Stopping; `6`: Stopped; `7`: Terminating; `8`: Terminated)
 Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param string $AccessPoint Log access point, which can be ignored. 
+Note:  This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -248,6 +260,10 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 
         if (array_key_exists("ProjectStatus",$param) and $param["ProjectStatus"] !== null) {
             $this->ProjectStatus = $param["ProjectStatus"];
+        }
+
+        if (array_key_exists("AccessPoint",$param) and $param["AccessPoint"] !== null) {
+            $this->AccessPoint = $param["AccessPoint"];
         }
     }
 }

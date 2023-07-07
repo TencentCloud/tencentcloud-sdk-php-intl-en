@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getStatus() Obtain Voice Chat status. Valid values: `open`, `close`.
  * @method void setStatus(string $Status) Set Voice Chat status. Valid values: `open`, `close`.
- * @method string getQuality() Obtain Voice Chat sound quality. Valid value: `high`.
- * @method void setQuality(string $Quality) Set Voice Chat sound quality. Valid value: `high`.
+ * @method string getQuality() Obtain Voice Chat sound quality type. Valid values: `high` (HD), `ordinary` (SD).
+ * @method void setQuality(string $Quality) Set Voice Chat sound quality type. Valid values: `high` (HD), `ordinary` (SD).
  */
 class RealtimeSpeechConf extends AbstractModel
 {
@@ -33,13 +33,13 @@ class RealtimeSpeechConf extends AbstractModel
     public $Status;
 
     /**
-     * @var string Voice Chat sound quality. Valid value: `high`.
+     * @var string Voice Chat sound quality type. Valid values: `high` (HD), `ordinary` (SD).
      */
     public $Quality;
 
     /**
      * @param string $Status Voice Chat status. Valid values: `open`, `close`.
-     * @param string $Quality Voice Chat sound quality. Valid value: `high`.
+     * @param string $Quality Voice Chat sound quality type. Valid values: `high` (HD), `ordinary` (SD).
      */
     function __construct()
     {
