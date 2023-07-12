@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeNetDetects request structure.
  *
- * @method array getNetDetectIds() Obtain The array of network detection instance `IDs`, such as [`netd-12345678`].
- * @method void setNetDetectIds(array $NetDetectIds) Set The array of network detection instance `IDs`, such as [`netd-12345678`].
+ * @method array getNetDetectIds() Obtain The array of network probe IDs, such as [`netd-12345678`].
+ * @method void setNetDetectIds(array $NetDetectIds) Set The array of network probe IDs, such as [`netd-12345678`].
  * @method array getFilters() Obtain Filter conditions. `NetDetectIds` and `Filters` cannot be specified at the same time.
 <li>vpc-id - String - (Filter condition) The VPC instance ID, such as vpc-12345678.</li>
 <li>net-detect-id - String - (Filter condition) The network detection instance ID, such as netd-12345678.</li>
@@ -40,7 +40,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeNetDetectsRequest extends AbstractModel
 {
     /**
-     * @var array The array of network detection instance `IDs`, such as [`netd-12345678`].
+     * @var array The array of network probe IDs, such as [`netd-12345678`].
      */
     public $NetDetectIds;
 
@@ -64,7 +64,7 @@ class DescribeNetDetectsRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @param array $NetDetectIds The array of network detection instance `IDs`, such as [`netd-12345678`].
+     * @param array $NetDetectIds The array of network probe IDs, such as [`netd-12345678`].
      * @param array $Filters Filter conditions. `NetDetectIds` and `Filters` cannot be specified at the same time.
 <li>vpc-id - String - (Filter condition) The VPC instance ID, such as vpc-12345678.</li>
 <li>net-detect-id - String - (Filter condition) The network detection instance ID, such as netd-12345678.</li>

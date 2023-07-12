@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceId(string $InstanceId) Set CVM instance ID.
  * @method array getPrivateIpAddresses() Obtain The information of the specified private IPs. You can specify a maximum of 10 IPs each time.
  * @method void setPrivateIpAddresses(array $PrivateIpAddresses) Set The information of the specified private IPs. You can specify a maximum of 10 IPs each time.
- * @method integer getSecondaryPrivateIpAddressCount() Obtain The number of private IP addresses you can apply for. The total number of private IP addresses cannot exceed the quota.
- * @method void setSecondaryPrivateIpAddressCount(integer $SecondaryPrivateIpAddressCount) Set The number of private IP addresses you can apply for. The total number of private IP addresses cannot exceed the quota.
+ * @method integer getSecondaryPrivateIpAddressCount() Obtain The number of private IP addresses you apply for. The total number of private IP addresses cannot exceed the quota.
+ * @method void setSecondaryPrivateIpAddressCount(integer $SecondaryPrivateIpAddressCount) Set The number of private IP addresses you apply for. The total number of private IP addresses cannot exceed the quota.
  * @method string getQosLevel() Obtain IP service level. It’s used in combination with `SecondaryPrivateIpAddressCount`. Values: `PT` (Gold), `AU` (Silver), `AG` (Bronze) and `DEFAULT`
  * @method void setQosLevel(string $QosLevel) Set IP service level. It’s used in combination with `SecondaryPrivateIpAddressCount`. Values: `PT` (Gold), `AU` (Silver), `AG` (Bronze) and `DEFAULT`
  * @method array getSecurityGroupIds() Obtain The security group to be bound with, such as ['sg-1dd51d'].
@@ -71,7 +71,7 @@ class CreateAndAttachNetworkInterfaceRequest extends AbstractModel
     public $PrivateIpAddresses;
 
     /**
-     * @var integer The number of private IP addresses you can apply for. The total number of private IP addresses cannot exceed the quota.
+     * @var integer The number of private IP addresses you apply for. The total number of private IP addresses cannot exceed the quota.
      */
     public $SecondaryPrivateIpAddressCount;
 
@@ -106,7 +106,7 @@ class CreateAndAttachNetworkInterfaceRequest extends AbstractModel
      * @param string $SubnetId The subnet instance ID of the ENI, such as 'subnet-0ap8nwca'.
      * @param string $InstanceId CVM instance ID.
      * @param array $PrivateIpAddresses The information of the specified private IPs. You can specify a maximum of 10 IPs each time.
-     * @param integer $SecondaryPrivateIpAddressCount The number of private IP addresses you can apply for. The total number of private IP addresses cannot exceed the quota.
+     * @param integer $SecondaryPrivateIpAddressCount The number of private IP addresses you apply for. The total number of private IP addresses cannot exceed the quota.
      * @param string $QosLevel IP service level. It’s used in combination with `SecondaryPrivateIpAddressCount`. Values: `PT` (Gold), `AU` (Silver), `AG` (Bronze) and `DEFAULT`
      * @param array $SecurityGroupIds The security group to be bound with, such as ['sg-1dd51d'].
      * @param string $NetworkInterfaceDescription The ENI description. You can enter any information within 60 characters.

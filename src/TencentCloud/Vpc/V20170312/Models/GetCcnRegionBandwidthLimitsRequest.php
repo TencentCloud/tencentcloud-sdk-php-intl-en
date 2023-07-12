@@ -30,10 +30,10 @@ use TencentCloud\Common\AbstractModel;
 <li>dregion - String - (Filter condition) Filter by the destination region, such as 'ap-shanghai-bm'.</li>
  * @method string getSortedBy() Obtain The sorting condition. Valid values: `BandwidthLimit` and `ExpireTime`.
  * @method void setSortedBy(string $SortedBy) Set The sorting condition. Valid values: `BandwidthLimit` and `ExpireTime`.
- * @method integer getOffset() Obtain The offset.
- * @method void setOffset(integer $Offset) Set The offset.
- * @method integer getLimit() Obtain The returned quantity.
- * @method void setLimit(integer $Limit) Set The returned quantity.
+ * @method integer getOffset() Obtain Offset
+ * @method void setOffset(integer $Offset) Set Offset
+ * @method integer getLimit() Obtain Quantity of returned items
+ * @method void setLimit(integer $Limit) Set Quantity of returned items
  * @method string getOrderBy() Obtain In ascending or descending order. Valid values: 'ASC' and 'DESC'.
  * @method void setOrderBy(string $OrderBy) Set In ascending or descending order. Valid values: 'ASC' and 'DESC'.
  */
@@ -57,12 +57,12 @@ class GetCcnRegionBandwidthLimitsRequest extends AbstractModel
     public $SortedBy;
 
     /**
-     * @var integer The offset.
+     * @var integer Offset
      */
     public $Offset;
 
     /**
-     * @var integer The returned quantity.
+     * @var integer Quantity of returned items
      */
     public $Limit;
 
@@ -77,8 +77,8 @@ class GetCcnRegionBandwidthLimitsRequest extends AbstractModel
 <li>sregion - String - (Filter condition) Filter by the source region, such as 'ap-guangzhou'.</li>
 <li>dregion - String - (Filter condition) Filter by the destination region, such as 'ap-shanghai-bm'.</li>
      * @param string $SortedBy The sorting condition. Valid values: `BandwidthLimit` and `ExpireTime`.
-     * @param integer $Offset The offset.
-     * @param integer $Limit The returned quantity.
+     * @param integer $Offset Offset
+     * @param integer $Limit Quantity of returned items
      * @param string $OrderBy In ascending or descending order. Valid values: 'ASC' and 'DESC'.
      */
     function __construct()

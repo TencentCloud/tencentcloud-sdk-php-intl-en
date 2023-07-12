@@ -20,26 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Default VPC and subnet
  *
- * @method string getVpcId() Obtain Default VpcId
- * @method void setVpcId(string $VpcId) Set Default VpcId
- * @method string getSubnetId() Obtain Default SubnetId
- * @method void setSubnetId(string $SubnetId) Set Default SubnetId
+ * @method string getVpcId() Obtain Default VPC ID
+ * @method void setVpcId(string $VpcId) Set Default VPC ID
+ * @method string getSubnetId() Obtain Default subnet ID
+ * @method void setSubnetId(string $SubnetId) Set Default subnet ID
+ * @method string getVpcName() Obtain Default VPC name
+ * @method void setVpcName(string $VpcName) Set Default VPC name
+ * @method string getSubnetName() Obtain Default subnet name
+ * @method void setSubnetName(string $SubnetName) Set Default subnet name
+ * @method string getCidrBlock() Obtain Default subnet IP range
+ * @method void setCidrBlock(string $CidrBlock) Set Default subnet IP range
  */
 class DefaultVpcSubnet extends AbstractModel
 {
     /**
-     * @var string Default VpcId
+     * @var string Default VPC ID
      */
     public $VpcId;
 
     /**
-     * @var string Default SubnetId
+     * @var string Default subnet ID
      */
     public $SubnetId;
 
     /**
-     * @param string $VpcId Default VpcId
-     * @param string $SubnetId Default SubnetId
+     * @var string Default VPC name
+     */
+    public $VpcName;
+
+    /**
+     * @var string Default subnet name
+     */
+    public $SubnetName;
+
+    /**
+     * @var string Default subnet IP range
+     */
+    public $CidrBlock;
+
+    /**
+     * @param string $VpcId Default VPC ID
+     * @param string $SubnetId Default subnet ID
+     * @param string $VpcName Default VPC name
+     * @param string $SubnetName Default subnet name
+     * @param string $CidrBlock Default subnet IP range
      */
     function __construct()
     {
@@ -60,6 +84,18 @@ class DefaultVpcSubnet extends AbstractModel
 
         if (array_key_exists("SubnetId",$param) and $param["SubnetId"] !== null) {
             $this->SubnetId = $param["SubnetId"];
+        }
+
+        if (array_key_exists("VpcName",$param) and $param["VpcName"] !== null) {
+            $this->VpcName = $param["VpcName"];
+        }
+
+        if (array_key_exists("SubnetName",$param) and $param["SubnetName"] !== null) {
+            $this->SubnetName = $param["SubnetName"];
+        }
+
+        if (array_key_exists("CidrBlock",$param) and $param["CidrBlock"] !== null) {
+            $this->CidrBlock = $param["CidrBlock"];
         }
     }
 }

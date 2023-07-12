@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateNetDetect request structure.
  *
- * @method string getVpcId() Obtain The `ID` of a `VPC` instance, such as `vpc-12345678`.
- * @method void setVpcId(string $VpcId) Set The `ID` of a `VPC` instance, such as `vpc-12345678`.
+ * @method string getVpcId() Obtain The ID of a VPC instance, such as `vpc-12345678`.
+ * @method void setVpcId(string $VpcId) Set The ID of a VPC instance, such as `vpc-12345678`.
  * @method string getSubnetId() Obtain The ID of a subnet instance, such as subnet-12345678.
  * @method void setSubnetId(string $SubnetId) Set The ID of a subnet instance, such as subnet-12345678.
  * @method string getNetDetectName() Obtain The name of a network detection instance. The maximum length is 60 characters.
@@ -30,39 +30,43 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDetectDestinationIp(array $DetectDestinationIp) Set The array of detection destination IPv4 addresses, which contains at most two IP addresses.
  * @method string getNextHopType() Obtain Type of the next hop. Valid values:
 `VPN`: VPN gateway;
-`DIRECTCONNECT`: direct connect gateway;
-`PEERCONNECTION`: peering connection;
+`DIRECTCONNECT`: Direct connect gateway;
+`PEERCONNECTION`: Peering connection;
 `NAT`: NAT gateway;
-`NORMAL_CVM`: normal CVM;
-`CCN`: CCN gateway.
+`NORMAL_CVM`: CVM instance;
+`CCN`: CCN instance;
+`NONEXTHOP`: No next hop.
  * @method void setNextHopType(string $NextHopType) Set Type of the next hop. Valid values:
 `VPN`: VPN gateway;
-`DIRECTCONNECT`: direct connect gateway;
-`PEERCONNECTION`: peering connection;
+`DIRECTCONNECT`: Direct connect gateway;
+`PEERCONNECTION`: Peering connection;
 `NAT`: NAT gateway;
-`NORMAL_CVM`: normal CVM;
-`CCN`: CCN gateway.
- * @method string getNextHopDestination() Obtain Next-hop destination gateway. Its value is determined by `NextHopType`.
-If `NextHopType` is set to `VPN`, the parameter value is the VPN gateway ID, such as `vpngw-12345678`.
-If `NextHopType` is set to `DIRECTCONNECT`, the parameter value is the direct connect gateway ID, such as `dcg-12345678`.
-If `NextHopType` is set to `PEERCONNECTION`, the parameter value is the peering connection ID, such as `pcx-12345678`.
-If `NextHopType` is set to `NAT`, the parameter value is the NAT gateway ID, such as `nat-12345678`.
-If `NextHopType` is set to `NORMAL_CVM`, the parameter value is the IPv4 address of the CVM instance, such as `10.0.0.12`.
-If `NextHopType` is set to `CCN`, the parameter value is the CCN ID, such as `ccn-12345678`.
- * @method void setNextHopDestination(string $NextHopDestination) Set Next-hop destination gateway. Its value is determined by `NextHopType`.
-If `NextHopType` is set to `VPN`, the parameter value is the VPN gateway ID, such as `vpngw-12345678`.
-If `NextHopType` is set to `DIRECTCONNECT`, the parameter value is the direct connect gateway ID, such as `dcg-12345678`.
-If `NextHopType` is set to `PEERCONNECTION`, the parameter value is the peering connection ID, such as `pcx-12345678`.
-If `NextHopType` is set to `NAT`, the parameter value is the NAT gateway ID, such as `nat-12345678`.
-If `NextHopType` is set to `NORMAL_CVM`, the parameter value is the IPv4 address of the CVM instance, such as `10.0.0.12`.
-If `NextHopType` is set to `CCN`, the parameter value is the CCN ID, such as `ccn-12345678`.
+`NORMAL_CVM`: CVM instance;
+`CCN`: CCN instance;
+`NONEXTHOP`: No next hop.
+ * @method string getNextHopDestination() Obtain ID of the next-hop gateway. 
+`NextHopType` = `VPN`: VPN gateway ID, such as `vpngw-12345678`.
+`NextHopType` = `DIRECTCONNECT`: Direct connect gateway ID, such as `dcg-12345678`.
+`NextHopType` = `PEERCONNECTION`: Peering connection ID, such as `pcx-12345678`.
+`NextHopType` = `NAT`: NAT gateway ID, such as `nat-12345678`.
+`NextHopType` = `NORMAL_CVM`: CVM IPv4 address, such as `10.0.0.12`.
+`NextHopType` = `CCN`: CCN instance ID, such as `ccn-12345678`.
+`NextHopType` = `NONEXTHOP`: No next hop.
+ * @method void setNextHopDestination(string $NextHopDestination) Set ID of the next-hop gateway. 
+`NextHopType` = `VPN`: VPN gateway ID, such as `vpngw-12345678`.
+`NextHopType` = `DIRECTCONNECT`: Direct connect gateway ID, such as `dcg-12345678`.
+`NextHopType` = `PEERCONNECTION`: Peering connection ID, such as `pcx-12345678`.
+`NextHopType` = `NAT`: NAT gateway ID, such as `nat-12345678`.
+`NextHopType` = `NORMAL_CVM`: CVM IPv4 address, such as `10.0.0.12`.
+`NextHopType` = `CCN`: CCN instance ID, such as `ccn-12345678`.
+`NextHopType` = `NONEXTHOP`: No next hop.
  * @method string getNetDetectDescription() Obtain Network detection description.
  * @method void setNetDetectDescription(string $NetDetectDescription) Set Network detection description.
  */
 class CreateNetDetectRequest extends AbstractModel
 {
     /**
-     * @var string The `ID` of a `VPC` instance, such as `vpc-12345678`.
+     * @var string The ID of a VPC instance, such as `vpc-12345678`.
      */
     public $VpcId;
 
@@ -84,22 +88,24 @@ class CreateNetDetectRequest extends AbstractModel
     /**
      * @var string Type of the next hop. Valid values:
 `VPN`: VPN gateway;
-`DIRECTCONNECT`: direct connect gateway;
-`PEERCONNECTION`: peering connection;
+`DIRECTCONNECT`: Direct connect gateway;
+`PEERCONNECTION`: Peering connection;
 `NAT`: NAT gateway;
-`NORMAL_CVM`: normal CVM;
-`CCN`: CCN gateway.
+`NORMAL_CVM`: CVM instance;
+`CCN`: CCN instance;
+`NONEXTHOP`: No next hop.
      */
     public $NextHopType;
 
     /**
-     * @var string Next-hop destination gateway. Its value is determined by `NextHopType`.
-If `NextHopType` is set to `VPN`, the parameter value is the VPN gateway ID, such as `vpngw-12345678`.
-If `NextHopType` is set to `DIRECTCONNECT`, the parameter value is the direct connect gateway ID, such as `dcg-12345678`.
-If `NextHopType` is set to `PEERCONNECTION`, the parameter value is the peering connection ID, such as `pcx-12345678`.
-If `NextHopType` is set to `NAT`, the parameter value is the NAT gateway ID, such as `nat-12345678`.
-If `NextHopType` is set to `NORMAL_CVM`, the parameter value is the IPv4 address of the CVM instance, such as `10.0.0.12`.
-If `NextHopType` is set to `CCN`, the parameter value is the CCN ID, such as `ccn-12345678`.
+     * @var string ID of the next-hop gateway. 
+`NextHopType` = `VPN`: VPN gateway ID, such as `vpngw-12345678`.
+`NextHopType` = `DIRECTCONNECT`: Direct connect gateway ID, such as `dcg-12345678`.
+`NextHopType` = `PEERCONNECTION`: Peering connection ID, such as `pcx-12345678`.
+`NextHopType` = `NAT`: NAT gateway ID, such as `nat-12345678`.
+`NextHopType` = `NORMAL_CVM`: CVM IPv4 address, such as `10.0.0.12`.
+`NextHopType` = `CCN`: CCN instance ID, such as `ccn-12345678`.
+`NextHopType` = `NONEXTHOP`: No next hop.
      */
     public $NextHopDestination;
 
@@ -109,24 +115,26 @@ If `NextHopType` is set to `CCN`, the parameter value is the CCN ID, such as `cc
     public $NetDetectDescription;
 
     /**
-     * @param string $VpcId The `ID` of a `VPC` instance, such as `vpc-12345678`.
+     * @param string $VpcId The ID of a VPC instance, such as `vpc-12345678`.
      * @param string $SubnetId The ID of a subnet instance, such as subnet-12345678.
      * @param string $NetDetectName The name of a network detection instance. The maximum length is 60 characters.
      * @param array $DetectDestinationIp The array of detection destination IPv4 addresses, which contains at most two IP addresses.
      * @param string $NextHopType Type of the next hop. Valid values:
 `VPN`: VPN gateway;
-`DIRECTCONNECT`: direct connect gateway;
-`PEERCONNECTION`: peering connection;
+`DIRECTCONNECT`: Direct connect gateway;
+`PEERCONNECTION`: Peering connection;
 `NAT`: NAT gateway;
-`NORMAL_CVM`: normal CVM;
-`CCN`: CCN gateway.
-     * @param string $NextHopDestination Next-hop destination gateway. Its value is determined by `NextHopType`.
-If `NextHopType` is set to `VPN`, the parameter value is the VPN gateway ID, such as `vpngw-12345678`.
-If `NextHopType` is set to `DIRECTCONNECT`, the parameter value is the direct connect gateway ID, such as `dcg-12345678`.
-If `NextHopType` is set to `PEERCONNECTION`, the parameter value is the peering connection ID, such as `pcx-12345678`.
-If `NextHopType` is set to `NAT`, the parameter value is the NAT gateway ID, such as `nat-12345678`.
-If `NextHopType` is set to `NORMAL_CVM`, the parameter value is the IPv4 address of the CVM instance, such as `10.0.0.12`.
-If `NextHopType` is set to `CCN`, the parameter value is the CCN ID, such as `ccn-12345678`.
+`NORMAL_CVM`: CVM instance;
+`CCN`: CCN instance;
+`NONEXTHOP`: No next hop.
+     * @param string $NextHopDestination ID of the next-hop gateway. 
+`NextHopType` = `VPN`: VPN gateway ID, such as `vpngw-12345678`.
+`NextHopType` = `DIRECTCONNECT`: Direct connect gateway ID, such as `dcg-12345678`.
+`NextHopType` = `PEERCONNECTION`: Peering connection ID, such as `pcx-12345678`.
+`NextHopType` = `NAT`: NAT gateway ID, such as `nat-12345678`.
+`NextHopType` = `NORMAL_CVM`: CVM IPv4 address, such as `10.0.0.12`.
+`NextHopType` = `CCN`: CCN instance ID, such as `ccn-12345678`.
+`NextHopType` = `NONEXTHOP`: No next hop.
      * @param string $NetDetectDescription Network detection description.
      */
     function __construct()

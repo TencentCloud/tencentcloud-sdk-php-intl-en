@@ -20,26 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Address information
  *
- * @method string getFrom() Obtain Start address
- * @method void setFrom(string $From) Set Start address
- * @method string getTo() Obtain End address
- * @method void setTo(string $To) Set End address
+ * @method string getAddressTemplateId() Obtain ipm-xxxxxxxx
+ * @method void setAddressTemplateId(string $AddressTemplateId) Set ipm-xxxxxxxx
+ * @method string getAddressTemplateName() Obtain IP template name
+ * @method void setAddressTemplateName(string $AddressTemplateName) Set IP template name
+ * @method string getFrom() Obtain Disused
+ * @method void setFrom(string $From) Set Disused
+ * @method string getTo() Obtain Disused
+ * @method void setTo(string $To) Set Disused
  */
 class AddressTemplateItem extends AbstractModel
 {
     /**
-     * @var string Start address
+     * @var string ipm-xxxxxxxx
+     */
+    public $AddressTemplateId;
+
+    /**
+     * @var string IP template name
+     */
+    public $AddressTemplateName;
+
+    /**
+     * @var string Disused
      */
     public $From;
 
     /**
-     * @var string End address
+     * @var string Disused
      */
     public $To;
 
     /**
-     * @param string $From Start address
-     * @param string $To End address
+     * @param string $AddressTemplateId ipm-xxxxxxxx
+     * @param string $AddressTemplateName IP template name
+     * @param string $From Disused
+     * @param string $To Disused
      */
     function __construct()
     {
@@ -54,6 +70,14 @@ class AddressTemplateItem extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("AddressTemplateId",$param) and $param["AddressTemplateId"] !== null) {
+            $this->AddressTemplateId = $param["AddressTemplateId"];
+        }
+
+        if (array_key_exists("AddressTemplateName",$param) and $param["AddressTemplateName"] !== null) {
+            $this->AddressTemplateName = $param["AddressTemplateName"];
+        }
+
         if (array_key_exists("From",$param) and $param["From"] !== null) {
             $this->From = $param["From"];
         }

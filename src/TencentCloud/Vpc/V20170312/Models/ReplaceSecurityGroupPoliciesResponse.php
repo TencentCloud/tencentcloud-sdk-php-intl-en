@@ -18,39 +18,19 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeVpnGatewayRoutes response structure.
+ * ReplaceSecurityGroupPolicies response structure.
  *
- * @method array getRoutes() Obtain Destination routes of the VPN gateway
- * @method void setRoutes(array $Routes) Set Destination routes of the VPN gateway
- * @method integer getTotalCount() Obtain 
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setTotalCount(integer $TotalCount) Set 
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
-class DescribeVpnGatewayRoutesResponse extends AbstractModel
+class ReplaceSecurityGroupPoliciesResponse extends AbstractModel
 {
-    /**
-     * @var array Destination routes of the VPN gateway
-     */
-    public $Routes;
-
-    /**
-     * @var integer 
-Note: This field may return null, indicating that no valid values can be obtained.
-     */
-    public $TotalCount;
-
     /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
 
     /**
-     * @param array $Routes Destination routes of the VPN gateway
-     * @param integer $TotalCount 
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -66,19 +46,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Routes",$param) and $param["Routes"] !== null) {
-            $this->Routes = [];
-            foreach ($param["Routes"] as $key => $value){
-                $obj = new VpnGatewayRoute();
-                $obj->deserialize($value);
-                array_push($this->Routes, $obj);
-            }
-        }
-
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
-        }
-
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
             $this->RequestId = $param["RequestId"];
         }

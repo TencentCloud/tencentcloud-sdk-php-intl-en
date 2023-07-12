@@ -101,25 +101,25 @@ This API is completed asynchronously. If you need to query the execution result 
 * You can add tags to a CCN instance upon the creation. The tags are added successfully if they are listed in the response.
 * There is a quota of CCN instances for each account. For more information, see product documentation. To increase the quota, please submit a ticket.
  * @method Models\CreateCustomerGatewayResponse CreateCustomerGateway(Models\CreateCustomerGatewayRequest $req) This API (CreateCustomerGateway) is used to create customer gateways.
- * @method Models\CreateDefaultVpcResponse CreateDefaultVpc(Models\CreateDefaultVpcRequest $req) This API is used to create a default VPC.
+ * @method Models\CreateDefaultVpcResponse CreateDefaultVpc(Models\CreateDefaultVpcRequest $req) This API is used to create a VPC with default settings.
 
-The default VPC is suitable for getting started with and launching public instances, and it can be used like any other VPCs. To create a standard VPC, for which you need to specify a VPC name, VPC IP range, subnet IP range, and subnet availability zone, use the regular CreateVpc API.
+To create a VPC with custom settings, such as VPC name, IP range, subnet IP range, and subnet availability zone, use `CreateVpc` instead.
 
-Under normal circumstances, this API may not create a default VPC. It depends on the network attributes (DescribeAccountAttributes) of your account.
-* If both basic network and VPC are supported, the returned VpcId is 0.
+This API may not create a default VPC. It depends on the network attributes (`DescribeAccountAttributes`) of your account.
+* If both basic network and VPC are supported, the returned `VpcId` is 0.
 * If only VPC is supported, the default VPC information is returned.
 
-You can also use the Force parameter to forcibly return a default VPC.
+You can also use the `Force` parameter to forcibly return a default VPC.
  * @method Models\CreateDirectConnectGatewayResponse CreateDirectConnectGateway(Models\CreateDirectConnectGatewayRequest $req) This API is used to create a direct connect gateway.
  * @method Models\CreateDirectConnectGatewayCcnRoutesResponse CreateDirectConnectGatewayCcnRoutes(Models\CreateDirectConnectGatewayCcnRoutesRequest $req) This API (CreateDirectConnectGatewayCcnRoutes) is used to create the CCN route (IDC IP range) of a Direct Connect gateway.
  * @method Models\CreateFlowLogResponse CreateFlowLog(Models\CreateFlowLogRequest $req) This API is used to create a flow log.
- * @method Models\CreateHaVipResponse CreateHaVip(Models\CreateHaVipRequest $req) This API (CreateHaVip) is used to create a highly available virtual IP (HAVIP)
+ * @method Models\CreateHaVipResponse CreateHaVip(Models\CreateHaVipRequest $req) This API is used to create a highly available virtual IP (HAVIP).
  * @method Models\CreateLocalGatewayResponse CreateLocalGateway(Models\CreateLocalGatewayRequest $req) This API is used to create a local gateway for a CDC instance.
  * @method Models\CreateNatGatewayResponse CreateNatGateway(Models\CreateNatGatewayRequest $req) This API is used to create a NAT Gateway.
 Before taking actions on a NAT gateway, ensure that it has been successfully created, namely, the `State` field in the response of the `DescribeNatGateway` API is `AVAILABLE`.
  * @method Models\CreateNatGatewayDestinationIpPortTranslationNatRuleResponse CreateNatGatewayDestinationIpPortTranslationNatRule(Models\CreateNatGatewayDestinationIpPortTranslationNatRuleRequest $req) This API is used to create the port forwarding rules of a NAT gateway.
  * @method Models\CreateNatGatewaySourceIpTranslationNatRuleResponse CreateNatGatewaySourceIpTranslationNatRule(Models\CreateNatGatewaySourceIpTranslationNatRuleRequest $req) This API is used to create SNAT rules for a NAT gateway.
- * @method Models\CreateNetDetectResponse CreateNetDetect(Models\CreateNetDetectRequest $req) This API is used to create a network detection instance.
+ * @method Models\CreateNetDetectResponse CreateNetDetect(Models\CreateNetDetectRequest $req) This API is used to create a network probe.
  * @method Models\CreateNetworkAclResponse CreateNetworkAcl(Models\CreateNetworkAclRequest $req) This API is used to create a <a href="https://intl.cloud.tencent.com/document/product/215/20088?from_cn_redirect=1">network ACL</a>.
 * The inbound and outbound rules for a new network ACL are "Deny All" by default. You need to call `ModifyNetworkAclEntries` to set rules for the new network ACL as needed.
  * @method Models\CreateNetworkAclQuintupleEntriesResponse CreateNetworkAclQuintupleEntries(Models\CreateNetworkAclQuintupleEntriesRequest $req) This API is used to add one or more in/outbound rules of the network ACL quintuple.
@@ -220,7 +220,7 @@ This API is completed asynchronously. If you need to query the execution result 
 When a NAT gateway is deleted, all routes containing this gateway are deleted automatically, and the elastic IP is unbound.
  * @method Models\DeleteNatGatewayDestinationIpPortTranslationNatRuleResponse DeleteNatGatewayDestinationIpPortTranslationNatRule(Models\DeleteNatGatewayDestinationIpPortTranslationNatRuleRequest $req) This API is used to delete the port forwarding rule of a NAT gateway.
  * @method Models\DeleteNatGatewaySourceIpTranslationNatRuleResponse DeleteNatGatewaySourceIpTranslationNatRule(Models\DeleteNatGatewaySourceIpTranslationNatRuleRequest $req) This API is used to delete a SNAT forwarding rule of a NAT gateway.
- * @method Models\DeleteNetDetectResponse DeleteNetDetect(Models\DeleteNetDetectRequest $req) This API (DeleteNetDetect) is used to delete a network detection instance.
+ * @method Models\DeleteNetDetectResponse DeleteNetDetect(Models\DeleteNetDetectRequest $req) This API is used to delete a network probe.
  * @method Models\DeleteNetworkAclResponse DeleteNetworkAcl(Models\DeleteNetworkAclRequest $req) This API is used to delete a network ACL.
  * @method Models\DeleteNetworkAclQuintupleEntriesResponse DeleteNetworkAclQuintupleEntries(Models\DeleteNetworkAclQuintupleEntriesRequest $req) This API is used to delete specified in/outbound rules of the network ACL quintuple. In the `NetworkAclQuintupleEntrySet` parameters, `NetworkAclQuintupleEntryId` is required for `NetworkAclQuintupleEntry`.
  * @method Models\DeleteNetworkInterfaceResponse DeleteNetworkInterface(Models\DeleteNetworkInterfaceRequest $req) This API is used to delete an ENI.
@@ -251,7 +251,7 @@ Before deleting a subnet, you need to remove all resources in the subnet, includ
  * @method Models\DeleteVpcEndPointServiceWhiteListResponse DeleteVpcEndPointServiceWhiteList(Models\DeleteVpcEndPointServiceWhiteListRequest $req) This API is used to delete the endpoint service allowlist.
  * @method Models\DeleteVpnConnectionResponse DeleteVpnConnection(Models\DeleteVpnConnectionRequest $req) This API is used to delete a VPN tunnel.
  * @method Models\DeleteVpnGatewayResponse DeleteVpnGateway(Models\DeleteVpnGatewayRequest $req) This API (DeleteVpnGateway) is used to delete a VPN gateway. Currently, only deletion of pay-as-you-go IPSEC gateway instances in running status is supported.
- * @method Models\DeleteVpnGatewayRoutesResponse DeleteVpnGatewayRoutes(Models\DeleteVpnGatewayRoutesRequest $req) This API is used to delete routes of a VPN gateway.
+ * @method Models\DeleteVpnGatewayRoutesResponse DeleteVpnGatewayRoutes(Models\DeleteVpnGatewayRoutesRequest $req) This API is used to delete routes of a VPN gateway. 
  * @method Models\DescribeAccountAttributesResponse DescribeAccountAttributes(Models\DescribeAccountAttributesRequest $req) This API (DescribeAccountAttributes) is used to query your account attributes.
  * @method Models\DescribeAddressQuotaResponse DescribeAddressQuota(Models\DescribeAddressQuotaRequest $req) This API (DescribeAddressQuota) is used to query the quota information of your [Elastic IP](https://intl.cloud.tencent.com/document/product/213/1941?from_cn_redirect=1) (EIP) in the current region. For more information, see [EIP product introduction](https://intl.cloud.tencent.com/document/product/213/5733?from_cn_redirect=1).
  * @method Models\DescribeAddressTemplateGroupsResponse DescribeAddressTemplateGroups(Models\DescribeAddressTemplateGroupsRequest $req) This API (DescribeAddressTemplateGroups) is used to query an IP address template group.
@@ -283,8 +283,9 @@ A service provider can query all review requests created by any `APPID` under it
  * @method Models\DescribeGatewayFlowQosResponse DescribeGatewayFlowQos(Models\DescribeGatewayFlowQosRequest $req) This API is used to query the inbound IP bandwidth limit of a gateway.
  * @method Models\DescribeHaVipsResponse DescribeHaVips(Models\DescribeHaVipsRequest $req) This API (DescribeHaVips) is used to query the list of highly available virtual IPs (HAVIP).
  * @method Models\DescribeIpGeolocationDatabaseUrlResponse DescribeIpGeolocationDatabaseUrl(Models\DescribeIpGeolocationDatabaseUrlRequest $req) This API is used to obtain the download link of an IP location database.
+<font color="#FF0000">This API will be discontinued soon and is only available for existing users.</font>
  * @method Models\DescribeIpGeolocationInfosResponse DescribeIpGeolocationInfos(Models\DescribeIpGeolocationInfosRequest $req) This API is used to query the location and network information of one or more IP addresses.
-This API is only available for existing customers. For any questions, please [submit a ticket](https://console.cloud.tencent.com/workorder/category?level1_id=6&level2_id=660&source=0&data_title=%E5%BC%B9%E6%80%A7%E5%85%AC%E7%BD%91%20EIP&level3_id=662&queue=96&scene_code=16400&step=2).
+<font color="#FF0000">This API will be discontinued soon and is only available for existing users.</font>
  * @method Models\DescribeLocalGatewayResponse DescribeLocalGateway(Models\DescribeLocalGatewayRequest $req) This API is used to query local gateways of a CDC instance.
  * @method Models\DescribeNatGatewayDestinationIpPortTranslationNatRulesResponse DescribeNatGatewayDestinationIpPortTranslationNatRules(Models\DescribeNatGatewayDestinationIpPortTranslationNatRulesRequest $req) This API is used to query the array of objects of a NAT gateway's port forwarding rules.
  * @method Models\DescribeNatGatewayDirectConnectGatewayRouteResponse DescribeNatGatewayDirectConnectGatewayRoute(Models\DescribeNatGatewayDirectConnectGatewayRouteRequest $req) This API is used to query the routes between a NAT gateway and Direct Connect.
@@ -325,8 +326,8 @@ This API is used to query only the information of IP addresses that are already 
  * @method Models\DescribeVpcTaskResultResponse DescribeVpcTaskResult(Models\DescribeVpcTaskResultRequest $req) This API is used to query the execution result of a VPC task.
  * @method Models\DescribeVpcsResponse DescribeVpcs(Models\DescribeVpcsRequest $req) This API (DescribeVpcs) is used to query the VPC list.
  * @method Models\DescribeVpnConnectionsResponse DescribeVpnConnections(Models\DescribeVpnConnectionsRequest $req) This API is used to used to query the list of VPN tunnels.
- * @method Models\DescribeVpnGatewayCcnRoutesResponse DescribeVpnGatewayCcnRoutes(Models\DescribeVpnGatewayCcnRoutesRequest $req) This API (DescribeVpnGatewayCcnRoutes) is used to query VPN gateway-based CCN routes.
- * @method Models\DescribeVpnGatewayRoutesResponse DescribeVpnGatewayRoutes(Models\DescribeVpnGatewayRoutesRequest $req) This API is used to query destination routes of a route-based VPN gateway.
+ * @method Models\DescribeVpnGatewayCcnRoutesResponse DescribeVpnGatewayCcnRoutes(Models\DescribeVpnGatewayCcnRoutesRequest $req) This API is used to query VPN gateway-based CCN routes.
+ * @method Models\DescribeVpnGatewayRoutesResponse DescribeVpnGatewayRoutes(Models\DescribeVpnGatewayRoutesRequest $req) This API is used to query VPN gateway routes.
  * @method Models\DescribeVpnGatewaysResponse DescribeVpnGateways(Models\DescribeVpnGatewaysRequest $req) This API (DescribeVpnGateways) is used to query the VPN gateway list.
  * @method Models\DetachCcnInstancesResponse DetachCcnInstances(Models\DetachCcnInstancesRequest $req) This API (DetachCcnInstances) is used to unbind a specified network instance from a CCN instance.<br />
 After unbinding the network instance, the corresponding routing policy will also be deleted.
@@ -350,7 +351,7 @@ This API is completed asynchronously. If you need to query the execution result 
  * @method Models\DisassociateNetworkAclSubnetsResponse DisassociateNetworkAclSubnets(Models\DisassociateNetworkAclSubnetsRequest $req) This API is used to disassociate a network ACL from subnets in a VPC instance.
  * @method Models\DisassociateNetworkInterfaceSecurityGroupsResponse DisassociateNetworkInterfaceSecurityGroups(Models\DisassociateNetworkInterfaceSecurityGroupsRequest $req) This API (DisassociateNetworkInterfaceSecurityGroups) is used to detach (or fully detach if possible) a security group from an ENI.
  * @method Models\DisassociateVpcEndPointSecurityGroupsResponse DisassociateVpcEndPointSecurityGroups(Models\DisassociateVpcEndPointSecurityGroupsRequest $req) This API is used to unbind an endpoint from a security group.
- * @method Models\DownloadCustomerGatewayConfigurationResponse DownloadCustomerGatewayConfiguration(Models\DownloadCustomerGatewayConfigurationRequest $req) This API (DownloadCustomerGatewayConfiguration) is used to download a VPN tunnel configuration.
+ * @method Models\DownloadCustomerGatewayConfigurationResponse DownloadCustomerGatewayConfiguration(Models\DownloadCustomerGatewayConfigurationRequest $req) This API is used to download VPN tunnel configurations.
  * @method Models\EnableCcnRoutesResponse EnableCcnRoutes(Models\EnableCcnRoutesRequest $req) This API (EnableCcnRoutes) is used to enable CCN routes that are already added.<br />
 This API is used to verify whether there will be conflict with an existing route after a CCN route is enabled. If there is a conflict, the route will not be enabled, and the process will fail. When a conflict occurs, you must disable the conflicting route before you can enable the desired route.
  * @method Models\EnableFlowLogsResponse EnableFlowLogs(Models\EnableFlowLogsRequest $req) This API is used to enable flow log.
@@ -433,8 +434,8 @@ This API is completed asynchronously. If you need to query the execution result 
  * @method Models\ModifyVpcEndPointServiceWhiteListResponse ModifyVpcEndPointServiceWhiteList(Models\ModifyVpcEndPointServiceWhiteListRequest $req) This API is used to modify the attributes of the endpoint service allowlist.
  * @method Models\ModifyVpnConnectionAttributeResponse ModifyVpnConnectionAttribute(Models\ModifyVpnConnectionAttributeRequest $req) This API (ModifyVpnConnectionAttribute) is used to modify VPN tunnels.
  * @method Models\ModifyVpnGatewayAttributeResponse ModifyVpnGatewayAttribute(Models\ModifyVpnGatewayAttributeRequest $req) This API (ModifyVpnGatewayAttribute) is used to modify the attributes of VPN gateways.
- * @method Models\ModifyVpnGatewayCcnRoutesResponse ModifyVpnGatewayCcnRoutes(Models\ModifyVpnGatewayCcnRoutesRequest $req) This API (ModifyVpnGatewayCcnRoutes) is used to modify VPN gateway-based CCN routes.
- * @method Models\ModifyVpnGatewayRoutesResponse ModifyVpnGatewayRoutes(Models\ModifyVpnGatewayRoutesRequest $req) This API is used to modify the route status of a VPN gateway.
+ * @method Models\ModifyVpnGatewayCcnRoutesResponse ModifyVpnGatewayCcnRoutes(Models\ModifyVpnGatewayCcnRoutesRequest $req) This API is used to modify VPN gateway-based CCN routes.
+ * @method Models\ModifyVpnGatewayRoutesResponse ModifyVpnGatewayRoutes(Models\ModifyVpnGatewayRoutesRequest $req) This API is used to modify VPN gateway routes.
  * @method Models\NotifyRoutesResponse NotifyRoutes(Models\NotifyRoutesRequest $req) This API is used to publish a route to CCN. This can also be done by clicking "Publish to CCN" in the operation column on the page of route table list.
  * @method Models\RefreshDirectConnectGatewayRouteToNatGatewayResponse RefreshDirectConnectGatewayRouteToNatGateway(Models\RefreshDirectConnectGatewayRouteToNatGatewayRequest $req) This API is used to refresh the route between a NAT gateway and  Direct Connect and update the associated route table.
  * @method Models\RejectAttachCcnInstancesResponse RejectAttachCcnInstances(Models\RejectAttachCcnInstancesRequest $req) This API (RejectAttachCcnInstances) is used to reject association operations when instances are associated across accounts for the CCN owner.
@@ -448,6 +449,8 @@ This API is completed asynchronously. If you need to query the execution result 
  * @method Models\ReplaceRouteTableAssociationResponse ReplaceRouteTableAssociation(Models\ReplaceRouteTableAssociationRequest $req) This API (ReplaceRouteTableAssociation) is used to modify the route table associated with a subnet.
 * A subnet can only be associated with one route table.
  * @method Models\ReplaceRoutesResponse ReplaceRoutes(Models\ReplaceRoutesRequest $req) This API (ReplaceRoutes) is used to modify a specified routing policy by its ID (RouteId). Batch modification is supported.
+ * @method Models\ReplaceSecurityGroupPoliciesResponse ReplaceSecurityGroupPolicies(Models\ReplaceSecurityGroupPoliciesRequest $req) This API is used to batch modify security group policies.
+Policies to modify must be in the same direction. `PolicyIndex` must be specified.
  * @method Models\ReplaceSecurityGroupPolicyResponse ReplaceSecurityGroupPolicy(Models\ReplaceSecurityGroupPolicyRequest $req) This API (ReplaceSecurityGroupPolicy) is used to replace a single security group policy (SecurityGroupPolicy).
 Only one policy in a single direction can be replaced in each request, and the PolicyIndex parameter must be specified.
  * @method Models\ResetAttachCcnInstancesResponse ResetAttachCcnInstances(Models\ResetAttachCcnInstancesRequest $req) This API (ResetAttachCcnInstances) is used to re-apply for the association operation when the application for cross-account instance association expires.
@@ -460,7 +463,7 @@ Note: When this API is called, all routing policies in the current route table a
  * @method Models\ReturnNormalAddressesResponse ReturnNormalAddresses(Models\ReturnNormalAddressesRequest $req) This API is used to unbind and release public IPs. 
 Note: Starting from Dec 15, 2022, CAM authorization is required for a sub-account to call this API. For more details, see [Authorization Guide](https://intl.cloud.tencent.com/document/product/598/34545?from_cn_redirect=1).
  * @method Models\SetCcnRegionBandwidthLimitsResponse SetCcnRegionBandwidthLimits(Models\SetCcnRegionBandwidthLimitsRequest $req) This API (SetCcnRegionBandwidthLimits) is used to set the outbound bandwidth cap for CCNs in each region. This API can only set the outbound bandwidth cap for regions in the network instances that have already been associated.
- * @method Models\SetVpnGatewaysRenewFlagResponse SetVpnGatewaysRenewFlag(Models\SetVpnGatewaysRenewFlagRequest $req) This API is used to specify whether to enable auto-renewal for the VPN gateway.
+ * @method Models\SetVpnGatewaysRenewFlagResponse SetVpnGatewaysRenewFlag(Models\SetVpnGatewaysRenewFlagRequest $req) This API is used set the auto-renewal configuration of a VPN gateway.
  * @method Models\TransformAddressResponse TransformAddress(Models\TransformAddressRequest $req) This API is used to convert a common public IP into an [Elastic IP](https://intl.cloud.tencent.com/document/product/213/1941?from_cn_redirect=1) (EIP for short).
 * Tencent Cloud limits the number of times that a user can unbind EIPs and reassign public IPs in each region per day. For more information, see product introduction of [Elastic IP](https://intl.cloud.tencent.com/document/product/213/5733?from_cn_redirect=1). The preceding quota can be obtained through the API [DescribeAddressQuota](https://intl.cloud.tencent.com/document/product/215/16701).
  * @method Models\UnassignIpv6AddressesResponse UnassignIpv6Addresses(Models\UnassignIpv6AddressesRequest $req) This API is used to release the IPv6 addresses of an ENI. <br />

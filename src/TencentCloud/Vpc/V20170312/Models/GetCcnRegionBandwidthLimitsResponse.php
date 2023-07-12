@@ -21,9 +21,9 @@ use TencentCloud\Common\AbstractModel;
  * GetCcnRegionBandwidthLimits response structure.
  *
  * @method array getCcnBandwidthSet() Obtain The outbound bandwidth limits of regions in a CCN instance.
-Note: this field may return null, indicating that no valid value was found.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setCcnBandwidthSet(array $CcnBandwidthSet) Set The outbound bandwidth limits of regions in a CCN instance.
-Note: this field may return null, indicating that no valid value was found.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method integer getTotalCount() Obtain The number of eligible objects.
 Note: this field may return null, indicating that no valid value was found.
  * @method void setTotalCount(integer $TotalCount) Set The number of eligible objects.
@@ -35,7 +35,7 @@ class GetCcnRegionBandwidthLimitsResponse extends AbstractModel
 {
     /**
      * @var array The outbound bandwidth limits of regions in a CCN instance.
-Note: this field may return null, indicating that no valid value was found.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $CcnBandwidthSet;
 
@@ -52,7 +52,7 @@ Note: this field may return null, indicating that no valid value was found.
 
     /**
      * @param array $CcnBandwidthSet The outbound bandwidth limits of regions in a CCN instance.
-Note: this field may return null, indicating that no valid value was found.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $TotalCount The number of eligible objects.
 Note: this field may return null, indicating that no valid value was found.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.

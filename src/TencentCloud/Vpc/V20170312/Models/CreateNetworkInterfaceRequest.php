@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSubnetId(string $SubnetId) Set The subnet instance ID of the ENI, such as `subnet-0ap8nwca`.
  * @method string getNetworkInterfaceDescription() Obtain ENI description can be named freely, but the maximum length is 60 characters.
  * @method void setNetworkInterfaceDescription(string $NetworkInterfaceDescription) Set ENI description can be named freely, but the maximum length is 60 characters.
- * @method integer getSecondaryPrivateIpAddressCount() Obtain The number of private IP addresses that is newly applied for. The total number of private IP addresses cannot exceed the quota.
- * @method void setSecondaryPrivateIpAddressCount(integer $SecondaryPrivateIpAddressCount) Set The number of private IP addresses that is newly applied for. The total number of private IP addresses cannot exceed the quota.
+ * @method integer getSecondaryPrivateIpAddressCount() Obtain The number of private IP addresses you apply for. The total number of private IP addresses cannot exceed the quota.
+ * @method void setSecondaryPrivateIpAddressCount(integer $SecondaryPrivateIpAddressCount) Set The number of private IP addresses you apply for. The total number of private IP addresses cannot exceed the quota.
  * @method string getQosLevel() Obtain IP service level. It’s used in combination with `SecondaryPrivateIpAddressCount`. Values: `PT` (Gold), `AU` (Silver), `AG` (Bronze) and `DEFAULT`
  * @method void setQosLevel(string $QosLevel) Set IP service level. It’s used in combination with `SecondaryPrivateIpAddressCount`. Values: `PT` (Gold), `AU` (Silver), `AG` (Bronze) and `DEFAULT`
  * @method array getSecurityGroupIds() Obtain Specifies the security group to be bound with, such as ['sg-1dd51d'].
@@ -64,7 +64,7 @@ class CreateNetworkInterfaceRequest extends AbstractModel
     public $NetworkInterfaceDescription;
 
     /**
-     * @var integer The number of private IP addresses that is newly applied for. The total number of private IP addresses cannot exceed the quota.
+     * @var integer The number of private IP addresses you apply for. The total number of private IP addresses cannot exceed the quota.
      */
     public $SecondaryPrivateIpAddressCount;
 
@@ -98,7 +98,7 @@ class CreateNetworkInterfaceRequest extends AbstractModel
      * @param string $NetworkInterfaceName The name of the ENI. The maximum length is 60 characters.
      * @param string $SubnetId The subnet instance ID of the ENI, such as `subnet-0ap8nwca`.
      * @param string $NetworkInterfaceDescription ENI description can be named freely, but the maximum length is 60 characters.
-     * @param integer $SecondaryPrivateIpAddressCount The number of private IP addresses that is newly applied for. The total number of private IP addresses cannot exceed the quota.
+     * @param integer $SecondaryPrivateIpAddressCount The number of private IP addresses you apply for. The total number of private IP addresses cannot exceed the quota.
      * @param string $QosLevel IP service level. It’s used in combination with `SecondaryPrivateIpAddressCount`. Values: `PT` (Gold), `AU` (Silver), `AG` (Bronze) and `DEFAULT`
      * @param array $SecurityGroupIds Specifies the security group to be bound with, such as ['sg-1dd51d'].
      * @param array $PrivateIpAddresses The information of the specified private IPs. You can specify a maximum of 10 each time.

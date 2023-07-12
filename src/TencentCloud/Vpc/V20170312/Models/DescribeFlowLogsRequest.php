@@ -44,12 +44,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) Set The offset. Default value: 0.
  * @method integer getLimit() Obtain The number of rows per page. Default value: 10.
  * @method void setLimit(integer $Limit) Set The number of rows per page. Default value: 10.
- * @method Filter getFilters() Obtain Filter condition. `FlowLogIds` and `Filters` cannot be specified at the same time.
-<li>tag-key - String - Required: No - (Filter condition) Filter by tag key.</li>
-<li> tag:tag-key - String - Required: No - (Filter condition) Filter by tag key-value pair. The tag-key should be replaced with a specified tag key.</li>
- * @method void setFilters(Filter $Filters) Set Filter condition. `FlowLogIds` and `Filters` cannot be specified at the same time.
-<li>tag-key - String - Required: No - (Filter condition) Filter by tag key.</li>
-<li> tag:tag-key - String - Required: No - (Filter condition) Filter by tag key-value pair. The tag-key should be replaced with a specified tag key.</li>
+ * @method Filter getFilters() Obtain Filter condition. `FlowLogId` and `Filters` cannot be specified at the same time.
+<li> `tag-key` - String - Optional - Filter by the tag key.</li>
+<li> `tag:tag-key` - String - Optional - Filter by the tag key-value pair. The tag-key should be replaced with a specified tag key.</li>
+ * @method void setFilters(Filter $Filters) Set Filter condition. `FlowLogId` and `Filters` cannot be specified at the same time.
+<li> `tag-key` - String - Optional - Filter by the tag key.</li>
+<li> `tag:tag-key` - String - Optional - Filter by the tag key-value pair. The tag-key should be replaced with a specified tag key.</li>
  * @method string getCloudLogRegion() Obtain The region corresponding to the flow log storage ID.
  * @method void setCloudLogRegion(string $CloudLogRegion) Set The region corresponding to the flow log storage ID.
  */
@@ -116,9 +116,9 @@ class DescribeFlowLogsRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @var Filter Filter condition. `FlowLogIds` and `Filters` cannot be specified at the same time.
-<li>tag-key - String - Required: No - (Filter condition) Filter by tag key.</li>
-<li> tag:tag-key - String - Required: No - (Filter condition) Filter by tag key-value pair. The tag-key should be replaced with a specified tag key.</li>
+     * @var Filter Filter condition. `FlowLogId` and `Filters` cannot be specified at the same time.
+<li> `tag-key` - String - Optional - Filter by the tag key.</li>
+<li> `tag:tag-key` - String - Optional - Filter by the tag key-value pair. The tag-key should be replaced with a specified tag key.</li>
      */
     public $Filters;
 
@@ -140,9 +140,9 @@ class DescribeFlowLogsRequest extends AbstractModel
      * @param string $OrderDirection In ascending (`asc`) or descending (`desc`) order. Default value: 'desc'.
      * @param integer $Offset The offset. Default value: 0.
      * @param integer $Limit The number of rows per page. Default value: 10.
-     * @param Filter $Filters Filter condition. `FlowLogIds` and `Filters` cannot be specified at the same time.
-<li>tag-key - String - Required: No - (Filter condition) Filter by tag key.</li>
-<li> tag:tag-key - String - Required: No - (Filter condition) Filter by tag key-value pair. The tag-key should be replaced with a specified tag key.</li>
+     * @param Filter $Filters Filter condition. `FlowLogId` and `Filters` cannot be specified at the same time.
+<li> `tag-key` - String - Optional - Filter by the tag key.</li>
+<li> `tag:tag-key` - String - Optional - Filter by the tag key-value pair. The tag-key should be replaced with a specified tag key.</li>
      * @param string $CloudLogRegion The region corresponding to the flow log storage ID.
      */
     function __construct()

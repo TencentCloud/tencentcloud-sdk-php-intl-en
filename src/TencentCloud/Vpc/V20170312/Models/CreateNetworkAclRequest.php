@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateNetworkAcl request structure.
  *
- * @method string getVpcId() Obtain VPC instance ID, which can be obtained from the `VpcId` field returned by `DescribeVpcs` API.
- * @method void setVpcId(string $VpcId) Set VPC instance ID, which can be obtained from the `VpcId` field returned by `DescribeVpcs` API.
+ * @method string getVpcId() Obtain VPC instance ID, which can be obtained from the `VpcId` field in the response of the [`DescribeVpcs`](https://intl.cloud.tencent.com/document/product/215/15778?from_cn_redirect=1) API.
+ * @method void setVpcId(string $VpcId) Set VPC instance ID, which can be obtained from the `VpcId` field in the response of the [`DescribeVpcs`](https://intl.cloud.tencent.com/document/product/215/15778?from_cn_redirect=1) API.
  * @method string getNetworkAclName() Obtain Network ACL name, which can contain up to 60 bytes.
  * @method void setNetworkAclName(string $NetworkAclName) Set Network ACL name, which can contain up to 60 bytes.
  * @method string getNetworkAclType() Obtain Network ACL type. Valid values: `TRIPLE` and `QUINTUPLE`.
@@ -32,7 +32,7 @@ use TencentCloud\Common\AbstractModel;
 class CreateNetworkAclRequest extends AbstractModel
 {
     /**
-     * @var string VPC instance ID, which can be obtained from the `VpcId` field returned by `DescribeVpcs` API.
+     * @var string VPC instance ID, which can be obtained from the `VpcId` field in the response of the [`DescribeVpcs`](https://intl.cloud.tencent.com/document/product/215/15778?from_cn_redirect=1) API.
      */
     public $VpcId;
 
@@ -52,7 +52,7 @@ class CreateNetworkAclRequest extends AbstractModel
     public $Tags;
 
     /**
-     * @param string $VpcId VPC instance ID, which can be obtained from the `VpcId` field returned by `DescribeVpcs` API.
+     * @param string $VpcId VPC instance ID, which can be obtained from the `VpcId` field in the response of the [`DescribeVpcs`](https://intl.cloud.tencent.com/document/product/215/15778?from_cn_redirect=1) API.
      * @param string $NetworkAclName Network ACL name, which can contain up to 60 bytes.
      * @param string $NetworkAclType Network ACL type. Valid values: `TRIPLE` and `QUINTUPLE`.
      * @param array $Tags Bound tags, such as [{"Key": "city", "Value": "shanghai"}].

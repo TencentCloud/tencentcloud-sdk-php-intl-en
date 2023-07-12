@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteNetDetect request structure.
  *
- * @method string getNetDetectId() Obtain The `ID` of a network detection instance, such as `netd-12345678`.
- * @method void setNetDetectId(string $NetDetectId) Set The `ID` of a network detection instance, such as `netd-12345678`.
+ * @method string getNetDetectId() Obtain ID of a network probe, such as `netd-12345678`.
+ * @method void setNetDetectId(string $NetDetectId) Set ID of a network probe, such as `netd-12345678`.
  */
 class DeleteNetDetectRequest extends AbstractModel
 {
     /**
-     * @var string The `ID` of a network detection instance, such as `netd-12345678`.
+     * @var string ID of a network probe, such as `netd-12345678`.
      */
     public $NetDetectId;
 
     /**
-     * @param string $NetDetectId The `ID` of a network detection instance, such as `netd-12345678`.
+     * @param string $NetDetectId ID of a network probe, such as `netd-12345678`.
      */
     function __construct()
     {

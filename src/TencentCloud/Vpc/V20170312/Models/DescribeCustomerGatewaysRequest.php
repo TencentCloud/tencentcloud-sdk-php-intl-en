@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
 <li>customer-gateway-id - String - (Filter condition) The unique ID of the user gateway, such as `cgw-mgp33pll`.</li>
 <li>customer-gateway-name - String - (Filter condition) The name of the user gateway, such as `test-cgw`.</li>
 <li>ip-address - String - (Filter condition) The public IP address, such as `58.211.1.12`.</li>
- * @method integer getOffset() Obtain The Offset. The default value is 0. For more information about Offset, see the relevant section in the API Introduction.
- * @method void setOffset(integer $Offset) Set The Offset. The default value is 0. For more information about Offset, see the relevant section in the API Introduction.
+ * @method integer getOffset() Obtain Offset. Default value: 0. For more information on Offset, see the relevant section in the API [Introduction](https://intl.cloud.tencent.com/document/api/213/11646?from_cn_redirect=1).
+ * @method void setOffset(integer $Offset) Set Offset. Default value: 0. For more information on Offset, see the relevant section in the API [Introduction](https://intl.cloud.tencent.com/document/api/213/11646?from_cn_redirect=1).
  * @method integer getLimit() Obtain Number of returned results. Default value: 20. Maximum value: 100.
  * @method void setLimit(integer $Limit) Set Number of returned results. Default value: 20. Maximum value: 100.
  */
@@ -51,7 +51,7 @@ class DescribeCustomerGatewaysRequest extends AbstractModel
     public $Filters;
 
     /**
-     * @var integer The Offset. The default value is 0. For more information about Offset, see the relevant section in the API Introduction.
+     * @var integer Offset. Default value: 0. For more information on Offset, see the relevant section in the API [Introduction](https://intl.cloud.tencent.com/document/api/213/11646?from_cn_redirect=1).
      */
     public $Offset;
 
@@ -66,7 +66,7 @@ class DescribeCustomerGatewaysRequest extends AbstractModel
 <li>customer-gateway-id - String - (Filter condition) The unique ID of the user gateway, such as `cgw-mgp33pll`.</li>
 <li>customer-gateway-name - String - (Filter condition) The name of the user gateway, such as `test-cgw`.</li>
 <li>ip-address - String - (Filter condition) The public IP address, such as `58.211.1.12`.</li>
-     * @param integer $Offset The Offset. The default value is 0. For more information about Offset, see the relevant section in the API Introduction.
+     * @param integer $Offset Offset. Default value: 0. For more information on Offset, see the relevant section in the API [Introduction](https://intl.cloud.tencent.com/document/api/213/11646?from_cn_redirect=1).
      * @param integer $Limit Number of returned results. Default value: 20. Maximum value: 100.
      */
     function __construct()

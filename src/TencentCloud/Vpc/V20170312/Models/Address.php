@@ -84,6 +84,16 @@ Note: this field may return `null`, indicating that no valid value was found.
 Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method void setTagSet(array $TagSet) Set List of tags associated with the EIP
 Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method string getDeadlineDate() Obtain The expiration time.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setDeadlineDate(string $DeadlineDate) Set The expiration time.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method string getInstanceType() Obtain The type of instance bound with the EIP
+Note: this field may return `null`, indicating that no valid value was found.
+ * @method void setInstanceType(string $InstanceType) Set The type of instance bound with the EIP
+Note: this field may return `null`, indicating that no valid value was found.
+ * @method string getAntiDDoSPackageId() Obtain 
+ * @method void setAntiDDoSPackageId(string $AntiDDoSPackageId) Set 
  */
 class Address extends AbstractModel
 {
@@ -196,6 +206,23 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     public $TagSet;
 
     /**
+     * @var string The expiration time.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $DeadlineDate;
+
+    /**
+     * @var string The type of instance bound with the EIP
+Note: this field may return `null`, indicating that no valid value was found.
+     */
+    public $InstanceType;
+
+    /**
+     * @var string 
+     */
+    public $AntiDDoSPackageId;
+
+    /**
      * @param string $AddressId `EIP` `ID`, the unique ID of the `EIP`.
      * @param string $AddressName The `EIP` name.
      * @param string $AddressStatus Possible `EIP` states are 'CREATING', 'BINDING', 'BIND', 'UNBINDING', 'UNBIND', 'OFFLINING', and 'BIND_ENI'.
@@ -228,6 +255,11 @@ Including:
 Note: this field may return `null`, indicating that no valid value was found.
      * @param array $TagSet List of tags associated with the EIP
 Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param string $DeadlineDate The expiration time.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param string $InstanceType The type of instance bound with the EIP
+Note: this field may return `null`, indicating that no valid value was found.
+     * @param string $AntiDDoSPackageId 
      */
     function __construct()
     {
@@ -322,6 +354,18 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                 $obj->deserialize($value);
                 array_push($this->TagSet, $obj);
             }
+        }
+
+        if (array_key_exists("DeadlineDate",$param) and $param["DeadlineDate"] !== null) {
+            $this->DeadlineDate = $param["DeadlineDate"];
+        }
+
+        if (array_key_exists("InstanceType",$param) and $param["InstanceType"] !== null) {
+            $this->InstanceType = $param["InstanceType"];
+        }
+
+        if (array_key_exists("AntiDDoSPackageId",$param) and $param["AntiDDoSPackageId"] !== null) {
+            $this->AntiDDoSPackageId = $param["AntiDDoSPackageId"];
         }
     }
 }

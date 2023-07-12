@@ -34,10 +34,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRouteId(string $RouteId) Set Route ID
  * @method string getType() Obtain Route type. Valid values: `VPC`, `CCN` (CCN-propagated route), `Static`, and `BGP`.
  * @method void setType(string $Type) Set Route type. Valid values: `VPC`, `CCN` (CCN-propagated route), `Static`, and `BGP`.
- * @method string getCreateTime() Obtain Creation time
- * @method void setCreateTime(string $CreateTime) Set Creation time
- * @method string getUpdateTime() Obtain Update time
- * @method void setUpdateTime(string $UpdateTime) Set Update time
+ * @method string getCreateTime() Obtain The creation time.
+ * @method void setCreateTime(string $CreateTime) Set The creation time.
+ * @method string getUpdateTime() Obtain The update time.
+ * @method void setUpdateTime(string $UpdateTime) Set The update time.
  */
 class VpnGatewayRoute extends AbstractModel
 {
@@ -77,12 +77,12 @@ class VpnGatewayRoute extends AbstractModel
     public $Type;
 
     /**
-     * @var string Creation time
+     * @var string The creation time.
      */
     public $CreateTime;
 
     /**
-     * @var string Update time
+     * @var string The update time.
      */
     public $UpdateTime;
 
@@ -94,8 +94,8 @@ class VpnGatewayRoute extends AbstractModel
      * @param string $Status Status. Valid values: `ENABLE` and `DISABLE`
      * @param string $RouteId Route ID
      * @param string $Type Route type. Valid values: `VPC`, `CCN` (CCN-propagated route), `Static`, and `BGP`.
-     * @param string $CreateTime Creation time
-     * @param string $UpdateTime Update time
+     * @param string $CreateTime The creation time.
+     * @param string $UpdateTime The update time.
      */
     function __construct()
     {

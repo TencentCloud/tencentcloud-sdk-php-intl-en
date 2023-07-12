@@ -48,6 +48,10 @@ Note: this field may return null, indicating that no valid value was found.
 Note: This field may return `null`, indicating that no valid values can be obtained.
  * @method void setMarketId(string $MarketId) Set Cloud marketplace instance ID.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method array getTagSet() Obtain The list of tags to be bound.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setTagSet(array $TagSet) Set The list of tags to be bound.
+Note: This field may return `null`, indicating that no valid values can be obtained.
  */
 class CcnBandwidthInfo extends AbstractModel
 {
@@ -94,6 +98,12 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     public $MarketId;
 
     /**
+     * @var array The list of tags to be bound.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $TagSet;
+
+    /**
      * @param string $CcnId The CCN ID that the bandwidth belongs to.
 Note: this field may return null, indicating that no valid value was found.
      * @param string $CreatedTime The creation time of the instance.
@@ -107,6 +117,8 @@ Note: this field may return null, indicating that no valid value was found.
      * @param CcnRegionBandwidthLimit $CcnRegionBandwidthLimit The information of the bandwidth regions and bandwidth caps. The parameter is only returned for the cross-region limit mode, but not for egress limit.
 Note: this field may return null, indicating that no valid value was found.
      * @param string $MarketId Cloud marketplace instance ID.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param array $TagSet The list of tags to be bound.
 Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
@@ -149,6 +161,15 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 
         if (array_key_exists("MarketId",$param) and $param["MarketId"] !== null) {
             $this->MarketId = $param["MarketId"];
+        }
+
+        if (array_key_exists("TagSet",$param) and $param["TagSet"] !== null) {
+            $this->TagSet = [];
+            foreach ($param["TagSet"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->TagSet, $obj);
+            }
         }
     }
 }

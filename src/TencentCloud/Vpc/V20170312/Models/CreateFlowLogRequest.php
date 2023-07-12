@@ -30,12 +30,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTrafficType(string $TrafficType) Set Type of the flow logs to be collected. Valid values: `ACCEPT`, `REJECT` and `ALL`.
  * @method string getVpcId() Obtain The VPC ID or unique ID of the resource. We recommend using the unique ID. This parameter is required unless the `ResourceType` is set to `CCN`.
  * @method void setVpcId(string $VpcId) Set The VPC ID or unique ID of the resource. We recommend using the unique ID. This parameter is required unless the `ResourceType` is set to `CCN`.
- * @method string getFlowLogDescription() Obtain The description of the flow log instance
- * @method void setFlowLogDescription(string $FlowLogDescription) Set The description of the flow log instance
+ * @method string getFlowLogDescription() Obtain The description of the flow log.
+ * @method void setFlowLogDescription(string $FlowLogDescription) Set The description of the flow log.
  * @method string getCloudLogId() Obtain The storage ID of the flow log.
  * @method void setCloudLogId(string $CloudLogId) Set The storage ID of the flow log.
- * @method array getTags() Obtain Bound tags, such as [{"Key": "city", "Value": "shanghai"}]
- * @method void setTags(array $Tags) Set Bound tags, such as [{"Key": "city", "Value": "shanghai"}]
+ * @method array getTags() Obtain Bound tags, such as [{"Key": "city", "Value": "shanghai"}].
+ * @method void setTags(array $Tags) Set Bound tags, such as [{"Key": "city", "Value": "shanghai"}].
  * @method string getStorageType() Obtain Consumer types: `cls` and `ckafka`
  * @method void setStorageType(string $StorageType) Set Consumer types: `cls` and `ckafka`
  * @method FlowLogStorage getFlowLogStorage() Obtain Information of the flow log consumer, which is required when the consumer type is `ckafka`.
@@ -71,7 +71,7 @@ class CreateFlowLogRequest extends AbstractModel
     public $VpcId;
 
     /**
-     * @var string The description of the flow log instance
+     * @var string The description of the flow log.
      */
     public $FlowLogDescription;
 
@@ -81,7 +81,7 @@ class CreateFlowLogRequest extends AbstractModel
     public $CloudLogId;
 
     /**
-     * @var array Bound tags, such as [{"Key": "city", "Value": "shanghai"}]
+     * @var array Bound tags, such as [{"Key": "city", "Value": "shanghai"}].
      */
     public $Tags;
 
@@ -106,9 +106,9 @@ class CreateFlowLogRequest extends AbstractModel
      * @param string $ResourceId The unique ID of the resource.
      * @param string $TrafficType Type of the flow logs to be collected. Valid values: `ACCEPT`, `REJECT` and `ALL`.
      * @param string $VpcId The VPC ID or unique ID of the resource. We recommend using the unique ID. This parameter is required unless the `ResourceType` is set to `CCN`.
-     * @param string $FlowLogDescription The description of the flow log instance
+     * @param string $FlowLogDescription The description of the flow log.
      * @param string $CloudLogId The storage ID of the flow log.
-     * @param array $Tags Bound tags, such as [{"Key": "city", "Value": "shanghai"}]
+     * @param array $Tags Bound tags, such as [{"Key": "city", "Value": "shanghai"}].
      * @param string $StorageType Consumer types: `cls` and `ckafka`
      * @param FlowLogStorage $FlowLogStorage Information of the flow log consumer, which is required when the consumer type is `ckafka`.
      * @param string $CloudLogRegion The region corresponding to the flow log storage ID. If not passed in, this field defaults to the current region.

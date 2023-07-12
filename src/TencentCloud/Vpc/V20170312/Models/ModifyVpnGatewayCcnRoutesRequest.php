@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyVpnGatewayCcnRoutes request structure.
  *
- * @method string getVpnGatewayId() Obtain The ID of the VPN gateway instance.
- * @method void setVpnGatewayId(string $VpnGatewayId) Set The ID of the VPN gateway instance.
+ * @method string getVpnGatewayId() Obtain Instance ID of the VPN gateway
+ * @method void setVpnGatewayId(string $VpnGatewayId) Set Instance ID of the VPN gateway
  * @method array getRoutes() Obtain The CCN route (IDC IP range) list.
  * @method void setRoutes(array $Routes) Set The CCN route (IDC IP range) list.
  */
 class ModifyVpnGatewayCcnRoutesRequest extends AbstractModel
 {
     /**
-     * @var string The ID of the VPN gateway instance.
+     * @var string Instance ID of the VPN gateway
      */
     public $VpnGatewayId;
 
@@ -38,7 +38,7 @@ class ModifyVpnGatewayCcnRoutesRequest extends AbstractModel
     public $Routes;
 
     /**
-     * @param string $VpnGatewayId The ID of the VPN gateway instance.
+     * @param string $VpnGatewayId Instance ID of the VPN gateway
      * @param array $Routes The CCN route (IDC IP range) list.
      */
     function __construct()

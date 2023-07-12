@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeVpnGatewayRoutes request structure.
  *
- * @method string getVpnGatewayId() Obtain VPN gateway ID
- * @method void setVpnGatewayId(string $VpnGatewayId) Set VPN gateway ID
+ * @method string getVpnGatewayId() Obtain Instance ID of the VPN gateway
+ * @method void setVpnGatewayId(string $VpnGatewayId) Set Instance ID of the VPN gateway
  * @method array getFilters() Obtain Filter condition. Valid values: `DestinationCidr`, `InstanceId`, and `InstanceType`.
  * @method void setFilters(array $Filters) Set Filter condition. Valid values: `DestinationCidr`, `InstanceId`, and `InstanceType`.
  * @method integer getOffset() Obtain Offset. Default value: 0
@@ -32,7 +32,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeVpnGatewayRoutesRequest extends AbstractModel
 {
     /**
-     * @var string VPN gateway ID
+     * @var string Instance ID of the VPN gateway
      */
     public $VpnGatewayId;
 
@@ -52,7 +52,7 @@ class DescribeVpnGatewayRoutesRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @param string $VpnGatewayId VPN gateway ID
+     * @param string $VpnGatewayId Instance ID of the VPN gateway
      * @param array $Filters Filter condition. Valid values: `DestinationCidr`, `InstanceId`, and `InstanceType`.
      * @param integer $Offset Offset. Default value: 0
      * @param integer $Limit Number of returned results per page. Default value: 20; maximum value: 100

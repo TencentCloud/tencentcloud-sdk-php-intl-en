@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setHaVipName(string $HaVipName) Set The name of the `HAVIP`.
  * @method string getVip() Obtain The specified virtual IP address, which must be within the IP range of the `VPC` and not in use. It will be automatically assigned if not specified.
  * @method void setVip(string $Vip) Set The specified virtual IP address, which must be within the IP range of the `VPC` and not in use. It will be automatically assigned if not specified.
+ * @method string getNetworkInterfaceId() Obtain The ID of the ENI associated with the HAVIP.
+ * @method void setNetworkInterfaceId(string $NetworkInterfaceId) Set The ID of the ENI associated with the HAVIP.
  */
 class CreateHaVipRequest extends AbstractModel
 {
@@ -52,10 +54,16 @@ class CreateHaVipRequest extends AbstractModel
     public $Vip;
 
     /**
+     * @var string The ID of the ENI associated with the HAVIP.
+     */
+    public $NetworkInterfaceId;
+
+    /**
      * @param string $VpcId The `ID` of the VPC to which the `HAVIP` belongs.
      * @param string $SubnetId The `ID` of the subnet to which the `HAVIP` belongs.
      * @param string $HaVipName The name of the `HAVIP`.
      * @param string $Vip The specified virtual IP address, which must be within the IP range of the `VPC` and not in use. It will be automatically assigned if not specified.
+     * @param string $NetworkInterfaceId The ID of the ENI associated with the HAVIP.
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class CreateHaVipRequest extends AbstractModel
 
         if (array_key_exists("Vip",$param) and $param["Vip"] !== null) {
             $this->Vip = $param["Vip"];
+        }
+
+        if (array_key_exists("NetworkInterfaceId",$param) and $param["NetworkInterfaceId"] !== null) {
+            $this->NetworkInterfaceId = $param["NetworkInterfaceId"];
         }
     }
 }

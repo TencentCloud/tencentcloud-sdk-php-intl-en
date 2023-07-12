@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeVpnGatewayCcnRoutes request structure.
  *
- * @method string getVpnGatewayId() Obtain The ID of the VPN gateway instance.
- * @method void setVpnGatewayId(string $VpnGatewayId) Set The ID of the VPN gateway instance.
+ * @method string getVpnGatewayId() Obtain Instance ID of the VPN gateway
+ * @method void setVpnGatewayId(string $VpnGatewayId) Set Instance ID of the VPN gateway
  * @method integer getOffset() Obtain Offset.
  * @method void setOffset(integer $Offset) Set Offset.
  * @method integer getLimit() Obtain The returned quantity
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeVpnGatewayCcnRoutesRequest extends AbstractModel
 {
     /**
-     * @var string The ID of the VPN gateway instance.
+     * @var string Instance ID of the VPN gateway
      */
     public $VpnGatewayId;
 
@@ -45,7 +45,7 @@ class DescribeVpnGatewayCcnRoutesRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @param string $VpnGatewayId The ID of the VPN gateway instance.
+     * @param string $VpnGatewayId Instance ID of the VPN gateway
      * @param integer $Offset Offset.
      * @param integer $Limit The returned quantity
      */

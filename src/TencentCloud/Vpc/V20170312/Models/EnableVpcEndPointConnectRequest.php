@@ -25,6 +25,7 @@ use TencentCloud\Common\AbstractModel;
  * @method array getEndPointId() Obtain Endpoint ID
  * @method void setEndPointId(array $EndPointId) Set Endpoint ID
  * @method boolean getAcceptFlag() Obtain Whether to accept the request of connecting with an endpoint
+
  * @method void setAcceptFlag(boolean $AcceptFlag) Set Whether to accept the request of connecting with an endpoint
  */
 class EnableVpcEndPointConnectRequest extends AbstractModel
@@ -41,6 +42,7 @@ class EnableVpcEndPointConnectRequest extends AbstractModel
 
     /**
      * @var boolean Whether to accept the request of connecting with an endpoint
+
      */
     public $AcceptFlag;
 

@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyVpnGatewayRoutes request structure.
  *
- * @method string getVpnGatewayId() Obtain VPN gateway ID
- * @method void setVpnGatewayId(string $VpnGatewayId) Set VPN gateway ID
+ * @method string getVpnGatewayId() Obtain Instance ID of the VPN gateway
+ * @method void setVpnGatewayId(string $VpnGatewayId) Set Instance ID of the VPN gateway
  * @method array getRoutes() Obtain Route parameters to modify
  * @method void setRoutes(array $Routes) Set Route parameters to modify
  */
 class ModifyVpnGatewayRoutesRequest extends AbstractModel
 {
     /**
-     * @var string VPN gateway ID
+     * @var string Instance ID of the VPN gateway
      */
     public $VpnGatewayId;
 
@@ -38,7 +38,7 @@ class ModifyVpnGatewayRoutesRequest extends AbstractModel
     public $Routes;
 
     /**
-     * @param string $VpnGatewayId VPN gateway ID
+     * @param string $VpnGatewayId Instance ID of the VPN gateway
      * @param array $Routes Route parameters to modify
      */
     function __construct()
