@@ -56,6 +56,7 @@ This API only supports connections of version 3.0.
  * @method Models\DeleteSecurityRulesResponse DeleteSecurityRules(Models\DeleteSecurityRulesRequest $req) This API is used to delete security policy rules.
  * @method Models\DescribeAccessRegionsResponse DescribeAccessRegions(Models\DescribeAccessRegionsRequest $req) This API (DescribeAccessRegions) is used to query acceleration region (client access region).
  * @method Models\DescribeAccessRegionsByDestRegionResponse DescribeAccessRegionsByDestRegion(Models\DescribeAccessRegionsByDestRegionRequest $req) This API is used to query the available accelerator region based on the origin server region.
+ * @method Models\DescribeAuthSignatureResponse DescribeAuthSignature(Models\DescribeAuthSignatureRequest $req) This API is used to get a request signature that can prevent parameter tampering in the process of triggering orders, getting quotes, or activating subscription services.
  * @method Models\DescribeBlackHeaderResponse DescribeBlackHeader(Models\DescribeBlackHeaderRequest $req) This API is used to query names of blocked custom headers.
  * @method Models\DescribeCertificateDetailResponse DescribeCertificateDetail(Models\DescribeCertificateDetailRequest $req) This API (DescribeCertificateDetail) is used to query certificate details, including the certificate ID, name, type, content, key, and other information.
  * @method Models\DescribeCertificatesResponse DescribeCertificates(Models\DescribeCertificatesRequest $req) This API (DescribeCertificates) is used to query the list of available certificates.

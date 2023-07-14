@@ -54,6 +54,10 @@ Each bit in the bitmap represents a feature:
 6th bit: non-BGP access;
 7th bit: QoS acceleration.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method SupportFeature getSupportFeature() Obtain Network support 
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setSupportFeature(SupportFeature $SupportFeature) Set Network support 
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class RegionDetail extends AbstractModel
 {
@@ -99,6 +103,12 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     public $FeatureBitmap;
 
     /**
+     * @var SupportFeature Network support 
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $SupportFeature;
+
+    /**
      * @param string $RegionId Region ID
      * @param string $RegionName Region name in Chinese or English
      * @param string $RegionArea Region where the data center locates
@@ -116,6 +126,8 @@ Each bit in the bitmap represents a feature:
 6th bit: non-BGP access;
 7th bit: QoS acceleration.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param SupportFeature $SupportFeature Network support 
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -152,6 +164,11 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
         if (array_key_exists("FeatureBitmap",$param) and $param["FeatureBitmap"] !== null) {
             $this->FeatureBitmap = $param["FeatureBitmap"];
+        }
+
+        if (array_key_exists("SupportFeature",$param) and $param["SupportFeature"] !== null) {
+            $this->SupportFeature = new SupportFeature();
+            $this->SupportFeature->deserialize($param["SupportFeature"]);
         }
     }
 }
