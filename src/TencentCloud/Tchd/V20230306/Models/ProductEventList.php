@@ -21,17 +21,21 @@ use TencentCloud\Common\AbstractModel;
  * Detailed event information.
  *
  * @method array getEventList() Obtain Detailed event information.
+Note: this field may return null, indicating that no valid value is obtained.
  * @method void setEventList(array $EventList) Set Detailed event information.
+Note: this field may return null, indicating that no valid value is obtained.
  */
 class ProductEventList extends AbstractModel
 {
     /**
      * @var array Detailed event information.
+Note: this field may return null, indicating that no valid value is obtained.
      */
     public $EventList;
 
     /**
      * @param array $EventList Detailed event information.
+Note: this field may return null, indicating that no valid value is obtained.
      */
     function __construct()
     {

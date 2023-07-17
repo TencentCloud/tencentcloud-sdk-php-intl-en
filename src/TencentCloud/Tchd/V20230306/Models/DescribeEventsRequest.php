@@ -24,11 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEventDate(string $EventDate) Set event occurrence date
  * @method array getProductIds() Obtain Query by Product ID(s). Product ID examples: cvm, lb, cdb, cdn, crs.
  * @method void setProductIds(array $ProductIds) Set Query by Product ID(s). Product ID examples: cvm, lb, cdb, cdn, crs.
- * @method array getRegionIds() Obtain 1. Query by Region ID(s). Region ID examples: ap-guangzhou、ap-shanghai、ap-singapore.
-2. The region ID for non-region-specific products should be set to "non-regional".
-
- * @method void setRegionIds(array $RegionIds) Set 1. Query by Region ID(s). Region ID examples: ap-guangzhou、ap-shanghai、ap-singapore.
-2. The region ID for non-region-specific products should be set to "non-regional".
+ * @method array getRegionIds() Obtain  1. Query by Region ID(s). Region ID examples: ap-guangzhou、ap-shanghai、ap-singapore.
+2. The region ID for non-region-specific products should be set to non-regional.
+ * @method void setRegionIds(array $RegionIds) Set  1. Query by Region ID(s). Region ID examples: ap-guangzhou、ap-shanghai、ap-singapore.
+2. The region ID for non-region-specific products should be set to non-regional.
  */
 class DescribeEventsRequest extends AbstractModel
 {
@@ -43,17 +42,16 @@ class DescribeEventsRequest extends AbstractModel
     public $ProductIds;
 
     /**
-     * @var array 1. Query by Region ID(s). Region ID examples: ap-guangzhou、ap-shanghai、ap-singapore.
-2. The region ID for non-region-specific products should be set to "non-regional".
-
+     * @var array  1. Query by Region ID(s). Region ID examples: ap-guangzhou、ap-shanghai、ap-singapore.
+2. The region ID for non-region-specific products should be set to non-regional.
      */
     public $RegionIds;
 
     /**
      * @param string $EventDate event occurrence date
      * @param array $ProductIds Query by Product ID(s). Product ID examples: cvm, lb, cdb, cdn, crs.
-     * @param array $RegionIds 1. Query by Region ID(s). Region ID examples: ap-guangzhou、ap-shanghai、ap-singapore.
-2. The region ID for non-region-specific products should be set to "non-regional".
+     * @param array $RegionIds  1. Query by Region ID(s). Region ID examples: ap-guangzhou、ap-shanghai、ap-singapore.
+2. The region ID for non-region-specific products should be set to non-regional.
      */
     function __construct()
     {

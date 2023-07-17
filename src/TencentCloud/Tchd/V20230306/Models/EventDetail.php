@@ -18,47 +18,47 @@ namespace TencentCloud\Tchd\V20230306\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Describes information on an event
+ * Describes information on an event.
  *
- * @method string getProductId() Obtain Product ID
- * @method void setProductId(string $ProductId) Set Product ID
- * @method string getProductName() Obtain Product name
- * @method void setProductName(string $ProductName) Set Product name
- * @method string getRegionId() Obtain Region ID
- * @method void setRegionId(string $RegionId) Set Region ID
- * @method string getRegionName() Obtain Region name
- * @method void setRegionName(string $RegionName) Set Region name
- * @method string getStartTime() Obtain Event start time
- * @method void setStartTime(string $StartTime) Set Event start time
+ * @method string getProductId() Obtain Product ID.
+ * @method void setProductId(string $ProductId) Set Product ID.
+ * @method string getProductName() Obtain Product name.
+ * @method void setProductName(string $ProductName) Set Product name.
+ * @method string getRegionId() Obtain Region ID.
+ * @method void setRegionId(string $RegionId) Set Region ID.
+ * @method string getRegionName() Obtain Region name.
+ * @method void setRegionName(string $RegionName) Set Region name.
+ * @method string getStartTime() Obtain Event start time.
+ * @method void setStartTime(string $StartTime) Set Event start time.
  * @method string getEndTime() Obtain Event end time. If the event is still ongoing and has not ended, the end time will be empty.
  * @method void setEndTime(string $EndTime) Set Event end time. If the event is still ongoing and has not ended, the end time will be empty.
- * @method string getCurrentStatus() Obtain Current status: Normally, Informational, Degradation
- * @method void setCurrentStatus(string $CurrentStatus) Set Current status: Normally, Informational, Degradation
+ * @method string getCurrentStatus() Obtain Current status: Normally, Informational, Degradation.
+ * @method void setCurrentStatus(string $CurrentStatus) Set Current status: Normally, Informational, Degradation.
  */
 class EventDetail extends AbstractModel
 {
     /**
-     * @var string Product ID
+     * @var string Product ID.
      */
     public $ProductId;
 
     /**
-     * @var string Product name
+     * @var string Product name.
      */
     public $ProductName;
 
     /**
-     * @var string Region ID
+     * @var string Region ID.
      */
     public $RegionId;
 
     /**
-     * @var string Region name
+     * @var string Region name.
      */
     public $RegionName;
 
     /**
-     * @var string Event start time
+     * @var string Event start time.
      */
     public $StartTime;
 
@@ -68,18 +68,18 @@ class EventDetail extends AbstractModel
     public $EndTime;
 
     /**
-     * @var string Current status: Normally, Informational, Degradation
+     * @var string Current status: Normally, Informational, Degradation.
      */
     public $CurrentStatus;
 
     /**
-     * @param string $ProductId Product ID
-     * @param string $ProductName Product name
-     * @param string $RegionId Region ID
-     * @param string $RegionName Region name
-     * @param string $StartTime Event start time
+     * @param string $ProductId Product ID.
+     * @param string $ProductName Product name.
+     * @param string $RegionId Region ID.
+     * @param string $RegionName Region name.
+     * @param string $StartTime Event start time.
      * @param string $EndTime Event end time. If the event is still ongoing and has not ended, the end time will be empty.
-     * @param string $CurrentStatus Current status: Normally, Informational, Degradation
+     * @param string $CurrentStatus Current status: Normally, Informational, Degradation.
      */
     function __construct()
     {

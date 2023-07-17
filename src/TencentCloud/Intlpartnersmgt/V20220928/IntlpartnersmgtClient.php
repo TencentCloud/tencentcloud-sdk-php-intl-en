@@ -38,9 +38,13 @@ Notes:<br>
  * @method Models\DescribeBillSummaryByRegionResponse DescribeBillSummaryByRegion(Models\DescribeBillSummaryByRegionRequest $req) This API is used to obtain the total amount of customer bills by region.
  * @method Models\DescribeCustomerBillDetailResponse DescribeCustomerBillDetail(Models\DescribeCustomerBillDetailRequest $req) This API is used to query the customer bill details.
  * @method Models\DescribeCustomerBillSummaryResponse DescribeCustomerBillSummary(Models\DescribeCustomerBillSummaryRequest $req) This API is used to query the total amount of customer bills.
+ * @method Models\DescribeCustomerInfoResponse DescribeCustomerInfo(Models\DescribeCustomerInfoRequest $req) This API is used to query the customer information.
+ * @method Models\DescribeCustomerUinResponse DescribeCustomerUin(Models\DescribeCustomerUinRequest $req) This API is used to query the list of customer UINs.
  * @method Models\GetCountryCodesResponse GetCountryCodes(Models\GetCountryCodesRequest $req) This API is used to obtain country/region codes.
+ * @method Models\QueryAccountVerificationStatusResponse QueryAccountVerificationStatus(Models\QueryAccountVerificationStatusRequest $req) This API is used to query the account verification status.
  * @method Models\QueryCreditAllocationHistoryResponse QueryCreditAllocationHistory(Models\QueryCreditAllocationHistoryRequest $req) This API is used to query all the credit allocation records of a single customer.
  * @method Models\QueryCreditByUinListResponse QueryCreditByUinList(Models\QueryCreditByUinListRequest $req) This API is used to query the credit of users in the list.
+ * @method Models\QueryCreditQuotaResponse QueryCreditQuota(Models\QueryCreditQuotaRequest $req) This API is used to query customer credits.
  * @method Models\QueryCustomersCreditResponse QueryCustomersCredit(Models\QueryCustomersCreditRequest $req) This API is used for a partner to the credits and basic information of cutomers.
  * @method Models\QueryDirectCustomersCreditResponse QueryDirectCustomersCredit(Models\QueryDirectCustomersCreditRequest $req) This API is used to query the credits of direct customers.
  * @method Models\QueryPartnerCreditResponse QueryPartnerCredit(Models\QueryPartnerCreditRequest $req) This API is used for a partner to query its own total credit, available credit, and used credit in USD.
