@@ -44,6 +44,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTriggerAttribute(string $TriggerAttribute) Set Trigger type. Two-way means that the trigger can be manipulated in both consoles, while one-way means that the trigger can be created only in the SCF Console
  * @method string getQualifier() Obtain The alias or version bound with the trigger
  * @method void setQualifier(string $Qualifier) Set The alias or version bound with the trigger
+ * @method string getDescription() Obtain Trigger description
+ * @method void setDescription(string $Description) Set Trigger description
  */
 class Trigger extends AbstractModel
 {
@@ -89,16 +91,19 @@ class Trigger extends AbstractModel
 
     /**
      * @var string Minimum resource ID of trigger
+     * @deprecated
      */
     public $ResourceId;
 
     /**
      * @var string Trigger-Function binding status
+     * @deprecated
      */
     public $BindStatus;
 
     /**
      * @var string Trigger type. Two-way means that the trigger can be manipulated in both consoles, while one-way means that the trigger can be created only in the SCF Console
+     * @deprecated
      */
     public $TriggerAttribute;
 
@@ -106,6 +111,11 @@ class Trigger extends AbstractModel
      * @var string The alias or version bound with the trigger
      */
     public $Qualifier;
+
+    /**
+     * @var string Trigger description
+     */
+    public $Description;
 
     /**
      * @param string $ModTime Latest modification time of the trigger
@@ -120,6 +130,7 @@ class Trigger extends AbstractModel
      * @param string $BindStatus Trigger-Function binding status
      * @param string $TriggerAttribute Trigger type. Two-way means that the trigger can be manipulated in both consoles, while one-way means that the trigger can be created only in the SCF Console
      * @param string $Qualifier The alias or version bound with the trigger
+     * @param string $Description Trigger description
      */
     function __construct()
     {
@@ -180,6 +191,10 @@ class Trigger extends AbstractModel
 
         if (array_key_exists("Qualifier",$param) and $param["Qualifier"] !== null) {
             $this->Qualifier = $param["Qualifier"];
+        }
+
+        if (array_key_exists("Description",$param) and $param["Description"] !== null) {
+            $this->Description = $param["Description"];
         }
     }
 }

@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() Obtain Instance ID
  * @method void setInstanceId(string $InstanceId) Set Instance ID
- * @method array getSecurityGroupDetails() Obtain Security group information
- * @method void setSecurityGroupDetails(array $SecurityGroupDetails) Set Security group information
+ * @method array getSecurityGroupDetails() Obtain Security group information, which includes  security group ID, name, outbound and inbound rules.
+ * @method void setSecurityGroupDetails(array $SecurityGroupDetails) Set Security group information, which includes  security group ID, name, outbound and inbound rules.
  */
 class InstanceSecurityGroupDetail extends AbstractModel
 {
@@ -33,13 +33,13 @@ class InstanceSecurityGroupDetail extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var array Security group information
+     * @var array Security group information, which includes  security group ID, name, outbound and inbound rules.
      */
     public $SecurityGroupDetails;
 
     /**
      * @param string $InstanceId Instance ID
-     * @param array $SecurityGroupDetails Security group information
+     * @param array $SecurityGroupDetails Security group information, which includes  security group ID, name, outbound and inbound rules.
      */
     function __construct()
     {

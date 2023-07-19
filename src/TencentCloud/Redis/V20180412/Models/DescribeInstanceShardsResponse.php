@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeInstanceShards response structure.
  *
- * @method array getInstanceShards() Obtain Information list of instance shards
- * @method void setInstanceShards(array $InstanceShards) Set Information list of instance shards
- * @method integer getTotalCount() Obtain Total number of instance shard nodes
- * @method void setTotalCount(integer $TotalCount) Set Total number of instance shard nodes
+ * @method array getInstanceShards() Obtain List information of the instance shards, which includes  node information, node ID, key count, used capacity, and capacity slope.
+ * @method void setInstanceShards(array $InstanceShards) Set List information of the instance shards, which includes  node information, node ID, key count, used capacity, and capacity slope.
+ * @method integer getTotalCount() Obtain Number of instance shard nodes
+ * @method void setTotalCount(integer $TotalCount) Set Number of instance shard nodes
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 class DescribeInstanceShardsResponse extends AbstractModel
 {
     /**
-     * @var array Information list of instance shards
+     * @var array List information of the instance shards, which includes  node information, node ID, key count, used capacity, and capacity slope.
      */
     public $InstanceShards;
 
     /**
-     * @var integer Total number of instance shard nodes
+     * @var integer Number of instance shard nodes
      */
     public $TotalCount;
 
@@ -45,8 +45,8 @@ class DescribeInstanceShardsResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $InstanceShards Information list of instance shards
-     * @param integer $TotalCount Total number of instance shard nodes
+     * @param array $InstanceShards List information of the instance shards, which includes  node information, node ID, key count, used capacity, and capacity slope.
+     * @param integer $TotalCount Number of instance shard nodes
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()

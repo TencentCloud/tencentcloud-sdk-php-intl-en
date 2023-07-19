@@ -32,10 +32,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOrderBy(string $OrderBy) Set Indicates by which field to sort the returned results. Valid values: add_time, mod_time. Default value: mod_time
  * @method string getOrder() Obtain Indicates whether the returned results are sorted in ascending or descending order. Valid values: ASC, DESC. Default value: DESC
  * @method void setOrder(string $Order) Set Indicates whether the returned results are sorted in ascending or descending order. Valid values: ASC, DESC. Default value: DESC
- * @method array getFilters() Obtain * Qualifier:
-Function version, alias
- * @method void setFilters(array $Filters) Set * Qualifier:
-Function version, alias
+ * @method array getFilters() Obtain * Qualifier: Version/Alias of trigger function 
+*TriggerName: Name of the trigger 
+*Description: Function trigger description
+ * @method void setFilters(array $Filters) Set * Qualifier: Version/Alias of trigger function 
+*TriggerName: Name of the trigger 
+*Description: Function trigger description
  */
 class ListTriggersRequest extends AbstractModel
 {
@@ -70,8 +72,9 @@ class ListTriggersRequest extends AbstractModel
     public $Order;
 
     /**
-     * @var array * Qualifier:
-Function version, alias
+     * @var array * Qualifier: Version/Alias of trigger function 
+*TriggerName: Name of the trigger 
+*Description: Function trigger description
      */
     public $Filters;
 
@@ -82,8 +85,9 @@ Function version, alias
      * @param integer $Limit Number of results to be returned. Default value: 20
      * @param string $OrderBy Indicates by which field to sort the returned results. Valid values: add_time, mod_time. Default value: mod_time
      * @param string $Order Indicates whether the returned results are sorted in ascending or descending order. Valid values: ASC, DESC. Default value: DESC
-     * @param array $Filters * Qualifier:
-Function version, alias
+     * @param array $Filters * Qualifier: Version/Alias of trigger function 
+*TriggerName: Name of the trigger 
+*Description: Function trigger description
      */
     function __construct()
     {

@@ -18,7 +18,7 @@ namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Instance node information
+ * Information of the instance node group
  *
  * @method integer getGroupId() Obtain Node group ID
  * @method void setGroupId(integer $GroupId) Set Node group ID

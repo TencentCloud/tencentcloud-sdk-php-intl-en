@@ -24,8 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setModTime(string $ModTime) Set Modification time
  * @method string getAddTime() Obtain Creation time
  * @method void setAddTime(string $AddTime) Set Creation time
- * @method string getRuntime() Obtain Running
- * @method void setRuntime(string $Runtime) Set Running
+ * @method string getRuntime() Obtain Runtime 
+Note: This parameter may return null, indicating that no valid values can be obtained.
+ * @method void setRuntime(string $Runtime) Set Runtime 
+Note: This parameter may return null, indicating that no valid values can be obtained.
  * @method string getFunctionName() Obtain Function name
  * @method void setFunctionName(string $FunctionName) Set Function name
  * @method string getFunctionId() Obtain Function ID
@@ -70,7 +72,8 @@ class FunctionInfo extends AbstractModel
     public $AddTime;
 
     /**
-     * @var string Running
+     * @var string Runtime 
+Note: This parameter may return null, indicating that no valid values can be obtained.
      */
     public $Runtime;
 
@@ -144,7 +147,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
     /**
      * @param string $ModTime Modification time
      * @param string $AddTime Creation time
-     * @param string $Runtime Running
+     * @param string $Runtime Runtime 
+Note: This parameter may return null, indicating that no valid values can be obtained.
      * @param string $FunctionName Function name
      * @param string $FunctionId Function ID
      * @param string $Namespace Namespace

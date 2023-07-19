@@ -22,20 +22,20 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getParamName() Obtain Parameter name
  * @method void setParamName(string $ParamName) Set Parameter name
- * @method string getValueType() Obtain Parameter type: Multi
- * @method void setValueType(string $ValueType) Set Parameter type: Multi
- * @method string getNeedRestart() Obtain Whether restart is required after a modification is made. Valid values: true, false
- * @method void setNeedRestart(string $NeedRestart) Set Whether restart is required after a modification is made. Valid values: true, false
+ * @method string getValueType() Obtain Parameter Type such as  `MULTI`
+ * @method void setValueType(string $ValueType) Set Parameter Type such as  `MULTI`
+ * @method string getNeedRestart() Obtain Whether to restart the database after modifying the parameter. Valid values:  - `true` (required) - `false` (not required)
+ * @method void setNeedRestart(string $NeedRestart) Set Whether to restart the database after modifying the parameter. Valid values:  - `true` (required) - `false` (not required)
  * @method string getDefaultValue() Obtain Default value of the parameter
  * @method void setDefaultValue(string $DefaultValue) Set Default value of the parameter
  * @method string getCurrentValue() Obtain Current value
  * @method void setCurrentValue(string $CurrentValue) Set Current value
- * @method string getTips() Obtain Parameter description
- * @method void setTips(string $Tips) Set Parameter description
- * @method array getEnumValue() Obtain Parameter description
- * @method void setEnumValue(array $EnumValue) Set Parameter description
- * @method integer getStatus() Obtain Parameter status. 1: modifying; 2: modified
- * @method void setStatus(integer $Status) Set Parameter status. 1: modifying; 2: modified
+ * @method string getTips() Obtain Description
+ * @method void setTips(string $Tips) Set Description
+ * @method array getEnumValue() Obtain Description
+ * @method void setEnumValue(array $EnumValue) Set Description
+ * @method integer getStatus() Obtain Parameter modification status. Valid values: - `1` (modifying) - `2` (modified)
+ * @method void setStatus(integer $Status) Set Parameter modification status. Valid values: - `1` (modifying) - `2` (modified)
  */
 class InstanceMultiParam extends AbstractModel
 {
@@ -45,12 +45,12 @@ class InstanceMultiParam extends AbstractModel
     public $ParamName;
 
     /**
-     * @var string Parameter type: Multi
+     * @var string Parameter Type such as  `MULTI`
      */
     public $ValueType;
 
     /**
-     * @var string Whether restart is required after a modification is made. Valid values: true, false
+     * @var string Whether to restart the database after modifying the parameter. Valid values:  - `true` (required) - `false` (not required)
      */
     public $NeedRestart;
 
@@ -65,29 +65,29 @@ class InstanceMultiParam extends AbstractModel
     public $CurrentValue;
 
     /**
-     * @var string Parameter description
+     * @var string Description
      */
     public $Tips;
 
     /**
-     * @var array Parameter description
+     * @var array Description
      */
     public $EnumValue;
 
     /**
-     * @var integer Parameter status. 1: modifying; 2: modified
+     * @var integer Parameter modification status. Valid values: - `1` (modifying) - `2` (modified)
      */
     public $Status;
 
     /**
      * @param string $ParamName Parameter name
-     * @param string $ValueType Parameter type: Multi
-     * @param string $NeedRestart Whether restart is required after a modification is made. Valid values: true, false
+     * @param string $ValueType Parameter Type such as  `MULTI`
+     * @param string $NeedRestart Whether to restart the database after modifying the parameter. Valid values:  - `true` (required) - `false` (not required)
      * @param string $DefaultValue Default value of the parameter
      * @param string $CurrentValue Current value
-     * @param string $Tips Parameter description
-     * @param array $EnumValue Parameter description
-     * @param integer $Status Parameter status. 1: modifying; 2: modified
+     * @param string $Tips Description
+     * @param array $EnumValue Description
+     * @param integer $Status Parameter modification status. Valid values: - `1` (modifying) - `2` (modified)
      */
     function __construct()
     {

@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Security group inbound/outbound rules
  *
- * @method string getAction() Obtain Action to be executed
- * @method void setAction(string $Action) Set Action to be executed
- * @method string getIp() Obtain IP addresses
- * @method void setIp(string $Ip) Set IP addresses
+ * @method string getAction() Obtain Identify whether the IP and port for accessing the database are allowed
+ * @method void setAction(string $Action) Set Identify whether the IP and port for accessing the database are allowed
+ * @method string getIp() Obtain IP address for accessing the database
+ * @method void setIp(string $Ip) Set IP address for accessing the database
  * @method string getPort() Obtain Port number
  * @method void setPort(string $Port) Set Port number
  * @method string getProto() Obtain Protocol type
@@ -32,12 +32,12 @@ use TencentCloud\Common\AbstractModel;
 class SecurityGroupsInboundAndOutbound extends AbstractModel
 {
     /**
-     * @var string Action to be executed
+     * @var string Identify whether the IP and port for accessing the database are allowed
      */
     public $Action;
 
     /**
-     * @var string IP addresses
+     * @var string IP address for accessing the database
      */
     public $Ip;
 
@@ -52,8 +52,8 @@ class SecurityGroupsInboundAndOutbound extends AbstractModel
     public $Proto;
 
     /**
-     * @param string $Action Action to be executed
-     * @param string $Ip IP addresses
+     * @param string $Action Identify whether the IP and port for accessing the database are allowed
+     * @param string $Ip IP address for accessing the database
      * @param string $Port Port number
      * @param string $Proto Protocol type
      */

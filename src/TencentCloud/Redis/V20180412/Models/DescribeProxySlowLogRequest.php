@@ -20,43 +20,46 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeProxySlowLog request structure.
  *
- * @method string getInstanceId() Obtain Instance ID
- * @method void setInstanceId(string $InstanceId) Set Instance ID
- * @method string getBeginTime() Obtain Start time
- * @method void setBeginTime(string $BeginTime) Set Start time
- * @method string getEndTime() Obtain End time
- * @method void setEndTime(string $EndTime) Set End time
- * @method integer getMinQueryTime() Obtain Slow query threshold in milliseconds
- * @method void setMinQueryTime(integer $MinQueryTime) Set Slow query threshold in milliseconds
- * @method integer getLimit() Obtain Maximum number of results returned per page
- * @method void setLimit(integer $Limit) Set Maximum number of results returned per page
+ * @method string getInstanceId() Obtain ID of a specified instance,  such as  "crs-xjhsdj****" Log in to the [Redis console](https://console.cloud.tencent.com/redis) and copy the instance ID in the instance list.
+
+ * @method void setInstanceId(string $InstanceId) Set ID of a specified instance,  such as  "crs-xjhsdj****" Log in to the [Redis console](https://console.cloud.tencent.com/redis) and copy the instance ID in the instance list.
+
+ * @method string getBeginTime() Obtain Start time of slow query
+ * @method void setBeginTime(string $BeginTime) Set Start time of slow query
+ * @method string getEndTime() Obtain End time of slow query
+ * @method void setEndTime(string $EndTime) Set End time of slow query
+ * @method integer getMinQueryTime() Obtain Slow query threshold  in milliseconds
+ * @method void setMinQueryTime(integer $MinQueryTime) Set Slow query threshold  in milliseconds
+ * @method integer getLimit() Obtain Number of results per page.  Default value: `20`. Value range: [20,1000].
+ * @method void setLimit(integer $Limit) Set Number of results per page.  Default value: `20`. Value range: [20,1000].
  * @method integer getOffset() Obtain Offset, which is an integral multiple of `Limit`.
  * @method void setOffset(integer $Offset) Set Offset, which is an integral multiple of `Limit`.
  */
 class DescribeProxySlowLogRequest extends AbstractModel
 {
     /**
-     * @var string Instance ID
+     * @var string ID of a specified instance,  such as  "crs-xjhsdj****" Log in to the [Redis console](https://console.cloud.tencent.com/redis) and copy the instance ID in the instance list.
+
      */
     public $InstanceId;
 
     /**
-     * @var string Start time
+     * @var string Start time of slow query
      */
     public $BeginTime;
 
     /**
-     * @var string End time
+     * @var string End time of slow query
      */
     public $EndTime;
 
     /**
-     * @var integer Slow query threshold in milliseconds
+     * @var integer Slow query threshold  in milliseconds
      */
     public $MinQueryTime;
 
     /**
-     * @var integer Maximum number of results returned per page
+     * @var integer Number of results per page.  Default value: `20`. Value range: [20,1000].
      */
     public $Limit;
 
@@ -66,11 +69,12 @@ class DescribeProxySlowLogRequest extends AbstractModel
     public $Offset;
 
     /**
-     * @param string $InstanceId Instance ID
-     * @param string $BeginTime Start time
-     * @param string $EndTime End time
-     * @param integer $MinQueryTime Slow query threshold in milliseconds
-     * @param integer $Limit Maximum number of results returned per page
+     * @param string $InstanceId ID of a specified instance,  such as  "crs-xjhsdj****" Log in to the [Redis console](https://console.cloud.tencent.com/redis) and copy the instance ID in the instance list.
+
+     * @param string $BeginTime Start time of slow query
+     * @param string $EndTime End time of slow query
+     * @param integer $MinQueryTime Slow query threshold  in milliseconds
+     * @param integer $Limit Number of results per page.  Default value: `20`. Value range: [20,1000].
      * @param integer $Offset Offset, which is an integral multiple of `Limit`.
      */
     function __construct()

@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Instance node
  *
- * @method integer getId() Obtain Id
- * @method void setId(integer $Id) Set Id
+ * @method integer getId() Obtain Instance ID
+ * @method void setId(integer $Id) Set Instance ID
  * @method array getInstanceClusterNode() Obtain Node details
  * @method void setInstanceClusterNode(array $InstanceClusterNode) Set Node details
  */
 class InstanceNode extends AbstractModel
 {
     /**
-     * @var integer Id
+     * @var integer Instance ID
      */
     public $Id;
 
@@ -38,7 +38,7 @@ class InstanceNode extends AbstractModel
     public $InstanceClusterNode;
 
     /**
-     * @param integer $Id Id
+     * @param integer $Id Instance ID
      * @param array $InstanceClusterNode Node details
      */
     function __construct()

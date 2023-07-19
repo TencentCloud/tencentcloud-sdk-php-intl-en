@@ -20,35 +20,35 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeTaskList request structure.
  *
- * @method string getInstanceId() Obtain Instance ID
- * @method void setInstanceId(string $InstanceId) Set Instance ID
+ * @method string getInstanceId() Obtain ID of a specified instance,  such as  "crs-xjhsdj****" Log in to the [Redis console](https://console.cloud.tencent.com/redis) and copy the instance ID in the instance list.
+ * @method void setInstanceId(string $InstanceId) Set ID of a specified instance,  such as  "crs-xjhsdj****" Log in to the [Redis console](https://console.cloud.tencent.com/redis) and copy the instance ID in the instance list.
  * @method string getInstanceName() Obtain Instance name
  * @method void setInstanceName(string $InstanceName) Set Instance name
- * @method integer getLimit() Obtain Maximum number of results returned per page. Default value: 20. Maximum value: 100.
- * @method void setLimit(integer $Limit) Set Maximum number of results returned per page. Default value: 20. Maximum value: 100.
- * @method integer getOffset() Obtain Offset, which is an integral multiple of `Limit` (rounded down automatically).
- * @method void setOffset(integer $Offset) Set Offset, which is an integral multiple of `Limit` (rounded down automatically).
- * @method array getProjectIds() Obtain Project ID
- * @method void setProjectIds(array $ProjectIds) Set Project ID
- * @method array getTaskTypes() Obtain Task type
- * @method void setTaskTypes(array $TaskTypes) Set Task type
- * @method string getBeginTime() Obtain Start time
- * @method void setBeginTime(string $BeginTime) Set Start time
- * @method string getEndTime() Obtain End time
- * @method void setEndTime(string $EndTime) Set End time
- * @method array getTaskStatus() Obtain Task status
- * @method void setTaskStatus(array $TaskStatus) Set Task status
- * @method array getResult() Obtain Task status
- * @method void setResult(array $Result) Set Task status
+ * @method integer getLimit() Obtain Number of taskss returned per page.  Default value: `20`. Maximum value: `100`.
+ * @method void setLimit(integer $Limit) Set Number of taskss returned per page.  Default value: `20`. Maximum value: `100`.
+ * @method integer getOffset() Obtain Pagination offset, which is an integral multiple of `Limit`. Calculation formula:  `offset` = `limit` * (page number - 1).
+ * @method void setOffset(integer $Offset) Set Pagination offset, which is an integral multiple of `Limit`. Calculation formula:  `offset` = `limit` * (page number - 1).
+ * @method array getProjectIds() Obtain Project ID Log in to the [Redis console](https://console.cloud.tencent.com/redis#/), go to the account information menu in the top-right corner, and select **Project Management** to query the project ID.
+ * @method void setProjectIds(array $ProjectIds) Set Project ID Log in to the [Redis console](https://console.cloud.tencent.com/redis#/), go to the account information menu in the top-right corner, and select **Project Management** to query the project ID.
+ * @method array getTaskTypes() Obtain Task type. Valid values:  - `FLOW_CREATE`: Create an instance. - `FLOW_MODIFYCONNECTIONCONFIG`: Adjust the number of bandwidth connections. - `FLOW_MODIFYINSTANCEPASSWORDFREE`: Modify the process of password-free access. - `FLOW_CLEARNETWORK`: Returning VPC - `FLOW_SETPWD`: Set the access password. - `FLOW_EXPORSHR`: Expand or reduce the capacity. - `FLOW_UpgradeArch`: Upgrade the instance architecture. - `FLOW_MODIFYINSTANCEPARAMS`: Modify the instance parameters. - `FLOW_MODIFYINSTACEREADONLY`: Modify read-only process. - `FLOW_CLOSE`: Disable the instance. - `FLOW_DELETE`: Delete the instance. - `FLOW_OPEN_WAN`: Enable the public network. - `FLOW_FLOW_CLEAN`: Clear the instance. - `FLOW_MODIFYINSTANCEACCOUNT`: Modify the instance account. - `FLOW_ENABLEINSTANCE_REPLICATE`: Enable the replica read-only feature. - `FLOW_DISABLEINSTANCE_REPLICATE`: Disable the replica read-only feature. - `FLOW_SWITCHINSTANCEVIP`: Swap the VIPs of instances. - FLOW_CHANGE_REPLICA_TO_MSTER: Promote the replica node to the mater node. - `FLOW_BACKUPINSTANCE`: Back up an instance.
+ * @method void setTaskTypes(array $TaskTypes) Set Task type. Valid values:  - `FLOW_CREATE`: Create an instance. - `FLOW_MODIFYCONNECTIONCONFIG`: Adjust the number of bandwidth connections. - `FLOW_MODIFYINSTANCEPASSWORDFREE`: Modify the process of password-free access. - `FLOW_CLEARNETWORK`: Returning VPC - `FLOW_SETPWD`: Set the access password. - `FLOW_EXPORSHR`: Expand or reduce the capacity. - `FLOW_UpgradeArch`: Upgrade the instance architecture. - `FLOW_MODIFYINSTANCEPARAMS`: Modify the instance parameters. - `FLOW_MODIFYINSTACEREADONLY`: Modify read-only process. - `FLOW_CLOSE`: Disable the instance. - `FLOW_DELETE`: Delete the instance. - `FLOW_OPEN_WAN`: Enable the public network. - `FLOW_FLOW_CLEAN`: Clear the instance. - `FLOW_MODIFYINSTANCEACCOUNT`: Modify the instance account. - `FLOW_ENABLEINSTANCE_REPLICATE`: Enable the replica read-only feature. - `FLOW_DISABLEINSTANCE_REPLICATE`: Disable the replica read-only feature. - `FLOW_SWITCHINSTANCEVIP`: Swap the VIPs of instances. - FLOW_CHANGE_REPLICA_TO_MSTER: Promote the replica node to the mater node. - `FLOW_BACKUPINSTANCE`: Back up an instance.
+ * @method string getBeginTime() Obtain Start time for executing a task,  in the format of  “2020-10-12 00:00:00”.
+ * @method void setBeginTime(string $BeginTime) Set Start time for executing a task,  in the format of  “2020-10-12 00:00:00”.
+ * @method string getEndTime() Obtain End time for executing a task,  in the format of  “2021-12-30 20:59:35”.
+ * @method void setEndTime(string $EndTime) Set End time for executing a task,  in the format of  “2021-12-30 20:59:35”.
+ * @method array getTaskStatus() Obtain This parameter is only for internal use and can be ignored.
+ * @method void setTaskStatus(array $TaskStatus) Set This parameter is only for internal use and can be ignored.
+ * @method array getResult() Obtain Task execution status. Valid values: - `0` (initilized) - `1` (executing) - `2` (completed) - `4` (failed)
+ * @method void setResult(array $Result) Set Task execution status. Valid values: - `0` (initilized) - `1` (executing) - `2` (completed) - `4` (failed)
  * @method array getOperatorUin() Obtain The field `OperatorUin` has been disused and replaced by `OperateUin`.
  * @method void setOperatorUin(array $OperatorUin) Set The field `OperatorUin` has been disused and replaced by `OperateUin`.
- * @method array getOperateUin() Obtain Operator Uin
- * @method void setOperateUin(array $OperateUin) Set Operator Uin
+ * @method array getOperateUin() Obtain Operator account ID or UIN
+ * @method void setOperateUin(array $OperateUin) Set Operator account ID or UIN
  */
 class DescribeTaskListRequest extends AbstractModel
 {
     /**
-     * @var string Instance ID
+     * @var string ID of a specified instance,  such as  "crs-xjhsdj****" Log in to the [Redis console](https://console.cloud.tencent.com/redis) and copy the instance ID in the instance list.
      */
     public $InstanceId;
 
@@ -58,42 +58,42 @@ class DescribeTaskListRequest extends AbstractModel
     public $InstanceName;
 
     /**
-     * @var integer Maximum number of results returned per page. Default value: 20. Maximum value: 100.
+     * @var integer Number of taskss returned per page.  Default value: `20`. Maximum value: `100`.
      */
     public $Limit;
 
     /**
-     * @var integer Offset, which is an integral multiple of `Limit` (rounded down automatically).
+     * @var integer Pagination offset, which is an integral multiple of `Limit`. Calculation formula:  `offset` = `limit` * (page number - 1).
      */
     public $Offset;
 
     /**
-     * @var array Project ID
+     * @var array Project ID Log in to the [Redis console](https://console.cloud.tencent.com/redis#/), go to the account information menu in the top-right corner, and select **Project Management** to query the project ID.
      */
     public $ProjectIds;
 
     /**
-     * @var array Task type
+     * @var array Task type. Valid values:  - `FLOW_CREATE`: Create an instance. - `FLOW_MODIFYCONNECTIONCONFIG`: Adjust the number of bandwidth connections. - `FLOW_MODIFYINSTANCEPASSWORDFREE`: Modify the process of password-free access. - `FLOW_CLEARNETWORK`: Returning VPC - `FLOW_SETPWD`: Set the access password. - `FLOW_EXPORSHR`: Expand or reduce the capacity. - `FLOW_UpgradeArch`: Upgrade the instance architecture. - `FLOW_MODIFYINSTANCEPARAMS`: Modify the instance parameters. - `FLOW_MODIFYINSTACEREADONLY`: Modify read-only process. - `FLOW_CLOSE`: Disable the instance. - `FLOW_DELETE`: Delete the instance. - `FLOW_OPEN_WAN`: Enable the public network. - `FLOW_FLOW_CLEAN`: Clear the instance. - `FLOW_MODIFYINSTANCEACCOUNT`: Modify the instance account. - `FLOW_ENABLEINSTANCE_REPLICATE`: Enable the replica read-only feature. - `FLOW_DISABLEINSTANCE_REPLICATE`: Disable the replica read-only feature. - `FLOW_SWITCHINSTANCEVIP`: Swap the VIPs of instances. - FLOW_CHANGE_REPLICA_TO_MSTER: Promote the replica node to the mater node. - `FLOW_BACKUPINSTANCE`: Back up an instance.
      */
     public $TaskTypes;
 
     /**
-     * @var string Start time
+     * @var string Start time for executing a task,  in the format of  “2020-10-12 00:00:00”.
      */
     public $BeginTime;
 
     /**
-     * @var string End time
+     * @var string End time for executing a task,  in the format of  “2021-12-30 20:59:35”.
      */
     public $EndTime;
 
     /**
-     * @var array Task status
+     * @var array This parameter is only for internal use and can be ignored.
      */
     public $TaskStatus;
 
     /**
-     * @var array Task status
+     * @var array Task execution status. Valid values: - `0` (initilized) - `1` (executing) - `2` (completed) - `4` (failed)
      */
     public $Result;
 
@@ -103,23 +103,23 @@ class DescribeTaskListRequest extends AbstractModel
     public $OperatorUin;
 
     /**
-     * @var array Operator Uin
+     * @var array Operator account ID or UIN
      */
     public $OperateUin;
 
     /**
-     * @param string $InstanceId Instance ID
+     * @param string $InstanceId ID of a specified instance,  such as  "crs-xjhsdj****" Log in to the [Redis console](https://console.cloud.tencent.com/redis) and copy the instance ID in the instance list.
      * @param string $InstanceName Instance name
-     * @param integer $Limit Maximum number of results returned per page. Default value: 20. Maximum value: 100.
-     * @param integer $Offset Offset, which is an integral multiple of `Limit` (rounded down automatically).
-     * @param array $ProjectIds Project ID
-     * @param array $TaskTypes Task type
-     * @param string $BeginTime Start time
-     * @param string $EndTime End time
-     * @param array $TaskStatus Task status
-     * @param array $Result Task status
+     * @param integer $Limit Number of taskss returned per page.  Default value: `20`. Maximum value: `100`.
+     * @param integer $Offset Pagination offset, which is an integral multiple of `Limit`. Calculation formula:  `offset` = `limit` * (page number - 1).
+     * @param array $ProjectIds Project ID Log in to the [Redis console](https://console.cloud.tencent.com/redis#/), go to the account information menu in the top-right corner, and select **Project Management** to query the project ID.
+     * @param array $TaskTypes Task type. Valid values:  - `FLOW_CREATE`: Create an instance. - `FLOW_MODIFYCONNECTIONCONFIG`: Adjust the number of bandwidth connections. - `FLOW_MODIFYINSTANCEPASSWORDFREE`: Modify the process of password-free access. - `FLOW_CLEARNETWORK`: Returning VPC - `FLOW_SETPWD`: Set the access password. - `FLOW_EXPORSHR`: Expand or reduce the capacity. - `FLOW_UpgradeArch`: Upgrade the instance architecture. - `FLOW_MODIFYINSTANCEPARAMS`: Modify the instance parameters. - `FLOW_MODIFYINSTACEREADONLY`: Modify read-only process. - `FLOW_CLOSE`: Disable the instance. - `FLOW_DELETE`: Delete the instance. - `FLOW_OPEN_WAN`: Enable the public network. - `FLOW_FLOW_CLEAN`: Clear the instance. - `FLOW_MODIFYINSTANCEACCOUNT`: Modify the instance account. - `FLOW_ENABLEINSTANCE_REPLICATE`: Enable the replica read-only feature. - `FLOW_DISABLEINSTANCE_REPLICATE`: Disable the replica read-only feature. - `FLOW_SWITCHINSTANCEVIP`: Swap the VIPs of instances. - FLOW_CHANGE_REPLICA_TO_MSTER: Promote the replica node to the mater node. - `FLOW_BACKUPINSTANCE`: Back up an instance.
+     * @param string $BeginTime Start time for executing a task,  in the format of  “2020-10-12 00:00:00”.
+     * @param string $EndTime End time for executing a task,  in the format of  “2021-12-30 20:59:35”.
+     * @param array $TaskStatus This parameter is only for internal use and can be ignored.
+     * @param array $Result Task execution status. Valid values: - `0` (initilized) - `1` (executing) - `2` (completed) - `4` (failed)
      * @param array $OperatorUin The field `OperatorUin` has been disused and replaced by `OperateUin`.
-     * @param array $OperateUin Operator Uin
+     * @param array $OperateUin Operator account ID or UIN
      */
     function __construct()
     {

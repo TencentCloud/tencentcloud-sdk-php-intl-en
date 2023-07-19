@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getGroups() Obtain Security group rules
  * @method void setGroups(array $Groups) Set Security group rules
- * @method string getVIP() Obtain Private IP for which the security group takes effect
- * @method void setVIP(string $VIP) Set Private IP for which the security group takes effect
- * @method string getVPort() Obtain Private port for which the security group takes effect
- * @method void setVPort(string $VPort) Set Private port for which the security group takes effect
+ * @method string getVIP() Obtain Private IPv4 address of an instance
+ * @method void setVIP(string $VIP) Set Private IPv4 address of an instance
+ * @method string getVPort() Obtain Private network port
+ * @method void setVPort(string $VPort) Set Private network port
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -37,12 +37,12 @@ class DescribeDBSecurityGroupsResponse extends AbstractModel
     public $Groups;
 
     /**
-     * @var string Private IP for which the security group takes effect
+     * @var string Private IPv4 address of an instance
      */
     public $VIP;
 
     /**
-     * @var string Private port for which the security group takes effect
+     * @var string Private network port
      */
     public $VPort;
 
@@ -53,8 +53,8 @@ class DescribeDBSecurityGroupsResponse extends AbstractModel
 
     /**
      * @param array $Groups Security group rules
-     * @param string $VIP Private IP for which the security group takes effect
-     * @param string $VPort Private port for which the security group takes effect
+     * @param string $VIP Private IPv4 address of an instance
+     * @param string $VPort Private network port
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()

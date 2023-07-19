@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeInstanceZoneInfo request structure.
  *
- * @method string getInstanceId() Obtain Instance ID, such as crs-6ubhgouj
- * @method void setInstanceId(string $InstanceId) Set Instance ID, such as crs-6ubhgouj
+ * @method string getInstanceId() Obtain ID of a specified instance,  such as  "crs-xjhsdj****" Log in to the [Redis console](https://console.cloud.tencent.com/redis) and copy the instance ID in the instance list.
+ * @method void setInstanceId(string $InstanceId) Set ID of a specified instance,  such as  "crs-xjhsdj****" Log in to the [Redis console](https://console.cloud.tencent.com/redis) and copy the instance ID in the instance list.
  */
 class DescribeInstanceZoneInfoRequest extends AbstractModel
 {
     /**
-     * @var string Instance ID, such as crs-6ubhgouj
+     * @var string ID of a specified instance,  such as  "crs-xjhsdj****" Log in to the [Redis console](https://console.cloud.tencent.com/redis) and copy the instance ID in the instance list.
      */
     public $InstanceId;
 
     /**
-     * @param string $InstanceId Instance ID, such as crs-6ubhgouj
+     * @param string $InstanceId ID of a specified instance,  such as  "crs-xjhsdj****" Log in to the [Redis console](https://console.cloud.tencent.com/redis) and copy the instance ID in the instance list.
      */
     function __construct()
     {

@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeInstanceNodeInfo request structure.
  *
- * @method string getInstanceId() Obtain Instance ID
- * @method void setInstanceId(string $InstanceId) Set Instance ID
- * @method integer getLimit() Obtain List size
- * @method void setLimit(integer $Limit) Set List size
- * @method integer getOffset() Obtain The offset value
- * @method void setOffset(integer $Offset) Set The offset value
+ * @method string getInstanceId() Obtain ID of a specified instance,  such as  "crs-xjhsdj****" Log in to the [Redis console](https://console.cloud.tencent.com/redis) and copy the instance ID in the instance list.
+ * @method void setInstanceId(string $InstanceId) Set ID of a specified instance,  such as  "crs-xjhsdj****" Log in to the [Redis console](https://console.cloud.tencent.com/redis) and copy the instance ID in the instance list.
+ * @method integer getLimit() Obtain List size Size of node information returned per page.  Default value: `20`. Maximum value: `1000`.  This field has been disused.
+ * @method void setLimit(integer $Limit) Set List size Size of node information returned per page.  Default value: `20`. Maximum value: `1000`.  This field has been disused.
+ * @method integer getOffset() Obtain Pagination offset, which is an integral multiple of `Limit`. Calculation formula:  `offset` = `limit` * (page number - 1). This field has been disused.
+ * @method void setOffset(integer $Offset) Set Pagination offset, which is an integral multiple of `Limit`. Calculation formula:  `offset` = `limit` * (page number - 1). This field has been disused.
  */
 class DescribeInstanceNodeInfoRequest extends AbstractModel
 {
     /**
-     * @var string Instance ID
+     * @var string ID of a specified instance,  such as  "crs-xjhsdj****" Log in to the [Redis console](https://console.cloud.tencent.com/redis) and copy the instance ID in the instance list.
      */
     public $InstanceId;
 
     /**
-     * @var integer List size
+     * @var integer List size Size of node information returned per page.  Default value: `20`. Maximum value: `1000`.  This field has been disused.
      */
     public $Limit;
 
     /**
-     * @var integer The offset value
+     * @var integer Pagination offset, which is an integral multiple of `Limit`. Calculation formula:  `offset` = `limit` * (page number - 1). This field has been disused.
      */
     public $Offset;
 
     /**
-     * @param string $InstanceId Instance ID
-     * @param integer $Limit List size
-     * @param integer $Offset The offset value
+     * @param string $InstanceId ID of a specified instance,  such as  "crs-xjhsdj****" Log in to the [Redis console](https://console.cloud.tencent.com/redis) and copy the instance ID in the instance list.
+     * @param integer $Limit List size Size of node information returned per page.  Default value: `20`. Maximum value: `1000`.  This field has been disused.
+     * @param integer $Offset Pagination offset, which is an integral multiple of `Limit`. Calculation formula:  `offset` = `limit` * (page number - 1). This field has been disused.
      */
     function __construct()
     {

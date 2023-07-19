@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeInstanceParams response structure.
  *
- * @method integer getTotalCount() Obtain Number of instance parameters
- * @method void setTotalCount(integer $TotalCount) Set Number of instance parameters
+ * @method integer getTotalCount() Obtain Total number of the parameter lists
+ * @method void setTotalCount(integer $TotalCount) Set Total number of the parameter lists
  * @method array getInstanceEnumParam() Obtain Instance parameter in Enum type
  * @method void setInstanceEnumParam(array $InstanceEnumParam) Set Instance parameter in Enum type
  * @method array getInstanceIntegerParam() Obtain Instance parameter in Integer type
@@ -36,7 +36,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeInstanceParamsResponse extends AbstractModel
 {
     /**
-     * @var integer Number of instance parameters
+     * @var integer Total number of the parameter lists
      */
     public $TotalCount;
 
@@ -66,7 +66,7 @@ class DescribeInstanceParamsResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $TotalCount Number of instance parameters
+     * @param integer $TotalCount Total number of the parameter lists
      * @param array $InstanceEnumParam Instance parameter in Enum type
      * @param array $InstanceIntegerParam Instance parameter in Integer type
      * @param array $InstanceTextParam Instance parameter in Char type

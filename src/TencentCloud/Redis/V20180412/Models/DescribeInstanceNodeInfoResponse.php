@@ -22,22 +22,22 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getProxyCount() Obtain The number of proxy nodes
  * @method void setProxyCount(integer $ProxyCount) Set The number of proxy nodes
- * @method array getProxy() Obtain Proxy node information
-Note: This field may return `null`, indicating that no valid values can be obtained.
- * @method void setProxy(array $Proxy) Set Proxy node information
-Note: This field may return `null`, indicating that no valid values can be obtained.
- * @method integer getRedisCount() Obtain The number of redis nodes
- * @method void setRedisCount(integer $RedisCount) Set The number of redis nodes
- * @method array getRedis() Obtain Redis node information
-Note: This field may return `null`, indicating that no valid values can be obtained.
- * @method void setRedis(array $Redis) Set Redis node information
-Note: This field may return `null`, indicating that no valid values can be obtained.
- * @method integer getTendisCount() Obtain The number of tendis nodes
- * @method void setTendisCount(integer $TendisCount) Set The number of tendis nodes
- * @method array getTendis() Obtain Tendis node information
-Note: This field may return `null`, indicating that no valid values can be obtained.
- * @method void setTendis(array $Tendis) Set Tendis node information
-Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method array getProxy() Obtain Proxy node information 
+Note:  This field may return null, indicating that no valid values can be obtained.
+ * @method void setProxy(array $Proxy) Set Proxy node information 
+Note:  This field may return null, indicating that no valid values can be obtained.
+ * @method integer getRedisCount() Obtain The number of Redis nodes
+ * @method void setRedisCount(integer $RedisCount) Set The number of Redis nodes
+ * @method array getRedis() Obtain Redis node information 
+Note:  This field may return null, indicating that no valid values can be obtained.
+ * @method void setRedis(array $Redis) Set Redis node information 
+Note:  This field may return null, indicating that no valid values can be obtained.
+ * @method integer getTendisCount() Obtain This parameter has been disused.
+ * @method void setTendisCount(integer $TendisCount) Set This parameter has been disused.
+ * @method array getTendis() Obtain This parameter has been disused. 
+Note:  This field may return null, indicating that no valid values can be obtained.
+ * @method void setTendis(array $Tendis) Set This parameter has been disused. 
+Note:  This field may return null, indicating that no valid values can be obtained.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -49,30 +49,30 @@ class DescribeInstanceNodeInfoResponse extends AbstractModel
     public $ProxyCount;
 
     /**
-     * @var array Proxy node information
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @var array Proxy node information 
+Note:  This field may return null, indicating that no valid values can be obtained.
      */
     public $Proxy;
 
     /**
-     * @var integer The number of redis nodes
+     * @var integer The number of Redis nodes
      */
     public $RedisCount;
 
     /**
-     * @var array Redis node information
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @var array Redis node information 
+Note:  This field may return null, indicating that no valid values can be obtained.
      */
     public $Redis;
 
     /**
-     * @var integer The number of tendis nodes
+     * @var integer This parameter has been disused.
      */
     public $TendisCount;
 
     /**
-     * @var array Tendis node information
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @var array This parameter has been disused. 
+Note:  This field may return null, indicating that no valid values can be obtained.
      */
     public $Tendis;
 
@@ -83,14 +83,14 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 
     /**
      * @param integer $ProxyCount The number of proxy nodes
-     * @param array $Proxy Proxy node information
-Note: This field may return `null`, indicating that no valid values can be obtained.
-     * @param integer $RedisCount The number of redis nodes
-     * @param array $Redis Redis node information
-Note: This field may return `null`, indicating that no valid values can be obtained.
-     * @param integer $TendisCount The number of tendis nodes
-     * @param array $Tendis Tendis node information
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param array $Proxy Proxy node information 
+Note:  This field may return null, indicating that no valid values can be obtained.
+     * @param integer $RedisCount The number of Redis nodes
+     * @param array $Redis Redis node information 
+Note:  This field may return null, indicating that no valid values can be obtained.
+     * @param integer $TendisCount This parameter has been disused.
+     * @param array $Tendis This parameter has been disused. 
+Note:  This field may return null, indicating that no valid values can be obtained.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()

@@ -32,8 +32,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setHandler(string $Handler) Set Function entry
  * @method integer getTimeout() Obtain Function timeout
  * @method void setTimeout(integer $Timeout) Set Function timeout
- * @method string getRuntime() Obtain Function running environment
- * @method void setRuntime(string $Runtime) Set Function running environment
+ * @method string getRuntime() Obtain Function running environment 
+Note: This parameter may return null, indicating that no valid values can be obtained.
+ * @method void setRuntime(string $Runtime) Set Function running environment 
+Note: This parameter may return null, indicating that no valid values can be obtained.
  * @method string getNamespace() Obtain Function namespace
  * @method void setNamespace(string $Namespace) Set Function namespace
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -72,7 +74,8 @@ class PublishVersionResponse extends AbstractModel
     public $Timeout;
 
     /**
-     * @var string Function running environment
+     * @var string Function running environment 
+Note: This parameter may return null, indicating that no valid values can be obtained.
      */
     public $Runtime;
 
@@ -93,7 +96,8 @@ class PublishVersionResponse extends AbstractModel
      * @param string $Description Function description
      * @param string $Handler Function entry
      * @param integer $Timeout Function timeout
-     * @param string $Runtime Function running environment
+     * @param string $Runtime Function running environment 
+Note: This parameter may return null, indicating that no valid values can be obtained.
      * @param string $Namespace Function namespace
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */

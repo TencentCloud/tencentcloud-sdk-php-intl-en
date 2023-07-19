@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeInstanceShards request structure.
  *
- * @method string getInstanceId() Obtain Instance ID
- * @method void setInstanceId(string $InstanceId) Set Instance ID
- * @method boolean getFilterSlave() Obtain Whether to filter out the replica node information
- * @method void setFilterSlave(boolean $FilterSlave) Set Whether to filter out the replica node information
+ * @method string getInstanceId() Obtain ID of a specified instance,  such as  "crs-xjhsdj****" Log in to the [Redis console](https://console.cloud.tencent.com/redis) and copy the instance ID in the instance list.
+ * @method void setInstanceId(string $InstanceId) Set ID of a specified instance,  such as  "crs-xjhsdj****" Log in to the [Redis console](https://console.cloud.tencent.com/redis) and copy the instance ID in the instance list.
+ * @method boolean getFilterSlave() Obtain Whether to filter out the replica node information. Valid values: `true` (yes),  `false` (no).
+ * @method void setFilterSlave(boolean $FilterSlave) Set Whether to filter out the replica node information. Valid values: `true` (yes),  `false` (no).
  */
 class DescribeInstanceShardsRequest extends AbstractModel
 {
     /**
-     * @var string Instance ID
+     * @var string ID of a specified instance,  such as  "crs-xjhsdj****" Log in to the [Redis console](https://console.cloud.tencent.com/redis) and copy the instance ID in the instance list.
      */
     public $InstanceId;
 
     /**
-     * @var boolean Whether to filter out the replica node information
+     * @var boolean Whether to filter out the replica node information. Valid values: `true` (yes),  `false` (no).
      */
     public $FilterSlave;
 
     /**
-     * @param string $InstanceId Instance ID
-     * @param boolean $FilterSlave Whether to filter out the replica node information
+     * @param string $InstanceId ID of a specified instance,  such as  "crs-xjhsdj****" Log in to the [Redis console](https://console.cloud.tencent.com/redis) and copy the instance ID in the instance list.
+     * @param boolean $FilterSlave Whether to filter out the replica node information. Valid values: `true` (yes),  `false` (no).
      */
     function __construct()
     {

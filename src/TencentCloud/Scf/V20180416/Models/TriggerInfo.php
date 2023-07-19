@@ -46,6 +46,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
  * @method void setBindStatus(string $BindStatus) Set Trigger-Function binding status
  * @method string getTriggerAttribute() Obtain Trigger type. Two-way means that the trigger can be manipulated in both consoles, while one-way means that the trigger can be created only in the SCF Console
  * @method void setTriggerAttribute(string $TriggerAttribute) Set Trigger type. Two-way means that the trigger can be manipulated in both consoles, while one-way means that the trigger can be created only in the SCF Console
+ * @method string getDescription() Obtain Description of a custom trigger 
+Note: This parameter may return null, indicating that no valid values can be obtained.
+ * @method void setDescription(string $Description) Set Description of a custom trigger 
+Note: This parameter may return null, indicating that no valid values can be obtained.
  */
 class TriggerInfo extends AbstractModel
 {
@@ -97,18 +101,27 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * @var string Minimum resource ID of trigger
+     * @deprecated
      */
     public $ResourceId;
 
     /**
      * @var string Trigger-Function binding status
+     * @deprecated
      */
     public $BindStatus;
 
     /**
      * @var string Trigger type. Two-way means that the trigger can be manipulated in both consoles, while one-way means that the trigger can be created only in the SCF Console
+     * @deprecated
      */
     public $TriggerAttribute;
+
+    /**
+     * @var string Description of a custom trigger 
+Note: This parameter may return null, indicating that no valid values can be obtained.
+     */
+    public $Description;
 
     /**
      * @param integer $Enable Whether to enable
@@ -124,6 +137,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @param string $ResourceId Minimum resource ID of trigger
      * @param string $BindStatus Trigger-Function binding status
      * @param string $TriggerAttribute Trigger type. Two-way means that the trigger can be manipulated in both consoles, while one-way means that the trigger can be created only in the SCF Console
+     * @param string $Description Description of a custom trigger 
+Note: This parameter may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -184,6 +199,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("TriggerAttribute",$param) and $param["TriggerAttribute"] !== null) {
             $this->TriggerAttribute = $param["TriggerAttribute"];
+        }
+
+        if (array_key_exists("Description",$param) and $param["Description"] !== null) {
+            $this->Description = $param["Description"];
         }
     }
 }

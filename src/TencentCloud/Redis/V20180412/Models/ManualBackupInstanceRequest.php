@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ManualBackupInstance request structure.
  *
- * @method string getInstanceId() Obtain ID of the instance to be operated on, which can be obtained through the `InstanceId` field in the return value of the `DescribeInstance` API.
- * @method void setInstanceId(string $InstanceId) Set ID of the instance to be operated on, which can be obtained through the `InstanceId` field in the return value of the `DescribeInstance` API.
- * @method string getRemark() Obtain Backup remarks
- * @method void setRemark(string $Remark) Set Backup remarks
- * @method integer getStorageDays() Obtain Retention time in days. 0 indicates the default retention time.
- * @method void setStorageDays(integer $StorageDays) Set Retention time in days. 0 indicates the default retention time.
+ * @method string getInstanceId() Obtain ID of a specified instance,  such as  "crs-xjhsdj****" Log in to the [Redis console](https://console.cloud.tencent.com/redis) and copy the instance ID in the instance list.
+ * @method void setInstanceId(string $InstanceId) Set ID of a specified instance,  such as  "crs-xjhsdj****" Log in to the [Redis console](https://console.cloud.tencent.com/redis) and copy the instance ID in the instance list.
+ * @method string getRemark() Obtain Remarks for manual backup task
+ * @method void setRemark(string $Remark) Set Remarks for manual backup task
+ * @method integer getStorageDays() Obtain Retention period of backup data in days.  Default value: 7 days.  Value range: [0,1825].  If the value exceeds 7 days, [submit a ticket](https://console.cloud.tencent.com/workorder/category) for application. - If this parameter is not configured, it will set to be the same as the period of automatic backup retention. - If automatic backup is not set, the default value will be 7 days.
+ * @method void setStorageDays(integer $StorageDays) Set Retention period of backup data in days.  Default value: 7 days.  Value range: [0,1825].  If the value exceeds 7 days, [submit a ticket](https://console.cloud.tencent.com/workorder/category) for application. - If this parameter is not configured, it will set to be the same as the period of automatic backup retention. - If automatic backup is not set, the default value will be 7 days.
  */
 class ManualBackupInstanceRequest extends AbstractModel
 {
     /**
-     * @var string ID of the instance to be operated on, which can be obtained through the `InstanceId` field in the return value of the `DescribeInstance` API.
+     * @var string ID of a specified instance,  such as  "crs-xjhsdj****" Log in to the [Redis console](https://console.cloud.tencent.com/redis) and copy the instance ID in the instance list.
      */
     public $InstanceId;
 
     /**
-     * @var string Backup remarks
+     * @var string Remarks for manual backup task
      */
     public $Remark;
 
     /**
-     * @var integer Retention time in days. 0 indicates the default retention time.
+     * @var integer Retention period of backup data in days.  Default value: 7 days.  Value range: [0,1825].  If the value exceeds 7 days, [submit a ticket](https://console.cloud.tencent.com/workorder/category) for application. - If this parameter is not configured, it will set to be the same as the period of automatic backup retention. - If automatic backup is not set, the default value will be 7 days.
      */
     public $StorageDays;
 
     /**
-     * @param string $InstanceId ID of the instance to be operated on, which can be obtained through the `InstanceId` field in the return value of the `DescribeInstance` API.
-     * @param string $Remark Backup remarks
-     * @param integer $StorageDays Retention time in days. 0 indicates the default retention time.
+     * @param string $InstanceId ID of a specified instance,  such as  "crs-xjhsdj****" Log in to the [Redis console](https://console.cloud.tencent.com/redis) and copy the instance ID in the instance list.
+     * @param string $Remark Remarks for manual backup task
+     * @param integer $StorageDays Retention period of backup data in days.  Default value: 7 days.  Value range: [0,1825].  If the value exceeds 7 days, [submit a ticket](https://console.cloud.tencent.com/workorder/category) for application. - If this parameter is not configured, it will set to be the same as the period of automatic backup retention. - If automatic backup is not set, the default value will be 7 days.
      */
     function __construct()
     {

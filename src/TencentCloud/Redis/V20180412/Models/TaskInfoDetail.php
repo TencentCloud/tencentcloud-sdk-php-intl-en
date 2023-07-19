@@ -20,118 +20,118 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Task details
  *
- * @method integer getTaskId() Obtain Task ID
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setTaskId(integer $TaskId) Set Task ID
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getStartTime() Obtain Start time
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setStartTime(string $StartTime) Set Start time
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getTaskType() Obtain Task type
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setTaskType(string $TaskType) Set Task type
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getInstanceName() Obtain Instance name
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setInstanceName(string $InstanceName) Set Instance name
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getInstanceId() Obtain Instance ID
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setInstanceId(string $InstanceId) Set Instance ID
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getProjectId() Obtain Project ID
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setProjectId(integer $ProjectId) Set Project ID
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method float getProgress() Obtain Task progress
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setProgress(float $Progress) Set Task progress
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getEndTime() Obtain End time
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setEndTime(string $EndTime) Set End time
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getResult() Obtain Task status
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setResult(integer $Result) Set Task status
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getTaskId() Obtain Task ID 
+Note:  This field may return null, indicating that no valid values can be obtained.
+ * @method void setTaskId(integer $TaskId) Set Task ID 
+Note:  This field may return null, indicating that no valid values can be obtained.
+ * @method string getStartTime() Obtain Task start time 
+Note:  This field may return null, indicating that no valid values can be obtained.
+ * @method void setStartTime(string $StartTime) Set Task start time 
+Note:  This field may return null, indicating that no valid values can be obtained.
+ * @method string getTaskType() Obtain Task type. Valid values:  - `FLOW_CREATE`: Create an instance. - `FLOW_MODIFYCONNECTIONCONFIG`: Adjust the number of bandwidth connections. - `FLOW_MODIFYINSTANCEPASSWORDFREE`: Modify the process of password-free access. - `FLOW_CLEARNETWORK`: Returning VPC - `FLOW_SETPWD`: Set the access password. - `FLOW_EXPORSHR`: Expand or reduce the capacity. - `FLOW_UpgradeArch`: Upgrade the instance architecture. - `FLOW_MODIFYINSTANCEPARAMS`: Modify the instance parameters. - `FLOW_MODIFYINSTACEREADONLY`: Modify read-only process. - `FLOW_CLOSE`: Disable the instance. - `FLOW_DELETE`: Delete the instance. - `FLOW_OPEN_WAN`: Enable the public network. - `FLOW_FLOW_CLEAN`: Clear the instance. - `FLOW_MODIFYINSTANCEACCOUNT`: Modify the instance account. - `FLOW_ENABLEINSTANCE_REPLICATE`: Enable the replica read-only feature. - `FLOW_DISABLEINSTANCE_REPLICATE`: Disable the replica read-only feature. - `FLOW_SWITCHINSTANCEVIP`: Swap the VIPs of instances. - FLOW_CHANGE_REPLICA_TO_MSTER: Promote the replica node to the mater node. Backup instance 
+Note:  This field may return null, indicating that no valid values can be obtained.
+ * @method void setTaskType(string $TaskType) Set Task type. Valid values:  - `FLOW_CREATE`: Create an instance. - `FLOW_MODIFYCONNECTIONCONFIG`: Adjust the number of bandwidth connections. - `FLOW_MODIFYINSTANCEPASSWORDFREE`: Modify the process of password-free access. - `FLOW_CLEARNETWORK`: Returning VPC - `FLOW_SETPWD`: Set the access password. - `FLOW_EXPORSHR`: Expand or reduce the capacity. - `FLOW_UpgradeArch`: Upgrade the instance architecture. - `FLOW_MODIFYINSTANCEPARAMS`: Modify the instance parameters. - `FLOW_MODIFYINSTACEREADONLY`: Modify read-only process. - `FLOW_CLOSE`: Disable the instance. - `FLOW_DELETE`: Delete the instance. - `FLOW_OPEN_WAN`: Enable the public network. - `FLOW_FLOW_CLEAN`: Clear the instance. - `FLOW_MODIFYINSTANCEACCOUNT`: Modify the instance account. - `FLOW_ENABLEINSTANCE_REPLICATE`: Enable the replica read-only feature. - `FLOW_DISABLEINSTANCE_REPLICATE`: Disable the replica read-only feature. - `FLOW_SWITCHINSTANCEVIP`: Swap the VIPs of instances. - FLOW_CHANGE_REPLICA_TO_MSTER: Promote the replica node to the mater node. Backup instance 
+Note:  This field may return null, indicating that no valid values can be obtained.
+ * @method string getInstanceName() Obtain Instance name 
+Note:  This field may return null, indicating that no valid values can be obtained.
+ * @method void setInstanceName(string $InstanceName) Set Instance name 
+Note:  This field may return null, indicating that no valid values can be obtained.
+ * @method string getInstanceId() Obtain Instance ID 
+Note:  This field may return null, indicating that no valid values can be obtained.
+ * @method void setInstanceId(string $InstanceId) Set Instance ID 
+Note:  This field may return null, indicating that no valid values can be obtained.
+ * @method integer getProjectId() Obtain Project ID 
+Note:  This field may return null, indicating that no valid values can be obtained.
+ * @method void setProjectId(integer $ProjectId) Set Project ID 
+Note:  This field may return null, indicating that no valid values can be obtained.
+ * @method float getProgress() Obtain Task progress 
+Note:  This field may return null, indicating that no valid values can be obtained.
+ * @method void setProgress(float $Progress) Set Task progress 
+Note:  This field may return null, indicating that no valid values can be obtained.
+ * @method string getEndTime() Obtain Task end time 
+Note:  This field may return null, indicating that no valid values can be obtained.
+ * @method void setEndTime(string $EndTime) Set Task end time 
+Note:  This field may return null, indicating that no valid values can be obtained.
+ * @method integer getResult() Obtain Task execution status. Valid values: - `0` (initilized) - `1` (executing) - `2` (completed) - `4` (failed) 
+Note:  This field may return null, indicating that no valid values can be obtained.
+ * @method void setResult(integer $Result) Set Task execution status. Valid values: - `0` (initilized) - `1` (executing) - `2` (completed) - `4` (failed) 
+Note:  This field may return null, indicating that no valid values can be obtained.
  */
 class TaskInfoDetail extends AbstractModel
 {
     /**
-     * @var integer Task ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Task ID 
+Note:  This field may return null, indicating that no valid values can be obtained.
      */
     public $TaskId;
 
     /**
-     * @var string Start time
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Task start time 
+Note:  This field may return null, indicating that no valid values can be obtained.
      */
     public $StartTime;
 
     /**
-     * @var string Task type
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Task type. Valid values:  - `FLOW_CREATE`: Create an instance. - `FLOW_MODIFYCONNECTIONCONFIG`: Adjust the number of bandwidth connections. - `FLOW_MODIFYINSTANCEPASSWORDFREE`: Modify the process of password-free access. - `FLOW_CLEARNETWORK`: Returning VPC - `FLOW_SETPWD`: Set the access password. - `FLOW_EXPORSHR`: Expand or reduce the capacity. - `FLOW_UpgradeArch`: Upgrade the instance architecture. - `FLOW_MODIFYINSTANCEPARAMS`: Modify the instance parameters. - `FLOW_MODIFYINSTACEREADONLY`: Modify read-only process. - `FLOW_CLOSE`: Disable the instance. - `FLOW_DELETE`: Delete the instance. - `FLOW_OPEN_WAN`: Enable the public network. - `FLOW_FLOW_CLEAN`: Clear the instance. - `FLOW_MODIFYINSTANCEACCOUNT`: Modify the instance account. - `FLOW_ENABLEINSTANCE_REPLICATE`: Enable the replica read-only feature. - `FLOW_DISABLEINSTANCE_REPLICATE`: Disable the replica read-only feature. - `FLOW_SWITCHINSTANCEVIP`: Swap the VIPs of instances. - FLOW_CHANGE_REPLICA_TO_MSTER: Promote the replica node to the mater node. Backup instance 
+Note:  This field may return null, indicating that no valid values can be obtained.
      */
     public $TaskType;
 
     /**
-     * @var string Instance name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Instance name 
+Note:  This field may return null, indicating that no valid values can be obtained.
      */
     public $InstanceName;
 
     /**
-     * @var string Instance ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Instance ID 
+Note:  This field may return null, indicating that no valid values can be obtained.
      */
     public $InstanceId;
 
     /**
-     * @var integer Project ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Project ID 
+Note:  This field may return null, indicating that no valid values can be obtained.
      */
     public $ProjectId;
 
     /**
-     * @var float Task progress
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var float Task progress 
+Note:  This field may return null, indicating that no valid values can be obtained.
      */
     public $Progress;
 
     /**
-     * @var string End time
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Task end time 
+Note:  This field may return null, indicating that no valid values can be obtained.
      */
     public $EndTime;
 
     /**
-     * @var integer Task status
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Task execution status. Valid values: - `0` (initilized) - `1` (executing) - `2` (completed) - `4` (failed) 
+Note:  This field may return null, indicating that no valid values can be obtained.
      */
     public $Result;
 
     /**
-     * @param integer $TaskId Task ID
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $StartTime Start time
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $TaskType Task type
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $InstanceName Instance name
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $InstanceId Instance ID
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $ProjectId Project ID
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param float $Progress Task progress
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $EndTime End time
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $Result Task status
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $TaskId Task ID 
+Note:  This field may return null, indicating that no valid values can be obtained.
+     * @param string $StartTime Task start time 
+Note:  This field may return null, indicating that no valid values can be obtained.
+     * @param string $TaskType Task type. Valid values:  - `FLOW_CREATE`: Create an instance. - `FLOW_MODIFYCONNECTIONCONFIG`: Adjust the number of bandwidth connections. - `FLOW_MODIFYINSTANCEPASSWORDFREE`: Modify the process of password-free access. - `FLOW_CLEARNETWORK`: Returning VPC - `FLOW_SETPWD`: Set the access password. - `FLOW_EXPORSHR`: Expand or reduce the capacity. - `FLOW_UpgradeArch`: Upgrade the instance architecture. - `FLOW_MODIFYINSTANCEPARAMS`: Modify the instance parameters. - `FLOW_MODIFYINSTACEREADONLY`: Modify read-only process. - `FLOW_CLOSE`: Disable the instance. - `FLOW_DELETE`: Delete the instance. - `FLOW_OPEN_WAN`: Enable the public network. - `FLOW_FLOW_CLEAN`: Clear the instance. - `FLOW_MODIFYINSTANCEACCOUNT`: Modify the instance account. - `FLOW_ENABLEINSTANCE_REPLICATE`: Enable the replica read-only feature. - `FLOW_DISABLEINSTANCE_REPLICATE`: Disable the replica read-only feature. - `FLOW_SWITCHINSTANCEVIP`: Swap the VIPs of instances. - FLOW_CHANGE_REPLICA_TO_MSTER: Promote the replica node to the mater node. Backup instance 
+Note:  This field may return null, indicating that no valid values can be obtained.
+     * @param string $InstanceName Instance name 
+Note:  This field may return null, indicating that no valid values can be obtained.
+     * @param string $InstanceId Instance ID 
+Note:  This field may return null, indicating that no valid values can be obtained.
+     * @param integer $ProjectId Project ID 
+Note:  This field may return null, indicating that no valid values can be obtained.
+     * @param float $Progress Task progress 
+Note:  This field may return null, indicating that no valid values can be obtained.
+     * @param string $EndTime Task end time 
+Note:  This field may return null, indicating that no valid values can be obtained.
+     * @param integer $Result Task execution status. Valid values: - `0` (initilized) - `1` (executing) - `2` (completed) - `4` (failed) 
+Note:  This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

@@ -20,19 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyAutoBackupConfig request structure.
  *
- * @method string getInstanceId() Obtain Instance ID
- * @method void setInstanceId(string $InstanceId) Set Instance ID
+ * @method string getInstanceId() Obtain ID of a specified instance,  such as  "crs-xjhsdj****" Log in to the [Redis console](https://console.cloud.tencent.com/redis) and copy the instance ID in the instance list.
+
+ * @method void setInstanceId(string $InstanceId) Set ID of a specified instance,  such as  "crs-xjhsdj****" Log in to the [Redis console](https://console.cloud.tencent.com/redis) and copy the instance ID in the instance list.
+
  * @method array getWeekDays() Obtain Automatic backup cycle. Valid values: `Monday`, `Tuesday`, `Wednesday`, `Thursday`, `Friday`, `Saturday`, `Sunday`. This parameter currently cannot be modified.
  * @method void setWeekDays(array $WeekDays) Set Automatic backup cycle. Valid values: `Monday`, `Tuesday`, `Wednesday`, `Thursday`, `Friday`, `Saturday`, `Sunday`. This parameter currently cannot be modified.
  * @method string getTimePeriod() Obtain Automatic backup time in the format of 00:00-01:00, 01:00-02:00... 23:00-00:00.
  * @method void setTimePeriod(string $TimePeriod) Set Automatic backup time in the format of 00:00-01:00, 01:00-02:00... 23:00-00:00.
- * @method integer getAutoBackupType() Obtain Automatic backup type. `1`: Scheduled rollback.
- * @method void setAutoBackupType(integer $AutoBackupType) Set Automatic backup type. `1`: Scheduled rollback.
+ * @method integer getAutoBackupType() Obtain Automatic backup type.  Valid value:  `1` (scheduled backup).
+ * @method void setAutoBackupType(integer $AutoBackupType) Set Automatic backup type.  Valid value:  `1` (scheduled backup).
  */
 class ModifyAutoBackupConfigRequest extends AbstractModel
 {
     /**
-     * @var string Instance ID
+     * @var string ID of a specified instance,  such as  "crs-xjhsdj****" Log in to the [Redis console](https://console.cloud.tencent.com/redis) and copy the instance ID in the instance list.
+
      */
     public $InstanceId;
 
@@ -47,15 +50,16 @@ class ModifyAutoBackupConfigRequest extends AbstractModel
     public $TimePeriod;
 
     /**
-     * @var integer Automatic backup type. `1`: Scheduled rollback.
+     * @var integer Automatic backup type.  Valid value:  `1` (scheduled backup).
      */
     public $AutoBackupType;
 
     /**
-     * @param string $InstanceId Instance ID
+     * @param string $InstanceId ID of a specified instance,  such as  "crs-xjhsdj****" Log in to the [Redis console](https://console.cloud.tencent.com/redis) and copy the instance ID in the instance list.
+
      * @param array $WeekDays Automatic backup cycle. Valid values: `Monday`, `Tuesday`, `Wednesday`, `Thursday`, `Friday`, `Saturday`, `Sunday`. This parameter currently cannot be modified.
      * @param string $TimePeriod Automatic backup time in the format of 00:00-01:00, 01:00-02:00... 23:00-00:00.
-     * @param integer $AutoBackupType Automatic backup type. `1`: Scheduled rollback.
+     * @param integer $AutoBackupType Automatic backup type.  Valid value:  `1` (scheduled backup).
      */
     function __construct()
     {

@@ -20,40 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Delay distribution details
  *
- * @method integer getLadder() Obtain Delay distribution. The mapping between delay range and `Ladder` value is as follows:
-[0ms,1ms]: 1;
-[1ms,5ms]: 5;
-[5ms,10ms]: 10;
-[10ms,50ms]: 50;
-[50ms,200ms]: 200;
-[200ms,∞]: -1.
- * @method void setLadder(integer $Ladder) Set Delay distribution. The mapping between delay range and `Ladder` value is as follows:
-[0ms,1ms]: 1;
-[1ms,5ms]: 5;
-[5ms,10ms]: 10;
-[10ms,50ms]: 50;
-[50ms,200ms]: 200;
-[200ms,∞]: -1.
- * @method integer getSize() Obtain The number of commands whose delay falls within the current delay range
- * @method void setSize(integer $Size) Set The number of commands whose delay falls within the current delay range
+ * @method integer getLadder() Obtain The delay distribution. The mapping between delay range and `Ladder` value is as follows:  - `1`: [0ms,1ms]. - `5`: [1ms,5ms]. - `10`: [5ms,10ms]. - `50`: [10ms,50ms]. - `200`:  [50ms,200ms]. - `-1`: [200ms,∞].
+ * @method void setLadder(integer $Ladder) Set The delay distribution. The mapping between delay range and `Ladder` value is as follows:  - `1`: [0ms,1ms]. - `5`: [1ms,5ms]. - `10`: [5ms,10ms]. - `50`: [10ms,50ms]. - `200`:  [50ms,200ms]. - `-1`: [200ms,∞].
+ * @method integer getSize() Obtain The number of commands with delay falling within the current delay range -
+ * @method void setSize(integer $Size) Set The number of commands with delay falling within the current delay range -
  * @method integer getUpdatetime() Obtain Modification time
  * @method void setUpdatetime(integer $Updatetime) Set Modification time
  */
 class DelayDistribution extends AbstractModel
 {
     /**
-     * @var integer Delay distribution. The mapping between delay range and `Ladder` value is as follows:
-[0ms,1ms]: 1;
-[1ms,5ms]: 5;
-[5ms,10ms]: 10;
-[10ms,50ms]: 50;
-[50ms,200ms]: 200;
-[200ms,∞]: -1.
+     * @var integer The delay distribution. The mapping between delay range and `Ladder` value is as follows:  - `1`: [0ms,1ms]. - `5`: [1ms,5ms]. - `10`: [5ms,10ms]. - `50`: [10ms,50ms]. - `200`:  [50ms,200ms]. - `-1`: [200ms,∞].
      */
     public $Ladder;
 
     /**
-     * @var integer The number of commands whose delay falls within the current delay range
+     * @var integer The number of commands with delay falling within the current delay range -
      */
     public $Size;
 
@@ -63,14 +45,8 @@ class DelayDistribution extends AbstractModel
     public $Updatetime;
 
     /**
-     * @param integer $Ladder Delay distribution. The mapping between delay range and `Ladder` value is as follows:
-[0ms,1ms]: 1;
-[1ms,5ms]: 5;
-[5ms,10ms]: 10;
-[10ms,50ms]: 50;
-[50ms,200ms]: 200;
-[200ms,∞]: -1.
-     * @param integer $Size The number of commands whose delay falls within the current delay range
+     * @param integer $Ladder The delay distribution. The mapping between delay range and `Ladder` value is as follows:  - `1`: [0ms,1ms]. - `5`: [1ms,5ms]. - `10`: [5ms,10ms]. - `50`: [10ms,50ms]. - `200`:  [50ms,200ms]. - `-1`: [200ms,∞].
+     * @param integer $Size The number of commands with delay falling within the current delay range -
      * @param integer $Updatetime Modification time
      */
     function __construct()

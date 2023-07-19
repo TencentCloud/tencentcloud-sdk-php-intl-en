@@ -22,16 +22,16 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getProjectId() Obtain Project ID
  * @method void setProjectId(integer $ProjectId) Set Project ID
- * @method string getCreateTime() Obtain Creation time
- * @method void setCreateTime(string $CreateTime) Set Creation time
+ * @method string getCreateTime() Obtain Security group creation time
+ * @method void setCreateTime(string $CreateTime) Set Security group creation time
  * @method string getSecurityGroupId() Obtain Security group ID
  * @method void setSecurityGroupId(string $SecurityGroupId) Set Security group ID
  * @method string getSecurityGroupName() Obtain Security group name
  * @method void setSecurityGroupName(string $SecurityGroupName) Set Security group name
  * @method string getSecurityGroupRemark() Obtain Security group remarks
  * @method void setSecurityGroupRemark(string $SecurityGroupRemark) Set Security group remarks
- * @method array getInboundRule() Obtain Security group inbound rule
- * @method void setInboundRule(array $InboundRule) Set Security group inbound rule
+ * @method array getInboundRule() Obtain Inbound rules of the security group, which control the access source to the database.
+ * @method void setInboundRule(array $InboundRule) Set Inbound rules of the security group, which control the access source to the database.
  * @method array getOutboundRule() Obtain Security group outbound rule
  * @method void setOutboundRule(array $OutboundRule) Set Security group outbound rule
  */
@@ -43,7 +43,7 @@ class SecurityGroupDetail extends AbstractModel
     public $ProjectId;
 
     /**
-     * @var string Creation time
+     * @var string Security group creation time
      */
     public $CreateTime;
 
@@ -63,7 +63,7 @@ class SecurityGroupDetail extends AbstractModel
     public $SecurityGroupRemark;
 
     /**
-     * @var array Security group inbound rule
+     * @var array Inbound rules of the security group, which control the access source to the database.
      */
     public $InboundRule;
 
@@ -74,11 +74,11 @@ class SecurityGroupDetail extends AbstractModel
 
     /**
      * @param integer $ProjectId Project ID
-     * @param string $CreateTime Creation time
+     * @param string $CreateTime Security group creation time
      * @param string $SecurityGroupId Security group ID
      * @param string $SecurityGroupName Security group name
      * @param string $SecurityGroupRemark Security group remarks
-     * @param array $InboundRule Security group inbound rule
+     * @param array $InboundRule Inbound rules of the security group, which control the access source to the database.
      * @param array $OutboundRule Security group outbound rule
      */
     function __construct()

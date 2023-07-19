@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEnable(string $Enable) Set Initial enabling status of the trigger. `OPEN` indicates enabled, and `CLOSE` indicates disabled.
  * @method string getCustomArgument() Obtain Custom argument, supporting only the timer trigger.
  * @method void setCustomArgument(string $CustomArgument) Set Custom argument, supporting only the timer trigger.
+ * @method string getDescription() Obtain Trigger description
+ * @method void setDescription(string $Description) Set Trigger description
  */
 class CreateTriggerRequest extends AbstractModel
 {
@@ -80,6 +82,11 @@ class CreateTriggerRequest extends AbstractModel
     public $CustomArgument;
 
     /**
+     * @var string Trigger description
+     */
+    public $Description;
+
+    /**
      * @param string $FunctionName Name of the function bound to the new trigger
      * @param string $TriggerName Name of a new trigger. For a timer trigger, the name can contain up to 100 letters, digits, dashes, and underscores; for a COS trigger, it should be an access domain name of the corresponding COS bucket applicable to the XML API (e.g., 5401-5ff414-12345.cos.ap-shanghai.myqcloud.com); for other triggers, please see the descriptions of parameters bound to the specific trigger.
      * @param string $Type Type of trigger. Values: `cos`, `cmq`, `timer`, `ckafka` and `apigw`. To create a CLS trigger, please refer to [Creating Shipping Task (SCF)](https://intl.cloud.tencent.com/document/product/614/61096?from_cn_redirect=1).
@@ -88,6 +95,7 @@ class CreateTriggerRequest extends AbstractModel
      * @param string $Qualifier Function version. It defaults to `$LATEST`. It’s recommended to use `[$DEFAULT](https://intl.cloud.tencent.com/document/product/583/36149?from_cn_redirect=1#.E9.BB.98.E8.AE.A4.E5.88.AB.E5.90.8D)` for canary release.
      * @param string $Enable Initial enabling status of the trigger. `OPEN` indicates enabled, and `CLOSE` indicates disabled.
      * @param string $CustomArgument Custom argument, supporting only the timer trigger.
+     * @param string $Description Trigger description
      */
     function __construct()
     {
@@ -132,6 +140,10 @@ class CreateTriggerRequest extends AbstractModel
 
         if (array_key_exists("CustomArgument",$param) and $param["CustomArgument"] !== null) {
             $this->CustomArgument = $param["CustomArgument"];
+        }
+
+        if (array_key_exists("Description",$param) and $param["Description"] !== null) {
+            $this->Description = $param["Description"];
         }
     }
 }

@@ -20,12 +20,12 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Running information of Redis nodes
  *
- * @method integer getKeys() Obtain Number of keys on the node
- * @method void setKeys(integer $Keys) Set Number of keys on the node
- * @method string getSlot() Obtain Distribution of node slots
- * @method void setSlot(string $Slot) Set Distribution of node slots
- * @method string getNodeId() Obtain Node ID
- * @method void setNodeId(string $NodeId) Set Node ID
+ * @method integer getKeys() Obtain Number of keys on Redis nodes
+ * @method void setKeys(integer $Keys) Set Number of keys on Redis nodes
+ * @method string getSlot() Obtain Slot distribution range for Redis node.  Value range:  0-5460.
+ * @method void setSlot(string $Slot) Set Slot distribution range for Redis node.  Value range:  0-5460.
+ * @method string getNodeId() Obtain Node sequence ID
+ * @method void setNodeId(string $NodeId) Set Node sequence ID
  * @method string getStatus() Obtain Node status
  * @method void setStatus(string $Status) Set Node status
  * @method string getRole() Obtain Node role
@@ -34,17 +34,17 @@ use TencentCloud\Common\AbstractModel;
 class RedisNode extends AbstractModel
 {
     /**
-     * @var integer Number of keys on the node
+     * @var integer Number of keys on Redis nodes
      */
     public $Keys;
 
     /**
-     * @var string Distribution of node slots
+     * @var string Slot distribution range for Redis node.  Value range:  0-5460.
      */
     public $Slot;
 
     /**
-     * @var string Node ID
+     * @var string Node sequence ID
      */
     public $NodeId;
 
@@ -59,9 +59,9 @@ class RedisNode extends AbstractModel
     public $Role;
 
     /**
-     * @param integer $Keys Number of keys on the node
-     * @param string $Slot Distribution of node slots
-     * @param string $NodeId Node ID
+     * @param integer $Keys Number of keys on Redis nodes
+     * @param string $Slot Slot distribution range for Redis node.  Value range:  0-5460.
+     * @param string $NodeId Node sequence ID
      * @param string $Status Node status
      * @param string $Role Node role
      */

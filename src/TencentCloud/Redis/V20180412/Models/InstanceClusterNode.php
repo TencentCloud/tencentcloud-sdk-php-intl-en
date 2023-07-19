@@ -22,26 +22,26 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getName() Obtain Node name
  * @method void setName(string $Name) Set Node name
- * @method string getRunId() Obtain ID of the runtime node of the instance
- * @method void setRunId(string $RunId) Set ID of the runtime node of the instance
- * @method integer getRole() Obtain Cluster role. 0: master; 1: replica
- * @method void setRole(integer $Role) Set Cluster role. 0: master; 1: replica
- * @method integer getStatus() Obtain Node status. 0: readwrite; 1: read; 2: backup
- * @method void setStatus(integer $Status) Set Node status. 0: readwrite; 1: read; 2: backup
- * @method integer getConnected() Obtain Service status. 0: down; 1: on
- * @method void setConnected(integer $Connected) Set Service status. 0: down; 1: on
+ * @method string getRunId() Obtain ID of the runtime node of an instance
+ * @method void setRunId(string $RunId) Set ID of the runtime node of an instance
+ * @method integer getRole() Obtain Cluster role. Valid values:  - `0` (master) - `1` (replica)
+ * @method void setRole(integer $Role) Set Cluster role. Valid values:  - `0` (master) - `1` (replica)
+ * @method integer getStatus() Obtain Node status. Valid values:  - `0` (read/write) - `1` (read) - `2` (backup)
+ * @method void setStatus(integer $Status) Set Node status. Valid values:  - `0` (read/write) - `1` (read) - `2` (backup)
+ * @method integer getConnected() Obtain Service status. Valid values: `0` (down), `1` (on).
+ * @method void setConnected(integer $Connected) Set Service status. Valid values: `0` (down), `1` (on).
  * @method string getCreateTime() Obtain Node creation time
  * @method void setCreateTime(string $CreateTime) Set Node creation time
  * @method string getDownTime() Obtain Node elimination time
  * @method void setDownTime(string $DownTime) Set Node elimination time
- * @method string getSlots() Obtain Distribution of node slots
- * @method void setSlots(string $Slots) Set Distribution of node slots
+ * @method string getSlots() Obtain Node slot distribution range
+ * @method void setSlots(string $Slots) Set Node slot distribution range
  * @method integer getKeys() Obtain Distribution of node keys
  * @method void setKeys(integer $Keys) Set Distribution of node keys
- * @method integer getQps() Obtain Node QPS
- * @method void setQps(integer $Qps) Set Node QPS
- * @method float getQpsSlope() Obtain Node QPS slope
- * @method void setQpsSlope(float $QpsSlope) Set Node QPS slope
+ * @method integer getQps() Obtain Node QPS Number of executions per second on sharded nodes Unit: Counts/sec
+ * @method void setQps(integer $Qps) Set Node QPS Number of executions per second on sharded nodes Unit: Counts/sec
+ * @method float getQpsSlope() Obtain QPS slope of a node
+ * @method void setQpsSlope(float $QpsSlope) Set QPS slope of a node
  * @method integer getStorage() Obtain Node storage
  * @method void setStorage(integer $Storage) Set Node storage
  * @method float getStorageSlope() Obtain Node storage slope
@@ -55,22 +55,22 @@ class InstanceClusterNode extends AbstractModel
     public $Name;
 
     /**
-     * @var string ID of the runtime node of the instance
+     * @var string ID of the runtime node of an instance
      */
     public $RunId;
 
     /**
-     * @var integer Cluster role. 0: master; 1: replica
+     * @var integer Cluster role. Valid values:  - `0` (master) - `1` (replica)
      */
     public $Role;
 
     /**
-     * @var integer Node status. 0: readwrite; 1: read; 2: backup
+     * @var integer Node status. Valid values:  - `0` (read/write) - `1` (read) - `2` (backup)
      */
     public $Status;
 
     /**
-     * @var integer Service status. 0: down; 1: on
+     * @var integer Service status. Valid values: `0` (down), `1` (on).
      */
     public $Connected;
 
@@ -85,7 +85,7 @@ class InstanceClusterNode extends AbstractModel
     public $DownTime;
 
     /**
-     * @var string Distribution of node slots
+     * @var string Node slot distribution range
      */
     public $Slots;
 
@@ -95,12 +95,12 @@ class InstanceClusterNode extends AbstractModel
     public $Keys;
 
     /**
-     * @var integer Node QPS
+     * @var integer Node QPS Number of executions per second on sharded nodes Unit: Counts/sec
      */
     public $Qps;
 
     /**
-     * @var float Node QPS slope
+     * @var float QPS slope of a node
      */
     public $QpsSlope;
 
@@ -116,16 +116,16 @@ class InstanceClusterNode extends AbstractModel
 
     /**
      * @param string $Name Node name
-     * @param string $RunId ID of the runtime node of the instance
-     * @param integer $Role Cluster role. 0: master; 1: replica
-     * @param integer $Status Node status. 0: readwrite; 1: read; 2: backup
-     * @param integer $Connected Service status. 0: down; 1: on
+     * @param string $RunId ID of the runtime node of an instance
+     * @param integer $Role Cluster role. Valid values:  - `0` (master) - `1` (replica)
+     * @param integer $Status Node status. Valid values:  - `0` (read/write) - `1` (read) - `2` (backup)
+     * @param integer $Connected Service status. Valid values: `0` (down), `1` (on).
      * @param string $CreateTime Node creation time
      * @param string $DownTime Node elimination time
-     * @param string $Slots Distribution of node slots
+     * @param string $Slots Node slot distribution range
      * @param integer $Keys Distribution of node keys
-     * @param integer $Qps Node QPS
-     * @param float $QpsSlope Node QPS slope
+     * @param integer $Qps Node QPS Number of executions per second on sharded nodes Unit: Counts/sec
+     * @param float $QpsSlope QPS slope of a node
      * @param integer $Storage Node storage
      * @param float $StorageSlope Node storage slope
      */

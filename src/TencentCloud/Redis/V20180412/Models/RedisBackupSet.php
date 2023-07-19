@@ -22,40 +22,16 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getStartTime() Obtain Backup start time
  * @method void setStartTime(string $StartTime) Set Backup start time
- * @method string getBackupId() Obtain Backup ID
- * @method void setBackupId(string $BackupId) Set Backup ID
- * @method string getBackupType() Obtain Backup type
-
-- `1`: Manual backup initiated by the user.
-- `0`: Automatic backup in the early morning initiated by the system.
- * @method void setBackupType(string $BackupType) Set Backup type
-
-- `1`: Manual backup initiated by the user.
-- `0`: Automatic backup in the early morning initiated by the system.
- * @method integer getStatus() Obtain Backup status 
-
-- `1`: The backup is locked by another process.
-- `2`: The backup is normal and not locked by any process.
-- `-1`: The backup expired.
-- `3`: The backup is being exported.
-- `4`: The backup was exported successfully.
- * @method void setStatus(integer $Status) Set Backup status 
-
-- `1`: The backup is locked by another process.
-- `2`: The backup is normal and not locked by any process.
-- `-1`: The backup expired.
-- `3`: The backup is being exported.
-- `4`: The backup was exported successfully.
+ * @method string getBackupId() Obtain Backup task ID
+ * @method void setBackupId(string $BackupId) Set Backup task ID
+ * @method string getBackupType() Obtain Backup type. Valid values:  `1` (Automatic backup in the early morning initiated by the system.) `0`: Manual backup initiated by the user.
+ * @method void setBackupType(string $BackupType) Set Backup type. Valid values:  `1` (Automatic backup in the early morning initiated by the system.) `0`: Manual backup initiated by the user.
+ * @method integer getStatus() Obtain Backup status. Valid values:  - `1`: The backup is locked by another process. - `2`: The backup is normal and not locked by any process. - `-1`: The backup is expired. - `3`: The backup is being exported. - `4`: Exported the backup successfully.
+ * @method void setStatus(integer $Status) Set Backup status. Valid values:  - `1`: The backup is locked by another process. - `2`: The backup is normal and not locked by any process. - `-1`: The backup is expired. - `3`: The backup is being exported. - `4`: Exported the backup successfully.
  * @method string getRemark() Obtain Backup remarks
  * @method void setRemark(string $Remark) Set Backup remarks
- * @method integer getLocked() Obtain Whether the backup is locked
-
-- `0`: Not locked.
-- `1`: Locked.
- * @method void setLocked(integer $Locked) Set Whether the backup is locked
-
-- `0`: Not locked.
-- `1`: Locked.
+ * @method integer getLocked() Obtain Whether the backup is locked. Valid values:  - `0` (no) - `1` (yes)
+ * @method void setLocked(integer $Locked) Set Whether the backup is locked. Valid values:  - `0` (no) - `1` (yes)
  * @method integer getBackupSize() Obtain Internal field, which can be ignored.
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setBackupSize(integer $BackupSize) Set Internal field, which can be ignored.
@@ -89,26 +65,17 @@ class RedisBackupSet extends AbstractModel
     public $StartTime;
 
     /**
-     * @var string Backup ID
+     * @var string Backup task ID
      */
     public $BackupId;
 
     /**
-     * @var string Backup type
-
-- `1`: Manual backup initiated by the user.
-- `0`: Automatic backup in the early morning initiated by the system.
+     * @var string Backup type. Valid values:  `1` (Automatic backup in the early morning initiated by the system.) `0`: Manual backup initiated by the user.
      */
     public $BackupType;
 
     /**
-     * @var integer Backup status 
-
-- `1`: The backup is locked by another process.
-- `2`: The backup is normal and not locked by any process.
-- `-1`: The backup expired.
-- `3`: The backup is being exported.
-- `4`: The backup was exported successfully.
+     * @var integer Backup status. Valid values:  - `1`: The backup is locked by another process. - `2`: The backup is normal and not locked by any process. - `-1`: The backup is expired. - `3`: The backup is being exported. - `4`: Exported the backup successfully.
      */
     public $Status;
 
@@ -118,10 +85,7 @@ class RedisBackupSet extends AbstractModel
     public $Remark;
 
     /**
-     * @var integer Whether the backup is locked
-
-- `0`: Not locked.
-- `1`: Locked.
+     * @var integer Whether the backup is locked. Valid values:  - `0` (no) - `1` (yes)
      */
     public $Locked;
 
@@ -175,23 +139,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * @param string $StartTime Backup start time
-     * @param string $BackupId Backup ID
-     * @param string $BackupType Backup type
-
-- `1`: Manual backup initiated by the user.
-- `0`: Automatic backup in the early morning initiated by the system.
-     * @param integer $Status Backup status 
-
-- `1`: The backup is locked by another process.
-- `2`: The backup is normal and not locked by any process.
-- `-1`: The backup expired.
-- `3`: The backup is being exported.
-- `4`: The backup was exported successfully.
+     * @param string $BackupId Backup task ID
+     * @param string $BackupType Backup type. Valid values:  `1` (Automatic backup in the early morning initiated by the system.) `0`: Manual backup initiated by the user.
+     * @param integer $Status Backup status. Valid values:  - `1`: The backup is locked by another process. - `2`: The backup is normal and not locked by any process. - `-1`: The backup is expired. - `3`: The backup is being exported. - `4`: Exported the backup successfully.
      * @param string $Remark Backup remarks
-     * @param integer $Locked Whether the backup is locked
-
-- `0`: Not locked.
-- `1`: Locked.
+     * @param integer $Locked Whether the backup is locked. Valid values:  - `0` (no) - `1` (yes)
      * @param integer $BackupSize Internal field, which can be ignored.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $FullBackup Internal field, which can be ignored.
