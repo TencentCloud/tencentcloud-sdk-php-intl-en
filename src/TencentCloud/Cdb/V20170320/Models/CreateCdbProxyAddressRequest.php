@@ -54,8 +54,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVPort(integer $VPort) Set Port
  * @method array getSecurityGroup() Obtain Security group
  * @method void setSecurityGroup(array $SecurityGroup) Set Security group
- * @method string getConnectionPoolType() Obtain 
- * @method void setConnectionPoolType(string $ConnectionPoolType) Set 
+ * @method string getConnectionPoolType() Obtain Connection pool type, which will take effect only when `ConnectionPool` is `true`. Valid values:  `transaction` (transaction-level), `connection` (session-level).
+ * @method void setConnectionPoolType(string $ConnectionPoolType) Set Connection pool type, which will take effect only when `ConnectionPool` is `true`. Valid values:  `transaction` (transaction-level), `connection` (session-level).
  */
 class CreateCdbProxyAddressRequest extends AbstractModel
 {
@@ -145,7 +145,7 @@ class CreateCdbProxyAddressRequest extends AbstractModel
     public $SecurityGroup;
 
     /**
-     * @var string 
+     * @var string Connection pool type, which will take effect only when `ConnectionPool` is `true`. Valid values:  `transaction` (transaction-level), `connection` (session-level).
      */
     public $ConnectionPoolType;
 
@@ -167,7 +167,7 @@ class CreateCdbProxyAddressRequest extends AbstractModel
      * @param string $Vip IP address
      * @param integer $VPort Port
      * @param array $SecurityGroup Security group
-     * @param string $ConnectionPoolType 
+     * @param string $ConnectionPoolType Connection pool type, which will take effect only when `ConnectionPool` is `true`. Valid values:  `transaction` (transaction-level), `connection` (session-level).
      */
     function __construct()
     {

@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceId(string $InstanceId) Set Instance ID Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getInstanceName() Obtain Instance name Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setInstanceName(string $InstanceName) Set Instance name Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getInstanceType() Obtain Instance type Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setInstanceType(string $InstanceType) Set Instance type Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getInstanceType() Obtain Instance type. Valid values:  `master` (source instance), `ro` (read-only instance), `dr` (disaster recovery instance), `sdr` (disaster recovery instance of small specifications). Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setInstanceType(integer $InstanceType) Set Instance type. Valid values:  `master` (source instance), `ro` (read-only instance), `dr` (disaster recovery instance), `sdr` (disaster recovery instance of small specifications). Note: This field may return null, indicating that no valid values can be obtained.
  * @method integer getStatus() Obtain Instance status. Valid values:  `0` (creating), `1` (running), `4` (isolating), `5` (isolated). Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setStatus(integer $Status) Set Instance status. Valid values:  `0` (creating), `1` (running), `4` (isolating), `5` (isolated). Note: This field may return null, indicating that no valid values can be obtained.
  * @method integer getWeight() Obtain Read weight. If it is assigned by the system automatically, the modification will not take effect but represents whether the instance is enabled. Note: This field may return null, indicating that no valid values can be obtained.
@@ -48,7 +48,7 @@ class ProxyInst extends AbstractModel
     public $InstanceName;
 
     /**
-     * @var string Instance type Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Instance type. Valid values:  `master` (source instance), `ro` (read-only instance), `dr` (disaster recovery instance), `sdr` (disaster recovery instance of small specifications). Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $InstanceType;
 
@@ -75,7 +75,7 @@ class ProxyInst extends AbstractModel
     /**
      * @param string $InstanceId Instance ID Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $InstanceName Instance name Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $InstanceType Instance type Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $InstanceType Instance type. Valid values:  `master` (source instance), `ro` (read-only instance), `dr` (disaster recovery instance), `sdr` (disaster recovery instance of small specifications). Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $Status Instance status. Valid values:  `0` (creating), `1` (running), `4` (isolating), `5` (isolated). Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $Weight Read weight. If it is assigned by the system automatically, the modification will not take effect but represents whether the instance is enabled. Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $Region Instance region Note: This field may return null, indicating that no valid values can be obtained.

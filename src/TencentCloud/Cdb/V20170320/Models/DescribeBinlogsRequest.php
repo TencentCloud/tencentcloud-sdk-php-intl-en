@@ -26,10 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) Set Offset. Minimum value: 0.
  * @method integer getLimit() Obtain Number of entries per page. Value range: 1-100. Default value: 20.
  * @method void setLimit(integer $Limit) Set Number of entries per page. Value range: 1-100. Default value: 20.
- * @method string getMinStartTime() Obtain Earliest Binlog start time in the format of  2016-03-17 02:10:37
- * @method void setMinStartTime(string $MinStartTime) Set Earliest Binlog start time in the format of  2016-03-17 02:10:37
- * @method string getMaxStartTime() Obtain Latest binlog start time in the format of  2016-03-17 02:10:37
- * @method void setMaxStartTime(string $MaxStartTime) Set Latest binlog start time in the format of  2016-03-17 02:10:37
+ * @method string getMinStartTime() Obtain The earliest start time of binlog  in the format of 2016-03-17 02:10:37.
+ * @method void setMinStartTime(string $MinStartTime) Set The earliest start time of binlog  in the format of 2016-03-17 02:10:37.
+ * @method string getMaxStartTime() Obtain The latest start time of binlog  in the format of 2016-03-17 02:10:37.
+ * @method void setMaxStartTime(string $MaxStartTime) Set The latest start time of binlog  in the format of 2016-03-17 02:10:37.
  */
 class DescribeBinlogsRequest extends AbstractModel
 {
@@ -49,12 +49,12 @@ class DescribeBinlogsRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @var string Earliest Binlog start time in the format of  2016-03-17 02:10:37
+     * @var string The earliest start time of binlog  in the format of 2016-03-17 02:10:37.
      */
     public $MinStartTime;
 
     /**
-     * @var string Latest binlog start time in the format of  2016-03-17 02:10:37
+     * @var string The latest start time of binlog  in the format of 2016-03-17 02:10:37.
      */
     public $MaxStartTime;
 
@@ -62,8 +62,8 @@ class DescribeBinlogsRequest extends AbstractModel
      * @param string $InstanceId Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
      * @param integer $Offset Offset. Minimum value: 0.
      * @param integer $Limit Number of entries per page. Value range: 1-100. Default value: 20.
-     * @param string $MinStartTime Earliest Binlog start time in the format of  2016-03-17 02:10:37
-     * @param string $MaxStartTime Latest binlog start time in the format of  2016-03-17 02:10:37
+     * @param string $MinStartTime The earliest start time of binlog  in the format of 2016-03-17 02:10:37.
+     * @param string $MaxStartTime The latest start time of binlog  in the format of 2016-03-17 02:10:37.
      */
     function __construct()
     {
