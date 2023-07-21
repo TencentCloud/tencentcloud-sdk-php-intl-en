@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFromTopicId(string $FromTopicId) Set `TopicId` created by the CLS console
  * @method integer getCompression() Obtain Compression mode. Valid values: `0` (no compression); `2` (snappy); `3` (LZ4)
  * @method void setCompression(integer $Compression) Set Compression mode. Valid values: `0` (no compression); `2` (snappy); `3` (LZ4)
+ * @method KafkaConsumerContent getConsumerContent() Obtain Kafka consumer data format
+ * @method void setConsumerContent(KafkaConsumerContent $ConsumerContent) Set Kafka consumer data format
  */
 class OpenKafkaConsumerRequest extends AbstractModel
 {
@@ -38,8 +40,14 @@ class OpenKafkaConsumerRequest extends AbstractModel
     public $Compression;
 
     /**
+     * @var KafkaConsumerContent Kafka consumer data format
+     */
+    public $ConsumerContent;
+
+    /**
      * @param string $FromTopicId `TopicId` created by the CLS console
      * @param integer $Compression Compression mode. Valid values: `0` (no compression); `2` (snappy); `3` (LZ4)
+     * @param KafkaConsumerContent $ConsumerContent Kafka consumer data format
      */
     function __construct()
     {
@@ -60,6 +68,11 @@ class OpenKafkaConsumerRequest extends AbstractModel
 
         if (array_key_exists("Compression",$param) and $param["Compression"] !== null) {
             $this->Compression = $param["Compression"];
+        }
+
+        if (array_key_exists("ConsumerContent",$param) and $param["ConsumerContent"] !== null) {
+            $this->ConsumerContent = new KafkaConsumerContent();
+            $this->ConsumerContent->deserialize($param["ConsumerContent"]);
         }
     }
 }

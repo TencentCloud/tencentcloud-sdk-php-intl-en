@@ -18,26 +18,20 @@ namespace TencentCloud\Cls\V20201016\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Dynamic index configuration
-
-Note: This feature is currently in a beta test. To use it, please contact technical support.
+ * DeleteDataTransform request structure.
  *
- * @method boolean getStatus() Obtain Dynamic index configuration status
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setStatus(boolean $Status) Set Dynamic index configuration status
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getTaskId() Obtain Data processing task ID
+ * @method void setTaskId(string $TaskId) Set Data processing task ID
  */
-class DynamicIndex extends AbstractModel
+class DeleteDataTransformRequest extends AbstractModel
 {
     /**
-     * @var boolean Dynamic index configuration status
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Data processing task ID
      */
-    public $Status;
+    public $TaskId;
 
     /**
-     * @param boolean $Status Dynamic index configuration status
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $TaskId Data processing task ID
      */
     function __construct()
     {
@@ -52,8 +46,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
-            $this->Status = $param["Status"];
+        if (array_key_exists("TaskId",$param) and $param["TaskId"] !== null) {
+            $this->TaskId = $param["TaskId"];
         }
     }
 }

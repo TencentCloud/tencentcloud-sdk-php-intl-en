@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setExcludePaths(array $ExcludePaths) Set Collection path blocklist
  * @method string getUserDefineRule() Obtain Custom collection rule, which is a serialized JSON string
  * @method void setUserDefineRule(string $UserDefineRule) Set Custom collection rule, which is a serialized JSON string
+ * @method string getAdvancedConfig() Obtain Advanced collection configuration
+ * @method void setAdvancedConfig(string $AdvancedConfig) Set Advanced collection configuration
  */
 class CreateConfigRequest extends AbstractModel
 {
@@ -73,6 +75,11 @@ class CreateConfigRequest extends AbstractModel
     public $UserDefineRule;
 
     /**
+     * @var string Advanced collection configuration
+     */
+    public $AdvancedConfig;
+
+    /**
      * @param string $Name Collection configuration name
      * @param string $Output Log topic ID (TopicId) of collection configuration
      * @param string $Path Log collection path containing the filename
@@ -80,6 +87,7 @@ class CreateConfigRequest extends AbstractModel
      * @param ExtractRuleInfo $ExtractRule Extraction rule. If `ExtractRule` is set, `LogType` must be set.
      * @param array $ExcludePaths Collection path blocklist
      * @param string $UserDefineRule Custom collection rule, which is a serialized JSON string
+     * @param string $AdvancedConfig Advanced collection configuration
      */
     function __construct()
     {
@@ -126,6 +134,10 @@ class CreateConfigRequest extends AbstractModel
 
         if (array_key_exists("UserDefineRule",$param) and $param["UserDefineRule"] !== null) {
             $this->UserDefineRule = $param["UserDefineRule"];
+        }
+
+        if (array_key_exists("AdvancedConfig",$param) and $param["AdvancedConfig"] !== null) {
+            $this->AdvancedConfig = $param["AdvancedConfig"];
         }
     }
 }

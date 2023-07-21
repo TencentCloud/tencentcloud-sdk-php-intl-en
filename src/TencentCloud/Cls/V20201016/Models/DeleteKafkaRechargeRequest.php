@@ -18,26 +18,28 @@ namespace TencentCloud\Cls\V20201016\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Dynamic index configuration
-
-Note: This feature is currently in a beta test. To use it, please contact technical support.
+ * DeleteKafkaRecharge request structure.
  *
- * @method boolean getStatus() Obtain Dynamic index configuration status
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setStatus(boolean $Status) Set Dynamic index configuration status
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getId() Obtain Kafka data import configuration ID
+ * @method void setId(string $Id) Set Kafka data import configuration ID
+ * @method string getTopicId() Obtain Target CLS log topic ID
+ * @method void setTopicId(string $TopicId) Set Target CLS log topic ID
  */
-class DynamicIndex extends AbstractModel
+class DeleteKafkaRechargeRequest extends AbstractModel
 {
     /**
-     * @var boolean Dynamic index configuration status
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Kafka data import configuration ID
      */
-    public $Status;
+    public $Id;
 
     /**
-     * @param boolean $Status Dynamic index configuration status
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Target CLS log topic ID
+     */
+    public $TopicId;
+
+    /**
+     * @param string $Id Kafka data import configuration ID
+     * @param string $TopicId Target CLS log topic ID
      */
     function __construct()
     {
@@ -52,8 +54,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
-            $this->Status = $param["Status"];
+        if (array_key_exists("Id",$param) and $param["Id"] !== null) {
+            $this->Id = $param["Id"];
+        }
+
+        if (array_key_exists("TopicId",$param) and $param["TopicId"] !== null) {
+            $this->TopicId = $param["TopicId"];
         }
     }
 }

@@ -30,8 +30,10 @@ Queries all logs using * or an empty string
  * @method void setQuery(string $Query) Set Search and analysis statement. Maximum length: 12 KB
 A statement is in the format of <a href="https://intl.cloud.tencent.com/document/product/614/47044?from_cn_redirect=1" target="_blank">[search criteria]</a> | <a href="https://intl.cloud.tencent.com/document/product/614/44061?from_cn_redirect=1" target="_blank">[SQL statement]</a>. You can omit the pipe symbol <code> | </code> and SQL statement when log analysis is not required.
 Queries all logs using * or an empty string
- * @method string getTopicId() Obtain ID of the log topic to be searched
- * @method void setTopicId(string $TopicId) Set ID of the log topic to be searched
+ * @method string getTopicId() Obtain - The ID of the log topic to be searched for. Only one log topic can be specified.
+- To search for multiple log topics at a time, use the `Topics` parameter.
+ * @method void setTopicId(string $TopicId) Set - The ID of the log topic to be searched for. Only one log topic can be specified.
+- To search for multiple log topics at a time, use the `Topics` parameter.
  * @method integer getLimit() Obtain The number of raw logs returned by a single query. Maximum value: 1000. You need to use `Context` to continue to get logs.
 Notes:
 * This parameter is valid only when the query statement (`Query`) does not contain an SQL statement.
@@ -80,6 +82,12 @@ For more information, see <a href="https://intl.cloud.tencent.com/document/produ
  * @method void setSyntaxRule(integer $SyntaxRule) Set Search syntax
 `0` (default): Lucene; `1`: CQL.
 For more information, see <a href="https://intl.cloud.tencent.com/document/product/614/47044?from_cn_redirect=1#RetrievesConditionalRules" target="_blank">Syntax Rules</a>
+ * @method array getTopics() Obtain - The IDs of the log topics (up to 20) to be searched for.
+- To search for a single log topic, use the `TopicId` parameter.
+- You cannot use both `TopicId` and `Topics`.
+ * @method void setTopics(array $Topics) Set - The IDs of the log topics (up to 20) to be searched for.
+- To search for a single log topic, use the `TopicId` parameter.
+- You cannot use both `TopicId` and `Topics`.
  */
 class SearchLogRequest extends AbstractModel
 {
@@ -101,7 +109,8 @@ Queries all logs using * or an empty string
     public $Query;
 
     /**
-     * @var string ID of the log topic to be searched
+     * @var string - The ID of the log topic to be searched for. Only one log topic can be specified.
+- To search for multiple log topics at a time, use the `Topics` parameter.
      */
     public $TopicId;
 
@@ -154,12 +163,20 @@ For more information, see <a href="https://intl.cloud.tencent.com/document/produ
     public $SyntaxRule;
 
     /**
+     * @var array - The IDs of the log topics (up to 20) to be searched for.
+- To search for a single log topic, use the `TopicId` parameter.
+- You cannot use both `TopicId` and `Topics`.
+     */
+    public $Topics;
+
+    /**
      * @param integer $From Start time of the log to be searched, which is a Unix timestamp in milliseconds
      * @param integer $To End time of the log to be searched, which is a Unix timestamp in milliseconds
      * @param string $Query Search and analysis statement. Maximum length: 12 KB
 A statement is in the format of <a href="https://intl.cloud.tencent.com/document/product/614/47044?from_cn_redirect=1" target="_blank">[search criteria]</a> | <a href="https://intl.cloud.tencent.com/document/product/614/44061?from_cn_redirect=1" target="_blank">[SQL statement]</a>. You can omit the pipe symbol <code> | </code> and SQL statement when log analysis is not required.
 Queries all logs using * or an empty string
-     * @param string $TopicId ID of the log topic to be searched
+     * @param string $TopicId - The ID of the log topic to be searched for. Only one log topic can be specified.
+- To search for multiple log topics at a time, use the `Topics` parameter.
      * @param integer $Limit The number of raw logs returned by a single query. Maximum value: 1000. You need to use `Context` to continue to get logs.
 Notes:
 * This parameter is valid only when the query statement (`Query`) does not contain an SQL statement.
@@ -184,6 +201,9 @@ Default value: `1`
      * @param integer $SyntaxRule Search syntax
 `0` (default): Lucene; `1`: CQL.
 For more information, see <a href="https://intl.cloud.tencent.com/document/product/614/47044?from_cn_redirect=1#RetrievesConditionalRules" target="_blank">Syntax Rules</a>
+     * @param array $Topics - The IDs of the log topics (up to 20) to be searched for.
+- To search for a single log topic, use the `TopicId` parameter.
+- You cannot use both `TopicId` and `Topics`.
      */
     function __construct()
     {
@@ -236,6 +256,15 @@ For more information, see <a href="https://intl.cloud.tencent.com/document/produ
 
         if (array_key_exists("SyntaxRule",$param) and $param["SyntaxRule"] !== null) {
             $this->SyntaxRule = $param["SyntaxRule"];
+        }
+
+        if (array_key_exists("Topics",$param) and $param["Topics"] !== null) {
+            $this->Topics = [];
+            foreach ($param["Topics"] as $key => $value){
+                $obj = new MultiTopicSearchInformation();
+                $obj->deserialize($value);
+                array_push($this->Topics, $obj);
+            }
         }
     }
 }

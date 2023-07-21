@@ -18,26 +18,28 @@ namespace TencentCloud\Cls\V20201016\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Dynamic index configuration
-
-Note: This feature is currently in a beta test. To use it, please contact technical support.
+ * Information about the resource for data processing
  *
- * @method boolean getStatus() Obtain Dynamic index configuration status
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setStatus(boolean $Status) Set Dynamic index configuration status
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getTopicId() Obtain Target topic ID
+ * @method void setTopicId(string $TopicId) Set Target topic ID
+ * @method string getAlias() Obtain Alias
+ * @method void setAlias(string $Alias) Set Alias
  */
-class DynamicIndex extends AbstractModel
+class DataTransformResouceInfo extends AbstractModel
 {
     /**
-     * @var boolean Dynamic index configuration status
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Target topic ID
      */
-    public $Status;
+    public $TopicId;
 
     /**
-     * @param boolean $Status Dynamic index configuration status
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Alias
+     */
+    public $Alias;
+
+    /**
+     * @param string $TopicId Target topic ID
+     * @param string $Alias Alias
      */
     function __construct()
     {
@@ -52,8 +54,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
-            $this->Status = $param["Status"];
+        if (array_key_exists("TopicId",$param) and $param["TopicId"] !== null) {
+            $this->TopicId = $param["TopicId"];
+        }
+
+        if (array_key_exists("Alias",$param) and $param["Alias"] !== null) {
+            $this->Alias = $param["Alias"];
         }
     }
 }

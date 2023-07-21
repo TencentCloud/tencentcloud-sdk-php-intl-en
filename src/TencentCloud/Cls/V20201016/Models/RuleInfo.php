@@ -33,9 +33,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
  * @method void setTag(RuleTagInfo $Tag) Set Metadata field index configuration. If the configuration is left empty, metadata field indexing is not enabled.
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method DynamicIndex getDynamicIndex() Obtain Dynamic index configuration. If the configuration is empty, dynamic indexing is not enabled.
-Note: This field may return null, indicating that no valid values can be obtained.
+
+Note: This feature is currently in a beta test. To use it, please contact technical support.
+Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setDynamicIndex(DynamicIndex $DynamicIndex) Set Dynamic index configuration. If the configuration is empty, dynamic indexing is not enabled.
-Note: This field may return null, indicating that no valid values can be obtained.
+
+Note: This feature is currently in a beta test. To use it, please contact technical support.
+Note: this field may return null, indicating that no valid values can be obtained.
  */
 class RuleInfo extends AbstractModel
 {
@@ -59,7 +63,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * @var DynamicIndex Dynamic index configuration. If the configuration is empty, dynamic indexing is not enabled.
-Note: This field may return null, indicating that no valid values can be obtained.
+
+Note: This feature is currently in a beta test. To use it, please contact technical support.
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $DynamicIndex;
 
@@ -71,7 +77,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param RuleTagInfo $Tag Metadata field index configuration. If the configuration is left empty, metadata field indexing is not enabled.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param DynamicIndex $DynamicIndex Dynamic index configuration. If the configuration is empty, dynamic indexing is not enabled.
-Note: This field may return null, indicating that no valid values can be obtained.
+
+Note: This feature is currently in a beta test. To use it, please contact technical support.
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

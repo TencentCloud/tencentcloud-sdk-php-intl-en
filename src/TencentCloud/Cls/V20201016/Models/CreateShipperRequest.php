@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setShipperName(string $ShipperName) Set Shipping rule name
  * @method integer getInterval() Obtain Interval between shipping tasks (in sec). Default value: 300. Value range: 300-900
  * @method void setInterval(integer $Interval) Set Interval between shipping tasks (in sec). Default value: 300. Value range: 300-900
- * @method integer getMaxSize() Obtain Maximum size of a file to be shipped, in MB. Default value: 256. Value range: 100-256
- * @method void setMaxSize(integer $MaxSize) Set Maximum size of a file to be shipped, in MB. Default value: 256. Value range: 100-256
+ * @method integer getMaxSize() Obtain Maximum size of a file to be shipped, in MB. Default value: 256. Value range: 5-256
+ * @method void setMaxSize(integer $MaxSize) Set Maximum size of a file to be shipped, in MB. Default value: 256. Value range: 5-256
  * @method array getFilterRules() Obtain Filter rules for shipped logs. Only logs matching the rules can be shipped. All rules are in the AND relationship, and up to five rules can be added. If the array is empty, no filtering will be performed, and all logs will be shipped.
  * @method void setFilterRules(array $FilterRules) Set Filter rules for shipped logs. Only logs matching the rules can be shipped. All rules are in the AND relationship, and up to five rules can be added. If the array is empty, no filtering will be performed, and all logs will be shipped.
  * @method string getPartition() Obtain Rules for partitioning logs to be shipped. `strftime` can be used to define the presentation of time format.
@@ -75,7 +75,7 @@ class CreateShipperRequest extends AbstractModel
     public $Interval;
 
     /**
-     * @var integer Maximum size of a file to be shipped, in MB. Default value: 256. Value range: 100-256
+     * @var integer Maximum size of a file to be shipped, in MB. Default value: 256. Value range: 5-256
      */
     public $MaxSize;
 
@@ -120,7 +120,7 @@ class CreateShipperRequest extends AbstractModel
      * @param string $Prefix Prefix of the shipping directory in the shipping rule to be created
      * @param string $ShipperName Shipping rule name
      * @param integer $Interval Interval between shipping tasks (in sec). Default value: 300. Value range: 300-900
-     * @param integer $MaxSize Maximum size of a file to be shipped, in MB. Default value: 256. Value range: 100-256
+     * @param integer $MaxSize Maximum size of a file to be shipped, in MB. Default value: 256. Value range: 5-256
      * @param array $FilterRules Filter rules for shipped logs. Only logs matching the rules can be shipped. All rules are in the AND relationship, and up to five rules can be added. If the array is empty, no filtering will be performed, and all logs will be shipped.
      * @param string $Partition Rules for partitioning logs to be shipped. `strftime` can be used to define the presentation of time format.
      * @param CompressInfo $Compress Compression configuration of shipped log

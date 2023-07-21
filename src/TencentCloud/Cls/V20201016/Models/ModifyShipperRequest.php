@@ -32,8 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setShipperName(string $ShipperName) Set Shipping rule name
  * @method integer getInterval() Obtain Shipping time interval in seconds. Default value: 300. Value range: 300–900
  * @method void setInterval(integer $Interval) Set Shipping time interval in seconds. Default value: 300. Value range: 300–900
- * @method integer getMaxSize() Obtain Maximum size of a file to be shipped, in MB. Default value: 256. Value range: 100–256
- * @method void setMaxSize(integer $MaxSize) Set Maximum size of a file to be shipped, in MB. Default value: 256. Value range: 100–256
+ * @method integer getMaxSize() Obtain Maximum size of a file to be shipped, in MB. Default value: 256. Value range: 5-256
+ * @method void setMaxSize(integer $MaxSize) Set Maximum size of a file to be shipped, in MB. Default value: 256. Value range: 5-256
  * @method array getFilterRules() Obtain Filter rules for shipped logs. Only logs matching the rules can be shipped. All rules are in the AND relationship, and up to five rules can be added. If the array is empty, no filtering will be performed, and all logs will be shipped.
  * @method void setFilterRules(array $FilterRules) Set Filter rules for shipped logs. Only logs matching the rules can be shipped. All rules are in the AND relationship, and up to five rules can be added. If the array is empty, no filtering will be performed, and all logs will be shipped.
  * @method string getPartition() Obtain Partition rule of shipped log, which can be represented in `strftime` time format
@@ -78,7 +78,7 @@ class ModifyShipperRequest extends AbstractModel
     public $Interval;
 
     /**
-     * @var integer Maximum size of a file to be shipped, in MB. Default value: 256. Value range: 100–256
+     * @var integer Maximum size of a file to be shipped, in MB. Default value: 256. Value range: 5-256
      */
     public $MaxSize;
 
@@ -114,7 +114,7 @@ class ModifyShipperRequest extends AbstractModel
      * @param boolean $Status Shipping rule status
      * @param string $ShipperName Shipping rule name
      * @param integer $Interval Shipping time interval in seconds. Default value: 300. Value range: 300–900
-     * @param integer $MaxSize Maximum size of a file to be shipped, in MB. Default value: 256. Value range: 100–256
+     * @param integer $MaxSize Maximum size of a file to be shipped, in MB. Default value: 256. Value range: 5-256
      * @param array $FilterRules Filter rules for shipped logs. Only logs matching the rules can be shipped. All rules are in the AND relationship, and up to five rules can be added. If the array is empty, no filtering will be performed, and all logs will be shipped.
      * @param string $Partition Partition rule of shipped log, which can be represented in `strftime` time format
      * @param CompressInfo $Compress Compression configuration of shipped log

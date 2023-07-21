@@ -40,10 +40,10 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method void setBeginRegex(string $BeginRegex) Set First-Line matching rule, which is valid only if `log_type` is `multiline_log` or `fullregex_log`
 Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method array getKeys() Obtain Key name of each extracted field. An empty key indicates to discard the field. This parameter is valid only if `log_type` is `delimiter_log`. `json_log` logs use the key of JSON itself
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setKeys(array $Keys) Set Key name of each extracted field. An empty key indicates to discard the field. This parameter is valid only if `log_type` is `delimiter_log`. `json_log` logs use the key of JSON itself
-Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method array getKeys() Obtain Key name of each extracted field. An empty key indicates to discard the field. This parameter is valid only if `log_type` is `delimiter_log`. `json_log` logs use the key of JSON itself. A maximum of 100 keys are supported.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setKeys(array $Keys) Set Key name of each extracted field. An empty key indicates to discard the field. This parameter is valid only if `log_type` is `delimiter_log`. `json_log` logs use the key of JSON itself. A maximum of 100 keys are supported.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method array getFilterKeyRegex() Obtain Log keys to be filtered and the corresponding regex
 Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method void setFilterKeyRegex(array $FilterKeyRegex) Set Log keys to be filtered and the corresponding regex
@@ -100,9 +100,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
 1: Use machine group metadata.
 2: Use user-defined metadata.
 3: Use the collection path to extract metadata.
- * @method string getPathRegex() Obtain Regular expression of the collection path, which is required when `MetadataType` is set to `3`.
+ * @method string getPathRegex() Obtain Regular expression of the collection configuration path, which is required when `MetadataType` is set to `3`
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setPathRegex(string $PathRegex) Set Regular expression of the collection path, which is required when `MetadataType` is set to `3`.
+ * @method void setPathRegex(string $PathRegex) Set Regular expression of the collection configuration path, which is required when `MetadataType` is set to `3`
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method array getMetaTags() Obtain User-defined metadata, which is required when `MetadataType` is set to `2`.
  * @method void setMetaTags(array $MetaTags) Set User-defined metadata, which is required when `MetadataType` is set to `2`.
@@ -140,8 +140,8 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     public $BeginRegex;
 
     /**
-     * @var array Key name of each extracted field. An empty key indicates to discard the field. This parameter is valid only if `log_type` is `delimiter_log`. `json_log` logs use the key of JSON itself
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @var array Key name of each extracted field. An empty key indicates to discard the field. This parameter is valid only if `log_type` is `delimiter_log`. `json_log` logs use the key of JSON itself. A maximum of 100 keys are supported.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Keys;
 
@@ -214,7 +214,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $MetadataType;
 
     /**
-     * @var string Regular expression of the collection path, which is required when `MetadataType` is set to `3`.
+     * @var string Regular expression of the collection configuration path, which is required when `MetadataType` is set to `3`
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $PathRegex;
@@ -235,8 +235,8 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param string $BeginRegex First-Line matching rule, which is valid only if `log_type` is `multiline_log` or `fullregex_log`
 Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param array $Keys Key name of each extracted field. An empty key indicates to discard the field. This parameter is valid only if `log_type` is `delimiter_log`. `json_log` logs use the key of JSON itself
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param array $Keys Key name of each extracted field. An empty key indicates to discard the field. This parameter is valid only if `log_type` is `delimiter_log`. `json_log` logs use the key of JSON itself. A maximum of 100 keys are supported.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param array $FilterKeyRegex Log keys to be filtered and the corresponding regex
 Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param boolean $UnMatchUpLoadSwitch Whether to upload the logs that failed to be parsed. Valid values: `true`: yes; `false`: no
@@ -265,7 +265,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 1: Use machine group metadata.
 2: Use user-defined metadata.
 3: Use the collection path to extract metadata.
-     * @param string $PathRegex Regular expression of the collection path, which is required when `MetadataType` is set to `3`.
+     * @param string $PathRegex Regular expression of the collection configuration path, which is required when `MetadataType` is set to `3`
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param array $MetaTags User-defined metadata, which is required when `MetadataType` is set to `2`.
      */
