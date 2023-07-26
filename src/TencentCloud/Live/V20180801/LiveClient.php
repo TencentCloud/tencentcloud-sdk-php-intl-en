@@ -192,6 +192,10 @@ If the start time and end time are not on the same day or if the data of specifi
 
  * @method Models\DescribePlayErrorCodeSumInfoListResponse DescribePlayErrorCodeSumInfoList(Models\DescribePlayErrorCodeSumInfoListRequest $req) This API is used to query the information of downstream playback error codes.
  * @method Models\DescribeProvinceIspPlayInfoListResponse DescribeProvinceIspPlayInfoList(Models\DescribeProvinceIspPlayInfoListRequest $req) This API is used to query the downstream playback data of a specified ISP in a specified district, including bandwidth, traffic, number of requests, and number of concurrent connections.
+ * @method Models\DescribeRecordTaskResponse DescribeRecordTask(Models\DescribeRecordTaskRequest $req) This API is used to retrieve a list of recording tasks that were started and ended within a specified time range. 
+- Prerequisites: 
+1. This API is only used to query recording tasks created by the CreateRecordTask interface. 
+2. It cannot retrieve recording tasks that have been deleted by the DeleteRecordTask interface or tasks that have expired (platform retains for 3 months).
  * @method Models\DescribeScreenShotSheetNumListResponse DescribeScreenShotSheetNumList(Models\DescribeScreenShotSheetNumListRequest $req) The API is used to query the number of screenshots as an LVB value-added service.
  * @method Models\DescribeStreamDayPlayInfoListResponse DescribeStreamDayPlayInfoList(Models\DescribeStreamDayPlayInfoListRequest $req) This API is used to query the playback data of each stream at the day level, including the total traffic.
  * @method Models\DescribeStreamPlayInfoListResponse DescribeStreamPlayInfoList(Models\DescribeStreamPlayInfoListRequest $req) This API is used to query the playback data. It supports querying the playback details by stream name and aggregated data by playback domain name. Data in the last 4 minutes or so cannot be queried due to delay.
