@@ -80,8 +80,8 @@ Monthly subscription refund
 Note: To query the product codes used in the current month, call <a href="https://intl.cloud.tencent.com/document/product/555/35761?from_cn_redirect=1">DescribeBillSummaryByProduct</a>.
  * @method void setBusinessCode(string $BusinessCode) Set Product code
 Note: To query the product codes used in the current month, call <a href="https://intl.cloud.tencent.com/document/product/555/35761?from_cn_redirect=1">DescribeBillSummaryByProduct</a>.
- * @method string getPayerUin() Obtain 
- * @method void setPayerUin(string $PayerUin) Set 
+ * @method string getPayerUin() Obtain The account ID of the payer, which is the unique identifier of a Tencent Cloud user. This account is allowed to query its own bills by default. If an organization admin account needs to query the self-pay bills of members, this field should be specified as the member account ID.
+ * @method void setPayerUin(string $PayerUin) Set The account ID of the payer, which is the unique identifier of a Tencent Cloud user. This account is allowed to query its own bills by default. If an organization admin account needs to query the self-pay bills of members, this field should be specified as the member account ID.
  */
 class DescribeBillResourceSummaryRequest extends AbstractModel
 {
@@ -152,7 +152,7 @@ Note: To query the product codes used in the current month, call <a href="https:
     public $BusinessCode;
 
     /**
-     * @var string 
+     * @var string The account ID of the payer, which is the unique identifier of a Tencent Cloud user. This account is allowed to query its own bills by default. If an organization admin account needs to query the self-pay bills of members, this field should be specified as the member account ID.
      */
     public $PayerUin;
 
@@ -187,7 +187,7 @@ Monthly subscription refund
      * @param string $PayMode Billing mode. Valid values: `prePay` (prepaid), `postPay` (postpaid)
      * @param string $BusinessCode Product code
 Note: To query the product codes used in the current month, call <a href="https://intl.cloud.tencent.com/document/product/555/35761?from_cn_redirect=1">DescribeBillSummaryByProduct</a>.
-     * @param string $PayerUin 
+     * @param string $PayerUin The account ID of the payer, which is the unique identifier of a Tencent Cloud user. This account is allowed to query its own bills by default. If an organization admin account needs to query the self-pay bills of members, this field should be specified as the member account ID.
      */
     function __construct()
     {

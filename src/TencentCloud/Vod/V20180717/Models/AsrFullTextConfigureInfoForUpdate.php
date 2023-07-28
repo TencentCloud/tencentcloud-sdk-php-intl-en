@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
 <li>vtt</li>
 <li>srt</li>
 <font color='red'>Note: This parameter has been deprecated. Please use `SubtitleFormatsOperation` instead.</font>
+ * @method string getSrcLanguage() Obtain Media source language value range: <li>zh: Mandarin </li> <li>en: English</li> <li>ja: Japanese </li> <li>zh-ca: Cantonese</li>
+ * @method void setSrcLanguage(string $SrcLanguage) Set Media source language value range: <li>zh: Mandarin </li> <li>en: English</li> <li>ja: Japanese </li> <li>zh-ca: Cantonese</li>
  */
 class AsrFullTextConfigureInfoForUpdate extends AbstractModel
 {
@@ -60,6 +62,11 @@ class AsrFullTextConfigureInfoForUpdate extends AbstractModel
     public $SubtitleFormat;
 
     /**
+     * @var string Media source language value range: <li>zh: Mandarin </li> <li>en: English</li> <li>ja: Japanese </li> <li>zh-ca: Cantonese</li>
+     */
+    public $SrcLanguage;
+
+    /**
      * @param string $Switch Switch of full speech recognition task. Valid values:
 <li>ON: enables intelligent full speech recognition task;</li>
 <li>OFF: disables intelligent full speech recognition task.</li>
@@ -68,6 +75,7 @@ class AsrFullTextConfigureInfoForUpdate extends AbstractModel
 <li>vtt</li>
 <li>srt</li>
 <font color='red'>Note: This parameter has been deprecated. Please use `SubtitleFormatsOperation` instead.</font>
+     * @param string $SrcLanguage Media source language value range: <li>zh: Mandarin </li> <li>en: English</li> <li>ja: Japanese </li> <li>zh-ca: Cantonese</li>
      */
     function __construct()
     {
@@ -93,6 +101,10 @@ class AsrFullTextConfigureInfoForUpdate extends AbstractModel
 
         if (array_key_exists("SubtitleFormat",$param) and $param["SubtitleFormat"] !== null) {
             $this->SubtitleFormat = $param["SubtitleFormat"];
+        }
+
+        if (array_key_exists("SrcLanguage",$param) and $param["SrcLanguage"] !== null) {
+            $this->SrcLanguage = $param["SrcLanguage"];
         }
     }
 }

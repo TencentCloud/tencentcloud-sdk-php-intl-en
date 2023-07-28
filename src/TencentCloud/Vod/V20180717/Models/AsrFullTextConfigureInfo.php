@@ -40,6 +40,8 @@ use TencentCloud\Common\AbstractModel;
 <li>vtt</li>
 <li>srt</li>
 <font color='red'>Note: This parameter has been deprecated. Please use `SubtitleFormats` instead.</font>
+ * @method string getSrcLanguage() Obtain Media source language value range: <li>zh: Mandarin </li> <li>en: English</li> <li>ja: Japanese </li> <li>zh-ca: Cantonese</li><font color=red>Note：</font> If it fills in an empty string or leave this parameter blank, it will be automatically recognized (it is recommended to fill in the language corresponding to the media to improve the recognition accuracy).
+ * @method void setSrcLanguage(string $SrcLanguage) Set Media source language value range: <li>zh: Mandarin </li> <li>en: English</li> <li>ja: Japanese </li> <li>zh-ca: Cantonese</li><font color=red>Note：</font> If it fills in an empty string or leave this parameter blank, it will be automatically recognized (it is recommended to fill in the language corresponding to the media to improve the recognition accuracy).
  */
 class AsrFullTextConfigureInfo extends AbstractModel
 {
@@ -66,6 +68,11 @@ class AsrFullTextConfigureInfo extends AbstractModel
     public $SubtitleFormat;
 
     /**
+     * @var string Media source language value range: <li>zh: Mandarin </li> <li>en: English</li> <li>ja: Japanese </li> <li>zh-ca: Cantonese</li><font color=red>Note：</font> If it fills in an empty string or leave this parameter blank, it will be automatically recognized (it is recommended to fill in the language corresponding to the media to improve the recognition accuracy).
+     */
+    public $SrcLanguage;
+
+    /**
      * @param string $Switch Switch of full speech recognition task. Valid values:
 <li>ON: enables intelligent full speech recognition task;</li>
 <li>OFF: disables intelligent full speech recognition task.</li>
@@ -76,6 +83,7 @@ class AsrFullTextConfigureInfo extends AbstractModel
 <li>vtt</li>
 <li>srt</li>
 <font color='red'>Note: This parameter has been deprecated. Please use `SubtitleFormats` instead.</font>
+     * @param string $SrcLanguage Media source language value range: <li>zh: Mandarin </li> <li>en: English</li> <li>ja: Japanese </li> <li>zh-ca: Cantonese</li><font color=red>Note：</font> If it fills in an empty string or leave this parameter blank, it will be automatically recognized (it is recommended to fill in the language corresponding to the media to improve the recognition accuracy).
      */
     function __construct()
     {
@@ -100,6 +108,10 @@ class AsrFullTextConfigureInfo extends AbstractModel
 
         if (array_key_exists("SubtitleFormat",$param) and $param["SubtitleFormat"] !== null) {
             $this->SubtitleFormat = $param["SubtitleFormat"];
+        }
+
+        if (array_key_exists("SrcLanguage",$param) and $param["SrcLanguage"] !== null) {
+            $this->SrcLanguage = $param["SrcLanguage"];
         }
     }
 }

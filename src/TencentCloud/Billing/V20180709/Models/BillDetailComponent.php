@@ -34,10 +34,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUsedAmount(string $UsedAmount) Set Component usage: The actually settled usage of a component, which is "Raw usage - Deducted usage (including packages)".
  * @method string getUsedAmountUnit() Obtain Component usage unit: The unit of measurement for component usage
  * @method void setUsedAmountUnit(string $UsedAmountUnit) Set Component usage unit: The unit of measurement for component usage
- * @method string getRealTotalMeasure() Obtain 
- * @method void setRealTotalMeasure(string $RealTotalMeasure) Set 
- * @method string getDeductedMeasure() Obtain 
- * @method void setDeductedMeasure(string $DeductedMeasure) Set 
+ * @method string getRealTotalMeasure() Obtain Raw usage/duration: The raw usage/duration of a component before deduction. Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setRealTotalMeasure(string $RealTotalMeasure) Set Raw usage/duration: The raw usage/duration of a component before deduction. Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getDeductedMeasure() Obtain Deducted usage/duration (including packages): The usage/duration deducted with a package. Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setDeductedMeasure(string $DeductedMeasure) Set Deducted usage/duration (including packages): The usage/duration deducted with a package. Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getTimeSpan() Obtain Usage duration: The resource usage duration
  * @method void setTimeSpan(string $TimeSpan) Set Usage duration: The resource usage duration
  * @method string getTimeUnitName() Obtain Duration unit: The unit of measurement for usage duration
@@ -118,12 +118,12 @@ class BillDetailComponent extends AbstractModel
     public $UsedAmountUnit;
 
     /**
-     * @var string 
+     * @var string Raw usage/duration: The raw usage/duration of a component before deduction. Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $RealTotalMeasure;
 
     /**
-     * @var string 
+     * @var string Deducted usage/duration (including packages): The usage/duration deducted with a package. Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $DeductedMeasure;
 
@@ -236,8 +236,8 @@ class BillDetailComponent extends AbstractModel
      * @param string $PriceUnit Component price measurement unit: The unit of measurement for a component price, which is composed of USD, usage unit, and duration unit.
      * @param string $UsedAmount Component usage: The actually settled usage of a component, which is "Raw usage - Deducted usage (including packages)".
      * @param string $UsedAmountUnit Component usage unit: The unit of measurement for component usage
-     * @param string $RealTotalMeasure 
-     * @param string $DeductedMeasure 
+     * @param string $RealTotalMeasure Raw usage/duration: The raw usage/duration of a component before deduction. Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $DeductedMeasure Deducted usage/duration (including packages): The usage/duration deducted with a package. Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $TimeSpan Usage duration: The resource usage duration
      * @param string $TimeUnitName Duration unit: The unit of measurement for usage duration
      * @param string $Cost Original cost: The original cost of a resource, which is "List price x Usage x Usage duration". If a customer has applied for a fixed preferential price or contract price or is in a refund scenario, this parameter will not be displayed by default.
