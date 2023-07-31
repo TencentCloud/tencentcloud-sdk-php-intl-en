@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSnatPro(boolean $SnatPro) Set Whether to enable cross-region binding 2.0
  * @method boolean getDeleteProtect() Obtain Specifies whether to enable deletion protection.
  * @method void setDeleteProtect(boolean $DeleteProtect) Set Specifies whether to enable deletion protection.
+ * @method boolean getModifyClassicDomain() Obtain Modifies the second-level domain name of CLB from mycloud.com to tencentclb.com. Note that the sub-domain names will be changed as well. After the modification, mycloud.com will be invalidated. 
+ * @method void setModifyClassicDomain(boolean $ModifyClassicDomain) Set Modifies the second-level domain name of CLB from mycloud.com to tencentclb.com. Note that the sub-domain names will be changed as well. After the modification, mycloud.com will be invalidated. 
  */
 class ModifyLoadBalancerAttributesRequest extends AbstractModel
 {
@@ -73,6 +75,11 @@ class ModifyLoadBalancerAttributesRequest extends AbstractModel
     public $DeleteProtect;
 
     /**
+     * @var boolean Modifies the second-level domain name of CLB from mycloud.com to tencentclb.com. Note that the sub-domain names will be changed as well. After the modification, mycloud.com will be invalidated. 
+     */
+    public $ModifyClassicDomain;
+
+    /**
      * @param string $LoadBalancerId Unique CLB ID
      * @param string $LoadBalancerName CLB instance name
      * @param TargetRegionInfo $TargetRegionInfo The backend service information of cross-region binding 1.0
@@ -80,6 +87,7 @@ class ModifyLoadBalancerAttributesRequest extends AbstractModel
      * @param boolean $LoadBalancerPassToTarget Whether the target opens traffic from CLB to the internet. If yes (true), only security groups on CLB will be verified; if no (false), security groups on both CLB and backend instance need to be verified.
      * @param boolean $SnatPro Whether to enable cross-region binding 2.0
      * @param boolean $DeleteProtect Specifies whether to enable deletion protection.
+     * @param boolean $ModifyClassicDomain Modifies the second-level domain name of CLB from mycloud.com to tencentclb.com. Note that the sub-domain names will be changed as well. After the modification, mycloud.com will be invalidated. 
      */
     function __construct()
     {
@@ -122,6 +130,10 @@ class ModifyLoadBalancerAttributesRequest extends AbstractModel
 
         if (array_key_exists("DeleteProtect",$param) and $param["DeleteProtect"] !== null) {
             $this->DeleteProtect = $param["DeleteProtect"];
+        }
+
+        if (array_key_exists("ModifyClassicDomain",$param) and $param["ModifyClassicDomain"] !== null) {
+            $this->ModifyClassicDomain = $param["ModifyClassicDomain"];
         }
     }
 }

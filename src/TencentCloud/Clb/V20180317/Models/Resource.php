@@ -28,6 +28,10 @@ use TencentCloud\Common\AbstractModel;
 Note: This field may return `null`, indicating that no valid values can be obtained.
  * @method void setAvailabilitySet(array $AvailabilitySet) Set Available resources
 Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method array getTypeSet() Obtain ISP Type
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setTypeSet(array $TypeSet) Set ISP Type
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class Resource extends AbstractModel
 {
@@ -48,10 +52,18 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     public $AvailabilitySet;
 
     /**
+     * @var array ISP Type
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $TypeSet;
+
+    /**
      * @param array $Type Specific ISP resource information, Vaules: `CMCC`, `CUCC`, `CTCC`, `BGP`, and `INTERNAL`.
      * @param string $Isp ISP information, such as `CMCC`, `CUCC`, `CTCC`, `BGP`, and `INTERNAL`.
      * @param array $AvailabilitySet Available resources
 Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param array $TypeSet ISP Type
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -80,6 +92,15 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                 $obj = new ResourceAvailability();
                 $obj->deserialize($value);
                 array_push($this->AvailabilitySet, $obj);
+            }
+        }
+
+        if (array_key_exists("TypeSet",$param) and $param["TypeSet"] !== null) {
+            $this->TypeSet = [];
+            foreach ($param["TypeSet"] as $key => $value){
+                $obj = new TypeInfo();
+                $obj->deserialize($value);
+                array_push($this->TypeSet, $obj);
             }
         }
     }

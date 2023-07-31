@@ -38,10 +38,10 @@ They represent weighted round robin, least connections, and IP hash, respectivel
  * @method void setSessionExpireTime(integer $SessionExpireTime) Set Session persistence time
  * @method string getForwardType() Obtain Forwarding protocol between CLB instance and real server. Default value: HTTP. Valid values: HTTP, HTTPS, and TRPC.
  * @method void setForwardType(string $ForwardType) Set Forwarding protocol between CLB instance and real server. Default value: HTTP. Valid values: HTTP, HTTPS, and TRPC.
- * @method string getTrpcCallee() Obtain TRPC callee server route, which is required when `ForwardType` is "TRPC".
- * @method void setTrpcCallee(string $TrpcCallee) Set TRPC callee server route, which is required when `ForwardType` is "TRPC".
- * @method string getTrpcFunc() Obtain TRPC calling service API, which is required when `ForwardType` is "TRPC".
- * @method void setTrpcFunc(string $TrpcFunc) Set TRPC calling service API, which is required when `ForwardType` is "TRPC".
+ * @method string getTrpcCallee() Obtain TRPC callee server route, which is required when `ForwardType` is "TRPC". This is now only for internal usage.
+ * @method void setTrpcCallee(string $TrpcCallee) Set TRPC callee server route, which is required when `ForwardType` is "TRPC". This is now only for internal usage.
+ * @method string getTrpcFunc() Obtain TRPC calling service API, which is required when `ForwardType` is "TRPC". This is now only for internal usage.
+ * @method void setTrpcFunc(string $TrpcFunc) Set TRPC calling service API, which is required when `ForwardType` is "TRPC". This is now only for internal usage.
  */
 class ModifyRuleRequest extends AbstractModel
 {
@@ -87,12 +87,12 @@ They represent weighted round robin, least connections, and IP hash, respectivel
     public $ForwardType;
 
     /**
-     * @var string TRPC callee server route, which is required when `ForwardType` is "TRPC".
+     * @var string TRPC callee server route, which is required when `ForwardType` is "TRPC". This is now only for internal usage.
      */
     public $TrpcCallee;
 
     /**
-     * @var string TRPC calling service API, which is required when `ForwardType` is "TRPC".
+     * @var string TRPC calling service API, which is required when `ForwardType` is "TRPC". This is now only for internal usage.
      */
     public $TrpcFunc;
 
@@ -106,8 +106,8 @@ They represent weighted round robin, least connections, and IP hash, respectivel
 They represent weighted round robin, least connections, and IP hash, respectively. Default value: WRR.
      * @param integer $SessionExpireTime Session persistence time
      * @param string $ForwardType Forwarding protocol between CLB instance and real server. Default value: HTTP. Valid values: HTTP, HTTPS, and TRPC.
-     * @param string $TrpcCallee TRPC callee server route, which is required when `ForwardType` is "TRPC".
-     * @param string $TrpcFunc TRPC calling service API, which is required when `ForwardType` is "TRPC".
+     * @param string $TrpcCallee TRPC callee server route, which is required when `ForwardType` is "TRPC". This is now only for internal usage.
+     * @param string $TrpcFunc TRPC calling service API, which is required when `ForwardType` is "TRPC". This is now only for internal usage.
      */
     function __construct()
     {

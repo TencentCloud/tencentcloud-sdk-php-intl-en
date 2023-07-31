@@ -44,6 +44,8 @@ Grey: 0x999999
  * @method void setBackgroundImageUrl(string $BackgroundImageUrl) Set The URL of the background image for the canvas. This parameter has a higher priority than `BackGroundColor`.
  * @method array getWaterMarkList() Obtain The watermark information for the mixed stream.
  * @method void setWaterMarkList(array $WaterMarkList) Set The watermark information for the mixed stream.
+ * @method integer getBackgroundRenderMode() Obtain Background image display mode during output: 0 for crop, 1 for scale and display with black background, 2 for proportional scaling. The backend default is proportional scaling.
+ * @method void setBackgroundRenderMode(integer $BackgroundRenderMode) Set Background image display mode during output: 0 for crop, 1 for scale and display with black background, 2 for proportional scaling. The backend default is proportional scaling.
  */
 class McuVideoParams extends AbstractModel
 {
@@ -80,6 +82,11 @@ Grey: 0x999999
     public $WaterMarkList;
 
     /**
+     * @var integer Background image display mode during output: 0 for crop, 1 for scale and display with black background, 2 for proportional scaling. The backend default is proportional scaling.
+     */
+    public $BackgroundRenderMode;
+
+    /**
      * @param VideoEncode $VideoEncode The video encoding parameters.
      * @param McuLayoutParams $LayoutParams The layout parameters.
      * @param string $BackGroundColor The canvas color. Below are the values for some common colors:
@@ -92,6 +99,7 @@ White: 0xFFFFFF
 Grey: 0x999999
      * @param string $BackgroundImageUrl The URL of the background image for the canvas. This parameter has a higher priority than `BackGroundColor`.
      * @param array $WaterMarkList The watermark information for the mixed stream.
+     * @param integer $BackgroundRenderMode Background image display mode during output: 0 for crop, 1 for scale and display with black background, 2 for proportional scaling. The backend default is proportional scaling.
      */
     function __construct()
     {
@@ -131,6 +139,10 @@ Grey: 0x999999
                 $obj->deserialize($value);
                 array_push($this->WaterMarkList, $obj);
             }
+        }
+
+        if (array_key_exists("BackgroundRenderMode",$param) and $param["BackgroundRenderMode"] !== null) {
+            $this->BackgroundRenderMode = $param["BackgroundRenderMode"];
         }
     }
 }

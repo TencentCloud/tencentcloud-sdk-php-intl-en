@@ -24,8 +24,18 @@ use TencentCloud\Common\AbstractModel;
 BANDWIDTH_PACKAGE: billed by bandwidth package (currently, this method is supported only if the ISP is specified)
  * @method void setInternetChargeType(string $InternetChargeType) Set TRAFFIC_POSTPAID_BY_HOUR: hourly pay-as-you-go by traffic; BANDWIDTH_POSTPAID_BY_HOUR: hourly pay-as-you-go by bandwidth;
 BANDWIDTH_PACKAGE: billed by bandwidth package (currently, this method is supported only if the ISP is specified)
- * @method integer getInternetMaxBandwidthOut() Obtain Maximum outbound bandwidth in Mbps, which applies only to public network CLB. Value range: 0-65,535. Default value: 10.
- * @method void setInternetMaxBandwidthOut(integer $InternetMaxBandwidthOut) Set Maximum outbound bandwidth in Mbps, which applies only to public network CLB. Value range: 0-65,535. Default value: 10.
+ * @method integer getInternetMaxBandwidthOut() Obtain Maximum outgoing bandwidth in Mbps. It works on LCU-supported instances on private networks and all instances on public networks.
+- For shared and dedicated CLB instances on public networks, the range is 1Mbps-2048Mbps.
+- For all LCU-supported CLB instances:
+  - It defaults to General LCU-supported instance. SLA corresponds to Super Large 1, and the range of maximum outgoing bandwidth is 1 Mbps - 10240 Mbps.
+  - If you have enabled Super Large specification, the range of maximum outgoing bandwidth is 1 Mbps - 61440 Mbps Super u200dLarge LCU-supported specification is in beta now. u200cu200dTo join the beta, [submit a ticket](https://console.cloud.tencent.com/workorder/category).
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setInternetMaxBandwidthOut(integer $InternetMaxBandwidthOut) Set Maximum outgoing bandwidth in Mbps. It works on LCU-supported instances on private networks and all instances on public networks.
+- For shared and dedicated CLB instances on public networks, the range is 1Mbps-2048Mbps.
+- For all LCU-supported CLB instances:
+  - It defaults to General LCU-supported instance. SLA corresponds to Super Large 1, and the range of maximum outgoing bandwidth is 1 Mbps - 10240 Mbps.
+  - If you have enabled Super Large specification, the range of maximum outgoing bandwidth is 1 Mbps - 61440 Mbps Super u200dLarge LCU-supported specification is in beta now. u200cu200dTo join the beta, [submit a ticket](https://console.cloud.tencent.com/workorder/category).
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getBandwidthpkgSubType() Obtain Bandwidth package type, such as SINGLEISP
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setBandwidthpkgSubType(string $BandwidthpkgSubType) Set Bandwidth package type, such as SINGLEISP
@@ -40,7 +50,12 @@ BANDWIDTH_PACKAGE: billed by bandwidth package (currently, this method is suppor
     public $InternetChargeType;
 
     /**
-     * @var integer Maximum outbound bandwidth in Mbps, which applies only to public network CLB. Value range: 0-65,535. Default value: 10.
+     * @var integer Maximum outgoing bandwidth in Mbps. It works on LCU-supported instances on private networks and all instances on public networks.
+- For shared and dedicated CLB instances on public networks, the range is 1Mbps-2048Mbps.
+- For all LCU-supported CLB instances:
+  - It defaults to General LCU-supported instance. SLA corresponds to Super Large 1, and the range of maximum outgoing bandwidth is 1 Mbps - 10240 Mbps.
+  - If you have enabled Super Large specification, the range of maximum outgoing bandwidth is 1 Mbps - 61440 Mbps Super u200dLarge LCU-supported specification is in beta now. u200cu200dTo join the beta, [submit a ticket](https://console.cloud.tencent.com/workorder/category).
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $InternetMaxBandwidthOut;
 
@@ -53,7 +68,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
     /**
      * @param string $InternetChargeType TRAFFIC_POSTPAID_BY_HOUR: hourly pay-as-you-go by traffic; BANDWIDTH_POSTPAID_BY_HOUR: hourly pay-as-you-go by bandwidth;
 BANDWIDTH_PACKAGE: billed by bandwidth package (currently, this method is supported only if the ISP is specified)
-     * @param integer $InternetMaxBandwidthOut Maximum outbound bandwidth in Mbps, which applies only to public network CLB. Value range: 0-65,535. Default value: 10.
+     * @param integer $InternetMaxBandwidthOut Maximum outgoing bandwidth in Mbps. It works on LCU-supported instances on private networks and all instances on public networks.
+- For shared and dedicated CLB instances on public networks, the range is 1Mbps-2048Mbps.
+- For all LCU-supported CLB instances:
+  - It defaults to General LCU-supported instance. SLA corresponds to Super Large 1, and the range of maximum outgoing bandwidth is 1 Mbps - 10240 Mbps.
+  - If you have enabled Super Large specification, the range of maximum outgoing bandwidth is 1 Mbps - 61440 Mbps Super u200dLarge LCU-supported specification is in beta now. u200cu200dTo join the beta, [submit a ticket](https://console.cloud.tencent.com/workorder/category).
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $BandwidthpkgSubType Bandwidth package type, such as SINGLEISP
 Note: This field may return null, indicating that no valid values can be obtained.
      */

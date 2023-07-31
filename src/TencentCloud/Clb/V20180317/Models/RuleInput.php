@@ -34,18 +34,18 @@ use TencentCloud\Common\AbstractModel;
 They represent weighted round robin, least connections, and IP hash, respectively. Default value: WRR.
  * @method void setScheduler(string $Scheduler) Set Request forwarding method of the rule. Value range: WRR, LEAST_CONN, IP_HASH
 They represent weighted round robin, least connections, and IP hash, respectively. Default value: WRR.
- * @method string getForwardType() Obtain Forwarding protocol between the CLB instance and real server. Currently, HTTP/HTTPS/TRPC are supported.
- * @method void setForwardType(string $ForwardType) Set Forwarding protocol between the CLB instance and real server. Currently, HTTP/HTTPS/TRPC are supported.
+ * @method string getForwardType() Obtain Forwarding protocol between the CLB instance and real server. HTTP/HTTPS/TRPC are supported. TRPC is now only available for internal usage.
+ * @method void setForwardType(string $ForwardType) Set Forwarding protocol between the CLB instance and real server. HTTP/HTTPS/TRPC are supported. TRPC is now only available for internal usage.
  * @method boolean getDefaultServer() Obtain Whether to set this domain name as the default domain name. Note: Only one default domain name can be set under one listener.
  * @method void setDefaultServer(boolean $DefaultServer) Set Whether to set this domain name as the default domain name. Note: Only one default domain name can be set under one listener.
  * @method boolean getHttp2() Obtain Whether to enable HTTP/2. Note: HTTP/2 can be enabled only for HTTPS domain names.
  * @method void setHttp2(boolean $Http2) Set Whether to enable HTTP/2. Note: HTTP/2 can be enabled only for HTTPS domain names.
  * @method string getTargetType() Obtain Target real server type. NODE: binding a general node; TARGETGROUP: binding a target group.
  * @method void setTargetType(string $TargetType) Set Target real server type. NODE: binding a general node; TARGETGROUP: binding a target group.
- * @method string getTrpcCallee() Obtain TRPC callee server route, which is required when `ForwardType` is `TRPC`.
- * @method void setTrpcCallee(string $TrpcCallee) Set TRPC callee server route, which is required when `ForwardType` is `TRPC`.
- * @method string getTrpcFunc() Obtain TRPC calling service API, which is required when `ForwardType` is `TRPC`.
- * @method void setTrpcFunc(string $TrpcFunc) Set TRPC calling service API, which is required when `ForwardType` is `TRPC`.
+ * @method string getTrpcCallee() Obtain TRPC callee server route, which is required when `ForwardType` is "TRPC". This is now only for internal usage.
+ * @method void setTrpcCallee(string $TrpcCallee) Set TRPC callee server route, which is required when `ForwardType` is "TRPC". This is now only for internal usage.
+ * @method string getTrpcFunc() Obtain TRPC calling service API, which is required when `ForwardType` is "TRPC". This is now only for internal usage.
+ * @method void setTrpcFunc(string $TrpcFunc) Set TRPC calling service API, which is required when `ForwardType` is "TRPC". This is now only for internal usage.
  * @method boolean getQuic() Obtain Whether to enable QUIC. Note: QUIC can be enabled only for HTTPS domain names
  * @method void setQuic(boolean $Quic) Set Whether to enable QUIC. Note: QUIC can be enabled only for HTTPS domain names
  * @method array getDomains() Obtain The domain name associated with the forwarding rule. Each contain 1-80 characters. If you only need to enter one domain name, use `Domain` instead.
@@ -87,7 +87,7 @@ They represent weighted round robin, least connections, and IP hash, respectivel
     public $Scheduler;
 
     /**
-     * @var string Forwarding protocol between the CLB instance and real server. Currently, HTTP/HTTPS/TRPC are supported.
+     * @var string Forwarding protocol between the CLB instance and real server. HTTP/HTTPS/TRPC are supported. TRPC is now only available for internal usage.
      */
     public $ForwardType;
 
@@ -107,12 +107,12 @@ They represent weighted round robin, least connections, and IP hash, respectivel
     public $TargetType;
 
     /**
-     * @var string TRPC callee server route, which is required when `ForwardType` is `TRPC`.
+     * @var string TRPC callee server route, which is required when `ForwardType` is "TRPC". This is now only for internal usage.
      */
     public $TrpcCallee;
 
     /**
-     * @var string TRPC calling service API, which is required when `ForwardType` is `TRPC`.
+     * @var string TRPC calling service API, which is required when `ForwardType` is "TRPC". This is now only for internal usage.
      */
     public $TrpcFunc;
 
@@ -139,12 +139,12 @@ They represent weighted round robin, least connections, and IP hash, respectivel
      * @param CertificateInput $Certificate Certificate information. `Certificate` and `MultiCertInfo` cannot be specified at the same time. 
      * @param string $Scheduler Request forwarding method of the rule. Value range: WRR, LEAST_CONN, IP_HASH
 They represent weighted round robin, least connections, and IP hash, respectively. Default value: WRR.
-     * @param string $ForwardType Forwarding protocol between the CLB instance and real server. Currently, HTTP/HTTPS/TRPC are supported.
+     * @param string $ForwardType Forwarding protocol between the CLB instance and real server. HTTP/HTTPS/TRPC are supported. TRPC is now only available for internal usage.
      * @param boolean $DefaultServer Whether to set this domain name as the default domain name. Note: Only one default domain name can be set under one listener.
      * @param boolean $Http2 Whether to enable HTTP/2. Note: HTTP/2 can be enabled only for HTTPS domain names.
      * @param string $TargetType Target real server type. NODE: binding a general node; TARGETGROUP: binding a target group.
-     * @param string $TrpcCallee TRPC callee server route, which is required when `ForwardType` is `TRPC`.
-     * @param string $TrpcFunc TRPC calling service API, which is required when `ForwardType` is `TRPC`.
+     * @param string $TrpcCallee TRPC callee server route, which is required when `ForwardType` is "TRPC". This is now only for internal usage.
+     * @param string $TrpcFunc TRPC calling service API, which is required when `ForwardType` is "TRPC". This is now only for internal usage.
      * @param boolean $Quic Whether to enable QUIC. Note: QUIC can be enabled only for HTTPS domain names
      * @param array $Domains The domain name associated with the forwarding rule. Each contain 1-80 characters. If you only need to enter one domain name, use `Domain` instead.
      * @param MultiCertInfo $MultiCertInfo Certificate information. You can specify multiple server-side certificates with different algorithm types. `Certificate` and `MultiCertInfo` cannot be specified at the same time. 
