@@ -27,10 +27,10 @@ Note: Custom check parameters are currently supported only in certain beta test 
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setTimeOut(integer $TimeOut) Set Health check response timeout period in seconds (applicable only to layer-4 listeners). Value range: 2-60. Default value: 2. This parameter should be less than the check interval.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getIntervalTime() Obtain Health check probing interval period. It defaults to `5`. For IPv4 CLB instances, the range is 2-300. u200dFor IPv6 CLB instances, the range is 5-300. Unit: second
+ * @method integer getIntervalTime() Obtain Health check probing interval period. It defaults to `5`. For IPv4 CLB instances, the range is 2-300. For IPv6 CLB instances, the range is 5-300. Unit: second
 Note: For some IPv4 CLB instances created long ago, the range is 5-300.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setIntervalTime(integer $IntervalTime) Set Health check probing interval period. It defaults to `5`. For IPv4 CLB instances, the range is 2-300. u200dFor IPv6 CLB instances, the range is 5-300. Unit: second
+ * @method void setIntervalTime(integer $IntervalTime) Set Health check probing interval period. It defaults to `5`. For IPv4 CLB instances, the range is 2-300. For IPv6 CLB instances, the range is 5-300. Unit: second
 Note: For some IPv4 CLB instances created long ago, the range is 5-300.
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method integer getHealthNum() Obtain Health threshold. Default value: 3, indicating that if a forward is found healthy three consecutive times, it is considered to be normal. Value range: 2-10
@@ -106,7 +106,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $TimeOut;
 
     /**
-     * @var integer Health check probing interval period. It defaults to `5`. For IPv4 CLB instances, the range is 2-300. u200dFor IPv6 CLB instances, the range is 5-300. Unit: second
+     * @var integer Health check probing interval period. It defaults to `5`. For IPv4 CLB instances, the range is 2-300. For IPv6 CLB instances, the range is 5-300. Unit: second
 Note: For some IPv4 CLB instances created long ago, the range is 5-300.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
@@ -201,7 +201,7 @@ Note: This field may return `null`, indicating that no valid values can be obtai
      * @param integer $HealthSwitch Whether to enable health check. 1: enable; 0: disable.
      * @param integer $TimeOut Health check response timeout period in seconds (applicable only to layer-4 listeners). Value range: 2-60. Default value: 2. This parameter should be less than the check interval.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $IntervalTime Health check probing interval period. It defaults to `5`. For IPv4 CLB instances, the range is 2-300. u200dFor IPv6 CLB instances, the range is 5-300. Unit: second
+     * @param integer $IntervalTime Health check probing interval period. It defaults to `5`. For IPv4 CLB instances, the range is 2-300. For IPv6 CLB instances, the range is 5-300. Unit: second
 Note: For some IPv4 CLB instances created long ago, the range is 5-300.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $HealthNum Health threshold. Default value: 3, indicating that if a forward is found healthy three consecutive times, it is considered to be normal. Value range: 2-10

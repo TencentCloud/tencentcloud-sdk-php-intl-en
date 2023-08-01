@@ -130,7 +130,7 @@ This is an async API. After it is returned successfully, you can call the Descri
 This is an async API. After it is returned successfully, you can check the task result by calling `DescribeTaskStatus` with the returned `RequestID`.
  * @method Models\ModifyLoadBalancerSlaResponse ModifyLoadBalancerSla(Models\ModifyLoadBalancerSlaRequest $req) This API is used to upgrade a pay-as-you-go shared CLB instance to an LCU-supported CLB instance. <br/>
 Limits
-- This API can only be used to upgrade pay-as-you-go shared instances. To upgrade monthly-subscribed shared instances, please go to the CLB u200dconsole.
+- This API can only be used to upgrade pay-as-you-go shared instances. To upgrade monthly-subscribed shared instances, please go to the CLB console.
 - An LCU-supported instance cannot be changed back to a shared instance.
 - Classic CLB instances cannot be upgraded to LCU-supported instances.
  * @method Models\ModifyRuleResponse ModifyRule(Models\ModifyRuleRequest $req) This API (ModifyRule) is used to modify the attributes of a forwarding rule under a layer-7 CLB listener, such as forwarding path, health check attribute, and forwarding policy.
