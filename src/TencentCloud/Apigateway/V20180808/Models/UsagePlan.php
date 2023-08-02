@@ -26,8 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUsagePlanId(string $UsagePlanId) Set Unique usage plan ID.
  * @method string getUsagePlanName() Obtain Usage plan name.
  * @method void setUsagePlanName(string $UsagePlanName) Set Usage plan name.
- * @method string getUsagePlanDesc() Obtain Usage plan description.
- * @method void setUsagePlanDesc(string $UsagePlanDesc) Set Usage plan description.
+ * @method string getUsagePlanDesc() Obtain Usage plan description. 
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setUsagePlanDesc(string $UsagePlanDesc) Set Usage plan description. 
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method integer getMaxRequestNumPreSec() Obtain Usage plan QPS. `-1` indicates no limit.
  * @method void setMaxRequestNumPreSec(integer $MaxRequestNumPreSec) Set Usage plan QPS. `-1` indicates no limit.
  * @method string getCreatedTime() Obtain Usage plan time.
@@ -53,7 +55,8 @@ class UsagePlan extends AbstractModel
     public $UsagePlanName;
 
     /**
-     * @var string Usage plan description.
+     * @var string Usage plan description. 
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $UsagePlanDesc;
 
@@ -76,7 +79,8 @@ class UsagePlan extends AbstractModel
      * @param string $Environment Environment name.
      * @param string $UsagePlanId Unique usage plan ID.
      * @param string $UsagePlanName Usage plan name.
-     * @param string $UsagePlanDesc Usage plan description.
+     * @param string $UsagePlanDesc Usage plan description. 
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $MaxRequestNumPreSec Usage plan QPS. `-1` indicates no limit.
      * @param string $CreatedTime Usage plan time.
      * @param string $ModifiedTime Usage plan modification time.

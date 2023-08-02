@@ -21,41 +21,57 @@ use TencentCloud\Common\AbstractModel;
  * Health check configuration, including `TsfHealthCheckConf` and `TargetServicesHealthCheckConf`
  *
  * @method boolean getIsHealthCheck() Obtain Whether health check is enabled.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setIsHealthCheck(boolean $IsHealthCheck) Set Whether health check is enabled.
- * @method integer getRequestVolumeThreshold() Obtain Health check threshold.
- * @method void setRequestVolumeThreshold(integer $RequestVolumeThreshold) Set Health check threshold.
- * @method integer getSleepWindowInMilliseconds() Obtain Window size.
- * @method void setSleepWindowInMilliseconds(integer $SleepWindowInMilliseconds) Set Window size.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getRequestVolumeThreshold() Obtain Health check threshold. 
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setRequestVolumeThreshold(integer $RequestVolumeThreshold) Set Health check threshold. 
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getSleepWindowInMilliseconds() Obtain Window size. 
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setSleepWindowInMilliseconds(integer $SleepWindowInMilliseconds) Set Window size. 
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method integer getErrorThresholdPercentage() Obtain Threshold percentage.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setErrorThresholdPercentage(integer $ErrorThresholdPercentage) Set Threshold percentage.
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class HealthCheckConf extends AbstractModel
 {
     /**
      * @var boolean Whether health check is enabled.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $IsHealthCheck;
 
     /**
-     * @var integer Health check threshold.
+     * @var integer Health check threshold. 
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $RequestVolumeThreshold;
 
     /**
-     * @var integer Window size.
+     * @var integer Window size. 
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $SleepWindowInMilliseconds;
 
     /**
      * @var integer Threshold percentage.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ErrorThresholdPercentage;
 
     /**
      * @param boolean $IsHealthCheck Whether health check is enabled.
-     * @param integer $RequestVolumeThreshold Health check threshold.
-     * @param integer $SleepWindowInMilliseconds Window size.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $RequestVolumeThreshold Health check threshold. 
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $SleepWindowInMilliseconds Window size. 
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $ErrorThresholdPercentage Threshold percentage.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

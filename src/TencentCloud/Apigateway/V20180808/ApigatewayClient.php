@@ -109,7 +109,6 @@ In API Gateway, a usage plan can be bound to multiple key pairs. You can use thi
  * @method Models\DetachPluginResponse DetachPlugin(Models\DetachPluginRequest $req) This API is used to unbind an API from the plugin.
  * @method Models\DisableApiKeyResponse DisableApiKey(Models\DisableApiKeyRequest $req) This API is used to disable an API key.
  * @method Models\EnableApiKeyResponse EnableApiKey(Models\EnableApiKeyRequest $req) This API is used to enable a disabled API key.
- * @method Models\GenerateApiDocumentResponse GenerateApiDocument(Models\GenerateApiDocumentRequest $req) This API is used to automatically generate API documents and SDKs. One document and one SDK will be generated for each environment under each service, respectively.
  * @method Models\ImportOpenApiResponse ImportOpenApi(Models\ImportOpenApiRequest $req) This API is used to import an OpenAPI to API gateway. 
  * @method Models\ModifyAPIDocResponse ModifyAPIDoc(Models\ModifyAPIDocRequest $req) This API is used to modify an API document.
  * @method Models\ModifyApiResponse ModifyApi(Models\ModifyApiRequest $req) This API is used to modify an API. You can call this API to edit/modify a configured API. The modified API takes effect only after its service is published to the corresponding environment again.
@@ -136,7 +135,7 @@ Only after a service is published to an environment can its APIs be called. You 
  * @method Models\UnbindApiAppResponse UnbindApiApp(Models\UnbindApiAppRequest $req) This API is used to unbind an application from an API.
  * @method Models\UpdateApiAppKeyResponse UpdateApiAppKey(Models\UpdateApiAppKeyRequest $req) This API is used to update an application key.
  * @method Models\UpdateApiKeyResponse UpdateApiKey(Models\UpdateApiKeyRequest $req) This API is used to update a created API key pair.
- * @method Models\UpdateServiceResponse UpdateService(Models\UpdateServiceRequest $req) This API is used to switch the running version of a service published in an environment to a specified version. After you create a service by using API Gateway and publish it to an environment, multiple versions will be generated during development. In this case, you can call this API to switch versions.
+ * @method Models\UpdateServiceResponse UpdateService(Models\UpdateServiceRequest $req) u200dThis API is used to switch the running version of a service published in an environment to a specified version. After you create a service by using API Gateway and publish it to an environment, multiple versions will be generated during development. In this case, you can call this API to switch versions.
  */
 
 class ApigatewayClient extends AbstractClient

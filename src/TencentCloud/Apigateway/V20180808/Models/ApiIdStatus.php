@@ -25,7 +25,9 @@ use TencentCloud\Common\AbstractModel;
  * @method string getApiId() Obtain Unique API ID.
  * @method void setApiId(string $ApiId) Set Unique API ID.
  * @method string getApiDesc() Obtain API description
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setApiDesc(string $ApiDesc) Set API description
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getPath() Obtain API path.
  * @method void setPath(string $Path) Set API path.
  * @method string getMethod() Obtain API method.
@@ -93,6 +95,7 @@ class ApiIdStatus extends AbstractModel
 
     /**
      * @var string API description
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ApiDesc;
 
@@ -167,6 +170,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     /**
      * @var array List of business APIs associated with authorization API.
 Note: this field may return null, indicating that no valid values can be obtained.
+     * @deprecated
      */
     public $RelationBuniessApiIds;
 
@@ -186,6 +190,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @param string $ServiceId Unique service ID.
      * @param string $ApiId Unique API ID.
      * @param string $ApiDesc API description
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $Path API path.
      * @param string $Method API method.
      * @param string $CreatedTime Service creation time.
