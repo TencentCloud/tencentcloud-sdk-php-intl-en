@@ -20,12 +20,12 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateApplicationProxy request structure.
  *
- * @method string getZoneId() Obtain The site ID.
- * @method void setZoneId(string $ZoneId) Set The site ID.
- * @method string getProxyName() Obtain When `ProxyType=hostname`, this field indicates a domain name or subdomain name.
-When `ProxyType=instance`, it indicates a proxy instance.
- * @method void setProxyName(string $ProxyName) Set When `ProxyType=hostname`, this field indicates a domain name or subdomain name.
-When `ProxyType=instance`, it indicates a proxy instance.
+ * @method string getZoneId() Obtain Site ID.
+ * @method void setZoneId(string $ZoneId) Set Site ID.
+ * @method string getProxyName() Obtain Domain name or subdomain name when `ProxyType=hostname`; 
+Instance name when `ProxyType=instance`.
+ * @method void setProxyName(string $ProxyName) Set Domain name or subdomain name when `ProxyType=hostname`; 
+Instance name when `ProxyType=instance`.
  * @method string getPlatType() Obtain The scheduling mode. Values:
 <li>`ip`: Schedule via Anycast IP.</li>
 <li>`domain`: Schedule via CNAME.</li>
@@ -54,25 +54,27 @@ When `ProxyType=instance`, it indicates a proxy instance.
 If not specified, this field uses the default value 600.
  * @method void setSessionPersistTime(integer $SessionPersistTime) Set The session persistence duration. Value range: 30-3600 (in seconds).
 If not specified, this field uses the default value 600.
- * @method Ipv6 getIpv6() Obtain The IPv6 access configuration.
-If this field is not specified, IPv6 access will be disabled.
- * @method void setIpv6(Ipv6 $Ipv6) Set The IPv6 access configuration.
-If this field is not specified, IPv6 access will be disabled.
+ * @method Ipv6 getIpv6() Obtain Ipv6 access configuration. 
+IPv6 access is disabled if it is not specified.
+ * @method void setIpv6(Ipv6 $Ipv6) Set Ipv6 access configuration. 
+IPv6 access is disabled if it is not specified.
  * @method array getApplicationProxyRules() Obtain The rule details.
 If this field is not specified, an application proxy rule will not be created.
  * @method void setApplicationProxyRules(array $ApplicationProxyRules) Set The rule details.
 If this field is not specified, an application proxy rule will not be created.
+ * @method AccelerateMainland getAccelerateMainland() Obtain Cross-MLC-border acceleration. It is disabled if this parameter is not specified.
+ * @method void setAccelerateMainland(AccelerateMainland $AccelerateMainland) Set Cross-MLC-border acceleration. It is disabled if this parameter is not specified.
  */
 class CreateApplicationProxyRequest extends AbstractModel
 {
     /**
-     * @var string The site ID.
+     * @var string Site ID.
      */
     public $ZoneId;
 
     /**
-     * @var string When `ProxyType=hostname`, this field indicates a domain name or subdomain name.
-When `ProxyType=instance`, it indicates a proxy instance.
+     * @var string Domain name or subdomain name when `ProxyType=hostname`; 
+Instance name when `ProxyType=instance`.
      */
     public $ProxyName;
 
@@ -111,8 +113,8 @@ If not specified, this field uses the default value 600.
     public $SessionPersistTime;
 
     /**
-     * @var Ipv6 The IPv6 access configuration.
-If this field is not specified, IPv6 access will be disabled.
+     * @var Ipv6 Ipv6 access configuration. 
+IPv6 access is disabled if it is not specified.
      */
     public $Ipv6;
 
@@ -123,9 +125,14 @@ If this field is not specified, an application proxy rule will not be created.
     public $ApplicationProxyRules;
 
     /**
-     * @param string $ZoneId The site ID.
-     * @param string $ProxyName When `ProxyType=hostname`, this field indicates a domain name or subdomain name.
-When `ProxyType=instance`, it indicates a proxy instance.
+     * @var AccelerateMainland Cross-MLC-border acceleration. It is disabled if this parameter is not specified.
+     */
+    public $AccelerateMainland;
+
+    /**
+     * @param string $ZoneId Site ID.
+     * @param string $ProxyName Domain name or subdomain name when `ProxyType=hostname`; 
+Instance name when `ProxyType=instance`.
      * @param string $PlatType The scheduling mode. Values:
 <li>`ip`: Schedule via Anycast IP.</li>
 <li>`domain`: Schedule via CNAME.</li>
@@ -140,10 +147,11 @@ When `ProxyType=instance`, it indicates a proxy instance.
 <li>`instance`: The proxy is created by instance.</li>If not specified, this field uses the default value `instance`.
      * @param integer $SessionPersistTime The session persistence duration. Value range: 30-3600 (in seconds).
 If not specified, this field uses the default value 600.
-     * @param Ipv6 $Ipv6 The IPv6 access configuration.
-If this field is not specified, IPv6 access will be disabled.
+     * @param Ipv6 $Ipv6 Ipv6 access configuration. 
+IPv6 access is disabled if it is not specified.
      * @param array $ApplicationProxyRules The rule details.
 If this field is not specified, an application proxy rule will not be created.
+     * @param AccelerateMainland $AccelerateMainland Cross-MLC-border acceleration. It is disabled if this parameter is not specified.
      */
     function __construct()
     {
@@ -198,6 +206,11 @@ If this field is not specified, an application proxy rule will not be created.
                 $obj->deserialize($value);
                 array_push($this->ApplicationProxyRules, $obj);
             }
+        }
+
+        if (array_key_exists("AccelerateMainland",$param) and $param["AccelerateMainland"] !== null) {
+            $this->AccelerateMainland = new AccelerateMainland();
+            $this->AccelerateMainland->deserialize($param["AccelerateMainland"]);
         }
     }
 }

@@ -94,14 +94,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setAliasZoneName(string $AliasZoneName) Set The site alias. It can be up to 20 characters consisting of digits, letters, hyphens (-) and underscores (_).
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getIsFake() Obtain Whether it’s a fake site. Values:
-<li>`0`: Non-fake site</li>
-<li>`1`: Fake site</li>
-Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method void setIsFake(integer $IsFake) Set Whether it’s a fake site. Values:
-<li>`0`: Non-fake site</li>
-<li>`1`: Fake site</li>
-Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method integer getIsFake() Obtain Whether it’s a fake site. Valid values: 
+<li>`0`: Non-fake site;</li>
+<li>`1`: Fake site.</li>
+ * @method void setIsFake(integer $IsFake) Set Whether it’s a fake site. Valid values: 
+<li>`0`: Non-fake site;</li>
+<li>`1`: Fake site.</li>
+ * @method string getLockStatus() Obtain Lock status. Valid values: <li>`enable`: Normal. Modifying is allowed;</li><li>`disable`: Locked. Modifying is not allowed.</li>
+ * @method void setLockStatus(string $LockStatus) Set Lock status. Valid values: <li>`enable`: Normal. Modifying is allowed;</li><li>`disable`: Locked. Modifying is not allowed.</li>
  */
 class Zone extends AbstractModel
 {
@@ -215,12 +215,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $AliasZoneName;
 
     /**
-     * @var integer Whether it’s a fake site. Values:
-<li>`0`: Non-fake site</li>
-<li>`1`: Fake site</li>
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @var integer Whether it’s a fake site. Valid values: 
+<li>`0`: Non-fake site;</li>
+<li>`1`: Fake site.</li>
      */
     public $IsFake;
+
+    /**
+     * @var string Lock status. Valid values: <li>`enable`: Normal. Modifying is allowed;</li><li>`disable`: Locked. Modifying is not allowed.</li>
+     */
+    public $LockStatus;
 
     /**
      * @param string $ZoneId The site ID.
@@ -260,10 +264,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 <li>`paused`: Disabled</li>
      * @param string $AliasZoneName The site alias. It can be up to 20 characters consisting of digits, letters, hyphens (-) and underscores (_).
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $IsFake Whether it’s a fake site. Values:
-<li>`0`: Non-fake site</li>
-<li>`1`: Fake site</li>
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param integer $IsFake Whether it’s a fake site. Valid values: 
+<li>`0`: Non-fake site;</li>
+<li>`1`: Fake site.</li>
+     * @param string $LockStatus Lock status. Valid values: <li>`enable`: Normal. Modifying is allowed;</li><li>`disable`: Locked. Modifying is not allowed.</li>
      */
     function __construct()
     {
@@ -368,6 +372,10 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 
         if (array_key_exists("IsFake",$param) and $param["IsFake"] !== null) {
             $this->IsFake = $param["IsFake"];
+        }
+
+        if (array_key_exists("LockStatus",$param) and $param["LockStatus"] !== null) {
+            $this->LockStatus = $param["LockStatus"];
         }
     }
 }

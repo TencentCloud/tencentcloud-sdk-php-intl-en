@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * The IPv6 access configuration.
  *
- * @method string getSwitch() Obtain Whether to enable IPv6 access. Values:
-<li>`on`: Enable IPv6 access.</li>
-<li>`off`: Disable IPv6 access.</li>
- * @method void setSwitch(string $Switch) Set Whether to enable IPv6 access. Values:
-<li>`on`: Enable IPv6 access.</li>
-<li>`off`: Disable IPv6 access.</li>
+ * @method string getSwitch() Obtain Whether to enable IPv6 access. Valid values: 
+<li>`on`: Enable;</li>
+<li>`off`: Disable.</li>
+ * @method void setSwitch(string $Switch) Set Whether to enable IPv6 access. Valid values: 
+<li>`on`: Enable;</li>
+<li>`off`: Disable.</li>
  */
 class Ipv6 extends AbstractModel
 {
     /**
-     * @var string Whether to enable IPv6 access. Values:
-<li>`on`: Enable IPv6 access.</li>
-<li>`off`: Disable IPv6 access.</li>
+     * @var string Whether to enable IPv6 access. Valid values: 
+<li>`on`: Enable;</li>
+<li>`off`: Disable.</li>
      */
     public $Switch;
 
     /**
-     * @param string $Switch Whether to enable IPv6 access. Values:
-<li>`on`: Enable IPv6 access.</li>
-<li>`off`: Disable IPv6 access.</li>
+     * @param string $Switch Whether to enable IPv6 access. Valid values: 
+<li>`on`: Enable;</li>
+<li>`off`: Disable.</li>
      */
     function __construct()
     {

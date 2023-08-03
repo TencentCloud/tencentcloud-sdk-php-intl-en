@@ -20,24 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Bot extended actions
  *
- * @method string getAction() Obtain The action. Values:
-<li>`monitor`: Observe</li>
-<li>`trans`: Allow</li>
-<li>`alg`: JavaScript challenge</li>
-<li>`captcha`: Managed challenge</li>
-<li>`random`: Weighted random. Actions are executed based on the percentage specified in `ExtendActions`.</li>
-<li>`silence`: Drop w/o response</li>
-<li>`shortdelay`: Add short latency</li>
-<li>`longdelay`: Add long latency</li>
- * @method void setAction(string $Action) Set The action. Values:
-<li>`monitor`: Observe</li>
-<li>`trans`: Allow</li>
-<li>`alg`: JavaScript challenge</li>
-<li>`captcha`: Managed challenge</li>
-<li>`random`: Weighted random. Actions are executed based on the percentage specified in `ExtendActions`.</li>
-<li>`silence`: Drop w/o response</li>
-<li>`shortdelay`: Add short latency</li>
-<li>`longdelay`: Add long latency</li>
+ * @method string getAction() Obtain Action. Valid values: 
+<li>`monitor`: Observe;</li>
+<li>`alg`: JavaScript challenge;</li>
+<li>`captcha`: Managed challenge;</li>
+<li>`random`: Actions are executed based on the percentage specified in `ExtendActions`;</li>
+<li>`silence`: Silence;</li>
+<li>`shortdelay`: Add short latency;</li>
+<li>`longdelay`: Add long latency.</li>
+ * @method void setAction(string $Action) Set Action. Valid values: 
+<li>`monitor`: Observe;</li>
+<li>`alg`: JavaScript challenge;</li>
+<li>`captcha`: Managed challenge;</li>
+<li>`random`: Actions are executed based on the percentage specified in `ExtendActions`;</li>
+<li>`silence`: Silence;</li>
+<li>`shortdelay`: Add short latency;</li>
+<li>`longdelay`: Add long latency.</li>
  * @method integer getPercent() Obtain The probability for triggering the action. Value range: 0-100.
 Note: This field may return `null`, indicating that no valid values can be obtained.
  * @method void setPercent(integer $Percent) Set The probability for triggering the action. Value range: 0-100.
@@ -46,15 +44,14 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 class BotExtendAction extends AbstractModel
 {
     /**
-     * @var string The action. Values:
-<li>`monitor`: Observe</li>
-<li>`trans`: Allow</li>
-<li>`alg`: JavaScript challenge</li>
-<li>`captcha`: Managed challenge</li>
-<li>`random`: Weighted random. Actions are executed based on the percentage specified in `ExtendActions`.</li>
-<li>`silence`: Drop w/o response</li>
-<li>`shortdelay`: Add short latency</li>
-<li>`longdelay`: Add long latency</li>
+     * @var string Action. Valid values: 
+<li>`monitor`: Observe;</li>
+<li>`alg`: JavaScript challenge;</li>
+<li>`captcha`: Managed challenge;</li>
+<li>`random`: Actions are executed based on the percentage specified in `ExtendActions`;</li>
+<li>`silence`: Silence;</li>
+<li>`shortdelay`: Add short latency;</li>
+<li>`longdelay`: Add long latency.</li>
      */
     public $Action;
 
@@ -65,15 +62,14 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     public $Percent;
 
     /**
-     * @param string $Action The action. Values:
-<li>`monitor`: Observe</li>
-<li>`trans`: Allow</li>
-<li>`alg`: JavaScript challenge</li>
-<li>`captcha`: Managed challenge</li>
-<li>`random`: Weighted random. Actions are executed based on the percentage specified in `ExtendActions`.</li>
-<li>`silence`: Drop w/o response</li>
-<li>`shortdelay`: Add short latency</li>
-<li>`longdelay`: Add long latency</li>
+     * @param string $Action Action. Valid values: 
+<li>`monitor`: Observe;</li>
+<li>`alg`: JavaScript challenge;</li>
+<li>`captcha`: Managed challenge;</li>
+<li>`random`: Actions are executed based on the percentage specified in `ExtendActions`;</li>
+<li>`silence`: Silence;</li>
+<li>`shortdelay`: Add short latency;</li>
+<li>`longdelay`: Add long latency.</li>
      * @param integer $Percent The probability for triggering the action. Value range: 0-100.
 Note: This field may return `null`, indicating that no valid values can be obtained.
      */

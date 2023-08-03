@@ -38,14 +38,14 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 <li>`follow`: Follow protocol.</li>
 <li>`https`: Force HTTPS for origin-pull.</li>
 Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method string getCosPrivateAccess() Obtain Whether to allow private access to buckets when `OriginType=cos`. Values:
-<li>`on`: Allow private access.</li>
-<li>`off`: Allow public access.</li>
-Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method void setCosPrivateAccess(string $CosPrivateAccess) Set Whether to allow private access to buckets when `OriginType=cos`. Values:
-<li>`on`: Allow private access.</li>
-<li>`off`: Allow public access.</li>
-Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method string getCosPrivateAccess() Obtain Whether to allow private access to buckets when `OriginType=cos`. Valid values: 
+<li>`on`: Private access;</li>
+<li>`off`: Public access.</li>
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setCosPrivateAccess(string $CosPrivateAccess) Set Whether to allow private access to buckets when `OriginType=cos`. Valid values: 
+<li>`on`: Private access;</li>
+<li>`off`: Public access.</li>
+Note: This field may return `null`, indicating that no valid values can be obtained.
  */
 class Origin extends AbstractModel
 {
@@ -71,10 +71,10 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     public $OriginPullProtocol;
 
     /**
-     * @var string Whether to allow private access to buckets when `OriginType=cos`. Values:
-<li>`on`: Allow private access.</li>
-<li>`off`: Allow public access.</li>
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @var string Whether to allow private access to buckets when `OriginType=cos`. Valid values: 
+<li>`on`: Private access;</li>
+<li>`off`: Public access.</li>
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public $CosPrivateAccess;
 
@@ -88,10 +88,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 <li>`follow`: Follow protocol.</li>
 <li>`https`: Force HTTPS for origin-pull.</li>
 Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param string $CosPrivateAccess Whether to allow private access to buckets when `OriginType=cos`. Values:
-<li>`on`: Allow private access.</li>
-<li>`off`: Allow public access.</li>
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param string $CosPrivateAccess Whether to allow private access to buckets when `OriginType=cos`. Valid values: 
+<li>`on`: Private access;</li>
+<li>`off`: Public access.</li>
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
     {

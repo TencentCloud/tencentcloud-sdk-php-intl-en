@@ -26,10 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSwitch(string $Switch) Set Whether to enable the configuration. Values:
 <li>`on`: Enable</li>
 <li>`off`: Disable</li>
- * @method integer getMaxAge() Obtain The MaxAge value in seconds. Maximum value: `86400` (one day)
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setMaxAge(integer $MaxAge) Set The MaxAge value in seconds. Maximum value: `86400` (one day)
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getMaxAge() Obtain MaxAge (in seconds). The maximum value is 1 day. 
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setMaxAge(integer $MaxAge) Set MaxAge (in seconds). The maximum value is 1 day. 
+Note: This field may return `null`, indicating that no valid values can be obtained.
  * @method string getIncludeSubDomains() Obtain Whether to contain subdomain names. Values:
 <li>`on`: Enable</li>
 <li>`off`: Disable</li>
@@ -57,8 +57,8 @@ class Hsts extends AbstractModel
     public $Switch;
 
     /**
-     * @var integer The MaxAge value in seconds. Maximum value: `86400` (one day)
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer MaxAge (in seconds). The maximum value is 1 day. 
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public $MaxAge;
 
@@ -82,8 +82,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $Switch Whether to enable the configuration. Values:
 <li>`on`: Enable</li>
 <li>`off`: Disable</li>
-     * @param integer $MaxAge The MaxAge value in seconds. Maximum value: `86400` (one day)
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $MaxAge MaxAge (in seconds). The maximum value is 1 day. 
+Note: This field may return `null`, indicating that no valid values can be obtained.
      * @param string $IncludeSubDomains Whether to contain subdomain names. Values:
 <li>`on`: Enable</li>
 <li>`off`: Disable</li>

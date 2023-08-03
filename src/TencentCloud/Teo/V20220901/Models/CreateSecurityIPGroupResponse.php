@@ -18,19 +18,27 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * ModifyRulePriority response structure.
+ * CreateSecurityIPGroup response structure.
  *
+ * @method integer getGroupId() Obtain IP group ID.
+ * @method void setGroupId(integer $GroupId) Set IP group ID.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
-class ModifyRulePriorityResponse extends AbstractModel
+class CreateSecurityIPGroupResponse extends AbstractModel
 {
+    /**
+     * @var integer IP group ID.
+     */
+    public $GroupId;
+
     /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
 
     /**
+     * @param integer $GroupId IP group ID.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -46,6 +54,10 @@ class ModifyRulePriorityResponse extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("GroupId",$param) and $param["GroupId"] !== null) {
+            $this->GroupId = $param["GroupId"];
+        }
+
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
             $this->RequestId = $param["RequestId"];
         }

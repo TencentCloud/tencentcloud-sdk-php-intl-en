@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Configuration of gRPC support
  *
- * @method string getSwitch() Obtain Whether to enable gRPC support
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
- * @method void setSwitch(string $Switch) Set Whether to enable gRPC support
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
+ * @method string getSwitch() Obtain Whether to enable gRPC support. Valid values: 
+<li>`on`: Enable;</li>
+<li>`off`: Disable.</li>
+ * @method void setSwitch(string $Switch) Set Whether to enable gRPC support. Valid values: 
+<li>`on`: Enable;</li>
+<li>`off`: Disable.</li>
  */
 class Grpc extends AbstractModel
 {
     /**
-     * @var string Whether to enable gRPC support
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
+     * @var string Whether to enable gRPC support. Valid values: 
+<li>`on`: Enable;</li>
+<li>`off`: Disable.</li>
      */
     public $Switch;
 
     /**
-     * @param string $Switch Whether to enable gRPC support
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
+     * @param string $Switch Whether to enable gRPC support. Valid values: 
+<li>`on`: Enable;</li>
+<li>`off`: Disable.</li>
      */
     function __construct()
     {

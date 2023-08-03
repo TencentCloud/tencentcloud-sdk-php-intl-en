@@ -18,28 +18,36 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * HTTP2 origin-pull configuration
+ * 
  *
- * @method string getSwitch() Obtain Whether to enable HTTP2 origin-pull. Valid values: 
-<li>`on`: Enable;</li>
-<li>`off`: Disable.</li>
- * @method void setSwitch(string $Switch) Set Whether to enable HTTP2 origin-pull. Valid values: 
-<li>`on`: Enable;</li>
-<li>`off`: Disable.</li>
+ * @method string getSwitch() Obtain 
+ * @method void setSwitch(string $Switch) Set 
+ * @method array getAllowClientIPList() Obtain 
+ * @method void setAllowClientIPList(array $AllowClientIPList) Set 
+ * @method string getExpireTime() Obtain 
+ * @method void setExpireTime(string $ExpireTime) Set 
  */
-class UpstreamHttp2 extends AbstractModel
+class StandardDebug extends AbstractModel
 {
     /**
-     * @var string Whether to enable HTTP2 origin-pull. Valid values: 
-<li>`on`: Enable;</li>
-<li>`off`: Disable.</li>
+     * @var string 
      */
     public $Switch;
 
     /**
-     * @param string $Switch Whether to enable HTTP2 origin-pull. Valid values: 
-<li>`on`: Enable;</li>
-<li>`off`: Disable.</li>
+     * @var array 
+     */
+    public $AllowClientIPList;
+
+    /**
+     * @var string 
+     */
+    public $ExpireTime;
+
+    /**
+     * @param string $Switch 
+     * @param array $AllowClientIPList 
+     * @param string $ExpireTime 
      */
     function __construct()
     {
@@ -56,6 +64,14 @@ class UpstreamHttp2 extends AbstractModel
         }
         if (array_key_exists("Switch",$param) and $param["Switch"] !== null) {
             $this->Switch = $param["Switch"];
+        }
+
+        if (array_key_exists("AllowClientIPList",$param) and $param["AllowClientIPList"] !== null) {
+            $this->AllowClientIPList = $param["AllowClientIPList"];
+        }
+
+        if (array_key_exists("ExpireTime",$param) and $param["ExpireTime"] !== null) {
+            $this->ExpireTime = $param["ExpireTime"];
         }
     }
 }

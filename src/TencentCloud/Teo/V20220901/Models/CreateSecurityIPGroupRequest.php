@@ -18,20 +18,28 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * ReclaimZone request structure.
+ * CreateSecurityIPGroup request structure.
  *
- * @method string getZoneName() Obtain The site name.
- * @method void setZoneName(string $ZoneName) Set The site name.
+ * @method string getZoneId() Obtain Site ID.
+ * @method void setZoneId(string $ZoneId) Set Site ID.
+ * @method IPGroup getIPGroup() Obtain IP group information.
+ * @method void setIPGroup(IPGroup $IPGroup) Set IP group information.
  */
-class ReclaimZoneRequest extends AbstractModel
+class CreateSecurityIPGroupRequest extends AbstractModel
 {
     /**
-     * @var string The site name.
+     * @var string Site ID.
      */
-    public $ZoneName;
+    public $ZoneId;
 
     /**
-     * @param string $ZoneName The site name.
+     * @var IPGroup IP group information.
+     */
+    public $IPGroup;
+
+    /**
+     * @param string $ZoneId Site ID.
+     * @param IPGroup $IPGroup IP group information.
      */
     function __construct()
     {
@@ -46,8 +54,13 @@ class ReclaimZoneRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ZoneName",$param) and $param["ZoneName"] !== null) {
-            $this->ZoneName = $param["ZoneName"];
+        if (array_key_exists("ZoneId",$param) and $param["ZoneId"] !== null) {
+            $this->ZoneId = $param["ZoneId"];
+        }
+
+        if (array_key_exists("IPGroup",$param) and $param["IPGroup"] !== null) {
+            $this->IPGroup = new IPGroup();
+            $this->IPGroup->deserialize($param["IPGroup"]);
         }
     }
 }

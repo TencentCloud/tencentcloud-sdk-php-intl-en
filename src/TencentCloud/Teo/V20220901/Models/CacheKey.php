@@ -36,10 +36,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 <li>`on`: Ignore</li>
 <li>`off`: Not ignore</li>
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method QueryString getQueryString() Obtain Request parameter contained in `CacheKey`
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setQueryString(QueryString $QueryString) Set Request parameter contained in `CacheKey`
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method QueryString getQueryString() Obtain Request parameter contained in `CacheKey`. 
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setQueryString(QueryString $QueryString) Set Request parameter contained in `CacheKey`. 
+Note: This field may return `null`, indicating that no valid values can be obtained.
  */
 class CacheKey extends AbstractModel
 {
@@ -60,8 +60,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $IgnoreCase;
 
     /**
-     * @var QueryString Request parameter contained in `CacheKey`
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var QueryString Request parameter contained in `CacheKey`. 
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public $QueryString;
 
@@ -74,8 +74,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
 <li>`on`: Ignore</li>
 <li>`off`: Not ignore</li>
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param QueryString $QueryString Request parameter contained in `CacheKey`
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param QueryString $QueryString Request parameter contained in `CacheKey`. 
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
     {

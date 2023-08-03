@@ -26,12 +26,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSwitch(string $Switch) Set Whether to enable the configuration. Values:
 <li>`on`: Enable</li>
 <li>`off`: Disable</li>
- * @method string getHeaderName() Obtain The name of the HTTP header that contains the client IP, which is used for forwarding.
-If this field is not specified, the default value `X-Forwarded-IP` will be used.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setHeaderName(string $HeaderName) Set The name of the HTTP header that contains the client IP, which is used for forwarding.
-If this field is not specified, the default value `X-Forwarded-IP` will be used.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getHeaderName() Obtain Name of the request header that contains the client IP for origin-pull. 
+The default value `X-Forwarded-IP` is used when it is not specified. 
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setHeaderName(string $HeaderName) Set Name of the request header that contains the client IP for origin-pull. 
+The default value `X-Forwarded-IP` is used when it is not specified. 
+Note: This field may return `null`, indicating that no valid values can be obtained.
  */
 class ClientIpHeader extends AbstractModel
 {
@@ -43,9 +43,9 @@ class ClientIpHeader extends AbstractModel
     public $Switch;
 
     /**
-     * @var string The name of the HTTP header that contains the client IP, which is used for forwarding.
-If this field is not specified, the default value `X-Forwarded-IP` will be used.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Name of the request header that contains the client IP for origin-pull. 
+The default value `X-Forwarded-IP` is used when it is not specified. 
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public $HeaderName;
 
@@ -53,9 +53,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $Switch Whether to enable the configuration. Values:
 <li>`on`: Enable</li>
 <li>`off`: Disable</li>
-     * @param string $HeaderName The name of the HTTP header that contains the client IP, which is used for forwarding.
-If this field is not specified, the default value `X-Forwarded-IP` will be used.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $HeaderName Name of the request header that contains the client IP for origin-pull. 
+The default value `X-Forwarded-IP` is used when it is not specified. 
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
     {

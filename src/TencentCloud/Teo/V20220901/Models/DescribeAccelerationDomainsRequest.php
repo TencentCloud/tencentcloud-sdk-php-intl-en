@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeAccelerationDomains request structure.
  *
- * @method string getZoneId() Obtain Site ID of the accelerated domain name. If it’s not specified, all accelerated domain names under the site are returned.
- * @method void setZoneId(string $ZoneId) Set Site ID of the accelerated domain name. If it’s not specified, all accelerated domain names under the site are returned.
+ * @method string getZoneId() Obtain ID of the site related with the accelerated domain name.
+ * @method void setZoneId(string $ZoneId) Set ID of the site related with the accelerated domain name.
  * @method array getFilters() Obtain Filters. Each filter can have up to 20 entries. See below for details: 
 <li>`domain-name`:<br>   <strong>Accelerated domain name</strong><br>   Type: String<br>Required: No 
 <li>`origin-type`:<br>   <strong>Type of the origin</strong><br>   Type: String<br>   Required: No 
@@ -64,7 +64,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeAccelerationDomainsRequest extends AbstractModel
 {
     /**
-     * @var string Site ID of the accelerated domain name. If it’s not specified, all accelerated domain names under the site are returned.
+     * @var string ID of the site related with the accelerated domain name.
      */
     public $ZoneId;
 
@@ -112,7 +112,7 @@ class DescribeAccelerationDomainsRequest extends AbstractModel
     public $Order;
 
     /**
-     * @param string $ZoneId Site ID of the accelerated domain name. If it’s not specified, all accelerated domain names under the site are returned.
+     * @param string $ZoneId ID of the site related with the accelerated domain name.
      * @param array $Filters Filters. Each filter can have up to 20 entries. See below for details: 
 <li>`domain-name`:<br>   <strong>Accelerated domain name</strong><br>   Type: String<br>Required: No 
 <li>`origin-type`:<br>   <strong>Type of the origin</strong><br>   Type: String<br>   Required: No 

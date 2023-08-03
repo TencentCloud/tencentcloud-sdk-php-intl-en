@@ -18,35 +18,19 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * CreateReplayTask response structure.
+ * DeleteSecurityIPGroup response structure.
  *
- * @method string getJobId() Obtain ID of the task.
- * @method void setJobId(string $JobId) Set ID of the task.
- * @method array getFailedList() Obtain List of failed tasks and reasons.
- * @method void setFailedList(array $FailedList) Set List of failed tasks and reasons.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
-class CreateReplayTaskResponse extends AbstractModel
+class DeleteSecurityIPGroupResponse extends AbstractModel
 {
-    /**
-     * @var string ID of the task.
-     */
-    public $JobId;
-
-    /**
-     * @var array List of failed tasks and reasons.
-     */
-    public $FailedList;
-
     /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
 
     /**
-     * @param string $JobId ID of the task.
-     * @param array $FailedList List of failed tasks and reasons.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -62,19 +46,6 @@ class CreateReplayTaskResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("JobId",$param) and $param["JobId"] !== null) {
-            $this->JobId = $param["JobId"];
-        }
-
-        if (array_key_exists("FailedList",$param) and $param["FailedList"] !== null) {
-            $this->FailedList = [];
-            foreach ($param["FailedList"] as $key => $value){
-                $obj = new FailReason();
-                $obj->deserialize($value);
-                array_push($this->FailedList, $obj);
-            }
-        }
-
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
             $this->RequestId = $param["RequestId"];
         }

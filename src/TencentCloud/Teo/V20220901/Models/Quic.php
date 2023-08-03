@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * QUIC configuration item
  *
- * @method string getSwitch() Obtain Whether to enable QUIC. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
- * @method void setSwitch(string $Switch) Set Whether to enable QUIC. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
+ * @method string getSwitch() Obtain Whether to enable QUIC. Valid values: 
+<li>`on`: Enable;</li>
+<li>`off`: Disable.</li>
+ * @method void setSwitch(string $Switch) Set Whether to enable QUIC. Valid values: 
+<li>`on`: Enable;</li>
+<li>`off`: Disable.</li>
  */
 class Quic extends AbstractModel
 {
     /**
-     * @var string Whether to enable QUIC. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
+     * @var string Whether to enable QUIC. Valid values: 
+<li>`on`: Enable;</li>
+<li>`off`: Disable.</li>
      */
     public $Switch;
 
     /**
-     * @param string $Switch Whether to enable QUIC. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
+     * @param string $Switch Whether to enable QUIC. Valid values: 
+<li>`on`: Enable;</li>
+<li>`off`: Disable.</li>
      */
     function __construct()
     {

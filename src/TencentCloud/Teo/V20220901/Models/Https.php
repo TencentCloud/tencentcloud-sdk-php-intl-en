@@ -36,18 +36,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
 <li>`on`: Enable</li>
 <li>`off`: Disable</li>
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method array getTlsVersion() Obtain TLS version. Values:
-<li>`TLSv1`: TLSv1 version</li>
-<li>`TLSV1.1`: TLSv1.1 version</li>
-<li>`TLSV1.2`: TLSv1.2 version</li>
-<li>`TLSv1.3`: TLSv1.3 version</li>Only consecutive versions can be enabled at the same time.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setTlsVersion(array $TlsVersion) Set TLS version. Values:
-<li>`TLSv1`: TLSv1 version</li>
-<li>`TLSV1.1`: TLSv1.1 version</li>
-<li>`TLSV1.2`: TLSv1.2 version</li>
-<li>`TLSv1.3`: TLSv1.3 version</li>Only consecutive versions can be enabled at the same time.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method array getTlsVersion() Obtain TLS version. Valid values: 
+<li>`TLSv1`: TLSv1 version;</li>
+<li>`TLSV1.1`: TLSv1.1 version;</li>
+<li>`TLSV1.2`: TLSv1.2 version;</li>
+<li>`TLSv1.3`: TLSv1.3 version.</li>Only consecutive versions can be enabled at the same time. 
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setTlsVersion(array $TlsVersion) Set TLS version. Valid values: 
+<li>`TLSv1`: TLSv1 version;</li>
+<li>`TLSV1.1`: TLSv1.1 version;</li>
+<li>`TLSV1.2`: TLSv1.2 version;</li>
+<li>`TLSv1.3`: TLSv1.3 version.</li>Only consecutive versions can be enabled at the same time. 
+Note: This field may return `null`, indicating that no valid values can be obtained.
  * @method Hsts getHsts() Obtain HSTS Configuration
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setHsts(Hsts $Hsts) Set HSTS Configuration
@@ -94,12 +94,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $OcspStapling;
 
     /**
-     * @var array TLS version. Values:
-<li>`TLSv1`: TLSv1 version</li>
-<li>`TLSV1.1`: TLSv1.1 version</li>
-<li>`TLSV1.2`: TLSv1.2 version</li>
-<li>`TLSv1.3`: TLSv1.3 version</li>Only consecutive versions can be enabled at the same time.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array TLS version. Valid values: 
+<li>`TLSv1`: TLSv1 version;</li>
+<li>`TLSV1.1`: TLSv1.1 version;</li>
+<li>`TLSV1.2`: TLSv1.2 version;</li>
+<li>`TLSv1.3`: TLSv1.3 version.</li>Only consecutive versions can be enabled at the same time. 
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public $TlsVersion;
 
@@ -141,12 +141,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
 <li>`on`: Enable</li>
 <li>`off`: Disable</li>
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param array $TlsVersion TLS version. Values:
-<li>`TLSv1`: TLSv1 version</li>
-<li>`TLSV1.1`: TLSv1.1 version</li>
-<li>`TLSV1.2`: TLSv1.2 version</li>
-<li>`TLSv1.3`: TLSv1.3 version</li>Only consecutive versions can be enabled at the same time.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param array $TlsVersion TLS version. Valid values: 
+<li>`TLSv1`: TLSv1 version;</li>
+<li>`TLSV1.1`: TLSv1.1 version;</li>
+<li>`TLSV1.2`: TLSv1.2 version;</li>
+<li>`TLSv1.3`: TLSv1.3 version.</li>Only consecutive versions can be enabled at the same time. 
+Note: This field may return `null`, indicating that no valid values can be obtained.
      * @param Hsts $Hsts HSTS Configuration
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param array $CertInfo The certificate configuration.

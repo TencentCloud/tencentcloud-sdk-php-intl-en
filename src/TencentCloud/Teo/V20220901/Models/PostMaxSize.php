@@ -20,12 +20,12 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Maximum size of the file uploaded for streaming via a POST request
  *
- * @method string getSwitch() Obtain Whether to enable POST upload limit (default limit: 32 MB). Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
- * @method void setSwitch(string $Switch) Set Whether to enable POST upload limit (default limit: 32 MB). Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
+ * @method string getSwitch() Obtain Whether to enable POST upload limit (default limit: 32 MB). Valid values: 
+<li>`on`: Enable;</li>
+<li>`off`: Disable.</li>
+ * @method void setSwitch(string $Switch) Set Whether to enable POST upload limit (default limit: 32 MB). Valid values: 
+<li>`on`: Enable;</li>
+<li>`off`: Disable.</li>
  * @method integer getMaxSize() Obtain Maximum size. Value range: 1-500 MB.
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setMaxSize(integer $MaxSize) Set Maximum size. Value range: 1-500 MB.
@@ -34,9 +34,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
 class PostMaxSize extends AbstractModel
 {
     /**
-     * @var string Whether to enable POST upload limit (default limit: 32 MB). Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
+     * @var string Whether to enable POST upload limit (default limit: 32 MB). Valid values: 
+<li>`on`: Enable;</li>
+<li>`off`: Disable.</li>
      */
     public $Switch;
 
@@ -47,9 +47,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $MaxSize;
 
     /**
-     * @param string $Switch Whether to enable POST upload limit (default limit: 32 MB). Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
+     * @param string $Switch Whether to enable POST upload limit (default limit: 32 MB). Valid values: 
+<li>`on`: Enable;</li>
+<li>`off`: Disable.</li>
      * @param integer $MaxSize Maximum size. Value range: 1-500 MB.
 Note: This field may return null, indicating that no valid values can be obtained.
      */

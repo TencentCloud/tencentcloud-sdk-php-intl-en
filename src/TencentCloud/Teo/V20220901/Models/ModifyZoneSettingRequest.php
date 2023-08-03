@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyZoneSetting request structure.
  *
- * @method string getZoneId() Obtain The site ID to be modified.
- * @method void setZoneId(string $ZoneId) Set The site ID to be modified.
+ * @method string getZoneId() Obtain Site ID to modify.
+ * @method void setZoneId(string $ZoneId) Set Site ID to modify.
  * @method CacheConfig getCacheConfig() Obtain Cache expiration time configuration
 The original configuration will apply if this field is not specified.
  * @method void setCacheConfig(CacheConfig $CacheConfig) Set Cache expiration time configuration
@@ -38,30 +38,30 @@ The original configuration will apply if this field is not specified.
 The original configuration will apply if this field is not specified.
  * @method void setOfflineCache(OfflineCache $OfflineCache) Set The offline cache configuration.
 The original configuration will apply if this field is not specified.
- * @method Quic getQuic() Obtain The QUIC access configuration.
-The original configuration will apply if this field is not specified.
- * @method void setQuic(Quic $Quic) Set The QUIC access configuration.
-The original configuration will apply if this field is not specified.
- * @method PostMaxSize getPostMaxSize() Obtain The POST transport configuration.
-The original configuration will apply if this field is not specified.
- * @method void setPostMaxSize(PostMaxSize $PostMaxSize) Set The POST transport configuration.
-The original configuration will apply if this field is not specified.
+ * @method Quic getQuic() Obtain QUIC access configuration. 
+The original configuration will apply if it is not specified.
+ * @method void setQuic(Quic $Quic) Set QUIC access configuration. 
+The original configuration will apply if it is not specified.
+ * @method PostMaxSize getPostMaxSize() Obtain POST transport configuration. 
+The original configuration will apply if it is not specified.
+ * @method void setPostMaxSize(PostMaxSize $PostMaxSize) Set POST transport configuration. 
+The original configuration will apply if it is not specified.
  * @method Compression getCompression() Obtain The smart compression configuration.
 The original configuration will apply if this field is not specified.
  * @method void setCompression(Compression $Compression) Set The smart compression configuration.
 The original configuration will apply if this field is not specified.
- * @method UpstreamHttp2 getUpstreamHttp2() Obtain The HTTP2 origin-pull configuration.
-The original configuration will apply if this field is not specified.
- * @method void setUpstreamHttp2(UpstreamHttp2 $UpstreamHttp2) Set The HTTP2 origin-pull configuration.
-The original configuration will apply if this field is not specified.
- * @method ForceRedirect getForceRedirect() Obtain The force HTTPS redirect configuration.
-The original configuration will apply if this field is not specified.
- * @method void setForceRedirect(ForceRedirect $ForceRedirect) Set The force HTTPS redirect configuration.
-The original configuration will apply if this field is not specified.
- * @method Https getHttps() Obtain The HTTPS acceleration configuration.
-The original configuration will apply if this field is not specified.
- * @method void setHttps(Https $Https) Set The HTTPS acceleration configuration.
-The original configuration will apply if this field is not specified.
+ * @method UpstreamHttp2 getUpstreamHttp2() Obtain HTTP2 origin-pull configuration. 
+The original configuration will apply if it is not specified.
+ * @method void setUpstreamHttp2(UpstreamHttp2 $UpstreamHttp2) Set HTTP2 origin-pull configuration. 
+The original configuration will apply if it is not specified.
+ * @method ForceRedirect getForceRedirect() Obtain Force HTTPS redirect configuration. 
+The original configuration will apply if it is not specified.
+ * @method void setForceRedirect(ForceRedirect $ForceRedirect) Set Force HTTPS redirect configuration. 
+The original configuration will apply if it is not specified.
+ * @method Https getHttps() Obtain HTTPS acceleration configuration. 
+The original configuration will apply if it is not specified.
+ * @method void setHttps(Https $Https) Set HTTPS acceleration configuration. 
+The original configuration will apply if it is not specified.
  * @method Origin getOrigin() Obtain The origin server configuration.
 The original configuration will apply if this field is not specified.
  * @method void setOrigin(Origin $Origin) Set The origin server configuration.
@@ -70,35 +70,41 @@ The original configuration will apply if this field is not specified.
 The original configuration will apply if this field is not specified.
  * @method void setSmartRouting(SmartRouting $SmartRouting) Set The smart acceleration configuration.
 The original configuration will apply if this field is not specified.
- * @method WebSocket getWebSocket() Obtain The WebSocket configuration.
-The original configuration will apply if this field is not specified.
- * @method void setWebSocket(WebSocket $WebSocket) Set The WebSocket configuration.
-The original configuration will apply if this field is not specified.
- * @method ClientIpHeader getClientIpHeader() Obtain The origin-pull client IP header configuration.
-The original configuration will apply if this field is not specified.
- * @method void setClientIpHeader(ClientIpHeader $ClientIpHeader) Set The origin-pull client IP header configuration.
-The original configuration will apply if this field is not specified.
+ * @method WebSocket getWebSocket() Obtain WebSocket configuration. 
+The original configuration will apply if it is not specified.
+ * @method void setWebSocket(WebSocket $WebSocket) Set WebSocket configuration. 
+The original configuration will apply if it is not specified.
+ * @method ClientIpHeader getClientIpHeader() Obtain Origin-pull client IP header configuration. 
+The original configuration will apply if it is not specified.
+ * @method void setClientIpHeader(ClientIpHeader $ClientIpHeader) Set Origin-pull client IP header configuration. 
+The original configuration will apply if it is not specified.
  * @method CachePrefresh getCachePrefresh() Obtain The cache prefresh configuration.
 The original configuration will apply if this field is not specified.
  * @method void setCachePrefresh(CachePrefresh $CachePrefresh) Set The cache prefresh configuration.
 The original configuration will apply if this field is not specified.
- * @method Ipv6 getIpv6() Obtain The IPv6 access configuration.
-The original configuration will apply if this field is not specified.
- * @method void setIpv6(Ipv6 $Ipv6) Set The IPv6 access configuration.
-The original configuration will apply if this field is not specified.
- * @method ClientIpCountry getClientIpCountry() Obtain Whether to carry the location information of the client IP during origin-pull.
-The original configuration will apply if this field is not specified.
- * @method void setClientIpCountry(ClientIpCountry $ClientIpCountry) Set Whether to carry the location information of the client IP during origin-pull.
-The original configuration will apply if this field is not specified.
- * @method Grpc getGrpc() Obtain Configuration of gRPC support
-The original configuration will apply if this field is not specified.
- * @method void setGrpc(Grpc $Grpc) Set Configuration of gRPC support
-The original configuration will apply if this field is not specified.
+ * @method Ipv6 getIpv6() Obtain Ipv6 access configuration. 
+The original configuration will apply if it is not specified.
+ * @method void setIpv6(Ipv6 $Ipv6) Set Ipv6 access configuration. 
+The original configuration will apply if it is not specified.
+ * @method ClientIpCountry getClientIpCountry() Obtain Whether to carry the location information of the client IP during origin-pull. 
+The original configuration will apply if it is not specified.
+ * @method void setClientIpCountry(ClientIpCountry $ClientIpCountry) Set Whether to carry the location information of the client IP during origin-pull. 
+The original configuration will apply if it is not specified.
+ * @method Grpc getGrpc() Obtain Configuration of gRPC support. 
+The original configuration will apply if it is not specified.
+ * @method void setGrpc(Grpc $Grpc) Set Configuration of gRPC support. 
+The original configuration will apply if it is not specified.
+ * @method ImageOptimize getImageOptimize() Obtain Image optimization. 
+It is disabled if this parameter is not specified.
+ * @method void setImageOptimize(ImageOptimize $ImageOptimize) Set Image optimization. 
+It is disabled if this parameter is not specified.
+ * @method StandardDebug getStandardDebug() Obtain 
+ * @method void setStandardDebug(StandardDebug $StandardDebug) Set 
  */
 class ModifyZoneSettingRequest extends AbstractModel
 {
     /**
-     * @var string The site ID to be modified.
+     * @var string Site ID to modify.
      */
     public $ZoneId;
 
@@ -127,14 +133,14 @@ The original configuration will apply if this field is not specified.
     public $OfflineCache;
 
     /**
-     * @var Quic The QUIC access configuration.
-The original configuration will apply if this field is not specified.
+     * @var Quic QUIC access configuration. 
+The original configuration will apply if it is not specified.
      */
     public $Quic;
 
     /**
-     * @var PostMaxSize The POST transport configuration.
-The original configuration will apply if this field is not specified.
+     * @var PostMaxSize POST transport configuration. 
+The original configuration will apply if it is not specified.
      */
     public $PostMaxSize;
 
@@ -145,20 +151,20 @@ The original configuration will apply if this field is not specified.
     public $Compression;
 
     /**
-     * @var UpstreamHttp2 The HTTP2 origin-pull configuration.
-The original configuration will apply if this field is not specified.
+     * @var UpstreamHttp2 HTTP2 origin-pull configuration. 
+The original configuration will apply if it is not specified.
      */
     public $UpstreamHttp2;
 
     /**
-     * @var ForceRedirect The force HTTPS redirect configuration.
-The original configuration will apply if this field is not specified.
+     * @var ForceRedirect Force HTTPS redirect configuration. 
+The original configuration will apply if it is not specified.
      */
     public $ForceRedirect;
 
     /**
-     * @var Https The HTTPS acceleration configuration.
-The original configuration will apply if this field is not specified.
+     * @var Https HTTPS acceleration configuration. 
+The original configuration will apply if it is not specified.
      */
     public $Https;
 
@@ -175,14 +181,14 @@ The original configuration will apply if this field is not specified.
     public $SmartRouting;
 
     /**
-     * @var WebSocket The WebSocket configuration.
-The original configuration will apply if this field is not specified.
+     * @var WebSocket WebSocket configuration. 
+The original configuration will apply if it is not specified.
      */
     public $WebSocket;
 
     /**
-     * @var ClientIpHeader The origin-pull client IP header configuration.
-The original configuration will apply if this field is not specified.
+     * @var ClientIpHeader Origin-pull client IP header configuration. 
+The original configuration will apply if it is not specified.
      */
     public $ClientIpHeader;
 
@@ -193,25 +199,36 @@ The original configuration will apply if this field is not specified.
     public $CachePrefresh;
 
     /**
-     * @var Ipv6 The IPv6 access configuration.
-The original configuration will apply if this field is not specified.
+     * @var Ipv6 Ipv6 access configuration. 
+The original configuration will apply if it is not specified.
      */
     public $Ipv6;
 
     /**
-     * @var ClientIpCountry Whether to carry the location information of the client IP during origin-pull.
-The original configuration will apply if this field is not specified.
+     * @var ClientIpCountry Whether to carry the location information of the client IP during origin-pull. 
+The original configuration will apply if it is not specified.
      */
     public $ClientIpCountry;
 
     /**
-     * @var Grpc Configuration of gRPC support
-The original configuration will apply if this field is not specified.
+     * @var Grpc Configuration of gRPC support. 
+The original configuration will apply if it is not specified.
      */
     public $Grpc;
 
     /**
-     * @param string $ZoneId The site ID to be modified.
+     * @var ImageOptimize Image optimization. 
+It is disabled if this parameter is not specified.
+     */
+    public $ImageOptimize;
+
+    /**
+     * @var StandardDebug 
+     */
+    public $StandardDebug;
+
+    /**
+     * @param string $ZoneId Site ID to modify.
      * @param CacheConfig $CacheConfig Cache expiration time configuration
 The original configuration will apply if this field is not specified.
      * @param CacheKey $CacheKey The node cache key configuration.
@@ -220,34 +237,37 @@ The original configuration will apply if this field is not specified.
 The original configuration will apply if this field is not specified.
      * @param OfflineCache $OfflineCache The offline cache configuration.
 The original configuration will apply if this field is not specified.
-     * @param Quic $Quic The QUIC access configuration.
-The original configuration will apply if this field is not specified.
-     * @param PostMaxSize $PostMaxSize The POST transport configuration.
-The original configuration will apply if this field is not specified.
+     * @param Quic $Quic QUIC access configuration. 
+The original configuration will apply if it is not specified.
+     * @param PostMaxSize $PostMaxSize POST transport configuration. 
+The original configuration will apply if it is not specified.
      * @param Compression $Compression The smart compression configuration.
 The original configuration will apply if this field is not specified.
-     * @param UpstreamHttp2 $UpstreamHttp2 The HTTP2 origin-pull configuration.
-The original configuration will apply if this field is not specified.
-     * @param ForceRedirect $ForceRedirect The force HTTPS redirect configuration.
-The original configuration will apply if this field is not specified.
-     * @param Https $Https The HTTPS acceleration configuration.
-The original configuration will apply if this field is not specified.
+     * @param UpstreamHttp2 $UpstreamHttp2 HTTP2 origin-pull configuration. 
+The original configuration will apply if it is not specified.
+     * @param ForceRedirect $ForceRedirect Force HTTPS redirect configuration. 
+The original configuration will apply if it is not specified.
+     * @param Https $Https HTTPS acceleration configuration. 
+The original configuration will apply if it is not specified.
      * @param Origin $Origin The origin server configuration.
 The original configuration will apply if this field is not specified.
      * @param SmartRouting $SmartRouting The smart acceleration configuration.
 The original configuration will apply if this field is not specified.
-     * @param WebSocket $WebSocket The WebSocket configuration.
-The original configuration will apply if this field is not specified.
-     * @param ClientIpHeader $ClientIpHeader The origin-pull client IP header configuration.
-The original configuration will apply if this field is not specified.
+     * @param WebSocket $WebSocket WebSocket configuration. 
+The original configuration will apply if it is not specified.
+     * @param ClientIpHeader $ClientIpHeader Origin-pull client IP header configuration. 
+The original configuration will apply if it is not specified.
      * @param CachePrefresh $CachePrefresh The cache prefresh configuration.
 The original configuration will apply if this field is not specified.
-     * @param Ipv6 $Ipv6 The IPv6 access configuration.
-The original configuration will apply if this field is not specified.
-     * @param ClientIpCountry $ClientIpCountry Whether to carry the location information of the client IP during origin-pull.
-The original configuration will apply if this field is not specified.
-     * @param Grpc $Grpc Configuration of gRPC support
-The original configuration will apply if this field is not specified.
+     * @param Ipv6 $Ipv6 Ipv6 access configuration. 
+The original configuration will apply if it is not specified.
+     * @param ClientIpCountry $ClientIpCountry Whether to carry the location information of the client IP during origin-pull. 
+The original configuration will apply if it is not specified.
+     * @param Grpc $Grpc Configuration of gRPC support. 
+The original configuration will apply if it is not specified.
+     * @param ImageOptimize $ImageOptimize Image optimization. 
+It is disabled if this parameter is not specified.
+     * @param StandardDebug $StandardDebug 
      */
     function __construct()
     {
@@ -354,6 +374,16 @@ The original configuration will apply if this field is not specified.
         if (array_key_exists("Grpc",$param) and $param["Grpc"] !== null) {
             $this->Grpc = new Grpc();
             $this->Grpc->deserialize($param["Grpc"]);
+        }
+
+        if (array_key_exists("ImageOptimize",$param) and $param["ImageOptimize"] !== null) {
+            $this->ImageOptimize = new ImageOptimize();
+            $this->ImageOptimize->deserialize($param["ImageOptimize"]);
+        }
+
+        if (array_key_exists("StandardDebug",$param) and $param["StandardDebug"] !== null) {
+            $this->StandardDebug = new StandardDebug();
+            $this->StandardDebug->deserialize($param["StandardDebug"]);
         }
     }
 }

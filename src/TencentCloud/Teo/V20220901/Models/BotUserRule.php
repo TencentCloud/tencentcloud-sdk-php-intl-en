@@ -22,24 +22,26 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getRuleName() Obtain 
  * @method void setRuleName(string $RuleName) Set 
- * @method string getAction() Obtain The action. Values:
-<li>`drop`: Block</li>
-<li>`monitor`: Observe</li>
-<li>`trans`: Allow</li>
-<li>`alg`: JavaScript challenge</li>
-<li>`captcha`: Managed challenge</li>
-<li>`silence`: Drop w/o response</li>
-<li>`shortdelay`: Add short latency</li>
-<li>`longdelay`: Add long latency</li>
- * @method void setAction(string $Action) Set The action. Values:
-<li>`drop`: Block</li>
-<li>`monitor`: Observe</li>
-<li>`trans`: Allow</li>
-<li>`alg`: JavaScript challenge</li>
-<li>`captcha`: Managed challenge</li>
-<li>`silence`: Drop w/o response</li>
-<li>`shortdelay`: Add short latency</li>
-<li>`longdelay`: Add long latency</li>
+ * @method string getAction() Obtain Action. Valid values: 
+<li>`drop`: Block;</li>
+<li>`monitor`: Observe;</li>
+<li>`trans`: Allow;</li>
+<li>`alg`: JavaScript challenge;</li>
+<li>`captcha`: Managed challenge;</li>
+<li>`random`: Random action;</li>
+<li>`silence`: Silence;</li>
+<li>`shortdelay`: Add short latency;</li>
+<li>`longdelay`: Add long latency.</li>
+ * @method void setAction(string $Action) Set Action. Valid values: 
+<li>`drop`: Block;</li>
+<li>`monitor`: Observe;</li>
+<li>`trans`: Allow;</li>
+<li>`alg`: JavaScript challenge;</li>
+<li>`captcha`: Managed challenge;</li>
+<li>`random`: Random action;</li>
+<li>`silence`: Silence;</li>
+<li>`shortdelay`: Add short latency;</li>
+<li>`longdelay`: Add long latency.</li>
  * @method string getRuleStatus() Obtain The rule status. Values:
 <li>`on`: Enabled</li>
 <li>`off`: Disabled</li>Default value: `on`
@@ -83,15 +85,16 @@ class BotUserRule extends AbstractModel
     public $RuleName;
 
     /**
-     * @var string The action. Values:
-<li>`drop`: Block</li>
-<li>`monitor`: Observe</li>
-<li>`trans`: Allow</li>
-<li>`alg`: JavaScript challenge</li>
-<li>`captcha`: Managed challenge</li>
-<li>`silence`: Drop w/o response</li>
-<li>`shortdelay`: Add short latency</li>
-<li>`longdelay`: Add long latency</li>
+     * @var string Action. Valid values: 
+<li>`drop`: Block;</li>
+<li>`monitor`: Observe;</li>
+<li>`trans`: Allow;</li>
+<li>`alg`: JavaScript challenge;</li>
+<li>`captcha`: Managed challenge;</li>
+<li>`random`: Random action;</li>
+<li>`silence`: Silence;</li>
+<li>`shortdelay`: Add short latency;</li>
+<li>`longdelay`: Add long latency.</li>
      */
     public $Action;
 
@@ -146,15 +149,16 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 
     /**
      * @param string $RuleName 
-     * @param string $Action The action. Values:
-<li>`drop`: Block</li>
-<li>`monitor`: Observe</li>
-<li>`trans`: Allow</li>
-<li>`alg`: JavaScript challenge</li>
-<li>`captcha`: Managed challenge</li>
-<li>`silence`: Drop w/o response</li>
-<li>`shortdelay`: Add short latency</li>
-<li>`longdelay`: Add long latency</li>
+     * @param string $Action Action. Valid values: 
+<li>`drop`: Block;</li>
+<li>`monitor`: Observe;</li>
+<li>`trans`: Allow;</li>
+<li>`alg`: JavaScript challenge;</li>
+<li>`captcha`: Managed challenge;</li>
+<li>`random`: Random action;</li>
+<li>`silence`: Silence;</li>
+<li>`shortdelay`: Add short latency;</li>
+<li>`longdelay`: Add long latency.</li>
      * @param string $RuleStatus The rule status. Values:
 <li>`on`: Enabled</li>
 <li>`off`: Disabled</li>Default value: `on`

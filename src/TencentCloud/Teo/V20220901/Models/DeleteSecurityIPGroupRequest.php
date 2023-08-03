@@ -18,28 +18,28 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * CheckCertificate request structure.
+ * DeleteSecurityIPGroup request structure.
  *
- * @method string getCertificate() Obtain Content of the certificate.
- * @method void setCertificate(string $Certificate) Set Content of the certificate.
- * @method string getPrivateKey() Obtain Content of the private key.
- * @method void setPrivateKey(string $PrivateKey) Set Content of the private key.
+ * @method string getZoneId() Obtain Site ID.
+ * @method void setZoneId(string $ZoneId) Set Site ID.
+ * @method integer getGroupId() Obtain IP group ID.
+ * @method void setGroupId(integer $GroupId) Set IP group ID.
  */
-class CheckCertificateRequest extends AbstractModel
+class DeleteSecurityIPGroupRequest extends AbstractModel
 {
     /**
-     * @var string Content of the certificate.
+     * @var string Site ID.
      */
-    public $Certificate;
+    public $ZoneId;
 
     /**
-     * @var string Content of the private key.
+     * @var integer IP group ID.
      */
-    public $PrivateKey;
+    public $GroupId;
 
     /**
-     * @param string $Certificate Content of the certificate.
-     * @param string $PrivateKey Content of the private key.
+     * @param string $ZoneId Site ID.
+     * @param integer $GroupId IP group ID.
      */
     function __construct()
     {
@@ -54,12 +54,12 @@ class CheckCertificateRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Certificate",$param) and $param["Certificate"] !== null) {
-            $this->Certificate = $param["Certificate"];
+        if (array_key_exists("ZoneId",$param) and $param["ZoneId"] !== null) {
+            $this->ZoneId = $param["ZoneId"];
         }
 
-        if (array_key_exists("PrivateKey",$param) and $param["PrivateKey"] !== null) {
-            $this->PrivateKey = $param["PrivateKey"];
+        if (array_key_exists("GroupId",$param) and $param["GroupId"] !== null) {
+            $this->GroupId = $param["GroupId"];
         }
     }
 }

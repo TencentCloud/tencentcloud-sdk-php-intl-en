@@ -104,8 +104,12 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value was found.
  * @method void setImageOptimize(ImageOptimize $ImageOptimize) Set Image optimization configuration. 
 Note: This field may return `null`, indicating that no valid value was found.
- * @method AccelerateMainland getAccelerateMainland() Obtain 
- * @method void setAccelerateMainland(AccelerateMainland $AccelerateMainland) Set 
+ * @method AccelerateMainland getAccelerateMainland() Obtain Cross-MLC-border acceleration. 
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setAccelerateMainland(AccelerateMainland $AccelerateMainland) Set Cross-MLC-border acceleration. 
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method StandardDebug getStandardDebug() Obtain 
+ * @method void setStandardDebug(StandardDebug $StandardDebug) Set 
  */
 class ZoneSetting extends AbstractModel
 {
@@ -236,9 +240,15 @@ Note: This field may return `null`, indicating that no valid value was found.
     public $ImageOptimize;
 
     /**
-     * @var AccelerateMainland 
+     * @var AccelerateMainland Cross-MLC-border acceleration. 
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public $AccelerateMainland;
+
+    /**
+     * @var StandardDebug 
+     */
+    public $StandardDebug;
 
     /**
      * @param string $ZoneName Name of the site
@@ -283,7 +293,9 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param ImageOptimize $ImageOptimize Image optimization configuration. 
 Note: This field may return `null`, indicating that no valid value was found.
-     * @param AccelerateMainland $AccelerateMainland 
+     * @param AccelerateMainland $AccelerateMainland Cross-MLC-border acceleration. 
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param StandardDebug $StandardDebug 
      */
     function __construct()
     {
@@ -404,6 +416,11 @@ Note: This field may return `null`, indicating that no valid value was found.
         if (array_key_exists("AccelerateMainland",$param) and $param["AccelerateMainland"] !== null) {
             $this->AccelerateMainland = new AccelerateMainland();
             $this->AccelerateMainland->deserialize($param["AccelerateMainland"]);
+        }
+
+        if (array_key_exists("StandardDebug",$param) and $param["StandardDebug"] !== null) {
+            $this->StandardDebug = new StandardDebug();
+            $this->StandardDebug->deserialize($param["StandardDebug"]);
         }
     }
 }

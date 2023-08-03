@@ -18,20 +18,28 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Cross-MLC-border acceleration.
  *
- * @method string getSwitch() Obtain 
- * @method void setSwitch(string $Switch) Set 
+ * @method string getSwitch() Obtain Whether to enable Cross-MLC-border acceleration. Valid values: 
+<li>`on`: Enable;</li>
+<li>`off`: Disable.</li>
+ * @method void setSwitch(string $Switch) Set Whether to enable Cross-MLC-border acceleration. Valid values: 
+<li>`on`: Enable;</li>
+<li>`off`: Disable.</li>
  */
 class AccelerateMainland extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Whether to enable Cross-MLC-border acceleration. Valid values: 
+<li>`on`: Enable;</li>
+<li>`off`: Disable.</li>
      */
     public $Switch;
 
     /**
-     * @param string $Switch 
+     * @param string $Switch Whether to enable Cross-MLC-border acceleration. Valid values: 
+<li>`on`: Enable;</li>
+<li>`off`: Disable.</li>
      */
     function __construct()
     {

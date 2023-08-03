@@ -98,6 +98,8 @@ This field indicates the unique ID of the subdomain name.
  * @method void setUpdateTime(string $UpdateTime) Set The update time.
  * @method array getApplicationProxyRules() Obtain List of rules.
  * @method void setApplicationProxyRules(array $ApplicationProxyRules) Set List of rules.
+ * @method AccelerateMainland getAccelerateMainland() Obtain Cross-MLC-border acceleration.
+ * @method void setAccelerateMainland(AccelerateMainland $AccelerateMainland) Set Cross-MLC-border acceleration.
  */
 class ApplicationProxy extends AbstractModel
 {
@@ -209,6 +211,11 @@ This field indicates the unique ID of the subdomain name.
     public $ApplicationProxyRules;
 
     /**
+     * @var AccelerateMainland Cross-MLC-border acceleration.
+     */
+    public $AccelerateMainland;
+
+    /**
      * @param string $ZoneId The site ID.
      * @param string $ZoneName The site name.
      * @param string $ProxyId The proxy ID.
@@ -248,6 +255,7 @@ This field indicates the unique ID of the subdomain name.
      * @param Ipv6 $Ipv6 The IPv6 access configuration.
      * @param string $UpdateTime The update time.
      * @param array $ApplicationProxyRules List of rules.
+     * @param AccelerateMainland $AccelerateMainland Cross-MLC-border acceleration.
      */
     function __construct()
     {
@@ -334,6 +342,11 @@ This field indicates the unique ID of the subdomain name.
                 $obj->deserialize($value);
                 array_push($this->ApplicationProxyRules, $obj);
             }
+        }
+
+        if (array_key_exists("AccelerateMainland",$param) and $param["AccelerateMainland"] !== null) {
+            $this->AccelerateMainland = new AccelerateMainland();
+            $this->AccelerateMainland->deserialize($param["AccelerateMainland"]);
         }
     }
 }

@@ -26,10 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSwitch(string $Switch) Set Whether to enable configuration. Values:
 <li>`on`: Enable</li>
 <li>`off`: Disable</li>
- * @method string getHeaderName() Obtain Header name of ClientIpCountry. This field is valid only when `Switch=on`.
-If it is left empty, the default value `EO-Client-IPCountry` will be used.
- * @method void setHeaderName(string $HeaderName) Set Header name of ClientIpCountry. This field is valid only when `Switch=on`.
-If it is left empty, the default value `EO-Client-IPCountry` will be used.
+ * @method string getHeaderName() Obtain Name of the request header that contains the client IP region. It is valid when `Switch=on`. 
+The default value `EO-Client-IPCountry` is used when it is not specified.
+ * @method void setHeaderName(string $HeaderName) Set Name of the request header that contains the client IP region. It is valid when `Switch=on`. 
+The default value `EO-Client-IPCountry` is used when it is not specified.
  */
 class ClientIpCountry extends AbstractModel
 {
@@ -41,8 +41,8 @@ class ClientIpCountry extends AbstractModel
     public $Switch;
 
     /**
-     * @var string Header name of ClientIpCountry. This field is valid only when `Switch=on`.
-If it is left empty, the default value `EO-Client-IPCountry` will be used.
+     * @var string Name of the request header that contains the client IP region. It is valid when `Switch=on`. 
+The default value `EO-Client-IPCountry` is used when it is not specified.
      */
     public $HeaderName;
 
@@ -50,8 +50,8 @@ If it is left empty, the default value `EO-Client-IPCountry` will be used.
      * @param string $Switch Whether to enable configuration. Values:
 <li>`on`: Enable</li>
 <li>`off`: Disable</li>
-     * @param string $HeaderName Header name of ClientIpCountry. This field is valid only when `Switch=on`.
-If it is left empty, the default value `EO-Client-IPCountry` will be used.
+     * @param string $HeaderName Name of the request header that contains the client IP region. It is valid when `Switch=on`. 
+The default value `EO-Client-IPCountry` is used when it is not specified.
      */
     function __construct()
     {
