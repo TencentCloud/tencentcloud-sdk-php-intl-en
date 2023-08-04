@@ -27,11 +27,11 @@ use TencentCloud\Common\AbstractModel;
  * @method array getServerCertInfo() Obtain Certificate information. Note that only `CertId` is required. If it is not specified, the default certificate will be used.
  * @method void setServerCertInfo(array $ServerCertInfo) Set Certificate information. Note that only `CertId` is required. If it is not specified, the default certificate will be used.
  * @method string getApplyType() Obtain Whether the certificate is managed by EdgeOne. Values:
-<li>`apply`: Managed by EdgeOne</li>
-<li>`none`: Not managed by EdgeOne</li>If it is left empty, the default value `apply` is used.
+<li>`apply`: Managed by EdgeOne.</li>
+<li>`none`: Not managed by EdgeOne.</li>If not specified, this field uses the default value `none`.
  * @method void setApplyType(string $ApplyType) Set Whether the certificate is managed by EdgeOne. Values:
-<li>`apply`: Managed by EdgeOne</li>
-<li>`none`: Not managed by EdgeOne</li>If it is left empty, the default value `apply` is used.
+<li>`apply`: Managed by EdgeOne.</li>
+<li>`none`: Not managed by EdgeOne.</li>If not specified, this field uses the default value `none`.
  */
 class ModifyHostsCertificateRequest extends AbstractModel
 {
@@ -52,8 +52,8 @@ class ModifyHostsCertificateRequest extends AbstractModel
 
     /**
      * @var string Whether the certificate is managed by EdgeOne. Values:
-<li>`apply`: Managed by EdgeOne</li>
-<li>`none`: Not managed by EdgeOne</li>If it is left empty, the default value `apply` is used.
+<li>`apply`: Managed by EdgeOne.</li>
+<li>`none`: Not managed by EdgeOne.</li>If not specified, this field uses the default value `none`.
      */
     public $ApplyType;
 
@@ -62,8 +62,8 @@ class ModifyHostsCertificateRequest extends AbstractModel
      * @param array $Hosts List of domain names that the certificate will be attached to.
      * @param array $ServerCertInfo Certificate information. Note that only `CertId` is required. If it is not specified, the default certificate will be used.
      * @param string $ApplyType Whether the certificate is managed by EdgeOne. Values:
-<li>`apply`: Managed by EdgeOne</li>
-<li>`none`: Not managed by EdgeOne</li>If it is left empty, the default value `apply` is used.
+<li>`apply`: Managed by EdgeOne.</li>
+<li>`none`: Not managed by EdgeOne.</li>If not specified, this field uses the default value `none`.
      */
     function __construct()
     {

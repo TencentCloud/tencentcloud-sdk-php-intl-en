@@ -38,12 +38,14 @@ use TencentCloud\Common\AbstractModel;
 <li>`pending`: The name server is not switched.</li>
 <li>`moved`: The name server is moved.</li>
 <li>`deactivated`: The site is blocked.</li>
- * @method string getType() Obtain The site access method. Values:
-<li>`full`: Access through a name server.</li>
-<li>`partial`: Access through a CNAME record.</li>
- * @method void setType(string $Type) Set The site access method. Values:
-<li>`full`: Access through a name server.</li>
-<li>`partial`: Access through a CNAME record.</li>
+ * @method string getType() Obtain Access mode of the site. Values:
+<li> `full`: Access through a name server.</li>
+<li> `partial`: Access through a CNAME record.</li>
+<li> `noDomainAccess`: Access without using a domain name </li>
+ * @method void setType(string $Type) Set Access mode of the site. Values:
+<li> `full`: Access through a name server.</li>
+<li> `partial`: Access through a CNAME record.</li>
+<li> `noDomainAccess`: Access without using a domain name </li>
  * @method boolean getPaused() Obtain Whether the site is disabled.
  * @method void setPaused(boolean $Paused) Set Whether the site is disabled.
  * @method string getCnameSpeedUp() Obtain Whether CNAME acceleration is enabled. Values:
@@ -135,9 +137,10 @@ class Zone extends AbstractModel
     public $Status;
 
     /**
-     * @var string The site access method. Values:
-<li>`full`: Access through a name server.</li>
-<li>`partial`: Access through a CNAME record.</li>
+     * @var string Access mode of the site. Values:
+<li> `full`: Access through a name server.</li>
+<li> `partial`: Access through a CNAME record.</li>
+<li> `noDomainAccess`: Access without using a domain name </li>
      */
     public $Type;
 
@@ -236,9 +239,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 <li>`pending`: The name server is not switched.</li>
 <li>`moved`: The name server is moved.</li>
 <li>`deactivated`: The site is blocked.</li>
-     * @param string $Type The site access method. Values:
-<li>`full`: Access through a name server.</li>
-<li>`partial`: Access through a CNAME record.</li>
+     * @param string $Type Access mode of the site. Values:
+<li> `full`: Access through a name server.</li>
+<li> `partial`: Access through a CNAME record.</li>
+<li> `noDomainAccess`: Access without using a domain name </li>
      * @param boolean $Paused Whether the site is disabled.
      * @param string $CnameSpeedUp Whether CNAME acceleration is enabled. Values:
 <li>`enabled`: Enabled</li>

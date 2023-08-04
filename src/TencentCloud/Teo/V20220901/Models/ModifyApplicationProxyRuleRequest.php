@@ -70,6 +70,8 @@ The original configuration will apply if this field is not specified.
  * @method void setSessionPersist(boolean $SessionPersist) Set Whether to enable session persistence. Values:
 <li>`true`: Enable</li>
 <li>`false`: Disable</li>If it is left empty, the default value `false` is used.
+ * @method integer getSessionPersistTime() Obtain Duration for the persistent session. The value takes effect only when `SessionPersist = true`.
+ * @method void setSessionPersistTime(integer $SessionPersistTime) Set Duration for the persistent session. The value takes effect only when `SessionPersist = true`.
  * @method string getOriginPort() Obtain The origin port, which can be:
 <li>A single port, such as 80</li>
 <li>A port range, such as 81-82</li>
@@ -141,6 +143,11 @@ The original configuration will apply if this field is not specified.
     public $SessionPersist;
 
     /**
+     * @var integer Duration for the persistent session. The value takes effect only when `SessionPersist = true`.
+     */
+    public $SessionPersistTime;
+
+    /**
      * @var string The origin port, which can be:
 <li>A single port, such as 80</li>
 <li>A port range, such as 81-82</li>
@@ -173,6 +180,7 @@ The original configuration will apply if this field is not specified.
      * @param boolean $SessionPersist Whether to enable session persistence. Values:
 <li>`true`: Enable</li>
 <li>`false`: Disable</li>If it is left empty, the default value `false` is used.
+     * @param integer $SessionPersistTime Duration for the persistent session. The value takes effect only when `SessionPersist = true`.
      * @param string $OriginPort The origin port, which can be:
 <li>A single port, such as 80</li>
 <li>A port range, such as 81-82</li>
@@ -224,6 +232,10 @@ The original configuration will apply if this field is not specified.
 
         if (array_key_exists("SessionPersist",$param) and $param["SessionPersist"] !== null) {
             $this->SessionPersist = $param["SessionPersist"];
+        }
+
+        if (array_key_exists("SessionPersistTime",$param) and $param["SessionPersistTime"] !== null) {
+            $this->SessionPersistTime = $param["SessionPersistTime"];
         }
 
         if (array_key_exists("OriginPort",$param) and $param["OriginPort"] !== null) {

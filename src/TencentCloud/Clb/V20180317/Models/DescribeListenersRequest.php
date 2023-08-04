@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLoadBalancerId(string $LoadBalancerId) Set CLB instance ID.
  * @method array getListenerIds() Obtain Array of CLB listener IDs to query (100 IDs at most).
  * @method void setListenerIds(array $ListenerIds) Set Array of CLB listener IDs to query (100 IDs at most).
- * @method string getProtocol() Obtain Type of the listener protocols to be queried. Valid values: TCP, UDP, HTTP, HTTPS, and TCP_SSL.
- * @method void setProtocol(string $Protocol) Set Type of the listener protocols to be queried. Valid values: TCP, UDP, HTTP, HTTPS, and TCP_SSL.
+ * @method string getProtocol() Obtain Type of the listener protocols to be queried. Values: TCP`, `UDP`, `HTTP`, `HTTPS`, `TCP_SSL` and `QUIC`.
+ * @method void setProtocol(string $Protocol) Set Type of the listener protocols to be queried. Values: TCP`, `UDP`, `HTTP`, `HTTPS`, `TCP_SSL` and `QUIC`.
  * @method integer getPort() Obtain Port of the listeners to be queried
  * @method void setPort(integer $Port) Set Port of the listeners to be queried
  */
@@ -42,7 +42,7 @@ class DescribeListenersRequest extends AbstractModel
     public $ListenerIds;
 
     /**
-     * @var string Type of the listener protocols to be queried. Valid values: TCP, UDP, HTTP, HTTPS, and TCP_SSL.
+     * @var string Type of the listener protocols to be queried. Values: TCP`, `UDP`, `HTTP`, `HTTPS`, `TCP_SSL` and `QUIC`.
      */
     public $Protocol;
 
@@ -54,7 +54,7 @@ class DescribeListenersRequest extends AbstractModel
     /**
      * @param string $LoadBalancerId CLB instance ID.
      * @param array $ListenerIds Array of CLB listener IDs to query (100 IDs at most).
-     * @param string $Protocol Type of the listener protocols to be queried. Valid values: TCP, UDP, HTTP, HTTPS, and TCP_SSL.
+     * @param string $Protocol Type of the listener protocols to be queried. Values: TCP`, `UDP`, `HTTP`, `HTTPS`, `TCP_SSL` and `QUIC`.
      * @param integer $Port Port of the listeners to be queried
      */
     function __construct()

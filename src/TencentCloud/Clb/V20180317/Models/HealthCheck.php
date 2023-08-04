@@ -51,10 +51,10 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setHttpCheckPath(string $HttpCheckPath) Set Health check path (applicable only to HTTP/HTTPS forwarding rules and HTTP health checks of TCP listeners).
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getHttpCheckDomain() Obtain The target domain name for health check. It’s applicable only to HTTP/HTTPS forwarding rules and HTTP health checks of TCP listeners. It’s required for TCP listeners.
-Note: This field may return `null`, indicating that no valid values can be obtained.
- * @method void setHttpCheckDomain(string $HttpCheckDomain) Set The target domain name for health check. It’s applicable only to HTTP/HTTPS forwarding rules and HTTP health checks of TCP listeners. It’s required for TCP listeners.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method string getHttpCheckDomain() Obtain Health check domain name. It is only applicable to HTTP/HTTPS forwarding rules and HTTP health checks of TCP listeners. For HTTP health checks of TCP listeners, this parameter is required.
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+ * @method void setHttpCheckDomain(string $HttpCheckDomain) Set Health check domain name. It is only applicable to HTTP/HTTPS forwarding rules and HTTP health checks of TCP listeners. For HTTP health checks of TCP listeners, this parameter is required.
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
  * @method string getHttpCheckMethod() Obtain Health check method (applicable only to HTTP/HTTPS forwarding rules and HTTP health checks of TCP listeners). Value range: HEAD, GET. Default value: HEAD.
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setHttpCheckMethod(string $HttpCheckMethod) Set Health check method (applicable only to HTTP/HTTPS forwarding rules and HTTP health checks of TCP listeners). Value range: HEAD, GET. Default value: HEAD.
@@ -75,18 +75,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setRecvContext(string $RecvContext) Set Health check protocol (a custom check parameter), which is required if the value of CheckType is CUSTOM. This parameter represents the result returned by the health check. Only ASCII visible characters are allowed, and the maximum length is 500. (Applicable only to TCP/UDP listeners.)
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getCheckType() Obtain Health check protocol (a custom check parameter). Value range: TCP, HTTP, CUSTOM (applicable only to TCP/UDP listeners, where UDP listeners only support CUSTOM. If custom health check is used, this parameter is required).
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setCheckType(string $CheckType) Set Health check protocol (a custom check parameter). Value range: TCP, HTTP, CUSTOM (applicable only to TCP/UDP listeners, where UDP listeners only support CUSTOM. If custom health check is used, this parameter is required).
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getHttpVersion() Obtain Health check protocol (a custom check parameter), which is required if the value of CheckType is HTTP. This parameter represents the HTTP version of the real server. Value range: HTTP/1.0, HTTP/1.1. (Applicable only to TCP listeners.)
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setHttpVersion(string $HttpVersion) Set Health check protocol (a custom check parameter), which is required if the value of CheckType is HTTP. This parameter represents the HTTP version of the real server. Value range: HTTP/1.0, HTTP/1.1. (Applicable only to TCP listeners.)
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getSourceIpType() Obtain Specifies the type of IP for health check. `0` (default): CLB VIP. `1`: Use the IP range starting with 100.64 as the source IP.
-Note: This field may return `null`, indicating that no valid values can be obtained.
- * @method void setSourceIpType(integer $SourceIpType) Set Specifies the type of IP for health check. `0` (default): CLB VIP. `1`: Use the IP range starting with 100.64 as the source IP.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method string getCheckType() Obtain u200dHealth check protocol. Values: `TCP`, `HTTP`, `HTTPS`, `GRPC`, `PING`, and `CUSTOM`. UDP listeners support `PING`/`CUSTOM`. TCP listener support `TCP`/`HTTP`/`CUSTOM`. TCP_SSL and QUIC listeners support `TCP`/`HTTP`. HTTP rules support `HTTP`/`GRPC. HTTPS rules support `HTTP`/`HTTPS`/`GRPC`.
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+ * @method void setCheckType(string $CheckType) Set u200dHealth check protocol. Values: `TCP`, `HTTP`, `HTTPS`, `GRPC`, `PING`, and `CUSTOM`. UDP listeners support `PING`/`CUSTOM`. TCP listener support `TCP`/`HTTP`/`CUSTOM`. TCP_SSL and QUIC listeners support `TCP`/`HTTP`. HTTP rules support `HTTP`/`GRPC. HTTPS rules support `HTTP`/`HTTPS`/`GRPC`.
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+ * @method string getHttpVersion() Obtain HTTP version. HTTP version of the backend service. Values: `HTTP/1.0`, HTTP/1.1`. It is only applicable to TCP listeners, and is required when `CheckType`=`HTTP`. 
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+ * @method void setHttpVersion(string $HttpVersion) Set HTTP version. HTTP version of the backend service. Values: `HTTP/1.0`, HTTP/1.1`. It is only applicable to TCP listeners, and is required when `CheckType`=`HTTP`. 
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+ * @method integer getSourceIpType() Obtain Specifies the type of health check source IP. `0` (default): CLB VIP. `1`: 100.64 IP range.
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+ * @method void setSourceIpType(integer $SourceIpType) Set Specifies the type of health check source IP. `0` (default): CLB VIP. `1`: 100.64 IP range.
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
  * @method string getExtendedCode() Obtain GRPC health check status code, which is only applicable to rules with GRPC as the backend forwarding protocol. It can be a single number (such as `20`), multiple numbers (such as `20,25`) or a range (such as `0-99`). The default value is `12`.
 Note: This field may return `null`, indicating that no valid values can be obtained.
  * @method void setExtendedCode(string $ExtendedCode) Set GRPC health check status code, which is only applicable to rules with GRPC as the backend forwarding protocol. It can be a single number (such as `20`), multiple numbers (such as `20,25`) or a range (such as `0-99`). The default value is `12`.
@@ -138,8 +138,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $HttpCheckPath;
 
     /**
-     * @var string The target domain name for health check. It’s applicable only to HTTP/HTTPS forwarding rules and HTTP health checks of TCP listeners. It’s required for TCP listeners.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @var string Health check domain name. It is only applicable to HTTP/HTTPS forwarding rules and HTTP health checks of TCP listeners. For HTTP health checks of TCP listeners, this parameter is required.
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
      */
     public $HttpCheckDomain;
 
@@ -174,20 +174,20 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $RecvContext;
 
     /**
-     * @var string Health check protocol (a custom check parameter). Value range: TCP, HTTP, CUSTOM (applicable only to TCP/UDP listeners, where UDP listeners only support CUSTOM. If custom health check is used, this parameter is required).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string u200dHealth check protocol. Values: `TCP`, `HTTP`, `HTTPS`, `GRPC`, `PING`, and `CUSTOM`. UDP listeners support `PING`/`CUSTOM`. TCP listener support `TCP`/`HTTP`/`CUSTOM`. TCP_SSL and QUIC listeners support `TCP`/`HTTP`. HTTP rules support `HTTP`/`GRPC. HTTPS rules support `HTTP`/`HTTPS`/`GRPC`.
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
      */
     public $CheckType;
 
     /**
-     * @var string Health check protocol (a custom check parameter), which is required if the value of CheckType is HTTP. This parameter represents the HTTP version of the real server. Value range: HTTP/1.0, HTTP/1.1. (Applicable only to TCP listeners.)
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string HTTP version. HTTP version of the backend service. Values: `HTTP/1.0`, HTTP/1.1`. It is only applicable to TCP listeners, and is required when `CheckType`=`HTTP`. 
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
      */
     public $HttpVersion;
 
     /**
-     * @var integer Specifies the type of IP for health check. `0` (default): CLB VIP. `1`: Use the IP range starting with 100.64 as the source IP.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @var integer Specifies the type of health check source IP. `0` (default): CLB VIP. `1`: 100.64 IP range.
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
      */
     public $SourceIpType;
 
@@ -213,8 +213,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return `null`, indicating that no valid values can be obtained.
      * @param string $HttpCheckPath Health check path (applicable only to HTTP/HTTPS forwarding rules and HTTP health checks of TCP listeners).
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $HttpCheckDomain The target domain name for health check. It’s applicable only to HTTP/HTTPS forwarding rules and HTTP health checks of TCP listeners. It’s required for TCP listeners.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param string $HttpCheckDomain Health check domain name. It is only applicable to HTTP/HTTPS forwarding rules and HTTP health checks of TCP listeners. For HTTP health checks of TCP listeners, this parameter is required.
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
      * @param string $HttpCheckMethod Health check method (applicable only to HTTP/HTTPS forwarding rules and HTTP health checks of TCP listeners). Value range: HEAD, GET. Default value: HEAD.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $CheckPort Health check port (a custom check parameter), which is the port of the real server by default. Unless you want to specify a port, it is recommended to leave it empty. (Applicable only to TCP/UDP listeners.)
@@ -225,12 +225,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $RecvContext Health check protocol (a custom check parameter), which is required if the value of CheckType is CUSTOM. This parameter represents the result returned by the health check. Only ASCII visible characters are allowed, and the maximum length is 500. (Applicable only to TCP/UDP listeners.)
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $CheckType Health check protocol (a custom check parameter). Value range: TCP, HTTP, CUSTOM (applicable only to TCP/UDP listeners, where UDP listeners only support CUSTOM. If custom health check is used, this parameter is required).
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $HttpVersion Health check protocol (a custom check parameter), which is required if the value of CheckType is HTTP. This parameter represents the HTTP version of the real server. Value range: HTTP/1.0, HTTP/1.1. (Applicable only to TCP listeners.)
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $SourceIpType Specifies the type of IP for health check. `0` (default): CLB VIP. `1`: Use the IP range starting with 100.64 as the source IP.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param string $CheckType u200dHealth check protocol. Values: `TCP`, `HTTP`, `HTTPS`, `GRPC`, `PING`, and `CUSTOM`. UDP listeners support `PING`/`CUSTOM`. TCP listener support `TCP`/`HTTP`/`CUSTOM`. TCP_SSL and QUIC listeners support `TCP`/`HTTP`. HTTP rules support `HTTP`/`GRPC. HTTPS rules support `HTTP`/`HTTPS`/`GRPC`.
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+     * @param string $HttpVersion HTTP version. HTTP version of the backend service. Values: `HTTP/1.0`, HTTP/1.1`. It is only applicable to TCP listeners, and is required when `CheckType`=`HTTP`. 
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+     * @param integer $SourceIpType Specifies the type of health check source IP. `0` (default): CLB VIP. `1`: 100.64 IP range.
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
      * @param string $ExtendedCode GRPC health check status code, which is only applicable to rules with GRPC as the backend forwarding protocol. It can be a single number (such as `20`), multiple numbers (such as `20,25`) or a range (such as `0-99`). The default value is `12`.
 Note: This field may return `null`, indicating that no valid values can be obtained.
      */

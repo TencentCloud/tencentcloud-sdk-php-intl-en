@@ -20,23 +20,38 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeTaskInfo response structure.
  *
- * @method string getStatus() Obtain Task status. preparing: to be run; running: running; succeed: succeeded; failed: failed; error: running error.
- * @method void setStatus(string $Status) Set Task status. preparing: to be run; running: running; succeed: succeeded; failed: failed; error: running error.
+ * @method string getStatus() Obtain Task status. Valid values: 
+- `preparing`: To be run
+- `running`: Running
+- `succeed`: Succeedu200ded
+- `failed`: Failed
+- `Error`: Error occurred while running
+ * @method void setStatus(string $Status) Set Task status. Valid values: 
+- `preparing`: To be run
+- `running`: Running
+- `succeed`: Succeedu200ded
+- `failed`: Failed
+- `Error`: Error occurred while running
  * @method string getStartTime() Obtain Task start time
  * @method void setStartTime(string $StartTime) Set Task start time
- * @method string getTaskType() Obtain Task type
- * @method void setTaskType(string $TaskType) Set Task type
+ * @method string getTaskType() Obtain Task type, including `Create`, `Configure`, u200d`Disable Instance`, `Clear Instance`, `Reset Password`, `Upgrade Version`, `Back up Instance`, `Modify Network`, `Migrate to New AZ` and `Promote to Master`.
+ * @method void setTaskType(string $TaskType) Set Task type, including `Create`, `Configure`, u200d`Disable Instance`, `Clear Instance`, `Reset Password`, `Upgrade Version`, `Back up Instance`, `Modify Network`, `Migrate to New AZ` and `Promote to Master`.
  * @method string getInstanceId() Obtain Instance ID
  * @method void setInstanceId(string $InstanceId) Set Instance ID
- * @method string getTaskMessage() Obtain Task message, which is displayed in case of an error. It will be blank if the status is running or succeeded.
- * @method void setTaskMessage(string $TaskMessage) Set Task message, which is displayed in case of an error. It will be blank if the status is running or succeeded.
+ * @method string getTaskMessage() Obtain Message returned by task execution, which will be au200dn error message when execution fails or be empty when the status is `running `or `succeed-`.
+ * @method void setTaskMessage(string $TaskMessage) Set Message returned by task execution, which will be au200dn error message when execution fails or be empty when the status is `running `or `succeed-`.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 class DescribeTaskInfoResponse extends AbstractModel
 {
     /**
-     * @var string Task status. preparing: to be run; running: running; succeed: succeeded; failed: failed; error: running error.
+     * @var string Task status. Valid values: 
+- `preparing`: To be run
+- `running`: Running
+- `succeed`: Succeedu200ded
+- `failed`: Failed
+- `Error`: Error occurred while running
      */
     public $Status;
 
@@ -46,7 +61,7 @@ class DescribeTaskInfoResponse extends AbstractModel
     public $StartTime;
 
     /**
-     * @var string Task type
+     * @var string Task type, including `Create`, `Configure`, u200d`Disable Instance`, `Clear Instance`, `Reset Password`, `Upgrade Version`, `Back up Instance`, `Modify Network`, `Migrate to New AZ` and `Promote to Master`.
      */
     public $TaskType;
 
@@ -56,7 +71,7 @@ class DescribeTaskInfoResponse extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var string Task message, which is displayed in case of an error. It will be blank if the status is running or succeeded.
+     * @var string Message returned by task execution, which will be au200dn error message when execution fails or be empty when the status is `running `or `succeed-`.
      */
     public $TaskMessage;
 
@@ -66,11 +81,16 @@ class DescribeTaskInfoResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $Status Task status. preparing: to be run; running: running; succeed: succeeded; failed: failed; error: running error.
+     * @param string $Status Task status. Valid values: 
+- `preparing`: To be run
+- `running`: Running
+- `succeed`: Succeedu200ded
+- `failed`: Failed
+- `Error`: Error occurred while running
      * @param string $StartTime Task start time
-     * @param string $TaskType Task type
+     * @param string $TaskType Task type, including `Create`, `Configure`, u200d`Disable Instance`, `Clear Instance`, `Reset Password`, `Upgrade Version`, `Back up Instance`, `Modify Network`, `Migrate to New AZ` and `Promote to Master`.
      * @param string $InstanceId Instance ID
-     * @param string $TaskMessage Task message, which is displayed in case of an error. It will be blank if the status is running or succeeded.
+     * @param string $TaskMessage Message returned by task execution, which will be au200dn error message when execution fails or be empty when the status is `running `or `succeed-`.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()

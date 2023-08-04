@@ -20,34 +20,62 @@ use TencentCloud\Common\AbstractModel;
 /**
  * UpgradeInstanceVersion request structure.
  *
- * @method string getTargetInstanceType() Obtain Target instance type after the change, which is the same as the `Type` of the [CreateInstances](https://intl.cloud.tencent.com/document/api/239/20026?from_cn_redirect=1) API.
- * @method void setTargetInstanceType(string $TargetInstanceType) Set Target instance type after the change, which is the same as the `Type` of the [CreateInstances](https://intl.cloud.tencent.com/document/api/239/20026?from_cn_redirect=1) API.
- * @method integer getSwitchOption() Obtain Switch mode. Valid values: 1 (switch during the maintenance time), 2 (switch now).
- * @method void setSwitchOption(integer $SwitchOption) Set Switch mode. Valid values: 1 (switch during the maintenance time), 2 (switch now).
- * @method string getInstanceId() Obtain Instance ID
- * @method void setInstanceId(string $InstanceId) Set Instance ID
+ * @method string getTargetInstanceType() Obtain Target instance type after the change, which is the same as the `TypeId` of the [CreateInstances](https://intl.cloud.tencent.com/document/api/239/20026?from_cn_redirect=1) API.
+- For Redis 4.0 or later, a standard architecture instance can be upgraded to a cluster architecture instance on the same version; for example, you can upgrade from Redis 4.0 Standard Architecture to Redis 4.0 Cluster Architecture.
+- Cross-version architecture upgrade is not supported; for example, you cannot upgrade from Redis 4.0 Standard Architecture to Redis 5.0 Cluster Architecture.
+- The architecture of Redis 2.8 cannot be upgraded.
+- Cluster architecture cannot be downgraded to standard architecture.
+
+ * @method void setTargetInstanceType(string $TargetInstanceType) Set Target instance type after the change, which is the same as the `TypeId` of the [CreateInstances](https://intl.cloud.tencent.com/document/api/239/20026?from_cn_redirect=1) API.
+- For Redis 4.0 or later, a standard architecture instance can be upgraded to a cluster architecture instance on the same version; for example, you can upgrade from Redis 4.0 Standard Architecture to Redis 4.0 Cluster Architecture.
+- Cross-version architecture upgrade is not supported; for example, you cannot upgrade from Redis 4.0 Standard Architecture to Redis 5.0 Cluster Architecture.
+- The architecture of Redis 2.8 cannot be upgraded.
+- Cluster architecture cannot be downgraded to standard architecture.
+
+ * @method integer getSwitchOption() Obtain Switch time. Valid values:
+- `1`: Switch in the maintenance time.
+- `2` (default value): Switch now.
+ * @method void setSwitchOption(integer $SwitchOption) Set Switch time. Valid values:
+- `1`: Switch in the maintenance time.
+- `2` (default value): Switch now.
+ * @method string getInstanceId() Obtain ID of the specified instance, such as `crs-xjhsdj****`. Log in to the [Redis console](https://console.cloud.tencent.com/redis#/), and copy it in the instance list.
+ * @method void setInstanceId(string $InstanceId) Set ID of the specified instance, such as `crs-xjhsdj****`. Log in to the [Redis console](https://console.cloud.tencent.com/redis#/), and copy it in the instance list.
  */
 class UpgradeInstanceVersionRequest extends AbstractModel
 {
     /**
-     * @var string Target instance type after the change, which is the same as the `Type` of the [CreateInstances](https://intl.cloud.tencent.com/document/api/239/20026?from_cn_redirect=1) API.
+     * @var string Target instance type after the change, which is the same as the `TypeId` of the [CreateInstances](https://intl.cloud.tencent.com/document/api/239/20026?from_cn_redirect=1) API.
+- For Redis 4.0 or later, a standard architecture instance can be upgraded to a cluster architecture instance on the same version; for example, you can upgrade from Redis 4.0 Standard Architecture to Redis 4.0 Cluster Architecture.
+- Cross-version architecture upgrade is not supported; for example, you cannot upgrade from Redis 4.0 Standard Architecture to Redis 5.0 Cluster Architecture.
+- The architecture of Redis 2.8 cannot be upgraded.
+- Cluster architecture cannot be downgraded to standard architecture.
+
      */
     public $TargetInstanceType;
 
     /**
-     * @var integer Switch mode. Valid values: 1 (switch during the maintenance time), 2 (switch now).
+     * @var integer Switch time. Valid values:
+- `1`: Switch in the maintenance time.
+- `2` (default value): Switch now.
      */
     public $SwitchOption;
 
     /**
-     * @var string Instance ID
+     * @var string ID of the specified instance, such as `crs-xjhsdj****`. Log in to the [Redis console](https://console.cloud.tencent.com/redis#/), and copy it in the instance list.
      */
     public $InstanceId;
 
     /**
-     * @param string $TargetInstanceType Target instance type after the change, which is the same as the `Type` of the [CreateInstances](https://intl.cloud.tencent.com/document/api/239/20026?from_cn_redirect=1) API.
-     * @param integer $SwitchOption Switch mode. Valid values: 1 (switch during the maintenance time), 2 (switch now).
-     * @param string $InstanceId Instance ID
+     * @param string $TargetInstanceType Target instance type after the change, which is the same as the `TypeId` of the [CreateInstances](https://intl.cloud.tencent.com/document/api/239/20026?from_cn_redirect=1) API.
+- For Redis 4.0 or later, a standard architecture instance can be upgraded to a cluster architecture instance on the same version; for example, you can upgrade from Redis 4.0 Standard Architecture to Redis 4.0 Cluster Architecture.
+- Cross-version architecture upgrade is not supported; for example, you cannot upgrade from Redis 4.0 Standard Architecture to Redis 5.0 Cluster Architecture.
+- The architecture of Redis 2.8 cannot be upgraded.
+- Cluster architecture cannot be downgraded to standard architecture.
+
+     * @param integer $SwitchOption Switch time. Valid values:
+- `1`: Switch in the maintenance time.
+- `2` (default value): Switch now.
+     * @param string $InstanceId ID of the specified instance, such as `crs-xjhsdj****`. Log in to the [Redis console](https://console.cloud.tencent.com/redis#/), and copy it in the instance list.
      */
     function __construct()
     {

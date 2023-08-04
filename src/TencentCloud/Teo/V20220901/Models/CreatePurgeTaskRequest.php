@@ -22,44 +22,22 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getZoneId() Obtain ID of the site.
  * @method void setZoneId(string $ZoneId) Set ID of the site.
- * @method string getType() Obtain Purging mode. Valid values: 
-<li>`purge_url`: Purge by URL;</li>
-<li>`purge_prefix`: Purge by directory;</li>
-<li>`purge_host`: Purge by hostname;</li>
-<li>`purge_all`: Puege all cache;</li>
-<li>`purge_cache_tag`: Purge by cache tag.</li>
- * @method void setType(string $Type) Set Purging mode. Valid values: 
-<li>`purge_url`: Purge by URL;</li>
-<li>`purge_prefix`: Purge by directory;</li>
-<li>`purge_host`: Purge by hostname;</li>
-<li>`purge_all`: Puege all cache;</li>
-<li>`purge_cache_tag`: Purge by cache tag.</li>
- * @method string getMethod() Obtain 
- * @method void setMethod(string $Method) Set 
- * @method array getTargets() Obtain Resource to be purged, which depends on the `Type` field. 
-1. When `Type = purge_host`: 
-Enter the hostname, such as www.example.com and foo.bar.example.com. 
-2. When `Type = purge_prefix`: 
-Enter the prefix, such as http://www.example.com/example/. 
-3. When `Type = purge_url`: 
-Enter the URL, such as https://www.example.com/example.jpg. 
-4. When `Type = purge_all`: 
-`Targets` can be left empty. 
-5. When `Type = purge_cache_tag`: 
-Enter the cache tag, such as tag1. 
-Note: The number of submitted tasks is limited by the quota of the plan. For details, see [Billing Overview](https://intl.cloud.tencent.com/document/product/1552/77380?from_cn_redirect=1).
- * @method void setTargets(array $Targets) Set Resource to be purged, which depends on the `Type` field. 
-1. When `Type = purge_host`: 
-Enter the hostname, such as www.example.com and foo.bar.example.com. 
-2. When `Type = purge_prefix`: 
-Enter the prefix, such as http://www.example.com/example/. 
-3. When `Type = purge_url`: 
-Enter the URL, such as https://www.example.com/example.jpg. 
-4. When `Type = purge_all`: 
-`Targets` can be left empty. 
-5. When `Type = purge_cache_tag`: 
-Enter the cache tag, such as tag1. 
-Note: The number of submitted tasks is limited by the quota of the plan. For details, see [Billing Overview](https://intl.cloud.tencent.com/document/product/1552/77380?from_cn_redirect=1).
+ * @method string getType() Obtain Type of cache purging. Values:
+<li>`purge_url`: Purge by the URL</li>
+<li>`purge_prefix`: Purge by the directory</li>
+<li>`purge_host`: Purge by the hostname</li>
+<li>`purge_all`: Purge all caches</li>
+<li>`purge_cache_tag`: Purge by the cache-tag </li>For more details, see [Cache Purge](https://intl.cloud.tencent.com/document/product/1552/70759?from_cn_redirect=1).
+ * @method void setType(string $Type) Set Type of cache purging. Values:
+<li>`purge_url`: Purge by the URL</li>
+<li>`purge_prefix`: Purge by the directory</li>
+<li>`purge_host`: Purge by the hostname</li>
+<li>`purge_all`: Purge all caches</li>
+<li>`purge_cache_tag`: Purge by the cache-tag </li>For more details, see [Cache Purge](https://intl.cloud.tencent.com/document/product/1552/70759?from_cn_redirect=1).
+ * @method string getMethod() Obtain Configures how resources under the directory are purged when `Type = purge_prefix`. Values: <li>`invalidate`: Only resources updated under the directory are purged.</li><li>`delete`: All resources under the directory are purged regardless of whether they are updated. </li>Default value: `invalidate`.
+ * @method void setMethod(string $Method) Set Configures how resources under the directory are purged when `Type = purge_prefix`. Values: <li>`invalidate`: Only resources updated under the directory are purged.</li><li>`delete`: All resources under the directory are purged regardless of whether they are updated. </li>Default value: `invalidate`.
+ * @method array getTargets() Obtain List of cached resources to purge. The format for input depends on the type of cache purging. See examples below for details. <li>By default, non-ASCII characters u200dare escaped based on RFC3986.</li><li>The maximum number of tasks per purging request is determined by the EdgeOne plan. See [Billing Overview (New)](https://intl.cloud.tencent.com/document/product/1552/77380?from_cn_redirect=1). </li>
+ * @method void setTargets(array $Targets) Set List of cached resources to purge. The format for input depends on the type of cache purging. See examples below for details. <li>By default, non-ASCII characters u200dare escaped based on RFC3986.</li><li>The maximum number of tasks per purging request is determined by the EdgeOne plan. See [Billing Overview (New)](https://intl.cloud.tencent.com/document/product/1552/77380?from_cn_redirect=1). </li>
  * @method boolean getEncodeUrl() Obtain Specifies whether to transcode non-ASCII URLs according to RFC3986.
 Note that if it’s enabled, the purging is based on the converted URLs.
  * @method void setEncodeUrl(boolean $EncodeUrl) Set Specifies whether to transcode non-ASCII URLs according to RFC3986.
@@ -73,33 +51,22 @@ class CreatePurgeTaskRequest extends AbstractModel
     public $ZoneId;
 
     /**
-     * @var string Purging mode. Valid values: 
-<li>`purge_url`: Purge by URL;</li>
-<li>`purge_prefix`: Purge by directory;</li>
-<li>`purge_host`: Purge by hostname;</li>
-<li>`purge_all`: Puege all cache;</li>
-<li>`purge_cache_tag`: Purge by cache tag.</li>
+     * @var string Type of cache purging. Values:
+<li>`purge_url`: Purge by the URL</li>
+<li>`purge_prefix`: Purge by the directory</li>
+<li>`purge_host`: Purge by the hostname</li>
+<li>`purge_all`: Purge all caches</li>
+<li>`purge_cache_tag`: Purge by the cache-tag </li>For more details, see [Cache Purge](https://intl.cloud.tencent.com/document/product/1552/70759?from_cn_redirect=1).
      */
     public $Type;
 
     /**
-     * @var string 
+     * @var string Configures how resources under the directory are purged when `Type = purge_prefix`. Values: <li>`invalidate`: Only resources updated under the directory are purged.</li><li>`delete`: All resources under the directory are purged regardless of whether they are updated. </li>Default value: `invalidate`.
      */
     public $Method;
 
     /**
-     * @var array Resource to be purged, which depends on the `Type` field. 
-1. When `Type = purge_host`: 
-Enter the hostname, such as www.example.com and foo.bar.example.com. 
-2. When `Type = purge_prefix`: 
-Enter the prefix, such as http://www.example.com/example/. 
-3. When `Type = purge_url`: 
-Enter the URL, such as https://www.example.com/example.jpg. 
-4. When `Type = purge_all`: 
-`Targets` can be left empty. 
-5. When `Type = purge_cache_tag`: 
-Enter the cache tag, such as tag1. 
-Note: The number of submitted tasks is limited by the quota of the plan. For details, see [Billing Overview](https://intl.cloud.tencent.com/document/product/1552/77380?from_cn_redirect=1).
+     * @var array List of cached resources to purge. The format for input depends on the type of cache purging. See examples below for details. <li>By default, non-ASCII characters u200dare escaped based on RFC3986.</li><li>The maximum number of tasks per purging request is determined by the EdgeOne plan. See [Billing Overview (New)](https://intl.cloud.tencent.com/document/product/1552/77380?from_cn_redirect=1). </li>
      */
     public $Targets;
 
@@ -112,25 +79,14 @@ Note that if it’s enabled, the purging is based on the converted URLs.
 
     /**
      * @param string $ZoneId ID of the site.
-     * @param string $Type Purging mode. Valid values: 
-<li>`purge_url`: Purge by URL;</li>
-<li>`purge_prefix`: Purge by directory;</li>
-<li>`purge_host`: Purge by hostname;</li>
-<li>`purge_all`: Puege all cache;</li>
-<li>`purge_cache_tag`: Purge by cache tag.</li>
-     * @param string $Method 
-     * @param array $Targets Resource to be purged, which depends on the `Type` field. 
-1. When `Type = purge_host`: 
-Enter the hostname, such as www.example.com and foo.bar.example.com. 
-2. When `Type = purge_prefix`: 
-Enter the prefix, such as http://www.example.com/example/. 
-3. When `Type = purge_url`: 
-Enter the URL, such as https://www.example.com/example.jpg. 
-4. When `Type = purge_all`: 
-`Targets` can be left empty. 
-5. When `Type = purge_cache_tag`: 
-Enter the cache tag, such as tag1. 
-Note: The number of submitted tasks is limited by the quota of the plan. For details, see [Billing Overview](https://intl.cloud.tencent.com/document/product/1552/77380?from_cn_redirect=1).
+     * @param string $Type Type of cache purging. Values:
+<li>`purge_url`: Purge by the URL</li>
+<li>`purge_prefix`: Purge by the directory</li>
+<li>`purge_host`: Purge by the hostname</li>
+<li>`purge_all`: Purge all caches</li>
+<li>`purge_cache_tag`: Purge by the cache-tag </li>For more details, see [Cache Purge](https://intl.cloud.tencent.com/document/product/1552/70759?from_cn_redirect=1).
+     * @param string $Method Configures how resources under the directory are purged when `Type = purge_prefix`. Values: <li>`invalidate`: Only resources updated under the directory are purged.</li><li>`delete`: All resources under the directory are purged regardless of whether they are updated. </li>Default value: `invalidate`.
+     * @param array $Targets List of cached resources to purge. The format for input depends on the type of cache purging. See examples below for details. <li>By default, non-ASCII characters u200dare escaped based on RFC3986.</li><li>The maximum number of tasks per purging request is determined by the EdgeOne plan. See [Billing Overview (New)](https://intl.cloud.tencent.com/document/product/1552/77380?from_cn_redirect=1). </li>
      * @param boolean $EncodeUrl Specifies whether to transcode non-ASCII URLs according to RFC3986.
 Note that if it’s enabled, the purging is based on the converted URLs.
      */

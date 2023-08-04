@@ -24,10 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) Set Number of instances returned per page. Default value: `20`.
  * @method integer getOffset() Obtain Pagination offset, which is an integral multiple of `Limit`. `offset` = `limit` * (page number - 1).
  * @method void setOffset(integer $Offset) Set Pagination offset, which is an integral multiple of `Limit`. `offset` = `limit` * (page number - 1).
- * @method string getGroupId() Obtain Replication group ID
- * @method void setGroupId(string $GroupId) Set Replication group ID
- * @method string getSearchKey() Obtain Key words for fuzzy query, which can be set as the ID or name of a replication group.
- * @method void setSearchKey(string $SearchKey) Set Key words for fuzzy query, which can be set as the ID or name of a replication group.
+ * @method string getGroupId() Obtain ID of the specified replication group, such as `crs-rpl-m3zt****`. Log in to the [TencentDB for Redis console](https://console.cloud.tencent.com/redis/replication), and get it in the global replication group list.
+ * @method void setGroupId(string $GroupId) Set ID of the specified replication group, such as `crs-rpl-m3zt****`. Log in to the [TencentDB for Redis console](https://console.cloud.tencent.com/redis/replication), and get it in the global replication group list.
+ * @method string getSearchKey() Obtain Keyword for fuzzy query, which can be a replication group ID or name. Log in to the [TencentDB for Redis console](https://console.cloud.tencent.com/redis/replication), and get u200dthem in the global replication group list.
+ * @method void setSearchKey(string $SearchKey) Set Keyword for fuzzy query, which can be a replication group ID or name. Log in to the [TencentDB for Redis console](https://console.cloud.tencent.com/redis/replication), and get u200dthem in the global replication group list.
  */
 class DescribeReplicationGroupRequest extends AbstractModel
 {
@@ -42,20 +42,20 @@ class DescribeReplicationGroupRequest extends AbstractModel
     public $Offset;
 
     /**
-     * @var string Replication group ID
+     * @var string ID of the specified replication group, such as `crs-rpl-m3zt****`. Log in to the [TencentDB for Redis console](https://console.cloud.tencent.com/redis/replication), and get it in the global replication group list.
      */
     public $GroupId;
 
     /**
-     * @var string Key words for fuzzy query, which can be set as the ID or name of a replication group.
+     * @var string Keyword for fuzzy query, which can be a replication group ID or name. Log in to the [TencentDB for Redis console](https://console.cloud.tencent.com/redis/replication), and get u200dthem in the global replication group list.
      */
     public $SearchKey;
 
     /**
      * @param integer $Limit Number of instances returned per page. Default value: `20`.
      * @param integer $Offset Pagination offset, which is an integral multiple of `Limit`. `offset` = `limit` * (page number - 1).
-     * @param string $GroupId Replication group ID
-     * @param string $SearchKey Key words for fuzzy query, which can be set as the ID or name of a replication group.
+     * @param string $GroupId ID of the specified replication group, such as `crs-rpl-m3zt****`. Log in to the [TencentDB for Redis console](https://console.cloud.tencent.com/redis/replication), and get it in the global replication group list.
+     * @param string $SearchKey Keyword for fuzzy query, which can be a replication group ID or name. Log in to the [TencentDB for Redis console](https://console.cloud.tencent.com/redis/replication), and get u200dthem in the global replication group list.
      */
     function __construct()
     {

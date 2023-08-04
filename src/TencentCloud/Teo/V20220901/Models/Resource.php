@@ -60,6 +60,20 @@ use TencentCloud\Common\AbstractModel;
 <li>`mainland`: Chinese mainland</li>
 <li>`overseas`: Regions outside the Chinese mainland</li>
 <li>`global`: Global</li>
+ * @method string getGroup() Obtain The resource type. Values:
+<li>`plan`: Plan resources</li>
+<li>`pay-as-you-go`: Pay-as-you-go resources </li>
+<li>`value-added`: Value-added resources </li>
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+ * @method void setGroup(string $Group) Set The resource type. Values:
+<li>`plan`: Plan resources</li>
+<li>`pay-as-you-go`: Pay-as-you-go resources </li>
+<li>`value-added`: Value-added resources </li>
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+ * @method integer getZoneNumber() Obtain The sites that are associated with the current resources.
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+ * @method void setZoneNumber(integer $ZoneNumber) Set The sites that are associated with the current resources.
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
  */
 class Resource extends AbstractModel
 {
@@ -124,6 +138,21 @@ class Resource extends AbstractModel
     public $Area;
 
     /**
+     * @var string The resource type. Values:
+<li>`plan`: Plan resources</li>
+<li>`pay-as-you-go`: Pay-as-you-go resources </li>
+<li>`value-added`: Value-added resources </li>
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+     */
+    public $Group;
+
+    /**
+     * @var integer The sites that are associated with the current resources.
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+     */
+    public $ZoneNumber;
+
+    /**
      * @param string $Id The resource ID.
      * @param integer $PayMode Billing mode
 `0`: Pay-as-you-go
@@ -144,6 +173,13 @@ class Resource extends AbstractModel
 <li>`mainland`: Chinese mainland</li>
 <li>`overseas`: Regions outside the Chinese mainland</li>
 <li>`global`: Global</li>
+     * @param string $Group The resource type. Values:
+<li>`plan`: Plan resources</li>
+<li>`pay-as-you-go`: Pay-as-you-go resources </li>
+<li>`value-added`: Value-added resources </li>
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+     * @param integer $ZoneNumber The sites that are associated with the current resources.
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -201,6 +237,14 @@ class Resource extends AbstractModel
 
         if (array_key_exists("Area",$param) and $param["Area"] !== null) {
             $this->Area = $param["Area"];
+        }
+
+        if (array_key_exists("Group",$param) and $param["Group"] !== null) {
+            $this->Group = $param["Group"];
+        }
+
+        if (array_key_exists("ZoneNumber",$param) and $param["ZoneNumber"] !== null) {
+            $this->ZoneNumber = $param["ZoneNumber"];
         }
     }
 }

@@ -98,8 +98,8 @@ The original configuration will apply if it is not specified.
 It is disabled if this parameter is not specified.
  * @method void setImageOptimize(ImageOptimize $ImageOptimize) Set Image optimization. 
 It is disabled if this parameter is not specified.
- * @method StandardDebug getStandardDebug() Obtain 
- * @method void setStandardDebug(StandardDebug $StandardDebug) Set 
+ * @method StandardDebug getStandardDebug() Obtain Standard debugging configuration.
+ * @method void setStandardDebug(StandardDebug $StandardDebug) Set Standard debugging configuration.
  */
 class ModifyZoneSettingRequest extends AbstractModel
 {
@@ -223,7 +223,7 @@ It is disabled if this parameter is not specified.
     public $ImageOptimize;
 
     /**
-     * @var StandardDebug 
+     * @var StandardDebug Standard debugging configuration.
      */
     public $StandardDebug;
 
@@ -267,7 +267,7 @@ The original configuration will apply if it is not specified.
 The original configuration will apply if it is not specified.
      * @param ImageOptimize $ImageOptimize Image optimization. 
 It is disabled if this parameter is not specified.
-     * @param StandardDebug $StandardDebug 
+     * @param StandardDebug $StandardDebug Standard debugging configuration.
      */
     function __construct()
     {

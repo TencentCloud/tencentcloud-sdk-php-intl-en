@@ -18,36 +18,44 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Standard debugging
  *
- * @method string getSwitch() Obtain 
- * @method void setSwitch(string $Switch) Set 
- * @method array getAllowClientIPList() Obtain 
- * @method void setAllowClientIPList(array $AllowClientIPList) Set 
- * @method string getExpireTime() Obtain 
- * @method void setExpireTime(string $ExpireTime) Set 
+ * @method string getSwitch() Obtain Whether to enable standard debugging. Values:
+<li>`on`: Enable</li>
+<li>`off`: Disable </li>
+ * @method void setSwitch(string $Switch) Set Whether to enable standard debugging. Values:
+<li>`on`: Enable</li>
+<li>`off`: Disable </li>
+ * @method array getAllowClientIPList() Obtain The client IP to allow. It can be an IPv4/IPv6 address or a CIDR block. If not specified, it means to allow any client IP
+ * @method void setAllowClientIPList(array $AllowClientIPList) Set The client IP to allow. It can be an IPv4/IPv6 address or a CIDR block. If not specified, it means to allow any client IP
+ * @method string getExpireTime() Obtain The time when the standard debugging setting expires. If it is exceeded, this feature u200dbecomes invalid.
+ * @method void setExpireTime(string $ExpireTime) Set The time when the standard debugging setting expires. If it is exceeded, this feature u200dbecomes invalid.
  */
 class StandardDebug extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Whether to enable standard debugging. Values:
+<li>`on`: Enable</li>
+<li>`off`: Disable </li>
      */
     public $Switch;
 
     /**
-     * @var array 
+     * @var array The client IP to allow. It can be an IPv4/IPv6 address or a CIDR block. If not specified, it means to allow any client IP
      */
     public $AllowClientIPList;
 
     /**
-     * @var string 
+     * @var string The time when the standard debugging setting expires. If it is exceeded, this feature u200dbecomes invalid.
      */
     public $ExpireTime;
 
     /**
-     * @param string $Switch 
-     * @param array $AllowClientIPList 
-     * @param string $ExpireTime 
+     * @param string $Switch Whether to enable standard debugging. Values:
+<li>`on`: Enable</li>
+<li>`off`: Disable </li>
+     * @param array $AllowClientIPList The client IP to allow. It can be an IPv4/IPv6 address or a CIDR block. If not specified, it means to allow any client IP
+     * @param string $ExpireTime The time when the standard debugging setting expires. If it is exceeded, this feature u200dbecomes invalid.
      */
     function __construct()
     {

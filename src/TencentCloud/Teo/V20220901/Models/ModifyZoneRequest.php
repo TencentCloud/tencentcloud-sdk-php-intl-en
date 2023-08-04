@@ -22,16 +22,26 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getZoneId() Obtain The site ID.
  * @method void setZoneId(string $ZoneId) Set The site ID.
- * @method string getType() Obtain The site access method. Values:
-<li>`full`: Access through a name server.</li>
-<li>`partial`: Access through a CNAME record.</li>The original configuration will apply if this field is not specified.
- * @method void setType(string $Type) Set The site access method. Values:
-<li>`full`: Access through a name server.</li>
-<li>`partial`: Access through a CNAME record.</li>The original configuration will apply if this field is not specified.
- * @method VanityNameServers getVanityNameServers() Obtain The custom name servers. If this field is not specified, the default name servers will be used.
- * @method void setVanityNameServers(VanityNameServers $VanityNameServers) Set The custom name servers. If this field is not specified, the default name servers will be used.
+ * @method string getType() Obtain Access mode of the site. Values:
+<li> `full`: Access through a name server.</li>
+<li> `partial`: Access through a CNAME u200drecord. A site using domainless access can only switch to CNAME access. </li>The original configuration applies if this field is not specified.
+ * @method void setType(string $Type) Set Access mode of the site. Values:
+<li> `full`: Access through a name server.</li>
+<li> `partial`: Access through a CNAME u200drecord. A site using domainless access can only switch to CNAME access. </li>The original configuration applies if this field is not specified.
+ * @method VanityNameServers getVanityNameServers() Obtain The custom name servers. The original configuration applies if this field is not specified. It is not allowed to pass this field when a site is connected without using a domain name.
+ * @method void setVanityNameServers(VanityNameServers $VanityNameServers) Set The custom name servers. The original configuration applies if this field is not specified. It is not allowed to pass this field when a site is connected without using a domain name.
  * @method string getAliasZoneName() Obtain The site alias. It can be up to 20 characters consisting of digits, letters, hyphens (-) and underscores (_).
  * @method void setAliasZoneName(string $AliasZoneName) Set The site alias. It can be up to 20 characters consisting of digits, letters, hyphens (-) and underscores (_).
+ * @method string getArea() Obtain The region where the site requests access. Values:
+<li> `global`: Global coverage</li>
+<li> `mainland`: Chinese mainland</li>
+<li> `overseas`: Outside the Chinese mainland </li>It is not allowed to pass this field when a site is connected without using a domain name.
+ * @method void setArea(string $Area) Set The region where the site requests access. Values:
+<li> `global`: Global coverage</li>
+<li> `mainland`: Chinese mainland</li>
+<li> `overseas`: Outside the Chinese mainland </li>It is not allowed to pass this field when a site is connected without using a domain name.
+ * @method string getZoneName() Obtain Name of the site. This field takes effect only when the site switches from domainless access to CNAME access.
+ * @method void setZoneName(string $ZoneName) Set Name of the site. This field takes effect only when the site switches from domainless access to CNAME access.
  */
 class ModifyZoneRequest extends AbstractModel
 {
@@ -41,14 +51,14 @@ class ModifyZoneRequest extends AbstractModel
     public $ZoneId;
 
     /**
-     * @var string The site access method. Values:
-<li>`full`: Access through a name server.</li>
-<li>`partial`: Access through a CNAME record.</li>The original configuration will apply if this field is not specified.
+     * @var string Access mode of the site. Values:
+<li> `full`: Access through a name server.</li>
+<li> `partial`: Access through a CNAME u200drecord. A site using domainless access can only switch to CNAME access. </li>The original configuration applies if this field is not specified.
      */
     public $Type;
 
     /**
-     * @var VanityNameServers The custom name servers. If this field is not specified, the default name servers will be used.
+     * @var VanityNameServers The custom name servers. The original configuration applies if this field is not specified. It is not allowed to pass this field when a site is connected without using a domain name.
      */
     public $VanityNameServers;
 
@@ -58,12 +68,30 @@ class ModifyZoneRequest extends AbstractModel
     public $AliasZoneName;
 
     /**
+     * @var string The region where the site requests access. Values:
+<li> `global`: Global coverage</li>
+<li> `mainland`: Chinese mainland</li>
+<li> `overseas`: Outside the Chinese mainland </li>It is not allowed to pass this field when a site is connected without using a domain name.
+     */
+    public $Area;
+
+    /**
+     * @var string Name of the site. This field takes effect only when the site switches from domainless access to CNAME access.
+     */
+    public $ZoneName;
+
+    /**
      * @param string $ZoneId The site ID.
-     * @param string $Type The site access method. Values:
-<li>`full`: Access through a name server.</li>
-<li>`partial`: Access through a CNAME record.</li>The original configuration will apply if this field is not specified.
-     * @param VanityNameServers $VanityNameServers The custom name servers. If this field is not specified, the default name servers will be used.
+     * @param string $Type Access mode of the site. Values:
+<li> `full`: Access through a name server.</li>
+<li> `partial`: Access through a CNAME u200drecord. A site using domainless access can only switch to CNAME access. </li>The original configuration applies if this field is not specified.
+     * @param VanityNameServers $VanityNameServers The custom name servers. The original configuration applies if this field is not specified. It is not allowed to pass this field when a site is connected without using a domain name.
      * @param string $AliasZoneName The site alias. It can be up to 20 characters consisting of digits, letters, hyphens (-) and underscores (_).
+     * @param string $Area The region where the site requests access. Values:
+<li> `global`: Global coverage</li>
+<li> `mainland`: Chinese mainland</li>
+<li> `overseas`: Outside the Chinese mainland </li>It is not allowed to pass this field when a site is connected without using a domain name.
+     * @param string $ZoneName Name of the site. This field takes effect only when the site switches from domainless access to CNAME access.
      */
     function __construct()
     {
@@ -93,6 +121,14 @@ class ModifyZoneRequest extends AbstractModel
 
         if (array_key_exists("AliasZoneName",$param) and $param["AliasZoneName"] !== null) {
             $this->AliasZoneName = $param["AliasZoneName"];
+        }
+
+        if (array_key_exists("Area",$param) and $param["Area"] !== null) {
+            $this->Area = $param["Area"];
+        }
+
+        if (array_key_exists("ZoneName",$param) and $param["ZoneName"] !== null) {
+            $this->ZoneName = $param["ZoneName"];
         }
     }
 }

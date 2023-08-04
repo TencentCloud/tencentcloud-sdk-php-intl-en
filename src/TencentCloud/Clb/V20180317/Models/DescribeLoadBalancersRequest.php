@@ -30,8 +30,8 @@ OPEN: public network; INTERNAL: private network.
  * @method void setForward(integer $Forward) Set CLB instance type. 1: generic CLB instance; 0: classic CLB instance
  * @method string getLoadBalancerName() Obtain CLB instance name.
  * @method void setLoadBalancerName(string $LoadBalancerName) Set CLB instance name.
- * @method string getDomain() Obtain Domain name assigned to a CLB instance by Tencent Cloud. This parameter is meaningful only for the public network classic CLB.
- * @method void setDomain(string $Domain) Set Domain name assigned to a CLB instance by Tencent Cloud. This parameter is meaningful only for the public network classic CLB.
+ * @method string getDomain() Obtain The domain name that Tencent Cloud assigned for the CLB instance.
+ * @method void setDomain(string $Domain) Set The domain name that Tencent Cloud assigned for the CLB instance.
  * @method array getLoadBalancerVips() Obtain VIP address of a CLB instance (there can be multiple addresses)
  * @method void setLoadBalancerVips(array $LoadBalancerVips) Set VIP address of a CLB instance (there can be multiple addresses)
  * @method array getBackendPublicIps() Obtain Public IPs of the backend services bound with the load balancer. Only the public IPs of CVMs are supported now.
@@ -89,7 +89,7 @@ OPEN: public network; INTERNAL: private network.
     public $LoadBalancerName;
 
     /**
-     * @var string Domain name assigned to a CLB instance by Tencent Cloud. This parameter is meaningful only for the public network classic CLB.
+     * @var string The domain name that Tencent Cloud assigned for the CLB instance.
      */
     public $Domain;
 
@@ -171,7 +171,7 @@ Basic network does not support queries by VpcId.
 OPEN: public network; INTERNAL: private network.
      * @param integer $Forward CLB instance type. 1: generic CLB instance; 0: classic CLB instance
      * @param string $LoadBalancerName CLB instance name.
-     * @param string $Domain Domain name assigned to a CLB instance by Tencent Cloud. This parameter is meaningful only for the public network classic CLB.
+     * @param string $Domain The domain name that Tencent Cloud assigned for the CLB instance.
      * @param array $LoadBalancerVips VIP address of a CLB instance (there can be multiple addresses)
      * @param array $BackendPublicIps Public IPs of the backend services bound with the load balancer. Only the public IPs of CVMs are supported now.
      * @param array $BackendPrivateIps Private IPs of the backend services bound with the load balancer. Only the private IPs of CVMs are supported now.

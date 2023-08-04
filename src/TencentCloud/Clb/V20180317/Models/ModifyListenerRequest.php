@@ -28,10 +28,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setListenerName(string $ListenerName) Set New listener name
  * @method integer getSessionExpireTime() Obtain Session persistence time in seconds. Value range: 30-3,600. The default value is 0, indicating that session persistence is not enabled. This parameter is applicable only to TCP/UDP listeners.
  * @method void setSessionExpireTime(integer $SessionExpireTime) Set Session persistence time in seconds. Value range: 30-3,600. The default value is 0, indicating that session persistence is not enabled. This parameter is applicable only to TCP/UDP listeners.
- * @method HealthCheck getHealthCheck() Obtain Health check parameter, which is applicable only to TCP, UDP, and TCP_SSL listeners.
- * @method void setHealthCheck(HealthCheck $HealthCheck) Set Health check parameter, which is applicable only to TCP, UDP, and TCP_SSL listeners.
- * @method CertificateInput getCertificate() Obtain Certificate information. This parameter is only applicable to HTTPS/TCP_SSL listeners. `Certificate` and `MultiCertInfo` cannot be specified at the same time. 
- * @method void setCertificate(CertificateInput $Certificate) Set Certificate information. This parameter is only applicable to HTTPS/TCP_SSL listeners. `Certificate` and `MultiCertInfo` cannot be specified at the same time. 
+ * @method HealthCheck getHealthCheck() Obtain Health check parameter. It is only applicable only to TCP, UDP, TCP_SSL and QUIC listeners.
+ * @method void setHealthCheck(HealthCheck $HealthCheck) Set Health check parameter. It is only applicable only to TCP, UDP, TCP_SSL and QUIC listeners.
+ * @method CertificateInput getCertificate() Obtain Certificate information. This parameter is only applicable to HTTPS/TCP_SSL/QUIC listeners. `Certificate` and `MultiCertInfo` cannot be both specified.
+ * @method void setCertificate(CertificateInput $Certificate) Set Certificate information. This parameter is only applicable to HTTPS/TCP_SSL/QUIC listeners. `Certificate` and `MultiCertInfo` cannot be both specified.
  * @method string getScheduler() Obtain Forwarding method of a listener. Value range: WRR, LEAST_CONN.
 They represent weighted round robin and least connections, respectively. Default value: WRR.
  * @method void setScheduler(string $Scheduler) Set Forwarding method of a listener. Value range: WRR, LEAST_CONN.
@@ -78,12 +78,12 @@ class ModifyListenerRequest extends AbstractModel
     public $SessionExpireTime;
 
     /**
-     * @var HealthCheck Health check parameter, which is applicable only to TCP, UDP, and TCP_SSL listeners.
+     * @var HealthCheck Health check parameter. It is only applicable only to TCP, UDP, TCP_SSL and QUIC listeners.
      */
     public $HealthCheck;
 
     /**
-     * @var CertificateInput Certificate information. This parameter is only applicable to HTTPS/TCP_SSL listeners. `Certificate` and `MultiCertInfo` cannot be specified at the same time. 
+     * @var CertificateInput Certificate information. This parameter is only applicable to HTTPS/TCP_SSL/QUIC listeners. `Certificate` and `MultiCertInfo` cannot be both specified.
      */
     public $Certificate;
 
@@ -143,8 +143,8 @@ They represent weighted round robin and least connections, respectively. Default
      * @param string $ListenerId CLB listener ID
      * @param string $ListenerName New listener name
      * @param integer $SessionExpireTime Session persistence time in seconds. Value range: 30-3,600. The default value is 0, indicating that session persistence is not enabled. This parameter is applicable only to TCP/UDP listeners.
-     * @param HealthCheck $HealthCheck Health check parameter, which is applicable only to TCP, UDP, and TCP_SSL listeners.
-     * @param CertificateInput $Certificate Certificate information. This parameter is only applicable to HTTPS/TCP_SSL listeners. `Certificate` and `MultiCertInfo` cannot be specified at the same time. 
+     * @param HealthCheck $HealthCheck Health check parameter. It is only applicable only to TCP, UDP, TCP_SSL and QUIC listeners.
+     * @param CertificateInput $Certificate Certificate information. This parameter is only applicable to HTTPS/TCP_SSL/QUIC listeners. `Certificate` and `MultiCertInfo` cannot be both specified.
      * @param string $Scheduler Forwarding method of a listener. Value range: WRR, LEAST_CONN.
 They represent weighted round robin and least connections, respectively. Default value: WRR.
      * @param integer $SniSwitch Whether to enable the SNI feature. This parameter is applicable only to HTTPS listeners. Note: The SNI feature can be enabled but cannot be disabled once enabled.
