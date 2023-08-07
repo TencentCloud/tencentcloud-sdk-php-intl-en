@@ -37,9 +37,9 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getRedisShardSize() Obtain Shard memory size.
  * @method void setRedisShardSize(integer $RedisShardSize) Set Shard memory size.
  * @method integer getDiskSize() Obtain Instance disk size
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setDiskSize(integer $DiskSize) Set Instance disk size
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getEngine() Obtain Engine: Redis Community Edition, Tencent Cloud CKV.
  * @method void setEngine(string $Engine) Set Engine: Redis Community Edition, Tencent Cloud CKV.
  * @method string getRole() Obtain Read-write permission of the instance. <ul><li>`rw`: Read/Write. </li><li>`r`: Read-only. </li></ul>
@@ -129,7 +129,7 @@ class Instances extends AbstractModel
 
     /**
      * @var integer Instance disk size
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $DiskSize;
 
@@ -209,7 +209,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param integer $RedisShardNum Number of shards
      * @param integer $RedisShardSize Shard memory size.
      * @param integer $DiskSize Instance disk size
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $Engine Engine: Redis Community Edition, Tencent Cloud CKV.
      * @param string $Role Read-write permission of the instance. <ul><li>`rw`: Read/Write. </li><li>`r`: Read-only. </li></ul>
      * @param string $Vip Instance VIP
