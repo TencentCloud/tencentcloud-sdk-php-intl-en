@@ -26,6 +26,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDetail(string $Detail) Set Problem Details
  * @method string getSolution() Obtain Recommended resolutions
  * @method void setSolution(string $Solution) Set Recommended resolutions
+ * @method string getLevel() Obtain u200dRisk level of the scaling group configuration. Valid values: <br>
+<li>WARNING<br>
+<li>CRITICAL<br>
+ * @method void setLevel(string $Level) Set u200dRisk level of the scaling group configuration. Valid values: <br>
+<li>WARNING<br>
+<li>CRITICAL<br>
  */
 class Advice extends AbstractModel
 {
@@ -45,9 +51,19 @@ class Advice extends AbstractModel
     public $Solution;
 
     /**
+     * @var string u200dRisk level of the scaling group configuration. Valid values: <br>
+<li>WARNING<br>
+<li>CRITICAL<br>
+     */
+    public $Level;
+
+    /**
      * @param string $Problem Problem Description
      * @param string $Detail Problem Details
      * @param string $Solution Recommended resolutions
+     * @param string $Level u200dRisk level of the scaling group configuration. Valid values: <br>
+<li>WARNING<br>
+<li>CRITICAL<br>
      */
     function __construct()
     {
@@ -72,6 +88,10 @@ class Advice extends AbstractModel
 
         if (array_key_exists("Solution",$param) and $param["Solution"] !== null) {
             $this->Solution = $param["Solution"];
+        }
+
+        if (array_key_exists("Level",$param) and $param["Level"] !== null) {
+            $this->Level = $param["Level"];
         }
     }
 }

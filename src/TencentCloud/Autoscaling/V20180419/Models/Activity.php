@@ -60,8 +60,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEndTime(string $EndTime) Set End time of the scaling activity.
  * @method string getCreatedTime() Obtain Creation time of the scaling activity.
  * @method void setCreatedTime(string $CreatedTime) Set Creation time of the scaling activity.
- * @method array getActivityRelatedInstanceSet() Obtain Information set of the instances related to the scaling activity.
- * @method void setActivityRelatedInstanceSet(array $ActivityRelatedInstanceSet) Set Information set of the instances related to the scaling activity.
+ * @method array getActivityRelatedInstanceSet() Obtain This parameter has been deprecated.
+ * @method void setActivityRelatedInstanceSet(array $ActivityRelatedInstanceSet) Set This parameter has been deprecated.
  * @method string getStatusMessageSimplified() Obtain Brief description of the scaling activity status.
  * @method void setStatusMessageSimplified(string $StatusMessageSimplified) Set Brief description of the scaling activity status.
  * @method array getLifecycleActionResultSet() Obtain Result of the lifecycle hook action in the scaling activity
@@ -70,6 +70,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDetailedStatusMessageSet(array $DetailedStatusMessageSet) Set Detailed description of scaling activity status
  * @method array getInvocationResultSet() Obtain Result of the command execution
  * @method void setInvocationResultSet(array $InvocationResultSet) Set Result of the command execution
+ * @method array getRelatedInstanceSet() Obtain Information set of the instances related to the scaling activity.
+ * @method void setRelatedInstanceSet(array $RelatedInstanceSet) Set Information set of the instances related to the scaling activity.
  */
 class Activity extends AbstractModel
 {
@@ -134,7 +136,8 @@ class Activity extends AbstractModel
     public $CreatedTime;
 
     /**
-     * @var array Information set of the instances related to the scaling activity.
+     * @var array This parameter has been deprecated.
+     * @deprecated
      */
     public $ActivityRelatedInstanceSet;
 
@@ -159,6 +162,11 @@ class Activity extends AbstractModel
     public $InvocationResultSet;
 
     /**
+     * @var array Information set of the instances related to the scaling activity.
+     */
+    public $RelatedInstanceSet;
+
+    /**
      * @param string $AutoScalingGroupId Auto scaling group ID.
      * @param string $ActivityId Scaling activity ID.
      * @param string $ActivityType Type of the scaling activity. Valid values:<br>
@@ -179,11 +187,12 @@ class Activity extends AbstractModel
      * @param string $StartTime Start time of the scaling activity.
      * @param string $EndTime End time of the scaling activity.
      * @param string $CreatedTime Creation time of the scaling activity.
-     * @param array $ActivityRelatedInstanceSet Information set of the instances related to the scaling activity.
+     * @param array $ActivityRelatedInstanceSet This parameter has been deprecated.
      * @param string $StatusMessageSimplified Brief description of the scaling activity status.
      * @param array $LifecycleActionResultSet Result of the lifecycle hook action in the scaling activity
      * @param array $DetailedStatusMessageSet Detailed description of scaling activity status
      * @param array $InvocationResultSet Result of the command execution
+     * @param array $RelatedInstanceSet Information set of the instances related to the scaling activity.
      */
     function __construct()
     {
@@ -275,6 +284,15 @@ class Activity extends AbstractModel
                 $obj = new InvocationResult();
                 $obj->deserialize($value);
                 array_push($this->InvocationResultSet, $obj);
+            }
+        }
+
+        if (array_key_exists("RelatedInstanceSet",$param) and $param["RelatedInstanceSet"] !== null) {
+            $this->RelatedInstanceSet = [];
+            foreach ($param["RelatedInstanceSet"] as $key => $value){
+                $obj = new RelatedInstance();
+                $obj->deserialize($value);
+                array_push($this->RelatedInstanceSet, $obj);
             }
         }
     }

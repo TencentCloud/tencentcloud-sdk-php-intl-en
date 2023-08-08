@@ -92,7 +92,7 @@ When the notification is sent to a CMQ topic or queue, the following contents ar
 ```
  * @method Models\CreateScalingPolicyResponse CreateScalingPolicy(Models\CreateScalingPolicyRequest $req) This API (CreateScalingPolicy) is used to create an alarm trigger policy.
  * @method Models\CreateScheduledActionResponse CreateScheduledAction(Models\CreateScheduledActionRequest $req) This API (CreateScheduledAction) is used to create a scheduled task.
- * @method Models\DeleteAutoScalingGroupResponse DeleteAutoScalingGroup(Models\DeleteAutoScalingGroupRequest $req) This API (DeleteAutoScalingGroup) is used to delete the specified auto scaling group that has no instances and remains inactive.
+ * @method Models\DeleteAutoScalingGroupResponse DeleteAutoScalingGroup(Models\DeleteAutoScalingGroupRequest $req) This API is used to delete an auto-scaling group. Make sure that there are no `IN_SERVICE` instances in the group, and there are no ongoing scaling activities. When you delete a scaling group, instances in the status of `CREATION_FAILED`, `TERMINATION_FAILED` and `DETACH_FAILED` are not terminated.
  * @method Models\DeleteLaunchConfigurationResponse DeleteLaunchConfiguration(Models\DeleteLaunchConfigurationRequest $req) This API (DeleteLaunchConfiguration) is used to delete a launch configuration.
 
 * If the launch configuration is active in an auto scaling group, it cannot be deleted.
@@ -183,11 +183,12 @@ If the parameter is empty, a certain number (specified by `Limit` and 20 by defa
 * Only the `IN_SERVICE` instances will be reduced. To reduce instances in other statues, use the [`DetachInstances`](https://intl.cloud.tencent.com/document/api/377/20436?from_cn_redirect=1) or [`RemoveInstances`](https://intl.cloud.tencent.com/document/api/377/20431?from_cn_redirect=1) API.
 * The desired capacity will be reduced accordingly. The new desired capacity should be no less than the minimum capacity.
 * If the scale-in activity failed or partially succeeded, the final desired capacity only deducts the instances that have been reduced successfully.
- * @method Models\ScaleOutInstancesResponse ScaleOutInstances(Models\ScaleOutInstancesRequest $req) This API is used to add the specified number of instances to the scaling group, which returns the scaling activity ID `ActivityId`.
-* There is no on going scaling task.
+ * @method Models\ScaleOutInstancesResponse ScaleOutInstances(Models\ScaleOutInstancesRequest $req) This API is used to add the specified number of instances to a scaling group. It returns the scaling activity ID `ActivityId`.
+* u200dMake sure that there are no ongoing scaling tasks.
 * This API is valid even when the scaling group is disabled. For more details, see [DisableAutoScalingGroup](https://intl.cloud.tencent.com/document/api/377/20435?from_cn_redirect=1).
-* The desired capacity will be increased accordingly. The new desired capacity should be no more than the maximum capacity.
-* If the scale-out activity failed or partially succeeded, the final desired capacity only includes the instances that have been added successfully.
+* The total number of instances after this action cannot exceed the maximum capacity.
+* If a scale-out action failed or partially succeeded, only the number of successfully created instances is added to the number of desired capacity.
+* If the allocation policy is `SPOT_MIXED`, there may be multiple scaling activities triggered for one scaling task. u200dIn this case, the first activity ID (`ActivityId`) is returned.
  * @method Models\SetInstancesProtectionResponse SetInstancesProtection(Models\SetInstancesProtectionRequest $req) This API is used to enable scale-in protection for an instance.
 When scale-in protection is enabled, the instance will not be removed in scale-in activities triggered by replacement of unhealthy instances, alarm threshold reached, change of desired quantity, etc.
  * @method Models\StartAutoScalingInstancesResponse StartAutoScalingInstances(Models\StartAutoScalingInstancesRequest $req) This API is used to start up CVM instances in a scaling group.
