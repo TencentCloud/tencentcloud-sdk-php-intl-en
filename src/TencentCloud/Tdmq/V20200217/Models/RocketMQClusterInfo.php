@@ -68,6 +68,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setHttpVpcEndpoint(string $HttpVpcEndpoint) Set HTTP-based VPC access address
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getInternalEndpoint() Obtain Internal TCP access address
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+ * @method void setInternalEndpoint(string $InternalEndpoint) Set Internal TCP access address
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+ * @method string getHttpInternalEndpoint() Obtain Internal HTTP access address
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+ * @method void setHttpInternalEndpoint(string $HttpInternalEndpoint) Set Internal HTTP access address
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
  */
 class RocketMQClusterInfo extends AbstractModel
 {
@@ -156,6 +164,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $HttpVpcEndpoint;
 
     /**
+     * @var string Internal TCP access address
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+     */
+    public $InternalEndpoint;
+
+    /**
+     * @var string Internal HTTP access address
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+     */
+    public $HttpInternalEndpoint;
+
+    /**
      * @param string $ClusterId Cluster ID
      * @param string $ClusterName Cluster name
      * @param string $Region Region information
@@ -180,6 +200,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $HttpVpcEndpoint HTTP-based VPC access address
 Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $InternalEndpoint Internal TCP access address
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+     * @param string $HttpInternalEndpoint Internal HTTP access address
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -257,6 +281,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("HttpVpcEndpoint",$param) and $param["HttpVpcEndpoint"] !== null) {
             $this->HttpVpcEndpoint = $param["HttpVpcEndpoint"];
+        }
+
+        if (array_key_exists("InternalEndpoint",$param) and $param["InternalEndpoint"] !== null) {
+            $this->InternalEndpoint = $param["InternalEndpoint"];
+        }
+
+        if (array_key_exists("HttpInternalEndpoint",$param) and $param["HttpInternalEndpoint"] !== null) {
+            $this->HttpInternalEndpoint = $param["HttpInternalEndpoint"];
         }
     }
 }

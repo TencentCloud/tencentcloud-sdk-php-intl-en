@@ -24,10 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setClusterId(string $ClusterId) Set Cluster ID
  * @method string getNamespaceId() Obtain Namespace name, which can contain 3–64 letters, digits, hyphens, and underscores
  * @method void setNamespaceId(string $NamespaceId) Set Namespace name, which can contain 3–64 letters, digits, hyphens, and underscores
- * @method integer getTtl() Obtain Retention time of unconsumed messages in milliseconds. Value range: 60 seconds–15 days
- * @method void setTtl(integer $Ttl) Set Retention time of unconsumed messages in milliseconds. Value range: 60 seconds–15 days
- * @method integer getRetentionTime() Obtain Retention time of persisted messages in milliseconds
- * @method void setRetentionTime(integer $RetentionTime) Set Retention time of persisted messages in milliseconds
+ * @method integer getTtl() Obtain This parameter is disused.
+ * @method void setTtl(integer $Ttl) Set This parameter is disused.
+ * @method integer getRetentionTime() Obtain This parameter is disused.
+ * @method void setRetentionTime(integer $RetentionTime) Set This parameter is disused.
  * @method string getRemark() Obtain Remarks (up to 128 characters)
  * @method void setRemark(string $Remark) Set Remarks (up to 128 characters)
  */
@@ -44,12 +44,12 @@ class CreateRocketMQNamespaceRequest extends AbstractModel
     public $NamespaceId;
 
     /**
-     * @var integer Retention time of unconsumed messages in milliseconds. Value range: 60 seconds–15 days
+     * @var integer This parameter is disused.
      */
     public $Ttl;
 
     /**
-     * @var integer Retention time of persisted messages in milliseconds
+     * @var integer This parameter is disused.
      */
     public $RetentionTime;
 
@@ -61,8 +61,8 @@ class CreateRocketMQNamespaceRequest extends AbstractModel
     /**
      * @param string $ClusterId Cluster ID
      * @param string $NamespaceId Namespace name, which can contain 3–64 letters, digits, hyphens, and underscores
-     * @param integer $Ttl Retention time of unconsumed messages in milliseconds. Value range: 60 seconds–15 days
-     * @param integer $RetentionTime Retention time of persisted messages in milliseconds
+     * @param integer $Ttl This parameter is disused.
+     * @param integer $RetentionTime This parameter is disused.
      * @param string $Remark Remarks (up to 128 characters)
      */
     function __construct()

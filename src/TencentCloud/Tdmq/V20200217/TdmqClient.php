@@ -32,7 +32,9 @@ use TencentCloud\Tdmq\V20200217\Models as Models;
  * @method Models\CreateCmqTopicResponse CreateCmqTopic(Models\CreateCmqTopicRequest $req) This API is used to create a CMQ topic.
  * @method Models\CreateEnvironmentResponse CreateEnvironment(Models\CreateEnvironmentRequest $req) This API is used to create a TDMQ namespace.
  * @method Models\CreateEnvironmentRoleResponse CreateEnvironmentRole(Models\CreateEnvironmentRoleRequest $req) This API is used to create an environment role.
+ * @method Models\CreateRabbitMQUserResponse CreateRabbitMQUser(Models\CreateRabbitMQUserRequest $req) This API is used to create a TDMQ for RabbitMQ user.
  * @method Models\CreateRabbitMQVipInstanceResponse CreateRabbitMQVipInstance(Models\CreateRabbitMQVipInstanceRequest $req) This API is used to create a TDMQ for RabbitMQ exclusive instance.
+ * @method Models\CreateRabbitMQVirtualHostResponse CreateRabbitMQVirtualHost(Models\CreateRabbitMQVirtualHostRequest $req) This API is used to create a TDMQ for RabbitMQ vhost.
  * @method Models\CreateRocketMQClusterResponse CreateRocketMQCluster(Models\CreateRocketMQClusterRequest $req) This API is used to create a RocketMQ cluster.
  * @method Models\CreateRocketMQGroupResponse CreateRocketMQGroup(Models\CreateRocketMQGroupRequest $req) This API is used to create a RocketMQ consumer group.
  * @method Models\CreateRocketMQNamespaceResponse CreateRocketMQNamespace(Models\CreateRocketMQNamespaceRequest $req) This API is used to create a RocketMQ namespace.
@@ -46,6 +48,9 @@ use TencentCloud\Tdmq\V20200217\Models as Models;
  * @method Models\DeleteCmqTopicResponse DeleteCmqTopic(Models\DeleteCmqTopicRequest $req) This API is used to delete a CMQ topic.
  * @method Models\DeleteEnvironmentRolesResponse DeleteEnvironmentRoles(Models\DeleteEnvironmentRolesRequest $req) This API is used to delete an environment role.
  * @method Models\DeleteEnvironmentsResponse DeleteEnvironments(Models\DeleteEnvironmentsRequest $req) This API is used to batch delete namespaces under a tenant.
+ * @method Models\DeleteRabbitMQUserResponse DeleteRabbitMQUser(Models\DeleteRabbitMQUserRequest $req) This API is used to delete a TDMQ for RabbitMQ user.
+ * @method Models\DeleteRabbitMQVipInstanceResponse DeleteRabbitMQVipInstance(Models\DeleteRabbitMQVipInstanceRequest $req) This API is used to delete a TDMQ for RabbitMQ exclusive instance.
+ * @method Models\DeleteRabbitMQVirtualHostResponse DeleteRabbitMQVirtualHost(Models\DeleteRabbitMQVirtualHostRequest $req) This API is used to delete a TDMQ for RabbitMQ vhost.
  * @method Models\DeleteRocketMQClusterResponse DeleteRocketMQCluster(Models\DeleteRocketMQClusterRequest $req) This API is used to delete a RocketMQ cluster.
  * @method Models\DeleteRocketMQGroupResponse DeleteRocketMQGroup(Models\DeleteRocketMQGroupRequest $req) This API is used to delete a RocketMQ consumer group.
  * @method Models\DeleteRocketMQNamespaceResponse DeleteRocketMQNamespace(Models\DeleteRocketMQNamespaceRequest $req) This API is used to delete a RocketMQ namespace.
@@ -71,10 +76,14 @@ use TencentCloud\Tdmq\V20200217\Models as Models;
  * @method Models\DescribePulsarProInstanceDetailResponse DescribePulsarProInstanceDetail(Models\DescribePulsarProInstanceDetailRequest $req) This API is used to obtain the information of a TDMQ for Pulsar pro cluster instance.
  * @method Models\DescribePulsarProInstancesResponse DescribePulsarProInstances(Models\DescribePulsarProInstancesRequest $req) This API is used to query the list of the purchased TDMQ for Pulsar pro instances.
  * @method Models\DescribeRabbitMQNodeListResponse DescribeRabbitMQNodeList(Models\DescribeRabbitMQNodeListRequest $req) This API is used to query the list of TDMQ for RabbitMQ exclusive cluster nodes.
+ * @method Models\DescribeRabbitMQUserResponse DescribeRabbitMQUser(Models\DescribeRabbitMQUserRequest $req) This API is used to query the list of TDMQ for RabbitMQ users.
  * @method Models\DescribeRabbitMQVipInstancesResponse DescribeRabbitMQVipInstances(Models\DescribeRabbitMQVipInstancesRequest $req) This API is used to query the list of the purchased TDMQ for RabbitMQ exclusive instances.
+ * @method Models\DescribeRabbitMQVirtualHostResponse DescribeRabbitMQVirtualHost(Models\DescribeRabbitMQVirtualHostRequest $req) This API is used to query the list of TDMQ for RabbitMQ vhosts.
+ * @method Models\DescribeRabbitMQVirtualHostListResponse DescribeRabbitMQVirtualHostList(Models\DescribeRabbitMQVirtualHostListRequest $req) This API is used to query the list of TDMQ for RabbitMQ exclusive vhosts.
  * @method Models\DescribeRocketMQClusterResponse DescribeRocketMQCluster(Models\DescribeRocketMQClusterRequest $req) This API is used to get the information of a specific RocketMQ cluster.
  * @method Models\DescribeRocketMQClustersResponse DescribeRocketMQClusters(Models\DescribeRocketMQClustersRequest $req) This API is used to get the list of RocketMQ clusters.
  * @method Models\DescribeRocketMQGroupsResponse DescribeRocketMQGroups(Models\DescribeRocketMQGroupsRequest $req) This API is used to get the list of RocketMQ consumer groups.
+ * @method Models\DescribeRocketMQMsgResponse DescribeRocketMQMsg(Models\DescribeRocketMQMsgRequest $req) This API is used to query the TDMQ for RocketMQ message details.
  * @method Models\DescribeRocketMQNamespacesResponse DescribeRocketMQNamespaces(Models\DescribeRocketMQNamespacesRequest $req) This API is used to get the list of RocketMQ namespaces.
  * @method Models\DescribeRocketMQTopicsResponse DescribeRocketMQTopics(Models\DescribeRocketMQTopicsRequest $req) This API is used to get the list of RocketMQ topics.
  * @method Models\DescribeRocketMQVipInstanceDetailResponse DescribeRocketMQVipInstanceDetail(Models\DescribeRocketMQVipInstanceDetailRequest $req) This API is used to get the information of a specific TDMQ for RocketMQ exclusive cluster.
@@ -88,8 +97,11 @@ use TencentCloud\Tdmq\V20200217\Models as Models;
  * @method Models\ModifyCmqTopicAttributeResponse ModifyCmqTopicAttribute(Models\ModifyCmqTopicAttributeRequest $req) This API is used to modify the attributes of a CMQ topic.
  * @method Models\ModifyEnvironmentAttributesResponse ModifyEnvironmentAttributes(Models\ModifyEnvironmentAttributesRequest $req) This API is used to modify the attributes of the specified namespace.
  * @method Models\ModifyEnvironmentRoleResponse ModifyEnvironmentRole(Models\ModifyEnvironmentRoleRequest $req) This API is used to modify an environment role.
+ * @method Models\ModifyRabbitMQUserResponse ModifyRabbitMQUser(Models\ModifyRabbitMQUserRequest $req) This API is used to modify a TDMQ for RabbitMQ user.
+ * @method Models\ModifyRabbitMQVirtualHostResponse ModifyRabbitMQVirtualHost(Models\ModifyRabbitMQVirtualHostRequest $req) This API is used to modify a TDMQ for RabbitMQ vhost.
  * @method Models\ModifyRocketMQClusterResponse ModifyRocketMQCluster(Models\ModifyRocketMQClusterRequest $req) This API is used to update a RocketMQ cluster.
  * @method Models\ModifyRocketMQGroupResponse ModifyRocketMQGroup(Models\ModifyRocketMQGroupRequest $req) This API is used to update a RocketMQ consumer group.
+ * @method Models\ModifyRocketMQInstanceSpecResponse ModifyRocketMQInstanceSpec(Models\ModifyRocketMQInstanceSpecRequest $req) This API is used to modify the configurations of a TDMQ for RocketMQ exclusive instance, including the upgrade of the instance specification, node count, and storage, and the downgrade of the instance specification. After you call this API to place the order and make payments, the configuration modification will be in progress. You can query whether the modification has been completed through the `DescribeRocketMQVipInstances` API`.
  * @method Models\ModifyRocketMQNamespaceResponse ModifyRocketMQNamespace(Models\ModifyRocketMQNamespaceRequest $req) This API is used to update a RocketMQ namespace.
  * @method Models\ModifyRocketMQTopicResponse ModifyRocketMQTopic(Models\ModifyRocketMQTopicRequest $req) This API is used to update a RocketMQ topic.
  * @method Models\ModifyRoleResponse ModifyRole(Models\ModifyRoleRequest $req) This API is used to modify a role.
@@ -123,8 +135,10 @@ The API configured with `BatchReceivePolicy` returns multiple messages at a time
 
 Note: the batch message sending API in TDMQ is to package messages into a batch on the service side of TDMQ-HTTP and then send the batch as a TCP request inside the service. Therefore, when using this API, you should still follow the logic of sending a single message: each message is an independent HTTP request, and multiple HTTP requests are aggregated into one batch inside the TDMQ-HTTP service and then sent to the server; that is, batch sending messages is the same as sending a single message in terms of usage, and batch aggregation is completed inside the TDMQ-HTTP service.
  * @method Models\SendCmqMsgResponse SendCmqMsg(Models\SendCmqMsgRequest $req) This API is used to send a CMQ message.
- * @method Models\SendMessagesResponse SendMessages(Models\SendMessagesRequest $req) This API is used to send one message.
+ * @method Models\SendMessagesResponse SendMessages(Models\SendMessagesRequest $req) This API is used to send a single message.
+The message cannot be sent to a persistent topic.
  * @method Models\SendMsgResponse SendMsg(Models\SendMsgRequest $req) This API is used to test message sending. It cannot be used in the production environment.
+ * @method Models\SendRocketMQMessageResponse SendRocketMQMessage(Models\SendRocketMQMessageRequest $req) This document is used to send a TDMQ for RocketMQ message.
  * @method Models\UnbindCmqDeadLetterResponse UnbindCmqDeadLetter(Models\UnbindCmqDeadLetterRequest $req) This API is used to unbind a CMQ dead letter queue.
  */
 

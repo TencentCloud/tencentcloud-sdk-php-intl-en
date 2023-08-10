@@ -18,46 +18,29 @@ namespace TencentCloud\Tdmq\V20200217\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * CreateRole response structure.
+ * DescribeRabbitMQVirtualHostList response structure.
  *
- * @method string getRoleName() Obtain Role name
- * @method void setRoleName(string $RoleName) Set Role name
- * @method string getToken() Obtain Role token
- * @method void setToken(string $Token) Set Role token
- * @method string getRemark() Obtain Remarks
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setRemark(string $Remark) Set Remarks
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method array getEnvironmentRoleSets() Obtain Namespaces that are bound in batches
+ * @method integer getTotalCount() Obtain The number of clusters
+ * @method void setTotalCount(integer $TotalCount) Set The number of clusters
+ * @method array getVirtualHostList() Obtain Cluster list
 Note: u200dThis field may return null, indicating that no valid values can be obtained.
- * @method void setEnvironmentRoleSets(array $EnvironmentRoleSets) Set Namespaces that are bound in batches
+ * @method void setVirtualHostList(array $VirtualHostList) Set Cluster list
 Note: u200dThis field may return null, indicating that no valid values can be obtained.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
-class CreateRoleResponse extends AbstractModel
+class DescribeRabbitMQVirtualHostListResponse extends AbstractModel
 {
     /**
-     * @var string Role name
+     * @var integer The number of clusters
      */
-    public $RoleName;
+    public $TotalCount;
 
     /**
-     * @var string Role token
-     */
-    public $Token;
-
-    /**
-     * @var string Remarks
-Note: this field may return null, indicating that no valid values can be obtained.
-     */
-    public $Remark;
-
-    /**
-     * @var array Namespaces that are bound in batches
+     * @var array Cluster list
 Note: u200dThis field may return null, indicating that no valid values can be obtained.
      */
-    public $EnvironmentRoleSets;
+    public $VirtualHostList;
 
     /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -65,11 +48,8 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
     public $RequestId;
 
     /**
-     * @param string $RoleName Role name
-     * @param string $Token Role token
-     * @param string $Remark Remarks
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param array $EnvironmentRoleSets Namespaces that are bound in batches
+     * @param integer $TotalCount The number of clusters
+     * @param array $VirtualHostList Cluster list
 Note: u200dThis field may return null, indicating that no valid values can be obtained.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
@@ -86,24 +66,16 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
         if ($param === null) {
             return;
         }
-        if (array_key_exists("RoleName",$param) and $param["RoleName"] !== null) {
-            $this->RoleName = $param["RoleName"];
+        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
+            $this->TotalCount = $param["TotalCount"];
         }
 
-        if (array_key_exists("Token",$param) and $param["Token"] !== null) {
-            $this->Token = $param["Token"];
-        }
-
-        if (array_key_exists("Remark",$param) and $param["Remark"] !== null) {
-            $this->Remark = $param["Remark"];
-        }
-
-        if (array_key_exists("EnvironmentRoleSets",$param) and $param["EnvironmentRoleSets"] !== null) {
-            $this->EnvironmentRoleSets = [];
-            foreach ($param["EnvironmentRoleSets"] as $key => $value){
-                $obj = new EnvironmentRoleSet();
+        if (array_key_exists("VirtualHostList",$param) and $param["VirtualHostList"] !== null) {
+            $this->VirtualHostList = [];
+            foreach ($param["VirtualHostList"] as $key => $value){
+                $obj = new RabbitMQPrivateVirtualHost();
                 $obj->deserialize($value);
-                array_push($this->EnvironmentRoleSets, $obj);
+                array_push($this->VirtualHostList, $obj);
             }
         }
 

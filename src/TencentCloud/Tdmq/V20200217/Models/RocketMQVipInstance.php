@@ -52,6 +52,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getSpecName() Obtain Instance specification ID
  * @method void setSpecName(string $SpecName) Set Instance specification ID
+ * @method integer getMaxRetention() Obtain The maximum message retention period in hours
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+ * @method void setMaxRetention(integer $MaxRetention) Set The maximum message retention period in hours
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+ * @method integer getMinRetention() Obtain The minimum message retention period in hours
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+ * @method void setMinRetention(integer $MinRetention) Set The minimum message retention period in hours
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+ * @method integer getRetention() Obtain Instance message retention period in hours
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+ * @method void setRetention(integer $Retention) Set Instance message retention period in hours
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
  */
 class RocketMQVipInstance extends AbstractModel
 {
@@ -128,6 +140,24 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $SpecName;
 
     /**
+     * @var integer The maximum message retention period in hours
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+     */
+    public $MaxRetention;
+
+    /**
+     * @var integer The minimum message retention period in hours
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+     */
+    public $MinRetention;
+
+    /**
+     * @var integer Instance message retention period in hours
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+     */
+    public $Retention;
+
+    /**
      * @param string $InstanceId Instance ID
      * @param string $InstanceName Instance name
      * @param string $InstanceVersion Instance version
@@ -144,6 +174,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $Remark Remarks
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $SpecName Instance specification ID
+     * @param integer $MaxRetention The maximum message retention period in hours
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+     * @param integer $MinRetention The minimum message retention period in hours
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+     * @param integer $Retention Instance message retention period in hours
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -212,6 +248,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("SpecName",$param) and $param["SpecName"] !== null) {
             $this->SpecName = $param["SpecName"];
+        }
+
+        if (array_key_exists("MaxRetention",$param) and $param["MaxRetention"] !== null) {
+            $this->MaxRetention = $param["MaxRetention"];
+        }
+
+        if (array_key_exists("MinRetention",$param) and $param["MinRetention"] !== null) {
+            $this->MinRetention = $param["MinRetention"];
+        }
+
+        if (array_key_exists("Retention",$param) and $param["Retention"] !== null) {
+            $this->Retention = $param["Retention"];
         }
     }
 }

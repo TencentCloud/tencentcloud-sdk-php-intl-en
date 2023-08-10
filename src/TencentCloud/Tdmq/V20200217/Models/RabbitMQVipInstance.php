@@ -56,6 +56,10 @@ Note: This field may return null, indicating that no valid value can be obtained
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setExceptionInformation(string $ExceptionInformation) Set Cluster exception
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getClusterStatus() Obtain Instance status. Valid values: `0` (Creating), `1` (Normal), `2` (Isolated), `3` (Terminated), `4` (Abnormal), `5` (Delivery failed).
+This parameter is used to display the instance status additionally and distinguish from the `Status` parameter.
+ * @method void setClusterStatus(integer $ClusterStatus) Set Instance status. Valid values: `0` (Creating), `1` (Normal), `2` (Isolated), `3` (Terminated), `4` (Abnormal), `5` (Delivery failed).
+This parameter is used to display the instance status additionally and distinguish from the `Status` parameter.
  */
 class RabbitMQVipInstance extends AbstractModel
 {
@@ -138,6 +142,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $ExceptionInformation;
 
     /**
+     * @var integer Instance status. Valid values: `0` (Creating), `1` (Normal), `2` (Isolated), `3` (Terminated), `4` (Abnormal), `5` (Delivery failed).
+This parameter is used to display the instance status additionally and distinguish from the `Status` parameter.
+     */
+    public $ClusterStatus;
+
+    /**
      * @param string $InstanceId Instance ID
      * @param string $InstanceName Instance name
      * @param string $InstanceVersion Instance version
@@ -156,6 +166,8 @@ Note: This field may return null, indicating that no valid value can be obtained
      * @param string $SpecName Instance specification ID
      * @param string $ExceptionInformation Cluster exception
 Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $ClusterStatus Instance status. Valid values: `0` (Creating), `1` (Normal), `2` (Isolated), `3` (Terminated), `4` (Abnormal), `5` (Delivery failed).
+This parameter is used to display the instance status additionally and distinguish from the `Status` parameter.
      */
     function __construct()
     {
@@ -228,6 +240,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("ExceptionInformation",$param) and $param["ExceptionInformation"] !== null) {
             $this->ExceptionInformation = $param["ExceptionInformation"];
+        }
+
+        if (array_key_exists("ClusterStatus",$param) and $param["ClusterStatus"] !== null) {
+            $this->ClusterStatus = $param["ClusterStatus"];
         }
     }
 }

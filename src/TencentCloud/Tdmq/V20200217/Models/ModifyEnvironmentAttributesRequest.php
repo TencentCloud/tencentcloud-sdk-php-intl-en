@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setClusterId(string $ClusterId) Set Cluster ID
  * @method RetentionPolicy getRetentionPolicy() Obtain Message retention policy
  * @method void setRetentionPolicy(RetentionPolicy $RetentionPolicy) Set Message retention policy
+ * @method boolean getAutoSubscriptionCreation() Obtain Whether to enable "Auto-Create Subscription"
+ * @method void setAutoSubscriptionCreation(boolean $AutoSubscriptionCreation) Set Whether to enable "Auto-Create Subscription"
  */
 class ModifyEnvironmentAttributesRequest extends AbstractModel
 {
@@ -59,11 +61,17 @@ class ModifyEnvironmentAttributesRequest extends AbstractModel
     public $RetentionPolicy;
 
     /**
+     * @var boolean Whether to enable "Auto-Create Subscription"
+     */
+    public $AutoSubscriptionCreation;
+
+    /**
      * @param string $EnvironmentId Namespace name.
      * @param integer $MsgTTL Retention period for unconsumed messages in seconds. Value range: 60s to 1,296,000s (or 15 days).
      * @param string $Remark Remarks (up to 128 characters).
      * @param string $ClusterId Cluster ID
      * @param RetentionPolicy $RetentionPolicy Message retention policy
+     * @param boolean $AutoSubscriptionCreation Whether to enable "Auto-Create Subscription"
      */
     function __construct()
     {
@@ -97,6 +105,10 @@ class ModifyEnvironmentAttributesRequest extends AbstractModel
         if (array_key_exists("RetentionPolicy",$param) and $param["RetentionPolicy"] !== null) {
             $this->RetentionPolicy = new RetentionPolicy();
             $this->RetentionPolicy->deserialize($param["RetentionPolicy"]);
+        }
+
+        if (array_key_exists("AutoSubscriptionCreation",$param) and $param["AutoSubscriptionCreation"] !== null) {
+            $this->AutoSubscriptionCreation = $param["AutoSubscriptionCreation"];
         }
     }
 }

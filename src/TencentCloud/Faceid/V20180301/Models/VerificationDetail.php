@@ -21,37 +21,37 @@ use TencentCloud\Common\AbstractModel;
  * The details of the verification process.
  *
  * @method integer getErrorCode() Obtain The final result of this verification. `0` indicates that the person is the same as that in the photo.
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
  * @method void setErrorCode(integer $ErrorCode) Set The final result of this verification. `0` indicates that the person is the same as that in the photo.
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
  * @method string getErrorMsg() Obtain The description of the final verification result.
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
  * @method void setErrorMsg(string $ErrorMsg) Set The description of the final verification result.
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
  * @method integer getLivenessErrorCode() Obtain The result of this liveness detection process. `0` indicates success.
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
  * @method void setLivenessErrorCode(integer $LivenessErrorCode) Set The result of this liveness detection process. `0` indicates success.
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
  * @method string getLivenessErrorMsg() Obtain The result description of this liveness detection process.
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setLivenessErrorMsg(string $LivenessErrorMsg) Set The result description of this liveness detection process.
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method integer getCompareErrorCode() Obtain The result of this comparison process. `0` indicates that the person in the best face screenshot collected from the video stream is the same as that in the uploaded image for comparison.
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
  * @method void setCompareErrorCode(integer $CompareErrorCode) Set The result of this comparison process. `0` indicates that the person in the best face screenshot collected from the video stream is the same as that in the uploaded image for comparison.
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
  * @method string getCompareErrorMsg() Obtain The result description of this comparison process.
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
  * @method void setCompareErrorMsg(string $CompareErrorMsg) Set The result description of this comparison process.
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
  * @method integer getReqTimestamp() Obtain The timestamp (ms) of this verification process.
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setReqTimestamp(integer $ReqTimestamp) Set The timestamp (ms) of this verification process.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method float getSimilarity() Obtain The similarity of the best face screenshot collected from the video stream and the uploaded image for comparison in this verification process. Valid range: [0.00, 100.00]. By default, the person in the screenshot is judged as the same person in the image if the similarity is greater than or equal to 70.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setSimilarity(float $Similarity) Set The similarity of the best face screenshot collected from the video stream and the uploaded image for comparison in this verification process. Valid range: [0.00, 100.00]. By default, the person in the screenshot is judged as the same person in the image if the similarity is greater than or equal to 70.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method float getSimilarity() Obtain The similarity of the best face screenshot collected from the video stream and the uploaded image for comparison in this verification process. Value range: [0.00, 100.00]. By default, the person in the screenshot is determined to be the same person in the image if the similarity is greater than or equal to 70.
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+ * @method void setSimilarity(float $Similarity) Set The similarity of the best face screenshot collected from the video stream and the uploaded image for comparison in this verification process. Value range: [0.00, 100.00]. By default, the person in the screenshot is determined to be the same person in the image if the similarity is greater than or equal to 70.
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
  * @method string getSeq() Obtain Unique ID of this verification process.
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setSeq(string $Seq) Set Unique ID of this verification process.
@@ -61,19 +61,19 @@ class VerificationDetail extends AbstractModel
 {
     /**
      * @var integer The final result of this verification. `0` indicates that the person is the same as that in the photo.
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
      */
     public $ErrorCode;
 
     /**
      * @var string The description of the final verification result.
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
      */
     public $ErrorMsg;
 
     /**
      * @var integer The result of this liveness detection process. `0` indicates success.
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
      */
     public $LivenessErrorCode;
 
@@ -85,13 +85,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * @var integer The result of this comparison process. `0` indicates that the person in the best face screenshot collected from the video stream is the same as that in the uploaded image for comparison.
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
      */
     public $CompareErrorCode;
 
     /**
      * @var string The result description of this comparison process.
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
      */
     public $CompareErrorMsg;
 
@@ -102,8 +102,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $ReqTimestamp;
 
     /**
-     * @var float The similarity of the best face screenshot collected from the video stream and the uploaded image for comparison in this verification process. Valid range: [0.00, 100.00]. By default, the person in the screenshot is judged as the same person in the image if the similarity is greater than or equal to 70.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var float The similarity of the best face screenshot collected from the video stream and the uploaded image for comparison in this verification process. Value range: [0.00, 100.00]. By default, the person in the screenshot is determined to be the same person in the image if the similarity is greater than or equal to 70.
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
      */
     public $Similarity;
 
@@ -115,21 +115,21 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * @param integer $ErrorCode The final result of this verification. `0` indicates that the person is the same as that in the photo.
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
      * @param string $ErrorMsg The description of the final verification result.
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
      * @param integer $LivenessErrorCode The result of this liveness detection process. `0` indicates success.
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
      * @param string $LivenessErrorMsg The result description of this liveness detection process.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $CompareErrorCode The result of this comparison process. `0` indicates that the person in the best face screenshot collected from the video stream is the same as that in the uploaded image for comparison.
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
      * @param string $CompareErrorMsg The result description of this comparison process.
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
      * @param integer $ReqTimestamp The timestamp (ms) of this verification process.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param float $Similarity The similarity of the best face screenshot collected from the video stream and the uploaded image for comparison in this verification process. Valid range: [0.00, 100.00]. By default, the person in the screenshot is judged as the same person in the image if the similarity is greater than or equal to 70.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param float $Similarity The similarity of the best face screenshot collected from the video stream and the uploaded image for comparison in this verification process. Value range: [0.00, 100.00]. By default, the person in the screenshot is determined to be the same person in the image if the similarity is greater than or equal to 70.
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
      * @param string $Seq Unique ID of this verification process.
 Note: This field may return null, indicating that no valid values can be obtained.
      */

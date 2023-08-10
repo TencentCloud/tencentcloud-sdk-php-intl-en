@@ -42,6 +42,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setRetentionPolicy(RetentionPolicy $RetentionPolicy) Set Message retention policy.
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method boolean getAutoSubscriptionCreation() Obtain Whether to enable "Auto-Create Subscription"
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+ * @method void setAutoSubscriptionCreation(boolean $AutoSubscriptionCreation) Set Whether to enable "Auto-Create Subscription"
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
  */
 class Environment extends AbstractModel
 {
@@ -93,6 +97,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $RetentionPolicy;
 
     /**
+     * @var boolean Whether to enable "Auto-Create Subscription"
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+     */
+    public $AutoSubscriptionCreation;
+
+    /**
      * @param string $EnvironmentId Namespace name.
      * @param string $Remark Description.
      * @param integer $MsgTTL Retention period for unconsumed messages in seconds. Maximum value: 1,296,000 seconds (15 days).
@@ -104,6 +114,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param RetentionPolicy $RetentionPolicy Message retention policy.
 Note: This field may return null, indicating that no valid values can be obtained.
+     * @param boolean $AutoSubscriptionCreation Whether to enable "Auto-Create Subscription"
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -153,6 +165,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (array_key_exists("RetentionPolicy",$param) and $param["RetentionPolicy"] !== null) {
             $this->RetentionPolicy = new RetentionPolicy();
             $this->RetentionPolicy->deserialize($param["RetentionPolicy"]);
+        }
+
+        if (array_key_exists("AutoSubscriptionCreation",$param) and $param["AutoSubscriptionCreation"] !== null) {
+            $this->AutoSubscriptionCreation = $param["AutoSubscriptionCreation"];
         }
     }
 }

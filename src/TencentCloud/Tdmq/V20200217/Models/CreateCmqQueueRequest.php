@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateCmqQueue request structure.
  *
- * @method string getQueueName() Obtain Queue name, which must be unique under the same account in the same region. It can contain up to 64 letters, digits, and hyphens and must begin with a letter.
- * @method void setQueueName(string $QueueName) Set Queue name, which must be unique under the same account in the same region. It can contain up to 64 letters, digits, and hyphens and must begin with a letter.
+ * @method string getQueueName() Obtain Queue name, which is unique under the same account in a single region. It is a string of up to 64 characters. It can contain letters, digits, and hyphens (-) and must start with a letter.
+ * @method void setQueueName(string $QueueName) Set Queue name, which is unique under the same account in a single region. It is a string of up to 64 characters. It can contain letters, digits, and hyphens (-) and must start with a letter.
  * @method integer getMaxMsgHeapNum() Obtain Maximum number of heaped messages. The value range is 1,000,000–10,000,000 during the beta test and can be 1,000,000–1,000,000,000 after the product is officially released. The default value is 10,000,000 during the beta test and will be 100,000,000 after the product is officially released.
  * @method void setMaxMsgHeapNum(integer $MaxMsgHeapNum) Set Maximum number of heaped messages. The value range is 1,000,000–10,000,000 during the beta test and can be 1,000,000–1,000,000,000 after the product is officially released. The default value is 10,000,000 during the beta test and will be 100,000,000 after the product is officially released.
  * @method integer getPollingWaitSeconds() Obtain Long polling wait time for message reception. Value range: 0–30 seconds. Default value: 0.
@@ -58,7 +58,7 @@ use TencentCloud\Common\AbstractModel;
 class CreateCmqQueueRequest extends AbstractModel
 {
     /**
-     * @var string Queue name, which must be unique under the same account in the same region. It can contain up to 64 letters, digits, and hyphens and must begin with a letter.
+     * @var string Queue name, which is unique under the same account in a single region. It is a string of up to 64 characters. It can contain letters, digits, and hyphens (-) and must start with a letter.
      */
     public $QueueName;
 
@@ -143,7 +143,7 @@ class CreateCmqQueueRequest extends AbstractModel
     public $RetentionSizeInMB;
 
     /**
-     * @param string $QueueName Queue name, which must be unique under the same account in the same region. It can contain up to 64 letters, digits, and hyphens and must begin with a letter.
+     * @param string $QueueName Queue name, which is unique under the same account in a single region. It is a string of up to 64 characters. It can contain letters, digits, and hyphens (-) and must start with a letter.
      * @param integer $MaxMsgHeapNum Maximum number of heaped messages. The value range is 1,000,000–10,000,000 during the beta test and can be 1,000,000–1,000,000,000 after the product is officially released. The default value is 10,000,000 during the beta test and will be 100,000,000 after the product is officially released.
      * @param integer $PollingWaitSeconds Long polling wait time for message reception. Value range: 0–30 seconds. Default value: 0.
      * @param integer $VisibilityTimeout Message visibility timeout period. Value range: 1–43200 seconds (i.e., 12 hours). Default value: 30.

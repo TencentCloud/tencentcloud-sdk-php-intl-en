@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getNamespaceId() Obtain Namespace name, which can contain 3–64 letters, digits, hyphens, and underscores.
  * @method void setNamespaceId(string $NamespaceId) Set Namespace name, which can contain 3–64 letters, digits, hyphens, and underscores.
- * @method integer getTtl() Obtain Retention period for unconsumed messages in milliseconds. Valid range: 60 seconds–15 days.
- * @method void setTtl(integer $Ttl) Set Retention period for unconsumed messages in milliseconds. Valid range: 60 seconds–15 days.
+ * @method integer getTtl() Obtain Retention period for unconsumed messages in milliseconds. Valid range: 60 seconds–15 days. This parameter is disused.
+ * @method void setTtl(integer $Ttl) Set Retention period for unconsumed messages in milliseconds. Valid range: 60 seconds–15 days. This parameter is disused.
  * @method integer getRetentionTime() Obtain Retention period for persistently stored messages in milliseconds.
  * @method void setRetentionTime(integer $RetentionTime) Set Retention period for persistently stored messages in milliseconds.
  * @method string getRemark() Obtain Description.
@@ -38,6 +38,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setVpcEndpoint(string $VpcEndpoint) Set VPC access point address.
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getInternalEndpoint() Obtain Internal access point address
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+ * @method void setInternalEndpoint(string $InternalEndpoint) Set Internal access point address
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
  */
 class RocketMQNamespace extends AbstractModel
 {
@@ -47,7 +51,7 @@ class RocketMQNamespace extends AbstractModel
     public $NamespaceId;
 
     /**
-     * @var integer Retention period for unconsumed messages in milliseconds. Valid range: 60 seconds–15 days.
+     * @var integer Retention period for unconsumed messages in milliseconds. Valid range: 60 seconds–15 days. This parameter is disused.
      */
     public $Ttl;
 
@@ -75,8 +79,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $VpcEndpoint;
 
     /**
+     * @var string Internal access point address
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+     */
+    public $InternalEndpoint;
+
+    /**
      * @param string $NamespaceId Namespace name, which can contain 3–64 letters, digits, hyphens, and underscores.
-     * @param integer $Ttl Retention period for unconsumed messages in milliseconds. Valid range: 60 seconds–15 days.
+     * @param integer $Ttl Retention period for unconsumed messages in milliseconds. Valid range: 60 seconds–15 days. This parameter is disused.
      * @param integer $RetentionTime Retention period for persistently stored messages in milliseconds.
      * @param string $Remark Description.
 Note: This field may return null, indicating that no valid values can be obtained.
@@ -84,6 +94,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $VpcEndpoint VPC access point address.
 Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $InternalEndpoint Internal access point address
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -120,6 +132,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("VpcEndpoint",$param) and $param["VpcEndpoint"] !== null) {
             $this->VpcEndpoint = $param["VpcEndpoint"];
+        }
+
+        if (array_key_exists("InternalEndpoint",$param) and $param["InternalEndpoint"] !== null) {
+            $this->InternalEndpoint = $param["InternalEndpoint"];
         }
     }
 }

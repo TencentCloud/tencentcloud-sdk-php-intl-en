@@ -38,6 +38,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method integer getMaxStorage() Obtain Max storage capacity in MB
  * @method void setMaxStorage(integer $MaxStorage) Set Max storage capacity in MB
+ * @method boolean getCanEditRoute() Obtain Whether the route can be modified
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+ * @method void setCanEditRoute(boolean $CanEditRoute) Set Whether the route can be modified
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
  */
 class PulsarProClusterInfo extends AbstractModel
 {
@@ -83,6 +87,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $MaxStorage;
 
     /**
+     * @var boolean Whether the route can be modified
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+     */
+    public $CanEditRoute;
+
+    /**
      * @param string $ClusterId Cluster ID
      * @param string $ClusterName Cluster name
      * @param string $Remark Description
@@ -92,6 +102,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param array $NodeDistribution Node distribution
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $MaxStorage Max storage capacity in MB
+     * @param boolean $CanEditRoute Whether the route can be modified
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -141,6 +153,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("MaxStorage",$param) and $param["MaxStorage"] !== null) {
             $this->MaxStorage = $param["MaxStorage"];
+        }
+
+        if (array_key_exists("CanEditRoute",$param) and $param["CanEditRoute"] !== null) {
+            $this->CanEditRoute = $param["CanEditRoute"];
         }
     }
 }
