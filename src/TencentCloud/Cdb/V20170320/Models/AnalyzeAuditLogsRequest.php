@@ -28,8 +28,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEndTime(string $EndTime) Set End time of the log to be analyzed in the format of `2023-02-16 00:00:20`.
  * @method array getAggregationConditions() Obtain Sorting conditions for aggregation dimension
  * @method void setAggregationConditions(array $AggregationConditions) Set Sorting conditions for aggregation dimension
- * @method AuditLogFilter getAuditLogFilter() Obtain The result set of the audit log filtered by this condition is set as the analysis Log.
- * @method void setAuditLogFilter(AuditLogFilter $AuditLogFilter) Set The result set of the audit log filtered by this condition is set as the analysis Log.
+ * @method AuditLogFilter getAuditLogFilter() Obtain This parameter is disused. The result set of the audit log filtered by this condition is set as the analysis log.
+ * @method void setAuditLogFilter(AuditLogFilter $AuditLogFilter) Set This parameter is disused. The result set of the audit log filtered by this condition is set as the analysis log.
+ * @method array getLogFilter() Obtain The result set of the audit log filtered by this condition is set as the analysis Log.
+ * @method void setLogFilter(array $LogFilter) Set The result set of the audit log filtered by this condition is set as the analysis Log.
  */
 class AnalyzeAuditLogsRequest extends AbstractModel
 {
@@ -54,16 +56,22 @@ class AnalyzeAuditLogsRequest extends AbstractModel
     public $AggregationConditions;
 
     /**
-     * @var AuditLogFilter The result set of the audit log filtered by this condition is set as the analysis Log.
+     * @var AuditLogFilter This parameter is disused. The result set of the audit log filtered by this condition is set as the analysis log.
      */
     public $AuditLogFilter;
+
+    /**
+     * @var array The result set of the audit log filtered by this condition is set as the analysis Log.
+     */
+    public $LogFilter;
 
     /**
      * @param string $InstanceId Instance ID
      * @param string $StartTime Start time of the log to be analyzed in the format of `2023-02-16 00:00:20`.
      * @param string $EndTime End time of the log to be analyzed in the format of `2023-02-16 00:00:20`.
      * @param array $AggregationConditions Sorting conditions for aggregation dimension
-     * @param AuditLogFilter $AuditLogFilter The result set of the audit log filtered by this condition is set as the analysis Log.
+     * @param AuditLogFilter $AuditLogFilter This parameter is disused. The result set of the audit log filtered by this condition is set as the analysis log.
+     * @param array $LogFilter The result set of the audit log filtered by this condition is set as the analysis Log.
      */
     function __construct()
     {
@@ -102,6 +110,15 @@ class AnalyzeAuditLogsRequest extends AbstractModel
         if (array_key_exists("AuditLogFilter",$param) and $param["AuditLogFilter"] !== null) {
             $this->AuditLogFilter = new AuditLogFilter();
             $this->AuditLogFilter->deserialize($param["AuditLogFilter"]);
+        }
+
+        if (array_key_exists("LogFilter",$param) and $param["LogFilter"] !== null) {
+            $this->LogFilter = [];
+            foreach ($param["LogFilter"] as $key => $value){
+                $obj = new InstanceAuditLogFilters();
+                $obj->deserialize($value);
+                array_push($this->LogFilter, $obj);
+            }
         }
     }
 }

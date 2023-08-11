@@ -70,6 +70,7 @@ This is an async API. You can also use the [DescribeDBInstances](https://intl.cl
  * @method Models\DescribeAccountPrivilegesResponse DescribeAccountPrivileges(Models\DescribeAccountPrivilegesRequest $req) This API (DescribeAccountPrivileges) is used to query the information of TencentDB account permissions.
  * @method Models\DescribeAccountsResponse DescribeAccounts(Models\DescribeAccountsRequest $req) This API is used to query information of all TencentDB accounts.
  * @method Models\DescribeAsyncRequestInfoResponse DescribeAsyncRequestInfo(Models\DescribeAsyncRequestInfoRequest $req) This API (DescribeAsyncRequestInfo) is used to query the async task execution result of a TencentDB instance.
+ * @method Models\DescribeAuditLogsResponse DescribeAuditLogs(Models\DescribeAuditLogsRequest $req) This API is used to query a database audit log.
  * @method Models\DescribeAuditPoliciesResponse DescribeAuditPolicies(Models\DescribeAuditPoliciesRequest $req) This API is used to query the audit policies of a TencentDB instance.
  * @method Models\DescribeAuditRulesResponse DescribeAuditRules(Models\DescribeAuditRulesRequest $req) This API is used to query the audit rules in the current region.
  * @method Models\DescribeBackupConfigResponse DescribeBackupConfig(Models\DescribeBackupConfigRequest $req) This API (DescribeBackupConfig) is used to query the configuration information of a TencentDB instance backup.
@@ -81,11 +82,6 @@ This is an async API. You can also use the [DescribeDBInstances](https://intl.cl
  * @method Models\DescribeBackupsResponse DescribeBackups(Models\DescribeBackupsRequest $req) This API (DescribeBackups) is used to query the backups of a TencentDB instance.
  * @method Models\DescribeBinlogBackupOverviewResponse DescribeBinlogBackupOverview(Models\DescribeBinlogBackupOverviewRequest $req) This API is used to query the log backup overview of a user in the current region.
  * @method Models\DescribeBinlogsResponse DescribeBinlogs(Models\DescribeBinlogsRequest $req) This API is used to query the list of binlog files of a TencentDB instance.
- * @method Models\DescribeCDBProxyResponse DescribeCDBProxy(Models\DescribeCDBProxyRequest $req) 接口已经废弃，请使用+DescribeCdbProxyInfo+进行替换。
-
-This API is deprecated and replaced by the `DescribeCdbProxyInfo` API. 
-
-This API is used to query database proxy. It will be deprecated and replaced by the `QueryCDBProxy` API.
  * @method Models\DescribeCdbProxyInfoResponse DescribeCdbProxyInfo(Models\DescribeCdbProxyInfoRequest $req) This API is used to query the details of a database proxy.
  * @method Models\DescribeCdbZoneConfigResponse DescribeCdbZoneConfig(Models\DescribeCdbZoneConfigRequest $req) This API is used to query the purchasable specifications of TencentDB instances in a region.
  * @method Models\DescribeCloneListResponse DescribeCloneList(Models\DescribeCloneListRequest $req) This API is used to query the clone task list of an instance.
@@ -114,11 +110,6 @@ Note: the HTTP response packet will be very large if it contain a single large e
  * @method Models\DescribeParamTemplateInfoResponse DescribeParamTemplateInfo(Models\DescribeParamTemplateInfoRequest $req) This API is used to query parameter template details. The common request parameter `Region` can only be set to `ap-guangzhou`.
  * @method Models\DescribeParamTemplatesResponse DescribeParamTemplates(Models\DescribeParamTemplatesRequest $req) This API is used to query the parameter template list. The common request parameter `Region` can only be set to `ap-guangzhou`.
  * @method Models\DescribeProjectSecurityGroupsResponse DescribeProjectSecurityGroups(Models\DescribeProjectSecurityGroupsRequest $req) This API (DescribeProjectSecurityGroups) is used to query the security group details of a project.
- * @method Models\DescribeProxyConnectionPoolConfResponse DescribeProxyConnectionPoolConf(Models\DescribeProxyConnectionPoolConfRequest $req) 当前接口已经废弃，请使用+DescribeCdbProxyInfo+替代。
-
-This API has been deprecated and replaced by the `DescribeCdbProxyInfo` API. 
-
-This API is used to query the connection pool configuration of a database proxy.
  * @method Models\DescribeProxyCustomConfResponse DescribeProxyCustomConf(Models\DescribeProxyCustomConfRequest $req) This API is used to query the proxy configuration.
  * @method Models\DescribeProxySupportParamResponse DescribeProxySupportParam(Models\DescribeProxySupportParamRequest $req) This API is used to query the supported proxy versions and parameters for an instance.
  * @method Models\DescribeRemoteBackupConfigResponse DescribeRemoteBackupConfig(Models\DescribeRemoteBackupConfigRequest $req) This API is used to query the configuration information of a remote TencentDB instance backup.
@@ -153,21 +144,6 @@ Note that when modifying account permissions, you need to pass in the full permi
  * @method Models\ModifyBackupConfigResponse ModifyBackupConfig(Models\ModifyBackupConfigRequest $req) This API (ModifyBackupConfig) is used to modify the database backup configuration.
  * @method Models\ModifyBackupDownloadRestrictionResponse ModifyBackupDownloadRestriction(Models\ModifyBackupDownloadRestrictionRequest $req) This API is used to modify the restrictions of downloading backups in a region. You can specify which types of networks (private, or both private and public), VPCs, and IPs to download backups.
  * @method Models\ModifyBackupEncryptionStatusResponse ModifyBackupEncryptionStatus(Models\ModifyBackupEncryptionStatusRequest $req) This API is used to set the encryption status of an instance backup.
- * @method Models\ModifyCDBProxyConnectionPoolResponse ModifyCDBProxyConnectionPool(Models\ModifyCDBProxyConnectionPoolRequest $req) 当前接口已经废弃，请使用+AdjustCdbProxyAddress+进行替代。
-
-This API has been deprecated and replaced with `AdjustCdbProxyAddress`. 
-
-This API is used to configure the connection pool of database proxy. The supported configurations can be obtained by the `DescribeProxyConnectionPoolConf` API.
- * @method Models\ModifyCDBProxyDescResponse ModifyCDBProxyDesc(Models\ModifyCDBProxyDescRequest $req) 当前接口已经废弃，请使用+ModifyCdbProxyAddressDesc+进行替代。
-
-This API has been deprecated and replaced with `ModifyCdbProxyAddressDesc`. 
-
-This API is used to modify the description of a database proxy.
- * @method Models\ModifyCDBProxyVipVPortResponse ModifyCDBProxyVipVPort(Models\ModifyCDBProxyVipVPortRequest $req) 当前接口已经废弃，请使用+ModifyCdbProxyAddressVipAndVPort+进行替代。
-
-This API has been deprecated and replaced with `ModifyCdbProxyAddressVipAndVPort`. 
-
-This API is used to modify the VIP or the port of a database proxy.
  * @method Models\ModifyCdbProxyAddressDescResponse ModifyCdbProxyAddressDesc(Models\ModifyCdbProxyAddressDescRequest $req) This API is used to modify the description of a proxy address.
  * @method Models\ModifyCdbProxyAddressVipAndVPortResponse ModifyCdbProxyAddressVipAndVPort(Models\ModifyCdbProxyAddressVipAndVPortRequest $req) This API is used to modify the VPC of the database proxy address.
  * @method Models\ModifyCdbProxyParamResponse ModifyCdbProxyParam(Models\ModifyCdbProxyParamRequest $req) This API is used to configure the database proxy parameters.
@@ -205,11 +181,6 @@ This API calling may take up to 10 seconds, causing the client to time out. If i
  * @method Models\OpenWanServiceResponse OpenWanService(Models\OpenWanServiceRequest $req) This API (OpenWanService) is used to enable public network access for an instance.
 
 Note that before enabling public network access, you need to first [initialize the instance](https://intl.cloud.tencent.com/document/api/236/15873?from_cn_redirect=1).
- * @method Models\QueryCDBProxyResponse QueryCDBProxy(Models\QueryCDBProxyRequest $req) 当前接口已经废弃，请使用+DescribeCdbProxyInfo+进行替代。
-
-This API has been deprecated and replaced with `DescribeCdbProxyInfo`. 
-
-This API is used to query the proxy details.
  * @method Models\ReleaseIsolatedDBInstancesResponse ReleaseIsolatedDBInstances(Models\ReleaseIsolatedDBInstancesRequest $req) This API is used to deisolate an isolated TencentDB instance.
  * @method Models\ReloadBalanceProxyNodeResponse ReloadBalanceProxyNode(Models\ReloadBalanceProxyNodeRequest $req) This API is used to rebalance the load on database proxy.
  * @method Models\RenewDBInstanceResponse RenewDBInstance(Models\RenewDBInstanceRequest $req) This API is used to renew a monthly subscribed TencentDB instance, and a pay-as-you-go instance can be renewed as a monthly subscribed one by this API.

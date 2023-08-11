@@ -18,32 +18,29 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeProxyConnectionPoolConf response structure.
+ * DescribeAuditLogs response structure.
  *
- * @method integer getCount() Obtain Number of queried configurations
-Note: this field may return `null`, indicating that no valid value can be found.
- * @method void setCount(integer $Count) Set Number of queried configurations
-Note: this field may return `null`, indicating that no valid value can be found.
- * @method PoolConf getPoolConf() Obtain Connection pool configuration details
-Note: this field may return `null`, indicating that no valid value can be found.
- * @method void setPoolConf(PoolConf $PoolConf) Set Connection pool configuration details
-Note: this field may return `null`, indicating that no valid value can be found.
+ * @method integer getTotalCount() Obtain Number of eligible audit logs
+ * @method void setTotalCount(integer $TotalCount) Set Number of eligible audit logs
+ * @method array getItems() Obtain Audit log details
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+ * @method void setItems(array $Items) Set Audit log details
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
-class DescribeProxyConnectionPoolConfResponse extends AbstractModel
+class DescribeAuditLogsResponse extends AbstractModel
 {
     /**
-     * @var integer Number of queried configurations
-Note: this field may return `null`, indicating that no valid value can be found.
+     * @var integer Number of eligible audit logs
      */
-    public $Count;
+    public $TotalCount;
 
     /**
-     * @var PoolConf Connection pool configuration details
-Note: this field may return `null`, indicating that no valid value can be found.
+     * @var array Audit log details
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
      */
-    public $PoolConf;
+    public $Items;
 
     /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -51,10 +48,9 @@ Note: this field may return `null`, indicating that no valid value can be found.
     public $RequestId;
 
     /**
-     * @param integer $Count Number of queried configurations
-Note: this field may return `null`, indicating that no valid value can be found.
-     * @param PoolConf $PoolConf Connection pool configuration details
-Note: this field may return `null`, indicating that no valid value can be found.
+     * @param integer $TotalCount Number of eligible audit logs
+     * @param array $Items Audit log details
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -70,13 +66,17 @@ Note: this field may return `null`, indicating that no valid value can be found.
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Count",$param) and $param["Count"] !== null) {
-            $this->Count = $param["Count"];
+        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
+            $this->TotalCount = $param["TotalCount"];
         }
 
-        if (array_key_exists("PoolConf",$param) and $param["PoolConf"] !== null) {
-            $this->PoolConf = new PoolConf();
-            $this->PoolConf->deserialize($param["PoolConf"]);
+        if (array_key_exists("Items",$param) and $param["Items"] !== null) {
+            $this->Items = [];
+            foreach ($param["Items"] as $key => $value){
+                $obj = new AuditLog();
+                $obj->deserialize($value);
+                array_push($this->Items, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

@@ -42,8 +42,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceRole(string $InstanceRole) Set Instance type. Valid values: master (primary instance), dr (disaster recovery instance), ro (read-only instance). Default value: master.
  * @method string getDeviceType() Obtain The resource isolation type after the instance is upgraded. Valid values: `UNIVERSAL` (general instance), `EXCLUSIVE` (dedicated instance), `BASIC` (basic instance). If this parameter is left empty, the resource isolation type will be the same as the original one.
  * @method void setDeviceType(string $DeviceType) Set The resource isolation type after the instance is upgraded. Valid values: `UNIVERSAL` (general instance), `EXCLUSIVE` (dedicated instance), `BASIC` (basic instance). If this parameter is left empty, the resource isolation type will be the same as the original one.
- * @method integer getCpu() Obtain The number of CPU cores after the instance is upgraded. If this parameter is left empty, it will be subject to the `Memory` value.
- * @method void setCpu(integer $Cpu) Set The number of CPU cores after the instance is upgraded. If this parameter is left empty, it will be subject to the `Memory` value.
+ * @method integer getCpu() Obtain The number of CPU cores after the instance is upgraded. If this parameter is left empty, the minimum value will be automatically filled based on the value specified by `Memory`.
+ * @method void setCpu(integer $Cpu) Set The number of CPU cores after the instance is upgraded. If this parameter is left empty, the minimum value will be automatically filled based on the value specified by `Memory`.
  * @method integer getFastUpgrade() Obtain QuickChange options. Valid values: `0` (common upgrade), `1` (QuickChange), `2` (QuickChange first). After QuickChange is enabled, the required resources will be checked. QuickChange will be performed only when the required resources support the feature; otherwise, an error message will be returned.
  * @method void setFastUpgrade(integer $FastUpgrade) Set QuickChange options. Valid values: `0` (common upgrade), `1` (QuickChange), `2` (QuickChange first). After QuickChange is enabled, the required resources will be checked. QuickChange will be performed only when the required resources support the feature; otherwise, an error message will be returned.
  * @method integer getMaxDelayTime() Obtain Delay threshold. Value range: 1-10. Default value: `10`.
@@ -113,7 +113,7 @@ class UpgradeDBInstanceRequest extends AbstractModel
     public $DeviceType;
 
     /**
-     * @var integer The number of CPU cores after the instance is upgraded. If this parameter is left empty, it will be subject to the `Memory` value.
+     * @var integer The number of CPU cores after the instance is upgraded. If this parameter is left empty, the minimum value will be automatically filled based on the value specified by `Memory`.
      */
     public $Cpu;
 
@@ -154,7 +154,7 @@ class UpgradeDBInstanceRequest extends AbstractModel
      * @param string $BackupZone AZ information of secondary database 2, which is empty by default. This parameter can be specified when upgrading primary instances and is meaningless for read-only or disaster recovery instances.
      * @param string $InstanceRole Instance type. Valid values: master (primary instance), dr (disaster recovery instance), ro (read-only instance). Default value: master.
      * @param string $DeviceType The resource isolation type after the instance is upgraded. Valid values: `UNIVERSAL` (general instance), `EXCLUSIVE` (dedicated instance), `BASIC` (basic instance). If this parameter is left empty, the resource isolation type will be the same as the original one.
-     * @param integer $Cpu The number of CPU cores after the instance is upgraded. If this parameter is left empty, it will be subject to the `Memory` value.
+     * @param integer $Cpu The number of CPU cores after the instance is upgraded. If this parameter is left empty, the minimum value will be automatically filled based on the value specified by `Memory`.
      * @param integer $FastUpgrade QuickChange options. Valid values: `0` (common upgrade), `1` (QuickChange), `2` (QuickChange first). After QuickChange is enabled, the required resources will be checked. QuickChange will be performed only when the required resources support the feature; otherwise, an error message will be returned.
      * @param integer $MaxDelayTime Delay threshold. Value range: 1-10. Default value: `10`.
      * @param integer $CrossCluster Whether to migrate the source node across AZs. Valid values: `0` (no), `1`(yes). Default value: `0`. If it is `1`, you can modify the source node AZ.

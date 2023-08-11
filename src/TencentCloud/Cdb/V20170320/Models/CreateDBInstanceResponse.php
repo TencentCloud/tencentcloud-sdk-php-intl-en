@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateDBInstance response structure.
  *
- * @method array getDealIds() Obtain Short order ID
- * @method void setDealIds(array $DealIds) Set Short order ID
+ * @method array getDealIds() Obtain Billing sub-order ID
+ * @method void setDealIds(array $DealIds) Set Billing sub-order ID
  * @method array getInstanceIds() Obtain List of instance IDs
  * @method void setInstanceIds(array $InstanceIds) Set List of instance IDs
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class CreateDBInstanceResponse extends AbstractModel
 {
     /**
-     * @var array Short order ID
+     * @var array Billing sub-order ID
      */
     public $DealIds;
 
@@ -45,7 +45,7 @@ class CreateDBInstanceResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $DealIds Short order ID
+     * @param array $DealIds Billing sub-order ID
      * @param array $InstanceIds List of instance IDs
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
