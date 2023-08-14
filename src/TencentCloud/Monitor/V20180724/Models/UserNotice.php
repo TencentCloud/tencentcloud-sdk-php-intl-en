@@ -72,6 +72,10 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
  * @method void setWeekday(array $Weekday) Set Notification cycle. The values 1-7 indicate Monday to Sunday.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method array getOnCallFormIDs() Obtain List of schedule IDs
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+ * @method void setOnCallFormIDs(array $OnCallFormIDs) Set List of schedule IDs
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
  */
 class UserNotice extends AbstractModel
 {
@@ -154,6 +158,12 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     public $Weekday;
 
     /**
+     * @var array List of schedule IDs
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+     */
+    public $OnCallFormIDs;
+
+    /**
      * @param string $ReceiverType Recipient type. Valid values: USER (user), GROUP (user group)
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param integer $StartTime Notification start time, which is expressed by the number of seconds since 00:00:00. Value range: 0–86399
@@ -180,6 +190,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: This field may return `null`, indicating that no valid values can be obtained.
      * @param array $Weekday Notification cycle. The values 1-7 indicate Monday to Sunday.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param array $OnCallFormIDs List of schedule IDs
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -244,6 +256,10 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 
         if (array_key_exists("Weekday",$param) and $param["Weekday"] !== null) {
             $this->Weekday = $param["Weekday"];
+        }
+
+        if (array_key_exists("OnCallFormIDs",$param) and $param["OnCallFormIDs"] !== null) {
+            $this->OnCallFormIDs = $param["OnCallFormIDs"];
         }
     }
 }

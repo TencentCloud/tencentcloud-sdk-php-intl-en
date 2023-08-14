@@ -36,8 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setGroupBy(array $GroupBy) Set Aggregation dimension list, which is used to specify which dimension keys data is grouped by.
  * @method LogAlarmReq getLogAlarmReqInfo() Obtain Log alarm creation request parameters
  * @method void setLogAlarmReqInfo(LogAlarmReq $LogAlarmReqInfo) Set Log alarm creation request parameters
- * @method array getNoticeIds() Obtain Template ID, which is dedicated to TMP.
- * @method void setNoticeIds(array $NoticeIds) Set Template ID, which is dedicated to TMP.
+ * @method array getNoticeIds() Obtain Template ID, which is dedicated to TencentCloud Managed Service for Prometheus.
+ * @method void setNoticeIds(array $NoticeIds) Set Template ID, which is dedicated to TencentCloud Managed Service for Prometheus.
  * @method integer getEnable() Obtain Status (`0`: Disabled; `1`: Enabled)
  * @method void setEnable(integer $Enable) Set Status (`0`: Disabled; `1`: Enabled)
  * @method string getPolicyName() Obtain Name of the policy dedicated to TMP
@@ -88,7 +88,7 @@ class ModifyAlarmPolicyConditionRequest extends AbstractModel
     public $LogAlarmReqInfo;
 
     /**
-     * @var array Template ID, which is dedicated to TMP.
+     * @var array Template ID, which is dedicated to TencentCloud Managed Service for Prometheus.
      */
     public $NoticeIds;
 
@@ -116,7 +116,7 @@ class ModifyAlarmPolicyConditionRequest extends AbstractModel
      * @param AlarmPolicyFilter $Filter Global filter.
      * @param array $GroupBy Aggregation dimension list, which is used to specify which dimension keys data is grouped by.
      * @param LogAlarmReq $LogAlarmReqInfo Log alarm creation request parameters
-     * @param array $NoticeIds Template ID, which is dedicated to TMP.
+     * @param array $NoticeIds Template ID, which is dedicated to TencentCloud Managed Service for Prometheus.
      * @param integer $Enable Status (`0`: Disabled; `1`: Enabled)
      * @param string $PolicyName Name of the policy dedicated to TMP
      * @param string $EbSubject The alert configured for an event

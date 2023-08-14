@@ -62,9 +62,9 @@ Note: If `1` is passed in for `NeedCorrespondence`, the relationship between a p
 [Project Management](https://console.cloud.tencent.com/project)
  * @method void setProjectIds(array $ProjectIds) Set ID array of the policy project, which can be viewed on the following page:
 [Project Management](https://console.cloud.tencent.com/project)
- * @method array getNoticeIds() Obtain ID list of the notification template, which can be obtained by querying the notification template list.
+ * @method array getNoticeIds() Obtain List of the notification template IDs, which can be obtained by querying the notification template list.
 It can be queried with the API [DescribeAlarmNotices](https://intl.cloud.tencent.com/document/product/248/51280?from_cn_redirect=1).
- * @method void setNoticeIds(array $NoticeIds) Set ID list of the notification template, which can be obtained by querying the notification template list.
+ * @method void setNoticeIds(array $NoticeIds) Set List of the notification template IDs, which can be obtained by querying the notification template list.
 It can be queried with the API [DescribeAlarmNotices](https://intl.cloud.tencent.com/document/product/248/51280?from_cn_redirect=1).
  * @method array getRuleTypes() Obtain Filter by trigger condition. Valid values: STATIC (display policies with static threshold), DYNAMIC (display policies with dynamic threshold). If this parameter is left empty, all policies will be displayed
  * @method void setRuleTypes(array $RuleTypes) Set Filter by trigger condition. Valid values: STATIC (display policies with static threshold), DYNAMIC (display policies with dynamic threshold). If this parameter is left empty, all policies will be displayed
@@ -80,12 +80,16 @@ It can be queried with the API [DescribeAlarmNotices](https://intl.cloud.tencent
  * @method void setTriggerTasks(array $TriggerTasks) Set Filter alarm policy by triggered task (such as auto scaling task). Up to 10 tasks can be specified.
  * @method array getOneClickPolicyType() Obtain Filter by quick alarm policy. If this parameter is left empty, all policies are displayed. `ONECLICK`: Display quick alarm policies; `NOT_ONECLICK`: Display non-quick alarm policies.
  * @method void setOneClickPolicyType(array $OneClickPolicyType) Set Filter by quick alarm policy. If this parameter is left empty, all policies are displayed. `ONECLICK`: Display quick alarm policies; `NOT_ONECLICK`: Display non-quick alarm policies.
- * @method integer getNotBindAll() Obtain Whether the returned result filters policies associated with all objects. Valid values: `1` (Yes), `0` (No).
- * @method void setNotBindAll(integer $NotBindAll) Set Whether the returned result filters policies associated with all objects. Valid values: `1` (Yes), `0` (No).
- * @method integer getNotInstanceGroup() Obtain Whether the returned result filters policies associated with instance groups. Valid values: `1` (Yes), `0` (No).
- * @method void setNotInstanceGroup(integer $NotInstanceGroup) Set Whether the returned result filters policies associated with instance groups. Valid values: `1` (Yes), `0` (No).
+ * @method integer getNotBindAll() Obtain Whether the returned result needs to filter policies associated with all objects. Valid values: `1` (Yes), `0` (No).
+ * @method void setNotBindAll(integer $NotBindAll) Set Whether the returned result needs to filter policies associated with all objects. Valid values: `1` (Yes), `0` (No).
+ * @method integer getNotInstanceGroup() Obtain Whether the returned result needs to filter policies associated with instance groups. Valid values: `1` (Yes), `0` (No).
+ * @method void setNotInstanceGroup(integer $NotInstanceGroup) Set Whether the returned result needs to filter policies associated with instance groups. Valid values: `1` (Yes), `0` (No).
  * @method array getTags() Obtain Filter policies by tag
  * @method void setTags(array $Tags) Set Filter policies by tag
+ * @method string getPromInsId() Obtain ID of the TencentCloud Managed Service for Prometheus instance, which is used for customizing a metric policy.
+ * @method void setPromInsId(string $PromInsId) Set ID of the TencentCloud Managed Service for Prometheus instance, which is used for customizing a metric policy.
+ * @method array getReceiverOnCallFormIDs() Obtain Search by schedule
+ * @method void setReceiverOnCallFormIDs(array $ReceiverOnCallFormIDs) Set Search by schedule
  */
 class DescribeAlarmPoliciesRequest extends AbstractModel
 {
@@ -163,7 +167,7 @@ Note: If `1` is passed in for `NeedCorrespondence`, the relationship between a p
     public $ProjectIds;
 
     /**
-     * @var array ID list of the notification template, which can be obtained by querying the notification template list.
+     * @var array List of the notification template IDs, which can be obtained by querying the notification template list.
 It can be queried with the API [DescribeAlarmNotices](https://intl.cloud.tencent.com/document/product/248/51280?from_cn_redirect=1).
      */
     public $NoticeIds;
@@ -204,12 +208,12 @@ It can be queried with the API [DescribeAlarmNotices](https://intl.cloud.tencent
     public $OneClickPolicyType;
 
     /**
-     * @var integer Whether the returned result filters policies associated with all objects. Valid values: `1` (Yes), `0` (No).
+     * @var integer Whether the returned result needs to filter policies associated with all objects. Valid values: `1` (Yes), `0` (No).
      */
     public $NotBindAll;
 
     /**
-     * @var integer Whether the returned result filters policies associated with instance groups. Valid values: `1` (Yes), `0` (No).
+     * @var integer Whether the returned result needs to filter policies associated with instance groups. Valid values: `1` (Yes), `0` (No).
      */
     public $NotInstanceGroup;
 
@@ -217,6 +221,16 @@ It can be queried with the API [DescribeAlarmNotices](https://intl.cloud.tencent
      * @var array Filter policies by tag
      */
     public $Tags;
+
+    /**
+     * @var string ID of the TencentCloud Managed Service for Prometheus instance, which is used for customizing a metric policy.
+     */
+    public $PromInsId;
+
+    /**
+     * @var array Search by schedule
+     */
+    public $ReceiverOnCallFormIDs;
 
     /**
      * @param string $Module Value fixed at "monitor"
@@ -240,7 +254,7 @@ Note: If `1` is passed in for `NeedCorrespondence`, the relationship between a p
      * @param string $Order Sort order. Valid values: ASC (ascending), DESC (descending)
      * @param array $ProjectIds ID array of the policy project, which can be viewed on the following page:
 [Project Management](https://console.cloud.tencent.com/project)
-     * @param array $NoticeIds ID list of the notification template, which can be obtained by querying the notification template list.
+     * @param array $NoticeIds List of the notification template IDs, which can be obtained by querying the notification template list.
 It can be queried with the API [DescribeAlarmNotices](https://intl.cloud.tencent.com/document/product/248/51280?from_cn_redirect=1).
      * @param array $RuleTypes Filter by trigger condition. Valid values: STATIC (display policies with static threshold), DYNAMIC (display policies with dynamic threshold). If this parameter is left empty, all policies will be displayed
      * @param array $Enable Filter by alarm status. Valid values: [1]: enabled; [0]: disabled; [0, 1]: all
@@ -249,9 +263,11 @@ It can be queried with the API [DescribeAlarmNotices](https://intl.cloud.tencent
      * @param integer $NeedCorrespondence Whether the relationship between a policy and the input parameter filter dimension is required. `1`: Yes. `0`: No. Default value: `0`.
      * @param array $TriggerTasks Filter alarm policy by triggered task (such as auto scaling task). Up to 10 tasks can be specified.
      * @param array $OneClickPolicyType Filter by quick alarm policy. If this parameter is left empty, all policies are displayed. `ONECLICK`: Display quick alarm policies; `NOT_ONECLICK`: Display non-quick alarm policies.
-     * @param integer $NotBindAll Whether the returned result filters policies associated with all objects. Valid values: `1` (Yes), `0` (No).
-     * @param integer $NotInstanceGroup Whether the returned result filters policies associated with instance groups. Valid values: `1` (Yes), `0` (No).
+     * @param integer $NotBindAll Whether the returned result needs to filter policies associated with all objects. Valid values: `1` (Yes), `0` (No).
+     * @param integer $NotInstanceGroup Whether the returned result needs to filter policies associated with instance groups. Valid values: `1` (Yes), `0` (No).
      * @param array $Tags Filter policies by tag
+     * @param string $PromInsId ID of the TencentCloud Managed Service for Prometheus instance, which is used for customizing a metric policy.
+     * @param array $ReceiverOnCallFormIDs Search by schedule
      */
     function __construct()
     {
@@ -370,6 +386,14 @@ It can be queried with the API [DescribeAlarmNotices](https://intl.cloud.tencent
                 $obj->deserialize($value);
                 array_push($this->Tags, $obj);
             }
+        }
+
+        if (array_key_exists("PromInsId",$param) and $param["PromInsId"] !== null) {
+            $this->PromInsId = $param["PromInsId"];
+        }
+
+        if (array_key_exists("ReceiverOnCallFormIDs",$param) and $param["ReceiverOnCallFormIDs"] !== null) {
+            $this->ReceiverOnCallFormIDs = $param["ReceiverOnCallFormIDs"];
         }
     }
 }

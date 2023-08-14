@@ -42,6 +42,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNoticeIds(array $NoticeIds) Set Filter by notification template ID. If an empty array is passed in or if this parameter is left empty, the filter operation will not be performed.
  * @method array getTags() Obtain Filter templates by tag
  * @method void setTags(array $Tags) Set Filter templates by tag
+ * @method array getOnCallFormIDs() Obtain Schedule list
+ * @method void setOnCallFormIDs(array $OnCallFormIDs) Set Schedule list
  */
 class DescribeAlarmNoticesRequest extends AbstractModel
 {
@@ -101,6 +103,11 @@ class DescribeAlarmNoticesRequest extends AbstractModel
     public $Tags;
 
     /**
+     * @var array Schedule list
+     */
+    public $OnCallFormIDs;
+
+    /**
      * @param string $Module Module name. Enter "monitor" here
      * @param integer $PageNumber Page number. Minimum value: 1
      * @param integer $PageSize Number of entries per page. Value range: 1–200
@@ -112,6 +119,7 @@ class DescribeAlarmNoticesRequest extends AbstractModel
      * @param array $GroupIds Recipient group list
      * @param array $NoticeIds Filter by notification template ID. If an empty array is passed in or if this parameter is left empty, the filter operation will not be performed.
      * @param array $Tags Filter templates by tag
+     * @param array $OnCallFormIDs Schedule list
      */
     function __construct()
     {
@@ -173,6 +181,10 @@ class DescribeAlarmNoticesRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Tags, $obj);
             }
+        }
+
+        if (array_key_exists("OnCallFormIDs",$param) and $param["OnCallFormIDs"] !== null) {
+            $this->OnCallFormIDs = $param["OnCallFormIDs"];
         }
     }
 }

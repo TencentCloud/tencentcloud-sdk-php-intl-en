@@ -33,7 +33,7 @@ use TencentCloud\Monitor\V20180724\Models as Models;
 
 Note that alert object and alert message are special fields of Prometheus Rule Annotations, which need to be passed in through `annotations` and correspond to `summary` and `description` keys respectively. For more information, see [Alerting rules](https://prometheus.io/docs/prometheus/latest/configuration/alerting_rules/).
  * @method Models\CreateExporterIntegrationResponse CreateExporterIntegration(Models\CreateExporterIntegrationRequest $req) This API is used to create an exporter integration.
- * @method Models\CreateGrafanaInstanceResponse CreateGrafanaInstance(Models\CreateGrafanaInstanceRequest $req) This API is used to create a Grafana instance.
+ * @method Models\CreateGrafanaInstanceResponse CreateGrafanaInstance(Models\CreateGrafanaInstanceRequest $req) This API is used to create a monthly subscribed TCMG instance of the Basic Edition, with auto-renewal enabled and vouchers not allowed by default.
  * @method Models\CreateGrafanaIntegrationResponse CreateGrafanaIntegration(Models\CreateGrafanaIntegrationRequest $req) This API is used to create a Grafana integration configuration.
  * @method Models\CreateGrafanaNotificationChannelResponse CreateGrafanaNotificationChannel(Models\CreateGrafanaNotificationChannelRequest $req) This API is used to create a Grafana notification channel.
  * @method Models\CreatePolicyGroupResponse CreatePolicyGroup(Models\CreatePolicyGroupRequest $req) This API is used to add a policy group.
@@ -55,7 +55,7 @@ Note that alert object and alert message are special fields of Prometheus Rule A
  * @method Models\DeleteAlarmPolicyResponse DeleteAlarmPolicy(Models\DeleteAlarmPolicyRequest $req) This API is used to delete an alarm policy.
  * @method Models\DeleteAlertRulesResponse DeleteAlertRules(Models\DeleteAlertRulesRequest $req) This API is used to batch delete Prometheus alerting rules.
  * @method Models\DeleteExporterIntegrationResponse DeleteExporterIntegration(Models\DeleteExporterIntegrationRequest $req) This API is used to delete an exporter integration.
- * @method Models\DeleteGrafanaInstanceResponse DeleteGrafanaInstance(Models\DeleteGrafanaInstanceRequest $req) This API is used to delete a Grafana instance.
+ * @method Models\DeleteGrafanaInstanceResponse DeleteGrafanaInstance(Models\DeleteGrafanaInstanceRequest $req) This API is used to refund a monthly subscribed TCMG instance. Once it is called, the instance cannot be used and will be automatically terminated seven days later.
  * @method Models\DeleteGrafanaIntegrationResponse DeleteGrafanaIntegration(Models\DeleteGrafanaIntegrationRequest $req) This API is used to delete a Grafana integration configuration.
  * @method Models\DeleteGrafanaNotificationChannelResponse DeleteGrafanaNotificationChannel(Models\DeleteGrafanaNotificationChannelRequest $req) This API is used to delete a Grafana notification channel.
  * @method Models\DeletePolicyGroupResponse DeletePolicyGroup(Models\DeletePolicyGroupRequest $req) This API is used to delete an alarm policy group.
@@ -84,6 +84,7 @@ Note: **If you use a sub-account, you can only query the alarm records of author
  * @method Models\DescribeBaseMetricsResponse DescribeBaseMetrics(Models\DescribeBaseMetricsRequest $req) This API is used to get the attributes of basic metrics.
  * @method Models\DescribeBasicAlarmListResponse DescribeBasicAlarmList(Models\DescribeBasicAlarmListRequest $req) This API is used to get the basic alarm list.
  * @method Models\DescribeBindingPolicyObjectListResponse DescribeBindingPolicyObjectList(Models\DescribeBindingPolicyObjectListRequest $req) This API is used to get the bound object list.
+ * @method Models\DescribeClusterAgentCreatingProgressResponse DescribeClusterAgentCreatingProgress(Models\DescribeClusterAgentCreatingProgressRequest $req) This API is used to u200dobtain the binding status between the TencentCloud Managed Service for Prometheus instance and the TKE cluster.
  * @method Models\DescribeConditionsTemplateListResponse DescribeConditionsTemplateList(Models\DescribeConditionsTemplateListRequest $req) This API is used to get the trigger condition template.
  * @method Models\DescribeDNSConfigResponse DescribeDNSConfig(Models\DescribeDNSConfigRequest $req) This API is used to list Grafana DNS configurations.
  * @method Models\DescribeExporterIntegrationsResponse DescribeExporterIntegrations(Models\DescribeExporterIntegrationsRequest $req) This API is used to query the list of exporter integrations.
@@ -156,18 +157,7 @@ If you need to call a large number of APIs to pull metrics or objects at a time,
  * @method Models\ModifyPrometheusInstanceAttributesResponse ModifyPrometheusInstanceAttributes(Models\ModifyPrometheusInstanceAttributesRequest $req) This API is used to modify the attributes of a Prometheus instance.
  * @method Models\ModifyPrometheusRecordRuleYamlResponse ModifyPrometheusRecordRuleYaml(Models\ModifyPrometheusRecordRuleYamlRequest $req) This API is used to modify a Prometheus recording instance through YAML.
  * @method Models\ModifyPrometheusTempResponse ModifyPrometheusTemp(Models\ModifyPrometheusTempRequest $req) This API is used to modify a template.
- * @method Models\PutMonitorDataResponse PutMonitorData(Models\PutMonitorDataRequest $req) 对应的功能控制台及后端服务已于2年前下线，剩余该API接口未下线。
-
-This API is not deprecated, but its related console features and backend services were deactivated two years ago.
-
-The default API request rate limit is 50 requests/sec.
-The default upper limit on metrics of a single tenant is 100.
-A maximum of 30 metric/value pairs can be reported at a time. When an error is returned for a request, no metrics/values in the request will be saved.
-
-The reporting timestamp is the timestamp when you want to save the data. We recommend that you construct a timestamp at integer minutes.
-The time range of a timestamp is from 300 seconds before the current time to the current time.
-The data of the same IP metric/value pair must be reported by minute in chronological order.
- * @method Models\ResumeGrafanaInstanceResponse ResumeGrafanaInstance(Models\ResumeGrafanaInstanceRequest $req) This API is used to restore a Grafana instance.
+ * @method Models\ResumeGrafanaInstanceResponse ResumeGrafanaInstance(Models\ResumeGrafanaInstanceRequest $req) This API is used to renew a monthly subscribed TCMG instance for a month without changing the instance edition. It doesn't apply to running instances.
  * @method Models\RunPrometheusInstanceResponse RunPrometheusInstance(Models\RunPrometheusInstanceRequest $req) This API is used to initialize a TMP instance, which is called when the integration center is enabled.
  * @method Models\SendCustomAlarmMsgResponse SendCustomAlarmMsg(Models\SendCustomAlarmMsgRequest $req) This API is used to send a custom alarm notification.
  * @method Models\SetDefaultAlarmPolicyResponse SetDefaultAlarmPolicy(Models\SetDefaultAlarmPolicyRequest $req) This API is used to set an alarm policy as the default policy in the current policy type under the current project.

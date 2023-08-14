@@ -50,6 +50,14 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
  * @method void setProductId(integer $ProductId) Set Integration center product ID.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method array getOperators() Obtain Matching operator
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+ * @method void setOperators(array $Operators) Set Matching operator
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+ * @method array getPeriods() Obtain Metric monitoring granularity
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+ * @method void setPeriods(array $Periods) Set Metric monitoring granularity
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
  */
 class Metric extends AbstractModel
 {
@@ -113,6 +121,18 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     public $ProductId;
 
     /**
+     * @var array Matching operator
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+     */
+    public $Operators;
+
+    /**
+     * @var array Metric monitoring granularity
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+     */
+    public $Periods;
+
+    /**
      * @param string $Namespace Alarm policy type
      * @param string $MetricName Metric name
      * @param string $Description Metric display name
@@ -128,6 +148,10 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
      * @param integer $ProductId Integration center product ID.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param array $Operators Matching operator
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+     * @param array $Periods Metric monitoring granularity
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -185,6 +209,19 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 
         if (array_key_exists("ProductId",$param) and $param["ProductId"] !== null) {
             $this->ProductId = $param["ProductId"];
+        }
+
+        if (array_key_exists("Operators",$param) and $param["Operators"] !== null) {
+            $this->Operators = [];
+            foreach ($param["Operators"] as $key => $value){
+                $obj = new Operator();
+                $obj->deserialize($value);
+                array_push($this->Operators, $obj);
+            }
+        }
+
+        if (array_key_exists("Periods",$param) and $param["Periods"] !== null) {
+            $this->Periods = $param["Periods"];
         }
     }
 }

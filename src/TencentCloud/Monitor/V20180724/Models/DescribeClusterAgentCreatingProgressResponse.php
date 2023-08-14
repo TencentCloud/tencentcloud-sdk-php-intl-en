@@ -18,28 +18,20 @@ namespace TencentCloud\Monitor\V20180724\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Metric names and values
+ * DescribeClusterAgentCreatingProgress response structure.
  *
- * @method string getMetricName() Obtain Metric name.
- * @method void setMetricName(string $MetricName) Set Metric name.
- * @method integer getValue() Obtain Metric value.
- * @method void setValue(integer $Value) Set Metric value.
+ * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
-class MetricDatum extends AbstractModel
+class DescribeClusterAgentCreatingProgressResponse extends AbstractModel
 {
     /**
-     * @var string Metric name.
+     * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
-    public $MetricName;
+    public $RequestId;
 
     /**
-     * @var integer Metric value.
-     */
-    public $Value;
-
-    /**
-     * @param string $MetricName Metric name.
-     * @param integer $Value Metric value.
+     * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
     {
@@ -54,12 +46,8 @@ class MetricDatum extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("MetricName",$param) and $param["MetricName"] !== null) {
-            $this->MetricName = $param["MetricName"];
-        }
-
-        if (array_key_exists("Value",$param) and $param["Value"] !== null) {
-            $this->Value = $param["Value"];
+        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
+            $this->RequestId = $param["RequestId"];
         }
     }
 }
