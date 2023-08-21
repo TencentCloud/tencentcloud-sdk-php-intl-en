@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCharacterSet(string $CharacterSet) Set Character set
  * @method string getStatus() Obtain Database status
  * @method void setStatus(string $Status) Set Database status
- * @method string getCollateRule() Obtain Collation rule
- * @method void setCollateRule(string $CollateRule) Set Collation rule
+ * @method string getCollateRule() Obtain Collation
+ * @method void setCollateRule(string $CollateRule) Set Collation
  * @method string getDescription() Obtain Database remarks Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setDescription(string $Description) Set Database remarks Note: This field may return null, indicating that no valid values can be obtained.
  * @method array getUserHostPrivileges() Obtain User permissions Note: This field may return null, indicating that no valid values can be obtained.
@@ -63,7 +63,7 @@ class DbInfo extends AbstractModel
     public $Status;
 
     /**
-     * @var string Collation rule
+     * @var string Collation
      */
     public $CollateRule;
 
@@ -111,7 +111,7 @@ class DbInfo extends AbstractModel
      * @param string $DbName Database name
      * @param string $CharacterSet Character set
      * @param string $Status Database status
-     * @param string $CollateRule Collation rule
+     * @param string $CollateRule Collation
      * @param string $Description Database remarks Note: This field may return null, indicating that no valid values can be obtained.
      * @param array $UserHostPrivileges User permissions Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $DbId Database ID Note: This field may return null, indicating that no valid values can be obtained.

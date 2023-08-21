@@ -36,6 +36,8 @@ This parameter has been disused.
  * @method void setLimit(integer $Limit) Set Maximum entries returned per page
  * @method integer getOffset() Obtain Offset
  * @method void setOffset(integer $Offset) Set Offset
+ * @method string getAccountRegular() Obtain Keywords for fuzzy search (match `AccountName` and `AccountHost` at the same time), which supports regex. The union results will be returned.
+ * @method void setAccountRegular(string $AccountRegular) Set Keywords for fuzzy search (match `AccountName` and `AccountHost` at the same time), which supports regex. The union results will be returned.
  */
 class DescribeAccountsRequest extends AbstractModel
 {
@@ -72,6 +74,11 @@ This parameter has been disused.
     public $Offset;
 
     /**
+     * @var string Keywords for fuzzy search (match `AccountName` and `AccountHost` at the same time), which supports regex. The union results will be returned.
+     */
+    public $AccountRegular;
+
+    /**
      * @param string $ClusterId Cluster ID
      * @param array $AccountNames List of accounts to be filtered
      * @param string $DbType Database type. Valid values: 
@@ -80,6 +87,7 @@ This parameter has been disused.
      * @param array $Hosts List of accounts to be filtered
      * @param integer $Limit Maximum entries returned per page
      * @param integer $Offset Offset
+     * @param string $AccountRegular Keywords for fuzzy search (match `AccountName` and `AccountHost` at the same time), which supports regex. The union results will be returned.
      */
     function __construct()
     {
@@ -116,6 +124,10 @@ This parameter has been disused.
 
         if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
             $this->Offset = $param["Offset"];
+        }
+
+        if (array_key_exists("AccountRegular",$param) and $param["AccountRegular"] !== null) {
+            $this->AccountRegular = $param["AccountRegular"];
         }
     }
 }

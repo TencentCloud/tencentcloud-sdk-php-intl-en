@@ -38,6 +38,20 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceStorage(integer $InstanceStorage) Set Disk
  * @method string getInstanceRole() Obtain Instance role
  * @method void setInstanceRole(string $InstanceRole) Set Instance role
+ * @method integer getMaintainStartTime() Obtain Execution start time in seconds from 0:00	
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+ * @method void setMaintainStartTime(integer $MaintainStartTime) Set Execution start time in seconds from 0:00	
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+ * @method integer getMaintainDuration() Obtain Duration in seconds	
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+ * @method void setMaintainDuration(integer $MaintainDuration) Set Duration in seconds	
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+ * @method array getMaintainWeekDays() Obtain Execution time. Valid values: `Mon`, `Tue`, `Wed`, `Thu`, `Fri`, Sat`, `Sun`.
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+ * @method void setMaintainWeekDays(array $MaintainWeekDays) Set Execution time. Valid values: `Mon`, `Tue`, `Wed`, `Thu`, `Fri`, Sat`, `Sun`.
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+ * @method string getServerlessStatus() Obtain 
+ * @method void setServerlessStatus(string $ServerlessStatus) Set 
  */
 class ClusterInstanceDetail extends AbstractModel
 {
@@ -87,6 +101,29 @@ class ClusterInstanceDetail extends AbstractModel
     public $InstanceRole;
 
     /**
+     * @var integer Execution start time in seconds from 0:00	
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+     */
+    public $MaintainStartTime;
+
+    /**
+     * @var integer Duration in seconds	
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+     */
+    public $MaintainDuration;
+
+    /**
+     * @var array Execution time. Valid values: `Mon`, `Tue`, `Wed`, `Thu`, `Fri`, Sat`, `Sun`.
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+     */
+    public $MaintainWeekDays;
+
+    /**
+     * @var string 
+     */
+    public $ServerlessStatus;
+
+    /**
      * @param string $InstanceId Instance ID
      * @param string $InstanceName Instance name
      * @param string $InstanceType Engine type
@@ -96,6 +133,13 @@ class ClusterInstanceDetail extends AbstractModel
      * @param integer $InstanceMemory Memory
      * @param integer $InstanceStorage Disk
      * @param string $InstanceRole Instance role
+     * @param integer $MaintainStartTime Execution start time in seconds from 0:00	
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+     * @param integer $MaintainDuration Duration in seconds	
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+     * @param array $MaintainWeekDays Execution time. Valid values: `Mon`, `Tue`, `Wed`, `Thu`, `Fri`, Sat`, `Sun`.
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+     * @param string $ServerlessStatus 
      */
     function __construct()
     {
@@ -144,6 +188,22 @@ class ClusterInstanceDetail extends AbstractModel
 
         if (array_key_exists("InstanceRole",$param) and $param["InstanceRole"] !== null) {
             $this->InstanceRole = $param["InstanceRole"];
+        }
+
+        if (array_key_exists("MaintainStartTime",$param) and $param["MaintainStartTime"] !== null) {
+            $this->MaintainStartTime = $param["MaintainStartTime"];
+        }
+
+        if (array_key_exists("MaintainDuration",$param) and $param["MaintainDuration"] !== null) {
+            $this->MaintainDuration = $param["MaintainDuration"];
+        }
+
+        if (array_key_exists("MaintainWeekDays",$param) and $param["MaintainWeekDays"] !== null) {
+            $this->MaintainWeekDays = $param["MaintainWeekDays"];
+        }
+
+        if (array_key_exists("ServerlessStatus",$param) and $param["ServerlessStatus"] !== null) {
+            $this->ServerlessStatus = $param["ServerlessStatus"];
         }
     }
 }

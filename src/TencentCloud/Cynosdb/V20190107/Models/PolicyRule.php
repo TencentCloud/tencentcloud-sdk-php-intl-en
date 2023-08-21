@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getAction() Obtain Policy, which can be `ACCEPT` or `DROP`
  * @method void setAction(string $Action) Set Policy, which can be `ACCEPT` or `DROP`
- * @method string getCidrIp() Obtain Source IP or IP range, such as 192.168.0.0/16
- * @method void setCidrIp(string $CidrIp) Set Source IP or IP range, such as 192.168.0.0/16
+ * @method string getCidrIp() Obtain Source IP or source IP range, such as 192.168.0.0/16
+ * @method void setCidrIp(string $CidrIp) Set Source IP or source IP range, such as 192.168.0.0/16
  * @method string getPortRange() Obtain Port
  * @method void setPortRange(string $PortRange) Set Port
  * @method string getIpProtocol() Obtain Network protocol, such as UDP and TCP
@@ -45,7 +45,7 @@ class PolicyRule extends AbstractModel
     public $Action;
 
     /**
-     * @var string Source IP or IP range, such as 192.168.0.0/16
+     * @var string Source IP or source IP range, such as 192.168.0.0/16
      */
     public $CidrIp;
 
@@ -81,7 +81,7 @@ class PolicyRule extends AbstractModel
 
     /**
      * @param string $Action Policy, which can be `ACCEPT` or `DROP`
-     * @param string $CidrIp Source IP or IP range, such as 192.168.0.0/16
+     * @param string $CidrIp Source IP or source IP range, such as 192.168.0.0/16
      * @param string $PortRange Port
      * @param string $IpProtocol Network protocol, such as UDP and TCP
      * @param string $ServiceModule Protocol port ID or protocol port group ID.

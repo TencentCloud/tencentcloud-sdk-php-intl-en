@@ -38,6 +38,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDatabase(string $Database) Set Database name
  * @method string getFileType() Obtain File type. Valid values: csv, original.
  * @method void setFileType(string $FileType) Set File type. Valid values: csv, original.
+ * @method string getOrderBy() Obtain Sorting field. Valid values: u200d`QueryTime`, `LockTime`, `RowsExamined`, and `RowsSent`.
+ * @method void setOrderBy(string $OrderBy) Set Sorting field. Valid values: u200d`QueryTime`, `LockTime`, `RowsExamined`, and `RowsSent`.
+ * @method string getOrderByType() Obtain Sorting order. Valid values: `asc`, `desc`.
+ * @method void setOrderByType(string $OrderByType) Set Sorting order. Valid values: `asc`, `desc`.
  */
 class ExportInstanceSlowQueriesRequest extends AbstractModel
 {
@@ -87,6 +91,16 @@ class ExportInstanceSlowQueriesRequest extends AbstractModel
     public $FileType;
 
     /**
+     * @var string Sorting field. Valid values: u200d`QueryTime`, `LockTime`, `RowsExamined`, and `RowsSent`.
+     */
+    public $OrderBy;
+
+    /**
+     * @var string Sorting order. Valid values: `asc`, `desc`.
+     */
+    public $OrderByType;
+
+    /**
      * @param string $InstanceId Instance ID
      * @param string $StartTime Transaction start time
      * @param string $EndTime Transaction end time
@@ -96,6 +110,8 @@ class ExportInstanceSlowQueriesRequest extends AbstractModel
      * @param string $Host Client host
      * @param string $Database Database name
      * @param string $FileType File type. Valid values: csv, original.
+     * @param string $OrderBy Sorting field. Valid values: u200d`QueryTime`, `LockTime`, `RowsExamined`, and `RowsSent`.
+     * @param string $OrderByType Sorting order. Valid values: `asc`, `desc`.
      */
     function __construct()
     {
@@ -144,6 +160,14 @@ class ExportInstanceSlowQueriesRequest extends AbstractModel
 
         if (array_key_exists("FileType",$param) and $param["FileType"] !== null) {
             $this->FileType = $param["FileType"];
+        }
+
+        if (array_key_exists("OrderBy",$param) and $param["OrderBy"] !== null) {
+            $this->OrderBy = $param["OrderBy"];
+        }
+
+        if (array_key_exists("OrderByType",$param) and $param["OrderByType"] !== null) {
+            $this->OrderByType = $param["OrderByType"];
         }
     }
 }

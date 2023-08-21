@@ -24,10 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTemplateName(string $TemplateName) Set Template name
  * @method string getEngineVersion() Obtain MySQL version number
  * @method void setEngineVersion(string $EngineVersion) Set MySQL version number
- * @method string getTemplateDescription() Obtain The description of a template
- * @method void setTemplateDescription(string $TemplateDescription) Set The description of a template
- * @method integer getTemplateId() Obtain (Optional) ID of the template to be copied
- * @method void setTemplateId(integer $TemplateId) Set (Optional) ID of the template to be copied
+ * @method string getTemplateDescription() Obtain Template description
+ * @method void setTemplateDescription(string $TemplateDescription) Set Template description
+ * @method integer getTemplateId() Obtain ID of the template to be copied
+ * @method void setTemplateId(integer $TemplateId) Set ID of the template to be copied
  * @method string getDbMode() Obtain Database type. Valid values:  `NORMAL` (default), `SERVERLESS`.
  * @method void setDbMode(string $DbMode) Set Database type. Valid values:  `NORMAL` (default), `SERVERLESS`.
  * @method array getParamList() Obtain List of the parameters
@@ -46,12 +46,12 @@ class CreateParamTemplateRequest extends AbstractModel
     public $EngineVersion;
 
     /**
-     * @var string The description of a template
+     * @var string Template description
      */
     public $TemplateDescription;
 
     /**
-     * @var integer (Optional) ID of the template to be copied
+     * @var integer ID of the template to be copied
      */
     public $TemplateId;
 
@@ -68,8 +68,8 @@ class CreateParamTemplateRequest extends AbstractModel
     /**
      * @param string $TemplateName Template name
      * @param string $EngineVersion MySQL version number
-     * @param string $TemplateDescription The description of a template
-     * @param integer $TemplateId (Optional) ID of the template to be copied
+     * @param string $TemplateDescription Template description
+     * @param integer $TemplateId ID of the template to be copied
      * @param string $DbMode Database type. Valid values:  `NORMAL` (default), `SERVERLESS`.
      * @param array $ParamList List of the parameters
      */
