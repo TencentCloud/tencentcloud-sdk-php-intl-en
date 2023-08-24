@@ -50,8 +50,10 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
 Note: u200dThis field may return null, indicating that no valid values can be obtained.
  * @method void setMaintainWeekDays(array $MaintainWeekDays) Set Execution time. Valid values: `Mon`, `Tue`, `Wed`, `Thu`, `Fri`, Sat`, `Sun`.
 Note: u200dThis field may return null, indicating that no valid values can be obtained.
- * @method string getServerlessStatus() Obtain 
- * @method void setServerlessStatus(string $ServerlessStatus) Set 
+ * @method string getServerlessStatus() Obtain Serverless instance u200denablement status
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+ * @method void setServerlessStatus(string $ServerlessStatus) Set Serverless instance u200denablement status
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
  */
 class ClusterInstanceDetail extends AbstractModel
 {
@@ -119,7 +121,8 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
     public $MaintainWeekDays;
 
     /**
-     * @var string 
+     * @var string Serverless instance u200denablement status
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
      */
     public $ServerlessStatus;
 
@@ -139,7 +142,8 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
 Note: u200dThis field may return null, indicating that no valid values can be obtained.
      * @param array $MaintainWeekDays Execution time. Valid values: `Mon`, `Tue`, `Wed`, `Thu`, `Fri`, Sat`, `Sun`.
 Note: u200dThis field may return null, indicating that no valid values can be obtained.
-     * @param string $ServerlessStatus 
+     * @param string $ServerlessStatus Serverless instance u200denablement status
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

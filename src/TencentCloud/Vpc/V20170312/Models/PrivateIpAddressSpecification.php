@@ -42,8 +42,8 @@ PENDING: Creating
 MIGRATING: Migrating
 DELETING: Deleting
 AVAILABLE: Available
- * @method string getQosLevel() Obtain IP service level. Values: `PT` (Gold), `AU` (Silver), `AG` (Bronze) and `DEFAULT`
- * @method void setQosLevel(string $QosLevel) Set IP service level. Values: `PT` (Gold), `AU` (Silver), `AG` (Bronze) and `DEFAULT`
+ * @method string getQosLevel() Obtain IP u200dservice level. Values: PT` u200d(Gold), `AU` u200d(Silver), `AG `(Bronze) and DEFAULT` (Default).
+ * @method void setQosLevel(string $QosLevel) Set IP u200dservice level. Values: PT` u200d(Gold), `AU` u200d(Silver), `AG `(Bronze) and DEFAULT` (Default).
  */
 class PrivateIpAddressSpecification extends AbstractModel
 {
@@ -87,7 +87,7 @@ AVAILABLE: Available
     public $State;
 
     /**
-     * @var string IP service level. Values: `PT` (Gold), `AU` (Silver), `AG` (Bronze) and `DEFAULT`
+     * @var string IP u200dservice level. Values: PT` u200d(Gold), `AU` u200d(Silver), `AG `(Bronze) and DEFAULT` (Default).
      */
     public $QosLevel;
 
@@ -103,7 +103,7 @@ PENDING: Creating
 MIGRATING: Migrating
 DELETING: Deleting
 AVAILABLE: Available
-     * @param string $QosLevel IP service level. Values: `PT` (Gold), `AU` (Silver), `AG` (Bronze) and `DEFAULT`
+     * @param string $QosLevel IP u200dservice level. Values: PT` u200d(Gold), `AU` u200d(Silver), `AG `(Bronze) and DEFAULT` (Default).
      */
     function __construct()
     {

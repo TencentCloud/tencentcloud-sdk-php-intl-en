@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeSecurityGroups request structure.
  *
- * @method array getSecurityGroupIds() Obtain The security group instance ID, such as `sg-33ocnj9n`. It can be obtained through `DescribeSecurityGroups`. Each request can have a maximum of 100 instances. `SecurityGroupIds` and `Filters` cannot be specified at the same time.
- * @method void setSecurityGroupIds(array $SecurityGroupIds) Set The security group instance ID, such as `sg-33ocnj9n`. It can be obtained through `DescribeSecurityGroups`. Each request can have a maximum of 100 instances. `SecurityGroupIds` and `Filters` cannot be specified at the same time.
+ * @method array getSecurityGroupIds() Obtain Security group ID, such as `sg-33ocnj9n`. Each request can contain up to 100 instances at a time. `SecurityGroupIds` and `Filters` cannot be specified at the same time.
+ * @method void setSecurityGroupIds(array $SecurityGroupIds) Set Security group ID, such as `sg-33ocnj9n`. Each request can contain up to 100 instances at a time. `SecurityGroupIds` and `Filters` cannot be specified at the same time.
  * @method array getFilters() Obtain Filter conditions. `SecurityGroupIds` and `Filters` cannot be specified at the same time.
 <li>security-group-id - String - (Filter condition) The security group ID.</li>
 <li>project-id - Integer - (Filter condition) The project ID.</li>
@@ -38,11 +38,15 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(string $Offset) Set Offset. Default value: 0.
  * @method string getLimit() Obtain Number of returned results. Default value: 20. Maximum value: 100.
  * @method void setLimit(string $Limit) Set Number of returned results. Default value: 20. Maximum value: 100.
+ * @method string getOrderField() Obtain Sorting field. Values: `CreatedTime`, `UpdateTime` Note: This field does not have default value.
+ * @method void setOrderField(string $OrderField) Set Sorting field. Values: `CreatedTime`, `UpdateTime` Note: This field does not have default value.
+ * @method string getOrderDirection() Obtain Sorting method Order methods. Ascending: `ASC`, Descending: `DESC`. Default: `ASC`
+ * @method void setOrderDirection(string $OrderDirection) Set Sorting method Order methods. Ascending: `ASC`, Descending: `DESC`. Default: `ASC`
  */
 class DescribeSecurityGroupsRequest extends AbstractModel
 {
     /**
-     * @var array The security group instance ID, such as `sg-33ocnj9n`. It can be obtained through `DescribeSecurityGroups`. Each request can have a maximum of 100 instances. `SecurityGroupIds` and `Filters` cannot be specified at the same time.
+     * @var array Security group ID, such as `sg-33ocnj9n`. Each request can contain up to 100 instances at a time. `SecurityGroupIds` and `Filters` cannot be specified at the same time.
      */
     public $SecurityGroupIds;
 
@@ -67,7 +71,17 @@ class DescribeSecurityGroupsRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @param array $SecurityGroupIds The security group instance ID, such as `sg-33ocnj9n`. It can be obtained through `DescribeSecurityGroups`. Each request can have a maximum of 100 instances. `SecurityGroupIds` and `Filters` cannot be specified at the same time.
+     * @var string Sorting field. Values: `CreatedTime`, `UpdateTime` Note: This field does not have default value.
+     */
+    public $OrderField;
+
+    /**
+     * @var string Sorting method Order methods. Ascending: `ASC`, Descending: `DESC`. Default: `ASC`
+     */
+    public $OrderDirection;
+
+    /**
+     * @param array $SecurityGroupIds Security group ID, such as `sg-33ocnj9n`. Each request can contain up to 100 instances at a time. `SecurityGroupIds` and `Filters` cannot be specified at the same time.
      * @param array $Filters Filter conditions. `SecurityGroupIds` and `Filters` cannot be specified at the same time.
 <li>security-group-id - String - (Filter condition) The security group ID.</li>
 <li>project-id - Integer - (Filter condition) The project ID.</li>
@@ -76,6 +90,8 @@ class DescribeSecurityGroupsRequest extends AbstractModel
 <li> `tag:tag-key` - String - Required: no - (Filter condition) Filters by tag key pair. For this parameter, `tag-key` will be replaced with a specific tag key. For more information, see Example 3.</li>
      * @param string $Offset Offset. Default value: 0.
      * @param string $Limit Number of returned results. Default value: 20. Maximum value: 100.
+     * @param string $OrderField Sorting field. Values: `CreatedTime`, `UpdateTime` Note: This field does not have default value.
+     * @param string $OrderDirection Sorting method Order methods. Ascending: `ASC`, Descending: `DESC`. Default: `ASC`
      */
     function __construct()
     {
@@ -109,6 +125,14 @@ class DescribeSecurityGroupsRequest extends AbstractModel
 
         if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
             $this->Limit = $param["Limit"];
+        }
+
+        if (array_key_exists("OrderField",$param) and $param["OrderField"] !== null) {
+            $this->OrderField = $param["OrderField"];
+        }
+
+        if (array_key_exists("OrderDirection",$param) and $param["OrderDirection"] !== null) {
+            $this->OrderDirection = $param["OrderDirection"];
         }
     }
 }

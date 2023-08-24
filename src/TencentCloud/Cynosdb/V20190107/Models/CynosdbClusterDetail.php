@@ -96,8 +96,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
  * @method void setVip(string $Vip) Set VIP
  * @method integer getVport() Obtain vport
  * @method void setVport(integer $Vport) Set vport
- * @method array getRoAddr() Obtain vport for read/write separation
- * @method void setRoAddr(array $RoAddr) Set vport for read/write separation
+ * @method array getRoAddr() Obtain VIP u200dand vport of the read-only instance in a cluster
+ * @method void setRoAddr(array $RoAddr) Set VIP u200dand vport of the read-only instance in a cluster
  * @method Ability getAbility() Obtain Features supported by the cluster
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setAbility(Ability $Ability) Set Features supported by the cluster
@@ -314,7 +314,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $Vport;
 
     /**
-     * @var array vport for read/write separation
+     * @var array VIP u200dand vport of the read-only instance in a cluster
      */
     public $RoAddr;
 
@@ -476,7 +476,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param integer $UsedStorage Used capacity
      * @param string $Vip VIP
      * @param integer $Vport vport
-     * @param array $RoAddr vport for read/write separation
+     * @param array $RoAddr VIP u200dand vport of the read-only instance in a cluster
      * @param Ability $Ability Features supported by the cluster
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $CynosVersion TDSQL-C version

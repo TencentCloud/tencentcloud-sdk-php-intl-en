@@ -22,16 +22,16 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getBusinessType() Obtain Type of associated resource. Values: `securitygroup`
  * @method void setBusinessType(string $BusinessType) Set Type of associated resource. Values: `securitygroup`
- * @method string getInstanceId() Obtain ID of the instance.
- * @method void setInstanceId(string $InstanceId) Set ID of the instance.
+ * @method string getInstanceId() Obtain Service instance ID. It's corresponding to the `BusinessType`. 
+ * @method void setInstanceId(string $InstanceId) Set Service instance ID. It's corresponding to the `BusinessType`. 
  * @method string getStartDate() Obtain Start time. Format: %Y-%m-%d %H:%M:%S
  * @method void setStartDate(string $StartDate) Set Start time. Format: %Y-%m-%d %H:%M:%S
  * @method string getEndDate() Obtain End time. Format: %Y-%m-%d %H:%M:%S
  * @method void setEndDate(string $EndDate) Set End time. Format: %Y-%m-%d %H:%M:%S
  * @method integer getOffset() Obtain Offset. Default value: `0`.
  * @method void setOffset(integer $Offset) Set Offset. Default value: `0`.
- * @method integer getLimit() Obtain Number of returned results. Default value: 20. Maximum value: 200.
- * @method void setLimit(integer $Limit) Set Number of returned results. Default value: 20. Maximum value: 200.
+ * @method integer getLimit() Obtain Number of returned results. Default value: 20. Maximum value: 100.
+ * @method void setLimit(integer $Limit) Set Number of returned results. Default value: 20. Maximum value: 100.
  */
 class DescribeSnapshotFilesRequest extends AbstractModel
 {
@@ -41,7 +41,7 @@ class DescribeSnapshotFilesRequest extends AbstractModel
     public $BusinessType;
 
     /**
-     * @var string ID of the instance.
+     * @var string Service instance ID. It's corresponding to the `BusinessType`. 
      */
     public $InstanceId;
 
@@ -61,17 +61,17 @@ class DescribeSnapshotFilesRequest extends AbstractModel
     public $Offset;
 
     /**
-     * @var integer Number of returned results. Default value: 20. Maximum value: 200.
+     * @var integer Number of returned results. Default value: 20. Maximum value: 100.
      */
     public $Limit;
 
     /**
      * @param string $BusinessType Type of associated resource. Values: `securitygroup`
-     * @param string $InstanceId ID of the instance.
+     * @param string $InstanceId Service instance ID. It's corresponding to the `BusinessType`. 
      * @param string $StartDate Start time. Format: %Y-%m-%d %H:%M:%S
      * @param string $EndDate End time. Format: %Y-%m-%d %H:%M:%S
      * @param integer $Offset Offset. Default value: `0`.
-     * @param integer $Limit Number of returned results. Default value: 20. Maximum value: 200.
+     * @param integer $Limit Number of returned results. Default value: 20. Maximum value: 100.
      */
     function __construct()
     {

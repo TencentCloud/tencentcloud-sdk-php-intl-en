@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDnsServers(array $DnsServers) Set DNS address. A maximum of 4 addresses is supported. The first one is primary server by default, and the rest are secondary servers.
  * @method string getDomainName() Obtain Domain name
  * @method void setDomainName(string $DomainName) Set Domain name
+ * @method boolean getEnableCdcPublish() Obtain Whether to publish the CDC subnet to CCN. `true`: Publish; `false`: u200dDo not publish
+ * @method void setEnableCdcPublish(boolean $EnableCdcPublish) Set Whether to publish the CDC subnet to CCN. `true`: Publish; `false`: u200dDo not publish
  */
 class ModifyVpcAttributeRequest extends AbstractModel
 {
@@ -59,11 +61,17 @@ class ModifyVpcAttributeRequest extends AbstractModel
     public $DomainName;
 
     /**
+     * @var boolean Whether to publish the CDC subnet to CCN. `true`: Publish; `false`: u200dDo not publish
+     */
+    public $EnableCdcPublish;
+
+    /**
      * @param string $VpcId Security group can be named freely, but cannot exceed 60 characters.
      * @param string $VpcName VPC can be named freely, but the maximum length is 60 characters.
      * @param string $EnableMulticast Whether multicast is enabled. `true`: Enabled. `false`: Off.
      * @param array $DnsServers DNS address. A maximum of 4 addresses is supported. The first one is primary server by default, and the rest are secondary servers.
      * @param string $DomainName Domain name
+     * @param boolean $EnableCdcPublish Whether to publish the CDC subnet to CCN. `true`: Publish; `false`: u200dDo not publish
      */
     function __construct()
     {
@@ -96,6 +104,10 @@ class ModifyVpcAttributeRequest extends AbstractModel
 
         if (array_key_exists("DomainName",$param) and $param["DomainName"] !== null) {
             $this->DomainName = $param["DomainName"];
+        }
+
+        if (array_key_exists("EnableCdcPublish",$param) and $param["EnableCdcPublish"] !== null) {
+            $this->EnableCdcPublish = $param["EnableCdcPublish"];
         }
     }
 }

@@ -38,14 +38,26 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVideoTemplate(VideoTemplateInfoForUpdate $VideoTemplate) Set Video stream configuration parameter.
  * @method AudioTemplateInfoForUpdate getAudioTemplate() Obtain Audio stream configuration parameter.
  * @method void setAudioTemplate(AudioTemplateInfoForUpdate $AudioTemplate) Set Audio stream configuration parameter.
- * @method TEHDConfigForUpdate getTEHDConfig() Obtain TESHD transcoding parameter.
- * @method void setTEHDConfig(TEHDConfigForUpdate $TEHDConfig) Set TESHD transcoding parameter.
+ * @method TEHDConfigForUpdate getTEHDConfig() Obtain The TSC transcoding parameters.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setTEHDConfig(TEHDConfigForUpdate $TEHDConfig) Set The TSC transcoding parameters.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method SubtitleTemplate getSubtitleTemplate() Obtain The subtitle settings.
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
  * @method void setSubtitleTemplate(SubtitleTemplate $SubtitleTemplate) Set The subtitle settings.
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
  * @method array getAddonAudioStream() Obtain The information of the external audio track to add.
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setAddonAudioStream(array $AddonAudioStream) Set The information of the external audio track to add.
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getStdExtInfo() Obtain An extended field for transcoding.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+ * @method void setStdExtInfo(string $StdExtInfo) Set An extended field for transcoding.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+ * @method array getAddOnSubtitles() Obtain The subtitle file to add.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+ * @method void setAddOnSubtitles(array $AddOnSubtitles) Set The subtitle file to add.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
  */
 class OverrideTranscodeParameter extends AbstractModel
 {
@@ -79,12 +91,14 @@ class OverrideTranscodeParameter extends AbstractModel
     public $AudioTemplate;
 
     /**
-     * @var TEHDConfigForUpdate TESHD transcoding parameter.
+     * @var TEHDConfigForUpdate The TSC transcoding parameters.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $TEHDConfig;
 
     /**
      * @var SubtitleTemplate The subtitle settings.
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
      */
     public $SubtitleTemplate;
 
@@ -93,6 +107,18 @@ class OverrideTranscodeParameter extends AbstractModel
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $AddonAudioStream;
+
+    /**
+     * @var string An extended field for transcoding.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+     */
+    public $StdExtInfo;
+
+    /**
+     * @var array The subtitle file to add.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+     */
+    public $AddOnSubtitles;
 
     /**
      * @param string $Container Container format. Valid values: mp4, flv, hls, mp3, flac, ogg, and m4a; mp3, flac, ogg, and m4a are formats of audio files.
@@ -104,10 +130,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
 <li>1: remove</li>
      * @param VideoTemplateInfoForUpdate $VideoTemplate Video stream configuration parameter.
      * @param AudioTemplateInfoForUpdate $AudioTemplate Audio stream configuration parameter.
-     * @param TEHDConfigForUpdate $TEHDConfig TESHD transcoding parameter.
+     * @param TEHDConfigForUpdate $TEHDConfig The TSC transcoding parameters.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param SubtitleTemplate $SubtitleTemplate The subtitle settings.
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
      * @param array $AddonAudioStream The information of the external audio track to add.
 Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $StdExtInfo An extended field for transcoding.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+     * @param array $AddOnSubtitles The subtitle file to add.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -160,6 +192,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 $obj = new MediaInputInfo();
                 $obj->deserialize($value);
                 array_push($this->AddonAudioStream, $obj);
+            }
+        }
+
+        if (array_key_exists("StdExtInfo",$param) and $param["StdExtInfo"] !== null) {
+            $this->StdExtInfo = $param["StdExtInfo"];
+        }
+
+        if (array_key_exists("AddOnSubtitles",$param) and $param["AddOnSubtitles"] !== null) {
+            $this->AddOnSubtitles = [];
+            foreach ($param["AddOnSubtitles"] as $key => $value){
+                $obj = new AddOnSubtitle();
+                $obj->deserialize($value);
+                array_push($this->AddOnSubtitles, $obj);
             }
         }
     }

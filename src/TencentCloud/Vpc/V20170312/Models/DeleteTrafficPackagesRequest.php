@@ -14,32 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cynosdb\V20190107\Models;
+namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Database address
+ * DeleteTrafficPackages request structure.
  *
- * @method string getIP() Obtain IP address
- * @method void setIP(string $IP) Set IP address
- * @method integer getPort() Obtain Port
- * @method void setPort(integer $Port) Set Port
+ * @method array getTrafficPackageIds() Obtain The unique ID array of traffic packages to delete
+ * @method void setTrafficPackageIds(array $TrafficPackageIds) Set The unique ID array of traffic packages to delete
  */
-class Addr extends AbstractModel
+class DeleteTrafficPackagesRequest extends AbstractModel
 {
     /**
-     * @var string IP address
+     * @var array The unique ID array of traffic packages to delete
      */
-    public $IP;
+    public $TrafficPackageIds;
 
     /**
-     * @var integer Port
-     */
-    public $Port;
-
-    /**
-     * @param string $IP IP address
-     * @param integer $Port Port
+     * @param array $TrafficPackageIds The unique ID array of traffic packages to delete
      */
     function __construct()
     {
@@ -54,12 +46,8 @@ class Addr extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("IP",$param) and $param["IP"] !== null) {
-            $this->IP = $param["IP"];
-        }
-
-        if (array_key_exists("Port",$param) and $param["Port"] !== null) {
-            $this->Port = $param["Port"];
+        if (array_key_exists("TrafficPackageIds",$param) and $param["TrafficPackageIds"] !== null) {
+            $this->TrafficPackageIds = $param["TrafficPackageIds"];
         }
     }
 }

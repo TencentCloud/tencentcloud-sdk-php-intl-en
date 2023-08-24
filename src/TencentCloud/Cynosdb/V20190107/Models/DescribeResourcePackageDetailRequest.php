@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getPackageId() Obtain The unique ID of a resource pack
  * @method void setPackageId(string $PackageId) Set The unique ID of a resource pack
- * @method array getClusterIds() Obtain Instance ID
- * @method void setClusterIds(array $ClusterIds) Set Instance ID
+ * @method array getClusterIds() Obtain Cluster ID
+ * @method void setClusterIds(array $ClusterIds) Set Cluster ID
  * @method string getStartTime() Obtain Start time
  * @method void setStartTime(string $StartTime) Set Start time
  * @method string getEndTime() Obtain End time
@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(string $Offset) Set Offset
  * @method string getLimit() Obtain Limit
  * @method void setLimit(string $Limit) Set Limit
+ * @method array getInstanceIds() Obtain Instance D
+ * @method void setInstanceIds(array $InstanceIds) Set Instance D
  */
 class DescribeResourcePackageDetailRequest extends AbstractModel
 {
@@ -41,7 +43,7 @@ class DescribeResourcePackageDetailRequest extends AbstractModel
     public $PackageId;
 
     /**
-     * @var array Instance ID
+     * @var array Cluster ID
      */
     public $ClusterIds;
 
@@ -66,12 +68,18 @@ class DescribeResourcePackageDetailRequest extends AbstractModel
     public $Limit;
 
     /**
+     * @var array Instance D
+     */
+    public $InstanceIds;
+
+    /**
      * @param string $PackageId The unique ID of a resource pack
-     * @param array $ClusterIds Instance ID
+     * @param array $ClusterIds Cluster ID
      * @param string $StartTime Start time
      * @param string $EndTime End time
      * @param string $Offset Offset
      * @param string $Limit Limit
+     * @param array $InstanceIds Instance D
      */
     function __construct()
     {
@@ -108,6 +116,10 @@ class DescribeResourcePackageDetailRequest extends AbstractModel
 
         if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
             $this->Limit = $param["Limit"];
+        }
+
+        if (array_key_exists("InstanceIds",$param) and $param["InstanceIds"] !== null) {
+            $this->InstanceIds = $param["InstanceIds"];
         }
     }
 }

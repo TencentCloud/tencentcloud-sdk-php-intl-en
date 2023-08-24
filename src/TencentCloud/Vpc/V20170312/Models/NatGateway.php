@@ -76,6 +76,10 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setRestrictState(string $RestrictState) Set Whether the NAT gateway is blocked. Values: `NORMAL`, `RESTRICTED`
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getNatProductVersion() Obtain NAT gateway major version. `1`: Classic, `2`: Standard
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setNatProductVersion(integer $NatProductVersion) Set NAT gateway major version. `1`: Classic, `2`: Standard
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class NatGateway extends AbstractModel
 {
@@ -184,6 +188,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $RestrictState;
 
     /**
+     * @var integer NAT gateway major version. `1`: Classic, `2`: Standard
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $NatProductVersion;
+
+    /**
      * @param string $NatGatewayId NAT gateway ID.
      * @param string $NatGatewayName NAT gateway name.
      * @param string $CreatedTime NAT gateway creation time.
@@ -211,6 +221,8 @@ Note: This field may return `null`, indicating that no valid values can be obtai
      * @param integer $ExclusiveGatewayBandwidth Bandwidth of the gateway cluster where the dedicated NAT Gateway resides. Unit: Mbps. This field does not exist when the `IsExclusive` field is set to `false`.
 Note: This field may return `null`, indicating that no valid values can be obtained.
      * @param string $RestrictState Whether the NAT gateway is blocked. Values: `NORMAL`, `RESTRICTED`
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $NatProductVersion NAT gateway major version. `1`: Classic, `2`: Standard
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
@@ -320,6 +332,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("RestrictState",$param) and $param["RestrictState"] !== null) {
             $this->RestrictState = $param["RestrictState"];
+        }
+
+        if (array_key_exists("NatProductVersion",$param) and $param["NatProductVersion"] !== null) {
+            $this->NatProductVersion = $param["NatProductVersion"];
         }
     }
 }

@@ -28,14 +28,20 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPdtInsertion(string $PdtInsertion) Set Whether to enable PDT insertion. Valid values: CLOSE/OPEN. Default value: CLOSE.
  * @method integer getPdtDuration() Obtain PDT duration in seconds. Value range: (0,3000]. Default value: 600.
  * @method void setPdtDuration(integer $PdtDuration) Set PDT duration in seconds. Value range: (0,3000]. Default value: 600.
- * @method string getScheme() Obtain Audio/Video packaging scheme. Valid values: `SEPARATE`, `MERGE`
- * @method void setScheme(string $Scheme) Set Audio/Video packaging scheme. Valid values: `SEPARATE`, `MERGE`
+ * @method string getScheme() Obtain Audio/Video packaging scheme. Valid values: `SEPARATE`, `MERGE`. Default value is: SEPARATE.
+ * @method void setScheme(string $Scheme) Set Audio/Video packaging scheme. Valid values: `SEPARATE`, `MERGE`. Default value is: SEPARATE.
  * @method string getSegmentType() Obtain The segment type. Valid values: `ts` (default), `fmp4`.
 Currently, fMP4 segments do not support DRM or time shifting.
  * @method void setSegmentType(string $SegmentType) Set The segment type. Valid values: `ts` (default), `fmp4`.
 Currently, fMP4 segments do not support DRM or time shifting.
  * @method string getH265PackageType() Obtain The HLS package type when the H.265 codec is used. Valid values: `hvc1`, `hev1` (default).
  * @method void setH265PackageType(string $H265PackageType) Set The HLS package type when the H.265 codec is used. Valid values: `hvc1`, `hev1` (default).
+ * @method integer getLowLatency() Obtain 
+ * @method void setLowLatency(integer $LowLatency) Set 
+ * @method integer getPartialSegmentDuration() Obtain 
+ * @method void setPartialSegmentDuration(integer $PartialSegmentDuration) Set 
+ * @method integer getPartialSegmentPlaySite() Obtain 
+ * @method void setPartialSegmentPlaySite(integer $PartialSegmentPlaySite) Set 
  */
 class HlsRemuxSettingsInfo extends AbstractModel
 {
@@ -60,7 +66,7 @@ class HlsRemuxSettingsInfo extends AbstractModel
     public $PdtDuration;
 
     /**
-     * @var string Audio/Video packaging scheme. Valid values: `SEPARATE`, `MERGE`
+     * @var string Audio/Video packaging scheme. Valid values: `SEPARATE`, `MERGE`. Default value is: SEPARATE.
      */
     public $Scheme;
 
@@ -76,14 +82,32 @@ Currently, fMP4 segments do not support DRM or time shifting.
     public $H265PackageType;
 
     /**
+     * @var integer 
+     */
+    public $LowLatency;
+
+    /**
+     * @var integer 
+     */
+    public $PartialSegmentDuration;
+
+    /**
+     * @var integer 
+     */
+    public $PartialSegmentPlaySite;
+
+    /**
      * @param integer $SegmentDuration Segment duration in ms. Value range: [1000,30000]. Default value: 4000. The value can only be a multiple of 1,000.
      * @param integer $SegmentNumber Number of segments. Value range: [1,30]. Default value: 5.
      * @param string $PdtInsertion Whether to enable PDT insertion. Valid values: CLOSE/OPEN. Default value: CLOSE.
      * @param integer $PdtDuration PDT duration in seconds. Value range: (0,3000]. Default value: 600.
-     * @param string $Scheme Audio/Video packaging scheme. Valid values: `SEPARATE`, `MERGE`
+     * @param string $Scheme Audio/Video packaging scheme. Valid values: `SEPARATE`, `MERGE`. Default value is: SEPARATE.
      * @param string $SegmentType The segment type. Valid values: `ts` (default), `fmp4`.
 Currently, fMP4 segments do not support DRM or time shifting.
      * @param string $H265PackageType The HLS package type when the H.265 codec is used. Valid values: `hvc1`, `hev1` (default).
+     * @param integer $LowLatency 
+     * @param integer $PartialSegmentDuration 
+     * @param integer $PartialSegmentPlaySite 
      */
     function __construct()
     {
@@ -124,6 +148,18 @@ Currently, fMP4 segments do not support DRM or time shifting.
 
         if (array_key_exists("H265PackageType",$param) and $param["H265PackageType"] !== null) {
             $this->H265PackageType = $param["H265PackageType"];
+        }
+
+        if (array_key_exists("LowLatency",$param) and $param["LowLatency"] !== null) {
+            $this->LowLatency = $param["LowLatency"];
+        }
+
+        if (array_key_exists("PartialSegmentDuration",$param) and $param["PartialSegmentDuration"] !== null) {
+            $this->PartialSegmentDuration = $param["PartialSegmentDuration"];
+        }
+
+        if (array_key_exists("PartialSegmentPlaySite",$param) and $param["PartialSegmentPlaySite"] !== null) {
+            $this->PartialSegmentPlaySite = $param["PartialSegmentPlaySite"];
         }
     }
 }

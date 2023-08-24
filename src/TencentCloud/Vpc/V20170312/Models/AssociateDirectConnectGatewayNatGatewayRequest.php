@@ -20,17 +20,17 @@ use TencentCloud\Common\AbstractModel;
 /**
  * AssociateDirectConnectGatewayNatGateway request structure.
  *
- * @method string getVpcId() Obtain The direct connect gateway ID.
- * @method void setVpcId(string $VpcId) Set The direct connect gateway ID.
+ * @method string getVpcId() Obtain VPC instance ID. VPC instance ID, which can be obtained from the `VpcId` field in the response of the `DescribeVpcs` API.
+ * @method void setVpcId(string $VpcId) Set VPC instance ID. VPC instance ID, which can be obtained from the `VpcId` field in the response of the `DescribeVpcs` API.
  * @method string getNatGatewayId() Obtain The NAT Gateway ID.
  * @method void setNatGatewayId(string $NatGatewayId) Set The NAT Gateway ID.
- * @method string getDirectConnectGatewayId() Obtain The ID of the VPC instance, which can be obtained from the `VpcId` field in response of the `DescribeVpcs` API.
- * @method void setDirectConnectGatewayId(string $DirectConnectGatewayId) Set The ID of the VPC instance, which can be obtained from the `VpcId` field in response of the `DescribeVpcs` API.
+ * @method string getDirectConnectGatewayId() Obtain The direct connect gateway ID.
+ * @method void setDirectConnectGatewayId(string $DirectConnectGatewayId) Set The direct connect gateway ID.
  */
 class AssociateDirectConnectGatewayNatGatewayRequest extends AbstractModel
 {
     /**
-     * @var string The direct connect gateway ID.
+     * @var string VPC instance ID. VPC instance ID, which can be obtained from the `VpcId` field in the response of the `DescribeVpcs` API.
      */
     public $VpcId;
 
@@ -40,14 +40,14 @@ class AssociateDirectConnectGatewayNatGatewayRequest extends AbstractModel
     public $NatGatewayId;
 
     /**
-     * @var string The ID of the VPC instance, which can be obtained from the `VpcId` field in response of the `DescribeVpcs` API.
+     * @var string The direct connect gateway ID.
      */
     public $DirectConnectGatewayId;
 
     /**
-     * @param string $VpcId The direct connect gateway ID.
+     * @param string $VpcId VPC instance ID. VPC instance ID, which can be obtained from the `VpcId` field in the response of the `DescribeVpcs` API.
      * @param string $NatGatewayId The NAT Gateway ID.
-     * @param string $DirectConnectGatewayId The ID of the VPC instance, which can be obtained from the `VpcId` field in response of the `DescribeVpcs` API.
+     * @param string $DirectConnectGatewayId The direct connect gateway ID.
      */
     function __construct()
     {

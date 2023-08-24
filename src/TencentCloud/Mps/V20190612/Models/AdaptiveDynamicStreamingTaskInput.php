@@ -34,6 +34,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
  * @method void setSubStreamObjectName(string $SubStreamObjectName) Set The relative output path of the substream file after being transcoded to adaptive bitrate streaming. If this parameter is left empty, a relative path in the following format will be used by default: `{inputName}_adaptiveDynamicStreaming_{definition}_{subStreamNumber}.{format}`.
  * @method string getSegmentObjectName() Obtain The relative output path of the segment file after being transcoded to adaptive bitrate streaming (in HLS format only). If this parameter is left empty, a relative path in the following format will be used by default: `{inputName}_adaptiveDynamicStreaming_{definition}_{subStreamNumber}_{segmentNumber}.{format}`.
  * @method void setSegmentObjectName(string $SegmentObjectName) Set The relative output path of the segment file after being transcoded to adaptive bitrate streaming (in HLS format only). If this parameter is left empty, a relative path in the following format will be used by default: `{inputName}_adaptiveDynamicStreaming_{definition}_{subStreamNumber}_{segmentNumber}.{format}`.
+ * @method array getAddOnSubtitles() Obtain The subtitle file to add.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+ * @method void setAddOnSubtitles(array $AddOnSubtitles) Set The subtitle file to add.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
  */
 class AdaptiveDynamicStreamingTaskInput extends AbstractModel
 {
@@ -69,6 +73,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $SegmentObjectName;
 
     /**
+     * @var array The subtitle file to add.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+     */
+    public $AddOnSubtitles;
+
+    /**
      * @param integer $Definition Adaptive bitrate streaming template ID.
      * @param array $WatermarkSet List of up to 10 image or text watermarks.
      * @param TaskOutputStorage $OutputStorage Target bucket of an output file after being transcoded to adaptive bitrate streaming. If this parameter is left empty, the `OutputStorage` value of the upper folder will be inherited.
@@ -76,6 +86,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @param string $OutputObjectPath The relative or absolute output path of the manifest file after being transcoded to adaptive bitrate streaming. If this parameter is left empty, a relative path in the following format will be used by default: `{inputName}_adaptiveDynamicStreaming_{definition}.{format}`.
      * @param string $SubStreamObjectName The relative output path of the substream file after being transcoded to adaptive bitrate streaming. If this parameter is left empty, a relative path in the following format will be used by default: `{inputName}_adaptiveDynamicStreaming_{definition}_{subStreamNumber}.{format}`.
      * @param string $SegmentObjectName The relative output path of the segment file after being transcoded to adaptive bitrate streaming (in HLS format only). If this parameter is left empty, a relative path in the following format will be used by default: `{inputName}_adaptiveDynamicStreaming_{definition}_{subStreamNumber}_{segmentNumber}.{format}`.
+     * @param array $AddOnSubtitles The subtitle file to add.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -118,6 +130,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("SegmentObjectName",$param) and $param["SegmentObjectName"] !== null) {
             $this->SegmentObjectName = $param["SegmentObjectName"];
+        }
+
+        if (array_key_exists("AddOnSubtitles",$param) and $param["AddOnSubtitles"] !== null) {
+            $this->AddOnSubtitles = [];
+            foreach ($param["AddOnSubtitles"] as $key => $value){
+                $obj = new AddOnSubtitle();
+                $obj->deserialize($value);
+                array_push($this->AddOnSubtitles, $obj);
+            }
         }
     }
 }

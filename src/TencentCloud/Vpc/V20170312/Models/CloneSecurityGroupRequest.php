@@ -20,21 +20,21 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CloneSecurityGroup request structure.
  *
- * @method string getSecurityGroupId() Obtain ID of the security group to be cloned, such as `sg-33ocnj9n`. This can be obtained through the `DescribeSecurityGroups` API.
- * @method void setSecurityGroupId(string $SecurityGroupId) Set ID of the security group to be cloned, such as `sg-33ocnj9n`. This can be obtained through the `DescribeSecurityGroups` API.
+ * @method string getSecurityGroupId() Obtain Security group instance ID, such as `esg-33ocnj9n`, which can be obtained through the <a href="https://intl.cloud.tencent.com/document/product/215/15808?from_cn_redirect=1">DescribeSecurityGroups</a> API.
+ * @method void setSecurityGroupId(string $SecurityGroupId) Set Security group instance ID, such as `esg-33ocnj9n`, which can be obtained through the <a href="https://intl.cloud.tencent.com/document/product/215/15808?from_cn_redirect=1">DescribeSecurityGroups</a> API.
  * @method string getGroupName() Obtain The name of security group clone. You can enter any name within 60 characters. If this parameter is left empty, the security group clone will use the name of the source security group.
  * @method void setGroupName(string $GroupName) Set The name of security group clone. You can enter any name within 60 characters. If this parameter is left empty, the security group clone will use the name of the source security group.
  * @method string getGroupDescription() Obtain Description of the security group clone. You can enter up to 100 characters. If this parameter is left empty, the security group clone will use the description of the source security group.
  * @method void setGroupDescription(string $GroupDescription) Set Description of the security group clone. You can enter up to 100 characters. If this parameter is left empty, the security group clone will use the description of the source security group.
- * @method string getProjectId() Obtain Project ID of the security group clone. The default is 0. You can query it on the project management page of the Tencent Cloud console.
- * @method void setProjectId(string $ProjectId) Set Project ID of the security group clone. The default is 0. You can query it on the project management page of the Tencent Cloud console.
+ * @method string getProjectId() Obtain Project ID. Default value: 0. You can query it on the <a href="https://console.cloud.tencent.com/project">project management page</a> of the Tencent Cloud console.
+ * @method void setProjectId(string $ProjectId) Set Project ID. Default value: 0. You can query it on the <a href="https://console.cloud.tencent.com/project">project management page</a> of the Tencent Cloud console.
  * @method string getRemoteRegion() Obtain The region of the source security group for a cross-region clone. For example, to clone the security group in Guangzhou to Shanghai, set it to `ap-guangzhou`.
  * @method void setRemoteRegion(string $RemoteRegion) Set The region of the source security group for a cross-region clone. For example, to clone the security group in Guangzhou to Shanghai, set it to `ap-guangzhou`.
  */
 class CloneSecurityGroupRequest extends AbstractModel
 {
     /**
-     * @var string ID of the security group to be cloned, such as `sg-33ocnj9n`. This can be obtained through the `DescribeSecurityGroups` API.
+     * @var string Security group instance ID, such as `esg-33ocnj9n`, which can be obtained through the <a href="https://intl.cloud.tencent.com/document/product/215/15808?from_cn_redirect=1">DescribeSecurityGroups</a> API.
      */
     public $SecurityGroupId;
 
@@ -49,7 +49,7 @@ class CloneSecurityGroupRequest extends AbstractModel
     public $GroupDescription;
 
     /**
-     * @var string Project ID of the security group clone. The default is 0. You can query it on the project management page of the Tencent Cloud console.
+     * @var string Project ID. Default value: 0. You can query it on the <a href="https://console.cloud.tencent.com/project">project management page</a> of the Tencent Cloud console.
      */
     public $ProjectId;
 
@@ -59,10 +59,10 @@ class CloneSecurityGroupRequest extends AbstractModel
     public $RemoteRegion;
 
     /**
-     * @param string $SecurityGroupId ID of the security group to be cloned, such as `sg-33ocnj9n`. This can be obtained through the `DescribeSecurityGroups` API.
+     * @param string $SecurityGroupId Security group instance ID, such as `esg-33ocnj9n`, which can be obtained through the <a href="https://intl.cloud.tencent.com/document/product/215/15808?from_cn_redirect=1">DescribeSecurityGroups</a> API.
      * @param string $GroupName The name of security group clone. You can enter any name within 60 characters. If this parameter is left empty, the security group clone will use the name of the source security group.
      * @param string $GroupDescription Description of the security group clone. You can enter up to 100 characters. If this parameter is left empty, the security group clone will use the description of the source security group.
-     * @param string $ProjectId Project ID of the security group clone. The default is 0. You can query it on the project management page of the Tencent Cloud console.
+     * @param string $ProjectId Project ID. Default value: 0. You can query it on the <a href="https://console.cloud.tencent.com/project">project management page</a> of the Tencent Cloud console.
      * @param string $RemoteRegion The region of the source security group for a cross-region clone. For example, to clone the security group in Guangzhou to Shanghai, set it to `ap-guangzhou`.
      */
     function __construct()

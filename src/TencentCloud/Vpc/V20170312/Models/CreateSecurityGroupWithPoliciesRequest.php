@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setGroupName(string $GroupName) Set Security group can be named freely, but cannot exceed 60 characters.
  * @method string getGroupDescription() Obtain The remarks for the security group. The maximum length is 100 characters.
  * @method void setGroupDescription(string $GroupDescription) Set The remarks for the security group. The maximum length is 100 characters.
- * @method string getProjectId() Obtain The project id is 0 by default. You can query this in the project management page of the Qcloud console.
- * @method void setProjectId(string $ProjectId) Set The project id is 0 by default. You can query this in the project management page of the Qcloud console.
+ * @method string getProjectId() Obtain Project ID. Default value: 0. You can query it on the <a href="https://console.cloud.tencent.com/project">project management page</a> of the Tencent Cloud console.
+ * @method void setProjectId(string $ProjectId) Set Project ID. Default value: 0. You can query it on the <a href="https://console.cloud.tencent.com/project">project management page</a> of the Tencent Cloud console.
  * @method SecurityGroupPolicySet getSecurityGroupPolicySet() Obtain Security group policy set.
  * @method void setSecurityGroupPolicySet(SecurityGroupPolicySet $SecurityGroupPolicySet) Set Security group policy set.
  */
@@ -42,7 +42,7 @@ class CreateSecurityGroupWithPoliciesRequest extends AbstractModel
     public $GroupDescription;
 
     /**
-     * @var string The project id is 0 by default. You can query this in the project management page of the Qcloud console.
+     * @var string Project ID. Default value: 0. You can query it on the <a href="https://console.cloud.tencent.com/project">project management page</a> of the Tencent Cloud console.
      */
     public $ProjectId;
 
@@ -54,7 +54,7 @@ class CreateSecurityGroupWithPoliciesRequest extends AbstractModel
     /**
      * @param string $GroupName Security group can be named freely, but cannot exceed 60 characters.
      * @param string $GroupDescription The remarks for the security group. The maximum length is 100 characters.
-     * @param string $ProjectId The project id is 0 by default. You can query this in the project management page of the Qcloud console.
+     * @param string $ProjectId Project ID. Default value: 0. You can query it on the <a href="https://console.cloud.tencent.com/project">project management page</a> of the Tencent Cloud console.
      * @param SecurityGroupPolicySet $SecurityGroupPolicySet Security group policy set.
      */
     function __construct()

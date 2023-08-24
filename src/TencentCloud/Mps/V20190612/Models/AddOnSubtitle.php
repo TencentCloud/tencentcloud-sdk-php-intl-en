@@ -18,47 +18,47 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * TESHD parameter configuration.
+ * The information of the subtitles to add.
  *
- * @method string getType() Obtain The TSC type. Valid values:
-<li>`TEHD-100`: TSC-100 (video TSC). </li>
-<li>`TEHD-200`: TSC-200 (audio TSC). </li>
-If this parameter is left blank, no modification will be made.
+ * @method string getType() Obtain The mode. Valid values:
+<li>`subtitle-stream`: Add a subtitle track.</li>
+<li>`close-caption-708`: u200dEmbed EA-708 subtitles in SEI frames.</li>
+<li>`close-caption-608`: Embed CEA-608 subtitles in SEI frames.</li>
 Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
- * @method void setType(string $Type) Set The TSC type. Valid values:
-<li>`TEHD-100`: TSC-100 (video TSC). </li>
-<li>`TEHD-200`: TSC-200 (audio TSC). </li>
-If this parameter is left blank, no modification will be made.
+ * @method void setType(string $Type) Set The mode. Valid values:
+<li>`subtitle-stream`: Add a subtitle track.</li>
+<li>`close-caption-708`: u200dEmbed EA-708 subtitles in SEI frames.</li>
+<li>`close-caption-608`: Embed CEA-608 subtitles in SEI frames.</li>
 Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
- * @method integer getMaxVideoBitrate() Obtain u200dThe maximum video bitrate. If this parameter is not specified, no modifications will be made.
+ * @method MediaInputInfo getSubtitle() Obtain The subtitle file.
 Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
- * @method void setMaxVideoBitrate(integer $MaxVideoBitrate) Set u200dThe maximum video bitrate. If this parameter is not specified, no modifications will be made.
+ * @method void setSubtitle(MediaInputInfo $Subtitle) Set The subtitle file.
 Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
  */
-class TEHDConfigForUpdate extends AbstractModel
+class AddOnSubtitle extends AbstractModel
 {
     /**
-     * @var string The TSC type. Valid values:
-<li>`TEHD-100`: TSC-100 (video TSC). </li>
-<li>`TEHD-200`: TSC-200 (audio TSC). </li>
-If this parameter is left blank, no modification will be made.
+     * @var string The mode. Valid values:
+<li>`subtitle-stream`: Add a subtitle track.</li>
+<li>`close-caption-708`: u200dEmbed EA-708 subtitles in SEI frames.</li>
+<li>`close-caption-608`: Embed CEA-608 subtitles in SEI frames.</li>
 Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
      */
     public $Type;
 
     /**
-     * @var integer u200dThe maximum video bitrate. If this parameter is not specified, no modifications will be made.
+     * @var MediaInputInfo The subtitle file.
 Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
      */
-    public $MaxVideoBitrate;
+    public $Subtitle;
 
     /**
-     * @param string $Type The TSC type. Valid values:
-<li>`TEHD-100`: TSC-100 (video TSC). </li>
-<li>`TEHD-200`: TSC-200 (audio TSC). </li>
-If this parameter is left blank, no modification will be made.
+     * @param string $Type The mode. Valid values:
+<li>`subtitle-stream`: Add a subtitle track.</li>
+<li>`close-caption-708`: u200dEmbed EA-708 subtitles in SEI frames.</li>
+<li>`close-caption-608`: Embed CEA-608 subtitles in SEI frames.</li>
 Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
-     * @param integer $MaxVideoBitrate u200dThe maximum video bitrate. If this parameter is not specified, no modifications will be made.
+     * @param MediaInputInfo $Subtitle The subtitle file.
 Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
      */
     function __construct()
@@ -78,8 +78,9 @@ Note: u200dThis field may returnu200d·nullu200d, indicating that no valid value
             $this->Type = $param["Type"];
         }
 
-        if (array_key_exists("MaxVideoBitrate",$param) and $param["MaxVideoBitrate"] !== null) {
-            $this->MaxVideoBitrate = $param["MaxVideoBitrate"];
+        if (array_key_exists("Subtitle",$param) and $param["Subtitle"] !== null) {
+            $this->Subtitle = new MediaInputInfo();
+            $this->Subtitle->deserialize($param["Subtitle"]);
         }
     }
 }

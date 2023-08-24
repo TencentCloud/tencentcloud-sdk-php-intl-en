@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNetworkInterfaceDescription(string $NetworkInterfaceDescription) Set ENI description can be named freely, but the maximum length is 60 characters.
  * @method integer getSecondaryPrivateIpAddressCount() Obtain The number of private IP addresses you apply for. The total number of private IP addresses cannot exceed the quota.
  * @method void setSecondaryPrivateIpAddressCount(integer $SecondaryPrivateIpAddressCount) Set The number of private IP addresses you apply for. The total number of private IP addresses cannot exceed the quota.
- * @method string getQosLevel() Obtain IP service level. It’s used in combination with `SecondaryPrivateIpAddressCount`. Values: `PT` (Gold), `AU` (Silver), `AG` (Bronze) and `DEFAULT`
- * @method void setQosLevel(string $QosLevel) Set IP service level. It’s used in combination with `SecondaryPrivateIpAddressCount`. Values: `PT` (Gold), `AU` (Silver), `AG` (Bronze) and `DEFAULT`
+ * @method string getQosLevel() Obtain IP u200dservice level. It is used together with `SecondaryPrivateIpAddressCount`. Values: `PT` u200d(Gold), `AU` u200d(Silver), `AG` (Bronze) and `DEFAULT` (Default).
+ * @method void setQosLevel(string $QosLevel) Set IP u200dservice level. It is used together with `SecondaryPrivateIpAddressCount`. Values: `PT` u200d(Gold), `AU` u200d(Silver), `AG` (Bronze) and `DEFAULT` (Default).
  * @method array getSecurityGroupIds() Obtain Specifies the security group to be bound with, such as ['sg-1dd51d'].
  * @method void setSecurityGroupIds(array $SecurityGroupIds) Set Specifies the security group to be bound with, such as ['sg-1dd51d'].
  * @method array getPrivateIpAddresses() Obtain The information of the specified private IPs. You can specify a maximum of 10 each time.
@@ -69,7 +69,7 @@ class CreateNetworkInterfaceRequest extends AbstractModel
     public $SecondaryPrivateIpAddressCount;
 
     /**
-     * @var string IP service level. It’s used in combination with `SecondaryPrivateIpAddressCount`. Values: `PT` (Gold), `AU` (Silver), `AG` (Bronze) and `DEFAULT`
+     * @var string IP u200dservice level. It is used together with `SecondaryPrivateIpAddressCount`. Values: `PT` u200d(Gold), `AU` u200d(Silver), `AG` (Bronze) and `DEFAULT` (Default).
      */
     public $QosLevel;
 
@@ -99,7 +99,7 @@ class CreateNetworkInterfaceRequest extends AbstractModel
      * @param string $SubnetId The subnet instance ID of the ENI, such as `subnet-0ap8nwca`.
      * @param string $NetworkInterfaceDescription ENI description can be named freely, but the maximum length is 60 characters.
      * @param integer $SecondaryPrivateIpAddressCount The number of private IP addresses you apply for. The total number of private IP addresses cannot exceed the quota.
-     * @param string $QosLevel IP service level. It’s used in combination with `SecondaryPrivateIpAddressCount`. Values: `PT` (Gold), `AU` (Silver), `AG` (Bronze) and `DEFAULT`
+     * @param string $QosLevel IP u200dservice level. It is used together with `SecondaryPrivateIpAddressCount`. Values: `PT` u200d(Gold), `AU` u200d(Silver), `AG` (Bronze) and `DEFAULT` (Default).
      * @param array $SecurityGroupIds Specifies the security group to be bound with, such as ['sg-1dd51d'].
      * @param array $PrivateIpAddresses The information of the specified private IPs. You can specify a maximum of 10 each time.
      * @param array $Tags Bound tags, such as [{"Key": "city", "Value": "shanghai"}].

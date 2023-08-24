@@ -14,32 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cynosdb\V20190107\Models;
+namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Database address
+ * DeleteTrafficPackages response structure.
  *
- * @method string getIP() Obtain IP address
- * @method void setIP(string $IP) Set IP address
- * @method integer getPort() Obtain Port
- * @method void setPort(integer $Port) Set Port
+ * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
-class Addr extends AbstractModel
+class DeleteTrafficPackagesResponse extends AbstractModel
 {
     /**
-     * @var string IP address
+     * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
-    public $IP;
+    public $RequestId;
 
     /**
-     * @var integer Port
-     */
-    public $Port;
-
-    /**
-     * @param string $IP IP address
-     * @param integer $Port Port
+     * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
     {
@@ -54,12 +46,8 @@ class Addr extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("IP",$param) and $param["IP"] !== null) {
-            $this->IP = $param["IP"];
-        }
-
-        if (array_key_exists("Port",$param) and $param["Port"] !== null) {
-            $this->Port = $param["Port"];
+        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
+            $this->RequestId = $param["RequestId"];
         }
     }
 }

@@ -92,8 +92,8 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid value was found.
  * @method void setInstanceType(string $InstanceType) Set The type of instance bound with the EIP
 Note: this field may return `null`, indicating that no valid value was found.
- * @method string getAntiDDoSPackageId() Obtain 
- * @method void setAntiDDoSPackageId(string $AntiDDoSPackageId) Set 
+ * @method string getAntiDDoSPackageId() Obtain ID of the Anti-DDoS service package. It is returned if the EIP is an u200dAnti-DDoS EIP. 
+ * @method void setAntiDDoSPackageId(string $AntiDDoSPackageId) Set ID of the Anti-DDoS service package. It is returned if the EIP is an u200dAnti-DDoS EIP. 
  */
 class Address extends AbstractModel
 {
@@ -218,7 +218,7 @@ Note: this field may return `null`, indicating that no valid value was found.
     public $InstanceType;
 
     /**
-     * @var string 
+     * @var string ID of the Anti-DDoS service package. It is returned if the EIP is an u200dAnti-DDoS EIP. 
      */
     public $AntiDDoSPackageId;
 
@@ -259,7 +259,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param string $InstanceType The type of instance bound with the EIP
 Note: this field may return `null`, indicating that no valid value was found.
-     * @param string $AntiDDoSPackageId 
+     * @param string $AntiDDoSPackageId ID of the Anti-DDoS service package. It is returned if the EIP is an u200dAnti-DDoS EIP. 
      */
     function __construct()
     {

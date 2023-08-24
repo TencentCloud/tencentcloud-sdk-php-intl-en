@@ -20,12 +20,12 @@ use TencentCloud\Common\AbstractModel;
 /**
  * SNAT rule of a NAT Gateway
  *
- * @method string getResourceId() Obtain Resource ID
- * @method void setResourceId(string $ResourceId) Set Resource ID
- * @method string getResourceType() Obtain Resource type. Valid values: SUBNET, NETWORKINTERFACE
-Note: This field may return `null`, indicating that no valid values can be obtained.
- * @method void setResourceType(string $ResourceType) Set Resource type. Valid values: SUBNET, NETWORKINTERFACE
-Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method string getResourceId() Obtain Resource ID. It can be left empty if `ResourceType` is `USERDEFINED`.
+ * @method void setResourceId(string $ResourceId) Set Resource ID. It can be left empty if `ResourceType` is `USERDEFINED`.
+ * @method string getResourceType() Obtain Resource type. Valid values: `SUBNET`, `NETWORKINTERFACE`, `USERDEFINED`
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setResourceType(string $ResourceType) Set Resource type. Valid values: `SUBNET`, `NETWORKINTERFACE`, `USERDEFINED`
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getPrivateIpAddress() Obtain Source IP/IP range
  * @method void setPrivateIpAddress(string $PrivateIpAddress) Set Source IP/IP range
  * @method array getPublicIpAddresses() Obtain Elastic IP address pool
@@ -50,13 +50,13 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 class SourceIpTranslationNatRule extends AbstractModel
 {
     /**
-     * @var string Resource ID
+     * @var string Resource ID. It can be left empty if `ResourceType` is `USERDEFINED`.
      */
     public $ResourceId;
 
     /**
-     * @var string Resource type. Valid values: SUBNET, NETWORKINTERFACE
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @var string Resource type. Valid values: `SUBNET`, `NETWORKINTERFACE`, `USERDEFINED`
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ResourceType;
 
@@ -99,9 +99,9 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     public $CreatedTime;
 
     /**
-     * @param string $ResourceId Resource ID
-     * @param string $ResourceType Resource type. Valid values: SUBNET, NETWORKINTERFACE
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param string $ResourceId Resource ID. It can be left empty if `ResourceType` is `USERDEFINED`.
+     * @param string $ResourceType Resource type. Valid values: `SUBNET`, `NETWORKINTERFACE`, `USERDEFINED`
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $PrivateIpAddress Source IP/IP range
      * @param array $PublicIpAddresses Elastic IP address pool
      * @param string $Description Description

@@ -25,15 +25,15 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getLimit() Obtain The returned quantity
  * @method void setLimit(integer $Limit) Set The returned quantity
  * @method array getFilters() Obtain Filter conditions:
-<li>ccn-id - String - (Filter condition) The CCN instance ID.</li>
-<li>instance-type - String - (Filter condition) The associated instance type.</li>
-<li>instance-region - String - (Filter condition) The associated instance region.</li>
-<li>instance-type - String - (Filter condition) The instance ID of the associated instance.</li>
+<li>`ccn-id` - String - The CCN instance ID. </li>
+<li>`instance-type` - String - The associated instance type. </li>
+<li>`instance-region` - String - The associated instance region. </li>
+<li>`instance-id` - String - The instance ID of the associated instance. </li>
  * @method void setFilters(array $Filters) Set Filter conditions:
-<li>ccn-id - String - (Filter condition) The CCN instance ID.</li>
-<li>instance-type - String - (Filter condition) The associated instance type.</li>
-<li>instance-region - String - (Filter condition) The associated instance region.</li>
-<li>instance-type - String - (Filter condition) The instance ID of the associated instance.</li>
+<li>`ccn-id` - String - The CCN instance ID. </li>
+<li>`instance-type` - String - The associated instance type. </li>
+<li>`instance-region` - String - The associated instance region. </li>
+<li>`instance-id` - String - The instance ID of the associated instance. </li>
  * @method string getCcnId() Obtain The ID of the CCN instance
  * @method void setCcnId(string $CcnId) Set The ID of the CCN instance
  * @method string getOrderField() Obtain The order field supports `CcnId`, `InstanceType`, `InstanceId`, `InstanceName`, `InstanceRegion`, `AttachedTime`, and `State`.
@@ -55,10 +55,10 @@ class DescribeCcnAttachedInstancesRequest extends AbstractModel
 
     /**
      * @var array Filter conditions:
-<li>ccn-id - String - (Filter condition) The CCN instance ID.</li>
-<li>instance-type - String - (Filter condition) The associated instance type.</li>
-<li>instance-region - String - (Filter condition) The associated instance region.</li>
-<li>instance-type - String - (Filter condition) The instance ID of the associated instance.</li>
+<li>`ccn-id` - String - The CCN instance ID. </li>
+<li>`instance-type` - String - The associated instance type. </li>
+<li>`instance-region` - String - The associated instance region. </li>
+<li>`instance-id` - String - The instance ID of the associated instance. </li>
      */
     public $Filters;
 
@@ -81,10 +81,10 @@ class DescribeCcnAttachedInstancesRequest extends AbstractModel
      * @param integer $Offset Offset
      * @param integer $Limit The returned quantity
      * @param array $Filters Filter conditions:
-<li>ccn-id - String - (Filter condition) The CCN instance ID.</li>
-<li>instance-type - String - (Filter condition) The associated instance type.</li>
-<li>instance-region - String - (Filter condition) The associated instance region.</li>
-<li>instance-type - String - (Filter condition) The instance ID of the associated instance.</li>
+<li>`ccn-id` - String - The CCN instance ID. </li>
+<li>`instance-type` - String - The associated instance type. </li>
+<li>`instance-region` - String - The associated instance region. </li>
+<li>`instance-id` - String - The instance ID of the associated instance. </li>
      * @param string $CcnId The ID of the CCN instance
      * @param string $OrderField The order field supports `CcnId`, `InstanceType`, `InstanceId`, `InstanceName`, `InstanceRegion`, `AttachedTime`, and `State`.
      * @param string $OrderDirection Order methods. Ascending: `ASC`, Descending: `DESC`.

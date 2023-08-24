@@ -14,32 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cynosdb\V20190107\Models;
+namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Database address
+ * GenerateVpnConnectionDefaultHealthCheckIp request structure.
  *
- * @method string getIP() Obtain IP address
- * @method void setIP(string $IP) Set IP address
- * @method integer getPort() Obtain Port
- * @method void setPort(integer $Port) Set Port
+ * @method string getVpnGatewayId() Obtain VPN gateway ID, such as `vpngw-1w9tue3d`
+ * @method void setVpnGatewayId(string $VpnGatewayId) Set VPN gateway ID, such as `vpngw-1w9tue3d`
  */
-class Addr extends AbstractModel
+class GenerateVpnConnectionDefaultHealthCheckIpRequest extends AbstractModel
 {
     /**
-     * @var string IP address
+     * @var string VPN gateway ID, such as `vpngw-1w9tue3d`
      */
-    public $IP;
+    public $VpnGatewayId;
 
     /**
-     * @var integer Port
-     */
-    public $Port;
-
-    /**
-     * @param string $IP IP address
-     * @param integer $Port Port
+     * @param string $VpnGatewayId VPN gateway ID, such as `vpngw-1w9tue3d`
      */
     function __construct()
     {
@@ -54,12 +46,8 @@ class Addr extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("IP",$param) and $param["IP"] !== null) {
-            $this->IP = $param["IP"];
-        }
-
-        if (array_key_exists("Port",$param) and $param["Port"] !== null) {
-            $this->Port = $param["Port"];
+        if (array_key_exists("VpnGatewayId",$param) and $param["VpnGatewayId"] !== null) {
+            $this->VpnGatewayId = $param["VpnGatewayId"];
         }
     }
 }

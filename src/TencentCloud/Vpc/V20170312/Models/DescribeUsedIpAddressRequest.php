@@ -24,12 +24,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVpcId(string $VpcId) Set VPC instance ID.
  * @method string getSubnetId() Obtain Subnet instance ID
  * @method void setSubnetId(string $SubnetId) Set Subnet instance ID
- * @method array getIpAddresses() Obtain IPs to query
- * @method void setIpAddresses(array $IpAddresses) Set IPs to query
- * @method integer getOffset() Obtain Offset
- * @method void setOffset(integer $Offset) Set Offset
- * @method integer getLimit() Obtain The number of requested objects.
- * @method void setLimit(integer $Limit) Set The number of requested objects.
+ * @method array getIpAddresses() Obtain List of IPs to be queried. The IPs must be within the VPC or subnet. Up to 100 IPs can be queried at a time.
+ * @method void setIpAddresses(array $IpAddresses) Set List of IPs to be queried. The IPs must be within the VPC or subnet. Up to 100 IPs can be queried at a time.
+ * @method integer getOffset() Obtain The offset. Default value: 0
+ * @method void setOffset(integer $Offset) Set The offset. Default value: 0
+ * @method integer getLimit() Obtain The number of returned results. Default value: 20. Maximum value: 100.
+ * @method void setLimit(integer $Limit) Set The number of returned results. Default value: 20. Maximum value: 100.
  */
 class DescribeUsedIpAddressRequest extends AbstractModel
 {
@@ -44,26 +44,26 @@ class DescribeUsedIpAddressRequest extends AbstractModel
     public $SubnetId;
 
     /**
-     * @var array IPs to query
+     * @var array List of IPs to be queried. The IPs must be within the VPC or subnet. Up to 100 IPs can be queried at a time.
      */
     public $IpAddresses;
 
     /**
-     * @var integer Offset
+     * @var integer The offset. Default value: 0
      */
     public $Offset;
 
     /**
-     * @var integer The number of requested objects.
+     * @var integer The number of returned results. Default value: 20. Maximum value: 100.
      */
     public $Limit;
 
     /**
      * @param string $VpcId VPC instance ID.
      * @param string $SubnetId Subnet instance ID
-     * @param array $IpAddresses IPs to query
-     * @param integer $Offset Offset
-     * @param integer $Limit The number of requested objects.
+     * @param array $IpAddresses List of IPs to be queried. The IPs must be within the VPC or subnet. Up to 100 IPs can be queried at a time.
+     * @param integer $Offset The offset. Default value: 0
+     * @param integer $Limit The number of returned results. Default value: 20. Maximum value: 100.
      */
     function __construct()
     {
