@@ -34,10 +34,18 @@ Empty string (default): Keep the application running on the cloud only when ther
 Empty string (default): Keep the application running on the cloud only when there are client connections.
  * @method string getApplicationParameters() Obtain Application startup parameter.
 If the user requests a multi-application project or a prelaunch-disabled single-application project, this parameter takes effect.
+ 
 If the user requests a prelaunch-enabled single-application project, this parameter is invalid.
+
+Note: When this parameter takes effect, the `ApplicationParameters` parameter will be appended to the end of the application startup parameter. The application startup parameter is set in the application or project configuration in the console.
+For example, for a prelaunch-disabled single-application project, if its application startup parameter `bar` is `0` and the `ApplicationParameters` parameter `foo` is `1`, the actual application startup parameters will be `bar=0 foo=1`.
  * @method void setApplicationParameters(string $ApplicationParameters) Set Application startup parameter.
 If the user requests a multi-application project or a prelaunch-disabled single-application project, this parameter takes effect.
+ 
 If the user requests a prelaunch-enabled single-application project, this parameter is invalid.
+
+Note: When this parameter takes effect, the `ApplicationParameters` parameter will be appended to the end of the application startup parameter. The application startup parameter is set in the application or project configuration in the console.
+For example, for a prelaunch-disabled single-application project, if its application startup parameter `bar` is `0` and the `ApplicationParameters` parameter `foo` is `1`, the actual application startup parameters will be `bar=0 foo=1`.
  * @method string getHostUserId() Obtain The user ID of the host in **multi-person interaction** scenarios, which is required.
 If the current user is the host, `HostUserId` must be the same as their `UserId`; otherwise, `HostUserId` should be the host's `UserId`.
  * @method void setHostUserId(string $HostUserId) Set The user ID of the host in **multi-person interaction** scenarios, which is required.
@@ -76,7 +84,11 @@ Empty string (default): Keep the application running on the cloud only when ther
     /**
      * @var string Application startup parameter.
 If the user requests a multi-application project or a prelaunch-disabled single-application project, this parameter takes effect.
+ 
 If the user requests a prelaunch-enabled single-application project, this parameter is invalid.
+
+Note: When this parameter takes effect, the `ApplicationParameters` parameter will be appended to the end of the application startup parameter. The application startup parameter is set in the application or project configuration in the console.
+For example, for a prelaunch-disabled single-application project, if its application startup parameter `bar` is `0` and the `ApplicationParameters` parameter `foo` is `1`, the actual application startup parameters will be `bar=0 foo=1`.
      */
     public $ApplicationParameters;
 
@@ -102,7 +114,11 @@ If the current user is the host, `HostUserId` must be the same as their `UserId`
 Empty string (default): Keep the application running on the cloud only when there are client connections.
      * @param string $ApplicationParameters Application startup parameter.
 If the user requests a multi-application project or a prelaunch-disabled single-application project, this parameter takes effect.
+ 
 If the user requests a prelaunch-enabled single-application project, this parameter is invalid.
+
+Note: When this parameter takes effect, the `ApplicationParameters` parameter will be appended to the end of the application startup parameter. The application startup parameter is set in the application or project configuration in the console.
+For example, for a prelaunch-disabled single-application project, if its application startup parameter `bar` is `0` and the `ApplicationParameters` parameter `foo` is `1`, the actual application startup parameters will be `bar=0 foo=1`.
      * @param string $HostUserId The user ID of the host in **multi-person interaction** scenarios, which is required.
 If the current user is the host, `HostUserId` must be the same as their `UserId`; otherwise, `HostUserId` should be the host's `UserId`.
      * @param string $Role The role in **multi-person interaction** scenarios. Valid values:

@@ -23,9 +23,11 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Car\V20220110\Models as Models;
 
 /**
- * @method Models\ApplyConcurrentResponse ApplyConcurrent(Models\ApplyConcurrentRequest $req) This API is used to request concurrency quota.
- * @method Models\CreateSessionResponse CreateSession(Models\CreateSessionRequest $req) This API is used to create a session.
+ * @method Models\ApplyConcurrentResponse ApplyConcurrent(Models\ApplyConcurrentRequest $req) This API is used to request a concurrency. The timeout period of the API is 20 seconds.
+ * @method Models\CreateSessionResponse CreateSession(Models\CreateSessionRequest $req) This API is used to create a session. The timeout period of the API is 5 seconds.
  * @method Models\DestroySessionResponse DestroySession(Models\DestroySessionRequest $req) This API is used to terminate a session.
+ * @method Models\StartPublishStreamResponse StartPublishStream(Models\StartPublishStreamRequest $req) This API is used to start stream push.
+ * @method Models\StopPublishStreamResponse StopPublishStream(Models\StopPublishStreamRequest $req) This API is used to stop stream push.
  */
 
 class CarClient extends AbstractClient
