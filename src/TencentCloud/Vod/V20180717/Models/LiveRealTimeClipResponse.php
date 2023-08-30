@@ -34,6 +34,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setMetaData(MediaMetaData $MetaData) Set Metadata of clipped video.
 Note: this field may return null, indicating that no valid values can be obtained.
+ * @method array getSegmentSet() Obtain Cliped media segment info.
+ * @method void setSegmentSet(array $SegmentSet) Set Cliped media segment info.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -63,6 +65,11 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $MetaData;
 
     /**
+     * @var array Cliped media segment info.
+     */
+    public $SegmentSet;
+
+    /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
@@ -75,6 +82,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param MediaMetaData $MetaData Metadata of clipped video.
 Note: this field may return null, indicating that no valid values can be obtained.
+     * @param array $SegmentSet Cliped media segment info.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -105,6 +113,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
         if (array_key_exists("MetaData",$param) and $param["MetaData"] !== null) {
             $this->MetaData = new MediaMetaData();
             $this->MetaData->deserialize($param["MetaData"]);
+        }
+
+        if (array_key_exists("SegmentSet",$param) and $param["SegmentSet"] !== null) {
+            $this->SegmentSet = [];
+            foreach ($param["SegmentSet"] as $key => $value){
+                $obj = new LiveRealTimeClipMediaSegmentInfo();
+                $obj->deserialize($value);
+                array_push($this->SegmentSet, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
