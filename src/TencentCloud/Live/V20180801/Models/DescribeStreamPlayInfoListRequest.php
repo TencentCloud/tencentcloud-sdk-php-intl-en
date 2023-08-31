@@ -20,12 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeStreamPlayInfoList request structure.
  *
- * @method string getStartTime() Obtain Start time (Beijing time) in the format of yyyy-mm-dd HH:MM:SS
- * @method void setStartTime(string $StartTime) Set Start time (Beijing time) in the format of yyyy-mm-dd HH:MM:SS
- * @method string getEndTime() Obtain The end time (Beijing time) in the format of yyyy-mm-dd HH:MM:SS.
-The start time and end time cannot be more than 24 hours apart and must be within the past month.
- * @method void setEndTime(string $EndTime) Set The end time (Beijing time) in the format of yyyy-mm-dd HH:MM:SS.
-The start time and end time cannot be more than 24 hours apart and must be within the past month.
+ * @method string getStartTime() Obtain The start time of the query,supports data query for the last ont months,the gap between the start time and the end time cannot exceed twenty-four hours. Interface query supports two time formats:
+1) YYYY-MM-DDThh:mm:ssZ: ISO time format,for details,see [ISO Date Format Description](https://cloud.tencent.com/document/product/267/38543#:~:text=I- ,ISO,-%E6%97%A5%E6%9C%9F%E6%A0%BC%E5%BC%8F)
+2) YYYY-MM-DD hh:mm:ss: When using this format, it represents Beijing time by default.
+ * @method void setStartTime(string $StartTime) Set The start time of the query,supports data query for the last ont months,the gap between the start time and the end time cannot exceed twenty-four hours. Interface query supports two time formats:
+1) YYYY-MM-DDThh:mm:ssZ: ISO time format,for details,see [ISO Date Format Description](https://cloud.tencent.com/document/product/267/38543#:~:text=I- ,ISO,-%E6%97%A5%E6%9C%9F%E6%A0%BC%E5%BC%8F)
+2) YYYY-MM-DD hh:mm:ss: When using this format, it represents Beijing time by default.
+ * @method string getEndTime() Obtain The end time of the query,supports data query for the last ont months,the gap between the start time and the end time cannot exceed twenty-four hours. Interface query supports two time formats:
+1) YYYY-MM-DDThh:mm:ssZ: ISO time format,for details,see [ISO Date Format Description](https://cloud.tencent.com/document/product/267/38543#:~:text=I- ,ISO,-%E6%97%A5%E6%9C%9F%E6%A0%BC%E5%BC%8F)
+2) YYYY-MM-DD hh:mm:ss: When using this format, it represents Beijing time by default.
+ * @method void setEndTime(string $EndTime) Set The end time of the query,supports data query for the last ont months,the gap between the start time and the end time cannot exceed twenty-four hours. Interface query supports two time formats:
+1) YYYY-MM-DDThh:mm:ssZ: ISO time format,for details,see [ISO Date Format Description](https://cloud.tencent.com/document/product/267/38543#:~:text=I- ,ISO,-%E6%97%A5%E6%9C%9F%E6%A0%BC%E5%BC%8F)
+2) YYYY-MM-DD hh:mm:ss: When using this format, it represents Beijing time by default.
  * @method string getPlayDomain() Obtain Playback domain name,
 If this parameter is left empty, data of live streams of all playback domain names will be queried.
  * @method void setPlayDomain(string $PlayDomain) Set Playback domain name,
@@ -46,13 +52,16 @@ Note: to query by `AppName`, you need to submit a ticket first. After your appli
 class DescribeStreamPlayInfoListRequest extends AbstractModel
 {
     /**
-     * @var string Start time (Beijing time) in the format of yyyy-mm-dd HH:MM:SS
+     * @var string The start time of the query,supports data query for the last ont months,the gap between the start time and the end time cannot exceed twenty-four hours. Interface query supports two time formats:
+1) YYYY-MM-DDThh:mm:ssZ: ISO time format,for details,see [ISO Date Format Description](https://cloud.tencent.com/document/product/267/38543#:~:text=I- ,ISO,-%E6%97%A5%E6%9C%9F%E6%A0%BC%E5%BC%8F)
+2) YYYY-MM-DD hh:mm:ss: When using this format, it represents Beijing time by default.
      */
     public $StartTime;
 
     /**
-     * @var string The end time (Beijing time) in the format of yyyy-mm-dd HH:MM:SS.
-The start time and end time cannot be more than 24 hours apart and must be within the past month.
+     * @var string The end time of the query,supports data query for the last ont months,the gap between the start time and the end time cannot exceed twenty-four hours. Interface query supports two time formats:
+1) YYYY-MM-DDThh:mm:ssZ: ISO time format,for details,see [ISO Date Format Description](https://cloud.tencent.com/document/product/267/38543#:~:text=I- ,ISO,-%E6%97%A5%E6%9C%9F%E6%A0%BC%E5%BC%8F)
+2) YYYY-MM-DD hh:mm:ss: When using this format, it represents Beijing time by default.
      */
     public $EndTime;
 
@@ -81,9 +90,12 @@ Note: to query by `AppName`, you need to submit a ticket first. After your appli
     public $ServiceName;
 
     /**
-     * @param string $StartTime Start time (Beijing time) in the format of yyyy-mm-dd HH:MM:SS
-     * @param string $EndTime The end time (Beijing time) in the format of yyyy-mm-dd HH:MM:SS.
-The start time and end time cannot be more than 24 hours apart and must be within the past month.
+     * @param string $StartTime The start time of the query,supports data query for the last ont months,the gap between the start time and the end time cannot exceed twenty-four hours. Interface query supports two time formats:
+1) YYYY-MM-DDThh:mm:ssZ: ISO time format,for details,see [ISO Date Format Description](https://cloud.tencent.com/document/product/267/38543#:~:text=I- ,ISO,-%E6%97%A5%E6%9C%9F%E6%A0%BC%E5%BC%8F)
+2) YYYY-MM-DD hh:mm:ss: When using this format, it represents Beijing time by default.
+     * @param string $EndTime The end time of the query,supports data query for the last ont months,the gap between the start time and the end time cannot exceed twenty-four hours. Interface query supports two time formats:
+1) YYYY-MM-DDThh:mm:ssZ: ISO time format,for details,see [ISO Date Format Description](https://cloud.tencent.com/document/product/267/38543#:~:text=I- ,ISO,-%E6%97%A5%E6%9C%9F%E6%A0%BC%E5%BC%8F)
+2) YYYY-MM-DD hh:mm:ss: When using this format, it represents Beijing time by default.
      * @param string $PlayDomain Playback domain name,
 If this parameter is left empty, data of live streams of all playback domain names will be queried.
      * @param string $StreamName Stream name (exact match).
