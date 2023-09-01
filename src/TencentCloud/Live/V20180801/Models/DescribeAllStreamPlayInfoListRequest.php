@@ -20,15 +20,21 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeAllStreamPlayInfoList request structure.
  *
- * @method string getQueryTime() Obtain The time point to query in the format of “yyyy-mm-dd HH:MM:00”(accurate to the minute). You can query data from the last month. Because there is a five-minute delay in the data, if you want to get the latest data, we recommend you pass in a time point five minutes earlier than the current time.
- * @method void setQueryTime(string $QueryTime) Set The time point to query in the format of “yyyy-mm-dd HH:MM:00”(accurate to the minute). You can query data from the last month. Because there is a five-minute delay in the data, if you want to get the latest data, we recommend you pass in a time point five minutes earlier than the current time.
+ * @method string getQueryTime() Obtain The query time of the request, supports data query for the last one month. Interface request supports two time formats:
+1) YYYY-MM-DDThh:mm:ssZ: ISO time format, for details, see [ISO Date Format Description](https://cloud.tencent.com/document/product/267/38543#:~:text=I- ,ISO,-%E6%97%A5%E6%9C%9F%E6%A0%BC%E5%BC%8F)
+2) YYYY-MM-DD hh:mm:ss: When using this format, it represents Beijing time by default.
+ * @method void setQueryTime(string $QueryTime) Set The query time of the request, supports data query for the last one month. Interface request supports two time formats:
+1) YYYY-MM-DDThh:mm:ssZ: ISO time format, for details, see [ISO Date Format Description](https://cloud.tencent.com/document/product/267/38543#:~:text=I- ,ISO,-%E6%97%A5%E6%9C%9F%E6%A0%BC%E5%BC%8F)
+2) YYYY-MM-DD hh:mm:ss: When using this format, it represents Beijing time by default.
  * @method array getPlayDomains() Obtain The playback domains to query. If you leave this empty, all playback domains will be queried.
  * @method void setPlayDomains(array $PlayDomains) Set The playback domains to query. If you leave this empty, all playback domains will be queried.
  */
 class DescribeAllStreamPlayInfoListRequest extends AbstractModel
 {
     /**
-     * @var string The time point to query in the format of “yyyy-mm-dd HH:MM:00”(accurate to the minute). You can query data from the last month. Because there is a five-minute delay in the data, if you want to get the latest data, we recommend you pass in a time point five minutes earlier than the current time.
+     * @var string The query time of the request, supports data query for the last one month. Interface request supports two time formats:
+1) YYYY-MM-DDThh:mm:ssZ: ISO time format, for details, see [ISO Date Format Description](https://cloud.tencent.com/document/product/267/38543#:~:text=I- ,ISO,-%E6%97%A5%E6%9C%9F%E6%A0%BC%E5%BC%8F)
+2) YYYY-MM-DD hh:mm:ss: When using this format, it represents Beijing time by default.
      */
     public $QueryTime;
 
@@ -38,7 +44,9 @@ class DescribeAllStreamPlayInfoListRequest extends AbstractModel
     public $PlayDomains;
 
     /**
-     * @param string $QueryTime The time point to query in the format of “yyyy-mm-dd HH:MM:00”(accurate to the minute). You can query data from the last month. Because there is a five-minute delay in the data, if you want to get the latest data, we recommend you pass in a time point five minutes earlier than the current time.
+     * @param string $QueryTime The query time of the request, supports data query for the last one month. Interface request supports two time formats:
+1) YYYY-MM-DDThh:mm:ssZ: ISO time format, for details, see [ISO Date Format Description](https://cloud.tencent.com/document/product/267/38543#:~:text=I- ,ISO,-%E6%97%A5%E6%9C%9F%E6%A0%BC%E5%BC%8F)
+2) YYYY-MM-DD hh:mm:ss: When using this format, it represents Beijing time by default.
      * @param array $PlayDomains The playback domains to query. If you leave this empty, all playback domains will be queried.
      */
     function __construct()

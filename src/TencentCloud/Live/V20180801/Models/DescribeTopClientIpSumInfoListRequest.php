@@ -20,12 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeTopClientIpSumInfoList request structure.
  *
- * @method string getStartTime() Obtain Start point in time in the format of `yyyy-mm-dd HH:MM:SS`.
- * @method void setStartTime(string $StartTime) Set Start point in time in the format of `yyyy-mm-dd HH:MM:SS`.
- * @method string getEndTime() Obtain End point in time in the format of `yyyy-mm-dd HH:MM:SS`
-The time span is [0,4 hours]. Data for the last day can be queried.
- * @method void setEndTime(string $EndTime) Set End point in time in the format of `yyyy-mm-dd HH:MM:SS`
-The time span is [0,4 hours]. Data for the last day can be queried.
+ * @method string getStartTime() Obtain The start time of the request, supports data query for the last one day, the gap between the start time and the end time cannot exceed four hours. Interface request supports two time formats:
+1) YYYY-MM-DDThh:mm:ssZ: ISO time format, for details, see [ISO Date Format Description](https://cloud.tencent.com/document/product/267/38543#:~:text=I- ,ISO,-%E6%97%A5%E6%9C%9F%E6%A0%BC%E5%BC%8F)
+2) YYYY-MM-DD hh:mm:ss: When using this format, it represents Beijing time by default.
+ * @method void setStartTime(string $StartTime) Set The start time of the request, supports data query for the last one day, the gap between the start time and the end time cannot exceed four hours. Interface request supports two time formats:
+1) YYYY-MM-DDThh:mm:ssZ: ISO time format, for details, see [ISO Date Format Description](https://cloud.tencent.com/document/product/267/38543#:~:text=I- ,ISO,-%E6%97%A5%E6%9C%9F%E6%A0%BC%E5%BC%8F)
+2) YYYY-MM-DD hh:mm:ss: When using this format, it represents Beijing time by default.
+ * @method string getEndTime() Obtain The end time of the request, supports data query for the last one day, the gap between the start time and the end time cannot exceed four hours. Interface request supports two time formats:
+1) YYYY-MM-DDThh:mm:ssZ: ISO time format,for details,see [ISO Date Format Description](https://cloud.tencent.com/document/product/267/38543#:~:text=I- ,ISO,-%E6%97%A5%E6%9C%9F%E6%A0%BC%E5%BC%8F)
+2) YYYY-MM-DD hh:mm:ss: When using this format, it represents Beijing time by default.
+ * @method void setEndTime(string $EndTime) Set The end time of the request, supports data query for the last one day, the gap between the start time and the end time cannot exceed four hours. Interface request supports two time formats:
+1) YYYY-MM-DDThh:mm:ssZ: ISO time format,for details,see [ISO Date Format Description](https://cloud.tencent.com/document/product/267/38543#:~:text=I- ,ISO,-%E6%97%A5%E6%9C%9F%E6%A0%BC%E5%BC%8F)
+2) YYYY-MM-DD hh:mm:ss: When using this format, it represents Beijing time by default.
  * @method array getPlayDomains() Obtain Playback domain name. If this parameter is left empty, full data will be queried by default.
  * @method void setPlayDomains(array $PlayDomains) Set Playback domain name. If this parameter is left empty, full data will be queried by default.
  * @method integer getPageNum() Obtain Page number. Value range: [1,1000]. Default value: 1.
@@ -42,13 +48,16 @@ The time span is [0,4 hours]. Data for the last day can be queried.
 class DescribeTopClientIpSumInfoListRequest extends AbstractModel
 {
     /**
-     * @var string Start point in time in the format of `yyyy-mm-dd HH:MM:SS`.
+     * @var string The start time of the request, supports data query for the last one day, the gap between the start time and the end time cannot exceed four hours. Interface request supports two time formats:
+1) YYYY-MM-DDThh:mm:ssZ: ISO time format, for details, see [ISO Date Format Description](https://cloud.tencent.com/document/product/267/38543#:~:text=I- ,ISO,-%E6%97%A5%E6%9C%9F%E6%A0%BC%E5%BC%8F)
+2) YYYY-MM-DD hh:mm:ss: When using this format, it represents Beijing time by default.
      */
     public $StartTime;
 
     /**
-     * @var string End point in time in the format of `yyyy-mm-dd HH:MM:SS`
-The time span is [0,4 hours]. Data for the last day can be queried.
+     * @var string The end time of the request, supports data query for the last one day, the gap between the start time and the end time cannot exceed four hours. Interface request supports two time formats:
+1) YYYY-MM-DDThh:mm:ssZ: ISO time format,for details,see [ISO Date Format Description](https://cloud.tencent.com/document/product/267/38543#:~:text=I- ,ISO,-%E6%97%A5%E6%9C%9F%E6%A0%BC%E5%BC%8F)
+2) YYYY-MM-DD hh:mm:ss: When using this format, it represents Beijing time by default.
      */
     public $EndTime;
 
@@ -83,9 +92,12 @@ The time span is [0,4 hours]. Data for the last day can be queried.
     public $OutLanguage;
 
     /**
-     * @param string $StartTime Start point in time in the format of `yyyy-mm-dd HH:MM:SS`.
-     * @param string $EndTime End point in time in the format of `yyyy-mm-dd HH:MM:SS`
-The time span is [0,4 hours]. Data for the last day can be queried.
+     * @param string $StartTime The start time of the request, supports data query for the last one day, the gap between the start time and the end time cannot exceed four hours. Interface request supports two time formats:
+1) YYYY-MM-DDThh:mm:ssZ: ISO time format, for details, see [ISO Date Format Description](https://cloud.tencent.com/document/product/267/38543#:~:text=I- ,ISO,-%E6%97%A5%E6%9C%9F%E6%A0%BC%E5%BC%8F)
+2) YYYY-MM-DD hh:mm:ss: When using this format, it represents Beijing time by default.
+     * @param string $EndTime The end time of the request, supports data query for the last one day, the gap between the start time and the end time cannot exceed four hours. Interface request supports two time formats:
+1) YYYY-MM-DDThh:mm:ssZ: ISO time format,for details,see [ISO Date Format Description](https://cloud.tencent.com/document/product/267/38543#:~:text=I- ,ISO,-%E6%97%A5%E6%9C%9F%E6%A0%BC%E5%BC%8F)
+2) YYYY-MM-DD hh:mm:ss: When using this format, it represents Beijing time by default.
      * @param array $PlayDomains Playback domain name. If this parameter is left empty, full data will be queried by default.
      * @param integer $PageNum Page number. Value range: [1,1000]. Default value: 1.
      * @param integer $PageSize Number of entries per page. Value range: [1,1000]. Default value: 20.

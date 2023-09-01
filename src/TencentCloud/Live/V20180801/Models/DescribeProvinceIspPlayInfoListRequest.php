@@ -20,16 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeProvinceIspPlayInfoList request structure.
  *
- * @method string getStartTime() Obtain Start point in time (Beijing time).
-Example: 2019-02-21 10:00:00.
- * @method void setStartTime(string $StartTime) Set Start point in time (Beijing time).
-Example: 2019-02-21 10:00:00.
- * @method string getEndTime() Obtain End point in time (Beijing time).
-Example: 2019-02-21 12:00:00.
-Note: `EndTime` and `StartTime` only support querying data for the last day.
- * @method void setEndTime(string $EndTime) Set End point in time (Beijing time).
-Example: 2019-02-21 12:00:00.
-Note: `EndTime` and `StartTime` only support querying data for the last day.
+ * @method string getStartTime() Obtain The start time of the request, supports data query for the last one day, the gap between the start time and the end time cannot exceed one day. Interface request supports two time formats:
+1) YYYY-MM-DDThh:mm:ssZ: ISO time format, for details, see [ISO Date Format Description](https://cloud.tencent.com/document/product/267/38543#:~:text=I- ,ISO,-%E6%97%A5%E6%9C%9F%E6%A0%BC%E5%BC%8F)
+2) YYYY-MM-DD hh:mm:ss: When using this format, it represents Beijing time by default.
+ * @method void setStartTime(string $StartTime) Set The start time of the request, supports data query for the last one day, the gap between the start time and the end time cannot exceed one day. Interface request supports two time formats:
+1) YYYY-MM-DDThh:mm:ssZ: ISO time format, for details, see [ISO Date Format Description](https://cloud.tencent.com/document/product/267/38543#:~:text=I- ,ISO,-%E6%97%A5%E6%9C%9F%E6%A0%BC%E5%BC%8F)
+2) YYYY-MM-DD hh:mm:ss: When using this format, it represents Beijing time by default.
+ * @method string getEndTime() Obtain The end time of the request, supports data query for the last one day, the gap between the start time and the end time cannot exceed one day. Interface request supports two time formats:
+1) YYYY-MM-DDThh:mm:ssZ: ISO time format,for details,see [ISO Date Format Description](https://cloud.tencent.com/document/product/267/38543#:~:text=I- ,ISO,-%E6%97%A5%E6%9C%9F%E6%A0%BC%E5%BC%8F)
+2) YYYY-MM-DD hh:mm:ss: When using this format, it represents Beijing time by default.
+ * @method void setEndTime(string $EndTime) Set The end time of the request, supports data query for the last one day, the gap between the start time and the end time cannot exceed one day. Interface request supports two time formats:
+1) YYYY-MM-DDThh:mm:ssZ: ISO time format,for details,see [ISO Date Format Description](https://cloud.tencent.com/document/product/267/38543#:~:text=I- ,ISO,-%E6%97%A5%E6%9C%9F%E6%A0%BC%E5%BC%8F)
+2) YYYY-MM-DD hh:mm:ss: When using this format, it represents Beijing time by default.
  * @method integer getGranularity() Obtain Supported granularities:
 1: 1-minute granularity (the query interval should be within 1 day)
  * @method void setGranularity(integer $Granularity) Set Supported granularities:
@@ -64,15 +66,16 @@ Data of all IPs will be returned if this parameter is left empty.
 class DescribeProvinceIspPlayInfoListRequest extends AbstractModel
 {
     /**
-     * @var string Start point in time (Beijing time).
-Example: 2019-02-21 10:00:00.
+     * @var string The start time of the request, supports data query for the last one day, the gap between the start time and the end time cannot exceed one day. Interface request supports two time formats:
+1) YYYY-MM-DDThh:mm:ssZ: ISO time format, for details, see [ISO Date Format Description](https://cloud.tencent.com/document/product/267/38543#:~:text=I- ,ISO,-%E6%97%A5%E6%9C%9F%E6%A0%BC%E5%BC%8F)
+2) YYYY-MM-DD hh:mm:ss: When using this format, it represents Beijing time by default.
      */
     public $StartTime;
 
     /**
-     * @var string End point in time (Beijing time).
-Example: 2019-02-21 12:00:00.
-Note: `EndTime` and `StartTime` only support querying data for the last day.
+     * @var string The end time of the request, supports data query for the last one day, the gap between the start time and the end time cannot exceed one day. Interface request supports two time formats:
+1) YYYY-MM-DDThh:mm:ssZ: ISO time format,for details,see [ISO Date Format Description](https://cloud.tencent.com/document/product/267/38543#:~:text=I- ,ISO,-%E6%97%A5%E6%9C%9F%E6%A0%BC%E5%BC%8F)
+2) YYYY-MM-DD hh:mm:ss: When using this format, it represents Beijing time by default.
      */
     public $EndTime;
 
@@ -120,11 +123,12 @@ Data of all IPs will be returned if this parameter is left empty.
     public $IpType;
 
     /**
-     * @param string $StartTime Start point in time (Beijing time).
-Example: 2019-02-21 10:00:00.
-     * @param string $EndTime End point in time (Beijing time).
-Example: 2019-02-21 12:00:00.
-Note: `EndTime` and `StartTime` only support querying data for the last day.
+     * @param string $StartTime The start time of the request, supports data query for the last one day, the gap between the start time and the end time cannot exceed one day. Interface request supports two time formats:
+1) YYYY-MM-DDThh:mm:ssZ: ISO time format, for details, see [ISO Date Format Description](https://cloud.tencent.com/document/product/267/38543#:~:text=I- ,ISO,-%E6%97%A5%E6%9C%9F%E6%A0%BC%E5%BC%8F)
+2) YYYY-MM-DD hh:mm:ss: When using this format, it represents Beijing time by default.
+     * @param string $EndTime The end time of the request, supports data query for the last one day, the gap between the start time and the end time cannot exceed one day. Interface request supports two time formats:
+1) YYYY-MM-DDThh:mm:ssZ: ISO time format,for details,see [ISO Date Format Description](https://cloud.tencent.com/document/product/267/38543#:~:text=I- ,ISO,-%E6%97%A5%E6%9C%9F%E6%A0%BC%E5%BC%8F)
+2) YYYY-MM-DD hh:mm:ss: When using this format, it represents Beijing time by default.
      * @param integer $Granularity Supported granularities:
 1: 1-minute granularity (the query interval should be within 1 day)
      * @param string $StatType Statistical metric type:

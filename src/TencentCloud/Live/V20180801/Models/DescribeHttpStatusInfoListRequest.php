@@ -20,31 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeHttpStatusInfoList request structure.
  *
- * @method string getStartTime() Obtain Start time (Beijing time).
-Format: yyyy-mm-dd HH:MM:SS.
- * @method void setStartTime(string $StartTime) Set Start time (Beijing time).
-Format: yyyy-mm-dd HH:MM:SS.
- * @method string getEndTime() Obtain End time (Beijing time).
-Format: yyyy-mm-dd HH:MM:SS.
-Note: data in the last 3 months can be queried and the query period is up to 1 day.
- * @method void setEndTime(string $EndTime) Set End time (Beijing time).
-Format: yyyy-mm-dd HH:MM:SS.
-Note: data in the last 3 months can be queried and the query period is up to 1 day.
+ * @method string getStartTime() Obtain The start time of the request, supports data query for the last three months, the gap between the start time and the end time cannot exceed one day. Interface request supports two time formats:
+1) YYYY-MM-DDThh:mm:ssZ: ISO time format, for details, see [ISO Date Format Description](https://cloud.tencent.com/document/product/267/38543#:~:text=I- ,ISO,-%E6%97%A5%E6%9C%9F%E6%A0%BC%E5%BC%8F)
+2) YYYY-MM-DD hh:mm:ss: When using this format, it represents Beijing time by default.
+ * @method void setStartTime(string $StartTime) Set The start time of the request, supports data query for the last three months, the gap between the start time and the end time cannot exceed one day. Interface request supports two time formats:
+1) YYYY-MM-DDThh:mm:ssZ: ISO time format, for details, see [ISO Date Format Description](https://cloud.tencent.com/document/product/267/38543#:~:text=I- ,ISO,-%E6%97%A5%E6%9C%9F%E6%A0%BC%E5%BC%8F)
+2) YYYY-MM-DD hh:mm:ss: When using this format, it represents Beijing time by default.
+ * @method string getEndTime() Obtain The end time of the request, supports data query for the last three months, the gap between the start time and the end time cannot exceed one day. Interface request supports two time formats:
+1) YYYY-MM-DDThh:mm:ssZ: ISO time format,for details,see [ISO Date Format Description](https://cloud.tencent.com/document/product/267/38543#:~:text=I- ,ISO,-%E6%97%A5%E6%9C%9F%E6%A0%BC%E5%BC%8F)
+2) YYYY-MM-DD hh:mm:ss: When using this format, it represents Beijing time by default.
+ * @method void setEndTime(string $EndTime) Set The end time of the request, supports data query for the last three months, the gap between the start time and the end time cannot exceed one day. Interface request supports two time formats:
+1) YYYY-MM-DDThh:mm:ssZ: ISO time format,for details,see [ISO Date Format Description](https://cloud.tencent.com/document/product/267/38543#:~:text=I- ,ISO,-%E6%97%A5%E6%9C%9F%E6%A0%BC%E5%BC%8F)
+2) YYYY-MM-DD hh:mm:ss: When using this format, it represents Beijing time by default.
  * @method array getPlayDomains() Obtain Playback domain name list.
  * @method void setPlayDomains(array $PlayDomains) Set Playback domain name list.
  */
 class DescribeHttpStatusInfoListRequest extends AbstractModel
 {
     /**
-     * @var string Start time (Beijing time).
-Format: yyyy-mm-dd HH:MM:SS.
+     * @var string The start time of the request, supports data query for the last three months, the gap between the start time and the end time cannot exceed one day. Interface request supports two time formats:
+1) YYYY-MM-DDThh:mm:ssZ: ISO time format, for details, see [ISO Date Format Description](https://cloud.tencent.com/document/product/267/38543#:~:text=I- ,ISO,-%E6%97%A5%E6%9C%9F%E6%A0%BC%E5%BC%8F)
+2) YYYY-MM-DD hh:mm:ss: When using this format, it represents Beijing time by default.
      */
     public $StartTime;
 
     /**
-     * @var string End time (Beijing time).
-Format: yyyy-mm-dd HH:MM:SS.
-Note: data in the last 3 months can be queried and the query period is up to 1 day.
+     * @var string The end time of the request, supports data query for the last three months, the gap between the start time and the end time cannot exceed one day. Interface request supports two time formats:
+1) YYYY-MM-DDThh:mm:ssZ: ISO time format,for details,see [ISO Date Format Description](https://cloud.tencent.com/document/product/267/38543#:~:text=I- ,ISO,-%E6%97%A5%E6%9C%9F%E6%A0%BC%E5%BC%8F)
+2) YYYY-MM-DD hh:mm:ss: When using this format, it represents Beijing time by default.
      */
     public $EndTime;
 
@@ -54,11 +57,12 @@ Note: data in the last 3 months can be queried and the query period is up to 1 d
     public $PlayDomains;
 
     /**
-     * @param string $StartTime Start time (Beijing time).
-Format: yyyy-mm-dd HH:MM:SS.
-     * @param string $EndTime End time (Beijing time).
-Format: yyyy-mm-dd HH:MM:SS.
-Note: data in the last 3 months can be queried and the query period is up to 1 day.
+     * @param string $StartTime The start time of the request, supports data query for the last three months, the gap between the start time and the end time cannot exceed one day. Interface request supports two time formats:
+1) YYYY-MM-DDThh:mm:ssZ: ISO time format, for details, see [ISO Date Format Description](https://cloud.tencent.com/document/product/267/38543#:~:text=I- ,ISO,-%E6%97%A5%E6%9C%9F%E6%A0%BC%E5%BC%8F)
+2) YYYY-MM-DD hh:mm:ss: When using this format, it represents Beijing time by default.
+     * @param string $EndTime The end time of the request, supports data query for the last three months, the gap between the start time and the end time cannot exceed one day. Interface request supports two time formats:
+1) YYYY-MM-DDThh:mm:ssZ: ISO time format,for details,see [ISO Date Format Description](https://cloud.tencent.com/document/product/267/38543#:~:text=I- ,ISO,-%E6%97%A5%E6%9C%9F%E6%A0%BC%E5%BC%8F)
+2) YYYY-MM-DD hh:mm:ss: When using this format, it represents Beijing time by default.
      * @param array $PlayDomains Playback domain name list.
      */
     function __construct()

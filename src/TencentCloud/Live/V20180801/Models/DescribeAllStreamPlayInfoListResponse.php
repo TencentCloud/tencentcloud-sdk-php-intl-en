@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeAllStreamPlayInfoList response structure.
  *
- * @method string getQueryTime() Obtain The time point queried, whose value is the same as that of the corresponding request parameter.
- * @method void setQueryTime(string $QueryTime) Set The time point queried, whose value is the same as that of the corresponding request parameter.
+ * @method string getQueryTime() Obtain The time point queried, whose format is the same as that of the corresponding request parameter.
+ * @method void setQueryTime(string $QueryTime) Set The time point queried, whose format is the same as that of the corresponding request parameter.
  * @method array getDataInfoList() Obtain The playback data.
  * @method void setDataInfoList(array $DataInfoList) Set The playback data.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeAllStreamPlayInfoListResponse extends AbstractModel
 {
     /**
-     * @var string The time point queried, whose value is the same as that of the corresponding request parameter.
+     * @var string The time point queried, whose format is the same as that of the corresponding request parameter.
      */
     public $QueryTime;
 
@@ -45,7 +45,7 @@ class DescribeAllStreamPlayInfoListResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $QueryTime The time point queried, whose value is the same as that of the corresponding request parameter.
+     * @param string $QueryTime The time point queried, whose format is the same as that of the corresponding request parameter.
      * @param array $DataInfoList The playback data.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */

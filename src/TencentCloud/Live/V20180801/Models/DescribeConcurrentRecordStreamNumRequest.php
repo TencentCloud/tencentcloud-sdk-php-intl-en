@@ -24,14 +24,18 @@ use TencentCloud\Common\AbstractModel;
 NormalLive: LVB.
  * @method void setLiveType(string $LiveType) Set Live streaming type. SlowLive: LCB.
 NormalLive: LVB.
- * @method string getStartTime() Obtain Start time in the format of `yyyy-mm-dd HH:MM:SS`.
-Data for the last 180 days can be queried.
- * @method void setStartTime(string $StartTime) Set Start time in the format of `yyyy-mm-dd HH:MM:SS`.
-Data for the last 180 days can be queried.
- * @method string getEndTime() Obtain End time in the format of `yyyy-mm-dd HH:MM:SS`.
-The maximum time span supported is 31 days.
- * @method void setEndTime(string $EndTime) Set End time in the format of `yyyy-mm-dd HH:MM:SS`.
-The maximum time span supported is 31 days.
+ * @method string getStartTime() Obtain The start time of the request, supports data query for the last six months, the gap between the start time and the end time cannot exceed one month. Interface request supports two time formats:
+1) YYYY-MM-DDThh:mm:ssZ: ISO time format, for details, see [ISO Date Format Description](https://cloud.tencent.com/document/product/267/38543#:~:text=I- ,ISO,-%E6%97%A5%E6%9C%9F%E6%A0%BC%E5%BC%8F)
+2) YYYY-MM-DD hh:mm:ss: When using this format, it represents Beijing time by default.
+ * @method void setStartTime(string $StartTime) Set The start time of the request, supports data query for the last six months, the gap between the start time and the end time cannot exceed one month. Interface request supports two time formats:
+1) YYYY-MM-DDThh:mm:ssZ: ISO time format, for details, see [ISO Date Format Description](https://cloud.tencent.com/document/product/267/38543#:~:text=I- ,ISO,-%E6%97%A5%E6%9C%9F%E6%A0%BC%E5%BC%8F)
+2) YYYY-MM-DD hh:mm:ss: When using this format, it represents Beijing time by default.
+ * @method string getEndTime() Obtain The end time of the request, supports data query for the last six months, the gap between the start time and the end time cannot exceed one month. Interface request supports two time formats:
+1) YYYY-MM-DDThh:mm:ssZ: ISO time format,for details,see [ISO Date Format Description](https://cloud.tencent.com/document/product/267/38543#:~:text=I- ,ISO,-%E6%97%A5%E6%9C%9F%E6%A0%BC%E5%BC%8F)
+2) YYYY-MM-DD hh:mm:ss: When using this format, it represents Beijing time by default.
+ * @method void setEndTime(string $EndTime) Set The end time of the request, supports data query for the last six months, the gap between the start time and the end time cannot exceed one month. Interface request supports two time formats:
+1) YYYY-MM-DDThh:mm:ssZ: ISO time format,for details,see [ISO Date Format Description](https://cloud.tencent.com/document/product/267/38543#:~:text=I- ,ISO,-%E6%97%A5%E6%9C%9F%E6%A0%BC%E5%BC%8F)
+2) YYYY-MM-DD hh:mm:ss: When using this format, it represents Beijing time by default.
  * @method string getMainlandOrOversea() Obtain Valid values: Mainland (data for Mainland China), Oversea (data for regions outside Mainland China). If this parameter is left empty, data for all regions will be queried.
  * @method void setMainlandOrOversea(string $MainlandOrOversea) Set Valid values: Mainland (data for Mainland China), Oversea (data for regions outside Mainland China). If this parameter is left empty, data for all regions will be queried.
  * @method array getPushDomains() Obtain Playback domain name list. If this parameter is left empty, full data will be queried.
@@ -46,14 +50,16 @@ NormalLive: LVB.
     public $LiveType;
 
     /**
-     * @var string Start time in the format of `yyyy-mm-dd HH:MM:SS`.
-Data for the last 180 days can be queried.
+     * @var string The start time of the request, supports data query for the last six months, the gap between the start time and the end time cannot exceed one month. Interface request supports two time formats:
+1) YYYY-MM-DDThh:mm:ssZ: ISO time format, for details, see [ISO Date Format Description](https://cloud.tencent.com/document/product/267/38543#:~:text=I- ,ISO,-%E6%97%A5%E6%9C%9F%E6%A0%BC%E5%BC%8F)
+2) YYYY-MM-DD hh:mm:ss: When using this format, it represents Beijing time by default.
      */
     public $StartTime;
 
     /**
-     * @var string End time in the format of `yyyy-mm-dd HH:MM:SS`.
-The maximum time span supported is 31 days.
+     * @var string The end time of the request, supports data query for the last six months, the gap between the start time and the end time cannot exceed one month. Interface request supports two time formats:
+1) YYYY-MM-DDThh:mm:ssZ: ISO time format,for details,see [ISO Date Format Description](https://cloud.tencent.com/document/product/267/38543#:~:text=I- ,ISO,-%E6%97%A5%E6%9C%9F%E6%A0%BC%E5%BC%8F)
+2) YYYY-MM-DD hh:mm:ss: When using this format, it represents Beijing time by default.
      */
     public $EndTime;
 
@@ -70,10 +76,12 @@ The maximum time span supported is 31 days.
     /**
      * @param string $LiveType Live streaming type. SlowLive: LCB.
 NormalLive: LVB.
-     * @param string $StartTime Start time in the format of `yyyy-mm-dd HH:MM:SS`.
-Data for the last 180 days can be queried.
-     * @param string $EndTime End time in the format of `yyyy-mm-dd HH:MM:SS`.
-The maximum time span supported is 31 days.
+     * @param string $StartTime The start time of the request, supports data query for the last six months, the gap between the start time and the end time cannot exceed one month. Interface request supports two time formats:
+1) YYYY-MM-DDThh:mm:ssZ: ISO time format, for details, see [ISO Date Format Description](https://cloud.tencent.com/document/product/267/38543#:~:text=I- ,ISO,-%E6%97%A5%E6%9C%9F%E6%A0%BC%E5%BC%8F)
+2) YYYY-MM-DD hh:mm:ss: When using this format, it represents Beijing time by default.
+     * @param string $EndTime The end time of the request, supports data query for the last six months, the gap between the start time and the end time cannot exceed one month. Interface request supports two time formats:
+1) YYYY-MM-DDThh:mm:ssZ: ISO time format,for details,see [ISO Date Format Description](https://cloud.tencent.com/document/product/267/38543#:~:text=I- ,ISO,-%E6%97%A5%E6%9C%9F%E6%A0%BC%E5%BC%8F)
+2) YYYY-MM-DD hh:mm:ss: When using this format, it represents Beijing time by default.
      * @param string $MainlandOrOversea Valid values: Mainland (data for Mainland China), Oversea (data for regions outside Mainland China). If this parameter is left empty, data for all regions will be queried.
      * @param array $PushDomains Playback domain name list. If this parameter is left empty, full data will be queried.
      */
