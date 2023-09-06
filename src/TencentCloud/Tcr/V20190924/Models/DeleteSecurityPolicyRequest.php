@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPolicyIndex(integer $PolicyIndex) Set Allowlist ID
  * @method string getPolicyVersion() Obtain Allowlist version
  * @method void setPolicyVersion(string $PolicyVersion) Set Allowlist version
+ * @method string getCidrBlock() Obtain IP range or IP address (mutually exclusive).
+ * @method void setCidrBlock(string $CidrBlock) Set IP range or IP address (mutually exclusive).
  */
 class DeleteSecurityPolicyRequest extends AbstractModel
 {
@@ -45,9 +47,15 @@ class DeleteSecurityPolicyRequest extends AbstractModel
     public $PolicyVersion;
 
     /**
+     * @var string IP range or IP address (mutually exclusive).
+     */
+    public $CidrBlock;
+
+    /**
      * @param string $RegistryId Instance ID
      * @param integer $PolicyIndex Allowlist ID
      * @param string $PolicyVersion Allowlist version
+     * @param string $CidrBlock IP range or IP address (mutually exclusive).
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class DeleteSecurityPolicyRequest extends AbstractModel
 
         if (array_key_exists("PolicyVersion",$param) and $param["PolicyVersion"] !== null) {
             $this->PolicyVersion = $param["PolicyVersion"];
+        }
+
+        if (array_key_exists("CidrBlock",$param) and $param["CidrBlock"] !== null) {
+            $this->CidrBlock = $param["CidrBlock"];
         }
     }
 }

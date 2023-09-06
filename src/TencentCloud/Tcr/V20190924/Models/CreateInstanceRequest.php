@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSyncTag(boolean $SyncTag) Set Whether to sync TCR cloud tags to the COS bucket
  * @method boolean getEnableCosMAZ() Obtain Whether to enable the COS Multi-AZ feature
  * @method void setEnableCosMAZ(boolean $EnableCosMAZ) Set Whether to enable the COS Multi-AZ feature
+ * @method boolean getDeletionProtection() Obtain Whether to enable deletion protection
+ * @method void setDeletionProtection(boolean $DeletionProtection) Set Whether to enable deletion protection
  */
 class CreateInstanceRequest extends AbstractModel
 {
@@ -73,6 +75,11 @@ class CreateInstanceRequest extends AbstractModel
     public $EnableCosMAZ;
 
     /**
+     * @var boolean Whether to enable deletion protection
+     */
+    public $DeletionProtection;
+
+    /**
      * @param string $RegistryName Enterprise Edition instance name
      * @param string $RegistryType Enterprise Edition instance type. Valid values: basic: Basic; standard: Standard; premium: Premium.
      * @param TagSpecification $TagSpecification Cloud tag description
@@ -80,6 +87,7 @@ class CreateInstanceRequest extends AbstractModel
      * @param RegistryChargePrepaid $RegistryChargePrepaid Auto-renewal setting and purchase period
      * @param boolean $SyncTag Whether to sync TCR cloud tags to the COS bucket
      * @param boolean $EnableCosMAZ Whether to enable the COS Multi-AZ feature
+     * @param boolean $DeletionProtection Whether to enable deletion protection
      */
     function __construct()
     {
@@ -122,6 +130,10 @@ class CreateInstanceRequest extends AbstractModel
 
         if (array_key_exists("EnableCosMAZ",$param) and $param["EnableCosMAZ"] !== null) {
             $this->EnableCosMAZ = $param["EnableCosMAZ"];
+        }
+
+        if (array_key_exists("DeletionProtection",$param) and $param["DeletionProtection"] !== null) {
+            $this->DeletionProtection = $param["DeletionProtection"];
         }
     }
 }

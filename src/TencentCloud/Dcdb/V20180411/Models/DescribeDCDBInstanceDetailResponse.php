@@ -156,8 +156,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method array getReservedNetResources() Obtain Unclaimed network resource
  * @method void setReservedNetResources(array $ReservedNetResources) Set Unclaimed network resource
- * @method boolean getIsPhysicalReplicationSupported() Obtain 
- * @method void setIsPhysicalReplicationSupported(boolean $IsPhysicalReplicationSupported) Set 
+ * @method boolean getIsPhysicalReplicationSupported() Obtain Whether physical replication is supported.
+ * @method void setIsPhysicalReplicationSupported(boolean $IsPhysicalReplicationSupported) Set Whether physical replication is supported.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -436,7 +436,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $ReservedNetResources;
 
     /**
-     * @var boolean 
+     * @var boolean Whether physical replication is supported.
      */
     public $IsPhysicalReplicationSupported;
 
@@ -514,7 +514,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param integer $RsAccessStrategy Nearby VPC access
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param array $ReservedNetResources Unclaimed network resource
-     * @param boolean $IsPhysicalReplicationSupported 
+     * @param boolean $IsPhysicalReplicationSupported Whether physical replication is supported.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()

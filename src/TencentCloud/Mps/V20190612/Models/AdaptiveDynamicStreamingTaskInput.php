@@ -38,6 +38,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: This field may return·null, indicating that no valid values can be obtained.
  * @method void setAddOnSubtitles(array $AddOnSubtitles) Set The subtitle file to add.
 Note: This field may return·null, indicating that no valid values can be obtained.
+ * @method DrmInfo getDrmInfo() Obtain Information of Drm.   Note: This field may return·null, indicating that no valid values can be obtained.
+ * @method void setDrmInfo(DrmInfo $DrmInfo) Set Information of Drm.   Note: This field may return·null, indicating that no valid values can be obtained.
  */
 class AdaptiveDynamicStreamingTaskInput extends AbstractModel
 {
@@ -79,6 +81,11 @@ Note: This field may return·null, indicating that no valid values can be obtain
     public $AddOnSubtitles;
 
     /**
+     * @var DrmInfo Information of Drm.   Note: This field may return·null, indicating that no valid values can be obtained.
+     */
+    public $DrmInfo;
+
+    /**
      * @param integer $Definition Adaptive bitrate streaming template ID.
      * @param array $WatermarkSet List of up to 10 image or text watermarks.
      * @param TaskOutputStorage $OutputStorage Target bucket of an output file after being transcoded to adaptive bitrate streaming. If this parameter is left empty, the `OutputStorage` value of the upper folder will be inherited.
@@ -88,6 +95,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @param string $SegmentObjectName The relative output path of the segment file after being transcoded to adaptive bitrate streaming (in HLS format only). If this parameter is left empty, a relative path in the following format will be used by default: `{inputName}_adaptiveDynamicStreaming_{definition}_{subStreamNumber}_{segmentNumber}.{format}`.
      * @param array $AddOnSubtitles The subtitle file to add.
 Note: This field may return·null, indicating that no valid values can be obtained.
+     * @param DrmInfo $DrmInfo Information of Drm.   Note: This field may return·null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -139,6 +147,11 @@ Note: This field may return·null, indicating that no valid values can be obtain
                 $obj->deserialize($value);
                 array_push($this->AddOnSubtitles, $obj);
             }
+        }
+
+        if (array_key_exists("DrmInfo",$param) and $param["DrmInfo"] !== null) {
+            $this->DrmInfo = new DrmInfo();
+            $this->DrmInfo->deserialize($param["DrmInfo"]);
         }
     }
 }

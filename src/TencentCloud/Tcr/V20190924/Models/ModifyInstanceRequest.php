@@ -22,8 +22,16 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getRegistryId() Obtain Instance ID
  * @method void setRegistryId(string $RegistryId) Set Instance ID
- * @method string getRegistryType() Obtain Instance specification
- * @method void setRegistryType(string $RegistryType) Set Instance specification
+ * @method string getRegistryType() Obtain Instance edition
+Basic: `basic`
+Standard: `standard`
+Premium: `premium`
+ * @method void setRegistryType(string $RegistryType) Set Instance edition
+Basic: `basic`
+Standard: `standard`
+Premium: `premium`
+ * @method boolean getDeletionProtection() Obtain Whether to enable deletion protection. It defaults to `false`. 
+ * @method void setDeletionProtection(boolean $DeletionProtection) Set Whether to enable deletion protection. It defaults to `false`. 
  */
 class ModifyInstanceRequest extends AbstractModel
 {
@@ -33,13 +41,25 @@ class ModifyInstanceRequest extends AbstractModel
     public $RegistryId;
 
     /**
-     * @var string Instance specification
+     * @var string Instance edition
+Basic: `basic`
+Standard: `standard`
+Premium: `premium`
      */
     public $RegistryType;
 
     /**
+     * @var boolean Whether to enable deletion protection. It defaults to `false`. 
+     */
+    public $DeletionProtection;
+
+    /**
      * @param string $RegistryId Instance ID
-     * @param string $RegistryType Instance specification
+     * @param string $RegistryType Instance edition
+Basic: `basic`
+Standard: `standard`
+Premium: `premium`
+     * @param boolean $DeletionProtection Whether to enable deletion protection. It defaults to `false`. 
      */
     function __construct()
     {
@@ -60,6 +80,10 @@ class ModifyInstanceRequest extends AbstractModel
 
         if (array_key_exists("RegistryType",$param) and $param["RegistryType"] !== null) {
             $this->RegistryType = $param["RegistryType"];
+        }
+
+        if (array_key_exists("DeletionProtection",$param) and $param["DeletionProtection"] !== null) {
+            $this->DeletionProtection = $param["DeletionProtection"];
         }
     }
 }
