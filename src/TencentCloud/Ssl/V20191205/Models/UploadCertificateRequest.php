@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProjectId(integer $ProjectId) Set Project ID
  * @method string getCertificateUse() Obtain 
  * @method void setCertificateUse(string $CertificateUse) Set 
+ * @method array getTags() Obtain The list of tags.
+ * @method void setTags(array $Tags) Set The list of tags.
  * @method boolean getRepeatable() Obtain Whether a certificate can be repeatedly uploaded.
  * @method void setRepeatable(boolean $Repeatable) Set Whether a certificate can be repeatedly uploaded.
  */
@@ -68,6 +70,11 @@ class UploadCertificateRequest extends AbstractModel
     public $CertificateUse;
 
     /**
+     * @var array The list of tags.
+     */
+    public $Tags;
+
+    /**
      * @var boolean Whether a certificate can be repeatedly uploaded.
      */
     public $Repeatable;
@@ -79,6 +86,7 @@ class UploadCertificateRequest extends AbstractModel
      * @param string $Alias Alias
      * @param integer $ProjectId Project ID
      * @param string $CertificateUse 
+     * @param array $Tags The list of tags.
      * @param boolean $Repeatable Whether a certificate can be repeatedly uploaded.
      */
     function __construct()
@@ -116,6 +124,15 @@ class UploadCertificateRequest extends AbstractModel
 
         if (array_key_exists("CertificateUse",$param) and $param["CertificateUse"] !== null) {
             $this->CertificateUse = $param["CertificateUse"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tags();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
 
         if (array_key_exists("Repeatable",$param) and $param["Repeatable"] !== null) {

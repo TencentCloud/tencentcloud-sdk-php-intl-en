@@ -46,6 +46,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIsSM(integer $IsSM) Set Whether to filter Chinese SM certificates. `1`: Yes; `0`: No.
  * @method integer getFilterExpiring() Obtain Whether to filter expiring certificates. `1`: Yes; `0`: No.
  * @method void setFilterExpiring(integer $FilterExpiring) Set Whether to filter expiring certificates. `1`: Yes; `0`: No.
+ * @method integer getHostable() Obtain Whether the certificate can be hosted. Valid values: `1` for yes and `0` for no.
+ * @method void setHostable(integer $Hostable) Set Whether the certificate can be hosted. Valid values: `1` for yes and `0` for no.
  */
 class DescribeCertificatesRequest extends AbstractModel
 {
@@ -115,6 +117,11 @@ class DescribeCertificatesRequest extends AbstractModel
     public $FilterExpiring;
 
     /**
+     * @var integer Whether the certificate can be hosted. Valid values: `1` for yes and `0` for no.
+     */
+    public $Hostable;
+
+    /**
      * @param integer $Offset Pagination offset, starting from 0
      * @param integer $Limit Number of entries per page. Default value: `20`. Maximum value: `1000`.
      * @param string $SearchKey Keyword for search, which can be a certificate ID, alias, or domain name, for example, a8xHcaIs
@@ -128,6 +135,7 @@ class DescribeCertificatesRequest extends AbstractModel
      * @param string $FilterSource Filter by source. `upload`: Uploaded certificate; `buy`: Tencent Cloud certificate. If this parameter is left empty, all certificates will be queried.
      * @param integer $IsSM Whether to filter Chinese SM certificates. `1`: Yes; `0`: No.
      * @param integer $FilterExpiring Whether to filter expiring certificates. `1`: Yes; `0`: No.
+     * @param integer $Hostable Whether the certificate can be hosted. Valid values: `1` for yes and `0` for no.
      */
     function __construct()
     {
@@ -192,6 +200,10 @@ class DescribeCertificatesRequest extends AbstractModel
 
         if (array_key_exists("FilterExpiring",$param) and $param["FilterExpiring"] !== null) {
             $this->FilterExpiring = $param["FilterExpiring"];
+        }
+
+        if (array_key_exists("Hostable",$param) and $param["Hostable"] !== null) {
+            $this->Hostable = $param["Hostable"];
         }
     }
 }

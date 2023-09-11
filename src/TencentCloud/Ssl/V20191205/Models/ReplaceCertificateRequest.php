@@ -32,6 +32,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCsrkeyPassword(string $CsrkeyPassword) Set Password of the key
  * @method string getReason() Obtain Reissue reason
  * @method void setReason(string $Reason) Set Reissue reason
+ * @method string getCertCSREncryptAlgo() Obtain The CSR encryption algorithm. Valid values: `RSA` (default), `ECC1`, and `SM2`.
+This parameter is available for selection only when the value of `CsrType` is `Online`.
+ * @method void setCertCSREncryptAlgo(string $CertCSREncryptAlgo) Set The CSR encryption algorithm. Valid values: `RSA` (default), `ECC1`, and `SM2`.
+This parameter is available for selection only when the value of `CsrType` is `Online`.
+ * @method string getCertCSRKeyParameter() Obtain The CSR encryption parameters. When `CsrEncryptAlgo` is set to `RSA`, `2048` (default) and `4096` are available for selection; and when`CsrEncryptAlgo` is set to `ECC`, `prime256v1` (default) and `secp384r1` are available for selection. 
+ * @method void setCertCSRKeyParameter(string $CertCSRKeyParameter) Set The CSR encryption parameters. When `CsrEncryptAlgo` is set to `RSA`, `2048` (default) and `4096` are available for selection; and when`CsrEncryptAlgo` is set to `ECC`, `prime256v1` (default) and `secp384r1` are available for selection. 
  */
 class ReplaceCertificateRequest extends AbstractModel
 {
@@ -66,12 +72,26 @@ class ReplaceCertificateRequest extends AbstractModel
     public $Reason;
 
     /**
+     * @var string The CSR encryption algorithm. Valid values: `RSA` (default), `ECC1`, and `SM2`.
+This parameter is available for selection only when the value of `CsrType` is `Online`.
+     */
+    public $CertCSREncryptAlgo;
+
+    /**
+     * @var string The CSR encryption parameters. When `CsrEncryptAlgo` is set to `RSA`, `2048` (default) and `4096` are available for selection; and when`CsrEncryptAlgo` is set to `ECC`, `prime256v1` (default) and `secp384r1` are available for selection. 
+     */
+    public $CertCSRKeyParameter;
+
+    /**
      * @param string $CertificateId Certificate ID
      * @param string $ValidType Validation type. `DNS_AUTO`: automatic DNS validation; `DNS`: manual DNS validation; `FILE`: file validation
      * @param string $CsrType Type. `original`: original certificate CSR; `upload`: uploaded manually; `online`: generated online. The default value is original.
      * @param string $CsrContent CSR content
      * @param string $CsrkeyPassword Password of the key
      * @param string $Reason Reissue reason
+     * @param string $CertCSREncryptAlgo The CSR encryption algorithm. Valid values: `RSA` (default), `ECC1`, and `SM2`.
+This parameter is available for selection only when the value of `CsrType` is `Online`.
+     * @param string $CertCSRKeyParameter The CSR encryption parameters. When `CsrEncryptAlgo` is set to `RSA`, `2048` (default) and `4096` are available for selection; and when`CsrEncryptAlgo` is set to `ECC`, `prime256v1` (default) and `secp384r1` are available for selection. 
      */
     function __construct()
     {
@@ -108,6 +128,14 @@ class ReplaceCertificateRequest extends AbstractModel
 
         if (array_key_exists("Reason",$param) and $param["Reason"] !== null) {
             $this->Reason = $param["Reason"];
+        }
+
+        if (array_key_exists("CertCSREncryptAlgo",$param) and $param["CertCSREncryptAlgo"] !== null) {
+            $this->CertCSREncryptAlgo = $param["CertCSREncryptAlgo"];
+        }
+
+        if (array_key_exists("CertCSRKeyParameter",$param) and $param["CertCSRKeyParameter"] !== null) {
+            $this->CertCSRKeyParameter = $param["CertCSRKeyParameter"];
         }
     }
 }

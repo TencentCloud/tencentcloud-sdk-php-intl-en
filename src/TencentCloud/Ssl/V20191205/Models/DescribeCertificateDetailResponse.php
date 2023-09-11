@@ -178,6 +178,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setEncryptAlgorithm(string $EncryptAlgorithm) Set Certificate algorithm
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method array getDvRevokeAuthDetail() Obtain The authentication value for DV certificate revocation.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setDvRevokeAuthDetail(array $DvRevokeAuthDetail) Set The authentication value for DV certificate revocation.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -423,6 +427,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $EncryptAlgorithm;
 
     /**
+     * @var array The authentication value for DV certificate revocation.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $DvRevokeAuthDetail;
+
+    /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
@@ -506,6 +516,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $EncryptCertFingerprint SHA1 fingerprint of the encryption certificate (for Chinese SM certificates only)
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $EncryptAlgorithm Certificate algorithm
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param array $DvRevokeAuthDetail The authentication value for DV certificate revocation.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
@@ -689,6 +701,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("EncryptAlgorithm",$param) and $param["EncryptAlgorithm"] !== null) {
             $this->EncryptAlgorithm = $param["EncryptAlgorithm"];
+        }
+
+        if (array_key_exists("DvRevokeAuthDetail",$param) and $param["DvRevokeAuthDetail"] !== null) {
+            $this->DvRevokeAuthDetail = [];
+            foreach ($param["DvRevokeAuthDetail"] as $key => $value){
+                $obj = new DvAuths();
+                $obj->deserialize($value);
+                array_push($this->DvRevokeAuthDetail, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
