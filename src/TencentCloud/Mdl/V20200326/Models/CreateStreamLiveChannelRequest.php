@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPlanSettings(PlanSettings $PlanSettings) Set Event settings
  * @method EventNotifySetting getEventNotifySettings() Obtain The callback settings.
  * @method void setEventNotifySettings(EventNotifySetting $EventNotifySettings) Set The callback settings.
+ * @method InputLossBehaviorInfo getInputLossBehavior() Obtain Complement the last video frame settings.
+ * @method void setInputLossBehavior(InputLossBehaviorInfo $InputLossBehavior) Set Complement the last video frame settings.
  */
 class CreateStreamLiveChannelRequest extends AbstractModel
 {
@@ -80,6 +82,11 @@ class CreateStreamLiveChannelRequest extends AbstractModel
     public $EventNotifySettings;
 
     /**
+     * @var InputLossBehaviorInfo Complement the last video frame settings.
+     */
+    public $InputLossBehavior;
+
+    /**
      * @param string $Name Channel name, which can contain 1-32 case-sensitive letters, digits, and underscores and must be unique at the region level
      * @param array $AttachedInputs Inputs to attach. You can attach 1 to 5 inputs.
      * @param array $OutputGroups Configuration information of the channel’s output groups. Quantity: [1, 10]
@@ -88,6 +95,7 @@ class CreateStreamLiveChannelRequest extends AbstractModel
      * @param array $AVTemplates Audio/Video transcoding templates. Quantity: [1, 10]
      * @param PlanSettings $PlanSettings Event settings
      * @param EventNotifySetting $EventNotifySettings The callback settings.
+     * @param InputLossBehaviorInfo $InputLossBehavior Complement the last video frame settings.
      */
     function __construct()
     {
@@ -159,6 +167,11 @@ class CreateStreamLiveChannelRequest extends AbstractModel
         if (array_key_exists("EventNotifySettings",$param) and $param["EventNotifySettings"] !== null) {
             $this->EventNotifySettings = new EventNotifySetting();
             $this->EventNotifySettings->deserialize($param["EventNotifySettings"]);
+        }
+
+        if (array_key_exists("InputLossBehavior",$param) and $param["InputLossBehavior"] !== null) {
+            $this->InputLossBehavior = new InputLossBehaviorInfo();
+            $this->InputLossBehavior->deserialize($param["InputLossBehavior"]);
         }
     }
 }
