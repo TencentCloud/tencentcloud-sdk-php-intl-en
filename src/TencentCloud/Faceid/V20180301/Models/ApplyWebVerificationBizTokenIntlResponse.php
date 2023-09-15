@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVerificationUrl(string $VerificationUrl) Set The URL of this verification process, which will be returned to the frontend of the browser for starting the process.
  * @method string getBizToken() Obtain The token identifying this web-based verification process, valid for 7,200s after issuance. It is required for getting the result after the verification process is completed.
  * @method void setBizToken(string $BizToken) Set The token identifying this web-based verification process, valid for 7,200s after issuance. It is required for getting the result after the verification process is completed.
+ * @method string getVerificationURL() Obtain 
+ * @method void setVerificationURL(string $VerificationURL) Set 
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -31,6 +33,7 @@ class ApplyWebVerificationBizTokenIntlResponse extends AbstractModel
 {
     /**
      * @var string The URL of this verification process, which will be returned to the frontend of the browser for starting the process.
+     * @deprecated
      */
     public $VerificationUrl;
 
@@ -40,6 +43,11 @@ class ApplyWebVerificationBizTokenIntlResponse extends AbstractModel
     public $BizToken;
 
     /**
+     * @var string 
+     */
+    public $VerificationURL;
+
+    /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
@@ -47,6 +55,7 @@ class ApplyWebVerificationBizTokenIntlResponse extends AbstractModel
     /**
      * @param string $VerificationUrl The URL of this verification process, which will be returned to the frontend of the browser for starting the process.
      * @param string $BizToken The token identifying this web-based verification process, valid for 7,200s after issuance. It is required for getting the result after the verification process is completed.
+     * @param string $VerificationURL 
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -68,6 +77,10 @@ class ApplyWebVerificationBizTokenIntlResponse extends AbstractModel
 
         if (array_key_exists("BizToken",$param) and $param["BizToken"] !== null) {
             $this->BizToken = $param["BizToken"];
+        }
+
+        if (array_key_exists("VerificationURL",$param) and $param["VerificationURL"] !== null) {
+            $this->VerificationURL = $param["VerificationURL"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

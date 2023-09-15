@@ -28,6 +28,8 @@ After the verification process is completed, the `BizToken` of this process will
 After the verification process is completed, the `BizToken` of this process will be spliced to the callback URL in the format of `https://www.tencentcloud.com/products/faceid?token={BizToken}` before redirect.
  * @method string getExtra() Obtain The passthrough parameter of the business, max 1,000 characters, which will be returned in `GetWebVerificationResultIntl`.
  * @method void setExtra(string $Extra) Set The passthrough parameter of the business, max 1,000 characters, which will be returned in `GetWebVerificationResultIntl`.
+ * @method WebVerificationConfigIntl getConfig() Obtain The parameter control the page configuration.
+ * @method void setConfig(WebVerificationConfigIntl $Config) Set The parameter control the page configuration.
  */
 class ApplyWebVerificationBizTokenIntlRequest extends AbstractModel
 {
@@ -48,10 +50,16 @@ After the verification process is completed, the `BizToken` of this process will
     public $Extra;
 
     /**
+     * @var WebVerificationConfigIntl The parameter control the page configuration.
+     */
+    public $Config;
+
+    /**
      * @param string $CompareImageBase64 The Base64-encoded string (max 8 MB in size) of the photo to be compared.
      * @param string $RedirectURL The web callback URL to redirect to after the verification is completed, including the protocol, hostname, and path. Example: `https://www.tencentcloud.com/products/faceid`.
 After the verification process is completed, the `BizToken` of this process will be spliced to the callback URL in the format of `https://www.tencentcloud.com/products/faceid?token={BizToken}` before redirect.
      * @param string $Extra The passthrough parameter of the business, max 1,000 characters, which will be returned in `GetWebVerificationResultIntl`.
+     * @param WebVerificationConfigIntl $Config The parameter control the page configuration.
      */
     function __construct()
     {
@@ -76,6 +84,11 @@ After the verification process is completed, the `BizToken` of this process will
 
         if (array_key_exists("Extra",$param) and $param["Extra"] !== null) {
             $this->Extra = $param["Extra"];
+        }
+
+        if (array_key_exists("Config",$param) and $param["Config"] !== null) {
+            $this->Config = new WebVerificationConfigIntl();
+            $this->Config->deserialize($param["Config"]);
         }
     }
 }
