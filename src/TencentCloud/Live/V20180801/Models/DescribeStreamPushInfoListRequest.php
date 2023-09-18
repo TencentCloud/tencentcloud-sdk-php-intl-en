@@ -22,10 +22,18 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getStreamName() Obtain The stream name.
  * @method void setStreamName(string $StreamName) Set The stream name.
- * @method string getStartTime() Obtain The start time (UTC+8) in the format of “yyyy-mm-dd HH:MM:SS”.
- * @method void setStartTime(string $StartTime) Set The start time (UTC+8) in the format of “yyyy-mm-dd HH:MM:SS”.
- * @method string getEndTime() Obtain The end time (UTC+8) in the format of “yyyy-mm-dd HH:MM:SS”. You can query data from the past seven days for a period of preferably not longer than three hours.
- * @method void setEndTime(string $EndTime) Set The end time (UTC+8) in the format of “yyyy-mm-dd HH:MM:SS”. You can query data from the past seven days for a period of preferably not longer than three hours.
+ * @method string getStartTime() Obtain The start time of the request, supports data query for the last seven days, the gap between the start time and the end time cannot exceed three hours. Interface request supports two time formats:
+1) YYYY-MM-DDThh:mm:ssZ: ISO time format, for details, see [ISO Date Format Description](https://cloud.tencent.com/document/product/267/38543#:~:text=I- ,ISO,-%E6%97%A5%E6%9C%9F%E6%A0%BC%E5%BC%8F)
+2) YYYY-MM-DD hh:mm:ss: When using this format, it represents Beijing time by default.
+ * @method void setStartTime(string $StartTime) Set The start time of the request, supports data query for the last seven days, the gap between the start time and the end time cannot exceed three hours. Interface request supports two time formats:
+1) YYYY-MM-DDThh:mm:ssZ: ISO time format, for details, see [ISO Date Format Description](https://cloud.tencent.com/document/product/267/38543#:~:text=I- ,ISO,-%E6%97%A5%E6%9C%9F%E6%A0%BC%E5%BC%8F)
+2) YYYY-MM-DD hh:mm:ss: When using this format, it represents Beijing time by default.
+ * @method string getEndTime() Obtain The end time of the request, supports data query for the last seven days, the gap between the start time and the end time cannot exceed three hours. Interface request supports two time formats:
+1) YYYY-MM-DDThh:mm:ssZ: ISO time format,for details,see [ISO Date Format Description](https://cloud.tencent.com/document/product/267/38543#:~:text=I- ,ISO,-%E6%97%A5%E6%9C%9F%E6%A0%BC%E5%BC%8F)
+2) YYYY-MM-DD hh:mm:ss: When using this format, it represents Beijing time by default.
+ * @method void setEndTime(string $EndTime) Set The end time of the request, supports data query for the last seven days, the gap between the start time and the end time cannot exceed three hours. Interface request supports two time formats:
+1) YYYY-MM-DDThh:mm:ssZ: ISO time format,for details,see [ISO Date Format Description](https://cloud.tencent.com/document/product/267/38543#:~:text=I- ,ISO,-%E6%97%A5%E6%9C%9F%E6%A0%BC%E5%BC%8F)
+2) YYYY-MM-DD hh:mm:ss: When using this format, it represents Beijing time by default.
  * @method string getPushDomain() Obtain The push domain.
  * @method void setPushDomain(string $PushDomain) Set The push domain.
  * @method string getAppName() Obtain The push path, which should be the same as `AppName` in the push and playback URL. The default value is `live`.
@@ -39,12 +47,16 @@ class DescribeStreamPushInfoListRequest extends AbstractModel
     public $StreamName;
 
     /**
-     * @var string The start time (UTC+8) in the format of “yyyy-mm-dd HH:MM:SS”.
+     * @var string The start time of the request, supports data query for the last seven days, the gap between the start time and the end time cannot exceed three hours. Interface request supports two time formats:
+1) YYYY-MM-DDThh:mm:ssZ: ISO time format, for details, see [ISO Date Format Description](https://cloud.tencent.com/document/product/267/38543#:~:text=I- ,ISO,-%E6%97%A5%E6%9C%9F%E6%A0%BC%E5%BC%8F)
+2) YYYY-MM-DD hh:mm:ss: When using this format, it represents Beijing time by default.
      */
     public $StartTime;
 
     /**
-     * @var string The end time (UTC+8) in the format of “yyyy-mm-dd HH:MM:SS”. You can query data from the past seven days for a period of preferably not longer than three hours.
+     * @var string The end time of the request, supports data query for the last seven days, the gap between the start time and the end time cannot exceed three hours. Interface request supports two time formats:
+1) YYYY-MM-DDThh:mm:ssZ: ISO time format,for details,see [ISO Date Format Description](https://cloud.tencent.com/document/product/267/38543#:~:text=I- ,ISO,-%E6%97%A5%E6%9C%9F%E6%A0%BC%E5%BC%8F)
+2) YYYY-MM-DD hh:mm:ss: When using this format, it represents Beijing time by default.
      */
     public $EndTime;
 
@@ -60,8 +72,12 @@ class DescribeStreamPushInfoListRequest extends AbstractModel
 
     /**
      * @param string $StreamName The stream name.
-     * @param string $StartTime The start time (UTC+8) in the format of “yyyy-mm-dd HH:MM:SS”.
-     * @param string $EndTime The end time (UTC+8) in the format of “yyyy-mm-dd HH:MM:SS”. You can query data from the past seven days for a period of preferably not longer than three hours.
+     * @param string $StartTime The start time of the request, supports data query for the last seven days, the gap between the start time and the end time cannot exceed three hours. Interface request supports two time formats:
+1) YYYY-MM-DDThh:mm:ssZ: ISO time format, for details, see [ISO Date Format Description](https://cloud.tencent.com/document/product/267/38543#:~:text=I- ,ISO,-%E6%97%A5%E6%9C%9F%E6%A0%BC%E5%BC%8F)
+2) YYYY-MM-DD hh:mm:ss: When using this format, it represents Beijing time by default.
+     * @param string $EndTime The end time of the request, supports data query for the last seven days, the gap between the start time and the end time cannot exceed three hours. Interface request supports two time formats:
+1) YYYY-MM-DDThh:mm:ssZ: ISO time format,for details,see [ISO Date Format Description](https://cloud.tencent.com/document/product/267/38543#:~:text=I- ,ISO,-%E6%97%A5%E6%9C%9F%E6%A0%BC%E5%BC%8F)
+2) YYYY-MM-DD hh:mm:ss: When using this format, it represents Beijing time by default.
      * @param string $PushDomain The push domain.
      * @param string $AppName The push path, which should be the same as `AppName` in the push and playback URL. The default value is `live`.
      */
