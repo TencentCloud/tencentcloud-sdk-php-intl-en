@@ -38,8 +38,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSessionId(string $SessionId) Set The unique ID of a session. If this parameter is specified, the task will be run using the specified session.
  * @method string getSessionName() Obtain The name of the session to create.
  * @method void setSessionName(string $SessionName) Set The name of the session to create.
- * @method array getArguments() Obtain Session configurations. `dlc.eni`, `dlc.role.arn`, `dlc.sql.set.config`, and user-defined configurations are supported.
- * @method void setArguments(array $Arguments) Set Session configurations. `dlc.eni`, `dlc.role.arn`, `dlc.sql.set.config`, and user-defined configurations are supported.
+ * @method array getArguments() Obtain The session configurations. Valid values: `1.dlc.eni` for user-defined ENI gateway information;
+`2.dlc.role.arn` for user-defined roleArn configurations;
+and `3.dlc.sql.set.config` for user-defined cluster configurations.
+ * @method void setArguments(array $Arguments) Set The session configurations. Valid values: `1.dlc.eni` for user-defined ENI gateway information;
+`2.dlc.role.arn` for user-defined roleArn configurations;
+and `3.dlc.sql.set.config` for user-defined cluster configurations.
+ * @method integer getIsInherit() Obtain Whether to inherit the resource configurations from the cluster. Valid values: `0` for no (default) and `1` for yes.
+ * @method void setIsInherit(integer $IsInherit) Set Whether to inherit the resource configurations from the cluster. Valid values: `0` for no (default) and `1` for yes.
  */
 class CreateSparkSessionBatchSQLRequest extends AbstractModel
 {
@@ -89,9 +95,16 @@ class CreateSparkSessionBatchSQLRequest extends AbstractModel
     public $SessionName;
 
     /**
-     * @var array Session configurations. `dlc.eni`, `dlc.role.arn`, `dlc.sql.set.config`, and user-defined configurations are supported.
+     * @var array The session configurations. Valid values: `1.dlc.eni` for user-defined ENI gateway information;
+`2.dlc.role.arn` for user-defined roleArn configurations;
+and `3.dlc.sql.set.config` for user-defined cluster configurations.
      */
     public $Arguments;
+
+    /**
+     * @var integer Whether to inherit the resource configurations from the cluster. Valid values: `0` for no (default) and `1` for yes.
+     */
+    public $IsInherit;
 
     /**
      * @param string $DataEngineName The name of the engine for executing the Spark job.
@@ -103,7 +116,10 @@ class CreateSparkSessionBatchSQLRequest extends AbstractModel
      * @param integer $TimeoutInSecond The session timeout period in seconds. Default value: 3600
      * @param string $SessionId The unique ID of a session. If this parameter is specified, the task will be run using the specified session.
      * @param string $SessionName The name of the session to create.
-     * @param array $Arguments Session configurations. `dlc.eni`, `dlc.role.arn`, `dlc.sql.set.config`, and user-defined configurations are supported.
+     * @param array $Arguments The session configurations. Valid values: `1.dlc.eni` for user-defined ENI gateway information;
+`2.dlc.role.arn` for user-defined roleArn configurations;
+and `3.dlc.sql.set.config` for user-defined cluster configurations.
+     * @param integer $IsInherit Whether to inherit the resource configurations from the cluster. Valid values: `0` for no (default) and `1` for yes.
      */
     function __construct()
     {
@@ -161,6 +177,10 @@ class CreateSparkSessionBatchSQLRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Arguments, $obj);
             }
+        }
+
+        if (array_key_exists("IsInherit",$param) and $param["IsInherit"] !== null) {
+            $this->IsInherit = $param["IsInherit"];
         }
     }
 }

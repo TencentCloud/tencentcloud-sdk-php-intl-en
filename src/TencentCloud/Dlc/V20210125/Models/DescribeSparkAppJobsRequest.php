@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSortBy(string $SortBy) Set The returned results are sorted by this field.
  * @method string getSorting() Obtain Descending or ascending order, such as `desc`.
  * @method void setSorting(string $Sorting) Set Descending or ascending order, such as `desc`.
- * @method array getFilters() Obtain Filter by this parameter, which can be `spark-job-name`.
- * @method void setFilters(array $Filters) Set Filter by this parameter, which can be `spark-job-name`.
+ * @method array getFilters() Obtain The filters. The following types are supported, and `Name` of the parameter passed in must be one of them: `spark-job-name` (job name), `spark-job-id` (job ID), `spark-app-type` (job type: `1` for batch, `2` for streaming, and `4` for SQL), `user-name` (creator), and `key-word` (job name or ID keywords for fuzzy search).
+ * @method void setFilters(array $Filters) Set The filters. The following types are supported, and `Name` of the parameter passed in must be one of them: `spark-job-name` (job name), `spark-job-id` (job ID), `spark-app-type` (job type: `1` for batch, `2` for streaming, and `4` for SQL), `user-name` (creator), and `key-word` (job name or ID keywords for fuzzy search).
  * @method string getStartTime() Obtain The update start time in the format of yyyy-mm-dd HH:MM:SS.
  * @method void setStartTime(string $StartTime) Set The update start time in the format of yyyy-mm-dd HH:MM:SS.
  * @method string getEndTime() Obtain The update end time in the format of yyyy-mm-dd HH:MM:SS.
@@ -48,7 +48,7 @@ class DescribeSparkAppJobsRequest extends AbstractModel
     public $Sorting;
 
     /**
-     * @var array Filter by this parameter, which can be `spark-job-name`.
+     * @var array The filters. The following types are supported, and `Name` of the parameter passed in must be one of them: `spark-job-name` (job name), `spark-job-id` (job ID), `spark-app-type` (job type: `1` for batch, `2` for streaming, and `4` for SQL), `user-name` (creator), and `key-word` (job name or ID keywords for fuzzy search).
      */
     public $Filters;
 
@@ -75,7 +75,7 @@ class DescribeSparkAppJobsRequest extends AbstractModel
     /**
      * @param string $SortBy The returned results are sorted by this field.
      * @param string $Sorting Descending or ascending order, such as `desc`.
-     * @param array $Filters Filter by this parameter, which can be `spark-job-name`.
+     * @param array $Filters The filters. The following types are supported, and `Name` of the parameter passed in must be one of them: `spark-job-name` (job name), `spark-job-id` (job ID), `spark-app-type` (job type: `1` for batch, `2` for streaming, and `4` for SQL), `user-name` (creator), and `key-word` (job name or ID keywords for fuzzy search).
      * @param string $StartTime The update start time in the format of yyyy-mm-dd HH:MM:SS.
      * @param string $EndTime The update end time in the format of yyyy-mm-dd HH:MM:SS.
      * @param integer $Offset The query list offset, which defaults to 0.

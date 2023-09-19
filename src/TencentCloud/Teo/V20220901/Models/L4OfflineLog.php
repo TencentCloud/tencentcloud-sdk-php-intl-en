@@ -20,70 +20,82 @@ use TencentCloud\Common\AbstractModel;
 /**
  * The L7 log details
  *
- * @method integer getLogTime() Obtain The start time of the log packaging.
- * @method void setLogTime(integer $LogTime) Set The start time of the log packaging.
- * @method string getProxyId() Obtain The L4 proxy ID.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setProxyId(string $ProxyId) Set The L4 proxy ID.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getSize() Obtain The log size, in bytes.
- * @method void setSize(integer $Size) Set The log size, in bytes.
- * @method string getUrl() Obtain The download address.
- * @method void setUrl(string $Url) Set The download address.
- * @method string getLogPacketName() Obtain The log package name.
- * @method void setLogPacketName(string $LogPacketName) Set The log package name.
- * @method string getArea() Obtain The acceleration region. Values:
+ * @method string getProxyId() Obtain L4 proxy instance ID.
+ * @method void setProxyId(string $ProxyId) Set L4 proxy instance ID.
+ * @method string getArea() Obtain Log query area. Valid values:
 <li>`mainland`: Chinese mainland;</li>
-<li>`overseas`: Global (outside the Chinese mainland);</li>
- * @method void setArea(string $Area) Set The acceleration region. Values:
+<li>`overseas`: Global (outside the Chinese mainland). </li>
+ * @method void setArea(string $Area) Set Log query area. Valid values:
 <li>`mainland`: Chinese mainland;</li>
-<li>`overseas`: Global (outside the Chinese mainland);</li>
+<li>`overseas`: Global (outside the Chinese mainland). </li>
+ * @method string getLogPacketName() Obtain Log packet name.
+ * @method void setLogPacketName(string $LogPacketName) Set Log packet name.
+ * @method string getUrl() Obtain Log download address.
+ * @method void setUrl(string $Url) Set Log download address.
+ * @method integer getLogTime() Obtain (Disused) Log packaging time. 
+ * @method void setLogTime(integer $LogTime) Set (Disused) Log packaging time. 
+ * @method string getLogStartTime() Obtain Start time of log packaging.
+ * @method void setLogStartTime(string $LogStartTime) Set Start time of log packaging.
+ * @method string getLogEndTime() Obtain End time of the log package.
+ * @method void setLogEndTime(string $LogEndTime) Set End time of the log package.
+ * @method integer getSize() Obtain Log size (in bytes).
+ * @method void setSize(integer $Size) Set Log size (in bytes).
  */
 class L4OfflineLog extends AbstractModel
 {
     /**
-     * @var integer The start time of the log packaging.
-     */
-    public $LogTime;
-
-    /**
-     * @var string The L4 proxy ID.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string L4 proxy instance ID.
      */
     public $ProxyId;
 
     /**
-     * @var integer The log size, in bytes.
-     */
-    public $Size;
-
-    /**
-     * @var string The download address.
-     */
-    public $Url;
-
-    /**
-     * @var string The log package name.
-     */
-    public $LogPacketName;
-
-    /**
-     * @var string The acceleration region. Values:
+     * @var string Log query area. Valid values:
 <li>`mainland`: Chinese mainland;</li>
-<li>`overseas`: Global (outside the Chinese mainland);</li>
+<li>`overseas`: Global (outside the Chinese mainland). </li>
      */
     public $Area;
 
     /**
-     * @param integer $LogTime The start time of the log packaging.
-     * @param string $ProxyId The L4 proxy ID.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $Size The log size, in bytes.
-     * @param string $Url The download address.
-     * @param string $LogPacketName The log package name.
-     * @param string $Area The acceleration region. Values:
+     * @var string Log packet name.
+     */
+    public $LogPacketName;
+
+    /**
+     * @var string Log download address.
+     */
+    public $Url;
+
+    /**
+     * @var integer (Disused) Log packaging time. 
+     */
+    public $LogTime;
+
+    /**
+     * @var string Start time of log packaging.
+     */
+    public $LogStartTime;
+
+    /**
+     * @var string End time of the log package.
+     */
+    public $LogEndTime;
+
+    /**
+     * @var integer Log size (in bytes).
+     */
+    public $Size;
+
+    /**
+     * @param string $ProxyId L4 proxy instance ID.
+     * @param string $Area Log query area. Valid values:
 <li>`mainland`: Chinese mainland;</li>
-<li>`overseas`: Global (outside the Chinese mainland);</li>
+<li>`overseas`: Global (outside the Chinese mainland). </li>
+     * @param string $LogPacketName Log packet name.
+     * @param string $Url Log download address.
+     * @param integer $LogTime (Disused) Log packaging time. 
+     * @param string $LogStartTime Start time of log packaging.
+     * @param string $LogEndTime End time of the log package.
+     * @param integer $Size Log size (in bytes).
      */
     function __construct()
     {
@@ -98,28 +110,36 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if ($param === null) {
             return;
         }
-        if (array_key_exists("LogTime",$param) and $param["LogTime"] !== null) {
-            $this->LogTime = $param["LogTime"];
-        }
-
         if (array_key_exists("ProxyId",$param) and $param["ProxyId"] !== null) {
             $this->ProxyId = $param["ProxyId"];
         }
 
-        if (array_key_exists("Size",$param) and $param["Size"] !== null) {
-            $this->Size = $param["Size"];
-        }
-
-        if (array_key_exists("Url",$param) and $param["Url"] !== null) {
-            $this->Url = $param["Url"];
+        if (array_key_exists("Area",$param) and $param["Area"] !== null) {
+            $this->Area = $param["Area"];
         }
 
         if (array_key_exists("LogPacketName",$param) and $param["LogPacketName"] !== null) {
             $this->LogPacketName = $param["LogPacketName"];
         }
 
-        if (array_key_exists("Area",$param) and $param["Area"] !== null) {
-            $this->Area = $param["Area"];
+        if (array_key_exists("Url",$param) and $param["Url"] !== null) {
+            $this->Url = $param["Url"];
+        }
+
+        if (array_key_exists("LogTime",$param) and $param["LogTime"] !== null) {
+            $this->LogTime = $param["LogTime"];
+        }
+
+        if (array_key_exists("LogStartTime",$param) and $param["LogStartTime"] !== null) {
+            $this->LogStartTime = $param["LogStartTime"];
+        }
+
+        if (array_key_exists("LogEndTime",$param) and $param["LogEndTime"] !== null) {
+            $this->LogEndTime = $param["LogEndTime"];
+        }
+
+        if (array_key_exists("Size",$param) and $param["Size"] !== null) {
+            $this->Size = $param["Size"];
         }
     }
 }

@@ -38,6 +38,8 @@ Note: This field may return `null`, indicating that no valid values can be obtai
  * @method void setHealth(string $Health) Set Health check deployment information of the cluster
  * @method string getGridDaemon() Obtain Whether to deploy GridDaemon to support headless service
  * @method void setGridDaemon(string $GridDaemon) Set Whether to deploy GridDaemon to support headless service
+ * @method string getUnitCluster() Obtain Access kins clusters over the public network
+ * @method void setUnitCluster(string $UnitCluster) Set Access kins clusters over the public network
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -85,6 +87,11 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     public $GridDaemon;
 
     /**
+     * @var string Access kins clusters over the public network
+     */
+    public $UnitCluster;
+
+    /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
@@ -99,6 +106,7 @@ Note: This field may return `null`, indicating that no valid values can be obtai
      * @param string $HealthRegion Multi-region health check deployment information of the cluster
      * @param string $Health Health check deployment information of the cluster
      * @param string $GridDaemon Whether to deploy GridDaemon to support headless service
+     * @param string $UnitCluster Access kins clusters over the public network
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -152,6 +160,10 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 
         if (array_key_exists("GridDaemon",$param) and $param["GridDaemon"] !== null) {
             $this->GridDaemon = $param["GridDaemon"];
+        }
+
+        if (array_key_exists("UnitCluster",$param) and $param["UnitCluster"] !== null) {
+            $this->UnitCluster = $param["UnitCluster"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUserName(string $UserName) Set Database username
  * @method array getDBPrivileges() Obtain Account permission change information
  * @method void setDBPrivileges(array $DBPrivileges) Set Account permission change information
- * @method boolean getIsAdmin() Obtain Whether the account has the admin permission. Valid values: `true` (Yes. It is an admin account when the instance is a basic edition type and `AccountType` is `L0`; it is a privileged account when the instance is a dual-server high availability edition type and `AccountType` is `L1`.), `false` (No. The admin permission is disabled by default).
- * @method void setIsAdmin(boolean $IsAdmin) Set Whether the account has the admin permission. Valid values: `true` (Yes. It is an admin account when the instance is a basic edition type and `AccountType` is `L0`; it is a privileged account when the instance is a dual-server high availability edition type and `AccountType` is `L1`.), `false` (No. The admin permission is disabled by default).
+ * @method boolean getIsAdmin() Obtain Whether it is an instance admin account. Valid values: `true` (Yes. When the instance is single-node and `AccountType` is `L0`, it's an admin account; when the instance is two-node and `AccountType` is `L1`, it's a privileged account), `false` (No. It's a standard account and `AccountType` is `L3`).
+ * @method void setIsAdmin(boolean $IsAdmin) Set Whether it is an instance admin account. Valid values: `true` (Yes. When the instance is single-node and `AccountType` is `L0`, it's an admin account; when the instance is two-node and `AccountType` is `L1`, it's a privileged account), `false` (No. It's a standard account and `AccountType` is `L3`).
  * @method string getAccountType() Obtain Account type, which is an extension field of `IsAdmin`. Valid values: `L0` (admin account, only for basic edition), `L1` (privileged account), `L2` (designated account), `L3` (standard account, default)
  * @method void setAccountType(string $AccountType) Set Account type, which is an extension field of `IsAdmin`. Valid values: `L0` (admin account, only for basic edition), `L1` (privileged account), `L2` (designated account), `L3` (standard account, default)
  */
@@ -42,7 +42,7 @@ class AccountPrivilegeModifyInfo extends AbstractModel
     public $DBPrivileges;
 
     /**
-     * @var boolean Whether the account has the admin permission. Valid values: `true` (Yes. It is an admin account when the instance is a basic edition type and `AccountType` is `L0`; it is a privileged account when the instance is a dual-server high availability edition type and `AccountType` is `L1`.), `false` (No. The admin permission is disabled by default).
+     * @var boolean Whether it is an instance admin account. Valid values: `true` (Yes. When the instance is single-node and `AccountType` is `L0`, it's an admin account; when the instance is two-node and `AccountType` is `L1`, it's a privileged account), `false` (No. It's a standard account and `AccountType` is `L3`).
      */
     public $IsAdmin;
 
@@ -54,7 +54,7 @@ class AccountPrivilegeModifyInfo extends AbstractModel
     /**
      * @param string $UserName Database username
      * @param array $DBPrivileges Account permission change information
-     * @param boolean $IsAdmin Whether the account has the admin permission. Valid values: `true` (Yes. It is an admin account when the instance is a basic edition type and `AccountType` is `L0`; it is a privileged account when the instance is a dual-server high availability edition type and `AccountType` is `L1`.), `false` (No. The admin permission is disabled by default).
+     * @param boolean $IsAdmin Whether it is an instance admin account. Valid values: `true` (Yes. When the instance is single-node and `AccountType` is `L0`, it's an admin account; when the instance is two-node and `AccountType` is `L1`, it's a privileged account), `false` (No. It's a standard account and `AccountType` is `L3`).
      * @param string $AccountType Account type, which is an extension field of `IsAdmin`. Valid values: `L0` (admin account, only for basic edition), `L1` (privileged account), `L2` (designated account), `L3` (standard account, default)
      */
     function __construct()

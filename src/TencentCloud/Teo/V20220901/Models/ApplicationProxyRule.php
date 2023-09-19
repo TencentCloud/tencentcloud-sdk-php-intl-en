@@ -86,6 +86,10 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
  * @method void setOriginPort(string $OriginPort) Set The origin port, which can be:
 <li>A single port, such as 80</li>
 <li>A port range, such as 81-82</li>
+ * @method string getRuleTag() Obtain Rule tag.
+Note: u200dThis field may returnu200d·`nullu200d`, indicating that no valid values can be obtained.
+ * @method void setRuleTag(string $RuleTag) Set Rule tag.
+Note: u200dThis field may returnu200d·`nullu200d`, indicating that no valid values can be obtained.
  */
 class ApplicationProxyRule extends AbstractModel
 {
@@ -163,6 +167,12 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
     public $OriginPort;
 
     /**
+     * @var string Rule tag.
+Note: u200dThis field may returnu200d·`nullu200d`, indicating that no valid values can be obtained.
+     */
+    public $RuleTag;
+
+    /**
      * @param string $Proto The protocol. Values:
 <li>`TCP`: TCP protocol.</li>
 <li>`UDP`: UDP protocol.</li>
@@ -196,6 +206,8 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
      * @param string $OriginPort The origin port, which can be:
 <li>A single port, such as 80</li>
 <li>A port range, such as 81-82</li>
+     * @param string $RuleTag Rule tag.
+Note: u200dThis field may returnu200d·`nullu200d`, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -248,6 +260,10 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
 
         if (array_key_exists("OriginPort",$param) and $param["OriginPort"] !== null) {
             $this->OriginPort = $param["OriginPort"];
+        }
+
+        if (array_key_exists("RuleTag",$param) and $param["RuleTag"] !== null) {
+            $this->RuleTag = $param["RuleTag"];
         }
     }
 }

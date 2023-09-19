@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBlockedThreshold(integer $BlockedThreshold) Set Block process threshold in milliseconds
  * @method integer getEventSaveDays() Obtain Retention period for the files of slow SQL, blocking, deadlock, and extended events.
  * @method void setEventSaveDays(integer $EventSaveDays) Set Retention period for the files of slow SQL, blocking, deadlock, and extended events.
+ * @method TDEConfigAttribute getTDEConfig() Obtain TDE u200dconfiguration
+ * @method void setTDEConfig(TDEConfigAttribute $TDEConfig) Set TDE u200dconfiguration
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -82,6 +84,11 @@ class DescribeDBInstancesAttributeResponse extends AbstractModel
     public $EventSaveDays;
 
     /**
+     * @var TDEConfigAttribute TDE u200dconfiguration
+     */
+    public $TDEConfig;
+
+    /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
@@ -95,6 +102,7 @@ class DescribeDBInstancesAttributeResponse extends AbstractModel
      * @param string $RegularBackupStartTime Archive backup start date in YYYY-MM-DD format, which is the current time by default.
      * @param integer $BlockedThreshold Block process threshold in milliseconds
      * @param integer $EventSaveDays Retention period for the files of slow SQL, blocking, deadlock, and extended events.
+     * @param TDEConfigAttribute $TDEConfig TDE u200dconfiguration
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -140,6 +148,11 @@ class DescribeDBInstancesAttributeResponse extends AbstractModel
 
         if (array_key_exists("EventSaveDays",$param) and $param["EventSaveDays"] !== null) {
             $this->EventSaveDays = $param["EventSaveDays"];
+        }
+
+        if (array_key_exists("TDEConfig",$param) and $param["TDEConfig"] !== null) {
+            $this->TDEConfig = new TDEConfigAttribute();
+            $this->TDEConfig->deserialize($param["TDEConfig"]);
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

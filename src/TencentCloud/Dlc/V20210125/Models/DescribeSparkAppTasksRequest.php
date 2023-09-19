@@ -28,10 +28,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) Set Paginated query limit
  * @method string getTaskId() Obtain Execution instance ID
  * @method void setTaskId(string $TaskId) Set Execution instance ID
- * @method string getStartTime() Obtain Update start time
- * @method void setStartTime(string $StartTime) Set Update start time
- * @method string getEndTime() Obtain Update end time
- * @method void setEndTime(string $EndTime) Set Update end time
+ * @method string getStartTime() Obtain The update start time in the format of yyyy-MM-dd HH:mm:ss.
+ * @method void setStartTime(string $StartTime) Set The update start time in the format of yyyy-MM-dd HH:mm:ss.
+ * @method string getEndTime() Obtain The update end time in the format of yyyy-MM-dd HH:mm:ss.
+ * @method void setEndTime(string $EndTime) Set The update end time in the format of yyyy-MM-dd HH:mm:ss.
  * @method array getFilters() Obtain Filter by this parameter, which can be `task-state`.
  * @method void setFilters(array $Filters) Set Filter by this parameter, which can be `task-state`.
  */
@@ -58,12 +58,12 @@ class DescribeSparkAppTasksRequest extends AbstractModel
     public $TaskId;
 
     /**
-     * @var string Update start time
+     * @var string The update start time in the format of yyyy-MM-dd HH:mm:ss.
      */
     public $StartTime;
 
     /**
-     * @var string Update end time
+     * @var string The update end time in the format of yyyy-MM-dd HH:mm:ss.
      */
     public $EndTime;
 
@@ -77,8 +77,8 @@ class DescribeSparkAppTasksRequest extends AbstractModel
      * @param integer $Offset Paginated query offset
      * @param integer $Limit Paginated query limit
      * @param string $TaskId Execution instance ID
-     * @param string $StartTime Update start time
-     * @param string $EndTime Update end time
+     * @param string $StartTime The update start time in the format of yyyy-MM-dd HH:mm:ss.
+     * @param string $EndTime The update end time in the format of yyyy-MM-dd HH:mm:ss.
      * @param array $Filters Filter by this parameter, which can be `task-state`.
      */
     function __construct()

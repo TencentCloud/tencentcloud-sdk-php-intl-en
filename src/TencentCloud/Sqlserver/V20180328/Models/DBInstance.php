@@ -76,8 +76,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCpu(integer $Cpu) Set Number of CPU cores of instance
  * @method string getVersion() Obtain Instance version code
  * @method void setVersion(string $Version) Set Instance version code
- * @method string getType() Obtain Physical server code
- * @method void setType(string $Type) Set Physical server code
+ * @method string getType() Obtain Instance type. Valid values: `TS85` (physical machine, local SSD), `Z3` (early version of physical machine, local SSD), `CLOUD_BASIC` (virtual machine, HDD cloud disk), `CLOUD_PREMIUM` (virtual machine, premium cloud disk), `CLOUD_SSD` (virtual machine, SSD), `CLOUD_HSSD` (virtual machine, enhanced SSD), `CLOUD_TSSD` (virtual machine, ulTra SSD), `CLOUD_BSSD` virtual machine, balanced SSD).
+ * @method void setType(string $Type) Set Instance type. Valid values: `TS85` (physical machine, local SSD), `Z3` (early version of physical machine, local SSD), `CLOUD_BASIC` (virtual machine, HDD cloud disk), `CLOUD_PREMIUM` (virtual machine, premium cloud disk), `CLOUD_SSD` (virtual machine, SSD), `CLOUD_HSSD` (virtual machine, enhanced SSD), `CLOUD_TSSD` (virtual machine, ulTra SSD), `CLOUD_BSSD` virtual machine, balanced SSD).
  * @method integer getPid() Obtain Billing ID
  * @method void setPid(integer $Pid) Set Billing ID
  * @method string getUniqVpcId() Obtain Unique string-type ID of instance VPC in the format of `vpc-xxx`, which is an empty string if the basic network is used
@@ -140,10 +140,10 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setSlaveZones(SlaveZones $SlaveZones) Set Replica AZ information
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getArchitecture() Obtain Architecture type. Valid values: `SINGLE` (single-node), `DOUBLE` (two-node), `TRIPLE` (three-node).
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setArchitecture(string $Architecture) Set Architecture type. Valid values: `SINGLE` (single-node), `DOUBLE` (two-node), `TRIPLE` (three-node).
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getArchitecture() Obtain Architecture type. Valid values: `SINGLE` (single-node), `DOUBLE` (two-node).
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+ * @method void setArchitecture(string $Architecture) Set Architecture type. Valid values: `SINGLE` (single-node), `DOUBLE` (two-node).
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
  * @method string getStyle() Obtain Instance type. Valid values: `EXCLUSIVE` (dedicated), `SHARED` (shared)
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setStyle(string $Style) Set Instance type. Valid values: `EXCLUSIVE` (dedicated), `SHARED` (shared)
@@ -292,7 +292,7 @@ class DBInstance extends AbstractModel
     public $Version;
 
     /**
-     * @var string Physical server code
+     * @var string Instance type. Valid values: `TS85` (physical machine, local SSD), `Z3` (early version of physical machine, local SSD), `CLOUD_BASIC` (virtual machine, HDD cloud disk), `CLOUD_PREMIUM` (virtual machine, premium cloud disk), `CLOUD_SSD` (virtual machine, SSD), `CLOUD_HSSD` (virtual machine, enhanced SSD), `CLOUD_TSSD` (virtual machine, ulTra SSD), `CLOUD_BSSD` virtual machine, balanced SSD).
      */
     public $Type;
 
@@ -420,8 +420,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $SlaveZones;
 
     /**
-     * @var string Architecture type. Valid values: `SINGLE` (single-node), `DOUBLE` (two-node), `TRIPLE` (three-node).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Architecture type. Valid values: `SINGLE` (single-node), `DOUBLE` (two-node).
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
      */
     public $Architecture;
 
@@ -460,7 +460,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $Uid Instance UID
      * @param integer $Cpu Number of CPU cores of instance
      * @param string $Version Instance version code
-     * @param string $Type Physical server code
+     * @param string $Type Instance type. Valid values: `TS85` (physical machine, local SSD), `Z3` (early version of physical machine, local SSD), `CLOUD_BASIC` (virtual machine, HDD cloud disk), `CLOUD_PREMIUM` (virtual machine, premium cloud disk), `CLOUD_SSD` (virtual machine, SSD), `CLOUD_HSSD` (virtual machine, enhanced SSD), `CLOUD_TSSD` (virtual machine, ulTra SSD), `CLOUD_BSSD` virtual machine, balanced SSD).
      * @param integer $Pid Billing ID
      * @param string $UniqVpcId Unique string-type ID of instance VPC in the format of `vpc-xxx`, which is an empty string if the basic network is used
      * @param string $UniqSubnetId Unique string-type ID of instance subnet in the format of `subnet-xxx`, which is an empty string if the basic network is used
@@ -492,8 +492,8 @@ Note: This field may return `null`, indicating that no valid values can be obtai
      * @param boolean $IsDrZone Whether the instance is deployed across AZs
      * @param SlaveZones $SlaveZones Replica AZ information
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Architecture Architecture type. Valid values: `SINGLE` (single-node), `DOUBLE` (two-node), `TRIPLE` (three-node).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $Architecture Architecture type. Valid values: `SINGLE` (single-node), `DOUBLE` (two-node).
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
      * @param string $Style Instance type. Valid values: `EXCLUSIVE` (dedicated), `SHARED` (shared)
 Note: This field may return null, indicating that no valid values can be obtained.
      */

@@ -72,6 +72,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOriginPort(string $OriginPort) Set The origin port, which can be:
 <li>A single port, such as 80</li>
 <li>A port range, such as 81-82</li>
+ * @method string getRuleTag() Obtain Rule tag. This parameter is left empty by default.
+ * @method void setRuleTag(string $RuleTag) Set Rule tag. This parameter is left empty by default.
  */
 class CreateApplicationProxyRuleRequest extends AbstractModel
 {
@@ -142,6 +144,11 @@ class CreateApplicationProxyRuleRequest extends AbstractModel
     public $OriginPort;
 
     /**
+     * @var string Rule tag. This parameter is left empty by default.
+     */
+    public $RuleTag;
+
+    /**
      * @param string $ZoneId The site ID.
      * @param string $ProxyId The proxy ID.
      * @param string $Proto The protocol. Values:
@@ -168,6 +175,7 @@ class CreateApplicationProxyRuleRequest extends AbstractModel
      * @param string $OriginPort The origin port, which can be:
 <li>A single port, such as 80</li>
 <li>A port range, such as 81-82</li>
+     * @param string $RuleTag Rule tag. This parameter is left empty by default.
      */
     function __construct()
     {
@@ -220,6 +228,10 @@ class CreateApplicationProxyRuleRequest extends AbstractModel
 
         if (array_key_exists("OriginPort",$param) and $param["OriginPort"] !== null) {
             $this->OriginPort = $param["OriginPort"];
+        }
+
+        if (array_key_exists("RuleTag",$param) and $param["RuleTag"] !== null) {
+            $this->RuleTag = $param["RuleTag"];
         }
     }
 }

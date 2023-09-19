@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAccounts(array $Accounts) Set Database account permission information
  * @method string getInternalStatus() Obtain Internal status. ONLINE: running
  * @method void setInternalStatus(string $InternalStatus) Set Internal status. ONLINE: running
+ * @method string getEncryption() Obtain TDE status. Valid values: `enable` (enabled), `disable` (disabled).
+ * @method void setEncryption(string $Encryption) Set TDE status. Valid values: `enable` (enabled), `disable` (disabled).
  */
 class DBDetail extends AbstractModel
 {
@@ -73,6 +75,11 @@ class DBDetail extends AbstractModel
     public $InternalStatus;
 
     /**
+     * @var string TDE status. Valid values: `enable` (enabled), `disable` (disabled).
+     */
+    public $Encryption;
+
+    /**
      * @param string $Name Database name
      * @param string $Charset Character set
      * @param string $Remark Remarks
@@ -80,6 +87,7 @@ class DBDetail extends AbstractModel
      * @param integer $Status Database status. 1: creating, 2: running, 3: modifying, -1: dropping
      * @param array $Accounts Database account permission information
      * @param string $InternalStatus Internal status. ONLINE: running
+     * @param string $Encryption TDE status. Valid values: `enable` (enabled), `disable` (disabled).
      */
     function __construct()
     {
@@ -125,6 +133,10 @@ class DBDetail extends AbstractModel
 
         if (array_key_exists("InternalStatus",$param) and $param["InternalStatus"] !== null) {
             $this->InternalStatus = $param["InternalStatus"];
+        }
+
+        if (array_key_exists("Encryption",$param) and $param["Encryption"] !== null) {
+            $this->Encryption = $param["Encryption"];
         }
     }
 }

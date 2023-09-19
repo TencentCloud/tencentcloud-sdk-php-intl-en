@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CheckCnameStatus request structure.
  *
- * @method string getZoneId() Obtain ID of the site.
- * @method void setZoneId(string $ZoneId) Set ID of the site.
- * @method array getRecordNames() Obtain List of domain names.
- * @method void setRecordNames(array $RecordNames) Set List of domain names.
+ * @method string getZoneId() Obtain Site ID.
+ * @method void setZoneId(string $ZoneId) Set Site ID.
+ * @method array getRecordNames() Obtain List of accelerated domain names.
+ * @method void setRecordNames(array $RecordNames) Set List of accelerated domain names.
  */
 class CheckCnameStatusRequest extends AbstractModel
 {
     /**
-     * @var string ID of the site.
+     * @var string Site ID.
      */
     public $ZoneId;
 
     /**
-     * @var array List of domain names.
+     * @var array List of accelerated domain names.
      */
     public $RecordNames;
 
     /**
-     * @param string $ZoneId ID of the site.
-     * @param array $RecordNames List of domain names.
+     * @param string $ZoneId Site ID.
+     * @param array $RecordNames List of accelerated domain names.
      */
     function __construct()
     {

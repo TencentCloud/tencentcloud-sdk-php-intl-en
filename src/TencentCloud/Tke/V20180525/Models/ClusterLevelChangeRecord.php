@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNewLevel(string $NewLevel) Set New model
  * @method string getTriggerType() Obtain Trigger type (valid values: `manual`, `auto`)
  * @method void setTriggerType(string $TriggerType) Set Trigger type (valid values: `manual`, `auto`)
+ * @method string getCreatedAt() Obtain Creation time
+ * @method void setCreatedAt(string $CreatedAt) Set Creation time
  * @method string getStartedAt() Obtain Start time
  * @method void setStartedAt(string $StartedAt) Set Start time
  * @method string getEndedAt() Obtain End time
@@ -77,6 +79,11 @@ class ClusterLevelChangeRecord extends AbstractModel
     public $TriggerType;
 
     /**
+     * @var string Creation time
+     */
+    public $CreatedAt;
+
+    /**
      * @var string Start time
      */
     public $StartedAt;
@@ -94,6 +101,7 @@ class ClusterLevelChangeRecord extends AbstractModel
      * @param string $OldLevel Original model
      * @param string $NewLevel New model
      * @param string $TriggerType Trigger type (valid values: `manual`, `auto`)
+     * @param string $CreatedAt Creation time
      * @param string $StartedAt Start time
      * @param string $EndedAt End time
      */
@@ -136,6 +144,10 @@ class ClusterLevelChangeRecord extends AbstractModel
 
         if (array_key_exists("TriggerType",$param) and $param["TriggerType"] !== null) {
             $this->TriggerType = $param["TriggerType"];
+        }
+
+        if (array_key_exists("CreatedAt",$param) and $param["CreatedAt"] !== null) {
+            $this->CreatedAt = $param["CreatedAt"];
         }
 
         if (array_key_exists("StartedAt",$param) and $param["StartedAt"] !== null) {

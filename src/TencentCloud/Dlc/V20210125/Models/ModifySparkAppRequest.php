@@ -20,54 +20,54 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifySparkApp request structure.
  *
- * @method string getAppName() Obtain Spark application name
- * @method void setAppName(string $AppName) Set Spark application name
- * @method integer getAppType() Obtain 1: Spark JAR application; 2: Spark streaming application
- * @method void setAppType(integer $AppType) Set 1: Spark JAR application; 2: Spark streaming application
- * @method string getDataEngine() Obtain The data engine executing the Spark job
- * @method void setDataEngine(string $DataEngine) Set The data engine executing the Spark job
- * @method string getAppFile() Obtain Execution entry of the Spark application
- * @method void setAppFile(string $AppFile) Set Execution entry of the Spark application
- * @method integer getRoleArn() Obtain Execution role ID of the Spark job
- * @method void setRoleArn(integer $RoleArn) Set Execution role ID of the Spark job
- * @method string getAppDriverSize() Obtain Driver resource specification of the Spark job. Valid values: `small`, `medium`, `large`, `xlarge`.
- * @method void setAppDriverSize(string $AppDriverSize) Set Driver resource specification of the Spark job. Valid values: `small`, `medium`, `large`, `xlarge`.
- * @method string getAppExecutorSize() Obtain Executor resource specification of the Spark job. Valid values: `small`, `medium`, `large`, `xlarge`.
- * @method void setAppExecutorSize(string $AppExecutorSize) Set Executor resource specification of the Spark job. Valid values: `small`, `medium`, `large`, `xlarge`.
+ * @method string getAppName() Obtain The Spark job name.
+ * @method void setAppName(string $AppName) Set The Spark job name.
+ * @method integer getAppType() Obtain The Spark job type. Valid values: `1` for Spark JAR job and `2` for Spark streaming job.
+ * @method void setAppType(integer $AppType) Set The Spark job type. Valid values: `1` for Spark JAR job and `2` for Spark streaming job.
+ * @method string getDataEngine() Obtain The data engine executing the Spark job.
+ * @method void setDataEngine(string $DataEngine) Set The data engine executing the Spark job.
+ * @method string getAppFile() Obtain The path of the Spark job package.
+ * @method void setAppFile(string $AppFile) Set The path of the Spark job package.
+ * @method integer getRoleArn() Obtain The data access policy (CAM role arn).
+ * @method void setRoleArn(integer $RoleArn) Set The data access policy (CAM role arn).
+ * @method string getAppDriverSize() Obtain The driver size. Valid values: `small` (default, 1 CU), `medium` (2 CUs), `large` (4 CUs), and `xlarge` (8 CUs).
+ * @method void setAppDriverSize(string $AppDriverSize) Set The driver size. Valid values: `small` (default, 1 CU), `medium` (2 CUs), `large` (4 CUs), and `xlarge` (8 CUs).
+ * @method string getAppExecutorSize() Obtain The executor size. Valid values: `small` (default, 1 CU), `medium` (2 CUs), `large` (4 CUs), and `xlarge` (8 CUs).
+ * @method void setAppExecutorSize(string $AppExecutorSize) Set The executor size. Valid values: `small` (default, 1 CU), `medium` (2 CUs), `large` (4 CUs), and `xlarge` (8 CUs).
  * @method integer getAppExecutorNums() Obtain Number of Spark job executors
  * @method void setAppExecutorNums(integer $AppExecutorNums) Set Number of Spark job executors
- * @method string getSparkAppId() Obtain Spark application ID
- * @method void setSparkAppId(string $SparkAppId) Set Spark application ID
+ * @method string getSparkAppId() Obtain The Spark job ID.
+ * @method void setSparkAppId(string $SparkAppId) Set The Spark job ID.
  * @method string getEni() Obtain This field has been disused. Use the `Datasource` field instead.
  * @method void setEni(string $Eni) Set This field has been disused. Use the `Datasource` field instead.
- * @method string getIsLocal() Obtain Whether it is uploaded locally. Valid values: `cos`, `lakefs`.
- * @method void setIsLocal(string $IsLocal) Set Whether it is uploaded locally. Valid values: `cos`, `lakefs`.
- * @method string getMainClass() Obtain Main class of the Spark JAR job during execution
- * @method void setMainClass(string $MainClass) Set Main class of the Spark JAR job during execution
+ * @method string getIsLocal() Obtain The source of the Spark job package. Valid values: `cos` for COS and `lakefs` for the local system (for use in the console, but this method does not support direct API calls).
+ * @method void setIsLocal(string $IsLocal) Set The source of the Spark job package. Valid values: `cos` for COS and `lakefs` for the local system (for use in the console, but this method does not support direct API calls).
+ * @method string getMainClass() Obtain The main class of the Spark job.
+ * @method void setMainClass(string $MainClass) Set The main class of the Spark job.
  * @method string getAppConf() Obtain Spark configurations separated by line break
  * @method void setAppConf(string $AppConf) Set Spark configurations separated by line break
- * @method string getIsLocalJars() Obtain JAR resource dependency upload method. 1: cos; 2: lakefs (this method needs to be used in the console but cannot be called through APIs).
- * @method void setIsLocalJars(string $IsLocalJars) Set JAR resource dependency upload method. 1: cos; 2: lakefs (this method needs to be used in the console but cannot be called through APIs).
- * @method string getAppJars() Obtain Dependency JAR packages of the Spark JAR job separated by comma
- * @method void setAppJars(string $AppJars) Set Dependency JAR packages of the Spark JAR job separated by comma
- * @method string getIsLocalFiles() Obtain File resource dependency upload method. 1: cos; 2: lakefs (this method needs to be used in the console but cannot be called through APIs).
- * @method void setIsLocalFiles(string $IsLocalFiles) Set File resource dependency upload method. 1: cos; 2: lakefs (this method needs to be used in the console but cannot be called through APIs).
- * @method string getAppFiles() Obtain Dependency resources of the Spark job separated by comma
- * @method void setAppFiles(string $AppFiles) Set Dependency resources of the Spark job separated by comma
- * @method string getIsLocalPythonFiles() Obtain PySpark: Dependency upload method. 1: cos; 2: lakefs (this method needs to be used in the console but cannot be called through APIs).
- * @method void setIsLocalPythonFiles(string $IsLocalPythonFiles) Set PySpark: Dependency upload method. 1: cos; 2: lakefs (this method needs to be used in the console but cannot be called through APIs).
- * @method string getAppPythonFiles() Obtain PySpark: Python dependency, which can be in .py, .zip, or .egg format. Multiple files should be separated by comma.
- * @method void setAppPythonFiles(string $AppPythonFiles) Set PySpark: Python dependency, which can be in .py, .zip, or .egg format. Multiple files should be separated by comma.
- * @method string getCmdArgs() Obtain Command line parameters of the Spark job
- * @method void setCmdArgs(string $CmdArgs) Set Command line parameters of the Spark job
- * @method integer getMaxRetries() Obtain This parameter takes effect only for Spark flow tasks.
- * @method void setMaxRetries(integer $MaxRetries) Set This parameter takes effect only for Spark flow tasks.
+ * @method string getIsLocalJars() Obtain The source of the dependency JAR packages of the Spark job. Valid values: `cos` for COS and `lakefs` for the local system (for use in the console, but this method does not support direct API calls).
+ * @method void setIsLocalJars(string $IsLocalJars) Set The source of the dependency JAR packages of the Spark job. Valid values: `cos` for COS and `lakefs` for the local system (for use in the console, but this method does not support direct API calls).
+ * @method string getAppJars() Obtain The dependency JAR packages of the Spark JAR job (JAR packages), separated by comma.
+ * @method void setAppJars(string $AppJars) Set The dependency JAR packages of the Spark JAR job (JAR packages), separated by comma.
+ * @method string getIsLocalFiles() Obtain The source of the dependency files of the Spark job. Valid values: `cos` for COS and `lakefs` for the local system (for use in the console, but this method does not support direct API calls).
+ * @method void setIsLocalFiles(string $IsLocalFiles) Set The source of the dependency files of the Spark job. Valid values: `cos` for COS and `lakefs` for the local system (for use in the console, but this method does not support direct API calls).
+ * @method string getAppFiles() Obtain The dependency files of the Spark job (files other than JAR and ZIP packages), separated by comma.
+ * @method void setAppFiles(string $AppFiles) Set The dependency files of the Spark job (files other than JAR and ZIP packages), separated by comma.
+ * @method string getIsLocalPythonFiles() Obtain The source of the PySpark dependencies. Valid values: `cos` for COS and `lakefs` for the local system (for use in the console, but this method does not support direct API calls).
+ * @method void setIsLocalPythonFiles(string $IsLocalPythonFiles) Set The source of the PySpark dependencies. Valid values: `cos` for COS and `lakefs` for the local system (for use in the console, but this method does not support direct API calls).
+ * @method string getAppPythonFiles() Obtain The PySpark dependencies (Python files), separated by comma, with .py, .zip, and .egg formats supported.
+ * @method void setAppPythonFiles(string $AppPythonFiles) Set The PySpark dependencies (Python files), separated by comma, with .py, .zip, and .egg formats supported.
+ * @method string getCmdArgs() Obtain The input parameters of the Spark job, separated by comma.
+ * @method void setCmdArgs(string $CmdArgs) Set The input parameters of the Spark job, separated by comma.
+ * @method integer getMaxRetries() Obtain The maximum number of retries, valid for Spark streaming tasks only.
+ * @method void setMaxRetries(integer $MaxRetries) Set The maximum number of retries, valid for Spark streaming tasks only.
  * @method string getDataSource() Obtain Data source name
  * @method void setDataSource(string $DataSource) Set Data source name
- * @method string getIsLocalArchives() Obtain Archives: Dependency upload method. 1: cos; 2: lakefs (this method needs to be used in the console but cannot be called through APIs).
- * @method void setIsLocalArchives(string $IsLocalArchives) Set Archives: Dependency upload method. 1: cos; 2: lakefs (this method needs to be used in the console but cannot be called through APIs).
- * @method string getAppArchives() Obtain Archives: Dependency resources
- * @method void setAppArchives(string $AppArchives) Set Archives: Dependency resources
+ * @method string getIsLocalArchives() Obtain The source of the dependency archives of the Spark job. Valid values: `cos` for COS and `lakefs` for the local system (for use in the console, but this method does not support direct API calls).
+ * @method void setIsLocalArchives(string $IsLocalArchives) Set The source of the dependency archives of the Spark job. Valid values: `cos` for COS and `lakefs` for the local system (for use in the console, but this method does not support direct API calls).
+ * @method string getAppArchives() Obtain The dependency archives of the Spark job, separated by comma, with tar.gz, .tgz, and .tar formats supported.
+ * @method void setAppArchives(string $AppArchives) Set The dependency archives of the Spark job, separated by comma, with tar.gz, .tgz, and .tar formats supported.
  * @method string getSparkImage() Obtain The Spark image version.
  * @method void setSparkImage(string $SparkImage) Set The Spark image version.
  * @method string getSparkImageVersion() Obtain The Spark image version name.
@@ -78,41 +78,43 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSessionId(string $SessionId) Set The associated Data Lake Compute query script.
  * @method integer getIsInherit() Obtain Whether to inherit the task resource configuration from the cluster configuration template. Valid values: `0` (default): No; `1`: Yes.
  * @method void setIsInherit(integer $IsInherit) Set Whether to inherit the task resource configuration from the cluster configuration template. Valid values: `0` (default): No; `1`: Yes.
+ * @method boolean getIsSessionStarted() Obtain Whether to run the task with the session SQLs. Valid values: `false` for no and `true` for yes.
+ * @method void setIsSessionStarted(boolean $IsSessionStarted) Set Whether to run the task with the session SQLs. Valid values: `false` for no and `true` for yes.
  */
 class ModifySparkAppRequest extends AbstractModel
 {
     /**
-     * @var string Spark application name
+     * @var string The Spark job name.
      */
     public $AppName;
 
     /**
-     * @var integer 1: Spark JAR application; 2: Spark streaming application
+     * @var integer The Spark job type. Valid values: `1` for Spark JAR job and `2` for Spark streaming job.
      */
     public $AppType;
 
     /**
-     * @var string The data engine executing the Spark job
+     * @var string The data engine executing the Spark job.
      */
     public $DataEngine;
 
     /**
-     * @var string Execution entry of the Spark application
+     * @var string The path of the Spark job package.
      */
     public $AppFile;
 
     /**
-     * @var integer Execution role ID of the Spark job
+     * @var integer The data access policy (CAM role arn).
      */
     public $RoleArn;
 
     /**
-     * @var string Driver resource specification of the Spark job. Valid values: `small`, `medium`, `large`, `xlarge`.
+     * @var string The driver size. Valid values: `small` (default, 1 CU), `medium` (2 CUs), `large` (4 CUs), and `xlarge` (8 CUs).
      */
     public $AppDriverSize;
 
     /**
-     * @var string Executor resource specification of the Spark job. Valid values: `small`, `medium`, `large`, `xlarge`.
+     * @var string The executor size. Valid values: `small` (default, 1 CU), `medium` (2 CUs), `large` (4 CUs), and `xlarge` (8 CUs).
      */
     public $AppExecutorSize;
 
@@ -122,7 +124,7 @@ class ModifySparkAppRequest extends AbstractModel
     public $AppExecutorNums;
 
     /**
-     * @var string Spark application ID
+     * @var string The Spark job ID.
      */
     public $SparkAppId;
 
@@ -132,12 +134,12 @@ class ModifySparkAppRequest extends AbstractModel
     public $Eni;
 
     /**
-     * @var string Whether it is uploaded locally. Valid values: `cos`, `lakefs`.
+     * @var string The source of the Spark job package. Valid values: `cos` for COS and `lakefs` for the local system (for use in the console, but this method does not support direct API calls).
      */
     public $IsLocal;
 
     /**
-     * @var string Main class of the Spark JAR job during execution
+     * @var string The main class of the Spark job.
      */
     public $MainClass;
 
@@ -147,42 +149,42 @@ class ModifySparkAppRequest extends AbstractModel
     public $AppConf;
 
     /**
-     * @var string JAR resource dependency upload method. 1: cos; 2: lakefs (this method needs to be used in the console but cannot be called through APIs).
+     * @var string The source of the dependency JAR packages of the Spark job. Valid values: `cos` for COS and `lakefs` for the local system (for use in the console, but this method does not support direct API calls).
      */
     public $IsLocalJars;
 
     /**
-     * @var string Dependency JAR packages of the Spark JAR job separated by comma
+     * @var string The dependency JAR packages of the Spark JAR job (JAR packages), separated by comma.
      */
     public $AppJars;
 
     /**
-     * @var string File resource dependency upload method. 1: cos; 2: lakefs (this method needs to be used in the console but cannot be called through APIs).
+     * @var string The source of the dependency files of the Spark job. Valid values: `cos` for COS and `lakefs` for the local system (for use in the console, but this method does not support direct API calls).
      */
     public $IsLocalFiles;
 
     /**
-     * @var string Dependency resources of the Spark job separated by comma
+     * @var string The dependency files of the Spark job (files other than JAR and ZIP packages), separated by comma.
      */
     public $AppFiles;
 
     /**
-     * @var string PySpark: Dependency upload method. 1: cos; 2: lakefs (this method needs to be used in the console but cannot be called through APIs).
+     * @var string The source of the PySpark dependencies. Valid values: `cos` for COS and `lakefs` for the local system (for use in the console, but this method does not support direct API calls).
      */
     public $IsLocalPythonFiles;
 
     /**
-     * @var string PySpark: Python dependency, which can be in .py, .zip, or .egg format. Multiple files should be separated by comma.
+     * @var string The PySpark dependencies (Python files), separated by comma, with .py, .zip, and .egg formats supported.
      */
     public $AppPythonFiles;
 
     /**
-     * @var string Command line parameters of the Spark job
+     * @var string The input parameters of the Spark job, separated by comma.
      */
     public $CmdArgs;
 
     /**
-     * @var integer This parameter takes effect only for Spark flow tasks.
+     * @var integer The maximum number of retries, valid for Spark streaming tasks only.
      */
     public $MaxRetries;
 
@@ -192,12 +194,12 @@ class ModifySparkAppRequest extends AbstractModel
     public $DataSource;
 
     /**
-     * @var string Archives: Dependency upload method. 1: cos; 2: lakefs (this method needs to be used in the console but cannot be called through APIs).
+     * @var string The source of the dependency archives of the Spark job. Valid values: `cos` for COS and `lakefs` for the local system (for use in the console, but this method does not support direct API calls).
      */
     public $IsLocalArchives;
 
     /**
-     * @var string Archives: Dependency resources
+     * @var string The dependency archives of the Spark job, separated by comma, with tar.gz, .tgz, and .tar formats supported.
      */
     public $AppArchives;
 
@@ -227,35 +229,41 @@ class ModifySparkAppRequest extends AbstractModel
     public $IsInherit;
 
     /**
-     * @param string $AppName Spark application name
-     * @param integer $AppType 1: Spark JAR application; 2: Spark streaming application
-     * @param string $DataEngine The data engine executing the Spark job
-     * @param string $AppFile Execution entry of the Spark application
-     * @param integer $RoleArn Execution role ID of the Spark job
-     * @param string $AppDriverSize Driver resource specification of the Spark job. Valid values: `small`, `medium`, `large`, `xlarge`.
-     * @param string $AppExecutorSize Executor resource specification of the Spark job. Valid values: `small`, `medium`, `large`, `xlarge`.
+     * @var boolean Whether to run the task with the session SQLs. Valid values: `false` for no and `true` for yes.
+     */
+    public $IsSessionStarted;
+
+    /**
+     * @param string $AppName The Spark job name.
+     * @param integer $AppType The Spark job type. Valid values: `1` for Spark JAR job and `2` for Spark streaming job.
+     * @param string $DataEngine The data engine executing the Spark job.
+     * @param string $AppFile The path of the Spark job package.
+     * @param integer $RoleArn The data access policy (CAM role arn).
+     * @param string $AppDriverSize The driver size. Valid values: `small` (default, 1 CU), `medium` (2 CUs), `large` (4 CUs), and `xlarge` (8 CUs).
+     * @param string $AppExecutorSize The executor size. Valid values: `small` (default, 1 CU), `medium` (2 CUs), `large` (4 CUs), and `xlarge` (8 CUs).
      * @param integer $AppExecutorNums Number of Spark job executors
-     * @param string $SparkAppId Spark application ID
+     * @param string $SparkAppId The Spark job ID.
      * @param string $Eni This field has been disused. Use the `Datasource` field instead.
-     * @param string $IsLocal Whether it is uploaded locally. Valid values: `cos`, `lakefs`.
-     * @param string $MainClass Main class of the Spark JAR job during execution
+     * @param string $IsLocal The source of the Spark job package. Valid values: `cos` for COS and `lakefs` for the local system (for use in the console, but this method does not support direct API calls).
+     * @param string $MainClass The main class of the Spark job.
      * @param string $AppConf Spark configurations separated by line break
-     * @param string $IsLocalJars JAR resource dependency upload method. 1: cos; 2: lakefs (this method needs to be used in the console but cannot be called through APIs).
-     * @param string $AppJars Dependency JAR packages of the Spark JAR job separated by comma
-     * @param string $IsLocalFiles File resource dependency upload method. 1: cos; 2: lakefs (this method needs to be used in the console but cannot be called through APIs).
-     * @param string $AppFiles Dependency resources of the Spark job separated by comma
-     * @param string $IsLocalPythonFiles PySpark: Dependency upload method. 1: cos; 2: lakefs (this method needs to be used in the console but cannot be called through APIs).
-     * @param string $AppPythonFiles PySpark: Python dependency, which can be in .py, .zip, or .egg format. Multiple files should be separated by comma.
-     * @param string $CmdArgs Command line parameters of the Spark job
-     * @param integer $MaxRetries This parameter takes effect only for Spark flow tasks.
+     * @param string $IsLocalJars The source of the dependency JAR packages of the Spark job. Valid values: `cos` for COS and `lakefs` for the local system (for use in the console, but this method does not support direct API calls).
+     * @param string $AppJars The dependency JAR packages of the Spark JAR job (JAR packages), separated by comma.
+     * @param string $IsLocalFiles The source of the dependency files of the Spark job. Valid values: `cos` for COS and `lakefs` for the local system (for use in the console, but this method does not support direct API calls).
+     * @param string $AppFiles The dependency files of the Spark job (files other than JAR and ZIP packages), separated by comma.
+     * @param string $IsLocalPythonFiles The source of the PySpark dependencies. Valid values: `cos` for COS and `lakefs` for the local system (for use in the console, but this method does not support direct API calls).
+     * @param string $AppPythonFiles The PySpark dependencies (Python files), separated by comma, with .py, .zip, and .egg formats supported.
+     * @param string $CmdArgs The input parameters of the Spark job, separated by comma.
+     * @param integer $MaxRetries The maximum number of retries, valid for Spark streaming tasks only.
      * @param string $DataSource Data source name
-     * @param string $IsLocalArchives Archives: Dependency upload method. 1: cos; 2: lakefs (this method needs to be used in the console but cannot be called through APIs).
-     * @param string $AppArchives Archives: Dependency resources
+     * @param string $IsLocalArchives The source of the dependency archives of the Spark job. Valid values: `cos` for COS and `lakefs` for the local system (for use in the console, but this method does not support direct API calls).
+     * @param string $AppArchives The dependency archives of the Spark job, separated by comma, with tar.gz, .tgz, and .tar formats supported.
      * @param string $SparkImage The Spark image version.
      * @param string $SparkImageVersion The Spark image version name.
      * @param integer $AppExecutorMaxNumbers The specified executor count (max), which defaults to 1. This parameter applies if the "Dynamic" mode is selected. If the "Dynamic" mode is not selected, the executor count is equal to `AppExecutorNums`.
      * @param string $SessionId The associated Data Lake Compute query script.
      * @param integer $IsInherit Whether to inherit the task resource configuration from the cluster configuration template. Valid values: `0` (default): No; `1`: Yes.
+     * @param boolean $IsSessionStarted Whether to run the task with the session SQLs. Valid values: `false` for no and `true` for yes.
      */
     function __construct()
     {
@@ -384,6 +392,10 @@ class ModifySparkAppRequest extends AbstractModel
 
         if (array_key_exists("IsInherit",$param) and $param["IsInherit"] !== null) {
             $this->IsInherit = $param["IsInherit"];
+        }
+
+        if (array_key_exists("IsSessionStarted",$param) and $param["IsSessionStarted"] !== null) {
+            $this->IsSessionStarted = $param["IsSessionStarted"];
         }
     }
 }

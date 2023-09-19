@@ -48,6 +48,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEdgeVersion(string $EdgeVersion) Set Edge cluster version. It is the set of versions of all cluster components.
  * @method string getRegistryPrefix() Obtain Prefix of the image registry of an edge component
  * @method void setRegistryPrefix(string $RegistryPrefix) Set Prefix of the image registry of an edge component
+ * @method TagSpecification getTagSpecification() Obtain u200dTags bound with the cluster
+ * @method void setTagSpecification(TagSpecification $TagSpecification) Set u200dTags bound with the cluster
  */
 class CreateTKEEdgeClusterRequest extends AbstractModel
 {
@@ -122,6 +124,11 @@ class CreateTKEEdgeClusterRequest extends AbstractModel
     public $RegistryPrefix;
 
     /**
+     * @var TagSpecification u200dTags bound with the cluster
+     */
+    public $TagSpecification;
+
+    /**
      * @param string $K8SVersion 
      * @param string $VpcId VPC ID
      * @param string $ClusterName Cluster name
@@ -136,6 +143,7 @@ class CreateTKEEdgeClusterRequest extends AbstractModel
      * @param string $ChargeType Cluster billing mode
      * @param string $EdgeVersion Edge cluster version. It is the set of versions of all cluster components.
      * @param string $RegistryPrefix Prefix of the image registry of an edge component
+     * @param TagSpecification $TagSpecification u200dTags bound with the cluster
      */
     function __construct()
     {
@@ -206,6 +214,11 @@ class CreateTKEEdgeClusterRequest extends AbstractModel
 
         if (array_key_exists("RegistryPrefix",$param) and $param["RegistryPrefix"] !== null) {
             $this->RegistryPrefix = $param["RegistryPrefix"];
+        }
+
+        if (array_key_exists("TagSpecification",$param) and $param["TagSpecification"] !== null) {
+            $this->TagSpecification = new TagSpecification();
+            $this->TagSpecification->deserialize($param["TagSpecification"]);
         }
     }
 }

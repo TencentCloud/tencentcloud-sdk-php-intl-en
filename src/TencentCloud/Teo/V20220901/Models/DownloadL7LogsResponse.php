@@ -20,27 +20,24 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DownloadL7Logs response structure.
  *
- * @method array getData() Obtain The list of L7 log data.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setData(array $Data) Set The list of L7 log data.
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method integer getTotalCount() Obtain Total number of query results.
  * @method void setTotalCount(integer $TotalCount) Set Total number of query results.
+ * @method array getData() Obtain List of L7 logs.
+ * @method void setData(array $Data) Set List of L7 logs.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 class DownloadL7LogsResponse extends AbstractModel
 {
     /**
-     * @var array The list of L7 log data.
-Note: This field may return null, indicating that no valid values can be obtained.
-     */
-    public $Data;
-
-    /**
      * @var integer Total number of query results.
      */
     public $TotalCount;
+
+    /**
+     * @var array List of L7 logs.
+     */
+    public $Data;
 
     /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -48,9 +45,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $RequestId;
 
     /**
-     * @param array $Data The list of L7 log data.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $TotalCount Total number of query results.
+     * @param array $Data List of L7 logs.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -66,6 +62,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if ($param === null) {
             return;
         }
+        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
+            $this->TotalCount = $param["TotalCount"];
+        }
+
         if (array_key_exists("Data",$param) and $param["Data"] !== null) {
             $this->Data = [];
             foreach ($param["Data"] as $key => $value){
@@ -73,10 +73,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 $obj->deserialize($value);
                 array_push($this->Data, $obj);
             }
-        }
-
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getJobName() Obtain Spark job name
  * @method void setJobName(string $JobName) Set Spark job name
- * @method string getCmdArgs() Obtain Command line parameters of the Spark job separated by space. They are generally used for periodic calls.
- * @method void setCmdArgs(string $CmdArgs) Set Command line parameters of the Spark job separated by space. They are generally used for periodic calls.
+ * @method string getCmdArgs() Obtain The input parameters of the Spark job, separated by space. They are generally used for periodic calls.
+ * @method void setCmdArgs(string $CmdArgs) Set The input parameters of the Spark job, separated by space. They are generally used for periodic calls.
  */
 class CreateSparkAppTaskRequest extends AbstractModel
 {
@@ -33,13 +33,13 @@ class CreateSparkAppTaskRequest extends AbstractModel
     public $JobName;
 
     /**
-     * @var string Command line parameters of the Spark job separated by space. They are generally used for periodic calls.
+     * @var string The input parameters of the Spark job, separated by space. They are generally used for periodic calls.
      */
     public $CmdArgs;
 
     /**
      * @param string $JobName Spark job name
-     * @param string $CmdArgs Command line parameters of the Spark job separated by space. They are generally used for periodic calls.
+     * @param string $CmdArgs The input parameters of the Spark job, separated by space. They are generally used for periodic calls.
      */
     function __construct()
     {

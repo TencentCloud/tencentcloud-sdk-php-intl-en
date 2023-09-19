@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCRDUsage(ResourceUsage $CRDUsage) Set CRD usage
  * @method integer getPodUsage() Obtain Pod usage
  * @method void setPodUsage(integer $PodUsage) Set Pod usage
+ * @method integer getRSUsage() Obtain ReplicaSet usage
+ * @method void setRSUsage(integer $RSUsage) Set ReplicaSet usage
  * @method integer getConfigMapUsage() Obtain ConfigMap usage
  * @method void setConfigMapUsage(integer $ConfigMapUsage) Set ConfigMap usage
  * @method ResourceUsage getOtherUsage() Obtain Other resource usage
@@ -44,6 +46,11 @@ class DescribeResourceUsageResponse extends AbstractModel
     public $PodUsage;
 
     /**
+     * @var integer ReplicaSet usage
+     */
+    public $RSUsage;
+
+    /**
      * @var integer ConfigMap usage
      */
     public $ConfigMapUsage;
@@ -61,6 +68,7 @@ class DescribeResourceUsageResponse extends AbstractModel
     /**
      * @param ResourceUsage $CRDUsage CRD usage
      * @param integer $PodUsage Pod usage
+     * @param integer $RSUsage ReplicaSet usage
      * @param integer $ConfigMapUsage ConfigMap usage
      * @param ResourceUsage $OtherUsage Other resource usage
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -85,6 +93,10 @@ class DescribeResourceUsageResponse extends AbstractModel
 
         if (array_key_exists("PodUsage",$param) and $param["PodUsage"] !== null) {
             $this->PodUsage = $param["PodUsage"];
+        }
+
+        if (array_key_exists("RSUsage",$param) and $param["RSUsage"] !== null) {
+            $this->RSUsage = $param["RSUsage"];
         }
 
         if (array_key_exists("ConfigMapUsage",$param) and $param["ConfigMapUsage"] !== null) {

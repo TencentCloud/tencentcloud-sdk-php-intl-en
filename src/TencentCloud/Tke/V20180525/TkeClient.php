@@ -32,7 +32,7 @@ use TencentCloud\Tke\V20180525\Models as Models;
  * @method Models\CreateBackupStorageLocationResponse CreateBackupStorageLocation(Models\CreateBackupStorageLocationRequest $req) This API is used to create a backup repository. You can specify the storage type (such as COS), the bucket region and the name. Up to 100 repositories can be created. Note that the settings of this API apply globally. You only need to create one backup repository, and back up TKE clusters in different regions in it.
  * @method Models\CreateClusterResponse CreateCluster(Models\CreateClusterRequest $req) This API is used to create a cluster.
  * @method Models\CreateClusterEndpointResponse CreateClusterEndpoint(Models\CreateClusterEndpointRequest $req) This API is used to create a cluster access endpoint.
- * @method Models\CreateClusterEndpointVipResponse CreateClusterEndpointVip(Models\CreateClusterEndpointVipRequest $req) Create an external network access port for the managed cluster (the old way, only the external network port for the managed cluster is supported)
+ * @method Models\CreateClusterEndpointVipResponse CreateClusterEndpointVip(Models\CreateClusterEndpointVipRequest $req) This API is used to create a public network access port for a managed cluster. Note: This API will be disused soon. Please call `CreateClusterEndpoint` instead.
  * @method Models\CreateClusterInstancesResponse CreateClusterInstances(Models\CreateClusterInstancesRequest $req) This API is used to create one or more nodes in a cluster.
  * @method Models\CreateClusterNodePoolResponse CreateClusterNodePool(Models\CreateClusterNodePoolRequest $req) This API is used to create a node pool.
  * @method Models\CreateClusterRouteTableResponse CreateClusterRouteTable(Models\CreateClusterRouteTableRequest $req) This API is used to create a cluster route table.
@@ -43,6 +43,7 @@ use TencentCloud\Tke\V20180525\Models as Models;
  * @method Models\CreateEdgeLogConfigResponse CreateEdgeLogConfig(Models\CreateEdgeLogConfigRequest $req) This API is used to create log collection configuration for a TKE Edge cluster.
  * @method Models\CreatePrometheusAlertRuleResponse CreatePrometheusAlertRule(Models\CreatePrometheusAlertRuleRequest $req) This API is used to create an alarm rule.
  * @method Models\CreateTKEEdgeClusterResponse CreateTKEEdgeCluster(Models\CreateTKEEdgeClusterRequest $req) This API is used to create a TKE Edge cluster.
+ * @method Models\DeleteAddonResponse DeleteAddon(Models\DeleteAddonRequest $req) This API is used to delete an add-on.
  * @method Models\DeleteBackupStorageLocationResponse DeleteBackupStorageLocation(Models\DeleteBackupStorageLocationRequest $req) This API is used to delete a backup repository.
  * @method Models\DeleteClusterResponse DeleteCluster(Models\DeleteClusterRequest $req) This API is used to delete a cluster. (Cloud API v3).
  * @method Models\DeleteClusterAsGroupsResponse DeleteClusterAsGroups(Models\DeleteClusterAsGroupsRequest $req) Delete a cluster scaling group
@@ -59,6 +60,8 @@ use TencentCloud\Tke\V20180525\Models as Models;
  * @method Models\DeleteEdgeClusterInstancesResponse DeleteEdgeClusterInstances(Models\DeleteEdgeClusterInstancesRequest $req) This API is used to delete one or more edge compute instances.
  * @method Models\DeletePrometheusAlertRuleResponse DeletePrometheusAlertRule(Models\DeletePrometheusAlertRuleRequest $req) This API is used to delete an alarm rule.
  * @method Models\DeleteTKEEdgeClusterResponse DeleteTKEEdgeCluster(Models\DeleteTKEEdgeClusterRequest $req) This API is used to delete a TKE Edge cluster.
+ * @method Models\DescribeAddonResponse DescribeAddon(Models\DescribeAddonRequest $req) This API is used to query the list of add-ons.
+ * @method Models\DescribeAddonValuesResponse DescribeAddonValues(Models\DescribeAddonValuesRequest $req) This API is used to query parameters of an add-on.
  * @method Models\DescribeAvailableClusterVersionResponse DescribeAvailableClusterVersion(Models\DescribeAvailableClusterVersionRequest $req) This API is used to obtain all versions that the cluster can upgrade to.
  * @method Models\DescribeAvailableTKEEdgeVersionResponse DescribeAvailableTKEEdgeVersion(Models\DescribeAvailableTKEEdgeVersionRequest $req) This API is used to check the edge component versions and K8s versions supported by TKE Edge.
  * @method Models\DescribeBackupStorageLocationsResponse DescribeBackupStorageLocations(Models\DescribeBackupStorageLocationsRequest $req) This API is used to query backup repositories.
@@ -90,6 +93,7 @@ use TencentCloud\Tke\V20180525\Models as Models;
  * @method Models\DescribeEdgeClusterUpgradeInfoResponse DescribeEdgeClusterUpgradeInfo(Models\DescribeEdgeClusterUpgradeInfoRequest $req) This API is used to query the upgrade information of an edge cluster, including the upgradeable components, the current upgrade status, and errors occur during the upgrade.
  * @method Models\DescribeEdgeLogSwitchesResponse DescribeEdgeLogSwitches(Models\DescribeEdgeLogSwitchesRequest $req) This API is used to query the status of event storage, cluster auditing and logging.
  * @method Models\DescribeEnableVpcCniProgressResponse DescribeEnableVpcCniProgress(Models\DescribeEnableVpcCniProgressRequest $req) This API is used to query the task progress of enabling VPC-CNI mode.
+ * @method Models\DescribeEncryptionStatusResponse DescribeEncryptionStatus(Models\DescribeEncryptionStatusRequest $req) This API is used to query the encryption status of etcd data.
  * @method Models\DescribeExistedInstancesResponse DescribeExistedInstances(Models\DescribeExistedInstancesRequest $req) This API is used to query one or more existing node and determine whether they can be added to a cluster.
  * @method Models\DescribeImagesResponse DescribeImages(Models\DescribeImagesRequest $req) This API is used to get image information.
  * @method Models\DescribePrometheusInstanceResponse DescribePrometheusInstance(Models\DescribePrometheusInstanceRequest $req) This API is used to obtain the instance details.
@@ -104,12 +108,15 @@ use TencentCloud\Tke\V20180525\Models as Models;
  * @method Models\DescribeVersionsResponse DescribeVersions(Models\DescribeVersionsRequest $req) This API is used to query cluster version information.
  * @method Models\DescribeVpcCniPodLimitsResponse DescribeVpcCniPodLimits(Models\DescribeVpcCniPodLimitsRequest $req) This API is used to query the maximum number of Pods in the VPC-CNI network mode supported by the models in the specified availability zone of the current user and region.
  * @method Models\DisableClusterDeletionProtectionResponse DisableClusterDeletionProtection(Models\DisableClusterDeletionProtectionRequest $req) This API is used to disable cluster deletion protection.
+ * @method Models\DisableEncryptionProtectionResponse DisableEncryptionProtection(Models\DisableEncryptionProtectionRequest $req) This API is used to disable encryption protection.
  * @method Models\DrainClusterVirtualNodeResponse DrainClusterVirtualNode(Models\DrainClusterVirtualNodeRequest $req) This API is used to drain a virtual node.
  * @method Models\EnableClusterDeletionProtectionResponse EnableClusterDeletionProtection(Models\EnableClusterDeletionProtectionRequest $req) This API is used to enable cluster deletion protection.
+ * @method Models\EnableEncryptionProtectionResponse EnableEncryptionProtection(Models\EnableEncryptionProtectionRequest $req) This API is used to enable encryption protection.
  * @method Models\EnableVpcCniNetworkTypeResponse EnableVpcCniNetworkType(Models\EnableVpcCniNetworkTypeRequest $req) This API is used to enable the VPC-CNI network mode for GR clusters.
  * @method Models\ForwardTKEEdgeApplicationRequestV3Response ForwardTKEEdgeApplicationRequestV3(Models\ForwardTKEEdgeApplicationRequestV3Request $req) This API is used to work with the add-ons of a TKE Edge cluster.
  * @method Models\GetClusterLevelPriceResponse GetClusterLevelPrice(Models\GetClusterLevelPriceRequest $req) Obtaining the price of specified cluster model
  * @method Models\GetUpgradeInstanceProgressResponse GetUpgradeInstanceProgress(Models\GetUpgradeInstanceProgressRequest $req) This API is used to obtain the current progress of the node upgrade.
+ * @method Models\InstallAddonResponse InstallAddon(Models\InstallAddonRequest $req) This API is used to install an add-on on the target cluster.
  * @method Models\InstallEdgeLogAgentResponse InstallEdgeLogAgent(Models\InstallEdgeLogAgentRequest $req) This API is used to install the log collection add-on on TKE Edge cluster nodes.
  * @method Models\ModifyClusterAsGroupAttributeResponse ModifyClusterAsGroupAttribute(Models\ModifyClusterAsGroupAttributeRequest $req) Modify cluster scaling group attributes
  * @method Models\ModifyClusterAsGroupOptionAttributeResponse ModifyClusterAsGroupOptionAttribute(Models\ModifyClusterAsGroupOptionAttributeRequest $req) This API is used to modify cluster auto scaling attributes.
@@ -123,6 +130,7 @@ use TencentCloud\Tke\V20180525\Models as Models;
  * @method Models\RemoveNodeFromNodePoolResponse RemoveNodeFromNodePool(Models\RemoveNodeFromNodePoolRequest $req) This API is used to remove a node from a node pool but retain it in the cluster.
  * @method Models\SetNodePoolNodeProtectionResponse SetNodePoolNodeProtection(Models\SetNodePoolNodeProtectionRequest $req) This API is used to enable removal protection for the nodes automatically created by the scaling group in a node pool.
  * @method Models\UninstallEdgeLogAgentResponse UninstallEdgeLogAgent(Models\UninstallEdgeLogAgentRequest $req) This API is used to uninstall the log collection add-on from TKE Edge cluster nodes.
+ * @method Models\UpdateAddonResponse UpdateAddon(Models\UpdateAddonRequest $req) This API is used to update parameters and version of an add-on.
  * @method Models\UpdateClusterKubeconfigResponse UpdateClusterKubeconfig(Models\UpdateClusterKubeconfigRequest $req) This API is used to update the Kubeconfig information of a cluster.
  * @method Models\UpdateClusterVersionResponse UpdateClusterVersion(Models\UpdateClusterVersionRequest $req) This API is used to upgrade the master component of the cluster to the specified version.
  * @method Models\UpdateEdgeClusterVersionResponse UpdateEdgeClusterVersion(Models\UpdateEdgeClusterVersionRequest $req) This API is used to upgrade an edge cluster component to a TKE Edge version.

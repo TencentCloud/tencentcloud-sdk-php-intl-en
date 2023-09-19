@@ -34,8 +34,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
  * @method void setSQL(string $SQL) Set The currently executed SQL statement. Each task contains one SQL statement.
  * @method string getSQLType() Obtain Type of the executed task. Valid values: `DDL`, `DML`, `DQL`.
  * @method void setSQLType(string $SQLType) Set Type of the executed task. Valid values: `DDL`, `DML`, `DQL`.
- * @method integer getState() Obtain Current status of the task. `0`: initial; `1`: task running; `2`: task execution succeeded; `-1`: task execution failed; `-3`: task terminated manually by the user. The task execution result will be returned only if task execution succeeds.
- * @method void setState(integer $State) Set Current status of the task. `0`: initial; `1`: task running; `2`: task execution succeeded; `-1`: task execution failed; `-3`: task terminated manually by the user. The task execution result will be returned only if task execution succeeds.
+ * @method integer getState() Obtain u200cThe current task status. Valid values: `0` (initializing), `1` (executing), `2` (executed), `3` (writing data), `4` (queuing), u200c`-1` (failed), and `-3` (canceled). Only when the task is successfully executed, a task execution result will be returned.
+ * @method void setState(integer $State) Set u200cThe current task status. Valid values: `0` (initializing), `1` (executing), `2` (executed), `3` (writing data), `4` (queuing), u200c`-1` (failed), and `-3` (canceled). Only when the task is successfully executed, a task execution result will be returned.
  * @method integer getDataAmount() Obtain Amount of the data scanned in bytes
  * @method void setDataAmount(integer $DataAmount) Set Amount of the data scanned in bytes
  * @method integer getUsedTime() Obtain The compute time in ms.
@@ -97,7 +97,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $SQLType;
 
     /**
-     * @var integer Current status of the task. `0`: initial; `1`: task running; `2`: task execution succeeded; `-1`: task execution failed; `-3`: task terminated manually by the user. The task execution result will be returned only if task execution succeeds.
+     * @var integer u200cThe current task status. Valid values: `0` (initializing), `1` (executing), `2` (executed), `3` (writing data), `4` (queuing), u200c`-1` (failed), and `-3` (canceled). Only when the task is successfully executed, a task execution result will be returned.
      */
     public $State;
 
@@ -176,7 +176,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $SQL The currently executed SQL statement. Each task contains one SQL statement.
      * @param string $SQLType Type of the executed task. Valid values: `DDL`, `DML`, `DQL`.
-     * @param integer $State Current status of the task. `0`: initial; `1`: task running; `2`: task execution succeeded; `-1`: task execution failed; `-3`: task terminated manually by the user. The task execution result will be returned only if task execution succeeds.
+     * @param integer $State u200cThe current task status. Valid values: `0` (initializing), `1` (executing), `2` (executed), `3` (writing data), `4` (queuing), u200c`-1` (failed), and `-3` (canceled). Only when the task is successfully executed, a task execution result will be returned.
      * @param integer $DataAmount Amount of the data scanned in bytes
      * @param integer $UsedTime The compute time in ms.
      * @param string $OutputPath Address of the COS bucket for storing the task result

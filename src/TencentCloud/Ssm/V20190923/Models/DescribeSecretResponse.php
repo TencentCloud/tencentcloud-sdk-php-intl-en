@@ -70,6 +70,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setTargetUin(integer $TargetUin) Set UIN of the Tencent Cloud API key. This field is valid when the secret type is Tencent Cloud API key secret.
 Note: this field may return null, indicating that no valid values can be obtained.
+ * @method string getAdditionalConfig() Obtain Additional configuration of the Secret
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setAdditionalConfig(string $AdditionalConfig) Set Additional configuration of the Secret
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -165,6 +169,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $TargetUin;
 
     /**
+     * @var string Additional configuration of the Secret
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $AdditionalConfig;
+
+    /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
@@ -195,6 +205,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param integer $TargetUin UIN of the Tencent Cloud API key. This field is valid when the secret type is Tencent Cloud API key secret.
 Note: this field may return null, indicating that no valid values can be obtained.
+     * @param string $AdditionalConfig Additional configuration of the Secret
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -272,6 +284,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("TargetUin",$param) and $param["TargetUin"] !== null) {
             $this->TargetUin = $param["TargetUin"];
+        }
+
+        if (array_key_exists("AdditionalConfig",$param) and $param["AdditionalConfig"] !== null) {
+            $this->AdditionalConfig = $param["AdditionalConfig"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

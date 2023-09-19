@@ -20,42 +20,44 @@ use TencentCloud\Common\AbstractModel;
 /**
  * The condition that makes up an access control rule
  *
- * @method string getMatchFrom() Obtain The field to match. Values:
-<li>`host`: Request domain name</li>
-<li>`sip`: Client IP</li>
-<li>`ua`: User-Agent</li>
-<li>`cookie`: Cookie</li>
-<li>`cgi`: CGI script</li>
-<li>`xff`: XFF header</li>
-<li>`url`: Request URL</li>
-<li>`accept`: Request content type</li>
-<li>`method`: Request method</li>
-<li>`header`: Request header</li>
-<li>`app_proto`: Application layer protocol</li>
-<li>`sip_proto`: Network layer protocol</li>
-<li>`uabot`: UA rules (only available in custom bot rules)</li>
-<li>`idcid`: IDC rules (only available in custom bot rules)</li>
-<li>`sipbot`: Search engine rules (only available in custom bot rules)</li>
-<li>`portrait`: Client reputation (only available in custom bot rules)</li>
-<li>`header_seq`: Header sequence (only available in custom bot rules)</li>
- * @method void setMatchFrom(string $MatchFrom) Set The field to match. Values:
-<li>`host`: Request domain name</li>
-<li>`sip`: Client IP</li>
-<li>`ua`: User-Agent</li>
-<li>`cookie`: Cookie</li>
-<li>`cgi`: CGI script</li>
-<li>`xff`: XFF header</li>
-<li>`url`: Request URL</li>
-<li>`accept`: Request content type</li>
-<li>`method`: Request method</li>
-<li>`header`: Request header</li>
-<li>`app_proto`: Application layer protocol</li>
-<li>`sip_proto`: Network layer protocol</li>
-<li>`uabot`: UA rules (only available in custom bot rules)</li>
-<li>`idcid`: IDC rules (only available in custom bot rules)</li>
-<li>`sipbot`: Search engine rules (only available in custom bot rules)</li>
-<li>`portrait`: Client reputation (only available in custom bot rules)</li>
-<li>`header_seq`: Header sequence (only available in custom bot rules)</li>
+ * @method string getMatchFrom() Obtain Filters: 
+<li>`host`: Request domain name;</li>
+<li>`sip`: Client IP;</li>
+<li>`ua`: User-Agent;</li>
+<li>`cookie`: Cookie;</li>
+<li>`cgi`: CGI script;</li>
+<li>`xff`: XFF header;</li></li>
+<li>`url`: Request URL;<li></li>
+<li>`accept`: Request content type;</li>
+<li>`method`: Request method<;/li>
+<li>`header`: Request header;</li>
+<li>`app_proto`: Application layer protocol;</li>
+<li>`sip_proto`: Network layer protocol;</li>
+<li>`uabot`: UA rules (only available in custom bot rules);</li>
+<li>`idcid`: IDC rules (only available in custom bot rules);</li>
+<li>`sipbot`: Search engine rules (only available in custom bot rules);</li>
+<li>`portrait`: Client reputation (only available in custom bot rules);</li>
+<li>`header_seq`: Header sequence (only available in custom bot rules);</li>
+<li>`hdr`: Request body (only available in custom Web protection rules). </li>
+ * @method void setMatchFrom(string $MatchFrom) Set Filters: 
+<li>`host`: Request domain name;</li>
+<li>`sip`: Client IP;</li>
+<li>`ua`: User-Agent;</li>
+<li>`cookie`: Cookie;</li>
+<li>`cgi`: CGI script;</li>
+<li>`xff`: XFF header;</li></li>
+<li>`url`: Request URL;<li></li>
+<li>`accept`: Request content type;</li>
+<li>`method`: Request method<;/li>
+<li>`header`: Request header;</li>
+<li>`app_proto`: Application layer protocol;</li>
+<li>`sip_proto`: Network layer protocol;</li>
+<li>`uabot`: UA rules (only available in custom bot rules);</li>
+<li>`idcid`: IDC rules (only available in custom bot rules);</li>
+<li>`sipbot`: Search engine rules (only available in custom bot rules);</li>
+<li>`portrait`: Client reputation (only available in custom bot rules);</li>
+<li>`header_seq`: Header sequence (only available in custom bot rules);</li>
+<li>`hdr`: Request body (only available in custom Web protection rules). </li>
  * @method string getMatchParam() Obtain The parameter of the field. When `MatchFrom = header`, the key contained in the header can be passed.
  * @method void setMatchParam(string $MatchParam) Set The parameter of the field. When `MatchFrom = header`, the key contained in the header can be passed.
  * @method string getOperator() Obtain The logical operator. Values:
@@ -98,24 +100,25 @@ use TencentCloud\Common\AbstractModel;
 class AclCondition extends AbstractModel
 {
     /**
-     * @var string The field to match. Values:
-<li>`host`: Request domain name</li>
-<li>`sip`: Client IP</li>
-<li>`ua`: User-Agent</li>
-<li>`cookie`: Cookie</li>
-<li>`cgi`: CGI script</li>
-<li>`xff`: XFF header</li>
-<li>`url`: Request URL</li>
-<li>`accept`: Request content type</li>
-<li>`method`: Request method</li>
-<li>`header`: Request header</li>
-<li>`app_proto`: Application layer protocol</li>
-<li>`sip_proto`: Network layer protocol</li>
-<li>`uabot`: UA rules (only available in custom bot rules)</li>
-<li>`idcid`: IDC rules (only available in custom bot rules)</li>
-<li>`sipbot`: Search engine rules (only available in custom bot rules)</li>
-<li>`portrait`: Client reputation (only available in custom bot rules)</li>
-<li>`header_seq`: Header sequence (only available in custom bot rules)</li>
+     * @var string Filters: 
+<li>`host`: Request domain name;</li>
+<li>`sip`: Client IP;</li>
+<li>`ua`: User-Agent;</li>
+<li>`cookie`: Cookie;</li>
+<li>`cgi`: CGI script;</li>
+<li>`xff`: XFF header;</li></li>
+<li>`url`: Request URL;<li></li>
+<li>`accept`: Request content type;</li>
+<li>`method`: Request method<;/li>
+<li>`header`: Request header;</li>
+<li>`app_proto`: Application layer protocol;</li>
+<li>`sip_proto`: Network layer protocol;</li>
+<li>`uabot`: UA rules (only available in custom bot rules);</li>
+<li>`idcid`: IDC rules (only available in custom bot rules);</li>
+<li>`sipbot`: Search engine rules (only available in custom bot rules);</li>
+<li>`portrait`: Client reputation (only available in custom bot rules);</li>
+<li>`header_seq`: Header sequence (only available in custom bot rules);</li>
+<li>`hdr`: Request body (only available in custom Web protection rules). </li>
      */
     public $MatchFrom;
 
@@ -151,24 +154,25 @@ class AclCondition extends AbstractModel
     public $MatchContent;
 
     /**
-     * @param string $MatchFrom The field to match. Values:
-<li>`host`: Request domain name</li>
-<li>`sip`: Client IP</li>
-<li>`ua`: User-Agent</li>
-<li>`cookie`: Cookie</li>
-<li>`cgi`: CGI script</li>
-<li>`xff`: XFF header</li>
-<li>`url`: Request URL</li>
-<li>`accept`: Request content type</li>
-<li>`method`: Request method</li>
-<li>`header`: Request header</li>
-<li>`app_proto`: Application layer protocol</li>
-<li>`sip_proto`: Network layer protocol</li>
-<li>`uabot`: UA rules (only available in custom bot rules)</li>
-<li>`idcid`: IDC rules (only available in custom bot rules)</li>
-<li>`sipbot`: Search engine rules (only available in custom bot rules)</li>
-<li>`portrait`: Client reputation (only available in custom bot rules)</li>
-<li>`header_seq`: Header sequence (only available in custom bot rules)</li>
+     * @param string $MatchFrom Filters: 
+<li>`host`: Request domain name;</li>
+<li>`sip`: Client IP;</li>
+<li>`ua`: User-Agent;</li>
+<li>`cookie`: Cookie;</li>
+<li>`cgi`: CGI script;</li>
+<li>`xff`: XFF header;</li></li>
+<li>`url`: Request URL;<li></li>
+<li>`accept`: Request content type;</li>
+<li>`method`: Request method<;/li>
+<li>`header`: Request header;</li>
+<li>`app_proto`: Application layer protocol;</li>
+<li>`sip_proto`: Network layer protocol;</li>
+<li>`uabot`: UA rules (only available in custom bot rules);</li>
+<li>`idcid`: IDC rules (only available in custom bot rules);</li>
+<li>`sipbot`: Search engine rules (only available in custom bot rules);</li>
+<li>`portrait`: Client reputation (only available in custom bot rules);</li>
+<li>`header_seq`: Header sequence (only available in custom bot rules);</li>
+<li>`hdr`: Request body (only available in custom Web protection rules). </li>
      * @param string $MatchParam The parameter of the field. When `MatchFrom = header`, the key contained in the header can be passed.
      * @param string $Operator The logical operator. Values:
 <li>`equal`: Value equals</li>

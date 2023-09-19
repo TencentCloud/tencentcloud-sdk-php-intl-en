@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteSparkApp request structure.
  *
- * @method string getAppName() Obtain Spark application name
- * @method void setAppName(string $AppName) Set Spark application name
+ * @method string getAppName() Obtain The Spark job name.
+ * @method void setAppName(string $AppName) Set The Spark job name.
  */
 class DeleteSparkAppRequest extends AbstractModel
 {
     /**
-     * @var string Spark application name
+     * @var string The Spark job name.
      */
     public $AppName;
 
     /**
-     * @param string $AppName Spark application name
+     * @param string $AppName The Spark job name.
      */
     function __construct()
     {

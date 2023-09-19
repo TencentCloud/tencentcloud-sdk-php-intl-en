@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setName(string $Name) Set Database name
  * @method string getOrderByType() Obtain Sorting rule. Valid values: `desc` (descending order), `asc` (ascending order). Default value: `desc`.
  * @method void setOrderByType(string $OrderByType) Set Sorting rule. Valid values: `desc` (descending order), `asc` (ascending order). Default value: `desc`.
+ * @method string getEncryption() Obtain TDE status. Valid values: `enable` (enabled), `disable` (disabled).
+ * @method void setEncryption(string $Encryption) Set TDE status. Valid values: `enable` (enabled), `disable` (disabled).
  */
 class DescribeDBsRequest extends AbstractModel
 {
@@ -59,11 +61,17 @@ class DescribeDBsRequest extends AbstractModel
     public $OrderByType;
 
     /**
+     * @var string TDE status. Valid values: `enable` (enabled), `disable` (disabled).
+     */
+    public $Encryption;
+
+    /**
      * @param array $InstanceIdSet Instance ID
      * @param integer $Limit Number of results per page. Value range: 1-100. Default value: 20
      * @param integer $Offset Page number. Default value: 0
      * @param string $Name Database name
      * @param string $OrderByType Sorting rule. Valid values: `desc` (descending order), `asc` (ascending order). Default value: `desc`.
+     * @param string $Encryption TDE status. Valid values: `enable` (enabled), `disable` (disabled).
      */
     function __construct()
     {
@@ -96,6 +104,10 @@ class DescribeDBsRequest extends AbstractModel
 
         if (array_key_exists("OrderByType",$param) and $param["OrderByType"] !== null) {
             $this->OrderByType = $param["OrderByType"];
+        }
+
+        if (array_key_exists("Encryption",$param) and $param["Encryption"] !== null) {
+            $this->Encryption = $param["Encryption"];
         }
     }
 }

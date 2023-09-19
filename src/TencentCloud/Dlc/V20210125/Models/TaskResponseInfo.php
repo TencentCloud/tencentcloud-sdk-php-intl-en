@@ -32,8 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOutputPath(string $OutputPath) Set Task output path
  * @method string getCreateTime() Obtain Task creation time
  * @method void setCreateTime(string $CreateTime) Set Task creation time
- * @method integer getState() Obtain Task status. Valid values: `0` (initial), `1` (executing), `2` (executed successfully), `-1` (failed to execute), `-3` (canceled).
- * @method void setState(integer $State) Set Task status. Valid values: `0` (initial), `1` (executing), `2` (executed successfully), `-1` (failed to execute), `-3` (canceled).
+ * @method integer getState() Obtain The task status. Valid values: `0` (initializing), `1` (executing), `2` (executed), `3` (writing data), `4` (queuing), `-1` (failed), and `-3` (canceled).
+ * @method void setState(integer $State) Set The task status. Valid values: `0` (initializing), `1` (executing), `2` (executed), `3` (writing data), `4` (queuing), `-1` (failed), and `-3` (canceled).
  * @method string getSQLType() Obtain SQL statement type of the task, such as DDL and DML.
  * @method void setSQLType(string $SQLType) Set SQL statement type of the task, such as DDL and DML.
  * @method string getSQL() Obtain SQL statement of the task
@@ -146,12 +146,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setExecutorMaxNumbers(integer $ExecutorMaxNumbers) Set The maximum executor count (in dynamic mode). The minimum value is 1 and the maximum value is less than the cluster specification. If you set `ExecutorMaxNumbers` to a value smaller than that of `ExecutorNums`, the value of `ExecutorMaxNumbers` is automatically changed to that of `ExecutorNums`.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method CommonMetrics getCommonMetrics() Obtain 
- * @method void setCommonMetrics(CommonMetrics $CommonMetrics) Set 
- * @method SparkMonitorMetrics getSparkMonitorMetrics() Obtain 
- * @method void setSparkMonitorMetrics(SparkMonitorMetrics $SparkMonitorMetrics) Set 
- * @method PrestoMonitorMetrics getPrestoMonitorMetrics() Obtain 
- * @method void setPrestoMonitorMetrics(PrestoMonitorMetrics $PrestoMonitorMetrics) Set 
+ * @method CommonMetrics getCommonMetrics() Obtain Common task metrics
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+ * @method void setCommonMetrics(CommonMetrics $CommonMetrics) Set Common task metrics
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+ * @method SparkMonitorMetrics getSparkMonitorMetrics() Obtain The Spark task metrics.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+ * @method void setSparkMonitorMetrics(SparkMonitorMetrics $SparkMonitorMetrics) Set The Spark task metrics.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+ * @method PrestoMonitorMetrics getPrestoMonitorMetrics() Obtain The Presto task metrics.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+ * @method void setPrestoMonitorMetrics(PrestoMonitorMetrics $PrestoMonitorMetrics) Set The Presto task metrics.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
  */
 class TaskResponseInfo extends AbstractModel
 {
@@ -186,7 +192,7 @@ class TaskResponseInfo extends AbstractModel
     public $CreateTime;
 
     /**
-     * @var integer Task status. Valid values: `0` (initial), `1` (executing), `2` (executed successfully), `-1` (failed to execute), `-3` (canceled).
+     * @var integer The task status. Valid values: `0` (initializing), `1` (executing), `2` (executed), `3` (writing data), `4` (queuing), `-1` (failed), and `-3` (canceled).
      */
     public $State;
 
@@ -367,17 +373,20 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $ExecutorMaxNumbers;
 
     /**
-     * @var CommonMetrics 
+     * @var CommonMetrics Common task metrics
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
      */
     public $CommonMetrics;
 
     /**
-     * @var SparkMonitorMetrics 
+     * @var SparkMonitorMetrics The Spark task metrics.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
      */
     public $SparkMonitorMetrics;
 
     /**
-     * @var PrestoMonitorMetrics 
+     * @var PrestoMonitorMetrics The Presto task metrics.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
      */
     public $PrestoMonitorMetrics;
 
@@ -388,7 +397,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param integer $UsedTime The compute time in ms.
      * @param string $OutputPath Task output path
      * @param string $CreateTime Task creation time
-     * @param integer $State Task status. Valid values: `0` (initial), `1` (executing), `2` (executed successfully), `-1` (failed to execute), `-3` (canceled).
+     * @param integer $State The task status. Valid values: `0` (initializing), `1` (executing), `2` (executed), `3` (writing data), `4` (queuing), `-1` (failed), and `-3` (canceled).
      * @param string $SQLType SQL statement type of the task, such as DDL and DML.
      * @param string $SQL SQL statement of the task
      * @param boolean $ResultExpired Whether the result has expired
@@ -445,9 +454,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $ExecutorMaxNumbers The maximum executor count (in dynamic mode). The minimum value is 1 and the maximum value is less than the cluster specification. If you set `ExecutorMaxNumbers` to a value smaller than that of `ExecutorNums`, the value of `ExecutorMaxNumbers` is automatically changed to that of `ExecutorNums`.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param CommonMetrics $CommonMetrics 
-     * @param SparkMonitorMetrics $SparkMonitorMetrics 
-     * @param PrestoMonitorMetrics $PrestoMonitorMetrics 
+     * @param CommonMetrics $CommonMetrics Common task metrics
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+     * @param SparkMonitorMetrics $SparkMonitorMetrics The Spark task metrics.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+     * @param PrestoMonitorMetrics $PrestoMonitorMetrics The Presto task metrics.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
      */
     function __construct()
     {

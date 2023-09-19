@@ -24,10 +24,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStrategy(integer $Strategy) Set Backup policy (0: instance backup, 1: multi-database backup)
  * @method array getDBNames() Obtain List of names of databases to be backed up (required only for multi-database backup)
  * @method void setDBNames(array $DBNames) Set List of names of databases to be backed up (required only for multi-database backup)
- * @method string getInstanceId() Obtain Instance ID in the format of mssql-i1z41iwd
- * @method void setInstanceId(string $InstanceId) Set Instance ID in the format of mssql-i1z41iwd
+ * @method string getInstanceId() Obtain (Required) Instance ID in the format of mssql-i1z41iwd
+ * @method void setInstanceId(string $InstanceId) Set (Required) Instance ID in the format of mssql-i1z41iwd
  * @method string getBackupName() Obtain Backup name. If this parameter is left empty, a backup name in the format of "[Instance ID]_[Backup start timestamp]" will be automatically generated.
  * @method void setBackupName(string $BackupName) Set Backup name. If this parameter is left empty, a backup name in the format of "[Instance ID]_[Backup start timestamp]" will be automatically generated.
+ * @method integer getStorageStrategy() Obtain 
+ * @method void setStorageStrategy(integer $StorageStrategy) Set 
  */
 class CreateBackupRequest extends AbstractModel
 {
@@ -42,7 +44,7 @@ class CreateBackupRequest extends AbstractModel
     public $DBNames;
 
     /**
-     * @var string Instance ID in the format of mssql-i1z41iwd
+     * @var string (Required) Instance ID in the format of mssql-i1z41iwd
      */
     public $InstanceId;
 
@@ -52,10 +54,16 @@ class CreateBackupRequest extends AbstractModel
     public $BackupName;
 
     /**
+     * @var integer 
+     */
+    public $StorageStrategy;
+
+    /**
      * @param integer $Strategy Backup policy (0: instance backup, 1: multi-database backup)
      * @param array $DBNames List of names of databases to be backed up (required only for multi-database backup)
-     * @param string $InstanceId Instance ID in the format of mssql-i1z41iwd
+     * @param string $InstanceId (Required) Instance ID in the format of mssql-i1z41iwd
      * @param string $BackupName Backup name. If this parameter is left empty, a backup name in the format of "[Instance ID]_[Backup start timestamp]" will be automatically generated.
+     * @param integer $StorageStrategy 
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class CreateBackupRequest extends AbstractModel
 
         if (array_key_exists("BackupName",$param) and $param["BackupName"] !== null) {
             $this->BackupName = $param["BackupName"];
+        }
+
+        if (array_key_exists("StorageStrategy",$param) and $param["StorageStrategy"] !== null) {
+            $this->StorageStrategy = $param["StorageStrategy"];
         }
     }
 }

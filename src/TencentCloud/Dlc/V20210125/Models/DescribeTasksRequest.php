@@ -44,8 +44,8 @@ task-kind - string (filter by task type)
  * @method void setStartTime(string $StartTime) Set Start time in the format of `yyyy-mm-dd HH:MM:SS`, which is the current time seven days ago by default.
  * @method string getEndTime() Obtain End time in the format of `yyyy-mm-dd HH:MM:SS`, which is the current time by default. The time span is (0, 30] days. Data in the last 45 days can be queried.
  * @method void setEndTime(string $EndTime) Set End time in the format of `yyyy-mm-dd HH:MM:SS`, which is the current time by default. The time span is (0, 30] days. Data in the last 45 days can be queried.
- * @method string getDataEngineName() Obtain Filter by compute resource name
- * @method void setDataEngineName(string $DataEngineName) Set Filter by compute resource name
+ * @method string getDataEngineName() Obtain The data engine name for filtering.
+ * @method void setDataEngineName(string $DataEngineName) Set The data engine name for filtering.
  */
 class DescribeTasksRequest extends AbstractModel
 {
@@ -90,7 +90,7 @@ task-kind - string (filter by task type)
     public $EndTime;
 
     /**
-     * @var string Filter by compute resource name
+     * @var string The data engine name for filtering.
      */
     public $DataEngineName;
 
@@ -107,7 +107,7 @@ task-kind - string (filter by task type)
      * @param string $Sorting Sorting order. Valid values: `asc` (ascending order), `desc` (descending order). Default value: `asc`.
      * @param string $StartTime Start time in the format of `yyyy-mm-dd HH:MM:SS`, which is the current time seven days ago by default.
      * @param string $EndTime End time in the format of `yyyy-mm-dd HH:MM:SS`, which is the current time by default. The time span is (0, 30] days. Data in the last 45 days can be queried.
-     * @param string $DataEngineName Filter by compute resource name
+     * @param string $DataEngineName The data engine name for filtering.
      */
     function __construct()
     {

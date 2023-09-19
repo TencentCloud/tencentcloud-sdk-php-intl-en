@@ -132,6 +132,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setIsInherit(integer $IsInherit) Set Whether the task resource configuration is inherited from the cluster template. Valid values: `0` (default): No; `1`: Yes.
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method boolean getIsSessionStarted() Obtain Whether the task runs with the session SQLs. Valid values: `false` for no and `true` for yes.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+ * @method void setIsSessionStarted(boolean $IsSessionStarted) Set Whether the task runs with the session SQLs. Valid values: `false` for no and `true` for yes.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
  */
 class SparkJobInfo extends AbstractModel
 {
@@ -352,6 +356,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $IsInherit;
 
     /**
+     * @var boolean Whether the task runs with the session SQLs. Valid values: `false` for no and `true` for yes.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+     */
+    public $IsSessionStarted;
+
+    /**
      * @param string $JobId Spark job ID
      * @param string $JobName Spark job name
      * @param integer $JobType Spark job type. Valid values: `1` (batch job), `2` (streaming job).
@@ -408,6 +418,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $IsInherit Whether the task resource configuration is inherited from the cluster template. Valid values: `0` (default): No; `1`: Yes.
 Note: This field may return null, indicating that no valid values can be obtained.
+     * @param boolean $IsSessionStarted Whether the task runs with the session SQLs. Valid values: `false` for no and `true` for yes.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -581,6 +593,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("IsInherit",$param) and $param["IsInherit"] !== null) {
             $this->IsInherit = $param["IsInherit"];
+        }
+
+        if (array_key_exists("IsSessionStarted",$param) and $param["IsSessionStarted"] !== null) {
+            $this->IsSessionStarted = $param["IsSessionStarted"];
         }
     }
 }

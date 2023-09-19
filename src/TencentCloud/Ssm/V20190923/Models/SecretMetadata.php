@@ -74,6 +74,18 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method void setTargetUin(integer $TargetUin) Set UIN of the Tencent Cloud API key. This field is valid when the secret type is Tencent Cloud API key secret.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method integer getRotationFrequency() Obtain Rotation frequency in days. It takes effect when the rotation feature is enabled. 
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setRotationFrequency(integer $RotationFrequency) Set Rotation frequency in days. It takes effect when the rotation feature is enabled. 
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getResourceID() Obtain ID of Tencent Cloud resource corresponding with the Secret. 
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setResourceID(string $ResourceID) Set ID of Tencent Cloud resource corresponding with the Secret. 
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getRotationBeginTime() Obtain The rotation start time.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setRotationBeginTime(string $RotationBeginTime) Set The rotation start time.
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class SecretMetadata extends AbstractModel
 {
@@ -169,6 +181,24 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     public $TargetUin;
 
     /**
+     * @var integer Rotation frequency in days. It takes effect when the rotation feature is enabled. 
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $RotationFrequency;
+
+    /**
+     * @var string ID of Tencent Cloud resource corresponding with the Secret. 
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $ResourceID;
+
+    /**
+     * @var string The rotation start time.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $RotationBeginTime;
+
+    /**
      * @param string $SecretName Credential name
      * @param string $Description Credential description
      * @param string $KmsKeyId KMS `KeyId` used to encrypt the credential
@@ -196,6 +226,12 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param integer $TargetUin UIN of the Tencent Cloud API key. This field is valid when the secret type is Tencent Cloud API key secret.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param integer $RotationFrequency Rotation frequency in days. It takes effect when the rotation feature is enabled. 
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $ResourceID ID of Tencent Cloud resource corresponding with the Secret. 
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $RotationBeginTime The rotation start time.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -272,6 +308,18 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
         if (array_key_exists("TargetUin",$param) and $param["TargetUin"] !== null) {
             $this->TargetUin = $param["TargetUin"];
+        }
+
+        if (array_key_exists("RotationFrequency",$param) and $param["RotationFrequency"] !== null) {
+            $this->RotationFrequency = $param["RotationFrequency"];
+        }
+
+        if (array_key_exists("ResourceID",$param) and $param["ResourceID"] !== null) {
+            $this->ResourceID = $param["ResourceID"];
+        }
+
+        if (array_key_exists("RotationBeginTime",$param) and $param["RotationBeginTime"] !== null) {
+            $this->RotationBeginTime = $param["RotationBeginTime"];
         }
     }
 }

@@ -44,7 +44,7 @@ use TencentCloud\Sqlserver\V20180328\Models as Models;
  * @method Models\DeleteMigrationResponse DeleteMigration(Models\DeleteMigrationRequest $req) This API is used to delete a migration task.
  * @method Models\DescribeAccountsResponse DescribeAccounts(Models\DescribeAccountsRequest $req) This API is used to pull the list of instance accounts.
  * @method Models\DescribeBackupCommandResponse DescribeBackupCommand(Models\DescribeBackupCommandRequest $req) This API is used to query the commands of creating backups canonically.
- * @method Models\DescribeBackupFilesResponse DescribeBackupFiles(Models\DescribeBackupFilesRequest $req) This API is used to query the list of unarchived database backup files.
+ * @method Models\DescribeBackupFilesResponse DescribeBackupFiles(Models\DescribeBackupFilesRequest $req) This API is used to query the details of an unarchived backup.
  * @method Models\DescribeBackupMigrationResponse DescribeBackupMigration(Models\DescribeBackupMigrationRequest $req) This API is used to create an incremental backup import task.
  * @method Models\DescribeBackupUploadSizeResponse DescribeBackupUploadSize(Models\DescribeBackupUploadSizeRequest $req) This API is used to query the size of uploaded backup files. It is valid if the backup file type is `COS_UPLOAD` (the file is stored in COS).
  * @method Models\DescribeBackupsResponse DescribeBackups(Models\DescribeBackupsRequest $req) This API is used to query the list of backups.
@@ -57,6 +57,7 @@ use TencentCloud\Sqlserver\V20180328\Models as Models;
  * @method Models\DescribeDBsNormalResponse DescribeDBsNormal(Models\DescribeDBsNormalRequest $req) This API is used to query database configurations. It does not return information of the accounts that have permissions to operate the database.
  * @method Models\DescribeFlowStatusResponse DescribeFlowStatus(Models\DescribeFlowStatusRequest $req) This API is used to query flow status.
  * @method Models\DescribeIncrementalMigrationResponse DescribeIncrementalMigration(Models\DescribeIncrementalMigrationRequest $req) This API is used to query an incremental backup import task.
+ * @method Models\DescribeInstanceByOrdersResponse DescribeInstanceByOrders(Models\DescribeInstanceByOrdersRequest $req) This API is used to query the instance ID by the order number.
  * @method Models\DescribeInstanceParamRecordsResponse DescribeInstanceParamRecords(Models\DescribeInstanceParamRecordsRequest $req) This API is used to query the parameter modification records of an instance.
  * @method Models\DescribeInstanceParamsResponse DescribeInstanceParams(Models\DescribeInstanceParamsRequest $req) This API is used to query the parameter list of an instance.
  * @method Models\DescribeMigrationDetailResponse DescribeMigrationDetail(Models\DescribeMigrationDetailRequest $req) This API is used to query migration task details.
@@ -70,11 +71,13 @@ use TencentCloud\Sqlserver\V20180328\Models as Models;
  * @method Models\DescribeXEventsResponse DescribeXEvents(Models\DescribeXEventsRequest $req) This API is used to query the list of extended events.
  * @method Models\DescribeZonesResponse DescribeZones(Models\DescribeZonesRequest $req) This API is used to query currently purchasable AZs.
  * @method Models\InquiryPriceCreateDBInstancesResponse InquiryPriceCreateDBInstances(Models\InquiryPriceCreateDBInstancesRequest $req) This API is used to query the price of requested instances.
- * @method Models\InquiryPriceUpgradeDBInstanceResponse InquiryPriceUpgradeDBInstance(Models\InquiryPriceUpgradeDBInstanceRequest $req) This API is used to query the upgrade price of an instance.
+ * @method Models\InquiryPriceUpgradeDBInstanceResponse InquiryPriceUpgradeDBInstance(Models\InquiryPriceUpgradeDBInstanceRequest $req) This API is used to query the upgrade prices of a monthly subscribed instance
+.
  * @method Models\ModifyAccountPrivilegeResponse ModifyAccountPrivilege(Models\ModifyAccountPrivilegeRequest $req) This API is used to modify instance account permissions.
  * @method Models\ModifyAccountRemarkResponse ModifyAccountRemark(Models\ModifyAccountRemarkRequest $req) This API is used to modify account remarks.
  * @method Models\ModifyBackupMigrationResponse ModifyBackupMigration(Models\ModifyBackupMigrationRequest $req) This API is used to modify a backup import task.
  * @method Models\ModifyBackupStrategyResponse ModifyBackupStrategy(Models\ModifyBackupStrategyRequest $req) This API is used to modify the backup policy.
+ * @method Models\ModifyDBEncryptAttributesResponse ModifyDBEncryptAttributes(Models\ModifyDBEncryptAttributesRequest $req) This API is used to u200denable or disable TDE of a database.
  * @method Models\ModifyDBInstanceNameResponse ModifyDBInstanceName(Models\ModifyDBInstanceNameRequest $req) This API is used to rename an instance.
  * @method Models\ModifyDBInstanceNetworkResponse ModifyDBInstanceNetwork(Models\ModifyDBInstanceNetworkRequest $req) This API is used to switch a running instance from a VPC to another.
  * @method Models\ModifyDBInstanceProjectResponse ModifyDBInstanceProject(Models\ModifyDBInstanceProjectRequest $req) This API is used to modify the project to which a database instance belongs.
@@ -84,6 +87,7 @@ use TencentCloud\Sqlserver\V20180328\Models as Models;
  * @method Models\ModifyDatabaseCTResponse ModifyDatabaseCT(Models\ModifyDatabaseCTRequest $req) This API is used to enable or disable the change tracking (CT) feature.
  * @method Models\ModifyDatabaseMdfResponse ModifyDatabaseMdf(Models\ModifyDatabaseMdfRequest $req) This API is used to shrink database MDF files.
  * @method Models\ModifyIncrementalMigrationResponse ModifyIncrementalMigration(Models\ModifyIncrementalMigrationRequest $req) This API is used to modify an incremental backup import task.
+ * @method Models\ModifyInstanceEncryptAttributesResponse ModifyInstanceEncryptAttributes(Models\ModifyInstanceEncryptAttributesRequest $req) This API is used to enable TDE of an instance.
  * @method Models\ModifyInstanceParamResponse ModifyInstanceParam(Models\ModifyInstanceParamRequest $req) This API is used to modify instance parameters.
 <b>Note</b>: if <b>the instance needs to be restarted</b> for the modified parameter to take effect, <b>it will be restarted</b> immediately or during the maintenance time according to the `WaitSwitch` parameter.
 Before you modify a parameter, you can use the `DescribeInstanceParams` API to query whether the instance needs to be restarted.

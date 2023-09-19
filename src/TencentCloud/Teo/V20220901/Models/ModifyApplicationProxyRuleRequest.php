@@ -78,6 +78,8 @@ The original configuration will apply if this field is not specified.
  * @method void setOriginPort(string $OriginPort) Set The origin port, which can be:
 <li>A single port, such as 80</li>
 <li>A port range, such as 81-82</li>
+ * @method string getRuleTag() Obtain Rule tag. The original configuration will apply if it is not specified.
+ * @method void setRuleTag(string $RuleTag) Set Rule tag. The original configuration will apply if it is not specified.
  */
 class ModifyApplicationProxyRuleRequest extends AbstractModel
 {
@@ -155,6 +157,11 @@ The original configuration will apply if this field is not specified.
     public $OriginPort;
 
     /**
+     * @var string Rule tag. The original configuration will apply if it is not specified.
+     */
+    public $RuleTag;
+
+    /**
      * @param string $ZoneId The site ID.
      * @param string $ProxyId The proxy ID.
      * @param string $RuleId The rule ID.
@@ -184,6 +191,7 @@ The original configuration will apply if this field is not specified.
      * @param string $OriginPort The origin port, which can be:
 <li>A single port, such as 80</li>
 <li>A port range, such as 81-82</li>
+     * @param string $RuleTag Rule tag. The original configuration will apply if it is not specified.
      */
     function __construct()
     {
@@ -240,6 +248,10 @@ The original configuration will apply if this field is not specified.
 
         if (array_key_exists("OriginPort",$param) and $param["OriginPort"] !== null) {
             $this->OriginPort = $param["OriginPort"];
+        }
+
+        if (array_key_exists("RuleTag",$param) and $param["RuleTag"] !== null) {
+            $this->RuleTag = $param["RuleTag"];
         }
     }
 }

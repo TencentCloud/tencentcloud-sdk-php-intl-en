@@ -28,8 +28,8 @@ all clusters under the account are obtained)
  * @method void setOffset(integer $Offset) Set Offset. Default value: `0`
  * @method integer getLimit() Obtain Maximum number of output entries. Default value: `20`
  * @method void setLimit(integer $Limit) Set Maximum number of output entries. Default value: `20`
- * @method array getFilters() Obtain Filter condition (only filtering by a single ClusterName is supported)
- * @method void setFilters(array $Filters) Set Filter condition (only filtering by a single ClusterName is supported)
+ * @method array getFilters() Obtain Filter conditions. Values: `ClusterName` and tags in the format of ["key1:value1","key2:value2"].
+ * @method void setFilters(array $Filters) Set Filter conditions. Values: `ClusterName` and tags in the format of ["key1:value1","key2:value2"].
  */
 class DescribeTKEEdgeClustersRequest extends AbstractModel
 {
@@ -50,7 +50,7 @@ all clusters under the account are obtained)
     public $Limit;
 
     /**
-     * @var array Filter condition (only filtering by a single ClusterName is supported)
+     * @var array Filter conditions. Values: `ClusterName` and tags in the format of ["key1:value1","key2:value2"].
      */
     public $Filters;
 
@@ -59,7 +59,7 @@ all clusters under the account are obtained)
 all clusters under the account are obtained)
      * @param integer $Offset Offset. Default value: `0`
      * @param integer $Limit Maximum number of output entries. Default value: `20`
-     * @param array $Filters Filter condition (only filtering by a single ClusterName is supported)
+     * @param array $Filters Filter conditions. Values: `ClusterName` and tags in the format of ["key1:value1","key2:value2"].
      */
     function __construct()
     {

@@ -64,8 +64,10 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setEdgeVersion(string $EdgeVersion) Set Edge cluster component version 
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method TagSpecification getTagSpecification() Obtain 
- * @method void setTagSpecification(TagSpecification $TagSpecification) Set 
+ * @method TagSpecification getTagSpecification() Obtain u200dTags bound with the cluster
+Note: u200dThis field may return `null`, indicating that no valid values can be obtained.
+ * @method void setTagSpecification(TagSpecification $TagSpecification) Set u200dTags bound with the cluster
+Note: u200dThis field may return `null`, indicating that no valid values can be obtained.
  */
 class EdgeCluster extends AbstractModel
 {
@@ -156,7 +158,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $EdgeVersion;
 
     /**
-     * @var TagSpecification 
+     * @var TagSpecification u200dTags bound with the cluster
+Note: u200dThis field may return `null`, indicating that no valid values can be obtained.
      */
     public $TagSpecification;
 
@@ -183,7 +186,8 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
      * @param string $EdgeVersion Edge cluster component version 
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param TagSpecification $TagSpecification 
+     * @param TagSpecification $TagSpecification u200dTags bound with the cluster
+Note: u200dThis field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
     {

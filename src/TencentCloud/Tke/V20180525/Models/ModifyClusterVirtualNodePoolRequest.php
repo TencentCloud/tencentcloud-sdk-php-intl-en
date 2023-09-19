@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNodePoolId(string $NodePoolId) Set Node pool ID
  * @method string getName() Obtain Node pool name
  * @method void setName(string $Name) Set Node pool name
+ * @method array getSecurityGroupIds() Obtain List of security group IDs
+ * @method void setSecurityGroupIds(array $SecurityGroupIds) Set List of security group IDs
  * @method array getLabels() Obtain Virtual node labels
  * @method void setLabels(array $Labels) Set Virtual node labels
  * @method array getTaints() Obtain Virtual node taint
@@ -51,6 +53,11 @@ class ModifyClusterVirtualNodePoolRequest extends AbstractModel
     public $Name;
 
     /**
+     * @var array List of security group IDs
+     */
+    public $SecurityGroupIds;
+
+    /**
      * @var array Virtual node labels
      */
     public $Labels;
@@ -69,6 +76,7 @@ class ModifyClusterVirtualNodePoolRequest extends AbstractModel
      * @param string $ClusterId Cluster ID
      * @param string $NodePoolId Node pool ID
      * @param string $Name Node pool name
+     * @param array $SecurityGroupIds List of security group IDs
      * @param array $Labels Virtual node labels
      * @param array $Taints Virtual node taint
      * @param boolean $DeletionProtection Setting of deletion protection
@@ -96,6 +104,10 @@ class ModifyClusterVirtualNodePoolRequest extends AbstractModel
 
         if (array_key_exists("Name",$param) and $param["Name"] !== null) {
             $this->Name = $param["Name"];
+        }
+
+        if (array_key_exists("SecurityGroupIds",$param) and $param["SecurityGroupIds"] !== null) {
+            $this->SecurityGroupIds = $param["SecurityGroupIds"];
         }
 
         if (array_key_exists("Labels",$param) and $param["Labels"] !== null) {

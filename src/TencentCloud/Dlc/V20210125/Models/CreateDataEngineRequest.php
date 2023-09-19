@@ -58,8 +58,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCrontabResumeSuspend(integer $CrontabResumeSuspend) Set Whether to enable scheduled start and suspension of clusters. Valid values: `0` (disable) and `1` (enable). Note: This policy and the auto-suspension policy are mutually exclusive.
  * @method CrontabResumeSuspendStrategy getCrontabResumeSuspendStrategy() Obtain The complex policy for scheduled start and suspension, including the start/suspension time and suspension policy.
  * @method void setCrontabResumeSuspendStrategy(CrontabResumeSuspendStrategy $CrontabResumeSuspendStrategy) Set The complex policy for scheduled start and suspension, including the start/suspension time and suspension policy.
- * @method string getEngineExecType() Obtain The type of tasks to be executed by the engine, which defaults to SQL.
- * @method void setEngineExecType(string $EngineExecType) Set The type of tasks to be executed by the engine, which defaults to SQL.
+ * @method string getEngineExecType() Obtain The type of tasks to be executed by the engine, which defaults to SQL. Valid values: `SQL` and `BATCH`.
+ * @method void setEngineExecType(string $EngineExecType) Set The type of tasks to be executed by the engine, which defaults to SQL. Valid values: `SQL` and `BATCH`.
  * @method integer getMaxConcurrency() Obtain The max task concurrency of a cluster, which defaults to 5.
  * @method void setMaxConcurrency(integer $MaxConcurrency) Set The max task concurrency of a cluster, which defaults to 5.
  * @method integer getTolerableQueueTime() Obtain The task queue time limit, which defaults to 0. When the actual queue time exceeds the value set here, scale-out may be triggered. Setting this parameter to 0 represents that scale-out may be triggered immediately after a task queues up.
@@ -72,8 +72,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDataEngineConfigPairs(array $DataEngineConfigPairs) Set The advanced configurations of clusters.
  * @method string getImageVersionName() Obtain The version name of cluster image, such as SuperSQL-P 1.1 and SuperSQL-S 3.2. If no value is passed in, a cluster is created using the latest image version.
  * @method void setImageVersionName(string $ImageVersionName) Set The version name of cluster image, such as SuperSQL-P 1.1 and SuperSQL-S 3.2. If no value is passed in, a cluster is created using the latest image version.
- * @method string getMainClusterName() Obtain The name of the primary cluster.
- * @method void setMainClusterName(string $MainClusterName) Set The name of the primary cluster.
+ * @method string getMainClusterName() Obtain The primary cluster, which is specified when a failover cluster is created.
+ * @method void setMainClusterName(string $MainClusterName) Set The primary cluster, which is specified when a failover cluster is created.
  * @method boolean getElasticSwitch() Obtain Whether to enable the scaling feature for a monthly subscribed Spark job cluster.
  * @method void setElasticSwitch(boolean $ElasticSwitch) Set Whether to enable the scaling feature for a monthly subscribed Spark job cluster.
  * @method integer getElasticLimit() Obtain The upper limit (in CUs) for scaling of the monthly subscribed Spark job cluster.
@@ -120,6 +120,7 @@ class CreateDataEngineRequest extends AbstractModel
 
     /**
      * @var boolean Whether the cluster is the default one.
+     * @deprecated
      */
     public $DefaultDataEngine;
 
@@ -179,7 +180,7 @@ class CreateDataEngineRequest extends AbstractModel
     public $CrontabResumeSuspendStrategy;
 
     /**
-     * @var string The type of tasks to be executed by the engine, which defaults to SQL.
+     * @var string The type of tasks to be executed by the engine, which defaults to SQL. Valid values: `SQL` and `BATCH`.
      */
     public $EngineExecType;
 
@@ -214,7 +215,7 @@ class CreateDataEngineRequest extends AbstractModel
     public $ImageVersionName;
 
     /**
-     * @var string The name of the primary cluster.
+     * @var string The primary cluster, which is specified when a failover cluster is created.
      */
     public $MainClusterName;
 
@@ -253,14 +254,14 @@ class CreateDataEngineRequest extends AbstractModel
      * @param boolean $AutoSuspend Whether to automatically suspend clusters. Valid values: `false` (default, no) and `true` (yes).
      * @param integer $CrontabResumeSuspend Whether to enable scheduled start and suspension of clusters. Valid values: `0` (disable) and `1` (enable). Note: This policy and the auto-suspension policy are mutually exclusive.
      * @param CrontabResumeSuspendStrategy $CrontabResumeSuspendStrategy The complex policy for scheduled start and suspension, including the start/suspension time and suspension policy.
-     * @param string $EngineExecType The type of tasks to be executed by the engine, which defaults to SQL.
+     * @param string $EngineExecType The type of tasks to be executed by the engine, which defaults to SQL. Valid values: `SQL` and `BATCH`.
      * @param integer $MaxConcurrency The max task concurrency of a cluster, which defaults to 5.
      * @param integer $TolerableQueueTime The task queue time limit, which defaults to 0. When the actual queue time exceeds the value set here, scale-out may be triggered. Setting this parameter to 0 represents that scale-out may be triggered immediately after a task queues up.
      * @param integer $AutoSuspendTime The cluster auto-suspension time, which defaults to 10 min.
      * @param string $ResourceType The resource type. Valid values: `Standard_CU` (standard) and `Memory_CU` (memory).
      * @param array $DataEngineConfigPairs The advanced configurations of clusters.
      * @param string $ImageVersionName The version name of cluster image, such as SuperSQL-P 1.1 and SuperSQL-S 3.2. If no value is passed in, a cluster is created using the latest image version.
-     * @param string $MainClusterName The name of the primary cluster.
+     * @param string $MainClusterName The primary cluster, which is specified when a failover cluster is created.
      * @param boolean $ElasticSwitch Whether to enable the scaling feature for a monthly subscribed Spark job cluster.
      * @param integer $ElasticLimit The upper limit (in CUs) for scaling of the monthly subscribed Spark job cluster.
      * @param SessionResourceTemplate $SessionResourceTemplate The session resource configuration template for a Spark job cluster.

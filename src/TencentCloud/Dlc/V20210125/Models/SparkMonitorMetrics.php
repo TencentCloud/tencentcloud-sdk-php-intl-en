@@ -18,28 +18,36 @@ namespace TencentCloud\Dlc\V20210125\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Spark monitoring metrics
  *
- * @method integer getShuffleWriteBytesCos() Obtain 
- * @method void setShuffleWriteBytesCos(integer $ShuffleWriteBytesCos) Set 
- * @method integer getShuffleWriteBytesTotal() Obtain 
- * @method void setShuffleWriteBytesTotal(integer $ShuffleWriteBytesTotal) Set 
+ * @method integer getShuffleWriteBytesCos() Obtain The shuffle data (in bytes) that overflows to COS.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+ * @method void setShuffleWriteBytesCos(integer $ShuffleWriteBytesCos) Set The shuffle data (in bytes) that overflows to COS.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+ * @method integer getShuffleWriteBytesTotal() Obtain The total shuffle data (in bytes).
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+ * @method void setShuffleWriteBytesTotal(integer $ShuffleWriteBytesTotal) Set The total shuffle data (in bytes).
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
  */
 class SparkMonitorMetrics extends AbstractModel
 {
     /**
-     * @var integer 
+     * @var integer The shuffle data (in bytes) that overflows to COS.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
      */
     public $ShuffleWriteBytesCos;
 
     /**
-     * @var integer 
+     * @var integer The total shuffle data (in bytes).
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
      */
     public $ShuffleWriteBytesTotal;
 
     /**
-     * @param integer $ShuffleWriteBytesCos 
-     * @param integer $ShuffleWriteBytesTotal 
+     * @param integer $ShuffleWriteBytesCos The shuffle data (in bytes) that overflows to COS.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+     * @param integer $ShuffleWriteBytesTotal The total shuffle data (in bytes).
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
      */
     function __construct()
     {

@@ -36,14 +36,14 @@ Note: This field may return null, indicating that no valid value was found.
 Note: this field may return `null`, indicating that no valid value is obtained.
  * @method void setAutoFormatAndMount(boolean $AutoFormatAndMount) Set Whether the disk is auto-formatted and mounted
 Note: this field may return `null`, indicating that no valid value is obtained.
- * @method string getMountTarget() Obtain Mounting directory
-Note: This field may return null, indicating that no valid value was found.
- * @method void setMountTarget(string $MountTarget) Set Mounting directory
-Note: This field may return null, indicating that no valid value was found.
  * @method string getDiskPartition() Obtain Mounted device name or partition name (only required when adding an existing node)
 Note: This field may return `null`, indicating that no valid values can be obtained.
  * @method void setDiskPartition(string $DiskPartition) Set Mounted device name or partition name (only required when adding an existing node)
 Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method string getMountTarget() Obtain Mounting directory
+Note: This field may return null, indicating that no valid value was found.
+ * @method void setMountTarget(string $MountTarget) Set Mounting directory
+Note: This field may return null, indicating that no valid value was found.
  */
 class DataDisk extends AbstractModel
 {
@@ -72,16 +72,16 @@ Note: this field may return `null`, indicating that no valid value is obtained.
     public $AutoFormatAndMount;
 
     /**
-     * @var string Mounting directory
-Note: This field may return null, indicating that no valid value was found.
-     */
-    public $MountTarget;
-
-    /**
      * @var string Mounted device name or partition name (only required when adding an existing node)
 Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public $DiskPartition;
+
+    /**
+     * @var string Mounting directory
+Note: This field may return null, indicating that no valid value was found.
+     */
+    public $MountTarget;
 
     /**
      * @param string $DiskType Disk type
@@ -92,10 +92,10 @@ Note: This field may return null, indicating that no valid value was found.
 Note: This field may return null, indicating that no valid value was found.
      * @param boolean $AutoFormatAndMount Whether the disk is auto-formatted and mounted
 Note: this field may return `null`, indicating that no valid value is obtained.
-     * @param string $MountTarget Mounting directory
-Note: This field may return null, indicating that no valid value was found.
      * @param string $DiskPartition Mounted device name or partition name (only required when adding an existing node)
 Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param string $MountTarget Mounting directory
+Note: This field may return null, indicating that no valid value was found.
      */
     function __construct()
     {
@@ -126,12 +126,12 @@ Note: This field may return `null`, indicating that no valid values can be obtai
             $this->AutoFormatAndMount = $param["AutoFormatAndMount"];
         }
 
-        if (array_key_exists("MountTarget",$param) and $param["MountTarget"] !== null) {
-            $this->MountTarget = $param["MountTarget"];
-        }
-
         if (array_key_exists("DiskPartition",$param) and $param["DiskPartition"] !== null) {
             $this->DiskPartition = $param["DiskPartition"];
+        }
+
+        if (array_key_exists("MountTarget",$param) and $param["MountTarget"] !== null) {
+            $this->MountTarget = $param["MountTarget"];
         }
     }
 }

@@ -25,6 +25,7 @@ use TencentCloud\Ssl\V20191205\Models as Models;
 /**
  * @method Models\ApplyCertificateResponse ApplyCertificate(Models\ApplyCertificateRequest $req) This API is used to apply for a free certificate.
  * @method Models\BatchDeleteCSRResponse BatchDeleteCSR(Models\BatchDeleteCSRRequest $req) This API is used to batch delete CSRs.
+ * @method Models\CancelAuditCertificateResponse CancelAuditCertificate(Models\CancelAuditCertificateRequest $req) This API is used to cancel certificate review.
  * @method Models\CancelCertificateOrderResponse CancelCertificateOrder(Models\CancelCertificateOrderRequest $req) This API is used to cancel a certificate order.
  * @method Models\CommitCertificateInformationResponse CommitCertificateInformation(Models\CommitCertificateInformationRequest $req) This API is used to submit a certificate order.
  * @method Models\CreateCSRResponse CreateCSR(Models\CreateCSRRequest $req) This API is used to create a CSR.
@@ -43,6 +44,7 @@ use TencentCloud\Ssl\V20191205\Models as Models;
  * @method Models\ModifyCSRResponse ModifyCSR(Models\ModifyCSRRequest $req) This API is used to modify the information of a CSR.
  * @method Models\ModifyCertificateAliasResponse ModifyCertificateAlias(Models\ModifyCertificateAliasRequest $req) This API is used to modify a certificate alias by passing in the certificate ID and new alias.
  * @method Models\ModifyCertificateProjectResponse ModifyCertificateProject(Models\ModifyCertificateProjectRequest $req) This API is used to modify the projects of multiple certificates.
+ * @method Models\ModifyCertificateResubmitResponse ModifyCertificateResubmit(Models\ModifyCertificateResubmitRequest $req) This API is used to re-submit a review application for a paid certificate whose review failed or was canceled.
  * @method Models\ReplaceCertificateResponse ReplaceCertificate(Models\ReplaceCertificateRequest $req) This API is used to reissue a certificate. Note that if you have applied for a free certificate, only an RSA-2048 certificate will be reissued, and the certificate can be reissued only once.
  * @method Models\SubmitCertificateInformationResponse SubmitCertificateInformation(Models\SubmitCertificateInformationRequest $req) This API is used to submit certificate information.
  * @method Models\UploadCertificateResponse UploadCertificate(Models\UploadCertificateRequest $req) This API is used to upload a certificate.

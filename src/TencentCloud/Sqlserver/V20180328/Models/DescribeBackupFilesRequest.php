@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() Obtain Instance ID in the format of mssql-njj2mtpl
  * @method void setInstanceId(string $InstanceId) Set Instance ID in the format of mssql-njj2mtpl
- * @method string getGroupId() Obtain Group ID of unarchived backup files, which can be obtained by the `DescribeBackups` API
- * @method void setGroupId(string $GroupId) Set Group ID of unarchived backup files, which can be obtained by the `DescribeBackups` API
+ * @method string getGroupId() Obtain Group ID of unarchived backup files, which can be obtained by the `DescribeBackups` API (Querying archived backup record is not supported).
+ * @method void setGroupId(string $GroupId) Set Group ID of unarchived backup files, which can be obtained by the `DescribeBackups` API (Querying archived backup record is not supported).
  * @method integer getLimit() Obtain Number of entries to be returned per page. Value range: 1-100. Default value: `20`
  * @method void setLimit(integer $Limit) Set Number of entries to be returned per page. Value range: 1-100. Default value: `20`
  * @method integer getOffset() Obtain Page number. Default value: `0`
@@ -41,7 +41,7 @@ class DescribeBackupFilesRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var string Group ID of unarchived backup files, which can be obtained by the `DescribeBackups` API
+     * @var string Group ID of unarchived backup files, which can be obtained by the `DescribeBackups` API (Querying archived backup record is not supported).
      */
     public $GroupId;
 
@@ -67,7 +67,7 @@ class DescribeBackupFilesRequest extends AbstractModel
 
     /**
      * @param string $InstanceId Instance ID in the format of mssql-njj2mtpl
-     * @param string $GroupId Group ID of unarchived backup files, which can be obtained by the `DescribeBackups` API
+     * @param string $GroupId Group ID of unarchived backup files, which can be obtained by the `DescribeBackups` API (Querying archived backup record is not supported).
      * @param integer $Limit Number of entries to be returned per page. Value range: 1-100. Default value: `20`
      * @param integer $Offset Page number. Default value: `0`
      * @param string $DatabaseName Filter backups by database name. If the parameter is left empty, this filter criterion will not take effect.

@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStartTime(string $StartTime) Set The start time.
  * @method string getEndTime() Obtain The end time.
  * @method void setEndTime(string $EndTime) Set The end time.
- * @method array getZoneIds() Obtain List of sites to be queried. All sites will be selected if this field is not specified.
- * @method void setZoneIds(array $ZoneIds) Set List of sites to be queried. All sites will be selected if this field is not specified.
+ * @method array getZoneIds() Obtain List of sites. This parameter is required. A `null` will be returned if it is left empty.
+ * @method void setZoneIds(array $ZoneIds) Set List of sites. This parameter is required. A `null` will be returned if it is left empty.
  * @method array getDomains() Obtain List of subdomain names to be queried. All subdomain names will be selected if this field is not specified.
  * @method void setDomains(array $Domains) Set List of subdomain names to be queried. All subdomain names will be selected if this field is not specified.
  * @method integer getLimit() Obtain Limit on paginated queries. Default value: 20. Maximum value: 1000.
@@ -46,7 +46,7 @@ class DownloadL7LogsRequest extends AbstractModel
     public $EndTime;
 
     /**
-     * @var array List of sites to be queried. All sites will be selected if this field is not specified.
+     * @var array List of sites. This parameter is required. A `null` will be returned if it is left empty.
      */
     public $ZoneIds;
 
@@ -68,7 +68,7 @@ class DownloadL7LogsRequest extends AbstractModel
     /**
      * @param string $StartTime The start time.
      * @param string $EndTime The end time.
-     * @param array $ZoneIds List of sites to be queried. All sites will be selected if this field is not specified.
+     * @param array $ZoneIds List of sites. This parameter is required. A `null` will be returned if it is left empty.
      * @param array $Domains List of subdomain names to be queried. All subdomain names will be selected if this field is not specified.
      * @param integer $Limit Limit on paginated queries. Default value: 20. Maximum value: 1000.
      * @param integer $Offset The page offset. Default value: 0.

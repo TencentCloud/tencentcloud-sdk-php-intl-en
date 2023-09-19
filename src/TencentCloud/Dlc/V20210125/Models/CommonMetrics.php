@@ -18,100 +18,144 @@ namespace TencentCloud\Dlc\V20210125\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Common task metrics
  *
- * @method float getCreateTaskTime() Obtain 
- * @method void setCreateTaskTime(float $CreateTaskTime) Set 
- * @method float getProcessTime() Obtain 
- * @method void setProcessTime(float $ProcessTime) Set 
- * @method float getQueueTime() Obtain 
- * @method void setQueueTime(float $QueueTime) Set 
- * @method float getExecutionTime() Obtain 
- * @method void setExecutionTime(float $ExecutionTime) Set 
- * @method boolean getIsResultCacheHit() Obtain 
- * @method void setIsResultCacheHit(boolean $IsResultCacheHit) Set 
- * @method integer getMatchedMVBytes() Obtain 
- * @method void setMatchedMVBytes(integer $MatchedMVBytes) Set 
- * @method string getMatchedMVs() Obtain 
- * @method void setMatchedMVs(string $MatchedMVs) Set 
- * @method string getAffectedBytes() Obtain 
- * @method void setAffectedBytes(string $AffectedBytes) Set 
- * @method integer getAffectedRows() Obtain 
- * @method void setAffectedRows(integer $AffectedRows) Set 
- * @method integer getProcessedBytes() Obtain 
- * @method void setProcessedBytes(integer $ProcessedBytes) Set 
- * @method integer getProcessedRows() Obtain 
- * @method void setProcessedRows(integer $ProcessedRows) Set 
+ * @method float getCreateTaskTime() Obtain The task creation time in ms.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+ * @method void setCreateTaskTime(float $CreateTaskTime) Set The task creation time in ms.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+ * @method float getProcessTime() Obtain The processing time in ms.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+ * @method void setProcessTime(float $ProcessTime) Set The processing time in ms.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+ * @method float getQueueTime() Obtain The queue time in ms.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+ * @method void setQueueTime(float $QueueTime) Set The queue time in ms.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+ * @method float getExecutionTime() Obtain The execution duration in ms.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+ * @method void setExecutionTime(float $ExecutionTime) Set The execution duration in ms.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+ * @method boolean getIsResultCacheHit() Obtain Whether the result cache is hit.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+ * @method void setIsResultCacheHit(boolean $IsResultCacheHit) Set Whether the result cache is hit.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+ * @method integer getMatchedMVBytes() Obtain The volume of matched materialized views, in bytes.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+ * @method void setMatchedMVBytes(integer $MatchedMVBytes) Set The volume of matched materialized views, in bytes.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+ * @method string getMatchedMVs() Obtain The list of matched materialized views.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+ * @method void setMatchedMVs(string $MatchedMVs) Set The list of matched materialized views.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+ * @method string getAffectedBytes() Obtain The result data in bytes.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+ * @method void setAffectedBytes(string $AffectedBytes) Set The result data in bytes.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+ * @method integer getAffectedRows() Obtain 	The number of rows in the result.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+ * @method void setAffectedRows(integer $AffectedRows) Set 	The number of rows in the result.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+ * @method integer getProcessedBytes() Obtain The volume of the data scanned, in bytes.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+ * @method void setProcessedBytes(integer $ProcessedBytes) Set The volume of the data scanned, in bytes.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+ * @method integer getProcessedRows() Obtain 	The number of scanned rows.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+ * @method void setProcessedRows(integer $ProcessedRows) Set 	The number of scanned rows.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
  */
 class CommonMetrics extends AbstractModel
 {
     /**
-     * @var float 
+     * @var float The task creation time in ms.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
      */
     public $CreateTaskTime;
 
     /**
-     * @var float 
+     * @var float The processing time in ms.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
      */
     public $ProcessTime;
 
     /**
-     * @var float 
+     * @var float The queue time in ms.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
      */
     public $QueueTime;
 
     /**
-     * @var float 
+     * @var float The execution duration in ms.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
      */
     public $ExecutionTime;
 
     /**
-     * @var boolean 
+     * @var boolean Whether the result cache is hit.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
      */
     public $IsResultCacheHit;
 
     /**
-     * @var integer 
+     * @var integer The volume of matched materialized views, in bytes.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
      */
     public $MatchedMVBytes;
 
     /**
-     * @var string 
+     * @var string The list of matched materialized views.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
      */
     public $MatchedMVs;
 
     /**
-     * @var string 
+     * @var string The result data in bytes.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
      */
     public $AffectedBytes;
 
     /**
-     * @var integer 
+     * @var integer 	The number of rows in the result.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
      */
     public $AffectedRows;
 
     /**
-     * @var integer 
+     * @var integer The volume of the data scanned, in bytes.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
      */
     public $ProcessedBytes;
 
     /**
-     * @var integer 
+     * @var integer 	The number of scanned rows.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
      */
     public $ProcessedRows;
 
     /**
-     * @param float $CreateTaskTime 
-     * @param float $ProcessTime 
-     * @param float $QueueTime 
-     * @param float $ExecutionTime 
-     * @param boolean $IsResultCacheHit 
-     * @param integer $MatchedMVBytes 
-     * @param string $MatchedMVs 
-     * @param string $AffectedBytes 
-     * @param integer $AffectedRows 
-     * @param integer $ProcessedBytes 
-     * @param integer $ProcessedRows 
+     * @param float $CreateTaskTime The task creation time in ms.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+     * @param float $ProcessTime The processing time in ms.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+     * @param float $QueueTime The queue time in ms.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+     * @param float $ExecutionTime The execution duration in ms.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+     * @param boolean $IsResultCacheHit Whether the result cache is hit.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+     * @param integer $MatchedMVBytes The volume of matched materialized views, in bytes.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+     * @param string $MatchedMVs The list of matched materialized views.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+     * @param string $AffectedBytes The result data in bytes.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+     * @param integer $AffectedRows 	The number of rows in the result.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+     * @param integer $ProcessedBytes The volume of the data scanned, in bytes.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+     * @param integer $ProcessedRows 	The number of scanned rows.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
      */
     function __construct()
     {

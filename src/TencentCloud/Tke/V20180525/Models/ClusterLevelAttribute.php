@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPodCount(integer $PodCount) Set Number of Pods
  * @method integer getConfigMapCount() Obtain Number of ConfigMap
  * @method void setConfigMapCount(integer $ConfigMapCount) Set Number of ConfigMap
+ * @method integer getRSCount() Obtain Number of ReplicaSets
+ * @method void setRSCount(integer $RSCount) Set Number of ReplicaSets
  * @method integer getCRDCount() Obtain Number of CRDs
  * @method void setCRDCount(integer $CRDCount) Set Number of CRDs
  * @method boolean getEnable() Obtain Whether it is enabled
@@ -67,6 +69,11 @@ class ClusterLevelAttribute extends AbstractModel
     public $ConfigMapCount;
 
     /**
+     * @var integer Number of ReplicaSets
+     */
+    public $RSCount;
+
+    /**
      * @var integer Number of CRDs
      */
     public $CRDCount;
@@ -88,6 +95,7 @@ Note: This field may return `null`, indicating that no valid values can be obtai
      * @param integer $NodeCount Number of nodes
      * @param integer $PodCount Number of Pods
      * @param integer $ConfigMapCount Number of ConfigMap
+     * @param integer $RSCount Number of ReplicaSets
      * @param integer $CRDCount Number of CRDs
      * @param boolean $Enable Whether it is enabled
      * @param integer $OtherCount Number of other resources
@@ -124,6 +132,10 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 
         if (array_key_exists("ConfigMapCount",$param) and $param["ConfigMapCount"] !== null) {
             $this->ConfigMapCount = $param["ConfigMapCount"];
+        }
+
+        if (array_key_exists("RSCount",$param) and $param["RSCount"] !== null) {
+            $this->RSCount = $param["RSCount"];
         }
 
         if (array_key_exists("CRDCount",$param) and $param["CRDCount"] !== null) {

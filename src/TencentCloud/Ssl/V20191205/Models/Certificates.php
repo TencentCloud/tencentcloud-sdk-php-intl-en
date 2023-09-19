@@ -176,6 +176,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid value can be obtained.
  * @method void setAutoRenewFlag(integer $AutoRenewFlag) Set Whether auto-renewal is enabled.
 Note: This field may return null, indicating that no valid value can be obtained.
+ * @method integer getHostingStatus() Obtain The hosting status. Valid values: `0` (hosting), `5` (replacing resources), `10` (hosting completed), and `-1` (not hosted). 
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setHostingStatus(integer $HostingStatus) Set The hosting status. Valid values: `0` (hosting), `5` (replacing resources), `10` (hosting completed), and `-1` (not hosted). 
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getHostingCompleteTime() Obtain The hosting completion time.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setHostingCompleteTime(string $HostingCompleteTime) Set The hosting completion time.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getHostingRenewCertId() Obtain The hosted new certificate ID.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setHostingRenewCertId(string $HostingRenewCertId) Set The hosted new certificate ID.
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class Certificates extends AbstractModel
 {
@@ -410,6 +422,24 @@ Note: This field may return null, indicating that no valid value can be obtained
     public $AutoRenewFlag;
 
     /**
+     * @var integer The hosting status. Valid values: `0` (hosting), `5` (replacing resources), `10` (hosting completed), and `-1` (not hosted). 
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $HostingStatus;
+
+    /**
+     * @var string The hosting completion time.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $HostingCompleteTime;
+
+    /**
+     * @var string The hosted new certificate ID.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $HostingRenewCertId;
+
+    /**
      * @param string $OwnerUin User UIN
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $ProjectId Project ID
@@ -488,6 +518,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $AutoRenewFlag Whether auto-renewal is enabled.
 Note: This field may return null, indicating that no valid value can be obtained.
+     * @param integer $HostingStatus The hosting status. Valid values: `0` (hosting), `5` (replacing resources), `10` (hosting completed), and `-1` (not hosted). 
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $HostingCompleteTime The hosting completion time.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $HostingRenewCertId The hosted new certificate ID.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -660,6 +696,18 @@ Note: This field may return null, indicating that no valid value can be obtained
 
         if (array_key_exists("AutoRenewFlag",$param) and $param["AutoRenewFlag"] !== null) {
             $this->AutoRenewFlag = $param["AutoRenewFlag"];
+        }
+
+        if (array_key_exists("HostingStatus",$param) and $param["HostingStatus"] !== null) {
+            $this->HostingStatus = $param["HostingStatus"];
+        }
+
+        if (array_key_exists("HostingCompleteTime",$param) and $param["HostingCompleteTime"] !== null) {
+            $this->HostingCompleteTime = $param["HostingCompleteTime"];
+        }
+
+        if (array_key_exists("HostingRenewCertId",$param) and $param["HostingRenewCertId"] !== null) {
+            $this->HostingRenewCertId = $param["HostingRenewCertId"];
         }
     }
 }

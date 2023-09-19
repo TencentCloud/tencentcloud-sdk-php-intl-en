@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CheckCnameStatus response structure.
  *
- * @method array getCnameStatus() Obtain List of CNAME statuses.
- * @method void setCnameStatus(array $CnameStatus) Set List of CNAME statuses.
+ * @method array getCnameStatus() Obtain CNAME status of accelerated domain names.
+ * @method void setCnameStatus(array $CnameStatus) Set CNAME status of accelerated domain names.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 class CheckCnameStatusResponse extends AbstractModel
 {
     /**
-     * @var array List of CNAME statuses.
+     * @var array CNAME status of accelerated domain names.
      */
     public $CnameStatus;
 
@@ -38,7 +38,7 @@ class CheckCnameStatusResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $CnameStatus List of CNAME statuses.
+     * @param array $CnameStatus CNAME status of accelerated domain names.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()

@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeSparkAppJob request structure.
  *
- * @method string getJobId() Obtain Spark job ID. If it co-exists with `JobName`, `JobName` will become invalid.
- * @method void setJobId(string $JobId) Set Spark job ID. If it co-exists with `JobName`, `JobName` will become invalid.
+ * @method string getJobId() Obtain The Spark job ID. If it co-exists with `JobName`, `JobName` is invalid. At least `JobId` or `JobName` must be used.
+ * @method void setJobId(string $JobId) Set The Spark job ID. If it co-exists with `JobName`, `JobName` is invalid. At least `JobId` or `JobName` must be used.
  * @method string getJobName() Obtain Spark job name
  * @method void setJobName(string $JobName) Set Spark job name
  */
 class DescribeSparkAppJobRequest extends AbstractModel
 {
     /**
-     * @var string Spark job ID. If it co-exists with `JobName`, `JobName` will become invalid.
+     * @var string The Spark job ID. If it co-exists with `JobName`, `JobName` is invalid. At least `JobId` or `JobName` must be used.
      */
     public $JobId;
 
@@ -38,7 +38,7 @@ class DescribeSparkAppJobRequest extends AbstractModel
     public $JobName;
 
     /**
-     * @param string $JobId Spark job ID. If it co-exists with `JobName`, `JobName` will become invalid.
+     * @param string $JobId The Spark job ID. If it co-exists with `JobName`, `JobName` is invalid. At least `JobId` or `JobName` must be used.
      * @param string $JobName Spark job name
      */
     function __construct()

@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() Obtain Instance ID in the format of mssql-k8voqdlz
  * @method void setInstanceId(string $InstanceId) Set Instance ID in the format of mssql-k8voqdlz
- * @method string getStartTime() Obtain Query start time
- * @method void setStartTime(string $StartTime) Set Query start time
- * @method string getEndTime() Obtain Query end time
- * @method void setEndTime(string $EndTime) Set Query end time
+ * @method string getStartTime() Obtain Start time in the format of `yyyy-MM-dd HH:mm:ss`
+ * @method void setStartTime(string $StartTime) Set Start time in the format of `yyyy-MM-dd HH:mm:ss`
+ * @method string getEndTime() Obtain End time in the format of `yyyy-MM-dd HH:mm:ss`
+ * @method void setEndTime(string $EndTime) Set End time in the format of `yyyy-MM-dd HH:mm:ss`
  * @method integer getLimit() Obtain Number of results per page. Value range: 1-100. Default value: 20
  * @method void setLimit(integer $Limit) Set Number of results per page. Value range: 1-100. Default value: 20
  * @method integer getOffset() Obtain Page number. Default value: 0
@@ -39,12 +39,12 @@ class DescribeSlowlogsRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var string Query start time
+     * @var string Start time in the format of `yyyy-MM-dd HH:mm:ss`
      */
     public $StartTime;
 
     /**
-     * @var string Query end time
+     * @var string End time in the format of `yyyy-MM-dd HH:mm:ss`
      */
     public $EndTime;
 
@@ -60,8 +60,8 @@ class DescribeSlowlogsRequest extends AbstractModel
 
     /**
      * @param string $InstanceId Instance ID in the format of mssql-k8voqdlz
-     * @param string $StartTime Query start time
-     * @param string $EndTime Query end time
+     * @param string $StartTime Start time in the format of `yyyy-MM-dd HH:mm:ss`
+     * @param string $EndTime End time in the format of `yyyy-MM-dd HH:mm:ss`
      * @param integer $Limit Number of results per page. Value range: 1-100. Default value: 20
      * @param integer $Offset Page number. Default value: 0
      */

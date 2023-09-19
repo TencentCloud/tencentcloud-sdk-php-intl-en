@@ -24,10 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceId(string $InstanceId) Set Instance ID
  * @method string getEventType() Obtain Event type. Valid values: `slow` (Slow SQL event), `blocked` (blocking event),  deadlock` (deadlock event).
  * @method void setEventType(string $EventType) Set Event type. Valid values: `slow` (Slow SQL event), `blocked` (blocking event),  deadlock` (deadlock event).
- * @method string getStartTime() Obtain Generation start time of an extended file
- * @method void setStartTime(string $StartTime) Set Generation start time of an extended file
- * @method string getEndTime() Obtain Generation end time of an extended file
- * @method void setEndTime(string $EndTime) Set Generation end time of an extended file
+ * @method string getStartTime() Obtain Generation start time of an extended file in the format of yyyy-MM-dd HH:mm:ss.
+ * @method void setStartTime(string $StartTime) Set Generation start time of an extended file in the format of yyyy-MM-dd HH:mm:ss.
+ * @method string getEndTime() Obtain Generation end time of an extended file in the format of yyyy-MM-dd HH:mm:ss.
+ * @method void setEndTime(string $EndTime) Set Generation end time of an extended file in the format of yyyy-MM-dd HH:mm:ss.
  * @method integer getOffset() Obtain Page number. Default value: `0`
  * @method void setOffset(integer $Offset) Set Page number. Default value: `0`
  * @method integer getLimit() Obtain Number of entries to be returned per page. Value range: 1-100. Default value: `20`
@@ -46,12 +46,12 @@ class DescribeXEventsRequest extends AbstractModel
     public $EventType;
 
     /**
-     * @var string Generation start time of an extended file
+     * @var string Generation start time of an extended file in the format of yyyy-MM-dd HH:mm:ss.
      */
     public $StartTime;
 
     /**
-     * @var string Generation end time of an extended file
+     * @var string Generation end time of an extended file in the format of yyyy-MM-dd HH:mm:ss.
      */
     public $EndTime;
 
@@ -68,8 +68,8 @@ class DescribeXEventsRequest extends AbstractModel
     /**
      * @param string $InstanceId Instance ID
      * @param string $EventType Event type. Valid values: `slow` (Slow SQL event), `blocked` (blocking event),  deadlock` (deadlock event).
-     * @param string $StartTime Generation start time of an extended file
-     * @param string $EndTime Generation end time of an extended file
+     * @param string $StartTime Generation start time of an extended file in the format of yyyy-MM-dd HH:mm:ss.
+     * @param string $EndTime Generation end time of an extended file in the format of yyyy-MM-dd HH:mm:ss.
      * @param integer $Offset Page number. Default value: `0`
      * @param integer $Limit Number of entries to be returned per page. Value range: 1-100. Default value: `20`
      */

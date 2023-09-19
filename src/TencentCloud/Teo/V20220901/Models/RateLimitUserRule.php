@@ -26,14 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPeriod(integer $Period) Set The statistical period. The value can be 10, 20, 30, 40, 50, or 60 seconds.
  * @method string getRuleName() Obtain The rule name, which consists of only letters, digits, and underscores and cannot start with an underscore.
  * @method void setRuleName(string $RuleName) Set The rule name, which consists of only letters, digits, and underscores and cannot start with an underscore.
- * @method string getAction() Obtain The action. Values:
-<li>`monitor`: Observe</li>
-<li>`drop`: Block</li>
-<li>`alg`: JavaScript challenge</li>
- * @method void setAction(string $Action) Set The action. Values:
-<li>`monitor`: Observe</li>
-<li>`drop`: Block</li>
-<li>`alg`: JavaScript challenge</li>
+ * @method string getAction() Obtain Action. Valid values: <li>`monitor`: Observe;</li>`<li>drop`: Block;</li> <li>`alg`: JavaScript challenge. </li>	
+ * @method void setAction(string $Action) Set Action. Valid values: <li>`monitor`: Observe;</li>`<li>drop`: Block;</li> <li>`alg`: JavaScript challenge. </li>	
  * @method integer getPunishTime() Obtain The amount of time taken to perform the action. Value range: 0 seconds - 2 days.
  * @method void setPunishTime(integer $PunishTime) Set The amount of time taken to perform the action. Value range: 0 seconds - 2 days.
  * @method string getPunishTimeUnit() Obtain The time unit. Values:
@@ -54,10 +48,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAclConditions(array $AclConditions) Set The rule details.
  * @method integer getRulePriority() Obtain The rule weight. Value range: 0-100.
  * @method void setRulePriority(integer $RulePriority) Set The rule weight. Value range: 0-100.
- * @method integer getRuleID() Obtain The rule ID, which is only used as an output parameter.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setRuleID(integer $RuleID) Set The rule ID, which is only used as an output parameter.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getRuleID() Obtain Rule ID, which is only used as an output parameter.
+Note: This field may return·`null`, indicating that no valid values can be obtained.
+ * @method void setRuleID(integer $RuleID) Set Rule ID, which is only used as an output parameter.
+Note: This field may return·`null`, indicating that no valid values can be obtained.
  * @method array getFreqFields() Obtain The filter. Values:
 <li>`sip`: Client IP</li>
 Note: This field may return null, indicating that no valid values can be obtained.
@@ -68,14 +62,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setUpdateTime(string $UpdateTime) Set Update time
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method array getFreqScope() Obtain The statistical dimension. Values:
-<li>`source_to_eo`: Responses from the origin server to EdgeOne</li>
-<li>`client_to_eo`: Requests from the client to EdgeOne</li>
-Note: A null value indicates responses from the origin server to EdgeOne are recorded.
- * @method void setFreqScope(array $FreqScope) Set The statistical dimension. Values:
-<li>`source_to_eo`: Responses from the origin server to EdgeOne</li>
-<li>`client_to_eo`: Requests from the client to EdgeOne</li>
-Note: A null value indicates responses from the origin server to EdgeOne are recorded.
+ * @method array getFreqScope() Obtain Statistical dimension. `source_to_eo` is entered by default when this parameter is not specified. Valid values:
+<li>`source_to_eo`: (Response) Traffic going from the origin to EdgeOne. </li>
+<li>`client_to_eo`: (Request) Traffic going from the client to EdgeOne.</li>
+Note: This field may return·`null`, indicating that no valid values can be obtained.
+ * @method void setFreqScope(array $FreqScope) Set Statistical dimension. `source_to_eo` is entered by default when this parameter is not specified. Valid values:
+<li>`source_to_eo`: (Response) Traffic going from the origin to EdgeOne. </li>
+<li>`client_to_eo`: (Request) Traffic going from the client to EdgeOne.</li>
+Note: This field may return·`null`, indicating that no valid values can be obtained.
  */
 class RateLimitUserRule extends AbstractModel
 {
@@ -95,10 +89,7 @@ class RateLimitUserRule extends AbstractModel
     public $RuleName;
 
     /**
-     * @var string The action. Values:
-<li>`monitor`: Observe</li>
-<li>`drop`: Block</li>
-<li>`alg`: JavaScript challenge</li>
+     * @var string Action. Valid values: <li>`monitor`: Observe;</li>`<li>drop`: Block;</li> <li>`alg`: JavaScript challenge. </li>	
      */
     public $Action;
 
@@ -133,8 +124,8 @@ class RateLimitUserRule extends AbstractModel
     public $RulePriority;
 
     /**
-     * @var integer The rule ID, which is only used as an output parameter.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Rule ID, which is only used as an output parameter.
+Note: This field may return·`null`, indicating that no valid values can be obtained.
      */
     public $RuleID;
 
@@ -152,10 +143,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $UpdateTime;
 
     /**
-     * @var array The statistical dimension. Values:
-<li>`source_to_eo`: Responses from the origin server to EdgeOne</li>
-<li>`client_to_eo`: Requests from the client to EdgeOne</li>
-Note: A null value indicates responses from the origin server to EdgeOne are recorded.
+     * @var array Statistical dimension. `source_to_eo` is entered by default when this parameter is not specified. Valid values:
+<li>`source_to_eo`: (Response) Traffic going from the origin to EdgeOne. </li>
+<li>`client_to_eo`: (Request) Traffic going from the client to EdgeOne.</li>
+Note: This field may return·`null`, indicating that no valid values can be obtained.
      */
     public $FreqScope;
 
@@ -163,10 +154,7 @@ Note: A null value indicates responses from the origin server to EdgeOne are rec
      * @param integer $Threshold The request threshold. Value range: 0-4294967294.
      * @param integer $Period The statistical period. The value can be 10, 20, 30, 40, 50, or 60 seconds.
      * @param string $RuleName The rule name, which consists of only letters, digits, and underscores and cannot start with an underscore.
-     * @param string $Action The action. Values:
-<li>`monitor`: Observe</li>
-<li>`drop`: Block</li>
-<li>`alg`: JavaScript challenge</li>
+     * @param string $Action Action. Valid values: <li>`monitor`: Observe;</li>`<li>drop`: Block;</li> <li>`alg`: JavaScript challenge. </li>	
      * @param integer $PunishTime The amount of time taken to perform the action. Value range: 0 seconds - 2 days.
      * @param string $PunishTimeUnit The time unit. Values:
 <li>`second`: Second</li>
@@ -177,17 +165,17 @@ Note: A null value indicates responses from the origin server to EdgeOne are rec
 <li>`off`: Disabled</li>Default value: on
      * @param array $AclConditions The rule details.
      * @param integer $RulePriority The rule weight. Value range: 0-100.
-     * @param integer $RuleID The rule ID, which is only used as an output parameter.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $RuleID Rule ID, which is only used as an output parameter.
+Note: This field may return·`null`, indicating that no valid values can be obtained.
      * @param array $FreqFields The filter. Values:
 <li>`sip`: Client IP</li>
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $UpdateTime Update time
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param array $FreqScope The statistical dimension. Values:
-<li>`source_to_eo`: Responses from the origin server to EdgeOne</li>
-<li>`client_to_eo`: Requests from the client to EdgeOne</li>
-Note: A null value indicates responses from the origin server to EdgeOne are recorded.
+     * @param array $FreqScope Statistical dimension. `source_to_eo` is entered by default when this parameter is not specified. Valid values:
+<li>`source_to_eo`: (Response) Traffic going from the origin to EdgeOne. </li>
+<li>`client_to_eo`: (Request) Traffic going from the client to EdgeOne.</li>
+Note: This field may return·`null`, indicating that no valid values can be obtained.
      */
     function __construct()
     {
