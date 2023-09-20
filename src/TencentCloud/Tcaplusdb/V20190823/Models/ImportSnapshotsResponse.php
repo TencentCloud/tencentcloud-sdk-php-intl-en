@@ -24,6 +24,10 @@ use TencentCloud\Common\AbstractModel;
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
  * @method void setTaskId(string $TaskId) Set `TaskId` is in the format of `AppInstanceId-taskId`, used to identify tasks of different clusters.
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+ * @method string getApplicationId() Obtain `ApplicationId` is in the format of `AppInstanceId-applicationId`, which is used to identify applications of different clusters.
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+ * @method void setApplicationId(string $ApplicationId) Set `ApplicationId` is in the format of `AppInstanceId-applicationId`, which is used to identify applications of different clusters.
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -36,6 +40,12 @@ Note: `null` may be returned for this field, indicating that no valid values can
     public $TaskId;
 
     /**
+     * @var string `ApplicationId` is in the format of `AppInstanceId-applicationId`, which is used to identify applications of different clusters.
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
+     */
+    public $ApplicationId;
+
+    /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
@@ -43,6 +53,8 @@ Note: `null` may be returned for this field, indicating that no valid values can
     /**
      * @param string $TaskId `TaskId` is in the format of `AppInstanceId-taskId`, used to identify tasks of different clusters.
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     * @param string $ApplicationId `ApplicationId` is in the format of `AppInstanceId-applicationId`, which is used to identify applications of different clusters.
+Note: u200dThis field may return null, indicating that no valid values can be obtained.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -60,6 +72,10 @@ Note: `null` may be returned for this field, indicating that no valid values can
         }
         if (array_key_exists("TaskId",$param) and $param["TaskId"] !== null) {
             $this->TaskId = $param["TaskId"];
+        }
+
+        if (array_key_exists("ApplicationId",$param) and $param["ApplicationId"] !== null) {
+            $this->ApplicationId = $param["ApplicationId"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

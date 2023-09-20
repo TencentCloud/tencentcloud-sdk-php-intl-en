@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setClusterId(string $ClusterId) Set ID of the cluster where the table to be queried resides
  * @method array getTableGroupIds() Obtain List of IDs of the table groups where the table to be queried resides
  * @method void setTableGroupIds(array $TableGroupIds) Set List of IDs of the table groups where the table to be queried resides
- * @method array getSelectedTables() Obtain Information list of tables to be queried
- * @method void setSelectedTables(array $SelectedTables) Set Information list of tables to be queried
+ * @method array getSelectedTables() Obtain Information list of tables to be queriedu200d. If you need to filter the tables, use the`Filter` parameter.
+ * @method void setSelectedTables(array $SelectedTables) Set Information list of tables to be queriedu200d. If you need to filter the tables, use the`Filter` parameter.
  * @method array getFilters() Obtain Filter. Valid values: TableName, TableInstanceId
  * @method void setFilters(array $Filters) Set Filter. Valid values: TableName, TableInstanceId
  * @method integer getOffset() Obtain Query result offset
@@ -46,7 +46,7 @@ class DescribeTablesRequest extends AbstractModel
     public $TableGroupIds;
 
     /**
-     * @var array Information list of tables to be queried
+     * @var array Information list of tables to be queriedu200d. If you need to filter the tables, use the`Filter` parameter.
      */
     public $SelectedTables;
 
@@ -68,7 +68,7 @@ class DescribeTablesRequest extends AbstractModel
     /**
      * @param string $ClusterId ID of the cluster where the table to be queried resides
      * @param array $TableGroupIds List of IDs of the table groups where the table to be queried resides
-     * @param array $SelectedTables Information list of tables to be queried
+     * @param array $SelectedTables Information list of tables to be queriedu200d. If you need to filter the tables, use the`Filter` parameter.
      * @param array $Filters Filter. Valid values: TableName, TableInstanceId
      * @param integer $Offset Query result offset
      * @param integer $Limit Number of returned query results
