@@ -200,6 +200,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 0: Do not use local mode
 1: Use local mode
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getRecordTemplateId() Obtain  Recording template ID.
+ * @method void setRecordTemplateId(string $RecordTemplateId) Set  Recording template ID.
+ * @method string getBackupToUrl() Obtain Newly added streaming address. Used for the scenario of pushing two streams with a single task.
+ * @method void setBackupToUrl(string $BackupToUrl) Set Newly added streaming address. Used for the scenario of pushing two streams with a single task.
  */
 class PullStreamTaskInfo extends AbstractModel
 {
@@ -402,6 +406,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $VodLocalMode;
 
     /**
+     * @var string  Recording template ID.
+     */
+    public $RecordTemplateId;
+
+    /**
+     * @var string Newly added streaming address. Used for the scenario of pushing two streams with a single task.
+     */
+    public $BackupToUrl;
+
+    /**
      * @param string $TaskId The task ID.
      * @param string $SourceType The source type. Valid values:
 PullLivePushLive: Live streaming
@@ -492,6 +506,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
 0: Do not use local mode
 1: Use local mode
 Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $RecordTemplateId  Recording template ID.
+     * @param string $BackupToUrl Newly added streaming address. Used for the scenario of pushing two streams with a single task.
      */
     function __construct()
     {
@@ -618,6 +634,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("VodLocalMode",$param) and $param["VodLocalMode"] !== null) {
             $this->VodLocalMode = $param["VodLocalMode"];
+        }
+
+        if (array_key_exists("RecordTemplateId",$param) and $param["RecordTemplateId"] !== null) {
+            $this->RecordTemplateId = $param["RecordTemplateId"];
+        }
+
+        if (array_key_exists("BackupToUrl",$param) and $param["BackupToUrl"] !== null) {
+            $this->BackupToUrl = $param["BackupToUrl"];
         }
     }
 }
