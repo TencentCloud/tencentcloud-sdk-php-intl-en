@@ -18,24 +18,24 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Input parameter type of a porn information detection task during content audit
+ * The placeholder element information of a video editing/compositing task.
  *
- * @method integer getDefinition() Obtain The ID of a porn detection template.
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setDefinition(integer $Definition) Set The ID of a porn detection template.
-Note: This field may return·null, indicating that no valid values can be obtained.
+ * @method string getDuration() Obtain The element duration.
+<li>The value of this parameter ends with `s`, which means seconds. For example, `3.5s` indicates 3.5 seconds. </li>
+ * @method void setDuration(string $Duration) Set The element duration.
+<li>The value of this parameter ends with `s`, which means seconds. For example, `3.5s` indicates 3.5 seconds. </li>
  */
-class AiReviewPornTaskInput extends AbstractModel
+class ComposeEmptyItem extends AbstractModel
 {
     /**
-     * @var integer The ID of a porn detection template.
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var string The element duration.
+<li>The value of this parameter ends with `s`, which means seconds. For example, `3.5s` indicates 3.5 seconds. </li>
      */
-    public $Definition;
+    public $Duration;
 
     /**
-     * @param integer $Definition The ID of a porn detection template.
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @param string $Duration The element duration.
+<li>The value of this parameter ends with `s`, which means seconds. For example, `3.5s` indicates 3.5 seconds. </li>
      */
     function __construct()
     {
@@ -50,8 +50,8 @@ Note: This field may return·null, indicating that no valid values can be obtain
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Definition",$param) and $param["Definition"] !== null) {
-            $this->Definition = $param["Definition"];
+        if (array_key_exists("Duration",$param) and $param["Duration"] !== null) {
+            $this->Duration = $param["Duration"];
         }
     }
 }

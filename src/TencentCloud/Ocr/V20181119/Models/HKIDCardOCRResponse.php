@@ -63,11 +63,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
  * @method array getWarningCode() Obtain Multiple alarm codes. If the ID card is spoofed, photocopied, or photoshopped, the corresponding alarm code will be returned.
 -9102: Alarm for photocopied document
 -9103: Alarm for spoofed document
--9104: Alarm for photoshopped document
  * @method void setWarningCode(array $WarningCode) Set Multiple alarm codes. If the ID card is spoofed, photocopied, or photoshopped, the corresponding alarm code will be returned.
 -9102: Alarm for photocopied document
 -9103: Alarm for spoofed document
--9104: Alarm for photoshopped document
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -145,7 +143,6 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @var array Multiple alarm codes. If the ID card is spoofed, photocopied, or photoshopped, the corresponding alarm code will be returned.
 -9102: Alarm for photocopied document
 -9103: Alarm for spoofed document
--9104: Alarm for photoshopped document
      */
     public $WarningCode;
 
@@ -178,7 +175,6 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @param array $WarningCode Multiple alarm codes. If the ID card is spoofed, photocopied, or photoshopped, the corresponding alarm code will be returned.
 -9102: Alarm for photocopied document
 -9103: Alarm for spoofed document
--9104: Alarm for photoshopped document
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()

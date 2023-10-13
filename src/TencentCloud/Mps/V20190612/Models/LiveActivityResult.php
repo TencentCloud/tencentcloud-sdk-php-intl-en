@@ -18,39 +18,39 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * The DRM encryption details.
+ * The output of a live scheme subtask.
  *
- * @method string getType() Obtain The encryption type.
-<li>`simpleaes`: AES-128 encryption.</li>
+ * @method string getActivityType() Obtain The task type.
+<li>`LiveRecord`: Live recording. </li>
 Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setType(string $Type) Set The encryption type.
-<li>`simpleaes`: AES-128 encryption.</li>
+ * @method void setActivityType(string $ActivityType) Set The task type.
+<li>`LiveRecord`: Live recording. </li>
 Note: This field may return·null, indicating that no valid values can be obtained.
- * @method SimpleAesDrm getSimpleAesDrm() Obtain The AES-128 encryption details.
+ * @method LiveActivityResItem getLiveActivityResItem() Obtain The task output.
 Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setSimpleAesDrm(SimpleAesDrm $SimpleAesDrm) Set The AES-128 encryption details.
+ * @method void setLiveActivityResItem(LiveActivityResItem $LiveActivityResItem) Set The task output.
 Note: This field may return·null, indicating that no valid values can be obtained.
  */
-class DrmInfo extends AbstractModel
+class LiveActivityResult extends AbstractModel
 {
     /**
-     * @var string The encryption type.
-<li>`simpleaes`: AES-128 encryption.</li>
+     * @var string The task type.
+<li>`LiveRecord`: Live recording. </li>
 Note: This field may return·null, indicating that no valid values can be obtained.
      */
-    public $Type;
+    public $ActivityType;
 
     /**
-     * @var SimpleAesDrm The AES-128 encryption details.
+     * @var LiveActivityResItem The task output.
 Note: This field may return·null, indicating that no valid values can be obtained.
      */
-    public $SimpleAesDrm;
+    public $LiveActivityResItem;
 
     /**
-     * @param string $Type The encryption type.
-<li>`simpleaes`: AES-128 encryption.</li>
+     * @param string $ActivityType The task type.
+<li>`LiveRecord`: Live recording. </li>
 Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param SimpleAesDrm $SimpleAesDrm The AES-128 encryption details.
+     * @param LiveActivityResItem $LiveActivityResItem The task output.
 Note: This field may return·null, indicating that no valid values can be obtained.
      */
     function __construct()
@@ -66,13 +66,13 @@ Note: This field may return·null, indicating that no valid values can be obtain
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
-            $this->Type = $param["Type"];
+        if (array_key_exists("ActivityType",$param) and $param["ActivityType"] !== null) {
+            $this->ActivityType = $param["ActivityType"];
         }
 
-        if (array_key_exists("SimpleAesDrm",$param) and $param["SimpleAesDrm"] !== null) {
-            $this->SimpleAesDrm = new SimpleAesDrm();
-            $this->SimpleAesDrm->deserialize($param["SimpleAesDrm"]);
+        if (array_key_exists("LiveActivityResItem",$param) and $param["LiveActivityResItem"] !== null) {
+            $this->LiveActivityResItem = new LiveActivityResItem();
+            $this->LiveActivityResItem->deserialize($param["LiveActivityResItem"]);
         }
     }
 }

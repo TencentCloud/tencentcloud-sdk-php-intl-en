@@ -32,10 +32,24 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAiContentReviewTask(AiContentReviewTaskInput $AiContentReviewTask) Set Type parameter of a video content audit task.
  * @method AiRecognitionTaskInput getAiRecognitionTask() Obtain Type parameter of video content recognition task.
  * @method void setAiRecognitionTask(AiRecognitionTaskInput $AiRecognitionTask) Set Type parameter of video content recognition task.
+ * @method AiAnalysisTaskInput getAiAnalysisTask() Obtain 
+ * @method void setAiAnalysisTask(AiAnalysisTaskInput $AiAnalysisTask) Set 
+ * @method AiQualityControlTaskInput getAiQualityControlTask() Obtain 
+ * @method void setAiQualityControlTask(AiQualityControlTaskInput $AiQualityControlTask) Set 
  * @method string getSessionId() Obtain The ID used for deduplication. If there was a request with the same ID in the last seven days, the current request will return an error. The ID can contain up to 50 characters. If this parameter is left empty or an empty string is entered, no deduplication will be performed.
  * @method void setSessionId(string $SessionId) Set The ID used for deduplication. If there was a request with the same ID in the last seven days, the current request will return an error. The ID can contain up to 50 characters. If this parameter is left empty or an empty string is entered, no deduplication will be performed.
  * @method string getSessionContext() Obtain The source context which is used to pass through the user request information. The task flow status change callback will return the value of this field. It can contain up to 1,000 characters.
  * @method void setSessionContext(string $SessionContext) Set The source context which is used to pass through the user request information. The task flow status change callback will return the value of this field. It can contain up to 1,000 characters.
+ * @method integer getScheduleId() Obtain The live scheme ID.
+Note 1:
+<li>If an output storage (`OutputStorage`) and directory (`OutputDir`) are specified for a subtask of the scheme, those output settings will be applied. </li>
+u200c<li>If an output storage (`OutputStorage`) and directory (`OutputDir`) are not specified for a subtask of the scheme, the output parameters specified for `ProcessLiveStream` (if any) will be applied. </li>
+Note 2: If `TaskNotifyConfig` is specified when `ProcessLiveStream` is called, the specified settings will be applied instead of the default callback settings of the scheme.
+ * @method void setScheduleId(integer $ScheduleId) Set The live scheme ID.
+Note 1:
+<li>If an output storage (`OutputStorage`) and directory (`OutputDir`) are specified for a subtask of the scheme, those output settings will be applied. </li>
+u200c<li>If an output storage (`OutputStorage`) and directory (`OutputDir`) are not specified for a subtask of the scheme, the output parameters specified for `ProcessLiveStream` (if any) will be applied. </li>
+Note 2: If `TaskNotifyConfig` is specified when `ProcessLiveStream` is called, the specified settings will be applied instead of the default callback settings of the scheme.
  */
 class ProcessLiveStreamRequest extends AbstractModel
 {
@@ -70,6 +84,16 @@ class ProcessLiveStreamRequest extends AbstractModel
     public $AiRecognitionTask;
 
     /**
+     * @var AiAnalysisTaskInput 
+     */
+    public $AiAnalysisTask;
+
+    /**
+     * @var AiQualityControlTaskInput 
+     */
+    public $AiQualityControlTask;
+
+    /**
      * @var string The ID used for deduplication. If there was a request with the same ID in the last seven days, the current request will return an error. The ID can contain up to 50 characters. If this parameter is left empty or an empty string is entered, no deduplication will be performed.
      */
     public $SessionId;
@@ -80,14 +104,30 @@ class ProcessLiveStreamRequest extends AbstractModel
     public $SessionContext;
 
     /**
+     * @var integer The live scheme ID.
+Note 1:
+<li>If an output storage (`OutputStorage`) and directory (`OutputDir`) are specified for a subtask of the scheme, those output settings will be applied. </li>
+u200c<li>If an output storage (`OutputStorage`) and directory (`OutputDir`) are not specified for a subtask of the scheme, the output parameters specified for `ProcessLiveStream` (if any) will be applied. </li>
+Note 2: If `TaskNotifyConfig` is specified when `ProcessLiveStream` is called, the specified settings will be applied instead of the default callback settings of the scheme.
+     */
+    public $ScheduleId;
+
+    /**
      * @param string $Url Live stream URL, which must be a live stream file address. RTMP, HLS, and FLV are supported.
      * @param LiveStreamTaskNotifyConfig $TaskNotifyConfig Event notification information of a task, which is used to specify the live stream processing result.
      * @param TaskOutputStorage $OutputStorage Target bucket of a live stream processing output file. This parameter is required if a file will be output.
      * @param string $OutputDir Target directory of a live stream processing output file, such as `/movie/201909/`. If this parameter is left empty, the `/` directory will be used.
      * @param AiContentReviewTaskInput $AiContentReviewTask Type parameter of a video content audit task.
      * @param AiRecognitionTaskInput $AiRecognitionTask Type parameter of video content recognition task.
+     * @param AiAnalysisTaskInput $AiAnalysisTask 
+     * @param AiQualityControlTaskInput $AiQualityControlTask 
      * @param string $SessionId The ID used for deduplication. If there was a request with the same ID in the last seven days, the current request will return an error. The ID can contain up to 50 characters. If this parameter is left empty or an empty string is entered, no deduplication will be performed.
      * @param string $SessionContext The source context which is used to pass through the user request information. The task flow status change callback will return the value of this field. It can contain up to 1,000 characters.
+     * @param integer $ScheduleId The live scheme ID.
+Note 1:
+<li>If an output storage (`OutputStorage`) and directory (`OutputDir`) are specified for a subtask of the scheme, those output settings will be applied. </li>
+u200c<li>If an output storage (`OutputStorage`) and directory (`OutputDir`) are not specified for a subtask of the scheme, the output parameters specified for `ProcessLiveStream` (if any) will be applied. </li>
+Note 2: If `TaskNotifyConfig` is specified when `ProcessLiveStream` is called, the specified settings will be applied instead of the default callback settings of the scheme.
      */
     function __construct()
     {
@@ -130,12 +170,26 @@ class ProcessLiveStreamRequest extends AbstractModel
             $this->AiRecognitionTask->deserialize($param["AiRecognitionTask"]);
         }
 
+        if (array_key_exists("AiAnalysisTask",$param) and $param["AiAnalysisTask"] !== null) {
+            $this->AiAnalysisTask = new AiAnalysisTaskInput();
+            $this->AiAnalysisTask->deserialize($param["AiAnalysisTask"]);
+        }
+
+        if (array_key_exists("AiQualityControlTask",$param) and $param["AiQualityControlTask"] !== null) {
+            $this->AiQualityControlTask = new AiQualityControlTaskInput();
+            $this->AiQualityControlTask->deserialize($param["AiQualityControlTask"]);
+        }
+
         if (array_key_exists("SessionId",$param) and $param["SessionId"] !== null) {
             $this->SessionId = $param["SessionId"];
         }
 
         if (array_key_exists("SessionContext",$param) and $param["SessionContext"] !== null) {
             $this->SessionContext = $param["SessionContext"];
+        }
+
+        if (array_key_exists("ScheduleId",$param) and $param["ScheduleId"] !== null) {
+            $this->ScheduleId = $param["ScheduleId"];
         }
     }
 }

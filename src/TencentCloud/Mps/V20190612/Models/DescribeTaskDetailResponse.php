@@ -70,6 +70,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setScheduleTask(ScheduleTask $ScheduleTask) Set The information of a scheme. This parameter is valid only if `TaskType` is `ScheduleTask`.
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method LiveScheduleTask getLiveScheduleTask() Obtain The information of a live scheme. This parameter is valid only if `TaskType` is `LiveScheduleTask`.
+Note: This field may return·null, indicating that no valid values can be obtained.
+ * @method void setLiveScheduleTask(LiveScheduleTask $LiveScheduleTask) Set The information of a live scheme. This parameter is valid only if `TaskType` is `LiveScheduleTask`.
+Note: This field may return·null, indicating that no valid values can be obtained.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -157,6 +161,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $ScheduleTask;
 
     /**
+     * @var LiveScheduleTask The information of a live scheme. This parameter is valid only if `TaskType` is `LiveScheduleTask`.
+Note: This field may return·null, indicating that no valid values can be obtained.
+     */
+    public $LiveScheduleTask;
+
+    /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
@@ -187,6 +197,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $ExtInfo Extended information field, used in specific scenarios.
      * @param ScheduleTask $ScheduleTask The information of a scheme. This parameter is valid only if `TaskType` is `ScheduleTask`.
 Note: This field may return null, indicating that no valid values can be obtained.
+     * @param LiveScheduleTask $LiveScheduleTask The information of a live scheme. This parameter is valid only if `TaskType` is `LiveScheduleTask`.
+Note: This field may return·null, indicating that no valid values can be obtained.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -261,6 +273,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (array_key_exists("ScheduleTask",$param) and $param["ScheduleTask"] !== null) {
             $this->ScheduleTask = new ScheduleTask();
             $this->ScheduleTask->deserialize($param["ScheduleTask"]);
+        }
+
+        if (array_key_exists("LiveScheduleTask",$param) and $param["LiveScheduleTask"] !== null) {
+            $this->LiveScheduleTask = new LiveScheduleTask();
+            $this->LiveScheduleTask->deserialize($param["LiveScheduleTask"]);
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

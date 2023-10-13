@@ -24,6 +24,10 @@ use TencentCloud\Common\AbstractModel;
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setVideoEnhance(VideoEnhanceConfig $VideoEnhance) Set Video enhancement configuration.
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method AudioEnhanceConfig getAudioEnhance() Obtain The audio enhancement configuration.
+Note: This field may return·null, indicating that no valid values can be obtained.
+ * @method void setAudioEnhance(AudioEnhanceConfig $AudioEnhance) Set The audio enhancement configuration.
+Note: This field may return·null, indicating that no valid values can be obtained.
  */
 class EnhanceConfig extends AbstractModel
 {
@@ -34,8 +38,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $VideoEnhance;
 
     /**
+     * @var AudioEnhanceConfig The audio enhancement configuration.
+Note: This field may return·null, indicating that no valid values can be obtained.
+     */
+    public $AudioEnhance;
+
+    /**
      * @param VideoEnhanceConfig $VideoEnhance Video enhancement configuration.
 Note: This field may return null, indicating that no valid values can be obtained.
+     * @param AudioEnhanceConfig $AudioEnhance The audio enhancement configuration.
+Note: This field may return·null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -53,6 +65,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (array_key_exists("VideoEnhance",$param) and $param["VideoEnhance"] !== null) {
             $this->VideoEnhance = new VideoEnhanceConfig();
             $this->VideoEnhance->deserialize($param["VideoEnhance"]);
+        }
+
+        if (array_key_exists("AudioEnhance",$param) and $param["AudioEnhance"] !== null) {
+            $this->AudioEnhance = new AudioEnhanceConfig();
+            $this->AudioEnhance->deserialize($param["AudioEnhance"]);
         }
     }
 }

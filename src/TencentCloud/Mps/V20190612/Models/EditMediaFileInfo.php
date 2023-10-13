@@ -22,10 +22,18 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method MediaInputInfo getInputInfo() Obtain Video input information.
  * @method void setInputInfo(MediaInputInfo $InputInfo) Set Video input information.
- * @method float getStartTimeOffset() Obtain Start time offset of video clipping in seconds.
- * @method void setStartTimeOffset(float $StartTimeOffset) Set Start time offset of video clipping in seconds.
- * @method float getEndTimeOffset() Obtain End time offset of video clipping in seconds.
- * @method void setEndTimeOffset(float $EndTimeOffset) Set End time offset of video clipping in seconds.
+ * @method float getStartTimeOffset() Obtain The start offset (seconds) for video clipping. This parameter is valid for video clipping tasks.
+ * @method void setStartTimeOffset(float $StartTimeOffset) Set The start offset (seconds) for video clipping. This parameter is valid for video clipping tasks.
+ * @method float getEndTimeOffset() Obtain The end offset (seconds) for video clipping. This parameter is valid for video clipping tasks.
+ * @method void setEndTimeOffset(float $EndTimeOffset) Set The end offset (seconds) for video clipping. This parameter is valid for video clipping tasks.
+ * @method string getId() Obtain The ID of the material associated with an element. This parameter is required for video compositing tasks.
+
+Note: The ID can be up to 32 characters long and can contain letters, digits, and special characters -_
+Note: This field may return·null, indicating that no valid values can be obtained.
+ * @method void setId(string $Id) Set The ID of the material associated with an element. This parameter is required for video compositing tasks.
+
+Note: The ID can be up to 32 characters long and can contain letters, digits, and special characters -_
+Note: This field may return·null, indicating that no valid values can be obtained.
  */
 class EditMediaFileInfo extends AbstractModel
 {
@@ -35,19 +43,31 @@ class EditMediaFileInfo extends AbstractModel
     public $InputInfo;
 
     /**
-     * @var float Start time offset of video clipping in seconds.
+     * @var float The start offset (seconds) for video clipping. This parameter is valid for video clipping tasks.
      */
     public $StartTimeOffset;
 
     /**
-     * @var float End time offset of video clipping in seconds.
+     * @var float The end offset (seconds) for video clipping. This parameter is valid for video clipping tasks.
      */
     public $EndTimeOffset;
 
     /**
+     * @var string The ID of the material associated with an element. This parameter is required for video compositing tasks.
+
+Note: The ID can be up to 32 characters long and can contain letters, digits, and special characters -_
+Note: This field may return·null, indicating that no valid values can be obtained.
+     */
+    public $Id;
+
+    /**
      * @param MediaInputInfo $InputInfo Video input information.
-     * @param float $StartTimeOffset Start time offset of video clipping in seconds.
-     * @param float $EndTimeOffset End time offset of video clipping in seconds.
+     * @param float $StartTimeOffset The start offset (seconds) for video clipping. This parameter is valid for video clipping tasks.
+     * @param float $EndTimeOffset The end offset (seconds) for video clipping. This parameter is valid for video clipping tasks.
+     * @param string $Id The ID of the material associated with an element. This parameter is required for video compositing tasks.
+
+Note: The ID can be up to 32 characters long and can contain letters, digits, and special characters -_
+Note: This field may return·null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -73,6 +93,10 @@ class EditMediaFileInfo extends AbstractModel
 
         if (array_key_exists("EndTimeOffset",$param) and $param["EndTimeOffset"] !== null) {
             $this->EndTimeOffset = $param["EndTimeOffset"];
+        }
+
+        if (array_key_exists("Id",$param) and $param["Id"] !== null) {
+            $this->Id = $param["Id"];
         }
     }
 }

@@ -18,36 +18,48 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * The AES-128 encryption details.
  *
- * @method string getUri() Obtain 
- * @method void setUri(string $Uri) Set 
- * @method string getKey() Obtain 
- * @method void setKey(string $Key) Set 
- * @method string getVector() Obtain 
- * @method void setVector(string $Vector) Set 
+ * @method string getUri() Obtain The URI of decryption key.
+Note: This field may return·null, indicating that no valid values can be obtained.
+ * @method void setUri(string $Uri) Set The URI of decryption key.
+Note: This field may return·null, indicating that no valid values can be obtained.
+ * @method string getKey() Obtain The encryption key (a 32-byte string).
+Note: This field may return·null, indicating that no valid values can be obtained.
+ * @method void setKey(string $Key) Set The encryption key (a 32-byte string).
+Note: This field may return·null, indicating that no valid values can be obtained.
+ * @method string getVector() Obtain The initialization vector for encryption (a 32-byte string).
+Note: This field may return·null, indicating that no valid values can be obtained.
+ * @method void setVector(string $Vector) Set The initialization vector for encryption (a 32-byte string).
+Note: This field may return·null, indicating that no valid values can be obtained.
  */
 class SimpleAesDrm extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string The URI of decryption key.
+Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public $Uri;
 
     /**
-     * @var string 
+     * @var string The encryption key (a 32-byte string).
+Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public $Key;
 
     /**
-     * @var string 
+     * @var string The initialization vector for encryption (a 32-byte string).
+Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public $Vector;
 
     /**
-     * @param string $Uri 
-     * @param string $Key 
-     * @param string $Vector 
+     * @param string $Uri The URI of decryption key.
+Note: This field may return·null, indicating that no valid values can be obtained.
+     * @param string $Key The encryption key (a 32-byte string).
+Note: This field may return·null, indicating that no valid values can be obtained.
+     * @param string $Vector The initialization vector for encryption (a 32-byte string).
+Note: This field may return·null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

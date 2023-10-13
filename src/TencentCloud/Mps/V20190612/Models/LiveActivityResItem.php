@@ -18,23 +18,23 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Input parameter type of a porn information detection task during content audit
+ * The output of a live scheme subtask.
  *
- * @method integer getDefinition() Obtain The ID of a porn detection template.
+ * @method LiveScheduleLiveRecordTaskResult getLiveRecordTask() Obtain The output of a live recording task.
 Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setDefinition(integer $Definition) Set The ID of a porn detection template.
+ * @method void setLiveRecordTask(LiveScheduleLiveRecordTaskResult $LiveRecordTask) Set The output of a live recording task.
 Note: This field may return·null, indicating that no valid values can be obtained.
  */
-class AiReviewPornTaskInput extends AbstractModel
+class LiveActivityResItem extends AbstractModel
 {
     /**
-     * @var integer The ID of a porn detection template.
+     * @var LiveScheduleLiveRecordTaskResult The output of a live recording task.
 Note: This field may return·null, indicating that no valid values can be obtained.
      */
-    public $Definition;
+    public $LiveRecordTask;
 
     /**
-     * @param integer $Definition The ID of a porn detection template.
+     * @param LiveScheduleLiveRecordTaskResult $LiveRecordTask The output of a live recording task.
 Note: This field may return·null, indicating that no valid values can be obtained.
      */
     function __construct()
@@ -50,8 +50,9 @@ Note: This field may return·null, indicating that no valid values can be obtain
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Definition",$param) and $param["Definition"] !== null) {
-            $this->Definition = $param["Definition"];
+        if (array_key_exists("LiveRecordTask",$param) and $param["LiveRecordTask"] !== null) {
+            $this->LiveRecordTask = new LiveScheduleLiveRecordTaskResult();
+            $this->LiveRecordTask->deserialize($param["LiveRecordTask"]);
         }
     }
 }

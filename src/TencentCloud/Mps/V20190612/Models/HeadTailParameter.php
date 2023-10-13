@@ -20,26 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Opening and closing credits parameters
  *
- * @method array getHeadSet() Obtain Opening credits list
- * @method void setHeadSet(array $HeadSet) Set Opening credits list
- * @method array getTailSet() Obtain Closing credits list
- * @method void setTailSet(array $TailSet) Set Closing credits list
+ * @method array getHeadSet() Obtain The opening segments.
+Note: This field may return·null, indicating that no valid values can be obtained.
+ * @method void setHeadSet(array $HeadSet) Set The opening segments.
+Note: This field may return·null, indicating that no valid values can be obtained.
+ * @method array getTailSet() Obtain The closing segments.
+Note: This field may return·null, indicating that no valid values can be obtained.
+ * @method void setTailSet(array $TailSet) Set The closing segments.
+Note: This field may return·null, indicating that no valid values can be obtained.
  */
 class HeadTailParameter extends AbstractModel
 {
     /**
-     * @var array Opening credits list
+     * @var array The opening segments.
+Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public $HeadSet;
 
     /**
-     * @var array Closing credits list
+     * @var array The closing segments.
+Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public $TailSet;
 
     /**
-     * @param array $HeadSet Opening credits list
-     * @param array $TailSet Closing credits list
+     * @param array $HeadSet The opening segments.
+Note: This field may return·null, indicating that no valid values can be obtained.
+     * @param array $TailSet The closing segments.
+Note: This field may return·null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

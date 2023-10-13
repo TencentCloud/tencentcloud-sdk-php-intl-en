@@ -44,6 +44,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setScheduleTaskEvent(ScheduleTask $ScheduleTaskEvent) Set The information of a scheme. Information will be returned only if `EventType` is `ScheduleTask`.
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getTimestamp() Obtain - The expiration time (Unix timestamp) of the notification's signature.
+- By default, notifications sent by MPS expire after 10 minutes. If the expiration time specified has elapsed, a notification will be considered invalid. This can prevent replay attacks.
+- The format of this parameter is a decimal Unix timestamp, i.e., the number of seconds that have elapsed since 00:00 (UTC/GMT time) on January 1, 1970.
+
+ * @method void setTimestamp(integer $Timestamp) Set - The expiration time (Unix timestamp) of the notification's signature.
+- By default, notifications sent by MPS expire after 10 minutes. If the expiration time specified has elapsed, a notification will be considered invalid. This can prevent replay attacks.
+- The format of this parameter is a decimal Unix timestamp, i.e., the number of seconds that have elapsed since 00:00 (UTC/GMT time) on January 1, 1970.
+
+ * @method string getSign() Obtain The notification signature. Sign = MD5 (Timestamp + NotifyKey) MPS concatenates `Timestamp` and `NotifyKey` in `TaskNotifyConfig` and calculates a signature using the MD5 algorithm. This signature is included in the notification sent to your backend server. If the signature in the notification matches your own calculation result, it indicates that the notification is from MPS.
+ * @method void setSign(string $Sign) Set The notification signature. Sign = MD5 (Timestamp + NotifyKey) MPS concatenates `Timestamp` and `NotifyKey` in `TaskNotifyConfig` and calculates a signature using the MD5 algorithm. This signature is included in the notification sent to your backend server. If the signature in the notification matches your own calculation result, it indicates that the notification is from MPS.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -86,6 +96,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $ScheduleTaskEvent;
 
     /**
+     * @var integer - The expiration time (Unix timestamp) of the notification's signature.
+- By default, notifications sent by MPS expire after 10 minutes. If the expiration time specified has elapsed, a notification will be considered invalid. This can prevent replay attacks.
+- The format of this parameter is a decimal Unix timestamp, i.e., the number of seconds that have elapsed since 00:00 (UTC/GMT time) on January 1, 1970.
+
+     */
+    public $Timestamp;
+
+    /**
+     * @var string The notification signature. Sign = MD5 (Timestamp + NotifyKey) MPS concatenates `Timestamp` and `NotifyKey` in `TaskNotifyConfig` and calculates a signature using the MD5 algorithm. This signature is included in the notification sent to your backend server. If the signature in the notification matches your own calculation result, it indicates that the notification is from MPS.
+     */
+    public $Sign;
+
+    /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
@@ -103,6 +126,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $SessionContext The source context which is used to pass through the user request information. The task flow status change callback will return the value of this field. It can contain up to 1,000 characters.
      * @param ScheduleTask $ScheduleTaskEvent The information of a scheme. Information will be returned only if `EventType` is `ScheduleTask`.
 Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $Timestamp - The expiration time (Unix timestamp) of the notification's signature.
+- By default, notifications sent by MPS expire after 10 minutes. If the expiration time specified has elapsed, a notification will be considered invalid. This can prevent replay attacks.
+- The format of this parameter is a decimal Unix timestamp, i.e., the number of seconds that have elapsed since 00:00 (UTC/GMT time) on January 1, 1970.
+
+     * @param string $Sign The notification signature. Sign = MD5 (Timestamp + NotifyKey) MPS concatenates `Timestamp` and `NotifyKey` in `TaskNotifyConfig` and calculates a signature using the MD5 algorithm. This signature is included in the notification sent to your backend server. If the signature in the notification matches your own calculation result, it indicates that the notification is from MPS.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -143,6 +171,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (array_key_exists("ScheduleTaskEvent",$param) and $param["ScheduleTaskEvent"] !== null) {
             $this->ScheduleTaskEvent = new ScheduleTask();
             $this->ScheduleTaskEvent->deserialize($param["ScheduleTaskEvent"]);
+        }
+
+        if (array_key_exists("Timestamp",$param) and $param["Timestamp"] !== null) {
+            $this->Timestamp = $param["Timestamp"];
+        }
+
+        if (array_key_exists("Sign",$param) and $param["Sign"] !== null) {
+            $this->Sign = $param["Sign"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

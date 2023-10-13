@@ -18,24 +18,32 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Input parameter type of a porn information detection task during content audit
+ * The noise reduction configuration.
  *
- * @method integer getDefinition() Obtain The ID of a porn detection template.
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setDefinition(integer $Definition) Set The ID of a porn detection template.
-Note: This field may return·null, indicating that no valid values can be obtained.
+ * @method string getSwitch() Obtain Whether to enable the feature. Valid values:
+<li>`ON`</li>
+<li>`OFF` </li>
+Default value: `ON`.
+ * @method void setSwitch(string $Switch) Set Whether to enable the feature. Valid values:
+<li>`ON`</li>
+<li>`OFF` </li>
+Default value: `ON`.
  */
-class AiReviewPornTaskInput extends AbstractModel
+class AudioDenoiseConfig extends AbstractModel
 {
     /**
-     * @var integer The ID of a porn detection template.
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var string Whether to enable the feature. Valid values:
+<li>`ON`</li>
+<li>`OFF` </li>
+Default value: `ON`.
      */
-    public $Definition;
+    public $Switch;
 
     /**
-     * @param integer $Definition The ID of a porn detection template.
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @param string $Switch Whether to enable the feature. Valid values:
+<li>`ON`</li>
+<li>`OFF` </li>
+Default value: `ON`.
      */
     function __construct()
     {
@@ -50,8 +58,8 @@ Note: This field may return·null, indicating that no valid values can be obtain
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Definition",$param) and $param["Definition"] !== null) {
-            $this->Definition = $param["Definition"];
+        if (array_key_exists("Switch",$param) and $param["Switch"] !== null) {
+            $this->Switch = $param["Switch"];
         }
     }
 }

@@ -20,26 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Configuration for output files of video editing
  *
- * @method string getContainer() Obtain Format. Valid values: `mp4` (default), `hls`, `mov`, `flv`, `avi`
- * @method void setContainer(string $Container) Set Format. Valid values: `mp4` (default), `hls`, `mov`, `flv`, `avi`
- * @method string getType() Obtain The editing mode. Valid values are `normal` and `fast`. The default is `normal`, which indicates precise editing.
- * @method void setType(string $Type) Set The editing mode. Valid values are `normal` and `fast`. The default is `normal`, which indicates precise editing.
+ * @method string getContainer() Obtain The container. Valid values: `mp4` (default), `hls`, `mov`, `flv`, `avi`.
+Note: This field may return·null, indicating that no valid values can be obtained.
+ * @method void setContainer(string $Container) Set The container. Valid values: `mp4` (default), `hls`, `mov`, `flv`, `avi`.
+Note: This field may return·null, indicating that no valid values can be obtained.
+ * @method string getType() Obtain The clip mode. Valid values: `normal` (default), `fast`.
+Note: This field may return·null, indicating that no valid values can be obtained.
+ * @method void setType(string $Type) Set The clip mode. Valid values: `normal` (default), `fast`.
+Note: This field may return·null, indicating that no valid values can be obtained.
  */
 class EditMediaOutputConfig extends AbstractModel
 {
     /**
-     * @var string Format. Valid values: `mp4` (default), `hls`, `mov`, `flv`, `avi`
+     * @var string The container. Valid values: `mp4` (default), `hls`, `mov`, `flv`, `avi`.
+Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public $Container;
 
     /**
-     * @var string The editing mode. Valid values are `normal` and `fast`. The default is `normal`, which indicates precise editing.
+     * @var string The clip mode. Valid values: `normal` (default), `fast`.
+Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public $Type;
 
     /**
-     * @param string $Container Format. Valid values: `mp4` (default), `hls`, `mov`, `flv`, `avi`
-     * @param string $Type The editing mode. Valid values are `normal` and `fast`. The default is `normal`, which indicates precise editing.
+     * @param string $Container The container. Valid values: `mp4` (default), `hls`, `mov`, `flv`, `avi`.
+Note: This field may return·null, indicating that no valid values can be obtained.
+     * @param string $Type The clip mode. Valid values: `normal` (default), `fast`.
+Note: This field may return·null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

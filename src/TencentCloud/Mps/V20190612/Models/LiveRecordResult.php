@@ -18,31 +18,35 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * The output of an intelligent highlight generation task.
+ * The live recording result.
  *
- * @method array getHighlightSet() Obtain A list of the highlight segments generated.
- * @method void setHighlightSet(array $HighlightSet) Set A list of the highlight segments generated.
- * @method TaskOutputStorage getOutputStorage() Obtain The storage location of the highlight segments.
+ * @method TaskOutputStorage getOutputStorage() Obtain The storage of the recording file.
 Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setOutputStorage(TaskOutputStorage $OutputStorage) Set The storage location of the highlight segments.
+ * @method void setOutputStorage(TaskOutputStorage $OutputStorage) Set The storage of the recording file.
+Note: This field may return·null, indicating that no valid values can be obtained.
+ * @method array getFileList() Obtain The recording segments.
+Note: This field may return·null, indicating that no valid values can be obtained.
+ * @method void setFileList(array $FileList) Set The recording segments.
 Note: This field may return·null, indicating that no valid values can be obtained.
  */
-class AiAnalysisTaskHighlightOutput extends AbstractModel
+class LiveRecordResult extends AbstractModel
 {
     /**
-     * @var array A list of the highlight segments generated.
-     */
-    public $HighlightSet;
-
-    /**
-     * @var TaskOutputStorage The storage location of the highlight segments.
+     * @var TaskOutputStorage The storage of the recording file.
 Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public $OutputStorage;
 
     /**
-     * @param array $HighlightSet A list of the highlight segments generated.
-     * @param TaskOutputStorage $OutputStorage The storage location of the highlight segments.
+     * @var array The recording segments.
+Note: This field may return·null, indicating that no valid values can be obtained.
+     */
+    public $FileList;
+
+    /**
+     * @param TaskOutputStorage $OutputStorage The storage of the recording file.
+Note: This field may return·null, indicating that no valid values can be obtained.
+     * @param array $FileList The recording segments.
 Note: This field may return·null, indicating that no valid values can be obtained.
      */
     function __construct()
@@ -58,18 +62,18 @@ Note: This field may return·null, indicating that no valid values can be obtain
         if ($param === null) {
             return;
         }
-        if (array_key_exists("HighlightSet",$param) and $param["HighlightSet"] !== null) {
-            $this->HighlightSet = [];
-            foreach ($param["HighlightSet"] as $key => $value){
-                $obj = new MediaAiAnalysisHighlightItem();
-                $obj->deserialize($value);
-                array_push($this->HighlightSet, $obj);
-            }
-        }
-
         if (array_key_exists("OutputStorage",$param) and $param["OutputStorage"] !== null) {
             $this->OutputStorage = new TaskOutputStorage();
             $this->OutputStorage->deserialize($param["OutputStorage"]);
+        }
+
+        if (array_key_exists("FileList",$param) and $param["FileList"] !== null) {
+            $this->FileList = [];
+            foreach ($param["FileList"] as $key => $value){
+                $obj = new LiveRecordFile();
+                $obj->deserialize($value);
+                array_push($this->FileList, $obj);
+            }
         }
     }
 }

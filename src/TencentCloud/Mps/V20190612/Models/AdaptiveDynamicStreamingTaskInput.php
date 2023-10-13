@@ -24,22 +24,24 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDefinition(integer $Definition) Set Adaptive bitrate streaming template ID.
  * @method array getWatermarkSet() Obtain List of up to 10 image or text watermarks.
  * @method void setWatermarkSet(array $WatermarkSet) Set List of up to 10 image or text watermarks.
- * @method TaskOutputStorage getOutputStorage() Obtain Target bucket of an output file after being transcoded to adaptive bitrate streaming. If this parameter is left empty, the `OutputStorage` value of the upper folder will be inherited.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setOutputStorage(TaskOutputStorage $OutputStorage) Set Target bucket of an output file after being transcoded to adaptive bitrate streaming. If this parameter is left empty, the `OutputStorage` value of the upper folder will be inherited.
-Note: this field may return null, indicating that no valid values can be obtained.
+ * @method TaskOutputStorage getOutputStorage() Obtain 
+Note: This field may return·null, indicating that no valid values can be obtained.
+ * @method void setOutputStorage(TaskOutputStorage $OutputStorage) Set 
+Note: This field may return·null, indicating that no valid values can be obtained.
  * @method string getOutputObjectPath() Obtain The relative or absolute output path of the manifest file after being transcoded to adaptive bitrate streaming. If this parameter is left empty, a relative path in the following format will be used by default: `{inputName}_adaptiveDynamicStreaming_{definition}.{format}`.
  * @method void setOutputObjectPath(string $OutputObjectPath) Set The relative or absolute output path of the manifest file after being transcoded to adaptive bitrate streaming. If this parameter is left empty, a relative path in the following format will be used by default: `{inputName}_adaptiveDynamicStreaming_{definition}.{format}`.
  * @method string getSubStreamObjectName() Obtain The relative output path of the substream file after being transcoded to adaptive bitrate streaming. If this parameter is left empty, a relative path in the following format will be used by default: `{inputName}_adaptiveDynamicStreaming_{definition}_{subStreamNumber}.{format}`.
  * @method void setSubStreamObjectName(string $SubStreamObjectName) Set The relative output path of the substream file after being transcoded to adaptive bitrate streaming. If this parameter is left empty, a relative path in the following format will be used by default: `{inputName}_adaptiveDynamicStreaming_{definition}_{subStreamNumber}.{format}`.
  * @method string getSegmentObjectName() Obtain The relative output path of the segment file after being transcoded to adaptive bitrate streaming (in HLS format only). If this parameter is left empty, a relative path in the following format will be used by default: `{inputName}_adaptiveDynamicStreaming_{definition}_{subStreamNumber}_{segmentNumber}.{format}`.
  * @method void setSegmentObjectName(string $SegmentObjectName) Set The relative output path of the segment file after being transcoded to adaptive bitrate streaming (in HLS format only). If this parameter is left empty, a relative path in the following format will be used by default: `{inputName}_adaptiveDynamicStreaming_{definition}_{subStreamNumber}_{segmentNumber}.{format}`.
- * @method array getAddOnSubtitles() Obtain The subtitle file to add.
+ * @method array getAddOnSubtitles() Obtain 
 Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setAddOnSubtitles(array $AddOnSubtitles) Set The subtitle file to add.
+ * @method void setAddOnSubtitles(array $AddOnSubtitles) Set 
 Note: This field may return·null, indicating that no valid values can be obtained.
- * @method DrmInfo getDrmInfo() Obtain Information of Drm.   Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setDrmInfo(DrmInfo $DrmInfo) Set Information of Drm.   Note: This field may return·null, indicating that no valid values can be obtained.
+ * @method DrmInfo getDrmInfo() Obtain 
+Note: This field may return·null, indicating that no valid values can be obtained.
+ * @method void setDrmInfo(DrmInfo $DrmInfo) Set 
+Note: This field may return·null, indicating that no valid values can be obtained.
  */
 class AdaptiveDynamicStreamingTaskInput extends AbstractModel
 {
@@ -54,8 +56,8 @@ class AdaptiveDynamicStreamingTaskInput extends AbstractModel
     public $WatermarkSet;
 
     /**
-     * @var TaskOutputStorage Target bucket of an output file after being transcoded to adaptive bitrate streaming. If this parameter is left empty, the `OutputStorage` value of the upper folder will be inherited.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var TaskOutputStorage 
+Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public $OutputStorage;
 
@@ -75,27 +77,29 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $SegmentObjectName;
 
     /**
-     * @var array The subtitle file to add.
+     * @var array 
 Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public $AddOnSubtitles;
 
     /**
-     * @var DrmInfo Information of Drm.   Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var DrmInfo 
+Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public $DrmInfo;
 
     /**
      * @param integer $Definition Adaptive bitrate streaming template ID.
      * @param array $WatermarkSet List of up to 10 image or text watermarks.
-     * @param TaskOutputStorage $OutputStorage Target bucket of an output file after being transcoded to adaptive bitrate streaming. If this parameter is left empty, the `OutputStorage` value of the upper folder will be inherited.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @param TaskOutputStorage $OutputStorage 
+Note: This field may return·null, indicating that no valid values can be obtained.
      * @param string $OutputObjectPath The relative or absolute output path of the manifest file after being transcoded to adaptive bitrate streaming. If this parameter is left empty, a relative path in the following format will be used by default: `{inputName}_adaptiveDynamicStreaming_{definition}.{format}`.
      * @param string $SubStreamObjectName The relative output path of the substream file after being transcoded to adaptive bitrate streaming. If this parameter is left empty, a relative path in the following format will be used by default: `{inputName}_adaptiveDynamicStreaming_{definition}_{subStreamNumber}.{format}`.
      * @param string $SegmentObjectName The relative output path of the segment file after being transcoded to adaptive bitrate streaming (in HLS format only). If this parameter is left empty, a relative path in the following format will be used by default: `{inputName}_adaptiveDynamicStreaming_{definition}_{subStreamNumber}_{segmentNumber}.{format}`.
-     * @param array $AddOnSubtitles The subtitle file to add.
+     * @param array $AddOnSubtitles 
 Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param DrmInfo $DrmInfo Information of Drm.   Note: This field may return·null, indicating that no valid values can be obtained.
+     * @param DrmInfo $DrmInfo 
+Note: This field may return·null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

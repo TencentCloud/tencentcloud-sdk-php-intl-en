@@ -18,59 +18,59 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * The information of an AWS SQS queue.
+ * The audio enhancement configuration.
  *
- * @method string getSQSRegion() Obtain The region of the SQS queue.
+ * @method AudioDenoiseConfig getDenoise() Obtain The audio noise reduction configuration.
 Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setSQSRegion(string $SQSRegion) Set The region of the SQS queue.
+ * @method void setDenoise(AudioDenoiseConfig $Denoise) Set The audio noise reduction configuration.
 Note: This field may return·null, indicating that no valid values can be obtained.
- * @method string getSQSQueueName() Obtain The name of the SQS queue.
+ * @method AudioSeparateConfig getSeparate() Obtain The audio separation configuration.
 Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setSQSQueueName(string $SQSQueueName) Set The name of the SQS queue.
+ * @method void setSeparate(AudioSeparateConfig $Separate) Set The audio separation configuration.
 Note: This field may return·null, indicating that no valid values can be obtained.
- * @method string getS3SecretId() Obtain The key ID required to read from/write to the SQS queue.
+ * @method VolumeBalanceConfig getVolumeBalance() Obtain The volume equalization configuration.
 Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setS3SecretId(string $S3SecretId) Set The key ID required to read from/write to the SQS queue.
+ * @method void setVolumeBalance(VolumeBalanceConfig $VolumeBalance) Set The volume equalization configuration.
 Note: This field may return·null, indicating that no valid values can be obtained.
- * @method string getS3SecretKey() Obtain The key required to read from/write to the SQS queue.
+ * @method AudioBeautifyConfig getBeautify() Obtain The audio improvement configuration.
 Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setS3SecretKey(string $S3SecretKey) Set The key required to read from/write to the SQS queue.
+ * @method void setBeautify(AudioBeautifyConfig $Beautify) Set The audio improvement configuration.
 Note: This field may return·null, indicating that no valid values can be obtained.
  */
-class AwsSQS extends AbstractModel
+class AudioEnhanceConfig extends AbstractModel
 {
     /**
-     * @var string The region of the SQS queue.
+     * @var AudioDenoiseConfig The audio noise reduction configuration.
 Note: This field may return·null, indicating that no valid values can be obtained.
      */
-    public $SQSRegion;
+    public $Denoise;
 
     /**
-     * @var string The name of the SQS queue.
+     * @var AudioSeparateConfig The audio separation configuration.
 Note: This field may return·null, indicating that no valid values can be obtained.
      */
-    public $SQSQueueName;
+    public $Separate;
 
     /**
-     * @var string The key ID required to read from/write to the SQS queue.
+     * @var VolumeBalanceConfig The volume equalization configuration.
 Note: This field may return·null, indicating that no valid values can be obtained.
      */
-    public $S3SecretId;
+    public $VolumeBalance;
 
     /**
-     * @var string The key required to read from/write to the SQS queue.
+     * @var AudioBeautifyConfig The audio improvement configuration.
 Note: This field may return·null, indicating that no valid values can be obtained.
      */
-    public $S3SecretKey;
+    public $Beautify;
 
     /**
-     * @param string $SQSRegion The region of the SQS queue.
+     * @param AudioDenoiseConfig $Denoise The audio noise reduction configuration.
 Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param string $SQSQueueName The name of the SQS queue.
+     * @param AudioSeparateConfig $Separate The audio separation configuration.
 Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param string $S3SecretId The key ID required to read from/write to the SQS queue.
+     * @param VolumeBalanceConfig $VolumeBalance The volume equalization configuration.
 Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param string $S3SecretKey The key required to read from/write to the SQS queue.
+     * @param AudioBeautifyConfig $Beautify The audio improvement configuration.
 Note: This field may return·null, indicating that no valid values can be obtained.
      */
     function __construct()
@@ -86,20 +86,24 @@ Note: This field may return·null, indicating that no valid values can be obtain
         if ($param === null) {
             return;
         }
-        if (array_key_exists("SQSRegion",$param) and $param["SQSRegion"] !== null) {
-            $this->SQSRegion = $param["SQSRegion"];
+        if (array_key_exists("Denoise",$param) and $param["Denoise"] !== null) {
+            $this->Denoise = new AudioDenoiseConfig();
+            $this->Denoise->deserialize($param["Denoise"]);
         }
 
-        if (array_key_exists("SQSQueueName",$param) and $param["SQSQueueName"] !== null) {
-            $this->SQSQueueName = $param["SQSQueueName"];
+        if (array_key_exists("Separate",$param) and $param["Separate"] !== null) {
+            $this->Separate = new AudioSeparateConfig();
+            $this->Separate->deserialize($param["Separate"]);
         }
 
-        if (array_key_exists("S3SecretId",$param) and $param["S3SecretId"] !== null) {
-            $this->S3SecretId = $param["S3SecretId"];
+        if (array_key_exists("VolumeBalance",$param) and $param["VolumeBalance"] !== null) {
+            $this->VolumeBalance = new VolumeBalanceConfig();
+            $this->VolumeBalance->deserialize($param["VolumeBalance"]);
         }
 
-        if (array_key_exists("S3SecretKey",$param) and $param["S3SecretKey"] !== null) {
-            $this->S3SecretKey = $param["S3SecretKey"];
+        if (array_key_exists("Beautify",$param) and $param["Beautify"] !== null) {
+            $this->Beautify = new AudioBeautifyConfig();
+            $this->Beautify->deserialize($param["Beautify"]);
         }
     }
 }

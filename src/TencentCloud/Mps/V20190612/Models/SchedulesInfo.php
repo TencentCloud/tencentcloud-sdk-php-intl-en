@@ -26,11 +26,19 @@ use TencentCloud\Common\AbstractModel;
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setScheduleName(string $ScheduleName) Set The scheme name.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method array getStatus() Obtain The scheme status. Valid values:
+ * @method string getType() Obtain The scheme type. Valid values:
+ <li>`Preset`</li>
+<li>`Custom` </li>
+Note: This field may return·null, indicating that no valid values can be obtained.
+ * @method void setType(string $Type) Set The scheme type. Valid values:
+ <li>`Preset`</li>
+<li>`Custom` </li>
+Note: This field may return·null, indicating that no valid values can be obtained.
+ * @method string getStatus() Obtain The scheme status. Valid values:
 `Enabled`
 `Disabled`
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setStatus(array $Status) Set The scheme status. Valid values:
+ * @method void setStatus(string $Status) Set The scheme status. Valid values:
 `Enabled`
 `Disabled`
 Note: This field may return null, indicating that no valid values can be obtained.
@@ -77,7 +85,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $ScheduleName;
 
     /**
-     * @var array The scheme status. Valid values:
+     * @var string The scheme type. Valid values:
+ <li>`Preset`</li>
+<li>`Custom` </li>
+Note: This field may return·null, indicating that no valid values can be obtained.
+     */
+    public $Type;
+
+    /**
+     * @var string The scheme status. Valid values:
 `Enabled`
 `Disabled`
 Note: This field may return null, indicating that no valid values can be obtained.
@@ -130,7 +146,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param integer $ScheduleId The scheme ID.
      * @param string $ScheduleName The scheme name.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param array $Status The scheme status. Valid values:
+     * @param string $Type The scheme type. Valid values:
+ <li>`Preset`</li>
+<li>`Custom` </li>
+Note: This field may return·null, indicating that no valid values can be obtained.
+     * @param string $Status The scheme status. Valid values:
 `Enabled`
 `Disabled`
 Note: This field may return null, indicating that no valid values can be obtained.
@@ -168,6 +188,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("ScheduleName",$param) and $param["ScheduleName"] !== null) {
             $this->ScheduleName = $param["ScheduleName"];
+        }
+
+        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
+            $this->Type = $param["Type"];
         }
 
         if (array_key_exists("Status",$param) and $param["Status"] !== null) {

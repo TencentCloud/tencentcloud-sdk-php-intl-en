@@ -25,9 +25,21 @@ use TencentCloud\Common\AbstractModel;
  * @method TaskOutputStorage getOutputStorage() Obtain The storage location of the media processing output file.
  * @method void setOutputStorage(TaskOutputStorage $OutputStorage) Set The storage location of the media processing output file.
  * @method string getOutputObjectPath() Obtain The path to save the media processing output file.
+
+Note: For complex compositing tasks, the filename can be up to 64 characters long and can only contain digits, letters, and special characters -_
+
  * @method void setOutputObjectPath(string $OutputObjectPath) Set The path to save the media processing output file.
- * @method EditMediaOutputConfig getOutputConfig() Obtain Configuration for output files of video editing
- * @method void setOutputConfig(EditMediaOutputConfig $OutputConfig) Set Configuration for output files of video editing
+
+Note: For complex compositing tasks, the filename can be up to 64 characters long and can only contain digits, letters, and special characters -_
+
+ * @method EditMediaOutputConfig getOutputConfig() Obtain The output settings for a video clipping task.
+ * @method void setOutputConfig(EditMediaOutputConfig $OutputConfig) Set The output settings for a video clipping task.
+ * @method ComposeMediaConfig getComposeConfig() Obtain The settings for a video compositing task.
+
+Note: If this parameter is not empty, the task is a video compositing task. Otherwise, the task is a video clipping task.
+ * @method void setComposeConfig(ComposeMediaConfig $ComposeConfig) Set The settings for a video compositing task.
+
+Note: If this parameter is not empty, the task is a video compositing task. Otherwise, the task is a video clipping task.
  * @method TaskNotifyConfig getTaskNotifyConfig() Obtain Event notification information of task. If this parameter is left empty, no event notifications will be obtained.
  * @method void setTaskNotifyConfig(TaskNotifyConfig $TaskNotifyConfig) Set Event notification information of task. If this parameter is left empty, no event notifications will be obtained.
  * @method integer getTasksPriority() Obtain Task priority. The higher the value, the higher the priority. Value range: -10–10. If this parameter is left empty, 0 will be used.
@@ -51,13 +63,23 @@ class EditMediaRequest extends AbstractModel
 
     /**
      * @var string The path to save the media processing output file.
+
+Note: For complex compositing tasks, the filename can be up to 64 characters long and can only contain digits, letters, and special characters -_
+
      */
     public $OutputObjectPath;
 
     /**
-     * @var EditMediaOutputConfig Configuration for output files of video editing
+     * @var EditMediaOutputConfig The output settings for a video clipping task.
      */
     public $OutputConfig;
+
+    /**
+     * @var ComposeMediaConfig The settings for a video compositing task.
+
+Note: If this parameter is not empty, the task is a video compositing task. Otherwise, the task is a video clipping task.
+     */
+    public $ComposeConfig;
 
     /**
      * @var TaskNotifyConfig Event notification information of task. If this parameter is left empty, no event notifications will be obtained.
@@ -83,7 +105,13 @@ class EditMediaRequest extends AbstractModel
      * @param array $FileInfos Information of input video file.
      * @param TaskOutputStorage $OutputStorage The storage location of the media processing output file.
      * @param string $OutputObjectPath The path to save the media processing output file.
-     * @param EditMediaOutputConfig $OutputConfig Configuration for output files of video editing
+
+Note: For complex compositing tasks, the filename can be up to 64 characters long and can only contain digits, letters, and special characters -_
+
+     * @param EditMediaOutputConfig $OutputConfig The output settings for a video clipping task.
+     * @param ComposeMediaConfig $ComposeConfig The settings for a video compositing task.
+
+Note: If this parameter is not empty, the task is a video compositing task. Otherwise, the task is a video clipping task.
      * @param TaskNotifyConfig $TaskNotifyConfig Event notification information of task. If this parameter is left empty, no event notifications will be obtained.
      * @param integer $TasksPriority Task priority. The higher the value, the higher the priority. Value range: -10–10. If this parameter is left empty, 0 will be used.
      * @param string $SessionId The ID used for deduplication. If there was a request with the same ID in the last three days, the current request will return an error. The ID can contain up to 50 characters. If this parameter is left empty or an empty string is entered, no deduplication will be performed.
@@ -123,6 +151,11 @@ class EditMediaRequest extends AbstractModel
         if (array_key_exists("OutputConfig",$param) and $param["OutputConfig"] !== null) {
             $this->OutputConfig = new EditMediaOutputConfig();
             $this->OutputConfig->deserialize($param["OutputConfig"]);
+        }
+
+        if (array_key_exists("ComposeConfig",$param) and $param["ComposeConfig"] !== null) {
+            $this->ComposeConfig = new ComposeMediaConfig();
+            $this->ComposeConfig->deserialize($param["ComposeConfig"]);
         }
 
         if (array_key_exists("TaskNotifyConfig",$param) and $param["TaskNotifyConfig"] !== null) {
