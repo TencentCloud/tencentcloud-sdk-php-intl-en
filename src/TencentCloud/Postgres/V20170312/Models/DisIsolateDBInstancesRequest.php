@@ -20,29 +20,44 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DisIsolateDBInstances request structure.
  *
- * @method array getDBInstanceIdSet() Obtain List of resource IDs. Note that currently you cannot remove multiple instances from isolation at the same time. Only one instance ID can be passed in here.
- * @method void setDBInstanceIdSet(array $DBInstanceIdSet) Set List of resource IDs. Note that currently you cannot remove multiple instances from isolation at the same time. Only one instance ID can be passed in here.
- * @method integer getPeriod() Obtain The valid period (in months) of the monthly-subscribed instance when removing it from isolation
- * @method void setPeriod(integer $Period) Set The valid period (in months) of the monthly-subscribed instance when removing it from isolation
- * @method boolean getAutoVoucher() Obtain Whether to use vouchers. Valid values: `true` (yes), `false` (no). Default value: `false`.
- * @method void setAutoVoucher(boolean $AutoVoucher) Set Whether to use vouchers. Valid values: `true` (yes), `false` (no). Default value: `false`.
+ * @method array getDBInstanceIdSet() Obtain Instance ID list. Currently, you can't remove multiple instances from isolation in batches. Only one instance ID can be passed in here.
+ * @method void setDBInstanceIdSet(array $DBInstanceIdSet) Set Instance ID list. Currently, you can't remove multiple instances from isolation in batches. Only one instance ID can be passed in here.
+ * @method integer getPeriod() Obtain Validity period in months
+<li>Monthly subscription: `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `24`, `36`.
+<li>Pay-as-you-go: `1`.
+ * @method void setPeriod(integer $Period) Set Validity period in months
+<li>Monthly subscription: `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `24`, `36`.
+<li>Pay-as-you-go: `1`.
+ * @method boolean getAutoVoucher() Obtain Whether to use vouchers. Valid values:
+<li>`true`: Yes.
+u200c<li>`false`: No.
+Default value: `false`.
+ * @method void setAutoVoucher(boolean $AutoVoucher) Set Whether to use vouchers. Valid values:
+<li>`true`: Yes.
+u200c<li>`false`: No.
+Default value: `false`.
  * @method array getVoucherIds() Obtain Voucher ID list
  * @method void setVoucherIds(array $VoucherIds) Set Voucher ID list
  */
 class DisIsolateDBInstancesRequest extends AbstractModel
 {
     /**
-     * @var array List of resource IDs. Note that currently you cannot remove multiple instances from isolation at the same time. Only one instance ID can be passed in here.
+     * @var array Instance ID list. Currently, you can't remove multiple instances from isolation in batches. Only one instance ID can be passed in here.
      */
     public $DBInstanceIdSet;
 
     /**
-     * @var integer The valid period (in months) of the monthly-subscribed instance when removing it from isolation
+     * @var integer Validity period in months
+<li>Monthly subscription: `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `24`, `36`.
+<li>Pay-as-you-go: `1`.
      */
     public $Period;
 
     /**
-     * @var boolean Whether to use vouchers. Valid values: `true` (yes), `false` (no). Default value: `false`.
+     * @var boolean Whether to use vouchers. Valid values:
+<li>`true`: Yes.
+u200c<li>`false`: No.
+Default value: `false`.
      */
     public $AutoVoucher;
 
@@ -52,9 +67,14 @@ class DisIsolateDBInstancesRequest extends AbstractModel
     public $VoucherIds;
 
     /**
-     * @param array $DBInstanceIdSet List of resource IDs. Note that currently you cannot remove multiple instances from isolation at the same time. Only one instance ID can be passed in here.
-     * @param integer $Period The valid period (in months) of the monthly-subscribed instance when removing it from isolation
-     * @param boolean $AutoVoucher Whether to use vouchers. Valid values: `true` (yes), `false` (no). Default value: `false`.
+     * @param array $DBInstanceIdSet Instance ID list. Currently, you can't remove multiple instances from isolation in batches. Only one instance ID can be passed in here.
+     * @param integer $Period Validity period in months
+<li>Monthly subscription: `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `24`, `36`.
+<li>Pay-as-you-go: `1`.
+     * @param boolean $AutoVoucher Whether to use vouchers. Valid values:
+<li>`true`: Yes.
+u200c<li>`false`: No.
+Default value: `false`.
      * @param array $VoucherIds Voucher ID list
      */
     function __construct()

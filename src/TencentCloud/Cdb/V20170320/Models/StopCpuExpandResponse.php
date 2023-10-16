@@ -14,30 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Postgres\V20170312\Models;
+namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeDBErrlogs response structure.
+ * StopCpuExpand response structure.
  *
- * @method integer getTotalCount() Obtain Number of logs returned in a single query. Maximum value: `10000`.
- * @method void setTotalCount(integer $TotalCount) Set Number of logs returned in a single query. Maximum value: `10000`.
- * @method array getDetails() Obtain Detailed sets of error logs
- * @method void setDetails(array $Details) Set Detailed sets of error logs
+ * @method string getAsyncRequestId() Obtain Async task ID, which can be passed in by calling the u200c`DescribeAsyncRequest` API for task progress query.
+ * @method void setAsyncRequestId(string $AsyncRequestId) Set Async task ID, which can be passed in by calling the u200c`DescribeAsyncRequest` API for task progress query.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
-class DescribeDBErrlogsResponse extends AbstractModel
+class StopCpuExpandResponse extends AbstractModel
 {
     /**
-     * @var integer Number of logs returned in a single query. Maximum value: `10000`.
+     * @var string Async task ID, which can be passed in by calling the u200c`DescribeAsyncRequest` API for task progress query.
      */
-    public $TotalCount;
-
-    /**
-     * @var array Detailed sets of error logs
-     */
-    public $Details;
+    public $AsyncRequestId;
 
     /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -45,8 +38,7 @@ class DescribeDBErrlogsResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $TotalCount Number of logs returned in a single query. Maximum value: `10000`.
-     * @param array $Details Detailed sets of error logs
+     * @param string $AsyncRequestId Async task ID, which can be passed in by calling the u200c`DescribeAsyncRequest` API for task progress query.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -62,17 +54,8 @@ class DescribeDBErrlogsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
-        }
-
-        if (array_key_exists("Details",$param) and $param["Details"] !== null) {
-            $this->Details = [];
-            foreach ($param["Details"] as $key => $value){
-                $obj = new ErrLogDetail();
-                $obj->deserialize($value);
-                array_push($this->Details, $obj);
-            }
+        if (array_key_exists("AsyncRequestId",$param) and $param["AsyncRequestId"] !== null) {
+            $this->AsyncRequestId = $param["AsyncRequestId"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

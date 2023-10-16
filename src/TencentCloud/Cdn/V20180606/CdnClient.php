@@ -45,7 +45,6 @@ use TencentCloud\Cdn\V20180606\Models as Models;
 + Aggregate list of 5xx status codes and the details of status codes starting with 5 (in entries)
  * @method Models\DescribeCdnDomainLogsResponse DescribeCdnDomainLogs(Models\DescribeCdnDomainLogsRequest $req) This API is used to query the download link of an access log. You can use this API for access logs in the last 30 days either within or outside Mainland China.
  * @method Models\DescribeCdnIpResponse DescribeCdnIp(Models\DescribeCdnIpRequest $req) This API is used to query CDN IP ownership.
-(Note: the request rate limit of this API is subject to the limit in CDN, which is 200 calls/10 minutes).  
  * @method Models\DescribeCdnOriginIpResponse DescribeCdnOriginIp(Models\DescribeCdnOriginIpRequest $req) This API is used to query the IP information of CDN intermediate nodes. Note: this API will be deactivated soon and no longer be maintained. Please call `DescribeIpStatus` instead.
  * @method Models\DescribeCertDomainsResponse DescribeCertDomains(Models\DescribeCertDomainsRequest $req) This API is used to verify a SSL certificate and obtain its domain names.
  * @method Models\DescribeDomainsResponse DescribeDomains(Models\DescribeDomainsRequest $req) This API is used to query the basic configuration information of CDN acceleration domain names (inside and outside mainland China), including the project ID, service status, service type, creation time, and update time, etc.

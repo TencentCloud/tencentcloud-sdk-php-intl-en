@@ -20,8 +20,12 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyDBInstanceSecurityGroups request structure.
  *
- * @method array getSecurityGroupIdSet() Obtain The list of security groups to be associated with the instance or RO groups
- * @method void setSecurityGroupIdSet(array $SecurityGroupIdSet) Set The list of security groups to be associated with the instance or RO groups
+ * @method array getSecurityGroupIdSet() Obtain The list of security groups to be associated with the instance or RO groups.
+Information of security groups can be obtained from the `sgld` field in the returned value of the [DescribeSecurityGroups](https://intl.cloud.tencent.com/document/api/215/15808?from_cn_redirect=1) API.
+
+ * @method void setSecurityGroupIdSet(array $SecurityGroupIdSet) Set The list of security groups to be associated with the instance or RO groups.
+Information of security groups can be obtained from the `sgld` field in the returned value of the [DescribeSecurityGroups](https://intl.cloud.tencent.com/document/api/215/15808?from_cn_redirect=1) API.
+
  * @method string getDBInstanceId() Obtain Instance ID. Either this parameter or `ReadOnlyGroupId` must be passed in. If both parameters are passed in, `ReadOnlyGroupId` will be ignored.
  * @method void setDBInstanceId(string $DBInstanceId) Set Instance ID. Either this parameter or `ReadOnlyGroupId` must be passed in. If both parameters are passed in, `ReadOnlyGroupId` will be ignored.
  * @method string getReadOnlyGroupId() Obtain RO group ID. Either this parameter or `DBInstanceId` must be passed in. To modify  the security groups associated with the RO groups, only pass in `ReadOnlyGroupId`.
@@ -30,7 +34,9 @@ use TencentCloud\Common\AbstractModel;
 class ModifyDBInstanceSecurityGroupsRequest extends AbstractModel
 {
     /**
-     * @var array The list of security groups to be associated with the instance or RO groups
+     * @var array The list of security groups to be associated with the instance or RO groups.
+Information of security groups can be obtained from the `sgld` field in the returned value of the [DescribeSecurityGroups](https://intl.cloud.tencent.com/document/api/215/15808?from_cn_redirect=1) API.
+
      */
     public $SecurityGroupIdSet;
 
@@ -45,7 +51,9 @@ class ModifyDBInstanceSecurityGroupsRequest extends AbstractModel
     public $ReadOnlyGroupId;
 
     /**
-     * @param array $SecurityGroupIdSet The list of security groups to be associated with the instance or RO groups
+     * @param array $SecurityGroupIdSet The list of security groups to be associated with the instance or RO groups.
+Information of security groups can be obtained from the `sgld` field in the returned value of the [DescribeSecurityGroups](https://intl.cloud.tencent.com/document/api/215/15808?from_cn_redirect=1) API.
+
      * @param string $DBInstanceId Instance ID. Either this parameter or `ReadOnlyGroupId` must be passed in. If both parameters are passed in, `ReadOnlyGroupId` will be ignored.
      * @param string $ReadOnlyGroupId RO group ID. Either this parameter or `DBInstanceId` must be passed in. To modify  the security groups associated with the RO groups, only pass in `ReadOnlyGroupId`.
      */

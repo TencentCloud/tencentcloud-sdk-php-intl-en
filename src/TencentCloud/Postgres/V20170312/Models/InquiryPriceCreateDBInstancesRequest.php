@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getZone() Obtain AZ ID, which can be obtained through the `Zone` field in the returned value of the `DescribeZones` API.
  * @method void setZone(string $Zone) Set AZ ID, which can be obtained through the `Zone` field in the returned value of the `DescribeZones` API.
- * @method string getSpecCode() Obtain Specification ID, which can be obtained through the `SpecCode` field in the returned value of the `DescribeProductConfig` API.
- * @method void setSpecCode(string $SpecCode) Set Specification ID, which can be obtained through the `SpecCode` field in the returned value of the `DescribeProductConfig` API.
+ * @method string getSpecCode() Obtain Specification ID, which can be obtained through the `SpecCode` field in the returned value of the `DescribeClasses` API.
+ * @method void setSpecCode(string $SpecCode) Set Specification ID, which can be obtained through the `SpecCode` field in the returned value of the `DescribeClasses` API.
  * @method integer getStorage() Obtain Storage capacity size in GB.
  * @method void setStorage(integer $Storage) Set Storage capacity size in GB.
  * @method integer getInstanceCount() Obtain Number of instances. Maximum value: 100. If you need to create more instances at a time, please contact customer service.
@@ -51,7 +51,7 @@ class InquiryPriceCreateDBInstancesRequest extends AbstractModel
     public $Zone;
 
     /**
-     * @var string Specification ID, which can be obtained through the `SpecCode` field in the returned value of the `DescribeProductConfig` API.
+     * @var string Specification ID, which can be obtained through the `SpecCode` field in the returned value of the `DescribeClasses` API.
      */
     public $SpecCode;
 
@@ -94,7 +94,7 @@ class InquiryPriceCreateDBInstancesRequest extends AbstractModel
 
     /**
      * @param string $Zone AZ ID, which can be obtained through the `Zone` field in the returned value of the `DescribeZones` API.
-     * @param string $SpecCode Specification ID, which can be obtained through the `SpecCode` field in the returned value of the `DescribeProductConfig` API.
+     * @param string $SpecCode Specification ID, which can be obtained through the `SpecCode` field in the returned value of the `DescribeClasses` API.
      * @param integer $Storage Storage capacity size in GB.
      * @param integer $InstanceCount Number of instances. Maximum value: 100. If you need to create more instances at a time, please contact customer service.
      * @param integer $Period Length of purchase in months. Currently, only 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, and 36 are supported.

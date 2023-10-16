@@ -20,35 +20,35 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeDBErrlogs request structure.
  *
- * @method string getDBInstanceId() Obtain Instance ID in the format of postgres-5bq3wfjd
- * @method void setDBInstanceId(string $DBInstanceId) Set Instance ID in the format of postgres-5bq3wfjd
- * @method string getStartTime() Obtain Query start time in the format of 2018-01-01 00:00:00, which cannot be more than 7 days ago
- * @method void setStartTime(string $StartTime) Set Query start time in the format of 2018-01-01 00:00:00, which cannot be more than 7 days ago
- * @method string getEndTime() Obtain Query end time in the format of 2018-01-01 00:00:00
- * @method void setEndTime(string $EndTime) Set Query end time in the format of 2018-01-01 00:00:00
+ * @method string getDBInstanceId() Obtain Instance ID	
+ * @method void setDBInstanceId(string $DBInstanceId) Set Instance ID	
+ * @method string getStartTime() Obtain u200cu200cu200cQuery start time in the format of 2018-01-01 00:00:00. The log is retained for seven days by default, so the start time must fall within the retention period.	
+ * @method void setStartTime(string $StartTime) Set u200cu200cu200cQuery start time in the format of 2018-01-01 00:00:00. The log is retained for seven days by default, so the start time must fall within the retention period.	
+ * @method string getEndTime() Obtain u200cu200cu200cu200cQuery end time in the format of 2018-01-01 00:00:00	
+ * @method void setEndTime(string $EndTime) Set u200cu200cu200cu200cQuery end time in the format of 2018-01-01 00:00:00	
  * @method string getDatabaseName() Obtain Database name
  * @method void setDatabaseName(string $DatabaseName) Set Database name
- * @method array getSearchKeys() Obtain Search keyword
- * @method void setSearchKeys(array $SearchKeys) Set Search keyword
- * @method integer getLimit() Obtain Number of entries returned per page. Value range: 1-100
- * @method void setLimit(integer $Limit) Set Number of entries returned per page. Value range: 1-100
- * @method integer getOffset() Obtain Page number for data return in paged query. Pagination starts from 0
- * @method void setOffset(integer $Offset) Set Page number for data return in paged query. Pagination starts from 0
+ * @method array getSearchKeys() Obtain Keywords used for search
+ * @method void setSearchKeys(array $SearchKeys) Set Keywords used for search
+ * @method integer getLimit() Obtain Number of results returned per page. Value range: 1-100. Default value: `50`.	
+ * @method void setLimit(integer $Limit) Set Number of results returned per page. Value range: 1-100. Default value: `50`.	
+ * @method integer getOffset() Obtain Data offset, which starts from 0. Default value: `0`.	
+ * @method void setOffset(integer $Offset) Set Data offset, which starts from 0. Default value: `0`.	
  */
 class DescribeDBErrlogsRequest extends AbstractModel
 {
     /**
-     * @var string Instance ID in the format of postgres-5bq3wfjd
+     * @var string Instance ID	
      */
     public $DBInstanceId;
 
     /**
-     * @var string Query start time in the format of 2018-01-01 00:00:00, which cannot be more than 7 days ago
+     * @var string u200cu200cu200cQuery start time in the format of 2018-01-01 00:00:00. The log is retained for seven days by default, so the start time must fall within the retention period.	
      */
     public $StartTime;
 
     /**
-     * @var string Query end time in the format of 2018-01-01 00:00:00
+     * @var string u200cu200cu200cu200cQuery end time in the format of 2018-01-01 00:00:00	
      */
     public $EndTime;
 
@@ -58,28 +58,28 @@ class DescribeDBErrlogsRequest extends AbstractModel
     public $DatabaseName;
 
     /**
-     * @var array Search keyword
+     * @var array Keywords used for search
      */
     public $SearchKeys;
 
     /**
-     * @var integer Number of entries returned per page. Value range: 1-100
+     * @var integer Number of results returned per page. Value range: 1-100. Default value: `50`.	
      */
     public $Limit;
 
     /**
-     * @var integer Page number for data return in paged query. Pagination starts from 0
+     * @var integer Data offset, which starts from 0. Default value: `0`.	
      */
     public $Offset;
 
     /**
-     * @param string $DBInstanceId Instance ID in the format of postgres-5bq3wfjd
-     * @param string $StartTime Query start time in the format of 2018-01-01 00:00:00, which cannot be more than 7 days ago
-     * @param string $EndTime Query end time in the format of 2018-01-01 00:00:00
+     * @param string $DBInstanceId Instance ID	
+     * @param string $StartTime u200cu200cu200cQuery start time in the format of 2018-01-01 00:00:00. The log is retained for seven days by default, so the start time must fall within the retention period.	
+     * @param string $EndTime u200cu200cu200cu200cQuery end time in the format of 2018-01-01 00:00:00	
      * @param string $DatabaseName Database name
-     * @param array $SearchKeys Search keyword
-     * @param integer $Limit Number of entries returned per page. Value range: 1-100
-     * @param integer $Offset Page number for data return in paged query. Pagination starts from 0
+     * @param array $SearchKeys Keywords used for search
+     * @param integer $Limit Number of results returned per page. Value range: 1-100. Default value: `50`.	
+     * @param integer $Offset Data offset, which starts from 0. Default value: `0`.	
      */
     function __construct()
     {

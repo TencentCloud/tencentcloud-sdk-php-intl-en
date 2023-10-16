@@ -40,8 +40,8 @@ use TencentCloud\Common\AbstractModel;
 `timestamp`: Timestamp,
 `affectRows`: Number of affected rows,
 `execTime`: Execution time.
- * @method array getLogFilter() Obtain Filter, which can be used to filter logs.
- * @method void setLogFilter(array $LogFilter) Set Filter, which can be used to filter logs.
+ * @method array getLogFilter() Obtain Filter. Multiple values are in `AND` relationship.
+ * @method void setLogFilter(array $LogFilter) Set Filter. Multiple values are in `AND` relationship.
  */
 class DescribeAuditLogsRequest extends AbstractModel
 {
@@ -84,7 +84,7 @@ class DescribeAuditLogsRequest extends AbstractModel
     public $OrderBy;
 
     /**
-     * @var array Filter, which can be used to filter logs.
+     * @var array Filter. Multiple values are in `AND` relationship.
      */
     public $LogFilter;
 
@@ -99,7 +99,7 @@ class DescribeAuditLogsRequest extends AbstractModel
 `timestamp`: Timestamp,
 `affectRows`: Number of affected rows,
 `execTime`: Execution time.
-     * @param array $LogFilter Filter, which can be used to filter logs.
+     * @param array $LogFilter Filter. Multiple values are in `AND` relationship.
      */
     function __construct()
     {

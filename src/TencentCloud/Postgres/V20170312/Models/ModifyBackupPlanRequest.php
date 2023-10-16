@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMinBackupStartTime(string $MinBackupStartTime) Set The earliest time to start a backup
  * @method string getMaxBackupStartTime() Obtain The latest time to start a backup
  * @method void setMaxBackupStartTime(string $MaxBackupStartTime) Set The latest time to start a backup
- * @method integer getBaseBackupRetentionPeriod() Obtain Backup retention period in days. Value range: 3-7
- * @method void setBaseBackupRetentionPeriod(integer $BaseBackupRetentionPeriod) Set Backup retention period in days. Value range: 3-7
+ * @method integer getBaseBackupRetentionPeriod() Obtain Backup retention period in days. Value range: 7-1830
+ * @method void setBaseBackupRetentionPeriod(integer $BaseBackupRetentionPeriod) Set Backup retention period in days. Value range: 7-1830
  * @method array getBackupPeriod() Obtain Backup cycle, which means on which days each week the instance will be backed up. The parameter value should be the lowercase names of the days of the week.
  * @method void setBackupPeriod(array $BackupPeriod) Set Backup cycle, which means on which days each week the instance will be backed up. The parameter value should be the lowercase names of the days of the week.
  */
@@ -49,7 +49,7 @@ class ModifyBackupPlanRequest extends AbstractModel
     public $MaxBackupStartTime;
 
     /**
-     * @var integer Backup retention period in days. Value range: 3-7
+     * @var integer Backup retention period in days. Value range: 7-1830
      */
     public $BaseBackupRetentionPeriod;
 
@@ -62,7 +62,7 @@ class ModifyBackupPlanRequest extends AbstractModel
      * @param string $DBInstanceId Instance ID
      * @param string $MinBackupStartTime The earliest time to start a backup
      * @param string $MaxBackupStartTime The latest time to start a backup
-     * @param integer $BaseBackupRetentionPeriod Backup retention period in days. Value range: 3-7
+     * @param integer $BaseBackupRetentionPeriod Backup retention period in days. Value range: 7-1830
      * @param array $BackupPeriod Backup cycle, which means on which days each week the instance will be backed up. The parameter value should be the lowercase names of the days of the week.
      */
     function __construct()

@@ -18,35 +18,19 @@ namespace TencentCloud\Postgres\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeDBErrlogs response structure.
+ * SwitchDBInstancePrimary response structure.
  *
- * @method integer getTotalCount() Obtain Number of logs returned in a single query. Maximum value: `10000`.
- * @method void setTotalCount(integer $TotalCount) Set Number of logs returned in a single query. Maximum value: `10000`.
- * @method array getDetails() Obtain Detailed sets of error logs
- * @method void setDetails(array $Details) Set Detailed sets of error logs
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
-class DescribeDBErrlogsResponse extends AbstractModel
+class SwitchDBInstancePrimaryResponse extends AbstractModel
 {
-    /**
-     * @var integer Number of logs returned in a single query. Maximum value: `10000`.
-     */
-    public $TotalCount;
-
-    /**
-     * @var array Detailed sets of error logs
-     */
-    public $Details;
-
     /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
 
     /**
-     * @param integer $TotalCount Number of logs returned in a single query. Maximum value: `10000`.
-     * @param array $Details Detailed sets of error logs
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -62,19 +46,6 @@ class DescribeDBErrlogsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
-        }
-
-        if (array_key_exists("Details",$param) and $param["Details"] !== null) {
-            $this->Details = [];
-            foreach ($param["Details"] as $key => $value){
-                $obj = new ErrLogDetail();
-                $obj->deserialize($value);
-                array_push($this->Details, $obj);
-            }
-        }
-
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
             $this->RequestId = $param["RequestId"];
         }

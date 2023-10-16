@@ -85,6 +85,7 @@ This is an async API. You can also use the [DescribeDBInstances](https://intl.cl
  * @method Models\DescribeCdbProxyInfoResponse DescribeCdbProxyInfo(Models\DescribeCdbProxyInfoRequest $req) This API is used to query the details of a database proxy.
  * @method Models\DescribeCdbZoneConfigResponse DescribeCdbZoneConfig(Models\DescribeCdbZoneConfigRequest $req) This API is used to query the purchasable specifications of TencentDB instances in a region.
  * @method Models\DescribeCloneListResponse DescribeCloneList(Models\DescribeCloneListRequest $req) This API is used to query the clone task list of an instance.
+ * @method Models\DescribeCpuExpandStrategyResponse DescribeCpuExpandStrategy(Models\DescribeCpuExpandStrategyRequest $req) This API is used to query the elastic expansion policy of an instance.
  * @method Models\DescribeDBFeaturesResponse DescribeDBFeatures(Models\DescribeDBFeaturesRequest $req) This API is used to query database version attributes, including supported features such as database encryption and audit.
  * @method Models\DescribeDBImportRecordsResponse DescribeDBImportRecords(Models\DescribeDBImportRecordsRequest $req) This API (DescribeDBImportRecords) is used to query the records of import tasks in a TencentDB instance.
  * @method Models\DescribeDBInstanceCharsetResponse DescribeDBInstanceCharset(Models\DescribeDBInstanceCharsetRequest $req) This API (DescribeDBInstanceCharset) is used to query the character set and its name of a TencentDB instance.
@@ -191,7 +192,9 @@ Note:
 1. This API only supports restarting primary instances.
 2. The instance status must be normal, and no other async tasks are in progress.
  * @method Models\StartBatchRollbackResponse StartBatchRollback(Models\StartBatchRollbackRequest $req) This API (StartBatchRollback) is used to roll back the tables of a TencentDB instance in batches.
+ * @method Models\StartCpuExpandResponse StartCpuExpand(Models\StartCpuExpandRequest $req) u200cThis API is used to enable elastic CPU expansion manually or automatically.
  * @method Models\StartReplicationResponse StartReplication(Models\StartReplicationRequest $req) This API is used to start the data replication from the source instance to the read-only instance.
+ * @method Models\StopCpuExpandResponse StopCpuExpand(Models\StopCpuExpandRequest $req) This API is used to disable elastic CPU expansion.
  * @method Models\StopDBImportJobResponse StopDBImportJob(Models\StopDBImportJobRequest $req) This API (StopDBImportJob) is used to stop a data import task.
  * @method Models\StopReplicationResponse StopReplication(Models\StopReplicationRequest $req) This API is used to stop the data replication from the source instance to the read-only instance.
  * @method Models\StopRollbackResponse StopRollback(Models\StopRollbackRequest $req) This API is used to cancel a rollback task in progress, and returns an async task ID. You can use the `DescribeAsyncRequestInfo` API to query the result of cancellation.

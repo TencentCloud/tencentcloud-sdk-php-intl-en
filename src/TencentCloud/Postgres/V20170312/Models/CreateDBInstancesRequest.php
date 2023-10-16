@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateDBInstances request structure.
  *
- * @method string getSpecCode() Obtain Purchasable specification ID, which can be obtained through the `SpecCode` field in the returned value of the `DescribeProductConfig` API.
- * @method void setSpecCode(string $SpecCode) Set Purchasable specification ID, which can be obtained through the `SpecCode` field in the returned value of the `DescribeProductConfig` API.
+ * @method string getSpecCode() Obtain Purchasable specification ID, which can be obtained through the `SpecCode` field in the returned value of the `DescribeClasses` API.
+ * @method void setSpecCode(string $SpecCode) Set Purchasable specification ID, which can be obtained through the `SpecCode` field in the returned value of the `DescribeClasses` API.
  * @method integer getStorage() Obtain Instance capacity size in GB.
  * @method void setStorage(integer $Storage) Set Instance capacity size in GB.
  * @method integer getInstanceCount() Obtain Number of instances purchased at a time. Value range: 1-100.
@@ -64,7 +64,7 @@ use TencentCloud\Common\AbstractModel;
 class CreateDBInstancesRequest extends AbstractModel
 {
     /**
-     * @var string Purchasable specification ID, which can be obtained through the `SpecCode` field in the returned value of the `DescribeProductConfig` API.
+     * @var string Purchasable specification ID, which can be obtained through the `SpecCode` field in the returned value of the `DescribeClasses` API.
      */
     public $SpecCode;
 
@@ -164,7 +164,7 @@ class CreateDBInstancesRequest extends AbstractModel
     public $DBKernelVersion;
 
     /**
-     * @param string $SpecCode Purchasable specification ID, which can be obtained through the `SpecCode` field in the returned value of the `DescribeProductConfig` API.
+     * @param string $SpecCode Purchasable specification ID, which can be obtained through the `SpecCode` field in the returned value of the `DescribeClasses` API.
      * @param integer $Storage Instance capacity size in GB.
      * @param integer $InstanceCount Number of instances purchased at a time. Value range: 1-100.
      * @param integer $Period Length of purchase in months. Currently, only 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, and 36 are supported.
