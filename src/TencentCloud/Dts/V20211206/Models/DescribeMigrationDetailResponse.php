@@ -98,6 +98,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setErrorInfo(array $ErrorInfo) Set Task error information
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getDumperResumeCtrl() Obtain Whether the task can be reentered in the full export stage. Valid values: `yes`, `no`. `yes`: The current task can be reentered. `no`: The current task is in the full export stage which cannot be reentered. If the value of this parameter is `no`, the checkpoint restart is not supported when the task is restarted in the export stage.
+ * @method void setDumperResumeCtrl(string $DumperResumeCtrl) Set Whether the task can be reentered in the full export stage. Valid values: `yes`, `no`. `yes`: The current task can be reentered. `no`: The current task is in the full export stage which cannot be reentered. If the value of this parameter is `no`, the checkpoint restart is not supported when the task is restarted in the export stage.
+ * @method RateLimitOption getRateLimitOption() Obtain Task throttling information
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+ * @method void setRateLimitOption(RateLimitOption $RateLimitOption) Set Task throttling information
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -223,6 +229,17 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $ErrorInfo;
 
     /**
+     * @var string Whether the task can be reentered in the full export stage. Valid values: `yes`, `no`. `yes`: The current task can be reentered. `no`: The current task is in the full export stage which cannot be reentered. If the value of this parameter is `no`, the checkpoint restart is not supported when the task is restarted in the export stage.
+     */
+    public $DumperResumeCtrl;
+
+    /**
+     * @var RateLimitOption Task throttling information
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+     */
+    public $RateLimitOption;
+
+    /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
@@ -267,6 +284,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param array $ErrorInfo Task error information
 Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $DumperResumeCtrl Whether the task can be reentered in the full export stage. Valid values: `yes`, `no`. `yes`: The current task can be reentered. `no`: The current task is in the full export stage which cannot be reentered. If the value of this parameter is `no`, the checkpoint restart is not supported when the task is restarted in the export stage.
+     * @param RateLimitOption $RateLimitOption Task throttling information
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -378,6 +398,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 $obj->deserialize($value);
                 array_push($this->ErrorInfo, $obj);
             }
+        }
+
+        if (array_key_exists("DumperResumeCtrl",$param) and $param["DumperResumeCtrl"] !== null) {
+            $this->DumperResumeCtrl = $param["DumperResumeCtrl"];
+        }
+
+        if (array_key_exists("RateLimitOption",$param) and $param["RateLimitOption"] !== null) {
+            $this->RateLimitOption = new RateLimitOption();
+            $this->RateLimitOption->deserialize($param["RateLimitOption"]);
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

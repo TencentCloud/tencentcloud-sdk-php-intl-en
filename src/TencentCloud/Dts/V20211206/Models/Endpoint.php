@@ -124,6 +124,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setDatabaseNetEnv(string $DatabaseNetEnv) Set Network environment of the database. This parameter is required when `AccessType` is `ccn`. Valid values: `UserIDC` (user IDC), `TencentVPC` (Tencent Cloud VPC).
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getCcnOwnerUin() Obtain The root account of CCN in the scenario where the database is connected to CCN under another Tencent Cloud account
+Note: u200dThis field may return `null`, indicating that no valid values can be obtained.
+ * @method void setCcnOwnerUin(string $CcnOwnerUin) Set The root account of CCN in the scenario where the database is connected to CCN under another Tencent Cloud account
+Note: u200dThis field may return `null`, indicating that no valid values can be obtained.
  */
 class Endpoint extends AbstractModel
 {
@@ -284,6 +288,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $DatabaseNetEnv;
 
     /**
+     * @var string The root account of CCN in the scenario where the database is connected to CCN under another Tencent Cloud account
+Note: u200dThis field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $CcnOwnerUin;
+
+    /**
      * @param string $Region Region name, such as `ap-guangzhou`.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $Role Node type of TDSQL for MySQL. Enumerated values: `proxy`, `set`.
@@ -336,6 +346,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $DatabaseNetEnv Network environment of the database. This parameter is required when `AccessType` is `ccn`. Valid values: `UserIDC` (user IDC), `TencentVPC` (Tencent Cloud VPC).
 Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $CcnOwnerUin The root account of CCN in the scenario where the database is connected to CCN under another Tencent Cloud account
+Note: u200dThis field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -452,6 +464,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("DatabaseNetEnv",$param) and $param["DatabaseNetEnv"] !== null) {
             $this->DatabaseNetEnv = $param["DatabaseNetEnv"];
+        }
+
+        if (array_key_exists("CcnOwnerUin",$param) and $param["CcnOwnerUin"] !== null) {
+            $this->CcnOwnerUin = $param["CcnOwnerUin"];
         }
     }
 }

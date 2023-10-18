@@ -32,10 +32,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setProgress(integer $Progress) Set Overall progress
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getCurrentStepProgress() Obtain Progress of the current step
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setCurrentStepProgress(integer $CurrentStepProgress) Set Progress of the current step
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getCurrentStepProgress() Obtain Progress of the current step. Value range: 0-100. The value of `-1` indicates that you can't check the progress of the current step.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+ * @method void setCurrentStepProgress(integer $CurrentStepProgress) Set Progress of the current step. Value range: 0-100. The value of `-1` indicates that you can't check the progress of the current step.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
  * @method integer getMasterSlaveDistance() Obtain Data volume difference between the sync source and target
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setMasterSlaveDistance(integer $MasterSlaveDistance) Set Data volume difference between the sync source and target
@@ -56,6 +56,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setCauseOfCompareDisable(string $CauseOfCompareDisable) Set Cause of the failure of initiating data consistency check
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method ErrInfo getErrInfo() Obtain Task error and the corresponding solution
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+ * @method void setErrInfo(ErrInfo $ErrInfo) Set Task error and the corresponding solution
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
  */
 class SyncDetailInfo extends AbstractModel
 {
@@ -78,8 +82,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $Progress;
 
     /**
-     * @var integer Progress of the current step
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Progress of the current step. Value range: 0-100. The value of `-1` indicates that you can't check the progress of the current step.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
      */
     public $CurrentStepProgress;
 
@@ -114,14 +118,20 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $CauseOfCompareDisable;
 
     /**
+     * @var ErrInfo Task error and the corresponding solution
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+     */
+    public $ErrInfo;
+
+    /**
      * @param integer $StepAll Total number of steps
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $StepNow Current step
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $Progress Overall progress
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $CurrentStepProgress Progress of the current step
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $CurrentStepProgress Progress of the current step. Value range: 0-100. The value of `-1` indicates that you can't check the progress of the current step.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
      * @param integer $MasterSlaveDistance Data volume difference between the sync source and target
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $SecondsBehindMaster Time difference between the sync source and target
@@ -132,6 +142,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $CauseOfCompareDisable Cause of the failure of initiating data consistency check
 Note: This field may return null, indicating that no valid values can be obtained.
+     * @param ErrInfo $ErrInfo Task error and the corresponding solution
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -185,6 +197,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("CauseOfCompareDisable",$param) and $param["CauseOfCompareDisable"] !== null) {
             $this->CauseOfCompareDisable = $param["CauseOfCompareDisable"];
+        }
+
+        if (array_key_exists("ErrInfo",$param) and $param["ErrInfo"] !== null) {
+            $this->ErrInfo = new ErrInfo();
+            $this->ErrInfo->deserialize($param["ErrInfo"]);
         }
     }
 }

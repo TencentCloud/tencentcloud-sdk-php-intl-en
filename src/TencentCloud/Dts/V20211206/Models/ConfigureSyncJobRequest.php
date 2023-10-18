@@ -48,8 +48,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDstInfos(SyncDBEndpointInfos $DstInfos) Set Target database information. This parameter is valid for multi-node databases, and the value of `DstNodeType` must be `cluster`.
  * @method string getDstNodeType() Obtain Enumerated values: `single` (for single-node target database), `cluster` (for multi-node target database).
  * @method void setDstNodeType(string $DstNodeType) Set Enumerated values: `single` (for single-node target database), `cluster` (for multi-node target database).
- * @method Options getOptions() Obtain Sync task options
- * @method void setOptions(Options $Options) Set Sync task options
+ * @method Options getOptions() Obtain Sync task options. The `RateLimitOption` option cannot take effect currently. To modify the speed limit settings, use the `ModifySyncRateLimit` API.
+ * @method void setOptions(Options $Options) Set Sync task options. The `RateLimitOption` option cannot take effect currently. To modify the speed limit settings, use the `ModifySyncRateLimit` API.
  * @method integer getAutoRetryTimeRangeMinutes() Obtain Automatic retry time, which can be set to 5-720 minutes. 0 indicates that retry is disabled.
  * @method void setAutoRetryTimeRangeMinutes(integer $AutoRetryTimeRangeMinutes) Set Automatic retry time, which can be set to 5-720 minutes. 0 indicates that retry is disabled.
  */
@@ -126,7 +126,7 @@ class ConfigureSyncJobRequest extends AbstractModel
     public $DstNodeType;
 
     /**
-     * @var Options Sync task options
+     * @var Options Sync task options. The `RateLimitOption` option cannot take effect currently. To modify the speed limit settings, use the `ModifySyncRateLimit` API.
      */
     public $Options;
 
@@ -150,7 +150,7 @@ class ConfigureSyncJobRequest extends AbstractModel
      * @param Endpoint $DstInfo Target database information. This parameter is used by single-node databases.
      * @param SyncDBEndpointInfos $DstInfos Target database information. This parameter is valid for multi-node databases, and the value of `DstNodeType` must be `cluster`.
      * @param string $DstNodeType Enumerated values: `single` (for single-node target database), `cluster` (for multi-node target database).
-     * @param Options $Options Sync task options
+     * @param Options $Options Sync task options. The `RateLimitOption` option cannot take effect currently. To modify the speed limit settings, use the `ModifySyncRateLimit` API.
      * @param integer $AutoRetryTimeRangeMinutes Automatic retry time, which can be set to 5-720 minutes. 0 indicates that retry is disabled.
      */
     function __construct()

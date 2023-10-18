@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setJobId(string $JobId) Set Task ID
  * @method string getRunMode() Obtain Running mode. Valid values: `immediate`, `timed`.
  * @method void setRunMode(string $RunMode) Set Running mode. Valid values: `immediate`, `timed`.
- * @method MigrateOption getMigrateOption() Obtain Migration task configuration options, which describe how the task performs migration.
- * @method void setMigrateOption(MigrateOption $MigrateOption) Set Migration task configuration options, which describe how the task performs migration.
+ * @method MigrateOption getMigrateOption() Obtain Migration task configuration options, which describe how the task performs migration. The `RateLimitOption` option cannot be configured. To modify the speed limit settings of the task, use the `ModifyMigrateRateLimit` API after the task starts running.
+ * @method void setMigrateOption(MigrateOption $MigrateOption) Set Migration task configuration options, which describe how the task performs migration. The `RateLimitOption` option cannot be configured. To modify the speed limit settings of the task, use the `ModifyMigrateRateLimit` API after the task starts running.
  * @method DBEndpointInfo getSrcInfo() Obtain Source instance information
  * @method void setSrcInfo(DBEndpointInfo $SrcInfo) Set Source instance information
  * @method DBEndpointInfo getDstInfo() Obtain Target instance information
@@ -52,7 +52,7 @@ class ModifyMigrationJobRequest extends AbstractModel
     public $RunMode;
 
     /**
-     * @var MigrateOption Migration task configuration options, which describe how the task performs migration.
+     * @var MigrateOption Migration task configuration options, which describe how the task performs migration. The `RateLimitOption` option cannot be configured. To modify the speed limit settings of the task, use the `ModifyMigrateRateLimit` API after the task starts running.
      */
     public $MigrateOption;
 
@@ -89,7 +89,7 @@ class ModifyMigrationJobRequest extends AbstractModel
     /**
      * @param string $JobId Task ID
      * @param string $RunMode Running mode. Valid values: `immediate`, `timed`.
-     * @param MigrateOption $MigrateOption Migration task configuration options, which describe how the task performs migration.
+     * @param MigrateOption $MigrateOption Migration task configuration options, which describe how the task performs migration. The `RateLimitOption` option cannot be configured. To modify the speed limit settings of the task, use the `ModifyMigrateRateLimit` API after the task starts running.
      * @param DBEndpointInfo $SrcInfo Source instance information
      * @param DBEndpointInfo $DstInfo Target instance information
      * @param string $JobName Migration task name, which can contain up to 128 characters.

@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEndTime(string $EndTime) Set End time of the time range in the format of yyyy-MM-dd HH:mm:ss, such as 2019-09-10 12:13:14.
  * @method string getProduct() Obtain Service type. Valid values: mysql (TencentDB for MySQL), cynosdb (TDSQL-C for MySQL). Default value: mysql.
  * @method void setProduct(string $Product) Set Service type. Valid values: mysql (TencentDB for MySQL), cynosdb (TDSQL-C for MySQL). Default value: mysql.
- * @method string getMd5() Obtain MD5 value of SOL template
- * @method void setMd5(string $Md5) Set MD5 value of SOL template
+ * @method string getMd5() Obtain MD5 value of the SQL template
+ * @method void setMd5(string $Md5) Set MD5 value of the SQL template
  */
 class DescribeSlowLogUserHostStatsRequest extends AbstractModel
 {
@@ -54,7 +54,7 @@ class DescribeSlowLogUserHostStatsRequest extends AbstractModel
     public $Product;
 
     /**
-     * @var string MD5 value of SOL template
+     * @var string MD5 value of the SQL template
      */
     public $Md5;
 
@@ -63,7 +63,7 @@ class DescribeSlowLogUserHostStatsRequest extends AbstractModel
      * @param string $StartTime Start time of the time range in the format of yyyy-MM-dd HH:mm:ss, such as 2019-09-10 12:13:14.
      * @param string $EndTime End time of the time range in the format of yyyy-MM-dd HH:mm:ss, such as 2019-09-10 12:13:14.
      * @param string $Product Service type. Valid values: mysql (TencentDB for MySQL), cynosdb (TDSQL-C for MySQL). Default value: mysql.
-     * @param string $Md5 MD5 value of SOL template
+     * @param string $Md5 MD5 value of the SQL template
      */
     function __construct()
     {

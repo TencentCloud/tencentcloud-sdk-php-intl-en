@@ -52,6 +52,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setKafkaOption(KafkaOption $KafkaOption) Set Kafka sync options
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method RateLimitOption getRateLimitOption() Obtain Task speed limit information. This parameter can only be used as an output parameter.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+ * @method void setRateLimitOption(RateLimitOption $RateLimitOption) Set Task speed limit information. This parameter can only be used as an output parameter.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+ * @method integer getAutoRetryTimeRangeMinutes() Obtain Settings of the automatic retry time range
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+ * @method void setAutoRetryTimeRangeMinutes(integer $AutoRetryTimeRangeMinutes) Set Settings of the automatic retry time range
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
  */
 class Options extends AbstractModel
 {
@@ -104,6 +112,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $KafkaOption;
 
     /**
+     * @var RateLimitOption Task speed limit information. This parameter can only be used as an output parameter.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+     */
+    public $RateLimitOption;
+
+    /**
+     * @var integer Settings of the automatic retry time range
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+     */
+    public $AutoRetryTimeRangeMinutes;
+
+    /**
      * @param string $InitType Sync initialization option. Valid values: `data` (full data initialization); `Structure` (structure initialization); `Full` (full data and structure initialization); `None` (incremental data only). Default value: `Full`.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $DealOfExistSameTable Processing method for duplicate tables. Valid values: `ReportErrorAfterCheck`, `InitializeAfterDelete`, `ExecuteAfterIgnore`. Default value: `ReportErrorAfterCheck`.
@@ -120,6 +140,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param KafkaOption $KafkaOption Kafka sync options
 Note: This field may return null, indicating that no valid values can be obtained.
+     * @param RateLimitOption $RateLimitOption Task speed limit information. This parameter can only be used as an output parameter.
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+     * @param integer $AutoRetryTimeRangeMinutes Settings of the automatic retry time range
+Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -171,6 +195,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (array_key_exists("KafkaOption",$param) and $param["KafkaOption"] !== null) {
             $this->KafkaOption = new KafkaOption();
             $this->KafkaOption->deserialize($param["KafkaOption"]);
+        }
+
+        if (array_key_exists("RateLimitOption",$param) and $param["RateLimitOption"] !== null) {
+            $this->RateLimitOption = new RateLimitOption();
+            $this->RateLimitOption->deserialize($param["RateLimitOption"]);
+        }
+
+        if (array_key_exists("AutoRetryTimeRangeMinutes",$param) and $param["AutoRetryTimeRangeMinutes"] !== null) {
+            $this->AutoRetryTimeRangeMinutes = $param["AutoRetryTimeRangeMinutes"];
         }
     }
 }
