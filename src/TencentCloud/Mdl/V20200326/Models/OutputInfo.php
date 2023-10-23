@@ -38,6 +38,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return `null`, indicating that no valid value was found.
  * @method void setAVTemplateNames(array $AVTemplateNames) Set Audio/Video transcoding template name. If `HlsRemuxSettings.Scheme` is `MERGE`, there is 1 audio/video transcoding template. Otherwise, this parameter is empty.
 Note: this field may return `null`, indicating that no valid value was found.
+ * @method TimedMetadataSettingInfo getTimedMetadataSettings() Obtain Meta information controls configuration.
+ * @method void setTimedMetadataSettings(TimedMetadataSettingInfo $TimedMetadataSettings) Set Meta information controls configuration.
  */
 class OutputInfo extends AbstractModel
 {
@@ -71,6 +73,11 @@ Note: this field may return `null`, indicating that no valid value was found.
     public $AVTemplateNames;
 
     /**
+     * @var TimedMetadataSettingInfo Meta information controls configuration.
+     */
+    public $TimedMetadataSettings;
+
+    /**
      * @param string $Name Output name.
      * @param array $AudioTemplateNames Audio transcoding template name array.
 Quantity limit: [0,1] for RTMP; [0,20] for others.
@@ -80,6 +87,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @param Scte35SettingsInfo $Scte35Settings SCTE-35 information configuration.
      * @param array $AVTemplateNames Audio/Video transcoding template name. If `HlsRemuxSettings.Scheme` is `MERGE`, there is 1 audio/video transcoding template. Otherwise, this parameter is empty.
 Note: this field may return `null`, indicating that no valid value was found.
+     * @param TimedMetadataSettingInfo $TimedMetadataSettings Meta information controls configuration.
      */
     function __construct()
     {
@@ -113,6 +121,11 @@ Note: this field may return `null`, indicating that no valid value was found.
 
         if (array_key_exists("AVTemplateNames",$param) and $param["AVTemplateNames"] !== null) {
             $this->AVTemplateNames = $param["AVTemplateNames"];
+        }
+
+        if (array_key_exists("TimedMetadataSettings",$param) and $param["TimedMetadataSettings"] !== null) {
+            $this->TimedMetadataSettings = new TimedMetadataSettingInfo();
+            $this->TimedMetadataSettings->deserialize($param["TimedMetadataSettings"]);
         }
     }
 }
