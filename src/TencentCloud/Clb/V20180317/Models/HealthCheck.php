@@ -51,10 +51,10 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setHttpCheckPath(string $HttpCheckPath) Set Health check path (applicable only to HTTP/HTTPS forwarding rules and HTTP health checks of TCP listeners).
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getHttpCheckDomain() Obtain Health check domain name. It is only applicable to HTTP/HTTPS forwarding rules and HTTP health checks of TCP listeners. For HTTP health checks of TCP listeners, this parameter is required.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
- * @method void setHttpCheckDomain(string $HttpCheckDomain) Set Health check domain name. It is only applicable to HTTP/HTTPS forwarding rules and HTTP health checks of TCP listeners. For HTTP health checks of TCP listeners, this parameter is required.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+ * @method string getHttpCheckDomain() Obtain Health check domain name. It’s applicable only to HTTP/HTTPS forwarding rules and HTTP health checks of TCP listeners. It’s required for HTTP health check of TCP listeners.
+Note: This field may return·null, indicating that no valid values can be obtained.
+ * @method void setHttpCheckDomain(string $HttpCheckDomain) Set Health check domain name. It’s applicable only to HTTP/HTTPS forwarding rules and HTTP health checks of TCP listeners. It’s required for HTTP health check of TCP listeners.
+Note: This field may return·null, indicating that no valid values can be obtained.
  * @method string getHttpCheckMethod() Obtain Health check method (applicable only to HTTP/HTTPS forwarding rules and HTTP health checks of TCP listeners). Value range: HEAD, GET. Default value: HEAD.
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setHttpCheckMethod(string $HttpCheckMethod) Set Health check method (applicable only to HTTP/HTTPS forwarding rules and HTTP health checks of TCP listeners). Value range: HEAD, GET. Default value: HEAD.
@@ -138,8 +138,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $HttpCheckPath;
 
     /**
-     * @var string Health check domain name. It is only applicable to HTTP/HTTPS forwarding rules and HTTP health checks of TCP listeners. For HTTP health checks of TCP listeners, this parameter is required.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+     * @var string Health check domain name. It’s applicable only to HTTP/HTTPS forwarding rules and HTTP health checks of TCP listeners. It’s required for HTTP health check of TCP listeners.
+Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public $HttpCheckDomain;
 
@@ -213,8 +213,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return `null`, indicating that no valid values can be obtained.
      * @param string $HttpCheckPath Health check path (applicable only to HTTP/HTTPS forwarding rules and HTTP health checks of TCP listeners).
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $HttpCheckDomain Health check domain name. It is only applicable to HTTP/HTTPS forwarding rules and HTTP health checks of TCP listeners. For HTTP health checks of TCP listeners, this parameter is required.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+     * @param string $HttpCheckDomain Health check domain name. It’s applicable only to HTTP/HTTPS forwarding rules and HTTP health checks of TCP listeners. It’s required for HTTP health check of TCP listeners.
+Note: This field may return·null, indicating that no valid values can be obtained.
      * @param string $HttpCheckMethod Health check method (applicable only to HTTP/HTTPS forwarding rules and HTTP health checks of TCP listeners). Value range: HEAD, GET. Default value: HEAD.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $CheckPort Health check port (a custom check parameter), which is the port of the real server by default. Unless you want to specify a port, it is recommended to leave it empty. (Applicable only to TCP/UDP listeners.)

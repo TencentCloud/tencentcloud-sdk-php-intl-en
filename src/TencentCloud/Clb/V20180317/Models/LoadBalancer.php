@@ -228,6 +228,10 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setLoadBalancerDomain(string $LoadBalancerDomain) Set Domain name of the CLB instance.
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getEgress() Obtain Network egress
+Note: This field may return·null, indicating that no valid values can be obtained.
+ * @method void setEgress(string $Egress) Set Network egress
+Note: This field may return·null, indicating that no valid values can be obtained.
  */
 class LoadBalancer extends AbstractModel
 {
@@ -552,6 +556,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $LoadBalancerDomain;
 
     /**
+     * @var string Network egress
+Note: This field may return·null, indicating that no valid values can be obtained.
+     */
+    public $Egress;
+
+    /**
      * @param string $LoadBalancerId CLB instance ID.
      * @param string $LoadBalancerName CLB instance name.
      * @param string $LoadBalancerType CLB instance network type:
@@ -656,6 +666,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param string $LoadBalancerDomain Domain name of the CLB instance.
 Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $Egress Network egress
+Note: This field may return·null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -905,6 +917,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("LoadBalancerDomain",$param) and $param["LoadBalancerDomain"] !== null) {
             $this->LoadBalancerDomain = $param["LoadBalancerDomain"];
+        }
+
+        if (array_key_exists("Egress",$param) and $param["Egress"] !== null) {
+            $this->Egress = $param["Egress"];
         }
     }
 }

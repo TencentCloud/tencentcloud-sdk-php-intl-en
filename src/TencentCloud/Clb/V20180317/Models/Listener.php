@@ -42,10 +42,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setSessionExpireTime(integer $SessionExpireTime) Set Session persistence time
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getSniSwitch() Obtain Whether to enable the SNI feature (this parameter is only meaningful for HTTPS listeners)
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setSniSwitch(integer $SniSwitch) Set Whether to enable the SNI feature (this parameter is only meaningful for HTTPS listeners)
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getSniSwitch() Obtain Whether to enable SNI. `1`: Enable; `0`: Do not enable. This parameter is only meaningful for HTTPS listeners.
+Note: This field may return·null, indicating that no valid values can be obtained.
+ * @method void setSniSwitch(integer $SniSwitch) Set Whether to enable SNI. `1`: Enable; `0`: Do not enable. This parameter is only meaningful for HTTPS listeners.
+Note: This field may return·null, indicating that no valid values can be obtained.
  * @method array getRules() Obtain All forwarding rules under a listener (this parameter is meaningful only for HTTP/HTTPS listeners)
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setRules(array $Rules) Set All forwarding rules under a listener (this parameter is meaningful only for HTTP/HTTPS listeners)
@@ -149,8 +149,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $SessionExpireTime;
 
     /**
-     * @var integer Whether to enable the SNI feature (this parameter is only meaningful for HTTPS listeners)
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Whether to enable SNI. `1`: Enable; `0`: Do not enable. This parameter is only meaningful for HTTPS listeners.
+Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public $SniSwitch;
 
@@ -256,8 +256,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $SessionExpireTime Session persistence time
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $SniSwitch Whether to enable the SNI feature (this parameter is only meaningful for HTTPS listeners)
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $SniSwitch Whether to enable SNI. `1`: Enable; `0`: Do not enable. This parameter is only meaningful for HTTPS listeners.
+Note: This field may return·null, indicating that no valid values can be obtained.
      * @param array $Rules All forwarding rules under a listener (this parameter is meaningful only for HTTP/HTTPS listeners)
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $ListenerName Listener name

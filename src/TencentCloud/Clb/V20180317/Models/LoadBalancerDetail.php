@@ -164,14 +164,18 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
  * @method void setZones(array $Zones) Set The AZ of private CLB instance. This is only available for beta users.
 Note: This field may return `null`, indicating that no valid values can be obtained.
- * @method integer getSniSwitch() Obtain Whether SNI is enabled. This parameter is only meaningful for HTTPS listeners.
-Note: This field may return `null`, indicating that no valid values can be obtained.
- * @method void setSniSwitch(integer $SniSwitch) Set Whether SNI is enabled. This parameter is only meaningful for HTTPS listeners.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method integer getSniSwitch() Obtain Whether to enable SNI. `1`: Enable; `0`: Do not enable. This parameter is only meaningful for HTTPS listeners.
+Note: This field may return·null, indicating that no valid values can be obtained.
+ * @method void setSniSwitch(integer $SniSwitch) Set Whether to enable SNI. `1`: Enable; `0`: Do not enable. This parameter is only meaningful for HTTPS listeners.
+Note: This field may return·null, indicating that no valid values can be obtained.
  * @method string getLoadBalancerDomain() Obtain Domain name of the CLB instance.
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setLoadBalancerDomain(string $LoadBalancerDomain) Set Domain name of the CLB instance.
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getEgress() Obtain Network egress
+Note: This field may return·null, indicating that no valid values can be obtained.
+ * @method void setEgress(string $Egress) Set Network egress
+Note: This field may return·null, indicating that no valid values can be obtained.
  */
 class LoadBalancerDetail extends AbstractModel
 {
@@ -392,8 +396,8 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     public $Zones;
 
     /**
-     * @var integer Whether SNI is enabled. This parameter is only meaningful for HTTPS listeners.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @var integer Whether to enable SNI. `1`: Enable; `0`: Do not enable. This parameter is only meaningful for HTTPS listeners.
+Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public $SniSwitch;
 
@@ -402,6 +406,12 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $LoadBalancerDomain;
+
+    /**
+     * @var string Network egress
+Note: This field may return·null, indicating that no valid values can be obtained.
+     */
+    public $Egress;
 
     /**
      * @param string $LoadBalancerId CLB instance ID.
@@ -476,10 +486,12 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
      * @param array $Zones The AZ of private CLB instance. This is only available for beta users.
 Note: This field may return `null`, indicating that no valid values can be obtained.
-     * @param integer $SniSwitch Whether SNI is enabled. This parameter is only meaningful for HTTPS listeners.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param integer $SniSwitch Whether to enable SNI. `1`: Enable; `0`: Do not enable. This parameter is only meaningful for HTTPS listeners.
+Note: This field may return·null, indicating that no valid values can be obtained.
      * @param string $LoadBalancerDomain Domain name of the CLB instance.
 Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $Egress Network egress
+Note: This field may return·null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -652,6 +664,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("LoadBalancerDomain",$param) and $param["LoadBalancerDomain"] !== null) {
             $this->LoadBalancerDomain = $param["LoadBalancerDomain"];
+        }
+
+        if (array_key_exists("Egress",$param) and $param["Egress"] !== null) {
+            $this->Egress = $param["Egress"];
         }
     }
 }

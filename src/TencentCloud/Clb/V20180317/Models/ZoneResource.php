@@ -40,6 +40,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
  * @method void setZoneResourceType(string $ZoneResourceType) Set Type of resources in the zone. Values: `SHARED`, `EXCLUSIVE`
  * @method boolean getEdgeZone() Obtain Whether the AZ is an edge zone. Values: `true`, `false`.
  * @method void setEdgeZone(boolean $EdgeZone) Set Whether the AZ is an edge zone. Values: `true`, `false`.
+ * @method string getEgress() Obtain Network egress
+Note: This field may return·null, indicating that no valid values can be obtained.
+ * @method void setEgress(string $Egress) Set Network egress
+Note: This field may return·null, indicating that no valid values can be obtained.
  */
 class ZoneResource extends AbstractModel
 {
@@ -86,6 +90,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $EdgeZone;
 
     /**
+     * @var string Network egress
+Note: This field may return·null, indicating that no valid values can be obtained.
+     */
+    public $Egress;
+
+    /**
      * @param string $MasterZone Primary AZ, such as "ap-guangzhou-1".
      * @param array $ResourceSet List of resources
 Note: This field may return null, indicating that no valid values can be obtained.
@@ -96,6 +106,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param boolean $LocalZone Whether the AZ is a `LocalZone`. Values: `true`, `false`.
      * @param string $ZoneResourceType Type of resources in the zone. Values: `SHARED`, `EXCLUSIVE`
      * @param boolean $EdgeZone Whether the AZ is an edge zone. Values: `true`, `false`.
+     * @param string $Egress Network egress
+Note: This field may return·null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -145,6 +157,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("EdgeZone",$param) and $param["EdgeZone"] !== null) {
             $this->EdgeZone = $param["EdgeZone"];
+        }
+
+        if (array_key_exists("Egress",$param) and $param["Egress"] !== null) {
+            $this->Egress = $param["Egress"];
         }
     }
 }

@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getSourceLocationId() Obtain Source forwarding rule ID
  * @method void setSourceLocationId(string $SourceLocationId) Set Source forwarding rule ID
- * @method string getTargetLocationId() Obtain Forwarding rule ID of a redirect target
- * @method void setTargetLocationId(string $TargetLocationId) Set Forwarding rule ID of a redirect target
+ * @method string getTargetLocationId() Obtain ID of the forwarding rule of the destination
+ * @method void setTargetLocationId(string $TargetLocationId) Set ID of the forwarding rule of the destination
  * @method integer getRewriteCode() Obtain Redirection status code. Valid values: 301, 302, and 307.
  * @method void setRewriteCode(integer $RewriteCode) Set Redirection status code. Valid values: 301, 302, and 307.
  * @method boolean getTakeUrl() Obtain Whether the matched URL is carried in redirection. It is required when configuring `RewriteCode`.
@@ -39,7 +39,7 @@ class RewriteLocationMap extends AbstractModel
     public $SourceLocationId;
 
     /**
-     * @var string Forwarding rule ID of a redirect target
+     * @var string ID of the forwarding rule of the destination
      */
     public $TargetLocationId;
 
@@ -60,7 +60,7 @@ class RewriteLocationMap extends AbstractModel
 
     /**
      * @param string $SourceLocationId Source forwarding rule ID
-     * @param string $TargetLocationId Forwarding rule ID of a redirect target
+     * @param string $TargetLocationId ID of the forwarding rule of the destination
      * @param integer $RewriteCode Redirection status code. Valid values: 301, 302, and 307.
      * @param boolean $TakeUrl Whether the matched URL is carried in redirection. It is required when configuring `RewriteCode`.
      * @param string $SourceDomain Original domain name of redirection, which must be the corresponding domain name of `SourceLocationId`. It is required when configuring `RewriteCode`.
