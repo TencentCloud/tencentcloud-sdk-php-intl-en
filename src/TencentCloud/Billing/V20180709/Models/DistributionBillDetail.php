@@ -18,56 +18,64 @@ namespace TencentCloud\Billing\V20180709\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Bill details
+ * Objects of reseller bill details
  *
  * @method string getBusinessCodeName() Obtain Product name: The name of a Tencent Cloud product purchased by the user, such as CVM.
  * @method void setBusinessCodeName(string $BusinessCodeName) Set Product name: The name of a Tencent Cloud product purchased by the user, such as CVM.
- * @method string getProductCodeName() Obtain Subproduct name: The subcategory of a Tencent Cloud product purchased by the user, such as CVM – Standard S1.
- * @method void setProductCodeName(string $ProductCodeName) Set Subproduct name: The subcategory of a Tencent Cloud product purchased by the user, such as CVM – Standard S1.
- * @method string getPayModeName() Obtain Billing mode, which can be monthly subscription or pay-as-you-go.
- * @method void setPayModeName(string $PayModeName) Set Billing mode, which can be monthly subscription or pay-as-you-go.
- * @method string getProjectName() Obtain Project name: The project to which a resource belongs, which is user-designated. If a resource has not been assigned to a project, it will automatically belong to the default project.
- * @method void setProjectName(string $ProjectName) Set Project name: The project to which a resource belongs, which is user-designated. If a resource has not been assigned to a project, it will automatically belong to the default project.
- * @method string getRegionName() Obtain Region: The region to which a resource belongs, such as South China (Guangzhou).
- * @method void setRegionName(string $RegionName) Set Region: The region to which a resource belongs, such as South China (Guangzhou).
- * @method string getZoneName() Obtain Availability zone: availability zone of a resource, e.g. Guangzhou Zone 3
- * @method void setZoneName(string $ZoneName) Set Availability zone: availability zone of a resource, e.g. Guangzhou Zone 3
+ * @method string getProductCodeName() Obtain Subproduct name: The subcategory of a Tencent Cloud product purchased by the user, such as CVM - Standard S1.
+ * @method void setProductCodeName(string $ProductCodeName) Set Subproduct name: The subcategory of a Tencent Cloud product purchased by the user, such as CVM - Standard S1.
+ * @method string getPayModeName() Obtain Billing mode: The billing mode, which can be monthly subscription or pay-as-you-go.
+ * @method void setPayModeName(string $PayModeName) Set Billing mode: The billing mode, which can be monthly subscription or pay-as-you-go.
+ * @method string getProjectName() Obtain Project Name: The project to which a resource belongs, which is user-designated. If a resource has not been assigned to a project, it will automatically belong to the default project.
+ * @method void setProjectName(string $ProjectName) Set Project Name: The project to which a resource belongs, which is user-designated. If a resource has not been assigned to a project, it will automatically belong to the default project.
+ * @method string getRegionName() Obtain Region: The region of a resource, e.g. South China (Guangzhou).
+ * @method void setRegionName(string $RegionName) Set Region: The region of a resource, e.g. South China (Guangzhou).
+ * @method string getZoneName() Obtain Availability zone: availability zone of a resource, e.g. Guangzhou Zone 3.
+ * @method void setZoneName(string $ZoneName) Set Availability zone: availability zone of a resource, e.g. Guangzhou Zone 3.
  * @method string getResourceId() Obtain Instance ID: The object ID of a billed resource, such as a CVM instance ID. This object ID may vary due to various forms and contents of resources in different products.
  * @method void setResourceId(string $ResourceId) Set Instance ID: The object ID of a billed resource, such as a CVM instance ID. This object ID may vary due to various forms and contents of resources in different products.
  * @method string getResourceName() Obtain Instance name: The resource name set by the user in the console. If it is not set, it will be empty by default.
  * @method void setResourceName(string $ResourceName) Set Instance name: The resource name set by the user in the console. If it is not set, it will be empty by default.
- * @method string getActionTypeName() Obtain Transaction type, which can be monthly subscription purchase, monthly subscription renewal, or pay-as-you-go deduction.
- * @method void setActionTypeName(string $ActionTypeName) Set Transaction type, which can be monthly subscription purchase, monthly subscription renewal, or pay-as-you-go deduction.
- * @method string getOrderId() Obtain Order ID: The order number for a monthly subscription purchase
- * @method void setOrderId(string $OrderId) Set Order ID: The order number for a monthly subscription purchase
- * @method string getBillId() Obtain Transaction ID: The bill number for a deducted payment
- * @method void setBillId(string $BillId) Set Transaction ID: The bill number for a deducted payment
- * @method string getPayTime() Obtain Transaction time: The time at which a payment was deducted
- * @method void setPayTime(string $PayTime) Set Transaction time: The time at which a payment was deducted
- * @method string getFeeBeginTime() Obtain Usage start time: The time at which product or service usage starts
- * @method void setFeeBeginTime(string $FeeBeginTime) Set Usage start time: The time at which product or service usage starts
- * @method string getFeeEndTime() Obtain Usage end time: The time at which product or service usage ends
- * @method void setFeeEndTime(string $FeeEndTime) Set Usage end time: The time at which product or service usage ends
- * @method array getComponentSet() Obtain Component list
- * @method void setComponentSet(array $ComponentSet) Set Component list
- * @method string getPayerUin() Obtain Payer account ID: The account ID of the payer, which is the unique identifier of a Tencent Cloud user.
- * @method void setPayerUin(string $PayerUin) Set Payer account ID: The account ID of the payer, which is the unique identifier of a Tencent Cloud user.
- * @method string getOwnerUin() Obtain Owner account ID: The account ID of the actual resource user
- * @method void setOwnerUin(string $OwnerUin) Set Owner account ID: The account ID of the actual resource user
- * @method string getOperateUin() Obtain Operator account ID: The account or role ID of the operator who purchases or activates a resource
- * @method void setOperateUin(string $OperateUin) Set Operator account ID: The account or role ID of the operator who purchases or activates a resource
- * @method array getTags() Obtain Tag information. Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setTags(array $Tags) Set Tag information. Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getBusinessCode() Obtain Product code. Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setBusinessCode(string $BusinessCode) Set Product code. Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getProductCode() Obtain Subproduct code. Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setProductCode(string $ProductCode) Set Subproduct code. Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getActionType() Obtain Transaction type code. Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setActionType(string $ActionType) Set Transaction type code. Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getRegionId() Obtain Region ID. Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setRegionId(string $RegionId) Set Region ID. Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getProjectId() Obtain Project ID
- * @method void setProjectId(integer $ProjectId) Set Project ID
+ * @method string getActionTypeName() Obtain Transaction type, which can be monthly subscription purchase, monthly subscription renewal, pay-as-you-go deduction, etc.
+ * @method void setActionTypeName(string $ActionTypeName) Set Transaction type, which can be monthly subscription purchase, monthly subscription renewal, pay-as-you-go deduction, etc.
+ * @method string getOrderId() Obtain Order ID: The ID of a monthly subscription order.
+ * @method void setOrderId(string $OrderId) Set Order ID: The ID of a monthly subscription order.
+ * @method string getBillId() Obtain Transaction ID: The ID of a settlement bill.
+ * @method void setBillId(string $BillId) Set Transaction ID: The ID of a settlement bill.
+ * @method string getPayTime() Obtain Deduction time: The settlement cost deduction time.
+ * @method void setPayTime(string $PayTime) Set Deduction time: The settlement cost deduction time.
+ * @method string getFeeBeginTime() Obtain Usage start time: The time at which product or service usage starts.
+ * @method void setFeeBeginTime(string $FeeBeginTime) Set Usage start time: The time at which product or service usage starts.
+ * @method string getFeeEndTime() Obtain Usage end time: The time at which product or service usage ends.
+ * @method void setFeeEndTime(string $FeeEndTime) Set Usage end time: The time at which product or service usage ends.
+ * @method array getComponentSet() Obtain List of components.
+ * @method void setComponentSet(array $ComponentSet) Set List of components.
+ * @method string getOwnerUin() Obtain Owner account ID: The account ID of the actual resource user.
+ * @method void setOwnerUin(string $OwnerUin) Set Owner account ID: The account ID of the actual resource user.
+ * @method string getOperateUin() Obtain Operator account ID: The account or role ID of the operator who purchases or activates a resource.
+ * @method void setOperateUin(string $OperateUin) Set Operator account ID: The account or role ID of the operator who purchases or activates a resource.
+ * @method array getTags() Obtain Tag information.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setTags(array $Tags) Set Tag information.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getBusinessCode() Obtain Product code.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setBusinessCode(string $BusinessCode) Set Product code.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getProductCode() Obtain Subproduct code.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setProductCode(string $ProductCode) Set Subproduct code.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getActionType() Obtain Transaction type code.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setActionType(string $ActionType) Set Transaction type code.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getRegionId() Obtain Region ID.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setRegionId(string $RegionId) Set Region ID.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getProjectId() Obtain Project ID.
+ * @method void setProjectId(integer $ProjectId) Set Project ID.
  * @method array getPriceInfo() Obtain Price attribute: A set of attributes which will determine the price of a component, apart from unit price and usage duration.
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setPriceInfo(array $PriceInfo) Set Price attribute: A set of attributes which will determine the price of a component, apart from unit price and usage duration.
@@ -85,7 +93,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
  * @method void setFormulaUrl(string $FormulaUrl) Set Billing rules: Official website links for detailed billing rules of each product.
 Note: This field may return null, indicating that no valid values can be obtained.
  */
-class BillDetail extends AbstractModel
+class DistributionBillDetail extends AbstractModel
 {
     /**
      * @var string Product name: The name of a Tencent Cloud product purchased by the user, such as CVM.
@@ -93,27 +101,27 @@ class BillDetail extends AbstractModel
     public $BusinessCodeName;
 
     /**
-     * @var string Subproduct name: The subcategory of a Tencent Cloud product purchased by the user, such as CVM – Standard S1.
+     * @var string Subproduct name: The subcategory of a Tencent Cloud product purchased by the user, such as CVM - Standard S1.
      */
     public $ProductCodeName;
 
     /**
-     * @var string Billing mode, which can be monthly subscription or pay-as-you-go.
+     * @var string Billing mode: The billing mode, which can be monthly subscription or pay-as-you-go.
      */
     public $PayModeName;
 
     /**
-     * @var string Project name: The project to which a resource belongs, which is user-designated. If a resource has not been assigned to a project, it will automatically belong to the default project.
+     * @var string Project Name: The project to which a resource belongs, which is user-designated. If a resource has not been assigned to a project, it will automatically belong to the default project.
      */
     public $ProjectName;
 
     /**
-     * @var string Region: The region to which a resource belongs, such as South China (Guangzhou).
+     * @var string Region: The region of a resource, e.g. South China (Guangzhou).
      */
     public $RegionName;
 
     /**
-     * @var string Availability zone: availability zone of a resource, e.g. Guangzhou Zone 3
+     * @var string Availability zone: availability zone of a resource, e.g. Guangzhou Zone 3.
      */
     public $ZoneName;
 
@@ -128,82 +136,82 @@ class BillDetail extends AbstractModel
     public $ResourceName;
 
     /**
-     * @var string Transaction type, which can be monthly subscription purchase, monthly subscription renewal, or pay-as-you-go deduction.
+     * @var string Transaction type, which can be monthly subscription purchase, monthly subscription renewal, pay-as-you-go deduction, etc.
      */
     public $ActionTypeName;
 
     /**
-     * @var string Order ID: The order number for a monthly subscription purchase
+     * @var string Order ID: The ID of a monthly subscription order.
      */
     public $OrderId;
 
     /**
-     * @var string Transaction ID: The bill number for a deducted payment
+     * @var string Transaction ID: The ID of a settlement bill.
      */
     public $BillId;
 
     /**
-     * @var string Transaction time: The time at which a payment was deducted
+     * @var string Deduction time: The settlement cost deduction time.
      */
     public $PayTime;
 
     /**
-     * @var string Usage start time: The time at which product or service usage starts
+     * @var string Usage start time: The time at which product or service usage starts.
      */
     public $FeeBeginTime;
 
     /**
-     * @var string Usage end time: The time at which product or service usage ends
+     * @var string Usage end time: The time at which product or service usage ends.
      */
     public $FeeEndTime;
 
     /**
-     * @var array Component list
+     * @var array List of components.
      */
     public $ComponentSet;
 
     /**
-     * @var string Payer account ID: The account ID of the payer, which is the unique identifier of a Tencent Cloud user.
-     */
-    public $PayerUin;
-
-    /**
-     * @var string Owner account ID: The account ID of the actual resource user
+     * @var string Owner account ID: The account ID of the actual resource user.
      */
     public $OwnerUin;
 
     /**
-     * @var string Operator account ID: The account or role ID of the operator who purchases or activates a resource
+     * @var string Operator account ID: The account or role ID of the operator who purchases or activates a resource.
      */
     public $OperateUin;
 
     /**
-     * @var array Tag information. Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array Tag information.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Tags;
 
     /**
-     * @var string Product code. Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Product code.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $BusinessCode;
 
     /**
-     * @var string Subproduct code. Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Subproduct code.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ProductCode;
 
     /**
-     * @var string Transaction type code. Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Transaction type code.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ActionType;
 
     /**
-     * @var string Region ID. Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Region ID.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $RegionId;
 
     /**
-     * @var integer Project ID
+     * @var integer Project ID.
      */
     public $ProjectId;
 
@@ -233,29 +241,33 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * @param string $BusinessCodeName Product name: The name of a Tencent Cloud product purchased by the user, such as CVM.
-     * @param string $ProductCodeName Subproduct name: The subcategory of a Tencent Cloud product purchased by the user, such as CVM – Standard S1.
-     * @param string $PayModeName Billing mode, which can be monthly subscription or pay-as-you-go.
-     * @param string $ProjectName Project name: The project to which a resource belongs, which is user-designated. If a resource has not been assigned to a project, it will automatically belong to the default project.
-     * @param string $RegionName Region: The region to which a resource belongs, such as South China (Guangzhou).
-     * @param string $ZoneName Availability zone: availability zone of a resource, e.g. Guangzhou Zone 3
+     * @param string $ProductCodeName Subproduct name: The subcategory of a Tencent Cloud product purchased by the user, such as CVM - Standard S1.
+     * @param string $PayModeName Billing mode: The billing mode, which can be monthly subscription or pay-as-you-go.
+     * @param string $ProjectName Project Name: The project to which a resource belongs, which is user-designated. If a resource has not been assigned to a project, it will automatically belong to the default project.
+     * @param string $RegionName Region: The region of a resource, e.g. South China (Guangzhou).
+     * @param string $ZoneName Availability zone: availability zone of a resource, e.g. Guangzhou Zone 3.
      * @param string $ResourceId Instance ID: The object ID of a billed resource, such as a CVM instance ID. This object ID may vary due to various forms and contents of resources in different products.
      * @param string $ResourceName Instance name: The resource name set by the user in the console. If it is not set, it will be empty by default.
-     * @param string $ActionTypeName Transaction type, which can be monthly subscription purchase, monthly subscription renewal, or pay-as-you-go deduction.
-     * @param string $OrderId Order ID: The order number for a monthly subscription purchase
-     * @param string $BillId Transaction ID: The bill number for a deducted payment
-     * @param string $PayTime Transaction time: The time at which a payment was deducted
-     * @param string $FeeBeginTime Usage start time: The time at which product or service usage starts
-     * @param string $FeeEndTime Usage end time: The time at which product or service usage ends
-     * @param array $ComponentSet Component list
-     * @param string $PayerUin Payer account ID: The account ID of the payer, which is the unique identifier of a Tencent Cloud user.
-     * @param string $OwnerUin Owner account ID: The account ID of the actual resource user
-     * @param string $OperateUin Operator account ID: The account or role ID of the operator who purchases or activates a resource
-     * @param array $Tags Tag information. Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $BusinessCode Product code. Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $ProductCode Subproduct code. Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $ActionType Transaction type code. Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $RegionId Region ID. Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $ProjectId Project ID
+     * @param string $ActionTypeName Transaction type, which can be monthly subscription purchase, monthly subscription renewal, pay-as-you-go deduction, etc.
+     * @param string $OrderId Order ID: The ID of a monthly subscription order.
+     * @param string $BillId Transaction ID: The ID of a settlement bill.
+     * @param string $PayTime Deduction time: The settlement cost deduction time.
+     * @param string $FeeBeginTime Usage start time: The time at which product or service usage starts.
+     * @param string $FeeEndTime Usage end time: The time at which product or service usage ends.
+     * @param array $ComponentSet List of components.
+     * @param string $OwnerUin Owner account ID: The account ID of the actual resource user.
+     * @param string $OperateUin Operator account ID: The account or role ID of the operator who purchases or activates a resource.
+     * @param array $Tags Tag information.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $BusinessCode Product code.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $ProductCode Subproduct code.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $ActionType Transaction type code.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $RegionId Region ID.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $ProjectId Project ID.
      * @param array $PriceInfo Price attribute: A set of attributes which will determine the price of a component, apart from unit price and usage duration.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param BillDetailAssociatedOrder $AssociatedOrder Associated transaction document ID: The ID of the document associated with a transaction, such as a write-off order, the original order showing a deduction error during first settlement, a restructured order, or the original purchase order corresponding to a refund order.
@@ -341,10 +353,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 $obj->deserialize($value);
                 array_push($this->ComponentSet, $obj);
             }
-        }
-
-        if (array_key_exists("PayerUin",$param) and $param["PayerUin"] !== null) {
-            $this->PayerUin = $param["PayerUin"];
         }
 
         if (array_key_exists("OwnerUin",$param) and $param["OwnerUin"] !== null) {

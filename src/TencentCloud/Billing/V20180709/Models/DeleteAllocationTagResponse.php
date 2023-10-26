@@ -14,24 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Faceid\V20180301\Models;
+namespace TencentCloud\Billing\V20180709\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * eKYC Web related configuration
+ * DeleteAllocationTag response structure.
  *
- * @method boolean getAutoSkip() Obtain Whether to automatically redirect to RedirectUrl after successful verification. Default value: false.
- * @method void setAutoSkip(boolean $AutoSkip) Set Whether to automatically redirect to RedirectUrl after successful verification. Default value: false.
+ * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
-class WebVerificationConfigIntl extends AbstractModel
+class DeleteAllocationTagResponse extends AbstractModel
 {
     /**
-     * @var boolean Whether to automatically redirect to RedirectUrl after successful verification. Default value: false.
+     * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
-    public $AutoSkip;
+    public $RequestId;
 
     /**
-     * @param boolean $AutoSkip Whether to automatically redirect to RedirectUrl after successful verification. Default value: false.
+     * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
     {
@@ -46,8 +46,8 @@ class WebVerificationConfigIntl extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("AutoSkip",$param) and $param["AutoSkip"] !== null) {
-            $this->AutoSkip = $param["AutoSkip"];
+        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
+            $this->RequestId = $param["RequestId"];
         }
     }
 }

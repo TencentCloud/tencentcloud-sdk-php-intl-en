@@ -14,24 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Faceid\V20180301\Models;
+namespace TencentCloud\Billing\V20180709\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * eKYC Web related configuration
+ * CreateAllocationTag request structure.
  *
- * @method boolean getAutoSkip() Obtain Whether to automatically redirect to RedirectUrl after successful verification. Default value: false.
- * @method void setAutoSkip(boolean $AutoSkip) Set Whether to automatically redirect to RedirectUrl after successful verification. Default value: false.
+ * @method array getTagKey() Obtain Cost allocation tag key.
+ * @method void setTagKey(array $TagKey) Set Cost allocation tag key.
  */
-class WebVerificationConfigIntl extends AbstractModel
+class CreateAllocationTagRequest extends AbstractModel
 {
     /**
-     * @var boolean Whether to automatically redirect to RedirectUrl after successful verification. Default value: false.
+     * @var array Cost allocation tag key.
      */
-    public $AutoSkip;
+    public $TagKey;
 
     /**
-     * @param boolean $AutoSkip Whether to automatically redirect to RedirectUrl after successful verification. Default value: false.
+     * @param array $TagKey Cost allocation tag key.
      */
     function __construct()
     {
@@ -46,8 +46,8 @@ class WebVerificationConfigIntl extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("AutoSkip",$param) and $param["AutoSkip"] !== null) {
-            $this->AutoSkip = $param["AutoSkip"];
+        if (array_key_exists("TagKey",$param) and $param["TagKey"] !== null) {
+            $this->TagKey = $param["TagKey"];
         }
     }
 }

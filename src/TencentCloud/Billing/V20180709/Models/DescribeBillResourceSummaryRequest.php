@@ -82,6 +82,12 @@ Note: To query the product codes used in the current month, call <a href="https:
 Note: To query the product codes used in the current month, call <a href="https://intl.cloud.tencent.com/document/product/555/35761?from_cn_redirect=1">DescribeBillSummaryByProduct</a>.
  * @method string getPayerUin() Obtain The account ID of the payer, which is the unique identifier of a Tencent Cloud user. This account is allowed to query its own bills by default. If an organization admin account needs to query the self-pay bills of members, this field should be specified as the member account ID.
  * @method void setPayerUin(string $PayerUin) Set The account ID of the payer, which is the unique identifier of a Tencent Cloud user. This account is allowed to query its own bills by default. If an organization admin account needs to query the self-pay bills of members, this field should be specified as the member account ID.
+ * @method string getTagKey() Obtain Cost allocation tag key, which can be customized. This parameter can be used for querying bills after January 2021.
+ * @method void setTagKey(string $TagKey) Set Cost allocation tag key, which can be customized. This parameter can be used for querying bills after January 2021.
+ * @method string getTagValue() Obtain Resource tag value. If it is left empty, there are no records with tag values set under this tag key.
+This parameter can be used for querying bills after January 2021.
+ * @method void setTagValue(string $TagValue) Set Resource tag value. If it is left empty, there are no records with tag values set under this tag key.
+This parameter can be used for querying bills after January 2021.
  */
 class DescribeBillResourceSummaryRequest extends AbstractModel
 {
@@ -157,6 +163,17 @@ Note: To query the product codes used in the current month, call <a href="https:
     public $PayerUin;
 
     /**
+     * @var string Cost allocation tag key, which can be customized. This parameter can be used for querying bills after January 2021.
+     */
+    public $TagKey;
+
+    /**
+     * @var string Resource tag value. If it is left empty, there are no records with tag values set under this tag key.
+This parameter can be used for querying bills after January 2021.
+     */
+    public $TagValue;
+
+    /**
      * @param integer $Offset Pagination offset. If `Offset` is `0`, it indicates the first page. If `Limit` is `100`, "`Offset` = `100`" indicates the second page, then "`Offset` = `200`" indicates the third page, and so on.
      * @param integer $Limit Quantity, maximum is 1000
      * @param string $Month Bill month in the format of "yyyy-mm". This value must be no earlier than March 2019, when Bill 2.0 was launched.
@@ -188,6 +205,9 @@ Monthly subscription refund
      * @param string $BusinessCode Product code
 Note: To query the product codes used in the current month, call <a href="https://intl.cloud.tencent.com/document/product/555/35761?from_cn_redirect=1">DescribeBillSummaryByProduct</a>.
      * @param string $PayerUin The account ID of the payer, which is the unique identifier of a Tencent Cloud user. This account is allowed to query its own bills by default. If an organization admin account needs to query the self-pay bills of members, this field should be specified as the member account ID.
+     * @param string $TagKey Cost allocation tag key, which can be customized. This parameter can be used for querying bills after January 2021.
+     * @param string $TagValue Resource tag value. If it is left empty, there are no records with tag values set under this tag key.
+This parameter can be used for querying bills after January 2021.
      */
     function __construct()
     {
@@ -240,6 +260,14 @@ Note: To query the product codes used in the current month, call <a href="https:
 
         if (array_key_exists("PayerUin",$param) and $param["PayerUin"] !== null) {
             $this->PayerUin = $param["PayerUin"];
+        }
+
+        if (array_key_exists("TagKey",$param) and $param["TagKey"] !== null) {
+            $this->TagKey = $param["TagKey"];
+        }
+
+        if (array_key_exists("TagValue",$param) and $param["TagValue"] !== null) {
+            $this->TagValue = $param["TagValue"];
         }
     }
 }

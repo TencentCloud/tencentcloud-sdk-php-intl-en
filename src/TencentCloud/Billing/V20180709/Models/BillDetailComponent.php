@@ -78,6 +78,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOriginalCostWithSP(string $OriginalCostWithSP) Set SP deduction (cost): SP deduction (cost) = Cost deduction by SP / SP deduction rate. Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getBlendedDiscount() Obtain Blended discount multiplier: The final discount multiplier that is applied after combining multiple discount types, which is "Total amount after discount / Original cost". Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setBlendedDiscount(string $BlendedDiscount) Set Blended discount multiplier: The final discount multiplier that is applied after combining multiple discount types, which is "Total amount after discount / Original cost". Note: This field may return null, indicating that no valid values can be obtained.
+ * @method array getComponentConfig() Obtain Configuration description: The specification configuration of an instance.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setComponentConfig(array $ComponentConfig) Set Configuration description: The specification configuration of an instance.
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class BillDetailComponent extends AbstractModel
 {
@@ -229,6 +233,12 @@ class BillDetailComponent extends AbstractModel
     public $BlendedDiscount;
 
     /**
+     * @var array Configuration description: The specification configuration of an instance.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $ComponentConfig;
+
+    /**
      * @param string $ComponentCodeName Component type: The component type of a product or service purchased, such as CVM instance components including CPU and memory.
      * @param string $ItemCodeName Component name: The specific component of a product or service purchased
      * @param string $SinglePrice Component list price: The listed unit price of a component. If a customer has applied for a fixed preferential price or contract price, this parameter will not be displayed by default.
@@ -258,6 +268,8 @@ class BillDetailComponent extends AbstractModel
      * @param string $SPDeduction Cost deduction by SP. This parameter has been deprecated. Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $OriginalCostWithSP SP deduction (cost): SP deduction (cost) = Cost deduction by SP / SP deduction rate. Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $BlendedDiscount Blended discount multiplier: The final discount multiplier that is applied after combining multiple discount types, which is "Total amount after discount / Original cost". Note: This field may return null, indicating that no valid values can be obtained.
+     * @param array $ComponentConfig Configuration description: The specification configuration of an instance.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -386,6 +398,15 @@ class BillDetailComponent extends AbstractModel
 
         if (array_key_exists("BlendedDiscount",$param) and $param["BlendedDiscount"] !== null) {
             $this->BlendedDiscount = $param["BlendedDiscount"];
+        }
+
+        if (array_key_exists("ComponentConfig",$param) and $param["ComponentConfig"] !== null) {
+            $this->ComponentConfig = [];
+            foreach ($param["ComponentConfig"] as $key => $value){
+                $obj = new BillDetailComponentConfig();
+                $obj->deserialize($value);
+                array_push($this->ComponentConfig, $obj);
+            }
         }
     }
 }

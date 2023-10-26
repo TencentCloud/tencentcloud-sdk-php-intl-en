@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ApplyWebVerificationBizTokenIntl response structure.
  *
- * @method string getVerificationUrl() Obtain The URL of this verification process, which will be returned to the frontend of the browser for starting the process.
- * @method void setVerificationUrl(string $VerificationUrl) Set The URL of this verification process, which will be returned to the frontend of the browser for starting the process.
- * @method string getBizToken() Obtain The token identifying this web-based verification process, valid for 7,200s after issuance. It is required for getting the result after the verification process is completed.
- * @method void setBizToken(string $BizToken) Set The token identifying this web-based verification process, valid for 7,200s after issuance. It is required for getting the result after the verification process is completed.
+ * @method string getVerificationUrl() Obtain The token identifying this web-based verification process, valid for 7,200s after issuance. It is required for getting the result after the verification process is completed.
+ * @method void setVerificationUrl(string $VerificationUrl) Set The token identifying this web-based verification process, valid for 7,200s after issuance. It is required for getting the result after the verification process is completed.
+ * @method string getBizToken() Obtain The token for the web-based verification, which is generated using the ApplyWebVerificationBizTokenIntl API.
+ * @method void setBizToken(string $BizToken) Set The token for the web-based verification, which is generated using the ApplyWebVerificationBizTokenIntl API.
  * @method string getVerificationURL() Obtain The verification URL to be opened with a browser to start the verification process.
  * @method void setVerificationURL(string $VerificationURL) Set The verification URL to be opened with a browser to start the verification process.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -32,13 +32,13 @@ use TencentCloud\Common\AbstractModel;
 class ApplyWebVerificationBizTokenIntlResponse extends AbstractModel
 {
     /**
-     * @var string The URL of this verification process, which will be returned to the frontend of the browser for starting the process.
+     * @var string The token identifying this web-based verification process, valid for 7,200s after issuance. It is required for getting the result after the verification process is completed.
      * @deprecated
      */
     public $VerificationUrl;
 
     /**
-     * @var string The token identifying this web-based verification process, valid for 7,200s after issuance. It is required for getting the result after the verification process is completed.
+     * @var string The token for the web-based verification, which is generated using the ApplyWebVerificationBizTokenIntl API.
      */
     public $BizToken;
 
@@ -53,8 +53,8 @@ class ApplyWebVerificationBizTokenIntlResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $VerificationUrl The URL of this verification process, which will be returned to the frontend of the browser for starting the process.
-     * @param string $BizToken The token identifying this web-based verification process, valid for 7,200s after issuance. It is required for getting the result after the verification process is completed.
+     * @param string $VerificationUrl The token identifying this web-based verification process, valid for 7,200s after issuance. It is required for getting the result after the verification process is completed.
+     * @param string $BizToken The token for the web-based verification, which is generated using the ApplyWebVerificationBizTokenIntl API.
      * @param string $VerificationURL The verification URL to be opened with a browser to start the verification process.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
