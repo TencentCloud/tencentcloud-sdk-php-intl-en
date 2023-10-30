@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteCDNDomain request structure.
  *
- * @method string getDomain() Obtain Domain.
- * @method void setDomain(string $Domain) Set Domain.
- * @method integer getSubAppId() Obtain VOD[Subapplication](/document/product/266/14574) ID。If you want to access resources in a Subapplication, fill this field with the Subapplication ID; otherwise, you don't need to fill in this field.
- * @method void setSubAppId(integer $SubAppId) Set VOD[Subapplication](/document/product/266/14574) ID。If you want to access resources in a Subapplication, fill this field with the Subapplication ID; otherwise, you don't need to fill in this field.
+ * @method string getDomain() Obtain 
+ * @method void setDomain(string $Domain) Set 
+ * @method integer getSubAppId() Obtain 
+ * @method void setSubAppId(integer $SubAppId) Set 
  */
 class DeleteCDNDomainRequest extends AbstractModel
 {
     /**
-     * @var string Domain.
+     * @var string 
      */
     public $Domain;
 
     /**
-     * @var integer VOD[Subapplication](/document/product/266/14574) ID。If you want to access resources in a Subapplication, fill this field with the Subapplication ID; otherwise, you don't need to fill in this field.
+     * @var integer 
      */
     public $SubAppId;
 
     /**
-     * @param string $Domain Domain.
-     * @param integer $SubAppId VOD[Subapplication](/document/product/266/14574) ID。If you want to access resources in a Subapplication, fill this field with the Subapplication ID; otherwise, you don't need to fill in this field.
+     * @param string $Domain 
+     * @param integer $SubAppId 
      */
     function __construct()
     {

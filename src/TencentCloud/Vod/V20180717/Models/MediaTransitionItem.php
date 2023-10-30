@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setTransitions(array $Transitions) Set List of transition operations. Up to one video image or audio transition operation is supported.
 Note: this field may return null, indicating that no valid values can be obtained.
+ * @method array getMediaTransitions() Obtain 
+ * @method void setMediaTransitions(array $MediaTransitions) Set 
  */
 class MediaTransitionItem extends AbstractModel
 {
@@ -37,13 +39,20 @@ class MediaTransitionItem extends AbstractModel
     /**
      * @var array List of transition operations. Up to one video image or audio transition operation is supported.
 Note: this field may return null, indicating that no valid values can be obtained.
+     * @deprecated
      */
     public $Transitions;
+
+    /**
+     * @var array 
+     */
+    public $MediaTransitions;
 
     /**
      * @param float $Duration Transition duration in seconds. For two media segments that use a transition, the start time of the second segment on the track will be automatically set to the end time of the first segment minus the transition duration.
      * @param array $Transitions List of transition operations. Up to one video image or audio transition operation is supported.
 Note: this field may return null, indicating that no valid values can be obtained.
+     * @param array $MediaTransitions 
      */
     function __construct()
     {
@@ -68,6 +77,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                 $obj = new TransitionOpertion();
                 $obj->deserialize($value);
                 array_push($this->Transitions, $obj);
+            }
+        }
+
+        if (array_key_exists("MediaTransitions",$param) and $param["MediaTransitions"] !== null) {
+            $this->MediaTransitions = [];
+            foreach ($param["MediaTransitions"] as $key => $value){
+                $obj = new TransitionOperation();
+                $obj->deserialize($value);
+                array_push($this->MediaTransitions, $obj);
             }
         }
     }

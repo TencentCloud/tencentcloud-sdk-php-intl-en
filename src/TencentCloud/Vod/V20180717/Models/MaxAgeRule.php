@@ -20,29 +20,29 @@ use TencentCloud\Common\AbstractModel;
 /**
  * MaxAge rules configuration
  *
- * @method string getMaxAgeType() Obtain Rule types: <li>all: effective for all files.</li> <li>file: effective for specified file suffixes.</li> <li>directory: effective for specified paths.</li> <li>path: effective for specified absolute paths.</li>
- * @method void setMaxAgeType(string $MaxAgeType) Set Rule types: <li>all: effective for all files.</li> <li>file: effective for specified file suffixes.</li> <li>directory: effective for specified paths.</li> <li>path: effective for specified absolute paths.</li>
- * @method array getMaxAgeContents() Obtain Content for each MaxAgeType: <li>For all, enter a wildcard *.</li> <li>For file, enter the suffix, e.g., jpg or txt.</li> <li>For directory, enter the path, e.g., /xxx/test/.</li> <li>For path, enter the absolute path, e.g., /xxx/test.html.</li> <b>Note: the all rule cannot be deleted, and it follows the origin site by default, which can be modified.</b>
- * @method void setMaxAgeContents(array $MaxAgeContents) Set Content for each MaxAgeType: <li>For all, enter a wildcard *.</li> <li>For file, enter the suffix, e.g., jpg or txt.</li> <li>For directory, enter the path, e.g., /xxx/test/.</li> <li>For path, enter the absolute path, e.g., /xxx/test.html.</li> <b>Note: the all rule cannot be deleted, and it follows the origin site by default, which can be modified.</b>
- * @method integer getMaxAgeTime() Obtain Note: The value 0 means not to cache. <b>Note: The value 0 means not to cache.</b>
- * @method void setMaxAgeTime(integer $MaxAgeTime) Set Note: The value 0 means not to cache. <b>Note: The value 0 means not to cache.</b>
+ * @method string getMaxAgeType() Obtain 
+ * @method void setMaxAgeType(string $MaxAgeType) Set 
+ * @method array getMaxAgeContents() Obtain 
+ * @method void setMaxAgeContents(array $MaxAgeContents) Set 
+ * @method integer getMaxAgeTime() Obtain 
+ * @method void setMaxAgeTime(integer $MaxAgeTime) Set 
  * @method string getFollowOrigin() Obtain Whether to follow the origin server. Valid values: on and off. If it's on, MaxAgeTime is ignored.
  * @method void setFollowOrigin(string $FollowOrigin) Set Whether to follow the origin server. Valid values: on and off. If it's on, MaxAgeTime is ignored.
  */
 class MaxAgeRule extends AbstractModel
 {
     /**
-     * @var string Rule types: <li>all: effective for all files.</li> <li>file: effective for specified file suffixes.</li> <li>directory: effective for specified paths.</li> <li>path: effective for specified absolute paths.</li>
+     * @var string 
      */
     public $MaxAgeType;
 
     /**
-     * @var array Content for each MaxAgeType: <li>For all, enter a wildcard *.</li> <li>For file, enter the suffix, e.g., jpg or txt.</li> <li>For directory, enter the path, e.g., /xxx/test/.</li> <li>For path, enter the absolute path, e.g., /xxx/test.html.</li> <b>Note: the all rule cannot be deleted, and it follows the origin site by default, which can be modified.</b>
+     * @var array 
      */
     public $MaxAgeContents;
 
     /**
-     * @var integer Note: The value 0 means not to cache. <b>Note: The value 0 means not to cache.</b>
+     * @var integer 
      */
     public $MaxAgeTime;
 
@@ -52,9 +52,9 @@ class MaxAgeRule extends AbstractModel
     public $FollowOrigin;
 
     /**
-     * @param string $MaxAgeType Rule types: <li>all: effective for all files.</li> <li>file: effective for specified file suffixes.</li> <li>directory: effective for specified paths.</li> <li>path: effective for specified absolute paths.</li>
-     * @param array $MaxAgeContents Content for each MaxAgeType: <li>For all, enter a wildcard *.</li> <li>For file, enter the suffix, e.g., jpg or txt.</li> <li>For directory, enter the path, e.g., /xxx/test/.</li> <li>For path, enter the absolute path, e.g., /xxx/test.html.</li> <b>Note: the all rule cannot be deleted, and it follows the origin site by default, which can be modified.</b>
-     * @param integer $MaxAgeTime Note: The value 0 means not to cache. <b>Note: The value 0 means not to cache.</b>
+     * @param string $MaxAgeType 
+     * @param array $MaxAgeContents 
+     * @param integer $MaxAgeTime 
      * @param string $FollowOrigin Whether to follow the origin server. Valid values: on and off. If it's on, MaxAgeTime is ignored.
      */
     function __construct()

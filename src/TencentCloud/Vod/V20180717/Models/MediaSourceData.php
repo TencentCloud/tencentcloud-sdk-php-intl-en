@@ -18,46 +18,37 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Source file information
+ * Source file information.
  *
- * @method string getSourceType() Obtain Source of a media file:
-<li>`Record`: recording, such as live or time-shift recording</li>
-<li>`Upload`: upload, such as pull for upload, upload from server, and UGC upload from client</li>
-<li>`VideoProcessing`: video processing, such as video splicing and video clipping</li>
-<li>`WebPageRecord`: panoramic recording </li>
-<li>`Unknown`: unknown source</li>
- * @method void setSourceType(string $SourceType) Set Source of a media file:
-<li>`Record`: recording, such as live or time-shift recording</li>
-<li>`Upload`: upload, such as pull for upload, upload from server, and UGC upload from client</li>
-<li>`VideoProcessing`: video processing, such as video splicing and video clipping</li>
-<li>`WebPageRecord`: panoramic recording </li>
-<li>`Unknown`: unknown source</li>
- * @method string getSourceContext() Obtain Field passed through when a file is created.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setSourceContext(string $SourceContext) Set Field passed through when a file is created.
-Note: this field may return null, indicating that no valid values can be obtained.
+ * @method string getSourceType() Obtain Media files source category: <li>Record: From recording. Such as live streaming recording, live time shift recording, etc.</li> <li>Upload: From upload. Such as pull upload, upload from server, client UGC upload, etc.</li> <li>VideoProcessing: From video processing. Such as video splicing, video editing, etc.</li> <li>TrtcRecord: From TRTC accompanying recording.</li> <li>WebPageRecord: From panoramic recording.</li> <li>Unknown: Unknown source.</li>
+ * @method void setSourceType(string $SourceType) Set Media files source category: <li>Record: From recording. Such as live streaming recording, live time shift recording, etc.</li> <li>Upload: From upload. Such as pull upload, upload from server, client UGC upload, etc.</li> <li>VideoProcessing: From video processing. Such as video splicing, video editing, etc.</li> <li>TrtcRecord: From TRTC accompanying recording.</li> <li>WebPageRecord: From panoramic recording.</li> <li>Unknown: Unknown source.</li>
+ * @method string getSourceContext() Obtain User-transparent transmission field when creating a file.
+ * @method void setSourceContext(string $SourceContext) Set User-transparent transmission field when creating a file.
+ * @method LiveRecordInfo getLiveRecordInfo() Obtain Live streaming recording information, valid when the file source is Record.
+ * @method void setLiveRecordInfo(LiveRecordInfo $LiveRecordInfo) Set Live streaming recording information, valid when the file source is Record.
  * @method TrtcRecordInfo getTrtcRecordInfo() Obtain The TRTC recording information.
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setTrtcRecordInfo(TrtcRecordInfo $TrtcRecordInfo) Set The TRTC recording information.
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method WebPageRecordInfo getWebPageRecordInfo() Obtain Panoramic recording information, valid when the file source is WebPageRecord.
+ * @method void setWebPageRecordInfo(WebPageRecordInfo $WebPageRecordInfo) Set Panoramic recording information, valid when the file source is WebPageRecord.
  */
 class MediaSourceData extends AbstractModel
 {
     /**
-     * @var string Source of a media file:
-<li>`Record`: recording, such as live or time-shift recording</li>
-<li>`Upload`: upload, such as pull for upload, upload from server, and UGC upload from client</li>
-<li>`VideoProcessing`: video processing, such as video splicing and video clipping</li>
-<li>`WebPageRecord`: panoramic recording </li>
-<li>`Unknown`: unknown source</li>
+     * @var string Media files source category: <li>Record: From recording. Such as live streaming recording, live time shift recording, etc.</li> <li>Upload: From upload. Such as pull upload, upload from server, client UGC upload, etc.</li> <li>VideoProcessing: From video processing. Such as video splicing, video editing, etc.</li> <li>TrtcRecord: From TRTC accompanying recording.</li> <li>WebPageRecord: From panoramic recording.</li> <li>Unknown: Unknown source.</li>
      */
     public $SourceType;
 
     /**
-     * @var string Field passed through when a file is created.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string User-transparent transmission field when creating a file.
      */
     public $SourceContext;
+
+    /**
+     * @var LiveRecordInfo Live streaming recording information, valid when the file source is Record.
+     */
+    public $LiveRecordInfo;
 
     /**
      * @var TrtcRecordInfo The TRTC recording information.
@@ -66,16 +57,17 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $TrtcRecordInfo;
 
     /**
-     * @param string $SourceType Source of a media file:
-<li>`Record`: recording, such as live or time-shift recording</li>
-<li>`Upload`: upload, such as pull for upload, upload from server, and UGC upload from client</li>
-<li>`VideoProcessing`: video processing, such as video splicing and video clipping</li>
-<li>`WebPageRecord`: panoramic recording </li>
-<li>`Unknown`: unknown source</li>
-     * @param string $SourceContext Field passed through when a file is created.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var WebPageRecordInfo Panoramic recording information, valid when the file source is WebPageRecord.
+     */
+    public $WebPageRecordInfo;
+
+    /**
+     * @param string $SourceType Media files source category: <li>Record: From recording. Such as live streaming recording, live time shift recording, etc.</li> <li>Upload: From upload. Such as pull upload, upload from server, client UGC upload, etc.</li> <li>VideoProcessing: From video processing. Such as video splicing, video editing, etc.</li> <li>TrtcRecord: From TRTC accompanying recording.</li> <li>WebPageRecord: From panoramic recording.</li> <li>Unknown: Unknown source.</li>
+     * @param string $SourceContext User-transparent transmission field when creating a file.
+     * @param LiveRecordInfo $LiveRecordInfo Live streaming recording information, valid when the file source is Record.
      * @param TrtcRecordInfo $TrtcRecordInfo The TRTC recording information.
 Note: This field may return null, indicating that no valid values can be obtained.
+     * @param WebPageRecordInfo $WebPageRecordInfo Panoramic recording information, valid when the file source is WebPageRecord.
      */
     function __construct()
     {
@@ -98,9 +90,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
             $this->SourceContext = $param["SourceContext"];
         }
 
+        if (array_key_exists("LiveRecordInfo",$param) and $param["LiveRecordInfo"] !== null) {
+            $this->LiveRecordInfo = new LiveRecordInfo();
+            $this->LiveRecordInfo->deserialize($param["LiveRecordInfo"]);
+        }
+
         if (array_key_exists("TrtcRecordInfo",$param) and $param["TrtcRecordInfo"] !== null) {
             $this->TrtcRecordInfo = new TrtcRecordInfo();
             $this->TrtcRecordInfo->deserialize($param["TrtcRecordInfo"]);
+        }
+
+        if (array_key_exists("WebPageRecordInfo",$param) and $param["WebPageRecordInfo"] !== null) {
+            $this->WebPageRecordInfo = new WebPageRecordInfo();
+            $this->WebPageRecordInfo->deserialize($param["WebPageRecordInfo"]);
         }
     }
 }

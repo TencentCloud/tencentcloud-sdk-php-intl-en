@@ -34,6 +34,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInput(AdaptiveDynamicStreamingTaskInput $Input) Set Input of adaptive bitrate streaming task.
  * @method AdaptiveDynamicStreamingInfoItem getOutput() Obtain Output of adaptive bitrate streaming task.
  * @method void setOutput(AdaptiveDynamicStreamingInfoItem $Output) Set Output of adaptive bitrate streaming task.
+ * @method string getBeginProcessTime() Obtain 
+ * @method void setBeginProcessTime(string $BeginProcessTime) Set 
+ * @method string getFinishTime() Obtain 
+ * @method void setFinishTime(string $FinishTime) Set 
  */
 class MediaProcessTaskAdaptiveDynamicStreamingResult extends AbstractModel
 {
@@ -73,6 +77,16 @@ class MediaProcessTaskAdaptiveDynamicStreamingResult extends AbstractModel
     public $Output;
 
     /**
+     * @var string 
+     */
+    public $BeginProcessTime;
+
+    /**
+     * @var string 
+     */
+    public $FinishTime;
+
+    /**
      * @param string $Status Task status. Valid values: PROCESSING, SUCCESS, FAIL.
      * @param string $ErrCodeExt Error code. An empty string indicates the task is successful; other values indicate failure. For details, see [Video Processing Error Codes](https://intl.cloud.tencent.com/zh/document/product/266/39145).
      * @param integer $ErrCode Error code. 0 indicates the task is successful; other values indicate failure. You’re not recommended to use this parameter, but to use the new parameter `ErrCodeExt`.
@@ -80,6 +94,8 @@ class MediaProcessTaskAdaptiveDynamicStreamingResult extends AbstractModel
      * @param integer $Progress The progress of the adaptive bitrate task. Value range: 0-100.
      * @param AdaptiveDynamicStreamingTaskInput $Input Input of adaptive bitrate streaming task.
      * @param AdaptiveDynamicStreamingInfoItem $Output Output of adaptive bitrate streaming task.
+     * @param string $BeginProcessTime 
+     * @param string $FinishTime 
      */
     function __construct()
     {
@@ -122,6 +138,14 @@ class MediaProcessTaskAdaptiveDynamicStreamingResult extends AbstractModel
         if (array_key_exists("Output",$param) and $param["Output"] !== null) {
             $this->Output = new AdaptiveDynamicStreamingInfoItem();
             $this->Output->deserialize($param["Output"]);
+        }
+
+        if (array_key_exists("BeginProcessTime",$param) and $param["BeginProcessTime"] !== null) {
+            $this->BeginProcessTime = $param["BeginProcessTime"];
+        }
+
+        if (array_key_exists("FinishTime",$param) and $param["FinishTime"] !== null) {
+            $this->FinishTime = $param["FinishTime"];
         }
     }
 }

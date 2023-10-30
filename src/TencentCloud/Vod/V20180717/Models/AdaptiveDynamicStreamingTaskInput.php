@@ -28,6 +28,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method TraceWatermarkInput getTraceWatermark() Obtain Digital watermark.
  * @method void setTraceWatermark(TraceWatermarkInput $TraceWatermark) Set Digital watermark.
+ * @method CopyRightWatermarkInput getCopyRightWatermark() Obtain 
+ * @method void setCopyRightWatermark(CopyRightWatermarkInput $CopyRightWatermark) Set 
  * @method array getSubtitleSet() Obtain List of subtitle IDs (maximum: 16)
  * @method void setSubtitleSet(array $SubtitleSet) Set List of subtitle IDs (maximum: 16)
  */
@@ -50,6 +52,11 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $TraceWatermark;
 
     /**
+     * @var CopyRightWatermarkInput 
+     */
+    public $CopyRightWatermark;
+
+    /**
      * @var array List of subtitle IDs (maximum: 16)
      */
     public $SubtitleSet;
@@ -59,6 +66,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @param array $WatermarkSet List of up to 10 image or text watermarks.
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param TraceWatermarkInput $TraceWatermark Digital watermark.
+     * @param CopyRightWatermarkInput $CopyRightWatermark 
      * @param array $SubtitleSet List of subtitle IDs (maximum: 16)
      */
     function __construct()
@@ -90,6 +98,11 @@ Note: this field may return null, indicating that no valid values can be obtaine
         if (array_key_exists("TraceWatermark",$param) and $param["TraceWatermark"] !== null) {
             $this->TraceWatermark = new TraceWatermarkInput();
             $this->TraceWatermark->deserialize($param["TraceWatermark"]);
+        }
+
+        if (array_key_exists("CopyRightWatermark",$param) and $param["CopyRightWatermark"] !== null) {
+            $this->CopyRightWatermark = new CopyRightWatermarkInput();
+            $this->CopyRightWatermark->deserialize($param["CopyRightWatermark"]);
         }
 
         if (array_key_exists("SubtitleSet",$param) and $param["SubtitleSet"] !== null) {

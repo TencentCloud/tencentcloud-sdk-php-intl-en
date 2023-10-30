@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getFileIds() Obtain The IDs of media files.
  * @method void setFileIds(array $FileIds) Set The IDs of media files.
+ * @method integer getSubAppId() Obtain The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.
+ * @method void setSubAppId(integer $SubAppId) Set The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.
  * @method integer getRestoreDay() Obtain The number of days during which the restored files will remain available.
  * @method void setRestoreDay(integer $RestoreDay) Set The number of days during which the restored files will remain available.
  * @method string getRestoreTier() Obtain The retrieval mode. If the current storage class is ARCHIVE, the valid values for this parameter are as follows:
@@ -38,8 +40,6 @@ If the current storage class is DEEP ARCHIVE, the valid values for this paramete
 If the current storage class is DEEP ARCHIVE, the valid values for this parameter are as follows:
 <li>Standard: The files are made available in 24 hours.</li>
 <li>Bulk: The files are made available in 48 hours.</li>
- * @method integer getSubAppId() Obtain The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.
- * @method void setSubAppId(integer $SubAppId) Set The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.
  */
 class RestoreMediaRequest extends AbstractModel
 {
@@ -47,6 +47,11 @@ class RestoreMediaRequest extends AbstractModel
      * @var array The IDs of media files.
      */
     public $FileIds;
+
+    /**
+     * @var integer The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.
+     */
+    public $SubAppId;
 
     /**
      * @var integer The number of days during which the restored files will remain available.
@@ -65,12 +70,8 @@ If the current storage class is DEEP ARCHIVE, the valid values for this paramete
     public $RestoreTier;
 
     /**
-     * @var integer The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.
-     */
-    public $SubAppId;
-
-    /**
      * @param array $FileIds The IDs of media files.
+     * @param integer $SubAppId The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.
      * @param integer $RestoreDay The number of days during which the restored files will remain available.
      * @param string $RestoreTier The retrieval mode. If the current storage class is ARCHIVE, the valid values for this parameter are as follows:
 <li>Expedited: The files are made available in five minutes.</li>
@@ -79,7 +80,6 @@ If the current storage class is DEEP ARCHIVE, the valid values for this paramete
 If the current storage class is DEEP ARCHIVE, the valid values for this parameter are as follows:
 <li>Standard: The files are made available in 24 hours.</li>
 <li>Bulk: The files are made available in 48 hours.</li>
-     * @param integer $SubAppId The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.
      */
     function __construct()
     {
@@ -98,16 +98,16 @@ If the current storage class is DEEP ARCHIVE, the valid values for this paramete
             $this->FileIds = $param["FileIds"];
         }
 
+        if (array_key_exists("SubAppId",$param) and $param["SubAppId"] !== null) {
+            $this->SubAppId = $param["SubAppId"];
+        }
+
         if (array_key_exists("RestoreDay",$param) and $param["RestoreDay"] !== null) {
             $this->RestoreDay = $param["RestoreDay"];
         }
 
         if (array_key_exists("RestoreTier",$param) and $param["RestoreTier"] !== null) {
             $this->RestoreTier = $param["RestoreTier"];
-        }
-
-        if (array_key_exists("SubAppId",$param) and $param["SubAppId"] !== null) {
-            $this->SubAppId = $param["SubAppId"];
         }
     }
 }

@@ -20,14 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeCDNStatDetails request structure.
  *
- * @method string getMetric() Obtain Metrics to query. Valid values:
-<li>`Traffic`: traffic in bytes</li>
-<li>`Bandwidth`: bandwidth in bps</li>
-<li>`Requests`: the number of requests</li>
- * @method void setMetric(string $Metric) Set Metrics to query. Valid values:
-<li>`Traffic`: traffic in bytes</li>
-<li>`Bandwidth`: bandwidth in bps</li>
-<li>`Requests`: the number of requests</li>
+ * @method string getMetric() Obtain 
+ * @method void setMetric(string $Metric) Set 
  * @method string getStartTime() Obtain Start time in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?lang=en&pg=).
  * @method void setStartTime(string $StartTime) Set Start time in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?lang=en&pg=).
  * @method string getEndTime() Obtain End time in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?lang=en&pg=).
@@ -158,10 +152,7 @@ If the difference between `StartTime` and `EndTime` is larger than 24 hours, the
 class DescribeCDNStatDetailsRequest extends AbstractModel
 {
     /**
-     * @var string Metrics to query. Valid values:
-<li>`Traffic`: traffic in bytes</li>
-<li>`Bandwidth`: bandwidth in bps</li>
-<li>`Requests`: the number of requests</li>
+     * @var string 
      */
     public $Metric;
 
@@ -261,10 +252,7 @@ If the difference between `StartTime` and `EndTime` is larger than 24 hours, the
     public $DataInterval;
 
     /**
-     * @param string $Metric Metrics to query. Valid values:
-<li>`Traffic`: traffic in bytes</li>
-<li>`Bandwidth`: bandwidth in bps</li>
-<li>`Requests`: the number of requests</li>
+     * @param string $Metric 
      * @param string $StartTime Start time in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?lang=en&pg=).
      * @param string $EndTime End time in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?lang=en&pg=).
      * @param integer $SubAppId <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>

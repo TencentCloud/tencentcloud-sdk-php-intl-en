@@ -34,6 +34,12 @@ use TencentCloud\Common\AbstractModel;
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setOutput(AiRecognitionTaskAsrFullTextResultOutput $Output) Set Output information of full speech recognition task.
 Note: this field may return null, indicating that no valid values can be obtained.
+ * @method integer getProgress() Obtain 
+ * @method void setProgress(integer $Progress) Set 
+ * @method string getBeginProcessTime() Obtain 
+ * @method void setBeginProcessTime(string $BeginProcessTime) Set 
+ * @method string getFinishTime() Obtain 
+ * @method void setFinishTime(string $FinishTime) Set 
  */
 class AiRecognitionTaskAsrFullTextResult extends AbstractModel
 {
@@ -69,6 +75,21 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $Output;
 
     /**
+     * @var integer 
+     */
+    public $Progress;
+
+    /**
+     * @var string 
+     */
+    public $BeginProcessTime;
+
+    /**
+     * @var string 
+     */
+    public $FinishTime;
+
+    /**
      * @param string $Status Task status. Valid values: PROCESSING, SUCCESS, FAIL.
      * @param string $ErrCodeExt Error code. An empty string indicates the task is successful; other values indicate failure. For details, see [Video Processing Error Codes](https://intl.cloud.tencent.com/zh/document/product/266/39145).
      * @param integer $ErrCode Error code. 0 indicates the task is successful; other values indicate failure. You’re not recommended to use this parameter, but to use the new parameter `ErrCodeExt`.
@@ -76,6 +97,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @param AiRecognitionTaskAsrFullTextResultInput $Input Input information of full speech recognition task.
      * @param AiRecognitionTaskAsrFullTextResultOutput $Output Output information of full speech recognition task.
 Note: this field may return null, indicating that no valid values can be obtained.
+     * @param integer $Progress 
+     * @param string $BeginProcessTime 
+     * @param string $FinishTime 
      */
     function __construct()
     {
@@ -114,6 +138,18 @@ Note: this field may return null, indicating that no valid values can be obtaine
         if (array_key_exists("Output",$param) and $param["Output"] !== null) {
             $this->Output = new AiRecognitionTaskAsrFullTextResultOutput();
             $this->Output->deserialize($param["Output"]);
+        }
+
+        if (array_key_exists("Progress",$param) and $param["Progress"] !== null) {
+            $this->Progress = $param["Progress"];
+        }
+
+        if (array_key_exists("BeginProcessTime",$param) and $param["BeginProcessTime"] !== null) {
+            $this->BeginProcessTime = $param["BeginProcessTime"];
+        }
+
+        if (array_key_exists("FinishTime",$param) and $param["FinishTime"] !== null) {
+            $this->FinishTime = $param["FinishTime"];
         }
     }
 }

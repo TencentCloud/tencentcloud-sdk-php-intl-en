@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDomains(array $Domains) Set List of domain. If this field is left blank, all domain information will be listed by default.
  * @method integer getLimit() Obtain The maximum number of returned results for pagination fetching. Default value: 20.
  * @method void setLimit(integer $Limit) Set The maximum number of returned results for pagination fetching. Default value: 20.
- * @method integer getOffset() Obtain The starting offset for page fetching. Default value: 0.
- * @method void setOffset(integer $Offset) Set The starting offset for page fetching. Default value: 0.
+ * @method integer getOffset() Obtain 
+ * @method void setOffset(integer $Offset) Set 
  * @method integer getSubAppId() Obtain VOD[Subapplication](/document/product/266/14574) ID。If you want to access resources in a Subapplication, fill this field with the Subapplication ID; otherwise, you don't need to fill in this field.
  * @method void setSubAppId(integer $SubAppId) Set VOD[Subapplication](/document/product/266/14574) ID。If you want to access resources in a Subapplication, fill this field with the Subapplication ID; otherwise, you don't need to fill in this field.
  */
@@ -42,7 +42,7 @@ class DescribeCDNDomainsRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @var integer The starting offset for page fetching. Default value: 0.
+     * @var integer 
      */
     public $Offset;
 
@@ -54,7 +54,7 @@ class DescribeCDNDomainsRequest extends AbstractModel
     /**
      * @param array $Domains List of domain. If this field is left blank, all domain information will be listed by default.
      * @param integer $Limit The maximum number of returned results for pagination fetching. Default value: 20.
-     * @param integer $Offset The starting offset for page fetching. Default value: 0.
+     * @param integer $Offset 
      * @param integer $SubAppId VOD[Subapplication](/document/product/266/14574) ID。If you want to access resources in a Subapplication, fill this field with the Subapplication ID; otherwise, you don't need to fill in this field.
      */
     function __construct()

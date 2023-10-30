@@ -20,17 +20,25 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateAccelerationDomain response structure.
  *
+ * @method OwnershipVerification getOwnershipVerification() Obtain 
+ * @method void setOwnershipVerification(OwnershipVerification $OwnershipVerification) Set 
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 class CreateAccelerationDomainResponse extends AbstractModel
 {
     /**
+     * @var OwnershipVerification 
+     */
+    public $OwnershipVerification;
+
+    /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
 
     /**
+     * @param OwnershipVerification $OwnershipVerification 
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -46,6 +54,11 @@ class CreateAccelerationDomainResponse extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("OwnershipVerification",$param) and $param["OwnershipVerification"] !== null) {
+            $this->OwnershipVerification = new OwnershipVerification();
+            $this->OwnershipVerification->deserialize($param["OwnershipVerification"]);
+        }
+
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
             $this->RequestId = $param["RequestId"];
         }

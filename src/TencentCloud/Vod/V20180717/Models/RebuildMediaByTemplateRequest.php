@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStartTimeOffset(float $StartTimeOffset) Set The start offset (seconds). If you do not specify this, the segment will start from the beginning of the video.
  * @method float getEndTimeOffset() Obtain The end offset (seconds). If you do not specify this, the segment will end at the end of the video.
  * @method void setEndTimeOffset(float $EndTimeOffset) Set The end offset (seconds). If you do not specify this, the segment will end at the end of the video.
- * @method RebuildMediaOutputConfig getOutputConfig() Obtain The parameters for the output file of remastering.
- * @method void setOutputConfig(RebuildMediaOutputConfig $OutputConfig) Set The parameters for the output file of remastering.
+ * @method RebuildMediaOutputConfig getOutputConfig() Obtain 
+ * @method void setOutputConfig(RebuildMediaOutputConfig $OutputConfig) Set 
  * @method string getSessionId() Obtain The session ID, which is used for de-duplication. If there was a request with the same session ID in the last three days, an error will be returned for the current request. The session ID can contain up to 50 characters. If you do not pass this parameter or pass in an empty string, duplicate sessions will not be identified.
  * @method void setSessionId(string $SessionId) Set The session ID, which is used for de-duplication. If there was a request with the same session ID in the last three days, an error will be returned for the current request. The session ID can contain up to 50 characters. If you do not pass this parameter or pass in an empty string, duplicate sessions will not be identified.
  * @method string getSessionContext() Obtain The source context, which is used to pass through user request information. The `ProcedureStateChanged` callback will return the value of this parameter. It can contain up to 1,000 characters.
@@ -69,7 +69,7 @@ class RebuildMediaByTemplateRequest extends AbstractModel
     public $EndTimeOffset;
 
     /**
-     * @var RebuildMediaOutputConfig The parameters for the output file of remastering.
+     * @var RebuildMediaOutputConfig 
      */
     public $OutputConfig;
 
@@ -99,7 +99,7 @@ class RebuildMediaByTemplateRequest extends AbstractModel
      * @param string $SubAppId <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
      * @param float $StartTimeOffset The start offset (seconds). If you do not specify this, the segment will start from the beginning of the video.
      * @param float $EndTimeOffset The end offset (seconds). If you do not specify this, the segment will end at the end of the video.
-     * @param RebuildMediaOutputConfig $OutputConfig The parameters for the output file of remastering.
+     * @param RebuildMediaOutputConfig $OutputConfig 
      * @param string $SessionId The session ID, which is used for de-duplication. If there was a request with the same session ID in the last three days, an error will be returned for the current request. The session ID can contain up to 50 characters. If you do not pass this parameter or pass in an empty string, duplicate sessions will not be identified.
      * @param string $SessionContext The source context, which is used to pass through user request information. The `ProcedureStateChanged` callback will return the value of this parameter. It can contain up to 1,000 characters.
      * @param integer $TasksPriority The task priority, which can be a value from -10 to 10. The higher the value, the higher the priority. If this parameter is left empty, 0 will be used.

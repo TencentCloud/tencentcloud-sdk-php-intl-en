@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getMd5() Obtain The MD5 hash of the file.
  * @method void setMd5(string $Md5) Set The MD5 hash of the file.
+ * @method string getSha1() Obtain 
+ * @method void setSha1(string $Sha1) Set 
  */
 class DescribeFileAttributesTaskOutput extends AbstractModel
 {
@@ -31,7 +33,13 @@ class DescribeFileAttributesTaskOutput extends AbstractModel
     public $Md5;
 
     /**
+     * @var string 
+     */
+    public $Sha1;
+
+    /**
      * @param string $Md5 The MD5 hash of the file.
+     * @param string $Sha1 
      */
     function __construct()
     {
@@ -48,6 +56,10 @@ class DescribeFileAttributesTaskOutput extends AbstractModel
         }
         if (array_key_exists("Md5",$param) and $param["Md5"] !== null) {
             $this->Md5 = $param["Md5"];
+        }
+
+        if (array_key_exists("Sha1",$param) and $param["Sha1"] !== null) {
+            $this->Sha1 = $param["Sha1"];
         }
     }
 }

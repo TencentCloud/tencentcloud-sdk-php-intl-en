@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateCDNDomain request structure.
  *
- * @method string getDomain() Obtain Domain.
- * @method void setDomain(string $Domain) Set Domain.
- * @method CDNDomainConfig getConfig() Obtain Domain configuration.
- * @method void setConfig(CDNDomainConfig $Config) Set Domain configuration.
- * @method integer getSubAppId() Obtain VOD[Subapplication](https://www.tencentcloud.com/zh/document/product/266/33987) ID。If you want to access resources in a Subapplication, fill this field with the Subapplication ID; otherwise, you don't need to fill in this field.
- * @method void setSubAppId(integer $SubAppId) Set VOD[Subapplication](https://www.tencentcloud.com/zh/document/product/266/33987) ID。If you want to access resources in a Subapplication, fill this field with the Subapplication ID; otherwise, you don't need to fill in this field.
+ * @method string getDomain() Obtain 
+ * @method void setDomain(string $Domain) Set 
+ * @method CDNDomainConfig getConfig() Obtain 
+ * @method void setConfig(CDNDomainConfig $Config) Set 
+ * @method integer getSubAppId() Obtain 
+ * @method void setSubAppId(integer $SubAppId) Set 
  */
 class CreateCDNDomainRequest extends AbstractModel
 {
     /**
-     * @var string Domain.
+     * @var string 
      */
     public $Domain;
 
     /**
-     * @var CDNDomainConfig Domain configuration.
+     * @var CDNDomainConfig 
      */
     public $Config;
 
     /**
-     * @var integer VOD[Subapplication](https://www.tencentcloud.com/zh/document/product/266/33987) ID。If you want to access resources in a Subapplication, fill this field with the Subapplication ID; otherwise, you don't need to fill in this field.
+     * @var integer 
      */
     public $SubAppId;
 
     /**
-     * @param string $Domain Domain.
-     * @param CDNDomainConfig $Config Domain configuration.
-     * @param integer $SubAppId VOD[Subapplication](https://www.tencentcloud.com/zh/document/product/266/33987) ID。If you want to access resources in a Subapplication, fill this field with the Subapplication ID; otherwise, you don't need to fill in this field.
+     * @param string $Domain 
+     * @param CDNDomainConfig $Config 
+     * @param integer $SubAppId 
      */
     function __construct()
     {

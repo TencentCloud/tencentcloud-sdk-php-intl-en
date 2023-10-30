@@ -18,8 +18,7 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Content to be deleted when a VOD video is deleted
-
+ * 
  *
  * @method string getType() Obtain The type of files to delete. If this parameter is left empty, it will be invalid. Valid values:
 <li>`OriginalFiles`: The original file. After deleting an original file, you can no longer perform operations such as transcoding or WeChat publishing on the file ID.</li>

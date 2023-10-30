@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Domain name HTTPS acceleration configuration. This is disabled by default.
  *
- * @method string getSwitch() Obtain HTTPS configuration switch: <li>on:Enable;</li> <li>off:Disable.</li>
- * @method void setSwitch(string $Switch) Set HTTPS configuration switch: <li>on:Enable;</li> <li>off:Disable.</li>
- * @method string getHttp2() Obtain Whether to enable HTTP2: <li>on:Enable;</li> <li>off:Disable.</li>
- * @method void setHttp2(string $Http2) Set Whether to enable HTTP2: <li>on:Enable;</li> <li>off:Disable.</li>
+ * @method string getSwitch() Obtain 
+ * @method void setSwitch(string $Switch) Set 
+ * @method string getHttp2() Obtain 
+ * @method void setHttp2(string $Http2) Set 
  * @method CDNCertInfo getCertInfo() Obtain Server certificate configuration information
  * @method void setCertInfo(CDNCertInfo $CertInfo) Set Server certificate configuration information
  */
 class Https extends AbstractModel
 {
     /**
-     * @var string HTTPS configuration switch: <li>on:Enable;</li> <li>off:Disable.</li>
+     * @var string 
      */
     public $Switch;
 
     /**
-     * @var string Whether to enable HTTP2: <li>on:Enable;</li> <li>off:Disable.</li>
+     * @var string 
      */
     public $Http2;
 
@@ -45,8 +45,8 @@ class Https extends AbstractModel
     public $CertInfo;
 
     /**
-     * @param string $Switch HTTPS configuration switch: <li>on:Enable;</li> <li>off:Disable.</li>
-     * @param string $Http2 Whether to enable HTTP2: <li>on:Enable;</li> <li>off:Disable.</li>
+     * @param string $Switch 
+     * @param string $Http2 
      * @param CDNCertInfo $CertInfo Server certificate configuration information
      */
     function __construct()

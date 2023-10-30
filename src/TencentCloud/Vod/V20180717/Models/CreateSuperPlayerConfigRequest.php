@@ -64,22 +64,8 @@ This parameter is required if `AudioVideoType` is `Transcode`.
 This parameter is required if `AudioVideoType` is `Transcode`.
  * @method integer getImageSpriteDefinition() Obtain ID of the image sprite generating template that allows output.
  * @method void setImageSpriteDefinition(integer $ImageSpriteDefinition) Set ID of the image sprite generating template that allows output.
- * @method array getResolutionNames() Obtain Display name of player for substreams with different resolutions. If this parameter is left empty or an empty array, the default configuration will be used:
-<li>MinEdgeLength: 240, Name: LD;</li>
-<li>MinEdgeLength: 480, Name: SD;</li>
-<li>MinEdgeLength: 720, Name: HD;</li>
-<li>MinEdgeLength: 1080, Name: FHD;</li>
-<li>MinEdgeLength: 1440, Name: 2K;</li>
-<li>MinEdgeLength: 2160, Name: 4K;</li>
-<li>MinEdgeLength: 4320, Name: 8K.</li>
- * @method void setResolutionNames(array $ResolutionNames) Set Display name of player for substreams with different resolutions. If this parameter is left empty or an empty array, the default configuration will be used:
-<li>MinEdgeLength: 240, Name: LD;</li>
-<li>MinEdgeLength: 480, Name: SD;</li>
-<li>MinEdgeLength: 720, Name: HD;</li>
-<li>MinEdgeLength: 1080, Name: FHD;</li>
-<li>MinEdgeLength: 1440, Name: 2K;</li>
-<li>MinEdgeLength: 2160, Name: 4K;</li>
-<li>MinEdgeLength: 4320, Name: 8K.</li>
+ * @method array getResolutionNames() Obtain 
+ * @method void setResolutionNames(array $ResolutionNames) Set 
  * @method string getDomain() Obtain Domain name used for playback. If it is left empty or set to `Default`, the domain name configured in [Default Distribution Configuration](https://intl.cloud.tencent.com/document/product/266/33373?from_cn_redirect=1) will be used.
  * @method void setDomain(string $Domain) Set Domain name used for playback. If it is left empty or set to `Default`, the domain name configured in [Default Distribution Configuration](https://intl.cloud.tencent.com/document/product/266/33373?from_cn_redirect=1) will be used.
  * @method string getScheme() Obtain Scheme used for playback. If it is left empty or set to `Default`, the scheme configured in [Default Distribution Configuration](https://intl.cloud.tencent.com/document/product/266/33373?from_cn_redirect=1) will be used. Other valid values:
@@ -148,14 +134,7 @@ This parameter is required if `AudioVideoType` is `Transcode`.
     public $ImageSpriteDefinition;
 
     /**
-     * @var array Display name of player for substreams with different resolutions. If this parameter is left empty or an empty array, the default configuration will be used:
-<li>MinEdgeLength: 240, Name: LD;</li>
-<li>MinEdgeLength: 480, Name: SD;</li>
-<li>MinEdgeLength: 720, Name: HD;</li>
-<li>MinEdgeLength: 1080, Name: FHD;</li>
-<li>MinEdgeLength: 1440, Name: 2K;</li>
-<li>MinEdgeLength: 2160, Name: 4K;</li>
-<li>MinEdgeLength: 4320, Name: 8K.</li>
+     * @var array 
      */
     public $ResolutionNames;
 
@@ -199,14 +178,7 @@ This parameter is required if `AudioVideoType` is `AdaptiveDynamicStream` and `D
 
 This parameter is required if `AudioVideoType` is `Transcode`.
      * @param integer $ImageSpriteDefinition ID of the image sprite generating template that allows output.
-     * @param array $ResolutionNames Display name of player for substreams with different resolutions. If this parameter is left empty or an empty array, the default configuration will be used:
-<li>MinEdgeLength: 240, Name: LD;</li>
-<li>MinEdgeLength: 480, Name: SD;</li>
-<li>MinEdgeLength: 720, Name: HD;</li>
-<li>MinEdgeLength: 1080, Name: FHD;</li>
-<li>MinEdgeLength: 1440, Name: 2K;</li>
-<li>MinEdgeLength: 2160, Name: 4K;</li>
-<li>MinEdgeLength: 4320, Name: 8K.</li>
+     * @param array $ResolutionNames 
      * @param string $Domain Domain name used for playback. If it is left empty or set to `Default`, the domain name configured in [Default Distribution Configuration](https://intl.cloud.tencent.com/document/product/266/33373?from_cn_redirect=1) will be used.
      * @param string $Scheme Scheme used for playback. If it is left empty or set to `Default`, the scheme configured in [Default Distribution Configuration](https://intl.cloud.tencent.com/document/product/266/33373?from_cn_redirect=1) will be used. Other valid values:
 <li>HTTP;</li>

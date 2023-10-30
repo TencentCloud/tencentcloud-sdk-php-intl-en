@@ -20,19 +20,19 @@ use TencentCloud\Common\AbstractModel;
 /**
  * UserAgent blacklist/whitelist rule configuration
  *
- * @method string getFilterType() Obtain UserAgent blacklist/whitelist type: <li>whitelist:whitelist;</li> <li>blacklist:blacklist.</li>
- * @method void setFilterType(string $FilterType) Set UserAgent blacklist/whitelist type: <li>whitelist:whitelist;</li> <li>blacklist:blacklist.</li>
+ * @method string getFilterType() Obtain 
+ * @method void setFilterType(string $FilterType) Set 
  * @method array getUserAgents() Obtain UserAgent list.
  * @method void setUserAgents(array $UserAgents) Set UserAgent list.
- * @method string getRuleType() Obtain Rule type: <li>all: All files take effect;</li> <li>file: The specified file suffix takes effect;</li> <li>directory: The specified path takes effect;</li> <li>path: The specified absolute path takes effect.</li>
- * @method void setRuleType(string $RuleType) Set Rule type: <li>all: All files take effect;</li> <li>file: The specified file suffix takes effect;</li> <li>directory: The specified path takes effect;</li> <li>path: The specified absolute path takes effect.</li>
- * @method array getRulePaths() Obtain Matching content under the corresponding type of RuleType:<li>For `all`, enter an asterisk (*).</li> <li>For `file`, enter the suffix, such as jpg, txt.</li> <li>For `directory`, enter the path, such as /xxx/test/.</li> <li>For `path`, enter the corresponding absolute path, such as /xxx/test.html.</li>
- * @method void setRulePaths(array $RulePaths) Set Matching content under the corresponding type of RuleType:<li>For `all`, enter an asterisk (*).</li> <li>For `file`, enter the suffix, such as jpg, txt.</li> <li>For `directory`, enter the path, such as /xxx/test/.</li> <li>For `path`, enter the corresponding absolute path, such as /xxx/test.html.</li>
+ * @method string getRuleType() Obtain 
+ * @method void setRuleType(string $RuleType) Set 
+ * @method array getRulePaths() Obtain 
+ * @method void setRulePaths(array $RulePaths) Set 
  */
 class UserAgentFilterRule extends AbstractModel
 {
     /**
-     * @var string UserAgent blacklist/whitelist type: <li>whitelist:whitelist;</li> <li>blacklist:blacklist.</li>
+     * @var string 
      */
     public $FilterType;
 
@@ -42,20 +42,20 @@ class UserAgentFilterRule extends AbstractModel
     public $UserAgents;
 
     /**
-     * @var string Rule type: <li>all: All files take effect;</li> <li>file: The specified file suffix takes effect;</li> <li>directory: The specified path takes effect;</li> <li>path: The specified absolute path takes effect.</li>
+     * @var string 
      */
     public $RuleType;
 
     /**
-     * @var array Matching content under the corresponding type of RuleType:<li>For `all`, enter an asterisk (*).</li> <li>For `file`, enter the suffix, such as jpg, txt.</li> <li>For `directory`, enter the path, such as /xxx/test/.</li> <li>For `path`, enter the corresponding absolute path, such as /xxx/test.html.</li>
+     * @var array 
      */
     public $RulePaths;
 
     /**
-     * @param string $FilterType UserAgent blacklist/whitelist type: <li>whitelist:whitelist;</li> <li>blacklist:blacklist.</li>
+     * @param string $FilterType 
      * @param array $UserAgents UserAgent list.
-     * @param string $RuleType Rule type: <li>all: All files take effect;</li> <li>file: The specified file suffix takes effect;</li> <li>directory: The specified path takes effect;</li> <li>path: The specified absolute path takes effect.</li>
-     * @param array $RulePaths Matching content under the corresponding type of RuleType:<li>For `all`, enter an asterisk (*).</li> <li>For `file`, enter the suffix, such as jpg, txt.</li> <li>For `directory`, enter the path, such as /xxx/test/.</li> <li>For `path`, enter the corresponding absolute path, such as /xxx/test.html.</li>
+     * @param string $RuleType 
+     * @param array $RulePaths 
      */
     function __construct()
     {

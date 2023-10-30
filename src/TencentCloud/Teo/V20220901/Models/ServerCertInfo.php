@@ -29,15 +29,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
  * @method void setAlias(string $Alias) Set Alias of the certificate.
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getType() Obtain Type of the certificate. Values:
-<li>`default`: Default certificate</lil>
-<li>`upload`: Specified certificate</li>
-<li>`managed`: Tencent Cloud-managed certificate</li>
-Note: This field may return `null`, indicating that no valid value can be obtained.
+u200c<li>`default`: Default certificate</li>
+u200c<li>`upload`: Custom certificate</li>
+u200c<li>`managed`: Tencent Cloud-managed certificate</li>
+Note: This field may return·null, indicating that no valid values can be obtained.
  * @method void setType(string $Type) Set Type of the certificate. Values:
-<li>`default`: Default certificate</lil>
-<li>`upload`: Specified certificate</li>
-<li>`managed`: Tencent Cloud-managed certificate</li>
-Note: This field may return `null`, indicating that no valid value can be obtained.
+u200c<li>`default`: Default certificate</li>
+u200c<li>`upload`: Custom certificate</li>
+u200c<li>`managed`: Tencent Cloud-managed certificate</li>
+Note: This field may return·null, indicating that no valid values can be obtained.
  * @method string getExpireTime() Obtain Time when the certificate expires.
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setExpireTime(string $ExpireTime) Set Time when the certificate expires.
@@ -71,10 +71,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * @var string Type of the certificate. Values:
-<li>`default`: Default certificate</lil>
-<li>`upload`: Specified certificate</li>
-<li>`managed`: Tencent Cloud-managed certificate</li>
-Note: This field may return `null`, indicating that no valid value can be obtained.
+u200c<li>`default`: Default certificate</li>
+u200c<li>`upload`: Custom certificate</li>
+u200c<li>`managed`: Tencent Cloud-managed certificate</li>
+Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public $Type;
 
@@ -108,10 +108,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $Alias Alias of the certificate.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $Type Type of the certificate. Values:
-<li>`default`: Default certificate</lil>
-<li>`upload`: Specified certificate</li>
-<li>`managed`: Tencent Cloud-managed certificate</li>
-Note: This field may return `null`, indicating that no valid value can be obtained.
+u200c<li>`default`: Default certificate</li>
+u200c<li>`upload`: Custom certificate</li>
+u200c<li>`managed`: Tencent Cloud-managed certificate</li>
+Note: This field may return·null, indicating that no valid values can be obtained.
      * @param string $ExpireTime Time when the certificate expires.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $DeployTime Time when the certificate is deployed.

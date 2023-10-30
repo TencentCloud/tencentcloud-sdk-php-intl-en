@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Path cache/no cache configuration.
  *
- * @method string getSwitch() Obtain No-cache configuration switch: <li>on: Enable;</li> <li>off: Disable.</li>
- * @method void setSwitch(string $Switch) Set No-cache configuration switch: <li>on: Enable;</li> <li>off: Disable.</li>
- * @method string getRevalidate() Obtain Always forwards to the origin server for verification:<li>on: Enable;</li> <li>off: Disable.</li>
- * @method void setRevalidate(string $Revalidate) Set Always forwards to the origin server for verification:<li>on: Enable;</li> <li>off: Disable.</li>
+ * @method string getSwitch() Obtain 
+ * @method void setSwitch(string $Switch) Set 
+ * @method string getRevalidate() Obtain 
+ * @method void setRevalidate(string $Revalidate) Set 
  */
 class CacheConfigNoCache extends AbstractModel
 {
     /**
-     * @var string No-cache configuration switch: <li>on: Enable;</li> <li>off: Disable.</li>
+     * @var string 
      */
     public $Switch;
 
     /**
-     * @var string Always forwards to the origin server for verification:<li>on: Enable;</li> <li>off: Disable.</li>
+     * @var string 
      */
     public $Revalidate;
 
     /**
-     * @param string $Switch No-cache configuration switch: <li>on: Enable;</li> <li>off: Disable.</li>
-     * @param string $Revalidate Always forwards to the origin server for verification:<li>on: Enable;</li> <li>off: Disable.</li>
+     * @param string $Switch 
+     * @param string $Revalidate 
      */
     function __construct()
     {

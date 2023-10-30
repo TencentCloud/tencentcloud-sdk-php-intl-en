@@ -22,26 +22,28 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getOriginType() Obtain The origin type. Values:
 <li>`IP_DOMAIN`: IPv4/IPv6 address or domain name</li>
-<li>`COS`: COS bucket address </li>
-<li>`ORIGIN_GROUP`: Origin group </li>
-<li>`AWS_S3`: AWS S3 bucket address </li>
-<li>`SPACE`: EdgeOne Shield Space </li>
+<li>`COS`: COS bucket address</li>
+<li>`ORIGIN_GROUP`: Origin group</li>
+<li>`AWS_S3`: AWS S3 bucket address</li>
+<li>`LB`: Tencent Cloud CLB instance</li>
+<li>`SPACE`: EdgeOne Shield Space</li>
  * @method void setOriginType(string $OriginType) Set The origin type. Values:
 <li>`IP_DOMAIN`: IPv4/IPv6 address or domain name</li>
-<li>`COS`: COS bucket address </li>
-<li>`ORIGIN_GROUP`: Origin group </li>
-<li>`AWS_S3`: AWS S3 bucket address </li>
-<li>`SPACE`: EdgeOne Shield Space </li>
+<li>`COS`: COS bucket address</li>
+<li>`ORIGIN_GROUP`: Origin group</li>
+<li>`AWS_S3`: AWS S3 bucket address</li>
+<li>`LB`: Tencent Cloud CLB instance</li>
+<li>`SPACE`: EdgeOne Shield Space</li>
  * @method string getOrigin() Obtain The origin address. Enter the origin group ID if `OriginType=ORIGIN_GROUP`.
  * @method void setOrigin(string $Origin) Set The origin address. Enter the origin group ID if `OriginType=ORIGIN_GROUP`.
- * @method string getBackupOrigin() Obtain ID of the secondary origin group (valid when `OriginType=ORIGIN_GROUP`). If it’s not specified, it indicates that secondary origins are not used.
- * @method void setBackupOrigin(string $BackupOrigin) Set ID of the secondary origin group (valid when `OriginType=ORIGIN_GROUP`). If it’s not specified, it indicates that secondary origins are not used.
- * @method string getPrivateAccess() Obtain Whether to authenticate access to the private object storage origin (valid when `OriginType=COS/AWS_S3`). Values: 
-<li>`on`: Enable private authentication.</li>
-<li>`off`: Disable private authentication.</li>If this field is not specified, the default value `off` is used.
- * @method void setPrivateAccess(string $PrivateAccess) Set Whether to authenticate access to the private object storage origin (valid when `OriginType=COS/AWS_S3`). Values: 
-<li>`on`: Enable private authentication.</li>
-<li>`off`: Disable private authentication.</li>If this field is not specified, the default value `off` is used.
+ * @method string getBackupOrigin() Obtain ID of the backup origin group (valid when `OriginType=ORIGIN_GROUP`). If it’s not specified, it indicates not to use backup origins.
+ * @method void setBackupOrigin(string $BackupOrigin) Set ID of the backup origin group (valid when `OriginType=ORIGIN_GROUP`). If it’s not specified, it indicates not to use backup origins.
+ * @method string getPrivateAccess() Obtain Whether to allow access to the private object storage origin (valid when `OriginType=COS/AWS_S3`). Values:
+u200c<li>`on`: Enable private authentication.</li>
+<li>`off`: (Default) Disable private authentication.</li>
+ * @method void setPrivateAccess(string $PrivateAccess) Set Whether to allow access to the private object storage origin (valid when `OriginType=COS/AWS_S3`). Values:
+u200c<li>`on`: Enable private authentication.</li>
+<li>`off`: (Default) Disable private authentication.</li>
  * @method array getPrivateParameters() Obtain The private authentication parameters. This field is valid when `PrivateAccess=on`.
  * @method void setPrivateParameters(array $PrivateParameters) Set The private authentication parameters. This field is valid when `PrivateAccess=on`.
  */
@@ -50,10 +52,11 @@ class OriginInfo extends AbstractModel
     /**
      * @var string The origin type. Values:
 <li>`IP_DOMAIN`: IPv4/IPv6 address or domain name</li>
-<li>`COS`: COS bucket address </li>
-<li>`ORIGIN_GROUP`: Origin group </li>
-<li>`AWS_S3`: AWS S3 bucket address </li>
-<li>`SPACE`: EdgeOne Shield Space </li>
+<li>`COS`: COS bucket address</li>
+<li>`ORIGIN_GROUP`: Origin group</li>
+<li>`AWS_S3`: AWS S3 bucket address</li>
+<li>`LB`: Tencent Cloud CLB instance</li>
+<li>`SPACE`: EdgeOne Shield Space</li>
      */
     public $OriginType;
 
@@ -63,14 +66,14 @@ class OriginInfo extends AbstractModel
     public $Origin;
 
     /**
-     * @var string ID of the secondary origin group (valid when `OriginType=ORIGIN_GROUP`). If it’s not specified, it indicates that secondary origins are not used.
+     * @var string ID of the backup origin group (valid when `OriginType=ORIGIN_GROUP`). If it’s not specified, it indicates not to use backup origins.
      */
     public $BackupOrigin;
 
     /**
-     * @var string Whether to authenticate access to the private object storage origin (valid when `OriginType=COS/AWS_S3`). Values: 
-<li>`on`: Enable private authentication.</li>
-<li>`off`: Disable private authentication.</li>If this field is not specified, the default value `off` is used.
+     * @var string Whether to allow access to the private object storage origin (valid when `OriginType=COS/AWS_S3`). Values:
+u200c<li>`on`: Enable private authentication.</li>
+<li>`off`: (Default) Disable private authentication.</li>
      */
     public $PrivateAccess;
 
@@ -82,15 +85,16 @@ class OriginInfo extends AbstractModel
     /**
      * @param string $OriginType The origin type. Values:
 <li>`IP_DOMAIN`: IPv4/IPv6 address or domain name</li>
-<li>`COS`: COS bucket address </li>
-<li>`ORIGIN_GROUP`: Origin group </li>
-<li>`AWS_S3`: AWS S3 bucket address </li>
-<li>`SPACE`: EdgeOne Shield Space </li>
+<li>`COS`: COS bucket address</li>
+<li>`ORIGIN_GROUP`: Origin group</li>
+<li>`AWS_S3`: AWS S3 bucket address</li>
+<li>`LB`: Tencent Cloud CLB instance</li>
+<li>`SPACE`: EdgeOne Shield Space</li>
      * @param string $Origin The origin address. Enter the origin group ID if `OriginType=ORIGIN_GROUP`.
-     * @param string $BackupOrigin ID of the secondary origin group (valid when `OriginType=ORIGIN_GROUP`). If it’s not specified, it indicates that secondary origins are not used.
-     * @param string $PrivateAccess Whether to authenticate access to the private object storage origin (valid when `OriginType=COS/AWS_S3`). Values: 
-<li>`on`: Enable private authentication.</li>
-<li>`off`: Disable private authentication.</li>If this field is not specified, the default value `off` is used.
+     * @param string $BackupOrigin ID of the backup origin group (valid when `OriginType=ORIGIN_GROUP`). If it’s not specified, it indicates not to use backup origins.
+     * @param string $PrivateAccess Whether to allow access to the private object storage origin (valid when `OriginType=COS/AWS_S3`). Values:
+u200c<li>`on`: Enable private authentication.</li>
+<li>`off`: (Default) Disable private authentication.</li>
      * @param array $PrivateParameters The private authentication parameters. This field is valid when `PrivateAccess=on`.
      */
     function __construct()

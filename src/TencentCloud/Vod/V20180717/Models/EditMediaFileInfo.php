@@ -22,14 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getFileId() Obtain Video ID.
  * @method void setFileId(string $FileId) Set Video ID.
- * @method float getStartTimeOffset() Obtain Start time offset of video clipping in seconds.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setStartTimeOffset(float $StartTimeOffset) Set Start time offset of video clipping in seconds.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method float getEndTimeOffset() Obtain End time offset of video clipping in seconds.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setEndTimeOffset(float $EndTimeOffset) Set End time offset of video clipping in seconds.
-Note: this field may return null, indicating that no valid values can be obtained.
+ * @method float getStartTimeOffset() Obtain 
+ * @method void setStartTimeOffset(float $StartTimeOffset) Set 
+ * @method float getEndTimeOffset() Obtain 
+ * @method void setEndTimeOffset(float $EndTimeOffset) Set 
  */
 class EditMediaFileInfo extends AbstractModel
 {
@@ -39,23 +35,19 @@ class EditMediaFileInfo extends AbstractModel
     public $FileId;
 
     /**
-     * @var float Start time offset of video clipping in seconds.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var float 
      */
     public $StartTimeOffset;
 
     /**
-     * @var float End time offset of video clipping in seconds.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var float 
      */
     public $EndTimeOffset;
 
     /**
      * @param string $FileId Video ID.
-     * @param float $StartTimeOffset Start time offset of video clipping in seconds.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param float $EndTimeOffset End time offset of video clipping in seconds.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @param float $StartTimeOffset 
+     * @param float $EndTimeOffset 
      */
     function __construct()
     {

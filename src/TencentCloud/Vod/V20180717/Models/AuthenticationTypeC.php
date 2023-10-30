@@ -18,63 +18,60 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Timestamp hotlink protection mode C configuration
-The access URL format of timestamp hotlink protection mode C is as follows: http://DomainName/md5hash/timestamp/FileName
-Here, timestamp is a hexadecimal timestamp in Unix format;
-md5hash: MD5 (custom key + file path + timestamp)
+ * 
  *
- * @method string getSecretKey() Obtain The key for signature calculation 6-32 characters. Only digits and letters are allowed.
- * @method void setSecretKey(string $SecretKey) Set The key for signature calculation 6-32 characters. Only digits and letters are allowed.
- * @method integer getExpireTime() Obtain Signature expiration time;Unit: second. The maximum value is 630720000.
- * @method void setExpireTime(integer $ExpireTime) Set Signature expiration time;Unit: second. The maximum value is 630720000.
- * @method array getFileExtensions() Obtain File extension list settings determining if authentication should be performed;If it contains an asterisk (*), this indicates all files.
- * @method void setFileExtensions(array $FileExtensions) Set File extension list settings determining if authentication should be performed;If it contains an asterisk (*), this indicates all files.
- * @method string getFilterType() Obtain whitelist: All file types apart from the FileExtensions list are authenticated;blacklist: Only the file types in the FileExtensions list are authenticated.
- * @method void setFilterType(string $FilterType) Set whitelist: All file types apart from the FileExtensions list are authenticated;blacklist: Only the file types in the FileExtensions list are authenticated.
- * @method string getTimeFormat() Obtain Timestamp settings:<li>dec: Decimal</li> <li>hex: Hexadecimal</li>
- * @method void setTimeFormat(string $TimeFormat) Set Timestamp settings:<li>dec: Decimal</li> <li>hex: Hexadecimal</li>
- * @method string getBackupSecretKey() Obtain Backup key, which is used to calculate a signature. 6-32 characters. Only digits and letters are allowed.
- * @method void setBackupSecretKey(string $BackupSecretKey) Set Backup key, which is used to calculate a signature. 6-32 characters. Only digits and letters are allowed.
+ * @method string getSecretKey() Obtain 
+ * @method void setSecretKey(string $SecretKey) Set 
+ * @method integer getExpireTime() Obtain 
+ * @method void setExpireTime(integer $ExpireTime) Set 
+ * @method array getFileExtensions() Obtain 
+ * @method void setFileExtensions(array $FileExtensions) Set 
+ * @method string getFilterType() Obtain 
+ * @method void setFilterType(string $FilterType) Set 
+ * @method string getTimeFormat() Obtain 
+ * @method void setTimeFormat(string $TimeFormat) Set 
+ * @method string getBackupSecretKey() Obtain 
+ * @method void setBackupSecretKey(string $BackupSecretKey) Set 
  */
 class AuthenticationTypeC extends AbstractModel
 {
     /**
-     * @var string The key for signature calculation 6-32 characters. Only digits and letters are allowed.
+     * @var string 
      */
     public $SecretKey;
 
     /**
-     * @var integer Signature expiration time;Unit: second. The maximum value is 630720000.
+     * @var integer 
      */
     public $ExpireTime;
 
     /**
-     * @var array File extension list settings determining if authentication should be performed;If it contains an asterisk (*), this indicates all files.
+     * @var array 
      */
     public $FileExtensions;
 
     /**
-     * @var string whitelist: All file types apart from the FileExtensions list are authenticated;blacklist: Only the file types in the FileExtensions list are authenticated.
+     * @var string 
      */
     public $FilterType;
 
     /**
-     * @var string Timestamp settings:<li>dec: Decimal</li> <li>hex: Hexadecimal</li>
+     * @var string 
      */
     public $TimeFormat;
 
     /**
-     * @var string Backup key, which is used to calculate a signature. 6-32 characters. Only digits and letters are allowed.
+     * @var string 
      */
     public $BackupSecretKey;
 
     /**
-     * @param string $SecretKey The key for signature calculation 6-32 characters. Only digits and letters are allowed.
-     * @param integer $ExpireTime Signature expiration time;Unit: second. The maximum value is 630720000.
-     * @param array $FileExtensions File extension list settings determining if authentication should be performed;If it contains an asterisk (*), this indicates all files.
-     * @param string $FilterType whitelist: All file types apart from the FileExtensions list are authenticated;blacklist: Only the file types in the FileExtensions list are authenticated.
-     * @param string $TimeFormat Timestamp settings:<li>dec: Decimal</li> <li>hex: Hexadecimal</li>
-     * @param string $BackupSecretKey Backup key, which is used to calculate a signature. 6-32 characters. Only digits and letters are allowed.
+     * @param string $SecretKey 
+     * @param integer $ExpireTime 
+     * @param array $FileExtensions 
+     * @param string $FilterType 
+     * @param string $TimeFormat 
+     * @param string $BackupSecretKey 
      */
     function __construct()
     {

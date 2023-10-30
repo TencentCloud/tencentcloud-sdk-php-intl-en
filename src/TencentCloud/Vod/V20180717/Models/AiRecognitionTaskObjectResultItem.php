@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setName(string $Name) Set Name of recognized object.
  * @method array getSegmentSet() Obtain List of segments that contain an object.
  * @method void setSegmentSet(array $SegmentSet) Set List of segments that contain an object.
+ * @method array getRecognitionSegmentSet() Obtain 
+ * @method void setRecognitionSegmentSet(array $RecognitionSegmentSet) Set 
  */
 class AiRecognitionTaskObjectResultItem extends AbstractModel
 {
@@ -34,12 +36,19 @@ class AiRecognitionTaskObjectResultItem extends AbstractModel
 
     /**
      * @var array List of segments that contain an object.
+     * @deprecated
      */
     public $SegmentSet;
 
     /**
+     * @var array 
+     */
+    public $RecognitionSegmentSet;
+
+    /**
      * @param string $Name Name of recognized object.
      * @param array $SegmentSet List of segments that contain an object.
+     * @param array $RecognitionSegmentSet 
      */
     function __construct()
     {
@@ -64,6 +73,15 @@ class AiRecognitionTaskObjectResultItem extends AbstractModel
                 $obj = new AiRecognitionTaskObjectSeqmentItem();
                 $obj->deserialize($value);
                 array_push($this->SegmentSet, $obj);
+            }
+        }
+
+        if (array_key_exists("RecognitionSegmentSet",$param) and $param["RecognitionSegmentSet"] !== null) {
+            $this->RecognitionSegmentSet = [];
+            foreach ($param["RecognitionSegmentSet"] as $key => $value){
+                $obj = new AiRecognitionTaskObjectSegmentItem();
+                $obj->deserialize($value);
+                array_push($this->RecognitionSegmentSet, $obj);
             }
         }
     }

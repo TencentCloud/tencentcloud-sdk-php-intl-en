@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Browser cache rule configuration, which is used to set the default value of MaxAge and is disabled by default.
  *
- * @method array getMaxAgeRules() Obtain MaxAge rule.
- * @method void setMaxAgeRules(array $MaxAgeRules) Set MaxAge rule.
+ * @method array getMaxAgeRules() Obtain MaxAge rule
+ * @method void setMaxAgeRules(array $MaxAgeRules) Set MaxAge rule
  */
 class MaxAge extends AbstractModel
 {
     /**
-     * @var array MaxAge rule.
+     * @var array MaxAge rule
      */
     public $MaxAgeRules;
 
     /**
-     * @param array $MaxAgeRules MaxAge rule.
+     * @param array $MaxAgeRules MaxAge rule
      */
     function __construct()
     {

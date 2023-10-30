@@ -44,6 +44,8 @@ use TencentCloud\Common\AbstractModel;
 <li>once: no longer appears after watermark playback ends.</li>
 <li>repeat_last_frame: stays on the last frame after watermark playback ends.</li>
 <li>repeat (default): repeats the playback until the video ends.</li>
+ * @method integer getTransparency() Obtain 
+ * @method void setTransparency(integer $Transparency) Set 
  */
 class ImageWatermarkTemplate extends AbstractModel
 {
@@ -76,6 +78,11 @@ class ImageWatermarkTemplate extends AbstractModel
     public $RepeatType;
 
     /**
+     * @var integer 
+     */
+    public $Transparency;
+
+    /**
      * @param string $ImageUrl Watermark image address.
      * @param string $Width Watermark width. % and px formats are supported:
 <li>If the string ends in %, the `Width` of the watermark will be the specified percentage of the video width; for example, `10%` means that `Width` is 10% of the video width;</li>
@@ -88,6 +95,7 @@ class ImageWatermarkTemplate extends AbstractModel
 <li>once: no longer appears after watermark playback ends.</li>
 <li>repeat_last_frame: stays on the last frame after watermark playback ends.</li>
 <li>repeat (default): repeats the playback until the video ends.</li>
+     * @param integer $Transparency 
      */
     function __construct()
     {
@@ -116,6 +124,10 @@ class ImageWatermarkTemplate extends AbstractModel
 
         if (array_key_exists("RepeatType",$param) and $param["RepeatType"] !== null) {
             $this->RepeatType = $param["RepeatType"];
+        }
+
+        if (array_key_exists("Transparency",$param) and $param["Transparency"] !== null) {
+            $this->Transparency = $param["Transparency"];
         }
     }
 }

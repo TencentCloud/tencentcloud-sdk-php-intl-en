@@ -80,42 +80,6 @@ use TencentCloud\Common\AbstractModel;
 <li>The files whose expiration time points are on the start or end time of the specified range will also be returned.</li>
  * @method void setExpireTime(TimeRange $ExpireTime) Set Files whose expiration time points are within the specified time range will be returned. Expired files will not be returned.
 <li>The files whose expiration time points are on the start or end time of the specified range will also be returned.</li>
- * @method SortBy getSort() Obtain Sorting order.
-<li>Valid value of `Sort.Field`: CreateTime.</li>
-<li>If `Text`, `Names`, or `Descriptions` is not empty, the `Sort.Field` field will not take effect, and the search results will be sorted by match rate.</li>
- * @method void setSort(SortBy $Sort) Set Sorting order.
-<li>Valid value of `Sort.Field`: CreateTime.</li>
-<li>If `Text`, `Names`, or `Descriptions` is not empty, the `Sort.Field` field will not take effect, and the search results will be sorted by match rate.</li>
- * @method integer getOffset() Obtain <div id="p_offset">Start offset of a paged return. Default value: 0. Entries from No. "Offset" to No. "Offset + Limit - 1" will be returned.
-<li>Value range: "Offset + Limit" cannot be more than 5,000. (For more information, please see <a href="#maxResultsDesc">Limit on the Number of Results Returned by API</a>)</li></div>
- * @method void setOffset(integer $Offset) Set <div id="p_offset">Start offset of a paged return. Default value: 0. Entries from No. "Offset" to No. "Offset + Limit - 1" will be returned.
-<li>Value range: "Offset + Limit" cannot be more than 5,000. (For more information, please see <a href="#maxResultsDesc">Limit on the Number of Results Returned by API</a>)</li></div>
- * @method integer getLimit() Obtain <div id="p_limit">Number of entries returned by a paged query. Default value: 10. Entries from No. "Offset" to No. "Offset + Limit - 1" will be returned.
-<li>Value range: "Offset + Limit" cannot be more than 5,000. (For more information, please see <a href="#maxResultsDesc">Limit on the Number of Results Returned by API</a>)</li></div>
- * @method void setLimit(integer $Limit) Set <div id="p_limit">Number of entries returned by a paged query. Default value: 10. Entries from No. "Offset" to No. "Offset + Limit - 1" will be returned.
-<li>Value range: "Offset + Limit" cannot be more than 5,000. (For more information, please see <a href="#maxResultsDesc">Limit on the Number of Results Returned by API</a>)</li></div>
- * @method array getFilters() Obtain Specifies information entry that needs to be returned for all media files. Multiple entries can be specified simultaneously. N starts from 0. If this field is left empty, all information entries will be returned by default. Valid values:
-<li>basicInfo (basic video information).</li>
-<li>metaData (video metadata).</li>
-<li>transcodeInfo (result information of video transcoding).</li>
-<li>animatedGraphicsInfo (result information of animated image generating task).</li>
-<li>imageSpriteInfo (image sprite information).</li>
-<li>snapshotByTimeOffsetInfo (point-in-time screenshot information).</li>
-<li>sampleSnapshotInfo (sampled screenshot information).</li>
-<li>keyFrameDescInfo (timestamp information).</li>
-<li>adaptiveDynamicStreamingInfo (information of adaptive bitrate streaming).</li>
-<li>miniProgramReviewInfo (WeChat Mini Program audit information).</li>
- * @method void setFilters(array $Filters) Set Specifies information entry that needs to be returned for all media files. Multiple entries can be specified simultaneously. N starts from 0. If this field is left empty, all information entries will be returned by default. Valid values:
-<li>basicInfo (basic video information).</li>
-<li>metaData (video metadata).</li>
-<li>transcodeInfo (result information of video transcoding).</li>
-<li>animatedGraphicsInfo (result information of animated image generating task).</li>
-<li>imageSpriteInfo (image sprite information).</li>
-<li>snapshotByTimeOffsetInfo (point-in-time screenshot information).</li>
-<li>sampleSnapshotInfo (sampled screenshot information).</li>
-<li>keyFrameDescInfo (timestamp information).</li>
-<li>adaptiveDynamicStreamingInfo (information of adaptive bitrate streaming).</li>
-<li>miniProgramReviewInfo (WeChat Mini Program audit information).</li>
  * @method array getStorageRegions() Obtain Regions where media files are stored, such as `ap-chongqing`. For more regions, see [Storage Regions](https://intl.cloud.tencent.com/document/product/266/9760?from_cn_redirect=1#.E5.B7.B2.E6.94.AF.E6.8C.81.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8).
 <li>Length limit for a single region: 20 characters</li>
 <li>Array length limit: 20</li>
@@ -164,6 +128,42 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTrtcRoomIds(array $TrtcRoomIds) Set The TRTC room IDs. Any file that matches one of the room IDs will be returned.
 <li>Element length limit: 64 characters.</li>
 <li>Array length limit: 10.</li>
+ * @method array getFilters() Obtain Specifies information entry that needs to be returned for all media files. Multiple entries can be specified simultaneously. N starts from 0. If this field is left empty, all information entries will be returned by default. Valid values:
+<li>basicInfo (basic video information).</li>
+<li>metaData (video metadata).</li>
+<li>transcodeInfo (result information of video transcoding).</li>
+<li>animatedGraphicsInfo (result information of animated image generating task).</li>
+<li>imageSpriteInfo (image sprite information).</li>
+<li>snapshotByTimeOffsetInfo (point-in-time screenshot information).</li>
+<li>sampleSnapshotInfo (sampled screenshot information).</li>
+<li>keyFrameDescInfo (timestamp information).</li>
+<li>adaptiveDynamicStreamingInfo (information of adaptive bitrate streaming).</li>
+<li>miniProgramReviewInfo (WeChat Mini Program audit information).</li>
+ * @method void setFilters(array $Filters) Set Specifies information entry that needs to be returned for all media files. Multiple entries can be specified simultaneously. N starts from 0. If this field is left empty, all information entries will be returned by default. Valid values:
+<li>basicInfo (basic video information).</li>
+<li>metaData (video metadata).</li>
+<li>transcodeInfo (result information of video transcoding).</li>
+<li>animatedGraphicsInfo (result information of animated image generating task).</li>
+<li>imageSpriteInfo (image sprite information).</li>
+<li>snapshotByTimeOffsetInfo (point-in-time screenshot information).</li>
+<li>sampleSnapshotInfo (sampled screenshot information).</li>
+<li>keyFrameDescInfo (timestamp information).</li>
+<li>adaptiveDynamicStreamingInfo (information of adaptive bitrate streaming).</li>
+<li>miniProgramReviewInfo (WeChat Mini Program audit information).</li>
+ * @method SortBy getSort() Obtain Sorting order.
+<li>Valid value of `Sort.Field`: CreateTime.</li>
+<li>If `Text`, `Names`, or `Descriptions` is not empty, the `Sort.Field` field will not take effect, and the search results will be sorted by match rate.</li>
+ * @method void setSort(SortBy $Sort) Set Sorting order.
+<li>Valid value of `Sort.Field`: CreateTime.</li>
+<li>If `Text`, `Names`, or `Descriptions` is not empty, the `Sort.Field` field will not take effect, and the search results will be sorted by match rate.</li>
+ * @method integer getOffset() Obtain <div id="p_offset">Start offset of a paged return. Default value: 0. Entries from No. "Offset" to No. "Offset + Limit - 1" will be returned.
+<li>Value range: "Offset + Limit" cannot be more than 5,000. (For more information, please see <a href="#maxResultsDesc">Limit on the Number of Results Returned by API</a>)</li></div>
+ * @method void setOffset(integer $Offset) Set <div id="p_offset">Start offset of a paged return. Default value: 0. Entries from No. "Offset" to No. "Offset + Limit - 1" will be returned.
+<li>Value range: "Offset + Limit" cannot be more than 5,000. (For more information, please see <a href="#maxResultsDesc">Limit on the Number of Results Returned by API</a>)</li></div>
+ * @method integer getLimit() Obtain <div id="p_limit">Number of entries returned by a paged query. Default value: 10. Entries from No. "Offset" to No. "Offset + Limit - 1" will be returned.
+<li>Value range: "Offset + Limit" cannot be more than 5,000. (For more information, please see <a href="#maxResultsDesc">Limit on the Number of Results Returned by API</a>)</li></div>
+ * @method void setLimit(integer $Limit) Set <div id="p_limit">Number of entries returned by a paged query. Default value: 10. Entries from No. "Offset" to No. "Offset + Limit - 1" will be returned.
+<li>Value range: "Offset + Limit" cannot be more than 5,000. (For more information, please see <a href="#maxResultsDesc">Limit on the Number of Results Returned by API</a>)</li></div>
  * @method string getText() Obtain (This is not recommended. `Names`, `NamePrefixes`, or `Descriptions` should be used instead)
 Search text, which fuzzily matches the media file name or description. The more matching items and the higher the match rate, the higher-ranked the result. It can contain up to 64 characters.
  * @method void setText(string $Text) Set (This is not recommended. `Names`, `NamePrefixes`, or `Descriptions` should be used instead)
@@ -282,40 +282,6 @@ class SearchMediaRequest extends AbstractModel
     public $ExpireTime;
 
     /**
-     * @var SortBy Sorting order.
-<li>Valid value of `Sort.Field`: CreateTime.</li>
-<li>If `Text`, `Names`, or `Descriptions` is not empty, the `Sort.Field` field will not take effect, and the search results will be sorted by match rate.</li>
-     */
-    public $Sort;
-
-    /**
-     * @var integer <div id="p_offset">Start offset of a paged return. Default value: 0. Entries from No. "Offset" to No. "Offset + Limit - 1" will be returned.
-<li>Value range: "Offset + Limit" cannot be more than 5,000. (For more information, please see <a href="#maxResultsDesc">Limit on the Number of Results Returned by API</a>)</li></div>
-     */
-    public $Offset;
-
-    /**
-     * @var integer <div id="p_limit">Number of entries returned by a paged query. Default value: 10. Entries from No. "Offset" to No. "Offset + Limit - 1" will be returned.
-<li>Value range: "Offset + Limit" cannot be more than 5,000. (For more information, please see <a href="#maxResultsDesc">Limit on the Number of Results Returned by API</a>)</li></div>
-     */
-    public $Limit;
-
-    /**
-     * @var array Specifies information entry that needs to be returned for all media files. Multiple entries can be specified simultaneously. N starts from 0. If this field is left empty, all information entries will be returned by default. Valid values:
-<li>basicInfo (basic video information).</li>
-<li>metaData (video metadata).</li>
-<li>transcodeInfo (result information of video transcoding).</li>
-<li>animatedGraphicsInfo (result information of animated image generating task).</li>
-<li>imageSpriteInfo (image sprite information).</li>
-<li>snapshotByTimeOffsetInfo (point-in-time screenshot information).</li>
-<li>sampleSnapshotInfo (sampled screenshot information).</li>
-<li>keyFrameDescInfo (timestamp information).</li>
-<li>adaptiveDynamicStreamingInfo (information of adaptive bitrate streaming).</li>
-<li>miniProgramReviewInfo (WeChat Mini Program audit information).</li>
-     */
-    public $Filters;
-
-    /**
      * @var array Regions where media files are stored, such as `ap-chongqing`. For more regions, see [Storage Regions](https://intl.cloud.tencent.com/document/product/266/9760?from_cn_redirect=1#.E5.B7.B2.E6.94.AF.E6.8C.81.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8).
 <li>Length limit for a single region: 20 characters</li>
 <li>Array length limit: 20</li>
@@ -366,6 +332,40 @@ class SearchMediaRequest extends AbstractModel
 <li>Array length limit: 10.</li>
      */
     public $TrtcRoomIds;
+
+    /**
+     * @var array Specifies information entry that needs to be returned for all media files. Multiple entries can be specified simultaneously. N starts from 0. If this field is left empty, all information entries will be returned by default. Valid values:
+<li>basicInfo (basic video information).</li>
+<li>metaData (video metadata).</li>
+<li>transcodeInfo (result information of video transcoding).</li>
+<li>animatedGraphicsInfo (result information of animated image generating task).</li>
+<li>imageSpriteInfo (image sprite information).</li>
+<li>snapshotByTimeOffsetInfo (point-in-time screenshot information).</li>
+<li>sampleSnapshotInfo (sampled screenshot information).</li>
+<li>keyFrameDescInfo (timestamp information).</li>
+<li>adaptiveDynamicStreamingInfo (information of adaptive bitrate streaming).</li>
+<li>miniProgramReviewInfo (WeChat Mini Program audit information).</li>
+     */
+    public $Filters;
+
+    /**
+     * @var SortBy Sorting order.
+<li>Valid value of `Sort.Field`: CreateTime.</li>
+<li>If `Text`, `Names`, or `Descriptions` is not empty, the `Sort.Field` field will not take effect, and the search results will be sorted by match rate.</li>
+     */
+    public $Sort;
+
+    /**
+     * @var integer <div id="p_offset">Start offset of a paged return. Default value: 0. Entries from No. "Offset" to No. "Offset + Limit - 1" will be returned.
+<li>Value range: "Offset + Limit" cannot be more than 5,000. (For more information, please see <a href="#maxResultsDesc">Limit on the Number of Results Returned by API</a>)</li></div>
+     */
+    public $Offset;
+
+    /**
+     * @var integer <div id="p_limit">Number of entries returned by a paged query. Default value: 10. Entries from No. "Offset" to No. "Offset + Limit - 1" will be returned.
+<li>Value range: "Offset + Limit" cannot be more than 5,000. (For more information, please see <a href="#maxResultsDesc">Limit on the Number of Results Returned by API</a>)</li></div>
+     */
+    public $Limit;
 
     /**
      * @var string (This is not recommended. `Names`, `NamePrefixes`, or `Descriptions` should be used instead)
@@ -444,24 +444,6 @@ End time in the creation time range.
 <li>Includes specified start and end points in time.</li>
      * @param TimeRange $ExpireTime Files whose expiration time points are within the specified time range will be returned. Expired files will not be returned.
 <li>The files whose expiration time points are on the start or end time of the specified range will also be returned.</li>
-     * @param SortBy $Sort Sorting order.
-<li>Valid value of `Sort.Field`: CreateTime.</li>
-<li>If `Text`, `Names`, or `Descriptions` is not empty, the `Sort.Field` field will not take effect, and the search results will be sorted by match rate.</li>
-     * @param integer $Offset <div id="p_offset">Start offset of a paged return. Default value: 0. Entries from No. "Offset" to No. "Offset + Limit - 1" will be returned.
-<li>Value range: "Offset + Limit" cannot be more than 5,000. (For more information, please see <a href="#maxResultsDesc">Limit on the Number of Results Returned by API</a>)</li></div>
-     * @param integer $Limit <div id="p_limit">Number of entries returned by a paged query. Default value: 10. Entries from No. "Offset" to No. "Offset + Limit - 1" will be returned.
-<li>Value range: "Offset + Limit" cannot be more than 5,000. (For more information, please see <a href="#maxResultsDesc">Limit on the Number of Results Returned by API</a>)</li></div>
-     * @param array $Filters Specifies information entry that needs to be returned for all media files. Multiple entries can be specified simultaneously. N starts from 0. If this field is left empty, all information entries will be returned by default. Valid values:
-<li>basicInfo (basic video information).</li>
-<li>metaData (video metadata).</li>
-<li>transcodeInfo (result information of video transcoding).</li>
-<li>animatedGraphicsInfo (result information of animated image generating task).</li>
-<li>imageSpriteInfo (image sprite information).</li>
-<li>snapshotByTimeOffsetInfo (point-in-time screenshot information).</li>
-<li>sampleSnapshotInfo (sampled screenshot information).</li>
-<li>keyFrameDescInfo (timestamp information).</li>
-<li>adaptiveDynamicStreamingInfo (information of adaptive bitrate streaming).</li>
-<li>miniProgramReviewInfo (WeChat Mini Program audit information).</li>
      * @param array $StorageRegions Regions where media files are stored, such as `ap-chongqing`. For more regions, see [Storage Regions](https://intl.cloud.tencent.com/document/product/266/9760?from_cn_redirect=1#.E5.B7.B2.E6.94.AF.E6.8C.81.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8).
 <li>Length limit for a single region: 20 characters</li>
 <li>Array length limit: 20</li>
@@ -486,6 +468,24 @@ End time in the creation time range.
      * @param array $TrtcRoomIds The TRTC room IDs. Any file that matches one of the room IDs will be returned.
 <li>Element length limit: 64 characters.</li>
 <li>Array length limit: 10.</li>
+     * @param array $Filters Specifies information entry that needs to be returned for all media files. Multiple entries can be specified simultaneously. N starts from 0. If this field is left empty, all information entries will be returned by default. Valid values:
+<li>basicInfo (basic video information).</li>
+<li>metaData (video metadata).</li>
+<li>transcodeInfo (result information of video transcoding).</li>
+<li>animatedGraphicsInfo (result information of animated image generating task).</li>
+<li>imageSpriteInfo (image sprite information).</li>
+<li>snapshotByTimeOffsetInfo (point-in-time screenshot information).</li>
+<li>sampleSnapshotInfo (sampled screenshot information).</li>
+<li>keyFrameDescInfo (timestamp information).</li>
+<li>adaptiveDynamicStreamingInfo (information of adaptive bitrate streaming).</li>
+<li>miniProgramReviewInfo (WeChat Mini Program audit information).</li>
+     * @param SortBy $Sort Sorting order.
+<li>Valid value of `Sort.Field`: CreateTime.</li>
+<li>If `Text`, `Names`, or `Descriptions` is not empty, the `Sort.Field` field will not take effect, and the search results will be sorted by match rate.</li>
+     * @param integer $Offset <div id="p_offset">Start offset of a paged return. Default value: 0. Entries from No. "Offset" to No. "Offset + Limit - 1" will be returned.
+<li>Value range: "Offset + Limit" cannot be more than 5,000. (For more information, please see <a href="#maxResultsDesc">Limit on the Number of Results Returned by API</a>)</li></div>
+     * @param integer $Limit <div id="p_limit">Number of entries returned by a paged query. Default value: 10. Entries from No. "Offset" to No. "Offset + Limit - 1" will be returned.
+<li>Value range: "Offset + Limit" cannot be more than 5,000. (For more information, please see <a href="#maxResultsDesc">Limit on the Number of Results Returned by API</a>)</li></div>
      * @param string $Text (This is not recommended. `Names`, `NamePrefixes`, or `Descriptions` should be used instead)
 Search text, which fuzzily matches the media file name or description. The more matching items and the higher the match rate, the higher-ranked the result. It can contain up to 64 characters.
      * @param string $SourceType (This is not recommended. `SourceTypes` should be used instead)
@@ -568,23 +568,6 @@ End time in the creation time range.
             $this->ExpireTime->deserialize($param["ExpireTime"]);
         }
 
-        if (array_key_exists("Sort",$param) and $param["Sort"] !== null) {
-            $this->Sort = new SortBy();
-            $this->Sort->deserialize($param["Sort"]);
-        }
-
-        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
-            $this->Offset = $param["Offset"];
-        }
-
-        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
-            $this->Limit = $param["Limit"];
-        }
-
-        if (array_key_exists("Filters",$param) and $param["Filters"] !== null) {
-            $this->Filters = $param["Filters"];
-        }
-
         if (array_key_exists("StorageRegions",$param) and $param["StorageRegions"] !== null) {
             $this->StorageRegions = $param["StorageRegions"];
         }
@@ -611,6 +594,23 @@ End time in the creation time range.
 
         if (array_key_exists("TrtcRoomIds",$param) and $param["TrtcRoomIds"] !== null) {
             $this->TrtcRoomIds = $param["TrtcRoomIds"];
+        }
+
+        if (array_key_exists("Filters",$param) and $param["Filters"] !== null) {
+            $this->Filters = $param["Filters"];
+        }
+
+        if (array_key_exists("Sort",$param) and $param["Sort"] !== null) {
+            $this->Sort = new SortBy();
+            $this->Sort->deserialize($param["Sort"]);
+        }
+
+        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
+            $this->Offset = $param["Offset"];
+        }
+
+        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
+            $this->Limit = $param["Limit"];
         }
 
         if (array_key_exists("Text",$param) and $param["Text"] !== null) {

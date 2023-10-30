@@ -20,21 +20,21 @@ use TencentCloud\Common\AbstractModel;
 /**
  * HTTP header setting rules. Up to 100 entries can be set.
  *
- * @method string getHeaderMode() Obtain HTTP header setting methods: <li>set: sets a value for an existing header parameter, a new header parameter, or multiple header parameters. Multiple header parameters will be merged into one.</li> <li>del: deletes a header parameter.</li> <li>add: adds a header parameter. By default, you can repeat the same action to add the same header parameter, which may affect browser response. Please consider the set operation first.</li>
- * @method void setHeaderMode(string $HeaderMode) Set HTTP header setting methods: <li>set: sets a value for an existing header parameter, a new header parameter, or multiple header parameters. Multiple header parameters will be merged into one.</li> <li>del: deletes a header parameter.</li> <li>add: adds a header parameter. By default, you can repeat the same action to add the same header parameter, which may affect browser response. Please consider the set operation first.</li>
+ * @method string getHeaderMode() Obtain 
+ * @method void setHeaderMode(string $HeaderMode) Set 
  * @method string getHeaderName() Obtain HTTP header name. Up to 100 characters can be set.
  * @method void setHeaderName(string $HeaderName) Set HTTP header name. Up to 100 characters can be set.
- * @method string getHeaderValue() Obtain HTTP header value. Up to 1000 characters can be set.<li>Not required when Mode is del.</li> <li>Required when Mode is add/set.</li>
- * @method void setHeaderValue(string $HeaderValue) Set HTTP header value. Up to 1000 characters can be set.<li>Not required when Mode is del.</li> <li>Required when Mode is add/set.</li>
- * @method string getRuleType() Obtain Rule types:<li>all: Apply to all files.</li> <li>file: Apply to files with the specified suffixes.</li> <li>directory: Apply to specified paths.</li> <li>path: Apply to specified absolute paths.</li>
- * @method void setRuleType(string $RuleType) Set Rule types:<li>all: Apply to all files.</li> <li>file: Apply to files with the specified suffixes.</li> <li>directory: Apply to specified paths.</li> <li>path: Apply to specified absolute paths.</li>
- * @method array getRulePaths() Obtain Content for each RuleType:<li>For all, enter a wildcard *.</li> <li>For file, enter a suffix, e.g., jpg or txt.</li> <li>For directory, enter a path, e.g., /xxx/test/.</li> <li>For path, enter an absolute path, e.g., /xxx/test.html.</li>
- * @method void setRulePaths(array $RulePaths) Set Content for each RuleType:<li>For all, enter a wildcard *.</li> <li>For file, enter a suffix, e.g., jpg or txt.</li> <li>For directory, enter a path, e.g., /xxx/test/.</li> <li>For path, enter an absolute path, e.g., /xxx/test.html.</li>
+ * @method string getHeaderValue() Obtain 
+ * @method void setHeaderValue(string $HeaderValue) Set 
+ * @method string getRuleType() Obtain 
+ * @method void setRuleType(string $RuleType) Set 
+ * @method array getRulePaths() Obtain 
+ * @method void setRulePaths(array $RulePaths) Set 
  */
 class HttpHeaderPathRule extends AbstractModel
 {
     /**
-     * @var string HTTP header setting methods: <li>set: sets a value for an existing header parameter, a new header parameter, or multiple header parameters. Multiple header parameters will be merged into one.</li> <li>del: deletes a header parameter.</li> <li>add: adds a header parameter. By default, you can repeat the same action to add the same header parameter, which may affect browser response. Please consider the set operation first.</li>
+     * @var string 
      */
     public $HeaderMode;
 
@@ -44,26 +44,26 @@ class HttpHeaderPathRule extends AbstractModel
     public $HeaderName;
 
     /**
-     * @var string HTTP header value. Up to 1000 characters can be set.<li>Not required when Mode is del.</li> <li>Required when Mode is add/set.</li>
+     * @var string 
      */
     public $HeaderValue;
 
     /**
-     * @var string Rule types:<li>all: Apply to all files.</li> <li>file: Apply to files with the specified suffixes.</li> <li>directory: Apply to specified paths.</li> <li>path: Apply to specified absolute paths.</li>
+     * @var string 
      */
     public $RuleType;
 
     /**
-     * @var array Content for each RuleType:<li>For all, enter a wildcard *.</li> <li>For file, enter a suffix, e.g., jpg or txt.</li> <li>For directory, enter a path, e.g., /xxx/test/.</li> <li>For path, enter an absolute path, e.g., /xxx/test.html.</li>
+     * @var array 
      */
     public $RulePaths;
 
     /**
-     * @param string $HeaderMode HTTP header setting methods: <li>set: sets a value for an existing header parameter, a new header parameter, or multiple header parameters. Multiple header parameters will be merged into one.</li> <li>del: deletes a header parameter.</li> <li>add: adds a header parameter. By default, you can repeat the same action to add the same header parameter, which may affect browser response. Please consider the set operation first.</li>
+     * @param string $HeaderMode 
      * @param string $HeaderName HTTP header name. Up to 100 characters can be set.
-     * @param string $HeaderValue HTTP header value. Up to 1000 characters can be set.<li>Not required when Mode is del.</li> <li>Required when Mode is add/set.</li>
-     * @param string $RuleType Rule types:<li>all: Apply to all files.</li> <li>file: Apply to files with the specified suffixes.</li> <li>directory: Apply to specified paths.</li> <li>path: Apply to specified absolute paths.</li>
-     * @param array $RulePaths Content for each RuleType:<li>For all, enter a wildcard *.</li> <li>For file, enter a suffix, e.g., jpg or txt.</li> <li>For directory, enter a path, e.g., /xxx/test/.</li> <li>For path, enter an absolute path, e.g., /xxx/test.html.</li>
+     * @param string $HeaderValue 
+     * @param string $RuleType 
+     * @param array $RulePaths 
      */
     function __construct()
     {

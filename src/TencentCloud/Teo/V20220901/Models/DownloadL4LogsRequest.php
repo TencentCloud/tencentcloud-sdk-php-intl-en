@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setZoneIds(array $ZoneIds) Set List of sites. This parameter is required. A `null` will be returned if it is left empty.
  * @method array getProxyIds() Obtain List of L4 proxy instance IDs.
  * @method void setProxyIds(array $ProxyIds) Set List of L4 proxy instance IDs.
- * @method integer getLimit() Obtain Limit on paginated queries. Default value: 20. Maximum value: 1000.
- * @method void setLimit(integer $Limit) Set Limit on paginated queries. Default value: 20. Maximum value: 1000.
+ * @method integer getLimit() Obtain Limit on paginated queries. Default value: 20. Maximum value: 300.
+ * @method void setLimit(integer $Limit) Set Limit on paginated queries. Default value: 20. Maximum value: 300.
  * @method integer getOffset() Obtain The page offset. Default value: 0.
  * @method void setOffset(integer $Offset) Set The page offset. Default value: 0.
  */
@@ -56,7 +56,7 @@ class DownloadL4LogsRequest extends AbstractModel
     public $ProxyIds;
 
     /**
-     * @var integer Limit on paginated queries. Default value: 20. Maximum value: 1000.
+     * @var integer Limit on paginated queries. Default value: 20. Maximum value: 300.
      */
     public $Limit;
 
@@ -70,7 +70,7 @@ class DownloadL4LogsRequest extends AbstractModel
      * @param string $EndTime The end time.
      * @param array $ZoneIds List of sites. This parameter is required. A `null` will be returned if it is left empty.
      * @param array $ProxyIds List of L4 proxy instance IDs.
-     * @param integer $Limit Limit on paginated queries. Default value: 20. Maximum value: 1000.
+     * @param integer $Limit Limit on paginated queries. Default value: 20. Maximum value: 300.
      * @param integer $Offset The page offset. Default value: 0.
      */
     function __construct()

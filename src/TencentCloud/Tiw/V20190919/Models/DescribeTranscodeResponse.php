@@ -66,6 +66,18 @@ Note: This parameter may return null, indicating that no valid values can be obt
 Note: This parameter may return null, indicating that no valid values can be obtained.
  * @method void setExt(string $Ext) Set Document generation mode (for trial).
 Note: This parameter may return null, indicating that no valid values can be obtained.
+ * @method integer getCreateTime() Obtain Document transcoding task creation time, unit: seconds.
+Note: This parameter may return null, indicating that no valid values can be obtained.
+ * @method void setCreateTime(integer $CreateTime) Set Document transcoding task creation time, unit: seconds.
+Note: This parameter may return null, indicating that no valid values can be obtained.
+ * @method integer getAssignTime() Obtain Document transcoding task assignment time, unit: seconds.
+Note: This parameter may return null, indicating that no valid values can be obtained.
+ * @method void setAssignTime(integer $AssignTime) Set Document transcoding task assignment time, unit: seconds.
+Note: This parameter may return null, indicating that no valid values can be obtained.
+ * @method integer getFinishedTime() Obtain Document transcoding task finished time, unit: seconds.
+Note: This parameter may return null, indicating that no valid values can be obtained.
+ * @method void setFinishedTime(integer $FinishedTime) Set Document transcoding task finished time, unit: seconds.
+Note: This parameter may return null, indicating that no valid values can be obtained.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -143,6 +155,24 @@ Note: This parameter may return null, indicating that no valid values can be obt
     public $Ext;
 
     /**
+     * @var integer Document transcoding task creation time, unit: seconds.
+Note: This parameter may return null, indicating that no valid values can be obtained.
+     */
+    public $CreateTime;
+
+    /**
+     * @var integer Document transcoding task assignment time, unit: seconds.
+Note: This parameter may return null, indicating that no valid values can be obtained.
+     */
+    public $AssignTime;
+
+    /**
+     * @var integer Document transcoding task finished time, unit: seconds.
+Note: This parameter may return null, indicating that no valid values can be obtained.
+     */
+    public $FinishedTime;
+
+    /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
@@ -170,6 +200,12 @@ If the document transcoding request carries the ThumbnailResolution parameter an
      * @param string $ResourceListUrl Download URL (for trial) of the resource list.
 Note: This parameter may return null, indicating that no valid values can be obtained.
      * @param string $Ext Document generation mode (for trial).
+Note: This parameter may return null, indicating that no valid values can be obtained.
+     * @param integer $CreateTime Document transcoding task creation time, unit: seconds.
+Note: This parameter may return null, indicating that no valid values can be obtained.
+     * @param integer $AssignTime Document transcoding task assignment time, unit: seconds.
+Note: This parameter may return null, indicating that no valid values can be obtained.
+     * @param integer $FinishedTime Document transcoding task finished time, unit: seconds.
 Note: This parameter may return null, indicating that no valid values can be obtained.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
@@ -232,6 +268,18 @@ Note: This parameter may return null, indicating that no valid values can be obt
 
         if (array_key_exists("Ext",$param) and $param["Ext"] !== null) {
             $this->Ext = $param["Ext"];
+        }
+
+        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
+            $this->CreateTime = $param["CreateTime"];
+        }
+
+        if (array_key_exists("AssignTime",$param) and $param["AssignTime"] !== null) {
+            $this->AssignTime = $param["AssignTime"];
+        }
+
+        if (array_key_exists("FinishedTime",$param) and $param["FinishedTime"] !== null) {
+            $this->FinishedTime = $param["FinishedTime"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

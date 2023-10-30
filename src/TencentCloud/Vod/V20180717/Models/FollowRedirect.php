@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Back to the source 301/302 status code automatically follows the configuration, the default is off
  *
- * @method string getSwitch() Obtain Access forced redirect configuration switch <li>on：Enable;</li> <li>off：Disable.</li>
- * @method void setSwitch(string $Switch) Set Access forced redirect configuration switch <li>on：Enable;</li> <li>off：Disable.</li>
+ * @method string getSwitch() Obtain 
+ * @method void setSwitch(string $Switch) Set 
  */
 class FollowRedirect extends AbstractModel
 {
     /**
-     * @var string Access forced redirect configuration switch <li>on：Enable;</li> <li>off：Disable.</li>
+     * @var string 
      */
     public $Switch;
 
     /**
-     * @param string $Switch Access forced redirect configuration switch <li>on：Enable;</li> <li>off：Disable.</li>
+     * @param string $Switch 
      */
     function __construct()
     {

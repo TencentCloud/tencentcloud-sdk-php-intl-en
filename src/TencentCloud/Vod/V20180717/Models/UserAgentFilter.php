@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * UserAgent:blacklist/whitelist configuration
  *
- * @method string getSwitch() Obtain UserAgent blacklist and whitelist configuration switches, the values are: <li>on:Enable; </li> <li>off: Disable. </li>
- * @method void setSwitch(string $Switch) Set UserAgent blacklist and whitelist configuration switches, the values are: <li>on:Enable; </li> <li>off: Disable. </li>
+ * @method string getSwitch() Obtain 
+ * @method void setSwitch(string $Switch) Set 
  * @method array getFilterRules() Obtain UA blacklist/whitelist effect rule list
  * @method void setFilterRules(array $FilterRules) Set UA blacklist/whitelist effect rule list
  */
 class UserAgentFilter extends AbstractModel
 {
     /**
-     * @var string UserAgent blacklist and whitelist configuration switches, the values are: <li>on:Enable; </li> <li>off: Disable. </li>
+     * @var string 
      */
     public $Switch;
 
@@ -38,7 +38,7 @@ class UserAgentFilter extends AbstractModel
     public $FilterRules;
 
     /**
-     * @param string $Switch UserAgent blacklist and whitelist configuration switches, the values are: <li>on:Enable; </li> <li>off: Disable. </li>
+     * @param string $Switch 
      * @param array $FilterRules UA blacklist/whitelist effect rule list
      */
     function __construct()

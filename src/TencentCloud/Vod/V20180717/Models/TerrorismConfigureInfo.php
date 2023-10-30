@@ -20,23 +20,17 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Parameters for recognition of terrorism content
  *
- * @method TerrorismOcrReviewTemplateInfo getOcrReviewInfo() Obtain Parameters for OCR-based recognition of terrorism content
-Note: This field may return `null`, indicating that no valid value can be found.
- * @method void setOcrReviewInfo(TerrorismOcrReviewTemplateInfo $OcrReviewInfo) Set Parameters for OCR-based recognition of terrorism content
-Note: This field may return `null`, indicating that no valid value can be found.
  * @method TerrorismImgReviewTemplateInfo getImgReviewInfo() Obtain Parameters for recognition of terrorism content in images
 Note: This field may return `null`, indicating that no valid value can be found.
  * @method void setImgReviewInfo(TerrorismImgReviewTemplateInfo $ImgReviewInfo) Set Parameters for recognition of terrorism content in images
 Note: This field may return `null`, indicating that no valid value can be found.
+ * @method TerrorismOcrReviewTemplateInfo getOcrReviewInfo() Obtain Parameters for OCR-based recognition of terrorism content
+Note: This field may return `null`, indicating that no valid value can be found.
+ * @method void setOcrReviewInfo(TerrorismOcrReviewTemplateInfo $OcrReviewInfo) Set Parameters for OCR-based recognition of terrorism content
+Note: This field may return `null`, indicating that no valid value can be found.
  */
 class TerrorismConfigureInfo extends AbstractModel
 {
-    /**
-     * @var TerrorismOcrReviewTemplateInfo Parameters for OCR-based recognition of terrorism content
-Note: This field may return `null`, indicating that no valid value can be found.
-     */
-    public $OcrReviewInfo;
-
     /**
      * @var TerrorismImgReviewTemplateInfo Parameters for recognition of terrorism content in images
 Note: This field may return `null`, indicating that no valid value can be found.
@@ -44,9 +38,15 @@ Note: This field may return `null`, indicating that no valid value can be found.
     public $ImgReviewInfo;
 
     /**
-     * @param TerrorismOcrReviewTemplateInfo $OcrReviewInfo Parameters for OCR-based recognition of terrorism content
+     * @var TerrorismOcrReviewTemplateInfo Parameters for OCR-based recognition of terrorism content
 Note: This field may return `null`, indicating that no valid value can be found.
+     */
+    public $OcrReviewInfo;
+
+    /**
      * @param TerrorismImgReviewTemplateInfo $ImgReviewInfo Parameters for recognition of terrorism content in images
+Note: This field may return `null`, indicating that no valid value can be found.
+     * @param TerrorismOcrReviewTemplateInfo $OcrReviewInfo Parameters for OCR-based recognition of terrorism content
 Note: This field may return `null`, indicating that no valid value can be found.
      */
     function __construct()
@@ -62,14 +62,14 @@ Note: This field may return `null`, indicating that no valid value can be found.
         if ($param === null) {
             return;
         }
-        if (array_key_exists("OcrReviewInfo",$param) and $param["OcrReviewInfo"] !== null) {
-            $this->OcrReviewInfo = new TerrorismOcrReviewTemplateInfo();
-            $this->OcrReviewInfo->deserialize($param["OcrReviewInfo"]);
-        }
-
         if (array_key_exists("ImgReviewInfo",$param) and $param["ImgReviewInfo"] !== null) {
             $this->ImgReviewInfo = new TerrorismImgReviewTemplateInfo();
             $this->ImgReviewInfo->deserialize($param["ImgReviewInfo"]);
+        }
+
+        if (array_key_exists("OcrReviewInfo",$param) and $param["OcrReviewInfo"] !== null) {
+            $this->OcrReviewInfo = new TerrorismOcrReviewTemplateInfo();
+            $this->OcrReviewInfo->deserialize($param["OcrReviewInfo"]);
         }
     }
 }

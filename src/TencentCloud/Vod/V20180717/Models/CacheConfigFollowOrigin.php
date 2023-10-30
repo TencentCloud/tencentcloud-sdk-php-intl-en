@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Path cache configuration follows the origin server configuration.
  *
- * @method string getSwitch() Obtain Follow origin server switch configuration: <li>on: Enable.</li> <li>off: Disable.</li>
- * @method void setSwitch(string $Switch) Set Follow origin server switch configuration: <li>on: Enable.</li> <li>off: Disable.</li>
+ * @method string getSwitch() Obtain 
+ * @method void setSwitch(string $Switch) Set 
  * @method HeuristicCache getHeuristicCache() Obtain Heuristic cache configuration
  * @method void setHeuristicCache(HeuristicCache $HeuristicCache) Set Heuristic cache configuration
  */
 class CacheConfigFollowOrigin extends AbstractModel
 {
     /**
-     * @var string Follow origin server switch configuration: <li>on: Enable.</li> <li>off: Disable.</li>
+     * @var string 
      */
     public $Switch;
 
@@ -38,7 +38,7 @@ class CacheConfigFollowOrigin extends AbstractModel
     public $HeuristicCache;
 
     /**
-     * @param string $Switch Follow origin server switch configuration: <li>on: Enable.</li> <li>off: Disable.</li>
+     * @param string $Switch 
      * @param HeuristicCache $HeuristicCache Heuristic cache configuration
      */
     function __construct()

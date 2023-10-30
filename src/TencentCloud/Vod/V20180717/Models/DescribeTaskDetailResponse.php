@@ -62,78 +62,46 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBeginProcessTime(string $BeginProcessTime) Set Start time of task execution in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
  * @method string getFinishTime() Obtain End time of task execution in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
  * @method void setFinishTime(string $FinishTime) Set End time of task execution in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
- * @method ProcedureTask getProcedureTask() Obtain Video processing task information. This field has a value only when `TaskType` is `Procedure`.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setProcedureTask(ProcedureTask $ProcedureTask) Set Video processing task information. This field has a value only when `TaskType` is `Procedure`.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method EditMediaTask getEditMediaTask() Obtain Video editing task information. This field has a value only when `TaskType` is `EditMedia`.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setEditMediaTask(EditMediaTask $EditMediaTask) Set Video editing task information. This field has a value only when `TaskType` is `EditMedia`.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method WechatPublishTask getWechatPublishTask() Obtain Release on WeChat task information. This field has a value only when `TaskType` is `WechatPublish`.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setWechatPublishTask(WechatPublishTask $WechatPublishTask) Set Release on WeChat task information. This field has a value only when `TaskType` is `WechatPublish`.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method ComposeMediaTask getComposeMediaTask() Obtain Media file composing task information. This field has a value only when `TaskType` is `ComposeMedia`.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setComposeMediaTask(ComposeMediaTask $ComposeMediaTask) Set Media file composing task information. This field has a value only when `TaskType` is `ComposeMedia`.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method SplitMediaTask getSplitMediaTask() Obtain Video splitting task information. This field has a value only when `TaskType` is `EditMedia`.
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setSplitMediaTask(SplitMediaTask $SplitMediaTask) Set Video splitting task information. This field has a value only when `TaskType` is `EditMedia`.
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method WechatMiniProgramPublishTask getWechatMiniProgramPublishTask() Obtain Release on WeChat Mini Program task information. This field has a value only when `TaskType` is `WechatMiniProgramPublish`.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setWechatMiniProgramPublishTask(WechatMiniProgramPublishTask $WechatMiniProgramPublishTask) Set Release on WeChat Mini Program task information. This field has a value only when `TaskType` is `WechatMiniProgramPublish`.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method PullUploadTask getPullUploadTask() Obtain Media file pulling for upload task information. This field has a value only when `TaskType` is `PullUpload`.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setPullUploadTask(PullUploadTask $PullUploadTask) Set Media file pulling for upload task information. This field has a value only when `TaskType` is `PullUpload`.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method TranscodeTask2017 getTranscodeTask() Obtain Video transcoding task information. This field has a value only when `TaskType` is `Transcode`.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setTranscodeTask(TranscodeTask2017 $TranscodeTask) Set Video transcoding task information. This field has a value only when `TaskType` is `Transcode`.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method ConcatTask2017 getConcatTask() Obtain Video splicing task information. This field has a value only when `TaskType` is `Concat`.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setConcatTask(ConcatTask2017 $ConcatTask) Set Video splicing task information. This field has a value only when `TaskType` is `Concat`.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method ClipTask2017 getClipTask() Obtain Video clipping task information. This field has a value only when `TaskType` is `Clip`.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setClipTask(ClipTask2017 $ClipTask) Set Video clipping task information. This field has a value only when `TaskType` is `Clip`.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method CreateImageSpriteTask2017 getCreateImageSpriteTask() Obtain Image sprite creating task information. This field has a value only when `TaskType` is `ImageSprite`.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setCreateImageSpriteTask(CreateImageSpriteTask2017 $CreateImageSpriteTask) Set Image sprite creating task information. This field has a value only when `TaskType` is `ImageSprite`.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method SnapshotByTimeOffsetTask2017 getSnapshotByTimeOffsetTask() Obtain Time point screencapturing task information. This field has a value only when `TaskType` is `SnapshotByTimeOffset`.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setSnapshotByTimeOffsetTask(SnapshotByTimeOffsetTask2017 $SnapshotByTimeOffsetTask) Set Time point screencapturing task information. This field has a value only when `TaskType` is `SnapshotByTimeOffset`.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method RemoveWatermarkTask getRemoveWatermarkTask() Obtain The information of a watermark removal task. This parameter is valid only if `TaskType` is `RemoveWatermark`.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setRemoveWatermarkTask(RemoveWatermarkTask $RemoveWatermarkTask) Set The information of a watermark removal task. This parameter is valid only if `TaskType` is `RemoveWatermark`.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method RebuildMediaTask getRebuildMediaTask() Obtain The information of an audio/video remastering task. This parameter is valid only if `TaskType` is `RebuildMedia`.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setRebuildMediaTask(RebuildMediaTask $RebuildMediaTask) Set The information of an audio/video remastering task. This parameter is valid only if `TaskType` is `RebuildMedia`.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method ExtractTraceWatermarkTask getExtractTraceWatermarkTask() Obtain The information of a digital watermark extraction task. This parameter is valid only if `TaskType` is `ExtractTraceWatermark`.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setExtractTraceWatermarkTask(ExtractTraceWatermarkTask $ExtractTraceWatermarkTask) Set The information of a digital watermark extraction task. This parameter is valid only if `TaskType` is `ExtractTraceWatermark`.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method ReviewAudioVideoTask getReviewAudioVideoTask() Obtain The information of a moderation task. This parameter is valid only if `TaskType` is `ReviewAudioVideo`.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setReviewAudioVideoTask(ReviewAudioVideoTask $ReviewAudioVideoTask) Set The information of a moderation task. This parameter is valid only if `TaskType` is `ReviewAudioVideo`.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method ReduceMediaBitrateTask getReduceMediaBitrateTask() Obtain This parameter is invalid now.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setReduceMediaBitrateTask(ReduceMediaBitrateTask $ReduceMediaBitrateTask) Set This parameter is invalid now.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method DescribeFileAttributesTask getDescribeFileAttributesTask() Obtain The information of a task to get file attributes. This parameter is valid only if `TaskType` is `DescribeFileAttributes`.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setDescribeFileAttributesTask(DescribeFileAttributesTask $DescribeFileAttributesTask) Set The information of a task to get file attributes. This parameter is valid only if `TaskType` is `DescribeFileAttributes`.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method ProcedureTask getProcedureTask() Obtain 
+ * @method void setProcedureTask(ProcedureTask $ProcedureTask) Set 
+ * @method EditMediaTask getEditMediaTask() Obtain 
+ * @method void setEditMediaTask(EditMediaTask $EditMediaTask) Set 
+ * @method WechatPublishTask getWechatPublishTask() Obtain 
+ * @method void setWechatPublishTask(WechatPublishTask $WechatPublishTask) Set 
+ * @method ComposeMediaTask getComposeMediaTask() Obtain 
+ * @method void setComposeMediaTask(ComposeMediaTask $ComposeMediaTask) Set 
+ * @method SplitMediaTask getSplitMediaTask() Obtain 
+ * @method void setSplitMediaTask(SplitMediaTask $SplitMediaTask) Set 
+ * @method WechatMiniProgramPublishTask getWechatMiniProgramPublishTask() Obtain 
+ * @method void setWechatMiniProgramPublishTask(WechatMiniProgramPublishTask $WechatMiniProgramPublishTask) Set 
+ * @method PullUploadTask getPullUploadTask() Obtain 
+ * @method void setPullUploadTask(PullUploadTask $PullUploadTask) Set 
+ * @method TranscodeTask2017 getTranscodeTask() Obtain 
+ * @method void setTranscodeTask(TranscodeTask2017 $TranscodeTask) Set 
+ * @method ConcatTask2017 getConcatTask() Obtain 
+ * @method void setConcatTask(ConcatTask2017 $ConcatTask) Set 
+ * @method ClipTask2017 getClipTask() Obtain 
+ * @method void setClipTask(ClipTask2017 $ClipTask) Set 
+ * @method CreateImageSpriteTask2017 getCreateImageSpriteTask() Obtain 
+ * @method void setCreateImageSpriteTask(CreateImageSpriteTask2017 $CreateImageSpriteTask) Set 
+ * @method SnapshotByTimeOffsetTask2017 getSnapshotByTimeOffsetTask() Obtain 
+ * @method void setSnapshotByTimeOffsetTask(SnapshotByTimeOffsetTask2017 $SnapshotByTimeOffsetTask) Set 
+ * @method RemoveWatermarkTask getRemoveWatermarkTask() Obtain 
+ * @method void setRemoveWatermarkTask(RemoveWatermarkTask $RemoveWatermarkTask) Set 
+ * @method RebuildMediaTask getRebuildMediaTask() Obtain 
+ * @method void setRebuildMediaTask(RebuildMediaTask $RebuildMediaTask) Set 
+ * @method ExtractTraceWatermarkTask getExtractTraceWatermarkTask() Obtain 
+ * @method void setExtractTraceWatermarkTask(ExtractTraceWatermarkTask $ExtractTraceWatermarkTask) Set 
+ * @method ExtractCopyRightWatermarkTask getExtractCopyRightWatermarkTask() Obtain 
+ * @method void setExtractCopyRightWatermarkTask(ExtractCopyRightWatermarkTask $ExtractCopyRightWatermarkTask) Set 
+ * @method ReviewAudioVideoTask getReviewAudioVideoTask() Obtain 
+ * @method void setReviewAudioVideoTask(ReviewAudioVideoTask $ReviewAudioVideoTask) Set 
+ * @method ReduceMediaBitrateTask getReduceMediaBitrateTask() Obtain 
+ * @method void setReduceMediaBitrateTask(ReduceMediaBitrateTask $ReduceMediaBitrateTask) Set 
+ * @method DescribeFileAttributesTask getDescribeFileAttributesTask() Obtain 
+ * @method void setDescribeFileAttributesTask(DescribeFileAttributesTask $DescribeFileAttributesTask) Set 
+ * @method QualityInspectTask getQualityInspectTask() Obtain 
+ * @method void setQualityInspectTask(QualityInspectTask $QualityInspectTask) Set 
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -181,112 +149,104 @@ class DescribeTaskDetailResponse extends AbstractModel
     public $FinishTime;
 
     /**
-     * @var ProcedureTask Video processing task information. This field has a value only when `TaskType` is `Procedure`.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var ProcedureTask 
      */
     public $ProcedureTask;
 
     /**
-     * @var EditMediaTask Video editing task information. This field has a value only when `TaskType` is `EditMedia`.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var EditMediaTask 
      */
     public $EditMediaTask;
 
     /**
-     * @var WechatPublishTask Release on WeChat task information. This field has a value only when `TaskType` is `WechatPublish`.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var WechatPublishTask 
      */
     public $WechatPublishTask;
 
     /**
-     * @var ComposeMediaTask Media file composing task information. This field has a value only when `TaskType` is `ComposeMedia`.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var ComposeMediaTask 
      */
     public $ComposeMediaTask;
 
     /**
-     * @var SplitMediaTask Video splitting task information. This field has a value only when `TaskType` is `EditMedia`.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @var SplitMediaTask 
      */
     public $SplitMediaTask;
 
     /**
-     * @var WechatMiniProgramPublishTask Release on WeChat Mini Program task information. This field has a value only when `TaskType` is `WechatMiniProgramPublish`.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var WechatMiniProgramPublishTask 
      */
     public $WechatMiniProgramPublishTask;
 
     /**
-     * @var PullUploadTask Media file pulling for upload task information. This field has a value only when `TaskType` is `PullUpload`.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var PullUploadTask 
      */
     public $PullUploadTask;
 
     /**
-     * @var TranscodeTask2017 Video transcoding task information. This field has a value only when `TaskType` is `Transcode`.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var TranscodeTask2017 
      */
     public $TranscodeTask;
 
     /**
-     * @var ConcatTask2017 Video splicing task information. This field has a value only when `TaskType` is `Concat`.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var ConcatTask2017 
      */
     public $ConcatTask;
 
     /**
-     * @var ClipTask2017 Video clipping task information. This field has a value only when `TaskType` is `Clip`.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var ClipTask2017 
      */
     public $ClipTask;
 
     /**
-     * @var CreateImageSpriteTask2017 Image sprite creating task information. This field has a value only when `TaskType` is `ImageSprite`.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var CreateImageSpriteTask2017 
      */
     public $CreateImageSpriteTask;
 
     /**
-     * @var SnapshotByTimeOffsetTask2017 Time point screencapturing task information. This field has a value only when `TaskType` is `SnapshotByTimeOffset`.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var SnapshotByTimeOffsetTask2017 
      */
     public $SnapshotByTimeOffsetTask;
 
     /**
-     * @var RemoveWatermarkTask The information of a watermark removal task. This parameter is valid only if `TaskType` is `RemoveWatermark`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var RemoveWatermarkTask 
      */
     public $RemoveWatermarkTask;
 
     /**
-     * @var RebuildMediaTask The information of an audio/video remastering task. This parameter is valid only if `TaskType` is `RebuildMedia`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var RebuildMediaTask 
      */
     public $RebuildMediaTask;
 
     /**
-     * @var ExtractTraceWatermarkTask The information of a digital watermark extraction task. This parameter is valid only if `TaskType` is `ExtractTraceWatermark`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var ExtractTraceWatermarkTask 
      */
     public $ExtractTraceWatermarkTask;
 
     /**
-     * @var ReviewAudioVideoTask The information of a moderation task. This parameter is valid only if `TaskType` is `ReviewAudioVideo`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var ExtractCopyRightWatermarkTask 
+     */
+    public $ExtractCopyRightWatermarkTask;
+
+    /**
+     * @var ReviewAudioVideoTask 
      */
     public $ReviewAudioVideoTask;
 
     /**
-     * @var ReduceMediaBitrateTask This parameter is invalid now.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var ReduceMediaBitrateTask 
      */
     public $ReduceMediaBitrateTask;
 
     /**
-     * @var DescribeFileAttributesTask The information of a task to get file attributes. This parameter is valid only if `TaskType` is `DescribeFileAttributes`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var DescribeFileAttributesTask 
      */
     public $DescribeFileAttributesTask;
+
+    /**
+     * @var QualityInspectTask 
+     */
+    public $QualityInspectTask;
 
     /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -315,42 +275,26 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $CreateTime Creation time of task in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
      * @param string $BeginProcessTime Start time of task execution in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
      * @param string $FinishTime End time of task execution in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
-     * @param ProcedureTask $ProcedureTask Video processing task information. This field has a value only when `TaskType` is `Procedure`.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param EditMediaTask $EditMediaTask Video editing task information. This field has a value only when `TaskType` is `EditMedia`.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param WechatPublishTask $WechatPublishTask Release on WeChat task information. This field has a value only when `TaskType` is `WechatPublish`.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param ComposeMediaTask $ComposeMediaTask Media file composing task information. This field has a value only when `TaskType` is `ComposeMedia`.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param SplitMediaTask $SplitMediaTask Video splitting task information. This field has a value only when `TaskType` is `EditMedia`.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param WechatMiniProgramPublishTask $WechatMiniProgramPublishTask Release on WeChat Mini Program task information. This field has a value only when `TaskType` is `WechatMiniProgramPublish`.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param PullUploadTask $PullUploadTask Media file pulling for upload task information. This field has a value only when `TaskType` is `PullUpload`.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param TranscodeTask2017 $TranscodeTask Video transcoding task information. This field has a value only when `TaskType` is `Transcode`.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param ConcatTask2017 $ConcatTask Video splicing task information. This field has a value only when `TaskType` is `Concat`.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param ClipTask2017 $ClipTask Video clipping task information. This field has a value only when `TaskType` is `Clip`.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param CreateImageSpriteTask2017 $CreateImageSpriteTask Image sprite creating task information. This field has a value only when `TaskType` is `ImageSprite`.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param SnapshotByTimeOffsetTask2017 $SnapshotByTimeOffsetTask Time point screencapturing task information. This field has a value only when `TaskType` is `SnapshotByTimeOffset`.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param RemoveWatermarkTask $RemoveWatermarkTask The information of a watermark removal task. This parameter is valid only if `TaskType` is `RemoveWatermark`.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param RebuildMediaTask $RebuildMediaTask The information of an audio/video remastering task. This parameter is valid only if `TaskType` is `RebuildMedia`.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ExtractTraceWatermarkTask $ExtractTraceWatermarkTask The information of a digital watermark extraction task. This parameter is valid only if `TaskType` is `ExtractTraceWatermark`.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ReviewAudioVideoTask $ReviewAudioVideoTask The information of a moderation task. This parameter is valid only if `TaskType` is `ReviewAudioVideo`.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ReduceMediaBitrateTask $ReduceMediaBitrateTask This parameter is invalid now.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param DescribeFileAttributesTask $DescribeFileAttributesTask The information of a task to get file attributes. This parameter is valid only if `TaskType` is `DescribeFileAttributes`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param ProcedureTask $ProcedureTask 
+     * @param EditMediaTask $EditMediaTask 
+     * @param WechatPublishTask $WechatPublishTask 
+     * @param ComposeMediaTask $ComposeMediaTask 
+     * @param SplitMediaTask $SplitMediaTask 
+     * @param WechatMiniProgramPublishTask $WechatMiniProgramPublishTask 
+     * @param PullUploadTask $PullUploadTask 
+     * @param TranscodeTask2017 $TranscodeTask 
+     * @param ConcatTask2017 $ConcatTask 
+     * @param ClipTask2017 $ClipTask 
+     * @param CreateImageSpriteTask2017 $CreateImageSpriteTask 
+     * @param SnapshotByTimeOffsetTask2017 $SnapshotByTimeOffsetTask 
+     * @param RemoveWatermarkTask $RemoveWatermarkTask 
+     * @param RebuildMediaTask $RebuildMediaTask 
+     * @param ExtractTraceWatermarkTask $ExtractTraceWatermarkTask 
+     * @param ExtractCopyRightWatermarkTask $ExtractCopyRightWatermarkTask 
+     * @param ReviewAudioVideoTask $ReviewAudioVideoTask 
+     * @param ReduceMediaBitrateTask $ReduceMediaBitrateTask 
+     * @param DescribeFileAttributesTask $DescribeFileAttributesTask 
+     * @param QualityInspectTask $QualityInspectTask 
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -461,6 +405,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
             $this->ExtractTraceWatermarkTask->deserialize($param["ExtractTraceWatermarkTask"]);
         }
 
+        if (array_key_exists("ExtractCopyRightWatermarkTask",$param) and $param["ExtractCopyRightWatermarkTask"] !== null) {
+            $this->ExtractCopyRightWatermarkTask = new ExtractCopyRightWatermarkTask();
+            $this->ExtractCopyRightWatermarkTask->deserialize($param["ExtractCopyRightWatermarkTask"]);
+        }
+
         if (array_key_exists("ReviewAudioVideoTask",$param) and $param["ReviewAudioVideoTask"] !== null) {
             $this->ReviewAudioVideoTask = new ReviewAudioVideoTask();
             $this->ReviewAudioVideoTask->deserialize($param["ReviewAudioVideoTask"]);
@@ -474,6 +423,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (array_key_exists("DescribeFileAttributesTask",$param) and $param["DescribeFileAttributesTask"] !== null) {
             $this->DescribeFileAttributesTask = new DescribeFileAttributesTask();
             $this->DescribeFileAttributesTask->deserialize($param["DescribeFileAttributesTask"]);
+        }
+
+        if (array_key_exists("QualityInspectTask",$param) and $param["QualityInspectTask"] !== null) {
+            $this->QualityInspectTask = new QualityInspectTask();
+            $this->QualityInspectTask->deserialize($param["QualityInspectTask"]);
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

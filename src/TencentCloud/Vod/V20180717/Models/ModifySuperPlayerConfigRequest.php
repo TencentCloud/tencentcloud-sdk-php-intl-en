@@ -46,8 +46,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTranscodeDefinition(integer $TranscodeDefinition) Set ID of the transcoding template allowed for playback
  * @method integer getImageSpriteDefinition() Obtain ID of the image sprite generating template that allows output.
  * @method void setImageSpriteDefinition(integer $ImageSpriteDefinition) Set ID of the image sprite generating template that allows output.
- * @method array getResolutionNames() Obtain Display name of player for substreams with different resolutions.
- * @method void setResolutionNames(array $ResolutionNames) Set Display name of player for substreams with different resolutions.
+ * @method array getResolutionNames() Obtain 
+ * @method void setResolutionNames(array $ResolutionNames) Set 
  * @method string getDomain() Obtain Domain name used for playback. If its value is `Default`, the domain name configured in [Default Distribution Configuration](https://intl.cloud.tencent.com/document/product/266/33373?from_cn_redirect=1) will be used.
  * @method void setDomain(string $Domain) Set Domain name used for playback. If its value is `Default`, the domain name configured in [Default Distribution Configuration](https://intl.cloud.tencent.com/document/product/266/33373?from_cn_redirect=1) will be used.
  * @method string getScheme() Obtain Scheme used for playback. Valid values:
@@ -109,7 +109,7 @@ class ModifySuperPlayerConfigRequest extends AbstractModel
     public $ImageSpriteDefinition;
 
     /**
-     * @var array Display name of player for substreams with different resolutions.
+     * @var array 
      */
     public $ResolutionNames;
 
@@ -145,7 +145,7 @@ class ModifySuperPlayerConfigRequest extends AbstractModel
      * @param DrmStreamingsInfoForUpdate $DrmStreamingsInfo Content of the DRM-protected adaptive bitrate streaming template that allows output.
      * @param integer $TranscodeDefinition ID of the transcoding template allowed for playback
      * @param integer $ImageSpriteDefinition ID of the image sprite generating template that allows output.
-     * @param array $ResolutionNames Display name of player for substreams with different resolutions.
+     * @param array $ResolutionNames 
      * @param string $Domain Domain name used for playback. If its value is `Default`, the domain name configured in [Default Distribution Configuration](https://intl.cloud.tencent.com/document/product/266/33373?from_cn_redirect=1) will be used.
      * @param string $Scheme Scheme used for playback. Valid values:
 <li>Default: the scheme configured in [Default Distribution Configuration](https://intl.cloud.tencent.com/document/product/266/33373?from_cn_redirect=1) will be used;</li>

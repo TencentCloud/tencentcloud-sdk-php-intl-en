@@ -46,6 +46,8 @@ Default value: 0 px, which means that `Height` will be proportionally scaled acc
 <li>once: no longer appears after watermark playback ends.</li>
 <li>repeat_last_frame: stays on the last frame after watermark playback ends.</li>
 <li>repeat (default): repeats the playback until the video ends.</li>
+ * @method integer getTransparency() Obtain 
+ * @method void setTransparency(integer $Transparency) Set 
  */
 class ImageWatermarkInput extends AbstractModel
 {
@@ -79,6 +81,11 @@ Default value: 0 px, which means that `Height` will be proportionally scaled acc
     public $RepeatType;
 
     /**
+     * @var integer 
+     */
+    public $Transparency;
+
+    /**
      * @param string $ImageContent The [Base64](https://tools.ietf.org/html/rfc4648) encoded string of a watermark image. Only JPEG, PNG, and GIF images are supported.
      * @param string $Width Watermark width. % and px formats are supported:
 <li>If the string ends in %, the `Width` of the watermark will be the specified percentage of the video width. For example, `10%` means that `Width` is 10% of the video width;</li>
@@ -92,6 +99,7 @@ Default value: 0 px, which means that `Height` will be proportionally scaled acc
 <li>once: no longer appears after watermark playback ends.</li>
 <li>repeat_last_frame: stays on the last frame after watermark playback ends.</li>
 <li>repeat (default): repeats the playback until the video ends.</li>
+     * @param integer $Transparency 
      */
     function __construct()
     {
@@ -120,6 +128,10 @@ Default value: 0 px, which means that `Height` will be proportionally scaled acc
 
         if (array_key_exists("RepeatType",$param) and $param["RepeatType"] !== null) {
             $this->RepeatType = $param["RepeatType"];
+        }
+
+        if (array_key_exists("Transparency",$param) and $param["Transparency"] !== null) {
+            $this->Transparency = $param["Transparency"];
         }
     }
 }

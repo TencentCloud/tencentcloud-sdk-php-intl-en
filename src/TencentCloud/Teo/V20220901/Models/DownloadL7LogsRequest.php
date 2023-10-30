@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setZoneIds(array $ZoneIds) Set List of sites. This parameter is required. A `null` will be returned if it is left empty.
  * @method array getDomains() Obtain List of subdomain names to be queried. All subdomain names will be selected if this field is not specified.
  * @method void setDomains(array $Domains) Set List of subdomain names to be queried. All subdomain names will be selected if this field is not specified.
- * @method integer getLimit() Obtain Limit on paginated queries. Default value: 20. Maximum value: 1000.
- * @method void setLimit(integer $Limit) Set Limit on paginated queries. Default value: 20. Maximum value: 1000.
+ * @method integer getLimit() Obtain Limit on paginated queries. Default value: 20. Maximum value: 300.
+ * @method void setLimit(integer $Limit) Set Limit on paginated queries. Default value: 20. Maximum value: 300.
  * @method integer getOffset() Obtain The page offset. Default value: 0.
  * @method void setOffset(integer $Offset) Set The page offset. Default value: 0.
  */
@@ -56,7 +56,7 @@ class DownloadL7LogsRequest extends AbstractModel
     public $Domains;
 
     /**
-     * @var integer Limit on paginated queries. Default value: 20. Maximum value: 1000.
+     * @var integer Limit on paginated queries. Default value: 20. Maximum value: 300.
      */
     public $Limit;
 
@@ -70,7 +70,7 @@ class DownloadL7LogsRequest extends AbstractModel
      * @param string $EndTime The end time.
      * @param array $ZoneIds List of sites. This parameter is required. A `null` will be returned if it is left empty.
      * @param array $Domains List of subdomain names to be queried. All subdomain names will be selected if this field is not specified.
-     * @param integer $Limit Limit on paginated queries. Default value: 20. Maximum value: 1000.
+     * @param integer $Limit Limit on paginated queries. Default value: 20. Maximum value: 300.
      * @param integer $Offset The page offset. Default value: 0.
      */
     function __construct()

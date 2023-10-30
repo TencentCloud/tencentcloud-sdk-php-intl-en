@@ -18,25 +18,24 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * ath-based cache rule configuration
-The cache expiration time for all files is 30 days by default.
+ * 
  *
- * @method string getRuleType() Obtain Rule types:<li>all: effective for all files.</li> <li>file: effective for specified file suffixes.</li> <li>directory: effective for specified paths.</li> <li>path: effective for specified absolute paths.</li>
- * @method void setRuleType(string $RuleType) Set Rule types:<li>all: effective for all files.</li> <li>file: effective for specified file suffixes.</li> <li>directory: effective for specified paths.</li> <li>path: effective for specified absolute paths.</li>
- * @method array getRulePaths() Obtain Content for each CacheType: <li>For all, enter a wildcard *.</li> <li>For file, enter the suffix, e.g., jpg or txt.</li> <li>For directory, enter the path, e.g., /xxx/test/.</li> <li>For path, enter the absolute path, e.g., /xxx/test.html.</li>
- * @method void setRulePaths(array $RulePaths) Set Content for each CacheType: <li>For all, enter a wildcard *.</li> <li>For file, enter the suffix, e.g., jpg or txt.</li> <li>For directory, enter the path, e.g., /xxx/test/.</li> <li>For path, enter the absolute path, e.g., /xxx/test.html.</li>
+ * @method string getRuleType() Obtain 
+ * @method void setRuleType(string $RuleType) Set 
+ * @method array getRulePaths() Obtain 
+ * @method void setRulePaths(array $RulePaths) Set 
  * @method RuleCacheConfig getCacheConfig() Obtain Cache configuration
  * @method void setCacheConfig(RuleCacheConfig $CacheConfig) Set Cache configuration
  */
 class RuleCache extends AbstractModel
 {
     /**
-     * @var string Rule types:<li>all: effective for all files.</li> <li>file: effective for specified file suffixes.</li> <li>directory: effective for specified paths.</li> <li>path: effective for specified absolute paths.</li>
+     * @var string 
      */
     public $RuleType;
 
     /**
-     * @var array Content for each CacheType: <li>For all, enter a wildcard *.</li> <li>For file, enter the suffix, e.g., jpg or txt.</li> <li>For directory, enter the path, e.g., /xxx/test/.</li> <li>For path, enter the absolute path, e.g., /xxx/test.html.</li>
+     * @var array 
      */
     public $RulePaths;
 
@@ -46,8 +45,8 @@ class RuleCache extends AbstractModel
     public $CacheConfig;
 
     /**
-     * @param string $RuleType Rule types:<li>all: effective for all files.</li> <li>file: effective for specified file suffixes.</li> <li>directory: effective for specified paths.</li> <li>path: effective for specified absolute paths.</li>
-     * @param array $RulePaths Content for each CacheType: <li>For all, enter a wildcard *.</li> <li>For file, enter the suffix, e.g., jpg or txt.</li> <li>For directory, enter the path, e.g., /xxx/test/.</li> <li>For path, enter the absolute path, e.g., /xxx/test.html.</li>
+     * @param string $RuleType 
+     * @param array $RulePaths 
      * @param RuleCacheConfig $CacheConfig Cache configuration
      */
     function __construct()

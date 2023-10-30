@@ -14,23 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Vod\V20180717\Models;
+namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * EditMedia response structure.
+ * CreateSharedCNAME response structure.
  *
- * @method string getTaskId() Obtain Video editing task ID, which can be used to query the status of editing task (with task type being `EditMedia`).
- * @method void setTaskId(string $TaskId) Set Video editing task ID, which can be used to query the status of editing task (with task type being `EditMedia`).
+ * @method string getSharedCNAME() Obtain Shared CNAME. Format: <Custom Prefix> + <12-bit random string in ZoneId> + "share.eo.dnse[0-5].com"
+ * @method void setSharedCNAME(string $SharedCNAME) Set Shared CNAME. Format: <Custom Prefix> + <12-bit random string in ZoneId> + "share.eo.dnse[0-5].com"
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
-class EditMediaResponse extends AbstractModel
+class CreateSharedCNAMEResponse extends AbstractModel
 {
     /**
-     * @var string Video editing task ID, which can be used to query the status of editing task (with task type being `EditMedia`).
+     * @var string Shared CNAME. Format: <Custom Prefix> + <12-bit random string in ZoneId> + "share.eo.dnse[0-5].com"
      */
-    public $TaskId;
+    public $SharedCNAME;
 
     /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -38,7 +38,7 @@ class EditMediaResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $TaskId Video editing task ID, which can be used to query the status of editing task (with task type being `EditMedia`).
+     * @param string $SharedCNAME Shared CNAME. Format: <Custom Prefix> + <12-bit random string in ZoneId> + "share.eo.dnse[0-5].com"
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -54,8 +54,8 @@ class EditMediaResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TaskId",$param) and $param["TaskId"] !== null) {
-            $this->TaskId = $param["TaskId"];
+        if (array_key_exists("SharedCNAME",$param) and $param["SharedCNAME"] !== null) {
+            $this->SharedCNAME = $param["SharedCNAME"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

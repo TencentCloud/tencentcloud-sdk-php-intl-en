@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setName(string $Name) Set The playlist name (not longer than 64 characters).
  * @method string getDesc() Obtain The playlist description (not longer than 256 characters).
  * @method void setDesc(string $Desc) Set The playlist description (not longer than 256 characters).
+ * @method string getPlayBackMode() Obtain 
+ * @method void setPlayBackMode(string $PlayBackMode) Set 
  */
 class CreateRoundPlayRequest extends AbstractModel
 {
@@ -62,12 +64,18 @@ class CreateRoundPlayRequest extends AbstractModel
     public $Desc;
 
     /**
+     * @var string 
+     */
+    public $PlayBackMode;
+
+    /**
      * @param string $StartTime The playback start time, in [ISO 8601 date format](https://intl.cloud.tencent.com/document/product/266/11732?lang=en&pg=).
      * @param array $RoundPlaylist The files on the list.
 <li>Array length limit: 100.</li>
      * @param integer $SubAppId <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
      * @param string $Name The playlist name (not longer than 64 characters).
      * @param string $Desc The playlist description (not longer than 256 characters).
+     * @param string $PlayBackMode 
      */
     function __construct()
     {
@@ -105,6 +113,10 @@ class CreateRoundPlayRequest extends AbstractModel
 
         if (array_key_exists("Desc",$param) and $param["Desc"] !== null) {
             $this->Desc = $param["Desc"];
+        }
+
+        if (array_key_exists("PlayBackMode",$param) and $param["PlayBackMode"] !== null) {
+            $this->PlayBackMode = $param["PlayBackMode"];
         }
     }
 }

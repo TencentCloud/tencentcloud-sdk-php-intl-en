@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Origin access authentication for S3 bucket.
  *
- * @method string getSwitch() Obtain  Aws S3 back-to-origin authentication configuration switch, the values are: <li>on:Enable;</li> <li>off: Disable.</li>
- * @method void setSwitch(string $Switch) Set  Aws S3 back-to-origin authentication configuration switch, the values are: <li>on:Enable;</li> <li>off: Disable.</li>
+ * @method string getSwitch() Obtain 
+ * @method void setSwitch(string $Switch) Set 
  * @method string getAccessKey() Obtain Access ID.
  * @method void setAccessKey(string $AccessKey) Set Access ID.
  * @method string getSecretKey() Obtain Key.
@@ -34,7 +34,7 @@ use TencentCloud\Common\AbstractModel;
 class AwsPrivateAccess extends AbstractModel
 {
     /**
-     * @var string  Aws S3 back-to-origin authentication configuration switch, the values are: <li>on:Enable;</li> <li>off: Disable.</li>
+     * @var string 
      */
     public $Switch;
 
@@ -59,7 +59,7 @@ class AwsPrivateAccess extends AbstractModel
     public $Bucket;
 
     /**
-     * @param string $Switch  Aws S3 back-to-origin authentication configuration switch, the values are: <li>on:Enable;</li> <li>off: Disable.</li>
+     * @param string $Switch 
      * @param string $AccessKey Access ID.
      * @param string $SecretKey Key.
      * @param string $Region Region.

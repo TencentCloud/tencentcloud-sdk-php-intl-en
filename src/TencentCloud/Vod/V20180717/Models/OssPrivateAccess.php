@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Access authentication configuration for OSS origin
  *
- * @method string getSwitch() Obtain Alibaba Cloud OSS back-to-origin authentication configuration switch, the values are:<li>on:Enable;</li> <li>off: Disable.</li>
- * @method void setSwitch(string $Switch) Set Alibaba Cloud OSS back-to-origin authentication configuration switch, the values are:<li>on:Enable;</li> <li>off: Disable.</li>
+ * @method string getSwitch() Obtain 
+ * @method void setSwitch(string $Switch) Set 
  * @method string getAccessKey() Obtain Access ID.
  * @method void setAccessKey(string $AccessKey) Set Access ID.
  * @method string getSecretKey() Obtain Key.
@@ -34,7 +34,7 @@ use TencentCloud\Common\AbstractModel;
 class OssPrivateAccess extends AbstractModel
 {
     /**
-     * @var string Alibaba Cloud OSS back-to-origin authentication configuration switch, the values are:<li>on:Enable;</li> <li>off: Disable.</li>
+     * @var string 
      */
     public $Switch;
 
@@ -59,7 +59,7 @@ class OssPrivateAccess extends AbstractModel
     public $Bucket;
 
     /**
-     * @param string $Switch Alibaba Cloud OSS back-to-origin authentication configuration switch, the values are:<li>on:Enable;</li> <li>off: Disable.</li>
+     * @param string $Switch 
      * @param string $AccessKey Access ID.
      * @param string $SecretKey Key.
      * @param string $Region Region.

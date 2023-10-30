@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Origin-pull authentication for other origins
  *
- * @method string getSwitch() Obtain Other vendor object storage back-to-source authentication configuration switches, the values are:<li>on:Enable;</li> <li>off: Disable.</li>
- * @method void setSwitch(string $Switch) Set Other vendor object storage back-to-source authentication configuration switches, the values are:<li>on:Enable;</li> <li>off: Disable.</li>
+ * @method string getSwitch() Obtain 
+ * @method void setSwitch(string $Switch) Set 
  * @method string getAccessKey() Obtain Access ID.
  * @method void setAccessKey(string $AccessKey) Set Access ID.
  * @method string getSecretKey() Obtain Key.
@@ -34,7 +34,7 @@ use TencentCloud\Common\AbstractModel;
 class OthersPrivateAccess extends AbstractModel
 {
     /**
-     * @var string Other vendor object storage back-to-source authentication configuration switches, the values are:<li>on:Enable;</li> <li>off: Disable.</li>
+     * @var string 
      */
     public $Switch;
 
@@ -59,7 +59,7 @@ class OthersPrivateAccess extends AbstractModel
     public $Bucket;
 
     /**
-     * @param string $Switch Other vendor object storage back-to-source authentication configuration switches, the values are:<li>on:Enable;</li> <li>off: Disable.</li>
+     * @param string $Switch 
      * @param string $AccessKey Access ID.
      * @param string $SecretKey Key.
      * @param string $Region Region.

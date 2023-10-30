@@ -30,6 +30,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setName(string $Name) Set The playlist name (not longer than 64 characters).
  * @method string getDesc() Obtain The playlist description (not longer than 256 characters).
  * @method void setDesc(string $Desc) Set The playlist description (not longer than 256 characters).
+ * @method string getStatus() Obtain 
+ * @method void setStatus(string $Status) Set 
+ * @method string getPlayBackMode() Obtain 
+ * @method void setPlayBackMode(string $PlayBackMode) Set 
+ * @method string getUrl() Obtain 
+ * @method void setUrl(string $Url) Set 
  */
 class RoundPlayInfo extends AbstractModel
 {
@@ -59,11 +65,29 @@ class RoundPlayInfo extends AbstractModel
     public $Desc;
 
     /**
+     * @var string 
+     */
+    public $Status;
+
+    /**
+     * @var string 
+     */
+    public $PlayBackMode;
+
+    /**
+     * @var string 
+     */
+    public $Url;
+
+    /**
      * @param string $RoundPlayId The playlist ID.
      * @param string $StartTime The playback start time, in [ISO 8601 date format](https://intl.cloud.tencent.com/document/product/266/11732?lang=en&pg=).
      * @param array $RoundPlaylist The files on the list.
      * @param string $Name The playlist name (not longer than 64 characters).
      * @param string $Desc The playlist description (not longer than 256 characters).
+     * @param string $Status 
+     * @param string $PlayBackMode 
+     * @param string $Url 
      */
     function __construct()
     {
@@ -101,6 +125,18 @@ class RoundPlayInfo extends AbstractModel
 
         if (array_key_exists("Desc",$param) and $param["Desc"] !== null) {
             $this->Desc = $param["Desc"];
+        }
+
+        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
+            $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("PlayBackMode",$param) and $param["PlayBackMode"] !== null) {
+            $this->PlayBackMode = $param["PlayBackMode"];
+        }
+
+        if (array_key_exists("Url",$param) and $param["Url"] !== null) {
+            $this->Url = $param["Url"];
         }
     }
 }

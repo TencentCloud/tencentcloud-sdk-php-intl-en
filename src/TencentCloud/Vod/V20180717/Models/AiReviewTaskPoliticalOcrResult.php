@@ -36,6 +36,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: This field may return `null`, indicating that no valid value can be found.
  * @method void setOutput(AiReviewPoliticalOcrTaskOutput $Output) Set Output for OCR-based recognition of politically sensitive content
 Note: This field may return `null`, indicating that no valid value can be found.
+ * @method integer getProgress() Obtain 
+ * @method void setProgress(integer $Progress) Set 
  */
 class AiReviewTaskPoliticalOcrResult extends AbstractModel
 {
@@ -72,6 +74,11 @@ Note: This field may return `null`, indicating that no valid value can be found.
     public $Output;
 
     /**
+     * @var integer 
+     */
+    public $Progress;
+
+    /**
      * @param string $Status Task status. Valid values: PROCESSING, SUCCESS, FAIL.
      * @param string $ErrCodeExt Error code. An empty string indicates the task is successful; other values indicate failure. For details, see [Video Processing Error Codes](https://intl.cloud.tencent.com/zh/document/product/266/39145).
      * @param integer $ErrCode Error code. 0 indicates the task is successful; other values indicate failure. You’re not recommended to use this parameter, but to use the new parameter `ErrCodeExt`.
@@ -80,6 +87,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @param AiReviewPoliticalOcrTaskInput $Input Input for OCR-based recognition of politically sensitive content
      * @param AiReviewPoliticalOcrTaskOutput $Output Output for OCR-based recognition of politically sensitive content
 Note: This field may return `null`, indicating that no valid value can be found.
+     * @param integer $Progress 
      */
     function __construct()
     {
@@ -118,6 +126,10 @@ Note: This field may return `null`, indicating that no valid value can be found.
         if (array_key_exists("Output",$param) and $param["Output"] !== null) {
             $this->Output = new AiReviewPoliticalOcrTaskOutput();
             $this->Output->deserialize($param["Output"]);
+        }
+
+        if (array_key_exists("Progress",$param) and $param["Progress"] !== null) {
+            $this->Progress = $param["Progress"];
         }
     }
 }

@@ -25,7 +25,9 @@ use TencentCloud\Tiw\V20190919\Models as Models;
 /**
  * @method Models\ApplyTiwTrialResponse ApplyTiwTrial(Models\ApplyTiwTrialRequest $req) This API is used to apply for a Tencent Interactive Whiteboard trial (15-day by default).
  * @method Models\CreateApplicationResponse CreateApplication(Models\CreateApplicationRequest $req) This API is used to create a whiteboard application.
- * @method Models\CreateOfflineRecordResponse CreateOfflineRecord(Models\CreateOfflineRecordRequest $req) This API is used to create an offline recording task.
+ * @method Models\CreateOfflineRecordResponse CreateOfflineRecord(Models\CreateOfflineRecordRequest $req) 课后录制服务已下线
+
+This API is used to create an offline recording task.
  * @method Models\CreateSnapshotTaskResponse CreateSnapshotTask(Models\CreateSnapshotTaskRequest $req) This API is used to create a whiteboard snapshot task. If a callback URL is provided, the whiteboard snapshot result is sent to the callback URL after the task is complete.
  * @method Models\CreateTranscodeResponse CreateTranscode(Models\CreateTranscodeRequest $req) This API is used to create a document transcoding task.
  * @method Models\CreateVideoGenerationTaskResponse CreateVideoGenerationTask(Models\CreateVideoGenerationTaskRequest $req) This API is used to create a recording video generation task.
@@ -34,8 +36,12 @@ use TencentCloud\Tiw\V20190919\Models as Models;
  * @method Models\DescribeApplicationUsageResponse DescribeApplicationUsage(Models\DescribeApplicationUsageRequest $req) This API is used to query the subproduct usage of Tencent Interactive Whiteboard.
  * @method Models\DescribeBoardSDKLogResponse DescribeBoardSDKLog(Models\DescribeBoardSDKLogRequest $req) This API is used to query the logs of a whiteboard application on a client.
  * @method Models\DescribeIMApplicationsResponse DescribeIMApplications(Models\DescribeIMApplicationsRequest $req) This API is used to query the instant messaging (IM) applications that are available for creating a whiteboard application.
- * @method Models\DescribeOfflineRecordResponse DescribeOfflineRecord(Models\DescribeOfflineRecordRequest $req) This API is used to query the information about an offline recording task, including the recording progress and recording result.
- * @method Models\DescribeOfflineRecordCallbackResponse DescribeOfflineRecordCallback(Models\DescribeOfflineRecordCallbackRequest $req) This API is used to query the offline recording callback URL.
+ * @method Models\DescribeOfflineRecordResponse DescribeOfflineRecord(Models\DescribeOfflineRecordRequest $req) 课后录制服务已下线
+
+This API is used to query the information about an offline recording task, including the recording progress and recording result.
+ * @method Models\DescribeOfflineRecordCallbackResponse DescribeOfflineRecordCallback(Models\DescribeOfflineRecordCallbackRequest $req) 课后录制服务已下线
+
+This API is used to query the offline recording callback URL.
  * @method Models\DescribeOnlineRecordResponse DescribeOnlineRecord(Models\DescribeOnlineRecordRequest $req) This API is used to query the status and result of a real-time recording task.
  * @method Models\DescribeOnlineRecordCallbackResponse DescribeOnlineRecordCallback(Models\DescribeOnlineRecordCallbackRequest $req) This API is used to query the real-time recording callback address.
  * @method Models\DescribePostpaidUsageResponse DescribePostpaidUsage(Models\DescribePostpaidUsageRequest $req) This API is used to query the pay-as-you-go usage of a user.
@@ -72,7 +78,9 @@ use TencentCloud\Tiw\V20190919\Models as Models;
  * @method Models\ModifyWhiteboardBucketConfigResponse ModifyWhiteboardBucketConfig(Models\ModifyWhiteboardBucketConfigRequest $req) This API is used to modify the bucket configurations for document transcoding and real-time recording.
  * @method Models\PauseOnlineRecordResponse PauseOnlineRecord(Models\PauseOnlineRecordRequest $req) This API is used to pause real-time recording.
  * @method Models\ResumeOnlineRecordResponse ResumeOnlineRecord(Models\ResumeOnlineRecordRequest $req) This API is used to resume real-time recording.
- * @method Models\SetOfflineRecordCallbackResponse SetOfflineRecordCallback(Models\SetOfflineRecordCallbackRequest $req) This API is used to set the offline recording callback URL.
+ * @method Models\SetOfflineRecordCallbackResponse SetOfflineRecordCallback(Models\SetOfflineRecordCallbackRequest $req) 课后录制服务已下线
+
+This API is used to set the offline recording callback URL.
  * @method Models\SetOnlineRecordCallbackResponse SetOnlineRecordCallback(Models\SetOnlineRecordCallbackRequest $req) This API is used to set the real-time recording callback address. For the callback format, please [see here](https://intl.cloud.tencent.com/document/product/1137/40258?from_cn_redirect=1).
  * @method Models\SetOnlineRecordCallbackKeyResponse SetOnlineRecordCallbackKey(Models\SetOnlineRecordCallbackKeyRequest $req) This API is used to set the callback authentication key for real-time recording. For more information, see [Event Notification](https://intl.cloud.tencent.com/document/product/1137/40257?from_cn_redirect=1).
  * @method Models\SetTranscodeCallbackResponse SetTranscodeCallback(Models\SetTranscodeCallbackRequest $req) This API is used to set the callback address for document transcoding. For the callback format, please [see here](https://intl.cloud.tencent.com/document/product/1137/40260?from_cn_redirect=1).
