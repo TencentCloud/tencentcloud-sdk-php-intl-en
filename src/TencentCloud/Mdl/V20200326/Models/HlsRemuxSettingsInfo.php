@@ -36,12 +36,16 @@ Currently, fMP4 segments do not support DRM or time shifting.
 Currently, fMP4 segments do not support DRM or time shifting.
  * @method string getH265PackageType() Obtain The HLS package type when the H.265 codec is used. Valid values: `hvc1`, `hev1` (default).
  * @method void setH265PackageType(string $H265PackageType) Set The HLS package type when the H.265 codec is used. Valid values: `hvc1`, `hev1` (default).
- * @method integer getLowLatency() Obtain 
- * @method void setLowLatency(integer $LowLatency) Set 
- * @method integer getPartialSegmentDuration() Obtain 
- * @method void setPartialSegmentDuration(integer $PartialSegmentDuration) Set 
- * @method integer getPartialSegmentPlaySite() Obtain 
- * @method void setPartialSegmentPlaySite(integer $PartialSegmentPlaySite) Set 
+ * @method integer getLowLatency() Obtain Whether to enable low latency 0:CLOSE, 1:OPEN, default value: 0.
+ * @method void setLowLatency(integer $LowLatency) Set Whether to enable low latency 0:CLOSE, 1:OPEN, default value: 0.
+ * @method integer getPartialSegmentDuration() Obtain Low latency slice size, unit ms. Value range: integer [200-HlsRemuxSettings.SegmentDuration] Default value: 500ms.
+ * @method void setPartialSegmentDuration(integer $PartialSegmentDuration) Set Low latency slice size, unit ms. Value range: integer [200-HlsRemuxSettings.SegmentDuration] Default value: 500ms.
+ * @method integer getPartialSegmentPlaySite() Obtain Low latency slice playback position, unit ms. Value range: integer [3*HlsRemuxSettings.PartiSegmentDuration - 3*HlsRemuxSettings.SegmentDuration], Default value: 3*HlsRemuxSettings.PartiSegmentDuration.
+ * @method void setPartialSegmentPlaySite(integer $PartialSegmentPlaySite) Set Low latency slice playback position, unit ms. Value range: integer [3*HlsRemuxSettings.PartiSegmentDuration - 3*HlsRemuxSettings.SegmentDuration], Default value: 3*HlsRemuxSettings.PartiSegmentDuration.
+ * @method integer getStreamOrder() Obtain Hls main m3u8 file sorting rules by bitrate, optional values: 1: video bitrate ascending order; 2: video bitrate descending order. Default value: 1.
+ * @method void setStreamOrder(integer $StreamOrder) Set Hls main m3u8 file sorting rules by bitrate, optional values: 1: video bitrate ascending order; 2: video bitrate descending order. Default value: 1.
+ * @method integer getVideoResolution() Obtain Whether the Hls main m3u8 file contains resolution information, optional values: 1: INCLUDE includes video resolution; 2: EXCLUDE does not include video resolution. Default value: 1.
+ * @method void setVideoResolution(integer $VideoResolution) Set Whether the Hls main m3u8 file contains resolution information, optional values: 1: INCLUDE includes video resolution; 2: EXCLUDE does not include video resolution. Default value: 1.
  */
 class HlsRemuxSettingsInfo extends AbstractModel
 {
@@ -82,19 +86,29 @@ Currently, fMP4 segments do not support DRM or time shifting.
     public $H265PackageType;
 
     /**
-     * @var integer 
+     * @var integer Whether to enable low latency 0:CLOSE, 1:OPEN, default value: 0.
      */
     public $LowLatency;
 
     /**
-     * @var integer 
+     * @var integer Low latency slice size, unit ms. Value range: integer [200-HlsRemuxSettings.SegmentDuration] Default value: 500ms.
      */
     public $PartialSegmentDuration;
 
     /**
-     * @var integer 
+     * @var integer Low latency slice playback position, unit ms. Value range: integer [3*HlsRemuxSettings.PartiSegmentDuration - 3*HlsRemuxSettings.SegmentDuration], Default value: 3*HlsRemuxSettings.PartiSegmentDuration.
      */
     public $PartialSegmentPlaySite;
+
+    /**
+     * @var integer Hls main m3u8 file sorting rules by bitrate, optional values: 1: video bitrate ascending order; 2: video bitrate descending order. Default value: 1.
+     */
+    public $StreamOrder;
+
+    /**
+     * @var integer Whether the Hls main m3u8 file contains resolution information, optional values: 1: INCLUDE includes video resolution; 2: EXCLUDE does not include video resolution. Default value: 1.
+     */
+    public $VideoResolution;
 
     /**
      * @param integer $SegmentDuration Segment duration in ms. Value range: [1000,30000]. Default value: 4000. The value can only be a multiple of 1,000.
@@ -105,9 +119,11 @@ Currently, fMP4 segments do not support DRM or time shifting.
      * @param string $SegmentType The segment type. Valid values: `ts` (default), `fmp4`.
 Currently, fMP4 segments do not support DRM or time shifting.
      * @param string $H265PackageType The HLS package type when the H.265 codec is used. Valid values: `hvc1`, `hev1` (default).
-     * @param integer $LowLatency 
-     * @param integer $PartialSegmentDuration 
-     * @param integer $PartialSegmentPlaySite 
+     * @param integer $LowLatency Whether to enable low latency 0:CLOSE, 1:OPEN, default value: 0.
+     * @param integer $PartialSegmentDuration Low latency slice size, unit ms. Value range: integer [200-HlsRemuxSettings.SegmentDuration] Default value: 500ms.
+     * @param integer $PartialSegmentPlaySite Low latency slice playback position, unit ms. Value range: integer [3*HlsRemuxSettings.PartiSegmentDuration - 3*HlsRemuxSettings.SegmentDuration], Default value: 3*HlsRemuxSettings.PartiSegmentDuration.
+     * @param integer $StreamOrder Hls main m3u8 file sorting rules by bitrate, optional values: 1: video bitrate ascending order; 2: video bitrate descending order. Default value: 1.
+     * @param integer $VideoResolution Whether the Hls main m3u8 file contains resolution information, optional values: 1: INCLUDE includes video resolution; 2: EXCLUDE does not include video resolution. Default value: 1.
      */
     function __construct()
     {
@@ -160,6 +176,14 @@ Currently, fMP4 segments do not support DRM or time shifting.
 
         if (array_key_exists("PartialSegmentPlaySite",$param) and $param["PartialSegmentPlaySite"] !== null) {
             $this->PartialSegmentPlaySite = $param["PartialSegmentPlaySite"];
+        }
+
+        if (array_key_exists("StreamOrder",$param) and $param["StreamOrder"] !== null) {
+            $this->StreamOrder = $param["StreamOrder"];
+        }
+
+        if (array_key_exists("VideoResolution",$param) and $param["VideoResolution"] !== null) {
+            $this->VideoResolution = $param["VideoResolution"];
         }
     }
 }

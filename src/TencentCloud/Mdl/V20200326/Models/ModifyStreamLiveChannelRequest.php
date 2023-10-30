@@ -40,6 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEventNotifySettings(EventNotifySetting $EventNotifySettings) Set The callback settings.
  * @method InputLossBehaviorInfo getInputLossBehavior() Obtain Complement the last video frame settings.
  * @method void setInputLossBehavior(InputLossBehaviorInfo $InputLossBehavior) Set Complement the last video frame settings.
+ * @method PipelineInputSettingsInfo getPipelineInputSettings() Obtain Pipeline configuration.
+ * @method void setPipelineInputSettings(PipelineInputSettingsInfo $PipelineInputSettings) Set Pipeline configuration.
  */
 class ModifyStreamLiveChannelRequest extends AbstractModel
 {
@@ -94,6 +96,11 @@ class ModifyStreamLiveChannelRequest extends AbstractModel
     public $InputLossBehavior;
 
     /**
+     * @var PipelineInputSettingsInfo Pipeline configuration.
+     */
+    public $PipelineInputSettings;
+
+    /**
      * @param string $Id Channel ID
      * @param string $Name Channel name, which can contain 1-32 case-sensitive letters, digits, and underscores and must be unique at the region level
      * @param array $AttachedInputs Inputs to attach. You can attach 1 to 5 inputs.
@@ -104,6 +111,7 @@ class ModifyStreamLiveChannelRequest extends AbstractModel
      * @param PlanSettings $PlanSettings Event settings
      * @param EventNotifySetting $EventNotifySettings The callback settings.
      * @param InputLossBehaviorInfo $InputLossBehavior Complement the last video frame settings.
+     * @param PipelineInputSettingsInfo $PipelineInputSettings Pipeline configuration.
      */
     function __construct()
     {
@@ -184,6 +192,11 @@ class ModifyStreamLiveChannelRequest extends AbstractModel
         if (array_key_exists("InputLossBehavior",$param) and $param["InputLossBehavior"] !== null) {
             $this->InputLossBehavior = new InputLossBehaviorInfo();
             $this->InputLossBehavior->deserialize($param["InputLossBehavior"]);
+        }
+
+        if (array_key_exists("PipelineInputSettings",$param) and $param["PipelineInputSettings"] !== null) {
+            $this->PipelineInputSettings = new PipelineInputSettingsInfo();
+            $this->PipelineInputSettings->deserialize($param["PipelineInputSettings"]);
         }
     }
 }

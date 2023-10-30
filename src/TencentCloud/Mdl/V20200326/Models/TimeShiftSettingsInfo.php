@@ -28,10 +28,8 @@ Note: This field may return `null`, indicating that no valid value was found.
 Note: This field may return `null`, indicating that no valid value was found.
  * @method void setPlayDomain(string $PlayDomain) Set Domain name bound for time shifting
 Note: This field may return `null`, indicating that no valid value was found.
- * @method integer getStartoverWindow() Obtain Allowable time-shift period (s). Value range: [600, 1209600]. Default value: 300
-Note: This field may return `null`, indicating that no valid value was found.
- * @method void setStartoverWindow(integer $StartoverWindow) Set Allowable time-shift period (s). Value range: [600, 1209600]. Default value: 300
-Note: This field may return `null`, indicating that no valid value was found.
+ * @method integer getStartoverWindow() Obtain Allowable time-shift period (s). Value range: [300, 2592000]. Default value: 300Note: This field may return `null`, indicating that no valid value was found.
+ * @method void setStartoverWindow(integer $StartoverWindow) Set Allowable time-shift period (s). Value range: [300, 2592000]. Default value: 300Note: This field may return `null`, indicating that no valid value was found.
  */
 class TimeShiftSettingsInfo extends AbstractModel
 {
@@ -48,8 +46,7 @@ Note: This field may return `null`, indicating that no valid value was found.
     public $PlayDomain;
 
     /**
-     * @var integer Allowable time-shift period (s). Value range: [600, 1209600]. Default value: 300
-Note: This field may return `null`, indicating that no valid value was found.
+     * @var integer Allowable time-shift period (s). Value range: [300, 2592000]. Default value: 300Note: This field may return `null`, indicating that no valid value was found.
      */
     public $StartoverWindow;
 
@@ -58,8 +55,7 @@ Note: This field may return `null`, indicating that no valid value was found.
 Note: This field may return `null`, indicating that no valid value was found.
      * @param string $PlayDomain Domain name bound for time shifting
 Note: This field may return `null`, indicating that no valid value was found.
-     * @param integer $StartoverWindow Allowable time-shift period (s). Value range: [600, 1209600]. Default value: 300
-Note: This field may return `null`, indicating that no valid value was found.
+     * @param integer $StartoverWindow Allowable time-shift period (s). Value range: [300, 2592000]. Default value: 300Note: This field may return `null`, indicating that no valid value was found.
      */
     function __construct()
     {

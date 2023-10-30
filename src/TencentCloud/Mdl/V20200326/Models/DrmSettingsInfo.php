@@ -42,10 +42,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: This field may return `null`, indicating that no valid value was found.
  * @method void setSDMCSettings(SDMCSettingsInfo $SDMCSettings) Set SDMC key configuration. This parameter is used when `Scheme` is set to `SDMCDRM`.
 Note: This field may return `null`, indicating that no valid value was found.
- * @method string getDrmType() Obtain The DRM type. Valid values: `FAIRPLAY`, `WIDEVINE`, `AES128`. For HLS, this can be `FAIRPLAY` or `AES128`. For DASH, this can only be `WIDEVINE`.
-Note: This field may return `null`, indicating that no valid values can be obtained.
- * @method void setDrmType(string $DrmType) Set The DRM type. Valid values: `FAIRPLAY`, `WIDEVINE`, `AES128`. For HLS, this can be `FAIRPLAY` or `AES128`. For DASH, this can only be `WIDEVINE`.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method string getDrmType() Obtain The DRM type. Valid values: `FAIRPLAY`, `WIDEVINE`, `AES128`, `PLAYREADY`. For HLS, this can be `FAIRPLAY` or `AES128` or `PLAYREADY`. For DASH, valid values: `WIDEVINE` or `PLAYREADY`. 
+ * @method void setDrmType(string $DrmType) Set The DRM type. Valid values: `FAIRPLAY`, `WIDEVINE`, `AES128`, `PLAYREADY`. For HLS, this can be `FAIRPLAY` or `AES128` or `PLAYREADY`. For DASH, valid values: `WIDEVINE` or `PLAYREADY`. 
  */
 class DrmSettingsInfo extends AbstractModel
 {
@@ -81,8 +79,7 @@ Note: This field may return `null`, indicating that no valid value was found.
     public $SDMCSettings;
 
     /**
-     * @var string The DRM type. Valid values: `FAIRPLAY`, `WIDEVINE`, `AES128`. For HLS, this can be `FAIRPLAY` or `AES128`. For DASH, this can only be `WIDEVINE`.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @var string The DRM type. Valid values: `FAIRPLAY`, `WIDEVINE`, `AES128`, `PLAYREADY`. For HLS, this can be `FAIRPLAY` or `AES128` or `PLAYREADY`. For DASH, valid values: `WIDEVINE` or `PLAYREADY`. 
      */
     public $DrmType;
 
@@ -98,8 +95,7 @@ If `Scheme` is set to `SDMCDRM`, this parameter is optional. It supports digits,
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param SDMCSettingsInfo $SDMCSettings SDMC key configuration. This parameter is used when `Scheme` is set to `SDMCDRM`.
 Note: This field may return `null`, indicating that no valid value was found.
-     * @param string $DrmType The DRM type. Valid values: `FAIRPLAY`, `WIDEVINE`, `AES128`. For HLS, this can be `FAIRPLAY` or `AES128`. For DASH, this can only be `WIDEVINE`.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param string $DrmType The DRM type. Valid values: `FAIRPLAY`, `WIDEVINE`, `AES128`, `PLAYREADY`. For HLS, this can be `FAIRPLAY` or `AES128` or `PLAYREADY`. For DASH, valid values: `WIDEVINE` or `PLAYREADY`. 
      */
     function __construct()
     {

@@ -52,6 +52,8 @@ Note: This field may return `null`, indicating that no valid value was found.
 Note: This field may return `null`, indicating that no valid value was found.
  * @method InputLossBehaviorInfo getInputLossBehavior() Obtain Supplement the last video frame configuration settings.
  * @method void setInputLossBehavior(InputLossBehaviorInfo $InputLossBehavior) Set Supplement the last video frame configuration settings.
+ * @method PipelineInputSettingsInfo getPipelineInputSettings() Obtain Pipeline configuration.
+ * @method void setPipelineInputSettings(PipelineInputSettingsInfo $PipelineInputSettings) Set Pipeline configuration.
  */
 class StreamLiveChannelInfo extends AbstractModel
 {
@@ -116,6 +118,11 @@ Note: This field may return `null`, indicating that no valid value was found.
     public $InputLossBehavior;
 
     /**
+     * @var PipelineInputSettingsInfo Pipeline configuration.
+     */
+    public $PipelineInputSettings;
+
+    /**
      * @param string $Id Channel ID
      * @param string $State Channel status
      * @param array $AttachedInputs Information of attached inputs
@@ -132,6 +139,7 @@ Note: This field may return `null`, indicating that no valid value was found.
      * @param EventNotifySetting $EventNotifySettings The callback settings.
 Note: This field may return `null`, indicating that no valid value was found.
      * @param InputLossBehaviorInfo $InputLossBehavior Supplement the last video frame configuration settings.
+     * @param PipelineInputSettingsInfo $PipelineInputSettings Pipeline configuration.
      */
     function __construct()
     {
@@ -216,6 +224,11 @@ Note: This field may return `null`, indicating that no valid value was found.
         if (array_key_exists("InputLossBehavior",$param) and $param["InputLossBehavior"] !== null) {
             $this->InputLossBehavior = new InputLossBehaviorInfo();
             $this->InputLossBehavior->deserialize($param["InputLossBehavior"]);
+        }
+
+        if (array_key_exists("PipelineInputSettings",$param) and $param["PipelineInputSettings"] !== null) {
+            $this->PipelineInputSettings = new PipelineInputSettingsInfo();
+            $this->PipelineInputSettings->deserialize($param["PipelineInputSettings"]);
         }
     }
 }
