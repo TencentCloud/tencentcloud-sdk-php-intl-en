@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Site information
  *
- * @method string getZoneId() Obtain The site ID.
- * @method void setZoneId(string $ZoneId) Set The site ID.
+ * @method string getZoneId() Obtain Site ID.
+ * @method void setZoneId(string $ZoneId) Set Site ID.
  * @method string getZoneName() Obtain The site name.
  * @method void setZoneName(string $ZoneName) Set The site name.
  * @method array getOriginalNameServers() Obtain List of name servers used by the site
@@ -29,23 +29,27 @@ use TencentCloud\Common\AbstractModel;
  * @method array getNameServers() Obtain The list of name servers assigned by Tencent Cloud.
  * @method void setNameServers(array $NameServers) Set The list of name servers assigned by Tencent Cloud.
  * @method string getStatus() Obtain The site status. Values:
-<li>`active`: The name server is switched.</li>
-<li>`pending`: The name server is not switched.</li>
-<li>`moved`: The name server is moved.</li>
-<li>`deactivated`: The site is blocked.</li>
+u200c<li>`active`: The name server is switched to EdgeOne.</li>
+u200c<li>`pending`: The name server is not switched.</li>
+u200c<li>`moved`: The name server is changed to other service providers.</li>
+u200c<li>`deactivated`: The site is blocked.</li>
+<li>`initializing`: The site is not bound with any plan. </li>
  * @method void setStatus(string $Status) Set The site status. Values:
-<li>`active`: The name server is switched.</li>
-<li>`pending`: The name server is not switched.</li>
-<li>`moved`: The name server is moved.</li>
-<li>`deactivated`: The site is blocked.</li>
- * @method string getType() Obtain Access mode of the site. Values:
-<li> `full`: Access through a name server.</li>
-<li> `partial`: Access through a CNAME record.</li>
-<li> `noDomainAccess`: Access without using a domain name </li>
- * @method void setType(string $Type) Set Access mode of the site. Values:
-<li> `full`: Access through a name server.</li>
-<li> `partial`: Access through a CNAME record.</li>
-<li> `noDomainAccess`: Access without using a domain name </li>
+u200c<li>`active`: The name server is switched to EdgeOne.</li>
+u200c<li>`pending`: The name server is not switched.</li>
+u200c<li>`moved`: The name server is changed to other service providers.</li>
+u200c<li>`deactivated`: The site is blocked.</li>
+<li>`initializing`: The site is not bound with any plan. </li>
+ * @method string getType() Obtain Connection mode of the site. Values:
+<li>`full`: Connect via the name server.</li>
+<li>`partial`: Connect via the CNAME record.</li>
+<li>`noDomainAccess`: Connect without using a domain name
+ 
+ * @method void setType(string $Type) Set Connection mode of the site. Values:
+<li>`full`: Connect via the name server.</li>
+<li>`partial`: Connect via the CNAME record.</li>
+<li>`noDomainAccess`: Connect without using a domain name
+ 
  * @method boolean getPaused() Obtain Whether the site is disabled.
  * @method void setPaused(boolean $Paused) Set Whether the site is disabled.
  * @method string getCnameSpeedUp() Obtain Whether CNAME acceleration is enabled. Values:
@@ -102,13 +106,17 @@ Note: This field may return null, indicating that no valid values can be obtaine
  * @method void setIsFake(integer $IsFake) Set Whether it’s a fake site. Valid values: 
 <li>`0`: Non-fake site;</li>
 <li>`1`: Fake site.</li>
- * @method string getLockStatus() Obtain Lock status. Valid values: <li>`enable`: Normal. Modifying is allowed;</li><li>`disable`: Locked. Modifying is not allowed.</li>
- * @method void setLockStatus(string $LockStatus) Set Lock status. Valid values: <li>`enable`: Normal. Modifying is allowed;</li><li>`disable`: Locked. Modifying is not allowed.</li>
+ * @method string getLockStatus() Obtain Lock status. Values: <li>`enable`: Normal. Modification is allowed.</li><li>`disable`: Locked. Modification is not allowed.</li><li>`plan_migrate`: Adjusting the plan. Modification is not allowed.</li> 
+ * @method void setLockStatus(string $LockStatus) Set Lock status. Values: <li>`enable`: Normal. Modification is allowed.</li><li>`disable`: Locked. Modification is not allowed.</li><li>`plan_migrate`: Adjusting the plan. Modification is not allowed.</li> 
+ * @method OwnershipVerification getOwnershipVerification() Obtain Ownership verification information
+Note: This field may return·null, indicating that no valid values can be obtained.
+ * @method void setOwnershipVerification(OwnershipVerification $OwnershipVerification) Set Ownership verification information
+Note: This field may return·null, indicating that no valid values can be obtained.
  */
 class Zone extends AbstractModel
 {
     /**
-     * @var string The site ID.
+     * @var string Site ID.
      */
     public $ZoneId;
 
@@ -129,18 +137,20 @@ class Zone extends AbstractModel
 
     /**
      * @var string The site status. Values:
-<li>`active`: The name server is switched.</li>
-<li>`pending`: The name server is not switched.</li>
-<li>`moved`: The name server is moved.</li>
-<li>`deactivated`: The site is blocked.</li>
+u200c<li>`active`: The name server is switched to EdgeOne.</li>
+u200c<li>`pending`: The name server is not switched.</li>
+u200c<li>`moved`: The name server is changed to other service providers.</li>
+u200c<li>`deactivated`: The site is blocked.</li>
+<li>`initializing`: The site is not bound with any plan. </li>
      */
     public $Status;
 
     /**
-     * @var string Access mode of the site. Values:
-<li> `full`: Access through a name server.</li>
-<li> `partial`: Access through a CNAME record.</li>
-<li> `noDomainAccess`: Access without using a domain name </li>
+     * @var string Connection mode of the site. Values:
+<li>`full`: Connect via the name server.</li>
+<li>`partial`: Connect via the CNAME record.</li>
+<li>`noDomainAccess`: Connect without using a domain name
+ 
      */
     public $Type;
 
@@ -225,24 +235,32 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $IsFake;
 
     /**
-     * @var string Lock status. Valid values: <li>`enable`: Normal. Modifying is allowed;</li><li>`disable`: Locked. Modifying is not allowed.</li>
+     * @var string Lock status. Values: <li>`enable`: Normal. Modification is allowed.</li><li>`disable`: Locked. Modification is not allowed.</li><li>`plan_migrate`: Adjusting the plan. Modification is not allowed.</li> 
      */
     public $LockStatus;
 
     /**
-     * @param string $ZoneId The site ID.
+     * @var OwnershipVerification Ownership verification information
+Note: This field may return·null, indicating that no valid values can be obtained.
+     */
+    public $OwnershipVerification;
+
+    /**
+     * @param string $ZoneId Site ID.
      * @param string $ZoneName The site name.
      * @param array $OriginalNameServers List of name servers used by the site
      * @param array $NameServers The list of name servers assigned by Tencent Cloud.
      * @param string $Status The site status. Values:
-<li>`active`: The name server is switched.</li>
-<li>`pending`: The name server is not switched.</li>
-<li>`moved`: The name server is moved.</li>
-<li>`deactivated`: The site is blocked.</li>
-     * @param string $Type Access mode of the site. Values:
-<li> `full`: Access through a name server.</li>
-<li> `partial`: Access through a CNAME record.</li>
-<li> `noDomainAccess`: Access without using a domain name </li>
+u200c<li>`active`: The name server is switched to EdgeOne.</li>
+u200c<li>`pending`: The name server is not switched.</li>
+u200c<li>`moved`: The name server is changed to other service providers.</li>
+u200c<li>`deactivated`: The site is blocked.</li>
+<li>`initializing`: The site is not bound with any plan. </li>
+     * @param string $Type Connection mode of the site. Values:
+<li>`full`: Connect via the name server.</li>
+<li>`partial`: Connect via the CNAME record.</li>
+<li>`noDomainAccess`: Connect without using a domain name
+ 
      * @param boolean $Paused Whether the site is disabled.
      * @param string $CnameSpeedUp Whether CNAME acceleration is enabled. Values:
 <li>`enabled`: Enabled</li>
@@ -271,7 +289,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param integer $IsFake Whether it’s a fake site. Valid values: 
 <li>`0`: Non-fake site;</li>
 <li>`1`: Fake site.</li>
-     * @param string $LockStatus Lock status. Valid values: <li>`enable`: Normal. Modifying is allowed;</li><li>`disable`: Locked. Modifying is not allowed.</li>
+     * @param string $LockStatus Lock status. Values: <li>`enable`: Normal. Modification is allowed.</li><li>`disable`: Locked. Modification is not allowed.</li><li>`plan_migrate`: Adjusting the plan. Modification is not allowed.</li> 
+     * @param OwnershipVerification $OwnershipVerification Ownership verification information
+Note: This field may return·null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -380,6 +400,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("LockStatus",$param) and $param["LockStatus"] !== null) {
             $this->LockStatus = $param["LockStatus"];
+        }
+
+        if (array_key_exists("OwnershipVerification",$param) and $param["OwnershipVerification"] !== null) {
+            $this->OwnershipVerification = new OwnershipVerification();
+            $this->OwnershipVerification->deserialize($param["OwnershipVerification"]);
         }
     }
 }

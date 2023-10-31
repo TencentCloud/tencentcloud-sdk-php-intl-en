@@ -20,22 +20,30 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateAccelerationDomain request structure.
  *
- * @method string getZoneId() Obtain ID of the site related with the accelerated domain name.
- * @method void setZoneId(string $ZoneId) Set ID of the site related with the accelerated domain name.
- * @method string getDomainName() Obtain Accelerated domain name
- * @method void setDomainName(string $DomainName) Set Accelerated domain name
+ * @method string getZoneId() Obtain ID of the site related with the acceleration domain name.
+ * @method void setZoneId(string $ZoneId) Set ID of the site related with the acceleration domain name.
+ * @method string getDomainName() Obtain Acceleration domain name
+ * @method void setDomainName(string $DomainName) Set Acceleration domain name
  * @method OriginInfo getOriginInfo() Obtain Details of the origin.
  * @method void setOriginInfo(OriginInfo $OriginInfo) Set Details of the origin.
+ * @method string getOriginProtocol() Obtain 
+ * @method void setOriginProtocol(string $OriginProtocol) Set 
+ * @method integer getHttpOriginPort() Obtain 
+ * @method void setHttpOriginPort(integer $HttpOriginPort) Set 
+ * @method integer getHttpsOriginPort() Obtain 
+ * @method void setHttpsOriginPort(integer $HttpsOriginPort) Set 
+ * @method string getIPv6Status() Obtain 
+ * @method void setIPv6Status(string $IPv6Status) Set 
  */
 class CreateAccelerationDomainRequest extends AbstractModel
 {
     /**
-     * @var string ID of the site related with the accelerated domain name.
+     * @var string ID of the site related with the acceleration domain name.
      */
     public $ZoneId;
 
     /**
-     * @var string Accelerated domain name
+     * @var string Acceleration domain name
      */
     public $DomainName;
 
@@ -45,9 +53,33 @@ class CreateAccelerationDomainRequest extends AbstractModel
     public $OriginInfo;
 
     /**
-     * @param string $ZoneId ID of the site related with the accelerated domain name.
-     * @param string $DomainName Accelerated domain name
+     * @var string 
+     */
+    public $OriginProtocol;
+
+    /**
+     * @var integer 
+     */
+    public $HttpOriginPort;
+
+    /**
+     * @var integer 
+     */
+    public $HttpsOriginPort;
+
+    /**
+     * @var string 
+     */
+    public $IPv6Status;
+
+    /**
+     * @param string $ZoneId ID of the site related with the acceleration domain name.
+     * @param string $DomainName Acceleration domain name
      * @param OriginInfo $OriginInfo Details of the origin.
+     * @param string $OriginProtocol 
+     * @param integer $HttpOriginPort 
+     * @param integer $HttpsOriginPort 
+     * @param string $IPv6Status 
      */
     function __construct()
     {
@@ -73,6 +105,22 @@ class CreateAccelerationDomainRequest extends AbstractModel
         if (array_key_exists("OriginInfo",$param) and $param["OriginInfo"] !== null) {
             $this->OriginInfo = new OriginInfo();
             $this->OriginInfo->deserialize($param["OriginInfo"]);
+        }
+
+        if (array_key_exists("OriginProtocol",$param) and $param["OriginProtocol"] !== null) {
+            $this->OriginProtocol = $param["OriginProtocol"];
+        }
+
+        if (array_key_exists("HttpOriginPort",$param) and $param["HttpOriginPort"] !== null) {
+            $this->HttpOriginPort = $param["HttpOriginPort"];
+        }
+
+        if (array_key_exists("HttpsOriginPort",$param) and $param["HttpsOriginPort"] !== null) {
+            $this->HttpsOriginPort = $param["HttpsOriginPort"];
+        }
+
+        if (array_key_exists("IPv6Status",$param) and $param["IPv6Status"] !== null) {
+            $this->IPv6Status = $param["IPv6Status"];
         }
     }
 }

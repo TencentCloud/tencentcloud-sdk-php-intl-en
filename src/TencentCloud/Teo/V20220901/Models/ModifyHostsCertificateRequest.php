@@ -22,16 +22,26 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getZoneId() Obtain ID of the site.
  * @method void setZoneId(string $ZoneId) Set ID of the site.
- * @method array getHosts() Obtain List of domain names that the certificate will be attached to.
- * @method void setHosts(array $Hosts) Set List of domain names that the certificate will be attached to.
- * @method array getServerCertInfo() Obtain Certificate information. Note that only `CertId` is required. If it is not specified, the default certificate will be used.
- * @method void setServerCertInfo(array $ServerCertInfo) Set Certificate information. Note that only `CertId` is required. If it is not specified, the default certificate will be used.
+ * @method array getHosts() Obtain Domain names that you need to modify the certificate configuration
+ * @method void setHosts(array $Hosts) Set Domain names that you need to modify the certificate configuration
+ * @method string getMode() Obtain Certificate configuration mode. Values:
+<li>`disable`: (Default) Do not configure the certificate</li>
+<li>`eofreecert`: Use a free certificate provided by EdgeOne</li>
+<li>`sslcert`: Configure an SSL certificate.</li>
+ * @method void setMode(string $Mode) Set Certificate configuration mode. Values:
+<li>`disable`: (Default) Do not configure the certificate</li>
+<li>`eofreecert`: Use a free certificate provided by EdgeOne</li>
+<li>`sslcert`: Configure an SSL certificate.</li>
+ * @method array getServerCertInfo() Obtain ID of the SSL certificate. It takes effect when `mode=sslcert`. To check the certificate ID, go to the [SSL Certificate](https://console.cloud.tencent.com/certoview) console.
+ * @method void setServerCertInfo(array $ServerCertInfo) Set ID of the SSL certificate. It takes effect when `mode=sslcert`. To check the certificate ID, go to the [SSL Certificate](https://console.cloud.tencent.com/certoview) console.
  * @method string getApplyType() Obtain Whether the certificate is managed by EdgeOne. Values:
-<li>`apply`: Managed by EdgeOne.</li>
-<li>`none`: Not managed by EdgeOne.</li>If not specified, this field uses the default value `none`.
+<li>`none`: Not managed by EdgeOne</li>
+<li>`apply`: Managed by EdgeOne</li>
+Default value: `none`.
  * @method void setApplyType(string $ApplyType) Set Whether the certificate is managed by EdgeOne. Values:
-<li>`apply`: Managed by EdgeOne.</li>
-<li>`none`: Not managed by EdgeOne.</li>If not specified, this field uses the default value `none`.
+<li>`none`: Not managed by EdgeOne</li>
+<li>`apply`: Managed by EdgeOne</li>
+Default value: `none`.
  */
 class ModifyHostsCertificateRequest extends AbstractModel
 {
@@ -41,29 +51,44 @@ class ModifyHostsCertificateRequest extends AbstractModel
     public $ZoneId;
 
     /**
-     * @var array List of domain names that the certificate will be attached to.
+     * @var array Domain names that you need to modify the certificate configuration
      */
     public $Hosts;
 
     /**
-     * @var array Certificate information. Note that only `CertId` is required. If it is not specified, the default certificate will be used.
+     * @var string Certificate configuration mode. Values:
+<li>`disable`: (Default) Do not configure the certificate</li>
+<li>`eofreecert`: Use a free certificate provided by EdgeOne</li>
+<li>`sslcert`: Configure an SSL certificate.</li>
+     */
+    public $Mode;
+
+    /**
+     * @var array ID of the SSL certificate. It takes effect when `mode=sslcert`. To check the certificate ID, go to the [SSL Certificate](https://console.cloud.tencent.com/certoview) console.
      */
     public $ServerCertInfo;
 
     /**
      * @var string Whether the certificate is managed by EdgeOne. Values:
-<li>`apply`: Managed by EdgeOne.</li>
-<li>`none`: Not managed by EdgeOne.</li>If not specified, this field uses the default value `none`.
+<li>`none`: Not managed by EdgeOne</li>
+<li>`apply`: Managed by EdgeOne</li>
+Default value: `none`.
+     * @deprecated
      */
     public $ApplyType;
 
     /**
      * @param string $ZoneId ID of the site.
-     * @param array $Hosts List of domain names that the certificate will be attached to.
-     * @param array $ServerCertInfo Certificate information. Note that only `CertId` is required. If it is not specified, the default certificate will be used.
+     * @param array $Hosts Domain names that you need to modify the certificate configuration
+     * @param string $Mode Certificate configuration mode. Values:
+<li>`disable`: (Default) Do not configure the certificate</li>
+<li>`eofreecert`: Use a free certificate provided by EdgeOne</li>
+<li>`sslcert`: Configure an SSL certificate.</li>
+     * @param array $ServerCertInfo ID of the SSL certificate. It takes effect when `mode=sslcert`. To check the certificate ID, go to the [SSL Certificate](https://console.cloud.tencent.com/certoview) console.
      * @param string $ApplyType Whether the certificate is managed by EdgeOne. Values:
-<li>`apply`: Managed by EdgeOne.</li>
-<li>`none`: Not managed by EdgeOne.</li>If not specified, this field uses the default value `none`.
+<li>`none`: Not managed by EdgeOne</li>
+<li>`apply`: Managed by EdgeOne</li>
+Default value: `none`.
      */
     function __construct()
     {
@@ -84,6 +109,10 @@ class ModifyHostsCertificateRequest extends AbstractModel
 
         if (array_key_exists("Hosts",$param) and $param["Hosts"] !== null) {
             $this->Hosts = $param["Hosts"];
+        }
+
+        if (array_key_exists("Mode",$param) and $param["Mode"] !== null) {
+            $this->Mode = $param["Mode"];
         }
 
         if (array_key_exists("ServerCertInfo",$param) and $param["ServerCertInfo"] !== null) {

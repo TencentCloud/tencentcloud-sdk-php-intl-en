@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 
  *
- * @method string getSubdomain() Obtain 
- * @method void setSubdomain(string $Subdomain) Set 
- * @method string getRecordType() Obtain 
- * @method void setRecordType(string $RecordType) Set 
- * @method string getRecordValue() Obtain 
- * @method void setRecordValue(string $RecordValue) Set 
+ * @method string getSubdomain() Obtain The host record.
+ * @method void setSubdomain(string $Subdomain) Set The host record.
+ * @method string getRecordType() Obtain The record type.
+ * @method void setRecordType(string $RecordType) Set The record type.
+ * @method string getRecordValue() Obtain The record value.
+ * @method void setRecordValue(string $RecordValue) Set The record value.
  */
 class DnsVerification extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string The host record.
      */
     public $Subdomain;
 
     /**
-     * @var string 
+     * @var string The record type.
      */
     public $RecordType;
 
     /**
-     * @var string 
+     * @var string The record value.
      */
     public $RecordValue;
 
     /**
-     * @param string $Subdomain 
-     * @param string $RecordType 
-     * @param string $RecordValue 
+     * @param string $Subdomain The host record.
+     * @param string $RecordType The record type.
+     * @param string $RecordValue The record value.
      */
     function __construct()
     {

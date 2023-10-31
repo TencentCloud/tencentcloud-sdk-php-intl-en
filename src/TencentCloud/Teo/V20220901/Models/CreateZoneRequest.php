@@ -20,51 +20,74 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateZone request structure.
  *
- * @method string getZoneName() Obtain The site name.
- * @method void setZoneName(string $ZoneName) Set The site name.
- * @method string getType() Obtain The access mode. Values:
-<li> `full`: Access through a name server.</li>
-<li> `partial`: Access through a CNAME. Before using this access mode, first verify your site with the site verification API (IdentifyZone).<li>`noDomainAccess`: Access without using a domain name. If this value is passed, only the Tags field needs to be set. </li>
-If not specified, this field uses the default value `full`.
- * @method void setType(string $Type) Set The access mode. Values:
-<li> `full`: Access through a name server.</li>
-<li> `partial`: Access through a CNAME. Before using this access mode, first verify your site with the site verification API (IdentifyZone).<li>`noDomainAccess`: Access without using a domain name. If this value is passed, only the Tags field needs to be set. </li>
-If not specified, this field uses the default value `full`.
- * @method boolean getJumpStart() Obtain Whether to skip scanning the existing DNS records of the site. Default value: false.
- * @method void setJumpStart(boolean $JumpStart) Set Whether to skip scanning the existing DNS records of the site. Default value: false.
- * @method array getTags() Obtain The resource tag.
- * @method void setTags(array $Tags) Set The resource tag.
+ * @method string getType() Obtain Site access types. Options include:
+<li>`partial`: (Default) Access through a CNAME record</li>
+<li>`full`: Access through a name server</li>
+<li>`noDomainAccess`: Access without using a domain name</li>
+ * @method void setType(string $Type) Set Site access types. Options include:
+<li>`partial`: (Default) Access through a CNAME record</li>
+<li>`full`: Access through a name server</li>
+<li>`noDomainAccess`: Access without using a domain name</li>
+ * @method string getZoneName() Obtain Site name. For sites connected via CNAME/NS, pass in the secondary domain name (example.com). Leave it blank if the site is connected without a domain name. 
+ * @method void setZoneName(string $ZoneName) Set Site name. For sites connected via CNAME/NS, pass in the secondary domain name (example.com). Leave it blank if the site is connected without a domain name. 
+ * @method string getArea() Obtain The acceleration area of the L7 domain name when `Type` is `partial` or `full`. When Type is `noDomainAccess`, please leave it blank.
+<li>`global`: Global AZs</li>
+<li>`mainland`: AZs in the Chinese mainland</li>
+<li>`overseas`: (Default) AZs outside the Chinese mainland </li>
+ * @method void setArea(string $Area) Set The acceleration area of the L7 domain name when `Type` is `partial` or `full`. When Type is `noDomainAccess`, please leave it blank.
+<li>`global`: Global AZs</li>
+<li>`mainland`: AZs in the Chinese mainland</li>
+<li>`overseas`: (Default) AZs outside the Chinese mainland </li>
+ * @method string getPlanId() Obtain ID of the plan to which you want to bind the site. If you don't have an EdgeOne plan, purchase one in the EdgeOne console.
+ * @method void setPlanId(string $PlanId) Set ID of the plan to which you want to bind the site. If you don't have an EdgeOne plan, purchase one in the EdgeOne console.
+ * @method string getAliasZoneName() Obtain The site alias. It allows up to 20 characters, including [0-9], [a-z], [A-Z] and [-_]. For details, see [Glossary](https://intl.cloud.tencent.com/document/product/1552/70202?from_cn_redirect=1). If you don't want to use it, just leave it blank.
+ * @method void setAliasZoneName(string $AliasZoneName) Set The site alias. It allows up to 20 characters, including [0-9], [a-z], [A-Z] and [-_]. For details, see [Glossary](https://intl.cloud.tencent.com/document/product/1552/70202?from_cn_redirect=1). If you don't want to use it, just leave it blank.
+ * @method array getTags() Obtain Tags of the site. To create tags, go to the [Tag Console](https://console.cloud.tencent.com/tag/taglist).
+ * @method void setTags(array $Tags) Set Tags of the site. To create tags, go to the [Tag Console](https://console.cloud.tencent.com/tag/taglist).
  * @method boolean getAllowDuplicates() Obtain Whether to allow duplicate sites. Values:
 <li>`true`: Duplicate sites are allowed.</li>
 <li>`false`: Duplicate sites are not allowed.</li>If it is left empty, the default value `false` is used.
  * @method void setAllowDuplicates(boolean $AllowDuplicates) Set Whether to allow duplicate sites. Values:
 <li>`true`: Duplicate sites are allowed.</li>
 <li>`false`: Duplicate sites are not allowed.</li>If it is left empty, the default value `false` is used.
- * @method string getAliasZoneName() Obtain The site alias. It can be up to 20 characters consisting of digits, letters, hyphens (-) and underscores (_).
- * @method void setAliasZoneName(string $AliasZoneName) Set The site alias. It can be up to 20 characters consisting of digits, letters, hyphens (-) and underscores (_).
+ * @method boolean getJumpStart() Obtain Whether to skip scanning the existing DNS records of the site. Default value: false.
+ * @method void setJumpStart(boolean $JumpStart) Set Whether to skip scanning the existing DNS records of the site. Default value: false.
  */
 class CreateZoneRequest extends AbstractModel
 {
     /**
-     * @var string The site name.
-     */
-    public $ZoneName;
-
-    /**
-     * @var string The access mode. Values:
-<li> `full`: Access through a name server.</li>
-<li> `partial`: Access through a CNAME. Before using this access mode, first verify your site with the site verification API (IdentifyZone).<li>`noDomainAccess`: Access without using a domain name. If this value is passed, only the Tags field needs to be set. </li>
-If not specified, this field uses the default value `full`.
+     * @var string Site access types. Options include:
+<li>`partial`: (Default) Access through a CNAME record</li>
+<li>`full`: Access through a name server</li>
+<li>`noDomainAccess`: Access without using a domain name</li>
      */
     public $Type;
 
     /**
-     * @var boolean Whether to skip scanning the existing DNS records of the site. Default value: false.
+     * @var string Site name. For sites connected via CNAME/NS, pass in the secondary domain name (example.com). Leave it blank if the site is connected without a domain name. 
      */
-    public $JumpStart;
+    public $ZoneName;
 
     /**
-     * @var array The resource tag.
+     * @var string The acceleration area of the L7 domain name when `Type` is `partial` or `full`. When Type is `noDomainAccess`, please leave it blank.
+<li>`global`: Global AZs</li>
+<li>`mainland`: AZs in the Chinese mainland</li>
+<li>`overseas`: (Default) AZs outside the Chinese mainland </li>
+     */
+    public $Area;
+
+    /**
+     * @var string ID of the plan to which you want to bind the site. If you don't have an EdgeOne plan, purchase one in the EdgeOne console.
+     */
+    public $PlanId;
+
+    /**
+     * @var string The site alias. It allows up to 20 characters, including [0-9], [a-z], [A-Z] and [-_]. For details, see [Glossary](https://intl.cloud.tencent.com/document/product/1552/70202?from_cn_redirect=1). If you don't want to use it, just leave it blank.
+     */
+    public $AliasZoneName;
+
+    /**
+     * @var array Tags of the site. To create tags, go to the [Tag Console](https://console.cloud.tencent.com/tag/taglist).
      */
     public $Tags;
 
@@ -72,26 +95,33 @@ If not specified, this field uses the default value `full`.
      * @var boolean Whether to allow duplicate sites. Values:
 <li>`true`: Duplicate sites are allowed.</li>
 <li>`false`: Duplicate sites are not allowed.</li>If it is left empty, the default value `false` is used.
+     * @deprecated
      */
     public $AllowDuplicates;
 
     /**
-     * @var string The site alias. It can be up to 20 characters consisting of digits, letters, hyphens (-) and underscores (_).
+     * @var boolean Whether to skip scanning the existing DNS records of the site. Default value: false.
+     * @deprecated
      */
-    public $AliasZoneName;
+    public $JumpStart;
 
     /**
-     * @param string $ZoneName The site name.
-     * @param string $Type The access mode. Values:
-<li> `full`: Access through a name server.</li>
-<li> `partial`: Access through a CNAME. Before using this access mode, first verify your site with the site verification API (IdentifyZone).<li>`noDomainAccess`: Access without using a domain name. If this value is passed, only the Tags field needs to be set. </li>
-If not specified, this field uses the default value `full`.
-     * @param boolean $JumpStart Whether to skip scanning the existing DNS records of the site. Default value: false.
-     * @param array $Tags The resource tag.
+     * @param string $Type Site access types. Options include:
+<li>`partial`: (Default) Access through a CNAME record</li>
+<li>`full`: Access through a name server</li>
+<li>`noDomainAccess`: Access without using a domain name</li>
+     * @param string $ZoneName Site name. For sites connected via CNAME/NS, pass in the secondary domain name (example.com). Leave it blank if the site is connected without a domain name. 
+     * @param string $Area The acceleration area of the L7 domain name when `Type` is `partial` or `full`. When Type is `noDomainAccess`, please leave it blank.
+<li>`global`: Global AZs</li>
+<li>`mainland`: AZs in the Chinese mainland</li>
+<li>`overseas`: (Default) AZs outside the Chinese mainland </li>
+     * @param string $PlanId ID of the plan to which you want to bind the site. If you don't have an EdgeOne plan, purchase one in the EdgeOne console.
+     * @param string $AliasZoneName The site alias. It allows up to 20 characters, including [0-9], [a-z], [A-Z] and [-_]. For details, see [Glossary](https://intl.cloud.tencent.com/document/product/1552/70202?from_cn_redirect=1). If you don't want to use it, just leave it blank.
+     * @param array $Tags Tags of the site. To create tags, go to the [Tag Console](https://console.cloud.tencent.com/tag/taglist).
      * @param boolean $AllowDuplicates Whether to allow duplicate sites. Values:
 <li>`true`: Duplicate sites are allowed.</li>
 <li>`false`: Duplicate sites are not allowed.</li>If it is left empty, the default value `false` is used.
-     * @param string $AliasZoneName The site alias. It can be up to 20 characters consisting of digits, letters, hyphens (-) and underscores (_).
+     * @param boolean $JumpStart Whether to skip scanning the existing DNS records of the site. Default value: false.
      */
     function __construct()
     {
@@ -106,16 +136,24 @@ If not specified, this field uses the default value `full`.
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ZoneName",$param) and $param["ZoneName"] !== null) {
-            $this->ZoneName = $param["ZoneName"];
-        }
-
         if (array_key_exists("Type",$param) and $param["Type"] !== null) {
             $this->Type = $param["Type"];
         }
 
-        if (array_key_exists("JumpStart",$param) and $param["JumpStart"] !== null) {
-            $this->JumpStart = $param["JumpStart"];
+        if (array_key_exists("ZoneName",$param) and $param["ZoneName"] !== null) {
+            $this->ZoneName = $param["ZoneName"];
+        }
+
+        if (array_key_exists("Area",$param) and $param["Area"] !== null) {
+            $this->Area = $param["Area"];
+        }
+
+        if (array_key_exists("PlanId",$param) and $param["PlanId"] !== null) {
+            $this->PlanId = $param["PlanId"];
+        }
+
+        if (array_key_exists("AliasZoneName",$param) and $param["AliasZoneName"] !== null) {
+            $this->AliasZoneName = $param["AliasZoneName"];
         }
 
         if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
@@ -131,8 +169,8 @@ If not specified, this field uses the default value `full`.
             $this->AllowDuplicates = $param["AllowDuplicates"];
         }
 
-        if (array_key_exists("AliasZoneName",$param) and $param["AliasZoneName"] !== null) {
-            $this->AliasZoneName = $param["AliasZoneName"];
+        if (array_key_exists("JumpStart",$param) and $param["JumpStart"] !== null) {
+            $this->JumpStart = $param["JumpStart"];
         }
     }
 }

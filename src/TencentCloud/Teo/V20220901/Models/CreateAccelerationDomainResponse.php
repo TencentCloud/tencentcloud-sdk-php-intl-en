@@ -20,15 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateAccelerationDomain response structure.
  *
- * @method OwnershipVerification getOwnershipVerification() Obtain 
- * @method void setOwnershipVerification(OwnershipVerification $OwnershipVerification) Set 
+ * @method OwnershipVerification getOwnershipVerification() Obtain Use the information returned by this parameter to verify the ownership of a domain name. For details, see [Ownership Verification](https://intl.cloud.tencent.com/document/product/1552/70789?from_cn_redirect=1).
+Note: This field may return·null, indicating that no valid values can be obtained.
+ * @method void setOwnershipVerification(OwnershipVerification $OwnershipVerification) Set Use the information returned by this parameter to verify the ownership of a domain name. For details, see [Ownership Verification](https://intl.cloud.tencent.com/document/product/1552/70789?from_cn_redirect=1).
+Note: This field may return·null, indicating that no valid values can be obtained.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 class CreateAccelerationDomainResponse extends AbstractModel
 {
     /**
-     * @var OwnershipVerification 
+     * @var OwnershipVerification Use the information returned by this parameter to verify the ownership of a domain name. For details, see [Ownership Verification](https://intl.cloud.tencent.com/document/product/1552/70789?from_cn_redirect=1).
+Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public $OwnershipVerification;
 
@@ -38,7 +41,8 @@ class CreateAccelerationDomainResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param OwnershipVerification $OwnershipVerification 
+     * @param OwnershipVerification $OwnershipVerification Use the information returned by this parameter to verify the ownership of a domain name. For details, see [Ownership Verification](https://intl.cloud.tencent.com/document/product/1552/70789?from_cn_redirect=1).
+Note: This field may return·null, indicating that no valid values can be obtained.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()

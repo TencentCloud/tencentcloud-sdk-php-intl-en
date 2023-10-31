@@ -26,14 +26,14 @@ use TencentCloud\Common\AbstractModel;
 <li>`ORIGIN_GROUP`: Origin group</li>
 <li>`AWS_S3`: AWS S3 bucket address</li>
 <li>`LB`: Tencent Cloud CLB instance</li>
-<li>`SPACE`: EdgeOne Shield Space</li>
+<li>`SPACE`: EdgeOne Shield Space</li>  
  * @method void setOriginType(string $OriginType) Set The origin type. Values:
 <li>`IP_DOMAIN`: IPv4/IPv6 address or domain name</li>
 <li>`COS`: COS bucket address</li>
 <li>`ORIGIN_GROUP`: Origin group</li>
 <li>`AWS_S3`: AWS S3 bucket address</li>
 <li>`LB`: Tencent Cloud CLB instance</li>
-<li>`SPACE`: EdgeOne Shield Space</li>
+<li>`SPACE`: EdgeOne Shield Space</li>  
  * @method string getOrigin() Obtain The origin address. Enter the origin group ID if `OriginType=ORIGIN_GROUP`.
  * @method void setOrigin(string $Origin) Set The origin address. Enter the origin group ID if `OriginType=ORIGIN_GROUP`.
  * @method string getBackupOrigin() Obtain ID of the backup origin group (valid when `OriginType=ORIGIN_GROUP`). If it’s not specified, it indicates not to use backup origins.
@@ -56,7 +56,7 @@ class OriginInfo extends AbstractModel
 <li>`ORIGIN_GROUP`: Origin group</li>
 <li>`AWS_S3`: AWS S3 bucket address</li>
 <li>`LB`: Tencent Cloud CLB instance</li>
-<li>`SPACE`: EdgeOne Shield Space</li>
+<li>`SPACE`: EdgeOne Shield Space</li>  
      */
     public $OriginType;
 
@@ -89,7 +89,7 @@ u200c<li>`on`: Enable private authentication.</li>
 <li>`ORIGIN_GROUP`: Origin group</li>
 <li>`AWS_S3`: AWS S3 bucket address</li>
 <li>`LB`: Tencent Cloud CLB instance</li>
-<li>`SPACE`: EdgeOne Shield Space</li>
+<li>`SPACE`: EdgeOne Shield Space</li>  
      * @param string $Origin The origin address. Enter the origin group ID if `OriginType=ORIGIN_GROUP`.
      * @param string $BackupOrigin ID of the backup origin group (valid when `OriginType=ORIGIN_GROUP`). If it’s not specified, it indicates not to use backup origins.
      * @param string $PrivateAccess Whether to allow access to the private object storage origin (valid when `OriginType=COS/AWS_S3`). Values:

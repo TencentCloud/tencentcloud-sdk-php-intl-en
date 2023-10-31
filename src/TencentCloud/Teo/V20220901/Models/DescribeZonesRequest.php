@@ -22,32 +22,32 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getOffset() Obtain The page offset. Default value: 0
  * @method void setOffset(integer $Offset) Set The page offset. Default value: 0
- * @method integer getLimit() Obtain The paginated query limit. Default value: 20. Maximum value: 1000.
- * @method void setLimit(integer $Limit) Set The paginated query limit. Default value: 20. Maximum value: 1000.
- * @method array getFilters() Obtain Filter criteria. Each filter criteria can have up to 20 entries.
-<li>`zone-name`:<br>   Filter by <strong>site name</strong><br>   Type: String<br>   Required: No</li><li>`zone-id`:<br>   Filter by <strong>site ID</strong>, such as zone-xxx<br>   Type: String<br>   Required: No</li><li>`status`:<br>   Filter by <strong>site status</strong><br>   Type: String<br>   Required: No</li><li>`tag-key`:<br>   Filter by <strong>tag key</strong><br>   Type: String<br>   Required: No</li><li>`tag-value`:<br>   Filter by <strong>tag value</strong><br>   Type: String<br>   Required: No</li>Only `zone-name` supports fuzzy query.
- * @method void setFilters(array $Filters) Set Filter criteria. Each filter criteria can have up to 20 entries.
-<li>`zone-name`:<br>   Filter by <strong>site name</strong><br>   Type: String<br>   Required: No</li><li>`zone-id`:<br>   Filter by <strong>site ID</strong>, such as zone-xxx<br>   Type: String<br>   Required: No</li><li>`status`:<br>   Filter by <strong>site status</strong><br>   Type: String<br>   Required: No</li><li>`tag-key`:<br>   Filter by <strong>tag key</strong><br>   Type: String<br>   Required: No</li><li>`tag-value`:<br>   Filter by <strong>tag value</strong><br>   Type: String<br>   Required: No</li>Only `zone-name` supports fuzzy query.
- * @method string getOrder() Obtain The sorting field. Values:
-<li>`type`: Access mode</li>
+ * @method integer getLimit() Obtain Limit on paginated queries. Default value: 20. Maximum value: 100.
+ * @method void setLimit(integer $Limit) Set Limit on paginated queries. Default value: 20. Maximum value: 100.
+ * @method array getFilters() Obtain Filter conditions. Up to 20 values for each filter. If this parameter is not filled in, the information of all sites under the current account is returned. Detailed filtering conditions are as follows:
+<li>`zone-name`: Site name </li><li>`zone-id`: Site ID, such as zone-2noz78a8ev6k</li><li>`status`: Site status </li><li>`tag-key`: Tag key </li><li>`tag-value`: Tag value </li>Only `zone-name` supports fuzzy query.
+ * @method void setFilters(array $Filters) Set Filter conditions. Up to 20 values for each filter. If this parameter is not filled in, the information of all sites under the current account is returned. Detailed filtering conditions are as follows:
+<li>`zone-name`: Site name </li><li>`zone-id`: Site ID, such as zone-2noz78a8ev6k</li><li>`status`: Site status </li><li>`tag-key`: Tag key </li><li>`tag-value`: Tag value </li>Only `zone-name` supports fuzzy query.
+ * @method string getOrder() Obtain Sort the returned results according to this field. Values include:
+<li>`type`: Connection mode</li>
 <li>`area`: Acceleration region</li>
-<li>`create-time`: Creation date</li>
+<li>`create-time`: Creation time</li>
 <li>`zone-name`: Site name</li>
-<li>`use-time`: Last used date</li>
-<li>`active-status`: Activation status</li>If it is left empty, the default value `create-time` is used.
- * @method void setOrder(string $Order) Set The sorting field. Values:
-<li>`type`: Access mode</li>
+<li>`use-time`: Last used time</li>
+<li>`active-status` Effective status</li> Default value: `create-time`
+ * @method void setOrder(string $Order) Set Sort the returned results according to this field. Values include:
+<li>`type`: Connection mode</li>
 <li>`area`: Acceleration region</li>
-<li>`create-time`: Creation date</li>
+<li>`create-time`: Creation time</li>
 <li>`zone-name`: Site name</li>
-<li>`use-time`: Last used date</li>
-<li>`active-status`: Activation status</li>If it is left empty, the default value `create-time` is used.
- * @method string getDirection() Obtain The sorting direction. Values:
-<li>`asc`: From smallest to largest</li>
-<li>`desc`: From largest to smallest</li>If it is left empty, the default value `desc` is used.
- * @method void setDirection(string $Direction) Set The sorting direction. Values:
-<li>`asc`: From smallest to largest</li>
-<li>`desc`: From largest to smallest</li>If it is left empty, the default value `desc` is used.
+<li>`use-time`: Last used time</li>
+<li>`active-status` Effective status</li> Default value: `create-time`
+ * @method string getDirection() Obtain Sort direction. If the field value is a number, sort by the numeric value. If the field value is text, sort by the ascill code. Values include:
+<li>`asc`: From the smallest to largest</li>
+<li>`desc`: From the largest to smallest.</li>Default value: `desc`
+ * @method void setDirection(string $Direction) Set Sort direction. If the field value is a number, sort by the numeric value. If the field value is text, sort by the ascill code. Values include:
+<li>`asc`: From the smallest to largest</li>
+<li>`desc`: From the largest to smallest.</li>Default value: `desc`
  */
 class DescribeZonesRequest extends AbstractModel
 {
@@ -57,49 +57,49 @@ class DescribeZonesRequest extends AbstractModel
     public $Offset;
 
     /**
-     * @var integer The paginated query limit. Default value: 20. Maximum value: 1000.
+     * @var integer Limit on paginated queries. Default value: 20. Maximum value: 100.
      */
     public $Limit;
 
     /**
-     * @var array Filter criteria. Each filter criteria can have up to 20 entries.
-<li>`zone-name`:<br>   Filter by <strong>site name</strong><br>   Type: String<br>   Required: No</li><li>`zone-id`:<br>   Filter by <strong>site ID</strong>, such as zone-xxx<br>   Type: String<br>   Required: No</li><li>`status`:<br>   Filter by <strong>site status</strong><br>   Type: String<br>   Required: No</li><li>`tag-key`:<br>   Filter by <strong>tag key</strong><br>   Type: String<br>   Required: No</li><li>`tag-value`:<br>   Filter by <strong>tag value</strong><br>   Type: String<br>   Required: No</li>Only `zone-name` supports fuzzy query.
+     * @var array Filter conditions. Up to 20 values for each filter. If this parameter is not filled in, the information of all sites under the current account is returned. Detailed filtering conditions are as follows:
+<li>`zone-name`: Site name </li><li>`zone-id`: Site ID, such as zone-2noz78a8ev6k</li><li>`status`: Site status </li><li>`tag-key`: Tag key </li><li>`tag-value`: Tag value </li>Only `zone-name` supports fuzzy query.
      */
     public $Filters;
 
     /**
-     * @var string The sorting field. Values:
-<li>`type`: Access mode</li>
+     * @var string Sort the returned results according to this field. Values include:
+<li>`type`: Connection mode</li>
 <li>`area`: Acceleration region</li>
-<li>`create-time`: Creation date</li>
+<li>`create-time`: Creation time</li>
 <li>`zone-name`: Site name</li>
-<li>`use-time`: Last used date</li>
-<li>`active-status`: Activation status</li>If it is left empty, the default value `create-time` is used.
+<li>`use-time`: Last used time</li>
+<li>`active-status` Effective status</li> Default value: `create-time`
      */
     public $Order;
 
     /**
-     * @var string The sorting direction. Values:
-<li>`asc`: From smallest to largest</li>
-<li>`desc`: From largest to smallest</li>If it is left empty, the default value `desc` is used.
+     * @var string Sort direction. If the field value is a number, sort by the numeric value. If the field value is text, sort by the ascill code. Values include:
+<li>`asc`: From the smallest to largest</li>
+<li>`desc`: From the largest to smallest.</li>Default value: `desc`
      */
     public $Direction;
 
     /**
      * @param integer $Offset The page offset. Default value: 0
-     * @param integer $Limit The paginated query limit. Default value: 20. Maximum value: 1000.
-     * @param array $Filters Filter criteria. Each filter criteria can have up to 20 entries.
-<li>`zone-name`:<br>   Filter by <strong>site name</strong><br>   Type: String<br>   Required: No</li><li>`zone-id`:<br>   Filter by <strong>site ID</strong>, such as zone-xxx<br>   Type: String<br>   Required: No</li><li>`status`:<br>   Filter by <strong>site status</strong><br>   Type: String<br>   Required: No</li><li>`tag-key`:<br>   Filter by <strong>tag key</strong><br>   Type: String<br>   Required: No</li><li>`tag-value`:<br>   Filter by <strong>tag value</strong><br>   Type: String<br>   Required: No</li>Only `zone-name` supports fuzzy query.
-     * @param string $Order The sorting field. Values:
-<li>`type`: Access mode</li>
+     * @param integer $Limit Limit on paginated queries. Default value: 20. Maximum value: 100.
+     * @param array $Filters Filter conditions. Up to 20 values for each filter. If this parameter is not filled in, the information of all sites under the current account is returned. Detailed filtering conditions are as follows:
+<li>`zone-name`: Site name </li><li>`zone-id`: Site ID, such as zone-2noz78a8ev6k</li><li>`status`: Site status </li><li>`tag-key`: Tag key </li><li>`tag-value`: Tag value </li>Only `zone-name` supports fuzzy query.
+     * @param string $Order Sort the returned results according to this field. Values include:
+<li>`type`: Connection mode</li>
 <li>`area`: Acceleration region</li>
-<li>`create-time`: Creation date</li>
+<li>`create-time`: Creation time</li>
 <li>`zone-name`: Site name</li>
-<li>`use-time`: Last used date</li>
-<li>`active-status`: Activation status</li>If it is left empty, the default value `create-time` is used.
-     * @param string $Direction The sorting direction. Values:
-<li>`asc`: From smallest to largest</li>
-<li>`desc`: From largest to smallest</li>If it is left empty, the default value `desc` is used.
+<li>`use-time`: Last used time</li>
+<li>`active-status` Effective status</li> Default value: `create-time`
+     * @param string $Direction Sort direction. If the field value is a number, sort by the numeric value. If the field value is text, sort by the ascill code. Values include:
+<li>`asc`: From the smallest to largest</li>
+<li>`desc`: From the largest to smallest.</li>Default value: `desc`
      */
     function __construct()
     {

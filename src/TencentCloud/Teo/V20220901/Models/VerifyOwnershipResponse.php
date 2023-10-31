@@ -18,26 +18,32 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeAccelerationDomains response structure.
+ * VerifyOwnership response structure.
  *
- * @method integer getTotalCount() Obtain Total of matched alias domain names.
- * @method void setTotalCount(integer $TotalCount) Set Total of matched alias domain names.
- * @method array getAccelerationDomains() Obtain Information of all matched acceleration domain names
- * @method void setAccelerationDomains(array $AccelerationDomains) Set Information of all matched acceleration domain names
+ * @method string getStatus() Obtain Result of ownership verification
+<li>`success`: Verification passed</li>
+<li>`fail`: Verification failed</li>
+ * @method void setStatus(string $Status) Set Result of ownership verification
+<li>`success`: Verification passed</li>
+<li>`fail`: Verification failed</li>
+ * @method string getResult() Obtain When the ownership verification result is `fail`, this field returns the reason of failure.
+ * @method void setResult(string $Result) Set When the ownership verification result is `fail`, this field returns the reason of failure.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
-class DescribeAccelerationDomainsResponse extends AbstractModel
+class VerifyOwnershipResponse extends AbstractModel
 {
     /**
-     * @var integer Total of matched alias domain names.
+     * @var string Result of ownership verification
+<li>`success`: Verification passed</li>
+<li>`fail`: Verification failed</li>
      */
-    public $TotalCount;
+    public $Status;
 
     /**
-     * @var array Information of all matched acceleration domain names
+     * @var string When the ownership verification result is `fail`, this field returns the reason of failure.
      */
-    public $AccelerationDomains;
+    public $Result;
 
     /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -45,8 +51,10 @@ class DescribeAccelerationDomainsResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $TotalCount Total of matched alias domain names.
-     * @param array $AccelerationDomains Information of all matched acceleration domain names
+     * @param string $Status Result of ownership verification
+<li>`success`: Verification passed</li>
+<li>`fail`: Verification failed</li>
+     * @param string $Result When the ownership verification result is `fail`, this field returns the reason of failure.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -62,17 +70,12 @@ class DescribeAccelerationDomainsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
+            $this->Status = $param["Status"];
         }
 
-        if (array_key_exists("AccelerationDomains",$param) and $param["AccelerationDomains"] !== null) {
-            $this->AccelerationDomains = [];
-            foreach ($param["AccelerationDomains"] as $key => $value){
-                $obj = new AccelerationDomain();
-                $obj->deserialize($value);
-                array_push($this->AccelerationDomains, $obj);
-            }
+        if (array_key_exists("Result",$param) and $param["Result"] !== null) {
+            $this->Result = $param["Result"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

@@ -20,18 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Accelerated domain name
  *
- * @method OriginDetail getOriginDetail() Obtain Details of the origin.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setOriginDetail(OriginDetail $OriginDetail) Set Details of the origin.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getCreatedOn() Obtain Creation time of the accelerated domain name.
- * @method void setCreatedOn(string $CreatedOn) Set Creation time of the accelerated domain name.
- * @method string getDomainName() Obtain Accelerated domain name
- * @method void setDomainName(string $DomainName) Set Accelerated domain name
- * @method string getModifiedOn() Obtain Modification time of the accelerated domain name.
- * @method void setModifiedOn(string $ModifiedOn) Set Modification time of the accelerated domain name.
  * @method string getZoneId() Obtain ID of the site.
  * @method void setZoneId(string $ZoneId) Set ID of the site.
+ * @method string getDomainName() Obtain Accelerated domain name
+ * @method void setDomainName(string $DomainName) Set Accelerated domain name
  * @method string getDomainStatus() Obtain Status of the accelerated domain name. Values:
 <li>`online`: Activated</li>
 <li>`process`: Being deployed</li>
@@ -44,40 +36,48 @@ Note: This field may return null, indicating that no valid values can be obtaine
 <li>`offline`: Disabled</li>
 <li>`forbidden`: Blocked</li>
 <li>`init`: Pending activation</li>
+ * @method OriginDetail getOriginDetail() Obtain Details of the origin.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setOriginDetail(OriginDetail $OriginDetail) Set Details of the origin.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getOriginProtocol() Obtain 
+ * @method void setOriginProtocol(string $OriginProtocol) Set 
+ * @method integer getHttpOriginPort() Obtain 
+ * @method void setHttpOriginPort(integer $HttpOriginPort) Set 
+ * @method integer getHttpsOriginPort() Obtain 
+ * @method void setHttpsOriginPort(integer $HttpsOriginPort) Set 
+ * @method string getIPv6Status() Obtain 
+ * @method void setIPv6Status(string $IPv6Status) Set 
  * @method string getCname() Obtain The CNAME address.
  * @method void setCname(string $Cname) Set The CNAME address.
  * @method string getIdentificationStatus() Obtain Ownership verification status. Values: <li>`pending`: Pending verification</li> <li>`finished`: Verified</li>	
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setIdentificationStatus(string $IdentificationStatus) Set Ownership verification status. Values: <li>`pending`: Pending verification</li> <li>`finished`: Verified</li>	
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getCreatedOn() Obtain Creation time of the accelerated domain name.
+ * @method void setCreatedOn(string $CreatedOn) Set Creation time of the accelerated domain name.
+ * @method string getModifiedOn() Obtain Modification time of the accelerated domain name.
+ * @method void setModifiedOn(string $ModifiedOn) Set Modification time of the accelerated domain name.
+ * @method OwnershipVerification getOwnershipVerification() Obtain Information required to verify the ownership of a domain name.
+Note: This field may return·null, indicating that no valid values can be obtained.
+ * @method void setOwnershipVerification(OwnershipVerification $OwnershipVerification) Set Information required to verify the ownership of a domain name.
+Note: This field may return·null, indicating that no valid values can be obtained.
+ * @method AccelerationDomainCertificate getCertificate() Obtain Domain name certificate information
+Note: This field may return·null, indicating that no valid values can be obtained.
+ * @method void setCertificate(AccelerationDomainCertificate $Certificate) Set Domain name certificate information
+Note: This field may return·null, indicating that no valid values can be obtained.
  */
 class AccelerationDomain extends AbstractModel
 {
     /**
-     * @var OriginDetail Details of the origin.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string ID of the site.
      */
-    public $OriginDetail;
-
-    /**
-     * @var string Creation time of the accelerated domain name.
-     */
-    public $CreatedOn;
+    public $ZoneId;
 
     /**
      * @var string Accelerated domain name
      */
     public $DomainName;
-
-    /**
-     * @var string Modification time of the accelerated domain name.
-     */
-    public $ModifiedOn;
-
-    /**
-     * @var string ID of the site.
-     */
-    public $ZoneId;
 
     /**
      * @var string Status of the accelerated domain name. Values:
@@ -88,6 +88,32 @@ Note: This field may return null, indicating that no valid values can be obtaine
 <li>`init`: Pending activation</li>
      */
     public $DomainStatus;
+
+    /**
+     * @var OriginDetail Details of the origin.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $OriginDetail;
+
+    /**
+     * @var string 
+     */
+    public $OriginProtocol;
+
+    /**
+     * @var integer 
+     */
+    public $HttpOriginPort;
+
+    /**
+     * @var integer 
+     */
+    public $HttpsOriginPort;
+
+    /**
+     * @var string 
+     */
+    public $IPv6Status;
 
     /**
      * @var string The CNAME address.
@@ -101,21 +127,51 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $IdentificationStatus;
 
     /**
-     * @param OriginDetail $OriginDetail Details of the origin.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $CreatedOn Creation time of the accelerated domain name.
-     * @param string $DomainName Accelerated domain name
-     * @param string $ModifiedOn Modification time of the accelerated domain name.
+     * @var string Creation time of the accelerated domain name.
+     */
+    public $CreatedOn;
+
+    /**
+     * @var string Modification time of the accelerated domain name.
+     */
+    public $ModifiedOn;
+
+    /**
+     * @var OwnershipVerification Information required to verify the ownership of a domain name.
+Note: This field may return·null, indicating that no valid values can be obtained.
+     */
+    public $OwnershipVerification;
+
+    /**
+     * @var AccelerationDomainCertificate Domain name certificate information
+Note: This field may return·null, indicating that no valid values can be obtained.
+     */
+    public $Certificate;
+
+    /**
      * @param string $ZoneId ID of the site.
+     * @param string $DomainName Accelerated domain name
      * @param string $DomainStatus Status of the accelerated domain name. Values:
 <li>`online`: Activated</li>
 <li>`process`: Being deployed</li>
 <li>`offline`: Disabled</li>
 <li>`forbidden`: Blocked</li>
 <li>`init`: Pending activation</li>
+     * @param OriginDetail $OriginDetail Details of the origin.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $OriginProtocol 
+     * @param integer $HttpOriginPort 
+     * @param integer $HttpsOriginPort 
+     * @param string $IPv6Status 
      * @param string $Cname The CNAME address.
      * @param string $IdentificationStatus Ownership verification status. Values: <li>`pending`: Pending verification</li> <li>`finished`: Verified</li>	
 Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $CreatedOn Creation time of the accelerated domain name.
+     * @param string $ModifiedOn Modification time of the accelerated domain name.
+     * @param OwnershipVerification $OwnershipVerification Information required to verify the ownership of a domain name.
+Note: This field may return·null, indicating that no valid values can be obtained.
+     * @param AccelerationDomainCertificate $Certificate Domain name certificate information
+Note: This field may return·null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -130,29 +186,37 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if ($param === null) {
             return;
         }
-        if (array_key_exists("OriginDetail",$param) and $param["OriginDetail"] !== null) {
-            $this->OriginDetail = new OriginDetail();
-            $this->OriginDetail->deserialize($param["OriginDetail"]);
-        }
-
-        if (array_key_exists("CreatedOn",$param) and $param["CreatedOn"] !== null) {
-            $this->CreatedOn = $param["CreatedOn"];
+        if (array_key_exists("ZoneId",$param) and $param["ZoneId"] !== null) {
+            $this->ZoneId = $param["ZoneId"];
         }
 
         if (array_key_exists("DomainName",$param) and $param["DomainName"] !== null) {
             $this->DomainName = $param["DomainName"];
         }
 
-        if (array_key_exists("ModifiedOn",$param) and $param["ModifiedOn"] !== null) {
-            $this->ModifiedOn = $param["ModifiedOn"];
-        }
-
-        if (array_key_exists("ZoneId",$param) and $param["ZoneId"] !== null) {
-            $this->ZoneId = $param["ZoneId"];
-        }
-
         if (array_key_exists("DomainStatus",$param) and $param["DomainStatus"] !== null) {
             $this->DomainStatus = $param["DomainStatus"];
+        }
+
+        if (array_key_exists("OriginDetail",$param) and $param["OriginDetail"] !== null) {
+            $this->OriginDetail = new OriginDetail();
+            $this->OriginDetail->deserialize($param["OriginDetail"]);
+        }
+
+        if (array_key_exists("OriginProtocol",$param) and $param["OriginProtocol"] !== null) {
+            $this->OriginProtocol = $param["OriginProtocol"];
+        }
+
+        if (array_key_exists("HttpOriginPort",$param) and $param["HttpOriginPort"] !== null) {
+            $this->HttpOriginPort = $param["HttpOriginPort"];
+        }
+
+        if (array_key_exists("HttpsOriginPort",$param) and $param["HttpsOriginPort"] !== null) {
+            $this->HttpsOriginPort = $param["HttpsOriginPort"];
+        }
+
+        if (array_key_exists("IPv6Status",$param) and $param["IPv6Status"] !== null) {
+            $this->IPv6Status = $param["IPv6Status"];
         }
 
         if (array_key_exists("Cname",$param) and $param["Cname"] !== null) {
@@ -161,6 +225,24 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("IdentificationStatus",$param) and $param["IdentificationStatus"] !== null) {
             $this->IdentificationStatus = $param["IdentificationStatus"];
+        }
+
+        if (array_key_exists("CreatedOn",$param) and $param["CreatedOn"] !== null) {
+            $this->CreatedOn = $param["CreatedOn"];
+        }
+
+        if (array_key_exists("ModifiedOn",$param) and $param["ModifiedOn"] !== null) {
+            $this->ModifiedOn = $param["ModifiedOn"];
+        }
+
+        if (array_key_exists("OwnershipVerification",$param) and $param["OwnershipVerification"] !== null) {
+            $this->OwnershipVerification = new OwnershipVerification();
+            $this->OwnershipVerification->deserialize($param["OwnershipVerification"]);
+        }
+
+        if (array_key_exists("Certificate",$param) and $param["Certificate"] !== null) {
+            $this->Certificate = new AccelerationDomainCertificate();
+            $this->Certificate->deserialize($param["Certificate"]);
         }
     }
 }

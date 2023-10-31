@@ -30,22 +30,8 @@ use TencentCloud\Common\AbstractModel;
 <li>`notEquals`: Does not equal</li>
 <li>`exist`: Exists</li>
 <li>`notexist`: Does not exist</li>
- * @method string getTarget() Obtain The match type. Values:
-<li>`filename`: File name</li>
-<li>`extension`: File extension</li>
-<li>`host`: Host</li>
-<li>`full_url`: Full URL, which indicates the complete URL path under the current site and must contain the HTTP protocol, host, and path.</li>
-<li>`url`: Partial URL under the current site</li><li>`client_country`: Country/Region of the client</li>
-<li>`query_string`: Query string in the request URL</li>
-<li>`request_header`: HTTP request header</li>
- * @method void setTarget(string $Target) Set The match type. Values:
-<li>`filename`: File name</li>
-<li>`extension`: File extension</li>
-<li>`host`: Host</li>
-<li>`full_url`: Full URL, which indicates the complete URL path under the current site and must contain the HTTP protocol, host, and path.</li>
-<li>`url`: Partial URL under the current site</li><li>`client_country`: Country/Region of the client</li>
-<li>`query_string`: Query string in the request URL</li>
-<li>`request_header`: HTTP request header</li>
+ * @method string getTarget() Obtain Match fields. Values: <li>`filename`: File name;</li><li>`extension`: File suffix;</li><li>`host`: HOST;</li><li>`full_url`: The complete URL path under the current site, including the HTTP protocol, Host and path;</li><li>`url`: The URL path request under the current site;</li><li>`client_country`: Client country;</li><li>`query_string`: The query string of the URL requested under the current site;</li><li>`request_header`: HTTP request header. </li>
+ * @method void setTarget(string $Target) Set Match fields. Values: <li>`filename`: File name;</li><li>`extension`: File suffix;</li><li>`host`: HOST;</li><li>`full_url`: The complete URL path under the current site, including the HTTP protocol, Host and path;</li><li>`url`: The URL path request under the current site;</li><li>`client_country`: Client country;</li><li>`query_string`: The query string of the URL requested under the current site;</li><li>`request_header`: HTTP request header. </li>
  * @method array getValues() Obtain The parameter value of the match type. It can be an empty string only when `Target=query string/request header` and `Operator=exist/notexist`.
 <li>When `Target=extension`, enter the file extension, such as "jpg" and "txt".</li>
 <li>When `Target=filename`, enter the file name, such as "foo" in "foo.jpg".</li>
@@ -91,14 +77,7 @@ class RuleCondition extends AbstractModel
     public $Operator;
 
     /**
-     * @var string The match type. Values:
-<li>`filename`: File name</li>
-<li>`extension`: File extension</li>
-<li>`host`: Host</li>
-<li>`full_url`: Full URL, which indicates the complete URL path under the current site and must contain the HTTP protocol, host, and path.</li>
-<li>`url`: Partial URL under the current site</li><li>`client_country`: Country/Region of the client</li>
-<li>`query_string`: Query string in the request URL</li>
-<li>`request_header`: HTTP request header</li>
+     * @var string Match fields. Values: <li>`filename`: File name;</li><li>`extension`: File suffix;</li><li>`host`: HOST;</li><li>`full_url`: The complete URL path under the current site, including the HTTP protocol, Host and path;</li><li>`url`: The URL path request under the current site;</li><li>`client_country`: Client country;</li><li>`query_string`: The query string of the URL requested under the current site;</li><li>`request_header`: HTTP request header. </li>
      */
     public $Target;
 
@@ -131,6 +110,7 @@ class RuleCondition extends AbstractModel
     /**
      * @var boolean Whether the parameter name is case insensitive. Default value: `false`.
 Note: This field may return null, indicating that no valid values can be obtained.
+     * @deprecated
      */
     public $IgnoreNameCase;
 
@@ -140,14 +120,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 <li>`notEquals`: Does not equal</li>
 <li>`exist`: Exists</li>
 <li>`notexist`: Does not exist</li>
-     * @param string $Target The match type. Values:
-<li>`filename`: File name</li>
-<li>`extension`: File extension</li>
-<li>`host`: Host</li>
-<li>`full_url`: Full URL, which indicates the complete URL path under the current site and must contain the HTTP protocol, host, and path.</li>
-<li>`url`: Partial URL under the current site</li><li>`client_country`: Country/Region of the client</li>
-<li>`query_string`: Query string in the request URL</li>
-<li>`request_header`: HTTP request header</li>
+     * @param string $Target Match fields. Values: <li>`filename`: File name;</li><li>`extension`: File suffix;</li><li>`host`: HOST;</li><li>`full_url`: The complete URL path under the current site, including the HTTP protocol, Host and path;</li><li>`url`: The URL path request under the current site;</li><li>`client_country`: Client country;</li><li>`query_string`: The query string of the URL requested under the current site;</li><li>`request_header`: HTTP request header. </li>
      * @param array $Values The parameter value of the match type. It can be an empty string only when `Target=query string/request header` and `Operator=exist/notexist`.
 <li>When `Target=extension`, enter the file extension, such as "jpg" and "txt".</li>
 <li>When `Target=filename`, enter the file name, such as "foo" in "foo.jpg".</li>

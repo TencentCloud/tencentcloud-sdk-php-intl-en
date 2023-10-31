@@ -18,28 +18,28 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Information required for verifying via a file. It's applicable to sites connected via CNAMEs.
  *
- * @method string getPath() Obtain 
- * @method void setPath(string $Path) Set 
- * @method string getContent() Obtain 
- * @method void setContent(string $Content) Set 
+ * @method string getPath() Obtain EdgeOne obtains the file verification information in the format of "Scheme + Host + URL Path", (e.g. https://www.example.com/.well-known/teo-verification/z12h416twn.txt). This field is the URL path section of the URL you need to create.
+ * @method void setPath(string $Path) Set EdgeOne obtains the file verification information in the format of "Scheme + Host + URL Path", (e.g. https://www.example.com/.well-known/teo-verification/z12h416twn.txt). This field is the URL path section of the URL you need to create.
+ * @method string getContent() Obtain Content of the verification file. The contents of this field need to be filled into the text file returned by `Path`.
+ * @method void setContent(string $Content) Set Content of the verification file. The contents of this field need to be filled into the text file returned by `Path`.
  */
 class FileVerification extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string EdgeOne obtains the file verification information in the format of "Scheme + Host + URL Path", (e.g. https://www.example.com/.well-known/teo-verification/z12h416twn.txt). This field is the URL path section of the URL you need to create.
      */
     public $Path;
 
     /**
-     * @var string 
+     * @var string Content of the verification file. The contents of this field need to be filled into the text file returned by `Path`.
      */
     public $Content;
 
     /**
-     * @param string $Path 
-     * @param string $Content 
+     * @param string $Path EdgeOne obtains the file verification information in the format of "Scheme + Host + URL Path", (e.g. https://www.example.com/.well-known/teo-verification/z12h416twn.txt). This field is the URL path section of the URL you need to create.
+     * @param string $Content Content of the verification file. The contents of this field need to be filled into the text file returned by `Path`.
      */
     function __construct()
     {

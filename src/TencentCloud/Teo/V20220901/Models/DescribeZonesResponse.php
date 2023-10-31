@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getTotalCount() Obtain Number of eligible sites.
  * @method void setTotalCount(integer $TotalCount) Set Number of eligible sites.
- * @method array getZones() Obtain Details of sites
- * @method void setZones(array $Zones) Set Details of sites
+ * @method array getZones() Obtain Details of sites.
+ * @method void setZones(array $Zones) Set Details of sites.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -35,7 +35,7 @@ class DescribeZonesResponse extends AbstractModel
     public $TotalCount;
 
     /**
-     * @var array Details of sites
+     * @var array Details of sites.
      */
     public $Zones;
 
@@ -46,7 +46,7 @@ class DescribeZonesResponse extends AbstractModel
 
     /**
      * @param integer $TotalCount Number of eligible sites.
-     * @param array $Zones Details of sites
+     * @param array $Zones Details of sites.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
