@@ -43,13 +43,11 @@ u200c<li>`deactivated`: The site is blocked.</li>
  * @method string getType() Obtain Connection mode of the site. Values:
 <li>`full`: Connect via the name server.</li>
 <li>`partial`: Connect via the CNAME record.</li>
-<li>`noDomainAccess`: Connect without using a domain name
- 
+<li>`noDomainAccess`: Connect without using a domain name</li>
  * @method void setType(string $Type) Set Connection mode of the site. Values:
 <li>`full`: Connect via the name server.</li>
 <li>`partial`: Connect via the CNAME record.</li>
-<li>`noDomainAccess`: Connect without using a domain name
- 
+<li>`noDomainAccess`: Connect without using a domain name</li>
  * @method boolean getPaused() Obtain Whether the site is disabled.
  * @method void setPaused(boolean $Paused) Set Whether the site is disabled.
  * @method string getCnameSpeedUp() Obtain Whether CNAME acceleration is enabled. Values:
@@ -149,8 +147,7 @@ u200c<li>`deactivated`: The site is blocked.</li>
      * @var string Connection mode of the site. Values:
 <li>`full`: Connect via the name server.</li>
 <li>`partial`: Connect via the CNAME record.</li>
-<li>`noDomainAccess`: Connect without using a domain name
- 
+<li>`noDomainAccess`: Connect without using a domain name</li>
      */
     public $Type;
 
@@ -259,8 +256,7 @@ u200c<li>`deactivated`: The site is blocked.</li>
      * @param string $Type Connection mode of the site. Values:
 <li>`full`: Connect via the name server.</li>
 <li>`partial`: Connect via the CNAME record.</li>
-<li>`noDomainAccess`: Connect without using a domain name
- 
+<li>`noDomainAccess`: Connect without using a domain name</li>
      * @param boolean $Paused Whether the site is disabled.
      * @param string $CnameSpeedUp Whether CNAME acceleration is enabled. Values:
 <li>`enabled`: Enabled</li>

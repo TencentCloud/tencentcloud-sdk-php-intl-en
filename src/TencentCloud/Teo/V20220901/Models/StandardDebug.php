@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSwitch(string $Switch) Set Whether to enable standard debugging. Values:
 <li>`on`: Enable</li>
 <li>`off`: Disable </li>
- * @method array getAllowClientIPList() Obtain The client IP to allow. It can be an IPv4/IPv6 address or a CIDR block. If not specified, it means to allow any client IP
- * @method void setAllowClientIPList(array $AllowClientIPList) Set The client IP to allow. It can be an IPv4/IPv6 address or a CIDR block. If not specified, it means to allow any client IP
+ * @method array getAllowClientIPList() Obtain Allowed client source. It supports IPv4/IPv6 addresses and CIDR blocks.
+ * @method void setAllowClientIPList(array $AllowClientIPList) Set Allowed client source. It supports IPv4/IPv6 addresses and CIDR blocks.
  * @method string getExpireTime() Obtain The time when the standard debugging setting expires. If it is exceeded, this feature u200dbecomes invalid.
  * @method void setExpireTime(string $ExpireTime) Set The time when the standard debugging setting expires. If it is exceeded, this feature u200dbecomes invalid.
  */
@@ -41,7 +41,7 @@ class StandardDebug extends AbstractModel
     public $Switch;
 
     /**
-     * @var array The client IP to allow. It can be an IPv4/IPv6 address or a CIDR block. If not specified, it means to allow any client IP
+     * @var array Allowed client source. It supports IPv4/IPv6 addresses and CIDR blocks.
      */
     public $AllowClientIPList;
 
@@ -54,7 +54,7 @@ class StandardDebug extends AbstractModel
      * @param string $Switch Whether to enable standard debugging. Values:
 <li>`on`: Enable</li>
 <li>`off`: Disable </li>
-     * @param array $AllowClientIPList The client IP to allow. It can be an IPv4/IPv6 address or a CIDR block. If not specified, it means to allow any client IP
+     * @param array $AllowClientIPList Allowed client source. It supports IPv4/IPv6 addresses and CIDR blocks.
      * @param string $ExpireTime The time when the standard debugging setting expires. If it is exceeded, this feature u200dbecomes invalid.
      */
     function __construct()

@@ -18,27 +18,19 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * CreateSharedCNAME response structure.
+ * BindSharedCNAME response structure.
  *
- * @method string getSharedCNAME() Obtain Shared CNAME. Format: <Custom prefix> + <12-bit random string in ZoneId> + "share.dnse[0-5].com"
- * @method void setSharedCNAME(string $SharedCNAME) Set Shared CNAME. Format: <Custom prefix> + <12-bit random string in ZoneId> + "share.dnse[0-5].com"
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
-class CreateSharedCNAMEResponse extends AbstractModel
+class BindSharedCNAMEResponse extends AbstractModel
 {
-    /**
-     * @var string Shared CNAME. Format: <Custom prefix> + <12-bit random string in ZoneId> + "share.dnse[0-5].com"
-     */
-    public $SharedCNAME;
-
     /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
 
     /**
-     * @param string $SharedCNAME Shared CNAME. Format: <Custom prefix> + <12-bit random string in ZoneId> + "share.dnse[0-5].com"
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -54,10 +46,6 @@ class CreateSharedCNAMEResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("SharedCNAME",$param) and $param["SharedCNAME"] !== null) {
-            $this->SharedCNAME = $param["SharedCNAME"];
-        }
-
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
             $this->RequestId = $param["RequestId"];
         }

@@ -20,81 +20,56 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Origin group information.
  *
- * @method string getZoneId() Obtain The site ID.
- * @method void setZoneId(string $ZoneId) Set The site ID.
- * @method string getZoneName() Obtain The site name.
- * @method void setZoneName(string $ZoneName) Set The site name.
- * @method string getOriginGroupId() Obtain The ID of the origin group.
- * @method void setOriginGroupId(string $OriginGroupId) Set The ID of the origin group.
- * @method string getOriginType() Obtain The origin type. Values:
-<li>`self`: Customer origin</li>
-<li>`third_party`: Third-party origin</li>
-<li>`cos`: Tencent Cloud COS origin</li>
- * @method void setOriginType(string $OriginType) Set The origin type. Values:
-<li>`self`: Customer origin</li>
-<li>`third_party`: Third-party origin</li>
-<li>`cos`: Tencent Cloud COS origin</li>
- * @method string getOriginGroupName() Obtain The name of the origin group.
- * @method void setOriginGroupName(string $OriginGroupName) Set The name of the origin group.
- * @method string getConfigurationType() Obtain The origin configuration type when `OriginType=self`. Values:
-<li>`area`: Configure by region.</li>
-<li>`weight`: Configure by weight.</li>
-<li>`proto`: Configure by HTTP protocol.</li>When `OriginType=third_party/cos`, leave this field empty.
- * @method void setConfigurationType(string $ConfigurationType) Set The origin configuration type when `OriginType=self`. Values:
-<li>`area`: Configure by region.</li>
-<li>`weight`: Configure by weight.</li>
-<li>`proto`: Configure by HTTP protocol.</li>When `OriginType=third_party/cos`, leave this field empty.
- * @method array getOriginRecords() Obtain The origin record information.
- * @method void setOriginRecords(array $OriginRecords) Set The origin record information.
+ * @method string getGroupId() Obtain 
+ * @method void setGroupId(string $GroupId) Set 
+ * @method string getName() Obtain 
+ * @method void setName(string $Name) Set 
+ * @method string getType() Obtain 
+ * @method void setType(string $Type) Set 
+ * @method array getRecords() Obtain 
+ * @method void setRecords(array $Records) Set 
+ * @method array getReferences() Obtain 
+ * @method void setReferences(array $References) Set 
+ * @method string getCreateTime() Obtain 
+ * @method void setCreateTime(string $CreateTime) Set 
  * @method string getUpdateTime() Obtain The update time of the origin group.
  * @method void setUpdateTime(string $UpdateTime) Set The update time of the origin group.
- * @method string getHostHeader() Obtain The origin domain when `OriginType=self`.
-Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method void setHostHeader(string $HostHeader) Set The origin domain when `OriginType=self`.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method string getHostHeader() Obtain Origin-pull host header
+Note: This field may return·null, indicating that no valid values can be obtained.
+ * @method void setHostHeader(string $HostHeader) Set Origin-pull host header
+Note: This field may return·null, indicating that no valid values can be obtained.
  */
 class OriginGroup extends AbstractModel
 {
     /**
-     * @var string The site ID.
+     * @var string 
      */
-    public $ZoneId;
+    public $GroupId;
 
     /**
-     * @var string The site name.
+     * @var string 
      */
-    public $ZoneName;
+    public $Name;
 
     /**
-     * @var string The ID of the origin group.
+     * @var string 
      */
-    public $OriginGroupId;
+    public $Type;
 
     /**
-     * @var string The origin type. Values:
-<li>`self`: Customer origin</li>
-<li>`third_party`: Third-party origin</li>
-<li>`cos`: Tencent Cloud COS origin</li>
+     * @var array 
      */
-    public $OriginType;
+    public $Records;
 
     /**
-     * @var string The name of the origin group.
+     * @var array 
      */
-    public $OriginGroupName;
+    public $References;
 
     /**
-     * @var string The origin configuration type when `OriginType=self`. Values:
-<li>`area`: Configure by region.</li>
-<li>`weight`: Configure by weight.</li>
-<li>`proto`: Configure by HTTP protocol.</li>When `OriginType=third_party/cos`, leave this field empty.
+     * @var string 
      */
-    public $ConfigurationType;
-
-    /**
-     * @var array The origin record information.
-     */
-    public $OriginRecords;
+    public $CreateTime;
 
     /**
      * @var string The update time of the origin group.
@@ -102,28 +77,21 @@ class OriginGroup extends AbstractModel
     public $UpdateTime;
 
     /**
-     * @var string The origin domain when `OriginType=self`.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @var string Origin-pull host header
+Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public $HostHeader;
 
     /**
-     * @param string $ZoneId The site ID.
-     * @param string $ZoneName The site name.
-     * @param string $OriginGroupId The ID of the origin group.
-     * @param string $OriginType The origin type. Values:
-<li>`self`: Customer origin</li>
-<li>`third_party`: Third-party origin</li>
-<li>`cos`: Tencent Cloud COS origin</li>
-     * @param string $OriginGroupName The name of the origin group.
-     * @param string $ConfigurationType The origin configuration type when `OriginType=self`. Values:
-<li>`area`: Configure by region.</li>
-<li>`weight`: Configure by weight.</li>
-<li>`proto`: Configure by HTTP protocol.</li>When `OriginType=third_party/cos`, leave this field empty.
-     * @param array $OriginRecords The origin record information.
+     * @param string $GroupId 
+     * @param string $Name 
+     * @param string $Type 
+     * @param array $Records 
+     * @param array $References 
+     * @param string $CreateTime 
      * @param string $UpdateTime The update time of the origin group.
-     * @param string $HostHeader The origin domain when `OriginType=self`.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param string $HostHeader Origin-pull host header
+Note: This field may return·null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -138,37 +106,38 @@ Note: This field may return `null`, indicating that no valid value can be obtain
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ZoneId",$param) and $param["ZoneId"] !== null) {
-            $this->ZoneId = $param["ZoneId"];
+        if (array_key_exists("GroupId",$param) and $param["GroupId"] !== null) {
+            $this->GroupId = $param["GroupId"];
         }
 
-        if (array_key_exists("ZoneName",$param) and $param["ZoneName"] !== null) {
-            $this->ZoneName = $param["ZoneName"];
+        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
+            $this->Name = $param["Name"];
         }
 
-        if (array_key_exists("OriginGroupId",$param) and $param["OriginGroupId"] !== null) {
-            $this->OriginGroupId = $param["OriginGroupId"];
+        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
+            $this->Type = $param["Type"];
         }
 
-        if (array_key_exists("OriginType",$param) and $param["OriginType"] !== null) {
-            $this->OriginType = $param["OriginType"];
-        }
-
-        if (array_key_exists("OriginGroupName",$param) and $param["OriginGroupName"] !== null) {
-            $this->OriginGroupName = $param["OriginGroupName"];
-        }
-
-        if (array_key_exists("ConfigurationType",$param) and $param["ConfigurationType"] !== null) {
-            $this->ConfigurationType = $param["ConfigurationType"];
-        }
-
-        if (array_key_exists("OriginRecords",$param) and $param["OriginRecords"] !== null) {
-            $this->OriginRecords = [];
-            foreach ($param["OriginRecords"] as $key => $value){
+        if (array_key_exists("Records",$param) and $param["Records"] !== null) {
+            $this->Records = [];
+            foreach ($param["Records"] as $key => $value){
                 $obj = new OriginRecord();
                 $obj->deserialize($value);
-                array_push($this->OriginRecords, $obj);
+                array_push($this->Records, $obj);
             }
+        }
+
+        if (array_key_exists("References",$param) and $param["References"] !== null) {
+            $this->References = [];
+            foreach ($param["References"] as $key => $value){
+                $obj = new OriginGroupReference();
+                $obj->deserialize($value);
+                array_push($this->References, $obj);
+            }
+        }
+
+        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
+            $this->CreateTime = $param["CreateTime"];
         }
 
         if (array_key_exists("UpdateTime",$param) and $param["UpdateTime"] !== null) {
