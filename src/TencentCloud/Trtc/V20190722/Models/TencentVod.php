@@ -36,8 +36,8 @@ The default value is `0`, which means others.
  * @method void setSessionContext(string $SessionContext) Set The task flow context, which is passed through after the task is completed.
  * @method string getSourceContext() Obtain The upload context, which is passed through after upload is completed.
  * @method void setSourceContext(string $SourceContext) Set The upload context, which is passed through after upload is completed.
- * @method integer getMediaType() Obtain The format of recording files uploaded to VOD. `0` (default): MP4; `1`: HLS; `2`: AAC (valid only if `StreamType` is `1`).
- * @method void setMediaType(integer $MediaType) Set The format of recording files uploaded to VOD. `0` (default): MP4; `1`: HLS; `2`: AAC (valid only if `StreamType` is `1`).
+ * @method integer getMediaType() Obtain The format of recording files uploaded to VOD. `0` (default): MP4; `1`: HLS; `2`: AAC (valid only if `StreamType` is `1`); `3`: HLS+MP4; `4`: HLS+AAC.
+ * @method void setMediaType(integer $MediaType) Set The format of recording files uploaded to VOD. `0` (default): MP4; `1`: HLS; `2`: AAC (valid only if `StreamType` is `1`); `3`: HLS+MP4; `4`: HLS+AAC.
  * @method string getUserDefineRecordId() Obtain The custom prefix of recording files. This parameter is valid only if recording files are uploaded to VOD. It can contain letters, numbers, underscores, and hyphens and cannot exceed 64 bytes. This prefix and the automatically generated filename are connected with `__UserId_u_`.
  * @method void setUserDefineRecordId(string $UserDefineRecordId) Set The custom prefix of recording files. This parameter is valid only if recording files are uploaded to VOD. It can contain letters, numbers, underscores, and hyphens and cannot exceed 64 bytes. This prefix and the automatically generated filename are connected with `__UserId_u_`.
  */
@@ -80,7 +80,7 @@ The default value is `0`, which means others.
     public $SourceContext;
 
     /**
-     * @var integer The format of recording files uploaded to VOD. `0` (default): MP4; `1`: HLS; `2`: AAC (valid only if `StreamType` is `1`).
+     * @var integer The format of recording files uploaded to VOD. `0` (default): MP4; `1`: HLS; `2`: AAC (valid only if `StreamType` is `1`); `3`: HLS+MP4; `4`: HLS+AAC.
      */
     public $MediaType;
 
@@ -98,7 +98,7 @@ The default value is `0`, which means others.
      * @param integer $SubAppId The VOD subapplication ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.
      * @param string $SessionContext The task flow context, which is passed through after the task is completed.
      * @param string $SourceContext The upload context, which is passed through after upload is completed.
-     * @param integer $MediaType The format of recording files uploaded to VOD. `0` (default): MP4; `1`: HLS; `2`: AAC (valid only if `StreamType` is `1`).
+     * @param integer $MediaType The format of recording files uploaded to VOD. `0` (default): MP4; `1`: HLS; `2`: AAC (valid only if `StreamType` is `1`); `3`: HLS+MP4; `4`: HLS+AAC.
      * @param string $UserDefineRecordId The custom prefix of recording files. This parameter is valid only if recording files are uploaded to VOD. It can contain letters, numbers, underscores, and hyphens and cannot exceed 64 bytes. This prefix and the automatically generated filename are connected with `__UserId_u_`.
      */
     function __construct()
