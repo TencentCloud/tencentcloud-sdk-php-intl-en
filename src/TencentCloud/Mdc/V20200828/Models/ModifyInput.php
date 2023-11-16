@@ -42,6 +42,16 @@ If there is an RTMP input, the output must be SRT or RTMP.
 If there is an SRT input, the output must be SRT.
  * @method string getFailOver() Obtain Whether to enable input failover. Valid values: OPEN, CLOSE.
  * @method void setFailOver(string $FailOver) Set Whether to enable input failover. Valid values: OPEN, CLOSE.
+ * @method CreateInputRTMPPullSettings getRTMPPullSettings() Obtain 
+ * @method void setRTMPPullSettings(CreateInputRTMPPullSettings $RTMPPullSettings) Set 
+ * @method CreateInputRTSPPullSettings getRTSPPullSettings() Obtain 
+ * @method void setRTSPPullSettings(CreateInputRTSPPullSettings $RTSPPullSettings) Set 
+ * @method CreateInputHLSPullSettings getHLSPullSettings() Obtain 
+ * @method void setHLSPullSettings(CreateInputHLSPullSettings $HLSPullSettings) Set 
+ * @method ResilientStreamConf getResilientStream() Obtain 
+ * @method void setResilientStream(ResilientStreamConf $ResilientStream) Set 
+ * @method array getSecurityGroupIds() Obtain The bound security group IDs. 
+ * @method void setSecurityGroupIds(array $SecurityGroupIds) Set The bound security group IDs. 
  */
 class ModifyInput extends AbstractModel
 {
@@ -89,6 +99,31 @@ If there is an SRT input, the output must be SRT.
     public $FailOver;
 
     /**
+     * @var CreateInputRTMPPullSettings 
+     */
+    public $RTMPPullSettings;
+
+    /**
+     * @var CreateInputRTSPPullSettings 
+     */
+    public $RTSPPullSettings;
+
+    /**
+     * @var CreateInputHLSPullSettings 
+     */
+    public $HLSPullSettings;
+
+    /**
+     * @var ResilientStreamConf 
+     */
+    public $ResilientStream;
+
+    /**
+     * @var array The bound security group IDs. 
+     */
+    public $SecurityGroupIds;
+
+    /**
      * @param string $InputId The input ID.
      * @param string $InputName The input name.
      * @param string $Description The description of the input.
@@ -100,6 +135,11 @@ If there is an RTP input, the output must be RTP.
 If there is an RTMP input, the output must be SRT or RTMP.
 If there is an SRT input, the output must be SRT.
      * @param string $FailOver Whether to enable input failover. Valid values: OPEN, CLOSE.
+     * @param CreateInputRTMPPullSettings $RTMPPullSettings 
+     * @param CreateInputRTSPPullSettings $RTSPPullSettings 
+     * @param CreateInputHLSPullSettings $HLSPullSettings 
+     * @param ResilientStreamConf $ResilientStream 
+     * @param array $SecurityGroupIds The bound security group IDs. 
      */
     function __construct()
     {
@@ -146,6 +186,30 @@ If there is an SRT input, the output must be SRT.
 
         if (array_key_exists("FailOver",$param) and $param["FailOver"] !== null) {
             $this->FailOver = $param["FailOver"];
+        }
+
+        if (array_key_exists("RTMPPullSettings",$param) and $param["RTMPPullSettings"] !== null) {
+            $this->RTMPPullSettings = new CreateInputRTMPPullSettings();
+            $this->RTMPPullSettings->deserialize($param["RTMPPullSettings"]);
+        }
+
+        if (array_key_exists("RTSPPullSettings",$param) and $param["RTSPPullSettings"] !== null) {
+            $this->RTSPPullSettings = new CreateInputRTSPPullSettings();
+            $this->RTSPPullSettings->deserialize($param["RTSPPullSettings"]);
+        }
+
+        if (array_key_exists("HLSPullSettings",$param) and $param["HLSPullSettings"] !== null) {
+            $this->HLSPullSettings = new CreateInputHLSPullSettings();
+            $this->HLSPullSettings->deserialize($param["HLSPullSettings"]);
+        }
+
+        if (array_key_exists("ResilientStream",$param) and $param["ResilientStream"] !== null) {
+            $this->ResilientStream = new ResilientStreamConf();
+            $this->ResilientStream->deserialize($param["ResilientStream"]);
+        }
+
+        if (array_key_exists("SecurityGroupIds",$param) and $param["SecurityGroupIds"] !== null) {
+            $this->SecurityGroupIds = $param["SecurityGroupIds"];
         }
     }
 }

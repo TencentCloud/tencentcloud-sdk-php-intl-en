@@ -50,6 +50,16 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return `null`, indicating that no valid value was found.
  * @method void setFailOver(string $FailOver) Set Input failover
 Note: this field may return `null`, indicating that no valid value was found.
+ * @method DescribeInputRTMPPullSettings getRTMPPullSettings() Obtain 
+ * @method void setRTMPPullSettings(DescribeInputRTMPPullSettings $RTMPPullSettings) Set 
+ * @method DescribeInputRTSPPullSettings getRTSPPullSettings() Obtain 
+ * @method void setRTSPPullSettings(DescribeInputRTSPPullSettings $RTSPPullSettings) Set 
+ * @method DescribeInputHLSPullSettings getHLSPullSettings() Obtain 
+ * @method void setHLSPullSettings(DescribeInputHLSPullSettings $HLSPullSettings) Set 
+ * @method ResilientStreamConf getResilientStream() Obtain 
+ * @method void setResilientStream(ResilientStreamConf $ResilientStream) Set 
+ * @method array getSecurityGroupIds() Obtain The bound security group ID.
+ * @method void setSecurityGroupIds(array $SecurityGroupIds) Set The bound security group ID.
  */
 class DescribeInput extends AbstractModel
 {
@@ -113,6 +123,31 @@ Note: this field may return `null`, indicating that no valid value was found.
     public $FailOver;
 
     /**
+     * @var DescribeInputRTMPPullSettings 
+     */
+    public $RTMPPullSettings;
+
+    /**
+     * @var DescribeInputRTSPPullSettings 
+     */
+    public $RTSPPullSettings;
+
+    /**
+     * @var DescribeInputHLSPullSettings 
+     */
+    public $HLSPullSettings;
+
+    /**
+     * @var ResilientStreamConf 
+     */
+    public $ResilientStream;
+
+    /**
+     * @var array The bound security group ID.
+     */
+    public $SecurityGroupIds;
+
+    /**
      * @param string $InputId Input ID.
      * @param string $InputName Input name.
      * @param string $Description Input description.
@@ -128,6 +163,11 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @param DescribeInputRTMPSettings $RTMPSettings RTMP configuration information of an input
      * @param string $FailOver Input failover
 Note: this field may return `null`, indicating that no valid value was found.
+     * @param DescribeInputRTMPPullSettings $RTMPPullSettings 
+     * @param DescribeInputRTSPPullSettings $RTSPPullSettings 
+     * @param DescribeInputHLSPullSettings $HLSPullSettings 
+     * @param ResilientStreamConf $ResilientStream 
+     * @param array $SecurityGroupIds The bound security group ID.
      */
     function __construct()
     {
@@ -192,6 +232,30 @@ Note: this field may return `null`, indicating that no valid value was found.
 
         if (array_key_exists("FailOver",$param) and $param["FailOver"] !== null) {
             $this->FailOver = $param["FailOver"];
+        }
+
+        if (array_key_exists("RTMPPullSettings",$param) and $param["RTMPPullSettings"] !== null) {
+            $this->RTMPPullSettings = new DescribeInputRTMPPullSettings();
+            $this->RTMPPullSettings->deserialize($param["RTMPPullSettings"]);
+        }
+
+        if (array_key_exists("RTSPPullSettings",$param) and $param["RTSPPullSettings"] !== null) {
+            $this->RTSPPullSettings = new DescribeInputRTSPPullSettings();
+            $this->RTSPPullSettings->deserialize($param["RTSPPullSettings"]);
+        }
+
+        if (array_key_exists("HLSPullSettings",$param) and $param["HLSPullSettings"] !== null) {
+            $this->HLSPullSettings = new DescribeInputHLSPullSettings();
+            $this->HLSPullSettings->deserialize($param["HLSPullSettings"]);
+        }
+
+        if (array_key_exists("ResilientStream",$param) and $param["ResilientStream"] !== null) {
+            $this->ResilientStream = new ResilientStreamConf();
+            $this->ResilientStream->deserialize($param["ResilientStream"]);
+        }
+
+        if (array_key_exists("SecurityGroupIds",$param) and $param["SecurityGroupIds"] !== null) {
+            $this->SecurityGroupIds = $param["SecurityGroupIds"];
         }
     }
 }

@@ -38,6 +38,10 @@ use TencentCloud\Common\AbstractModel;
 This parameter is valid if `Protocol` is set to `RTMP_PULL`. If it is left empty, there is no restriction on clients’ IP addresses.
  * @method void setAllowIpList(array $AllowIpList) Set The IP allowlist. The address must be in CIDR format, such as `0.0.0.0/0`.
 This parameter is valid if `Protocol` is set to `RTMP_PULL`. If it is left empty, there is no restriction on clients’ IP addresses.
+ * @method integer getMaxConcurrent() Obtain 
+ * @method void setMaxConcurrent(integer $MaxConcurrent) Set 
+ * @method array getSecurityGroupIds() Obtain The bound security group IDs.
+ * @method void setSecurityGroupIds(array $SecurityGroupIds) Set The bound security group IDs.
  */
 class ModifyOutputInfo extends AbstractModel
 {
@@ -83,6 +87,16 @@ This parameter is valid if `Protocol` is set to `RTMP_PULL`. If it is left empty
     public $AllowIpList;
 
     /**
+     * @var integer 
+     */
+    public $MaxConcurrent;
+
+    /**
+     * @var array The bound security group IDs.
+     */
+    public $SecurityGroupIds;
+
+    /**
      * @param string $OutputId The ID of the output to modify.
      * @param string $OutputName The output name.
      * @param string $Description The description of the output.
@@ -92,6 +106,8 @@ This parameter is valid if `Protocol` is set to `RTMP_PULL`. If it is left empty
      * @param CreateOutputRTMPSettings $RTMPSettings The RTMP relay configuration.
      * @param array $AllowIpList The IP allowlist. The address must be in CIDR format, such as `0.0.0.0/0`.
 This parameter is valid if `Protocol` is set to `RTMP_PULL`. If it is left empty, there is no restriction on clients’ IP addresses.
+     * @param integer $MaxConcurrent 
+     * @param array $SecurityGroupIds The bound security group IDs.
      */
     function __construct()
     {
@@ -139,6 +155,14 @@ This parameter is valid if `Protocol` is set to `RTMP_PULL`. If it is left empty
 
         if (array_key_exists("AllowIpList",$param) and $param["AllowIpList"] !== null) {
             $this->AllowIpList = $param["AllowIpList"];
+        }
+
+        if (array_key_exists("MaxConcurrent",$param) and $param["MaxConcurrent"] !== null) {
+            $this->MaxConcurrent = $param["MaxConcurrent"];
+        }
+
+        if (array_key_exists("SecurityGroupIds",$param) and $param["SecurityGroupIds"] !== null) {
+            $this->SecurityGroupIds = $param["SecurityGroupIds"];
         }
     }
 }

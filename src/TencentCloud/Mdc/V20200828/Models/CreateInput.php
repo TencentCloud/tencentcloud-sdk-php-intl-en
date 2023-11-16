@@ -34,6 +34,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRTPSettings(CreateInputRTPSettings $RTPSettings) Set RTP configuration information of input.
  * @method string getFailOver() Obtain Input failover. Valid values: `OPEN`, `CLOSE` (default)
  * @method void setFailOver(string $FailOver) Set Input failover. Valid values: `OPEN`, `CLOSE` (default)
+ * @method CreateInputRTMPPullSettings getRTMPPullSettings() Obtain 
+ * @method void setRTMPPullSettings(CreateInputRTMPPullSettings $RTMPPullSettings) Set 
+ * @method CreateInputRTSPPullSettings getRTSPPullSettings() Obtain 
+ * @method void setRTSPPullSettings(CreateInputRTSPPullSettings $RTSPPullSettings) Set 
+ * @method CreateInputHLSPullSettings getHLSPullSettings() Obtain 
+ * @method void setHLSPullSettings(CreateInputHLSPullSettings $HLSPullSettings) Set 
+ * @method ResilientStreamConf getResilientStream() Obtain 
+ * @method void setResilientStream(ResilientStreamConf $ResilientStream) Set 
+ * @method array getSecurityGroupIds() Obtain The bound security group IDs.
+ * @method void setSecurityGroupIds(array $SecurityGroupIds) Set The bound security group IDs.
  */
 class CreateInput extends AbstractModel
 {
@@ -73,6 +83,31 @@ class CreateInput extends AbstractModel
     public $FailOver;
 
     /**
+     * @var CreateInputRTMPPullSettings 
+     */
+    public $RTMPPullSettings;
+
+    /**
+     * @var CreateInputRTSPPullSettings 
+     */
+    public $RTSPPullSettings;
+
+    /**
+     * @var CreateInputHLSPullSettings 
+     */
+    public $HLSPullSettings;
+
+    /**
+     * @var ResilientStreamConf 
+     */
+    public $ResilientStream;
+
+    /**
+     * @var array The bound security group IDs.
+     */
+    public $SecurityGroupIds;
+
+    /**
      * @param string $InputName Input name, which can contain 1 to 32 letters, digits, and underscores.
      * @param string $Protocol Input protocol. Valid values: `SRT`, `RTP`, `RTMP`
      * @param string $Description Input description. Length: [0, 255].
@@ -80,6 +115,11 @@ class CreateInput extends AbstractModel
      * @param CreateInputSRTSettings $SRTSettings SRT configuration information of input.
      * @param CreateInputRTPSettings $RTPSettings RTP configuration information of input.
      * @param string $FailOver Input failover. Valid values: `OPEN`, `CLOSE` (default)
+     * @param CreateInputRTMPPullSettings $RTMPPullSettings 
+     * @param CreateInputRTSPPullSettings $RTSPPullSettings 
+     * @param CreateInputHLSPullSettings $HLSPullSettings 
+     * @param ResilientStreamConf $ResilientStream 
+     * @param array $SecurityGroupIds The bound security group IDs.
      */
     function __construct()
     {
@@ -122,6 +162,30 @@ class CreateInput extends AbstractModel
 
         if (array_key_exists("FailOver",$param) and $param["FailOver"] !== null) {
             $this->FailOver = $param["FailOver"];
+        }
+
+        if (array_key_exists("RTMPPullSettings",$param) and $param["RTMPPullSettings"] !== null) {
+            $this->RTMPPullSettings = new CreateInputRTMPPullSettings();
+            $this->RTMPPullSettings->deserialize($param["RTMPPullSettings"]);
+        }
+
+        if (array_key_exists("RTSPPullSettings",$param) and $param["RTSPPullSettings"] !== null) {
+            $this->RTSPPullSettings = new CreateInputRTSPPullSettings();
+            $this->RTSPPullSettings->deserialize($param["RTSPPullSettings"]);
+        }
+
+        if (array_key_exists("HLSPullSettings",$param) and $param["HLSPullSettings"] !== null) {
+            $this->HLSPullSettings = new CreateInputHLSPullSettings();
+            $this->HLSPullSettings->deserialize($param["HLSPullSettings"]);
+        }
+
+        if (array_key_exists("ResilientStream",$param) and $param["ResilientStream"] !== null) {
+            $this->ResilientStream = new ResilientStreamConf();
+            $this->ResilientStream->deserialize($param["ResilientStream"]);
+        }
+
+        if (array_key_exists("SecurityGroupIds",$param) and $param["SecurityGroupIds"] !== null) {
+            $this->SecurityGroupIds = $param["SecurityGroupIds"];
         }
     }
 }

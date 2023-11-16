@@ -60,6 +60,14 @@ Note: This field may return `null`, indicating that no valid value was found.
  * @method void setAllowIpList(array $AllowIpList) Set CIDR allowlist
 This parameter is valid if `Protocol` is set to `RTMP_PULL`. If this parameter is left empty, there is no restriction on clients’ IP addresses.
 Note: This field may return `null`, indicating that no valid value was found.
+ * @method DescribeOutputRTSPPullSettings getRTSPPullSettings() Obtain 
+ * @method void setRTSPPullSettings(DescribeOutputRTSPPullSettings $RTSPPullSettings) Set 
+ * @method DescribeOutputHLSPullSettings getHLSPullSettings() Obtain 
+ * @method void setHLSPullSettings(DescribeOutputHLSPullSettings $HLSPullSettings) Set 
+ * @method integer getMaxConcurrent() Obtain 
+ * @method void setMaxConcurrent(integer $MaxConcurrent) Set 
+ * @method array getSecurityGroupIds() Obtain The bound security group IDs.
+ * @method void setSecurityGroupIds(array $SecurityGroupIds) Set The bound security group IDs.
  */
 class DescribeOutput extends AbstractModel
 {
@@ -132,6 +140,26 @@ Note: This field may return `null`, indicating that no valid value was found.
     public $AllowIpList;
 
     /**
+     * @var DescribeOutputRTSPPullSettings 
+     */
+    public $RTSPPullSettings;
+
+    /**
+     * @var DescribeOutputHLSPullSettings 
+     */
+    public $HLSPullSettings;
+
+    /**
+     * @var integer 
+     */
+    public $MaxConcurrent;
+
+    /**
+     * @var array The bound security group IDs.
+     */
+    public $SecurityGroupIds;
+
+    /**
      * @param string $OutputId Output ID.
      * @param string $OutputName Output name.
      * @param string $OutputType Output type.
@@ -152,6 +180,10 @@ Note: This field may return `null`, indicating that no valid value was found.
      * @param array $AllowIpList CIDR allowlist
 This parameter is valid if `Protocol` is set to `RTMP_PULL`. If this parameter is left empty, there is no restriction on clients’ IP addresses.
 Note: This field may return `null`, indicating that no valid value was found.
+     * @param DescribeOutputRTSPPullSettings $RTSPPullSettings 
+     * @param DescribeOutputHLSPullSettings $HLSPullSettings 
+     * @param integer $MaxConcurrent 
+     * @param array $SecurityGroupIds The bound security group IDs.
      */
     function __construct()
     {
@@ -221,6 +253,24 @@ Note: This field may return `null`, indicating that no valid value was found.
 
         if (array_key_exists("AllowIpList",$param) and $param["AllowIpList"] !== null) {
             $this->AllowIpList = $param["AllowIpList"];
+        }
+
+        if (array_key_exists("RTSPPullSettings",$param) and $param["RTSPPullSettings"] !== null) {
+            $this->RTSPPullSettings = new DescribeOutputRTSPPullSettings();
+            $this->RTSPPullSettings->deserialize($param["RTSPPullSettings"]);
+        }
+
+        if (array_key_exists("HLSPullSettings",$param) and $param["HLSPullSettings"] !== null) {
+            $this->HLSPullSettings = new DescribeOutputHLSPullSettings();
+            $this->HLSPullSettings->deserialize($param["HLSPullSettings"]);
+        }
+
+        if (array_key_exists("MaxConcurrent",$param) and $param["MaxConcurrent"] !== null) {
+            $this->MaxConcurrent = $param["MaxConcurrent"];
+        }
+
+        if (array_key_exists("SecurityGroupIds",$param) and $param["SecurityGroupIds"] !== null) {
+            $this->SecurityGroupIds = $param["SecurityGroupIds"];
         }
     }
 }
