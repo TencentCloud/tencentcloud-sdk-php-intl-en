@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeCDNDomains response structure.
  *
- * @method array getDomainSet() Obtain 
- * @method void setDomainSet(array $DomainSet) Set 
- * @method integer getTotalCount() Obtain 
- * @method void setTotalCount(integer $TotalCount) Set 
+ * @method array getDomainSet() Obtain Domain information list.
+ * @method void setDomainSet(array $DomainSet) Set Domain information list.
+ * @method integer getTotalCount() Obtain The total number of CDN domains under the current application.
+ * @method void setTotalCount(integer $TotalCount) Set The total number of CDN domains under the current application.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 class DescribeCDNDomainsResponse extends AbstractModel
 {
     /**
-     * @var array 
+     * @var array Domain information list.
      */
     public $DomainSet;
 
     /**
-     * @var integer 
+     * @var integer The total number of CDN domains under the current application.
      */
     public $TotalCount;
 
@@ -45,8 +45,8 @@ class DescribeCDNDomainsResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $DomainSet 
-     * @param integer $TotalCount 
+     * @param array $DomainSet Domain information list.
+     * @param integer $TotalCount The total number of CDN domains under the current application.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()

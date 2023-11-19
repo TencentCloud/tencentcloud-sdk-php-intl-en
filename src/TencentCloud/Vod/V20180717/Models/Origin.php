@@ -20,52 +20,52 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Origin Server Configuration
  *
- * @method array getOrigins() Obtain 
- * @method void setOrigins(array $Origins) Set 
- * @method string getOriginType() Obtain 
- * @method void setOriginType(string $OriginType) Set 
- * @method string getServerName() Obtain 
- * @method void setServerName(string $ServerName) Set 
- * @method string getOriginPullProtocol() Obtain 
- * @method void setOriginPullProtocol(string $OriginPullProtocol) Set 
- * @method array getBackupOrigins() Obtain 
- * @method void setBackupOrigins(array $BackupOrigins) Set 
- * @method string getBackupOriginType() Obtain 
- * @method void setBackupOriginType(string $BackupOriginType) Set 
+ * @method array getOrigins() Obtain List of main origin sites. When modifying the main origin site, the corresponding OriginType needs to be filled in at the same time.
+ * @method void setOrigins(array $Origins) Set List of main origin sites. When modifying the main origin site, the corresponding OriginType needs to be filled in at the same time.
+ * @method string getOriginType() Obtain Main origin site type, input parameters support the following types: <li>domain: domain name type;</li> <li>ip: IP list as the origin site;</li> <li>third_party: third-party storage origin site . </li>
+ * @method void setOriginType(string $OriginType) Set Main origin site type, input parameters support the following types: <li>domain: domain name type;</li> <li>ip: IP list as the origin site;</li> <li>third_party: third-party storage origin site . </li>
+ * @method string getServerName() Obtain When returning to the main origin server, the Host header will default to the accelerated domain name if it is not filled in. When the origin server type is object storage, the ServerName field is required.
+ * @method void setServerName(string $ServerName) Set When returning to the main origin server, the Host header will default to the accelerated domain name if it is not filled in. When the origin server type is object storage, the ServerName field is required.
+ * @method string getOriginPullProtocol() Obtain Back-to-origin protocol configuration: <li>http: Forces HTTP back-to-origin;</li> <li>follow: The protocol follows back-to-origin;</li> <li>https: Forces https back-to-origin, and https back-to-origin only supports origin. Station port 443. </li>
+ * @method void setOriginPullProtocol(string $OriginPullProtocol) Set Back-to-origin protocol configuration: <li>http: Forces HTTP back-to-origin;</li> <li>follow: The protocol follows back-to-origin;</li> <li>https: Forces https back-to-origin, and https back-to-origin only supports origin. Station port 443. </li>
+ * @method array getBackupOrigins() Obtain Backup source site list. When modifying the backup origin site, the corresponding OriginType needs to be filled in at the same time.
+ * @method void setBackupOrigins(array $BackupOrigins) Set Backup source site list. When modifying the backup origin site, the corresponding OriginType needs to be filled in at the same time.
+ * @method string getBackupOriginType() Obtain Backup origin site type, input parameters support the following types: <li>domain: domain name type;</li> <li>ip: IP list as the origin site;</li> <li>third_party: third-party storage origin site . </li>
+ * @method void setBackupOriginType(string $BackupOriginType) Set Backup origin site type, input parameters support the following types: <li>domain: domain name type;</li> <li>ip: IP list as the origin site;</li> <li>third_party: third-party storage origin site . </li>
  * @method string getBackupServerName() Obtain Host header used when accessing the backup origin server. If it is left empty, the ServerName of primary origin server will be used by default. Note: This field may return null, indicating that no valid value can be obtained.
  * @method void setBackupServerName(string $BackupServerName) Set Host header used when accessing the backup origin server. If it is left empty, the ServerName of primary origin server will be used by default. Note: This field may return null, indicating that no valid value can be obtained.
- * @method string getOriginCompany() Obtain 
- * @method void setOriginCompany(string $OriginCompany) Set 
+ * @method string getOriginCompany() Obtain Object storage back to the origin vendor. Required when the origin site type is a third-party storage origin site (third_party). Optional values u200bu200binclude the following: <li>aws_s3: AWS S3;</li> <li>ali_oss: Alibaba Cloud OSS; </li> <li>hw_obs: Huawei OBS;</li> <li>others: object storage from other manufacturers, only supports object storage compatible with AWS signature algorithm, such as Tencent Cloud COS. </li>
+ * @method void setOriginCompany(string $OriginCompany) Set Object storage back to the origin vendor. Required when the origin site type is a third-party storage origin site (third_party). Optional values u200bu200binclude the following: <li>aws_s3: AWS S3;</li> <li>ali_oss: Alibaba Cloud OSS; </li> <li>hw_obs: Huawei OBS;</li> <li>others: object storage from other manufacturers, only supports object storage compatible with AWS signature algorithm, such as Tencent Cloud COS. </li>
  */
 class Origin extends AbstractModel
 {
     /**
-     * @var array 
+     * @var array List of main origin sites. When modifying the main origin site, the corresponding OriginType needs to be filled in at the same time.
      */
     public $Origins;
 
     /**
-     * @var string 
+     * @var string Main origin site type, input parameters support the following types: <li>domain: domain name type;</li> <li>ip: IP list as the origin site;</li> <li>third_party: third-party storage origin site . </li>
      */
     public $OriginType;
 
     /**
-     * @var string 
+     * @var string When returning to the main origin server, the Host header will default to the accelerated domain name if it is not filled in. When the origin server type is object storage, the ServerName field is required.
      */
     public $ServerName;
 
     /**
-     * @var string 
+     * @var string Back-to-origin protocol configuration: <li>http: Forces HTTP back-to-origin;</li> <li>follow: The protocol follows back-to-origin;</li> <li>https: Forces https back-to-origin, and https back-to-origin only supports origin. Station port 443. </li>
      */
     public $OriginPullProtocol;
 
     /**
-     * @var array 
+     * @var array Backup source site list. When modifying the backup origin site, the corresponding OriginType needs to be filled in at the same time.
      */
     public $BackupOrigins;
 
     /**
-     * @var string 
+     * @var string Backup origin site type, input parameters support the following types: <li>domain: domain name type;</li> <li>ip: IP list as the origin site;</li> <li>third_party: third-party storage origin site . </li>
      */
     public $BackupOriginType;
 
@@ -75,19 +75,19 @@ class Origin extends AbstractModel
     public $BackupServerName;
 
     /**
-     * @var string 
+     * @var string Object storage back to the origin vendor. Required when the origin site type is a third-party storage origin site (third_party). Optional values u200bu200binclude the following: <li>aws_s3: AWS S3;</li> <li>ali_oss: Alibaba Cloud OSS; </li> <li>hw_obs: Huawei OBS;</li> <li>others: object storage from other manufacturers, only supports object storage compatible with AWS signature algorithm, such as Tencent Cloud COS. </li>
      */
     public $OriginCompany;
 
     /**
-     * @param array $Origins 
-     * @param string $OriginType 
-     * @param string $ServerName 
-     * @param string $OriginPullProtocol 
-     * @param array $BackupOrigins 
-     * @param string $BackupOriginType 
+     * @param array $Origins List of main origin sites. When modifying the main origin site, the corresponding OriginType needs to be filled in at the same time.
+     * @param string $OriginType Main origin site type, input parameters support the following types: <li>domain: domain name type;</li> <li>ip: IP list as the origin site;</li> <li>third_party: third-party storage origin site . </li>
+     * @param string $ServerName When returning to the main origin server, the Host header will default to the accelerated domain name if it is not filled in. When the origin server type is object storage, the ServerName field is required.
+     * @param string $OriginPullProtocol Back-to-origin protocol configuration: <li>http: Forces HTTP back-to-origin;</li> <li>follow: The protocol follows back-to-origin;</li> <li>https: Forces https back-to-origin, and https back-to-origin only supports origin. Station port 443. </li>
+     * @param array $BackupOrigins Backup source site list. When modifying the backup origin site, the corresponding OriginType needs to be filled in at the same time.
+     * @param string $BackupOriginType Backup origin site type, input parameters support the following types: <li>domain: domain name type;</li> <li>ip: IP list as the origin site;</li> <li>third_party: third-party storage origin site . </li>
      * @param string $BackupServerName Host header used when accessing the backup origin server. If it is left empty, the ServerName of primary origin server will be used by default. Note: This field may return null, indicating that no valid value can be obtained.
-     * @param string $OriginCompany 
+     * @param string $OriginCompany Object storage back to the origin vendor. Required when the origin site type is a third-party storage origin site (third_party). Optional values u200bu200binclude the following: <li>aws_s3: AWS S3;</li> <li>ali_oss: Alibaba Cloud OSS; </li> <li>hw_obs: Huawei OBS;</li> <li>others: object storage from other manufacturers, only supports object storage compatible with AWS signature algorithm, such as Tencent Cloud COS. </li>
      */
     function __construct()
     {

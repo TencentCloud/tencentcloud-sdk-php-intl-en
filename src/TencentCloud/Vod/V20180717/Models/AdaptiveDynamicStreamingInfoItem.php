@@ -40,12 +40,18 @@ use TencentCloud\Common\AbstractModel;
 <li>If the file is an HLS file, the value of this parameter is the sum of the size of the M3U8 and TS files.</li>
 <li>If the file is a DASH file, the value of this parameter is the sum of the size of the MPD and segment files.</li>
 <li><font color=red>Note</font>: For adaptive bitrate streaming files generated before 2022-01-10T16:00:00Z, the value of this parameter is `0`.</li>
- * @method string getDigitalWatermarkType() Obtain 
- * @method void setDigitalWatermarkType(string $DigitalWatermarkType) Set 
+ * @method string getDigitalWatermarkType() Obtain Digital watermark type. Optional values:
+<li>Trace means traceability watermark processing; </li>
+<li>CopyRight means copyright watermark processing; </li>
+<li>None means no digital watermark processing. </li>
+ * @method void setDigitalWatermarkType(string $DigitalWatermarkType) Set Digital watermark type. Optional values:
+<li>Trace means traceability watermark processing; </li>
+<li>CopyRight means copyright watermark processing; </li>
+<li>None means no digital watermark processing. </li>
  * @method array getSubStreamSet() Obtain The information of the streams.
  * @method void setSubStreamSet(array $SubStreamSet) Set The information of the streams.
- * @method string getCopyRightWatermarkText() Obtain 
- * @method void setCopyRightWatermarkText(string $CopyRightWatermarkText) Set 
+ * @method string getCopyRightWatermarkText() Obtain Copyright Information.
+ * @method void setCopyRightWatermarkText(string $CopyRightWatermarkText) Set Copyright Information.
  */
 class AdaptiveDynamicStreamingInfoItem extends AbstractModel
 {
@@ -80,7 +86,10 @@ class AdaptiveDynamicStreamingInfoItem extends AbstractModel
     public $Size;
 
     /**
-     * @var string 
+     * @var string Digital watermark type. Optional values:
+<li>Trace means traceability watermark processing; </li>
+<li>CopyRight means copyright watermark processing; </li>
+<li>None means no digital watermark processing. </li>
      */
     public $DigitalWatermarkType;
 
@@ -90,7 +99,7 @@ class AdaptiveDynamicStreamingInfoItem extends AbstractModel
     public $SubStreamSet;
 
     /**
-     * @var string 
+     * @var string Copyright Information.
      */
     public $CopyRightWatermarkText;
 
@@ -105,9 +114,12 @@ class AdaptiveDynamicStreamingInfoItem extends AbstractModel
 <li>If the file is an HLS file, the value of this parameter is the sum of the size of the M3U8 and TS files.</li>
 <li>If the file is a DASH file, the value of this parameter is the sum of the size of the MPD and segment files.</li>
 <li><font color=red>Note</font>: For adaptive bitrate streaming files generated before 2022-01-10T16:00:00Z, the value of this parameter is `0`.</li>
-     * @param string $DigitalWatermarkType 
+     * @param string $DigitalWatermarkType Digital watermark type. Optional values:
+<li>Trace means traceability watermark processing; </li>
+<li>CopyRight means copyright watermark processing; </li>
+<li>None means no digital watermark processing. </li>
      * @param array $SubStreamSet The information of the streams.
-     * @param string $CopyRightWatermarkText 
+     * @param string $CopyRightWatermarkText Copyright Information.
      */
     function __construct()
     {

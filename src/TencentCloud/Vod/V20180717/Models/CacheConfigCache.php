@@ -20,21 +20,21 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Path cache configuration
  *
- * @method string getSwitch() Obtain 
- * @method void setSwitch(string $Switch) Set 
+ * @method string getSwitch() Obtain Path cache configuration switch, the values u200bu200bare: <li>on: on; </li> <li>off: off. </li>
+ * @method void setSwitch(string $Switch) Set Path cache configuration switch, the values u200bu200bare: <li>on: on; </li> <li>off: off. </li>
  * @method integer getCacheTime() Obtain Cache expiration time settings<li>Unit: second. The maximum value is 365 days.</li>
  * @method void setCacheTime(integer $CacheTime) Set Cache expiration time settings<li>Unit: second. The maximum value is 365 days.</li>
- * @method string getCompareMaxAge() Obtain 
- * @method void setCompareMaxAge(string $CompareMaxAge) Set 
- * @method string getIgnoreCacheControl() Obtain 
- * @method void setIgnoreCacheControl(string $IgnoreCacheControl) Set 
- * @method string getIgnoreSetCookie() Obtain 
- * @method void setIgnoreSetCookie(string $IgnoreSetCookie) Set 
+ * @method string getCompareMaxAge() Obtain Advanced cache expiration configuration. When enabled, the max-age value returned by the origin site will be compared with the cache expiration time set in CacheRules, and the minimum value will be used to cache the node. Values: <li>on: enabled; </li> <li >off: off. </li>
+ * @method void setCompareMaxAge(string $CompareMaxAge) Set Advanced cache expiration configuration. When enabled, the max-age value returned by the origin site will be compared with the cache expiration time set in CacheRules, and the minimum value will be used to cache the node. Values: <li>on: enabled; </li> <li >off: off. </li>
+ * @method string getIgnoreCacheControl() Obtain Force caching, values: <li>on: on; </li> <li>off: off. </li>
+ * @method void setIgnoreCacheControl(string $IgnoreCacheControl) Set Force caching, values: <li>on: on; </li> <li>off: off. </li>
+ * @method string getIgnoreSetCookie() Obtain When the origin site returns the Set-Cookie header, whether the node caches the header and body: <li>on: on, does not cache the header and body;</li> <li>off: off, follows user customization Node caching rules. </li>
+ * @method void setIgnoreSetCookie(string $IgnoreSetCookie) Set When the origin site returns the Set-Cookie header, whether the node caches the header and body: <li>on: on, does not cache the header and body;</li> <li>off: off, follows user customization Node caching rules. </li>
  */
 class CacheConfigCache extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Path cache configuration switch, the values u200bu200bare: <li>on: on; </li> <li>off: off. </li>
      */
     public $Switch;
 
@@ -44,26 +44,26 @@ class CacheConfigCache extends AbstractModel
     public $CacheTime;
 
     /**
-     * @var string 
+     * @var string Advanced cache expiration configuration. When enabled, the max-age value returned by the origin site will be compared with the cache expiration time set in CacheRules, and the minimum value will be used to cache the node. Values: <li>on: enabled; </li> <li >off: off. </li>
      */
     public $CompareMaxAge;
 
     /**
-     * @var string 
+     * @var string Force caching, values: <li>on: on; </li> <li>off: off. </li>
      */
     public $IgnoreCacheControl;
 
     /**
-     * @var string 
+     * @var string When the origin site returns the Set-Cookie header, whether the node caches the header and body: <li>on: on, does not cache the header and body;</li> <li>off: off, follows user customization Node caching rules. </li>
      */
     public $IgnoreSetCookie;
 
     /**
-     * @param string $Switch 
+     * @param string $Switch Path cache configuration switch, the values u200bu200bare: <li>on: on; </li> <li>off: off. </li>
      * @param integer $CacheTime Cache expiration time settings<li>Unit: second. The maximum value is 365 days.</li>
-     * @param string $CompareMaxAge 
-     * @param string $IgnoreCacheControl 
-     * @param string $IgnoreSetCookie 
+     * @param string $CompareMaxAge Advanced cache expiration configuration. When enabled, the max-age value returned by the origin site will be compared with the cache expiration time set in CacheRules, and the minimum value will be used to cache the node. Values: <li>on: enabled; </li> <li >off: off. </li>
+     * @param string $IgnoreCacheControl Force caching, values: <li>on: on; </li> <li>off: off. </li>
+     * @param string $IgnoreSetCookie When the origin site returns the Set-Cookie header, whether the node caches the header and body: <li>on: on, does not cache the header and body;</li> <li>off: off, follows user customization Node caching rules. </li>
      */
     function __construct()
     {

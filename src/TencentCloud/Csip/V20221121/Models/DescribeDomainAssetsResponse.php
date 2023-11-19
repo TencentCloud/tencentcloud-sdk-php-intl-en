@@ -28,9 +28,9 @@ Note: This field may return·null, indicating that no valid values can be obtain
 Note: This field may return·null, indicating that no valid values can be obtained.
  * @method void setData(array $Data) Set u200c-
 Note: This field may return·null, indicating that no valid values can be obtained.
- * @method array getDefenseStatusList() Obtain List of protection status
+ * @method array getDefenseStatusList() Obtain List of WAF protection status
 Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setDefenseStatusList(array $DefenseStatusList) Set List of protection status
+ * @method void setDefenseStatusList(array $DefenseStatusList) Set List of WAF protection status
 Note: This field may return·null, indicating that no valid values can be obtained.
  * @method array getAssetLocationList() Obtain List of asset locations
 Note: This field may return·null, indicating that no valid values can be obtained.
@@ -62,7 +62,7 @@ Note: This field may return·null, indicating that no valid values can be obtain
     public $Data;
 
     /**
-     * @var array List of protection status
+     * @var array List of WAF protection status
 Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public $DefenseStatusList;
@@ -95,7 +95,7 @@ Note: This field may return·null, indicating that no valid values can be obtain
 Note: This field may return·null, indicating that no valid values can be obtained.
      * @param array $Data u200c-
 Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param array $DefenseStatusList List of protection status
+     * @param array $DefenseStatusList List of WAF protection status
 Note: This field may return·null, indicating that no valid values can be obtained.
      * @param array $AssetLocationList List of asset locations
 Note: This field may return·null, indicating that no valid values can be obtained.

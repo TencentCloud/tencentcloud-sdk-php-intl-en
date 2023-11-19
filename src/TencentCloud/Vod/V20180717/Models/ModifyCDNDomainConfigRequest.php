@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyCDNDomainConfig request structure.
  *
- * @method string getDomain() Obtain 
- * @method void setDomain(string $Domain) Set 
- * @method CDNDomainConfigForUpdate getConfig() Obtain 
- * @method void setConfig(CDNDomainConfigForUpdate $Config) Set 
- * @method integer getSubAppId() Obtain 
- * @method void setSubAppId(integer $SubAppId) Set 
+ * @method string getDomain() Obtain Domain.
+ * @method void setDomain(string $Domain) Set Domain.
+ * @method CDNDomainConfigForUpdate getConfig() Obtain Domain Config.
+ * @method void setConfig(CDNDomainConfigForUpdate $Config) Set Domain Config.
+ * @method integer getSubAppId() Obtain VOD Application ID. If you want to access resources in a sub-app, fill in this field with the sub-app ID; otherwise, don't fill in this field.
+ * @method void setSubAppId(integer $SubAppId) Set VOD Application ID. If you want to access resources in a sub-app, fill in this field with the sub-app ID; otherwise, don't fill in this field.
  */
 class ModifyCDNDomainConfigRequest extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Domain.
      */
     public $Domain;
 
     /**
-     * @var CDNDomainConfigForUpdate 
+     * @var CDNDomainConfigForUpdate Domain Config.
      */
     public $Config;
 
     /**
-     * @var integer 
+     * @var integer VOD Application ID. If you want to access resources in a sub-app, fill in this field with the sub-app ID; otherwise, don't fill in this field.
      */
     public $SubAppId;
 
     /**
-     * @param string $Domain 
-     * @param CDNDomainConfigForUpdate $Config 
-     * @param integer $SubAppId 
+     * @param string $Domain Domain.
+     * @param CDNDomainConfigForUpdate $Config Domain Config.
+     * @param integer $SubAppId VOD Application ID. If you want to access resources in a sub-app, fill in this field with the sub-app ID; otherwise, don't fill in this field.
      */
     function __construct()
     {

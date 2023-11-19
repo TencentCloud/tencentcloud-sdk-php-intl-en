@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getSubAppId() Obtain <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
  * @method void setSubAppId(integer $SubAppId) Set <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
- * @method array getDefinitions() Obtain The IDs of the moderation templates to query. Array length limit: 100.
- * @method void setDefinitions(array $Definitions) Set The IDs of the moderation templates to query. Array length limit: 100.
+ * @method array getDefinitions() Obtain The audit template uniquely identifies the filtering conditions, and the array length limit is: 100.
+ * @method void setDefinitions(array $Definitions) Set The audit template uniquely identifies the filtering conditions, and the array length limit is: 100.
  * @method string getType() Obtain The template type. Valid values:
 <li>Preset</li>
 <li>Custom</li>
@@ -43,7 +43,7 @@ class DescribeReviewTemplatesRequest extends AbstractModel
     public $SubAppId;
 
     /**
-     * @var array The IDs of the moderation templates to query. Array length limit: 100.
+     * @var array The audit template uniquely identifies the filtering conditions, and the array length limit is: 100.
      */
     public $Definitions;
 
@@ -66,7 +66,7 @@ class DescribeReviewTemplatesRequest extends AbstractModel
 
     /**
      * @param integer $SubAppId <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
-     * @param array $Definitions The IDs of the moderation templates to query. Array length limit: 100.
+     * @param array $Definitions The audit template uniquely identifies the filtering conditions, and the array length limit is: 100.
      * @param string $Type The template type. Valid values:
 <li>Preset</li>
 <li>Custom</li>

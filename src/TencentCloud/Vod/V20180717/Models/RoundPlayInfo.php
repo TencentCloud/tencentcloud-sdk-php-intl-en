@@ -30,12 +30,24 @@ use TencentCloud\Common\AbstractModel;
  * @method void setName(string $Name) Set The playlist name (not longer than 64 characters).
  * @method string getDesc() Obtain The playlist description (not longer than 256 characters).
  * @method void setDesc(string $Desc) Set The playlist description (not longer than 256 characters).
- * @method string getStatus() Obtain 
- * @method void setStatus(string $Status) Set 
- * @method string getPlayBackMode() Obtain 
- * @method void setPlayBackMode(string $PlayBackMode) Set 
- * @method string getUrl() Obtain 
- * @method void setUrl(string $Url) Set 
+ * @method string getStatus() Obtain Playback status, optional values:
+<li>Enabled: startup status;</li>
+<li>Disabled: stop status. </li>
+Default value: Enabled.
+ * @method void setStatus(string $Status) Set Playback status, optional values:
+<li>Enabled: startup status;</li>
+<li>Disabled: stop status. </li>
+Default value: Enabled.
+ * @method string getPlayBackMode() Obtain Play mode, optional values:
+<li>Loop: Play the playlist in a loop;</li>
+<li>Linear: Play once, stop playing after the playlist is played. </li>
+Default value: Loop.
+ * @method void setPlayBackMode(string $PlayBackMode) Set Play mode, optional values:
+<li>Loop: Play the playlist in a loop;</li>
+<li>Linear: Play once, stop playing after the playlist is played. </li>
+Default value: Loop.
+ * @method string getUrl() Obtain Carousel playback address.
+ * @method void setUrl(string $Url) Set Carousel playback address.
  */
 class RoundPlayInfo extends AbstractModel
 {
@@ -65,17 +77,23 @@ class RoundPlayInfo extends AbstractModel
     public $Desc;
 
     /**
-     * @var string 
+     * @var string Playback status, optional values:
+<li>Enabled: startup status;</li>
+<li>Disabled: stop status. </li>
+Default value: Enabled.
      */
     public $Status;
 
     /**
-     * @var string 
+     * @var string Play mode, optional values:
+<li>Loop: Play the playlist in a loop;</li>
+<li>Linear: Play once, stop playing after the playlist is played. </li>
+Default value: Loop.
      */
     public $PlayBackMode;
 
     /**
-     * @var string 
+     * @var string Carousel playback address.
      */
     public $Url;
 
@@ -85,9 +103,15 @@ class RoundPlayInfo extends AbstractModel
      * @param array $RoundPlaylist The files on the list.
      * @param string $Name The playlist name (not longer than 64 characters).
      * @param string $Desc The playlist description (not longer than 256 characters).
-     * @param string $Status 
-     * @param string $PlayBackMode 
-     * @param string $Url 
+     * @param string $Status Playback status, optional values:
+<li>Enabled: startup status;</li>
+<li>Disabled: stop status. </li>
+Default value: Enabled.
+     * @param string $PlayBackMode Play mode, optional values:
+<li>Loop: Play the playlist in a loop;</li>
+<li>Linear: Play once, stop playing after the playlist is played. </li>
+Default value: Loop.
+     * @param string $Url Carousel playback address.
      */
     function __construct()
     {

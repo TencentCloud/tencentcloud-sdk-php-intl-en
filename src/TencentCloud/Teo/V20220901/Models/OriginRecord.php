@@ -22,50 +22,30 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getRecord() Obtain The origin record value, which can be an IPv4/IPv6 address or a domain name.
  * @method void setRecord(string $Record) Set The origin record value, which can be an IPv4/IPv6 address or a domain name.
+ * @method string getType() Obtain The origin type. Values:
+<li>`IP_DOMAIN`: IPv4/IPv6 address or domain name</li>
+<li>`COS`: COS bucket address</li>
+<li>`AWS_S3`: AWS S3 bucket address
+ * @method void setType(string $Type) Set The origin type. Values:
+<li>`IP_DOMAIN`: IPv4/IPv6 address or domain name</li>
+<li>`COS`: COS bucket address</li>
+<li>`AWS_S3`: AWS S3 bucket address
  * @method string getRecordId() Obtain The origin record ID.
  * @method void setRecordId(string $RecordId) Set The origin record ID.
- * @method integer getPort() Obtain The origin port. Value rang: 1-65535.
- * @method void setPort(integer $Port) Set The origin port. Value rang: 1-65535.
- * @method integer getWeight() Obtain The weight when `ConfigurationType=weight`.
-If 0 or no value is passed, the weight of each origin in a group will be 0 or left empty, indicating that origin-pull is performed by round-robin.
-If a value between 1-100 is passed, the total weight of multiple origins in a group should be 100, indicating that origin-pull is performed by weight.
-The weight when `ConfigurationType=proto`.
-If 0 or no value is passed, the weight of each origin in a group will be 0 or left empty, indicating that origin-pull is performed by round-robin.
-If a value between 1-100 is passed, the total weight of multiple origins with the same protocol in a group should be 100, indicating that origin-pull is performed by weight.
- * @method void setWeight(integer $Weight) Set The weight when `ConfigurationType=weight`.
-If 0 or no value is passed, the weight of each origin in a group will be 0 or left empty, indicating that origin-pull is performed by round-robin.
-If a value between 1-100 is passed, the total weight of multiple origins in a group should be 100, indicating that origin-pull is performed by weight.
-The weight when `ConfigurationType=proto`.
-If 0 or no value is passed, the weight of each origin in a group will be 0 or left empty, indicating that origin-pull is performed by round-robin.
-If a value between 1-100 is passed, the total weight of multiple origins with the same protocol in a group should be 100, indicating that origin-pull is performed by weight.
- * @method string getProto() Obtain The origin protocol when `ConfigurationType=proto`, indicating that origin-pull is performed by protocol.
-<li>`http`: HTTP protocol</li>
-<li>`https`: HTTPS protocol</li>
- * @method void setProto(string $Proto) Set The origin protocol when `ConfigurationType=proto`, indicating that origin-pull is performed by protocol.
-<li>`http`: HTTP protocol</li>
-<li>`https`: HTTPS protocol</li>
- * @method array getArea() Obtain The region when `ConfigurationType=area`, which is specified by country code (ISO 3166 alpha-2) or continent code. If not specified, it indicates all regions. Supported continent codes:
-<li>`Asia`</li>
-<li>`Europe`</li>
-<li>`Africa`</li>
-<li>`Oceania`</li>
-<li>`Americas`</li>An origin group must have at least one origin configured with all regions.
- * @method void setArea(array $Area) Set The region when `ConfigurationType=area`, which is specified by country code (ISO 3166 alpha-2) or continent code. If not specified, it indicates all regions. Supported continent codes:
-<li>`Asia`</li>
-<li>`Europe`</li>
-<li>`Africa`</li>
-<li>`Oceania`</li>
-<li>`Americas`</li>An origin group must have at least one origin configured with all regions.
- * @method boolean getPrivate() Obtain It is valid only when `OriginType=third_part`.
-Whether the origin group is private. Values:
+ * @method integer getWeight() Obtain Weight of an origin. Range: 0-100. If it is not specified, a random weight is assigned. If `0` is passed in, there is no traffic scheduled to this origin.
+Note: This field may return·null, indicating that no valid values can be obtained.
+ * @method void setWeight(integer $Weight) Set Weight of an origin. Range: 0-100. If it is not specified, a random weight is assigned. If `0` is passed in, there is no traffic scheduled to this origin.
+Note: This field may return·null, indicating that no valid values can be obtained.
+ * @method boolean getPrivate() Obtain Whether to enable private authentication. It is valid when `OriginType=COS/AWS_S3`. Values:
 <li>`true`: Yes.</li>
-<li>`false`: No.</li>If not specified, it defaults to false.
- * @method void setPrivate(boolean $Private) Set It is valid only when `OriginType=third_part`.
-Whether the origin group is private. Values:
+<li>`false`: No.</li>Default: `false`.
+
+ * @method void setPrivate(boolean $Private) Set Whether to enable private authentication. It is valid when `OriginType=COS/AWS_S3`. Values:
 <li>`true`: Yes.</li>
-<li>`false`: No.</li>If not specified, it defaults to false.
- * @method array getPrivateParameters() Obtain The authentication parameter, which is used when `Private=true`.
- * @method void setPrivateParameters(array $PrivateParameters) Set The authentication parameter, which is used when `Private=true`.
+<li>`false`: No.</li>Default: `false`.
+
+ * @method array getPrivateParameters() Obtain Private authentication parameters. This field is valid when `Private=true`.
+ * @method void setPrivateParameters(array $PrivateParameters) Set Private authentication parameters. This field is valid when `Private=true`.
  */
 class OriginRecord extends AbstractModel
 {
@@ -75,79 +55,51 @@ class OriginRecord extends AbstractModel
     public $Record;
 
     /**
+     * @var string The origin type. Values:
+<li>`IP_DOMAIN`: IPv4/IPv6 address or domain name</li>
+<li>`COS`: COS bucket address</li>
+<li>`AWS_S3`: AWS S3 bucket address
+     */
+    public $Type;
+
+    /**
      * @var string The origin record ID.
      */
     public $RecordId;
 
     /**
-     * @var integer The origin port. Value rang: 1-65535.
-     */
-    public $Port;
-
-    /**
-     * @var integer The weight when `ConfigurationType=weight`.
-If 0 or no value is passed, the weight of each origin in a group will be 0 or left empty, indicating that origin-pull is performed by round-robin.
-If a value between 1-100 is passed, the total weight of multiple origins in a group should be 100, indicating that origin-pull is performed by weight.
-The weight when `ConfigurationType=proto`.
-If 0 or no value is passed, the weight of each origin in a group will be 0 or left empty, indicating that origin-pull is performed by round-robin.
-If a value between 1-100 is passed, the total weight of multiple origins with the same protocol in a group should be 100, indicating that origin-pull is performed by weight.
+     * @var integer Weight of an origin. Range: 0-100. If it is not specified, a random weight is assigned. If `0` is passed in, there is no traffic scheduled to this origin.
+Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public $Weight;
 
     /**
-     * @var string The origin protocol when `ConfigurationType=proto`, indicating that origin-pull is performed by protocol.
-<li>`http`: HTTP protocol</li>
-<li>`https`: HTTPS protocol</li>
-     */
-    public $Proto;
-
-    /**
-     * @var array The region when `ConfigurationType=area`, which is specified by country code (ISO 3166 alpha-2) or continent code. If not specified, it indicates all regions. Supported continent codes:
-<li>`Asia`</li>
-<li>`Europe`</li>
-<li>`Africa`</li>
-<li>`Oceania`</li>
-<li>`Americas`</li>An origin group must have at least one origin configured with all regions.
-     */
-    public $Area;
-
-    /**
-     * @var boolean It is valid only when `OriginType=third_part`.
-Whether the origin group is private. Values:
+     * @var boolean Whether to enable private authentication. It is valid when `OriginType=COS/AWS_S3`. Values:
 <li>`true`: Yes.</li>
-<li>`false`: No.</li>If not specified, it defaults to false.
+<li>`false`: No.</li>Default: `false`.
+
      */
     public $Private;
 
     /**
-     * @var array The authentication parameter, which is used when `Private=true`.
+     * @var array Private authentication parameters. This field is valid when `Private=true`.
      */
     public $PrivateParameters;
 
     /**
      * @param string $Record The origin record value, which can be an IPv4/IPv6 address or a domain name.
+     * @param string $Type The origin type. Values:
+<li>`IP_DOMAIN`: IPv4/IPv6 address or domain name</li>
+<li>`COS`: COS bucket address</li>
+<li>`AWS_S3`: AWS S3 bucket address
      * @param string $RecordId The origin record ID.
-     * @param integer $Port The origin port. Value rang: 1-65535.
-     * @param integer $Weight The weight when `ConfigurationType=weight`.
-If 0 or no value is passed, the weight of each origin in a group will be 0 or left empty, indicating that origin-pull is performed by round-robin.
-If a value between 1-100 is passed, the total weight of multiple origins in a group should be 100, indicating that origin-pull is performed by weight.
-The weight when `ConfigurationType=proto`.
-If 0 or no value is passed, the weight of each origin in a group will be 0 or left empty, indicating that origin-pull is performed by round-robin.
-If a value between 1-100 is passed, the total weight of multiple origins with the same protocol in a group should be 100, indicating that origin-pull is performed by weight.
-     * @param string $Proto The origin protocol when `ConfigurationType=proto`, indicating that origin-pull is performed by protocol.
-<li>`http`: HTTP protocol</li>
-<li>`https`: HTTPS protocol</li>
-     * @param array $Area The region when `ConfigurationType=area`, which is specified by country code (ISO 3166 alpha-2) or continent code. If not specified, it indicates all regions. Supported continent codes:
-<li>`Asia`</li>
-<li>`Europe`</li>
-<li>`Africa`</li>
-<li>`Oceania`</li>
-<li>`Americas`</li>An origin group must have at least one origin configured with all regions.
-     * @param boolean $Private It is valid only when `OriginType=third_part`.
-Whether the origin group is private. Values:
+     * @param integer $Weight Weight of an origin. Range: 0-100. If it is not specified, a random weight is assigned. If `0` is passed in, there is no traffic scheduled to this origin.
+Note: This field may return·null, indicating that no valid values can be obtained.
+     * @param boolean $Private Whether to enable private authentication. It is valid when `OriginType=COS/AWS_S3`. Values:
 <li>`true`: Yes.</li>
-<li>`false`: No.</li>If not specified, it defaults to false.
-     * @param array $PrivateParameters The authentication parameter, which is used when `Private=true`.
+<li>`false`: No.</li>Default: `false`.
+
+     * @param array $PrivateParameters Private authentication parameters. This field is valid when `Private=true`.
      */
     function __construct()
     {
@@ -166,24 +118,16 @@ Whether the origin group is private. Values:
             $this->Record = $param["Record"];
         }
 
+        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
+            $this->Type = $param["Type"];
+        }
+
         if (array_key_exists("RecordId",$param) and $param["RecordId"] !== null) {
             $this->RecordId = $param["RecordId"];
         }
 
-        if (array_key_exists("Port",$param) and $param["Port"] !== null) {
-            $this->Port = $param["Port"];
-        }
-
         if (array_key_exists("Weight",$param) and $param["Weight"] !== null) {
             $this->Weight = $param["Weight"];
-        }
-
-        if (array_key_exists("Proto",$param) and $param["Proto"] !== null) {
-            $this->Proto = $param["Proto"];
-        }
-
-        if (array_key_exists("Area",$param) and $param["Area"] !== null) {
-            $this->Area = $param["Area"];
         }
 
         if (array_key_exists("Private",$param) and $param["Private"] !== null) {

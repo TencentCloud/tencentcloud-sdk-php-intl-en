@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getFileId() Obtain Video ID.
  * @method void setFileId(string $FileId) Set Video ID.
- * @method float getStartTimeOffset() Obtain 
- * @method void setStartTimeOffset(float $StartTimeOffset) Set 
- * @method float getEndTimeOffset() Obtain 
- * @method void setEndTimeOffset(float $EndTimeOffset) Set 
+ * @method float getStartTimeOffset() Obtain Offset time of the start of the video clip, unit: seconds.
+ * @method void setStartTimeOffset(float $StartTimeOffset) Set Offset time of the start of the video clip, unit: seconds.
+ * @method float getEndTimeOffset() Obtain Offset time at the end of the video clip, unit: seconds.
+ * @method void setEndTimeOffset(float $EndTimeOffset) Set Offset time at the end of the video clip, unit: seconds.
  */
 class EditMediaFileInfo extends AbstractModel
 {
@@ -35,19 +35,19 @@ class EditMediaFileInfo extends AbstractModel
     public $FileId;
 
     /**
-     * @var float 
+     * @var float Offset time of the start of the video clip, unit: seconds.
      */
     public $StartTimeOffset;
 
     /**
-     * @var float 
+     * @var float Offset time at the end of the video clip, unit: seconds.
      */
     public $EndTimeOffset;
 
     /**
      * @param string $FileId Video ID.
-     * @param float $StartTimeOffset 
-     * @param float $EndTimeOffset 
+     * @param float $StartTimeOffset Offset time of the start of the video clip, unit: seconds.
+     * @param float $EndTimeOffset Offset time at the end of the video clip, unit: seconds.
      */
     function __construct()
     {

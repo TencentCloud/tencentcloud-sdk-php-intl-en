@@ -38,9 +38,9 @@ Note: This field may return·null, indicating that no valid values can be obtain
 Note: This field may return·null, indicating that no valid values can be obtained.
  * @method void setRegion(string $Region) Set Region
 Note: This field may return·null, indicating that no valid values can be obtained.
- * @method string getArn() Obtain Unique ID of Multi-cloud asset
+ * @method string getArn() Obtain The ID specific for an asset synched from another cloud platform
 Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setArn(string $Arn) Set Unique ID of Multi-cloud asset
+ * @method void setArn(string $Arn) Set The ID specific for an asset synched from another cloud platform
 Note: This field may return·null, indicating that no valid values can be obtained.
  */
 class TaskAssetObject extends AbstractModel
@@ -75,7 +75,7 @@ Note: This field may return·null, indicating that no valid values can be obtain
     public $Region;
 
     /**
-     * @var string Unique ID of Multi-cloud asset
+     * @var string The ID specific for an asset synched from another cloud platform
 Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public $Arn;
@@ -90,7 +90,7 @@ Note: This field may return·null, indicating that no valid values can be obtain
      * @param string $Asset IP, domain name, asset ID, database ID, and more
      * @param string $Region Region
 Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param string $Arn Unique ID of Multi-cloud asset
+     * @param string $Arn The ID specific for an asset synched from another cloud platform
 Note: This field may return·null, indicating that no valid values can be obtained.
      */
     function __construct()

@@ -22,16 +22,16 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getFileId() Obtain The file ID.
  * @method void setFileId(string $FileId) Set The file ID.
- * @method integer getDefinition() Obtain The remaster template ID.
- * @method void setDefinition(integer $Definition) Set The remaster template ID.
+ * @method integer getDefinition() Obtain Rebuild Media Template ID.
+ * @method void setDefinition(integer $Definition) Set Rebuild Media Template ID.
  * @method string getSubAppId() Obtain <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
  * @method void setSubAppId(string $SubAppId) Set <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
  * @method float getStartTimeOffset() Obtain The start offset (seconds). If you do not specify this, the segment will start from the beginning of the video.
  * @method void setStartTimeOffset(float $StartTimeOffset) Set The start offset (seconds). If you do not specify this, the segment will start from the beginning of the video.
  * @method float getEndTimeOffset() Obtain The end offset (seconds). If you do not specify this, the segment will end at the end of the video.
  * @method void setEndTimeOffset(float $EndTimeOffset) Set The end offset (seconds). If you do not specify this, the segment will end at the end of the video.
- * @method RebuildMediaOutputConfig getOutputConfig() Obtain 
- * @method void setOutputConfig(RebuildMediaOutputConfig $OutputConfig) Set 
+ * @method RebuildMediaOutputConfig getOutputConfig() Obtain New file configuration after rebuild.
+ * @method void setOutputConfig(RebuildMediaOutputConfig $OutputConfig) Set New file configuration after rebuild.
  * @method string getSessionId() Obtain The session ID, which is used for de-duplication. If there was a request with the same session ID in the last three days, an error will be returned for the current request. The session ID can contain up to 50 characters. If you do not pass this parameter or pass in an empty string, duplicate sessions will not be identified.
  * @method void setSessionId(string $SessionId) Set The session ID, which is used for de-duplication. If there was a request with the same session ID in the last three days, an error will be returned for the current request. The session ID can contain up to 50 characters. If you do not pass this parameter or pass in an empty string, duplicate sessions will not be identified.
  * @method string getSessionContext() Obtain The source context, which is used to pass through user request information. The `ProcedureStateChanged` callback will return the value of this parameter. It can contain up to 1,000 characters.
@@ -49,7 +49,7 @@ class RebuildMediaByTemplateRequest extends AbstractModel
     public $FileId;
 
     /**
-     * @var integer The remaster template ID.
+     * @var integer Rebuild Media Template ID.
      */
     public $Definition;
 
@@ -69,7 +69,7 @@ class RebuildMediaByTemplateRequest extends AbstractModel
     public $EndTimeOffset;
 
     /**
-     * @var RebuildMediaOutputConfig 
+     * @var RebuildMediaOutputConfig New file configuration after rebuild.
      */
     public $OutputConfig;
 
@@ -95,11 +95,11 @@ class RebuildMediaByTemplateRequest extends AbstractModel
 
     /**
      * @param string $FileId The file ID.
-     * @param integer $Definition The remaster template ID.
+     * @param integer $Definition Rebuild Media Template ID.
      * @param string $SubAppId <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
      * @param float $StartTimeOffset The start offset (seconds). If you do not specify this, the segment will start from the beginning of the video.
      * @param float $EndTimeOffset The end offset (seconds). If you do not specify this, the segment will end at the end of the video.
-     * @param RebuildMediaOutputConfig $OutputConfig 
+     * @param RebuildMediaOutputConfig $OutputConfig New file configuration after rebuild.
      * @param string $SessionId The session ID, which is used for de-duplication. If there was a request with the same session ID in the last three days, an error will be returned for the current request. The session ID can contain up to 50 characters. If you do not pass this parameter or pass in an empty string, duplicate sessions will not be identified.
      * @param string $SessionContext The source context, which is used to pass through user request information. The `ProcedureStateChanged` callback will return the value of this parameter. It can contain up to 1,000 characters.
      * @param integer $TasksPriority The task priority, which can be a value from -10 to 10. The higher the value, the higher the priority. If this parameter is left empty, 0 will be used.

@@ -36,8 +36,38 @@ The value is set according to query period length by default. 5-minute granulari
 <li>Minute: 5-minute granularity</li>
 <li>Day: 1-day granularity</li>
 The value is set according to query period length by default. 5-minute granularity is set for periods no longer than 1 day, and 1-day granularity is set for periods longer than 1 day.
- * @method string getStorageType() Obtain 
- * @method void setStorageType(string $StorageType) Set 
+ * @method string getStorageType() Obtain Queryed storage type, valid values:
+<li>TotalStorage: total storage amount, the sum of standard, low-frequency, archive and deep archive storage amounts, excluding early deletion amount. </li>
+<li>StandardStorage: Standard storage. </li>
+<li>InfrequentStorage: low-frequency storage. </li>
+<li>ArchiveStorage: archive storage. </li>
+<li>DeepArchiveStorage: deep archive storage. </li>
+<li>DeletedInfrequentStorage: The amount of early deletion of low-frequency storage. </li>
+<li>DeletedArchiveStorage: The amount of archives deleted in advance. </li>
+<li>DeletedDeepArchiveStorage: The amount of deep archive deletion in advance. 
+<li>ArchiveStandardRetrieval: Archive standard retrieval amount. </li>
+<li>ArchiveExpeditedRetrieval: archive quick retrieval amount. </li>
+<li>ArchiveBulkRetrieval: Archive batch retrieval amount. </li>
+<li>DeepArchiveStandardRetrieval: Deep archive standard retrieval amount. </li>
+<li>DeepArchiveBulkRetrieval: Deep archive batch retrieval amount. </li>
+<li>InfrequentRetrieval: Low-frequency storage retrieval amount. </li>
+The default value is TotalStorage.
+ * @method void setStorageType(string $StorageType) Set Queryed storage type, valid values:
+<li>TotalStorage: total storage amount, the sum of standard, low-frequency, archive and deep archive storage amounts, excluding early deletion amount. </li>
+<li>StandardStorage: Standard storage. </li>
+<li>InfrequentStorage: low-frequency storage. </li>
+<li>ArchiveStorage: archive storage. </li>
+<li>DeepArchiveStorage: deep archive storage. </li>
+<li>DeletedInfrequentStorage: The amount of early deletion of low-frequency storage. </li>
+<li>DeletedArchiveStorage: The amount of archives deleted in advance. </li>
+<li>DeletedDeepArchiveStorage: The amount of deep archive deletion in advance. 
+<li>ArchiveStandardRetrieval: Archive standard retrieval amount. </li>
+<li>ArchiveExpeditedRetrieval: archive quick retrieval amount. </li>
+<li>ArchiveBulkRetrieval: Archive batch retrieval amount. </li>
+<li>DeepArchiveStandardRetrieval: Deep archive standard retrieval amount. </li>
+<li>DeepArchiveBulkRetrieval: Deep archive batch retrieval amount. </li>
+<li>InfrequentRetrieval: Low-frequency storage retrieval amount. </li>
+The default value is TotalStorage.
  * @method string getArea() Obtain Storage region to query. Valid values:
 <li>Chinese Mainland</li>
 <li>Outside Chinese Mainland</li>
@@ -74,7 +104,22 @@ The value is set according to query period length by default. 5-minute granulari
     public $Interval;
 
     /**
-     * @var string 
+     * @var string Queryed storage type, valid values:
+<li>TotalStorage: total storage amount, the sum of standard, low-frequency, archive and deep archive storage amounts, excluding early deletion amount. </li>
+<li>StandardStorage: Standard storage. </li>
+<li>InfrequentStorage: low-frequency storage. </li>
+<li>ArchiveStorage: archive storage. </li>
+<li>DeepArchiveStorage: deep archive storage. </li>
+<li>DeletedInfrequentStorage: The amount of early deletion of low-frequency storage. </li>
+<li>DeletedArchiveStorage: The amount of archives deleted in advance. </li>
+<li>DeletedDeepArchiveStorage: The amount of deep archive deletion in advance. 
+<li>ArchiveStandardRetrieval: Archive standard retrieval amount. </li>
+<li>ArchiveExpeditedRetrieval: archive quick retrieval amount. </li>
+<li>ArchiveBulkRetrieval: Archive batch retrieval amount. </li>
+<li>DeepArchiveStandardRetrieval: Deep archive standard retrieval amount. </li>
+<li>DeepArchiveBulkRetrieval: Deep archive batch retrieval amount. </li>
+<li>InfrequentRetrieval: Low-frequency storage retrieval amount. </li>
+The default value is TotalStorage.
      */
     public $StorageType;
 
@@ -95,7 +140,22 @@ You can set this parameter to 1 to query the total usage of all applications (in
 <li>Minute: 5-minute granularity</li>
 <li>Day: 1-day granularity</li>
 The value is set according to query period length by default. 5-minute granularity is set for periods no longer than 1 day, and 1-day granularity is set for periods longer than 1 day.
-     * @param string $StorageType 
+     * @param string $StorageType Queryed storage type, valid values:
+<li>TotalStorage: total storage amount, the sum of standard, low-frequency, archive and deep archive storage amounts, excluding early deletion amount. </li>
+<li>StandardStorage: Standard storage. </li>
+<li>InfrequentStorage: low-frequency storage. </li>
+<li>ArchiveStorage: archive storage. </li>
+<li>DeepArchiveStorage: deep archive storage. </li>
+<li>DeletedInfrequentStorage: The amount of early deletion of low-frequency storage. </li>
+<li>DeletedArchiveStorage: The amount of archives deleted in advance. </li>
+<li>DeletedDeepArchiveStorage: The amount of deep archive deletion in advance. 
+<li>ArchiveStandardRetrieval: Archive standard retrieval amount. </li>
+<li>ArchiveExpeditedRetrieval: archive quick retrieval amount. </li>
+<li>ArchiveBulkRetrieval: Archive batch retrieval amount. </li>
+<li>DeepArchiveStandardRetrieval: Deep archive standard retrieval amount. </li>
+<li>DeepArchiveBulkRetrieval: Deep archive batch retrieval amount. </li>
+<li>InfrequentRetrieval: Low-frequency storage retrieval amount. </li>
+The default value is TotalStorage.
      * @param string $Area Storage region to query. Valid values:
 <li>Chinese Mainland</li>
 <li>Outside Chinese Mainland</li>

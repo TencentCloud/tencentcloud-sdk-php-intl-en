@@ -22,26 +22,30 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getRuleName() Obtain 
  * @method void setRuleName(string $RuleName) Set 
- * @method string getAction() Obtain Action. Valid values: 
-<li>`drop`: Block;</li>
-<li>`monitor`: Observe;</li>
-<li>`trans`: Allow;</li>
-<li>`alg`: JavaScript challenge;</li>
-<li>`captcha`: Managed challenge;</li>
-<li>`random`: Random action;</li>
-<li>`silence`: Silence;</li>
-<li>`shortdelay`: Add short latency;</li>
-<li>`longdelay`: Add long latency.</li>
- * @method void setAction(string $Action) Set Action. Valid values: 
-<li>`drop`: Block;</li>
-<li>`monitor`: Observe;</li>
-<li>`trans`: Allow;</li>
-<li>`alg`: JavaScript challenge;</li>
-<li>`captcha`: Managed challenge;</li>
-<li>`random`: Random action;</li>
-<li>`silence`: Silence;</li>
-<li>`shortdelay`: Add short latency;</li>
-<li>`longdelay`: Add long latency.</li>
+ * @method string getAction() Obtain The action. Values:
+<li>`drop`: Block the request</li>
+<li>`monitor`: Observe</li>
+<li>`trans`: Allow</li>
+<li>`redirect`: Redirect the request</li>
+<li>`page`: Return the specified page</li>
+<li>`alg`: JavaScript challenge</li>
+<li>`captcha`: Managed challenge</li>
+<li>`random`: Handle the request randomly by the weight</li>
+<li>`silence`: Keep the connection but do not response to the client</li>
+<li>`shortdelay`: Add a short latency period</li>
+<li>`longdelay`: Add a long latency period</li>
+ * @method void setAction(string $Action) Set The action. Values:
+<li>`drop`: Block the request</li>
+<li>`monitor`: Observe</li>
+<li>`trans`: Allow</li>
+<li>`redirect`: Redirect the request</li>
+<li>`page`: Return the specified page</li>
+<li>`alg`: JavaScript challenge</li>
+<li>`captcha`: Managed challenge</li>
+<li>`random`: Handle the request randomly by the weight</li>
+<li>`silence`: Keep the connection but do not response to the client</li>
+<li>`shortdelay`: Add a short latency period</li>
+<li>`longdelay`: Add a long latency period</li>
  * @method string getRuleStatus() Obtain The rule status. Values:
 <li>`on`: Enabled</li>
 <li>`off`: Disabled</li>Default value: `on`
@@ -52,30 +56,34 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAclConditions(array $AclConditions) Set Details of the rule.
  * @method integer getRulePriority() Obtain The rule weight. Value range: 0-100.
  * @method void setRulePriority(integer $RulePriority) Set The rule weight. Value range: 0-100.
- * @method integer getRuleID() Obtain The rule ID, which is only used as an output parameter.
-Note: This field may return `null`, indicating that no valid values can be obtained.
- * @method void setRuleID(integer $RuleID) Set The rule ID, which is only used as an output parameter.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method integer getRuleID() Obtain Rule ID, which is only used as an output parameter.
+ * @method void setRuleID(integer $RuleID) Set Rule ID, which is only used as an output parameter.
  * @method array getExtendActions() Obtain [Currently unavailable] Specify the random action and percentage.
  * @method void setExtendActions(array $ExtendActions) Set [Currently unavailable] Specify the random action and percentage.
  * @method array getFreqFields() Obtain The filter. Values:
 <li>`sip`: Client IP</li>
-Note: This field may return `null`, indicating that no valid values can be obtained.
+This parameter is left empty by default.
  * @method void setFreqFields(array $FreqFields) Set The filter. Values:
 <li>`sip`: Client IP</li>
-Note: This field may return `null`, indicating that no valid values can be obtained.
- * @method string getUpdateTime() Obtain Updated time
-Note: This field may return `null`, indicating that no valid values can be obtained.
- * @method void setUpdateTime(string $UpdateTime) Set Updated time
-Note: This field may return `null`, indicating that no valid values can be obtained.
- * @method array getFreqScope() Obtain The statistical dimension. Values:
-<li>`source_to_eo`: Responses from the origin server to EdgeOne</li>
-<li>`client_to_eo`: Requests from the client to EdgeOne</li>
-Note: This field may return `null`, indicating that no valid values can be obtained.
- * @method void setFreqScope(array $FreqScope) Set The statistical dimension. Values:
-<li>`source_to_eo`: Responses from the origin server to EdgeOne</li>
-<li>`client_to_eo`: Requests from the client to EdgeOne</li>
-Note: This field may return `null`, indicating that no valid values can be obtained.
+This parameter is left empty by default.
+ * @method string getUpdateTime() Obtain The update time, which is only used as an output parameter.
+ * @method void setUpdateTime(string $UpdateTime) Set The update time, which is only used as an output parameter.
+ * @method array getFreqScope() Obtain Query scope. Values:
+<li>`source_to_eo`: (Response) Traffic going from the origin to EdgeOne.</li>
+<li>`client_to_eo`: (Request) Traffic going from the client to EdgeOne.</li>
+Default: `source_to_eo`.
+ * @method void setFreqScope(array $FreqScope) Set Query scope. Values:
+<li>`source_to_eo`: (Response) Traffic going from the origin to EdgeOne.</li>
+<li>`client_to_eo`: (Request) Traffic going from the client to EdgeOne.</li>
+Default: `source_to_eo`.
+ * @method string getName() Obtain Name of the custom return page. It's required when `Action=page`.
+ * @method void setName(string $Name) Set Name of the custom return page. It's required when `Action=page`.
+ * @method string getCustomResponseId() Obtain ID of custom response. The ID can be obtained via the `DescribeCustomErrorPages` API. It's required when `Action=page`.	
+ * @method void setCustomResponseId(string $CustomResponseId) Set ID of custom response. The ID can be obtained via the `DescribeCustomErrorPages` API. It's required when `Action=page`.	
+ * @method integer getResponseCode() Obtain The response code to trigger the return page. It's required when `Action=page`. Value: 100-600. 3xx response codes are not supported. Default value: 567.
+ * @method void setResponseCode(integer $ResponseCode) Set The response code to trigger the return page. It's required when `Action=page`. Value: 100-600. 3xx response codes are not supported. Default value: 567.
+ * @method string getRedirectUrl() Obtain The redirection URL. It's required when `Action=redirect`.
+ * @method void setRedirectUrl(string $RedirectUrl) Set The redirection URL. It's required when `Action=redirect`.
  */
 class BotUserRule extends AbstractModel
 {
@@ -85,16 +93,18 @@ class BotUserRule extends AbstractModel
     public $RuleName;
 
     /**
-     * @var string Action. Valid values: 
-<li>`drop`: Block;</li>
-<li>`monitor`: Observe;</li>
-<li>`trans`: Allow;</li>
-<li>`alg`: JavaScript challenge;</li>
-<li>`captcha`: Managed challenge;</li>
-<li>`random`: Random action;</li>
-<li>`silence`: Silence;</li>
-<li>`shortdelay`: Add short latency;</li>
-<li>`longdelay`: Add long latency.</li>
+     * @var string The action. Values:
+<li>`drop`: Block the request</li>
+<li>`monitor`: Observe</li>
+<li>`trans`: Allow</li>
+<li>`redirect`: Redirect the request</li>
+<li>`page`: Return the specified page</li>
+<li>`alg`: JavaScript challenge</li>
+<li>`captcha`: Managed challenge</li>
+<li>`random`: Handle the request randomly by the weight</li>
+<li>`silence`: Keep the connection but do not response to the client</li>
+<li>`shortdelay`: Add a short latency period</li>
+<li>`longdelay`: Add a long latency period</li>
      */
     public $Action;
 
@@ -116,8 +126,7 @@ class BotUserRule extends AbstractModel
     public $RulePriority;
 
     /**
-     * @var integer The rule ID, which is only used as an output parameter.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @var integer Rule ID, which is only used as an output parameter.
      */
     public $RuleID;
 
@@ -129,53 +138,76 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     /**
      * @var array The filter. Values:
 <li>`sip`: Client IP</li>
-Note: This field may return `null`, indicating that no valid values can be obtained.
+This parameter is left empty by default.
      */
     public $FreqFields;
 
     /**
-     * @var string Updated time
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @var string The update time, which is only used as an output parameter.
      */
     public $UpdateTime;
 
     /**
-     * @var array The statistical dimension. Values:
-<li>`source_to_eo`: Responses from the origin server to EdgeOne</li>
-<li>`client_to_eo`: Requests from the client to EdgeOne</li>
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @var array Query scope. Values:
+<li>`source_to_eo`: (Response) Traffic going from the origin to EdgeOne.</li>
+<li>`client_to_eo`: (Request) Traffic going from the client to EdgeOne.</li>
+Default: `source_to_eo`.
      */
     public $FreqScope;
 
     /**
+     * @var string Name of the custom return page. It's required when `Action=page`.
+     */
+    public $Name;
+
+    /**
+     * @var string ID of custom response. The ID can be obtained via the `DescribeCustomErrorPages` API. It's required when `Action=page`.	
+     */
+    public $CustomResponseId;
+
+    /**
+     * @var integer The response code to trigger the return page. It's required when `Action=page`. Value: 100-600. 3xx response codes are not supported. Default value: 567.
+     */
+    public $ResponseCode;
+
+    /**
+     * @var string The redirection URL. It's required when `Action=redirect`.
+     */
+    public $RedirectUrl;
+
+    /**
      * @param string $RuleName 
-     * @param string $Action Action. Valid values: 
-<li>`drop`: Block;</li>
-<li>`monitor`: Observe;</li>
-<li>`trans`: Allow;</li>
-<li>`alg`: JavaScript challenge;</li>
-<li>`captcha`: Managed challenge;</li>
-<li>`random`: Random action;</li>
-<li>`silence`: Silence;</li>
-<li>`shortdelay`: Add short latency;</li>
-<li>`longdelay`: Add long latency.</li>
+     * @param string $Action The action. Values:
+<li>`drop`: Block the request</li>
+<li>`monitor`: Observe</li>
+<li>`trans`: Allow</li>
+<li>`redirect`: Redirect the request</li>
+<li>`page`: Return the specified page</li>
+<li>`alg`: JavaScript challenge</li>
+<li>`captcha`: Managed challenge</li>
+<li>`random`: Handle the request randomly by the weight</li>
+<li>`silence`: Keep the connection but do not response to the client</li>
+<li>`shortdelay`: Add a short latency period</li>
+<li>`longdelay`: Add a long latency period</li>
      * @param string $RuleStatus The rule status. Values:
 <li>`on`: Enabled</li>
 <li>`off`: Disabled</li>Default value: `on`
      * @param array $AclConditions Details of the rule.
      * @param integer $RulePriority The rule weight. Value range: 0-100.
-     * @param integer $RuleID The rule ID, which is only used as an output parameter.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param integer $RuleID Rule ID, which is only used as an output parameter.
      * @param array $ExtendActions [Currently unavailable] Specify the random action and percentage.
      * @param array $FreqFields The filter. Values:
 <li>`sip`: Client IP</li>
-Note: This field may return `null`, indicating that no valid values can be obtained.
-     * @param string $UpdateTime Updated time
-Note: This field may return `null`, indicating that no valid values can be obtained.
-     * @param array $FreqScope The statistical dimension. Values:
-<li>`source_to_eo`: Responses from the origin server to EdgeOne</li>
-<li>`client_to_eo`: Requests from the client to EdgeOne</li>
-Note: This field may return `null`, indicating that no valid values can be obtained.
+This parameter is left empty by default.
+     * @param string $UpdateTime The update time, which is only used as an output parameter.
+     * @param array $FreqScope Query scope. Values:
+<li>`source_to_eo`: (Response) Traffic going from the origin to EdgeOne.</li>
+<li>`client_to_eo`: (Request) Traffic going from the client to EdgeOne.</li>
+Default: `source_to_eo`.
+     * @param string $Name Name of the custom return page. It's required when `Action=page`.
+     * @param string $CustomResponseId ID of custom response. The ID can be obtained via the `DescribeCustomErrorPages` API. It's required when `Action=page`.	
+     * @param integer $ResponseCode The response code to trigger the return page. It's required when `Action=page`. Value: 100-600. 3xx response codes are not supported. Default value: 567.
+     * @param string $RedirectUrl The redirection URL. It's required when `Action=redirect`.
      */
     function __construct()
     {
@@ -238,6 +270,22 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 
         if (array_key_exists("FreqScope",$param) and $param["FreqScope"] !== null) {
             $this->FreqScope = $param["FreqScope"];
+        }
+
+        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
+            $this->Name = $param["Name"];
+        }
+
+        if (array_key_exists("CustomResponseId",$param) and $param["CustomResponseId"] !== null) {
+            $this->CustomResponseId = $param["CustomResponseId"];
+        }
+
+        if (array_key_exists("ResponseCode",$param) and $param["ResponseCode"] !== null) {
+            $this->ResponseCode = $param["ResponseCode"];
+        }
+
+        if (array_key_exists("RedirectUrl",$param) and $param["RedirectUrl"] !== null) {
+            $this->RedirectUrl = $param["RedirectUrl"];
         }
     }
 }

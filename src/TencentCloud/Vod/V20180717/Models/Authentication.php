@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Timestamp hotlink protection configuration
  *
- * @method string getSwitch() Obtain 
- * @method void setSwitch(string $Switch) Set 
+ * @method string getSwitch() Obtain Anti-hotlink configuration switch, value: <li>on: on; </li> <li>off: off. </li>
+ * @method void setSwitch(string $Switch) Set Anti-hotlink configuration switch, value: <li>on: on; </li> <li>off: off. </li>
  * @method AuthenticationTypeA getTypeA() Obtain Timestamp hotlink protection mode A configuration
  * @method void setTypeA(AuthenticationTypeA $TypeA) Set Timestamp hotlink protection mode A configuration
  * @method AuthenticationTypeB getTypeB() Obtain Timestamp hotlink protection mode B configuration
@@ -34,7 +34,7 @@ use TencentCloud\Common\AbstractModel;
 class Authentication extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Anti-hotlink configuration switch, value: <li>on: on; </li> <li>off: off. </li>
      */
     public $Switch;
 
@@ -59,7 +59,7 @@ class Authentication extends AbstractModel
     public $TypeD;
 
     /**
-     * @param string $Switch 
+     * @param string $Switch Anti-hotlink configuration switch, value: <li>on: on; </li> <li>off: off. </li>
      * @param AuthenticationTypeA $TypeA Timestamp hotlink protection mode A configuration
      * @param AuthenticationTypeB $TypeB Timestamp hotlink protection mode B configuration
      * @param AuthenticationTypeC $TypeC Timestamp hotlink protection mode C configuration

@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getStatusCode() Obtain The status code.
  * @method void setStatusCode(integer $StatusCode) Set The status code.
- * @method string getName() Obtain The parameter name. You can call the [DescribeRulesSetting](https://tcloud4api.woa.com/document/product/1657/79433?!preview&!document=1) API to view the requirements for entering the parameter name.
- * @method void setName(string $Name) Set The parameter name. You can call the [DescribeRulesSetting](https://tcloud4api.woa.com/document/product/1657/79433?!preview&!document=1) API to view the requirements for entering the parameter name.
+ * @method string getName() Obtain The parameter name. For details, see [DescribeRulesSetting](https://intl.cloud.tencent.com/document/product/1552/80618?from_cn_redirect=1).
+ * @method void setName(string $Name) Set The parameter name. For details, see [DescribeRulesSetting](https://intl.cloud.tencent.com/document/product/1552/80618?from_cn_redirect=1).
  * @method array getValues() Obtain The parameter value.
  * @method void setValues(array $Values) Set The parameter value.
  */
@@ -35,7 +35,7 @@ class RuleCodeActionParams extends AbstractModel
     public $StatusCode;
 
     /**
-     * @var string The parameter name. You can call the [DescribeRulesSetting](https://tcloud4api.woa.com/document/product/1657/79433?!preview&!document=1) API to view the requirements for entering the parameter name.
+     * @var string The parameter name. For details, see [DescribeRulesSetting](https://intl.cloud.tencent.com/document/product/1552/80618?from_cn_redirect=1).
      */
     public $Name;
 
@@ -46,7 +46,7 @@ class RuleCodeActionParams extends AbstractModel
 
     /**
      * @param integer $StatusCode The status code.
-     * @param string $Name The parameter name. You can call the [DescribeRulesSetting](https://tcloud4api.woa.com/document/product/1657/79433?!preview&!document=1) API to view the requirements for entering the parameter name.
+     * @param string $Name The parameter name. For details, see [DescribeRulesSetting](https://intl.cloud.tencent.com/document/product/1552/80618?from_cn_redirect=1).
      * @param array $Values The parameter value.
      */
     function __construct()

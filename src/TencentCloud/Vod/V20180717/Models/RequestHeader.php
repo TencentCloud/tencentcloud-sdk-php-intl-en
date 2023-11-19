@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Custom request header configuration. This is disabled by default.
  *
- * @method string getSwitch() Obtain 
- * @method void setSwitch(string $Switch) Set 
+ * @method string getSwitch() Obtain Custom request header configuration switch, the values u200bu200bare: <li>on: on; </li> <li>off: off. </li>
+ * @method void setSwitch(string $Switch) Set Custom request header configuration switch, the values u200bu200bare: <li>on: on; </li> <li>off: off. </li>
  * @method array getHeaderRules() Obtain Custom request header configuration rules
  * @method void setHeaderRules(array $HeaderRules) Set Custom request header configuration rules
  */
 class RequestHeader extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Custom request header configuration switch, the values u200bu200bare: <li>on: on; </li> <li>off: off. </li>
      */
     public $Switch;
 
@@ -38,7 +38,7 @@ class RequestHeader extends AbstractModel
     public $HeaderRules;
 
     /**
-     * @param string $Switch 
+     * @param string $Switch Custom request header configuration switch, the values u200bu200bare: <li>on: on; </li> <li>off: off. </li>
      * @param array $HeaderRules Custom request header configuration rules
      */
     function __construct()

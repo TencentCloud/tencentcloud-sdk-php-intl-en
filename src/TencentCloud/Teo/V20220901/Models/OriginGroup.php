@@ -20,18 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Origin group information.
  *
- * @method string getGroupId() Obtain 
- * @method void setGroupId(string $GroupId) Set 
- * @method string getName() Obtain 
- * @method void setName(string $Name) Set 
- * @method string getType() Obtain 
- * @method void setType(string $Type) Set 
- * @method array getRecords() Obtain 
- * @method void setRecords(array $Records) Set 
- * @method array getReferences() Obtain 
- * @method void setReferences(array $References) Set 
- * @method string getCreateTime() Obtain 
- * @method void setCreateTime(string $CreateTime) Set 
+ * @method string getGroupId() Obtain The ID of the origin group.
+ * @method void setGroupId(string $GroupId) Set The ID of the origin group.
+ * @method string getName() Obtain The name of the origin group.
+ * @method void setName(string $Name) Set The name of the origin group.
+ * @method string getType() Obtain The origin group type. Values:
+<li>`GENERAL`: General origin group</li>
+<li>`HTTP`: HTTP-specific origin group</li>
+ * @method void setType(string $Type) Set The origin group type. Values:
+<li>`GENERAL`: General origin group</li>
+<li>`HTTP`: HTTP-specific origin group</li>
+ * @method array getRecords() Obtain Details of the origin record.
+ * @method void setRecords(array $Records) Set Details of the origin record.
+ * @method array getReferences() Obtain List of instances referencing this origin group.	
+ * @method void setReferences(array $References) Set List of instances referencing this origin group.	
+ * @method string getCreateTime() Obtain Creation time of the origin group.
+ * @method void setCreateTime(string $CreateTime) Set Creation time of the origin group.
  * @method string getUpdateTime() Obtain The update time of the origin group.
  * @method void setUpdateTime(string $UpdateTime) Set The update time of the origin group.
  * @method string getHostHeader() Obtain Origin-pull host header
@@ -42,32 +46,34 @@ Note: This field may return·null, indicating that no valid values can be obtain
 class OriginGroup extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string The ID of the origin group.
      */
     public $GroupId;
 
     /**
-     * @var string 
+     * @var string The name of the origin group.
      */
     public $Name;
 
     /**
-     * @var string 
+     * @var string The origin group type. Values:
+<li>`GENERAL`: General origin group</li>
+<li>`HTTP`: HTTP-specific origin group</li>
      */
     public $Type;
 
     /**
-     * @var array 
+     * @var array Details of the origin record.
      */
     public $Records;
 
     /**
-     * @var array 
+     * @var array List of instances referencing this origin group.	
      */
     public $References;
 
     /**
-     * @var string 
+     * @var string Creation time of the origin group.
      */
     public $CreateTime;
 
@@ -83,12 +89,14 @@ Note: This field may return·null, indicating that no valid values can be obtain
     public $HostHeader;
 
     /**
-     * @param string $GroupId 
-     * @param string $Name 
-     * @param string $Type 
-     * @param array $Records 
-     * @param array $References 
-     * @param string $CreateTime 
+     * @param string $GroupId The ID of the origin group.
+     * @param string $Name The name of the origin group.
+     * @param string $Type The origin group type. Values:
+<li>`GENERAL`: General origin group</li>
+<li>`HTTP`: HTTP-specific origin group</li>
+     * @param array $Records Details of the origin record.
+     * @param array $References List of instances referencing this origin group.	
+     * @param string $CreateTime Creation time of the origin group.
      * @param string $UpdateTime The update time of the origin group.
      * @param string $HostHeader Origin-pull host header
 Note: This field may return·null, indicating that no valid values can be obtained.

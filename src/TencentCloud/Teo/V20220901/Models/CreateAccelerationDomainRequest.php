@@ -26,14 +26,30 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDomainName(string $DomainName) Set Acceleration domain name
  * @method OriginInfo getOriginInfo() Obtain Details of the origin.
  * @method void setOriginInfo(OriginInfo $OriginInfo) Set Details of the origin.
- * @method string getOriginProtocol() Obtain 
- * @method void setOriginProtocol(string $OriginProtocol) Set 
- * @method integer getHttpOriginPort() Obtain 
- * @method void setHttpOriginPort(integer $HttpOriginPort) Set 
- * @method integer getHttpsOriginPort() Obtain 
- * @method void setHttpsOriginPort(integer $HttpsOriginPort) Set 
- * @method string getIPv6Status() Obtain 
- * @method void setIPv6Status(string $IPv6Status) Set 
+ * @method string getOriginProtocol() Obtain Origin-pull protocol configuration. Values:
+<li>`FOLLOW`: Follow the protocol of origin</li>
+<li>`HTTP`: Send requests to the origin over HTTP</li>
+<li>`HTTPS`: Send requests to the origin over HTTPS</li>
+<li>Default: `FOLLOW`</li>
+ * @method void setOriginProtocol(string $OriginProtocol) Set Origin-pull protocol configuration. Values:
+<li>`FOLLOW`: Follow the protocol of origin</li>
+<li>`HTTP`: Send requests to the origin over HTTP</li>
+<li>`HTTPS`: Send requests to the origin over HTTPS</li>
+<li>Default: `FOLLOW`</li>
+ * @method integer getHttpOriginPort() Obtain Ports for HTTP origin-pull requests. Range: 1-65535. It takes effect when `OriginProtocol=FOLLOW/HTTP`. Port 80 is used if it's not specified. 
+ * @method void setHttpOriginPort(integer $HttpOriginPort) Set Ports for HTTP origin-pull requests. Range: 1-65535. It takes effect when `OriginProtocol=FOLLOW/HTTP`. Port 80 is used if it's not specified. 
+ * @method integer getHttpsOriginPort() Obtain Ports for HTTPS origin-pull requests. Range: 1-65535. It takes effect when `OriginProtocol=FOLLOW/HTTPS`. Port 443 is used if it's not specified. 
+ * @method void setHttpsOriginPort(integer $HttpsOriginPort) Set Ports for HTTPS origin-pull requests. Range: 1-65535. It takes effect when `OriginProtocol=FOLLOW/HTTPS`. Port 443 is used if it's not specified. 
+ * @method string getIPv6Status() Obtain IPv6 status. Values:
+<li>`follow`: Follow the IPv6 configuration of the site</li>
+<li>`on`: Enable</li>
+<li>`off`: Disable</li>
+<li>Default: `follow`</li>
+ * @method void setIPv6Status(string $IPv6Status) Set IPv6 status. Values:
+<li>`follow`: Follow the IPv6 configuration of the site</li>
+<li>`on`: Enable</li>
+<li>`off`: Disable</li>
+<li>Default: `follow`</li>
  */
 class CreateAccelerationDomainRequest extends AbstractModel
 {
@@ -53,22 +69,30 @@ class CreateAccelerationDomainRequest extends AbstractModel
     public $OriginInfo;
 
     /**
-     * @var string 
+     * @var string Origin-pull protocol configuration. Values:
+<li>`FOLLOW`: Follow the protocol of origin</li>
+<li>`HTTP`: Send requests to the origin over HTTP</li>
+<li>`HTTPS`: Send requests to the origin over HTTPS</li>
+<li>Default: `FOLLOW`</li>
      */
     public $OriginProtocol;
 
     /**
-     * @var integer 
+     * @var integer Ports for HTTP origin-pull requests. Range: 1-65535. It takes effect when `OriginProtocol=FOLLOW/HTTP`. Port 80 is used if it's not specified. 
      */
     public $HttpOriginPort;
 
     /**
-     * @var integer 
+     * @var integer Ports for HTTPS origin-pull requests. Range: 1-65535. It takes effect when `OriginProtocol=FOLLOW/HTTPS`. Port 443 is used if it's not specified. 
      */
     public $HttpsOriginPort;
 
     /**
-     * @var string 
+     * @var string IPv6 status. Values:
+<li>`follow`: Follow the IPv6 configuration of the site</li>
+<li>`on`: Enable</li>
+<li>`off`: Disable</li>
+<li>Default: `follow`</li>
      */
     public $IPv6Status;
 
@@ -76,10 +100,18 @@ class CreateAccelerationDomainRequest extends AbstractModel
      * @param string $ZoneId ID of the site related with the acceleration domain name.
      * @param string $DomainName Acceleration domain name
      * @param OriginInfo $OriginInfo Details of the origin.
-     * @param string $OriginProtocol 
-     * @param integer $HttpOriginPort 
-     * @param integer $HttpsOriginPort 
-     * @param string $IPv6Status 
+     * @param string $OriginProtocol Origin-pull protocol configuration. Values:
+<li>`FOLLOW`: Follow the protocol of origin</li>
+<li>`HTTP`: Send requests to the origin over HTTP</li>
+<li>`HTTPS`: Send requests to the origin over HTTPS</li>
+<li>Default: `FOLLOW`</li>
+     * @param integer $HttpOriginPort Ports for HTTP origin-pull requests. Range: 1-65535. It takes effect when `OriginProtocol=FOLLOW/HTTP`. Port 80 is used if it's not specified. 
+     * @param integer $HttpsOriginPort Ports for HTTPS origin-pull requests. Range: 1-65535. It takes effect when `OriginProtocol=FOLLOW/HTTPS`. Port 443 is used if it's not specified. 
+     * @param string $IPv6Status IPv6 status. Values:
+<li>`follow`: Follow the IPv6 configuration of the site</li>
+<li>`on`: Enable</li>
+<li>`off`: Disable</li>
+<li>Default: `follow`</li>
      */
     function __construct()
     {

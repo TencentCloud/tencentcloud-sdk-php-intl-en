@@ -20,14 +20,14 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Parameter of the action for the HTTP request/response header of a rule engine condition.
  *
- * @method string getAction() Obtain Feature parameter name. You can call the [DescribeRulesSetting](https://tcloud4api.woa.com/document/product/1657/79433?!preview&!document=1) API to view the requirements for entering the parameter name, which has three values:
-<li>add: Add the HTTP header.</li>
-<li>set: Rewrite the HTTP header.</li>
-<li>del: Delete the HTTP header.</li>
- * @method void setAction(string $Action) Set Feature parameter name. You can call the [DescribeRulesSetting](https://tcloud4api.woa.com/document/product/1657/79433?!preview&!document=1) API to view the requirements for entering the parameter name, which has three values:
-<li>add: Add the HTTP header.</li>
-<li>set: Rewrite the HTTP header.</li>
-<li>del: Delete the HTTP header.</li>
+ * @method string getAction() Obtain Feature parameter name. For details, see [DescribeRulesSetting](https://intl.cloud.tencent.com/document/product/1552/80618?from_cn_redirect=1).
+<li>`add`: Add the HTTP header.</li>
+<li>`set`: Rewrite the HTTP header.</li>
+<li>`del`: Delete the HTTP header.</li>
+ * @method void setAction(string $Action) Set Feature parameter name. For details, see [DescribeRulesSetting](https://intl.cloud.tencent.com/document/product/1552/80618?from_cn_redirect=1).
+<li>`add`: Add the HTTP header.</li>
+<li>`set`: Rewrite the HTTP header.</li>
+<li>`del`: Delete the HTTP header.</li>
  * @method string getName() Obtain Parameter name
  * @method void setName(string $Name) Set Parameter name
  * @method array getValues() Obtain Parameter value
@@ -36,10 +36,10 @@ use TencentCloud\Common\AbstractModel;
 class RuleRewriteActionParams extends AbstractModel
 {
     /**
-     * @var string Feature parameter name. You can call the [DescribeRulesSetting](https://tcloud4api.woa.com/document/product/1657/79433?!preview&!document=1) API to view the requirements for entering the parameter name, which has three values:
-<li>add: Add the HTTP header.</li>
-<li>set: Rewrite the HTTP header.</li>
-<li>del: Delete the HTTP header.</li>
+     * @var string Feature parameter name. For details, see [DescribeRulesSetting](https://intl.cloud.tencent.com/document/product/1552/80618?from_cn_redirect=1).
+<li>`add`: Add the HTTP header.</li>
+<li>`set`: Rewrite the HTTP header.</li>
+<li>`del`: Delete the HTTP header.</li>
      */
     public $Action;
 
@@ -54,10 +54,10 @@ class RuleRewriteActionParams extends AbstractModel
     public $Values;
 
     /**
-     * @param string $Action Feature parameter name. You can call the [DescribeRulesSetting](https://tcloud4api.woa.com/document/product/1657/79433?!preview&!document=1) API to view the requirements for entering the parameter name, which has three values:
-<li>add: Add the HTTP header.</li>
-<li>set: Rewrite the HTTP header.</li>
-<li>del: Delete the HTTP header.</li>
+     * @param string $Action Feature parameter name. For details, see [DescribeRulesSetting](https://intl.cloud.tencent.com/document/product/1552/80618?from_cn_redirect=1).
+<li>`add`: Add the HTTP header.</li>
+<li>`set`: Rewrite the HTTP header.</li>
+<li>`del`: Delete the HTTP header.</li>
      * @param string $Name Parameter name
      * @param array $Values Parameter value
      */

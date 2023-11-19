@@ -18,84 +18,112 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Extract copyright watermark
  *
- * @method string getTaskId() Obtain 
- * @method void setTaskId(string $TaskId) Set 
- * @method string getStatus() Obtain 
- * @method void setStatus(string $Status) Set 
- * @method integer getErrCode() Obtain 
- * @method void setErrCode(integer $ErrCode) Set 
- * @method string getMessage() Obtain 
- * @method void setMessage(string $Message) Set 
- * @method string getErrCodeExt() Obtain 
- * @method void setErrCodeExt(string $ErrCodeExt) Set 
- * @method ExtractCopyRightWatermarkTaskInput getInput() Obtain 
- * @method void setInput(ExtractCopyRightWatermarkTaskInput $Input) Set 
- * @method ExtractCopyRightWatermarkTaskOutput getOutput() Obtain 
- * @method void setOutput(ExtractCopyRightWatermarkTaskOutput $Output) Set 
- * @method string getSessionId() Obtain 
- * @method void setSessionId(string $SessionId) Set 
- * @method string getSessionContext() Obtain 
- * @method void setSessionContext(string $SessionContext) Set 
+ * @method string getTaskId() Obtain Task ID.
+ * @method void setTaskId(string $TaskId) Set Task ID.
+ * @method string getStatus() Obtain Task status, values:
+<li>PROCESSING: Processing;</li>
+<li>FINISH: Completed. </li>
+ * @method void setStatus(string $Status) Set Task status, values:
+<li>PROCESSING: Processing;</li>
+<li>FINISH: Completed. </li>
+ * @method integer getErrCode() Obtain Error code, 0 means success, other values u200bu200bmean failure:
+<li>40000: The input parameters are illegal, please check the input parameters;</li>
+<li>60000: Source file error (such as video data damage), Please confirm whether the source file is normal;</li>
+<li>70000: Internal service error, it is recommended to try again. </li>
+ * @method void setErrCode(integer $ErrCode) Set Error code, 0 means success, other values u200bu200bmean failure:
+<li>40000: The input parameters are illegal, please check the input parameters;</li>
+<li>60000: Source file error (such as video data damage), Please confirm whether the source file is normal;</li>
+<li>70000: Internal service error, it is recommended to try again. </li>
+ * @method string getMessage() Obtain Error message.
+ * @method void setMessage(string $Message) Set Error message.
+ * @method string getErrCodeExt() Obtain Error code. An empty string indicates success. Other values u200bu200bindicate failure. For values, please refer to [Video Processing Error Code](https://www.tencentcloud.com/document/product/266/39145) list.
+ * @method void setErrCodeExt(string $ErrCodeExt) Set Error code. An empty string indicates success. Other values u200bu200bindicate failure. For values, please refer to [Video Processing Error Code](https://www.tencentcloud.com/document/product/266/39145) list.
+ * @method ExtractCopyRightWatermarkTaskInput getInput() Obtain Extract copyright watermark task input information.
+Note: This field may return null, indicating that no valid value can be obtained.
+ * @method void setInput(ExtractCopyRightWatermarkTaskInput $Input) Set Extract copyright watermark task input information.
+Note: This field may return null, indicating that no valid value can be obtained.
+ * @method ExtractCopyRightWatermarkTaskOutput getOutput() Obtain Extract copyright watermark task output information.
+Note: This field may return null, indicating that no valid value can be obtained.
+ * @method void setOutput(ExtractCopyRightWatermarkTaskOutput $Output) Set Extract copyright watermark task output information.
+Note: This field may return null, indicating that no valid value can be obtained.
+ * @method string getSessionId() Obtain Identification code used for deduplication. If there is a request for the same identification code within seven days, this request will return an error. The maximum length is 50 characters, without or with an empty string to indicate no deduplication.
+ * @method void setSessionId(string $SessionId) Set Identification code used for deduplication. If there is a request for the same identification code within seven days, this request will return an error. The maximum length is 50 characters, without or with an empty string to indicate no deduplication.
+ * @method string getSessionContext() Obtain Source context, used to transparently transmit user request information. The task flow status change callback will return the value of this field, which can be up to 1000 characters.
+ * @method void setSessionContext(string $SessionContext) Set Source context, used to transparently transmit user request information. The task flow status change callback will return the value of this field, which can be up to 1000 characters.
  */
 class ExtractCopyRightWatermarkTask extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Task ID.
      */
     public $TaskId;
 
     /**
-     * @var string 
+     * @var string Task status, values:
+<li>PROCESSING: Processing;</li>
+<li>FINISH: Completed. </li>
      */
     public $Status;
 
     /**
-     * @var integer 
+     * @var integer Error code, 0 means success, other values u200bu200bmean failure:
+<li>40000: The input parameters are illegal, please check the input parameters;</li>
+<li>60000: Source file error (such as video data damage), Please confirm whether the source file is normal;</li>
+<li>70000: Internal service error, it is recommended to try again. </li>
      */
     public $ErrCode;
 
     /**
-     * @var string 
+     * @var string Error message.
      */
     public $Message;
 
     /**
-     * @var string 
+     * @var string Error code. An empty string indicates success. Other values u200bu200bindicate failure. For values, please refer to [Video Processing Error Code](https://www.tencentcloud.com/document/product/266/39145) list.
      */
     public $ErrCodeExt;
 
     /**
-     * @var ExtractCopyRightWatermarkTaskInput 
+     * @var ExtractCopyRightWatermarkTaskInput Extract copyright watermark task input information.
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public $Input;
 
     /**
-     * @var ExtractCopyRightWatermarkTaskOutput 
+     * @var ExtractCopyRightWatermarkTaskOutput Extract copyright watermark task output information.
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public $Output;
 
     /**
-     * @var string 
+     * @var string Identification code used for deduplication. If there is a request for the same identification code within seven days, this request will return an error. The maximum length is 50 characters, without or with an empty string to indicate no deduplication.
      */
     public $SessionId;
 
     /**
-     * @var string 
+     * @var string Source context, used to transparently transmit user request information. The task flow status change callback will return the value of this field, which can be up to 1000 characters.
      */
     public $SessionContext;
 
     /**
-     * @param string $TaskId 
-     * @param string $Status 
-     * @param integer $ErrCode 
-     * @param string $Message 
-     * @param string $ErrCodeExt 
-     * @param ExtractCopyRightWatermarkTaskInput $Input 
-     * @param ExtractCopyRightWatermarkTaskOutput $Output 
-     * @param string $SessionId 
-     * @param string $SessionContext 
+     * @param string $TaskId Task ID.
+     * @param string $Status Task status, values:
+<li>PROCESSING: Processing;</li>
+<li>FINISH: Completed. </li>
+     * @param integer $ErrCode Error code, 0 means success, other values u200bu200bmean failure:
+<li>40000: The input parameters are illegal, please check the input parameters;</li>
+<li>60000: Source file error (such as video data damage), Please confirm whether the source file is normal;</li>
+<li>70000: Internal service error, it is recommended to try again. </li>
+     * @param string $Message Error message.
+     * @param string $ErrCodeExt Error code. An empty string indicates success. Other values u200bu200bindicate failure. For values, please refer to [Video Processing Error Code](https://www.tencentcloud.com/document/product/266/39145) list.
+     * @param ExtractCopyRightWatermarkTaskInput $Input Extract copyright watermark task input information.
+Note: This field may return null, indicating that no valid value can be obtained.
+     * @param ExtractCopyRightWatermarkTaskOutput $Output Extract copyright watermark task output information.
+Note: This field may return null, indicating that no valid value can be obtained.
+     * @param string $SessionId Identification code used for deduplication. If there is a request for the same identification code within seven days, this request will return an error. The maximum length is 50 characters, without or with an empty string to indicate no deduplication.
+     * @param string $SessionContext Source context, used to transparently transmit user request information. The task flow status change callback will return the value of this field, which can be up to 1000 characters.
      */
     function __construct()
     {

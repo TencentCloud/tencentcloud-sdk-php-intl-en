@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setName(string $Name) Set Name of recognized object.
  * @method array getSegmentSet() Obtain List of segments that contain an object.
  * @method void setSegmentSet(array $SegmentSet) Set List of segments that contain an object.
- * @method array getRecognitionSegmentSet() Obtain 
- * @method void setRecognitionSegmentSet(array $RecognitionSegmentSet) Set 
+ * @method array getRecognitionSegmentSet() Obtain List of fragments in which the object appears.
+ * @method void setRecognitionSegmentSet(array $RecognitionSegmentSet) Set List of fragments in which the object appears.
  */
 class AiRecognitionTaskObjectResultItem extends AbstractModel
 {
@@ -41,14 +41,14 @@ class AiRecognitionTaskObjectResultItem extends AbstractModel
     public $SegmentSet;
 
     /**
-     * @var array 
+     * @var array List of fragments in which the object appears.
      */
     public $RecognitionSegmentSet;
 
     /**
      * @param string $Name Name of recognized object.
      * @param array $SegmentSet List of segments that contain an object.
-     * @param array $RecognitionSegmentSet 
+     * @param array $RecognitionSegmentSet List of fragments in which the object appears.
      */
     function __construct()
     {

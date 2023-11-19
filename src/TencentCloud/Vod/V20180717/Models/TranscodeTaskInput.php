@@ -28,8 +28,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method TraceWatermarkInput getTraceWatermark() Obtain Digital watermark.
  * @method void setTraceWatermark(TraceWatermarkInput $TraceWatermark) Set Digital watermark.
- * @method CopyRightWatermarkInput getCopyRightWatermark() Obtain 
- * @method void setCopyRightWatermark(CopyRightWatermarkInput $CopyRightWatermark) Set 
+ * @method CopyRightWatermarkInput getCopyRightWatermark() Obtain Copyright watermark.
+ * @method void setCopyRightWatermark(CopyRightWatermarkInput $CopyRightWatermark) Set Copyright watermark.
  * @method array getMosaicSet() Obtain List of blurs. Up to 10 ones can be supported.
  * @method void setMosaicSet(array $MosaicSet) Set List of blurs. Up to 10 ones can be supported.
  * @method array getHeadTailSet() Obtain List of video opening/closing credits configuration template IDs. You can enter up to 10 IDs.
@@ -70,7 +70,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $TraceWatermark;
 
     /**
-     * @var CopyRightWatermarkInput 
+     * @var CopyRightWatermarkInput Copyright watermark.
      */
     public $CopyRightWatermark;
 
@@ -105,7 +105,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @param array $WatermarkSet List of up to 10 image or text watermarks.
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param TraceWatermarkInput $TraceWatermark Digital watermark.
-     * @param CopyRightWatermarkInput $CopyRightWatermark 
+     * @param CopyRightWatermarkInput $CopyRightWatermark Copyright watermark.
      * @param array $MosaicSet List of blurs. Up to 10 ones can be supported.
      * @param array $HeadTailSet List of video opening/closing credits configuration template IDs. You can enter up to 10 IDs.
      * @param float $StartTimeOffset Start time offset of a transcoded video, in seconds.

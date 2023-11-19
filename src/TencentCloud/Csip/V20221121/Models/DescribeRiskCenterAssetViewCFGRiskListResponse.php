@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTotalCount(integer $TotalCount) Set Total number of entries
  * @method array getData() Obtain List of configuration risks
  * @method void setData(array $Data) Set List of configuration risks
- * @method array getStatusLists() Obtain List of status
- * @method void setStatusLists(array $StatusLists) Set List of status
+ * @method array getStatusLists() Obtain List of risk handling status
+ * @method void setStatusLists(array $StatusLists) Set List of risk handling status
  * @method array getLevelLists() Obtain List of risk levels
  * @method void setLevelLists(array $LevelLists) Set List of risk levels
  * @method array getCFGNameLists() Obtain List of configuration names
@@ -52,7 +52,7 @@ class DescribeRiskCenterAssetViewCFGRiskListResponse extends AbstractModel
     public $Data;
 
     /**
-     * @var array List of status
+     * @var array List of risk handling status
      */
     public $StatusLists;
 
@@ -89,7 +89,7 @@ class DescribeRiskCenterAssetViewCFGRiskListResponse extends AbstractModel
     /**
      * @param integer $TotalCount Total number of entries
      * @param array $Data List of configuration risks
-     * @param array $StatusLists List of status
+     * @param array $StatusLists List of risk handling status
      * @param array $LevelLists List of risk levels
      * @param array $CFGNameLists List of configuration names
      * @param array $CheckTypeLists List of check types

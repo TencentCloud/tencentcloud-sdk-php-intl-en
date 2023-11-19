@@ -40,14 +40,34 @@ use TencentCloud\Common\AbstractModel;
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setOriginDetail(OriginDetail $OriginDetail) Set Details of the origin.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getOriginProtocol() Obtain 
- * @method void setOriginProtocol(string $OriginProtocol) Set 
- * @method integer getHttpOriginPort() Obtain 
- * @method void setHttpOriginPort(integer $HttpOriginPort) Set 
- * @method integer getHttpsOriginPort() Obtain 
- * @method void setHttpsOriginPort(integer $HttpsOriginPort) Set 
- * @method string getIPv6Status() Obtain 
- * @method void setIPv6Status(string $IPv6Status) Set 
+ * @method string getOriginProtocol() Obtain Origin-pull protocol configuration. Values:
+<li>`FOLLOW`: Follow the protocol of origin</li>
+<li>`HTTP`: Send requests to the origin over HTTP</li>
+<li>`HTTPS`: Send requests to the origin over HTTPS</li>
+Note: This field may return·null, indicating that no valid values can be obtained.
+ * @method void setOriginProtocol(string $OriginProtocol) Set Origin-pull protocol configuration. Values:
+<li>`FOLLOW`: Follow the protocol of origin</li>
+<li>`HTTP`: Send requests to the origin over HTTP</li>
+<li>`HTTPS`: Send requests to the origin over HTTPS</li>
+Note: This field may return·null, indicating that no valid values can be obtained.
+ * @method integer getHttpOriginPort() Obtain The port used for HTTP origin-pull requests
+Note: This field may return·null, indicating that no valid values can be obtained.
+ * @method void setHttpOriginPort(integer $HttpOriginPort) Set The port used for HTTP origin-pull requests
+Note: This field may return·null, indicating that no valid values can be obtained.
+ * @method integer getHttpsOriginPort() Obtain The port used for HTTPS origin-pull requests
+Note: This field may return·null, indicating that no valid values can be obtained.
+ * @method void setHttpsOriginPort(integer $HttpsOriginPort) Set The port used for HTTPS origin-pull requests
+Note: This field may return·null, indicating that no valid values can be obtained.
+ * @method string getIPv6Status() Obtain IPv6 status. Values:
+<li>`follow`: Follow the IPv6 configuration of the site</li>
+<li>`on`: Enable</li>
+<li>`off`: Disable</li>
+Note: This field may return·null, indicating that no valid values can be obtained.
+ * @method void setIPv6Status(string $IPv6Status) Set IPv6 status. Values:
+<li>`follow`: Follow the IPv6 configuration of the site</li>
+<li>`on`: Enable</li>
+<li>`off`: Disable</li>
+Note: This field may return·null, indicating that no valid values can be obtained.
  * @method string getCname() Obtain The CNAME address.
  * @method void setCname(string $Cname) Set The CNAME address.
  * @method string getIdentificationStatus() Obtain Ownership verification status. Values: <li>`pending`: Pending verification</li> <li>`finished`: Verified</li>	
@@ -96,22 +116,32 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $OriginDetail;
 
     /**
-     * @var string 
+     * @var string Origin-pull protocol configuration. Values:
+<li>`FOLLOW`: Follow the protocol of origin</li>
+<li>`HTTP`: Send requests to the origin over HTTP</li>
+<li>`HTTPS`: Send requests to the origin over HTTPS</li>
+Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public $OriginProtocol;
 
     /**
-     * @var integer 
+     * @var integer The port used for HTTP origin-pull requests
+Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public $HttpOriginPort;
 
     /**
-     * @var integer 
+     * @var integer The port used for HTTPS origin-pull requests
+Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public $HttpsOriginPort;
 
     /**
-     * @var string 
+     * @var string IPv6 status. Values:
+<li>`follow`: Follow the IPv6 configuration of the site</li>
+<li>`on`: Enable</li>
+<li>`off`: Disable</li>
+Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public $IPv6Status;
 
@@ -159,10 +189,20 @@ Note: This field may return·null, indicating that no valid values can be obtain
 <li>`init`: Pending activation</li>
      * @param OriginDetail $OriginDetail Details of the origin.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $OriginProtocol 
-     * @param integer $HttpOriginPort 
-     * @param integer $HttpsOriginPort 
-     * @param string $IPv6Status 
+     * @param string $OriginProtocol Origin-pull protocol configuration. Values:
+<li>`FOLLOW`: Follow the protocol of origin</li>
+<li>`HTTP`: Send requests to the origin over HTTP</li>
+<li>`HTTPS`: Send requests to the origin over HTTPS</li>
+Note: This field may return·null, indicating that no valid values can be obtained.
+     * @param integer $HttpOriginPort The port used for HTTP origin-pull requests
+Note: This field may return·null, indicating that no valid values can be obtained.
+     * @param integer $HttpsOriginPort The port used for HTTPS origin-pull requests
+Note: This field may return·null, indicating that no valid values can be obtained.
+     * @param string $IPv6Status IPv6 status. Values:
+<li>`follow`: Follow the IPv6 configuration of the site</li>
+<li>`on`: Enable</li>
+<li>`off`: Disable</li>
+Note: This field may return·null, indicating that no valid values can be obtained.
      * @param string $Cname The CNAME address.
      * @param string $IdentificationStatus Ownership verification status. Values: <li>`pending`: Pending verification</li> <li>`finished`: Verified</li>	
 Note: This field may return null, indicating that no valid values can be obtained.

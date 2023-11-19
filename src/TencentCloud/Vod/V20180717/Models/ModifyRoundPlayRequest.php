@@ -34,10 +34,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setName(string $Name) Set The playlist name (not longer than 64 characters).
  * @method string getDesc() Obtain The playlist description (not longer than 256 characters).
  * @method void setDesc(string $Desc) Set The playlist description (not longer than 256 characters).
- * @method string getStatus() Obtain 
- * @method void setStatus(string $Status) Set 
- * @method string getPlayBackMode() Obtain 
- * @method void setPlayBackMode(string $PlayBackMode) Set 
+ * @method string getStatus() Obtain Playback status, optional values: 
+<li>Disabled: End playback, and the carousel task cannot be started again after the end. </li>
+
+ * @method void setStatus(string $Status) Set Playback status, optional values: 
+<li>Disabled: End playback, and the carousel task cannot be started again after the end. </li>
+
+ * @method string getPlayBackMode() Obtain Play mode, optional values:
+<li>Loop: Play the playlist in a loop;</li>
+<li>Linear: Play once, stop playing after the playlist is played. </li>
+ * @method void setPlayBackMode(string $PlayBackMode) Set Play mode, optional values:
+<li>Loop: Play the playlist in a loop;</li>
+<li>Linear: Play once, stop playing after the playlist is played. </li>
  */
 class ModifyRoundPlayRequest extends AbstractModel
 {
@@ -73,12 +81,16 @@ class ModifyRoundPlayRequest extends AbstractModel
     public $Desc;
 
     /**
-     * @var string 
+     * @var string Playback status, optional values: 
+<li>Disabled: End playback, and the carousel task cannot be started again after the end. </li>
+
      */
     public $Status;
 
     /**
-     * @var string 
+     * @var string Play mode, optional values:
+<li>Loop: Play the playlist in a loop;</li>
+<li>Linear: Play once, stop playing after the playlist is played. </li>
      */
     public $PlayBackMode;
 
@@ -90,8 +102,12 @@ class ModifyRoundPlayRequest extends AbstractModel
 <li>Array length limit: 100.</li>
      * @param string $Name The playlist name (not longer than 64 characters).
      * @param string $Desc The playlist description (not longer than 256 characters).
-     * @param string $Status 
-     * @param string $PlayBackMode 
+     * @param string $Status Playback status, optional values: 
+<li>Disabled: End playback, and the carousel task cannot be started again after the end. </li>
+
+     * @param string $PlayBackMode Play mode, optional values:
+<li>Loop: Play the playlist in a loop;</li>
+<li>Linear: Play once, stop playing after the playlist is played. </li>
      */
     function __construct()
     {

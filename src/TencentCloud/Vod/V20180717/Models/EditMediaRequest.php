@@ -20,98 +20,106 @@ use TencentCloud\Common\AbstractModel;
 /**
  * EditMedia request structure.
  *
- * @method string getInputType() Obtain 
- * @method void setInputType(string $InputType) Set 
- * @method integer getSubAppId() Obtain 
- * @method void setSubAppId(integer $SubAppId) Set 
- * @method array getFileInfos() Obtain 
- * @method void setFileInfos(array $FileInfos) Set 
- * @method array getStreamInfos() Obtain 
- * @method void setStreamInfos(array $StreamInfos) Set 
- * @method integer getDefinition() Obtain 
- * @method void setDefinition(integer $Definition) Set 
- * @method string getProcedureName() Obtain 
- * @method void setProcedureName(string $ProcedureName) Set 
- * @method EditMediaOutputConfig getOutputConfig() Obtain 
- * @method void setOutputConfig(EditMediaOutputConfig $OutputConfig) Set 
- * @method string getSessionContext() Obtain 
- * @method void setSessionContext(string $SessionContext) Set 
- * @method integer getTasksPriority() Obtain 
- * @method void setTasksPriority(integer $TasksPriority) Set 
- * @method string getSessionId() Obtain Used to identify duplicate requests. After you send a request, if any request with the same `SessionId` has already been sent in the last three days (72 hours), an error message will be returned. `SessionId` contains up to 50 characters. If this parameter is not carried or is an empty string, no deduplication will be performed.
- * @method void setSessionId(string $SessionId) Set Used to identify duplicate requests. After you send a request, if any request with the same `SessionId` has already been sent in the last three days (72 hours), an error message will be returned. `SessionId` contains up to 50 characters. If this parameter is not carried or is an empty string, no deduplication will be performed.
- * @method string getExtInfo() Obtain Reserved field for special purposes.
- * @method void setExtInfo(string $ExtInfo) Set Reserved field for special purposes.
+ * @method string getInputType() Obtain Input the type of video. The possible values u200bu200bare File and Stream.
+ * @method void setInputType(string $InputType) Set Input the type of video. The possible values u200bu200bare File and Stream.
+ * @method integer getSubAppId() Obtain </b>VOD Application ID. If you want to access resources in a sub-app, fill in this field with the sub-app ID; otherwise, don't fill in this field.</b>
+ * @method void setSubAppId(integer $SubAppId) Set </b>VOD Application ID. If you want to access resources in a sub-app, fill in this field with the sub-app ID; otherwise, don't fill in this field.</b>
+ * @method array getFileInfos() Obtain Input video file information, required when InputType is File.
+ * @method void setFileInfos(array $FileInfos) Set Input video file information, required when InputType is File.
+ * @method array getStreamInfos() Obtain nput stream information, required when InputType is Stream.
+ * @method void setStreamInfos(array $StreamInfos) Set nput stream information, required when InputType is Stream.
+ * @method integer getDefinition() Obtain EditMedia template ID. The values u200bu200bare 10 and 20. If left blank, the 10 template is used. 
+<li>10: When splicing, the input with the highest resolution is used as the benchmark;</li>
+<li>20: When splicing, the input with the highest code rate is used as the benchmark. </li>
+ * @method void setDefinition(integer $Definition) Set EditMedia template ID. The values u200bu200bare 10 and 20. If left blank, the 10 template is used. 
+<li>10: When splicing, the input with the highest resolution is used as the benchmark;</li>
+<li>20: When splicing, the input with the highest code rate is used as the benchmark. </li>
+ * @method string getProcedureName() Obtain Task flow template name, if you want Fill in when executing the task flow on the generated new video.
+ * @method void setProcedureName(string $ProcedureName) Set Task flow template name, if you want Fill in when executing the task flow on the generated new video.
+ * @method EditMediaOutputConfig getOutputConfig() Obtain The file configuration generated after editing.
+ * @method void setOutputConfig(EditMediaOutputConfig $OutputConfig) Set The file configuration generated after editing.
+ * @method string getSessionContext() Obtain Identifies the source context, which is used to transparently transmit user request information. This field value will be returned in the EditMediaComplete callback and task flow status change callback, with a maximum length of 1000 characters.
+ * @method void setSessionContext(string $SessionContext) Set Identifies the source context, which is used to transparently transmit user request information. This field value will be returned in the EditMediaComplete callback and task flow status change callback, with a maximum length of 1000 characters.
+ * @method integer getTasksPriority() Obtain The priority of the task. The larger the value, the higher the priority. The value range is -10 to 10. If left blank, it means 0.
+ * @method void setTasksPriority(integer $TasksPriority) Set The priority of the task. The larger the value, the higher the priority. The value range is -10 to 10. If left blank, it means 0.
+ * @method string getSessionId() Obtain The identification code used for task deduplication. If there is a request with the same identification code within three days, this request will return an error. The maximum length is 50 characters, without or with an empty string to indicate no deduplication.
+ * @method void setSessionId(string $SessionId) Set The identification code used for task deduplication. If there is a request with the same identification code within three days, this request will return an error. The maximum length is 50 characters, without or with an empty string to indicate no deduplication.
+ * @method string getExtInfo() Obtain Reserved fields, used for special purposes.
+ * @method void setExtInfo(string $ExtInfo) Set Reserved fields, used for special purposes.
  */
 class EditMediaRequest extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Input the type of video. The possible values u200bu200bare File and Stream.
      */
     public $InputType;
 
     /**
-     * @var integer 
+     * @var integer </b>VOD Application ID. If you want to access resources in a sub-app, fill in this field with the sub-app ID; otherwise, don't fill in this field.</b>
      */
     public $SubAppId;
 
     /**
-     * @var array 
+     * @var array Input video file information, required when InputType is File.
      */
     public $FileInfos;
 
     /**
-     * @var array 
+     * @var array nput stream information, required when InputType is Stream.
      */
     public $StreamInfos;
 
     /**
-     * @var integer 
+     * @var integer EditMedia template ID. The values u200bu200bare 10 and 20. If left blank, the 10 template is used. 
+<li>10: When splicing, the input with the highest resolution is used as the benchmark;</li>
+<li>20: When splicing, the input with the highest code rate is used as the benchmark. </li>
      */
     public $Definition;
 
     /**
-     * @var string 
+     * @var string Task flow template name, if you want Fill in when executing the task flow on the generated new video.
      */
     public $ProcedureName;
 
     /**
-     * @var EditMediaOutputConfig 
+     * @var EditMediaOutputConfig The file configuration generated after editing.
      */
     public $OutputConfig;
 
     /**
-     * @var string 
+     * @var string Identifies the source context, which is used to transparently transmit user request information. This field value will be returned in the EditMediaComplete callback and task flow status change callback, with a maximum length of 1000 characters.
      */
     public $SessionContext;
 
     /**
-     * @var integer 
+     * @var integer The priority of the task. The larger the value, the higher the priority. The value range is -10 to 10. If left blank, it means 0.
      */
     public $TasksPriority;
 
     /**
-     * @var string Used to identify duplicate requests. After you send a request, if any request with the same `SessionId` has already been sent in the last three days (72 hours), an error message will be returned. `SessionId` contains up to 50 characters. If this parameter is not carried or is an empty string, no deduplication will be performed.
+     * @var string The identification code used for task deduplication. If there is a request with the same identification code within three days, this request will return an error. The maximum length is 50 characters, without or with an empty string to indicate no deduplication.
      */
     public $SessionId;
 
     /**
-     * @var string Reserved field for special purposes.
+     * @var string Reserved fields, used for special purposes.
      */
     public $ExtInfo;
 
     /**
-     * @param string $InputType 
-     * @param integer $SubAppId 
-     * @param array $FileInfos 
-     * @param array $StreamInfos 
-     * @param integer $Definition 
-     * @param string $ProcedureName 
-     * @param EditMediaOutputConfig $OutputConfig 
-     * @param string $SessionContext 
-     * @param integer $TasksPriority 
-     * @param string $SessionId Used to identify duplicate requests. After you send a request, if any request with the same `SessionId` has already been sent in the last three days (72 hours), an error message will be returned. `SessionId` contains up to 50 characters. If this parameter is not carried or is an empty string, no deduplication will be performed.
-     * @param string $ExtInfo Reserved field for special purposes.
+     * @param string $InputType Input the type of video. The possible values u200bu200bare File and Stream.
+     * @param integer $SubAppId </b>VOD Application ID. If you want to access resources in a sub-app, fill in this field with the sub-app ID; otherwise, don't fill in this field.</b>
+     * @param array $FileInfos Input video file information, required when InputType is File.
+     * @param array $StreamInfos nput stream information, required when InputType is Stream.
+     * @param integer $Definition EditMedia template ID. The values u200bu200bare 10 and 20. If left blank, the 10 template is used. 
+<li>10: When splicing, the input with the highest resolution is used as the benchmark;</li>
+<li>20: When splicing, the input with the highest code rate is used as the benchmark. </li>
+     * @param string $ProcedureName Task flow template name, if you want Fill in when executing the task flow on the generated new video.
+     * @param EditMediaOutputConfig $OutputConfig The file configuration generated after editing.
+     * @param string $SessionContext Identifies the source context, which is used to transparently transmit user request information. This field value will be returned in the EditMediaComplete callback and task flow status change callback, with a maximum length of 1000 characters.
+     * @param integer $TasksPriority The priority of the task. The larger the value, the higher the priority. The value range is -10 to 10. If left blank, it means 0.
+     * @param string $SessionId The identification code used for task deduplication. If there is a request with the same identification code within three days, this request will return an error. The maximum length is 50 characters, without or with an empty string to indicate no deduplication.
+     * @param string $ExtInfo Reserved fields, used for special purposes.
      */
     function __construct()
     {

@@ -26,6 +26,30 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDomainName(string $DomainName) Set Accelerated domain name
  * @method OriginInfo getOriginInfo() Obtain Details of the origin.
  * @method void setOriginInfo(OriginInfo $OriginInfo) Set Details of the origin.
+ * @method string getOriginProtocol() Obtain Origin-pull protocol configuration. Values:
+<li>`FOLLOW`: Follow the protocol of origin</li>
+<li>`HTTP`: Send requests to the origin over HTTP</li>
+<li>`HTTPS`: Send requests to the origin over HTTPS</li>
+<li>The original configuration applies if this field is not specified.</li>
+ * @method void setOriginProtocol(string $OriginProtocol) Set Origin-pull protocol configuration. Values:
+<li>`FOLLOW`: Follow the protocol of origin</li>
+<li>`HTTP`: Send requests to the origin over HTTP</li>
+<li>`HTTPS`: Send requests to the origin over HTTPS</li>
+<li>The original configuration applies if this field is not specified.</li>
+ * @method integer getHttpOriginPort() Obtain Ports for HTTP origin-pull requests. Range: 1-65535. It takes effect when `OriginProtocol=FOLLOW/HTTP`. The original configuration is used if it's not specified.
+ * @method void setHttpOriginPort(integer $HttpOriginPort) Set Ports for HTTP origin-pull requests. Range: 1-65535. It takes effect when `OriginProtocol=FOLLOW/HTTP`. The original configuration is used if it's not specified.
+ * @method integer getHttpsOriginPort() Obtain Ports for HTTPS origin-pull requests. Range: 1-65535. It takes effect when `OriginProtocol=FOLLOW/HTTPS`. The original configuration is used if it's not specified.
+ * @method void setHttpsOriginPort(integer $HttpsOriginPort) Set Ports for HTTPS origin-pull requests. Range: 1-65535. It takes effect when `OriginProtocol=FOLLOW/HTTPS`. The original configuration is used if it's not specified.
+ * @method string getIPv6Status() Obtain IPv6 status. Values:
+<li>`follow`: Follow the IPv6 configuration of the site</li>
+<li>`on`: Enable</li>
+<li>`off`: Disable</li>
+<li>The original configuration applies if this field is not specified.</li>
+ * @method void setIPv6Status(string $IPv6Status) Set IPv6 status. Values:
+<li>`follow`: Follow the IPv6 configuration of the site</li>
+<li>`on`: Enable</li>
+<li>`off`: Disable</li>
+<li>The original configuration applies if this field is not specified.</li>
  */
 class ModifyAccelerationDomainRequest extends AbstractModel
 {
@@ -45,9 +69,49 @@ class ModifyAccelerationDomainRequest extends AbstractModel
     public $OriginInfo;
 
     /**
+     * @var string Origin-pull protocol configuration. Values:
+<li>`FOLLOW`: Follow the protocol of origin</li>
+<li>`HTTP`: Send requests to the origin over HTTP</li>
+<li>`HTTPS`: Send requests to the origin over HTTPS</li>
+<li>The original configuration applies if this field is not specified.</li>
+     */
+    public $OriginProtocol;
+
+    /**
+     * @var integer Ports for HTTP origin-pull requests. Range: 1-65535. It takes effect when `OriginProtocol=FOLLOW/HTTP`. The original configuration is used if it's not specified.
+     */
+    public $HttpOriginPort;
+
+    /**
+     * @var integer Ports for HTTPS origin-pull requests. Range: 1-65535. It takes effect when `OriginProtocol=FOLLOW/HTTPS`. The original configuration is used if it's not specified.
+     */
+    public $HttpsOriginPort;
+
+    /**
+     * @var string IPv6 status. Values:
+<li>`follow`: Follow the IPv6 configuration of the site</li>
+<li>`on`: Enable</li>
+<li>`off`: Disable</li>
+<li>The original configuration applies if this field is not specified.</li>
+     */
+    public $IPv6Status;
+
+    /**
      * @param string $ZoneId ID of the site related with the accelerated domain name.
      * @param string $DomainName Accelerated domain name
      * @param OriginInfo $OriginInfo Details of the origin.
+     * @param string $OriginProtocol Origin-pull protocol configuration. Values:
+<li>`FOLLOW`: Follow the protocol of origin</li>
+<li>`HTTP`: Send requests to the origin over HTTP</li>
+<li>`HTTPS`: Send requests to the origin over HTTPS</li>
+<li>The original configuration applies if this field is not specified.</li>
+     * @param integer $HttpOriginPort Ports for HTTP origin-pull requests. Range: 1-65535. It takes effect when `OriginProtocol=FOLLOW/HTTP`. The original configuration is used if it's not specified.
+     * @param integer $HttpsOriginPort Ports for HTTPS origin-pull requests. Range: 1-65535. It takes effect when `OriginProtocol=FOLLOW/HTTPS`. The original configuration is used if it's not specified.
+     * @param string $IPv6Status IPv6 status. Values:
+<li>`follow`: Follow the IPv6 configuration of the site</li>
+<li>`on`: Enable</li>
+<li>`off`: Disable</li>
+<li>The original configuration applies if this field is not specified.</li>
      */
     function __construct()
     {
@@ -73,6 +137,22 @@ class ModifyAccelerationDomainRequest extends AbstractModel
         if (array_key_exists("OriginInfo",$param) and $param["OriginInfo"] !== null) {
             $this->OriginInfo = new OriginInfo();
             $this->OriginInfo->deserialize($param["OriginInfo"]);
+        }
+
+        if (array_key_exists("OriginProtocol",$param) and $param["OriginProtocol"] !== null) {
+            $this->OriginProtocol = $param["OriginProtocol"];
+        }
+
+        if (array_key_exists("HttpOriginPort",$param) and $param["HttpOriginPort"] !== null) {
+            $this->HttpOriginPort = $param["HttpOriginPort"];
+        }
+
+        if (array_key_exists("HttpsOriginPort",$param) and $param["HttpsOriginPort"] !== null) {
+            $this->HttpsOriginPort = $param["HttpsOriginPort"];
+        }
+
+        if (array_key_exists("IPv6Status",$param) and $param["IPv6Status"] !== null) {
+            $this->IPv6Status = $param["IPv6Status"];
         }
     }
 }

@@ -18,60 +18,64 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Result file output of edited video.
  *
- * @method string getMediaName() Obtain 
- * @method void setMediaName(string $MediaName) Set 
- * @method string getType() Obtain 
- * @method void setType(string $Type) Set 
- * @method integer getClassId() Obtain 
- * @method void setClassId(integer $ClassId) Set 
- * @method string getExpireTime() Obtain 
- * @method void setExpireTime(string $ExpireTime) Set 
- * @method EditMediaVideoStream getVideoStream() Obtain 
- * @method void setVideoStream(EditMediaVideoStream $VideoStream) Set 
- * @method EditMediaTEHDConfig getTEHDConfig() Obtain 
- * @method void setTEHDConfig(EditMediaTEHDConfig $TEHDConfig) Set 
+ * @method string getMediaName() Obtain Output file name, up to 64 characters. By default, the generated file name is specified by the system.
+ * @method void setMediaName(string $MediaName) Set Output file name, up to 64 characters. By default, the generated file name is specified by the system.
+ * @method string getType() Obtain Output file format, optional values: mp4, hls. The default is mp4.
+ * @method void setType(string $Type) Set Output file format, optional values: mp4, hls. The default is mp4.
+ * @method integer getClassId() Obtain Classification ID is used to classify media. You can create a classification through the Create Classification interface to obtain the classification ID. 
+<li>Default value: 0, indicating other categories. </li>
+ * @method void setClassId(integer $ClassId) Set Classification ID is used to classify media. You can create a classification through the Create Classification interface to obtain the classification ID. 
+<li>Default value: 0, indicating other categories. </li>
+ * @method string getExpireTime() Obtain The expiration time of the output file. The file will be deleted after this time. The default is permanent and not expired. The format is expressed in accordance with the ISO 8601 standard. For details, see [ISO Date Format Description](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
+ * @method void setExpireTime(string $ExpireTime) Set The expiration time of the output file. The file will be deleted after this time. The default is permanent and not expired. The format is expressed in accordance with the ISO 8601 standard. For details, see [ISO Date Format Description](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
+ * @method EditMediaVideoStream getVideoStream() Obtain Output video information.
+ * @method void setVideoStream(EditMediaVideoStream $VideoStream) Set Output video information.
+ * @method EditMediaTEHDConfig getTEHDConfig() Obtain TSC Transcoding Config.
+ * @method void setTEHDConfig(EditMediaTEHDConfig $TEHDConfig) Set TSC Transcoding Config.
  */
 class EditMediaOutputConfig extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Output file name, up to 64 characters. By default, the generated file name is specified by the system.
      */
     public $MediaName;
 
     /**
-     * @var string 
+     * @var string Output file format, optional values: mp4, hls. The default is mp4.
      */
     public $Type;
 
     /**
-     * @var integer 
+     * @var integer Classification ID is used to classify media. You can create a classification through the Create Classification interface to obtain the classification ID. 
+<li>Default value: 0, indicating other categories. </li>
      */
     public $ClassId;
 
     /**
-     * @var string 
+     * @var string The expiration time of the output file. The file will be deleted after this time. The default is permanent and not expired. The format is expressed in accordance with the ISO 8601 standard. For details, see [ISO Date Format Description](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
      */
     public $ExpireTime;
 
     /**
-     * @var EditMediaVideoStream 
+     * @var EditMediaVideoStream Output video information.
      */
     public $VideoStream;
 
     /**
-     * @var EditMediaTEHDConfig 
+     * @var EditMediaTEHDConfig TSC Transcoding Config.
      */
     public $TEHDConfig;
 
     /**
-     * @param string $MediaName 
-     * @param string $Type 
-     * @param integer $ClassId 
-     * @param string $ExpireTime 
-     * @param EditMediaVideoStream $VideoStream 
-     * @param EditMediaTEHDConfig $TEHDConfig 
+     * @param string $MediaName Output file name, up to 64 characters. By default, the generated file name is specified by the system.
+     * @param string $Type Output file format, optional values: mp4, hls. The default is mp4.
+     * @param integer $ClassId Classification ID is used to classify media. You can create a classification through the Create Classification interface to obtain the classification ID. 
+<li>Default value: 0, indicating other categories. </li>
+     * @param string $ExpireTime The expiration time of the output file. The file will be deleted after this time. The default is permanent and not expired. The format is expressed in accordance with the ISO 8601 standard. For details, see [ISO Date Format Description](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
+     * @param EditMediaVideoStream $VideoStream Output video information.
+     * @param EditMediaTEHDConfig $TEHDConfig TSC Transcoding Config.
      */
     function __construct()
     {

@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeVodDomains request structure.
  *
- * @method array getDomains() Obtain List of domain names. If this parameter is left empty, all domain names will be listed.
-<li>Maximum number of domain names listed: 20</li>
- * @method void setDomains(array $Domains) Set List of domain names. If this parameter is left empty, all domain names will be listed.
-<li>Maximum number of domain names listed: 20</li>
+ * @method array getDomains() Obtain Domain name list. When this field is left blank, all domain name information will be listed by default. The limitations of this field are as follows:
+<li>The maximum number of domain names is 20. </li>
+ * @method void setDomains(array $Domains) Set Domain name list. When this field is left blank, all domain name information will be listed by default. The limitations of this field are as follows:
+<li>The maximum number of domain names is 20. </li>
  * @method integer getLimit() Obtain Maximum results to return for pulling paginated queries. Default value: 20
  * @method void setLimit(integer $Limit) Set Maximum results to return for pulling paginated queries. Default value: 20
  * @method integer getOffset() Obtain Page number offset from the beginning of paginated queries. Default value: 0
@@ -34,8 +34,8 @@ use TencentCloud\Common\AbstractModel;
 class DescribeVodDomainsRequest extends AbstractModel
 {
     /**
-     * @var array List of domain names. If this parameter is left empty, all domain names will be listed.
-<li>Maximum number of domain names listed: 20</li>
+     * @var array Domain name list. When this field is left blank, all domain name information will be listed by default. The limitations of this field are as follows:
+<li>The maximum number of domain names is 20. </li>
      */
     public $Domains;
 
@@ -55,8 +55,8 @@ class DescribeVodDomainsRequest extends AbstractModel
     public $SubAppId;
 
     /**
-     * @param array $Domains List of domain names. If this parameter is left empty, all domain names will be listed.
-<li>Maximum number of domain names listed: 20</li>
+     * @param array $Domains Domain name list. When this field is left blank, all domain name information will be listed by default. The limitations of this field are as follows:
+<li>The maximum number of domain names is 20. </li>
      * @param integer $Limit Maximum results to return for pulling paginated queries. Default value: 20
      * @param integer $Offset Page number offset from the beginning of paginated queries. Default value: 0
      * @param integer $SubAppId VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.

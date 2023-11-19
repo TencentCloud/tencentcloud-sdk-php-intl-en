@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Rule engine action for the HTTP request/response header
  *
- * @method string getAction() Obtain Feature name. You can call the [DescribeRulesSetting](https://tcloud4api.woa.com/document/product/1657/79433?!preview&!document=1) API to view the requirements for entering the feature name.
- * @method void setAction(string $Action) Set Feature name. You can call the [DescribeRulesSetting](https://tcloud4api.woa.com/document/product/1657/79433?!preview&!document=1) API to view the requirements for entering the feature name.
+ * @method string getAction() Obtain Feature name. For details, see [DescribeRulesSetting](https://intl.cloud.tencent.com/document/product/1552/80618?from_cn_redirect=1) API
+ * @method void setAction(string $Action) Set Feature name. For details, see [DescribeRulesSetting](https://intl.cloud.tencent.com/document/product/1552/80618?from_cn_redirect=1) API
  * @method array getParameters() Obtain Parameter
  * @method void setParameters(array $Parameters) Set Parameter
  */
 class RewriteAction extends AbstractModel
 {
     /**
-     * @var string Feature name. You can call the [DescribeRulesSetting](https://tcloud4api.woa.com/document/product/1657/79433?!preview&!document=1) API to view the requirements for entering the feature name.
+     * @var string Feature name. For details, see [DescribeRulesSetting](https://intl.cloud.tencent.com/document/product/1552/80618?from_cn_redirect=1) API
      */
     public $Action;
 
@@ -38,7 +38,7 @@ class RewriteAction extends AbstractModel
     public $Parameters;
 
     /**
-     * @param string $Action Feature name. You can call the [DescribeRulesSetting](https://tcloud4api.woa.com/document/product/1657/79433?!preview&!document=1) API to view the requirements for entering the feature name.
+     * @param string $Action Feature name. For details, see [DescribeRulesSetting](https://intl.cloud.tencent.com/document/product/1552/80618?from_cn_redirect=1) API
      * @param array $Parameters Parameter
      */
     function __construct()

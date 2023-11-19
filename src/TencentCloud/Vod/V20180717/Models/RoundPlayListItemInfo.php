@@ -18,7 +18,7 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * The information of a file on a playlist.
+ * Carousel media file information
  *
  * @method string getFileId() Obtain The file ID.
  * @method void setFileId(string $FileId) Set The file ID.

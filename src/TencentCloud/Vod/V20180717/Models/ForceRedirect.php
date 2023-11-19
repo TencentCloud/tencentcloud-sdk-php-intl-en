@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Access protocol forced redirect configuration. This is disabled by default.
  *
- * @method string getSwitch() Obtain 
- * @method void setSwitch(string $Switch) Set 
- * @method string getRedirectType() Obtain 
- * @method void setRedirectType(string $RedirectType) Set 
+ * @method string getSwitch() Obtain Access forced jump configuration switch, value: <li>on: on; </li> <li>off: off. </li>
+ * @method void setSwitch(string $Switch) Set Access forced jump configuration switch, value: <li>on: on; </li> <li>off: off. </li>
+ * @method string getRedirectType() Obtain Access forced jump type: <li>http: forced http jump</li> <li>https: forced https jump</li>
+ * @method void setRedirectType(string $RedirectType) Set Access forced jump type: <li>http: forced http jump</li> <li>https: forced https jump</li>
  * @method integer getRedirectStatusCode() Obtain Status code returned for forced redirect Supports 301, 302.
  * @method void setRedirectStatusCode(integer $RedirectStatusCode) Set Status code returned for forced redirect Supports 301, 302.
  * @method string getCarryHeaders() Obtain Whether to return the newly added header during force redirection.
@@ -32,12 +32,12 @@ use TencentCloud\Common\AbstractModel;
 class ForceRedirect extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Access forced jump configuration switch, value: <li>on: on; </li> <li>off: off. </li>
      */
     public $Switch;
 
     /**
-     * @var string 
+     * @var string Access forced jump type: <li>http: forced http jump</li> <li>https: forced https jump</li>
      */
     public $RedirectType;
 
@@ -52,8 +52,8 @@ class ForceRedirect extends AbstractModel
     public $CarryHeaders;
 
     /**
-     * @param string $Switch 
-     * @param string $RedirectType 
+     * @param string $Switch Access forced jump configuration switch, value: <li>on: on; </li> <li>off: off. </li>
+     * @param string $RedirectType Access forced jump type: <li>http: forced http jump</li> <li>https: forced https jump</li>
      * @param integer $RedirectStatusCode Status code returned for forced redirect Supports 301, 302.
      * @param string $CarryHeaders Whether to return the newly added header during force redirection.
      */

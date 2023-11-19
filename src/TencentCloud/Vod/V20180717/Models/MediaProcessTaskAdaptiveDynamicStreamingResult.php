@@ -34,10 +34,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInput(AdaptiveDynamicStreamingTaskInput $Input) Set Input of adaptive bitrate streaming task.
  * @method AdaptiveDynamicStreamingInfoItem getOutput() Obtain Output of adaptive bitrate streaming task.
  * @method void setOutput(AdaptiveDynamicStreamingInfoItem $Output) Set Output of adaptive bitrate streaming task.
- * @method string getBeginProcessTime() Obtain 
- * @method void setBeginProcessTime(string $BeginProcessTime) Set 
- * @method string getFinishTime() Obtain 
- * @method void setFinishTime(string $FinishTime) Set 
+ * @method string getBeginProcessTime() Obtain The time when the conversion to adaptive code stream task starts, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
+ * @method void setBeginProcessTime(string $BeginProcessTime) Set The time when the conversion to adaptive code stream task starts, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
+ * @method string getFinishTime() Obtain The time when the adaptive code stream conversion task is completed, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
+ * @method void setFinishTime(string $FinishTime) Set The time when the adaptive code stream conversion task is completed, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
  */
 class MediaProcessTaskAdaptiveDynamicStreamingResult extends AbstractModel
 {
@@ -77,12 +77,12 @@ class MediaProcessTaskAdaptiveDynamicStreamingResult extends AbstractModel
     public $Output;
 
     /**
-     * @var string 
+     * @var string The time when the conversion to adaptive code stream task starts, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
      */
     public $BeginProcessTime;
 
     /**
-     * @var string 
+     * @var string The time when the adaptive code stream conversion task is completed, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
      */
     public $FinishTime;
 
@@ -94,8 +94,8 @@ class MediaProcessTaskAdaptiveDynamicStreamingResult extends AbstractModel
      * @param integer $Progress The progress of the adaptive bitrate task. Value range: 0-100.
      * @param AdaptiveDynamicStreamingTaskInput $Input Input of adaptive bitrate streaming task.
      * @param AdaptiveDynamicStreamingInfoItem $Output Output of adaptive bitrate streaming task.
-     * @param string $BeginProcessTime 
-     * @param string $FinishTime 
+     * @param string $BeginProcessTime The time when the conversion to adaptive code stream task starts, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
+     * @param string $FinishTime The time when the adaptive code stream conversion task is completed, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
      */
     function __construct()
     {

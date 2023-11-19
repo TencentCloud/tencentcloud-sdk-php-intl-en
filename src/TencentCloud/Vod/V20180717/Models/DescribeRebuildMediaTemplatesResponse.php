@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getTotalCount() Obtain The total number of records that meet the conditions.
  * @method void setTotalCount(integer $TotalCount) Set The total number of records that meet the conditions.
- * @method array getRebuildMediaTemplateSet() Obtain The details of the remaster templates.
- * @method void setRebuildMediaTemplateSet(array $RebuildMediaTemplateSet) Set The details of the remaster templates.
+ * @method array getRebuildMediaTemplateSet() Obtain Rebuild media template details list.
+ * @method void setRebuildMediaTemplateSet(array $RebuildMediaTemplateSet) Set Rebuild media template details list.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -35,7 +35,7 @@ class DescribeRebuildMediaTemplatesResponse extends AbstractModel
     public $TotalCount;
 
     /**
-     * @var array The details of the remaster templates.
+     * @var array Rebuild media template details list.
      */
     public $RebuildMediaTemplateSet;
 
@@ -46,7 +46,7 @@ class DescribeRebuildMediaTemplatesResponse extends AbstractModel
 
     /**
      * @param integer $TotalCount The total number of records that meet the conditions.
-     * @param array $RebuildMediaTemplateSet The details of the remaster templates.
+     * @param array $RebuildMediaTemplateSet Rebuild media template details list.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()

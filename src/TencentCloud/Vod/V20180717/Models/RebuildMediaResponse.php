@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * RebuildMedia response structure.
  *
- * @method string getTaskId() Obtain The ID of the audio/video remastering task. You need to provide this ID to query the task status.
- * @method void setTaskId(string $TaskId) Set The ID of the audio/video remastering task. You need to provide this ID to query the task status.
+ * @method string getTaskId() Obtain The task ID of the Enhance Media. You can use this ID to query the status of the EnhanceMedia task.
+ * @method void setTaskId(string $TaskId) Set The task ID of the Enhance Media. You can use this ID to query the status of the EnhanceMedia task.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 class RebuildMediaResponse extends AbstractModel
 {
     /**
-     * @var string The ID of the audio/video remastering task. You need to provide this ID to query the task status.
+     * @var string The task ID of the Enhance Media. You can use this ID to query the status of the EnhanceMedia task.
      */
     public $TaskId;
 
@@ -38,7 +38,7 @@ class RebuildMediaResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $TaskId The ID of the audio/video remastering task. You need to provide this ID to query the task status.
+     * @param string $TaskId The task ID of the Enhance Media. You can use this ID to query the status of the EnhanceMedia task.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()

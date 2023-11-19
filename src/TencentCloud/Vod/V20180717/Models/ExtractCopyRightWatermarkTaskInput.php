@@ -18,20 +18,20 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Extract copyright watermark task input
  *
- * @method string getUrl() Obtain 
- * @method void setUrl(string $Url) Set 
+ * @method string getUrl() Obtain The media URL from which the watermark needs to be extracted.
+ * @method void setUrl(string $Url) Set The media URL from which the watermark needs to be extracted.
  */
 class ExtractCopyRightWatermarkTaskInput extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string The media URL from which the watermark needs to be extracted.
      */
     public $Url;
 
     /**
-     * @param string $Url 
+     * @param string $Url The media URL from which the watermark needs to be extracted.
      */
     function __construct()
     {

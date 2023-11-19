@@ -18,44 +18,96 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Video stream configuration information
  *
- * @method string getResolutionAdaptive() Obtain 
- * @method void setResolutionAdaptive(string $ResolutionAdaptive) Set 
- * @method integer getWidth() Obtain 
- * @method void setWidth(integer $Width) Set 
- * @method integer getHeight() Obtain 
- * @method void setHeight(integer $Height) Set 
- * @method integer getFps() Obtain 
- * @method void setFps(integer $Fps) Set 
+ * @method string getResolutionAdaptive() Obtain Resolution adaptive, optional values:
+<li>open: open, at this time, Width represents the long side of the video, and Height represents the short side of the video;</li>
+<li>close: closed, at this time , Width represents the width of the video, and Height represents the height of the video. </li>
+Default value: open.
+ * @method void setResolutionAdaptive(string $ResolutionAdaptive) Set Resolution adaptive, optional values:
+<li>open: open, at this time, Width represents the long side of the video, and Height represents the short side of the video;</li>
+<li>close: closed, at this time , Width represents the width of the video, and Height represents the height of the video. </li>
+Default value: open.
+ * @method integer getWidth() Obtain Resolution adaptive, optional values:
+<li>open: open, at this time, Width represents the long side of the video, and Height represents the short side of the video;</li>
+<li>close: closed, at this time , Width represents the width of the video, and Height represents the height of the video. </li>
+Default value: open.
+ * @method void setWidth(integer $Width) Set Resolution adaptive, optional values:
+<li>open: open, at this time, Width represents the long side of the video, and Height represents the short side of the video;</li>
+<li>close: closed, at this time , Width represents the width of the video, and Height represents the height of the video. </li>
+Default value: open.
+ * @method integer getHeight() Obtain The maximum value of the video stream height (or short side), value range: 0 and [128, 4096], unit: px. 
+<li>When Width and Height are both 0, the resolution is based on the base resolution;</li>
+<li>When Width is 0 and Height is non-0, Width is scaled according to the base resolution;</li> li>
+<li>When Width is non-0 and Height is 0, the Height is scaled according to the base resolution; </li>
+<li>When both Width and Height are non-0, the resolution is specified by the user. </li>
+Default value: 0.
+ * @method void setHeight(integer $Height) Set The maximum value of the video stream height (or short side), value range: 0 and [128, 4096], unit: px. 
+<li>When Width and Height are both 0, the resolution is based on the base resolution;</li>
+<li>When Width is 0 and Height is non-0, Width is scaled according to the base resolution;</li> li>
+<li>When Width is non-0 and Height is 0, the Height is scaled according to the base resolution; </li>
+<li>When both Width and Height are non-0, the resolution is specified by the user. </li>
+Default value: 0.
+ * @method integer getFps() Obtain Video frame rate, value range: [0, 100], unit: Hz. 
+When the value is 0, the frame rate will be automatically set for the video. 
+The default value is 0.
+ * @method void setFps(integer $Fps) Set Video frame rate, value range: [0, 100], unit: Hz. 
+When the value is 0, the frame rate will be automatically set for the video. 
+The default value is 0.
  */
 class EditMediaVideoStream extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Resolution adaptive, optional values:
+<li>open: open, at this time, Width represents the long side of the video, and Height represents the short side of the video;</li>
+<li>close: closed, at this time , Width represents the width of the video, and Height represents the height of the video. </li>
+Default value: open.
      */
     public $ResolutionAdaptive;
 
     /**
-     * @var integer 
+     * @var integer Resolution adaptive, optional values:
+<li>open: open, at this time, Width represents the long side of the video, and Height represents the short side of the video;</li>
+<li>close: closed, at this time , Width represents the width of the video, and Height represents the height of the video. </li>
+Default value: open.
      */
     public $Width;
 
     /**
-     * @var integer 
+     * @var integer The maximum value of the video stream height (or short side), value range: 0 and [128, 4096], unit: px. 
+<li>When Width and Height are both 0, the resolution is based on the base resolution;</li>
+<li>When Width is 0 and Height is non-0, Width is scaled according to the base resolution;</li> li>
+<li>When Width is non-0 and Height is 0, the Height is scaled according to the base resolution; </li>
+<li>When both Width and Height are non-0, the resolution is specified by the user. </li>
+Default value: 0.
      */
     public $Height;
 
     /**
-     * @var integer 
+     * @var integer Video frame rate, value range: [0, 100], unit: Hz. 
+When the value is 0, the frame rate will be automatically set for the video. 
+The default value is 0.
      */
     public $Fps;
 
     /**
-     * @param string $ResolutionAdaptive 
-     * @param integer $Width 
-     * @param integer $Height 
-     * @param integer $Fps 
+     * @param string $ResolutionAdaptive Resolution adaptive, optional values:
+<li>open: open, at this time, Width represents the long side of the video, and Height represents the short side of the video;</li>
+<li>close: closed, at this time , Width represents the width of the video, and Height represents the height of the video. </li>
+Default value: open.
+     * @param integer $Width Resolution adaptive, optional values:
+<li>open: open, at this time, Width represents the long side of the video, and Height represents the short side of the video;</li>
+<li>close: closed, at this time , Width represents the width of the video, and Height represents the height of the video. </li>
+Default value: open.
+     * @param integer $Height The maximum value of the video stream height (or short side), value range: 0 and [128, 4096], unit: px. 
+<li>When Width and Height are both 0, the resolution is based on the base resolution;</li>
+<li>When Width is 0 and Height is non-0, Width is scaled according to the base resolution;</li> li>
+<li>When Width is non-0 and Height is 0, the Height is scaled according to the base resolution; </li>
+<li>When both Width and Height are non-0, the resolution is specified by the user. </li>
+Default value: 0.
+     * @param integer $Fps Video frame rate, value range: [0, 100], unit: Hz. 
+When the value is 0, the frame rate will be automatically set for the video. 
+The default value is 0.
      */
     function __construct()
     {

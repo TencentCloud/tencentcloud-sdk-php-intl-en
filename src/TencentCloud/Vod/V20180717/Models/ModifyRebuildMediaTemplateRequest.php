@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyRebuildMediaTemplate request structure.
  *
- * @method integer getDefinition() Obtain The remaster template ID.
- * @method void setDefinition(integer $Definition) Set The remaster template ID.
+ * @method integer getDefinition() Obtain Rebuild Media Template ID.
+ * @method void setDefinition(integer $Definition) Set Rebuild Media Template ID.
  * @method string getSubAppId() Obtain <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
  * @method void setSubAppId(string $SubAppId) Set <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
- * @method string getName() Obtain The remaster template name.
- * @method void setName(string $Name) Set The remaster template name.
- * @method string getComment() Obtain The template description.
- * @method void setComment(string $Comment) Set The template description.
- * @method RebuildVideoInfo getRebuildVideoInfo() Obtain 
- * @method void setRebuildVideoInfo(RebuildVideoInfo $RebuildVideoInfo) Set 
- * @method RebuildAudioInfo getRebuildAudioInfo() Obtain 
- * @method void setRebuildAudioInfo(RebuildAudioInfo $RebuildAudioInfo) Set 
+ * @method string getName() Obtain Rebuild Media Template Name.
+ * @method void setName(string $Name) Set Rebuild Media Template Name.
+ * @method string getComment() Obtain Rebuild media template description.
+ * @method void setComment(string $Comment) Set Rebuild media template description.
+ * @method RebuildVideoInfo getRebuildVideoInfo() Obtain Rebuild media video control information.
+ * @method void setRebuildVideoInfo(RebuildVideoInfo $RebuildVideoInfo) Set Rebuild media video control information.
+ * @method RebuildAudioInfo getRebuildAudioInfo() Obtain Rebuild media audio control information.
+ * @method void setRebuildAudioInfo(RebuildAudioInfo $RebuildAudioInfo) Set Rebuild media audio control information.
  * @method RebuildMediaTargetVideoStream getTargetVideoInfo() Obtain The output video parameters.
  * @method void setTargetVideoInfo(RebuildMediaTargetVideoStream $TargetVideoInfo) Set The output video parameters.
  * @method RebuildMediaTargetAudioStream getTargetAudioInfo() Obtain The output audio parameters.
@@ -54,7 +54,7 @@ use TencentCloud\Common\AbstractModel;
 class ModifyRebuildMediaTemplateRequest extends AbstractModel
 {
     /**
-     * @var integer The remaster template ID.
+     * @var integer Rebuild Media Template ID.
      */
     public $Definition;
 
@@ -64,22 +64,22 @@ class ModifyRebuildMediaTemplateRequest extends AbstractModel
     public $SubAppId;
 
     /**
-     * @var string The remaster template name.
+     * @var string Rebuild Media Template Name.
      */
     public $Name;
 
     /**
-     * @var string The template description.
+     * @var string Rebuild media template description.
      */
     public $Comment;
 
     /**
-     * @var RebuildVideoInfo 
+     * @var RebuildVideoInfo Rebuild media video control information.
      */
     public $RebuildVideoInfo;
 
     /**
-     * @var RebuildAudioInfo 
+     * @var RebuildAudioInfo Rebuild media audio control information.
      */
     public $RebuildAudioInfo;
 
@@ -113,12 +113,12 @@ class ModifyRebuildMediaTemplateRequest extends AbstractModel
     public $RemoveAudio;
 
     /**
-     * @param integer $Definition The remaster template ID.
+     * @param integer $Definition Rebuild Media Template ID.
      * @param string $SubAppId <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
-     * @param string $Name The remaster template name.
-     * @param string $Comment The template description.
-     * @param RebuildVideoInfo $RebuildVideoInfo 
-     * @param RebuildAudioInfo $RebuildAudioInfo 
+     * @param string $Name Rebuild Media Template Name.
+     * @param string $Comment Rebuild media template description.
+     * @param RebuildVideoInfo $RebuildVideoInfo Rebuild media video control information.
+     * @param RebuildAudioInfo $RebuildAudioInfo Rebuild media audio control information.
      * @param RebuildMediaTargetVideoStream $TargetVideoInfo The output video parameters.
      * @param RebuildMediaTargetAudioStream $TargetAudioInfo The output audio parameters.
      * @param string $Container The output container format. Valid values: `mp4`, `flv`, `hls`.

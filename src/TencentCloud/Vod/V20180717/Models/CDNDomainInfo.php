@@ -18,52 +18,56 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * CDN domain name information
  *
- * @method string getDomain() Obtain 
- * @method void setDomain(string $Domain) Set 
- * @method string getDeployStatus() Obtain 
- * @method void setDeployStatus(string $DeployStatus) Set 
- * @method string getCname() Obtain 
- * @method void setCname(string $Cname) Set 
- * @method string getCreateTime() Obtain 
- * @method void setCreateTime(string $CreateTime) Set 
- * @method CDNDomainConfig getConfig() Obtain 
- * @method void setConfig(CDNDomainConfig $Config) Set 
+ * @method string getDomain() Obtain Domain.
+ * @method void setDomain(string $Domain) Set Domain.
+ * @method string getDeployStatus() Obtain Deployment status.
+ * @method void setDeployStatus(string $DeployStatus) Set Deployment status.
+ * @method string getCname() Obtain Cname record.
+ * @method void setCname(string $Cname) Set Cname record.
+ * @method string getCreateTime() Obtain Create Time
+ * @method void setCreateTime(string $CreateTime) Set Create Time
+ * @method CDNDomainConfig getConfig() Obtain CDN domain name configuration information. 
+Note: This field may return null, indicating that no valid value can be obtained.
+ * @method void setConfig(CDNDomainConfig $Config) Set CDN domain name configuration information. 
+Note: This field may return null, indicating that no valid value can be obtained.
  */
 class CDNDomainInfo extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Domain.
      */
     public $Domain;
 
     /**
-     * @var string 
+     * @var string Deployment status.
      */
     public $DeployStatus;
 
     /**
-     * @var string 
+     * @var string Cname record.
      */
     public $Cname;
 
     /**
-     * @var string 
+     * @var string Create Time
      */
     public $CreateTime;
 
     /**
-     * @var CDNDomainConfig 
+     * @var CDNDomainConfig CDN domain name configuration information. 
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public $Config;
 
     /**
-     * @param string $Domain 
-     * @param string $DeployStatus 
-     * @param string $Cname 
-     * @param string $CreateTime 
-     * @param CDNDomainConfig $Config 
+     * @param string $Domain Domain.
+     * @param string $DeployStatus Deployment status.
+     * @param string $Cname Cname record.
+     * @param string $CreateTime Create Time
+     * @param CDNDomainConfig $Config CDN domain name configuration information. 
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     function __construct()
     {

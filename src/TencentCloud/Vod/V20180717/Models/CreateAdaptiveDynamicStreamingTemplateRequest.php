@@ -34,8 +34,16 @@ Note: the frame rate of all substreams must be the same; otherwise, the frame ra
  * @method void setSubAppId(integer $SubAppId) Set <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
  * @method string getName() Obtain Template name. Length limit: 64 characters.
  * @method void setName(string $Name) Set Template name. Length limit: 64 characters.
- * @method string getDrmType() Obtain 
- * @method void setDrmType(string $DrmType) Set 
+ * @method string getDrmType() Obtain DRM scheme type, value range:
+<li>SimpleAES</li>
+<li>Widevine</li>
+<li>FairPlay</li>
+The default value is an empty string. It is an empty string, indicating that the video will not be DRM protected.
+ * @method void setDrmType(string $DrmType) Set DRM scheme type, value range:
+<li>SimpleAES</li>
+<li>Widevine</li>
+<li>FairPlay</li>
+The default value is an empty string. It is an empty string, indicating that the video will not be DRM protected.
  * @method string getDrmKeyProvider() Obtain The provider of the DRM key. Valid values:
 <li>SDMC</li>
 <li>VOD</li>
@@ -97,7 +105,11 @@ Note: the frame rate of all substreams must be the same; otherwise, the frame ra
     public $Name;
 
     /**
-     * @var string 
+     * @var string DRM scheme type, value range:
+<li>SimpleAES</li>
+<li>Widevine</li>
+<li>FairPlay</li>
+The default value is an empty string. It is an empty string, indicating that the video will not be DRM protected.
      */
     public $DrmType;
 
@@ -146,7 +158,11 @@ Default: ts
 Note: the frame rate of all substreams must be the same; otherwise, the frame rate of the first substream will be used as the output frame rate.
      * @param integer $SubAppId <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
      * @param string $Name Template name. Length limit: 64 characters.
-     * @param string $DrmType 
+     * @param string $DrmType DRM scheme type, value range:
+<li>SimpleAES</li>
+<li>Widevine</li>
+<li>FairPlay</li>
+The default value is an empty string. It is an empty string, indicating that the video will not be DRM protected.
      * @param string $DrmKeyProvider The provider of the DRM key. Valid values:
 <li>SDMC</li>
 <li>VOD</li>

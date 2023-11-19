@@ -36,10 +36,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method integer getProgress() Obtain The progress of an intelligent highlight generation task. Value range: 0-100.
  * @method void setProgress(integer $Progress) Set The progress of an intelligent highlight generation task. Value range: 0-100.
- * @method string getBeginProcessTime() Obtain 
- * @method void setBeginProcessTime(string $BeginProcessTime) Set 
- * @method string getFinishTime() Obtain 
- * @method void setFinishTime(string $FinishTime) Set 
+ * @method string getBeginProcessTime() Obtain The time when the smart highlight task started execution, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
+ * @method void setBeginProcessTime(string $BeginProcessTime) Set The time when the smart highlight task started execution, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
+ * @method string getFinishTime() Obtain The time the smart highlight task completed, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
+ * @method void setFinishTime(string $FinishTime) Set The time the smart highlight task completed, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
  */
 class AiAnalysisTaskHighlightResult extends AbstractModel
 {
@@ -80,12 +80,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $Progress;
 
     /**
-     * @var string 
+     * @var string The time when the smart highlight task started execution, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
      */
     public $BeginProcessTime;
 
     /**
-     * @var string 
+     * @var string The time the smart highlight task completed, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
      */
     public $FinishTime;
 
@@ -98,8 +98,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param AiAnalysisTaskHighlightOutput $Output Output of an intelligent highlight generating task.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $Progress The progress of an intelligent highlight generation task. Value range: 0-100.
-     * @param string $BeginProcessTime 
-     * @param string $FinishTime 
+     * @param string $BeginProcessTime The time when the smart highlight task started execution, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
+     * @param string $FinishTime The time the smart highlight task completed, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
      */
     function __construct()
     {

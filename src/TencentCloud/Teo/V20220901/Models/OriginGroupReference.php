@@ -18,36 +18,52 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Services referencing this origin group
  *
- * @method string getInstanceType() Obtain 
- * @method void setInstanceType(string $InstanceType) Set 
- * @method string getInstanceId() Obtain 
- * @method void setInstanceId(string $InstanceId) Set 
- * @method string getInstanceName() Obtain 
- * @method void setInstanceName(string $InstanceName) Set 
+ * @method string getInstanceType() Obtain Services referencing the origin group. Values:
+<li>`AccelerationDomain`: Acceleration domain name</li>
+<li>`RuleEngine`: Rules engine</li>
+<li>`Loadbalance`: Load balancer</li>
+<li>`ApplicationProxy`: L4 proxy</li>
+ * @method void setInstanceType(string $InstanceType) Set Services referencing the origin group. Values:
+<li>`AccelerationDomain`: Acceleration domain name</li>
+<li>`RuleEngine`: Rules engine</li>
+<li>`Loadbalance`: Load balancer</li>
+<li>`ApplicationProxy`: L4 proxy</li>
+ * @method string getInstanceId() Obtain ID of the instances referencing the origin group
+ * @method void setInstanceId(string $InstanceId) Set ID of the instances referencing the origin group
+ * @method string getInstanceName() Obtain Name of the instance referencing the origin group
+ * @method void setInstanceName(string $InstanceName) Set Name of the instance referencing the origin group
  */
 class OriginGroupReference extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Services referencing the origin group. Values:
+<li>`AccelerationDomain`: Acceleration domain name</li>
+<li>`RuleEngine`: Rules engine</li>
+<li>`Loadbalance`: Load balancer</li>
+<li>`ApplicationProxy`: L4 proxy</li>
      */
     public $InstanceType;
 
     /**
-     * @var string 
+     * @var string ID of the instances referencing the origin group
      */
     public $InstanceId;
 
     /**
-     * @var string 
+     * @var string Name of the instance referencing the origin group
      */
     public $InstanceName;
 
     /**
-     * @param string $InstanceType 
-     * @param string $InstanceId 
-     * @param string $InstanceName 
+     * @param string $InstanceType Services referencing the origin group. Values:
+<li>`AccelerationDomain`: Acceleration domain name</li>
+<li>`RuleEngine`: Rules engine</li>
+<li>`Loadbalance`: Load balancer</li>
+<li>`ApplicationProxy`: L4 proxy</li>
+     * @param string $InstanceId ID of the instances referencing the origin group
+     * @param string $InstanceName Name of the instance referencing the origin group
      */
     function __construct()
     {

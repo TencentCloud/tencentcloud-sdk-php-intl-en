@@ -18,20 +18,20 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Extract copyright watermark output information
  *
- * @method string getText() Obtain 
- * @method void setText(string $Text) Set 
+ * @method string getText() Obtain Copyright information
+ * @method void setText(string $Text) Set Copyright information
  */
 class ExtractCopyRightWatermarkTaskOutput extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Copyright information
      */
     public $Text;
 
     /**
-     * @param string $Text 
+     * @param string $Text Copyright information
      */
     function __construct()
     {

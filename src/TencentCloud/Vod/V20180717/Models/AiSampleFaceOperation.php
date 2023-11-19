@@ -24,8 +24,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setType(string $Type) Set Operation type. Valid values: add, delete, reset. The `reset` operation will clear the existing face data of a figure and add `FaceContents` as the specified face data.
  * @method array getFaceIds() Obtain Face ID set, which is required if `Type` is `delete`.
  * @method void setFaceIds(array $FaceIds) Set Face ID set, which is required if `Type` is `delete`.
- * @method array getFaceContents() Obtain 
- * @method void setFaceContents(array $FaceContents) Set 
+ * @method array getFaceContents() Obtain Face image [Base64](https://tools.ietf.org/html/rfc4648) Encoded string collection, only supports jpeg and png image formats. 
+<li>When Type is add or reset, this field is required;</li>
+<li>Array length limit: 5 pictures. </li>
+Note: The picture must be a clear frontal photo of a single person, with a pixel size of no less than 200*200.
+ * @method void setFaceContents(array $FaceContents) Set Face image [Base64](https://tools.ietf.org/html/rfc4648) Encoded string collection, only supports jpeg and png image formats. 
+<li>When Type is add or reset, this field is required;</li>
+<li>Array length limit: 5 pictures. </li>
+Note: The picture must be a clear frontal photo of a single person, with a pixel size of no less than 200*200.
  */
 class AiSampleFaceOperation extends AbstractModel
 {
@@ -40,14 +46,20 @@ class AiSampleFaceOperation extends AbstractModel
     public $FaceIds;
 
     /**
-     * @var array 
+     * @var array Face image [Base64](https://tools.ietf.org/html/rfc4648) Encoded string collection, only supports jpeg and png image formats. 
+<li>When Type is add or reset, this field is required;</li>
+<li>Array length limit: 5 pictures. </li>
+Note: The picture must be a clear frontal photo of a single person, with a pixel size of no less than 200*200.
      */
     public $FaceContents;
 
     /**
      * @param string $Type Operation type. Valid values: add, delete, reset. The `reset` operation will clear the existing face data of a figure and add `FaceContents` as the specified face data.
      * @param array $FaceIds Face ID set, which is required if `Type` is `delete`.
-     * @param array $FaceContents 
+     * @param array $FaceContents Face image [Base64](https://tools.ietf.org/html/rfc4648) Encoded string collection, only supports jpeg and png image formats. 
+<li>When Type is add or reset, this field is required;</li>
+<li>Array length limit: 5 pictures. </li>
+Note: The picture must be a clear frontal photo of a single person, with a pixel size of no less than 200*200.
      */
     function __construct()
     {

@@ -18,36 +18,36 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Live streaming recording information.
+ * Live recording information
  *
- * @method string getStreamId() Obtain Live streaming recording ID
- * @method void setStreamId(string $StreamId) Set Live streaming recording ID
- * @method string getRecordStartTime() Obtain Recording start time, using [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
- * @method void setRecordStartTime(string $RecordStartTime) Set Recording start time, using [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
- * @method string getRecordEndTime() Obtain Recording end time, using [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
- * @method void setRecordEndTime(string $RecordEndTime) Set Recording end time, using [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+ * @method string getStreamId() Obtain Live recording stream ID.
+ * @method void setStreamId(string $StreamId) Set Live recording stream ID.
+ * @method string getRecordStartTime() Obtain Recording start time, use [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
+ * @method void setRecordStartTime(string $RecordStartTime) Set Recording start time, use [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
+ * @method string getRecordEndTime() Obtain Recording end time, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
+ * @method void setRecordEndTime(string $RecordEndTime) Set Recording end time, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
  */
 class LiveRecordInfo extends AbstractModel
 {
     /**
-     * @var string Live streaming recording ID
+     * @var string Live recording stream ID.
      */
     public $StreamId;
 
     /**
-     * @var string Recording start time, using [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @var string Recording start time, use [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
      */
     public $RecordStartTime;
 
     /**
-     * @var string Recording end time, using [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @var string Recording end time, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
      */
     public $RecordEndTime;
 
     /**
-     * @param string $StreamId Live streaming recording ID
-     * @param string $RecordStartTime Recording start time, using [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
-     * @param string $RecordEndTime Recording end time, using [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @param string $StreamId Live recording stream ID.
+     * @param string $RecordStartTime Recording start time, use [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
+     * @param string $RecordEndTime Recording end time, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
      */
     function __construct()
     {

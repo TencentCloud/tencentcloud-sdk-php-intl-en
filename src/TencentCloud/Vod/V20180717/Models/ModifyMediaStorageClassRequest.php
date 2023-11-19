@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyMediaStorageClass request structure.
  *
- * @method array getFileIds() Obtain 
- * @method void setFileIds(array $FileIds) Set 
+ * @method array getFileIds() Obtain Media file unique identifier list, maximum length: 100.
+ * @method void setFileIds(array $FileIds) Set Media file unique identifier list, maximum length: 100.
  * @method string getStorageClass() Obtain The target storage class. Valid values:
 <li>STANDARD</li>
 <li>STANDARD_IA</li>
@@ -54,7 +54,7 @@ If the current storage class is DEEP ARCHIVE, the valid values for this paramete
 class ModifyMediaStorageClassRequest extends AbstractModel
 {
     /**
-     * @var array 
+     * @var array Media file unique identifier list, maximum length: 100.
      */
     public $FileIds;
 
@@ -85,7 +85,7 @@ If the current storage class is DEEP ARCHIVE, the valid values for this paramete
     public $RestoreTier;
 
     /**
-     * @param array $FileIds 
+     * @param array $FileIds Media file unique identifier list, maximum length: 100.
      * @param string $StorageClass The target storage class. Valid values:
 <li>STANDARD</li>
 <li>STANDARD_IA</li>

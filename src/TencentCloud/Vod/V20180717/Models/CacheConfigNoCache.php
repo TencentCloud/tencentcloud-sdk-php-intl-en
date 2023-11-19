@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Path cache/no cache configuration.
  *
- * @method string getSwitch() Obtain 
- * @method void setSwitch(string $Switch) Set 
- * @method string getRevalidate() Obtain 
- * @method void setRevalidate(string $Revalidate) Set 
+ * @method string getSwitch() Obtain Path cache does not cache configuration configuration switch, value: <li>on: on; </li> <li>off: off. </li>
+ * @method void setSwitch(string $Switch) Set Path cache does not cache configuration configuration switch, value: <li>on: on; </li> <li>off: off. </li>
+ * @method string getRevalidate() Obtain Always return to the origin site for verification, value: <li>on: on; </li> <li>off: off. </li>
+ * @method void setRevalidate(string $Revalidate) Set Always return to the origin site for verification, value: <li>on: on; </li> <li>off: off. </li>
  */
 class CacheConfigNoCache extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Path cache does not cache configuration configuration switch, value: <li>on: on; </li> <li>off: off. </li>
      */
     public $Switch;
 
     /**
-     * @var string 
+     * @var string Always return to the origin site for verification, value: <li>on: on; </li> <li>off: off. </li>
      */
     public $Revalidate;
 
     /**
-     * @param string $Switch 
-     * @param string $Revalidate 
+     * @param string $Switch Path cache does not cache configuration configuration switch, value: <li>on: on; </li> <li>off: off. </li>
+     * @param string $Revalidate Always return to the origin site for verification, value: <li>on: on; </li> <li>off: off. </li>
      */
     function __construct()
     {

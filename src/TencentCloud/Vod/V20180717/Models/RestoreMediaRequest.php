@@ -20,12 +20,12 @@ use TencentCloud\Common\AbstractModel;
 /**
  * RestoreMedia request structure.
  *
- * @method array getFileIds() Obtain The IDs of media files.
- * @method void setFileIds(array $FileIds) Set The IDs of media files.
+ * @method array getFileIds() Obtain Media file unique identifier list, maximum length: 100.
+ * @method void setFileIds(array $FileIds) Set Media file unique identifier list, maximum length: 100.
  * @method integer getSubAppId() Obtain The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.
  * @method void setSubAppId(integer $SubAppId) Set The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.
- * @method integer getRestoreDay() Obtain The number of days during which the restored files will remain available.
- * @method void setRestoreDay(integer $RestoreDay) Set The number of days during which the restored files will remain available.
+ * @method integer getRestoreDay() Obtain The accessible duration of the unfrozen temporary media files must be greater than 0, and the unit is "days".
+ * @method void setRestoreDay(integer $RestoreDay) Set The accessible duration of the unfrozen temporary media files must be greater than 0, and the unit is "days".
  * @method string getRestoreTier() Obtain The retrieval mode. If the current storage class is ARCHIVE, the valid values for this parameter are as follows:
 <li>Expedited: The files are made available in five minutes.</li>
 <li>Standard: The files are made available in five hours.</li>
@@ -44,7 +44,7 @@ If the current storage class is DEEP ARCHIVE, the valid values for this paramete
 class RestoreMediaRequest extends AbstractModel
 {
     /**
-     * @var array The IDs of media files.
+     * @var array Media file unique identifier list, maximum length: 100.
      */
     public $FileIds;
 
@@ -54,7 +54,7 @@ class RestoreMediaRequest extends AbstractModel
     public $SubAppId;
 
     /**
-     * @var integer The number of days during which the restored files will remain available.
+     * @var integer The accessible duration of the unfrozen temporary media files must be greater than 0, and the unit is "days".
      */
     public $RestoreDay;
 
@@ -70,9 +70,9 @@ If the current storage class is DEEP ARCHIVE, the valid values for this paramete
     public $RestoreTier;
 
     /**
-     * @param array $FileIds The IDs of media files.
+     * @param array $FileIds Media file unique identifier list, maximum length: 100.
      * @param integer $SubAppId The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.
-     * @param integer $RestoreDay The number of days during which the restored files will remain available.
+     * @param integer $RestoreDay The accessible duration of the unfrozen temporary media files must be greater than 0, and the unit is "days".
      * @param string $RestoreTier The retrieval mode. If the current storage class is ARCHIVE, the valid values for this parameter are as follows:
 <li>Expedited: The files are made available in five minutes.</li>
 <li>Standard: The files are made available in five hours.</li>

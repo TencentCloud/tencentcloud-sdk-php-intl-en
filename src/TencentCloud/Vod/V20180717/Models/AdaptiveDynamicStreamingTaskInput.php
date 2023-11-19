@@ -28,8 +28,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method TraceWatermarkInput getTraceWatermark() Obtain Digital watermark.
  * @method void setTraceWatermark(TraceWatermarkInput $TraceWatermark) Set Digital watermark.
- * @method CopyRightWatermarkInput getCopyRightWatermark() Obtain 
- * @method void setCopyRightWatermark(CopyRightWatermarkInput $CopyRightWatermark) Set 
+ * @method CopyRightWatermarkInput getCopyRightWatermark() Obtain CopyRight Watermark.
+ * @method void setCopyRightWatermark(CopyRightWatermarkInput $CopyRightWatermark) Set CopyRight Watermark.
  * @method array getSubtitleSet() Obtain List of subtitle IDs (maximum: 16)
  * @method void setSubtitleSet(array $SubtitleSet) Set List of subtitle IDs (maximum: 16)
  */
@@ -52,7 +52,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $TraceWatermark;
 
     /**
-     * @var CopyRightWatermarkInput 
+     * @var CopyRightWatermarkInput CopyRight Watermark.
      */
     public $CopyRightWatermark;
 
@@ -66,7 +66,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @param array $WatermarkSet List of up to 10 image or text watermarks.
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param TraceWatermarkInput $TraceWatermark Digital watermark.
-     * @param CopyRightWatermarkInput $CopyRightWatermark 
+     * @param CopyRightWatermarkInput $CopyRightWatermark CopyRight Watermark.
      * @param array $SubtitleSet List of subtitle IDs (maximum: 16)
      */
     function __construct()

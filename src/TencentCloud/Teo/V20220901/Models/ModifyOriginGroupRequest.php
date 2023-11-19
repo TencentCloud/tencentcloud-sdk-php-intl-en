@@ -20,94 +20,66 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyOriginGroup request structure.
  *
- * @method string getZoneId() Obtain The site ID.
- * @method void setZoneId(string $ZoneId) Set The site ID.
- * @method string getOriginGroupId() Obtain The ID of the origin group.
- * @method void setOriginGroupId(string $OriginGroupId) Set The ID of the origin group.
- * @method string getOriginType() Obtain The origin type. Values:
-<li>`self`: Customer origin</li>
-<li>`third_party`: Third-party origin</li>
-<li>`cos`: Tencent Cloud COS origin</li>
- * @method void setOriginType(string $OriginType) Set The origin type. Values:
-<li>`self`: Customer origin</li>
-<li>`third_party`: Third-party origin</li>
-<li>`cos`: Tencent Cloud COS origin</li>
- * @method string getOriginGroupName() Obtain The name of the origin group.
- * @method void setOriginGroupName(string $OriginGroupName) Set The name of the origin group.
- * @method string getConfigurationType() Obtain The origin configuration type when `OriginType=self`. Values:
-<li>`area`: Configure by region.</li>
-<li>`weight`: Configure by weight.</li>
-<li>`proto`: Configure by HTTP protocol.</li> When `OriginType=third_party/cos`, leave this field empty.
- * @method void setConfigurationType(string $ConfigurationType) Set The origin configuration type when `OriginType=self`. Values:
-<li>`area`: Configure by region.</li>
-<li>`weight`: Configure by weight.</li>
-<li>`proto`: Configure by HTTP protocol.</li> When `OriginType=third_party/cos`, leave this field empty.
- * @method array getOriginRecords() Obtain Details of the origin record.
- * @method void setOriginRecords(array $OriginRecords) Set Details of the origin record.
- * @method string getHostHeader() Obtain The origin domain. This field can be specified only when `OriginType=self`.
-If it is left empty, the existing configuration is used.
- * @method void setHostHeader(string $HostHeader) Set The origin domain. This field can be specified only when `OriginType=self`.
-If it is left empty, the existing configuration is used.
+ * @method string getZoneId() Obtain Site ID
+ * @method void setZoneId(string $ZoneId) Set Site ID
+ * @method string getGroupId() Obtain (Required) Origin group ID
+ * @method void setGroupId(string $GroupId) Set (Required) Origin group ID
+ * @method string getName() Obtain Origin group name. It can contain 1 to 200 characters ([a-z], [A-Z], [0-9] and [_-]). The original configuration applies if this field is not specified.	
+ * @method void setName(string $Name) Set Origin group name. It can contain 1 to 200 characters ([a-z], [A-Z], [0-9] and [_-]). The original configuration applies if this field is not specified.	
+ * @method string getType() Obtain The origin grouptype. Values:
+<li>`GENERAL`: General origin groups. It supports IPs and domain names. It can be referenced by DNS, Rule Engine, Layer 4 Proxy and General LoadBalancer.</li>
+<li>`HTTP`: HTTP-specific origin groups. It supports IPs/domain names and object storage buckets. It can be referenced by acceleration domain names, rule engines and HTTP LoadBalancer. It cannot be referenced by L4 proxies. </li>The original configuration is used if it's not specified.
+ * @method void setType(string $Type) Set The origin grouptype. Values:
+<li>`GENERAL`: General origin groups. It supports IPs and domain names. It can be referenced by DNS, Rule Engine, Layer 4 Proxy and General LoadBalancer.</li>
+<li>`HTTP`: HTTP-specific origin groups. It supports IPs/domain names and object storage buckets. It can be referenced by acceleration domain names, rule engines and HTTP LoadBalancer. It cannot be referenced by L4 proxies. </li>The original configuration is used if it's not specified.
+ * @method array getRecords() Obtain Origin information. The original configuration is used if it's not specified.
+ * @method void setRecords(array $Records) Set Origin information. The original configuration is used if it's not specified.
+ * @method string getHostHeader() Obtain Host header used for origin-pull. It only works when `Type=HTTP`. If it's not specified, no specific Host header is configured. The `HostHeader` specified in `RuleEngine` takes a higher priority over this configuration. 
+ * @method void setHostHeader(string $HostHeader) Set Host header used for origin-pull. It only works when `Type=HTTP`. If it's not specified, no specific Host header is configured. The `HostHeader` specified in `RuleEngine` takes a higher priority over this configuration. 
  */
 class ModifyOriginGroupRequest extends AbstractModel
 {
     /**
-     * @var string The site ID.
+     * @var string Site ID
      */
     public $ZoneId;
 
     /**
-     * @var string The ID of the origin group.
+     * @var string (Required) Origin group ID
      */
-    public $OriginGroupId;
+    public $GroupId;
 
     /**
-     * @var string The origin type. Values:
-<li>`self`: Customer origin</li>
-<li>`third_party`: Third-party origin</li>
-<li>`cos`: Tencent Cloud COS origin</li>
+     * @var string Origin group name. It can contain 1 to 200 characters ([a-z], [A-Z], [0-9] and [_-]). The original configuration applies if this field is not specified.	
      */
-    public $OriginType;
+    public $Name;
 
     /**
-     * @var string The name of the origin group.
+     * @var string The origin grouptype. Values:
+<li>`GENERAL`: General origin groups. It supports IPs and domain names. It can be referenced by DNS, Rule Engine, Layer 4 Proxy and General LoadBalancer.</li>
+<li>`HTTP`: HTTP-specific origin groups. It supports IPs/domain names and object storage buckets. It can be referenced by acceleration domain names, rule engines and HTTP LoadBalancer. It cannot be referenced by L4 proxies. </li>The original configuration is used if it's not specified.
      */
-    public $OriginGroupName;
+    public $Type;
 
     /**
-     * @var string The origin configuration type when `OriginType=self`. Values:
-<li>`area`: Configure by region.</li>
-<li>`weight`: Configure by weight.</li>
-<li>`proto`: Configure by HTTP protocol.</li> When `OriginType=third_party/cos`, leave this field empty.
+     * @var array Origin information. The original configuration is used if it's not specified.
      */
-    public $ConfigurationType;
+    public $Records;
 
     /**
-     * @var array Details of the origin record.
-     */
-    public $OriginRecords;
-
-    /**
-     * @var string The origin domain. This field can be specified only when `OriginType=self`.
-If it is left empty, the existing configuration is used.
+     * @var string Host header used for origin-pull. It only works when `Type=HTTP`. If it's not specified, no specific Host header is configured. The `HostHeader` specified in `RuleEngine` takes a higher priority over this configuration. 
      */
     public $HostHeader;
 
     /**
-     * @param string $ZoneId The site ID.
-     * @param string $OriginGroupId The ID of the origin group.
-     * @param string $OriginType The origin type. Values:
-<li>`self`: Customer origin</li>
-<li>`third_party`: Third-party origin</li>
-<li>`cos`: Tencent Cloud COS origin</li>
-     * @param string $OriginGroupName The name of the origin group.
-     * @param string $ConfigurationType The origin configuration type when `OriginType=self`. Values:
-<li>`area`: Configure by region.</li>
-<li>`weight`: Configure by weight.</li>
-<li>`proto`: Configure by HTTP protocol.</li> When `OriginType=third_party/cos`, leave this field empty.
-     * @param array $OriginRecords Details of the origin record.
-     * @param string $HostHeader The origin domain. This field can be specified only when `OriginType=self`.
-If it is left empty, the existing configuration is used.
+     * @param string $ZoneId Site ID
+     * @param string $GroupId (Required) Origin group ID
+     * @param string $Name Origin group name. It can contain 1 to 200 characters ([a-z], [A-Z], [0-9] and [_-]). The original configuration applies if this field is not specified.	
+     * @param string $Type The origin grouptype. Values:
+<li>`GENERAL`: General origin groups. It supports IPs and domain names. It can be referenced by DNS, Rule Engine, Layer 4 Proxy and General LoadBalancer.</li>
+<li>`HTTP`: HTTP-specific origin groups. It supports IPs/domain names and object storage buckets. It can be referenced by acceleration domain names, rule engines and HTTP LoadBalancer. It cannot be referenced by L4 proxies. </li>The original configuration is used if it's not specified.
+     * @param array $Records Origin information. The original configuration is used if it's not specified.
+     * @param string $HostHeader Host header used for origin-pull. It only works when `Type=HTTP`. If it's not specified, no specific Host header is configured. The `HostHeader` specified in `RuleEngine` takes a higher priority over this configuration. 
      */
     function __construct()
     {
@@ -126,28 +98,24 @@ If it is left empty, the existing configuration is used.
             $this->ZoneId = $param["ZoneId"];
         }
 
-        if (array_key_exists("OriginGroupId",$param) and $param["OriginGroupId"] !== null) {
-            $this->OriginGroupId = $param["OriginGroupId"];
+        if (array_key_exists("GroupId",$param) and $param["GroupId"] !== null) {
+            $this->GroupId = $param["GroupId"];
         }
 
-        if (array_key_exists("OriginType",$param) and $param["OriginType"] !== null) {
-            $this->OriginType = $param["OriginType"];
+        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
+            $this->Name = $param["Name"];
         }
 
-        if (array_key_exists("OriginGroupName",$param) and $param["OriginGroupName"] !== null) {
-            $this->OriginGroupName = $param["OriginGroupName"];
+        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
+            $this->Type = $param["Type"];
         }
 
-        if (array_key_exists("ConfigurationType",$param) and $param["ConfigurationType"] !== null) {
-            $this->ConfigurationType = $param["ConfigurationType"];
-        }
-
-        if (array_key_exists("OriginRecords",$param) and $param["OriginRecords"] !== null) {
-            $this->OriginRecords = [];
-            foreach ($param["OriginRecords"] as $key => $value){
+        if (array_key_exists("Records",$param) and $param["Records"] !== null) {
+            $this->Records = [];
+            foreach ($param["Records"] as $key => $value){
                 $obj = new OriginRecord();
                 $obj->deserialize($value);
-                array_push($this->OriginRecords, $obj);
+                array_push($this->Records, $obj);
             }
         }
 

@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateRebuildMediaTemplate response structure.
  *
- * @method integer getDefinition() Obtain The remaster template ID.
- * @method void setDefinition(integer $Definition) Set The remaster template ID.
+ * @method integer getDefinition() Obtain Rebuild Media Template ID.
+ * @method void setDefinition(integer $Definition) Set Rebuild Media Template ID.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 class CreateRebuildMediaTemplateResponse extends AbstractModel
 {
     /**
-     * @var integer The remaster template ID.
+     * @var integer Rebuild Media Template ID.
      */
     public $Definition;
 
@@ -38,7 +38,7 @@ class CreateRebuildMediaTemplateResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $Definition The remaster template ID.
+     * @param integer $Definition Rebuild Media Template ID.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()

@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Access authentication for Huawei Cloud OBS origin
  *
- * @method string getSwitch() Obtain 
- * @method void setSwitch(string $Switch) Set 
+ * @method string getSwitch() Obtain Huawei Cloud Object Storage back-to-origin authentication configuration switch, the value is: <li>on: on; </li> <li>off: off. </li>
+ * @method void setSwitch(string $Switch) Set Huawei Cloud Object Storage back-to-origin authentication configuration switch, the value is: <li>on: on; </li> <li>off: off. </li>
  * @method string getAccessKey() Obtain Access ID
  * @method void setAccessKey(string $AccessKey) Set Access ID
  * @method string getSecretKey() Obtain Key
@@ -32,7 +32,7 @@ use TencentCloud\Common\AbstractModel;
 class HwPrivateAccess extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Huawei Cloud Object Storage back-to-origin authentication configuration switch, the value is: <li>on: on; </li> <li>off: off. </li>
      */
     public $Switch;
 
@@ -52,7 +52,7 @@ class HwPrivateAccess extends AbstractModel
     public $Bucket;
 
     /**
-     * @param string $Switch 
+     * @param string $Switch Huawei Cloud Object Storage back-to-origin authentication configuration switch, the value is: <li>on: on; </li> <li>off: off. </li>
      * @param string $AccessKey Access ID
      * @param string $SecretKey Key
      * @param string $Bucket BucketName

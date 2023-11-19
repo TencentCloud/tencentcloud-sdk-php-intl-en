@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Back to the source 301/302 status code automatically follows the configuration, the default is off
  *
- * @method string getSwitch() Obtain 
- * @method void setSwitch(string $Switch) Set 
+ * @method string getSwitch() Obtain Back-to-origin follow configuration switch, the values u200bu200bare: <li>on: on; </li> <li>off: off. </li>
+ * @method void setSwitch(string $Switch) Set Back-to-origin follow configuration switch, the values u200bu200bare: <li>on: on; </li> <li>off: off. </li>
  */
 class FollowRedirect extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Back-to-origin follow configuration switch, the values u200bu200bare: <li>on: on; </li> <li>off: off. </li>
      */
     public $Switch;
 
     /**
-     * @param string $Switch 
+     * @param string $Switch Back-to-origin follow configuration switch, the values u200bu200bare: <li>on: on; </li> <li>off: off. </li>
      */
     function __construct()
     {

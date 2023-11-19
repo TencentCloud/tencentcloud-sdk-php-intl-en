@@ -20,21 +20,21 @@ use TencentCloud\Common\AbstractModel;
 /**
  * HTTP header setting rules. Up to 100 entries can be set.
  *
- * @method string getHeaderMode() Obtain 
- * @method void setHeaderMode(string $HeaderMode) Set 
+ * @method string getHeaderMode() Obtain http header setting method: <li>set: setting. Change the value of the specified header parameter to the set value; if the set header does not exist, the header will be added; if there are multiple duplicate header parameters, all will be changed and merged into one header. ;</li> <li>del: delete. Delete the specified header parameter;</li> <li>add: add. Add the specified header parameters. By default, repeated addition is allowed, that is, the same header is added repeatedly (note: repeated addition may affect the browser response, please use the set operation first). </li>
+ * @method void setHeaderMode(string $HeaderMode) Set http header setting method: <li>set: setting. Change the value of the specified header parameter to the set value; if the set header does not exist, the header will be added; if there are multiple duplicate header parameters, all will be changed and merged into one header. ;</li> <li>del: delete. Delete the specified header parameter;</li> <li>add: add. Add the specified header parameters. By default, repeated addition is allowed, that is, the same header is added repeatedly (note: repeated addition may affect the browser response, please use the set operation first). </li>
  * @method string getHeaderName() Obtain HTTP header name. Up to 100 characters can be set.
  * @method void setHeaderName(string $HeaderName) Set HTTP header name. Up to 100 characters can be set.
- * @method string getHeaderValue() Obtain 
- * @method void setHeaderValue(string $HeaderValue) Set 
- * @method string getRuleType() Obtain 
- * @method void setRuleType(string $RuleType) Set 
- * @method array getRulePaths() Obtain 
- * @method void setRulePaths(array $RulePaths) Set 
+ * @method string getHeaderValue() Obtain http header value, up to 1000 characters can be set; optional when Mode is del; required when Mode is add/set.
+ * @method void setHeaderValue(string $HeaderValue) Set http header value, up to 1000 characters can be set; optional when Mode is del; required when Mode is add/set.
+ * @method string getRuleType() Obtain Rule type: <li>all: valid for all files;</li> <li>file: valid for specified file suffix;</li> <li>directory: valid for specified path;</li> <li>path: specified absolute The path takes effect. </li>
+ * @method void setRuleType(string $RuleType) Set Rule type: <li>all: valid for all files;</li> <li>file: valid for specified file suffix;</li> <li>directory: valid for specified path;</li> <li>path: specified absolute The path takes effect. </li>
+ * @method array getRulePaths() Obtain Matching content under the corresponding type of RuleType: <li>Fill in * when all is used;</li> <li>Fill in suffix name when file is used, such as jpg, txt;</li> <li>Fill in path when directory is used, such as /xxx/ test/;</li> <li>Fill in the absolute path when path is specified, such as /xxx/test.html. </li>
+ * @method void setRulePaths(array $RulePaths) Set Matching content under the corresponding type of RuleType: <li>Fill in * when all is used;</li> <li>Fill in suffix name when file is used, such as jpg, txt;</li> <li>Fill in path when directory is used, such as /xxx/ test/;</li> <li>Fill in the absolute path when path is specified, such as /xxx/test.html. </li>
  */
 class HttpHeaderPathRule extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string http header setting method: <li>set: setting. Change the value of the specified header parameter to the set value; if the set header does not exist, the header will be added; if there are multiple duplicate header parameters, all will be changed and merged into one header. ;</li> <li>del: delete. Delete the specified header parameter;</li> <li>add: add. Add the specified header parameters. By default, repeated addition is allowed, that is, the same header is added repeatedly (note: repeated addition may affect the browser response, please use the set operation first). </li>
      */
     public $HeaderMode;
 
@@ -44,26 +44,26 @@ class HttpHeaderPathRule extends AbstractModel
     public $HeaderName;
 
     /**
-     * @var string 
+     * @var string http header value, up to 1000 characters can be set; optional when Mode is del; required when Mode is add/set.
      */
     public $HeaderValue;
 
     /**
-     * @var string 
+     * @var string Rule type: <li>all: valid for all files;</li> <li>file: valid for specified file suffix;</li> <li>directory: valid for specified path;</li> <li>path: specified absolute The path takes effect. </li>
      */
     public $RuleType;
 
     /**
-     * @var array 
+     * @var array Matching content under the corresponding type of RuleType: <li>Fill in * when all is used;</li> <li>Fill in suffix name when file is used, such as jpg, txt;</li> <li>Fill in path when directory is used, such as /xxx/ test/;</li> <li>Fill in the absolute path when path is specified, such as /xxx/test.html. </li>
      */
     public $RulePaths;
 
     /**
-     * @param string $HeaderMode 
+     * @param string $HeaderMode http header setting method: <li>set: setting. Change the value of the specified header parameter to the set value; if the set header does not exist, the header will be added; if there are multiple duplicate header parameters, all will be changed and merged into one header. ;</li> <li>del: delete. Delete the specified header parameter;</li> <li>add: add. Add the specified header parameters. By default, repeated addition is allowed, that is, the same header is added repeatedly (note: repeated addition may affect the browser response, please use the set operation first). </li>
      * @param string $HeaderName HTTP header name. Up to 100 characters can be set.
-     * @param string $HeaderValue 
-     * @param string $RuleType 
-     * @param array $RulePaths 
+     * @param string $HeaderValue http header value, up to 1000 characters can be set; optional when Mode is del; required when Mode is add/set.
+     * @param string $RuleType Rule type: <li>all: valid for all files;</li> <li>file: valid for specified file suffix;</li> <li>directory: valid for specified path;</li> <li>path: specified absolute The path takes effect. </li>
+     * @param array $RulePaths Matching content under the corresponding type of RuleType: <li>Fill in * when all is used;</li> <li>Fill in suffix name when file is used, such as jpg, txt;</li> <li>Fill in path when directory is used, such as /xxx/ test/;</li> <li>Fill in the absolute path when path is specified, such as /xxx/test.html. </li>
      */
     function __construct()
     {

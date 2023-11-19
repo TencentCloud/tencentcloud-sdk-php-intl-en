@@ -32,8 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTasksNotifyMode(string $TasksNotifyMode) Set Notification mode for task flow status change. Valid values: Finish, Change, None. If this parameter is left empty, `Finish` will be used.
  * @method string getSessionContext() Obtain The source context which is used to pass through the user request information. The task flow status change callback will return the value of this field. It can contain up to 1,000 characters.
  * @method void setSessionContext(string $SessionContext) Set The source context which is used to pass through the user request information. The task flow status change callback will return the value of this field. It can contain up to 1,000 characters.
- * @method string getSessionId() Obtain 
- * @method void setSessionId(string $SessionId) Set 
+ * @method string getSessionId() Obtain Identification code used for deduplication. If there is a request with the same identification code within 7 days, this request will return an error. The maximum length is 50 characters, without or with an empty string to indicate no deduplication.
+ * @method void setSessionId(string $SessionId) Set Identification code used for deduplication. If there is a request with the same identification code within 7 days, this request will return an error. The maximum length is 50 characters, without or with an empty string to indicate no deduplication.
  * @method string getExtInfo() Obtain Reserved field for special purposes.
  * @method void setExtInfo(string $ExtInfo) Set Reserved field for special purposes.
  */
@@ -70,7 +70,7 @@ class ProcessMediaByProcedureRequest extends AbstractModel
     public $SessionContext;
 
     /**
-     * @var string 
+     * @var string Identification code used for deduplication. If there is a request with the same identification code within 7 days, this request will return an error. The maximum length is 50 characters, without or with an empty string to indicate no deduplication.
      */
     public $SessionId;
 
@@ -86,7 +86,7 @@ class ProcessMediaByProcedureRequest extends AbstractModel
      * @param integer $TasksPriority Task flow priority. The higher the value, the higher the priority. Value range: -10-10. If this parameter is left empty, 0 will be used.
      * @param string $TasksNotifyMode Notification mode for task flow status change. Valid values: Finish, Change, None. If this parameter is left empty, `Finish` will be used.
      * @param string $SessionContext The source context which is used to pass through the user request information. The task flow status change callback will return the value of this field. It can contain up to 1,000 characters.
-     * @param string $SessionId 
+     * @param string $SessionId Identification code used for deduplication. If there is a request with the same identification code within 7 days, this request will return an error. The maximum length is 50 characters, without or with an empty string to indicate no deduplication.
      * @param string $ExtInfo Reserved field for special purposes.
      */
     function __construct()

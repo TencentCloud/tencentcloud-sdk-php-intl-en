@@ -78,17 +78,17 @@ Note: This field may return·null, indicating that no valid values can be obtain
 Note: This field may return·null, indicating that no valid values can be obtained.
  * @method void setIsCloud(integer $IsCloud) Set Whether it's a cloud asset
 Note: This field may return·null, indicating that no valid values can be obtained.
- * @method integer getAttack() Obtain Network attacks
+ * @method integer getAttack() Obtain Number of network attacks
 Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setAttack(integer $Attack) Set Network attacks
+ * @method void setAttack(integer $Attack) Set Number of network attacks
 Note: This field may return·null, indicating that no valid values can be obtained.
- * @method integer getAccess() Obtain Network access
+ * @method integer getAccess() Obtain Number of network access requests
 Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setAccess(integer $Access) Set Network access
+ * @method void setAccess(integer $Access) Set Number of network access requests
 Note: This field may return·null, indicating that no valid values can be obtained.
- * @method integer getIntercept() Obtain Network Interception
+ * @method integer getIntercept() Obtain Number of blocked attacks
 Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setIntercept(integer $Intercept) Set Network Interception
+ * @method void setIntercept(integer $Intercept) Set Number of blocked attacks
 Note: This field may return·null, indicating that no valid values can be obtained.
  * @method string getInBandwidth() Obtain Inbound bandwidth
 Note: This field may return·null, indicating that no valid values can be obtained.
@@ -251,19 +251,19 @@ Note: This field may return·null, indicating that no valid values can be obtain
     public $IsCloud;
 
     /**
-     * @var integer Network attacks
+     * @var integer Number of network attacks
 Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public $Attack;
 
     /**
-     * @var integer Network access
+     * @var integer Number of network access requests
 Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public $Access;
 
     /**
-     * @var integer Network Interception
+     * @var integer Number of blocked attacks
 Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public $Intercept;
@@ -400,11 +400,11 @@ Note: This field may return·null, indicating that no valid values can be obtain
 Note: This field may return·null, indicating that no valid values can be obtained.
      * @param integer $IsCloud Whether it's a cloud asset
 Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param integer $Attack Network attacks
+     * @param integer $Attack Number of network attacks
 Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param integer $Access Network access
+     * @param integer $Access Number of network access requests
 Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param integer $Intercept Network Interception
+     * @param integer $Intercept Number of blocked attacks
 Note: This field may return·null, indicating that no valid values can be obtained.
      * @param string $InBandwidth Inbound bandwidth
 Note: This field may return·null, indicating that no valid values can be obtained.

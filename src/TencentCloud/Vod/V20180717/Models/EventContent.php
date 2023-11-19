@@ -65,61 +65,97 @@ use TencentCloud\Common\AbstractModel;
 <li>`CreateImageSpriteComplete`: Finished image sprite generation.</li>
 <li>`CreateSnapshotByTimeOffsetComplete`: Finished time point screencapturing.</li>
  * @method FileUploadTask getFileUploadEvent() Obtain 
+Note: This field may return null, indicating that no valid value can be obtained.
  * @method void setFileUploadEvent(FileUploadTask $FileUploadEvent) Set 
+Note: This field may return null, indicating that no valid value can be obtained.
  * @method ProcedureTask getProcedureStateChangeEvent() Obtain 
+Note: This field may return null, indicating that no valid value can be obtained.
  * @method void setProcedureStateChangeEvent(ProcedureTask $ProcedureStateChangeEvent) Set 
+Note: This field may return null, indicating that no valid value can be obtained.
  * @method FileDeleteTask getFileDeleteEvent() Obtain 
+Note: This field may return null, indicating that no valid value can be obtained.
  * @method void setFileDeleteEvent(FileDeleteTask $FileDeleteEvent) Set 
+Note: This field may return null, indicating that no valid value can be obtained.
  * @method PullUploadTask getPullCompleteEvent() Obtain 
+Note: This field may return null, indicating that no valid value can be obtained.
  * @method void setPullCompleteEvent(PullUploadTask $PullCompleteEvent) Set 
+Note: This field may return null, indicating that no valid value can be obtained.
  * @method EditMediaTask getEditMediaCompleteEvent() Obtain 
+Note: This field may return null, indicating that no valid value can be obtained.
  * @method void setEditMediaCompleteEvent(EditMediaTask $EditMediaCompleteEvent) Set 
- * @method SplitMediaTask getSplitMediaCompleteEvent() Obtain The notification for completing video splitting, which is valid if the event type is `SplitMediaComplete`.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setSplitMediaCompleteEvent(SplitMediaTask $SplitMediaCompleteEvent) Set The notification for completing video splitting, which is valid if the event type is `SplitMediaComplete`.
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid value can be obtained.
+ * @method SplitMediaTask getSplitMediaCompleteEvent() Obtain 
+Note: This field may return null, indicating that no valid value can be obtained.
+ * @method void setSplitMediaCompleteEvent(SplitMediaTask $SplitMediaCompleteEvent) Set 
+Note: This field may return null, indicating that no valid value can be obtained.
  * @method ComposeMediaTask getComposeMediaCompleteEvent() Obtain 
+Note: This field may return null, indicating that no valid value can be obtained.
  * @method void setComposeMediaCompleteEvent(ComposeMediaTask $ComposeMediaCompleteEvent) Set 
+Note: This field may return null, indicating that no valid value can be obtained.
  * @method ClipTask2017 getClipCompleteEvent() Obtain 
+Note: This field may return null, indicating that no valid value can be obtained.
  * @method void setClipCompleteEvent(ClipTask2017 $ClipCompleteEvent) Set 
+Note: This field may return null, indicating that no valid value can be obtained.
  * @method TranscodeTask2017 getTranscodeCompleteEvent() Obtain 
+Note: This field may return null, indicating that no valid value can be obtained.
  * @method void setTranscodeCompleteEvent(TranscodeTask2017 $TranscodeCompleteEvent) Set 
+Note: This field may return null, indicating that no valid value can be obtained.
  * @method CreateImageSpriteTask2017 getCreateImageSpriteCompleteEvent() Obtain 
+Note: This field may return null, indicating that no valid value can be obtained.
  * @method void setCreateImageSpriteCompleteEvent(CreateImageSpriteTask2017 $CreateImageSpriteCompleteEvent) Set 
+Note: This field may return null, indicating that no valid value can be obtained.
  * @method ConcatTask2017 getConcatCompleteEvent() Obtain 
+Note: This field may return null, indicating that no valid value can be obtained.
  * @method void setConcatCompleteEvent(ConcatTask2017 $ConcatCompleteEvent) Set 
+Note: This field may return null, indicating that no valid value can be obtained.
  * @method SnapshotByTimeOffsetTask2017 getSnapshotByTimeOffsetCompleteEvent() Obtain 
+Note: This field may return null, indicating that no valid value can be obtained.
  * @method void setSnapshotByTimeOffsetCompleteEvent(SnapshotByTimeOffsetTask2017 $SnapshotByTimeOffsetCompleteEvent) Set 
+Note: This field may return null, indicating that no valid value can be obtained.
  * @method WechatPublishTask getWechatPublishCompleteEvent() Obtain 
+Note: This field may return null, indicating that no valid value can be obtained.
  * @method void setWechatPublishCompleteEvent(WechatPublishTask $WechatPublishCompleteEvent) Set 
+Note: This field may return null, indicating that no valid value can be obtained.
  * @method WechatMiniProgramPublishTask getWechatMiniProgramPublishCompleteEvent() Obtain 
+Note: This field may return null, indicating that no valid value can be obtained.
  * @method void setWechatMiniProgramPublishCompleteEvent(WechatMiniProgramPublishTask $WechatMiniProgramPublishCompleteEvent) Set 
- * @method RemoveWatermarkTask getRemoveWatermarkCompleteEvent() Obtain The notification for completing watermark removal. This parameter is valid only if the event type is `RemoveWatermark`.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setRemoveWatermarkCompleteEvent(RemoveWatermarkTask $RemoveWatermarkCompleteEvent) Set The notification for completing watermark removal. This parameter is valid only if the event type is `RemoveWatermark`.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method RestoreMediaTask getRestoreMediaCompleteEvent() Obtain The notification for completing video retrieval. This parameter is valid if the event type is `RestoreMediaComplete`.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setRestoreMediaCompleteEvent(RestoreMediaTask $RestoreMediaCompleteEvent) Set The notification for completing video retrieval. This parameter is valid if the event type is `RestoreMediaComplete`.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method RebuildMediaTask getRebuildMediaCompleteEvent() Obtain The notification for completing audio/video remastering. This parameter is valid only if the event type is `RebuildMediaComplete`.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setRebuildMediaCompleteEvent(RebuildMediaTask $RebuildMediaCompleteEvent) Set The notification for completing audio/video remastering. This parameter is valid only if the event type is `RebuildMediaComplete`.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method ExtractTraceWatermarkTask getExtractTraceWatermarkCompleteEvent() Obtain The notification for completing digital watermark extraction. This parameter is valid only if `EventType` is `ExtractTraceWatermarkComplete`.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setExtractTraceWatermarkCompleteEvent(ExtractTraceWatermarkTask $ExtractTraceWatermarkCompleteEvent) Set The notification for completing digital watermark extraction. This parameter is valid only if `EventType` is `ExtractTraceWatermarkComplete`.
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid value can be obtained.
+ * @method RemoveWatermarkTask getRemoveWatermarkCompleteEvent() Obtain 
+Note: This field may return null, indicating that no valid value can be obtained.
+ * @method void setRemoveWatermarkCompleteEvent(RemoveWatermarkTask $RemoveWatermarkCompleteEvent) Set 
+Note: This field may return null, indicating that no valid value can be obtained.
+ * @method RestoreMediaTask getRestoreMediaCompleteEvent() Obtain 
+Note: This field may return null, indicating that no valid value can be obtained.
+ * @method void setRestoreMediaCompleteEvent(RestoreMediaTask $RestoreMediaCompleteEvent) Set 
+Note: This field may return null, indicating that no valid value can be obtained.
+ * @method RebuildMediaTask getRebuildMediaCompleteEvent() Obtain 
+Note: This field may return null, indicating that no valid value can be obtained.
+ * @method void setRebuildMediaCompleteEvent(RebuildMediaTask $RebuildMediaCompleteEvent) Set 
+Note: This field may return null, indicating that no valid value can be obtained.
+ * @method ExtractTraceWatermarkTask getExtractTraceWatermarkCompleteEvent() Obtain 
+Note: This field may return null, indicating that no valid value can be obtained.
+ * @method void setExtractTraceWatermarkCompleteEvent(ExtractTraceWatermarkTask $ExtractTraceWatermarkCompleteEvent) Set 
+Note: This field may return null, indicating that no valid value can be obtained.
  * @method ExtractCopyRightWatermarkTask getExtractCopyRightWatermarkCompleteEvent() Obtain 
+Note: This field may return null, indicating that no valid value can be obtained.
  * @method void setExtractCopyRightWatermarkCompleteEvent(ExtractCopyRightWatermarkTask $ExtractCopyRightWatermarkCompleteEvent) Set 
+Note: This field may return null, indicating that no valid value can be obtained.
  * @method ReviewAudioVideoTask getReviewAudioVideoCompleteEvent() Obtain 
+Note: This field may return null, indicating that no valid value can be obtained.
  * @method void setReviewAudioVideoCompleteEvent(ReviewAudioVideoTask $ReviewAudioVideoCompleteEvent) Set 
+Note: This field may return null, indicating that no valid value can be obtained.
  * @method ReduceMediaBitrateTask getReduceMediaBitrateCompleteEvent() Obtain 
+Note: This field may return null, indicating that no valid value can be obtained.
  * @method void setReduceMediaBitrateCompleteEvent(ReduceMediaBitrateTask $ReduceMediaBitrateCompleteEvent) Set 
+Note: This field may return null, indicating that no valid value can be obtained.
  * @method DescribeFileAttributesTask getDescribeFileAttributesCompleteEvent() Obtain 
+Note: This field may return null, indicating that no valid value can be obtained.
  * @method void setDescribeFileAttributesCompleteEvent(DescribeFileAttributesTask $DescribeFileAttributesCompleteEvent) Set 
+Note: This field may return null, indicating that no valid value can be obtained.
  * @method QualityInspectTask getQualityInspectCompleteEvent() Obtain 
+Note: This field may return null, indicating that no valid value can be obtained.
  * @method void setQualityInspectCompleteEvent(QualityInspectTask $QualityInspectCompleteEvent) Set 
+Note: This field may return null, indicating that no valid value can be obtained.
  */
 class EventContent extends AbstractModel
 {
@@ -155,121 +191,139 @@ class EventContent extends AbstractModel
 
     /**
      * @var FileUploadTask 
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public $FileUploadEvent;
 
     /**
      * @var ProcedureTask 
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public $ProcedureStateChangeEvent;
 
     /**
      * @var FileDeleteTask 
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public $FileDeleteEvent;
 
     /**
      * @var PullUploadTask 
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public $PullCompleteEvent;
 
     /**
      * @var EditMediaTask 
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public $EditMediaCompleteEvent;
 
     /**
-     * @var SplitMediaTask The notification for completing video splitting, which is valid if the event type is `SplitMediaComplete`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var SplitMediaTask 
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public $SplitMediaCompleteEvent;
 
     /**
      * @var ComposeMediaTask 
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public $ComposeMediaCompleteEvent;
 
     /**
      * @var ClipTask2017 
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public $ClipCompleteEvent;
 
     /**
      * @var TranscodeTask2017 
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public $TranscodeCompleteEvent;
 
     /**
      * @var CreateImageSpriteTask2017 
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public $CreateImageSpriteCompleteEvent;
 
     /**
      * @var ConcatTask2017 
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public $ConcatCompleteEvent;
 
     /**
      * @var SnapshotByTimeOffsetTask2017 
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public $SnapshotByTimeOffsetCompleteEvent;
 
     /**
      * @var WechatPublishTask 
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public $WechatPublishCompleteEvent;
 
     /**
      * @var WechatMiniProgramPublishTask 
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public $WechatMiniProgramPublishCompleteEvent;
 
     /**
-     * @var RemoveWatermarkTask The notification for completing watermark removal. This parameter is valid only if the event type is `RemoveWatermark`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var RemoveWatermarkTask 
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public $RemoveWatermarkCompleteEvent;
 
     /**
-     * @var RestoreMediaTask The notification for completing video retrieval. This parameter is valid if the event type is `RestoreMediaComplete`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var RestoreMediaTask 
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public $RestoreMediaCompleteEvent;
 
     /**
-     * @var RebuildMediaTask The notification for completing audio/video remastering. This parameter is valid only if the event type is `RebuildMediaComplete`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var RebuildMediaTask 
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public $RebuildMediaCompleteEvent;
 
     /**
-     * @var ExtractTraceWatermarkTask The notification for completing digital watermark extraction. This parameter is valid only if `EventType` is `ExtractTraceWatermarkComplete`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var ExtractTraceWatermarkTask 
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public $ExtractTraceWatermarkCompleteEvent;
 
     /**
      * @var ExtractCopyRightWatermarkTask 
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public $ExtractCopyRightWatermarkCompleteEvent;
 
     /**
      * @var ReviewAudioVideoTask 
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public $ReviewAudioVideoCompleteEvent;
 
     /**
      * @var ReduceMediaBitrateTask 
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public $ReduceMediaBitrateCompleteEvent;
 
     /**
      * @var DescribeFileAttributesTask 
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public $DescribeFileAttributesCompleteEvent;
 
     /**
      * @var QualityInspectTask 
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public $QualityInspectCompleteEvent;
 
@@ -297,33 +351,51 @@ Note: This field may return null, indicating that no valid values can be obtaine
 <li>`CreateImageSpriteComplete`: Finished image sprite generation.</li>
 <li>`CreateSnapshotByTimeOffsetComplete`: Finished time point screencapturing.</li>
      * @param FileUploadTask $FileUploadEvent 
+Note: This field may return null, indicating that no valid value can be obtained.
      * @param ProcedureTask $ProcedureStateChangeEvent 
+Note: This field may return null, indicating that no valid value can be obtained.
      * @param FileDeleteTask $FileDeleteEvent 
+Note: This field may return null, indicating that no valid value can be obtained.
      * @param PullUploadTask $PullCompleteEvent 
+Note: This field may return null, indicating that no valid value can be obtained.
      * @param EditMediaTask $EditMediaCompleteEvent 
-     * @param SplitMediaTask $SplitMediaCompleteEvent The notification for completing video splitting, which is valid if the event type is `SplitMediaComplete`.
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid value can be obtained.
+     * @param SplitMediaTask $SplitMediaCompleteEvent 
+Note: This field may return null, indicating that no valid value can be obtained.
      * @param ComposeMediaTask $ComposeMediaCompleteEvent 
+Note: This field may return null, indicating that no valid value can be obtained.
      * @param ClipTask2017 $ClipCompleteEvent 
+Note: This field may return null, indicating that no valid value can be obtained.
      * @param TranscodeTask2017 $TranscodeCompleteEvent 
+Note: This field may return null, indicating that no valid value can be obtained.
      * @param CreateImageSpriteTask2017 $CreateImageSpriteCompleteEvent 
+Note: This field may return null, indicating that no valid value can be obtained.
      * @param ConcatTask2017 $ConcatCompleteEvent 
+Note: This field may return null, indicating that no valid value can be obtained.
      * @param SnapshotByTimeOffsetTask2017 $SnapshotByTimeOffsetCompleteEvent 
+Note: This field may return null, indicating that no valid value can be obtained.
      * @param WechatPublishTask $WechatPublishCompleteEvent 
+Note: This field may return null, indicating that no valid value can be obtained.
      * @param WechatMiniProgramPublishTask $WechatMiniProgramPublishCompleteEvent 
-     * @param RemoveWatermarkTask $RemoveWatermarkCompleteEvent The notification for completing watermark removal. This parameter is valid only if the event type is `RemoveWatermark`.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param RestoreMediaTask $RestoreMediaCompleteEvent The notification for completing video retrieval. This parameter is valid if the event type is `RestoreMediaComplete`.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param RebuildMediaTask $RebuildMediaCompleteEvent The notification for completing audio/video remastering. This parameter is valid only if the event type is `RebuildMediaComplete`.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ExtractTraceWatermarkTask $ExtractTraceWatermarkCompleteEvent The notification for completing digital watermark extraction. This parameter is valid only if `EventType` is `ExtractTraceWatermarkComplete`.
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid value can be obtained.
+     * @param RemoveWatermarkTask $RemoveWatermarkCompleteEvent 
+Note: This field may return null, indicating that no valid value can be obtained.
+     * @param RestoreMediaTask $RestoreMediaCompleteEvent 
+Note: This field may return null, indicating that no valid value can be obtained.
+     * @param RebuildMediaTask $RebuildMediaCompleteEvent 
+Note: This field may return null, indicating that no valid value can be obtained.
+     * @param ExtractTraceWatermarkTask $ExtractTraceWatermarkCompleteEvent 
+Note: This field may return null, indicating that no valid value can be obtained.
      * @param ExtractCopyRightWatermarkTask $ExtractCopyRightWatermarkCompleteEvent 
+Note: This field may return null, indicating that no valid value can be obtained.
      * @param ReviewAudioVideoTask $ReviewAudioVideoCompleteEvent 
+Note: This field may return null, indicating that no valid value can be obtained.
      * @param ReduceMediaBitrateTask $ReduceMediaBitrateCompleteEvent 
+Note: This field may return null, indicating that no valid value can be obtained.
      * @param DescribeFileAttributesTask $DescribeFileAttributesCompleteEvent 
+Note: This field may return null, indicating that no valid value can be obtained.
      * @param QualityInspectTask $QualityInspectCompleteEvent 
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     function __construct()
     {

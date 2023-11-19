@@ -36,10 +36,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
  * @method void setOutput(CoverBySnapshotTaskOutput $Output) Set Output of cover generating task.
  * @method integer getProgress() Obtain The progress of a video screenshot (thumbnail) task. Value range: 0-100.
  * @method void setProgress(integer $Progress) Set The progress of a video screenshot (thumbnail) task. Value range: 0-100.
- * @method string getBeginProcessTime() Obtain 
- * @method void setBeginProcessTime(string $BeginProcessTime) Set 
- * @method string getFinishTime() Obtain 
- * @method void setFinishTime(string $FinishTime) Set 
+ * @method string getBeginProcessTime() Obtain The time when the screenshot making cover task started, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
+ * @method void setBeginProcessTime(string $BeginProcessTime) Set The time when the screenshot making cover task started, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
+ * @method string getFinishTime() Obtain Screenshot the time when the cover task was completed, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
+ * @method void setFinishTime(string $FinishTime) Set Screenshot the time when the cover task was completed, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
  */
 class MediaProcessTaskCoverBySnapshotResult extends AbstractModel
 {
@@ -80,12 +80,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $Progress;
 
     /**
-     * @var string 
+     * @var string The time when the screenshot making cover task started, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
      */
     public $BeginProcessTime;
 
     /**
-     * @var string 
+     * @var string Screenshot the time when the cover task was completed, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
      */
     public $FinishTime;
 
@@ -98,8 +98,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @param CoverBySnapshotTaskInput $Input Input of cover generating task.
      * @param CoverBySnapshotTaskOutput $Output Output of cover generating task.
      * @param integer $Progress The progress of a video screenshot (thumbnail) task. Value range: 0-100.
-     * @param string $BeginProcessTime 
-     * @param string $FinishTime 
+     * @param string $BeginProcessTime The time when the screenshot making cover task started, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
+     * @param string $FinishTime Screenshot the time when the cover task was completed, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
      */
     function __construct()
     {

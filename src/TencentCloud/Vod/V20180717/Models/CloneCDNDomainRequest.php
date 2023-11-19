@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDomain(string $Domain) Set Domain
  * @method string getReferenceDomain() Obtain The cloned domain.
  * @method void setReferenceDomain(string $ReferenceDomain) Set The cloned domain.
- * @method integer getSubAppId() Obtain 
- * @method void setSubAppId(integer $SubAppId) Set 
+ * @method integer getSubAppId() Obtain VOD Application ID. If you want to access resources in a sub-app, fill in this field with the sub-app ID; otherwise, don't fill in this field.
+ * @method void setSubAppId(integer $SubAppId) Set VOD Application ID. If you want to access resources in a sub-app, fill in this field with the sub-app ID; otherwise, don't fill in this field.
  */
 class CloneCDNDomainRequest extends AbstractModel
 {
@@ -40,14 +40,14 @@ class CloneCDNDomainRequest extends AbstractModel
     public $ReferenceDomain;
 
     /**
-     * @var integer 
+     * @var integer VOD Application ID. If you want to access resources in a sub-app, fill in this field with the sub-app ID; otherwise, don't fill in this field.
      */
     public $SubAppId;
 
     /**
      * @param string $Domain Domain
      * @param string $ReferenceDomain The cloned domain.
-     * @param integer $SubAppId 
+     * @param integer $SubAppId VOD Application ID. If you want to access resources in a sub-app, fill in this field with the sub-app ID; otherwise, don't fill in this field.
      */
     function __construct()
     {

@@ -20,8 +20,14 @@ use TencentCloud\Common\AbstractModel;
 /**
  * An image operation.
  *
- * @method string getType() Obtain 
- * @method void setType(string $Type) Set 
+ * @method string getType() Obtain Image processing type. Optional types are:
+<li>Scale: image thumbnail processing;</li>
+<li>CenterCut: image cropping processing;</li>
+<li>Blur: image blur processing. </li>
+ * @method void setType(string $Type) Set Image processing type. Optional types are:
+<li>Scale: image thumbnail processing;</li>
+<li>CenterCut: image cropping processing;</li>
+<li>Blur: image blur processing. </li>
  * @method ImageScale getScale() Obtain The scaling details. This parameter is valid only if `Type` is `Scale`.
  * @method void setScale(ImageScale $Scale) Set The scaling details. This parameter is valid only if `Type` is `Scale`.
  * @method ImageCenterCut getCenterCut() Obtain The cropping details. This parameter is valid only if `Type` is `CenterCut`.
@@ -32,7 +38,10 @@ use TencentCloud\Common\AbstractModel;
 class ImageOperation extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Image processing type. Optional types are:
+<li>Scale: image thumbnail processing;</li>
+<li>CenterCut: image cropping processing;</li>
+<li>Blur: image blur processing. </li>
      */
     public $Type;
 
@@ -52,7 +61,10 @@ class ImageOperation extends AbstractModel
     public $Blur;
 
     /**
-     * @param string $Type 
+     * @param string $Type Image processing type. Optional types are:
+<li>Scale: image thumbnail processing;</li>
+<li>CenterCut: image cropping processing;</li>
+<li>Blur: image blur processing. </li>
      * @param ImageScale $Scale The scaling details. This parameter is valid only if `Type` is `Scale`.
      * @param ImageCenterCut $CenterCut The cropping details. This parameter is valid only if `Type` is `CenterCut`.
      * @param ImageBlur $Blur Image blurring. This parameter is valid only if `Type` is `Blur`.

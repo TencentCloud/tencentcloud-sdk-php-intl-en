@@ -34,12 +34,12 @@ use TencentCloud\Common\AbstractModel;
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setOutput(AiRecognitionTaskAsrFullTextResultOutput $Output) Set Output information of full speech recognition task.
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method integer getProgress() Obtain 
- * @method void setProgress(integer $Progress) Set 
- * @method string getBeginProcessTime() Obtain 
- * @method void setBeginProcessTime(string $BeginProcessTime) Set 
- * @method string getFinishTime() Obtain 
- * @method void setFinishTime(string $FinishTime) Set 
+ * @method integer getProgress() Obtain Speech full-text recognition task progress, value range [0-100].
+ * @method void setProgress(integer $Progress) Set Speech full-text recognition task progress, value range [0-100].
+ * @method string getBeginProcessTime() Obtain The time when the full-text speech recognition task started, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
+ * @method void setBeginProcessTime(string $BeginProcessTime) Set The time when the full-text speech recognition task started, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
+ * @method string getFinishTime() Obtain The time when the speech full-text recognition task was completed, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
+ * @method void setFinishTime(string $FinishTime) Set The time when the speech full-text recognition task was completed, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
  */
 class AiRecognitionTaskAsrFullTextResult extends AbstractModel
 {
@@ -75,17 +75,17 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $Output;
 
     /**
-     * @var integer 
+     * @var integer Speech full-text recognition task progress, value range [0-100].
      */
     public $Progress;
 
     /**
-     * @var string 
+     * @var string The time when the full-text speech recognition task started, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
      */
     public $BeginProcessTime;
 
     /**
-     * @var string 
+     * @var string The time when the speech full-text recognition task was completed, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
      */
     public $FinishTime;
 
@@ -97,9 +97,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @param AiRecognitionTaskAsrFullTextResultInput $Input Input information of full speech recognition task.
      * @param AiRecognitionTaskAsrFullTextResultOutput $Output Output information of full speech recognition task.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param integer $Progress 
-     * @param string $BeginProcessTime 
-     * @param string $FinishTime 
+     * @param integer $Progress Speech full-text recognition task progress, value range [0-100].
+     * @param string $BeginProcessTime The time when the full-text speech recognition task started, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
+     * @param string $FinishTime The time when the speech full-text recognition task was completed, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
      */
     function __construct()
     {

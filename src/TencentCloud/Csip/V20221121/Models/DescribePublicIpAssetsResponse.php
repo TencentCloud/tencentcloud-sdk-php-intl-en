@@ -30,9 +30,9 @@ Note: This field may return·null, indicating that no valid values can be obtain
 Note: This field may return·null, indicating that no valid values can be obtained.
  * @method void setAssetLocationList(array $AssetLocationList) Set List of asset locations
 Note: This field may return·null, indicating that no valid values can be obtained.
- * @method array getIpTypeList() Obtain List of IPs
+ * @method array getIpTypeList() Obtain List of IP types
 Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setIpTypeList(array $IpTypeList) Set List of IPs
+ * @method void setIpTypeList(array $IpTypeList) Set List of IP types
 Note: This field may return·null, indicating that no valid values can be obtained.
  * @method array getRegionList() Obtain List of regions
 Note: This field may return·null, indicating that no valid values can be obtained.
@@ -73,7 +73,7 @@ Note: This field may return·null, indicating that no valid values can be obtain
     public $AssetLocationList;
 
     /**
-     * @var array List of IPs
+     * @var array List of IP types
 Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public $IpTypeList;
@@ -113,7 +113,7 @@ Note: This field may return·null, indicating that no valid values can be obtain
      * @param integer $Total Total number of results
      * @param array $AssetLocationList List of asset locations
 Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param array $IpTypeList List of IPs
+     * @param array $IpTypeList List of IP types
 Note: This field may return·null, indicating that no valid values can be obtained.
      * @param array $RegionList List of regions
 Note: This field may return·null, indicating that no valid values can be obtained.

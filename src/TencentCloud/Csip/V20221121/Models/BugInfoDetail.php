@@ -20,9 +20,9 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Vulnerability details
  *
- * @method integer getId() Obtain Type of the query action. `1`: Query emergency vulnerabilities; `2`: Query all vulnerabilities; `3`: Query a specific vulnerability. When `Id=3`, `CVEId` is required. 
+ * @method integer getId() Obtain Vulnerability ID
 Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setId(integer $Id) Set Type of the query action. `1`: Query emergency vulnerabilities; `2`: Query all vulnerabilities; `3`: Query a specific vulnerability. When `Id=3`, `CVEId` is required. 
+ * @method void setId(integer $Id) Set Vulnerability ID
 Note: This field may return·null, indicating that no valid values can be obtained.
  * @method string getPatchId() Obtain POC ID of the vulnerability
 Note: This field may return·null, indicating that no valid values can be obtained.
@@ -80,21 +80,21 @@ Note: This field may return·null, indicating that no valid values can be obtain
 Note: This field may return·null, indicating that no valid values can be obtained.
  * @method void setProSupport(integer $ProSupport) Set Product support status. The real-time status is returned.
 Note: This field may return·null, indicating that no valid values can be obtained.
- * @method integer getIsPublish() Obtain Published or not, `0`: Not published; `1`: Published.
+ * @method integer getIsPublish() Obtain Specify whether the vulnerability is published as an emergency vulnerability. `1`: Published as an emergency vulnerability; `0`: Not an emergency vulnerability.
 Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setIsPublish(integer $IsPublish) Set Published or not, `0`: Not published; `1`: Published.
+ * @method void setIsPublish(integer $IsPublish) Set Specify whether the vulnerability is published as an emergency vulnerability. `1`: Published as an emergency vulnerability; `0`: Not an emergency vulnerability.
 Note: This field may return·null, indicating that no valid values can be obtained.
- * @method string getReleaseTime() Obtain Release time
+ * @method string getReleaseTime() Obtain Disclosure time of the vulnerability. 
 Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setReleaseTime(string $ReleaseTime) Set Release time
+ * @method void setReleaseTime(string $ReleaseTime) Set Disclosure time of the vulnerability. 
 Note: This field may return·null, indicating that no valid values can be obtained.
- * @method string getCreateTime() Obtain Creation time
+ * @method string getCreateTime() Obtain The time when the vulnerability is added to the vulnerability database.
 Note: u200dThis field may return `null`, indicating that no valid values can be obtained.
- * @method void setCreateTime(string $CreateTime) Set Creation time
+ * @method void setCreateTime(string $CreateTime) Set The time when the vulnerability is added to the vulnerability database.
 Note: u200dThis field may return `null`, indicating that no valid values can be obtained.
- * @method string getUpdateTime() Obtain Update time
+ * @method string getUpdateTime() Obtain The last update time of the vulnerability in the database
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setUpdateTime(string $UpdateTime) Set Update time
+ * @method void setUpdateTime(string $UpdateTime) Set The last update time of the vulnerability in the database
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getSubCategory() Obtain Sub-category of the vulnerability
 Note: This field may return·null, indicating that no valid values can be obtained.
@@ -104,7 +104,7 @@ Note: This field may return·null, indicating that no valid values can be obtain
 class BugInfoDetail extends AbstractModel
 {
     /**
-     * @var integer Type of the query action. `1`: Query emergency vulnerabilities; `2`: Query all vulnerabilities; `3`: Query a specific vulnerability. When `Id=3`, `CVEId` is required. 
+     * @var integer Vulnerability ID
 Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public $Id;
@@ -194,25 +194,25 @@ Note: This field may return·null, indicating that no valid values can be obtain
     public $ProSupport;
 
     /**
-     * @var integer Published or not, `0`: Not published; `1`: Published.
+     * @var integer Specify whether the vulnerability is published as an emergency vulnerability. `1`: Published as an emergency vulnerability; `0`: Not an emergency vulnerability.
 Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public $IsPublish;
 
     /**
-     * @var string Release time
+     * @var string Disclosure time of the vulnerability. 
 Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public $ReleaseTime;
 
     /**
-     * @var string Creation time
+     * @var string The time when the vulnerability is added to the vulnerability database.
 Note: u200dThis field may return `null`, indicating that no valid values can be obtained.
      */
     public $CreateTime;
 
     /**
-     * @var string Update time
+     * @var string The last update time of the vulnerability in the database
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $UpdateTime;
@@ -224,7 +224,7 @@ Note: This field may return·null, indicating that no valid values can be obtain
     public $SubCategory;
 
     /**
-     * @param integer $Id Type of the query action. `1`: Query emergency vulnerabilities; `2`: Query all vulnerabilities; `3`: Query a specific vulnerability. When `Id=3`, `CVEId` is required. 
+     * @param integer $Id Vulnerability ID
 Note: This field may return·null, indicating that no valid values can be obtained.
      * @param string $PatchId POC ID of the vulnerability
 Note: This field may return·null, indicating that no valid values can be obtained.
@@ -254,13 +254,13 @@ Note: This field may return·null, indicating that no valid values can be obtain
 Note: This field may return·null, indicating that no valid values can be obtained.
      * @param integer $ProSupport Product support status. The real-time status is returned.
 Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param integer $IsPublish Published or not, `0`: Not published; `1`: Published.
+     * @param integer $IsPublish Specify whether the vulnerability is published as an emergency vulnerability. `1`: Published as an emergency vulnerability; `0`: Not an emergency vulnerability.
 Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param string $ReleaseTime Release time
+     * @param string $ReleaseTime Disclosure time of the vulnerability. 
 Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param string $CreateTime Creation time
+     * @param string $CreateTime The time when the vulnerability is added to the vulnerability database.
 Note: u200dThis field may return `null`, indicating that no valid values can be obtained.
-     * @param string $UpdateTime Update time
+     * @param string $UpdateTime The last update time of the vulnerability in the database
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $SubCategory Sub-category of the vulnerability
 Note: This field may return·null, indicating that no valid values can be obtained.

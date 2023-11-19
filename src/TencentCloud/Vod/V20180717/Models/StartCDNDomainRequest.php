@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getDomain() Obtain Domain.
  * @method void setDomain(string $Domain) Set Domain.
- * @method string getOperation() Obtain 
- * @method void setOperation(string $Operation) Set 
+ * @method string getOperation() Obtain Domain name operation, value: <li>start: enable;</li> <li>stop: disable. </li>
+ * @method void setOperation(string $Operation) Set Domain name operation, value: <li>start: enable;</li> <li>stop: disable. </li>
  * @method integer getSubAppId() Obtain VOD[Subapplication](/document/product/266/14574) ID。If you want to access resources in a Subapplication, fill this field with the Subapplication ID; otherwise, you don't need to fill in this field.
  * @method void setSubAppId(integer $SubAppId) Set VOD[Subapplication](/document/product/266/14574) ID。If you want to access resources in a Subapplication, fill this field with the Subapplication ID; otherwise, you don't need to fill in this field.
  */
@@ -35,7 +35,7 @@ class StartCDNDomainRequest extends AbstractModel
     public $Domain;
 
     /**
-     * @var string 
+     * @var string Domain name operation, value: <li>start: enable;</li> <li>stop: disable. </li>
      */
     public $Operation;
 
@@ -46,7 +46,7 @@ class StartCDNDomainRequest extends AbstractModel
 
     /**
      * @param string $Domain Domain.
-     * @param string $Operation 
+     * @param string $Operation Domain name operation, value: <li>start: enable;</li> <li>stop: disable. </li>
      * @param integer $SubAppId VOD[Subapplication](/document/product/266/14574) ID。If you want to access resources in a Subapplication, fill this field with the Subapplication ID; otherwise, you don't need to fill in this field.
      */
     function __construct()

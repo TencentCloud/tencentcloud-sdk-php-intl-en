@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getUrl() Obtain The URL of the media on which digital watermark extraction is to be performed.
  * @method void setUrl(string $Url) Set The URL of the media on which digital watermark extraction is to be performed.
- * @method string getFileId() Obtain 
- * @method void setFileId(string $FileId) Set 
+ * @method string getFileId() Obtain Media file ID. The original media file ID corresponding to the URL.
+ * @method void setFileId(string $FileId) Set Media file ID. The original media file ID corresponding to the URL.
  */
 class ExtractTraceWatermarkTaskInput extends AbstractModel
 {
@@ -33,13 +33,13 @@ class ExtractTraceWatermarkTaskInput extends AbstractModel
     public $Url;
 
     /**
-     * @var string 
+     * @var string Media file ID. The original media file ID corresponding to the URL.
      */
     public $FileId;
 
     /**
      * @param string $Url The URL of the media on which digital watermark extraction is to be performed.
-     * @param string $FileId 
+     * @param string $FileId Media file ID. The original media file ID corresponding to the URL.
      */
     function __construct()
     {

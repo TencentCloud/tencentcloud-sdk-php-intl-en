@@ -18,76 +18,76 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Timestamp anti-hotlinking mode D configuration; The access URL format of timestamp anti-hotlinking mode D is: http://DomainName/FileName?sign=md5hash&t=timestamp; where timestamp is a decimal or hexadecimal UNIX timestamp; md5hash: MD5 (custom key + file path + timestamp).
  *
- * @method string getSecretKey() Obtain 
- * @method void setSecretKey(string $SecretKey) Set 
- * @method integer getExpireTime() Obtain 
- * @method void setExpireTime(integer $ExpireTime) Set 
- * @method array getFileExtensions() Obtain 
- * @method void setFileExtensions(array $FileExtensions) Set 
- * @method string getFilterType() Obtain 
- * @method void setFilterType(string $FilterType) Set 
- * @method string getSignParam() Obtain 
- * @method void setSignParam(string $SignParam) Set 
- * @method string getTimeParam() Obtain 
- * @method void setTimeParam(string $TimeParam) Set 
- * @method string getTimeFormat() Obtain 
- * @method void setTimeFormat(string $TimeFormat) Set 
- * @method string getBackupSecretKey() Obtain 
- * @method void setBackupSecretKey(string $BackupSecretKey) Set 
+ * @method string getSecretKey() Obtain The key to calculate the signature; only uppercase and lowercase letters and numbers are allowed, with a length of 6~32 characters.
+ * @method void setSecretKey(string $SecretKey) Set The key to calculate the signature; only uppercase and lowercase letters and numbers are allowed, with a length of 6~32 characters.
+ * @method integer getExpireTime() Obtain Signature expiration time setting; the unit is seconds, and the maximum value can be set to 630720000.
+ * @method void setExpireTime(integer $ExpireTime) Set Signature expiration time setting; the unit is seconds, and the maximum value can be set to 630720000.
+ * @method array getFileExtensions() Obtain File extension list settings for authentication/non-authentication; if the character * is included, it means all files.
+ * @method void setFileExtensions(array $FileExtensions) Set File extension list settings for authentication/non-authentication; if the character * is included, it means all files.
+ * @method string getFilterType() Obtain whitelist: whitelist, indicating that all types except the FileExtensions list will be authenticated; blacklist: blacklist, indicating that only the types in FileExtensions will be authenticated.
+ * @method void setFilterType(string $FilterType) Set whitelist: whitelist, indicating that all types except the FileExtensions list will be authenticated; blacklist: blacklist, indicating that only the types in FileExtensions will be authenticated.
+ * @method string getSignParam() Obtain Signature parameter name setting; only uppercase and lowercase letters, numbers or underscores are allowed, the length is 1~100 characters, and it cannot start with a number.
+ * @method void setSignParam(string $SignParam) Set Signature parameter name setting; only uppercase and lowercase letters, numbers or underscores are allowed, the length is 1~100 characters, and it cannot start with a number.
+ * @method string getTimeParam() Obtain Timestamp parameter name setting; only uppercase and lowercase letters, numbers or underscores are allowed, the length is 1~100 characters, and it cannot start with a number.
+ * @method void setTimeParam(string $TimeParam) Set Timestamp parameter name setting; only uppercase and lowercase letters, numbers or underscores are allowed, the length is 1~100 characters, and it cannot start with a number.
+ * @method string getTimeFormat() Obtain Timestamp base setting: <li>dec: decimal</li> <li>hex: hexadecimal</li>
+ * @method void setTimeFormat(string $TimeFormat) Set Timestamp base setting: <li>dec: decimal</li> <li>hex: hexadecimal</li>
+ * @method string getBackupSecretKey() Obtain Alternate key for calculating signature; only uppercase and lowercase letters and numbers are allowed, length 6~32 characters.
+ * @method void setBackupSecretKey(string $BackupSecretKey) Set Alternate key for calculating signature; only uppercase and lowercase letters and numbers are allowed, length 6~32 characters.
  */
 class AuthenticationTypeD extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string The key to calculate the signature; only uppercase and lowercase letters and numbers are allowed, with a length of 6~32 characters.
      */
     public $SecretKey;
 
     /**
-     * @var integer 
+     * @var integer Signature expiration time setting; the unit is seconds, and the maximum value can be set to 630720000.
      */
     public $ExpireTime;
 
     /**
-     * @var array 
+     * @var array File extension list settings for authentication/non-authentication; if the character * is included, it means all files.
      */
     public $FileExtensions;
 
     /**
-     * @var string 
+     * @var string whitelist: whitelist, indicating that all types except the FileExtensions list will be authenticated; blacklist: blacklist, indicating that only the types in FileExtensions will be authenticated.
      */
     public $FilterType;
 
     /**
-     * @var string 
+     * @var string Signature parameter name setting; only uppercase and lowercase letters, numbers or underscores are allowed, the length is 1~100 characters, and it cannot start with a number.
      */
     public $SignParam;
 
     /**
-     * @var string 
+     * @var string Timestamp parameter name setting; only uppercase and lowercase letters, numbers or underscores are allowed, the length is 1~100 characters, and it cannot start with a number.
      */
     public $TimeParam;
 
     /**
-     * @var string 
+     * @var string Timestamp base setting: <li>dec: decimal</li> <li>hex: hexadecimal</li>
      */
     public $TimeFormat;
 
     /**
-     * @var string 
+     * @var string Alternate key for calculating signature; only uppercase and lowercase letters and numbers are allowed, length 6~32 characters.
      */
     public $BackupSecretKey;
 
     /**
-     * @param string $SecretKey 
-     * @param integer $ExpireTime 
-     * @param array $FileExtensions 
-     * @param string $FilterType 
-     * @param string $SignParam 
-     * @param string $TimeParam 
-     * @param string $TimeFormat 
-     * @param string $BackupSecretKey 
+     * @param string $SecretKey The key to calculate the signature; only uppercase and lowercase letters and numbers are allowed, with a length of 6~32 characters.
+     * @param integer $ExpireTime Signature expiration time setting; the unit is seconds, and the maximum value can be set to 630720000.
+     * @param array $FileExtensions File extension list settings for authentication/non-authentication; if the character * is included, it means all files.
+     * @param string $FilterType whitelist: whitelist, indicating that all types except the FileExtensions list will be authenticated; blacklist: blacklist, indicating that only the types in FileExtensions will be authenticated.
+     * @param string $SignParam Signature parameter name setting; only uppercase and lowercase letters, numbers or underscores are allowed, the length is 1~100 characters, and it cannot start with a number.
+     * @param string $TimeParam Timestamp parameter name setting; only uppercase and lowercase letters, numbers or underscores are allowed, the length is 1~100 characters, and it cannot start with a number.
+     * @param string $TimeFormat Timestamp base setting: <li>dec: decimal</li> <li>hex: hexadecimal</li>
+     * @param string $BackupSecretKey Alternate key for calculating signature; only uppercase and lowercase letters and numbers are allowed, length 6~32 characters.
      */
     function __construct()
     {

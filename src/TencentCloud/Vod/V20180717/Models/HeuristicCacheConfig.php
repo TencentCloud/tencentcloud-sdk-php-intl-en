@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Heuristic cache configuration
  *
- * @method string getHeuristicCacheTimeSwitch() Obtain 
- * @method void setHeuristicCacheTimeSwitch(string $HeuristicCacheTimeSwitch) Set 
+ * @method string getHeuristicCacheTimeSwitch() Obtain Heuristic custom time cache configuration switch, the values u200bu200bare: <li>on: on; </li> <li>off: off. </li>
+ * @method void setHeuristicCacheTimeSwitch(string $HeuristicCacheTimeSwitch) Set Heuristic custom time cache configuration switch, the values u200bu200bare: <li>on: on; </li> <li>off: off. </li>
  * @method integer getHeuristicCacheTime() Obtain Unit: seconds.
  * @method void setHeuristicCacheTime(integer $HeuristicCacheTime) Set Unit: seconds.
  */
 class HeuristicCacheConfig extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Heuristic custom time cache configuration switch, the values u200bu200bare: <li>on: on; </li> <li>off: off. </li>
      */
     public $HeuristicCacheTimeSwitch;
 
@@ -38,7 +38,7 @@ class HeuristicCacheConfig extends AbstractModel
     public $HeuristicCacheTime;
 
     /**
-     * @param string $HeuristicCacheTimeSwitch 
+     * @param string $HeuristicCacheTimeSwitch Heuristic custom time cache configuration switch, the values u200bu200bare: <li>on: on; </li> <li>off: off. </li>
      * @param integer $HeuristicCacheTime Unit: seconds.
      */
     function __construct()

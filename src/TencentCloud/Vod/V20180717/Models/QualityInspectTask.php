@@ -24,20 +24,20 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTaskId(string $TaskId) Set Media quality inspection task ID.
  * @method string getStatus() Obtain Task status, value: <li>PROCESSING: processing;</li> <li>FINISH: Completed.</li>
  * @method void setStatus(string $Status) Set Task status, value: <li>PROCESSING: processing;</li> <li>FINISH: Completed.</li>
- * @method string getErrCodeExt() Obtain Error code, an empty string indicates success, other values indicate failure. Please refer to the [Video Processing Error Code](https://intl.cloud.tencent.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81) list for values.
- * @method void setErrCodeExt(string $ErrCodeExt) Set Error code, an empty string indicates success, other values indicate failure. Please refer to the [Video Processing Error Code](https://intl.cloud.tencent.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81) list for values.
+ * @method string getErrCodeExt() Obtain Error code, an empty string indicates success, other values indicate failure. Please refer to the [Video Processing Error Code](https://www.tencentcloud.com/document/product/266/39145) list for values.
+ * @method void setErrCodeExt(string $ErrCodeExt) Set Error code, an empty string indicates success, other values indicate failure. Please refer to the [Video Processing Error Code](https://www.tencentcloud.com/document/product/266/39145) list for values.
  * @method string getMessage() Obtain Error information.
  * @method void setMessage(string $Message) Set Error information.
- * @method MediaMetaData getMetaData() Obtain Media quality inpection input metadata of audio and video.
- * @method void setMetaData(MediaMetaData $MetaData) Set Media quality inpection input metadata of audio and video.
+ * @method MediaMetaData getMetaData() Obtain Media quality inspection input metadata of audio and video.
+ * @method void setMetaData(MediaMetaData $MetaData) Set Media quality inspection input metadata of audio and video.
  * @method QualityInspectTaskInput getInput() Obtain Media quality inspection task input.
  * @method void setInput(QualityInspectTaskInput $Input) Set Media quality inspection task input.
  * @method QualityInspectTaskOutput getOutput() Obtain Media quality inspection task generates.
  * @method void setOutput(QualityInspectTaskOutput $Output) Set Media quality inspection task generates.
  * @method string getSessionId() Obtain Used for deduplication, if there has been a request with the same recognition code within seven days, this request will return an error. Maximum length of 50 characters, without or with an empty string indicates no deduplication.
  * @method void setSessionId(string $SessionId) Set Used for deduplication, if there has been a request with the same recognition code within seven days, this request will return an error. Maximum length of 50 characters, without or with an empty string indicates no deduplication.
- * @method string getSessionContext() Obtain Source context, used for transparent transmission of user request information. Upon completion of media quality inpection, the callback will return the value of this field, with a maximum length of 1000 characters.
- * @method void setSessionContext(string $SessionContext) Set Source context, used for transparent transmission of user request information. Upon completion of media quality inpection, the callback will return the value of this field, with a maximum length of 1000 characters.
+ * @method string getSessionContext() Obtain Source context, used for transparent transmission of user request information. Upon completion of media quality inspection, the callback will return the value of this field, with a maximum length of 1000 characters.
+ * @method void setSessionContext(string $SessionContext) Set Source context, used for transparent transmission of user request information. Upon completion of media quality inspection, the callback will return the value of this field, with a maximum length of 1000 characters.
  */
 class QualityInspectTask extends AbstractModel
 {
@@ -52,7 +52,7 @@ class QualityInspectTask extends AbstractModel
     public $Status;
 
     /**
-     * @var string Error code, an empty string indicates success, other values indicate failure. Please refer to the [Video Processing Error Code](https://intl.cloud.tencent.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81) list for values.
+     * @var string Error code, an empty string indicates success, other values indicate failure. Please refer to the [Video Processing Error Code](https://www.tencentcloud.com/document/product/266/39145) list for values.
      */
     public $ErrCodeExt;
 
@@ -62,7 +62,7 @@ class QualityInspectTask extends AbstractModel
     public $Message;
 
     /**
-     * @var MediaMetaData Media quality inpection input metadata of audio and video.
+     * @var MediaMetaData Media quality inspection input metadata of audio and video.
      */
     public $MetaData;
 
@@ -82,20 +82,20 @@ class QualityInspectTask extends AbstractModel
     public $SessionId;
 
     /**
-     * @var string Source context, used for transparent transmission of user request information. Upon completion of media quality inpection, the callback will return the value of this field, with a maximum length of 1000 characters.
+     * @var string Source context, used for transparent transmission of user request information. Upon completion of media quality inspection, the callback will return the value of this field, with a maximum length of 1000 characters.
      */
     public $SessionContext;
 
     /**
      * @param string $TaskId Media quality inspection task ID.
      * @param string $Status Task status, value: <li>PROCESSING: processing;</li> <li>FINISH: Completed.</li>
-     * @param string $ErrCodeExt Error code, an empty string indicates success, other values indicate failure. Please refer to the [Video Processing Error Code](https://intl.cloud.tencent.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81) list for values.
+     * @param string $ErrCodeExt Error code, an empty string indicates success, other values indicate failure. Please refer to the [Video Processing Error Code](https://www.tencentcloud.com/document/product/266/39145) list for values.
      * @param string $Message Error information.
-     * @param MediaMetaData $MetaData Media quality inpection input metadata of audio and video.
+     * @param MediaMetaData $MetaData Media quality inspection input metadata of audio and video.
      * @param QualityInspectTaskInput $Input Media quality inspection task input.
      * @param QualityInspectTaskOutput $Output Media quality inspection task generates.
      * @param string $SessionId Used for deduplication, if there has been a request with the same recognition code within seven days, this request will return an error. Maximum length of 50 characters, without or with an empty string indicates no deduplication.
-     * @param string $SessionContext Source context, used for transparent transmission of user request information. Upon completion of media quality inpection, the callback will return the value of this field, with a maximum length of 1000 characters.
+     * @param string $SessionContext Source context, used for transparent transmission of user request information. Upon completion of media quality inspection, the callback will return the value of this field, with a maximum length of 1000 characters.
      */
     function __construct()
     {

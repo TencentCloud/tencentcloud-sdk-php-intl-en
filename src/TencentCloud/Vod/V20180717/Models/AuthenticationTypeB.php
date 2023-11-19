@@ -20,50 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Timestamp hotlink protection mode B configuration
  *
- * @method string getSecretKey() Obtain 
- * @method void setSecretKey(string $SecretKey) Set 
- * @method integer getExpireTime() Obtain 
- * @method void setExpireTime(integer $ExpireTime) Set 
- * @method array getFileExtensions() Obtain 
- * @method void setFileExtensions(array $FileExtensions) Set 
- * @method string getFilterType() Obtain 
- * @method void setFilterType(string $FilterType) Set 
- * @method string getBackupSecretKey() Obtain 
- * @method void setBackupSecretKey(string $BackupSecretKey) Set 
+ * @method string getSecretKey() Obtain The key to calculate the signature; only uppercase and lowercase letters and numbers are allowed, with a length of 6~32 characters.
+ * @method void setSecretKey(string $SecretKey) Set The key to calculate the signature; only uppercase and lowercase letters and numbers are allowed, with a length of 6~32 characters.
+ * @method integer getExpireTime() Obtain Signature expiration time setting; the unit is seconds, and the maximum value can be set to 630720000.
+ * @method void setExpireTime(integer $ExpireTime) Set Signature expiration time setting; the unit is seconds, and the maximum value can be set to 630720000.
+ * @method array getFileExtensions() Obtain File extension list settings for authentication/non-authentication; if the character * is included, it means all files.
+ * @method void setFileExtensions(array $FileExtensions) Set File extension list settings for authentication/non-authentication; if the character * is included, it means all files.
+ * @method string getFilterType() Obtain whitelist: whitelist, indicating that all types except the FileExtensions list will be authenticated; blacklist: blacklist, indicating that only the types in FileExtensions will be authenticated.
+ * @method void setFilterType(string $FilterType) Set whitelist: whitelist, indicating that all types except the FileExtensions list will be authenticated; blacklist: blacklist, indicating that only the types in FileExtensions will be authenticated.
+ * @method string getBackupSecretKey() Obtain Alternate key for calculating signature; only uppercase and lowercase letters and numbers are allowed, length 6~32 characters.
+ * @method void setBackupSecretKey(string $BackupSecretKey) Set Alternate key for calculating signature; only uppercase and lowercase letters and numbers are allowed, length 6~32 characters.
  */
 class AuthenticationTypeB extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string The key to calculate the signature; only uppercase and lowercase letters and numbers are allowed, with a length of 6~32 characters.
      */
     public $SecretKey;
 
     /**
-     * @var integer 
+     * @var integer Signature expiration time setting; the unit is seconds, and the maximum value can be set to 630720000.
      */
     public $ExpireTime;
 
     /**
-     * @var array 
+     * @var array File extension list settings for authentication/non-authentication; if the character * is included, it means all files.
      */
     public $FileExtensions;
 
     /**
-     * @var string 
+     * @var string whitelist: whitelist, indicating that all types except the FileExtensions list will be authenticated; blacklist: blacklist, indicating that only the types in FileExtensions will be authenticated.
      */
     public $FilterType;
 
     /**
-     * @var string 
+     * @var string Alternate key for calculating signature; only uppercase and lowercase letters and numbers are allowed, length 6~32 characters.
      */
     public $BackupSecretKey;
 
     /**
-     * @param string $SecretKey 
-     * @param integer $ExpireTime 
-     * @param array $FileExtensions 
-     * @param string $FilterType 
-     * @param string $BackupSecretKey 
+     * @param string $SecretKey The key to calculate the signature; only uppercase and lowercase letters and numbers are allowed, with a length of 6~32 characters.
+     * @param integer $ExpireTime Signature expiration time setting; the unit is seconds, and the maximum value can be set to 630720000.
+     * @param array $FileExtensions File extension list settings for authentication/non-authentication; if the character * is included, it means all files.
+     * @param string $FilterType whitelist: whitelist, indicating that all types except the FileExtensions list will be authenticated; blacklist: blacklist, indicating that only the types in FileExtensions will be authenticated.
+     * @param string $BackupSecretKey Alternate key for calculating signature; only uppercase and lowercase letters and numbers are allowed, length 6~32 characters.
      */
     function __construct()
     {

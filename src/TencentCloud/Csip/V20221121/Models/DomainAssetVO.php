@@ -72,9 +72,9 @@ Note: This field may return·null, indicating that no valid values can be obtain
 Note: This field may return·null, indicating that no valid values can be obtained.
  * @method void setAccess(integer $Access) Set Network access
 Note: This field may return·null, indicating that no valid values can be obtained.
- * @method integer getIntercept() Obtain Network interception
+ * @method integer getIntercept() Obtain Number of blocked attacks
 Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setIntercept(integer $Intercept) Set Network interception
+ * @method void setIntercept(integer $Intercept) Set Number of blocked attacks
 Note: This field may return·null, indicating that no valid values can be obtained.
  * @method string getInBandwidth() Obtain Inbound peak bandwidth
 Note: This field may return·null, indicating that no valid values can be obtained.
@@ -172,9 +172,9 @@ Note: This field may return·null, indicating that no valid values can be obtain
 Note: This field may return·null, indicating that no valid values can be obtained.
  * @method void setVerifyStatus(integer $VerifyStatus) Set Ownership verification status of the asset. `0`: Pending verification; `1`: Verified; `2`: Verifying; `3`: TXT record verification failed; `4`: Human verification failed.
 Note: This field may return·null, indicating that no valid values can be obtained.
- * @method integer getBotAccessCount() Obtain Bot access data
+ * @method integer getBotAccessCount() Obtain u200cNumber of bot attacks
 Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setBotAccessCount(integer $BotAccessCount) Set Bot access data
+ * @method void setBotAccessCount(integer $BotAccessCount) Set u200cNumber of bot attacks
 Note: This field may return·null, indicating that no valid values can be obtained.
  */
 class DomainAssetVO extends AbstractModel
@@ -258,7 +258,7 @@ Note: This field may return·null, indicating that no valid values can be obtain
     public $Access;
 
     /**
-     * @var integer Network interception
+     * @var integer Number of blocked attacks
 Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public $Intercept;
@@ -408,7 +408,7 @@ Note: This field may return·null, indicating that no valid values can be obtain
     public $VerifyStatus;
 
     /**
-     * @var integer Bot access data
+     * @var integer u200cNumber of bot attacks
 Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public $BotAccessCount;
@@ -440,7 +440,7 @@ Note: This field may return·null, indicating that no valid values can be obtain
 Note: This field may return·null, indicating that no valid values can be obtained.
      * @param integer $Access Network access
 Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param integer $Intercept Network interception
+     * @param integer $Intercept Number of blocked attacks
 Note: This field may return·null, indicating that no valid values can be obtained.
      * @param string $InBandwidth Inbound peak bandwidth
 Note: This field may return·null, indicating that no valid values can be obtained.
@@ -490,7 +490,7 @@ Note: This field may return·null, indicating that no valid values can be obtain
 Note: This field may return·null, indicating that no valid values can be obtained.
      * @param integer $VerifyStatus Ownership verification status of the asset. `0`: Pending verification; `1`: Verified; `2`: Verifying; `3`: TXT record verification failed; `4`: Human verification failed.
 Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param integer $BotAccessCount Bot access data
+     * @param integer $BotAccessCount u200cNumber of bot attacks
 Note: This field may return·null, indicating that no valid values can be obtained.
      */
     function __construct()

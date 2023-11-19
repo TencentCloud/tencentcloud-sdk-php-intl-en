@@ -20,8 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeCDNStatDetails request structure.
  *
- * @method string getMetric() Obtain 
- * @method void setMetric(string $Metric) Set 
+ * @method string getMetric() Obtain Query indicators, the values u200bu200bare:
+<li>Traffic: traffic, unit is Byte. </li>
+<li>Bandwidth: Bandwidth, unit is Bps. </li>
+<li>Requests: Number of requests. </li>
+<li>QUICRequests: Number of QUIC requests. </li>
+<li>IpVisit: Number of IP visits. </li>
+ * @method void setMetric(string $Metric) Set Query indicators, the values u200bu200bare:
+<li>Traffic: traffic, unit is Byte. </li>
+<li>Bandwidth: Bandwidth, unit is Bps. </li>
+<li>Requests: Number of requests. </li>
+<li>QUICRequests: Number of QUIC requests. </li>
+<li>IpVisit: Number of IP visits. </li>
  * @method string getStartTime() Obtain Start time in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?lang=en&pg=).
  * @method void setStartTime(string $StartTime) Set Start time in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?lang=en&pg=).
  * @method string getEndTime() Obtain End time in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?lang=en&pg=).
@@ -152,7 +162,12 @@ If the difference between `StartTime` and `EndTime` is larger than 24 hours, the
 class DescribeCDNStatDetailsRequest extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Query indicators, the values u200bu200bare:
+<li>Traffic: traffic, unit is Byte. </li>
+<li>Bandwidth: Bandwidth, unit is Bps. </li>
+<li>Requests: Number of requests. </li>
+<li>QUICRequests: Number of QUIC requests. </li>
+<li>IpVisit: Number of IP visits. </li>
      */
     public $Metric;
 
@@ -252,7 +267,12 @@ If the difference between `StartTime` and `EndTime` is larger than 24 hours, the
     public $DataInterval;
 
     /**
-     * @param string $Metric 
+     * @param string $Metric Query indicators, the values u200bu200bare:
+<li>Traffic: traffic, unit is Byte. </li>
+<li>Bandwidth: Bandwidth, unit is Bps. </li>
+<li>Requests: Number of requests. </li>
+<li>QUICRequests: Number of QUIC requests. </li>
+<li>IpVisit: Number of IP visits. </li>
      * @param string $StartTime Start time in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?lang=en&pg=).
      * @param string $EndTime End time in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?lang=en&pg=).
      * @param integer $SubAppId <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>

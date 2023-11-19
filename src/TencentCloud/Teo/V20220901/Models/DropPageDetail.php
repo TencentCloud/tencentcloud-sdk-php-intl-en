@@ -20,31 +20,33 @@ use TencentCloud\Common\AbstractModel;
 /**
  * The configuration details of the block page
  *
- * @method integer getPageId() Obtain The ID of the block page, which can be obtained from the CreateSecurityDropPage API.
-If 0 is passed, the default block page will be used.
- * @method void setPageId(integer $PageId) Set The ID of the block page, which can be obtained from the CreateSecurityDropPage API.
-If 0 is passed, the default block page will be used.
- * @method integer getStatusCode() Obtain The HTTP status code of the block page. Value range: 100-600.
- * @method void setStatusCode(integer $StatusCode) Set The HTTP status code of the block page. Value range: 100-600.
+ * @method integer getPageId() Obtain The ID of the block page. Specify `0` to use the default block page. 
+(Disused) If 0 is passed, the default block page will be used.
+ * @method void setPageId(integer $PageId) Set The ID of the block page. Specify `0` to use the default block page. 
+(Disused) If 0 is passed, the default block page will be used.
+ * @method integer getStatusCode() Obtain The HTTP status code to trigger the block page. Range: 100-600, excluding 3xx codes. Code 566: Requests blocked by managed rules. Code 567: Requests blocked by web security rules (except managed rules).
+ * @method void setStatusCode(integer $StatusCode) Set The HTTP status code to trigger the block page. Range: 100-600, excluding 3xx codes. Code 566: Requests blocked by managed rules. Code 567: Requests blocked by web security rules (except managed rules).
  * @method string getName() Obtain The block page file or URL.
  * @method void setName(string $Name) Set The block page file or URL.
  * @method string getType() Obtain Type of the block page. Values:
-<li>`file`: Block page file</li>
-<li>`url`: Block page URL</li>
+<li>`page`: Return the specified page.</li>
+
  * @method void setType(string $Type) Set Type of the block page. Values:
-<li>`file`: Block page file</li>
-<li>`url`: Block page URL</li>
+<li>`page`: Return the specified page.</li>
+
+ * @method string getCustomResponseId() Obtain ID of custom response. The ID can be obtained via the `DescribeCustomErrorPages` API. It's required when `Type=page`.
+ * @method void setCustomResponseId(string $CustomResponseId) Set ID of custom response. The ID can be obtained via the `DescribeCustomErrorPages` API. It's required when `Type=page`.
  */
 class DropPageDetail extends AbstractModel
 {
     /**
-     * @var integer The ID of the block page, which can be obtained from the CreateSecurityDropPage API.
-If 0 is passed, the default block page will be used.
+     * @var integer The ID of the block page. Specify `0` to use the default block page. 
+(Disused) If 0 is passed, the default block page will be used.
      */
     public $PageId;
 
     /**
-     * @var integer The HTTP status code of the block page. Value range: 100-600.
+     * @var integer The HTTP status code to trigger the block page. Range: 100-600, excluding 3xx codes. Code 566: Requests blocked by managed rules. Code 567: Requests blocked by web security rules (except managed rules).
      */
     public $StatusCode;
 
@@ -55,19 +57,25 @@ If 0 is passed, the default block page will be used.
 
     /**
      * @var string Type of the block page. Values:
-<li>`file`: Block page file</li>
-<li>`url`: Block page URL</li>
+<li>`page`: Return the specified page.</li>
+
      */
     public $Type;
 
     /**
-     * @param integer $PageId The ID of the block page, which can be obtained from the CreateSecurityDropPage API.
-If 0 is passed, the default block page will be used.
-     * @param integer $StatusCode The HTTP status code of the block page. Value range: 100-600.
+     * @var string ID of custom response. The ID can be obtained via the `DescribeCustomErrorPages` API. It's required when `Type=page`.
+     */
+    public $CustomResponseId;
+
+    /**
+     * @param integer $PageId The ID of the block page. Specify `0` to use the default block page. 
+(Disused) If 0 is passed, the default block page will be used.
+     * @param integer $StatusCode The HTTP status code to trigger the block page. Range: 100-600, excluding 3xx codes. Code 566: Requests blocked by managed rules. Code 567: Requests blocked by web security rules (except managed rules).
      * @param string $Name The block page file or URL.
      * @param string $Type Type of the block page. Values:
-<li>`file`: Block page file</li>
-<li>`url`: Block page URL</li>
+<li>`page`: Return the specified page.</li>
+
+     * @param string $CustomResponseId ID of custom response. The ID can be obtained via the `DescribeCustomErrorPages` API. It's required when `Type=page`.
      */
     function __construct()
     {
@@ -96,6 +104,10 @@ If 0 is passed, the default block page will be used.
 
         if (array_key_exists("Type",$param) and $param["Type"] !== null) {
             $this->Type = $param["Type"];
+        }
+
+        if (array_key_exists("CustomResponseId",$param) and $param["CustomResponseId"] !== null) {
+            $this->CustomResponseId = $param["CustomResponseId"];
         }
     }
 }

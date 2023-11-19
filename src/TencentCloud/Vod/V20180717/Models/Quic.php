@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * QUIC configuration item
  *
- * @method string getSwitch() Obtain 
- * @method void setSwitch(string $Switch) Set 
+ * @method string getSwitch() Obtain Quic function configuration switch, the values u200bu200bare: <li>on: on; </li> <li>off: off. </li>
+ * @method void setSwitch(string $Switch) Set Quic function configuration switch, the values u200bu200bare: <li>on: on; </li> <li>off: off. </li>
  */
 class Quic extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Quic function configuration switch, the values u200bu200bare: <li>on: on; </li> <li>off: off. </li>
      */
     public $Switch;
 
     /**
-     * @param string $Switch 
+     * @param string $Switch Quic function configuration switch, the values u200bu200bare: <li>on: on; </li> <li>off: off. </li>
      */
     function __construct()
     {

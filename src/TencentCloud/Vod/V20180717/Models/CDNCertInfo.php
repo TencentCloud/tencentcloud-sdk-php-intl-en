@@ -20,19 +20,19 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Domain https acceleration configuration, the default is off
  *
- * @method string getCertId() Obtain 
- * @method void setCertId(string $CertId) Set 
+ * @method string getCertId() Obtain The server certificate ID is automatically generated during certificate hosting by SSL Certificate Management.
+ * @method void setCertId(string $CertId) Set The server certificate ID is automatically generated during certificate hosting by SSL Certificate Management.
  * @method string getCertificate() Obtain Server certificate information.
  * @method void setCertificate(string $Certificate) Set Server certificate information.
  * @method string getPrivateKey() Obtain Server key information.
  * @method void setPrivateKey(string $PrivateKey) Set Server key information.
- * @method string getExpireTime() Obtain 
- * @method void setExpireTime(string $ExpireTime) Set 
+ * @method string getExpireTime() Obtain Certificate expiration time; no need to fill in when configured as an input parameter.
+ * @method void setExpireTime(string $ExpireTime) Set Certificate expiration time; no need to fill in when configured as an input parameter.
  */
 class CDNCertInfo extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string The server certificate ID is automatically generated during certificate hosting by SSL Certificate Management.
      */
     public $CertId;
 
@@ -47,15 +47,15 @@ class CDNCertInfo extends AbstractModel
     public $PrivateKey;
 
     /**
-     * @var string 
+     * @var string Certificate expiration time; no need to fill in when configured as an input parameter.
      */
     public $ExpireTime;
 
     /**
-     * @param string $CertId 
+     * @param string $CertId The server certificate ID is automatically generated during certificate hosting by SSL Certificate Management.
      * @param string $Certificate Server certificate information.
      * @param string $PrivateKey Server key information.
-     * @param string $ExpireTime 
+     * @param string $ExpireTime Certificate expiration time; no need to fill in when configured as an input parameter.
      */
     function __construct()
     {

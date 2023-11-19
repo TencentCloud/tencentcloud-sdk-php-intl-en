@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteOriginGroup request structure.
  *
- * @method string getZoneId() Obtain The site ID.
- * @method void setZoneId(string $ZoneId) Set The site ID.
- * @method string getOriginGroupId() Obtain The ID of the origin group.
- * @method void setOriginGroupId(string $OriginGroupId) Set The ID of the origin group.
+ * @method string getZoneId() Obtain ID of the site.
+ * @method void setZoneId(string $ZoneId) Set ID of the site.
+ * @method string getGroupId() Obtain (Required) Origin group IDe group ID. This parameter is required.
+ * @method void setGroupId(string $GroupId) Set (Required) Origin group IDe group ID. This parameter is required.
  */
 class DeleteOriginGroupRequest extends AbstractModel
 {
     /**
-     * @var string The site ID.
+     * @var string ID of the site.
      */
     public $ZoneId;
 
     /**
-     * @var string The ID of the origin group.
+     * @var string (Required) Origin group IDe group ID. This parameter is required.
      */
-    public $OriginGroupId;
+    public $GroupId;
 
     /**
-     * @param string $ZoneId The site ID.
-     * @param string $OriginGroupId The ID of the origin group.
+     * @param string $ZoneId ID of the site.
+     * @param string $GroupId (Required) Origin group IDe group ID. This parameter is required.
      */
     function __construct()
     {
@@ -58,8 +58,8 @@ class DeleteOriginGroupRequest extends AbstractModel
             $this->ZoneId = $param["ZoneId"];
         }
 
-        if (array_key_exists("OriginGroupId",$param) and $param["OriginGroupId"] !== null) {
-            $this->OriginGroupId = $param["OriginGroupId"];
+        if (array_key_exists("GroupId",$param) and $param["GroupId"] !== null) {
+            $this->GroupId = $param["GroupId"];
         }
     }
 }

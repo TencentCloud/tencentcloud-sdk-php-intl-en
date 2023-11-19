@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteRebuildMediaTemplate request structure.
  *
- * @method integer getDefinition() Obtain The remaster template ID.
- * @method void setDefinition(integer $Definition) Set The remaster template ID.
+ * @method integer getDefinition() Obtain Rebuild Media Template ID.
+ * @method void setDefinition(integer $Definition) Set Rebuild Media Template ID.
  * @method integer getSubAppId() Obtain <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
  * @method void setSubAppId(integer $SubAppId) Set <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
  */
 class DeleteRebuildMediaTemplateRequest extends AbstractModel
 {
     /**
-     * @var integer The remaster template ID.
+     * @var integer Rebuild Media Template ID.
      */
     public $Definition;
 
@@ -38,7 +38,7 @@ class DeleteRebuildMediaTemplateRequest extends AbstractModel
     public $SubAppId;
 
     /**
-     * @param integer $Definition The remaster template ID.
+     * @param integer $Definition Rebuild Media Template ID.
      * @param integer $SubAppId <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
      */
     function __construct()

@@ -26,18 +26,22 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTime(string $Time) Set Start time of data time range in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I). For example, if the time granularity is 1-day, `2018-12-01T00:00:00+08:00` represents the time range between December 1, 2018 (inclusive) and December 2, 2018 (not inclusive).
 <li>For data at hourly level, `2019-08-22T00:00:00+08:00` indicates the statistics between 00:00 and 01:00 AM on August 22, 2019.</li>
 <li>For data at daily level, `2019-08-22T00:00:00+08:00` indicates statistics on August 22, 2019.</li>
- * @method integer getValue() Obtain The data size.
-<li>Storage capacity in bytes.</li>
-<li>Transcoding duration in seconds.</li>
-<li>Traffic in bytes.</li>
-<li>Bandwidth in bps.</li>
-<li>Live stream clip duration in seconds.</li>
- * @method void setValue(integer $Value) Set The data size.
-<li>Storage capacity in bytes.</li>
-<li>Transcoding duration in seconds.</li>
-<li>Traffic in bytes.</li>
-<li>Bandwidth in bps.</li>
-<li>Live stream clip duration in seconds.</li>
+ * @method integer getValue() Obtain Data size. 
+<li>The data of the storage space, the unit is bytes. </li>
+<li>Transcoding duration data, unit is seconds. </li>
+<li>Traffic data, unit is bytes. </li>
+<li>Bandwidth data, unit is bits per second. </li>
+<li>Live broadcast clip data, the unit is seconds. </li>
+<li>Carousel data, unit is seconds. </li>
+<li>The number of sub-applications, the unit is one. </li>
+ * @method void setValue(integer $Value) Set Data size. 
+<li>The data of the storage space, the unit is bytes. </li>
+<li>Transcoding duration data, unit is seconds. </li>
+<li>Traffic data, unit is bytes. </li>
+<li>Bandwidth data, unit is bits per second. </li>
+<li>Live broadcast clip data, the unit is seconds. </li>
+<li>Carousel data, unit is seconds. </li>
+<li>The number of sub-applications, the unit is one. </li>
  */
 class StatDataItem extends AbstractModel
 {
@@ -49,12 +53,14 @@ class StatDataItem extends AbstractModel
     public $Time;
 
     /**
-     * @var integer The data size.
-<li>Storage capacity in bytes.</li>
-<li>Transcoding duration in seconds.</li>
-<li>Traffic in bytes.</li>
-<li>Bandwidth in bps.</li>
-<li>Live stream clip duration in seconds.</li>
+     * @var integer Data size. 
+<li>The data of the storage space, the unit is bytes. </li>
+<li>Transcoding duration data, unit is seconds. </li>
+<li>Traffic data, unit is bytes. </li>
+<li>Bandwidth data, unit is bits per second. </li>
+<li>Live broadcast clip data, the unit is seconds. </li>
+<li>Carousel data, unit is seconds. </li>
+<li>The number of sub-applications, the unit is one. </li>
      */
     public $Value;
 
@@ -62,12 +68,14 @@ class StatDataItem extends AbstractModel
      * @param string $Time Start time of data time range in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I). For example, if the time granularity is 1-day, `2018-12-01T00:00:00+08:00` represents the time range between December 1, 2018 (inclusive) and December 2, 2018 (not inclusive).
 <li>For data at hourly level, `2019-08-22T00:00:00+08:00` indicates the statistics between 00:00 and 01:00 AM on August 22, 2019.</li>
 <li>For data at daily level, `2019-08-22T00:00:00+08:00` indicates statistics on August 22, 2019.</li>
-     * @param integer $Value The data size.
-<li>Storage capacity in bytes.</li>
-<li>Transcoding duration in seconds.</li>
-<li>Traffic in bytes.</li>
-<li>Bandwidth in bps.</li>
-<li>Live stream clip duration in seconds.</li>
+     * @param integer $Value Data size. 
+<li>The data of the storage space, the unit is bytes. </li>
+<li>Transcoding duration data, unit is seconds. </li>
+<li>Traffic data, unit is bytes. </li>
+<li>Bandwidth data, unit is bits per second. </li>
+<li>Live broadcast clip data, the unit is seconds. </li>
+<li>Carousel data, unit is seconds. </li>
+<li>The number of sub-applications, the unit is one. </li>
      */
     function __construct()
     {

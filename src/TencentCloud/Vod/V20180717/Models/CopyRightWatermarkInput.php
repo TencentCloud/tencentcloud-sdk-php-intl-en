@@ -18,20 +18,20 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Copyright watermark parameters
  *
- * @method string getText() Obtain 
- * @method void setText(string $Text) Set 
+ * @method string getText() Obtain Copyright information, maximum length is 200 characters.
+ * @method void setText(string $Text) Set Copyright information, maximum length is 200 characters.
  */
 class CopyRightWatermarkInput extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Copyright information, maximum length is 200 characters.
      */
     public $Text;
 
     /**
-     * @param string $Text 
+     * @param string $Text Copyright information, maximum length is 200 characters.
      */
     function __construct()
     {

@@ -24,8 +24,10 @@ use TencentCloud\Common\AbstractModel;
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setUrl(string $Url) Set Address of output video file.
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method integer getDefinition() Obtain 
- * @method void setDefinition(integer $Definition) Set 
+ * @method integer getDefinition() Obtain For transcoding specification ID, see [Transcoding Parameter Template](https://intl.cloud.tencent.com/document/product/266/33476?from_cn_redirect=1). 
+<font color=red>Note: A value of 0 represents the original file. </font>
+ * @method void setDefinition(integer $Definition) Set For transcoding specification ID, see [Transcoding Parameter Template](https://intl.cloud.tencent.com/document/product/266/33476?from_cn_redirect=1). 
+<font color=red>Note: A value of 0 represents the original file. </font>
  * @method integer getBitrate() Obtain Sum of the average bitrate of a video stream and that of an audio stream in bps.
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setBitrate(integer $Bitrate) Set Sum of the average bitrate of a video stream and that of an audio stream in bps.
@@ -80,7 +82,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $Url;
 
     /**
-     * @var integer 
+     * @var integer For transcoding specification ID, see [Transcoding Parameter Template](https://intl.cloud.tencent.com/document/product/266/33476?from_cn_redirect=1). 
+<font color=red>Note: A value of 0 represents the original file. </font>
      */
     public $Definition;
 
@@ -153,7 +156,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
     /**
      * @param string $Url Address of output video file.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param integer $Definition 
+     * @param integer $Definition For transcoding specification ID, see [Transcoding Parameter Template](https://intl.cloud.tencent.com/document/product/266/33476?from_cn_redirect=1). 
+<font color=red>Note: A value of 0 represents the original file. </font>
      * @param integer $Bitrate Sum of the average bitrate of a video stream and that of an audio stream in bps.
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param integer $Height Maximum value of the height of a video stream in px.

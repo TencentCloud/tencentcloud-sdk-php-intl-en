@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CDN Domain Config
  *
- * @method string getArea() Obtain 
- * @method void setArea(string $Area) Set 
+ * @method string getArea() Obtain Domain name acceleration areas: <li>mainland: acceleration within China; </li> <li>overseas: acceleration outside China; </li> <li>global: global acceleration. </li>
+ * @method void setArea(string $Area) Set Domain name acceleration areas: <li>mainland: acceleration within China; </li> <li>overseas: acceleration outside China; </li> <li>global: global acceleration. </li>
  * @method Origin getOrigin() Obtain Origin Server Configuration
  * @method void setOrigin(Origin $Origin) Set Origin Server Configuration
  * @method IpFilter getIpFilter() Obtain IP blocklist/allowlist configuration. This is disabled by default.
@@ -62,7 +62,7 @@ use TencentCloud\Common\AbstractModel;
 class CDNDomainConfig extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Domain name acceleration areas: <li>mainland: acceleration within China; </li> <li>overseas: acceleration outside China; </li> <li>global: global acceleration. </li>
      */
     public $Area;
 
@@ -157,7 +157,7 @@ class CDNDomainConfig extends AbstractModel
     public $OthersPrivateAccess;
 
     /**
-     * @param string $Area 
+     * @param string $Area Domain name acceleration areas: <li>mainland: acceleration within China; </li> <li>overseas: acceleration outside China; </li> <li>global: global acceleration. </li>
      * @param Origin $Origin Origin Server Configuration
      * @param IpFilter $IpFilter IP blocklist/allowlist configuration. This is disabled by default.
      * @param UserAgentFilter $UserAgentFilter UserAgent:blacklist/whitelist configuration.

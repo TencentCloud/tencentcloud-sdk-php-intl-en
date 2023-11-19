@@ -63,45 +63,85 @@ use TencentCloud\Common\AbstractModel;
  * @method string getFinishTime() Obtain End time of task execution in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
  * @method void setFinishTime(string $FinishTime) Set End time of task execution in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
  * @method ProcedureTask getProcedureTask() Obtain 
+Note: This field may return null, indicating that no valid value can be obtained.
  * @method void setProcedureTask(ProcedureTask $ProcedureTask) Set 
+Note: This field may return null, indicating that no valid value can be obtained.
  * @method EditMediaTask getEditMediaTask() Obtain 
+Note: This field may return null, indicating that no valid value can be obtained.
  * @method void setEditMediaTask(EditMediaTask $EditMediaTask) Set 
+Note: This field may return null, indicating that no valid value can be obtained.
  * @method WechatPublishTask getWechatPublishTask() Obtain 
+Note: This field may return null, indicating that no valid value can be obtained.
  * @method void setWechatPublishTask(WechatPublishTask $WechatPublishTask) Set 
+Note: This field may return null, indicating that no valid value can be obtained.
  * @method ComposeMediaTask getComposeMediaTask() Obtain 
+Note: This field may return null, indicating that no valid value can be obtained.
  * @method void setComposeMediaTask(ComposeMediaTask $ComposeMediaTask) Set 
+Note: This field may return null, indicating that no valid value can be obtained.
  * @method SplitMediaTask getSplitMediaTask() Obtain 
+Note: This field may return null, indicating that no valid value can be obtained.
  * @method void setSplitMediaTask(SplitMediaTask $SplitMediaTask) Set 
+Note: This field may return null, indicating that no valid value can be obtained.
  * @method WechatMiniProgramPublishTask getWechatMiniProgramPublishTask() Obtain 
+Note: This field may return null, indicating that no valid value can be obtained.
  * @method void setWechatMiniProgramPublishTask(WechatMiniProgramPublishTask $WechatMiniProgramPublishTask) Set 
+Note: This field may return null, indicating that no valid value can be obtained.
  * @method PullUploadTask getPullUploadTask() Obtain 
+Note: This field may return null, indicating that no valid value can be obtained.
  * @method void setPullUploadTask(PullUploadTask $PullUploadTask) Set 
+Note: This field may return null, indicating that no valid value can be obtained.
  * @method TranscodeTask2017 getTranscodeTask() Obtain 
+Note: This field may return null, indicating that no valid value can be obtained.
  * @method void setTranscodeTask(TranscodeTask2017 $TranscodeTask) Set 
+Note: This field may return null, indicating that no valid value can be obtained.
  * @method ConcatTask2017 getConcatTask() Obtain 
+Note: This field may return null, indicating that no valid value can be obtained.
  * @method void setConcatTask(ConcatTask2017 $ConcatTask) Set 
+Note: This field may return null, indicating that no valid value can be obtained.
  * @method ClipTask2017 getClipTask() Obtain 
+Note: This field may return null, indicating that no valid value can be obtained.
  * @method void setClipTask(ClipTask2017 $ClipTask) Set 
+Note: This field may return null, indicating that no valid value can be obtained.
  * @method CreateImageSpriteTask2017 getCreateImageSpriteTask() Obtain 
+Note: This field may return null, indicating that no valid value can be obtained.
  * @method void setCreateImageSpriteTask(CreateImageSpriteTask2017 $CreateImageSpriteTask) Set 
+Note: This field may return null, indicating that no valid value can be obtained.
  * @method SnapshotByTimeOffsetTask2017 getSnapshotByTimeOffsetTask() Obtain 
+Note: This field may return null, indicating that no valid value can be obtained.
  * @method void setSnapshotByTimeOffsetTask(SnapshotByTimeOffsetTask2017 $SnapshotByTimeOffsetTask) Set 
+Note: This field may return null, indicating that no valid value can be obtained.
  * @method RemoveWatermarkTask getRemoveWatermarkTask() Obtain 
+Note: This field may return null, indicating that no valid value can be obtained.
  * @method void setRemoveWatermarkTask(RemoveWatermarkTask $RemoveWatermarkTask) Set 
+Note: This field may return null, indicating that no valid value can be obtained.
  * @method RebuildMediaTask getRebuildMediaTask() Obtain 
+Note: This field may return null, indicating that no valid value can be obtained.
  * @method void setRebuildMediaTask(RebuildMediaTask $RebuildMediaTask) Set 
+Note: This field may return null, indicating that no valid value can be obtained.
  * @method ExtractTraceWatermarkTask getExtractTraceWatermarkTask() Obtain 
+Note: This field may return null, indicating that no valid value can be obtained.
  * @method void setExtractTraceWatermarkTask(ExtractTraceWatermarkTask $ExtractTraceWatermarkTask) Set 
+Note: This field may return null, indicating that no valid value can be obtained.
  * @method ExtractCopyRightWatermarkTask getExtractCopyRightWatermarkTask() Obtain 
+Note: This field may return null, indicating that no valid value can be obtained.
  * @method void setExtractCopyRightWatermarkTask(ExtractCopyRightWatermarkTask $ExtractCopyRightWatermarkTask) Set 
+Note: This field may return null, indicating that no valid value can be obtained.
  * @method ReviewAudioVideoTask getReviewAudioVideoTask() Obtain 
+Note: This field may return null, indicating that no valid value can be obtained.
  * @method void setReviewAudioVideoTask(ReviewAudioVideoTask $ReviewAudioVideoTask) Set 
+Note: This field may return null, indicating that no valid value can be obtained.
  * @method ReduceMediaBitrateTask getReduceMediaBitrateTask() Obtain 
+Note: This field may return null, indicating that no valid value can be obtained.
  * @method void setReduceMediaBitrateTask(ReduceMediaBitrateTask $ReduceMediaBitrateTask) Set 
+Note: This field may return null, indicating that no valid value can be obtained.
  * @method DescribeFileAttributesTask getDescribeFileAttributesTask() Obtain 
+Note: This field may return null, indicating that no valid value can be obtained.
  * @method void setDescribeFileAttributesTask(DescribeFileAttributesTask $DescribeFileAttributesTask) Set 
+Note: This field may return null, indicating that no valid value can be obtained.
  * @method QualityInspectTask getQualityInspectTask() Obtain 
+Note: This field may return null, indicating that no valid value can be obtained.
  * @method void setQualityInspectTask(QualityInspectTask $QualityInspectTask) Set 
+Note: This field may return null, indicating that no valid value can be obtained.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -150,101 +190,121 @@ class DescribeTaskDetailResponse extends AbstractModel
 
     /**
      * @var ProcedureTask 
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public $ProcedureTask;
 
     /**
      * @var EditMediaTask 
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public $EditMediaTask;
 
     /**
      * @var WechatPublishTask 
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public $WechatPublishTask;
 
     /**
      * @var ComposeMediaTask 
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public $ComposeMediaTask;
 
     /**
      * @var SplitMediaTask 
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public $SplitMediaTask;
 
     /**
      * @var WechatMiniProgramPublishTask 
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public $WechatMiniProgramPublishTask;
 
     /**
      * @var PullUploadTask 
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public $PullUploadTask;
 
     /**
      * @var TranscodeTask2017 
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public $TranscodeTask;
 
     /**
      * @var ConcatTask2017 
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public $ConcatTask;
 
     /**
      * @var ClipTask2017 
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public $ClipTask;
 
     /**
      * @var CreateImageSpriteTask2017 
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public $CreateImageSpriteTask;
 
     /**
      * @var SnapshotByTimeOffsetTask2017 
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public $SnapshotByTimeOffsetTask;
 
     /**
      * @var RemoveWatermarkTask 
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public $RemoveWatermarkTask;
 
     /**
      * @var RebuildMediaTask 
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public $RebuildMediaTask;
 
     /**
      * @var ExtractTraceWatermarkTask 
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public $ExtractTraceWatermarkTask;
 
     /**
      * @var ExtractCopyRightWatermarkTask 
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public $ExtractCopyRightWatermarkTask;
 
     /**
      * @var ReviewAudioVideoTask 
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public $ReviewAudioVideoTask;
 
     /**
      * @var ReduceMediaBitrateTask 
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public $ReduceMediaBitrateTask;
 
     /**
      * @var DescribeFileAttributesTask 
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public $DescribeFileAttributesTask;
 
     /**
      * @var QualityInspectTask 
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public $QualityInspectTask;
 
@@ -276,25 +336,45 @@ class DescribeTaskDetailResponse extends AbstractModel
      * @param string $BeginProcessTime Start time of task execution in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
      * @param string $FinishTime End time of task execution in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
      * @param ProcedureTask $ProcedureTask 
+Note: This field may return null, indicating that no valid value can be obtained.
      * @param EditMediaTask $EditMediaTask 
+Note: This field may return null, indicating that no valid value can be obtained.
      * @param WechatPublishTask $WechatPublishTask 
+Note: This field may return null, indicating that no valid value can be obtained.
      * @param ComposeMediaTask $ComposeMediaTask 
+Note: This field may return null, indicating that no valid value can be obtained.
      * @param SplitMediaTask $SplitMediaTask 
+Note: This field may return null, indicating that no valid value can be obtained.
      * @param WechatMiniProgramPublishTask $WechatMiniProgramPublishTask 
+Note: This field may return null, indicating that no valid value can be obtained.
      * @param PullUploadTask $PullUploadTask 
+Note: This field may return null, indicating that no valid value can be obtained.
      * @param TranscodeTask2017 $TranscodeTask 
+Note: This field may return null, indicating that no valid value can be obtained.
      * @param ConcatTask2017 $ConcatTask 
+Note: This field may return null, indicating that no valid value can be obtained.
      * @param ClipTask2017 $ClipTask 
+Note: This field may return null, indicating that no valid value can be obtained.
      * @param CreateImageSpriteTask2017 $CreateImageSpriteTask 
+Note: This field may return null, indicating that no valid value can be obtained.
      * @param SnapshotByTimeOffsetTask2017 $SnapshotByTimeOffsetTask 
+Note: This field may return null, indicating that no valid value can be obtained.
      * @param RemoveWatermarkTask $RemoveWatermarkTask 
+Note: This field may return null, indicating that no valid value can be obtained.
      * @param RebuildMediaTask $RebuildMediaTask 
+Note: This field may return null, indicating that no valid value can be obtained.
      * @param ExtractTraceWatermarkTask $ExtractTraceWatermarkTask 
+Note: This field may return null, indicating that no valid value can be obtained.
      * @param ExtractCopyRightWatermarkTask $ExtractCopyRightWatermarkTask 
+Note: This field may return null, indicating that no valid value can be obtained.
      * @param ReviewAudioVideoTask $ReviewAudioVideoTask 
+Note: This field may return null, indicating that no valid value can be obtained.
      * @param ReduceMediaBitrateTask $ReduceMediaBitrateTask 
+Note: This field may return null, indicating that no valid value can be obtained.
      * @param DescribeFileAttributesTask $DescribeFileAttributesTask 
+Note: This field may return null, indicating that no valid value can be obtained.
      * @param QualityInspectTask $QualityInspectTask 
+Note: This field may return null, indicating that no valid value can be obtained.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()

@@ -18,14 +18,18 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Origin authentication parameter
+ * Private authentication parameters of object storage origins
  *
  * @method string getName() Obtain The parameter name. Values
 <li>`AccessKeyId`: Access Key ID</li>
 <li>`SecretAccessKey`: Secret Access Key</li>
+<li>`SignatureVersion`: Signature version. Values: `v2`, `v4`</li>
+<li>`Region`: Region of the storage bucket</li>
  * @method void setName(string $Name) Set The parameter name. Values
 <li>`AccessKeyId`: Access Key ID</li>
 <li>`SecretAccessKey`: Secret Access Key</li>
+<li>`SignatureVersion`: Signature version. Values: `v2`, `v4`</li>
+<li>`Region`: Region of the storage bucket</li>
  * @method string getValue() Obtain The parameter value.
  * @method void setValue(string $Value) Set The parameter value.
  */
@@ -35,6 +39,8 @@ class PrivateParameter extends AbstractModel
      * @var string The parameter name. Values
 <li>`AccessKeyId`: Access Key ID</li>
 <li>`SecretAccessKey`: Secret Access Key</li>
+<li>`SignatureVersion`: Signature version. Values: `v2`, `v4`</li>
+<li>`Region`: Region of the storage bucket</li>
      */
     public $Name;
 
@@ -47,6 +53,8 @@ class PrivateParameter extends AbstractModel
      * @param string $Name The parameter name. Values
 <li>`AccessKeyId`: Access Key ID</li>
 <li>`SecretAccessKey`: Secret Access Key</li>
+<li>`SignatureVersion`: Signature version. Values: `v2`, `v4`</li>
+<li>`Region`: Region of the storage bucket</li>
      * @param string $Value The parameter value.
      */
     function __construct()

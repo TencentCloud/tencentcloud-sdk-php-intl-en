@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * EditMedia response structure.
  *
- * @method string getTaskId() Obtain 
- * @method void setTaskId(string $TaskId) Set 
+ * @method string getTaskId() Obtain The task ID of the video editing. You can use this ID to query the status of the editing task (task type is EditMedia).
+ * @method void setTaskId(string $TaskId) Set The task ID of the video editing. You can use this ID to query the status of the editing task (task type is EditMedia).
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 class EditMediaResponse extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string The task ID of the video editing. You can use this ID to query the status of the editing task (task type is EditMedia).
      */
     public $TaskId;
 
@@ -38,7 +38,7 @@ class EditMediaResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $TaskId 
+     * @param string $TaskId The task ID of the video editing. You can use this ID to query the status of the editing task (task type is EditMedia).
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()

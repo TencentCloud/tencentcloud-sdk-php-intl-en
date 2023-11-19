@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setTransitions(array $Transitions) Set List of transition operations. Up to one video image or audio transition operation is supported.
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method array getMediaTransitions() Obtain 
- * @method void setMediaTransitions(array $MediaTransitions) Set 
+ * @method array getMediaTransitions() Obtain Transition operation list. Image transition operations and audio transition operations support at most one each.
+ * @method void setMediaTransitions(array $MediaTransitions) Set Transition operation list. Image transition operations and audio transition operations support at most one each.
  */
 class MediaTransitionItem extends AbstractModel
 {
@@ -44,7 +44,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $Transitions;
 
     /**
-     * @var array 
+     * @var array Transition operation list. Image transition operations and audio transition operations support at most one each.
      */
     public $MediaTransitions;
 
@@ -52,7 +52,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @param float $Duration Transition duration in seconds. For two media segments that use a transition, the start time of the second segment on the track will be automatically set to the end time of the first segment minus the transition duration.
      * @param array $Transitions List of transition operations. Up to one video image or audio transition operation is supported.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param array $MediaTransitions 
+     * @param array $MediaTransitions Transition operation list. Image transition operations and audio transition operations support at most one each.
      */
     function __construct()
     {

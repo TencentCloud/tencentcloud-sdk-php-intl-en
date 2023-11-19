@@ -36,8 +36,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: This field may return `null`, indicating that no valid value can be found.
  * @method void setOutput(AiReviewPoliticalOcrTaskOutput $Output) Set Output for OCR-based recognition of politically sensitive content
 Note: This field may return `null`, indicating that no valid value can be found.
- * @method integer getProgress() Obtain 
- * @method void setProgress(integer $Progress) Set 
+ * @method integer getProgress() Obtain Audio and video review OCR text involves the task progress of inappropriate information, the value range is [0-100].
+ * @method void setProgress(integer $Progress) Set Audio and video review OCR text involves the task progress of inappropriate information, the value range is [0-100].
  */
 class AiReviewTaskPoliticalOcrResult extends AbstractModel
 {
@@ -74,7 +74,7 @@ Note: This field may return `null`, indicating that no valid value can be found.
     public $Output;
 
     /**
-     * @var integer 
+     * @var integer Audio and video review OCR text involves the task progress of inappropriate information, the value range is [0-100].
      */
     public $Progress;
 
@@ -87,7 +87,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @param AiReviewPoliticalOcrTaskInput $Input Input for OCR-based recognition of politically sensitive content
      * @param AiReviewPoliticalOcrTaskOutput $Output Output for OCR-based recognition of politically sensitive content
 Note: This field may return `null`, indicating that no valid value can be found.
-     * @param integer $Progress 
+     * @param integer $Progress Audio and video review OCR text involves the task progress of inappropriate information, the value range is [0-100].
      */
     function __construct()
     {

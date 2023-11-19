@@ -32,8 +32,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setName(string $Name) Set The playlist name (not longer than 64 characters).
  * @method string getDesc() Obtain The playlist description (not longer than 256 characters).
  * @method void setDesc(string $Desc) Set The playlist description (not longer than 256 characters).
- * @method string getPlayBackMode() Obtain 
- * @method void setPlayBackMode(string $PlayBackMode) Set 
+ * @method string getPlayBackMode() Obtain Play mode, optional values:
+<li>Loop: Play the playlist in a loop;</li>
+<li>Linear: Play once, stop playing after the playlist is played. </li>
+Default value：Loop。
+ * @method void setPlayBackMode(string $PlayBackMode) Set Play mode, optional values:
+<li>Loop: Play the playlist in a loop;</li>
+<li>Linear: Play once, stop playing after the playlist is played. </li>
+Default value：Loop。
  */
 class CreateRoundPlayRequest extends AbstractModel
 {
@@ -64,7 +70,10 @@ class CreateRoundPlayRequest extends AbstractModel
     public $Desc;
 
     /**
-     * @var string 
+     * @var string Play mode, optional values:
+<li>Loop: Play the playlist in a loop;</li>
+<li>Linear: Play once, stop playing after the playlist is played. </li>
+Default value：Loop。
      */
     public $PlayBackMode;
 
@@ -75,7 +84,10 @@ class CreateRoundPlayRequest extends AbstractModel
      * @param integer $SubAppId <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
      * @param string $Name The playlist name (not longer than 64 characters).
      * @param string $Desc The playlist description (not longer than 256 characters).
-     * @param string $PlayBackMode 
+     * @param string $PlayBackMode Play mode, optional values:
+<li>Loop: Play the playlist in a loop;</li>
+<li>Linear: Play once, stop playing after the playlist is played. </li>
+Default value：Loop。
      */
     function __construct()
     {

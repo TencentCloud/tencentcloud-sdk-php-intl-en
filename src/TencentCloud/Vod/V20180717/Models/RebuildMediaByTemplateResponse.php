@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * RebuildMediaByTemplate response structure.
  *
- * @method string getTaskId() Obtain The ID of the remaster task. You need to provide this ID to query the task status.
- * @method void setTaskId(string $TaskId) Set The ID of the remaster task. You need to provide this ID to query the task status.
+ * @method string getTaskId() Obtain The task ID of the rebuild, through which the status of the rebuild task can be queried.
+ * @method void setTaskId(string $TaskId) Set The task ID of the rebuild, through which the status of the rebuild task can be queried.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 class RebuildMediaByTemplateResponse extends AbstractModel
 {
     /**
-     * @var string The ID of the remaster task. You need to provide this ID to query the task status.
+     * @var string The task ID of the rebuild, through which the status of the rebuild task can be queried.
      */
     public $TaskId;
 
@@ -38,7 +38,7 @@ class RebuildMediaByTemplateResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $TaskId The ID of the remaster task. You need to provide this ID to query the task status.
+     * @param string $TaskId The task ID of the rebuild, through which the status of the rebuild task can be queried.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()

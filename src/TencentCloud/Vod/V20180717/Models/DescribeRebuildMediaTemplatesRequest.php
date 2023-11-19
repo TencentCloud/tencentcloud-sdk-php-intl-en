@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeRebuildMediaTemplates request structure.
  *
- * @method array getDefinitions() Obtain The remaster template IDs.
- * @method void setDefinitions(array $Definitions) Set The remaster template IDs.
+ * @method array getDefinitions() Obtain List of rebuild media templates.
+ * @method void setDefinitions(array $Definitions) Set List of rebuild media templates.
  * @method integer getSubAppId() Obtain <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
  * @method void setSubAppId(integer $SubAppId) Set <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
  * @method string getType() Obtain The template type. Valid values:
@@ -38,7 +38,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeRebuildMediaTemplatesRequest extends AbstractModel
 {
     /**
-     * @var array The remaster template IDs.
+     * @var array List of rebuild media templates.
      */
     public $Definitions;
 
@@ -65,7 +65,7 @@ class DescribeRebuildMediaTemplatesRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @param array $Definitions The remaster template IDs.
+     * @param array $Definitions List of rebuild media templates.
      * @param integer $SubAppId <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
      * @param string $Type The template type. Valid values:
 <li>`Preset`</li>

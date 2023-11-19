@@ -38,10 +38,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method integer getProgress() Obtain The progress of a time point screenshot task. Value range: 0-100.
  * @method void setProgress(integer $Progress) Set The progress of a time point screenshot task. Value range: 0-100.
- * @method string getBeginProcessTime() Obtain 
- * @method void setBeginProcessTime(string $BeginProcessTime) Set 
- * @method string getFinishTime() Obtain 
- * @method void setFinishTime(string $FinishTime) Set 
+ * @method string getBeginProcessTime() Obtain The time when the point-in-time screenshot task started to be executed, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
+ * @method void setBeginProcessTime(string $BeginProcessTime) Set The time when the point-in-time screenshot task started to be executed, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
+ * @method string getFinishTime() Obtain The time when the point-in-time screenshot task is completed, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
+ * @method void setFinishTime(string $FinishTime) Set The time when the point-in-time screenshot task is completed, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
  */
 class MediaProcessTaskSnapshotByTimeOffsetResult extends AbstractModel
 {
@@ -83,12 +83,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $Progress;
 
     /**
-     * @var string 
+     * @var string The time when the point-in-time screenshot task started to be executed, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
      */
     public $BeginProcessTime;
 
     /**
-     * @var string 
+     * @var string The time when the point-in-time screenshot task is completed, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
      */
     public $FinishTime;
 
@@ -102,8 +102,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @param MediaSnapshotByTimeOffsetItem $Output Output of time point screencapturing task.
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param integer $Progress The progress of a time point screenshot task. Value range: 0-100.
-     * @param string $BeginProcessTime 
-     * @param string $FinishTime 
+     * @param string $BeginProcessTime The time when the point-in-time screenshot task started to be executed, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
+     * @param string $FinishTime The time when the point-in-time screenshot task is completed, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
      */
     function __construct()
     {

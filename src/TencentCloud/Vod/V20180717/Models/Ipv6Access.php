@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * IPv6 access configuration
  *
- * @method string getSwitch() Obtain 
- * @method void setSwitch(string $Switch) Set 
+ * @method string getSwitch() Obtain Domain name enables ipv6 access configuration switch. The value is: <li>on: on; </li> <li>off: off. </li>
+ * @method void setSwitch(string $Switch) Set Domain name enables ipv6 access configuration switch. The value is: <li>on: on; </li> <li>off: off. </li>
  */
 class Ipv6Access extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Domain name enables ipv6 access configuration switch. The value is: <li>on: on; </li> <li>off: off. </li>
      */
     public $Switch;
 
     /**
-     * @param string $Switch 
+     * @param string $Switch Domain name enables ipv6 access configuration switch. The value is: <li>on: on; </li> <li>off: off. </li>
      */
     function __construct()
     {

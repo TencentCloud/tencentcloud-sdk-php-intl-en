@@ -36,10 +36,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method integer getProgress() Obtain The progress of an opening/closing segment recognition task. Value range: 0-100.
  * @method void setProgress(integer $Progress) Set The progress of an opening/closing segment recognition task. Value range: 0-100.
- * @method string getBeginProcessTime() Obtain 
- * @method void setBeginProcessTime(string $BeginProcessTime) Set 
- * @method string getFinishTime() Obtain 
- * @method void setFinishTime(string $FinishTime) Set 
+ * @method string getBeginProcessTime() Obtain The time when the video start and end recognition task starts, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
+ * @method void setBeginProcessTime(string $BeginProcessTime) Set The time when the video start and end recognition task starts, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
+ * @method string getFinishTime() Obtain The time when the video start and end recognition task is completed, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
+ * @method void setFinishTime(string $FinishTime) Set The time when the video start and end recognition task is completed, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
  */
 class AiRecognitionTaskHeadTailResult extends AbstractModel
 {
@@ -80,12 +80,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $Progress;
 
     /**
-     * @var string 
+     * @var string The time when the video start and end recognition task starts, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
      */
     public $BeginProcessTime;
 
     /**
-     * @var string 
+     * @var string The time when the video start and end recognition task is completed, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
      */
     public $FinishTime;
 
@@ -98,8 +98,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @param AiRecognitionTaskHeadTailResultOutput $Output Output information of video opening and ending credits recognition task.
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param integer $Progress The progress of an opening/closing segment recognition task. Value range: 0-100.
-     * @param string $BeginProcessTime 
-     * @param string $FinishTime 
+     * @param string $BeginProcessTime The time when the video start and end recognition task starts, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
+     * @param string $FinishTime The time when the video start and end recognition task is completed, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
      */
     function __construct()
     {
