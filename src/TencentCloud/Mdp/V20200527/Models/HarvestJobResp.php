@@ -18,30 +18,30 @@ namespace TencentCloud\Mdp\V20200527\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * HarvestJob Response parameter structure
+ * HarvestJob response info.
  *
- * @method string getID() Obtain Job ID, a globally unique identifier.
- * @method void setID(string $ID) Set Job ID, a globally unique identifier.
+ * @method string getID() Obtain HarvestJob ID, a globally unique identifier.
+ * @method void setID(string $ID) Set HarvestJob ID, a globally unique identifier.
  * @method string getChannelName() Obtain The associated channel name.
  * @method void setChannelName(string $ChannelName) Set The associated channel name.
  * @method string getEndpointName() Obtain The associated endpoint name.
  * @method void setEndpointName(string $EndpointName) Set The associated endpoint name.
  * @method string getTimeFormat() Obtain Time format, supports the following types: 1. Epoch seconds 2. ISO-8601
  * @method void setTimeFormat(string $TimeFormat) Set Time format, supports the following types: 1. Epoch seconds 2. ISO-8601
- * @method string getStartTime() Obtain Job start time.
- * @method void setStartTime(string $StartTime) Set Job start time.
- * @method string getEndTime() Obtain Job end time.
- * @method void setEndTime(string $EndTime) Set Job end time.
+ * @method string getStartTime() Obtain HarvestJob start time.
+ * @method void setStartTime(string $StartTime) Set HarvestJob start time.
+ * @method string getEndTime() Obtain HarvestJob end time.
+ * @method void setEndTime(string $EndTime) Set HarvestJob end time.
  * @method string getDestination() Obtain The path where the recording file is stored in COS.
  * @method void setDestination(string $Destination) Set The path where the recording file is stored in COS.
  * @method string getManifest() Obtain The file name of the recording file stored in COS.
  * @method void setManifest(string $Manifest) Set The file name of the recording file stored in COS.
  * @method string getStatus() Obtain The task status is divided into running: Running, execution completed: Completed, and execution failure: Failed.
  * @method void setStatus(string $Status) Set The task status is divided into running: Running, execution completed: Completed, and execution failure: Failed.
- * @method string getErrMessage() Obtain Job error message.
- * @method void setErrMessage(string $ErrMessage) Set Job error message.
- * @method integer getCreateTime() Obtain Job creation time, timestamp in seconds.
- * @method void setCreateTime(integer $CreateTime) Set Job creation time, timestamp in seconds.
+ * @method string getErrMessage() Obtain HarvestJob error message.
+ * @method void setErrMessage(string $ErrMessage) Set HarvestJob error message.
+ * @method integer getCreateTime() Obtain HarvestJob creation time, timestamp in seconds.
+ * @method void setCreateTime(integer $CreateTime) Set HarvestJob creation time, timestamp in seconds.
  * @method string getChannelId() Obtain The associated ChannelID.
  * @method void setChannelId(string $ChannelId) Set The associated ChannelID.
  * @method string getRegion() Obtain The region corresponding to the harvest job.
@@ -50,7 +50,7 @@ use TencentCloud\Common\AbstractModel;
 class HarvestJobResp extends AbstractModel
 {
     /**
-     * @var string Job ID, a globally unique identifier.
+     * @var string HarvestJob ID, a globally unique identifier.
      */
     public $ID;
 
@@ -70,12 +70,12 @@ class HarvestJobResp extends AbstractModel
     public $TimeFormat;
 
     /**
-     * @var string Job start time.
+     * @var string HarvestJob start time.
      */
     public $StartTime;
 
     /**
-     * @var string Job end time.
+     * @var string HarvestJob end time.
      */
     public $EndTime;
 
@@ -95,12 +95,12 @@ class HarvestJobResp extends AbstractModel
     public $Status;
 
     /**
-     * @var string Job error message.
+     * @var string HarvestJob error message.
      */
     public $ErrMessage;
 
     /**
-     * @var integer Job creation time, timestamp in seconds.
+     * @var integer HarvestJob creation time, timestamp in seconds.
      */
     public $CreateTime;
 
@@ -115,17 +115,17 @@ class HarvestJobResp extends AbstractModel
     public $Region;
 
     /**
-     * @param string $ID Job ID, a globally unique identifier.
+     * @param string $ID HarvestJob ID, a globally unique identifier.
      * @param string $ChannelName The associated channel name.
      * @param string $EndpointName The associated endpoint name.
      * @param string $TimeFormat Time format, supports the following types: 1. Epoch seconds 2. ISO-8601
-     * @param string $StartTime Job start time.
-     * @param string $EndTime Job end time.
+     * @param string $StartTime HarvestJob start time.
+     * @param string $EndTime HarvestJob end time.
      * @param string $Destination The path where the recording file is stored in COS.
      * @param string $Manifest The file name of the recording file stored in COS.
      * @param string $Status The task status is divided into running: Running, execution completed: Completed, and execution failure: Failed.
-     * @param string $ErrMessage Job error message.
-     * @param integer $CreateTime Job creation time, timestamp in seconds.
+     * @param string $ErrMessage HarvestJob error message.
+     * @param integer $CreateTime HarvestJob creation time, timestamp in seconds.
      * @param string $ChannelId The associated ChannelID.
      * @param string $Region The region corresponding to the harvest job.
      */

@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteStreamPackageHarvestJob request structure.
  *
- * @method string getID() Obtain Task ID, a globally unique identifier.
- * @method void setID(string $ID) Set Task ID, a globally unique identifier.
+ * @method string getID() Obtain HarvestJob ID, a globally unique identifier.
+ * @method void setID(string $ID) Set HarvestJob ID, a globally unique identifier.
  */
 class DeleteStreamPackageHarvestJobRequest extends AbstractModel
 {
     /**
-     * @var string Task ID, a globally unique identifier.
+     * @var string HarvestJob ID, a globally unique identifier.
      */
     public $ID;
 
     /**
-     * @param string $ID Task ID, a globally unique identifier.
+     * @param string $ID HarvestJob ID, a globally unique identifier.
      */
     function __construct()
     {

@@ -20,39 +20,27 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateStreamPackageHarvestJob request structure.
  *
- * @method string getID() Obtain Task ID, a globally unique identifier, ID can contain up to 128 characters. Supported characters are numbers, letters, underscores (_), and dashes (-).
- * @method void setID(string $ID) Set Task ID, a globally unique identifier, ID can contain up to 128 characters. Supported characters are numbers, letters, underscores (_), and dashes (-).
+ * @method string getID() Obtain HarvestJob ID, a globally unique identifier.
+ * @method void setID(string $ID) Set HarvestJob ID, a globally unique identifier.
  * @method string getChannelName() Obtain The associated channel name.
  * @method void setChannelName(string $ChannelName) Set The associated channel name.
- * @method string getEndpointName() Obtain The associated endpoint name, StreamPackage only supports harvesting content from HLS and DASH endpoints that have startover turned on.
- * @method void setEndpointName(string $EndpointName) Set The associated endpoint name, StreamPackage only supports harvesting content from HLS and DASH endpoints that have startover turned on.
- * @method string getTimeFormat() Obtain Time format, supports the following types: 
-1. Epoch seconds 
-2. ISO-8601.
- * @method void setTimeFormat(string $TimeFormat) Set Time format, supports the following types: 
-1. Epoch seconds 
-2. ISO-8601.
- * @method string getStartTime() Obtain Task start time supports two formats for TimeFormat input: 
-1. Epoch seconds: The input box is a numeric input box, and only positive integers can be entered. 
-2. ISO-8601: The supported format is ISO time, for example: 2023-08-01T10:00:00+08:00.
- * @method void setStartTime(string $StartTime) Set Task start time supports two formats for TimeFormat input: 
-1. Epoch seconds: The input box is a numeric input box, and only positive integers can be entered. 
-2. ISO-8601: The supported format is ISO time, for example: 2023-08-01T10:00:00+08:00.
- * @method string getEndTime() Obtain Task end time supports two formats for TimeFormat input: 
-1. Epoch seconds: The input box is a numeric input box, and only positive integers can be entered. 
-2. ISO-8601: The supported format is ISO time, for example: 2023-08-01T10:00:00+08:00.
- * @method void setEndTime(string $EndTime) Set Task end time supports two formats for TimeFormat input: 
-1. Epoch seconds: The input box is a numeric input box, and only positive integers can be entered. 
-2. ISO-8601: The supported format is ISO time, for example: 2023-08-01T10:00:00+08:00.
- * @method string getDestination() Obtain The COS bucket address where the recording file is stored in COS, format: https://{Bucket_name}-{AppId}.cos.{Region}.myqcloud.com/.
- * @method void setDestination(string $Destination) Set The COS bucket address where the recording file is stored in COS, format: https://{Bucket_name}-{AppId}.cos.{Region}.myqcloud.com/.
- * @method string getManifest() Obtain The path in the cos bucket and identifier for the parent manifest for the live-to-VOD asset, fotmat: {path 1}/xxx/{path n}/{name}.m3u8.
- * @method void setManifest(string $Manifest) Set The path in the cos bucket and identifier for the parent manifest for the live-to-VOD asset, fotmat: {path 1}/xxx/{path n}/{name}.m3u8.
+ * @method string getEndpointName() Obtain The associated endpoint name.
+ * @method void setEndpointName(string $EndpointName) Set The associated endpoint name.
+ * @method string getTimeFormat() Obtain Time format, supports the following types: 1. Epoch seconds 2. ISO-8601
+ * @method void setTimeFormat(string $TimeFormat) Set Time format, supports the following types: 1. Epoch seconds 2. ISO-8601
+ * @method string getStartTime() Obtain Task start time supports two formats for TimeFormat input: 1. Epoch seconds: The input box is a numeric input box, and only positive integers can be entered. 2. ISO-8601: The supported format is ISO time, for example: 2023-08-01T10:00:00+08:00.
+ * @method void setStartTime(string $StartTime) Set Task start time supports two formats for TimeFormat input: 1. Epoch seconds: The input box is a numeric input box, and only positive integers can be entered. 2. ISO-8601: The supported format is ISO time, for example: 2023-08-01T10:00:00+08:00.
+ * @method string getEndTime() Obtain Task end time supports two formats for TimeFormat input: 1. Epoch seconds: The input box is a numeric input box, and only positive integers can be entered. 2. ISO-8601: The supported format is ISO time, for example: 2023-08-01T10:00:00+08:00.
+ * @method void setEndTime(string $EndTime) Set Task end time supports two formats for TimeFormat input: 1. Epoch seconds: The input box is a numeric input box, and only positive integers can be entered. 2. ISO-8601: The supported format is ISO time, for example: 2023-08-01T10:00:00+08:00.
+ * @method string getDestination() Obtain The path where the recording file is stored in Cos.
+ * @method void setDestination(string $Destination) Set The path where the recording file is stored in Cos.
+ * @method string getManifest() Obtain The file name of the recording file stored in Cos.
+ * @method void setManifest(string $Manifest) Set The file name of the recording file stored in Cos.
  */
 class CreateStreamPackageHarvestJobRequest extends AbstractModel
 {
     /**
-     * @var string Task ID, a globally unique identifier, ID can contain up to 128 characters. Supported characters are numbers, letters, underscores (_), and dashes (-).
+     * @var string HarvestJob ID, a globally unique identifier.
      */
     public $ID;
 
@@ -62,56 +50,44 @@ class CreateStreamPackageHarvestJobRequest extends AbstractModel
     public $ChannelName;
 
     /**
-     * @var string The associated endpoint name, StreamPackage only supports harvesting content from HLS and DASH endpoints that have startover turned on.
+     * @var string The associated endpoint name.
      */
     public $EndpointName;
 
     /**
-     * @var string Time format, supports the following types: 
-1. Epoch seconds 
-2. ISO-8601.
+     * @var string Time format, supports the following types: 1. Epoch seconds 2. ISO-8601
      */
     public $TimeFormat;
 
     /**
-     * @var string Task start time supports two formats for TimeFormat input: 
-1. Epoch seconds: The input box is a numeric input box, and only positive integers can be entered. 
-2. ISO-8601: The supported format is ISO time, for example: 2023-08-01T10:00:00+08:00.
+     * @var string Task start time supports two formats for TimeFormat input: 1. Epoch seconds: The input box is a numeric input box, and only positive integers can be entered. 2. ISO-8601: The supported format is ISO time, for example: 2023-08-01T10:00:00+08:00.
      */
     public $StartTime;
 
     /**
-     * @var string Task end time supports two formats for TimeFormat input: 
-1. Epoch seconds: The input box is a numeric input box, and only positive integers can be entered. 
-2. ISO-8601: The supported format is ISO time, for example: 2023-08-01T10:00:00+08:00.
+     * @var string Task end time supports two formats for TimeFormat input: 1. Epoch seconds: The input box is a numeric input box, and only positive integers can be entered. 2. ISO-8601: The supported format is ISO time, for example: 2023-08-01T10:00:00+08:00.
      */
     public $EndTime;
 
     /**
-     * @var string The COS bucket address where the recording file is stored in COS, format: https://{Bucket_name}-{AppId}.cos.{Region}.myqcloud.com/.
+     * @var string The path where the recording file is stored in Cos.
      */
     public $Destination;
 
     /**
-     * @var string The path in the cos bucket and identifier for the parent manifest for the live-to-VOD asset, fotmat: {path 1}/xxx/{path n}/{name}.m3u8.
+     * @var string The file name of the recording file stored in Cos.
      */
     public $Manifest;
 
     /**
-     * @param string $ID Task ID, a globally unique identifier, ID can contain up to 128 characters. Supported characters are numbers, letters, underscores (_), and dashes (-).
+     * @param string $ID HarvestJob ID, a globally unique identifier.
      * @param string $ChannelName The associated channel name.
-     * @param string $EndpointName The associated endpoint name, StreamPackage only supports harvesting content from HLS and DASH endpoints that have startover turned on.
-     * @param string $TimeFormat Time format, supports the following types: 
-1. Epoch seconds 
-2. ISO-8601.
-     * @param string $StartTime Task start time supports two formats for TimeFormat input: 
-1. Epoch seconds: The input box is a numeric input box, and only positive integers can be entered. 
-2. ISO-8601: The supported format is ISO time, for example: 2023-08-01T10:00:00+08:00.
-     * @param string $EndTime Task end time supports two formats for TimeFormat input: 
-1. Epoch seconds: The input box is a numeric input box, and only positive integers can be entered. 
-2. ISO-8601: The supported format is ISO time, for example: 2023-08-01T10:00:00+08:00.
-     * @param string $Destination The COS bucket address where the recording file is stored in COS, format: https://{Bucket_name}-{AppId}.cos.{Region}.myqcloud.com/.
-     * @param string $Manifest The path in the cos bucket and identifier for the parent manifest for the live-to-VOD asset, fotmat: {path 1}/xxx/{path n}/{name}.m3u8.
+     * @param string $EndpointName The associated endpoint name.
+     * @param string $TimeFormat Time format, supports the following types: 1. Epoch seconds 2. ISO-8601
+     * @param string $StartTime Task start time supports two formats for TimeFormat input: 1. Epoch seconds: The input box is a numeric input box, and only positive integers can be entered. 2. ISO-8601: The supported format is ISO time, for example: 2023-08-01T10:00:00+08:00.
+     * @param string $EndTime Task end time supports two formats for TimeFormat input: 1. Epoch seconds: The input box is a numeric input box, and only positive integers can be entered. 2. ISO-8601: The supported format is ISO time, for example: 2023-08-01T10:00:00+08:00.
+     * @param string $Destination The path where the recording file is stored in Cos.
+     * @param string $Manifest The file name of the recording file stored in Cos.
      */
     function __construct()
     {
