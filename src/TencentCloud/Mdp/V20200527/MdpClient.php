@@ -26,10 +26,15 @@ use TencentCloud\Mdp\V20200527\Models as Models;
  * @method Models\BindNewLVBDomainWithChannelResponse BindNewLVBDomainWithChannel(Models\BindNewLVBDomainWithChannelRequest $req) This API is used to bind an LVB domain name to a channel.
  * @method Models\CreateStreamPackageChannelResponse CreateStreamPackageChannel(Models\CreateStreamPackageChannelRequest $req) This API is used to create a StreamPackage channel.
  * @method Models\CreateStreamPackageChannelEndpointResponse CreateStreamPackageChannelEndpoint(Models\CreateStreamPackageChannelEndpointRequest $req) This API is used to create an endpoint on a StreamPackage channel.
+ * @method Models\CreateStreamPackageHarvestJobResponse CreateStreamPackageHarvestJob(Models\CreateStreamPackageHarvestJobRequest $req) Create HarvestJob.
  * @method Models\DeleteStreamPackageChannelEndpointsResponse DeleteStreamPackageChannelEndpoints(Models\DeleteStreamPackageChannelEndpointsRequest $req) This API is used to delete endpoints from a StreamPackage channel in batches.
  * @method Models\DeleteStreamPackageChannelsResponse DeleteStreamPackageChannels(Models\DeleteStreamPackageChannelsRequest $req) This API is used to delete StreamPackage channels in batches.
+ * @method Models\DeleteStreamPackageHarvestJobResponse DeleteStreamPackageHarvestJob(Models\DeleteStreamPackageHarvestJobRequest $req) Delete HarvestJob.
+ * @method Models\DeleteStreamPackageHarvestJobsResponse DeleteStreamPackageHarvestJobs(Models\DeleteStreamPackageHarvestJobsRequest $req) Deleting HarvestJobs in Batch.
  * @method Models\DescribeStreamPackageChannelResponse DescribeStreamPackageChannel(Models\DescribeStreamPackageChannelRequest $req) This API is used to query the information of a StreamPackage channel.
  * @method Models\DescribeStreamPackageChannelsResponse DescribeStreamPackageChannels(Models\DescribeStreamPackageChannelsRequest $req) This API is used to query the information of multiple StreamPackage channels.
+ * @method Models\DescribeStreamPackageHarvestJobResponse DescribeStreamPackageHarvestJob(Models\DescribeStreamPackageHarvestJobRequest $req) Query HarvestJob.
+ * @method Models\DescribeStreamPackageHarvestJobsResponse DescribeStreamPackageHarvestJobs(Models\DescribeStreamPackageHarvestJobsRequest $req) Batch query HarvestJob.
  * @method Models\ModifyStreamPackageChannelResponse ModifyStreamPackageChannel(Models\ModifyStreamPackageChannelRequest $req) This API is used to modify a StreamPackage channel.
  * @method Models\ModifyStreamPackageChannelEndpointResponse ModifyStreamPackageChannelEndpoint(Models\ModifyStreamPackageChannelEndpointRequest $req) This API is used to modify an endpoint of a StreamPackage channel.
  * @method Models\ModifyStreamPackageChannelInputAuthInfoResponse ModifyStreamPackageChannelInputAuthInfo(Models\ModifyStreamPackageChannelInputAuthInfoRequest $req) This API is used to modify the input authentication information of a StreamPackage channel.
