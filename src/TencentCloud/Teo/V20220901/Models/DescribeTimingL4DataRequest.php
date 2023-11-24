@@ -24,24 +24,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStartTime(string $StartTime) Set The start time.
  * @method string getEndTime() Obtain The end time.
  * @method void setEndTime(string $EndTime) Set The end time.
- * @method array getMetricNames() Obtain Metric to query. Values:
-<li>`l4Flow_connections`: Access connections;</li>
-<li>`l4Flow_flux`: Access traffic;</li>
-<li>`l4Flow_inFlux`: Inbound traffic;</li>
-<li>`l4Flow_outFlux`: Outbound traffic;</li>
-<li>`l4Flow_outPkt`: Outbound packets.</li>
- * @method void setMetricNames(array $MetricNames) Set Metric to query. Values:
-<li>`l4Flow_connections`: Access connections;</li>
-<li>`l4Flow_flux`: Access traffic;</li>
-<li>`l4Flow_inFlux`: Inbound traffic;</li>
-<li>`l4Flow_outFlux`: Outbound traffic;</li>
-<li>`l4Flow_outPkt`: Outbound packets.</li>
- * @method array getZoneIds() Obtain List of sites
-If it’s not specified, all sites are selected by default, and the query period must be within the last 30 days. 
-Enter the IDs of sites to query. The maximum query period is determined by the <a href="https://intl.cloud.tencent.com/document/product/1552/77380?from_cn_redirect=1#edgeone-.E5.A5.97.E9.A4.90">max data query period</a> of the bound plan. 
- * @method void setZoneIds(array $ZoneIds) Set List of sites
-If it’s not specified, all sites are selected by default, and the query period must be within the last 30 days. 
-Enter the IDs of sites to query. The maximum query period is determined by the <a href="https://intl.cloud.tencent.com/document/product/1552/77380?from_cn_redirect=1#edgeone-.E5.A5.97.E9.A4.90">max data query period</a> of the bound plan. 
+ * @method array getMetricNames() Obtain Query indicator. Values: 
+<li>l4Flow_connections: Number of access connections;</li>
+<li>l4Flow_flux: Total access traffic;</li>
+<li>l4Flow_inFlux: Ingress access traffic;</li>
+<li>l4Flow_outFlux: Egress access traffic. </li>
+ * @method void setMetricNames(array $MetricNames) Set Query indicator. Values: 
+<li>l4Flow_connections: Number of access connections;</li>
+<li>l4Flow_flux: Total access traffic;</li>
+<li>l4Flow_inFlux: Ingress access traffic;</li>
+<li>l4Flow_outFlux: Egress access traffic. </li>
+ * @method array getZoneIds() Obtain ZoneId set. This parameter is required.
+ * @method void setZoneIds(array $ZoneIds) Set ZoneId set. This parameter is required.
  * @method array getProxyIds() Obtain List of L4 proxy IDs. All L4 proxies will be selected if this field is not specified.
  * @method void setProxyIds(array $ProxyIds) Set List of L4 proxy IDs. All L4 proxies will be selected if this field is not specified.
  * @method string getInterval() Obtain The query granularity. Values:
@@ -82,19 +76,16 @@ class DescribeTimingL4DataRequest extends AbstractModel
     public $EndTime;
 
     /**
-     * @var array Metric to query. Values:
-<li>`l4Flow_connections`: Access connections;</li>
-<li>`l4Flow_flux`: Access traffic;</li>
-<li>`l4Flow_inFlux`: Inbound traffic;</li>
-<li>`l4Flow_outFlux`: Outbound traffic;</li>
-<li>`l4Flow_outPkt`: Outbound packets.</li>
+     * @var array Query indicator. Values: 
+<li>l4Flow_connections: Number of access connections;</li>
+<li>l4Flow_flux: Total access traffic;</li>
+<li>l4Flow_inFlux: Ingress access traffic;</li>
+<li>l4Flow_outFlux: Egress access traffic. </li>
      */
     public $MetricNames;
 
     /**
-     * @var array List of sites
-If it’s not specified, all sites are selected by default, and the query period must be within the last 30 days. 
-Enter the IDs of sites to query. The maximum query period is determined by the <a href="https://intl.cloud.tencent.com/document/product/1552/77380?from_cn_redirect=1#edgeone-.E5.A5.97.E9.A4.90">max data query period</a> of the bound plan. 
+     * @var array ZoneId set. This parameter is required.
      */
     public $ZoneIds;
 
@@ -130,15 +121,12 @@ Enter the IDs of sites to query. The maximum query period is determined by the <
     /**
      * @param string $StartTime The start time.
      * @param string $EndTime The end time.
-     * @param array $MetricNames Metric to query. Values:
-<li>`l4Flow_connections`: Access connections;</li>
-<li>`l4Flow_flux`: Access traffic;</li>
-<li>`l4Flow_inFlux`: Inbound traffic;</li>
-<li>`l4Flow_outFlux`: Outbound traffic;</li>
-<li>`l4Flow_outPkt`: Outbound packets.</li>
-     * @param array $ZoneIds List of sites
-If it’s not specified, all sites are selected by default, and the query period must be within the last 30 days. 
-Enter the IDs of sites to query. The maximum query period is determined by the <a href="https://intl.cloud.tencent.com/document/product/1552/77380?from_cn_redirect=1#edgeone-.E5.A5.97.E9.A4.90">max data query period</a> of the bound plan. 
+     * @param array $MetricNames Query indicator. Values: 
+<li>l4Flow_connections: Number of access connections;</li>
+<li>l4Flow_flux: Total access traffic;</li>
+<li>l4Flow_inFlux: Ingress access traffic;</li>
+<li>l4Flow_outFlux: Egress access traffic. </li>
+     * @param array $ZoneIds ZoneId set. This parameter is required.
      * @param array $ProxyIds List of L4 proxy IDs. All L4 proxies will be selected if this field is not specified.
      * @param string $Interval The query granularity. Values:
 <li>`min`: 1 minute;</li>

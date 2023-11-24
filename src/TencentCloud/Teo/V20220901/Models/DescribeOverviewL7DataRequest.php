@@ -42,12 +42,10 @@ use TencentCloud\Common\AbstractModel;
 <li>`l7Flow_request`: Access requests</li>
 <li>`l7Flow_flux`: Upstream and downstream traffic used for client access</li>
 <li>`l7Flow_bandwidth`: Upstream and downstream bandwidth used for client access</li>
- * @method array getZoneIds() Obtain List of sites
-Enter the IDs of sites to query. The maximum query period is determined by the <a href="https://intl.cloud.tencent.com/document/product/1552/77380?from_cn_redirect=1#edgeone-.E5.A5.97.E9.A4.90">max data query period</a> of the bound plan. If it’s not specified, all sites are selected by default, and the query period must be within the last 30 days. 
- * @method void setZoneIds(array $ZoneIds) Set List of sites
-Enter the IDs of sites to query. The maximum query period is determined by the <a href="https://intl.cloud.tencent.com/document/product/1552/77380?from_cn_redirect=1#edgeone-.E5.A5.97.E9.A4.90">max data query period</a> of the bound plan. If it’s not specified, all sites are selected by default, and the query period must be within the last 30 days. 
- * @method array getDomains() Obtain List of subdomain names to be queried. All subdomain names will be selected if this field is not specified.
- * @method void setDomains(array $Domains) Set List of subdomain names to be queried. All subdomain names will be selected if this field is not specified.
+ * @method array getZoneIds() Obtain ZoneId set. This parameter is required.
+ * @method void setZoneIds(array $ZoneIds) Set ZoneId set. This parameter is required.
+ * @method array getDomains() Obtain Queried domain name set. This parameter has been discarded.
+ * @method void setDomains(array $Domains) Set Queried domain name set. This parameter has been discarded.
  * @method string getProtocol() Obtain The protocol type. Values:
 <li>`http`: HTTP protocol;</li>
 <li>`https`: HTTPS protocol;</li>
@@ -68,14 +66,16 @@ Enter the IDs of sites to query. The maximum query period is determined by the <
 <li>`5min`: 5 minutes;</li>
 <li>`hour`: 1 hour;</li>
 <li>`day`: One day</li>If this field is not specified, the granularity will be determined based on the query period. <br>Period ≤ 1 hour: `min`; <br>1 hour < Period ≤ 2 days: `5min`; <br>2 days < period ≤ 7 days: `hour`; <br>Period > 7 days: `day`.
- * @method array getFilters() Obtain Filters
-<li>`socket`:<br>u2003u2003 Filter by the specified <strong>HTTP protocol type</strong><br>u2003u2003 Values:<br>u2003u2003 `HTTP`: HTTP protocol;<br>u2003u2003 `HTTPS`: HTTPS protocol;<br>u2003u2003 `QUIC`: QUIC protocol.</li>
-<li>`tagKey`:<br>u2003u2003 Filter by the specified <strong>tag key</strong></li>
-<li>`tagValue`<br>u2003u2003 Filter by the specified <strong>tag value</strong></li>
- * @method void setFilters(array $Filters) Set Filters
-<li>`socket`:<br>u2003u2003 Filter by the specified <strong>HTTP protocol type</strong><br>u2003u2003 Values:<br>u2003u2003 `HTTP`: HTTP protocol;<br>u2003u2003 `HTTPS`: HTTPS protocol;<br>u2003u2003 `QUIC`: QUIC protocol.</li>
-<li>`tagKey`:<br>u2003u2003 Filter by the specified <strong>tag key</strong></li>
-<li>`tagValue`<br>u2003u2003 Filter by the specified <strong>tag value</strong></li>
+ * @method array getFilters() Obtain Filtering condition. The detailed filtering condition key values are as follows: 
+<li>socket<br>    Filter based on [<strong>HTTP protocol type</strong>]. <br>    Corresponding value options: <br>    HTTP: HTTP protocol；<br>    HTTPS: HTTPS protocol;<br>    QUIC: QUIC protocol. </li>
+<li>domains<br>    Filter based on [<strong>domain name</strong>]. </li>
+<li>tagKey<br>    Filter based on [<strong>Tag Key</strong>]. </li>
+<li>tagValue<br>    Filter based on [<strong>Tag Value</strong>]. </li>
+ * @method void setFilters(array $Filters) Set Filtering condition. The detailed filtering condition key values are as follows: 
+<li>socket<br>    Filter based on [<strong>HTTP protocol type</strong>]. <br>    Corresponding value options: <br>    HTTP: HTTP protocol；<br>    HTTPS: HTTPS protocol;<br>    QUIC: QUIC protocol. </li>
+<li>domains<br>    Filter based on [<strong>domain name</strong>]. </li>
+<li>tagKey<br>    Filter based on [<strong>Tag Key</strong>]. </li>
+<li>tagValue<br>    Filter based on [<strong>Tag Value</strong>]. </li>
  * @method string getArea() Obtain Geolocation scope. Values:
 <li>`overseas`: Regions outside the Chinese mainland</li>
 <li>`mainland`: Chinese mainland</li>
@@ -111,13 +111,12 @@ class DescribeOverviewL7DataRequest extends AbstractModel
     public $MetricNames;
 
     /**
-     * @var array List of sites
-Enter the IDs of sites to query. The maximum query period is determined by the <a href="https://intl.cloud.tencent.com/document/product/1552/77380?from_cn_redirect=1#edgeone-.E5.A5.97.E9.A4.90">max data query period</a> of the bound plan. If it’s not specified, all sites are selected by default, and the query period must be within the last 30 days. 
+     * @var array ZoneId set. This parameter is required.
      */
     public $ZoneIds;
 
     /**
-     * @var array List of subdomain names to be queried. All subdomain names will be selected if this field is not specified.
+     * @var array Queried domain name set. This parameter has been discarded.
      */
     public $Domains;
 
@@ -140,10 +139,11 @@ Enter the IDs of sites to query. The maximum query period is determined by the <
     public $Interval;
 
     /**
-     * @var array Filters
-<li>`socket`:<br>u2003u2003 Filter by the specified <strong>HTTP protocol type</strong><br>u2003u2003 Values:<br>u2003u2003 `HTTP`: HTTP protocol;<br>u2003u2003 `HTTPS`: HTTPS protocol;<br>u2003u2003 `QUIC`: QUIC protocol.</li>
-<li>`tagKey`:<br>u2003u2003 Filter by the specified <strong>tag key</strong></li>
-<li>`tagValue`<br>u2003u2003 Filter by the specified <strong>tag value</strong></li>
+     * @var array Filtering condition. The detailed filtering condition key values are as follows: 
+<li>socket<br>    Filter based on [<strong>HTTP protocol type</strong>]. <br>    Corresponding value options: <br>    HTTP: HTTP protocol；<br>    HTTPS: HTTPS protocol;<br>    QUIC: QUIC protocol. </li>
+<li>domains<br>    Filter based on [<strong>domain name</strong>]. </li>
+<li>tagKey<br>    Filter based on [<strong>Tag Key</strong>]. </li>
+<li>tagValue<br>    Filter based on [<strong>Tag Value</strong>]. </li>
      */
     public $Filters;
 
@@ -167,9 +167,8 @@ Enter the IDs of sites to query. The maximum query period is determined by the <
 <li>`l7Flow_request`: Access requests</li>
 <li>`l7Flow_flux`: Upstream and downstream traffic used for client access</li>
 <li>`l7Flow_bandwidth`: Upstream and downstream bandwidth used for client access</li>
-     * @param array $ZoneIds List of sites
-Enter the IDs of sites to query. The maximum query period is determined by the <a href="https://intl.cloud.tencent.com/document/product/1552/77380?from_cn_redirect=1#edgeone-.E5.A5.97.E9.A4.90">max data query period</a> of the bound plan. If it’s not specified, all sites are selected by default, and the query period must be within the last 30 days. 
-     * @param array $Domains List of subdomain names to be queried. All subdomain names will be selected if this field is not specified.
+     * @param array $ZoneIds ZoneId set. This parameter is required.
+     * @param array $Domains Queried domain name set. This parameter has been discarded.
      * @param string $Protocol The protocol type. Values:
 <li>`http`: HTTP protocol;</li>
 <li>`https`: HTTPS protocol;</li>
@@ -180,10 +179,11 @@ Enter the IDs of sites to query. The maximum query period is determined by the <
 <li>`5min`: 5 minutes;</li>
 <li>`hour`: 1 hour;</li>
 <li>`day`: One day</li>If this field is not specified, the granularity will be determined based on the query period. <br>Period ≤ 1 hour: `min`; <br>1 hour < Period ≤ 2 days: `5min`; <br>2 days < period ≤ 7 days: `hour`; <br>Period > 7 days: `day`.
-     * @param array $Filters Filters
-<li>`socket`:<br>u2003u2003 Filter by the specified <strong>HTTP protocol type</strong><br>u2003u2003 Values:<br>u2003u2003 `HTTP`: HTTP protocol;<br>u2003u2003 `HTTPS`: HTTPS protocol;<br>u2003u2003 `QUIC`: QUIC protocol.</li>
-<li>`tagKey`:<br>u2003u2003 Filter by the specified <strong>tag key</strong></li>
-<li>`tagValue`<br>u2003u2003 Filter by the specified <strong>tag value</strong></li>
+     * @param array $Filters Filtering condition. The detailed filtering condition key values are as follows: 
+<li>socket<br>    Filter based on [<strong>HTTP protocol type</strong>]. <br>    Corresponding value options: <br>    HTTP: HTTP protocol；<br>    HTTPS: HTTPS protocol;<br>    QUIC: QUIC protocol. </li>
+<li>domains<br>    Filter based on [<strong>domain name</strong>]. </li>
+<li>tagKey<br>    Filter based on [<strong>Tag Key</strong>]. </li>
+<li>tagValue<br>    Filter based on [<strong>Tag Value</strong>]. </li>
      * @param string $Area Geolocation scope. Values:
 <li>`overseas`: Regions outside the Chinese mainland</li>
 <li>`mainland`: Chinese mainland</li>

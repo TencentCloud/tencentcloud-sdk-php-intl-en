@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSwitch(string $Switch) Set Whether to enable standard debugging. Values:
 <li>`on`: Enable</li>
 <li>`off`: Disable </li>
- * @method array getAllowClientIPList() Obtain Allowed client source. It supports IPv4/IPv6 addresses and CIDR blocks.
- * @method void setAllowClientIPList(array $AllowClientIPList) Set Allowed client source. It supports IPv4/IPv6 addresses and CIDR blocks.
+ * @method array getAllowClientIPList() Obtain Allowed client source. IPv4 and IPv6 addresses and network segments are supported. 0.0.0.0/0 indicates that all IPv4 clients can be debugged, and ::/0 indicates that all IPv6 clients can be debugged.
+ * @method void setAllowClientIPList(array $AllowClientIPList) Set Allowed client source. IPv4 and IPv6 addresses and network segments are supported. 0.0.0.0/0 indicates that all IPv4 clients can be debugged, and ::/0 indicates that all IPv6 clients can be debugged.
  * @method string getExpireTime() Obtain The time when the standard debugging setting expires. If it is exceeded, this feature u200dbecomes invalid.
  * @method void setExpireTime(string $ExpireTime) Set The time when the standard debugging setting expires. If it is exceeded, this feature u200dbecomes invalid.
  */
@@ -41,7 +41,7 @@ class StandardDebug extends AbstractModel
     public $Switch;
 
     /**
-     * @var array Allowed client source. It supports IPv4/IPv6 addresses and CIDR blocks.
+     * @var array Allowed client source. IPv4 and IPv6 addresses and network segments are supported. 0.0.0.0/0 indicates that all IPv4 clients can be debugged, and ::/0 indicates that all IPv6 clients can be debugged.
      */
     public $AllowClientIPList;
 
@@ -54,7 +54,7 @@ class StandardDebug extends AbstractModel
      * @param string $Switch Whether to enable standard debugging. Values:
 <li>`on`: Enable</li>
 <li>`off`: Disable </li>
-     * @param array $AllowClientIPList Allowed client source. It supports IPv4/IPv6 addresses and CIDR blocks.
+     * @param array $AllowClientIPList Allowed client source. IPv4 and IPv6 addresses and network segments are supported. 0.0.0.0/0 indicates that all IPv4 clients can be debugged, and ::/0 indicates that all IPv6 clients can be debugged.
      * @param string $ExpireTime The time when the standard debugging setting expires. If it is exceeded, this feature u200dbecomes invalid.
      */
     function __construct()

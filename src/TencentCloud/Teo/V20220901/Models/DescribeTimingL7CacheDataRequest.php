@@ -32,8 +32,8 @@ use TencentCloud\Common\AbstractModel;
 <li>`l7Cache_outFlux`: Response traffic.</li>
 <li>`l7Cache_request`: Response requests.</li>
 <li>`l7Cache_outBandwidth`: Response bandwidth.</li>
- * @method array getZoneIds() Obtain List of sites to be queried. All sites will be selected if this field is not specified.
- * @method void setZoneIds(array $ZoneIds) Set List of sites to be queried. All sites will be selected if this field is not specified.
+ * @method array getZoneIds() Obtain ZoneId set. This parameter is required.
+ * @method void setZoneIds(array $ZoneIds) Set ZoneId set. This parameter is required.
  * @method array getFilters() Obtain Filter conditions. See below for details: 
 <li>`domain`<br>   Filter by the <strong>sub-domain name</strong>, such as `test.example.com`<br>   Type: String<br>   Required: No</li>
 <li>`url`<br>   Filter by the <strong>URL</strong>, such as `/content`. The query period cannot exceed 30 days. <br>   Type: String<br>   Required: No</li>
@@ -90,7 +90,7 @@ class DescribeTimingL7CacheDataRequest extends AbstractModel
     public $MetricNames;
 
     /**
-     * @var array List of sites to be queried. All sites will be selected if this field is not specified.
+     * @var array ZoneId set. This parameter is required.
      */
     public $ZoneIds;
 
@@ -130,7 +130,7 @@ class DescribeTimingL7CacheDataRequest extends AbstractModel
 <li>`l7Cache_outFlux`: Response traffic.</li>
 <li>`l7Cache_request`: Response requests.</li>
 <li>`l7Cache_outBandwidth`: Response bandwidth.</li>
-     * @param array $ZoneIds List of sites to be queried. All sites will be selected if this field is not specified.
+     * @param array $ZoneIds ZoneId set. This parameter is required.
      * @param array $Filters Filter conditions. See below for details: 
 <li>`domain`<br>   Filter by the <strong>sub-domain name</strong>, such as `test.example.com`<br>   Type: String<br>   Required: No</li>
 <li>`url`<br>   Filter by the <strong>URL</strong>, such as `/content`. The query period cannot exceed 30 days. <br>   Type: String<br>   Required: No</li>

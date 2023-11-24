@@ -24,26 +24,24 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStartTime(string $StartTime) Set The start time.
  * @method string getEndTime() Obtain The end time.
  * @method void setEndTime(string $EndTime) Set The end time.
- * @method array getMetricNames() Obtain The metric to query. Values:
-<li>`l7Flow_outFlux`: Traffic used for EdgeOne responses</li>
-<li>`l7Flow_inFlux`: Traffic used for EdgeOne requests</li>
-<li>`l7Flow_outBandwidth`: Bandwidth used for EdgeOne responses</li>
-<li>`l7Flow_inBandwidth`: Bandwidth used for EdgeOne requests</li>
-<li>`l7Flow_request`: Access requests</li>
-<li>`l7Flow_flux`: Upstream and downstream traffic used for client access</li>
-<li>`l7Flow_bandwidth`: Upstream and downstream bandwidth used for client access</li>
- * @method void setMetricNames(array $MetricNames) Set The metric to query. Values:
-<li>`l7Flow_outFlux`: Traffic used for EdgeOne responses</li>
-<li>`l7Flow_inFlux`: Traffic used for EdgeOne requests</li>
-<li>`l7Flow_outBandwidth`: Bandwidth used for EdgeOne responses</li>
-<li>`l7Flow_inBandwidth`: Bandwidth used for EdgeOne requests</li>
-<li>`l7Flow_request`: Access requests</li>
-<li>`l7Flow_flux`: Upstream and downstream traffic used for client access</li>
-<li>`l7Flow_bandwidth`: Upstream and downstream bandwidth used for client access</li>
- * @method array getZoneIds() Obtain List of sites
-Enter the IDs of sites to query. The maximum query period is determined by the <a href="https://intl.cloud.tencent.com/document/product/1552/77380?from_cn_redirect=1#edgeone-.E5.A5.97.E9.A4.90">max data query period</a> of the bound plan. If it’s not specified, all sites are selected by default, and the query period must be within the last 30 days. 
- * @method void setZoneIds(array $ZoneIds) Set List of sites
-Enter the IDs of sites to query. The maximum query period is determined by the <a href="https://intl.cloud.tencent.com/document/product/1552/77380?from_cn_redirect=1#edgeone-.E5.A5.97.E9.A4.90">max data query period</a> of the bound plan. If it’s not specified, all sites are selected by default, and the query period must be within the last 30 days. 
+ * @method array getMetricNames() Obtain Indicator list. Values: 
+<li>l7Flow_outFlux: Edgeone response traffic;</li>
+<li>l7Flow_inFlux: Edgeone request traffic;</li>
+<li>l7Flow_outBandwidth: Edgeone response bandwidth;</li>
+<li>l7Flow_inBandwidth: Edgeone request bandwidth;</li>
+<li>l7Flow_request: Number of access requests;</li>
+<li>l7Flow_flux: Uplink + downlink traffic of access requests;< li>
+<li>l7Flow_bandwidth: Uplink + downlink bandwidth of access requests. </li>
+ * @method void setMetricNames(array $MetricNames) Set Indicator list. Values: 
+<li>l7Flow_outFlux: Edgeone response traffic;</li>
+<li>l7Flow_inFlux: Edgeone request traffic;</li>
+<li>l7Flow_outBandwidth: Edgeone response bandwidth;</li>
+<li>l7Flow_inBandwidth: Edgeone request bandwidth;</li>
+<li>l7Flow_request: Number of access requests;</li>
+<li>l7Flow_flux: Uplink + downlink traffic of access requests;< li>
+<li>l7Flow_bandwidth: Uplink + downlink bandwidth of access requests. </li>
+ * @method array getZoneIds() Obtain ZoneId set. This parameter is required.
+ * @method void setZoneIds(array $ZoneIds) Set ZoneId set. This parameter is required.
  * @method string getInterval() Obtain The query granularity. Values:
 <li>`min`: 1 minute;</li>
 <li>`5min`: 5 minutes;</li>
@@ -112,20 +110,19 @@ class DescribeTimingL7AnalysisDataRequest extends AbstractModel
     public $EndTime;
 
     /**
-     * @var array The metric to query. Values:
-<li>`l7Flow_outFlux`: Traffic used for EdgeOne responses</li>
-<li>`l7Flow_inFlux`: Traffic used for EdgeOne requests</li>
-<li>`l7Flow_outBandwidth`: Bandwidth used for EdgeOne responses</li>
-<li>`l7Flow_inBandwidth`: Bandwidth used for EdgeOne requests</li>
-<li>`l7Flow_request`: Access requests</li>
-<li>`l7Flow_flux`: Upstream and downstream traffic used for client access</li>
-<li>`l7Flow_bandwidth`: Upstream and downstream bandwidth used for client access</li>
+     * @var array Indicator list. Values: 
+<li>l7Flow_outFlux: Edgeone response traffic;</li>
+<li>l7Flow_inFlux: Edgeone request traffic;</li>
+<li>l7Flow_outBandwidth: Edgeone response bandwidth;</li>
+<li>l7Flow_inBandwidth: Edgeone request bandwidth;</li>
+<li>l7Flow_request: Number of access requests;</li>
+<li>l7Flow_flux: Uplink + downlink traffic of access requests;< li>
+<li>l7Flow_bandwidth: Uplink + downlink bandwidth of access requests. </li>
      */
     public $MetricNames;
 
     /**
-     * @var array List of sites
-Enter the IDs of sites to query. The maximum query period is determined by the <a href="https://intl.cloud.tencent.com/document/product/1552/77380?from_cn_redirect=1#edgeone-.E5.A5.97.E9.A4.90">max data query period</a> of the bound plan. If it’s not specified, all sites are selected by default, and the query period must be within the last 30 days. 
+     * @var array ZoneId set. This parameter is required.
      */
     public $ZoneIds;
 
@@ -171,16 +168,15 @@ Enter the IDs of sites to query. The maximum query period is determined by the <
     /**
      * @param string $StartTime The start time.
      * @param string $EndTime The end time.
-     * @param array $MetricNames The metric to query. Values:
-<li>`l7Flow_outFlux`: Traffic used for EdgeOne responses</li>
-<li>`l7Flow_inFlux`: Traffic used for EdgeOne requests</li>
-<li>`l7Flow_outBandwidth`: Bandwidth used for EdgeOne responses</li>
-<li>`l7Flow_inBandwidth`: Bandwidth used for EdgeOne requests</li>
-<li>`l7Flow_request`: Access requests</li>
-<li>`l7Flow_flux`: Upstream and downstream traffic used for client access</li>
-<li>`l7Flow_bandwidth`: Upstream and downstream bandwidth used for client access</li>
-     * @param array $ZoneIds List of sites
-Enter the IDs of sites to query. The maximum query period is determined by the <a href="https://intl.cloud.tencent.com/document/product/1552/77380?from_cn_redirect=1#edgeone-.E5.A5.97.E9.A4.90">max data query period</a> of the bound plan. If it’s not specified, all sites are selected by default, and the query period must be within the last 30 days. 
+     * @param array $MetricNames Indicator list. Values: 
+<li>l7Flow_outFlux: Edgeone response traffic;</li>
+<li>l7Flow_inFlux: Edgeone request traffic;</li>
+<li>l7Flow_outBandwidth: Edgeone response bandwidth;</li>
+<li>l7Flow_inBandwidth: Edgeone request bandwidth;</li>
+<li>l7Flow_request: Number of access requests;</li>
+<li>l7Flow_flux: Uplink + downlink traffic of access requests;< li>
+<li>l7Flow_bandwidth: Uplink + downlink bandwidth of access requests. </li>
+     * @param array $ZoneIds ZoneId set. This parameter is required.
      * @param string $Interval The query granularity. Values:
 <li>`min`: 1 minute;</li>
 <li>`5min`: 5 minutes;</li>

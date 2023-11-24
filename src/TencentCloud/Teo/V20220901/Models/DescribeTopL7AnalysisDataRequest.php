@@ -68,8 +68,8 @@ use TencentCloud\Common\AbstractModel;
 <li>`l7Flow_request_ua_browser`: Query requests by browser;</li>
 <li>`l7Flow_request_us_os`: Query requests by OS.</li>
 
- * @method array getZoneIds() Obtain (Required) List of sites. No query results are returned if this field is not specified.
- * @method void setZoneIds(array $ZoneIds) Set (Required) List of sites. No query results are returned if this field is not specified.
+ * @method array getZoneIds() Obtain ZoneId set. This parameter is required.
+ * @method void setZoneIds(array $ZoneIds) Set ZoneId set. This parameter is required.
  * @method integer getLimit() Obtain Queries the top n rows of data. Maximum value: 1000. Top 10 rows of data will be queried if this field is not specified.
  * @method void setLimit(integer $Limit) Set Queries the top n rows of data. Maximum value: 1000. Top 10 rows of data will be queried if this field is not specified.
  * @method array getFilters() Obtain Filters
@@ -166,7 +166,7 @@ class DescribeTopL7AnalysisDataRequest extends AbstractModel
     public $MetricName;
 
     /**
-     * @var array (Required) List of sites. No query results are returned if this field is not specified.
+     * @var array ZoneId set. This parameter is required.
      */
     public $ZoneIds;
 
@@ -239,7 +239,7 @@ class DescribeTopL7AnalysisDataRequest extends AbstractModel
 <li>`l7Flow_request_ua_browser`: Query requests by browser;</li>
 <li>`l7Flow_request_us_os`: Query requests by OS.</li>
 
-     * @param array $ZoneIds (Required) List of sites. No query results are returned if this field is not specified.
+     * @param array $ZoneIds ZoneId set. This parameter is required.
      * @param integer $Limit Queries the top n rows of data. Maximum value: 1000. Top 10 rows of data will be queried if this field is not specified.
      * @param array $Filters Filters
 <li>`country`<br>Filter by the <strong> Country/Region</strong>. The country/region follows <a href="https://baike.baidu.com/item/ISO%203166-1/5269555">ISO 3166</a> specification. </li>

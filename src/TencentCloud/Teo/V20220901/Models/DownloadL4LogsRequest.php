@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStartTime(string $StartTime) Set The start time.
  * @method string getEndTime() Obtain The end time.
  * @method void setEndTime(string $EndTime) Set The end time.
- * @method array getZoneIds() Obtain List of sites. This parameter is required. A `null` will be returned if it is left empty.
- * @method void setZoneIds(array $ZoneIds) Set List of sites. This parameter is required. A `null` will be returned if it is left empty.
+ * @method array getZoneIds() Obtain ZoneId set. This parameter is required.
+ * @method void setZoneIds(array $ZoneIds) Set ZoneId set. This parameter is required.
  * @method array getProxyIds() Obtain List of L4 proxy instance IDs.
  * @method void setProxyIds(array $ProxyIds) Set List of L4 proxy instance IDs.
  * @method integer getLimit() Obtain Limit on paginated queries. Default value: 20. Maximum value: 300.
@@ -46,7 +46,7 @@ class DownloadL4LogsRequest extends AbstractModel
     public $EndTime;
 
     /**
-     * @var array List of sites. This parameter is required. A `null` will be returned if it is left empty.
+     * @var array ZoneId set. This parameter is required.
      */
     public $ZoneIds;
 
@@ -68,7 +68,7 @@ class DownloadL4LogsRequest extends AbstractModel
     /**
      * @param string $StartTime The start time.
      * @param string $EndTime The end time.
-     * @param array $ZoneIds List of sites. This parameter is required. A `null` will be returned if it is left empty.
+     * @param array $ZoneIds ZoneId set. This parameter is required.
      * @param array $ProxyIds List of L4 proxy instance IDs.
      * @param integer $Limit Limit on paginated queries. Default value: 20. Maximum value: 300.
      * @param integer $Offset The page offset. Default value: 0.

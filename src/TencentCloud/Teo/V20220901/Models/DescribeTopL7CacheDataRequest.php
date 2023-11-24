@@ -34,8 +34,8 @@ use TencentCloud\Common\AbstractModel;
 <li>`l7Cache_outFlux_url`: URL address;</li>
 <li>`l7Cache_outFlux_resourceType`: Resource type;</li>
 <li>`l7Cache_outFlux_statusCode`: Status code.</li>
- * @method array getZoneIds() Obtain Specifies sites by ID. All sites will be selected if this field is not specified.
- * @method void setZoneIds(array $ZoneIds) Set Specifies sites by ID. All sites will be selected if this field is not specified.
+ * @method array getZoneIds() Obtain ZoneId set. This parameter is required.
+ * @method void setZoneIds(array $ZoneIds) Set ZoneId set. This parameter is required.
  * @method integer getLimit() Obtain Top rows of data to query. Maximum value: 1000. Top 10 rows of data are queried if this field is not specified.
  * @method void setLimit(integer $Limit) Set Top rows of data to query. Maximum value: 1000. Top 10 rows of data are queried if this field is not specified.
  * @method array getFilters() Obtain Filter conditions. See below for details: 
@@ -95,7 +95,7 @@ class DescribeTopL7CacheDataRequest extends AbstractModel
     public $MetricName;
 
     /**
-     * @var array Specifies sites by ID. All sites will be selected if this field is not specified.
+     * @var array ZoneId set. This parameter is required.
      */
     public $ZoneIds;
 
@@ -141,7 +141,7 @@ class DescribeTopL7CacheDataRequest extends AbstractModel
 <li>`l7Cache_outFlux_url`: URL address;</li>
 <li>`l7Cache_outFlux_resourceType`: Resource type;</li>
 <li>`l7Cache_outFlux_statusCode`: Status code.</li>
-     * @param array $ZoneIds Specifies sites by ID. All sites will be selected if this field is not specified.
+     * @param array $ZoneIds ZoneId set. This parameter is required.
      * @param integer $Limit Top rows of data to query. Maximum value: 1000. Top 10 rows of data are queried if this field is not specified.
      * @param array $Filters Filter conditions. See below for details: 
 <li>`domain`<br>   Filter by the <strong>sub-domain name</strong>, such as `test.example.com`<br>   Type: String<br>   Required: No</li>
