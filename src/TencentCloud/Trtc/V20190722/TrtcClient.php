@@ -65,6 +65,7 @@ If a recording file is being uploaded to VOD, the response parameter `StorageFil
 1. You can use this API to query historical data or for reconciliation purposes, but we do not recommend you use it for crucial business logic.
 2. If you need to call this API, please upgrade the monitoring dashboard version to "Standard". For more details, please refer to: https://www.tencentcloud.com/document/product/647/54481.
  * @method Models\DescribeScaleInfoResponse DescribeScaleInfo(Models\DescribeScaleInfoRequest $req) This API (the old `DescribeHistoryScale`) is used to query the daily number of rooms and users of an application (`SDKAppID`) in the last 14 days. Data for the current day cannot be queried.
+ * @method Models\DescribeStreamIngestResponse DescribeStreamIngest(Models\DescribeStreamIngestRequest $req) You can query the status of the Relay task.
  * @method Models\DescribeTrtcRoomUsageResponse DescribeTrtcRoomUsage(Models\DescribeTrtcRoomUsageRequest $req) This API is used to query usage data grouped by room.
 - The queried period cannot exceed 24 hours. If the period spans two different days, the data returned may not be accurate due to a delay in data collection. You can make multiple calls to query the usage on different days.
 - You can use this API to query your historical usage or to reconcile data, but we do not recommend you use it for crucial business logic.
@@ -150,7 +151,9 @@ Usage Precautions:
 7. When calling the API, choose the region according to the following instructions: If the Application ID is 1400xxx, the region can be Beijing, Shanghai, Guangzhou, or Hong Kong. If your CDN audience is mainly overseas, please choose Hong Kong. If the Application ID is 200xxx or 400xxx, please choose Singapore.
 8. Streams pushed back to the TRTC room will not participate in the mixing of other push back room tasks. If one of the following conditions is met, it can participate in the mixing of other relay CDN tasks: (1) The push stream robot is specified to participate in the mixing in the video parameters of the relay CDN task; (2) The push stream robot is specified to participate in the mixing in the audio parameters of the relay CDN task through the whitelist method; (3) The room number of the mix user participating in the relay CDN task is completely different from the room number of the mix user corresponding to the push back robot.
 9. You can create a relay task before the anchor enters the room. When the relay task is finished, you need to call the stop interface actively. If you do not call the Stop Relay Task Interface, Tencent Cloud will automatically stop the mix relay task when all users participating in the mix have no data uploaded for a period of time exceeding the timeout (AgentParams.MaxIdleTime) set when starting the relay task.
+ * @method Models\StartStreamIngestResponse StartStreamIngest(Models\StartStreamIngestRequest $req) Push an online media stream to the TRTC room.
  * @method Models\StopPublishCdnStreamResponse StopPublishCdnStream(Models\StopPublishCdnStreamRequest $req) This API is used to stop a relaying task.
+ * @method Models\StopStreamIngestResponse StopStreamIngest(Models\StopStreamIngestRequest $req) Stop a Pull stream Relay task.
  * @method Models\UpdatePublishCdnStreamResponse UpdatePublishCdnStream(Models\UpdatePublishCdnStreamRequest $req) This API is used to change the parameters of a relaying task.
 Note: For details about how to use this API, see the `StartPublishCdnStream` document.
  */
