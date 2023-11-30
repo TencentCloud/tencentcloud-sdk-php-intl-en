@@ -56,18 +56,20 @@ Default value: 0 px.
 <li>If the string ends in `L%`, the `Height` of the watermark will be the specified percentage of the long side of the video; for example, `10L%` means that `Height` is 10% of the long side of the video;</li>
 <li>If the string ends in %, the meaning is the same as `H%`.
 Default value: 0 px.
- * @method WatermarkCycleConfigForUpdate getCycleConfig() Obtain Watermark cycle configuration, which is used to configure watermarks so that they will be displayed and hidden periodically.
-Primary use case: watermarks can be added at various positions in a video, which are displayed and hidden periodically to prevent them from being covered.
-For example, watermarks A, B, C, and D are set in the top-left corner, top-right corner, bottom-right corner, and bottom-left corner of a video, respectively. After the first video frame, { A will be displayed for 5s -> B for 5s -> C for 5s -> D for 5s } -> A for 5s -> B for 5s -> ... Only one watermark will be visible at any time.
-Within the braces ({}) is a major cycle composed of four watermarks, namely, A, B, C, and D, which lasts for 20 seconds in a cycle.
-Watermarks A, B, C, and D are displayed periodically for 5 seconds and hidden for 15 seconds each in a fixed order.
-This configuration item is used to describe the cycle configuration of a single watermark.
- * @method void setCycleConfig(WatermarkCycleConfigForUpdate $CycleConfig) Set Watermark cycle configuration, which is used to configure watermarks so that they will be displayed and hidden periodically.
-Primary use case: watermarks can be added at various positions in a video, which are displayed and hidden periodically to prevent them from being covered.
-For example, watermarks A, B, C, and D are set in the top-left corner, top-right corner, bottom-right corner, and bottom-left corner of a video, respectively. After the first video frame, { A will be displayed for 5s -> B for 5s -> C for 5s -> D for 5s } -> A for 5s -> B for 5s -> ... Only one watermark will be visible at any time.
-Within the braces ({}) is a major cycle composed of four watermarks, namely, A, B, C, and D, which lasts for 20 seconds in a cycle.
-Watermarks A, B, C, and D are displayed periodically for 5 seconds and hidden for 15 seconds each in a fixed order.
-This configuration item is used to describe the cycle configuration of a single watermark.
+ * @method WatermarkCycleConfigForUpdate getCycleConfig() Obtain Watermark period configuration is used to configure the watermark to be displayed and hidden periodically. 
+The main usage scenario is: in order to prevent video from being blocked, watermarks are set in multiple places on the video. These watermarks are periodically displayed and hidden in a fixed order. 
+For example, set four watermarks A, B, C, and D to be located in the upper left corner, upper right corner, lower right corner, and lower left corner of the video respectively. When the video starts, { A displays for 5 seconds -> B displays for 5 seconds -> C Display for 5 seconds -> D Display for 5 seconds} -> A Display for 5 seconds -> B Display for 5 seconds -> ..., only one watermark is displayed at any time. 
+The curly brackets {} represent a large cycle consisting of 4 watermarks A, B, C, and D. It can be seen that each large cycle lasts 20 seconds. 
+It can be seen that A, B, C, and D are periodically displayed for 5 seconds and hidden for 15 seconds, and the four have a fixed display order. 
+This configuration item is used to describe the periodic configuration of a single watermark.
+Note: This field may return null, indicating that no valid value can be obtained.
+ * @method void setCycleConfig(WatermarkCycleConfigForUpdate $CycleConfig) Set Watermark period configuration is used to configure the watermark to be displayed and hidden periodically. 
+The main usage scenario is: in order to prevent video from being blocked, watermarks are set in multiple places on the video. These watermarks are periodically displayed and hidden in a fixed order. 
+For example, set four watermarks A, B, C, and D to be located in the upper left corner, upper right corner, lower right corner, and lower left corner of the video respectively. When the video starts, { A displays for 5 seconds -> B displays for 5 seconds -> C Display for 5 seconds -> D Display for 5 seconds} -> A Display for 5 seconds -> B Display for 5 seconds -> ..., only one watermark is displayed at any time. 
+The curly brackets {} represent a large cycle consisting of 4 watermarks A, B, C, and D. It can be seen that each large cycle lasts 20 seconds. 
+It can be seen that A, B, C, and D are periodically displayed for 5 seconds and hidden for 15 seconds, and the four have a fixed display order. 
+This configuration item is used to describe the periodic configuration of a single watermark.
+Note: This field may return null, indicating that no valid value can be obtained.
  */
 class SvgWatermarkInputForUpdate extends AbstractModel
 {
@@ -98,12 +100,13 @@ Default value: 0 px.
     public $Height;
 
     /**
-     * @var WatermarkCycleConfigForUpdate Watermark cycle configuration, which is used to configure watermarks so that they will be displayed and hidden periodically.
-Primary use case: watermarks can be added at various positions in a video, which are displayed and hidden periodically to prevent them from being covered.
-For example, watermarks A, B, C, and D are set in the top-left corner, top-right corner, bottom-right corner, and bottom-left corner of a video, respectively. After the first video frame, { A will be displayed for 5s -> B for 5s -> C for 5s -> D for 5s } -> A for 5s -> B for 5s -> ... Only one watermark will be visible at any time.
-Within the braces ({}) is a major cycle composed of four watermarks, namely, A, B, C, and D, which lasts for 20 seconds in a cycle.
-Watermarks A, B, C, and D are displayed periodically for 5 seconds and hidden for 15 seconds each in a fixed order.
-This configuration item is used to describe the cycle configuration of a single watermark.
+     * @var WatermarkCycleConfigForUpdate Watermark period configuration is used to configure the watermark to be displayed and hidden periodically. 
+The main usage scenario is: in order to prevent video from being blocked, watermarks are set in multiple places on the video. These watermarks are periodically displayed and hidden in a fixed order. 
+For example, set four watermarks A, B, C, and D to be located in the upper left corner, upper right corner, lower right corner, and lower left corner of the video respectively. When the video starts, { A displays for 5 seconds -> B displays for 5 seconds -> C Display for 5 seconds -> D Display for 5 seconds} -> A Display for 5 seconds -> B Display for 5 seconds -> ..., only one watermark is displayed at any time. 
+The curly brackets {} represent a large cycle consisting of 4 watermarks A, B, C, and D. It can be seen that each large cycle lasts 20 seconds. 
+It can be seen that A, B, C, and D are periodically displayed for 5 seconds and hidden for 15 seconds, and the four have a fixed display order. 
+This configuration item is used to describe the periodic configuration of a single watermark.
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public $CycleConfig;
 
@@ -126,12 +129,13 @@ Default value: 10W%.
 <li>If the string ends in `L%`, the `Height` of the watermark will be the specified percentage of the long side of the video; for example, `10L%` means that `Height` is 10% of the long side of the video;</li>
 <li>If the string ends in %, the meaning is the same as `H%`.
 Default value: 0 px.
-     * @param WatermarkCycleConfigForUpdate $CycleConfig Watermark cycle configuration, which is used to configure watermarks so that they will be displayed and hidden periodically.
-Primary use case: watermarks can be added at various positions in a video, which are displayed and hidden periodically to prevent them from being covered.
-For example, watermarks A, B, C, and D are set in the top-left corner, top-right corner, bottom-right corner, and bottom-left corner of a video, respectively. After the first video frame, { A will be displayed for 5s -> B for 5s -> C for 5s -> D for 5s } -> A for 5s -> B for 5s -> ... Only one watermark will be visible at any time.
-Within the braces ({}) is a major cycle composed of four watermarks, namely, A, B, C, and D, which lasts for 20 seconds in a cycle.
-Watermarks A, B, C, and D are displayed periodically for 5 seconds and hidden for 15 seconds each in a fixed order.
-This configuration item is used to describe the cycle configuration of a single watermark.
+     * @param WatermarkCycleConfigForUpdate $CycleConfig Watermark period configuration is used to configure the watermark to be displayed and hidden periodically. 
+The main usage scenario is: in order to prevent video from being blocked, watermarks are set in multiple places on the video. These watermarks are periodically displayed and hidden in a fixed order. 
+For example, set four watermarks A, B, C, and D to be located in the upper left corner, upper right corner, lower right corner, and lower left corner of the video respectively. When the video starts, { A displays for 5 seconds -> B displays for 5 seconds -> C Display for 5 seconds -> D Display for 5 seconds} -> A Display for 5 seconds -> B Display for 5 seconds -> ..., only one watermark is displayed at any time. 
+The curly brackets {} represent a large cycle consisting of 4 watermarks A, B, C, and D. It can be seen that each large cycle lasts 20 seconds. 
+It can be seen that A, B, C, and D are periodically displayed for 5 seconds and hidden for 15 seconds, and the four have a fixed display order. 
+This configuration item is used to describe the periodic configuration of a single watermark.
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     function __construct()
     {

@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
 <li>The time is in [ISO 8601 date format](https://intl.cloud.tencent.com/document/product/266/11732).</li>
  * @method void setCertExpireTime(string $CertExpireTime) Set Time when the certificate expires
 <li>The time is in [ISO 8601 date format](https://intl.cloud.tencent.com/document/product/266/11732).</li>
+ * @method string getCloudCertId() Obtain Certificate ID in Tencent Cloud SSL product.
+ * @method void setCloudCertId(string $CloudCertId) Set Certificate ID in Tencent Cloud SSL product.
  */
 class DomainHTTPSConfig extends AbstractModel
 {
@@ -34,8 +36,14 @@ class DomainHTTPSConfig extends AbstractModel
     public $CertExpireTime;
 
     /**
+     * @var string Certificate ID in Tencent Cloud SSL product.
+     */
+    public $CloudCertId;
+
+    /**
      * @param string $CertExpireTime Time when the certificate expires
 <li>The time is in [ISO 8601 date format](https://intl.cloud.tencent.com/document/product/266/11732).</li>
+     * @param string $CloudCertId Certificate ID in Tencent Cloud SSL product.
      */
     function __construct()
     {
@@ -52,6 +60,10 @@ class DomainHTTPSConfig extends AbstractModel
         }
         if (array_key_exists("CertExpireTime",$param) and $param["CertExpireTime"] !== null) {
             $this->CertExpireTime = $param["CertExpireTime"];
+        }
+
+        if (array_key_exists("CloudCertId",$param) and $param["CloudCertId"] !== null) {
+            $this->CloudCertId = $param["CloudCertId"];
         }
     }
 }

@@ -48,6 +48,10 @@ Default value: 2.
 <li>1: mono.</li>
 <li>2: dual</li>
 Default value: 2.
+ * @method integer getBitrate() Obtain The bit rate of the audio stream, value range: 0 and [26, 256], unit: kbps. 
+When the value is 0, the audio bitrate will be automatically set.
+ * @method void setBitrate(integer $Bitrate) Set The bit rate of the audio stream, value range: 0 and [26, 256], unit: kbps. 
+When the value is 0, the audio bitrate will be automatically set.
  */
 class OutputAudioStream extends AbstractModel
 {
@@ -78,6 +82,12 @@ Default value: 2.
     public $AudioChannel;
 
     /**
+     * @var integer The bit rate of the audio stream, value range: 0 and [26, 256], unit: kbps. 
+When the value is 0, the audio bitrate will be automatically set.
+     */
+    public $Bitrate;
+
+    /**
      * @param string $Codec Audio stream encoder. Valid values:
 <li>libfdk_aac: suitable for mp4 files.</li>
 Default value: libfdk_aac.
@@ -92,6 +102,8 @@ Default value: 16,000.
 <li>1: mono.</li>
 <li>2: dual</li>
 Default value: 2.
+     * @param integer $Bitrate The bit rate of the audio stream, value range: 0 and [26, 256], unit: kbps. 
+When the value is 0, the audio bitrate will be automatically set.
      */
     function __construct()
     {
@@ -116,6 +128,10 @@ Default value: 2.
 
         if (array_key_exists("AudioChannel",$param) and $param["AudioChannel"] !== null) {
             $this->AudioChannel = $param["AudioChannel"];
+        }
+
+        if (array_key_exists("Bitrate",$param) and $param["Bitrate"] !== null) {
+            $this->Bitrate = $param["Bitrate"];
         }
     }
 }

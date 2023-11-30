@@ -142,6 +142,10 @@ Note: This field may return null, indicating that no valid value can be obtained
 Note: This field may return null, indicating that no valid value can be obtained.
  * @method void setQualityInspectTask(QualityInspectTask $QualityInspectTask) Set 
 Note: This field may return null, indicating that no valid value can be obtained.
+ * @method QualityEnhanceTask getQualityEnhanceTask() Obtain Media Quality Enhance task information. This field has a value only when TaskType is QualityEnhance.
+Note: This field may return null, indicating that no valid value can be obtained.
+ * @method void setQualityEnhanceTask(QualityEnhanceTask $QualityEnhanceTask) Set Media Quality Enhance task information. This field has a value only when TaskType is QualityEnhance.
+Note: This field may return null, indicating that no valid value can be obtained.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -309,6 +313,12 @@ Note: This field may return null, indicating that no valid value can be obtained
     public $QualityInspectTask;
 
     /**
+     * @var QualityEnhanceTask Media Quality Enhance task information. This field has a value only when TaskType is QualityEnhance.
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public $QualityEnhanceTask;
+
+    /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
@@ -374,6 +384,8 @@ Note: This field may return null, indicating that no valid value can be obtained
      * @param DescribeFileAttributesTask $DescribeFileAttributesTask 
 Note: This field may return null, indicating that no valid value can be obtained.
      * @param QualityInspectTask $QualityInspectTask 
+Note: This field may return null, indicating that no valid value can be obtained.
+     * @param QualityEnhanceTask $QualityEnhanceTask Media Quality Enhance task information. This field has a value only when TaskType is QualityEnhance.
 Note: This field may return null, indicating that no valid value can be obtained.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
@@ -508,6 +520,11 @@ Note: This field may return null, indicating that no valid value can be obtained
         if (array_key_exists("QualityInspectTask",$param) and $param["QualityInspectTask"] !== null) {
             $this->QualityInspectTask = new QualityInspectTask();
             $this->QualityInspectTask->deserialize($param["QualityInspectTask"]);
+        }
+
+        if (array_key_exists("QualityEnhanceTask",$param) and $param["QualityEnhanceTask"] !== null) {
+            $this->QualityEnhanceTask = new QualityEnhanceTask();
+            $this->QualityEnhanceTask->deserialize($param["QualityEnhanceTask"]);
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

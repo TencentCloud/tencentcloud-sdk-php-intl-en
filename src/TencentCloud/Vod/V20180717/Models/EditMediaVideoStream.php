@@ -20,6 +20,20 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Video stream configuration information
  *
+ * @method string getCodec() Obtain The encoding format of the video stream, optional values:
+<li>libx264: H.264 encoding;</li>
+<li>libx265: H.265 encoding;</li>
+<li>av1: AOMedia Video 1 encoding;</li>
+<li>H.266: H.266 encoding. </li>
+ * @method void setCodec(string $Codec) Set The encoding format of the video stream, optional values:
+<li>libx264: H.264 encoding;</li>
+<li>libx265: H.265 encoding;</li>
+<li>av1: AOMedia Video 1 encoding;</li>
+<li>H.266: H.266 encoding. </li>
+ * @method integer getBitrate() Obtain The bit rate of the video stream, value range: 0 and [128, 35000], unit: kbps. 
+When the value is 0 or left blank, it means automatically selecting the best video bit rate.
+ * @method void setBitrate(integer $Bitrate) Set The bit rate of the video stream, value range: 0 and [128, 35000], unit: kbps. 
+When the value is 0 or left blank, it means automatically selecting the best video bit rate.
  * @method string getResolutionAdaptive() Obtain Resolution adaptive, optional values:
 <li>open: open, at this time, Width represents the long side of the video, and Height represents the short side of the video;</li>
 <li>close: closed, at this time , Width represents the width of the video, and Height represents the height of the video. </li>
@@ -58,6 +72,21 @@ The default value is 0.
 class EditMediaVideoStream extends AbstractModel
 {
     /**
+     * @var string The encoding format of the video stream, optional values:
+<li>libx264: H.264 encoding;</li>
+<li>libx265: H.265 encoding;</li>
+<li>av1: AOMedia Video 1 encoding;</li>
+<li>H.266: H.266 encoding. </li>
+     */
+    public $Codec;
+
+    /**
+     * @var integer The bit rate of the video stream, value range: 0 and [128, 35000], unit: kbps. 
+When the value is 0 or left blank, it means automatically selecting the best video bit rate.
+     */
+    public $Bitrate;
+
+    /**
      * @var string Resolution adaptive, optional values:
 <li>open: open, at this time, Width represents the long side of the video, and Height represents the short side of the video;</li>
 <li>close: closed, at this time , Width represents the width of the video, and Height represents the height of the video. </li>
@@ -91,6 +120,13 @@ The default value is 0.
     public $Fps;
 
     /**
+     * @param string $Codec The encoding format of the video stream, optional values:
+<li>libx264: H.264 encoding;</li>
+<li>libx265: H.265 encoding;</li>
+<li>av1: AOMedia Video 1 encoding;</li>
+<li>H.266: H.266 encoding. </li>
+     * @param integer $Bitrate The bit rate of the video stream, value range: 0 and [128, 35000], unit: kbps. 
+When the value is 0 or left blank, it means automatically selecting the best video bit rate.
      * @param string $ResolutionAdaptive Resolution adaptive, optional values:
 <li>open: open, at this time, Width represents the long side of the video, and Height represents the short side of the video;</li>
 <li>close: closed, at this time , Width represents the width of the video, and Height represents the height of the video. </li>
@@ -122,6 +158,14 @@ The default value is 0.
         if ($param === null) {
             return;
         }
+        if (array_key_exists("Codec",$param) and $param["Codec"] !== null) {
+            $this->Codec = $param["Codec"];
+        }
+
+        if (array_key_exists("Bitrate",$param) and $param["Bitrate"] !== null) {
+            $this->Bitrate = $param["Bitrate"];
+        }
+
         if (array_key_exists("ResolutionAdaptive",$param) and $param["ResolutionAdaptive"] !== null) {
             $this->ResolutionAdaptive = $param["ResolutionAdaptive"];
         }

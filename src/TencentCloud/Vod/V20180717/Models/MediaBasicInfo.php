@@ -84,12 +84,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
 <li>Video: video file</li>
 <li>Audio: audio file</li>
 <li>Image: image file</li>
- * @method string getStatus() Obtain The file status. Valid values: `Normal`, `Forbidden`.
-
-*Note: This field is not supported yet.	
- * @method void setStatus(string $Status) Set The file status. Valid values: `Normal`, `Forbidden`.
-
-*Note: This field is not supported yet.	
+ * @method string getStatus() Obtain File status: Normal: normal, Forbidden: banned.
+ * @method void setStatus(string $Status) Set File status: Normal: normal, Forbidden: banned.
  * @method string getStorageClass() Obtain Storage class of a media file:
 <li>STANDARD</li>
 <li>STANDARD_IA</li>
@@ -200,9 +196,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $Category;
 
     /**
-     * @var string The file status. Valid values: `Normal`, `Forbidden`.
-
-*Note: This field is not supported yet.	
+     * @var string File status: Normal: normal, Forbidden: banned.
      */
     public $Status;
 
@@ -248,9 +242,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 <li>Video: video file</li>
 <li>Audio: audio file</li>
 <li>Image: image file</li>
-     * @param string $Status The file status. Valid values: `Normal`, `Forbidden`.
-
-*Note: This field is not supported yet.	
+     * @param string $Status File status: Normal: normal, Forbidden: banned.
      * @param string $StorageClass Storage class of a media file:
 <li>STANDARD</li>
 <li>STANDARD_IA</li>
