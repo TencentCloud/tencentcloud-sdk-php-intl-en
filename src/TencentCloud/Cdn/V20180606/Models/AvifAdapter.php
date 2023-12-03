@@ -20,22 +20,30 @@ use TencentCloud\Common\AbstractModel;
 /**
  * AVIF adapter, used for image optimization
  *
- * @method string getSwitch() Obtain Switch. Valid values: `on`, `off`.
-Note: This field may return `null`, indicating that no valid value was found.
- * @method void setSwitch(string $Switch) Set Switch. Valid values: `on`, `off`.
-Note: This field may return `null`, indicating that no valid value was found.
+ * @method string getSwitch() Obtain Whether to enable `AvifAdapter` for image optimization. Values:
+`on`: Enable
+`off`: Disable
+Note: This field may return·`null`, indicating that no valid values can be obtained.
+ * @method void setSwitch(string $Switch) Set Whether to enable `AvifAdapter` for image optimization. Values:
+`on`: Enable
+`off`: Disable
+Note: This field may return·`null`, indicating that no valid values can be obtained.
  */
 class AvifAdapter extends AbstractModel
 {
     /**
-     * @var string Switch. Valid values: `on`, `off`.
-Note: This field may return `null`, indicating that no valid value was found.
+     * @var string Whether to enable `AvifAdapter` for image optimization. Values:
+`on`: Enable
+`off`: Disable
+Note: This field may return·`null`, indicating that no valid values can be obtained.
      */
     public $Switch;
 
     /**
-     * @param string $Switch Switch. Valid values: `on`, `off`.
-Note: This field may return `null`, indicating that no valid value was found.
+     * @param string $Switch Whether to enable `AvifAdapter` for image optimization. Values:
+`on`: Enable
+`off`: Disable
+Note: This field may return·`null`, indicating that no valid values can be obtained.
      */
     function __construct()
     {

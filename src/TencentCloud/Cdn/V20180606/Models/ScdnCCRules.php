@@ -44,10 +44,14 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method void setFrequencyLimit(integer $FrequencyLimit) Set Frequency threshold
 Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method string getPunishmentSwitch() Obtain Whether to block or redirect requests from suspicious IPs. Valid values: `on` and `off`.
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setPunishmentSwitch(string $PunishmentSwitch) Set Whether to block or redirect requests from suspicious IPs. Valid values: `on` and `off`.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method string getPunishmentSwitch() Obtain Whether to enable IP blocking. Values:
+`on`: Enable
+`off`: Disable
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setPunishmentSwitch(string $PunishmentSwitch) Set Whether to enable IP blocking. Values:
+`on`: Enable
+`off`: Disable
+Note: This field may return `null`, indicating that no valid values can be obtained.
  * @method integer getPunishmentTime() Obtain Suspicious IP restriction duration
 Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method void setPunishmentTime(integer $PunishmentTime) Set Suspicious IP restriction duration
@@ -96,8 +100,10 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     public $FrequencyLimit;
 
     /**
-     * @var string Whether to block or redirect requests from suspicious IPs. Valid values: `on` and `off`.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @var string Whether to enable IP blocking. Values:
+`on`: Enable
+`off`: Disable
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public $PunishmentSwitch;
 
@@ -132,8 +138,10 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param integer $FrequencyLimit Frequency threshold
 Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param string $PunishmentSwitch Whether to block or redirect requests from suspicious IPs. Valid values: `on` and `off`.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param string $PunishmentSwitch Whether to enable IP blocking. Values:
+`on`: Enable
+`off`: Disable
+Note: This field may return `null`, indicating that no valid values can be obtained.
      * @param integer $PunishmentTime Suspicious IP restriction duration
 Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param string $Action Action. Valid values: `intercept` and `redirect`.

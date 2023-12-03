@@ -20,14 +20,14 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Path cache configuration
  *
- * @method string getSwitch() Obtain Cache configuration switch
-on: enable
-off: disable
-Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method void setSwitch(string $Switch) Set Cache configuration switch
-on: enable
-off: disable
-Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method string getSwitch() Obtain Whether to enable path cache. Values:
+`on`: Enable
+`off`: Disable
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setSwitch(string $Switch) Set Whether to enable path cache. Values:
+`on`: Enable
+`off`: Disable
+Note: This field may return `null`, indicating that no valid values can be obtained.
  * @method integer getCacheTime() Obtain Cache expiration time settings
 Unit: second. The maximum value is 365 days.
 Note: This field may return `null`, indicating that no valid value can be obtained.
@@ -68,10 +68,10 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 class CacheConfigCache extends AbstractModel
 {
     /**
-     * @var string Cache configuration switch
-on: enable
-off: disable
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @var string Whether to enable path cache. Values:
+`on`: Enable
+`off`: Disable
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public $Switch;
 
@@ -110,10 +110,10 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     public $IgnoreSetCookie;
 
     /**
-     * @param string $Switch Cache configuration switch
-on: enable
-off: disable
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param string $Switch Whether to enable path cache. Values:
+`on`: Enable
+`off`: Disable
+Note: This field may return `null`, indicating that no valid values can be obtained.
      * @param integer $CacheTime Cache expiration time settings
 Unit: second. The maximum value is 365 days.
 Note: This field may return `null`, indicating that no valid value can be obtained.

@@ -20,10 +20,14 @@ use TencentCloud\Common\AbstractModel;
 /**
  * `UserAgent` blacklist/whitelist configuration
  *
- * @method string getSwitch() Obtain Switch. Valid values: on, off
-Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method void setSwitch(string $Switch) Set Switch. Valid values: on, off
-Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method string getSwitch() Obtain Whether to enable User-Agent blocklist/allowlist. Values:
+`on`: Enable
+`off`: Disable
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setSwitch(string $Switch) Set Whether to enable User-Agent blocklist/allowlist. Values:
+`on`: Enable
+`off`: Disable
+Note: This field may return `null`, indicating that no valid values can be obtained.
  * @method array getFilterRules() Obtain UA blacklist/whitelist effect rule list
 Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method void setFilterRules(array $FilterRules) Set UA blacklist/whitelist effect rule list
@@ -32,8 +36,10 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 class UserAgentFilter extends AbstractModel
 {
     /**
-     * @var string Switch. Valid values: on, off
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @var string Whether to enable User-Agent blocklist/allowlist. Values:
+`on`: Enable
+`off`: Disable
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public $Switch;
 
@@ -44,8 +50,10 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     public $FilterRules;
 
     /**
-     * @param string $Switch Switch. Valid values: on, off
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param string $Switch Whether to enable User-Agent blocklist/allowlist. Values:
+`on`: Enable
+`off`: Disable
+Note: This field may return `null`, indicating that no valid values can be obtained.
      * @param array $FilterRules UA blacklist/whitelist effect rule list
 Note: This field may return `null`, indicating that no valid value can be obtained.
      */

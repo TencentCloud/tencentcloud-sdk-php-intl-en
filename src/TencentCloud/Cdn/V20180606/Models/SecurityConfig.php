@@ -20,18 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * SCDN configuration
  *
- * @method string getSwitch() Obtain on|off
- * @method void setSwitch(string $Switch) Set on|off
+ * @method string getSwitch() Obtain Whether to enable SCDN. Values:
+`on`: Enable
+`off`: Disable
+ * @method void setSwitch(string $Switch) Set Whether to enable SCDN. Values:
+`on`: Enable
+`off`: Disable
  */
 class SecurityConfig extends AbstractModel
 {
     /**
-     * @var string on|off
+     * @var string Whether to enable SCDN. Values:
+`on`: Enable
+`off`: Disable
      */
     public $Switch;
 
     /**
-     * @param string $Switch on|off
+     * @param string $Switch Whether to enable SCDN. Values:
+`on`: Enable
+`off`: Disable
      */
     function __construct()
     {

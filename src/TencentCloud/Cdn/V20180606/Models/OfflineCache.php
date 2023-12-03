@@ -20,18 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Offline cache feature status switch.
  *
- * @method string getSwitch() Obtain Whether to enable offline cache. Valid values: `on` and `off`.
- * @method void setSwitch(string $Switch) Set Whether to enable offline cache. Valid values: `on` and `off`.
+ * @method string getSwitch() Obtain Whether to enable offline caching. Values:
+`on`: Enable
+`off`: Disable
+ * @method void setSwitch(string $Switch) Set Whether to enable offline caching. Values:
+`on`: Enable
+`off`: Disable
  */
 class OfflineCache extends AbstractModel
 {
     /**
-     * @var string Whether to enable offline cache. Valid values: `on` and `off`.
+     * @var string Whether to enable offline caching. Values:
+`on`: Enable
+`off`: Disable
      */
     public $Switch;
 
     /**
-     * @param string $Switch Whether to enable offline cache. Valid values: `on` and `off`.
+     * @param string $Switch Whether to enable offline caching. Values:
+`on`: Enable
+`off`: Disable
      */
     function __construct()
     {

@@ -20,14 +20,14 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Browser cache rule configuration, which is used to set the default value of `MaxAge` and is disabled by default.
  *
- * @method string getSwitch() Obtain Browser cache configuration switch
+ * @method string getSwitch() Obtain Whether to enable browser caching. Values:
 `on`: Enable
 `off`: Disable
-Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method void setSwitch(string $Switch) Set Browser cache configuration switch
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setSwitch(string $Switch) Set Whether to enable browser caching. Values:
 `on`: Enable
 `off`: Disable
-Note: This field may return `null`, indicating that no valid value can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
  * @method array getMaxAgeRules() Obtain MaxAge rule
 Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method void setMaxAgeRules(array $MaxAgeRules) Set MaxAge rule
@@ -40,10 +40,10 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 class MaxAge extends AbstractModel
 {
     /**
-     * @var string Browser cache configuration switch
+     * @var string Whether to enable browser caching. Values:
 `on`: Enable
 `off`: Disable
-Note: This field may return `null`, indicating that no valid value can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public $Switch;
 
@@ -60,10 +60,10 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     public $MaxAgeCodeRule;
 
     /**
-     * @param string $Switch Browser cache configuration switch
+     * @param string $Switch Whether to enable browser caching. Values:
 `on`: Enable
 `off`: Disable
-Note: This field may return `null`, indicating that no valid value can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      * @param array $MaxAgeRules MaxAge rule
 Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param MaxAgeCodeRule $MaxAgeCodeRule MaxAge status code

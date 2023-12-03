@@ -20,10 +20,14 @@ use TencentCloud\Common\AbstractModel;
 /**
  * A part of `CacheKey`
  *
- * @method string getSwitch() Obtain Whether to use `Cookie` as part of `CacheKey`. Valid values: on, off
-Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method void setSwitch(string $Switch) Set Whether to use `Cookie` as part of `CacheKey`. Valid values: on, off
-Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method string getSwitch() Obtain Whether to include Cookie as part of CacheKey. Values:
+`on`: Yes
+`off`: No
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setSwitch(string $Switch) Set Whether to include Cookie as part of CacheKey. Values:
+`on`: Yes
+`off`: No
+Note: This field may return `null`, indicating that no valid values can be obtained.
  * @method string getValue() Obtain Used cookies (separated by ';')
 Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method void setValue(string $Value) Set Used cookies (separated by ';')
@@ -32,8 +36,10 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 class CookieKey extends AbstractModel
 {
     /**
-     * @var string Whether to use `Cookie` as part of `CacheKey`. Valid values: on, off
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @var string Whether to include Cookie as part of CacheKey. Values:
+`on`: Yes
+`off`: No
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public $Switch;
 
@@ -44,8 +50,10 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     public $Value;
 
     /**
-     * @param string $Switch Whether to use `Cookie` as part of `CacheKey`. Valid values: on, off
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param string $Switch Whether to include Cookie as part of CacheKey. Values:
+`on`: Yes
+`off`: No
+Note: This field may return `null`, indicating that no valid values can be obtained.
      * @param string $Value Used cookies (separated by ';')
 Note: This field may return `null`, indicating that no valid value can be obtained.
      */

@@ -32,10 +32,30 @@ use TencentCloud\Common\AbstractModel;
  * @method void setName(string $Name) Set Displayed name Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getBindTime() Obtain Binding time Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setBindTime(string $BindTime) Set Binding time Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getAccountStatus() Obtain Account status Valid values: `0` (Not frozen),  `1` (Frozen).  Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setAccountStatus(string $AccountStatus) Set Account status Valid values: `0` (Not frozen),  `1` (Frozen).  Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getAuthStatus() Obtain Identity verification status Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setAuthStatus(string $AuthStatus) Set Identity verification status Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getAccountStatus() Obtain Account status
+0: Normal
+1: Forcibly mandatory (this function is not supported yet)
+2. Mandatory arrears
+Note: The return value may be null, indicating that no valid data can be obtained.
+ * @method void setAccountStatus(string $AccountStatus) Set Account status
+0: Normal
+1: Forcibly mandatory (this function is not supported yet)
+2. Mandatory arrears
+Note: The return value may be null, indicating that no valid data can be obtained.
+ * @method string getAuthStatus() Obtain Identity verification status
+-1: Files not uploaded
+0: Not submitted for review
+1: Under review
+2: Review error
+3: Approved
+Note: The return value may be null, indicating that no valid data can be obtained.
+ * @method void setAuthStatus(string $AuthStatus) Set Identity verification status
+-1: Files not uploaded
+0: Not submitted for review
+1: Under review
+2: Review error
+3: Approved
+Note: The return value may be null, indicating that no valid data can be obtained.
  */
 class DescribeCustomerInfoData extends AbstractModel
 {
@@ -70,12 +90,22 @@ class DescribeCustomerInfoData extends AbstractModel
     public $BindTime;
 
     /**
-     * @var string Account status Valid values: `0` (Not frozen),  `1` (Frozen).  Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Account status
+0: Normal
+1: Forcibly mandatory (this function is not supported yet)
+2. Mandatory arrears
+Note: The return value may be null, indicating that no valid data can be obtained.
      */
     public $AccountStatus;
 
     /**
-     * @var string Identity verification status Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Identity verification status
+-1: Files not uploaded
+0: Not submitted for review
+1: Under review
+2: Review error
+3: Approved
+Note: The return value may be null, indicating that no valid data can be obtained.
      */
     public $AuthStatus;
 
@@ -86,8 +116,18 @@ class DescribeCustomerInfoData extends AbstractModel
      * @param string $Mark Remarks Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $Name Displayed name Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $BindTime Binding time Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $AccountStatus Account status Valid values: `0` (Not frozen),  `1` (Frozen).  Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $AuthStatus Identity verification status Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $AccountStatus Account status
+0: Normal
+1: Forcibly mandatory (this function is not supported yet)
+2. Mandatory arrears
+Note: The return value may be null, indicating that no valid data can be obtained.
+     * @param string $AuthStatus Identity verification status
+-1: Files not uploaded
+0: Not submitted for review
+1: Under review
+2: Review error
+3: Approved
+Note: The return value may be null, indicating that no valid data can be obtained.
      */
     function __construct()
     {

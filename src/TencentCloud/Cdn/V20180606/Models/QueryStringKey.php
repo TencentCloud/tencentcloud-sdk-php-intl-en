@@ -20,18 +20,30 @@ use TencentCloud\Common\AbstractModel;
 /**
  * A part of `CacheKey`
  *
- * @method string getSwitch() Obtain Whether to use `QueryString` as part of `CacheKey`. Valid values: on, off
-Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method void setSwitch(string $Switch) Set Whether to use `QueryString` as part of `CacheKey`. Valid values: on, off
-Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method string getSwitch() Obtain Whether to include `QueryString` as part of `CacheKey`. Values:
+`on`: Enable
+`off`: Disable
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setSwitch(string $Switch) Set Whether to include `QueryString` as part of `CacheKey`. Values:
+`on`: Enable
+`off`: Disable
+Note: This field may return `null`, indicating that no valid values can be obtained.
  * @method string getReorder() Obtain Whether to sort again
 Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method void setReorder(string $Reorder) Set Whether to sort again
 Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method string getAction() Obtain Includes/excludes query parameters. Valid values: `includeAll`, `excludeAll`, `includeCustom`, `excludeCustom`
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setAction(string $Action) Set Includes/excludes query parameters. Valid values: `includeAll`, `excludeAll`, `includeCustom`, `excludeCustom`
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getAction() Obtain Whether to include URL parameters. Values:
+`includeAll`: Include all parameters.
+`excludeAll`: Exclude all parameters.
+`includeCustom`: Include custom parameters.
+`excludeCustom`: Exclude custom parameters.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setAction(string $Action) Set Whether to include URL parameters. Values:
+`includeAll`: Include all parameters.
+`excludeAll`: Exclude all parameters.
+`includeCustom`: Include custom parameters.
+`excludeCustom`: Exclude custom parameters.
+Note: This field may return `null`, indicating that no valid values can be obtained.
  * @method string getValue() Obtain Array of included/excluded query strings (separated by ';')
 Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method void setValue(string $Value) Set Array of included/excluded query strings (separated by ';')
@@ -40,8 +52,10 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 class QueryStringKey extends AbstractModel
 {
     /**
-     * @var string Whether to use `QueryString` as part of `CacheKey`. Valid values: on, off
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @var string Whether to include `QueryString` as part of `CacheKey`. Values:
+`on`: Enable
+`off`: Disable
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public $Switch;
 
@@ -52,8 +66,12 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     public $Reorder;
 
     /**
-     * @var string Includes/excludes query parameters. Valid values: `includeAll`, `excludeAll`, `includeCustom`, `excludeCustom`
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Whether to include URL parameters. Values:
+`includeAll`: Include all parameters.
+`excludeAll`: Exclude all parameters.
+`includeCustom`: Include custom parameters.
+`excludeCustom`: Exclude custom parameters.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public $Action;
 
@@ -64,12 +82,18 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     public $Value;
 
     /**
-     * @param string $Switch Whether to use `QueryString` as part of `CacheKey`. Valid values: on, off
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param string $Switch Whether to include `QueryString` as part of `CacheKey`. Values:
+`on`: Enable
+`off`: Disable
+Note: This field may return `null`, indicating that no valid values can be obtained.
      * @param string $Reorder Whether to sort again
 Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param string $Action Includes/excludes query parameters. Valid values: `includeAll`, `excludeAll`, `includeCustom`, `excludeCustom`
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $Action Whether to include URL parameters. Values:
+`includeAll`: Include all parameters.
+`excludeAll`: Exclude all parameters.
+`includeCustom`: Include custom parameters.
+`excludeCustom`: Exclude custom parameters.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      * @param string $Value Array of included/excluded query strings (separated by ';')
 Note: This field may return `null`, indicating that no valid value can be obtained.
      */

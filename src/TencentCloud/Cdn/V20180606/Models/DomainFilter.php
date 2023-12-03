@@ -20,29 +20,29 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Filter conditions for domain name query.
  *
- * @method string getName() Obtain Filters by the field name, which includes:
+ * @method string getName() Obtain Filter filter. Values:
 - `origin`: Primary origin server.
 - `domain`: Domain name.
 - `resourceId`: Domain name ID.
-- `status`: Domain name status. Valid values: `online`, `offline`, and `processing`.
-- `serviceType`: Service type. Valid values: `web`, `download`, `media`, `hybrid` and `dynamic`.
+- `status`: Domain name status. Values: `online`, `offline`, and `processing`.
+- `serviceType`: Service type. Values: `web`, `download`, `media`, `hybrid` and `dynamic`.
 - `projectId`: Project ID.
-- `domainType`: Primary origin server type. Valid values: `cname` (customer origin), `COS` (COS origin), and `third_party` (third-party object storage origin).
-- `fullUrlCache`: Whether to enable full-path cache, which can be `on` or `off`.
-- `https`: Whether to configure HTTPS, which can be `on`, `off` or `processing`.
-- `originPullProtocol`: Origin-pull protocol type, which can be `http`, `follow`, or `https`.
+- `domainType`: Primary origin type. Values: `cname` (customer origin), `COS` (COS origin), `third_party` (third-party object storage origin), and `igtm` (IGTM origin).
+- `fullUrlCache`: Whether to enable path cache. Values: `on`, `off`.
+- `https`: Whether to configure HTTPS. Values: `on`, `off` and `processing`.
+- `originPullProtocol`: Origin-pull protocol type. Value: `http`, `follow`, and `https`.
 - `tagKey`: Tag key.
- * @method void setName(string $Name) Set Filters by the field name, which includes:
+ * @method void setName(string $Name) Set Filter filter. Values:
 - `origin`: Primary origin server.
 - `domain`: Domain name.
 - `resourceId`: Domain name ID.
-- `status`: Domain name status. Valid values: `online`, `offline`, and `processing`.
-- `serviceType`: Service type. Valid values: `web`, `download`, `media`, `hybrid` and `dynamic`.
+- `status`: Domain name status. Values: `online`, `offline`, and `processing`.
+- `serviceType`: Service type. Values: `web`, `download`, `media`, `hybrid` and `dynamic`.
 - `projectId`: Project ID.
-- `domainType`: Primary origin server type. Valid values: `cname` (customer origin), `COS` (COS origin), and `third_party` (third-party object storage origin).
-- `fullUrlCache`: Whether to enable full-path cache, which can be `on` or `off`.
-- `https`: Whether to configure HTTPS, which can be `on`, `off` or `processing`.
-- `originPullProtocol`: Origin-pull protocol type, which can be `http`, `follow`, or `https`.
+- `domainType`: Primary origin type. Values: `cname` (customer origin), `COS` (COS origin), `third_party` (third-party object storage origin), and `igtm` (IGTM origin).
+- `fullUrlCache`: Whether to enable path cache. Values: `on`, `off`.
+- `https`: Whether to configure HTTPS. Values: `on`, `off` and `processing`.
+- `originPullProtocol`: Origin-pull protocol type. Value: `http`, `follow`, and `https`.
 - `tagKey`: Tag key.
  * @method array getValue() Obtain Filter field value.
  * @method void setValue(array $Value) Set Filter field value.
@@ -54,17 +54,17 @@ When fuzzy query is enabled, the maximum Value length is 1. When fuzzy query is 
 class DomainFilter extends AbstractModel
 {
     /**
-     * @var string Filters by the field name, which includes:
+     * @var string Filter filter. Values:
 - `origin`: Primary origin server.
 - `domain`: Domain name.
 - `resourceId`: Domain name ID.
-- `status`: Domain name status. Valid values: `online`, `offline`, and `processing`.
-- `serviceType`: Service type. Valid values: `web`, `download`, `media`, `hybrid` and `dynamic`.
+- `status`: Domain name status. Values: `online`, `offline`, and `processing`.
+- `serviceType`: Service type. Values: `web`, `download`, `media`, `hybrid` and `dynamic`.
 - `projectId`: Project ID.
-- `domainType`: Primary origin server type. Valid values: `cname` (customer origin), `COS` (COS origin), and `third_party` (third-party object storage origin).
-- `fullUrlCache`: Whether to enable full-path cache, which can be `on` or `off`.
-- `https`: Whether to configure HTTPS, which can be `on`, `off` or `processing`.
-- `originPullProtocol`: Origin-pull protocol type, which can be `http`, `follow`, or `https`.
+- `domainType`: Primary origin type. Values: `cname` (customer origin), `COS` (COS origin), `third_party` (third-party object storage origin), and `igtm` (IGTM origin).
+- `fullUrlCache`: Whether to enable path cache. Values: `on`, `off`.
+- `https`: Whether to configure HTTPS. Values: `on`, `off` and `processing`.
+- `originPullProtocol`: Origin-pull protocol type. Value: `http`, `follow`, and `https`.
 - `tagKey`: Tag key.
      */
     public $Name;
@@ -81,17 +81,17 @@ When fuzzy query is enabled, the maximum Value length is 1. When fuzzy query is 
     public $Fuzzy;
 
     /**
-     * @param string $Name Filters by the field name, which includes:
+     * @param string $Name Filter filter. Values:
 - `origin`: Primary origin server.
 - `domain`: Domain name.
 - `resourceId`: Domain name ID.
-- `status`: Domain name status. Valid values: `online`, `offline`, and `processing`.
-- `serviceType`: Service type. Valid values: `web`, `download`, `media`, `hybrid` and `dynamic`.
+- `status`: Domain name status. Values: `online`, `offline`, and `processing`.
+- `serviceType`: Service type. Values: `web`, `download`, `media`, `hybrid` and `dynamic`.
 - `projectId`: Project ID.
-- `domainType`: Primary origin server type. Valid values: `cname` (customer origin), `COS` (COS origin), and `third_party` (third-party object storage origin).
-- `fullUrlCache`: Whether to enable full-path cache, which can be `on` or `off`.
-- `https`: Whether to configure HTTPS, which can be `on`, `off` or `processing`.
-- `originPullProtocol`: Origin-pull protocol type, which can be `http`, `follow`, or `https`.
+- `domainType`: Primary origin type. Values: `cname` (customer origin), `COS` (COS origin), `third_party` (third-party object storage origin), and `igtm` (IGTM origin).
+- `fullUrlCache`: Whether to enable path cache. Values: `on`, `off`.
+- `https`: Whether to configure HTTPS. Values: `on`, `off` and `processing`.
+- `originPullProtocol`: Origin-pull protocol type. Value: `http`, `follow`, and `https`.
 - `tagKey`: Tag key.
      * @param array $Value Filter field value.
      * @param boolean $Fuzzy Whether to enable fuzzy query. Only `origin` or `domain` is supported for the filter field name.

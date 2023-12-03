@@ -19,13 +19,16 @@ use TencentCloud\Common\AbstractModel;
 
 /**
  * Shared CNAME configuration
+ShareCname is only available to beta users. Submit a ticket if you need it.
  *
- * @method string getSwitch() Obtain Specifies whether to enable Shared CNAME. If it is set to `off`, the default CNAME is used. If it is set to `on`, a shared CNAME is used.
+ * @method string getSwitch() Obtain Whether to enable Shared CNAME. Values:
+`on`: Enable. When enabled, it uses a shared CNAME.
+`off`: Disable. When disabled, it uses a default CNAME.
 
-* ShareCname is only available to beta users. To use this feature, please submit a ticket for application.
- * @method void setSwitch(string $Switch) Set Specifies whether to enable Shared CNAME. If it is set to `off`, the default CNAME is used. If it is set to `on`, a shared CNAME is used.
+ * @method void setSwitch(string $Switch) Set Whether to enable Shared CNAME. Values:
+`on`: Enable. When enabled, it uses a shared CNAME.
+`off`: Disable. When disabled, it uses a default CNAME.
 
-* ShareCname is only available to beta users. To use this feature, please submit a ticket for application.
  * @method string getCname() Obtain Shared CNAME to be configured
 Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method void setCname(string $Cname) Set Shared CNAME to be configured
@@ -34,9 +37,10 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 class ShareCname extends AbstractModel
 {
     /**
-     * @var string Specifies whether to enable Shared CNAME. If it is set to `off`, the default CNAME is used. If it is set to `on`, a shared CNAME is used.
+     * @var string Whether to enable Shared CNAME. Values:
+`on`: Enable. When enabled, it uses a shared CNAME.
+`off`: Disable. When disabled, it uses a default CNAME.
 
-* ShareCname is only available to beta users. To use this feature, please submit a ticket for application.
      */
     public $Switch;
 
@@ -47,9 +51,10 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     public $Cname;
 
     /**
-     * @param string $Switch Specifies whether to enable Shared CNAME. If it is set to `off`, the default CNAME is used. If it is set to `on`, a shared CNAME is used.
+     * @param string $Switch Whether to enable Shared CNAME. Values:
+`on`: Enable. When enabled, it uses a shared CNAME.
+`off`: Disable. When disabled, it uses a default CNAME.
 
-* ShareCname is only available to beta users. To use this feature, please submit a ticket for application.
      * @param string $Cname Shared CNAME to be configured
 Note: this field may return `null`, indicating that no valid values can be obtained.
      */

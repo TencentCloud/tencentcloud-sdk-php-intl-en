@@ -42,8 +42,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFollowRedirect(FollowRedirect $FollowRedirect) Set 301/302 origin-pull follow-redirect configuration
  * @method ErrorPage getErrorPage() Obtain Error code redirect configuration (This feature is in beta and not generally available yet.)
  * @method void setErrorPage(ErrorPage $ErrorPage) Set Error code redirect configuration (This feature is in beta and not generally available yet.)
- * @method RequestHeader getRequestHeader() Obtain Request header configuration
- * @method void setRequestHeader(RequestHeader $RequestHeader) Set Request header configuration
+ * @method RequestHeader getRequestHeader() Obtain Origin-pull request header configuration.
+ * @method void setRequestHeader(RequestHeader $RequestHeader) Set Origin-pull request header configuration.
  * @method ResponseHeader getResponseHeader() Obtain Response header configuration
  * @method void setResponseHeader(ResponseHeader $ResponseHeader) Set Response header configuration
  * @method DownstreamCapping getDownstreamCapping() Obtain Download speed configuration
@@ -193,7 +193,7 @@ class UpdateDomainConfigRequest extends AbstractModel
     public $ErrorPage;
 
     /**
-     * @var RequestHeader Request header configuration
+     * @var RequestHeader Origin-pull request header configuration.
      */
     public $RequestHeader;
 
@@ -402,7 +402,7 @@ After switching to global acceleration, configurations of the domain name will b
      * @param RangeOriginPull $RangeOriginPull Range GETs configuration
      * @param FollowRedirect $FollowRedirect 301/302 origin-pull follow-redirect configuration
      * @param ErrorPage $ErrorPage Error code redirect configuration (This feature is in beta and not generally available yet.)
-     * @param RequestHeader $RequestHeader Request header configuration
+     * @param RequestHeader $RequestHeader Origin-pull request header configuration.
      * @param ResponseHeader $ResponseHeader Response header configuration
      * @param DownstreamCapping $DownstreamCapping Download speed configuration
      * @param CacheKey $CacheKey Node cache key configuration

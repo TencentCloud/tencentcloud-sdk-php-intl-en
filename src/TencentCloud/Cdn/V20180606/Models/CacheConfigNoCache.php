@@ -20,14 +20,14 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Path cache/no cache configuration.
  *
- * @method string getSwitch() Obtain No-cache configuration switch
+ * @method string getSwitch() Obtain Whether to enable no-caching at the path. Values:
 `on`: Enable
 `off`: Disable
-Note: this field may return null, indicating that no valid value is obtained.
- * @method void setSwitch(string $Switch) Set No-cache configuration switch
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setSwitch(string $Switch) Set Whether to enable no-caching at the path. Values:
 `on`: Enable
 `off`: Disable
-Note: this field may return null, indicating that no valid value is obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
  * @method string getRevalidate() Obtain Always forwards to the origin server for verification
 `on`: Enable
 `off`: Disable
@@ -42,10 +42,10 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 class CacheConfigNoCache extends AbstractModel
 {
     /**
-     * @var string No-cache configuration switch
+     * @var string Whether to enable no-caching at the path. Values:
 `on`: Enable
 `off`: Disable
-Note: this field may return null, indicating that no valid value is obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public $Switch;
 
@@ -59,10 +59,10 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     public $Revalidate;
 
     /**
-     * @param string $Switch No-cache configuration switch
+     * @param string $Switch Whether to enable no-caching at the path. Values:
 `on`: Enable
 `off`: Disable
-Note: this field may return null, indicating that no valid value is obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      * @param string $Revalidate Always forwards to the origin server for verification
 `on`: Enable
 `off`: Disable

@@ -20,18 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Merging pull requests configuration item
  *
- * @method string getSwitch() Obtain Whether to enable the merging pull requests feature. Valid values: `on` and `off`.
- * @method void setSwitch(string $Switch) Set Whether to enable the merging pull requests feature. Valid values: `on` and `off`.
+ * @method string getSwitch() Obtain Whether to enable origin-pull merge. Values:
+`on`: Enable
+`off`: Disable
+ * @method void setSwitch(string $Switch) Set Whether to enable origin-pull merge. Values:
+`on`: Enable
+`off`: Disable
  */
 class OriginCombine extends AbstractModel
 {
     /**
-     * @var string Whether to enable the merging pull requests feature. Valid values: `on` and `off`.
+     * @var string Whether to enable origin-pull merge. Values:
+`on`: Enable
+`off`: Disable
      */
     public $Switch;
 
     /**
-     * @param string $Switch Whether to enable the merging pull requests feature. Valid values: `on` and `off`.
+     * @param string $Switch Whether to enable origin-pull merge. Values:
+`on`: Enable
+`off`: Disable
      */
     function __construct()
     {

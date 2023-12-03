@@ -18,10 +18,14 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- *  Access authentication for Huawei Cloud OBS origin
+ * Origin-pull authentication for Huawei Cloud OBS origin
  *
- * @method string getSwitch() Obtain Whether to enable access authentication. Valid values: `on`, `off`.
- * @method void setSwitch(string $Switch) Set Whether to enable access authentication. Valid values: `on`, `off`.
+ * @method string getSwitch() Obtain  Whether to enable origin-pull authentication for Huawei Cloud OBS origin. Values:
+`on`: Enable
+`off`: Disable
+ * @method void setSwitch(string $Switch) Set  Whether to enable origin-pull authentication for Huawei Cloud OBS origin. Values:
+`on`: Enable
+`off`: Disable
  * @method string getAccessKey() Obtain Access ID
 Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method void setAccessKey(string $AccessKey) Set Access ID
@@ -38,7 +42,9 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 class HwPrivateAccess extends AbstractModel
 {
     /**
-     * @var string Whether to enable access authentication. Valid values: `on`, `off`.
+     * @var string  Whether to enable origin-pull authentication for Huawei Cloud OBS origin. Values:
+`on`: Enable
+`off`: Disable
      */
     public $Switch;
 
@@ -61,7 +67,9 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     public $Bucket;
 
     /**
-     * @param string $Switch Whether to enable access authentication. Valid values: `on`, `off`.
+     * @param string $Switch  Whether to enable origin-pull authentication for Huawei Cloud OBS origin. Values:
+`on`: Enable
+`off`: Disable
      * @param string $AccessKey Access ID
 Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param string $SecretKey Key

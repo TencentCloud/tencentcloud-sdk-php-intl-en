@@ -32,12 +32,10 @@ Instance name when `ProxyType=instance`.
 The original configuration will apply if this field is not specified.
  * @method void setSessionPersistTime(integer $SessionPersistTime) Set The session persistence duration. Value range: 30-3600 (in seconds).
 The original configuration will apply if this field is not specified.
- * @method string getProxyType() Obtain The proxy type. Values:
-<li>`hostname`: The proxy is created by subdomain name.</li>
-<li>`instance`: The proxy is created by instance.</li>If not specified, this field uses the default value `instance`.
- * @method void setProxyType(string $ProxyType) Set The proxy type. Values:
-<li>`hostname`: The proxy is created by subdomain name.</li>
-<li>`instance`: The proxy is created by instance.</li>If not specified, this field uses the default value `instance`.
+ * @method string getProxyType() Obtain L4 proxy mode. Valid values: 
+<li>instance: Instance mode. </li>If it is not specified, instance is used by default.
+ * @method void setProxyType(string $ProxyType) Set L4 proxy mode. Valid values: 
+<li>instance: Instance mode. </li>If it is not specified, instance is used by default.
  * @method Ipv6 getIpv6() Obtain IPv6 access configuration. The original configuration will apply if it is not specified.
  * @method void setIpv6(Ipv6 $Ipv6) Set IPv6 access configuration. The original configuration will apply if it is not specified.
  * @method AccelerateMainland getAccelerateMainland() Obtain Cross-MLC-border acceleration. The original configuration will apply if it is not specified.
@@ -68,9 +66,8 @@ The original configuration will apply if this field is not specified.
     public $SessionPersistTime;
 
     /**
-     * @var string The proxy type. Values:
-<li>`hostname`: The proxy is created by subdomain name.</li>
-<li>`instance`: The proxy is created by instance.</li>If not specified, this field uses the default value `instance`.
+     * @var string L4 proxy mode. Valid values: 
+<li>instance: Instance mode. </li>If it is not specified, instance is used by default.
      */
     public $ProxyType;
 
@@ -91,9 +88,8 @@ The original configuration will apply if this field is not specified.
 Instance name when `ProxyType=instance`.
      * @param integer $SessionPersistTime The session persistence duration. Value range: 30-3600 (in seconds).
 The original configuration will apply if this field is not specified.
-     * @param string $ProxyType The proxy type. Values:
-<li>`hostname`: The proxy is created by subdomain name.</li>
-<li>`instance`: The proxy is created by instance.</li>If not specified, this field uses the default value `instance`.
+     * @param string $ProxyType L4 proxy mode. Valid values: 
+<li>instance: Instance mode. </li>If it is not specified, instance is used by default.
      * @param Ipv6 $Ipv6 IPv6 access configuration. The original configuration will apply if it is not specified.
      * @param AccelerateMainland $AccelerateMainland Cross-MLC-border acceleration. The original configuration will apply if it is not specified.
      */

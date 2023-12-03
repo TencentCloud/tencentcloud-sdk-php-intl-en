@@ -20,10 +20,14 @@ use TencentCloud\Common\AbstractModel;
 /**
  * A part of `CacheKey`
  *
- * @method string getSwitch() Obtain Whether to use it as part of `CacheKey`
-Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method void setSwitch(string $Switch) Set Whether to use it as part of `CacheKey`
-Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method string getSwitch() Obtain Whether to enable Cachekey control. Values:
+`on`: Enable
+`off`: Disable
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setSwitch(string $Switch) Set Whether to enable Cachekey control. Values:
+`on`: Enable
+`off`: Disable
+Note: This field may return `null`, indicating that no valid values can be obtained.
  * @method string getValue() Obtain Array of headers that make up the `CacheKey` (separated by ';')
 Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method void setValue(string $Value) Set Array of headers that make up the `CacheKey` (separated by ';')
@@ -32,8 +36,10 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 class HeaderKey extends AbstractModel
 {
     /**
-     * @var string Whether to use it as part of `CacheKey`
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @var string Whether to enable Cachekey control. Values:
+`on`: Enable
+`off`: Disable
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public $Switch;
 
@@ -44,8 +50,10 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     public $Value;
 
     /**
-     * @param string $Switch Whether to use it as part of `CacheKey`
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param string $Switch Whether to enable Cachekey control. Values:
+`on`: Enable
+`off`: Disable
+Note: This field may return `null`, indicating that no valid values can be obtained.
      * @param string $Value Array of headers that make up the `CacheKey` (separated by ';')
 Note: This field may return `null`, indicating that no valid value can be obtained.
      */

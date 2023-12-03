@@ -20,10 +20,16 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Configuration to retain query strings for this path
  *
- * @method string getSwitch() Obtain Whether to use `QueryString` as part of `CacheKey`. Valid values: on, off
-Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method void setSwitch(string $Switch) Set Whether to use `QueryString` as part of `CacheKey`. Valid values: on, off
-Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method string getSwitch() Obtain Whether to include query string parameters. Values:
+`on`: Include `QueryString` as part of `CacheKey`.
+`off`: Do not include `QueryString` as part of `CacheKey`.
+
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setSwitch(string $Switch) Set Whether to include query string parameters. Values:
+`on`: Include `QueryString` as part of `CacheKey`.
+`off`: Do not include `QueryString` as part of `CacheKey`.
+
+Note: This field may return `null`, indicating that no valid values can be obtained.
  * @method string getAction() Obtain `includeCustom` will retain partial query strings
 Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method void setAction(string $Action) Set `includeCustom` will retain partial query strings
@@ -36,8 +42,11 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 class RuleQueryString extends AbstractModel
 {
     /**
-     * @var string Whether to use `QueryString` as part of `CacheKey`. Valid values: on, off
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @var string Whether to include query string parameters. Values:
+`on`: Include `QueryString` as part of `CacheKey`.
+`off`: Do not include `QueryString` as part of `CacheKey`.
+
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public $Switch;
 
@@ -54,8 +63,11 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     public $Value;
 
     /**
-     * @param string $Switch Whether to use `QueryString` as part of `CacheKey`. Valid values: on, off
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param string $Switch Whether to include query string parameters. Values:
+`on`: Include `QueryString` as part of `CacheKey`.
+`off`: Do not include `QueryString` as part of `CacheKey`.
+
+Note: This field may return `null`, indicating that no valid values can be obtained.
      * @param string $Action `includeCustom` will retain partial query strings
 Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param string $Value Array of included/excluded query strings (separated by ';')

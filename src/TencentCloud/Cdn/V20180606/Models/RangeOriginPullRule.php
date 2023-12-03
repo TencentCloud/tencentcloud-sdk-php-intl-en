@@ -20,8 +20,12 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Range GETs configuration
  *
- * @method string getSwitch() Obtain Specifies whether Range GETs is enabled
- * @method void setSwitch(string $Switch) Set Specifies whether Range GETs is enabled
+ * @method string getSwitch() Obtain Whether to enable Range GETs. Values:
+`on`: Enable
+`off`: Disable
+ * @method void setSwitch(string $Switch) Set Whether to enable Range GETs. Values:
+`on`: Enable
+`off`: Disable
  * @method string getRuleType() Obtain Rule types:
 `file`: effective for specified file suffixes.
 `directory`: effective for specified paths.
@@ -46,7 +50,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 class RangeOriginPullRule extends AbstractModel
 {
     /**
-     * @var string Specifies whether Range GETs is enabled
+     * @var string Whether to enable Range GETs. Values:
+`on`: Enable
+`off`: Disable
      */
     public $Switch;
 
@@ -69,7 +75,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     public $RulePaths;
 
     /**
-     * @param string $Switch Specifies whether Range GETs is enabled
+     * @param string $Switch Whether to enable Range GETs. Values:
+`on`: Enable
+`off`: Disable
      * @param string $RuleType Rule types:
 `file`: effective for specified file suffixes.
 `directory`: effective for specified paths.

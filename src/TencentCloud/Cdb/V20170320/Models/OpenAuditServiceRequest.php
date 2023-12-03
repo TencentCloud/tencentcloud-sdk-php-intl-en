@@ -28,8 +28,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setHighLogExpireDay(integer $HighLogExpireDay) Set Retention period of high-frequency audit logs. Valid values:  `7` (one week), `30` (one month).
  * @method array getAuditRuleFilters() Obtain Audit rule If both this parameter and `RuleTemplateIds` are left empty, full audit will be applied.
  * @method void setAuditRuleFilters(array $AuditRuleFilters) Set Audit rule If both this parameter and `RuleTemplateIds` are left empty, full audit will be applied.
- * @method array getRuleTemplateIds() Obtain Rule template ID If both this parameter and `AuditRuleFilters` are left empty, full audit will be applied.
- * @method void setRuleTemplateIds(array $RuleTemplateIds) Set Rule template ID If both this parameter and `AuditRuleFilters` are left empty, full audit will be applied.
+ * @method array getRuleTemplateIds() Obtain Rule template ID. If both this parameter and AuditRuleFilters are not specified, all SQL statements will be recorded.
+ * @method void setRuleTemplateIds(array $RuleTemplateIds) Set Rule template ID. If both this parameter and AuditRuleFilters are not specified, all SQL statements will be recorded.
+ * @method boolean getAuditAll() Obtain Audit type. Valid values: true: Record all; false: Record by rules (default value).
+ * @method void setAuditAll(boolean $AuditAll) Set Audit type. Valid values: true: Record all; false: Record by rules (default value).
  */
 class OpenAuditServiceRequest extends AbstractModel
 {
@@ -54,16 +56,22 @@ class OpenAuditServiceRequest extends AbstractModel
     public $AuditRuleFilters;
 
     /**
-     * @var array Rule template ID If both this parameter and `AuditRuleFilters` are left empty, full audit will be applied.
+     * @var array Rule template ID. If both this parameter and AuditRuleFilters are not specified, all SQL statements will be recorded.
      */
     public $RuleTemplateIds;
+
+    /**
+     * @var boolean Audit type. Valid values: true: Record all; false: Record by rules (default value).
+     */
+    public $AuditAll;
 
     /**
      * @param string $InstanceId TencentDB for MySQL instance ID
      * @param integer $LogExpireDay Retention period of the audit log. Valid values:  `7` (one week), `30` (one month), `90` (three months), `180` (six months), `365` (one year), `1095` (three years), `1825` (five years).
      * @param integer $HighLogExpireDay Retention period of high-frequency audit logs. Valid values:  `7` (one week), `30` (one month).
      * @param array $AuditRuleFilters Audit rule If both this parameter and `RuleTemplateIds` are left empty, full audit will be applied.
-     * @param array $RuleTemplateIds Rule template ID If both this parameter and `AuditRuleFilters` are left empty, full audit will be applied.
+     * @param array $RuleTemplateIds Rule template ID. If both this parameter and AuditRuleFilters are not specified, all SQL statements will be recorded.
+     * @param boolean $AuditAll Audit type. Valid values: true: Record all; false: Record by rules (default value).
      */
     function __construct()
     {
@@ -101,6 +109,10 @@ class OpenAuditServiceRequest extends AbstractModel
 
         if (array_key_exists("RuleTemplateIds",$param) and $param["RuleTemplateIds"] !== null) {
             $this->RuleTemplateIds = $param["RuleTemplateIds"];
+        }
+
+        if (array_key_exists("AuditAll",$param) and $param["AuditAll"] !== null) {
+            $this->AuditAll = $param["AuditAll"];
         }
     }
 }

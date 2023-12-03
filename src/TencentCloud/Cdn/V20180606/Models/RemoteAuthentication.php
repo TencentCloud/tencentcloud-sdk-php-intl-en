@@ -22,14 +22,14 @@ use TencentCloud\Common\AbstractModel;
 `RemoteAuthenticationRules` and `Server` cannot be configured at the same time.
 If only `Server` is configured, all parameters of `RemoteAuthenticationRules` will be set to the default values. The default values are described in each configuration parameter.
  *
- * @method string getSwitch() Obtain Remote authentication switch
-`on`: enable
-`off`: disable
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setSwitch(string $Switch) Set Remote authentication switch
-`on`: enable
-`off`: disable
-Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method string getSwitch() Obtain Whether to enable remote authentication. Values:
+`on`: Enable
+`off`: Disable
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setSwitch(string $Switch) Set Whether to enable remote authentication. Values:
+`on`: Enable
+`off`: Disable
+Note: This field may return `null`, indicating that no valid values can be obtained.
  * @method array getRemoteAuthenticationRules() Obtain Remote authentication rule configuration
 Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method void setRemoteAuthenticationRules(array $RemoteAuthenticationRules) Set Remote authentication rule configuration
@@ -42,10 +42,10 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 class RemoteAuthentication extends AbstractModel
 {
     /**
-     * @var string Remote authentication switch
-`on`: enable
-`off`: disable
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @var string Whether to enable remote authentication. Values:
+`on`: Enable
+`off`: Disable
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public $Switch;
 
@@ -62,10 +62,10 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     public $Server;
 
     /**
-     * @param string $Switch Remote authentication switch
-`on`: enable
-`off`: disable
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param string $Switch Whether to enable remote authentication. Values:
+`on`: Enable
+`off`: Disable
+Note: This field may return `null`, indicating that no valid values can be obtained.
      * @param array $RemoteAuthenticationRules Remote authentication rule configuration
 Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param string $Server Remote authentication server

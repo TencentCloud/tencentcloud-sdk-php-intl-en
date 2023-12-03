@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Referer blacklist/whitelist configuration. This is disabled by default.
  *
- * @method string getSwitch() Obtain Referer blacklist/whitelist configuration switch
+ * @method string getSwitch() Obtain Whether to enable referer blocklist/allowlist. Values:
 `on`: Enable
 `off`: Disable
- * @method void setSwitch(string $Switch) Set Referer blacklist/whitelist configuration switch
+ * @method void setSwitch(string $Switch) Set Whether to enable referer blocklist/allowlist. Values:
 `on`: Enable
 `off`: Disable
  * @method array getRefererRules() Obtain Referer blacklist/whitelist configuration rule
@@ -34,7 +34,7 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 class Referer extends AbstractModel
 {
     /**
-     * @var string Referer blacklist/whitelist configuration switch
+     * @var string Whether to enable referer blocklist/allowlist. Values:
 `on`: Enable
 `off`: Disable
      */
@@ -47,7 +47,7 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     public $RefererRules;
 
     /**
-     * @param string $Switch Referer blacklist/whitelist configuration switch
+     * @param string $Switch Whether to enable referer blocklist/allowlist. Values:
 `on`: Enable
 `off`: Disable
      * @param array $RefererRules Referer blacklist/whitelist configuration rule

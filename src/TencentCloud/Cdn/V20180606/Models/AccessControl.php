@@ -20,8 +20,12 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Request header and request URL access control
  *
- * @method string getSwitch() Obtain Whether to enable request header and request URL access control. Valid values: on, off
- * @method void setSwitch(string $Switch) Set Whether to enable request header and request URL access control. Valid values: on, off
+ * @method string getSwitch() Obtain Whether to enable access control based on the request header and request URL. Values:
+`on`: Enable
+`off`: Disable
+ * @method void setSwitch(string $Switch) Set Whether to enable access control based on the request header and request URL. Values:
+`on`: Enable
+`off`: Disable
  * @method array getAccessControlRules() Obtain Request header and request URL access rule
 Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method void setAccessControlRules(array $AccessControlRules) Set Request header and request URL access rule
@@ -34,7 +38,9 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 class AccessControl extends AbstractModel
 {
     /**
-     * @var string Whether to enable request header and request URL access control. Valid values: on, off
+     * @var string Whether to enable access control based on the request header and request URL. Values:
+`on`: Enable
+`off`: Disable
      */
     public $Switch;
 
@@ -51,7 +57,9 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     public $ReturnCode;
 
     /**
-     * @param string $Switch Whether to enable request header and request URL access control. Valid values: on, off
+     * @param string $Switch Whether to enable access control based on the request header and request URL. Values:
+`on`: Enable
+`off`: Disable
      * @param array $AccessControlRules Request header and request URL access rule
 Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param integer $ReturnCode Returns status code

@@ -36,8 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setValidityPeriod(string $ValidityPeriod) Set Validity period. The default value is 12 months, which is the only supported value currently.
  * @method string getCsrEncryptAlgo() Obtain Encryption algorithm. RSA and ECC are supported.
  * @method void setCsrEncryptAlgo(string $CsrEncryptAlgo) Set Encryption algorithm. RSA and ECC are supported.
- * @method string getCsrKeyParameter() Obtain Key pair parameter. RSA supports only the 2048-bit key and ECC supports only prime256v1.
- * @method void setCsrKeyParameter(string $CsrKeyParameter) Set Key pair parameter. RSA supports only the 2048-bit key and ECC supports only prime256v1.
+ * @method string getCsrKeyParameter() Obtain Key pair parameters. RSA supports only 2048. ECC supports only prime256v1. When the encryption algorithm is set to ECC, this parameter is mandatory.
+ * @method void setCsrKeyParameter(string $CsrKeyParameter) Set Key pair parameters. RSA supports only 2048. ECC supports only prime256v1. When the encryption algorithm is set to ECC, this parameter is mandatory.
  * @method string getCsrKeyPassword() Obtain CSR encryption password
  * @method void setCsrKeyPassword(string $CsrKeyPassword) Set CSR encryption password
  * @method string getAlias() Obtain Alias
@@ -92,7 +92,7 @@ class ApplyCertificateRequest extends AbstractModel
     public $CsrEncryptAlgo;
 
     /**
-     * @var string Key pair parameter. RSA supports only the 2048-bit key and ECC supports only prime256v1.
+     * @var string Key pair parameters. RSA supports only 2048. ECC supports only prime256v1. When the encryption algorithm is set to ECC, this parameter is mandatory.
      */
     public $CsrKeyParameter;
 
@@ -130,7 +130,7 @@ class ApplyCertificateRequest extends AbstractModel
      * @param string $ContactPhone Mobile number
      * @param string $ValidityPeriod Validity period. The default value is 12 months, which is the only supported value currently.
      * @param string $CsrEncryptAlgo Encryption algorithm. RSA and ECC are supported.
-     * @param string $CsrKeyParameter Key pair parameter. RSA supports only the 2048-bit key and ECC supports only prime256v1.
+     * @param string $CsrKeyParameter Key pair parameters. RSA supports only 2048. ECC supports only prime256v1. When the encryption algorithm is set to ECC, this parameter is mandatory.
      * @param string $CsrKeyPassword CSR encryption password
      * @param string $Alias Alias
      * @param string $OldCertificateId Original certificate ID, which is used to apply for a new certificate.

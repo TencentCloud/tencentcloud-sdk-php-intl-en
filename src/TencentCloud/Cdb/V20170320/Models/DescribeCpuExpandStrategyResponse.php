@@ -21,17 +21,17 @@ use TencentCloud\Common\AbstractModel;
  * DescribeCpuExpandStrategy response structure.
  *
  * @method string getType() Obtain Policy type. Valid values: `auto`, `manual`.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setType(string $Type) Set Policy type. Valid values: `auto`, `manual`.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getExpandCpu() Obtain Manually expanded CPU, which is valid when `Type` is `manual`.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setExpandCpu(string $ExpandCpu) Set Manually expanded CPU, which is valid when `Type` is `manual`.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getAutoStrategy() Obtain Automatic expansion policy, which is valid when `Type` is `auto`.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setAutoStrategy(string $AutoStrategy) Set Automatic expansion policy, which is valid when `Type` is `auto`.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -39,19 +39,19 @@ class DescribeCpuExpandStrategyResponse extends AbstractModel
 {
     /**
      * @var string Policy type. Valid values: `auto`, `manual`.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Type;
 
     /**
      * @var string Manually expanded CPU, which is valid when `Type` is `manual`.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ExpandCpu;
 
     /**
      * @var string Automatic expansion policy, which is valid when `Type` is `auto`.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $AutoStrategy;
 
@@ -62,11 +62,11 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
 
     /**
      * @param string $Type Policy type. Valid values: `auto`, `manual`.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $ExpandCpu Manually expanded CPU, which is valid when `Type` is `manual`.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $AutoStrategy Automatic expansion policy, which is valid when `Type` is `auto`.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()

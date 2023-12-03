@@ -20,30 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Heuristic cache validity configuration
  *
- * @method string getHeuristicCacheTimeSwitch() Obtain `on`: Enable
+ * @method string getHeuristicCacheTimeSwitch() Obtain Whether to enable heuristic cache validity. Values:
+`on`: Enable
 `off`: Disable
- * @method void setHeuristicCacheTimeSwitch(string $HeuristicCacheTimeSwitch) Set `on`: Enable
+Note: This field may return·`null`, indicating that no valid values can be obtained.
+ * @method void setHeuristicCacheTimeSwitch(string $HeuristicCacheTimeSwitch) Set Whether to enable heuristic cache validity. Values:
+`on`: Enable
 `off`: Disable
+Note: This field may return·`null`, indicating that no valid values can be obtained.
  * @method integer getHeuristicCacheTime() Obtain Unit: Second
+Note: This field may return·`null`, indicating that no valid values can be obtained.
  * @method void setHeuristicCacheTime(integer $HeuristicCacheTime) Set Unit: Second
+Note: This field may return·`null`, indicating that no valid values can be obtained.
  */
 class CacheConfig extends AbstractModel
 {
     /**
-     * @var string `on`: Enable
+     * @var string Whether to enable heuristic cache validity. Values:
+`on`: Enable
 `off`: Disable
+Note: This field may return·`null`, indicating that no valid values can be obtained.
      */
     public $HeuristicCacheTimeSwitch;
 
     /**
      * @var integer Unit: Second
+Note: This field may return·`null`, indicating that no valid values can be obtained.
      */
     public $HeuristicCacheTime;
 
     /**
-     * @param string $HeuristicCacheTimeSwitch `on`: Enable
+     * @param string $HeuristicCacheTimeSwitch Whether to enable heuristic cache validity. Values:
+`on`: Enable
 `off`: Disable
+Note: This field may return·`null`, indicating that no valid values can be obtained.
      * @param integer $HeuristicCacheTime Unit: Second
+Note: This field may return·`null`, indicating that no valid values can be obtained.
      */
     function __construct()
     {

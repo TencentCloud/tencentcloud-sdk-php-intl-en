@@ -20,8 +20,14 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Timestamp hotlink protection advanced configuration (allowlist feature)
  *
- * @method string getSwitch() Obtain Hotlink protection configuration switch (which can be on or off). If it is enabled, only one mode can and must be configured, while other modes are null.
- * @method void setSwitch(string $Switch) Set Hotlink protection configuration switch (which can be on or off). If it is enabled, only one mode can and must be configured, while other modes are null.
+ * @method string getSwitch() Obtain Whether to enable hot linking protection. Values:
+`on`: Enable
+`off`: Disable
+Only one advanced configuration can be enabled. Set the rests to `null`.
+ * @method void setSwitch(string $Switch) Set Whether to enable hot linking protection. Values:
+`on`: Enable
+`off`: Disable
+Only one advanced configuration can be enabled. Set the rests to `null`.
  * @method AdvancedAuthenticationTypeA getTypeA() Obtain Timestamp hotlink protection advanced configuration mode A
 Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method void setTypeA(AdvancedAuthenticationTypeA $TypeA) Set Timestamp hotlink protection advanced configuration mode A
@@ -50,7 +56,10 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 class AdvancedAuthentication extends AbstractModel
 {
     /**
-     * @var string Hotlink protection configuration switch (which can be on or off). If it is enabled, only one mode can and must be configured, while other modes are null.
+     * @var string Whether to enable hot linking protection. Values:
+`on`: Enable
+`off`: Disable
+Only one advanced configuration can be enabled. Set the rests to `null`.
      */
     public $Switch;
 
@@ -91,7 +100,10 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     public $TypeF;
 
     /**
-     * @param string $Switch Hotlink protection configuration switch (which can be on or off). If it is enabled, only one mode can and must be configured, while other modes are null.
+     * @param string $Switch Whether to enable hot linking protection. Values:
+`on`: Enable
+`off`: Disable
+Only one advanced configuration can be enabled. Set the rests to `null`.
      * @param AdvancedAuthenticationTypeA $TypeA Timestamp hotlink protection advanced configuration mode A
 Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param AdvancedAuthenticationTypeB $TypeB Timestamp hotlink protection advanced configuration mode B

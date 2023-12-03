@@ -20,8 +20,12 @@ use TencentCloud\Common\AbstractModel;
 /**
  * WAF configuration
  *
- * @method string getSwitch() Obtain Whether to enable WAF. Valid values: `on` and `off`.
- * @method void setSwitch(string $Switch) Set Whether to enable WAF. Valid values: `on` and `off`.
+ * @method string getSwitch() Obtain Whether to enable SCDN WAF configuration. Values:
+`on`: Enable
+`off`: Disable
+ * @method void setSwitch(string $Switch) Set Whether to enable SCDN WAF configuration. Values:
+`on`: Enable
+`off`: Disable
  * @method string getMode() Obtain WAF protection mode. Valid values: `intercept` and `observe`. Default value: `intercept`.
 Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method void setMode(string $Mode) Set WAF protection mode. Valid values: `intercept` and `observe`. Default value: `intercept`.
@@ -30,10 +34,14 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method void setErrorPage(ScdnErrorPage $ErrorPage) Set Redirection error page
 Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method string getWebShellSwitch() Obtain Whether to enable Web shell blocking. Valid values: `on` and `off`. Default value: `off`.
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setWebShellSwitch(string $WebShellSwitch) Set Whether to enable Web shell blocking. Valid values: `on` and `off`. Default value: `off`.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method string getWebShellSwitch() Obtain Whether to enable webshell blocking. Values:
+`on`: Enable
+`off`: Disable
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setWebShellSwitch(string $WebShellSwitch) Set Whether to enable webshell blocking. Values:
+`on`: Enable
+`off`: Disable
+Note: This field may return `null`, indicating that no valid values can be obtained.
  * @method array getRules() Obtain Attack blocking rules
 Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method void setRules(array $Rules) Set Attack blocking rules
@@ -42,15 +50,21 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method void setLevel(integer $Level) Set WAF rule level. Valid values: 100, 200, and 300.
 Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method array getSubRuleSwitch() Obtain WAF sub-rule switch
-Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method void setSubRuleSwitch(array $SubRuleSwitch) Set WAF sub-rule switch
-Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method array getSubRuleSwitch() Obtain Whether to enable WAF sub-rules. Values:
+`on`: Enable
+`off`: Disable
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setSubRuleSwitch(array $SubRuleSwitch) Set Whether to enable WAF sub-rules. Values:
+`on`: Enable
+`off`: Disable
+Note: This field may return `null`, indicating that no valid values can be obtained.
  */
 class ScdnWafConfig extends AbstractModel
 {
     /**
-     * @var string Whether to enable WAF. Valid values: `on` and `off`.
+     * @var string Whether to enable SCDN WAF configuration. Values:
+`on`: Enable
+`off`: Disable
      */
     public $Switch;
 
@@ -67,8 +81,10 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     public $ErrorPage;
 
     /**
-     * @var string Whether to enable Web shell blocking. Valid values: `on` and `off`. Default value: `off`.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @var string Whether to enable webshell blocking. Values:
+`on`: Enable
+`off`: Disable
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public $WebShellSwitch;
 
@@ -85,25 +101,33 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     public $Level;
 
     /**
-     * @var array WAF sub-rule switch
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @var array Whether to enable WAF sub-rules. Values:
+`on`: Enable
+`off`: Disable
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public $SubRuleSwitch;
 
     /**
-     * @param string $Switch Whether to enable WAF. Valid values: `on` and `off`.
+     * @param string $Switch Whether to enable SCDN WAF configuration. Values:
+`on`: Enable
+`off`: Disable
      * @param string $Mode WAF protection mode. Valid values: `intercept` and `observe`. Default value: `intercept`.
 Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param ScdnErrorPage $ErrorPage Redirection error page
 Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param string $WebShellSwitch Whether to enable Web shell blocking. Valid values: `on` and `off`. Default value: `off`.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param string $WebShellSwitch Whether to enable webshell blocking. Values:
+`on`: Enable
+`off`: Disable
+Note: This field may return `null`, indicating that no valid values can be obtained.
      * @param array $Rules Attack blocking rules
 Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param integer $Level WAF rule level. Valid values: 100, 200, and 300.
 Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param array $SubRuleSwitch WAF sub-rule switch
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param array $SubRuleSwitch Whether to enable WAF sub-rules. Values:
+`on`: Enable
+`off`: Disable
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
     {

@@ -20,24 +20,35 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribePayType request structure.
  *
- * @method string getArea() Obtain Specifies a service region.
-`mainland`: queries billing methods within Mainland China;
-`overseas`: queries billing methods outside Mainland China.
-Default value: `mainland`.
- * @method void setArea(string $Area) Set Specifies a service region.
-`mainland`: queries billing methods within Mainland China;
-`overseas`: queries billing methods outside Mainland China.
-Default value: `mainland`.
+ * @method string getArea() Obtain Specifies the service area.
+`mainland`: Queries billing methods available in the Chinese mainland.
+`overseas`: Queries billing methods available in the regions outside the Chinese mainland.
+`Global`: Queries billing methods available across the globe.
+If it is not specified, it defaults to `mainland`.
+ * @method void setArea(string $Area) Set Specifies the service area.
+`mainland`: Queries billing methods available in the Chinese mainland.
+`overseas`: Queries billing methods available in the regions outside the Chinese mainland.
+`Global`: Queries billing methods available across the globe.
+If it is not specified, it defaults to `mainland`.
  * @method string getProduct() Obtain Specifies the product to query, either `cdn` (default) or `ecdn`.
  * @method void setProduct(string $Product) Set Specifies the product to query, either `cdn` (default) or `ecdn`.
+ * @method string getType() Obtain Specifies resources.
+`flux`: Traffic package
+`https`: HTTPS requests
+It defaults to `flux` if not specified. 
+ * @method void setType(string $Type) Set Specifies resources.
+`flux`: Traffic package
+`https`: HTTPS requests
+It defaults to `flux` if not specified. 
  */
 class DescribePayTypeRequest extends AbstractModel
 {
     /**
-     * @var string Specifies a service region.
-`mainland`: queries billing methods within Mainland China;
-`overseas`: queries billing methods outside Mainland China.
-Default value: `mainland`.
+     * @var string Specifies the service area.
+`mainland`: Queries billing methods available in the Chinese mainland.
+`overseas`: Queries billing methods available in the regions outside the Chinese mainland.
+`Global`: Queries billing methods available across the globe.
+If it is not specified, it defaults to `mainland`.
      */
     public $Area;
 
@@ -47,11 +58,24 @@ Default value: `mainland`.
     public $Product;
 
     /**
-     * @param string $Area Specifies a service region.
-`mainland`: queries billing methods within Mainland China;
-`overseas`: queries billing methods outside Mainland China.
-Default value: `mainland`.
+     * @var string Specifies resources.
+`flux`: Traffic package
+`https`: HTTPS requests
+It defaults to `flux` if not specified. 
+     */
+    public $Type;
+
+    /**
+     * @param string $Area Specifies the service area.
+`mainland`: Queries billing methods available in the Chinese mainland.
+`overseas`: Queries billing methods available in the regions outside the Chinese mainland.
+`Global`: Queries billing methods available across the globe.
+If it is not specified, it defaults to `mainland`.
      * @param string $Product Specifies the product to query, either `cdn` (default) or `ecdn`.
+     * @param string $Type Specifies resources.
+`flux`: Traffic package
+`https`: HTTPS requests
+It defaults to `flux` if not specified. 
      */
     function __construct()
     {
@@ -72,6 +96,10 @@ Default value: `mainland`.
 
         if (array_key_exists("Product",$param) and $param["Product"] !== null) {
             $this->Product = $param["Product"];
+        }
+
+        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
+            $this->Type = $param["Type"];
         }
     }
 }

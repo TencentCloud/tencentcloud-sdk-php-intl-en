@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 301/302 automatic origin-pull follow-redirect configuration. It is disabled by default.
  *
- * @method string getSwitch() Obtain Origin-pull follow-redirect switch
+ * @method string getSwitch() Obtain Whether to enable origin-pull to follow the origin configuration. Values:
 `on`: Enable
 `off`: Disable
- * @method void setSwitch(string $Switch) Set Origin-pull follow-redirect switch
+ * @method void setSwitch(string $Switch) Set Whether to enable origin-pull to follow the origin configuration. Values:
 `on`: Enable
 `off`: Disable
  * @method RedirectConfig getRedirectConfig() Obtain Specifies a host header for 302 redirects. This feature is only available to beta users. To join the beta, please submit a ticket.
@@ -34,7 +34,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 class FollowRedirect extends AbstractModel
 {
     /**
-     * @var string Origin-pull follow-redirect switch
+     * @var string Whether to enable origin-pull to follow the origin configuration. Values:
 `on`: Enable
 `off`: Disable
      */
@@ -47,7 +47,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $RedirectConfig;
 
     /**
-     * @param string $Switch Origin-pull follow-redirect switch
+     * @param string $Switch Whether to enable origin-pull to follow the origin configuration. Values:
 `on`: Enable
 `off`: Disable
      * @param RedirectConfig $RedirectConfig Specifies a host header for 302 redirects. This feature is only available to beta users. To join the beta, please submit a ticket.

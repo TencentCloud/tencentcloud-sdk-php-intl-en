@@ -18,24 +18,32 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * IPv6 activation configurations, which cannot be changed.
+ * IPv6 origin configuration (changes not allowed).
  *
- * @method string getSwitch() Obtain Whether to enable the IPv6 feature for a domain name. Values include `on` or `off`.
-Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method void setSwitch(string $Switch) Set Whether to enable the IPv6 feature for a domain name. Values include `on` or `off`.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method string getSwitch() Obtain Whether to enable an IPv6 address for the origin server. Values:
+`on`: Enable
+`off`: Disable
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setSwitch(string $Switch) Set Whether to enable an IPv6 address for the origin server. Values:
+`on`: Enable
+`off`: Disable
+Note: This field may return `null`, indicating that no valid values can be obtained.
  */
 class Ipv6 extends AbstractModel
 {
     /**
-     * @var string Whether to enable the IPv6 feature for a domain name. Values include `on` or `off`.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @var string Whether to enable an IPv6 address for the origin server. Values:
+`on`: Enable
+`off`: Disable
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public $Switch;
 
     /**
-     * @param string $Switch Whether to enable the IPv6 feature for a domain name. Values include `on` or `off`.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param string $Switch Whether to enable an IPv6 address for the origin server. Values:
+`on`: Enable
+`off`: Disable
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
     {

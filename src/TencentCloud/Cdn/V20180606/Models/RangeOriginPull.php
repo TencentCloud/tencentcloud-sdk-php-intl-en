@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Range GETs configuration which is enabled by default
  *
- * @method string getSwitch() Obtain Range GETs configuration switch
+ * @method string getSwitch() Obtain Whether to enable Range GETs. Values:
 `on`: Enable
 `off`: Disable
- * @method void setSwitch(string $Switch) Set Range GETs configuration switch
+ * @method void setSwitch(string $Switch) Set Whether to enable Range GETs. Values:
 `on`: Enable
 `off`: Disable
  * @method array getRangeRules() Obtain Range GETs configuration
@@ -34,7 +34,7 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 class RangeOriginPull extends AbstractModel
 {
     /**
-     * @var string Range GETs configuration switch
+     * @var string Whether to enable Range GETs. Values:
 `on`: Enable
 `off`: Disable
      */
@@ -47,7 +47,7 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     public $RangeRules;
 
     /**
-     * @param string $Switch Range GETs configuration switch
+     * @param string $Switch Whether to enable Range GETs. Values:
 `on`: Enable
 `off`: Disable
      * @param array $RangeRules Range GETs configuration

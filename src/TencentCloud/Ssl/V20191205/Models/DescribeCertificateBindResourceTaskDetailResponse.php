@@ -64,6 +64,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
  * @method void setStatus(integer $Status) Set The status of the async task. Valid values: `0` for querying, `1` for successful, and `2` for abnormal. If the status is `1`, the result of `BindResourceResult` will be displayed; if the status is `2`, the error causes will be displayed.
  * @method string getCacheTime() Obtain The cache time of the current result.
  * @method void setCacheTime(string $CacheTime) Set The cache time of the current result.
+ * @method array getTSE() Obtain Associated TSE resource details
+Note: This field may return null, indicating that no valid value can be obtained.
+ * @method void setTSE(array $TSE) Set Associated TSE resource details
+Note: This field may return null, indicating that no valid value can be obtained.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -140,6 +144,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $CacheTime;
 
     /**
+     * @var array Associated TSE resource details
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public $TSE;
+
+    /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
@@ -167,6 +177,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $Status The status of the async task. Valid values: `0` for querying, `1` for successful, and `2` for abnormal. If the status is `1`, the result of `BindResourceResult` will be displayed; if the status is `2`, the error causes will be displayed.
      * @param string $CacheTime The cache time of the current result.
+     * @param array $TSE Associated TSE resource details
+Note: This field may return null, indicating that no valid value can be obtained.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -278,6 +290,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("CacheTime",$param) and $param["CacheTime"] !== null) {
             $this->CacheTime = $param["CacheTime"];
+        }
+
+        if (array_key_exists("TSE",$param) and $param["TSE"] !== null) {
+            $this->TSE = [];
+            foreach ($param["TSE"] as $key => $value){
+                $obj = new TSEInstanceList();
+                $obj->deserialize($value);
+                array_push($this->TSE, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

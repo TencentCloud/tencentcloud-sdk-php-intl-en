@@ -20,18 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DDoS configuration
  *
- * @method string getSwitch() Obtain Whether to enable DDoS defense. Valid values: `on` and `off`.
- * @method void setSwitch(string $Switch) Set Whether to enable DDoS defense. Valid values: `on` and `off`.
+ * @method string getSwitch() Obtain Whether to enable SCDN DDoS configuration. Values:
+`on`: Enable
+`off`: Disable
+ * @method void setSwitch(string $Switch) Set Whether to enable SCDN DDoS configuration. Values:
+`on`: Enable
+`off`: Disable
  */
 class ScdnDdosConfig extends AbstractModel
 {
     /**
-     * @var string Whether to enable DDoS defense. Valid values: `on` and `off`.
+     * @var string Whether to enable SCDN DDoS configuration. Values:
+`on`: Enable
+`off`: Disable
      */
     public $Switch;
 
     /**
-     * @param string $Switch Whether to enable DDoS defense. Valid values: `on` and `off`.
+     * @param string $Switch Whether to enable SCDN DDoS configuration. Values:
+`on`: Enable
+`off`: Disable
      */
     function __construct()
     {

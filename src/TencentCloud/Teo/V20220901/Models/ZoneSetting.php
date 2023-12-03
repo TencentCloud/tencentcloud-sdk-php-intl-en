@@ -109,9 +109,9 @@ Note: This field may return `null`, indicating that no valid values can be obtai
  * @method void setAccelerateMainland(AccelerateMainland $AccelerateMainland) Set Cross-MLC-border acceleration. 
 Note: This field may return `null`, indicating that no valid values can be obtained.
  * @method StandardDebug getStandardDebug() Obtain Standard debugging configuration.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setStandardDebug(StandardDebug $StandardDebug) Set Standard debugging configuration.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class ZoneSetting extends AbstractModel
 {
@@ -249,7 +249,7 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 
     /**
      * @var StandardDebug Standard debugging configuration.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $StandardDebug;
 
@@ -299,7 +299,7 @@ Note: This field may return `null`, indicating that no valid value was found.
      * @param AccelerateMainland $AccelerateMainland Cross-MLC-border acceleration. 
 Note: This field may return `null`, indicating that no valid values can be obtained.
      * @param StandardDebug $StandardDebug Standard debugging configuration.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

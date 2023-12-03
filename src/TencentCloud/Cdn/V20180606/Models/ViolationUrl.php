@@ -26,17 +26,17 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRealUrl(string $RealUrl) Set Origin access URL of the resource in violation
  * @method string getDownloadUrl() Obtain Snapshot path. This is used to display a snapshot of the content in violation on the console.
  * @method void setDownloadUrl(string $DownloadUrl) Set Snapshot path. This is used to display a snapshot of the content in violation on the console.
- * @method string getUrlStatus() Obtain Current status of the resources in violation
+ * @method string getUrlStatus() Obtain Current status of non-compliant resource
 `forbid`: Blocked
 `release`: Unblocked
 `delay`: Processing delayed
-`reject`: Appeal dismissed. The status is still blocked.
+`reject`: Appeal dismissed. It is still in `forbid` status.
 `complain`: Appeal in process
- * @method void setUrlStatus(string $UrlStatus) Set Current status of the resources in violation
+ * @method void setUrlStatus(string $UrlStatus) Set Current status of non-compliant resource
 `forbid`: Blocked
 `release`: Unblocked
 `delay`: Processing delayed
-`reject`: Appeal dismissed. The status is still blocked.
+`reject`: Appeal dismissed. It is still in `forbid` status.
 `complain`: Appeal in process
  * @method string getCreateTime() Obtain Creation time
  * @method void setCreateTime(string $CreateTime) Set Creation time
@@ -61,11 +61,11 @@ class ViolationUrl extends AbstractModel
     public $DownloadUrl;
 
     /**
-     * @var string Current status of the resources in violation
+     * @var string Current status of non-compliant resource
 `forbid`: Blocked
 `release`: Unblocked
 `delay`: Processing delayed
-`reject`: Appeal dismissed. The status is still blocked.
+`reject`: Appeal dismissed. It is still in `forbid` status.
 `complain`: Appeal in process
      */
     public $UrlStatus;
@@ -84,11 +84,11 @@ class ViolationUrl extends AbstractModel
      * @param integer $Id ID
      * @param string $RealUrl Origin access URL of the resource in violation
      * @param string $DownloadUrl Snapshot path. This is used to display a snapshot of the content in violation on the console.
-     * @param string $UrlStatus Current status of the resources in violation
+     * @param string $UrlStatus Current status of non-compliant resource
 `forbid`: Blocked
 `release`: Unblocked
 `delay`: Processing delayed
-`reject`: Appeal dismissed. The status is still blocked.
+`reject`: Appeal dismissed. It is still in `forbid` status.
 `complain`: Appeal in process
      * @param string $CreateTime Creation time
      * @param string $UpdateTime Update time

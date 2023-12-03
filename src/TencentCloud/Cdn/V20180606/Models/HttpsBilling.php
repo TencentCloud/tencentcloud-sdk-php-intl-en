@@ -20,18 +20,28 @@ use TencentCloud\Common\AbstractModel;
 /**
  * HTTPS. When it’s disabled, HTTPS requests are blocked.
  *
- * @method string getSwitch() Obtain HTTPS (enabled by default), which will incur charges.
- * @method void setSwitch(string $Switch) Set HTTPS (enabled by default), which will incur charges.
+ * @method string getSwitch() Obtain Whether to enable HTTPS. Values:
+`on`: When it's enabled, HTTPS requests are allowed and incur charges. If not specified, his field uses the default value `on`.
+`off`: When it's disabled, HTTPS requests are blocked.
+
+ * @method void setSwitch(string $Switch) Set Whether to enable HTTPS. Values:
+`on`: When it's enabled, HTTPS requests are allowed and incur charges. If not specified, his field uses the default value `on`.
+`off`: When it's disabled, HTTPS requests are blocked.
  */
 class HttpsBilling extends AbstractModel
 {
     /**
-     * @var string HTTPS (enabled by default), which will incur charges.
+     * @var string Whether to enable HTTPS. Values:
+`on`: When it's enabled, HTTPS requests are allowed and incur charges. If not specified, his field uses the default value `on`.
+`off`: When it's disabled, HTTPS requests are blocked.
+
      */
     public $Switch;
 
     /**
-     * @param string $Switch HTTPS (enabled by default), which will incur charges.
+     * @param string $Switch Whether to enable HTTPS. Values:
+`on`: When it's enabled, HTTPS requests are allowed and incur charges. If not specified, his field uses the default value `on`.
+`off`: When it's disabled, HTTPS requests are blocked.
      */
     function __construct()
     {

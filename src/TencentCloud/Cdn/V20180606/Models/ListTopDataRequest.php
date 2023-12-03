@@ -21,21 +21,17 @@ use TencentCloud\Common\AbstractModel;
  * ListTopData request structure.
  *
  * @method string getStartTime() Obtain Query start time in the format of `yyyy-MM-dd HH:mm:ss`
-Only supports data query at daily granularity. The date in the input parameter is used as the start date.
-If the specified start date is greater than 00:00:00, it will be rounded down to 00:00:00 on the date. For example, if `StartTime` is 2018-09-04 10:40:00, it will be rounded down to 2018-09-04 00:00:00.
-Only data from the last 90 days will be queried.
+Only data queries at the granularity of minutes are supported. The start time is truncated to minutes. For example, if the value of `StartTime` is 2018-09-04 10:40:23, the start time of the data returned is 2018-09-04 10:40:00.
+Only data for the last 90 days can be queried.
  * @method void setStartTime(string $StartTime) Set Query start time in the format of `yyyy-MM-dd HH:mm:ss`
-Only supports data query at daily granularity. The date in the input parameter is used as the start date.
-If the specified start date is greater than 00:00:00, it will be rounded down to 00:00:00 on the date. For example, if `StartTime` is 2018-09-04 10:40:00, it will be rounded down to 2018-09-04 00:00:00.
-Only data from the last 90 days will be queried.
+Only data queries at the granularity of minutes are supported. The start time is truncated to minutes. For example, if the value of `StartTime` is 2018-09-04 10:40:23, the start time of the data returned is 2018-09-04 10:40:00.
+Only data for the last 90 days can be queried.
  * @method string getEndTime() Obtain Query end time in the format of `yyyy-MM-dd HH:mm:ss`
-Only supports data query at daily granularity. The date in the input parameter is used as the end date.
-If the specified end date is smaller than 23:59:59, it will be rounded up to 23:59:59 on the date. For example, if `EndTime` is 2018-09-05 22:40:00, it will be rounded up to 2018-09-05 23:59:59.
-`EndTime` must be later than or equal to `StartTime`
+Only data queries at the granularity of days are supported. Take the day in the input parameter as the end date, and the data generated on or before 23:59:59 on the end date is returned. For example, if the value of `EndTime` is 2018-09-05 22:40:00, the end time of the data returned is 2018-09-05 23:59:59.
+`EndTime` must be later than or equal to `StartTime`.
  * @method void setEndTime(string $EndTime) Set Query end time in the format of `yyyy-MM-dd HH:mm:ss`
-Only supports data query at daily granularity. The date in the input parameter is used as the end date.
-If the specified end date is smaller than 23:59:59, it will be rounded up to 23:59:59 on the date. For example, if `EndTime` is 2018-09-05 22:40:00, it will be rounded up to 2018-09-05 23:59:59.
-`EndTime` must be later than or equal to `StartTime`
+Only data queries at the granularity of days are supported. Take the day in the input parameter as the end date, and the data generated on or before 23:59:59 on the end date is returned. For example, if the value of `EndTime` is 2018-09-05 22:40:00, the end time of the data returned is 2018-09-05 23:59:59.
+`EndTime` must be later than or equal to `StartTime`.
  * @method string getMetric() Obtain Objects to be sorted. Valid values:
 `url`: Sort by access URL (URLs carrying no parameters). Supported filters are `flux` and `request`.
 `district`: sorts provinces or countries/regions. Supported filters are `flux` and `request`.
@@ -111,17 +107,15 @@ class ListTopDataRequest extends AbstractModel
 {
     /**
      * @var string Query start time in the format of `yyyy-MM-dd HH:mm:ss`
-Only supports data query at daily granularity. The date in the input parameter is used as the start date.
-If the specified start date is greater than 00:00:00, it will be rounded down to 00:00:00 on the date. For example, if `StartTime` is 2018-09-04 10:40:00, it will be rounded down to 2018-09-04 00:00:00.
-Only data from the last 90 days will be queried.
+Only data queries at the granularity of minutes are supported. The start time is truncated to minutes. For example, if the value of `StartTime` is 2018-09-04 10:40:23, the start time of the data returned is 2018-09-04 10:40:00.
+Only data for the last 90 days can be queried.
      */
     public $StartTime;
 
     /**
      * @var string Query end time in the format of `yyyy-MM-dd HH:mm:ss`
-Only supports data query at daily granularity. The date in the input parameter is used as the end date.
-If the specified end date is smaller than 23:59:59, it will be rounded up to 23:59:59 on the date. For example, if `EndTime` is 2018-09-05 22:40:00, it will be rounded up to 2018-09-05 23:59:59.
-`EndTime` must be later than or equal to `StartTime`
+Only data queries at the granularity of days are supported. Take the day in the input parameter as the end date, and the data generated on or before 23:59:59 on the end date is returned. For example, if the value of `EndTime` is 2018-09-05 22:40:00, the end time of the data returned is 2018-09-05 23:59:59.
+`EndTime` must be later than or equal to `StartTime`.
      */
     public $EndTime;
 
@@ -202,13 +196,11 @@ If `Metric` is `url`, `path`, `district`, or `isp` and `Filter` is `flux` or `re
 
     /**
      * @param string $StartTime Query start time in the format of `yyyy-MM-dd HH:mm:ss`
-Only supports data query at daily granularity. The date in the input parameter is used as the start date.
-If the specified start date is greater than 00:00:00, it will be rounded down to 00:00:00 on the date. For example, if `StartTime` is 2018-09-04 10:40:00, it will be rounded down to 2018-09-04 00:00:00.
-Only data from the last 90 days will be queried.
+Only data queries at the granularity of minutes are supported. The start time is truncated to minutes. For example, if the value of `StartTime` is 2018-09-04 10:40:23, the start time of the data returned is 2018-09-04 10:40:00.
+Only data for the last 90 days can be queried.
      * @param string $EndTime Query end time in the format of `yyyy-MM-dd HH:mm:ss`
-Only supports data query at daily granularity. The date in the input parameter is used as the end date.
-If the specified end date is smaller than 23:59:59, it will be rounded up to 23:59:59 on the date. For example, if `EndTime` is 2018-09-05 22:40:00, it will be rounded up to 2018-09-05 23:59:59.
-`EndTime` must be later than or equal to `StartTime`
+Only data queries at the granularity of days are supported. Take the day in the input parameter as the end date, and the data generated on or before 23:59:59 on the end date is returned. For example, if the value of `EndTime` is 2018-09-05 22:40:00, the end time of the data returned is 2018-09-05 23:59:59.
+`EndTime` must be later than or equal to `StartTime`.
      * @param string $Metric Objects to be sorted. Valid values:
 `url`: Sort by access URL (URLs carrying no parameters). Supported filters are `flux` and `request`.
 `district`: sorts provinces or countries/regions. Supported filters are `flux` and `request`.

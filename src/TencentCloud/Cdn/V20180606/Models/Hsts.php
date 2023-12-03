@@ -20,8 +20,12 @@ use TencentCloud\Common\AbstractModel;
 /**
  * HSTS configuration.
  *
- * @method string getSwitch() Obtain Whether to enable. Valid values: on, off.
- * @method void setSwitch(string $Switch) Set Whether to enable. Valid values: on, off.
+ * @method string getSwitch() Obtain Whether to enable HSTS. Values:
+`on`: Enable
+`off`: Disable
+ * @method void setSwitch(string $Switch) Set Whether to enable HSTS. Values:
+`on`: Enable
+`off`: Disable
  * @method integer getMaxAge() Obtain `MaxAge` value.
 Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method void setMaxAge(integer $MaxAge) Set `MaxAge` value.
@@ -34,7 +38,9 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 class Hsts extends AbstractModel
 {
     /**
-     * @var string Whether to enable. Valid values: on, off.
+     * @var string Whether to enable HSTS. Values:
+`on`: Enable
+`off`: Disable
      */
     public $Switch;
 
@@ -51,7 +57,9 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     public $IncludeSubDomains;
 
     /**
-     * @param string $Switch Whether to enable. Valid values: on, off.
+     * @param string $Switch Whether to enable HSTS. Values:
+`on`: Enable
+`off`: Disable
      * @param integer $MaxAge `MaxAge` value.
 Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param string $IncludeSubDomains Whether to include subdomain names. Valid values: on, off.

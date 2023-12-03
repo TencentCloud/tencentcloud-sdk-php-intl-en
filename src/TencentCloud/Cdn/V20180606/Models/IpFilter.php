@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * IP blocklist/allowlist configuration. This is disabled by default.
  *
- * @method string getSwitch() Obtain IP blocklist/allowlist configuration switch
+ * @method string getSwitch() Obtain Whether to enable IP blocklist/allowlist. Values:
 `on`: Enable
 `off`: Disable
- * @method void setSwitch(string $Switch) Set IP blocklist/allowlist configuration switch
+ * @method void setSwitch(string $Switch) Set Whether to enable IP blocklist/allowlist. Values:
 `on`: Enable
 `off`: Disable
  * @method string getFilterType() Obtain IP blocklist/allowlist type
@@ -54,7 +54,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 class IpFilter extends AbstractModel
 {
     /**
-     * @var string IP blocklist/allowlist configuration switch
+     * @var string Whether to enable IP blocklist/allowlist. Values:
 `on`: Enable
 `off`: Disable
      */
@@ -89,7 +89,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     public $ReturnCode;
 
     /**
-     * @param string $Switch IP blocklist/allowlist configuration switch
+     * @param string $Switch Whether to enable IP blocklist/allowlist. Values:
 `on`: Enable
 `off`: Disable
      * @param string $FilterType IP blocklist/allowlist type

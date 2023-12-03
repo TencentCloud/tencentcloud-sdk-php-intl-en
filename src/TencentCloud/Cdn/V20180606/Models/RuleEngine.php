@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Rule engine configuration
  *
- * @method string getSwitch() Obtain Specifies whether to enable rule engine
+ * @method string getSwitch() Obtain Whether to enable rule engine. Values:
 `on`: Enable
 `off`: Disable
- * @method void setSwitch(string $Switch) Set Specifies whether to enable rule engine
+ * @method void setSwitch(string $Switch) Set Whether to enable rule engine. Values:
 `on`: Enable
 `off`: Disable
  * @method string getContent() Obtain Rule
@@ -34,7 +34,7 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 class RuleEngine extends AbstractModel
 {
     /**
-     * @var string Specifies whether to enable rule engine
+     * @var string Whether to enable rule engine. Values:
 `on`: Enable
 `off`: Disable
      */
@@ -47,7 +47,7 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     public $Content;
 
     /**
-     * @param string $Switch Specifies whether to enable rule engine
+     * @param string $Switch Whether to enable rule engine. Values:
 `on`: Enable
 `off`: Disable
      * @param string $Content Rule

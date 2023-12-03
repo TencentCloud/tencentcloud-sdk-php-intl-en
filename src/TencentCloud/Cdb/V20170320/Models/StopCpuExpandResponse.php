@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * StopCpuExpand response structure.
  *
- * @method string getAsyncRequestId() Obtain Async task ID, which can be passed in by calling the u200c`DescribeAsyncRequest` API for task progress query.
- * @method void setAsyncRequestId(string $AsyncRequestId) Set Async task ID, which can be passed in by calling the u200c`DescribeAsyncRequest` API for task progress query.
+ * @method string getAsyncRequestId() Obtain Async task ID, which can be passed in by calling the `DescribeAsyncRequest` API for task progress query.
+ * @method void setAsyncRequestId(string $AsyncRequestId) Set Async task ID, which can be passed in by calling the `DescribeAsyncRequest` API for task progress query.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 class StopCpuExpandResponse extends AbstractModel
 {
     /**
-     * @var string Async task ID, which can be passed in by calling the u200c`DescribeAsyncRequest` API for task progress query.
+     * @var string Async task ID, which can be passed in by calling the `DescribeAsyncRequest` API for task progress query.
      */
     public $AsyncRequestId;
 
@@ -38,7 +38,7 @@ class StopCpuExpandResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $AsyncRequestId Async task ID, which can be passed in by calling the u200c`DescribeAsyncRequest` API for task progress query.
+     * @param string $AsyncRequestId Async task ID, which can be passed in by calling the `DescribeAsyncRequest` API for task progress query.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()

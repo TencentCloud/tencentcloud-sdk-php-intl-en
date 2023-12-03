@@ -23,17 +23,17 @@ use TencentCloud\Common\AbstractModel;
  * @method string getRecordName() Obtain The domain name.
  * @method void setRecordName(string $RecordName) Set The domain name.
  * @method string getCname() Obtain The CNAME address.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setCname(string $Cname) Set The CNAME address.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getStatus() Obtain The CNAME status. Values:
 <li>`active`: Activated</li>
 <li>`moved`: Not activated </li>
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setStatus(string $Status) Set The CNAME status. Values:
 <li>`active`: Activated</li>
 <li>`moved`: Not activated </li>
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class CnameStatus extends AbstractModel
 {
@@ -44,7 +44,7 @@ class CnameStatus extends AbstractModel
 
     /**
      * @var string The CNAME address.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Cname;
 
@@ -52,18 +52,18 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
      * @var string The CNAME status. Values:
 <li>`active`: Activated</li>
 <li>`moved`: Not activated </li>
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Status;
 
     /**
      * @param string $RecordName The domain name.
      * @param string $Cname The CNAME address.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $Status The CNAME status. Values:
 <li>`active`: Activated</li>
 <li>`moved`: Not activated </li>
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

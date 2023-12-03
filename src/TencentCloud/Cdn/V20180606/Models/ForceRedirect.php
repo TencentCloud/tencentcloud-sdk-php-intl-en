@@ -20,14 +20,14 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Access protocol forced redirect configuration. This is disabled by default.
  *
- * @method string getSwitch() Obtain Access forced redirect configuration switch
+ * @method string getSwitch() Obtain Whether to enable forced HTTPS redirects. Values:
 `on`: Enable
 `off`: Disable
-Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method void setSwitch(string $Switch) Set Access forced redirect configuration switch
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setSwitch(string $Switch) Set Whether to enable forced HTTPS redirects. Values:
 `on`: Enable
 `off`: Disable
-Note: This field may return `null`, indicating that no valid value can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
  * @method string getRedirectType() Obtain Access forced redirect types
 http: forced HTTP redirect
 https: forced HTTPS redirect
@@ -50,10 +50,10 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 class ForceRedirect extends AbstractModel
 {
     /**
-     * @var string Access forced redirect configuration switch
+     * @var string Whether to enable forced HTTPS redirects. Values:
 `on`: Enable
 `off`: Disable
-Note: This field may return `null`, indicating that no valid value can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public $Switch;
 
@@ -79,10 +79,10 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     public $CarryHeaders;
 
     /**
-     * @param string $Switch Access forced redirect configuration switch
+     * @param string $Switch Whether to enable forced HTTPS redirects. Values:
 `on`: Enable
 `off`: Disable
-Note: This field may return `null`, indicating that no valid value can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      * @param string $RedirectType Access forced redirect types
 http: forced HTTP redirect
 https: forced HTTPS redirect

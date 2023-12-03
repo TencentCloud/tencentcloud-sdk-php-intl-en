@@ -20,14 +20,14 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Status code cache expiration configuration. 404 status codes are cached for 10 seconds by default
  *
- * @method string getSwitch() Obtain Status code cache expiration configuration switch
+ * @method string getSwitch() Obtain Whether to enable status code caching. Values:
 `on`: Enable
 `off`: Disable
-Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method void setSwitch(string $Switch) Set Status code cache expiration configuration switch
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setSwitch(string $Switch) Set Whether to enable status code caching. Values:
 `on`: Enable
 `off`: Disable
-Note: This field may return `null`, indicating that no valid value can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
  * @method array getCacheRules() Obtain Status code cache expiration rules details
 Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method void setCacheRules(array $CacheRules) Set Status code cache expiration rules details
@@ -36,10 +36,10 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 class StatusCodeCache extends AbstractModel
 {
     /**
-     * @var string Status code cache expiration configuration switch
+     * @var string Whether to enable status code caching. Values:
 `on`: Enable
 `off`: Disable
-Note: This field may return `null`, indicating that no valid value can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public $Switch;
 
@@ -50,10 +50,10 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     public $CacheRules;
 
     /**
-     * @param string $Switch Status code cache expiration configuration switch
+     * @param string $Switch Whether to enable status code caching. Values:
 `on`: Enable
 `off`: Disable
-Note: This field may return `null`, indicating that no valid value can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      * @param array $CacheRules Status code cache expiration rules details
 Note: This field may return `null`, indicating that no valid value can be obtained.
      */

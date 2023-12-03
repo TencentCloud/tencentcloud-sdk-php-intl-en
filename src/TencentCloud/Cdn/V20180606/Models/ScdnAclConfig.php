@@ -20,8 +20,12 @@ use TencentCloud\Common\AbstractModel;
 /**
  * SCDN access control
  *
- * @method string getSwitch() Obtain Whether to enable. Valid values: `on` and `off`.
- * @method void setSwitch(string $Switch) Set Whether to enable. Valid values: `on` and `off`.
+ * @method string getSwitch() Obtain Whether to enable SCDN access. Values:
+`on`: Enable
+`off`: Disable
+ * @method void setSwitch(string $Switch) Set Whether to enable SCDN access. Values:
+`on`: Enable
+`off`: Disable
  * @method array getScriptData() Obtain This field is disused. Please use `AdvancedScriptData` instead.
 Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method void setScriptData(array $ScriptData) Set This field is disused. Please use `AdvancedScriptData` instead.
@@ -38,7 +42,9 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 class ScdnAclConfig extends AbstractModel
 {
     /**
-     * @var string Whether to enable. Valid values: `on` and `off`.
+     * @var string Whether to enable SCDN access. Values:
+`on`: Enable
+`off`: Disable
      */
     public $Switch;
 
@@ -61,7 +67,9 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     public $AdvancedScriptData;
 
     /**
-     * @param string $Switch Whether to enable. Valid values: `on` and `off`.
+     * @param string $Switch Whether to enable SCDN access. Values:
+`on`: Enable
+`off`: Disable
      * @param array $ScriptData This field is disused. Please use `AdvancedScriptData` instead.
 Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param ScdnErrorPage $ErrorPage Error page configuration

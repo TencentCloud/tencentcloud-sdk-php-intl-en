@@ -26,10 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSwitch(string $Switch) Set Whether to enable standard debugging. Values:
 <li>`on`: Enable</li>
 <li>`off`: Disable </li>
- * @method array getAllowClientIPList() Obtain Allowed client source. IPv4 and IPv6 addresses and network segments are supported. 0.0.0.0/0 indicates that all IPv4 clients can be debugged, and ::/0 indicates that all IPv6 clients can be debugged.
- * @method void setAllowClientIPList(array $AllowClientIPList) Set Allowed client source. IPv4 and IPv6 addresses and network segments are supported. 0.0.0.0/0 indicates that all IPv4 clients can be debugged, and ::/0 indicates that all IPv6 clients can be debugged.
- * @method string getExpireTime() Obtain The time when the standard debugging setting expires. If it is exceeded, this feature u200dbecomes invalid.
- * @method void setExpireTime(string $ExpireTime) Set The time when the standard debugging setting expires. If it is exceeded, this feature u200dbecomes invalid.
+ * @method array getAllowClientIPList() Obtain The client IP to allow. It can be an IPv4/IPv6 address or a CIDR block. If not specified, it means to allow any client IP
+ * @method void setAllowClientIPList(array $AllowClientIPList) Set The client IP to allow. It can be an IPv4/IPv6 address or a CIDR block. If not specified, it means to allow any client IP
+ * @method string getExpireTime() Obtain The time when the standard debugging setting expires. If it is exceeded, this feature becomes invalid.
+ * @method void setExpireTime(string $ExpireTime) Set The time when the standard debugging setting expires. If it is exceeded, this feature becomes invalid.
  */
 class StandardDebug extends AbstractModel
 {
@@ -41,12 +41,12 @@ class StandardDebug extends AbstractModel
     public $Switch;
 
     /**
-     * @var array Allowed client source. IPv4 and IPv6 addresses and network segments are supported. 0.0.0.0/0 indicates that all IPv4 clients can be debugged, and ::/0 indicates that all IPv6 clients can be debugged.
+     * @var array The client IP to allow. It can be an IPv4/IPv6 address or a CIDR block. If not specified, it means to allow any client IP
      */
     public $AllowClientIPList;
 
     /**
-     * @var string The time when the standard debugging setting expires. If it is exceeded, this feature u200dbecomes invalid.
+     * @var string The time when the standard debugging setting expires. If it is exceeded, this feature becomes invalid.
      */
     public $ExpireTime;
 
@@ -54,8 +54,8 @@ class StandardDebug extends AbstractModel
      * @param string $Switch Whether to enable standard debugging. Values:
 <li>`on`: Enable</li>
 <li>`off`: Disable </li>
-     * @param array $AllowClientIPList Allowed client source. IPv4 and IPv6 addresses and network segments are supported. 0.0.0.0/0 indicates that all IPv4 clients can be debugged, and ::/0 indicates that all IPv6 clients can be debugged.
-     * @param string $ExpireTime The time when the standard debugging setting expires. If it is exceeded, this feature u200dbecomes invalid.
+     * @param array $AllowClientIPList The client IP to allow. It can be an IPv4/IPv6 address or a CIDR block. If not specified, it means to allow any client IP
+     * @param string $ExpireTime The time when the standard debugging setting expires. If it is exceeded, this feature becomes invalid.
      */
     function __construct()
     {

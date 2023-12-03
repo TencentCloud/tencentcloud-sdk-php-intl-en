@@ -34,6 +34,10 @@ use TencentCloud\Common\AbstractModel;
 `overseas`: Outside the Chinese mainland
  * @method string getLogName() Obtain Log package filename
  * @method void setLogName(string $LogName) Set Log package filename
+ * @method integer getFileSize() Obtain File size, in bytes.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setFileSize(integer $FileSize) Set File size, in bytes.
+Note: This field may return `null`, indicating that no valid values can be obtained.
  */
 class DomainLog extends AbstractModel
 {
@@ -65,6 +69,12 @@ class DomainLog extends AbstractModel
     public $LogName;
 
     /**
+     * @var integer File size, in bytes.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $FileSize;
+
+    /**
      * @param string $StartTime Starting time of the log package
      * @param string $EndTime End time of the log package
      * @param string $LogPath Log package download link
@@ -72,6 +82,8 @@ class DomainLog extends AbstractModel
 `mainland`: Within the Chinese mainland
 `overseas`: Outside the Chinese mainland
      * @param string $LogName Log package filename
+     * @param integer $FileSize File size, in bytes.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -104,6 +116,10 @@ class DomainLog extends AbstractModel
 
         if (array_key_exists("LogName",$param) and $param["LogName"] !== null) {
             $this->LogName = $param["LogName"];
+        }
+
+        if (array_key_exists("FileSize",$param) and $param["FileSize"] !== null) {
+            $this->FileSize = $param["FileSize"];
         }
     }
 }

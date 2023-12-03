@@ -124,10 +124,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setIsVulnerability(boolean $IsVulnerability) Set Whether the vulnerability scanning feature is enabled
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method boolean getRenewAble() Obtain Whether the certificate can be reissued
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setRenewAble(boolean $RenewAble) Set Whether the certificate can be reissued
-Note: this field may return null, indicating that no valid values can be obtained.
+ * @method boolean getRenewAble() Obtain Whether it can be renewed 
+Note: This field may return null, indicating that no valid value can be obtained.
+ * @method void setRenewAble(boolean $RenewAble) Set Whether it can be renewed 
+Note: This field may return null, indicating that no valid value can be obtained.
  * @method ProjectInfo getProjectInfo() Obtain Project information
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setProjectInfo(ProjectInfo $ProjectInfo) Set Project information
@@ -188,6 +188,46 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setHostingRenewCertId(string $HostingRenewCertId) Set The hosted new certificate ID.
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getHasRenewOrder() Obtain Existing renewed certificate ID
+Note: This field may return null, indicating that no valid value can be obtained.
+ * @method void setHasRenewOrder(string $HasRenewOrder) Set Existing renewed certificate ID
+Note: This field may return null, indicating that no valid value can be obtained.
+ * @method boolean getReplaceOriCertIsDelete() Obtain Whether the original certificate is deleted when a certificate is reissued.
+Note: This field may return null, indicating that no valid value can be obtained.
+ * @method void setReplaceOriCertIsDelete(boolean $ReplaceOriCertIsDelete) Set Whether the original certificate is deleted when a certificate is reissued.
+Note: This field may return null, indicating that no valid value can be obtained.
+ * @method boolean getIsExpiring() Obtain Whether the certificate is expiring soon. A certificate is considered to be expiring soon when there are 30 days or less left.
+Note: This field may return null, indicating that no valid value can be obtained.
+ * @method void setIsExpiring(boolean $IsExpiring) Set Whether the certificate is expiring soon. A certificate is considered to be expiring soon when there are 30 days or less left.
+Note: This field may return null, indicating that no valid value can be obtained.
+ * @method string getDVAuthDeadline() Obtain Validation expiration time for the addition of the DV certificate
+Note: This field may return null, indicating that no valid value can be obtained.
+ * @method void setDVAuthDeadline(string $DVAuthDeadline) Set Validation expiration time for the addition of the DV certificate
+Note: This field may return null, indicating that no valid value can be obtained.
+ * @method string getValidationPassedTime() Obtain Domain name validation pass time
+Note: This field may return null, indicating that no valid value can be obtained.
+ * @method void setValidationPassedTime(string $ValidationPassedTime) Set Domain name validation pass time
+Note: This field may return null, indicating that no valid value can be obtained.
+ * @method array getCertSANs() Obtain Multiple domain names with which the certificate is associated
+Note: This field may return null, indicating that no valid value can be obtained.
+ * @method void setCertSANs(array $CertSANs) Set Multiple domain names with which the certificate is associated
+Note: This field may return null, indicating that no valid value can be obtained.
+ * @method string getAwaitingValidationMsg() Obtain Domain name validation rejection information
+Note: This field may return null, indicating that no valid value can be obtained.
+ * @method void setAwaitingValidationMsg(string $AwaitingValidationMsg) Set Domain name validation rejection information
+Note: This field may return null, indicating that no valid value can be obtained.
+ * @method boolean getAllowDownload() Obtain Whether downloading is allowed
+Note: This field may return null, indicating that no valid value can be obtained.
+ * @method void setAllowDownload(boolean $AllowDownload) Set Whether downloading is allowed
+Note: This field may return null, indicating that no valid value can be obtained.
+ * @method boolean getIsDNSPODResolve() Obtain 
+ * @method void setIsDNSPODResolve(boolean $IsDNSPODResolve) Set 
+ * @method boolean getIsPackage() Obtain 
+ * @method void setIsPackage(boolean $IsPackage) Set 
+ * @method boolean getKeyPasswordCustomFlag() Obtain 
+ * @method void setKeyPasswordCustomFlag(boolean $KeyPasswordCustomFlag) Set 
+ * @method SupportDownloadType getSupportDownloadType() Obtain 
+ * @method void setSupportDownloadType(SupportDownloadType $SupportDownloadType) Set 
  */
 class Certificates extends AbstractModel
 {
@@ -344,8 +384,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $IsVulnerability;
 
     /**
-     * @var boolean Whether the certificate can be reissued
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var boolean Whether it can be renewed 
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public $RenewAble;
 
@@ -440,6 +480,74 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $HostingRenewCertId;
 
     /**
+     * @var string Existing renewed certificate ID
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public $HasRenewOrder;
+
+    /**
+     * @var boolean Whether the original certificate is deleted when a certificate is reissued.
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public $ReplaceOriCertIsDelete;
+
+    /**
+     * @var boolean Whether the certificate is expiring soon. A certificate is considered to be expiring soon when there are 30 days or less left.
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public $IsExpiring;
+
+    /**
+     * @var string Validation expiration time for the addition of the DV certificate
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public $DVAuthDeadline;
+
+    /**
+     * @var string Domain name validation pass time
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public $ValidationPassedTime;
+
+    /**
+     * @var array Multiple domain names with which the certificate is associated
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public $CertSANs;
+
+    /**
+     * @var string Domain name validation rejection information
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public $AwaitingValidationMsg;
+
+    /**
+     * @var boolean Whether downloading is allowed
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public $AllowDownload;
+
+    /**
+     * @var boolean 
+     */
+    public $IsDNSPODResolve;
+
+    /**
+     * @var boolean 
+     */
+    public $IsPackage;
+
+    /**
+     * @var boolean 
+     */
+    public $KeyPasswordCustomFlag;
+
+    /**
+     * @var SupportDownloadType 
+     */
+    public $SupportDownloadType;
+
+    /**
      * @param string $OwnerUin User UIN
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $ProjectId Project ID
@@ -492,8 +600,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param boolean $IsVulnerability Whether the vulnerability scanning feature is enabled
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param boolean $RenewAble Whether the certificate can be reissued
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @param boolean $RenewAble Whether it can be renewed 
+Note: This field may return null, indicating that no valid value can be obtained.
      * @param ProjectInfo $ProjectInfo Project information
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param array $BoundResource Associated Tencent Cloud services. Currently, this parameter is unavailable.
@@ -524,6 +632,26 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $HostingRenewCertId The hosted new certificate ID.
 Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $HasRenewOrder Existing renewed certificate ID
+Note: This field may return null, indicating that no valid value can be obtained.
+     * @param boolean $ReplaceOriCertIsDelete Whether the original certificate is deleted when a certificate is reissued.
+Note: This field may return null, indicating that no valid value can be obtained.
+     * @param boolean $IsExpiring Whether the certificate is expiring soon. A certificate is considered to be expiring soon when there are 30 days or less left.
+Note: This field may return null, indicating that no valid value can be obtained.
+     * @param string $DVAuthDeadline Validation expiration time for the addition of the DV certificate
+Note: This field may return null, indicating that no valid value can be obtained.
+     * @param string $ValidationPassedTime Domain name validation pass time
+Note: This field may return null, indicating that no valid value can be obtained.
+     * @param array $CertSANs Multiple domain names with which the certificate is associated
+Note: This field may return null, indicating that no valid value can be obtained.
+     * @param string $AwaitingValidationMsg Domain name validation rejection information
+Note: This field may return null, indicating that no valid value can be obtained.
+     * @param boolean $AllowDownload Whether downloading is allowed
+Note: This field may return null, indicating that no valid value can be obtained.
+     * @param boolean $IsDNSPODResolve 
+     * @param boolean $IsPackage 
+     * @param boolean $KeyPasswordCustomFlag 
+     * @param SupportDownloadType $SupportDownloadType 
      */
     function __construct()
     {
@@ -708,6 +836,55 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("HostingRenewCertId",$param) and $param["HostingRenewCertId"] !== null) {
             $this->HostingRenewCertId = $param["HostingRenewCertId"];
+        }
+
+        if (array_key_exists("HasRenewOrder",$param) and $param["HasRenewOrder"] !== null) {
+            $this->HasRenewOrder = $param["HasRenewOrder"];
+        }
+
+        if (array_key_exists("ReplaceOriCertIsDelete",$param) and $param["ReplaceOriCertIsDelete"] !== null) {
+            $this->ReplaceOriCertIsDelete = $param["ReplaceOriCertIsDelete"];
+        }
+
+        if (array_key_exists("IsExpiring",$param) and $param["IsExpiring"] !== null) {
+            $this->IsExpiring = $param["IsExpiring"];
+        }
+
+        if (array_key_exists("DVAuthDeadline",$param) and $param["DVAuthDeadline"] !== null) {
+            $this->DVAuthDeadline = $param["DVAuthDeadline"];
+        }
+
+        if (array_key_exists("ValidationPassedTime",$param) and $param["ValidationPassedTime"] !== null) {
+            $this->ValidationPassedTime = $param["ValidationPassedTime"];
+        }
+
+        if (array_key_exists("CertSANs",$param) and $param["CertSANs"] !== null) {
+            $this->CertSANs = $param["CertSANs"];
+        }
+
+        if (array_key_exists("AwaitingValidationMsg",$param) and $param["AwaitingValidationMsg"] !== null) {
+            $this->AwaitingValidationMsg = $param["AwaitingValidationMsg"];
+        }
+
+        if (array_key_exists("AllowDownload",$param) and $param["AllowDownload"] !== null) {
+            $this->AllowDownload = $param["AllowDownload"];
+        }
+
+        if (array_key_exists("IsDNSPODResolve",$param) and $param["IsDNSPODResolve"] !== null) {
+            $this->IsDNSPODResolve = $param["IsDNSPODResolve"];
+        }
+
+        if (array_key_exists("IsPackage",$param) and $param["IsPackage"] !== null) {
+            $this->IsPackage = $param["IsPackage"];
+        }
+
+        if (array_key_exists("KeyPasswordCustomFlag",$param) and $param["KeyPasswordCustomFlag"] !== null) {
+            $this->KeyPasswordCustomFlag = $param["KeyPasswordCustomFlag"];
+        }
+
+        if (array_key_exists("SupportDownloadType",$param) and $param["SupportDownloadType"] !== null) {
+            $this->SupportDownloadType = new SupportDownloadType();
+            $this->SupportDownloadType->deserialize($param["SupportDownloadType"]);
         }
     }
 }

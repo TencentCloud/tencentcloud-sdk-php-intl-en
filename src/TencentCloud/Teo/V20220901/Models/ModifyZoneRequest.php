@@ -24,10 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setZoneId(string $ZoneId) Set The site ID.
  * @method string getType() Obtain Access mode of the site. Values:
 <li> `full`: Access through a name server.</li>
-<li> `partial`: Access through a CNAME u200drecord. A site using domainless access can only switch to CNAME access. </li>The original configuration applies if this field is not specified.
+<li> `partial`: Access through a CNAME record. A site using domainless access can only switch to CNAME access. </li>The original configuration applies if this field is not specified.
  * @method void setType(string $Type) Set Access mode of the site. Values:
 <li> `full`: Access through a name server.</li>
-<li> `partial`: Access through a CNAME u200drecord. A site using domainless access can only switch to CNAME access. </li>The original configuration applies if this field is not specified.
+<li> `partial`: Access through a CNAME record. A site using domainless access can only switch to CNAME access. </li>The original configuration applies if this field is not specified.
  * @method VanityNameServers getVanityNameServers() Obtain The custom name servers. The original configuration applies if this field is not specified. It is not allowed to pass this field when a site is connected without using a domain name.
  * @method void setVanityNameServers(VanityNameServers $VanityNameServers) Set The custom name servers. The original configuration applies if this field is not specified. It is not allowed to pass this field when a site is connected without using a domain name.
  * @method string getAliasZoneName() Obtain The site alias. It can be up to 20 characters consisting of digits, letters, hyphens (-) and underscores (_).
@@ -53,7 +53,7 @@ class ModifyZoneRequest extends AbstractModel
     /**
      * @var string Access mode of the site. Values:
 <li> `full`: Access through a name server.</li>
-<li> `partial`: Access through a CNAME u200drecord. A site using domainless access can only switch to CNAME access. </li>The original configuration applies if this field is not specified.
+<li> `partial`: Access through a CNAME record. A site using domainless access can only switch to CNAME access. </li>The original configuration applies if this field is not specified.
      */
     public $Type;
 
@@ -84,7 +84,7 @@ class ModifyZoneRequest extends AbstractModel
      * @param string $ZoneId The site ID.
      * @param string $Type Access mode of the site. Values:
 <li> `full`: Access through a name server.</li>
-<li> `partial`: Access through a CNAME u200drecord. A site using domainless access can only switch to CNAME access. </li>The original configuration applies if this field is not specified.
+<li> `partial`: Access through a CNAME record. A site using domainless access can only switch to CNAME access. </li>The original configuration applies if this field is not specified.
      * @param VanityNameServers $VanityNameServers The custom name servers. The original configuration applies if this field is not specified. It is not allowed to pass this field when a site is connected without using a domain name.
      * @param string $AliasZoneName The site alias. It can be up to 20 characters consisting of digits, letters, hyphens (-) and underscores (_).
      * @param string $Area The region where the site requests access. Values:

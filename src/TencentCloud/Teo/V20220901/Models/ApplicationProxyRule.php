@@ -87,9 +87,9 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
 <li>A single port, such as 80</li>
 <li>A port range, such as 81-82</li>
  * @method string getRuleTag() Obtain Rule tag.
-Note: u200dThis field may returnu200d·`nullu200d`, indicating that no valid values can be obtained.
+Note: This field may return·`null`, indicating that no valid values can be obtained.
  * @method void setRuleTag(string $RuleTag) Set Rule tag.
-Note: u200dThis field may returnu200d·`nullu200d`, indicating that no valid values can be obtained.
+Note: This field may return·`null`, indicating that no valid values can be obtained.
  */
 class ApplicationProxyRule extends AbstractModel
 {
@@ -168,7 +168,7 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
 
     /**
      * @var string Rule tag.
-Note: u200dThis field may returnu200d·`nullu200d`, indicating that no valid values can be obtained.
+Note: This field may return·`null`, indicating that no valid values can be obtained.
      */
     public $RuleTag;
 
@@ -207,7 +207,7 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
 <li>A single port, such as 80</li>
 <li>A port range, such as 81-82</li>
      * @param string $RuleTag Rule tag.
-Note: u200dThis field may returnu200d·`nullu200d`, indicating that no valid values can be obtained.
+Note: This field may return·`null`, indicating that no valid values can be obtained.
      */
     function __construct()
     {

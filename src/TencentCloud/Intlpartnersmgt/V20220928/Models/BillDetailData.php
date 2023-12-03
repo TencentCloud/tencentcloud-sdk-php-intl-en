@@ -154,6 +154,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setTotalCost(string $TotalCost) Set Total cost = discounted total - voucher deduction
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getId() Obtain ID
+Note: The return value may be null, indicating that no valid data can be obtained.
+ * @method void setId(string $Id) Set ID
+Note: The return value may be null, indicating that no valid data can be obtained.
  */
 class BillDetailData extends AbstractModel
 {
@@ -345,6 +349,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $TotalCost;
 
     /**
+     * @var string ID
+Note: The return value may be null, indicating that no valid data can be obtained.
+     */
+    public $Id;
+
+    /**
      * @param integer $PayerAccountId Reseller account
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $OwnerAccountId Customer account
@@ -412,6 +422,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $TotalCost Total cost = discounted total - voucher deduction
 Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $Id ID
+Note: The return value may be null, indicating that no valid data can be obtained.
      */
     function __construct()
     {
@@ -544,6 +556,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("TotalCost",$param) and $param["TotalCost"] !== null) {
             $this->TotalCost = $param["TotalCost"];
+        }
+
+        if (array_key_exists("Id",$param) and $param["Id"] !== null) {
+            $this->Id = $param["Id"];
         }
     }
 }

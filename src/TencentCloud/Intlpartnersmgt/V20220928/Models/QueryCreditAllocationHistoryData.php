@@ -28,6 +28,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCredit(float $Credit) Set Allocated credit value
  * @method float getAllocatedCredit() Obtain The allocated total credit
  * @method void setAllocatedCredit(float $AllocatedCredit) Set The allocated total credit
+ * @method float getClientCreditAfter() Obtain Available credits after allocation
+Note: The return value may be null, indicating that no valid data can be obtained.
+ * @method void setClientCreditAfter(float $ClientCreditAfter) Set Available credits after allocation
+Note: The return value may be null, indicating that no valid data can be obtained.
  */
 class QueryCreditAllocationHistoryData extends AbstractModel
 {
@@ -52,10 +56,18 @@ class QueryCreditAllocationHistoryData extends AbstractModel
     public $AllocatedCredit;
 
     /**
+     * @var float Available credits after allocation
+Note: The return value may be null, indicating that no valid data can be obtained.
+     */
+    public $ClientCreditAfter;
+
+    /**
      * @param string $AllocatedTime Allocation time
      * @param string $Operator Operator
      * @param float $Credit Allocated credit value
      * @param float $AllocatedCredit The allocated total credit
+     * @param float $ClientCreditAfter Available credits after allocation
+Note: The return value may be null, indicating that no valid data can be obtained.
      */
     function __construct()
     {
@@ -84,6 +96,10 @@ class QueryCreditAllocationHistoryData extends AbstractModel
 
         if (array_key_exists("AllocatedCredit",$param) and $param["AllocatedCredit"] !== null) {
             $this->AllocatedCredit = $param["AllocatedCredit"];
+        }
+
+        if (array_key_exists("ClientCreditAfter",$param) and $param["ClientCreditAfter"] !== null) {
+            $this->ClientCreditAfter = $param["ClientCreditAfter"];
         }
     }
 }

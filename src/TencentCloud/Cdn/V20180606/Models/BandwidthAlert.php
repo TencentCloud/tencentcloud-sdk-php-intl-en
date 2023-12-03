@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Bandwidth cap configuration. This is disabled by default.
  *
- * @method string getSwitch() Obtain Specifies whether to enable the bandwidth cap
+ * @method string getSwitch() Obtain Whether to enable usage limit. Values:
 `on`: Enable
 `off`: Disable
- * @method void setSwitch(string $Switch) Set Specifies whether to enable the bandwidth cap
+ * @method void setSwitch(string $Switch) Set Whether to enable usage limit. Values:
 `on`: Enable
 `off`: Disable
  * @method integer getBpsThreshold() Obtain The upper limit of bandwidth usage (in bps) or traffic usage (in bytes).
@@ -40,14 +40,14 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method void setLastTriggerTime(string $LastTriggerTime) Set The last time when the usage upper limit in the Chinese mainland was reached
 Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method string getAlertSwitch() Obtain Indicates whether to trigger alerts when the upper limit is reached
+ * @method string getAlertSwitch() Obtain Whether to enable alerts for usage limit. Values:
 `on`: Enable
 `off`: Disable
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setAlertSwitch(string $AlertSwitch) Set Indicates whether to trigger alerts when the upper limit is reached
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setAlertSwitch(string $AlertSwitch) Set Whether to enable alerts for usage limit. Values:
 `on`: Enable
 `off`: Disable
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
  * @method integer getAlertPercentage() Obtain Triggers alarms when the ratio of bandwidth or traffic usage to the usage upper limit reaches the specified value
 Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method void setAlertPercentage(integer $AlertPercentage) Set Triggers alarms when the ratio of bandwidth or traffic usage to the usage upper limit reaches the specified value
@@ -72,7 +72,7 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 class BandwidthAlert extends AbstractModel
 {
     /**
-     * @var string Specifies whether to enable the bandwidth cap
+     * @var string Whether to enable usage limit. Values:
 `on`: Enable
 `off`: Disable
      */
@@ -98,10 +98,10 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     public $LastTriggerTime;
 
     /**
-     * @var string Indicates whether to trigger alerts when the upper limit is reached
+     * @var string Whether to enable alerts for usage limit. Values:
 `on`: Enable
 `off`: Disable
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public $AlertSwitch;
 
@@ -132,7 +132,7 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     public $StatisticItems;
 
     /**
-     * @param string $Switch Specifies whether to enable the bandwidth cap
+     * @param string $Switch Whether to enable usage limit. Values:
 `on`: Enable
 `off`: Disable
      * @param integer $BpsThreshold The upper limit of bandwidth usage (in bps) or traffic usage (in bytes).
@@ -142,10 +142,10 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param string $LastTriggerTime The last time when the usage upper limit in the Chinese mainland was reached
 Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param string $AlertSwitch Indicates whether to trigger alerts when the upper limit is reached
+     * @param string $AlertSwitch Whether to enable alerts for usage limit. Values:
 `on`: Enable
 `off`: Disable
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      * @param integer $AlertPercentage Triggers alarms when the ratio of bandwidth or traffic usage to the usage upper limit reaches the specified value
 Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param string $LastTriggerTimeOverseas The last time when the usage outside the Chinese mainland reached the upper limit

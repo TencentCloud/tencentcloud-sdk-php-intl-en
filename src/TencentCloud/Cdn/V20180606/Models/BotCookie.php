@@ -20,8 +20,12 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Bot cookie policy
  *
- * @method string getSwitch() Obtain Valid values: `on` and `off`.
- * @method void setSwitch(string $Switch) Set Valid values: `on` and `off`.
+ * @method string getSwitch() Obtain Whether to enable bot cookie policies. Values:
+`on`: Enable
+`off`: Disable
+ * @method void setSwitch(string $Switch) Set Whether to enable bot cookie policies. Values:
+`on`: Enable
+`off`: Disable
  * @method string getRuleType() Obtain Rule type, which can only be `all` currently.
  * @method void setRuleType(string $RuleType) Set Rule type, which can only be `all` currently.
  * @method array getRuleValue() Obtain Rule value. Valid value: `*`.
@@ -40,7 +44,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
 class BotCookie extends AbstractModel
 {
     /**
-     * @var string Valid values: `on` and `off`.
+     * @var string Whether to enable bot cookie policies. Values:
+`on`: Enable
+`off`: Disable
      */
     public $Switch;
 
@@ -72,7 +78,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $UpdateTime;
 
     /**
-     * @param string $Switch Valid values: `on` and `off`.
+     * @param string $Switch Whether to enable bot cookie policies. Values:
+`on`: Enable
+`off`: Disable
      * @param string $RuleType Rule type, which can only be `all` currently.
      * @param array $RuleValue Rule value. Valid value: `*`.
      * @param string $Action Action. Valid values: `monitor`, `intercept`, `redirect`, and `captcha`.

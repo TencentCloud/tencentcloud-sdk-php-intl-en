@@ -20,8 +20,12 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Access authentication for QiNiu Cloud Kodo origin
  *
- * @method string getSwitch() Obtain Switch. Valid values: `on`, `off`.
- * @method void setSwitch(string $Switch) Set Switch. Valid values: `on`, `off`.
+ * @method string getSwitch() Obtain Whether to enable origin-pull authentication for QiNiu Cloud Kodo. Values:
+`on`: Enable
+`off`: Disable
+ * @method void setSwitch(string $Switch) Set Whether to enable origin-pull authentication for QiNiu Cloud Kodo. Values:
+`on`: Enable
+`off`: Disable
  * @method string getAccessKey() Obtain Access ID
 Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method void setAccessKey(string $AccessKey) Set Access ID
@@ -32,7 +36,9 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 class QnPrivateAccess extends AbstractModel
 {
     /**
-     * @var string Switch. Valid values: `on`, `off`.
+     * @var string Whether to enable origin-pull authentication for QiNiu Cloud Kodo. Values:
+`on`: Enable
+`off`: Disable
      */
     public $Switch;
 
@@ -48,7 +54,9 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     public $SecretKey;
 
     /**
-     * @param string $Switch Switch. Valid values: `on`, `off`.
+     * @param string $Switch Whether to enable origin-pull authentication for QiNiu Cloud Kodo. Values:
+`on`: Enable
+`off`: Disable
      * @param string $AccessKey Access ID
 Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param string $SecretKey Key

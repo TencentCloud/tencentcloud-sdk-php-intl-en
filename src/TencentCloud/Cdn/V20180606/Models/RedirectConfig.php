@@ -20,8 +20,12 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Host header for 302 redirects
  *
- * @method string getSwitch() Obtain Configuration switch
- * @method void setSwitch(string $Switch) Set Configuration switch
+ * @method string getSwitch() Obtain Whether to enable the custom origin-pull request to follow the host when a 302 code is returned. Values:
+`on`: Enable
+`off`: Disable
+ * @method void setSwitch(string $Switch) Set Whether to enable the custom origin-pull request to follow the host when a 302 code is returned. Values:
+`on`: Enable
+`off`: Disable
  * @method string getFollowRedirectHost() Obtain The custom host header that is sent when the primary origin server follows 302 redirects
  * @method void setFollowRedirectHost(string $FollowRedirectHost) Set The custom host header that is sent when the primary origin server follows 302 redirects
  * @method string getFollowRedirectBackupHost() Obtain The custom host header that is sent when the secondary origin server follows 302 redirects
@@ -30,7 +34,9 @@ use TencentCloud\Common\AbstractModel;
 class RedirectConfig extends AbstractModel
 {
     /**
-     * @var string Configuration switch
+     * @var string Whether to enable the custom origin-pull request to follow the host when a 302 code is returned. Values:
+`on`: Enable
+`off`: Disable
      */
     public $Switch;
 
@@ -45,7 +51,9 @@ class RedirectConfig extends AbstractModel
     public $FollowRedirectBackupHost;
 
     /**
-     * @param string $Switch Configuration switch
+     * @param string $Switch Whether to enable the custom origin-pull request to follow the host when a 302 code is returned. Values:
+`on`: Enable
+`off`: Disable
      * @param string $FollowRedirectHost The custom host header that is sent when the primary origin server follows 302 redirects
      * @param string $FollowRedirectBackupHost The custom host header that is sent when the secondary origin server follows 302 redirects
      */

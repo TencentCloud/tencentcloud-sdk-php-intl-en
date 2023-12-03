@@ -20,10 +20,14 @@ use TencentCloud\Common\AbstractModel;
 /**
  * A part of `CacheKey`
  *
- * @method string getSwitch() Obtain Whether to use `CacheTag` as part of `CacheKey`
-Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method void setSwitch(string $Switch) Set Whether to use `CacheTag` as part of `CacheKey`
-Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method string getSwitch() Obtain Whether to include `CacheTag` as part of `CacheKey`. Values:
+`on`: Yes
+`off`: No
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setSwitch(string $Switch) Set Whether to include `CacheTag` as part of `CacheKey`. Values:
+`on`: Yes
+`off`: No
+Note: This field may return `null`, indicating that no valid values can be obtained.
  * @method string getValue() Obtain Value of custom `CacheTag`
 Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method void setValue(string $Value) Set Value of custom `CacheTag`
@@ -32,8 +36,10 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 class CacheTagKey extends AbstractModel
 {
     /**
-     * @var string Whether to use `CacheTag` as part of `CacheKey`
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @var string Whether to include `CacheTag` as part of `CacheKey`. Values:
+`on`: Yes
+`off`: No
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public $Switch;
 
@@ -44,8 +50,10 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     public $Value;
 
     /**
-     * @param string $Switch Whether to use `CacheTag` as part of `CacheKey`
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param string $Switch Whether to include `CacheTag` as part of `CacheKey`. Values:
+`on`: Yes
+`off`: No
+Note: This field may return `null`, indicating that no valid values can be obtained.
      * @param string $Value Value of custom `CacheTag`
 Note: This field may return `null`, indicating that no valid value can be obtained.
      */

@@ -20,8 +20,12 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CC attack defense configuration
  *
- * @method string getSwitch() Obtain Valid values: `on` and `off`.
- * @method void setSwitch(string $Switch) Set Valid values: `on` and `off`.
+ * @method string getSwitch() Obtain Whether to enable SCDN CC configuration. Values:
+`on`: Enable
+`off`: Disable
+ * @method void setSwitch(string $Switch) Set Whether to enable SCDN CC configuration. Values:
+`on`: Enable
+`off`: Disable
  * @method array getRules() Obtain Custom CC attack defense rule
 Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method void setRules(array $Rules) Set Custom CC attack defense rule
@@ -38,7 +42,9 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 class ScdnConfig extends AbstractModel
 {
     /**
-     * @var string Valid values: `on` and `off`.
+     * @var string Whether to enable SCDN CC configuration. Values:
+`on`: Enable
+`off`: Disable
      */
     public $Switch;
 
@@ -61,7 +67,9 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     public $GlobalAdvancedRules;
 
     /**
-     * @param string $Switch Valid values: `on` and `off`.
+     * @param string $Switch Whether to enable SCDN CC configuration. Values:
+`on`: Enable
+`off`: Disable
      * @param array $Rules Custom CC attack defense rule
 Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param array $AdvancedRules Advanced custom CC attack defense rule

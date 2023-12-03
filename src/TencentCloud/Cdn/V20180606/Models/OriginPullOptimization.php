@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * (Disused) Cross-border origin-pull optimization
  *
- * @method string getSwitch() Obtain Cross-border origin-pull optimization configuration switch
+ * @method string getSwitch() Obtain Whether to enable cross-MLC-border origin-pull optimization. Values:
 `on`: Enable
 `off`: Disable
- * @method void setSwitch(string $Switch) Set Cross-border origin-pull optimization configuration switch
+ * @method void setSwitch(string $Switch) Set Whether to enable cross-MLC-border origin-pull optimization. Values:
 `on`: Enable
 `off`: Disable
  * @method string getOptimizationType() Obtain Cross-border types
@@ -38,7 +38,7 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 class OriginPullOptimization extends AbstractModel
 {
     /**
-     * @var string Cross-border origin-pull optimization configuration switch
+     * @var string Whether to enable cross-MLC-border origin-pull optimization. Values:
 `on`: Enable
 `off`: Disable
      */
@@ -53,7 +53,7 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     public $OptimizationType;
 
     /**
-     * @param string $Switch Cross-border origin-pull optimization configuration switch
+     * @param string $Switch Whether to enable cross-MLC-border origin-pull optimization. Values:
 `on`: Enable
 `off`: Disable
      * @param string $OptimizationType Cross-border types

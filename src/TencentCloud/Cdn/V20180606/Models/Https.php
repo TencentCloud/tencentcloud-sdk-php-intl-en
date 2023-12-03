@@ -20,14 +20,14 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Domain name HTTPS acceleration configuration. This is disabled by default.
  *
- * @method string getSwitch() Obtain HTTPS configuration switch
+ * @method string getSwitch() Obtain Whether to enable HTTPS. Values:
 `on`: Enable
 `off`: Disable
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setSwitch(string $Switch) Set HTTPS configuration switch
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setSwitch(string $Switch) Set Whether to enable HTTPS. Values:
 `on`: Enable
 `off`: Disable
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
  * @method string getHttp2() Obtain Whether to enable HTTP2
 `on`: Enable
 `off`: Disable
@@ -98,10 +98,10 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 class Https extends AbstractModel
 {
     /**
-     * @var string HTTPS configuration switch
+     * @var string Whether to enable HTTPS. Values:
 `on`: Enable
 `off`: Disable
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public $Switch;
 
@@ -175,10 +175,10 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     public $TlsVersion;
 
     /**
-     * @param string $Switch HTTPS configuration switch
+     * @param string $Switch Whether to enable HTTPS. Values:
 `on`: Enable
 `off`: Disable
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      * @param string $Http2 Whether to enable HTTP2
 `on`: Enable
 `off`: Disable

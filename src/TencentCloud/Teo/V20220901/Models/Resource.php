@@ -64,16 +64,16 @@ use TencentCloud\Common\AbstractModel;
 <li>`plan`: Plan resources</li>
 <li>`pay-as-you-go`: Pay-as-you-go resources </li>
 <li>`value-added`: Value-added resources </li>
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setGroup(string $Group) Set The resource type. Values:
 <li>`plan`: Plan resources</li>
 <li>`pay-as-you-go`: Pay-as-you-go resources </li>
 <li>`value-added`: Value-added resources </li>
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method integer getZoneNumber() Obtain The sites that are associated with the current resources.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setZoneNumber(integer $ZoneNumber) Set The sites that are associated with the current resources.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class Resource extends AbstractModel
 {
@@ -142,13 +142,13 @@ class Resource extends AbstractModel
 <li>`plan`: Plan resources</li>
 <li>`pay-as-you-go`: Pay-as-you-go resources </li>
 <li>`value-added`: Value-added resources </li>
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Group;
 
     /**
      * @var integer The sites that are associated with the current resources.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ZoneNumber;
 
@@ -177,9 +177,9 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
 <li>`plan`: Plan resources</li>
 <li>`pay-as-you-go`: Pay-as-you-go resources </li>
 <li>`value-added`: Value-added resources </li>
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $ZoneNumber The sites that are associated with the current resources.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

@@ -40,20 +40,28 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method void setAlertPercentage(integer $AlertPercentage) Set Threshold (in percentage) that triggers alarms
 Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method string getAlertSwitch() Obtain Whether to enable the alarm threshold trigger. Values: `on`, `off`.
-Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method void setAlertSwitch(string $AlertSwitch) Set Whether to enable the alarm threshold trigger. Values: `on`, `off`.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method string getAlertSwitch() Obtain Whether to enable alerts for cumulative usage limit. Values:
+`on`: Enable
+`off`: Disable
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setAlertSwitch(string $AlertSwitch) Set Whether to enable alerts for cumulative usage limit. Values:
+`on`: Enable
+`off`: Disable
+Note: This field may return `null`, indicating that no valid values can be obtained.
  * @method string getMetric() Obtain Metric type. `flux`: Traffic; `bandwidth`: Bandwidth.
 Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method void setMetric(string $Metric) Set Metric type. `flux`: Traffic; `bandwidth`: Bandwidth.
 Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method integer getCycle() Obtain 
  * @method void setCycle(integer $Cycle) Set 
- * @method string getSwitch() Obtain Whether to enable usage limit configuration. Values: `on`, `off`.
-Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method void setSwitch(string $Switch) Set Whether to enable usage limit configuration. Values: `on`, `off`.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method string getSwitch() Obtain Whether to enable cumulative usage limit. Values:
+`on`: Enable
+`off`: Disable
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setSwitch(string $Switch) Set Whether to enable cumulative usage limit. Values:
+`on`: Enable
+`off`: Disable
+Note: This field may return `null`, indicating that no valid values can be obtained.
  */
 class StatisticItem extends AbstractModel
 {
@@ -88,8 +96,10 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     public $AlertPercentage;
 
     /**
-     * @var string Whether to enable the alarm threshold trigger. Values: `on`, `off`.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @var string Whether to enable alerts for cumulative usage limit. Values:
+`on`: Enable
+`off`: Disable
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public $AlertSwitch;
 
@@ -105,8 +115,10 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     public $Cycle;
 
     /**
-     * @var string Whether to enable usage limit configuration. Values: `on`, `off`.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @var string Whether to enable cumulative usage limit. Values:
+`on`: Enable
+`off`: Disable
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public $Switch;
 
@@ -121,13 +133,17 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param integer $AlertPercentage Threshold (in percentage) that triggers alarms
 Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param string $AlertSwitch Whether to enable the alarm threshold trigger. Values: `on`, `off`.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param string $AlertSwitch Whether to enable alerts for cumulative usage limit. Values:
+`on`: Enable
+`off`: Disable
+Note: This field may return `null`, indicating that no valid values can be obtained.
      * @param string $Metric Metric type. `flux`: Traffic; `bandwidth`: Bandwidth.
 Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param integer $Cycle 
-     * @param string $Switch Whether to enable usage limit configuration. Values: `on`, `off`.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param string $Switch Whether to enable cumulative usage limit. Values:
+`on`: Enable
+`off`: Disable
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
     {

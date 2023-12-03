@@ -44,6 +44,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setSMCert(integer $SMCert) Set Whether the certificate is a Chinese SM certificate.
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getCompanyType() Obtain Company type
+Note: This field may return null, indicating that no valid value can be obtained.
+ * @method void setCompanyType(integer $CompanyType) Set Company type
+Note: This field may return null, indicating that no valid value can be obtained.
  */
 class CertificateExtra extends AbstractModel
 {
@@ -84,6 +88,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $SMCert;
 
     /**
+     * @var integer Company type
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public $CompanyType;
+
+    /**
      * @param string $DomainNumber Number of domain names which can be associated with the certificate
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $OriginCertificateId Original certificate ID
@@ -96,6 +106,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param integer $SMCert Whether the certificate is a Chinese SM certificate.
 Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $CompanyType Company type
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     function __construct()
     {
@@ -132,6 +144,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("SMCert",$param) and $param["SMCert"] !== null) {
             $this->SMCert = $param["SMCert"];
+        }
+
+        if (array_key_exists("CompanyType",$param) and $param["CompanyType"] !== null) {
+            $this->CompanyType = $param["CompanyType"];
         }
     }
 }

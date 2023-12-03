@@ -67,15 +67,15 @@ use TencentCloud\Common\AbstractModel;
 <li>`hour`: 1 hour;</li>
 <li>`day`: One day</li>If this field is not specified, the granularity will be determined based on the query period. <br>Period ≤ 1 hour: `min`; <br>1 hour < Period ≤ 2 days: `5min`; <br>2 days < period ≤ 7 days: `hour`; <br>Period > 7 days: `day`.
  * @method array getFilters() Obtain Filtering condition. The detailed filtering condition key values are as follows: 
-<li>socket<br>    Filter based on [<strong>HTTP protocol type</strong>]. <br>    Corresponding value options: <br>    HTTP: HTTP protocol；<br>    HTTPS: HTTPS protocol;<br>    QUIC: QUIC protocol. </li>
-<li>domains<br>    Filter based on [<strong>domain name</strong>]. </li>
-<li>tagKey<br>    Filter based on [<strong>Tag Key</strong>]. </li>
-<li>tagValue<br>    Filter based on [<strong>Tag Value</strong>]. </li>
+<li>socket<br>u2003u2003 Filter based on [<strong>HTTP protocol type</strong>]. <br>u2003u2003 Corresponding value options: <br>u2003u2003 HTTP: HTTP protocol；<br>u2003u2003 HTTPS: HTTPS protocol;<br>u2003u2003 QUIC: QUIC protocol. </li>
+<li>domains<br>u2003u2003 Filter based on [<strong>domain name</strong>]. </li>
+<li>tagKey<br>u2003u2003 Filter based on [<strong>Tag Key</strong>]. </li>
+<li>tagValue<br>u2003u2003 Filter based on [<strong>Tag Value</strong>]. </li>
  * @method void setFilters(array $Filters) Set Filtering condition. The detailed filtering condition key values are as follows: 
-<li>socket<br>    Filter based on [<strong>HTTP protocol type</strong>]. <br>    Corresponding value options: <br>    HTTP: HTTP protocol；<br>    HTTPS: HTTPS protocol;<br>    QUIC: QUIC protocol. </li>
-<li>domains<br>    Filter based on [<strong>domain name</strong>]. </li>
-<li>tagKey<br>    Filter based on [<strong>Tag Key</strong>]. </li>
-<li>tagValue<br>    Filter based on [<strong>Tag Value</strong>]. </li>
+<li>socket<br>u2003u2003 Filter based on [<strong>HTTP protocol type</strong>]. <br>u2003u2003 Corresponding value options: <br>u2003u2003 HTTP: HTTP protocol；<br>u2003u2003 HTTPS: HTTPS protocol;<br>u2003u2003 QUIC: QUIC protocol. </li>
+<li>domains<br>u2003u2003 Filter based on [<strong>domain name</strong>]. </li>
+<li>tagKey<br>u2003u2003 Filter based on [<strong>Tag Key</strong>]. </li>
+<li>tagValue<br>u2003u2003 Filter based on [<strong>Tag Value</strong>]. </li>
  * @method string getArea() Obtain Geolocation scope. Values:
 <li>`overseas`: Regions outside the Chinese mainland</li>
 <li>`mainland`: Chinese mainland</li>
@@ -140,10 +140,10 @@ class DescribeOverviewL7DataRequest extends AbstractModel
 
     /**
      * @var array Filtering condition. The detailed filtering condition key values are as follows: 
-<li>socket<br>    Filter based on [<strong>HTTP protocol type</strong>]. <br>    Corresponding value options: <br>    HTTP: HTTP protocol；<br>    HTTPS: HTTPS protocol;<br>    QUIC: QUIC protocol. </li>
-<li>domains<br>    Filter based on [<strong>domain name</strong>]. </li>
-<li>tagKey<br>    Filter based on [<strong>Tag Key</strong>]. </li>
-<li>tagValue<br>    Filter based on [<strong>Tag Value</strong>]. </li>
+<li>socket<br>u2003u2003 Filter based on [<strong>HTTP protocol type</strong>]. <br>u2003u2003 Corresponding value options: <br>u2003u2003 HTTP: HTTP protocol；<br>u2003u2003 HTTPS: HTTPS protocol;<br>u2003u2003 QUIC: QUIC protocol. </li>
+<li>domains<br>u2003u2003 Filter based on [<strong>domain name</strong>]. </li>
+<li>tagKey<br>u2003u2003 Filter based on [<strong>Tag Key</strong>]. </li>
+<li>tagValue<br>u2003u2003 Filter based on [<strong>Tag Value</strong>]. </li>
      */
     public $Filters;
 
@@ -180,10 +180,10 @@ class DescribeOverviewL7DataRequest extends AbstractModel
 <li>`hour`: 1 hour;</li>
 <li>`day`: One day</li>If this field is not specified, the granularity will be determined based on the query period. <br>Period ≤ 1 hour: `min`; <br>1 hour < Period ≤ 2 days: `5min`; <br>2 days < period ≤ 7 days: `hour`; <br>Period > 7 days: `day`.
      * @param array $Filters Filtering condition. The detailed filtering condition key values are as follows: 
-<li>socket<br>    Filter based on [<strong>HTTP protocol type</strong>]. <br>    Corresponding value options: <br>    HTTP: HTTP protocol；<br>    HTTPS: HTTPS protocol;<br>    QUIC: QUIC protocol. </li>
-<li>domains<br>    Filter based on [<strong>domain name</strong>]. </li>
-<li>tagKey<br>    Filter based on [<strong>Tag Key</strong>]. </li>
-<li>tagValue<br>    Filter based on [<strong>Tag Value</strong>]. </li>
+<li>socket<br>u2003u2003 Filter based on [<strong>HTTP protocol type</strong>]. <br>u2003u2003 Corresponding value options: <br>u2003u2003 HTTP: HTTP protocol；<br>u2003u2003 HTTPS: HTTPS protocol;<br>u2003u2003 QUIC: QUIC protocol. </li>
+<li>domains<br>u2003u2003 Filter based on [<strong>domain name</strong>]. </li>
+<li>tagKey<br>u2003u2003 Filter based on [<strong>Tag Key</strong>]. </li>
+<li>tagValue<br>u2003u2003 Filter based on [<strong>Tag Value</strong>]. </li>
      * @param string $Area Geolocation scope. Values:
 <li>`overseas`: Regions outside the Chinese mainland</li>
 <li>`mainland`: Chinese mainland</li>

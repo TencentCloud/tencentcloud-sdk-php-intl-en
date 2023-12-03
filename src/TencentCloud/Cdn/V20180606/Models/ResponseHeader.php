@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Custom response header configuration. This is disabled by default.
  *
- * @method string getSwitch() Obtain Custom response header switch
+ * @method string getSwitch() Obtain Whether to enable custom response headers. Values:
 `on`: Enable
 `off`: Disable
- * @method void setSwitch(string $Switch) Set Custom response header switch
+ * @method void setSwitch(string $Switch) Set Whether to enable custom response headers. Values:
 `on`: Enable
 `off`: Disable
  * @method array getHeaderRules() Obtain Custom response header rules
@@ -34,7 +34,7 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 class ResponseHeader extends AbstractModel
 {
     /**
-     * @var string Custom response header switch
+     * @var string Whether to enable custom response headers. Values:
 `on`: Enable
 `off`: Disable
      */
@@ -47,7 +47,7 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     public $HeaderRules;
 
     /**
-     * @param string $Switch Custom response header switch
+     * @param string $Switch Whether to enable custom response headers. Values:
 `on`: Enable
 `off`: Disable
      * @param array $HeaderRules Custom response header rules

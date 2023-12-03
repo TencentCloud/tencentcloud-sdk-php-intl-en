@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Configuration of URL rewriting
  *
- * @method string getSwitch() Obtain Whether to enable URL rewriting
+ * @method string getSwitch() Obtain Whether to enable URL rewriting. Values:
 `on`: Enable
 `off`: Disable
- * @method void setSwitch(string $Switch) Set Whether to enable URL rewriting
+ * @method void setSwitch(string $Switch) Set Whether to enable URL rewriting. Values:
 `on`: Enable
 `off`: Disable
  * @method array getPathRules() Obtain Rule of URL rewriting rule, which is required if `Switch` is `on`. There can be up to 10 rules.
@@ -34,7 +34,7 @@ Note: this field may return `null`, indicating that no valid value can be obtain
 class UrlRedirect extends AbstractModel
 {
     /**
-     * @var string Whether to enable URL rewriting
+     * @var string Whether to enable URL rewriting. Values:
 `on`: Enable
 `off`: Disable
      */
@@ -47,7 +47,7 @@ Note: this field may return `null`, indicating that no valid value can be obtain
     public $PathRules;
 
     /**
-     * @param string $Switch Whether to enable URL rewriting
+     * @param string $Switch Whether to enable URL rewriting. Values:
 `on`: Enable
 `off`: Disable
      * @param array $PathRules Rule of URL rewriting rule, which is required if `Switch` is `on`. There can be up to 10 rules.

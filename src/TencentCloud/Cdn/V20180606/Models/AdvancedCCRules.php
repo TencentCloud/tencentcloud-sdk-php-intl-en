@@ -30,10 +30,14 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method void setFrequencyLimit(integer $FrequencyLimit) Set Detection frequency threshold
 Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method string getPunishmentSwitch() Obtain Whether to enable IP penalty. Valid values: `on` and `off`.
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setPunishmentSwitch(string $PunishmentSwitch) Set Whether to enable IP penalty. Valid values: `on` and `off`.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method string getPunishmentSwitch() Obtain Whether to enable IP blocking. Values:
+`on`: Enable
+`off`: Disable
+Note: This field may return·`null`, indicating that no valid values can be obtained.
+ * @method void setPunishmentSwitch(string $PunishmentSwitch) Set Whether to enable IP blocking. Values:
+`on`: Enable
+`off`: Disable
+Note: This field may return·`null`, indicating that no valid values can be obtained.
  * @method integer getPunishmentTime() Obtain IP penalty duration
 Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method void setPunishmentTime(integer $PunishmentTime) Set IP penalty duration
@@ -50,10 +54,14 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method void setConfigure(array $Configure) Set Layer-7 rule configuration for CC frequency limiting
 Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method string getSwitch() Obtain Whether to enable the rule. Values: `on` (enable), `off` (disable).
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setSwitch(string $Switch) Set Whether to enable the rule. Values: `on` (enable), `off` (disable).
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getSwitch() Obtain Whether to enable custom CC rules. Values:
+`on`: Enable
+`off`: Disable
+Note: This field may return·`null`, indicating that no valid values can be obtained.
+ * @method void setSwitch(string $Switch) Set Whether to enable custom CC rules. Values:
+`on`: Enable
+`off`: Disable
+Note: This field may return·`null`, indicating that no valid values can be obtained.
  */
 class AdvancedCCRules extends AbstractModel
 {
@@ -75,8 +83,10 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     public $FrequencyLimit;
 
     /**
-     * @var string Whether to enable IP penalty. Valid values: `on` and `off`.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @var string Whether to enable IP blocking. Values:
+`on`: Enable
+`off`: Disable
+Note: This field may return·`null`, indicating that no valid values can be obtained.
      */
     public $PunishmentSwitch;
 
@@ -105,8 +115,10 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     public $Configure;
 
     /**
-     * @var string Whether to enable the rule. Values: `on` (enable), `off` (disable).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Whether to enable custom CC rules. Values:
+`on`: Enable
+`off`: Disable
+Note: This field may return·`null`, indicating that no valid values can be obtained.
      */
     public $Switch;
 
@@ -116,8 +128,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param integer $FrequencyLimit Detection frequency threshold
 Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param string $PunishmentSwitch Whether to enable IP penalty. Valid values: `on` and `off`.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param string $PunishmentSwitch Whether to enable IP blocking. Values:
+`on`: Enable
+`off`: Disable
+Note: This field may return·`null`, indicating that no valid values can be obtained.
      * @param integer $PunishmentTime IP penalty duration
 Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param string $Action Action. Valid values: `intercept` and `redirect`.
@@ -126,8 +140,10 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param array $Configure Layer-7 rule configuration for CC frequency limiting
 Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param string $Switch Whether to enable the rule. Values: `on` (enable), `off` (disable).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $Switch Whether to enable custom CC rules. Values:
+`on`: Enable
+`off`: Disable
+Note: This field may return·`null`, indicating that no valid values can be obtained.
      */
     function __construct()
     {

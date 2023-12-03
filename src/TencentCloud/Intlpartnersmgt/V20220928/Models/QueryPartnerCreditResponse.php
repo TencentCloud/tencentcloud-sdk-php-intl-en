@@ -26,6 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTotalCredit(float $TotalCredit) Set Total credit
  * @method float getRemainingCredit() Obtain Remaining credit
  * @method void setRemainingCredit(float $RemainingCredit) Set Remaining credit
+ * @method float getCustomerTotalCredit() Obtain Allocated quota for the client
+ * @method void setCustomerTotalCredit(float $CustomerTotalCredit) Set Allocated quota for the client
+ * @method float getCustomerRemainingCredit() Obtain Remaining quota for the client
+ * @method void setCustomerRemainingCredit(float $CustomerRemainingCredit) Set Remaining quota for the client
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -47,6 +51,16 @@ class QueryPartnerCreditResponse extends AbstractModel
     public $RemainingCredit;
 
     /**
+     * @var float Allocated quota for the client
+     */
+    public $CustomerTotalCredit;
+
+    /**
+     * @var float Remaining quota for the client
+     */
+    public $CustomerRemainingCredit;
+
+    /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
@@ -55,6 +69,8 @@ class QueryPartnerCreditResponse extends AbstractModel
      * @param float $AllocatedCredit Allocated credit
      * @param float $TotalCredit Total credit
      * @param float $RemainingCredit Remaining credit
+     * @param float $CustomerTotalCredit Allocated quota for the client
+     * @param float $CustomerRemainingCredit Remaining quota for the client
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -80,6 +96,14 @@ class QueryPartnerCreditResponse extends AbstractModel
 
         if (array_key_exists("RemainingCredit",$param) and $param["RemainingCredit"] !== null) {
             $this->RemainingCredit = $param["RemainingCredit"];
+        }
+
+        if (array_key_exists("CustomerTotalCredit",$param) and $param["CustomerTotalCredit"] !== null) {
+            $this->CustomerTotalCredit = $param["CustomerTotalCredit"];
+        }
+
+        if (array_key_exists("CustomerRemainingCredit",$param) and $param["CustomerRemainingCredit"] !== null) {
+            $this->CustomerRemainingCredit = $param["CustomerRemainingCredit"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

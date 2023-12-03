@@ -20,10 +20,16 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Origin-pull authentication advanced configuration
  *
- * @method string getSwitch() Obtain Authentication switch, which can be on or off.
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setSwitch(string $Switch) Set Authentication switch, which can be on or off.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method string getSwitch() Obtain Whether to enable advanced origin-pull authentication. Values:
+`on`: Enable
+`off`: Disable
+
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setSwitch(string $Switch) Set Whether to enable advanced origin-pull authentication. Values:
+`on`: Enable
+`off`: Disable
+
+Note: This field may return `null`, indicating that no valid values can be obtained.
  * @method OriginAuthenticationTypeA getTypeA() Obtain Authentication type configuration A
 Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method void setTypeA(OriginAuthenticationTypeA $TypeA) Set Authentication type configuration A
@@ -32,8 +38,11 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 class OriginAuthentication extends AbstractModel
 {
     /**
-     * @var string Authentication switch, which can be on or off.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @var string Whether to enable advanced origin-pull authentication. Values:
+`on`: Enable
+`off`: Disable
+
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public $Switch;
 
@@ -44,8 +53,11 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     public $TypeA;
 
     /**
-     * @param string $Switch Authentication switch, which can be on or off.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param string $Switch Whether to enable advanced origin-pull authentication. Values:
+`on`: Enable
+`off`: Disable
+
+Note: This field may return `null`, indicating that no valid values can be obtained.
      * @param OriginAuthenticationTypeA $TypeA Authentication type configuration A
 Note: this field may return `null`, indicating that no valid values can be obtained.
      */

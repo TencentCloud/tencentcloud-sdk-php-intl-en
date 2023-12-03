@@ -34,11 +34,11 @@ You must specify either a task ID or a starting time.
  * @method void setOffset(integer $Offset) Set Offset for paginated queries. Default value: 0
  * @method integer getLimit() Obtain Limit on paginated queries. Default value: 20
  * @method void setLimit(integer $Limit) Set Limit on paginated queries. Default value: 20
- * @method string getArea() Obtain Specifies a region for your query:
+ * @method string getArea() Obtain Specifies a region to query the prefetch records
 `mainland`: Chinese mainland
 `overseas`: Outside the Chinese mainland
 `global`: Globe
- * @method void setArea(string $Area) Set Specifies a region for your query:
+ * @method void setArea(string $Area) Set Specifies a region to query the prefetch records
 `mainland`: Chinese mainland
 `overseas`: Outside the Chinese mainland
 `global`: Globe
@@ -87,7 +87,7 @@ You must specify either a task ID or a starting time.
     public $Limit;
 
     /**
-     * @var string Specifies a region for your query:
+     * @var string Specifies a region to query the prefetch records
 `mainland`: Chinese mainland
 `overseas`: Outside the Chinese mainland
 `global`: Globe
@@ -111,7 +111,7 @@ You must specify either a task ID or a starting time.
      * @param string $Keyword Specifies a keyword for your query. Please enter a domain name or a complete URL beginning with `http(s)://`
      * @param integer $Offset Offset for paginated queries. Default value: 0
      * @param integer $Limit Limit on paginated queries. Default value: 20
-     * @param string $Area Specifies a region for your query:
+     * @param string $Area Specifies a region to query the prefetch records
 `mainland`: Chinese mainland
 `overseas`: Outside the Chinese mainland
 `global`: Globe

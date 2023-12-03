@@ -20,15 +20,21 @@ use TencentCloud\Common\AbstractModel;
 /**
  * WAF sub-rule switch status
  *
- * @method string getSwitch() Obtain Sub-rule status. Valid values: `on` and `off`.
- * @method void setSwitch(string $Switch) Set Sub-rule status. Valid values: `on` and `off`.
+ * @method string getSwitch() Obtain Whether to enable WAF sub-rules. Values:
+`on`: Enable
+`off`: Disable
+ * @method void setSwitch(string $Switch) Set Whether to enable WAF sub-rules. Values:
+`on`: Enable
+`off`: Disable
  * @method array getSubIds() Obtain List of rule IDs
  * @method void setSubIds(array $SubIds) Set List of rule IDs
  */
 class WafSubRuleStatus extends AbstractModel
 {
     /**
-     * @var string Sub-rule status. Valid values: `on` and `off`.
+     * @var string Whether to enable WAF sub-rules. Values:
+`on`: Enable
+`off`: Disable
      */
     public $Switch;
 
@@ -38,7 +44,9 @@ class WafSubRuleStatus extends AbstractModel
     public $SubIds;
 
     /**
-     * @param string $Switch Sub-rule status. Valid values: `on` and `off`.
+     * @param string $Switch Whether to enable WAF sub-rules. Values:
+`on`: Enable
+`off`: Disable
      * @param array $SubIds List of rule IDs
      */
     function __construct()

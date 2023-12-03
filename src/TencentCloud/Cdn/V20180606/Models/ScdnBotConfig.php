@@ -20,8 +20,12 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Bot configuration
  *
- * @method string getSwitch() Obtain Valid values: `on` and `off`.
- * @method void setSwitch(string $Switch) Set Valid values: `on` and `off`.
+ * @method string getSwitch() Obtain Whether to enable SCDN bot configuration. Values:
+`on`: Enable
+`off`: Disable
+ * @method void setSwitch(string $Switch) Set Whether to enable SCDN bot configuration. Values:
+`on`: Enable
+`off`: Disable
  * @method array getBotCookie() Obtain Bot cookie policy
 Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method void setBotCookie(array $BotCookie) Set Bot cookie policy
@@ -34,7 +38,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 class ScdnBotConfig extends AbstractModel
 {
     /**
-     * @var string Valid values: `on` and `off`.
+     * @var string Whether to enable SCDN bot configuration. Values:
+`on`: Enable
+`off`: Disable
      */
     public $Switch;
 
@@ -51,7 +57,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     public $BotJavaScript;
 
     /**
-     * @param string $Switch Valid values: `on` and `off`.
+     * @param string $Switch Whether to enable SCDN bot configuration. Values:
+`on`: Enable
+`off`: Disable
      * @param array $BotCookie Bot cookie policy
 Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param array $BotJavaScript Bot JS policy

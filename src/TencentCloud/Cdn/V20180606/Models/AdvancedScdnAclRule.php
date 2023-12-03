@@ -70,7 +70,7 @@ use TencentCloud\Common\AbstractModel;
 `equal`: The same as the keyword
 `matching`: The prefix is matched
 `null`: Empty or does not exist
- * @method array getMatchValue() Obtain Match value
+ * @method array getMatchValue() Obtain Matched value.
 When `MatchKey` is `protocol`,
 Values: `HTTP` and `HTTPS`.
 
@@ -133,11 +133,10 @@ When `MatchKey` is `ipCountry`, valid values include:
 `AI`: Anguilla
 `VA`: Vatican
 `SK`: Slovakia
-`RU`: Russia
 `GB`: United Kingdom
 `CZ`: Czech Republic
 `UA`: Ukraine
-`TR`: Turkey
+`TR`: Türkiye
 `SI`: Slovenia
 `SE`: Sweden
 `RS`: Republic of Serbia
@@ -274,7 +273,7 @@ When `MatchKey` is `ipCountry`, valid values include:
 `AO`: Angola
 
 When MatchKey is `ipArea`, valid values include:
-`OTHER`: other areas
+`OTHER`: Other areas
 `AS`: Asia
 `EU`: Europe
 `AN`: Antarctica
@@ -285,7 +284,7 @@ When MatchKey is `ipArea`, valid values include:
 
 When MatchKey is `index`,
 valid value is `/;/index.html`.
- * @method void setMatchValue(array $MatchValue) Set Match value
+ * @method void setMatchValue(array $MatchValue) Set Matched value.
 When `MatchKey` is `protocol`,
 Values: `HTTP` and `HTTPS`.
 
@@ -348,11 +347,10 @@ When `MatchKey` is `ipCountry`, valid values include:
 `AI`: Anguilla
 `VA`: Vatican
 `SK`: Slovakia
-`RU`: Russia
 `GB`: United Kingdom
 `CZ`: Czech Republic
 `UA`: Ukraine
-`TR`: Turkey
+`TR`: Türkiye
 `SI`: Slovenia
 `SE`: Sweden
 `RS`: Republic of Serbia
@@ -489,7 +487,7 @@ When `MatchKey` is `ipCountry`, valid values include:
 `AO`: Angola
 
 When MatchKey is `ipArea`, valid values include:
-`OTHER`: other areas
+`OTHER`: Other areas
 `AS`: Asia
 `EU`: Europe
 `AN`: Antarctica
@@ -541,7 +539,7 @@ class AdvancedScdnAclRule extends AbstractModel
     public $LogicOperator;
 
     /**
-     * @var array Match value
+     * @var array Matched value.
 When `MatchKey` is `protocol`,
 Values: `HTTP` and `HTTPS`.
 
@@ -604,11 +602,10 @@ When `MatchKey` is `ipCountry`, valid values include:
 `AI`: Anguilla
 `VA`: Vatican
 `SK`: Slovakia
-`RU`: Russia
 `GB`: United Kingdom
 `CZ`: Czech Republic
 `UA`: Ukraine
-`TR`: Turkey
+`TR`: Türkiye
 `SI`: Slovenia
 `SE`: Sweden
 `RS`: Republic of Serbia
@@ -745,7 +742,7 @@ When `MatchKey` is `ipCountry`, valid values include:
 `AO`: Angola
 
 When MatchKey is `ipArea`, valid values include:
-`OTHER`: other areas
+`OTHER`: Other areas
 `AS`: Asia
 `EU`: Europe
 `AN`: Antarctica
@@ -795,7 +792,7 @@ valid value is `/;/index.html`.
 `equal`: The same as the keyword
 `matching`: The prefix is matched
 `null`: Empty or does not exist
-     * @param array $MatchValue Match value
+     * @param array $MatchValue Matched value.
 When `MatchKey` is `protocol`,
 Values: `HTTP` and `HTTPS`.
 
@@ -858,11 +855,10 @@ When `MatchKey` is `ipCountry`, valid values include:
 `AI`: Anguilla
 `VA`: Vatican
 `SK`: Slovakia
-`RU`: Russia
 `GB`: United Kingdom
 `CZ`: Czech Republic
 `UA`: Ukraine
-`TR`: Turkey
+`TR`: Türkiye
 `SI`: Slovenia
 `SE`: Sweden
 `RS`: Republic of Serbia
@@ -999,7 +995,7 @@ When `MatchKey` is `ipCountry`, valid values include:
 `AO`: Angola
 
 When MatchKey is `ipArea`, valid values include:
-`OTHER`: other areas
+`OTHER`: Other areas
 `AS`: Asia
 `EU`: Europe
 `AN`: Antarctica

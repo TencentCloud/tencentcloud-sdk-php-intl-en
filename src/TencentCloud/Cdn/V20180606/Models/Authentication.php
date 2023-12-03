@@ -20,14 +20,24 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Timestamp hotlink protection configuration
  *
- * @method string getSwitch() Obtain Hotlink protection configuration switch
+ * @method string getSwitch() Obtain Whether to enable hot linking protection. Values:
 `on`: Enable
 `off`: Disable
-When this is enabled, one mode needs to be configured. Other modes need to be set to null.
- * @method void setSwitch(string $Switch) Set Hotlink protection configuration switch
+Only one advanced configuration can be enabled. Set the rests to `null`.
+ * @method void setSwitch(string $Switch) Set Whether to enable hot linking protection. Values:
 `on`: Enable
 `off`: Disable
-When this is enabled, one mode needs to be configured. Other modes need to be set to null.
+Only one advanced configuration can be enabled. Set the rests to `null`.
+ * @method string getAuthAlgorithm() Obtain Authentication algorithm. Values:
+`md5`: Calculate the hash using MD5.
+`sha256`: Calculate the hash using SHA-256.
+Default value: `md5`.
+Note: This field may return·`null`, indicating that no valid values can be obtained.
+ * @method void setAuthAlgorithm(string $AuthAlgorithm) Set Authentication algorithm. Values:
+`md5`: Calculate the hash using MD5.
+`sha256`: Calculate the hash using SHA-256.
+Default value: `md5`.
+Note: This field may return·`null`, indicating that no valid values can be obtained.
  * @method AuthenticationTypeA getTypeA() Obtain Timestamp hotlink protection mode A configuration
 Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method void setTypeA(AuthenticationTypeA $TypeA) Set Timestamp hotlink protection mode A configuration
@@ -48,12 +58,21 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 class Authentication extends AbstractModel
 {
     /**
-     * @var string Hotlink protection configuration switch
+     * @var string Whether to enable hot linking protection. Values:
 `on`: Enable
 `off`: Disable
-When this is enabled, one mode needs to be configured. Other modes need to be set to null.
+Only one advanced configuration can be enabled. Set the rests to `null`.
      */
     public $Switch;
+
+    /**
+     * @var string Authentication algorithm. Values:
+`md5`: Calculate the hash using MD5.
+`sha256`: Calculate the hash using SHA-256.
+Default value: `md5`.
+Note: This field may return·`null`, indicating that no valid values can be obtained.
+     */
+    public $AuthAlgorithm;
 
     /**
      * @var AuthenticationTypeA Timestamp hotlink protection mode A configuration
@@ -80,10 +99,15 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     public $TypeD;
 
     /**
-     * @param string $Switch Hotlink protection configuration switch
+     * @param string $Switch Whether to enable hot linking protection. Values:
 `on`: Enable
 `off`: Disable
-When this is enabled, one mode needs to be configured. Other modes need to be set to null.
+Only one advanced configuration can be enabled. Set the rests to `null`.
+     * @param string $AuthAlgorithm Authentication algorithm. Values:
+`md5`: Calculate the hash using MD5.
+`sha256`: Calculate the hash using SHA-256.
+Default value: `md5`.
+Note: This field may return·`null`, indicating that no valid values can be obtained.
      * @param AuthenticationTypeA $TypeA Timestamp hotlink protection mode A configuration
 Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param AuthenticationTypeB $TypeB Timestamp hotlink protection mode B configuration (mode B is being upgraded and is currently not supported)
@@ -108,6 +132,10 @@ Note: This field may return `null`, indicating that no valid value can be obtain
         }
         if (array_key_exists("Switch",$param) and $param["Switch"] !== null) {
             $this->Switch = $param["Switch"];
+        }
+
+        if (array_key_exists("AuthAlgorithm",$param) and $param["AuthAlgorithm"] !== null) {
+            $this->AuthAlgorithm = $param["AuthAlgorithm"];
         }
 
         if (array_key_exists("TypeA",$param) and $param["TypeA"] !== null) {
