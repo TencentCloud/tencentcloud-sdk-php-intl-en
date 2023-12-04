@@ -20,14 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * SyncAssetImageRegistryAsset request structure.
  *
-
+ * @method boolean getAll() Obtain 
+ * @method void setAll(boolean $All) Set 
+ * @method array getRegistryIds() Obtain 
+ * @method void setRegistryIds(array $RegistryIds) Set 
  */
 class SyncAssetImageRegistryAssetRequest extends AbstractModel
 {
-
+    /**
+     * @var boolean 
+     */
+    public $All;
 
     /**
+     * @var array 
+     */
+    public $RegistryIds;
 
+    /**
+     * @param boolean $All 
+     * @param array $RegistryIds 
      */
     function __construct()
     {
@@ -42,6 +54,12 @@ class SyncAssetImageRegistryAssetRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("All",$param) and $param["All"] !== null) {
+            $this->All = $param["All"];
+        }
 
+        if (array_key_exists("RegistryIds",$param) and $param["RegistryIds"] !== null) {
+            $this->RegistryIds = $param["RegistryIds"];
+        }
     }
 }

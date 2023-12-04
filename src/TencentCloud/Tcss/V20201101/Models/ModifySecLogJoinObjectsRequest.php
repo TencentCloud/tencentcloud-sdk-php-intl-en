@@ -32,6 +32,13 @@ K8s API: k8s_api
  * @method void setBindList(array $BindList) Set List of QUuids of bound servers
  * @method array getUnBindList() Obtain List of QUuids of servers to be unbound
  * @method void setUnBindList(array $UnBindList) Set List of QUuids of servers to be unbound
+ * @method string getNodeType() Obtain Node type.
+`NORMAL`: General node (default)
+`SUPER`: Super node
+
+ * @method void setNodeType(string $NodeType) Set Node type.
+`NORMAL`: General node (default)
+`SUPER`: Super node
  */
 class ModifySecLogJoinObjectsRequest extends AbstractModel
 {
@@ -54,12 +61,23 @@ K8s API: k8s_api
     public $UnBindList;
 
     /**
+     * @var string Node type.
+`NORMAL`: General node (default)
+`SUPER`: Super node
+
+     */
+    public $NodeType;
+
+    /**
      * @param string $LogType Log type
 Container bash: container_bash
 Container startup: container_launch
 K8s API: k8s_api
      * @param array $BindList List of QUuids of bound servers
      * @param array $UnBindList List of QUuids of servers to be unbound
+     * @param string $NodeType Node type.
+`NORMAL`: General node (default)
+`SUPER`: Super node
      */
     function __construct()
     {
@@ -84,6 +102,10 @@ K8s API: k8s_api
 
         if (array_key_exists("UnBindList",$param) and $param["UnBindList"] !== null) {
             $this->UnBindList = $param["UnBindList"];
+        }
+
+        if (array_key_exists("NodeType",$param) and $param["NodeType"] !== null) {
+            $this->NodeType = $param["NodeType"];
         }
     }
 }

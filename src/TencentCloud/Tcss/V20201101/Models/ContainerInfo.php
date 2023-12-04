@@ -76,6 +76,26 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setIsolateTime(string $IsolateTime) Set Isolation time
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getNodeID() Obtain Super node ID
+ * @method void setNodeID(string $NodeID) Set Super node ID
+ * @method string getPodIP() Obtain Pod IP
+ * @method void setPodIP(string $PodIP) Set Pod IP
+ * @method string getPodName() Obtain Pod name
+ * @method void setPodName(string $PodName) Set Pod name
+ * @method string getNodeType() Obtain Node type. Valid values: `NORMAL` (general node), `SUPER` (super node)
+ * @method void setNodeType(string $NodeType) Set Node type. Valid values: `NORMAL` (general node), `SUPER` (super node)
+ * @method string getNodeUniqueID() Obtain UID of the super node
+ * @method void setNodeUniqueID(string $NodeUniqueID) Set UID of the super node
+ * @method integer getPodCpu() Obtain Number of CPU cores used by the pod
+ * @method void setPodCpu(integer $PodCpu) Set Number of CPU cores used by the pod
+ * @method integer getPodMem() Obtain Memory specification of the Pod
+ * @method void setPodMem(integer $PodMem) Set Memory specification of the Pod
+ * @method string getClusterName() Obtain 
+ * @method void setClusterName(string $ClusterName) Set 
+ * @method string getClusterID() Obtain 
+ * @method void setClusterID(string $ClusterID) Set 
+ * @method string getPodUid() Obtain 
+ * @method void setPodUid(string $PodUid) Set 
  */
 class ContainerInfo extends AbstractModel
 {
@@ -188,6 +208,56 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $IsolateTime;
 
     /**
+     * @var string Super node ID
+     */
+    public $NodeID;
+
+    /**
+     * @var string Pod IP
+     */
+    public $PodIP;
+
+    /**
+     * @var string Pod name
+     */
+    public $PodName;
+
+    /**
+     * @var string Node type. Valid values: `NORMAL` (general node), `SUPER` (super node)
+     */
+    public $NodeType;
+
+    /**
+     * @var string UID of the super node
+     */
+    public $NodeUniqueID;
+
+    /**
+     * @var integer Number of CPU cores used by the pod
+     */
+    public $PodCpu;
+
+    /**
+     * @var integer Memory specification of the Pod
+     */
+    public $PodMem;
+
+    /**
+     * @var string 
+     */
+    public $ClusterName;
+
+    /**
+     * @var string 
+     */
+    public $ClusterID;
+
+    /**
+     * @var string 
+     */
+    public $PodUid;
+
+    /**
      * @param string $ContainerID Container ID
      * @param string $ContainerName Container name
      * @param string $Status Container status
@@ -216,6 +286,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $IsolateTime Isolation time
 Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $NodeID Super node ID
+     * @param string $PodIP Pod IP
+     * @param string $PodName Pod name
+     * @param string $NodeType Node type. Valid values: `NORMAL` (general node), `SUPER` (super node)
+     * @param string $NodeUniqueID UID of the super node
+     * @param integer $PodCpu Number of CPU cores used by the pod
+     * @param integer $PodMem Memory specification of the Pod
+     * @param string $ClusterName 
+     * @param string $ClusterID 
+     * @param string $PodUid 
      */
     function __construct()
     {
@@ -308,6 +388,46 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("IsolateTime",$param) and $param["IsolateTime"] !== null) {
             $this->IsolateTime = $param["IsolateTime"];
+        }
+
+        if (array_key_exists("NodeID",$param) and $param["NodeID"] !== null) {
+            $this->NodeID = $param["NodeID"];
+        }
+
+        if (array_key_exists("PodIP",$param) and $param["PodIP"] !== null) {
+            $this->PodIP = $param["PodIP"];
+        }
+
+        if (array_key_exists("PodName",$param) and $param["PodName"] !== null) {
+            $this->PodName = $param["PodName"];
+        }
+
+        if (array_key_exists("NodeType",$param) and $param["NodeType"] !== null) {
+            $this->NodeType = $param["NodeType"];
+        }
+
+        if (array_key_exists("NodeUniqueID",$param) and $param["NodeUniqueID"] !== null) {
+            $this->NodeUniqueID = $param["NodeUniqueID"];
+        }
+
+        if (array_key_exists("PodCpu",$param) and $param["PodCpu"] !== null) {
+            $this->PodCpu = $param["PodCpu"];
+        }
+
+        if (array_key_exists("PodMem",$param) and $param["PodMem"] !== null) {
+            $this->PodMem = $param["PodMem"];
+        }
+
+        if (array_key_exists("ClusterName",$param) and $param["ClusterName"] !== null) {
+            $this->ClusterName = $param["ClusterName"];
+        }
+
+        if (array_key_exists("ClusterID",$param) and $param["ClusterID"] !== null) {
+            $this->ClusterID = $param["ClusterID"];
+        }
+
+        if (array_key_exists("PodUid",$param) and $param["PodUid"] !== null) {
+            $this->PodUid = $param["PodUid"];
         }
     }
 }

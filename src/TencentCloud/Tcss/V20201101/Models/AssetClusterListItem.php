@@ -37,9 +37,17 @@ use TencentCloud\Common\AbstractModel;
  * @method string getClusterType() Obtain Cluster type:
 `CT_TKE`: TKE cluster
 `CT_USER_CREATE`: External cluster
+`CT_TKE_SERVERLESS`: TKE Serverless cluster
  * @method void setClusterType(string $ClusterType) Set Cluster type:
 `CT_TKE`: TKE cluster
 `CT_USER_CREATE`: External cluster
+`CT_TKE_SERVERLESS`: TKE Serverless cluster
+ * @method string getClusterVersion() Obtain Cluster version
+ * @method void setClusterVersion(string $ClusterVersion) Set Cluster version
+ * @method integer getMemLimit() Obtain MEM usage
+ * @method void setMemLimit(integer $MemLimit) Set MEM usage
+ * @method integer getCpuLimit() Obtain cpu
+ * @method void setCpuLimit(integer $CpuLimit) Set cpu
  */
 class AssetClusterListItem extends AbstractModel
 {
@@ -70,8 +78,24 @@ class AssetClusterListItem extends AbstractModel
      * @var string Cluster type:
 `CT_TKE`: TKE cluster
 `CT_USER_CREATE`: External cluster
+`CT_TKE_SERVERLESS`: TKE Serverless cluster
      */
     public $ClusterType;
+
+    /**
+     * @var string Cluster version
+     */
+    public $ClusterVersion;
+
+    /**
+     * @var integer MEM usage
+     */
+    public $MemLimit;
+
+    /**
+     * @var integer cpu
+     */
+    public $CpuLimit;
 
     /**
      * @param string $ClusterID Cluster ID
@@ -84,6 +108,10 @@ class AssetClusterListItem extends AbstractModel
      * @param string $ClusterType Cluster type:
 `CT_TKE`: TKE cluster
 `CT_USER_CREATE`: External cluster
+`CT_TKE_SERVERLESS`: TKE Serverless cluster
+     * @param string $ClusterVersion Cluster version
+     * @param integer $MemLimit MEM usage
+     * @param integer $CpuLimit cpu
      */
     function __construct()
     {
@@ -116,6 +144,18 @@ class AssetClusterListItem extends AbstractModel
 
         if (array_key_exists("ClusterType",$param) and $param["ClusterType"] !== null) {
             $this->ClusterType = $param["ClusterType"];
+        }
+
+        if (array_key_exists("ClusterVersion",$param) and $param["ClusterVersion"] !== null) {
+            $this->ClusterVersion = $param["ClusterVersion"];
+        }
+
+        if (array_key_exists("MemLimit",$param) and $param["MemLimit"] !== null) {
+            $this->MemLimit = $param["MemLimit"];
+        }
+
+        if (array_key_exists("CpuLimit",$param) and $param["CpuLimit"] !== null) {
+            $this->CpuLimit = $param["CpuLimit"];
         }
     }
 }

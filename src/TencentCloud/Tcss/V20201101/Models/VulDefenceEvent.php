@@ -108,18 +108,30 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setContainerIsolateOperationSrc(string $ContainerIsolateOperationSrc) Set Container isolation operation source
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getQUUID() Obtain Server QUuid
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setQUUID(string $QUUID) Set Server QUuid
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getQUUID() Obtain Node QUuid/Super node ID
+Note: This field may return·`null`, indicating that no valid values can be obtained.
+ * @method void setQUUID(string $QUUID) Set Node QUuid/Super node ID
+Note: This field may return·`null`, indicating that no valid values can be obtained.
  * @method string getHostIP() Obtain Server private IP
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setHostIP(string $HostIP) Set Server private IP
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getHostName() Obtain Server name
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setHostName(string $HostName) Set Server name
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getHostName() Obtain General node/Super node name
+Note: This field may return·`null`, indicating that no valid values can be obtained.
+ * @method void setHostName(string $HostName) Set General node/Super node name
+Note: This field may return·`null`, indicating that no valid values can be obtained.
+ * @method string getNodeType() Obtain Node type. Values: `NORMAL` (general node), `SUPER` (super node).
+ * @method void setNodeType(string $NodeType) Set Node type. Values: `NORMAL` (general node), `SUPER` (super node).
+ * @method string getPublicIP() Obtain Public IP
+ * @method void setPublicIP(string $PublicIP) Set Public IP
+ * @method string getNodeUniqueID() Obtain UID of a super node
+ * @method void setNodeUniqueID(string $NodeUniqueID) Set UID of a super node
+ * @method string getNodeID() Obtain ID of a super node
+ * @method void setNodeID(string $NodeID) Set ID of a super node
+ * @method string getClusterID() Obtain Cluster ID
+ * @method void setClusterID(string $ClusterID) Set Cluster ID
+ * @method string getClusterName() Obtain Cluster name
+ * @method void setClusterName(string $ClusterName) Set Cluster name
  */
 class VulDefenceEvent extends AbstractModel
 {
@@ -244,8 +256,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $ContainerIsolateOperationSrc;
 
     /**
-     * @var string Server QUuid
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Node QUuid/Super node ID
+Note: This field may return·`null`, indicating that no valid values can be obtained.
      */
     public $QUUID;
 
@@ -256,10 +268,40 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $HostIP;
 
     /**
-     * @var string Server name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string General node/Super node name
+Note: This field may return·`null`, indicating that no valid values can be obtained.
      */
     public $HostName;
+
+    /**
+     * @var string Node type. Values: `NORMAL` (general node), `SUPER` (super node).
+     */
+    public $NodeType;
+
+    /**
+     * @var string Public IP
+     */
+    public $PublicIP;
+
+    /**
+     * @var string UID of a super node
+     */
+    public $NodeUniqueID;
+
+    /**
+     * @var string ID of a super node
+     */
+    public $NodeID;
+
+    /**
+     * @var string Cluster ID
+     */
+    public $ClusterID;
+
+    /**
+     * @var string Cluster name
+     */
+    public $ClusterName;
 
     /**
      * @param string $CVEID Vulnerability CVE ID
@@ -306,12 +348,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $ContainerIsolateOperationSrc Container isolation operation source
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $QUUID Server QUuid
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $QUUID Node QUuid/Super node ID
+Note: This field may return·`null`, indicating that no valid values can be obtained.
      * @param string $HostIP Server private IP
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $HostName Server name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $HostName General node/Super node name
+Note: This field may return·`null`, indicating that no valid values can be obtained.
+     * @param string $NodeType Node type. Values: `NORMAL` (general node), `SUPER` (super node).
+     * @param string $PublicIP Public IP
+     * @param string $NodeUniqueID UID of a super node
+     * @param string $NodeID ID of a super node
+     * @param string $ClusterID Cluster ID
+     * @param string $ClusterName Cluster name
      */
     function __construct()
     {
@@ -412,6 +460,30 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("HostName",$param) and $param["HostName"] !== null) {
             $this->HostName = $param["HostName"];
+        }
+
+        if (array_key_exists("NodeType",$param) and $param["NodeType"] !== null) {
+            $this->NodeType = $param["NodeType"];
+        }
+
+        if (array_key_exists("PublicIP",$param) and $param["PublicIP"] !== null) {
+            $this->PublicIP = $param["PublicIP"];
+        }
+
+        if (array_key_exists("NodeUniqueID",$param) and $param["NodeUniqueID"] !== null) {
+            $this->NodeUniqueID = $param["NodeUniqueID"];
+        }
+
+        if (array_key_exists("NodeID",$param) and $param["NodeID"] !== null) {
+            $this->NodeID = $param["NodeID"];
+        }
+
+        if (array_key_exists("ClusterID",$param) and $param["ClusterID"] !== null) {
+            $this->ClusterID = $param["ClusterID"];
+        }
+
+        if (array_key_exists("ClusterName",$param) and $param["ClusterName"] !== null) {
+            $this->ClusterName = $param["ClusterName"];
         }
     }
 }

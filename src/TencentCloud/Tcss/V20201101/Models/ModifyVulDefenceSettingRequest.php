@@ -22,10 +22,14 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getIsEnabled() Obtain Whether it is enabled. Valid values: `0` (disabled); `1` (enabled).
  * @method void setIsEnabled(integer $IsEnabled) Set Whether it is enabled. Valid values: `0` (disabled); `1` (enabled).
- * @method integer getScope() Obtain Scope of servers for which to enable exploit prevention. Valid values: `0` (specified servers); `1` (all servers). This parameter is required when `IsEnabled` is `1`.
- * @method void setScope(integer $Scope) Set Scope of servers for which to enable exploit prevention. Valid values: `0` (specified servers); `1` (all servers). This parameter is required when `IsEnabled` is `1`.
- * @method array getHostIDs() Obtain Specified servers for which to enable exploit prevention. This parameter is required when `Scope` is `0`.
- * @method void setHostIDs(array $HostIDs) Set Specified servers for which to enable exploit prevention. This parameter is required when `Scope` is `0`.
+ * @method integer getScope() Obtain Servers to enable exploit prevention. Values: `0` (custom); `1` (all).
+ * @method void setScope(integer $Scope) Set Servers to enable exploit prevention. Values: `0` (custom); `1` (all).
+ * @method array getHostIDs() Obtain Specified servers with exploit prevention enabled
+ * @method void setHostIDs(array $HostIDs) Set Specified servers with exploit prevention enabled
+ * @method integer getSuperScope() Obtain Super nodes to enable exploit prevention. Values: `0` (custom); `1` (all).
+ * @method void setSuperScope(integer $SuperScope) Set Super nodes to enable exploit prevention. Values: `0` (custom); `1` (all).
+ * @method array getNodeIds() Obtain List of super node IDs
+ * @method void setNodeIds(array $NodeIds) Set List of super node IDs
  */
 class ModifyVulDefenceSettingRequest extends AbstractModel
 {
@@ -35,19 +39,31 @@ class ModifyVulDefenceSettingRequest extends AbstractModel
     public $IsEnabled;
 
     /**
-     * @var integer Scope of servers for which to enable exploit prevention. Valid values: `0` (specified servers); `1` (all servers). This parameter is required when `IsEnabled` is `1`.
+     * @var integer Servers to enable exploit prevention. Values: `0` (custom); `1` (all).
      */
     public $Scope;
 
     /**
-     * @var array Specified servers for which to enable exploit prevention. This parameter is required when `Scope` is `0`.
+     * @var array Specified servers with exploit prevention enabled
      */
     public $HostIDs;
 
     /**
+     * @var integer Super nodes to enable exploit prevention. Values: `0` (custom); `1` (all).
+     */
+    public $SuperScope;
+
+    /**
+     * @var array List of super node IDs
+     */
+    public $NodeIds;
+
+    /**
      * @param integer $IsEnabled Whether it is enabled. Valid values: `0` (disabled); `1` (enabled).
-     * @param integer $Scope Scope of servers for which to enable exploit prevention. Valid values: `0` (specified servers); `1` (all servers). This parameter is required when `IsEnabled` is `1`.
-     * @param array $HostIDs Specified servers for which to enable exploit prevention. This parameter is required when `Scope` is `0`.
+     * @param integer $Scope Servers to enable exploit prevention. Values: `0` (custom); `1` (all).
+     * @param array $HostIDs Specified servers with exploit prevention enabled
+     * @param integer $SuperScope Super nodes to enable exploit prevention. Values: `0` (custom); `1` (all).
+     * @param array $NodeIds List of super node IDs
      */
     function __construct()
     {
@@ -72,6 +88,14 @@ class ModifyVulDefenceSettingRequest extends AbstractModel
 
         if (array_key_exists("HostIDs",$param) and $param["HostIDs"] !== null) {
             $this->HostIDs = $param["HostIDs"];
+        }
+
+        if (array_key_exists("SuperScope",$param) and $param["SuperScope"] !== null) {
+            $this->SuperScope = $param["SuperScope"];
+        }
+
+        if (array_key_exists("NodeIds",$param) and $param["NodeIds"] !== null) {
+            $this->NodeIds = $param["NodeIds"];
         }
     }
 }

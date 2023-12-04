@@ -28,10 +28,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setImageName(string $ImageName) Set Image name
  * @method string getImageId() Obtain Image ID
  * @method void setImageId(string $ImageId) Set Image ID
- * @method string getHostName() Obtain Server name
- * @method void setHostName(string $HostName) Set Server name
- * @method string getHostIp() Obtain Server IP
- * @method void setHostIp(string $HostIp) Set Server IP
+ * @method string getHostName() Obtain Node name
+ * @method void setHostName(string $HostName) Set Node name
+ * @method string getHostIp() Obtain Private IP of the node
+ * @method void setHostIp(string $HostIp) Set Private IP of the node
  * @method string getStatus() Obtain Scanning status:
 `WAIT`: Pending scanning.
 `FAILED`: Failed.
@@ -84,6 +84,12 @@ use TencentCloud\Common\AbstractModel;
 `MISC`: Other errors.
 `UNAUTH`: The image is not assigned with a license.
 `SEND_CANCEL_SUCCESSED`: Task submitted.
+ * @method string getNodeType() Obtain Node type. Values: `NORMAL` (general node), `SUPER` (super node).
+ * @method void setNodeType(string $NodeType) Set Node type. Values: `NORMAL` (general node), `SUPER` (super node).
+ * @method string getPublicIP() Obtain Public IP of the node
+ * @method void setPublicIP(string $PublicIP) Set Public IP of the node
+ * @method string getNodeID() Obtain Node ID
+ * @method void setNodeID(string $NodeID) Set Node ID
  */
 class VirusTaskInfo extends AbstractModel
 {
@@ -108,12 +114,12 @@ class VirusTaskInfo extends AbstractModel
     public $ImageId;
 
     /**
-     * @var string Server name
+     * @var string Node name
      */
     public $HostName;
 
     /**
-     * @var string Server IP
+     * @var string Private IP of the node
      */
     public $HostIp;
 
@@ -168,12 +174,27 @@ class VirusTaskInfo extends AbstractModel
     public $ErrorMsg;
 
     /**
+     * @var string Node type. Values: `NORMAL` (general node), `SUPER` (super node).
+     */
+    public $NodeType;
+
+    /**
+     * @var string Public IP of the node
+     */
+    public $PublicIP;
+
+    /**
+     * @var string Node ID
+     */
+    public $NodeID;
+
+    /**
      * @param string $ContainerName Container name
      * @param string $ContainerId Container ID
      * @param string $ImageName Image name
      * @param string $ImageId Image ID
-     * @param string $HostName Server name
-     * @param string $HostIp Server IP
+     * @param string $HostName Node name
+     * @param string $HostIp Private IP of the node
      * @param string $Status Scanning status:
 `WAIT`: Pending scanning.
 `FAILED`: Failed.
@@ -200,6 +221,9 @@ class VirusTaskInfo extends AbstractModel
 `MISC`: Other errors.
 `UNAUTH`: The image is not assigned with a license.
 `SEND_CANCEL_SUCCESSED`: Task submitted.
+     * @param string $NodeType Node type. Values: `NORMAL` (general node), `SUPER` (super node).
+     * @param string $PublicIP Public IP of the node
+     * @param string $NodeID Node ID
      */
     function __construct()
     {
@@ -260,6 +284,18 @@ class VirusTaskInfo extends AbstractModel
 
         if (array_key_exists("ErrorMsg",$param) and $param["ErrorMsg"] !== null) {
             $this->ErrorMsg = $param["ErrorMsg"];
+        }
+
+        if (array_key_exists("NodeType",$param) and $param["NodeType"] !== null) {
+            $this->NodeType = $param["NodeType"];
+        }
+
+        if (array_key_exists("PublicIP",$param) and $param["PublicIP"] !== null) {
+            $this->PublicIP = $param["PublicIP"];
+        }
+
+        if (array_key_exists("NodeID",$param) and $param["NodeID"] !== null) {
+            $this->NodeID = $param["NodeID"];
         }
     }
 }

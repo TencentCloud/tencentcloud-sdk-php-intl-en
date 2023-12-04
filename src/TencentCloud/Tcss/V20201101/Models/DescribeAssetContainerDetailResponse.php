@@ -90,6 +90,32 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setIsolateTime(string $IsolateTime) Set Isolation time
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getNodeID() Obtain Node ID
+ * @method void setNodeID(string $NodeID) Set Node ID
+ * @method string getNodeName() Obtain Node name
+ * @method void setNodeName(string $NodeName) Set Node name
+ * @method string getNodeSubNetID() Obtain Node subnet ID
+ * @method void setNodeSubNetID(string $NodeSubNetID) Set Node subnet ID
+ * @method string getNodeSubNetName() Obtain Node subnet name
+ * @method void setNodeSubNetName(string $NodeSubNetName) Set Node subnet name
+ * @method string getNodeSubNetCIDR() Obtain Subnet IP range
+ * @method void setNodeSubNetCIDR(string $NodeSubNetCIDR) Set Subnet IP range
+ * @method string getPodName() Obtain Pod name
+ * @method void setPodName(string $PodName) Set Pod name
+ * @method string getPodIP() Obtain Pod IP
+ * @method void setPodIP(string $PodIP) Set Pod IP
+ * @method string getPodStatus() Obtain Pod status
+ * @method void setPodStatus(string $PodStatus) Set Pod status
+ * @method string getClusterID() Obtain Cluster ID
+ * @method void setClusterID(string $ClusterID) Set Cluster ID
+ * @method string getClusterName() Obtain Cluster name
+ * @method void setClusterName(string $ClusterName) Set Cluster name
+ * @method string getNodeType() Obtain Node type. Values: `NORMAL` (default), `SUPER`
+ * @method void setNodeType(string $NodeType) Set Node type. Values: `NORMAL` (default), `SUPER`
+ * @method string getNodeUniqueID() Obtain UID of the super node
+ * @method void setNodeUniqueID(string $NodeUniqueID) Set UID of the super node
+ * @method string getPublicIP() Obtain Public IP
+ * @method void setPublicIP(string $PublicIP) Set Public IP
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -239,6 +265,71 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $IsolateTime;
 
     /**
+     * @var string Node ID
+     */
+    public $NodeID;
+
+    /**
+     * @var string Node name
+     */
+    public $NodeName;
+
+    /**
+     * @var string Node subnet ID
+     */
+    public $NodeSubNetID;
+
+    /**
+     * @var string Node subnet name
+     */
+    public $NodeSubNetName;
+
+    /**
+     * @var string Subnet IP range
+     */
+    public $NodeSubNetCIDR;
+
+    /**
+     * @var string Pod name
+     */
+    public $PodName;
+
+    /**
+     * @var string Pod IP
+     */
+    public $PodIP;
+
+    /**
+     * @var string Pod status
+     */
+    public $PodStatus;
+
+    /**
+     * @var string Cluster ID
+     */
+    public $ClusterID;
+
+    /**
+     * @var string Cluster name
+     */
+    public $ClusterName;
+
+    /**
+     * @var string Node type. Values: `NORMAL` (default), `SUPER`
+     */
+    public $NodeType;
+
+    /**
+     * @var string UID of the super node
+     */
+    public $NodeUniqueID;
+
+    /**
+     * @var string Public IP
+     */
+    public $PublicIP;
+
+    /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
@@ -279,6 +370,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $IsolateTime Isolation time
 Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $NodeID Node ID
+     * @param string $NodeName Node name
+     * @param string $NodeSubNetID Node subnet ID
+     * @param string $NodeSubNetName Node subnet name
+     * @param string $NodeSubNetCIDR Subnet IP range
+     * @param string $PodName Pod name
+     * @param string $PodIP Pod IP
+     * @param string $PodStatus Pod status
+     * @param string $ClusterID Cluster ID
+     * @param string $ClusterName Cluster name
+     * @param string $NodeType Node type. Values: `NORMAL` (default), `SUPER`
+     * @param string $NodeUniqueID UID of the super node
+     * @param string $PublicIP Public IP
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -406,6 +510,58 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("IsolateTime",$param) and $param["IsolateTime"] !== null) {
             $this->IsolateTime = $param["IsolateTime"];
+        }
+
+        if (array_key_exists("NodeID",$param) and $param["NodeID"] !== null) {
+            $this->NodeID = $param["NodeID"];
+        }
+
+        if (array_key_exists("NodeName",$param) and $param["NodeName"] !== null) {
+            $this->NodeName = $param["NodeName"];
+        }
+
+        if (array_key_exists("NodeSubNetID",$param) and $param["NodeSubNetID"] !== null) {
+            $this->NodeSubNetID = $param["NodeSubNetID"];
+        }
+
+        if (array_key_exists("NodeSubNetName",$param) and $param["NodeSubNetName"] !== null) {
+            $this->NodeSubNetName = $param["NodeSubNetName"];
+        }
+
+        if (array_key_exists("NodeSubNetCIDR",$param) and $param["NodeSubNetCIDR"] !== null) {
+            $this->NodeSubNetCIDR = $param["NodeSubNetCIDR"];
+        }
+
+        if (array_key_exists("PodName",$param) and $param["PodName"] !== null) {
+            $this->PodName = $param["PodName"];
+        }
+
+        if (array_key_exists("PodIP",$param) and $param["PodIP"] !== null) {
+            $this->PodIP = $param["PodIP"];
+        }
+
+        if (array_key_exists("PodStatus",$param) and $param["PodStatus"] !== null) {
+            $this->PodStatus = $param["PodStatus"];
+        }
+
+        if (array_key_exists("ClusterID",$param) and $param["ClusterID"] !== null) {
+            $this->ClusterID = $param["ClusterID"];
+        }
+
+        if (array_key_exists("ClusterName",$param) and $param["ClusterName"] !== null) {
+            $this->ClusterName = $param["ClusterName"];
+        }
+
+        if (array_key_exists("NodeType",$param) and $param["NodeType"] !== null) {
+            $this->NodeType = $param["NodeType"];
+        }
+
+        if (array_key_exists("NodeUniqueID",$param) and $param["NodeUniqueID"] !== null) {
+            $this->NodeUniqueID = $param["NodeUniqueID"];
+        }
+
+        if (array_key_exists("PublicIP",$param) and $param["PublicIP"] !== null) {
+            $this->PublicIP = $param["PublicIP"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

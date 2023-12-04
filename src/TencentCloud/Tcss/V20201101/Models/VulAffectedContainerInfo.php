@@ -36,6 +36,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setHostID(string $HostID) Set Server ID
  * @method string getPublicIP() Obtain Public IP
  * @method void setPublicIP(string $PublicIP) Set Public IP
+ * @method string getClusterID() Obtain Cluster ID
+ * @method void setClusterID(string $ClusterID) Set Cluster ID
+ * @method string getClusterName() Obtain Cluster name
+ * @method void setClusterName(string $ClusterName) Set Cluster name
+ * @method string getNodeType() Obtain Node type. Values: `NORMAL` (general node), `SUPER` (super node).
+ * @method void setNodeType(string $NodeType) Set Node type. Values: `NORMAL` (general node), `SUPER` (super node).
+ * @method string getNodeUniqueID() Obtain UID of a super node
+ * @method void setNodeUniqueID(string $NodeUniqueID) Set UID of a super node
+ * @method string getNodeID() Obtain ID of a super node
+ * @method void setNodeID(string $NodeID) Set ID of a super node
+ * @method string getNodeName() Obtain Super node name
+ * @method void setNodeName(string $NodeName) Set Super node name
  */
 class VulAffectedContainerInfo extends AbstractModel
 {
@@ -80,6 +92,36 @@ class VulAffectedContainerInfo extends AbstractModel
     public $PublicIP;
 
     /**
+     * @var string Cluster ID
+     */
+    public $ClusterID;
+
+    /**
+     * @var string Cluster name
+     */
+    public $ClusterName;
+
+    /**
+     * @var string Node type. Values: `NORMAL` (general node), `SUPER` (super node).
+     */
+    public $NodeType;
+
+    /**
+     * @var string UID of a super node
+     */
+    public $NodeUniqueID;
+
+    /**
+     * @var string ID of a super node
+     */
+    public $NodeID;
+
+    /**
+     * @var string Super node name
+     */
+    public $NodeName;
+
+    /**
      * @param string $HostIP Private IP
      * @param string $ContainerID Container ID
      * @param string $ContainerName Container name
@@ -88,6 +130,12 @@ class VulAffectedContainerInfo extends AbstractModel
      * @param string $HostName Server name
      * @param string $HostID Server ID
      * @param string $PublicIP Public IP
+     * @param string $ClusterID Cluster ID
+     * @param string $ClusterName Cluster name
+     * @param string $NodeType Node type. Values: `NORMAL` (general node), `SUPER` (super node).
+     * @param string $NodeUniqueID UID of a super node
+     * @param string $NodeID ID of a super node
+     * @param string $NodeName Super node name
      */
     function __construct()
     {
@@ -132,6 +180,30 @@ class VulAffectedContainerInfo extends AbstractModel
 
         if (array_key_exists("PublicIP",$param) and $param["PublicIP"] !== null) {
             $this->PublicIP = $param["PublicIP"];
+        }
+
+        if (array_key_exists("ClusterID",$param) and $param["ClusterID"] !== null) {
+            $this->ClusterID = $param["ClusterID"];
+        }
+
+        if (array_key_exists("ClusterName",$param) and $param["ClusterName"] !== null) {
+            $this->ClusterName = $param["ClusterName"];
+        }
+
+        if (array_key_exists("NodeType",$param) and $param["NodeType"] !== null) {
+            $this->NodeType = $param["NodeType"];
+        }
+
+        if (array_key_exists("NodeUniqueID",$param) and $param["NodeUniqueID"] !== null) {
+            $this->NodeUniqueID = $param["NodeUniqueID"];
+        }
+
+        if (array_key_exists("NodeID",$param) and $param["NodeID"] !== null) {
+            $this->NodeID = $param["NodeID"];
+        }
+
+        if (array_key_exists("NodeName",$param) and $param["NodeName"] !== null) {
+            $this->NodeName = $param["NodeName"];
         }
     }
 }

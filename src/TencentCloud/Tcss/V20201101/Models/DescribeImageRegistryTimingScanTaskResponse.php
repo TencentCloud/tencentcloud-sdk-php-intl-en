@@ -42,6 +42,20 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setId(array $Id) Set ID of the specified image
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method boolean getLatest() Obtain Whether to scan the latest image tag
+Note: This field may return·`null`, indicating that no valid values can be obtained.
+ * @method void setLatest(boolean $Latest) Set Whether to scan the latest image tag
+Note: This field may return·`null`, indicating that no valid values can be obtained.
+ * @method string getScanEndTime() Obtain 
+ * @method void setScanEndTime(string $ScanEndTime) Set 
+ * @method array getRegistryType() Obtain 
+ * @method void setRegistryType(array $RegistryType) Set 
+ * @method boolean getContainerRunning() Obtain 
+ * @method void setContainerRunning(boolean $ContainerRunning) Set 
+ * @method integer getScanScope() Obtain 
+ * @method void setScanScope(integer $ScanScope) Set 
+ * @method array getNamespace() Obtain 
+ * @method void setNamespace(array $Namespace) Set 
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -71,6 +85,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * @var boolean Scan of all images
+     * @deprecated
      */
     public $All;
 
@@ -85,6 +100,37 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Id;
+
+    /**
+     * @var boolean Whether to scan the latest image tag
+Note: This field may return·`null`, indicating that no valid values can be obtained.
+     */
+    public $Latest;
+
+    /**
+     * @var string 
+     */
+    public $ScanEndTime;
+
+    /**
+     * @var array 
+     */
+    public $RegistryType;
+
+    /**
+     * @var boolean 
+     */
+    public $ContainerRunning;
+
+    /**
+     * @var integer 
+     */
+    public $ScanScope;
+
+    /**
+     * @var array 
+     */
+    public $Namespace;
 
     /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -103,6 +149,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param array $Id ID of the specified image
 Note: This field may return null, indicating that no valid values can be obtained.
+     * @param boolean $Latest Whether to scan the latest image tag
+Note: This field may return·`null`, indicating that no valid values can be obtained.
+     * @param string $ScanEndTime 
+     * @param array $RegistryType 
+     * @param boolean $ContainerRunning 
+     * @param integer $ScanScope 
+     * @param array $Namespace 
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -149,6 +202,30 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("Id",$param) and $param["Id"] !== null) {
             $this->Id = $param["Id"];
+        }
+
+        if (array_key_exists("Latest",$param) and $param["Latest"] !== null) {
+            $this->Latest = $param["Latest"];
+        }
+
+        if (array_key_exists("ScanEndTime",$param) and $param["ScanEndTime"] !== null) {
+            $this->ScanEndTime = $param["ScanEndTime"];
+        }
+
+        if (array_key_exists("RegistryType",$param) and $param["RegistryType"] !== null) {
+            $this->RegistryType = $param["RegistryType"];
+        }
+
+        if (array_key_exists("ContainerRunning",$param) and $param["ContainerRunning"] !== null) {
+            $this->ContainerRunning = $param["ContainerRunning"];
+        }
+
+        if (array_key_exists("ScanScope",$param) and $param["ScanScope"] !== null) {
+            $this->ScanScope = $param["ScanScope"];
+        }
+
+        if (array_key_exists("Namespace",$param) and $param["Namespace"] !== null) {
+            $this->Namespace = $param["Namespace"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

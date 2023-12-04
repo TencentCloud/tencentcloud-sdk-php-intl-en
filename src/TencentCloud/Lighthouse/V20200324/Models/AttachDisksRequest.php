@@ -24,8 +24,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDiskIds(array $DiskIds) Set List of cloud disk IDs.
  * @method string getInstanceId() Obtain Instance ID.
  * @method void setInstanceId(string $InstanceId) Set Instance ID.
- * @method string getRenewFlag() Obtain Whether Auto-Renewal is enabled 
- * @method void setRenewFlag(string $RenewFlag) Set Whether Auto-Renewal is enabled 
+ * @method string getRenewFlag() Obtain Specify whether to renew an instance automatically when it expires. Values: 
+
+`NOTIFY_AND_AUTO_RENEW`: Trigger expiration notification and renew automatically; `NOTIFY_AND_MANUAL_RENEW`: Trigger expiration notification but do not renew; `DISABLE_NOTIFY_AND_MANUAL_RENEW`: Do not trigger the notification and do not renew.
+
+Default: `NOTIFY_AND_MANUAL_RENEW`. If `NOTIFY_AND_AUTO_RENEW` is specified, the instance is automatically renewed on a monthly basis when the account balance is sufficient.
+ * @method void setRenewFlag(string $RenewFlag) Set Specify whether to renew an instance automatically when it expires. Values: 
+
+`NOTIFY_AND_AUTO_RENEW`: Trigger expiration notification and renew automatically; `NOTIFY_AND_MANUAL_RENEW`: Trigger expiration notification but do not renew; `DISABLE_NOTIFY_AND_MANUAL_RENEW`: Do not trigger the notification and do not renew.
+
+Default: `NOTIFY_AND_MANUAL_RENEW`. If `NOTIFY_AND_AUTO_RENEW` is specified, the instance is automatically renewed on a monthly basis when the account balance is sufficient.
  */
 class AttachDisksRequest extends AbstractModel
 {
@@ -40,14 +48,22 @@ class AttachDisksRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var string Whether Auto-Renewal is enabled 
+     * @var string Specify whether to renew an instance automatically when it expires. Values: 
+
+`NOTIFY_AND_AUTO_RENEW`: Trigger expiration notification and renew automatically; `NOTIFY_AND_MANUAL_RENEW`: Trigger expiration notification but do not renew; `DISABLE_NOTIFY_AND_MANUAL_RENEW`: Do not trigger the notification and do not renew.
+
+Default: `NOTIFY_AND_MANUAL_RENEW`. If `NOTIFY_AND_AUTO_RENEW` is specified, the instance is automatically renewed on a monthly basis when the account balance is sufficient.
      */
     public $RenewFlag;
 
     /**
      * @param array $DiskIds List of cloud disk IDs.
      * @param string $InstanceId Instance ID.
-     * @param string $RenewFlag Whether Auto-Renewal is enabled 
+     * @param string $RenewFlag Specify whether to renew an instance automatically when it expires. Values: 
+
+`NOTIFY_AND_AUTO_RENEW`: Trigger expiration notification and renew automatically; `NOTIFY_AND_MANUAL_RENEW`: Trigger expiration notification but do not renew; `DISABLE_NOTIFY_AND_MANUAL_RENEW`: Do not trigger the notification and do not renew.
+
+Default: `NOTIFY_AND_MANUAL_RENEW`. If `NOTIFY_AND_AUTO_RENEW` is specified, the instance is automatically renewed on a monthly basis when the account balance is sufficient.
      */
     function __construct()
     {

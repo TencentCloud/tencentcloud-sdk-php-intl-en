@@ -34,8 +34,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setImageName(string $ImageName) Set Image name
  * @method string getNodeName() Obtain Node name
  * @method void setNodeName(string $NodeName) Set Node name
- * @method string getPodName() Obtain Pod name
- * @method void setPodName(string $PodName) Set Pod name
  * @method string getStatus() Obtain Status. `EVENT_UNDEAL`: Pending.
     `EVENT_DEALED`: Processed.
     `EVENT_INGNORE`: Ignored.
@@ -124,6 +122,34 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setContainerIsolateOperationSrc(string $ContainerIsolateOperationSrc) Set Container isolation operation source
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getNodeID() Obtain Node ID
+ * @method void setNodeID(string $NodeID) Set Node ID
+ * @method string getNodeType() Obtain Node type. Valid values: `NORMAL` (general node), `SUPER` (super node)
+ * @method void setNodeType(string $NodeType) Set Node type. Valid values: `NORMAL` (general node), `SUPER` (super node)
+ * @method string getNodeSubNetID() Obtain Node subnet ID
+ * @method void setNodeSubNetID(string $NodeSubNetID) Set Node subnet ID
+ * @method string getNodeSubNetName() Obtain Node subnet name
+ * @method void setNodeSubNetName(string $NodeSubNetName) Set Node subnet name
+ * @method string getNodeSubNetCIDR() Obtain Subnet IP range
+ * @method void setNodeSubNetCIDR(string $NodeSubNetCIDR) Set Subnet IP range
+ * @method string getPodName() Obtain Pod name
+ * @method void setPodName(string $PodName) Set Pod name
+ * @method string getPodIP() Obtain Pod IP
+ * @method void setPodIP(string $PodIP) Set Pod IP
+ * @method string getPodStatus() Obtain Pod status
+ * @method void setPodStatus(string $PodStatus) Set Pod status
+ * @method string getClusterID() Obtain Cluster ID
+ * @method void setClusterID(string $ClusterID) Set Cluster ID
+ * @method string getClusterName() Obtain Cluster name
+ * @method void setClusterName(string $ClusterName) Set Cluster name
+ * @method string getNodeUniqueID() Obtain Unique node ID
+ * @method void setNodeUniqueID(string $NodeUniqueID) Set Unique node ID
+ * @method string getHostID() Obtain uuid
+ * @method void setHostID(string $HostID) Set uuid
+ * @method string getNamespace() Obtain 
+ * @method void setNamespace(string $Namespace) Set 
+ * @method string getWorkloadType() Obtain 
+ * @method void setWorkloadType(string $WorkloadType) Set 
  */
 class RunTimeEventBaseInfo extends AbstractModel
 {
@@ -161,11 +187,6 @@ class RunTimeEventBaseInfo extends AbstractModel
      * @var string Node name
      */
     public $NodeName;
-
-    /**
-     * @var string Pod name
-     */
-    public $PodName;
 
     /**
      * @var string Status. `EVENT_UNDEAL`: Pending.
@@ -252,6 +273,76 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $ContainerIsolateOperationSrc;
 
     /**
+     * @var string Node ID
+     */
+    public $NodeID;
+
+    /**
+     * @var string Node type. Valid values: `NORMAL` (general node), `SUPER` (super node)
+     */
+    public $NodeType;
+
+    /**
+     * @var string Node subnet ID
+     */
+    public $NodeSubNetID;
+
+    /**
+     * @var string Node subnet name
+     */
+    public $NodeSubNetName;
+
+    /**
+     * @var string Subnet IP range
+     */
+    public $NodeSubNetCIDR;
+
+    /**
+     * @var string Pod name
+     */
+    public $PodName;
+
+    /**
+     * @var string Pod IP
+     */
+    public $PodIP;
+
+    /**
+     * @var string Pod status
+     */
+    public $PodStatus;
+
+    /**
+     * @var string Cluster ID
+     */
+    public $ClusterID;
+
+    /**
+     * @var string Cluster name
+     */
+    public $ClusterName;
+
+    /**
+     * @var string Unique node ID
+     */
+    public $NodeUniqueID;
+
+    /**
+     * @var string uuid
+     */
+    public $HostID;
+
+    /**
+     * @var string 
+     */
+    public $Namespace;
+
+    /**
+     * @var string 
+     */
+    public $WorkloadType;
+
+    /**
      * @param string $EventId Unique event ID
      * @param string $FoundTime Event discovery time
      * @param string $ContainerId Container ID
@@ -259,7 +350,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $ImageId Image ID
      * @param string $ImageName Image name
      * @param string $NodeName Node name
-     * @param string $PodName Pod name
      * @param string $Status Status. `EVENT_UNDEAL`: Pending.
     `EVENT_DEALED`: Processed.
     `EVENT_INGNORE`: Ignored.
@@ -304,6 +394,20 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $ContainerIsolateOperationSrc Container isolation operation source
 Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $NodeID Node ID
+     * @param string $NodeType Node type. Valid values: `NORMAL` (general node), `SUPER` (super node)
+     * @param string $NodeSubNetID Node subnet ID
+     * @param string $NodeSubNetName Node subnet name
+     * @param string $NodeSubNetCIDR Subnet IP range
+     * @param string $PodName Pod name
+     * @param string $PodIP Pod IP
+     * @param string $PodStatus Pod status
+     * @param string $ClusterID Cluster ID
+     * @param string $ClusterName Cluster name
+     * @param string $NodeUniqueID Unique node ID
+     * @param string $HostID uuid
+     * @param string $Namespace 
+     * @param string $WorkloadType 
      */
     function __construct()
     {
@@ -346,10 +450,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
             $this->NodeName = $param["NodeName"];
         }
 
-        if (array_key_exists("PodName",$param) and $param["PodName"] !== null) {
-            $this->PodName = $param["PodName"];
-        }
-
         if (array_key_exists("Status",$param) and $param["Status"] !== null) {
             $this->Status = $param["Status"];
         }
@@ -388,6 +488,62 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("ContainerIsolateOperationSrc",$param) and $param["ContainerIsolateOperationSrc"] !== null) {
             $this->ContainerIsolateOperationSrc = $param["ContainerIsolateOperationSrc"];
+        }
+
+        if (array_key_exists("NodeID",$param) and $param["NodeID"] !== null) {
+            $this->NodeID = $param["NodeID"];
+        }
+
+        if (array_key_exists("NodeType",$param) and $param["NodeType"] !== null) {
+            $this->NodeType = $param["NodeType"];
+        }
+
+        if (array_key_exists("NodeSubNetID",$param) and $param["NodeSubNetID"] !== null) {
+            $this->NodeSubNetID = $param["NodeSubNetID"];
+        }
+
+        if (array_key_exists("NodeSubNetName",$param) and $param["NodeSubNetName"] !== null) {
+            $this->NodeSubNetName = $param["NodeSubNetName"];
+        }
+
+        if (array_key_exists("NodeSubNetCIDR",$param) and $param["NodeSubNetCIDR"] !== null) {
+            $this->NodeSubNetCIDR = $param["NodeSubNetCIDR"];
+        }
+
+        if (array_key_exists("PodName",$param) and $param["PodName"] !== null) {
+            $this->PodName = $param["PodName"];
+        }
+
+        if (array_key_exists("PodIP",$param) and $param["PodIP"] !== null) {
+            $this->PodIP = $param["PodIP"];
+        }
+
+        if (array_key_exists("PodStatus",$param) and $param["PodStatus"] !== null) {
+            $this->PodStatus = $param["PodStatus"];
+        }
+
+        if (array_key_exists("ClusterID",$param) and $param["ClusterID"] !== null) {
+            $this->ClusterID = $param["ClusterID"];
+        }
+
+        if (array_key_exists("ClusterName",$param) and $param["ClusterName"] !== null) {
+            $this->ClusterName = $param["ClusterName"];
+        }
+
+        if (array_key_exists("NodeUniqueID",$param) and $param["NodeUniqueID"] !== null) {
+            $this->NodeUniqueID = $param["NodeUniqueID"];
+        }
+
+        if (array_key_exists("HostID",$param) and $param["HostID"] !== null) {
+            $this->HostID = $param["HostID"];
+        }
+
+        if (array_key_exists("Namespace",$param) and $param["Namespace"] !== null) {
+            $this->Namespace = $param["Namespace"];
+        }
+
+        if (array_key_exists("WorkloadType",$param) and $param["WorkloadType"] !== null) {
+            $this->WorkloadType = $param["WorkloadType"];
         }
     }
 }

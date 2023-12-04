@@ -20,171 +20,168 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeTaskDetail response structure.
  *
- * @method string getTaskId() Obtain This field is used to return the task ID (in the `Results` parameter) after an audio moderation task is created. It is used to identify the moderation task for which to query the details.
+ * @method string getTaskId() Obtain 
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setTaskId(string $TaskId) Set This field is used to return the task ID (in the `Results` parameter) after an audio moderation task is created. It is used to identify the moderation task for which to query the details.
+ * @method void setTaskId(string $TaskId) Set 
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getDataId() Obtain This field is used to return the data ID parameter passed in within the `Tasks` parameter when the audio moderation API is called for easier data identification and management.
+ * @method string getDataId() Obtain 
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setDataId(string $DataId) Set This field is used to return the data ID parameter passed in within the `Tasks` parameter when the audio moderation API is called for easier data identification and management.
+ * @method void setDataId(string $DataId) Set 
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getBizType() Obtain This field is used to return the `BizType` parameter passed in when the audio moderation API is called for easier data identification and management.
+ * @method string getBizType() Obtain 
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setBizType(string $BizType) Set This field is used to return the `BizType` parameter passed in when the audio moderation API is called for easier data identification and management.
+ * @method void setBizType(string $BizType) Set 
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getName() Obtain This field is used to return the task name in the `TaskInput` parameter passed in when the audio moderation API is called for easier task identification and management.
+ * @method string getName() Obtain 
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setName(string $Name) Set This field is used to return the task name in the `TaskInput` parameter passed in when the audio moderation API is called for easier task identification and management.
+ * @method void setName(string $Name) Set 
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getStatus() Obtain This field is used to return the task status of the queried content.
-<br>Valid values: **FINISH** (task completed), **PENDING** (task pending), **RUNNING** (task in progress), **ERROR** (task error), **CANCELLED** (task canceled).
+ * @method string getStatus() Obtain 
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setStatus(string $Status) Set This field is used to return the task status of the queried content.
-<br>Valid values: **FINISH** (task completed), **PENDING** (task pending), **RUNNING** (task in progress), **ERROR** (task error), **CANCELLED** (task canceled).
+ * @method void setStatus(string $Status) Set 
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getType() Obtain This field is used to return the audio moderation type passed in when the audio moderation API is called. Valid values: **AUDIO** (audio on demand), **LIVE_AUDIO** (audio live streaming). Default value: AUDIO.
+ * @method string getType() Obtain 
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setType(string $Type) Set This field is used to return the audio moderation type passed in when the audio moderation API is called. Valid values: **AUDIO** (audio on demand), **LIVE_AUDIO** (audio live streaming). Default value: AUDIO.
+ * @method void setType(string $Type) Set 
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getSuggestion() Obtain This field is used to return the operation suggestion for the maliciousness tag. When you get the determination result, the returned value indicates the operation suggested by the system. We recommend you handle different types of violations and suggestions according to your business needs. <br>Returned values: **Block**, **Review**, **Pass**.
+ * @method string getSuggestion() Obtain 
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setSuggestion(string $Suggestion) Set This field is used to return the operation suggestion for the maliciousness tag. When you get the determination result, the returned value indicates the operation suggested by the system. We recommend you handle different types of violations and suggestions according to your business needs. <br>Returned values: **Block**, **Review**, **Pass**.
+ * @method void setSuggestion(string $Suggestion) Set 
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method array getLabels() Obtain Label of the malicious content detected. <br>Values: **Porn**: pornographic; **Abuse**: abusive; **Ad**: advertising; **Custom**: custom type of non-compliant content and other offensive, unsafe, or inappropriate types of content.
-Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method void setLabels(array $Labels) Set Label of the malicious content detected. <br>Values: **Porn**: pornographic; **Abuse**: abusive; **Ad**: advertising; **Custom**: custom type of non-compliant content and other offensive, unsafe, or inappropriate types of content.
-Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method InputInfo getInputInfo() Obtain This field is used to return the media content information of the moderation service, mainly including the input file type and access URL.
+ * @method array getLabels() Obtain 
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setInputInfo(InputInfo $InputInfo) Set This field is used to return the media content information of the moderation service, mainly including the input file type and access URL.
+ * @method void setLabels(array $Labels) Set 
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getAudioText() Obtain This field is used to return the recognized text content of an audio file. **Up to the first 1,000 characters** can be recognized.
+ * @method InputInfo getInputInfo() Obtain 
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setAudioText(string $AudioText) Set This field is used to return the recognized text content of an audio file. **Up to the first 1,000 characters** can be recognized.
+ * @method void setInputInfo(InputInfo $InputInfo) Set 
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method array getAudioSegments() Obtain This field is used to return the moderation result of an audio segment, mainly including the start time and audio moderation result.<br>For the specific output content, see the detailed description of the `AudioSegments` and `AudioResult` data structures.
+ * @method string getAudioText() Obtain 
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setAudioSegments(array $AudioSegments) Set This field is used to return the moderation result of an audio segment, mainly including the start time and audio moderation result.<br>For the specific output content, see the detailed description of the `AudioSegments` and `AudioResult` data structures.
+ * @method void setAudioText(string $AudioText) Set 
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getErrorType() Obtain If the task status is `Error`, this field will return the error type; otherwise, null will be returned by default.
+ * @method array getAudioSegments() Obtain 
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setErrorType(string $ErrorType) Set If the task status is `Error`, this field will return the error type; otherwise, null will be returned by default.
+ * @method void setAudioSegments(array $AudioSegments) Set 
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getErrorDescription() Obtain If the task status is `Error`, this field will return the error message; otherwise, null will be returned by default.
+ * @method string getErrorType() Obtain 
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setErrorDescription(string $ErrorDescription) Set If the task status is `Error`, this field will return the error message; otherwise, null will be returned by default.
+ * @method void setErrorType(string $ErrorType) Set 
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getCreatedAt() Obtain This field is used to return the creation time of the queried task in ISO 8601 format.
+ * @method string getErrorDescription() Obtain 
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setCreatedAt(string $CreatedAt) Set This field is used to return the creation time of the queried task in ISO 8601 format.
+ * @method void setErrorDescription(string $ErrorDescription) Set 
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getUpdatedAt() Obtain This field is used to return the last update time of the queried task in ISO 8601 format.
+ * @method string getCreatedAt() Obtain 
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setUpdatedAt(string $UpdatedAt) Set This field is used to return the last update time of the queried task in ISO 8601 format.
+ * @method void setCreatedAt(string $CreatedAt) Set 
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getLabel() Obtain If the recognition result is normal, this parameter is returned with the value `Normal`. If malicious content is recognized, the tag with the highest priority in the result of `Labels` is returned.
-Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method void setLabel(string $Label) Set If the recognition result is normal, this parameter is returned with the value `Normal`. If malicious content is recognized, the tag with the highest priority in the result of `Labels` is returned.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method string getUpdatedAt() Obtain 
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method void setUpdatedAt(string $UpdatedAt) Set 
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method string getLabel() Obtain 
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method void setLabel(string $Label) Set 
+Note: this field may return null, indicating that no valid values can be obtained.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 class DescribeTaskDetailResponse extends AbstractModel
 {
     /**
-     * @var string This field is used to return the task ID (in the `Results` parameter) after an audio moderation task is created. It is used to identify the moderation task for which to query the details.
+     * @var string 
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $TaskId;
 
     /**
-     * @var string This field is used to return the data ID parameter passed in within the `Tasks` parameter when the audio moderation API is called for easier data identification and management.
+     * @var string 
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $DataId;
 
     /**
-     * @var string This field is used to return the `BizType` parameter passed in when the audio moderation API is called for easier data identification and management.
+     * @var string 
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $BizType;
 
     /**
-     * @var string This field is used to return the task name in the `TaskInput` parameter passed in when the audio moderation API is called for easier task identification and management.
+     * @var string 
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $Name;
 
     /**
-     * @var string This field is used to return the task status of the queried content.
-<br>Valid values: **FINISH** (task completed), **PENDING** (task pending), **RUNNING** (task in progress), **ERROR** (task error), **CANCELLED** (task canceled).
+     * @var string 
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $Status;
 
     /**
-     * @var string This field is used to return the audio moderation type passed in when the audio moderation API is called. Valid values: **AUDIO** (audio on demand), **LIVE_AUDIO** (audio live streaming). Default value: AUDIO.
+     * @var string 
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $Type;
 
     /**
-     * @var string This field is used to return the operation suggestion for the maliciousness tag. When you get the determination result, the returned value indicates the operation suggested by the system. We recommend you handle different types of violations and suggestions according to your business needs. <br>Returned values: **Block**, **Review**, **Pass**.
+     * @var string 
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $Suggestion;
 
     /**
-     * @var array Label of the malicious content detected. <br>Values: **Porn**: pornographic; **Abuse**: abusive; **Ad**: advertising; **Custom**: custom type of non-compliant content and other offensive, unsafe, or inappropriate types of content.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @var array 
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $Labels;
 
     /**
-     * @var InputInfo This field is used to return the media content information of the moderation service, mainly including the input file type and access URL.
+     * @var InputInfo 
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $InputInfo;
 
     /**
-     * @var string This field is used to return the recognized text content of an audio file. **Up to the first 1,000 characters** can be recognized.
+     * @var string 
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $AudioText;
 
     /**
-     * @var array This field is used to return the moderation result of an audio segment, mainly including the start time and audio moderation result.<br>For the specific output content, see the detailed description of the `AudioSegments` and `AudioResult` data structures.
+     * @var array 
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $AudioSegments;
 
     /**
-     * @var string If the task status is `Error`, this field will return the error type; otherwise, null will be returned by default.
+     * @var string 
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $ErrorType;
 
     /**
-     * @var string If the task status is `Error`, this field will return the error message; otherwise, null will be returned by default.
+     * @var string 
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $ErrorDescription;
 
     /**
-     * @var string This field is used to return the creation time of the queried task in ISO 8601 format.
+     * @var string 
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $CreatedAt;
 
     /**
-     * @var string This field is used to return the last update time of the queried task in ISO 8601 format.
+     * @var string 
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $UpdatedAt;
 
     /**
-     * @var string If the recognition result is normal, this parameter is returned with the value `Normal`. If malicious content is recognized, the tag with the highest priority in the result of `Labels` is returned.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @var string 
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $Label;
 
@@ -194,39 +191,38 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     public $RequestId;
 
     /**
-     * @param string $TaskId This field is used to return the task ID (in the `Results` parameter) after an audio moderation task is created. It is used to identify the moderation task for which to query the details.
+     * @param string $TaskId 
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $DataId This field is used to return the data ID parameter passed in within the `Tasks` parameter when the audio moderation API is called for easier data identification and management.
+     * @param string $DataId 
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $BizType This field is used to return the `BizType` parameter passed in when the audio moderation API is called for easier data identification and management.
+     * @param string $BizType 
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $Name This field is used to return the task name in the `TaskInput` parameter passed in when the audio moderation API is called for easier task identification and management.
+     * @param string $Name 
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $Status This field is used to return the task status of the queried content.
-<br>Valid values: **FINISH** (task completed), **PENDING** (task pending), **RUNNING** (task in progress), **ERROR** (task error), **CANCELLED** (task canceled).
+     * @param string $Status 
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $Type This field is used to return the audio moderation type passed in when the audio moderation API is called. Valid values: **AUDIO** (audio on demand), **LIVE_AUDIO** (audio live streaming). Default value: AUDIO.
+     * @param string $Type 
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $Suggestion This field is used to return the operation suggestion for the maliciousness tag. When you get the determination result, the returned value indicates the operation suggested by the system. We recommend you handle different types of violations and suggestions according to your business needs. <br>Returned values: **Block**, **Review**, **Pass**.
+     * @param string $Suggestion 
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param array $Labels Label of the malicious content detected. <br>Values: **Porn**: pornographic; **Abuse**: abusive; **Ad**: advertising; **Custom**: custom type of non-compliant content and other offensive, unsafe, or inappropriate types of content.
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param InputInfo $InputInfo This field is used to return the media content information of the moderation service, mainly including the input file type and access URL.
+     * @param array $Labels 
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $AudioText This field is used to return the recognized text content of an audio file. **Up to the first 1,000 characters** can be recognized.
+     * @param InputInfo $InputInfo 
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param array $AudioSegments This field is used to return the moderation result of an audio segment, mainly including the start time and audio moderation result.<br>For the specific output content, see the detailed description of the `AudioSegments` and `AudioResult` data structures.
+     * @param string $AudioText 
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $ErrorType If the task status is `Error`, this field will return the error type; otherwise, null will be returned by default.
+     * @param array $AudioSegments 
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $ErrorDescription If the task status is `Error`, this field will return the error message; otherwise, null will be returned by default.
+     * @param string $ErrorType 
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $CreatedAt This field is used to return the creation time of the queried task in ISO 8601 format.
+     * @param string $ErrorDescription 
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $UpdatedAt This field is used to return the last update time of the queried task in ISO 8601 format.
+     * @param string $CreatedAt 
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $Label If the recognition result is normal, this parameter is returned with the value `Normal`. If malicious content is recognized, the tag with the highest priority in the result of `Labels` is returned.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param string $UpdatedAt 
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param string $Label 
+Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()

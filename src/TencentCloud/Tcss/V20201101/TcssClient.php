@@ -293,6 +293,7 @@ use TencentCloud\Tcss\V20201101\Models as Models;
  * @method Models\DescribeVulImageSummaryResponse DescribeVulImageSummary(Models\DescribeVulImageSummaryRequest $req) This API is used to query the statistics of images affected by vulnerabilities.
  * @method Models\DescribeVulLevelImageSummaryResponse DescribeVulLevelImageSummary(Models\DescribeVulLevelImageSummaryRequest $req) This API is used to query the numbers of images affected by emergency vulnerabilities at each severity level.
  * @method Models\DescribeVulLevelSummaryResponse DescribeVulLevelSummary(Models\DescribeVulLevelSummaryRequest $req) This API is used to query the numbers of vulnerabilities at each severity level.
+ * @method Models\DescribeVulRegistryImageListResponse DescribeVulRegistryImageList(Models\DescribeVulRegistryImageListRequest $req) This API is used to query the list of repository images affected by vulnerabilities.
  * @method Models\DescribeVulScanAuthorizedImageSummaryResponse DescribeVulScanAuthorizedImageSummary(Models\DescribeVulScanAuthorizedImageSummaryRequest $req) This API is used to count the number of licensed but not scanned images on the vulnerability scanning page.
  * @method Models\DescribeVulScanInfoResponse DescribeVulScanInfo(Models\DescribeVulScanInfoRequest $req) This API is used to query the information of a vulnerability scan task.
  * @method Models\DescribeVulScanLocalImageListResponse DescribeVulScanLocalImageList(Models\DescribeVulScanLocalImageListRequest $req) This API is used to query the list of local images in a vulnerability scan task.

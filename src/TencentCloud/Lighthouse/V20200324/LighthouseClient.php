@@ -37,6 +37,7 @@ use TencentCloud\Lighthouse\V20200324\Models as Models;
  * @method Models\AttachCcnResponse AttachCcn(Models\AttachCcnRequest $req) This API is used to associate a CCN instance.
  * @method Models\AttachDisksResponse AttachDisks(Models\AttachDisksRequest $req) This API is used to attach one or more cloud disks.
  * @method Models\CreateBlueprintResponse CreateBlueprint(Models\CreateBlueprintRequest $req) This API is used to create an image.
+ * @method Models\CreateDisksResponse CreateDisks(Models\CreateDisksRequest $req) This API is used to create one or more cloud disks.
  * @method Models\CreateFirewallRulesResponse CreateFirewallRules(Models\CreateFirewallRulesRequest $req) This API is used to add a firewall rule on an instance.
 
 
@@ -112,7 +113,7 @@ https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F
  * @method Models\DescribeSnapshotsResponse DescribeSnapshots(Models\DescribeSnapshotsRequest $req) This API is used to query the list of snapshots.
  * @method Models\DescribeSnapshotsDeniedActionsResponse DescribeSnapshotsDeniedActions(Models\DescribeSnapshotsDeniedActionsRequest $req) This API is used to query the list of operation limits of one or more snapshots.
  * @method Models\DescribeZonesResponse DescribeZones(Models\DescribeZonesRequest $req) This API is used to query the list of AZs in a region.
- * @method Models\DetachCcnResponse DetachCcn(Models\DetachCcnRequest $req) This API is used to unassociate a CCN instance.
+ * @method Models\DetachCcnResponse DetachCcn(Models\DetachCcnRequest $req) This API is used to disassociate with a CCN instance.
  * @method Models\DetachDisksResponse DetachDisks(Models\DetachDisksRequest $req) This API is used to detach one or more cloud disks.
  * @method Models\DisassociateInstancesKeyPairsResponse DisassociateInstancesKeyPairs(Models\DisassociateInstancesKeyPairsRequest $req) This API is used to unbind an instance from the specified key pair.
 
@@ -127,6 +128,12 @@ https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F
  * @method Models\InquirePriceCreateInstancesResponse InquirePriceCreateInstances(Models\InquirePriceCreateInstancesRequest $req) This API is used to query the price of a created instance.
  * @method Models\InquirePriceRenewDisksResponse InquirePriceRenewDisks(Models\InquirePriceRenewDisksRequest $req) This API is used to query the price of renewing cloud disks.
  * @method Models\InquirePriceRenewInstancesResponse InquirePriceRenewInstances(Models\InquirePriceRenewInstancesRequest $req) This API is used to query the price of renewing one or more instances.
+ * @method Models\IsolateDisksResponse IsolateDisks(Models\IsolateDisksRequest $req) This API is used to return one or more Lighthouse cloud disks.
+
+You can only perform this operation on `UNATTACHED` disks.
+After the successful call of the API, the cloud disk goes to the SHUTDOWN state.
+Up to 20 instances are supported at one time. 
+This API is async. After the request is sent, a `RequestId` is returned. At this time, the operation is not completed yet. To check the result, you need to call  [DescribeDisks](https://intl.cloud.tencent.com/document/product/1207/66093?from_cn_redirect=1). If the latest operation status (LatestOperationState) of the disk is `SUCCESS`, the operation is successful.
  * @method Models\IsolateInstancesResponse IsolateInstances(Models\IsolateInstancesRequest $req) This API is used to return one or more Lighthouse instances. 
 * Only `RUNNING` and `STOPPED` instances can be returned. 
 * The instance status goes to `SHUTDOWN` after the API is called successfully. 
@@ -178,6 +185,15 @@ In the `FirewallRules` parameter:
 * You can only perform this operation on instances whose status is `RUNNING`.
 * The instance status will become `REBOOTING` when the API is called successfully and will become `RUNNING` when the instance is successfully restarted.
 * Batch operations are supported. The maximum number of instances in each request is 100.
+* This API is async. After the request is sent successfully, a `RequestId` will be returned. At this time, the operation is not completed immediately. The result of the instance operation can be queried by calling the `DescribeInstances` API. If the latest operation status (LatestOperationState) of the instance is `SUCCESS`, the operation is successful.
+ * @method Models\RenewDisksResponse RenewDisks(Models\RenewDisksRequest $req) This API is used to renew one or more Lighthouse cloud disks.
+
+This operation can only be performed on data disks with the status of `ATTACHED`, `UNATTACHED` or `SHUTDOWN`.
+Up to 50 cloud disks are supported at one time.
+This API is async. After the request is sent, a `RequestId` is returned. At this time, the operation is not completed yet. To check the result, you need to call  [DescribeDisks](https://intl.cloud.tencent.com/document/product/1207/66093?from_cn_redirect=1). If the latest operation status (LatestOperationState) of the disk is `SUCCESS`, the operation is successful.
+ * @method Models\RenewInstancesResponse RenewInstances(Models\RenewInstancesRequest $req) This API is used to renew one or more Lighthouse instances.
+* You can only perform this operation on instances whose status is `RUNNING`, `STOPPED` and `SHUTDOWN`.
+* Batch operations are supported. Up to 100 instances are supported in each request.
 * This API is async. After the request is sent successfully, a `RequestId` will be returned. At this time, the operation is not completed immediately. The result of the instance operation can be queried by calling the `DescribeInstances` API. If the latest operation status (LatestOperationState) of the instance is `SUCCESS`, the operation is successful.
  * @method Models\ResetAttachCcnResponse ResetAttachCcn(Models\ResetAttachCcnRequest $req) This API is used to apply for association again after a CCN instance association application expires.
  * @method Models\ResetInstanceResponse ResetInstance(Models\ResetInstanceRequest $req) This API is used to reinstall the image on the specified instance.

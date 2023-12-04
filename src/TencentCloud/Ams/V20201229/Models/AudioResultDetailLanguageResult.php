@@ -28,13 +28,13 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setScore(integer $Score) Set This parameter is used to return the confidence under the current tag. Value range: 0 (**the lowest confidence**)–100 (**the highest confidence**), where a higher value indicates that the audio is more likely to fall into the category of the current returned language tag;
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method float getStartTime() Obtain This parameter is used to return the start time of the segment of an audio file under the corresponding language tag in milliseconds.
+ * @method float getStartTime() Obtain This parameter is used to return the start time of the segment of an audio file under the corresponding language tag in seconds. 
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setStartTime(float $StartTime) Set This parameter is used to return the start time of the segment of an audio file under the corresponding language tag in milliseconds.
+ * @method void setStartTime(float $StartTime) Set This parameter is used to return the start time of the segment of an audio file under the corresponding language tag in seconds. 
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method float getEndTime() Obtain This parameter is used to return the end time of the segment of an audio file under the corresponding language tag in milliseconds.
+ * @method float getEndTime() Obtain This parameter is used to return the end time of the segment of an audio file under the corresponding language tag in seconds. 
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setEndTime(float $EndTime) Set This parameter is used to return the end time of the segment of an audio file under the corresponding language tag in milliseconds.
+ * @method void setEndTime(float $EndTime) Set This parameter is used to return the end time of the segment of an audio file under the corresponding language tag in seconds. 
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method string getSubLabelCode() Obtain *This field is in beta test. Stay tuned*
 Note: this field may return null, indicating that no valid values can be obtained.
@@ -56,13 +56,13 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $Score;
 
     /**
-     * @var float This parameter is used to return the start time of the segment of an audio file under the corresponding language tag in milliseconds.
+     * @var float This parameter is used to return the start time of the segment of an audio file under the corresponding language tag in seconds. 
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $StartTime;
 
     /**
-     * @var float This parameter is used to return the end time of the segment of an audio file under the corresponding language tag in milliseconds.
+     * @var float This parameter is used to return the end time of the segment of an audio file under the corresponding language tag in seconds. 
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $EndTime;
@@ -78,9 +78,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param integer $Score This parameter is used to return the confidence under the current tag. Value range: 0 (**the lowest confidence**)–100 (**the highest confidence**), where a higher value indicates that the audio is more likely to fall into the category of the current returned language tag;
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param float $StartTime This parameter is used to return the start time of the segment of an audio file under the corresponding language tag in milliseconds.
+     * @param float $StartTime This parameter is used to return the start time of the segment of an audio file under the corresponding language tag in seconds. 
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param float $EndTime This parameter is used to return the end time of the segment of an audio file under the corresponding language tag in milliseconds.
+     * @param float $EndTime This parameter is used to return the end time of the segment of an audio file under the corresponding language tag in seconds. 
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $SubLabelCode *This field is in beta test. Stay tuned*
 Note: this field may return null, indicating that no valid values can be obtained.

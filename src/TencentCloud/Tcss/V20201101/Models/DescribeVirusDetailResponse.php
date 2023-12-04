@@ -108,10 +108,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setSourceType(integer $SourceType) Set Source. Valid values: `0` (quick scan); `1` (scheduled scan); `2` (real-time monitoring).
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getPodName() Obtain Cluster name
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setPodName(string $PodName) Set Cluster name
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method array getTags() Obtain Tag
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setTags(array $Tags) Set Tag
@@ -139,6 +135,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
  * @method string getEventType() Obtain Event type
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setEventType(string $EventType) Set Event type
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getPodName() Obtain Cluster name
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setPodName(string $PodName) Set Cluster name
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getStatus() Obtain `DEAL_NONE`: Pending.
 `DEAL_IGNORE`: Ignored.
@@ -254,6 +254,30 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setFileModifyTime(string $FileModifyTime) Set File modified time
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getNodeSubNetID() Obtain Node subnet ID
+ * @method void setNodeSubNetID(string $NodeSubNetID) Set Node subnet ID
+ * @method string getNodeSubNetName() Obtain Node subnet name
+ * @method void setNodeSubNetName(string $NodeSubNetName) Set Node subnet name
+ * @method string getNodeSubNetCIDR() Obtain Subnet IP range
+ * @method void setNodeSubNetCIDR(string $NodeSubNetCIDR) Set Subnet IP range
+ * @method string getClusterID() Obtain Cluster ID
+ * @method void setClusterID(string $ClusterID) Set Cluster ID
+ * @method string getPodIP() Obtain Pod IP
+ * @method void setPodIP(string $PodIP) Set Pod IP
+ * @method string getPodStatus() Obtain Pod status
+ * @method void setPodStatus(string $PodStatus) Set Pod status
+ * @method string getNodeUniqueID() Obtain UID of the node
+ * @method void setNodeUniqueID(string $NodeUniqueID) Set UID of the node
+ * @method string getNodeType() Obtain Node type. Values: `NORMAL` (general node), `SUPER` (super node).
+ * @method void setNodeType(string $NodeType) Set Node type. Values: `NORMAL` (general node), `SUPER` (super node).
+ * @method string getNodeID() Obtain Node ID
+ * @method void setNodeID(string $NodeID) Set Node ID
+ * @method string getClusterName() Obtain Cluster name
+ * @method void setClusterName(string $ClusterName) Set Cluster name
+ * @method string getNamespace() Obtain 
+ * @method void setNamespace(string $Namespace) Set 
+ * @method string getWorkloadType() Obtain 
+ * @method void setWorkloadType(string $WorkloadType) Set 
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -392,12 +416,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $SourceType;
 
     /**
-     * @var string Cluster name
-Note: This field may return null, indicating that no valid values can be obtained.
-     */
-    public $PodName;
-
-    /**
      * @var array Tag
 Note: This field may return null, indicating that no valid values can be obtained.
      */
@@ -438,6 +456,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $EventType;
+
+    /**
+     * @var string Cluster name
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $PodName;
 
     /**
      * @var string `DEAL_NONE`: Pending.
@@ -573,6 +597,66 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $FileModifyTime;
 
     /**
+     * @var string Node subnet ID
+     */
+    public $NodeSubNetID;
+
+    /**
+     * @var string Node subnet name
+     */
+    public $NodeSubNetName;
+
+    /**
+     * @var string Subnet IP range
+     */
+    public $NodeSubNetCIDR;
+
+    /**
+     * @var string Cluster ID
+     */
+    public $ClusterID;
+
+    /**
+     * @var string Pod IP
+     */
+    public $PodIP;
+
+    /**
+     * @var string Pod status
+     */
+    public $PodStatus;
+
+    /**
+     * @var string UID of the node
+     */
+    public $NodeUniqueID;
+
+    /**
+     * @var string Node type. Values: `NORMAL` (general node), `SUPER` (super node).
+     */
+    public $NodeType;
+
+    /**
+     * @var string Node ID
+     */
+    public $NodeID;
+
+    /**
+     * @var string Cluster name
+     */
+    public $ClusterName;
+
+    /**
+     * @var string 
+     */
+    public $Namespace;
+
+    /**
+     * @var string 
+     */
+    public $WorkloadType;
+
+    /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
@@ -622,8 +706,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $SourceType Source. Valid values: `0` (quick scan); `1` (scheduled scan); `2` (real-time monitoring).
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $PodName Cluster name
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param array $Tags Tag
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $HarmDescribe Event description
@@ -637,6 +719,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $FileMd5 MD5 checksum of the file
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $EventType Event type
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $PodName Cluster name
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $Status `DEAL_NONE`: Pending.
 `DEAL_IGNORE`: Ignored.
@@ -695,6 +779,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $FileModifyTime File modified time
 Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $NodeSubNetID Node subnet ID
+     * @param string $NodeSubNetName Node subnet name
+     * @param string $NodeSubNetCIDR Subnet IP range
+     * @param string $ClusterID Cluster ID
+     * @param string $PodIP Pod IP
+     * @param string $PodStatus Pod status
+     * @param string $NodeUniqueID UID of the node
+     * @param string $NodeType Node type. Values: `NORMAL` (general node), `SUPER` (super node).
+     * @param string $NodeID Node ID
+     * @param string $ClusterName Cluster name
+     * @param string $Namespace 
+     * @param string $WorkloadType 
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -798,10 +894,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
             $this->SourceType = $param["SourceType"];
         }
 
-        if (array_key_exists("PodName",$param) and $param["PodName"] !== null) {
-            $this->PodName = $param["PodName"];
-        }
-
         if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
             $this->Tags = $param["Tags"];
         }
@@ -828,6 +920,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("EventType",$param) and $param["EventType"] !== null) {
             $this->EventType = $param["EventType"];
+        }
+
+        if (array_key_exists("PodName",$param) and $param["PodName"] !== null) {
+            $this->PodName = $param["PodName"];
         }
 
         if (array_key_exists("Status",$param) and $param["Status"] !== null) {
@@ -904,6 +1000,54 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("FileModifyTime",$param) and $param["FileModifyTime"] !== null) {
             $this->FileModifyTime = $param["FileModifyTime"];
+        }
+
+        if (array_key_exists("NodeSubNetID",$param) and $param["NodeSubNetID"] !== null) {
+            $this->NodeSubNetID = $param["NodeSubNetID"];
+        }
+
+        if (array_key_exists("NodeSubNetName",$param) and $param["NodeSubNetName"] !== null) {
+            $this->NodeSubNetName = $param["NodeSubNetName"];
+        }
+
+        if (array_key_exists("NodeSubNetCIDR",$param) and $param["NodeSubNetCIDR"] !== null) {
+            $this->NodeSubNetCIDR = $param["NodeSubNetCIDR"];
+        }
+
+        if (array_key_exists("ClusterID",$param) and $param["ClusterID"] !== null) {
+            $this->ClusterID = $param["ClusterID"];
+        }
+
+        if (array_key_exists("PodIP",$param) and $param["PodIP"] !== null) {
+            $this->PodIP = $param["PodIP"];
+        }
+
+        if (array_key_exists("PodStatus",$param) and $param["PodStatus"] !== null) {
+            $this->PodStatus = $param["PodStatus"];
+        }
+
+        if (array_key_exists("NodeUniqueID",$param) and $param["NodeUniqueID"] !== null) {
+            $this->NodeUniqueID = $param["NodeUniqueID"];
+        }
+
+        if (array_key_exists("NodeType",$param) and $param["NodeType"] !== null) {
+            $this->NodeType = $param["NodeType"];
+        }
+
+        if (array_key_exists("NodeID",$param) and $param["NodeID"] !== null) {
+            $this->NodeID = $param["NodeID"];
+        }
+
+        if (array_key_exists("ClusterName",$param) and $param["ClusterName"] !== null) {
+            $this->ClusterName = $param["ClusterName"];
+        }
+
+        if (array_key_exists("Namespace",$param) and $param["Namespace"] !== null) {
+            $this->Namespace = $param["Namespace"];
+        }
+
+        if (array_key_exists("WorkloadType",$param) and $param["WorkloadType"] !== null) {
+            $this->WorkloadType = $param["WorkloadType"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

@@ -20,42 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Parameter settings for renewing the monthly subscribed cloud disk
  *
- * @method integer getPeriod() Obtain Purchase duration.
- * @method void setPeriod(integer $Period) Set Purchase duration.
- * @method string getRenewFlag() Obtain Whether Auto-Renewal is enabled 
- * @method void setRenewFlag(string $RenewFlag) Set Whether Auto-Renewal is enabled 
- * @method string getTimeUnit() Obtain Duration unit. Default value: "m" (month).
- * @method void setTimeUnit(string $TimeUnit) Set Duration unit. Default value: "m" (month).
- * @method string getCurInstanceDeadline() Obtain Expiration time of the current instance.
- * @method void setCurInstanceDeadline(string $CurInstanceDeadline) Set Expiration time of the current instance.
+ * @method integer getPeriod() Obtain Renewal period
+ * @method void setPeriod(integer $Period) Set Renewal period
+ * @method string getRenewFlag() Obtain Whether to renew the disk automatically. Values:
+
+`NOTIFY_AND_AUTO_RENEW`: Trigger expiration notification and renew automatically; `NOTIFY_AND_MANUAL_RENEW`: Trigger expiration notification but do not renew; `DISABLE_NOTIFY_AND_MANUAL_RENEW`: Do not trigger the notification and do not renew.
+
+Default: `NOTIFY_AND_MANUAL_RENEW`. If `NOTIFY_AND_AUTO_RENEW` is specified, the instance is automatically renewed on a monthly basis when the account balance is sufficient.
+ * @method void setRenewFlag(string $RenewFlag) Set Whether to renew the disk automatically. Values:
+
+`NOTIFY_AND_AUTO_RENEW`: Trigger expiration notification and renew automatically; `NOTIFY_AND_MANUAL_RENEW`: Trigger expiration notification but do not renew; `DISABLE_NOTIFY_AND_MANUAL_RENEW`: Do not trigger the notification and do not renew.
+
+Default: `NOTIFY_AND_MANUAL_RENEW`. If `NOTIFY_AND_AUTO_RENEW` is specified, the instance is automatically renewed on a monthly basis when the account balance is sufficient.
+ * @method string getTimeUnit() Obtain Unit of the period. Values: `m` (month).
+ * @method void setTimeUnit(string $TimeUnit) Set Unit of the period. Values: `m` (month).
+ * @method string getCurInstanceDeadline() Obtain Expiration time of the current instance, such as "2018-01-01 00:00:00". Specify this parameter to align the expiration time of the instance and attached cloud disks. `CurInstanceDeadline` and `Period` cannot be both specified.
+ * @method void setCurInstanceDeadline(string $CurInstanceDeadline) Set Expiration time of the current instance, such as "2018-01-01 00:00:00". Specify this parameter to align the expiration time of the instance and attached cloud disks. `CurInstanceDeadline` and `Period` cannot be both specified.
  */
 class RenewDiskChargePrepaid extends AbstractModel
 {
     /**
-     * @var integer Purchase duration.
+     * @var integer Renewal period
      */
     public $Period;
 
     /**
-     * @var string Whether Auto-Renewal is enabled 
+     * @var string Whether to renew the disk automatically. Values:
+
+`NOTIFY_AND_AUTO_RENEW`: Trigger expiration notification and renew automatically; `NOTIFY_AND_MANUAL_RENEW`: Trigger expiration notification but do not renew; `DISABLE_NOTIFY_AND_MANUAL_RENEW`: Do not trigger the notification and do not renew.
+
+Default: `NOTIFY_AND_MANUAL_RENEW`. If `NOTIFY_AND_AUTO_RENEW` is specified, the instance is automatically renewed on a monthly basis when the account balance is sufficient.
      */
     public $RenewFlag;
 
     /**
-     * @var string Duration unit. Default value: "m" (month).
+     * @var string Unit of the period. Values: `m` (month).
      */
     public $TimeUnit;
 
     /**
-     * @var string Expiration time of the current instance.
+     * @var string Expiration time of the current instance, such as "2018-01-01 00:00:00". Specify this parameter to align the expiration time of the instance and attached cloud disks. `CurInstanceDeadline` and `Period` cannot be both specified.
      */
     public $CurInstanceDeadline;
 
     /**
-     * @param integer $Period Purchase duration.
-     * @param string $RenewFlag Whether Auto-Renewal is enabled 
-     * @param string $TimeUnit Duration unit. Default value: "m" (month).
-     * @param string $CurInstanceDeadline Expiration time of the current instance.
+     * @param integer $Period Renewal period
+     * @param string $RenewFlag Whether to renew the disk automatically. Values:
+
+`NOTIFY_AND_AUTO_RENEW`: Trigger expiration notification and renew automatically; `NOTIFY_AND_MANUAL_RENEW`: Trigger expiration notification but do not renew; `DISABLE_NOTIFY_AND_MANUAL_RENEW`: Do not trigger the notification and do not renew.
+
+Default: `NOTIFY_AND_MANUAL_RENEW`. If `NOTIFY_AND_AUTO_RENEW` is specified, the instance is automatically renewed on a monthly basis when the account balance is sufficient.
+     * @param string $TimeUnit Unit of the period. Values: `m` (month).
+     * @param string $CurInstanceDeadline Expiration time of the current instance, such as "2018-01-01 00:00:00". Specify this parameter to align the expiration time of the instance and attached cloud disks. `CurInstanceDeadline` and `Period` cannot be both specified.
      */
     function __construct()
     {

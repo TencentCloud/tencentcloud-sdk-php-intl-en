@@ -156,6 +156,28 @@ Note: This field may return null, indicating that no valid values can be obtaine
 `4`: Unusual behavior.
 `5`: Threat intelligence.
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getNodeID() Obtain Node ID.
+ * @method void setNodeID(string $NodeID) Set Node ID.
+ * @method string getNodeName() Obtain Node name
+ * @method void setNodeName(string $NodeName) Set Node name
+ * @method string getPodIP() Obtain Pod IP
+ * @method void setPodIP(string $PodIP) Set Pod IP
+ * @method string getPodName() Obtain Pod (instance) name
+ * @method void setPodName(string $PodName) Set Pod (instance) name
+ * @method string getClusterID() Obtain ID of the cluster where the node resides
+ * @method void setClusterID(string $ClusterID) Set ID of the cluster where the node resides
+ * @method string getNodeType() Obtain Node type. Values: `NORMAL` (general node), `SUPER` (super node).
+ * @method void setNodeType(string $NodeType) Set Node type. Values: `NORMAL` (general node), `SUPER` (super node).
+ * @method string getPublicIP() Obtain Public IP of the node
+ * @method void setPublicIP(string $PublicIP) Set Public IP of the node
+ * @method string getInnerIP() Obtain Node private IP
+ * @method void setInnerIP(string $InnerIP) Set Node private IP
+ * @method string getNodeUniqueID() Obtain UID of the node
+ * @method void setNodeUniqueID(string $NodeUniqueID) Set UID of the node
+ * @method string getHostID() Obtain ID for u200dthe general node
+ * @method void setHostID(string $HostID) Set ID for u200dthe general node
+ * @method string getClusterName() Obtain Cluster name
+ * @method void setClusterName(string $ClusterName) Set Cluster name
  */
 class VirusInfo extends AbstractModel
 {
@@ -312,6 +334,61 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $CheckPlatform;
 
     /**
+     * @var string Node ID.
+     */
+    public $NodeID;
+
+    /**
+     * @var string Node name
+     */
+    public $NodeName;
+
+    /**
+     * @var string Pod IP
+     */
+    public $PodIP;
+
+    /**
+     * @var string Pod (instance) name
+     */
+    public $PodName;
+
+    /**
+     * @var string ID of the cluster where the node resides
+     */
+    public $ClusterID;
+
+    /**
+     * @var string Node type. Values: `NORMAL` (general node), `SUPER` (super node).
+     */
+    public $NodeType;
+
+    /**
+     * @var string Public IP of the node
+     */
+    public $PublicIP;
+
+    /**
+     * @var string Node private IP
+     */
+    public $InnerIP;
+
+    /**
+     * @var string UID of the node
+     */
+    public $NodeUniqueID;
+
+    /**
+     * @var string ID for u200dthe general node
+     */
+    public $HostID;
+
+    /**
+     * @var string Cluster name
+     */
+    public $ClusterName;
+
+    /**
      * @param string $FileName Filename
      * @param string $FilePath File path
      * @param string $VirusName Virus name
@@ -380,6 +457,17 @@ Note: This field may return null, indicating that no valid values can be obtaine
 `4`: Unusual behavior.
 `5`: Threat intelligence.
 Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $NodeID Node ID.
+     * @param string $NodeName Node name
+     * @param string $PodIP Pod IP
+     * @param string $PodName Pod (instance) name
+     * @param string $ClusterID ID of the cluster where the node resides
+     * @param string $NodeType Node type. Values: `NORMAL` (general node), `SUPER` (super node).
+     * @param string $PublicIP Public IP of the node
+     * @param string $InnerIP Node private IP
+     * @param string $NodeUniqueID UID of the node
+     * @param string $HostID ID for u200dthe general node
+     * @param string $ClusterName Cluster name
      */
     function __construct()
     {
@@ -476,6 +564,50 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("CheckPlatform",$param) and $param["CheckPlatform"] !== null) {
             $this->CheckPlatform = $param["CheckPlatform"];
+        }
+
+        if (array_key_exists("NodeID",$param) and $param["NodeID"] !== null) {
+            $this->NodeID = $param["NodeID"];
+        }
+
+        if (array_key_exists("NodeName",$param) and $param["NodeName"] !== null) {
+            $this->NodeName = $param["NodeName"];
+        }
+
+        if (array_key_exists("PodIP",$param) and $param["PodIP"] !== null) {
+            $this->PodIP = $param["PodIP"];
+        }
+
+        if (array_key_exists("PodName",$param) and $param["PodName"] !== null) {
+            $this->PodName = $param["PodName"];
+        }
+
+        if (array_key_exists("ClusterID",$param) and $param["ClusterID"] !== null) {
+            $this->ClusterID = $param["ClusterID"];
+        }
+
+        if (array_key_exists("NodeType",$param) and $param["NodeType"] !== null) {
+            $this->NodeType = $param["NodeType"];
+        }
+
+        if (array_key_exists("PublicIP",$param) and $param["PublicIP"] !== null) {
+            $this->PublicIP = $param["PublicIP"];
+        }
+
+        if (array_key_exists("InnerIP",$param) and $param["InnerIP"] !== null) {
+            $this->InnerIP = $param["InnerIP"];
+        }
+
+        if (array_key_exists("NodeUniqueID",$param) and $param["NodeUniqueID"] !== null) {
+            $this->NodeUniqueID = $param["NodeUniqueID"];
+        }
+
+        if (array_key_exists("HostID",$param) and $param["HostID"] !== null) {
+            $this->HostID = $param["HostID"];
+        }
+
+        if (array_key_exists("ClusterName",$param) and $param["ClusterName"] !== null) {
+            $this->ClusterName = $param["ClusterName"];
         }
     }
 }

@@ -20,8 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Security log access details
  *
- * @method integer getCount() Obtain Number of accessed servers
- * @method void setCount(integer $Count) Set Number of accessed servers
+ * @method integer getCount() Obtain Number of connected general nodes
+ * @method void setCount(integer $Count) Set Number of connected general nodes
+ * @method integer getSuperNodeCount() Obtain Number of connected super nodes
+ * @method void setSuperNodeCount(integer $SuperNodeCount) Set Number of connected super nodes
  * @method boolean getIsJoined() Obtain Whether it is accessed. Valid values: `true` (accessed); `false` (not accessed).
  * @method void setIsJoined(boolean $IsJoined) Set Whether it is accessed. Valid values: `true` (accessed); `false` (not accessed).
  * @method string getLogType() Obtain Log type (
@@ -38,9 +40,14 @@ K8s API: "k8s_api"
 class SecLogJoinInfo extends AbstractModel
 {
     /**
-     * @var integer Number of accessed servers
+     * @var integer Number of connected general nodes
      */
     public $Count;
+
+    /**
+     * @var integer Number of connected super nodes
+     */
+    public $SuperNodeCount;
 
     /**
      * @var boolean Whether it is accessed. Valid values: `true` (accessed); `false` (not accessed).
@@ -57,7 +64,8 @@ K8s API: "k8s_api"
     public $LogType;
 
     /**
-     * @param integer $Count Number of accessed servers
+     * @param integer $Count Number of connected general nodes
+     * @param integer $SuperNodeCount Number of connected super nodes
      * @param boolean $IsJoined Whether it is accessed. Valid values: `true` (accessed); `false` (not accessed).
      * @param string $LogType Log type (
 Container bash: "container_bash"
@@ -80,6 +88,10 @@ K8s API: "k8s_api"
         }
         if (array_key_exists("Count",$param) and $param["Count"] !== null) {
             $this->Count = $param["Count"];
+        }
+
+        if (array_key_exists("SuperNodeCount",$param) and $param["SuperNodeCount"] !== null) {
+            $this->SuperNodeCount = $param["SuperNodeCount"];
         }
 
         if (array_key_exists("IsJoined",$param) and $param["IsJoined"] !== null) {

@@ -40,6 +40,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setSupportDefenseVulCount(integer $SupportDefenseVulCount) Set Number of vulnerabilities that can be prevented
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getHostNodeCount() Obtain Number of normal nodes
+ * @method void setHostNodeCount(integer $HostNodeCount) Set Number of normal nodes
+ * @method integer getSuperScope() Obtain Super node scope
+ * @method void setSuperScope(integer $SuperScope) Set Super node scope
+ * @method integer getSuperNodeCount() Obtain Number of super nodes
+ * @method void setSuperNodeCount(integer $SuperNodeCount) Set Number of super nodes
+ * @method array getSuperNodeIds() Obtain List of super node IDs
+ * @method void setSuperNodeIds(array $SuperNodeIds) Set List of super node IDs
+ * @method integer getNodeTotalCount() Obtain Total number of super nodes with TCSS activated
+ * @method void setNodeTotalCount(integer $NodeTotalCount) Set Total number of super nodes with TCSS activated
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -84,6 +94,31 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $SupportDefenseVulCount;
 
     /**
+     * @var integer Number of normal nodes
+     */
+    public $HostNodeCount;
+
+    /**
+     * @var integer Super node scope
+     */
+    public $SuperScope;
+
+    /**
+     * @var integer Number of super nodes
+     */
+    public $SuperNodeCount;
+
+    /**
+     * @var array List of super node IDs
+     */
+    public $SuperNodeIds;
+
+    /**
+     * @var integer Total number of super nodes with TCSS activated
+     */
+    public $NodeTotalCount;
+
+    /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
@@ -99,6 +134,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $SupportDefenseVulCount Number of vulnerabilities that can be prevented
 Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $HostNodeCount Number of normal nodes
+     * @param integer $SuperScope Super node scope
+     * @param integer $SuperNodeCount Number of super nodes
+     * @param array $SuperNodeIds List of super node IDs
+     * @param integer $NodeTotalCount Total number of super nodes with TCSS activated
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -140,6 +180,26 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("SupportDefenseVulCount",$param) and $param["SupportDefenseVulCount"] !== null) {
             $this->SupportDefenseVulCount = $param["SupportDefenseVulCount"];
+        }
+
+        if (array_key_exists("HostNodeCount",$param) and $param["HostNodeCount"] !== null) {
+            $this->HostNodeCount = $param["HostNodeCount"];
+        }
+
+        if (array_key_exists("SuperScope",$param) and $param["SuperScope"] !== null) {
+            $this->SuperScope = $param["SuperScope"];
+        }
+
+        if (array_key_exists("SuperNodeCount",$param) and $param["SuperNodeCount"] !== null) {
+            $this->SuperNodeCount = $param["SuperNodeCount"];
+        }
+
+        if (array_key_exists("SuperNodeIds",$param) and $param["SuperNodeIds"] !== null) {
+            $this->SuperNodeIds = $param["SuperNodeIds"];
+        }
+
+        if (array_key_exists("NodeTotalCount",$param) and $param["NodeTotalCount"] !== null) {
+            $this->NodeTotalCount = $param["NodeTotalCount"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

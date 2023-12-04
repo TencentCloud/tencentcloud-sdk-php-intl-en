@@ -48,8 +48,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSourcePort(array $SourcePort) Set Attacker port
  * @method integer getEventID() Obtain Event ID
  * @method void setEventID(integer $EventID) Set Event ID
- * @method string getHostName() Obtain Server name
- * @method void setHostName(string $HostName) Set Server name
+ * @method string getHostName() Obtain General node/Super node name
+ * @method void setHostName(string $HostName) Set General node/Super node name
  * @method string getHostIP() Obtain Server private IP
  * @method void setHostIP(string $HostIP) Set Server private IP
  * @method string getPublicIP() Obtain Server public IP
@@ -90,10 +90,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setServerArg(string $ServerArg) Set Process command line parameter
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getQUUID() Obtain Server QUuid
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setQUUID(string $QUUID) Set Server QUuid
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getQUUID() Obtain Node QUuid/Super node ID
+Note: This field may return·`null`, indicating that no valid values can be obtained.
+ * @method void setQUUID(string $QUUID) Set Node QUuid/Super node ID
+Note: This field may return·`null`, indicating that no valid values can be obtained.
  * @method string getContainerNetStatus() Obtain Isolation status
 `NORMAL`: 	Not isolated.
 `ISOLATED`: 		Isolated.
@@ -158,6 +158,28 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return `null`, indicating that no valid value was found.
  * @method void setRaspDetail(array $RaspDetail) Set RASP details
 Note: This field may return `null`, indicating that no valid value was found.
+ * @method string getNodeSubNetName() Obtain Super node subnet name
+ * @method void setNodeSubNetName(string $NodeSubNetName) Set Super node subnet name
+ * @method string getNodeSubNetCIDR() Obtain Super node subnet IP range
+ * @method void setNodeSubNetCIDR(string $NodeSubNetCIDR) Set Super node subnet IP range
+ * @method string getPodIP() Obtain Pod IP
+ * @method void setPodIP(string $PodIP) Set Pod IP
+ * @method string getNodeType() Obtain Node type. Values: `NORMAL` (general node), `SUPER` (super node).
+ * @method void setNodeType(string $NodeType) Set Node type. Values: `NORMAL` (general node), `SUPER` (super node).
+ * @method string getNodeID() Obtain ID of a super node
+ * @method void setNodeID(string $NodeID) Set ID of a super node
+ * @method string getNodeUniqueID() Obtain UID of a super node
+ * @method void setNodeUniqueID(string $NodeUniqueID) Set UID of a super node
+ * @method string getNodeSubNetID() Obtain Super node subnet ID
+ * @method void setNodeSubNetID(string $NodeSubNetID) Set Super node subnet ID
+ * @method string getClusterID() Obtain Cluster ID
+ * @method void setClusterID(string $ClusterID) Set Cluster ID
+ * @method string getClusterName() Obtain Cluster name
+ * @method void setClusterName(string $ClusterName) Set Cluster name
+ * @method string getNamespace() Obtain 
+ * @method void setNamespace(string $Namespace) Set 
+ * @method string getWorkloadType() Obtain 
+ * @method void setWorkloadType(string $WorkloadType) Set 
  */
 class VulDefenceEventDetail extends AbstractModel
 {
@@ -232,7 +254,7 @@ class VulDefenceEventDetail extends AbstractModel
     public $EventID;
 
     /**
-     * @var string Server name
+     * @var string General node/Super node name
      */
     public $HostName;
 
@@ -309,8 +331,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $ServerArg;
 
     /**
-     * @var string Server QUuid
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Node QUuid/Super node ID
+Note: This field may return·`null`, indicating that no valid values can be obtained.
      */
     public $QUUID;
 
@@ -371,6 +393,61 @@ Note: This field may return `null`, indicating that no valid value was found.
     public $RaspDetail;
 
     /**
+     * @var string Super node subnet name
+     */
+    public $NodeSubNetName;
+
+    /**
+     * @var string Super node subnet IP range
+     */
+    public $NodeSubNetCIDR;
+
+    /**
+     * @var string Pod IP
+     */
+    public $PodIP;
+
+    /**
+     * @var string Node type. Values: `NORMAL` (general node), `SUPER` (super node).
+     */
+    public $NodeType;
+
+    /**
+     * @var string ID of a super node
+     */
+    public $NodeID;
+
+    /**
+     * @var string UID of a super node
+     */
+    public $NodeUniqueID;
+
+    /**
+     * @var string Super node subnet ID
+     */
+    public $NodeSubNetID;
+
+    /**
+     * @var string Cluster ID
+     */
+    public $ClusterID;
+
+    /**
+     * @var string Cluster name
+     */
+    public $ClusterName;
+
+    /**
+     * @var string 
+     */
+    public $Namespace;
+
+    /**
+     * @var string 
+     */
+    public $WorkloadType;
+
+    /**
      * @param string $CVEID Vulnerability CVE ID
      * @param string $VulName Vulnerability name
      * @param string $PocID POC ID
@@ -385,7 +462,7 @@ Note: This field may return `null`, indicating that no valid value was found.
      * @param string $Status Processing status
      * @param array $SourcePort Attacker port
      * @param integer $EventID Event ID
-     * @param string $HostName Server name
+     * @param string $HostName General node/Super node name
      * @param string $HostIP Server private IP
      * @param string $PublicIP Server public IP
      * @param string $PodName Pod name
@@ -406,8 +483,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $ServerArg Process command line parameter
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $QUUID Server QUuid
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $QUUID Node QUuid/Super node ID
+Note: This field may return·`null`, indicating that no valid values can be obtained.
      * @param string $ContainerNetStatus Isolation status
 `NORMAL`: 	Not isolated.
 `ISOLATED`: 		Isolated.
@@ -440,6 +517,17 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param array $RaspDetail RASP details
 Note: This field may return `null`, indicating that no valid value was found.
+     * @param string $NodeSubNetName Super node subnet name
+     * @param string $NodeSubNetCIDR Super node subnet IP range
+     * @param string $PodIP Pod IP
+     * @param string $NodeType Node type. Values: `NORMAL` (general node), `SUPER` (super node).
+     * @param string $NodeID ID of a super node
+     * @param string $NodeUniqueID UID of a super node
+     * @param string $NodeSubNetID Super node subnet ID
+     * @param string $ClusterID Cluster ID
+     * @param string $ClusterName Cluster name
+     * @param string $Namespace 
+     * @param string $WorkloadType 
      */
     function __construct()
     {
@@ -597,6 +685,50 @@ Note: This field may return `null`, indicating that no valid value was found.
                 $obj->deserialize($value);
                 array_push($this->RaspDetail, $obj);
             }
+        }
+
+        if (array_key_exists("NodeSubNetName",$param) and $param["NodeSubNetName"] !== null) {
+            $this->NodeSubNetName = $param["NodeSubNetName"];
+        }
+
+        if (array_key_exists("NodeSubNetCIDR",$param) and $param["NodeSubNetCIDR"] !== null) {
+            $this->NodeSubNetCIDR = $param["NodeSubNetCIDR"];
+        }
+
+        if (array_key_exists("PodIP",$param) and $param["PodIP"] !== null) {
+            $this->PodIP = $param["PodIP"];
+        }
+
+        if (array_key_exists("NodeType",$param) and $param["NodeType"] !== null) {
+            $this->NodeType = $param["NodeType"];
+        }
+
+        if (array_key_exists("NodeID",$param) and $param["NodeID"] !== null) {
+            $this->NodeID = $param["NodeID"];
+        }
+
+        if (array_key_exists("NodeUniqueID",$param) and $param["NodeUniqueID"] !== null) {
+            $this->NodeUniqueID = $param["NodeUniqueID"];
+        }
+
+        if (array_key_exists("NodeSubNetID",$param) and $param["NodeSubNetID"] !== null) {
+            $this->NodeSubNetID = $param["NodeSubNetID"];
+        }
+
+        if (array_key_exists("ClusterID",$param) and $param["ClusterID"] !== null) {
+            $this->ClusterID = $param["ClusterID"];
+        }
+
+        if (array_key_exists("ClusterName",$param) and $param["ClusterName"] !== null) {
+            $this->ClusterName = $param["ClusterName"];
+        }
+
+        if (array_key_exists("Namespace",$param) and $param["Namespace"] !== null) {
+            $this->Namespace = $param["Namespace"];
+        }
+
+        if (array_key_exists("WorkloadType",$param) and $param["WorkloadType"] !== null) {
+            $this->WorkloadType = $param["WorkloadType"];
         }
     }
 }

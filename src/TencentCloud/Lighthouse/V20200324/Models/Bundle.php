@@ -25,15 +25,15 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getMemory() Obtain Memory size in GB.
  * @method void setMemory(integer $Memory) Set Memory size in GB.
  * @method string getSystemDiskType() Obtain System disk type.
-Valid values: 
-<li> LOCAL_BASIC: local disk</li><li> LOCAL_SSD: local SSD disk</li><li> CLOUD_BASIC: HDD cloud disk</li><li> CLOUD_SSD: SSD cloud disk</li><li> CLOUD_PREMIUM: Premium Cloud Storage</li>
+Values: 
+<li>`CLOUD_SSD`: SSD cloud disks</li><li>`CLOUD_PREMIUM`: Premium cloud disks</li>
  * @method void setSystemDiskType(string $SystemDiskType) Set System disk type.
-Valid values: 
-<li> LOCAL_BASIC: local disk</li><li> LOCAL_SSD: local SSD disk</li><li> CLOUD_BASIC: HDD cloud disk</li><li> CLOUD_SSD: SSD cloud disk</li><li> CLOUD_PREMIUM: Premium Cloud Storage</li>
- * @method integer getSystemDiskSize() Obtain System disk size.
- * @method void setSystemDiskSize(integer $SystemDiskSize) Set System disk size.
- * @method integer getMonthlyTraffic() Obtain Monthly network traffic in Gb.
- * @method void setMonthlyTraffic(integer $MonthlyTraffic) Set Monthly network traffic in Gb.
+Values: 
+<li>`CLOUD_SSD`: SSD cloud disks</li><li>`CLOUD_PREMIUM`: Premium cloud disks</li>
+ * @method integer getSystemDiskSize() Obtain System disk size in GB.
+ * @method void setSystemDiskSize(integer $SystemDiskSize) Set System disk size in GB.
+ * @method integer getMonthlyTraffic() Obtain Monthly network traffic in GB.
+ * @method void setMonthlyTraffic(integer $MonthlyTraffic) Set Monthly network traffic in GB.
  * @method boolean getSupportLinuxUnixPlatform() Obtain Whether Linux/Unix is supported.
  * @method void setSupportLinuxUnixPlatform(boolean $SupportLinuxUnixPlatform) Set Whether Linux/Unix is supported.
  * @method boolean getSupportWindowsPlatform() Obtain Whether Windows is supported.
@@ -97,18 +97,18 @@ class Bundle extends AbstractModel
 
     /**
      * @var string System disk type.
-Valid values: 
-<li> LOCAL_BASIC: local disk</li><li> LOCAL_SSD: local SSD disk</li><li> CLOUD_BASIC: HDD cloud disk</li><li> CLOUD_SSD: SSD cloud disk</li><li> CLOUD_PREMIUM: Premium Cloud Storage</li>
+Values: 
+<li>`CLOUD_SSD`: SSD cloud disks</li><li>`CLOUD_PREMIUM`: Premium cloud disks</li>
      */
     public $SystemDiskType;
 
     /**
-     * @var integer System disk size.
+     * @var integer System disk size in GB.
      */
     public $SystemDiskSize;
 
     /**
-     * @var integer Monthly network traffic in Gb.
+     * @var integer Monthly network traffic in GB.
      */
     public $MonthlyTraffic;
 
@@ -180,10 +180,10 @@ Valid values:
      * @param string $BundleId Package ID.
      * @param integer $Memory Memory size in GB.
      * @param string $SystemDiskType System disk type.
-Valid values: 
-<li> LOCAL_BASIC: local disk</li><li> LOCAL_SSD: local SSD disk</li><li> CLOUD_BASIC: HDD cloud disk</li><li> CLOUD_SSD: SSD cloud disk</li><li> CLOUD_PREMIUM: Premium Cloud Storage</li>
-     * @param integer $SystemDiskSize System disk size.
-     * @param integer $MonthlyTraffic Monthly network traffic in Gb.
+Values: 
+<li>`CLOUD_SSD`: SSD cloud disks</li><li>`CLOUD_PREMIUM`: Premium cloud disks</li>
+     * @param integer $SystemDiskSize System disk size in GB.
+     * @param integer $MonthlyTraffic Monthly network traffic in GB.
      * @param boolean $SupportLinuxUnixPlatform Whether Linux/Unix is supported.
      * @param boolean $SupportWindowsPlatform Whether Windows is supported.
      * @param Price $Price Current package unit price information.

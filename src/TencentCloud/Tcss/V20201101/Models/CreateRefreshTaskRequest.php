@@ -20,14 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateRefreshTask request structure.
  *
-
+ * @method array getClusterIDs() Obtain 
+ * @method void setClusterIDs(array $ClusterIDs) Set 
+ * @method boolean getIsSyncListOnly() Obtain 
+ * @method void setIsSyncListOnly(boolean $IsSyncListOnly) Set 
  */
 class CreateRefreshTaskRequest extends AbstractModel
 {
-
+    /**
+     * @var array 
+     */
+    public $ClusterIDs;
 
     /**
+     * @var boolean 
+     */
+    public $IsSyncListOnly;
 
+    /**
+     * @param array $ClusterIDs 
+     * @param boolean $IsSyncListOnly 
      */
     function __construct()
     {
@@ -42,6 +54,12 @@ class CreateRefreshTaskRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("ClusterIDs",$param) and $param["ClusterIDs"] !== null) {
+            $this->ClusterIDs = $param["ClusterIDs"];
+        }
 
+        if (array_key_exists("IsSyncListOnly",$param) and $param["IsSyncListOnly"] !== null) {
+            $this->IsSyncListOnly = $param["IsSyncListOnly"];
+        }
     }
 }

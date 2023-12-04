@@ -42,6 +42,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setImageTotalCnt(integer $ImageTotalCnt) Set Total number of images
  * @method integer getHostUnInstallCnt() Obtain Number of servers not installed with the agent
  * @method void setHostUnInstallCnt(integer $HostUnInstallCnt) Set Number of servers not installed with the agent
+ * @method integer getHostSuperNodeCnt() Obtain Number of super nodes
+ * @method void setHostSuperNodeCnt(integer $HostSuperNodeCnt) Set Number of super nodes
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -103,6 +105,11 @@ class DescribeContainerAssetSummaryResponse extends AbstractModel
     public $HostUnInstallCnt;
 
     /**
+     * @var integer Number of super nodes
+     */
+    public $HostSuperNodeCnt;
+
+    /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
@@ -119,6 +126,7 @@ class DescribeContainerAssetSummaryResponse extends AbstractModel
      * @param integer $ImageRegistryCnt Number of image repositories
      * @param integer $ImageTotalCnt Total number of images
      * @param integer $HostUnInstallCnt Number of servers not installed with the agent
+     * @param integer $HostSuperNodeCnt Number of super nodes
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -176,6 +184,10 @@ class DescribeContainerAssetSummaryResponse extends AbstractModel
 
         if (array_key_exists("HostUnInstallCnt",$param) and $param["HostUnInstallCnt"] !== null) {
             $this->HostUnInstallCnt = $param["HostUnInstallCnt"];
+        }
+
+        if (array_key_exists("HostSuperNodeCnt",$param) and $param["HostSuperNodeCnt"] !== null) {
+            $this->HostSuperNodeCnt = $param["HostSuperNodeCnt"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

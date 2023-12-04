@@ -136,6 +136,28 @@ Note: This field may return null, indicating that no valid values can be obtaine
 `DESTROYED`: Terminated.
 `RESTARTING`: Restarting.
 `REMOVING`: Removing.
+ * @method string getClusterID() Obtain Cluster ID
+ * @method void setClusterID(string $ClusterID) Set Cluster ID
+ * @method string getNodeType() Obtain Node type. Values: `NORMAL` (general node), `SUPER` (super node).
+ * @method void setNodeType(string $NodeType) Set Node type. Values: `NORMAL` (general node), `SUPER` (super node).
+ * @method string getPodName() Obtain Pod name
+ * @method void setPodName(string $PodName) Set Pod name
+ * @method string getPodIP() Obtain Pod IP
+ * @method void setPodIP(string $PodIP) Set Pod IP
+ * @method string getNodeUniqueID() Obtain Cluster ID
+ * @method void setNodeUniqueID(string $NodeUniqueID) Set Cluster ID
+ * @method string getPublicIP() Obtain Node public IP
+ * @method void setPublicIP(string $PublicIP) Set Node public IP
+ * @method string getNodeName() Obtain Node name
+ * @method void setNodeName(string $NodeName) Set Node name
+ * @method string getNodeID() Obtain Node ID
+ * @method void setNodeID(string $NodeID) Set Node ID
+ * @method string getHostID() Obtain uuid
+ * @method void setHostID(string $HostID) Set uuid
+ * @method string getHostIP() Obtain Private IP of the node
+ * @method void setHostIP(string $HostIP) Set Private IP of the node
+ * @method string getClusterName() Obtain Cluster name
+ * @method void setClusterName(string $ClusterName) Set Cluster name
  */
 class AbnormalProcessEventInfo extends AbstractModel
 {
@@ -302,6 +324,61 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $ContainerStatus;
 
     /**
+     * @var string Cluster ID
+     */
+    public $ClusterID;
+
+    /**
+     * @var string Node type. Values: `NORMAL` (general node), `SUPER` (super node).
+     */
+    public $NodeType;
+
+    /**
+     * @var string Pod name
+     */
+    public $PodName;
+
+    /**
+     * @var string Pod IP
+     */
+    public $PodIP;
+
+    /**
+     * @var string Cluster ID
+     */
+    public $NodeUniqueID;
+
+    /**
+     * @var string Node public IP
+     */
+    public $PublicIP;
+
+    /**
+     * @var string Node name
+     */
+    public $NodeName;
+
+    /**
+     * @var string Node ID
+     */
+    public $NodeID;
+
+    /**
+     * @var string uuid
+     */
+    public $HostID;
+
+    /**
+     * @var string Private IP of the node
+     */
+    public $HostIP;
+
+    /**
+     * @var string Cluster name
+     */
+    public $ClusterName;
+
+    /**
      * @param string $ProcessPath Process directory
      * @param string $EventType Event type. `MALICE_PROCESS_START`: Malicious process startup.
      * @param string $MatchRuleName Name of the hit rule. Valid values: `PROXY_TOOL` (proxy); `TRANSFER_CONTROL` (lateral movement); `ATTACK_CMD` (malicious command); `REVERSE_SHELL` (reverse shell); `FILELESS` (fileless execution); `RISK_CMD` (high-risk command); `ABNORMAL_CHILD_PROC` (unusual start found in the child process of the sensitive service); `USER_DEFINED_RULE` (custom rule).
@@ -360,6 +437,17 @@ Note: This field may return null, indicating that no valid values can be obtaine
 `DESTROYED`: Terminated.
 `RESTARTING`: Restarting.
 `REMOVING`: Removing.
+     * @param string $ClusterID Cluster ID
+     * @param string $NodeType Node type. Values: `NORMAL` (general node), `SUPER` (super node).
+     * @param string $PodName Pod name
+     * @param string $PodIP Pod IP
+     * @param string $NodeUniqueID Cluster ID
+     * @param string $PublicIP Node public IP
+     * @param string $NodeName Node name
+     * @param string $NodeID Node ID
+     * @param string $HostID uuid
+     * @param string $HostIP Private IP of the node
+     * @param string $ClusterName Cluster name
      */
     function __construct()
     {
@@ -476,6 +564,50 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("ContainerStatus",$param) and $param["ContainerStatus"] !== null) {
             $this->ContainerStatus = $param["ContainerStatus"];
+        }
+
+        if (array_key_exists("ClusterID",$param) and $param["ClusterID"] !== null) {
+            $this->ClusterID = $param["ClusterID"];
+        }
+
+        if (array_key_exists("NodeType",$param) and $param["NodeType"] !== null) {
+            $this->NodeType = $param["NodeType"];
+        }
+
+        if (array_key_exists("PodName",$param) and $param["PodName"] !== null) {
+            $this->PodName = $param["PodName"];
+        }
+
+        if (array_key_exists("PodIP",$param) and $param["PodIP"] !== null) {
+            $this->PodIP = $param["PodIP"];
+        }
+
+        if (array_key_exists("NodeUniqueID",$param) and $param["NodeUniqueID"] !== null) {
+            $this->NodeUniqueID = $param["NodeUniqueID"];
+        }
+
+        if (array_key_exists("PublicIP",$param) and $param["PublicIP"] !== null) {
+            $this->PublicIP = $param["PublicIP"];
+        }
+
+        if (array_key_exists("NodeName",$param) and $param["NodeName"] !== null) {
+            $this->NodeName = $param["NodeName"];
+        }
+
+        if (array_key_exists("NodeID",$param) and $param["NodeID"] !== null) {
+            $this->NodeID = $param["NodeID"];
+        }
+
+        if (array_key_exists("HostID",$param) and $param["HostID"] !== null) {
+            $this->HostID = $param["HostID"];
+        }
+
+        if (array_key_exists("HostIP",$param) and $param["HostIP"] !== null) {
+            $this->HostIP = $param["HostIP"];
+        }
+
+        if (array_key_exists("ClusterName",$param) and $param["ClusterName"] !== null) {
+            $this->ClusterName = $param["ClusterName"];
         }
     }
 }

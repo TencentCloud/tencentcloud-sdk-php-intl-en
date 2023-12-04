@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getCodecs() Obtain This field is used to return the codec of the media file passed in, such as WAV, MP3, AAC, FLAC, AMR, 3GP, M4A, WMA, OGG, and APE.
  * @method void setCodecs(string $Codecs) Set This field is used to return the codec of the media file passed in, such as WAV, MP3, AAC, FLAC, AMR, 3GP, M4A, WMA, OGG, and APE.
- * @method integer getDuration() Obtain This field is used to return the segment length of the input streaming media file in seconds. It is **15 seconds by default** and is customizable.
- * @method void setDuration(integer $Duration) Set This field is used to return the segment length of the input streaming media file in seconds. It is **15 seconds by default** and is customizable.
+ * @method integer getDuration() Obtain This field is used to return the segment length of the input streaming media file in milliseconds.** It is 15 seconds** by default and is customizable.
+ * @method void setDuration(integer $Duration) Set This field is used to return the segment length of the input streaming media file in milliseconds.** It is 15 seconds** by default and is customizable.
  * @method integer getWidth() Obtain *This field is in beta test. Stay tuned*
  * @method void setWidth(integer $Width) Set *This field is in beta test. Stay tuned*
  * @method integer getHeight() Obtain *This field is in beta test. Stay tuned*
@@ -39,7 +39,7 @@ class MediaInfo extends AbstractModel
     public $Codecs;
 
     /**
-     * @var integer This field is used to return the segment length of the input streaming media file in seconds. It is **15 seconds by default** and is customizable.
+     * @var integer This field is used to return the segment length of the input streaming media file in milliseconds.** It is 15 seconds** by default and is customizable.
      */
     public $Duration;
 
@@ -60,7 +60,7 @@ class MediaInfo extends AbstractModel
 
     /**
      * @param string $Codecs This field is used to return the codec of the media file passed in, such as WAV, MP3, AAC, FLAC, AMR, 3GP, M4A, WMA, OGG, and APE.
-     * @param integer $Duration This field is used to return the segment length of the input streaming media file in seconds. It is **15 seconds by default** and is customizable.
+     * @param integer $Duration This field is used to return the segment length of the input streaming media file in milliseconds.** It is 15 seconds** by default and is customizable.
      * @param integer $Width *This field is in beta test. Stay tuned*
      * @param integer $Height *This field is in beta test. Stay tuned*
      * @param string $Thumbnail *This field is in beta test. Stay tuned*

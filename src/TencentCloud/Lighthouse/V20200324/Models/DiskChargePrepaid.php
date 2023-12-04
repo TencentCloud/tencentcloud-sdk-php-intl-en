@@ -22,8 +22,20 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getPeriod() Obtain Purchase duration.
  * @method void setPeriod(integer $Period) Set Purchase duration.
- * @method string getRenewFlag() Obtain Whether Auto-Renewal is enabled 
- * @method void setRenewFlag(string $RenewFlag) Set Whether Auto-Renewal is enabled 
+ * @method string getRenewFlag() Obtain Auto-Renewal flag. Valid values:
+
+`NOTIFY_AND_AUTO_RENEW`: Trigger expiration notification and renew automatically
+`NOTIFY_AND_MANUAL_RENEW`: Trigger expiration notification but do not renew
+`u200cDISABLE_NOTIFY_AND_AUTO_RENEW`: Neither trigger expiration notification nor renew
+
+Default: `NOTIFY_AND_MANUAL_RENEW`. If `NOTIFY_AND_AUTO_RENEW` is specified, the instance is automatically renewed on a monthly basis when the account balance is sufficient.
+ * @method void setRenewFlag(string $RenewFlag) Set Auto-Renewal flag. Valid values:
+
+`NOTIFY_AND_AUTO_RENEW`: Trigger expiration notification and renew automatically
+`NOTIFY_AND_MANUAL_RENEW`: Trigger expiration notification but do not renew
+`u200cDISABLE_NOTIFY_AND_AUTO_RENEW`: Neither trigger expiration notification nor renew
+
+Default: `NOTIFY_AND_MANUAL_RENEW`. If `NOTIFY_AND_AUTO_RENEW` is specified, the instance is automatically renewed on a monthly basis when the account balance is sufficient.
  * @method string getTimeUnit() Obtain Purchase duration unit. Default value: "m" (month)
  * @method void setTimeUnit(string $TimeUnit) Set Purchase duration unit. Default value: "m" (month)
  */
@@ -35,7 +47,13 @@ class DiskChargePrepaid extends AbstractModel
     public $Period;
 
     /**
-     * @var string Whether Auto-Renewal is enabled 
+     * @var string Auto-Renewal flag. Valid values:
+
+`NOTIFY_AND_AUTO_RENEW`: Trigger expiration notification and renew automatically
+`NOTIFY_AND_MANUAL_RENEW`: Trigger expiration notification but do not renew
+`u200cDISABLE_NOTIFY_AND_AUTO_RENEW`: Neither trigger expiration notification nor renew
+
+Default: `NOTIFY_AND_MANUAL_RENEW`. If `NOTIFY_AND_AUTO_RENEW` is specified, the instance is automatically renewed on a monthly basis when the account balance is sufficient.
      */
     public $RenewFlag;
 
@@ -46,7 +64,13 @@ class DiskChargePrepaid extends AbstractModel
 
     /**
      * @param integer $Period Purchase duration.
-     * @param string $RenewFlag Whether Auto-Renewal is enabled 
+     * @param string $RenewFlag Auto-Renewal flag. Valid values:
+
+`NOTIFY_AND_AUTO_RENEW`: Trigger expiration notification and renew automatically
+`NOTIFY_AND_MANUAL_RENEW`: Trigger expiration notification but do not renew
+`u200cDISABLE_NOTIFY_AND_AUTO_RENEW`: Neither trigger expiration notification nor renew
+
+Default: `NOTIFY_AND_MANUAL_RENEW`. If `NOTIFY_AND_AUTO_RENEW` is specified, the instance is automatically renewed on a monthly basis when the account balance is sufficient.
      * @param string $TimeUnit Purchase duration unit. Default value: "m" (month)
      */
     function __construct()

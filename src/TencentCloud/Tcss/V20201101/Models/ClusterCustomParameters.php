@@ -18,20 +18,28 @@ namespace TencentCloud\Tcss\V20201101\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeAssetImageRegistrySummary request structure.
+ * Custom parameters of the cluster
  *
- * @method array getFilters() Obtain 
- * @method void setFilters(array $Filters) Set 
+ * @method string getName() Obtain Parameter name
+ * @method void setName(string $Name) Set Parameter name
+ * @method array getValues() Obtain Parameter value
+ * @method void setValues(array $Values) Set Parameter value
  */
-class DescribeAssetImageRegistrySummaryRequest extends AbstractModel
+class ClusterCustomParameters extends AbstractModel
 {
     /**
-     * @var array 
+     * @var string Parameter name
      */
-    public $Filters;
+    public $Name;
 
     /**
-     * @param array $Filters 
+     * @var array Parameter value
+     */
+    public $Values;
+
+    /**
+     * @param string $Name Parameter name
+     * @param array $Values Parameter value
      */
     function __construct()
     {
@@ -46,13 +54,12 @@ class DescribeAssetImageRegistrySummaryRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Filters",$param) and $param["Filters"] !== null) {
-            $this->Filters = [];
-            foreach ($param["Filters"] as $key => $value){
-                $obj = new AssetFilters();
-                $obj->deserialize($value);
-                array_push($this->Filters, $obj);
-            }
+        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
+            $this->Name = $param["Name"];
+        }
+
+        if (array_key_exists("Values",$param) and $param["Values"] !== null) {
+            $this->Values = $param["Values"];
         }
     }
 }

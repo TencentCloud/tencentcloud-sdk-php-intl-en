@@ -18,19 +18,26 @@ namespace TencentCloud\Tcss\V20201101\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * CreateAssetImageRegistryScanTaskOneKey response structure.
+ * DescribeVulRegistryImageList response structure.
  *
- * @method integer getTaskID() Obtain 
- * @method void setTaskID(integer $TaskID) Set 
+ * @method integer getTotalCount() Obtain Total number of images
+ * @method void setTotalCount(integer $TotalCount) Set Total number of images
+ * @method array getList() Obtain 
+ * @method void setList(array $List) Set 
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
-class CreateAssetImageRegistryScanTaskOneKeyResponse extends AbstractModel
+class DescribeVulRegistryImageListResponse extends AbstractModel
 {
     /**
-     * @var integer 
+     * @var integer Total number of images
      */
-    public $TaskID;
+    public $TotalCount;
+
+    /**
+     * @var array 
+     */
+    public $List;
 
     /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -38,7 +45,8 @@ class CreateAssetImageRegistryScanTaskOneKeyResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $TaskID 
+     * @param integer $TotalCount Total number of images
+     * @param array $List 
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -54,8 +62,17 @@ class CreateAssetImageRegistryScanTaskOneKeyResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TaskID",$param) and $param["TaskID"] !== null) {
-            $this->TaskID = $param["TaskID"];
+        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
+            $this->TotalCount = $param["TotalCount"];
+        }
+
+        if (array_key_exists("List",$param) and $param["List"] !== null) {
+            $this->List = [];
+            foreach ($param["List"] as $key => $value){
+                $obj = new VulAffectedRegistryImageInfo();
+                $obj->deserialize($value);
+                array_push($this->List, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

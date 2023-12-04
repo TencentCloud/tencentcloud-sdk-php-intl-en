@@ -24,22 +24,32 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) Set Number of results to be returned. Default value: `10`. Maximum value: `100`.
  * @method integer getOffset() Obtain Offset. Default value: `0`.
  * @method void setOffset(integer $Offset) Set Offset. Default value: `0`.
- * @method array getFilters() Obtain Filter
-<li>ContainerName - String - Required: No - Container name</li>
-<li>Status - String - Required: No - Container status. Valid values: `0` (created); `1` (running); `2` (paused); `3` (restarting); `4` (removing); `5` (exited); `6` (dead).</li>
-<li>Runas - String - Required: No - Operator</li>
-<li>ImageName- String - Required: No - Image name</li>
-<li>HostIP- string - Required: No - Server IP</li>
-<li>OrderBy - String - Required: No - Sorting field, which supports dynamic sorting by `cpu_usage` or `mem_usage` such as ["cpu_usage","+"]. '+' indicates ascending, and '-' indicates descending.</li>
-<li>NetStatus - String - Required: No - Container network status. Valid values: `normal`, `isolated`, `isolating`, `isolate_failed`, `restoring`, `restore_failed`.</li>
- * @method void setFilters(array $Filters) Set Filter
-<li>ContainerName - String - Required: No - Container name</li>
-<li>Status - String - Required: No - Container status. Valid values: `0` (created); `1` (running); `2` (paused); `3` (restarting); `4` (removing); `5` (exited); `6` (dead).</li>
-<li>Runas - String - Required: No - Operator</li>
-<li>ImageName- String - Required: No - Image name</li>
-<li>HostIP- string - Required: No - Server IP</li>
-<li>OrderBy - String - Required: No - Sorting field, which supports dynamic sorting by `cpu_usage` or `mem_usage` such as ["cpu_usage","+"]. '+' indicates ascending, and '-' indicates descending.</li>
-<li>NetStatus - String - Required: No - Container network status. Valid values: `normal`, `isolated`, `isolating`, `isolate_failed`, `restoring`, `restore_failed`.</li>
+ * @method array getFilters() Obtain Filter condition
+<li>`ContainerName`: String - Required: No - Container name</li>
+<li>`Status` - String - Required: No - Container status. Values: `0` (created); `1` (running); `2` (paused); `3` (restarting); `4` (removing); `5` (exited); `6` (dead).</li>
+<li>`Runas`: String - Required: No - Operator</li>
+<li>`ImageName`: String - Required: No - Image name</li>
+<li>`HostIP`: String - Required: No - Server IP</li>
+<li>`OrderBy` - String - Required: No - Sorting field, which supports dynamic sorting by `cpu_usage` or `mem_usage` such as ["cpu_usage","+"]. '+' indicates ascending, and '-' indicates descending.</li>
+<li>`NetStatus`: String - Required: No - Container network status. Values: `normal`, `isolated`, `isolating`, `isolate_failed`, `restoring`, `restore_failed`.</li>
+<li>`PodID`: String - Required: No- Pod ID </li>
+<li>`NodeUniqueID`: String - Required: No - Super Node</li>
+<li>`PodUid`: String - Required: No - Pod</li>
+<li>`PodIP`: String - Required: No - Pod IP</li>
+<li>`NodeType`: String - Required: No - Values: `NORMAL` (general nodes), `SUPER` (super nodes)</li>
+ * @method void setFilters(array $Filters) Set Filter condition
+<li>`ContainerName`: String - Required: No - Container name</li>
+<li>`Status` - String - Required: No - Container status. Values: `0` (created); `1` (running); `2` (paused); `3` (restarting); `4` (removing); `5` (exited); `6` (dead).</li>
+<li>`Runas`: String - Required: No - Operator</li>
+<li>`ImageName`: String - Required: No - Image name</li>
+<li>`HostIP`: String - Required: No - Server IP</li>
+<li>`OrderBy` - String - Required: No - Sorting field, which supports dynamic sorting by `cpu_usage` or `mem_usage` such as ["cpu_usage","+"]. '+' indicates ascending, and '-' indicates descending.</li>
+<li>`NetStatus`: String - Required: No - Container network status. Values: `normal`, `isolated`, `isolating`, `isolate_failed`, `restoring`, `restore_failed`.</li>
+<li>`PodID`: String - Required: No- Pod ID </li>
+<li>`NodeUniqueID`: String - Required: No - Super Node</li>
+<li>`PodUid`: String - Required: No - Pod</li>
+<li>`PodIP`: String - Required: No - Pod IP</li>
+<li>`NodeType`: String - Required: No - Values: `NORMAL` (general nodes), `SUPER` (super nodes)</li>
  * @method string getBy() Obtain Sorting field
  * @method void setBy(string $By) Set Sorting field
  * @method string getOrder() Obtain Sorting order. Valid values: `asc`, `desc`.
@@ -58,14 +68,19 @@ class DescribeAssetContainerListRequest extends AbstractModel
     public $Offset;
 
     /**
-     * @var array Filter
-<li>ContainerName - String - Required: No - Container name</li>
-<li>Status - String - Required: No - Container status. Valid values: `0` (created); `1` (running); `2` (paused); `3` (restarting); `4` (removing); `5` (exited); `6` (dead).</li>
-<li>Runas - String - Required: No - Operator</li>
-<li>ImageName- String - Required: No - Image name</li>
-<li>HostIP- string - Required: No - Server IP</li>
-<li>OrderBy - String - Required: No - Sorting field, which supports dynamic sorting by `cpu_usage` or `mem_usage` such as ["cpu_usage","+"]. '+' indicates ascending, and '-' indicates descending.</li>
-<li>NetStatus - String - Required: No - Container network status. Valid values: `normal`, `isolated`, `isolating`, `isolate_failed`, `restoring`, `restore_failed`.</li>
+     * @var array Filter condition
+<li>`ContainerName`: String - Required: No - Container name</li>
+<li>`Status` - String - Required: No - Container status. Values: `0` (created); `1` (running); `2` (paused); `3` (restarting); `4` (removing); `5` (exited); `6` (dead).</li>
+<li>`Runas`: String - Required: No - Operator</li>
+<li>`ImageName`: String - Required: No - Image name</li>
+<li>`HostIP`: String - Required: No - Server IP</li>
+<li>`OrderBy` - String - Required: No - Sorting field, which supports dynamic sorting by `cpu_usage` or `mem_usage` such as ["cpu_usage","+"]. '+' indicates ascending, and '-' indicates descending.</li>
+<li>`NetStatus`: String - Required: No - Container network status. Values: `normal`, `isolated`, `isolating`, `isolate_failed`, `restoring`, `restore_failed`.</li>
+<li>`PodID`: String - Required: No- Pod ID </li>
+<li>`NodeUniqueID`: String - Required: No - Super Node</li>
+<li>`PodUid`: String - Required: No - Pod</li>
+<li>`PodIP`: String - Required: No - Pod IP</li>
+<li>`NodeType`: String - Required: No - Values: `NORMAL` (general nodes), `SUPER` (super nodes)</li>
      */
     public $Filters;
 
@@ -82,14 +97,19 @@ class DescribeAssetContainerListRequest extends AbstractModel
     /**
      * @param integer $Limit Number of results to be returned. Default value: `10`. Maximum value: `100`.
      * @param integer $Offset Offset. Default value: `0`.
-     * @param array $Filters Filter
-<li>ContainerName - String - Required: No - Container name</li>
-<li>Status - String - Required: No - Container status. Valid values: `0` (created); `1` (running); `2` (paused); `3` (restarting); `4` (removing); `5` (exited); `6` (dead).</li>
-<li>Runas - String - Required: No - Operator</li>
-<li>ImageName- String - Required: No - Image name</li>
-<li>HostIP- string - Required: No - Server IP</li>
-<li>OrderBy - String - Required: No - Sorting field, which supports dynamic sorting by `cpu_usage` or `mem_usage` such as ["cpu_usage","+"]. '+' indicates ascending, and '-' indicates descending.</li>
-<li>NetStatus - String - Required: No - Container network status. Valid values: `normal`, `isolated`, `isolating`, `isolate_failed`, `restoring`, `restore_failed`.</li>
+     * @param array $Filters Filter condition
+<li>`ContainerName`: String - Required: No - Container name</li>
+<li>`Status` - String - Required: No - Container status. Values: `0` (created); `1` (running); `2` (paused); `3` (restarting); `4` (removing); `5` (exited); `6` (dead).</li>
+<li>`Runas`: String - Required: No - Operator</li>
+<li>`ImageName`: String - Required: No - Image name</li>
+<li>`HostIP`: String - Required: No - Server IP</li>
+<li>`OrderBy` - String - Required: No - Sorting field, which supports dynamic sorting by `cpu_usage` or `mem_usage` such as ["cpu_usage","+"]. '+' indicates ascending, and '-' indicates descending.</li>
+<li>`NetStatus`: String - Required: No - Container network status. Values: `normal`, `isolated`, `isolating`, `isolate_failed`, `restoring`, `restore_failed`.</li>
+<li>`PodID`: String - Required: No- Pod ID </li>
+<li>`NodeUniqueID`: String - Required: No - Super Node</li>
+<li>`PodUid`: String - Required: No - Pod</li>
+<li>`PodIP`: String - Required: No - Pod IP</li>
+<li>`NodeType`: String - Required: No - Values: `NORMAL` (general nodes), `SUPER` (super nodes)</li>
      * @param string $By Sorting field
      * @param string $Order Sorting order. Valid values: `asc`, `desc`.
      */

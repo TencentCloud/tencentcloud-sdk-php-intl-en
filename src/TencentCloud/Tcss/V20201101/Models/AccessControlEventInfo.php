@@ -132,6 +132,28 @@ use TencentCloud\Common\AbstractModel;
 `DESTROYED`: Terminated.
 `RESTARTING`: Restarting.
 `REMOVING`: Removing.
+ * @method string getNodeName() Obtain Node name: For super nodes, the node_id is displayed.
+ * @method void setNodeName(string $NodeName) Set Node name: For super nodes, the node_id is displayed.
+ * @method string getPodName() Obtain Pod name
+ * @method void setPodName(string $PodName) Set Pod name
+ * @method string getPodIP() Obtain Pod IP
+ * @method void setPodIP(string $PodIP) Set Pod IP
+ * @method string getNodeType() Obtain Node type. Values: `NORMAL` (general node), `SUPER` (super node).
+ * @method void setNodeType(string $NodeType) Set Node type. Values: `NORMAL` (general node), `SUPER` (super node).
+ * @method string getClusterID() Obtain Cluster ID
+ * @method void setClusterID(string $ClusterID) Set Cluster ID
+ * @method string getNodeUniqueID() Obtain Node unique ID. It's used for super nodes.
+ * @method void setNodeUniqueID(string $NodeUniqueID) Set Node unique ID. It's used for super nodes.
+ * @method string getPublicIP() Obtain Node public IP
+ * @method void setPublicIP(string $PublicIP) Set Node public IP
+ * @method string getNodeID() Obtain Node ID
+ * @method void setNodeID(string $NodeID) Set Node ID
+ * @method string getHostID() Obtain uuid
+ * @method void setHostID(string $HostID) Set uuid
+ * @method string getHostIP() Obtain Private IP of the node
+ * @method void setHostIP(string $HostIP) Set Private IP of the node
+ * @method string getClusterName() Obtain Cluster name
+ * @method void setClusterName(string $ClusterName) Set Cluster name
  */
 class AccessControlEventInfo extends AbstractModel
 {
@@ -300,6 +322,61 @@ class AccessControlEventInfo extends AbstractModel
     public $ContainerStatus;
 
     /**
+     * @var string Node name: For super nodes, the node_id is displayed.
+     */
+    public $NodeName;
+
+    /**
+     * @var string Pod name
+     */
+    public $PodName;
+
+    /**
+     * @var string Pod IP
+     */
+    public $PodIP;
+
+    /**
+     * @var string Node type. Values: `NORMAL` (general node), `SUPER` (super node).
+     */
+    public $NodeType;
+
+    /**
+     * @var string Cluster ID
+     */
+    public $ClusterID;
+
+    /**
+     * @var string Node unique ID. It's used for super nodes.
+     */
+    public $NodeUniqueID;
+
+    /**
+     * @var string Node public IP
+     */
+    public $PublicIP;
+
+    /**
+     * @var string Node ID
+     */
+    public $NodeID;
+
+    /**
+     * @var string uuid
+     */
+    public $HostID;
+
+    /**
+     * @var string Private IP of the node
+     */
+    public $HostIP;
+
+    /**
+     * @var string Cluster name
+     */
+    public $ClusterName;
+
+    /**
      * @param string $ProcessName Process name
      * @param string $MatchRuleName Name of the hit rule
      * @param string $FoundTime Generation time
@@ -356,6 +433,17 @@ class AccessControlEventInfo extends AbstractModel
 `DESTROYED`: Terminated.
 `RESTARTING`: Restarting.
 `REMOVING`: Removing.
+     * @param string $NodeName Node name: For super nodes, the node_id is displayed.
+     * @param string $PodName Pod name
+     * @param string $PodIP Pod IP
+     * @param string $NodeType Node type. Values: `NORMAL` (general node), `SUPER` (super node).
+     * @param string $ClusterID Cluster ID
+     * @param string $NodeUniqueID Node unique ID. It's used for super nodes.
+     * @param string $PublicIP Node public IP
+     * @param string $NodeID Node ID
+     * @param string $HostID uuid
+     * @param string $HostIP Private IP of the node
+     * @param string $ClusterName Cluster name
      */
     function __construct()
     {
@@ -476,6 +564,50 @@ class AccessControlEventInfo extends AbstractModel
 
         if (array_key_exists("ContainerStatus",$param) and $param["ContainerStatus"] !== null) {
             $this->ContainerStatus = $param["ContainerStatus"];
+        }
+
+        if (array_key_exists("NodeName",$param) and $param["NodeName"] !== null) {
+            $this->NodeName = $param["NodeName"];
+        }
+
+        if (array_key_exists("PodName",$param) and $param["PodName"] !== null) {
+            $this->PodName = $param["PodName"];
+        }
+
+        if (array_key_exists("PodIP",$param) and $param["PodIP"] !== null) {
+            $this->PodIP = $param["PodIP"];
+        }
+
+        if (array_key_exists("NodeType",$param) and $param["NodeType"] !== null) {
+            $this->NodeType = $param["NodeType"];
+        }
+
+        if (array_key_exists("ClusterID",$param) and $param["ClusterID"] !== null) {
+            $this->ClusterID = $param["ClusterID"];
+        }
+
+        if (array_key_exists("NodeUniqueID",$param) and $param["NodeUniqueID"] !== null) {
+            $this->NodeUniqueID = $param["NodeUniqueID"];
+        }
+
+        if (array_key_exists("PublicIP",$param) and $param["PublicIP"] !== null) {
+            $this->PublicIP = $param["PublicIP"];
+        }
+
+        if (array_key_exists("NodeID",$param) and $param["NodeID"] !== null) {
+            $this->NodeID = $param["NodeID"];
+        }
+
+        if (array_key_exists("HostID",$param) and $param["HostID"] !== null) {
+            $this->HostID = $param["HostID"];
+        }
+
+        if (array_key_exists("HostIP",$param) and $param["HostIP"] !== null) {
+            $this->HostIP = $param["HostIP"];
+        }
+
+        if (array_key_exists("ClusterName",$param) and $param["ClusterName"] !== null) {
+            $this->ClusterName = $param["ClusterName"];
         }
     }
 }

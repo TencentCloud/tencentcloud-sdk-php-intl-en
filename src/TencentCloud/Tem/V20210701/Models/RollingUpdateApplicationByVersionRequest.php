@@ -40,6 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBetaBatchNum(integer $BetaBatchNum) Set Number of instances in a beta batch
  * @method integer getMinAvailable() Obtain Minimum number of available instances during the deployment
  * @method void setMinAvailable(integer $MinAvailable) Set Minimum number of available instances during the deployment
+ * @method boolean getForce() Obtain Whether to enable force release
+ * @method void setForce(boolean $Force) Set Whether to enable force release
  */
 class RollingUpdateApplicationByVersionRequest extends AbstractModel
 {
@@ -94,6 +96,11 @@ class RollingUpdateApplicationByVersionRequest extends AbstractModel
     public $MinAvailable;
 
     /**
+     * @var boolean Whether to enable force release
+     */
+    public $Force;
+
+    /**
      * @param string $ApplicationId Application ID
      * @param string $EnvironmentId Environment ID
      * @param string $DeployVersion Update version. For image-based deployment, it is the value. For deployment with JAR/WAR files, it is `Version`.
@@ -104,6 +111,7 @@ class RollingUpdateApplicationByVersionRequest extends AbstractModel
      * @param integer $BatchInterval Interval between the batches
      * @param integer $BetaBatchNum Number of instances in a beta batch
      * @param integer $MinAvailable Minimum number of available instances during the deployment
+     * @param boolean $Force Whether to enable force release
      */
     function __construct()
     {
@@ -156,6 +164,10 @@ class RollingUpdateApplicationByVersionRequest extends AbstractModel
 
         if (array_key_exists("MinAvailable",$param) and $param["MinAvailable"] !== null) {
             $this->MinAvailable = $param["MinAvailable"];
+        }
+
+        if (array_key_exists("Force",$param) and $param["Force"] !== null) {
+            $this->Force = $param["Force"];
         }
     }
 }

@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVpcId(string $VpcId) Set VpcId, which is required when `NetType` is `direct`.
  * @method string getExpireDate() Obtain Command validity, which is required for non-Tencent Cloud instances.
  * @method void setExpireDate(string $ExpireDate) Set Command validity, which is required for non-Tencent Cloud instances.
+ * @method array getClusterCustomParameters() Obtain Custom parameters of the cluster
+ * @method void setClusterCustomParameters(array $ClusterCustomParameters) Set Custom parameters of the cluster
  */
 class DescribeAgentDaemonSetCmdRequest extends AbstractModel
 {
@@ -59,11 +61,17 @@ class DescribeAgentDaemonSetCmdRequest extends AbstractModel
     public $ExpireDate;
 
     /**
+     * @var array Custom parameters of the cluster
+     */
+    public $ClusterCustomParameters;
+
+    /**
      * @param boolean $IsCloud Whether it is from Tencent Cloud
      * @param string $NetType Network type. Valid values: `basic` (classic network); `private` (VPC); `public` (public network); `direct` (Direct Connect).
      * @param string $RegionCode Region, which is required when `NetType` is `direct`.
      * @param string $VpcId VpcId, which is required when `NetType` is `direct`.
      * @param string $ExpireDate Command validity, which is required for non-Tencent Cloud instances.
+     * @param array $ClusterCustomParameters Custom parameters of the cluster
      */
     function __construct()
     {
@@ -96,6 +104,15 @@ class DescribeAgentDaemonSetCmdRequest extends AbstractModel
 
         if (array_key_exists("ExpireDate",$param) and $param["ExpireDate"] !== null) {
             $this->ExpireDate = $param["ExpireDate"];
+        }
+
+        if (array_key_exists("ClusterCustomParameters",$param) and $param["ClusterCustomParameters"] !== null) {
+            $this->ClusterCustomParameters = [];
+            foreach ($param["ClusterCustomParameters"] as $key => $value){
+                $obj = new ClusterCustomParameters();
+                $obj->deserialize($value);
+                array_push($this->ClusterCustomParameters, $obj);
+            }
         }
     }
 }

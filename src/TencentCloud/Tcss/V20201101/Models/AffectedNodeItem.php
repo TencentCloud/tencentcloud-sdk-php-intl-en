@@ -38,6 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRegion(string $Region) Set Region
  * @method string getVerifyInfo() Obtain Verification information of the check result
  * @method void setVerifyInfo(string $VerifyInfo) Set Verification information of the check result
+ * @method string getNodeName() Obtain Node name
+ * @method void setNodeName(string $NodeName) Set Node name
  */
 class AffectedNodeItem extends AbstractModel
 {
@@ -87,6 +89,11 @@ class AffectedNodeItem extends AbstractModel
     public $VerifyInfo;
 
     /**
+     * @var string Node name
+     */
+    public $NodeName;
+
+    /**
      * @param string $ClusterId Cluster ID
      * @param string $ClusterName Cluster name
      * @param string $InstanceId Instance ID
@@ -96,6 +103,7 @@ class AffectedNodeItem extends AbstractModel
      * @param string $ContainerRuntime Runtime component. Valid values: `docker`, `containerd`.
      * @param string $Region Region
      * @param string $VerifyInfo Verification information of the check result
+     * @param string $NodeName Node name
      */
     function __construct()
     {
@@ -144,6 +152,10 @@ class AffectedNodeItem extends AbstractModel
 
         if (array_key_exists("VerifyInfo",$param) and $param["VerifyInfo"] !== null) {
             $this->VerifyInfo = $param["VerifyInfo"];
+        }
+
+        if (array_key_exists("NodeName",$param) and $param["NodeName"] !== null) {
+            $this->NodeName = $param["NodeName"];
         }
     }
 }

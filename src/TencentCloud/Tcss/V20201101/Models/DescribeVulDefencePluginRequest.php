@@ -20,21 +20,25 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeVulDefencePlugin request structure.
  *
- * @method string getHostID() Obtain Server host ID, i.e., QUuid
- * @method void setHostID(string $HostID) Set Server host ID, i.e., QUuid
+ * @method string getHostID() Obtain Host ID or unique super node ID
+ * @method void setHostID(string $HostID) Set Host ID or unique super node ID
  * @method integer getLimit() Obtain Number of results to be returned. Default value: `10`. Maximum value: `100`.
  * @method void setLimit(integer $Limit) Set Number of results to be returned. Default value: `10`. Maximum value: `100`.
  * @method integer getOffset() Obtain Offset. Default value: `0`.
  * @method void setOffset(integer $Offset) Set Offset. Default value: `0`.
- * @method array getFilters() Obtain Filter
-<li>Status- String - Required: No - Plugin status. Valid values: `INJECTING` (injecting); `SUCCESS` (injected successfully); `FAIL` (injection failed); `TIMEOUT` (plugin timed out); `QUIT` (plugin exited).</li>
- * @method void setFilters(array $Filters) Set Filter
-<li>Status- String - Required: No - Plugin status. Valid values: `INJECTING` (injecting); `SUCCESS` (injected successfully); `FAIL` (injection failed); `TIMEOUT` (plugin timed out); `QUIT` (plugin exited).</li>
+ * @method array getFilters() Obtain Filter condition
+<li>
+Status- String - Required: No - Plugin status. Valid values: `INJECTING` (injecting); `SUCCESS` (injected successfully); `FAIL` (injection failed); `TIMEOUT` (plugin timed out); `QUIT` (plugin exited).
+</li>
+ * @method void setFilters(array $Filters) Set Filter condition
+<li>
+Status- String - Required: No - Plugin status. Valid values: `INJECTING` (injecting); `SUCCESS` (injected successfully); `FAIL` (injection failed); `TIMEOUT` (plugin timed out); `QUIT` (plugin exited).
+</li>
  */
 class DescribeVulDefencePluginRequest extends AbstractModel
 {
     /**
-     * @var string Server host ID, i.e., QUuid
+     * @var string Host ID or unique super node ID
      */
     public $HostID;
 
@@ -49,17 +53,21 @@ class DescribeVulDefencePluginRequest extends AbstractModel
     public $Offset;
 
     /**
-     * @var array Filter
-<li>Status- String - Required: No - Plugin status. Valid values: `INJECTING` (injecting); `SUCCESS` (injected successfully); `FAIL` (injection failed); `TIMEOUT` (plugin timed out); `QUIT` (plugin exited).</li>
+     * @var array Filter condition
+<li>
+Status- String - Required: No - Plugin status. Valid values: `INJECTING` (injecting); `SUCCESS` (injected successfully); `FAIL` (injection failed); `TIMEOUT` (plugin timed out); `QUIT` (plugin exited).
+</li>
      */
     public $Filters;
 
     /**
-     * @param string $HostID Server host ID, i.e., QUuid
+     * @param string $HostID Host ID or unique super node ID
      * @param integer $Limit Number of results to be returned. Default value: `10`. Maximum value: `100`.
      * @param integer $Offset Offset. Default value: `0`.
-     * @param array $Filters Filter
-<li>Status- String - Required: No - Plugin status. Valid values: `INJECTING` (injecting); `SUCCESS` (injected successfully); `FAIL` (injection failed); `TIMEOUT` (plugin timed out); `QUIT` (plugin exited).</li>
+     * @param array $Filters Filter condition
+<li>
+Status- String - Required: No - Plugin status. Valid values: `INJECTING` (injecting); `SUCCESS` (injected successfully); `FAIL` (injection failed); `TIMEOUT` (plugin timed out); `QUIT` (plugin exited).
+</li>
      */
     function __construct()
     {

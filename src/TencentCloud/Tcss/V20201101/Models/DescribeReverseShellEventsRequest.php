@@ -24,8 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) Set Number of results to be returned. Default value: `10`. Maximum value: `100`.
  * @method integer getOffset() Obtain Offset. Default value: `0`.
  * @method void setOffset(integer $Offset) Set Offset. Default value: `0`.
- * @method array getFilters() Obtain Filter parameter. "Filters":[{"Name":"Status","Values":["2"]}]
- * @method void setFilters(array $Filters) Set Filter parameter. "Filters":[{"Name":"Status","Values":["2"]}]
+ * @method array getFilters() Obtain Filter parameters
+`InnerNetAlarmShow` - int - Required: Values: `1` (show private network alert); `0` (do not show)
+ * @method void setFilters(array $Filters) Set Filter parameters
+`InnerNetAlarmShow` - int - Required: Values: `1` (show private network alert); `0` (do not show)
  * @method string getOrder() Obtain Valid values: `asc`, `desc`.
  * @method void setOrder(string $Order) Set Valid values: `asc`, `desc`.
  * @method string getBy() Obtain Sorting field
@@ -44,7 +46,8 @@ class DescribeReverseShellEventsRequest extends AbstractModel
     public $Offset;
 
     /**
-     * @var array Filter parameter. "Filters":[{"Name":"Status","Values":["2"]}]
+     * @var array Filter parameters
+`InnerNetAlarmShow` - int - Required: Values: `1` (show private network alert); `0` (do not show)
      */
     public $Filters;
 
@@ -61,7 +64,8 @@ class DescribeReverseShellEventsRequest extends AbstractModel
     /**
      * @param integer $Limit Number of results to be returned. Default value: `10`. Maximum value: `100`.
      * @param integer $Offset Offset. Default value: `0`.
-     * @param array $Filters Filter parameter. "Filters":[{"Name":"Status","Values":["2"]}]
+     * @param array $Filters Filter parameters
+`InnerNetAlarmShow` - int - Required: Values: `1` (show private network alert); `0` (do not show)
      * @param string $Order Valid values: `asc`, `desc`.
      * @param string $By Sorting field
      */

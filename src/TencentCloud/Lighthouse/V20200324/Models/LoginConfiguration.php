@@ -24,18 +24,20 @@ use TencentCloud\Common\AbstractModel;
 <li>`No`: Custom. `Password` must be specified. </li>
  * @method void setAutoGeneratePassword(string $AutoGeneratePassword) Set <li>`YES`: Random password. In this case, `Password` cannot be specified. </li>
 <li>`No`: Custom. `Password` must be specified. </li>
- * @method string getPassword() Obtain Instace login password.
-For Windows instances, the password must contain 12 to 30 characters of the following types. It cannot start with “/” and cannot include the username.
-<li>[a-z]</li>
-<li>[A-Z]</li>
-<li>[0-9]</li>
-<li>[()`~!@#$%^&*-+=_|{}[]:;' <>,.?/]</li>
- * @method void setPassword(string $Password) Set Instace login password.
-For Windows instances, the password must contain 12 to 30 characters of the following types. It cannot start with “/” and cannot include the username.
-<li>[a-z]</li>
-<li>[A-Z]</li>
-<li>[0-9]</li>
-<li>[()`~!@#$%^&*-+=_|{}[]:;' <>,.?/]</li>
+ * @method string getPassword() Obtain Instance login password. 
+For Windows instances, the password must contain 12 to 30 characters of the following types. It cannot start with “/” and cannot include the username. 
+<li>Lowercase letters: [a–z]</li>
+<li>Uppercase letters: [A–Z]</li>
+<li>Digits: 0-9</li>
+<li>Symbols: ()`~!@#$%^&*-+=_|{}[]:;'<>,.?/</li>
+ * @method void setPassword(string $Password) Set Instance login password. 
+For Windows instances, the password must contain 12 to 30 characters of the following types. It cannot start with “/” and cannot include the username. 
+<li>Lowercase letters: [a–z]</li>
+<li>Uppercase letters: [A–Z]</li>
+<li>Digits: 0-9</li>
+<li>Symbols: ()`~!@#$%^&*-+=_|{}[]:;'<>,.?/</li>
+ * @method array getKeyIds() Obtain 
+ * @method void setKeyIds(array $KeyIds) Set 
  */
 class LoginConfiguration extends AbstractModel
 {
@@ -46,24 +48,30 @@ class LoginConfiguration extends AbstractModel
     public $AutoGeneratePassword;
 
     /**
-     * @var string Instace login password.
-For Windows instances, the password must contain 12 to 30 characters of the following types. It cannot start with “/” and cannot include the username.
-<li>[a-z]</li>
-<li>[A-Z]</li>
-<li>[0-9]</li>
-<li>[()`~!@#$%^&*-+=_|{}[]:;' <>,.?/]</li>
+     * @var string Instance login password. 
+For Windows instances, the password must contain 12 to 30 characters of the following types. It cannot start with “/” and cannot include the username. 
+<li>Lowercase letters: [a–z]</li>
+<li>Uppercase letters: [A–Z]</li>
+<li>Digits: 0-9</li>
+<li>Symbols: ()`~!@#$%^&*-+=_|{}[]:;'<>,.?/</li>
      */
     public $Password;
 
     /**
+     * @var array 
+     */
+    public $KeyIds;
+
+    /**
      * @param string $AutoGeneratePassword <li>`YES`: Random password. In this case, `Password` cannot be specified. </li>
 <li>`No`: Custom. `Password` must be specified. </li>
-     * @param string $Password Instace login password.
-For Windows instances, the password must contain 12 to 30 characters of the following types. It cannot start with “/” and cannot include the username.
-<li>[a-z]</li>
-<li>[A-Z]</li>
-<li>[0-9]</li>
-<li>[()`~!@#$%^&*-+=_|{}[]:;' <>,.?/]</li>
+     * @param string $Password Instance login password. 
+For Windows instances, the password must contain 12 to 30 characters of the following types. It cannot start with “/” and cannot include the username. 
+<li>Lowercase letters: [a–z]</li>
+<li>Uppercase letters: [A–Z]</li>
+<li>Digits: 0-9</li>
+<li>Symbols: ()`~!@#$%^&*-+=_|{}[]:;'<>,.?/</li>
+     * @param array $KeyIds 
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ For Windows instances, the password must contain 12 to 30 characters of the foll
 
         if (array_key_exists("Password",$param) and $param["Password"] !== null) {
             $this->Password = $param["Password"];
+        }
+
+        if (array_key_exists("KeyIds",$param) and $param["KeyIds"] !== null) {
+            $this->KeyIds = $param["KeyIds"];
         }
     }
 }

@@ -34,6 +34,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAll(boolean $All) Set Whether to scan all
  * @method array getId() Obtain ID of the image to be scanned
  * @method void setId(array $Id) Set ID of the image to be scanned
+ * @method boolean getLatest() Obtain Whether to scan for the latest version
+ * @method void setLatest(boolean $Latest) Set Whether to scan for the latest version
+ * @method boolean getContainerRunning() Obtain 
+ * @method void setContainerRunning(boolean $ContainerRunning) Set 
+ * @method string getScanEndTime() Obtain 
+ * @method void setScanEndTime(string $ScanEndTime) Set 
+ * @method integer getScanScope() Obtain 
+ * @method void setScanScope(integer $ScanScope) Set 
+ * @method array getRegistryType() Obtain 
+ * @method void setRegistryType(array $RegistryType) Set 
+ * @method array getNamespace() Obtain 
+ * @method void setNamespace(array $Namespace) Set 
  */
 class UpdateImageRegistryTimingScanTaskRequest extends AbstractModel
 {
@@ -64,6 +76,7 @@ class UpdateImageRegistryTimingScanTaskRequest extends AbstractModel
 
     /**
      * @var boolean Whether to scan all
+     * @deprecated
      */
     public $All;
 
@@ -73,6 +86,36 @@ class UpdateImageRegistryTimingScanTaskRequest extends AbstractModel
     public $Id;
 
     /**
+     * @var boolean Whether to scan for the latest version
+     */
+    public $Latest;
+
+    /**
+     * @var boolean 
+     */
+    public $ContainerRunning;
+
+    /**
+     * @var string 
+     */
+    public $ScanEndTime;
+
+    /**
+     * @var integer 
+     */
+    public $ScanScope;
+
+    /**
+     * @var array 
+     */
+    public $RegistryType;
+
+    /**
+     * @var array 
+     */
+    public $Namespace;
+
+    /**
      * @param integer $ScanPeriod Scheduled scan cycle
      * @param boolean $Enable Scheduled scan switch
      * @param string $ScanTime Scheduled scan time
@@ -80,6 +123,12 @@ class UpdateImageRegistryTimingScanTaskRequest extends AbstractModel
      * @param array $Images Scanned image
      * @param boolean $All Whether to scan all
      * @param array $Id ID of the image to be scanned
+     * @param boolean $Latest Whether to scan for the latest version
+     * @param boolean $ContainerRunning 
+     * @param string $ScanEndTime 
+     * @param integer $ScanScope 
+     * @param array $RegistryType 
+     * @param array $Namespace 
      */
     function __construct()
     {
@@ -125,6 +174,30 @@ class UpdateImageRegistryTimingScanTaskRequest extends AbstractModel
 
         if (array_key_exists("Id",$param) and $param["Id"] !== null) {
             $this->Id = $param["Id"];
+        }
+
+        if (array_key_exists("Latest",$param) and $param["Latest"] !== null) {
+            $this->Latest = $param["Latest"];
+        }
+
+        if (array_key_exists("ContainerRunning",$param) and $param["ContainerRunning"] !== null) {
+            $this->ContainerRunning = $param["ContainerRunning"];
+        }
+
+        if (array_key_exists("ScanEndTime",$param) and $param["ScanEndTime"] !== null) {
+            $this->ScanEndTime = $param["ScanEndTime"];
+        }
+
+        if (array_key_exists("ScanScope",$param) and $param["ScanScope"] !== null) {
+            $this->ScanScope = $param["ScanScope"];
+        }
+
+        if (array_key_exists("RegistryType",$param) and $param["RegistryType"] !== null) {
+            $this->RegistryType = $param["RegistryType"];
+        }
+
+        if (array_key_exists("Namespace",$param) and $param["Namespace"] !== null) {
+            $this->Namespace = $param["Namespace"];
         }
     }
 }

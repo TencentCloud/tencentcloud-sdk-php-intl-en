@@ -21,34 +21,46 @@ use TencentCloud\Common\AbstractModel;
  * Bucket information
 See the basic concepts at https://intl.cloud.tencent.com/document/product/436/44352?from_cn_redirect=1
  *
- * @method string getBucket() Obtain This field indicates a bucket name in Tencent Cloud COS. For more information on buckets, see [Basic Concepts](https://intl.cloud.tencent.com/document/product/436/44352?from_cn_redirect=1).
- * @method void setBucket(string $Bucket) Set This field indicates a bucket name in Tencent Cloud COS. For more information on buckets, see [Basic Concepts](https://intl.cloud.tencent.com/document/product/436/44352?from_cn_redirect=1).
- * @method string getRegion() Obtain This field indicates a region where a Tencent Cloud managed data center is deployed. COS data is stored in buckets in these regions.
- * @method void setRegion(string $Region) Set This field indicates a region where a Tencent Cloud managed data center is deployed. COS data is stored in buckets in these regions.
- * @method string getObject() Obtain This field indicates an object key in Tencent Cloud COS. An object is stored in a bucket as a basic storage unit. You can manage objects through the Tencent Cloud console, API, or SDK. For more information on objects, see [Object Overview](https://intl.cloud.tencent.com/document/product/436/13324?from_cn_redirect=1).
- * @method void setObject(string $Object) Set This field indicates an object key in Tencent Cloud COS. An object is stored in a bucket as a basic storage unit. You can manage objects through the Tencent Cloud console, API, or SDK. For more information on objects, see [Object Overview](https://intl.cloud.tencent.com/document/product/436/13324?from_cn_redirect=1).
+ * @method string getBucket() Obtain This field indicates a bucket name in Tencent Cloud COS. For more information on buckets, see Basic Concepts (https://intl.cloud.tencent.com/document/product/436/44352?from_cn_redirect=1). 
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method void setBucket(string $Bucket) Set This field indicates a bucket name in Tencent Cloud COS. For more information on buckets, see Basic Concepts (https://intl.cloud.tencent.com/document/product/436/44352?from_cn_redirect=1). 
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method string getRegion() Obtain This field indicates a region where a Tencent Cloud COS managed data center is deployed. COS data is stored in buckets in these regions. 
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method void setRegion(string $Region) Set This field indicates a region where a Tencent Cloud COS managed data center is deployed. COS data is stored in buckets in these regions. 
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method string getObject() Obtain This field indicates an object key in Tencent Cloud COS. Object z is stored in a bucket as a basic storage unit. You can manage objects through the Tencent Cloud console, API, or SDK. For more information on objects, see Object Overview (https://intl.cloud.tencent.com/document/product/436/13324?from_cn_redirect=1). 
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method void setObject(string $Object) Set This field indicates an object key in Tencent Cloud COS. Object z is stored in a bucket as a basic storage unit. You can manage objects through the Tencent Cloud console, API, or SDK. For more information on objects, see Object Overview (https://intl.cloud.tencent.com/document/product/436/13324?from_cn_redirect=1). 
+Note: this field may return null, indicating that no valid values can be obtained.
  */
 class BucketInfo extends AbstractModel
 {
     /**
-     * @var string This field indicates a bucket name in Tencent Cloud COS. For more information on buckets, see [Basic Concepts](https://intl.cloud.tencent.com/document/product/436/44352?from_cn_redirect=1).
+     * @var string This field indicates a bucket name in Tencent Cloud COS. For more information on buckets, see Basic Concepts (https://intl.cloud.tencent.com/document/product/436/44352?from_cn_redirect=1). 
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $Bucket;
 
     /**
-     * @var string This field indicates a region where a Tencent Cloud managed data center is deployed. COS data is stored in buckets in these regions.
+     * @var string This field indicates a region where a Tencent Cloud COS managed data center is deployed. COS data is stored in buckets in these regions. 
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $Region;
 
     /**
-     * @var string This field indicates an object key in Tencent Cloud COS. An object is stored in a bucket as a basic storage unit. You can manage objects through the Tencent Cloud console, API, or SDK. For more information on objects, see [Object Overview](https://intl.cloud.tencent.com/document/product/436/13324?from_cn_redirect=1).
+     * @var string This field indicates an object key in Tencent Cloud COS. Object z is stored in a bucket as a basic storage unit. You can manage objects through the Tencent Cloud console, API, or SDK. For more information on objects, see Object Overview (https://intl.cloud.tencent.com/document/product/436/13324?from_cn_redirect=1). 
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $Object;
 
     /**
-     * @param string $Bucket This field indicates a bucket name in Tencent Cloud COS. For more information on buckets, see [Basic Concepts](https://intl.cloud.tencent.com/document/product/436/44352?from_cn_redirect=1).
-     * @param string $Region This field indicates a region where a Tencent Cloud managed data center is deployed. COS data is stored in buckets in these regions.
-     * @param string $Object This field indicates an object key in Tencent Cloud COS. An object is stored in a bucket as a basic storage unit. You can manage objects through the Tencent Cloud console, API, or SDK. For more information on objects, see [Object Overview](https://intl.cloud.tencent.com/document/product/436/13324?from_cn_redirect=1).
+     * @param string $Bucket This field indicates a bucket name in Tencent Cloud COS. For more information on buckets, see Basic Concepts (https://intl.cloud.tencent.com/document/product/436/44352?from_cn_redirect=1). 
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param string $Region This field indicates a region where a Tencent Cloud COS managed data center is deployed. COS data is stored in buckets in these regions. 
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param string $Object This field indicates an object key in Tencent Cloud COS. Object z is stored in a bucket as a basic storage unit. You can manage objects through the Tencent Cloud console, API, or SDK. For more information on objects, see Object Overview (https://intl.cloud.tencent.com/document/product/436/13324?from_cn_redirect=1). 
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

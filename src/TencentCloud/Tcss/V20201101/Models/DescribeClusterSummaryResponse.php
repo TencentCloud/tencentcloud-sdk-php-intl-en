@@ -42,6 +42,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFailedClusterCount(integer $FailedClusterCount) Set Number of clusters that failed the check
  * @method integer getNotImportedClusterCount() Obtain Number of clusters not imported
  * @method void setNotImportedClusterCount(integer $NotImportedClusterCount) Set Number of clusters not imported
+ * @method integer getServerlessClusterCount() Obtain Number of EKS clusters
+ * @method void setServerlessClusterCount(integer $ServerlessClusterCount) Set Number of EKS clusters
+ * @method integer getTkeClusterCount() Obtain 
+ * @method void setTkeClusterCount(integer $TkeClusterCount) Set 
+ * @method integer getUserCreateTencentClusterCount() Obtain 
+ * @method void setUserCreateTencentClusterCount(integer $UserCreateTencentClusterCount) Set 
+ * @method integer getUserCreateHybridClusterCount() Obtain 
+ * @method void setUserCreateHybridClusterCount(integer $UserCreateHybridClusterCount) Set 
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -103,6 +111,26 @@ class DescribeClusterSummaryResponse extends AbstractModel
     public $NotImportedClusterCount;
 
     /**
+     * @var integer Number of EKS clusters
+     */
+    public $ServerlessClusterCount;
+
+    /**
+     * @var integer 
+     */
+    public $TkeClusterCount;
+
+    /**
+     * @var integer 
+     */
+    public $UserCreateTencentClusterCount;
+
+    /**
+     * @var integer 
+     */
+    public $UserCreateHybridClusterCount;
+
+    /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
@@ -119,6 +147,10 @@ class DescribeClusterSummaryResponse extends AbstractModel
      * @param integer $ManualCheckClusterCount Number of clusters manually checked
      * @param integer $FailedClusterCount Number of clusters that failed the check
      * @param integer $NotImportedClusterCount Number of clusters not imported
+     * @param integer $ServerlessClusterCount Number of EKS clusters
+     * @param integer $TkeClusterCount 
+     * @param integer $UserCreateTencentClusterCount 
+     * @param integer $UserCreateHybridClusterCount 
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -176,6 +208,22 @@ class DescribeClusterSummaryResponse extends AbstractModel
 
         if (array_key_exists("NotImportedClusterCount",$param) and $param["NotImportedClusterCount"] !== null) {
             $this->NotImportedClusterCount = $param["NotImportedClusterCount"];
+        }
+
+        if (array_key_exists("ServerlessClusterCount",$param) and $param["ServerlessClusterCount"] !== null) {
+            $this->ServerlessClusterCount = $param["ServerlessClusterCount"];
+        }
+
+        if (array_key_exists("TkeClusterCount",$param) and $param["TkeClusterCount"] !== null) {
+            $this->TkeClusterCount = $param["TkeClusterCount"];
+        }
+
+        if (array_key_exists("UserCreateTencentClusterCount",$param) and $param["UserCreateTencentClusterCount"] !== null) {
+            $this->UserCreateTencentClusterCount = $param["UserCreateTencentClusterCount"];
+        }
+
+        if (array_key_exists("UserCreateHybridClusterCount",$param) and $param["UserCreateHybridClusterCount"] !== null) {
+            $this->UserCreateHybridClusterCount = $param["UserCreateHybridClusterCount"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

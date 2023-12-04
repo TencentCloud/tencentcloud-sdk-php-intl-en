@@ -46,6 +46,10 @@ use TencentCloud\Common\AbstractModel;
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setNetworkPolicyPluginError(string $NetworkPolicyPluginError) Set Error message of the cluster network plugin
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getClusterNetworkSettings() Obtain Cluster network plugin
+Note: This field may return·`null`, indicating that no valid values can be obtained.
+ * @method void setClusterNetworkSettings(string $ClusterNetworkSettings) Set Cluster network plugin
+Note: This field may return·`null`, indicating that no valid values can be obtained.
  */
 class NetworkClusterInfoItem extends AbstractModel
 {
@@ -111,6 +115,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $NetworkPolicyPluginError;
 
     /**
+     * @var string Cluster network plugin
+Note: This field may return·`null`, indicating that no valid values can be obtained.
+     */
+    public $ClusterNetworkSettings;
+
+    /**
      * @param string $ClusterId Cluster ID
      * @param string $ClusterName Cluster name
      * @param string $ClusterVersion Cluster version
@@ -124,6 +134,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $NetworkPolicyPluginStatus Status of the cluster network plugin. Valid values: `Running` (normal); `Error` (abnormal).
      * @param string $NetworkPolicyPluginError Error message of the cluster network plugin
 Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $ClusterNetworkSettings Cluster network plugin
+Note: This field may return·`null`, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -184,6 +196,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("NetworkPolicyPluginError",$param) and $param["NetworkPolicyPluginError"] !== null) {
             $this->NetworkPolicyPluginError = $param["NetworkPolicyPluginError"];
+        }
+
+        if (array_key_exists("ClusterNetworkSettings",$param) and $param["ClusterNetworkSettings"] !== null) {
+            $this->ClusterNetworkSettings = $param["ClusterNetworkSettings"];
         }
     }
 }

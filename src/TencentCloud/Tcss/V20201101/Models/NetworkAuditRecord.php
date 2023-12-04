@@ -40,6 +40,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getUin() Obtain Operator UIN
  * @method void setUin(string $Uin) Set Operator UIN
+ * @method integer getPolicyId() Obtain The policy ID.
+Note: This field may return·`null`, indicating that no valid values can be obtained.
+ * @method void setPolicyId(integer $PolicyId) Set The policy ID.
+Note: This field may return·`null`, indicating that no valid values can be obtained.
  */
 class NetworkAuditRecord extends AbstractModel
 {
@@ -90,6 +94,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $Uin;
 
     /**
+     * @var integer The policy ID.
+Note: This field may return·`null`, indicating that no valid values can be obtained.
+     */
+    public $PolicyId;
+
+    /**
      * @param string $ClusterId Cluster ID
      * @param string $ClusterName Cluster name
      * @param string $Region Cluster region
@@ -100,6 +110,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param integer $AppId Operator `appid`
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $Uin Operator UIN
+     * @param integer $PolicyId The policy ID.
+Note: This field may return·`null`, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -148,6 +160,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("Uin",$param) and $param["Uin"] !== null) {
             $this->Uin = $param["Uin"];
+        }
+
+        if (array_key_exists("PolicyId",$param) and $param["PolicyId"] !== null) {
+            $this->PolicyId = $param["PolicyId"];
         }
     }
 }

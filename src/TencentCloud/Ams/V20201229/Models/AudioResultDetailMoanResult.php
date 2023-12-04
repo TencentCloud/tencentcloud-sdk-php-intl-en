@@ -26,10 +26,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method integer getScore() Obtain This field is used to return the confidence of moan detection. Value range: 0 (**the lowest confidence**)–100 (**the highest confidence**), where a higher value indicates that the audio is more likely to fall into the category of moan.
  * @method void setScore(integer $Score) Set This field is used to return the confidence of moan detection. Value range: 0 (**the lowest confidence**)–100 (**the highest confidence**), where a higher value indicates that the audio is more likely to fall into the category of moan.
- * @method float getStartTime() Obtain This field is used to return the start time of the segment of an audio file under the corresponding moan tag in milliseconds.
- * @method void setStartTime(float $StartTime) Set This field is used to return the start time of the segment of an audio file under the corresponding moan tag in milliseconds.
- * @method float getEndTime() Obtain This field is used to return the end time of the segment of an audio file under the corresponding moan tag in milliseconds.
- * @method void setEndTime(float $EndTime) Set This field is used to return the end time of the segment of an audio file under the corresponding moan tag in milliseconds.
+ * @method float getStartTime() Obtain This field is used to return the start time of the segment of an audio file under the corresponding moan tag in seconds.
+ * @method void setStartTime(float $StartTime) Set This field is used to return the start time of the segment of an audio file under the corresponding moan tag in seconds.
+ * @method float getEndTime() Obtain This field is used to return the end time of the segment of an audio file under the corresponding moan tag in seconds.
+ * @method void setEndTime(float $EndTime) Set This field is used to return the end time of the segment of an audio file under the corresponding moan tag in seconds.
  * @method string getSubLabelCode() Obtain *This field is in beta test. Stay tuned*
  * @method void setSubLabelCode(string $SubLabelCode) Set *This field is in beta test. Stay tuned*
  * @method string getSubLabel() Obtain This field is used to return a subtag under the current tag (Lable).
@@ -53,12 +53,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $Score;
 
     /**
-     * @var float This field is used to return the start time of the segment of an audio file under the corresponding moan tag in milliseconds.
+     * @var float This field is used to return the start time of the segment of an audio file under the corresponding moan tag in seconds.
      */
     public $StartTime;
 
     /**
-     * @var float This field is used to return the end time of the segment of an audio file under the corresponding moan tag in milliseconds.
+     * @var float This field is used to return the end time of the segment of an audio file under the corresponding moan tag in seconds.
      */
     public $EndTime;
 
@@ -82,8 +82,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @param string $Label This field is used to return the type of the content to be detected. It is fixed at **Moan** here to call the moan detection feature.
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param integer $Score This field is used to return the confidence of moan detection. Value range: 0 (**the lowest confidence**)–100 (**the highest confidence**), where a higher value indicates that the audio is more likely to fall into the category of moan.
-     * @param float $StartTime This field is used to return the start time of the segment of an audio file under the corresponding moan tag in milliseconds.
-     * @param float $EndTime This field is used to return the end time of the segment of an audio file under the corresponding moan tag in milliseconds.
+     * @param float $StartTime This field is used to return the start time of the segment of an audio file under the corresponding moan tag in seconds.
+     * @param float $EndTime This field is used to return the end time of the segment of an audio file under the corresponding moan tag in seconds.
      * @param string $SubLabelCode *This field is in beta test. Stay tuned*
      * @param string $SubLabel This field is used to return a subtag under the current tag (Lable).
 Note: this field may return null, indicating that no valid values can be obtained.

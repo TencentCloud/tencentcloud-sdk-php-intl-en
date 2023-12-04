@@ -20,12 +20,20 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeVulDefenceHost request structure.
  *
- * @method array getFilters() Obtain Filter
-<li>Status- String - Required: No - Plugin status. Valid values: `SUCCESS` (normal); `FAIL` (abnormal); `NO_DEFENCE` (not defended).</li>
-<li>KeyWords- string - Required: No - Server name/IP</li>
- * @method void setFilters(array $Filters) Set Filter
-<li>Status- String - Required: No - Plugin status. Valid values: `SUCCESS` (normal); `FAIL` (abnormal); `NO_DEFENCE` (not defended).</li>
-<li>KeyWords- string - Required: No - Server name/IP</li>
+ * @method array getFilters() Obtain Filter condition
+<li>`Status`: String - Required: No - Plugin status. Values: `SUCCESS` (normal); `FAIL` (abnormal); `NO_DEFENCE` (not defended).</li>
+<li>`HostName`: String - Required: No - Server/Super node name</li>
+<li>`HostIP`: String - Required: No - Server IP </li>
+<li>`NodeType`: String  - Required: No - Node type</li>
+<li>`HostName` - String - Required: No - Super node name </li>
+<li>`NodeSubNetCIDR`: String - Required: No - Super node CIDR block</li>
+ * @method void setFilters(array $Filters) Set Filter condition
+<li>`Status`: String - Required: No - Plugin status. Values: `SUCCESS` (normal); `FAIL` (abnormal); `NO_DEFENCE` (not defended).</li>
+<li>`HostName`: String - Required: No - Server/Super node name</li>
+<li>`HostIP`: String - Required: No - Server IP </li>
+<li>`NodeType`: String  - Required: No - Node type</li>
+<li>`HostName` - String - Required: No - Super node name </li>
+<li>`NodeSubNetCIDR`: String - Required: No - Super node CIDR block</li>
  * @method integer getLimit() Obtain Number of results to be returned. Default value: `10`. Maximum value: `100`.
  * @method void setLimit(integer $Limit) Set Number of results to be returned. Default value: `10`. Maximum value: `100`.
  * @method integer getOffset() Obtain Offset. Default value: `0`.
@@ -38,9 +46,13 @@ use TencentCloud\Common\AbstractModel;
 class DescribeVulDefenceHostRequest extends AbstractModel
 {
     /**
-     * @var array Filter
-<li>Status- String - Required: No - Plugin status. Valid values: `SUCCESS` (normal); `FAIL` (abnormal); `NO_DEFENCE` (not defended).</li>
-<li>KeyWords- string - Required: No - Server name/IP</li>
+     * @var array Filter condition
+<li>`Status`: String - Required: No - Plugin status. Values: `SUCCESS` (normal); `FAIL` (abnormal); `NO_DEFENCE` (not defended).</li>
+<li>`HostName`: String - Required: No - Server/Super node name</li>
+<li>`HostIP`: String - Required: No - Server IP </li>
+<li>`NodeType`: String  - Required: No - Node type</li>
+<li>`HostName` - String - Required: No - Super node name </li>
+<li>`NodeSubNetCIDR`: String - Required: No - Super node CIDR block</li>
      */
     public $Filters;
 
@@ -65,9 +77,13 @@ class DescribeVulDefenceHostRequest extends AbstractModel
     public $By;
 
     /**
-     * @param array $Filters Filter
-<li>Status- String - Required: No - Plugin status. Valid values: `SUCCESS` (normal); `FAIL` (abnormal); `NO_DEFENCE` (not defended).</li>
-<li>KeyWords- string - Required: No - Server name/IP</li>
+     * @param array $Filters Filter condition
+<li>`Status`: String - Required: No - Plugin status. Values: `SUCCESS` (normal); `FAIL` (abnormal); `NO_DEFENCE` (not defended).</li>
+<li>`HostName`: String - Required: No - Server/Super node name</li>
+<li>`HostIP`: String - Required: No - Server IP </li>
+<li>`NodeType`: String  - Required: No - Node type</li>
+<li>`HostName` - String - Required: No - Super node name </li>
+<li>`NodeSubNetCIDR`: String - Required: No - Super node CIDR block</li>
      * @param integer $Limit Number of results to be returned. Default value: `10`. Maximum value: `100`.
      * @param integer $Offset Offset. Default value: `0`.
      * @param string $Order Sorting order. Valid values: `asc`, `desc`.

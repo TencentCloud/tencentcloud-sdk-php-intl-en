@@ -48,6 +48,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setHostName(string $HostName) Set Server name
  * @method string getPublicIp() Obtain Public IP
  * @method void setPublicIp(string $PublicIp) Set Public IP
+ * @method string getNodeID() Obtain Node ID
+ * @method void setNodeID(string $NodeID) Set Node ID
+ * @method string getPodIP() Obtain Pod IP
+ * @method void setPodIP(string $PodIP) Set Pod IP
+ * @method string getPodName() Obtain Pod name
+ * @method void setPodName(string $PodName) Set Pod name
+ * @method string getNodeType() Obtain Node type.
+ * @method void setNodeType(string $NodeType) Set Node type.
+ * @method string getNodeUniqueID() Obtain UID of the super node
+ * @method void setNodeUniqueID(string $NodeUniqueID) Set UID of the super node
  */
 class PortInfo extends AbstractModel
 {
@@ -122,6 +132,31 @@ class PortInfo extends AbstractModel
     public $PublicIp;
 
     /**
+     * @var string Node ID
+     */
+    public $NodeID;
+
+    /**
+     * @var string Pod IP
+     */
+    public $PodIP;
+
+    /**
+     * @var string Pod name
+     */
+    public $PodName;
+
+    /**
+     * @var string Node type.
+     */
+    public $NodeType;
+
+    /**
+     * @var string UID of the super node
+     */
+    public $NodeUniqueID;
+
+    /**
      * @param string $Type Type
      * @param string $PublicIP Public IP
      * @param integer $PublicPort Server port
@@ -136,6 +171,11 @@ class PortInfo extends AbstractModel
      * @param string $RunAs Operating account
      * @param string $HostName Server name
      * @param string $PublicIp Public IP
+     * @param string $NodeID Node ID
+     * @param string $PodIP Pod IP
+     * @param string $PodName Pod name
+     * @param string $NodeType Node type.
+     * @param string $NodeUniqueID UID of the super node
      */
     function __construct()
     {
@@ -204,6 +244,26 @@ class PortInfo extends AbstractModel
 
         if (array_key_exists("PublicIp",$param) and $param["PublicIp"] !== null) {
             $this->PublicIp = $param["PublicIp"];
+        }
+
+        if (array_key_exists("NodeID",$param) and $param["NodeID"] !== null) {
+            $this->NodeID = $param["NodeID"];
+        }
+
+        if (array_key_exists("PodIP",$param) and $param["PodIP"] !== null) {
+            $this->PodIP = $param["PodIP"];
+        }
+
+        if (array_key_exists("PodName",$param) and $param["PodName"] !== null) {
+            $this->PodName = $param["PodName"];
+        }
+
+        if (array_key_exists("NodeType",$param) and $param["NodeType"] !== null) {
+            $this->NodeType = $param["NodeType"];
+        }
+
+        if (array_key_exists("NodeUniqueID",$param) and $param["NodeUniqueID"] !== null) {
+            $this->NodeUniqueID = $param["NodeUniqueID"];
         }
     }
 }

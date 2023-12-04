@@ -60,6 +60,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setImageUnsafeCnt(integer $ImageUnsafeCnt) Set Number of images at risk
  * @method integer getHostUnInstallCnt() Obtain Number of servers not installed with the agent
  * @method void setHostUnInstallCnt(integer $HostUnInstallCnt) Set Number of servers not installed with the agent
+ * @method integer getSuperNodeCnt() Obtain Number of super nodes
+ * @method void setSuperNodeCnt(integer $SuperNodeCnt) Set Number of super nodes
+ * @method integer getSuperNodeRunningCnt() Obtain Number of running super nodes
+ * @method void setSuperNodeRunningCnt(integer $SuperNodeRunningCnt) Set Number of running super nodes
+ * @method integer getTodayNewImageCnt() Obtain 
+ * @method void setTodayNewImageCnt(integer $TodayNewImageCnt) Set 
+ * @method integer getTodayUnsafeImageCnt() Obtain 
+ * @method void setTodayUnsafeImageCnt(integer $TodayUnsafeImageCnt) Set 
+ * @method integer getRecommendedFixImageCnt() Obtain 
+ * @method void setRecommendedFixImageCnt(integer $RecommendedFixImageCnt) Set 
+ * @method integer getScannedImageCnt() Obtain 
+ * @method void setScannedImageCnt(integer $ScannedImageCnt) Set 
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -166,6 +178,36 @@ class DescribeAssetSummaryResponse extends AbstractModel
     public $HostUnInstallCnt;
 
     /**
+     * @var integer Number of super nodes
+     */
+    public $SuperNodeCnt;
+
+    /**
+     * @var integer Number of running super nodes
+     */
+    public $SuperNodeRunningCnt;
+
+    /**
+     * @var integer 
+     */
+    public $TodayNewImageCnt;
+
+    /**
+     * @var integer 
+     */
+    public $TodayUnsafeImageCnt;
+
+    /**
+     * @var integer 
+     */
+    public $RecommendedFixImageCnt;
+
+    /**
+     * @var integer 
+     */
+    public $ScannedImageCnt;
+
+    /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
@@ -191,6 +233,12 @@ class DescribeAssetSummaryResponse extends AbstractModel
      * @param string $LatestImageScanTime Last image scan time
      * @param integer $ImageUnsafeCnt Number of images at risk
      * @param integer $HostUnInstallCnt Number of servers not installed with the agent
+     * @param integer $SuperNodeCnt Number of super nodes
+     * @param integer $SuperNodeRunningCnt Number of running super nodes
+     * @param integer $TodayNewImageCnt 
+     * @param integer $TodayUnsafeImageCnt 
+     * @param integer $RecommendedFixImageCnt 
+     * @param integer $ScannedImageCnt 
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -284,6 +332,30 @@ class DescribeAssetSummaryResponse extends AbstractModel
 
         if (array_key_exists("HostUnInstallCnt",$param) and $param["HostUnInstallCnt"] !== null) {
             $this->HostUnInstallCnt = $param["HostUnInstallCnt"];
+        }
+
+        if (array_key_exists("SuperNodeCnt",$param) and $param["SuperNodeCnt"] !== null) {
+            $this->SuperNodeCnt = $param["SuperNodeCnt"];
+        }
+
+        if (array_key_exists("SuperNodeRunningCnt",$param) and $param["SuperNodeRunningCnt"] !== null) {
+            $this->SuperNodeRunningCnt = $param["SuperNodeRunningCnt"];
+        }
+
+        if (array_key_exists("TodayNewImageCnt",$param) and $param["TodayNewImageCnt"] !== null) {
+            $this->TodayNewImageCnt = $param["TodayNewImageCnt"];
+        }
+
+        if (array_key_exists("TodayUnsafeImageCnt",$param) and $param["TodayUnsafeImageCnt"] !== null) {
+            $this->TodayUnsafeImageCnt = $param["TodayUnsafeImageCnt"];
+        }
+
+        if (array_key_exists("RecommendedFixImageCnt",$param) and $param["RecommendedFixImageCnt"] !== null) {
+            $this->RecommendedFixImageCnt = $param["RecommendedFixImageCnt"];
+        }
+
+        if (array_key_exists("ScannedImageCnt",$param) and $param["ScannedImageCnt"] !== null) {
+            $this->ScannedImageCnt = $param["ScannedImageCnt"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

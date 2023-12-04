@@ -20,20 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * List of container escape events
  *
- * @method string getEventType() Obtain Event type
-   `ESCAPE_HOST_ACESS_FILE`: Host file access escape.
-   `ESCAPE_MOUNT_NAMESPACE`: Mount namespace escape.
-   `ESCAPE_PRIVILEDGE`: Program privilege escalation escape.
-   `ESCAPE_PRIVILEDGE_CONTAINER_START`: Privileged container startup escape.
-   `ESCAPE_MOUNT_SENSITIVE_PTAH`: Sensitive path mount.
-   `ESCAPE_SYSCALL`: Syscall escape.
- * @method void setEventType(string $EventType) Set Event type
-   `ESCAPE_HOST_ACESS_FILE`: Host file access escape.
-   `ESCAPE_MOUNT_NAMESPACE`: Mount namespace escape.
-   `ESCAPE_PRIVILEDGE`: Program privilege escalation escape.
-   `ESCAPE_PRIVILEDGE_CONTAINER_START`: Privileged container startup escape.
-   `ESCAPE_MOUNT_SENSITIVE_PTAH`: Sensitive path mount.
-   `ESCAPE_SYSCALL`: Syscall escape.
+ * @method string getEventType() Obtain Event type.
+   `ESCAPE_CGROUPS`: Cgroup escape.
+   `ESCAPE_TAMPER_SENSITIVE_FILE`: File tamper escape.
+   `ESCAPE_DOCKER_API`: Docker API access escape.
+   `ESCAPE_VUL_OCCURRED`: Vulnerability exploit.
+   `MOUNT_SENSITIVE_PTAH`: Sensitive path mount.
+   `PRIVILEGE_CONTAINER_START`: Privileged container.
+   `PRIVILEGE`: Program privilege escalation escape.
+ * @method void setEventType(string $EventType) Set Event type.
+   `ESCAPE_CGROUPS`: Cgroup escape.
+   `ESCAPE_TAMPER_SENSITIVE_FILE`: File tamper escape.
+   `ESCAPE_DOCKER_API`: Docker API access escape.
+   `ESCAPE_VUL_OCCURRED`: Vulnerability exploit.
+   `MOUNT_SENSITIVE_PTAH`: Sensitive path mount.
+   `PRIVILEGE_CONTAINER_START`: Privileged container.
+   `PRIVILEGE`: Program privilege escalation escape.
  * @method string getContainerName() Obtain Container name
  * @method void setContainerName(string $ContainerName) Set Container name
  * @method string getImageName() Obtain Image name
@@ -136,17 +138,34 @@ Note: This field may return null, indicating that no valid values can be obtaine
 `DESTROYED`: Terminated.
 `RESTARTING`: Restarting.
 `REMOVING`: Removing.
+ * @method string getClusterID() Obtain ID of the cluster where the node resides
+ * @method void setClusterID(string $ClusterID) Set ID of the cluster where the node resides
+ * @method string getNodeType() Obtain Node type. Values: `NORMAL` (general node), `SUPER` (super node).
+ * @method void setNodeType(string $NodeType) Set Node type. Values: `NORMAL` (general node), `SUPER` (super node).
+ * @method string getPodIP() Obtain Pod IP
+ * @method void setPodIP(string $PodIP) Set Pod IP
+ * @method string getNodeUniqueID() Obtain Unique node ID
+ * @method void setNodeUniqueID(string $NodeUniqueID) Set Unique node ID
+ * @method string getPublicIP() Obtain Node public IP
+ * @method void setPublicIP(string $PublicIP) Set Node public IP
+ * @method string getNodeID() Obtain Node ID
+ * @method void setNodeID(string $NodeID) Set Node ID
+ * @method string getHostIP() Obtain Private IP of the node
+ * @method void setHostIP(string $HostIP) Set Private IP of the node
+ * @method string getClusterName() Obtain Cluster name
+ * @method void setClusterName(string $ClusterName) Set Cluster name
  */
 class EscapeEventInfo extends AbstractModel
 {
     /**
-     * @var string Event type
-   `ESCAPE_HOST_ACESS_FILE`: Host file access escape.
-   `ESCAPE_MOUNT_NAMESPACE`: Mount namespace escape.
-   `ESCAPE_PRIVILEDGE`: Program privilege escalation escape.
-   `ESCAPE_PRIVILEDGE_CONTAINER_START`: Privileged container startup escape.
-   `ESCAPE_MOUNT_SENSITIVE_PTAH`: Sensitive path mount.
-   `ESCAPE_SYSCALL`: Syscall escape.
+     * @var string Event type.
+   `ESCAPE_CGROUPS`: Cgroup escape.
+   `ESCAPE_TAMPER_SENSITIVE_FILE`: File tamper escape.
+   `ESCAPE_DOCKER_API`: Docker API access escape.
+   `ESCAPE_VUL_OCCURRED`: Vulnerability exploit.
+   `MOUNT_SENSITIVE_PTAH`: Sensitive path mount.
+   `PRIVILEGE_CONTAINER_START`: Privileged container.
+   `PRIVILEGE`: Program privilege escalation escape.
      */
     public $EventType;
 
@@ -282,13 +301,54 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $ContainerStatus;
 
     /**
-     * @param string $EventType Event type
-   `ESCAPE_HOST_ACESS_FILE`: Host file access escape.
-   `ESCAPE_MOUNT_NAMESPACE`: Mount namespace escape.
-   `ESCAPE_PRIVILEDGE`: Program privilege escalation escape.
-   `ESCAPE_PRIVILEDGE_CONTAINER_START`: Privileged container startup escape.
-   `ESCAPE_MOUNT_SENSITIVE_PTAH`: Sensitive path mount.
-   `ESCAPE_SYSCALL`: Syscall escape.
+     * @var string ID of the cluster where the node resides
+     */
+    public $ClusterID;
+
+    /**
+     * @var string Node type. Values: `NORMAL` (general node), `SUPER` (super node).
+     */
+    public $NodeType;
+
+    /**
+     * @var string Pod IP
+     */
+    public $PodIP;
+
+    /**
+     * @var string Unique node ID
+     */
+    public $NodeUniqueID;
+
+    /**
+     * @var string Node public IP
+     */
+    public $PublicIP;
+
+    /**
+     * @var string Node ID
+     */
+    public $NodeID;
+
+    /**
+     * @var string Private IP of the node
+     */
+    public $HostIP;
+
+    /**
+     * @var string Cluster name
+     */
+    public $ClusterName;
+
+    /**
+     * @param string $EventType Event type.
+   `ESCAPE_CGROUPS`: Cgroup escape.
+   `ESCAPE_TAMPER_SENSITIVE_FILE`: File tamper escape.
+   `ESCAPE_DOCKER_API`: Docker API access escape.
+   `ESCAPE_VUL_OCCURRED`: Vulnerability exploit.
+   `MOUNT_SENSITIVE_PTAH`: Sensitive path mount.
+   `PRIVILEGE_CONTAINER_START`: Privileged container.
+   `PRIVILEGE`: Program privilege escalation escape.
      * @param string $ContainerName Container name
      * @param string $ImageName Image name
      * @param string $Status Status. Valid values: `EVENT_UNDEAL` (pending); `EVENT_DEALED` (processed); `EVENT_INGNORE` (ignored).
@@ -340,6 +400,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 `DESTROYED`: Terminated.
 `RESTARTING`: Restarting.
 `REMOVING`: Removing.
+     * @param string $ClusterID ID of the cluster where the node resides
+     * @param string $NodeType Node type. Values: `NORMAL` (general node), `SUPER` (super node).
+     * @param string $PodIP Pod IP
+     * @param string $NodeUniqueID Unique node ID
+     * @param string $PublicIP Node public IP
+     * @param string $NodeID Node ID
+     * @param string $HostIP Private IP of the node
+     * @param string $ClusterName Cluster name
      */
     function __construct()
     {
@@ -436,6 +504,38 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("ContainerStatus",$param) and $param["ContainerStatus"] !== null) {
             $this->ContainerStatus = $param["ContainerStatus"];
+        }
+
+        if (array_key_exists("ClusterID",$param) and $param["ClusterID"] !== null) {
+            $this->ClusterID = $param["ClusterID"];
+        }
+
+        if (array_key_exists("NodeType",$param) and $param["NodeType"] !== null) {
+            $this->NodeType = $param["NodeType"];
+        }
+
+        if (array_key_exists("PodIP",$param) and $param["PodIP"] !== null) {
+            $this->PodIP = $param["PodIP"];
+        }
+
+        if (array_key_exists("NodeUniqueID",$param) and $param["NodeUniqueID"] !== null) {
+            $this->NodeUniqueID = $param["NodeUniqueID"];
+        }
+
+        if (array_key_exists("PublicIP",$param) and $param["PublicIP"] !== null) {
+            $this->PublicIP = $param["PublicIP"];
+        }
+
+        if (array_key_exists("NodeID",$param) and $param["NodeID"] !== null) {
+            $this->NodeID = $param["NodeID"];
+        }
+
+        if (array_key_exists("HostIP",$param) and $param["HostIP"] !== null) {
+            $this->HostIP = $param["HostIP"];
+        }
+
+        if (array_key_exists("ClusterName",$param) and $param["ClusterName"] !== null) {
+            $this->ClusterName = $param["ClusterName"];
         }
     }
 }

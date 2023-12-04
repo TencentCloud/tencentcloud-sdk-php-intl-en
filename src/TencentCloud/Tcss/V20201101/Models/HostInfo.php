@@ -58,6 +58,12 @@ Note: This field may return `null`, indicating that no valid value was found.
 Note: This field may return `null`, indicating that no valid value was found.
  * @method void setTags(array $Tags) Set Tags
 Note: This field may return `null`, indicating that no valid value was found.
+ * @method string getClusterID() Obtain Cluster ID
+ * @method void setClusterID(string $ClusterID) Set Cluster ID
+ * @method string getClusterName() Obtain 
+ * @method void setClusterName(string $ClusterName) Set 
+ * @method string getClusterAccessedStatus() Obtain 
+ * @method void setClusterAccessedStatus(string $ClusterAccessedStatus) Set 
  */
 class HostInfo extends AbstractModel
 {
@@ -149,6 +155,21 @@ Note: This field may return `null`, indicating that no valid value was found.
     public $Tags;
 
     /**
+     * @var string Cluster ID
+     */
+    public $ClusterID;
+
+    /**
+     * @var string 
+     */
+    public $ClusterName;
+
+    /**
+     * @var string 
+     */
+    public $ClusterAccessedStatus;
+
+    /**
      * @param string $HostID Server ID
      * @param string $HostIP Server IP, which is the private IP
      * @param string $HostName Server name
@@ -168,6 +189,9 @@ Note: This field may return `null`, indicating that no valid value was found.
 Note: This field may return `null`, indicating that no valid value was found.
      * @param array $Tags Tags
 Note: This field may return `null`, indicating that no valid value was found.
+     * @param string $ClusterID Cluster ID
+     * @param string $ClusterName 
+     * @param string $ClusterAccessedStatus 
      */
     function __construct()
     {
@@ -254,6 +278,18 @@ Note: This field may return `null`, indicating that no valid value was found.
                 $obj->deserialize($value);
                 array_push($this->Tags, $obj);
             }
+        }
+
+        if (array_key_exists("ClusterID",$param) and $param["ClusterID"] !== null) {
+            $this->ClusterID = $param["ClusterID"];
+        }
+
+        if (array_key_exists("ClusterName",$param) and $param["ClusterName"] !== null) {
+            $this->ClusterName = $param["ClusterName"];
+        }
+
+        if (array_key_exists("ClusterAccessedStatus",$param) and $param["ClusterAccessedStatus"] !== null) {
+            $this->ClusterAccessedStatus = $param["ClusterAccessedStatus"];
         }
     }
 }
