@@ -238,6 +238,7 @@ For the generated new video, you can also specify whether the generated video ne
 
 If event notification is used, the type of event notification is [Video editing completed](https://intl.cloud.tencent.com/document/product/266/33794?from_cn_redirect=1).
  * @method Models\EnhanceMediaByTemplateResponse EnhanceMediaByTemplate(Models\EnhanceMediaByTemplateRequest $req) Enhance Media By Template.
+ * @method Models\EnhanceMediaQualityResponse EnhanceMediaQuality(Models\EnhanceMediaQualityRequest $req) Initiate a Remaster task for audio and video media in VOD
  * @method Models\ExecuteFunctionResponse ExecuteFunction(Models\ExecuteFunctionRequest $req) This API is only used in special scenarios of custom development. Unless requested by VOD customer service, please do not call it.
  * @method Models\ExtractCopyRightWatermarkResponse ExtractCopyRightWatermark(Models\ExtractCopyRightWatermarkRequest $req) Extract CopyRight Watermark.
  * @method Models\ExtractTraceWatermarkResponse ExtractTraceWatermark(Models\ExtractTraceWatermarkRequest $req) This API is used to extract the user ID of a user that distributed a video containing a digital watermark.

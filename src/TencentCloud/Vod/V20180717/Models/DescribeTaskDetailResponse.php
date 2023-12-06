@@ -31,9 +31,9 @@ use TencentCloud\Common\AbstractModel;
 <li>`FastClipMedia`: Quick clipping</li>
 <li>`RemoveWatermarkTask`: Watermark removal</li>
 <li>`DescribeFileAttributesTask`: Getting file attributes</li>
-<li>`RebuildMedia`; Remastering audio/video</li>
 <li> `ReviewAudioVideo`: Moderation</li>
 <li>`ExtractTraceWatermark`: Digital watermark extraction</li>
+<li>`QualityEnhance：Enhance audio/video</li>
  * @method void setTaskType(string $TaskType) Set The task type. Valid values:
 <li>`Procedure`: Video processing</li>
 <li>`EditMedia`: Video editing</li>
@@ -45,9 +45,9 @@ use TencentCloud\Common\AbstractModel;
 <li>`FastClipMedia`: Quick clipping</li>
 <li>`RemoveWatermarkTask`: Watermark removal</li>
 <li>`DescribeFileAttributesTask`: Getting file attributes</li>
-<li>`RebuildMedia`; Remastering audio/video</li>
 <li> `ReviewAudioVideo`: Moderation</li>
 <li>`ExtractTraceWatermark`: Digital watermark extraction</li>
+<li>`QualityEnhance：Enhance audio/video</li>
  * @method string getStatus() Obtain Task status. Valid values:
 <li>WAITING: waiting;</li>
 <li>PROCESSING: processing;</li>
@@ -163,9 +163,9 @@ class DescribeTaskDetailResponse extends AbstractModel
 <li>`FastClipMedia`: Quick clipping</li>
 <li>`RemoveWatermarkTask`: Watermark removal</li>
 <li>`DescribeFileAttributesTask`: Getting file attributes</li>
-<li>`RebuildMedia`; Remastering audio/video</li>
 <li> `ReviewAudioVideo`: Moderation</li>
 <li>`ExtractTraceWatermark`: Digital watermark extraction</li>
+<li>`QualityEnhance：Enhance audio/video</li>
      */
     public $TaskType;
 
@@ -335,9 +335,9 @@ Note: This field may return null, indicating that no valid value can be obtained
 <li>`FastClipMedia`: Quick clipping</li>
 <li>`RemoveWatermarkTask`: Watermark removal</li>
 <li>`DescribeFileAttributesTask`: Getting file attributes</li>
-<li>`RebuildMedia`; Remastering audio/video</li>
 <li> `ReviewAudioVideo`: Moderation</li>
 <li>`ExtractTraceWatermark`: Digital watermark extraction</li>
+<li>`QualityEnhance：Enhance audio/video</li>
      * @param string $Status Task status. Valid values:
 <li>WAITING: waiting;</li>
 <li>PROCESSING: processing;</li>

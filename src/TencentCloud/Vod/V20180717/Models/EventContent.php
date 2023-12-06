@@ -156,6 +156,10 @@ Note: This field may return null, indicating that no valid value can be obtained
 Note: This field may return null, indicating that no valid value can be obtained.
  * @method void setQualityInspectCompleteEvent(QualityInspectTask $QualityInspectCompleteEvent) Set 
 Note: This field may return null, indicating that no valid value can be obtained.
+ * @method QualityEnhanceTask getQualityEnhanceCompleteEvent() Obtain Remaster completion event, valid when the event type is QualityEnhanceComplete.
+Pay attention to: this field may return null, indicating that no valid value can be obtained
+ * @method void setQualityEnhanceCompleteEvent(QualityEnhanceTask $QualityEnhanceCompleteEvent) Set Remaster completion event, valid when the event type is QualityEnhanceComplete.
+Pay attention to: this field may return null, indicating that no valid value can be obtained
  */
 class EventContent extends AbstractModel
 {
@@ -328,6 +332,12 @@ Note: This field may return null, indicating that no valid value can be obtained
     public $QualityInspectCompleteEvent;
 
     /**
+     * @var QualityEnhanceTask Remaster completion event, valid when the event type is QualityEnhanceComplete.
+Pay attention to: this field may return null, indicating that no valid value can be obtained
+     */
+    public $QualityEnhanceCompleteEvent;
+
+    /**
      * @param string $EventHandle Event handler. The caller must call `ConfirmEvents` to confirm that the message has been received, and the confirmation is valid for 30 seconds. After the confirmation expires, the event can be obtained again.
      * @param string $EventType <b>Supported event types:</b>
 <li>`NewFileUpload`: Video uploaded.</li>
@@ -396,6 +406,8 @@ Note: This field may return null, indicating that no valid value can be obtained
 Note: This field may return null, indicating that no valid value can be obtained.
      * @param QualityInspectTask $QualityInspectCompleteEvent 
 Note: This field may return null, indicating that no valid value can be obtained.
+     * @param QualityEnhanceTask $QualityEnhanceCompleteEvent Remaster completion event, valid when the event type is QualityEnhanceComplete.
+Pay attention to: this field may return null, indicating that no valid value can be obtained
      */
     function __construct()
     {
@@ -531,6 +543,11 @@ Note: This field may return null, indicating that no valid value can be obtained
         if (array_key_exists("QualityInspectCompleteEvent",$param) and $param["QualityInspectCompleteEvent"] !== null) {
             $this->QualityInspectCompleteEvent = new QualityInspectTask();
             $this->QualityInspectCompleteEvent->deserialize($param["QualityInspectCompleteEvent"]);
+        }
+
+        if (array_key_exists("QualityEnhanceCompleteEvent",$param) and $param["QualityEnhanceCompleteEvent"] !== null) {
+            $this->QualityEnhanceCompleteEvent = new QualityEnhanceTask();
+            $this->QualityEnhanceCompleteEvent->deserialize($param["QualityEnhanceCompleteEvent"]);
         }
     }
 }
