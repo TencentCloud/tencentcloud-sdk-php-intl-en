@@ -23,9 +23,9 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getSdkAppId() Obtain SdkAppId of the customer
  * @method void setSdkAppId(integer $SdkAppId) Set SdkAppId of the customer
  * @method string getCallback() Obtain Callback address for the document transcoding progress. If an empty string is passed in, the existing callback address will be deleted. The callback address only supports the HTTP or HTTPS protocol, so the callback address must start with `http://` or `https://`.
-For more information about the callback format, please [see here](https://intl.cloud.tencent.com/document/product/1137/40260?from_cn_redirect=1).
+For more information about the callback format, please [see here](https://www.tencentcloud.com/document/product/1176/55569).
  * @method void setCallback(string $Callback) Set Callback address for the document transcoding progress. If an empty string is passed in, the existing callback address will be deleted. The callback address only supports the HTTP or HTTPS protocol, so the callback address must start with `http://` or `https://`.
-For more information about the callback format, please [see here](https://intl.cloud.tencent.com/document/product/1137/40260?from_cn_redirect=1).
+For more information about the callback format, please [see here](https://www.tencentcloud.com/document/product/1176/55569).
  */
 class SetTranscodeCallbackRequest extends AbstractModel
 {
@@ -36,14 +36,14 @@ class SetTranscodeCallbackRequest extends AbstractModel
 
     /**
      * @var string Callback address for the document transcoding progress. If an empty string is passed in, the existing callback address will be deleted. The callback address only supports the HTTP or HTTPS protocol, so the callback address must start with `http://` or `https://`.
-For more information about the callback format, please [see here](https://intl.cloud.tencent.com/document/product/1137/40260?from_cn_redirect=1).
+For more information about the callback format, please [see here](https://www.tencentcloud.com/document/product/1176/55569).
      */
     public $Callback;
 
     /**
      * @param integer $SdkAppId SdkAppId of the customer
      * @param string $Callback Callback address for the document transcoding progress. If an empty string is passed in, the existing callback address will be deleted. The callback address only supports the HTTP or HTTPS protocol, so the callback address must start with `http://` or `https://`.
-For more information about the callback format, please [see here](https://intl.cloud.tencent.com/document/product/1137/40260?from_cn_redirect=1).
+For more information about the callback format, please [see here](https://www.tencentcloud.com/document/product/1176/55569).
      */
     function __construct()
     {
