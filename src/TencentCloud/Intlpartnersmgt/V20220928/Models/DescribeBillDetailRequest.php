@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getMonth() Obtain The queried month in u200dthe format of “YYYY-MM”, such as 2023-01.
  * @method void setMonth(string $Month) Set The queried month in u200dthe format of “YYYY-MM”, such as 2023-01.
- * @method integer getPageSize() Obtain Page parameter: Indicates the number of entries per page. The maximum value is 200.
- * @method void setPageSize(integer $PageSize) Set Page parameter: Indicates the number of entries per page. The maximum value is 200.
- * @method integer getPage() Obtain A pagination parameter that specifies the current page number
- * @method void setPage(integer $Page) Set A pagination parameter that specifies the current page number
+ * @method integer getPageSize() Obtain Page parameter: Indicates the number of entries per page. Value range: [1, 200]
+ * @method void setPageSize(integer $PageSize) Set Page parameter: Indicates the number of entries per page. Value range: [1, 200]
+ * @method integer getPage() Obtain Page parameter: Indicates the current page number. The minimum value is 1.
+ * @method void setPage(integer $Page) Set Page parameter: Indicates the current page number. The minimum value is 1.
  * @method string getPayMode() Obtain Billing mode. Valid values: `prePay` (Monthly subscription), postPay` (Pay-As-You-Go resources).
  * @method void setPayMode(string $PayMode) Set Billing mode. Valid values: `prePay` (Monthly subscription), postPay` (Pay-As-You-Go resources).
  * @method string getActionType() Obtain Transaction type. Valid values: `prepay_purchase` (Purchase), `prepay_renew` (Renewal), `prepay_modify` (Upgrade/Downgrade), `prepay_return` ( Monthly subscription refund), `postpay_deduct` (Pay-as-you-go), `postpay_deduct_h` (Hourly settlement), `postpay_deduct_d` (Daily settlement), `postpay_deduct_m` (Monthly settlement), `offline_deduct` (Offline project deduction), `online_deduct` (Offline product deduction), `recon_deduct` (Adjustment - deduction), `recon_increase` (Adjustment - compensation), `ripay_purchase` (One-off RI Fee), `postpay_deduct_s` (Spot), `ri_hour_pay` (Hourly RI fee), `prePurchase` (New monthly subscription), `preRenew` (Monthly subscription renewal), `preUpgrade` (Upgrade/Downgrade), `preDowngrade` (Upgrade/Downgrade), `svp_hour_pay` (Hourly Savings Plan fee), `recon_guarantee` (Minimum spend deduction), `pre_purchase` (New monthly subscription), `pre_renew` (Monthly subscription renewal), `pre_upgrade` (Upgrade/Downgrade), `pre_downgrade` (Upgrade/Downgrade).
@@ -39,12 +39,12 @@ class DescribeBillDetailRequest extends AbstractModel
     public $Month;
 
     /**
-     * @var integer Page parameter: Indicates the number of entries per page. The maximum value is 200.
+     * @var integer Page parameter: Indicates the number of entries per page. Value range: [1, 200]
      */
     public $PageSize;
 
     /**
-     * @var integer A pagination parameter that specifies the current page number
+     * @var integer Page parameter: Indicates the current page number. The minimum value is 1.
      */
     public $Page;
 
@@ -60,8 +60,8 @@ class DescribeBillDetailRequest extends AbstractModel
 
     /**
      * @param string $Month The queried month in u200dthe format of “YYYY-MM”, such as 2023-01.
-     * @param integer $PageSize Page parameter: Indicates the number of entries per page. The maximum value is 200.
-     * @param integer $Page A pagination parameter that specifies the current page number
+     * @param integer $PageSize Page parameter: Indicates the number of entries per page. Value range: [1, 200]
+     * @param integer $Page Page parameter: Indicates the current page number. The minimum value is 1.
      * @param string $PayMode Billing mode. Valid values: `prePay` (Monthly subscription), postPay` (Pay-As-You-Go resources).
      * @param string $ActionType Transaction type. Valid values: `prepay_purchase` (Purchase), `prepay_renew` (Renewal), `prepay_modify` (Upgrade/Downgrade), `prepay_return` ( Monthly subscription refund), `postpay_deduct` (Pay-as-you-go), `postpay_deduct_h` (Hourly settlement), `postpay_deduct_d` (Daily settlement), `postpay_deduct_m` (Monthly settlement), `offline_deduct` (Offline project deduction), `online_deduct` (Offline product deduction), `recon_deduct` (Adjustment - deduction), `recon_increase` (Adjustment - compensation), `ripay_purchase` (One-off RI Fee), `postpay_deduct_s` (Spot), `ri_hour_pay` (Hourly RI fee), `prePurchase` (New monthly subscription), `preRenew` (Monthly subscription renewal), `preUpgrade` (Upgrade/Downgrade), `preDowngrade` (Upgrade/Downgrade), `svp_hour_pay` (Hourly Savings Plan fee), `recon_guarantee` (Minimum spend deduction), `pre_purchase` (New monthly subscription), `pre_renew` (Monthly subscription renewal), `pre_upgrade` (Upgrade/Downgrade), `pre_downgrade` (Upgrade/Downgrade).
      */

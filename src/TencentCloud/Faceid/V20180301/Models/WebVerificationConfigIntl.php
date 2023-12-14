@@ -20,18 +20,98 @@ use TencentCloud\Common\AbstractModel;
 /**
  * eKYC Web related configuration
  *
- * @method boolean getAutoSkip() Obtain Whether to automatically redirect to RedirectUrl after successful verification. Default value: false.
- * @method void setAutoSkip(boolean $AutoSkip) Set Whether to automatically redirect to RedirectUrl after successful verification. Default value: false.
+ * @method boolean getAutoSkip() Obtain When the verification passed, whether to skip the result page and automatically jump to RedirectURL. The default value is false.
+Example value: false
+ * @method void setAutoSkip(boolean $AutoSkip) Set When the verification passed, whether to skip the result page and automatically jump to RedirectURL. The default value is false.
+Example value: false
+ * @method integer getCheckMode() Obtain Detection mode, parameter values are as follows:
+1: OCR+living detection & face comparison;
+2: Living detection & face comparison;
+3: Living detection;
+The default value is 2.
+Example value: 3
+ * @method void setCheckMode(integer $CheckMode) Set Detection mode, parameter values are as follows:
+1: OCR+living detection & face comparison;
+2: Living detection & face comparison;
+3: Living detection;
+The default value is 2.
+Example value: 3
+ * @method string getIDCardType() Obtain The type of lisence used for verification. The following types are supported.
+1.HKIDCard: Hong Kong (China) ID card
+2.MLIDCard: Malaysia ID card
+3.IndonesiaIDCard: Indonesia ID card
+4.PhilippinesVoteID: Philippines VoteID card
+5.PhilippinesDrivingLicense: Philippines driving license
+6.PhilippinesTinID: Philippines TinID card
+7.PhilippinesSSSID: Philippines SSSID card
+8.PhilippinesUMID: Philippines UMID card
+9.InternationalIDPassport: ID cards of Hong Kong, Macao and Taiwan (China), and international passport.
+Example: HKIDCard
+ * @method void setIDCardType(string $IDCardType) Set The type of lisence used for verification. The following types are supported.
+1.HKIDCard: Hong Kong (China) ID card
+2.MLIDCard: Malaysia ID card
+3.IndonesiaIDCard: Indonesia ID card
+4.PhilippinesVoteID: Philippines VoteID card
+5.PhilippinesDrivingLicense: Philippines driving license
+6.PhilippinesTinID: Philippines TinID card
+7.PhilippinesSSSID: Philippines SSSID card
+8.PhilippinesUMID: Philippines UMID card
+9.InternationalIDPassport: ID cards of Hong Kong, Macao and Taiwan (China), and international passport.
+Example: HKIDCard
  */
 class WebVerificationConfigIntl extends AbstractModel
 {
     /**
-     * @var boolean Whether to automatically redirect to RedirectUrl after successful verification. Default value: false.
+     * @var boolean When the verification passed, whether to skip the result page and automatically jump to RedirectURL. The default value is false.
+Example value: false
      */
     public $AutoSkip;
 
     /**
-     * @param boolean $AutoSkip Whether to automatically redirect to RedirectUrl after successful verification. Default value: false.
+     * @var integer Detection mode, parameter values are as follows:
+1: OCR+living detection & face comparison;
+2: Living detection & face comparison;
+3: Living detection;
+The default value is 2.
+Example value: 3
+     */
+    public $CheckMode;
+
+    /**
+     * @var string The type of lisence used for verification. The following types are supported.
+1.HKIDCard: Hong Kong (China) ID card
+2.MLIDCard: Malaysia ID card
+3.IndonesiaIDCard: Indonesia ID card
+4.PhilippinesVoteID: Philippines VoteID card
+5.PhilippinesDrivingLicense: Philippines driving license
+6.PhilippinesTinID: Philippines TinID card
+7.PhilippinesSSSID: Philippines SSSID card
+8.PhilippinesUMID: Philippines UMID card
+9.InternationalIDPassport: ID cards of Hong Kong, Macao and Taiwan (China), and international passport.
+Example: HKIDCard
+     */
+    public $IDCardType;
+
+    /**
+     * @param boolean $AutoSkip When the verification passed, whether to skip the result page and automatically jump to RedirectURL. The default value is false.
+Example value: false
+     * @param integer $CheckMode Detection mode, parameter values are as follows:
+1: OCR+living detection & face comparison;
+2: Living detection & face comparison;
+3: Living detection;
+The default value is 2.
+Example value: 3
+     * @param string $IDCardType The type of lisence used for verification. The following types are supported.
+1.HKIDCard: Hong Kong (China) ID card
+2.MLIDCard: Malaysia ID card
+3.IndonesiaIDCard: Indonesia ID card
+4.PhilippinesVoteID: Philippines VoteID card
+5.PhilippinesDrivingLicense: Philippines driving license
+6.PhilippinesTinID: Philippines TinID card
+7.PhilippinesSSSID: Philippines SSSID card
+8.PhilippinesUMID: Philippines UMID card
+9.InternationalIDPassport: ID cards of Hong Kong, Macao and Taiwan (China), and international passport.
+Example: HKIDCard
      */
     function __construct()
     {
@@ -48,6 +128,14 @@ class WebVerificationConfigIntl extends AbstractModel
         }
         if (array_key_exists("AutoSkip",$param) and $param["AutoSkip"] !== null) {
             $this->AutoSkip = $param["AutoSkip"];
+        }
+
+        if (array_key_exists("CheckMode",$param) and $param["CheckMode"] !== null) {
+            $this->CheckMode = $param["CheckMode"];
+        }
+
+        if (array_key_exists("IDCardType",$param) and $param["IDCardType"] !== null) {
+            $this->IDCardType = $param["IDCardType"];
         }
     }
 }

@@ -42,6 +42,12 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
 Note: u200dThis field may return null, indicating that no valid values can be obtained.
  * @method void setBestFrameBase64(string $BestFrameBase64) Set The Base64-encoded string of the best face screenshot u200dcollected from the video stream. Retries are allowed, and this field returns only the data collected in the last verification. If no best face screenshot is collected, null is returned.
 Note: u200dThis field may return null, indicating that no valid values can be obtained.
+ * @method array getOCRResult() Obtain Card recognize result.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setOCRResult(array $OCRResult) Set Card recognize result.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getExtra() Obtain The passthrough parameter of the business, max 1,000 characters, which will be returned in GetWebVerificationResultIntl.
+ * @method void setExtra(string $Extra) Set The passthrough parameter of the business, max 1,000 characters, which will be returned in GetWebVerificationResultIntl.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -79,6 +85,17 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
     public $BestFrameBase64;
 
     /**
+     * @var array Card recognize result.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $OCRResult;
+
+    /**
+     * @var string The passthrough parameter of the business, max 1,000 characters, which will be returned in GetWebVerificationResultIntl.
+     */
+    public $Extra;
+
+    /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
@@ -95,6 +112,9 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
 Note: u200dThis field may return null, indicating that no valid values can be obtained.
      * @param string $BestFrameBase64 The Base64-encoded string of the best face screenshot u200dcollected from the video stream. Retries are allowed, and this field returns only the data collected in the last verification. If no best face screenshot is collected, null is returned.
 Note: u200dThis field may return null, indicating that no valid values can be obtained.
+     * @param array $OCRResult Card recognize result.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $Extra The passthrough parameter of the business, max 1,000 characters, which will be returned in GetWebVerificationResultIntl.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -133,6 +153,19 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
 
         if (array_key_exists("BestFrameBase64",$param) and $param["BestFrameBase64"] !== null) {
             $this->BestFrameBase64 = $param["BestFrameBase64"];
+        }
+
+        if (array_key_exists("OCRResult",$param) and $param["OCRResult"] !== null) {
+            $this->OCRResult = [];
+            foreach ($param["OCRResult"] as $key => $value){
+                $obj = new OCRResult();
+                $obj->deserialize($value);
+                array_push($this->OCRResult, $obj);
+            }
+        }
+
+        if (array_key_exists("Extra",$param) and $param["Extra"] !== null) {
+            $this->Extra = $param["Extra"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

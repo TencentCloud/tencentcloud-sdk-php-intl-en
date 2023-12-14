@@ -24,10 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCustomerUin(integer $CustomerUin) Set Customer UIN
  * @method string getMonth() Obtain The queried month in “YYYY-MM” format, such as 2023-01.
  * @method void setMonth(string $Month) Set The queried month in “YYYY-MM” format, such as 2023-01.
- * @method integer getPageSize() Obtain Page parameter: Indicates the number of entries per page. The maximum value is 200.
- * @method void setPageSize(integer $PageSize) Set Page parameter: Indicates the number of entries per page. The maximum value is 200.
- * @method integer getPage() Obtain A pagination parameter that specifies the current page number
- * @method void setPage(integer $Page) Set A pagination parameter that specifies the current page number
+ * @method integer getPageSize() Obtain Page parameter: Indicates the number of entries per page. Value range: [1, 200]
+ * @method void setPageSize(integer $PageSize) Set Page parameter: Indicates the number of entries per page. Value range: [1, 200]
+ * @method integer getPage() Obtain Page parameter: Indicates the current page number. The minimum value is 1.
+ * @method void setPage(integer $Page) Set Page parameter: Indicates the current page number. The minimum value is 1.
  * @method string getPayMode() Obtain Billing mode. Valid values:
 `prePay` (Monthly subscription)
 `postPay` (Pay-as-you-go)
@@ -108,12 +108,12 @@ class DescribeCustomerBillDetailRequest extends AbstractModel
     public $Month;
 
     /**
-     * @var integer Page parameter: Indicates the number of entries per page. The maximum value is 200.
+     * @var integer Page parameter: Indicates the number of entries per page. Value range: [1, 200]
      */
     public $PageSize;
 
     /**
-     * @var integer A pagination parameter that specifies the current page number
+     * @var integer Page parameter: Indicates the current page number. The minimum value is 1.
      */
     public $Page;
 
@@ -165,8 +165,8 @@ class DescribeCustomerBillDetailRequest extends AbstractModel
     /**
      * @param integer $CustomerUin Customer UIN
      * @param string $Month The queried month in “YYYY-MM” format, such as 2023-01.
-     * @param integer $PageSize Page parameter: Indicates the number of entries per page. The maximum value is 200.
-     * @param integer $Page A pagination parameter that specifies the current page number
+     * @param integer $PageSize Page parameter: Indicates the number of entries per page. Value range: [1, 200]
+     * @param integer $Page Page parameter: Indicates the current page number. The minimum value is 1.
      * @param string $PayMode Billing mode. Valid values:
 `prePay` (Monthly subscription)
 `postPay` (Pay-as-you-go)
