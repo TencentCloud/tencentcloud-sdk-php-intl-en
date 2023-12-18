@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTagKey(string $TagKey) Set Tag key.
  * @method string getTagValue() Obtain Tag value.
  * @method void setTagValue(string $TagValue) Set Tag value.
+ * @method string getCategory() Obtain Tag type. Valid values: Custom: custom tag; System: system tag; All: all tags. Default value: All.Note: This field may return null, indicating that no value is obtained.
+ * @method void setCategory(string $Category) Set Tag type. Valid values: Custom: custom tag; System: system tag; All: all tags. Default value: All.Note: This field may return null, indicating that no value is obtained.
  */
 class Tag extends AbstractModel
 {
@@ -38,8 +40,14 @@ class Tag extends AbstractModel
     public $TagValue;
 
     /**
+     * @var string Tag type. Valid values: Custom: custom tag; System: system tag; All: all tags. Default value: All.Note: This field may return null, indicating that no value is obtained.
+     */
+    public $Category;
+
+    /**
      * @param string $TagKey Tag key.
      * @param string $TagValue Tag value.
+     * @param string $Category Tag type. Valid values: Custom: custom tag; System: system tag; All: all tags. Default value: All.Note: This field may return null, indicating that no value is obtained.
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class Tag extends AbstractModel
 
         if (array_key_exists("TagValue",$param) and $param["TagValue"] !== null) {
             $this->TagValue = $param["TagValue"];
+        }
+
+        if (array_key_exists("Category",$param) and $param["Category"] !== null) {
+            $this->Category = $param["Category"];
         }
     }
 }

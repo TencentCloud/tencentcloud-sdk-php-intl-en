@@ -34,6 +34,8 @@ Maximum length: 20
  * @method void setTagKeys(array $TagKeys) Set Tag key.
 All tags corresponding to the list of tag keys.
 Maximum length: 20
+ * @method string getCategory() Obtain Tag type. Valid values: Custom: custom tag; System: system tag; All: all tags. Default value: All.
+ * @method void setCategory(string $Category) Set Tag type. Valid values: Custom: custom tag; System: system tag; All: all tags. Default value: All.
  */
 class GetTagsRequest extends AbstractModel
 {
@@ -57,6 +59,11 @@ Maximum length: 20
     public $TagKeys;
 
     /**
+     * @var string Tag type. Valid values: Custom: custom tag; System: system tag; All: all tags. Default value: All.
+     */
+    public $Category;
+
+    /**
      * @param string $PaginationToken The token value of the next page obtained from the response of the previous page.
 Leave it empty for the first request.
      * @param integer $MaxResults Number of data entries to return per page (up to 1,000).
@@ -64,6 +71,7 @@ Default value: 50.
      * @param array $TagKeys Tag key.
 All tags corresponding to the list of tag keys.
 Maximum length: 20
+     * @param string $Category Tag type. Valid values: Custom: custom tag; System: system tag; All: all tags. Default value: All.
      */
     function __construct()
     {
@@ -88,6 +96,10 @@ Maximum length: 20
 
         if (array_key_exists("TagKeys",$param) and $param["TagKeys"] !== null) {
             $this->TagKeys = $param["TagKeys"];
+        }
+
+        if (array_key_exists("Category",$param) and $param["Category"] !== null) {
+            $this->Category = $param["Category"];
         }
     }
 }

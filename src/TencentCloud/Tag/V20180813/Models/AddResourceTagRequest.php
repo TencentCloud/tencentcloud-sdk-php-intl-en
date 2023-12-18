@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * AddResourceTag request structure.
  *
- * @method string getTagKey() Obtain Tag key.
- * @method void setTagKey(string $TagKey) Set Tag key.
- * @method string getTagValue() Obtain Tag value.
- * @method void setTagValue(string $TagValue) Set Tag value.
- * @method string getResource() Obtain [Six-segment resource description](https://intl.cloud.tencent.com/document/product/598/10606?from_cn_redirect=1)
- * @method void setResource(string $Resource) Set [Six-segment resource description](https://intl.cloud.tencent.com/document/product/598/10606?from_cn_redirect=1)
+ * @method string getTagKey() Obtain The tag key that needs to be bound. For the requirements, refer to: https://intl.cloud.tencent.com/document/product/651/13354?from_cn_redirect=1
+ * @method void setTagKey(string $TagKey) Set The tag key that needs to be bound. For the requirements, refer to: https://intl.cloud.tencent.com/document/product/651/13354?from_cn_redirect=1
+ * @method string getTagValue() Obtain The tag value that needs to be bound. For the requirements, refer to: https://intl.cloud.tencent.com/document/product/651/13354?from_cn_redirect=1
+ * @method void setTagValue(string $TagValue) Set The tag value that needs to be bound. For the requirements, refer to: https://intl.cloud.tencent.com/document/product/651/13354?from_cn_redirect=1
+ * @method string getResource() Obtain Resource to be associated, represented in the standard six-segment resource format. For the correct format, see https://intl.cloud.tencent.com/document/product/651/89122?from_cn_redirect=1
+ * @method void setResource(string $Resource) Set Resource to be associated, represented in the standard six-segment resource format. For the correct format, see https://intl.cloud.tencent.com/document/product/651/89122?from_cn_redirect=1
  */
 class AddResourceTagRequest extends AbstractModel
 {
     /**
-     * @var string Tag key.
+     * @var string The tag key that needs to be bound. For the requirements, refer to: https://intl.cloud.tencent.com/document/product/651/13354?from_cn_redirect=1
      */
     public $TagKey;
 
     /**
-     * @var string Tag value.
+     * @var string The tag value that needs to be bound. For the requirements, refer to: https://intl.cloud.tencent.com/document/product/651/13354?from_cn_redirect=1
      */
     public $TagValue;
 
     /**
-     * @var string [Six-segment resource description](https://intl.cloud.tencent.com/document/product/598/10606?from_cn_redirect=1)
+     * @var string Resource to be associated, represented in the standard six-segment resource format. For the correct format, see https://intl.cloud.tencent.com/document/product/651/89122?from_cn_redirect=1
      */
     public $Resource;
 
     /**
-     * @param string $TagKey Tag key.
-     * @param string $TagValue Tag value.
-     * @param string $Resource [Six-segment resource description](https://intl.cloud.tencent.com/document/product/598/10606?from_cn_redirect=1)
+     * @param string $TagKey The tag key that needs to be bound. For the requirements, refer to: https://intl.cloud.tencent.com/document/product/651/13354?from_cn_redirect=1
+     * @param string $TagValue The tag value that needs to be bound. For the requirements, refer to: https://intl.cloud.tencent.com/document/product/651/13354?from_cn_redirect=1
+     * @param string $Resource Resource to be associated, represented in the standard six-segment resource format. For the correct format, see https://intl.cloud.tencent.com/document/product/651/89122?from_cn_redirect=1
      */
     function __construct()
     {

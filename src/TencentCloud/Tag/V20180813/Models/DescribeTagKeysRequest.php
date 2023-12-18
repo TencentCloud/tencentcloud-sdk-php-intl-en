@@ -24,10 +24,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCreateUin(integer $CreateUin) Set Creator `Uin`. If not specified, `Uin` is only used as the query condition.
  * @method integer getOffset() Obtain Data offset. The default value is 0. Must be an integral multiple of the `Limit` parameter.
  * @method void setOffset(integer $Offset) Set Data offset. The default value is 0. Must be an integral multiple of the `Limit` parameter.
- * @method integer getLimit() Obtain Page size. The default value is 0.
- * @method void setLimit(integer $Limit) Set Page size. The default value is 0.
+ * @method integer getLimit() Obtain Number of entries per page. Default: 15; maximum: 1,000.
+ * @method void setLimit(integer $Limit) Set Number of entries per page. Default: 15; maximum: 1,000.
  * @method integer getShowProject() Obtain Whether to show project
  * @method void setShowProject(integer $ShowProject) Set Whether to show project
+ * @method string getCategory() Obtain Tag type. Valid values: Custom: custom tag; System: system tag; All: all tags. Default value: All.
+ * @method void setCategory(string $Category) Set Tag type. Valid values: Custom: custom tag; System: system tag; All: all tags. Default value: All.
  */
 class DescribeTagKeysRequest extends AbstractModel
 {
@@ -42,7 +44,7 @@ class DescribeTagKeysRequest extends AbstractModel
     public $Offset;
 
     /**
-     * @var integer Page size. The default value is 0.
+     * @var integer Number of entries per page. Default: 15; maximum: 1,000.
      */
     public $Limit;
 
@@ -52,10 +54,16 @@ class DescribeTagKeysRequest extends AbstractModel
     public $ShowProject;
 
     /**
+     * @var string Tag type. Valid values: Custom: custom tag; System: system tag; All: all tags. Default value: All.
+     */
+    public $Category;
+
+    /**
      * @param integer $CreateUin Creator `Uin`. If not specified, `Uin` is only used as the query condition.
      * @param integer $Offset Data offset. The default value is 0. Must be an integral multiple of the `Limit` parameter.
-     * @param integer $Limit Page size. The default value is 0.
+     * @param integer $Limit Number of entries per page. Default: 15; maximum: 1,000.
      * @param integer $ShowProject Whether to show project
+     * @param string $Category Tag type. Valid values: Custom: custom tag; System: system tag; All: all tags. Default value: All.
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class DescribeTagKeysRequest extends AbstractModel
 
         if (array_key_exists("ShowProject",$param) and $param["ShowProject"] !== null) {
             $this->ShowProject = $param["ShowProject"];
+        }
+
+        if (array_key_exists("Category",$param) and $param["Category"] !== null) {
+            $this->Category = $param["Category"];
         }
     }
 }

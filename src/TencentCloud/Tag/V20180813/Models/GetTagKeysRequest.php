@@ -28,6 +28,8 @@ Leave it empty for the first request.
 Default value: 50.
  * @method void setMaxResults(integer $MaxResults) Set Number of data entries to return per page (up to 1,000).
 Default value: 50.
+ * @method string getCategory() Obtain Tag type. Valid values: Custom: custom tag; System: system tag; All: all tags. Default value: All.
+ * @method void setCategory(string $Category) Set Tag type. Valid values: Custom: custom tag; System: system tag; All: all tags. Default value: All.
  */
 class GetTagKeysRequest extends AbstractModel
 {
@@ -44,10 +46,16 @@ Default value: 50.
     public $MaxResults;
 
     /**
+     * @var string Tag type. Valid values: Custom: custom tag; System: system tag; All: all tags. Default value: All.
+     */
+    public $Category;
+
+    /**
      * @param string $PaginationToken The token value of the next page obtained from the response of the previous page.
 Leave it empty for the first request.
      * @param integer $MaxResults Number of data entries to return per page (up to 1,000).
 Default value: 50.
+     * @param string $Category Tag type. Valid values: Custom: custom tag; System: system tag; All: all tags. Default value: All.
      */
     function __construct()
     {
@@ -68,6 +76,10 @@ Default value: 50.
 
         if (array_key_exists("MaxResults",$param) and $param["MaxResults"] !== null) {
             $this->MaxResults = $param["MaxResults"];
+        }
+
+        if (array_key_exists("Category",$param) and $param["Category"] !== null) {
+            $this->Category = $param["Category"];
         }
     }
 }

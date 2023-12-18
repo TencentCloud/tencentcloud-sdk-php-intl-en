@@ -20,23 +20,23 @@ use TencentCloud\Common\AbstractModel;
 /**
  * AttachResourcesTag request structure.
  *
- * @method string getServiceType() Obtain Resource service name (the third segment in the six-segment resource description)
- * @method void setServiceType(string $ServiceType) Set Resource service name (the third segment in the six-segment resource description)
+ * @method string getServiceType() Obtain Service short name, which is the third segment of the six-segment resource format. For more information on the format, see https://intl.cloud.tencent.com/document/product/651/89122?from_cn_redirect=1
+ * @method void setServiceType(string $ServiceType) Set Service short name, which is the third segment of the six-segment resource format. For more information on the format, see https://intl.cloud.tencent.com/document/product/651/89122?from_cn_redirect=1
  * @method array getResourceIds() Obtain Resource ID array, which can contain up to 50 resources
  * @method void setResourceIds(array $ResourceIds) Set Resource ID array, which can contain up to 50 resources
- * @method string getTagKey() Obtain Tag key
- * @method void setTagKey(string $TagKey) Set Tag key
- * @method string getTagValue() Obtain Tag value
- * @method void setTagValue(string $TagValue) Set Tag value
- * @method string getResourceRegion() Obtain Resource region. If resources have the region attribute, this field is required; otherwise, it is optional.
- * @method void setResourceRegion(string $ResourceRegion) Set Resource region. If resources have the region attribute, this field is required; otherwise, it is optional.
+ * @method string getTagKey() Obtain The tag key that needs to be bound. For the requirements, refer to: https://intl.cloud.tencent.com/document/product/651/13354?from_cn_redirect=1
+ * @method void setTagKey(string $TagKey) Set The tag key that needs to be bound. For the requirements, refer to: https://intl.cloud.tencent.com/document/product/651/13354?from_cn_redirect=1
+ * @method string getTagValue() Obtain The tag value that needs to be bound. For the requirements, refer to: https://intl.cloud.tencent.com/document/product/651/13354?from_cn_redirect=1
+ * @method void setTagValue(string $TagValue) Set The tag value that needs to be bound. For the requirements, refer to: https://intl.cloud.tencent.com/document/product/651/13354?from_cn_redirect=1
+ * @method string getResourceRegion() Obtain Region of the resource. This parameter can be left blank if region is not involved. The region must correspond to resources specified by ResourceIds.N. Once the region is specified, all resources specified by ResourceIds.N must locate in this region. Example: ap-beijing.
+ * @method void setResourceRegion(string $ResourceRegion) Set Region of the resource. This parameter can be left blank if region is not involved. The region must correspond to resources specified by ResourceIds.N. Once the region is specified, all resources specified by ResourceIds.N must locate in this region. Example: ap-beijing.
  * @method string getResourcePrefix() Obtain Resource prefix (the part before "/" in the last segment in the six-segment resource description), which is optional for COS buckets but required for other Tencent Cloud resources.
  * @method void setResourcePrefix(string $ResourcePrefix) Set Resource prefix (the part before "/" in the last segment in the six-segment resource description), which is optional for COS buckets but required for other Tencent Cloud resources.
  */
 class AttachResourcesTagRequest extends AbstractModel
 {
     /**
-     * @var string Resource service name (the third segment in the six-segment resource description)
+     * @var string Service short name, which is the third segment of the six-segment resource format. For more information on the format, see https://intl.cloud.tencent.com/document/product/651/89122?from_cn_redirect=1
      */
     public $ServiceType;
 
@@ -46,17 +46,17 @@ class AttachResourcesTagRequest extends AbstractModel
     public $ResourceIds;
 
     /**
-     * @var string Tag key
+     * @var string The tag key that needs to be bound. For the requirements, refer to: https://intl.cloud.tencent.com/document/product/651/13354?from_cn_redirect=1
      */
     public $TagKey;
 
     /**
-     * @var string Tag value
+     * @var string The tag value that needs to be bound. For the requirements, refer to: https://intl.cloud.tencent.com/document/product/651/13354?from_cn_redirect=1
      */
     public $TagValue;
 
     /**
-     * @var string Resource region. If resources have the region attribute, this field is required; otherwise, it is optional.
+     * @var string Region of the resource. This parameter can be left blank if region is not involved. The region must correspond to resources specified by ResourceIds.N. Once the region is specified, all resources specified by ResourceIds.N must locate in this region. Example: ap-beijing.
      */
     public $ResourceRegion;
 
@@ -66,11 +66,11 @@ class AttachResourcesTagRequest extends AbstractModel
     public $ResourcePrefix;
 
     /**
-     * @param string $ServiceType Resource service name (the third segment in the six-segment resource description)
+     * @param string $ServiceType Service short name, which is the third segment of the six-segment resource format. For more information on the format, see https://intl.cloud.tencent.com/document/product/651/89122?from_cn_redirect=1
      * @param array $ResourceIds Resource ID array, which can contain up to 50 resources
-     * @param string $TagKey Tag key
-     * @param string $TagValue Tag value
-     * @param string $ResourceRegion Resource region. If resources have the region attribute, this field is required; otherwise, it is optional.
+     * @param string $TagKey The tag key that needs to be bound. For the requirements, refer to: https://intl.cloud.tencent.com/document/product/651/13354?from_cn_redirect=1
+     * @param string $TagValue The tag value that needs to be bound. For the requirements, refer to: https://intl.cloud.tencent.com/document/product/651/13354?from_cn_redirect=1
+     * @param string $ResourceRegion Region of the resource. This parameter can be left blank if region is not involved. The region must correspond to resources specified by ResourceIds.N. Once the region is specified, all resources specified by ResourceIds.N must locate in this region. Example: ap-beijing.
      * @param string $ResourcePrefix Resource prefix (the part before "/" in the last segment in the six-segment resource description), which is optional for COS buckets but required for other Tencent Cloud resources.
      */
     function __construct()

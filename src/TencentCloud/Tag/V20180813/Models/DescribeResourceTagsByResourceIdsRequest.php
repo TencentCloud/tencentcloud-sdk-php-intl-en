@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) Set Data offset. The default value is 0. Must be an integral multiple of the `Limit` parameter.
  * @method integer getLimit() Obtain Page size. The default value is 0.
  * @method void setLimit(integer $Limit) Set Page size. The default value is 0.
+ * @method string getCategory() Obtain Tag type. Valid values: Custom: custom tag; System: system tag; All: all tags. Default value: All.
+ * @method void setCategory(string $Category) Set Tag type. Valid values: Custom: custom tag; System: system tag; All: all tags. Default value: All.
  */
 class DescribeResourceTagsByResourceIdsRequest extends AbstractModel
 {
@@ -66,12 +68,18 @@ class DescribeResourceTagsByResourceIdsRequest extends AbstractModel
     public $Limit;
 
     /**
+     * @var string Tag type. Valid values: Custom: custom tag; System: system tag; All: all tags. Default value: All.
+     */
+    public $Category;
+
+    /**
      * @param string $ServiceType Service type.
      * @param string $ResourcePrefix Resource prefix.
      * @param array $ResourceIds Array of resource IDs (up to 50)
      * @param string $ResourceRegion The resource's region.
      * @param integer $Offset Data offset. The default value is 0. Must be an integral multiple of the `Limit` parameter.
      * @param integer $Limit Page size. The default value is 0.
+     * @param string $Category Tag type. Valid values: Custom: custom tag; System: system tag; All: all tags. Default value: All.
      */
     function __construct()
     {
@@ -108,6 +116,10 @@ class DescribeResourceTagsByResourceIdsRequest extends AbstractModel
 
         if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
             $this->Limit = $param["Limit"];
+        }
+
+        if (array_key_exists("Category",$param) and $param["Category"] !== null) {
+            $this->Category = $param["Category"];
         }
     }
 }

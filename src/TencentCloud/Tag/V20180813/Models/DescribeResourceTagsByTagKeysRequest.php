@@ -26,10 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setResourcePrefix(string $ResourcePrefix) Set Resource prefix
  * @method string getResourceRegion() Obtain Resource region
  * @method void setResourceRegion(string $ResourceRegion) Set Resource region
- * @method array getResourceIds() Obtain Unique resource ID
- * @method void setResourceIds(array $ResourceIds) Set Unique resource ID
- * @method array getTagKeys() Obtain Resource tag key
- * @method void setTagKeys(array $TagKeys) Set Resource tag key
+ * @method array getResourceIds() Obtain List of unique resource IDs, which can contain no more than 20 IDs.
+ * @method void setResourceIds(array $ResourceIds) Set List of unique resource IDs, which can contain no more than 20 IDs.
+ * @method array getTagKeys() Obtain List of resource tag keys, which can contain no more than 20 keys.
+ * @method void setTagKeys(array $TagKeys) Set List of resource tag keys, which can contain no more than 20 keys.
  * @method integer getLimit() Obtain Number of entries per page. Default value: 400
  * @method void setLimit(integer $Limit) Set Number of entries per page. Default value: 400
  * @method integer getOffset() Obtain Data offset. Default value: 0. It must be an integer multiple of the `Limit` parameter
@@ -53,12 +53,12 @@ class DescribeResourceTagsByTagKeysRequest extends AbstractModel
     public $ResourceRegion;
 
     /**
-     * @var array Unique resource ID
+     * @var array List of unique resource IDs, which can contain no more than 20 IDs.
      */
     public $ResourceIds;
 
     /**
-     * @var array Resource tag key
+     * @var array List of resource tag keys, which can contain no more than 20 keys.
      */
     public $TagKeys;
 
@@ -76,8 +76,8 @@ class DescribeResourceTagsByTagKeysRequest extends AbstractModel
      * @param string $ServiceType Service type
      * @param string $ResourcePrefix Resource prefix
      * @param string $ResourceRegion Resource region
-     * @param array $ResourceIds Unique resource ID
-     * @param array $TagKeys Resource tag key
+     * @param array $ResourceIds List of unique resource IDs, which can contain no more than 20 IDs.
+     * @param array $TagKeys List of resource tag keys, which can contain no more than 20 keys.
      * @param integer $Limit Number of entries per page. Default value: 400
      * @param integer $Offset Data offset. Default value: 0. It must be an integer multiple of the `Limit` parameter
      */

@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
 Note: this field may return null, indicating that no valid values found.
  * @method void setServiceType(string $ServiceType) Set Resource type
 Note: this field may return null, indicating that no valid values found.
+ * @method string getCategory() Obtain Tag type. Valid values: Custom: custom tag; System: system tag.Note: This field may return null, indicating that no value is obtained.
+ * @method void setCategory(string $Category) Set Tag type. Valid values: Custom: custom tag; System: system tag.Note: This field may return null, indicating that no value is obtained.
  */
 class TagResource extends AbstractModel
 {
@@ -69,6 +71,11 @@ Note: this field may return null, indicating that no valid values found.
     public $ServiceType;
 
     /**
+     * @var string Tag type. Valid values: Custom: custom tag; System: system tag.Note: This field may return null, indicating that no value is obtained.
+     */
+    public $Category;
+
+    /**
      * @param string $TagKey Tag key.
      * @param string $TagValue Tag value.
      * @param string $ResourceId Resource ID.
@@ -76,6 +83,7 @@ Note: this field may return null, indicating that no valid values found.
      * @param string $TagValueMd5 Tag value MD5 value.
      * @param string $ServiceType Resource type
 Note: this field may return null, indicating that no valid values found.
+     * @param string $Category Tag type. Valid values: Custom: custom tag; System: system tag.Note: This field may return null, indicating that no value is obtained.
      */
     function __construct()
     {
@@ -112,6 +120,10 @@ Note: this field may return null, indicating that no valid values found.
 
         if (array_key_exists("ServiceType",$param) and $param["ServiceType"] !== null) {
             $this->ServiceType = $param["ServiceType"];
+        }
+
+        if (array_key_exists("Category",$param) and $param["Category"] !== null) {
+            $this->Category = $param["Category"];
         }
     }
 }
