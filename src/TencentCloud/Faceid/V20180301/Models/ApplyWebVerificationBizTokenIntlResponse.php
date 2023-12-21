@@ -21,11 +21,17 @@ use TencentCloud\Common\AbstractModel;
  * ApplyWebVerificationBizTokenIntl response structure.
  *
  * @method string getVerificationUrl() Obtain The token identifying this web-based verification process, valid for 7,200s after issuance. It is required for getting the result after the verification process is completed.
+Example: https://intl.faceid.qq.com/reflect/?token=81EEF678-28EE-4759-A82E-6CBBBE6BC442
  * @method void setVerificationUrl(string $VerificationUrl) Set The token identifying this web-based verification process, valid for 7,200s after issuance. It is required for getting the result after the verification process is completed.
+Example: https://intl.faceid.qq.com/reflect/?token=81EEF678-28EE-4759-A82E-6CBBBE6BC442
  * @method string getBizToken() Obtain The token for the web-based verification, which is generated using the ApplyWebVerificationBizTokenIntl API.
+Example: 81EEF678-28EE-4759-A82E-6CBBBE6BC442
  * @method void setBizToken(string $BizToken) Set The token for the web-based verification, which is generated using the ApplyWebVerificationBizTokenIntl API.
+Example: 81EEF678-28EE-4759-A82E-6CBBBE6BC442
  * @method string getVerificationURL() Obtain The verification URL to be opened with a browser to start the verification process.
+Example: https://intl.faceid.qq.com/reflect/?token=81EEF678-28EE-4759-A82E-6CBBBE6BC442
  * @method void setVerificationURL(string $VerificationURL) Set The verification URL to be opened with a browser to start the verification process.
+Example: https://intl.faceid.qq.com/reflect/?token=81EEF678-28EE-4759-A82E-6CBBBE6BC442
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -33,17 +39,20 @@ class ApplyWebVerificationBizTokenIntlResponse extends AbstractModel
 {
     /**
      * @var string The token identifying this web-based verification process, valid for 7,200s after issuance. It is required for getting the result after the verification process is completed.
+Example: https://intl.faceid.qq.com/reflect/?token=81EEF678-28EE-4759-A82E-6CBBBE6BC442
      * @deprecated
      */
     public $VerificationUrl;
 
     /**
      * @var string The token for the web-based verification, which is generated using the ApplyWebVerificationBizTokenIntl API.
+Example: 81EEF678-28EE-4759-A82E-6CBBBE6BC442
      */
     public $BizToken;
 
     /**
      * @var string The verification URL to be opened with a browser to start the verification process.
+Example: https://intl.faceid.qq.com/reflect/?token=81EEF678-28EE-4759-A82E-6CBBBE6BC442
      */
     public $VerificationURL;
 
@@ -54,8 +63,11 @@ class ApplyWebVerificationBizTokenIntlResponse extends AbstractModel
 
     /**
      * @param string $VerificationUrl The token identifying this web-based verification process, valid for 7,200s after issuance. It is required for getting the result after the verification process is completed.
+Example: https://intl.faceid.qq.com/reflect/?token=81EEF678-28EE-4759-A82E-6CBBBE6BC442
      * @param string $BizToken The token for the web-based verification, which is generated using the ApplyWebVerificationBizTokenIntl API.
+Example: 81EEF678-28EE-4759-A82E-6CBBBE6BC442
      * @param string $VerificationURL The verification URL to be opened with a browser to start the verification process.
+Example: https://intl.faceid.qq.com/reflect/?token=81EEF678-28EE-4759-A82E-6CBBBE6BC442
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
