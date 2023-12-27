@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeCustomerInfo request structure.
  *
- * @method array getCustomerUin() Obtain List of customer UINs
- * @method void setCustomerUin(array $CustomerUin) Set List of customer UINs
+ * @method array getCustomerUin() Obtain List of customer UIN. Array length value: 1-20.
+ * @method void setCustomerUin(array $CustomerUin) Set List of customer UIN. Array length value: 1-20.
  */
 class DescribeCustomerInfoRequest extends AbstractModel
 {
     /**
-     * @var array List of customer UINs
+     * @var array List of customer UIN. Array length value: 1-20.
      */
     public $CustomerUin;
 
     /**
-     * @param array $CustomerUin List of customer UINs
+     * @param array $CustomerUin List of customer UIN. Array length value: 1-20.
      */
     function __construct()
     {

@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * QueryVoucherAmountByUin request structure.
  *
- * @method array getClientUins() Obtain Customer UIN list
- * @method void setClientUins(array $ClientUins) Set Customer UIN list
+ * @method array getClientUins() Obtain List of customer UIN. Array length value: 1-20.
+ * @method void setClientUins(array $ClientUins) Set List of customer UIN. Array length value: 1-20.
  */
 class QueryVoucherAmountByUinRequest extends AbstractModel
 {
     /**
-     * @var array Customer UIN list
+     * @var array List of customer UIN. Array length value: 1-20.
      */
     public $ClientUins;
 
     /**
-     * @param array $ClientUins Customer UIN list
+     * @param array $ClientUins List of customer UIN. Array length value: 1-20.
      */
     function __construct()
     {

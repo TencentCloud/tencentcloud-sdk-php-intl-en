@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * QueryCreditByUinList request structure.
  *
- * @method array getUinList() Obtain User list
- * @method void setUinList(array $UinList) Set User list
+ * @method array getUinList() Obtain List of user. Array length value: 1-50.
+ * @method void setUinList(array $UinList) Set List of user. Array length value: 1-50.
  */
 class QueryCreditByUinListRequest extends AbstractModel
 {
     /**
-     * @var array User list
+     * @var array List of user. Array length value: 1-50.
      */
     public $UinList;
 
     /**
-     * @param array $UinList User list
+     * @param array $UinList List of user. Array length value: 1-50.
      */
     function __construct()
     {
