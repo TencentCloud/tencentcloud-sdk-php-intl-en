@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDomain(string $Domain) Set Domain.
  * @method CDNDomainConfigForUpdate getConfig() Obtain Domain Config.
  * @method void setConfig(CDNDomainConfigForUpdate $Config) Set Domain Config.
- * @method integer getSubAppId() Obtain VOD Application ID. If you want to access resources in a sub-app, fill in this field with the sub-app ID; otherwise, don't fill in this field.
- * @method void setSubAppId(integer $SubAppId) Set VOD Application ID. If you want to access resources in a sub-app, fill in this field with the sub-app ID; otherwise, don't fill in this field.
+ * @method integer getSubAppId() Obtain <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+ * @method void setSubAppId(integer $SubAppId) Set <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
  */
 class ModifyCDNDomainConfigRequest extends AbstractModel
 {
@@ -40,14 +40,14 @@ class ModifyCDNDomainConfigRequest extends AbstractModel
     public $Config;
 
     /**
-     * @var integer VOD Application ID. If you want to access resources in a sub-app, fill in this field with the sub-app ID; otherwise, don't fill in this field.
+     * @var integer <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
      */
     public $SubAppId;
 
     /**
      * @param string $Domain Domain.
      * @param CDNDomainConfigForUpdate $Config Domain Config.
-     * @param integer $SubAppId VOD Application ID. If you want to access resources in a sub-app, fill in this field with the sub-app ID; otherwise, don't fill in this field.
+     * @param integer $SubAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
      */
     function __construct()
     {

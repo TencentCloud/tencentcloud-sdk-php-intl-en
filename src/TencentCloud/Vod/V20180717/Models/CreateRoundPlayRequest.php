@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
 <li>Array length limit: 100.</li>
  * @method void setRoundPlaylist(array $RoundPlaylist) Set The files on the list.
 <li>Array length limit: 100.</li>
- * @method integer getSubAppId() Obtain <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
- * @method void setSubAppId(integer $SubAppId) Set <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
+ * @method integer getSubAppId() Obtain <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+ * @method void setSubAppId(integer $SubAppId) Set <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
  * @method string getName() Obtain The playlist name (not longer than 64 characters).
  * @method void setName(string $Name) Set The playlist name (not longer than 64 characters).
  * @method string getDesc() Obtain The playlist description (not longer than 256 characters).
@@ -35,11 +35,11 @@ use TencentCloud\Common\AbstractModel;
  * @method string getPlayBackMode() Obtain Play mode, optional values:
 <li>Loop: Play the playlist in a loop;</li>
 <li>Linear: Play once, stop playing after the playlist is played. </li>
-Default value：Loop。
+Default value: Loop.
  * @method void setPlayBackMode(string $PlayBackMode) Set Play mode, optional values:
 <li>Loop: Play the playlist in a loop;</li>
 <li>Linear: Play once, stop playing after the playlist is played. </li>
-Default value：Loop。
+Default value: Loop.
  */
 class CreateRoundPlayRequest extends AbstractModel
 {
@@ -55,7 +55,7 @@ class CreateRoundPlayRequest extends AbstractModel
     public $RoundPlaylist;
 
     /**
-     * @var integer <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
+     * @var integer <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
      */
     public $SubAppId;
 
@@ -73,7 +73,7 @@ class CreateRoundPlayRequest extends AbstractModel
      * @var string Play mode, optional values:
 <li>Loop: Play the playlist in a loop;</li>
 <li>Linear: Play once, stop playing after the playlist is played. </li>
-Default value：Loop。
+Default value: Loop.
      */
     public $PlayBackMode;
 
@@ -81,13 +81,13 @@ Default value：Loop。
      * @param string $StartTime The playback start time, in [ISO 8601 date format](https://intl.cloud.tencent.com/document/product/266/11732?lang=en&pg=).
      * @param array $RoundPlaylist The files on the list.
 <li>Array length limit: 100.</li>
-     * @param integer $SubAppId <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
+     * @param integer $SubAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
      * @param string $Name The playlist name (not longer than 64 characters).
      * @param string $Desc The playlist description (not longer than 256 characters).
      * @param string $PlayBackMode Play mode, optional values:
 <li>Loop: Play the playlist in a loop;</li>
 <li>Linear: Play once, stop playing after the playlist is played. </li>
-Default value：Loop。
+Default value: Loop.
      */
     function __construct()
     {

@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getContainer() Obtain Output file encapsulation format, optional values: mp4, flv, hls.
  * @method void setContainer(string $Container) Set Output file encapsulation format, optional values: mp4, flv, hls.
- * @method integer getSubAppId() Obtain VOD Application ID. If you want to access resources in a sub-app, fill in this field with the sub-app ID; otherwise, don't fill in this field.
- * @method void setSubAppId(integer $SubAppId) Set VOD Application ID. If you want to access resources in a sub-app, fill in this field with the sub-app ID; otherwise, don't fill in this field.
+ * @method integer getSubAppId() Obtain <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+ * @method void setSubAppId(integer $SubAppId) Set <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
  * @method string getName() Obtain Audio and video quality rebirth template name, length limit: 64 characters.
  * @method void setName(string $Name) Set Audio and video quality rebirth template name, length limit: 64 characters.
  * @method string getComment() Obtain Template description information, length limit: 256 characters.
@@ -61,7 +61,7 @@ class CreateEnhanceMediaTemplateRequest extends AbstractModel
     public $Container;
 
     /**
-     * @var integer VOD Application ID. If you want to access resources in a sub-app, fill in this field with the sub-app ID; otherwise, don't fill in this field.
+     * @var integer <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
      */
     public $SubAppId;
 
@@ -113,7 +113,7 @@ Default value 0.
 
     /**
      * @param string $Container Output file encapsulation format, optional values: mp4, flv, hls.
-     * @param integer $SubAppId VOD Application ID. If you want to access resources in a sub-app, fill in this field with the sub-app ID; otherwise, don't fill in this field.
+     * @param integer $SubAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
      * @param string $Name Audio and video quality rebirth template name, length limit: 64 characters.
      * @param string $Comment Template description information, length limit: 256 characters.
      * @param RebuildVideoInfo $RebuildVideoInfo Audio and picture quality regeneration video control control information.

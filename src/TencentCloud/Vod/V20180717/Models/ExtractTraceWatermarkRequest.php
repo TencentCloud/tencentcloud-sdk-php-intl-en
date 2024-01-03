@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
 <li><font color=red>Note</font>: This parameter is required.</li>
  * @method void setFileId(string $FileId) Set The ID of the file specified by `Url`.
 <li><font color=red>Note</font>: This parameter is required.</li>
- * @method integer getSubAppId() Obtain <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
- * @method void setSubAppId(integer $SubAppId) Set <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
+ * @method integer getSubAppId() Obtain <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+ * @method void setSubAppId(integer $SubAppId) Set <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
  * @method string getSessionContext() Obtain The source context, which is used to pass through user request information. The `ExtractTraceWatermarkComplete` callback and the `ProcedureStateChanged` callback will return the value of this parameter. It can contain up to 1,000 characters.
  * @method void setSessionContext(string $SessionContext) Set The source context, which is used to pass through user request information. The `ExtractTraceWatermarkComplete` callback and the `ProcedureStateChanged` callback will return the value of this parameter. It can contain up to 1,000 characters.
  * @method string getSessionId() Obtain The session ID, which is used for de-duplication. If there was a request with the same session ID in the last three days, an error will be returned for the current request. The session ID can contain up to 50 characters. If you do not pass this parameter or pass in an empty string, duplicate sessions will not be identified.
@@ -51,7 +51,7 @@ class ExtractTraceWatermarkRequest extends AbstractModel
     public $FileId;
 
     /**
-     * @var integer <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
+     * @var integer <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
      */
     public $SubAppId;
 
@@ -79,7 +79,7 @@ class ExtractTraceWatermarkRequest extends AbstractModel
      * @param string $Url The URL of the media on which digital watermark extraction is to be performed.
      * @param string $FileId The ID of the file specified by `Url`.
 <li><font color=red>Note</font>: This parameter is required.</li>
-     * @param integer $SubAppId <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
+     * @param integer $SubAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
      * @param string $SessionContext The source context, which is used to pass through user request information. The `ExtractTraceWatermarkComplete` callback and the `ProcedureStateChanged` callback will return the value of this parameter. It can contain up to 1,000 characters.
      * @param string $SessionId The session ID, which is used for de-duplication. If there was a request with the same session ID in the last three days, an error will be returned for the current request. The session ID can contain up to 50 characters. If you do not pass this parameter or pass in an empty string, duplicate sessions will not be identified.
      * @param integer $TasksPriority The task priority, which can be a value from -10 to 10. The higher the value, the higher the priority. If this parameter is left empty, 0 will be used.

@@ -32,8 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSampleInterval(integer $SampleInterval) Set Sampling interval.
 <li>If `SampleType` is `Percent`, sampling will be performed at an interval of the specified percentage.</li>
 <li>If `SampleType` is `Time`, sampling will be performed at the specified time interval in seconds.</li>
- * @method integer getSubAppId() Obtain <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
- * @method void setSubAppId(integer $SubAppId) Set <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
+ * @method integer getSubAppId() Obtain <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+ * @method void setSubAppId(integer $SubAppId) Set <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
  * @method string getName() Obtain Name of a sampled screencapturing template. Length limit: 64 characters.
  * @method void setName(string $Name) Set Name of a sampled screencapturing template. Length limit: 64 characters.
  * @method integer getWidth() Obtain Maximum value of the width (or long side) of a screenshot in px. Value range: 0 and [128, 4,096].
@@ -102,7 +102,7 @@ class CreateSampleSnapshotTemplateRequest extends AbstractModel
     public $SampleInterval;
 
     /**
-     * @var integer <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
+     * @var integer <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
      */
     public $SubAppId;
 
@@ -166,7 +166,7 @@ Default value: black.
      * @param integer $SampleInterval Sampling interval.
 <li>If `SampleType` is `Percent`, sampling will be performed at an interval of the specified percentage.</li>
 <li>If `SampleType` is `Time`, sampling will be performed at the specified time interval in seconds.</li>
-     * @param integer $SubAppId <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
+     * @param integer $SubAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
      * @param string $Name Name of a sampled screencapturing template. Length limit: 64 characters.
      * @param integer $Width Maximum value of the width (or long side) of a screenshot in px. Value range: 0 and [128, 4,096].
 <li>If both `Width` and `Height` are 0, the resolution will be the same as that of the source video;</li>

@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setReviewWallSwitch(string $ReviewWallSwitch) Set Whether to allow the recognition result to enter the intelligent recognition platform (for human recognition).
 <li>ON: yes</li>
 <li>OFF: no</li>
- * @method integer getSubAppId() Obtain <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
- * @method void setSubAppId(integer $SubAppId) Set <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
+ * @method integer getSubAppId() Obtain <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+ * @method void setSubAppId(integer $SubAppId) Set <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
  * @method string getName() Obtain Name of an intelligent content recognition template. Length limit: 64 characters.
  * @method void setName(string $Name) Set Name of an intelligent content recognition template. Length limit: 64 characters.
  * @method string getComment() Obtain Description of an intelligent content recognition template. Length limit: 256 characters.
@@ -59,7 +59,7 @@ class CreateContentReviewTemplateRequest extends AbstractModel
     public $ReviewWallSwitch;
 
     /**
-     * @var integer <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
+     * @var integer <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
      */
     public $SubAppId;
 
@@ -109,7 +109,7 @@ class CreateContentReviewTemplateRequest extends AbstractModel
      * @param string $ReviewWallSwitch Whether to allow the recognition result to enter the intelligent recognition platform (for human recognition).
 <li>ON: yes</li>
 <li>OFF: no</li>
-     * @param integer $SubAppId <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
+     * @param integer $SubAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
      * @param string $Name Name of an intelligent content recognition template. Length limit: 64 characters.
      * @param string $Comment Description of an intelligent content recognition template. Length limit: 256 characters.
      * @param PornConfigureInfo $PornConfigure Control parameter for porn information.

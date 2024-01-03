@@ -36,8 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStartTime(string $StartTime) Set Start time in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?lang=en&pg=).
  * @method string getEndTime() Obtain End time in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?lang=en&pg=).
  * @method void setEndTime(string $EndTime) Set End time in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?lang=en&pg=).
- * @method integer getSubAppId() Obtain <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
- * @method void setSubAppId(integer $SubAppId) Set <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
+ * @method integer getSubAppId() Obtain <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+ * @method void setSubAppId(integer $SubAppId) Set <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
  * @method array getDomainNames() Obtain List of domain names. The usage data of up to 20 domain names can be queried at a time. The usage data of all domain names is returned by default.
  * @method void setDomainNames(array $DomainNames) Set List of domain names. The usage data of up to 20 domain names can be queried at a time. The usage data of all domain names is returned by default.
  * @method string getArea() Obtain Service region. Valid values:
@@ -182,7 +182,7 @@ class DescribeCDNStatDetailsRequest extends AbstractModel
     public $EndTime;
 
     /**
-     * @var integer <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
+     * @var integer <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
      */
     public $SubAppId;
 
@@ -275,7 +275,7 @@ If the difference between `StartTime` and `EndTime` is larger than 24 hours, the
 <li>IpVisit: Number of IP visits. </li>
      * @param string $StartTime Start time in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?lang=en&pg=).
      * @param string $EndTime End time in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?lang=en&pg=).
-     * @param integer $SubAppId <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
+     * @param integer $SubAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
      * @param array $DomainNames List of domain names. The usage data of up to 20 domain names can be queried at a time. The usage data of all domain names is returned by default.
      * @param string $Area Service region. Valid values:
 <li>Chinese Mainland</li>

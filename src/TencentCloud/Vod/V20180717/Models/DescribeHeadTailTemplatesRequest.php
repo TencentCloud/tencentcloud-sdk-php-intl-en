@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeHeadTailTemplates request structure.
  *
- * @method integer getSubAppId() Obtain </b>VOD Application ID. If you want to access resources in a sub-app, fill in this field with the sub-app ID; otherwise, don't fill in this field.</b>
- * @method void setSubAppId(integer $SubAppId) Set </b>VOD Application ID. If you want to access resources in a sub-app, fill in this field with the sub-app ID; otherwise, don't fill in this field.</b>
+ * @method integer getSubAppId() Obtain <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+ * @method void setSubAppId(integer $SubAppId) Set <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
  * @method array getDefinitions() Obtain Head Tail template number, array length limit: 100.
  * @method void setDefinitions(array $Definitions) Set Head Tail template number, array length limit: 100.
  * @method integer getOffset() Obtain Paging offset, default value: 0.
@@ -32,7 +32,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeHeadTailTemplatesRequest extends AbstractModel
 {
     /**
-     * @var integer </b>VOD Application ID. If you want to access resources in a sub-app, fill in this field with the sub-app ID; otherwise, don't fill in this field.</b>
+     * @var integer <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
      */
     public $SubAppId;
 
@@ -52,7 +52,7 @@ class DescribeHeadTailTemplatesRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @param integer $SubAppId </b>VOD Application ID. If you want to access resources in a sub-app, fill in this field with the sub-app ID; otherwise, don't fill in this field.</b>
+     * @param integer $SubAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
      * @param array $Definitions Head Tail template number, array length limit: 100.
      * @param integer $Offset Paging offset, default value: 0.
      * @param integer $Limit Returns the number of records, default value: 10, maximum value: 100.

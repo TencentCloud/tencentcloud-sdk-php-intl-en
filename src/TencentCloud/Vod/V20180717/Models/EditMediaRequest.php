@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInputType() Obtain Input the type of video. The possible values u200bu200bare File and Stream.
  * @method void setInputType(string $InputType) Set Input the type of video. The possible values u200bu200bare File and Stream.
- * @method integer getSubAppId() Obtain </b>VOD Application ID. If you want to access resources in a sub-app, fill in this field with the sub-app ID; otherwise, don't fill in this field.</b>
- * @method void setSubAppId(integer $SubAppId) Set </b>VOD Application ID. If you want to access resources in a sub-app, fill in this field with the sub-app ID; otherwise, don't fill in this field.</b>
+ * @method integer getSubAppId() Obtain <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+ * @method void setSubAppId(integer $SubAppId) Set <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
  * @method array getFileInfos() Obtain Input video file information, required when InputType is File.
  * @method void setFileInfos(array $FileInfos) Set Input video file information, required when InputType is File.
  * @method array getStreamInfos() Obtain nput stream information, required when InputType is Stream.
@@ -55,7 +55,7 @@ class EditMediaRequest extends AbstractModel
     public $InputType;
 
     /**
-     * @var integer </b>VOD Application ID. If you want to access resources in a sub-app, fill in this field with the sub-app ID; otherwise, don't fill in this field.</b>
+     * @var integer <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
      */
     public $SubAppId;
 
@@ -108,7 +108,7 @@ class EditMediaRequest extends AbstractModel
 
     /**
      * @param string $InputType Input the type of video. The possible values u200bu200bare File and Stream.
-     * @param integer $SubAppId </b>VOD Application ID. If you want to access resources in a sub-app, fill in this field with the sub-app ID; otherwise, don't fill in this field.</b>
+     * @param integer $SubAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
      * @param array $FileInfos Input video file information, required when InputType is File.
      * @param array $StreamInfos nput stream information, required when InputType is Stream.
      * @param integer $Definition EditMedia template ID. The values u200bu200bare 10 and 20. If left blank, the 10 template is used. 

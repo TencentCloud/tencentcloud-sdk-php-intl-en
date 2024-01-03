@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFileId(string $FileId) Set File ID.
  * @method integer getDefinition() Obtain Enhance Media Template ID.
  * @method void setDefinition(integer $Definition) Set Enhance Media Template ID.
- * @method integer getSubAppId() Obtain </b>VOD Application ID. If you want to access resources in a sub-app, fill in this field with the sub-app ID; otherwise, don't fill in this field.</b>
- * @method void setSubAppId(integer $SubAppId) Set </b>VOD Application ID. If you want to access resources in a sub-app, fill in this field with the sub-app ID; otherwise, don't fill in this field.</b>
+ * @method integer getSubAppId() Obtain <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+ * @method void setSubAppId(integer $SubAppId) Set <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
  * @method float getStartTimeOffset() Obtain Starting offset time, unit: seconds, leaving it blank means intercepting from the beginning of the video.
  * @method void setStartTimeOffset(float $StartTimeOffset) Set Starting offset time, unit: seconds, leaving it blank means intercepting from the beginning of the video.
  * @method float getEndTimeOffset() Obtain End offset time, unit: seconds, leaving it blank means intercepting to the end of the video.
@@ -54,7 +54,7 @@ class EnhanceMediaByTemplateRequest extends AbstractModel
     public $Definition;
 
     /**
-     * @var integer </b>VOD Application ID. If you want to access resources in a sub-app, fill in this field with the sub-app ID; otherwise, don't fill in this field.</b>
+     * @var integer <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
      */
     public $SubAppId;
 
@@ -96,7 +96,7 @@ class EnhanceMediaByTemplateRequest extends AbstractModel
     /**
      * @param string $FileId File ID.
      * @param integer $Definition Enhance Media Template ID.
-     * @param integer $SubAppId </b>VOD Application ID. If you want to access resources in a sub-app, fill in this field with the sub-app ID; otherwise, don't fill in this field.</b>
+     * @param integer $SubAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
      * @param float $StartTimeOffset Starting offset time, unit: seconds, leaving it blank means intercepting from the beginning of the video.
      * @param float $EndTimeOffset End offset time, unit: seconds, leaving it blank means intercepting to the end of the video.
      * @param RebuildMediaOutputConfig $OutputConfig File configuration after Enhance.

@@ -30,10 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDataType(string $DataType) Set CDN statistics type. Valid values:
 <li>Flux: traffic in bytes.</li>
 <li>Bandwidth: bandwidth in bps.</li>
- * @method integer getSubAppId() Obtain <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.
-You can set this parameter to 1 to query the total usage of all applications (including the primary application) as an admin (only 1-day granularity is supported).</b>
- * @method void setSubAppId(integer $SubAppId) Set <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.
-You can set this parameter to 1 to query the total usage of all applications (including the primary application) as an admin (only 1-day granularity is supported).</b>
+ * @method integer getSubAppId() Obtain <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+ * @method void setSubAppId(integer $SubAppId) Set <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
  * @method integer getDataInterval() Obtain Time granularity of usage data in minutes. Valid values:
 <li>5: 5-minute granularity. The data at 5-minute granularity in the query period will be returned.</li>
 <li>60: 1-hour granularity. The data at 1-hour granularity in the query period will be returned.</li>
@@ -67,8 +65,7 @@ class DescribeCDNUsageDataRequest extends AbstractModel
     public $DataType;
 
     /**
-     * @var integer <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.
-You can set this parameter to 1 to query the total usage of all applications (including the primary application) as an admin (only 1-day granularity is supported).</b>
+     * @var integer <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
      */
     public $SubAppId;
 
@@ -92,8 +89,7 @@ Default value: 1440. Data at 1-day granularity will be returned.
      * @param string $DataType CDN statistics type. Valid values:
 <li>Flux: traffic in bytes.</li>
 <li>Bandwidth: bandwidth in bps.</li>
-     * @param integer $SubAppId <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.
-You can set this parameter to 1 to query the total usage of all applications (including the primary application) as an admin (only 1-day granularity is supported).</b>
+     * @param integer $SubAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
      * @param integer $DataInterval Time granularity of usage data in minutes. Valid values:
 <li>5: 5-minute granularity. The data at 5-minute granularity in the query period will be returned.</li>
 <li>60: 1-hour granularity. The data at 1-hour granularity in the query period will be returned.</li>
