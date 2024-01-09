@@ -20,32 +20,36 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateInstance request structure.
  *
- * @method integer getProductId() Obtain The product ID. Different product IDs represent different EMR product versions. Valid values:
-<li>16: EMR v2.3.0</li>
-<li>20: EMR v2.5.0</li>
-<li>25: EMR v3.1.0</li>
-<li>27: Kafka v1.0.0</li>
-<li>30: EMR v2.6.0</li>
-<li>33: EMR v3.2.1</li>
-<li>34: EMR v3.3.0</li>
-<li>36: StarRocks v1.0.0</li>
-<li>37: EMR v3.4.0</li>
-<li>38: EMR v2.7.0</li>
-<li>39: StarRocks v1.1.0</li>
-<li>41: Druid v1.1.0</li>
- * @method void setProductId(integer $ProductId) Set The product ID. Different product IDs represent different EMR product versions. Valid values:
-<li>16: EMR v2.3.0</li>
-<li>20: EMR v2.5.0</li>
-<li>25: EMR v3.1.0</li>
-<li>27: Kafka v1.0.0</li>
-<li>30: EMR v2.6.0</li>
-<li>33: EMR v3.2.1</li>
-<li>34: EMR v3.3.0</li>
-<li>36: StarRocks v1.0.0</li>
-<li>37: EMR v3.4.0</li>
-<li>38: EMR v2.7.0</li>
-<li>39: StarRocks v1.1.0</li>
-<li>41: Druid v1.1.0</li>
+ * @method integer getProductId() Obtain Product ID. Different product IDs stand for different EMR product versions. Valid range:
+51: STARROCKS-V1.4.0
+54: STARROCKS-V2.0.0
+27: KAFKA-V1.0.0
+50: KAFKA-V2.0.0
+16: EMR-V2.3.0
+20: EMR-V2.5.0
+30: EMR-V2.6.0
+38: EMR-V2.7.0
+25: EMR-V3.1.0
+33: EMR-V3.2.1
+34: EMR-V3.3.0
+37: EMR-V3.4.0
+44: EMR-V3.5.0
+53: EMR-V3.6.0
+ * @method void setProductId(integer $ProductId) Set Product ID. Different product IDs stand for different EMR product versions. Valid range:
+51: STARROCKS-V1.4.0
+54: STARROCKS-V2.0.0
+27: KAFKA-V1.0.0
+50: KAFKA-V2.0.0
+16: EMR-V2.3.0
+20: EMR-V2.5.0
+30: EMR-V2.6.0
+38: EMR-V2.7.0
+25: EMR-V3.1.0
+33: EMR-V3.2.1
+34: EMR-V3.3.0
+37: EMR-V3.4.0
+44: EMR-V3.5.0
+53: EMR-V3.6.0
  * @method array getSoftware() Obtain List of deployed components. The list of component options varies by EMR product ID (i.e., `ProductId`; for specific meanings, please see the `ProductId` input parameter). For more information, please see [Component Version](https://intl.cloud.tencent.com/document/product/589/20279?from_cn_redirect=1).
 Enter an instance value: `hive` or `flink`.
  * @method void setSoftware(array $Software) Set List of deployed components. The list of component options varies by EMR product ID (i.e., `ProductId`; for specific meanings, please see the `ProductId` input parameter). For more information, please see [Component Version](https://intl.cloud.tencent.com/document/product/589/20279?from_cn_redirect=1).
@@ -160,19 +164,21 @@ Hadoop-Hbase
 class CreateInstanceRequest extends AbstractModel
 {
     /**
-     * @var integer The product ID. Different product IDs represent different EMR product versions. Valid values:
-<li>16: EMR v2.3.0</li>
-<li>20: EMR v2.5.0</li>
-<li>25: EMR v3.1.0</li>
-<li>27: Kafka v1.0.0</li>
-<li>30: EMR v2.6.0</li>
-<li>33: EMR v3.2.1</li>
-<li>34: EMR v3.3.0</li>
-<li>36: StarRocks v1.0.0</li>
-<li>37: EMR v3.4.0</li>
-<li>38: EMR v2.7.0</li>
-<li>39: StarRocks v1.1.0</li>
-<li>41: Druid v1.1.0</li>
+     * @var integer Product ID. Different product IDs stand for different EMR product versions. Valid range:
+51: STARROCKS-V1.4.0
+54: STARROCKS-V2.0.0
+27: KAFKA-V1.0.0
+50: KAFKA-V2.0.0
+16: EMR-V2.3.0
+20: EMR-V2.5.0
+30: EMR-V2.6.0
+38: EMR-V2.7.0
+25: EMR-V3.1.0
+33: EMR-V3.2.1
+34: EMR-V3.3.0
+37: EMR-V3.4.0
+44: EMR-V3.5.0
+53: EMR-V3.6.0
      */
     public $ProductId;
 
@@ -356,19 +362,21 @@ Hadoop-Hbase
     public $MultiZoneSettings;
 
     /**
-     * @param integer $ProductId The product ID. Different product IDs represent different EMR product versions. Valid values:
-<li>16: EMR v2.3.0</li>
-<li>20: EMR v2.5.0</li>
-<li>25: EMR v3.1.0</li>
-<li>27: Kafka v1.0.0</li>
-<li>30: EMR v2.6.0</li>
-<li>33: EMR v3.2.1</li>
-<li>34: EMR v3.3.0</li>
-<li>36: StarRocks v1.0.0</li>
-<li>37: EMR v3.4.0</li>
-<li>38: EMR v2.7.0</li>
-<li>39: StarRocks v1.1.0</li>
-<li>41: Druid v1.1.0</li>
+     * @param integer $ProductId Product ID. Different product IDs stand for different EMR product versions. Valid range:
+51: STARROCKS-V1.4.0
+54: STARROCKS-V2.0.0
+27: KAFKA-V1.0.0
+50: KAFKA-V2.0.0
+16: EMR-V2.3.0
+20: EMR-V2.5.0
+30: EMR-V2.6.0
+38: EMR-V2.7.0
+25: EMR-V3.1.0
+33: EMR-V3.2.1
+34: EMR-V3.3.0
+37: EMR-V3.4.0
+44: EMR-V3.5.0
+53: EMR-V3.6.0
      * @param array $Software List of deployed components. The list of component options varies by EMR product ID (i.e., `ProductId`; for specific meanings, please see the `ProductId` input parameter). For more information, please see [Component Version](https://intl.cloud.tencent.com/document/product/589/20279?from_cn_redirect=1).
 Enter an instance value: `hive` or `flink`.
      * @param integer $SupportHA Whether to enable high node availability. Valid values:

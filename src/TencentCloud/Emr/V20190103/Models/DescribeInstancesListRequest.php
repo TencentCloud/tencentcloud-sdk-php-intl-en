@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) Set Number of returned results per page. Default value: `10`; maximum value: `100`.
  * @method string getOrderField() Obtain Sorting field. Valid values: <li>clusterId: Sorting by instance ID. </li><li>addTime: Sorting by instance creation time.</li><li>status: Sorting by instance status code.</li>
  * @method void setOrderField(string $OrderField) Set Sorting field. Valid values: <li>clusterId: Sorting by instance ID. </li><li>addTime: Sorting by instance creation time.</li><li>status: Sorting by instance status code.</li>
- * @method integer getAsc() Obtain Sort ascending or descending based on `OrderField`. Valid values:<li>0: Descending.</li><li>1: Ascending.</li>Default value: `0`.
- * @method void setAsc(integer $Asc) Set Sort ascending or descending based on `OrderField`. Valid values:<li>0: Descending.</li><li>1: Ascending.</li>Default value: `0`.
+ * @method integer getAsc() Obtain Sort according to OrderField in ascending or descending order. Valid range:<li>0: Descending order.</li><li>1: Ascending order.</li>Default: 0.
+ * @method void setAsc(integer $Asc) Set Sort according to OrderField in ascending or descending order. Valid range:<li>0: Descending order.</li><li>1: Ascending order.</li>Default: 0.
  * @method array getFilters() Obtain Custom query
  * @method void setFilters(array $Filters) Set Custom query
  */
@@ -56,7 +56,7 @@ class DescribeInstancesListRequest extends AbstractModel
     public $OrderField;
 
     /**
-     * @var integer Sort ascending or descending based on `OrderField`. Valid values:<li>0: Descending.</li><li>1: Ascending.</li>Default value: `0`.
+     * @var integer Sort according to OrderField in ascending or descending order. Valid range:<li>0: Descending order.</li><li>1: Ascending order.</li>Default: 0.
      */
     public $Asc;
 
@@ -70,7 +70,7 @@ class DescribeInstancesListRequest extends AbstractModel
      * @param integer $Offset Page number. Default value: `0`, indicating the first page.
      * @param integer $Limit Number of returned results per page. Default value: `10`; maximum value: `100`.
      * @param string $OrderField Sorting field. Valid values: <li>clusterId: Sorting by instance ID. </li><li>addTime: Sorting by instance creation time.</li><li>status: Sorting by instance status code.</li>
-     * @param integer $Asc Sort ascending or descending based on `OrderField`. Valid values:<li>0: Descending.</li><li>1: Ascending.</li>Default value: `0`.
+     * @param integer $Asc Sort according to OrderField in ascending or descending order. Valid range:<li>0: Descending order.</li><li>1: Ascending order.</li>Default: 0.
      * @param array $Filters Custom query
      */
     function __construct()

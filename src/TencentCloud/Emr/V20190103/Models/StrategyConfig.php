@@ -26,9 +26,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
  * @method void setRollingRestartSwitch(integer $RollingRestartSwitch) Set `0`: Disable rolling restart
 `1`: Enable rolling restart
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getBatchSize() Obtain The number of nodes to be restarted per batch in rolling restart, with a maximum value of 99,999.
+ * @method integer getBatchSize() Obtain The quantity of restarts per batch during a rolling restart, with the maximum number of restarts being 99999
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setBatchSize(integer $BatchSize) Set The number of nodes to be restarted per batch in rolling restart, with a maximum value of 99,999.
+ * @method void setBatchSize(integer $BatchSize) Set The quantity of restarts per batch during a rolling restart, with the maximum number of restarts being 99999
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method integer getTimeWait() Obtain The wait time (in seconds) per batch in rolling restart, with a maximum value of 5 minutes.
 Note: This field may return null, indicating that no valid values can be obtained.
@@ -49,7 +49,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $RollingRestartSwitch;
 
     /**
-     * @var integer The number of nodes to be restarted per batch in rolling restart, with a maximum value of 99,999.
+     * @var integer The quantity of restarts per batch during a rolling restart, with the maximum number of restarts being 99999
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $BatchSize;
@@ -70,7 +70,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param integer $RollingRestartSwitch `0`: Disable rolling restart
 `1`: Enable rolling restart
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $BatchSize The number of nodes to be restarted per batch in rolling restart, with a maximum value of 99,999.
+     * @param integer $BatchSize The quantity of restarts per batch during a rolling restart, with the maximum number of restarts being 99999
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $TimeWait The wait time (in seconds) per batch in rolling restart, with a maximum value of 5 minutes.
 Note: This field may return null, indicating that no valid values can be obtained.

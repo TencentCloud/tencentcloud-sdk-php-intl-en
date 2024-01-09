@@ -220,6 +220,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setTradeVersion(integer $TradeVersion) Set The billing version. Valid values: `0` (original billing) and `1` (new billing)
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getServicesStatus() Obtain Status of each component. Zookeeper: STARTED; ResourceManager: STARTED. STARTED indicates "already in operation"; STOPPED indicates "ceased".
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setServicesStatus(string $ServicesStatus) Set Status of each component. Zookeeper: STARTED; ResourceManager: STARTED. STARTED indicates "already in operation"; STOPPED indicates "ceased".
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class NodeHardwareInfo extends AbstractModel
 {
@@ -524,6 +528,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $TradeVersion;
 
     /**
+     * @var string Status of each component. Zookeeper: STARTED; ResourceManager: STARTED. STARTED indicates "already in operation"; STOPPED indicates "ceased".
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $ServicesStatus;
+
+    /**
      * @param integer $AppId User `APPID`
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $SerialNo Serial number
@@ -623,6 +633,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param boolean $DisableApiTermination Enabling instance protection for this instance. Valid values: `true` (enable) and `false` (disable).
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $TradeVersion The billing version. Valid values: `0` (original billing) and `1` (new billing)
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $ServicesStatus Status of each component. Zookeeper: STARTED; ResourceManager: STARTED. STARTED indicates "already in operation"; STOPPED indicates "ceased".
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
@@ -848,6 +860,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("TradeVersion",$param) and $param["TradeVersion"] !== null) {
             $this->TradeVersion = $param["TradeVersion"];
+        }
+
+        if (array_key_exists("ServicesStatus",$param) and $param["ServicesStatus"] !== null) {
+            $this->ServicesStatus = $param["ServicesStatus"];
         }
     }
 }

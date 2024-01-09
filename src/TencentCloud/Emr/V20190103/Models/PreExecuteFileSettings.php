@@ -44,6 +44,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCosSecretKey(string $CosSecretKey) Set COS `SecretKey`
  * @method string getAppId() Obtain COS `appid`, which has been disused
  * @method void setAppId(string $AppId) Set COS `appid`, which has been disused
+ * @method string getRemark() Obtain Remarks
+ * @method void setRemark(string $Remark) Set Remarks
  */
 class PreExecuteFileSettings extends AbstractModel
 {
@@ -108,6 +110,11 @@ class PreExecuteFileSettings extends AbstractModel
     public $AppId;
 
     /**
+     * @var string Remarks
+     */
+    public $Remark;
+
+    /**
      * @param string $Path COS path to script, which has been disused
      * @param array $Args Execution script parameter
      * @param string $Bucket COS bucket name, which has been disused
@@ -120,6 +127,7 @@ class PreExecuteFileSettings extends AbstractModel
      * @param string $CosSecretId COS `SecretId`
      * @param string $CosSecretKey COS `SecretKey`
      * @param string $AppId COS `appid`, which has been disused
+     * @param string $Remark Remarks
      */
     function __construct()
     {
@@ -180,6 +188,10 @@ class PreExecuteFileSettings extends AbstractModel
 
         if (array_key_exists("AppId",$param) and $param["AppId"] !== null) {
             $this->AppId = $param["AppId"];
+        }
+
+        if (array_key_exists("Remark",$param) and $param["Remark"] !== null) {
+            $this->Remark = $param["Remark"];
         }
     }
 }
