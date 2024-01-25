@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * The information of an error event (the possible cause of an abnormal user experience).
  *
- * @method integer getAbnormalEventId() Obtain The error event ID. For details, see https://intl.cloud.tencent.com/document/product/647/44916?from_cn_redirect=1
- * @method void setAbnormalEventId(integer $AbnormalEventId) Set The error event ID. For details, see https://intl.cloud.tencent.com/document/product/647/44916?from_cn_redirect=1
+ * @method integer getAbnormalEventId() Obtain The error event ID. For details, see https://www.tencentcloud.com/document/product/647/37906?has_map=1
+ * @method void setAbnormalEventId(integer $AbnormalEventId) Set The error event ID. For details, see https://www.tencentcloud.com/document/product/647/37906?has_map=1
  * @method string getPeerId() Obtain The remote user ID. If this parameter is empty, it indicates that the error event is not associated with a remote user.
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setPeerId(string $PeerId) Set The remote user ID. If this parameter is empty, it indicates that the error event is not associated with a remote user.
@@ -30,7 +30,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 class AbnormalEvent extends AbstractModel
 {
     /**
-     * @var integer The error event ID. For details, see https://intl.cloud.tencent.com/document/product/647/44916?from_cn_redirect=1
+     * @var integer The error event ID. For details, see https://www.tencentcloud.com/document/product/647/37906?has_map=1
      */
     public $AbnormalEventId;
 
@@ -41,7 +41,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $PeerId;
 
     /**
-     * @param integer $AbnormalEventId The error event ID. For details, see https://intl.cloud.tencent.com/document/product/647/44916?from_cn_redirect=1
+     * @param integer $AbnormalEventId The error event ID. For details, see https://www.tencentcloud.com/document/product/647/37906?has_map=1
      * @param string $PeerId The remote user ID. If this parameter is empty, it indicates that the error event is not associated with a remote user.
 Note: This field may return null, indicating that no valid values can be obtained.
      */

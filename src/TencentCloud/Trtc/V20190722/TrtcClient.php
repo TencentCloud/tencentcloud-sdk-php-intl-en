@@ -66,6 +66,30 @@ If a recording file is being uploaded to VOD, the response parameter `StorageFil
 2. If you need to call this API, please upgrade the monitoring dashboard version to "Standard". For more details, please refer to: https://www.tencentcloud.com/document/product/647/54481.
  * @method Models\DescribeScaleInfoResponse DescribeScaleInfo(Models\DescribeScaleInfoRequest $req) This API (the old `DescribeHistoryScale`) is used to query the daily number of rooms and users of an application (`SDKAppID`) in the last 14 days. Data for the current day cannot be queried.
  * @method Models\DescribeStreamIngestResponse DescribeStreamIngest(Models\DescribeStreamIngestRequest $req) You can query the status of the Relay task.
+ * @method Models\DescribeTRTCMarketQualityDataResponse DescribeTRTCMarketQualityData(Models\DescribeTRTCMarketQualityDataRequest $req) Query TRTC Monitoring Dashboard - Data Dashboard Quality Metrics (including the following metrics)
+joinSuccessRate: Join channel success rate.
+joinSuccessIn5sRate: Join channel success rate within 5s.
+audioFreezeRate: Audio stutter rate.
+videoFreezeRate: Video stutter rate.
+networkDelay: Lag rate.
+Note:
+1. To call the API, you need to activate the monitoring dashboard Standard Edition and Premium Edition, the monitoring dashboard Free Edition does not support calling. Monitoring dashboard version features and billing overview: https://trtc.io/document/54481.
+2. The query time range depends on the monitoring dashboard function version, premium edition can query the last 30 days.
+ * @method Models\DescribeTRTCMarketScaleDataResponse DescribeTRTCMarketScaleData(Models\DescribeTRTCMarketScaleDataRequest $req) Query TRTC Monitoring Dashboard - Data Dashboard Scale Metrics (will return userCount, roomCount, peakCurrentUsers, peakCurrentChannels)
+- userCount: number of users in the call,
+- roomCount: number of rooms in the call, counted as one call channel from the time a user joins the channel to the time all users leave the channel.
+- peakCurrentChannels: peak number of channels online at the same time.
+- peakCurrentUsers: peak number of users online at the same time.
+Note:
+1. To call the interface, you need to activate the monitoring dashboard Standard Edition and Premium Edition, the monitoring dashboard Free Edition does not support calling, for monitoring dashboard version features and billing overview: https://trtc.io/document/54481.
+2. The query time range depends on the monitoring dashboard function version, premium edition can query up to 60 days.
+ * @method Models\DescribeTRTCRealTimeQualityDataResponse DescribeTRTCRealTimeQualityData(Models\DescribeTRTCRealTimeQualityDataRequest $req) Query TRTC Monitoring Dashboard - Real-Time Monitoring Quality Metrics (return the following metrics)
+ -Video stutter rate
+ -Audio stutter rate
+ Note:
+ 1. To call the API, you need to activate the Monitoring Dashboard Standard Edition and Premium Edition. The Monitoring Dashboard Free Edition does not support calling. For monitoring dashboard version features and billing overview, please visit: https://trtc.io/document/54481.
+ 2. The query time range depends on the monitoring dashboard function version. The premium edition can query up to 1 hours
+ * @method Models\DescribeTRTCRealTimeScaleDataResponse DescribeTRTCRealTimeScaleData(Models\DescribeTRTCRealTimeScaleDataRequest $req) Query TRTC Monitoring Dashboard - Real-Time Monitoring Scale Metrics (the following metrics will be returned) -userCount (Online users) -roomCount (Online rooms) Note: 1. To call the interface, you need to activate the monitoring dashboard Standard Edition and Premium Edition, the monitoring dashboard Free Edition does not support calling. For monitoring dashboard version features and billing overview, please visit: https://trtc.io/document/54481. 2. The query time range depends on the function version of the monitoring dashboard. The premium edition can query the last 1 hours
  * @method Models\DescribeTrtcRoomUsageResponse DescribeTrtcRoomUsage(Models\DescribeTrtcRoomUsageRequest $req) This API is used to query usage data grouped by room.
 - The queried period cannot exceed 24 hours. If the period spans two different days, the data returned may not be accurate due to a delay in data collection. You can make multiple calls to query the usage on different days.
 - You can use this API to query your historical usage or to reconcile data, but we do not recommend you use it for crucial business logic.

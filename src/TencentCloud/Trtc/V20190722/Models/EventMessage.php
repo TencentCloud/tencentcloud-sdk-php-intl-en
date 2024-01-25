@@ -32,8 +32,8 @@ use TencentCloud\Common\AbstractModel;
 `7`: A relayed video
  * @method integer getTime() Obtain The event reporting time in the format of UNIX timestamp (milliseconds), such as `1589891188801`.
  * @method void setTime(integer $Time) Set The event reporting time in the format of UNIX timestamp (milliseconds), such as `1589891188801`.
- * @method integer getEventId() Obtain The event ID. Events are classified into SDK events and WebRTC events. For more information, see https://intl.cloud.tencent.com/document/product/647/44916?from_cn_redirect=1
- * @method void setEventId(integer $EventId) Set The event ID. Events are classified into SDK events and WebRTC events. For more information, see https://intl.cloud.tencent.com/document/product/647/44916?from_cn_redirect=1
+ * @method integer getEventId() Obtain The event ID. Events are classified into SDK events and WebRTC events. For more information, see https://www.tencentcloud.com/document/product/647/37906?has_map=1
+ * @method void setEventId(integer $EventId) Set The event ID. Events are classified into SDK events and WebRTC events. For more information, see https://www.tencentcloud.com/document/product/647/37906?has_map=1
  * @method integer getParamOne() Obtain The first event parameter, such as the video width.
  * @method void setParamOne(integer $ParamOne) Set The first event parameter, such as the video width.
  * @method integer getParamTwo() Obtain The second event parameter, such as the video height.
@@ -56,7 +56,7 @@ class EventMessage extends AbstractModel
     public $Time;
 
     /**
-     * @var integer The event ID. Events are classified into SDK events and WebRTC events. For more information, see https://intl.cloud.tencent.com/document/product/647/44916?from_cn_redirect=1
+     * @var integer The event ID. Events are classified into SDK events and WebRTC events. For more information, see https://www.tencentcloud.com/document/product/647/37906?has_map=1
      */
     public $EventId;
 
@@ -77,7 +77,7 @@ class EventMessage extends AbstractModel
 `3`: The small video
 `7`: A relayed video
      * @param integer $Time The event reporting time in the format of UNIX timestamp (milliseconds), such as `1589891188801`.
-     * @param integer $EventId The event ID. Events are classified into SDK events and WebRTC events. For more information, see https://intl.cloud.tencent.com/document/product/647/44916?from_cn_redirect=1
+     * @param integer $EventId The event ID. Events are classified into SDK events and WebRTC events. For more information, see https://www.tencentcloud.com/document/product/647/37906?has_map=1
      * @param integer $ParamOne The first event parameter, such as the video width.
      * @param integer $ParamTwo The second event parameter, such as the video height.
      */
