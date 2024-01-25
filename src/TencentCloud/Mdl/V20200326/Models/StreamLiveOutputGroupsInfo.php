@@ -32,9 +32,9 @@ If the type is RTMP or RTP, only one output is allowed; if it is HLS or DASH, 1-
 If the type is RTMP or RTP, only one output is allowed; if it is HLS or DASH, 1-10 outputs are allowed.
  * @method array getDestinations() Obtain Relay destinations. Quantity: [1, 2]
  * @method void setDestinations(array $Destinations) Set Relay destinations. Quantity: [1, 2]
- * @method HlsRemuxSettingsInfo getHlsRemuxSettings() Obtain HLS protocol configuration information, which takes effect only for HLS/HLS_ARCHIVE outputs
+ * @method HlsRemuxSettingsInfo getHlsRemuxSettings() Obtain HLS protocol configuration information, which takes effect only for HLS/HLS_ARCHIVE/HLS_STREAM_PACKAGE outputs.
 Note: this field may return `null`, indicating that no valid value was found.
- * @method void setHlsRemuxSettings(HlsRemuxSettingsInfo $HlsRemuxSettings) Set HLS protocol configuration information, which takes effect only for HLS/HLS_ARCHIVE outputs
+ * @method void setHlsRemuxSettings(HlsRemuxSettingsInfo $HlsRemuxSettings) Set HLS protocol configuration information, which takes effect only for HLS/HLS_ARCHIVE/HLS_STREAM_PACKAGE outputs.
 Note: this field may return `null`, indicating that no valid value was found.
  * @method DrmSettingsInfo getDrmSettings() Obtain DRM configuration information
 Note: this field may return `null`, indicating that no valid value was found.
@@ -78,7 +78,7 @@ If the type is RTMP or RTP, only one output is allowed; if it is HLS or DASH, 1-
     public $Destinations;
 
     /**
-     * @var HlsRemuxSettingsInfo HLS protocol configuration information, which takes effect only for HLS/HLS_ARCHIVE outputs
+     * @var HlsRemuxSettingsInfo HLS protocol configuration information, which takes effect only for HLS/HLS_ARCHIVE/HLS_STREAM_PACKAGE outputs.
 Note: this field may return `null`, indicating that no valid value was found.
      */
     public $HlsRemuxSettings;
@@ -114,7 +114,7 @@ Valid values: `HLS`, `DASH`, `HLS_ARCHIVE`, `HLS_STREAM_PACKAGE`, `DASH_STREAM_P
      * @param array $Outputs Output information
 If the type is RTMP or RTP, only one output is allowed; if it is HLS or DASH, 1-10 outputs are allowed.
      * @param array $Destinations Relay destinations. Quantity: [1, 2]
-     * @param HlsRemuxSettingsInfo $HlsRemuxSettings HLS protocol configuration information, which takes effect only for HLS/HLS_ARCHIVE outputs
+     * @param HlsRemuxSettingsInfo $HlsRemuxSettings HLS protocol configuration information, which takes effect only for HLS/HLS_ARCHIVE/HLS_STREAM_PACKAGE outputs.
 Note: this field may return `null`, indicating that no valid value was found.
      * @param DrmSettingsInfo $DrmSettings DRM configuration information
 Note: this field may return `null`, indicating that no valid value was found.
