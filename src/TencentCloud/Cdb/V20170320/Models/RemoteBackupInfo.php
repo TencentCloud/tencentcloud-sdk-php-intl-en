@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Information of the remote backup
  *
- * @method array getSubBackupId() Obtain ID of the remote backup subtask
- * @method void setSubBackupId(array $SubBackupId) Set ID of the remote backup subtask
+ * @method integer getSubBackupId() Obtain ID of the remote backup subtask
+ * @method void setSubBackupId(integer $SubBackupId) Set ID of the remote backup subtask
  * @method string getRegion() Obtain The region where the remote backup resides
  * @method void setRegion(string $Region) Set The region where the remote backup resides
  * @method string getStatus() Obtain Backup task status. Valid values: `SUCCESS` (backup succeeded), `FAILED` (backup failed), `RUNNING` (backup is in progress).
@@ -36,7 +36,7 @@ use TencentCloud\Common\AbstractModel;
 class RemoteBackupInfo extends AbstractModel
 {
     /**
-     * @var array ID of the remote backup subtask
+     * @var integer ID of the remote backup subtask
      */
     public $SubBackupId;
 
@@ -66,7 +66,7 @@ class RemoteBackupInfo extends AbstractModel
     public $Url;
 
     /**
-     * @param array $SubBackupId ID of the remote backup subtask
+     * @param integer $SubBackupId ID of the remote backup subtask
      * @param string $Region The region where the remote backup resides
      * @param string $Status Backup task status. Valid values: `SUCCESS` (backup succeeded), `FAILED` (backup failed), `RUNNING` (backup is in progress).
      * @param string $StartTime The start time of remote backup
