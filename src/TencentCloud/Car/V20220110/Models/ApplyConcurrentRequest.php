@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUserIp(string $UserIp) Set Public IP of user’s application client, which is used for nearby scheduling.
  * @method string getProjectId() Obtain The project ID.
  * @method void setProjectId(string $ProjectId) Set The project ID.
- * @method string getApplicationVersionId() Obtain The application version ID.
- * @method void setApplicationVersionId(string $ApplicationVersionId) Set The application version ID.
+ * @method string getApplicationVersionId() Obtain Application version ID. If the application of the current version is requested, you do not need to fill in this field. If the application of other versions is requested, you need to specify the version through this field.
+ * @method void setApplicationVersionId(string $ApplicationVersionId) Set Application version ID. If the application of the current version is requested, you do not need to fill in this field. If the application of other versions is requested, you need to specify the version through this field.
  * @method string getApplicationId() Obtain Application ID, which is used only by the multi-application project to specify applications. For a single-application project, this parameter is ignored, and the application bound to the project will be used.
  * @method void setApplicationId(string $ApplicationId) Set Application ID, which is used only by the multi-application project to specify applications. For a single-application project, this parameter is ignored, and the application bound to the project will be used.
  */
@@ -49,7 +49,7 @@ class ApplyConcurrentRequest extends AbstractModel
     public $ProjectId;
 
     /**
-     * @var string The application version ID.
+     * @var string Application version ID. If the application of the current version is requested, you do not need to fill in this field. If the application of other versions is requested, you need to specify the version through this field.
      */
     public $ApplicationVersionId;
 
@@ -62,7 +62,7 @@ class ApplyConcurrentRequest extends AbstractModel
      * @param string $UserId The user’s unique ID. Tencent Cloud does not parse the ID. You need to manage your own user IDs. Based on your needs, you can either define unique IDs for users or use timestamps to generate random IDs. Make sure the same ID is used when a user reconnects to your application.
      * @param string $UserIp Public IP of user’s application client, which is used for nearby scheduling.
      * @param string $ProjectId The project ID.
-     * @param string $ApplicationVersionId The application version ID.
+     * @param string $ApplicationVersionId Application version ID. If the application of the current version is requested, you do not need to fill in this field. If the application of other versions is requested, you need to specify the version through this field.
      * @param string $ApplicationId Application ID, which is used only by the multi-application project to specify applications. For a single-application project, this parameter is ignored, and the application bound to the project will be used.
      */
     function __construct()

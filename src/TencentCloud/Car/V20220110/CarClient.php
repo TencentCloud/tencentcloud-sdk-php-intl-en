@@ -25,9 +25,10 @@ use TencentCloud\Car\V20220110\Models as Models;
 /**
  * @method Models\ApplyConcurrentResponse ApplyConcurrent(Models\ApplyConcurrentRequest $req) This API is used to request a concurrency. The timeout period of the API is 20 seconds.
  * @method Models\CreateSessionResponse CreateSession(Models\CreateSessionRequest $req) This API is used to create a session. The timeout period of the API is 5 seconds.
- * @method Models\DestroySessionResponse DestroySession(Models\DestroySessionRequest $req) This API is used to terminate a session.
- * @method Models\StartPublishStreamResponse StartPublishStream(Models\StartPublishStreamRequest $req) This API is used to start stream push.
- * @method Models\StartPublishStreamWithURLResponse StartPublishStreamWithURL(Models\StartPublishStreamWithURLRequest $req) This API is used to start stream push to the specified URL. It is billed separately. For billing details, see the [Push to third-party address](https://intl.cloud.tencent.com/document/product/1547/72168?from_cn_redirect=1#98ac188a-d122-4caf-88be-05268ecefdf6) section.
+ * @method Models\DescribeConcurrentCountResponse DescribeConcurrentCount(Models\DescribeConcurrentCountRequest $req) Obtain the concurrency count.
+ * @method Models\DestroySessionResponse DestroySession(Models\DestroySessionRequest $req) Terminate the session. If stream push has been initiated in this session, then the stream push will end upon session termination.
+ * @method Models\StartPublishStreamResponse StartPublishStream(Models\StartPublishStreamRequest $req) Initiate stream push. The codec for the stream push is automatically adjusted based on the client's (SDK) capabilities, with a default order of H265, H264, VP8, and VP9.
+ * @method Models\StartPublishStreamWithURLResponse StartPublishStreamWithURL(Models\StartPublishStreamWithURLRequest $req) Initiate stream push to the specified URL. The codec for the stream push is automatically adjusted based on the client's (SDK) capabilities, with a default order of H265, H264, VP8, and VP9. This stream push method will be charged separately. For details about the charging method, see [Charging for Stream Push to Specified URL](https://intl.cloud.tencent.com/document/product/1547/72168?from_cn_redirect=1#98ac188a-d122-4caf-88be-05268ecefdf6).
  * @method Models\StopPublishStreamResponse StopPublishStream(Models\StopPublishStreamRequest $req) This API is used to stop stream push.
  */
 
