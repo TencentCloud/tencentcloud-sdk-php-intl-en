@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * QueryVoucherListByUin request structure.
  *
- * @method array getClientUins() Obtain List of customer UIN. Array length value:1-20.
- * @method void setClientUins(array $ClientUins) Set List of customer UIN. Array length value:1-20.
+ * @method array getClientUins() Obtain Customer UIN list. Array length value: 1-20.
+ * @method void setClientUins(array $ClientUins) Set Customer UIN list. Array length value: 1-20.
  * @method string getStatus() Obtain Voucher status. If this parameter is not passed in, all status will be queried by default. Valid values: `Unused`, `Used`, `Expired`.
  * @method void setStatus(string $Status) Set Voucher status. If this parameter is not passed in, all status will be queried by default. Valid values: `Unused`, `Used`, `Expired`.
  */
 class QueryVoucherListByUinRequest extends AbstractModel
 {
     /**
-     * @var array List of customer UIN. Array length value:1-20.
+     * @var array Customer UIN list. Array length value: 1-20.
      */
     public $ClientUins;
 
@@ -38,7 +38,7 @@ class QueryVoucherListByUinRequest extends AbstractModel
     public $Status;
 
     /**
-     * @param array $ClientUins List of customer UIN. Array length value:1-20.
+     * @param array $ClientUins Customer UIN list. Array length value: 1-20.
      * @param string $Status Voucher status. If this parameter is not passed in, all status will be queried by default. Valid values: `Unused`, `Used`, `Expired`.
      */
     function __construct()

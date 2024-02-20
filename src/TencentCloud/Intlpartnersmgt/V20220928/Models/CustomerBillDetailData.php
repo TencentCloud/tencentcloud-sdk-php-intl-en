@@ -146,6 +146,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: The return value may be null, indicating that no valid data can be obtained.
  * @method void setId(string $Id) Set ID
 Note: The return value may be null, indicating that no valid data can be obtained.
+ * @method array getTags() Obtain Tag informationNote: This field may return null, indicating that no valid values can be obtained.
+ * @method void setTags(array $Tags) Set Tag informationNote: This field may return null, indicating that no valid values can be obtained.
  */
 class CustomerBillDetailData extends AbstractModel
 {
@@ -325,6 +327,11 @@ Note: The return value may be null, indicating that no valid data can be obtaine
     public $Id;
 
     /**
+     * @var array Tag informationNote: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $Tags;
+
+    /**
      * @param integer $PayerAccountId Reseller account
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $OwnerAccountId Customer account
@@ -388,6 +395,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $Id ID
 Note: The return value may be null, indicating that no valid data can be obtained.
+     * @param array $Tags Tag informationNote: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -512,6 +520,15 @@ Note: The return value may be null, indicating that no valid data can be obtaine
 
         if (array_key_exists("Id",$param) and $param["Id"] !== null) {
             $this->Id = $param["Id"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new TagInfo();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }
