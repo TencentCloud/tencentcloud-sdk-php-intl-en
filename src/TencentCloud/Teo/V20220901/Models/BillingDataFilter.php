@@ -18,28 +18,28 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DeleteOriginGroup request structure.
+ * Billing data filter criteria.
  *
- * @method string getZoneId() Obtain Zone ID.
- * @method void setZoneId(string $ZoneId) Set Zone ID.
- * @method string getGroupId() Obtain Origin server group ID. This parameter is required.
- * @method void setGroupId(string $GroupId) Set Origin server group ID. This parameter is required.
+ * @method string getType() Obtain Parameter name.
+ * @method void setType(string $Type) Set Parameter name.
+ * @method string getValue() Obtain Parameter value.
+ * @method void setValue(string $Value) Set Parameter value.
  */
-class DeleteOriginGroupRequest extends AbstractModel
+class BillingDataFilter extends AbstractModel
 {
     /**
-     * @var string Zone ID.
+     * @var string Parameter name.
      */
-    public $ZoneId;
+    public $Type;
 
     /**
-     * @var string Origin server group ID. This parameter is required.
+     * @var string Parameter value.
      */
-    public $GroupId;
+    public $Value;
 
     /**
-     * @param string $ZoneId Zone ID.
-     * @param string $GroupId Origin server group ID. This parameter is required.
+     * @param string $Type Parameter name.
+     * @param string $Value Parameter value.
      */
     function __construct()
     {
@@ -54,12 +54,12 @@ class DeleteOriginGroupRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ZoneId",$param) and $param["ZoneId"] !== null) {
-            $this->ZoneId = $param["ZoneId"];
+        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
+            $this->Type = $param["Type"];
         }
 
-        if (array_key_exists("GroupId",$param) and $param["GroupId"] !== null) {
-            $this->GroupId = $param["GroupId"];
+        if (array_key_exists("Value",$param) and $param["Value"] !== null) {
+            $this->Value = $param["Value"];
         }
     }
 }

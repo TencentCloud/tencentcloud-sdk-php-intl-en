@@ -18,28 +18,28 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DeleteOriginGroup request structure.
+ * Billing data item
  *
- * @method string getZoneId() Obtain Zone ID.
- * @method void setZoneId(string $ZoneId) Set Zone ID.
- * @method string getGroupId() Obtain Origin server group ID. This parameter is required.
- * @method void setGroupId(string $GroupId) Set Origin server group ID. This parameter is required.
+ * @method string getTime() Obtain Time.
+ * @method void setTime(string $Time) Set Time.
+ * @method integer getValue() Obtain Value.
+ * @method void setValue(integer $Value) Set Value.
  */
-class DeleteOriginGroupRequest extends AbstractModel
+class BillingData extends AbstractModel
 {
     /**
-     * @var string Zone ID.
+     * @var string Time.
      */
-    public $ZoneId;
+    public $Time;
 
     /**
-     * @var string Origin server group ID. This parameter is required.
+     * @var integer Value.
      */
-    public $GroupId;
+    public $Value;
 
     /**
-     * @param string $ZoneId Zone ID.
-     * @param string $GroupId Origin server group ID. This parameter is required.
+     * @param string $Time Time.
+     * @param integer $Value Value.
      */
     function __construct()
     {
@@ -54,12 +54,12 @@ class DeleteOriginGroupRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ZoneId",$param) and $param["ZoneId"] !== null) {
-            $this->ZoneId = $param["ZoneId"];
+        if (array_key_exists("Time",$param) and $param["Time"] !== null) {
+            $this->Time = $param["Time"];
         }
 
-        if (array_key_exists("GroupId",$param) and $param["GroupId"] !== null) {
-            $this->GroupId = $param["GroupId"];
+        if (array_key_exists("Value",$param) and $param["Value"] !== null) {
+            $this->Value = $param["Value"];
         }
     }
 }

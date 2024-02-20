@@ -18,14 +18,16 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DeleteOriginGroup request structure.
+ * DeleteL4ProxyRules request structure.
  *
  * @method string getZoneId() Obtain Zone ID.
  * @method void setZoneId(string $ZoneId) Set Zone ID.
- * @method string getGroupId() Obtain Origin server group ID. This parameter is required.
- * @method void setGroupId(string $GroupId) Set Origin server group ID. This parameter is required.
+ * @method string getProxyId() Obtain Layer 4 proxy instance ID.
+ * @method void setProxyId(string $ProxyId) Set Layer 4 proxy instance ID.
+ * @method array getRuleIds() Obtain List of forwarding rule IDs. It supports up to 200 forwarding rules at a time.
+ * @method void setRuleIds(array $RuleIds) Set List of forwarding rule IDs. It supports up to 200 forwarding rules at a time.
  */
-class DeleteOriginGroupRequest extends AbstractModel
+class DeleteL4ProxyRulesRequest extends AbstractModel
 {
     /**
      * @var string Zone ID.
@@ -33,13 +35,19 @@ class DeleteOriginGroupRequest extends AbstractModel
     public $ZoneId;
 
     /**
-     * @var string Origin server group ID. This parameter is required.
+     * @var string Layer 4 proxy instance ID.
      */
-    public $GroupId;
+    public $ProxyId;
+
+    /**
+     * @var array List of forwarding rule IDs. It supports up to 200 forwarding rules at a time.
+     */
+    public $RuleIds;
 
     /**
      * @param string $ZoneId Zone ID.
-     * @param string $GroupId Origin server group ID. This parameter is required.
+     * @param string $ProxyId Layer 4 proxy instance ID.
+     * @param array $RuleIds List of forwarding rule IDs. It supports up to 200 forwarding rules at a time.
      */
     function __construct()
     {
@@ -58,8 +66,12 @@ class DeleteOriginGroupRequest extends AbstractModel
             $this->ZoneId = $param["ZoneId"];
         }
 
-        if (array_key_exists("GroupId",$param) and $param["GroupId"] !== null) {
-            $this->GroupId = $param["GroupId"];
+        if (array_key_exists("ProxyId",$param) and $param["ProxyId"] !== null) {
+            $this->ProxyId = $param["ProxyId"];
+        }
+
+        if (array_key_exists("RuleIds",$param) and $param["RuleIds"] !== null) {
+            $this->RuleIds = $param["RuleIds"];
         }
     }
 }

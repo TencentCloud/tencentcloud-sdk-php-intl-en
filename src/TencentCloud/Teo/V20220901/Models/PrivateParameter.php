@@ -18,29 +18,29 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Private authentication parameters of object storage origins
+ * Private authentication parameters for Cloud Object Storage origin server
  *
- * @method string getName() Obtain The parameter name. Values
-<li>`AccessKeyId`: Access Key ID</li>
-<li>`SecretAccessKey`: Secret Access Key</li>
-<li>`SignatureVersion`: Signature version. Values: `v2`, `v4`</li>
-<li>`Region`: Region of the storage bucket</li>
- * @method void setName(string $Name) Set The parameter name. Values
-<li>`AccessKeyId`: Access Key ID</li>
-<li>`SecretAccessKey`: Secret Access Key</li>
-<li>`SignatureVersion`: Signature version. Values: `v2`, `v4`</li>
-<li>`Region`: Region of the storage bucket</li>
+ * @method string getName() Obtain The name of the private authentication parameter. Valid values:
+<li>AccessKeyId: Access Key ID for authentication;</li>
+<li>SecretAccessKey: Secret Access Key for authentication;</li>
+<li>SignatureVersion: Authentication version, v2 or v4;</li>
+<li>Region: The region of the storage bucket.</li>
+ * @method void setName(string $Name) Set The name of the private authentication parameter. Valid values:
+<li>AccessKeyId: Access Key ID for authentication;</li>
+<li>SecretAccessKey: Secret Access Key for authentication;</li>
+<li>SignatureVersion: Authentication version, v2 or v4;</li>
+<li>Region: The region of the storage bucket.</li>
  * @method string getValue() Obtain The parameter value.
  * @method void setValue(string $Value) Set The parameter value.
  */
 class PrivateParameter extends AbstractModel
 {
     /**
-     * @var string The parameter name. Values
-<li>`AccessKeyId`: Access Key ID</li>
-<li>`SecretAccessKey`: Secret Access Key</li>
-<li>`SignatureVersion`: Signature version. Values: `v2`, `v4`</li>
-<li>`Region`: Region of the storage bucket</li>
+     * @var string The name of the private authentication parameter. Valid values:
+<li>AccessKeyId: Access Key ID for authentication;</li>
+<li>SecretAccessKey: Secret Access Key for authentication;</li>
+<li>SignatureVersion: Authentication version, v2 or v4;</li>
+<li>Region: The region of the storage bucket.</li>
      */
     public $Name;
 
@@ -50,11 +50,11 @@ class PrivateParameter extends AbstractModel
     public $Value;
 
     /**
-     * @param string $Name The parameter name. Values
-<li>`AccessKeyId`: Access Key ID</li>
-<li>`SecretAccessKey`: Secret Access Key</li>
-<li>`SignatureVersion`: Signature version. Values: `v2`, `v4`</li>
-<li>`Region`: Region of the storage bucket</li>
+     * @param string $Name The name of the private authentication parameter. Valid values:
+<li>AccessKeyId: Access Key ID for authentication;</li>
+<li>SecretAccessKey: Secret Access Key for authentication;</li>
+<li>SignatureVersion: Authentication version, v2 or v4;</li>
+<li>Region: The region of the storage bucket.</li>
      * @param string $Value The parameter value.
      */
     function __construct()

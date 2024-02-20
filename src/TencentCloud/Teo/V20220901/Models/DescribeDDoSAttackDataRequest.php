@@ -34,8 +34,8 @@ use TencentCloud\Common\AbstractModel;
 <li>`ddos_attackMaxPackageRate`: Peak attack packet rate;</li>
 <li>`ddos_attackBandwidth`: Time-series data of attack bandwidth;</li>
 <li>`ddos_attackPackageRate`: Time-series data of attack packet rate.</li>
- * @method array getZoneIds() Obtain List of sites to be queried. All sites will be selected if this field is not specified.
- * @method void setZoneIds(array $ZoneIds) Set List of sites to be queried. All sites will be selected if this field is not specified.
+ * @method array getZoneIds() Obtain ZoneId set. This parameter is required.
+ * @method void setZoneIds(array $ZoneIds) Set ZoneId set. This parameter is required.
  * @method array getPolicyIds() Obtain IDs of DDoS policies to be queried. All policies will be selected if this field is not specified.
  * @method void setPolicyIds(array $PolicyIds) Set IDs of DDoS policies to be queried. All policies will be selected if this field is not specified.
  * @method string getInterval() Obtain The query granularity. Values:
@@ -79,7 +79,7 @@ class DescribeDDoSAttackDataRequest extends AbstractModel
     public $MetricNames;
 
     /**
-     * @var array List of sites to be queried. All sites will be selected if this field is not specified.
+     * @var array ZoneId set. This parameter is required.
      */
     public $ZoneIds;
 
@@ -113,7 +113,7 @@ class DescribeDDoSAttackDataRequest extends AbstractModel
 <li>`ddos_attackMaxPackageRate`: Peak attack packet rate;</li>
 <li>`ddos_attackBandwidth`: Time-series data of attack bandwidth;</li>
 <li>`ddos_attackPackageRate`: Time-series data of attack packet rate.</li>
-     * @param array $ZoneIds List of sites to be queried. All sites will be selected if this field is not specified.
+     * @param array $ZoneIds ZoneId set. This parameter is required.
      * @param array $PolicyIds IDs of DDoS policies to be queried. All policies will be selected if this field is not specified.
      * @param string $Interval The query granularity. Values:
 <li>`min`: 1 minute;</li>

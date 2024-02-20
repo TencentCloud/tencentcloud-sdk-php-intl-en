@@ -44,12 +44,8 @@ Instance name when `ProxyType=instance`.
  * @method void setAccelerateType(integer $AccelerateType) Set Whether to enable acceleration. Values:
 <li>`0`: Disable acceleration.</li>
 <li>`1`: Enable acceleration.</li>
- * @method string getProxyType() Obtain The proxy type. Values:
-<li>`hostname`: The proxy is created by subdomain name.</li>
-<li>`instance`: The proxy is created by instance.</li>If not specified, this field uses the default value `instance`.
- * @method void setProxyType(string $ProxyType) Set The proxy type. Values:
-<li>`hostname`: The proxy is created by subdomain name.</li>
-<li>`instance`: The proxy is created by instance.</li>If not specified, this field uses the default value `instance`.
+ * @method string getProxyType() Obtain Layer 4 proxy mode, with value: <li>instance: instance mode.</li>If not specified, the default value instance will be used.
+ * @method void setProxyType(string $ProxyType) Set Layer 4 proxy mode, with value: <li>instance: instance mode.</li>If not specified, the default value instance will be used.
  * @method integer getSessionPersistTime() Obtain The session persistence duration. Value range: 30-3600 (in seconds).
 If not specified, this field uses the default value 600.
  * @method void setSessionPersistTime(integer $SessionPersistTime) Set The session persistence duration. Value range: 30-3600 (in seconds).
@@ -100,9 +96,7 @@ Instance name when `ProxyType=instance`.
     public $AccelerateType;
 
     /**
-     * @var string The proxy type. Values:
-<li>`hostname`: The proxy is created by subdomain name.</li>
-<li>`instance`: The proxy is created by instance.</li>If not specified, this field uses the default value `instance`.
+     * @var string Layer 4 proxy mode, with value: <li>instance: instance mode.</li>If not specified, the default value instance will be used.
      */
     public $ProxyType;
 
@@ -142,9 +136,7 @@ Instance name when `ProxyType=instance`.
      * @param integer $AccelerateType Whether to enable acceleration. Values:
 <li>`0`: Disable acceleration.</li>
 <li>`1`: Enable acceleration.</li>
-     * @param string $ProxyType The proxy type. Values:
-<li>`hostname`: The proxy is created by subdomain name.</li>
-<li>`instance`: The proxy is created by instance.</li>If not specified, this field uses the default value `instance`.
+     * @param string $ProxyType Layer 4 proxy mode, with value: <li>instance: instance mode.</li>If not specified, the default value instance will be used.
      * @param integer $SessionPersistTime The session persistence duration. Value range: 30-3600 (in seconds).
 If not specified, this field uses the default value 600.
      * @param Ipv6 $Ipv6 Ipv6 access configuration. 

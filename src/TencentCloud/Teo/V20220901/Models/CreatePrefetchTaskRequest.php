@@ -22,12 +22,12 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getZoneId() Obtain ID of the site.
  * @method void setZoneId(string $ZoneId) Set ID of the site.
- * @method array getTargets() Obtain Resources to be pre-warmed, for example: 
-http://www.example.com/example.txt 
-Note: The number of submitted tasks is limited by the quota of the plan. For details, see [Billing Overview](https://intl.cloud.tencent.com/document/product/1552/77380?from_cn_redirect=1).
- * @method void setTargets(array $Targets) Set Resources to be pre-warmed, for example: 
-http://www.example.com/example.txt 
-Note: The number of submitted tasks is limited by the quota of the plan. For details, see [Billing Overview](https://intl.cloud.tencent.com/document/product/1552/77380?from_cn_redirect=1).
+ * @method array getTargets() Obtain List of resources to be preheated. Each element format is similar to the following:
+http://www.example.com/example.txt. The parameter value is currently required.
+Note: The number of tasks that can be submitted is limited by the quota of a billing package. For details, see [Billing Overview] (https://intl.cloud.tencent.com/document/product/1552/77380?from_cn_redirect=1).
+ * @method void setTargets(array $Targets) Set List of resources to be preheated. Each element format is similar to the following:
+http://www.example.com/example.txt. The parameter value is currently required.
+Note: The number of tasks that can be submitted is limited by the quota of a billing package. For details, see [Billing Overview] (https://intl.cloud.tencent.com/document/product/1552/77380?from_cn_redirect=1).
  * @method boolean getEncodeUrl() Obtain Whether to encode a URL according to RFC3986. Enable this field when the URL contains non-ASCII characters.
  * @method void setEncodeUrl(boolean $EncodeUrl) Set Whether to encode a URL according to RFC3986. Enable this field when the URL contains non-ASCII characters.
  * @method array getHeaders() Obtain HTTP header information
@@ -41,9 +41,9 @@ class CreatePrefetchTaskRequest extends AbstractModel
     public $ZoneId;
 
     /**
-     * @var array Resources to be pre-warmed, for example: 
-http://www.example.com/example.txt 
-Note: The number of submitted tasks is limited by the quota of the plan. For details, see [Billing Overview](https://intl.cloud.tencent.com/document/product/1552/77380?from_cn_redirect=1).
+     * @var array List of resources to be preheated. Each element format is similar to the following:
+http://www.example.com/example.txt. The parameter value is currently required.
+Note: The number of tasks that can be submitted is limited by the quota of a billing package. For details, see [Billing Overview] (https://intl.cloud.tencent.com/document/product/1552/77380?from_cn_redirect=1).
      */
     public $Targets;
 
@@ -59,9 +59,9 @@ Note: The number of submitted tasks is limited by the quota of the plan. For det
 
     /**
      * @param string $ZoneId ID of the site.
-     * @param array $Targets Resources to be pre-warmed, for example: 
-http://www.example.com/example.txt 
-Note: The number of submitted tasks is limited by the quota of the plan. For details, see [Billing Overview](https://intl.cloud.tencent.com/document/product/1552/77380?from_cn_redirect=1).
+     * @param array $Targets List of resources to be preheated. Each element format is similar to the following:
+http://www.example.com/example.txt. The parameter value is currently required.
+Note: The number of tasks that can be submitted is limited by the quota of a billing package. For details, see [Billing Overview] (https://intl.cloud.tencent.com/document/product/1552/77380?from_cn_redirect=1).
      * @param boolean $EncodeUrl Whether to encode a URL according to RFC3986. Enable this field when the URL contains non-ASCII characters.
      * @param array $Headers HTTP header information
      */

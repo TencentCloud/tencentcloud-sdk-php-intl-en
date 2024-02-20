@@ -36,18 +36,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPort(array $Port) Set The access port, which can be:
 <li>A single port, such as 80</li>
 <li>A port range, such as 81-90</li>
- * @method string getOriginType() Obtain The origin type. Values:
-<li>`custom`: Specified origins</li>
-<li>`origins`: Origin group</li>
- * @method void setOriginType(string $OriginType) Set The origin type. Values:
-<li>`custom`: Specified origins</li>
-<li>`origins`: Origin group</li>
- * @method array getOriginValue() Obtain Origin server information:
-<li>When `OriginType=custom`, it indicates one or more origin servers, such as ["8.8.8.8","9.9.9.9"] or ["test.com"].</li>
-<li>When `OriginType=origins`, it indicates an origin group ID, such as ["origin-537f5b41-162a-11ed-abaa-525400c5da15"].</li>
- * @method void setOriginValue(array $OriginValue) Set Origin server information:
-<li>When `OriginType=custom`, it indicates one or more origin servers, such as ["8.8.8.8","9.9.9.9"] or ["test.com"].</li>
-<li>When `OriginType=origins`, it indicates an origin group ID, such as ["origin-537f5b41-162a-11ed-abaa-525400c5da15"].</li>
+ * @method string getOriginType() Obtain Origin server type. Valid values:<li>custom: Manually added;</li>
+<li>loadbalancer: Cloud Load Balancer;</li><li>origins: Origin server group.</li>
+ * @method void setOriginType(string $OriginType) Set Origin server type. Valid values:<li>custom: Manually added;</li>
+<li>loadbalancer: Cloud Load Balancer;</li><li>origins: Origin server group.</li>
+ * @method array getOriginValue() Obtain Details of the origin server:<li>When OriginType is custom, it indicates one or more origin servers, such as ["8.8.8.8","9.9.9.9"] or OriginValue=["test.com"];</li><li>When OriginType is loadbalancer, it indicates a single Cloud Load Balancer, such as ["lb-xdffsfasdfs"];</li><li>When OriginType is origins, it requires one and only one element, which represents an origin server group ID, such as ["origin-537f5b41-162a-11ed-abaa-525400c5da15"].</li>
+ * @method void setOriginValue(array $OriginValue) Set Details of the origin server:<li>When OriginType is custom, it indicates one or more origin servers, such as ["8.8.8.8","9.9.9.9"] or OriginValue=["test.com"];</li><li>When OriginType is loadbalancer, it indicates a single Cloud Load Balancer, such as ["lb-xdffsfasdfs"];</li><li>When OriginType is origins, it requires one and only one element, which represents an origin server group ID, such as ["origin-537f5b41-162a-11ed-abaa-525400c5da15"].</li>
  * @method string getForwardClientIp() Obtain Passes the client IP. Values:
 <li>`TOA`: Pass the client IP via TOA (available only when `Proto=TCP`).</li>
 <li>`PPV1`: Pass the client IP via Proxy Protocol V1 (available only when `Proto=TCP`).</li>
@@ -102,16 +96,13 @@ class CreateApplicationProxyRuleRequest extends AbstractModel
     public $Port;
 
     /**
-     * @var string The origin type. Values:
-<li>`custom`: Specified origins</li>
-<li>`origins`: Origin group</li>
+     * @var string Origin server type. Valid values:<li>custom: Manually added;</li>
+<li>loadbalancer: Cloud Load Balancer;</li><li>origins: Origin server group.</li>
      */
     public $OriginType;
 
     /**
-     * @var array Origin server information:
-<li>When `OriginType=custom`, it indicates one or more origin servers, such as ["8.8.8.8","9.9.9.9"] or ["test.com"].</li>
-<li>When `OriginType=origins`, it indicates an origin group ID, such as ["origin-537f5b41-162a-11ed-abaa-525400c5da15"].</li>
+     * @var array Details of the origin server:<li>When OriginType is custom, it indicates one or more origin servers, such as ["8.8.8.8","9.9.9.9"] or OriginValue=["test.com"];</li><li>When OriginType is loadbalancer, it indicates a single Cloud Load Balancer, such as ["lb-xdffsfasdfs"];</li><li>When OriginType is origins, it requires one and only one element, which represents an origin server group ID, such as ["origin-537f5b41-162a-11ed-abaa-525400c5da15"].</li>
      */
     public $OriginValue;
 
@@ -157,12 +148,9 @@ class CreateApplicationProxyRuleRequest extends AbstractModel
      * @param array $Port The access port, which can be:
 <li>A single port, such as 80</li>
 <li>A port range, such as 81-90</li>
-     * @param string $OriginType The origin type. Values:
-<li>`custom`: Specified origins</li>
-<li>`origins`: Origin group</li>
-     * @param array $OriginValue Origin server information:
-<li>When `OriginType=custom`, it indicates one or more origin servers, such as ["8.8.8.8","9.9.9.9"] or ["test.com"].</li>
-<li>When `OriginType=origins`, it indicates an origin group ID, such as ["origin-537f5b41-162a-11ed-abaa-525400c5da15"].</li>
+     * @param string $OriginType Origin server type. Valid values:<li>custom: Manually added;</li>
+<li>loadbalancer: Cloud Load Balancer;</li><li>origins: Origin server group.</li>
+     * @param array $OriginValue Details of the origin server:<li>When OriginType is custom, it indicates one or more origin servers, such as ["8.8.8.8","9.9.9.9"] or OriginValue=["test.com"];</li><li>When OriginType is loadbalancer, it indicates a single Cloud Load Balancer, such as ["lb-xdffsfasdfs"];</li><li>When OriginType is origins, it requires one and only one element, which represents an origin server group ID, such as ["origin-537f5b41-162a-11ed-abaa-525400c5da15"].</li>
      * @param string $ForwardClientIp Passes the client IP. Values:
 <li>`TOA`: Pass the client IP via TOA (available only when `Proto=TCP`).</li>
 <li>`PPV1`: Pass the client IP via Proxy Protocol V1 (available only when `Proto=TCP`).</li>

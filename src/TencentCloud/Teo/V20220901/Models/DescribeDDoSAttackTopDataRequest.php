@@ -38,8 +38,8 @@ use TencentCloud\Common\AbstractModel;
 <li>`ddos_attackNum_sregion`: Rank attacker regions by the number of attacks.</li>
 <li>`ddos_attackFlux_sip`: Rank attacker IPs by the number of attacks.</li>
 <li>`ddos_attackFlux_sregion`: Rank attacker regions by the number of attacks.</li>
- * @method array getZoneIds() Obtain List of site IDs to be queried. All sites will be selected if this field is not specified.
- * @method void setZoneIds(array $ZoneIds) Set List of site IDs to be queried. All sites will be selected if this field is not specified.
+ * @method array getZoneIds() Obtain Site ID set. This parameter is required.
+ * @method void setZoneIds(array $ZoneIds) Set Site ID set. This parameter is required.
  * @method array getPolicyIds() Obtain The list of DDoS policy IDs to be specified. All policies will be selected if this field is not specified.
  * @method void setPolicyIds(array $PolicyIds) Set The list of DDoS policy IDs to be specified. All policies will be selected if this field is not specified.
  * @method string getAttackType() Obtain The attack type. Values:
@@ -93,7 +93,7 @@ class DescribeDDoSAttackTopDataRequest extends AbstractModel
     public $MetricName;
 
     /**
-     * @var array List of site IDs to be queried. All sites will be selected if this field is not specified.
+     * @var array Site ID set. This parameter is required.
      */
     public $ZoneIds;
 
@@ -145,7 +145,7 @@ class DescribeDDoSAttackTopDataRequest extends AbstractModel
 <li>`ddos_attackNum_sregion`: Rank attacker regions by the number of attacks.</li>
 <li>`ddos_attackFlux_sip`: Rank attacker IPs by the number of attacks.</li>
 <li>`ddos_attackFlux_sregion`: Rank attacker regions by the number of attacks.</li>
-     * @param array $ZoneIds List of site IDs to be queried. All sites will be selected if this field is not specified.
+     * @param array $ZoneIds Site ID set. This parameter is required.
      * @param array $PolicyIds The list of DDoS policy IDs to be specified. All policies will be selected if this field is not specified.
      * @param string $AttackType The attack type. Values:
 <li>`flood`: Flood;</li>

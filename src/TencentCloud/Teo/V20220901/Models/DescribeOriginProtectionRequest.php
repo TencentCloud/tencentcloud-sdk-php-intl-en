@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeOriginProtection request structure.
  *
- * @method array getZoneIds() Obtain List of sites to be queried. All sites will be selected if this field is not specified.
- * @method void setZoneIds(array $ZoneIds) Set List of sites to be queried. All sites will be selected if this field is not specified.
+ * @method array getZoneIds() Obtain Set of site IDs to be queried. This is a required parameter.
+ * @method void setZoneIds(array $ZoneIds) Set Set of site IDs to be queried. This is a required parameter.
  * @method array getFilters() Obtain Filter conditions. Each filter condition can have up to 20 entries. See below for details:
 <li>`need-update`:<br>   Whether <strong>the intermediate IP update is needed for the site</strong>.<br>   Type: String<br>   Required: No<br>   Values:<br>   `true`: Update needed.<br>   `false`: Update not needed.<br></li>
 <li>`plan-support`:<br>   Whether <strong>origin protection is supported in the plan</strong>.<br>   Type: String<br>   Required: No<br>   Values:<br>   `true`: Origin protection supported.<br>   `false`: Origin protection not supported.<br></li>
@@ -36,7 +36,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeOriginProtectionRequest extends AbstractModel
 {
     /**
-     * @var array List of sites to be queried. All sites will be selected if this field is not specified.
+     * @var array Set of site IDs to be queried. This is a required parameter.
      */
     public $ZoneIds;
 
@@ -58,7 +58,7 @@ class DescribeOriginProtectionRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @param array $ZoneIds List of sites to be queried. All sites will be selected if this field is not specified.
+     * @param array $ZoneIds Set of site IDs to be queried. This is a required parameter.
      * @param array $Filters Filter conditions. Each filter condition can have up to 20 entries. See below for details:
 <li>`need-update`:<br>   Whether <strong>the intermediate IP update is needed for the site</strong>.<br>   Type: String<br>   Required: No<br>   Values:<br>   `true`: Update needed.<br>   `false`: Update not needed.<br></li>
 <li>`plan-support`:<br>   Whether <strong>origin protection is supported in the plan</strong>.<br>   Type: String<br>   Required: No<br>   Values:<br>   `true`: Origin protection supported.<br>   `false`: Origin protection not supported.<br></li>

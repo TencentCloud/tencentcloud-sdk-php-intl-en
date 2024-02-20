@@ -20,6 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeDefaultCertificates request structure.
  *
+ * @method string getZoneId() Obtain Zone ID.
+ * @method void setZoneId(string $ZoneId) Set Zone ID.
  * @method array getFilters() Obtain Filter criteria. Each filter criteria can have up to 5 entries.
 <li>`zone-id`: <br>Filter by <strong>site ID</strong>, such as zone-xxx<br>   Type: String<br>   Required: No</li>
  * @method void setFilters(array $Filters) Set Filter criteria. Each filter criteria can have up to 5 entries.
@@ -31,6 +33,11 @@ use TencentCloud\Common\AbstractModel;
  */
 class DescribeDefaultCertificatesRequest extends AbstractModel
 {
+    /**
+     * @var string Zone ID.
+     */
+    public $ZoneId;
+
     /**
      * @var array Filter criteria. Each filter criteria can have up to 5 entries.
 <li>`zone-id`: <br>Filter by <strong>site ID</strong>, such as zone-xxx<br>   Type: String<br>   Required: No</li>
@@ -48,6 +55,7 @@ class DescribeDefaultCertificatesRequest extends AbstractModel
     public $Limit;
 
     /**
+     * @param string $ZoneId Zone ID.
      * @param array $Filters Filter criteria. Each filter criteria can have up to 5 entries.
 <li>`zone-id`: <br>Filter by <strong>site ID</strong>, such as zone-xxx<br>   Type: String<br>   Required: No</li>
      * @param integer $Offset Offset for paginated queries. Default value: `0`
@@ -66,6 +74,10 @@ class DescribeDefaultCertificatesRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("ZoneId",$param) and $param["ZoneId"] !== null) {
+            $this->ZoneId = $param["ZoneId"];
+        }
+
         if (array_key_exists("Filters",$param) and $param["Filters"] !== null) {
             $this->Filters = [];
             foreach ($param["Filters"] as $key => $value){

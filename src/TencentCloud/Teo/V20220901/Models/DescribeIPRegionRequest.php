@@ -18,28 +18,20 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DeleteOriginGroup request structure.
+ * DescribeIPRegion request structure.
  *
- * @method string getZoneId() Obtain Zone ID.
- * @method void setZoneId(string $ZoneId) Set Zone ID.
- * @method string getGroupId() Obtain Origin server group ID. This parameter is required.
- * @method void setGroupId(string $GroupId) Set Origin server group ID. This parameter is required.
+ * @method array getIPs() Obtain List of IPs to be queried, supporting IPV4 and IPV6. Up to 100 can be queried.
+ * @method void setIPs(array $IPs) Set List of IPs to be queried, supporting IPV4 and IPV6. Up to 100 can be queried.
  */
-class DeleteOriginGroupRequest extends AbstractModel
+class DescribeIPRegionRequest extends AbstractModel
 {
     /**
-     * @var string Zone ID.
+     * @var array List of IPs to be queried, supporting IPV4 and IPV6. Up to 100 can be queried.
      */
-    public $ZoneId;
+    public $IPs;
 
     /**
-     * @var string Origin server group ID. This parameter is required.
-     */
-    public $GroupId;
-
-    /**
-     * @param string $ZoneId Zone ID.
-     * @param string $GroupId Origin server group ID. This parameter is required.
+     * @param array $IPs List of IPs to be queried, supporting IPV4 and IPV6. Up to 100 can be queried.
      */
     function __construct()
     {
@@ -54,12 +46,8 @@ class DeleteOriginGroupRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ZoneId",$param) and $param["ZoneId"] !== null) {
-            $this->ZoneId = $param["ZoneId"];
-        }
-
-        if (array_key_exists("GroupId",$param) and $param["GroupId"] !== null) {
-            $this->GroupId = $param["GroupId"];
+        if (array_key_exists("IPs",$param) and $param["IPs"] !== null) {
+            $this->IPs = $param["IPs"];
         }
     }
 }

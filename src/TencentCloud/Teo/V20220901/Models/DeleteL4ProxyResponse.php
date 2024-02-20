@@ -18,28 +18,20 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DeleteOriginGroup request structure.
+ * DeleteL4Proxy response structure.
  *
- * @method string getZoneId() Obtain Zone ID.
- * @method void setZoneId(string $ZoneId) Set Zone ID.
- * @method string getGroupId() Obtain Origin server group ID. This parameter is required.
- * @method void setGroupId(string $GroupId) Set Origin server group ID. This parameter is required.
+ * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
-class DeleteOriginGroupRequest extends AbstractModel
+class DeleteL4ProxyResponse extends AbstractModel
 {
     /**
-     * @var string Zone ID.
+     * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
-    public $ZoneId;
+    public $RequestId;
 
     /**
-     * @var string Origin server group ID. This parameter is required.
-     */
-    public $GroupId;
-
-    /**
-     * @param string $ZoneId Zone ID.
-     * @param string $GroupId Origin server group ID. This parameter is required.
+     * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
     {
@@ -54,12 +46,8 @@ class DeleteOriginGroupRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ZoneId",$param) and $param["ZoneId"] !== null) {
-            $this->ZoneId = $param["ZoneId"];
-        }
-
-        if (array_key_exists("GroupId",$param) and $param["GroupId"] !== null) {
-            $this->GroupId = $param["GroupId"];
+        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
+            $this->RequestId = $param["RequestId"];
         }
     }
 }

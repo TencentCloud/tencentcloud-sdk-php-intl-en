@@ -74,6 +74,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setZoneNumber(integer $ZoneNumber) Set The sites that are associated with the current resources.
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getType() Obtain Resource tag type. Valid values:
+<li>vodeo: vodeo resource.</li>
+ * @method void setType(string $Type) Set Resource tag type. Valid values:
+<li>vodeo: vodeo resource.</li>
  */
 class Resource extends AbstractModel
 {
@@ -153,6 +157,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $ZoneNumber;
 
     /**
+     * @var string Resource tag type. Valid values:
+<li>vodeo: vodeo resource.</li>
+     */
+    public $Type;
+
+    /**
      * @param string $Id The resource ID.
      * @param integer $PayMode Billing mode
 `0`: Pay-as-you-go
@@ -180,6 +190,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $ZoneNumber The sites that are associated with the current resources.
 Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $Type Resource tag type. Valid values:
+<li>vodeo: vodeo resource.</li>
      */
     function __construct()
     {
@@ -245,6 +257,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("ZoneNumber",$param) and $param["ZoneNumber"] !== null) {
             $this->ZoneNumber = $param["ZoneNumber"];
+        }
+
+        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
+            $this->Type = $param["Type"];
         }
     }
 }

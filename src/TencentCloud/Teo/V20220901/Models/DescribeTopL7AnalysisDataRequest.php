@@ -70,8 +70,8 @@ use TencentCloud\Common\AbstractModel;
 
  * @method array getZoneIds() Obtain ZoneId set. This parameter is required.
  * @method void setZoneIds(array $ZoneIds) Set ZoneId set. This parameter is required.
- * @method integer getLimit() Obtain Queries the top n rows of data. Maximum value: 1000. Top 10 rows of data will be queried if this field is not specified.
- * @method void setLimit(integer $Limit) Set Queries the top n rows of data. Maximum value: 1000. Top 10 rows of data will be queried if this field is not specified.
+ * @method integer getLimit() Obtain Queries the top N data entries. Maximum value: 1000. Top 10 data entries will be queried if this field is not specified.
+ * @method void setLimit(integer $Limit) Set Queries the top N data entries. Maximum value: 1000. Top 10 data entries will be queried if this field is not specified.
  * @method array getFilters() Obtain Filters
 <li>`country`<br>Filter by the <strong> Country/Region</strong>. The country/region follows <a href="https://baike.baidu.com/item/ISO%203166-1/5269555">ISO 3166</a> specification. </li>
 <li>`province`<br>Filter by the <strong>specified province name</strong>. It’s only available when `Area` is `mainland`.</li>
@@ -171,7 +171,7 @@ class DescribeTopL7AnalysisDataRequest extends AbstractModel
     public $ZoneIds;
 
     /**
-     * @var integer Queries the top n rows of data. Maximum value: 1000. Top 10 rows of data will be queried if this field is not specified.
+     * @var integer Queries the top N data entries. Maximum value: 1000. Top 10 data entries will be queried if this field is not specified.
      */
     public $Limit;
 
@@ -240,7 +240,7 @@ class DescribeTopL7AnalysisDataRequest extends AbstractModel
 <li>`l7Flow_request_us_os`: Query requests by OS.</li>
 
      * @param array $ZoneIds ZoneId set. This parameter is required.
-     * @param integer $Limit Queries the top n rows of data. Maximum value: 1000. Top 10 rows of data will be queried if this field is not specified.
+     * @param integer $Limit Queries the top N data entries. Maximum value: 1000. Top 10 data entries will be queried if this field is not specified.
      * @param array $Filters Filters
 <li>`country`<br>Filter by the <strong> Country/Region</strong>. The country/region follows <a href="https://baike.baidu.com/item/ISO%203166-1/5269555">ISO 3166</a> specification. </li>
 <li>`province`<br>Filter by the <strong>specified province name</strong>. It’s only available when `Area` is `mainland`.</li>

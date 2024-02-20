@@ -20,20 +20,20 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeDDoSAttackEvent request structure.
  *
- * @method string getStartTime() Obtain Start time of the query period.
- * @method void setStartTime(string $StartTime) Set Start time of the query period.
- * @method string getEndTime() Obtain End time of the query period.
- * @method void setEndTime(string $EndTime) Set End time of the query period.
+ * @method string getStartTime() Obtain Start time. Time range: 30 days.
+ * @method void setStartTime(string $StartTime) Set Start time. Time range: 30 days.
+ * @method string getEndTime() Obtain End time. Time range: 30 days.
+ * @method void setEndTime(string $EndTime) Set End time. Time range: 30 days.
  * @method array getPolicyIds() Obtain List of DDoS policy IDs. All policies are selected if this field is not specified.
  * @method void setPolicyIds(array $PolicyIds) Set List of DDoS policy IDs. All policies are selected if this field is not specified.
- * @method array getZoneIds() Obtain (Required) List of sites. No query results are returned if this field is not specified.
- * @method void setZoneIds(array $ZoneIds) Set (Required) List of sites. No query results are returned if this field is not specified.
+ * @method array getZoneIds() Obtain ZoneId set. This parameter is required.
+ * @method void setZoneIds(array $ZoneIds) Set ZoneId set. This parameter is required.
  * @method integer getLimit() Obtain Limit on paginated queries. Default value: 20. Maximum value: 1000.
  * @method void setLimit(integer $Limit) Set Limit on paginated queries. Default value: 20. Maximum value: 1000.
  * @method integer getOffset() Obtain The page offset. Default value: 0.
  * @method void setOffset(integer $Offset) Set The page offset. Default value: 0.
- * @method boolean getShowDetail() Obtain Whether to display the details.
- * @method void setShowDetail(boolean $ShowDetail) Set Whether to display the details.
+ * @method boolean getShowDetail() Obtain Parameter to show attack details. If it is configured as false, only the number of attacks is returned without details. If it is configured as true, attack details are returned.
+ * @method void setShowDetail(boolean $ShowDetail) Set Parameter to show attack details. If it is configured as false, only the number of attacks is returned without details. If it is configured as true, attack details are returned.
  * @method string getArea() Obtain Geolocation scope. Values: 
 <li>`overseas`: Regions outside the Chinese mainland</li>
 <li>`mainland`: Chinese mainland</li>
@@ -58,12 +58,12 @@ use TencentCloud\Common\AbstractModel;
 class DescribeDDoSAttackEventRequest extends AbstractModel
 {
     /**
-     * @var string Start time of the query period.
+     * @var string Start time. Time range: 30 days.
      */
     public $StartTime;
 
     /**
-     * @var string End time of the query period.
+     * @var string End time. Time range: 30 days.
      */
     public $EndTime;
 
@@ -73,7 +73,7 @@ class DescribeDDoSAttackEventRequest extends AbstractModel
     public $PolicyIds;
 
     /**
-     * @var array (Required) List of sites. No query results are returned if this field is not specified.
+     * @var array ZoneId set. This parameter is required.
      */
     public $ZoneIds;
 
@@ -88,7 +88,7 @@ class DescribeDDoSAttackEventRequest extends AbstractModel
     public $Offset;
 
     /**
-     * @var boolean Whether to display the details.
+     * @var boolean Parameter to show attack details. If it is configured as false, only the number of attacks is returned without details. If it is configured as true, attack details are returned.
      */
     public $ShowDetail;
 
@@ -115,13 +115,13 @@ class DescribeDDoSAttackEventRequest extends AbstractModel
     public $OrderType;
 
     /**
-     * @param string $StartTime Start time of the query period.
-     * @param string $EndTime End time of the query period.
+     * @param string $StartTime Start time. Time range: 30 days.
+     * @param string $EndTime End time. Time range: 30 days.
      * @param array $PolicyIds List of DDoS policy IDs. All policies are selected if this field is not specified.
-     * @param array $ZoneIds (Required) List of sites. No query results are returned if this field is not specified.
+     * @param array $ZoneIds ZoneId set. This parameter is required.
      * @param integer $Limit Limit on paginated queries. Default value: 20. Maximum value: 1000.
      * @param integer $Offset The page offset. Default value: 0.
-     * @param boolean $ShowDetail Whether to display the details.
+     * @param boolean $ShowDetail Parameter to show attack details. If it is configured as false, only the number of attacks is returned without details. If it is configured as true, attack details are returned.
      * @param string $Area Geolocation scope. Values: 
 <li>`overseas`: Regions outside the Chinese mainland</li>
 <li>`mainland`: Chinese mainland</li>

@@ -20,94 +20,83 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Security configuration
  *
- * @method WafConfig getWafConfig() Obtain The settings of the managed rule. If it is null, the settings that were last configured will be used.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setWafConfig(WafConfig $WafConfig) Set The settings of the managed rule. If it is null, the settings that were last configured will be used.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method RateLimitConfig getRateLimitConfig() Obtain The settings of the rate limiting rule. If it is null, the settings that were last configured will be used.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setRateLimitConfig(RateLimitConfig $RateLimitConfig) Set The settings of the rate limiting rule. If it is null, the settings that were last configured will be used.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method AclConfig getAclConfig() Obtain The settings of the custom rule. If it is null, the settings that were last configured will be used.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setAclConfig(AclConfig $AclConfig) Set The settings of the custom rule. If it is null, the settings that were last configured will be used.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method BotConfig getBotConfig() Obtain The settings of the bot configuration. If it is null, the settings that were last configured will be used.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setBotConfig(BotConfig $BotConfig) Set The settings of the bot configuration. If it is null, the settings that were last configured will be used.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method SwitchConfig getSwitchConfig() Obtain The switch setting of the layer-7 protection. If it is null, the setting that was last configured will be used.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setSwitchConfig(SwitchConfig $SwitchConfig) Set The switch setting of the layer-7 protection. If it is null, the setting that was last configured will be used.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method IpTableConfig getIpTableConfig() Obtain The settings of the basic access control rule. If it is null, the settings that were last configured will be used.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setIpTableConfig(IpTableConfig $IpTableConfig) Set The settings of the basic access control rule. If it is null, the settings that were last configured will be used.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method ExceptConfig getExceptConfig() Obtain The settings of the exception rule. If it is null, the settings that were last configured will be used.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setExceptConfig(ExceptConfig $ExceptConfig) Set The settings of the exception rule. If it is null, the settings that were last configured will be used.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method DropPageConfig getDropPageConfig() Obtain The settings of the custom block page. If it is null, the settings that were last configured will be used.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setDropPageConfig(DropPageConfig $DropPageConfig) Set The settings of the custom block page. If it is null, the settings that were last configured will be used.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method WafConfig getWafConfig() Obtain Managed rule. If the parameter is null or not filled, the configuration last set will be used by default.
+Note: This field may return null, indicating that no valid value can be obtained.
+ * @method void setWafConfig(WafConfig $WafConfig) Set Managed rule. If the parameter is null or not filled, the configuration last set will be used by default.
+Note: This field may return null, indicating that no valid value can be obtained.
+ * @method RateLimitConfig getRateLimitConfig() Obtain Rate limiting. If the parameter is null or not filled, the configuration last set will be used by default.
+Note: This field may return null, indicating that no valid value can be obtained.
+ * @method void setRateLimitConfig(RateLimitConfig $RateLimitConfig) Set Rate limiting. If the parameter is null or not filled, the configuration last set will be used by default.
+Note: This field may return null, indicating that no valid value can be obtained.
+ * @method AclConfig getAclConfig() Obtain Custom rule. If the parameter is null or not filled, the configuration last set will be used by default.
+Note: This field may return null, indicating that no valid value can be obtained.
+ * @method void setAclConfig(AclConfig $AclConfig) Set Custom rule. If the parameter is null or not filled, the configuration last set will be used by default.
+Note: This field may return null, indicating that no valid value can be obtained.
+ * @method BotConfig getBotConfig() Obtain Bot configuration. If the parameter is null or not filled, the configuration last set will be used by default.
+Note: This field may return null, indicating that no valid value can be obtained.
+ * @method void setBotConfig(BotConfig $BotConfig) Set Bot configuration. If the parameter is null or not filled, the configuration last set will be used by default.
+Note: This field may return null, indicating that no valid value can be obtained.
+ * @method SwitchConfig getSwitchConfig() Obtain Switch setting of the 7-layer protection. If the parameter is null or not filled, the configuration last set will be used by default.Note: This field may return null, indicating that no valid value can be obtained.
+ * @method void setSwitchConfig(SwitchConfig $SwitchConfig) Set Switch setting of the 7-layer protection. If the parameter is null or not filled, the configuration last set will be used by default.Note: This field may return null, indicating that no valid value can be obtained.
+ * @method IpTableConfig getIpTableConfig() Obtain Basic access control. If the parameter is null or not filled, the configuration last set will be used by default.
+Note: This field may return null, indicating that no valid value can be obtained.
+ * @method void setIpTableConfig(IpTableConfig $IpTableConfig) Set Basic access control. If the parameter is null or not filled, the configuration last set will be used by default.
+Note: This field may return null, indicating that no valid value can be obtained.
+ * @method ExceptConfig getExceptConfig() Obtain Exception rule configuration. If the parameter is null or not filled, the configuration last set will be used by default.Note: This field may return null, indicating that no valid value can be obtained.
+ * @method void setExceptConfig(ExceptConfig $ExceptConfig) Set Exception rule configuration. If the parameter is null or not filled, the configuration last set will be used by default.Note: This field may return null, indicating that no valid value can be obtained.
+ * @method DropPageConfig getDropPageConfig() Obtain Custom block page settings. If the parameter is null or not filled, the configuration last set will be used by default.Note: This field may return null, indicating that no valid value can be obtained.
+ * @method void setDropPageConfig(DropPageConfig $DropPageConfig) Set Custom block page settings. If the parameter is null or not filled, the configuration last set will be used by default.Note: This field may return null, indicating that no valid value can be obtained.
  * @method TemplateConfig getTemplateConfig() Obtain Security template settings
 Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method void setTemplateConfig(TemplateConfig $TemplateConfig) Set Security template settings
 Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method SlowPostConfig getSlowPostConfig() Obtain Slow attack defense configuration. If it is `null`, the previous setting is used.
-Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method void setSlowPostConfig(SlowPostConfig $SlowPostConfig) Set Slow attack defense configuration. If it is `null`, the previous setting is used.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method SlowPostConfig getSlowPostConfig() Obtain Settings for slow attack defense. If the parameter is null or not filled, the configuration last set will be used by default.Note: This field may return null, indicating that no valid value can be obtained.
+ * @method void setSlowPostConfig(SlowPostConfig $SlowPostConfig) Set Settings for slow attack defense. If the parameter is null or not filled, the configuration last set will be used by default.Note: This field may return null, indicating that no valid value can be obtained.
  */
 class SecurityConfig extends AbstractModel
 {
     /**
-     * @var WafConfig The settings of the managed rule. If it is null, the settings that were last configured will be used.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var WafConfig Managed rule. If the parameter is null or not filled, the configuration last set will be used by default.
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public $WafConfig;
 
     /**
-     * @var RateLimitConfig The settings of the rate limiting rule. If it is null, the settings that were last configured will be used.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var RateLimitConfig Rate limiting. If the parameter is null or not filled, the configuration last set will be used by default.
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public $RateLimitConfig;
 
     /**
-     * @var AclConfig The settings of the custom rule. If it is null, the settings that were last configured will be used.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var AclConfig Custom rule. If the parameter is null or not filled, the configuration last set will be used by default.
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public $AclConfig;
 
     /**
-     * @var BotConfig The settings of the bot configuration. If it is null, the settings that were last configured will be used.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var BotConfig Bot configuration. If the parameter is null or not filled, the configuration last set will be used by default.
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public $BotConfig;
 
     /**
-     * @var SwitchConfig The switch setting of the layer-7 protection. If it is null, the setting that was last configured will be used.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var SwitchConfig Switch setting of the 7-layer protection. If the parameter is null or not filled, the configuration last set will be used by default.Note: This field may return null, indicating that no valid value can be obtained.
      */
     public $SwitchConfig;
 
     /**
-     * @var IpTableConfig The settings of the basic access control rule. If it is null, the settings that were last configured will be used.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var IpTableConfig Basic access control. If the parameter is null or not filled, the configuration last set will be used by default.
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public $IpTableConfig;
 
     /**
-     * @var ExceptConfig The settings of the exception rule. If it is null, the settings that were last configured will be used.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var ExceptConfig Exception rule configuration. If the parameter is null or not filled, the configuration last set will be used by default.Note: This field may return null, indicating that no valid value can be obtained.
      */
     public $ExceptConfig;
 
     /**
-     * @var DropPageConfig The settings of the custom block page. If it is null, the settings that were last configured will be used.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var DropPageConfig Custom block page settings. If the parameter is null or not filled, the configuration last set will be used by default.Note: This field may return null, indicating that no valid value can be obtained.
      */
     public $DropPageConfig;
 
@@ -118,32 +107,27 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     public $TemplateConfig;
 
     /**
-     * @var SlowPostConfig Slow attack defense configuration. If it is `null`, the previous setting is used.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @var SlowPostConfig Settings for slow attack defense. If the parameter is null or not filled, the configuration last set will be used by default.Note: This field may return null, indicating that no valid value can be obtained.
      */
     public $SlowPostConfig;
 
     /**
-     * @param WafConfig $WafConfig The settings of the managed rule. If it is null, the settings that were last configured will be used.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param RateLimitConfig $RateLimitConfig The settings of the rate limiting rule. If it is null, the settings that were last configured will be used.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param AclConfig $AclConfig The settings of the custom rule. If it is null, the settings that were last configured will be used.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param BotConfig $BotConfig The settings of the bot configuration. If it is null, the settings that were last configured will be used.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param SwitchConfig $SwitchConfig The switch setting of the layer-7 protection. If it is null, the setting that was last configured will be used.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param IpTableConfig $IpTableConfig The settings of the basic access control rule. If it is null, the settings that were last configured will be used.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ExceptConfig $ExceptConfig The settings of the exception rule. If it is null, the settings that were last configured will be used.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param DropPageConfig $DropPageConfig The settings of the custom block page. If it is null, the settings that were last configured will be used.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param WafConfig $WafConfig Managed rule. If the parameter is null or not filled, the configuration last set will be used by default.
+Note: This field may return null, indicating that no valid value can be obtained.
+     * @param RateLimitConfig $RateLimitConfig Rate limiting. If the parameter is null or not filled, the configuration last set will be used by default.
+Note: This field may return null, indicating that no valid value can be obtained.
+     * @param AclConfig $AclConfig Custom rule. If the parameter is null or not filled, the configuration last set will be used by default.
+Note: This field may return null, indicating that no valid value can be obtained.
+     * @param BotConfig $BotConfig Bot configuration. If the parameter is null or not filled, the configuration last set will be used by default.
+Note: This field may return null, indicating that no valid value can be obtained.
+     * @param SwitchConfig $SwitchConfig Switch setting of the 7-layer protection. If the parameter is null or not filled, the configuration last set will be used by default.Note: This field may return null, indicating that no valid value can be obtained.
+     * @param IpTableConfig $IpTableConfig Basic access control. If the parameter is null or not filled, the configuration last set will be used by default.
+Note: This field may return null, indicating that no valid value can be obtained.
+     * @param ExceptConfig $ExceptConfig Exception rule configuration. If the parameter is null or not filled, the configuration last set will be used by default.Note: This field may return null, indicating that no valid value can be obtained.
+     * @param DropPageConfig $DropPageConfig Custom block page settings. If the parameter is null or not filled, the configuration last set will be used by default.Note: This field may return null, indicating that no valid value can be obtained.
      * @param TemplateConfig $TemplateConfig Security template settings
 Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param SlowPostConfig $SlowPostConfig Slow attack defense configuration. If it is `null`, the previous setting is used.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param SlowPostConfig $SlowPostConfig Settings for slow attack defense. If the parameter is null or not filled, the configuration last set will be used by default.Note: This field may return null, indicating that no valid value can be obtained.
      */
     function __construct()
     {

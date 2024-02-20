@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setGroupId(integer $GroupId) Set Group ID. Enter `0`.
  * @method string getName() Obtain Group name.
  * @method void setName(string $Name) Set Group name.
- * @method array getContent() Obtain IP group information, including IP and IP mask.
- * @method void setContent(array $Content) Set IP group information, including IP and IP mask.
+ * @method array getContent() Obtain IP group content. Only supports IP and IP mask.
+ * @method void setContent(array $Content) Set IP group content. Only supports IP and IP mask.
  */
 class IPGroup extends AbstractModel
 {
@@ -40,14 +40,14 @@ class IPGroup extends AbstractModel
     public $Name;
 
     /**
-     * @var array IP group information, including IP and IP mask.
+     * @var array IP group content. Only supports IP and IP mask.
      */
     public $Content;
 
     /**
      * @param integer $GroupId Group ID. Enter `0`.
      * @param string $Name Group name.
-     * @param array $Content IP group information, including IP and IP mask.
+     * @param array $Content IP group content. Only supports IP and IP mask.
      */
     function __construct()
     {
