@@ -226,6 +226,8 @@ When the value of `IdCardType` is `MLIDPassport`:
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getRequestId() Obtain The request ID of a single process.
  * @method void setRequestId(string $RequestId) Set The request ID of a single process.
+ * @method CardInfo getCardInfo() Obtain The recognition results of ID card
+ * @method void setCardInfo(CardInfo $CardInfo) Set The recognition results of ID card
  */
 class CardVerifyResult extends AbstractModel
 {
@@ -353,6 +355,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $RequestId;
 
     /**
+     * @var CardInfo The recognition results of ID card
+     */
+    public $CardInfo;
+
+    /**
      * @param boolean $IsPass Whether the authentication or OCR process is successful.
      * @param FileInfo $CardVideo The download URL of the video used for identity document verification, which is valid for 10 minutes. This parameter is returned only if video-based identity document verification is enabled.
 Note: This field may return null, indicating that no valid value can be obtained.
@@ -456,6 +463,7 @@ When the value of `IdCardType` is `MLIDPassport`:
 - NationalityCode (string): Country/region code.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $RequestId The request ID of a single process.
+     * @param CardInfo $CardInfo The recognition results of ID card
      */
     function __construct()
     {
@@ -491,6 +499,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
             $this->RequestId = $param["RequestId"];
+        }
+
+        if (array_key_exists("CardInfo",$param) and $param["CardInfo"] !== null) {
+            $this->CardInfo = new CardInfo();
+            $this->CardInfo->deserialize($param["CardInfo"]);
         }
     }
 }
