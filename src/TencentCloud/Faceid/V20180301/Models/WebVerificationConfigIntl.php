@@ -20,6 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * eKYC Web related configuration
  *
+ * @method boolean getAutoSkipStartPage() Obtain When starting verification, whether to skip the starting verification page. If true, enter the verification process directly. The default is false. This configuration will not take effect if the downgrade policy is triggered.
+ * @method void setAutoSkipStartPage(boolean $AutoSkipStartPage) Set When starting verification, whether to skip the starting verification page. If true, enter the verification process directly. The default is false. This configuration will not take effect if the downgrade policy is triggered.
  * @method boolean getAutoSkip() Obtain When the verification passed, whether to skip the result page and automatically jump to RedirectURL. The default value is false.
 Example value: false
  * @method void setAutoSkip(boolean $AutoSkip) Set When the verification passed, whether to skip the result page and automatically jump to RedirectURL. The default value is false.
@@ -58,9 +60,16 @@ Example: HKIDCard
 8.PhilippinesUMID: Philippines UMID card
 9.InternationalIDPassport: ID cards of Hong Kong, Macao and Taiwan (China), and international passport.
 Example: HKIDCard
+ * @method boolean getDisableCheckOcrWarnings() Obtain Whether to turn off document alarms, the default is false (the alarm detection function is turned on). When enabled, the identity authentication process will be intercepted based on the alarm status of the certificate. If you need to use the document authentication function, please contact us.
+ * @method void setDisableCheckOcrWarnings(boolean $DisableCheckOcrWarnings) Set Whether to turn off document alarms, the default is false (the alarm detection function is turned on). When enabled, the identity authentication process will be intercepted based on the alarm status of the certificate. If you need to use the document authentication function, please contact us.
  */
 class WebVerificationConfigIntl extends AbstractModel
 {
+    /**
+     * @var boolean When starting verification, whether to skip the starting verification page. If true, enter the verification process directly. The default is false. This configuration will not take effect if the downgrade policy is triggered.
+     */
+    public $AutoSkipStartPage;
+
     /**
      * @var boolean When the verification passed, whether to skip the result page and automatically jump to RedirectURL. The default value is false.
 Example value: false
@@ -93,6 +102,12 @@ Example: HKIDCard
     public $IDCardType;
 
     /**
+     * @var boolean Whether to turn off document alarms, the default is false (the alarm detection function is turned on). When enabled, the identity authentication process will be intercepted based on the alarm status of the certificate. If you need to use the document authentication function, please contact us.
+     */
+    public $DisableCheckOcrWarnings;
+
+    /**
+     * @param boolean $AutoSkipStartPage When starting verification, whether to skip the starting verification page. If true, enter the verification process directly. The default is false. This configuration will not take effect if the downgrade policy is triggered.
      * @param boolean $AutoSkip When the verification passed, whether to skip the result page and automatically jump to RedirectURL. The default value is false.
 Example value: false
      * @param integer $CheckMode Detection mode, parameter values are as follows:
@@ -112,6 +127,7 @@ Example value: 3
 8.PhilippinesUMID: Philippines UMID card
 9.InternationalIDPassport: ID cards of Hong Kong, Macao and Taiwan (China), and international passport.
 Example: HKIDCard
+     * @param boolean $DisableCheckOcrWarnings Whether to turn off document alarms, the default is false (the alarm detection function is turned on). When enabled, the identity authentication process will be intercepted based on the alarm status of the certificate. If you need to use the document authentication function, please contact us.
      */
     function __construct()
     {
@@ -126,6 +142,10 @@ Example: HKIDCard
         if ($param === null) {
             return;
         }
+        if (array_key_exists("AutoSkipStartPage",$param) and $param["AutoSkipStartPage"] !== null) {
+            $this->AutoSkipStartPage = $param["AutoSkipStartPage"];
+        }
+
         if (array_key_exists("AutoSkip",$param) and $param["AutoSkip"] !== null) {
             $this->AutoSkip = $param["AutoSkip"];
         }
@@ -136,6 +156,10 @@ Example: HKIDCard
 
         if (array_key_exists("IDCardType",$param) and $param["IDCardType"] !== null) {
             $this->IDCardType = $param["IDCardType"];
+        }
+
+        if (array_key_exists("DisableCheckOcrWarnings",$param) and $param["DisableCheckOcrWarnings"] !== null) {
+            $this->DisableCheckOcrWarnings = $param["DisableCheckOcrWarnings"];
         }
     }
 }

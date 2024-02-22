@@ -71,15 +71,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
  * @method void setLastName(string $LastName) Set Last name
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getSex() Obtain Gender on the license
-- M：male
-- F：female
-- X：other gender
+- M: male
+- F: female
+- X: other gender
 Note: This field may return null, indicating that no valid values can be obtained.
 Example: M
  * @method void setSex(string $Sex) Set Gender on the license
-- M：male
-- F：female
-- X：other gender
+- M: male
+- F: female
+- X: other gender
 Note: This field may return null, indicating that no valid values can be obtained.
 Example: M
  * @method string getAge() Obtain Age. 0 indicates that no valid information is obtained.
@@ -103,6 +103,10 @@ Example: IND
  * @method string getRegistrationNumber() Obtain Registration number
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setRegistrationNumber(string $RegistrationNumber) Set Registration number
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method Address getAddress() Obtain Address
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setAddress(Address $Address) Set Address
 Note: This field may return null, indicating that no valid values can be obtained.
  */
 class GeneralCard extends AbstractModel
@@ -182,9 +186,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * @var string Gender on the license
-- M：male
-- F：female
-- X：other gender
+- M: male
+- F: female
+- X: other gender
 Note: This field may return null, indicating that no valid values can be obtained.
 Example: M
      */
@@ -222,6 +226,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $RegistrationNumber;
 
     /**
+     * @var Address Address
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $Address;
+
+    /**
      * @param string $LicenseNumber License number
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $PersonalNumber Personal number, which is returned when it is a passport
@@ -248,9 +258,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $LastName Last name
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $Sex Gender on the license
-- M：male
-- F：female
-- X：other gender
+- M: male
+- F: female
+- X: other gender
 Note: This field may return null, indicating that no valid values can be obtained.
 Example: M
      * @param string $Age Age. 0 indicates that no valid information is obtained.
@@ -263,6 +273,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
 Example: IND
      * @param string $RegistrationNumber Registration number
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Address $Address Address
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
@@ -348,6 +360,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("RegistrationNumber",$param) and $param["RegistrationNumber"] !== null) {
             $this->RegistrationNumber = $param["RegistrationNumber"];
+        }
+
+        if (array_key_exists("Address",$param) and $param["Address"] !== null) {
+            $this->Address = new Address();
+            $this->Address->deserialize($param["Address"]);
         }
     }
 }
