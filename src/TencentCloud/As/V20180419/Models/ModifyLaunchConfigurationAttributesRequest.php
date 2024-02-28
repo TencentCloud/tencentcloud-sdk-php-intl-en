@@ -112,6 +112,8 @@ Note: This field is default to empty
  * @method void setIPv6InternetAccessible(IPv6InternetAccessible $IPv6InternetAccessible) Set IPv6 public network bandwidth configuration. If the IPv6 address is available in the new instance, public network bandwidth can be allocated to the IPv6 address. This parameter is invalid if `Ipv6AddressCount` of the scaling group associated with the launch configuration is 0.
  * @method array getDisasterRecoverGroupIds() Obtain Placement group ID. Only one is allowed.
  * @method void setDisasterRecoverGroupIds(array $DisasterRecoverGroupIds) Set Placement group ID. Only one is allowed.
+ * @method LoginSettings getLoginSettings() Obtain Instance login settings, which include passwords, keys, or the original login settings inherited from the image. <br>Please note that specifying new login settings will overwrite the existing ones. For instance, if you previously used a password for login and then use this parameter to switch the login settings to a key, the original password will be removed.
+ * @method void setLoginSettings(LoginSettings $LoginSettings) Set Instance login settings, which include passwords, keys, or the original login settings inherited from the image. <br>Please note that specifying new login settings will overwrite the existing ones. For instance, if you previously used a password for login and then use this parameter to switch the login settings to a key, the original password will be removed.
  */
 class ModifyLaunchConfigurationAttributesRequest extends AbstractModel
 {
@@ -246,6 +248,11 @@ Note: This field is default to empty
     public $DisasterRecoverGroupIds;
 
     /**
+     * @var LoginSettings Instance login settings, which include passwords, keys, or the original login settings inherited from the image. <br>Please note that specifying new login settings will overwrite the existing ones. For instance, if you previously used a password for login and then use this parameter to switch the login settings to a key, the original password will be removed.
+     */
+    public $LoginSettings;
+
+    /**
      * @param string $LaunchConfigurationId Launch configuration ID
      * @param string $ImageId [Image](https://intl.cloud.tencent.com/document/product/213/4940?from_cn_redirect=1) ID in the format of `img-xxx`. There are three types of images: <br/><li>Public images </li><li>Custom images </li><li>Shared images </li><br/>You can obtain the image IDs in the [CVM console](https://console.cloud.tencent.com/cvm/image?rid=1&imageType=PUBLIC_IMAGE).</li><li>You can also use the [DescribeImages](https://intl.cloud.tencent.com/document/api/213/15715?from_cn_redirect=1) and look for `ImageId` in the response.</li>
      * @param array $InstanceTypes List of instance types. Each type specifies different resource specifications. This list contains up to 10 instance types.
@@ -292,6 +299,7 @@ This field requires passing in the `InstanceName` field. Other fields that are n
 Note: This field is default to empty
      * @param IPv6InternetAccessible $IPv6InternetAccessible IPv6 public network bandwidth configuration. If the IPv6 address is available in the new instance, public network bandwidth can be allocated to the IPv6 address. This parameter is invalid if `Ipv6AddressCount` of the scaling group associated with the launch configuration is 0.
      * @param array $DisasterRecoverGroupIds Placement group ID. Only one is allowed.
+     * @param LoginSettings $LoginSettings Instance login settings, which include passwords, keys, or the original login settings inherited from the image. <br>Please note that specifying new login settings will overwrite the existing ones. For instance, if you previously used a password for login and then use this parameter to switch the login settings to a key, the original password will be removed.
      */
     function __construct()
     {
@@ -401,6 +409,11 @@ Note: This field is default to empty
 
         if (array_key_exists("DisasterRecoverGroupIds",$param) and $param["DisasterRecoverGroupIds"] !== null) {
             $this->DisasterRecoverGroupIds = $param["DisasterRecoverGroupIds"];
+        }
+
+        if (array_key_exists("LoginSettings",$param) and $param["LoginSettings"] !== null) {
+            $this->LoginSettings = new LoginSettings();
+            $this->LoginSettings->deserialize($param["LoginSettings"]);
         }
     }
 }

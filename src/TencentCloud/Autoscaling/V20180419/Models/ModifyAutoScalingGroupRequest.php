@@ -112,6 +112,8 @@ This parameter is valid only when `InstanceAllocationPolicy` is set to `SPOT_MIX
  * @method void setCapacityRebalance(boolean $CapacityRebalance) Set Indicates whether the capacity rebalancing feature is enabled. This parameter is only valid for spot instances in the scaling group. Valid values:
 <br><li>`TRUE`: yes. Before the spot instances in the scaling group are about to be automatically repossessed, AS will terminate them. The scale-in hook (if configured) will take effect before the termination. After the termination process starts, AS will asynchronously initiate a scaling activity to meet the desired capacity.
 <br><li>`FALSE`: no. In this case, AS will add instances to meet the desired capacity only after the spot instances are terminated.
+ * @method InstanceNameIndexSettings getInstanceNameIndexSettings() Obtain Instance name sequencing settings. When enabled, an incremental numeric sequence will be appended to the names of instances automatically created within the scaling group.
+ * @method void setInstanceNameIndexSettings(InstanceNameIndexSettings $InstanceNameIndexSettings) Set Instance name sequencing settings. When enabled, an incremental numeric sequence will be appended to the names of instances automatically created within the scaling group.
  */
 class ModifyAutoScalingGroupRequest extends AbstractModel
 {
@@ -250,6 +252,11 @@ This parameter is valid only when `InstanceAllocationPolicy` is set to `SPOT_MIX
     public $CapacityRebalance;
 
     /**
+     * @var InstanceNameIndexSettings Instance name sequencing settings. When enabled, an incremental numeric sequence will be appended to the names of instances automatically created within the scaling group.
+     */
+    public $InstanceNameIndexSettings;
+
+    /**
      * @param string $AutoScalingGroupId Auto scaling group ID
      * @param string $AutoScalingGroupName Auto scaling group name, which can only contain letters, numbers, underscores, hyphens ("-"), and decimal points with a maximum length of 55 bytes and must be unique under your account.
      * @param integer $DefaultCooldown Default cooldown period in seconds. Default value: 300
@@ -296,6 +303,7 @@ This parameter is valid only when `InstanceAllocationPolicy` is set to `SPOT_MIX
      * @param boolean $CapacityRebalance Indicates whether the capacity rebalancing feature is enabled. This parameter is only valid for spot instances in the scaling group. Valid values:
 <br><li>`TRUE`: yes. Before the spot instances in the scaling group are about to be automatically repossessed, AS will terminate them. The scale-in hook (if configured) will take effect before the termination. After the termination process starts, AS will asynchronously initiate a scaling activity to meet the desired capacity.
 <br><li>`FALSE`: no. In this case, AS will add instances to meet the desired capacity only after the spot instances are terminated.
+     * @param InstanceNameIndexSettings $InstanceNameIndexSettings Instance name sequencing settings. When enabled, an incremental numeric sequence will be appended to the names of instances automatically created within the scaling group.
      */
     function __construct()
     {
@@ -398,6 +406,11 @@ This parameter is valid only when `InstanceAllocationPolicy` is set to `SPOT_MIX
 
         if (array_key_exists("CapacityRebalance",$param) and $param["CapacityRebalance"] !== null) {
             $this->CapacityRebalance = $param["CapacityRebalance"];
+        }
+
+        if (array_key_exists("InstanceNameIndexSettings",$param) and $param["InstanceNameIndexSettings"] !== null) {
+            $this->InstanceNameIndexSettings = new InstanceNameIndexSettings();
+            $this->InstanceNameIndexSettings->deserialize($param["InstanceNameIndexSettings"]);
         }
     }
 }

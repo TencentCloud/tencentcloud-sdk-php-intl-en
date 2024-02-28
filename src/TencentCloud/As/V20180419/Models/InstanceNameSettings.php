@@ -20,14 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Settings of CVM instance names.
  *
- * @method string getInstanceName() Obtain CVM instance name
-
-The `InstanceName` cannot start or end with a dot (.) or hyphen (-), and cannot contain consecutive dots and hyphens.
-The name contains 2 to 40 characters, and supports multiple dots (.). The string between two dots can consist of letters (case-insensitive), numbers, and hyphens (-), and cannot be all numbers.
- * @method void setInstanceName(string $InstanceName) Set CVM instance name
-
-The `InstanceName` cannot start or end with a dot (.) or hyphen (-), and cannot contain consecutive dots and hyphens.
-The name contains 2 to 40 characters, and supports multiple dots (.). The string between two dots can consist of letters (case-insensitive), numbers, and hyphens (-), and cannot be all numbers.
+ * @method string getInstanceName() Obtain CVM instance name. Value range: 2-108.
+ * @method void setInstanceName(string $InstanceName) Set CVM instance name. Value range: 2-108.
  * @method string getInstanceNameStyle() Obtain Type of CVM instance name. Valid values: `ORIGINAL` and `UNIQUE`. Default value: `ORIGINAL`.
 
 `ORIGINAL`: Auto Scaling sends the input parameter `InstanceName` to the CVM directly. The CVM may append a serial number to the `InstanceName`. The `InstanceName` of the instances within the scaling group may conflict.
@@ -42,10 +36,7 @@ The name contains 2 to 40 characters, and supports multiple dots (.). The string
 class InstanceNameSettings extends AbstractModel
 {
     /**
-     * @var string CVM instance name
-
-The `InstanceName` cannot start or end with a dot (.) or hyphen (-), and cannot contain consecutive dots and hyphens.
-The name contains 2 to 40 characters, and supports multiple dots (.). The string between two dots can consist of letters (case-insensitive), numbers, and hyphens (-), and cannot be all numbers.
+     * @var string CVM instance name. Value range: 2-108.
      */
     public $InstanceName;
 
@@ -59,10 +50,7 @@ The name contains 2 to 40 characters, and supports multiple dots (.). The string
     public $InstanceNameStyle;
 
     /**
-     * @param string $InstanceName CVM instance name
-
-The `InstanceName` cannot start or end with a dot (.) or hyphen (-), and cannot contain consecutive dots and hyphens.
-The name contains 2 to 40 characters, and supports multiple dots (.). The string between two dots can consist of letters (case-insensitive), numbers, and hyphens (-), and cannot be all numbers.
+     * @param string $InstanceName CVM instance name. Value range: 2-108.
      * @param string $InstanceNameStyle Type of CVM instance name. Valid values: `ORIGINAL` and `UNIQUE`. Default value: `ORIGINAL`.
 
 `ORIGINAL`: Auto Scaling sends the input parameter `InstanceName` to the CVM directly. The CVM may append a serial number to the `InstanceName`. The `InstanceName` of the instances within the scaling group may conflict.

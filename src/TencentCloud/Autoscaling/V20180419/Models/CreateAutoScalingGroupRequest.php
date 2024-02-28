@@ -116,6 +116,8 @@ Default value: `False`.
 <br><li>`FALSE`: no. In this case, AS will add instances to meet the desired capacity only after the spot instances are terminated.
 
 Default value: `False`.
+ * @method InstanceNameIndexSettings getInstanceNameIndexSettings() Obtain Instance name sequencing settings. If this parameter is not specified, the default is not enabled. When enabled, an incremental numeric sequence will be appended to the names of instances automatically created within the scaling group.
+ * @method void setInstanceNameIndexSettings(InstanceNameIndexSettings $InstanceNameIndexSettings) Set Instance name sequencing settings. If this parameter is not specified, the default is not enabled. When enabled, an incremental numeric sequence will be appended to the names of instances automatically created within the scaling group.
  */
 class CreateAutoScalingGroupRequest extends AbstractModel
 {
@@ -264,6 +266,11 @@ Default value: `False`.
     public $CapacityRebalance;
 
     /**
+     * @var InstanceNameIndexSettings Instance name sequencing settings. If this parameter is not specified, the default is not enabled. When enabled, an incremental numeric sequence will be appended to the names of instances automatically created within the scaling group.
+     */
+    public $InstanceNameIndexSettings;
+
+    /**
      * @param string $AutoScalingGroupName Auto scaling group name, which can only contain letters, numbers, underscores, hyphens ("-"), and decimal points with a maximum length of 55 bytes and must be unique under your account.
      * @param string $LaunchConfigurationId Launch configuration ID
      * @param integer $MaxSize Maximum number of instances. Value range: 0-2,000.
@@ -312,6 +319,7 @@ This parameter is valid only when `InstanceAllocationPolicy ` is set to `SPOT_MI
 <br><li>`FALSE`: no. In this case, AS will add instances to meet the desired capacity only after the spot instances are terminated.
 
 Default value: `False`.
+     * @param InstanceNameIndexSettings $InstanceNameIndexSettings Instance name sequencing settings. If this parameter is not specified, the default is not enabled. When enabled, an incremental numeric sequence will be appended to the names of instances automatically created within the scaling group.
      */
     function __construct()
     {
@@ -432,6 +440,11 @@ Default value: `False`.
 
         if (array_key_exists("CapacityRebalance",$param) and $param["CapacityRebalance"] !== null) {
             $this->CapacityRebalance = $param["CapacityRebalance"];
+        }
+
+        if (array_key_exists("InstanceNameIndexSettings",$param) and $param["InstanceNameIndexSettings"] !== null) {
+            $this->InstanceNameIndexSettings = new InstanceNameIndexSettings();
+            $this->InstanceNameIndexSettings->deserialize($param["InstanceNameIndexSettings"]);
         }
     }
 }

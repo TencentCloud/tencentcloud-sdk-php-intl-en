@@ -116,6 +116,10 @@ A valid value will be returned only when `InstanceAllocationPolicy` is set to `S
  * @method void setCapacityRebalance(boolean $CapacityRebalance) Set Indicates whether the capacity rebalancing feature is enabled. This parameter is only valid for spot instances in the scaling group. Valid values:
 <br><li>`TRUE`: yes. Before the spot instances in the scaling group are about to be automatically repossessed, AS will terminate them. The scale-in hook (if configured) will take effect before the termination. After the termination process starts, AS will asynchronously initiate a scaling activity to meet the desired capacity.
 <br><li>`FALSE`: no. AS will add instances to meet the desired capacity only after the spot instances are terminated.
+ * @method InstanceNameIndexSettings getInstanceNameIndexSettings() Obtain Instance name sequencing settings.
+Note: This field may return null, indicating that no valid value can be obtained.
+ * @method void setInstanceNameIndexSettings(InstanceNameIndexSettings $InstanceNameIndexSettings) Set Instance name sequencing settings.
+Note: This field may return null, indicating that no valid value can be obtained.
  */
 class AutoScalingGroup extends AbstractModel
 {
@@ -292,6 +296,12 @@ A valid value will be returned only when `InstanceAllocationPolicy` is set to `S
     public $CapacityRebalance;
 
     /**
+     * @var InstanceNameIndexSettings Instance name sequencing settings.
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public $InstanceNameIndexSettings;
+
+    /**
      * @param string $AutoScalingGroupId Auto scaling group ID
      * @param string $AutoScalingGroupName Auto scaling group name
      * @param string $AutoScalingGroupStatus Current scaling group status. Valid values:<br>
@@ -340,6 +350,8 @@ A valid value will be returned only when `InstanceAllocationPolicy` is set to `S
      * @param boolean $CapacityRebalance Indicates whether the capacity rebalancing feature is enabled. This parameter is only valid for spot instances in the scaling group. Valid values:
 <br><li>`TRUE`: yes. Before the spot instances in the scaling group are about to be automatically repossessed, AS will terminate them. The scale-in hook (if configured) will take effect before the termination. After the termination process starts, AS will asynchronously initiate a scaling activity to meet the desired capacity.
 <br><li>`FALSE`: no. AS will add instances to meet the desired capacity only after the spot instances are terminated.
+     * @param InstanceNameIndexSettings $InstanceNameIndexSettings Instance name sequencing settings.
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     function __construct()
     {
@@ -488,6 +500,11 @@ A valid value will be returned only when `InstanceAllocationPolicy` is set to `S
 
         if (array_key_exists("CapacityRebalance",$param) and $param["CapacityRebalance"] !== null) {
             $this->CapacityRebalance = $param["CapacityRebalance"];
+        }
+
+        if (array_key_exists("InstanceNameIndexSettings",$param) and $param["InstanceNameIndexSettings"] !== null) {
+            $this->InstanceNameIndexSettings = new InstanceNameIndexSettings();
+            $this->InstanceNameIndexSettings->deserialize($param["InstanceNameIndexSettings"]);
         }
     }
 }

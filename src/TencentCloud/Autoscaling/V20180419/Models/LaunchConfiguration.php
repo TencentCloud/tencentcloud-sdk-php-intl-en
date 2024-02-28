@@ -50,14 +50,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
  * @method void setEnhancedService(EnhancedService $EnhancedService) Set Conditions of enhancement services for the instance and their settings.
  * @method string getImageId() Obtain Image ID.
  * @method void setImageId(string $ImageId) Set Image ID.
- * @method string getLaunchConfigurationStatus() Obtain Current status of the launch configuration. Value range: <br><li>NORMAL: normal <br><li>IMAGE_ABNORMAL: Exception with the image of the launch configuration <br><li>CBS_SNAP_ABNORMAL: Exception with the data disk snapshot of the launch configuration <br><li>SECURITY_GROUP_ABNORMAL: Exception with the security group of the launch configuration<br>
- * @method void setLaunchConfigurationStatus(string $LaunchConfigurationStatus) Set Current status of the launch configuration. Value range: <br><li>NORMAL: normal <br><li>IMAGE_ABNORMAL: Exception with the image of the launch configuration <br><li>CBS_SNAP_ABNORMAL: Exception with the data disk snapshot of the launch configuration <br><li>SECURITY_GROUP_ABNORMAL: Exception with the security group of the launch configuration<br>
- * @method string getInstanceChargeType() Obtain Instance billing mode. CVM instances take `POSTPAID_BY_HOUR` by default. Valid values:
-<br><li>POSTPAID_BY_HOUR: pay-as-you-go hourly
-<br><li>SPOTPAID: spot instance
- * @method void setInstanceChargeType(string $InstanceChargeType) Set Instance billing mode. CVM instances take `POSTPAID_BY_HOUR` by default. Valid values:
-<br><li>POSTPAID_BY_HOUR: pay-as-you-go hourly
-<br><li>SPOTPAID: spot instance
+ * @method string getLaunchConfigurationStatus() Obtain Current status of the launch configuration. Valid values: <li>NORMAL: Normal.</li> <li>IMAGE_ABNORMAL: Image exception in the launch configuration.</li> <li>CBS_SNAP_ABNORMAL: Exception with data disk snapshot in the launch configuration.</li> <li>SECURITY_GROUP_ABNORMAL: Security group exception in the launch configuration.</li>
+ * @method void setLaunchConfigurationStatus(string $LaunchConfigurationStatus) Set Current status of the launch configuration. Valid values: <li>NORMAL: Normal.</li> <li>IMAGE_ABNORMAL: Image exception in the launch configuration.</li> <li>CBS_SNAP_ABNORMAL: Exception with data disk snapshot in the launch configuration.</li> <li>SECURITY_GROUP_ABNORMAL: Security group exception in the launch configuration.</li>
+ * @method string getInstanceChargeType() Obtain Instance billing type, with the CVM default value processed as POSTPAID_BY_HOUR. <li>POSTPAID_BY_HOUR: Hourly postpaid billing.</li> <li>SPOTPAID: Spot billing.</li>
+ * @method void setInstanceChargeType(string $InstanceChargeType) Set Instance billing type, with the CVM default value processed as POSTPAID_BY_HOUR. <li>POSTPAID_BY_HOUR: Hourly postpaid billing.</li> <li>SPOTPAID: Spot billing.</li>
  * @method InstanceMarketOptionsRequest getInstanceMarketOptions() Obtain Market options of the instance, such as parameters related to spot instances. This parameter is required for spot instances.
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setInstanceMarketOptions(InstanceMarketOptionsRequest $InstanceMarketOptions) Set Market options of the instance, such as parameters related to spot instances. This parameter is required for spot instances.
@@ -84,18 +80,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
  * @method void setInstanceNameSettings(InstanceNameSettings $InstanceNameSettings) Set Settings of CVM instance names
  * @method InstanceChargePrepaid getInstanceChargePrepaid() Obtain Details of the monthly subscription, including the purchase period, auto-renewal. It is required if the `InstanceChargeType` is `PREPAID`.
  * @method void setInstanceChargePrepaid(InstanceChargePrepaid $InstanceChargePrepaid) Set Details of the monthly subscription, including the purchase period, auto-renewal. It is required if the `InstanceChargeType` is `PREPAID`.
- * @method string getDiskTypePolicy() Obtain Selection policy of cloud disks. Default value: ORIGINAL. Valid values:
-<br><li>ORIGINAL: uses the configured cloud disk type
-<br><li>AUTOMATIC: automatically chooses an available cloud disk type in the current availability zone
- * @method void setDiskTypePolicy(string $DiskTypePolicy) Set Selection policy of cloud disks. Default value: ORIGINAL. Valid values:
-<br><li>ORIGINAL: uses the configured cloud disk type
-<br><li>AUTOMATIC: automatically chooses an available cloud disk type in the current availability zone
+ * @method string getDiskTypePolicy() Obtain Cloud disk type selection policy. Valid values: <li>ORIGINAL: Use the set cloud disk type.</li> <li>AUTOMATIC: Automatically select available cloud disk types in the current availability zone.</li>
+ * @method void setDiskTypePolicy(string $DiskTypePolicy) Set Cloud disk type selection policy. Valid values: <li>ORIGINAL: Use the set cloud disk type.</li> <li>AUTOMATIC: Automatically select available cloud disk types in the current availability zone.</li>
  * @method string getHpcClusterId() Obtain HPC ID<br>
 Note: This field is default to empty
  * @method void setHpcClusterId(string $HpcClusterId) Set HPC ID<br>
 Note: This field is default to empty
  * @method IPv6InternetAccessible getIPv6InternetAccessible() Obtain IPv6 public network bandwidth configuration.
  * @method void setIPv6InternetAccessible(IPv6InternetAccessible $IPv6InternetAccessible) Set IPv6 public network bandwidth configuration.
+ * @method array getDisasterRecoverGroupIds() Obtain Placement group ID, supporting specification of only one.
+ * @method void setDisasterRecoverGroupIds(array $DisasterRecoverGroupIds) Set Placement group ID, supporting specification of only one.
  */
 class LaunchConfiguration extends AbstractModel
 {
@@ -171,14 +165,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $ImageId;
 
     /**
-     * @var string Current status of the launch configuration. Value range: <br><li>NORMAL: normal <br><li>IMAGE_ABNORMAL: Exception with the image of the launch configuration <br><li>CBS_SNAP_ABNORMAL: Exception with the data disk snapshot of the launch configuration <br><li>SECURITY_GROUP_ABNORMAL: Exception with the security group of the launch configuration<br>
+     * @var string Current status of the launch configuration. Valid values: <li>NORMAL: Normal.</li> <li>IMAGE_ABNORMAL: Image exception in the launch configuration.</li> <li>CBS_SNAP_ABNORMAL: Exception with data disk snapshot in the launch configuration.</li> <li>SECURITY_GROUP_ABNORMAL: Security group exception in the launch configuration.</li>
      */
     public $LaunchConfigurationStatus;
 
     /**
-     * @var string Instance billing mode. CVM instances take `POSTPAID_BY_HOUR` by default. Valid values:
-<br><li>POSTPAID_BY_HOUR: pay-as-you-go hourly
-<br><li>SPOTPAID: spot instance
+     * @var string Instance billing type, with the CVM default value processed as POSTPAID_BY_HOUR. <li>POSTPAID_BY_HOUR: Hourly postpaid billing.</li> <li>SPOTPAID: Spot billing.</li>
      */
     public $InstanceChargeType;
 
@@ -240,9 +232,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $InstanceChargePrepaid;
 
     /**
-     * @var string Selection policy of cloud disks. Default value: ORIGINAL. Valid values:
-<br><li>ORIGINAL: uses the configured cloud disk type
-<br><li>AUTOMATIC: automatically chooses an available cloud disk type in the current availability zone
+     * @var string Cloud disk type selection policy. Valid values: <li>ORIGINAL: Use the set cloud disk type.</li> <li>AUTOMATIC: Automatically select available cloud disk types in the current availability zone.</li>
      */
     public $DiskTypePolicy;
 
@@ -256,6 +246,11 @@ Note: This field is default to empty
      * @var IPv6InternetAccessible IPv6 public network bandwidth configuration.
      */
     public $IPv6InternetAccessible;
+
+    /**
+     * @var array Placement group ID, supporting specification of only one.
+     */
+    public $DisasterRecoverGroupIds;
 
     /**
      * @param integer $ProjectId Project ID of the instance.
@@ -273,10 +268,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $CreatedTime Creation time of the launch configuration.
      * @param EnhancedService $EnhancedService Conditions of enhancement services for the instance and their settings.
      * @param string $ImageId Image ID.
-     * @param string $LaunchConfigurationStatus Current status of the launch configuration. Value range: <br><li>NORMAL: normal <br><li>IMAGE_ABNORMAL: Exception with the image of the launch configuration <br><li>CBS_SNAP_ABNORMAL: Exception with the data disk snapshot of the launch configuration <br><li>SECURITY_GROUP_ABNORMAL: Exception with the security group of the launch configuration<br>
-     * @param string $InstanceChargeType Instance billing mode. CVM instances take `POSTPAID_BY_HOUR` by default. Valid values:
-<br><li>POSTPAID_BY_HOUR: pay-as-you-go hourly
-<br><li>SPOTPAID: spot instance
+     * @param string $LaunchConfigurationStatus Current status of the launch configuration. Valid values: <li>NORMAL: Normal.</li> <li>IMAGE_ABNORMAL: Image exception in the launch configuration.</li> <li>CBS_SNAP_ABNORMAL: Exception with data disk snapshot in the launch configuration.</li> <li>SECURITY_GROUP_ABNORMAL: Security group exception in the launch configuration.</li>
+     * @param string $InstanceChargeType Instance billing type, with the CVM default value processed as POSTPAID_BY_HOUR. <li>POSTPAID_BY_HOUR: Hourly postpaid billing.</li> <li>SPOTPAID: Spot billing.</li>
      * @param InstanceMarketOptionsRequest $InstanceMarketOptions Market options of the instance, such as parameters related to spot instances. This parameter is required for spot instances.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param array $InstanceTypes List of instance models.
@@ -290,12 +283,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param HostNameSettings $HostNameSettings CVM hostname settings.
      * @param InstanceNameSettings $InstanceNameSettings Settings of CVM instance names
      * @param InstanceChargePrepaid $InstanceChargePrepaid Details of the monthly subscription, including the purchase period, auto-renewal. It is required if the `InstanceChargeType` is `PREPAID`.
-     * @param string $DiskTypePolicy Selection policy of cloud disks. Default value: ORIGINAL. Valid values:
-<br><li>ORIGINAL: uses the configured cloud disk type
-<br><li>AUTOMATIC: automatically chooses an available cloud disk type in the current availability zone
+     * @param string $DiskTypePolicy Cloud disk type selection policy. Valid values: <li>ORIGINAL: Use the set cloud disk type.</li> <li>AUTOMATIC: Automatically select available cloud disk types in the current availability zone.</li>
      * @param string $HpcClusterId HPC ID<br>
 Note: This field is default to empty
      * @param IPv6InternetAccessible $IPv6InternetAccessible IPv6 public network bandwidth configuration.
+     * @param array $DisasterRecoverGroupIds Placement group ID, supporting specification of only one.
      */
     function __construct()
     {
@@ -457,6 +449,10 @@ Note: This field is default to empty
         if (array_key_exists("IPv6InternetAccessible",$param) and $param["IPv6InternetAccessible"] !== null) {
             $this->IPv6InternetAccessible = new IPv6InternetAccessible();
             $this->IPv6InternetAccessible->deserialize($param["IPv6InternetAccessible"]);
+        }
+
+        if (array_key_exists("DisasterRecoverGroupIds",$param) and $param["DisasterRecoverGroupIds"] !== null) {
+            $this->DisasterRecoverGroupIds = $param["DisasterRecoverGroupIds"];
         }
     }
 }
