@@ -18,28 +18,20 @@ namespace TencentCloud\Tcr\V20190924\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DeleteCustomAccount request structure.
+ * DuplicateImage response structure.
  *
- * @method string getRegistryId() Obtain Instance ID	
- * @method void setRegistryId(string $RegistryId) Set Instance ID	
- * @method string getName() Obtain Custom account name
- * @method void setName(string $Name) Set Custom account name
+ * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
-class DeleteCustomAccountRequest extends AbstractModel
+class DuplicateImageResponse extends AbstractModel
 {
     /**
-     * @var string Instance ID	
+     * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
-    public $RegistryId;
+    public $RequestId;
 
     /**
-     * @var string Custom account name
-     */
-    public $Name;
-
-    /**
-     * @param string $RegistryId Instance ID	
-     * @param string $Name Custom account name
+     * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
     {
@@ -54,12 +46,8 @@ class DeleteCustomAccountRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("RegistryId",$param) and $param["RegistryId"] !== null) {
-            $this->RegistryId = $param["RegistryId"];
-        }
-
-        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
-            $this->Name = $param["Name"];
+        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
+            $this->RequestId = $param["RequestId"];
         }
     }
 }

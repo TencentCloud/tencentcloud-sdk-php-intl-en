@@ -24,10 +24,10 @@ use TencentCloud\Common\AbstractModel;
 Note: This field may return `null`, indicating that no valid values can be obtained.
  * @method void setResource(string $Resource) Set Resource path. Valid value: `Namespace`
 Note: This field may return `null`, indicating that no valid values can be obtained.
- * @method array getActions() Obtain Action. Valid values: `tcr:PushRepository`, `tcr:PullRepository`
-Note: This field may return `null`, indicating that no valid values can be obtained.
- * @method void setActions(array $Actions) Set Action. Valid values: `tcr:PushRepository`, `tcr:PullRepository`
-Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method array getActions() Obtain Actions. Currently only support: tcr:PushRepository, tcr:PullRepository, tcr:CreateRepository, tcr:CreateHelmChart, tcr:DescribeHelmCharts.
+Note: This field may return null, indicating that no valid value can be obtained.
+ * @method void setActions(array $Actions) Set Actions. Currently only support: tcr:PushRepository, tcr:PullRepository, tcr:CreateRepository, tcr:CreateHelmChart, tcr:DescribeHelmCharts.
+Note: This field may return null, indicating that no valid value can be obtained.
  */
 class Permission extends AbstractModel
 {
@@ -38,16 +38,16 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     public $Resource;
 
     /**
-     * @var array Action. Valid values: `tcr:PushRepository`, `tcr:PullRepository`
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @var array Actions. Currently only support: tcr:PushRepository, tcr:PullRepository, tcr:CreateRepository, tcr:CreateHelmChart, tcr:DescribeHelmCharts.
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public $Actions;
 
     /**
      * @param string $Resource Resource path. Valid value: `Namespace`
 Note: This field may return `null`, indicating that no valid values can be obtained.
-     * @param array $Actions Action. Valid values: `tcr:PushRepository`, `tcr:PullRepository`
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param array $Actions Actions. Currently only support: tcr:PushRepository, tcr:PullRepository, tcr:CreateRepository, tcr:CreateHelmChart, tcr:DescribeHelmCharts.
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     function __construct()
     {

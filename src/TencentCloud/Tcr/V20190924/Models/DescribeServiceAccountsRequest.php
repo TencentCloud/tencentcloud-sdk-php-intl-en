@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRegistryId(string $RegistryId) Set Instance ID
  * @method boolean getAll() Obtain All service accounts
  * @method void setAll(boolean $All) Set All service accounts
- * @method boolean getEmbedPermission() Obtain Whether to fill in permission information
- * @method void setEmbedPermission(boolean $EmbedPermission) Set Whether to fill in permission information
+ * @method boolean getEmbedPermission() Obtain Whether to fill in permission information.
+ * @method void setEmbedPermission(boolean $EmbedPermission) Set Whether to fill in permission information.
  * @method array getFilters() Obtain Filters
  * @method void setFilters(array $Filters) Set Filters
  * @method integer getOffset() Obtain Offset. Default value: `0`
@@ -46,7 +46,7 @@ class DescribeServiceAccountsRequest extends AbstractModel
     public $All;
 
     /**
-     * @var boolean Whether to fill in permission information
+     * @var boolean Whether to fill in permission information.
      */
     public $EmbedPermission;
 
@@ -68,7 +68,7 @@ class DescribeServiceAccountsRequest extends AbstractModel
     /**
      * @param string $RegistryId Instance ID
      * @param boolean $All All service accounts
-     * @param boolean $EmbedPermission Whether to fill in permission information
+     * @param boolean $EmbedPermission Whether to fill in permission information.
      * @param array $Filters Filters
      * @param integer $Offset Offset. Default value: `0`
      * @param integer $Limit Maximum number of output entries. Default value: `20`. Maximum value: `100`. The maximum value is automatically applied when a value exceeding it is entered.

@@ -58,6 +58,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setRenewFlag(integer $RenewFlag) Set Prepayment renewal flag. Valid values: 0: Manual renewal; 1: Auto-renewal; 2: No renewal and no notification.
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method boolean getDeletionProtection() Obtain Whether to enable instance deletion protection. false indicates it is not enabled.
+ * @method void setDeletionProtection(boolean $DeletionProtection) Set Whether to enable instance deletion protection. false indicates it is not enabled.
  */
 class Registry extends AbstractModel
 {
@@ -141,6 +143,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $RenewFlag;
 
     /**
+     * @var boolean Whether to enable instance deletion protection. false indicates it is not enabled.
+     */
+    public $DeletionProtection;
+
+    /**
      * @param string $RegistryId Instance ID
      * @param string $RegistryName Instance name
      * @param string $RegistryType Instance specification
@@ -160,6 +167,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $RenewFlag Prepayment renewal flag. Valid values: 0: Manual renewal; 1: Auto-renewal; 2: No renewal and no notification.
 Note: This field may return null, indicating that no valid values can be obtained.
+     * @param boolean $DeletionProtection Whether to enable instance deletion protection. false indicates it is not enabled.
      */
     function __construct()
     {
@@ -233,6 +241,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("RenewFlag",$param) and $param["RenewFlag"] !== null) {
             $this->RenewFlag = $param["RenewFlag"];
+        }
+
+        if (array_key_exists("DeletionProtection",$param) and $param["DeletionProtection"] !== null) {
+            $this->DeletionProtection = $param["DeletionProtection"];
         }
     }
 }

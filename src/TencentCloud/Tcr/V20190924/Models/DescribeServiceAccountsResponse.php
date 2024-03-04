@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
 Note: This field may return `null`, indicating that no valid values can be obtained.
  * @method void setServiceAccounts(array $ServiceAccounts) Set List of service accounts
 Note: This field may return `null`, indicating that no valid values can be obtained.
- * @method integer getTotalCount() Obtain Number of service accounts
- * @method void setTotalCount(integer $TotalCount) Set Number of service accounts
+ * @method integer getTotalCount() Obtain Number of service level accounts.
+ * @method void setTotalCount(integer $TotalCount) Set Number of service level accounts.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -38,7 +38,7 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     public $ServiceAccounts;
 
     /**
-     * @var integer Number of service accounts
+     * @var integer Number of service level accounts.
      */
     public $TotalCount;
 
@@ -50,7 +50,7 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     /**
      * @param array $ServiceAccounts List of service accounts
 Note: This field may return `null`, indicating that no valid values can be obtained.
-     * @param integer $TotalCount Number of service accounts
+     * @param integer $TotalCount Number of service level accounts.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()

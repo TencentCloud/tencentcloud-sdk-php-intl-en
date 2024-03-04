@@ -18,40 +18,19 @@ namespace TencentCloud\Tcr\V20190924\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * CreateCustomAccount response structure.
+ * ModifyServiceAccountPassword response structure.
  *
- * @method string getName() Obtain Custom username (the prefix `tcr$` is automatically added)
- * @method void setName(string $Name) Set Custom username (the prefix `tcr$` is automatically added)
- * @method string getPassword() Obtain Custom password, which is displayed only once
- * @method void setPassword(string $Password) Set Custom password, which is displayed only once
- * @method integer getExpiresAt() Obtain Custom expiry time (timestamp)
- * @method void setExpiresAt(integer $ExpiresAt) Set Custom expiry time (timestamp)
- * @method string getCreateTime() Obtain Custom account creation time
- * @method void setCreateTime(string $CreateTime) Set Custom account creation time
+ * @method string getPassword() Obtain Custom user password, displayed only once. Please make sure to retain it securely.
+ * @method void setPassword(string $Password) Set Custom user password, displayed only once. Please make sure to retain it securely.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
-class CreateCustomAccountResponse extends AbstractModel
+class ModifyServiceAccountPasswordResponse extends AbstractModel
 {
     /**
-     * @var string Custom username (the prefix `tcr$` is automatically added)
-     */
-    public $Name;
-
-    /**
-     * @var string Custom password, which is displayed only once
+     * @var string Custom user password, displayed only once. Please make sure to retain it securely.
      */
     public $Password;
-
-    /**
-     * @var integer Custom expiry time (timestamp)
-     */
-    public $ExpiresAt;
-
-    /**
-     * @var string Custom account creation time
-     */
-    public $CreateTime;
 
     /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -59,10 +38,7 @@ class CreateCustomAccountResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $Name Custom username (the prefix `tcr$` is automatically added)
-     * @param string $Password Custom password, which is displayed only once
-     * @param integer $ExpiresAt Custom expiry time (timestamp)
-     * @param string $CreateTime Custom account creation time
+     * @param string $Password Custom user password, displayed only once. Please make sure to retain it securely.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -78,20 +54,8 @@ class CreateCustomAccountResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
-            $this->Name = $param["Name"];
-        }
-
         if (array_key_exists("Password",$param) and $param["Password"] !== null) {
             $this->Password = $param["Password"];
-        }
-
-        if (array_key_exists("ExpiresAt",$param) and $param["ExpiresAt"] !== null) {
-            $this->ExpiresAt = $param["ExpiresAt"];
-        }
-
-        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
-            $this->CreateTime = $param["CreateTime"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
