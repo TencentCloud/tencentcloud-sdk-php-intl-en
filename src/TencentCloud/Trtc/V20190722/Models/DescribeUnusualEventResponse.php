@@ -26,8 +26,8 @@ Value range: 0-20.
 Value range: 0-20.
  * @method array getAbnormalExperienceList() Obtain The information of the abnormal user experiences.
  * @method void setAbnormalExperienceList(array $AbnormalExperienceList) Set The information of the abnormal user experiences.
- * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method string getRequestId() Obtain 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeUnusualEventResponse extends AbstractModel
 {
@@ -43,7 +43,7 @@ Value range: 0-20.
     public $AbnormalExperienceList;
 
     /**
-     * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
@@ -51,7 +51,7 @@ Value range: 0-20.
      * @param integer $Total The number of records returned.
 Value range: 0-20.
      * @param array $AbnormalExperienceList The information of the abnormal user experiences.
-     * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {

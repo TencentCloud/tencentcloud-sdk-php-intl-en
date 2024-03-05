@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getTaskId() Obtain The task ID assigned by the recording service, which uniquely identifies a recording process and becomes invalid after a recording task ends.
  * @method void setTaskId(string $TaskId) Set The task ID assigned by the recording service, which uniquely identifies a recording process and becomes invalid after a recording task ends.
- * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method string getRequestId() Obtain 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class DeleteCloudRecordingResponse extends AbstractModel
 {
@@ -33,13 +33,13 @@ class DeleteCloudRecordingResponse extends AbstractModel
     public $TaskId;
 
     /**
-     * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
      * @param string $TaskId The task ID assigned by the recording service, which uniquely identifies a recording process and becomes invalid after a recording task ends.
-     * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {

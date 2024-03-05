@@ -34,8 +34,8 @@ Exited: The task is being ended.
 Note: This field may return `null`, indicating that no valid values can be obtained.
  * @method void setStorageFileList(array $StorageFileList) Set The information of the recording files.
 Note: This field may return `null`, indicating that no valid values can be obtained.
- * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method string getRequestId() Obtain 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeCloudRecordingResponse extends AbstractModel
 {
@@ -59,7 +59,7 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     public $StorageFileList;
 
     /**
-     * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
@@ -71,7 +71,7 @@ InProgress: The task is in progress.
 Exited: The task is being ended.
      * @param array $StorageFileList The information of the recording files.
 Note: This field may return `null`, indicating that no valid values can be obtained.
-     * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {
