@@ -38,8 +38,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStorage(integer $Storage) Set Used Capacity
  * @method float getStorageSlope() Obtain Capacity slope
  * @method void setStorageSlope(float $StorageSlope) Set Capacity slope
- * @method string getRunid() Obtain Instance runtime node ID
- * @method void setRunid(string $Runid) Set Instance runtime node ID
+ * @method string getRunid() Obtain This field is recommended to use the RunId instead due to spelling inconsistency.
+ Meaning: The node ID during instance runtime.
+
+ * @method void setRunid(string $Runid) Set This field is recommended to use the RunId instead due to spelling inconsistency.
+ Meaning: The node ID during instance runtime.
+
+ * @method string getRunId() Obtain The node ID during instance runtime.
+ * @method void setRunId(string $RunId) Set The node ID during instance runtime.
  * @method integer getConnected() Obtain Service status
 - `0`: Down.
 - `1`: On.
@@ -87,9 +93,16 @@ class InstanceClusterShard extends AbstractModel
     public $StorageSlope;
 
     /**
-     * @var string Instance runtime node ID
+     * @var string This field is recommended to use the RunId instead due to spelling inconsistency.
+ Meaning: The node ID during instance runtime.
+
      */
     public $Runid;
+
+    /**
+     * @var string The node ID during instance runtime.
+     */
+    public $RunId;
 
     /**
      * @var integer Service status
@@ -108,7 +121,10 @@ class InstanceClusterShard extends AbstractModel
      * @param string $Slots Slot information
      * @param integer $Storage Used Capacity
      * @param float $StorageSlope Capacity slope
-     * @param string $Runid Instance runtime node ID
+     * @param string $Runid This field is recommended to use the RunId instead due to spelling inconsistency.
+ Meaning: The node ID during instance runtime.
+
+     * @param string $RunId The node ID during instance runtime.
      * @param integer $Connected Service status
 - `0`: Down.
 - `1`: On.
@@ -156,6 +172,10 @@ class InstanceClusterShard extends AbstractModel
 
         if (array_key_exists("Runid",$param) and $param["Runid"] !== null) {
             $this->Runid = $param["Runid"];
+        }
+
+        if (array_key_exists("RunId",$param) and $param["RunId"] !== null) {
+            $this->RunId = $param["RunId"];
         }
 
         if (array_key_exists("Connected",$param) and $param["Connected"] !== null) {

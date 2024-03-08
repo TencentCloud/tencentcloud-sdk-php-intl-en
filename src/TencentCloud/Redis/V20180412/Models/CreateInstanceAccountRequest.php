@@ -20,82 +20,90 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateInstanceAccount request structure.
  *
- * @method string getInstanceId() Obtain Instance ID
- * @method void setInstanceId(string $InstanceId) Set Instance ID
- * @method string getAccountName() Obtain Sub-account name
- * @method void setAccountName(string $AccountName) Set Sub-account name
- * @method string getAccountPassword() Obtain 1. The password must contain 8–30 characters. A password of 12 or more characters is recommended.
-2. It cannot start with a slash (/).
-3. It must contain characters in at least two of the following types:
-    a. Lowercase letters (a–z)
-    b. Uppercase letters (A–Z)
-    c. Digits (0–9)
-    d. ()`~!@#$%^&*-+=_|{}[]:;<>,.?/
- * @method void setAccountPassword(string $AccountPassword) Set 1. The password must contain 8–30 characters. A password of 12 or more characters is recommended.
-2. It cannot start with a slash (/).
-3. It must contain characters in at least two of the following types:
-    a. Lowercase letters (a–z)
-    b. Uppercase letters (A–Z)
-    c. Digits (0–9)
-    d. ()`~!@#$%^&*-+=_|{}[]:;<>,.?/
- * @method array getReadonlyPolicy() Obtain Routing policy. Valid values: master (master node); replication (replica node)
- * @method void setReadonlyPolicy(array $ReadonlyPolicy) Set Routing policy. Valid values: master (master node); replication (replica node)
- * @method string getPrivilege() Obtain Read/Write policy. Valid values: r (read-only); rw (read/write).
- * @method void setPrivilege(string $Privilege) Set Read/Write policy. Valid values: r (read-only); rw (read/write).
- * @method string getRemark() Obtain Sub-account description information
- * @method void setRemark(string $Remark) Set Sub-account description information
+ * @method string getInstanceId() Obtain Instance ID.
+ * @method void setInstanceId(string $InstanceId) Set Instance ID.
+ * @method string getAccountName() Obtain Custom the name of the database to access.
+- Contains only letters, digits, underscores, and hyphens.
+- The length cannot exceed 32 characters.
+ * @method void setAccountName(string $AccountName) Set Custom the name of the database to access.
+- Contains only letters, digits, underscores, and hyphens.
+- The length cannot exceed 32 characters.
+ * @method string getAccountPassword() Obtain Set a password for the customized account. The password complexity requirements are as follows:
+- Value range: [8, 32].
+- Contains at least two types of characters from the following categories: lowercase letters, uppercase letters, digits, and characters ()`~!@#$%^&*-+=_|{}[]:;<>,.? /.- Cannot start with "/".
+
+ * @method void setAccountPassword(string $AccountPassword) Set Set a password for the customized account. The password complexity requirements are as follows:
+- Value range: [8, 32].
+- Contains at least two types of characters from the following categories: lowercase letters, uppercase letters, digits, and characters ()`~!@#$%^&*-+=_|{}[]:;<>,.? /.- Cannot start with "/".
+
+ * @method array getReadonlyPolicy() Obtain The read requests for the designated account are routed to either the master node or replica nodes. If the Read-Only Replica is not enabled, the selection of replica nodes is not supported.
+- master: Master node.- replication: Replica node.
+ * @method void setReadonlyPolicy(array $ReadonlyPolicy) Set The read requests for the designated account are routed to either the master node or replica nodes. If the Read-Only Replica is not enabled, the selection of replica nodes is not supported.
+- master: Master node.- replication: Replica node.
+ * @method string getPrivilege() Obtain The read/write permission of the account supports the selection of read-only and read/write permissions.
+- r: read-only
+- rw: Read/Write permission.
+ * @method void setPrivilege(string $Privilege) Set The read/write permission of the account supports the selection of read-only and read/write permissions.
+- r: read-only
+- rw: Read/Write permission.
+ * @method string getRemark() Obtain Sub-account description information, with a length of [0, 64] bytes, supports Chinese characters.
+ * @method void setRemark(string $Remark) Set Sub-account description information, with a length of [0, 64] bytes, supports Chinese characters.
  */
 class CreateInstanceAccountRequest extends AbstractModel
 {
     /**
-     * @var string Instance ID
+     * @var string Instance ID.
      */
     public $InstanceId;
 
     /**
-     * @var string Sub-account name
+     * @var string Custom the name of the database to access.
+- Contains only letters, digits, underscores, and hyphens.
+- The length cannot exceed 32 characters.
      */
     public $AccountName;
 
     /**
-     * @var string 1. The password must contain 8–30 characters. A password of 12 or more characters is recommended.
-2. It cannot start with a slash (/).
-3. It must contain characters in at least two of the following types:
-    a. Lowercase letters (a–z)
-    b. Uppercase letters (A–Z)
-    c. Digits (0–9)
-    d. ()`~!@#$%^&*-+=_|{}[]:;<>,.?/
+     * @var string Set a password for the customized account. The password complexity requirements are as follows:
+- Value range: [8, 32].
+- Contains at least two types of characters from the following categories: lowercase letters, uppercase letters, digits, and characters ()`~!@#$%^&*-+=_|{}[]:;<>,.? /.- Cannot start with "/".
+
      */
     public $AccountPassword;
 
     /**
-     * @var array Routing policy. Valid values: master (master node); replication (replica node)
+     * @var array The read requests for the designated account are routed to either the master node or replica nodes. If the Read-Only Replica is not enabled, the selection of replica nodes is not supported.
+- master: Master node.- replication: Replica node.
      */
     public $ReadonlyPolicy;
 
     /**
-     * @var string Read/Write policy. Valid values: r (read-only); rw (read/write).
+     * @var string The read/write permission of the account supports the selection of read-only and read/write permissions.
+- r: read-only
+- rw: Read/Write permission.
      */
     public $Privilege;
 
     /**
-     * @var string Sub-account description information
+     * @var string Sub-account description information, with a length of [0, 64] bytes, supports Chinese characters.
      */
     public $Remark;
 
     /**
-     * @param string $InstanceId Instance ID
-     * @param string $AccountName Sub-account name
-     * @param string $AccountPassword 1. The password must contain 8–30 characters. A password of 12 or more characters is recommended.
-2. It cannot start with a slash (/).
-3. It must contain characters in at least two of the following types:
-    a. Lowercase letters (a–z)
-    b. Uppercase letters (A–Z)
-    c. Digits (0–9)
-    d. ()`~!@#$%^&*-+=_|{}[]:;<>,.?/
-     * @param array $ReadonlyPolicy Routing policy. Valid values: master (master node); replication (replica node)
-     * @param string $Privilege Read/Write policy. Valid values: r (read-only); rw (read/write).
-     * @param string $Remark Sub-account description information
+     * @param string $InstanceId Instance ID.
+     * @param string $AccountName Custom the name of the database to access.
+- Contains only letters, digits, underscores, and hyphens.
+- The length cannot exceed 32 characters.
+     * @param string $AccountPassword Set a password for the customized account. The password complexity requirements are as follows:
+- Value range: [8, 32].
+- Contains at least two types of characters from the following categories: lowercase letters, uppercase letters, digits, and characters ()`~!@#$%^&*-+=_|{}[]:;<>,.? /.- Cannot start with "/".
+
+     * @param array $ReadonlyPolicy The read requests for the designated account are routed to either the master node or replica nodes. If the Read-Only Replica is not enabled, the selection of replica nodes is not supported.
+- master: Master node.- replication: Replica node.
+     * @param string $Privilege The read/write permission of the account supports the selection of read-only and read/write permissions.
+- r: read-only
+- rw: Read/Write permission.
+     * @param string $Remark Sub-account description information, with a length of [0, 64] bytes, supports Chinese characters.
      */
     function __construct()
     {

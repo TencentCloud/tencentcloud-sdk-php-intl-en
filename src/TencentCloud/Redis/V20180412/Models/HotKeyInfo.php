@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Hot key details
  *
- * @method string getKey() Obtain Hot key
- * @method void setKey(string $Key) Set Hot key
- * @method string getType() Obtain Type
- * @method void setType(string $Type) Set Type
- * @method integer getCount() Obtain Count
- * @method void setCount(integer $Count) Set Count
+ * @method string getKey() Obtain The name of the hot key.
+ * @method void setKey(string $Key) Set The name of the hot key.
+ * @method string getType() Obtain Key type.
+ * @method void setType(string $Type) Set Key type.
+ * @method integer getCount() Obtain Number of accesses for the hot key in a specified time period.
+ * @method void setCount(integer $Count) Set Number of accesses for the hot key in a specified time period.
  */
 class HotKeyInfo extends AbstractModel
 {
     /**
-     * @var string Hot key
+     * @var string The name of the hot key.
      */
     public $Key;
 
     /**
-     * @var string Type
+     * @var string Key type.
      */
     public $Type;
 
     /**
-     * @var integer Count
+     * @var integer Number of accesses for the hot key in a specified time period.
      */
     public $Count;
 
     /**
-     * @param string $Key Hot key
-     * @param string $Type Type
-     * @param integer $Count Count
+     * @param string $Key The name of the hot key.
+     * @param string $Type Key type.
+     * @param integer $Count Number of accesses for the hot key in a specified time period.
      */
     function __construct()
     {

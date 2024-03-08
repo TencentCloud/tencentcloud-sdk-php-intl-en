@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
 
  * @method integer getProjectId() Obtain Project ID
  * @method void setProjectId(integer $ProjectId) Set Project ID
- * @method integer getRegionId() Obtain Region ID. <ul><li>`1`: Guangzhou. </li><li>`4`: Shanghai. </li><li>`5`: Hong Kong (China). </li><li>`6`: Toronto. </li> <li>`7`: Shanghai Finance. </li> <li>`8`: Beijing. </li> <li>`9`: Singapore. </li> <li>`11`: Shenzhen Finance. </li> <li>`15`: West US (Silicon Valley). </li><li>`16`: Chengdu. </li><li>`17`: Frankfurt. </li><li>`18`: Seoul. </li><li>`19`: Chongqing. </li><li>`21`: Mumbai. </li><li>`22`: East US (Virginia). </li><li>`23`: Bangkok. </li><li>`24`: Moscow. </li><li>`25`: Tokyo. </li></ul>
- * @method void setRegionId(integer $RegionId) Set Region ID. <ul><li>`1`: Guangzhou. </li><li>`4`: Shanghai. </li><li>`5`: Hong Kong (China). </li><li>`6`: Toronto. </li> <li>`7`: Shanghai Finance. </li> <li>`8`: Beijing. </li> <li>`9`: Singapore. </li> <li>`11`: Shenzhen Finance. </li> <li>`15`: West US (Silicon Valley). </li><li>`16`: Chengdu. </li><li>`17`: Frankfurt. </li><li>`18`: Seoul. </li><li>`19`: Chongqing. </li><li>`21`: Mumbai. </li><li>`22`: East US (Virginia). </li><li>`23`: Bangkok. </li><li>`24`: Moscow. </li><li>`25`: Tokyo. </li></ul>
+ * @method integer getRegionId() Obtain Region IDs. <ul><li>1: Guangzhou. </li><li>4: Shanghai. </li><li>5: Hong Kong, China. </li><li>6: Toronto. </li><li>8: Beijing. </li><li>9: Singapore. </li><li>15: West US (Silicon Valley). </li><li>16: Chengdu. </li><li>17: Frankfurt. </li><li>18: Seoul. </li><li>19: Chongqing. </li><li>21: Mumbai. </li><li>22: East US (Virginia). </li><li>23: Bangkok. </li><li>25: Tokyo. </li></ul>
+ * @method void setRegionId(integer $RegionId) Set Region IDs. <ul><li>1: Guangzhou. </li><li>4: Shanghai. </li><li>5: Hong Kong, China. </li><li>6: Toronto. </li><li>8: Beijing. </li><li>9: Singapore. </li><li>15: West US (Silicon Valley). </li><li>16: Chengdu. </li><li>17: Frankfurt. </li><li>18: Seoul. </li><li>19: Chongqing. </li><li>21: Mumbai. </li><li>22: East US (Virginia). </li><li>23: Bangkok. </li><li>25: Tokyo. </li></ul>
  * @method integer getZoneId() Obtain Region ID
  * @method void setZoneId(integer $ZoneId) Set Region ID
  * @method integer getVpcId() Obtain VPC ID, such as `75101`.
@@ -136,10 +136,14 @@ Note: This field may return null, indicating that no valid value can be obtained
 Note: This field may return null, indicating that no valid value can be obtained.
  * @method void setPasswordFree(integer $PasswordFree) Set Password-free instance flag (internal parameter, which can be ignored)
 Note: This field may return null, indicating that no valid value can be obtained.
- * @method string getVip6() Obtain Internal parameter, which can be ignored.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setVip6(string $Vip6) Set Internal parameter, which can be ignored.
-Note: This field may return null, indicating that no valid value can be obtained.
+ * @method string getVip6() Obtain Due to the naming irregularity of this parameter, it is recommended to use the parameter IPv6 instead. Internal parameters, which can be ignored by users.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setVip6(string $Vip6) Set Due to the naming irregularity of this parameter, it is recommended to use the parameter IPv6 instead. Internal parameters, which can be ignored by users.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getIPv6() Obtain Internal parameters, which can be ignored by users.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setIPv6(string $IPv6) Set Internal parameters, which can be ignored by users.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method integer getReadOnly() Obtain Read-only instance flag (internal parameter, which can be ignored)
 Note: This field may return null, indicating that no valid value can be obtained.
  * @method void setReadOnly(integer $ReadOnly) Set Read-only instance flag (internal parameter, which can be ignored)
@@ -221,7 +225,7 @@ class InstanceSet extends AbstractModel
     public $ProjectId;
 
     /**
-     * @var integer Region ID. <ul><li>`1`: Guangzhou. </li><li>`4`: Shanghai. </li><li>`5`: Hong Kong (China). </li><li>`6`: Toronto. </li> <li>`7`: Shanghai Finance. </li> <li>`8`: Beijing. </li> <li>`9`: Singapore. </li> <li>`11`: Shenzhen Finance. </li> <li>`15`: West US (Silicon Valley). </li><li>`16`: Chengdu. </li><li>`17`: Frankfurt. </li><li>`18`: Seoul. </li><li>`19`: Chongqing. </li><li>`21`: Mumbai. </li><li>`22`: East US (Virginia). </li><li>`23`: Bangkok. </li><li>`24`: Moscow. </li><li>`25`: Tokyo. </li></ul>
+     * @var integer Region IDs. <ul><li>1: Guangzhou. </li><li>4: Shanghai. </li><li>5: Hong Kong, China. </li><li>6: Toronto. </li><li>8: Beijing. </li><li>9: Singapore. </li><li>15: West US (Silicon Valley). </li><li>16: Chengdu. </li><li>17: Frankfurt. </li><li>18: Seoul. </li><li>19: Chongqing. </li><li>21: Mumbai. </li><li>22: East US (Virginia). </li><li>23: Bangkok. </li><li>25: Tokyo. </li></ul>
      */
     public $RegionId;
 
@@ -418,10 +422,16 @@ Note: This field may return null, indicating that no valid value can be obtained
     public $PasswordFree;
 
     /**
-     * @var string Internal parameter, which can be ignored.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @var string Due to the naming irregularity of this parameter, it is recommended to use the parameter IPv6 instead. Internal parameters, which can be ignored by users.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Vip6;
+
+    /**
+     * @var string Internal parameters, which can be ignored by users.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $IPv6;
 
     /**
      * @var integer Read-only instance flag (internal parameter, which can be ignored)
@@ -513,7 +523,7 @@ Note: This field may return null, indicating that no valid value can be obtained
      * @param integer $Appid User APPID, which is the unique application ID that matches an account. Some Tencent Cloud products use this APPID.
 
      * @param integer $ProjectId Project ID
-     * @param integer $RegionId Region ID. <ul><li>`1`: Guangzhou. </li><li>`4`: Shanghai. </li><li>`5`: Hong Kong (China). </li><li>`6`: Toronto. </li> <li>`7`: Shanghai Finance. </li> <li>`8`: Beijing. </li> <li>`9`: Singapore. </li> <li>`11`: Shenzhen Finance. </li> <li>`15`: West US (Silicon Valley). </li><li>`16`: Chengdu. </li><li>`17`: Frankfurt. </li><li>`18`: Seoul. </li><li>`19`: Chongqing. </li><li>`21`: Mumbai. </li><li>`22`: East US (Virginia). </li><li>`23`: Bangkok. </li><li>`24`: Moscow. </li><li>`25`: Tokyo. </li></ul>
+     * @param integer $RegionId Region IDs. <ul><li>1: Guangzhou. </li><li>4: Shanghai. </li><li>5: Hong Kong, China. </li><li>6: Toronto. </li><li>8: Beijing. </li><li>9: Singapore. </li><li>15: West US (Silicon Valley). </li><li>16: Chengdu. </li><li>17: Frankfurt. </li><li>18: Seoul. </li><li>19: Chongqing. </li><li>21: Mumbai. </li><li>22: East US (Virginia). </li><li>23: Bangkok. </li><li>25: Tokyo. </li></ul>
      * @param integer $ZoneId Region ID
      * @param integer $VpcId VPC ID, such as `75101`.
      * @param integer $SubnetId Subnet ID, such as `46315`.
@@ -566,8 +576,10 @@ Note: This field may return null, indicating that no valid value can be obtained
 Note: This field may return null, indicating that no valid value can be obtained.
      * @param integer $PasswordFree Password-free instance flag (internal parameter, which can be ignored)
 Note: This field may return null, indicating that no valid value can be obtained.
-     * @param string $Vip6 Internal parameter, which can be ignored.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @param string $Vip6 Due to the naming irregularity of this parameter, it is recommended to use the parameter IPv6 instead. Internal parameters, which can be ignored by users.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $IPv6 Internal parameters, which can be ignored by users.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $ReadOnly Read-only instance flag (internal parameter, which can be ignored)
 Note: This field may return null, indicating that no valid value can be obtained.
      * @param string $RemainBandwidthDuration Internal parameter, which can be ignored.
@@ -782,6 +794,10 @@ Note: This field may return null, indicating that no valid value can be obtained
 
         if (array_key_exists("Vip6",$param) and $param["Vip6"] !== null) {
             $this->Vip6 = $param["Vip6"];
+        }
+
+        if (array_key_exists("IPv6",$param) and $param["IPv6"] !== null) {
+            $this->IPv6 = $param["IPv6"];
         }
 
         if (array_key_exists("ReadOnly",$param) and $param["ReadOnly"] !== null) {

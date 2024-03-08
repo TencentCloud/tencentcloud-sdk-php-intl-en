@@ -46,9 +46,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
  * @method void setRole(string $Role) Set Read-write permission of the instance. <ul><li>`rw`: Read/Write. </li><li>`r`: Read-only. </li></ul>
  * @method string getVip() Obtain Instance VIP
  * @method void setVip(string $Vip) Set Instance VIP
- * @method string getVip6() Obtain Internal parameter, which can be ignored.
+ * @method string getVip6() Obtain Due to the naming irregularity of this parameter, it is recommended to use the parameter IPv6 instead. Internal parameters, which can be ignored by users.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setVip6(string $Vip6) Set Internal parameter, which can be ignored.
+ * @method void setVip6(string $Vip6) Set Due to the naming irregularity of this parameter, it is recommended to use the parameter IPv6 instead. Internal parameters, which can be ignored by users.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getIPv6() Obtain Internal parameters, which can be ignored by users.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setIPv6(string $IPv6) Set Internal parameters, which can be ignored by users.
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method integer getVpcID() Obtain VPC ID, such as `75101`.
  * @method void setVpcID(integer $VpcID) Set VPC ID, such as `75101`.
@@ -149,10 +153,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $Vip;
 
     /**
-     * @var string Internal parameter, which can be ignored.
+     * @var string Due to the naming irregularity of this parameter, it is recommended to use the parameter IPv6 instead. Internal parameters, which can be ignored by users.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Vip6;
+
+    /**
+     * @var string Internal parameters, which can be ignored by users.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $IPv6;
 
     /**
      * @var integer VPC ID, such as `75101`.
@@ -213,7 +223,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $Engine Engine: Redis Community Edition, Tencent Cloud CKV.
      * @param string $Role Read-write permission of the instance. <ul><li>`rw`: Read/Write. </li><li>`r`: Read-only. </li></ul>
      * @param string $Vip Instance VIP
-     * @param string $Vip6 Internal parameter, which can be ignored.
+     * @param string $Vip6 Due to the naming irregularity of this parameter, it is recommended to use the parameter IPv6 instead. Internal parameters, which can be ignored by users.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $IPv6 Internal parameters, which can be ignored by users.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $VpcID VPC ID, such as `75101`.
      * @param integer $VPort Instance port
@@ -296,6 +308,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("Vip6",$param) and $param["Vip6"] !== null) {
             $this->Vip6 = $param["Vip6"];
+        }
+
+        if (array_key_exists("IPv6",$param) and $param["IPv6"] !== null) {
+            $this->IPv6 = $param["IPv6"];
         }
 
         if (array_key_exists("VpcID",$param) and $param["VpcID"] !== null) {

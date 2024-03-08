@@ -72,12 +72,20 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPayMode(string $PayMode) Set Supported billing modes
 - `1`: Monthly subscription.
 - `0`: Pay-as-you-go.
- * @method boolean getEnableRepicaReadOnly() Obtain Whether to support read-only replicas
-- `true`: Supported.
--`false`: Not supported.
- * @method void setEnableRepicaReadOnly(boolean $EnableRepicaReadOnly) Set Whether to support read-only replicas
-- `true`: Supported.
--`false`: Not supported.
+ * @method boolean getEnableRepicaReadOnly() Obtain Due to spelling inconsistency in this parameter name, it is recommended to use the **EnableReplicaReadOnly** parameter instead. Its meaning refers to whether the Read-Only Replica is supported.
+- true: Supported.
+- false: Not supported.
+ * @method void setEnableRepicaReadOnly(boolean $EnableRepicaReadOnly) Set Due to spelling inconsistency in this parameter name, it is recommended to use the **EnableReplicaReadOnly** parameter instead. Its meaning refers to whether the Read-Only Replica is supported.
+- true: Supported.
+- false: Not supported.
+ * @method boolean getEnableReplicaReadOnly() Obtain Whether the Read-Only Replica is supported.
+- true: Supported.
+- false: Not supported.
+Note: This field may return null, indicating that no valid value can be obtained.
+ * @method void setEnableReplicaReadOnly(boolean $EnableReplicaReadOnly) Set Whether the Read-Only Replica is supported.
+- true: Supported.
+- false: Not supported.
+Note: This field may return null, indicating that no valid value can be obtained.
  */
 class ProductConf extends AbstractModel
 {
@@ -156,11 +164,19 @@ class ProductConf extends AbstractModel
     public $PayMode;
 
     /**
-     * @var boolean Whether to support read-only replicas
-- `true`: Supported.
--`false`: Not supported.
+     * @var boolean Due to spelling inconsistency in this parameter name, it is recommended to use the **EnableReplicaReadOnly** parameter instead. Its meaning refers to whether the Read-Only Replica is supported.
+- true: Supported.
+- false: Not supported.
      */
     public $EnableRepicaReadOnly;
+
+    /**
+     * @var boolean Whether the Read-Only Replica is supported.
+- true: Supported.
+- false: Not supported.
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public $EnableReplicaReadOnly;
 
     /**
      * @param integer $Type Product type
@@ -189,9 +205,13 @@ class ProductConf extends AbstractModel
      * @param string $PayMode Supported billing modes
 - `1`: Monthly subscription.
 - `0`: Pay-as-you-go.
-     * @param boolean $EnableRepicaReadOnly Whether to support read-only replicas
-- `true`: Supported.
--`false`: Not supported.
+     * @param boolean $EnableRepicaReadOnly Due to spelling inconsistency in this parameter name, it is recommended to use the **EnableReplicaReadOnly** parameter instead. Its meaning refers to whether the Read-Only Replica is supported.
+- true: Supported.
+- false: Not supported.
+     * @param boolean $EnableReplicaReadOnly Whether the Read-Only Replica is supported.
+- true: Supported.
+- false: Not supported.
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     function __construct()
     {
@@ -256,6 +276,10 @@ class ProductConf extends AbstractModel
 
         if (array_key_exists("EnableRepicaReadOnly",$param) and $param["EnableRepicaReadOnly"] !== null) {
             $this->EnableRepicaReadOnly = $param["EnableRepicaReadOnly"];
+        }
+
+        if (array_key_exists("EnableReplicaReadOnly",$param) and $param["EnableReplicaReadOnly"] !== null) {
+            $this->EnableReplicaReadOnly = $param["EnableReplicaReadOnly"];
         }
     }
 }

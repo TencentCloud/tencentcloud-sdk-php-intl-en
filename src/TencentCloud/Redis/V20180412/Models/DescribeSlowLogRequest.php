@@ -34,8 +34,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) Set Number of slow queries displayed per page. Default value: `20`. Value range:  [20,1000].
  * @method integer getOffset() Obtain Slow query offset, which is an integral multiple of `Limit`. Calculation formula:  `offset` = `limit` * (page number - 1).
  * @method void setOffset(integer $Offset) Set Slow query offset, which is an integral multiple of `Limit`. Calculation formula:  `offset` = `limit` * (page number - 1).
- * @method string getRole() Obtain Node role. <ul><li>`Master`: Master node</li><li>`Slave`: Replica node</li></ul>
- * @method void setRole(string $Role) Set Node role. <ul><li>`Master`: Master node</li><li>`Slave`: Replica node</li></ul>
+ * @method string getRole() Obtain Node role.
+- master: Master node.- slave: Replica node.
+ * @method void setRole(string $Role) Set Node role.
+- master: Master node.- slave: Replica node.
  */
 class DescribeSlowLogRequest extends AbstractModel
 {
@@ -71,7 +73,8 @@ class DescribeSlowLogRequest extends AbstractModel
     public $Offset;
 
     /**
-     * @var string Node role. <ul><li>`Master`: Master node</li><li>`Slave`: Replica node</li></ul>
+     * @var string Node role.
+- master: Master node.- slave: Replica node.
      */
     public $Role;
 
@@ -83,7 +86,8 @@ class DescribeSlowLogRequest extends AbstractModel
      * @param integer $MinQueryTime The average execution time threshold of slow query  in microseconds
      * @param integer $Limit Number of slow queries displayed per page. Default value: `20`. Value range:  [20,1000].
      * @param integer $Offset Slow query offset, which is an integral multiple of `Limit`. Calculation formula:  `offset` = `limit` * (page number - 1).
-     * @param string $Role Node role. <ul><li>`Master`: Master node</li><li>`Slave`: Replica node</li></ul>
+     * @param string $Role Node role.
+- master: Master node.- slave: Replica node.
      */
     function __construct()
     {
