@@ -26,6 +26,24 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUrl(string $Url) Set Endpoint URL.
  * @method EndpointAuthInfo getAuthInfo() Obtain Endpoint authentication information.
  * @method void setAuthInfo(EndpointAuthInfo $AuthInfo) Set Endpoint authentication information.
+ * @method string getProtocol() Obtain Endpoint protocol.
+ * @method void setProtocol(string $Protocol) Set Endpoint protocol.
+ * @method string getManifest() Obtain Manifest name, default is main.
+ * @method void setManifest(string $Manifest) Set Manifest name, default is main.
+ * @method boolean getTimeShiftEnable() Obtain Whether to turn on the time shift function, true: on, false: off, the default is off.
+ * @method void setTimeShiftEnable(boolean $TimeShiftEnable) Set Whether to turn on the time shift function, true: on, false: off, the default is off.
+ * @method integer getTimeShiftDuration() Obtain The number of days in the time shift window, up to 30 days. Valid when TimeShiftEnable is turned on.
+ * @method void setTimeShiftDuration(integer $TimeShiftDuration) Set The number of days in the time shift window, up to 30 days. Valid when TimeShiftEnable is turned on.
+ * @method boolean getSSAIEnable() Obtain Advertising insertion function switch.
+ * @method void setSSAIEnable(boolean $SSAIEnable) Set Advertising insertion function switch.
+ * @method SSAIConf getSSAIInfo() Obtain Ad insertion function configuration information.
+ * @method void setSSAIInfo(SSAIConf $SSAIInfo) Set Ad insertion function configuration information.
+ * @method integer getCustomUrlParamIndex() Obtain The customer-defined url parameter is inserted into the subscript at the specified position of the Endpoint url. The optional range of the subscript is: [0,3].
+ * @method void setCustomUrlParamIndex(integer $CustomUrlParamIndex) Set The customer-defined url parameter is inserted into the subscript at the specified position of the Endpoint url. The optional range of the subscript is: [0,3].
+ * @method string getCustomUrlParam() Obtain Customer-defined url parameters are inserted into the specified position of the Endpoint url based on the CustomUrlParamIndex.
+The parameters can only contain digits, letters, underscores (_), and hyphens (-), with a length of 1 to 64 chars.
+ * @method void setCustomUrlParam(string $CustomUrlParam) Set Customer-defined url parameters are inserted into the specified position of the Endpoint url based on the CustomUrlParamIndex.
+The parameters can only contain digits, letters, underscores (_), and hyphens (-), with a length of 1 to 64 chars.
  */
 class EndpointInfo extends AbstractModel
 {
@@ -45,9 +63,59 @@ class EndpointInfo extends AbstractModel
     public $AuthInfo;
 
     /**
+     * @var string Endpoint protocol.
+     */
+    public $Protocol;
+
+    /**
+     * @var string Manifest name, default is main.
+     */
+    public $Manifest;
+
+    /**
+     * @var boolean Whether to turn on the time shift function, true: on, false: off, the default is off.
+     */
+    public $TimeShiftEnable;
+
+    /**
+     * @var integer The number of days in the time shift window, up to 30 days. Valid when TimeShiftEnable is turned on.
+     */
+    public $TimeShiftDuration;
+
+    /**
+     * @var boolean Advertising insertion function switch.
+     */
+    public $SSAIEnable;
+
+    /**
+     * @var SSAIConf Ad insertion function configuration information.
+     */
+    public $SSAIInfo;
+
+    /**
+     * @var integer The customer-defined url parameter is inserted into the subscript at the specified position of the Endpoint url. The optional range of the subscript is: [0,3].
+     */
+    public $CustomUrlParamIndex;
+
+    /**
+     * @var string Customer-defined url parameters are inserted into the specified position of the Endpoint url based on the CustomUrlParamIndex.
+The parameters can only contain digits, letters, underscores (_), and hyphens (-), with a length of 1 to 64 chars.
+     */
+    public $CustomUrlParam;
+
+    /**
      * @param string $Name Endpoint name.
      * @param string $Url Endpoint URL.
      * @param EndpointAuthInfo $AuthInfo Endpoint authentication information.
+     * @param string $Protocol Endpoint protocol.
+     * @param string $Manifest Manifest name, default is main.
+     * @param boolean $TimeShiftEnable Whether to turn on the time shift function, true: on, false: off, the default is off.
+     * @param integer $TimeShiftDuration The number of days in the time shift window, up to 30 days. Valid when TimeShiftEnable is turned on.
+     * @param boolean $SSAIEnable Advertising insertion function switch.
+     * @param SSAIConf $SSAIInfo Ad insertion function configuration information.
+     * @param integer $CustomUrlParamIndex The customer-defined url parameter is inserted into the subscript at the specified position of the Endpoint url. The optional range of the subscript is: [0,3].
+     * @param string $CustomUrlParam Customer-defined url parameters are inserted into the specified position of the Endpoint url based on the CustomUrlParamIndex.
+The parameters can only contain digits, letters, underscores (_), and hyphens (-), with a length of 1 to 64 chars.
      */
     function __construct()
     {
@@ -73,6 +141,39 @@ class EndpointInfo extends AbstractModel
         if (array_key_exists("AuthInfo",$param) and $param["AuthInfo"] !== null) {
             $this->AuthInfo = new EndpointAuthInfo();
             $this->AuthInfo->deserialize($param["AuthInfo"]);
+        }
+
+        if (array_key_exists("Protocol",$param) and $param["Protocol"] !== null) {
+            $this->Protocol = $param["Protocol"];
+        }
+
+        if (array_key_exists("Manifest",$param) and $param["Manifest"] !== null) {
+            $this->Manifest = $param["Manifest"];
+        }
+
+        if (array_key_exists("TimeShiftEnable",$param) and $param["TimeShiftEnable"] !== null) {
+            $this->TimeShiftEnable = $param["TimeShiftEnable"];
+        }
+
+        if (array_key_exists("TimeShiftDuration",$param) and $param["TimeShiftDuration"] !== null) {
+            $this->TimeShiftDuration = $param["TimeShiftDuration"];
+        }
+
+        if (array_key_exists("SSAIEnable",$param) and $param["SSAIEnable"] !== null) {
+            $this->SSAIEnable = $param["SSAIEnable"];
+        }
+
+        if (array_key_exists("SSAIInfo",$param) and $param["SSAIInfo"] !== null) {
+            $this->SSAIInfo = new SSAIConf();
+            $this->SSAIInfo->deserialize($param["SSAIInfo"]);
+        }
+
+        if (array_key_exists("CustomUrlParamIndex",$param) and $param["CustomUrlParamIndex"] !== null) {
+            $this->CustomUrlParamIndex = $param["CustomUrlParamIndex"];
+        }
+
+        if (array_key_exists("CustomUrlParam",$param) and $param["CustomUrlParam"] !== null) {
+            $this->CustomUrlParam = $param["CustomUrlParam"];
         }
     }
 }
