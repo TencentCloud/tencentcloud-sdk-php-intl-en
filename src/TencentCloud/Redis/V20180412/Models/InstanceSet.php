@@ -48,8 +48,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCreatetime(string $Createtime) Set Instance creation time in the format of "2020-01-15 10:20:00"
  * @method float getSize() Obtain Instance memory capacity in MB (1 MB = 1024 KB)
  * @method void setSize(float $Size) Set Instance memory capacity in MB (1 MB = 1024 KB)
- * @method float getSizeUsed() Obtain This field has been disused. You can use the TCOP’s [GetMonitorData](https://intl.cloud.tencent.com/document/product/248/31014?from_cn_redirect=1) API to query the capacity used by the instance.
- * @method void setSizeUsed(float $SizeUsed) Set This field has been disused. You can use the TCOP’s [GetMonitorData](https://intl.cloud.tencent.com/document/product/248/31014?from_cn_redirect=1) API to query the capacity used by the instance.
+ * @method float getSizeUsed() Obtain This field has been disused. You can use the TCOP [GetMonitorData](https://www.tencentcloud.com/zh/document/product/248/33881) API to query the capacity used by the instance.
+ * @method void setSizeUsed(float $SizeUsed) Set This field has been disused. You can use the TCOP [GetMonitorData](https://www.tencentcloud.com/zh/document/product/248/33881) API to query the capacity used by the instance.
  * @method integer getType() Obtain Instance type
 - `2`: Redis 2.8 Memory Edition (Standard Architecture).
 - `3`: CKV 3.2 Memory Edition (Standard Architecture).
@@ -270,7 +270,7 @@ class InstanceSet extends AbstractModel
     public $Size;
 
     /**
-     * @var float This field has been disused. You can use the TCOP’s [GetMonitorData](https://intl.cloud.tencent.com/document/product/248/31014?from_cn_redirect=1) API to query the capacity used by the instance.
+     * @var float This field has been disused. You can use the TCOP [GetMonitorData](https://www.tencentcloud.com/zh/document/product/248/33881) API to query the capacity used by the instance.
      */
     public $SizeUsed;
 
@@ -532,7 +532,7 @@ Note: This field may return null, indicating that no valid value can be obtained
      * @param integer $Port Port number of an instance
      * @param string $Createtime Instance creation time in the format of "2020-01-15 10:20:00"
      * @param float $Size Instance memory capacity in MB (1 MB = 1024 KB)
-     * @param float $SizeUsed This field has been disused. You can use the TCOP’s [GetMonitorData](https://intl.cloud.tencent.com/document/product/248/31014?from_cn_redirect=1) API to query the capacity used by the instance.
+     * @param float $SizeUsed This field has been disused. You can use the TCOP [GetMonitorData](https://www.tencentcloud.com/zh/document/product/248/33881) API to query the capacity used by the instance.
      * @param integer $Type Instance type
 - `2`: Redis 2.8 Memory Edition (Standard Architecture).
 - `3`: CKV 3.2 Memory Edition (Standard Architecture).
