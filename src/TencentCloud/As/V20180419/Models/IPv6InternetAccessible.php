@@ -20,11 +20,11 @@ use TencentCloud\Common\AbstractModel;
 /**
  * This describes the IPv6 address public network accessibility of the instance created by a launch configuration and declares the public network usage billing method of the IPv6 address and the maximum bandwidth.
  *
- * @method string getInternetChargeType() Obtain Network billing mode. Valid values: TRAFFIC_POSTPAID_BY_HOUR, BANDWIDTH_PACKAGE. Default value: TRAFFIC_POSTPAID_BY_HOUR. For the current account type, see [Account Type Description](https://intl.cloud.tencent.com/document/product/1199/49090?from_cn_redirect=1#judge).
+ * @method string getInternetChargeType() Obtain Network billing mode. Valid values: TRAFFIC_POSTPAID_BY_HOUR, BANDWIDTH_PACKAGE. Default value: TRAFFIC_POSTPAID_BY_HOUR. For the current account type, see [Account Type Description](https://intl.cloud.tencent.com/document/product/684/15246?from_cn_redirect=1#judge).
 <br><li> IPv6 supports `TRAFFIC_POSTPAID_BY_HOUR` under a bill-by-IP account.
 <br><li> IPv6 supports `BANDWIDTH_PACKAGE` under a bill-by-CVM account.
 Note: This field may return `null`, indicating that no valid values can be obtained.
- * @method void setInternetChargeType(string $InternetChargeType) Set Network billing mode. Valid values: TRAFFIC_POSTPAID_BY_HOUR, BANDWIDTH_PACKAGE. Default value: TRAFFIC_POSTPAID_BY_HOUR. For the current account type, see [Account Type Description](https://intl.cloud.tencent.com/document/product/1199/49090?from_cn_redirect=1#judge).
+ * @method void setInternetChargeType(string $InternetChargeType) Set Network billing mode. Valid values: TRAFFIC_POSTPAID_BY_HOUR, BANDWIDTH_PACKAGE. Default value: TRAFFIC_POSTPAID_BY_HOUR. For the current account type, see [Account Type Description](https://intl.cloud.tencent.com/document/product/684/15246?from_cn_redirect=1#judge).
 <br><li> IPv6 supports `TRAFFIC_POSTPAID_BY_HOUR` under a bill-by-IP account.
 <br><li> IPv6 supports `BANDWIDTH_PACKAGE` under a bill-by-CVM account.
 Note: This field may return `null`, indicating that no valid values can be obtained.
@@ -40,7 +40,7 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 class IPv6InternetAccessible extends AbstractModel
 {
     /**
-     * @var string Network billing mode. Valid values: TRAFFIC_POSTPAID_BY_HOUR, BANDWIDTH_PACKAGE. Default value: TRAFFIC_POSTPAID_BY_HOUR. For the current account type, see [Account Type Description](https://intl.cloud.tencent.com/document/product/1199/49090?from_cn_redirect=1#judge).
+     * @var string Network billing mode. Valid values: TRAFFIC_POSTPAID_BY_HOUR, BANDWIDTH_PACKAGE. Default value: TRAFFIC_POSTPAID_BY_HOUR. For the current account type, see [Account Type Description](https://intl.cloud.tencent.com/document/product/684/15246?from_cn_redirect=1#judge).
 <br><li> IPv6 supports `TRAFFIC_POSTPAID_BY_HOUR` under a bill-by-IP account.
 <br><li> IPv6 supports `BANDWIDTH_PACKAGE` under a bill-by-CVM account.
 Note: This field may return `null`, indicating that no valid values can be obtained.
@@ -60,7 +60,7 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     public $BandwidthPackageId;
 
     /**
-     * @param string $InternetChargeType Network billing mode. Valid values: TRAFFIC_POSTPAID_BY_HOUR, BANDWIDTH_PACKAGE. Default value: TRAFFIC_POSTPAID_BY_HOUR. For the current account type, see [Account Type Description](https://intl.cloud.tencent.com/document/product/1199/49090?from_cn_redirect=1#judge).
+     * @param string $InternetChargeType Network billing mode. Valid values: TRAFFIC_POSTPAID_BY_HOUR, BANDWIDTH_PACKAGE. Default value: TRAFFIC_POSTPAID_BY_HOUR. For the current account type, see [Account Type Description](https://intl.cloud.tencent.com/document/product/684/15246?from_cn_redirect=1#judge).
 <br><li> IPv6 supports `TRAFFIC_POSTPAID_BY_HOUR` under a bill-by-IP account.
 <br><li> IPv6 supports `BANDWIDTH_PACKAGE` under a bill-by-CVM account.
 Note: This field may return `null`, indicating that no valid values can be obtained.
