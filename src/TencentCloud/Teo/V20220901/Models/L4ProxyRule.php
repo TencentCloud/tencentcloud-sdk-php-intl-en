@@ -106,6 +106,8 @@ Note: Do not set this parameter when L4ProxyRule is used as an input parameter i
 <li>stopping: Disabling;</li>
 <li>fail: Failed to deploy or disable.</li>
 Note: Do not set this parameter when L4ProxyRule is used as an input parameter in CreateL4ProxyRules and ModifyL4ProxyRules.
+ * @method string getBuId() Obtain BuID.
+ * @method void setBuId(string $BuId) Set BuID.
  */
 class L4ProxyRule extends AbstractModel
 {
@@ -197,6 +199,11 @@ Note: Do not set this parameter when L4ProxyRule is used as an input parameter i
     public $Status;
 
     /**
+     * @var string BuID.
+     */
+    public $BuId;
+
+    /**
      * @param string $RuleId Forwarding rule ID.
 Note: Do not fill in this parameter when L4ProxyRule is used as an input parameter in CreateL4ProxyRules; it must be filled in when L4ProxyRule is used as an input parameter in ModifyL4ProxyRules.
      * @param string $Protocol Forwarding protocol. Valid values:
@@ -240,6 +247,7 @@ Note: This parameter is optional when L4ProxyRule is used as an input parameter 
 <li>stopping: Disabling;</li>
 <li>fail: Failed to deploy or disable.</li>
 Note: Do not set this parameter when L4ProxyRule is used as an input parameter in CreateL4ProxyRules and ModifyL4ProxyRules.
+     * @param string $BuId BuID.
      */
     function __construct()
     {
@@ -296,6 +304,10 @@ Note: Do not set this parameter when L4ProxyRule is used as an input parameter i
 
         if (array_key_exists("Status",$param) and $param["Status"] !== null) {
             $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("BuId",$param) and $param["BuId"] !== null) {
+            $this->BuId = $param["BuId"];
         }
     }
 }
