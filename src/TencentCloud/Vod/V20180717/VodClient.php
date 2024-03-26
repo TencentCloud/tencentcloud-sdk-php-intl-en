@@ -242,6 +242,7 @@ If event notification is used, the type of event notification is [Video editing 
  * @method Models\ExecuteFunctionResponse ExecuteFunction(Models\ExecuteFunctionRequest $req) This API is only used in special scenarios of custom development. Unless requested by VOD customer service, please do not call it.
  * @method Models\ExtractCopyRightWatermarkResponse ExtractCopyRightWatermark(Models\ExtractCopyRightWatermarkRequest $req) Extract CopyRight Watermark.
  * @method Models\ExtractTraceWatermarkResponse ExtractTraceWatermark(Models\ExtractTraceWatermarkRequest $req) This API is used to extract the user ID of a user that distributed a video containing a digital watermark.
+ * @method Models\FastEditMediaResponse FastEditMedia(Models\FastEditMediaRequest $req) Implement fast splicing and editing of HLS videos to generate new HLS format media.
  * @method Models\ForbidMediaDistributionResponse ForbidMediaDistribution(Models\ForbidMediaDistributionRequest $req) * After a media file is forbidden, except previewing it in the VOD Console, accessing the URLs of its various resources (such as source file, output files, and screenshots) in other scenarios will return error 403.
   It takes about 5-10 minutes for a forbidding/unblocking operation to take effect across the entire network.
  * @method Models\InspectMediaQualityResponse InspectMediaQuality(Models\InspectMediaQualityRequest $req) Initiate media quality inspection task.
