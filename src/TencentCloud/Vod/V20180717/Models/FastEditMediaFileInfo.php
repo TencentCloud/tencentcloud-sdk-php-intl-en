@@ -18,52 +18,52 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * VOD  fast media editing information
  *
- * @method string getFileId() Obtain 
- * @method void setFileId(string $FileId) Set 
- * @method string getAudioVideoType() Obtain 
- * @method void setAudioVideoType(string $AudioVideoType) Set 
- * @method integer getTranscodeDefinition() Obtain 
- * @method void setTranscodeDefinition(integer $TranscodeDefinition) Set 
- * @method float getStartTimeOffset() Obtain 
- * @method void setStartTimeOffset(float $StartTimeOffset) Set 
- * @method float getEndTimeOffset() Obtain 
- * @method void setEndTimeOffset(float $EndTimeOffset) Set 
+ * @method string getFileId() Obtain Media file ID.
+ * @method void setFileId(string $FileId) Set Media file ID.
+ * @method string getAudioVideoType() Obtain The types of media. Valid values: <li>Transcode:Transcoded output; </li> <li>Original: Original audio and video. </li>The audio and video being operated on must be in HLS format.
+ * @method void setAudioVideoType(string $AudioVideoType) Set The types of media. Valid values: <li>Transcode:Transcoded output; </li> <li>Original: Original audio and video. </li>The audio and video being operated on must be in HLS format.
+ * @method integer getTranscodeDefinition() Obtain When AudioVideoType is set to Transcode, it is valid and indicates the transcoding template ID for the media being operated on.
+ * @method void setTranscodeDefinition(integer $TranscodeDefinition) Set When AudioVideoType is set to Transcode, it is valid and indicates the transcoding template ID for the media being operated on.
+ * @method float getStartTimeOffset() Obtain Offset time of the start of the video clip, unit: seconds.
+ * @method void setStartTimeOffset(float $StartTimeOffset) Set Offset time of the start of the video clip, unit: seconds.
+ * @method float getEndTimeOffset() Obtain Offset time at the end of the video clip, unit: seconds.
+ * @method void setEndTimeOffset(float $EndTimeOffset) Set Offset time at the end of the video clip, unit: seconds.
  */
 class FastEditMediaFileInfo extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Media file ID.
      */
     public $FileId;
 
     /**
-     * @var string 
+     * @var string The types of media. Valid values: <li>Transcode:Transcoded output; </li> <li>Original: Original audio and video. </li>The audio and video being operated on must be in HLS format.
      */
     public $AudioVideoType;
 
     /**
-     * @var integer 
+     * @var integer When AudioVideoType is set to Transcode, it is valid and indicates the transcoding template ID for the media being operated on.
      */
     public $TranscodeDefinition;
 
     /**
-     * @var float 
+     * @var float Offset time of the start of the video clip, unit: seconds.
      */
     public $StartTimeOffset;
 
     /**
-     * @var float 
+     * @var float Offset time at the end of the video clip, unit: seconds.
      */
     public $EndTimeOffset;
 
     /**
-     * @param string $FileId 
-     * @param string $AudioVideoType 
-     * @param integer $TranscodeDefinition 
-     * @param float $StartTimeOffset 
-     * @param float $EndTimeOffset 
+     * @param string $FileId Media file ID.
+     * @param string $AudioVideoType The types of media. Valid values: <li>Transcode:Transcoded output; </li> <li>Original: Original audio and video. </li>The audio and video being operated on must be in HLS format.
+     * @param integer $TranscodeDefinition When AudioVideoType is set to Transcode, it is valid and indicates the transcoding template ID for the media being operated on.
+     * @param float $StartTimeOffset Offset time of the start of the video clip, unit: seconds.
+     * @param float $EndTimeOffset Offset time at the end of the video clip, unit: seconds.
      */
     function __construct()
     {
