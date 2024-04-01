@@ -28,6 +28,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setUserId(string $UserId) Set The ID of the user to whom the event occurred.
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getDevice() Obtain User device type. 0: Unknown; 1: Windows; 2: macOS; 3: Android; 4: iOS; 5: Web; 6: Mobile webpage; 7: Wechat Mini Program.
+ * @method void setDevice(integer $Device) Set User device type. 0: Unknown; 1: Windows; 2: macOS; 3: Android; 4: iOS; 5: Web; 6: Mobile webpage; 7: Wechat Mini Program.
+ * @method integer getDuration() Obtain Recording time. Unit: seconds
+ * @method void setDuration(integer $Duration) Set Recording time. Unit: seconds
+ * @method integer getRecordSize() Obtain Recorded file size
+ * @method void setRecordSize(integer $RecordSize) Set Recorded file size
+ * @method string getRecordUrl() Obtain Recording url
+ * @method void setRecordUrl(string $RecordUrl) Set Recording url
  */
 class EventDataInfo extends AbstractModel
 {
@@ -44,10 +52,34 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $UserId;
 
     /**
+     * @var integer User device type. 0: Unknown; 1: Windows; 2: macOS; 3: Android; 4: iOS; 5: Web; 6: Mobile webpage; 7: Wechat Mini Program.
+     */
+    public $Device;
+
+    /**
+     * @var integer Recording time. Unit: seconds
+     */
+    public $Duration;
+
+    /**
+     * @var integer Recorded file size
+     */
+    public $RecordSize;
+
+    /**
+     * @var string Recording url
+     */
+    public $RecordUrl;
+
+    /**
      * @param integer $RoomId The room ID.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $UserId The ID of the user to whom the event occurred.
 Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $Device User device type. 0: Unknown; 1: Windows; 2: macOS; 3: Android; 4: iOS; 5: Web; 6: Mobile webpage; 7: Wechat Mini Program.
+     * @param integer $Duration Recording time. Unit: seconds
+     * @param integer $RecordSize Recorded file size
+     * @param string $RecordUrl Recording url
      */
     function __construct()
     {
@@ -68,6 +100,22 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("UserId",$param) and $param["UserId"] !== null) {
             $this->UserId = $param["UserId"];
+        }
+
+        if (array_key_exists("Device",$param) and $param["Device"] !== null) {
+            $this->Device = $param["Device"];
+        }
+
+        if (array_key_exists("Duration",$param) and $param["Duration"] !== null) {
+            $this->Duration = $param["Duration"];
+        }
+
+        if (array_key_exists("RecordSize",$param) and $param["RecordSize"] !== null) {
+            $this->RecordSize = $param["RecordSize"];
+        }
+
+        if (array_key_exists("RecordUrl",$param) and $param["RecordUrl"] !== null) {
+            $this->RecordUrl = $param["RecordUrl"];
         }
     }
 }

@@ -76,6 +76,28 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid value was found.
  * @method void setEnableDirectControl(integer $EnableDirectControl) Set Whether the students' consent is required to control their cameras/microphones.
 Note: This field may return null, indicating that no valid value was found.
+ * @method integer getInteractionMode() Obtain 
+ * @method void setInteractionMode(integer $InteractionMode) Set 
+ * @method integer getVideoOrientation() Obtain 
+ * @method void setVideoOrientation(integer $VideoOrientation) Set 
+ * @method integer getIsGradingRequiredPostClass() Obtain 
+ * @method void setIsGradingRequiredPostClass(integer $IsGradingRequiredPostClass) Set 
+ * @method integer getRoomType() Obtain Room Type: 0 Small Classroom(default); 1 Lecture Hall(public class)
+ * @method void setRoomType(integer $RoomType) Set Room Type: 0 Small Classroom(default); 1 Lecture Hall(public class)
+ * @method integer getEndDelayTime() Obtain 
+ * @method void setEndDelayTime(integer $EndDelayTime) Set 
+ * @method integer getLiveType() Obtain 
+ * @method void setLiveType(integer $LiveType) Set 
+ * @method string getRecordLiveUrl() Obtain 
+ * @method void setRecordLiveUrl(string $RecordLiveUrl) Set 
+ * @method integer getEnableAutoStart() Obtain 
+ * @method void setEnableAutoStart(integer $EnableAutoStart) Set 
+ * @method string getRecordBackground() Obtain 
+ * @method void setRecordBackground(string $RecordBackground) Set 
+ * @method string getRecordScene() Obtain 
+ * @method void setRecordScene(string $RecordScene) Set 
+ * @method string getRecordLang() Obtain 
+ * @method void setRecordLang(string $RecordLang) Set 
  */
 class RoomItem extends AbstractModel
 {
@@ -160,6 +182,61 @@ Note: This field may return null, indicating that no valid value was found.
     public $EnableDirectControl;
 
     /**
+     * @var integer 
+     */
+    public $InteractionMode;
+
+    /**
+     * @var integer 
+     */
+    public $VideoOrientation;
+
+    /**
+     * @var integer 
+     */
+    public $IsGradingRequiredPostClass;
+
+    /**
+     * @var integer Room Type: 0 Small Classroom(default); 1 Lecture Hall(public class)
+     */
+    public $RoomType;
+
+    /**
+     * @var integer 
+     */
+    public $EndDelayTime;
+
+    /**
+     * @var integer 
+     */
+    public $LiveType;
+
+    /**
+     * @var string 
+     */
+    public $RecordLiveUrl;
+
+    /**
+     * @var integer 
+     */
+    public $EnableAutoStart;
+
+    /**
+     * @var string 
+     */
+    public $RecordBackground;
+
+    /**
+     * @var string 
+     */
+    public $RecordScene;
+
+    /**
+     * @var string 
+     */
+    public $RecordLang;
+
+    /**
      * @param string $Name The name.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $RoomId The room ID.
@@ -188,6 +265,17 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $EnableDirectControl Whether the students' consent is required to control their cameras/microphones.
 Note: This field may return null, indicating that no valid value was found.
+     * @param integer $InteractionMode 
+     * @param integer $VideoOrientation 
+     * @param integer $IsGradingRequiredPostClass 
+     * @param integer $RoomType Room Type: 0 Small Classroom(default); 1 Lecture Hall(public class)
+     * @param integer $EndDelayTime 
+     * @param integer $LiveType 
+     * @param string $RecordLiveUrl 
+     * @param integer $EnableAutoStart 
+     * @param string $RecordBackground 
+     * @param string $RecordScene 
+     * @param string $RecordLang 
      */
     function __construct()
     {
@@ -252,6 +340,50 @@ Note: This field may return null, indicating that no valid value was found.
 
         if (array_key_exists("EnableDirectControl",$param) and $param["EnableDirectControl"] !== null) {
             $this->EnableDirectControl = $param["EnableDirectControl"];
+        }
+
+        if (array_key_exists("InteractionMode",$param) and $param["InteractionMode"] !== null) {
+            $this->InteractionMode = $param["InteractionMode"];
+        }
+
+        if (array_key_exists("VideoOrientation",$param) and $param["VideoOrientation"] !== null) {
+            $this->VideoOrientation = $param["VideoOrientation"];
+        }
+
+        if (array_key_exists("IsGradingRequiredPostClass",$param) and $param["IsGradingRequiredPostClass"] !== null) {
+            $this->IsGradingRequiredPostClass = $param["IsGradingRequiredPostClass"];
+        }
+
+        if (array_key_exists("RoomType",$param) and $param["RoomType"] !== null) {
+            $this->RoomType = $param["RoomType"];
+        }
+
+        if (array_key_exists("EndDelayTime",$param) and $param["EndDelayTime"] !== null) {
+            $this->EndDelayTime = $param["EndDelayTime"];
+        }
+
+        if (array_key_exists("LiveType",$param) and $param["LiveType"] !== null) {
+            $this->LiveType = $param["LiveType"];
+        }
+
+        if (array_key_exists("RecordLiveUrl",$param) and $param["RecordLiveUrl"] !== null) {
+            $this->RecordLiveUrl = $param["RecordLiveUrl"];
+        }
+
+        if (array_key_exists("EnableAutoStart",$param) and $param["EnableAutoStart"] !== null) {
+            $this->EnableAutoStart = $param["EnableAutoStart"];
+        }
+
+        if (array_key_exists("RecordBackground",$param) and $param["RecordBackground"] !== null) {
+            $this->RecordBackground = $param["RecordBackground"];
+        }
+
+        if (array_key_exists("RecordScene",$param) and $param["RecordScene"] !== null) {
+            $this->RecordScene = $param["RecordScene"];
+        }
+
+        if (array_key_exists("RecordLang",$param) and $param["RecordLang"] !== null) {
+            $this->RecordLang = $param["RecordLang"];
         }
     }
 }

@@ -43,12 +43,12 @@ Used by actions: DescribeCurrentMemberList, DescribeRoomStatistics.
  * @method void setLastQuitTimestamp(integer $LastQuitTimestamp) Set Last time that the user left the room, in UNIX timestamp format
  * @method integer getRewords() Obtain Number of rewards received
  * @method void setRewords(integer $Rewords) Set Number of rewards received
- * @method string getIPAddress() Obtain The user’s IP address.
- * @method void setIPAddress(string $IPAddress) Set The user’s IP address.
- * @method string getLocation() Obtain The user’s location.
- * @method void setLocation(string $Location) Set The user’s location.
- * @method integer getDevice() Obtain The user’s device type. 0: Unknown; 1: Windows; 2: macOS; 3: Android; 4: iOS; 5: Web; 6: Mobile webpage; 7: Weixin Mini Program.
- * @method void setDevice(integer $Device) Set The user’s device type. 0: Unknown; 1: Windows; 2: macOS; 3: Android; 4: iOS; 5: Web; 6: Mobile webpage; 7: Weixin Mini Program.
+ * @method string getIPAddress() Obtain The user's IP address.
+ * @method void setIPAddress(string $IPAddress) Set The user's IP address.
+ * @method string getLocation() Obtain The user's location.
+ * @method void setLocation(string $Location) Set The user's location.
+ * @method integer getDevice() Obtain The user's device type. 0: Unknown; 1: Windows; 2: macOS; 3: Android; 4: iOS; 5: Web; 6: Mobile webpage; 7: Weixin Mini Program.
+ * @method void setDevice(integer $Device) Set The user's device type. 0: Unknown; 1: Windows; 2: macOS; 3: Android; 4: iOS; 5: Web; 6: Mobile webpage; 7: Weixin Mini Program.
  * @method integer getPerMemberMicCount() Obtain The number of times a user turned their mic on.
  * @method void setPerMemberMicCount(integer $PerMemberMicCount) Set The number of times a user turned their mic on.
  * @method integer getPerMemberMessageCount() Obtain The number of messages sent by a user.
@@ -65,6 +65,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setStage(integer $Stage) Set Whether the user is on the stage.
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getCurrentState() Obtain User status. 0 is not present, 1 is online, 2 is offline, 3 is kicked, 4 is permanently kicked, 5 is temporarily offline
+ * @method void setCurrentState(integer $CurrentState) Set User status. 0 is not present, 1 is online, 2 is offline, 3 is kicked, 4 is permanently kicked, 5 is temporarily offline
  */
 class MemberRecord extends AbstractModel
 {
@@ -124,17 +126,17 @@ class MemberRecord extends AbstractModel
     public $Rewords;
 
     /**
-     * @var string The user’s IP address.
+     * @var string The user's IP address.
      */
     public $IPAddress;
 
     /**
-     * @var string The user’s location.
+     * @var string The user's location.
      */
     public $Location;
 
     /**
-     * @var integer The user’s device type. 0: Unknown; 1: Windows; 2: macOS; 3: Android; 4: iOS; 5: Web; 6: Mobile webpage; 7: Weixin Mini Program.
+     * @var integer The user's device type. 0: Unknown; 1: Windows; 2: macOS; 3: Android; 4: iOS; 5: Web; 6: Mobile webpage; 7: Weixin Mini Program.
      */
     public $Device;
 
@@ -171,6 +173,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $Stage;
 
     /**
+     * @var integer User status. 0 is not present, 1 is online, 2 is offline, 3 is kicked, 4 is permanently kicked, 5 is temporarily offline
+     */
+    public $CurrentState;
+
+    /**
      * @param string $UserId User ID
      * @param string $UserName Username
      * @param integer $PresentTime Online duration, in seconds
@@ -182,9 +189,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param integer $FirstJoinTimestamp First time that the user entered the room, in UNIX timestamp format
      * @param integer $LastQuitTimestamp Last time that the user left the room, in UNIX timestamp format
      * @param integer $Rewords Number of rewards received
-     * @param string $IPAddress The user’s IP address.
-     * @param string $Location The user’s location.
-     * @param integer $Device The user’s device type. 0: Unknown; 1: Windows; 2: macOS; 3: Android; 4: iOS; 5: Web; 6: Mobile webpage; 7: Weixin Mini Program.
+     * @param string $IPAddress The user's IP address.
+     * @param string $Location The user's location.
+     * @param integer $Device The user's device type. 0: Unknown; 1: Windows; 2: macOS; 3: Android; 4: iOS; 5: Web; 6: Mobile webpage; 7: Weixin Mini Program.
      * @param integer $PerMemberMicCount The number of times a user turned their mic on.
      * @param integer $PerMemberMessageCount The number of messages sent by a user.
      * @param integer $Role The user role. `0`: Student; `1`: Teacher; `2`: Teaching Assistant; `3`: Spectator.
@@ -193,6 +200,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $Stage Whether the user is on the stage.
 Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $CurrentState User status. 0 is not present, 1 is online, 2 is offline, 3 is kicked, 4 is permanently kicked, 5 is temporarily offline
      */
     function __construct()
     {
@@ -285,6 +293,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("Stage",$param) and $param["Stage"] !== null) {
             $this->Stage = $param["Stage"];
+        }
+
+        if (array_key_exists("CurrentState",$param) and $param["CurrentState"] !== null) {
+            $this->CurrentState = $param["CurrentState"];
         }
     }
 }

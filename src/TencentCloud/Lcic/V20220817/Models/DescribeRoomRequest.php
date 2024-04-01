@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getRoomId() Obtain Room ID	
  * @method void setRoomId(integer $RoomId) Set Room ID	
+ * @method integer getRTMPStreamingURL() Obtain Request RTMP  stream link, 0: no, 1: yes, default is 0.
+ * @method void setRTMPStreamingURL(integer $RTMPStreamingURL) Set Request RTMP  stream link, 0: no, 1: yes, default is 0.
  */
 class DescribeRoomRequest extends AbstractModel
 {
@@ -31,7 +33,13 @@ class DescribeRoomRequest extends AbstractModel
     public $RoomId;
 
     /**
+     * @var integer Request RTMP  stream link, 0: no, 1: yes, default is 0.
+     */
+    public $RTMPStreamingURL;
+
+    /**
      * @param integer $RoomId Room ID	
+     * @param integer $RTMPStreamingURL Request RTMP  stream link, 0: no, 1: yes, default is 0.
      */
     function __construct()
     {
@@ -48,6 +56,10 @@ class DescribeRoomRequest extends AbstractModel
         }
         if (array_key_exists("RoomId",$param) and $param["RoomId"] !== null) {
             $this->RoomId = $param["RoomId"];
+        }
+
+        if (array_key_exists("RTMPStreamingURL",$param) and $param["RTMPStreamingURL"] !== null) {
+            $this->RTMPStreamingURL = $param["RTMPStreamingURL"];
         }
     }
 }

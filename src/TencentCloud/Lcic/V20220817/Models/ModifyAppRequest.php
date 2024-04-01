@@ -26,6 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCallback(string $Callback) Set Callback URL. Currently, only port 80 and port 443 are supported.
  * @method string getCallbackKey() Obtain The callback key.
  * @method void setCallbackKey(string $CallbackKey) Set The callback key.
+ * @method string getTransferId() Obtain Transfer Id
+ * @method void setTransferId(string $TransferId) Set Transfer Id
+ * @method string getTransferUrl() Obtain Transfer Url
+ * @method void setTransferUrl(string $TransferUrl) Set Transfer Url
  */
 class ModifyAppRequest extends AbstractModel
 {
@@ -45,9 +49,21 @@ class ModifyAppRequest extends AbstractModel
     public $CallbackKey;
 
     /**
+     * @var string Transfer Id
+     */
+    public $TransferId;
+
+    /**
+     * @var string Transfer Url
+     */
+    public $TransferUrl;
+
+    /**
      * @param integer $SdkAppId LCIC SdkAppId
      * @param string $Callback Callback URL. Currently, only port 80 and port 443 are supported.
      * @param string $CallbackKey The callback key.
+     * @param string $TransferId Transfer Id
+     * @param string $TransferUrl Transfer Url
      */
     function __construct()
     {
@@ -72,6 +88,14 @@ class ModifyAppRequest extends AbstractModel
 
         if (array_key_exists("CallbackKey",$param) and $param["CallbackKey"] !== null) {
             $this->CallbackKey = $param["CallbackKey"];
+        }
+
+        if (array_key_exists("TransferId",$param) and $param["TransferId"] !== null) {
+            $this->TransferId = $param["TransferId"];
+        }
+
+        if (array_key_exists("TransferUrl",$param) and $param["TransferUrl"] !== null) {
+            $this->TransferUrl = $param["TransferUrl"];
         }
     }
 }

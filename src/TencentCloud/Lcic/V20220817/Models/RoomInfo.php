@@ -55,6 +55,28 @@ Used by actions: BatchCreateRoom.
  * @method void setGroupId(string $GroupId) Set The ID of the group to bind. Note: This field may return null, indicating that no valid values can be obtained.
  * @method integer getEnableDirectControl() Obtain Whether the students' consent is required to control their cameras/microphones.
  * @method void setEnableDirectControl(integer $EnableDirectControl) Set Whether the students' consent is required to control their cameras/microphones.
+ * @method integer getInteractionMode() Obtain Turn on focus mode. 0 Watch all character audio and video (default) 1 Watch only teachers and teaching assistants
+ * @method void setInteractionMode(integer $InteractionMode) Set Turn on focus mode. 0 Watch all character audio and video (default) 1 Watch only teachers and teaching assistants
+ * @method integer getVideoOrientation() Obtain Horizontal and vertical screen. 0: Horizontal screen to open broadcast (default); 1: Vertical screen to open broadcast, currently only support mobile pure video type
+ * @method void setVideoOrientation(integer $VideoOrientation) Set Horizontal and vertical screen. 0: Horizontal screen to open broadcast (default); 1: Vertical screen to open broadcast, currently only support mobile pure video type
+ * @method integer getIsGradingRequiredPostClass() Obtain Whether the room is enabled for grading after the lesson. 0: not enabled 1: enabled
+ * @method void setIsGradingRequiredPostClass(integer $IsGradingRequiredPostClass) Set Whether the room is enabled for grading after the lesson. 0: not enabled 1: enabled
+ * @method integer getRoomType() Obtain Room Type: 0 Small Classroom(default); 1 Lecture Hall(public class)
+ * @method void setRoomType(integer $RoomType) Set Room Type: 0 Small Classroom(default); 1 Lecture Hall(public class)
+ * @method integer getEndDelayTime() Obtain Drag class time: unit minutes, 0 is unlimited (default), -1 is can't drag the class, greater than 0 is the time of dragging the class, the maximum value of 120 minutes
+ * @method void setEndDelayTime(integer $EndDelayTime) Set Drag class time: unit minutes, 0 is unlimited (default), -1 is can't drag the class, greater than 0 is the time of dragging the class, the maximum value of 120 minutes
+ * @method integer getLiveType() Obtain Live type: 0 regular (default) 1 Simulated Live
+ * @method void setLiveType(integer $LiveType) Set Live type: 0 regular (default) 1 Simulated Live
+ * @method string getRecordLiveUrl() Obtain Simulated Live link
+ * @method void setRecordLiveUrl(string $RecordLiveUrl) Set Simulated Live link
+ * @method integer getEnableAutoStart() Obtain Whether to start the lesson automatically: 0 not automatic lesson (default) 1 automatic lesson live_type=1 is valid
+ * @method void setEnableAutoStart(integer $EnableAutoStart) Set Whether to start the lesson automatically: 0 not automatic lesson (default) 1 automatic lesson live_type=1 is valid
+ * @method string getRecordBackground() Obtain Recorded file background image, support png, jpg, jpeg, bmp format, does not support transparent channel for the time being
+ * @method void setRecordBackground(string $RecordBackground) Set Recorded file background image, support png, jpg, jpeg, bmp format, does not support transparent channel for the time being
+ * @method string getRecordScene() Obtain Record customized scene, only recordlayout=9 this parameter is valid, the data content for the user-defined scene parameters, data format for the json key-value pairs, where the key-value pairs of the value for the string type.
+ * @method void setRecordScene(string $RecordScene) Set Record customized scene, only recordlayout=9 this parameter is valid, the data content for the user-defined scene parameters, data format for the json key-value pairs, where the key-value pairs of the value for the string type.
+ * @method string getRecordLang() Obtain Record customized language, only when recordlayout=9, this parameter is valid.
+ * @method void setRecordLang(string $RecordLang) Set Record customized language, only when recordlayout=9, this parameter is valid.
  */
 class RoomInfo extends AbstractModel
 {
@@ -144,6 +166,62 @@ class RoomInfo extends AbstractModel
     public $EnableDirectControl;
 
     /**
+     * @var integer Turn on focus mode. 0 Watch all character audio and video (default) 1 Watch only teachers and teaching assistants
+     */
+    public $InteractionMode;
+
+    /**
+     * @var integer Horizontal and vertical screen. 0: Horizontal screen to open broadcast (default); 1: Vertical screen to open broadcast, currently only support mobile pure video type
+     */
+    public $VideoOrientation;
+
+    /**
+     * @var integer Whether the room is enabled for grading after the lesson. 0: not enabled 1: enabled
+     */
+    public $IsGradingRequiredPostClass;
+
+    /**
+     * @var integer Room Type: 0 Small Classroom(default); 1 Lecture Hall(public class)
+     */
+    public $RoomType;
+
+    /**
+     * @var integer Drag class time: unit minutes, 0 is unlimited (default), -1 is can't drag the class, greater than 0 is the time of dragging the class, the maximum value of 120 minutes
+     */
+    public $EndDelayTime;
+
+    /**
+     * @var integer Live type: 0 regular (default) 1 Simulated Live
+     */
+    public $LiveType;
+
+    /**
+     * @var string Simulated Live link
+     */
+    public $RecordLiveUrl;
+
+    /**
+     * @var integer Whether to start the lesson automatically: 0 not automatic lesson (default) 1 automatic lesson live_type=1 is valid
+     */
+    public $EnableAutoStart;
+
+    /**
+     * @var string Recorded file background image, support png, jpg, jpeg, bmp format, does not support transparent channel for the time being
+     */
+    public $RecordBackground;
+
+    /**
+     * @var string Record customized scene, only recordlayout=9 this parameter is valid, the data content for the user-defined scene parameters, data format for the json key-value pairs, where the key-value pairs of the value for the string type.
+     */
+    public $RecordScene;
+
+    /**
+     * @var string Record customized language, only when recordlayout=9, this parameter is valid.
+     * @deprecated
+     */
+    public $RecordLang;
+
+    /**
      * @param string $Name The room name.
      * @param integer $StartTime The room start time (Unix timestamp).
      * @param integer $EndTime The room end time (Unix timestamp).
@@ -161,6 +239,17 @@ class RoomInfo extends AbstractModel
      * @param integer $RecordLayout The recording layout.
      * @param string $GroupId The ID of the group to bind. Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $EnableDirectControl Whether the students' consent is required to control their cameras/microphones.
+     * @param integer $InteractionMode Turn on focus mode. 0 Watch all character audio and video (default) 1 Watch only teachers and teaching assistants
+     * @param integer $VideoOrientation Horizontal and vertical screen. 0: Horizontal screen to open broadcast (default); 1: Vertical screen to open broadcast, currently only support mobile pure video type
+     * @param integer $IsGradingRequiredPostClass Whether the room is enabled for grading after the lesson. 0: not enabled 1: enabled
+     * @param integer $RoomType Room Type: 0 Small Classroom(default); 1 Lecture Hall(public class)
+     * @param integer $EndDelayTime Drag class time: unit minutes, 0 is unlimited (default), -1 is can't drag the class, greater than 0 is the time of dragging the class, the maximum value of 120 minutes
+     * @param integer $LiveType Live type: 0 regular (default) 1 Simulated Live
+     * @param string $RecordLiveUrl Simulated Live link
+     * @param integer $EnableAutoStart Whether to start the lesson automatically: 0 not automatic lesson (default) 1 automatic lesson live_type=1 is valid
+     * @param string $RecordBackground Recorded file background image, support png, jpg, jpeg, bmp format, does not support transparent channel for the time being
+     * @param string $RecordScene Record customized scene, only recordlayout=9 this parameter is valid, the data content for the user-defined scene parameters, data format for the json key-value pairs, where the key-value pairs of the value for the string type.
+     * @param string $RecordLang Record customized language, only when recordlayout=9, this parameter is valid.
      */
     function __construct()
     {
@@ -241,6 +330,50 @@ class RoomInfo extends AbstractModel
 
         if (array_key_exists("EnableDirectControl",$param) and $param["EnableDirectControl"] !== null) {
             $this->EnableDirectControl = $param["EnableDirectControl"];
+        }
+
+        if (array_key_exists("InteractionMode",$param) and $param["InteractionMode"] !== null) {
+            $this->InteractionMode = $param["InteractionMode"];
+        }
+
+        if (array_key_exists("VideoOrientation",$param) and $param["VideoOrientation"] !== null) {
+            $this->VideoOrientation = $param["VideoOrientation"];
+        }
+
+        if (array_key_exists("IsGradingRequiredPostClass",$param) and $param["IsGradingRequiredPostClass"] !== null) {
+            $this->IsGradingRequiredPostClass = $param["IsGradingRequiredPostClass"];
+        }
+
+        if (array_key_exists("RoomType",$param) and $param["RoomType"] !== null) {
+            $this->RoomType = $param["RoomType"];
+        }
+
+        if (array_key_exists("EndDelayTime",$param) and $param["EndDelayTime"] !== null) {
+            $this->EndDelayTime = $param["EndDelayTime"];
+        }
+
+        if (array_key_exists("LiveType",$param) and $param["LiveType"] !== null) {
+            $this->LiveType = $param["LiveType"];
+        }
+
+        if (array_key_exists("RecordLiveUrl",$param) and $param["RecordLiveUrl"] !== null) {
+            $this->RecordLiveUrl = $param["RecordLiveUrl"];
+        }
+
+        if (array_key_exists("EnableAutoStart",$param) and $param["EnableAutoStart"] !== null) {
+            $this->EnableAutoStart = $param["EnableAutoStart"];
+        }
+
+        if (array_key_exists("RecordBackground",$param) and $param["RecordBackground"] !== null) {
+            $this->RecordBackground = $param["RecordBackground"];
+        }
+
+        if (array_key_exists("RecordScene",$param) and $param["RecordScene"] !== null) {
+            $this->RecordScene = $param["RecordScene"];
+        }
+
+        if (array_key_exists("RecordLang",$param) and $param["RecordLang"] !== null) {
+            $this->RecordLang = $param["RecordLang"];
         }
     }
 }

@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPage(integer $Page) Set The page to return records from. Pagination starts from 1.
  * @method integer getLimit() Obtain The number of records per page. The default is 10.
  * @method void setLimit(integer $Limit) Set The number of records per page. The default is 10.
+ * @method array getStatus() Obtain Classroom status. Default display all classes, 0 is not started, 1 is in class, 2 is finished, 3 is expired
+ * @method void setStatus(array $Status) Set Classroom status. Default display all classes, 0 is not started, 1 is in class, 2 is finished, 3 is expired
  */
 class GetRoomsRequest extends AbstractModel
 {
@@ -62,12 +64,18 @@ class GetRoomsRequest extends AbstractModel
     public $Limit;
 
     /**
+     * @var array Classroom status. Default display all classes, 0 is not started, 1 is in class, 2 is finished, 3 is expired
+     */
+    public $Status;
+
+    /**
      * @param integer $SdkAppId The SDKAppID assigned by LCIC.
 
      * @param integer $StartTime The start time. The default start time is 30 minutes before the current time.
      * @param integer $EndTime The end time. The default end time is 30 minutes after the current time.
      * @param integer $Page The page to return records from. Pagination starts from 1.
      * @param integer $Limit The number of records per page. The default is 10.
+     * @param array $Status Classroom status. Default display all classes, 0 is not started, 1 is in class, 2 is finished, 3 is expired
      */
     function __construct()
     {
@@ -100,6 +108,10 @@ class GetRoomsRequest extends AbstractModel
 
         if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
             $this->Limit = $param["Limit"];
+        }
+
+        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
+            $this->Status = $param["Status"];
         }
     }
 }

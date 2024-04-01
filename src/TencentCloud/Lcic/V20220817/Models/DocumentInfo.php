@@ -23,12 +23,12 @@ Used by actions: DescribeDocumentsByRoom.
  *
  * @method string getDocumentId() Obtain The document ID. Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setDocumentId(string $DocumentId) Set The document ID. Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getDocumentUrl() Obtain The document’s original URL. Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setDocumentUrl(string $DocumentUrl) Set The document’s original URL. Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getDocumentUrl() Obtain The document's original URL. Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setDocumentUrl(string $DocumentUrl) Set The document's original URL. Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getDocumentName() Obtain The document title. Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setDocumentName(string $DocumentName) Set The document title. Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getOwner() Obtain The user ID of the document’s owner. Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setOwner(string $Owner) Set The user ID of the document’s owner. Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getOwner() Obtain The user ID of the document's owner. Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setOwner(string $Owner) Set The user ID of the document's owner. Note: This field may return null, indicating that no valid values can be obtained.
  * @method integer getSdkAppId() Obtain The application ID. Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setSdkAppId(integer $SdkAppId) Set The application ID. Note: This field may return null, indicating that no valid values can be obtained.
  * @method integer getPermission() Obtain The document access type. 0: Private; 1: Public. Note: This field may return null, indicating that no valid values can be obtained.
@@ -65,6 +65,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setCover(string $Cover) Set The thumbnail. Only transcoded courseware has thumbnails.
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getPreview() Obtain Document preview address
+ * @method void setPreview(string $Preview) Set Document preview address
  */
 class DocumentInfo extends AbstractModel
 {
@@ -74,7 +76,7 @@ class DocumentInfo extends AbstractModel
     public $DocumentId;
 
     /**
-     * @var string The document’s original URL. Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string The document's original URL. Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $DocumentUrl;
 
@@ -84,7 +86,7 @@ class DocumentInfo extends AbstractModel
     public $DocumentName;
 
     /**
-     * @var string The user ID of the document’s owner. Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string The user ID of the document's owner. Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Owner;
 
@@ -163,10 +165,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $Cover;
 
     /**
+     * @var string Document preview address
+     */
+    public $Preview;
+
+    /**
      * @param string $DocumentId The document ID. Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $DocumentUrl The document’s original URL. Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $DocumentUrl The document's original URL. Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $DocumentName The document title. Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Owner The user ID of the document’s owner. Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $Owner The user ID of the document's owner. Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $SdkAppId The application ID. Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $Permission The document access type. 0: Private; 1: Public. Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $TranscodeResult The transcoding result. If the file is not transcoded, this parameter will be empty. If it is successfully transcoded, this parameter will be the URL of the transcoded file. If transcoding fails, this parameter will indicate the error code. Note: This field may return null, indicating that no valid values can be obtained.
@@ -185,6 +192,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $Cover The thumbnail. Only transcoded courseware has thumbnails.
 Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $Preview Document preview address
      */
     function __construct()
     {
@@ -269,6 +277,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("Cover",$param) and $param["Cover"] !== null) {
             $this->Cover = $param["Cover"];
+        }
+
+        if (array_key_exists("Preview",$param) and $param["Preview"] !== null) {
+            $this->Preview = $param["Preview"];
         }
     }
 }

@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDocumentType(string $DocumentType) Set Document extension
  * @method integer getDocumentSize() Obtain Document size, in bytes
  * @method void setDocumentSize(integer $DocumentSize) Set Document size, in bytes
+ * @method boolean getAutoHandleUnsupportedElement() Obtain Whether or not to enable automatic processing for unsupported elements. Default: off. The automatically processed elements are as follows: 1. Ink: Remove unsupported ink (e.g. WPS Ink) 2. Auto Page Turn: Remove all auto page turn settings on the PPT and set it to mouse click to turn the page 3. Corrupted Audio/Video: Remove references to corrupted audio/video on the PPT
+ * @method void setAutoHandleUnsupportedElement(boolean $AutoHandleUnsupportedElement) Set Whether or not to enable automatic processing for unsupported elements. Default: off. The automatically processed elements are as follows: 1. Ink: Remove unsupported ink (e.g. WPS Ink) 2. Auto Page Turn: Remove all auto page turn settings on the PPT and set it to mouse click to turn the page 3. Corrupted Audio/Video: Remove references to corrupted audio/video on the PPT
  */
 class CreateDocumentRequest extends AbstractModel
 {
@@ -80,6 +82,11 @@ class CreateDocumentRequest extends AbstractModel
     public $DocumentSize;
 
     /**
+     * @var boolean Whether or not to enable automatic processing for unsupported elements. Default: off. The automatically processed elements are as follows: 1. Ink: Remove unsupported ink (e.g. WPS Ink) 2. Auto Page Turn: Remove all auto page turn settings on the PPT and set it to mouse click to turn the page 3. Corrupted Audio/Video: Remove references to corrupted audio/video on the PPT
+     */
+    public $AutoHandleUnsupportedElement;
+
+    /**
      * @param integer $SdkAppId LCIC SdkAppId
      * @param string $DocumentUrl Document URL	
      * @param string $DocumentName Document name	
@@ -88,6 +95,7 @@ class CreateDocumentRequest extends AbstractModel
      * @param integer $Permission Permission. Valid values: `0`: Private document (default); `1`: Public document
      * @param string $DocumentType Document extension
      * @param integer $DocumentSize Document size, in bytes
+     * @param boolean $AutoHandleUnsupportedElement Whether or not to enable automatic processing for unsupported elements. Default: off. The automatically processed elements are as follows: 1. Ink: Remove unsupported ink (e.g. WPS Ink) 2. Auto Page Turn: Remove all auto page turn settings on the PPT and set it to mouse click to turn the page 3. Corrupted Audio/Video: Remove references to corrupted audio/video on the PPT
      */
     function __construct()
     {
@@ -132,6 +140,10 @@ class CreateDocumentRequest extends AbstractModel
 
         if (array_key_exists("DocumentSize",$param) and $param["DocumentSize"] !== null) {
             $this->DocumentSize = $param["DocumentSize"];
+        }
+
+        if (array_key_exists("AutoHandleUnsupportedElement",$param) and $param["AutoHandleUnsupportedElement"] !== null) {
+            $this->AutoHandleUnsupportedElement = $param["AutoHandleUnsupportedElement"];
         }
     }
 }

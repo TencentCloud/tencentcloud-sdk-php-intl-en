@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTeacherId(string $TeacherId) Set Teacher ID	
  * @method integer getSdkAppId() Obtain LCIC SdkAppId	
  * @method void setSdkAppId(integer $SdkAppId) Set LCIC SdkAppId	
+ * @method integer getAudienceType() Obtain  Watch type. Can have the following values: 1 interactive viewing 2 standard viewing
+ * @method void setAudienceType(integer $AudienceType) Set  Watch type. Can have the following values: 1 interactive viewing 2 standard viewing
  * @method integer getResolution() Obtain Resolution. Valid values: 1: SD; 2: HD; 3: FHD
  * @method void setResolution(integer $Resolution) Set Resolution. Valid values: 1: SD; 2: HD; 3: FHD
  * @method integer getMaxMicNumber() Obtain Maximum number of mic-on users (excluding teachers). Value range: [0, 16]
@@ -52,8 +54,34 @@ use TencentCloud\Common\AbstractModel;
  * @method void setGroupId(string $GroupId) Set Note: This field may return null, indicating that no valid values can be obtained.
  * @method integer getEnableDirectControl() Obtain Whether the students' consent is required to control their cameras/microphones.
  * @method void setEnableDirectControl(integer $EnableDirectControl) Set Whether the students' consent is required to control their cameras/microphones.
- * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method integer getInteractionMode() Obtain Turn on focus mode. 0 Watch all character audio and video (default) 1 Watch only teachers and teaching assistants
+ * @method void setInteractionMode(integer $InteractionMode) Set Turn on focus mode. 0 Watch all character audio and video (default) 1 Watch only teachers and teaching assistants
+ * @method integer getVideoOrientation() Obtain Horizontal and vertical screen. 0: Horizontal screen to open broadcast (default); 1: Vertical screen to open broadcast, currently only support mobile pure video type
+ * @method void setVideoOrientation(integer $VideoOrientation) Set Horizontal and vertical screen. 0: Horizontal screen to open broadcast (default); 1: Vertical screen to open broadcast, currently only support mobile pure video type
+ * @method integer getIsGradingRequiredPostClass() Obtain Whether the room is enabled for grading after the lesson. 0: not enabled 1: enabled
+ * @method void setIsGradingRequiredPostClass(integer $IsGradingRequiredPostClass) Set Whether the room is enabled for grading after the lesson. 0: not enabled 1: enabled
+ * @method integer getRoomType() Obtain Room Type: 0 Small Classroom(default); 1 Lecture Hall(public class)
+ * @method void setRoomType(integer $RoomType) Set Room Type: 0 Small Classroom(default); 1 Lecture Hall(public class)
+ * @method integer getVideoDuration() Obtain Recording Duration
+ * @method void setVideoDuration(integer $VideoDuration) Set Recording Duration
+ * @method integer getEndDelayTime() Obtain Drag class time: unit minutes, 0 is unlimited (default), -1 is can't drag the class, greater than 0 is the time of dragging the class, the maximum value of 120 minutes
+ * @method void setEndDelayTime(integer $EndDelayTime) Set Drag class time: unit minutes, 0 is unlimited (default), -1 is can't drag the class, greater than 0 is the time of dragging the class, the maximum value of 120 minutes
+ * @method integer getLiveType() Obtain Live type: 0 regular (default) 1 Simulated Live
+ * @method void setLiveType(integer $LiveType) Set Live type: 0 regular (default) 1 Simulated Live
+ * @method string getRecordLiveUrl() Obtain Simulated Live link
+ * @method void setRecordLiveUrl(string $RecordLiveUrl) Set Simulated Live link
+ * @method integer getEnableAutoStart() Obtain Whether to start the lesson automatically: 0 not automatic lesson (default) 1 automatic lesson live_type=1 is valid
+ * @method void setEnableAutoStart(integer $EnableAutoStart) Set Whether to start the lesson automatically: 0 not automatic lesson (default) 1 automatic lesson live_type=1 is valid
+ * @method string getRecordBackground() Obtain Recorded file background image, support png, jpg, jpeg, bmp format, does not support transparent channel for the time being
+ * @method void setRecordBackground(string $RecordBackground) Set Recorded file background image, support png, jpg, jpeg, bmp format, does not support transparent channel for the time being
+ * @method string getRTMPStreamingURL() Obtain RTMP  stream link
+ * @method void setRTMPStreamingURL(string $RTMPStreamingURL) Set RTMP  stream link
+ * @method string getRecordScene() Obtain Record customized scene, only recordlayout=9 this parameter is valid
+ * @method void setRecordScene(string $RecordScene) Set Record customized scene, only recordlayout=9 this parameter is valid
+ * @method string getRecordLang() Obtain Record customized language, only when recordlayout=9, this parameter is valid
+ * @method void setRecordLang(string $RecordLang) Set Record customized language, only when recordlayout=9, this parameter is valid
+ * @method string getRequestId() Obtain The unique request ID, generated by the server, will be returned for every request (if the request fails to reach the server for other reasons, the request will not obtain a RequestId). RequestId is required for locating a problem.
+ * @method void setRequestId(string $RequestId) Set The unique request ID, generated by the server, will be returned for every request (if the request fails to reach the server for other reasons, the request will not obtain a RequestId). RequestId is required for locating a problem.
  */
 class DescribeRoomResponse extends AbstractModel
 {
@@ -81,6 +109,11 @@ class DescribeRoomResponse extends AbstractModel
      * @var integer LCIC SdkAppId	
      */
     public $SdkAppId;
+
+    /**
+     * @var integer  Watch type. Can have the following values: 1 interactive viewing 2 standard viewing
+     */
+    public $AudienceType;
 
     /**
      * @var integer Resolution. Valid values: 1: SD; 2: HD; 3: FHD
@@ -138,7 +171,72 @@ class DescribeRoomResponse extends AbstractModel
     public $EnableDirectControl;
 
     /**
-     * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+     * @var integer Turn on focus mode. 0 Watch all character audio and video (default) 1 Watch only teachers and teaching assistants
+     */
+    public $InteractionMode;
+
+    /**
+     * @var integer Horizontal and vertical screen. 0: Horizontal screen to open broadcast (default); 1: Vertical screen to open broadcast, currently only support mobile pure video type
+     */
+    public $VideoOrientation;
+
+    /**
+     * @var integer Whether the room is enabled for grading after the lesson. 0: not enabled 1: enabled
+     */
+    public $IsGradingRequiredPostClass;
+
+    /**
+     * @var integer Room Type: 0 Small Classroom(default); 1 Lecture Hall(public class)
+     */
+    public $RoomType;
+
+    /**
+     * @var integer Recording Duration
+     */
+    public $VideoDuration;
+
+    /**
+     * @var integer Drag class time: unit minutes, 0 is unlimited (default), -1 is can't drag the class, greater than 0 is the time of dragging the class, the maximum value of 120 minutes
+     */
+    public $EndDelayTime;
+
+    /**
+     * @var integer Live type: 0 regular (default) 1 Simulated Live
+     */
+    public $LiveType;
+
+    /**
+     * @var string Simulated Live link
+     */
+    public $RecordLiveUrl;
+
+    /**
+     * @var integer Whether to start the lesson automatically: 0 not automatic lesson (default) 1 automatic lesson live_type=1 is valid
+     */
+    public $EnableAutoStart;
+
+    /**
+     * @var string Recorded file background image, support png, jpg, jpeg, bmp format, does not support transparent channel for the time being
+     */
+    public $RecordBackground;
+
+    /**
+     * @var string RTMP  stream link
+     */
+    public $RTMPStreamingURL;
+
+    /**
+     * @var string Record customized scene, only recordlayout=9 this parameter is valid
+     */
+    public $RecordScene;
+
+    /**
+     * @var string Record customized language, only when recordlayout=9, this parameter is valid
+     */
+    public $RecordLang;
+
+    /**
+     * @var string The unique request ID, generated by the server, will be returned for every request (if the request fails to reach the server for other reasons, the request will not obtain a RequestId). RequestId is required for locating a problem.
      */
     public $RequestId;
 
@@ -148,6 +246,7 @@ class DescribeRoomResponse extends AbstractModel
      * @param integer $EndTime Reserved room end time, in UNIX timestamp format	
      * @param string $TeacherId Teacher ID	
      * @param integer $SdkAppId LCIC SdkAppId	
+     * @param integer $AudienceType  Watch type. Can have the following values: 1 interactive viewing 2 standard viewing
      * @param integer $Resolution Resolution. Valid values: 1: SD; 2: HD; 3: FHD
      * @param integer $MaxMicNumber Maximum number of mic-on users (excluding teachers). Value range: [0, 16]
      * @param integer $AutoMic Whether to automatically turn the mic on when the user enters a room. Valid values: 0: No (default value); 1: Yes.
@@ -159,7 +258,20 @@ class DescribeRoomResponse extends AbstractModel
      * @param integer $Status The class status. 0: The class has not started. 1: The class has started. 2: The class ended. 3: The class expired. Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $GroupId Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $EnableDirectControl Whether the students' consent is required to control their cameras/microphones.
-     * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+     * @param integer $InteractionMode Turn on focus mode. 0 Watch all character audio and video (default) 1 Watch only teachers and teaching assistants
+     * @param integer $VideoOrientation Horizontal and vertical screen. 0: Horizontal screen to open broadcast (default); 1: Vertical screen to open broadcast, currently only support mobile pure video type
+     * @param integer $IsGradingRequiredPostClass Whether the room is enabled for grading after the lesson. 0: not enabled 1: enabled
+     * @param integer $RoomType Room Type: 0 Small Classroom(default); 1 Lecture Hall(public class)
+     * @param integer $VideoDuration Recording Duration
+     * @param integer $EndDelayTime Drag class time: unit minutes, 0 is unlimited (default), -1 is can't drag the class, greater than 0 is the time of dragging the class, the maximum value of 120 minutes
+     * @param integer $LiveType Live type: 0 regular (default) 1 Simulated Live
+     * @param string $RecordLiveUrl Simulated Live link
+     * @param integer $EnableAutoStart Whether to start the lesson automatically: 0 not automatic lesson (default) 1 automatic lesson live_type=1 is valid
+     * @param string $RecordBackground Recorded file background image, support png, jpg, jpeg, bmp format, does not support transparent channel for the time being
+     * @param string $RTMPStreamingURL RTMP  stream link
+     * @param string $RecordScene Record customized scene, only recordlayout=9 this parameter is valid
+     * @param string $RecordLang Record customized language, only when recordlayout=9, this parameter is valid
+     * @param string $RequestId The unique request ID, generated by the server, will be returned for every request (if the request fails to reach the server for other reasons, the request will not obtain a RequestId). RequestId is required for locating a problem.
      */
     function __construct()
     {
@@ -192,6 +304,10 @@ class DescribeRoomResponse extends AbstractModel
 
         if (array_key_exists("SdkAppId",$param) and $param["SdkAppId"] !== null) {
             $this->SdkAppId = $param["SdkAppId"];
+        }
+
+        if (array_key_exists("AudienceType",$param) and $param["AudienceType"] !== null) {
+            $this->AudienceType = $param["AudienceType"];
         }
 
         if (array_key_exists("Resolution",$param) and $param["Resolution"] !== null) {
@@ -236,6 +352,58 @@ class DescribeRoomResponse extends AbstractModel
 
         if (array_key_exists("EnableDirectControl",$param) and $param["EnableDirectControl"] !== null) {
             $this->EnableDirectControl = $param["EnableDirectControl"];
+        }
+
+        if (array_key_exists("InteractionMode",$param) and $param["InteractionMode"] !== null) {
+            $this->InteractionMode = $param["InteractionMode"];
+        }
+
+        if (array_key_exists("VideoOrientation",$param) and $param["VideoOrientation"] !== null) {
+            $this->VideoOrientation = $param["VideoOrientation"];
+        }
+
+        if (array_key_exists("IsGradingRequiredPostClass",$param) and $param["IsGradingRequiredPostClass"] !== null) {
+            $this->IsGradingRequiredPostClass = $param["IsGradingRequiredPostClass"];
+        }
+
+        if (array_key_exists("RoomType",$param) and $param["RoomType"] !== null) {
+            $this->RoomType = $param["RoomType"];
+        }
+
+        if (array_key_exists("VideoDuration",$param) and $param["VideoDuration"] !== null) {
+            $this->VideoDuration = $param["VideoDuration"];
+        }
+
+        if (array_key_exists("EndDelayTime",$param) and $param["EndDelayTime"] !== null) {
+            $this->EndDelayTime = $param["EndDelayTime"];
+        }
+
+        if (array_key_exists("LiveType",$param) and $param["LiveType"] !== null) {
+            $this->LiveType = $param["LiveType"];
+        }
+
+        if (array_key_exists("RecordLiveUrl",$param) and $param["RecordLiveUrl"] !== null) {
+            $this->RecordLiveUrl = $param["RecordLiveUrl"];
+        }
+
+        if (array_key_exists("EnableAutoStart",$param) and $param["EnableAutoStart"] !== null) {
+            $this->EnableAutoStart = $param["EnableAutoStart"];
+        }
+
+        if (array_key_exists("RecordBackground",$param) and $param["RecordBackground"] !== null) {
+            $this->RecordBackground = $param["RecordBackground"];
+        }
+
+        if (array_key_exists("RTMPStreamingURL",$param) and $param["RTMPStreamingURL"] !== null) {
+            $this->RTMPStreamingURL = $param["RTMPStreamingURL"];
+        }
+
+        if (array_key_exists("RecordScene",$param) and $param["RecordScene"] !== null) {
+            $this->RecordScene = $param["RecordScene"];
+        }
+
+        if (array_key_exists("RecordLang",$param) and $param["RecordLang"] !== null) {
+            $this->RecordLang = $param["RecordLang"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

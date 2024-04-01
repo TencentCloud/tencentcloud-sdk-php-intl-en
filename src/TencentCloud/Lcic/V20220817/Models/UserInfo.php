@@ -37,6 +37,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setAvatar(string $Avatar) Set 
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getOriginId() Obtain User's Id in the client system
+ * @method void setOriginId(string $OriginId) Set User's Id in the client system
  */
 class UserInfo extends AbstractModel
 {
@@ -65,6 +67,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $Avatar;
 
     /**
+     * @var string User's Id in the client system
+     */
+    public $OriginId;
+
+    /**
      * @param integer $SdkAppId 
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $UserId 
@@ -73,6 +80,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $Avatar 
 Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $OriginId User's Id in the client system
      */
     function __construct()
     {
@@ -101,6 +109,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("Avatar",$param) and $param["Avatar"] !== null) {
             $this->Avatar = $param["Avatar"];
+        }
+
+        if (array_key_exists("OriginId",$param) and $param["OriginId"] !== null) {
+            $this->OriginId = $param["OriginId"];
         }
     }
 }
