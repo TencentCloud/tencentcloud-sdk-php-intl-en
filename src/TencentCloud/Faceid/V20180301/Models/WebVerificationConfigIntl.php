@@ -62,6 +62,16 @@ Example: HKIDCard
 Example: HKIDCard
  * @method boolean getDisableCheckOcrWarnings() Obtain Whether to turn off document alarms, the default is false (the alarm detection function is turned on). When enabled, the identity authentication process will be intercepted based on the alarm status of the certificate. If you need to use the document authentication function, please contact us.
  * @method void setDisableCheckOcrWarnings(boolean $DisableCheckOcrWarnings) Set Whether to turn off document alarms, the default is false (the alarm detection function is turned on). When enabled, the identity authentication process will be intercepted based on the alarm status of the certificate. If you need to use the document authentication function, please contact us.
+ * @method integer getSecurityLevel() Obtain Liveness security level: 1:Silent mode;2:Action mode;3:Lighting mode;4:Action+Lighting mode;default value is 3
+ * @method void setSecurityLevel(integer $SecurityLevel) Set Liveness security level: 1:Silent mode;2:Action mode;3:Lighting mode;4:Action+Lighting mode;default value is 3
+ * @method boolean getSkipPrivacyPolicy() Obtain Whether to skip the agreement page, the default is false. When SkipPrivacyPolicy is false, the agreement page will be displayed and the privacy agreement needs to be checked; when SkipPrivacyPolicy is true, the agreement page will be skipped and the liveness process will be entered directly without checking the privacy agreement page.
+ * @method void setSkipPrivacyPolicy(boolean $SkipPrivacyPolicy) Set Whether to skip the agreement page, the default is false. When SkipPrivacyPolicy is false, the agreement page will be displayed and the privacy agreement needs to be checked; when SkipPrivacyPolicy is true, the agreement page will be skipped and the liveness process will be entered directly without checking the privacy agreement page.
+ * @method boolean getIdCardCutReturn() Obtain The default value is false. If it is false, the original ID image will be displayed. If it is true, the cut ID image will be displayed.
+ * @method void setIdCardCutReturn(boolean $IdCardCutReturn) Set The default value is false. If it is false, the original ID image will be displayed. If it is true, the cut ID image will be displayed.
+ * @method string getThemeColor() Obtain Front-end theme color, in the format of RGB hexadecimal color code. The default value is "#2d72+1". If the format is incorrect, the default value color will be used.
+ * @method void setThemeColor(string $ThemeColor) Set Front-end theme color, in the format of RGB hexadecimal color code. The default value is "#2d72+1". If the format is incorrect, the default value color will be used.
+ * @method string getLanguage() Obtain International language, the default value is en (English). Currently supported: th: Thai; en: English;
+ * @method void setLanguage(string $Language) Set International language, the default value is en (English). Currently supported: th: Thai; en: English;
  */
 class WebVerificationConfigIntl extends AbstractModel
 {
@@ -107,6 +117,31 @@ Example: HKIDCard
     public $DisableCheckOcrWarnings;
 
     /**
+     * @var integer Liveness security level: 1:Silent mode;2:Action mode;3:Lighting mode;4:Action+Lighting mode;default value is 3
+     */
+    public $SecurityLevel;
+
+    /**
+     * @var boolean Whether to skip the agreement page, the default is false. When SkipPrivacyPolicy is false, the agreement page will be displayed and the privacy agreement needs to be checked; when SkipPrivacyPolicy is true, the agreement page will be skipped and the liveness process will be entered directly without checking the privacy agreement page.
+     */
+    public $SkipPrivacyPolicy;
+
+    /**
+     * @var boolean The default value is false. If it is false, the original ID image will be displayed. If it is true, the cut ID image will be displayed.
+     */
+    public $IdCardCutReturn;
+
+    /**
+     * @var string Front-end theme color, in the format of RGB hexadecimal color code. The default value is "#2d72+1". If the format is incorrect, the default value color will be used.
+     */
+    public $ThemeColor;
+
+    /**
+     * @var string International language, the default value is en (English). Currently supported: th: Thai; en: English;
+     */
+    public $Language;
+
+    /**
      * @param boolean $AutoSkipStartPage When starting verification, whether to skip the starting verification page. If true, enter the verification process directly. The default is false. This configuration will not take effect if the downgrade policy is triggered.
      * @param boolean $AutoSkip When the verification passed, whether to skip the result page and automatically jump to RedirectURL. The default value is false.
 Example value: false
@@ -128,6 +163,11 @@ Example value: 3
 9.InternationalIDPassport: ID cards of Hong Kong, Macao and Taiwan (China), and international passport.
 Example: HKIDCard
      * @param boolean $DisableCheckOcrWarnings Whether to turn off document alarms, the default is false (the alarm detection function is turned on). When enabled, the identity authentication process will be intercepted based on the alarm status of the certificate. If you need to use the document authentication function, please contact us.
+     * @param integer $SecurityLevel Liveness security level: 1:Silent mode;2:Action mode;3:Lighting mode;4:Action+Lighting mode;default value is 3
+     * @param boolean $SkipPrivacyPolicy Whether to skip the agreement page, the default is false. When SkipPrivacyPolicy is false, the agreement page will be displayed and the privacy agreement needs to be checked; when SkipPrivacyPolicy is true, the agreement page will be skipped and the liveness process will be entered directly without checking the privacy agreement page.
+     * @param boolean $IdCardCutReturn The default value is false. If it is false, the original ID image will be displayed. If it is true, the cut ID image will be displayed.
+     * @param string $ThemeColor Front-end theme color, in the format of RGB hexadecimal color code. The default value is "#2d72+1". If the format is incorrect, the default value color will be used.
+     * @param string $Language International language, the default value is en (English). Currently supported: th: Thai; en: English;
      */
     function __construct()
     {
@@ -160,6 +200,26 @@ Example: HKIDCard
 
         if (array_key_exists("DisableCheckOcrWarnings",$param) and $param["DisableCheckOcrWarnings"] !== null) {
             $this->DisableCheckOcrWarnings = $param["DisableCheckOcrWarnings"];
+        }
+
+        if (array_key_exists("SecurityLevel",$param) and $param["SecurityLevel"] !== null) {
+            $this->SecurityLevel = $param["SecurityLevel"];
+        }
+
+        if (array_key_exists("SkipPrivacyPolicy",$param) and $param["SkipPrivacyPolicy"] !== null) {
+            $this->SkipPrivacyPolicy = $param["SkipPrivacyPolicy"];
+        }
+
+        if (array_key_exists("IdCardCutReturn",$param) and $param["IdCardCutReturn"] !== null) {
+            $this->IdCardCutReturn = $param["IdCardCutReturn"];
+        }
+
+        if (array_key_exists("ThemeColor",$param) and $param["ThemeColor"] !== null) {
+            $this->ThemeColor = $param["ThemeColor"];
+        }
+
+        if (array_key_exists("Language",$param) and $param["Language"] !== null) {
+            $this->Language = $param["Language"];
         }
     }
 }
