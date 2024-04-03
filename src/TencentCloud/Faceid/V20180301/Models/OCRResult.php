@@ -30,6 +30,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
  * @method void setCardInfo(CardInfo $CardInfo) Set OCR result of the ID card.
  * @method string getRequestId() Obtain The request id
  * @method void setRequestId(string $RequestId) Set The request id
+ * @method string getCardCutImageBase64() Obtain Base64 of cropped image of ID card
+ * @method void setCardCutImageBase64(string $CardCutImageBase64) Set Base64 of cropped image of ID card
+ * @method string getCardBackCutImageBase64() Obtain Base64 of the cropped image on the reverse side of the ID card
+ * @method void setCardBackCutImageBase64(string $CardBackCutImageBase64) Set Base64 of the cropped image on the reverse side of the ID card
  */
 class OCRResult extends AbstractModel
 {
@@ -55,11 +59,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $RequestId;
 
     /**
+     * @var string Base64 of cropped image of ID card
+     */
+    public $CardCutImageBase64;
+
+    /**
+     * @var string Base64 of the cropped image on the reverse side of the ID card
+     */
+    public $CardBackCutImageBase64;
+
+    /**
      * @param boolean $IsPass Is the indentity verification or OCR process passed
      * @param string $CardImageBase64 The Base64 of ID card image
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param CardInfo $CardInfo OCR result of the ID card.
      * @param string $RequestId The request id
+     * @param string $CardCutImageBase64 Base64 of cropped image of ID card
+     * @param string $CardBackCutImageBase64 Base64 of the cropped image on the reverse side of the ID card
      */
     function __construct()
     {
@@ -89,6 +105,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
             $this->RequestId = $param["RequestId"];
+        }
+
+        if (array_key_exists("CardCutImageBase64",$param) and $param["CardCutImageBase64"] !== null) {
+            $this->CardCutImageBase64 = $param["CardCutImageBase64"];
+        }
+
+        if (array_key_exists("CardBackCutImageBase64",$param) and $param["CardBackCutImageBase64"] !== null) {
+            $this->CardBackCutImageBase64 = $param["CardBackCutImageBase64"];
         }
     }
 }
