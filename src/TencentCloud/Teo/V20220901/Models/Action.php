@@ -20,60 +20,64 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Rule engine action. Each feature supports only one of the following three action types. The `RuleAction` array can be of only one of the following types. For all details, see [DescribeRulesSetting](https://intl.cloud.tencent.com/document/product/1552/80618?from_cn_redirect=1).
  *
- * @method NormalAction getNormalAction() Obtain Common operation. Values:
-<li>`AccessUrlRedirect`: Access URL rewrite</li>
-<li>`UpstreamUrlRedirect`: Origin-pull URL rewrite</li>
-<li>`QUIC`: QUIC</li>
-<li>`WebSocket`: WebSocket</li>
-<li>`VideoSeek`: Video dragging</li>
-<li>`Authentication`: Token authentication</li>
-<li>`CacheKey`: Custom cache key</li>
-<li>`Cache`: Node cache TTL</li>
-<li>`MaxAge`: Browser cache TTL</li>
-<li>`OfflineCache`: Offline cache</li>
-<li>`SmartRouting`: Smart acceleration</li>
-<li>`RangeOriginPull`: Range GETs</li>
-<li>`UpstreamHttp2`: HTTP/2 forwarding</li>
-<li>`HostHeader`: Host header rewrite</li>
-<li>`ForceRedirect`: Force HTTPS</li>
-<li>`OriginPullProtocol`: Origin-pull HTTPS</li>
-<li>`CachePrefresh`: Cache prefresh</li>
-<li>`Compression`: Smart compression</li>
-<li>`Hsts`</li>
-<li>`ClientIpHeader`</li>
-<li>`SslTlsSecureConf`</li>
-<li>`OcspStapling`</li>
-<li>`Http2`: HTTP/2 access</li>
-<li>`UpstreamFollowRedirect`: Follow origin redirect</li>
-<li>`Origin`: Origin</li>
-Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method void setNormalAction(NormalAction $NormalAction) Set Common operation. Values:
-<li>`AccessUrlRedirect`: Access URL rewrite</li>
-<li>`UpstreamUrlRedirect`: Origin-pull URL rewrite</li>
-<li>`QUIC`: QUIC</li>
-<li>`WebSocket`: WebSocket</li>
-<li>`VideoSeek`: Video dragging</li>
-<li>`Authentication`: Token authentication</li>
-<li>`CacheKey`: Custom cache key</li>
-<li>`Cache`: Node cache TTL</li>
-<li>`MaxAge`: Browser cache TTL</li>
-<li>`OfflineCache`: Offline cache</li>
-<li>`SmartRouting`: Smart acceleration</li>
-<li>`RangeOriginPull`: Range GETs</li>
-<li>`UpstreamHttp2`: HTTP/2 forwarding</li>
-<li>`HostHeader`: Host header rewrite</li>
-<li>`ForceRedirect`: Force HTTPS</li>
-<li>`OriginPullProtocol`: Origin-pull HTTPS</li>
-<li>`CachePrefresh`: Cache prefresh</li>
-<li>`Compression`: Smart compression</li>
-<li>`Hsts`</li>
-<li>`ClientIpHeader`</li>
-<li>`SslTlsSecureConf`</li>
-<li>`OcspStapling`</li>
-<li>`Http2`: HTTP/2 access</li>
-<li>`UpstreamFollowRedirect`: Follow origin redirect</li>
-<li>`Origin`: Origin</li>
-Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method NormalAction getNormalAction() Obtain Common feature operations. The options for this category include:
+<li> Access URL overriding (AccessUrlRedirect);</li>
+<li> Origin URL overriding (UpstreamUrlRedirect);</li>
+<li> QUIC;</li>
+<li> WebSocket;</li>
+<li> Video dragging (VideoSeek);</li>
+<li> Token authentication (Authentication);</li>
+<li> Custom CacheKey (CacheKey);</li>
+<li> Node caching TTL (Cache);</li>
+<li> Browser caching TTL (MaxAge);</li>
+<li> Offline caching (OfflineCache);</li>
+<li> Smart routing (SmartRouting);</li>
+<li> Range-based origin pull (RangeOriginPull);</li>
+<li> HTTP/2 origin pull (UpstreamHttp2);</li>
+<li> Host header overriding (HostHeader);</li>
+<li> Forced HTTPS (ForceRedirect);</li>
+<li> HTTPS origin pull (OriginPullProtocol);</li>
+<li> Cache pre-refresh (CachePrefresh);</li>
+<li> Smart compression (Compression);</li>
+<li> Hsts;</li>
+<li> ClientIpHeader;</li>
+<li> SslTlsSecureConf;</li>
+<li> OcspStapling;</li>
+<li> HTTP/2 access (Http2);</li>
+<li> Redirection during origin pull (UpstreamFollowRedirect);</li>
+<li> Modifying origin server (Origin);</li>
+<li> Layer 7 origin pull timeout (HTTPUpstreamTimeout);</li>
+<li> HTTP response (HttpResponse).</li>
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setNormalAction(NormalAction $NormalAction) Set Common feature operations. The options for this category include:
+<li> Access URL overriding (AccessUrlRedirect);</li>
+<li> Origin URL overriding (UpstreamUrlRedirect);</li>
+<li> QUIC;</li>
+<li> WebSocket;</li>
+<li> Video dragging (VideoSeek);</li>
+<li> Token authentication (Authentication);</li>
+<li> Custom CacheKey (CacheKey);</li>
+<li> Node caching TTL (Cache);</li>
+<li> Browser caching TTL (MaxAge);</li>
+<li> Offline caching (OfflineCache);</li>
+<li> Smart routing (SmartRouting);</li>
+<li> Range-based origin pull (RangeOriginPull);</li>
+<li> HTTP/2 origin pull (UpstreamHttp2);</li>
+<li> Host header overriding (HostHeader);</li>
+<li> Forced HTTPS (ForceRedirect);</li>
+<li> HTTPS origin pull (OriginPullProtocol);</li>
+<li> Cache pre-refresh (CachePrefresh);</li>
+<li> Smart compression (Compression);</li>
+<li> Hsts;</li>
+<li> ClientIpHeader;</li>
+<li> SslTlsSecureConf;</li>
+<li> OcspStapling;</li>
+<li> HTTP/2 access (Http2);</li>
+<li> Redirection during origin pull (UpstreamFollowRedirect);</li>
+<li> Modifying origin server (Origin);</li>
+<li> Layer 7 origin pull timeout (HTTPUpstreamTimeout);</li>
+<li> HTTP response (HttpResponse).</li>
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method RewriteAction getRewriteAction() Obtain Feature operation with a request/response header. Features of this type include:
 <li>`RequestHeader`: HTTP request header modification.</li>
 <li>`ResponseHeader`: HTTP response header modification.</li>
@@ -94,33 +98,35 @@ Note: This field may return null, indicating that no valid values can be obtaine
 class Action extends AbstractModel
 {
     /**
-     * @var NormalAction Common operation. Values:
-<li>`AccessUrlRedirect`: Access URL rewrite</li>
-<li>`UpstreamUrlRedirect`: Origin-pull URL rewrite</li>
-<li>`QUIC`: QUIC</li>
-<li>`WebSocket`: WebSocket</li>
-<li>`VideoSeek`: Video dragging</li>
-<li>`Authentication`: Token authentication</li>
-<li>`CacheKey`: Custom cache key</li>
-<li>`Cache`: Node cache TTL</li>
-<li>`MaxAge`: Browser cache TTL</li>
-<li>`OfflineCache`: Offline cache</li>
-<li>`SmartRouting`: Smart acceleration</li>
-<li>`RangeOriginPull`: Range GETs</li>
-<li>`UpstreamHttp2`: HTTP/2 forwarding</li>
-<li>`HostHeader`: Host header rewrite</li>
-<li>`ForceRedirect`: Force HTTPS</li>
-<li>`OriginPullProtocol`: Origin-pull HTTPS</li>
-<li>`CachePrefresh`: Cache prefresh</li>
-<li>`Compression`: Smart compression</li>
-<li>`Hsts`</li>
-<li>`ClientIpHeader`</li>
-<li>`SslTlsSecureConf`</li>
-<li>`OcspStapling`</li>
-<li>`Http2`: HTTP/2 access</li>
-<li>`UpstreamFollowRedirect`: Follow origin redirect</li>
-<li>`Origin`: Origin</li>
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @var NormalAction Common feature operations. The options for this category include:
+<li> Access URL overriding (AccessUrlRedirect);</li>
+<li> Origin URL overriding (UpstreamUrlRedirect);</li>
+<li> QUIC;</li>
+<li> WebSocket;</li>
+<li> Video dragging (VideoSeek);</li>
+<li> Token authentication (Authentication);</li>
+<li> Custom CacheKey (CacheKey);</li>
+<li> Node caching TTL (Cache);</li>
+<li> Browser caching TTL (MaxAge);</li>
+<li> Offline caching (OfflineCache);</li>
+<li> Smart routing (SmartRouting);</li>
+<li> Range-based origin pull (RangeOriginPull);</li>
+<li> HTTP/2 origin pull (UpstreamHttp2);</li>
+<li> Host header overriding (HostHeader);</li>
+<li> Forced HTTPS (ForceRedirect);</li>
+<li> HTTPS origin pull (OriginPullProtocol);</li>
+<li> Cache pre-refresh (CachePrefresh);</li>
+<li> Smart compression (Compression);</li>
+<li> Hsts;</li>
+<li> ClientIpHeader;</li>
+<li> SslTlsSecureConf;</li>
+<li> OcspStapling;</li>
+<li> HTTP/2 access (Http2);</li>
+<li> Redirection during origin pull (UpstreamFollowRedirect);</li>
+<li> Modifying origin server (Origin);</li>
+<li> Layer 7 origin pull timeout (HTTPUpstreamTimeout);</li>
+<li> HTTP response (HttpResponse).</li>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $NormalAction;
 
@@ -141,33 +147,35 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $CodeAction;
 
     /**
-     * @param NormalAction $NormalAction Common operation. Values:
-<li>`AccessUrlRedirect`: Access URL rewrite</li>
-<li>`UpstreamUrlRedirect`: Origin-pull URL rewrite</li>
-<li>`QUIC`: QUIC</li>
-<li>`WebSocket`: WebSocket</li>
-<li>`VideoSeek`: Video dragging</li>
-<li>`Authentication`: Token authentication</li>
-<li>`CacheKey`: Custom cache key</li>
-<li>`Cache`: Node cache TTL</li>
-<li>`MaxAge`: Browser cache TTL</li>
-<li>`OfflineCache`: Offline cache</li>
-<li>`SmartRouting`: Smart acceleration</li>
-<li>`RangeOriginPull`: Range GETs</li>
-<li>`UpstreamHttp2`: HTTP/2 forwarding</li>
-<li>`HostHeader`: Host header rewrite</li>
-<li>`ForceRedirect`: Force HTTPS</li>
-<li>`OriginPullProtocol`: Origin-pull HTTPS</li>
-<li>`CachePrefresh`: Cache prefresh</li>
-<li>`Compression`: Smart compression</li>
-<li>`Hsts`</li>
-<li>`ClientIpHeader`</li>
-<li>`SslTlsSecureConf`</li>
-<li>`OcspStapling`</li>
-<li>`Http2`: HTTP/2 access</li>
-<li>`UpstreamFollowRedirect`: Follow origin redirect</li>
-<li>`Origin`: Origin</li>
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param NormalAction $NormalAction Common feature operations. The options for this category include:
+<li> Access URL overriding (AccessUrlRedirect);</li>
+<li> Origin URL overriding (UpstreamUrlRedirect);</li>
+<li> QUIC;</li>
+<li> WebSocket;</li>
+<li> Video dragging (VideoSeek);</li>
+<li> Token authentication (Authentication);</li>
+<li> Custom CacheKey (CacheKey);</li>
+<li> Node caching TTL (Cache);</li>
+<li> Browser caching TTL (MaxAge);</li>
+<li> Offline caching (OfflineCache);</li>
+<li> Smart routing (SmartRouting);</li>
+<li> Range-based origin pull (RangeOriginPull);</li>
+<li> HTTP/2 origin pull (UpstreamHttp2);</li>
+<li> Host header overriding (HostHeader);</li>
+<li> Forced HTTPS (ForceRedirect);</li>
+<li> HTTPS origin pull (OriginPullProtocol);</li>
+<li> Cache pre-refresh (CachePrefresh);</li>
+<li> Smart compression (Compression);</li>
+<li> Hsts;</li>
+<li> ClientIpHeader;</li>
+<li> SslTlsSecureConf;</li>
+<li> OcspStapling;</li>
+<li> HTTP/2 access (Http2);</li>
+<li> Redirection during origin pull (UpstreamFollowRedirect);</li>
+<li> Modifying origin server (Origin);</li>
+<li> Layer 7 origin pull timeout (HTTPUpstreamTimeout);</li>
+<li> HTTP response (HttpResponse).</li>
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param RewriteAction $RewriteAction Feature operation with a request/response header. Features of this type include:
 <li>`RequestHeader`: HTTP request header modification.</li>
 <li>`ResponseHeader`: HTTP response header modification.</li>

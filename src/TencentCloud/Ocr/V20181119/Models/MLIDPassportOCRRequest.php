@@ -22,8 +22,20 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getImageBase64() Obtain Base64-encoded value of image. The image cannot exceed 7 MB in size after being Base64-encoded. A resolution above 500x800 is recommended. PNG, JPG, JPEG, and BMP formats are supported. It is recommended that the card part occupies more than 2/3 area of the image.
  * @method void setImageBase64(string $ImageBase64) Set Base64-encoded value of image. The image cannot exceed 7 MB in size after being Base64-encoded. A resolution above 500x800 is recommended. PNG, JPG, JPEG, and BMP formats are supported. It is recommended that the card part occupies more than 2/3 area of the image.
- * @method boolean getRetImage() Obtain Whether to return an image. Default value: false.
- * @method void setRetImage(boolean $RetImage) Set Whether to return an image. Default value: false.
+ * @method boolean getRetImage() Obtain Whether to return an image. 
+Default value: false.
+ * @method void setRetImage(boolean $RetImage) Set Whether to return an image. 
+Default value: false.
+ * @method string getImageUrl() Obtain URL address of image. (This field is not supported outside Chinese mainland)
+Supported image formats: PNG, JPG, JPEG. GIF is currently not supported.
+Supported image size: the downloaded image cannot exceed 7 MB after being Base64-encoded. The download time of the image cannot exceed 3 seconds.
+We recommend you store the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability.
+The download speed and stability of non-Tencent Cloud URLs may be low.
+ * @method void setImageUrl(string $ImageUrl) Set URL address of image. (This field is not supported outside Chinese mainland)
+Supported image formats: PNG, JPG, JPEG. GIF is currently not supported.
+Supported image size: the downloaded image cannot exceed 7 MB after being Base64-encoded. The download time of the image cannot exceed 3 seconds.
+We recommend you store the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability.
+The download speed and stability of non-Tencent Cloud URLs may be low.
  */
 class MLIDPassportOCRRequest extends AbstractModel
 {
@@ -33,13 +45,29 @@ class MLIDPassportOCRRequest extends AbstractModel
     public $ImageBase64;
 
     /**
-     * @var boolean Whether to return an image. Default value: false.
+     * @var boolean Whether to return an image. 
+Default value: false.
      */
     public $RetImage;
 
     /**
+     * @var string URL address of image. (This field is not supported outside Chinese mainland)
+Supported image formats: PNG, JPG, JPEG. GIF is currently not supported.
+Supported image size: the downloaded image cannot exceed 7 MB after being Base64-encoded. The download time of the image cannot exceed 3 seconds.
+We recommend you store the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability.
+The download speed and stability of non-Tencent Cloud URLs may be low.
+     */
+    public $ImageUrl;
+
+    /**
      * @param string $ImageBase64 Base64-encoded value of image. The image cannot exceed 7 MB in size after being Base64-encoded. A resolution above 500x800 is recommended. PNG, JPG, JPEG, and BMP formats are supported. It is recommended that the card part occupies more than 2/3 area of the image.
-     * @param boolean $RetImage Whether to return an image. Default value: false.
+     * @param boolean $RetImage Whether to return an image. 
+Default value: false.
+     * @param string $ImageUrl URL address of image. (This field is not supported outside Chinese mainland)
+Supported image formats: PNG, JPG, JPEG. GIF is currently not supported.
+Supported image size: the downloaded image cannot exceed 7 MB after being Base64-encoded. The download time of the image cannot exceed 3 seconds.
+We recommend you store the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability.
+The download speed and stability of non-Tencent Cloud URLs may be low.
      */
     function __construct()
     {
@@ -60,6 +88,10 @@ class MLIDPassportOCRRequest extends AbstractModel
 
         if (array_key_exists("RetImage",$param) and $param["RetImage"] !== null) {
             $this->RetImage = $param["RetImage"];
+        }
+
+        if (array_key_exists("ImageUrl",$param) and $param["ImageUrl"] !== null) {
+            $this->ImageUrl = $param["ImageUrl"];
         }
     }
 }

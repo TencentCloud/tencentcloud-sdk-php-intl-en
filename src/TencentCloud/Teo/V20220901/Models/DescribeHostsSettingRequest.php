@@ -26,10 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) Set Offset for paginated queries. Default value: 0. Minimum value: 0.
  * @method integer getLimit() Obtain Limit on paginated queries. Default value: 100. Maximum value: 1000.
  * @method void setLimit(integer $Limit) Set Limit on paginated queries. Default value: 100. Maximum value: 1000.
- * @method array getFilters() Obtain Filter criteria. Each filter criteria can have up to 20 entries.
-<li>`host`:<br>   Filter by <strong>domain name </strong><br>   Type: String<br>   Required: No</li>
- * @method void setFilters(array $Filters) Set Filter criteria. Each filter criteria can have up to 20 entries.
-<li>`host`:<br>   Filter by <strong>domain name </strong><br>   Type: String<br>   Required: No</li>
+ * @method array getFilters() Obtain Filter conditions. The maximum value for Filters.Values is 20. The detailed conditions are as follows:<li>host: Filter by domain name.</li>
+ * @method void setFilters(array $Filters) Set Filter conditions. The maximum value for Filters.Values is 20. The detailed conditions are as follows:<li>host: Filter by domain name.</li>
  */
 class DescribeHostsSettingRequest extends AbstractModel
 {
@@ -49,8 +47,7 @@ class DescribeHostsSettingRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @var array Filter criteria. Each filter criteria can have up to 20 entries.
-<li>`host`:<br>   Filter by <strong>domain name </strong><br>   Type: String<br>   Required: No</li>
+     * @var array Filter conditions. The maximum value for Filters.Values is 20. The detailed conditions are as follows:<li>host: Filter by domain name.</li>
      */
     public $Filters;
 
@@ -58,8 +55,7 @@ class DescribeHostsSettingRequest extends AbstractModel
      * @param string $ZoneId The site ID.
      * @param integer $Offset Offset for paginated queries. Default value: 0. Minimum value: 0.
      * @param integer $Limit Limit on paginated queries. Default value: 100. Maximum value: 1000.
-     * @param array $Filters Filter criteria. Each filter criteria can have up to 20 entries.
-<li>`host`:<br>   Filter by <strong>domain name </strong><br>   Type: String<br>   Required: No</li>
+     * @param array $Filters Filter conditions. The maximum value for Filters.Values is 20. The detailed conditions are as follows:<li>host: Filter by domain name.</li>
      */
     function __construct()
     {

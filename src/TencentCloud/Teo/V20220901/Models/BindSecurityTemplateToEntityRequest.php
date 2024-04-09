@@ -32,8 +32,16 @@ use TencentCloud\Common\AbstractModel;
 <li>`bind`: Bind the domain names to the specified policy template </li>
 <li>`unbind-keep-policy`: Unbind a domain name from a policy template and keep the current policy when unbinding</li>
 <li>`unbind-use-default`: Unbind domain names from policy templates and use default blank policy.</li> Note: Only one domain name can be unbound at one time. When `Operate` is `unbind-keep-policy` or `unbind-use-default`, there can only be one domain name specified in `Entities`.
- * @method string getTemplateId() Obtain Specifies the policy template ID to bind or unbind.
- * @method void setTemplateId(string $TemplateId) Set Specifies the policy template ID to bind or unbind.
+ * @method string getTemplateId() Obtain Specifies the ID of the policy template or the site's global policy to be bound or unbound.
+- To bind to a policy template, or unbind from it, specify the policy template ID.
+- To bind to the site's global policy, or unbind from it, use the @ZoneLevel@domain parameter value.
+
+Note: After unbinding, the domain name will use an independent policy and rule quota will be calculated separately. Please make sure there is sufficient rule quota before unbinding.
+ * @method void setTemplateId(string $TemplateId) Set Specifies the ID of the policy template or the site's global policy to be bound or unbound.
+- To bind to a policy template, or unbind from it, specify the policy template ID.
+- To bind to the site's global policy, or unbind from it, use the @ZoneLevel@domain parameter value.
+
+Note: After unbinding, the domain name will use an independent policy and rule quota will be calculated separately. Please make sure there is sufficient rule quota before unbinding.
  * @method boolean getOverWrite() Obtain Whether to replace the existing policy template bound with the domain name. Values: 
 <li>`true`: Replace the template bound to the domain. </li>
 <li>`false`: Do not replace the template.</li> Note: In this case, the API returns an error if there is already a policy template bound to the specified domain name.
@@ -62,7 +70,11 @@ class BindSecurityTemplateToEntityRequest extends AbstractModel
     public $Operate;
 
     /**
-     * @var string Specifies the policy template ID to bind or unbind.
+     * @var string Specifies the ID of the policy template or the site's global policy to be bound or unbound.
+- To bind to a policy template, or unbind from it, specify the policy template ID.
+- To bind to the site's global policy, or unbind from it, use the @ZoneLevel@domain parameter value.
+
+Note: After unbinding, the domain name will use an independent policy and rule quota will be calculated separately. Please make sure there is sufficient rule quota before unbinding.
      */
     public $TemplateId;
 
@@ -80,7 +92,11 @@ class BindSecurityTemplateToEntityRequest extends AbstractModel
 <li>`bind`: Bind the domain names to the specified policy template </li>
 <li>`unbind-keep-policy`: Unbind a domain name from a policy template and keep the current policy when unbinding</li>
 <li>`unbind-use-default`: Unbind domain names from policy templates and use default blank policy.</li> Note: Only one domain name can be unbound at one time. When `Operate` is `unbind-keep-policy` or `unbind-use-default`, there can only be one domain name specified in `Entities`.
-     * @param string $TemplateId Specifies the policy template ID to bind or unbind.
+     * @param string $TemplateId Specifies the ID of the policy template or the site's global policy to be bound or unbound.
+- To bind to a policy template, or unbind from it, specify the policy template ID.
+- To bind to the site's global policy, or unbind from it, use the @ZoneLevel@domain parameter value.
+
+Note: After unbinding, the domain name will use an independent policy and rule quota will be calculated separately. Please make sure there is sufficient rule quota before unbinding.
      * @param boolean $OverWrite Whether to replace the existing policy template bound with the domain name. Values: 
 <li>`true`: Replace the template bound to the domain. </li>
 <li>`false`: Do not replace the template.</li> Note: In this case, the API returns an error if there is already a policy template bound to the specified domain name.

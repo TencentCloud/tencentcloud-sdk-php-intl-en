@@ -30,28 +30,30 @@ use TencentCloud\Common\AbstractModel;
 <li>`notEquals`: Does not equal</li>
 <li>`exist`: Exists</li>
 <li>`notexist`: Does not exist</li>
- * @method string getTarget() Obtain Match fields. Values: <li>`filename`: File name;</li><li>`extension`: File suffix;</li><li>`host`: HOST;</li><li>`full_url`: The complete URL path under the current site, including the HTTP protocol, Host and path;</li><li>`url`: The URL path request under the current site;</li><li>`client_country`: Client country;</li><li>`query_string`: The query string of the URL requested under the current site;</li><li>`request_header`: HTTP request header. </li>
- * @method void setTarget(string $Target) Set Match fields. Values: <li>`filename`: File name;</li><li>`extension`: File suffix;</li><li>`host`: HOST;</li><li>`full_url`: The complete URL path under the current site, including the HTTP protocol, Host and path;</li><li>`url`: The URL path request under the current site;</li><li>`client_country`: Client country;</li><li>`query_string`: The query string of the URL requested under the current site;</li><li>`request_header`: HTTP request header. </li>
- * @method array getValues() Obtain The parameter value of the match type. It can be an empty string only when `Target=query string/request header` and `Operator=exist/notexist`.
-<li>When `Target=extension`, enter the file extension, such as "jpg" and "txt".</li>
-<li>When `Target=filename`, enter the file name, such as "foo" in "foo.jpg".</li>
-<li>When `Target=all`, it indicates any site request.</li>
-<li>When `Target=host`, enter the host under the current site, such as "www.maxx55.com".</li>
-<li>When `Target=url`, enter the partial URL path under the current site, such as "/example".</li>
-<li>When `Target=full_url`, enter the complete URL under the current site. It must contain the HTTP protocol, host, and path, such as "https://www.maxx55.cn/example".</li>
-<li>When `Target=client_country`, enter the ISO-3166 country/region code.</li>
-<li>When `Target=query_string`, enter the value of the query string, such as "cn" and "1" in "lang=cn&version=1".</li>
-<li>When `Target=request_header`, enter the HTTP request header value, such as "zh-CN,zh;q=0.9" in the "Accept-Language:zh-CN,zh;q=0.9" header.</li>
- * @method void setValues(array $Values) Set The parameter value of the match type. It can be an empty string only when `Target=query string/request header` and `Operator=exist/notexist`.
-<li>When `Target=extension`, enter the file extension, such as "jpg" and "txt".</li>
-<li>When `Target=filename`, enter the file name, such as "foo" in "foo.jpg".</li>
-<li>When `Target=all`, it indicates any site request.</li>
-<li>When `Target=host`, enter the host under the current site, such as "www.maxx55.com".</li>
-<li>When `Target=url`, enter the partial URL path under the current site, such as "/example".</li>
-<li>When `Target=full_url`, enter the complete URL under the current site. It must contain the HTTP protocol, host, and path, such as "https://www.maxx55.cn/example".</li>
-<li>When `Target=client_country`, enter the ISO-3166 country/region code.</li>
-<li>When `Target=query_string`, enter the value of the query string, such as "cn" and "1" in "lang=cn&version=1".</li>
-<li>When `Target=request_header`, enter the HTTP request header value, such as "zh-CN,zh;q=0.9" in the "Accept-Language:zh-CN,zh;q=0.9" header.</li>
+ * @method string getTarget() Obtain Match type. Valid values: <li> filename: File name; </li> <li> extension: File extension; </li> <li> host: Host name; </li> <li> full_url: The complete URL path under the current site, which must include the HTTP protocol, host, and path; </li> <li> url: Request for the URL path under the current site; </li><li> client_country: Client country/region;</li> <li> query_string: The query string of the URL requested under the current site; </li> <li> request_header: HTTP request header; </li><li> client_ip: Client IP address. </li>
+ * @method void setTarget(string $Target) Set Match type. Valid values: <li> filename: File name; </li> <li> extension: File extension; </li> <li> host: Host name; </li> <li> full_url: The complete URL path under the current site, which must include the HTTP protocol, host, and path; </li> <li> url: Request for the URL path under the current site; </li><li> client_country: Client country/region;</li> <li> query_string: The query string of the URL requested under the current site; </li> <li> request_header: HTTP request header; </li><li> client_ip: Client IP address. </li>
+ * @method array getValues() Obtain The parameter values for match types. It is allowed to pass an empty array only when the match type is query_string or request_header and the operator value is Exist or Does Not Exist. The corresponding match types include:
+<li> File extension: Extensions like jpg, txt, etc.;</li>
+<li> File name: For example, foo in foo.jpg;</li>
+<li> All: All requests for domain names under the site; </li>
+<li> HOST: The host under the current site, for example, www.maxx55.com;</li>
+<li> URL Path: Request for the URL path under the current site, for example, /example;</li>
+<li> URL Full: The complete URL request under the current site, which must include the HTTP protocol, host, and path, for example, https://www.maxx55.cn/example;</li>
+<li> Client country/region: Country/region codes compliant with the ISO3166 standard;</li>
+<li> Query string: The parameter values in the query string of the URL requested under the current site, for example, cn and 1 in lang=cn&version=1; </li>
+<li> HTTP request header: The value of the HTTP request header field, for example, zh-CN,zh;q=0.9 in Accept-Language:zh-CN,zh;q=0.9; </li>
+<li> Client IP: The client IP address carried by the current request, supporting IPv4, IPv6, and an IP range. </li>
+ * @method void setValues(array $Values) Set The parameter values for match types. It is allowed to pass an empty array only when the match type is query_string or request_header and the operator value is Exist or Does Not Exist. The corresponding match types include:
+<li> File extension: Extensions like jpg, txt, etc.;</li>
+<li> File name: For example, foo in foo.jpg;</li>
+<li> All: All requests for domain names under the site; </li>
+<li> HOST: The host under the current site, for example, www.maxx55.com;</li>
+<li> URL Path: Request for the URL path under the current site, for example, /example;</li>
+<li> URL Full: The complete URL request under the current site, which must include the HTTP protocol, host, and path, for example, https://www.maxx55.cn/example;</li>
+<li> Client country/region: Country/region codes compliant with the ISO3166 standard;</li>
+<li> Query string: The parameter values in the query string of the URL requested under the current site, for example, cn and 1 in lang=cn&version=1; </li>
+<li> HTTP request header: The value of the HTTP request header field, for example, zh-CN,zh;q=0.9 in Accept-Language:zh-CN,zh;q=0.9; </li>
+<li> Client IP: The client IP address carried by the current request, supporting IPv4, IPv6, and an IP range. </li>
  * @method boolean getIgnoreCase() Obtain Whether the parameter value is case insensitive. Default value: false.
  * @method void setIgnoreCase(boolean $IgnoreCase) Set Whether the parameter value is case insensitive. Default value: false.
  * @method string getName() Obtain The parameter name of the match type. This field is required only when `Target=query_string/request_header`.
@@ -77,21 +79,22 @@ class RuleCondition extends AbstractModel
     public $Operator;
 
     /**
-     * @var string Match fields. Values: <li>`filename`: File name;</li><li>`extension`: File suffix;</li><li>`host`: HOST;</li><li>`full_url`: The complete URL path under the current site, including the HTTP protocol, Host and path;</li><li>`url`: The URL path request under the current site;</li><li>`client_country`: Client country;</li><li>`query_string`: The query string of the URL requested under the current site;</li><li>`request_header`: HTTP request header. </li>
+     * @var string Match type. Valid values: <li> filename: File name; </li> <li> extension: File extension; </li> <li> host: Host name; </li> <li> full_url: The complete URL path under the current site, which must include the HTTP protocol, host, and path; </li> <li> url: Request for the URL path under the current site; </li><li> client_country: Client country/region;</li> <li> query_string: The query string of the URL requested under the current site; </li> <li> request_header: HTTP request header; </li><li> client_ip: Client IP address. </li>
      */
     public $Target;
 
     /**
-     * @var array The parameter value of the match type. It can be an empty string only when `Target=query string/request header` and `Operator=exist/notexist`.
-<li>When `Target=extension`, enter the file extension, such as "jpg" and "txt".</li>
-<li>When `Target=filename`, enter the file name, such as "foo" in "foo.jpg".</li>
-<li>When `Target=all`, it indicates any site request.</li>
-<li>When `Target=host`, enter the host under the current site, such as "www.maxx55.com".</li>
-<li>When `Target=url`, enter the partial URL path under the current site, such as "/example".</li>
-<li>When `Target=full_url`, enter the complete URL under the current site. It must contain the HTTP protocol, host, and path, such as "https://www.maxx55.cn/example".</li>
-<li>When `Target=client_country`, enter the ISO-3166 country/region code.</li>
-<li>When `Target=query_string`, enter the value of the query string, such as "cn" and "1" in "lang=cn&version=1".</li>
-<li>When `Target=request_header`, enter the HTTP request header value, such as "zh-CN,zh;q=0.9" in the "Accept-Language:zh-CN,zh;q=0.9" header.</li>
+     * @var array The parameter values for match types. It is allowed to pass an empty array only when the match type is query_string or request_header and the operator value is Exist or Does Not Exist. The corresponding match types include:
+<li> File extension: Extensions like jpg, txt, etc.;</li>
+<li> File name: For example, foo in foo.jpg;</li>
+<li> All: All requests for domain names under the site; </li>
+<li> HOST: The host under the current site, for example, www.maxx55.com;</li>
+<li> URL Path: Request for the URL path under the current site, for example, /example;</li>
+<li> URL Full: The complete URL request under the current site, which must include the HTTP protocol, host, and path, for example, https://www.maxx55.cn/example;</li>
+<li> Client country/region: Country/region codes compliant with the ISO3166 standard;</li>
+<li> Query string: The parameter values in the query string of the URL requested under the current site, for example, cn and 1 in lang=cn&version=1; </li>
+<li> HTTP request header: The value of the HTTP request header field, for example, zh-CN,zh;q=0.9 in Accept-Language:zh-CN,zh;q=0.9; </li>
+<li> Client IP: The client IP address carried by the current request, supporting IPv4, IPv6, and an IP range. </li>
      */
     public $Values;
 
@@ -120,17 +123,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
 <li>`notEquals`: Does not equal</li>
 <li>`exist`: Exists</li>
 <li>`notexist`: Does not exist</li>
-     * @param string $Target Match fields. Values: <li>`filename`: File name;</li><li>`extension`: File suffix;</li><li>`host`: HOST;</li><li>`full_url`: The complete URL path under the current site, including the HTTP protocol, Host and path;</li><li>`url`: The URL path request under the current site;</li><li>`client_country`: Client country;</li><li>`query_string`: The query string of the URL requested under the current site;</li><li>`request_header`: HTTP request header. </li>
-     * @param array $Values The parameter value of the match type. It can be an empty string only when `Target=query string/request header` and `Operator=exist/notexist`.
-<li>When `Target=extension`, enter the file extension, such as "jpg" and "txt".</li>
-<li>When `Target=filename`, enter the file name, such as "foo" in "foo.jpg".</li>
-<li>When `Target=all`, it indicates any site request.</li>
-<li>When `Target=host`, enter the host under the current site, such as "www.maxx55.com".</li>
-<li>When `Target=url`, enter the partial URL path under the current site, such as "/example".</li>
-<li>When `Target=full_url`, enter the complete URL under the current site. It must contain the HTTP protocol, host, and path, such as "https://www.maxx55.cn/example".</li>
-<li>When `Target=client_country`, enter the ISO-3166 country/region code.</li>
-<li>When `Target=query_string`, enter the value of the query string, such as "cn" and "1" in "lang=cn&version=1".</li>
-<li>When `Target=request_header`, enter the HTTP request header value, such as "zh-CN,zh;q=0.9" in the "Accept-Language:zh-CN,zh;q=0.9" header.</li>
+     * @param string $Target Match type. Valid values: <li> filename: File name; </li> <li> extension: File extension; </li> <li> host: Host name; </li> <li> full_url: The complete URL path under the current site, which must include the HTTP protocol, host, and path; </li> <li> url: Request for the URL path under the current site; </li><li> client_country: Client country/region;</li> <li> query_string: The query string of the URL requested under the current site; </li> <li> request_header: HTTP request header; </li><li> client_ip: Client IP address. </li>
+     * @param array $Values The parameter values for match types. It is allowed to pass an empty array only when the match type is query_string or request_header and the operator value is Exist or Does Not Exist. The corresponding match types include:
+<li> File extension: Extensions like jpg, txt, etc.;</li>
+<li> File name: For example, foo in foo.jpg;</li>
+<li> All: All requests for domain names under the site; </li>
+<li> HOST: The host under the current site, for example, www.maxx55.com;</li>
+<li> URL Path: Request for the URL path under the current site, for example, /example;</li>
+<li> URL Full: The complete URL request under the current site, which must include the HTTP protocol, host, and path, for example, https://www.maxx55.cn/example;</li>
+<li> Client country/region: Country/region codes compliant with the ISO3166 standard;</li>
+<li> Query string: The parameter values in the query string of the URL requested under the current site, for example, cn and 1 in lang=cn&version=1; </li>
+<li> HTTP request header: The value of the HTTP request header field, for example, zh-CN,zh;q=0.9 in Accept-Language:zh-CN,zh;q=0.9; </li>
+<li> Client IP: The client IP address carried by the current request, supporting IPv4, IPv6, and an IP range. </li>
      * @param boolean $IgnoreCase Whether the parameter value is case insensitive. Default value: false.
      * @param string $Name The parameter name of the match type. This field is required only when `Target=query_string/request_header`.
 <li>`query_string`: Name of the query string, such as "lang" and "version" in "lang=cn&version=1".</li>

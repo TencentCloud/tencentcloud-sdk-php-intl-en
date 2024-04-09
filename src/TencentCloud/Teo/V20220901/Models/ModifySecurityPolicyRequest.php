@@ -24,10 +24,22 @@ use TencentCloud\Common\AbstractModel;
  * @method void setZoneId(string $ZoneId) Set The site ID.
  * @method SecurityConfig getSecurityConfig() Obtain Security configuration.
  * @method void setSecurityConfig(SecurityConfig $SecurityConfig) Set Security configuration.
- * @method string getEntity() Obtain The subdomain name/L4 proxy. You must specify either "Entity" or "TemplateId".
- * @method void setEntity(string $Entity) Set The subdomain name/L4 proxy. You must specify either "Entity" or "TemplateId".
- * @method string getTemplateId() Obtain The template ID. You must specify either this field or "Entity".
- * @method void setTemplateId(string $TemplateId) Set The template ID. You must specify either this field or "Entity".
+ * @method string getEntity() Obtain Subdomain/application name.
+
+Note: When both this parameter and the TemplateId parameter are specified, this parameter will not take effect. Do not specify this parameter and the TemplateId parameter at the same time.
+ * @method void setEntity(string $Entity) Set Subdomain/application name.
+
+Note: When both this parameter and the TemplateId parameter are specified, this parameter will not take effect. Do not specify this parameter and the TemplateId parameter at the same time.
+ * @method string getTemplateId() Obtain Specifies the policy template ID, or the site's global policy.
+- To configure a policy template, specify the policy template ID.
+- To configure the site's global policy, use the @ZoneLevel@Domain parameter value.
+
+Note: When this parameter is used, the Entity parameter will not take effect. Do not use this parameter and the Entity parameter at the same time.
+ * @method void setTemplateId(string $TemplateId) Set Specifies the policy template ID, or the site's global policy.
+- To configure a policy template, specify the policy template ID.
+- To configure the site's global policy, use the @ZoneLevel@Domain parameter value.
+
+Note: When this parameter is used, the Entity parameter will not take effect. Do not use this parameter and the Entity parameter at the same time.
  */
 class ModifySecurityPolicyRequest extends AbstractModel
 {
@@ -42,20 +54,32 @@ class ModifySecurityPolicyRequest extends AbstractModel
     public $SecurityConfig;
 
     /**
-     * @var string The subdomain name/L4 proxy. You must specify either "Entity" or "TemplateId".
+     * @var string Subdomain/application name.
+
+Note: When both this parameter and the TemplateId parameter are specified, this parameter will not take effect. Do not specify this parameter and the TemplateId parameter at the same time.
      */
     public $Entity;
 
     /**
-     * @var string The template ID. You must specify either this field or "Entity".
+     * @var string Specifies the policy template ID, or the site's global policy.
+- To configure a policy template, specify the policy template ID.
+- To configure the site's global policy, use the @ZoneLevel@Domain parameter value.
+
+Note: When this parameter is used, the Entity parameter will not take effect. Do not use this parameter and the Entity parameter at the same time.
      */
     public $TemplateId;
 
     /**
      * @param string $ZoneId The site ID.
      * @param SecurityConfig $SecurityConfig Security configuration.
-     * @param string $Entity The subdomain name/L4 proxy. You must specify either "Entity" or "TemplateId".
-     * @param string $TemplateId The template ID. You must specify either this field or "Entity".
+     * @param string $Entity Subdomain/application name.
+
+Note: When both this parameter and the TemplateId parameter are specified, this parameter will not take effect. Do not specify this parameter and the TemplateId parameter at the same time.
+     * @param string $TemplateId Specifies the policy template ID, or the site's global policy.
+- To configure a policy template, specify the policy template ID.
+- To configure the site's global policy, use the @ZoneLevel@Domain parameter value.
+
+Note: When this parameter is used, the Entity parameter will not take effect. Do not use this parameter and the Entity parameter at the same time.
      */
     function __construct()
     {

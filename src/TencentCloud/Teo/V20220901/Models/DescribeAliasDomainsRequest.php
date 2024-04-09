@@ -26,10 +26,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) Set The page offset. Default value: 0
  * @method integer getLimit() Obtain The paginated query limit. Default value: 20. Maximum value: 1000.
  * @method void setLimit(integer $Limit) Set The paginated query limit. Default value: 20. Maximum value: 1000.
- * @method array getFilters() Obtain Filter criteria. Each filter criteria can have up to 20 entries.
-<li>`target-name`:<br>   Filter by <strong>target domain name</strong><br>   Type: String<br>   Required: No</li><li>`alias-name`:<br>   Filter by <strong>alias domain name</strong><br>   Type: String<br>   Required: No</li>Only `alias-name` supports fuzzy query.
- * @method void setFilters(array $Filters) Set Filter criteria. Each filter criteria can have up to 20 entries.
-<li>`target-name`:<br>   Filter by <strong>target domain name</strong><br>   Type: String<br>   Required: No</li><li>`alias-name`:<br>   Filter by <strong>alias domain name</strong><br>   Type: String<br>   Required: No</li>Only `alias-name` supports fuzzy query.
+ * @method array getFilters() Obtain Filter conditions. The maximum value for Filters.Values is 20. The detailed conditions are as follows:
+<li>target-name: Filter by the target domain name;</li>
+<li>alias-name: Filter by the alias of the domain name.</li>Fuzzy queries are only supported for the field name alias-name.
+ * @method void setFilters(array $Filters) Set Filter conditions. The maximum value for Filters.Values is 20. The detailed conditions are as follows:
+<li>target-name: Filter by the target domain name;</li>
+<li>alias-name: Filter by the alias of the domain name.</li>Fuzzy queries are only supported for the field name alias-name.
  */
 class DescribeAliasDomainsRequest extends AbstractModel
 {
@@ -49,8 +51,9 @@ class DescribeAliasDomainsRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @var array Filter criteria. Each filter criteria can have up to 20 entries.
-<li>`target-name`:<br>   Filter by <strong>target domain name</strong><br>   Type: String<br>   Required: No</li><li>`alias-name`:<br>   Filter by <strong>alias domain name</strong><br>   Type: String<br>   Required: No</li>Only `alias-name` supports fuzzy query.
+     * @var array Filter conditions. The maximum value for Filters.Values is 20. The detailed conditions are as follows:
+<li>target-name: Filter by the target domain name;</li>
+<li>alias-name: Filter by the alias of the domain name.</li>Fuzzy queries are only supported for the field name alias-name.
      */
     public $Filters;
 
@@ -58,8 +61,9 @@ class DescribeAliasDomainsRequest extends AbstractModel
      * @param string $ZoneId The site ID.
      * @param integer $Offset The page offset. Default value: 0
      * @param integer $Limit The paginated query limit. Default value: 20. Maximum value: 1000.
-     * @param array $Filters Filter criteria. Each filter criteria can have up to 20 entries.
-<li>`target-name`:<br>   Filter by <strong>target domain name</strong><br>   Type: String<br>   Required: No</li><li>`alias-name`:<br>   Filter by <strong>alias domain name</strong><br>   Type: String<br>   Required: No</li>Only `alias-name` supports fuzzy query.
+     * @param array $Filters Filter conditions. The maximum value for Filters.Values is 20. The detailed conditions are as follows:
+<li>target-name: Filter by the target domain name;</li>
+<li>alias-name: Filter by the alias of the domain name.</li>Fuzzy queries are only supported for the field name alias-name.
      */
     function __construct()
     {

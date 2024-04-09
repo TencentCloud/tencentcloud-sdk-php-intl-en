@@ -26,12 +26,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProxyId(string $ProxyId) Set The proxy ID.
  * @method string getRuleId() Obtain The rule ID.
  * @method void setRuleId(string $RuleId) Set The rule ID.
- * @method string getOriginType() Obtain The origin type. Values:
-<li>`custom`: Specified origins</li>
-<li>`origins`: Origin group</li></li>The original configuration will apply if this field is not specified.
- * @method void setOriginType(string $OriginType) Set The origin type. Values:
-<li>`custom`: Specified origins</li>
-<li>`origins`: Origin group</li></li>The original configuration will apply if this field is not specified.
+ * @method string getOriginType() Obtain Origin server type. Valid values:
+<li>custom: Manually added;</li>
+<li>origins: Origin server group.</li>
+ * @method void setOriginType(string $OriginType) Set Origin server type. Valid values:
+<li>custom: Manually added;</li>
+<li>origins: Origin server group.</li>
  * @method array getPort() Obtain The access port, which can be:
 <li>A single port, such as 80</li>
 <li>A port range, such as 81-90</li>
@@ -99,9 +99,9 @@ class ModifyApplicationProxyRuleRequest extends AbstractModel
     public $RuleId;
 
     /**
-     * @var string The origin type. Values:
-<li>`custom`: Specified origins</li>
-<li>`origins`: Origin group</li></li>The original configuration will apply if this field is not specified.
+     * @var string Origin server type. Valid values:
+<li>custom: Manually added;</li>
+<li>origins: Origin server group.</li>
      */
     public $OriginType;
 
@@ -165,9 +165,9 @@ The original configuration will apply if this field is not specified.
      * @param string $ZoneId The site ID.
      * @param string $ProxyId The proxy ID.
      * @param string $RuleId The rule ID.
-     * @param string $OriginType The origin type. Values:
-<li>`custom`: Specified origins</li>
-<li>`origins`: Origin group</li></li>The original configuration will apply if this field is not specified.
+     * @param string $OriginType Origin server type. Valid values:
+<li>custom: Manually added;</li>
+<li>origins: Origin server group.</li>
      * @param array $Port The access port, which can be:
 <li>A single port, such as 80</li>
 <li>A port range, such as 81-90</li>

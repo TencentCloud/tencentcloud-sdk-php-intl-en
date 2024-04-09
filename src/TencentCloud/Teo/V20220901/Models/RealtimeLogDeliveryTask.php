@@ -42,18 +42,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDeliveryConditions(array $DeliveryConditions) Set Log delivery filter conditions.
  * @method integer getSample() Obtain The sampling ratio in permille. Value range: 1 to 1000. For example, 605 represents a sampling ratio of 60.5%.
  * @method void setSample(integer $Sample) Set The sampling ratio in permille. Value range: 1 to 1000. For example, 605 represents a sampling ratio of 60.5%.
- * @method CLSTopic getCLS() Obtain The configuration information of CLS.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setCLS(CLSTopic $CLS) Set The configuration information of CLS.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method CustomEndpoint getCustomEndpoint() Obtain The configuration information of the custom HTTP service.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setCustomEndpoint(CustomEndpoint $CustomEndpoint) Set The configuration information of the custom HTTP service.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method S3 getS3() Obtain The configuration information of the AWS S3-compatible bucket.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setS3(S3 $S3) Set The configuration information of the AWS S3-compatible bucket.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method CLSTopic getCLS() Obtain Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setCLS(CLSTopic $CLS) Set Note: This field may return null, indicating that no valid values can be obtained.
+ * @method CustomEndpoint getCustomEndpoint() Obtain Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setCustomEndpoint(CustomEndpoint $CustomEndpoint) Set Note: This field may return null, indicating that no valid values can be obtained.
+ * @method S3 getS3() Obtain Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setS3(S3 $S3) Set Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getCreateTime() Obtain The creation time.
  * @method void setCreateTime(string $CreateTime) Set The creation time.
  * @method string getUpdateTime() Obtain The update time.
@@ -117,20 +111,17 @@ class RealtimeLogDeliveryTask extends AbstractModel
     public $Sample;
 
     /**
-     * @var CLSTopic The configuration information of CLS.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var CLSTopic Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $CLS;
 
     /**
-     * @var CustomEndpoint The configuration information of the custom HTTP service.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var CustomEndpoint Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $CustomEndpoint;
 
     /**
-     * @var S3 The configuration information of the AWS S3-compatible bucket.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var S3 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $S3;
 
@@ -156,12 +147,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param array $CustomFields The list of custom fields for delivery.
      * @param array $DeliveryConditions Log delivery filter conditions.
      * @param integer $Sample The sampling ratio in permille. Value range: 1 to 1000. For example, 605 represents a sampling ratio of 60.5%.
-     * @param CLSTopic $CLS The configuration information of CLS.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param CustomEndpoint $CustomEndpoint The configuration information of the custom HTTP service.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param S3 $S3 The configuration information of the AWS S3-compatible bucket.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param CLSTopic $CLS Note: This field may return null, indicating that no valid values can be obtained.
+     * @param CustomEndpoint $CustomEndpoint Note: This field may return null, indicating that no valid values can be obtained.
+     * @param S3 $S3 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $CreateTime The creation time.
      * @param string $UpdateTime The update time.
      */
