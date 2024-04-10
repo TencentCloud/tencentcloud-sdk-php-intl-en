@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEnableFlag(integer $EnableFlag) Set Task status. Valid values: 1 (enabled) and 2 (disabled).
  * @method array getDstResources() Obtain Destination topic ID and alias of the data processing task
  * @method void setDstResources(array $DstResources) Set Destination topic ID and alias of the data processing task
+ * @method integer getHasServicesLog() Obtain Whether to enable delivery service log. 1 for disabled, 2 for enabled
+ * @method void setHasServicesLog(integer $HasServicesLog) Set Whether to enable delivery service log. 1 for disabled, 2 for enabled
  */
 class ModifyDataTransformRequest extends AbstractModel
 {
@@ -59,11 +61,17 @@ class ModifyDataTransformRequest extends AbstractModel
     public $DstResources;
 
     /**
+     * @var integer Whether to enable delivery service log. 1 for disabled, 2 for enabled
+     */
+    public $HasServicesLog;
+
+    /**
      * @param string $TaskId Data processing task ID
      * @param string $Name Data processing task name
      * @param string $EtlContent Data processing statement
      * @param integer $EnableFlag Task status. Valid values: 1 (enabled) and 2 (disabled).
      * @param array $DstResources Destination topic ID and alias of the data processing task
+     * @param integer $HasServicesLog Whether to enable delivery service log. 1 for disabled, 2 for enabled
      */
     function __construct()
     {
@@ -101,6 +109,10 @@ class ModifyDataTransformRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->DstResources, $obj);
             }
+        }
+
+        if (array_key_exists("HasServicesLog",$param) and $param["HasServicesLog"] !== null) {
+            $this->HasServicesLog = $param["HasServicesLog"];
         }
     }
 }

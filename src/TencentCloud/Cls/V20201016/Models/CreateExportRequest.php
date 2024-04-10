@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOrder(string $Order) Set Exported log sorting order by time. Valid values: `asc`: ascending; `desc`: descending. Default value: `desc`
  * @method string getFormat() Obtain Exported log data format. Valid values: `json`, `csv`. Default value: `json`
  * @method void setFormat(string $Format) Set Exported log data format. Valid values: `json`, `csv`. Default value: `json`
+ * @method integer getSyntaxRule() Obtain Syntax rules; the default value is 0.0: Lucene syntax; 1: CQL syntax.
+ * @method void setSyntaxRule(integer $SyntaxRule) Set Syntax rules; the default value is 0.0: Lucene syntax; 1: CQL syntax.
  */
 class CreateExportRequest extends AbstractModel
 {
@@ -73,6 +75,11 @@ class CreateExportRequest extends AbstractModel
     public $Format;
 
     /**
+     * @var integer Syntax rules; the default value is 0.0: Lucene syntax; 1: CQL syntax.
+     */
+    public $SyntaxRule;
+
+    /**
      * @param string $TopicId Log topic ID
      * @param integer $Count Number of logs to be exported. Maximum value: 50 million
      * @param string $Query Search statements for log export. <a href="https://intl.cloud.tencent.com/document/product/614/44061?from_cn_redirect=1" target="_blank">[SQL statements]</a> are not supported.
@@ -80,6 +87,7 @@ class CreateExportRequest extends AbstractModel
      * @param integer $To End time of the log to be exported, which is a timestamp in milliseconds
      * @param string $Order Exported log sorting order by time. Valid values: `asc`: ascending; `desc`: descending. Default value: `desc`
      * @param string $Format Exported log data format. Valid values: `json`, `csv`. Default value: `json`
+     * @param integer $SyntaxRule Syntax rules; the default value is 0.0: Lucene syntax; 1: CQL syntax.
      */
     function __construct()
     {
@@ -120,6 +128,10 @@ class CreateExportRequest extends AbstractModel
 
         if (array_key_exists("Format",$param) and $param["Format"] !== null) {
             $this->Format = $param["Format"];
+        }
+
+        if (array_key_exists("SyntaxRule",$param) and $param["SyntaxRule"] !== null) {
+            $this->SyntaxRule = $param["SyntaxRule"];
         }
     }
 }

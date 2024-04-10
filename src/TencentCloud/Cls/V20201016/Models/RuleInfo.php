@@ -20,66 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Index rule. At least one of the `FullText`, `KeyValue`, and `Tag` parameters must be valid.
  *
- * @method FullTextInfo getFullText() Obtain Full-text index configuration. If the configuration is left empty, full-text indexing is not enabled.
+ * @method FullTextInfo getFullText() Obtain Full-text index configuration. If empty, full-text indexing is not enabled.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setFullText(FullTextInfo $FullText) Set Full-text index configuration. If the configuration is left empty, full-text indexing is not enabled.
+ * @method void setFullText(FullTextInfo $FullText) Set Full-text index configuration. If empty, full-text indexing is not enabled.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method RuleKeyValueInfo getKeyValue() Obtain Key-value index configuration. If the configuration is left empty, key-value indexing is not enabled.
+ * @method RuleKeyValueInfo getKeyValue() Obtain Key-value index configuration. If empty, key-value indexing is not enabled.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setKeyValue(RuleKeyValueInfo $KeyValue) Set Key-value index configuration. If the configuration is left empty, key-value indexing is not enabled.
+ * @method void setKeyValue(RuleKeyValueInfo $KeyValue) Set Key-value index configuration. If empty, key-value indexing is not enabled.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method RuleTagInfo getTag() Obtain Metadata field index configuration. If the configuration is left empty, metadata field indexing is not enabled.
+ * @method RuleTagInfo getTag() Obtain Metadata field index configuration. If empty, metadata field indexing is not enabled.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setTag(RuleTagInfo $Tag) Set Metadata field index configuration. If the configuration is left empty, metadata field indexing is not enabled.
+ * @method void setTag(RuleTagInfo $Tag) Set Metadata field index configuration. If empty, metadata field indexing is not enabled.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method DynamicIndex getDynamicIndex() Obtain Dynamic index configuration. If the configuration is empty, dynamic indexing is not enabled.
-
-Note: This feature is currently in a beta test. To use it, please contact technical support.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setDynamicIndex(DynamicIndex $DynamicIndex) Set Dynamic index configuration. If the configuration is empty, dynamic indexing is not enabled.
-
-Note: This feature is currently in a beta test. To use it, please contact technical support.
-Note: this field may return null, indicating that no valid values can be obtained.
+ * @method DynamicIndex getDynamicIndex() Obtain Key-value index automatic configuration. If empty, the feature is not enabled.Once enabled, fields within logs are automatically added to the key-value index, including fields added to logs subsequently.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setDynamicIndex(DynamicIndex $DynamicIndex) Set Key-value index automatic configuration. If empty, the feature is not enabled.Once enabled, fields within logs are automatically added to the key-value index, including fields added to logs subsequently.
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class RuleInfo extends AbstractModel
 {
     /**
-     * @var FullTextInfo Full-text index configuration. If the configuration is left empty, full-text indexing is not enabled.
+     * @var FullTextInfo Full-text index configuration. If empty, full-text indexing is not enabled.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $FullText;
 
     /**
-     * @var RuleKeyValueInfo Key-value index configuration. If the configuration is left empty, key-value indexing is not enabled.
+     * @var RuleKeyValueInfo Key-value index configuration. If empty, key-value indexing is not enabled.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $KeyValue;
 
     /**
-     * @var RuleTagInfo Metadata field index configuration. If the configuration is left empty, metadata field indexing is not enabled.
+     * @var RuleTagInfo Metadata field index configuration. If empty, metadata field indexing is not enabled.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Tag;
 
     /**
-     * @var DynamicIndex Dynamic index configuration. If the configuration is empty, dynamic indexing is not enabled.
-
-Note: This feature is currently in a beta test. To use it, please contact technical support.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var DynamicIndex Key-value index automatic configuration. If empty, the feature is not enabled.Once enabled, fields within logs are automatically added to the key-value index, including fields added to logs subsequently.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $DynamicIndex;
 
     /**
-     * @param FullTextInfo $FullText Full-text index configuration. If the configuration is left empty, full-text indexing is not enabled.
+     * @param FullTextInfo $FullText Full-text index configuration. If empty, full-text indexing is not enabled.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param RuleKeyValueInfo $KeyValue Key-value index configuration. If the configuration is left empty, key-value indexing is not enabled.
+     * @param RuleKeyValueInfo $KeyValue Key-value index configuration. If empty, key-value indexing is not enabled.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param RuleTagInfo $Tag Metadata field index configuration. If the configuration is left empty, metadata field indexing is not enabled.
+     * @param RuleTagInfo $Tag Metadata field index configuration. If empty, metadata field indexing is not enabled.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param DynamicIndex $DynamicIndex Dynamic index configuration. If the configuration is empty, dynamic indexing is not enabled.
-
-Note: This feature is currently in a beta test. To use it, please contact technical support.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @param DynamicIndex $DynamicIndex Key-value index automatic configuration. If empty, the feature is not enabled.Once enabled, fields within logs are automatically added to the key-value index, including fields added to logs subsequently.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

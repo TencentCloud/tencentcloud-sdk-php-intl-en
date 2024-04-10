@@ -34,16 +34,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMaxSplitPartitions(integer $MaxSplitPartitions) Set Maximum number of partitions to split into for this topic if automatic split is enabled. Default value: 50
  * @method string getStorageType() Obtain Log topic storage type. Valid values: `hot` (STANDARD storage); `cold` (IA storage). Default value: `hot`.
  * @method void setStorageType(string $StorageType) Set Log topic storage type. Valid values: `hot` (STANDARD storage); `cold` (IA storage). Default value: `hot`.
- * @method integer getPeriod() Obtain Lifecycle in days. Value range: 1–3600 (STANDARD storage); 7–3600 (IA storage). `3640` indicates permanent retention.
- * @method void setPeriod(integer $Period) Set Lifecycle in days. Value range: 1–3600 (STANDARD storage); 7–3600 (IA storage). `3640` indicates permanent retention.
+ * @method integer getPeriod() Obtain lifetime. Unit: days. Standard storage value range: 1~3600. Infrequent storage value range: 7~3600 days. A value of 3640 indicates permanent retention.If this value is not input, it defaults to the Period value of the log set corresponding to the accessed log topic (defaults to 30 days in case of access failure).
+ * @method void setPeriod(integer $Period) Set lifetime. Unit: days. Standard storage value range: 1~3600. Infrequent storage value range: 7~3600 days. A value of 3640 indicates permanent retention.If this value is not input, it defaults to the Period value of the log set corresponding to the accessed log topic (defaults to 30 days in case of access failure).
  * @method string getDescribes() Obtain Log topic description
  * @method void setDescribes(string $Describes) Set Log topic description
- * @method integer getHotPeriod() Obtain `0`: Disable log transitioning.
-A value other than `0`: The number of STANDARD storage days after log transitioning is enabled (valid only if `StorageType` is `hot`). Note: `HotPeriod` should be greater than or equal to `7` and less than `Period`.
- * @method void setHotPeriod(integer $HotPeriod) Set `0`: Disable log transitioning.
-A value other than `0`: The number of STANDARD storage days after log transitioning is enabled (valid only if `StorageType` is `hot`). Note: `HotPeriod` should be greater than or equal to `7` and less than `Period`.
- * @method boolean getIsWebTracking() Obtain Whether to enable web tracking. Valid values: `false` (disable); `true` (enable)
- * @method void setIsWebTracking(boolean $IsWebTracking) Set Whether to enable web tracking. Valid values: `false` (disable); `true` (enable)
+ * @method integer getHotPeriod() Obtain 0: Disable log settlement.Non-zero: The number of Standard Storage days after enabling log settlement. HotPeriod needs to be greater than or equal to 7, and less than Period.Effective only when StorageType is hot.
+ * @method void setHotPeriod(integer $HotPeriod) Set 0: Disable log settlement.Non-zero: The number of Standard Storage days after enabling log settlement. HotPeriod needs to be greater than or equal to 7, and less than Period.Effective only when StorageType is hot.
+ * @method boolean getIsWebTracking() Obtain Authentication switch. false: off; true: on. Default is false.Once enabled, it will support specified operations for anonymous access to this log topic. For details, please see [log Topic](https://intl.cloud.tencent.com/document/product/614/41035?from_cn_redirect=1).
+ * @method void setIsWebTracking(boolean $IsWebTracking) Set Authentication switch. false: off; true: on. Default is false.Once enabled, it will support specified operations for anonymous access to this log topic. For details, please see [log Topic](https://intl.cloud.tencent.com/document/product/614/41035?from_cn_redirect=1).
  */
 class CreateTopicRequest extends AbstractModel
 {
@@ -83,7 +81,7 @@ class CreateTopicRequest extends AbstractModel
     public $StorageType;
 
     /**
-     * @var integer Lifecycle in days. Value range: 1–3600 (STANDARD storage); 7–3600 (IA storage). `3640` indicates permanent retention.
+     * @var integer lifetime. Unit: days. Standard storage value range: 1~3600. Infrequent storage value range: 7~3600 days. A value of 3640 indicates permanent retention.If this value is not input, it defaults to the Period value of the log set corresponding to the accessed log topic (defaults to 30 days in case of access failure).
      */
     public $Period;
 
@@ -93,13 +91,12 @@ class CreateTopicRequest extends AbstractModel
     public $Describes;
 
     /**
-     * @var integer `0`: Disable log transitioning.
-A value other than `0`: The number of STANDARD storage days after log transitioning is enabled (valid only if `StorageType` is `hot`). Note: `HotPeriod` should be greater than or equal to `7` and less than `Period`.
+     * @var integer 0: Disable log settlement.Non-zero: The number of Standard Storage days after enabling log settlement. HotPeriod needs to be greater than or equal to 7, and less than Period.Effective only when StorageType is hot.
      */
     public $HotPeriod;
 
     /**
-     * @var boolean Whether to enable web tracking. Valid values: `false` (disable); `true` (enable)
+     * @var boolean Authentication switch. false: off; true: on. Default is false.Once enabled, it will support specified operations for anonymous access to this log topic. For details, please see [log Topic](https://intl.cloud.tencent.com/document/product/614/41035?from_cn_redirect=1).
      */
     public $IsWebTracking;
 
@@ -111,11 +108,10 @@ A value other than `0`: The number of STANDARD storage days after log transition
      * @param boolean $AutoSplit Whether to enable automatic split. Default value: true
      * @param integer $MaxSplitPartitions Maximum number of partitions to split into for this topic if automatic split is enabled. Default value: 50
      * @param string $StorageType Log topic storage type. Valid values: `hot` (STANDARD storage); `cold` (IA storage). Default value: `hot`.
-     * @param integer $Period Lifecycle in days. Value range: 1–3600 (STANDARD storage); 7–3600 (IA storage). `3640` indicates permanent retention.
+     * @param integer $Period lifetime. Unit: days. Standard storage value range: 1~3600. Infrequent storage value range: 7~3600 days. A value of 3640 indicates permanent retention.If this value is not input, it defaults to the Period value of the log set corresponding to the accessed log topic (defaults to 30 days in case of access failure).
      * @param string $Describes Log topic description
-     * @param integer $HotPeriod `0`: Disable log transitioning.
-A value other than `0`: The number of STANDARD storage days after log transitioning is enabled (valid only if `StorageType` is `hot`). Note: `HotPeriod` should be greater than or equal to `7` and less than `Period`.
-     * @param boolean $IsWebTracking Whether to enable web tracking. Valid values: `false` (disable); `true` (enable)
+     * @param integer $HotPeriod 0: Disable log settlement.Non-zero: The number of Standard Storage days after enabling log settlement. HotPeriod needs to be greater than or equal to 7, and less than Period.Effective only when StorageType is hot.
+     * @param boolean $IsWebTracking Authentication switch. false: off; true: on. Default is false.Once enabled, it will support specified operations for anonymous access to this log topic. For details, please see [log Topic](https://intl.cloud.tencent.com/document/product/614/41035?from_cn_redirect=1).
      */
     function __construct()
     {

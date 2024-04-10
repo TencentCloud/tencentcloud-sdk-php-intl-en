@@ -26,18 +26,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLogsetId(string $LogsetId) Set ID of the logset.
  * @method string getName() Obtain Shipping task name.
  * @method void setName(string $Name) Set Shipping task name.
- * @method string getBucket() Obtain COS bucket.
- * @method void setBucket(string $Bucket) Set COS bucket.
- * @method string getBucketRegion() Obtain Region where the COS bucket is located.
- * @method void setBucketRegion(string $BucketRegion) Set Region where the COS bucket is located.
+ * @method string getBucket() Obtain COS bucket, see the supported [bucket naming conventions](https://intl.cloud.tencent.com/document/product/436/13312?from_cn_redirect=1).
+ * @method void setBucket(string $Bucket) Set COS bucket, see the supported [bucket naming conventions](https://intl.cloud.tencent.com/document/product/436/13312?from_cn_redirect=1).
+ * @method string getBucketRegion() Obtain The region where the COS bucket is located, see the supported [region list](https://intl.cloud.tencent.com/document/product/436/6224?from_cn_redirect=1).
+ * @method void setBucketRegion(string $BucketRegion) Set The region where the COS bucket is located, see the supported [region list](https://intl.cloud.tencent.com/document/product/436/6224?from_cn_redirect=1).
  * @method string getPrefix() Obtain The prefix of the folder where COS files are located.
  * @method void setPrefix(string $Prefix) Set The prefix of the folder where COS files are located.
  * @method string getLogType() Obtain The type of log collected. `json_log`: JSON logs; `delimiter_log`: separator logs; `minimalist_log`: full text in a single line
 Default value: `minimalist_log`
  * @method void setLogType(string $LogType) Set The type of log collected. `json_log`: JSON logs; `delimiter_log`: separator logs; `minimalist_log`: full text in a single line
 Default value: `minimalist_log`
- * @method string getCompress() Obtain Valid values: "" (default), "gzip", "lzop", "snappy"
- * @method void setCompress(string $Compress) Set Valid values: "" (default), "gzip", "lzop", "snappy"
+ * @method string getCompress() Obtain Valid values: supported: "", "gzip", "lzop", "snappy"; Default value: "".
+ * @method void setCompress(string $Compress) Set Valid values: supported: "", "gzip", "lzop", "snappy"; Default value: "".
  * @method ExtractRuleInfo getExtractRuleInfo() Obtain Extraction rule. If `ExtractRule` is set, `LogType` must be set.
  * @method void setExtractRuleInfo(ExtractRuleInfo $ExtractRuleInfo) Set Extraction rule. If `ExtractRule` is set, `LogType` must be set.
  */
@@ -59,12 +59,12 @@ class CreateCosRechargeRequest extends AbstractModel
     public $Name;
 
     /**
-     * @var string COS bucket.
+     * @var string COS bucket, see the supported [bucket naming conventions](https://intl.cloud.tencent.com/document/product/436/13312?from_cn_redirect=1).
      */
     public $Bucket;
 
     /**
-     * @var string Region where the COS bucket is located.
+     * @var string The region where the COS bucket is located, see the supported [region list](https://intl.cloud.tencent.com/document/product/436/6224?from_cn_redirect=1).
      */
     public $BucketRegion;
 
@@ -80,7 +80,7 @@ Default value: `minimalist_log`
     public $LogType;
 
     /**
-     * @var string Valid values: "" (default), "gzip", "lzop", "snappy"
+     * @var string Valid values: supported: "", "gzip", "lzop", "snappy"; Default value: "".
      */
     public $Compress;
 
@@ -93,12 +93,12 @@ Default value: `minimalist_log`
      * @param string $TopicId ID of the log topic.
      * @param string $LogsetId ID of the logset.
      * @param string $Name Shipping task name.
-     * @param string $Bucket COS bucket.
-     * @param string $BucketRegion Region where the COS bucket is located.
+     * @param string $Bucket COS bucket, see the supported [bucket naming conventions](https://intl.cloud.tencent.com/document/product/436/13312?from_cn_redirect=1).
+     * @param string $BucketRegion The region where the COS bucket is located, see the supported [region list](https://intl.cloud.tencent.com/document/product/436/6224?from_cn_redirect=1).
      * @param string $Prefix The prefix of the folder where COS files are located.
      * @param string $LogType The type of log collected. `json_log`: JSON logs; `delimiter_log`: separator logs; `minimalist_log`: full text in a single line
 Default value: `minimalist_log`
-     * @param string $Compress Valid values: "" (default), "gzip", "lzop", "snappy"
+     * @param string $Compress Valid values: supported: "", "gzip", "lzop", "snappy"; Default value: "".
      * @param ExtractRuleInfo $ExtractRuleInfo Extraction rule. If `ExtractRule` is set, `LogType` must be set.
      */
     function __construct()

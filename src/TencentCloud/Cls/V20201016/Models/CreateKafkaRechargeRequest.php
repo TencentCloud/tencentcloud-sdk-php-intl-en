@@ -30,18 +30,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUserKafkaTopics(string $UserKafkaTopics) Set List of Kafka topics to import data from. Separate multiple topics with commas (,).
  * @method integer getOffset() Obtain Position for data import. Valid values: -2 (earliest, default) and -1 (latest).
  * @method void setOffset(integer $Offset) Set Position for data import. Valid values: -2 (earliest, default) and -1 (latest).
+ * @method LogRechargeRuleInfo getLogRechargeRule() Obtain Log Import Rules.
+ * @method void setLogRechargeRule(LogRechargeRuleInfo $LogRechargeRule) Set Log Import Rules.
  * @method string getKafkaInstance() Obtain CKafka instance ID, which is required when `KafkaType` is set to `0`
  * @method void setKafkaInstance(string $KafkaInstance) Set CKafka instance ID, which is required when `KafkaType` is set to `0`
  * @method string getServerAddr() Obtain Service address, which is required when `KafkaType` is set to `1`
  * @method void setServerAddr(string $ServerAddr) Set Service address, which is required when `KafkaType` is set to `1`
  * @method boolean getIsEncryptionAddr() Obtain Whether the service address uses an encrypted connection, which is required when `KafkaType` is set to `1`
  * @method void setIsEncryptionAddr(boolean $IsEncryptionAddr) Set Whether the service address uses an encrypted connection, which is required when `KafkaType` is set to `1`
- * @method KafkaProtocolInfo getProtocol() Obtain Encryption access protocol, which is required when `IsEncryptionAddr` is set to `true`
- * @method void setProtocol(KafkaProtocolInfo $Protocol) Set Encryption access protocol, which is required when `IsEncryptionAddr` is set to `true`
+ * @method KafkaProtocolInfo getProtocol() Obtain Encrypted Access ProtocolWhen KafkaType is 1 and IsEncryptionAddr is true, Protocol is required
+ * @method void setProtocol(KafkaProtocolInfo $Protocol) Set Encrypted Access ProtocolWhen KafkaType is 1 and IsEncryptionAddr is true, Protocol is required
  * @method string getConsumerGroupName() Obtain Kafka consumer group name
  * @method void setConsumerGroupName(string $ConsumerGroupName) Set Kafka consumer group name
- * @method LogRechargeRuleInfo getLogRechargeRule() Obtain Log import rule
- * @method void setLogRechargeRule(LogRechargeRuleInfo $LogRechargeRule) Set Log import rule
  */
 class CreateKafkaRechargeRequest extends AbstractModel
 {
@@ -71,6 +71,11 @@ class CreateKafkaRechargeRequest extends AbstractModel
     public $Offset;
 
     /**
+     * @var LogRechargeRuleInfo Log Import Rules.
+     */
+    public $LogRechargeRule;
+
+    /**
      * @var string CKafka instance ID, which is required when `KafkaType` is set to `0`
      */
     public $KafkaInstance;
@@ -86,7 +91,7 @@ class CreateKafkaRechargeRequest extends AbstractModel
     public $IsEncryptionAddr;
 
     /**
-     * @var KafkaProtocolInfo Encryption access protocol, which is required when `IsEncryptionAddr` is set to `true`
+     * @var KafkaProtocolInfo Encrypted Access ProtocolWhen KafkaType is 1 and IsEncryptionAddr is true, Protocol is required
      */
     public $Protocol;
 
@@ -96,22 +101,17 @@ class CreateKafkaRechargeRequest extends AbstractModel
     public $ConsumerGroupName;
 
     /**
-     * @var LogRechargeRuleInfo Log import rule
-     */
-    public $LogRechargeRule;
-
-    /**
      * @param string $TopicId Target topic ID
      * @param string $Name Kafka data import configuration name
      * @param integer $KafkaType Kafka type. Valid values: 0 (Tencent Cloud CKafka) and 1 (customer's Kafka).
      * @param string $UserKafkaTopics List of Kafka topics to import data from. Separate multiple topics with commas (,).
      * @param integer $Offset Position for data import. Valid values: -2 (earliest, default) and -1 (latest).
+     * @param LogRechargeRuleInfo $LogRechargeRule Log Import Rules.
      * @param string $KafkaInstance CKafka instance ID, which is required when `KafkaType` is set to `0`
      * @param string $ServerAddr Service address, which is required when `KafkaType` is set to `1`
      * @param boolean $IsEncryptionAddr Whether the service address uses an encrypted connection, which is required when `KafkaType` is set to `1`
-     * @param KafkaProtocolInfo $Protocol Encryption access protocol, which is required when `IsEncryptionAddr` is set to `true`
+     * @param KafkaProtocolInfo $Protocol Encrypted Access ProtocolWhen KafkaType is 1 and IsEncryptionAddr is true, Protocol is required
      * @param string $ConsumerGroupName Kafka consumer group name
-     * @param LogRechargeRuleInfo $LogRechargeRule Log import rule
      */
     function __construct()
     {
@@ -146,6 +146,11 @@ class CreateKafkaRechargeRequest extends AbstractModel
             $this->Offset = $param["Offset"];
         }
 
+        if (array_key_exists("LogRechargeRule",$param) and $param["LogRechargeRule"] !== null) {
+            $this->LogRechargeRule = new LogRechargeRuleInfo();
+            $this->LogRechargeRule->deserialize($param["LogRechargeRule"]);
+        }
+
         if (array_key_exists("KafkaInstance",$param) and $param["KafkaInstance"] !== null) {
             $this->KafkaInstance = $param["KafkaInstance"];
         }
@@ -165,11 +170,6 @@ class CreateKafkaRechargeRequest extends AbstractModel
 
         if (array_key_exists("ConsumerGroupName",$param) and $param["ConsumerGroupName"] !== null) {
             $this->ConsumerGroupName = $param["ConsumerGroupName"];
-        }
-
-        if (array_key_exists("LogRechargeRule",$param) and $param["LogRechargeRule"] !== null) {
-            $this->LogRechargeRule = new LogRechargeRuleInfo();
-            $this->LogRechargeRule->deserialize($param["LogRechargeRule"]);
         }
     }
 }

@@ -44,6 +44,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setIndexStatus(string $IndexStatus) Set The cause of index creation exception (this parameter has a value only when an exception occurred while creating indexes for logs).
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method array getHighLights() Obtain Highlighted description of log contentNote: This field may return null, indicating that no valid values can be obtained.
+ * @method void setHighLights(array $HighLights) Set Highlighted description of log contentNote: This field may return null, indicating that no valid values can be obtained.
  */
 class LogContextInfo extends AbstractModel
 {
@@ -96,6 +98,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $IndexStatus;
 
     /**
+     * @var array Highlighted description of log contentNote: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $HighLights;
+
+    /**
      * @param string $Source Log source device
      * @param string $Filename Collection path
      * @param string $Content Log content
@@ -108,6 +115,7 @@ Note: This field may return `null`, indicating that no valid value was found.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $IndexStatus The cause of index creation exception (this parameter has a value only when an exception occurred while creating indexes for logs).
 Note: This field may return null, indicating that no valid values can be obtained.
+     * @param array $HighLights Highlighted description of log contentNote: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -156,6 +164,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("IndexStatus",$param) and $param["IndexStatus"] !== null) {
             $this->IndexStatus = $param["IndexStatus"];
+        }
+
+        if (array_key_exists("HighLights",$param) and $param["HighLights"] !== null) {
+            $this->HighLights = [];
+            foreach ($param["HighLights"] as $key => $value){
+                $obj = new HighLightItem();
+                $obj->deserialize($value);
+                array_push($this->HighLights, $obj);
+            }
         }
     }
 }

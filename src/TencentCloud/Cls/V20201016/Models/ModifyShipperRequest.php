@@ -44,6 +44,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setContent(ContentInfo $Content) Set Format configuration of shipped log content
  * @method integer getFilenameMode() Obtain Naming a shipping file. Valid values: `0` (by random number), `1` (by shipping time). Default value: `0`.
  * @method void setFilenameMode(integer $FilenameMode) Set Naming a shipping file. Valid values: `0` (by random number), `1` (by shipping time). Default value: `0`.
+ * @method string getStorageType() Obtain COS Bucket Type
+ * @method void setStorageType(string $StorageType) Set COS Bucket Type
  */
 class ModifyShipperRequest extends AbstractModel
 {
@@ -108,6 +110,11 @@ class ModifyShipperRequest extends AbstractModel
     public $FilenameMode;
 
     /**
+     * @var string COS Bucket Type
+     */
+    public $StorageType;
+
+    /**
      * @param string $ShipperId Shipping rule ID
      * @param string $Bucket New destination bucket in shipping rule
      * @param string $Prefix New destination directory prefix in shipping rule
@@ -120,6 +127,7 @@ class ModifyShipperRequest extends AbstractModel
      * @param CompressInfo $Compress Compression configuration of shipped log
      * @param ContentInfo $Content Format configuration of shipped log content
      * @param integer $FilenameMode Naming a shipping file. Valid values: `0` (by random number), `1` (by shipping time). Default value: `0`.
+     * @param string $StorageType COS Bucket Type
      */
     function __construct()
     {
@@ -187,6 +195,10 @@ class ModifyShipperRequest extends AbstractModel
 
         if (array_key_exists("FilenameMode",$param) and $param["FilenameMode"] !== null) {
             $this->FilenameMode = $param["FilenameMode"];
+        }
+
+        if (array_key_exists("StorageType",$param) and $param["StorageType"] !== null) {
+            $this->StorageType = $param["StorageType"];
         }
     }
 }

@@ -18,30 +18,26 @@ namespace TencentCloud\Cls\V20201016\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Log topic information
+ * Basic Topic Information
  *
  * @method string getLogsetId() Obtain Logset ID
  * @method void setLogsetId(string $LogsetId) Set Logset ID
- * @method string getTopicId() Obtain Log topic ID
- * @method void setTopicId(string $TopicId) Set Log topic ID
- * @method string getTopicName() Obtain Log topic name
- * @method void setTopicName(string $TopicName) Set Log topic name
+ * @method string getTopicId() Obtain  Topic ID
+ * @method void setTopicId(string $TopicId) Set  Topic ID
+ * @method string getTopicName() Obtain Topic Name
+ * @method void setTopicName(string $TopicName) Set Topic Name
  * @method integer getPartitionCount() Obtain Number of topic partitions
  * @method void setPartitionCount(integer $PartitionCount) Set Number of topic partitions
- * @method boolean getIndex() Obtain Whether index is enabled
- * @method void setIndex(boolean $Index) Set Whether index is enabled
- * @method string getAssumerName() Obtain Cloud product identifier. If the log topic is created by another cloud product, this field returns the name of the cloud product, such as `CDN` or `TKE`.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setAssumerName(string $AssumerName) Set Cloud product identifier. If the log topic is created by another cloud product, this field returns the name of the cloud product, such as `CDN` or `TKE`.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method boolean getIndex() Obtain Whether the topic has indexing enabled (the topic type must be log topic)
+ * @method void setIndex(boolean $Index) Set Whether the topic has indexing enabled (the topic type must be log topic)
+ * @method string getAssumerName() Obtain Cloud product identifier. When the topic is created by other cloud products, this field displays the name of the cloud product, such as CDN, TKE.Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setAssumerName(string $AssumerName) Set Cloud product identifier. When the topic is created by other cloud products, this field displays the name of the cloud product, such as CDN, TKE.Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getCreateTime() Obtain Creation time
  * @method void setCreateTime(string $CreateTime) Set Creation time
- * @method boolean getStatus() Obtain Whether collection is enabled in the log topic
- * @method void setStatus(boolean $Status) Set Whether collection is enabled in the log topic
- * @method array getTags() Obtain Information of tags bound to log topic
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setTags(array $Tags) Set Information of tags bound to log topic
-Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method boolean getStatus() Obtain Whether the topic has log collection enabled. true: collection enabled; false: collection disabled.Log collection is enabled by default when creating a log topic, and this field can be modified by calling ModifyTopic through the SDK.The console currently does not support modifying this parameter.
+ * @method void setStatus(boolean $Status) Set Whether the topic has log collection enabled. true: collection enabled; false: collection disabled.Log collection is enabled by default when creating a log topic, and this field can be modified by calling ModifyTopic through the SDK.The console currently does not support modifying this parameter.
+ * @method array getTags() Obtain Tag information bound to the topicNote: This field may return null, indicating that no valid values can be obtained.
+ * @method void setTags(array $Tags) Set Tag information bound to the topicNote: This field may return null, indicating that no valid values can be obtained.
  * @method boolean getAutoSplit() Obtain Whether automatic split is enabled for this topic
 Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method void setAutoSplit(boolean $AutoSplit) Set Whether automatic split is enabled for this topic
@@ -50,10 +46,8 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method void setMaxSplitPartitions(integer $MaxSplitPartitions) Set Maximum number of partitions to split into for this topic if automatic split is enabled
 Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method string getStorageType() Obtain Log topic storage class
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setStorageType(string $StorageType) Set Log topic storage class
-Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method string getStorageType() Obtain Storage type of the topicNote: This field may return null, indicating that no valid values can be obtained.
+ * @method void setStorageType(string $StorageType) Set Storage type of the topicNote: This field may return null, indicating that no valid values can be obtained.
  * @method integer getPeriod() Obtain Lifecycle in days. Value range: 1-3600 (3640 indicates permanent retention)
 Note: This field may return `null`, indicating that no valid value was found.
  * @method void setPeriod(integer $Period) Set Lifecycle in days. Value range: 1-3600 (3640 indicates permanent retention)
@@ -62,16 +56,24 @@ Note: This field may return `null`, indicating that no valid value was found.
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setSubAssumerName(string $SubAssumerName) Set Cloud product sub-identifier. If the log topic is created by another cloud product, this field returns the name of the cloud product and its log type, such as `TKE-Audit` or `TKE-Event`. Some products only return the cloud product identifier (`AssumerName`), without this field.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getDescribes() Obtain Log topic description
+ * @method string getDescribes() Obtain Topic description
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setDescribes(string $Describes) Set Log topic description
+ * @method void setDescribes(string $Describes) Set Topic description
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getHotPeriod() Obtain The lifecycle of hot storage when log transitioning is enabled. The value of `hotPeriod` is smaller than that of `Period`.
-The hot storage period is the value of `hotPeriod`, and the cold storage period is the value of `Period` minus the value of `hotPeriod`.
+ * @method integer getHotPeriod() Obtain Enable log sinking, with the lifecycle of standard storage, where hotPeriod < Period.For standard storage, hotPeriod is used, and for infrequent access storage, it is Period-hotPeriod. (The topic type must be a log topic)HotPeriod=0 indicates that log sinking is not enabled.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setHotPeriod(integer $HotPeriod) Set The lifecycle of hot storage when log transitioning is enabled. The value of `hotPeriod` is smaller than that of `Period`.
-The hot storage period is the value of `hotPeriod`, and the cold storage period is the value of `Period` minus the value of `hotPeriod`.
+ * @method void setHotPeriod(integer $HotPeriod) Set Enable log sinking, with the lifecycle of standard storage, where hotPeriod < Period.For standard storage, hotPeriod is used, and for infrequent access storage, it is Period-hotPeriod. (The topic type must be a log topic)HotPeriod=0 indicates that log sinking is not enabled.
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getBizType() Obtain Topic type.
+- 0:  log  Topic  
+- 1: Metric Topic
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setBizType(integer $BizType) Set Topic type.
+- 0:  log  Topic  
+- 1: Metric Topic
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method boolean getIsWebTracking() Obtain Free authentication switch. false: disabled; true: enabled.After enabling, anonymous access to the log topic will be supported for specified operations. For details, please refer to Log Topic (https://intl.cloud.tencent.com/document/product/614/41035?from_cn_redirect=1).Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setIsWebTracking(boolean $IsWebTracking) Set Free authentication switch. false: disabled; true: enabled.After enabling, anonymous access to the log topic will be supported for specified operations. For details, please refer to Log Topic (https://intl.cloud.tencent.com/document/product/614/41035?from_cn_redirect=1).Note: This field may return null, indicating that no valid values can be obtained.
  */
 class TopicInfo extends AbstractModel
 {
@@ -81,12 +83,12 @@ class TopicInfo extends AbstractModel
     public $LogsetId;
 
     /**
-     * @var string Log topic ID
+     * @var string  Topic ID
      */
     public $TopicId;
 
     /**
-     * @var string Log topic name
+     * @var string Topic Name
      */
     public $TopicName;
 
@@ -96,13 +98,12 @@ class TopicInfo extends AbstractModel
     public $PartitionCount;
 
     /**
-     * @var boolean Whether index is enabled
+     * @var boolean Whether the topic has indexing enabled (the topic type must be log topic)
      */
     public $Index;
 
     /**
-     * @var string Cloud product identifier. If the log topic is created by another cloud product, this field returns the name of the cloud product, such as `CDN` or `TKE`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Cloud product identifier. When the topic is created by other cloud products, this field displays the name of the cloud product, such as CDN, TKE.Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $AssumerName;
 
@@ -112,13 +113,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $CreateTime;
 
     /**
-     * @var boolean Whether collection is enabled in the log topic
+     * @var boolean Whether the topic has log collection enabled. true: collection enabled; false: collection disabled.Log collection is enabled by default when creating a log topic, and this field can be modified by calling ModifyTopic through the SDK.The console currently does not support modifying this parameter.
      */
     public $Status;
 
     /**
-     * @var array Information of tags bound to log topic
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @var array Tag information bound to the topicNote: This field may return null, indicating that no valid values can be obtained.
      */
     public $Tags;
 
@@ -135,8 +135,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     public $MaxSplitPartitions;
 
     /**
-     * @var string Log topic storage class
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @var string Storage type of the topicNote: This field may return null, indicating that no valid values can be obtained.
      */
     public $StorageType;
 
@@ -153,45 +152,58 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $SubAssumerName;
 
     /**
-     * @var string Log topic description
+     * @var string Topic description
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Describes;
 
     /**
-     * @var integer The lifecycle of hot storage when log transitioning is enabled. The value of `hotPeriod` is smaller than that of `Period`.
-The hot storage period is the value of `hotPeriod`, and the cold storage period is the value of `Period` minus the value of `hotPeriod`.
+     * @var integer Enable log sinking, with the lifecycle of standard storage, where hotPeriod < Period.For standard storage, hotPeriod is used, and for infrequent access storage, it is Period-hotPeriod. (The topic type must be a log topic)HotPeriod=0 indicates that log sinking is not enabled.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $HotPeriod;
 
     /**
-     * @param string $LogsetId Logset ID
-     * @param string $TopicId Log topic ID
-     * @param string $TopicName Log topic name
-     * @param integer $PartitionCount Number of topic partitions
-     * @param boolean $Index Whether index is enabled
-     * @param string $AssumerName Cloud product identifier. If the log topic is created by another cloud product, this field returns the name of the cloud product, such as `CDN` or `TKE`.
+     * @var integer Topic type.
+- 0:  log  Topic  
+- 1: Metric Topic
 Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $BizType;
+
+    /**
+     * @var boolean Free authentication switch. false: disabled; true: enabled.After enabling, anonymous access to the log topic will be supported for specified operations. For details, please refer to Log Topic (https://intl.cloud.tencent.com/document/product/614/41035?from_cn_redirect=1).Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $IsWebTracking;
+
+    /**
+     * @param string $LogsetId Logset ID
+     * @param string $TopicId  Topic ID
+     * @param string $TopicName Topic Name
+     * @param integer $PartitionCount Number of topic partitions
+     * @param boolean $Index Whether the topic has indexing enabled (the topic type must be log topic)
+     * @param string $AssumerName Cloud product identifier. When the topic is created by other cloud products, this field displays the name of the cloud product, such as CDN, TKE.Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $CreateTime Creation time
-     * @param boolean $Status Whether collection is enabled in the log topic
-     * @param array $Tags Information of tags bound to log topic
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param boolean $Status Whether the topic has log collection enabled. true: collection enabled; false: collection disabled.Log collection is enabled by default when creating a log topic, and this field can be modified by calling ModifyTopic through the SDK.The console currently does not support modifying this parameter.
+     * @param array $Tags Tag information bound to the topicNote: This field may return null, indicating that no valid values can be obtained.
      * @param boolean $AutoSplit Whether automatic split is enabled for this topic
 Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param integer $MaxSplitPartitions Maximum number of partitions to split into for this topic if automatic split is enabled
 Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param string $StorageType Log topic storage class
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param string $StorageType Storage type of the topicNote: This field may return null, indicating that no valid values can be obtained.
      * @param integer $Period Lifecycle in days. Value range: 1-3600 (3640 indicates permanent retention)
 Note: This field may return `null`, indicating that no valid value was found.
      * @param string $SubAssumerName Cloud product sub-identifier. If the log topic is created by another cloud product, this field returns the name of the cloud product and its log type, such as `TKE-Audit` or `TKE-Event`. Some products only return the cloud product identifier (`AssumerName`), without this field.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Describes Log topic description
+     * @param string $Describes Topic description
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $HotPeriod The lifecycle of hot storage when log transitioning is enabled. The value of `hotPeriod` is smaller than that of `Period`.
-The hot storage period is the value of `hotPeriod`, and the cold storage period is the value of `Period` minus the value of `hotPeriod`.
+     * @param integer $HotPeriod Enable log sinking, with the lifecycle of standard storage, where hotPeriod < Period.For standard storage, hotPeriod is used, and for infrequent access storage, it is Period-hotPeriod. (The topic type must be a log topic)HotPeriod=0 indicates that log sinking is not enabled.
 Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $BizType Topic type.
+- 0:  log  Topic  
+- 1: Metric Topic
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param boolean $IsWebTracking Free authentication switch. false: disabled; true: enabled.After enabling, anonymous access to the log topic will be supported for specified operations. For details, please refer to Log Topic (https://intl.cloud.tencent.com/document/product/614/41035?from_cn_redirect=1).Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -273,6 +285,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("HotPeriod",$param) and $param["HotPeriod"] !== null) {
             $this->HotPeriod = $param["HotPeriod"];
+        }
+
+        if (array_key_exists("BizType",$param) and $param["BizType"] !== null) {
+            $this->BizType = $param["BizType"];
+        }
+
+        if (array_key_exists("IsWebTracking",$param) and $param["IsWebTracking"] !== null) {
+            $this->IsWebTracking = $param["IsWebTracking"];
         }
     }
 }

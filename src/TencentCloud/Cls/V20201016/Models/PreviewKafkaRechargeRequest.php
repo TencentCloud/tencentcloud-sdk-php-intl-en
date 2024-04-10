@@ -24,18 +24,22 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPreviewType(integer $PreviewType) Set Preview type. Valid values: 1 (source data preview) and 2 (result preview).
  * @method integer getKafkaType() Obtain Kafka type. Valid values: 0 (Tencent Cloud CKafka) and 1 (customer's Kafka)
  * @method void setKafkaType(integer $KafkaType) Set Kafka type. Valid values: 0 (Tencent Cloud CKafka) and 1 (customer's Kafka)
- * @method string getUserKafkaTopics() Obtain List of Kafka topics to import data from. Separate multiple topics with commas (,).
- * @method void setUserKafkaTopics(string $UserKafkaTopics) Set List of Kafka topics to import data from. Separate multiple topics with commas (,).
+ * @method string getUserKafkaTopics() Obtain List of Kafka-related topics that the user needs to import, separated by commas. Supports up to 100 topics.
+ * @method void setUserKafkaTopics(string $UserKafkaTopics) Set List of Kafka-related topics that the user needs to import, separated by commas. Supports up to 100 topics.
  * @method integer getOffset() Obtain Position for data import. Valid values: -2 (earliest, default) and -1 (latest).
  * @method void setOffset(integer $Offset) Set Position for data import. Valid values: -2 (earliest, default) and -1 (latest).
- * @method string getKafkaInstance() Obtain CKafka instance ID, which is required when `KafkaType` is set to `0`
- * @method void setKafkaInstance(string $KafkaInstance) Set CKafka instance ID, which is required when `KafkaType` is set to `0`
- * @method string getServerAddr() Obtain Service address
- * @method void setServerAddr(string $ServerAddr) Set Service address
- * @method boolean getIsEncryptionAddr() Obtain Whether the service address uses an encrypted connection
- * @method void setIsEncryptionAddr(boolean $IsEncryptionAddr) Set Whether the service address uses an encrypted connection
- * @method KafkaProtocolInfo getProtocol() Obtain Encryption access protocol, which is required when `IsEncryptionAddr` is set to `true`
- * @method void setProtocol(KafkaProtocolInfo $Protocol) Set Encryption access protocol, which is required when `IsEncryptionAddr` is set to `true`
+ * @method string getKafkaInstance() Obtain Tencent Cloud CKafka instance ID.
+KafkaInstance is required when KafkaType is 0
+ * @method void setKafkaInstance(string $KafkaInstance) Set Tencent Cloud CKafka instance ID.
+KafkaInstance is required when KafkaType is 0
+ * @method string getServerAddr() Obtain Service AddressServerAddr is required when KafkaType is 1
+ * @method void setServerAddr(string $ServerAddr) Set Service AddressServerAddr is required when KafkaType is 1
+ * @method boolean getIsEncryptionAddr() Obtain Whether ServerAddr is a secure connection.
+Valid when KafkaType is 1.
+ * @method void setIsEncryptionAddr(boolean $IsEncryptionAddr) Set Whether ServerAddr is a secure connection.
+Valid when KafkaType is 1.
+ * @method KafkaProtocolInfo getProtocol() Obtain Encrypted Access ProtocolWhen KafkaType is 1 and IsEncryptionAddr is true, Protocol is required
+ * @method void setProtocol(KafkaProtocolInfo $Protocol) Set Encrypted Access ProtocolWhen KafkaType is 1 and IsEncryptionAddr is true, Protocol is required
  * @method string getConsumerGroupName() Obtain Kafka consumer group name
  * @method void setConsumerGroupName(string $ConsumerGroupName) Set Kafka consumer group name
  * @method LogRechargeRuleInfo getLogRechargeRule() Obtain Log import rule
@@ -54,7 +58,7 @@ class PreviewKafkaRechargeRequest extends AbstractModel
     public $KafkaType;
 
     /**
-     * @var string List of Kafka topics to import data from. Separate multiple topics with commas (,).
+     * @var string List of Kafka-related topics that the user needs to import, separated by commas. Supports up to 100 topics.
      */
     public $UserKafkaTopics;
 
@@ -64,22 +68,24 @@ class PreviewKafkaRechargeRequest extends AbstractModel
     public $Offset;
 
     /**
-     * @var string CKafka instance ID, which is required when `KafkaType` is set to `0`
+     * @var string Tencent Cloud CKafka instance ID.
+KafkaInstance is required when KafkaType is 0
      */
     public $KafkaInstance;
 
     /**
-     * @var string Service address
+     * @var string Service AddressServerAddr is required when KafkaType is 1
      */
     public $ServerAddr;
 
     /**
-     * @var boolean Whether the service address uses an encrypted connection
+     * @var boolean Whether ServerAddr is a secure connection.
+Valid when KafkaType is 1.
      */
     public $IsEncryptionAddr;
 
     /**
-     * @var KafkaProtocolInfo Encryption access protocol, which is required when `IsEncryptionAddr` is set to `true`
+     * @var KafkaProtocolInfo Encrypted Access ProtocolWhen KafkaType is 1 and IsEncryptionAddr is true, Protocol is required
      */
     public $Protocol;
 
@@ -96,12 +102,14 @@ class PreviewKafkaRechargeRequest extends AbstractModel
     /**
      * @param integer $PreviewType Preview type. Valid values: 1 (source data preview) and 2 (result preview).
      * @param integer $KafkaType Kafka type. Valid values: 0 (Tencent Cloud CKafka) and 1 (customer's Kafka)
-     * @param string $UserKafkaTopics List of Kafka topics to import data from. Separate multiple topics with commas (,).
+     * @param string $UserKafkaTopics List of Kafka-related topics that the user needs to import, separated by commas. Supports up to 100 topics.
      * @param integer $Offset Position for data import. Valid values: -2 (earliest, default) and -1 (latest).
-     * @param string $KafkaInstance CKafka instance ID, which is required when `KafkaType` is set to `0`
-     * @param string $ServerAddr Service address
-     * @param boolean $IsEncryptionAddr Whether the service address uses an encrypted connection
-     * @param KafkaProtocolInfo $Protocol Encryption access protocol, which is required when `IsEncryptionAddr` is set to `true`
+     * @param string $KafkaInstance Tencent Cloud CKafka instance ID.
+KafkaInstance is required when KafkaType is 0
+     * @param string $ServerAddr Service AddressServerAddr is required when KafkaType is 1
+     * @param boolean $IsEncryptionAddr Whether ServerAddr is a secure connection.
+Valid when KafkaType is 1.
+     * @param KafkaProtocolInfo $Protocol Encrypted Access ProtocolWhen KafkaType is 1 and IsEncryptionAddr is true, Protocol is required
      * @param string $ConsumerGroupName Kafka consumer group name
      * @param LogRechargeRuleInfo $LogRechargeRule Log import rule
      */

@@ -32,9 +32,69 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setContent(string $Content) Set Analysis content
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method array getConfigInfo() Obtain Configuration
+ * @method array getConfigInfo() Obtain Multi-dimensional analysis configuration.
+
+Supported when the type field of Analysis is query (custom){
+"Key": "SyntaxRule", // Syntax rules"Value": "1" // 0: Lucene syntax, 1: CQL syntax}
+
+Supported when the Type field of Analysis is field (top5) {
+    "Key": "QueryIndex",
+"Value": "-1" // -1: Custom, 1: Execute Statement 1, 2: Execute Statement 2},{
+"Key": "CustomQuery", // Search statement. Valid and required when QueryIndex is -1    "Value": "* | select count(*) as count"
+},{
+"Key": "SyntaxRule", // If this field cannot be found, it's assumed to be the legacy syntax (Lucene)
+    "Value": "0"//0:Lucene, 1:CQL
+}       
+
+When the Type field of Analysis is original (original log), it supports
+{
+    "Key": "Fields",
+    "Value": "__SOURCE__,__HOSTNAME__,__TIMESTAMP__,__PKG_LOGID__,__TAG__.pod_ip"
+}, {
+    "Key": "QueryIndex",
+"Value": "-1" // -1: Custom, 1: Execute Statement 1, 2: Execute Statement 2},{
+"Key": "CustomQuery", // //Search statement. Valid and required when QueryIndex is -1    "Value": "* | select count(*) as count"
+},{
+"Key": "Format", // Display format. 1: One log per line, 2: One field per line for each log    "Value": "2"
+},
+{
+"Key": "Limit", // Maximum number of logs    "Value": "5"
+},{
+"Key": "SyntaxRule", // If this field cannot be found, it's considered the legacy syntax
+    "Value": "0"//0:Lucene, 1:CQL
+}
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setConfigInfo(array $ConfigInfo) Set Configuration
+ * @method void setConfigInfo(array $ConfigInfo) Set Multi-dimensional analysis configuration.
+
+Supported when the type field of Analysis is query (custom){
+"Key": "SyntaxRule", // Syntax rules"Value": "1" // 0: Lucene syntax, 1: CQL syntax}
+
+Supported when the Type field of Analysis is field (top5) {
+    "Key": "QueryIndex",
+"Value": "-1" // -1: Custom, 1: Execute Statement 1, 2: Execute Statement 2},{
+"Key": "CustomQuery", // Search statement. Valid and required when QueryIndex is -1    "Value": "* | select count(*) as count"
+},{
+"Key": "SyntaxRule", // If this field cannot be found, it's assumed to be the legacy syntax (Lucene)
+    "Value": "0"//0:Lucene, 1:CQL
+}       
+
+When the Type field of Analysis is original (original log), it supports
+{
+    "Key": "Fields",
+    "Value": "__SOURCE__,__HOSTNAME__,__TIMESTAMP__,__PKG_LOGID__,__TAG__.pod_ip"
+}, {
+    "Key": "QueryIndex",
+"Value": "-1" // -1: Custom, 1: Execute Statement 1, 2: Execute Statement 2},{
+"Key": "CustomQuery", // //Search statement. Valid and required when QueryIndex is -1    "Value": "* | select count(*) as count"
+},{
+"Key": "Format", // Display format. 1: One log per line, 2: One field per line for each log    "Value": "2"
+},
+{
+"Key": "Limit", // Maximum number of logs    "Value": "5"
+},{
+"Key": "SyntaxRule", // If this field cannot be found, it's considered the legacy syntax
+    "Value": "0"//0:Lucene, 1:CQL
+}
 Note: This field may return null, indicating that no valid values can be obtained.
  */
 class AnalysisDimensional extends AbstractModel
@@ -58,7 +118,37 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $Content;
 
     /**
-     * @var array Configuration
+     * @var array Multi-dimensional analysis configuration.
+
+Supported when the type field of Analysis is query (custom){
+"Key": "SyntaxRule", // Syntax rules"Value": "1" // 0: Lucene syntax, 1: CQL syntax}
+
+Supported when the Type field of Analysis is field (top5) {
+    "Key": "QueryIndex",
+"Value": "-1" // -1: Custom, 1: Execute Statement 1, 2: Execute Statement 2},{
+"Key": "CustomQuery", // Search statement. Valid and required when QueryIndex is -1    "Value": "* | select count(*) as count"
+},{
+"Key": "SyntaxRule", // If this field cannot be found, it's assumed to be the legacy syntax (Lucene)
+    "Value": "0"//0:Lucene, 1:CQL
+}       
+
+When the Type field of Analysis is original (original log), it supports
+{
+    "Key": "Fields",
+    "Value": "__SOURCE__,__HOSTNAME__,__TIMESTAMP__,__PKG_LOGID__,__TAG__.pod_ip"
+}, {
+    "Key": "QueryIndex",
+"Value": "-1" // -1: Custom, 1: Execute Statement 1, 2: Execute Statement 2},{
+"Key": "CustomQuery", // //Search statement. Valid and required when QueryIndex is -1    "Value": "* | select count(*) as count"
+},{
+"Key": "Format", // Display format. 1: One log per line, 2: One field per line for each log    "Value": "2"
+},
+{
+"Key": "Limit", // Maximum number of logs    "Value": "5"
+},{
+"Key": "SyntaxRule", // If this field cannot be found, it's considered the legacy syntax
+    "Value": "0"//0:Lucene, 1:CQL
+}
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ConfigInfo;
@@ -70,7 +160,37 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $Content Analysis content
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param array $ConfigInfo Configuration
+     * @param array $ConfigInfo Multi-dimensional analysis configuration.
+
+Supported when the type field of Analysis is query (custom){
+"Key": "SyntaxRule", // Syntax rules"Value": "1" // 0: Lucene syntax, 1: CQL syntax}
+
+Supported when the Type field of Analysis is field (top5) {
+    "Key": "QueryIndex",
+"Value": "-1" // -1: Custom, 1: Execute Statement 1, 2: Execute Statement 2},{
+"Key": "CustomQuery", // Search statement. Valid and required when QueryIndex is -1    "Value": "* | select count(*) as count"
+},{
+"Key": "SyntaxRule", // If this field cannot be found, it's assumed to be the legacy syntax (Lucene)
+    "Value": "0"//0:Lucene, 1:CQL
+}       
+
+When the Type field of Analysis is original (original log), it supports
+{
+    "Key": "Fields",
+    "Value": "__SOURCE__,__HOSTNAME__,__TIMESTAMP__,__PKG_LOGID__,__TAG__.pod_ip"
+}, {
+    "Key": "QueryIndex",
+"Value": "-1" // -1: Custom, 1: Execute Statement 1, 2: Execute Statement 2},{
+"Key": "CustomQuery", // //Search statement. Valid and required when QueryIndex is -1    "Value": "* | select count(*) as count"
+},{
+"Key": "Format", // Display format. 1: One log per line, 2: One field per line for each log    "Value": "2"
+},
+{
+"Key": "Limit", // Maximum number of logs    "Value": "5"
+},{
+"Key": "SyntaxRule", // If this field cannot be found, it's considered the legacy syntax
+    "Value": "0"//0:Lucene, 1:CQL
+}
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()

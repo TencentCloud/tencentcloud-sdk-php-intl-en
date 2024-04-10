@@ -18,25 +18,23 @@ namespace TencentCloud\Cls\V20201016\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Dynamic index configuration
-
-Note: This feature is currently in a beta test. To use it, please contact technical support.
+ * Key-value index auto-configuration enables automatic addition of fields from logs into the key-value index, including subsequently added fields in the logs.
  *
- * @method boolean getStatus() Obtain Dynamic index configuration status
+ * @method boolean getStatus() Obtain Key-Value Index Auto-Config Switch
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setStatus(boolean $Status) Set Dynamic index configuration status
+ * @method void setStatus(boolean $Status) Set Key-Value Index Auto-Config Switch
 Note: This field may return null, indicating that no valid values can be obtained.
  */
 class DynamicIndex extends AbstractModel
 {
     /**
-     * @var boolean Dynamic index configuration status
+     * @var boolean Key-Value Index Auto-Config Switch
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Status;
 
     /**
-     * @param boolean $Status Dynamic index configuration status
+     * @param boolean $Status Key-Value Index Auto-Config Switch
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()

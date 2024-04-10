@@ -21,41 +21,39 @@ use TencentCloud\Common\AbstractModel;
  * DescribeAlarmNotices request structure.
  *
  * @method array getFilters() Obtain <li> name
-Filter by **notification group name**.
-Type: String
-Required: No
+Filter by Notification Channel Group Name.Type: String
+Required: No</li>
 <li> alarmNoticeId
-Filter by **notification group ID**.
-Type: String
-Required: No
+Filter by Notification Channel Group ID.Type: String
+Required: No</li>
 <li> uid
-Filter by **recipient ID**.
-Type: String
-Required: No
+Filter by Receiving User ID.Type: String
+Required: No</li>
 <li> groupId
-Filter by **recipient ID**.
-Type: String
-Required: No
+Filter by Receiving User Group ID.Type: String
+Required: No</li>
 
-Each request can have up to 10 `Filters` and 5 `Filter.Values`.
+<li> deliverFlag
+Filter by Delivery Status.Type: String
+Required: No
+Optional Values: "1": Not Enabled, "2": Enabled, "3": Delivery Exception</li>The maximum number of Filters per request is 10, and the maximum for Filter.Values is 5.
  * @method void setFilters(array $Filters) Set <li> name
-Filter by **notification group name**.
-Type: String
-Required: No
+Filter by Notification Channel Group Name.Type: String
+Required: No</li>
 <li> alarmNoticeId
-Filter by **notification group ID**.
-Type: String
-Required: No
+Filter by Notification Channel Group ID.Type: String
+Required: No</li>
 <li> uid
-Filter by **recipient ID**.
-Type: String
-Required: No
+Filter by Receiving User ID.Type: String
+Required: No</li>
 <li> groupId
-Filter by **recipient ID**.
-Type: String
-Required: No
+Filter by Receiving User Group ID.Type: String
+Required: No</li>
 
-Each request can have up to 10 `Filters` and 5 `Filter.Values`.
+<li> deliverFlag
+Filter by Delivery Status.Type: String
+Required: No
+Optional Values: "1": Not Enabled, "2": Enabled, "3": Delivery Exception</li>The maximum number of Filters per request is 10, and the maximum for Filter.Values is 5.
  * @method integer getOffset() Obtain Page offset. Default value: 0
  * @method void setOffset(integer $Offset) Set Page offset. Default value: 0
  * @method integer getLimit() Obtain Maximum number of entries per page. Default value: 20. Maximum value: 100.
@@ -65,23 +63,22 @@ class DescribeAlarmNoticesRequest extends AbstractModel
 {
     /**
      * @var array <li> name
-Filter by **notification group name**.
-Type: String
-Required: No
+Filter by Notification Channel Group Name.Type: String
+Required: No</li>
 <li> alarmNoticeId
-Filter by **notification group ID**.
-Type: String
-Required: No
+Filter by Notification Channel Group ID.Type: String
+Required: No</li>
 <li> uid
-Filter by **recipient ID**.
-Type: String
-Required: No
+Filter by Receiving User ID.Type: String
+Required: No</li>
 <li> groupId
-Filter by **recipient ID**.
-Type: String
-Required: No
+Filter by Receiving User Group ID.Type: String
+Required: No</li>
 
-Each request can have up to 10 `Filters` and 5 `Filter.Values`.
+<li> deliverFlag
+Filter by Delivery Status.Type: String
+Required: No
+Optional Values: "1": Not Enabled, "2": Enabled, "3": Delivery Exception</li>The maximum number of Filters per request is 10, and the maximum for Filter.Values is 5.
      */
     public $Filters;
 
@@ -97,23 +94,22 @@ Each request can have up to 10 `Filters` and 5 `Filter.Values`.
 
     /**
      * @param array $Filters <li> name
-Filter by **notification group name**.
-Type: String
-Required: No
+Filter by Notification Channel Group Name.Type: String
+Required: No</li>
 <li> alarmNoticeId
-Filter by **notification group ID**.
-Type: String
-Required: No
+Filter by Notification Channel Group ID.Type: String
+Required: No</li>
 <li> uid
-Filter by **recipient ID**.
-Type: String
-Required: No
+Filter by Receiving User ID.Type: String
+Required: No</li>
 <li> groupId
-Filter by **recipient ID**.
-Type: String
-Required: No
+Filter by Receiving User Group ID.Type: String
+Required: No</li>
 
-Each request can have up to 10 `Filters` and 5 `Filter.Values`.
+<li> deliverFlag
+Filter by Delivery Status.Type: String
+Required: No
+Optional Values: "1": Not Enabled, "2": Enabled, "3": Delivery Exception</li>The maximum number of Filters per request is 10, and the maximum for Filter.Values is 5.
      * @param integer $Offset Page offset. Default value: 0
      * @param integer $Limit Maximum number of entries per page. Default value: 20. Maximum value: 100.
      */

@@ -42,10 +42,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFrom(integer $From) Set Log export start time
  * @method integer getTo() Obtain Log export end time
  * @method void setTo(integer $To) Set Log export end time
- * @method string getCosPath() Obtain Log export path
- * @method void setCosPath(string $CosPath) Set Log export path
+ * @method string getCosPath() Obtain Log export path, valid for one hour. Please download using this path as soon as possible.
+ * @method void setCosPath(string $CosPath) Set Log export path, valid for one hour. Please download using this path as soon as possible.
  * @method string getCreateTime() Obtain Log export creation time
  * @method void setCreateTime(string $CreateTime) Set Log export creation time
+ * @method integer getSyntaxRule() Obtain Syntax rules. The default value is 0.0: Lucene syntax, 1: CQL syntax.
+ * @method void setSyntaxRule(integer $SyntaxRule) Set Syntax rules. The default value is 0.0: Lucene syntax, 1: CQL syntax.
  */
 class ExportInfo extends AbstractModel
 {
@@ -105,7 +107,7 @@ class ExportInfo extends AbstractModel
     public $To;
 
     /**
-     * @var string Log export path
+     * @var string Log export path, valid for one hour. Please download using this path as soon as possible.
      */
     public $CosPath;
 
@@ -113,6 +115,11 @@ class ExportInfo extends AbstractModel
      * @var string Log export creation time
      */
     public $CreateTime;
+
+    /**
+     * @var integer Syntax rules. The default value is 0.0: Lucene syntax, 1: CQL syntax.
+     */
+    public $SyntaxRule;
 
     /**
      * @param string $TopicId Log topic ID
@@ -126,8 +133,9 @@ class ExportInfo extends AbstractModel
      * @param string $Status Log download status. Valid values: `Processing`, `Completed`, `Failed`, `Expired` (three-day validity period), and `Queuing`.
      * @param integer $From Log export start time
      * @param integer $To Log export end time
-     * @param string $CosPath Log export path
+     * @param string $CosPath Log export path, valid for one hour. Please download using this path as soon as possible.
      * @param string $CreateTime Log export creation time
+     * @param integer $SyntaxRule Syntax rules. The default value is 0.0: Lucene syntax, 1: CQL syntax.
      */
     function __construct()
     {
@@ -192,6 +200,10 @@ class ExportInfo extends AbstractModel
 
         if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
             $this->CreateTime = $param["CreateTime"];
+        }
+
+        if (array_key_exists("SyntaxRule",$param) and $param["SyntaxRule"] !== null) {
+            $this->SyntaxRule = $param["SyntaxRule"];
         }
     }
 }

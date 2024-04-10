@@ -20,26 +20,54 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Alarm configuration for the multidimensional analysis
  *
- * @method string getKey() Obtain Key
- * @method void setKey(string $Key) Set Key
- * @method string getValue() Obtain Value
- * @method void setValue(string $Value) Set Value
+ * @method string getKey() Obtain Keys. The following keys are supported:
+SyntaxRule: Syntax rule, value supports 0: Lucene syntax; 1: CQL syntax.
+QueryIndex: Serial number of execution statement. Value supports -1: Custom; 1: Execute Statement 1; 2: Execute Statement 2.CustomQuery: Search statement. Valid and required when QueryIndex is -1, example of value: "* | select count(*) as count".Fields: Fields. Value supports __SOURCE__; __FILENAME__; __HOSTNAME__; __TIMESTAMP__; __INDEX_STATUS__; __PKG_LOGID__; __TOPIC__.
+Format: Display format. Value supports 1: One log per line; 2: One field per line per log.
+Limit: Maximum number of logs. Example of value: 5.Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setKey(string $Key) Set Keys. The following keys are supported:
+SyntaxRule: Syntax rule, value supports 0: Lucene syntax; 1: CQL syntax.
+QueryIndex: Serial number of execution statement. Value supports -1: Custom; 1: Execute Statement 1; 2: Execute Statement 2.CustomQuery: Search statement. Valid and required when QueryIndex is -1, example of value: "* | select count(*) as count".Fields: Fields. Value supports __SOURCE__; __FILENAME__; __HOSTNAME__; __TIMESTAMP__; __INDEX_STATUS__; __PKG_LOGID__; __TOPIC__.
+Format: Display format. Value supports 1: One log per line; 2: One field per line per log.
+Limit: Maximum number of logs. Example of value: 5.Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getValue() Obtain Value.
+Key corresponds to the following values:
+SyntaxRule: Syntax rule, value supports 0: Lucene syntax; 1: CQL syntax.
+QueryIndex: Serial number of execution statement. Value supports -1: Custom; 1: Execute Statement 1; 2: Execute Statement 2.CustomQuery: Search statement. Valid and required when QueryIndex is -1, example of value: "* | select count(*) as count".Fields: Fields. Value supports __SOURCE__; __FILENAME__; __HOSTNAME__; __TIMESTAMP__; __INDEX_STATUS__; __PKG_LOGID__; __TOPIC__.Format: Display format. Value supports 1: One log per line; 2: One field per line per log.Limit: Maximum number of logs. Example of value: 5.Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setValue(string $Value) Set Value.
+Key corresponds to the following values:
+SyntaxRule: Syntax rule, value supports 0: Lucene syntax; 1: CQL syntax.
+QueryIndex: Serial number of execution statement. Value supports -1: Custom; 1: Execute Statement 1; 2: Execute Statement 2.CustomQuery: Search statement. Valid and required when QueryIndex is -1, example of value: "* | select count(*) as count".Fields: Fields. Value supports __SOURCE__; __FILENAME__; __HOSTNAME__; __TIMESTAMP__; __INDEX_STATUS__; __PKG_LOGID__; __TOPIC__.Format: Display format. Value supports 1: One log per line; 2: One field per line per log.Limit: Maximum number of logs. Example of value: 5.Note: This field may return null, indicating that no valid values can be obtained.
  */
 class AlarmAnalysisConfig extends AbstractModel
 {
     /**
-     * @var string Key
+     * @var string Keys. The following keys are supported:
+SyntaxRule: Syntax rule, value supports 0: Lucene syntax; 1: CQL syntax.
+QueryIndex: Serial number of execution statement. Value supports -1: Custom; 1: Execute Statement 1; 2: Execute Statement 2.CustomQuery: Search statement. Valid and required when QueryIndex is -1, example of value: "* | select count(*) as count".Fields: Fields. Value supports __SOURCE__; __FILENAME__; __HOSTNAME__; __TIMESTAMP__; __INDEX_STATUS__; __PKG_LOGID__; __TOPIC__.
+Format: Display format. Value supports 1: One log per line; 2: One field per line per log.
+Limit: Maximum number of logs. Example of value: 5.Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Key;
 
     /**
-     * @var string Value
+     * @var string Value.
+Key corresponds to the following values:
+SyntaxRule: Syntax rule, value supports 0: Lucene syntax; 1: CQL syntax.
+QueryIndex: Serial number of execution statement. Value supports -1: Custom; 1: Execute Statement 1; 2: Execute Statement 2.CustomQuery: Search statement. Valid and required when QueryIndex is -1, example of value: "* | select count(*) as count".Fields: Fields. Value supports __SOURCE__; __FILENAME__; __HOSTNAME__; __TIMESTAMP__; __INDEX_STATUS__; __PKG_LOGID__; __TOPIC__.Format: Display format. Value supports 1: One log per line; 2: One field per line per log.Limit: Maximum number of logs. Example of value: 5.Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Value;
 
     /**
-     * @param string $Key Key
-     * @param string $Value Value
+     * @param string $Key Keys. The following keys are supported:
+SyntaxRule: Syntax rule, value supports 0: Lucene syntax; 1: CQL syntax.
+QueryIndex: Serial number of execution statement. Value supports -1: Custom; 1: Execute Statement 1; 2: Execute Statement 2.CustomQuery: Search statement. Valid and required when QueryIndex is -1, example of value: "* | select count(*) as count".Fields: Fields. Value supports __SOURCE__; __FILENAME__; __HOSTNAME__; __TIMESTAMP__; __INDEX_STATUS__; __PKG_LOGID__; __TOPIC__.
+Format: Display format. Value supports 1: One log per line; 2: One field per line per log.
+Limit: Maximum number of logs. Example of value: 5.Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $Value Value.
+Key corresponds to the following values:
+SyntaxRule: Syntax rule, value supports 0: Lucene syntax; 1: CQL syntax.
+QueryIndex: Serial number of execution statement. Value supports -1: Custom; 1: Execute Statement 1; 2: Execute Statement 2.CustomQuery: Search statement. Valid and required when QueryIndex is -1, example of value: "* | select count(*) as count".Fields: Fields. Value supports __SOURCE__; __FILENAME__; __HOSTNAME__; __TIMESTAMP__; __INDEX_STATUS__; __PKG_LOGID__; __TOPIC__.Format: Display format. Value supports 1: One log per line; 2: One field per line per log.Limit: Maximum number of logs. Example of value: 5.Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

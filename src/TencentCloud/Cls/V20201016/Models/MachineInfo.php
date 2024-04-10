@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getIp() Obtain Machine IP
  * @method void setIp(string $Ip) Set Machine IP
+ * @method string getInstanceID() Obtain Machine instance IDNote: This field may return null, indicating that no valid values can be obtained.
+ * @method void setInstanceID(string $InstanceID) Set Machine instance IDNote: This field may return null, indicating that no valid values can be obtained.
  * @method integer getStatus() Obtain Machine status. Valid values: `0`: exceptional; `1`: normal
  * @method void setStatus(integer $Status) Set Machine status. Valid values: `0`: exceptional; `1`: normal
  * @method string getOfflineTime() Obtain Machine disconnection time. If the value is empty, the machine is normal. If the machine is exceptional, a specific value will be returned.
@@ -30,12 +32,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAutoUpdate(integer $AutoUpdate) Set Whether to enable automatic update for the machine. Valid values: `0`: no; `1`: yes
  * @method string getVersion() Obtain Current machine version number
  * @method void setVersion(string $Version) Set Current machine version number
- * @method integer getUpdateStatus() Obtain Machine update feature status
- * @method void setUpdateStatus(integer $UpdateStatus) Set Machine update feature status
- * @method integer getErrCode() Obtain Machine update result flag
- * @method void setErrCode(integer $ErrCode) Set Machine update result flag
- * @method string getErrMsg() Obtain Machine update result information
- * @method void setErrMsg(string $ErrMsg) Set Machine update result information
+ * @method integer getUpdateStatus() Obtain Machine upgrade status. 0: Upgrade successful; 1: Upgrading; -1: Upgrade failed.
+ * @method void setUpdateStatus(integer $UpdateStatus) Set Machine upgrade status. 0: Upgrade successful; 1: Upgrading; -1: Upgrade failed.
+ * @method integer getErrCode() Obtain Machine upgrade result identifier.0: Success; 1200: Upgrade successful; Other values indicate exceptions.
+ * @method void setErrCode(integer $ErrCode) Set Machine upgrade result identifier.0: Success; 1200: Upgrade successful; Other values indicate exceptions.
+ * @method string getErrMsg() Obtain Machine upgrade result information."ok": Success; "update success": Upgrade successful; Other values indicate the reason for failure.
+ * @method void setErrMsg(string $ErrMsg) Set Machine upgrade result information."ok": Success; "update success": Upgrade successful; Other values indicate the reason for failure.
  */
 class MachineInfo extends AbstractModel
 {
@@ -43,6 +45,11 @@ class MachineInfo extends AbstractModel
      * @var string Machine IP
      */
     public $Ip;
+
+    /**
+     * @var string Machine instance IDNote: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $InstanceID;
 
     /**
      * @var integer Machine status. Valid values: `0`: exceptional; `1`: normal
@@ -65,29 +72,30 @@ class MachineInfo extends AbstractModel
     public $Version;
 
     /**
-     * @var integer Machine update feature status
+     * @var integer Machine upgrade status. 0: Upgrade successful; 1: Upgrading; -1: Upgrade failed.
      */
     public $UpdateStatus;
 
     /**
-     * @var integer Machine update result flag
+     * @var integer Machine upgrade result identifier.0: Success; 1200: Upgrade successful; Other values indicate exceptions.
      */
     public $ErrCode;
 
     /**
-     * @var string Machine update result information
+     * @var string Machine upgrade result information."ok": Success; "update success": Upgrade successful; Other values indicate the reason for failure.
      */
     public $ErrMsg;
 
     /**
      * @param string $Ip Machine IP
+     * @param string $InstanceID Machine instance IDNote: This field may return null, indicating that no valid values can be obtained.
      * @param integer $Status Machine status. Valid values: `0`: exceptional; `1`: normal
      * @param string $OfflineTime Machine disconnection time. If the value is empty, the machine is normal. If the machine is exceptional, a specific value will be returned.
      * @param integer $AutoUpdate Whether to enable automatic update for the machine. Valid values: `0`: no; `1`: yes
      * @param string $Version Current machine version number
-     * @param integer $UpdateStatus Machine update feature status
-     * @param integer $ErrCode Machine update result flag
-     * @param string $ErrMsg Machine update result information
+     * @param integer $UpdateStatus Machine upgrade status. 0: Upgrade successful; 1: Upgrading; -1: Upgrade failed.
+     * @param integer $ErrCode Machine upgrade result identifier.0: Success; 1200: Upgrade successful; Other values indicate exceptions.
+     * @param string $ErrMsg Machine upgrade result information."ok": Success; "update success": Upgrade successful; Other values indicate the reason for failure.
      */
     function __construct()
     {
@@ -104,6 +112,10 @@ class MachineInfo extends AbstractModel
         }
         if (array_key_exists("Ip",$param) and $param["Ip"] !== null) {
             $this->Ip = $param["Ip"];
+        }
+
+        if (array_key_exists("InstanceID",$param) and $param["InstanceID"] !== null) {
+            $this->InstanceID = $param["InstanceID"];
         }
 
         if (array_key_exists("Status",$param) and $param["Status"] !== null) {

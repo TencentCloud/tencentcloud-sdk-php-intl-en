@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Kafka consumer content
  *
- * @method integer getFormat() Obtain Format. Valid values: 0 (full-text) and 1 (JSON).
- * @method void setFormat(integer $Format) Set Format. Valid values: 0 (full-text) and 1 (JSON).
+ * @method integer getFormat() Obtain Consumption data format. Valid values: 0 (original content) and 1 (JSON).
+ * @method void setFormat(integer $Format) Set Consumption data format. Valid values: 0 (original content) and 1 (JSON).
  * @method boolean getEnableTag() Obtain Whether to ship tag information
 This parameter does not need to be set when `Format` is set to `0`.
  * @method void setEnableTag(boolean $EnableTag) Set Whether to ship tag information
@@ -32,25 +32,47 @@ This parameter does not need to be set when `Format` is set to `0`.
  * @method void setMetaFields(array $MetaFields) Set Metadata information list. Valid values: \_\_SOURCE\_\_, \_\_FILENAME\_\_,
 \_\_TIMESTAMP\_\_, \_\_HOSTNAME\_\_, and \_\_PKGID\_\_.
 This parameter does not need to be set when `Format` is set to `0`.
- * @method integer getTagTransaction() Obtain Tag data processing mode. Valid values:
-1 (default): Do not tile data.
-2: Tile data.
+ * @method integer getTagTransaction() Obtain Tag data processing mode: 1: Do not tile (default); 2: Tile.
+
+Untiled example:
+TAG information: `{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
+Untiled: `{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
+
+Tiled example:
+TAG information: `{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
+Tiled: `{"__TAG__.fieldA":200,"__TAG__.fieldB":"text"}`
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setTagTransaction(integer $TagTransaction) Set Tag data processing mode. Valid values:
-1 (default): Do not tile data.
-2: Tile data.
+ * @method void setTagTransaction(integer $TagTransaction) Set Tag data processing mode: 1: Do not tile (default); 2: Tile.
+
+Untiled example:
+TAG information: `{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
+Untiled: `{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
+
+Tiled example:
+TAG information: `{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
+Tiled: `{"__TAG__.fieldA":200,"__TAG__.fieldB":"text"}`
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getJsonType() Obtain JSON data format. Valid values:
-1 (default): Not escaped.
-2: Escaped.
- * @method void setJsonType(integer $JsonType) Set JSON data format. Valid values:
-1 (default): Not escaped.
-2: Escaped.
+ * @method integer getJsonType() Obtain JSON data format:
+1: Not escaped (default format)
+2: Escaped
+
+Deliver in JSON format.JsonType is 1: Consistent with the original log, not escaped. Example:
+Original log: `{"a":"aa", "b":{"b1":"b1b1", "c1":"c1c1"}}`
+Deliver to CKafka: `{"a":"aa", "b":{"b1":"b1b1", "c1":"c1c1"}}`JsonType is 2: escaped. Example:Original log: `{"a":"aa", "b":{"b1":"b1b1", "c1":"c1c1"}}`
+Deliver to CKafka: `{"a":"aa","b":"{\"b1\":\"b1b1\", \"c1\":\"c1c1\"}"}`
+ * @method void setJsonType(integer $JsonType) Set JSON data format:
+1: Not escaped (default format)
+2: Escaped
+
+Deliver in JSON format.JsonType is 1: Consistent with the original log, not escaped. Example:
+Original log: `{"a":"aa", "b":{"b1":"b1b1", "c1":"c1c1"}}`
+Deliver to CKafka: `{"a":"aa", "b":{"b1":"b1b1", "c1":"c1c1"}}`JsonType is 2: escaped. Example:Original log: `{"a":"aa", "b":{"b1":"b1b1", "c1":"c1c1"}}`
+Deliver to CKafka: `{"a":"aa","b":"{\"b1\":\"b1b1\", \"c1\":\"c1c1\"}"}`
  */
 class KafkaConsumerContent extends AbstractModel
 {
     /**
-     * @var integer Format. Valid values: 0 (full-text) and 1 (JSON).
+     * @var integer Consumption data format. Valid values: 0 (original content) and 1 (JSON).
      */
     public $Format;
 
@@ -68,34 +90,56 @@ This parameter does not need to be set when `Format` is set to `0`.
     public $MetaFields;
 
     /**
-     * @var integer Tag data processing mode. Valid values:
-1 (default): Do not tile data.
-2: Tile data.
+     * @var integer Tag data processing mode: 1: Do not tile (default); 2: Tile.
+
+Untiled example:
+TAG information: `{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
+Untiled: `{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
+
+Tiled example:
+TAG information: `{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
+Tiled: `{"__TAG__.fieldA":200,"__TAG__.fieldB":"text"}`
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $TagTransaction;
 
     /**
-     * @var integer JSON data format. Valid values:
-1 (default): Not escaped.
-2: Escaped.
+     * @var integer JSON data format:
+1: Not escaped (default format)
+2: Escaped
+
+Deliver in JSON format.JsonType is 1: Consistent with the original log, not escaped. Example:
+Original log: `{"a":"aa", "b":{"b1":"b1b1", "c1":"c1c1"}}`
+Deliver to CKafka: `{"a":"aa", "b":{"b1":"b1b1", "c1":"c1c1"}}`JsonType is 2: escaped. Example:Original log: `{"a":"aa", "b":{"b1":"b1b1", "c1":"c1c1"}}`
+Deliver to CKafka: `{"a":"aa","b":"{\"b1\":\"b1b1\", \"c1\":\"c1c1\"}"}`
      */
     public $JsonType;
 
     /**
-     * @param integer $Format Format. Valid values: 0 (full-text) and 1 (JSON).
+     * @param integer $Format Consumption data format. Valid values: 0 (original content) and 1 (JSON).
      * @param boolean $EnableTag Whether to ship tag information
 This parameter does not need to be set when `Format` is set to `0`.
      * @param array $MetaFields Metadata information list. Valid values: \_\_SOURCE\_\_, \_\_FILENAME\_\_,
 \_\_TIMESTAMP\_\_, \_\_HOSTNAME\_\_, and \_\_PKGID\_\_.
 This parameter does not need to be set when `Format` is set to `0`.
-     * @param integer $TagTransaction Tag data processing mode. Valid values:
-1 (default): Do not tile data.
-2: Tile data.
+     * @param integer $TagTransaction Tag data processing mode: 1: Do not tile (default); 2: Tile.
+
+Untiled example:
+TAG information: `{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
+Untiled: `{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
+
+Tiled example:
+TAG information: `{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
+Tiled: `{"__TAG__.fieldA":200,"__TAG__.fieldB":"text"}`
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $JsonType JSON data format. Valid values:
-1 (default): Not escaped.
-2: Escaped.
+     * @param integer $JsonType JSON data format:
+1: Not escaped (default format)
+2: Escaped
+
+Deliver in JSON format.JsonType is 1: Consistent with the original log, not escaped. Example:
+Original log: `{"a":"aa", "b":{"b1":"b1b1", "c1":"c1c1"}}`
+Deliver to CKafka: `{"a":"aa", "b":{"b1":"b1b1", "c1":"c1c1"}}`JsonType is 2: escaped. Example:Original log: `{"a":"aa", "b":{"b1":"b1b1", "c1":"c1c1"}}`
+Deliver to CKafka: `{"a":"aa","b":"{\"b1\":\"b1b1\", \"c1\":\"c1c1\"}"}`
      */
     function __construct()
     {

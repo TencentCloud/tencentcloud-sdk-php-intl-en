@@ -24,14 +24,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTopicId(string $TopicId) Set Log topic ID to be queried
  * @method string getBTime() Obtain Log time in the format of YYYY-mm-dd HH:MM:SS.FFF
  * @method void setBTime(string $BTime) Set Log time in the format of YYYY-mm-dd HH:MM:SS.FFF
- * @method string getPkgId() Obtain Log package number
- * @method void setPkgId(string $PkgId) Set Log package number
- * @method integer getPkgLogId() Obtain Log number in log package
- * @method void setPkgLogId(integer $PkgLogId) Set Log number in log package
- * @method integer getPrevLogs() Obtain Number of previous logs. Default value: 10
- * @method void setPrevLogs(integer $PrevLogs) Set Number of previous logs. Default value: 10
- * @method integer getNextLogs() Obtain Number of next logs. Default value: 10
- * @method void setNextLogs(integer $NextLogs) Set Number of next logs. Default value: 10
+ * @method string getPkgId() Obtain Log package sequence number. PkgId in the Results structure of the returned information of SearchLog API.
+ * @method void setPkgId(string $PkgId) Set Log package sequence number. PkgId in the Results structure of the returned information of SearchLog API.
+ * @method integer getPkgLogId() Obtain Sequence number of a log within the log package.
+The PkgLogId in the Results structure of the SearchLog API returned information.
+ * @method void setPkgLogId(integer $PkgLogId) Set Sequence number of a log within the log package.
+The PkgLogId in the Results structure of the SearchLog API returned information.
+ * @method integer getPrevLogs() Obtain The previous ${PrevLogs} logs. Default value: 10.
+ * @method void setPrevLogs(integer $PrevLogs) Set The previous ${PrevLogs} logs. Default value: 10.
+ * @method integer getNextLogs() Obtain The next ${NextLogs} logs. Default value: 10.
+ * @method void setNextLogs(integer $NextLogs) Set The next ${NextLogs} logs. Default value: 10.
  */
 class DescribeLogContextRequest extends AbstractModel
 {
@@ -46,32 +48,34 @@ class DescribeLogContextRequest extends AbstractModel
     public $BTime;
 
     /**
-     * @var string Log package number
+     * @var string Log package sequence number. PkgId in the Results structure of the returned information of SearchLog API.
      */
     public $PkgId;
 
     /**
-     * @var integer Log number in log package
+     * @var integer Sequence number of a log within the log package.
+The PkgLogId in the Results structure of the SearchLog API returned information.
      */
     public $PkgLogId;
 
     /**
-     * @var integer Number of previous logs. Default value: 10
+     * @var integer The previous ${PrevLogs} logs. Default value: 10.
      */
     public $PrevLogs;
 
     /**
-     * @var integer Number of next logs. Default value: 10
+     * @var integer The next ${NextLogs} logs. Default value: 10.
      */
     public $NextLogs;
 
     /**
      * @param string $TopicId Log topic ID to be queried
      * @param string $BTime Log time in the format of YYYY-mm-dd HH:MM:SS.FFF
-     * @param string $PkgId Log package number
-     * @param integer $PkgLogId Log number in log package
-     * @param integer $PrevLogs Number of previous logs. Default value: 10
-     * @param integer $NextLogs Number of next logs. Default value: 10
+     * @param string $PkgId Log package sequence number. PkgId in the Results structure of the returned information of SearchLog API.
+     * @param integer $PkgLogId Sequence number of a log within the log package.
+The PkgLogId in the Results structure of the SearchLog API returned information.
+     * @param integer $PrevLogs The previous ${PrevLogs} logs. Default value: 10.
+     * @param integer $NextLogs The next ${NextLogs} logs. Default value: 10.
      */
     function __construct()
     {

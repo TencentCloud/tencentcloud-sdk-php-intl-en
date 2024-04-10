@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CloseKafkaConsumer request structure.
  *
- * @method string getFromTopicId() Obtain CLS topic identifier
- * @method void setFromTopicId(string $FromTopicId) Set CLS topic identifier
+ * @method string getFromTopicId() Obtain Log Topic ID
+ * @method void setFromTopicId(string $FromTopicId) Set Log Topic ID
  */
 class CloseKafkaConsumerRequest extends AbstractModel
 {
     /**
-     * @var string CLS topic identifier
+     * @var string Log Topic ID
      */
     public $FromTopicId;
 
     /**
-     * @param string $FromTopicId CLS topic identifier
+     * @param string $FromTopicId Log Topic ID
      */
     function __construct()
     {

@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * OpenKafkaConsumer request structure.
  *
- * @method string getFromTopicId() Obtain `TopicId` created by the CLS console
- * @method void setFromTopicId(string $FromTopicId) Set `TopicId` created by the CLS console
+ * @method string getFromTopicId() Obtain Log Topic ID
+ * @method void setFromTopicId(string $FromTopicId) Set Log Topic ID
  * @method integer getCompression() Obtain Compression mode. Valid values: `0` (no compression); `2` (snappy); `3` (LZ4)
  * @method void setCompression(integer $Compression) Set Compression mode. Valid values: `0` (no compression); `2` (snappy); `3` (LZ4)
  * @method KafkaConsumerContent getConsumerContent() Obtain Kafka consumer data format
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class OpenKafkaConsumerRequest extends AbstractModel
 {
     /**
-     * @var string `TopicId` created by the CLS console
+     * @var string Log Topic ID
      */
     public $FromTopicId;
 
@@ -45,7 +45,7 @@ class OpenKafkaConsumerRequest extends AbstractModel
     public $ConsumerContent;
 
     /**
-     * @param string $FromTopicId `TopicId` created by the CLS console
+     * @param string $FromTopicId Log Topic ID
      * @param integer $Compression Compression mode. Valid values: `0` (no compression); `2` (snappy); `3` (LZ4)
      * @param KafkaConsumerContent $ConsumerContent Kafka consumer data format
      */

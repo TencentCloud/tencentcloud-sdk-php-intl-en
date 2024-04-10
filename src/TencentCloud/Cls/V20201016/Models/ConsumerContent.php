@@ -20,28 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Shipping content
  *
- * @method boolean getEnableTag() Obtain Whether to ship tag information
-Note: This field may return `null`, indicating that no valid value was found.
- * @method void setEnableTag(boolean $EnableTag) Set Whether to ship tag information
-Note: This field may return `null`, indicating that no valid value was found.
+ * @method boolean getEnableTag() Obtain Whether to deliver TAG information.
+When EnableTag is true, it indicates the delivery of TAG metadata.Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setEnableTag(boolean $EnableTag) Set Whether to deliver TAG information.
+When EnableTag is true, it indicates the delivery of TAG metadata.Note: This field may return null, indicating that no valid values can be obtained.
  * @method array getMetaFields() Obtain List of metadata to ship. Supported metadata types: \_\_SOURCE\_\_, \_\_FILENAME\_\_, \_\_TIMESTAMP\_\_, \_\_HOSTNAME\_\_, and \_\_PKGID\_\_.
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setMetaFields(array $MetaFields) Set List of metadata to ship. Supported metadata types: \_\_SOURCE\_\_, \_\_FILENAME\_\_, \_\_TIMESTAMP\_\_, \_\_HOSTNAME\_\_, and \_\_PKGID\_\_.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method boolean getTagJsonNotTiled() Obtain This parameter is required if `EnableTag` is `true`, and is used to specify whether the tag information is JSON tiled. Valid values: `true` (not tiled); `false` (tiled)
-Note: This field may return `null`, indicating that no valid value was found.
- * @method void setTagJsonNotTiled(boolean $TagJsonNotTiled) Set This parameter is required if `EnableTag` is `true`, and is used to specify whether the tag information is JSON tiled. Valid values: `true` (not tiled); `false` (tiled)
-Note: This field may return `null`, indicating that no valid value was found.
- * @method integer getTimestampAccuracy() Obtain Shipping timestamp precision in seconds (default) or milliseconds
+ * @method boolean getTagJsonNotTiled() Obtain When EnableTag is true, the TagJsonNotTiled field must be filled.TagJsonNotTiled is used to indicate whether tag information is JSON flattened.When TagJsonNotTiled is true, it is not flattened. Example:TAG information: `{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
+Untiled: `{"__TAG__":{"fieldA":200,"fieldB":"text"}}`When TagJsonNotTiled is false, the data is tiled. Example:TAG information: `{"__TAG__":{"fieldA":200,"fieldB":"text"}}`Tiled: `{"__TAG__.fieldA":200,"__TAG__.fieldB":"text"}`
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setTimestampAccuracy(integer $TimestampAccuracy) Set Shipping timestamp precision in seconds (default) or milliseconds
+ * @method void setTagJsonNotTiled(boolean $TagJsonNotTiled) Set When EnableTag is true, the TagJsonNotTiled field must be filled.TagJsonNotTiled is used to indicate whether tag information is JSON flattened.When TagJsonNotTiled is true, it is not flattened. Example:TAG information: `{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
+Untiled: `{"__TAG__":{"fieldA":200,"fieldB":"text"}}`When TagJsonNotTiled is false, the data is tiled. Example:TAG information: `{"__TAG__":{"fieldA":200,"fieldB":"text"}}`Tiled: `{"__TAG__.fieldA":200,"__TAG__.fieldB":"text"}`
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getTimestampAccuracy() Obtain Delivery timestamp precision, optional [1: second; 2: millisecond], default is 1.Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setTimestampAccuracy(integer $TimestampAccuracy) Set Delivery timestamp precision, optional [1: second; 2: millisecond], default is 1.Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getJsonType() Obtain Deliver in JSON format.JsonType is 0: Consistent with the original log, no escape. Example:
+Original log: `{"a":"aa", "b":{"b1":"b1b1", "c1":"c1c1"}}`Deliver to CKafka: `{"a":"aa", "b":{"b1":"b1b1", "c1":"c1c1"}}`JsonType is 1: Escaped. Example:Original log: `{"a":"aa", "b":{"b1":"b1b1", "c1":"c1c1"}}`Delivered to CKafka: `{"a":"aa","b":"{\"b1\":\"b1b1\", \"c1\":\"c1c1\"}"}`
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setJsonType(integer $JsonType) Set Deliver in JSON format.JsonType is 0: Consistent with the original log, no escape. Example:
+Original log: `{"a":"aa", "b":{"b1":"b1b1", "c1":"c1c1"}}`Deliver to CKafka: `{"a":"aa", "b":{"b1":"b1b1", "c1":"c1c1"}}`JsonType is 1: Escaped. Example:Original log: `{"a":"aa", "b":{"b1":"b1b1", "c1":"c1c1"}}`Delivered to CKafka: `{"a":"aa","b":"{\"b1\":\"b1b1\", \"c1\":\"c1c1\"}"}`
 Note: This field may return null, indicating that no valid values can be obtained.
  */
 class ConsumerContent extends AbstractModel
 {
     /**
-     * @var boolean Whether to ship tag information
-Note: This field may return `null`, indicating that no valid value was found.
+     * @var boolean Whether to deliver TAG information.
+When EnableTag is true, it indicates the delivery of TAG metadata.Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $EnableTag;
 
@@ -52,25 +58,35 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $MetaFields;
 
     /**
-     * @var boolean This parameter is required if `EnableTag` is `true`, and is used to specify whether the tag information is JSON tiled. Valid values: `true` (not tiled); `false` (tiled)
-Note: This field may return `null`, indicating that no valid value was found.
+     * @var boolean When EnableTag is true, the TagJsonNotTiled field must be filled.TagJsonNotTiled is used to indicate whether tag information is JSON flattened.When TagJsonNotTiled is true, it is not flattened. Example:TAG information: `{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
+Untiled: `{"__TAG__":{"fieldA":200,"fieldB":"text"}}`When TagJsonNotTiled is false, the data is tiled. Example:TAG information: `{"__TAG__":{"fieldA":200,"fieldB":"text"}}`Tiled: `{"__TAG__.fieldA":200,"__TAG__.fieldB":"text"}`
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $TagJsonNotTiled;
 
     /**
-     * @var integer Shipping timestamp precision in seconds (default) or milliseconds
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Delivery timestamp precision, optional [1: second; 2: millisecond], default is 1.Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $TimestampAccuracy;
 
     /**
-     * @param boolean $EnableTag Whether to ship tag information
-Note: This field may return `null`, indicating that no valid value was found.
+     * @var integer Deliver in JSON format.JsonType is 0: Consistent with the original log, no escape. Example:
+Original log: `{"a":"aa", "b":{"b1":"b1b1", "c1":"c1c1"}}`Deliver to CKafka: `{"a":"aa", "b":{"b1":"b1b1", "c1":"c1c1"}}`JsonType is 1: Escaped. Example:Original log: `{"a":"aa", "b":{"b1":"b1b1", "c1":"c1c1"}}`Delivered to CKafka: `{"a":"aa","b":"{\"b1\":\"b1b1\", \"c1\":\"c1c1\"}"}`
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $JsonType;
+
+    /**
+     * @param boolean $EnableTag Whether to deliver TAG information.
+When EnableTag is true, it indicates the delivery of TAG metadata.Note: This field may return null, indicating that no valid values can be obtained.
      * @param array $MetaFields List of metadata to ship. Supported metadata types: \_\_SOURCE\_\_, \_\_FILENAME\_\_, \_\_TIMESTAMP\_\_, \_\_HOSTNAME\_\_, and \_\_PKGID\_\_.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param boolean $TagJsonNotTiled This parameter is required if `EnableTag` is `true`, and is used to specify whether the tag information is JSON tiled. Valid values: `true` (not tiled); `false` (tiled)
-Note: This field may return `null`, indicating that no valid value was found.
-     * @param integer $TimestampAccuracy Shipping timestamp precision in seconds (default) or milliseconds
+     * @param boolean $TagJsonNotTiled When EnableTag is true, the TagJsonNotTiled field must be filled.TagJsonNotTiled is used to indicate whether tag information is JSON flattened.When TagJsonNotTiled is true, it is not flattened. Example:TAG information: `{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
+Untiled: `{"__TAG__":{"fieldA":200,"fieldB":"text"}}`When TagJsonNotTiled is false, the data is tiled. Example:TAG information: `{"__TAG__":{"fieldA":200,"fieldB":"text"}}`Tiled: `{"__TAG__.fieldA":200,"__TAG__.fieldB":"text"}`
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $TimestampAccuracy Delivery timestamp precision, optional [1: second; 2: millisecond], default is 1.Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $JsonType Deliver in JSON format.JsonType is 0: Consistent with the original log, no escape. Example:
+Original log: `{"a":"aa", "b":{"b1":"b1b1", "c1":"c1c1"}}`Deliver to CKafka: `{"a":"aa", "b":{"b1":"b1b1", "c1":"c1c1"}}`JsonType is 1: Escaped. Example:Original log: `{"a":"aa", "b":{"b1":"b1b1", "c1":"c1c1"}}`Delivered to CKafka: `{"a":"aa","b":"{\"b1\":\"b1b1\", \"c1\":\"c1c1\"}"}`
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
@@ -100,6 +116,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("TimestampAccuracy",$param) and $param["TimestampAccuracy"] !== null) {
             $this->TimestampAccuracy = $param["TimestampAccuracy"];
+        }
+
+        if (array_key_exists("JsonType",$param) and $param["JsonType"] !== null) {
+            $this->JsonType = $param["JsonType"];
         }
     }
 }

@@ -24,14 +24,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTopicId(string $TopicId) Set Log topic ID bound to the task
  * @method boolean getEffective() Obtain Whether the shipping task takes effect (default: no)
  * @method void setEffective(boolean $Effective) Set Whether the shipping task takes effect (default: no)
- * @method boolean getNeedContent() Obtain Whether to ship metadata. Default value: `false`
- * @method void setNeedContent(boolean $NeedContent) Set Whether to ship metadata. Default value: `false`
+ * @method boolean getNeedContent() Obtain Whether to deliver log Metadata information; the default is true.When NeedContent is true: Content field is valid.When NeedContent is false: Content field is invalid.
+ * @method void setNeedContent(boolean $NeedContent) Set Whether to deliver log Metadata information; the default is true.When NeedContent is true: Content field is valid.When NeedContent is false: Content field is invalid.
  * @method ConsumerContent getContent() Obtain Metadata to ship if `NeedContent` is `true`
  * @method void setContent(ConsumerContent $Content) Set Metadata to ship if `NeedContent` is `true`
  * @method Ckafka getCkafka() Obtain CKafka information
  * @method void setCkafka(Ckafka $Ckafka) Set CKafka information
- * @method integer getCompression() Obtain Compression mode. Valid values: `0` (no compression), `2` (snappy), `3` (LZ4).
- * @method void setCompression(integer $Compression) Set Compression mode. Valid values: `0` (no compression), `2` (snappy), `3` (LZ4).
+ * @method integer getCompression() Obtain Compression method during delivery. Valid values: 0, 2, and 3. [0：NONE；2：SNAPPY；3：LZ4]
+ * @method void setCompression(integer $Compression) Set Compression method during delivery. Valid values: 0, 2, and 3. [0：NONE；2：SNAPPY；3：LZ4]
  */
 class ModifyConsumerRequest extends AbstractModel
 {
@@ -46,7 +46,7 @@ class ModifyConsumerRequest extends AbstractModel
     public $Effective;
 
     /**
-     * @var boolean Whether to ship metadata. Default value: `false`
+     * @var boolean Whether to deliver log Metadata information; the default is true.When NeedContent is true: Content field is valid.When NeedContent is false: Content field is invalid.
      */
     public $NeedContent;
 
@@ -61,17 +61,17 @@ class ModifyConsumerRequest extends AbstractModel
     public $Ckafka;
 
     /**
-     * @var integer Compression mode. Valid values: `0` (no compression), `2` (snappy), `3` (LZ4).
+     * @var integer Compression method during delivery. Valid values: 0, 2, and 3. [0：NONE；2：SNAPPY；3：LZ4]
      */
     public $Compression;
 
     /**
      * @param string $TopicId Log topic ID bound to the task
      * @param boolean $Effective Whether the shipping task takes effect (default: no)
-     * @param boolean $NeedContent Whether to ship metadata. Default value: `false`
+     * @param boolean $NeedContent Whether to deliver log Metadata information; the default is true.When NeedContent is true: Content field is valid.When NeedContent is false: Content field is invalid.
      * @param ConsumerContent $Content Metadata to ship if `NeedContent` is `true`
      * @param Ckafka $Ckafka CKafka information
-     * @param integer $Compression Compression mode. Valid values: `0` (no compression), `2` (snappy), `3` (LZ4).
+     * @param integer $Compression Compression method during delivery. Valid values: 0, 2, and 3. [0：NONE；2：SNAPPY；3：LZ4]
      */
     function __construct()
     {

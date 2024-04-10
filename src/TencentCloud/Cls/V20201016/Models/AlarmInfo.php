@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAlarmTargets(array $AlarmTargets) Set Monitoring object list
  * @method MonitorTime getMonitorTime() Obtain Monitoring task running time point
  * @method void setMonitorTime(MonitorTime $MonitorTime) Set Monitoring task running time point
- * @method string getCondition() Obtain Trigger condition
- * @method void setCondition(string $Condition) Set Trigger condition
+ * @method string getCondition() Obtain Single trigger condition. Mutually exclusive with the MultiConditions parameter.
+ * @method void setCondition(string $Condition) Set Single trigger condition. Mutually exclusive with the MultiConditions parameter.
  * @method integer getTriggerCount() Obtain Alarm persistence cycle. An alarm will be triggered only after the corresponding trigger condition is met for the number of times specified by `TriggerCount`. Value range: 1–10.
  * @method void setTriggerCount(integer $TriggerCount) Set Alarm persistence cycle. An alarm will be triggered only after the corresponding trigger condition is met for the number of times specified by `TriggerCount`. Value range: 1–10.
  * @method integer getAlarmPeriod() Obtain Repeated alarm interval in minutes. Value range: 0–1440.
@@ -54,6 +54,18 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method void setAnalysis(array $Analysis) Set Multi-Dimensional analysis settings
 Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method boolean getGroupTriggerStatus() Obtain Group trigger status. 1: Enabled, 0: Disabled (default)
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setGroupTriggerStatus(boolean $GroupTriggerStatus) Set Group trigger status. 1: Enabled, 0: Disabled (default)
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method array getGroupTriggerCondition() Obtain Group Trigger ConditionsNote: This field may return null, indicating that no valid values can be obtained.
+ * @method void setGroupTriggerCondition(array $GroupTriggerCondition) Set Group Trigger ConditionsNote: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getMonitorObjectType() Obtain Type of the monitored object. 0: common monitoring objects for execution statements; 1: separately selected monitoring objects for each execution statement.Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setMonitorObjectType(integer $MonitorObjectType) Set Type of the monitored object. 0: common monitoring objects for execution statements; 1: separately selected monitoring objects for each execution statement.Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getAlarmLevel() Obtain Alarm severity. 0: warning (Warn); 1: Reminder (Info); 2: urgent (Critical).Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setAlarmLevel(integer $AlarmLevel) Set Alarm severity. 0: warning (Warn); 1: Reminder (Info); 2: urgent (Critical).Note: This field may return null, indicating that no valid values can be obtained.
+ * @method array getMultiConditions() Obtain Multiple trigger conditions. Exclusive with Condition.Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setMultiConditions(array $MultiConditions) Set Multiple trigger conditions. Exclusive with Condition.Note: This field may return null, indicating that no valid values can be obtained.
  */
 class AlarmInfo extends AbstractModel
 {
@@ -73,7 +85,7 @@ class AlarmInfo extends AbstractModel
     public $MonitorTime;
 
     /**
-     * @var string Trigger condition
+     * @var string Single trigger condition. Mutually exclusive with the MultiConditions parameter.
      */
     public $Condition;
 
@@ -131,10 +143,36 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     public $Analysis;
 
     /**
+     * @var boolean Group trigger status. 1: Enabled, 0: Disabled (default)
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $GroupTriggerStatus;
+
+    /**
+     * @var array Group Trigger ConditionsNote: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $GroupTriggerCondition;
+
+    /**
+     * @var integer Type of the monitored object. 0: common monitoring objects for execution statements; 1: separately selected monitoring objects for each execution statement.Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $MonitorObjectType;
+
+    /**
+     * @var integer Alarm severity. 0: warning (Warn); 1: Reminder (Info); 2: urgent (Critical).Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $AlarmLevel;
+
+    /**
+     * @var array Multiple trigger conditions. Exclusive with Condition.Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $MultiConditions;
+
+    /**
      * @param string $Name Alarm policy name
      * @param array $AlarmTargets Monitoring object list
      * @param MonitorTime $MonitorTime Monitoring task running time point
-     * @param string $Condition Trigger condition
+     * @param string $Condition Single trigger condition. Mutually exclusive with the MultiConditions parameter.
      * @param integer $TriggerCount Alarm persistence cycle. An alarm will be triggered only after the corresponding trigger condition is met for the number of times specified by `TriggerCount`. Value range: 1–10.
      * @param integer $AlarmPeriod Repeated alarm interval in minutes. Value range: 0–1440.
      * @param array $AlarmNoticeIds List of associated alarm notification templates
@@ -148,6 +186,12 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param array $Analysis Multi-Dimensional analysis settings
 Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param boolean $GroupTriggerStatus Group trigger status. 1: Enabled, 0: Disabled (default)
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param array $GroupTriggerCondition Group Trigger ConditionsNote: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $MonitorObjectType Type of the monitored object. 0: common monitoring objects for execution statements; 1: separately selected monitoring objects for each execution statement.Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $AlarmLevel Alarm severity. 0: warning (Warn); 1: Reminder (Info); 2: urgent (Critical).Note: This field may return null, indicating that no valid values can be obtained.
+     * @param array $MultiConditions Multiple trigger conditions. Exclusive with Condition.Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -227,6 +271,31 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                 $obj = new AnalysisDimensional();
                 $obj->deserialize($value);
                 array_push($this->Analysis, $obj);
+            }
+        }
+
+        if (array_key_exists("GroupTriggerStatus",$param) and $param["GroupTriggerStatus"] !== null) {
+            $this->GroupTriggerStatus = $param["GroupTriggerStatus"];
+        }
+
+        if (array_key_exists("GroupTriggerCondition",$param) and $param["GroupTriggerCondition"] !== null) {
+            $this->GroupTriggerCondition = $param["GroupTriggerCondition"];
+        }
+
+        if (array_key_exists("MonitorObjectType",$param) and $param["MonitorObjectType"] !== null) {
+            $this->MonitorObjectType = $param["MonitorObjectType"];
+        }
+
+        if (array_key_exists("AlarmLevel",$param) and $param["AlarmLevel"] !== null) {
+            $this->AlarmLevel = $param["AlarmLevel"];
+        }
+
+        if (array_key_exists("MultiConditions",$param) and $param["MultiConditions"] !== null) {
+            $this->MultiConditions = [];
+            foreach ($param["MultiConditions"] as $key => $value){
+                $obj = new MultiCondition();
+                $obj->deserialize($value);
+                array_push($this->MultiConditions, $obj);
             }
         }
     }

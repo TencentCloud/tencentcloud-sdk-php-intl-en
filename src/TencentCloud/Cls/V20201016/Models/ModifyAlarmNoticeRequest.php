@@ -24,18 +24,20 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAlarmNoticeId(string $AlarmNoticeId) Set Notification group ID
  * @method string getName() Obtain Notification group name
  * @method void setName(string $Name) Set Notification group name
- * @method string getType() Obtain Notification type. Valid values:
-<li> `Trigger`: alarm triggered
-<li> `Recovery`: alarm cleared
-<li> `All`: alarm triggered and alarm cleared
- * @method void setType(string $Type) Set Notification type. Valid values:
-<li> `Trigger`: alarm triggered
-<li> `Recovery`: alarm cleared
-<li> `All`: alarm triggered and alarm cleared
+ * @method string getType() Obtain Notification type. Optional Values:
+<li> Trigger - Alarm trigger</li>
+<li> Recovery - Alarm recovery</li>
+<li> All - Alarm triggered and alarm recovery</li>
+ * @method void setType(string $Type) Set Notification type. Optional Values:
+<li> Trigger - Alarm trigger</li>
+<li> Recovery - Alarm recovery</li>
+<li> All - Alarm triggered and alarm recovery</li>
  * @method array getNoticeReceivers() Obtain Notification recipient
  * @method void setNoticeReceivers(array $NoticeReceivers) Set Notification recipient
  * @method array getWebCallbacks() Obtain API callback information (including WeCom)
  * @method void setWebCallbacks(array $WebCallbacks) Set API callback information (including WeCom)
+ * @method array getNoticeRules() Obtain Notification rulesNote: - Type, NoticeReceivers, and WebCallbacks are one set of configurations, while NoticeRules is another set of configurations. The two sets are mutually exclusive.- Submitting one set of data will nullify the other set.
+ * @method void setNoticeRules(array $NoticeRules) Set Notification rulesNote: - Type, NoticeReceivers, and WebCallbacks are one set of configurations, while NoticeRules is another set of configurations. The two sets are mutually exclusive.- Submitting one set of data will nullify the other set.
  */
 class ModifyAlarmNoticeRequest extends AbstractModel
 {
@@ -50,10 +52,10 @@ class ModifyAlarmNoticeRequest extends AbstractModel
     public $Name;
 
     /**
-     * @var string Notification type. Valid values:
-<li> `Trigger`: alarm triggered
-<li> `Recovery`: alarm cleared
-<li> `All`: alarm triggered and alarm cleared
+     * @var string Notification type. Optional Values:
+<li> Trigger - Alarm trigger</li>
+<li> Recovery - Alarm recovery</li>
+<li> All - Alarm triggered and alarm recovery</li>
      */
     public $Type;
 
@@ -68,14 +70,20 @@ class ModifyAlarmNoticeRequest extends AbstractModel
     public $WebCallbacks;
 
     /**
+     * @var array Notification rulesNote: - Type, NoticeReceivers, and WebCallbacks are one set of configurations, while NoticeRules is another set of configurations. The two sets are mutually exclusive.- Submitting one set of data will nullify the other set.
+     */
+    public $NoticeRules;
+
+    /**
      * @param string $AlarmNoticeId Notification group ID
      * @param string $Name Notification group name
-     * @param string $Type Notification type. Valid values:
-<li> `Trigger`: alarm triggered
-<li> `Recovery`: alarm cleared
-<li> `All`: alarm triggered and alarm cleared
+     * @param string $Type Notification type. Optional Values:
+<li> Trigger - Alarm trigger</li>
+<li> Recovery - Alarm recovery</li>
+<li> All - Alarm triggered and alarm recovery</li>
      * @param array $NoticeReceivers Notification recipient
      * @param array $WebCallbacks API callback information (including WeCom)
+     * @param array $NoticeRules Notification rulesNote: - Type, NoticeReceivers, and WebCallbacks are one set of configurations, while NoticeRules is another set of configurations. The two sets are mutually exclusive.- Submitting one set of data will nullify the other set.
      */
     function __construct()
     {
@@ -117,6 +125,15 @@ class ModifyAlarmNoticeRequest extends AbstractModel
                 $obj = new WebCallback();
                 $obj->deserialize($value);
                 array_push($this->WebCallbacks, $obj);
+            }
+        }
+
+        if (array_key_exists("NoticeRules",$param) and $param["NoticeRules"] !== null) {
+            $this->NoticeRules = [];
+            foreach ($param["NoticeRules"] as $key => $value){
+                $obj = new NoticeRule();
+                $obj->deserialize($value);
+                array_push($this->NoticeRules, $obj);
             }
         }
     }

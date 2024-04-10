@@ -20,10 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Kafka data import configuration
  *
- * @method string getId() Obtain Primary key ID
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setId(string $Id) Set Primary key ID
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getId() Obtain ID of the Kafka data subscription configuration.Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setId(string $Id) Set ID of the Kafka data subscription configuration.Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getTopicId() Obtain Log topic ID
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setTopicId(string $TopicId) Set Log topic ID
@@ -58,14 +56,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setConsumerGroupName(string $ConsumerGroupName) Set Kafka consumer group name	
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getStatus() Obtain Status. Valid values: 1 (running) and 2 (suspended).
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setStatus(integer $Status) Set Status. Valid values: 1 (running) and 2 (suspended).
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getOffset() Obtain Position for data import. Valid values: -2 (earliest, default) and -1 (latest).  
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setOffset(integer $Offset) Set Position for data import. Valid values: -2 (earliest, default) and -1 (latest).  
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getStatus() Obtain Status, 1: running; 2: paused.Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setStatus(integer $Status) Set Status, 1: running; 2: paused.Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getOffset() Obtain Import data position, -2: earliest (default), -1: latestNote: This field may return null, indicating that no valid values can be obtained.
+ * @method void setOffset(integer $Offset) Set Import data position, -2: earliest (default), -1: latestNote: This field may return null, indicating that no valid values can be obtained.
  * @method string getCreateTime() Obtain Creation time
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setCreateTime(string $CreateTime) Set Creation time
@@ -82,8 +76,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 class KafkaRechargeInfo extends AbstractModel
 {
     /**
-     * @var string Primary key ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string ID of the Kafka data subscription configuration.Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Id;
 
@@ -141,14 +134,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $ConsumerGroupName;
 
     /**
-     * @var integer Status. Valid values: 1 (running) and 2 (suspended).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Status, 1: running; 2: paused.Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Status;
 
     /**
-     * @var integer Position for data import. Valid values: -2 (earliest, default) and -1 (latest).  
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Import data position, -2: earliest (default), -1: latestNote: This field may return null, indicating that no valid values can be obtained.
      */
     public $Offset;
 
@@ -171,8 +162,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $LogRechargeRule;
 
     /**
-     * @param string $Id Primary key ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $Id ID of the Kafka data subscription configuration.Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $TopicId Log topic ID
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $Name Kafka data import task name
@@ -190,10 +180,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $ConsumerGroupName Kafka consumer group name	
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $Status Status. Valid values: 1 (running) and 2 (suspended).
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $Offset Position for data import. Valid values: -2 (earliest, default) and -1 (latest).  
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $Status Status, 1: running; 2: paused.Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $Offset Import data position, -2: earliest (default), -1: latestNote: This field may return null, indicating that no valid values can be obtained.
      * @param string $CreateTime Creation time
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $UpdateTime Update time

@@ -22,18 +22,14 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getName() Obtain Notification group name
  * @method void setName(string $Name) Set Notification group name
- * @method string getType() Obtain Notification type. Valid values:
-<li> `Trigger`: alarm triggered
-<li> `Recovery`: alarm cleared
-<li> `All`: alarm triggered and alarm cleared
- * @method void setType(string $Type) Set Notification type. Valid values:
-<li> `Trigger`: alarm triggered
-<li> `Recovery`: alarm cleared
-<li> `All`: alarm triggered and alarm cleared
+ * @method string getType() Obtain Notification type. Optional Values:<li> Trigger - Alarm triggered </li><li> Recovery - Alarm recovery</li><li> All - Alarm triggered and alarm recovery</li>
+ * @method void setType(string $Type) Set Notification type. Optional Values:<li> Trigger - Alarm triggered </li><li> Recovery - Alarm recovery</li><li> All - Alarm triggered and alarm recovery</li>
  * @method array getNoticeReceivers() Obtain Notification recipient
  * @method void setNoticeReceivers(array $NoticeReceivers) Set Notification recipient
  * @method array getWebCallbacks() Obtain API callback information (including WeCom)
  * @method void setWebCallbacks(array $WebCallbacks) Set API callback information (including WeCom)
+ * @method array getNoticeRules() Obtain Notification RulesNote: - Type, NoticeReceivers, and WebCallbacks form one set of configurations, and NoticeRules form another set. The two sets of configurations are mutually exclusive.
+ * @method void setNoticeRules(array $NoticeRules) Set Notification RulesNote: - Type, NoticeReceivers, and WebCallbacks form one set of configurations, and NoticeRules form another set. The two sets of configurations are mutually exclusive.
  */
 class CreateAlarmNoticeRequest extends AbstractModel
 {
@@ -43,10 +39,7 @@ class CreateAlarmNoticeRequest extends AbstractModel
     public $Name;
 
     /**
-     * @var string Notification type. Valid values:
-<li> `Trigger`: alarm triggered
-<li> `Recovery`: alarm cleared
-<li> `All`: alarm triggered and alarm cleared
+     * @var string Notification type. Optional Values:<li> Trigger - Alarm triggered </li><li> Recovery - Alarm recovery</li><li> All - Alarm triggered and alarm recovery</li>
      */
     public $Type;
 
@@ -61,13 +54,16 @@ class CreateAlarmNoticeRequest extends AbstractModel
     public $WebCallbacks;
 
     /**
+     * @var array Notification RulesNote: - Type, NoticeReceivers, and WebCallbacks form one set of configurations, and NoticeRules form another set. The two sets of configurations are mutually exclusive.
+     */
+    public $NoticeRules;
+
+    /**
      * @param string $Name Notification group name
-     * @param string $Type Notification type. Valid values:
-<li> `Trigger`: alarm triggered
-<li> `Recovery`: alarm cleared
-<li> `All`: alarm triggered and alarm cleared
+     * @param string $Type Notification type. Optional Values:<li> Trigger - Alarm triggered </li><li> Recovery - Alarm recovery</li><li> All - Alarm triggered and alarm recovery</li>
      * @param array $NoticeReceivers Notification recipient
      * @param array $WebCallbacks API callback information (including WeCom)
+     * @param array $NoticeRules Notification RulesNote: - Type, NoticeReceivers, and WebCallbacks form one set of configurations, and NoticeRules form another set. The two sets of configurations are mutually exclusive.
      */
     function __construct()
     {
@@ -105,6 +101,15 @@ class CreateAlarmNoticeRequest extends AbstractModel
                 $obj = new WebCallback();
                 $obj->deserialize($value);
                 array_push($this->WebCallbacks, $obj);
+            }
+        }
+
+        if (array_key_exists("NoticeRules",$param) and $param["NoticeRules"] !== null) {
+            $this->NoticeRules = [];
+            foreach ($param["NoticeRules"] as $key => $value){
+                $obj = new NoticeRule();
+                $obj->deserialize($value);
+                array_push($this->NoticeRules, $obj);
             }
         }
     }

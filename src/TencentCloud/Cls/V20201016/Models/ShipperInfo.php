@@ -86,6 +86,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 3: An error occurred while shipping historical data.
 4: Historical data shipping ended.
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getStorageType() Obtain COS bucket type
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setStorageType(string $StorageType) Set COS bucket type
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class ShipperInfo extends AbstractModel
 {
@@ -199,6 +203,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $HistoryStatus;
 
     /**
+     * @var string COS bucket type
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $StorageType;
+
+    /**
      * @param string $ShipperId Shipping rule ID
      * @param string $TopicId Log topic ID
      * @param string $Bucket Bucket address shipped to
@@ -231,6 +241,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
 2: Historical data is being shipped.
 3: An error occurred while shipping historical data.
 4: Historical data shipping ended.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $StorageType COS bucket type
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
@@ -327,6 +339,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("HistoryStatus",$param) and $param["HistoryStatus"] !== null) {
             $this->HistoryStatus = $param["HistoryStatus"];
+        }
+
+        if (array_key_exists("StorageType",$param) and $param["StorageType"] !== null) {
+            $this->StorageType = $param["StorageType"];
         }
     }
 }

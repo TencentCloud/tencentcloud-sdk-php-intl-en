@@ -20,27 +20,29 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateDataTransform request structure.
  *
- * @method integer getFuncType() Obtain Task type. Valid values: 1 (specified topic) and 2 (dynamically created).
- * @method void setFuncType(integer $FuncType) Set Task type. Valid values: 1 (specified topic) and 2 (dynamically created).
+ * @method integer getFuncType() Obtain Task type. 1: Specify topic; 2: Dynamic creation. For details, please refer to Creating Processing Task Document (https://intl.cloud.tencent.com/document/product/614/63940?from_cn_redirect=1).
+ * @method void setFuncType(integer $FuncType) Set Task type. 1: Specify topic; 2: Dynamic creation. For details, please refer to Creating Processing Task Document (https://intl.cloud.tencent.com/document/product/614/63940?from_cn_redirect=1).
  * @method string getSrcTopicId() Obtain Source log topic
  * @method void setSrcTopicId(string $SrcTopicId) Set Source log topic
  * @method string getName() Obtain Data processing task name
  * @method void setName(string $Name) Set Data processing task name
  * @method string getEtlContent() Obtain Data processing statement
  * @method void setEtlContent(string $EtlContent) Set Data processing statement
- * @method integer getTaskType() Obtain Data processing type. Valid values: `1`: Use random data from the source log topic for processing preview. `2`: Use user-defined test data for processing preview. `3`: Create a real processing task.
- * @method void setTaskType(integer $TaskType) Set Data processing type. Valid values: `1`: Use random data from the source log topic for processing preview. `2`: Use user-defined test data for processing preview. `3`: Create a real processing task.
+ * @method integer getTaskType() Obtain Processing type.
+1: Process preview using random data from the source log topic; 2: Process preview using user-defined test data; 3: Create real processing tasks.
+ * @method void setTaskType(integer $TaskType) Set Processing type.
+1: Process preview using random data from the source log topic; 2: Process preview using user-defined test data; 3: Create real processing tasks.
+ * @method array getDstResources() Obtain Destination topic_id and alias of processing task. This parameter is required when FuncType=1, and not required when FuncType=2.
+ * @method void setDstResources(array $DstResources) Set Destination topic_id and alias of processing task. This parameter is required when FuncType=1, and not required when FuncType=2.
  * @method integer getEnableFlag() Obtain Task status. Valid values: 1 (enabled) and 2 (disabled).
  * @method void setEnableFlag(integer $EnableFlag) Set Task status. Valid values: 1 (enabled) and 2 (disabled).
- * @method array getDstResources() Obtain Target topic ID and alias of the data processing task
- * @method void setDstResources(array $DstResources) Set Target topic ID and alias of the data processing task
  * @method array getPreviewLogStatistics() Obtain Test data used for previewing the processing result
  * @method void setPreviewLogStatistics(array $PreviewLogStatistics) Set Test data used for previewing the processing result
  */
 class CreateDataTransformRequest extends AbstractModel
 {
     /**
-     * @var integer Task type. Valid values: 1 (specified topic) and 2 (dynamically created).
+     * @var integer Task type. 1: Specify topic; 2: Dynamic creation. For details, please refer to Creating Processing Task Document (https://intl.cloud.tencent.com/document/product/614/63940?from_cn_redirect=1).
      */
     public $FuncType;
 
@@ -60,9 +62,15 @@ class CreateDataTransformRequest extends AbstractModel
     public $EtlContent;
 
     /**
-     * @var integer Data processing type. Valid values: `1`: Use random data from the source log topic for processing preview. `2`: Use user-defined test data for processing preview. `3`: Create a real processing task.
+     * @var integer Processing type.
+1: Process preview using random data from the source log topic; 2: Process preview using user-defined test data; 3: Create real processing tasks.
      */
     public $TaskType;
+
+    /**
+     * @var array Destination topic_id and alias of processing task. This parameter is required when FuncType=1, and not required when FuncType=2.
+     */
+    public $DstResources;
 
     /**
      * @var integer Task status. Valid values: 1 (enabled) and 2 (disabled).
@@ -70,23 +78,19 @@ class CreateDataTransformRequest extends AbstractModel
     public $EnableFlag;
 
     /**
-     * @var array Target topic ID and alias of the data processing task
-     */
-    public $DstResources;
-
-    /**
      * @var array Test data used for previewing the processing result
      */
     public $PreviewLogStatistics;
 
     /**
-     * @param integer $FuncType Task type. Valid values: 1 (specified topic) and 2 (dynamically created).
+     * @param integer $FuncType Task type. 1: Specify topic; 2: Dynamic creation. For details, please refer to Creating Processing Task Document (https://intl.cloud.tencent.com/document/product/614/63940?from_cn_redirect=1).
      * @param string $SrcTopicId Source log topic
      * @param string $Name Data processing task name
      * @param string $EtlContent Data processing statement
-     * @param integer $TaskType Data processing type. Valid values: `1`: Use random data from the source log topic for processing preview. `2`: Use user-defined test data for processing preview. `3`: Create a real processing task.
+     * @param integer $TaskType Processing type.
+1: Process preview using random data from the source log topic; 2: Process preview using user-defined test data; 3: Create real processing tasks.
+     * @param array $DstResources Destination topic_id and alias of processing task. This parameter is required when FuncType=1, and not required when FuncType=2.
      * @param integer $EnableFlag Task status. Valid values: 1 (enabled) and 2 (disabled).
-     * @param array $DstResources Target topic ID and alias of the data processing task
      * @param array $PreviewLogStatistics Test data used for previewing the processing result
      */
     function __construct()
@@ -122,10 +126,6 @@ class CreateDataTransformRequest extends AbstractModel
             $this->TaskType = $param["TaskType"];
         }
 
-        if (array_key_exists("EnableFlag",$param) and $param["EnableFlag"] !== null) {
-            $this->EnableFlag = $param["EnableFlag"];
-        }
-
         if (array_key_exists("DstResources",$param) and $param["DstResources"] !== null) {
             $this->DstResources = [];
             foreach ($param["DstResources"] as $key => $value){
@@ -133,6 +133,10 @@ class CreateDataTransformRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->DstResources, $obj);
             }
+        }
+
+        if (array_key_exists("EnableFlag",$param) and $param["EnableFlag"] !== null) {
+            $this->EnableFlag = $param["EnableFlag"];
         }
 
         if (array_key_exists("PreviewLogStatistics",$param) and $param["PreviewLogStatistics"] !== null) {

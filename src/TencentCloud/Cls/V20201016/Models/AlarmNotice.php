@@ -22,14 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getName() Obtain Alarm notification template name
  * @method void setName(string $Name) Set Alarm notification template name
- * @method string getType() Obtain Alarm template type. Valid values:
-<br><li> `Trigger`: alarm triggered
-<br><li> `Recovery`: alarm cleared
-<br><li> `All`: alarm triggered and alarm cleared
- * @method void setType(string $Type) Set Alarm template type. Valid values:
-<br><li> `Trigger`: alarm triggered
-<br><li> `Recovery`: alarm cleared
-<br><li> `All`: alarm triggered and alarm cleared
+ * @method string getType() Obtain Alarm template type. Optional values:<br><li> Trigger - Alarm Trigger </li><br><li> Recovery - Alarm Recovery </li><br><li> All - Alarm Trigger and Alarm Recovery </li>
+ * @method void setType(string $Type) Set Alarm template type. Optional values:<br><li> Trigger - Alarm Trigger </li><br><li> Recovery - Alarm Recovery </li><br><li> All - Alarm Trigger and Alarm Recovery </li>
  * @method array getNoticeReceivers() Obtain Information of the recipient in alarm notification template
 Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method void setNoticeReceivers(array $NoticeReceivers) Set Information of the recipient in alarm notification template
@@ -50,6 +44,8 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method void setUpdateTime(string $UpdateTime) Set Last update time
 Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method array getNoticeRules() Obtain Notification rules.Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setNoticeRules(array $NoticeRules) Set Notification rules.Note: This field may return null, indicating that no valid values can be obtained.
  */
 class AlarmNotice extends AbstractModel
 {
@@ -59,10 +55,7 @@ class AlarmNotice extends AbstractModel
     public $Name;
 
     /**
-     * @var string Alarm template type. Valid values:
-<br><li> `Trigger`: alarm triggered
-<br><li> `Recovery`: alarm cleared
-<br><li> `All`: alarm triggered and alarm cleared
+     * @var string Alarm template type. Optional values:<br><li> Trigger - Alarm Trigger </li><br><li> Recovery - Alarm Recovery </li><br><li> All - Alarm Trigger and Alarm Recovery </li>
      */
     public $Type;
 
@@ -97,11 +90,13 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     public $UpdateTime;
 
     /**
+     * @var array Notification rules.Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $NoticeRules;
+
+    /**
      * @param string $Name Alarm notification template name
-     * @param string $Type Alarm template type. Valid values:
-<br><li> `Trigger`: alarm triggered
-<br><li> `Recovery`: alarm cleared
-<br><li> `All`: alarm triggered and alarm cleared
+     * @param string $Type Alarm template type. Optional values:<br><li> Trigger - Alarm Trigger </li><br><li> Recovery - Alarm Recovery </li><br><li> All - Alarm Trigger and Alarm Recovery </li>
      * @param array $NoticeReceivers Information of the recipient in alarm notification template
 Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param array $WebCallbacks Callback information of alarm notification template
@@ -112,6 +107,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param string $UpdateTime Last update time
 Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param array $NoticeRules Notification rules.Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -162,6 +158,15 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
         if (array_key_exists("UpdateTime",$param) and $param["UpdateTime"] !== null) {
             $this->UpdateTime = $param["UpdateTime"];
+        }
+
+        if (array_key_exists("NoticeRules",$param) and $param["NoticeRules"] !== null) {
+            $this->NoticeRules = [];
+            foreach ($param["NoticeRules"] as $key => $value){
+                $obj = new NoticeRule();
+                $obj->deserialize($value);
+                array_push($this->NoticeRules, $obj);
+            }
         }
     }
 }

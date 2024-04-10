@@ -22,14 +22,14 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getKafkaType() Obtain Kafka type. Valid values: 0 (Tencent Cloud CKafka) and 1 (customer's Kafka).
  * @method void setKafkaType(integer $KafkaType) Set Kafka type. Valid values: 0 (Tencent Cloud CKafka) and 1 (customer's Kafka).
- * @method string getKafkaInstance() Obtain CKafka instance ID, which is required when `KafkaType` is set to `0`
- * @method void setKafkaInstance(string $KafkaInstance) Set CKafka instance ID, which is required when `KafkaType` is set to `0`
- * @method string getServerAddr() Obtain Service address
- * @method void setServerAddr(string $ServerAddr) Set Service address
+ * @method string getKafkaInstance() Obtain Tencent Cloud CKafka Instance IDWhen KafkaType is 0, KafkaInstance is required
+ * @method void setKafkaInstance(string $KafkaInstance) Set Tencent Cloud CKafka Instance IDWhen KafkaType is 0, KafkaInstance is required
+ * @method string getServerAddr() Obtain Service AddressWhen KafkaType is 1, ServerAddr is required
+ * @method void setServerAddr(string $ServerAddr) Set Service AddressWhen KafkaType is 1, ServerAddr is required
  * @method boolean getIsEncryptionAddr() Obtain Whether the service address uses an encrypted connection
  * @method void setIsEncryptionAddr(boolean $IsEncryptionAddr) Set Whether the service address uses an encrypted connection
- * @method KafkaProtocolInfo getProtocol() Obtain Encryption access protocol, which is required when `IsEncryptionAddr` is set to `true`
- * @method void setProtocol(KafkaProtocolInfo $Protocol) Set Encryption access protocol, which is required when `IsEncryptionAddr` is set to `true`
+ * @method KafkaProtocolInfo getProtocol() Obtain Encryption access protocol. Required when IsEncryptionAddr parameter is set to true
+ * @method void setProtocol(KafkaProtocolInfo $Protocol) Set Encryption access protocol. Required when IsEncryptionAddr parameter is set to true
  */
 class CheckRechargeKafkaServerRequest extends AbstractModel
 {
@@ -39,12 +39,12 @@ class CheckRechargeKafkaServerRequest extends AbstractModel
     public $KafkaType;
 
     /**
-     * @var string CKafka instance ID, which is required when `KafkaType` is set to `0`
+     * @var string Tencent Cloud CKafka Instance IDWhen KafkaType is 0, KafkaInstance is required
      */
     public $KafkaInstance;
 
     /**
-     * @var string Service address
+     * @var string Service AddressWhen KafkaType is 1, ServerAddr is required
      */
     public $ServerAddr;
 
@@ -54,16 +54,16 @@ class CheckRechargeKafkaServerRequest extends AbstractModel
     public $IsEncryptionAddr;
 
     /**
-     * @var KafkaProtocolInfo Encryption access protocol, which is required when `IsEncryptionAddr` is set to `true`
+     * @var KafkaProtocolInfo Encryption access protocol. Required when IsEncryptionAddr parameter is set to true
      */
     public $Protocol;
 
     /**
      * @param integer $KafkaType Kafka type. Valid values: 0 (Tencent Cloud CKafka) and 1 (customer's Kafka).
-     * @param string $KafkaInstance CKafka instance ID, which is required when `KafkaType` is set to `0`
-     * @param string $ServerAddr Service address
+     * @param string $KafkaInstance Tencent Cloud CKafka Instance IDWhen KafkaType is 0, KafkaInstance is required
+     * @param string $ServerAddr Service AddressWhen KafkaType is 1, ServerAddr is required
      * @param boolean $IsEncryptionAddr Whether the service address uses an encrypted connection
-     * @param KafkaProtocolInfo $Protocol Encryption access protocol, which is required when `IsEncryptionAddr` is set to `true`
+     * @param KafkaProtocolInfo $Protocol Encryption access protocol. Required when IsEncryptionAddr parameter is set to true
      */
     function __construct()
     {

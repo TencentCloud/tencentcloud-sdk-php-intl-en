@@ -20,58 +20,46 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Kafka access protocol
  *
- * @method string getProtocol() Obtain Protocol type. Valid values: `plaintext`, `sasl_plaintext`, and `sasl_ssl`. `sasl_ssl` is recommended. Using this protocol will encrypt the connection and implement user authentication.
+ * @method string getProtocol() Obtain Protocol type, including plaintext, sasl_plaintext, or sasl_ssl. sasl_ssl is recommended for encrypted connections and user authentication.Required input parameters
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setProtocol(string $Protocol) Set Protocol type. Valid values: `plaintext`, `sasl_plaintext`, and `sasl_ssl`. `sasl_ssl` is recommended. Using this protocol will encrypt the connection and implement user authentication.
+ * @method void setProtocol(string $Protocol) Set Protocol type, including plaintext, sasl_plaintext, or sasl_ssl. sasl_ssl is recommended for encrypted connections and user authentication.Required input parameters
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getMechanism() Obtain Encryption type. Valid values: `PLAIN`, `SCRAM-SHA-256`, and SCRAM-SHA-512`.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setMechanism(string $Mechanism) Set Encryption type. Valid values: `PLAIN`, `SCRAM-SHA-256`, and SCRAM-SHA-512`.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getUserName() Obtain Username
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setUserName(string $UserName) Set Username
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getPassword() Obtain User password
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setPassword(string $Password) Set User password
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getMechanism() Obtain Encryption type, supports PLAIN, SCRAM-SHA-256, or SCRAM-SHA-512.Required when the Protocol is sasl_plaintext or sasl_ssl.Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setMechanism(string $Mechanism) Set Encryption type, supports PLAIN, SCRAM-SHA-256, or SCRAM-SHA-512.Required when the Protocol is sasl_plaintext or sasl_ssl.Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getUserName() Obtain UsernameRequired when the Protocol is sasl_plaintext or sasl_ssl.Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setUserName(string $UserName) Set UsernameRequired when the Protocol is sasl_plaintext or sasl_ssl.Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getPassword() Obtain User PasswordRequired when the Protocol is sasl_plaintext or sasl_ssl.Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setPassword(string $Password) Set User PasswordRequired when the Protocol is sasl_plaintext or sasl_ssl.Note: This field may return null, indicating that no valid values can be obtained.
  */
 class KafkaProtocolInfo extends AbstractModel
 {
     /**
-     * @var string Protocol type. Valid values: `plaintext`, `sasl_plaintext`, and `sasl_ssl`. `sasl_ssl` is recommended. Using this protocol will encrypt the connection and implement user authentication.
+     * @var string Protocol type, including plaintext, sasl_plaintext, or sasl_ssl. sasl_ssl is recommended for encrypted connections and user authentication.Required input parameters
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Protocol;
 
     /**
-     * @var string Encryption type. Valid values: `PLAIN`, `SCRAM-SHA-256`, and SCRAM-SHA-512`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Encryption type, supports PLAIN, SCRAM-SHA-256, or SCRAM-SHA-512.Required when the Protocol is sasl_plaintext or sasl_ssl.Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Mechanism;
 
     /**
-     * @var string Username
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string UsernameRequired when the Protocol is sasl_plaintext or sasl_ssl.Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $UserName;
 
     /**
-     * @var string User password
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string User PasswordRequired when the Protocol is sasl_plaintext or sasl_ssl.Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Password;
 
     /**
-     * @param string $Protocol Protocol type. Valid values: `plaintext`, `sasl_plaintext`, and `sasl_ssl`. `sasl_ssl` is recommended. Using this protocol will encrypt the connection and implement user authentication.
+     * @param string $Protocol Protocol type, including plaintext, sasl_plaintext, or sasl_ssl. sasl_ssl is recommended for encrypted connections and user authentication.Required input parameters
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Mechanism Encryption type. Valid values: `PLAIN`, `SCRAM-SHA-256`, and SCRAM-SHA-512`.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $UserName Username
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Password User password
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $Mechanism Encryption type, supports PLAIN, SCRAM-SHA-256, or SCRAM-SHA-512.Required when the Protocol is sasl_plaintext or sasl_ssl.Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $UserName UsernameRequired when the Protocol is sasl_plaintext or sasl_ssl.Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $Password User PasswordRequired when the Protocol is sasl_plaintext or sasl_ssl.Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

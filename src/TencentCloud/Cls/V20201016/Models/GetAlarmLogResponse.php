@@ -20,102 +20,106 @@ use TencentCloud\Common\AbstractModel;
 /**
  * GetAlarmLog response structure.
  *
- * @method string getContext() Obtain `Context` for loading subsequent content
- * @method void setContext(string $Context) Set `Context` for loading subsequent content
- * @method boolean getListOver() Obtain Whether all log query results are returned
- * @method void setListOver(boolean $ListOver) Set Whether all log query results are returned
- * @method boolean getAnalysis() Obtain Whether the return is the analysis result
- * @method void setAnalysis(boolean $Analysis) Set Whether the return is the analysis result
- * @method array getColNames() Obtain If `Analysis` is `true`, column name of the analysis result will be returned; otherwise, empty content will be returned.
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setColNames(array $ColNames) Set If `Analysis` is `true`, column name of the analysis result will be returned; otherwise, empty content will be returned.
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method array getResults() Obtain Log query result. If `Analysis` is `True`, `null` may be returned
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setResults(array $Results) Set Log query result. If `Analysis` is `True`, `null` may be returned
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method array getAnalysisResults() Obtain Log analysis result. If `Analysis` is `False`, `null` may be returned
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setAnalysisResults(array $AnalysisResults) Set Log analysis result. If `Analysis` is `False`, `null` may be returned
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method array getAnalysisRecords() Obtain New log analysis result, which will be valid if `UseNewAnalysis` is `true`
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setAnalysisRecords(array $AnalysisRecords) Set New log analysis result, which will be valid if `UseNewAnalysis` is `true`
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method array getColumns() Obtain Column attribute of log analysis, which will be valid if `UseNewAnalysis` is `true`
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setColumns(array $Columns) Set Column attribute of log analysis, which will be valid if `UseNewAnalysis` is `true`
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method string getContext() Obtain Context for loading subsequent details
+ * @method void setContext(string $Context) Set Context for loading subsequent details
+ * @method boolean getListOver() Obtain Whether alarm execution details within a specified time range are fully returned
+ * @method void setListOver(boolean $ListOver) Set Whether alarm execution details within a specified time range are fully returned
+ * @method boolean getAnalysis() Obtain Whether return value is SQL analysis result or not
+ * @method void setAnalysis(boolean $Analysis) Set Whether return value is SQL analysis result or not
+ * @method array getColNames() Obtain Column names of analysis results. If the Query statement contains an SQL query, then column names of the queried fields will be returned;Otherwise, it will be empty.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setColNames(array $ColNames) Set Column names of analysis results. If the Query statement contains an SQL query, then column names of the queried fields will be returned;Otherwise, it will be empty.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method array getResults() Obtain Execution details query results.
+When there is no SQL statement in the Query field, it returns query results.
+When there is an SQL statement in the Query field, it may return null.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setResults(array $Results) Set Execution details query results.
+When there is no SQL statement in the Query field, it returns query results.
+When there is an SQL statement in the Query field, it may return null.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method array getAnalysisResults() Obtain Execution details statistical analysis results. When there is an SQL statement in the Query field, it returns SQL statistical results; otherwise, it may return null.
+
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setAnalysisResults(array $AnalysisResults) Set Execution details statistical analysis results. When there is an SQL statement in the Query field, it returns SQL statistical results; otherwise, it may return null.
+
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method array getAnalysisRecords() Obtain Execution details statistical analysis results; only valid if UseNewAnalysis is true.Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setAnalysisRecords(array $AnalysisRecords) Set Execution details statistical analysis results; only valid if UseNewAnalysis is true.Note: This field may return null, indicating that no valid values can be obtained.
+ * @method array getColumns() Obtain Column names of analysis results, valid only if UseNewAnalysis is trueNote: This field may return null, indicating that no valid values can be obtained.
+ * @method void setColumns(array $Columns) Set Column names of analysis results, valid only if UseNewAnalysis is trueNote: This field may return null, indicating that no valid values can be obtained.
+ * @method string getRequestId() Obtain The unique request ID, generated by the server, will be returned for every request (if the request fails to reach the server for other reasons, the request will not obtain a RequestId). RequestId is required for locating a problem.
+ * @method void setRequestId(string $RequestId) Set The unique request ID, generated by the server, will be returned for every request (if the request fails to reach the server for other reasons, the request will not obtain a RequestId). RequestId is required for locating a problem.
  */
 class GetAlarmLogResponse extends AbstractModel
 {
     /**
-     * @var string `Context` for loading subsequent content
+     * @var string Context for loading subsequent details
      */
     public $Context;
 
     /**
-     * @var boolean Whether all log query results are returned
+     * @var boolean Whether alarm execution details within a specified time range are fully returned
      */
     public $ListOver;
 
     /**
-     * @var boolean Whether the return is the analysis result
+     * @var boolean Whether return value is SQL analysis result or not
      */
     public $Analysis;
 
     /**
-     * @var array If `Analysis` is `true`, column name of the analysis result will be returned; otherwise, empty content will be returned.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @var array Column names of analysis results. If the Query statement contains an SQL query, then column names of the queried fields will be returned;Otherwise, it will be empty.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ColNames;
 
     /**
-     * @var array Log query result. If `Analysis` is `True`, `null` may be returned
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @var array Execution details query results.
+When there is no SQL statement in the Query field, it returns query results.
+When there is an SQL statement in the Query field, it may return null.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Results;
 
     /**
-     * @var array Log analysis result. If `Analysis` is `False`, `null` may be returned
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @var array Execution details statistical analysis results. When there is an SQL statement in the Query field, it returns SQL statistical results; otherwise, it may return null.
+
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $AnalysisResults;
 
     /**
-     * @var array New log analysis result, which will be valid if `UseNewAnalysis` is `true`
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @var array Execution details statistical analysis results; only valid if UseNewAnalysis is true.Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $AnalysisRecords;
 
     /**
-     * @var array Column attribute of log analysis, which will be valid if `UseNewAnalysis` is `true`
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @var array Column names of analysis results, valid only if UseNewAnalysis is trueNote: This field may return null, indicating that no valid values can be obtained.
      */
     public $Columns;
 
     /**
-     * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+     * @var string The unique request ID, generated by the server, will be returned for every request (if the request fails to reach the server for other reasons, the request will not obtain a RequestId). RequestId is required for locating a problem.
      */
     public $RequestId;
 
     /**
-     * @param string $Context `Context` for loading subsequent content
-     * @param boolean $ListOver Whether all log query results are returned
-     * @param boolean $Analysis Whether the return is the analysis result
-     * @param array $ColNames If `Analysis` is `true`, column name of the analysis result will be returned; otherwise, empty content will be returned.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param array $Results Log query result. If `Analysis` is `True`, `null` may be returned
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param array $AnalysisResults Log analysis result. If `Analysis` is `False`, `null` may be returned
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param array $AnalysisRecords New log analysis result, which will be valid if `UseNewAnalysis` is `true`
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param array $Columns Column attribute of log analysis, which will be valid if `UseNewAnalysis` is `true`
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+     * @param string $Context Context for loading subsequent details
+     * @param boolean $ListOver Whether alarm execution details within a specified time range are fully returned
+     * @param boolean $Analysis Whether return value is SQL analysis result or not
+     * @param array $ColNames Column names of analysis results. If the Query statement contains an SQL query, then column names of the queried fields will be returned;Otherwise, it will be empty.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param array $Results Execution details query results.
+When there is no SQL statement in the Query field, it returns query results.
+When there is an SQL statement in the Query field, it may return null.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param array $AnalysisResults Execution details statistical analysis results. When there is an SQL statement in the Query field, it returns SQL statistical results; otherwise, it may return null.
+
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param array $AnalysisRecords Execution details statistical analysis results; only valid if UseNewAnalysis is true.Note: This field may return null, indicating that no valid values can be obtained.
+     * @param array $Columns Column names of analysis results, valid only if UseNewAnalysis is trueNote: This field may return null, indicating that no valid values can be obtained.
+     * @param string $RequestId The unique request ID, generated by the server, will be returned for every request (if the request fails to reach the server for other reasons, the request will not obtain a RequestId). RequestId is required for locating a problem.
      */
     function __construct()
     {

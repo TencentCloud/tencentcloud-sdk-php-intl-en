@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTopicName(string $TopicName) Set Log topic name
  * @method array getTags() Obtain Tag description list. This parameter is used to bind a tag to a log topic. Up to 10 tag key-value pairs are supported, and they must be unique.
  * @method void setTags(array $Tags) Set Tag description list. This parameter is used to bind a tag to a log topic. Up to 10 tag key-value pairs are supported, and they must be unique.
- * @method boolean getStatus() Obtain Whether to start collection for this log topic
- * @method void setStatus(boolean $Status) Set Whether to start collection for this log topic
+ * @method boolean getStatus() Obtain Whether the topic has log collection enabled. true: collection enabled; false: collection disabled.The console currently does not support modifying this parameter.
+ * @method void setStatus(boolean $Status) Set Whether the topic has log collection enabled. true: collection enabled; false: collection disabled.The console currently does not support modifying this parameter.
  * @method boolean getAutoSplit() Obtain Whether to enable automatic split
  * @method void setAutoSplit(boolean $AutoSplit) Set Whether to enable automatic split
  * @method integer getMaxSplitPartitions() Obtain Maximum number of partitions to split into for this topic if automatic split is enabled
@@ -40,8 +40,8 @@ use TencentCloud\Common\AbstractModel;
 A value other than `0`: The number of STANDARD storage days after log transitioning is enabled (valid only if `StorageType` is `hot`). Note: `HotPeriod` should be greater than or equal to `7` and less than `Period`.
  * @method void setHotPeriod(integer $HotPeriod) Set `0`: Disable log transitioning.
 A value other than `0`: The number of STANDARD storage days after log transitioning is enabled (valid only if `StorageType` is `hot`). Note: `HotPeriod` should be greater than or equal to `7` and less than `Period`.
- * @method boolean getIsWebTracking() Obtain Whether to enable web tracking. Valid values: `false` (disable); `true` (enable)
- * @method void setIsWebTracking(boolean $IsWebTracking) Set Whether to enable web tracking. Valid values: `false` (disable); `true` (enable)
+ * @method boolean getIsWebTracking() Obtain Free authentication switch. false: disabled; true: enabled.Once enabled, it will support specified operations for anonymous access to this log topic. For details, please see [log Topic](https://intl.cloud.tencent.com/document/product/614/41035?from_cn_redirect=1).
+ * @method void setIsWebTracking(boolean $IsWebTracking) Set Free authentication switch. false: disabled; true: enabled.Once enabled, it will support specified operations for anonymous access to this log topic. For details, please see [log Topic](https://intl.cloud.tencent.com/document/product/614/41035?from_cn_redirect=1).
  */
 class ModifyTopicRequest extends AbstractModel
 {
@@ -61,7 +61,7 @@ class ModifyTopicRequest extends AbstractModel
     public $Tags;
 
     /**
-     * @var boolean Whether to start collection for this log topic
+     * @var boolean Whether the topic has log collection enabled. true: collection enabled; false: collection disabled.The console currently does not support modifying this parameter.
      */
     public $Status;
 
@@ -92,7 +92,7 @@ A value other than `0`: The number of STANDARD storage days after log transition
     public $HotPeriod;
 
     /**
-     * @var boolean Whether to enable web tracking. Valid values: `false` (disable); `true` (enable)
+     * @var boolean Free authentication switch. false: disabled; true: enabled.Once enabled, it will support specified operations for anonymous access to this log topic. For details, please see [log Topic](https://intl.cloud.tencent.com/document/product/614/41035?from_cn_redirect=1).
      */
     public $IsWebTracking;
 
@@ -100,14 +100,14 @@ A value other than `0`: The number of STANDARD storage days after log transition
      * @param string $TopicId Log topic ID
      * @param string $TopicName Log topic name
      * @param array $Tags Tag description list. This parameter is used to bind a tag to a log topic. Up to 10 tag key-value pairs are supported, and they must be unique.
-     * @param boolean $Status Whether to start collection for this log topic
+     * @param boolean $Status Whether the topic has log collection enabled. true: collection enabled; false: collection disabled.The console currently does not support modifying this parameter.
      * @param boolean $AutoSplit Whether to enable automatic split
      * @param integer $MaxSplitPartitions Maximum number of partitions to split into for this topic if automatic split is enabled
      * @param integer $Period Lifecycle in days. Value range: 1–3600 (STANDARD storage); 7–3600 (IA storage). `3640` indicates permanent retention.
      * @param string $Describes Log topic description
      * @param integer $HotPeriod `0`: Disable log transitioning.
 A value other than `0`: The number of STANDARD storage days after log transitioning is enabled (valid only if `StorageType` is `hot`). Note: `HotPeriod` should be greater than or equal to `7` and less than `Period`.
-     * @param boolean $IsWebTracking Whether to enable web tracking. Valid values: `false` (disable); `true` (enable)
+     * @param boolean $IsWebTracking Free authentication switch. false: disabled; true: enabled.Once enabled, it will support specified operations for anonymous access to this log topic. For details, please see [log Topic](https://intl.cloud.tencent.com/document/product/614/41035?from_cn_redirect=1).
      */
     function __construct()
     {

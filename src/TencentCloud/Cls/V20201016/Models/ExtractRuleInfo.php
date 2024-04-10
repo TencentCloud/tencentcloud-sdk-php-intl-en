@@ -20,34 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Log extraction rule
  *
- * @method string getTimeKey() Obtain Time field key name. `time_key` and `time_format` must appear in pairs
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setTimeKey(string $TimeKey) Set Time field key name. `time_key` and `time_format` must appear in pairs
-Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method string getTimeKey() Obtain Key name for the time field. TikeKey and TimeFormat must appear in pairsNote: This field may return null, indicating that no valid values can be obtained.
+ * @method void setTimeKey(string $TimeKey) Set Key name for the time field. TikeKey and TimeFormat must appear in pairsNote: This field may return null, indicating that no valid values can be obtained.
  * @method string getTimeFormat() Obtain Time field format. For more information, please see the output parameters of the time format description of the `strftime` function in C language
 Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method void setTimeFormat(string $TimeFormat) Set Time field format. For more information, please see the output parameters of the time format description of the `strftime` function in C language
 Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method string getDelimiter() Obtain Delimiter for delimited log, which is valid only if `log_type` is `delimiter_log`
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setDelimiter(string $Delimiter) Set Delimiter for delimited log, which is valid only if `log_type` is `delimiter_log`
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method string getLogRegex() Obtain Full log matching rule, which is valid only if `log_type` is `fullregex_log`
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setLogRegex(string $LogRegex) Set Full log matching rule, which is valid only if `log_type` is `fullregex_log`
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method string getBeginRegex() Obtain First-Line matching rule, which is valid only if `log_type` is `multiline_log` or `fullregex_log`
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setBeginRegex(string $BeginRegex) Set First-Line matching rule, which is valid only if `log_type` is `multiline_log` or `fullregex_log`
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method array getKeys() Obtain Key name of each extracted field. An empty key indicates to discard the field. This parameter is valid only if `log_type` is `delimiter_log`. `json_log` logs use the key of JSON itself. A maximum of 100 keys are supported.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setKeys(array $Keys) Set Key name of each extracted field. An empty key indicates to discard the field. This parameter is valid only if `log_type` is `delimiter_log`. `json_log` logs use the key of JSON itself. A maximum of 100 keys are supported.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method array getFilterKeyRegex() Obtain Log keys to be filtered and the corresponding regex
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setFilterKeyRegex(array $FilterKeyRegex) Set Log keys to be filtered and the corresponding regex
-Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method string getDelimiter() Obtain Delimiter for log type. Valid only when LogType is delimiter_logNote: This field may return null, indicating that no valid values can be obtained.
+ * @method void setDelimiter(string $Delimiter) Set Delimiter for log type. Valid only when LogType is delimiter_logNote: This field may return null, indicating that no valid values can be obtained.
+ * @method string getLogRegex() Obtain Full log matching rule. Valid only if LogType is fullregex_logNote: This field may return null, indicating that no valid values can be obtained.
+ * @method void setLogRegex(string $LogRegex) Set Full log matching rule. Valid only if LogType is fullregex_logNote: This field may return null, indicating that no valid values can be obtained.
+ * @method string getBeginRegex() Obtain Line beginning matching rule, valid only if LogType is multiline_log or fullregex_logNote: This field may return null, indicating that no valid values can be obtained.
+ * @method void setBeginRegex(string $BeginRegex) Set Line beginning matching rule, valid only if LogType is multiline_log or fullregex_logNote: This field may return null, indicating that no valid values can be obtained.
+ * @method array getKeys() Obtain Key name of each extracted field. An empty key indicates discarding the field. Valid only if LogType is delimiter_log. json_log logs use the key of JSON itself. Limited to 100.Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setKeys(array $Keys) Set Key name of each extracted field. An empty key indicates discarding the field. Valid only if LogType is delimiter_log. json_log logs use the key of JSON itself. Limited to 100.Note: This field may return null, indicating that no valid values can be obtained.
+ * @method array getFilterKeyRegex() Obtain Log filter rule list (previous version), keys to be filtered in the log and their corresponding regex.Note: For LogListener version 2.9.3 and later, it is recommended to use the AdvanceFilterRules configuration for log filtering.Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setFilterKeyRegex(array $FilterKeyRegex) Set Log filter rule list (previous version), keys to be filtered in the log and their corresponding regex.Note: For LogListener version 2.9.3 and later, it is recommended to use the AdvanceFilterRules configuration for log filtering.Note: This field may return null, indicating that no valid values can be obtained.
  * @method boolean getUnMatchUpLoadSwitch() Obtain Whether to upload the logs that failed to be parsed. Valid values: `true`: yes; `false`: no
 Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method void setUnMatchUpLoadSwitch(boolean $UnMatchUpLoadSwitch) Set Whether to upload the logs that failed to be parsed. Valid values: `true`: yes; `false`: no
@@ -56,10 +44,8 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method void setUnMatchLogKey(string $UnMatchLogKey) Set Unmatched log key
 Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method integer getBacktracking() Obtain Size of the data to be rewound in incremental collection mode. Default value: -1 (full collection)
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setBacktracking(integer $Backtracking) Set Size of the data to be rewound in incremental collection mode. Default value: -1 (full collection)
-Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method integer getBacktracking() Obtain Backtracking data volume under incremental collection pattern, default -1 indicates full collection; other non-negative numbers indicate incremental collection (collect logs backward from the latest position by ${Backtracking} bytes) with a maximum support of 1073741824 (1G).Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setBacktracking(integer $Backtracking) Set Backtracking data volume under incremental collection pattern, default -1 indicates full collection; other non-negative numbers indicate incremental collection (collect logs backward from the latest position by ${Backtracking} bytes) with a maximum support of 1073741824 (1G).Note: This field may return null, indicating that no valid values can be obtained.
  * @method integer getIsGBK() Obtain Whether to be encoded in GBK format. Valid values: `0` (No) and `1` (Yes).
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setIsGBK(integer $IsGBK) Set Whether to be encoded in GBK format. Valid values: `0` (No) and `1` (Yes).
@@ -106,12 +92,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method array getMetaTags() Obtain User-defined metadata, which is required when `MetadataType` is set to `2`.
  * @method void setMetaTags(array $MetaTags) Set User-defined metadata, which is required when `MetadataType` is set to `2`.
+ * @method array getEventLogRules() Obtain Windows event log collection
+ * @method void setEventLogRules(array $EventLogRules) Set Windows event log collection
  */
 class ExtractRuleInfo extends AbstractModel
 {
     /**
-     * @var string Time field key name. `time_key` and `time_format` must appear in pairs
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @var string Key name for the time field. TikeKey and TimeFormat must appear in pairsNote: This field may return null, indicating that no valid values can be obtained.
      */
     public $TimeKey;
 
@@ -122,32 +109,27 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     public $TimeFormat;
 
     /**
-     * @var string Delimiter for delimited log, which is valid only if `log_type` is `delimiter_log`
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @var string Delimiter for log type. Valid only when LogType is delimiter_logNote: This field may return null, indicating that no valid values can be obtained.
      */
     public $Delimiter;
 
     /**
-     * @var string Full log matching rule, which is valid only if `log_type` is `fullregex_log`
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @var string Full log matching rule. Valid only if LogType is fullregex_logNote: This field may return null, indicating that no valid values can be obtained.
      */
     public $LogRegex;
 
     /**
-     * @var string First-Line matching rule, which is valid only if `log_type` is `multiline_log` or `fullregex_log`
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @var string Line beginning matching rule, valid only if LogType is multiline_log or fullregex_logNote: This field may return null, indicating that no valid values can be obtained.
      */
     public $BeginRegex;
 
     /**
-     * @var array Key name of each extracted field. An empty key indicates to discard the field. This parameter is valid only if `log_type` is `delimiter_log`. `json_log` logs use the key of JSON itself. A maximum of 100 keys are supported.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array Key name of each extracted field. An empty key indicates discarding the field. Valid only if LogType is delimiter_log. json_log logs use the key of JSON itself. Limited to 100.Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Keys;
 
     /**
-     * @var array Log keys to be filtered and the corresponding regex
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @var array Log filter rule list (previous version), keys to be filtered in the log and their corresponding regex.Note: For LogListener version 2.9.3 and later, it is recommended to use the AdvanceFilterRules configuration for log filtering.Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $FilterKeyRegex;
 
@@ -164,8 +146,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     public $UnMatchLogKey;
 
     /**
-     * @var integer Size of the data to be rewound in incremental collection mode. Default value: -1 (full collection)
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @var integer Backtracking data volume under incremental collection pattern, default -1 indicates full collection; other non-negative numbers indicate incremental collection (collect logs backward from the latest position by ${Backtracking} bytes) with a maximum support of 1073741824 (1G).Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Backtracking;
 
@@ -225,26 +206,24 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $MetaTags;
 
     /**
-     * @param string $TimeKey Time field key name. `time_key` and `time_format` must appear in pairs
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @var array Windows event log collection
+     */
+    public $EventLogRules;
+
+    /**
+     * @param string $TimeKey Key name for the time field. TikeKey and TimeFormat must appear in pairsNote: This field may return null, indicating that no valid values can be obtained.
      * @param string $TimeFormat Time field format. For more information, please see the output parameters of the time format description of the `strftime` function in C language
 Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param string $Delimiter Delimiter for delimited log, which is valid only if `log_type` is `delimiter_log`
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param string $LogRegex Full log matching rule, which is valid only if `log_type` is `fullregex_log`
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param string $BeginRegex First-Line matching rule, which is valid only if `log_type` is `multiline_log` or `fullregex_log`
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param array $Keys Key name of each extracted field. An empty key indicates to discard the field. This parameter is valid only if `log_type` is `delimiter_log`. `json_log` logs use the key of JSON itself. A maximum of 100 keys are supported.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param array $FilterKeyRegex Log keys to be filtered and the corresponding regex
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param string $Delimiter Delimiter for log type. Valid only when LogType is delimiter_logNote: This field may return null, indicating that no valid values can be obtained.
+     * @param string $LogRegex Full log matching rule. Valid only if LogType is fullregex_logNote: This field may return null, indicating that no valid values can be obtained.
+     * @param string $BeginRegex Line beginning matching rule, valid only if LogType is multiline_log or fullregex_logNote: This field may return null, indicating that no valid values can be obtained.
+     * @param array $Keys Key name of each extracted field. An empty key indicates discarding the field. Valid only if LogType is delimiter_log. json_log logs use the key of JSON itself. Limited to 100.Note: This field may return null, indicating that no valid values can be obtained.
+     * @param array $FilterKeyRegex Log filter rule list (previous version), keys to be filtered in the log and their corresponding regex.Note: For LogListener version 2.9.3 and later, it is recommended to use the AdvanceFilterRules configuration for log filtering.Note: This field may return null, indicating that no valid values can be obtained.
      * @param boolean $UnMatchUpLoadSwitch Whether to upload the logs that failed to be parsed. Valid values: `true`: yes; `false`: no
 Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param string $UnMatchLogKey Unmatched log key
 Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param integer $Backtracking Size of the data to be rewound in incremental collection mode. Default value: -1 (full collection)
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param integer $Backtracking Backtracking data volume under incremental collection pattern, default -1 indicates full collection; other non-negative numbers indicate incremental collection (collect logs backward from the latest position by ${Backtracking} bytes) with a maximum support of 1073741824 (1G).Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $IsGBK Whether to be encoded in GBK format. Valid values: `0` (No) and `1` (Yes).
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $JsonStandard Whether to be formatted as JSON (standard). Valid values: `0` (No) and `1` (Yes).
@@ -268,6 +247,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $PathRegex Regular expression of the collection configuration path, which is required when `MetadataType` is set to `3`
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param array $MetaTags User-defined metadata, which is required when `MetadataType` is set to `2`.
+     * @param array $EventLogRules Windows event log collection
      */
     function __construct()
     {
@@ -361,6 +341,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 $obj = new MetaTagInfo();
                 $obj->deserialize($value);
                 array_push($this->MetaTags, $obj);
+            }
+        }
+
+        if (array_key_exists("EventLogRules",$param) and $param["EventLogRules"] !== null) {
+            $this->EventLogRules = [];
+            foreach ($param["EventLogRules"] as $key => $value){
+                $obj = new EventLog();
+                $obj->deserialize($value);
+                array_push($this->EventLogRules, $obj);
             }
         }
     }
