@@ -108,98 +108,52 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCloseTime(string $CloseTime) Set The time when an instance start to be isolated
  * @method integer getSlaveReadWeight() Obtain Read weight of a replica node
  * @method void setSlaveReadWeight(integer $SlaveReadWeight) Set Read weight of a replica node
- * @method array getInstanceTags() Obtain Instance tag information
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setInstanceTags(array $InstanceTags) Set Instance tag information
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method string getProjectName() Obtain Project name
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setProjectName(string $ProjectName) Set Project name
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method boolean getNoAuth() Obtain Whether an instance is password-free. <ul><li>`true`: Yes. </li><li>`false`: No. </li></ul>
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setNoAuth(boolean $NoAuth) Set Whether an instance is password-free. <ul><li>`true`: Yes. </li><li>`false`: No. </li></ul>
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method integer getClientLimit() Obtain Number of client connections
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setClientLimit(integer $ClientLimit) Set Number of client connections
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method integer getDtsStatus() Obtain DTS status (internal parameter, which can be ignored)
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setDtsStatus(integer $DtsStatus) Set DTS status (internal parameter, which can be ignored)
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method integer getNetLimit() Obtain Upper shard bandwidth limit in MB
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setNetLimit(integer $NetLimit) Set Upper shard bandwidth limit in MB
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method integer getPasswordFree() Obtain Password-free instance flag (internal parameter, which can be ignored)
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setPasswordFree(integer $PasswordFree) Set Password-free instance flag (internal parameter, which can be ignored)
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method string getVip6() Obtain Due to the naming irregularity of this parameter, it is recommended to use the parameter IPv6 instead. Internal parameters, which can be ignored by users.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setVip6(string $Vip6) Set Due to the naming irregularity of this parameter, it is recommended to use the parameter IPv6 instead. Internal parameters, which can be ignored by users.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getIPv6() Obtain Internal parameters, which can be ignored by users.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setIPv6(string $IPv6) Set Internal parameters, which can be ignored by users.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getReadOnly() Obtain Read-only instance flag (internal parameter, which can be ignored)
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setReadOnly(integer $ReadOnly) Set Read-only instance flag (internal parameter, which can be ignored)
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method string getRemainBandwidthDuration() Obtain Internal parameter, which can be ignored.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setRemainBandwidthDuration(string $RemainBandwidthDuration) Set Internal parameter, which can be ignored.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method integer getDiskSize() Obtain This parameter can be ignored for Redis instance.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setDiskSize(integer $DiskSize) Set This parameter can be ignored for Redis instance.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method string getMonitorVersion() Obtain Monitoring granularity. <ul><li>`1m`: Monitoring at one-minute granularity. This granularity has been disused. For more information, see [1-Minute Granularity Will Be Disused](https://www.tencentcloud.com/document/product/239/50440).</li><li>`5s`: Monitoring at five-second granularity.</li></ul>
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setMonitorVersion(string $MonitorVersion) Set Monitoring granularity. <ul><li>`1m`: Monitoring at one-minute granularity. This granularity has been disused. For more information, see [1-Minute Granularity Will Be Disused](https://www.tencentcloud.com/document/product/239/50440).</li><li>`5s`: Monitoring at five-second granularity.</li></ul>
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getClientLimitMin() Obtain The minimum number of max client connections
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setClientLimitMin(integer $ClientLimitMin) Set The minimum number of max client connections
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method integer getClientLimitMax() Obtain The maximum number of max client connections
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setClientLimitMax(integer $ClientLimitMax) Set The maximum number of max client connections
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method array getNodeSet() Obtain Instance node details
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setNodeSet(array $NodeSet) Set Instance node details
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method string getRegion() Obtain Information of the region where the instance is deployed, such as `ap-guangzhou`.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setRegion(string $Region) Set Information of the region where the instance is deployed, such as `ap-guangzhou`.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method string getWanAddress() Obtain Public IP
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setWanAddress(string $WanAddress) Set Public IP
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method string getPolarisServer() Obtain Polaris service address, which is for internal use.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setPolarisServer(string $PolarisServer) Set Polaris service address, which is for internal use.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getCurrentProxyVersion() Obtain The current proxy version of an instance
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setCurrentProxyVersion(string $CurrentProxyVersion) Set The current proxy version of an instance
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method string getCurrentRedisVersion() Obtain The current cache minor version of an instance
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setCurrentRedisVersion(string $CurrentRedisVersion) Set The current cache minor version of an instance
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method string getUpgradeProxyVersion() Obtain Proxy version, which can be upgraded for the instance
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setUpgradeProxyVersion(string $UpgradeProxyVersion) Set Proxy version, which can be upgraded for the instance
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method string getUpgradeRedisVersion() Obtain Cache minor version, which can be upgraded for the instance
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setUpgradeRedisVersion(string $UpgradeRedisVersion) Set Cache minor version, which can be upgraded for the instance
-Note: This field may return null, indicating that no valid value can be obtained.
+ * @method array getInstanceTags() Obtain Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setInstanceTags(array $InstanceTags) Set Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getProjectName() Obtain Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setProjectName(string $ProjectName) Set Note: This field may return null, indicating that no valid values can be obtained.
+ * @method boolean getNoAuth() Obtain Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setNoAuth(boolean $NoAuth) Set Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getClientLimit() Obtain Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setClientLimit(integer $ClientLimit) Set Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getDtsStatus() Obtain Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setDtsStatus(integer $DtsStatus) Set Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getNetLimit() Obtain Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setNetLimit(integer $NetLimit) Set Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getPasswordFree() Obtain Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setPasswordFree(integer $PasswordFree) Set Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getVip6() Obtain Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setVip6(string $Vip6) Set Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getIPv6() Obtain Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setIPv6(string $IPv6) Set Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getReadOnly() Obtain Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setReadOnly(integer $ReadOnly) Set Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getRemainBandwidthDuration() Obtain Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setRemainBandwidthDuration(string $RemainBandwidthDuration) Set Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getDiskSize() Obtain Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setDiskSize(integer $DiskSize) Set Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getMonitorVersion() Obtain Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setMonitorVersion(string $MonitorVersion) Set Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getClientLimitMin() Obtain Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setClientLimitMin(integer $ClientLimitMin) Set Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getClientLimitMax() Obtain Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setClientLimitMax(integer $ClientLimitMax) Set Note: This field may return null, indicating that no valid values can be obtained.
+ * @method array getNodeSet() Obtain Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setNodeSet(array $NodeSet) Set Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getRegion() Obtain Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setRegion(string $Region) Set Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getWanAddress() Obtain Note: This field may return null, indicating that no valid value can be obtained.
+ * @method void setWanAddress(string $WanAddress) Set Note: This field may return null, indicating that no valid value can be obtained.
+ * @method string getPolarisServer() Obtain Note: This field may return null, indicating that no valid value can be obtained.
+ * @method void setPolarisServer(string $PolarisServer) Set Note: This field may return null, indicating that no valid value can be obtained.
+ * @method string getCurrentProxyVersion() Obtain Note: This field may return null, indicating that no valid value can be obtained.
+ * @method void setCurrentProxyVersion(string $CurrentProxyVersion) Set Note: This field may return null, indicating that no valid value can be obtained.
+ * @method string getCurrentRedisVersion() Obtain Note: This field may return null, indicating that no valid value can be obtained.
+ * @method void setCurrentRedisVersion(string $CurrentRedisVersion) Set Note: This field may return null, indicating that no valid value can be obtained.
+ * @method string getUpgradeProxyVersion() Obtain Note: This field may return null, indicating that no valid value can be obtained.
+ * @method void setUpgradeProxyVersion(string $UpgradeProxyVersion) Set Note: This field may return null, indicating that no valid value can be obtained.
+ * @method string getUpgradeRedisVersion() Obtain Note: This field may return null, indicating that no valid value can be obtained.
+ * @method void setUpgradeRedisVersion(string $UpgradeRedisVersion) Set Note: This field may return null, indicating that no valid value can be obtained.
  */
 class InstanceSet extends AbstractModel
 {
@@ -380,140 +334,117 @@ class InstanceSet extends AbstractModel
     public $SlaveReadWeight;
 
     /**
-     * @var array Instance tag information
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @var array Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $InstanceTags;
 
     /**
-     * @var string Project name
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @var string Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ProjectName;
 
     /**
-     * @var boolean Whether an instance is password-free. <ul><li>`true`: Yes. </li><li>`false`: No. </li></ul>
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @var boolean Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $NoAuth;
 
     /**
-     * @var integer Number of client connections
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @var integer Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ClientLimit;
 
     /**
-     * @var integer DTS status (internal parameter, which can be ignored)
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @var integer Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $DtsStatus;
 
     /**
-     * @var integer Upper shard bandwidth limit in MB
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @var integer Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $NetLimit;
 
     /**
-     * @var integer Password-free instance flag (internal parameter, which can be ignored)
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @var integer Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $PasswordFree;
 
     /**
-     * @var string Due to the naming irregularity of this parameter, it is recommended to use the parameter IPv6 instead. Internal parameters, which can be ignored by users.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Vip6;
 
     /**
-     * @var string Internal parameters, which can be ignored by users.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $IPv6;
 
     /**
-     * @var integer Read-only instance flag (internal parameter, which can be ignored)
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @var integer Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ReadOnly;
 
     /**
-     * @var string Internal parameter, which can be ignored.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @var string Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $RemainBandwidthDuration;
 
     /**
-     * @var integer This parameter can be ignored for Redis instance.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @var integer Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $DiskSize;
 
     /**
-     * @var string Monitoring granularity. <ul><li>`1m`: Monitoring at one-minute granularity. This granularity has been disused. For more information, see [1-Minute Granularity Will Be Disused](https://www.tencentcloud.com/document/product/239/50440).</li><li>`5s`: Monitoring at five-second granularity.</li></ul>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $MonitorVersion;
 
     /**
-     * @var integer The minimum number of max client connections
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @var integer Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ClientLimitMin;
 
     /**
-     * @var integer The maximum number of max client connections
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @var integer Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ClientLimitMax;
 
     /**
-     * @var array Instance node details
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @var array Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $NodeSet;
 
     /**
-     * @var string Information of the region where the instance is deployed, such as `ap-guangzhou`.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @var string Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Region;
 
     /**
-     * @var string Public IP
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @var string Note: This field may return null, indicating that no valid value can be obtained.
      */
     public $WanAddress;
 
     /**
-     * @var string Polaris service address, which is for internal use.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Note: This field may return null, indicating that no valid value can be obtained.
      */
     public $PolarisServer;
 
     /**
-     * @var string The current proxy version of an instance
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @var string Note: This field may return null, indicating that no valid value can be obtained.
      */
     public $CurrentProxyVersion;
 
     /**
-     * @var string The current cache minor version of an instance
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @var string Note: This field may return null, indicating that no valid value can be obtained.
      */
     public $CurrentRedisVersion;
 
     /**
-     * @var string Proxy version, which can be upgraded for the instance
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @var string Note: This field may return null, indicating that no valid value can be obtained.
      */
     public $UpgradeProxyVersion;
 
     /**
-     * @var string Cache minor version, which can be upgraded for the instance
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @var string Note: This field may return null, indicating that no valid value can be obtained.
      */
     public $UpgradeRedisVersion;
 
@@ -562,52 +493,29 @@ Note: This field may return null, indicating that no valid value can be obtained
      * @param integer $PriceId Billing ID
      * @param string $CloseTime The time when an instance start to be isolated
      * @param integer $SlaveReadWeight Read weight of a replica node
-     * @param array $InstanceTags Instance tag information
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param string $ProjectName Project name
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param boolean $NoAuth Whether an instance is password-free. <ul><li>`true`: Yes. </li><li>`false`: No. </li></ul>
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param integer $ClientLimit Number of client connections
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param integer $DtsStatus DTS status (internal parameter, which can be ignored)
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param integer $NetLimit Upper shard bandwidth limit in MB
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param integer $PasswordFree Password-free instance flag (internal parameter, which can be ignored)
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param string $Vip6 Due to the naming irregularity of this parameter, it is recommended to use the parameter IPv6 instead. Internal parameters, which can be ignored by users.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $IPv6 Internal parameters, which can be ignored by users.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $ReadOnly Read-only instance flag (internal parameter, which can be ignored)
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param string $RemainBandwidthDuration Internal parameter, which can be ignored.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param integer $DiskSize This parameter can be ignored for Redis instance.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param string $MonitorVersion Monitoring granularity. <ul><li>`1m`: Monitoring at one-minute granularity. This granularity has been disused. For more information, see [1-Minute Granularity Will Be Disused](https://www.tencentcloud.com/document/product/239/50440).</li><li>`5s`: Monitoring at five-second granularity.</li></ul>
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $ClientLimitMin The minimum number of max client connections
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param integer $ClientLimitMax The maximum number of max client connections
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param array $NodeSet Instance node details
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param string $Region Information of the region where the instance is deployed, such as `ap-guangzhou`.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param string $WanAddress Public IP
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param string $PolarisServer Polaris service address, which is for internal use.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $CurrentProxyVersion The current proxy version of an instance
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param string $CurrentRedisVersion The current cache minor version of an instance
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param string $UpgradeProxyVersion Proxy version, which can be upgraded for the instance
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param string $UpgradeRedisVersion Cache minor version, which can be upgraded for the instance
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @param array $InstanceTags Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $ProjectName Note: This field may return null, indicating that no valid values can be obtained.
+     * @param boolean $NoAuth Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $ClientLimit Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $DtsStatus Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $NetLimit Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $PasswordFree Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $Vip6 Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $IPv6 Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $ReadOnly Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $RemainBandwidthDuration Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $DiskSize Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $MonitorVersion Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $ClientLimitMin Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $ClientLimitMax Note: This field may return null, indicating that no valid values can be obtained.
+     * @param array $NodeSet Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $Region Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $WanAddress Note: This field may return null, indicating that no valid value can be obtained.
+     * @param string $PolarisServer Note: This field may return null, indicating that no valid value can be obtained.
+     * @param string $CurrentProxyVersion Note: This field may return null, indicating that no valid value can be obtained.
+     * @param string $CurrentRedisVersion Note: This field may return null, indicating that no valid value can be obtained.
+     * @param string $UpgradeProxyVersion Note: This field may return null, indicating that no valid value can be obtained.
+     * @param string $UpgradeRedisVersion Note: This field may return null, indicating that no valid value can be obtained.
      */
     function __construct()
     {

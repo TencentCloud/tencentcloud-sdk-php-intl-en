@@ -20,82 +20,66 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Sub-account information
  *
- * @method string getInstanceId() Obtain Instance ID 
-Note:  This field may return null, indicating that no valid values can be obtained.
- * @method void setInstanceId(string $InstanceId) Set Instance ID 
-Note:  This field may return null, indicating that no valid values can be obtained.
- * @method string getAccountName() Obtain Account name 
-Note:  This field may return null, indicating that no valid values can be obtained.
- * @method void setAccountName(string $AccountName) Set Account name 
-Note:  This field may return null, indicating that no valid values can be obtained.
- * @method string getRemark() Obtain Account description information 
-Note:  This field may return null, indicating that no valid values can be obtained.
- * @method void setRemark(string $Remark) Set Account description information 
-Note:  This field may return null, indicating that no valid values can be obtained.
- * @method string getPrivilege() Obtain Read/write permission policy. Valid values: `r` (read-only),  `w` (write-only),  `rw`  (read/write). 
-Note:  This field may return null, indicating that no valid values can be obtained.
- * @method void setPrivilege(string $Privilege) Set Read/write permission policy. Valid values: `r` (read-only),  `w` (write-only),  `rw`  (read/write). 
-Note:  This field may return null, indicating that no valid values can be obtained.
- * @method array getReadonlyPolicy() Obtain Read-only routing policy. Valid values: `master` (master node),  `replication`  (replica node). 
-Note:  This field may return null, indicating that no valid values can be obtained.
- * @method void setReadonlyPolicy(array $ReadonlyPolicy) Set Read-only routing policy. Valid values: `master` (master node),  `replication`  (replica node). 
-Note:  This field may return null, indicating that no valid values can be obtained.
- * @method integer getStatus() Obtain Sub-account status. Valid values:  `1` (being changed),  `2` (valid). `4` (deleted). 
-Note:  This field may return null, indicating that no valid values can be obtained.
- * @method void setStatus(integer $Status) Set Sub-account status. Valid values:  `1` (being changed),  `2` (valid). `4` (deleted). 
-Note:  This field may return null, indicating that no valid values can be obtained.
+ * @method string getInstanceId() Obtain Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setInstanceId(string $InstanceId) Set Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getAccountName() Obtain Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setAccountName(string $AccountName) Set Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getRemark() Obtain Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setRemark(string $Remark) Set Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getPrivilege() Obtain Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setPrivilege(string $Privilege) Set Note: This field may return null, indicating that no valid values can be obtained.
+ * @method array getReadonlyPolicy() Obtain Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setReadonlyPolicy(array $ReadonlyPolicy) Set Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getStatus() Obtain Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setStatus(integer $Status) Set Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getCreateTime() Obtain Creation time.Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setCreateTime(string $CreateTime) Set Creation time.Note: This field may return null, indicating that no valid values can be obtained.
  */
 class Account extends AbstractModel
 {
     /**
-     * @var string Instance ID 
-Note:  This field may return null, indicating that no valid values can be obtained.
+     * @var string Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $InstanceId;
 
     /**
-     * @var string Account name 
-Note:  This field may return null, indicating that no valid values can be obtained.
+     * @var string Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $AccountName;
 
     /**
-     * @var string Account description information 
-Note:  This field may return null, indicating that no valid values can be obtained.
+     * @var string Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Remark;
 
     /**
-     * @var string Read/write permission policy. Valid values: `r` (read-only),  `w` (write-only),  `rw`  (read/write). 
-Note:  This field may return null, indicating that no valid values can be obtained.
+     * @var string Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Privilege;
 
     /**
-     * @var array Read-only routing policy. Valid values: `master` (master node),  `replication`  (replica node). 
-Note:  This field may return null, indicating that no valid values can be obtained.
+     * @var array Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ReadonlyPolicy;
 
     /**
-     * @var integer Sub-account status. Valid values:  `1` (being changed),  `2` (valid). `4` (deleted). 
-Note:  This field may return null, indicating that no valid values can be obtained.
+     * @var integer Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Status;
 
     /**
-     * @param string $InstanceId Instance ID 
-Note:  This field may return null, indicating that no valid values can be obtained.
-     * @param string $AccountName Account name 
-Note:  This field may return null, indicating that no valid values can be obtained.
-     * @param string $Remark Account description information 
-Note:  This field may return null, indicating that no valid values can be obtained.
-     * @param string $Privilege Read/write permission policy. Valid values: `r` (read-only),  `w` (write-only),  `rw`  (read/write). 
-Note:  This field may return null, indicating that no valid values can be obtained.
-     * @param array $ReadonlyPolicy Read-only routing policy. Valid values: `master` (master node),  `replication`  (replica node). 
-Note:  This field may return null, indicating that no valid values can be obtained.
-     * @param integer $Status Sub-account status. Valid values:  `1` (being changed),  `2` (valid). `4` (deleted). 
-Note:  This field may return null, indicating that no valid values can be obtained.
+     * @var string Creation time.Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $CreateTime;
+
+    /**
+     * @param string $InstanceId Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $AccountName Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $Remark Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $Privilege Note: This field may return null, indicating that no valid values can be obtained.
+     * @param array $ReadonlyPolicy Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $Status Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $CreateTime Creation time.Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -132,6 +116,10 @@ Note:  This field may return null, indicating that no valid values can be obtain
 
         if (array_key_exists("Status",$param) and $param["Status"] !== null) {
             $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
+            $this->CreateTime = $param["CreateTime"];
         }
     }
 }
