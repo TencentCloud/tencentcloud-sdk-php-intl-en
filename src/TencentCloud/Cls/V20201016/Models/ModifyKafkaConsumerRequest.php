@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getFromTopicId() Obtain Log Topic ID
  * @method void setFromTopicId(string $FromTopicId) Set Log Topic ID
- * @method integer getCompression() Obtain Compression mode [0:NONE；2:SNAPPY；3:LZ4]
- * @method void setCompression(integer $Compression) Set Compression mode [0:NONE；2:SNAPPY；3:LZ4]
+ * @method integer getCompression() Obtain Compression mode [0: NONE; 2: SNAPPY; 3: LZ4]
+ * @method void setCompression(integer $Compression) Set Compression mode [0: NONE; 2: SNAPPY; 3: LZ4]
  * @method KafkaConsumerContent getConsumerContent() Obtain Kafka protocol consumer data format
  * @method void setConsumerContent(KafkaConsumerContent $ConsumerContent) Set Kafka protocol consumer data format
  */
@@ -35,7 +35,7 @@ class ModifyKafkaConsumerRequest extends AbstractModel
     public $FromTopicId;
 
     /**
-     * @var integer Compression mode [0:NONE；2:SNAPPY；3:LZ4]
+     * @var integer Compression mode [0: NONE; 2: SNAPPY; 3: LZ4]
      */
     public $Compression;
 
@@ -46,7 +46,7 @@ class ModifyKafkaConsumerRequest extends AbstractModel
 
     /**
      * @param string $FromTopicId Log Topic ID
-     * @param integer $Compression Compression mode [0:NONE；2:SNAPPY；3:LZ4]
+     * @param integer $Compression Compression mode [0: NONE; 2: SNAPPY; 3: LZ4]
      * @param KafkaConsumerContent $ConsumerContent Kafka protocol consumer data format
      */
     function __construct()

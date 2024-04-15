@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getTaskId() Obtain Task ID
  * @method void setTaskId(string $TaskId) Set Task ID
- * @method string getSrcTopicId() Obtain Source Log Topic
- * @method void setSrcTopicId(string $SrcTopicId) Set Source Log Topic
+ * @method string getSrcTopicId() Obtain Source log topic
+ * @method void setSrcTopicId(string $SrcTopicId) Set Source log topic
  * @method integer getEnableFlag() Obtain Task start status. 1: Enabled, 2: Disabled
  * @method void setEnableFlag(integer $EnableFlag) Set Task start status. 1: Enabled, 2: Disabled
  * @method ScheduledSqlResouceInfo getDstResource() Obtain Target log topic for scheduled SQL analysis
@@ -51,7 +51,7 @@ class ModifyScheduledSqlRequest extends AbstractModel
     public $TaskId;
 
     /**
-     * @var string Source Log Topic
+     * @var string Source log topic
      */
     public $SrcTopicId;
 
@@ -102,7 +102,7 @@ class ModifyScheduledSqlRequest extends AbstractModel
 
     /**
      * @param string $TaskId Task ID
-     * @param string $SrcTopicId Source Log Topic
+     * @param string $SrcTopicId Source log topic
      * @param integer $EnableFlag Task start status. 1: Enabled, 2: Disabled
      * @param ScheduledSqlResouceInfo $DstResource Target log topic for scheduled SQL analysis
      * @param string $ScheduledSqlContent Queries statements

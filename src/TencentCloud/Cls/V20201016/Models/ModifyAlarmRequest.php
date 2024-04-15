@@ -26,20 +26,20 @@ use TencentCloud\Common\AbstractModel;
  * @method void setName(string $Name) Set Alarm policy name
  * @method MonitorTime getMonitorTime() Obtain Monitoring task running time point
  * @method void setMonitorTime(MonitorTime $MonitorTime) Set Monitoring task running time point
- * @method string getCondition() Obtain Trigger condition.Note:- Condition and AlarmLevel are one set of configurations, MultiConditions is another set of configurations. The two sets of configurations are mutually exclusive.
- * @method void setCondition(string $Condition) Set Trigger condition.Note:- Condition and AlarmLevel are one set of configurations, MultiConditions is another set of configurations. The two sets of configurations are mutually exclusive.
+ * @method string getCondition() Obtain Trigger condition. Note: - Condition and AlarmLevel are one set of configurations, MultiConditions is another set of configurations. The two sets of configurations are mutually exclusive.
+ * @method void setCondition(string $Condition) Set Trigger condition. Note: - Condition and AlarmLevel are one set of configurations, MultiConditions is another set of configurations. The two sets of configurations are mutually exclusive.
  * @method integer getAlarmLevel() Obtain Alarm level.0: Warning (Warn); 1: Reminder (Info); 2: Urgent (Critical)
 
-Note:- Condition and AlarmLevel are one set of configurations, MultiConditions is another set of configurations. The two sets of configurations are mutually exclusive.
+Note: - Condition and AlarmLevel are one set of configurations, MultiConditions is another set of configurations. The two sets of configurations are mutually exclusive.
  * @method void setAlarmLevel(integer $AlarmLevel) Set Alarm level.0: Warning (Warn); 1: Reminder (Info); 2: Urgent (Critical)
 
-Note:- Condition and AlarmLevel are one set of configurations, MultiConditions is another set of configurations. The two sets of configurations are mutually exclusive.
- * @method array getMultiConditions() Obtain Multiple ttrigger conditions.Note:- Condition and AlarmLevel are one set of configurations, MultiConditions is another set of configurations. The two sets of configurations are mutually exclusive.
- * @method void setMultiConditions(array $MultiConditions) Set Multiple ttrigger conditions.Note:- Condition and AlarmLevel are one set of configurations, MultiConditions is another set of configurations. The two sets of configurations are mutually exclusive.
- * @method integer getTriggerCount() Obtain Alarm persistence cycle. An alarm will be triggered only after the corresponding trigger condition is met for the number of times specified by `TriggerCount`. Value range: 1–10.
- * @method void setTriggerCount(integer $TriggerCount) Set Alarm persistence cycle. An alarm will be triggered only after the corresponding trigger condition is met for the number of times specified by `TriggerCount`. Value range: 1–10.
- * @method integer getAlarmPeriod() Obtain Repeated alarm interval in minutes. Value range: 0–1440.
- * @method void setAlarmPeriod(integer $AlarmPeriod) Set Repeated alarm interval in minutes. Value range: 0–1440.
+Note: - Condition and AlarmLevel are one set of configurations, MultiConditions is another set of configurations. The two sets of configurations are mutually exclusive.
+ * @method array getMultiConditions() Obtain Multiple trigger conditions. Note: - Condition and AlarmLevel are one set of configurations, MultiConditions is another set of configurations. The two sets of configurations are mutually exclusive.
+ * @method void setMultiConditions(array $MultiConditions) Set Multiple trigger conditions. Note: - Condition and AlarmLevel are one set of configurations, MultiConditions is another set of configurations. The two sets of configurations are mutually exclusive.
+ * @method integer getTriggerCount() Obtain Alarm persistence cycle. An alarm will be triggered only after the corresponding trigger condition is met for the number of times specified by `TriggerCount`. Value range: 1 to 10
+ * @method void setTriggerCount(integer $TriggerCount) Set Alarm persistence cycle. An alarm will be triggered only after the corresponding trigger condition is met for the number of times specified by `TriggerCount`. Value range: 1 to 10
+ * @method integer getAlarmPeriod() Obtain Repeated alarm interval in minutes. Value range: 0 to 1440
+ * @method void setAlarmPeriod(integer $AlarmPeriod) Set Repeated alarm interval in minutes. Value range: 0 to 1440
  * @method array getAlarmNoticeIds() Obtain List of associated alarm notification templates
  * @method void setAlarmNoticeIds(array $AlarmNoticeIds) Set List of associated alarm notification templates
  * @method array getAlarmTargets() Obtain Monitoring object list
@@ -54,8 +54,8 @@ Note:- Condition and AlarmLevel are one set of configurations, MultiConditions i
  * @method void setCallBack(CallBackInfo $CallBack) Set Custom callback
  * @method array getAnalysis() Obtain Multi-Dimensional analysis
  * @method void setAnalysis(array $Analysis) Set Multi-Dimensional analysis
- * @method boolean getGroupTriggerStatus() Obtain Group trigger status. true: enabled, false: disabled (default)
- * @method void setGroupTriggerStatus(boolean $GroupTriggerStatus) Set Group trigger status. true: enabled, false: disabled (default)
+ * @method boolean getGroupTriggerStatus() Obtain Group trigger status. true: enabled; false: disabled (default)
+ * @method void setGroupTriggerStatus(boolean $GroupTriggerStatus) Set Group trigger status. true: enabled; false: disabled (default)
  * @method array getGroupTriggerCondition() Obtain Grouping trigger conditions.
  * @method void setGroupTriggerCondition(array $GroupTriggerCondition) Set Grouping trigger conditions.
  * @method array getTags() Obtain Tag description list, by specifying this parameter, you can simultaneously bind a Tag to the corresponding alarm policy. Up to 10 Tag key-value pairs are supported, and they must be unique.
@@ -87,29 +87,29 @@ class ModifyAlarmRequest extends AbstractModel
     public $MonitorTime;
 
     /**
-     * @var string Trigger condition.Note:- Condition and AlarmLevel are one set of configurations, MultiConditions is another set of configurations. The two sets of configurations are mutually exclusive.
+     * @var string Trigger condition. Note: - Condition and AlarmLevel are one set of configurations, MultiConditions is another set of configurations. The two sets of configurations are mutually exclusive.
      */
     public $Condition;
 
     /**
      * @var integer Alarm level.0: Warning (Warn); 1: Reminder (Info); 2: Urgent (Critical)
 
-Note:- Condition and AlarmLevel are one set of configurations, MultiConditions is another set of configurations. The two sets of configurations are mutually exclusive.
+Note: - Condition and AlarmLevel are one set of configurations, MultiConditions is another set of configurations. The two sets of configurations are mutually exclusive.
      */
     public $AlarmLevel;
 
     /**
-     * @var array Multiple ttrigger conditions.Note:- Condition and AlarmLevel are one set of configurations, MultiConditions is another set of configurations. The two sets of configurations are mutually exclusive.
+     * @var array Multiple trigger conditions. Note: - Condition and AlarmLevel are one set of configurations, MultiConditions is another set of configurations. The two sets of configurations are mutually exclusive.
      */
     public $MultiConditions;
 
     /**
-     * @var integer Alarm persistence cycle. An alarm will be triggered only after the corresponding trigger condition is met for the number of times specified by `TriggerCount`. Value range: 1–10.
+     * @var integer Alarm persistence cycle. An alarm will be triggered only after the corresponding trigger condition is met for the number of times specified by `TriggerCount`. Value range: 1 to 10
      */
     public $TriggerCount;
 
     /**
-     * @var integer Repeated alarm interval in minutes. Value range: 0–1440.
+     * @var integer Repeated alarm interval in minutes. Value range: 0 to 1440
      */
     public $AlarmPeriod;
 
@@ -149,7 +149,7 @@ Note:- Condition and AlarmLevel are one set of configurations, MultiConditions i
     public $Analysis;
 
     /**
-     * @var boolean Group trigger status. true: enabled, false: disabled (default)
+     * @var boolean Group trigger status. true: enabled; false: disabled (default)
      */
     public $GroupTriggerStatus;
 
@@ -179,13 +179,13 @@ The number of Classifications elements cannot exceed 20.The Key of Classificatio
      * @param string $AlarmId Alarm policy ID
      * @param string $Name Alarm policy name
      * @param MonitorTime $MonitorTime Monitoring task running time point
-     * @param string $Condition Trigger condition.Note:- Condition and AlarmLevel are one set of configurations, MultiConditions is another set of configurations. The two sets of configurations are mutually exclusive.
+     * @param string $Condition Trigger condition. Note: - Condition and AlarmLevel are one set of configurations, MultiConditions is another set of configurations. The two sets of configurations are mutually exclusive.
      * @param integer $AlarmLevel Alarm level.0: Warning (Warn); 1: Reminder (Info); 2: Urgent (Critical)
 
-Note:- Condition and AlarmLevel are one set of configurations, MultiConditions is another set of configurations. The two sets of configurations are mutually exclusive.
-     * @param array $MultiConditions Multiple ttrigger conditions.Note:- Condition and AlarmLevel are one set of configurations, MultiConditions is another set of configurations. The two sets of configurations are mutually exclusive.
-     * @param integer $TriggerCount Alarm persistence cycle. An alarm will be triggered only after the corresponding trigger condition is met for the number of times specified by `TriggerCount`. Value range: 1–10.
-     * @param integer $AlarmPeriod Repeated alarm interval in minutes. Value range: 0–1440.
+Note: - Condition and AlarmLevel are one set of configurations, MultiConditions is another set of configurations. The two sets of configurations are mutually exclusive.
+     * @param array $MultiConditions Multiple trigger conditions. Note: - Condition and AlarmLevel are one set of configurations, MultiConditions is another set of configurations. The two sets of configurations are mutually exclusive.
+     * @param integer $TriggerCount Alarm persistence cycle. An alarm will be triggered only after the corresponding trigger condition is met for the number of times specified by `TriggerCount`. Value range: 1 to 10
+     * @param integer $AlarmPeriod Repeated alarm interval in minutes. Value range: 0 to 1440
      * @param array $AlarmNoticeIds List of associated alarm notification templates
      * @param array $AlarmTargets Monitoring object list
      * @param boolean $Status Whether to enable the alarm policy
@@ -193,7 +193,7 @@ Note:- Condition and AlarmLevel are one set of configurations, MultiConditions i
      * @param string $MessageTemplate Custom alarm content
      * @param CallBackInfo $CallBack Custom callback
      * @param array $Analysis Multi-Dimensional analysis
-     * @param boolean $GroupTriggerStatus Group trigger status. true: enabled, false: disabled (default)
+     * @param boolean $GroupTriggerStatus Group trigger status. true: enabled; false: disabled (default)
      * @param array $GroupTriggerCondition Grouping trigger conditions.
      * @param array $Tags Tag description list, by specifying this parameter, you can simultaneously bind a Tag to the corresponding alarm policy. Up to 10 Tag key-value pairs are supported, and they must be unique.
      * @param integer $MonitorObjectType Monitored Object Type. 0: common monitoring objects for execution statements; 1: separately selected monitoring objects for each execution statement.When the value is 1, the number of AlarmTargets Elements (XML) cannot exceed 10, and the Numbers in AlarmTargets must be continuous positive integers starting from 1, without duplication.

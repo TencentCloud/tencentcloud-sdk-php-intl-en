@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setQuery(string $Query) Set Query statement
  * @method string getTopicId() Obtain ID of the log topic to be queried
  * @method void setTopicId(string $TopicId) Set ID of the log topic to be queried
- * @method integer getInterval() Obtain Interval in milliseconds. Condition: (To – From) / Interval ≤ 200
- * @method void setInterval(integer $Interval) Set Interval in milliseconds. Condition: (To – From) / Interval ≤ 200
+ * @method integer getInterval() Obtain Interval in milliseconds. Condition: (To-From) / Interval <= 200
+ * @method void setInterval(integer $Interval) Set Interval in milliseconds. Condition: (To-From) / Interval <= 200
  * @method integer getSyntaxRule() Obtain Search syntax. Valid values:
 `0` (default): Lucene; `1`: CQL
 For more information, see <a href="https://intl.cloud.tencent.com/document/product/614/47044?from_cn_redirect=1#RetrievesConditionalRules" target="_blank">Search Syntax</a>.
@@ -60,7 +60,7 @@ class DescribeLogHistogramRequest extends AbstractModel
     public $TopicId;
 
     /**
-     * @var integer Interval in milliseconds. Condition: (To – From) / Interval ≤ 200
+     * @var integer Interval in milliseconds. Condition: (To-From) / Interval <= 200
      */
     public $Interval;
 
@@ -76,7 +76,7 @@ For more information, see <a href="https://intl.cloud.tencent.com/document/produ
      * @param integer $To End time of the log to be queried, which is a Unix timestamp in milliseconds
      * @param string $Query Query statement
      * @param string $TopicId ID of the log topic to be queried
-     * @param integer $Interval Interval in milliseconds. Condition: (To – From) / Interval ≤ 200
+     * @param integer $Interval Interval in milliseconds. Condition: (To-From) / Interval <= 200
      * @param integer $SyntaxRule Search syntax. Valid values:
 `0` (default): Lucene; `1`: CQL
 For more information, see <a href="https://intl.cloud.tencent.com/document/product/614/47044?from_cn_redirect=1#RetrievesConditionalRules" target="_blank">Search Syntax</a>.

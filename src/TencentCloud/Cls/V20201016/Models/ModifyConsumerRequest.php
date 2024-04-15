@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setContent(ConsumerContent $Content) Set Metadata to ship if `NeedContent` is `true`
  * @method Ckafka getCkafka() Obtain CKafka information
  * @method void setCkafka(Ckafka $Ckafka) Set CKafka information
- * @method integer getCompression() Obtain Compression method during delivery. Valid values: 0, 2, and 3. [0：NONE；2：SNAPPY；3：LZ4]
- * @method void setCompression(integer $Compression) Set Compression method during delivery. Valid values: 0, 2, and 3. [0：NONE；2：SNAPPY；3：LZ4]
+ * @method integer getCompression() Obtain Compression method during delivery. Valid values: 0, 2, and 3. [0: NONE; 2: SNAPPY; 3: LZ4]
+ * @method void setCompression(integer $Compression) Set Compression method during delivery. Valid values: 0, 2, and 3. [0: NONE; 2: SNAPPY; 3: LZ4]
  */
 class ModifyConsumerRequest extends AbstractModel
 {
@@ -61,7 +61,7 @@ class ModifyConsumerRequest extends AbstractModel
     public $Ckafka;
 
     /**
-     * @var integer Compression method during delivery. Valid values: 0, 2, and 3. [0：NONE；2：SNAPPY；3：LZ4]
+     * @var integer Compression method during delivery. Valid values: 0, 2, and 3. [0: NONE; 2: SNAPPY; 3: LZ4]
      */
     public $Compression;
 
@@ -71,7 +71,7 @@ class ModifyConsumerRequest extends AbstractModel
      * @param boolean $NeedContent Whether to deliver log Metadata information; the default is true.When NeedContent is true: Content field is valid.When NeedContent is false: Content field is invalid.
      * @param ConsumerContent $Content Metadata to ship if `NeedContent` is `true`
      * @param Ckafka $Ckafka CKafka information
-     * @param integer $Compression Compression method during delivery. Valid values: 0, 2, and 3. [0：NONE；2：SNAPPY；3：LZ4]
+     * @param integer $Compression Compression method during delivery. Valid values: 0, 2, and 3. [0: NONE; 2: SNAPPY; 3: LZ4]
      */
     function __construct()
     {

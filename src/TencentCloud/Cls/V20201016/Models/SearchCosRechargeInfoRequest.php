@@ -32,8 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBucketRegion(string $BucketRegion) Set The region where the COS bucket is located, see the supported [region list](https://intl.cloud.tencent.com/document/product/436/6224?from_cn_redirect=1).
  * @method string getPrefix() Obtain The prefix of the folder where COS files are located
  * @method void setPrefix(string $Prefix) Set The prefix of the folder where COS files are located
- * @method string getCompress() Obtain Compression mode: "", "gzip", "lzop", and "snappy”. The default mode is "".
- * @method void setCompress(string $Compress) Set Compression mode: "", "gzip", "lzop", and "snappy”. The default mode is "".
+ * @method string getCompress() Obtain Compression mode: "", "gzip", "lzop", and "snappy". The default mode is "".
+ * @method void setCompress(string $Compress) Set Compression mode: "", "gzip", "lzop", and "snappy". The default mode is "".
  */
 class SearchCosRechargeInfoRequest extends AbstractModel
 {
@@ -68,7 +68,7 @@ class SearchCosRechargeInfoRequest extends AbstractModel
     public $Prefix;
 
     /**
-     * @var string Compression mode: "", "gzip", "lzop", and "snappy”. The default mode is "".
+     * @var string Compression mode: "", "gzip", "lzop", and "snappy". The default mode is "".
      */
     public $Compress;
 
@@ -79,7 +79,7 @@ class SearchCosRechargeInfoRequest extends AbstractModel
      * @param string $Bucket COS bucket, see the supported [bucket naming conventions](https://intl.cloud.tencent.com/document/product/436/13312?from_cn_redirect=1).
      * @param string $BucketRegion The region where the COS bucket is located, see the supported [region list](https://intl.cloud.tencent.com/document/product/436/6224?from_cn_redirect=1).
      * @param string $Prefix The prefix of the folder where COS files are located
-     * @param string $Compress Compression mode: "", "gzip", "lzop", and "snappy”. The default mode is "".
+     * @param string $Compress Compression mode: "", "gzip", "lzop", and "snappy". The default mode is "".
      */
     function __construct()
     {

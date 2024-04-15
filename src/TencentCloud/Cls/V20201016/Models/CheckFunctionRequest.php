@@ -20,17 +20,17 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CheckFunction request structure.
  *
- * @method string getEtlContent() Obtain The processing statement entered by the user
- * @method void setEtlContent(string $EtlContent) Set The processing statement entered by the user
+ * @method string getEtlContent() Obtain Processing statement entered by the user
+ * @method void setEtlContent(string $EtlContent) Set Processing statement entered by the user
  * @method array getDstResources() Obtain Target topic ID and alias of the data processing task
  * @method void setDstResources(array $DstResources) Set Target topic ID and alias of the data processing task
- * @method integer getFuncType() Obtain The type of the target topic for data processing. Valid values: 1 (fixed Topic) and 2 (dynamic creation)
- * @method void setFuncType(integer $FuncType) Set The type of the target topic for data processing. Valid values: 1 (fixed Topic) and 2 (dynamic creation)
+ * @method integer getFuncType() Obtain Type of the target topic for data processing. Valid values: 1 (fixed Topic) and 2 (dynamic creation)
+ * @method void setFuncType(integer $FuncType) Set Type of the target topic for data processing. Valid values: 1 (fixed Topic) and 2 (dynamic creation)
  */
 class CheckFunctionRequest extends AbstractModel
 {
     /**
-     * @var string The processing statement entered by the user
+     * @var string Processing statement entered by the user
      */
     public $EtlContent;
 
@@ -40,14 +40,14 @@ class CheckFunctionRequest extends AbstractModel
     public $DstResources;
 
     /**
-     * @var integer The type of the target topic for data processing. Valid values: 1 (fixed Topic) and 2 (dynamic creation)
+     * @var integer Type of the target topic for data processing. Valid values: 1 (fixed Topic) and 2 (dynamic creation)
      */
     public $FuncType;
 
     /**
-     * @param string $EtlContent The processing statement entered by the user
+     * @param string $EtlContent Processing statement entered by the user
      * @param array $DstResources Target topic ID and alias of the data processing task
-     * @param integer $FuncType The type of the target topic for data processing. Valid values: 1 (fixed Topic) and 2 (dynamic creation)
+     * @param integer $FuncType Type of the target topic for data processing. Valid values: 1 (fixed Topic) and 2 (dynamic creation)
      */
     function __construct()
     {

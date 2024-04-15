@@ -58,12 +58,12 @@ Notes:
  * @method void setContext(string $Context) Set Pass the Context value returned by the last API call to retrieve more subsequent logs. A total of up to 10,000 raw logs can be obtained, with an expiration time of 1 hour.Note:* When passing this parameter, do not modify any other parameters except for this one* Only applicable for single log topic retrieval. When retrieving multiple log topics, use the Context in Topics.* This is only valid when the retrieval analysis statement (Query) does not contain SQL. For obtaining subsequent SQL results, refer to <a href="https://intl.cloud.tencent.com/document/product/614/58977?from_cn_redirect=1" target="_blank">SQL LIMIT Syntax</a>
  * @method float getSamplingRate() Obtain Indicates whether to sample raw logs before statistical analysis (`Query` includes SQL statements).
 `0`: Auto-sample.
-`0–1`: Sample by the specified sample rate, such as `0.02`.
+`0-1`: Sample by the specified sample rate, such as `0.02`.
 `1`: Precise analysis without sampling.
 Default value: `1`
  * @method void setSamplingRate(float $SamplingRate) Set Indicates whether to sample raw logs before statistical analysis (`Query` includes SQL statements).
 `0`: Auto-sample.
-`0–1`: Sample by the specified sample rate, such as `0.02`.
+`0-1`: Sample by the specified sample rate, such as `0.02`.
 `1`: Precise analysis without sampling.
 Default value: `1`
  * @method boolean getUseNewAnalysis() Obtain If the value is `true`, the new response method will be used, and the output parameters `AnalysisRecords` and `Columns` will be valid.
@@ -132,7 +132,7 @@ Notes:
     /**
      * @var float Indicates whether to sample raw logs before statistical analysis (`Query` includes SQL statements).
 `0`: Auto-sample.
-`0–1`: Sample by the specified sample rate, such as `0.02`.
+`0-1`: Sample by the specified sample rate, such as `0.02`.
 `1`: Precise analysis without sampling.
 Default value: `1`
      */
@@ -166,7 +166,7 @@ Notes:
      * @param string $Context Pass the Context value returned by the last API call to retrieve more subsequent logs. A total of up to 10,000 raw logs can be obtained, with an expiration time of 1 hour.Note:* When passing this parameter, do not modify any other parameters except for this one* Only applicable for single log topic retrieval. When retrieving multiple log topics, use the Context in Topics.* This is only valid when the retrieval analysis statement (Query) does not contain SQL. For obtaining subsequent SQL results, refer to <a href="https://intl.cloud.tencent.com/document/product/614/58977?from_cn_redirect=1" target="_blank">SQL LIMIT Syntax</a>
      * @param float $SamplingRate Indicates whether to sample raw logs before statistical analysis (`Query` includes SQL statements).
 `0`: Auto-sample.
-`0–1`: Sample by the specified sample rate, such as `0.02`.
+`0-1`: Sample by the specified sample rate, such as `0.02`.
 `1`: Precise analysis without sampling.
 Default value: `1`
      * @param boolean $UseNewAnalysis If the value is `true`, the new response method will be used, and the output parameters `AnalysisRecords` and `Columns` will be valid.

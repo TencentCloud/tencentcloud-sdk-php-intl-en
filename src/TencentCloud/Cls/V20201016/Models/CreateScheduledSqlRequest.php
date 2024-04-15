@@ -20,42 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateScheduledSql request structure.
  *
- * @method string getSrcTopicId() Obtain Source Log Topic
- * @method void setSrcTopicId(string $SrcTopicId) Set Source Log Topic
- * @method string getName() Obtain Task Name
- * @method void setName(string $Name) Set Task Name
+ * @method string getSrcTopicId() Obtain Source log topic
+ * @method void setSrcTopicId(string $SrcTopicId) Set Source log topic
+ * @method string getName() Obtain Task name
+ * @method void setName(string $Name) Set Task name
  * @method integer getEnableFlag() Obtain Task start status. 1: Enabled, 2: Disabled
  * @method void setEnableFlag(integer $EnableFlag) Set Task start status. 1: Enabled, 2: Disabled
  * @method ScheduledSqlResouceInfo getDstResource() Obtain Target log topic for scheduled SQL analysis
  * @method void setDstResource(ScheduledSqlResouceInfo $DstResource) Set Target log topic for scheduled SQL analysis
- * @method string getScheduledSqlContent() Obtain Query Statement
- * @method void setScheduledSqlContent(string $ScheduledSqlContent) Set Query Statement
- * @method integer getProcessStartTime() Obtain Schedule Start Time, Unix timestamp, in milliseconds
- * @method void setProcessStartTime(integer $ProcessStartTime) Set Schedule Start Time, Unix timestamp, in milliseconds
- * @method integer getProcessType() Obtain Schedule Type: 1 Continuous Running 2 Specified Time Range
- * @method void setProcessType(integer $ProcessType) Set Schedule Type: 1 Continuous Running 2 Specified Time Range
- * @method integer getProcessPeriod() Obtain Scheduling Interval (Minutes)
- * @method void setProcessPeriod(integer $ProcessPeriod) Set Scheduling Interval (Minutes)
+ * @method string getScheduledSqlContent() Obtain Query statement
+ * @method void setScheduledSqlContent(string $ScheduledSqlContent) Set Query statement
+ * @method integer getProcessStartTime() Obtain Schedule start time, Unix timestamp, in milliseconds
+ * @method void setProcessStartTime(integer $ProcessStartTime) Set Schedule start time, Unix timestamp, in milliseconds
+ * @method integer getProcessType() Obtain Schedule type: 1: Continuous running; 2: Specified time range
+ * @method void setProcessType(integer $ProcessType) Set Schedule type: 1: Continuous running; 2: Specified time range
+ * @method integer getProcessPeriod() Obtain Scheduling interval (minutes)
+ * @method void setProcessPeriod(integer $ProcessPeriod) Set Scheduling interval (minutes)
  * @method string getProcessTimeWindow() Obtain Time window for a single query. If your target topic is a metric topic, it is recommended that the size of this parameter not exceed 30 minutes, otherwise, metric conversion may fail.
  * @method void setProcessTimeWindow(string $ProcessTimeWindow) Set Time window for a single query. If your target topic is a metric topic, it is recommended that the size of this parameter not exceed 30 minutes, otherwise, metric conversion may fail.
- * @method integer getProcessDelay() Obtain Execution Delay (Seconds)
- * @method void setProcessDelay(integer $ProcessDelay) Set Execution Delay (Seconds)
- * @method string getSrcTopicRegion() Obtain Source Topic ID Region Information
- * @method void setSrcTopicRegion(string $SrcTopicRegion) Set Source Topic ID Region Information
- * @method integer getProcessEndTime() Obtain Schedule End Time. Required field when ProcessType=2, Unix timestamp, in milliseconds
- * @method void setProcessEndTime(integer $ProcessEndTime) Set Schedule End Time. Required field when ProcessType=2, Unix timestamp, in milliseconds
+ * @method integer getProcessDelay() Obtain Execution delay (Seconds)
+ * @method void setProcessDelay(integer $ProcessDelay) Set Execution delay (Seconds)
+ * @method string getSrcTopicRegion() Obtain Source topic ID region information
+ * @method void setSrcTopicRegion(string $SrcTopicRegion) Set Source topic ID region information
+ * @method integer getProcessEndTime() Obtain Schedule end time. Required field when ProcessType=2, Unix timestamp, in milliseconds
+ * @method void setProcessEndTime(integer $ProcessEndTime) Set Schedule end time. Required field when ProcessType=2, Unix timestamp, in milliseconds
  * @method integer getSyntaxRule() Obtain Query syntax rules. Default value is 0. 0: Lucene syntax, 1: CQL syntax
  * @method void setSyntaxRule(integer $SyntaxRule) Set Query syntax rules. Default value is 0. 0: Lucene syntax, 1: CQL syntax
  */
 class CreateScheduledSqlRequest extends AbstractModel
 {
     /**
-     * @var string Source Log Topic
+     * @var string Source log topic
      */
     public $SrcTopicId;
 
     /**
-     * @var string Task Name
+     * @var string Task name
      */
     public $Name;
 
@@ -70,22 +70,22 @@ class CreateScheduledSqlRequest extends AbstractModel
     public $DstResource;
 
     /**
-     * @var string Query Statement
+     * @var string Query statement
      */
     public $ScheduledSqlContent;
 
     /**
-     * @var integer Schedule Start Time, Unix timestamp, in milliseconds
+     * @var integer Schedule start time, Unix timestamp, in milliseconds
      */
     public $ProcessStartTime;
 
     /**
-     * @var integer Schedule Type: 1 Continuous Running 2 Specified Time Range
+     * @var integer Schedule type: 1: Continuous running; 2: Specified time range
      */
     public $ProcessType;
 
     /**
-     * @var integer Scheduling Interval (Minutes)
+     * @var integer Scheduling interval (minutes)
      */
     public $ProcessPeriod;
 
@@ -95,17 +95,17 @@ class CreateScheduledSqlRequest extends AbstractModel
     public $ProcessTimeWindow;
 
     /**
-     * @var integer Execution Delay (Seconds)
+     * @var integer Execution delay (Seconds)
      */
     public $ProcessDelay;
 
     /**
-     * @var string Source Topic ID Region Information
+     * @var string Source topic ID region information
      */
     public $SrcTopicRegion;
 
     /**
-     * @var integer Schedule End Time. Required field when ProcessType=2, Unix timestamp, in milliseconds
+     * @var integer Schedule end time. Required field when ProcessType=2, Unix timestamp, in milliseconds
      */
     public $ProcessEndTime;
 
@@ -115,18 +115,18 @@ class CreateScheduledSqlRequest extends AbstractModel
     public $SyntaxRule;
 
     /**
-     * @param string $SrcTopicId Source Log Topic
-     * @param string $Name Task Name
+     * @param string $SrcTopicId Source log topic
+     * @param string $Name Task name
      * @param integer $EnableFlag Task start status. 1: Enabled, 2: Disabled
      * @param ScheduledSqlResouceInfo $DstResource Target log topic for scheduled SQL analysis
-     * @param string $ScheduledSqlContent Query Statement
-     * @param integer $ProcessStartTime Schedule Start Time, Unix timestamp, in milliseconds
-     * @param integer $ProcessType Schedule Type: 1 Continuous Running 2 Specified Time Range
-     * @param integer $ProcessPeriod Scheduling Interval (Minutes)
+     * @param string $ScheduledSqlContent Query statement
+     * @param integer $ProcessStartTime Schedule start time, Unix timestamp, in milliseconds
+     * @param integer $ProcessType Schedule type: 1: Continuous running; 2: Specified time range
+     * @param integer $ProcessPeriod Scheduling interval (minutes)
      * @param string $ProcessTimeWindow Time window for a single query. If your target topic is a metric topic, it is recommended that the size of this parameter not exceed 30 minutes, otherwise, metric conversion may fail.
-     * @param integer $ProcessDelay Execution Delay (Seconds)
-     * @param string $SrcTopicRegion Source Topic ID Region Information
-     * @param integer $ProcessEndTime Schedule End Time. Required field when ProcessType=2, Unix timestamp, in milliseconds
+     * @param integer $ProcessDelay Execution delay (Seconds)
+     * @param string $SrcTopicRegion Source topic ID region information
+     * @param integer $ProcessEndTime Schedule end time. Required field when ProcessType=2, Unix timestamp, in milliseconds
      * @param integer $SyntaxRule Query syntax rules. Default value is 0. 0: Lucene syntax, 1: CQL syntax
      */
     function __construct()
