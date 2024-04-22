@@ -126,6 +126,8 @@ Node information of an instance. Currently, information about the node type (mas
 - `cdc`: Dedicated Cluster Edition. Default value: `local`.
  * @method string getRedisClusterId() Obtain Exclusive cluster ID. When `ProductVersion` is set to `cdc`, this parameter is required.
  * @method void setRedisClusterId(string $RedisClusterId) Set Exclusive cluster ID. When `ProductVersion` is set to `cdc`, this parameter is required.
+ * @method array getAlarmPolicyList() Obtain Alarm policy ID array.- Please log in to [Tencent Cloud Observability Platform - Alarm Management - Policy Management](https://console.cloud.tencent.com/monitor/alarm/policy) to access the alarm policy ID.- If this parameter is not configured, the default alarm policy will be bound. For the specific information about the default alarm policy, please log in to [Tencent Cloud Observability Platform - Alarm Management - Policy Management](https://console.cloud.tencent.com/monitor/alarm/policy) to view.
+ * @method void setAlarmPolicyList(array $AlarmPolicyList) Set Alarm policy ID array.- Please log in to [Tencent Cloud Observability Platform - Alarm Management - Policy Management](https://console.cloud.tencent.com/monitor/alarm/policy) to access the alarm policy ID.- If this parameter is not configured, the default alarm policy will be bound. For the specific information about the default alarm policy, please log in to [Tencent Cloud Observability Platform - Alarm Management - Policy Management](https://console.cloud.tencent.com/monitor/alarm/policy) to view.
  */
 class CreateInstancesRequest extends AbstractModel
 {
@@ -283,6 +285,11 @@ Node information of an instance. Currently, information about the node type (mas
     public $RedisClusterId;
 
     /**
+     * @var array Alarm policy ID array.- Please log in to [Tencent Cloud Observability Platform - Alarm Management - Policy Management](https://console.cloud.tencent.com/monitor/alarm/policy) to access the alarm policy ID.- If this parameter is not configured, the default alarm policy will be bound. For the specific information about the default alarm policy, please log in to [Tencent Cloud Observability Platform - Alarm Management - Policy Management](https://console.cloud.tencent.com/monitor/alarm/policy) to view.
+     */
+    public $AlarmPolicyList;
+
+    /**
      * @param integer $TypeId Instance type
 <ul><li>`2`: Redis 2.8 Memory Edition (Standard Architecture). </li><li>`3`: CKV 3.2 Memory Edition (Standard Architecture). </li><li>`4`: CKV 3.2 Memory Edition (Cluster Architecture). </li><li>`6`: Redis 4.0 Memory Edition (Standard Architecture). </li><li>`7`: Redis 4.0 Memory Edition (Cluster Architecture). </li><li>`8`: Redis 5.0 Memory Edition (Standard Architecture). </li><li>`9`: Redis 5.0 Memory Edition (Cluster Architecture). </li><li>`15`: Redis 6.2 Memory Edition (Standard Architecture). </li><li>`16`: Redis 6.2 Memory Edition (Cluster Architecture).</li></ul>
      * @param integer $MemSize Memory capacity in MB, which must be an integer multiple of 1024. For specific specifications, query the sales specifications in all regions through the [DescribeProductInfo](https://intl.cloud.tencent.com/document/api/239/30600?from_cn_redirect=1) API.
@@ -336,6 +343,7 @@ Node information of an instance. Currently, information about the node type (mas
 - `cloud`: Cloud Disk Edition.
 - `cdc`: Dedicated Cluster Edition. Default value: `local`.
      * @param string $RedisClusterId Exclusive cluster ID. When `ProductVersion` is set to `cdc`, this parameter is required.
+     * @param array $AlarmPolicyList Alarm policy ID array.- Please log in to [Tencent Cloud Observability Platform - Alarm Management - Policy Management](https://console.cloud.tencent.com/monitor/alarm/policy) to access the alarm policy ID.- If this parameter is not configured, the default alarm policy will be bound. For the specific information about the default alarm policy, please log in to [Tencent Cloud Observability Platform - Alarm Management - Policy Management](https://console.cloud.tencent.com/monitor/alarm/policy) to view.
      */
     function __construct()
     {
@@ -458,6 +466,10 @@ Node information of an instance. Currently, information about the node type (mas
 
         if (array_key_exists("RedisClusterId",$param) and $param["RedisClusterId"] !== null) {
             $this->RedisClusterId = $param["RedisClusterId"];
+        }
+
+        if (array_key_exists("AlarmPolicyList",$param) and $param["AlarmPolicyList"] !== null) {
+            $this->AlarmPolicyList = $param["AlarmPolicyList"];
         }
     }
 }
