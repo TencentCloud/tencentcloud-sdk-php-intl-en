@@ -72,6 +72,8 @@ Example: HKIDCard
  * @method void setThemeColor(string $ThemeColor) Set Front-end theme color, in the format of RGB hexadecimal color code. The default value is "#2d72+1". If the format is incorrect, the default value color will be used.
  * @method string getLanguage() Obtain International language, the default value is en (English). Currently supported: th: Thai; en: English;
  * @method void setLanguage(string $Language) Set International language, the default value is en (English). Currently supported: th: Thai; en: English;
+ * @method integer getAutoDowngrade() Obtain Automatic downgrade mode, with the following parameter values: 1: Downgrade to silent live mode; 2: Disable downgrade mode. The default value is 1.
+ * @method void setAutoDowngrade(integer $AutoDowngrade) Set Automatic downgrade mode, with the following parameter values: 1: Downgrade to silent live mode; 2: Disable downgrade mode. The default value is 1.
  */
 class WebVerificationConfigIntl extends AbstractModel
 {
@@ -142,6 +144,11 @@ Example: HKIDCard
     public $Language;
 
     /**
+     * @var integer Automatic downgrade mode, with the following parameter values: 1: Downgrade to silent live mode; 2: Disable downgrade mode. The default value is 1.
+     */
+    public $AutoDowngrade;
+
+    /**
      * @param boolean $AutoSkipStartPage When starting verification, whether to skip the starting verification page. If true, enter the verification process directly. The default is false. This configuration will not take effect if the downgrade policy is triggered.
      * @param boolean $AutoSkip When the verification passed, whether to skip the result page and automatically jump to RedirectURL. The default value is false.
 Example value: false
@@ -168,6 +175,7 @@ Example: HKIDCard
      * @param boolean $IdCardCutReturn The default value is false. If it is false, the original ID image will be displayed. If it is true, the cut ID image will be displayed.
      * @param string $ThemeColor Front-end theme color, in the format of RGB hexadecimal color code. The default value is "#2d72+1". If the format is incorrect, the default value color will be used.
      * @param string $Language International language, the default value is en (English). Currently supported: th: Thai; en: English;
+     * @param integer $AutoDowngrade Automatic downgrade mode, with the following parameter values: 1: Downgrade to silent live mode; 2: Disable downgrade mode. The default value is 1.
      */
     function __construct()
     {
@@ -220,6 +228,10 @@ Example: HKIDCard
 
         if (array_key_exists("Language",$param) and $param["Language"] !== null) {
             $this->Language = $param["Language"];
+        }
+
+        if (array_key_exists("AutoDowngrade",$param) and $param["AutoDowngrade"] !== null) {
+            $this->AutoDowngrade = $param["AutoDowngrade"];
         }
     }
 }
