@@ -14,24 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Faceid\V20180301\Models;
+namespace TencentCloud\Billing\V20180709\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * GetWebVerificationResult request structure.
+ * Cost analysis header data
  *
- * @method string getBizToken() Obtain The token for the web-based verification, which is generated with the `ApplyWebVerificationToken` API.
- * @method void setBizToken(string $BizToken) Set The token for the web-based verification, which is generated with the `ApplyWebVerificationToken` API.
+ * @method string getName() Obtain DateNote: This field may return null, indicating that no valid values can be obtained.
+ * @method void setName(string $Name) Set DateNote: This field may return null, indicating that no valid values can be obtained.
  */
-class GetWebVerificationResultRequest extends AbstractModel
+class AnalyseHeaderTimeDetail extends AbstractModel
 {
     /**
-     * @var string The token for the web-based verification, which is generated with the `ApplyWebVerificationToken` API.
+     * @var string DateNote: This field may return null, indicating that no valid values can be obtained.
      */
-    public $BizToken;
+    public $Name;
 
     /**
-     * @param string $BizToken The token for the web-based verification, which is generated with the `ApplyWebVerificationToken` API.
+     * @param string $Name DateNote: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -46,8 +46,8 @@ class GetWebVerificationResultRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("BizToken",$param) and $param["BizToken"] !== null) {
-            $this->BizToken = $param["BizToken"];
+        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
+            $this->Name = $param["Name"];
         }
     }
 }

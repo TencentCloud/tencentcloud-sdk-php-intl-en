@@ -50,6 +50,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPayScene(string $PayScene) Set If `PayMode` is `postPay`, this parameter may be `spotpay` (spot instance) or `settle account` (regular pay-as-you-go). If `PayMode` is `prePay`, this parameter may be `purchase`, `renew`, or `modify` (downgrade/upgrade). If `PayMode` is `riPay`, this parameter may be `oneOffFee` (prepayment of reserved instance) or `hourlyFee` (hourly billing of reserved instance). `*` means to query vouchers that support all billing scenarios.
  * @method string getOperator() Obtain The operator. The default is the UIN of the current user.
  * @method void setOperator(string $Operator) Set The operator. The default is the UIN of the current user.
+ * @method string getVoucherMainType() Obtain The primary types of vouchers are has_price and no_price, which represent the cash voucher with a price and the cash voucher without a price respectively.
+ * @method void setVoucherMainType(string $VoucherMainType) Set The primary types of vouchers are has_price and no_price, which represent the cash voucher with a price and the cash voucher without a price respectively.
+ * @method string getVoucherSubType() Obtain Voucher subtype: Discount is a discount voucher, and deduct is a deduction voucher.
+ * @method void setVoucherSubType(string $VoucherSubType) Set Voucher subtype: Discount is a discount voucher, and deduct is a deduction voucher.
  */
 class DescribeVoucherInfoRequest extends AbstractModel
 {
@@ -129,6 +133,16 @@ class DescribeVoucherInfoRequest extends AbstractModel
     public $Operator;
 
     /**
+     * @var string The primary types of vouchers are has_price and no_price, which represent the cash voucher with a price and the cash voucher without a price respectively.
+     */
+    public $VoucherMainType;
+
+    /**
+     * @var string Voucher subtype: Discount is a discount voucher, and deduct is a deduction voucher.
+     */
+    public $VoucherSubType;
+
+    /**
      * @param integer $Limit The number of records per page. The default is 20, and the maximum is 1,000.
      * @param integer $Offset The page number the records start from. The default is 1.
      * @param string $Status The voucher status. Valid values: `unUsed`, `used`, `delivered`, `cancel`, `overdue`.
@@ -144,6 +158,8 @@ class DescribeVoucherInfoRequest extends AbstractModel
      * @param string $PayMode The payment mode. Valid values: `postPay`: pay-as-you-go; `prePay`: prepaid; `riPay`: reserved instance; empty or `*`: all. If this parameter is empty or `*`, `productCode` and `subProductCode` must also be empty.
      * @param string $PayScene If `PayMode` is `postPay`, this parameter may be `spotpay` (spot instance) or `settle account` (regular pay-as-you-go). If `PayMode` is `prePay`, this parameter may be `purchase`, `renew`, or `modify` (downgrade/upgrade). If `PayMode` is `riPay`, this parameter may be `oneOffFee` (prepayment of reserved instance) or `hourlyFee` (hourly billing of reserved instance). `*` means to query vouchers that support all billing scenarios.
      * @param string $Operator The operator. The default is the UIN of the current user.
+     * @param string $VoucherMainType The primary types of vouchers are has_price and no_price, which represent the cash voucher with a price and the cash voucher without a price respectively.
+     * @param string $VoucherSubType Voucher subtype: Discount is a discount voucher, and deduct is a deduction voucher.
      */
     function __construct()
     {
@@ -216,6 +232,14 @@ class DescribeVoucherInfoRequest extends AbstractModel
 
         if (array_key_exists("Operator",$param) and $param["Operator"] !== null) {
             $this->Operator = $param["Operator"];
+        }
+
+        if (array_key_exists("VoucherMainType",$param) and $param["VoucherMainType"] !== null) {
+            $this->VoucherMainType = $param["VoucherMainType"];
+        }
+
+        if (array_key_exists("VoucherSubType",$param) and $param["VoucherSubType"] !== null) {
+            $this->VoucherSubType = $param["VoucherSubType"];
         }
     }
 }

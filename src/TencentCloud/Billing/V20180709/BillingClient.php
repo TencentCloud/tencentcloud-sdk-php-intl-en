@@ -42,6 +42,7 @@ Note: The API request may fail due to network instability or other exceptions. I
  * @method Models\DescribeBillSummaryByRegionResponse DescribeBillSummaryByRegion(Models\DescribeBillSummaryByRegionRequest $req) Gets the bill summarized according to region
  * @method Models\DescribeBillSummaryByTagResponse DescribeBillSummaryByTag(Models\DescribeBillSummaryByTagRequest $req) This API is used to get the cost distribution over different tags.
  * @method Models\DescribeBillSummaryForOrganizationResponse DescribeBillSummaryForOrganization(Models\DescribeBillSummaryForOrganizationRequest $req) This API is used to get bills summarized by product, project, region, billing mode, and tag by passing in parameters.
+ * @method Models\DescribeCostExplorerSummaryResponse DescribeCostExplorerSummary(Models\DescribeCostExplorerSummaryRequest $req) This API is used to view cost analysis details.
  * @method Models\DescribeDosageCosDetailByDateResponse DescribeDosageCosDetailByDate(Models\DescribeDosageCosDetailByDateRequest $req) This API is used to query COS usage details.
  * @method Models\DescribeTagListResponse DescribeTagList(Models\DescribeTagListRequest $req) This API is used to get cost allocation tags.
  * @method Models\DescribeVoucherInfoResponse DescribeVoucherInfo(Models\DescribeVoucherInfoRequest $req) This API is used to query vouchers.

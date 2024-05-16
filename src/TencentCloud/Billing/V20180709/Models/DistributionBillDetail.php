@@ -92,6 +92,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setFormulaUrl(string $FormulaUrl) Set Billing rules: Official website links for detailed billing rules of each product.
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getBillMonth() Obtain Billing monthNote: This field may return null, indicating that no valid values can be obtained.
+ * @method void setBillMonth(string $BillMonth) Set Billing monthNote: This field may return null, indicating that no valid values can be obtained.
+ * @method string getBillDay() Obtain Billing dayNote: This field may return null, indicating that no valid values can be obtained.
+ * @method void setBillDay(string $BillDay) Set Billing dayNote: This field may return null, indicating that no valid values can be obtained.
  */
 class DistributionBillDetail extends AbstractModel
 {
@@ -240,6 +244,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $FormulaUrl;
 
     /**
+     * @var string Billing monthNote: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $BillMonth;
+
+    /**
+     * @var string Billing dayNote: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $BillDay;
+
+    /**
      * @param string $BusinessCodeName Product name: The name of a Tencent Cloud product purchased by the user, such as CVM.
      * @param string $ProductCodeName Subproduct name: The subcategory of a Tencent Cloud product purchased by the user, such as CVM - Standard S1.
      * @param string $PayModeName Billing mode: The billing mode, which can be monthly subscription or pay-as-you-go.
@@ -276,6 +290,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $FormulaUrl Billing rules: Official website links for detailed billing rules of each product.
 Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $BillMonth Billing monthNote: This field may return null, indicating that no valid values can be obtained.
+     * @param string $BillDay Billing dayNote: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -407,6 +423,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("FormulaUrl",$param) and $param["FormulaUrl"] !== null) {
             $this->FormulaUrl = $param["FormulaUrl"];
+        }
+
+        if (array_key_exists("BillMonth",$param) and $param["BillMonth"] !== null) {
+            $this->BillMonth = $param["BillMonth"];
+        }
+
+        if (array_key_exists("BillDay",$param) and $param["BillDay"] !== null) {
+            $this->BillDay = $param["BillDay"];
         }
     }
 }

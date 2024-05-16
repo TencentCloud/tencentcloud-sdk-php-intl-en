@@ -96,6 +96,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSPDeduction(string $SPDeduction) Set Cost deduction by SP. This parameter has been deprecated.
  * @method string getOriginalCostWithSP() Obtain SP deduction (cost): SP deduction (cost) = Cost deduction by SP / SP deduction rate	
  * @method void setOriginalCostWithSP(string $OriginalCostWithSP) Set SP deduction (cost): SP deduction (cost) = Cost deduction by SP / SP deduction rate	
+ * @method string getBillMonth() Obtain Billing monthNote: This field may return null, indicating that no valid values can be obtained.
+ * @method void setBillMonth(string $BillMonth) Set Billing monthNote: This field may return null, indicating that no valid values can be obtained.
  */
 class BillResourceSummary extends AbstractModel
 {
@@ -291,6 +293,11 @@ class BillResourceSummary extends AbstractModel
     public $OriginalCostWithSP;
 
     /**
+     * @var string Billing monthNote: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $BillMonth;
+
+    /**
      * @param string $BusinessCodeName Product name: The name of a Tencent Cloud product purchased by the user, such as CVM.
      * @param string $ProductCodeName Subproduct name: The subcategory of a Tencent Cloud product purchased by the user, such as CVM – Standard S1.
      * @param string $PayModeName Billing mode, which can be monthly subscription or pay-as-you-go.
@@ -329,6 +336,7 @@ class BillResourceSummary extends AbstractModel
      * @param string $OriginalCostWithRI RI deduction (cost): The amount deducted from the original cost by RI	
      * @param string $SPDeduction Cost deduction by SP. This parameter has been deprecated.
      * @param string $OriginalCostWithSP SP deduction (cost): SP deduction (cost) = Cost deduction by SP / SP deduction rate	
+     * @param string $BillMonth Billing monthNote: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -498,6 +506,10 @@ class BillResourceSummary extends AbstractModel
 
         if (array_key_exists("OriginalCostWithSP",$param) and $param["OriginalCostWithSP"] !== null) {
             $this->OriginalCostWithSP = $param["OriginalCostWithSP"];
+        }
+
+        if (array_key_exists("BillMonth",$param) and $param["BillMonth"] !== null) {
+            $this->BillMonth = $param["BillMonth"];
         }
     }
 }

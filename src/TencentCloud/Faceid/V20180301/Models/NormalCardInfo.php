@@ -20,21 +20,21 @@ use TencentCloud\Common\AbstractModel;
 /**
  * License OCR result
  *
- * @method HKIDCard getHKIDCard() Obtain Hong Kong ID Card
+ * @method NormalHKIDCard getHKIDCard() Obtain Hong Kong ID Card
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setHKIDCard(HKIDCard $HKIDCard) Set Hong Kong ID Card
+ * @method void setHKIDCard(NormalHKIDCard $HKIDCard) Set Hong Kong ID Card
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method MLIDCard getMLIDCard() Obtain Malaysia ID Card
+ * @method NormalMLIDCard getMLIDCard() Obtain Malaysia ID Card
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setMLIDCard(MLIDCard $MLIDCard) Set Malaysia ID Card
+ * @method void setMLIDCard(NormalMLIDCard $MLIDCard) Set Malaysia ID Card
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method PhilippinesVoteID getPhilippinesVoteID() Obtain Philippines VoteID Card
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setPhilippinesVoteID(PhilippinesVoteID $PhilippinesVoteID) Set Philippines VoteID Card
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method IndonesiaIDCard getIndonesiaIDCard() Obtain Indonesia ID Card
+ * @method NormalIndonesiaIDCard getIndonesiaIDCard() Obtain Indonesia ID Card
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setIndonesiaIDCard(IndonesiaIDCard $IndonesiaIDCard) Set Indonesia ID Card
+ * @method void setIndonesiaIDCard(NormalIndonesiaIDCard $IndonesiaIDCard) Set Indonesia ID Card
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method PhilippinesDrivingLicense getPhilippinesDrivingLicense() Obtain Philippines Driving License
 Note: This field may return null, indicating that no valid values can be obtained.
@@ -64,9 +64,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setIndonesiaDrivingLicense(IndonesiaDrivingLicense $IndonesiaDrivingLicense) Set Indonesia Driving License
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method ThailandIDCard getThailandIDCard() Obtain Thailand ID Card
+ * @method NormalThailandIDCard getThailandIDCard() Obtain Thailand ID Card
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setThailandIDCard(ThailandIDCard $ThailandIDCard) Set Thailand ID Card
+ * @method void setThailandIDCard(NormalThailandIDCard $ThailandIDCard) Set Thailand ID Card
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method SingaporeIDCard getSingaporeIDCard() Obtain Singapore ID Card
 Note: This field may return null, indicating that no valid values can be obtained.
@@ -77,16 +77,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
  * @method void setMacaoIDCard(MacaoIDCard $MacaoIDCard) Set Macao ID Card
 Note: This field may return null, indicating that no valid values can be obtained.
  */
-class CardInfo extends AbstractModel
+class NormalCardInfo extends AbstractModel
 {
     /**
-     * @var HKIDCard Hong Kong ID Card
+     * @var NormalHKIDCard Hong Kong ID Card
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $HKIDCard;
 
     /**
-     * @var MLIDCard Malaysia ID Card
+     * @var NormalMLIDCard Malaysia ID Card
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $MLIDCard;
@@ -98,7 +98,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $PhilippinesVoteID;
 
     /**
-     * @var IndonesiaIDCard Indonesia ID Card
+     * @var NormalIndonesiaIDCard Indonesia ID Card
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $IndonesiaIDCard;
@@ -146,7 +146,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $IndonesiaDrivingLicense;
 
     /**
-     * @var ThailandIDCard Thailand ID Card
+     * @var NormalThailandIDCard Thailand ID Card
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ThailandIDCard;
@@ -164,13 +164,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $MacaoIDCard;
 
     /**
-     * @param HKIDCard $HKIDCard Hong Kong ID Card
+     * @param NormalHKIDCard $HKIDCard Hong Kong ID Card
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param MLIDCard $MLIDCard Malaysia ID Card
+     * @param NormalMLIDCard $MLIDCard Malaysia ID Card
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param PhilippinesVoteID $PhilippinesVoteID Philippines VoteID Card
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param IndonesiaIDCard $IndonesiaIDCard Indonesia ID Card
+     * @param NormalIndonesiaIDCard $IndonesiaIDCard Indonesia ID Card
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param PhilippinesDrivingLicense $PhilippinesDrivingLicense Philippines Driving License
 Note: This field may return null, indicating that no valid values can be obtained.
@@ -186,7 +186,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param IndonesiaDrivingLicense $IndonesiaDrivingLicense Indonesia Driving License
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ThailandIDCard $ThailandIDCard Thailand ID Card
+     * @param NormalThailandIDCard $ThailandIDCard Thailand ID Card
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param SingaporeIDCard $SingaporeIDCard Singapore ID Card
 Note: This field may return null, indicating that no valid values can be obtained.
@@ -207,12 +207,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
             return;
         }
         if (array_key_exists("HKIDCard",$param) and $param["HKIDCard"] !== null) {
-            $this->HKIDCard = new HKIDCard();
+            $this->HKIDCard = new NormalHKIDCard();
             $this->HKIDCard->deserialize($param["HKIDCard"]);
         }
 
         if (array_key_exists("MLIDCard",$param) and $param["MLIDCard"] !== null) {
-            $this->MLIDCard = new MLIDCard();
+            $this->MLIDCard = new NormalMLIDCard();
             $this->MLIDCard->deserialize($param["MLIDCard"]);
         }
 
@@ -222,7 +222,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         }
 
         if (array_key_exists("IndonesiaIDCard",$param) and $param["IndonesiaIDCard"] !== null) {
-            $this->IndonesiaIDCard = new IndonesiaIDCard();
+            $this->IndonesiaIDCard = new NormalIndonesiaIDCard();
             $this->IndonesiaIDCard->deserialize($param["IndonesiaIDCard"]);
         }
 
@@ -262,7 +262,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         }
 
         if (array_key_exists("ThailandIDCard",$param) and $param["ThailandIDCard"] !== null) {
-            $this->ThailandIDCard = new ThailandIDCard();
+            $this->ThailandIDCard = new NormalThailandIDCard();
             $this->ThailandIDCard->deserialize($param["ThailandIDCard"]);
         }
 

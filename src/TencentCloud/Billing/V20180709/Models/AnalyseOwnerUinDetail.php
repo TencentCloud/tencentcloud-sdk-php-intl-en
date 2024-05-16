@@ -14,24 +14,28 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Faceid\V20180301\Models;
+namespace TencentCloud\Billing\V20180709\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * CreateUploadUrl request structure.
+ * Cost analysis user UIN complex type
  *
- * @method string getTargetAction() Obtain Target API
- * @method void setTargetAction(string $TargetAction) Set Target API
+ * @method string getOwnerUin() Obtain User UIN
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setOwnerUin(string $OwnerUin) Set User UIN
+Note: This field may return null, indicating that no valid values can be obtained.
  */
-class CreateUploadUrlRequest extends AbstractModel
+class AnalyseOwnerUinDetail extends AbstractModel
 {
     /**
-     * @var string Target API
+     * @var string User UIN
+Note: This field may return null, indicating that no valid values can be obtained.
      */
-    public $TargetAction;
+    public $OwnerUin;
 
     /**
-     * @param string $TargetAction Target API
+     * @param string $OwnerUin User UIN
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -46,8 +50,8 @@ class CreateUploadUrlRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TargetAction",$param) and $param["TargetAction"] !== null) {
-            $this->TargetAction = $param["TargetAction"];
+        if (array_key_exists("OwnerUin",$param) and $param["OwnerUin"] !== null) {
+            $this->OwnerUin = $param["OwnerUin"];
         }
     }
 }

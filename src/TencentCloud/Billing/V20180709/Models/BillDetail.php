@@ -84,6 +84,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setFormulaUrl(string $FormulaUrl) Set Billing rules: Official website links for detailed billing rules of each product.
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getBillDay() Obtain Billing dayNote: This field may return null, indicating that no valid values can be obtained.
+ * @method void setBillDay(string $BillDay) Set Billing dayNote: This field may return null, indicating that no valid values can be obtained.
+ * @method string getBillMonth() Obtain Billing monthNote: This field may return null, indicating that no valid values can be obtained.
+ * @method void setBillMonth(string $BillMonth) Set Billing monthNote: This field may return null, indicating that no valid values can be obtained.
+ * @method string getId() Obtain Billing record IDNote: This field may return null, indicating that no valid values can be obtained.
+ * @method void setId(string $Id) Set Billing record IDNote: This field may return null, indicating that no valid values can be obtained.
+ * @method string getRegionType() Obtain Domestic and international codesNote: This field may return null, indicating that no valid values can be obtained.
+ * @method void setRegionType(string $RegionType) Set Domestic and international codesNote: This field may return null, indicating that no valid values can be obtained.
+ * @method string getRegionTypeName() Obtain Domestic and International: The region type to which the resource belongs (domestic, international)Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setRegionTypeName(string $RegionTypeName) Set Domestic and International: The region type to which the resource belongs (domestic, international)Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getReserveDetail() Obtain Note attributes (instance configuration): Other note information, such as the reserved instance, the reserved instance type, the transaction type, and the region information on both ends of the CCN product.Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setReserveDetail(string $ReserveDetail) Set Note attributes (instance configuration): Other note information, such as the reserved instance, the reserved instance type, the transaction type, and the region information on both ends of the CCN product.Note: This field may return null, indicating that no valid values can be obtained.
  */
 class BillDetail extends AbstractModel
 {
@@ -232,6 +244,36 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $FormulaUrl;
 
     /**
+     * @var string Billing dayNote: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $BillDay;
+
+    /**
+     * @var string Billing monthNote: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $BillMonth;
+
+    /**
+     * @var string Billing record IDNote: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $Id;
+
+    /**
+     * @var string Domestic and international codesNote: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $RegionType;
+
+    /**
+     * @var string Domestic and International: The region type to which the resource belongs (domestic, international)Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $RegionTypeName;
+
+    /**
+     * @var string Note attributes (instance configuration): Other note information, such as the reserved instance, the reserved instance type, the transaction type, and the region information on both ends of the CCN product.Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $ReserveDetail;
+
+    /**
      * @param string $BusinessCodeName Product name: The name of a Tencent Cloud product purchased by the user, such as CVM.
      * @param string $ProductCodeName Subproduct name: The subcategory of a Tencent Cloud product purchased by the user, such as CVM – Standard S1.
      * @param string $PayModeName Billing mode, which can be monthly subscription or pay-as-you-go.
@@ -264,6 +306,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $FormulaUrl Billing rules: Official website links for detailed billing rules of each product.
 Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $BillDay Billing dayNote: This field may return null, indicating that no valid values can be obtained.
+     * @param string $BillMonth Billing monthNote: This field may return null, indicating that no valid values can be obtained.
+     * @param string $Id Billing record IDNote: This field may return null, indicating that no valid values can be obtained.
+     * @param string $RegionType Domestic and international codesNote: This field may return null, indicating that no valid values can be obtained.
+     * @param string $RegionTypeName Domestic and International: The region type to which the resource belongs (domestic, international)Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $ReserveDetail Note attributes (instance configuration): Other note information, such as the reserved instance, the reserved instance type, the transaction type, and the region information on both ends of the CCN product.Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -399,6 +447,30 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("FormulaUrl",$param) and $param["FormulaUrl"] !== null) {
             $this->FormulaUrl = $param["FormulaUrl"];
+        }
+
+        if (array_key_exists("BillDay",$param) and $param["BillDay"] !== null) {
+            $this->BillDay = $param["BillDay"];
+        }
+
+        if (array_key_exists("BillMonth",$param) and $param["BillMonth"] !== null) {
+            $this->BillMonth = $param["BillMonth"];
+        }
+
+        if (array_key_exists("Id",$param) and $param["Id"] !== null) {
+            $this->Id = $param["Id"];
+        }
+
+        if (array_key_exists("RegionType",$param) and $param["RegionType"] !== null) {
+            $this->RegionType = $param["RegionType"];
+        }
+
+        if (array_key_exists("RegionTypeName",$param) and $param["RegionTypeName"] !== null) {
+            $this->RegionTypeName = $param["RegionTypeName"];
+        }
+
+        if (array_key_exists("ReserveDetail",$param) and $param["ReserveDetail"] !== null) {
+            $this->ReserveDetail = $param["ReserveDetail"];
         }
     }
 }

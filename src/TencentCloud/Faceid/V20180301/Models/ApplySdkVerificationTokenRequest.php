@@ -20,8 +20,6 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ApplySdkVerificationToken request structure.
  *
- * @method boolean getNeedVerifyIdCard() Obtain Whether ID card authentication is required. If not, only document OCR will be performed. Currently, authentication is available only when the value of `IdCardType` is `HK`.
- * @method void setNeedVerifyIdCard(boolean $NeedVerifyIdCard) Set Whether ID card authentication is required. If not, only document OCR will be performed. Currently, authentication is available only when the value of `IdCardType` is `HK`.
  * @method integer getCheckMode() Obtain The verification mode. Valid values:
 1: OCR + liveness detection + face comparison
 2: Liveness detection + face comparison
@@ -54,6 +52,9 @@ Default value: 4
 7. `PhilippinesSSSID`: Philippine SSS ID card
 8. `PhilippinesUMID`: Philippine UMID card
 9. `MLIDPassport`: Passport issued in Hong Kong/Macao/Taiwan (China) or other countries/regions
+10..MacaoIDCard: Macao ID Card
+11.ThailandIDCard: Thailand ID Card
+12.MainlandIDCard: Mainland ID Card
  * @method void setIdCardType(string $IdCardType) Set The identity document type. Valid values: 
 1. `HK` (default): Identity card of Hong Kong (China)
 2. `ML`: Malaysian identity card
@@ -64,8 +65,13 @@ Default value: 4
 7. `PhilippinesSSSID`: Philippine SSS ID card
 8. `PhilippinesUMID`: Philippine UMID card
 9. `MLIDPassport`: Passport issued in Hong Kong/Macao/Taiwan (China) or other countries/regions
+10..MacaoIDCard: Macao ID Card
+11.ThailandIDCard: Thailand ID Card
+12.MainlandIDCard: Mainland ID Card
  * @method string getCompareImage() Obtain The Base64-encoded value of the photo to compare, which is required only when `CheckMode` is set to `2`.
  * @method void setCompareImage(string $CompareImage) Set The Base64-encoded value of the photo to compare, which is required only when `CheckMode` is set to `2`.
+ * @method boolean getNeedVerifyIdCard() Obtain Whether ID card authentication is required. If not, only document OCR will be performed. Currently, authentication is available only when the value of `IdCardType` is `HK`.
+ * @method void setNeedVerifyIdCard(boolean $NeedVerifyIdCard) Set Whether ID card authentication is required. If not, only document OCR will be performed. Currently, authentication is available only when the value of `IdCardType` is `HK`.
  * @method boolean getDisableChangeOcrResult() Obtain Whether to forbid the modification of the OCR result by users. Default value: `false` (modification allowed). (Currently, this parameter is not applied.)
  * @method void setDisableChangeOcrResult(boolean $DisableChangeOcrResult) Set Whether to forbid the modification of the OCR result by users. Default value: `false` (modification allowed). (Currently, this parameter is not applied.)
  * @method boolean getDisableCheckOcrWarnings() Obtain Whether to disable the OCR warnings. Default value: `false` (not disable), where OCR warnings are enabled and the OCR result will not be returned if there is a warning.
@@ -77,11 +83,6 @@ This feature applies only to Hong Kong (China) identity cards, Malaysian identit
  */
 class ApplySdkVerificationTokenRequest extends AbstractModel
 {
-    /**
-     * @var boolean Whether ID card authentication is required. If not, only document OCR will be performed. Currently, authentication is available only when the value of `IdCardType` is `HK`.
-     */
-    public $NeedVerifyIdCard;
-
     /**
      * @var integer The verification mode. Valid values:
 1: OCR + liveness detection + face comparison
@@ -112,6 +113,9 @@ Default value: 4
 7. `PhilippinesSSSID`: Philippine SSS ID card
 8. `PhilippinesUMID`: Philippine UMID card
 9. `MLIDPassport`: Passport issued in Hong Kong/Macao/Taiwan (China) or other countries/regions
+10..MacaoIDCard: Macao ID Card
+11.ThailandIDCard: Thailand ID Card
+12.MainlandIDCard: Mainland ID Card
      */
     public $IdCardType;
 
@@ -119,6 +123,12 @@ Default value: 4
      * @var string The Base64-encoded value of the photo to compare, which is required only when `CheckMode` is set to `2`.
      */
     public $CompareImage;
+
+    /**
+     * @var boolean Whether ID card authentication is required. If not, only document OCR will be performed. Currently, authentication is available only when the value of `IdCardType` is `HK`.
+     * @deprecated
+     */
+    public $NeedVerifyIdCard;
 
     /**
      * @var boolean Whether to forbid the modification of the OCR result by users. Default value: `false` (modification allowed). (Currently, this parameter is not applied.)
@@ -137,7 +147,6 @@ This feature applies only to Hong Kong (China) identity cards, Malaysian identit
     public $Extra;
 
     /**
-     * @param boolean $NeedVerifyIdCard Whether ID card authentication is required. If not, only document OCR will be performed. Currently, authentication is available only when the value of `IdCardType` is `HK`.
      * @param integer $CheckMode The verification mode. Valid values:
 1: OCR + liveness detection + face comparison
 2: Liveness detection + face comparison
@@ -159,7 +168,11 @@ Default value: 4
 7. `PhilippinesSSSID`: Philippine SSS ID card
 8. `PhilippinesUMID`: Philippine UMID card
 9. `MLIDPassport`: Passport issued in Hong Kong/Macao/Taiwan (China) or other countries/regions
+10..MacaoIDCard: Macao ID Card
+11.ThailandIDCard: Thailand ID Card
+12.MainlandIDCard: Mainland ID Card
      * @param string $CompareImage The Base64-encoded value of the photo to compare, which is required only when `CheckMode` is set to `2`.
+     * @param boolean $NeedVerifyIdCard Whether ID card authentication is required. If not, only document OCR will be performed. Currently, authentication is available only when the value of `IdCardType` is `HK`.
      * @param boolean $DisableChangeOcrResult Whether to forbid the modification of the OCR result by users. Default value: `false` (modification allowed). (Currently, this parameter is not applied.)
      * @param boolean $DisableCheckOcrWarnings Whether to disable the OCR warnings. Default value: `false` (not disable), where OCR warnings are enabled and the OCR result will not be returned if there is a warning.
 This feature applies only to Hong Kong (China) identity cards, Malaysian identity cards, and passports.
@@ -178,10 +191,6 @@ This feature applies only to Hong Kong (China) identity cards, Malaysian identit
         if ($param === null) {
             return;
         }
-        if (array_key_exists("NeedVerifyIdCard",$param) and $param["NeedVerifyIdCard"] !== null) {
-            $this->NeedVerifyIdCard = $param["NeedVerifyIdCard"];
-        }
-
         if (array_key_exists("CheckMode",$param) and $param["CheckMode"] !== null) {
             $this->CheckMode = $param["CheckMode"];
         }
@@ -196,6 +205,10 @@ This feature applies only to Hong Kong (China) identity cards, Malaysian identit
 
         if (array_key_exists("CompareImage",$param) and $param["CompareImage"] !== null) {
             $this->CompareImage = $param["CompareImage"];
+        }
+
+        if (array_key_exists("NeedVerifyIdCard",$param) and $param["NeedVerifyIdCard"] !== null) {
+            $this->NeedVerifyIdCard = $param["NeedVerifyIdCard"];
         }
 
         if (array_key_exists("DisableChangeOcrResult",$param) and $param["DisableChangeOcrResult"] !== null) {

@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method boolean getIsPass() Obtain Whether the authentication or OCR process is successful.
  * @method void setIsPass(boolean $IsPass) Set Whether the authentication or OCR process is successful.
+ * @method boolean getIsEdit() Obtain Whether the user modified the card recognition result
+ * @method void setIsEdit(boolean $IsEdit) Set Whether the user modified the card recognition result
  * @method FileInfo getCardVideo() Obtain The download URL of the video used for identity document verification, which is valid for 10 minutes. This parameter is returned only if video-based identity document verification is enabled.
 Note: This field may return null, indicating that no valid value can be obtained.
  * @method void setCardVideo(FileInfo $CardVideo) Set The download URL of the video used for identity document verification, which is valid for 10 minutes. This parameter is returned only if video-based identity document verification is enabled.
@@ -228,6 +230,22 @@ Note: This field may return null, indicating that no valid values can be obtaine
  * @method void setRequestId(string $RequestId) Set The request ID of a single process.
  * @method CardInfo getCardInfo() Obtain The recognition results of ID card
  * @method void setCardInfo(CardInfo $CardInfo) Set The recognition results of ID card
+ * @method NormalCardInfo getNormalCardInfo() Obtain License OCR result
+ * @method void setNormalCardInfo(NormalCardInfo $NormalCardInfo) Set License OCR result
+ * @method array getWarnCardInfos() Obtain Card warning information
+-9101 Alarm for covered certificate,
+-9102 Alarm for photocopied certificate,
+-9103 Alarm for photographed certificate,
+-9107 Alarm for reflective certificate,
+-9108 Alarm for blurry image,
+-9109 This capability is not enabled.
+ * @method void setWarnCardInfos(array $WarnCardInfos) Set Card warning information
+-9101 Alarm for covered certificate,
+-9102 Alarm for photocopied certificate,
+-9103 Alarm for photographed certificate,
+-9107 Alarm for reflective certificate,
+-9108 Alarm for blurry image,
+-9109 This capability is not enabled.
  */
 class CardVerifyResult extends AbstractModel
 {
@@ -235,6 +253,11 @@ class CardVerifyResult extends AbstractModel
      * @var boolean Whether the authentication or OCR process is successful.
      */
     public $IsPass;
+
+    /**
+     * @var boolean Whether the user modified the card recognition result
+     */
+    public $IsEdit;
 
     /**
      * @var FileInfo The download URL of the video used for identity document verification, which is valid for 10 minutes. This parameter is returned only if video-based identity document verification is enabled.
@@ -356,11 +379,29 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * @var CardInfo The recognition results of ID card
+     * @deprecated
      */
     public $CardInfo;
 
     /**
+     * @var NormalCardInfo License OCR result
+     */
+    public $NormalCardInfo;
+
+    /**
+     * @var array Card warning information
+-9101 Alarm for covered certificate,
+-9102 Alarm for photocopied certificate,
+-9103 Alarm for photographed certificate,
+-9107 Alarm for reflective certificate,
+-9108 Alarm for blurry image,
+-9109 This capability is not enabled.
+     */
+    public $WarnCardInfos;
+
+    /**
      * @param boolean $IsPass Whether the authentication or OCR process is successful.
+     * @param boolean $IsEdit Whether the user modified the card recognition result
      * @param FileInfo $CardVideo The download URL of the video used for identity document verification, which is valid for 10 minutes. This parameter is returned only if video-based identity document verification is enabled.
 Note: This field may return null, indicating that no valid value can be obtained.
      * @param FileInfo $CardImage The download URL of the identity document image, which is valid for 10 minutes.
@@ -464,6 +505,14 @@ When the value of `IdCardType` is `MLIDPassport`:
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $RequestId The request ID of a single process.
      * @param CardInfo $CardInfo The recognition results of ID card
+     * @param NormalCardInfo $NormalCardInfo License OCR result
+     * @param array $WarnCardInfos Card warning information
+-9101 Alarm for covered certificate,
+-9102 Alarm for photocopied certificate,
+-9103 Alarm for photographed certificate,
+-9107 Alarm for reflective certificate,
+-9108 Alarm for blurry image,
+-9109 This capability is not enabled.
      */
     function __construct()
     {
@@ -480,6 +529,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
         }
         if (array_key_exists("IsPass",$param) and $param["IsPass"] !== null) {
             $this->IsPass = $param["IsPass"];
+        }
+
+        if (array_key_exists("IsEdit",$param) and $param["IsEdit"] !== null) {
+            $this->IsEdit = $param["IsEdit"];
         }
 
         if (array_key_exists("CardVideo",$param) and $param["CardVideo"] !== null) {
@@ -504,6 +557,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (array_key_exists("CardInfo",$param) and $param["CardInfo"] !== null) {
             $this->CardInfo = new CardInfo();
             $this->CardInfo->deserialize($param["CardInfo"]);
+        }
+
+        if (array_key_exists("NormalCardInfo",$param) and $param["NormalCardInfo"] !== null) {
+            $this->NormalCardInfo = new NormalCardInfo();
+            $this->NormalCardInfo->deserialize($param["NormalCardInfo"]);
+        }
+
+        if (array_key_exists("WarnCardInfos",$param) and $param["WarnCardInfos"] !== null) {
+            $this->WarnCardInfos = $param["WarnCardInfos"];
         }
     }
 }
