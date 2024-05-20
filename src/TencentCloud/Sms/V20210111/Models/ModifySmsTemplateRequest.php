@@ -26,8 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTemplateName(string $TemplateName) Set New template name.
  * @method string getTemplateContent() Obtain New template content.
  * @method void setTemplateContent(string $TemplateContent) Set New template content.
- * @method integer getSmsType() Obtain SMS type. 0: regular SMS, 1: marketing SMS.
- * @method void setSmsType(integer $SmsType) Set SMS type. 0: regular SMS, 1: marketing SMS.
+ * @method integer getSmsType() Obtain SMS type. 1: Marketing SMS, 2: Notification SMS, 3: OTP SMS.
+Note: The "Regular SMS" type template currently still supports submission. However, in order to further improve the quality of SMS service and increase the approval rate of SMS templates, it is recommended to apply for a new template according to the "Notification SMS" type or the "OTP SMS" type. You can Refer to [Optimization of Tencent Cloud SMS Template Types](https://www.tencentcloud.com/document/product/382/60410).
+ * @method void setSmsType(integer $SmsType) Set SMS type. 1: Marketing SMS, 2: Notification SMS, 3: OTP SMS.
+Note: The "Regular SMS" type template currently still supports submission. However, in order to further improve the quality of SMS service and increase the approval rate of SMS templates, it is recommended to apply for a new template according to the "Notification SMS" type or the "OTP SMS" type. You can Refer to [Optimization of Tencent Cloud SMS Template Types](https://www.tencentcloud.com/document/product/382/60410).
  * @method integer getInternational() Obtain Whether it is Global SMS:
 0: Mainland China SMS.
 1: Global SMS.
@@ -55,7 +57,8 @@ class ModifySmsTemplateRequest extends AbstractModel
     public $TemplateContent;
 
     /**
-     * @var integer SMS type. 0: regular SMS, 1: marketing SMS.
+     * @var integer SMS type. 1: Marketing SMS, 2: Notification SMS, 3: OTP SMS.
+Note: The "Regular SMS" type template currently still supports submission. However, in order to further improve the quality of SMS service and increase the approval rate of SMS templates, it is recommended to apply for a new template according to the "Notification SMS" type or the "OTP SMS" type. You can Refer to [Optimization of Tencent Cloud SMS Template Types](https://www.tencentcloud.com/document/product/382/60410).
      */
     public $SmsType;
 
@@ -75,7 +78,8 @@ class ModifySmsTemplateRequest extends AbstractModel
      * @param integer $TemplateId ID of the template to be modified.
      * @param string $TemplateName New template name.
      * @param string $TemplateContent New template content.
-     * @param integer $SmsType SMS type. 0: regular SMS, 1: marketing SMS.
+     * @param integer $SmsType SMS type. 1: Marketing SMS, 2: Notification SMS, 3: OTP SMS.
+Note: The "Regular SMS" type template currently still supports submission. However, in order to further improve the quality of SMS service and increase the approval rate of SMS templates, it is recommended to apply for a new template according to the "Notification SMS" type or the "OTP SMS" type. You can Refer to [Optimization of Tencent Cloud SMS Template Types](https://www.tencentcloud.com/document/product/382/60410).
      * @param integer $International Whether it is Global SMS:
 0: Mainland China SMS.
 1: Global SMS.
