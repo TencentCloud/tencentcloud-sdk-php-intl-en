@@ -30,6 +30,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setWechat(integer $Wechat) Set WeChat
  * @method integer getCustom() Obtain Custom
  * @method void setCustom(integer $Custom) Set Custom
+ * @method integer getMail() Obtain Mail
+ * @method void setMail(integer $Mail) Set Mail
+ * @method integer getU2FToken() Obtain U2F token
+ * @method void setU2FToken(integer $U2FToken) Set U2F token
  */
 class LoginActionFlag extends AbstractModel
 {
@@ -59,11 +63,23 @@ class LoginActionFlag extends AbstractModel
     public $Custom;
 
     /**
+     * @var integer Mail
+     */
+    public $Mail;
+
+    /**
+     * @var integer U2F token
+     */
+    public $U2FToken;
+
+    /**
      * @param integer $Phone Phone
      * @param integer $Token Hard token
      * @param integer $Stoken Soft token
      * @param integer $Wechat WeChat
      * @param integer $Custom Custom
+     * @param integer $Mail Mail
+     * @param integer $U2FToken U2F token
      */
     function __construct()
     {
@@ -96,6 +112,14 @@ class LoginActionFlag extends AbstractModel
 
         if (array_key_exists("Custom",$param) and $param["Custom"] !== null) {
             $this->Custom = $param["Custom"];
+        }
+
+        if (array_key_exists("Mail",$param) and $param["Mail"] !== null) {
+            $this->Mail = $param["Mail"];
+        }
+
+        if (array_key_exists("U2FToken",$param) and $param["U2FToken"] !== null) {
+            $this->U2FToken = $param["U2FToken"];
         }
     }
 }
