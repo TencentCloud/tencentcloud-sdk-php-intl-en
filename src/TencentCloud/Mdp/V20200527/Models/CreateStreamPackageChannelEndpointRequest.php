@@ -26,6 +26,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setName(string $Name) Set Endpoint name, which must contain 1 to 32 characters and supports digits, letters, and underscores
  * @method EndpointAuthInfo getAuthInfo() Obtain Authentication information
  * @method void setAuthInfo(EndpointAuthInfo $AuthInfo) Set Authentication information
+ * @method string getProtocol() Obtain Endpoint protocol type, supports HLS, DASH, CMAF (only HLS type input can create CMAF Endpoint).
+ * @method void setProtocol(string $Protocol) Set Endpoint protocol type, supports HLS, DASH, CMAF (only HLS type input can create CMAF Endpoint).
+ * @method string getManifest() Obtain Mainifest name, default is main.
+ * @method void setManifest(string $Manifest) Set Mainifest name, default is main.
+ * @method boolean getTimeShiftEnable() Obtain Whether to turn on the TimeShift function, true: on, false: off, the default is off.
+ * @method void setTimeShiftEnable(boolean $TimeShiftEnable) Set Whether to turn on the TimeShift function, true: on, false: off, the default is off.
+ * @method integer getTimeShiftDuration() Obtain The number of days to look back in TimeShift, up to 30 days is supported.
+ * @method void setTimeShiftDuration(integer $TimeShiftDuration) Set The number of days to look back in TimeShift, up to 30 days is supported.
  */
 class CreateStreamPackageChannelEndpointRequest extends AbstractModel
 {
@@ -45,9 +53,33 @@ class CreateStreamPackageChannelEndpointRequest extends AbstractModel
     public $AuthInfo;
 
     /**
+     * @var string Endpoint protocol type, supports HLS, DASH, CMAF (only HLS type input can create CMAF Endpoint).
+     */
+    public $Protocol;
+
+    /**
+     * @var string Mainifest name, default is main.
+     */
+    public $Manifest;
+
+    /**
+     * @var boolean Whether to turn on the TimeShift function, true: on, false: off, the default is off.
+     */
+    public $TimeShiftEnable;
+
+    /**
+     * @var integer The number of days to look back in TimeShift, up to 30 days is supported.
+     */
+    public $TimeShiftDuration;
+
+    /**
      * @param string $Id Channel ID
      * @param string $Name Endpoint name, which must contain 1 to 32 characters and supports digits, letters, and underscores
      * @param EndpointAuthInfo $AuthInfo Authentication information
+     * @param string $Protocol Endpoint protocol type, supports HLS, DASH, CMAF (only HLS type input can create CMAF Endpoint).
+     * @param string $Manifest Mainifest name, default is main.
+     * @param boolean $TimeShiftEnable Whether to turn on the TimeShift function, true: on, false: off, the default is off.
+     * @param integer $TimeShiftDuration The number of days to look back in TimeShift, up to 30 days is supported.
      */
     function __construct()
     {
@@ -73,6 +105,22 @@ class CreateStreamPackageChannelEndpointRequest extends AbstractModel
         if (array_key_exists("AuthInfo",$param) and $param["AuthInfo"] !== null) {
             $this->AuthInfo = new EndpointAuthInfo();
             $this->AuthInfo->deserialize($param["AuthInfo"]);
+        }
+
+        if (array_key_exists("Protocol",$param) and $param["Protocol"] !== null) {
+            $this->Protocol = $param["Protocol"];
+        }
+
+        if (array_key_exists("Manifest",$param) and $param["Manifest"] !== null) {
+            $this->Manifest = $param["Manifest"];
+        }
+
+        if (array_key_exists("TimeShiftEnable",$param) and $param["TimeShiftEnable"] !== null) {
+            $this->TimeShiftEnable = $param["TimeShiftEnable"];
+        }
+
+        if (array_key_exists("TimeShiftDuration",$param) and $param["TimeShiftDuration"] !== null) {
+            $this->TimeShiftDuration = $param["TimeShiftDuration"];
         }
     }
 }
