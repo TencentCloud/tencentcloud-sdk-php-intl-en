@@ -22,12 +22,22 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getJobId() Obtain ID of the task.
  * @method void setJobId(string $JobId) Set ID of the task.
- * @method string getStatus() Obtain Status of the task.
- * @method void setStatus(string $Status) Set Status of the task.
  * @method string getTarget() Obtain Resource.
  * @method void setTarget(string $Target) Set Resource.
  * @method string getType() Obtain Type of the task.
  * @method void setType(string $Type) Set Type of the task.
+ * @method string getMethod() Obtain 
+ * @method void setMethod(string $Method) Set 
+ * @method string getStatus() Obtain Status. Valid values:
+<li>processing: Processing;</li>
+<li>success: Succeeded;</li>
+<li>failed: Failed;</li>
+<li>timeout: Timed out. </li>
+ * @method void setStatus(string $Status) Set Status. Valid values:
+<li>processing: Processing;</li>
+<li>success: Succeeded;</li>
+<li>failed: Failed;</li>
+<li>timeout: Timed out. </li>
  * @method string getCreateTime() Obtain Creation time of the task.
  * @method void setCreateTime(string $CreateTime) Set Creation time of the task.
  * @method string getUpdateTime() Obtain Completion time of the task.
@@ -41,11 +51,6 @@ class Task extends AbstractModel
     public $JobId;
 
     /**
-     * @var string Status of the task.
-     */
-    public $Status;
-
-    /**
      * @var string Resource.
      */
     public $Target;
@@ -54,6 +59,20 @@ class Task extends AbstractModel
      * @var string Type of the task.
      */
     public $Type;
+
+    /**
+     * @var string 
+     */
+    public $Method;
+
+    /**
+     * @var string Status. Valid values:
+<li>processing: Processing;</li>
+<li>success: Succeeded;</li>
+<li>failed: Failed;</li>
+<li>timeout: Timed out. </li>
+     */
+    public $Status;
 
     /**
      * @var string Creation time of the task.
@@ -67,9 +86,14 @@ class Task extends AbstractModel
 
     /**
      * @param string $JobId ID of the task.
-     * @param string $Status Status of the task.
      * @param string $Target Resource.
      * @param string $Type Type of the task.
+     * @param string $Method 
+     * @param string $Status Status. Valid values:
+<li>processing: Processing;</li>
+<li>success: Succeeded;</li>
+<li>failed: Failed;</li>
+<li>timeout: Timed out. </li>
      * @param string $CreateTime Creation time of the task.
      * @param string $UpdateTime Completion time of the task.
      */
@@ -90,16 +114,20 @@ class Task extends AbstractModel
             $this->JobId = $param["JobId"];
         }
 
-        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
-            $this->Status = $param["Status"];
-        }
-
         if (array_key_exists("Target",$param) and $param["Target"] !== null) {
             $this->Target = $param["Target"];
         }
 
         if (array_key_exists("Type",$param) and $param["Type"] !== null) {
             $this->Type = $param["Type"];
+        }
+
+        if (array_key_exists("Method",$param) and $param["Method"] !== null) {
+            $this->Method = $param["Method"];
+        }
+
+        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
+            $this->Status = $param["Status"];
         }
 
         if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {

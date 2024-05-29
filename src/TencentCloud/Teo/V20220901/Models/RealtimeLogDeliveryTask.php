@@ -42,6 +42,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDeliveryConditions(array $DeliveryConditions) Set Log delivery filter conditions.
  * @method integer getSample() Obtain The sampling ratio in permille. Value range: 1 to 1000. For example, 605 represents a sampling ratio of 60.5%.
  * @method void setSample(integer $Sample) Set The sampling ratio in permille. Value range: 1 to 1000. For example, 605 represents a sampling ratio of 60.5%.
+ * @method LogFormat getLogFormat() Obtain Output format for log delivery. When the output parameter is null, the default format is used, which works as follows:
+<li>When TaskType is 'custom_endpoint', the default format is an array of JSON objects, with each JSON object representing a log entry;</li>
+<li>When TaskType is 's3', the default format is JSON Lines. </li>
+Note: This field may return 'null', which indicates a failure to obtain a valid value.
+ * @method void setLogFormat(LogFormat $LogFormat) Set Output format for log delivery. When the output parameter is null, the default format is used, which works as follows:
+<li>When TaskType is 'custom_endpoint', the default format is an array of JSON objects, with each JSON object representing a log entry;</li>
+<li>When TaskType is 's3', the default format is JSON Lines. </li>
+Note: This field may return 'null', which indicates a failure to obtain a valid value.
  * @method CLSTopic getCLS() Obtain Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setCLS(CLSTopic $CLS) Set Note: This field may return null, indicating that no valid values can be obtained.
  * @method CustomEndpoint getCustomEndpoint() Obtain Note: This field may return null, indicating that no valid values can be obtained.
@@ -111,6 +119,14 @@ class RealtimeLogDeliveryTask extends AbstractModel
     public $Sample;
 
     /**
+     * @var LogFormat Output format for log delivery. When the output parameter is null, the default format is used, which works as follows:
+<li>When TaskType is 'custom_endpoint', the default format is an array of JSON objects, with each JSON object representing a log entry;</li>
+<li>When TaskType is 's3', the default format is JSON Lines. </li>
+Note: This field may return 'null', which indicates a failure to obtain a valid value.
+     */
+    public $LogFormat;
+
+    /**
      * @var CLSTopic Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $CLS;
@@ -147,6 +163,10 @@ class RealtimeLogDeliveryTask extends AbstractModel
      * @param array $CustomFields The list of custom fields for delivery.
      * @param array $DeliveryConditions Log delivery filter conditions.
      * @param integer $Sample The sampling ratio in permille. Value range: 1 to 1000. For example, 605 represents a sampling ratio of 60.5%.
+     * @param LogFormat $LogFormat Output format for log delivery. When the output parameter is null, the default format is used, which works as follows:
+<li>When TaskType is 'custom_endpoint', the default format is an array of JSON objects, with each JSON object representing a log entry;</li>
+<li>When TaskType is 's3', the default format is JSON Lines. </li>
+Note: This field may return 'null', which indicates a failure to obtain a valid value.
      * @param CLSTopic $CLS Note: This field may return null, indicating that no valid values can be obtained.
      * @param CustomEndpoint $CustomEndpoint Note: This field may return null, indicating that no valid values can be obtained.
      * @param S3 $S3 Note: This field may return null, indicating that no valid values can be obtained.
@@ -218,6 +238,11 @@ class RealtimeLogDeliveryTask extends AbstractModel
 
         if (array_key_exists("Sample",$param) and $param["Sample"] !== null) {
             $this->Sample = $param["Sample"];
+        }
+
+        if (array_key_exists("LogFormat",$param) and $param["LogFormat"] !== null) {
+            $this->LogFormat = new LogFormat();
+            $this->LogFormat->deserialize($param["LogFormat"]);
         }
 
         if (array_key_exists("CLS",$param) and $param["CLS"] !== null) {

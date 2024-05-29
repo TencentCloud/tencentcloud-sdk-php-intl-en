@@ -66,6 +66,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDeliveryConditions(array $DeliveryConditions) Set Log delivery filter conditions. If this field is not filled in, all logs will be delivered.
  * @method integer getSample() Obtain The sampling ratio in permille. Value range: 1 to 1000. For example, 605 represents a sampling ratio of 60.5%. If this field is not filled in, the sampling ratio is 100%.
  * @method void setSample(integer $Sample) Set The sampling ratio in permille. Value range: 1 to 1000. For example, 605 represents a sampling ratio of 60.5%. If this field is not filled in, the sampling ratio is 100%.
+ * @method LogFormat getLogFormat() Obtain Output format for log delivery. If this field is not specified, the default format is used, which works as follows:
+<li>When TaskType is 'custom_endpoint', the default format is an array of JSON objects, with each JSON object representing a log entry;</li>
+<li>When TaskType is 's3', the default format is JSON Lines;</li>Specifically, when TaskType is 'cls', the only allowed value for LogFormat.FormatType is 'json', and other parameters in LogFormat will be ignored. It is recommended not to transfer LogFormat.
+ * @method void setLogFormat(LogFormat $LogFormat) Set Output format for log delivery. If this field is not specified, the default format is used, which works as follows:
+<li>When TaskType is 'custom_endpoint', the default format is an array of JSON objects, with each JSON object representing a log entry;</li>
+<li>When TaskType is 's3', the default format is JSON Lines;</li>Specifically, when TaskType is 'cls', the only allowed value for LogFormat.FormatType is 'json', and other parameters in LogFormat will be ignored. It is recommended not to transfer LogFormat.
  * @method CLSTopic getCLS() Obtain The configuration information of CLS. This parameter is required when TaskType is cls.
  * @method void setCLS(CLSTopic $CLS) Set The configuration information of CLS. This parameter is required when TaskType is cls.
  * @method CustomEndpoint getCustomEndpoint() Obtain The configuration information of the custom HTTP service. This parameter is required when TaskType is custom_endpoint.
@@ -139,6 +145,13 @@ class CreateRealtimeLogDeliveryTaskRequest extends AbstractModel
     public $Sample;
 
     /**
+     * @var LogFormat Output format for log delivery. If this field is not specified, the default format is used, which works as follows:
+<li>When TaskType is 'custom_endpoint', the default format is an array of JSON objects, with each JSON object representing a log entry;</li>
+<li>When TaskType is 's3', the default format is JSON Lines;</li>Specifically, when TaskType is 'cls', the only allowed value for LogFormat.FormatType is 'json', and other parameters in LogFormat will be ignored. It is recommended not to transfer LogFormat.
+     */
+    public $LogFormat;
+
+    /**
      * @var CLSTopic The configuration information of CLS. This parameter is required when TaskType is cls.
      */
     public $CLS;
@@ -177,6 +190,9 @@ class CreateRealtimeLogDeliveryTaskRequest extends AbstractModel
      * @param array $CustomFields The list of custom fields for delivery, supporting extracting specified field values from HTTP request headers, response headers, and cookies. Each custom field name must be unique and the maximum number of fields is 200.
      * @param array $DeliveryConditions Log delivery filter conditions. If this field is not filled in, all logs will be delivered.
      * @param integer $Sample The sampling ratio in permille. Value range: 1 to 1000. For example, 605 represents a sampling ratio of 60.5%. If this field is not filled in, the sampling ratio is 100%.
+     * @param LogFormat $LogFormat Output format for log delivery. If this field is not specified, the default format is used, which works as follows:
+<li>When TaskType is 'custom_endpoint', the default format is an array of JSON objects, with each JSON object representing a log entry;</li>
+<li>When TaskType is 's3', the default format is JSON Lines;</li>Specifically, when TaskType is 'cls', the only allowed value for LogFormat.FormatType is 'json', and other parameters in LogFormat will be ignored. It is recommended not to transfer LogFormat.
      * @param CLSTopic $CLS The configuration information of CLS. This parameter is required when TaskType is cls.
      * @param CustomEndpoint $CustomEndpoint The configuration information of the custom HTTP service. This parameter is required when TaskType is custom_endpoint.
      * @param S3 $S3 The configuration information of the AWS S3-compatible bucket. This parameter is required when TaskType is s3.
@@ -242,6 +258,11 @@ class CreateRealtimeLogDeliveryTaskRequest extends AbstractModel
 
         if (array_key_exists("Sample",$param) and $param["Sample"] !== null) {
             $this->Sample = $param["Sample"];
+        }
+
+        if (array_key_exists("LogFormat",$param) and $param["LogFormat"] !== null) {
+            $this->LogFormat = new LogFormat();
+            $this->LogFormat->deserialize($param["LogFormat"]);
         }
 
         if (array_key_exists("CLS",$param) and $param["CLS"] !== null) {
