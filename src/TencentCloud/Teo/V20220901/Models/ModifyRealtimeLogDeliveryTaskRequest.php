@@ -46,8 +46,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDeliveryConditions(array $DeliveryConditions) Set Log delivery filter conditions. If this field is not filled in, all logs will be delivered.
  * @method integer getSample() Obtain The sampling ratio in permille. Value range: 1 to 1000. For example, 605 represents a sampling ratio of 60.5%. If this field is not filled in, the original configuration will be retained.
  * @method void setSample(integer $Sample) Set The sampling ratio in permille. Value range: 1 to 1000. For example, 605 represents a sampling ratio of 60.5%. If this field is not filled in, the original configuration will be retained.
- * @method LogFormat getLogFormat() Obtain Output format for log delivery. If this field is not specified, the original configuration will be retained.
- * @method void setLogFormat(LogFormat $LogFormat) Set Output format for log delivery. If this field is not specified, the original configuration will be retained.
+ * @method LogFormat getLogFormat() Obtain Output format for log delivery. If this field is not specified, the original configuration will be retained.Specifically, when TaskType is set to cls, the value of LogFormat.FormatType can only be json, and other parameters in LogFormat will be ignored. It is recommended not to input LogFormat.
+ * @method void setLogFormat(LogFormat $LogFormat) Set Output format for log delivery. If this field is not specified, the original configuration will be retained.Specifically, when TaskType is set to cls, the value of LogFormat.FormatType can only be json, and other parameters in LogFormat will be ignored. It is recommended not to input LogFormat.
  * @method CustomEndpoint getCustomEndpoint() Obtain The configuration information of the custom HTTP service. If this field is not filled in, the original configuration will be retained.
  * @method void setCustomEndpoint(CustomEndpoint $CustomEndpoint) Set The configuration information of the custom HTTP service. If this field is not filled in, the original configuration will be retained.
  * @method S3 getS3() Obtain The configuration information of the AWS S3-compatible bucket. If this field is not filled in, the original configuration will be retained.
@@ -105,7 +105,7 @@ class ModifyRealtimeLogDeliveryTaskRequest extends AbstractModel
     public $Sample;
 
     /**
-     * @var LogFormat Output format for log delivery. If this field is not specified, the original configuration will be retained.
+     * @var LogFormat Output format for log delivery. If this field is not specified, the original configuration will be retained.Specifically, when TaskType is set to cls, the value of LogFormat.FormatType can only be json, and other parameters in LogFormat will be ignored. It is recommended not to input LogFormat.
      */
     public $LogFormat;
 
@@ -133,7 +133,7 @@ class ModifyRealtimeLogDeliveryTaskRequest extends AbstractModel
      * @param array $CustomFields The list of custom fields for delivery, supporting extracting specified field values from HTTP request headers, response headers, and cookies. Each custom field name must be unique and the maximum number of fields is 200. If this field is not filled in, the original configuration will be retained.
      * @param array $DeliveryConditions Log delivery filter conditions. If this field is not filled in, all logs will be delivered.
      * @param integer $Sample The sampling ratio in permille. Value range: 1 to 1000. For example, 605 represents a sampling ratio of 60.5%. If this field is not filled in, the original configuration will be retained.
-     * @param LogFormat $LogFormat Output format for log delivery. If this field is not specified, the original configuration will be retained.
+     * @param LogFormat $LogFormat Output format for log delivery. If this field is not specified, the original configuration will be retained.Specifically, when TaskType is set to cls, the value of LogFormat.FormatType can only be json, and other parameters in LogFormat will be ignored. It is recommended not to input LogFormat.
      * @param CustomEndpoint $CustomEndpoint The configuration information of the custom HTTP service. If this field is not filled in, the original configuration will be retained.
      * @param S3 $S3 The configuration information of the AWS S3-compatible bucket. If this field is not filled in, the original configuration will be retained.
      */

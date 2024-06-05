@@ -93,7 +93,11 @@ If there are already EdgeOne plans under the current account, it is recommended 
  * @method Models\DescribeRealtimeLogDeliveryTasksResponse DescribeRealtimeLogDeliveryTasks(Models\DescribeRealtimeLogDeliveryTasksRequest $req) This API is used to query the real-time log delivery task list.
  * @method Models\DescribeRulesResponse DescribeRules(Models\DescribeRulesRequest $req) This API is used to query the rules in the rule engine.
  * @method Models\DescribeRulesSettingResponse DescribeRulesSetting(Models\DescribeRulesSettingRequest $req) This API is used to return the list of the settings of the rule engine that can be used for request match and their detailed recommended configuration information.
- * @method Models\DescribeSecurityIPGroupInfoResponse DescribeSecurityIPGroupInfo(Models\DescribeSecurityIPGroupInfoRequest $req) This API is used to query the configuration information of an IP group, including the IP group name, IP group content, and the site the IP group belongs to.
+ * @method Models\DescribeSecurityIPGroupResponse DescribeSecurityIPGroup(Models\DescribeSecurityIPGroupRequest $req) This API is used to query the configuration information of a security IP group, including the ID, name, and content of the security IP group.
+ * @method Models\DescribeSecurityIPGroupInfoResponse DescribeSecurityIPGroupInfo(Models\DescribeSecurityIPGroupInfoRequest $req) The API is deprecated and will be discontinued on June 30, 2024. Please use the API [DescribeSecurityIPGroup
+](https://intl.cloud.tencent.com/document/product/1552/105866?from_cn_redirect=1).
+
+This API is used to query the configuration information of an IP group, including the IP group name, IP group content, and the site the IP group belongs to.
  * @method Models\DescribeSecurityTemplateBindingsResponse DescribeSecurityTemplateBindings(Models\DescribeSecurityTemplateBindingsRequest $req) This API is used to query bindings of a policy template.
  * @method Models\DescribeTimingL4DataResponse DescribeTimingL4Data(Models\DescribeTimingL4DataRequest $req) This API is used to query the list of L4 traffic data recorded over time.
  * @method Models\DescribeTimingL7AnalysisDataResponse DescribeTimingL7AnalysisData(Models\DescribeTimingL7AnalysisDataRequest $req) This API is used to query the L7 data recorded over time.

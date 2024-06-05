@@ -42,6 +42,8 @@ use TencentCloud\Common\AbstractModel;
 Note that if it’s enabled, the purging is based on the converted URLs.
  * @method void setEncodeUrl(boolean $EncodeUrl) Set Specifies whether to transcode non-ASCII URLs according to RFC3986.
 Note that if it’s enabled, the purging is based on the converted URLs.
+ * @method CacheTag getCacheTag() Obtain The information attached when the node cache purge type is set to purge_cache_tag.
+ * @method void setCacheTag(CacheTag $CacheTag) Set The information attached when the node cache purge type is set to purge_cache_tag.
  */
 class CreatePurgeTaskRequest extends AbstractModel
 {
@@ -78,6 +80,11 @@ Note that if it’s enabled, the purging is based on the converted URLs.
     public $EncodeUrl;
 
     /**
+     * @var CacheTag The information attached when the node cache purge type is set to purge_cache_tag.
+     */
+    public $CacheTag;
+
+    /**
      * @param string $ZoneId ID of the site.
      * @param string $Type Type of cache purging. Values:
 <li>`purge_url`: Purge by the URL</li>
@@ -89,6 +96,7 @@ Note that if it’s enabled, the purging is based on the converted URLs.
      * @param array $Targets List of resources for which cache is to be purged. Each element format depends on the cache purge type and you can refer to the API examples for details. <li>The number of tasks that can be submitted at a time is limited by the quota of a billing package. For details, see [Billing Overview] (https://intl.cloud.tencent.com/document/product/1552/77380?from_cn_redirect=1).</li>
      * @param boolean $EncodeUrl Specifies whether to transcode non-ASCII URLs according to RFC3986.
 Note that if it’s enabled, the purging is based on the converted URLs.
+     * @param CacheTag $CacheTag The information attached when the node cache purge type is set to purge_cache_tag.
      */
     function __construct()
     {
@@ -121,6 +129,11 @@ Note that if it’s enabled, the purging is based on the converted URLs.
 
         if (array_key_exists("EncodeUrl",$param) and $param["EncodeUrl"] !== null) {
             $this->EncodeUrl = $param["EncodeUrl"];
+        }
+
+        if (array_key_exists("CacheTag",$param) and $param["CacheTag"] !== null) {
+            $this->CacheTag = new CacheTag();
+            $this->CacheTag->deserialize($param["CacheTag"]);
         }
     }
 }

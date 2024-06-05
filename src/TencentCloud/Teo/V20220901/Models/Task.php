@@ -26,8 +26,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTarget(string $Target) Set Resource.
  * @method string getType() Obtain Type of the task.
  * @method void setType(string $Type) Set Type of the task.
- * @method string getMethod() Obtain 
- * @method void setMethod(string $Method) Set 
+ * @method string getMethod() Obtain Node cache purge method, with values:
+<li>invalidate: Marks as expired. A back-to-origin validation is triggered upon user request, sending an HTTP conditional request with If-None-Match and If-Modified-Since headers. If the origin server responds with 200, the node will fetch new resources from the origin and update the cache; if the origin server responds with 304, the cache will not be updated;</li>
+<li>delete: Directly deletes the node's cache, triggering a resource fetch from the origin upon user request.</li>
+Note: This field may return null, which indicates a failure to obtain a valid value.
+ * @method void setMethod(string $Method) Set Node cache purge method, with values:
+<li>invalidate: Marks as expired. A back-to-origin validation is triggered upon user request, sending an HTTP conditional request with If-None-Match and If-Modified-Since headers. If the origin server responds with 200, the node will fetch new resources from the origin and update the cache; if the origin server responds with 304, the cache will not be updated;</li>
+<li>delete: Directly deletes the node's cache, triggering a resource fetch from the origin upon user request.</li>
+Note: This field may return null, which indicates a failure to obtain a valid value.
  * @method string getStatus() Obtain Status. Valid values:
 <li>processing: Processing;</li>
 <li>success: Succeeded;</li>
@@ -61,7 +67,10 @@ class Task extends AbstractModel
     public $Type;
 
     /**
-     * @var string 
+     * @var string Node cache purge method, with values:
+<li>invalidate: Marks as expired. A back-to-origin validation is triggered upon user request, sending an HTTP conditional request with If-None-Match and If-Modified-Since headers. If the origin server responds with 200, the node will fetch new resources from the origin and update the cache; if the origin server responds with 304, the cache will not be updated;</li>
+<li>delete: Directly deletes the node's cache, triggering a resource fetch from the origin upon user request.</li>
+Note: This field may return null, which indicates a failure to obtain a valid value.
      */
     public $Method;
 
@@ -88,7 +97,10 @@ class Task extends AbstractModel
      * @param string $JobId ID of the task.
      * @param string $Target Resource.
      * @param string $Type Type of the task.
-     * @param string $Method 
+     * @param string $Method Node cache purge method, with values:
+<li>invalidate: Marks as expired. A back-to-origin validation is triggered upon user request, sending an HTTP conditional request with If-None-Match and If-Modified-Since headers. If the origin server responds with 200, the node will fetch new resources from the origin and update the cache; if the origin server responds with 304, the cache will not be updated;</li>
+<li>delete: Directly deletes the node's cache, triggering a resource fetch from the origin upon user request.</li>
+Note: This field may return null, which indicates a failure to obtain a valid value.
      * @param string $Status Status. Valid values:
 <li>processing: Processing;</li>
 <li>success: Succeeded;</li>

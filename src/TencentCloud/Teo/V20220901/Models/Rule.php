@@ -20,22 +20,21 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Rule item of the rule engine. The items in the `Conditions` array are in `OR` relationship, and the items in the inner `Conditions` list are in `AND` relationship.
  *
- * @method array getActions() Obtain Feature to be executed.
- * @method void setActions(array $Actions) Set Feature to be executed.
  * @method array getConditions() Obtain Feature execution conditions.
 Note: If any condition in the array is met, the feature will run.
  * @method void setConditions(array $Conditions) Set Feature execution conditions.
 Note: If any condition in the array is met, the feature will run.
+ * @method array getActions() Obtain Feature to be executed.
+Note: Actions and SubRules cannot both be empty.
+ * @method void setActions(array $Actions) Set Feature to be executed.
+Note: Actions and SubRules cannot both be empty.
  * @method array getSubRules() Obtain The nested rule.
+Note: Actions and SubRules cannot both be empty.
  * @method void setSubRules(array $SubRules) Set The nested rule.
+Note: Actions and SubRules cannot both be empty.
  */
 class Rule extends AbstractModel
 {
-    /**
-     * @var array Feature to be executed.
-     */
-    public $Actions;
-
     /**
      * @var array Feature execution conditions.
 Note: If any condition in the array is met, the feature will run.
@@ -43,15 +42,24 @@ Note: If any condition in the array is met, the feature will run.
     public $Conditions;
 
     /**
+     * @var array Feature to be executed.
+Note: Actions and SubRules cannot both be empty.
+     */
+    public $Actions;
+
+    /**
      * @var array The nested rule.
+Note: Actions and SubRules cannot both be empty.
      */
     public $SubRules;
 
     /**
-     * @param array $Actions Feature to be executed.
      * @param array $Conditions Feature execution conditions.
 Note: If any condition in the array is met, the feature will run.
+     * @param array $Actions Feature to be executed.
+Note: Actions and SubRules cannot both be empty.
      * @param array $SubRules The nested rule.
+Note: Actions and SubRules cannot both be empty.
      */
     function __construct()
     {
@@ -66,21 +74,21 @@ Note: If any condition in the array is met, the feature will run.
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Actions",$param) and $param["Actions"] !== null) {
-            $this->Actions = [];
-            foreach ($param["Actions"] as $key => $value){
-                $obj = new Action();
-                $obj->deserialize($value);
-                array_push($this->Actions, $obj);
-            }
-        }
-
         if (array_key_exists("Conditions",$param) and $param["Conditions"] !== null) {
             $this->Conditions = [];
             foreach ($param["Conditions"] as $key => $value){
                 $obj = new RuleAndConditions();
                 $obj->deserialize($value);
                 array_push($this->Conditions, $obj);
+            }
+        }
+
+        if (array_key_exists("Actions",$param) and $param["Actions"] !== null) {
+            $this->Actions = [];
+            foreach ($param["Actions"] as $key => $value){
+                $obj = new Action();
+                $obj->deserialize($value);
+                array_push($this->Actions, $obj);
             }
         }
 

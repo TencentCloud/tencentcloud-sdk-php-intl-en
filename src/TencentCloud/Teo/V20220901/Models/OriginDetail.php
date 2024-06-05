@@ -20,21 +20,21 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Details of the origin.
  *
- * @method string getOriginType() Obtain Origin server type. Valid values:
-<li>IP_DOMAIN: IPv4, IPv6, or domain name-typed origin servers;</li>
-<li>COS: Tencent Cloud COS origin servers;</li>
-<li>AWS_S3: AWS S3 object storage origin servers;</li>
-<li>ORIGIN_GROUP: origin server group-typed origin servers;</li>
-<li>VODEO: Cloud VOD (Hybrid Cloud Edition);</li>
-<li>SPACE: uninstalling origin servers. Currently only available to the allowlist;</li>
+ * @method string getOriginType() Obtain The origin server type, with values:
+<li>IP_DOMAIN: IPv4, IPv6, or domain name type origin server;</li>
+<li>COS: Tencent Cloud COS origin server;</li>
+<li>AWS_S3: AWS S3 origin server;</li>
+<li>ORIGIN_GROUP: origin server group type origin server;</li>
+<li>VODEO: VOD on EO;</li>
+<li>SPACE: origin server uninstallation. Currently only available to the allowlist;</li>
 <li>LB: load balancing. Currently only available to the allowlist. </li>
- * @method void setOriginType(string $OriginType) Set Origin server type. Valid values:
-<li>IP_DOMAIN: IPv4, IPv6, or domain name-typed origin servers;</li>
-<li>COS: Tencent Cloud COS origin servers;</li>
-<li>AWS_S3: AWS S3 object storage origin servers;</li>
-<li>ORIGIN_GROUP: origin server group-typed origin servers;</li>
-<li>VODEO: Cloud VOD (Hybrid Cloud Edition);</li>
-<li>SPACE: uninstalling origin servers. Currently only available to the allowlist;</li>
+ * @method void setOriginType(string $OriginType) Set The origin server type, with values:
+<li>IP_DOMAIN: IPv4, IPv6, or domain name type origin server;</li>
+<li>COS: Tencent Cloud COS origin server;</li>
+<li>AWS_S3: AWS S3 origin server;</li>
+<li>ORIGIN_GROUP: origin server group type origin server;</li>
+<li>VODEO: VOD on EO;</li>
+<li>SPACE: origin server uninstallation. Currently only available to the allowlist;</li>
 <li>LB: load balancing. Currently only available to the allowlist. </li>
  * @method string getOrigin() Obtain Origin server address, which varies according to the value of OriginType:
 <li>For OriginType = IP_DOMAIN, this parameter is an IPv4, IPv6 address or domain name;</li>
@@ -76,13 +76,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
 class OriginDetail extends AbstractModel
 {
     /**
-     * @var string Origin server type. Valid values:
-<li>IP_DOMAIN: IPv4, IPv6, or domain name-typed origin servers;</li>
-<li>COS: Tencent Cloud COS origin servers;</li>
-<li>AWS_S3: AWS S3 object storage origin servers;</li>
-<li>ORIGIN_GROUP: origin server group-typed origin servers;</li>
-<li>VODEO: Cloud VOD (Hybrid Cloud Edition);</li>
-<li>SPACE: uninstalling origin servers. Currently only available to the allowlist;</li>
+     * @var string The origin server type, with values:
+<li>IP_DOMAIN: IPv4, IPv6, or domain name type origin server;</li>
+<li>COS: Tencent Cloud COS origin server;</li>
+<li>AWS_S3: AWS S3 origin server;</li>
+<li>ORIGIN_GROUP: origin server group type origin server;</li>
+<li>VODEO: VOD on EO;</li>
+<li>SPACE: origin server uninstallation. Currently only available to the allowlist;</li>
 <li>LB: load balancing. Currently only available to the allowlist. </li>
      */
     public $OriginType;
@@ -142,13 +142,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $VodeoBucketId;
 
     /**
-     * @param string $OriginType Origin server type. Valid values:
-<li>IP_DOMAIN: IPv4, IPv6, or domain name-typed origin servers;</li>
-<li>COS: Tencent Cloud COS origin servers;</li>
-<li>AWS_S3: AWS S3 object storage origin servers;</li>
-<li>ORIGIN_GROUP: origin server group-typed origin servers;</li>
-<li>VODEO: Cloud VOD (Hybrid Cloud Edition);</li>
-<li>SPACE: uninstalling origin servers. Currently only available to the allowlist;</li>
+     * @param string $OriginType The origin server type, with values:
+<li>IP_DOMAIN: IPv4, IPv6, or domain name type origin server;</li>
+<li>COS: Tencent Cloud COS origin server;</li>
+<li>AWS_S3: AWS S3 origin server;</li>
+<li>ORIGIN_GROUP: origin server group type origin server;</li>
+<li>VODEO: VOD on EO;</li>
+<li>SPACE: origin server uninstallation. Currently only available to the allowlist;</li>
 <li>LB: load balancing. Currently only available to the allowlist. </li>
      * @param string $Origin Origin server address, which varies according to the value of OriginType:
 <li>For OriginType = IP_DOMAIN, this parameter is an IPv4, IPv6 address or domain name;</li>

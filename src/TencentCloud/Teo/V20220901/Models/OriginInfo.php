@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Details of the origin.
  *
- * @method string getOriginType() Obtain Origin server type. Valid values:
-<li>IP_DOMAIN: IPV4, IPV6, or domain type origin server;</li>
-<li>COS: Tencent Cloud Object Storage origin server;</li>
-<li>AWS_S3: AWS S3 Cloud Object Storage origin server;</li>
-<li>ORIGIN_GROUP: Origin group type origin server;</li>
-<li>VODEO: Video on Demand (hybrid cloud edition);</li>
-<li>SPACE: Origin shield, currently only available to the whitelist;</li>
-<li>LB: Cloud Load Balancer, currently only available to the whitelist.</li>
- * @method void setOriginType(string $OriginType) Set Origin server type. Valid values:
-<li>IP_DOMAIN: IPV4, IPV6, or domain type origin server;</li>
-<li>COS: Tencent Cloud Object Storage origin server;</li>
-<li>AWS_S3: AWS S3 Cloud Object Storage origin server;</li>
-<li>ORIGIN_GROUP: Origin group type origin server;</li>
-<li>VODEO: Video on Demand (hybrid cloud edition);</li>
-<li>SPACE: Origin shield, currently only available to the whitelist;</li>
-<li>LB: Cloud Load Balancer, currently only available to the whitelist.</li>
+ * @method string getOriginType() Obtain The origin server type, with values:
+<li>IP_DOMAIN: IPv4, IPv6, or domain name type origin server;</li>
+<li>COS: Tencent Cloud COS origin server;</li>
+<li>AWS_S3: AWS S3 origin server;</li>
+<li>ORIGIN_GROUP: origin server group type origin server;</li>
+<li>VODEO: VOD on EO;</li>
+<li>SPACE: origin server uninstallation. Currently only available to the allowlist;</li>
+<li>LB: load balancing. Currently only available to the allowlist. </li>
+ * @method void setOriginType(string $OriginType) Set The origin server type, with values:
+<li>IP_DOMAIN: IPv4, IPv6, or domain name type origin server;</li>
+<li>COS: Tencent Cloud COS origin server;</li>
+<li>AWS_S3: AWS S3 origin server;</li>
+<li>ORIGIN_GROUP: origin server group type origin server;</li>
+<li>VODEO: VOD on EO;</li>
+<li>SPACE: origin server uninstallation. Currently only available to the allowlist;</li>
+<li>LB: load balancing. Currently only available to the allowlist. </li>
  * @method string getOrigin() Obtain Origin server address, varying depending on the value of OriginType:
 <li>When OriginType is IP_DOMAIN, specify this parameter with IPv4, IPv6, or domain name;</li>
 <li>When OriginType is COS, specify this parameter with the COS bucket access domain name;</li>
@@ -78,14 +78,14 @@ If it is not specified, the default value is off.
 class OriginInfo extends AbstractModel
 {
     /**
-     * @var string Origin server type. Valid values:
-<li>IP_DOMAIN: IPV4, IPV6, or domain type origin server;</li>
-<li>COS: Tencent Cloud Object Storage origin server;</li>
-<li>AWS_S3: AWS S3 Cloud Object Storage origin server;</li>
-<li>ORIGIN_GROUP: Origin group type origin server;</li>
-<li>VODEO: Video on Demand (hybrid cloud edition);</li>
-<li>SPACE: Origin shield, currently only available to the whitelist;</li>
-<li>LB: Cloud Load Balancer, currently only available to the whitelist.</li>
+     * @var string The origin server type, with values:
+<li>IP_DOMAIN: IPv4, IPv6, or domain name type origin server;</li>
+<li>COS: Tencent Cloud COS origin server;</li>
+<li>AWS_S3: AWS S3 origin server;</li>
+<li>ORIGIN_GROUP: origin server group type origin server;</li>
+<li>VODEO: VOD on EO;</li>
+<li>SPACE: origin server uninstallation. Currently only available to the allowlist;</li>
+<li>LB: load balancing. Currently only available to the allowlist. </li>
      */
     public $OriginType;
 
@@ -137,14 +137,14 @@ If it is not specified, the default value is off.
     public $VodeoBucketId;
 
     /**
-     * @param string $OriginType Origin server type. Valid values:
-<li>IP_DOMAIN: IPV4, IPV6, or domain type origin server;</li>
-<li>COS: Tencent Cloud Object Storage origin server;</li>
-<li>AWS_S3: AWS S3 Cloud Object Storage origin server;</li>
-<li>ORIGIN_GROUP: Origin group type origin server;</li>
-<li>VODEO: Video on Demand (hybrid cloud edition);</li>
-<li>SPACE: Origin shield, currently only available to the whitelist;</li>
-<li>LB: Cloud Load Balancer, currently only available to the whitelist.</li>
+     * @param string $OriginType The origin server type, with values:
+<li>IP_DOMAIN: IPv4, IPv6, or domain name type origin server;</li>
+<li>COS: Tencent Cloud COS origin server;</li>
+<li>AWS_S3: AWS S3 origin server;</li>
+<li>ORIGIN_GROUP: origin server group type origin server;</li>
+<li>VODEO: VOD on EO;</li>
+<li>SPACE: origin server uninstallation. Currently only available to the allowlist;</li>
+<li>LB: load balancing. Currently only available to the allowlist. </li>
      * @param string $Origin Origin server address, varying depending on the value of OriginType:
 <li>When OriginType is IP_DOMAIN, specify this parameter with IPv4, IPv6, or domain name;</li>
 <li>When OriginType is COS, specify this parameter with the COS bucket access domain name;</li>

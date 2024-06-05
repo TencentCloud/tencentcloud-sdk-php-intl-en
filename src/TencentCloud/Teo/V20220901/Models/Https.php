@@ -64,16 +64,16 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 <li>`apply`: Managed by EdgeOne.</li>
 <li>`none`: Not managed by EdgeOne.</li>If it is left empty, the default value `none` is used.
 Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method string getCipherSuite() Obtain Cipher suite. Values:
-<li>`loose-v2023`: Offer the highest compatibility but relatively lower security. It supports TLS 1.0-1.3.</li>
-<li>`general-v2023`: Keep a balance between the compatibility and security. It supports TLS 1.2-1.3.</li>
-<li>`strict-v2023`: Provides high security, disabling all insecure cipher suites. It supports TLS 1.2-1.3.
-Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method void setCipherSuite(string $CipherSuite) Set Cipher suite. Values:
-<li>`loose-v2023`: Offer the highest compatibility but relatively lower security. It supports TLS 1.0-1.3.</li>
-<li>`general-v2023`: Keep a balance between the compatibility and security. It supports TLS 1.2-1.3.</li>
-<li>`strict-v2023`: Provides high security, disabling all insecure cipher suites. It supports TLS 1.2-1.3.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method string getCipherSuite() Obtain The cipher suite, with values:
+<li>loose-v2023: Provides high compatibility with general security, and supports TLS 1.0-1.3 cipher suites;</li>
+<li>general-v2023: Provides relatively high compatibility with moderate security, and supports TLS 1.2-1.3 cipher suites;</li>
+<li>strict-v2023: Provides high security, disables all cipher suites with security risks, and supports TLS 1.2-1.3 cipher suites.</li>
+Note: This field may return null, which indicates a failure to obtain a valid value.
+ * @method void setCipherSuite(string $CipherSuite) Set The cipher suite, with values:
+<li>loose-v2023: Provides high compatibility with general security, and supports TLS 1.0-1.3 cipher suites;</li>
+<li>general-v2023: Provides relatively high compatibility with moderate security, and supports TLS 1.2-1.3 cipher suites;</li>
+<li>strict-v2023: Provides high security, disables all cipher suites with security risks, and supports TLS 1.2-1.3 cipher suites.</li>
+Note: This field may return null, which indicates a failure to obtain a valid value.
  */
 class Https extends AbstractModel
 {
@@ -124,11 +124,11 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     public $ApplyType;
 
     /**
-     * @var string Cipher suite. Values:
-<li>`loose-v2023`: Offer the highest compatibility but relatively lower security. It supports TLS 1.0-1.3.</li>
-<li>`general-v2023`: Keep a balance between the compatibility and security. It supports TLS 1.2-1.3.</li>
-<li>`strict-v2023`: Provides high security, disabling all insecure cipher suites. It supports TLS 1.2-1.3.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @var string The cipher suite, with values:
+<li>loose-v2023: Provides high compatibility with general security, and supports TLS 1.0-1.3 cipher suites;</li>
+<li>general-v2023: Provides relatively high compatibility with moderate security, and supports TLS 1.2-1.3 cipher suites;</li>
+<li>strict-v2023: Provides high security, disables all cipher suites with security risks, and supports TLS 1.2-1.3 cipher suites.</li>
+Note: This field may return null, which indicates a failure to obtain a valid value.
      */
     public $CipherSuite;
 
@@ -155,11 +155,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
 <li>`apply`: Managed by EdgeOne.</li>
 <li>`none`: Not managed by EdgeOne.</li>If it is left empty, the default value `none` is used.
 Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param string $CipherSuite Cipher suite. Values:
-<li>`loose-v2023`: Offer the highest compatibility but relatively lower security. It supports TLS 1.0-1.3.</li>
-<li>`general-v2023`: Keep a balance between the compatibility and security. It supports TLS 1.2-1.3.</li>
-<li>`strict-v2023`: Provides high security, disabling all insecure cipher suites. It supports TLS 1.2-1.3.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param string $CipherSuite The cipher suite, with values:
+<li>loose-v2023: Provides high compatibility with general security, and supports TLS 1.0-1.3 cipher suites;</li>
+<li>general-v2023: Provides relatively high compatibility with moderate security, and supports TLS 1.2-1.3 cipher suites;</li>
+<li>strict-v2023: Provides high security, disables all cipher suites with security risks, and supports TLS 1.2-1.3 cipher suites.</li>
+Note: This field may return null, which indicates a failure to obtain a valid value.
      */
     function __construct()
     {
