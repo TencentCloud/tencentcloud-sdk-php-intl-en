@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * HKIDCardOCR request structure.
  *
- * @method boolean getDetectFake() Obtain Whether to check for authenticity.
- * @method void setDetectFake(boolean $DetectFake) Set Whether to check for authenticity.
  * @method boolean getReturnHeadImage() Obtain Whether to return identity photo.
  * @method void setReturnHeadImage(boolean $ReturnHeadImage) Set Whether to return identity photo.
+ * @method boolean getDetectFake() Obtain Whether to check for authenticity.
+ * @method void setDetectFake(boolean $DetectFake) Set Whether to check for authenticity.
  * @method string getImageBase64() Obtain Base64 string of the image
 Supported image formats: PNG, JPG, JPEG. GIF is not supported yet.
 Supported image size: The downloaded image cannot exceed 7 MB after being Base64-encoded, and it cannot take longer than 3 seconds to download the image.
@@ -44,14 +44,15 @@ The download speed and stability of non-Tencent Cloud URLs may be low.
 class HKIDCardOCRRequest extends AbstractModel
 {
     /**
-     * @var boolean Whether to check for authenticity.
-     */
-    public $DetectFake;
-
-    /**
      * @var boolean Whether to return identity photo.
      */
     public $ReturnHeadImage;
+
+    /**
+     * @var boolean Whether to check for authenticity.
+     * @deprecated
+     */
+    public $DetectFake;
 
     /**
      * @var string Base64 string of the image
@@ -70,8 +71,8 @@ The download speed and stability of non-Tencent Cloud URLs may be low.
     public $ImageUrl;
 
     /**
-     * @param boolean $DetectFake Whether to check for authenticity.
      * @param boolean $ReturnHeadImage Whether to return identity photo.
+     * @param boolean $DetectFake Whether to check for authenticity.
      * @param string $ImageBase64 Base64 string of the image
 Supported image formats: PNG, JPG, JPEG. GIF is not supported yet.
 Supported image size: The downloaded image cannot exceed 7 MB after being Base64-encoded, and it cannot take longer than 3 seconds to download the image.
@@ -94,12 +95,12 @@ The download speed and stability of non-Tencent Cloud URLs may be low.
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DetectFake",$param) and $param["DetectFake"] !== null) {
-            $this->DetectFake = $param["DetectFake"];
-        }
-
         if (array_key_exists("ReturnHeadImage",$param) and $param["ReturnHeadImage"] !== null) {
             $this->ReturnHeadImage = $param["ReturnHeadImage"];
+        }
+
+        if (array_key_exists("DetectFake",$param) and $param["DetectFake"] !== null) {
+            $this->DetectFake = $param["DetectFake"];
         }
 
         if (array_key_exists("ImageBase64",$param) and $param["ImageBase64"] !== null) {

@@ -20,38 +20,38 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Details of the origin.
  *
- * @method string getOriginType() Obtain The origin server type, with values:
+ * @method string getOriginType() Obtain Origin server type, with values:
 <li>IP_DOMAIN: IPv4, IPv6, or domain name type origin server;</li>
 <li>COS: Tencent Cloud COS origin server;</li>
 <li>AWS_S3: AWS S3 origin server;</li>
 <li>ORIGIN_GROUP: origin server group type origin server;</li>
-<li>VODEO: VOD on EO;</li>
+ <li>VOD: Video on Demand;</li>
 <li>SPACE: origin server uninstallation. Currently only available to the allowlist;</li>
 <li>LB: load balancing. Currently only available to the allowlist. </li>
- * @method void setOriginType(string $OriginType) Set The origin server type, with values:
+ * @method void setOriginType(string $OriginType) Set Origin server type, with values:
 <li>IP_DOMAIN: IPv4, IPv6, or domain name type origin server;</li>
 <li>COS: Tencent Cloud COS origin server;</li>
 <li>AWS_S3: AWS S3 origin server;</li>
 <li>ORIGIN_GROUP: origin server group type origin server;</li>
-<li>VODEO: VOD on EO;</li>
+ <li>VOD: Video on Demand;</li>
 <li>SPACE: origin server uninstallation. Currently only available to the allowlist;</li>
 <li>LB: load balancing. Currently only available to the allowlist. </li>
- * @method string getOrigin() Obtain Origin server address, varying depending on the value of OriginType:
-<li>When OriginType is IP_DOMAIN, specify this parameter with IPv4, IPv6, or domain name;</li>
-<li>When OriginType is COS, specify this parameter with the COS bucket access domain name;</li>
-<li>When OriginType is AWS_S3, specify this parameter with the S3 bucket access domain name;</li>
-<li>When OriginType is ORIGIN_GROUP, specify this parameter with the origin group ID;</li>
-<li>When OriginType is VODEO and VodeoDistributionRange is ALL, specify this parameter with "all-buckets-in-vodeo-application"; if VodeoDistributionRange is Bucket, specify this parameter with the corresponding storage bucket domain name;</li>
-<li>When OriginType is LB, specify the Cloud Load Balancer instance ID. This feature is currently only available to the whitelist;</li>
-<li>When OriginType is SPACE, specify this parameter with the origin shield space ID. This feature is currently only available to the whitelist.</li>
- * @method void setOrigin(string $Origin) Set Origin server address, varying depending on the value of OriginType:
-<li>When OriginType is IP_DOMAIN, specify this parameter with IPv4, IPv6, or domain name;</li>
-<li>When OriginType is COS, specify this parameter with the COS bucket access domain name;</li>
-<li>When OriginType is AWS_S3, specify this parameter with the S3 bucket access domain name;</li>
-<li>When OriginType is ORIGIN_GROUP, specify this parameter with the origin group ID;</li>
-<li>When OriginType is VODEO and VodeoDistributionRange is ALL, specify this parameter with "all-buckets-in-vodeo-application"; if VodeoDistributionRange is Bucket, specify this parameter with the corresponding storage bucket domain name;</li>
-<li>When OriginType is LB, specify the Cloud Load Balancer instance ID. This feature is currently only available to the whitelist;</li>
-<li>When OriginType is SPACE, specify this parameter with the origin shield space ID. This feature is currently only available to the whitelist.</li>
+ * @method string getOrigin() Obtain Origin server address, which varies according to the value of OriginType:
+<li>When OriginType = IP_DOMAIN, fill in an IPv4 address, an IPv6 address, or a domain name;</li>
+<li>When OriginType = COS, fill in the access domain name of the COS bucket;</li>
+<li>When OriginType = AWS_S3, fill in the access domain name of the S3 bucket;</li>
+<li>When OriginType = ORIGIN_GROUP, fill in the origin server group ID;</li>
+<li>When OriginType = VOD, fill in the VOD application ID;</li>
+<li>When OriginType = LB, fill in the Cloud Load Balancer instance ID. This feature is currently only available to the allowlist;</li>
+<li>When OriginType = SPACE, fill in the origin server uninstallation space ID. This feature is currently only available to the allowlist.</li>
+ * @method void setOrigin(string $Origin) Set Origin server address, which varies according to the value of OriginType:
+<li>When OriginType = IP_DOMAIN, fill in an IPv4 address, an IPv6 address, or a domain name;</li>
+<li>When OriginType = COS, fill in the access domain name of the COS bucket;</li>
+<li>When OriginType = AWS_S3, fill in the access domain name of the S3 bucket;</li>
+<li>When OriginType = ORIGIN_GROUP, fill in the origin server group ID;</li>
+<li>When OriginType = VOD, fill in the VOD application ID;</li>
+<li>When OriginType = LB, fill in the Cloud Load Balancer instance ID. This feature is currently only available to the allowlist;</li>
+<li>When OriginType = SPACE, fill in the origin server uninstallation space ID. This feature is currently only available to the allowlist.</li>
  * @method string getBackupOrigin() Obtain The ID of the secondary origin group. This parameter is valid only when OriginType is ORIGIN_GROUP. This field indicates the old version capability, which cannot be configured or modified on the control panel after being called. Please submit a ticket if required.
  * @method void setBackupOrigin(string $BackupOrigin) Set The ID of the secondary origin group. This parameter is valid only when OriginType is ORIGIN_GROUP. This field indicates the old version capability, which cannot be configured or modified on the control panel after being called. Please submit a ticket if required.
  * @method string getPrivateAccess() Obtain Whether access to the private Cloud Object Storage origin server is allowed. This parameter is valid only when OriginType is COS or AWS_S3. Valid values:
@@ -66,38 +66,38 @@ If it is not specified, the default value is off.
  * @method void setPrivateParameters(array $PrivateParameters) Set Private authentication parameter. This parameter is valid only when PrivateAccess is on.
  * @method integer getVodeoSubAppId() Obtain VODEO sub-application ID. This parameter is required when OriginType is VODEO.
  * @method void setVodeoSubAppId(integer $VodeoSubAppId) Set VODEO sub-application ID. This parameter is required when OriginType is VODEO.
- * @method string getVodeoDistributionRange() Obtain VODEO distribution range. This parameter is required when OriginType is VODEO. Valid values:
-<li>All: All storage buckets under the current application;</li>
-<li>Bucket: A specified storage bucket.</li>
- * @method void setVodeoDistributionRange(string $VodeoDistributionRange) Set VODEO distribution range. This parameter is required when OriginType is VODEO. Valid values:
-<li>All: All storage buckets under the current application;</li>
-<li>Bucket: A specified storage bucket.</li>
+ * @method string getVodeoDistributionRange() Obtain VOD on EO distribution range. This parameter is required when OriginType = VODEO. The values are: 
+<li>All: all buckets under the current application;</li> 
+<li>Bucket: a specified bucket.</li>
+ * @method void setVodeoDistributionRange(string $VodeoDistributionRange) Set VOD on EO distribution range. This parameter is required when OriginType = VODEO. The values are: 
+<li>All: all buckets under the current application;</li> 
+<li>Bucket: a specified bucket.</li>
  * @method string getVodeoBucketId() Obtain VODEO storage bucket ID. This parameter is required when OriginType is VODEO and VodeoDistributionRange is Bucket.
  * @method void setVodeoBucketId(string $VodeoBucketId) Set VODEO storage bucket ID. This parameter is required when OriginType is VODEO and VodeoDistributionRange is Bucket.
  */
 class OriginInfo extends AbstractModel
 {
     /**
-     * @var string The origin server type, with values:
+     * @var string Origin server type, with values:
 <li>IP_DOMAIN: IPv4, IPv6, or domain name type origin server;</li>
 <li>COS: Tencent Cloud COS origin server;</li>
 <li>AWS_S3: AWS S3 origin server;</li>
 <li>ORIGIN_GROUP: origin server group type origin server;</li>
-<li>VODEO: VOD on EO;</li>
+ <li>VOD: Video on Demand;</li>
 <li>SPACE: origin server uninstallation. Currently only available to the allowlist;</li>
 <li>LB: load balancing. Currently only available to the allowlist. </li>
      */
     public $OriginType;
 
     /**
-     * @var string Origin server address, varying depending on the value of OriginType:
-<li>When OriginType is IP_DOMAIN, specify this parameter with IPv4, IPv6, or domain name;</li>
-<li>When OriginType is COS, specify this parameter with the COS bucket access domain name;</li>
-<li>When OriginType is AWS_S3, specify this parameter with the S3 bucket access domain name;</li>
-<li>When OriginType is ORIGIN_GROUP, specify this parameter with the origin group ID;</li>
-<li>When OriginType is VODEO and VodeoDistributionRange is ALL, specify this parameter with "all-buckets-in-vodeo-application"; if VodeoDistributionRange is Bucket, specify this parameter with the corresponding storage bucket domain name;</li>
-<li>When OriginType is LB, specify the Cloud Load Balancer instance ID. This feature is currently only available to the whitelist;</li>
-<li>When OriginType is SPACE, specify this parameter with the origin shield space ID. This feature is currently only available to the whitelist.</li>
+     * @var string Origin server address, which varies according to the value of OriginType:
+<li>When OriginType = IP_DOMAIN, fill in an IPv4 address, an IPv6 address, or a domain name;</li>
+<li>When OriginType = COS, fill in the access domain name of the COS bucket;</li>
+<li>When OriginType = AWS_S3, fill in the access domain name of the S3 bucket;</li>
+<li>When OriginType = ORIGIN_GROUP, fill in the origin server group ID;</li>
+<li>When OriginType = VOD, fill in the VOD application ID;</li>
+<li>When OriginType = LB, fill in the Cloud Load Balancer instance ID. This feature is currently only available to the allowlist;</li>
+<li>When OriginType = SPACE, fill in the origin server uninstallation space ID. This feature is currently only available to the allowlist.</li>
      */
     public $Origin;
 
@@ -125,9 +125,9 @@ If it is not specified, the default value is off.
     public $VodeoSubAppId;
 
     /**
-     * @var string VODEO distribution range. This parameter is required when OriginType is VODEO. Valid values:
-<li>All: All storage buckets under the current application;</li>
-<li>Bucket: A specified storage bucket.</li>
+     * @var string VOD on EO distribution range. This parameter is required when OriginType = VODEO. The values are: 
+<li>All: all buckets under the current application;</li> 
+<li>Bucket: a specified bucket.</li>
      */
     public $VodeoDistributionRange;
 
@@ -137,22 +137,22 @@ If it is not specified, the default value is off.
     public $VodeoBucketId;
 
     /**
-     * @param string $OriginType The origin server type, with values:
+     * @param string $OriginType Origin server type, with values:
 <li>IP_DOMAIN: IPv4, IPv6, or domain name type origin server;</li>
 <li>COS: Tencent Cloud COS origin server;</li>
 <li>AWS_S3: AWS S3 origin server;</li>
 <li>ORIGIN_GROUP: origin server group type origin server;</li>
-<li>VODEO: VOD on EO;</li>
+ <li>VOD: Video on Demand;</li>
 <li>SPACE: origin server uninstallation. Currently only available to the allowlist;</li>
 <li>LB: load balancing. Currently only available to the allowlist. </li>
-     * @param string $Origin Origin server address, varying depending on the value of OriginType:
-<li>When OriginType is IP_DOMAIN, specify this parameter with IPv4, IPv6, or domain name;</li>
-<li>When OriginType is COS, specify this parameter with the COS bucket access domain name;</li>
-<li>When OriginType is AWS_S3, specify this parameter with the S3 bucket access domain name;</li>
-<li>When OriginType is ORIGIN_GROUP, specify this parameter with the origin group ID;</li>
-<li>When OriginType is VODEO and VodeoDistributionRange is ALL, specify this parameter with "all-buckets-in-vodeo-application"; if VodeoDistributionRange is Bucket, specify this parameter with the corresponding storage bucket domain name;</li>
-<li>When OriginType is LB, specify the Cloud Load Balancer instance ID. This feature is currently only available to the whitelist;</li>
-<li>When OriginType is SPACE, specify this parameter with the origin shield space ID. This feature is currently only available to the whitelist.</li>
+     * @param string $Origin Origin server address, which varies according to the value of OriginType:
+<li>When OriginType = IP_DOMAIN, fill in an IPv4 address, an IPv6 address, or a domain name;</li>
+<li>When OriginType = COS, fill in the access domain name of the COS bucket;</li>
+<li>When OriginType = AWS_S3, fill in the access domain name of the S3 bucket;</li>
+<li>When OriginType = ORIGIN_GROUP, fill in the origin server group ID;</li>
+<li>When OriginType = VOD, fill in the VOD application ID;</li>
+<li>When OriginType = LB, fill in the Cloud Load Balancer instance ID. This feature is currently only available to the allowlist;</li>
+<li>When OriginType = SPACE, fill in the origin server uninstallation space ID. This feature is currently only available to the allowlist.</li>
      * @param string $BackupOrigin The ID of the secondary origin group. This parameter is valid only when OriginType is ORIGIN_GROUP. This field indicates the old version capability, which cannot be configured or modified on the control panel after being called. Please submit a ticket if required.
      * @param string $PrivateAccess Whether access to the private Cloud Object Storage origin server is allowed. This parameter is valid only when OriginType is COS or AWS_S3. Valid values:
 <li>on: Enable private authentication;</li>
@@ -160,9 +160,9 @@ If it is not specified, the default value is off.
 If it is not specified, the default value is off.
      * @param array $PrivateParameters Private authentication parameter. This parameter is valid only when PrivateAccess is on.
      * @param integer $VodeoSubAppId VODEO sub-application ID. This parameter is required when OriginType is VODEO.
-     * @param string $VodeoDistributionRange VODEO distribution range. This parameter is required when OriginType is VODEO. Valid values:
-<li>All: All storage buckets under the current application;</li>
-<li>Bucket: A specified storage bucket.</li>
+     * @param string $VodeoDistributionRange VOD on EO distribution range. This parameter is required when OriginType = VODEO. The values are: 
+<li>All: all buckets under the current application;</li> 
+<li>Bucket: a specified bucket.</li>
      * @param string $VodeoBucketId VODEO storage bucket ID. This parameter is required when OriginType is VODEO and VodeoDistributionRange is Bucket.
      */
     function __construct()

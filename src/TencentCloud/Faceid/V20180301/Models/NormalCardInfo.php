@@ -76,10 +76,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setMacaoIDCard(MacaoIDCard $MacaoIDCard) Set Macao ID Card
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method MainlandIDCard getMainlandIDCard() Obtain Mainland ID Card
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setMainlandIDCard(MainlandIDCard $MainlandIDCard) Set Mainland ID Card
-Note: This field may return null, indicating that no valid values can be obtained.
  */
 class NormalCardInfo extends AbstractModel
 {
@@ -168,12 +164,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $MacaoIDCard;
 
     /**
-     * @var MainlandIDCard Mainland ID Card
-Note: This field may return null, indicating that no valid values can be obtained.
-     */
-    public $MainlandIDCard;
-
-    /**
      * @param NormalHKIDCard $HKIDCard Hong Kong ID Card
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param NormalMLIDCard $MLIDCard Malaysia ID Card
@@ -201,8 +191,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param SingaporeIDCard $SingaporeIDCard Singapore ID Card
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param MacaoIDCard $MacaoIDCard Macao ID Card
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param MainlandIDCard $MainlandIDCard Mainland ID Card
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
@@ -286,11 +274,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (array_key_exists("MacaoIDCard",$param) and $param["MacaoIDCard"] !== null) {
             $this->MacaoIDCard = new MacaoIDCard();
             $this->MacaoIDCard->deserialize($param["MacaoIDCard"]);
-        }
-
-        if (array_key_exists("MainlandIDCard",$param) and $param["MainlandIDCard"] !== null) {
-            $this->MainlandIDCard = new MainlandIDCard();
-            $this->MainlandIDCard->deserialize($param["MainlandIDCard"]);
         }
     }
 }

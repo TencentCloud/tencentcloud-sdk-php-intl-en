@@ -24,13 +24,25 @@ use TencentCloud\Common\AbstractModel;
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setChName(string $ChName) Set Chinese name
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getChineseName() Obtain Chinese name
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setChineseName(string $ChineseName) Set Chinese name
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getEnName() Obtain English name
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setEnName(string $EnName) Set English name
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getFullName() Obtain English name
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setFullName(string $FullName) Set English name
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getID() Obtain License number
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setID(string $ID) Set License number
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getLicenseNumber() Obtain License number
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setLicenseNumber(string $LicenseNumber) Set License number
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getSex() Obtain Gender
 Note: This field may return null, indicating that no valid values can be obtained.
@@ -40,6 +52,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setCountryOfBirth(string $CountryOfBirth) Set Country of birth
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getNationality() Obtain Nationality
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setNationality(string $Nationality) Set Nationality
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getBirthday() Obtain Birthday
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setBirthday(string $Birthday) Set Birthday
@@ -48,9 +64,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setAddress(string $Address) Set Address (on the back)
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getRace() Obtain Nationality (on the back)
+ * @method string getRace() Obtain Race (on the back)
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setRace(string $Race) Set Nationality (on the back)
+ * @method void setRace(string $Race) Set Race (on the back)
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getNRICCode() Obtain  NRIC number (on the back)
 Note: This field may return null, indicating that no valid values can be obtained.
@@ -74,20 +90,41 @@ class SingaporeIDCard extends AbstractModel
     /**
      * @var string Chinese name
 Note: This field may return null, indicating that no valid values can be obtained.
+     * @deprecated
      */
     public $ChName;
+
+    /**
+     * @var string Chinese name
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $ChineseName;
+
+    /**
+     * @var string English name
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @deprecated
+     */
+    public $EnName;
 
     /**
      * @var string English name
 Note: This field may return null, indicating that no valid values can be obtained.
      */
-    public $EnName;
+    public $FullName;
+
+    /**
+     * @var string License number
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @deprecated
+     */
+    public $ID;
 
     /**
      * @var string License number
 Note: This field may return null, indicating that no valid values can be obtained.
      */
-    public $ID;
+    public $LicenseNumber;
 
     /**
      * @var string Gender
@@ -98,8 +135,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
     /**
      * @var string Country of birth
 Note: This field may return null, indicating that no valid values can be obtained.
+     * @deprecated
      */
     public $CountryOfBirth;
+
+    /**
+     * @var string Nationality
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $Nationality;
 
     /**
      * @var string Birthday
@@ -114,7 +158,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $Address;
 
     /**
-     * @var string Nationality (on the back)
+     * @var string Race (on the back)
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Race;
@@ -146,19 +190,27 @@ Note: This field may return null, indicating that no valid values can be obtaine
     /**
      * @param string $ChName Chinese name
 Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $ChineseName Chinese name
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $EnName English name
 Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $FullName English name
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $ID License number
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $LicenseNumber License number
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $Sex Gender
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $CountryOfBirth Country of birth
 Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $Nationality Nationality
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $Birthday Birthday
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $Address Address (on the back)
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Race Nationality (on the back)
+     * @param string $Race Race (on the back)
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $NRICCode  NRIC number (on the back)
 Note: This field may return null, indicating that no valid values can be obtained.
@@ -186,12 +238,24 @@ Note: This field may return null, indicating that no valid values can be obtaine
             $this->ChName = $param["ChName"];
         }
 
+        if (array_key_exists("ChineseName",$param) and $param["ChineseName"] !== null) {
+            $this->ChineseName = $param["ChineseName"];
+        }
+
         if (array_key_exists("EnName",$param) and $param["EnName"] !== null) {
             $this->EnName = $param["EnName"];
         }
 
+        if (array_key_exists("FullName",$param) and $param["FullName"] !== null) {
+            $this->FullName = $param["FullName"];
+        }
+
         if (array_key_exists("ID",$param) and $param["ID"] !== null) {
             $this->ID = $param["ID"];
+        }
+
+        if (array_key_exists("LicenseNumber",$param) and $param["LicenseNumber"] !== null) {
+            $this->LicenseNumber = $param["LicenseNumber"];
         }
 
         if (array_key_exists("Sex",$param) and $param["Sex"] !== null) {
@@ -200,6 +264,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("CountryOfBirth",$param) and $param["CountryOfBirth"] !== null) {
             $this->CountryOfBirth = $param["CountryOfBirth"];
+        }
+
+        if (array_key_exists("Nationality",$param) and $param["Nationality"] !== null) {
+            $this->Nationality = $param["Nationality"];
         }
 
         if (array_key_exists("Birthday",$param) and $param["Birthday"] !== null) {
