@@ -18,7 +18,7 @@ namespace TencentCloud\Postgres\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Full backup information of a database
+ * Database data backup information
  *
  * @method string getDBInstanceId() Obtain Instance ID
  * @method void setDBInstanceId(string $DBInstanceId) Set Instance ID

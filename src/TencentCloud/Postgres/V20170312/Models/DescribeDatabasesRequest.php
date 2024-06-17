@@ -22,6 +22,12 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getDBInstanceId() Obtain Instance ID
  * @method void setDBInstanceId(string $DBInstanceId) Set Instance ID
+ * @method array getFilters() Obtain Query using one or more filter criteria. Filter criteria currently supported include: database-name: filter by database name (in string format). Fuzzy matching is used to search for databases that meet the criteria.
+ * @method void setFilters(array $Filters) Set Query using one or more filter criteria. Filter criteria currently supported include: database-name: filter by database name (in string format). Fuzzy matching is used to search for databases that meet the criteria.
+ * @method integer getOffset() Obtain Data offset, which starts from 0.
+ * @method void setOffset(integer $Offset) Set Data offset, which starts from 0.
+ * @method integer getLimit() Obtain Number of items displayed at a time
+ * @method void setLimit(integer $Limit) Set Number of items displayed at a time
  */
 class DescribeDatabasesRequest extends AbstractModel
 {
@@ -31,7 +37,25 @@ class DescribeDatabasesRequest extends AbstractModel
     public $DBInstanceId;
 
     /**
+     * @var array Query using one or more filter criteria. Filter criteria currently supported include: database-name: filter by database name (in string format). Fuzzy matching is used to search for databases that meet the criteria.
+     */
+    public $Filters;
+
+    /**
+     * @var integer Data offset, which starts from 0.
+     */
+    public $Offset;
+
+    /**
+     * @var integer Number of items displayed at a time
+     */
+    public $Limit;
+
+    /**
      * @param string $DBInstanceId Instance ID
+     * @param array $Filters Query using one or more filter criteria. Filter criteria currently supported include: database-name: filter by database name (in string format). Fuzzy matching is used to search for databases that meet the criteria.
+     * @param integer $Offset Data offset, which starts from 0.
+     * @param integer $Limit Number of items displayed at a time
      */
     function __construct()
     {
@@ -48,6 +72,23 @@ class DescribeDatabasesRequest extends AbstractModel
         }
         if (array_key_exists("DBInstanceId",$param) and $param["DBInstanceId"] !== null) {
             $this->DBInstanceId = $param["DBInstanceId"];
+        }
+
+        if (array_key_exists("Filters",$param) and $param["Filters"] !== null) {
+            $this->Filters = [];
+            foreach ($param["Filters"] as $key => $value){
+                $obj = new Filter();
+                $obj->deserialize($value);
+                array_push($this->Filters, $obj);
+            }
+        }
+
+        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
+            $this->Offset = $param["Offset"];
+        }
+
+        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
+            $this->Limit = $param["Limit"];
         }
     }
 }

@@ -26,14 +26,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLogBackupCount(integer $LogBackupCount) Set Number of log backups of an instance
  * @method integer getLogBackupSize() Obtain Size of log backups of an instance
  * @method void setLogBackupSize(integer $LogBackupSize) Set Size of log backups of an instance
- * @method integer getManualBaseBackupCount() Obtain Number of manually created full backups of an instance
- * @method void setManualBaseBackupCount(integer $ManualBaseBackupCount) Set Number of manually created full backups of an instance
- * @method integer getManualBaseBackupSize() Obtain Size of manually created full backups of an instance
- * @method void setManualBaseBackupSize(integer $ManualBaseBackupSize) Set Size of manually created full backups of an instance
- * @method integer getAutoBaseBackupCount() Obtain Number of automatically created full backups of an instance
- * @method void setAutoBaseBackupCount(integer $AutoBaseBackupCount) Set Number of automatically created full backups of an instance
- * @method integer getAutoBaseBackupSize() Obtain Size of automatically created full backups of an instance
- * @method void setAutoBaseBackupSize(integer $AutoBaseBackupSize) Set Size of automatically created full backups of an instance
+ * @method integer getManualBaseBackupCount() Obtain Number of manually created instance data backups.
+ * @method void setManualBaseBackupCount(integer $ManualBaseBackupCount) Set Number of manually created instance data backups.
+ * @method integer getManualBaseBackupSize() Obtain Size of manually created instance data backups.
+ * @method void setManualBaseBackupSize(integer $ManualBaseBackupSize) Set Size of manually created instance data backups.
+ * @method integer getAutoBaseBackupCount() Obtain Number of automatically created instance data backups.
+ * @method void setAutoBaseBackupCount(integer $AutoBaseBackupCount) Set Number of automatically created instance data backups.
+ * @method integer getAutoBaseBackupSize() Obtain Size of automatically created instance data backups.
+ * @method void setAutoBaseBackupSize(integer $AutoBaseBackupSize) Set Size of automatically created instance data backups.
  * @method integer getTotalBackupCount() Obtain Total number of backups
  * @method void setTotalBackupCount(integer $TotalBackupCount) Set Total number of backups
  * @method integer getTotalBackupSize() Obtain Total backup size
@@ -57,22 +57,22 @@ class BackupSummary extends AbstractModel
     public $LogBackupSize;
 
     /**
-     * @var integer Number of manually created full backups of an instance
+     * @var integer Number of manually created instance data backups.
      */
     public $ManualBaseBackupCount;
 
     /**
-     * @var integer Size of manually created full backups of an instance
+     * @var integer Size of manually created instance data backups.
      */
     public $ManualBaseBackupSize;
 
     /**
-     * @var integer Number of automatically created full backups of an instance
+     * @var integer Number of automatically created instance data backups.
      */
     public $AutoBaseBackupCount;
 
     /**
-     * @var integer Size of automatically created full backups of an instance
+     * @var integer Size of automatically created instance data backups.
      */
     public $AutoBaseBackupSize;
 
@@ -90,10 +90,10 @@ class BackupSummary extends AbstractModel
      * @param string $DBInstanceId Instance ID
      * @param integer $LogBackupCount Number of log backups of an instance
      * @param integer $LogBackupSize Size of log backups of an instance
-     * @param integer $ManualBaseBackupCount Number of manually created full backups of an instance
-     * @param integer $ManualBaseBackupSize Size of manually created full backups of an instance
-     * @param integer $AutoBaseBackupCount Number of automatically created full backups of an instance
-     * @param integer $AutoBaseBackupSize Size of automatically created full backups of an instance
+     * @param integer $ManualBaseBackupCount Number of manually created instance data backups.
+     * @param integer $ManualBaseBackupSize Size of manually created instance data backups.
+     * @param integer $AutoBaseBackupCount Number of automatically created instance data backups.
+     * @param integer $AutoBaseBackupSize Size of automatically created instance data backups.
      * @param integer $TotalBackupCount Total number of backups
      * @param integer $TotalBackupSize Total backup size
      */

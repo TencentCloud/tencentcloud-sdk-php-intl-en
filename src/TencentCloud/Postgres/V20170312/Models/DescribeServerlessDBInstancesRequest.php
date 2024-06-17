@@ -20,8 +20,20 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeServerlessDBInstances request structure.
  *
- * @method array getFilter() Obtain Query conditions
- * @method void setFilter(array $Filter) Set Query conditions
+ * @method array getFilter() Obtain Query criteria. Query using one or more filter criteria. Filter criteria type (specified by the name field) currently supported include: 
+
+- db-instance-id: filter by instance ID (in string format)
+- db-instance-name: filter by instance name (in string format)
+- db-tag-key: filter by instance tag (in string format)
+
+The value field specifies the specific instance ID/instance name/instance tag-key to filter under this type of filter criteria.
+ * @method void setFilter(array $Filter) Set Query criteria. Query using one or more filter criteria. Filter criteria type (specified by the name field) currently supported include: 
+
+- db-instance-id: filter by instance ID (in string format)
+- db-instance-name: filter by instance name (in string format)
+- db-tag-key: filter by instance tag (in string format)
+
+The value field specifies the specific instance ID/instance name/instance tag-key to filter under this type of filter criteria.
  * @method integer getLimit() Obtain The number of queries
  * @method void setLimit(integer $Limit) Set The number of queries
  * @method integer getOffset() Obtain The offset value
@@ -34,7 +46,13 @@ use TencentCloud\Common\AbstractModel;
 class DescribeServerlessDBInstancesRequest extends AbstractModel
 {
     /**
-     * @var array Query conditions
+     * @var array Query criteria. Query using one or more filter criteria. Filter criteria type (specified by the name field) currently supported include: 
+
+- db-instance-id: filter by instance ID (in string format)
+- db-instance-name: filter by instance name (in string format)
+- db-tag-key: filter by instance tag (in string format)
+
+The value field specifies the specific instance ID/instance name/instance tag-key to filter under this type of filter criteria.
      */
     public $Filter;
 
@@ -59,7 +77,13 @@ class DescribeServerlessDBInstancesRequest extends AbstractModel
     public $OrderByType;
 
     /**
-     * @param array $Filter Query conditions
+     * @param array $Filter Query criteria. Query using one or more filter criteria. Filter criteria type (specified by the name field) currently supported include: 
+
+- db-instance-id: filter by instance ID (in string format)
+- db-instance-name: filter by instance name (in string format)
+- db-tag-key: filter by instance tag (in string format)
+
+The value field specifies the specific instance ID/instance name/instance tag-key to filter under this type of filter criteria.
      * @param integer $Limit The number of queries
      * @param integer $Offset The offset value
      * @param string $OrderBy Sorting metric. Currently, only "CreateTime" (instance creation time) is supported.

@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBaseBackupRetentionPeriod(integer $BaseBackupRetentionPeriod) Set Backup retention period in days. Value range: 7-1830
  * @method array getBackupPeriod() Obtain Backup cycle, which means on which days each week the instance will be backed up. The parameter value should be the lowercase names of the days of the week.
  * @method void setBackupPeriod(array $BackupPeriod) Set Backup cycle, which means on which days each week the instance will be backed up. The parameter value should be the lowercase names of the days of the week.
+ * @method integer getLogBackupRetentionPeriod() Obtain Instance log backup retention duration, with a value range of 7-1830 and a unit of day
+ * @method void setLogBackupRetentionPeriod(integer $LogBackupRetentionPeriod) Set Instance log backup retention duration, with a value range of 7-1830 and a unit of day
  */
 class ModifyBackupPlanRequest extends AbstractModel
 {
@@ -59,11 +61,17 @@ class ModifyBackupPlanRequest extends AbstractModel
     public $BackupPeriod;
 
     /**
+     * @var integer Instance log backup retention duration, with a value range of 7-1830 and a unit of day
+     */
+    public $LogBackupRetentionPeriod;
+
+    /**
      * @param string $DBInstanceId Instance ID
      * @param string $MinBackupStartTime The earliest time to start a backup
      * @param string $MaxBackupStartTime The latest time to start a backup
      * @param integer $BaseBackupRetentionPeriod Backup retention period in days. Value range: 7-1830
      * @param array $BackupPeriod Backup cycle, which means on which days each week the instance will be backed up. The parameter value should be the lowercase names of the days of the week.
+     * @param integer $LogBackupRetentionPeriod Instance log backup retention duration, with a value range of 7-1830 and a unit of day
      */
     function __construct()
     {
@@ -96,6 +104,10 @@ class ModifyBackupPlanRequest extends AbstractModel
 
         if (array_key_exists("BackupPeriod",$param) and $param["BackupPeriod"] !== null) {
             $this->BackupPeriod = $param["BackupPeriod"];
+        }
+
+        if (array_key_exists("LogBackupRetentionPeriod",$param) and $param["LogBackupRetentionPeriod"] !== null) {
+            $this->LogBackupRetentionPeriod = $param["LogBackupRetentionPeriod"];
         }
     }
 }

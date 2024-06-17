@@ -42,8 +42,8 @@ TDE: Supports data encryption.
  * @method void setStatus(string $Status) Set Database version status. Valid values:
 `AVAILABLE`.
 `DEPRECATED`.
- * @method array getAvailableUpgradeTarget() Obtain List of versions to which this database version (`DBKernelVersion`) can be upgraded.
- * @method void setAvailableUpgradeTarget(array $AvailableUpgradeTarget) Set List of versions to which this database version (`DBKernelVersion`) can be upgraded.
+ * @method array getAvailableUpgradeTarget() Obtain List of versions to which this database version (`DBKernelVersion`) can be upgraded, including minor and major version numbers available for upgrade (complete kernel version format example: v15.1_v1.6).
+ * @method void setAvailableUpgradeTarget(array $AvailableUpgradeTarget) Set List of versions to which this database version (`DBKernelVersion`) can be upgraded, including minor and major version numbers available for upgrade (complete kernel version format example: v15.1_v1.6).
  */
 class Version extends AbstractModel
 {
@@ -83,7 +83,7 @@ TDE: Supports data encryption.
     public $Status;
 
     /**
-     * @var array List of versions to which this database version (`DBKernelVersion`) can be upgraded.
+     * @var array List of versions to which this database version (`DBKernelVersion`) can be upgraded, including minor and major version numbers available for upgrade (complete kernel version format example: v15.1_v1.6).
      */
     public $AvailableUpgradeTarget;
 
@@ -99,7 +99,7 @@ TDE: Supports data encryption.
      * @param string $Status Database version status. Valid values:
 `AVAILABLE`.
 `DEPRECATED`.
-     * @param array $AvailableUpgradeTarget List of versions to which this database version (`DBKernelVersion`) can be upgraded.
+     * @param array $AvailableUpgradeTarget List of versions to which this database version (`DBKernelVersion`) can be upgraded, including minor and major version numbers available for upgrade (complete kernel version format example: v15.1_v1.6).
      */
     function __construct()
     {

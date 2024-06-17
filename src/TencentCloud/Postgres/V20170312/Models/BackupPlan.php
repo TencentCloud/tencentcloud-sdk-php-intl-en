@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getBackupPeriod() Obtain Backup cycle
  * @method void setBackupPeriod(string $BackupPeriod) Set Backup cycle
- * @method integer getBaseBackupRetentionPeriod() Obtain Retention period of basic backups
- * @method void setBaseBackupRetentionPeriod(integer $BaseBackupRetentionPeriod) Set Retention period of basic backups
+ * @method integer getBaseBackupRetentionPeriod() Obtain Data backup retention duration
+ * @method void setBaseBackupRetentionPeriod(integer $BaseBackupRetentionPeriod) Set Data backup retention duration
  * @method string getMinBackupStartTime() Obtain The earliest time to start a backup
  * @method void setMinBackupStartTime(string $MinBackupStartTime) Set The earliest time to start a backup
  * @method string getMaxBackupStartTime() Obtain The latest time to start a backup
@@ -37,7 +37,7 @@ class BackupPlan extends AbstractModel
     public $BackupPeriod;
 
     /**
-     * @var integer Retention period of basic backups
+     * @var integer Data backup retention duration
      */
     public $BaseBackupRetentionPeriod;
 
@@ -53,7 +53,7 @@ class BackupPlan extends AbstractModel
 
     /**
      * @param string $BackupPeriod Backup cycle
-     * @param integer $BaseBackupRetentionPeriod Retention period of basic backups
+     * @param integer $BaseBackupRetentionPeriod Data backup retention duration
      * @param string $MinBackupStartTime The earliest time to start a backup
      * @param string $MaxBackupStartTime The latest time to start a backup
      */

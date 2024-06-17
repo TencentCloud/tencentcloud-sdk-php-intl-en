@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getDBInstanceId() Obtain Instance ID
  * @method void setDBInstanceId(string $DBInstanceId) Set Instance ID
- * @method string getBaseBackupId() Obtain Base backup ID
- * @method void setBaseBackupId(string $BaseBackupId) Set Base backup ID
+ * @method string getBaseBackupId() Obtain Data Backup ID.
+ * @method void setBaseBackupId(string $BaseBackupId) Set Data Backup ID.
  * @method string getNewExpireTime() Obtain New expiration time
  * @method void setNewExpireTime(string $NewExpireTime) Set New expiration time
  */
@@ -35,7 +35,7 @@ class ModifyBaseBackupExpireTimeRequest extends AbstractModel
     public $DBInstanceId;
 
     /**
-     * @var string Base backup ID
+     * @var string Data Backup ID.
      */
     public $BaseBackupId;
 
@@ -46,7 +46,7 @@ class ModifyBaseBackupExpireTimeRequest extends AbstractModel
 
     /**
      * @param string $DBInstanceId Instance ID
-     * @param string $BaseBackupId Base backup ID
+     * @param string $BaseBackupId Data Backup ID.
      * @param string $NewExpireTime New expiration time
      */
     function __construct()

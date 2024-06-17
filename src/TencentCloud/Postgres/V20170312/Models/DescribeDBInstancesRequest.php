@@ -20,18 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeDBInstances request structure.
  *
- * @method array getFilters() Obtain Filter instances using one or more criteria. Valid filter names:
+ * @method array getFilters() Obtain Query using one or more filter criteria. Filter criteria currently supported include:
 db-instance-id: filter by instance ID (in string format)
 db-instance-name: filter by instance name (in string format)
-db-project-id: filter by project ID (in integer format)
-db-pay-mode: filter by billing mode (in string format)
+db-project-id: filter by project ID (in string format)
+db-pay-mode: filter by instance billing mode (in string format)
 db-tag-key: filter by tag key (in string format)
- * @method void setFilters(array $Filters) Set Filter instances using one or more criteria. Valid filter names:
+db-private-ip: filter by instance VPC IP (in string format)
+db-public-address: filter by instance public network address (in string format)
+ * @method void setFilters(array $Filters) Set Query using one or more filter criteria. Filter criteria currently supported include:
 db-instance-id: filter by instance ID (in string format)
 db-instance-name: filter by instance name (in string format)
-db-project-id: filter by project ID (in integer format)
-db-pay-mode: filter by billing mode (in string format)
+db-project-id: filter by project ID (in string format)
+db-pay-mode: filter by instance billing mode (in string format)
 db-tag-key: filter by tag key (in string format)
+db-private-ip: filter by instance VPC IP (in string format)
+db-public-address: filter by instance public network address (in string format)
  * @method integer getLimit() Obtain The maximum number of results returned per page. Value range: 1-100. Default: `10`
  * @method void setLimit(integer $Limit) Set The maximum number of results returned per page. Value range: 1-100. Default: `10`
  * @method integer getOffset() Obtain Data offset, which starts from 0.
@@ -44,12 +48,14 @@ db-tag-key: filter by tag key (in string format)
 class DescribeDBInstancesRequest extends AbstractModel
 {
     /**
-     * @var array Filter instances using one or more criteria. Valid filter names:
+     * @var array Query using one or more filter criteria. Filter criteria currently supported include:
 db-instance-id: filter by instance ID (in string format)
 db-instance-name: filter by instance name (in string format)
-db-project-id: filter by project ID (in integer format)
-db-pay-mode: filter by billing mode (in string format)
+db-project-id: filter by project ID (in string format)
+db-pay-mode: filter by instance billing mode (in string format)
 db-tag-key: filter by tag key (in string format)
+db-private-ip: filter by instance VPC IP (in string format)
+db-public-address: filter by instance public network address (in string format)
      */
     public $Filters;
 
@@ -74,12 +80,14 @@ db-tag-key: filter by tag key (in string format)
     public $OrderByType;
 
     /**
-     * @param array $Filters Filter instances using one or more criteria. Valid filter names:
+     * @param array $Filters Query using one or more filter criteria. Filter criteria currently supported include:
 db-instance-id: filter by instance ID (in string format)
 db-instance-name: filter by instance name (in string format)
-db-project-id: filter by project ID (in integer format)
-db-pay-mode: filter by billing mode (in string format)
+db-project-id: filter by project ID (in string format)
+db-pay-mode: filter by instance billing mode (in string format)
 db-tag-key: filter by tag key (in string format)
+db-private-ip: filter by instance VPC IP (in string format)
+db-public-address: filter by instance public network address (in string format)
      * @param integer $Limit The maximum number of results returned per page. Value range: 1-100. Default: `10`
      * @param integer $Offset Data offset, which starts from 0.
      * @param string $OrderBy Sorting metric, such as instance name or creation time. Valid values: DBInstanceId, CreateTime, Name, EndTime

@@ -18,7 +18,7 @@ namespace TencentCloud\Postgres\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Parameter information of each specification
+ * Parameter information for each specification
  *
  * @method string getName() Obtain Parameter name
 Note: This field may return null, indicating that no valid values can be obtained.

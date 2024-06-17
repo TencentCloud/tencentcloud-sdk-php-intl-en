@@ -94,17 +94,17 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method void setLastModifyTime(string $LastModifyTime) Set The last modified time of the parameter
 Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method integer getStandbyRelated() Obtain Primary-standby constraint. Valid values: `0` (no constraint), `1` (The parameter value of the standby server must be greater than that of the primary server), `2` (The parameter value of the primary server must be greater than that of the standby server.)
+ * @method integer getStandbyRelated() Obtain Parameter primary-secondary constraints, `0`: No constraint, `1`: Standby parameter value must be greater than that of the primary machine, `2`: Primary parameter value must be greater than that of the standby machine.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setStandbyRelated(integer $StandbyRelated) Set Primary-standby constraint. Valid values: `0` (no constraint), `1` (The parameter value of the standby server must be greater than that of the primary server), `2` (The parameter value of the primary server must be greater than that of the standby server.)
+ * @method void setStandbyRelated(integer $StandbyRelated) Set Parameter primary-secondary constraints, `0`: No constraint, `1`: Standby parameter value must be greater than that of the primary machine, `2`: Primary parameter value must be greater than that of the standby machine.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method array getVersionRelationSet() Obtain Associated parameter version information, which refers to the detailed parameter information of the kernel version.
+ * @method array getVersionRelationSet() Obtain Parameter version association information, containing detailed parameter information for the respective kernel version
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setVersionRelationSet(array $VersionRelationSet) Set Associated parameter version information, which refers to the detailed parameter information of the kernel version.
+ * @method void setVersionRelationSet(array $VersionRelationSet) Set Parameter version association information, containing detailed parameter information for the respective kernel version
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method array getSpecRelationSet() Obtain Associated parameter specification information, which refers to the detailed parameter information of the specifications.
+ * @method array getSpecRelationSet() Obtain Parameter specification association information, containing detailed parameter information for the respective specification
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setSpecRelationSet(array $SpecRelationSet) Set Associated parameter specification information, which refers to the detailed parameter information of the specifications.
+ * @method void setSpecRelationSet(array $SpecRelationSet) Set Parameter specification association information, containing detailed parameter information for the respective specification
 Note: This field may return null, indicating that no valid values can be obtained.
  */
 class ParamInfo extends AbstractModel
@@ -215,19 +215,19 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     public $LastModifyTime;
 
     /**
-     * @var integer Primary-standby constraint. Valid values: `0` (no constraint), `1` (The parameter value of the standby server must be greater than that of the primary server), `2` (The parameter value of the primary server must be greater than that of the standby server.)
+     * @var integer Parameter primary-secondary constraints, `0`: No constraint, `1`: Standby parameter value must be greater than that of the primary machine, `2`: Primary parameter value must be greater than that of the standby machine.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $StandbyRelated;
 
     /**
-     * @var array Associated parameter version information, which refers to the detailed parameter information of the kernel version.
+     * @var array Parameter version association information, containing detailed parameter information for the respective kernel version
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $VersionRelationSet;
 
     /**
-     * @var array Associated parameter specification information, which refers to the detailed parameter information of the specifications.
+     * @var array Parameter specification association information, containing detailed parameter information for the respective specification
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $SpecRelationSet;
@@ -270,11 +270,11 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param string $LastModifyTime The last modified time of the parameter
 Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param integer $StandbyRelated Primary-standby constraint. Valid values: `0` (no constraint), `1` (The parameter value of the standby server must be greater than that of the primary server), `2` (The parameter value of the primary server must be greater than that of the standby server.)
+     * @param integer $StandbyRelated Parameter primary-secondary constraints, `0`: No constraint, `1`: Standby parameter value must be greater than that of the primary machine, `2`: Primary parameter value must be greater than that of the standby machine.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param array $VersionRelationSet Associated parameter version information, which refers to the detailed parameter information of the kernel version.
+     * @param array $VersionRelationSet Parameter version association information, containing detailed parameter information for the respective kernel version
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param array $SpecRelationSet Associated parameter specification information, which refers to the detailed parameter information of the specifications.
+     * @param array $SpecRelationSet Parameter specification association information, containing detailed parameter information for the respective specification
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()

@@ -22,20 +22,20 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getDBInstanceId() Obtain Instance ID.
  * @method void setDBInstanceId(string $DBInstanceId) Set Instance ID.
- * @method string getStartTime() Obtain Start timestamp of the query range in the format of "YYYY-MM-DD HH:mm:ss". The log is retained for seven days by default, so the start timestamp must fall within the retention period.
- * @method void setStartTime(string $StartTime) Set Start timestamp of the query range in the format of "YYYY-MM-DD HH:mm:ss". The log is retained for seven days by default, so the start timestamp must fall within the retention period.
- * @method string getEndTime() Obtain End timestamp of the query range in the format of "YYYY-MM-DD HH:mm:ss".
- * @method void setEndTime(string $EndTime) Set End timestamp of the query range in the format of "YYYY-MM-DD HH:mm:ss".
- * @method string getDatabaseName() Obtain Filter by database name. This parameter is optional.
- * @method void setDatabaseName(string $DatabaseName) Set Filter by database name. This parameter is optional.
- * @method string getOrderByType() Obtain Sorting order. Valid values: `asc` (ascending), `desc` (descending). Default value: `desc`.
- * @method void setOrderByType(string $OrderByType) Set Sorting order. Valid values: `asc` (ascending), `desc` (descending). Default value: `desc`.
- * @method string getOrderBy() Obtain Sort by field. Valid values: `SessionStartTime` (default), `Duration`.
- * @method void setOrderBy(string $OrderBy) Set Sort by field. Valid values: `SessionStartTime` (default), `Duration`.
- * @method integer getLimit() Obtain Number of entries per page. Value range: [1,100]. Default value: `20`.
- * @method void setLimit(integer $Limit) Set Number of entries per page. Value range: [1,100]. Default value: `20`.
- * @method integer getOffset() Obtain Pagination offset. Value range: [0,INF). Default value: `0`.
- * @method void setOffset(integer $Offset) Set Pagination offset. Value range: [0,INF). Default value: `0`.
+ * @method string getStartTime() Obtain Query start time, in the format of 2018-01-01 00:00:00. The log is retained for seven days by default, so the start time must fall within the retention period.
+ * @method void setStartTime(string $StartTime) Set Query start time, in the format of 2018-01-01 00:00:00. The log is retained for seven days by default, so the start time must fall within the retention period.
+ * @method string getEndTime() Obtain Query end time, in the format of 2018-01-01 00:00:00.
+ * @method void setEndTime(string $EndTime) Set Query end time, in the format of 2018-01-01 00:00:00.
+ * @method string getDatabaseName() Obtain Database name.
+ * @method void setDatabaseName(string $DatabaseName) Set Database name.
+ * @method string getOrderByType() Obtain Sorting method, including ascending: `asc` and descending: `desc`. The default value is `desc`.	
+ * @method void setOrderByType(string $OrderByType) Set Sorting method, including ascending: `asc` and descending: `desc`. The default value is `desc`.	
+ * @method string getOrderBy() Obtain Sorting field, with a value range of `[SessionStartTime, Duration]`. The default value is `SessionStartTime`.
+ * @method void setOrderBy(string $OrderBy) Set Sorting field, with a value range of `[SessionStartTime, Duration]`. The default value is `SessionStartTime`.
+ * @method integer getLimit() Obtain Number of results returned per page, with a value range of 1-100. The default value is `50`.
+ * @method void setLimit(integer $Limit) Set Number of results returned per page, with a value range of 1-100. The default value is `50`.
+ * @method integer getOffset() Obtain Data offset, which starts from 0. The default value is `0`.
+ * @method void setOffset(integer $Offset) Set Data offset, which starts from 0. The default value is `0`.
  */
 class DescribeSlowQueryListRequest extends AbstractModel
 {
@@ -45,49 +45,49 @@ class DescribeSlowQueryListRequest extends AbstractModel
     public $DBInstanceId;
 
     /**
-     * @var string Start timestamp of the query range in the format of "YYYY-MM-DD HH:mm:ss". The log is retained for seven days by default, so the start timestamp must fall within the retention period.
+     * @var string Query start time, in the format of 2018-01-01 00:00:00. The log is retained for seven days by default, so the start time must fall within the retention period.
      */
     public $StartTime;
 
     /**
-     * @var string End timestamp of the query range in the format of "YYYY-MM-DD HH:mm:ss".
+     * @var string Query end time, in the format of 2018-01-01 00:00:00.
      */
     public $EndTime;
 
     /**
-     * @var string Filter by database name. This parameter is optional.
+     * @var string Database name.
      */
     public $DatabaseName;
 
     /**
-     * @var string Sorting order. Valid values: `asc` (ascending), `desc` (descending). Default value: `desc`.
+     * @var string Sorting method, including ascending: `asc` and descending: `desc`. The default value is `desc`.	
      */
     public $OrderByType;
 
     /**
-     * @var string Sort by field. Valid values: `SessionStartTime` (default), `Duration`.
+     * @var string Sorting field, with a value range of `[SessionStartTime, Duration]`. The default value is `SessionStartTime`.
      */
     public $OrderBy;
 
     /**
-     * @var integer Number of entries per page. Value range: [1,100]. Default value: `20`.
+     * @var integer Number of results returned per page, with a value range of 1-100. The default value is `50`.
      */
     public $Limit;
 
     /**
-     * @var integer Pagination offset. Value range: [0,INF). Default value: `0`.
+     * @var integer Data offset, which starts from 0. The default value is `0`.
      */
     public $Offset;
 
     /**
      * @param string $DBInstanceId Instance ID.
-     * @param string $StartTime Start timestamp of the query range in the format of "YYYY-MM-DD HH:mm:ss". The log is retained for seven days by default, so the start timestamp must fall within the retention period.
-     * @param string $EndTime End timestamp of the query range in the format of "YYYY-MM-DD HH:mm:ss".
-     * @param string $DatabaseName Filter by database name. This parameter is optional.
-     * @param string $OrderByType Sorting order. Valid values: `asc` (ascending), `desc` (descending). Default value: `desc`.
-     * @param string $OrderBy Sort by field. Valid values: `SessionStartTime` (default), `Duration`.
-     * @param integer $Limit Number of entries per page. Value range: [1,100]. Default value: `20`.
-     * @param integer $Offset Pagination offset. Value range: [0,INF). Default value: `0`.
+     * @param string $StartTime Query start time, in the format of 2018-01-01 00:00:00. The log is retained for seven days by default, so the start time must fall within the retention period.
+     * @param string $EndTime Query end time, in the format of 2018-01-01 00:00:00.
+     * @param string $DatabaseName Database name.
+     * @param string $OrderByType Sorting method, including ascending: `asc` and descending: `desc`. The default value is `desc`.	
+     * @param string $OrderBy Sorting field, with a value range of `[SessionStartTime, Duration]`. The default value is `SessionStartTime`.
+     * @param integer $Limit Number of results returned per page, with a value range of 1-100. The default value is `50`.
+     * @param integer $Offset Data offset, which starts from 0. The default value is `0`.
      */
     function __construct()
     {

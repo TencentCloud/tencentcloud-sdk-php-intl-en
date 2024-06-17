@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeBillDetail request structure.
  *
- * @method string getMonth() Obtain The queried month in the format of “YYYY-MM”, such as 2023-01.
- * @method void setMonth(string $Month) Set The queried month in the format of “YYYY-MM”, such as 2023-01.
+ * @method string getMonth() Obtain The queried month in the format of "YYYY-MM", such as 2023-01.
+ * @method void setMonth(string $Month) Set The queried month in the format of "YYYY-MM", such as 2023-01.
  * @method integer getPageSize() Obtain Page parameter: Indicates the number of entries per page. Value range: [1, 200]
  * @method void setPageSize(integer $PageSize) Set Page parameter: Indicates the number of entries per page. Value range: [1, 200]
  * @method integer getPage() Obtain Page parameter: Indicates the current page number. The minimum value is 1.
@@ -34,7 +34,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeBillDetailRequest extends AbstractModel
 {
     /**
-     * @var string The queried month in the format of “YYYY-MM”, such as 2023-01.
+     * @var string The queried month in the format of "YYYY-MM", such as 2023-01.
      */
     public $Month;
 
@@ -59,7 +59,7 @@ class DescribeBillDetailRequest extends AbstractModel
     public $ActionType;
 
     /**
-     * @param string $Month The queried month in the format of “YYYY-MM”, such as 2023-01.
+     * @param string $Month The queried month in the format of "YYYY-MM", such as 2023-01.
      * @param integer $PageSize Page parameter: Indicates the number of entries per page. Value range: [1, 200]
      * @param integer $Page Page parameter: Indicates the current page number. The minimum value is 1.
      * @param string $PayMode Billing mode. Valid values: `prePay` (Monthly subscription), postPay` (Pay-As-You-Go resources).

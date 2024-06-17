@@ -26,34 +26,46 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSpecCode(string $SpecCode) Set Purchasable code, which can be obtained from the `SpecCode` field in the return value of the [DescribeClasses](https://intl.cloud.tencent.com/document/api/409/89019?from_cn_redirect=1) API.
  * @method integer getStorage() Obtain Instance storage capacity in GB.
  * @method void setStorage(integer $Storage) Set Instance storage capacity in GB.
- * @method integer getPeriod() Obtain Validity period in months. Valid values:
-<li>Monthly subscription: `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `24`, `36`.
-<li>Pay-as-you-go: `1`.
- * @method void setPeriod(integer $Period) Set Validity period in months. Valid values:
-<li>Monthly subscription: `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `24`, `36`.
-<li>Pay-as-you-go: `1`.
- * @method integer getAutoRenewFlag() Obtain Auto-renewal flag. Valid values:
-<li>`0`: Manual renewal.
-<li>`1`: Automatic renewal.
-Default value: `0`.
- * @method void setAutoRenewFlag(integer $AutoRenewFlag) Set Auto-renewal flag. Valid values:
-<li>`0`: Manual renewal.
-<li>`1`: Automatic renewal.
-Default value: `0`.
+ * @method integer getPeriod() Obtain Purchase duration, in months.
+
+- Prepaid: Supports `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `24`, and `36`.
+- Pay-as-you-go: Only supports `1`.
+
+ * @method void setPeriod(integer $Period) Set Purchase duration, in months.
+
+- Prepaid: Supports `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `24`, and `36`.
+- Pay-as-you-go: Only supports `1`.
+
+ * @method integer getAutoRenewFlag() Obtain Renewal Flag:
+
+- `0`: manual renewal
+`1`: auto-renewal
+
+Default value: 0
+ * @method void setAutoRenewFlag(integer $AutoRenewFlag) Set Renewal Flag:
+
+- `0`: manual renewal
+`1`: auto-renewal
+
+Default value: 0
  * @method string getVpcId() Obtain VPC ID in the format of `vpc-xxxxxxx`, which can be obtained in the console or from the `unVpcId` field in the return value of the [DescribeVpcEx](https://intl.cloud.tencent.com/document/api/215/1372?from_cn_redirect=1) API.
  * @method void setVpcId(string $VpcId) Set VPC ID in the format of `vpc-xxxxxxx`, which can be obtained in the console or from the `unVpcId` field in the return value of the [DescribeVpcEx](https://intl.cloud.tencent.com/document/api/215/1372?from_cn_redirect=1) API.
  * @method string getSubnetId() Obtain VPC subnet ID in the format of `subnet-xxxxxxxx`, which can be obtained in the console or from the `unSubnetId` field in the return value of the [DescribeSubnets](https://intl.cloud.tencent.com/document/api/215/15784?from_cn_redirect=1) API.
  * @method void setSubnetId(string $SubnetId) Set VPC subnet ID in the format of `subnet-xxxxxxxx`, which can be obtained in the console or from the `unSubnetId` field in the return value of the [DescribeSubnets](https://intl.cloud.tencent.com/document/api/215/15784?from_cn_redirect=1) API.
  * @method string getName() Obtain Name of the newly purchased instance, which can contain up to 60 letters, digits, or symbols (-_). If this parameter is not specified, "Unnamed" will be displayed by default.
  * @method void setName(string $Name) Set Name of the newly purchased instance, which can contain up to 60 letters, digits, or symbols (-_). If this parameter is not specified, "Unnamed" will be displayed by default.
- * @method string getInstanceChargeType() Obtain Instance billing mode. Valid values:
-<li>`PREPAID`: Monthly subscription.
-<li>`POSTPAID_BY_HOUR`: Pay-as-you-go.
-Default value: `PREPAID`.
- * @method void setInstanceChargeType(string $InstanceChargeType) Set Instance billing mode. Valid values:
-<li>`PREPAID`: Monthly subscription.
-<li>`POSTPAID_BY_HOUR`: Pay-as-you-go.
-Default value: `PREPAID`.
+ * @method string getInstanceChargeType() Obtain Instance billing type, which currently supports:
+
+- PREPAID: Prepaid, i.e., monthly subscription
+- POSTPAID_BY_HOUR: Pay-as-you-go, i.e., pay by consumption
+
+Default value: PREPAID
+ * @method void setInstanceChargeType(string $InstanceChargeType) Set Instance billing type, which currently supports:
+
+- PREPAID: Prepaid, i.e., monthly subscription
+- POSTPAID_BY_HOUR: Pay-as-you-go, i.e., pay by consumption
+
+Default value: PREPAID
  * @method array getSecurityGroupIds() Obtain Security group of the instance, which can be obtained from the `sgld` field in the return value of the [DescribeSecurityGroups](https://intl.cloud.tencent.com/document/api/215/15808?from_cn_redirect=1) API. If this parameter is not specified, the default security group will be bound.
 
  * @method void setSecurityGroupIds(array $SecurityGroupIds) Set Security group of the instance, which can be obtained from the `sgld` field in the return value of the [DescribeSecurityGroups](https://intl.cloud.tencent.com/document/api/215/15808?from_cn_redirect=1) API. If this parameter is not specified, the default security group will be bound.
@@ -66,14 +78,18 @@ Default value: `PREPAID`.
 The information of AZ can be obtained from the `Zone` field in the return value of the [DescribeZones](https://intl.cloud.tencent.com/document/api/409/16769?from_cn_redirect=1) API.
  * @method void setDBNodeSet(array $DBNodeSet) Set Deployment information of the instance node, which will display the information of each AZ when the instance node is deployed across multiple AZs.
 The information of AZ can be obtained from the `Zone` field in the return value of the [DescribeZones](https://intl.cloud.tencent.com/document/api/409/16769?from_cn_redirect=1) API.
- * @method integer getAutoVoucher() Obtain Whether to use vouchers automatically. Valid values:
-<li>`0`: No.
-<li>`1`: Yes.
-Default value: `0`.
- * @method void setAutoVoucher(integer $AutoVoucher) Set Whether to use vouchers automatically. Valid values:
-<li>`0`: No.
-<li>`1`: Yes.
-Default value: `0`.
+ * @method integer getAutoVoucher() Obtain Whether to automatically use coupons:
+
+- 0: No
+- 1: Yes
+
+Default value: 0
+ * @method void setAutoVoucher(integer $AutoVoucher) Set Whether to automatically use coupons:
+
+- 0: No
+- 1: Yes
+
+Default value: 0
  * @method string getVoucherIds() Obtain Voucher ID list.
  * @method void setVoucherIds(string $VoucherIds) Set Voucher ID list.
  * @method integer getActivityId() Obtain Campaign ID.
@@ -82,16 +98,16 @@ Default value: `0`.
  * @method void setBackupSetId(string $BackupSetId) Set Basic backup set ID.
  * @method string getRecoveryTargetTime() Obtain Restoration point in time.
  * @method void setRecoveryTargetTime(string $RecoveryTargetTime) Set Restoration point in time.
- * @method string getSyncMode() Obtain Primary-standby sync mode. Valid values:  
-<li>`Semi-sync`
-<li>`Async`
-Default value for the primary instance: `Semi-sync`.
-Default value for the standby instance: `Async`.
- * @method void setSyncMode(string $SyncMode) Set Primary-standby sync mode. Valid values:  
-<li>`Semi-sync`
-<li>`Async`
-Default value for the primary instance: `Semi-sync`.
-Default value for the standby instance: `Async`.
+ * @method string getSyncMode() Obtain Primary-standby sync mode, which supports:
+<li>Semi-sync: Semi-sync</li>
+<li>Async: Asynchronous</li>
+Default value for the primary instance: Semi-sync
+Default value for the read-only instance: Async
+ * @method void setSyncMode(string $SyncMode) Set Primary-standby sync mode, which supports:
+<li>Semi-sync: Semi-sync</li>
+<li>Async: Asynchronous</li>
+Default value for the primary instance: Semi-sync
+Default value for the read-only instance: Async
  */
 class CloneDBInstanceRequest extends AbstractModel
 {
@@ -111,17 +127,21 @@ class CloneDBInstanceRequest extends AbstractModel
     public $Storage;
 
     /**
-     * @var integer Validity period in months. Valid values:
-<li>Monthly subscription: `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `24`, `36`.
-<li>Pay-as-you-go: `1`.
+     * @var integer Purchase duration, in months.
+
+- Prepaid: Supports `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `24`, and `36`.
+- Pay-as-you-go: Only supports `1`.
+
      */
     public $Period;
 
     /**
-     * @var integer Auto-renewal flag. Valid values:
-<li>`0`: Manual renewal.
-<li>`1`: Automatic renewal.
-Default value: `0`.
+     * @var integer Renewal Flag:
+
+- `0`: manual renewal
+`1`: auto-renewal
+
+Default value: 0
      */
     public $AutoRenewFlag;
 
@@ -141,10 +161,12 @@ Default value: `0`.
     public $Name;
 
     /**
-     * @var string Instance billing mode. Valid values:
-<li>`PREPAID`: Monthly subscription.
-<li>`POSTPAID_BY_HOUR`: Pay-as-you-go.
-Default value: `PREPAID`.
+     * @var string Instance billing type, which currently supports:
+
+- PREPAID: Prepaid, i.e., monthly subscription
+- POSTPAID_BY_HOUR: Pay-as-you-go, i.e., pay by consumption
+
+Default value: PREPAID
      */
     public $InstanceChargeType;
 
@@ -171,10 +193,12 @@ The information of AZ can be obtained from the `Zone` field in the return value 
     public $DBNodeSet;
 
     /**
-     * @var integer Whether to use vouchers automatically. Valid values:
-<li>`0`: No.
-<li>`1`: Yes.
-Default value: `0`.
+     * @var integer Whether to automatically use coupons:
+
+- 0: No
+- 1: Yes
+
+Default value: 0
      */
     public $AutoVoucher;
 
@@ -199,11 +223,11 @@ Default value: `0`.
     public $RecoveryTargetTime;
 
     /**
-     * @var string Primary-standby sync mode. Valid values:  
-<li>`Semi-sync`
-<li>`Async`
-Default value for the primary instance: `Semi-sync`.
-Default value for the standby instance: `Async`.
+     * @var string Primary-standby sync mode, which supports:
+<li>Semi-sync: Semi-sync</li>
+<li>Async: Asynchronous</li>
+Default value for the primary instance: Semi-sync
+Default value for the read-only instance: Async
      */
     public $SyncMode;
 
@@ -211,39 +235,47 @@ Default value for the standby instance: `Async`.
      * @param string $DBInstanceId ID of the original instance to be cloned.
      * @param string $SpecCode Purchasable code, which can be obtained from the `SpecCode` field in the return value of the [DescribeClasses](https://intl.cloud.tencent.com/document/api/409/89019?from_cn_redirect=1) API.
      * @param integer $Storage Instance storage capacity in GB.
-     * @param integer $Period Validity period in months. Valid values:
-<li>Monthly subscription: `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `24`, `36`.
-<li>Pay-as-you-go: `1`.
-     * @param integer $AutoRenewFlag Auto-renewal flag. Valid values:
-<li>`0`: Manual renewal.
-<li>`1`: Automatic renewal.
-Default value: `0`.
+     * @param integer $Period Purchase duration, in months.
+
+- Prepaid: Supports `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `24`, and `36`.
+- Pay-as-you-go: Only supports `1`.
+
+     * @param integer $AutoRenewFlag Renewal Flag:
+
+- `0`: manual renewal
+`1`: auto-renewal
+
+Default value: 0
      * @param string $VpcId VPC ID in the format of `vpc-xxxxxxx`, which can be obtained in the console or from the `unVpcId` field in the return value of the [DescribeVpcEx](https://intl.cloud.tencent.com/document/api/215/1372?from_cn_redirect=1) API.
      * @param string $SubnetId VPC subnet ID in the format of `subnet-xxxxxxxx`, which can be obtained in the console or from the `unSubnetId` field in the return value of the [DescribeSubnets](https://intl.cloud.tencent.com/document/api/215/15784?from_cn_redirect=1) API.
      * @param string $Name Name of the newly purchased instance, which can contain up to 60 letters, digits, or symbols (-_). If this parameter is not specified, "Unnamed" will be displayed by default.
-     * @param string $InstanceChargeType Instance billing mode. Valid values:
-<li>`PREPAID`: Monthly subscription.
-<li>`POSTPAID_BY_HOUR`: Pay-as-you-go.
-Default value: `PREPAID`.
+     * @param string $InstanceChargeType Instance billing type, which currently supports:
+
+- PREPAID: Prepaid, i.e., monthly subscription
+- POSTPAID_BY_HOUR: Pay-as-you-go, i.e., pay by consumption
+
+Default value: PREPAID
      * @param array $SecurityGroupIds Security group of the instance, which can be obtained from the `sgld` field in the return value of the [DescribeSecurityGroups](https://intl.cloud.tencent.com/document/api/215/15808?from_cn_redirect=1) API. If this parameter is not specified, the default security group will be bound.
 
      * @param integer $ProjectId Project ID.
      * @param array $TagList The information of tags to be bound with the instance, which is left empty by default. This parameter can be obtained from the `Tags` field in the return value of the [DescribeTags](https://intl.cloud.tencent.com/document/api/651/35316?from_cn_redirect=1) API.
      * @param array $DBNodeSet Deployment information of the instance node, which will display the information of each AZ when the instance node is deployed across multiple AZs.
 The information of AZ can be obtained from the `Zone` field in the return value of the [DescribeZones](https://intl.cloud.tencent.com/document/api/409/16769?from_cn_redirect=1) API.
-     * @param integer $AutoVoucher Whether to use vouchers automatically. Valid values:
-<li>`0`: No.
-<li>`1`: Yes.
-Default value: `0`.
+     * @param integer $AutoVoucher Whether to automatically use coupons:
+
+- 0: No
+- 1: Yes
+
+Default value: 0
      * @param string $VoucherIds Voucher ID list.
      * @param integer $ActivityId Campaign ID.
      * @param string $BackupSetId Basic backup set ID.
      * @param string $RecoveryTargetTime Restoration point in time.
-     * @param string $SyncMode Primary-standby sync mode. Valid values:  
-<li>`Semi-sync`
-<li>`Async`
-Default value for the primary instance: `Semi-sync`.
-Default value for the standby instance: `Async`.
+     * @param string $SyncMode Primary-standby sync mode, which supports:
+<li>Semi-sync: Semi-sync</li>
+<li>Async: Asynchronous</li>
+Default value for the primary instance: Semi-sync
+Default value for the read-only instance: Async
      */
     function __construct()
     {

@@ -26,16 +26,16 @@ use TencentCloud\Common\AbstractModel;
 The information of AZ can be obtained from the `Zone` field in the returned value of the [DescribeZones](https://intl.cloud.tencent.com/document/api/409/16769?from_cn_redirect=1) API.
  * @method void setDBNodeSet(array $DBNodeSet) Set Deployment information of the instance node, which will display the information of each AZ when the instance node is deployed across multiple AZs.
 The information of AZ can be obtained from the `Zone` field in the returned value of the [DescribeZones](https://intl.cloud.tencent.com/document/api/409/16769?from_cn_redirect=1) API.
- * @method integer getSwitchTag() Obtain Switch time for the specified instance after configuration modification.
-<li>`0`: Switch now. 
-<li>`1`: Switch at the specified time.
-<li>`2`: Switch in the maintenance time.
-Default value: `0`. 
- * @method void setSwitchTag(integer $SwitchTag) Set Switch time for the specified instance after configuration modification.
-<li>`0`: Switch now. 
-<li>`1`: Switch at the specified time.
-<li>`2`: Switch in the maintenance time.
-Default value: `0`. 
+ * @method integer getSwitchTag() Obtain Switch time after instance configurations are modified.
+<li>0: Switch immediately</li>
+<li>1: Switch at specified time</li>
+<li>2: Switch during maintenance time window</li>
+Default value: 0
+ * @method void setSwitchTag(integer $SwitchTag) Set Switch time after instance configurations are modified.
+<li>0: Switch immediately</li>
+<li>1: Switch at specified time</li>
+<li>2: Switch during maintenance time window</li>
+Default value: 0
  * @method string getSwitchStartTime() Obtain Switch start time in the format of `HH:MM:SS`, such as 01:00:00. When `SwitchTag` is 0 or 2, this parameter becomes invalid.
  * @method void setSwitchStartTime(string $SwitchStartTime) Set Switch start time in the format of `HH:MM:SS`, such as 01:00:00. When `SwitchTag` is 0 or 2, this parameter becomes invalid.
  * @method string getSwitchEndTime() Obtain Switch end time in the format of `HH:MM:SS`, such as 01:30:00. When `SwitchTag` is 0 or 2, this parameter becomes invalid.
@@ -55,11 +55,11 @@ The information of AZ can be obtained from the `Zone` field in the returned valu
     public $DBNodeSet;
 
     /**
-     * @var integer Switch time for the specified instance after configuration modification.
-<li>`0`: Switch now. 
-<li>`1`: Switch at the specified time.
-<li>`2`: Switch in the maintenance time.
-Default value: `0`. 
+     * @var integer Switch time after instance configurations are modified.
+<li>0: Switch immediately</li>
+<li>1: Switch at specified time</li>
+<li>2: Switch during maintenance time window</li>
+Default value: 0
      */
     public $SwitchTag;
 
@@ -77,11 +77,11 @@ Default value: `0`.
      * @param string $DBInstanceId Instance ID.
      * @param array $DBNodeSet Deployment information of the instance node, which will display the information of each AZ when the instance node is deployed across multiple AZs.
 The information of AZ can be obtained from the `Zone` field in the returned value of the [DescribeZones](https://intl.cloud.tencent.com/document/api/409/16769?from_cn_redirect=1) API.
-     * @param integer $SwitchTag Switch time for the specified instance after configuration modification.
-<li>`0`: Switch now. 
-<li>`1`: Switch at the specified time.
-<li>`2`: Switch in the maintenance time.
-Default value: `0`. 
+     * @param integer $SwitchTag Switch time after instance configurations are modified.
+<li>0: Switch immediately</li>
+<li>1: Switch at specified time</li>
+<li>2: Switch during maintenance time window</li>
+Default value: 0
      * @param string $SwitchStartTime Switch start time in the format of `HH:MM:SS`, such as 01:00:00. When `SwitchTag` is 0 or 2, this parameter becomes invalid.
      * @param string $SwitchEndTime Switch end time in the format of `HH:MM:SS`, such as 01:30:00. When `SwitchTag` is 0 or 2, this parameter becomes invalid.
      */

@@ -32,8 +32,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setZone(string $Zone) Set AZ ID, which can be obtained through the `Zone` field in the returned value of the `DescribeZones` API.
  * @method integer getProjectId() Obtain Project ID.
  * @method void setProjectId(integer $ProjectId) Set Project ID.
- * @method string getDBVersion() Obtain PostgreSQL version. If it is specified, an instance running the latest kernel of PostgreSQL `DBVersion` will be created. You must pass in at least one of the following parameters: DBVersion, DBMajorVersion, DBKernelVersion.
- * @method void setDBVersion(string $DBVersion) Set PostgreSQL version. If it is specified, an instance running the latest kernel of PostgreSQL `DBVersion` will be created. You must pass in at least one of the following parameters: DBVersion, DBMajorVersion, DBKernelVersion.
+ * @method string getDBVersion() Obtain PostgreSQL community major version + minor version number.
+It's generally not recommended to pass in this parameter. If needed, only the latest minor version number under the current major version can be passed.
+ * @method void setDBVersion(string $DBVersion) Set PostgreSQL community major version + minor version number.
+It's generally not recommended to pass in this parameter. If needed, only the latest minor version number under the current major version can be passed.
  * @method string getInstanceChargeType() Obtain Instance billing type.
  * @method void setInstanceChargeType(string $InstanceChargeType) Set Instance billing type.
  * @method integer getAutoVoucher() Obtain Whether to automatically use vouchers. 1: yes, 0: no. Default value: no.
@@ -56,10 +58,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTagList(array $TagList) Set The information of tags to be associated with instances. This parameter is left empty by default.
  * @method array getSecurityGroupIds() Obtain Security group ID
  * @method void setSecurityGroupIds(array $SecurityGroupIds) Set Security group ID
- * @method string getDBMajorVersion() Obtain PostgreSQL major version. If it is specified, an instance running the latest kernel of PostgreSQL `DBMajorVersion` will be created. You must pass in at least one of the following parameters: DBMajorVersion, DBVersion, DBKernelVersion.
- * @method void setDBMajorVersion(string $DBMajorVersion) Set PostgreSQL major version. If it is specified, an instance running the latest kernel of PostgreSQL `DBMajorVersion` will be created. You must pass in at least one of the following parameters: DBMajorVersion, DBVersion, DBKernelVersion.
- * @method string getDBKernelVersion() Obtain PostgreSQL kernel version. If it is specified, an instance running the latest kernel of PostgreSQL `DBKernelVersion` will be created. You must pass in one of the following parameters: DBKernelVersion, DBVersion, DBMajorVersion.
- * @method void setDBKernelVersion(string $DBKernelVersion) Set PostgreSQL kernel version. If it is specified, an instance running the latest kernel of PostgreSQL `DBKernelVersion` will be created. You must pass in one of the following parameters: DBKernelVersion, DBVersion, DBMajorVersion.
+ * @method string getDBMajorVersion() Obtain The major version number of PostgreSQL (this parameter is currently required), and the version information can be obtained from [DescribeDBVersions](https://intl.cloud.tencent.com/document/api/409/89018?from_cn_redirect=1). Currently major versions `10`, `11`, `12`, `13`, `14`, and `15` are supported. For details, see [Kernel Version Overview](https://intl.cloud.tencent.com/document/product/409/67018).
+When this parameter is entered, an instance running the latest kernel version of the latest minor version will be created based on this major version number.
+ * @method void setDBMajorVersion(string $DBMajorVersion) Set The major version number of PostgreSQL (this parameter is currently required), and the version information can be obtained from [DescribeDBVersions](https://intl.cloud.tencent.com/document/api/409/89018?from_cn_redirect=1). Currently major versions `10`, `11`, `12`, `13`, `14`, and `15` are supported. For details, see [Kernel Version Overview](https://intl.cloud.tencent.com/document/product/409/67018).
+When this parameter is entered, an instance running the latest kernel version of the latest minor version will be created based on this major version number.
+ * @method string getDBKernelVersion() Obtain PostgreSQL kernel version number.
+It's generally not recommended to pass in this parameter. If needed, only the latest kernel version number under the current major version can be passed.
+ * @method void setDBKernelVersion(string $DBKernelVersion) Set PostgreSQL kernel version number.
+It's generally not recommended to pass in this parameter. If needed, only the latest kernel version number under the current major version can be passed.
  */
 class CreateDBInstancesRequest extends AbstractModel
 {
@@ -94,7 +100,8 @@ class CreateDBInstancesRequest extends AbstractModel
     public $ProjectId;
 
     /**
-     * @var string PostgreSQL version. If it is specified, an instance running the latest kernel of PostgreSQL `DBVersion` will be created. You must pass in at least one of the following parameters: DBVersion, DBMajorVersion, DBKernelVersion.
+     * @var string PostgreSQL community major version + minor version number.
+It's generally not recommended to pass in this parameter. If needed, only the latest minor version number under the current major version can be passed.
      */
     public $DBVersion;
 
@@ -154,12 +161,14 @@ class CreateDBInstancesRequest extends AbstractModel
     public $SecurityGroupIds;
 
     /**
-     * @var string PostgreSQL major version. If it is specified, an instance running the latest kernel of PostgreSQL `DBMajorVersion` will be created. You must pass in at least one of the following parameters: DBMajorVersion, DBVersion, DBKernelVersion.
+     * @var string The major version number of PostgreSQL (this parameter is currently required), and the version information can be obtained from [DescribeDBVersions](https://intl.cloud.tencent.com/document/api/409/89018?from_cn_redirect=1). Currently major versions `10`, `11`, `12`, `13`, `14`, and `15` are supported. For details, see [Kernel Version Overview](https://intl.cloud.tencent.com/document/product/409/67018).
+When this parameter is entered, an instance running the latest kernel version of the latest minor version will be created based on this major version number.
      */
     public $DBMajorVersion;
 
     /**
-     * @var string PostgreSQL kernel version. If it is specified, an instance running the latest kernel of PostgreSQL `DBKernelVersion` will be created. You must pass in one of the following parameters: DBKernelVersion, DBVersion, DBMajorVersion.
+     * @var string PostgreSQL kernel version number.
+It's generally not recommended to pass in this parameter. If needed, only the latest kernel version number under the current major version can be passed.
      */
     public $DBKernelVersion;
 
@@ -170,7 +179,8 @@ class CreateDBInstancesRequest extends AbstractModel
      * @param integer $Period Length of purchase in months. Currently, only 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, and 36 are supported.
      * @param string $Zone AZ ID, which can be obtained through the `Zone` field in the returned value of the `DescribeZones` API.
      * @param integer $ProjectId Project ID.
-     * @param string $DBVersion PostgreSQL version. If it is specified, an instance running the latest kernel of PostgreSQL `DBVersion` will be created. You must pass in at least one of the following parameters: DBVersion, DBMajorVersion, DBKernelVersion.
+     * @param string $DBVersion PostgreSQL community major version + minor version number.
+It's generally not recommended to pass in this parameter. If needed, only the latest minor version number under the current major version can be passed.
      * @param string $InstanceChargeType Instance billing type.
      * @param integer $AutoVoucher Whether to automatically use vouchers. 1: yes, 0: no. Default value: no.
      * @param array $VoucherIds Voucher ID list (only one voucher can be specified currently).
@@ -182,8 +192,10 @@ class CreateDBInstancesRequest extends AbstractModel
      * @param integer $NeedSupportIpv6 Whether to support IPv6 address access. Valid values: 1 (yes), 0 (no)
      * @param array $TagList The information of tags to be associated with instances. This parameter is left empty by default.
      * @param array $SecurityGroupIds Security group ID
-     * @param string $DBMajorVersion PostgreSQL major version. If it is specified, an instance running the latest kernel of PostgreSQL `DBMajorVersion` will be created. You must pass in at least one of the following parameters: DBMajorVersion, DBVersion, DBKernelVersion.
-     * @param string $DBKernelVersion PostgreSQL kernel version. If it is specified, an instance running the latest kernel of PostgreSQL `DBKernelVersion` will be created. You must pass in one of the following parameters: DBKernelVersion, DBVersion, DBMajorVersion.
+     * @param string $DBMajorVersion The major version number of PostgreSQL (this parameter is currently required), and the version information can be obtained from [DescribeDBVersions](https://intl.cloud.tencent.com/document/api/409/89018?from_cn_redirect=1). Currently major versions `10`, `11`, `12`, `13`, `14`, and `15` are supported. For details, see [Kernel Version Overview](https://intl.cloud.tencent.com/document/product/409/67018).
+When this parameter is entered, an instance running the latest kernel version of the latest minor version will be created based on this major version number.
+     * @param string $DBKernelVersion PostgreSQL kernel version number.
+It's generally not recommended to pass in this parameter. If needed, only the latest kernel version number under the current major version can be passed.
      */
     function __construct()
     {

@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getCustomerUin() Obtain Customer UIN
  * @method void setCustomerUin(integer $CustomerUin) Set Customer UIN
- * @method string getMonth() Obtain The queried month in “YYYY-MM” format, such as 2023-01.
- * @method void setMonth(string $Month) Set The queried month in “YYYY-MM” format, such as 2023-01.
+ * @method string getMonth() Obtain The queried month in "YYYY-MM" format, such as 2023-01.
+ * @method void setMonth(string $Month) Set The queried month in "YYYY-MM" format, such as 2023-01.
  * @method integer getPageSize() Obtain Page parameter: Indicates the number of entries per page. Value range: [1, 200]
  * @method void setPageSize(integer $PageSize) Set Page parameter: Indicates the number of entries per page. Value range: [1, 200]
  * @method integer getPage() Obtain Page parameter: Indicates the current page number. The minimum value is 1.
@@ -103,7 +103,7 @@ class DescribeCustomerBillDetailRequest extends AbstractModel
     public $CustomerUin;
 
     /**
-     * @var string The queried month in “YYYY-MM” format, such as 2023-01.
+     * @var string The queried month in "YYYY-MM" format, such as 2023-01.
      */
     public $Month;
 
@@ -164,7 +164,7 @@ class DescribeCustomerBillDetailRequest extends AbstractModel
 
     /**
      * @param integer $CustomerUin Customer UIN
-     * @param string $Month The queried month in “YYYY-MM” format, such as 2023-01.
+     * @param string $Month The queried month in "YYYY-MM" format, such as 2023-01.
      * @param integer $PageSize Page parameter: Indicates the number of entries per page. Value range: [1, 200]
      * @param integer $Page Page parameter: Indicates the current page number. The minimum value is 1.
      * @param string $PayMode Billing mode. Valid values:

@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getDBInstanceId() Obtain Instance ID
  * @method void setDBInstanceId(string $DBInstanceId) Set Instance ID
- * @method string getBaseBackupId() Obtain Base backup ID
- * @method void setBaseBackupId(string $BaseBackupId) Set Base backup ID
+ * @method string getBaseBackupId() Obtain Data Backup ID.
+ * @method void setBaseBackupId(string $BaseBackupId) Set Data Backup ID.
  */
 class DeleteBaseBackupRequest extends AbstractModel
 {
@@ -33,13 +33,13 @@ class DeleteBaseBackupRequest extends AbstractModel
     public $DBInstanceId;
 
     /**
-     * @var string Base backup ID
+     * @var string Data Backup ID.
      */
     public $BaseBackupId;
 
     /**
      * @param string $DBInstanceId Instance ID
-     * @param string $BaseBackupId Base backup ID
+     * @param string $BaseBackupId Data Backup ID.
      */
     function __construct()
     {

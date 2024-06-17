@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDBInstanceId(string $DBInstanceId) Set Instance ID in the format of postgres-hez4fh0v
  * @method string getInstanceChargeType() Obtain Instance billing type. Valid value: `POSTPAID_BY_HOUR` (pay-as-you-go hourly)
  * @method void setInstanceChargeType(string $InstanceChargeType) Set Instance billing type. Valid value: `POSTPAID_BY_HOUR` (pay-as-you-go hourly)
+ * @method integer getCpu() Obtain Instance CPU size, unit: Core
+ * @method void setCpu(integer $Cpu) Set Instance CPU size, unit: Core
  */
 class InquiryPriceUpgradeDBInstanceRequest extends AbstractModel
 {
@@ -52,10 +54,16 @@ class InquiryPriceUpgradeDBInstanceRequest extends AbstractModel
     public $InstanceChargeType;
 
     /**
+     * @var integer Instance CPU size, unit: Core
+     */
+    public $Cpu;
+
+    /**
      * @param integer $Storage Instance disk size in GB
      * @param integer $Memory Instance memory size in GB
      * @param string $DBInstanceId Instance ID in the format of postgres-hez4fh0v
      * @param string $InstanceChargeType Instance billing type. Valid value: `POSTPAID_BY_HOUR` (pay-as-you-go hourly)
+     * @param integer $Cpu Instance CPU size, unit: Core
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class InquiryPriceUpgradeDBInstanceRequest extends AbstractModel
 
         if (array_key_exists("InstanceChargeType",$param) and $param["InstanceChargeType"] !== null) {
             $this->InstanceChargeType = $param["InstanceChargeType"];
+        }
+
+        if (array_key_exists("Cpu",$param) and $param["Cpu"] !== null) {
+            $this->Cpu = $param["Cpu"];
         }
     }
 }

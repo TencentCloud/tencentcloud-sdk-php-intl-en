@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyDBInstanceParameters request structure.
  *
- * @method string getDBInstanceId() Obtain Instance ID
- * @method void setDBInstanceId(string $DBInstanceId) Set Instance ID
- * @method array getParamList() Obtain Parameters to be modified and their new values
- * @method void setParamList(array $ParamList) Set Parameters to be modified and their new values
+ * @method string getDBInstanceId() Obtain Instance ID.
+ * @method void setDBInstanceId(string $DBInstanceId) Set Instance ID.
+ * @method array getParamList() Obtain Parameters to be modified and expected values.
+ * @method void setParamList(array $ParamList) Set Parameters to be modified and expected values.
  */
 class ModifyDBInstanceParametersRequest extends AbstractModel
 {
     /**
-     * @var string Instance ID
+     * @var string Instance ID.
      */
     public $DBInstanceId;
 
     /**
-     * @var array Parameters to be modified and their new values
+     * @var array Parameters to be modified and expected values.
      */
     public $ParamList;
 
     /**
-     * @param string $DBInstanceId Instance ID
-     * @param array $ParamList Parameters to be modified and their new values
+     * @param string $DBInstanceId Instance ID.
+     * @param array $ParamList Parameters to be modified and expected values.
      */
     function __construct()
     {
