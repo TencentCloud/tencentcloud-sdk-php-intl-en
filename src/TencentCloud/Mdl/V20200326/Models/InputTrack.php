@@ -14,24 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Faceid\V20180301\Models;
+namespace TencentCloud\Mdl\V20200326\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * GetSdkVerificationResult request structure.
+ * Audio track configuration.
  *
- * @method string getSdkToken() Obtain The token used to identify an SDK-based verification process. 
- * @method void setSdkToken(string $SdkToken) Set The token used to identify an SDK-based verification process. 
+ * @method integer getTrackIndex() Obtain Audio track index 1-based index mapping to the specified audio track integer starting from 1.
+ * @method void setTrackIndex(integer $TrackIndex) Set Audio track index 1-based index mapping to the specified audio track integer starting from 1.
  */
-class GetSdkVerificationResultRequest extends AbstractModel
+class InputTrack extends AbstractModel
 {
     /**
-     * @var string The token used to identify an SDK-based verification process. 
+     * @var integer Audio track index 1-based index mapping to the specified audio track integer starting from 1.
      */
-    public $SdkToken;
+    public $TrackIndex;
 
     /**
-     * @param string $SdkToken The token used to identify an SDK-based verification process. 
+     * @param integer $TrackIndex Audio track index 1-based index mapping to the specified audio track integer starting from 1.
      */
     function __construct()
     {
@@ -46,8 +46,8 @@ class GetSdkVerificationResultRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("SdkToken",$param) and $param["SdkToken"] !== null) {
-            $this->SdkToken = $param["SdkToken"];
+        if (array_key_exists("TrackIndex",$param) and $param["TrackIndex"] !== null) {
+            $this->TrackIndex = $param["TrackIndex"];
         }
     }
 }

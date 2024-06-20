@@ -24,6 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setName(string $Name) Set Audio name, which can contain 1-32 letters, digits, and underscores.
  * @method AudioPidSelectionInfo getAudioPidSelection() Obtain Audio `Pid` selection.
  * @method void setAudioPidSelection(AudioPidSelectionInfo $AudioPidSelection) Set Audio `Pid` selection.
+ * @method string getAudioSelectorType() Obtain Audio input type, optional values: 'PID_SELECTOR' 'TRACK_SELECTOR', default value PID_SELECTOR.
+ * @method void setAudioSelectorType(string $AudioSelectorType) Set Audio input type, optional values: 'PID_SELECTOR' 'TRACK_SELECTOR', default value PID_SELECTOR.
+ * @method InputTracks getAudioTrackSelection() Obtain AudioTrack configuration.
+ * @method void setAudioTrackSelection(InputTracks $AudioTrackSelection) Set AudioTrack configuration.
  */
 class AudioSelectorInfo extends AbstractModel
 {
@@ -38,8 +42,20 @@ class AudioSelectorInfo extends AbstractModel
     public $AudioPidSelection;
 
     /**
+     * @var string Audio input type, optional values: 'PID_SELECTOR' 'TRACK_SELECTOR', default value PID_SELECTOR.
+     */
+    public $AudioSelectorType;
+
+    /**
+     * @var InputTracks AudioTrack configuration.
+     */
+    public $AudioTrackSelection;
+
+    /**
      * @param string $Name Audio name, which can contain 1-32 letters, digits, and underscores.
      * @param AudioPidSelectionInfo $AudioPidSelection Audio `Pid` selection.
+     * @param string $AudioSelectorType Audio input type, optional values: 'PID_SELECTOR' 'TRACK_SELECTOR', default value PID_SELECTOR.
+     * @param InputTracks $AudioTrackSelection AudioTrack configuration.
      */
     function __construct()
     {
@@ -61,6 +77,15 @@ class AudioSelectorInfo extends AbstractModel
         if (array_key_exists("AudioPidSelection",$param) and $param["AudioPidSelection"] !== null) {
             $this->AudioPidSelection = new AudioPidSelectionInfo();
             $this->AudioPidSelection->deserialize($param["AudioPidSelection"]);
+        }
+
+        if (array_key_exists("AudioSelectorType",$param) and $param["AudioSelectorType"] !== null) {
+            $this->AudioSelectorType = $param["AudioSelectorType"];
+        }
+
+        if (array_key_exists("AudioTrackSelection",$param) and $param["AudioTrackSelection"] !== null) {
+            $this->AudioTrackSelection = new InputTracks();
+            $this->AudioTrackSelection->deserialize($param["AudioTrackSelection"]);
         }
     }
 }

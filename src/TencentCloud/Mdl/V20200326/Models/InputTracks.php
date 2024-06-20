@@ -14,24 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Faceid\V20180301\Models;
+namespace TencentCloud\Mdl\V20200326\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * GetSdkVerificationResult request structure.
+ * 
  *
- * @method string getSdkToken() Obtain The token used to identify an SDK-based verification process. 
- * @method void setSdkToken(string $SdkToken) Set The token used to identify an SDK-based verification process. 
+ * @method array getTracks() Obtain Audio track configuration information.
+ * @method void setTracks(array $Tracks) Set Audio track configuration information.
  */
-class GetSdkVerificationResultRequest extends AbstractModel
+class InputTracks extends AbstractModel
 {
     /**
-     * @var string The token used to identify an SDK-based verification process. 
+     * @var array Audio track configuration information.
      */
-    public $SdkToken;
+    public $Tracks;
 
     /**
-     * @param string $SdkToken The token used to identify an SDK-based verification process. 
+     * @param array $Tracks Audio track configuration information.
      */
     function __construct()
     {
@@ -46,8 +46,13 @@ class GetSdkVerificationResultRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("SdkToken",$param) and $param["SdkToken"] !== null) {
-            $this->SdkToken = $param["SdkToken"];
+        if (array_key_exists("Tracks",$param) and $param["Tracks"] !== null) {
+            $this->Tracks = [];
+            foreach ($param["Tracks"] as $key => $value){
+                $obj = new InputTrack();
+                $obj->deserialize($value);
+                array_push($this->Tracks, $obj);
+            }
         }
     }
 }
