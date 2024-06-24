@@ -100,10 +100,14 @@ Note: This field may return null, indicating that no valid value can be obtained
 Note: This field may return null, indicating that no valid value can be obtained.
  * @method void setTag(string $Tag) Set Function tag
 Note: This field may return null, indicating that no valid value can be obtained.
- * @method array getOperatorUserIdsStr() Obtain 
- * @method void setOperatorUserIdsStr(array $OperatorUserIdsStr) Set 
- * @method array getOwnerUserIdsStr() Obtain 
- * @method void setOwnerUserIdsStr(array $OwnerUserIdsStr) Set 
+ * @method array getOperatorUserIdsStr() Obtain Operator ID List
+Note: This field may return null, indicating that no valid value can be obtained.
+ * @method void setOperatorUserIdsStr(array $OperatorUserIdsStr) Set Operator ID List
+Note: This field may return null, indicating that no valid value can be obtained.
+ * @method array getOwnerUserIdsStr() Obtain Public Cloud Owner ID List
+Note: This field may return null, indicating that no valid value can be obtained.
+ * @method void setOwnerUserIdsStr(array $OwnerUserIdsStr) Set Public Cloud Owner ID List
+Note: This field may return null, indicating that no valid value can be obtained.
  */
 class OrganizationalFunction extends AbstractModel
 {
@@ -252,12 +256,14 @@ Note: This field may return null, indicating that no valid value can be obtained
     public $Tag;
 
     /**
-     * @var array 
+     * @var array Operator ID List
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public $OperatorUserIdsStr;
 
     /**
-     * @var array 
+     * @var array Public Cloud Owner ID List
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public $OwnerUserIdsStr;
 
@@ -302,8 +308,10 @@ Note: This field may return null, indicating that no valid value can be obtained
      * @param string $SubmitTimestamp TimestampNote: This field may return null, indicating that no valid value can be obtained.
      * @param string $Tag Function tag
 Note: This field may return null, indicating that no valid value can be obtained.
-     * @param array $OperatorUserIdsStr 
-     * @param array $OwnerUserIdsStr 
+     * @param array $OperatorUserIdsStr Operator ID List
+Note: This field may return null, indicating that no valid value can be obtained.
+     * @param array $OwnerUserIdsStr Public Cloud Owner ID List
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     function __construct()
     {

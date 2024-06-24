@@ -40,8 +40,10 @@ Note: This field may return null, indicating that no valid value can be obtained
  * @method void setJoinTableNumber(integer $JoinTableNumber) Set Number of Evaluation Forms Involved
  * @method float getScore() Obtain Scoring
  * @method void setScore(float $Score) Set Scoring
- * @method string getUserIdStr() Obtain 
- * @method void setUserIdStr(string $UserIdStr) Set 
+ * @method string getUserIdStr() Obtain Set by User ID Str
+Note: This field may return null, indicating that no valid value can be obtained.
+ * @method void setUserIdStr(string $UserIdStr) Set Set by User ID Str
+Note: This field may return null, indicating that no valid value can be obtained.
  */
 class DimensionScoreInfo extends AbstractModel
 {
@@ -84,7 +86,8 @@ Note: This field may return null, indicating that no valid value can be obtained
     public $Score;
 
     /**
-     * @var string 
+     * @var string Set by User ID Str
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public $UserIdStr;
 
@@ -99,7 +102,8 @@ Note: This field may return null, indicating that no valid value can be obtained
 Note: This field may return null, indicating that no valid value can be obtained.
      * @param integer $JoinTableNumber Number of Evaluation Forms Involved
      * @param float $Score Scoring
-     * @param string $UserIdStr 
+     * @param string $UserIdStr Set by User ID Str
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     function __construct()
     {

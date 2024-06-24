@@ -126,6 +126,10 @@ Note: This field may return null, indicating that no valid value can be obtained
 Note: This field may return null, indicating that no valid value can be obtained.
  * @method void setLarkWebHooks(string $LarkWebHooks) Set FeiShu Group Hook Address, multiple hook addresses separated by commas
 Note: This field may return null, indicating that no valid value can be obtained.
+ * @method string getDingDingWebHooks() Obtain DingTalk Group Hook addresses, multiple hook addresses separated by commas
+Note: This field may return null, indicating that no valid value can be obtained.
+ * @method void setDingDingWebHooks(string $DingDingWebHooks) Set DingTalk Group Hook addresses, multiple hook addresses separated by commas
+Note: This field may return null, indicating that no valid value can be obtained.
  */
 class TaskAlarmInfo extends AbstractModel
 {
@@ -311,6 +315,12 @@ Note: This field may return null, indicating that no valid value can be obtained
     public $LarkWebHooks;
 
     /**
+     * @var string DingTalk Group Hook addresses, multiple hook addresses separated by commas
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public $DingDingWebHooks;
+
+    /**
      * @param string $TaskId Task ID
      * @param string $RegularName Rule name
      * @param integer $RegularStatus Rule Status (0 for off, 1 for on)
@@ -363,6 +373,8 @@ Note: This field may return null, indicating that no valid value can be obtained
      * @param string $Description Alert Rule Description
 Note: This field may return null, indicating that no valid value can be obtained.
      * @param string $LarkWebHooks FeiShu Group Hook Address, multiple hook addresses separated by commas
+Note: This field may return null, indicating that no valid value can be obtained.
+     * @param string $DingDingWebHooks DingTalk Group Hook addresses, multiple hook addresses separated by commas
 Note: This field may return null, indicating that no valid value can be obtained.
      */
     function __construct()
@@ -514,6 +526,10 @@ Note: This field may return null, indicating that no valid value can be obtained
 
         if (array_key_exists("LarkWebHooks",$param) and $param["LarkWebHooks"] !== null) {
             $this->LarkWebHooks = $param["LarkWebHooks"];
+        }
+
+        if (array_key_exists("DingDingWebHooks",$param) and $param["DingDingWebHooks"] !== null) {
+            $this->DingDingWebHooks = $param["DingDingWebHooks"];
         }
     }
 }

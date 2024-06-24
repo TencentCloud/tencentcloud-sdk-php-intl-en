@@ -59,6 +59,7 @@ use TencentCloud\Wedata\V20210820\Models as Models;
  * @method Models\CreateRuleTemplateResponse CreateRuleTemplate(Models\CreateRuleTemplateRequest $req) Create Rule Template
  * @method Models\CreateTaskResponse CreateTask(Models\CreateTaskRequest $req) Creating task
  * @method Models\CreateTaskAlarmRegularResponse CreateTaskAlarmRegular(Models\CreateTaskAlarmRegularRequest $req) Create task alert rules
+ * @method Models\CreateTaskFolderResponse CreateTaskFolder(Models\CreateTaskFolderRequest $req) Orchestration Space - Workflow - Create Task Folder
  * @method Models\CreateTaskVersionDsResponse CreateTaskVersionDs(Models\CreateTaskVersionDsRequest $req) Submit Task Version
  * @method Models\CreateWorkflowDsResponse CreateWorkflowDs(Models\CreateWorkflowDsRequest $req) Creating workflow
  * @method Models\DagInstancesResponse DagInstances(Models\DagInstancesRequest $req) Pull DAG Instance
@@ -191,7 +192,7 @@ use TencentCloud\Wedata\V20210820\Models as Models;
  * @method Models\DescribeWorkflowInfoByIdResponse DescribeWorkflowInfoById(Models\DescribeWorkflowInfoByIdRequest $req) Query Workflow Details by Workflow ID
  * @method Models\DescribeWorkflowListByProjectIdResponse DescribeWorkflowListByProjectId(Models\DescribeWorkflowListByProjectIdRequest $req) Get all workflow lists under the project by Project ID
  * @method Models\DescribeWorkflowTaskCountResponse DescribeWorkflowTaskCount(Models\DescribeWorkflowTaskCountRequest $req) Query the number of workflow tasks
- * @method Models\DiagnoseProResponse DiagnosePro(Models\DiagnoseProRequest $req) Instance Diagnosis
+ * @method Models\DiagnoseProResponse DiagnosePro(Models\DiagnoseProRequest $req) Instance diagnosis for diagnosing instances in INITIAL, DEPENDENCE, ALLOCATED, LAUNCHED, EVENT_LISTENING, BEFORE_ASPECT, EXPIRED, FAILED states
  * @method Models\DryRunDIOfflineTaskResponse DryRunDIOfflineTask(Models\DryRunDIOfflineTaskRequest $req) Debug and Run Integration Task
  * @method Models\FindAllFolderResponse FindAllFolder(Models\FindAllFolderRequest $req) Orchestration Space Bulk Operation Page Find All Folders
  * @method Models\FreezeOpsTasksResponse FreezeOpsTasks(Models\FreezeOpsTasksRequest $req) Task Operation and Maintenance - Bulk Pause Tasks
@@ -225,6 +226,7 @@ Add Parent Task Dependency
 Modify Task Script
  * @method Models\ModifyWorkflowInfoResponse ModifyWorkflowInfo(Models\ModifyWorkflowInfoRequest $req) Update Workflow Information
  * @method Models\ModifyWorkflowScheduleResponse ModifyWorkflowSchedule(Models\ModifyWorkflowScheduleRequest $req) Update Workflow Scheduling
+ * @method Models\MoveTasksToFolderResponse MoveTasksToFolder(Models\MoveTasksToFolderRequest $req) Orchestration Space - Workflow - Move Task to Workflow Folder
  * @method Models\RegisterEventResponse RegisterEvent(Models\RegisterEventRequest $req) <p style="color:red;">[Note: This version is only available to a portion of allowlist customers in the Guangzhou Region]</p>
 Registration Event
  * @method Models\RegisterEventListenerResponse RegisterEventListener(Models\RegisterEventListenerRequest $req) <p style="color:red;">[Note: This version is only available to a portion of allowlist customers in the Guangzhou Region]</p>

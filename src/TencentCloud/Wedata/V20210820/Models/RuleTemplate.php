@@ -88,8 +88,10 @@ Note: This field may return null, indicating that no valid value can be obtained
 Note: This field may return null, indicating that no valid value can be obtained.
  * @method void setDatasourceTypes(array $DatasourceTypes) Set Supported Data Source Types
 Note: This field may return null, indicating that no valid value can be obtained.
- * @method string getUserIdStr() Obtain 
- * @method void setUserIdStr(string $UserIdStr) Set 
+ * @method string getUserIdStr() Obtain Created by User ID Str
+Note: This field may return null, indicating that no valid value can be obtained.
+ * @method void setUserIdStr(string $UserIdStr) Set Created by User ID Str
+Note: This field may return null, indicating that no valid value can be obtained.
  */
 class RuleTemplate extends AbstractModel
 {
@@ -208,7 +210,8 @@ Note: This field may return null, indicating that no valid value can be obtained
     public $DatasourceTypes;
 
     /**
-     * @var string 
+     * @var string Created by User ID Str
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public $UserIdStr;
 
@@ -247,7 +250,8 @@ Note: This field may return null, indicating that no valid value can be obtained
 Note: This field may return null, indicating that no valid value can be obtained.
      * @param array $DatasourceTypes Supported Data Source Types
 Note: This field may return null, indicating that no valid value can be obtained.
-     * @param string $UserIdStr 
+     * @param string $UserIdStr Created by User ID Str
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     function __construct()
     {

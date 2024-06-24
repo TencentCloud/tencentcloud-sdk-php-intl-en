@@ -22,6 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getTableId() Obtain Unique Table ID
  * @method void setTableId(string $TableId) Set Unique Table ID
+ * @method TableNameFilter getTableNameFilter() Obtain Query conditions by Name
+ * @method void setTableNameFilter(TableNameFilter $TableNameFilter) Set Query conditions by Name
+ * @method integer getTableFilterType() Obtain Query condition type: 0 by ID, 1 by Name, default is 0
+ * @method void setTableFilterType(integer $TableFilterType) Set Query condition type: 0 by ID, 1 by Name, default is 0
  */
 class DescribeTableMetaRequest extends AbstractModel
 {
@@ -31,7 +35,19 @@ class DescribeTableMetaRequest extends AbstractModel
     public $TableId;
 
     /**
+     * @var TableNameFilter Query conditions by Name
+     */
+    public $TableNameFilter;
+
+    /**
+     * @var integer Query condition type: 0 by ID, 1 by Name, default is 0
+     */
+    public $TableFilterType;
+
+    /**
      * @param string $TableId Unique Table ID
+     * @param TableNameFilter $TableNameFilter Query conditions by Name
+     * @param integer $TableFilterType Query condition type: 0 by ID, 1 by Name, default is 0
      */
     function __construct()
     {
@@ -48,6 +64,15 @@ class DescribeTableMetaRequest extends AbstractModel
         }
         if (array_key_exists("TableId",$param) and $param["TableId"] !== null) {
             $this->TableId = $param["TableId"];
+        }
+
+        if (array_key_exists("TableNameFilter",$param) and $param["TableNameFilter"] !== null) {
+            $this->TableNameFilter = new TableNameFilter();
+            $this->TableNameFilter->deserialize($param["TableNameFilter"]);
+        }
+
+        if (array_key_exists("TableFilterType",$param) and $param["TableFilterType"] !== null) {
+            $this->TableFilterType = $param["TableFilterType"];
         }
     }
 }

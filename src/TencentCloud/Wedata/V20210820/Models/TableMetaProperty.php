@@ -18,47 +18,35 @@ namespace TencentCloud\Wedata\V20210820\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Subscription Recipient
+ * Table Ancillary Information
  *
- * @method integer getReceiverUserId() Obtain Recipient Uin
+ * @method string getKey() Obtain Attribute Key
 Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setReceiverUserId(integer $ReceiverUserId) Set Recipient Uin
+ * @method void setKey(string $Key) Set Attribute Key
 Note: This field may return null, indicating that no valid value can be obtained.
- * @method string getReceiverName() Obtain Recipient Name
+ * @method string getValue() Obtain Attribute Value
 Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setReceiverName(string $ReceiverName) Set Recipient Name
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method string getReceiverUserIdStr() Obtain Recipient UIN
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setReceiverUserIdStr(string $ReceiverUserIdStr) Set Recipient UIN
+ * @method void setValue(string $Value) Set Attribute Value
 Note: This field may return null, indicating that no valid value can be obtained.
  */
-class SubscribeReceiver extends AbstractModel
+class TableMetaProperty extends AbstractModel
 {
     /**
-     * @var integer Recipient Uin
+     * @var string Attribute Key
 Note: This field may return null, indicating that no valid value can be obtained.
      */
-    public $ReceiverUserId;
+    public $Key;
 
     /**
-     * @var string Recipient Name
+     * @var string Attribute Value
 Note: This field may return null, indicating that no valid value can be obtained.
      */
-    public $ReceiverName;
+    public $Value;
 
     /**
-     * @var string Recipient UIN
+     * @param string $Key Attribute Key
 Note: This field may return null, indicating that no valid value can be obtained.
-     */
-    public $ReceiverUserIdStr;
-
-    /**
-     * @param integer $ReceiverUserId Recipient Uin
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param string $ReceiverName Recipient Name
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param string $ReceiverUserIdStr Recipient UIN
+     * @param string $Value Attribute Value
 Note: This field may return null, indicating that no valid value can be obtained.
      */
     function __construct()
@@ -74,16 +62,12 @@ Note: This field may return null, indicating that no valid value can be obtained
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ReceiverUserId",$param) and $param["ReceiverUserId"] !== null) {
-            $this->ReceiverUserId = $param["ReceiverUserId"];
+        if (array_key_exists("Key",$param) and $param["Key"] !== null) {
+            $this->Key = $param["Key"];
         }
 
-        if (array_key_exists("ReceiverName",$param) and $param["ReceiverName"] !== null) {
-            $this->ReceiverName = $param["ReceiverName"];
-        }
-
-        if (array_key_exists("ReceiverUserIdStr",$param) and $param["ReceiverUserIdStr"] !== null) {
-            $this->ReceiverUserIdStr = $param["ReceiverUserIdStr"];
+        if (array_key_exists("Value",$param) and $param["Value"] !== null) {
+            $this->Value = $param["Value"];
         }
     }
 }

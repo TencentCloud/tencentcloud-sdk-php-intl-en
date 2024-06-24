@@ -220,6 +220,10 @@ Note: This field may return null, indicating that no valid value can be obtained
 Note: This field may return null, indicating that no valid value can be obtained.
  * @method void setPartitionExpireDays(integer $PartitionExpireDays) Set Lifecycle - Partition Retention Days [Valid when Partition Retention Policy is applied]
 Note: This field may return null, indicating that no valid value can be obtained.
+ * @method array getTableProperties() Obtain Table Ancillary Information
+Note: This field may return null, indicating that no valid value can be obtained.
+ * @method void setTableProperties(array $TableProperties) Set Table Ancillary Information
+Note: This field may return null, indicating that no valid value can be obtained.
  */
 class TableMeta extends AbstractModel
 {
@@ -536,6 +540,12 @@ Note: This field may return null, indicating that no valid value can be obtained
     public $PartitionExpireDays;
 
     /**
+     * @var array Table Ancillary Information
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public $TableProperties;
+
+    /**
      * @param string $TableId Global Unique ID of the Table
 Note: This field may return null, indicating that no valid value can be obtained.
      * @param string $TableName Table NameNote: This field may return null, indicating that no valid value can be obtained.
@@ -635,6 +645,8 @@ Note: This field may return null, indicating that no valid value can be obtained
      * @param array $PartitionColumns Partition Field Key
 Note: This field may return null, indicating that no valid value can be obtained.
      * @param integer $PartitionExpireDays Lifecycle - Partition Retention Days [Valid when Partition Retention Policy is applied]
+Note: This field may return null, indicating that no valid value can be obtained.
+     * @param array $TableProperties Table Ancillary Information
 Note: This field may return null, indicating that no valid value can be obtained.
      */
     function __construct()
@@ -867,6 +879,15 @@ Note: This field may return null, indicating that no valid value can be obtained
 
         if (array_key_exists("PartitionExpireDays",$param) and $param["PartitionExpireDays"] !== null) {
             $this->PartitionExpireDays = $param["PartitionExpireDays"];
+        }
+
+        if (array_key_exists("TableProperties",$param) and $param["TableProperties"] !== null) {
+            $this->TableProperties = [];
+            foreach ($param["TableProperties"] as $key => $value){
+                $obj = new TableMetaProperty();
+                $obj->deserialize($value);
+                array_push($this->TableProperties, $obj);
+            }
         }
     }
 }
