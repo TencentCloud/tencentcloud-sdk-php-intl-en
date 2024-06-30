@@ -57,7 +57,9 @@ use TencentCloud\Antiddos\V20200309\Models as Models;
  * @method Models\DescribeBgpBizTrendResponse DescribeBgpBizTrend(Models\DescribeBgpBizTrendRequest $req) This API is used to obtain Anti-DDoS Pro traffic data.
  * @method Models\DescribeBizHttpStatusResponse DescribeBizHttpStatus(Models\DescribeBizHttpStatusRequest $req) This API is used to get the statistics on the status codes of business traffic.
  * @method Models\DescribeBizTrendResponse DescribeBizTrend(Models\DescribeBizTrendRequest $req) This API is used to get the traffic flow data collected in the specified period.
- * @method Models\DescribeBlackWhiteIpListResponse DescribeBlackWhiteIpList(Models\DescribeBlackWhiteIpListRequest $req) This API is used to get an Anti-DDoS IP blocklist/allowlist.
+ * @method Models\DescribeBlackWhiteIpListResponse DescribeBlackWhiteIpList(Models\DescribeBlackWhiteIpListRequest $req) 接口变更
+
+This API is used to get an Anti-DDoS IP blocklist/allowlist.
  * @method Models\DescribeCCLevelListResponse DescribeCCLevelList(Models\DescribeCCLevelListRequest $req) Gets the list of CC protection levels
  * @method Models\DescribeCCLevelPolicyResponse DescribeCCLevelPolicy(Models\DescribeCCLevelPolicyRequest $req) This API is used the query a level-defining policy of CC attacks
  * @method Models\DescribeCCPrecisionPlyListResponse DescribeCCPrecisionPlyList(Models\DescribeCCPrecisionPlyListRequest $req) This API is used to obtain the list of CC precise protection policies.
@@ -78,7 +80,9 @@ use TencentCloud\Antiddos\V20200309\Models as Models;
  * @method Models\DescribeListIPAlarmConfigResponse DescribeListIPAlarmConfig(Models\DescribeListIPAlarmConfigRequest $req) This API is used to get a list of IP alarm threshold configurations.
  * @method Models\DescribeListListenerResponse DescribeListListener(Models\DescribeListListenerRequest $req) This API is used to get a list of forwarding listeners.
  * @method Models\DescribeListPacketFilterConfigResponse DescribeListPacketFilterConfig(Models\DescribeListPacketFilterConfigRequest $req) This API is used to get a list of Anti-DDoS feature filtering rules.
- * @method Models\DescribeListProtectThresholdConfigResponse DescribeListProtectThresholdConfig(Models\DescribeListProtectThresholdConfigRequest $req) This API is used to get a list of protection threshold configurations for AI protection switch, protection level, and CC threshold switch.
+ * @method Models\DescribeListProtectThresholdConfigResponse DescribeListProtectThresholdConfig(Models\DescribeListProtectThresholdConfigRequest $req) 接口变更
+
+This API is used to get a list of protection threshold configurations for AI protection switch, protection level, and CC threshold switch.
  * @method Models\DescribeListProtocolBlockConfigResponse DescribeListProtocolBlockConfig(Models\DescribeListProtocolBlockConfigRequest $req) This API is used to get a list of Anti-DDoS protocol blocking configurations.
  * @method Models\DescribeListSchedulingDomainResponse DescribeListSchedulingDomain(Models\DescribeListSchedulingDomainRequest $req) This API is used to get a list of intelligent scheduling domain names.
  * @method Models\DescribeListWaterPrintConfigResponse DescribeListWaterPrintConfig(Models\DescribeListWaterPrintConfigRequest $req) This API is used to get a list of Anti-DDoS watermark configurations.
