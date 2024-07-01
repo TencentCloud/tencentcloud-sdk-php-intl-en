@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Information of tag bound to API.
  *
- * @method string getKey() Obtain Tag key.
- * @method void setKey(string $Key) Set Tag key.
- * @method string getValue() Obtain Tag value.
- * @method void setValue(string $Value) Set Tag value.
+ * @method string getKey() Obtain Tag key
+ * @method void setKey(string $Key) Set Tag key
+ * @method string getValue() Obtain Tag value
+ * @method void setValue(string $Value) Set Tag value
  */
 class Tag extends AbstractModel
 {
     /**
-     * @var string Tag key.
+     * @var string Tag key
      */
     public $Key;
 
     /**
-     * @var string Tag value.
+     * @var string Tag value
      */
     public $Value;
 
     /**
-     * @param string $Key Tag key.
-     * @param string $Value Tag value.
+     * @param string $Key Tag key
+     * @param string $Value Tag value
      */
     function __construct()
     {

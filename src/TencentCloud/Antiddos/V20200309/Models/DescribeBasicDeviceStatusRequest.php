@@ -22,6 +22,12 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getIpList() Obtain List of IP resources
  * @method void setIpList(array $IpList) Set List of IP resources
+ * @method array getIdList() Obtain 
+ * @method void setIdList(array $IdList) Set 
+ * @method integer getFilterRegion() Obtain 
+ * @method void setFilterRegion(integer $FilterRegion) Set 
+ * @method array getCnameWafIdList() Obtain 
+ * @method void setCnameWafIdList(array $CnameWafIdList) Set 
  */
 class DescribeBasicDeviceStatusRequest extends AbstractModel
 {
@@ -31,7 +37,25 @@ class DescribeBasicDeviceStatusRequest extends AbstractModel
     public $IpList;
 
     /**
+     * @var array 
+     */
+    public $IdList;
+
+    /**
+     * @var integer 
+     */
+    public $FilterRegion;
+
+    /**
+     * @var array 
+     */
+    public $CnameWafIdList;
+
+    /**
      * @param array $IpList List of IP resources
+     * @param array $IdList 
+     * @param integer $FilterRegion 
+     * @param array $CnameWafIdList 
      */
     function __construct()
     {
@@ -48,6 +72,18 @@ class DescribeBasicDeviceStatusRequest extends AbstractModel
         }
         if (array_key_exists("IpList",$param) and $param["IpList"] !== null) {
             $this->IpList = $param["IpList"];
+        }
+
+        if (array_key_exists("IdList",$param) and $param["IdList"] !== null) {
+            $this->IdList = $param["IdList"];
+        }
+
+        if (array_key_exists("FilterRegion",$param) and $param["FilterRegion"] !== null) {
+            $this->FilterRegion = $param["FilterRegion"];
+        }
+
+        if (array_key_exists("CnameWafIdList",$param) and $param["CnameWafIdList"] !== null) {
+            $this->CnameWafIdList = $param["CnameWafIdList"];
         }
     }
 }
