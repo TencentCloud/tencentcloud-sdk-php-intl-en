@@ -70,8 +70,8 @@ Example: HKIDCard
  * @method void setIdCardCutReturn(boolean $IdCardCutReturn) Set The default value is false. If it is false, the original ID image will be displayed. If it is true, the cut ID image will be displayed.
  * @method string getThemeColor() Obtain Front-end theme color, in the format of RGB hexadecimal color code. The default value is "#2d72+1". If the format is incorrect, the default value color will be used.
  * @method void setThemeColor(string $ThemeColor) Set Front-end theme color, in the format of RGB hexadecimal color code. The default value is "#2d72+1". If the format is incorrect, the default value color will be used.
- * @method string getLanguage() Obtain International language, the default value is en (English). Currently supported: th: Thai; en: English;
- * @method void setLanguage(string $Language) Set International language, the default value is en (English). Currently supported: th: Thai; en: English;
+ * @method string getLanguage() Obtain International language, the default value is en (English). Currently supported: th: Thai; en: English; zh-cn: Simplified Chinese; zh-tc: Tradionnal Chinese; id: Bahasa Indonesia.
+ * @method void setLanguage(string $Language) Set International language, the default value is en (English). Currently supported: th: Thai; en: English; zh-cn: Simplified Chinese; zh-tc: Tradionnal Chinese; id: Bahasa Indonesia.
  * @method integer getAutoDowngrade() Obtain Automatic downgrade mode, with the following parameter values: 1: Downgrade to silent live mode; 2: Disable downgrade mode. The default value is 1.
  * @method void setAutoDowngrade(integer $AutoDowngrade) Set Automatic downgrade mode, with the following parameter values: 1: Downgrade to silent live mode; 2: Disable downgrade mode. The default value is 1.
  */
@@ -139,7 +139,7 @@ Example: HKIDCard
     public $ThemeColor;
 
     /**
-     * @var string International language, the default value is en (English). Currently supported: th: Thai; en: English;
+     * @var string International language, the default value is en (English). Currently supported: th: Thai; en: English; zh-cn: Simplified Chinese; zh-tc: Tradionnal Chinese; id: Bahasa Indonesia.
      */
     public $Language;
 
@@ -174,7 +174,7 @@ Example: HKIDCard
      * @param boolean $SkipPrivacyPolicy Whether to skip the agreement page, the default is false. When SkipPrivacyPolicy is false, the agreement page will be displayed and the privacy agreement needs to be checked; when SkipPrivacyPolicy is true, the agreement page will be skipped and the liveness process will be entered directly without checking the privacy agreement page.
      * @param boolean $IdCardCutReturn The default value is false. If it is false, the original ID image will be displayed. If it is true, the cut ID image will be displayed.
      * @param string $ThemeColor Front-end theme color, in the format of RGB hexadecimal color code. The default value is "#2d72+1". If the format is incorrect, the default value color will be used.
-     * @param string $Language International language, the default value is en (English). Currently supported: th: Thai; en: English;
+     * @param string $Language International language, the default value is en (English). Currently supported: th: Thai; en: English; zh-cn: Simplified Chinese; zh-tc: Tradionnal Chinese; id: Bahasa Indonesia.
      * @param integer $AutoDowngrade Automatic downgrade mode, with the following parameter values: 1: Downgrade to silent live mode; 2: Disable downgrade mode. The default value is 1.
      */
     function __construct()
