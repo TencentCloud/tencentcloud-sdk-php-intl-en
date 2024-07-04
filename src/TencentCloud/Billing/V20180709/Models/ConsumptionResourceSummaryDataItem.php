@@ -102,6 +102,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
  * @method void setZoneName(string $ZoneName) Set Availability zone: availability zone of a resource, e.g. Guangzhou Zone 3Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getComponentConfig() Obtain Configuration descriptionNote: This field may return null, indicating that no valid values can be obtained.
  * @method void setComponentConfig(string $ComponentConfig) Set Configuration descriptionNote: This field may return null, indicating that no valid values can be obtained.
+ * @method string getTags() Obtain Tag information.Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setTags(string $Tags) Set Tag information.Note: This field may return null, indicating that no valid values can be obtained.
  */
 class ConsumptionResourceSummaryDataItem extends AbstractModel
 {
@@ -303,6 +305,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $ComponentConfig;
 
     /**
+     * @var string Tag information.Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $Tags;
+
+    /**
      * @param string $ResourceId Resource ID
      * @param string $ResourceName Resource name
      * @param string $RealTotalCost Discounted total price
@@ -344,6 +351,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $PayTime Deduction time: the time at which a payment is deductedNote: This field may return null, indicating that no valid values can be obtained.
      * @param string $ZoneName Availability zone: availability zone of a resource, e.g. Guangzhou Zone 3Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $ComponentConfig Configuration descriptionNote: This field may return null, indicating that no valid values can be obtained.
+     * @param string $Tags Tag information.Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -512,6 +520,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("ComponentConfig",$param) and $param["ComponentConfig"] !== null) {
             $this->ComponentConfig = $param["ComponentConfig"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = $param["Tags"];
         }
     }
 }
