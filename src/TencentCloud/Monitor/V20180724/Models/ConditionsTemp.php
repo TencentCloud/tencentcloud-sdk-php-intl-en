@@ -21,9 +21,9 @@ use TencentCloud\Common\AbstractModel;
  * Alarm trigger condition template
  *
  * @method string getTemplateName() Obtain Template name
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setTemplateName(string $TemplateName) Set Template name
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method AlarmPolicyCondition getCondition() Obtain Metric trigger condition
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setCondition(AlarmPolicyCondition $Condition) Set Metric trigger condition
@@ -37,7 +37,7 @@ class ConditionsTemp extends AbstractModel
 {
     /**
      * @var string Template name
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $TemplateName;
 
@@ -55,7 +55,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * @param string $TemplateName Template name
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param AlarmPolicyCondition $Condition Metric trigger condition
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param AlarmPolicyEventCondition $EventCondition Event trigger condition

@@ -104,9 +104,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setTaskNum(integer $TaskNum) Set Number of tasks running or ready to run under the current job
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getDataEngineStatus() Obtain Engine status. -100 (default value): unknown; -2–11: normal.
+ * @method integer getDataEngineStatus() Obtain Engine status. -100 (default value): unknown; -2-11: normal.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setDataEngineStatus(integer $DataEngineStatus) Set Engine status. -100 (default value): unknown; -2–11: normal.
+ * @method void setDataEngineStatus(integer $DataEngineStatus) Set Engine status. -100 (default value): unknown; -2-11: normal.
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method integer getJobExecutorMaxNumbers() Obtain The specified executor count (max), which defaults to 1. This parameter applies if the "Dynamic" mode is selected. If the "Dynamic" mode is not selected, the executor count is equal to `JobExecutorNums`.
 Note: This field may return null, indicating that no valid values can be obtained.
@@ -133,9 +133,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
  * @method void setIsInherit(integer $IsInherit) Set Whether the task resource configuration is inherited from the cluster template. Valid values: `0` (default): No; `1`: Yes.
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method boolean getIsSessionStarted() Obtain Whether the task runs with the session SQLs. Valid values: `false` for no and `true` for yes.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setIsSessionStarted(boolean $IsSessionStarted) Set Whether the task runs with the session SQLs. Valid values: `false` for no and `true` for yes.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getEngineTypeDetail() Obtain 
+ * @method void setEngineTypeDetail(string $EngineTypeDetail) Set 
  */
 class SparkJobInfo extends AbstractModel
 {
@@ -314,7 +316,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $TaskNum;
 
     /**
-     * @var integer Engine status. -100 (default value): unknown; -2–11: normal.
+     * @var integer Engine status. -100 (default value): unknown; -2-11: normal.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $DataEngineStatus;
@@ -357,9 +359,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * @var boolean Whether the task runs with the session SQLs. Valid values: `false` for no and `true` for yes.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $IsSessionStarted;
+
+    /**
+     * @var string 
+     */
+    public $EngineTypeDetail;
 
     /**
      * @param string $JobId Spark job ID
@@ -404,7 +411,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $TaskNum Number of tasks running or ready to run under the current job
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $DataEngineStatus Engine status. -100 (default value): unknown; -2–11: normal.
+     * @param integer $DataEngineStatus Engine status. -100 (default value): unknown; -2-11: normal.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $JobExecutorMaxNumbers The specified executor count (max), which defaults to 1. This parameter applies if the "Dynamic" mode is selected. If the "Dynamic" mode is not selected, the executor count is equal to `JobExecutorNums`.
 Note: This field may return null, indicating that no valid values can be obtained.
@@ -419,7 +426,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param integer $IsInherit Whether the task resource configuration is inherited from the cluster template. Valid values: `0` (default): No; `1`: Yes.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param boolean $IsSessionStarted Whether the task runs with the session SQLs. Valid values: `false` for no and `true` for yes.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $EngineTypeDetail 
      */
     function __construct()
     {
@@ -597,6 +605,10 @@ Note: u200dThis field may returnu200d·nullu200d, indicating that no valid value
 
         if (array_key_exists("IsSessionStarted",$param) and $param["IsSessionStarted"] !== null) {
             $this->IsSessionStarted = $param["IsSessionStarted"];
+        }
+
+        if (array_key_exists("EngineTypeDetail",$param) and $param["EngineTypeDetail"] !== null) {
+            $this->EngineTypeDetail = $param["EngineTypeDetail"];
         }
     }
 }

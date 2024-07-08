@@ -33,21 +33,21 @@ use TencentCloud\Common\AbstractModel;
  * @method string getDesc() Obtain The role description.
  * @method void setDesc(string $Desc) Set The role description.
  * @method string getRoleName() Obtain The role name.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setRoleName(string $RoleName) Set The role name.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getCreator() Obtain The creator UIN.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setCreator(string $Creator) Set The creator UIN.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method array getCosPermissionList() Obtain The COS permission list.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setCosPermissionList(array $CosPermissionList) Set The COS permission list.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getPermissionJson() Obtain The CAM policy in JSON.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setPermissionJson(string $PermissionJson) Set The CAM policy in JSON.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class UserRole extends AbstractModel
 {
@@ -83,25 +83,25 @@ class UserRole extends AbstractModel
 
     /**
      * @var string The role name.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $RoleName;
 
     /**
      * @var string The creator UIN.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Creator;
 
     /**
      * @var array The COS permission list.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $CosPermissionList;
 
     /**
      * @var string The CAM policy in JSON.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $PermissionJson;
 
@@ -113,13 +113,13 @@ Note: u200dThis field may returnu200d·nullu200d, indicating that no valid value
      * @param integer $ModifyTime The last modified timestamp.
      * @param string $Desc The role description.
      * @param string $RoleName The role name.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $Creator The creator UIN.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param array $CosPermissionList The COS permission list.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $PermissionJson The CAM policy in JSON.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

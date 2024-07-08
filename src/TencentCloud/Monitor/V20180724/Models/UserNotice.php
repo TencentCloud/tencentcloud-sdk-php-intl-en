@@ -18,19 +18,19 @@ namespace TencentCloud\Monitor\V20180724\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Alarm notification template – user notification details
+ * Alarm notification template - user notification details
  *
  * @method string getReceiverType() Obtain Recipient type. Valid values: USER (user), GROUP (user group)
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setReceiverType(string $ReceiverType) Set Recipient type. Valid values: USER (user), GROUP (user group)
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method integer getStartTime() Obtain Notification start time, which is expressed by the number of seconds since 00:00:00. Value range: 0–86399
+ * @method integer getStartTime() Obtain Notification start time, which is expressed by the number of seconds since 00:00:00. Value range: 0-86399
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setStartTime(integer $StartTime) Set Notification start time, which is expressed by the number of seconds since 00:00:00. Value range: 0–86399
+ * @method void setStartTime(integer $StartTime) Set Notification start time, which is expressed by the number of seconds since 00:00:00. Value range: 0-86399
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method integer getEndTime() Obtain Notification end time, which is expressed by the number of seconds since 00:00:00. Value range: 0–86399
+ * @method integer getEndTime() Obtain Notification end time, which is expressed by the number of seconds since 00:00:00. Value range: 0-86399
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setEndTime(integer $EndTime) Set Notification end time, which is expressed by the number of seconds since 00:00:00. Value range: 0–86399
+ * @method void setEndTime(integer $EndTime) Set Notification end time, which is expressed by the number of seconds since 00:00:00. Value range: 0-86399
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method array getNoticeWay() Obtain Notification channel list. Valid values: `EMAIL` (email), `SMS` (SMS), `CALL` (phone), `WECHAT` (WeChat), `RTX` (WeCom)
 Note: This field may return `null`, indicating that no valid values can be obtained.
@@ -48,17 +48,17 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setPhoneOrder(array $PhoneOrder) Set Phone polling list
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method integer getPhoneCircleTimes() Obtain Number of phone pollings. Value range: 1–5
+ * @method integer getPhoneCircleTimes() Obtain Number of phone pollings. Value range: 1-5
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setPhoneCircleTimes(integer $PhoneCircleTimes) Set Number of phone pollings. Value range: 1–5
+ * @method void setPhoneCircleTimes(integer $PhoneCircleTimes) Set Number of phone pollings. Value range: 1-5
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method integer getPhoneInnerInterval() Obtain Call interval in seconds within one polling. Value range: 60–900
+ * @method integer getPhoneInnerInterval() Obtain Call interval in seconds within one polling. Value range: 60-900
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setPhoneInnerInterval(integer $PhoneInnerInterval) Set Call interval in seconds within one polling. Value range: 60–900
+ * @method void setPhoneInnerInterval(integer $PhoneInnerInterval) Set Call interval in seconds within one polling. Value range: 60-900
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method integer getPhoneCircleInterval() Obtain Polling interval in seconds. Value range: 60–900
+ * @method integer getPhoneCircleInterval() Obtain Polling interval in seconds. Value range: 60-900
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setPhoneCircleInterval(integer $PhoneCircleInterval) Set Polling interval in seconds. Value range: 60–900
+ * @method void setPhoneCircleInterval(integer $PhoneCircleInterval) Set Polling interval in seconds. Value range: 60-900
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method integer getNeedPhoneArriveNotice() Obtain Whether receipt notification is required. Valid values: 0 (no), 1 (yes)
 Note: this field may return null, indicating that no valid values can be obtained.
@@ -73,9 +73,9 @@ Note: This field may return `null`, indicating that no valid values can be obtai
  * @method void setWeekday(array $Weekday) Set Notification cycle. The values 1-7 indicate Monday to Sunday.
 Note: This field may return `null`, indicating that no valid values can be obtained.
  * @method array getOnCallFormIDs() Obtain List of schedule IDs
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setOnCallFormIDs(array $OnCallFormIDs) Set List of schedule IDs
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class UserNotice extends AbstractModel
 {
@@ -86,13 +86,13 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $ReceiverType;
 
     /**
-     * @var integer Notification start time, which is expressed by the number of seconds since 00:00:00. Value range: 0–86399
+     * @var integer Notification start time, which is expressed by the number of seconds since 00:00:00. Value range: 0-86399
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $StartTime;
 
     /**
-     * @var integer Notification end time, which is expressed by the number of seconds since 00:00:00. Value range: 0–86399
+     * @var integer Notification end time, which is expressed by the number of seconds since 00:00:00. Value range: 0-86399
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $EndTime;
@@ -122,19 +122,19 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $PhoneOrder;
 
     /**
-     * @var integer Number of phone pollings. Value range: 1–5
+     * @var integer Number of phone pollings. Value range: 1-5
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $PhoneCircleTimes;
 
     /**
-     * @var integer Call interval in seconds within one polling. Value range: 60–900
+     * @var integer Call interval in seconds within one polling. Value range: 60-900
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $PhoneInnerInterval;
 
     /**
-     * @var integer Polling interval in seconds. Value range: 60–900
+     * @var integer Polling interval in seconds. Value range: 60-900
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $PhoneCircleInterval;
@@ -159,16 +159,16 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 
     /**
      * @var array List of schedule IDs
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $OnCallFormIDs;
 
     /**
      * @param string $ReceiverType Recipient type. Valid values: USER (user), GROUP (user group)
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param integer $StartTime Notification start time, which is expressed by the number of seconds since 00:00:00. Value range: 0–86399
+     * @param integer $StartTime Notification start time, which is expressed by the number of seconds since 00:00:00. Value range: 0-86399
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param integer $EndTime Notification end time, which is expressed by the number of seconds since 00:00:00. Value range: 0–86399
+     * @param integer $EndTime Notification end time, which is expressed by the number of seconds since 00:00:00. Value range: 0-86399
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param array $NoticeWay Notification channel list. Valid values: `EMAIL` (email), `SMS` (SMS), `CALL` (phone), `WECHAT` (WeChat), `RTX` (WeCom)
 Note: This field may return `null`, indicating that no valid values can be obtained.
@@ -178,11 +178,11 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param array $PhoneOrder Phone polling list
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param integer $PhoneCircleTimes Number of phone pollings. Value range: 1–5
+     * @param integer $PhoneCircleTimes Number of phone pollings. Value range: 1-5
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param integer $PhoneInnerInterval Call interval in seconds within one polling. Value range: 60–900
+     * @param integer $PhoneInnerInterval Call interval in seconds within one polling. Value range: 60-900
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param integer $PhoneCircleInterval Polling interval in seconds. Value range: 60–900
+     * @param integer $PhoneCircleInterval Polling interval in seconds. Value range: 60-900
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param integer $NeedPhoneArriveNotice Whether receipt notification is required. Valid values: 0 (no), 1 (yes)
 Note: this field may return null, indicating that no valid values can be obtained.
@@ -191,7 +191,7 @@ Note: This field may return `null`, indicating that no valid values can be obtai
      * @param array $Weekday Notification cycle. The values 1-7 indicate Monday to Sunday.
 Note: This field may return `null`, indicating that no valid values can be obtained.
      * @param array $OnCallFormIDs List of schedule IDs
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

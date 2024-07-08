@@ -18,16 +18,16 @@ namespace TencentCloud\Sqlserver\V20180328\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * TDE u200dconfiguration
+ * TDE configuration
  *
  * @method string getEncryption() Obtain TDE status. Valid values: `enable` (enabled), `disable` (disabled).
  * @method void setEncryption(string $Encryption) Set TDE status. Valid values: `enable` (enabled), `disable` (disabled).
- * @method string getCertificateAttribution() Obtain Certificate u200downership. Valid values: `self` (u200dcertificate of the this account), `others` (u200dcertificate of the other account), `none` (no certificate).
- * @method void setCertificateAttribution(string $CertificateAttribution) Set Certificate u200downership. Valid values: `self` (u200dcertificate of the this account), `others` (u200dcertificate of the other account), `none` (no certificate).
- * @method string getQuoteUin() Obtain ID of the u200dother referenced root account when enabling TDE
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
- * @method void setQuoteUin(string $QuoteUin) Set ID of the u200dother referenced root account when enabling TDE
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+ * @method string getCertificateAttribution() Obtain Certificate ownership. Valid values: `self` (certificate of the this account), `others` (certificate of the other account), `none` (no certificate).
+ * @method void setCertificateAttribution(string $CertificateAttribution) Set Certificate ownership. Valid values: `self` (certificate of the this account), `others` (certificate of the other account), `none` (no certificate).
+ * @method string getQuoteUin() Obtain ID of the other referenced root account when enabling TDE
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setQuoteUin(string $QuoteUin) Set ID of the other referenced root account when enabling TDE
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class TDEConfigAttribute extends AbstractModel
 {
@@ -37,21 +37,21 @@ class TDEConfigAttribute extends AbstractModel
     public $Encryption;
 
     /**
-     * @var string Certificate u200downership. Valid values: `self` (u200dcertificate of the this account), `others` (u200dcertificate of the other account), `none` (no certificate).
+     * @var string Certificate ownership. Valid values: `self` (certificate of the this account), `others` (certificate of the other account), `none` (no certificate).
      */
     public $CertificateAttribution;
 
     /**
-     * @var string ID of the u200dother referenced root account when enabling TDE
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+     * @var string ID of the other referenced root account when enabling TDE
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $QuoteUin;
 
     /**
      * @param string $Encryption TDE status. Valid values: `enable` (enabled), `disable` (disabled).
-     * @param string $CertificateAttribution Certificate u200downership. Valid values: `self` (u200dcertificate of the this account), `others` (u200dcertificate of the other account), `none` (no certificate).
-     * @param string $QuoteUin ID of the u200dother referenced root account when enabling TDE
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+     * @param string $CertificateAttribution Certificate ownership. Valid values: `self` (certificate of the this account), `others` (certificate of the other account), `none` (no certificate).
+     * @param string $QuoteUin ID of the other referenced root account when enabling TDE
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

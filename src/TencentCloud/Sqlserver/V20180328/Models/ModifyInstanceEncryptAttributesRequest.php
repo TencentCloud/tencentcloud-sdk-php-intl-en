@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() Obtain Instance ID
  * @method void setInstanceId(string $InstanceId) Set Instance ID
- * @method string getCertificateAttribution() Obtain Certificate u200downership. Valid values: `self` (certificate of this account), `others` (certificate of the other account). Default value: `self`.
- * @method void setCertificateAttribution(string $CertificateAttribution) Set Certificate u200downership. Valid values: `self` (certificate of this account), `others` (certificate of the other account). Default value: `self`.
+ * @method string getCertificateAttribution() Obtain Certificate ownership. Valid values: `self` (certificate of this account), `others` (certificate of the other account). Default value: `self`.
+ * @method void setCertificateAttribution(string $CertificateAttribution) Set Certificate ownership. Valid values: `self` (certificate of this account), `others` (certificate of the other account). Default value: `self`.
  * @method string getQuoteUin() Obtain ID of the other referenced root account, which is required when `CertificateAttribution` is `others`.
  * @method void setQuoteUin(string $QuoteUin) Set ID of the other referenced root account, which is required when `CertificateAttribution` is `others`.
  */
@@ -35,7 +35,7 @@ class ModifyInstanceEncryptAttributesRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var string Certificate u200downership. Valid values: `self` (certificate of this account), `others` (certificate of the other account). Default value: `self`.
+     * @var string Certificate ownership. Valid values: `self` (certificate of this account), `others` (certificate of the other account). Default value: `self`.
      */
     public $CertificateAttribution;
 
@@ -46,7 +46,7 @@ class ModifyInstanceEncryptAttributesRequest extends AbstractModel
 
     /**
      * @param string $InstanceId Instance ID
-     * @param string $CertificateAttribution Certificate u200downership. Valid values: `self` (certificate of this account), `others` (certificate of the other account). Default value: `self`.
+     * @param string $CertificateAttribution Certificate ownership. Valid values: `self` (certificate of this account), `others` (certificate of the other account). Default value: `self`.
      * @param string $QuoteUin ID of the other referenced root account, which is required when `CertificateAttribution` is `others`.
      */
     function __construct()

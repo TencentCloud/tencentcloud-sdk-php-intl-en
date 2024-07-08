@@ -246,6 +246,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
 -9107 Alarm for reflective certificate,
 -9108 Alarm for blurry image,
 -9109 This capability is not enabled.
+ * @method array getEditDetails() Obtain Details of the OCR modifications for this EKYC card, when the user manually modifies the card recognition results (IsEdit=true), EditDetails will return the modified fields. When IsEdit=false, EditDetails is empty.
+ * @method void setEditDetails(array $EditDetails) Set Details of the OCR modifications for this EKYC card, when the user manually modifies the card recognition results (IsEdit=true), EditDetails will return the modified fields. When IsEdit=false, EditDetails is empty.
  */
 class CardVerifyResult extends AbstractModel
 {
@@ -400,6 +402,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $WarnCardInfos;
 
     /**
+     * @var array Details of the OCR modifications for this EKYC card, when the user manually modifies the card recognition results (IsEdit=true), EditDetails will return the modified fields. When IsEdit=false, EditDetails is empty.
+     */
+    public $EditDetails;
+
+    /**
      * @param boolean $IsPass Whether the authentication or OCR process is successful.
      * @param boolean $IsEdit Whether the user modified the card recognition result
      * @param FileInfo $CardVideo The download URL of the video used for identity document verification, which is valid for 10 minutes. This parameter is returned only if video-based identity document verification is enabled.
@@ -513,6 +520,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 -9107 Alarm for reflective certificate,
 -9108 Alarm for blurry image,
 -9109 This capability is not enabled.
+     * @param array $EditDetails Details of the OCR modifications for this EKYC card, when the user manually modifies the card recognition results (IsEdit=true), EditDetails will return the modified fields. When IsEdit=false, EditDetails is empty.
      */
     function __construct()
     {
@@ -566,6 +574,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("WarnCardInfos",$param) and $param["WarnCardInfos"] !== null) {
             $this->WarnCardInfos = $param["WarnCardInfos"];
+        }
+
+        if (array_key_exists("EditDetails",$param) and $param["EditDetails"] !== null) {
+            $this->EditDetails = [];
+            foreach ($param["EditDetails"] as $key => $value){
+                $obj = new EditDetail();
+                $obj->deserialize($value);
+                array_push($this->EditDetails, $obj);
+            }
         }
     }
 }

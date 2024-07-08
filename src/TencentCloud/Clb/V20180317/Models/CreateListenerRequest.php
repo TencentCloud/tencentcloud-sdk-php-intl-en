@@ -34,9 +34,9 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCertificate(CertificateInput $Certificate) Set Certificate information. This parameter is only applicable to TCP_SSL listeners and HTTPS listeners with the SNI feature not enabled. `Certificate` and `MultiCertInfo` cannot be specified at the same time. 
  * @method integer getSessionExpireTime() Obtain Session persistence time in seconds. Value range: 30-3,600. The default value is 0, indicating that session persistence is not enabled. This parameter is applicable only to TCP/UDP listeners.
  * @method void setSessionExpireTime(integer $SessionExpireTime) Set Session persistence time in seconds. Value range: 30-3,600. The default value is 0, indicating that session persistence is not enabled. This parameter is applicable only to TCP/UDP listeners.
- * @method string getScheduler() Obtain Listener forwarding mode. u200dValues: `WRR` (weighted round robin) and `LEAST_CONN` (least connections). 
+ * @method string getScheduler() Obtain Listener forwarding mode. Values: `WRR` (weighted round robin) and `LEAST_CONN` (least connections). 
 Default value: `WRR`. This parameter is only applicable to TCP, UDP, TCP_SSL and QUIC listeners.
- * @method void setScheduler(string $Scheduler) Set Listener forwarding mode. u200dValues: `WRR` (weighted round robin) and `LEAST_CONN` (least connections). 
+ * @method void setScheduler(string $Scheduler) Set Listener forwarding mode. Values: `WRR` (weighted round robin) and `LEAST_CONN` (least connections). 
 Default value: `WRR`. This parameter is only applicable to TCP, UDP, TCP_SSL and QUIC listeners.
  * @method integer getSniSwitch() Obtain Whether to enable the SNI feature. This parameter is applicable only to HTTPS listeners
  * @method void setSniSwitch(integer $SniSwitch) Set Whether to enable the SNI feature. This parameter is applicable only to HTTPS listeners
@@ -52,12 +52,14 @@ Default value: `WRR`. This parameter is only applicable to TCP, UDP, TCP_SSL and
  * @method void setDeregisterTargetRst(boolean $DeregisterTargetRst) Set Whether to send the TCP RST packet to the client when unbinding a real server. This parameter is applicable to TCP listeners only.
  * @method MultiCertInfo getMultiCertInfo() Obtain Certificate information. You can specify multiple server-side certificates with different algorithm types. This parameter is only applicable to HTTPS listeners with the SNI feature not enabled. `Certificate` and `MultiCertInfo` cannot be specified at the same time. 
  * @method void setMultiCertInfo(MultiCertInfo $MultiCertInfo) Set Certificate information. You can specify multiple server-side certificates with different algorithm types. This parameter is only applicable to HTTPS listeners with the SNI feature not enabled. `Certificate` and `MultiCertInfo` cannot be specified at the same time. 
- * @method integer getMaxConn() Obtain Maximum number of concurrent listener connections. It’s available for TCP/UDP/TCP_SSL/QUIC listeners. If it’s set to `-1` or not specified, the listener speed is not limited. 
- * @method void setMaxConn(integer $MaxConn) Set Maximum number of concurrent listener connections. It’s available for TCP/UDP/TCP_SSL/QUIC listeners. If it’s set to `-1` or not specified, the listener speed is not limited. 
- * @method integer getMaxCps() Obtain Maximum number of new listener connections. It’s available for TCP/UDP/TCP_SSL/QUIC listeners. If it’s set to `-1` or not specified, the listener speed is not limited. 
- * @method void setMaxCps(integer $MaxCps) Set Maximum number of new listener connections. It’s available for TCP/UDP/TCP_SSL/QUIC listeners. If it’s set to `-1` or not specified, the listener speed is not limited. 
- * @method integer getIdleConnectTimeout() Obtain Connection idle timeout period (in seconds). It’s only available to TCP listeners. Value range: 300-900 for shared and dedicated instances; 300-2000 for LCU-supported CLB instances. It defaults to 900. To set a period longer than 2000 seconds (up to 3600 seconds), please submit a [submit](https://console.cloud.tencent.com/workorder/category). 
- * @method void setIdleConnectTimeout(integer $IdleConnectTimeout) Set Connection idle timeout period (in seconds). It’s only available to TCP listeners. Value range: 300-900 for shared and dedicated instances; 300-2000 for LCU-supported CLB instances. It defaults to 900. To set a period longer than 2000 seconds (up to 3600 seconds), please submit a [submit](https://console.cloud.tencent.com/workorder/category). 
+ * @method integer getMaxConn() Obtain Maximum number of concurrent listener connections. It's available for TCP/UDP/TCP_SSL/QUIC listeners. If it's set to `-1` or not specified, the listener speed is not limited. 
+ * @method void setMaxConn(integer $MaxConn) Set Maximum number of concurrent listener connections. It's available for TCP/UDP/TCP_SSL/QUIC listeners. If it's set to `-1` or not specified, the listener speed is not limited. 
+ * @method integer getMaxCps() Obtain Maximum number of new listener connections. It's available for TCP/UDP/TCP_SSL/QUIC listeners. If it's set to `-1` or not specified, the listener speed is not limited. 
+ * @method void setMaxCps(integer $MaxCps) Set Maximum number of new listener connections. It's available for TCP/UDP/TCP_SSL/QUIC listeners. If it's set to `-1` or not specified, the listener speed is not limited. 
+ * @method integer getIdleConnectTimeout() Obtain Connection idle timeout period (in seconds). It's only available to TCP listeners. Value range: 300-900 for shared and dedicated instances; 300-2000 for LCU-supported CLB instances. It defaults to 900. To set a period longer than 2000 seconds (up to 3600 seconds), please submit a [submit](https://console.cloud.tencent.com/workorder/category). 
+ * @method void setIdleConnectTimeout(integer $IdleConnectTimeout) Set Connection idle timeout period (in seconds). It's only available to TCP listeners. Value range: 300-900 for shared and dedicated instances; 300-2000 for LCU-supported CLB instances. It defaults to 900. To set a period longer than 2000 seconds (up to 3600 seconds), please submit a [submit](https://console.cloud.tencent.com/workorder/category). 
+ * @method boolean getSnatEnable() Obtain 
+ * @method void setSnatEnable(boolean $SnatEnable) Set 
  */
 class CreateListenerRequest extends AbstractModel
 {
@@ -97,7 +99,7 @@ class CreateListenerRequest extends AbstractModel
     public $SessionExpireTime;
 
     /**
-     * @var string Listener forwarding mode. u200dValues: `WRR` (weighted round robin) and `LEAST_CONN` (least connections). 
+     * @var string Listener forwarding mode. Values: `WRR` (weighted round robin) and `LEAST_CONN` (least connections). 
 Default value: `WRR`. This parameter is only applicable to TCP, UDP, TCP_SSL and QUIC listeners.
      */
     public $Scheduler;
@@ -138,19 +140,24 @@ Default value: `WRR`. This parameter is only applicable to TCP, UDP, TCP_SSL and
     public $MultiCertInfo;
 
     /**
-     * @var integer Maximum number of concurrent listener connections. It’s available for TCP/UDP/TCP_SSL/QUIC listeners. If it’s set to `-1` or not specified, the listener speed is not limited. 
+     * @var integer Maximum number of concurrent listener connections. It's available for TCP/UDP/TCP_SSL/QUIC listeners. If it's set to `-1` or not specified, the listener speed is not limited. 
      */
     public $MaxConn;
 
     /**
-     * @var integer Maximum number of new listener connections. It’s available for TCP/UDP/TCP_SSL/QUIC listeners. If it’s set to `-1` or not specified, the listener speed is not limited. 
+     * @var integer Maximum number of new listener connections. It's available for TCP/UDP/TCP_SSL/QUIC listeners. If it's set to `-1` or not specified, the listener speed is not limited. 
      */
     public $MaxCps;
 
     /**
-     * @var integer Connection idle timeout period (in seconds). It’s only available to TCP listeners. Value range: 300-900 for shared and dedicated instances; 300-2000 for LCU-supported CLB instances. It defaults to 900. To set a period longer than 2000 seconds (up to 3600 seconds), please submit a [submit](https://console.cloud.tencent.com/workorder/category). 
+     * @var integer Connection idle timeout period (in seconds). It's only available to TCP listeners. Value range: 300-900 for shared and dedicated instances; 300-2000 for LCU-supported CLB instances. It defaults to 900. To set a period longer than 2000 seconds (up to 3600 seconds), please submit a [submit](https://console.cloud.tencent.com/workorder/category). 
      */
     public $IdleConnectTimeout;
+
+    /**
+     * @var boolean 
+     */
+    public $SnatEnable;
 
     /**
      * @param string $LoadBalancerId CLB instance ID
@@ -160,7 +167,7 @@ Default value: `WRR`. This parameter is only applicable to TCP, UDP, TCP_SSL and
      * @param HealthCheck $HealthCheck Health check parameter. It is only applicable only to TCP, UDP, TCP_SSL and QUIC listeners.
      * @param CertificateInput $Certificate Certificate information. This parameter is only applicable to TCP_SSL listeners and HTTPS listeners with the SNI feature not enabled. `Certificate` and `MultiCertInfo` cannot be specified at the same time. 
      * @param integer $SessionExpireTime Session persistence time in seconds. Value range: 30-3,600. The default value is 0, indicating that session persistence is not enabled. This parameter is applicable only to TCP/UDP listeners.
-     * @param string $Scheduler Listener forwarding mode. u200dValues: `WRR` (weighted round robin) and `LEAST_CONN` (least connections). 
+     * @param string $Scheduler Listener forwarding mode. Values: `WRR` (weighted round robin) and `LEAST_CONN` (least connections). 
 Default value: `WRR`. This parameter is only applicable to TCP, UDP, TCP_SSL and QUIC listeners.
      * @param integer $SniSwitch Whether to enable the SNI feature. This parameter is applicable only to HTTPS listeners
      * @param string $TargetType Target real server type. `NODE`: binding a general node; `TARGETGROUP`: binding a target group.
@@ -169,9 +176,10 @@ Default value: `WRR`. This parameter is only applicable to TCP, UDP, TCP_SSL and
      * @param integer $EndPort This parameter is used to specify the end port and is required when creating a port range listener. Only one member can be passed in when inputting the `Ports` parameter, which is used to specify the start port. If you want to try the port range feature, please [submit a ticket](https://console.cloud.tencent.com/workorder/category).
      * @param boolean $DeregisterTargetRst Whether to send the TCP RST packet to the client when unbinding a real server. This parameter is applicable to TCP listeners only.
      * @param MultiCertInfo $MultiCertInfo Certificate information. You can specify multiple server-side certificates with different algorithm types. This parameter is only applicable to HTTPS listeners with the SNI feature not enabled. `Certificate` and `MultiCertInfo` cannot be specified at the same time. 
-     * @param integer $MaxConn Maximum number of concurrent listener connections. It’s available for TCP/UDP/TCP_SSL/QUIC listeners. If it’s set to `-1` or not specified, the listener speed is not limited. 
-     * @param integer $MaxCps Maximum number of new listener connections. It’s available for TCP/UDP/TCP_SSL/QUIC listeners. If it’s set to `-1` or not specified, the listener speed is not limited. 
-     * @param integer $IdleConnectTimeout Connection idle timeout period (in seconds). It’s only available to TCP listeners. Value range: 300-900 for shared and dedicated instances; 300-2000 for LCU-supported CLB instances. It defaults to 900. To set a period longer than 2000 seconds (up to 3600 seconds), please submit a [submit](https://console.cloud.tencent.com/workorder/category). 
+     * @param integer $MaxConn Maximum number of concurrent listener connections. It's available for TCP/UDP/TCP_SSL/QUIC listeners. If it's set to `-1` or not specified, the listener speed is not limited. 
+     * @param integer $MaxCps Maximum number of new listener connections. It's available for TCP/UDP/TCP_SSL/QUIC listeners. If it's set to `-1` or not specified, the listener speed is not limited. 
+     * @param integer $IdleConnectTimeout Connection idle timeout period (in seconds). It's only available to TCP listeners. Value range: 300-900 for shared and dedicated instances; 300-2000 for LCU-supported CLB instances. It defaults to 900. To set a period longer than 2000 seconds (up to 3600 seconds), please submit a [submit](https://console.cloud.tencent.com/workorder/category). 
+     * @param boolean $SnatEnable 
      */
     function __construct()
     {
@@ -259,6 +267,10 @@ Default value: `WRR`. This parameter is only applicable to TCP, UDP, TCP_SSL and
 
         if (array_key_exists("IdleConnectTimeout",$param) and $param["IdleConnectTimeout"] !== null) {
             $this->IdleConnectTimeout = $param["IdleConnectTimeout"];
+        }
+
+        if (array_key_exists("SnatEnable",$param) and $param["SnatEnable"] !== null) {
+            $this->SnatEnable = $param["SnatEnable"];
         }
     }
 }

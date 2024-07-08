@@ -84,7 +84,7 @@ Note: **If you use a sub-account, you can only query the alarm records of author
  * @method Models\DescribeBaseMetricsResponse DescribeBaseMetrics(Models\DescribeBaseMetricsRequest $req) This API is used to get the attributes of basic metrics.
  * @method Models\DescribeBasicAlarmListResponse DescribeBasicAlarmList(Models\DescribeBasicAlarmListRequest $req) This API is used to get the basic alarm list.
  * @method Models\DescribeBindingPolicyObjectListResponse DescribeBindingPolicyObjectList(Models\DescribeBindingPolicyObjectListRequest $req) This API is used to get the bound object list.
- * @method Models\DescribeClusterAgentCreatingProgressResponse DescribeClusterAgentCreatingProgress(Models\DescribeClusterAgentCreatingProgressRequest $req) This API is used to u200dobtain the binding status between the TencentCloud Managed Service for Prometheus instance and the TKE cluster.
+ * @method Models\DescribeClusterAgentCreatingProgressResponse DescribeClusterAgentCreatingProgress(Models\DescribeClusterAgentCreatingProgressRequest $req) This API is used to obtain the binding status between the TencentCloud Managed Service for Prometheus instance and the TKE cluster.
  * @method Models\DescribeConditionsTemplateListResponse DescribeConditionsTemplateList(Models\DescribeConditionsTemplateListRequest $req) This API is used to get the trigger condition template.
  * @method Models\DescribeDNSConfigResponse DescribeDNSConfig(Models\DescribeDNSConfigRequest $req) This API is used to list Grafana DNS configurations.
  * @method Models\DescribeExporterIntegrationsResponse DescribeExporterIntegrations(Models\DescribeExporterIntegrationsRequest $req) This API is used to query the list of exporter integrations.

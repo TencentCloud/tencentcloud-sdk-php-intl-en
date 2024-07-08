@@ -147,17 +147,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
  * @method void setExecutorMaxNumbers(integer $ExecutorMaxNumbers) Set The maximum executor count (in dynamic mode). The minimum value is 1 and the maximum value is less than the cluster specification. If you set `ExecutorMaxNumbers` to a value smaller than that of `ExecutorNums`, the value of `ExecutorMaxNumbers` is automatically changed to that of `ExecutorNums`.
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method CommonMetrics getCommonMetrics() Obtain Common task metrics
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setCommonMetrics(CommonMetrics $CommonMetrics) Set Common task metrics
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method SparkMonitorMetrics getSparkMonitorMetrics() Obtain The Spark task metrics.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setSparkMonitorMetrics(SparkMonitorMetrics $SparkMonitorMetrics) Set The Spark task metrics.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method PrestoMonitorMetrics getPrestoMonitorMetrics() Obtain The Presto task metrics.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setPrestoMonitorMetrics(PrestoMonitorMetrics $PrestoMonitorMetrics) Set The Presto task metrics.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getResultFormat() Obtain 
+ * @method void setResultFormat(string $ResultFormat) Set 
+ * @method string getEngineTypeDetail() Obtain 
+ * @method void setEngineTypeDetail(string $EngineTypeDetail) Set 
+ * @method string getResourceGroupName() Obtain 
+ * @method void setResourceGroupName(string $ResourceGroupName) Set 
  */
 class TaskResponseInfo extends AbstractModel
 {
@@ -374,21 +380,36 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * @var CommonMetrics Common task metrics
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $CommonMetrics;
 
     /**
      * @var SparkMonitorMetrics The Spark task metrics.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $SparkMonitorMetrics;
 
     /**
      * @var PrestoMonitorMetrics The Presto task metrics.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $PrestoMonitorMetrics;
+
+    /**
+     * @var string 
+     */
+    public $ResultFormat;
+
+    /**
+     * @var string 
+     */
+    public $EngineTypeDetail;
+
+    /**
+     * @var string 
+     */
+    public $ResourceGroupName;
 
     /**
      * @param string $DatabaseName Database name of the task
@@ -455,11 +476,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param integer $ExecutorMaxNumbers The maximum executor count (in dynamic mode). The minimum value is 1 and the maximum value is less than the cluster specification. If you set `ExecutorMaxNumbers` to a value smaller than that of `ExecutorNums`, the value of `ExecutorMaxNumbers` is automatically changed to that of `ExecutorNums`.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param CommonMetrics $CommonMetrics Common task metrics
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param SparkMonitorMetrics $SparkMonitorMetrics The Spark task metrics.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param PrestoMonitorMetrics $PrestoMonitorMetrics The Presto task metrics.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $ResultFormat 
+     * @param string $EngineTypeDetail 
+     * @param string $ResourceGroupName 
      */
     function __construct()
     {
@@ -635,6 +659,18 @@ Note: u200dThis field may returnu200d·nullu200d, indicating that no valid value
         if (array_key_exists("PrestoMonitorMetrics",$param) and $param["PrestoMonitorMetrics"] !== null) {
             $this->PrestoMonitorMetrics = new PrestoMonitorMetrics();
             $this->PrestoMonitorMetrics->deserialize($param["PrestoMonitorMetrics"]);
+        }
+
+        if (array_key_exists("ResultFormat",$param) and $param["ResultFormat"] !== null) {
+            $this->ResultFormat = $param["ResultFormat"];
+        }
+
+        if (array_key_exists("EngineTypeDetail",$param) and $param["EngineTypeDetail"] !== null) {
+            $this->EngineTypeDetail = $param["EngineTypeDetail"];
+        }
+
+        if (array_key_exists("ResourceGroupName",$param) and $param["ResourceGroupName"] !== null) {
+            $this->ResourceGroupName = $param["ResourceGroupName"];
         }
     }
 }

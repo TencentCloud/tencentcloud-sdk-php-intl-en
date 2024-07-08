@@ -18,28 +18,36 @@ namespace TencentCloud\Sqlserver\V20180328\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * This example shows you how to enable or disable TDE of a database.
+ * 
  *
- * @method string getDBName() Obtain 
- * @method void setDBName(string $DBName) Set 
- * @method string getEncryption() Obtain TDE status. Valid values: `enable` (enabled), `disable` (disabled).
- * @method void setEncryption(string $Encryption) Set TDE status. Valid values: `enable` (enabled), `disable` (disabled).
+ * @method string getEncryption() Obtain 
+ * @method void setEncryption(string $Encryption) Set 
+ * @method string getSSLValidityPeriod() Obtain 
+ * @method void setSSLValidityPeriod(string $SSLValidityPeriod) Set 
+ * @method integer getSSLValidity() Obtain 
+ * @method void setSSLValidity(integer $SSLValidity) Set 
  */
-class DBTDEEncrypt extends AbstractModel
+class SSLConfig extends AbstractModel
 {
     /**
      * @var string 
      */
-    public $DBName;
-
-    /**
-     * @var string TDE status. Valid values: `enable` (enabled), `disable` (disabled).
-     */
     public $Encryption;
 
     /**
-     * @param string $DBName 
-     * @param string $Encryption TDE status. Valid values: `enable` (enabled), `disable` (disabled).
+     * @var string 
+     */
+    public $SSLValidityPeriod;
+
+    /**
+     * @var integer 
+     */
+    public $SSLValidity;
+
+    /**
+     * @param string $Encryption 
+     * @param string $SSLValidityPeriod 
+     * @param integer $SSLValidity 
      */
     function __construct()
     {
@@ -54,12 +62,16 @@ class DBTDEEncrypt extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DBName",$param) and $param["DBName"] !== null) {
-            $this->DBName = $param["DBName"];
-        }
-
         if (array_key_exists("Encryption",$param) and $param["Encryption"] !== null) {
             $this->Encryption = $param["Encryption"];
+        }
+
+        if (array_key_exists("SSLValidityPeriod",$param) and $param["SSLValidityPeriod"] !== null) {
+            $this->SSLValidityPeriod = $param["SSLValidityPeriod"];
+        }
+
+        if (array_key_exists("SSLValidity",$param) and $param["SSLValidity"] !== null) {
+            $this->SSLValidity = $param["SSLValidity"];
         }
     }
 }

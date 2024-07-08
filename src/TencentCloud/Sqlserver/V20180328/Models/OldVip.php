@@ -18,28 +18,36 @@ namespace TencentCloud\Sqlserver\V20180328\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * This example shows you how to enable or disable TDE of a database.
+ * 
  *
- * @method string getDBName() Obtain 
- * @method void setDBName(string $DBName) Set 
- * @method string getEncryption() Obtain TDE status. Valid values: `enable` (enabled), `disable` (disabled).
- * @method void setEncryption(string $Encryption) Set TDE status. Valid values: `enable` (enabled), `disable` (disabled).
+ * @method string getVip() Obtain 
+ * @method void setVip(string $Vip) Set 
+ * @method string getRecycleTime() Obtain 
+ * @method void setRecycleTime(string $RecycleTime) Set 
+ * @method integer getOldIpRetainTime() Obtain 
+ * @method void setOldIpRetainTime(integer $OldIpRetainTime) Set 
  */
-class DBTDEEncrypt extends AbstractModel
+class OldVip extends AbstractModel
 {
     /**
      * @var string 
      */
-    public $DBName;
+    public $Vip;
 
     /**
-     * @var string TDE status. Valid values: `enable` (enabled), `disable` (disabled).
+     * @var string 
      */
-    public $Encryption;
+    public $RecycleTime;
 
     /**
-     * @param string $DBName 
-     * @param string $Encryption TDE status. Valid values: `enable` (enabled), `disable` (disabled).
+     * @var integer 
+     */
+    public $OldIpRetainTime;
+
+    /**
+     * @param string $Vip 
+     * @param string $RecycleTime 
+     * @param integer $OldIpRetainTime 
      */
     function __construct()
     {
@@ -54,12 +62,16 @@ class DBTDEEncrypt extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DBName",$param) and $param["DBName"] !== null) {
-            $this->DBName = $param["DBName"];
+        if (array_key_exists("Vip",$param) and $param["Vip"] !== null) {
+            $this->Vip = $param["Vip"];
         }
 
-        if (array_key_exists("Encryption",$param) and $param["Encryption"] !== null) {
-            $this->Encryption = $param["Encryption"];
+        if (array_key_exists("RecycleTime",$param) and $param["RecycleTime"] !== null) {
+            $this->RecycleTime = $param["RecycleTime"];
+        }
+
+        if (array_key_exists("OldIpRetainTime",$param) and $param["OldIpRetainTime"] !== null) {
+            $this->OldIpRetainTime = $param["OldIpRetainTime"];
         }
     }
 }

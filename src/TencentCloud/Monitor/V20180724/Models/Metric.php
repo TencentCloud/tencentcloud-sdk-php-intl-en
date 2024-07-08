@@ -51,13 +51,15 @@ Note: This field may return `null`, indicating that no valid values can be obtai
  * @method void setProductId(integer $ProductId) Set Integration center product ID.
 Note: This field may return `null`, indicating that no valid values can be obtained.
  * @method array getOperators() Obtain Matching operator
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setOperators(array $Operators) Set Matching operator
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method array getPeriods() Obtain Metric monitoring granularity
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setPeriods(array $Periods) Set Metric monitoring granularity
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getIsLatenessMetric() Obtain 
+ * @method void setIsLatenessMetric(integer $IsLatenessMetric) Set 
  */
 class Metric extends AbstractModel
 {
@@ -122,15 +124,20 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 
     /**
      * @var array Matching operator
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Operators;
 
     /**
      * @var array Metric monitoring granularity
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Periods;
+
+    /**
+     * @var integer 
+     */
+    public $IsLatenessMetric;
 
     /**
      * @param string $Namespace Alarm policy type
@@ -149,9 +156,10 @@ Note: This field may return `null`, indicating that no valid values can be obtai
      * @param integer $ProductId Integration center product ID.
 Note: This field may return `null`, indicating that no valid values can be obtained.
      * @param array $Operators Matching operator
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param array $Periods Metric monitoring granularity
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $IsLatenessMetric 
      */
     function __construct()
     {
@@ -222,6 +230,10 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
 
         if (array_key_exists("Periods",$param) and $param["Periods"] !== null) {
             $this->Periods = $param["Periods"];
+        }
+
+        if (array_key_exists("IsLatenessMetric",$param) and $param["IsLatenessMetric"] !== null) {
+            $this->IsLatenessMetric = $param["IsLatenessMetric"];
         }
     }
 }

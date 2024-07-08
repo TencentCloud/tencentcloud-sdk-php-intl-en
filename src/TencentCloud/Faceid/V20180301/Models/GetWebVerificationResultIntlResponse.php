@@ -22,26 +22,26 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getErrorCode() Obtain The final result of this verification. `0` indicates that the person is the same as that in the photo.
 For other error codes, see <a href="https://www.tencentcloud.com/document/product/1061/55390?lang=en&pg=#8a960e1e-39c0-42cb-b181-b3164d77f81e">Liveness Detection and Face Comparison (Mobile HTML5) Error Codes</a>
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setErrorCode(integer $ErrorCode) Set The final result of this verification. `0` indicates that the person is the same as that in the photo.
 For other error codes, see <a href="https://www.tencentcloud.com/document/product/1061/55390?lang=en&pg=#8a960e1e-39c0-42cb-b181-b3164d77f81e">Liveness Detection and Face Comparison (Mobile HTML5) Error Codes</a>
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getErrorMsg() Obtain The description of the final verification result.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setErrorMsg(string $ErrorMsg) Set The description of the final verification result.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method array getVerificationDetailList() Obtain The detailed verification result list of this process. Retries are allowed, so a verification process may have several entries of results.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setVerificationDetailList(array $VerificationDetailList) Set The detailed verification result list of this process. Retries are allowed, so a verification process may have several entries of results.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getVideoBase64() Obtain The Base64-encoded string of the video collected from the video stream. Retries are allowed, and this field returns only the data collected in the last verification. If no video is collected, null is returned.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setVideoBase64(string $VideoBase64) Set The Base64-encoded string of the video collected from the video stream. Retries are allowed, and this field returns only the data collected in the last verification. If no video is collected, null is returned.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
- * @method string getBestFrameBase64() Obtain The Base64-encoded string of the best face screenshot u200dcollected from the video stream. Retries are allowed, and this field returns only the data collected in the last verification. If no best face screenshot is collected, null is returned.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
- * @method void setBestFrameBase64(string $BestFrameBase64) Set The Base64-encoded string of the best face screenshot u200dcollected from the video stream. Retries are allowed, and this field returns only the data collected in the last verification. If no best face screenshot is collected, null is returned.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getBestFrameBase64() Obtain The Base64-encoded string of the best face screenshot collected from the video stream. Retries are allowed, and this field returns only the data collected in the last verification. If no best face screenshot is collected, null is returned.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setBestFrameBase64(string $BestFrameBase64) Set The Base64-encoded string of the best face screenshot collected from the video stream. Retries are allowed, and this field returns only the data collected in the last verification. If no best face screenshot is collected, null is returned.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method array getOCRResult() Obtain Card recognize result.
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setOCRResult(array $OCRResult) Set Card recognize result.
@@ -56,31 +56,31 @@ class GetWebVerificationResultIntlResponse extends AbstractModel
     /**
      * @var integer The final result of this verification. `0` indicates that the person is the same as that in the photo.
 For other error codes, see <a href="https://www.tencentcloud.com/document/product/1061/55390?lang=en&pg=#8a960e1e-39c0-42cb-b181-b3164d77f81e">Liveness Detection and Face Comparison (Mobile HTML5) Error Codes</a>
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ErrorCode;
 
     /**
      * @var string The description of the final verification result.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ErrorMsg;
 
     /**
      * @var array The detailed verification result list of this process. Retries are allowed, so a verification process may have several entries of results.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $VerificationDetailList;
 
     /**
      * @var string The Base64-encoded string of the video collected from the video stream. Retries are allowed, and this field returns only the data collected in the last verification. If no video is collected, null is returned.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $VideoBase64;
 
     /**
-     * @var string The Base64-encoded string of the best face screenshot u200dcollected from the video stream. Retries are allowed, and this field returns only the data collected in the last verification. If no best face screenshot is collected, null is returned.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+     * @var string The Base64-encoded string of the best face screenshot collected from the video stream. Retries are allowed, and this field returns only the data collected in the last verification. If no best face screenshot is collected, null is returned.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $BestFrameBase64;
 
@@ -103,15 +103,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
     /**
      * @param integer $ErrorCode The final result of this verification. `0` indicates that the person is the same as that in the photo.
 For other error codes, see <a href="https://www.tencentcloud.com/document/product/1061/55390?lang=en&pg=#8a960e1e-39c0-42cb-b181-b3164d77f81e">Liveness Detection and Face Comparison (Mobile HTML5) Error Codes</a>
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $ErrorMsg The description of the final verification result.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param array $VerificationDetailList The detailed verification result list of this process. Retries are allowed, so a verification process may have several entries of results.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $VideoBase64 The Base64-encoded string of the video collected from the video stream. Retries are allowed, and this field returns only the data collected in the last verification. If no video is collected, null is returned.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
-     * @param string $BestFrameBase64 The Base64-encoded string of the best face screenshot u200dcollected from the video stream. Retries are allowed, and this field returns only the data collected in the last verification. If no best face screenshot is collected, null is returned.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $BestFrameBase64 The Base64-encoded string of the best face screenshot collected from the video stream. Retries are allowed, and this field returns only the data collected in the last verification. If no best face screenshot is collected, null is returned.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param array $OCRResult Card recognize result.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $Extra The passthrough parameter of the business, max 1,000 characters, which will be returned in GetWebVerificationResultIntl.

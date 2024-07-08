@@ -21,33 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * COS permissions
  *
  * @method string getCosPath() Obtain The COS path.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setCosPath(string $CosPath) Set The COS path.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method array getPermissions() Obtain The permissions. Valid values: `read` and `write`.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setPermissions(array $Permissions) Set The permissions. Valid values: `read` and `write`.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class CosPermission extends AbstractModel
 {
     /**
      * @var string The COS path.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $CosPath;
 
     /**
      * @var array The permissions. Valid values: `read` and `write`.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Permissions;
 
     /**
      * @param string $CosPath The COS path.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param array $Permissions The permissions. Valid values: `read` and `write`.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
