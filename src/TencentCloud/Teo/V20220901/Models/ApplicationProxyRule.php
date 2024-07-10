@@ -73,9 +73,9 @@ Note that each rule can have up to 20 ports.
 <li>`true`: Enable</li>
 <li>`false`: Disable</li>Default value: false
  * @method integer getSessionPersistTime() Obtain Duration for the persistent session. The value takes effect only when `SessionPersist = true`.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setSessionPersistTime(integer $SessionPersistTime) Set Duration for the persistent session. The value takes effect only when `SessionPersist = true`.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getOriginPort() Obtain The origin port, which can be:
 <li>A single port, such as 80</li>
 <li>A port range, such as 81-82</li>
@@ -83,9 +83,9 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
 <li>A single port, such as 80</li>
 <li>A port range, such as 81-82</li>
  * @method string getRuleTag() Obtain Rule tag.
-Note: This field may return·`null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setRuleTag(string $RuleTag) Set Rule tag.
-Note: This field may return·`null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class ApplicationProxyRule extends AbstractModel
 {
@@ -149,7 +149,7 @@ Note that each rule can have up to 20 ports.
 
     /**
      * @var integer Duration for the persistent session. The value takes effect only when `SessionPersist = true`.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $SessionPersistTime;
 
@@ -162,7 +162,7 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
 
     /**
      * @var string Rule tag.
-Note: This field may return·`null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $RuleTag;
 
@@ -194,12 +194,12 @@ Note that each rule can have up to 20 ports.
 <li>`true`: Enable</li>
 <li>`false`: Disable</li>Default value: false
      * @param integer $SessionPersistTime Duration for the persistent session. The value takes effect only when `SessionPersist = true`.
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $OriginPort The origin port, which can be:
 <li>A single port, such as 80</li>
 <li>A port range, such as 81-82</li>
      * @param string $RuleTag Rule tag.
-Note: This field may return·`null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

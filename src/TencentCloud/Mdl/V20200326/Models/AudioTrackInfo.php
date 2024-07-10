@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAudioSelectorName(string $AudioSelectorName) Set Only values defined by AttachedInputs.$.AudioSelectors.$.audioPidSelection.pid can be entered.
  * @method AudioNormalizationSettings getAudioNormalization() Obtain Audio loudness configuration.
  * @method void setAudioNormalization(AudioNormalizationSettings $AudioNormalization) Set Audio loudness configuration.
+ * @method AudioCodecDetail getAudioCodecDetails() Obtain Audio encoding configuration.
+ * @method void setAudioCodecDetails(AudioCodecDetail $AudioCodecDetails) Set Audio encoding configuration.
  */
 class AudioTrackInfo extends AbstractModel
 {
@@ -66,12 +68,18 @@ class AudioTrackInfo extends AbstractModel
     public $AudioNormalization;
 
     /**
+     * @var AudioCodecDetail Audio encoding configuration.
+     */
+    public $AudioCodecDetails;
+
+    /**
      * @param string $TrackName User input is limited to letters and numbers, the length should not exceed 20, and should not be repeated in the same channel.
      * @param string $AudioCodec Only AAC is supported.
      * @param integer $AudioBitrate Audio bitrate.
      * @param integer $AudioSampleRate Audio sample rate.
      * @param string $AudioSelectorName Only values defined by AttachedInputs.$.AudioSelectors.$.audioPidSelection.pid can be entered.
      * @param AudioNormalizationSettings $AudioNormalization Audio loudness configuration.
+     * @param AudioCodecDetail $AudioCodecDetails Audio encoding configuration.
      */
     function __construct()
     {
@@ -109,6 +117,11 @@ class AudioTrackInfo extends AbstractModel
         if (array_key_exists("AudioNormalization",$param) and $param["AudioNormalization"] !== null) {
             $this->AudioNormalization = new AudioNormalizationSettings();
             $this->AudioNormalization->deserialize($param["AudioNormalization"]);
+        }
+
+        if (array_key_exists("AudioCodecDetails",$param) and $param["AudioCodecDetails"] !== null) {
+            $this->AudioCodecDetails = new AudioCodecDetail();
+            $this->AudioCodecDetails->deserialize($param["AudioCodecDetails"]);
         }
     }
 }

@@ -86,8 +86,8 @@ Whether the Anycast EIP can be bound to CLB instances.
  * @method void setAddressName(string $AddressName) Set EIP name, which is the custom EIP name given by the user when applying for the EIP. Default: not named
  * @method string getEgress() Obtain Network egress. It defaults to `center_egress1`.
  * @method void setEgress(string $Egress) Set Network egress. It defaults to `center_egress1`.
- * @method string getAntiDDoSPackageId() Obtain Anti-DDoS service package ID. This is required when you want to request an u200dAnti-DDoS IP.
- * @method void setAntiDDoSPackageId(string $AntiDDoSPackageId) Set Anti-DDoS service package ID. This is required when you want to request an u200dAnti-DDoS IP.
+ * @method string getAntiDDoSPackageId() Obtain Anti-DDoS service package ID. This is required when you want to request an Anti-DDoS IP.
+ * @method void setAntiDDoSPackageId(string $AntiDDoSPackageId) Set Anti-DDoS service package ID. This is required when you want to request an Anti-DDoS IP.
  * @method string getClientToken() Obtain A string used to ensure the idempotency of the request. Generate a value based on your client. This can ensure that the value is unique for different requests. It only supports ASCII characters and can contain up to 64 characters. 
  * @method void setClientToken(string $ClientToken) Set A string used to ensure the idempotency of the request. Generate a value based on your client. This can ensure that the value is unique for different requests. It only supports ASCII characters and can contain up to 64 characters. 
  */
@@ -175,7 +175,7 @@ Whether the Anycast EIP can be bound to CLB instances.
     public $Egress;
 
     /**
-     * @var string Anti-DDoS service package ID. This is required when you want to request an u200dAnti-DDoS IP.
+     * @var string Anti-DDoS service package ID. This is required when you want to request an Anti-DDoS IP.
      */
     public $AntiDDoSPackageId;
 
@@ -218,7 +218,7 @@ Whether the Anycast EIP can be bound to CLB instances.
      * @param string $BandwidthPackageId The unique ID of a BGP bandwidth package. If you configure this parameter and set InternetChargeType as BANDWIDTH_PACKAGE, the new EIP is added to this package and billed by the bandwidth package mode.
      * @param string $AddressName EIP name, which is the custom EIP name given by the user when applying for the EIP. Default: not named
      * @param string $Egress Network egress. It defaults to `center_egress1`.
-     * @param string $AntiDDoSPackageId Anti-DDoS service package ID. This is required when you want to request an u200dAnti-DDoS IP.
+     * @param string $AntiDDoSPackageId Anti-DDoS service package ID. This is required when you want to request an Anti-DDoS IP.
      * @param string $ClientToken A string used to ensure the idempotency of the request. Generate a value based on your client. This can ensure that the value is unique for different requests. It only supports ASCII characters and can contain up to 64 characters. 
      */
     function __construct()

@@ -92,8 +92,14 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid value was found.
  * @method void setInstanceType(string $InstanceType) Set The type of instance bound with the EIP
 Note: this field may return `null`, indicating that no valid value was found.
- * @method string getAntiDDoSPackageId() Obtain ID of the Anti-DDoS service package. It is returned if the EIP is an u200dAnti-DDoS EIP. 
- * @method void setAntiDDoSPackageId(string $AntiDDoSPackageId) Set ID of the Anti-DDoS service package. It is returned if the EIP is an u200dAnti-DDoS EIP. 
+ * @method string getEgress() Obtain 
+ * @method void setEgress(string $Egress) Set 
+ * @method string getAntiDDoSPackageId() Obtain ID of the Anti-DDoS service package. It is returned if the EIP is an Anti-DDoS EIP. 
+ * @method void setAntiDDoSPackageId(string $AntiDDoSPackageId) Set ID of the Anti-DDoS service package. It is returned if the EIP is an Anti-DDoS EIP. 
+ * @method string getRenewFlag() Obtain 
+ * @method void setRenewFlag(string $RenewFlag) Set 
+ * @method string getBandwidthPackageId() Obtain 
+ * @method void setBandwidthPackageId(string $BandwidthPackageId) Set 
  */
 class Address extends AbstractModel
 {
@@ -218,9 +224,24 @@ Note: this field may return `null`, indicating that no valid value was found.
     public $InstanceType;
 
     /**
-     * @var string ID of the Anti-DDoS service package. It is returned if the EIP is an u200dAnti-DDoS EIP. 
+     * @var string 
+     */
+    public $Egress;
+
+    /**
+     * @var string ID of the Anti-DDoS service package. It is returned if the EIP is an Anti-DDoS EIP. 
      */
     public $AntiDDoSPackageId;
+
+    /**
+     * @var string 
+     */
+    public $RenewFlag;
+
+    /**
+     * @var string 
+     */
+    public $BandwidthPackageId;
 
     /**
      * @param string $AddressId `EIP` `ID`, the unique ID of the `EIP`.
@@ -259,7 +280,10 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param string $InstanceType The type of instance bound with the EIP
 Note: this field may return `null`, indicating that no valid value was found.
-     * @param string $AntiDDoSPackageId ID of the Anti-DDoS service package. It is returned if the EIP is an u200dAnti-DDoS EIP. 
+     * @param string $Egress 
+     * @param string $AntiDDoSPackageId ID of the Anti-DDoS service package. It is returned if the EIP is an Anti-DDoS EIP. 
+     * @param string $RenewFlag 
+     * @param string $BandwidthPackageId 
      */
     function __construct()
     {
@@ -364,8 +388,20 @@ Note: this field may return `null`, indicating that no valid value was found.
             $this->InstanceType = $param["InstanceType"];
         }
 
+        if (array_key_exists("Egress",$param) and $param["Egress"] !== null) {
+            $this->Egress = $param["Egress"];
+        }
+
         if (array_key_exists("AntiDDoSPackageId",$param) and $param["AntiDDoSPackageId"] !== null) {
             $this->AntiDDoSPackageId = $param["AntiDDoSPackageId"];
+        }
+
+        if (array_key_exists("RenewFlag",$param) and $param["RenewFlag"] !== null) {
+            $this->RenewFlag = $param["RenewFlag"];
+        }
+
+        if (array_key_exists("BandwidthPackageId",$param) and $param["BandwidthPackageId"] !== null) {
+            $this->BandwidthPackageId = $param["BandwidthPackageId"];
         }
     }
 }

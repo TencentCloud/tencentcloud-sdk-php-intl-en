@@ -34,6 +34,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setPassword(string $Password) Set Authentication password. Length limit: [1,128].
 Note: this field may return null, indicating that no valid values can be obtained.
+ * @method string getDestinationType() Obtain The destination type of the retweet. Currently available values are: Standard, AWS_MediaPackageV1, AWS_MediaPackageV2. The default is: Standard.
+ * @method void setDestinationType(string $DestinationType) Set The destination type of the retweet. Currently available values are: Standard, AWS_MediaPackageV1, AWS_MediaPackageV2. The default is: Standard.
  */
 class DestinationInfo extends AbstractModel
 {
@@ -61,6 +63,11 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $Password;
 
     /**
+     * @var string The destination type of the retweet. Currently available values are: Standard, AWS_MediaPackageV1, AWS_MediaPackageV2. The default is: Standard.
+     */
+    public $DestinationType;
+
+    /**
      * @param string $OutputUrl Relay destination address. Length limit: [1,512].
      * @param string $AuthKey Authentication key. Length limit: [1,128].
 Note: this field may return null, indicating that no valid values can be obtained.
@@ -68,6 +75,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $Password Authentication password. Length limit: [1,128].
 Note: this field may return null, indicating that no valid values can be obtained.
+     * @param string $DestinationType The destination type of the retweet. Currently available values are: Standard, AWS_MediaPackageV1, AWS_MediaPackageV2. The default is: Standard.
      */
     function __construct()
     {
@@ -96,6 +104,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("Password",$param) and $param["Password"] !== null) {
             $this->Password = $param["Password"];
+        }
+
+        if (array_key_exists("DestinationType",$param) and $param["DestinationType"] !== null) {
+            $this->DestinationType = $param["DestinationType"];
         }
     }
 }
