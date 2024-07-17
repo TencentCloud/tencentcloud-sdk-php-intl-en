@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstancePayMode(string $InstancePayMode) Set Instance type for purchase. Valid values: `PREPAID`, `POSTPAID`, `SERVERLESS`.
  * @method string getStoragePayMode() Obtain Storage type for purchase. Valid values: `PREPAID`, `POSTPAID`.
  * @method void setStoragePayMode(string $StoragePayMode) Set Storage type for purchase. Valid values: `PREPAID`, `POSTPAID`.
+ * @method string getDeviceType() Obtain device type:common, exclusive
+ * @method void setDeviceType(string $DeviceType) Set device type:common, exclusive
  * @method integer getCpu() Obtain Number of CPU cores, which is required when `InstancePayMode` is `PREPAID` or `POSTPAID`.
  * @method void setCpu(integer $Cpu) Set Number of CPU cores, which is required when `InstancePayMode` is `PREPAID` or `POSTPAID`.
  * @method integer getMemory() Obtain Memory size in GB, which is required when `InstancePayMode` is `PREPAID` or `POSTPAID`.
@@ -64,6 +66,11 @@ class InquirePriceCreateRequest extends AbstractModel
     public $StoragePayMode;
 
     /**
+     * @var string device type:common, exclusive
+     */
+    public $DeviceType;
+
+    /**
      * @var integer Number of CPU cores, which is required when `InstancePayMode` is `PREPAID` or `POSTPAID`.
      */
     public $Cpu;
@@ -98,6 +105,7 @@ class InquirePriceCreateRequest extends AbstractModel
      * @param integer $GoodsNum Number of compute node to purchase
      * @param string $InstancePayMode Instance type for purchase. Valid values: `PREPAID`, `POSTPAID`, `SERVERLESS`.
      * @param string $StoragePayMode Storage type for purchase. Valid values: `PREPAID`, `POSTPAID`.
+     * @param string $DeviceType device type:common, exclusive
      * @param integer $Cpu Number of CPU cores, which is required when `InstancePayMode` is `PREPAID` or `POSTPAID`.
      * @param integer $Memory Memory size in GB, which is required when `InstancePayMode` is `PREPAID` or `POSTPAID`.
      * @param float $Ccu CCU size, which is required when `InstancePayMode` is `SERVERLESS`.
@@ -132,6 +140,10 @@ class InquirePriceCreateRequest extends AbstractModel
 
         if (array_key_exists("StoragePayMode",$param) and $param["StoragePayMode"] !== null) {
             $this->StoragePayMode = $param["StoragePayMode"];
+        }
+
+        if (array_key_exists("DeviceType",$param) and $param["DeviceType"] !== null) {
+            $this->DeviceType = $param["DeviceType"];
         }
 
         if (array_key_exists("Cpu",$param) and $param["Cpu"] !== null) {
