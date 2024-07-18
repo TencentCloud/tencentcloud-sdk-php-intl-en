@@ -18,7 +18,7 @@ namespace TencentCloud\Mdl\V20200326\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Video codec additional configuration.
  *
  * @method string getProfile() Obtain The three image quality levels of h264 include: BASELINE, HIGH, and MAIN. The default option is MAIN.
  * @method void setProfile(string $Profile) Set The three image quality levels of h264 include: BASELINE, HIGH, and MAIN. The default option is MAIN.

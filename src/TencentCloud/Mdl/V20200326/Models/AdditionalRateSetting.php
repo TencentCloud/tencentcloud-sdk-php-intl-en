@@ -18,7 +18,7 @@ namespace TencentCloud\Mdl\V20200326\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * additional bit rate configuration.
  *
  * @method integer getVideoMaxBitrate() Obtain The maximum bit rate in a VBR scenario must be a multiple of 1000 and between 50000 - 40000000.
  * @method void setVideoMaxBitrate(integer $VideoMaxBitrate) Set The maximum bit rate in a VBR scenario must be a multiple of 1000 and between 50000 - 40000000.

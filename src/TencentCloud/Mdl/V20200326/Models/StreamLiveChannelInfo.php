@@ -42,6 +42,8 @@ Note: this field may return `null`, indicating that no valid value was found.
 Note: this field may return `null`, indicating that no valid value was found.
  * @method void setAVTemplates(array $AVTemplates) Set Audio/Video transcoding templates
 Note: this field may return `null`, indicating that no valid value was found.
+ * @method array getCaptionTemplates() Obtain 
+ * @method void setCaptionTemplates(array $CaptionTemplates) Set 
  * @method PlanSettings getPlanSettings() Obtain Event settings
 Note: This field may return `null`, indicating that no valid value was found.
  * @method void setPlanSettings(PlanSettings $PlanSettings) Set Event settings
@@ -54,6 +56,10 @@ Note: This field may return `null`, indicating that no valid value was found.
  * @method void setInputLossBehavior(InputLossBehaviorInfo $InputLossBehavior) Set Supplement the last video frame configuration settings.
  * @method PipelineInputSettingsInfo getPipelineInputSettings() Obtain Pipeline configuration.
  * @method void setPipelineInputSettings(PipelineInputSettingsInfo $PipelineInputSettings) Set Pipeline configuration.
+ * @method InputAnalysisInfo getInputAnalysisSettings() Obtain Recognition configuration for input content.
+ * @method void setInputAnalysisSettings(InputAnalysisInfo $InputAnalysisSettings) Set Recognition configuration for input content.
+ * @method array getTags() Obtain Console tag list.
+ * @method void setTags(array $Tags) Set Console tag list.
  */
 class StreamLiveChannelInfo extends AbstractModel
 {
@@ -101,6 +107,11 @@ Note: this field may return `null`, indicating that no valid value was found.
     public $AVTemplates;
 
     /**
+     * @var array 
+     */
+    public $CaptionTemplates;
+
+    /**
      * @var PlanSettings Event settings
 Note: This field may return `null`, indicating that no valid value was found.
      */
@@ -123,6 +134,16 @@ Note: This field may return `null`, indicating that no valid value was found.
     public $PipelineInputSettings;
 
     /**
+     * @var InputAnalysisInfo Recognition configuration for input content.
+     */
+    public $InputAnalysisSettings;
+
+    /**
+     * @var array Console tag list.
+     */
+    public $Tags;
+
+    /**
      * @param string $Id Channel ID
      * @param string $State Channel status
      * @param array $AttachedInputs Information of attached inputs
@@ -134,12 +155,15 @@ Note: this field may return `null`, indicating that no valid value was found.
 Note: this field may return `null`, indicating that no valid value was found.
      * @param array $AVTemplates Audio/Video transcoding templates
 Note: this field may return `null`, indicating that no valid value was found.
+     * @param array $CaptionTemplates 
      * @param PlanSettings $PlanSettings Event settings
 Note: This field may return `null`, indicating that no valid value was found.
      * @param EventNotifySetting $EventNotifySettings The callback settings.
 Note: This field may return `null`, indicating that no valid value was found.
      * @param InputLossBehaviorInfo $InputLossBehavior Supplement the last video frame configuration settings.
      * @param PipelineInputSettingsInfo $PipelineInputSettings Pipeline configuration.
+     * @param InputAnalysisInfo $InputAnalysisSettings Recognition configuration for input content.
+     * @param array $Tags Console tag list.
      */
     function __construct()
     {
@@ -211,6 +235,15 @@ Note: This field may return `null`, indicating that no valid value was found.
             }
         }
 
+        if (array_key_exists("CaptionTemplates",$param) and $param["CaptionTemplates"] !== null) {
+            $this->CaptionTemplates = [];
+            foreach ($param["CaptionTemplates"] as $key => $value){
+                $obj = new SubtitleConf();
+                $obj->deserialize($value);
+                array_push($this->CaptionTemplates, $obj);
+            }
+        }
+
         if (array_key_exists("PlanSettings",$param) and $param["PlanSettings"] !== null) {
             $this->PlanSettings = new PlanSettings();
             $this->PlanSettings->deserialize($param["PlanSettings"]);
@@ -229,6 +262,20 @@ Note: This field may return `null`, indicating that no valid value was found.
         if (array_key_exists("PipelineInputSettings",$param) and $param["PipelineInputSettings"] !== null) {
             $this->PipelineInputSettings = new PipelineInputSettingsInfo();
             $this->PipelineInputSettings->deserialize($param["PipelineInputSettings"]);
+        }
+
+        if (array_key_exists("InputAnalysisSettings",$param) and $param["InputAnalysisSettings"] !== null) {
+            $this->InputAnalysisSettings = new InputAnalysisInfo();
+            $this->InputAnalysisSettings->deserialize($param["InputAnalysisSettings"]);
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }

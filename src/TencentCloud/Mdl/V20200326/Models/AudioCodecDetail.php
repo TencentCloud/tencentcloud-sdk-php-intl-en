@@ -18,7 +18,7 @@ namespace TencentCloud\Mdl\V20200326\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Audio codec configuration.
  *
  * @method string getChannelMode() Obtain Channel configuration, optional values: MONO (mono), STEREO (two-channel), 5.1 (surround).
  * @method void setChannelMode(string $ChannelMode) Set Channel configuration, optional values: MONO (mono), STEREO (two-channel), 5.1 (surround).

@@ -26,14 +26,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setName(string $Name) Set Channel name, which can contain 1-32 case-sensitive letters, digits, and underscores and must be unique at the region level
  * @method array getAttachedInputs() Obtain Inputs to attach. You can attach 1 to 5 inputs.
  * @method void setAttachedInputs(array $AttachedInputs) Set Inputs to attach. You can attach 1 to 5 inputs.
- * @method array getOutputGroups() Obtain Configuration information of the channel’s output groups. Quantity: [1, 10]
- * @method void setOutputGroups(array $OutputGroups) Set Configuration information of the channel’s output groups. Quantity: [1, 10]
+ * @method array getOutputGroups() Obtain Configuration information of the channel's output groups. Quantity: [1, 10]
+ * @method void setOutputGroups(array $OutputGroups) Set Configuration information of the channel's output groups. Quantity: [1, 10]
  * @method array getAudioTemplates() Obtain Audio transcoding templates. Quantity: [1, 20]
  * @method void setAudioTemplates(array $AudioTemplates) Set Audio transcoding templates. Quantity: [1, 20]
  * @method array getVideoTemplates() Obtain Video transcoding templates. Quantity: [1, 10]
  * @method void setVideoTemplates(array $VideoTemplates) Set Video transcoding templates. Quantity: [1, 10]
  * @method array getAVTemplates() Obtain Audio/Video transcoding templates. Quantity: [1, 10]
  * @method void setAVTemplates(array $AVTemplates) Set Audio/Video transcoding templates. Quantity: [1, 10]
+ * @method array getCaptionTemplates() Obtain Subtitle template configuration, only AVTemplates are valid.
+ * @method void setCaptionTemplates(array $CaptionTemplates) Set Subtitle template configuration, only AVTemplates are valid.
  * @method PlanSettings getPlanSettings() Obtain Event settings
  * @method void setPlanSettings(PlanSettings $PlanSettings) Set Event settings
  * @method EventNotifySetting getEventNotifySettings() Obtain The callback settings.
@@ -42,6 +44,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInputLossBehavior(InputLossBehaviorInfo $InputLossBehavior) Set Complement the last video frame settings.
  * @method PipelineInputSettingsInfo getPipelineInputSettings() Obtain Pipeline configuration.
  * @method void setPipelineInputSettings(PipelineInputSettingsInfo $PipelineInputSettings) Set Pipeline configuration.
+ * @method InputAnalysisInfo getInputAnalysisSettings() Obtain Recognition configuration for input content.
+ * @method void setInputAnalysisSettings(InputAnalysisInfo $InputAnalysisSettings) Set Recognition configuration for input content.
+ * @method array getTags() Obtain Console tag list.
+ * @method void setTags(array $Tags) Set Console tag list.
  */
 class ModifyStreamLiveChannelRequest extends AbstractModel
 {
@@ -61,7 +67,7 @@ class ModifyStreamLiveChannelRequest extends AbstractModel
     public $AttachedInputs;
 
     /**
-     * @var array Configuration information of the channel’s output groups. Quantity: [1, 10]
+     * @var array Configuration information of the channel's output groups. Quantity: [1, 10]
      */
     public $OutputGroups;
 
@@ -79,6 +85,11 @@ class ModifyStreamLiveChannelRequest extends AbstractModel
      * @var array Audio/Video transcoding templates. Quantity: [1, 10]
      */
     public $AVTemplates;
+
+    /**
+     * @var array Subtitle template configuration, only AVTemplates are valid.
+     */
+    public $CaptionTemplates;
 
     /**
      * @var PlanSettings Event settings
@@ -101,17 +112,30 @@ class ModifyStreamLiveChannelRequest extends AbstractModel
     public $PipelineInputSettings;
 
     /**
+     * @var InputAnalysisInfo Recognition configuration for input content.
+     */
+    public $InputAnalysisSettings;
+
+    /**
+     * @var array Console tag list.
+     */
+    public $Tags;
+
+    /**
      * @param string $Id Channel ID
      * @param string $Name Channel name, which can contain 1-32 case-sensitive letters, digits, and underscores and must be unique at the region level
      * @param array $AttachedInputs Inputs to attach. You can attach 1 to 5 inputs.
-     * @param array $OutputGroups Configuration information of the channel’s output groups. Quantity: [1, 10]
+     * @param array $OutputGroups Configuration information of the channel's output groups. Quantity: [1, 10]
      * @param array $AudioTemplates Audio transcoding templates. Quantity: [1, 20]
      * @param array $VideoTemplates Video transcoding templates. Quantity: [1, 10]
      * @param array $AVTemplates Audio/Video transcoding templates. Quantity: [1, 10]
+     * @param array $CaptionTemplates Subtitle template configuration, only AVTemplates are valid.
      * @param PlanSettings $PlanSettings Event settings
      * @param EventNotifySetting $EventNotifySettings The callback settings.
      * @param InputLossBehaviorInfo $InputLossBehavior Complement the last video frame settings.
      * @param PipelineInputSettingsInfo $PipelineInputSettings Pipeline configuration.
+     * @param InputAnalysisInfo $InputAnalysisSettings Recognition configuration for input content.
+     * @param array $Tags Console tag list.
      */
     function __construct()
     {
@@ -179,6 +203,15 @@ class ModifyStreamLiveChannelRequest extends AbstractModel
             }
         }
 
+        if (array_key_exists("CaptionTemplates",$param) and $param["CaptionTemplates"] !== null) {
+            $this->CaptionTemplates = [];
+            foreach ($param["CaptionTemplates"] as $key => $value){
+                $obj = new SubtitleConf();
+                $obj->deserialize($value);
+                array_push($this->CaptionTemplates, $obj);
+            }
+        }
+
         if (array_key_exists("PlanSettings",$param) and $param["PlanSettings"] !== null) {
             $this->PlanSettings = new PlanSettings();
             $this->PlanSettings->deserialize($param["PlanSettings"]);
@@ -197,6 +230,20 @@ class ModifyStreamLiveChannelRequest extends AbstractModel
         if (array_key_exists("PipelineInputSettings",$param) and $param["PipelineInputSettings"] !== null) {
             $this->PipelineInputSettings = new PipelineInputSettingsInfo();
             $this->PipelineInputSettings->deserialize($param["PipelineInputSettings"]);
+        }
+
+        if (array_key_exists("InputAnalysisSettings",$param) and $param["InputAnalysisSettings"] !== null) {
+            $this->InputAnalysisSettings = new InputAnalysisInfo();
+            $this->InputAnalysisSettings->deserialize($param["InputAnalysisSettings"]);
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }

@@ -38,6 +38,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return `null`, indicating that no valid value was found.
  * @method void setAVTemplateNames(array $AVTemplateNames) Set Audio/Video transcoding template name. If `HlsRemuxSettings.Scheme` is `MERGE`, there is 1 audio/video transcoding template. Otherwise, this parameter is empty.
 Note: this field may return `null`, indicating that no valid value was found.
+ * @method array getCaptionTemplateNames() Obtain For the subtitle template used, only the AVTemplateNames is valid.
+ * @method void setCaptionTemplateNames(array $CaptionTemplateNames) Set For the subtitle template used, only the AVTemplateNames is valid.
  * @method TimedMetadataSettingInfo getTimedMetadataSettings() Obtain Meta information controls configuration.
  * @method void setTimedMetadataSettings(TimedMetadataSettingInfo $TimedMetadataSettings) Set Meta information controls configuration.
  */
@@ -73,6 +75,11 @@ Note: this field may return `null`, indicating that no valid value was found.
     public $AVTemplateNames;
 
     /**
+     * @var array For the subtitle template used, only the AVTemplateNames is valid.
+     */
+    public $CaptionTemplateNames;
+
+    /**
      * @var TimedMetadataSettingInfo Meta information controls configuration.
      */
     public $TimedMetadataSettings;
@@ -87,6 +94,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @param Scte35SettingsInfo $Scte35Settings SCTE-35 information configuration.
      * @param array $AVTemplateNames Audio/Video transcoding template name. If `HlsRemuxSettings.Scheme` is `MERGE`, there is 1 audio/video transcoding template. Otherwise, this parameter is empty.
 Note: this field may return `null`, indicating that no valid value was found.
+     * @param array $CaptionTemplateNames For the subtitle template used, only the AVTemplateNames is valid.
      * @param TimedMetadataSettingInfo $TimedMetadataSettings Meta information controls configuration.
      */
     function __construct()
@@ -121,6 +129,10 @@ Note: this field may return `null`, indicating that no valid value was found.
 
         if (array_key_exists("AVTemplateNames",$param) and $param["AVTemplateNames"] !== null) {
             $this->AVTemplateNames = $param["AVTemplateNames"];
+        }
+
+        if (array_key_exists("CaptionTemplateNames",$param) and $param["CaptionTemplateNames"] !== null) {
+            $this->CaptionTemplateNames = $param["CaptionTemplateNames"];
         }
 
         if (array_key_exists("TimedMetadataSettings",$param) and $param["TimedMetadataSettings"] !== null) {
