@@ -29,7 +29,7 @@ use TencentCloud\Cynosdb\V20190107\Models as Models;
  * @method Models\BindClusterResourcePackagesResponse BindClusterResourcePackages(Models\BindClusterResourcePackagesRequest $req) This API is used to bind a resource pack to a cluster.
  * @method Models\CloseAuditServiceResponse CloseAuditService(Models\CloseAuditServiceRequest $req) This API is used to disable the audit service for a TDSQL-C for MySQL instance.
  * @method Models\CloseClusterPasswordComplexityResponse CloseClusterPasswordComplexity(Models\CloseClusterPasswordComplexityRequest $req) This API is used to disable the password complexity for a cluster.
- * @method Models\CloseProxyResponse CloseProxy(Models\CloseProxyRequest $req) This API is used to disable u200dthe database proxy.
+ * @method Models\CloseProxyResponse CloseProxy(Models\CloseProxyRequest $req) This API is used to disable the database proxy.
  * @method Models\CloseWanResponse CloseWan(Models\CloseWanRequest $req) This API is used to disable the public network.
  * @method Models\CopyClusterPasswordComplexityResponse CopyClusterPasswordComplexity(Models\CopyClusterPasswordComplexityRequest $req) This API is used to replicate the password complexity for a cluster.
  * @method Models\CreateAccountsResponse CreateAccounts(Models\CreateAccountsRequest $req) This API is used to create an account.

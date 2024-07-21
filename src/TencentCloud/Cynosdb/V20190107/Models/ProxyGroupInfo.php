@@ -21,81 +21,81 @@ use TencentCloud\Common\AbstractModel;
  * Database proxy group details
  *
  * @method ProxyGroup getProxyGroup() Obtain Database proxy group
-Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setProxyGroup(ProxyGroup $ProxyGroup) Set Database proxy group
-Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid values can be obtained.
- * @method ProxyGroupRwInfo getProxyGroupRwInfo() Obtain Read/write separation information of the database proxy u200dgroup
-Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid values can be obtained.
- * @method void setProxyGroupRwInfo(ProxyGroupRwInfo $ProxyGroupRwInfo) Set Read/write separation information of the database proxy u200dgroup
-Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid values can be obtained.
- * @method array getProxyNodes() Obtain Node information of the u200ddatabase proxy
-Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid values can be obtained.
- * @method void setProxyNodes(array $ProxyNodes) Set Node information of the u200ddatabase proxy
-Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method ProxyGroupRwInfo getProxyGroupRwInfo() Obtain Read/write separation information of the database proxy group
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setProxyGroupRwInfo(ProxyGroupRwInfo $ProxyGroupRwInfo) Set Read/write separation information of the database proxy group
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method array getProxyNodes() Obtain Node information of the database proxy
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setProxyNodes(array $ProxyNodes) Set Node information of the database proxy
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method ProxyConnectionPoolInfo getConnectionPool() Obtain Connection pool information for the database proxy
-Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setConnectionPool(ProxyConnectionPoolInfo $ConnectionPool) Set Connection pool information for the database proxy
-Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method array getNetAddrInfos() Obtain Network information for database proxy
-Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setNetAddrInfos(array $NetAddrInfos) Set Network information for database proxy
-Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method array getTasks() Obtain Task set of the database proxy
-Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setTasks(array $Tasks) Set Task set of the database proxy
-Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class ProxyGroupInfo extends AbstractModel
 {
     /**
      * @var ProxyGroup Database proxy group
-Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ProxyGroup;
 
     /**
-     * @var ProxyGroupRwInfo Read/write separation information of the database proxy u200dgroup
-Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid values can be obtained.
+     * @var ProxyGroupRwInfo Read/write separation information of the database proxy group
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ProxyGroupRwInfo;
 
     /**
-     * @var array Node information of the u200ddatabase proxy
-Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid values can be obtained.
+     * @var array Node information of the database proxy
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ProxyNodes;
 
     /**
      * @var ProxyConnectionPoolInfo Connection pool information for the database proxy
-Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ConnectionPool;
 
     /**
      * @var array Network information for database proxy
-Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $NetAddrInfos;
 
     /**
      * @var array Task set of the database proxy
-Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Tasks;
 
     /**
      * @param ProxyGroup $ProxyGroup Database proxy group
-Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid values can be obtained.
-     * @param ProxyGroupRwInfo $ProxyGroupRwInfo Read/write separation information of the database proxy u200dgroup
-Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid values can be obtained.
-     * @param array $ProxyNodes Node information of the u200ddatabase proxy
-Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param ProxyGroupRwInfo $ProxyGroupRwInfo Read/write separation information of the database proxy group
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param array $ProxyNodes Node information of the database proxy
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param ProxyConnectionPoolInfo $ConnectionPool Connection pool information for the database proxy
-Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param array $NetAddrInfos Network information for database proxy
-Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param array $Tasks Task set of the database proxy
-Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

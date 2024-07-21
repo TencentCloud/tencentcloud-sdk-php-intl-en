@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSrcProxyVersion(string $SrcProxyVersion) Set Current version of database proxy
  * @method string getDstProxyVersion() Obtain Target version of database proxy
  * @method void setDstProxyVersion(string $DstProxyVersion) Set Target version of database proxy
- * @method string getProxyGroupId() Obtain Database proxy u200dgroup ID
- * @method void setProxyGroupId(string $ProxyGroupId) Set Database proxy u200dgroup ID
+ * @method string getProxyGroupId() Obtain Database proxy group ID
+ * @method void setProxyGroupId(string $ProxyGroupId) Set Database proxy group ID
  * @method string getIsInMaintainPeriod() Obtain Upgrade time. Valid values: `no` (upon upgrade completion), `yes` (upgrade during instance maintenance time)
  * @method void setIsInMaintainPeriod(string $IsInMaintainPeriod) Set Upgrade time. Valid values: `no` (upon upgrade completion), `yes` (upgrade during instance maintenance time)
  */
@@ -49,7 +49,7 @@ class UpgradeProxyVersionRequest extends AbstractModel
     public $DstProxyVersion;
 
     /**
-     * @var string Database proxy u200dgroup ID
+     * @var string Database proxy group ID
      */
     public $ProxyGroupId;
 
@@ -62,7 +62,7 @@ class UpgradeProxyVersionRequest extends AbstractModel
      * @param string $ClusterId Cluster ID
      * @param string $SrcProxyVersion Current version of database proxy
      * @param string $DstProxyVersion Target version of database proxy
-     * @param string $ProxyGroupId Database proxy u200dgroup ID
+     * @param string $ProxyGroupId Database proxy group ID
      * @param string $IsInMaintainPeriod Upgrade time. Valid values: `no` (upon upgrade completion), `yes` (upgrade during instance maintenance time)
      */
     function __construct()

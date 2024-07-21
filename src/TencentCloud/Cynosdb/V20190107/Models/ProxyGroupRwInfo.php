@@ -18,7 +18,7 @@ namespace TencentCloud\Cynosdb\V20190107\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Read/write separation information of the database proxy u200dgroup
+ * Read/write separation information of the database proxy group
  *
  * @method string getConsistencyType() Obtain Consistency type. Valid values: `eventual` (eventual consistency), `session` (session consistency), `global` (global consistency).
  * @method void setConsistencyType(string $ConsistencyType) Set Consistency type. Valid values: `eventual` (eventual consistency), `session` (session consistency), `global` (global consistency).
@@ -33,9 +33,9 @@ use TencentCloud\Common\AbstractModel;
  * @method array getInstanceWeights() Obtain Instance weight array
  * @method void setInstanceWeights(array $InstanceWeights) Set Instance weight array
  * @method string getOpenRw() Obtain Whether to enable read-write node. Valid values: `yes`, `no`.
-Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setOpenRw(string $OpenRw) Set Whether to enable read-write node. Valid values: `yes`, `no`.
-Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getRwType() Obtain Read/write attribute. Valid values: `READWRITE`, `READONLY`.
  * @method void setRwType(string $RwType) Set Read/write attribute. Valid values: `READWRITE`, `READONLY`.
  * @method boolean getTransSplit() Obtain Transaction split
@@ -77,7 +77,7 @@ class ProxyGroupRwInfo extends AbstractModel
 
     /**
      * @var string Whether to enable read-write node. Valid values: `yes`, `no`.
-Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $OpenRw;
 
@@ -104,7 +104,7 @@ Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid val
      * @param string $AutoAddRo Whether to automatically add read-only instance. Valid value: `yes`, `no`.
      * @param array $InstanceWeights Instance weight array
      * @param string $OpenRw Whether to enable read-write node. Valid values: `yes`, `no`.
-Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $RwType Read/write attribute. Valid values: `READWRITE`, `READONLY`.
      * @param boolean $TransSplit Transaction split
      * @param string $AccessMode Connection mode. Valid values: `balance`, `nearby`.

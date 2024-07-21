@@ -48,8 +48,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEdgeVersion(string $EdgeVersion) Set Edge cluster version. It is the set of versions of all cluster components.
  * @method string getRegistryPrefix() Obtain Prefix of the image registry of an edge component
  * @method void setRegistryPrefix(string $RegistryPrefix) Set Prefix of the image registry of an edge component
- * @method TagSpecification getTagSpecification() Obtain u200dTags bound with the cluster
- * @method void setTagSpecification(TagSpecification $TagSpecification) Set u200dTags bound with the cluster
+ * @method TagSpecification getTagSpecification() Obtain Tags bound with the cluster
+ * @method void setTagSpecification(TagSpecification $TagSpecification) Set Tags bound with the cluster
  */
 class CreateTKEEdgeClusterRequest extends AbstractModel
 {
@@ -124,7 +124,7 @@ class CreateTKEEdgeClusterRequest extends AbstractModel
     public $RegistryPrefix;
 
     /**
-     * @var TagSpecification u200dTags bound with the cluster
+     * @var TagSpecification Tags bound with the cluster
      */
     public $TagSpecification;
 
@@ -143,7 +143,7 @@ class CreateTKEEdgeClusterRequest extends AbstractModel
      * @param string $ChargeType Cluster billing mode
      * @param string $EdgeVersion Edge cluster version. It is the set of versions of all cluster components.
      * @param string $RegistryPrefix Prefix of the image registry of an edge component
-     * @param TagSpecification $TagSpecification u200dTags bound with the cluster
+     * @param TagSpecification $TagSpecification Tags bound with the cluster
      */
     function __construct()
     {

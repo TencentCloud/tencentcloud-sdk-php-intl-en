@@ -96,8 +96,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
  * @method void setVip(string $Vip) Set VIP
  * @method integer getVport() Obtain vport
  * @method void setVport(integer $Vport) Set vport
- * @method array getRoAddr() Obtain VIP u200dand vport of the read-only instance in a cluster
- * @method void setRoAddr(array $RoAddr) Set VIP u200dand vport of the read-only instance in a cluster
+ * @method array getRoAddr() Obtain VIP and vport of the read-only instance in a cluster
+ * @method void setRoAddr(array $RoAddr) Set VIP and vport of the read-only instance in a cluster
  * @method Ability getAbility() Obtain Features supported by the cluster
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setAbility(Ability $Ability) Set Features supported by the cluster
@@ -168,6 +168,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
  * @method void setResourcePackages(array $ResourcePackages) Set Information of the resource pack bound to a cluster Note: This field may return null, indicating that no valid values can be obtained.
  * @method integer getRenewFlag() Obtain The auto-renewal flag. Valid values: `0`: (manual renewal, default), `1` (auto-renewal). Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setRenewFlag(integer $RenewFlag) Set The auto-renewal flag. Valid values: `0`: (manual renewal, default), `1` (auto-renewal). Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getNetworkType() Obtain 
+ * @method void setNetworkType(string $NetworkType) Set 
+ * @method array getSlaveZoneAttr() Obtain 
+ * @method void setSlaveZoneAttr(array $SlaveZoneAttr) Set 
  */
 class CynosdbClusterDetail extends AbstractModel
 {
@@ -314,7 +318,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $Vport;
 
     /**
-     * @var array VIP u200dand vport of the read-only instance in a cluster
+     * @var array VIP and vport of the read-only instance in a cluster
      */
     public $RoAddr;
 
@@ -438,6 +442,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $RenewFlag;
 
     /**
+     * @var string 
+     */
+    public $NetworkType;
+
+    /**
+     * @var array 
+     */
+    public $SlaveZoneAttr;
+
+    /**
      * @param string $ClusterId Cluster ID
      * @param string $ClusterName Cluster name
      * @param string $Region Region
@@ -476,7 +490,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param integer $UsedStorage Used capacity
      * @param string $Vip VIP
      * @param integer $Vport vport
-     * @param array $RoAddr VIP u200dand vport of the read-only instance in a cluster
+     * @param array $RoAddr VIP and vport of the read-only instance in a cluster
      * @param Ability $Ability Features supported by the cluster
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $CynosVersion TDSQL-C version
@@ -512,6 +526,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param array $ResourcePackages Information of the resource pack bound to a cluster Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $RenewFlag The auto-renewal flag. Valid values: `0`: (manual renewal, default), `1` (auto-renewal). Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $NetworkType 
+     * @param array $SlaveZoneAttr 
      */
     function __construct()
     {
@@ -742,6 +758,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("RenewFlag",$param) and $param["RenewFlag"] !== null) {
             $this->RenewFlag = $param["RenewFlag"];
+        }
+
+        if (array_key_exists("NetworkType",$param) and $param["NetworkType"] !== null) {
+            $this->NetworkType = $param["NetworkType"];
+        }
+
+        if (array_key_exists("SlaveZoneAttr",$param) and $param["SlaveZoneAttr"] !== null) {
+            $this->SlaveZoneAttr = [];
+            foreach ($param["SlaveZoneAttr"] as $key => $value){
+                $obj = new SlaveZoneAttrItem();
+                $obj->deserialize($value);
+                array_push($this->SlaveZoneAttr, $obj);
+            }
         }
     }
 }

@@ -30,10 +30,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setExpandShardConfig(ExpandShardConfig $ExpandShardConfig) Set A parameter for vertically expand a shard when `UpgradeType` is `EXPAND`.
  * @method SplitShardConfig getSplitShardConfig() Obtain A parameter for splitting a shard when `UpgradeType` is `SPLIT`.
  * @method void setSplitShardConfig(SplitShardConfig $SplitShardConfig) Set A parameter for splitting a shard when `UpgradeType` is `SPLIT`.
- * @method integer getSwitchAutoRetry() Obtain Whether to automatically retry u200donce when missing the switch time window. Valid values: `0` (No), `1` (Yes).
- * @method void setSwitchAutoRetry(integer $SwitchAutoRetry) Set Whether to automatically retry u200donce when missing the switch time window. Valid values: `0` (No), `1` (Yes).
- * @method string getSwitchStartTime() Obtain Switch u200dstart u200dtime
- * @method void setSwitchStartTime(string $SwitchStartTime) Set Switch u200dstart u200dtime
+ * @method integer getSwitchAutoRetry() Obtain Whether to automatically retry once when missing the switch time window. Valid values: `0` (No), `1` (Yes).
+ * @method void setSwitchAutoRetry(integer $SwitchAutoRetry) Set Whether to automatically retry once when missing the switch time window. Valid values: `0` (No), `1` (Yes).
+ * @method string getSwitchStartTime() Obtain Switch start time
+ * @method void setSwitchStartTime(string $SwitchStartTime) Set Switch start time
  * @method string getSwitchEndTime() Obtain Switch end time
  * @method void setSwitchEndTime(string $SwitchEndTime) Set Switch end time
  */
@@ -65,12 +65,12 @@ class UpgradeDedicatedDCDBInstanceRequest extends AbstractModel
     public $SplitShardConfig;
 
     /**
-     * @var integer Whether to automatically retry u200donce when missing the switch time window. Valid values: `0` (No), `1` (Yes).
+     * @var integer Whether to automatically retry once when missing the switch time window. Valid values: `0` (No), `1` (Yes).
      */
     public $SwitchAutoRetry;
 
     /**
-     * @var string Switch u200dstart u200dtime
+     * @var string Switch start time
      */
     public $SwitchStartTime;
 
@@ -85,8 +85,8 @@ class UpgradeDedicatedDCDBInstanceRequest extends AbstractModel
      * @param AddShardConfig $AddShardConfig A parameter for adding shards when `UpgradeType` is `ADD`.
      * @param ExpandShardConfig $ExpandShardConfig A parameter for vertically expand a shard when `UpgradeType` is `EXPAND`.
      * @param SplitShardConfig $SplitShardConfig A parameter for splitting a shard when `UpgradeType` is `SPLIT`.
-     * @param integer $SwitchAutoRetry Whether to automatically retry u200donce when missing the switch time window. Valid values: `0` (No), `1` (Yes).
-     * @param string $SwitchStartTime Switch u200dstart u200dtime
+     * @param integer $SwitchAutoRetry Whether to automatically retry once when missing the switch time window. Valid values: `0` (No), `1` (Yes).
+     * @param string $SwitchStartTime Switch start time
      * @param string $SwitchEndTime Switch end time
      */
     function __construct()

@@ -45,7 +45,7 @@ Note: Accounts with the same username but different hosts are considered as diff
  * @method Models\DescribeDBSecurityGroupsResponse DescribeDBSecurityGroups(Models\DescribeDBSecurityGroupsRequest $req) This API is used to query the security group information of an instance.
  * @method Models\DescribeDBSlowLogsResponse DescribeDBSlowLogs(Models\DescribeDBSlowLogsRequest $req) This API is used to query the list of slow query logs.
  * @method Models\DescribeDBSyncModeResponse DescribeDBSyncMode(Models\DescribeDBSyncModeRequest $req) This API is used to query the sync mode of a TencentDB instance.
- * @method Models\DescribeDBTmpInstancesResponse DescribeDBTmpInstances(Models\DescribeDBTmpInstancesRequest $req) This API is used to obtain u200da temp rollback instance.
+ * @method Models\DescribeDBTmpInstancesResponse DescribeDBTmpInstances(Models\DescribeDBTmpInstancesRequest $req) This API is used to obtain a temp rollback instance.
  * @method Models\DescribeDCDBInstanceDetailResponse DescribeDCDBInstanceDetail(Models\DescribeDCDBInstanceDetailRequest $req) This API is used to get the details of a TDSQL instance.
  * @method Models\DescribeDCDBInstanceNodeInfoResponse DescribeDCDBInstanceNodeInfo(Models\DescribeDCDBInstanceNodeInfoRequest $req) This API is used to query the information of instance nodes.
  * @method Models\DescribeDCDBInstancesResponse DescribeDCDBInstances(Models\DescribeDCDBInstancesRequest $req) This API is used to query the list of TencentDB instances. It supports filtering instances by project ID, instance ID, private network address, and instance name.
@@ -88,7 +88,7 @@ Note: accounts with the same username but different hosts are different accounts
 Note: accounts with the same username but different hosts are different accounts.
  * @method Models\SwitchDBInstanceHAResponse SwitchDBInstanceHA(Models\SwitchDBInstanceHARequest $req) This API is used to start a source-replica switch of instances.
  * @method Models\TerminateDedicatedDBInstanceResponse TerminateDedicatedDBInstance(Models\TerminateDedicatedDBInstanceRequest $req) This API is used to terminate the isolated dedicated TDSQL instance.
- * @method Models\UpgradeDedicatedDCDBInstanceResponse UpgradeDedicatedDCDBInstance(Models\UpgradeDedicatedDCDBInstanceRequest $req) This API is used to u200dupgrade a dedicated TDSQL cluster instance.
+ * @method Models\UpgradeDedicatedDCDBInstanceResponse UpgradeDedicatedDCDBInstance(Models\UpgradeDedicatedDCDBInstanceRequest $req) This API is used to upgrade a dedicated TDSQL cluster instance.
  * @method Models\UpgradeHourDCDBInstanceResponse UpgradeHourDCDBInstance(Models\UpgradeHourDCDBInstanceRequest $req) This API is used to upgrade a pay-as-you-go TDSQL instance.
  */
 

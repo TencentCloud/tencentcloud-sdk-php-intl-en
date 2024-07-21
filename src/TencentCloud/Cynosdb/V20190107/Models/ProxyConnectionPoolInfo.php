@@ -21,45 +21,45 @@ use TencentCloud\Common\AbstractModel;
  * Connection pool information for the database proxy
  *
  * @method integer getConnectionPoolTimeOut() Obtain Connection persistence timeout in seconds
-Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setConnectionPoolTimeOut(integer $ConnectionPoolTimeOut) Set Connection persistence timeout in seconds
-Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getOpenConnectionPool() Obtain Whether the connection pool is enabled
-Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setOpenConnectionPool(string $OpenConnectionPool) Set Whether the connection pool is enabled
-Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getConnectionPoolType() Obtain Connection pool type. Valid value: `SessionConnectionPool` (session-level).
-Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setConnectionPoolType(string $ConnectionPoolType) Set Connection pool type. Valid value: `SessionConnectionPool` (session-level).
-Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class ProxyConnectionPoolInfo extends AbstractModel
 {
     /**
      * @var integer Connection persistence timeout in seconds
-Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ConnectionPoolTimeOut;
 
     /**
      * @var string Whether the connection pool is enabled
-Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $OpenConnectionPool;
 
     /**
      * @var string Connection pool type. Valid value: `SessionConnectionPool` (session-level).
-Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ConnectionPoolType;
 
     /**
      * @param integer $ConnectionPoolTimeOut Connection persistence timeout in seconds
-Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $OpenConnectionPool Whether the connection pool is enabled
-Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $ConnectionPoolType Connection pool type. Valid value: `SessionConnectionPool` (session-level).
-Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

@@ -45,13 +45,13 @@ Note: this field may return null, indicating that no valid value was found.
  * @method void setScaleDownUtilizationThreshold(integer $ScaleDownUtilizationThreshold) Set Percentage of node resource usage below which the node is considered to be idle (default value: 50)
 Note: this field may return null, indicating that no valid value was found.
  * @method boolean getSkipNodesWithLocalStorage() Obtain Do not scale in a node if it contains local storage Pods. Default: `true`.
-Note: u200dThis field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
  * @method void setSkipNodesWithLocalStorage(boolean $SkipNodesWithLocalStorage) Set Do not scale in a node if it contains local storage Pods. Default: `true`.
-Note: u200dThis field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
  * @method boolean getSkipNodesWithSystemPods() Obtain Do not scale in a node if it contains Pods in the kube-system namespace that are not managed by DaemonSet. Default: `true`.
-Note: u200dThis field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
  * @method void setSkipNodesWithSystemPods(boolean $SkipNodesWithSystemPods) Set Do not scale in a node if it contains Pods in the kube-system namespace that are not managed by DaemonSet. Default: `true`.
-Note: u200dThis field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
  * @method boolean getIgnoreDaemonSetsUtilization() Obtain Whether to ignore DaemonSet pods by default when calculating resource usage (default value: False: do not ignore)
 Note: this field may return null, indicating that no valid value was found.
  * @method void setIgnoreDaemonSetsUtilization(boolean $IgnoreDaemonSetsUtilization) Set Whether to ignore DaemonSet pods by default when calculating resource usage (default value: False: do not ignore)
@@ -113,13 +113,13 @@ Note: this field may return null, indicating that no valid value was found.
 
     /**
      * @var boolean Do not scale in a node if it contains local storage Pods. Default: `true`.
-Note: u200dThis field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public $SkipNodesWithLocalStorage;
 
     /**
      * @var boolean Do not scale in a node if it contains Pods in the kube-system namespace that are not managed by DaemonSet. Default: `true`.
-Note: u200dThis field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public $SkipNodesWithSystemPods;
 
@@ -167,9 +167,9 @@ Note: this field may return null, indicating that no valid value was found.
      * @param integer $ScaleDownUtilizationThreshold Percentage of node resource usage below which the node is considered to be idle (default value: 50)
 Note: this field may return null, indicating that no valid value was found.
      * @param boolean $SkipNodesWithLocalStorage Do not scale in a node if it contains local storage Pods. Default: `true`.
-Note: u200dThis field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      * @param boolean $SkipNodesWithSystemPods Do not scale in a node if it contains Pods in the kube-system namespace that are not managed by DaemonSet. Default: `true`.
-Note: u200dThis field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      * @param boolean $IgnoreDaemonSetsUtilization Whether to ignore DaemonSet pods by default when calculating resource usage (default value: False: do not ignore)
 Note: this field may return null, indicating that no valid value was found.
      * @param integer $OkTotalUnreadyCount Number at which CA health detection is triggered (default value: 3). After the number specified in OkTotalUnreadyCount is exceeded, CA will perform health detection.

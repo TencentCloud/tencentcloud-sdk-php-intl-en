@@ -24,12 +24,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceId(string $InstanceId) Set Instance ID
  * @method string getInstanceStatus() Obtain Status of the instance in the scaling activity. Valid values:
 `INIT`: Initializing
-`RUNNING`: u200dProcessing u200dthe instance
+`RUNNING`: Processing the instance
 `SUCCESSFUL`: Task succeeded on the instance
 `FAILED`: Task failed on the instance
  * @method void setInstanceStatus(string $InstanceStatus) Set Status of the instance in the scaling activity. Valid values:
 `INIT`: Initializing
-`RUNNING`: u200dProcessing u200dthe instance
+`RUNNING`: Processing the instance
 `SUCCESSFUL`: Task succeeded on the instance
 `FAILED`: Task failed on the instance
  */
@@ -43,7 +43,7 @@ class RelatedInstance extends AbstractModel
     /**
      * @var string Status of the instance in the scaling activity. Valid values:
 `INIT`: Initializing
-`RUNNING`: u200dProcessing u200dthe instance
+`RUNNING`: Processing the instance
 `SUCCESSFUL`: Task succeeded on the instance
 `FAILED`: Task failed on the instance
      */
@@ -53,7 +53,7 @@ class RelatedInstance extends AbstractModel
      * @param string $InstanceId Instance ID
      * @param string $InstanceStatus Status of the instance in the scaling activity. Valid values:
 `INIT`: Initializing
-`RUNNING`: u200dProcessing u200dthe instance
+`RUNNING`: Processing the instance
 `SUCCESSFUL`: Task succeeded on the instance
 `FAILED`: Task failed on the instance
      */

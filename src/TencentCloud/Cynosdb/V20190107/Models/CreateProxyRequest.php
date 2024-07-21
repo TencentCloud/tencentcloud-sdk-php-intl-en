@@ -26,16 +26,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCpu(integer $Cpu) Set Number of CPU cores
  * @method integer getMem() Obtain Memory
  * @method void setMem(integer $Mem) Set Memory
- * @method string getUniqueVpcId() Obtain VPC ID, which is the same as that of the cluster by defaultu200d.
- * @method void setUniqueVpcId(string $UniqueVpcId) Set VPC ID, which is the same as that of the cluster by defaultu200d.
+ * @method string getUniqueVpcId() Obtain VPC ID, which is the same as that of the cluster by default.
+ * @method void setUniqueVpcId(string $UniqueVpcId) Set VPC ID, which is the same as that of the cluster by default.
  * @method string getUniqueSubnetId() Obtain VPC subnet ID, which is the same as that of the cluster by default.
  * @method void setUniqueSubnetId(string $UniqueSubnetId) Set VPC subnet ID, which is the same as that of the cluster by default.
  * @method integer getProxyCount() Obtain Number of nodes in the proxy group
  * @method void setProxyCount(integer $ProxyCount) Set Number of nodes in the proxy group
  * @method string getConnectionPoolType() Obtain Connection pool type. Valid value: `SessionConnectionPool` (session-level connection pool)
  * @method void setConnectionPoolType(string $ConnectionPoolType) Set Connection pool type. Valid value: `SessionConnectionPool` (session-level connection pool)
- * @method string getOpenConnectionPool() Obtain Whether to enable connection pool. Valid value: `yes` (enable), `no` u200d(disable).
- * @method void setOpenConnectionPool(string $OpenConnectionPool) Set Whether to enable connection pool. Valid value: `yes` (enable), `no` u200d(disable).
+ * @method string getOpenConnectionPool() Obtain Whether to enable connection pool. Valid value: `yes` (enable), `no` (disable).
+ * @method void setOpenConnectionPool(string $OpenConnectionPool) Set Whether to enable connection pool. Valid value: `yes` (enable), `no` (disable).
  * @method integer getConnectionPoolTimeOut() Obtain Connection pool threshold in seconds
  * @method void setConnectionPoolTimeOut(integer $ConnectionPoolTimeOut) Set Connection pool threshold in seconds
  * @method array getSecurityGroupIds() Obtain Array of security group IDs
@@ -63,7 +63,7 @@ class CreateProxyRequest extends AbstractModel
     public $Mem;
 
     /**
-     * @var string VPC ID, which is the same as that of the cluster by defaultu200d.
+     * @var string VPC ID, which is the same as that of the cluster by default.
      */
     public $UniqueVpcId;
 
@@ -83,7 +83,7 @@ class CreateProxyRequest extends AbstractModel
     public $ConnectionPoolType;
 
     /**
-     * @var string Whether to enable connection pool. Valid value: `yes` (enable), `no` u200d(disable).
+     * @var string Whether to enable connection pool. Valid value: `yes` (enable), `no` (disable).
      */
     public $OpenConnectionPool;
 
@@ -111,11 +111,11 @@ class CreateProxyRequest extends AbstractModel
      * @param string $ClusterId Cluster ID
      * @param integer $Cpu Number of CPU cores
      * @param integer $Mem Memory
-     * @param string $UniqueVpcId VPC ID, which is the same as that of the cluster by defaultu200d.
+     * @param string $UniqueVpcId VPC ID, which is the same as that of the cluster by default.
      * @param string $UniqueSubnetId VPC subnet ID, which is the same as that of the cluster by default.
      * @param integer $ProxyCount Number of nodes in the proxy group
      * @param string $ConnectionPoolType Connection pool type. Valid value: `SessionConnectionPool` (session-level connection pool)
-     * @param string $OpenConnectionPool Whether to enable connection pool. Valid value: `yes` (enable), `no` u200d(disable).
+     * @param string $OpenConnectionPool Whether to enable connection pool. Valid value: `yes` (enable), `no` (disable).
      * @param integer $ConnectionPoolTimeOut Connection pool threshold in seconds
      * @param array $SecurityGroupIds Array of security group IDs
      * @param string $Description Description

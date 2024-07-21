@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getGoodsNum() Obtain Number of created instances
  * @method void setGoodsNum(integer $GoodsNum) Set Number of created instances
- * @method integer getShardNum() Obtain Shard u200dcount
- * @method void setShardNum(integer $ShardNum) Set Shard u200dcount
+ * @method integer getShardNum() Obtain Shard count
+ * @method void setShardNum(integer $ShardNum) Set Shard count
  * @method integer getShardMemory() Obtain Shard memory size in GB
  * @method void setShardMemory(integer $ShardMemory) Set Shard memory size in GB
  * @method integer getShardStorage() Obtain Shard disk size in GB
@@ -34,8 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setZone(string $Zone) Set (Disused) AZ
  * @method integer getProjectId() Obtain Project ID
  * @method void setProjectId(integer $ProjectId) Set Project ID
- * @method integer getCpu() Obtain (Disused) u200dNumber of CPU u200dcores
- * @method void setCpu(integer $Cpu) Set (Disused) u200dNumber of CPU u200dcores
+ * @method integer getCpu() Obtain (Disused) Number of CPU cores
+ * @method void setCpu(integer $Cpu) Set (Disused) Number of CPU cores
  * @method string getVpcId() Obtain VPC ID
  * @method void setVpcId(string $VpcId) Set VPC ID
  * @method string getSubnetId() Obtain Subnet ID
@@ -66,18 +66,20 @@ use TencentCloud\Common\AbstractModel;
  * @method void setResourceTags(array $ResourceTags) Set Tag
  * @method integer getIpv6Flag() Obtain Whether IPv6 flag is supported. Valid values: `1` (yes), `0` (no).
  * @method void setIpv6Flag(integer $Ipv6Flag) Set Whether IPv6 flag is supported. Valid values: `1` (yes), `0` (no).
- * @method integer getPid() Obtain (Disused) Pid, which can be queried by the u200d`DescribeSpecInfo` API.
- * @method void setPid(integer $Pid) Set (Disused) Pid, which can be queried by the u200d`DescribeSpecInfo` API.
- * @method array getInitParams() Obtain List of parameters. Valid values: `character_set_server` (character set; required), `lower_case_table_names` (table name case sensitivity; required; `0`: case-sensitive; `1`: case-insensitive), `innodb_page_size` (InnoDB data page; default size: 16 KB), `sync_mode` (sync mode; `0`: async; `1`: strong sync; `2`: downgradable strong sync. Default value: u200d`2`).
- * @method void setInitParams(array $InitParams) Set List of parameters. Valid values: `character_set_server` (character set; required), `lower_case_table_names` (table name case sensitivity; required; `0`: case-sensitive; `1`: case-insensitive), `innodb_page_size` (InnoDB data page; default size: 16 KB), `sync_mode` (sync mode; `0`: async; `1`: strong sync; `2`: downgradable strong sync. Default value: u200d`2`).
+ * @method integer getPid() Obtain (Disused) Pid, which can be queried by the `DescribeSpecInfo` API.
+ * @method void setPid(integer $Pid) Set (Disused) Pid, which can be queried by the `DescribeSpecInfo` API.
+ * @method array getInitParams() Obtain List of parameters. Valid values: `character_set_server` (character set; required), `lower_case_table_names` (table name case sensitivity; required; `0`: case-sensitive; `1`: case-insensitive), `innodb_page_size` (InnoDB data page; default size: 16 KB), `sync_mode` (sync mode; `0`: async; `1`: strong sync; `2`: downgradable strong sync. Default value: `2`).
+ * @method void setInitParams(array $InitParams) Set List of parameters. Valid values: `character_set_server` (character set; required), `lower_case_table_names` (table name case sensitivity; required; `0`: case-sensitive; `1`: case-insensitive), `innodb_page_size` (InnoDB data page; default size: 16 KB), `sync_mode` (sync mode; `0`: async; `1`: strong sync; `2`: downgradable strong sync. Default value: `2`).
  * @method string getMasterHostId() Obtain Specified UUID for the source node. If left empty, it will be assigned by the system randomly.
  * @method void setMasterHostId(string $MasterHostId) Set Specified UUID for the source node. If left empty, it will be assigned by the system randomly.
- * @method array getSlaveHostIds() Obtain Specified UUID for the u200dreplica node. If left empty, it will be assigned by the system randomly.
- * @method void setSlaveHostIds(array $SlaveHostIds) Set Specified UUID for the u200dreplica node. If left empty, it will be assigned by the system randomly.
- * @method string getRollbackInstanceId() Obtain ID of the u200dsource instance to be rolled back
- * @method void setRollbackInstanceId(string $RollbackInstanceId) Set ID of the u200dsource instance to be rolled back
+ * @method array getSlaveHostIds() Obtain Specified UUID for the replica node. If left empty, it will be assigned by the system randomly.
+ * @method void setSlaveHostIds(array $SlaveHostIds) Set Specified UUID for the replica node. If left empty, it will be assigned by the system randomly.
+ * @method string getRollbackInstanceId() Obtain ID of the source instance to be rolled back
+ * @method void setRollbackInstanceId(string $RollbackInstanceId) Set ID of the source instance to be rolled back
  * @method string getRollbackTime() Obtain Rollback time
  * @method void setRollbackTime(string $RollbackTime) Set Rollback time
+ * @method integer getDcnSyncMode() Obtain 
+ * @method void setDcnSyncMode(integer $DcnSyncMode) Set 
  */
 class CreateDedicatedClusterDCDBInstanceRequest extends AbstractModel
 {
@@ -87,7 +89,7 @@ class CreateDedicatedClusterDCDBInstanceRequest extends AbstractModel
     public $GoodsNum;
 
     /**
-     * @var integer Shard u200dcount
+     * @var integer Shard count
      */
     public $ShardNum;
 
@@ -117,7 +119,7 @@ class CreateDedicatedClusterDCDBInstanceRequest extends AbstractModel
     public $ProjectId;
 
     /**
-     * @var integer (Disused) u200dNumber of CPU u200dcores
+     * @var integer (Disused) Number of CPU cores
      */
     public $Cpu;
 
@@ -197,12 +199,12 @@ class CreateDedicatedClusterDCDBInstanceRequest extends AbstractModel
     public $Ipv6Flag;
 
     /**
-     * @var integer (Disused) Pid, which can be queried by the u200d`DescribeSpecInfo` API.
+     * @var integer (Disused) Pid, which can be queried by the `DescribeSpecInfo` API.
      */
     public $Pid;
 
     /**
-     * @var array List of parameters. Valid values: `character_set_server` (character set; required), `lower_case_table_names` (table name case sensitivity; required; `0`: case-sensitive; `1`: case-insensitive), `innodb_page_size` (InnoDB data page; default size: 16 KB), `sync_mode` (sync mode; `0`: async; `1`: strong sync; `2`: downgradable strong sync. Default value: u200d`2`).
+     * @var array List of parameters. Valid values: `character_set_server` (character set; required), `lower_case_table_names` (table name case sensitivity; required; `0`: case-sensitive; `1`: case-insensitive), `innodb_page_size` (InnoDB data page; default size: 16 KB), `sync_mode` (sync mode; `0`: async; `1`: strong sync; `2`: downgradable strong sync. Default value: `2`).
      */
     public $InitParams;
 
@@ -212,12 +214,12 @@ class CreateDedicatedClusterDCDBInstanceRequest extends AbstractModel
     public $MasterHostId;
 
     /**
-     * @var array Specified UUID for the u200dreplica node. If left empty, it will be assigned by the system randomly.
+     * @var array Specified UUID for the replica node. If left empty, it will be assigned by the system randomly.
      */
     public $SlaveHostIds;
 
     /**
-     * @var string ID of the u200dsource instance to be rolled back
+     * @var string ID of the source instance to be rolled back
      */
     public $RollbackInstanceId;
 
@@ -227,14 +229,19 @@ class CreateDedicatedClusterDCDBInstanceRequest extends AbstractModel
     public $RollbackTime;
 
     /**
+     * @var integer 
+     */
+    public $DcnSyncMode;
+
+    /**
      * @param integer $GoodsNum Number of created instances
-     * @param integer $ShardNum Shard u200dcount
+     * @param integer $ShardNum Shard count
      * @param integer $ShardMemory Shard memory size in GB
      * @param integer $ShardStorage Shard disk size in GB
      * @param string $ClusterId UUID of the dedicated cluster
      * @param string $Zone (Disused) AZ
      * @param integer $ProjectId Project ID
-     * @param integer $Cpu (Disused) u200dNumber of CPU u200dcores
+     * @param integer $Cpu (Disused) Number of CPU cores
      * @param string $VpcId VPC ID
      * @param string $SubnetId Subnet ID
      * @param string $ShardMachine (Disused) Shard model
@@ -250,12 +257,13 @@ class CreateDedicatedClusterDCDBInstanceRequest extends AbstractModel
      * @param string $InstanceName Custom instance name
      * @param array $ResourceTags Tag
      * @param integer $Ipv6Flag Whether IPv6 flag is supported. Valid values: `1` (yes), `0` (no).
-     * @param integer $Pid (Disused) Pid, which can be queried by the u200d`DescribeSpecInfo` API.
-     * @param array $InitParams List of parameters. Valid values: `character_set_server` (character set; required), `lower_case_table_names` (table name case sensitivity; required; `0`: case-sensitive; `1`: case-insensitive), `innodb_page_size` (InnoDB data page; default size: 16 KB), `sync_mode` (sync mode; `0`: async; `1`: strong sync; `2`: downgradable strong sync. Default value: u200d`2`).
+     * @param integer $Pid (Disused) Pid, which can be queried by the `DescribeSpecInfo` API.
+     * @param array $InitParams List of parameters. Valid values: `character_set_server` (character set; required), `lower_case_table_names` (table name case sensitivity; required; `0`: case-sensitive; `1`: case-insensitive), `innodb_page_size` (InnoDB data page; default size: 16 KB), `sync_mode` (sync mode; `0`: async; `1`: strong sync; `2`: downgradable strong sync. Default value: `2`).
      * @param string $MasterHostId Specified UUID for the source node. If left empty, it will be assigned by the system randomly.
-     * @param array $SlaveHostIds Specified UUID for the u200dreplica node. If left empty, it will be assigned by the system randomly.
-     * @param string $RollbackInstanceId ID of the u200dsource instance to be rolled back
+     * @param array $SlaveHostIds Specified UUID for the replica node. If left empty, it will be assigned by the system randomly.
+     * @param string $RollbackInstanceId ID of the source instance to be rolled back
      * @param string $RollbackTime Rollback time
+     * @param integer $DcnSyncMode 
      */
     function __construct()
     {
@@ -394,6 +402,10 @@ class CreateDedicatedClusterDCDBInstanceRequest extends AbstractModel
 
         if (array_key_exists("RollbackTime",$param) and $param["RollbackTime"] !== null) {
             $this->RollbackTime = $param["RollbackTime"];
+        }
+
+        if (array_key_exists("DcnSyncMode",$param) and $param["DcnSyncMode"] !== null) {
+            $this->DcnSyncMode = $param["DcnSyncMode"];
         }
     }
 }

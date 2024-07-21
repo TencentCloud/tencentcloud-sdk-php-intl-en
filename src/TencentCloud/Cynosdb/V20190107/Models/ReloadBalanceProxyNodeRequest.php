@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getClusterId() Obtain Cluster ID
  * @method void setClusterId(string $ClusterId) Set Cluster ID
- * @method string getProxyGroupId() Obtain Database proxy u200dgroup ID
- * @method void setProxyGroupId(string $ProxyGroupId) Set Database proxy u200dgroup ID
+ * @method string getProxyGroupId() Obtain Database proxy group ID
+ * @method void setProxyGroupId(string $ProxyGroupId) Set Database proxy group ID
  */
 class ReloadBalanceProxyNodeRequest extends AbstractModel
 {
@@ -33,13 +33,13 @@ class ReloadBalanceProxyNodeRequest extends AbstractModel
     public $ClusterId;
 
     /**
-     * @var string Database proxy u200dgroup ID
+     * @var string Database proxy group ID
      */
     public $ProxyGroupId;
 
     /**
      * @param string $ClusterId Cluster ID
-     * @param string $ProxyGroupId Database proxy u200dgroup ID
+     * @param string $ProxyGroupId Database proxy group ID
      */
     function __construct()
     {

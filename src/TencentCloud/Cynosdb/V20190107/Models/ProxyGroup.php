@@ -20,12 +20,12 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Proxy group
  *
- * @method string getProxyGroupId() Obtain Database proxy u200dgroup ID
- * @method void setProxyGroupId(string $ProxyGroupId) Set Database proxy u200dgroup ID
+ * @method string getProxyGroupId() Obtain Database proxy group ID
+ * @method void setProxyGroupId(string $ProxyGroupId) Set Database proxy group ID
  * @method integer getProxyNodeCount() Obtain Number of nodes in the proxy group
  * @method void setProxyNodeCount(integer $ProxyNodeCount) Set Number of nodes in the proxy group
- * @method string getStatus() Obtain Database proxy u200dgroup status
- * @method void setStatus(string $Status) Set Database proxy u200dgroup status
+ * @method string getStatus() Obtain Database proxy group status
+ * @method void setStatus(string $Status) Set Database proxy group status
  * @method string getRegion() Obtain Region
  * @method void setRegion(string $Region) Set Region
  * @method string getZone() Obtain AZ
@@ -33,22 +33,22 @@ use TencentCloud\Common\AbstractModel;
  * @method string getCurrentProxyVersion() Obtain Current proxy version
  * @method void setCurrentProxyVersion(string $CurrentProxyVersion) Set Current proxy version
  * @method string getClusterId() Obtain Cluster ID
-Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setClusterId(string $ClusterId) Set Cluster ID
-Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method integer getAppId() Obtain User `AppId`
-Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setAppId(integer $AppId) Set User `AppId`
-Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getOpenRw() Obtain Enabling read/write separation for database proxy
-Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setOpenRw(string $OpenRw) Set Enabling read/write separation for database proxy
-Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class ProxyGroup extends AbstractModel
 {
     /**
-     * @var string Database proxy u200dgroup ID
+     * @var string Database proxy group ID
      */
     public $ProxyGroupId;
 
@@ -58,7 +58,7 @@ class ProxyGroup extends AbstractModel
     public $ProxyNodeCount;
 
     /**
-     * @var string Database proxy u200dgroup status
+     * @var string Database proxy group status
      */
     public $Status;
 
@@ -79,35 +79,35 @@ class ProxyGroup extends AbstractModel
 
     /**
      * @var string Cluster ID
-Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ClusterId;
 
     /**
      * @var integer User `AppId`
-Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $AppId;
 
     /**
      * @var string Enabling read/write separation for database proxy
-Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $OpenRw;
 
     /**
-     * @param string $ProxyGroupId Database proxy u200dgroup ID
+     * @param string $ProxyGroupId Database proxy group ID
      * @param integer $ProxyNodeCount Number of nodes in the proxy group
-     * @param string $Status Database proxy u200dgroup status
+     * @param string $Status Database proxy group status
      * @param string $Region Region
      * @param string $Zone AZ
      * @param string $CurrentProxyVersion Current proxy version
      * @param string $ClusterId Cluster ID
-Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $AppId User `AppId`
-Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $OpenRw Enabling read/write separation for database proxy
-Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

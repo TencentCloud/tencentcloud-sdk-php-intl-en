@@ -198,11 +198,11 @@ If the parameter is empty, a certain number (specified by `Limit` and 20 by defa
 * The desired capacity will be reduced accordingly. The new desired capacity should be no less than the minimum capacity.
 * If the scale-in activity failed or partially succeeded, the final desired capacity only deducts the instances that have been reduced successfully.
  * @method Models\ScaleOutInstancesResponse ScaleOutInstances(Models\ScaleOutInstancesRequest $req) This API is used to add the specified number of instances to a scaling group. It returns the scaling activity ID `ActivityId`.
-* u200dMake sure that there are no ongoing scaling tasks.
+* Make sure that there are no ongoing scaling tasks.
 * This API is valid even when the scaling group is disabled. For more details, see [DisableAutoScalingGroup](https://intl.cloud.tencent.com/document/api/377/20435?from_cn_redirect=1).
 * The total number of instances after this action cannot exceed the maximum capacity.
 * If a scale-out action failed or partially succeeded, only the number of successfully created instances is added to the number of desired capacity.
-* If the allocation policy is `SPOT_MIXED`, there may be multiple scaling activities triggered for one scaling task. u200dIn this case, the first activity ID (`ActivityId`) is returned.
+* If the allocation policy is `SPOT_MIXED`, there may be multiple scaling activities triggered for one scaling task. In this case, the first activity ID (`ActivityId`) is returned.
  * @method Models\SetInstancesProtectionResponse SetInstancesProtection(Models\SetInstancesProtectionRequest $req) This API is used to enable scale-in protection for an instance.
 When scale-in protection is enabled, the instance will not be removed in scale-in activities triggered by replacement of unhealthy instances, alarm threshold reached, change of desired quantity, etc.
  * @method Models\StartAutoScalingInstancesResponse StartAutoScalingInstances(Models\StartAutoScalingInstancesRequest $req) This API is used to start up CVM instances in a scaling group.

@@ -21,23 +21,23 @@ use TencentCloud\Common\AbstractModel;
  * Information of the instance bound to the resource pack
  *
  * @method string getInstanceId() Obtain ID of the bound cluster
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setInstanceId(string $InstanceId) Set ID of the bound cluster
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getInstanceRegion() Obtain Region of the instance bound Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setInstanceRegion(string $InstanceRegion) Set Region of the instance bound Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getInstanceType() Obtain Type of the instance bound Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setInstanceType(string $InstanceType) Set Type of the instance bound Note: This field may return null, indicating that no valid values can be obtained.
  * @method array getExtendIds() Obtain ID of the instance in the bound cluster
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setExtendIds(array $ExtendIds) Set ID of the instance in the bound cluster
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class BindInstanceInfo extends AbstractModel
 {
     /**
      * @var string ID of the bound cluster
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $InstanceId;
 
@@ -53,17 +53,17 @@ Note: u200dThis field may return null, indicating that no valid values can be ob
 
     /**
      * @var array ID of the instance in the bound cluster
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ExtendIds;
 
     /**
      * @param string $InstanceId ID of the bound cluster
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $InstanceRegion Region of the instance bound Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $InstanceType Type of the instance bound Note: This field may return null, indicating that no valid values can be obtained.
      * @param array $ExtendIds ID of the instance in the bound cluster
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

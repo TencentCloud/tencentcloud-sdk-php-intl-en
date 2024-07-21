@@ -18,28 +18,28 @@ namespace TencentCloud\Cynosdb\V20190107\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Number of proxy nodes and their AZs
+ * 
  *
- * @method string getProxyNodeZone() Obtain AZ of the proxy node
- * @method void setProxyNodeZone(string $ProxyNodeZone) Set AZ of the proxy node
- * @method integer getProxyNodeCount() Obtain The number of proxy nodes
- * @method void setProxyNodeCount(integer $ProxyNodeCount) Set The number of proxy nodes
+ * @method string getZone() Obtain 
+ * @method void setZone(string $Zone) Set 
+ * @method string getBinlogSyncWay() Obtain 
+ * @method void setBinlogSyncWay(string $BinlogSyncWay) Set 
  */
-class ProxyZone extends AbstractModel
+class SlaveZoneAttrItem extends AbstractModel
 {
     /**
-     * @var string AZ of the proxy node
+     * @var string 
      */
-    public $ProxyNodeZone;
+    public $Zone;
 
     /**
-     * @var integer The number of proxy nodes
+     * @var string 
      */
-    public $ProxyNodeCount;
+    public $BinlogSyncWay;
 
     /**
-     * @param string $ProxyNodeZone AZ of the proxy node
-     * @param integer $ProxyNodeCount The number of proxy nodes
+     * @param string $Zone 
+     * @param string $BinlogSyncWay 
      */
     function __construct()
     {
@@ -54,12 +54,12 @@ class ProxyZone extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ProxyNodeZone",$param) and $param["ProxyNodeZone"] !== null) {
-            $this->ProxyNodeZone = $param["ProxyNodeZone"];
+        if (array_key_exists("Zone",$param) and $param["Zone"] !== null) {
+            $this->Zone = $param["Zone"];
         }
 
-        if (array_key_exists("ProxyNodeCount",$param) and $param["ProxyNodeCount"] !== null) {
-            $this->ProxyNodeCount = $param["ProxyNodeCount"];
+        if (array_key_exists("BinlogSyncWay",$param) and $param["BinlogSyncWay"] !== null) {
+            $this->BinlogSyncWay = $param["BinlogSyncWay"];
         }
     }
 }

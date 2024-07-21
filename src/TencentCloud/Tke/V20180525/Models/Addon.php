@@ -25,17 +25,17 @@ use TencentCloud\Common\AbstractModel;
  * @method string getAddonVersion() Obtain Add-on version
  * @method void setAddonVersion(string $AddonVersion) Set Add-on version
  * @method string getRawValues() Obtain Add-on parameters, which are base64-encoded strings in JSON/
-Note: u200dThis field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
  * @method void setRawValues(string $RawValues) Set Add-on parameters, which are base64-encoded strings in JSON/
-Note: u200dThis field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
  * @method string getPhase() Obtain Add-on status
-Note: u200dThis field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
  * @method void setPhase(string $Phase) Set Add-on status
-Note: u200dThis field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
  * @method string getReason() Obtain Reason for add-on failure
-Note: u200dThis field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
  * @method void setReason(string $Reason) Set Reason for add-on failure
-Note: u200dThis field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
  */
 class Addon extends AbstractModel
 {
@@ -51,19 +51,19 @@ class Addon extends AbstractModel
 
     /**
      * @var string Add-on parameters, which are base64-encoded strings in JSON/
-Note: u200dThis field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public $RawValues;
 
     /**
      * @var string Add-on status
-Note: u200dThis field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public $Phase;
 
     /**
      * @var string Reason for add-on failure
-Note: u200dThis field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public $Reason;
 
@@ -71,11 +71,11 @@ Note: u200dThis field may return `null`, indicating that no valid values can be 
      * @param string $AddonName Add-on name
      * @param string $AddonVersion Add-on version
      * @param string $RawValues Add-on parameters, which are base64-encoded strings in JSON/
-Note: u200dThis field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      * @param string $Phase Add-on status
-Note: u200dThis field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      * @param string $Reason Reason for add-on failure
-Note: u200dThis field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
     {

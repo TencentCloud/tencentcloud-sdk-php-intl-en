@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getClusterId() Obtain Cluster ID
  * @method void setClusterId(string $ClusterId) Set Cluster ID
- * @method string getProxyGroupId() Obtain Database proxy u200dgroup ID
- * @method void setProxyGroupId(string $ProxyGroupId) Set Database proxy u200dgroup ID
+ * @method string getProxyGroupId() Obtain Database proxy group ID
+ * @method void setProxyGroupId(string $ProxyGroupId) Set Database proxy group ID
  * @method string getConsistencyType() Obtain Consistency type. Valid values: `eventual` (eventual consistency), `session` (session consistency), `global` (global consistency).
  * @method void setConsistencyType(string $ConsistencyType) Set Consistency type. Valid values: `eventual` (eventual consistency), `session` (session consistency), `global` (global consistency).
  * @method string getConsistencyTimeOut() Obtain Consistency timeout period
@@ -56,8 +56,8 @@ use TencentCloud\Common\AbstractModel;
 `ConnectionPoolType`, `SessionConnectionPool`.
  * @method void setConnectionPoolType(string $ConnectionPoolType) Set Connection pool type. Valid values:
 `ConnectionPoolType`, `SessionConnectionPool`.
- * @method integer getConnectionPoolTimeOut() Obtain Connection u200dpersistence timeout
- * @method void setConnectionPoolTimeOut(integer $ConnectionPoolTimeOut) Set Connection u200dpersistence timeout
+ * @method integer getConnectionPoolTimeOut() Obtain Connection persistence timeout
+ * @method void setConnectionPoolTimeOut(integer $ConnectionPoolTimeOut) Set Connection persistence timeout
  */
 class ModifyProxyRwSplitRequest extends AbstractModel
 {
@@ -67,7 +67,7 @@ class ModifyProxyRwSplitRequest extends AbstractModel
     public $ClusterId;
 
     /**
-     * @var string Database proxy u200dgroup ID
+     * @var string Database proxy group ID
      */
     public $ProxyGroupId;
 
@@ -136,13 +136,13 @@ class ModifyProxyRwSplitRequest extends AbstractModel
     public $ConnectionPoolType;
 
     /**
-     * @var integer Connection u200dpersistence timeout
+     * @var integer Connection persistence timeout
      */
     public $ConnectionPoolTimeOut;
 
     /**
      * @param string $ClusterId Cluster ID
-     * @param string $ProxyGroupId Database proxy u200dgroup ID
+     * @param string $ProxyGroupId Database proxy group ID
      * @param string $ConsistencyType Consistency type. Valid values: `eventual` (eventual consistency), `session` (session consistency), `global` (global consistency).
      * @param string $ConsistencyTimeOut Consistency timeout period
      * @param string $WeightMode Assignment mode of read/write weights. Valid values: `system` (auto-assigned), `custom`
@@ -159,7 +159,7 @@ class ModifyProxyRwSplitRequest extends AbstractModel
 `yes`, `no`.
      * @param string $ConnectionPoolType Connection pool type. Valid values:
 `ConnectionPoolType`, `SessionConnectionPool`.
-     * @param integer $ConnectionPoolTimeOut Connection u200dpersistence timeout
+     * @param integer $ConnectionPoolTimeOut Connection persistence timeout
      */
     function __construct()
     {

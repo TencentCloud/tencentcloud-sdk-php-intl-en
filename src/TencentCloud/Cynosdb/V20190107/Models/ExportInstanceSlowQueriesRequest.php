@@ -38,8 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDatabase(string $Database) Set Database name
  * @method string getFileType() Obtain File type. Valid values: csv, original.
  * @method void setFileType(string $FileType) Set File type. Valid values: csv, original.
- * @method string getOrderBy() Obtain Sorting field. Valid values: u200d`QueryTime`, `LockTime`, `RowsExamined`, and `RowsSent`.
- * @method void setOrderBy(string $OrderBy) Set Sorting field. Valid values: u200d`QueryTime`, `LockTime`, `RowsExamined`, and `RowsSent`.
+ * @method string getOrderBy() Obtain Sorting field. Valid values: `QueryTime`, `LockTime`, `RowsExamined`, and `RowsSent`.
+ * @method void setOrderBy(string $OrderBy) Set Sorting field. Valid values: `QueryTime`, `LockTime`, `RowsExamined`, and `RowsSent`.
  * @method string getOrderByType() Obtain Sorting order. Valid values: `asc`, `desc`.
  * @method void setOrderByType(string $OrderByType) Set Sorting order. Valid values: `asc`, `desc`.
  */
@@ -91,7 +91,7 @@ class ExportInstanceSlowQueriesRequest extends AbstractModel
     public $FileType;
 
     /**
-     * @var string Sorting field. Valid values: u200d`QueryTime`, `LockTime`, `RowsExamined`, and `RowsSent`.
+     * @var string Sorting field. Valid values: `QueryTime`, `LockTime`, `RowsExamined`, and `RowsSent`.
      */
     public $OrderBy;
 
@@ -110,7 +110,7 @@ class ExportInstanceSlowQueriesRequest extends AbstractModel
      * @param string $Host Client host
      * @param string $Database Database name
      * @param string $FileType File type. Valid values: csv, original.
-     * @param string $OrderBy Sorting field. Valid values: u200d`QueryTime`, `LockTime`, `RowsExamined`, and `RowsSent`.
+     * @param string $OrderBy Sorting field. Valid values: `QueryTime`, `LockTime`, `RowsExamined`, and `RowsSent`.
      * @param string $OrderByType Sorting order. Valid values: `asc`, `desc`.
      */
     function __construct()
