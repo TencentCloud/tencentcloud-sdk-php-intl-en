@@ -21,193 +21,193 @@ use TencentCloud\Common\AbstractModel;
  * Vulnerability details
  *
  * @method integer getId() Obtain Vulnerability ID
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setId(integer $Id) Set Vulnerability ID
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getPatchId() Obtain POC ID of the vulnerability
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setPatchId(string $PatchId) Set POC ID of the vulnerability
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getVULName() Obtain Vulnerability name
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setVULName(string $VULName) Set Vulnerability name
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getLevel() Obtain Vulnerability severity: `high`, `middle`, `low`, `info`
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setLevel(string $Level) Set Vulnerability severity: `high`, `middle`, `low`, `info`
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getCVSSScore() Obtain CVSS score
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setCVSSScore(string $CVSSScore) Set CVSS score
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getCVEId() Obtain CVE number
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setCVEId(string $CVEId) Set CVE number
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getTag() Obtain Vulnerability tag
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setTag(string $Tag) Set Vulnerability tag
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method integer getVULCategory() Obtain Vulnerability category: `1`: Web application vulnerabilities, `2`: System component vulnerabilities, `3`: Configuration risks
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setVULCategory(integer $VULCategory) Set Vulnerability category: `1`: Web application vulnerabilities, `2`: System component vulnerabilities, `3`: Configuration risks
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getImpactOs() Obtain Operating systems affected by the vulnerability 
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setImpactOs(string $ImpactOs) Set Operating systems affected by the vulnerability 
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getImpactCOMPENT() Obtain Components affected by the vulnerability 
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setImpactCOMPENT(string $ImpactCOMPENT) Set Components affected by the vulnerability 
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getImpactVersion() Obtain Versions affected by the vulnerability
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setImpactVersion(string $ImpactVersion) Set Versions affected by the vulnerability
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getReference() Obtain Reference information of the vulnerability
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setReference(string $Reference) Set Reference information of the vulnerability
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getVULDescribe() Obtain Vulnerability description
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setVULDescribe(string $VULDescribe) Set Vulnerability description
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getFix() Obtain Fix suggestion
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setFix(string $Fix) Set Fix suggestion
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method integer getProSupport() Obtain Product support status. The real-time status is returned.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setProSupport(integer $ProSupport) Set Product support status. The real-time status is returned.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method integer getIsPublish() Obtain Specify whether the vulnerability is published as an emergency vulnerability. `1`: Published as an emergency vulnerability; `0`: Not an emergency vulnerability.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setIsPublish(integer $IsPublish) Set Specify whether the vulnerability is published as an emergency vulnerability. `1`: Published as an emergency vulnerability; `0`: Not an emergency vulnerability.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getReleaseTime() Obtain Disclosure time of the vulnerability. 
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setReleaseTime(string $ReleaseTime) Set Disclosure time of the vulnerability. 
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getCreateTime() Obtain The time when the vulnerability is added to the vulnerability database.
-Note: u200dThis field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setCreateTime(string $CreateTime) Set The time when the vulnerability is added to the vulnerability database.
-Note: u200dThis field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getUpdateTime() Obtain The last update time of the vulnerability in the database
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setUpdateTime(string $UpdateTime) Set The last update time of the vulnerability in the database
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getSubCategory() Obtain Sub-category of the vulnerability
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setSubCategory(string $SubCategory) Set Sub-category of the vulnerability
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class BugInfoDetail extends AbstractModel
 {
     /**
      * @var integer Vulnerability ID
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Id;
 
     /**
      * @var string POC ID of the vulnerability
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $PatchId;
 
     /**
      * @var string Vulnerability name
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $VULName;
 
     /**
      * @var string Vulnerability severity: `high`, `middle`, `low`, `info`
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Level;
 
     /**
      * @var string CVSS score
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $CVSSScore;
 
     /**
      * @var string CVE number
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $CVEId;
 
     /**
      * @var string Vulnerability tag
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Tag;
 
     /**
      * @var integer Vulnerability category: `1`: Web application vulnerabilities, `2`: System component vulnerabilities, `3`: Configuration risks
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $VULCategory;
 
     /**
      * @var string Operating systems affected by the vulnerability 
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ImpactOs;
 
     /**
      * @var string Components affected by the vulnerability 
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ImpactCOMPENT;
 
     /**
      * @var string Versions affected by the vulnerability
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ImpactVersion;
 
     /**
      * @var string Reference information of the vulnerability
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Reference;
 
     /**
      * @var string Vulnerability description
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $VULDescribe;
 
     /**
      * @var string Fix suggestion
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Fix;
 
     /**
      * @var integer Product support status. The real-time status is returned.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ProSupport;
 
     /**
      * @var integer Specify whether the vulnerability is published as an emergency vulnerability. `1`: Published as an emergency vulnerability; `0`: Not an emergency vulnerability.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $IsPublish;
 
     /**
      * @var string Disclosure time of the vulnerability. 
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ReleaseTime;
 
     /**
      * @var string The time when the vulnerability is added to the vulnerability database.
-Note: u200dThis field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $CreateTime;
 
@@ -219,51 +219,51 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * @var string Sub-category of the vulnerability
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $SubCategory;
 
     /**
      * @param integer $Id Vulnerability ID
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $PatchId POC ID of the vulnerability
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $VULName Vulnerability name
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $Level Vulnerability severity: `high`, `middle`, `low`, `info`
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $CVSSScore CVSS score
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $CVEId CVE number
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $Tag Vulnerability tag
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $VULCategory Vulnerability category: `1`: Web application vulnerabilities, `2`: System component vulnerabilities, `3`: Configuration risks
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $ImpactOs Operating systems affected by the vulnerability 
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $ImpactCOMPENT Components affected by the vulnerability 
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $ImpactVersion Versions affected by the vulnerability
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $Reference Reference information of the vulnerability
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $VULDescribe Vulnerability description
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $Fix Fix suggestion
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $ProSupport Product support status. The real-time status is returned.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $IsPublish Specify whether the vulnerability is published as an emergency vulnerability. `1`: Published as an emergency vulnerability; `0`: Not an emergency vulnerability.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $ReleaseTime Disclosure time of the vulnerability. 
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $CreateTime The time when the vulnerability is added to the vulnerability database.
-Note: u200dThis field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $UpdateTime The last update time of the vulnerability in the database
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $SubCategory Sub-category of the vulnerability
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
