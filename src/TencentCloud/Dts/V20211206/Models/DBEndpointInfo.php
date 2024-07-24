@@ -32,10 +32,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setDatabaseType(string $DatabaseType) Set Database type, such as `mysql`, `redis`, `mongodb`, `postgresql`, `mariadb`, and `percona`.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getNodeType() Obtain Node type. Valid values: empty or `simple` (general node); `cluster` (cluster node).
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setNodeType(string $NodeType) Set Node type. Valid values: empty or `simple` (general node); `cluster` (cluster node).
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getNodeType() Obtain Node type, empty or simple indicates a general node, cluster indicates a cluster node; for mongo services, valid values: replicaset (mongodb replica set), standalone (mongodb single node), cluster (mongodb cluster); for redis instances, valid values: empty or simple (single node), cluster (cluster), cluster-cache (cache cluster), cluster-proxy (proxy cluster).Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setNodeType(string $NodeType) Set Node type, empty or simple indicates a general node, cluster indicates a cluster node; for mongo services, valid values: replicaset (mongodb replica set), standalone (mongodb single node), cluster (mongodb cluster); for redis instances, valid values: empty or simple (single node), cluster (cluster), cluster-cache (cache cluster), cluster-proxy (proxy cluster).Note: This field may return null, indicating that no valid values can be obtained.
  * @method array getInfo() Obtain Database information
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setInfo(array $Info) Set Database information
@@ -54,6 +52,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setDatabaseNetEnv(string $DatabaseNetEnv) Set Network environment of the database. This parameter is required when `AccessType` is `ccn`. Valid values: `UserIDC` (user IDC), `TencentVPC` (Tencent Cloud VPC).
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getConnectType() Obtain 
+ * @method void setConnectType(string $ConnectType) Set 
  */
 class DBEndpointInfo extends AbstractModel
 {
@@ -76,8 +76,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $DatabaseType;
 
     /**
-     * @var string Node type. Valid values: empty or `simple` (general node); `cluster` (cluster node).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Node type, empty or simple indicates a general node, cluster indicates a cluster node; for mongo services, valid values: replicaset (mongodb replica set), standalone (mongodb single node), cluster (mongodb cluster); for redis instances, valid values: empty or simple (single node), cluster (cluster), cluster-cache (cache cluster), cluster-proxy (proxy cluster).Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $NodeType;
 
@@ -107,14 +106,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $DatabaseNetEnv;
 
     /**
+     * @var string 
+     */
+    public $ConnectType;
+
+    /**
      * @param string $Region Instance region
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $AccessType Instances network access type. Valid values: `extranet` (public network); `ipv6` (public IPv6); `cvm` (self-build on CVM); `dcg` (Direct Connect); `vpncloud` (VPN access); `cdb` (database); `ccn` (CCN); `intranet` (intranet); `vpc` (VPC). Note that the valid values are subject to the current link.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $DatabaseType Database type, such as `mysql`, `redis`, `mongodb`, `postgresql`, `mariadb`, and `percona`.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $NodeType Node type. Valid values: empty or `simple` (general node); `cluster` (cluster node).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $NodeType Node type, empty or simple indicates a general node, cluster indicates a cluster node; for mongo services, valid values: replicaset (mongodb replica set), standalone (mongodb single node), cluster (mongodb cluster); for redis instances, valid values: empty or simple (single node), cluster (cluster), cluster-cache (cache cluster), cluster-proxy (proxy cluster).Note: This field may return null, indicating that no valid values can be obtained.
      * @param array $Info Database information
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $Supplier Instance service provider, such as "aliyun" and "others".
@@ -124,6 +127,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $DatabaseNetEnv Network environment of the database. This parameter is required when `AccessType` is `ccn`. Valid values: `UserIDC` (user IDC), `TencentVPC` (Tencent Cloud VPC).
 Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $ConnectType 
      */
     function __construct()
     {
@@ -178,6 +182,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("DatabaseNetEnv",$param) and $param["DatabaseNetEnv"] !== null) {
             $this->DatabaseNetEnv = $param["DatabaseNetEnv"];
+        }
+
+        if (array_key_exists("ConnectType",$param) and $param["ConnectType"] !== null) {
+            $this->ConnectType = $param["ConnectType"];
         }
     }
 }

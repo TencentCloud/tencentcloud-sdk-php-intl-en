@@ -28,10 +28,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setDatabases(array $Databases) Set Migration object, which is required if `ObjectMode` is `partial`.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method array getAdvancedObjects() Obtain Advanced object type, such as trigger, function, procedure, and event.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setAdvancedObjects(array $AdvancedObjects) Set Advanced object type, such as trigger, function, procedure, and event.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method array getAdvancedObjects() Obtain Advanced object types, such as trigger, function, procedure, event. Note: If you want to migrate and synchronize advanced objects, the corresponding advanced object type should be included in this configuration.Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setAdvancedObjects(array $AdvancedObjects) Set Advanced object types, such as trigger, function, procedure, event. Note: If you want to migrate and synchronize advanced objects, the corresponding advanced object type should be included in this configuration.Note: This field may return null, indicating that no valid values can be obtained.
  */
 class DatabaseTableObject extends AbstractModel
 {
@@ -48,8 +46,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $Databases;
 
     /**
-     * @var array Advanced object type, such as trigger, function, procedure, and event.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array Advanced object types, such as trigger, function, procedure, event. Note: If you want to migrate and synchronize advanced objects, the corresponding advanced object type should be included in this configuration.Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $AdvancedObjects;
 
@@ -58,8 +55,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param array $Databases Migration object, which is required if `ObjectMode` is `partial`.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param array $AdvancedObjects Advanced object type, such as trigger, function, procedure, and event.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param array $AdvancedObjects Advanced object types, such as trigger, function, procedure, event. Note: If you want to migrate and synchronize advanced objects, the corresponding advanced object type should be included in this configuration.Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

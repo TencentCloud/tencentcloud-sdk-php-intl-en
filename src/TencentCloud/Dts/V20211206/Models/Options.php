@@ -52,14 +52,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setKafkaOption(KafkaOption $KafkaOption) Set Kafka sync options
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method RateLimitOption getRateLimitOption() Obtain Task speed limit information. This parameter can only be used as an output parameter.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
- * @method void setRateLimitOption(RateLimitOption $RateLimitOption) Set Task speed limit information. This parameter can only be used as an output parameter.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+ * @method RateLimitOption getRateLimitOption() Obtain Task speed limit information
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setRateLimitOption(RateLimitOption $RateLimitOption) Set Task speed limit information
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method integer getAutoRetryTimeRangeMinutes() Obtain Settings of the automatic retry time range
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setAutoRetryTimeRangeMinutes(integer $AutoRetryTimeRangeMinutes) Set Settings of the automatic retry time range
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method boolean getFilterBeginCommit() Obtain 
+ * @method void setFilterBeginCommit(boolean $FilterBeginCommit) Set 
+ * @method boolean getFilterCheckpoint() Obtain 
+ * @method void setFilterCheckpoint(boolean $FilterCheckpoint) Set 
  */
 class Options extends AbstractModel
 {
@@ -112,16 +116,26 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $KafkaOption;
 
     /**
-     * @var RateLimitOption Task speed limit information. This parameter can only be used as an output parameter.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+     * @var RateLimitOption Task speed limit information
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $RateLimitOption;
 
     /**
      * @var integer Settings of the automatic retry time range
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $AutoRetryTimeRangeMinutes;
+
+    /**
+     * @var boolean 
+     */
+    public $FilterBeginCommit;
+
+    /**
+     * @var boolean 
+     */
+    public $FilterCheckpoint;
 
     /**
      * @param string $InitType Sync initialization option. Valid values: `data` (full data initialization); `Structure` (structure initialization); `Full` (full data and structure initialization); `None` (incremental data only). Default value: `Full`.
@@ -140,10 +154,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param KafkaOption $KafkaOption Kafka sync options
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param RateLimitOption $RateLimitOption Task speed limit information. This parameter can only be used as an output parameter.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+     * @param RateLimitOption $RateLimitOption Task speed limit information
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $AutoRetryTimeRangeMinutes Settings of the automatic retry time range
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param boolean $FilterBeginCommit 
+     * @param boolean $FilterCheckpoint 
      */
     function __construct()
     {
@@ -204,6 +220,14 @@ Note: u200dThis field may returnu200d·nullu200d, indicating that no valid value
 
         if (array_key_exists("AutoRetryTimeRangeMinutes",$param) and $param["AutoRetryTimeRangeMinutes"] !== null) {
             $this->AutoRetryTimeRangeMinutes = $param["AutoRetryTimeRangeMinutes"];
+        }
+
+        if (array_key_exists("FilterBeginCommit",$param) and $param["FilterBeginCommit"] !== null) {
+            $this->FilterBeginCommit = $param["FilterBeginCommit"];
+        }
+
+        if (array_key_exists("FilterCheckpoint",$param) and $param["FilterCheckpoint"] !== null) {
+            $this->FilterCheckpoint = $param["FilterCheckpoint"];
         }
     }
 }

@@ -81,13 +81,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
  * @method void setSrcInfo(Endpoint $SrcInfo) Set Source database information. This parameter is used by single-node databases.
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getSrcNodeType() Obtain Valid values: `cluster`, `single`. `single`: For single-node source databases; `cluster`: For multi-node source databases.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setSrcNodeType(string $SrcNodeType) Set Valid values: `cluster`, `single`. `single`: For single-node source databases; `cluster`: For multi-node source databases.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method SyncDBEndpointInfos getSrcInfos() Obtain Source database information. This parameter is used for multi-node databases.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setSrcInfos(SyncDBEndpointInfos $SrcInfos) Set Source database information. This parameter is used for multi-node databases.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getDstRegion() Obtain Target database region, such as `ap-guangzhou`.
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setDstRegion(string $DstRegion) Set Target database region, such as `ap-guangzhou`.
@@ -105,13 +105,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
  * @method void setDstInfo(Endpoint $DstInfo) Set Target database information. This parameter is used by single-node databases.
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getDstNodeType() Obtain Valid values: `cluster`, `single`. `single`: For single-node target databases; `cluster`: For multi-node target databases.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setDstNodeType(string $DstNodeType) Set Valid values: `cluster`, `single`. `single`: For single-node target databases; `cluster`: For multi-node target databases.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method SyncDBEndpointInfos getDstInfos() Obtain Target database information. This parameter is used for multi-node databases.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setDstInfos(SyncDBEndpointInfos $DstInfos) Set Target database information. This parameter is used for multi-node databases.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getCreateTime() Obtain Creation time in the format of `yyyy-mm-dd hh:mm:ss`
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setCreateTime(string $CreateTime) Set Creation time in the format of `yyyy-mm-dd hh:mm:ss`
@@ -157,9 +157,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
  * @method void setAutoRetryTimeRangeMinutes(integer $AutoRetryTimeRangeMinutes) Set Settings of automatic retry time
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getDumperResumeCtrl() Obtain Whether the task can be reentered in the full export stage. Valid values: `yes`, `no`. `yes`: The current task can be reentered. `no`: The current task is in the full export stage which cannot be reentered. If the value of this parameter is `no`, the checkpoint restart is not supported when the task is restarted in the export stage.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setDumperResumeCtrl(string $DumperResumeCtrl) Set Whether the task can be reentered in the full export stage. Valid values: `yes`, `no`. `yes`: The current task can be reentered. `no`: The current task is in the full export stage which cannot be reentered. If the value of this parameter is `no`, the checkpoint restart is not supported when the task is restarted in the export stage.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class SyncJobInfo extends AbstractModel
 {
@@ -255,13 +255,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * @var string Valid values: `cluster`, `single`. `single`: For single-node source databases; `cluster`: For multi-node source databases.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $SrcNodeType;
 
     /**
      * @var SyncDBEndpointInfos Source database information. This parameter is used for multi-node databases.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $SrcInfos;
 
@@ -291,13 +291,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * @var string Valid values: `cluster`, `single`. `single`: For single-node target databases; `cluster`: For multi-node target databases.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $DstNodeType;
 
     /**
      * @var SyncDBEndpointInfos Target database information. This parameter is used for multi-node databases.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $DstInfos;
 
@@ -369,7 +369,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * @var string Whether the task can be reentered in the full export stage. Valid values: `yes`, `no`. `yes`: The current task can be reentered. `no`: The current task is in the full export stage which cannot be reentered. If the value of this parameter is `no`, the checkpoint restart is not supported when the task is restarted in the export stage.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $DumperResumeCtrl;
 
@@ -405,9 +405,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param Endpoint $SrcInfo Source database information. This parameter is used by single-node databases.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $SrcNodeType Valid values: `cluster`, `single`. `single`: For single-node source databases; `cluster`: For multi-node source databases.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param SyncDBEndpointInfos $SrcInfos Source database information. This parameter is used for multi-node databases.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $DstRegion Target database region, such as `ap-guangzhou`.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $DstDatabaseType Target database type, such as `mysql`, `cynosdbmysql`, `tdapg`, `tdpg`, and `tdsqlmysql`.
@@ -417,9 +417,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param Endpoint $DstInfo Target database information. This parameter is used by single-node databases.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $DstNodeType Valid values: `cluster`, `single`. `single`: For single-node target databases; `cluster`: For multi-node target databases.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param SyncDBEndpointInfos $DstInfos Target database information. This parameter is used for multi-node databases.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $CreateTime Creation time in the format of `yyyy-mm-dd hh:mm:ss`
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $StartTime Start time in the format of `yyyy-mm-dd hh:mm:ss`
@@ -443,7 +443,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param integer $AutoRetryTimeRangeMinutes Settings of automatic retry time
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $DumperResumeCtrl Whether the task can be reentered in the full export stage. Valid values: `yes`, `no`. `yes`: The current task can be reentered. `no`: The current task is in the full export stage which cannot be reentered. If the value of this parameter is `no`, the checkpoint restart is not supported when the task is restarted in the export stage.
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

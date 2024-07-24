@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setDatabases(array $Databases) Set Sync object, which is required if `Mode` is `Partial`.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method array getAdvancedObjects() Obtain Advanced object type, such as functions and procedures. If you need to sync advanced objects, the initialization type must include structure initialization, that is, `Options.InitType` must be `Structure` or `Full`. Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setAdvancedObjects(array $AdvancedObjects) Set Advanced object type, such as functions and procedures. If you need to sync advanced objects, the initialization type must include structure initialization, that is, `Options.InitType` must be `Structure` or `Full`. Note: This field may return null, indicating that no valid values can be obtained.
+ * @method array getAdvancedObjects() Obtain Advanced object types, such as function and procedure. Note: If you want to migrate and synchronize advanced objects, the corresponding advanced object type should be included in this configuration. When advanced objects need to be synchronized, the initialization type must include the structure initialization type, that is, the Options.InitType value of the task is Structure or Full.Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setAdvancedObjects(array $AdvancedObjects) Set Advanced object types, such as function and procedure. Note: If you want to migrate and synchronize advanced objects, the corresponding advanced object type should be included in this configuration. When advanced objects need to be synchronized, the initialization type must include the structure initialization type, that is, the Options.InitType value of the task is Structure or Full.Note: This field may return null, indicating that no valid values can be obtained.
  * @method OnlineDDL getOnlineDDL() Obtain A redundant field that specifies the online DDL type
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setOnlineDDL(OnlineDDL $OnlineDDL) Set A redundant field that specifies the online DDL type
@@ -47,7 +47,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $Databases;
 
     /**
-     * @var array Advanced object type, such as functions and procedures. If you need to sync advanced objects, the initialization type must include structure initialization, that is, `Options.InitType` must be `Structure` or `Full`. Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array Advanced object types, such as function and procedure. Note: If you want to migrate and synchronize advanced objects, the corresponding advanced object type should be included in this configuration. When advanced objects need to be synchronized, the initialization type must include the structure initialization type, that is, the Options.InitType value of the task is Structure or Full.Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $AdvancedObjects;
 
@@ -61,7 +61,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $Mode Sync object type. Valid value: `Partial` (Partial objects). Note: This field may return null, indicating that no valid values can be obtained.
      * @param array $Databases Sync object, which is required if `Mode` is `Partial`.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param array $AdvancedObjects Advanced object type, such as functions and procedures. If you need to sync advanced objects, the initialization type must include structure initialization, that is, `Options.InitType` must be `Structure` or `Full`. Note: This field may return null, indicating that no valid values can be obtained.
+     * @param array $AdvancedObjects Advanced object types, such as function and procedure. Note: If you want to migrate and synchronize advanced objects, the corresponding advanced object type should be included in this configuration. When advanced objects need to be synchronized, the initialization type must include the structure initialization type, that is, the Options.InitType value of the task is Structure or Full.Note: This field may return null, indicating that no valid values can be obtained.
      * @param OnlineDDL $OnlineDDL A redundant field that specifies the online DDL type
 Note: This field may return null, indicating that no valid values can be obtained.
      */

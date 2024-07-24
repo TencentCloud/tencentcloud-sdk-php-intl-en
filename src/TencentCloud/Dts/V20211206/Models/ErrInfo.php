@@ -23,13 +23,13 @@ use TencentCloud\Common\AbstractModel;
  * @method string getReason() Obtain Cause of the error
  * @method void setReason(string $Reason) Set Cause of the error
  * @method string getMessage() Obtain Error message
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setMessage(string $Message) Set Error message
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getSolution() Obtain Solution
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setSolution(string $Solution) Set Solution
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class ErrInfo extends AbstractModel
 {
@@ -40,22 +40,22 @@ class ErrInfo extends AbstractModel
 
     /**
      * @var string Error message
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Message;
 
     /**
      * @var string Solution
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Solution;
 
     /**
      * @param string $Reason Cause of the error
      * @param string $Message Error message
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $Solution Solution
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

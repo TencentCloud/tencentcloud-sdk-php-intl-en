@@ -104,18 +104,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setRoleExternalId(string $RoleExternalId) Set External role ID
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getTmpSecretId() Obtain ID of the temporary key, which is required if the operation is performed across accounts.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setTmpSecretId(string $TmpSecretId) Set ID of the temporary key, which is required if the operation is performed across accounts.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getTmpSecretKey() Obtain Key of the temporary key, which is required if the operation is performed across accounts.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setTmpSecretKey(string $TmpSecretKey) Set Key of the temporary key, which is required if the operation is performed across accounts.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getTmpToken() Obtain Temporary token, which is required if the operation is performed across accounts.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setTmpToken(string $TmpToken) Set Temporary token, which is required if the operation is performed across accounts.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getTmpSecretId() Obtain Temporary SecretId, you can obtain the temporary key by [GetFederationToken](https://intl.cloud.tencent.com/document/product/1312/48195?from_cn_redirect=1). This field is required if it is a cross-account instance.Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setTmpSecretId(string $TmpSecretId) Set Temporary SecretId, you can obtain the temporary key by [GetFederationToken](https://intl.cloud.tencent.com/document/product/1312/48195?from_cn_redirect=1). This field is required if it is a cross-account instance.Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getTmpSecretKey() Obtain Temporary SecretKey, you can obtain the temporary key by [GetFederationToken](https://intl.cloud.tencent.com/document/product/1312/48195?from_cn_redirect=1). This field is required if it is a cross-account instance.Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setTmpSecretKey(string $TmpSecretKey) Set Temporary SecretKey, you can obtain the temporary key by [GetFederationToken](https://intl.cloud.tencent.com/document/product/1312/48195?from_cn_redirect=1). This field is required if it is a cross-account instance.Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getTmpToken() Obtain Temporary token, you can obtain the temporary key by [GetFederationToken](https://intl.cloud.tencent.com/document/product/1312/48195?from_cn_redirect=1). This field is required if it is a cross-account instance. Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setTmpToken(string $TmpToken) Set Temporary token, you can obtain the temporary key by [GetFederationToken](https://intl.cloud.tencent.com/document/product/1312/48195?from_cn_redirect=1). This field is required if it is a cross-account instance. Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getEncryptConn() Obtain Whether to enable encrypted transfer (`UnEncrypted`: No; `Encrypted`: Yes). Default value: `UnEncrypted`.
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setEncryptConn(string $EncryptConn) Set Whether to enable encrypted transfer (`UnEncrypted`: No; `Encrypted`: Yes). Default value: `UnEncrypted`.
@@ -125,9 +119,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
  * @method void setDatabaseNetEnv(string $DatabaseNetEnv) Set Network environment of the database. This parameter is required when `AccessType` is `ccn`. Valid values: `UserIDC` (user IDC), `TencentVPC` (Tencent Cloud VPC).
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getCcnOwnerUin() Obtain The root account of CCN in the scenario where the database is connected to CCN under another Tencent Cloud account
-Note: u200dThis field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
  * @method void setCcnOwnerUin(string $CcnOwnerUin) Set The root account of CCN in the scenario where the database is connected to CCN under another Tencent Cloud account
-Note: u200dThis field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method string getChildInstanceId() Obtain 
+ * @method void setChildInstanceId(string $ChildInstanceId) Set 
+ * @method string getChildInstanceType() Obtain 
+ * @method void setChildInstanceType(string $ChildInstanceType) Set 
+ * @method string getSetId() Obtain 
+ * @method void setSetId(string $SetId) Set 
  */
 class Endpoint extends AbstractModel
 {
@@ -258,20 +258,17 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $RoleExternalId;
 
     /**
-     * @var string ID of the temporary key, which is required if the operation is performed across accounts.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Temporary SecretId, you can obtain the temporary key by [GetFederationToken](https://intl.cloud.tencent.com/document/product/1312/48195?from_cn_redirect=1). This field is required if it is a cross-account instance.Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $TmpSecretId;
 
     /**
-     * @var string Key of the temporary key, which is required if the operation is performed across accounts.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Temporary SecretKey, you can obtain the temporary key by [GetFederationToken](https://intl.cloud.tencent.com/document/product/1312/48195?from_cn_redirect=1). This field is required if it is a cross-account instance.Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $TmpSecretKey;
 
     /**
-     * @var string Temporary token, which is required if the operation is performed across accounts.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Temporary token, you can obtain the temporary key by [GetFederationToken](https://intl.cloud.tencent.com/document/product/1312/48195?from_cn_redirect=1). This field is required if it is a cross-account instance. Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $TmpToken;
 
@@ -289,9 +286,24 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * @var string The root account of CCN in the scenario where the database is connected to CCN under another Tencent Cloud account
-Note: u200dThis field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public $CcnOwnerUin;
+
+    /**
+     * @var string 
+     */
+    public $ChildInstanceId;
+
+    /**
+     * @var string 
+     */
+    public $ChildInstanceType;
+
+    /**
+     * @var string 
+     */
+    public $SetId;
 
     /**
      * @param string $Region Region name, such as `ap-guangzhou`.
@@ -336,18 +348,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $RoleExternalId External role ID
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $TmpSecretId ID of the temporary key, which is required if the operation is performed across accounts.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $TmpSecretKey Key of the temporary key, which is required if the operation is performed across accounts.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $TmpToken Temporary token, which is required if the operation is performed across accounts.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $TmpSecretId Temporary SecretId, you can obtain the temporary key by [GetFederationToken](https://intl.cloud.tencent.com/document/product/1312/48195?from_cn_redirect=1). This field is required if it is a cross-account instance.Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $TmpSecretKey Temporary SecretKey, you can obtain the temporary key by [GetFederationToken](https://intl.cloud.tencent.com/document/product/1312/48195?from_cn_redirect=1). This field is required if it is a cross-account instance.Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $TmpToken Temporary token, you can obtain the temporary key by [GetFederationToken](https://intl.cloud.tencent.com/document/product/1312/48195?from_cn_redirect=1). This field is required if it is a cross-account instance. Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $EncryptConn Whether to enable encrypted transfer (`UnEncrypted`: No; `Encrypted`: Yes). Default value: `UnEncrypted`.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $DatabaseNetEnv Network environment of the database. This parameter is required when `AccessType` is `ccn`. Valid values: `UserIDC` (user IDC), `TencentVPC` (Tencent Cloud VPC).
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $CcnOwnerUin The root account of CCN in the scenario where the database is connected to CCN under another Tencent Cloud account
-Note: u200dThis field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param string $ChildInstanceId 
+     * @param string $ChildInstanceType 
+     * @param string $SetId 
      */
     function __construct()
     {
@@ -468,6 +480,18 @@ Note: u200dThis field may return `null`, indicating that no valid values can be 
 
         if (array_key_exists("CcnOwnerUin",$param) and $param["CcnOwnerUin"] !== null) {
             $this->CcnOwnerUin = $param["CcnOwnerUin"];
+        }
+
+        if (array_key_exists("ChildInstanceId",$param) and $param["ChildInstanceId"] !== null) {
+            $this->ChildInstanceId = $param["ChildInstanceId"];
+        }
+
+        if (array_key_exists("ChildInstanceType",$param) and $param["ChildInstanceType"] !== null) {
+            $this->ChildInstanceType = $param["ChildInstanceType"];
+        }
+
+        if (array_key_exists("SetId",$param) and $param["SetId"] !== null) {
+            $this->SetId = $param["SetId"];
         }
     }
 }

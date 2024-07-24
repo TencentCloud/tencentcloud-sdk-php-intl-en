@@ -88,18 +88,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setAccountMode(string $AccountMode) Set The account to which the resource belongs. Valid values: empty or `self` (the current account); `other` (another account).
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getTmpSecretId() Obtain ID of the temporary key
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setTmpSecretId(string $TmpSecretId) Set ID of the temporary key
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getTmpSecretKey() Obtain Key of the temporary key
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setTmpSecretKey(string $TmpSecretKey) Set Key of the temporary key
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getTmpToken() Obtain Temporary token
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setTmpToken(string $TmpToken) Set Temporary token
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getTmpSecretId() Obtain Temporary SecretId, you can obtain the temporary key by [GetFederationToken](https://intl.cloud.tencent.com/document/product/1312/48195?from_cn_redirect=1).Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setTmpSecretId(string $TmpSecretId) Set Temporary SecretId, you can obtain the temporary key by [GetFederationToken](https://intl.cloud.tencent.com/document/product/1312/48195?from_cn_redirect=1).Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getTmpSecretKey() Obtain Temporary SecretKey, you can obtain the temporary key by [GetFederationToken](https://intl.cloud.tencent.com/document/product/1312/48195?from_cn_redirect=1).Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setTmpSecretKey(string $TmpSecretKey) Set Temporary SecretKey, you can obtain the temporary key by [GetFederationToken](https://intl.cloud.tencent.com/document/product/1312/48195?from_cn_redirect=1).Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getTmpToken() Obtain Temporary token, you can obtain the temporary key by [GetFederationToken](https://intl.cloud.tencent.com/document/product/1312/48195?from_cn_redirect=1).Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setTmpToken(string $TmpToken) Set Temporary token, you can obtain the temporary key by [GetFederationToken](https://intl.cloud.tencent.com/document/product/1312/48195?from_cn_redirect=1).Note: This field may return null, indicating that no valid values can be obtained.
  */
 class DBInfo extends AbstractModel
 {
@@ -206,20 +200,17 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $AccountMode;
 
     /**
-     * @var string ID of the temporary key
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Temporary SecretId, you can obtain the temporary key by [GetFederationToken](https://intl.cloud.tencent.com/document/product/1312/48195?from_cn_redirect=1).Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $TmpSecretId;
 
     /**
-     * @var string Key of the temporary key
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Temporary SecretKey, you can obtain the temporary key by [GetFederationToken](https://intl.cloud.tencent.com/document/product/1312/48195?from_cn_redirect=1).Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $TmpSecretKey;
 
     /**
-     * @var string Temporary token
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Temporary token, you can obtain the temporary key by [GetFederationToken](https://intl.cloud.tencent.com/document/product/1312/48195?from_cn_redirect=1).Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $TmpToken;
 
@@ -258,12 +249,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $AccountMode The account to which the resource belongs. Valid values: empty or `self` (the current account); `other` (another account).
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $TmpSecretId ID of the temporary key
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $TmpSecretKey Key of the temporary key
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $TmpToken Temporary token
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $TmpSecretId Temporary SecretId, you can obtain the temporary key by [GetFederationToken](https://intl.cloud.tencent.com/document/product/1312/48195?from_cn_redirect=1).Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $TmpSecretKey Temporary SecretKey, you can obtain the temporary key by [GetFederationToken](https://intl.cloud.tencent.com/document/product/1312/48195?from_cn_redirect=1).Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $TmpToken Temporary token, you can obtain the temporary key by [GetFederationToken](https://intl.cloud.tencent.com/document/product/1312/48195?from_cn_redirect=1).Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

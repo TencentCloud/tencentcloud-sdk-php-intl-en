@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Log import rule
  *
- * @method string getRechargeType() Obtain Import type. Valid values: `json_log` (JSON logs), `minimalist_log` (single-line full text), and fullregex_log u200d(single-line full regex)
- * @method void setRechargeType(string $RechargeType) Set Import type. Valid values: `json_log` (JSON logs), `minimalist_log` (single-line full text), and fullregex_log u200d(single-line full regex)
+ * @method string getRechargeType() Obtain Import type. Valid values: `json_log` (JSON logs), `minimalist_log` (single-line full text), and fullregex_log (single-line full regex)
+ * @method void setRechargeType(string $RechargeType) Set Import type. Valid values: `json_log` (JSON logs), `minimalist_log` (single-line full text), and fullregex_log (single-line full regex)
  * @method integer getEncodingFormat() Obtain Encoding format. Valid values: 0 (default, UTF-8) and 1 GBK).
  * @method void setEncodingFormat(integer $EncodingFormat) Set Encoding format. Valid values: 0 (default, UTF-8) and 1 GBK).
  * @method boolean getDefaultTimeSwitch() Obtain Whether to use the default time. Valid values: `true` (default) and `false`.
@@ -72,7 +72,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 class LogRechargeRuleInfo extends AbstractModel
 {
     /**
-     * @var string Import type. Valid values: `json_log` (JSON logs), `minimalist_log` (single-line full text), and fullregex_log u200d(single-line full regex)
+     * @var string Import type. Valid values: `json_log` (JSON logs), `minimalist_log` (single-line full text), and fullregex_log (single-line full regex)
      */
     public $RechargeType;
 
@@ -152,7 +152,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $Keys;
 
     /**
-     * @param string $RechargeType Import type. Valid values: `json_log` (JSON logs), `minimalist_log` (single-line full text), and fullregex_log u200d(single-line full regex)
+     * @param string $RechargeType Import type. Valid values: `json_log` (JSON logs), `minimalist_log` (single-line full text), and fullregex_log (single-line full regex)
      * @param integer $EncodingFormat Encoding format. Valid values: 0 (default, UTF-8) and 1 GBK).
      * @param boolean $DefaultTimeSwitch Whether to use the default time. Valid values: `true` (default) and `false`.
      * @param string $LogRegex Full log matching rule, which is valid only if `RechargeType` is `fullregex_log`.

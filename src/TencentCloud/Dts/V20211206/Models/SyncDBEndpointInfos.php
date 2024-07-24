@@ -32,10 +32,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setDatabaseType(string $DatabaseType) Set Database type, such as `mysql`, `redis`, `mongodb`, `postgresql`, `mariadb`, and `percona`.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method array getInfo() Obtain Database information
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setInfo(array $Info) Set Database information
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method array getInfo() Obtain Database information. Note: If the data type is tdsqlmysql, the order of this Endpoint array should correspond to the set order, and the first shard (shardkey range starting from 0) must be entered first.Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setInfo(array $Info) Set Database information. Note: If the data type is tdsqlmysql, the order of this Endpoint array should correspond to the set order, and the first shard (shardkey range starting from 0) must be entered first.Note: This field may return null, indicating that no valid values can be obtained.
  */
 class SyncDBEndpointInfos extends AbstractModel
 {
@@ -58,8 +56,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $DatabaseType;
 
     /**
-     * @var array Database information
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array Database information. Note: If the data type is tdsqlmysql, the order of this Endpoint array should correspond to the set order, and the first shard (shardkey range starting from 0) must be entered first.Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Info;
 
@@ -70,8 +67,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $DatabaseType Database type, such as `mysql`, `redis`, `mongodb`, `postgresql`, `mariadb`, and `percona`.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param array $Info Database information
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param array $Info Database information. Note: If the data type is tdsqlmysql, the order of this Endpoint array should correspond to the set order, and the first shard (shardkey range starting from 0) must be entered first.Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Sync options configured when the target database is Kafka
  *
- * @method string getDataType() Obtain Type of data that is delivered to Kafka, such as `Avro` and `Json`.
- * @method void setDataType(string $DataType) Set Type of data that is delivered to Kafka, such as `Avro` and `Json`.
+ * @method string getDataType() Obtain Data type delivered to Kafka, such as Avro, Json, canal-pb, canal-json
+ * @method void setDataType(string $DataType) Set Data type delivered to Kafka, such as Avro, Json, canal-pb, canal-json
  * @method string getTopicType() Obtain Topic sync policy, such as `Single` (deliver all data to a single topic), `Multi` (deliver data to multiple custom topics).
  * @method void setTopicType(string $TopicType) Set Topic sync policy, such as `Single` (deliver all data to a single topic), `Multi` (deliver data to multiple custom topics).
  * @method string getDDLTopicName() Obtain Topic for DDL storage
@@ -32,7 +32,7 @@ use TencentCloud\Common\AbstractModel;
 class KafkaOption extends AbstractModel
 {
     /**
-     * @var string Type of data that is delivered to Kafka, such as `Avro` and `Json`.
+     * @var string Data type delivered to Kafka, such as Avro, Json, canal-pb, canal-json
      */
     public $DataType;
 
@@ -52,7 +52,7 @@ class KafkaOption extends AbstractModel
     public $TopicRules;
 
     /**
-     * @param string $DataType Type of data that is delivered to Kafka, such as `Avro` and `Json`.
+     * @param string $DataType Data type delivered to Kafka, such as Avro, Json, canal-pb, canal-json
      * @param string $TopicType Topic sync policy, such as `Single` (deliver all data to a single topic), `Multi` (deliver data to multiple custom topics).
      * @param string $DDLTopicName Topic for DDL storage
      * @param array $TopicRules Topic description
