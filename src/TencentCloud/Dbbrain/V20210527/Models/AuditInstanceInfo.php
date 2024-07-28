@@ -33,9 +33,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getRegion() Obtain The region where the instance resides
  * @method void setRegion(string $Region) Set The region where the instance resides
  * @method array getResourceTags() Obtain Resource tags
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
  * @method void setResourceTags(array $ResourceTags) Set Resource tags
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
  */
 class AuditInstanceInfo extends AbstractModel
 {
@@ -71,7 +69,6 @@ class AuditInstanceInfo extends AbstractModel
 
     /**
      * @var array Resource tags
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
      */
     public $ResourceTags;
 
@@ -83,7 +80,6 @@ Note: u200dThis field may returnu200d·nullu200d, indicating that no valid value
      * @param integer $ProjectId Project ID
      * @param string $Region The region where the instance resides
      * @param array $ResourceTags Resource tags
-Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
      */
     function __construct()
     {

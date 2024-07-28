@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getProduct() Obtain Service type. Valid values: `dcdb` (TDSQL for MySQL), `mariadb` (TencentDB for MariaDB).
  * @method void setProduct(string $Product) Set Service type. Valid values: `dcdb` (TDSQL for MySQL), `mariadb` (TencentDB for MariaDB).
- * @method string getNodeRequestType() Obtain Use the value of `u200cProduct` for this parameter, such as `dcdb` and `mariadb`.
- * @method void setNodeRequestType(string $NodeRequestType) Set Use the value of `u200cProduct` for this parameter, such as `dcdb` and `mariadb`.
+ * @method string getNodeRequestType() Obtain Use the value of `Product` for this parameter, such as `dcdb` and `mariadb`.
+ * @method void setNodeRequestType(string $NodeRequestType) Set Use the value of `Product` for this parameter, such as `dcdb` and `mariadb`.
  * @method integer getAuditSwitch() Obtain Audit status. Valid values: `0` (Not enabled), `1` (Enabled). Default value: `0`.
  * @method void setAuditSwitch(integer $AuditSwitch) Set Audit status. Valid values: `0` (Not enabled), `1` (Enabled). Default value: `0`.
  * @method integer getOffset() Obtain The offset. Default value: `0`.
@@ -41,7 +41,7 @@ class DescribeAuditInstanceListRequest extends AbstractModel
     public $Product;
 
     /**
-     * @var string Use the value of `u200cProduct` for this parameter, such as `dcdb` and `mariadb`.
+     * @var string Use the value of `Product` for this parameter, such as `dcdb` and `mariadb`.
      */
     public $NodeRequestType;
 
@@ -67,7 +67,7 @@ class DescribeAuditInstanceListRequest extends AbstractModel
 
     /**
      * @param string $Product Service type. Valid values: `dcdb` (TDSQL for MySQL), `mariadb` (TencentDB for MariaDB).
-     * @param string $NodeRequestType Use the value of `u200cProduct` for this parameter, such as `dcdb` and `mariadb`.
+     * @param string $NodeRequestType Use the value of `Product` for this parameter, such as `dcdb` and `mariadb`.
      * @param integer $AuditSwitch Audit status. Valid values: `0` (Not enabled), `1` (Enabled). Default value: `0`.
      * @param integer $Offset The offset. Default value: `0`.
      * @param integer $Limit The number of queried items. Default value: `20`. Max value: `100`.
