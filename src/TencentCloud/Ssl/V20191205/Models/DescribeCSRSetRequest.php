@@ -24,10 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) Set The number of CSRs on each page. The default value is 10, and the maximum value is 100.
  * @method integer getOffset() Obtain The pagination offset, starting from 0.	
  * @method void setOffset(integer $Offset) Set The pagination offset, starting from 0.	
- * @method string getDomain() Obtain The domain for CSR filtering.
- * @method void setDomain(string $Domain) Set The domain for CSR filtering.
- * @method string getEncryptAlgo() Obtain The encryption algorithm for CSR filtering.
- * @method void setEncryptAlgo(string $EncryptAlgo) Set The encryption algorithm for CSR filtering.
+ * @method string getDomain() Obtain The domain for CSR filtering
+ * @method void setDomain(string $Domain) Set The domain for CSR filtering
+ * @method string getEncryptAlgo() Obtain The encryption algorithm for CSR filtering
+ * @method void setEncryptAlgo(string $EncryptAlgo) Set The encryption algorithm for CSR filtering
  */
 class DescribeCSRSetRequest extends AbstractModel
 {
@@ -42,20 +42,20 @@ class DescribeCSRSetRequest extends AbstractModel
     public $Offset;
 
     /**
-     * @var string The domain for CSR filtering.
+     * @var string The domain for CSR filtering
      */
     public $Domain;
 
     /**
-     * @var string The encryption algorithm for CSR filtering.
+     * @var string The encryption algorithm for CSR filtering
      */
     public $EncryptAlgo;
 
     /**
      * @param integer $Limit The number of CSRs on each page. The default value is 10, and the maximum value is 100.
      * @param integer $Offset The pagination offset, starting from 0.	
-     * @param string $Domain The domain for CSR filtering.
-     * @param string $EncryptAlgo The encryption algorithm for CSR filtering.
+     * @param string $Domain The domain for CSR filtering
+     * @param string $EncryptAlgo The encryption algorithm for CSR filtering
      */
     function __construct()
     {

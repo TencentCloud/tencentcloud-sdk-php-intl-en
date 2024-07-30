@@ -58,7 +58,7 @@ use TencentCloud\Postgres\V20170312\Models as Models;
  * @method Models\DescribeDBBackupsResponse DescribeDBBackups(Models\DescribeDBBackupsRequest $req) This API is used to query the backup list of an instance. This API is disused and replaced by the [DescribeBaseBackups](https://intl.cloud.tencent.com/document/api/409/89022?from_cn_redirect=1) API.
  * @method Models\DescribeDBErrlogsResponse DescribeDBErrlogs(Models\DescribeDBErrlogsRequest $req) This API is used to query an error log.
  * @method Models\DescribeDBInstanceAttributeResponse DescribeDBInstanceAttribute(Models\DescribeDBInstanceAttributeRequest $req) This API is used to query the details of one instance.
- * @method Models\DescribeDBInstanceHAConfigResponse DescribeDBInstanceHAConfig(Models\DescribeDBInstanceHAConfigRequest $req) This API is used to query the HA configuration of an instance, u200cwhich includes:
+ * @method Models\DescribeDBInstanceHAConfigResponse DescribeDBInstanceHAConfig(Models\DescribeDBInstanceHAConfigRequest $req) This API is used to query the HA configuration of an instance, which includes:
 <li>Allow a standby node to promote to a primary node.
 <li>Allow a semi-sync instance to adopt sync or async replication.
  * @method Models\DescribeDBInstanceParametersResponse DescribeDBInstanceParameters(Models\DescribeDBInstanceParametersRequest $req) This API is used to query the parameters of an instance.
@@ -95,7 +95,7 @@ use TencentCloud\Postgres\V20170312\Models as Models;
  * @method Models\ModifyBaseBackupExpireTimeResponse ModifyBaseBackupExpireTime(Models\ModifyBaseBackupExpireTimeRequest $req) This API is used to modify the expiration time of a specified data backup for an instance.
  * @method Models\ModifyDBInstanceChargeTypeResponse ModifyDBInstanceChargeType(Models\ModifyDBInstanceChargeTypeRequest $req) This API is used to switch the instance billing mode from pay-as-you-go to monthly subscription.
  * @method Models\ModifyDBInstanceDeploymentResponse ModifyDBInstanceDeployment(Models\ModifyDBInstanceDeploymentRequest $req) This API is used to modify the AZs where the nodes of a source instance reside.
- * @method Models\ModifyDBInstanceHAConfigResponse ModifyDBInstanceHAConfig(Models\ModifyDBInstanceHAConfigRequest $req) This API is used to modify the HA configuration of an instance. u200cwhich includes:
+ * @method Models\ModifyDBInstanceHAConfigResponse ModifyDBInstanceHAConfig(Models\ModifyDBInstanceHAConfigRequest $req) This API is used to modify the HA configuration of an instance. which includes:
 <li>Allow the standby node to promote to the primary node.
 <li>Allow a semi-sync instance to adopt sync or async replication.
  * @method Models\ModifyDBInstanceNameResponse ModifyDBInstanceName(Models\ModifyDBInstanceNameRequest $req) This API is used to rename a TencentDB for PostgreSQL instance.

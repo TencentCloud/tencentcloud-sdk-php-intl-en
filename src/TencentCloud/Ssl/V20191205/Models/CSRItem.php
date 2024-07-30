@@ -65,9 +65,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
  * @method void setStatus(integer $Status) Set The status.
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getCreateTime() Obtain The creation time.
-Note: u200dThis field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
  * @method void setCreateTime(string $CreateTime) Set The creation time.
-Note: u200dThis field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
  * @method string getEncryptAlgo() Obtain The encryption algorithm.
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setEncryptAlgo(string $EncryptAlgo) Set The encryption algorithm.
@@ -147,7 +147,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * @var string The creation time.
-Note: u200dThis field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public $CreateTime;
 
@@ -187,7 +187,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param integer $Status The status.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $CreateTime The creation time.
-Note: u200dThis field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      * @param string $EncryptAlgo The encryption algorithm.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $KeyParameter The algorithm parameter.

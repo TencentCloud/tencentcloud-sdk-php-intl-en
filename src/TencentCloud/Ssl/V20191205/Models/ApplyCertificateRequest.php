@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ApplyCertificate request structure.
  *
- * @method string getDvAuthMethod() Obtain Validation type. `DNS_AUTO`: automatic DNS validation; `DNS`: manual DNS validation; `FILE`: file validation
- * @method void setDvAuthMethod(string $DvAuthMethod) Set Validation type. `DNS_AUTO`: automatic DNS validation; `DNS`: manual DNS validation; `FILE`: file validation
+ * @method string getDvAuthMethod() Obtain Validation type. `DNS_AUTO`: automatic DNS validation; `DNS`: manual DNS validation; `FILE`: file validation.
+ * @method void setDvAuthMethod(string $DvAuthMethod) Set Validation type. `DNS_AUTO`: automatic DNS validation; `DNS`: manual DNS validation; `FILE`: file validation.
  * @method string getDomainName() Obtain Domain name
  * @method void setDomainName(string $DomainName) Set Domain name
  * @method integer getProjectId() Obtain Project ID
@@ -48,11 +48,13 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPackageId(string $PackageId) Set Benefit package ID, which is used to expand the free certificate package
  * @method boolean getDeleteDnsAutoRecord() Obtain Whether to delete the automatic domain name verification record after issuance, which is no by default. This parameter can be passed in only for domain names of the DNS_AUTO verification type.
  * @method void setDeleteDnsAutoRecord(boolean $DeleteDnsAutoRecord) Set Whether to delete the automatic domain name verification record after issuance, which is no by default. This parameter can be passed in only for domain names of the DNS_AUTO verification type.
+ * @method array getDnsNames() Obtain 
+ * @method void setDnsNames(array $DnsNames) Set 
  */
 class ApplyCertificateRequest extends AbstractModel
 {
     /**
-     * @var string Validation type. `DNS_AUTO`: automatic DNS validation; `DNS`: manual DNS validation; `FILE`: file validation
+     * @var string Validation type. `DNS_AUTO`: automatic DNS validation; `DNS`: manual DNS validation; `FILE`: file validation.
      */
     public $DvAuthMethod;
 
@@ -122,7 +124,12 @@ class ApplyCertificateRequest extends AbstractModel
     public $DeleteDnsAutoRecord;
 
     /**
-     * @param string $DvAuthMethod Validation type. `DNS_AUTO`: automatic DNS validation; `DNS`: manual DNS validation; `FILE`: file validation
+     * @var array 
+     */
+    public $DnsNames;
+
+    /**
+     * @param string $DvAuthMethod Validation type. `DNS_AUTO`: automatic DNS validation; `DNS`: manual DNS validation; `FILE`: file validation.
      * @param string $DomainName Domain name
      * @param integer $ProjectId Project ID
      * @param string $PackageType Certificate type. Currently, the only supported value is 2, which indicates TrustAsia TLS RSA CA.
@@ -136,6 +143,7 @@ class ApplyCertificateRequest extends AbstractModel
      * @param string $OldCertificateId Original certificate ID, which is used to apply for a new certificate.
      * @param string $PackageId Benefit package ID, which is used to expand the free certificate package
      * @param boolean $DeleteDnsAutoRecord Whether to delete the automatic domain name verification record after issuance, which is no by default. This parameter can be passed in only for domain names of the DNS_AUTO verification type.
+     * @param array $DnsNames 
      */
     function __construct()
     {
@@ -204,6 +212,10 @@ class ApplyCertificateRequest extends AbstractModel
 
         if (array_key_exists("DeleteDnsAutoRecord",$param) and $param["DeleteDnsAutoRecord"] !== null) {
             $this->DeleteDnsAutoRecord = $param["DeleteDnsAutoRecord"];
+        }
+
+        if (array_key_exists("DnsNames",$param) and $param["DnsNames"] !== null) {
+            $this->DnsNames = $param["DnsNames"];
         }
     }
 }

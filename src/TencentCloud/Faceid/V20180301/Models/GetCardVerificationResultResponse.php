@@ -21,13 +21,15 @@ use TencentCloud\Common\AbstractModel;
  * GetCardVerificationResult response structure.
  *
  * @method string getStatus() Obtain Pass status. When Warning and Rejected are returned, please check the specific reasons in the WarnInfo structure return. Example values are as follows:
-Passed
-Warning
-Rejected
+PASSED
+WARNING
+REJECTED
+PROCESSING
  * @method void setStatus(string $Status) Set Pass status. When Warning and Rejected are returned, please check the specific reasons in the WarnInfo structure return. Example values are as follows:
-Passed
-Warning
-Rejected
+PASSED
+WARNING
+REJECTED
+PROCESSING
  * @method array getWarnInfo() Obtain Warning information returned by document verification.
  * @method void setWarnInfo(array $WarnInfo) Set Warning information returned by document verification.
  * @method string getNationality() Obtain Nationality code. Complies with standard ISO 3166-1 alpha-3. 
@@ -65,9 +67,10 @@ class GetCardVerificationResultResponse extends AbstractModel
 {
     /**
      * @var string Pass status. When Warning and Rejected are returned, please check the specific reasons in the WarnInfo structure return. Example values are as follows:
-Passed
-Warning
-Rejected
+PASSED
+WARNING
+REJECTED
+PROCESSING
      */
     public $Status;
 
@@ -117,9 +120,10 @@ Example value: ID_CARD
 
     /**
      * @param string $Status Pass status. When Warning and Rejected are returned, please check the specific reasons in the WarnInfo structure return. Example values are as follows:
-Passed
-Warning
-Rejected
+PASSED
+WARNING
+REJECTED
+PROCESSING
      * @param array $WarnInfo Warning information returned by document verification.
      * @param string $Nationality Nationality code. Complies with standard ISO 3166-1 alpha-3. 
 
