@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDatasourceConnectionName(string $DatasourceConnectionName) Set Name of the default data source
  * @method string getDataEngineName() Obtain Data engine name. If this parameter is not specified, the task will be submitted to the default engine.
  * @method void setDataEngineName(string $DataEngineName) Set Data engine name. If this parameter is not specified, the task will be submitted to the default engine.
+ * @method string getResourceGroupName() Obtain Standard spark execution task resourceGroupName
+ * @method void setResourceGroupName(string $ResourceGroupName) Set Standard spark execution task resourceGroupName
  */
 class CreateTaskRequest extends AbstractModel
 {
@@ -52,10 +54,16 @@ class CreateTaskRequest extends AbstractModel
     public $DataEngineName;
 
     /**
+     * @var string Standard spark execution task resourceGroupName
+     */
+    public $ResourceGroupName;
+
+    /**
      * @param Task $Task Computing task. This parameter contains the task type and related configuration information.
      * @param string $DatabaseName Database name. If there is a database name in the SQL statement, the database in the SQL statement will be used first; otherwise, the database specified by this parameter will be used (note: when submitting the database creation SQL statement, passed in an empty string for this field).
      * @param string $DatasourceConnectionName Name of the default data source
      * @param string $DataEngineName Data engine name. If this parameter is not specified, the task will be submitted to the default engine.
+     * @param string $ResourceGroupName Standard spark execution task resourceGroupName
      */
     function __construct()
     {
@@ -85,6 +93,10 @@ class CreateTaskRequest extends AbstractModel
 
         if (array_key_exists("DataEngineName",$param) and $param["DataEngineName"] !== null) {
             $this->DataEngineName = $param["DataEngineName"];
+        }
+
+        if (array_key_exists("ResourceGroupName",$param) and $param["ResourceGroupName"] !== null) {
+            $this->ResourceGroupName = $param["ResourceGroupName"];
         }
     }
 }

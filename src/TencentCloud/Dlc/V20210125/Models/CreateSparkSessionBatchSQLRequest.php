@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getDataEngineName() Obtain The name of the engine for executing the Spark job.
  * @method void setDataEngineName(string $DataEngineName) Set The name of the engine for executing the Spark job.
- * @method string getExecuteSQL() Obtain The SQL statement to execute.
- * @method void setExecuteSQL(string $ExecuteSQL) Set The SQL statement to execute.
+ * @method string getExecuteSQL() Obtain Run SQL. The base64 encoding is needed.
+ * @method void setExecuteSQL(string $ExecuteSQL) Set Run SQL. The base64 encoding is needed.
  * @method string getDriverSize() Obtain The driver size. Valid values: `small` (default, 1 CU), `medium` (2 CUs), `large` (4 CUs), and `xlarge` (8 CUs).
  * @method void setDriverSize(string $DriverSize) Set The driver size. Valid values: `small` (default, 1 CU), `medium` (2 CUs), `large` (4 CUs), and `xlarge` (8 CUs).
  * @method string getExecutorSize() Obtain The executor size. Valid values: `small` (default, 1 CU), `medium` (2 CUs), `large` (4 CUs), and `xlarge` (8 CUs).
@@ -44,8 +44,10 @@ and `3.dlc.sql.set.config` for user-defined cluster configurations.
  * @method void setArguments(array $Arguments) Set The session configurations. Valid values: `1.dlc.eni` for user-defined ENI gateway information;
 `2.dlc.role.arn` for user-defined roleArn configurations;
 and `3.dlc.sql.set.config` for user-defined cluster configurations.
- * @method integer getIsInherit() Obtain Whether to inherit the resource configurations from the cluster. Valid values: `0` for no (default) and `1` for yes.
- * @method void setIsInherit(integer $IsInherit) Set Whether to inherit the resource configurations from the cluster. Valid values: `0` for no (default) and `1` for yes.
+ * @method integer getIsInherit() Obtain Whether to inherit the resource configuration of clusters; 0: not inherit (by default); 1: inherit clusters.
+ * @method void setIsInherit(integer $IsInherit) Set Whether to inherit the resource configuration of clusters; 0: not inherit (by default); 1: inherit clusters.
+ * @method string getCustomKey() Obtain User-defined primary key, and it should be unique.
+ * @method void setCustomKey(string $CustomKey) Set User-defined primary key, and it should be unique.
  */
 class CreateSparkSessionBatchSQLRequest extends AbstractModel
 {
@@ -55,7 +57,7 @@ class CreateSparkSessionBatchSQLRequest extends AbstractModel
     public $DataEngineName;
 
     /**
-     * @var string The SQL statement to execute.
+     * @var string Run SQL. The base64 encoding is needed.
      */
     public $ExecuteSQL;
 
@@ -102,13 +104,18 @@ and `3.dlc.sql.set.config` for user-defined cluster configurations.
     public $Arguments;
 
     /**
-     * @var integer Whether to inherit the resource configurations from the cluster. Valid values: `0` for no (default) and `1` for yes.
+     * @var integer Whether to inherit the resource configuration of clusters; 0: not inherit (by default); 1: inherit clusters.
      */
     public $IsInherit;
 
     /**
+     * @var string User-defined primary key, and it should be unique.
+     */
+    public $CustomKey;
+
+    /**
      * @param string $DataEngineName The name of the engine for executing the Spark job.
-     * @param string $ExecuteSQL The SQL statement to execute.
+     * @param string $ExecuteSQL Run SQL. The base64 encoding is needed.
      * @param string $DriverSize The driver size. Valid values: `small` (default, 1 CU), `medium` (2 CUs), `large` (4 CUs), and `xlarge` (8 CUs).
      * @param string $ExecutorSize The executor size. Valid values: `small` (default, 1 CU), `medium` (2 CUs), `large` (4 CUs), and `xlarge` (8 CUs).
      * @param integer $ExecutorNumbers The executor count, which defaults to 1.
@@ -119,7 +126,8 @@ and `3.dlc.sql.set.config` for user-defined cluster configurations.
      * @param array $Arguments The session configurations. Valid values: `1.dlc.eni` for user-defined ENI gateway information;
 `2.dlc.role.arn` for user-defined roleArn configurations;
 and `3.dlc.sql.set.config` for user-defined cluster configurations.
-     * @param integer $IsInherit Whether to inherit the resource configurations from the cluster. Valid values: `0` for no (default) and `1` for yes.
+     * @param integer $IsInherit Whether to inherit the resource configuration of clusters; 0: not inherit (by default); 1: inherit clusters.
+     * @param string $CustomKey User-defined primary key, and it should be unique.
      */
     function __construct()
     {
@@ -181,6 +189,10 @@ and `3.dlc.sql.set.config` for user-defined cluster configurations.
 
         if (array_key_exists("IsInherit",$param) and $param["IsInherit"] !== null) {
             $this->IsInherit = $param["IsInherit"];
+        }
+
+        if (array_key_exists("CustomKey",$param) and $param["CustomKey"] !== null) {
+            $this->CustomKey = $param["CustomKey"];
         }
     }
 }

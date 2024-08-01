@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getBatchId() Obtain The unique ID of a Spark SQL job.
  * @method void setBatchId(string $BatchId) Set The unique ID of a Spark SQL job.
+ * @method string getCustomKey() Obtain User-defined primary key. If it is specified, the query should be based on the value.
+ * @method void setCustomKey(string $CustomKey) Set User-defined primary key. If it is specified, the query should be based on the value.
  */
 class DescribeSparkSessionBatchSqlLogRequest extends AbstractModel
 {
@@ -31,7 +33,13 @@ class DescribeSparkSessionBatchSqlLogRequest extends AbstractModel
     public $BatchId;
 
     /**
+     * @var string User-defined primary key. If it is specified, the query should be based on the value.
+     */
+    public $CustomKey;
+
+    /**
      * @param string $BatchId The unique ID of a Spark SQL job.
+     * @param string $CustomKey User-defined primary key. If it is specified, the query should be based on the value.
      */
     function __construct()
     {
@@ -48,6 +56,10 @@ class DescribeSparkSessionBatchSqlLogRequest extends AbstractModel
         }
         if (array_key_exists("BatchId",$param) and $param["BatchId"] !== null) {
             $this->BatchId = $param["BatchId"];
+        }
+
+        if (array_key_exists("CustomKey",$param) and $param["CustomKey"] !== null) {
+            $this->CustomKey = $param["CustomKey"];
         }
     }
 }

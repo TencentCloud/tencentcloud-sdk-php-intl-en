@@ -30,6 +30,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDefault(string $Default) Set The default field value.
  * @method boolean getNotNull() Obtain Whether the field is not null.
  * @method void setNotNull(boolean $NotNull) Set Whether the field is not null.
+ * @method integer getPrecision() Obtain Indicate the length of the entire numeric with a value of 1-38
+ * @method void setPrecision(integer $Precision) Set Indicate the length of the entire numeric with a value of 1-38
+ * @method integer getScale() Obtain Indicate the length of the decimal part.
+Scale is smaller than Precision.
+ * @method void setScale(integer $Scale) Set Indicate the length of the decimal part.
+Scale is smaller than Precision.
  */
 class TColumn extends AbstractModel
 {
@@ -59,11 +65,25 @@ class TColumn extends AbstractModel
     public $NotNull;
 
     /**
+     * @var integer Indicate the length of the entire numeric with a value of 1-38
+     */
+    public $Precision;
+
+    /**
+     * @var integer Indicate the length of the decimal part.
+Scale is smaller than Precision.
+     */
+    public $Scale;
+
+    /**
      * @param string $Name The field name.
      * @param string $Type The field type.
      * @param string $Comment The field description.
      * @param string $Default The default field value.
      * @param boolean $NotNull Whether the field is not null.
+     * @param integer $Precision Indicate the length of the entire numeric with a value of 1-38
+     * @param integer $Scale Indicate the length of the decimal part.
+Scale is smaller than Precision.
      */
     function __construct()
     {
@@ -96,6 +116,14 @@ class TColumn extends AbstractModel
 
         if (array_key_exists("NotNull",$param) and $param["NotNull"] !== null) {
             $this->NotNull = $param["NotNull"];
+        }
+
+        if (array_key_exists("Precision",$param) and $param["Precision"] !== null) {
+            $this->Precision = $param["Precision"];
+        }
+
+        if (array_key_exists("Scale",$param) and $param["Scale"] !== null) {
+            $this->Scale = $param["Scale"];
         }
     }
 }

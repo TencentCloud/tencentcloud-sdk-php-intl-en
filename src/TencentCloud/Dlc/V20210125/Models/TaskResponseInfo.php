@@ -42,10 +42,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setResultExpired(boolean $ResultExpired) Set Whether the result has expired
  * @method string getRowAffectInfo() Obtain Number of affected data rows
  * @method void setRowAffectInfo(string $RowAffectInfo) Set Number of affected data rows
- * @method string getDataSet() Obtain Dataset of task results
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setDataSet(string $DataSet) Set Dataset of task results
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getDataSet() Obtain Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setDataSet(string $DataSet) Set Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getError() Obtain Failure information, such as `errorMessage`. This field has been disused.
  * @method void setError(string $Error) Set Failure information, such as `errorMessage`. This field has been disused.
  * @method integer getPercentage() Obtain Task progress (%)
@@ -54,116 +52,60 @@ Note: This field may return null, indicating that no valid values can be obtaine
  * @method void setOutputMessage(string $OutputMessage) Set Output information of task execution
  * @method string getTaskType() Obtain Type of the engine executing the SQL statement
  * @method void setTaskType(string $TaskType) Set Type of the engine executing the SQL statement
- * @method string getProgressDetail() Obtain Task progress details
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setProgressDetail(string $ProgressDetail) Set Task progress details
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getUpdateTime() Obtain Task end time
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setUpdateTime(string $UpdateTime) Set Task end time
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getDataEngineId() Obtain Compute resource ID
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setDataEngineId(string $DataEngineId) Set Compute resource ID
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getOperateUin() Obtain Sub-UIN that executes the SQL statement
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setOperateUin(string $OperateUin) Set Sub-UIN that executes the SQL statement
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getDataEngineName() Obtain Compute resource name
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setDataEngineName(string $DataEngineName) Set Compute resource name
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getInputType() Obtain Whether the import type is local import or COS
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setInputType(string $InputType) Set Whether the import type is local import or COS
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getInputConf() Obtain Import configuration
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setInputConf(string $InputConf) Set Import configuration
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getDataNumber() Obtain Number of data entries
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setDataNumber(integer $DataNumber) Set Number of data entries
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method boolean getCanDownload() Obtain Whether the data can be downloaded
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setCanDownload(boolean $CanDownload) Set Whether the data can be downloaded
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getUserAlias() Obtain User alias
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setUserAlias(string $UserAlias) Set User alias
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getSparkJobName() Obtain Spark application job name
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setSparkJobName(string $SparkJobName) Set Spark application job name
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getSparkJobId() Obtain Spark application job ID
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setSparkJobId(string $SparkJobId) Set Spark application job ID
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getSparkJobFile() Obtain JAR file of the Spark application entry
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setSparkJobFile(string $SparkJobFile) Set JAR file of the Spark application entry
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getUiUrl() Obtain Spark UI URL
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setUiUrl(string $UiUrl) Set Spark UI URL
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getTotalTime() Obtain The task time in ms.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setTotalTime(integer $TotalTime) Set The task time in ms.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getCmdArgs() Obtain The program entry parameter for running a task under a Spark job.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setCmdArgs(string $CmdArgs) Set The program entry parameter for running a task under a Spark job.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getImageVersion() Obtain The image version of the cluster.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setImageVersion(string $ImageVersion) Set The image version of the cluster.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getDriverSize() Obtain The driver size.
-Valid values for the standard resource type: `small`, `medium`, `large`, and `xlarge`.
-Valid values for the memory resource type: `m.small`, `m.medium`, `m.large`, and `m.xlarge`.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setDriverSize(string $DriverSize) Set The driver size.
-Valid values for the standard resource type: `small`, `medium`, `large`, and `xlarge`.
-Valid values for the memory resource type: `m.small`, `m.medium`, `m.large`, and `m.xlarge`.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getExecutorSize() Obtain The executor size.
-Valid values for the standard resource type: `small`, `medium`, `large`, and `xlarge`.
-Valid values for the memory resource type: `m.small`, `m.medium`, `m.large`, and `m.xlarge`.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setExecutorSize(string $ExecutorSize) Set The executor size.
-Valid values for the standard resource type: `small`, `medium`, `large`, and `xlarge`.
-Valid values for the memory resource type: `m.small`, `m.medium`, `m.large`, and `m.xlarge`.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getExecutorNums() Obtain The executor count. The minimum value is 1 and the maximum value is less than the cluster specification.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setExecutorNums(integer $ExecutorNums) Set The executor count. The minimum value is 1 and the maximum value is less than the cluster specification.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getExecutorMaxNumbers() Obtain The maximum executor count (in dynamic mode). The minimum value is 1 and the maximum value is less than the cluster specification. If you set `ExecutorMaxNumbers` to a value smaller than that of `ExecutorNums`, the value of `ExecutorMaxNumbers` is automatically changed to that of `ExecutorNums`.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setExecutorMaxNumbers(integer $ExecutorMaxNumbers) Set The maximum executor count (in dynamic mode). The minimum value is 1 and the maximum value is less than the cluster specification. If you set `ExecutorMaxNumbers` to a value smaller than that of `ExecutorNums`, the value of `ExecutorMaxNumbers` is automatically changed to that of `ExecutorNums`.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method CommonMetrics getCommonMetrics() Obtain Common task metrics
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setCommonMetrics(CommonMetrics $CommonMetrics) Set Common task metrics
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method SparkMonitorMetrics getSparkMonitorMetrics() Obtain The Spark task metrics.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setSparkMonitorMetrics(SparkMonitorMetrics $SparkMonitorMetrics) Set The Spark task metrics.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method PrestoMonitorMetrics getPrestoMonitorMetrics() Obtain The Presto task metrics.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setPrestoMonitorMetrics(PrestoMonitorMetrics $PrestoMonitorMetrics) Set The Presto task metrics.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getResultFormat() Obtain 
- * @method void setResultFormat(string $ResultFormat) Set 
- * @method string getEngineTypeDetail() Obtain 
- * @method void setEngineTypeDetail(string $EngineTypeDetail) Set 
- * @method string getResourceGroupName() Obtain 
- * @method void setResourceGroupName(string $ResourceGroupName) Set 
+ * @method string getProgressDetail() Obtain Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setProgressDetail(string $ProgressDetail) Set Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getUpdateTime() Obtain Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setUpdateTime(string $UpdateTime) Set Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getDataEngineId() Obtain Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setDataEngineId(string $DataEngineId) Set Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getOperateUin() Obtain Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setOperateUin(string $OperateUin) Set Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getDataEngineName() Obtain Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setDataEngineName(string $DataEngineName) Set Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getInputType() Obtain Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setInputType(string $InputType) Set Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getInputConf() Obtain Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setInputConf(string $InputConf) Set Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getDataNumber() Obtain Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setDataNumber(integer $DataNumber) Set Note: This field may return null, indicating that no valid values can be obtained.
+ * @method boolean getCanDownload() Obtain Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setCanDownload(boolean $CanDownload) Set Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getUserAlias() Obtain Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setUserAlias(string $UserAlias) Set Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getSparkJobName() Obtain Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setSparkJobName(string $SparkJobName) Set Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getSparkJobId() Obtain Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setSparkJobId(string $SparkJobId) Set Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getSparkJobFile() Obtain Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setSparkJobFile(string $SparkJobFile) Set Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getUiUrl() Obtain Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setUiUrl(string $UiUrl) Set Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getTotalTime() Obtain Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setTotalTime(integer $TotalTime) Set Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getCmdArgs() Obtain Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setCmdArgs(string $CmdArgs) Set Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getImageVersion() Obtain Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setImageVersion(string $ImageVersion) Set Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getDriverSize() Obtain Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setDriverSize(string $DriverSize) Set Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getExecutorSize() Obtain Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setExecutorSize(string $ExecutorSize) Set Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getExecutorNums() Obtain Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setExecutorNums(integer $ExecutorNums) Set Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getExecutorMaxNumbers() Obtain Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setExecutorMaxNumbers(integer $ExecutorMaxNumbers) Set Note: This field may return null, indicating that no valid values can be obtained.
+ * @method CommonMetrics getCommonMetrics() Obtain Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setCommonMetrics(CommonMetrics $CommonMetrics) Set Note: This field may return null, indicating that no valid values can be obtained.
+ * @method SparkMonitorMetrics getSparkMonitorMetrics() Obtain Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setSparkMonitorMetrics(SparkMonitorMetrics $SparkMonitorMetrics) Set Note: This field may return null, indicating that no valid values can be obtained.
+ * @method PrestoMonitorMetrics getPrestoMonitorMetrics() Obtain Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setPrestoMonitorMetrics(PrestoMonitorMetrics $PrestoMonitorMetrics) Set Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getResultFormat() Obtain Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setResultFormat(string $ResultFormat) Set Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getEngineTypeDetail() Obtain Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setEngineTypeDetail(string $EngineTypeDetail) Set Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getResourceGroupName() Obtain Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setResourceGroupName(string $ResourceGroupName) Set Note: This field may return null, indicating that no valid values can be obtained.
  */
 class TaskResponseInfo extends AbstractModel
 {
@@ -223,8 +165,7 @@ class TaskResponseInfo extends AbstractModel
     public $RowAffectInfo;
 
     /**
-     * @var string Dataset of task results
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $DataSet;
 
@@ -249,165 +190,137 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $TaskType;
 
     /**
-     * @var string Task progress details
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ProgressDetail;
 
     /**
-     * @var string Task end time
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $UpdateTime;
 
     /**
-     * @var string Compute resource ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $DataEngineId;
 
     /**
-     * @var string Sub-UIN that executes the SQL statement
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $OperateUin;
 
     /**
-     * @var string Compute resource name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $DataEngineName;
 
     /**
-     * @var string Whether the import type is local import or COS
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $InputType;
 
     /**
-     * @var string Import configuration
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $InputConf;
 
     /**
-     * @var integer Number of data entries
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $DataNumber;
 
     /**
-     * @var boolean Whether the data can be downloaded
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var boolean Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $CanDownload;
 
     /**
-     * @var string User alias
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $UserAlias;
 
     /**
-     * @var string Spark application job name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $SparkJobName;
 
     /**
-     * @var string Spark application job ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $SparkJobId;
 
     /**
-     * @var string JAR file of the Spark application entry
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $SparkJobFile;
 
     /**
-     * @var string Spark UI URL
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $UiUrl;
 
     /**
-     * @var integer The task time in ms.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $TotalTime;
 
     /**
-     * @var string The program entry parameter for running a task under a Spark job.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $CmdArgs;
 
     /**
-     * @var string The image version of the cluster.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ImageVersion;
 
     /**
-     * @var string The driver size.
-Valid values for the standard resource type: `small`, `medium`, `large`, and `xlarge`.
-Valid values for the memory resource type: `m.small`, `m.medium`, `m.large`, and `m.xlarge`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $DriverSize;
 
     /**
-     * @var string The executor size.
-Valid values for the standard resource type: `small`, `medium`, `large`, and `xlarge`.
-Valid values for the memory resource type: `m.small`, `m.medium`, `m.large`, and `m.xlarge`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ExecutorSize;
 
     /**
-     * @var integer The executor count. The minimum value is 1 and the maximum value is less than the cluster specification.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ExecutorNums;
 
     /**
-     * @var integer The maximum executor count (in dynamic mode). The minimum value is 1 and the maximum value is less than the cluster specification. If you set `ExecutorMaxNumbers` to a value smaller than that of `ExecutorNums`, the value of `ExecutorMaxNumbers` is automatically changed to that of `ExecutorNums`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ExecutorMaxNumbers;
 
     /**
-     * @var CommonMetrics Common task metrics
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var CommonMetrics Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $CommonMetrics;
 
     /**
-     * @var SparkMonitorMetrics The Spark task metrics.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var SparkMonitorMetrics Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $SparkMonitorMetrics;
 
     /**
-     * @var PrestoMonitorMetrics The Presto task metrics.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var PrestoMonitorMetrics Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $PrestoMonitorMetrics;
 
     /**
-     * @var string 
+     * @var string Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ResultFormat;
 
     /**
-     * @var string 
+     * @var string Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $EngineTypeDetail;
 
     /**
-     * @var string 
+     * @var string Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ResourceGroupName;
 
@@ -423,67 +336,38 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $SQL SQL statement of the task
      * @param boolean $ResultExpired Whether the result has expired
      * @param string $RowAffectInfo Number of affected data rows
-     * @param string $DataSet Dataset of task results
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $DataSet Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $Error Failure information, such as `errorMessage`. This field has been disused.
      * @param integer $Percentage Task progress (%)
      * @param string $OutputMessage Output information of task execution
      * @param string $TaskType Type of the engine executing the SQL statement
-     * @param string $ProgressDetail Task progress details
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $UpdateTime Task end time
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $DataEngineId Compute resource ID
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $OperateUin Sub-UIN that executes the SQL statement
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $DataEngineName Compute resource name
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $InputType Whether the import type is local import or COS
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $InputConf Import configuration
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $DataNumber Number of data entries
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param boolean $CanDownload Whether the data can be downloaded
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $UserAlias User alias
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $SparkJobName Spark application job name
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $SparkJobId Spark application job ID
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $SparkJobFile JAR file of the Spark application entry
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $UiUrl Spark UI URL
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $TotalTime The task time in ms.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $CmdArgs The program entry parameter for running a task under a Spark job.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $ImageVersion The image version of the cluster.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $DriverSize The driver size.
-Valid values for the standard resource type: `small`, `medium`, `large`, and `xlarge`.
-Valid values for the memory resource type: `m.small`, `m.medium`, `m.large`, and `m.xlarge`.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $ExecutorSize The executor size.
-Valid values for the standard resource type: `small`, `medium`, `large`, and `xlarge`.
-Valid values for the memory resource type: `m.small`, `m.medium`, `m.large`, and `m.xlarge`.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $ExecutorNums The executor count. The minimum value is 1 and the maximum value is less than the cluster specification.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $ExecutorMaxNumbers The maximum executor count (in dynamic mode). The minimum value is 1 and the maximum value is less than the cluster specification. If you set `ExecutorMaxNumbers` to a value smaller than that of `ExecutorNums`, the value of `ExecutorMaxNumbers` is automatically changed to that of `ExecutorNums`.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param CommonMetrics $CommonMetrics Common task metrics
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param SparkMonitorMetrics $SparkMonitorMetrics The Spark task metrics.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param PrestoMonitorMetrics $PrestoMonitorMetrics The Presto task metrics.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $ResultFormat 
-     * @param string $EngineTypeDetail 
-     * @param string $ResourceGroupName 
+     * @param string $ProgressDetail Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $UpdateTime Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $DataEngineId Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $OperateUin Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $DataEngineName Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $InputType Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $InputConf Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $DataNumber Note: This field may return null, indicating that no valid values can be obtained.
+     * @param boolean $CanDownload Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $UserAlias Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $SparkJobName Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $SparkJobId Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $SparkJobFile Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $UiUrl Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $TotalTime Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $CmdArgs Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $ImageVersion Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $DriverSize Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $ExecutorSize Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $ExecutorNums Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $ExecutorMaxNumbers Note: This field may return null, indicating that no valid values can be obtained.
+     * @param CommonMetrics $CommonMetrics Note: This field may return null, indicating that no valid values can be obtained.
+     * @param SparkMonitorMetrics $SparkMonitorMetrics Note: This field may return null, indicating that no valid values can be obtained.
+     * @param PrestoMonitorMetrics $PrestoMonitorMetrics Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $ResultFormat Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $EngineTypeDetail Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $ResourceGroupName Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

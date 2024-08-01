@@ -20,13 +20,13 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Scheduled start and suspension information
  *
- * @method string getResumeTime() Obtain The scheduled start time, such as 8:00 AM every Monday.
+ * @method string getResumeTime() Obtain Scheduled starting time, such as 8: 00 a.m. on Monday and Wednesday
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setResumeTime(string $ResumeTime) Set The scheduled start time, such as 8:00 AM every Monday.
+ * @method void setResumeTime(string $ResumeTime) Set Scheduled starting time, such as 8: 00 a.m. on Monday and Wednesday
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getSuspendTime() Obtain The scheduled suspension time, such as 8:00 PM every Monday.
+ * @method string getSuspendTime() Obtain Scheduled suspension time, such as 8: 00 p.m. on Monday and Wednesday
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setSuspendTime(string $SuspendTime) Set The scheduled suspension time, such as 8:00 PM every Monday.
+ * @method void setSuspendTime(string $SuspendTime) Set Scheduled suspension time, such as 8: 00 p.m. on Monday and Wednesday
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method integer getSuspendStrategy() Obtain The suspension setting. Valid values: `0` (suspension after task end, default) and `1` (force suspension).
 Note: This field may return null, indicating that no valid values can be obtained.
@@ -36,13 +36,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
 class CrontabResumeSuspendStrategy extends AbstractModel
 {
     /**
-     * @var string The scheduled start time, such as 8:00 AM every Monday.
+     * @var string Scheduled starting time, such as 8: 00 a.m. on Monday and Wednesday
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ResumeTime;
 
     /**
-     * @var string The scheduled suspension time, such as 8:00 PM every Monday.
+     * @var string Scheduled suspension time, such as 8: 00 p.m. on Monday and Wednesday
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $SuspendTime;
@@ -54,9 +54,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $SuspendStrategy;
 
     /**
-     * @param string $ResumeTime The scheduled start time, such as 8:00 AM every Monday.
+     * @param string $ResumeTime Scheduled starting time, such as 8: 00 a.m. on Monday and Wednesday
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $SuspendTime The scheduled suspension time, such as 8:00 PM every Monday.
+     * @param string $SuspendTime Scheduled suspension time, such as 8: 00 p.m. on Monday and Wednesday
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $SuspendStrategy The suspension setting. Valid values: `0` (suspension after task end, default) and `1` (force suspension).
 Note: This field may return null, indicating that no valid values can be obtained.

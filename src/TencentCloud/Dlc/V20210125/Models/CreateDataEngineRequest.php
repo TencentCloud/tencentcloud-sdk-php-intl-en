@@ -44,8 +44,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSize(integer $Size) Set The cluster size.
  * @method integer getPayMode() Obtain The pay mode. Valid value: `0` (postpaid, default) and `1` (prepaid) (currently not available).
  * @method void setPayMode(integer $PayMode) Set The pay mode. Valid value: `0` (postpaid, default) and `1` (prepaid) (currently not available).
- * @method integer getTimeSpan() Obtain The resource period. For the postpaid mode, the value is 3600 (default); for the prepaid mode, the value must be in the range of 1–120, representing purchasing the resource for 1–120 months.
- * @method void setTimeSpan(integer $TimeSpan) Set The resource period. For the postpaid mode, the value is 3600 (default); for the prepaid mode, the value must be in the range of 1–120, representing purchasing the resource for 1–120 months.
+ * @method integer getTimeSpan() Obtain The usage duration of the resource. Postpaid: Fill in 3,600 as a fixed figure; prepaid: fill in a figure equal to or bigger than 1 which means purchasing resources for one month. The maximum figure is not bigger than 120. The default value is 1.
+ * @method void setTimeSpan(integer $TimeSpan) Set The usage duration of the resource. Postpaid: Fill in 3,600 as a fixed figure; prepaid: fill in a figure equal to or bigger than 1 which means purchasing resources for one month. The maximum figure is not bigger than 120. The default value is 1.
  * @method string getTimeUnit() Obtain The unit of the resource period. Valid values: `s` (default) for the postpaid mode and `m` for the prepaid mode.
  * @method void setTimeUnit(string $TimeUnit) Set The unit of the resource period. Valid values: `s` (default) for the postpaid mode and `m` for the prepaid mode.
  * @method integer getAutoRenew() Obtain The auto-renewal status of the resource. For the postpaid mode, no renewal is required, and the value is fixed to `0`. For the prepaid mode, valid values are `0` (manual), `1` (auto), and `2` (no renewal). If this parameter is set to `0` for a key account in the prepaid mode, auto-renewal applies. It defaults to `0`.
@@ -80,6 +80,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setElasticLimit(integer $ElasticLimit) Set The upper limit (in CUs) for scaling of the monthly subscribed Spark job cluster.
  * @method SessionResourceTemplate getSessionResourceTemplate() Obtain The session resource configuration template for a Spark job cluster.
  * @method void setSessionResourceTemplate(SessionResourceTemplate $SessionResourceTemplate) Set The session resource configuration template for a Spark job cluster.
+ * @method boolean getAutoAuthorization() Obtain Automatically grant permissions
+ * @method void setAutoAuthorization(boolean $AutoAuthorization) Set Automatically grant permissions
+ * @method string getEngineNetworkId() Obtain Engine network ID
+ * @method void setEngineNetworkId(string $EngineNetworkId) Set Engine network ID
+ * @method string getEngineGeneration() Obtain Generation of the engine. SuperSQL means the supersql engine while Native means the standard engine. It is SuperSQL by default.
+ * @method void setEngineGeneration(string $EngineGeneration) Set Generation of the engine. SuperSQL means the supersql engine while Native means the standard engine. It is SuperSQL by default.
  */
 class CreateDataEngineRequest extends AbstractModel
 {
@@ -145,7 +151,7 @@ class CreateDataEngineRequest extends AbstractModel
     public $PayMode;
 
     /**
-     * @var integer The resource period. For the postpaid mode, the value is 3600 (default); for the prepaid mode, the value must be in the range of 1–120, representing purchasing the resource for 1–120 months.
+     * @var integer The usage duration of the resource. Postpaid: Fill in 3,600 as a fixed figure; prepaid: fill in a figure equal to or bigger than 1 which means purchasing resources for one month. The maximum figure is not bigger than 120. The default value is 1.
      */
     public $TimeSpan;
 
@@ -235,6 +241,21 @@ class CreateDataEngineRequest extends AbstractModel
     public $SessionResourceTemplate;
 
     /**
+     * @var boolean Automatically grant permissions
+     */
+    public $AutoAuthorization;
+
+    /**
+     * @var string Engine network ID
+     */
+    public $EngineNetworkId;
+
+    /**
+     * @var string Generation of the engine. SuperSQL means the supersql engine while Native means the standard engine. It is SuperSQL by default.
+     */
+    public $EngineGeneration;
+
+    /**
      * @param string $EngineType The engine type. Valid values: `spark` and `presto`.
      * @param string $DataEngineName The name of the virtual cluster.
      * @param string $ClusterType The cluster type. Valid values: `spark_private`, `presto_private`, `presto_cu`, and `spark_cu`.
@@ -247,7 +268,7 @@ class CreateDataEngineRequest extends AbstractModel
      * @param string $Message The description.
      * @param integer $Size The cluster size.
      * @param integer $PayMode The pay mode. Valid value: `0` (postpaid, default) and `1` (prepaid) (currently not available).
-     * @param integer $TimeSpan The resource period. For the postpaid mode, the value is 3600 (default); for the prepaid mode, the value must be in the range of 1–120, representing purchasing the resource for 1–120 months.
+     * @param integer $TimeSpan The usage duration of the resource. Postpaid: Fill in 3,600 as a fixed figure; prepaid: fill in a figure equal to or bigger than 1 which means purchasing resources for one month. The maximum figure is not bigger than 120. The default value is 1.
      * @param string $TimeUnit The unit of the resource period. Valid values: `s` (default) for the postpaid mode and `m` for the prepaid mode.
      * @param integer $AutoRenew The auto-renewal status of the resource. For the postpaid mode, no renewal is required, and the value is fixed to `0`. For the prepaid mode, valid values are `0` (manual), `1` (auto), and `2` (no renewal). If this parameter is set to `0` for a key account in the prepaid mode, auto-renewal applies. It defaults to `0`.
      * @param array $Tags The tags to be set for the resource being created.
@@ -265,6 +286,9 @@ class CreateDataEngineRequest extends AbstractModel
      * @param boolean $ElasticSwitch Whether to enable the scaling feature for a monthly subscribed Spark job cluster.
      * @param integer $ElasticLimit The upper limit (in CUs) for scaling of the monthly subscribed Spark job cluster.
      * @param SessionResourceTemplate $SessionResourceTemplate The session resource configuration template for a Spark job cluster.
+     * @param boolean $AutoAuthorization Automatically grant permissions
+     * @param string $EngineNetworkId Engine network ID
+     * @param string $EngineGeneration Generation of the engine. SuperSQL means the supersql engine while Native means the standard engine. It is SuperSQL by default.
      */
     function __construct()
     {
@@ -409,6 +433,18 @@ class CreateDataEngineRequest extends AbstractModel
         if (array_key_exists("SessionResourceTemplate",$param) and $param["SessionResourceTemplate"] !== null) {
             $this->SessionResourceTemplate = new SessionResourceTemplate();
             $this->SessionResourceTemplate->deserialize($param["SessionResourceTemplate"]);
+        }
+
+        if (array_key_exists("AutoAuthorization",$param) and $param["AutoAuthorization"] !== null) {
+            $this->AutoAuthorization = $param["AutoAuthorization"];
+        }
+
+        if (array_key_exists("EngineNetworkId",$param) and $param["EngineNetworkId"] !== null) {
+            $this->EngineNetworkId = $param["EngineNetworkId"];
+        }
+
+        if (array_key_exists("EngineGeneration",$param) and $param["EngineGeneration"] !== null) {
+            $this->EngineGeneration = $param["EngineGeneration"];
         }
     }
 }

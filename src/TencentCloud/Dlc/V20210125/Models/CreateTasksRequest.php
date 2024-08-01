@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDatasourceConnectionName(string $DatasourceConnectionName) Set Data source name. Default value: DataLakeCatalog.
  * @method string getDataEngineName() Obtain Compute engine name. If this parameter is not specified, the task will be submitted to the default engine.
  * @method void setDataEngineName(string $DataEngineName) Set Compute engine name. If this parameter is not specified, the task will be submitted to the default engine.
+ * @method string getResourceGroupName() Obtain Resource group name of the spark cluster
+ * @method void setResourceGroupName(string $ResourceGroupName) Set Resource group name of the spark cluster
  */
 class CreateTasksRequest extends AbstractModel
 {
@@ -52,10 +54,16 @@ class CreateTasksRequest extends AbstractModel
     public $DataEngineName;
 
     /**
+     * @var string Resource group name of the spark cluster
+     */
+    public $ResourceGroupName;
+
+    /**
      * @param string $DatabaseName Database name. If there is a database name in the SQL statement, the database in the SQL statement will be used first; otherwise, the database specified by this parameter will be used (note: when submitting the database creation SQL statement, passed in an empty string for this field).
      * @param TasksInfo $Tasks SQL task information
      * @param string $DatasourceConnectionName Data source name. Default value: DataLakeCatalog.
      * @param string $DataEngineName Compute engine name. If this parameter is not specified, the task will be submitted to the default engine.
+     * @param string $ResourceGroupName Resource group name of the spark cluster
      */
     function __construct()
     {
@@ -85,6 +93,10 @@ class CreateTasksRequest extends AbstractModel
 
         if (array_key_exists("DataEngineName",$param) and $param["DataEngineName"] !== null) {
             $this->DataEngineName = $param["DataEngineName"];
+        }
+
+        if (array_key_exists("ResourceGroupName",$param) and $param["ResourceGroupName"] !== null) {
+            $this->ResourceGroupName = $param["ResourceGroupName"];
         }
     }
 }

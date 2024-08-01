@@ -20,14 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Engine configurations
  *
-
+ * @method string getConfigItem() Obtain Configuration items
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setConfigItem(string $ConfigItem) Set Configuration items
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getConfigValue() Obtain Configuration values
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setConfigValue(string $ConfigValue) Set Configuration values
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class DataEngineConfigPair extends AbstractModel
 {
-
+    /**
+     * @var string Configuration items
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $ConfigItem;
 
     /**
+     * @var string Configuration values
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $ConfigValue;
 
+    /**
+     * @param string $ConfigItem Configuration items
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $ConfigValue Configuration values
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -42,6 +62,12 @@ class DataEngineConfigPair extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("ConfigItem",$param) and $param["ConfigItem"] !== null) {
+            $this->ConfigItem = $param["ConfigItem"];
+        }
 
+        if (array_key_exists("ConfigValue",$param) and $param["ConfigValue"] !== null) {
+            $this->ConfigValue = $param["ConfigValue"];
+        }
     }
 }

@@ -66,6 +66,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
  * @method void setDisplayFormat(string $DisplayFormat) Set Console display format. Valid values: `table`, `text`.
  * @method integer getTotalTime() Obtain The task time in ms.
  * @method void setTotalTime(integer $TotalTime) Set The task time in ms.
+ * @method float getQueryResultTime() Obtain Time consumed to get results
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setQueryResultTime(float $QueryResultTime) Set Time consumed to get results
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class TaskResultInfo extends AbstractModel
 {
@@ -169,6 +173,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $TotalTime;
 
     /**
+     * @var float Time consumed to get results
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $QueryResultTime;
+
+    /**
      * @param string $TaskId Unique task ID
      * @param string $DatasourceConnectionName Name of the default selected data source when the current job is executed
 Note: This field may return null, indicating that no valid values can be obtained.
@@ -192,6 +202,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $ProgressDetail Task progress details
      * @param string $DisplayFormat Console display format. Valid values: `table`, `text`.
      * @param integer $TotalTime The task time in ms.
+     * @param float $QueryResultTime Time consumed to get results
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -285,6 +297,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("TotalTime",$param) and $param["TotalTime"] !== null) {
             $this->TotalTime = $param["TotalTime"];
+        }
+
+        if (array_key_exists("QueryResultTime",$param) and $param["QueryResultTime"] !== null) {
+            $this->QueryResultTime = $param["QueryResultTime"];
         }
     }
 }

@@ -20,34 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Presto monitoring metrics
  *
- * @method float getLocalCacheHitRate() Obtain 	The Alluxio cache hit rate.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setLocalCacheHitRate(float $LocalCacheHitRate) Set 	The Alluxio cache hit rate.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method float getFragmentCacheHitRate() Obtain The Fragment cache hit rate.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setFragmentCacheHitRate(float $FragmentCacheHitRate) Set The Fragment cache hit rate.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method float getLocalCacheHitRate() Obtain Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setLocalCacheHitRate(float $LocalCacheHitRate) Set Note: This field may return null, indicating that no valid values can be obtained.
+ * @method float getFragmentCacheHitRate() Obtain Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setFragmentCacheHitRate(float $FragmentCacheHitRate) Set Note: This field may return null, indicating that no valid values can be obtained.
  */
 class PrestoMonitorMetrics extends AbstractModel
 {
     /**
-     * @var float 	The Alluxio cache hit rate.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var float Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $LocalCacheHitRate;
 
     /**
-     * @var float The Fragment cache hit rate.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var float Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $FragmentCacheHitRate;
 
     /**
-     * @param float $LocalCacheHitRate 	The Alluxio cache hit rate.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param float $FragmentCacheHitRate The Fragment cache hit rate.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param float $LocalCacheHitRate Note: This field may return null, indicating that no valid values can be obtained.
+     * @param float $FragmentCacheHitRate Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

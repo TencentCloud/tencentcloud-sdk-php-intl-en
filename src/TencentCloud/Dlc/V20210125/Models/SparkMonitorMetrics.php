@@ -20,34 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Spark monitoring metrics
  *
- * @method integer getShuffleWriteBytesCos() Obtain The shuffle data (in bytes) that overflows to COS.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setShuffleWriteBytesCos(integer $ShuffleWriteBytesCos) Set The shuffle data (in bytes) that overflows to COS.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getShuffleWriteBytesTotal() Obtain The total shuffle data (in bytes).
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setShuffleWriteBytesTotal(integer $ShuffleWriteBytesTotal) Set The total shuffle data (in bytes).
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getShuffleWriteBytesCos() Obtain Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setShuffleWriteBytesCos(integer $ShuffleWriteBytesCos) Set Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getShuffleWriteBytesTotal() Obtain Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setShuffleWriteBytesTotal(integer $ShuffleWriteBytesTotal) Set Note: This field may return null, indicating that no valid values can be obtained.
  */
 class SparkMonitorMetrics extends AbstractModel
 {
     /**
-     * @var integer The shuffle data (in bytes) that overflows to COS.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ShuffleWriteBytesCos;
 
     /**
-     * @var integer The total shuffle data (in bytes).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ShuffleWriteBytesTotal;
 
     /**
-     * @param integer $ShuffleWriteBytesCos The shuffle data (in bytes) that overflows to COS.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $ShuffleWriteBytesTotal The total shuffle data (in bytes).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $ShuffleWriteBytesCos Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $ShuffleWriteBytesTotal Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

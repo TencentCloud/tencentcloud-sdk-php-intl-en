@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNextToken(string $NextToken) Set The pagination information returned by the last response. This parameter can be omitted for the first response, where the data will be returned from the beginning. The data with a volume set by the `MaxResults` field is returned each time.
  * @method integer getMaxResults() Obtain Maximum number of returned rows. Value range: 0–1,000. Default value: 1,000.
  * @method void setMaxResults(integer $MaxResults) Set Maximum number of returned rows. Value range: 0–1,000. Default value: 1,000.
+ * @method boolean getIsTransformDataType() Obtain Whether to convert the data type
+ * @method void setIsTransformDataType(boolean $IsTransformDataType) Set Whether to convert the data type
  */
 class DescribeTaskResultRequest extends AbstractModel
 {
@@ -45,9 +47,15 @@ class DescribeTaskResultRequest extends AbstractModel
     public $MaxResults;
 
     /**
+     * @var boolean Whether to convert the data type
+     */
+    public $IsTransformDataType;
+
+    /**
      * @param string $TaskId Unique task ID
      * @param string $NextToken The pagination information returned by the last response. This parameter can be omitted for the first response, where the data will be returned from the beginning. The data with a volume set by the `MaxResults` field is returned each time.
      * @param integer $MaxResults Maximum number of returned rows. Value range: 0–1,000. Default value: 1,000.
+     * @param boolean $IsTransformDataType Whether to convert the data type
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class DescribeTaskResultRequest extends AbstractModel
 
         if (array_key_exists("MaxResults",$param) and $param["MaxResults"] !== null) {
             $this->MaxResults = $param["MaxResults"];
+        }
+
+        if (array_key_exists("IsTransformDataType",$param) and $param["IsTransformDataType"] !== null) {
+            $this->IsTransformDataType = $param["IsTransformDataType"];
         }
     }
 }

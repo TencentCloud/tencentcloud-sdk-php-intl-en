@@ -20,34 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * COS permissions
  *
- * @method string getCosPath() Obtain The COS path.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setCosPath(string $CosPath) Set The COS path.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method array getPermissions() Obtain The permissions. Valid values: `read` and `write`.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setPermissions(array $Permissions) Set The permissions. Valid values: `read` and `write`.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getCosPath() Obtain Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setCosPath(string $CosPath) Set Note: This field may return null, indicating that no valid values can be obtained.
+ * @method array getPermissions() Obtain Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setPermissions(array $Permissions) Set Note: This field may return null, indicating that no valid values can be obtained.
  */
 class CosPermission extends AbstractModel
 {
     /**
-     * @var string The COS path.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $CosPath;
 
     /**
-     * @var array The permissions. Valid values: `read` and `write`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Permissions;
 
     /**
-     * @param string $CosPath The COS path.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param array $Permissions The permissions. Valid values: `read` and `write`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $CosPath Note: This field may return null, indicating that no valid values can be obtained.
+     * @param array $Permissions Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

@@ -68,76 +68,42 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCurrentTaskId(string $CurrentTaskId) Set Last task ID of the Spark job
  * @method integer getJobStatus() Obtain Last status of the Spark job
  * @method void setJobStatus(integer $JobStatus) Set Last status of the Spark job
- * @method StreamingStatistics getStreamingStat() Obtain Spark streaming job statistics
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setStreamingStat(StreamingStatistics $StreamingStat) Set Spark streaming job statistics
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getDataSource() Obtain Data source name
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setDataSource(string $DataSource) Set Data source name
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getIsLocalPythonFiles() Obtain PySpark: Dependency upload method. 1: cos; 2: lakefs (this method needs to be used in the console but cannot be called through APIs).
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setIsLocalPythonFiles(string $IsLocalPythonFiles) Set PySpark: Dependency upload method. 1: cos; 2: lakefs (this method needs to be used in the console but cannot be called through APIs).
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getAppPythonFiles() Obtain Note: This returned value has been disused.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setAppPythonFiles(string $AppPythonFiles) Set Note: This returned value has been disused.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getIsLocalArchives() Obtain Archives: Dependency upload method. 1: cos; 2: lakefs (this method needs to be used in the console but cannot be called through APIs).
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setIsLocalArchives(string $IsLocalArchives) Set Archives: Dependency upload method. 1: cos; 2: lakefs (this method needs to be used in the console but cannot be called through APIs).
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getJobArchives() Obtain Archives: Dependency resources
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setJobArchives(string $JobArchives) Set Archives: Dependency resources
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getSparkImage() Obtain The Spark image version.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setSparkImage(string $SparkImage) Set The Spark image version.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getJobPythonFiles() Obtain PySpark: Python dependency, which can be in .py, .zip, or .egg format. Multiple files should be separated by comma.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setJobPythonFiles(string $JobPythonFiles) Set PySpark: Python dependency, which can be in .py, .zip, or .egg format. Multiple files should be separated by comma.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getTaskNum() Obtain Number of tasks running or ready to run under the current job
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setTaskNum(integer $TaskNum) Set Number of tasks running or ready to run under the current job
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getDataEngineStatus() Obtain Engine status. -100 (default value): unknown; -2-11: normal.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setDataEngineStatus(integer $DataEngineStatus) Set Engine status. -100 (default value): unknown; -2-11: normal.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getJobExecutorMaxNumbers() Obtain The specified executor count (max), which defaults to 1. This parameter applies if the "Dynamic" mode is selected. If the "Dynamic" mode is not selected, the executor count is equal to `JobExecutorNums`.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setJobExecutorMaxNumbers(integer $JobExecutorMaxNumbers) Set The specified executor count (max), which defaults to 1. This parameter applies if the "Dynamic" mode is selected. If the "Dynamic" mode is not selected, the executor count is equal to `JobExecutorNums`.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getSparkImageVersion() Obtain The image version.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setSparkImageVersion(string $SparkImageVersion) Set The image version.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getSessionId() Obtain The ID of the associated Data Lake Compute query script.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setSessionId(string $SessionId) Set The ID of the associated Data Lake Compute query script.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getDataEngineClusterType() Obtain `spark_emr_livy` indicates to create an EMR cluster.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setDataEngineClusterType(string $DataEngineClusterType) Set `spark_emr_livy` indicates to create an EMR cluster.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getDataEngineImageVersion() Obtain `Spark 3.2-EMR` indicates to use the Spark 3.2 image.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setDataEngineImageVersion(string $DataEngineImageVersion) Set `Spark 3.2-EMR` indicates to use the Spark 3.2 image.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getIsInherit() Obtain Whether the task resource configuration is inherited from the cluster template. Valid values: `0` (default): No; `1`: Yes.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setIsInherit(integer $IsInherit) Set Whether the task resource configuration is inherited from the cluster template. Valid values: `0` (default): No; `1`: Yes.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method boolean getIsSessionStarted() Obtain Whether the task runs with the session SQLs. Valid values: `false` for no and `true` for yes.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setIsSessionStarted(boolean $IsSessionStarted) Set Whether the task runs with the session SQLs. Valid values: `false` for no and `true` for yes.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getEngineTypeDetail() Obtain 
- * @method void setEngineTypeDetail(string $EngineTypeDetail) Set 
+ * @method StreamingStatistics getStreamingStat() Obtain Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setStreamingStat(StreamingStatistics $StreamingStat) Set Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getDataSource() Obtain Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setDataSource(string $DataSource) Set Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getIsLocalPythonFiles() Obtain Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setIsLocalPythonFiles(string $IsLocalPythonFiles) Set Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getAppPythonFiles() Obtain Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setAppPythonFiles(string $AppPythonFiles) Set Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getIsLocalArchives() Obtain Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setIsLocalArchives(string $IsLocalArchives) Set Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getJobArchives() Obtain Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setJobArchives(string $JobArchives) Set Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getSparkImage() Obtain Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setSparkImage(string $SparkImage) Set Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getJobPythonFiles() Obtain Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setJobPythonFiles(string $JobPythonFiles) Set Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getTaskNum() Obtain Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setTaskNum(integer $TaskNum) Set Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getDataEngineStatus() Obtain Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setDataEngineStatus(integer $DataEngineStatus) Set Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getJobExecutorMaxNumbers() Obtain Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setJobExecutorMaxNumbers(integer $JobExecutorMaxNumbers) Set Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getSparkImageVersion() Obtain Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setSparkImageVersion(string $SparkImageVersion) Set Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getSessionId() Obtain Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setSessionId(string $SessionId) Set Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getDataEngineClusterType() Obtain Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setDataEngineClusterType(string $DataEngineClusterType) Set Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getDataEngineImageVersion() Obtain Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setDataEngineImageVersion(string $DataEngineImageVersion) Set Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getIsInherit() Obtain Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setIsInherit(integer $IsInherit) Set Note: This field may return null, indicating that no valid values can be obtained.
+ * @method boolean getIsSessionStarted() Obtain Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setIsSessionStarted(boolean $IsSessionStarted) Set Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getEngineTypeDetail() Obtain Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setEngineTypeDetail(string $EngineTypeDetail) Set Note: This field may return null, indicating that no valid values can be obtained.
  */
 class SparkJobInfo extends AbstractModel
 {
@@ -262,109 +228,92 @@ class SparkJobInfo extends AbstractModel
     public $JobStatus;
 
     /**
-     * @var StreamingStatistics Spark streaming job statistics
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var StreamingStatistics Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $StreamingStat;
 
     /**
-     * @var string Data source name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $DataSource;
 
     /**
-     * @var string PySpark: Dependency upload method. 1: cos; 2: lakefs (this method needs to be used in the console but cannot be called through APIs).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $IsLocalPythonFiles;
 
     /**
-     * @var string Note: This returned value has been disused.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $AppPythonFiles;
 
     /**
-     * @var string Archives: Dependency upload method. 1: cos; 2: lakefs (this method needs to be used in the console but cannot be called through APIs).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $IsLocalArchives;
 
     /**
-     * @var string Archives: Dependency resources
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $JobArchives;
 
     /**
-     * @var string The Spark image version.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $SparkImage;
 
     /**
-     * @var string PySpark: Python dependency, which can be in .py, .zip, or .egg format. Multiple files should be separated by comma.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $JobPythonFiles;
 
     /**
-     * @var integer Number of tasks running or ready to run under the current job
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $TaskNum;
 
     /**
-     * @var integer Engine status. -100 (default value): unknown; -2-11: normal.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $DataEngineStatus;
 
     /**
-     * @var integer The specified executor count (max), which defaults to 1. This parameter applies if the "Dynamic" mode is selected. If the "Dynamic" mode is not selected, the executor count is equal to `JobExecutorNums`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $JobExecutorMaxNumbers;
 
     /**
-     * @var string The image version.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $SparkImageVersion;
 
     /**
-     * @var string The ID of the associated Data Lake Compute query script.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $SessionId;
 
     /**
-     * @var string `spark_emr_livy` indicates to create an EMR cluster.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $DataEngineClusterType;
 
     /**
-     * @var string `Spark 3.2-EMR` indicates to use the Spark 3.2 image.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $DataEngineImageVersion;
 
     /**
-     * @var integer Whether the task resource configuration is inherited from the cluster template. Valid values: `0` (default): No; `1`: Yes.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $IsInherit;
 
     /**
-     * @var boolean Whether the task runs with the session SQLs. Valid values: `false` for no and `true` for yes.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var boolean Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $IsSessionStarted;
 
     /**
-     * @var string 
+     * @var string Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $EngineTypeDetail;
 
@@ -393,41 +342,24 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param integer $JobUpdateTime Spark job update time
      * @param string $CurrentTaskId Last task ID of the Spark job
      * @param integer $JobStatus Last status of the Spark job
-     * @param StreamingStatistics $StreamingStat Spark streaming job statistics
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $DataSource Data source name
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $IsLocalPythonFiles PySpark: Dependency upload method. 1: cos; 2: lakefs (this method needs to be used in the console but cannot be called through APIs).
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $AppPythonFiles Note: This returned value has been disused.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $IsLocalArchives Archives: Dependency upload method. 1: cos; 2: lakefs (this method needs to be used in the console but cannot be called through APIs).
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $JobArchives Archives: Dependency resources
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $SparkImage The Spark image version.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $JobPythonFiles PySpark: Python dependency, which can be in .py, .zip, or .egg format. Multiple files should be separated by comma.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $TaskNum Number of tasks running or ready to run under the current job
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $DataEngineStatus Engine status. -100 (default value): unknown; -2-11: normal.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $JobExecutorMaxNumbers The specified executor count (max), which defaults to 1. This parameter applies if the "Dynamic" mode is selected. If the "Dynamic" mode is not selected, the executor count is equal to `JobExecutorNums`.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $SparkImageVersion The image version.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $SessionId The ID of the associated Data Lake Compute query script.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $DataEngineClusterType `spark_emr_livy` indicates to create an EMR cluster.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $DataEngineImageVersion `Spark 3.2-EMR` indicates to use the Spark 3.2 image.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $IsInherit Whether the task resource configuration is inherited from the cluster template. Valid values: `0` (default): No; `1`: Yes.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param boolean $IsSessionStarted Whether the task runs with the session SQLs. Valid values: `false` for no and `true` for yes.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $EngineTypeDetail 
+     * @param StreamingStatistics $StreamingStat Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $DataSource Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $IsLocalPythonFiles Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $AppPythonFiles Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $IsLocalArchives Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $JobArchives Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $SparkImage Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $JobPythonFiles Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $TaskNum Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $DataEngineStatus Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $JobExecutorMaxNumbers Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $SparkImageVersion Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $SessionId Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $DataEngineClusterType Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $DataEngineImageVersion Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $IsInherit Note: This field may return null, indicating that no valid values can be obtained.
+     * @param boolean $IsSessionStarted Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $EngineTypeDetail Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

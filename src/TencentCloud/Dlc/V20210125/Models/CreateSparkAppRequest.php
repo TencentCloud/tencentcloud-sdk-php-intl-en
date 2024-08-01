@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDataEngine(string $DataEngine) Set The data engine executing the Spark job.
  * @method string getAppFile() Obtain The path of the Spark job package.
  * @method void setAppFile(string $AppFile) Set The path of the Spark job package.
- * @method integer getRoleArn() Obtain The data access policy (CAM role arn).
- * @method void setRoleArn(integer $RoleArn) Set The data access policy (CAM role arn).
+ * @method integer getRoleArn() Obtain Data visiting policy achieved through CAM Role arn; the console can obtain it through Data Job -> Job Configuration; SDK can obtain corresponding values through the DescribeUserRoles API.
+ * @method void setRoleArn(integer $RoleArn) Set Data visiting policy achieved through CAM Role arn; the console can obtain it through Data Job -> Job Configuration; SDK can obtain corresponding values through the DescribeUserRoles API.
  * @method string getAppDriverSize() Obtain The driver size. Valid values: `small` (default, 1 CU), `medium` (2 CUs), `large` (4 CUs), and `xlarge` (8 CUs).
  * @method void setAppDriverSize(string $AppDriverSize) Set The driver size. Valid values: `small` (default, 1 CU), `medium` (2 CUs), `large` (4 CUs), and `xlarge` (8 CUs).
  * @method string getAppExecutorSize() Obtain The executor size. Valid values: `small` (default, 1 CU), `medium` (2 CUs), `large` (4 CUs), and `xlarge` (8 CUs).
@@ -102,7 +102,7 @@ class CreateSparkAppRequest extends AbstractModel
     public $AppFile;
 
     /**
-     * @var integer The data access policy (CAM role arn).
+     * @var integer Data visiting policy achieved through CAM Role arn; the console can obtain it through Data Job -> Job Configuration; SDK can obtain corresponding values through the DescribeUserRoles API.
      */
     public $RoleArn;
 
@@ -231,7 +231,7 @@ class CreateSparkAppRequest extends AbstractModel
      * @param integer $AppType The Spark job type. Valid values: `1` for Spark JAR job and `2` for Spark streaming job.
      * @param string $DataEngine The data engine executing the Spark job.
      * @param string $AppFile The path of the Spark job package.
-     * @param integer $RoleArn The data access policy (CAM role arn).
+     * @param integer $RoleArn Data visiting policy achieved through CAM Role arn; the console can obtain it through Data Job -> Job Configuration; SDK can obtain corresponding values through the DescribeUserRoles API.
      * @param string $AppDriverSize The driver size. Valid values: `small` (default, 1 CU), `medium` (2 CUs), `large` (4 CUs), and `xlarge` (8 CUs).
      * @param string $AppExecutorSize The executor size. Valid values: `small` (default, 1 CU), `medium` (2 CUs), `large` (4 CUs), and `xlarge` (8 CUs).
      * @param integer $AppExecutorNums Number of Spark job executors

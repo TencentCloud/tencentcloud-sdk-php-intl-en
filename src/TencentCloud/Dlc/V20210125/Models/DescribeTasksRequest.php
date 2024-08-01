@@ -46,6 +46,8 @@ task-kind - string (filter by task type)
  * @method void setEndTime(string $EndTime) Set End time in the format of `yyyy-mm-dd HH:MM:SS`, which is the current time by default. The time span is (0, 30] days. Data in the last 45 days can be queried.
  * @method string getDataEngineName() Obtain The data engine name for filtering.
  * @method void setDataEngineName(string $DataEngineName) Set The data engine name for filtering.
+ * @method string getResourceGroupName() Obtain Resource group name of the spark engine
+ * @method void setResourceGroupName(string $ResourceGroupName) Set Resource group name of the spark engine
  */
 class DescribeTasksRequest extends AbstractModel
 {
@@ -95,6 +97,11 @@ task-kind - string (filter by task type)
     public $DataEngineName;
 
     /**
+     * @var string Resource group name of the spark engine
+     */
+    public $ResourceGroupName;
+
+    /**
      * @param integer $Limit Number of returned results. Default value: 10. Maximum value: 100.
      * @param integer $Offset Offset. Default value: 0.
      * @param array $Filters Filter. The following filters are supported, and the `Name` input parameter must be one of them. Up to 50 `task-id` values can be filtered, while up to 5 other parameters can be filtered in total.
@@ -108,6 +115,7 @@ task-kind - string (filter by task type)
      * @param string $StartTime Start time in the format of `yyyy-mm-dd HH:MM:SS`, which is the current time seven days ago by default.
      * @param string $EndTime End time in the format of `yyyy-mm-dd HH:MM:SS`, which is the current time by default. The time span is (0, 30] days. Data in the last 45 days can be queried.
      * @param string $DataEngineName The data engine name for filtering.
+     * @param string $ResourceGroupName Resource group name of the spark engine
      */
     function __construct()
     {
@@ -157,6 +165,10 @@ task-kind - string (filter by task type)
 
         if (array_key_exists("DataEngineName",$param) and $param["DataEngineName"] !== null) {
             $this->DataEngineName = $param["DataEngineName"];
+        }
+
+        if (array_key_exists("ResourceGroupName",$param) and $param["ResourceGroupName"] !== null) {
+            $this->ResourceGroupName = $param["ResourceGroupName"];
         }
     }
 }

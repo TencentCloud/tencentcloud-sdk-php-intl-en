@@ -56,6 +56,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setDbGovernPolicyIsDisable(string $DbGovernPolicyIsDisable) Set Whether database data governance is disabled. Valid values: `true` (disabled) and `false` (not disabled).
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method SmartPolicy getSmartPolicy() Obtain Smart data governance configuration items
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setSmartPolicy(SmartPolicy $SmartPolicy) Set Smart data governance configuration items
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class TableBaseInfo extends AbstractModel
 {
@@ -108,14 +112,22 @@ Note: This field may return null, indicating that no valid values can be obtaine
     /**
      * @var DataGovernPolicy The data governance configuration.
 Note: This field may return null, indicating that no valid values can be obtained.
+     * @deprecated
      */
     public $GovernPolicy;
 
     /**
      * @var string Whether database data governance is disabled. Valid values: `true` (disabled) and `false` (not disabled).
 Note: This field may return null, indicating that no valid values can be obtained.
+     * @deprecated
      */
     public $DbGovernPolicyIsDisable;
+
+    /**
+     * @var SmartPolicy Smart data governance configuration items
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $SmartPolicy;
 
     /**
      * @param string $DatabaseName The database name.
@@ -135,6 +147,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param DataGovernPolicy $GovernPolicy The data governance configuration.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $DbGovernPolicyIsDisable Whether database data governance is disabled. Valid values: `true` (disabled) and `false` (not disabled).
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param SmartPolicy $SmartPolicy Smart data governance configuration items
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
@@ -189,6 +203,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("DbGovernPolicyIsDisable",$param) and $param["DbGovernPolicyIsDisable"] !== null) {
             $this->DbGovernPolicyIsDisable = $param["DbGovernPolicyIsDisable"];
+        }
+
+        if (array_key_exists("SmartPolicy",$param) and $param["SmartPolicy"] !== null) {
+            $this->SmartPolicy = new SmartPolicy();
+            $this->SmartPolicy->deserialize($param["SmartPolicy"]);
         }
     }
 }
