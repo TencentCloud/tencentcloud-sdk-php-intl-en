@@ -48,6 +48,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInputAnalysisSettings(InputAnalysisInfo $InputAnalysisSettings) Set Recognition configuration for input content.
  * @method array getTags() Obtain Console tag list.
  * @method void setTags(array $Tags) Set Console tag list.
+ * @method array getFrameCaptureTemplates() Obtain Frame capture templates.
+ * @method void setFrameCaptureTemplates(array $FrameCaptureTemplates) Set Frame capture templates.
  */
 class ModifyStreamLiveChannelRequest extends AbstractModel
 {
@@ -122,6 +124,11 @@ class ModifyStreamLiveChannelRequest extends AbstractModel
     public $Tags;
 
     /**
+     * @var array Frame capture templates.
+     */
+    public $FrameCaptureTemplates;
+
+    /**
      * @param string $Id Channel ID
      * @param string $Name Channel name, which can contain 1-32 case-sensitive letters, digits, and underscores and must be unique at the region level
      * @param array $AttachedInputs Inputs to attach. You can attach 1 to 5 inputs.
@@ -136,6 +143,7 @@ class ModifyStreamLiveChannelRequest extends AbstractModel
      * @param PipelineInputSettingsInfo $PipelineInputSettings Pipeline configuration.
      * @param InputAnalysisInfo $InputAnalysisSettings Recognition configuration for input content.
      * @param array $Tags Console tag list.
+     * @param array $FrameCaptureTemplates Frame capture templates.
      */
     function __construct()
     {
@@ -243,6 +251,15 @@ class ModifyStreamLiveChannelRequest extends AbstractModel
                 $obj = new Tag();
                 $obj->deserialize($value);
                 array_push($this->Tags, $obj);
+            }
+        }
+
+        if (array_key_exists("FrameCaptureTemplates",$param) and $param["FrameCaptureTemplates"] !== null) {
+            $this->FrameCaptureTemplates = [];
+            foreach ($param["FrameCaptureTemplates"] as $key => $value){
+                $obj = new FrameCaptureTemplate();
+                $obj->deserialize($value);
+                array_push($this->FrameCaptureTemplates, $obj);
             }
         }
     }

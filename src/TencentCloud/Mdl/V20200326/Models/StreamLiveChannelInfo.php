@@ -60,6 +60,8 @@ Note: This field may return `null`, indicating that no valid value was found.
  * @method void setInputAnalysisSettings(InputAnalysisInfo $InputAnalysisSettings) Set Recognition configuration for input content.
  * @method array getTags() Obtain Console tag list.
  * @method void setTags(array $Tags) Set Console tag list.
+ * @method array getFrameCaptureTemplates() Obtain Frame capture templates.
+ * @method void setFrameCaptureTemplates(array $FrameCaptureTemplates) Set Frame capture templates.
  */
 class StreamLiveChannelInfo extends AbstractModel
 {
@@ -144,6 +146,11 @@ Note: This field may return `null`, indicating that no valid value was found.
     public $Tags;
 
     /**
+     * @var array Frame capture templates.
+     */
+    public $FrameCaptureTemplates;
+
+    /**
      * @param string $Id Channel ID
      * @param string $State Channel status
      * @param array $AttachedInputs Information of attached inputs
@@ -164,6 +171,7 @@ Note: This field may return `null`, indicating that no valid value was found.
      * @param PipelineInputSettingsInfo $PipelineInputSettings Pipeline configuration.
      * @param InputAnalysisInfo $InputAnalysisSettings Recognition configuration for input content.
      * @param array $Tags Console tag list.
+     * @param array $FrameCaptureTemplates Frame capture templates.
      */
     function __construct()
     {
@@ -275,6 +283,15 @@ Note: This field may return `null`, indicating that no valid value was found.
                 $obj = new Tag();
                 $obj->deserialize($value);
                 array_push($this->Tags, $obj);
+            }
+        }
+
+        if (array_key_exists("FrameCaptureTemplates",$param) and $param["FrameCaptureTemplates"] !== null) {
+            $this->FrameCaptureTemplates = [];
+            foreach ($param["FrameCaptureTemplates"] as $key => $value){
+                $obj = new FrameCaptureTemplate();
+                $obj->deserialize($value);
+                array_push($this->FrameCaptureTemplates, $obj);
             }
         }
     }

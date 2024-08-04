@@ -34,8 +34,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setPassword(string $Password) Set Authentication password. Length limit: [1,128].
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getDestinationType() Obtain The destination type of the retweet. Currently available values are: Standard, AWS_MediaPackageV1, AWS_MediaPackageV2. The default is: Standard.
- * @method void setDestinationType(string $DestinationType) Set The destination type of the retweet. Currently available values are: Standard, AWS_MediaPackageV1, AWS_MediaPackageV2. The default is: Standard.
+ * @method string getDestinationType() Obtain The destination type of the retweet. Currently available values are: Standard, AWS_MediaPackageV1, AWS_MediaPackageV2. The default is: Standard. When the output group type is FRAME_CAPTURE, valid values are: AWS_AmazonS3, COS.
+ * @method void setDestinationType(string $DestinationType) Set The destination type of the retweet. Currently available values are: Standard, AWS_MediaPackageV1, AWS_MediaPackageV2. The default is: Standard. When the output group type is FRAME_CAPTURE, valid values are: AWS_AmazonS3, COS.
+ * @method AmazonS3Settings getAmazonS3Settings() Obtain Aws S3 destination setting.
+ * @method void setAmazonS3Settings(AmazonS3Settings $AmazonS3Settings) Set Aws S3 destination setting.
+ * @method CosSettings getCosSettings() Obtain Cos destination setting.
+ * @method void setCosSettings(CosSettings $CosSettings) Set Cos destination setting.
  */
 class DestinationInfo extends AbstractModel
 {
@@ -63,9 +67,19 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $Password;
 
     /**
-     * @var string The destination type of the retweet. Currently available values are: Standard, AWS_MediaPackageV1, AWS_MediaPackageV2. The default is: Standard.
+     * @var string The destination type of the retweet. Currently available values are: Standard, AWS_MediaPackageV1, AWS_MediaPackageV2. The default is: Standard. When the output group type is FRAME_CAPTURE, valid values are: AWS_AmazonS3, COS.
      */
     public $DestinationType;
+
+    /**
+     * @var AmazonS3Settings Aws S3 destination setting.
+     */
+    public $AmazonS3Settings;
+
+    /**
+     * @var CosSettings Cos destination setting.
+     */
+    public $CosSettings;
 
     /**
      * @param string $OutputUrl Relay destination address. Length limit: [1,512].
@@ -75,7 +89,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $Password Authentication password. Length limit: [1,128].
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $DestinationType The destination type of the retweet. Currently available values are: Standard, AWS_MediaPackageV1, AWS_MediaPackageV2. The default is: Standard.
+     * @param string $DestinationType The destination type of the retweet. Currently available values are: Standard, AWS_MediaPackageV1, AWS_MediaPackageV2. The default is: Standard. When the output group type is FRAME_CAPTURE, valid values are: AWS_AmazonS3, COS.
+     * @param AmazonS3Settings $AmazonS3Settings Aws S3 destination setting.
+     * @param CosSettings $CosSettings Cos destination setting.
      */
     function __construct()
     {
@@ -108,6 +124,16 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("DestinationType",$param) and $param["DestinationType"] !== null) {
             $this->DestinationType = $param["DestinationType"];
+        }
+
+        if (array_key_exists("AmazonS3Settings",$param) and $param["AmazonS3Settings"] !== null) {
+            $this->AmazonS3Settings = new AmazonS3Settings();
+            $this->AmazonS3Settings->deserialize($param["AmazonS3Settings"]);
+        }
+
+        if (array_key_exists("CosSettings",$param) and $param["CosSettings"] !== null) {
+            $this->CosSettings = new CosSettings();
+            $this->CosSettings->deserialize($param["CosSettings"]);
         }
     }
 }

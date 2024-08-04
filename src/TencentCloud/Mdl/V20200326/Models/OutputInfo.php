@@ -42,6 +42,8 @@ Note: this field may return `null`, indicating that no valid value was found.
  * @method void setCaptionTemplateNames(array $CaptionTemplateNames) Set For the subtitle template used, only the AVTemplateNames is valid.
  * @method TimedMetadataSettingInfo getTimedMetadataSettings() Obtain Meta information controls configuration.
  * @method void setTimedMetadataSettings(TimedMetadataSettingInfo $TimedMetadataSettings) Set Meta information controls configuration.
+ * @method array getFrameCaptureTemplateNames() Obtain Frame capture template name array. Quantity limit: [0,1].
+ * @method void setFrameCaptureTemplateNames(array $FrameCaptureTemplateNames) Set Frame capture template name array. Quantity limit: [0,1].
  */
 class OutputInfo extends AbstractModel
 {
@@ -85,6 +87,11 @@ Note: this field may return `null`, indicating that no valid value was found.
     public $TimedMetadataSettings;
 
     /**
+     * @var array Frame capture template name array. Quantity limit: [0,1].
+     */
+    public $FrameCaptureTemplateNames;
+
+    /**
      * @param string $Name Output name.
      * @param array $AudioTemplateNames Audio transcoding template name array.
 Quantity limit: [0,1] for RTMP; [0,20] for others.
@@ -96,6 +103,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return `null`, indicating that no valid value was found.
      * @param array $CaptionTemplateNames For the subtitle template used, only the AVTemplateNames is valid.
      * @param TimedMetadataSettingInfo $TimedMetadataSettings Meta information controls configuration.
+     * @param array $FrameCaptureTemplateNames Frame capture template name array. Quantity limit: [0,1].
      */
     function __construct()
     {
@@ -138,6 +146,10 @@ Note: this field may return `null`, indicating that no valid value was found.
         if (array_key_exists("TimedMetadataSettings",$param) and $param["TimedMetadataSettings"] !== null) {
             $this->TimedMetadataSettings = new TimedMetadataSettingInfo();
             $this->TimedMetadataSettings->deserialize($param["TimedMetadataSettings"]);
+        }
+
+        if (array_key_exists("FrameCaptureTemplateNames",$param) and $param["FrameCaptureTemplateNames"] !== null) {
+            $this->FrameCaptureTemplateNames = $param["FrameCaptureTemplateNames"];
         }
     }
 }
