@@ -24,6 +24,7 @@ use TencentCloud\Dlc\V20210125\Models as Models;
 
 /**
  * @method Models\AddUsersToWorkGroupResponse AddUsersToWorkGroup(Models\AddUsersToWorkGroupRequest $req) This API is used to add users to working groups.
+ * @method Models\AlterDMSDatabaseResponse AlterDMSDatabase(Models\AlterDMSDatabaseRequest $req) This API is used to update databases in the DMS metadata module.
  * @method Models\AttachUserPolicyResponse AttachUserPolicy(Models\AttachUserPolicyRequest $req) This API is used to bind the authentication policy to the user.
  * @method Models\AttachWorkGroupPolicyResponse AttachWorkGroupPolicy(Models\AttachWorkGroupPolicyRequest $req) This API is used to bind an authentication policy to a working group.
  * @method Models\BindWorkGroupsToUserResponse BindWorkGroupsToUser(Models\BindWorkGroupsToUserRequest $req) This API is used to bind working groups to users.
@@ -33,6 +34,7 @@ use TencentCloud\Dlc\V20210125\Models as Models;
  * @method Models\CheckDataEngineImageCanBeRollbackResponse CheckDataEngineImageCanBeRollback(Models\CheckDataEngineImageCanBeRollbackRequest $req) This API is used to check whether the cluster can be rolled back.
  * @method Models\CheckDataEngineImageCanBeUpgradeResponse CheckDataEngineImageCanBeUpgrade(Models\CheckDataEngineImageCanBeUpgradeRequest $req) This API is used to check whether the cluster image can be upgraded.
  * @method Models\CreateCHDFSBindingProductResponse CreateCHDFSBindingProduct(Models\CreateCHDFSBindingProductRequest $req) This API is used to create metadata acceleration buckets and the binding relationship between products.
+ * @method Models\CreateDMSDatabaseResponse CreateDMSDatabase(Models\CreateDMSDatabaseRequest $req) This API is used to create databases in the DMS metadata module.
  * @method Models\CreateDataEngineResponse CreateDataEngine(Models\CreateDataEngineRequest $req) This API is used to create a data engine.
  * @method Models\CreateInternalTableResponse CreateInternalTable(Models\CreateInternalTableRequest $req) This API is used to create a managed internal table. It has been disused.
  * @method Models\CreateResultDownloadResponse CreateResultDownload(Models\CreateResultDownloadRequest $req) This API is used to create a query result download task.
@@ -53,6 +55,7 @@ use TencentCloud\Dlc\V20210125\Models as Models;
  * @method Models\DeleteWorkGroupResponse DeleteWorkGroup(Models\DeleteWorkGroupRequest $req) This API is used to delete working groups.
  * @method Models\DescribeAdvancedStoreLocationResponse DescribeAdvancedStoreLocation(Models\DescribeAdvancedStoreLocationRequest $req) This API is used to query the advanced settings of the SQL query interface.
  * @method Models\DescribeDLCCatalogAccessResponse DescribeDLCCatalogAccess(Models\DescribeDLCCatalogAccessRequest $req) This API is used to query the DLC Catalog authorization list.
+ * @method Models\DescribeDMSDatabaseResponse DescribeDMSDatabase(Models\DescribeDMSDatabaseRequest $req) This API is used to obtain databases in the DMS metadata module.
  * @method Models\DescribeDataEngineResponse DescribeDataEngine(Models\DescribeDataEngineRequest $req) This API is used to obtain detailed data engine information based on names.
  * @method Models\DescribeDataEngineImageVersionsResponse DescribeDataEngineImageVersions(Models\DescribeDataEngineImageVersionsRequest $req) This API is used to obtain the major version image list of exclusive clusters.
  * @method Models\DescribeDataEnginePythonSparkImagesResponse DescribeDataEnginePythonSparkImages(Models\DescribeDataEnginePythonSparkImagesRequest $req) This API is used to obtain the PYSPARK image list.
@@ -83,6 +86,7 @@ use TencentCloud\Dlc\V20210125\Models as Models;
  * @method Models\DescribeWorkGroupsResponse DescribeWorkGroups(Models\DescribeWorkGroupsRequest $req) This API is used to get a list of working groups.
  * @method Models\DetachUserPolicyResponse DetachUserPolicy(Models\DetachUserPolicyRequest $req) This API is used to unbind the authentication policy from the user.
  * @method Models\DetachWorkGroupPolicyResponse DetachWorkGroupPolicy(Models\DetachWorkGroupPolicyRequest $req) This API is used to unbind the authentication policy from the working group.
+ * @method Models\DropDMSDatabaseResponse DropDMSDatabase(Models\DropDMSDatabaseRequest $req) This API is used to delete databases in the DMS metadata module.
  * @method Models\GenerateCreateMangedTableSqlResponse GenerateCreateMangedTableSql(Models\GenerateCreateMangedTableSqlRequest $req) This API is used to generate SQL statements for creating a managed table.
  * @method Models\GetOptimizerPolicyResponse GetOptimizerPolicy(Models\GetOptimizerPolicyRequest $req) GetOptimizerPolicy
  * @method Models\GrantDLCCatalogAccessResponse GrantDLCCatalogAccess(Models\GrantDLCCatalogAccessRequest $req) This API is used to grant permissions for visiting DLC Catalog.
