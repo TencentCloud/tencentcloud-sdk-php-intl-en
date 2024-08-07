@@ -28,12 +28,12 @@ Example values: "/9j/4AAQSk... (total length:61944)KiiK//2Q=="
 The size of image data encoded by Base64 shall not exceed 3M, only jpg and png are supported. 
 Please use standard Base64 encoding (use = for padding). Refer to RFC4648 for encoding specifications. 
 Example values: "/9j/4AAQSk... (total length:61944)KiiK//2Q=="
- * @method string getVideoBase64() Obtain Base64 value of photos used for face comparison. 
-The size of image data encoded by Base64 shall not exceed 3M, only jpg and png are supported. 
+ * @method string getVideoBase64() Obtain Base64 value of videos used for face comparison. 
+The size of videos data encoded by Base64 shall not exceed 8M, only mp4,avi,flv are supported. 
 Please use standard Base64 encoding (use = for padding). Refer to RFC4648 for encoding specifications. 
 Example values: "/9j/4AAQSk... (total length:61944)KiiK//2Q=="
- * @method void setVideoBase64(string $VideoBase64) Set Base64 value of photos used for face comparison. 
-The size of image data encoded by Base64 shall not exceed 3M, only jpg and png are supported. 
+ * @method void setVideoBase64(string $VideoBase64) Set Base64 value of videos used for face comparison. 
+The size of videos data encoded by Base64 shall not exceed 8M, only mp4,avi,flv are supported. 
 Please use standard Base64 encoding (use = for padding). Refer to RFC4648 for encoding specifications. 
 Example values: "/9j/4AAQSk... (total length:61944)KiiK//2Q=="
  * @method string getLivenessType() Obtain The liveness detection type. Valid values: `LIP`, `ACTION`, and `SILENT`.
@@ -42,7 +42,7 @@ Example value: "SILENT"
  * @method void setLivenessType(string $LivenessType) Set The liveness detection type. Valid values: `LIP`, `ACTION`, and `SILENT`.
 `LIP`: Numeric mode; `ACTION`: Motion mode; `SILENT`: silent mode. Select one of them.
 Example value: "SILENT"
- * @method string getValidateData() Obtain When the “LivenessType” parameter is “ACTION”, it must be specified.
+ * @method string getValidateData() Obtain When the "LivenessType" parameter is "ACTION", it must be specified.
 It is used to control the action sequence. Action types: 
 1 (open mouth)
 2 (blink)
@@ -51,9 +51,9 @@ It is used to control the action sequence. Action types:
 Select one or two from the four actions.
 Example of passing single action parameter: "1".
 Example of passing multiple action parameters: "4,2".
-When the “LivenessType” parameter value is “SILENT”, it shall be unspecified.
+When the "LivenessType" parameter value is "SILENT", it shall be unspecified.
 Example value: ""
- * @method void setValidateData(string $ValidateData) Set When the “LivenessType” parameter is “ACTION”, it must be specified.
+ * @method void setValidateData(string $ValidateData) Set When the "LivenessType" parameter is "ACTION", it must be specified.
 It is used to control the action sequence. Action types: 
 1 (open mouth)
 2 (blink)
@@ -62,7 +62,7 @@ It is used to control the action sequence. Action types:
 Select one or two from the four actions.
 Example of passing single action parameter: "1".
 Example of passing multiple action parameters: "4,2".
-When the “LivenessType” parameter value is “SILENT”, it shall be unspecified.
+When the "LivenessType" parameter value is "SILENT", it shall be unspecified.
 Example value: ""
  */
 class CompareFaceLivenessRequest extends AbstractModel
@@ -76,8 +76,8 @@ Example values: "/9j/4AAQSk... (total length:61944)KiiK//2Q=="
     public $ImageBase64;
 
     /**
-     * @var string Base64 value of photos used for face comparison. 
-The size of image data encoded by Base64 shall not exceed 3M, only jpg and png are supported. 
+     * @var string Base64 value of videos used for face comparison. 
+The size of videos data encoded by Base64 shall not exceed 8M, only mp4,avi,flv are supported. 
 Please use standard Base64 encoding (use = for padding). Refer to RFC4648 for encoding specifications. 
 Example values: "/9j/4AAQSk... (total length:61944)KiiK//2Q=="
      */
@@ -91,7 +91,7 @@ Example value: "SILENT"
     public $LivenessType;
 
     /**
-     * @var string When the “LivenessType” parameter is “ACTION”, it must be specified.
+     * @var string When the "LivenessType" parameter is "ACTION", it must be specified.
 It is used to control the action sequence. Action types: 
 1 (open mouth)
 2 (blink)
@@ -100,7 +100,7 @@ It is used to control the action sequence. Action types:
 Select one or two from the four actions.
 Example of passing single action parameter: "1".
 Example of passing multiple action parameters: "4,2".
-When the “LivenessType” parameter value is “SILENT”, it shall be unspecified.
+When the "LivenessType" parameter value is "SILENT", it shall be unspecified.
 Example value: ""
      */
     public $ValidateData;
@@ -110,14 +110,14 @@ Example value: ""
 The size of image data encoded by Base64 shall not exceed 3M, only jpg and png are supported. 
 Please use standard Base64 encoding (use = for padding). Refer to RFC4648 for encoding specifications. 
 Example values: "/9j/4AAQSk... (total length:61944)KiiK//2Q=="
-     * @param string $VideoBase64 Base64 value of photos used for face comparison. 
-The size of image data encoded by Base64 shall not exceed 3M, only jpg and png are supported. 
+     * @param string $VideoBase64 Base64 value of videos used for face comparison. 
+The size of videos data encoded by Base64 shall not exceed 8M, only mp4,avi,flv are supported. 
 Please use standard Base64 encoding (use = for padding). Refer to RFC4648 for encoding specifications. 
 Example values: "/9j/4AAQSk... (total length:61944)KiiK//2Q=="
      * @param string $LivenessType The liveness detection type. Valid values: `LIP`, `ACTION`, and `SILENT`.
 `LIP`: Numeric mode; `ACTION`: Motion mode; `SILENT`: silent mode. Select one of them.
 Example value: "SILENT"
-     * @param string $ValidateData When the “LivenessType” parameter is “ACTION”, it must be specified.
+     * @param string $ValidateData When the "LivenessType" parameter is "ACTION", it must be specified.
 It is used to control the action sequence. Action types: 
 1 (open mouth)
 2 (blink)
@@ -126,7 +126,7 @@ It is used to control the action sequence. Action types:
 Select one or two from the four actions.
 Example of passing single action parameter: "1".
 Example of passing multiple action parameters: "4,2".
-When the “LivenessType” parameter value is “SILENT”, it shall be unspecified.
+When the "LivenessType" parameter value is "SILENT", it shall be unspecified.
 Example value: ""
      */
     function __construct()
