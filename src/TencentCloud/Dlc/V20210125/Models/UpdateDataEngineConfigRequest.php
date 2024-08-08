@@ -24,6 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDataEngineIds(array $DataEngineIds) Set Engine ID
  * @method string getDataEngineConfigCommand() Obtain Commands of engine configuration. UpdateSparkSQLLakefsPath (updates the configuration of the native table) and UpdateSparkSQLResultPath (updates the configuration of the result path) are supported.
  * @method void setDataEngineConfigCommand(string $DataEngineConfigCommand) Set Commands of engine configuration. UpdateSparkSQLLakefsPath (updates the configuration of the native table) and UpdateSparkSQLResultPath (updates the configuration of the result path) are supported.
+ * @method boolean getUseLakeFs() Obtain Whether to use lakeFS as result storage
+ * @method void setUseLakeFs(boolean $UseLakeFs) Set Whether to use lakeFS as result storage
+ * @method string getCustomResultPath() Obtain User-defined result path
+ * @method void setCustomResultPath(string $CustomResultPath) Set User-defined result path
  */
 class UpdateDataEngineConfigRequest extends AbstractModel
 {
@@ -38,8 +42,20 @@ class UpdateDataEngineConfigRequest extends AbstractModel
     public $DataEngineConfigCommand;
 
     /**
+     * @var boolean Whether to use lakeFS as result storage
+     */
+    public $UseLakeFs;
+
+    /**
+     * @var string User-defined result path
+     */
+    public $CustomResultPath;
+
+    /**
      * @param array $DataEngineIds Engine ID
      * @param string $DataEngineConfigCommand Commands of engine configuration. UpdateSparkSQLLakefsPath (updates the configuration of the native table) and UpdateSparkSQLResultPath (updates the configuration of the result path) are supported.
+     * @param boolean $UseLakeFs Whether to use lakeFS as result storage
+     * @param string $CustomResultPath User-defined result path
      */
     function __construct()
     {
@@ -60,6 +76,14 @@ class UpdateDataEngineConfigRequest extends AbstractModel
 
         if (array_key_exists("DataEngineConfigCommand",$param) and $param["DataEngineConfigCommand"] !== null) {
             $this->DataEngineConfigCommand = $param["DataEngineConfigCommand"];
+        }
+
+        if (array_key_exists("UseLakeFs",$param) and $param["UseLakeFs"] !== null) {
+            $this->UseLakeFs = $param["UseLakeFs"];
+        }
+
+        if (array_key_exists("CustomResultPath",$param) and $param["CustomResultPath"] !== null) {
+            $this->CustomResultPath = $param["CustomResultPath"];
         }
     }
 }

@@ -87,6 +87,7 @@ use TencentCloud\Dlc\V20210125\Models as Models;
  * @method Models\DetachUserPolicyResponse DetachUserPolicy(Models\DetachUserPolicyRequest $req) This API is used to unbind the authentication policy from the user.
  * @method Models\DetachWorkGroupPolicyResponse DetachWorkGroupPolicy(Models\DetachWorkGroupPolicyRequest $req) This API is used to unbind the authentication policy from the working group.
  * @method Models\DropDMSDatabaseResponse DropDMSDatabase(Models\DropDMSDatabaseRequest $req) This API is used to delete databases in the DMS metadata module.
+ * @method Models\DropDMSTableResponse DropDMSTable(Models\DropDMSTableRequest $req) This API is used to delete tables in the DMS metadata module.
  * @method Models\GenerateCreateMangedTableSqlResponse GenerateCreateMangedTableSql(Models\GenerateCreateMangedTableSqlRequest $req) This API is used to generate SQL statements for creating a managed table.
  * @method Models\GetOptimizerPolicyResponse GetOptimizerPolicy(Models\GetOptimizerPolicyRequest $req) GetOptimizerPolicy
  * @method Models\GrantDLCCatalogAccessResponse GrantDLCCatalogAccess(Models\GrantDLCCatalogAccessRequest $req) This API is used to grant permissions for visiting DLC Catalog.
