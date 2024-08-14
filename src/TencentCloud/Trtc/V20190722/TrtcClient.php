@@ -180,6 +180,7 @@ Usage Precautions:
  * @method Models\StopStreamIngestResponse StopStreamIngest(Models\StopStreamIngestRequest $req) Stop a Pull stream Relay task.
  * @method Models\UpdatePublishCdnStreamResponse UpdatePublishCdnStream(Models\UpdatePublishCdnStreamRequest $req) This API is used to change the parameters of a relaying task.
 Note: For details about how to use this API, see the `StartPublishCdnStream` document.
+ * @method Models\UpdateStreamIngestResponse UpdateStreamIngest(Models\UpdateStreamIngestRequest $req) You can update the StreamUrl of the Relay task.
  */
 
 class TrtcClient extends AbstractClient
