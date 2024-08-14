@@ -23,6 +23,7 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Intlpartnersmgt\V20220928\Models as Models;
 
 /**
+ * @method Models\AllocateCreditPoolResponse AllocateCreditPool(Models\AllocateCreditPoolRequest $req) This API is used to allocate credit pools to second-level resellers by distributors.
  * @method Models\AllocateCustomerCreditResponse AllocateCustomerCredit(Models\AllocateCustomerCreditRequest $req) This API is used for a partner to set credit for a customer, such as increasing or lowering the credit and setting it to 0.
 1. The credit is valid permanently and will not be zeroed regularly.
 2. The customer's service will be suspended when its available credit is set to 0, so caution should be exercised with this operation.
