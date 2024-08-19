@@ -34,6 +34,8 @@ Note: this field may return `null`, indicating that no valid value was found.
 Note: this field may return `null`, indicating that no valid value was found.
  * @method void setFailOverSettings(FailOverSettings $FailOverSettings) Set Input failover configuration
 Note: this field may return `null`, indicating that no valid value was found.
+ * @method array getCaptionSelectors() Obtain Caption selector for the input. There can be 0 to 1 audio selectors.
+ * @method void setCaptionSelectors(array $CaptionSelectors) Set Caption selector for the input. There can be 0 to 1 audio selectors.
  */
 class AttachedInput extends AbstractModel
 {
@@ -61,6 +63,11 @@ Note: this field may return `null`, indicating that no valid value was found.
     public $FailOverSettings;
 
     /**
+     * @var array Caption selector for the input. There can be 0 to 1 audio selectors.
+     */
+    public $CaptionSelectors;
+
+    /**
      * @param string $Id Input ID
      * @param array $AudioSelectors Audio selector for the input. There can be 0 to 20 audio selectors.
 Note: this field may return `null`, indicating that no valid value was found.
@@ -68,6 +75,7 @@ Note: this field may return `null`, indicating that no valid value was found.
 Note: this field may return `null`, indicating that no valid value was found.
      * @param FailOverSettings $FailOverSettings Input failover configuration
 Note: this field may return `null`, indicating that no valid value was found.
+     * @param array $CaptionSelectors Caption selector for the input. There can be 0 to 1 audio selectors.
      */
     function __construct()
     {
@@ -102,6 +110,15 @@ Note: this field may return `null`, indicating that no valid value was found.
         if (array_key_exists("FailOverSettings",$param) and $param["FailOverSettings"] !== null) {
             $this->FailOverSettings = new FailOverSettings();
             $this->FailOverSettings->deserialize($param["FailOverSettings"]);
+        }
+
+        if (array_key_exists("CaptionSelectors",$param) and $param["CaptionSelectors"] !== null) {
+            $this->CaptionSelectors = [];
+            foreach ($param["CaptionSelectors"] as $key => $value){
+                $obj = new CaptionSelector();
+                $obj->deserialize($value);
+                array_push($this->CaptionSelectors, $obj);
+            }
         }
     }
 }
