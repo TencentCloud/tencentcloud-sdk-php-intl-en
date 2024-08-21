@@ -20,70 +20,122 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Table field information
  *
- * @method string getName() Obtain The field name.
- * @method void setName(string $Name) Set The field name.
- * @method string getType() Obtain The field type.
- * @method void setType(string $Type) Set The field type.
- * @method string getComment() Obtain The field description.
- * @method void setComment(string $Comment) Set The field description.
- * @method string getDefault() Obtain The default field value.
- * @method void setDefault(string $Default) Set The default field value.
- * @method boolean getNotNull() Obtain Whether the field is not null.
- * @method void setNotNull(boolean $NotNull) Set Whether the field is not null.
+ * @method string getName() Obtain Field name
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setName(string $Name) Set Field name
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getType() Obtain Field type
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setType(string $Type) Set Field type
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getComment() Obtain Field description
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setComment(string $Comment) Set Field description
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getDefault() Obtain Field default values
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setDefault(string $Default) Set Field default values
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method boolean getNotNull() Obtain Is the field non-empty?
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setNotNull(boolean $NotNull) Set Is the field non-empty?
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method integer getPrecision() Obtain Indicate the length of the entire numeric with a value of 1-38
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setPrecision(integer $Precision) Set Indicate the length of the entire numeric with a value of 1-38
- * @method integer getScale() Obtain Indicate the length of the decimal part.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getScale() Obtain Indicates the length of the decimal part.
 Scale is smaller than Precision.
- * @method void setScale(integer $Scale) Set Indicate the length of the decimal part.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setScale(integer $Scale) Set Indicates the length of the decimal part.
 Scale is smaller than Precision.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getPosition() Obtain Field position: Fields with smaller values need to be placed first.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setPosition(integer $Position) Set Field position: Fields with smaller values need to be placed first.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method boolean getIsPartition() Obtain Whether it is a partition field
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setIsPartition(boolean $IsPartition) Set Whether it is a partition field
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class TColumn extends AbstractModel
 {
     /**
-     * @var string The field name.
+     * @var string Field name
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Name;
 
     /**
-     * @var string The field type.
+     * @var string Field type
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Type;
 
     /**
-     * @var string The field description.
+     * @var string Field description
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Comment;
 
     /**
-     * @var string The default field value.
+     * @var string Field default values
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Default;
 
     /**
-     * @var boolean Whether the field is not null.
+     * @var boolean Is the field non-empty?
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $NotNull;
 
     /**
      * @var integer Indicate the length of the entire numeric with a value of 1-38
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Precision;
 
     /**
-     * @var integer Indicate the length of the decimal part.
+     * @var integer Indicates the length of the decimal part.
 Scale is smaller than Precision.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Scale;
 
     /**
-     * @param string $Name The field name.
-     * @param string $Type The field type.
-     * @param string $Comment The field description.
-     * @param string $Default The default field value.
-     * @param boolean $NotNull Whether the field is not null.
+     * @var integer Field position: Fields with smaller values need to be placed first.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $Position;
+
+    /**
+     * @var boolean Whether it is a partition field
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $IsPartition;
+
+    /**
+     * @param string $Name Field name
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $Type Field type
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $Comment Field description
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $Default Field default values
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param boolean $NotNull Is the field non-empty?
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $Precision Indicate the length of the entire numeric with a value of 1-38
-     * @param integer $Scale Indicate the length of the decimal part.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $Scale Indicates the length of the decimal part.
 Scale is smaller than Precision.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $Position Field position: Fields with smaller values need to be placed first.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param boolean $IsPartition Whether it is a partition field
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -124,6 +176,14 @@ Scale is smaller than Precision.
 
         if (array_key_exists("Scale",$param) and $param["Scale"] !== null) {
             $this->Scale = $param["Scale"];
+        }
+
+        if (array_key_exists("Position",$param) and $param["Position"] !== null) {
+            $this->Position = $param["Position"];
+        }
+
+        if (array_key_exists("IsPartition",$param) and $param["IsPartition"] !== null) {
+            $this->IsPartition = $param["IsPartition"];
         }
     }
 }

@@ -18,24 +18,20 @@ namespace TencentCloud\Dlc\V20210125\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * SmartOptimizerWrittenPolicy
+ * DescribeQuery request structure.
  *
- * @method string getWrittenEnable() Obtain none/enable/disable/default
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setWrittenEnable(string $WrittenEnable) Set none/enable/disable/default
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getTaskId() Obtain Task ID
+ * @method void setTaskId(string $TaskId) Set Task ID
  */
-class SmartOptimizerWrittenPolicy extends AbstractModel
+class DescribeQueryRequest extends AbstractModel
 {
     /**
-     * @var string none/enable/disable/default
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Task ID
      */
-    public $WrittenEnable;
+    public $TaskId;
 
     /**
-     * @param string $WrittenEnable none/enable/disable/default
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $TaskId Task ID
      */
     function __construct()
     {
@@ -50,8 +46,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if ($param === null) {
             return;
         }
-        if (array_key_exists("WrittenEnable",$param) and $param["WrittenEnable"] !== null) {
-            $this->WrittenEnable = $param["WrittenEnable"];
+        if (array_key_exists("TaskId",$param) and $param["TaskId"] !== null) {
+            $this->TaskId = $param["TaskId"];
         }
     }
 }

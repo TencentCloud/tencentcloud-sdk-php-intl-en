@@ -18,24 +18,20 @@ namespace TencentCloud\Dlc\V20210125\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * SmartOptimizerWrittenPolicy
+ * DescribeJob request structure.
  *
- * @method string getWrittenEnable() Obtain none/enable/disable/default
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setWrittenEnable(string $WrittenEnable) Set none/enable/disable/default
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getJobId() Obtain Job ID
+ * @method void setJobId(string $JobId) Set Job ID
  */
-class SmartOptimizerWrittenPolicy extends AbstractModel
+class DescribeJobRequest extends AbstractModel
 {
     /**
-     * @var string none/enable/disable/default
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Job ID
      */
-    public $WrittenEnable;
+    public $JobId;
 
     /**
-     * @param string $WrittenEnable none/enable/disable/default
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $JobId Job ID
      */
     function __construct()
     {
@@ -50,8 +46,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if ($param === null) {
             return;
         }
-        if (array_key_exists("WrittenEnable",$param) and $param["WrittenEnable"] !== null) {
-            $this->WrittenEnable = $param["WrittenEnable"];
+        if (array_key_exists("JobId",$param) and $param["JobId"] !== null) {
+            $this->JobId = $param["JobId"];
         }
     }
 }

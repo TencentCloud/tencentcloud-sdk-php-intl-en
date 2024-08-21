@@ -18,71 +18,83 @@ namespace TencentCloud\Dlc\V20210125\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * SmartOptimizerLifecyclePolicy
+ * Resource basic information
  *
- * @method string getLifecycleEnable() Obtain Enable the lifecycle
+ * @method string getCatalog() Obtain Catalog name
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setLifecycleEnable(string $LifecycleEnable) Set Enable the lifecycle
+ * @method void setCatalog(string $Catalog) Set Catalog name
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getExpiration() Obtain Expiration time
+ * @method string getSchema() Obtain Schema name
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setExpiration(integer $Expiration) Set Expiration time
+ * @method void setSchema(string $Schema) Set Schema name
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method boolean getDropTable() Obtain Whether to delete the table
+ * @method string getTable() Obtain Table name
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setDropTable(boolean $DropTable) Set Whether to delete the table
+ * @method void setTable(string $Table) Set Table name
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getExpiredField() Obtain Expired fields
+ * @method string getView() Obtain View name
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setExpiredField(string $ExpiredField) Set Expired fields
+ * @method void setView(string $View) Set View name
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getExpiredFieldFormat() Obtain Expired field format
+ * @method string getDatabase() Obtain Database name
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setExpiredFieldFormat(string $ExpiredFieldFormat) Set Expired field format
+ * @method void setDatabase(string $Database) Set Database name
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getFunction() Obtain Function name
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setFunction(string $Function) Set Function name
 Note: This field may return null, indicating that no valid values can be obtained.
  */
-class SmartOptimizerLifecyclePolicy extends AbstractModel
+class ResourceBaseInfo extends AbstractModel
 {
     /**
-     * @var string Enable the lifecycle
+     * @var string Catalog name
 Note: This field may return null, indicating that no valid values can be obtained.
      */
-    public $LifecycleEnable;
+    public $Catalog;
 
     /**
-     * @var integer Expiration time
+     * @var string Schema name
 Note: This field may return null, indicating that no valid values can be obtained.
      */
-    public $Expiration;
+    public $Schema;
 
     /**
-     * @var boolean Whether to delete the table
+     * @var string Table name
 Note: This field may return null, indicating that no valid values can be obtained.
      */
-    public $DropTable;
+    public $Table;
 
     /**
-     * @var string Expired fields
+     * @var string View name
 Note: This field may return null, indicating that no valid values can be obtained.
      */
-    public $ExpiredField;
+    public $View;
 
     /**
-     * @var string Expired field format
+     * @var string Database name
 Note: This field may return null, indicating that no valid values can be obtained.
      */
-    public $ExpiredFieldFormat;
+    public $Database;
 
     /**
-     * @param string $LifecycleEnable Enable the lifecycle
+     * @var string Function name
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $Expiration Expiration time
+     */
+    public $Function;
+
+    /**
+     * @param string $Catalog Catalog name
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param boolean $DropTable Whether to delete the table
+     * @param string $Schema Schema name
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $ExpiredField Expired fields
+     * @param string $Table Table name
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $ExpiredFieldFormat Expired field format
+     * @param string $View View name
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $Database Database name
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $Function Function name
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
@@ -98,24 +110,28 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if ($param === null) {
             return;
         }
-        if (array_key_exists("LifecycleEnable",$param) and $param["LifecycleEnable"] !== null) {
-            $this->LifecycleEnable = $param["LifecycleEnable"];
+        if (array_key_exists("Catalog",$param) and $param["Catalog"] !== null) {
+            $this->Catalog = $param["Catalog"];
         }
 
-        if (array_key_exists("Expiration",$param) and $param["Expiration"] !== null) {
-            $this->Expiration = $param["Expiration"];
+        if (array_key_exists("Schema",$param) and $param["Schema"] !== null) {
+            $this->Schema = $param["Schema"];
         }
 
-        if (array_key_exists("DropTable",$param) and $param["DropTable"] !== null) {
-            $this->DropTable = $param["DropTable"];
+        if (array_key_exists("Table",$param) and $param["Table"] !== null) {
+            $this->Table = $param["Table"];
         }
 
-        if (array_key_exists("ExpiredField",$param) and $param["ExpiredField"] !== null) {
-            $this->ExpiredField = $param["ExpiredField"];
+        if (array_key_exists("View",$param) and $param["View"] !== null) {
+            $this->View = $param["View"];
         }
 
-        if (array_key_exists("ExpiredFieldFormat",$param) and $param["ExpiredFieldFormat"] !== null) {
-            $this->ExpiredFieldFormat = $param["ExpiredFieldFormat"];
+        if (array_key_exists("Database",$param) and $param["Database"] !== null) {
+            $this->Database = $param["Database"];
+        }
+
+        if (array_key_exists("Function",$param) and $param["Function"] !== null) {
+            $this->Function = $param["Function"];
         }
     }
 }

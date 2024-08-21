@@ -18,23 +18,35 @@ namespace TencentCloud\Dlc\V20210125\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * SmartOptimizerWrittenPolicy
+ * Column sorting object
  *
- * @method string getWrittenEnable() Obtain none/enable/disable/default
+ * @method string getCol() Obtain Column name
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setWrittenEnable(string $WrittenEnable) Set none/enable/disable/default
+ * @method void setCol(string $Col) Set Column name
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getOrder() Obtain Sort
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setOrder(integer $Order) Set Sort
 Note: This field may return null, indicating that no valid values can be obtained.
  */
-class SmartOptimizerWrittenPolicy extends AbstractModel
+class DMSColumnOrder extends AbstractModel
 {
     /**
-     * @var string none/enable/disable/default
+     * @var string Column name
 Note: This field may return null, indicating that no valid values can be obtained.
      */
-    public $WrittenEnable;
+    public $Col;
 
     /**
-     * @param string $WrittenEnable none/enable/disable/default
+     * @var integer Sort
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $Order;
+
+    /**
+     * @param string $Col Column name
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $Order Sort
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
@@ -50,8 +62,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if ($param === null) {
             return;
         }
-        if (array_key_exists("WrittenEnable",$param) and $param["WrittenEnable"] !== null) {
-            $this->WrittenEnable = $param["WrittenEnable"];
+        if (array_key_exists("Col",$param) and $param["Col"] !== null) {
+            $this->Col = $param["Col"];
+        }
+
+        if (array_key_exists("Order",$param) and $param["Order"] !== null) {
+            $this->Order = $param["Order"];
         }
     }
 }

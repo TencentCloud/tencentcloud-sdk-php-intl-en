@@ -28,6 +28,22 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSpaceUsedSize(float $SpaceUsedSize) Set Capacity
  * @method integer getCreateTimeStamp() Obtain Timestamp of the creation time
  * @method void setCreateTimeStamp(integer $CreateTimeStamp) Set Timestamp of the creation time
+ * @method integer getDefaultBucket() Obtain Whether it is the user's default bucket: 0: default bucket, 1: non-default bucket
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setDefaultBucket(integer $DefaultBucket) Set Whether it is the user's default bucket: 0: default bucket, 1: non-default bucket
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getShortName() Obtain Managed storage short name
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setShortName(string $ShortName) Set Managed storage short name
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getDescription() Obtain Description information of the bucket
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setDescription(string $Description) Set Description information of the bucket
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getStatus() Obtain The status of the managed bucket. Current values: creating, bind, readOnly, and isolate
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setStatus(string $Status) Set The status of the managed bucket. Current values: creating, bind, readOnly, and isolate
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class LakeFsInfo extends AbstractModel
 {
@@ -52,10 +68,42 @@ class LakeFsInfo extends AbstractModel
     public $CreateTimeStamp;
 
     /**
+     * @var integer Whether it is the user's default bucket: 0: default bucket, 1: non-default bucket
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $DefaultBucket;
+
+    /**
+     * @var string Managed storage short name
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $ShortName;
+
+    /**
+     * @var string Description information of the bucket
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $Description;
+
+    /**
+     * @var string The status of the managed bucket. Current values: creating, bind, readOnly, and isolate
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $Status;
+
+    /**
      * @param string $Name Managed storage name
      * @param string $Type Managed storage type
      * @param float $SpaceUsedSize Capacity
      * @param integer $CreateTimeStamp Timestamp of the creation time
+     * @param integer $DefaultBucket Whether it is the user's default bucket: 0: default bucket, 1: non-default bucket
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $ShortName Managed storage short name
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $Description Description information of the bucket
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $Status The status of the managed bucket. Current values: creating, bind, readOnly, and isolate
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -84,6 +132,22 @@ class LakeFsInfo extends AbstractModel
 
         if (array_key_exists("CreateTimeStamp",$param) and $param["CreateTimeStamp"] !== null) {
             $this->CreateTimeStamp = $param["CreateTimeStamp"];
+        }
+
+        if (array_key_exists("DefaultBucket",$param) and $param["DefaultBucket"] !== null) {
+            $this->DefaultBucket = $param["DefaultBucket"];
+        }
+
+        if (array_key_exists("ShortName",$param) and $param["ShortName"] !== null) {
+            $this->ShortName = $param["ShortName"];
+        }
+
+        if (array_key_exists("Description",$param) and $param["Description"] !== null) {
+            $this->Description = $param["Description"];
+        }
+
+        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
+            $this->Status = $param["Status"];
         }
     }
 }

@@ -18,24 +18,20 @@ namespace TencentCloud\Dlc\V20210125\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * SmartOptimizerWrittenPolicy
+ * CheckGrantedPermission request structure.
  *
- * @method string getWrittenEnable() Obtain none/enable/disable/default
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setWrittenEnable(string $WrittenEnable) Set none/enable/disable/default
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method array getCheckPermission() Obtain Permission check
+ * @method void setCheckPermission(array $CheckPermission) Set Permission check
  */
-class SmartOptimizerWrittenPolicy extends AbstractModel
+class CheckGrantedPermissionRequest extends AbstractModel
 {
     /**
-     * @var string none/enable/disable/default
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array Permission check
      */
-    public $WrittenEnable;
+    public $CheckPermission;
 
     /**
-     * @param string $WrittenEnable none/enable/disable/default
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param array $CheckPermission Permission check
      */
     function __construct()
     {
@@ -50,8 +46,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if ($param === null) {
             return;
         }
-        if (array_key_exists("WrittenEnable",$param) and $param["WrittenEnable"] !== null) {
-            $this->WrittenEnable = $param["WrittenEnable"];
+        if (array_key_exists("CheckPermission",$param) and $param["CheckPermission"] !== null) {
+            $this->CheckPermission = [];
+            foreach ($param["CheckPermission"] as $key => $value){
+                $obj = new CheckPermission();
+                $obj->deserialize($value);
+                array_push($this->CheckPermission, $obj);
+            }
         }
     }
 }
