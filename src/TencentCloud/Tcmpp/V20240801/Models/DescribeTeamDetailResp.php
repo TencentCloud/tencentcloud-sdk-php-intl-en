@@ -52,6 +52,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
  * @method void setBindTeamName(string $BindTeamName) Set Name of the bound team
  * @method string getRegisterLink() Obtain Team registration link
  * @method void setRegisterLink(string $RegisterLink) Set Team registration link
+ * @method string getApplicationName() Obtain Application name. It’s required when querying details of a mini program team.
+ * @method void setApplicationName(string $ApplicationName) Set Application name. It’s required when querying details of a mini program team.
  */
 class DescribeTeamDetailResp extends AbstractModel
 {
@@ -108,6 +110,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $RegisterLink;
 
     /**
+     * @var string Application name. It’s required when querying details of a mini program team.
+     */
+    public $ApplicationName;
+
+    /**
      * @param string $TeamName Team name
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $TeamRoleType Team role type 1-Mini program team 2-Application team
@@ -124,6 +131,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $BindTeamName Name of the bound team
      * @param string $RegisterLink Team registration link
+     * @param string $ApplicationName Application name. It’s required when querying details of a mini program team.
      */
     function __construct()
     {
@@ -172,6 +180,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("RegisterLink",$param) and $param["RegisterLink"] !== null) {
             $this->RegisterLink = $param["RegisterLink"];
+        }
+
+        if (array_key_exists("ApplicationName",$param) and $param["ApplicationName"] !== null) {
+            $this->ApplicationName = $param["ApplicationName"];
         }
     }
 }

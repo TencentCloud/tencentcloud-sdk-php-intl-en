@@ -48,6 +48,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setStatus(integer $Status) Set Status. 1: Normal; 2: Disabled
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getTeamName() Obtain Team name
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setTeamName(string $TeamName) Set Team name
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class DescribeUserListData extends AbstractModel
 {
@@ -66,6 +70,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     /**
      * @var string Associated team
 Note: This field may return null, indicating that no valid values can be obtained.
+     * @deprecated
      */
     public $Teams;
 
@@ -94,6 +99,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $Status;
 
     /**
+     * @var string Team name
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $TeamName;
+
+    /**
      * @param string $UserId User ID
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $UserAccount User account
@@ -107,6 +118,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $CreateTime Creation time
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $Status Status. 1: Normal; 2: Disabled
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $TeamName Team name
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
@@ -148,6 +161,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("Status",$param) and $param["Status"] !== null) {
             $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("TeamName",$param) and $param["TeamName"] !== null) {
+            $this->TeamName = $param["TeamName"];
         }
     }
 }

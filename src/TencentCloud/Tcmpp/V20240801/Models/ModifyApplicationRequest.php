@@ -30,16 +30,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLogo(string $Logo) Set Icon
  * @method string getPlatformId() Obtain Platform ID
  * @method void setPlatformId(string $PlatformId) Set Platform ID
- * @method string getAndroidAppKey() Obtain Android package name
- * @method void setAndroidAppKey(string $AndroidAppKey) Set Android package name
- * @method string getIosAppKey() Obtain iOS bundleId
- * @method void setIosAppKey(string $IosAppKey) Set iOS bundleId
+ * @method string getAndroidAppKey() Obtain Android app package name
+ * @method void setAndroidAppKey(string $AndroidAppKey) Set Android app package name
+ * @method string getIosAppKey() Obtain iOS App bundleId
+ * @method void setIosAppKey(string $IosAppKey) Set iOS App bundleId
  * @method string getRemark() Obtain Remarks
  * @method void setRemark(string $Remark) Set Remarks
- * @method string getAndroidAppURL() Obtain Android App download address
- * @method void setAndroidAppURL(string $AndroidAppURL) Set Android App download address
- * @method string getIosAppURL() Obtain iOS App download address
- * @method void setIosAppURL(string $IosAppURL) Set iOS App download address
  */
 class ModifyApplicationRequest extends AbstractModel
 {
@@ -69,12 +65,12 @@ class ModifyApplicationRequest extends AbstractModel
     public $PlatformId;
 
     /**
-     * @var string Android package name
+     * @var string Android app package name
      */
     public $AndroidAppKey;
 
     /**
-     * @var string iOS bundleId
+     * @var string iOS App bundleId
      */
     public $IosAppKey;
 
@@ -84,26 +80,14 @@ class ModifyApplicationRequest extends AbstractModel
     public $Remark;
 
     /**
-     * @var string Android App download address
-     */
-    public $AndroidAppURL;
-
-    /**
-     * @var string iOS App download address
-     */
-    public $IosAppURL;
-
-    /**
      * @param string $ApplicationId Application ID
      * @param string $ApplicationName The application name.
      * @param string $Intro Application introduction
      * @param string $Logo Icon
      * @param string $PlatformId Platform ID
-     * @param string $AndroidAppKey Android package name
-     * @param string $IosAppKey iOS bundleId
+     * @param string $AndroidAppKey Android app package name
+     * @param string $IosAppKey iOS App bundleId
      * @param string $Remark Remarks
-     * @param string $AndroidAppURL Android App download address
-     * @param string $IosAppURL iOS App download address
      */
     function __construct()
     {
@@ -148,14 +132,6 @@ class ModifyApplicationRequest extends AbstractModel
 
         if (array_key_exists("Remark",$param) and $param["Remark"] !== null) {
             $this->Remark = $param["Remark"];
-        }
-
-        if (array_key_exists("AndroidAppURL",$param) and $param["AndroidAppURL"] !== null) {
-            $this->AndroidAppURL = $param["AndroidAppURL"];
-        }
-
-        if (array_key_exists("IosAppURL",$param) and $param["IosAppURL"] !== null) {
-            $this->IosAppURL = $param["IosAppURL"];
         }
     }
 }

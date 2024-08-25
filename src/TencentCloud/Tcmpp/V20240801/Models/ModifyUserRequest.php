@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAccountType(integer $AccountType) Set Account type 2 - Platform administrator 3 - Ordinary member
  * @method string getPlatformId() Obtain Platform ID
  * @method void setPlatformId(string $PlatformId) Set Platform ID
+ * @method string getUserAccount() Obtain Account
+ * @method void setUserAccount(string $UserAccount) Set Account
  */
 class ModifyUserRequest extends AbstractModel
 {
@@ -52,10 +54,17 @@ class ModifyUserRequest extends AbstractModel
     public $PlatformId;
 
     /**
+     * @var string Account
+     * @deprecated
+     */
+    public $UserAccount;
+
+    /**
      * @param string $UserId User ID
      * @param string $UserName User name
      * @param integer $AccountType Account type 2 - Platform administrator 3 - Ordinary member
      * @param string $PlatformId Platform ID
+     * @param string $UserAccount Account
      */
     function __construct()
     {
@@ -84,6 +93,10 @@ class ModifyUserRequest extends AbstractModel
 
         if (array_key_exists("PlatformId",$param) and $param["PlatformId"] !== null) {
             $this->PlatformId = $param["PlatformId"];
+        }
+
+        if (array_key_exists("UserAccount",$param) and $param["UserAccount"] !== null) {
+            $this->UserAccount = $param["UserAccount"];
         }
     }
 }

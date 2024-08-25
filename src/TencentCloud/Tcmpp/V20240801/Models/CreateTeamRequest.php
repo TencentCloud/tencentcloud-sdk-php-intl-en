@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTeamName(string $TeamName) Set Team name
  * @method string getAdminUserId() Obtain Administrator name
  * @method void setAdminUserId(string $AdminUserId) Set Administrator name
- * @method array getTeamRoleTypeList() Obtain Team permission type 1 Mini program 2 App (Multiple selection)
- * @method void setTeamRoleTypeList(array $TeamRoleTypeList) Set Team permission type 1 Mini program 2 App (Multiple selection)
+ * @method array getTeamRoleTypeList() Obtain Permission assigned to the team. 1: Mini program; 2: Application (only one of these types is supported)
+ * @method void setTeamRoleTypeList(array $TeamRoleTypeList) Set Permission assigned to the team. 1: Mini program; 2: Application (only one of these types is supported)
  * @method string getRemark() Obtain Remarks
  * @method void setRemark(string $Remark) Set Remarks
  * @method string getPlatformId() Obtain Platform ID, required for API call
@@ -46,7 +46,7 @@ class CreateTeamRequest extends AbstractModel
     public $AdminUserId;
 
     /**
-     * @var array Team permission type 1 Mini program 2 App (Multiple selection)
+     * @var array Permission assigned to the team. 1: Mini program; 2: Application (only one of these types is supported)
      */
     public $TeamRoleTypeList;
 
@@ -68,7 +68,7 @@ class CreateTeamRequest extends AbstractModel
     /**
      * @param string $TeamName Team name
      * @param string $AdminUserId Administrator name
-     * @param array $TeamRoleTypeList Team permission type 1 Mini program 2 App (Multiple selection)
+     * @param array $TeamRoleTypeList Permission assigned to the team. 1: Mini program; 2: Application (only one of these types is supported)
      * @param string $Remark Remarks
      * @param string $PlatformId Platform ID, required for API call
      * @param string $RelatedTeamId Associated team ID
