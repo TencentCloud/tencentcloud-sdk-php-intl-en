@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * UpdateOrganizationNode request structure.
  *
- * @method integer getNodeId() Obtain Node ID.
- * @method void setNodeId(integer $NodeId) Set Node ID.
+ * @method integer getNodeId() Obtain Node ID, which can be obtained through [DescribeOrganizationNodes](https://intl.cloud.tencent.com/document/product/850/82926?from_cn_redirect=1).
+ * @method void setNodeId(integer $NodeId) Set Node ID, which can be obtained through [DescribeOrganizationNodes](https://intl.cloud.tencent.com/document/product/850/82926?from_cn_redirect=1).
  * @method string getName() Obtain Node name, which can contain up to 40 letters, digits, and symbols `+@&._[]-`.
  * @method void setName(string $Name) Set Node name, which can contain up to 40 letters, digits, and symbols `+@&._[]-`.
  * @method string getRemark() Obtain Remarks.
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class UpdateOrganizationNodeRequest extends AbstractModel
 {
     /**
-     * @var integer Node ID.
+     * @var integer Node ID, which can be obtained through [DescribeOrganizationNodes](https://intl.cloud.tencent.com/document/product/850/82926?from_cn_redirect=1).
      */
     public $NodeId;
 
@@ -45,7 +45,7 @@ class UpdateOrganizationNodeRequest extends AbstractModel
     public $Remark;
 
     /**
-     * @param integer $NodeId Node ID.
+     * @param integer $NodeId Node ID, which can be obtained through [DescribeOrganizationNodes](https://intl.cloud.tencent.com/document/product/850/82926?from_cn_redirect=1).
      * @param string $Name Node name, which can contain up to 40 letters, digits, and symbols `+@&._[]-`.
      * @param string $Remark Remarks.
      */

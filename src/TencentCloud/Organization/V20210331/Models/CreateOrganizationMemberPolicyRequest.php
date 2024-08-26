@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMemberUin(integer $MemberUin) Set Member UIN.
  * @method string getPolicyName() Obtain Policy name, which can contain up to 128 letters, digits, and symbols `+=,.@_-`.
  * @method void setPolicyName(string $PolicyName) Set Policy name, which can contain up to 128 letters, digits, and symbols `+=,.@_-`.
- * @method integer getIdentityId() Obtain Member access identity ID, which can be obtained through the `DescribeOrganizationMemberAuthIdentities` API.
- * @method void setIdentityId(integer $IdentityId) Set Member access identity ID, which can be obtained through the `DescribeOrganizationMemberAuthIdentities` API.
+ * @method integer getIdentityId() Obtain Member access identity ID, which can be obtained through [DescribeOrganizationMemberAuthIdentities](https://intl.cloud.tencent.com/document/product/850/82936?from_cn_redirect=1).
+ * @method void setIdentityId(integer $IdentityId) Set Member access identity ID, which can be obtained through [DescribeOrganizationMemberAuthIdentities](https://intl.cloud.tencent.com/document/product/850/82936?from_cn_redirect=1).
  * @method string getDescription() Obtain Description.
  * @method void setDescription(string $Description) Set Description.
  */
@@ -42,7 +42,7 @@ class CreateOrganizationMemberPolicyRequest extends AbstractModel
     public $PolicyName;
 
     /**
-     * @var integer Member access identity ID, which can be obtained through the `DescribeOrganizationMemberAuthIdentities` API.
+     * @var integer Member access identity ID, which can be obtained through [DescribeOrganizationMemberAuthIdentities](https://intl.cloud.tencent.com/document/product/850/82936?from_cn_redirect=1).
      */
     public $IdentityId;
 
@@ -54,7 +54,7 @@ class CreateOrganizationMemberPolicyRequest extends AbstractModel
     /**
      * @param integer $MemberUin Member UIN.
      * @param string $PolicyName Policy name, which can contain up to 128 letters, digits, and symbols `+=,.@_-`.
-     * @param integer $IdentityId Member access identity ID, which can be obtained through the `DescribeOrganizationMemberAuthIdentities` API.
+     * @param integer $IdentityId Member access identity ID, which can be obtained through [DescribeOrganizationMemberAuthIdentities](https://intl.cloud.tencent.com/document/product/850/82936?from_cn_redirect=1).
      * @param string $Description Description.
      */
     function __construct()

@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) Set The limit for the number of query results.  Value range:  1-50.  Default value:  `10`.
  * @method string getSearchKey() Obtain Search by name.
  * @method void setSearchKey(string $SearchKey) Set Search by name.
- * @method integer getIdentityId() Obtain Search by identity ID.
- * @method void setIdentityId(integer $IdentityId) Set Search by identity ID.
+ * @method integer getIdentityId() Obtain Identity ID, which can be searched by identity ID.
+ * @method void setIdentityId(integer $IdentityId) Set Identity ID, which can be searched by identity ID.
  * @method integer getIdentityType() Obtain Identity type.  Valid values: `1` (Preset), `2` (Custom).
  * @method void setIdentityType(integer $IdentityType) Set Identity type.  Valid values: `1` (Preset), `2` (Custom).
  */
@@ -49,7 +49,7 @@ class ListOrganizationIdentityRequest extends AbstractModel
     public $SearchKey;
 
     /**
-     * @var integer Search by identity ID.
+     * @var integer Identity ID, which can be searched by identity ID.
      */
     public $IdentityId;
 
@@ -62,7 +62,7 @@ class ListOrganizationIdentityRequest extends AbstractModel
      * @param integer $Offset Offset.  It must be an integer multiple of the value of `Limit`.  Default value: `0`.
      * @param integer $Limit The limit for the number of query results.  Value range:  1-50.  Default value:  `10`.
      * @param string $SearchKey Search by name.
-     * @param integer $IdentityId Search by identity ID.
+     * @param integer $IdentityId Identity ID, which can be searched by identity ID.
      * @param integer $IdentityType Identity type.  Valid values: `1` (Preset), `2` (Custom).
      */
     function __construct()

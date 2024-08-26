@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteOrganizationMembers request structure.
  *
- * @method array getMemberUin() Obtain List of UINs of the members to be deleted.
- * @method void setMemberUin(array $MemberUin) Set List of UINs of the members to be deleted.
+ * @method array getMemberUin() Obtain Uin list of the deleted members.
+ * @method void setMemberUin(array $MemberUin) Set Uin list of the deleted members.
  */
 class DeleteOrganizationMembersRequest extends AbstractModel
 {
     /**
-     * @var array List of UINs of the members to be deleted.
+     * @var array Uin list of the deleted members.
      */
     public $MemberUin;
 
     /**
-     * @param array $MemberUin List of UINs of the members to be deleted.
+     * @param array $MemberUin Uin list of the deleted members.
      */
     function __construct()
     {

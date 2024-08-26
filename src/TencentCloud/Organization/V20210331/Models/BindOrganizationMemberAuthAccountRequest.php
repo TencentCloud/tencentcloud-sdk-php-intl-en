@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getMemberUin() Obtain Member UIN.
  * @method void setMemberUin(integer $MemberUin) Set Member UIN.
- * @method integer getPolicyId() Obtain Policy ID, which can be obtained through the `DescribeOrganizationMemberPolicies` API.
- * @method void setPolicyId(integer $PolicyId) Set Policy ID, which can be obtained through the `DescribeOrganizationMemberPolicies` API.
+ * @method integer getPolicyId() Obtain Policy ID, which can be obtained by calling [DescribeOrganizationMemberPolicies](https://intl.cloud.tencent.com/document/product/850/82935?from_cn_redirect=1).
+ * @method void setPolicyId(integer $PolicyId) Set Policy ID, which can be obtained by calling [DescribeOrganizationMemberPolicies](https://intl.cloud.tencent.com/document/product/850/82935?from_cn_redirect=1).
  * @method array getOrgSubAccountUins() Obtain List of sub-account UINs of the organization admin, which can contain up to five UINs.
  * @method void setOrgSubAccountUins(array $OrgSubAccountUins) Set List of sub-account UINs of the organization admin, which can contain up to five UINs.
  */
@@ -35,7 +35,7 @@ class BindOrganizationMemberAuthAccountRequest extends AbstractModel
     public $MemberUin;
 
     /**
-     * @var integer Policy ID, which can be obtained through the `DescribeOrganizationMemberPolicies` API.
+     * @var integer Policy ID, which can be obtained by calling [DescribeOrganizationMemberPolicies](https://intl.cloud.tencent.com/document/product/850/82935?from_cn_redirect=1).
      */
     public $PolicyId;
 
@@ -46,7 +46,7 @@ class BindOrganizationMemberAuthAccountRequest extends AbstractModel
 
     /**
      * @param integer $MemberUin Member UIN.
-     * @param integer $PolicyId Policy ID, which can be obtained through the `DescribeOrganizationMemberPolicies` API.
+     * @param integer $PolicyId Policy ID, which can be obtained by calling [DescribeOrganizationMemberPolicies](https://intl.cloud.tencent.com/document/product/850/82935?from_cn_redirect=1).
      * @param array $OrgSubAccountUins List of sub-account UINs of the organization admin, which can contain up to five UINs.
      */
     function __construct()

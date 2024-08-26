@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getMemberUin() Obtain Member UIN.
  * @method void setMemberUin(integer $MemberUin) Set Member UIN.
- * @method integer getPolicyId() Obtain Policy ID.
- * @method void setPolicyId(integer $PolicyId) Set Policy ID.
+ * @method integer getPolicyId() Obtain Policy ID, which can be obtained through [DescribeOrganizationMemberPolicies](https://intl.cloud.tencent.com/document/product/850/82935?from_cn_redirect=1).
+ * @method void setPolicyId(integer $PolicyId) Set Policy ID, which can be obtained through [DescribeOrganizationMemberPolicies](https://intl.cloud.tencent.com/document/product/850/82935?from_cn_redirect=1).
  * @method integer getOrgSubAccountUin() Obtain Organization sub-account UIN.
  * @method void setOrgSubAccountUin(integer $OrgSubAccountUin) Set Organization sub-account UIN.
  */
@@ -35,7 +35,7 @@ class CancelOrganizationMemberAuthAccountRequest extends AbstractModel
     public $MemberUin;
 
     /**
-     * @var integer Policy ID.
+     * @var integer Policy ID, which can be obtained through [DescribeOrganizationMemberPolicies](https://intl.cloud.tencent.com/document/product/850/82935?from_cn_redirect=1).
      */
     public $PolicyId;
 
@@ -46,7 +46,7 @@ class CancelOrganizationMemberAuthAccountRequest extends AbstractModel
 
     /**
      * @param integer $MemberUin Member UIN.
-     * @param integer $PolicyId Policy ID.
+     * @param integer $PolicyId Policy ID, which can be obtained through [DescribeOrganizationMemberPolicies](https://intl.cloud.tencent.com/document/product/850/82935?from_cn_redirect=1).
      * @param integer $OrgSubAccountUin Organization sub-account UIN.
      */
     function __construct()

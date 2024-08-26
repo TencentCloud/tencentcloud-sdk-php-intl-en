@@ -32,21 +32,33 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setIdentityRoleAliasName(string $IdentityRoleAliasName) Set Role alias of an identity
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getDescription() Obtain Description
+ * @method string getDescription() Obtain Identity description.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setDescription(string $Description) Set Description
+ * @method void setDescription(string $Description) Set Identity description.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getCreateTime() Obtain Creation time.
+ * @method string getCreateTime() Obtain Time of initial configuration success.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setCreateTime(string $CreateTime) Set Creation time.
+ * @method void setCreateTime(string $CreateTime) Set Time of initial configuration success.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getUpdateTime() Obtain Update time.
+ * @method string getUpdateTime() Obtain Time of last configuration success.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setUpdateTime(string $UpdateTime) Set Update time.
+ * @method void setUpdateTime(string $UpdateTime) Set Time of last configuration success.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getIdentityType() Obtain Identity type (`1`: Preset; `2`: Custom)
+ * @method integer getIdentityType() Obtain Identity type. Valid values: 1 (preset identity), 2 (custom identity).
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setIdentityType(integer $IdentityType) Set Identity type (`1`: Preset; `2`: Custom)
+ * @method void setIdentityType(integer $IdentityType) Set Identity type. Valid values: 1 (preset identity), 2 (custom identity).
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getStatus() Obtain Configuration status. Valid values: 1 (configuration completed), 2 (reconfiguration required).
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setStatus(integer $Status) Set Configuration status. Valid values: 1 (configuration completed), 2 (reconfiguration required).
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getMemberUin() Obtain Member Uin.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setMemberUin(integer $MemberUin) Set Member Uin.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getMemberName() Obtain Member name.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setMemberName(string $MemberName) Set Member name.
 Note: This field may return null, indicating that no valid values can be obtained.
  */
 class OrgMemberAuthIdentity extends AbstractModel
@@ -70,28 +82,46 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $IdentityRoleAliasName;
 
     /**
-     * @var string Description
+     * @var string Identity description.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Description;
 
     /**
-     * @var string Creation time.
+     * @var string Time of initial configuration success.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $CreateTime;
 
     /**
-     * @var string Update time.
+     * @var string Time of last configuration success.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $UpdateTime;
 
     /**
-     * @var integer Identity type (`1`: Preset; `2`: Custom)
+     * @var integer Identity type. Valid values: 1 (preset identity), 2 (custom identity).
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $IdentityType;
+
+    /**
+     * @var integer Configuration status. Valid values: 1 (configuration completed), 2 (reconfiguration required).
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $Status;
+
+    /**
+     * @var integer Member Uin.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $MemberUin;
+
+    /**
+     * @var string Member name.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $MemberName;
 
     /**
      * @param integer $IdentityId Identity ID.
@@ -100,13 +130,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $IdentityRoleAliasName Role alias of an identity
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Description Description
+     * @param string $Description Identity description.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $CreateTime Creation time.
+     * @param string $CreateTime Time of initial configuration success.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $UpdateTime Update time.
+     * @param string $UpdateTime Time of last configuration success.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $IdentityType Identity type (`1`: Preset; `2`: Custom)
+     * @param integer $IdentityType Identity type. Valid values: 1 (preset identity), 2 (custom identity).
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $Status Configuration status. Valid values: 1 (configuration completed), 2 (reconfiguration required).
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $MemberUin Member Uin.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $MemberName Member name.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
@@ -148,6 +184,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("IdentityType",$param) and $param["IdentityType"] !== null) {
             $this->IdentityType = $param["IdentityType"];
+        }
+
+        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
+            $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("MemberUin",$param) and $param["MemberUin"] !== null) {
+            $this->MemberUin = $param["MemberUin"];
+        }
+
+        if (array_key_exists("MemberName",$param) and $param["MemberName"] !== null) {
+            $this->MemberName = $param["MemberName"];
         }
     }
 }

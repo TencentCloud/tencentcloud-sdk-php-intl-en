@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getLimit() Obtain Maximum number of returned results. Maximum value: `50`.
  * @method void setLimit(integer $Limit) Set Maximum number of returned results. Maximum value: `50`.
- * @method integer getOffset() Obtain Offset.
- * @method void setOffset(integer $Offset) Set Offset.
+ * @method integer getOffset() Obtain Offset. Its value must be an integer multiple of the limit. Default value: 0.
+ * @method void setOffset(integer $Offset) Set Offset. Its value must be an integer multiple of the limit. Default value: 0.
  */
 class DescribeOrganizationNodesRequest extends AbstractModel
 {
@@ -33,13 +33,13 @@ class DescribeOrganizationNodesRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @var integer Offset.
+     * @var integer Offset. Its value must be an integer multiple of the limit. Default value: 0.
      */
     public $Offset;
 
     /**
      * @param integer $Limit Maximum number of returned results. Maximum value: `50`.
-     * @param integer $Offset Offset.
+     * @param integer $Offset Offset. Its value must be an integer multiple of the limit. Default value: 0.
      */
     function __construct()
     {

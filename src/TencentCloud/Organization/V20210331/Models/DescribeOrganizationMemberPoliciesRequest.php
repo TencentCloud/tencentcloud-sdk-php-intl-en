@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeOrganizationMemberPolicies request structure.
  *
- * @method integer getOffset() Obtain Offset.
- * @method void setOffset(integer $Offset) Set Offset.
- * @method integer getLimit() Obtain Maximum number of returned results. Maximum value: `50`.
- * @method void setLimit(integer $Limit) Set Maximum number of returned results. Maximum value: `50`.
+ * @method integer getOffset() Obtain Offset. Its value must be an integer multiple of the limit. Default value: 0.
+ * @method void setOffset(integer $Offset) Set Offset. Its value must be an integer multiple of the limit. Default value: 0.
+ * @method integer getLimit() Obtain Limit. Value range: 1-50. Default value: 10.
+ * @method void setLimit(integer $Limit) Set Limit. Value range: 1-50. Default value: 10.
  * @method integer getMemberUin() Obtain Member UIN.
  * @method void setMemberUin(integer $MemberUin) Set Member UIN.
  * @method string getSearchKey() Obtain Search keyword, which can be the policy name or description.
@@ -32,12 +32,12 @@ use TencentCloud\Common\AbstractModel;
 class DescribeOrganizationMemberPoliciesRequest extends AbstractModel
 {
     /**
-     * @var integer Offset.
+     * @var integer Offset. Its value must be an integer multiple of the limit. Default value: 0.
      */
     public $Offset;
 
     /**
-     * @var integer Maximum number of returned results. Maximum value: `50`.
+     * @var integer Limit. Value range: 1-50. Default value: 10.
      */
     public $Limit;
 
@@ -52,8 +52,8 @@ class DescribeOrganizationMemberPoliciesRequest extends AbstractModel
     public $SearchKey;
 
     /**
-     * @param integer $Offset Offset.
-     * @param integer $Limit Maximum number of returned results. Maximum value: `50`.
+     * @param integer $Offset Offset. Its value must be an integer multiple of the limit. Default value: 0.
+     * @param integer $Limit Limit. Value range: 1-50. Default value: 10.
      * @param integer $MemberUin Member UIN.
      * @param string $SearchKey Search keyword, which can be the policy name or description.
      */

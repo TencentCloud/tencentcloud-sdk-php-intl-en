@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPolicyType(string $PolicyType) Set Relationship policy. Valid value: `Financial`.
  * @method array getPermissionIds() Obtain List of member financial permission IDs. `7` indicates paying, which is the default value.
  * @method void setPermissionIds(array $PermissionIds) Set List of member financial permission IDs. `7` indicates paying, which is the default value.
- * @method integer getNodeId() Obtain ID of the node of the member's department, which can be obtained through the `DescribeOrganizationNodes` API.
- * @method void setNodeId(integer $NodeId) Set ID of the node of the member's department, which can be obtained through the `DescribeOrganizationNodes` API.
+ * @method integer getNodeId() Obtain Node ID of the member's department, which can be obtained through [DescribeOrganizationNodes](https://intl.cloud.tencent.com/document/product/850/82926?from_cn_redirect=1).
+ * @method void setNodeId(integer $NodeId) Set Node ID of the member's department, which can be obtained through [DescribeOrganizationNodes](https://intl.cloud.tencent.com/document/product/850/82926?from_cn_redirect=1).
  * @method string getAccountName() Obtain Account name, which can contain up to 25 letters, digits, and symbols `+@&._[]-:,`.
  * @method void setAccountName(string $AccountName) Set Account name, which can contain up to 25 letters, digits, and symbols `+@&._[]-:,`.
  * @method string getRemark() Obtain Remarks.
@@ -59,7 +59,7 @@ class CreateOrganizationMemberRequest extends AbstractModel
     public $PermissionIds;
 
     /**
-     * @var integer ID of the node of the member's department, which can be obtained through the `DescribeOrganizationNodes` API.
+     * @var integer Node ID of the member's department, which can be obtained through [DescribeOrganizationNodes](https://intl.cloud.tencent.com/document/product/850/82926?from_cn_redirect=1).
      */
     public $NodeId;
 
@@ -97,7 +97,7 @@ class CreateOrganizationMemberRequest extends AbstractModel
      * @param string $Name Member name, which can contain up to 25 letters, digits, and symbols `+@&._[]-:,`.
      * @param string $PolicyType Relationship policy. Valid value: `Financial`.
      * @param array $PermissionIds List of member financial permission IDs. `7` indicates paying, which is the default value.
-     * @param integer $NodeId ID of the node of the member's department, which can be obtained through the `DescribeOrganizationNodes` API.
+     * @param integer $NodeId Node ID of the member's department, which can be obtained through [DescribeOrganizationNodes](https://intl.cloud.tencent.com/document/product/850/82926?from_cn_redirect=1).
      * @param string $AccountName Account name, which can contain up to 25 letters, digits, and symbols `+@&._[]-:,`.
      * @param string $Remark Remarks.
      * @param integer $RecordId Member creation record ID, which is required during retry upon creation exception.

@@ -24,8 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) Set Offset, which is an integer multiple of the value of `Limit`. Default value: `0`.
  * @method integer getLimit() Obtain Limit, which defaults to `10`. Value range: 1-50.
  * @method void setLimit(integer $Limit) Set Limit, which defaults to `10`. Value range: 1-50.
- * @method integer getMemberUin() Obtain Organization member UIN.
- * @method void setMemberUin(integer $MemberUin) Set Organization member UIN.
+ * @method integer getMemberUin() Obtain Uin of the organization member. At least one of the input parameters MemberUin and IdentityId must be entered.
+ * @method void setMemberUin(integer $MemberUin) Set Uin of the organization member. At least one of the input parameters MemberUin and IdentityId must be entered.
+ * @method integer getIdentityId() Obtain Identity ID. At least one of the input parameters MemberUin and IdentityId must be provided. It can be obtained through [ListOrganizationIdentity](https://intl.cloud.tencent.com/document/product/850/82934?from_cn_redirect=1).
+ * @method void setIdentityId(integer $IdentityId) Set Identity ID. At least one of the input parameters MemberUin and IdentityId must be provided. It can be obtained through [ListOrganizationIdentity](https://intl.cloud.tencent.com/document/product/850/82934?from_cn_redirect=1).
  */
 class DescribeOrganizationMemberAuthIdentitiesRequest extends AbstractModel
 {
@@ -40,14 +42,20 @@ class DescribeOrganizationMemberAuthIdentitiesRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @var integer Organization member UIN.
+     * @var integer Uin of the organization member. At least one of the input parameters MemberUin and IdentityId must be entered.
      */
     public $MemberUin;
 
     /**
+     * @var integer Identity ID. At least one of the input parameters MemberUin and IdentityId must be provided. It can be obtained through [ListOrganizationIdentity](https://intl.cloud.tencent.com/document/product/850/82934?from_cn_redirect=1).
+     */
+    public $IdentityId;
+
+    /**
      * @param integer $Offset Offset, which is an integer multiple of the value of `Limit`. Default value: `0`.
      * @param integer $Limit Limit, which defaults to `10`. Value range: 1-50.
-     * @param integer $MemberUin Organization member UIN.
+     * @param integer $MemberUin Uin of the organization member. At least one of the input parameters MemberUin and IdentityId must be entered.
+     * @param integer $IdentityId Identity ID. At least one of the input parameters MemberUin and IdentityId must be provided. It can be obtained through [ListOrganizationIdentity](https://intl.cloud.tencent.com/document/product/850/82934?from_cn_redirect=1).
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class DescribeOrganizationMemberAuthIdentitiesRequest extends AbstractModel
 
         if (array_key_exists("MemberUin",$param) and $param["MemberUin"] !== null) {
             $this->MemberUin = $param["MemberUin"];
+        }
+
+        if (array_key_exists("IdentityId",$param) and $param["IdentityId"] !== null) {
+            $this->IdentityId = $param["IdentityId"];
         }
     }
 }

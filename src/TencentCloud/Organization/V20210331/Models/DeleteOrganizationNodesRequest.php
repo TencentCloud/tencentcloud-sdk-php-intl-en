@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteOrganizationNodes request structure.
  *
- * @method array getNodeId() Obtain List of node IDs.
- * @method void setNodeId(array $NodeId) Set List of node IDs.
+ * @method array getNodeId() Obtain Node ID list, which can be obtained through [DescribeOrganizationNodes](https://intl.cloud.tencent.com/document/product/850/82926?from_cn_redirect=1).
+ * @method void setNodeId(array $NodeId) Set Node ID list, which can be obtained through [DescribeOrganizationNodes](https://intl.cloud.tencent.com/document/product/850/82926?from_cn_redirect=1).
  */
 class DeleteOrganizationNodesRequest extends AbstractModel
 {
     /**
-     * @var array List of node IDs.
+     * @var array Node ID list, which can be obtained through [DescribeOrganizationNodes](https://intl.cloud.tencent.com/document/product/850/82926?from_cn_redirect=1).
      */
     public $NodeId;
 
     /**
-     * @param array $NodeId List of node IDs.
+     * @param array $NodeId Node ID list, which can be obtained through [DescribeOrganizationNodes](https://intl.cloud.tencent.com/document/product/850/82926?from_cn_redirect=1).
      */
     function __construct()
     {

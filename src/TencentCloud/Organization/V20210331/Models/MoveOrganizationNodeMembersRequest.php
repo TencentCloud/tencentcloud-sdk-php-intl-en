@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * MoveOrganizationNodeMembers request structure.
  *
- * @method integer getNodeId() Obtain Organization node ID.
- * @method void setNodeId(integer $NodeId) Set Organization node ID.
- * @method array getMemberUin() Obtain Member UIN list.
- * @method void setMemberUin(array $MemberUin) Set Member UIN list.
+ * @method integer getNodeId() Obtain Organization node ID, which can be obtained through [DescribeOrganizationNodes](https://intl.cloud.tencent.com/document/product/850/82926?from_cn_redirect=1).
+ * @method void setNodeId(integer $NodeId) Set Organization node ID, which can be obtained through [DescribeOrganizationNodes](https://intl.cloud.tencent.com/document/product/850/82926?from_cn_redirect=1).
+ * @method array getMemberUin() Obtain Uin list of the members.
+ * @method void setMemberUin(array $MemberUin) Set Uin list of the members.
  */
 class MoveOrganizationNodeMembersRequest extends AbstractModel
 {
     /**
-     * @var integer Organization node ID.
+     * @var integer Organization node ID, which can be obtained through [DescribeOrganizationNodes](https://intl.cloud.tencent.com/document/product/850/82926?from_cn_redirect=1).
      */
     public $NodeId;
 
     /**
-     * @var array Member UIN list.
+     * @var array Uin list of the members.
      */
     public $MemberUin;
 
     /**
-     * @param integer $NodeId Organization node ID.
-     * @param array $MemberUin Member UIN list.
+     * @param integer $NodeId Organization node ID, which can be obtained through [DescribeOrganizationNodes](https://intl.cloud.tencent.com/document/product/850/82926?from_cn_redirect=1).
+     * @param array $MemberUin Uin list of the members.
      */
     function __construct()
     {
