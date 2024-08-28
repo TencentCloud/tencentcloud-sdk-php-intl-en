@@ -1,0 +1,281 @@
+<?php
+/*
+ * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+namespace TencentCloud\Cwp\V20180228\Models;
+use TencentCloud\Common\AbstractModel;
+
+/**
+ * DescribeMachineGeneral response structure.
+ *
+ * @method integer getMachineCnt() Obtain Total number of assets
+ * @method void setMachineCnt(integer $MachineCnt) Set Total number of assets
+ * @method integer getTencentCloudMachineCnt() Obtain Number of Tencent Cloud machines
+ * @method void setTencentCloudMachineCnt(integer $TencentCloudMachineCnt) Set Number of Tencent Cloud machines
+ * @method integer getAliCloudMachineCnt() Obtain Number of Alibaba Cloud machines
+ * @method void setAliCloudMachineCnt(integer $AliCloudMachineCnt) Set Number of Alibaba Cloud machines
+ * @method integer getBaiduCloudMachineCnt() Obtain Number of Baidu Cloud machines
+ * @method void setBaiduCloudMachineCnt(integer $BaiduCloudMachineCnt) Set Number of Baidu Cloud machines
+ * @method integer getIDCMachineCnt() Obtain Number of IDC machines
+ * @method void setIDCMachineCnt(integer $IDCMachineCnt) Set Number of IDC machines
+ * @method integer getOtherCloudMachineCnt() Obtain Number of machines from other cloud service vendors
+ * @method void setOtherCloudMachineCnt(integer $OtherCloudMachineCnt) Set Number of machines from other cloud service vendors
+ * @method integer getProtectMachineCnt() Obtain Number of protected machines
+ * @method void setProtectMachineCnt(integer $ProtectMachineCnt) Set Number of protected machines
+ * @method integer getBaseMachineCnt() Obtain Number of protected Basic Edition machines
+ * @method void setBaseMachineCnt(integer $BaseMachineCnt) Set Number of protected Basic Edition machines
+ * @method integer getSpecialtyMachineCnt() Obtain Number of protected Pro Edition machines
+ * @method void setSpecialtyMachineCnt(integer $SpecialtyMachineCnt) Set Number of protected Pro Edition machines
+ * @method integer getFlagshipMachineCnt() Obtain Number of protected Ultimate Edition machines
+ * @method void setFlagshipMachineCnt(integer $FlagshipMachineCnt) Set Number of protected Ultimate Edition machines
+ * @method integer getRiskMachineCnt() Obtain Number of risky machines
+ * @method void setRiskMachineCnt(integer $RiskMachineCnt) Set Number of risky machines
+ * @method integer getCompareYesterdayRiskMachineCnt() Obtain Number of new risky machines compared with that yesterday
+ * @method void setCompareYesterdayRiskMachineCnt(integer $CompareYesterdayRiskMachineCnt) Set Number of new risky machines compared with that yesterday
+ * @method integer getCompareYesterdayNotProtectMachineCnt() Obtain Number of new unprotected machines compared with that yesterday
+ * @method void setCompareYesterdayNotProtectMachineCnt(integer $CompareYesterdayNotProtectMachineCnt) Set Number of new unprotected machines compared with that yesterday
+ * @method integer getCompareYesterdayDeadlineMachineCnt() Obtain Number of new machines about to expire compared with that yesterday
+ * @method void setCompareYesterdayDeadlineMachineCnt(integer $CompareYesterdayDeadlineMachineCnt) Set Number of new machines about to expire compared with that yesterday
+ * @method integer getDeadlineMachineCnt() Obtain Number of machines about to expire
+ * @method void setDeadlineMachineCnt(integer $DeadlineMachineCnt) Set Number of machines about to expire
+ * @method integer getNotProtectMachineCnt() Obtain Number of unprotected machines
+ * @method void setNotProtectMachineCnt(integer $NotProtectMachineCnt) Set Number of unprotected machines
+ * @method integer getLHGeneralDiscountCnt() Obtain Number of protected Inclusive Edition machines (Lighthouse machines)
+ * @method void setLHGeneralDiscountCnt(integer $LHGeneralDiscountCnt) Set Number of protected Inclusive Edition machines (Lighthouse machines)
+ * @method integer getCompareYesterdayMachineCnt() Obtain Number of new hosts compared with that yesterday
+ * @method void setCompareYesterdayMachineCnt(integer $CompareYesterdayMachineCnt) Set Number of new hosts compared with that yesterday
+ * @method integer getMachineDestroyAfterOfflineHours() Obtain Auto-cleanup Time, maximum 720 hours, minimum 0, 0 by default, 0=OFF
+ * @method void setMachineDestroyAfterOfflineHours(integer $MachineDestroyAfterOfflineHours) Set Auto-cleanup Time, maximum 720 hours, minimum 0, 0 by default, 0=OFF
+ * @method string getRequestId() Obtain The unique request ID, generated by the server, will be returned for every request (if the request fails to reach the server for other reasons, the request will not obtain a RequestId). RequestId is required for locating a problem.
+ * @method void setRequestId(string $RequestId) Set The unique request ID, generated by the server, will be returned for every request (if the request fails to reach the server for other reasons, the request will not obtain a RequestId). RequestId is required for locating a problem.
+ */
+class DescribeMachineGeneralResponse extends AbstractModel
+{
+    /**
+     * @var integer Total number of assets
+     */
+    public $MachineCnt;
+
+    /**
+     * @var integer Number of Tencent Cloud machines
+     */
+    public $TencentCloudMachineCnt;
+
+    /**
+     * @var integer Number of Alibaba Cloud machines
+     */
+    public $AliCloudMachineCnt;
+
+    /**
+     * @var integer Number of Baidu Cloud machines
+     */
+    public $BaiduCloudMachineCnt;
+
+    /**
+     * @var integer Number of IDC machines
+     */
+    public $IDCMachineCnt;
+
+    /**
+     * @var integer Number of machines from other cloud service vendors
+     */
+    public $OtherCloudMachineCnt;
+
+    /**
+     * @var integer Number of protected machines
+     */
+    public $ProtectMachineCnt;
+
+    /**
+     * @var integer Number of protected Basic Edition machines
+     */
+    public $BaseMachineCnt;
+
+    /**
+     * @var integer Number of protected Pro Edition machines
+     */
+    public $SpecialtyMachineCnt;
+
+    /**
+     * @var integer Number of protected Ultimate Edition machines
+     */
+    public $FlagshipMachineCnt;
+
+    /**
+     * @var integer Number of risky machines
+     */
+    public $RiskMachineCnt;
+
+    /**
+     * @var integer Number of new risky machines compared with that yesterday
+     */
+    public $CompareYesterdayRiskMachineCnt;
+
+    /**
+     * @var integer Number of new unprotected machines compared with that yesterday
+     */
+    public $CompareYesterdayNotProtectMachineCnt;
+
+    /**
+     * @var integer Number of new machines about to expire compared with that yesterday
+     */
+    public $CompareYesterdayDeadlineMachineCnt;
+
+    /**
+     * @var integer Number of machines about to expire
+     */
+    public $DeadlineMachineCnt;
+
+    /**
+     * @var integer Number of unprotected machines
+     */
+    public $NotProtectMachineCnt;
+
+    /**
+     * @var integer Number of protected Inclusive Edition machines (Lighthouse machines)
+     */
+    public $LHGeneralDiscountCnt;
+
+    /**
+     * @var integer Number of new hosts compared with that yesterday
+     */
+    public $CompareYesterdayMachineCnt;
+
+    /**
+     * @var integer Auto-cleanup Time, maximum 720 hours, minimum 0, 0 by default, 0=OFF
+     */
+    public $MachineDestroyAfterOfflineHours;
+
+    /**
+     * @var string The unique request ID, generated by the server, will be returned for every request (if the request fails to reach the server for other reasons, the request will not obtain a RequestId). RequestId is required for locating a problem.
+     */
+    public $RequestId;
+
+    /**
+     * @param integer $MachineCnt Total number of assets
+     * @param integer $TencentCloudMachineCnt Number of Tencent Cloud machines
+     * @param integer $AliCloudMachineCnt Number of Alibaba Cloud machines
+     * @param integer $BaiduCloudMachineCnt Number of Baidu Cloud machines
+     * @param integer $IDCMachineCnt Number of IDC machines
+     * @param integer $OtherCloudMachineCnt Number of machines from other cloud service vendors
+     * @param integer $ProtectMachineCnt Number of protected machines
+     * @param integer $BaseMachineCnt Number of protected Basic Edition machines
+     * @param integer $SpecialtyMachineCnt Number of protected Pro Edition machines
+     * @param integer $FlagshipMachineCnt Number of protected Ultimate Edition machines
+     * @param integer $RiskMachineCnt Number of risky machines
+     * @param integer $CompareYesterdayRiskMachineCnt Number of new risky machines compared with that yesterday
+     * @param integer $CompareYesterdayNotProtectMachineCnt Number of new unprotected machines compared with that yesterday
+     * @param integer $CompareYesterdayDeadlineMachineCnt Number of new machines about to expire compared with that yesterday
+     * @param integer $DeadlineMachineCnt Number of machines about to expire
+     * @param integer $NotProtectMachineCnt Number of unprotected machines
+     * @param integer $LHGeneralDiscountCnt Number of protected Inclusive Edition machines (Lighthouse machines)
+     * @param integer $CompareYesterdayMachineCnt Number of new hosts compared with that yesterday
+     * @param integer $MachineDestroyAfterOfflineHours Auto-cleanup Time, maximum 720 hours, minimum 0, 0 by default, 0=OFF
+     * @param string $RequestId The unique request ID, generated by the server, will be returned for every request (if the request fails to reach the server for other reasons, the request will not obtain a RequestId). RequestId is required for locating a problem.
+     */
+    function __construct()
+    {
+
+    }
+
+    /**
+     * For internal only. DO NOT USE IT.
+     */
+    public function deserialize($param)
+    {
+        if ($param === null) {
+            return;
+        }
+        if (array_key_exists("MachineCnt",$param) and $param["MachineCnt"] !== null) {
+            $this->MachineCnt = $param["MachineCnt"];
+        }
+
+        if (array_key_exists("TencentCloudMachineCnt",$param) and $param["TencentCloudMachineCnt"] !== null) {
+            $this->TencentCloudMachineCnt = $param["TencentCloudMachineCnt"];
+        }
+
+        if (array_key_exists("AliCloudMachineCnt",$param) and $param["AliCloudMachineCnt"] !== null) {
+            $this->AliCloudMachineCnt = $param["AliCloudMachineCnt"];
+        }
+
+        if (array_key_exists("BaiduCloudMachineCnt",$param) and $param["BaiduCloudMachineCnt"] !== null) {
+            $this->BaiduCloudMachineCnt = $param["BaiduCloudMachineCnt"];
+        }
+
+        if (array_key_exists("IDCMachineCnt",$param) and $param["IDCMachineCnt"] !== null) {
+            $this->IDCMachineCnt = $param["IDCMachineCnt"];
+        }
+
+        if (array_key_exists("OtherCloudMachineCnt",$param) and $param["OtherCloudMachineCnt"] !== null) {
+            $this->OtherCloudMachineCnt = $param["OtherCloudMachineCnt"];
+        }
+
+        if (array_key_exists("ProtectMachineCnt",$param) and $param["ProtectMachineCnt"] !== null) {
+            $this->ProtectMachineCnt = $param["ProtectMachineCnt"];
+        }
+
+        if (array_key_exists("BaseMachineCnt",$param) and $param["BaseMachineCnt"] !== null) {
+            $this->BaseMachineCnt = $param["BaseMachineCnt"];
+        }
+
+        if (array_key_exists("SpecialtyMachineCnt",$param) and $param["SpecialtyMachineCnt"] !== null) {
+            $this->SpecialtyMachineCnt = $param["SpecialtyMachineCnt"];
+        }
+
+        if (array_key_exists("FlagshipMachineCnt",$param) and $param["FlagshipMachineCnt"] !== null) {
+            $this->FlagshipMachineCnt = $param["FlagshipMachineCnt"];
+        }
+
+        if (array_key_exists("RiskMachineCnt",$param) and $param["RiskMachineCnt"] !== null) {
+            $this->RiskMachineCnt = $param["RiskMachineCnt"];
+        }
+
+        if (array_key_exists("CompareYesterdayRiskMachineCnt",$param) and $param["CompareYesterdayRiskMachineCnt"] !== null) {
+            $this->CompareYesterdayRiskMachineCnt = $param["CompareYesterdayRiskMachineCnt"];
+        }
+
+        if (array_key_exists("CompareYesterdayNotProtectMachineCnt",$param) and $param["CompareYesterdayNotProtectMachineCnt"] !== null) {
+            $this->CompareYesterdayNotProtectMachineCnt = $param["CompareYesterdayNotProtectMachineCnt"];
+        }
+
+        if (array_key_exists("CompareYesterdayDeadlineMachineCnt",$param) and $param["CompareYesterdayDeadlineMachineCnt"] !== null) {
+            $this->CompareYesterdayDeadlineMachineCnt = $param["CompareYesterdayDeadlineMachineCnt"];
+        }
+
+        if (array_key_exists("DeadlineMachineCnt",$param) and $param["DeadlineMachineCnt"] !== null) {
+            $this->DeadlineMachineCnt = $param["DeadlineMachineCnt"];
+        }
+
+        if (array_key_exists("NotProtectMachineCnt",$param) and $param["NotProtectMachineCnt"] !== null) {
+            $this->NotProtectMachineCnt = $param["NotProtectMachineCnt"];
+        }
+
+        if (array_key_exists("LHGeneralDiscountCnt",$param) and $param["LHGeneralDiscountCnt"] !== null) {
+            $this->LHGeneralDiscountCnt = $param["LHGeneralDiscountCnt"];
+        }
+
+        if (array_key_exists("CompareYesterdayMachineCnt",$param) and $param["CompareYesterdayMachineCnt"] !== null) {
+            $this->CompareYesterdayMachineCnt = $param["CompareYesterdayMachineCnt"];
+        }
+
+        if (array_key_exists("MachineDestroyAfterOfflineHours",$param) and $param["MachineDestroyAfterOfflineHours"] !== null) {
+            $this->MachineDestroyAfterOfflineHours = $param["MachineDestroyAfterOfflineHours"];
+        }
+
+        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
+            $this->RequestId = $param["RequestId"];
+        }
+    }
+}
