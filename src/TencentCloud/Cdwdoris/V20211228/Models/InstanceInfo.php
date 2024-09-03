@@ -222,6 +222,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setCoolDownBucket(string $CoolDownBucket) Set COS buckets are used for hot and cold stratification
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method InstanceDetail getDetails() Obtain Instance extension information
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setDetails(InstanceDetail $Details) Set Instance extension information
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getEnableDlc() Obtain Whether to enable DLC. 0: disable; 1: enable.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setEnableDlc(integer $EnableDlc) Set Whether to enable DLC. 0: disable; 1: enable.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getAccountType() Obtain Account type. 0: ordinary user; 1: CAM user.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setAccountType(integer $AccountType) Set Account type. 0: ordinary user; 1: CAM user.
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class InstanceInfo extends AbstractModel
 {
@@ -516,6 +528,24 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $CoolDownBucket;
 
     /**
+     * @var InstanceDetail Instance extension information
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $Details;
+
+    /**
+     * @var integer Whether to enable DLC. 0: disable; 1: enable.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $EnableDlc;
+
+    /**
+     * @var integer Account type. 0: ordinary user; 1: CAM user.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $AccountType;
+
+    /**
      * @param string $InstanceId Cluster instance ID, "cdw-xxxx" string type
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $InstanceName Cluster instance name
@@ -616,6 +646,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param integer $EnableCoolDown Whether to enable hot and cold stratification. 0 refers to disabled, and 1 refers to enabled.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $CoolDownBucket COS buckets are used for hot and cold stratification
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param InstanceDetail $Details Instance extension information
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $EnableDlc Whether to enable DLC. 0: disable; 1: enable.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $AccountType Account type. 0: ordinary user; 1: CAM user.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
@@ -824,6 +860,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("CoolDownBucket",$param) and $param["CoolDownBucket"] !== null) {
             $this->CoolDownBucket = $param["CoolDownBucket"];
+        }
+
+        if (array_key_exists("Details",$param) and $param["Details"] !== null) {
+            $this->Details = new InstanceDetail();
+            $this->Details->deserialize($param["Details"]);
+        }
+
+        if (array_key_exists("EnableDlc",$param) and $param["EnableDlc"] !== null) {
+            $this->EnableDlc = $param["EnableDlc"];
+        }
+
+        if (array_key_exists("AccountType",$param) and $param["AccountType"] !== null) {
+            $this->AccountType = $param["AccountType"];
         }
     }
 }

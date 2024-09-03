@@ -23,15 +23,23 @@ use TencentCloud\Common\AbstractModel;
  * @method string getName() Obtain Input name, which can contain 1-32 case-sensitive letters, digits, and underscores and must be unique at the region level
  * @method void setName(string $Name) Set Input name, which can contain 1-32 case-sensitive letters, digits, and underscores and must be unique at the region level
  * @method string getType() Obtain Input type
-Valid values: `RTMP_PUSH`, `RTP_PUSH`, `UDP_PUSH`, `RTMP_PULL`, `HLS_PULL`, `MP4_PULL`
+Valid values: `RTMP_PUSH`, `RTP_PUSH`, `UDP_PUSH`, `RTMP_PULL`, `HLS_PULL`, `MP4_PULL`,`RTP-FEC_PUSH`,`RTSP_PULL`,`SRT_PUSH `,`SRT_PULL `
  * @method void setType(string $Type) Set Input type
-Valid values: `RTMP_PUSH`, `RTP_PUSH`, `UDP_PUSH`, `RTMP_PULL`, `HLS_PULL`, `MP4_PULL`
+Valid values: `RTMP_PUSH`, `RTP_PUSH`, `UDP_PUSH`, `RTMP_PULL`, `HLS_PULL`, `MP4_PULL`,`RTP-FEC_PUSH`,`RTSP_PULL`,`SRT_PUSH `,`SRT_PULL `
  * @method array getSecurityGroupIds() Obtain ID of the input security group to attach
 You can attach only one security group to an input.
  * @method void setSecurityGroupIds(array $SecurityGroupIds) Set ID of the input security group to attach
 You can attach only one security group to an input.
- * @method array getInputSettings() Obtain Input settings. For the type `RTMP_PUSH`, `RTMP_PULL`, `HLS_PULL`, or `MP4_PULL`, 1 or 2 inputs of the corresponding type can be configured.
- * @method void setInputSettings(array $InputSettings) Set Input settings. For the type `RTMP_PUSH`, `RTMP_PULL`, `HLS_PULL`, or `MP4_PULL`, 1 or 2 inputs of the corresponding type can be configured.
+ * @method array getInputSettings() Obtain Input settings. 
+For the type:
+`RTMP_PUSH`, `RTMP_PULL`, `HLS_PULL`,`RTSP_PULL`,`SRT_PULL` or `MP4_PULL`, 1 or 2 inputs of the corresponding type can be configured.
+For the type:
+`SRT_PUSH`, 0 or 2 inputs of the corresponding type can be configured.
+ * @method void setInputSettings(array $InputSettings) Set Input settings. 
+For the type:
+`RTMP_PUSH`, `RTMP_PULL`, `HLS_PULL`,`RTSP_PULL`,`SRT_PULL` or `MP4_PULL`, 1 or 2 inputs of the corresponding type can be configured.
+For the type:
+`SRT_PUSH`, 0 or 2 inputs of the corresponding type can be configured.
  */
 class CreateStreamLiveInputRequest extends AbstractModel
 {
@@ -42,7 +50,7 @@ class CreateStreamLiveInputRequest extends AbstractModel
 
     /**
      * @var string Input type
-Valid values: `RTMP_PUSH`, `RTP_PUSH`, `UDP_PUSH`, `RTMP_PULL`, `HLS_PULL`, `MP4_PULL`
+Valid values: `RTMP_PUSH`, `RTP_PUSH`, `UDP_PUSH`, `RTMP_PULL`, `HLS_PULL`, `MP4_PULL`,`RTP-FEC_PUSH`,`RTSP_PULL`,`SRT_PUSH `,`SRT_PULL `
      */
     public $Type;
 
@@ -53,17 +61,25 @@ You can attach only one security group to an input.
     public $SecurityGroupIds;
 
     /**
-     * @var array Input settings. For the type `RTMP_PUSH`, `RTMP_PULL`, `HLS_PULL`, or `MP4_PULL`, 1 or 2 inputs of the corresponding type can be configured.
+     * @var array Input settings. 
+For the type:
+`RTMP_PUSH`, `RTMP_PULL`, `HLS_PULL`,`RTSP_PULL`,`SRT_PULL` or `MP4_PULL`, 1 or 2 inputs of the corresponding type can be configured.
+For the type:
+`SRT_PUSH`, 0 or 2 inputs of the corresponding type can be configured.
      */
     public $InputSettings;
 
     /**
      * @param string $Name Input name, which can contain 1-32 case-sensitive letters, digits, and underscores and must be unique at the region level
      * @param string $Type Input type
-Valid values: `RTMP_PUSH`, `RTP_PUSH`, `UDP_PUSH`, `RTMP_PULL`, `HLS_PULL`, `MP4_PULL`
+Valid values: `RTMP_PUSH`, `RTP_PUSH`, `UDP_PUSH`, `RTMP_PULL`, `HLS_PULL`, `MP4_PULL`,`RTP-FEC_PUSH`,`RTSP_PULL`,`SRT_PUSH `,`SRT_PULL `
      * @param array $SecurityGroupIds ID of the input security group to attach
 You can attach only one security group to an input.
-     * @param array $InputSettings Input settings. For the type `RTMP_PUSH`, `RTMP_PULL`, `HLS_PULL`, or `MP4_PULL`, 1 or 2 inputs of the corresponding type can be configured.
+     * @param array $InputSettings Input settings. 
+For the type:
+`RTMP_PUSH`, `RTMP_PULL`, `HLS_PULL`,`RTSP_PULL`,`SRT_PULL` or `MP4_PULL`, 1 or 2 inputs of the corresponding type can be configured.
+For the type:
+`SRT_PUSH`, 0 or 2 inputs of the corresponding type can be configured.
      */
     function __construct()
     {

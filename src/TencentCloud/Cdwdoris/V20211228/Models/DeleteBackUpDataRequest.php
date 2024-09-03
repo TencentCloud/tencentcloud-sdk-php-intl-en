@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceId(string $InstanceId) Set Cluster ID
  * @method integer getBackUpJobId() Obtain Task ID
  * @method void setBackUpJobId(integer $BackUpJobId) Set Task ID
- * @method boolean getIsDeleteAll() Obtain Whether to delete all data
- * @method void setIsDeleteAll(boolean $IsDeleteAll) Set Whether to delete all data
+ * @method boolean getIsDeleteAll() Obtain Whether to delete all instances
+ * @method void setIsDeleteAll(boolean $IsDeleteAll) Set Whether to delete all instances
  */
 class DeleteBackUpDataRequest extends AbstractModel
 {
@@ -40,14 +40,14 @@ class DeleteBackUpDataRequest extends AbstractModel
     public $BackUpJobId;
 
     /**
-     * @var boolean Whether to delete all data
+     * @var boolean Whether to delete all instances
      */
     public $IsDeleteAll;
 
     /**
      * @param string $InstanceId Cluster ID
      * @param integer $BackUpJobId Task ID
-     * @param boolean $IsDeleteAll Whether to delete all data
+     * @param boolean $IsDeleteAll Whether to delete all instances
      */
     function __construct()
     {

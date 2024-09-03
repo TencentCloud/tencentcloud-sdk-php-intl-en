@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceID() Obtain Cluster ID
  * @method void setInstanceID(string $InstanceID) Set Cluster ID
- * @method string getInput() Obtain "" or a cluster ID
- * @method void setInput(string $Input) Set "" or a cluster ID
+ * @method string getInput() Obtain If this parameter is left blank, all clusters corresponding to the current appId are involved. Otherwise, a specific cluster is involved.
+ * @method void setInput(string $Input) Set If this parameter is left blank, all clusters corresponding to the current appId are involved. Otherwise, a specific cluster is involved.
  */
 class DescribeInstancesHealthStateRequest extends AbstractModel
 {
@@ -34,13 +34,13 @@ class DescribeInstancesHealthStateRequest extends AbstractModel
     public $InstanceID;
 
     /**
-     * @var string "" or a cluster ID
+     * @var string If this parameter is left blank, all clusters corresponding to the current appId are involved. Otherwise, a specific cluster is involved.
      */
     public $Input;
 
     /**
      * @param string $InstanceID Cluster ID
-     * @param string $Input "" or a cluster ID
+     * @param string $Input If this parameter is left blank, all clusters corresponding to the current appId are involved. Otherwise, a specific cluster is involved.
      */
     function __construct()
     {

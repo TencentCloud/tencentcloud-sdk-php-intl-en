@@ -20,36 +20,36 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ApplyConcurrent request structure.
  *
- * @method string getUserId() Obtain The user’s unique ID. Tencent Cloud does not parse the ID. You need to manage your own user IDs. Based on your needs, you can either define unique IDs for users or use timestamps to generate random IDs. Make sure the same ID is used when a user reconnects to your application.
- * @method void setUserId(string $UserId) Set The user’s unique ID. Tencent Cloud does not parse the ID. You need to manage your own user IDs. Based on your needs, you can either define unique IDs for users or use timestamps to generate random IDs. Make sure the same ID is used when a user reconnects to your application.
- * @method string getUserIp() Obtain Public IP of user’s application client, which is used for nearby scheduling.
- * @method void setUserIp(string $UserIp) Set Public IP of user’s application client, which is used for nearby scheduling.
- * @method string getProjectId() Obtain The project ID.
- * @method void setProjectId(string $ProjectId) Set The project ID.
- * @method string getApplicationVersionId() Obtain Application version ID. If the application of the current version is requested, you do not need to fill in this field. If the application of other versions is requested, you need to specify the version through this field.
- * @method void setApplicationVersionId(string $ApplicationVersionId) Set Application version ID. If the application of the current version is requested, you do not need to fill in this field. If the application of other versions is requested, you need to specify the version through this field.
+ * @method string getUserId() Obtain Unique user ID, which is customized by you and is not parsed by CAR. Based on your needs, you can either define unique IDs for users or use timestamps to generate random IDs. Make sure the same ID is used when a user reconnects to your application.
+ * @method void setUserId(string $UserId) Set Unique user ID, which is customized by you and is not parsed by CAR. Based on your needs, you can either define unique IDs for users or use timestamps to generate random IDs. Make sure the same ID is used when a user reconnects to your application.
+ * @method string getUserIp() Obtain Public IP address of the user's client, which is used for nearby scheduling.
+ * @method void setUserIp(string $UserIp) Set Public IP address of the user's client, which is used for nearby scheduling.
+ * @method string getProjectId() Obtain Project ID.
+ * @method void setProjectId(string $ProjectId) Set Project ID.
+ * @method string getApplicationVersionId() Obtain Application version ID. If the application of the current version is requested, you do not need to fill in this field. If the application of the other versions is requested, you need to specify the version through this field.
+ * @method void setApplicationVersionId(string $ApplicationVersionId) Set Application version ID. If the application of the current version is requested, you do not need to fill in this field. If the application of the other versions is requested, you need to specify the version through this field.
  * @method string getApplicationId() Obtain Application ID, which is used only by the multi-application project to specify applications. For a single-application project, this parameter is ignored, and the application bound to the project will be used.
  * @method void setApplicationId(string $ApplicationId) Set Application ID, which is used only by the multi-application project to specify applications. For a single-application project, this parameter is ignored, and the application bound to the project will be used.
  */
 class ApplyConcurrentRequest extends AbstractModel
 {
     /**
-     * @var string The user’s unique ID. Tencent Cloud does not parse the ID. You need to manage your own user IDs. Based on your needs, you can either define unique IDs for users or use timestamps to generate random IDs. Make sure the same ID is used when a user reconnects to your application.
+     * @var string Unique user ID, which is customized by you and is not parsed by CAR. Based on your needs, you can either define unique IDs for users or use timestamps to generate random IDs. Make sure the same ID is used when a user reconnects to your application.
      */
     public $UserId;
 
     /**
-     * @var string Public IP of user’s application client, which is used for nearby scheduling.
+     * @var string Public IP address of the user's client, which is used for nearby scheduling.
      */
     public $UserIp;
 
     /**
-     * @var string The project ID.
+     * @var string Project ID.
      */
     public $ProjectId;
 
     /**
-     * @var string Application version ID. If the application of the current version is requested, you do not need to fill in this field. If the application of other versions is requested, you need to specify the version through this field.
+     * @var string Application version ID. If the application of the current version is requested, you do not need to fill in this field. If the application of the other versions is requested, you need to specify the version through this field.
      */
     public $ApplicationVersionId;
 
@@ -59,10 +59,10 @@ class ApplyConcurrentRequest extends AbstractModel
     public $ApplicationId;
 
     /**
-     * @param string $UserId The user’s unique ID. Tencent Cloud does not parse the ID. You need to manage your own user IDs. Based on your needs, you can either define unique IDs for users or use timestamps to generate random IDs. Make sure the same ID is used when a user reconnects to your application.
-     * @param string $UserIp Public IP of user’s application client, which is used for nearby scheduling.
-     * @param string $ProjectId The project ID.
-     * @param string $ApplicationVersionId Application version ID. If the application of the current version is requested, you do not need to fill in this field. If the application of other versions is requested, you need to specify the version through this field.
+     * @param string $UserId Unique user ID, which is customized by you and is not parsed by CAR. Based on your needs, you can either define unique IDs for users or use timestamps to generate random IDs. Make sure the same ID is used when a user reconnects to your application.
+     * @param string $UserIp Public IP address of the user's client, which is used for nearby scheduling.
+     * @param string $ProjectId Project ID.
+     * @param string $ApplicationVersionId Application version ID. If the application of the current version is requested, you do not need to fill in this field. If the application of the other versions is requested, you need to specify the version through this field.
      * @param string $ApplicationId Application ID, which is used only by the multi-application project to specify applications. For a single-application project, this parameter is ignored, and the application bound to the project will be used.
      */
     function __construct()

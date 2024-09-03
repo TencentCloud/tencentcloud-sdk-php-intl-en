@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeConcurrentCount request structure.
  *
- * @method string getProjectId() Obtain Project ID
- * @method void setProjectId(string $ProjectId) Set Project ID
+ * @method string getProjectId() Obtain Project ID.
+ * @method void setProjectId(string $ProjectId) Set Project ID.
  */
 class DescribeConcurrentCountRequest extends AbstractModel
 {
     /**
-     * @var string Project ID
+     * @var string Project ID.
      */
     public $ProjectId;
 
     /**
-     * @param string $ProjectId Project ID
+     * @param string $ProjectId Project ID.
      */
     function __construct()
     {

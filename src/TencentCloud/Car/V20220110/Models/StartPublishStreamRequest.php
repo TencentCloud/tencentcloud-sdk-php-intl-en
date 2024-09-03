@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * StartPublishStream request structure.
  *
- * @method string getUserId() Obtain Unique user ID, which is customized by you and is not understood by CAR. It will be used as the `StreamId` for pushing streams. For example, if the bound push domain is **abc.livepush.myqcloud.com**, the push address will be **rtmp://abc.livepush.myqcloud.com/live/UserId?txSecret=xxx&txTime=xxx**.
- * @method void setUserId(string $UserId) Set Unique user ID, which is customized by you and is not understood by CAR. It will be used as the `StreamId` for pushing streams. For example, if the bound push domain is **abc.livepush.myqcloud.com**, the push address will be **rtmp://abc.livepush.myqcloud.com/live/UserId?txSecret=xxx&txTime=xxx**.
- * @method string getPublishStreamArgs() Obtain Push parameter, which is a custom parameter carried during stream pushing.
- * @method void setPublishStreamArgs(string $PublishStreamArgs) Set Push parameter, which is a custom parameter carried during stream pushing.
+ * @method string getUserId() Obtain Unique user ID, which is customized by you and is not parsed by CAR. It will be used as the `StreamId` for streaming. For example, if the bound streaming domain is **abc.livepush.myqcloud.com**, the streaming address will be **rtmp://abc.livepush.myqcloud.com/live/UserId?txSecret=xxx&txTime=xxx**.
+ * @method void setUserId(string $UserId) Set Unique user ID, which is customized by you and is not parsed by CAR. It will be used as the `StreamId` for streaming. For example, if the bound streaming domain is **abc.livepush.myqcloud.com**, the streaming address will be **rtmp://abc.livepush.myqcloud.com/live/UserId?txSecret=xxx&txTime=xxx**.
+ * @method string getPublishStreamArgs() Obtain Streaming parameter, which is a custom parameter carried during streaming.
+ * @method void setPublishStreamArgs(string $PublishStreamArgs) Set Streaming parameter, which is a custom parameter carried during streaming.
  */
 class StartPublishStreamRequest extends AbstractModel
 {
     /**
-     * @var string Unique user ID, which is customized by you and is not understood by CAR. It will be used as the `StreamId` for pushing streams. For example, if the bound push domain is **abc.livepush.myqcloud.com**, the push address will be **rtmp://abc.livepush.myqcloud.com/live/UserId?txSecret=xxx&txTime=xxx**.
+     * @var string Unique user ID, which is customized by you and is not parsed by CAR. It will be used as the `StreamId` for streaming. For example, if the bound streaming domain is **abc.livepush.myqcloud.com**, the streaming address will be **rtmp://abc.livepush.myqcloud.com/live/UserId?txSecret=xxx&txTime=xxx**.
      */
     public $UserId;
 
     /**
-     * @var string Push parameter, which is a custom parameter carried during stream pushing.
+     * @var string Streaming parameter, which is a custom parameter carried during streaming.
      */
     public $PublishStreamArgs;
 
     /**
-     * @param string $UserId Unique user ID, which is customized by you and is not understood by CAR. It will be used as the `StreamId` for pushing streams. For example, if the bound push domain is **abc.livepush.myqcloud.com**, the push address will be **rtmp://abc.livepush.myqcloud.com/live/UserId?txSecret=xxx&txTime=xxx**.
-     * @param string $PublishStreamArgs Push parameter, which is a custom parameter carried during stream pushing.
+     * @param string $UserId Unique user ID, which is customized by you and is not parsed by CAR. It will be used as the `StreamId` for streaming. For example, if the bound streaming domain is **abc.livepush.myqcloud.com**, the streaming address will be **rtmp://abc.livepush.myqcloud.com/live/UserId?txSecret=xxx&txTime=xxx**.
+     * @param string $PublishStreamArgs Streaming parameter, which is a custom parameter carried during streaming.
      */
     function __construct()
     {

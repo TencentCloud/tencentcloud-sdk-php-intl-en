@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * StartPublishStreamWithURL request structure.
  *
- * @method string getUserId() Obtain Unique user ID, which is customized by you and is not understood by CAR.
- * @method void setUserId(string $UserId) Set Unique user ID, which is customized by you and is not understood by CAR.
- * @method string getPublishStreamURL() Obtain Push address. Only RTMP is supported for push currently.
- * @method void setPublishStreamURL(string $PublishStreamURL) Set Push address. Only RTMP is supported for push currently.
+ * @method string getUserId() Obtain Unique user ID, which is customized by you and is not parsed by CAR.
+ * @method void setUserId(string $UserId) Set Unique user ID, which is customized by you and is not parsed by CAR.
+ * @method string getPublishStreamURL() Obtain Streaming address. Only RTMP is supported for streaming currently.
+ * @method void setPublishStreamURL(string $PublishStreamURL) Set Streaming address. Only RTMP is supported for streaming currently.
  */
 class StartPublishStreamWithURLRequest extends AbstractModel
 {
     /**
-     * @var string Unique user ID, which is customized by you and is not understood by CAR.
+     * @var string Unique user ID, which is customized by you and is not parsed by CAR.
      */
     public $UserId;
 
     /**
-     * @var string Push address. Only RTMP is supported for push currently.
+     * @var string Streaming address. Only RTMP is supported for streaming currently.
      */
     public $PublishStreamURL;
 
     /**
-     * @param string $UserId Unique user ID, which is customized by you and is not understood by CAR.
-     * @param string $PublishStreamURL Push address. Only RTMP is supported for push currently.
+     * @param string $UserId Unique user ID, which is customized by you and is not parsed by CAR.
+     * @param string $PublishStreamURL Streaming address. Only RTMP is supported for streaming currently.
      */
     function __construct()
     {

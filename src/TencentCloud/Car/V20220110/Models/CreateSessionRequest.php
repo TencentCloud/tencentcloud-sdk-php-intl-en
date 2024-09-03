@@ -20,110 +20,94 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateSession request structure.
  *
- * @method string getUserId() Obtain The user’s unique ID. Tencent Cloud does not parse the ID. You need to manage your own user IDs. Based on your needs, you can either define unique IDs for users or use timestamps to generate random IDs. Make sure the same ID is used when a user reconnects to your application.
- * @method void setUserId(string $UserId) Set The user’s unique ID. Tencent Cloud does not parse the ID. You need to manage your own user IDs. Based on your needs, you can either define unique IDs for users or use timestamps to generate random IDs. Make sure the same ID is used when a user reconnects to your application.
- * @method string getUserIp() Obtain Public IP of user’s application client, which is used for nearby scheduling.
- * @method void setUserIp(string $UserIp) Set Public IP of user’s application client, which is used for nearby scheduling.
- * @method string getClientSession() Obtain The client-side session data, which is obtained from the SDK. If `RunMode` is `RunWithoutClient`, this parameter can be null.
- * @method void setClientSession(string $ClientSession) Set The client-side session data, which is obtained from the SDK. If `RunMode` is `RunWithoutClient`, this parameter can be null.
- * @method string getRunMode() Obtain The on-cloud running mode.
-`RunWithoutClient`: Keep the application running on the cloud even when there are no client connections.
-Empty string (default): Keep the application running on the cloud only when there are client connections.
- * @method void setRunMode(string $RunMode) Set The on-cloud running mode.
-`RunWithoutClient`: Keep the application running on the cloud even when there are no client connections.
-Empty string (default): Keep the application running on the cloud only when there are client connections.
- * @method string getApplicationParameters() Obtain Application startup parameter.
-If the user requests a multi-application project or a prelaunch-disabled single-application project, this parameter takes effect.
- 
-If the user requests a prelaunch-enabled single-application project, this parameter is invalid.
-
-Note: When this parameter takes effect, the `ApplicationParameters` parameter will be appended to the end of the application startup parameter. The application startup parameter is set in the application or project configuration in the console.
-For example, for a prelaunch-disabled single-application project, if its application startup parameter `bar` is `0` and the `ApplicationParameters` parameter `foo` is `1`, the actual application startup parameters will be `bar=0 foo=1`.
- * @method void setApplicationParameters(string $ApplicationParameters) Set Application startup parameter.
-If the user requests a multi-application project or a prelaunch-disabled single-application project, this parameter takes effect.
- 
-If the user requests a prelaunch-enabled single-application project, this parameter is invalid.
-
-Note: When this parameter takes effect, the `ApplicationParameters` parameter will be appended to the end of the application startup parameter. The application startup parameter is set in the application or project configuration in the console.
-For example, for a prelaunch-disabled single-application project, if its application startup parameter `bar` is `0` and the `ApplicationParameters` parameter `foo` is `1`, the actual application startup parameters will be `bar=0 foo=1`.
- * @method string getHostUserId() Obtain The user ID of the host in **multi-person interaction** scenarios, which is required.
-If the current user is the host, `HostUserId` must be the same as their `UserId`; otherwise, `HostUserId` should be the host's `UserId`.
- * @method void setHostUserId(string $HostUserId) Set The user ID of the host in **multi-person interaction** scenarios, which is required.
-If the current user is the host, `HostUserId` must be the same as their `UserId`; otherwise, `HostUserId` should be the host's `UserId`.
- * @method string getRole() Obtain The role in **multi-person interaction** scenarios. Valid values:
-`Player`: A user who can operate an application by using a keyboard and mouse
-`Viewer`: A user who can only watch the video in the room but cannot operate the application
- * @method void setRole(string $Role) Set The role in **multi-person interaction** scenarios. Valid values:
-`Player`: A user who can operate an application by using a keyboard and mouse
-`Viewer`: A user who can only watch the video in the room but cannot operate the application
+ * @method string getUserId() Obtain Unique user ID, which is customized by you and is not parsed by CAR. Based on your needs, you can either define unique IDs for users or use timestamps to generate random IDs. Make sure the same ID is used when a user reconnects to your application.
+ * @method void setUserId(string $UserId) Set Unique user ID, which is customized by you and is not parsed by CAR. Based on your needs, you can either define unique IDs for users or use timestamps to generate random IDs. Make sure the same ID is used when a user reconnects to your application.
+ * @method string getUserIp() Obtain Public IP address of the user's client, which is used for nearby scheduling.
+ * @method void setUserIp(string $UserIp) Set Public IP address of the user's client, which is used for nearby scheduling.
+ * @method string getClientSession() Obtain Client-side session information, which is obtained from the SDK. If `RunMode` is `RunWithoutClient`, this parameter can be empty.
+ * @method void setClientSession(string $ClientSession) Set Client-side session information, which is obtained from the SDK. If `RunMode` is `RunWithoutClient`, this parameter can be empty.
+ * @method string getRunMode() Obtain On-cloud running mode.RunWithoutClient: Keeps the application running on the cloud even when there are no client connections.Empty string (default): Keeps the application running on the cloud only when there are client connections.
+ * @method void setRunMode(string $RunMode) Set On-cloud running mode.RunWithoutClient: Keeps the application running on the cloud even when there are no client connections.Empty string (default): Keeps the application running on the cloud only when there are client connections.
+ * @method string getApplicationParameters() Obtain Application startup parameters.This parameter is effective for multi-application projects.
+This parameter is effective for single-application projects with prelaunch disabled.This parameter is ineffective for single-application projects with prelaunch enabled.
+Note: When this parameter is effective, it will be appended to the startup parameters of application or project configuration in the console.
+For example, for a single-application project with prelaunch disabled, if its startup parameter `bar` is `0` for project configuration in the console and the `ApplicationParameters` parameter `foo` is `1`, the actual application startup parameters will be `bar=0 and foo=1`.
+ * @method void setApplicationParameters(string $ApplicationParameters) Set Application startup parameters.This parameter is effective for multi-application projects.
+This parameter is effective for single-application projects with prelaunch disabled.This parameter is ineffective for single-application projects with prelaunch enabled.
+Note: When this parameter is effective, it will be appended to the startup parameters of application or project configuration in the console.
+For example, for a single-application project with prelaunch disabled, if its startup parameter `bar` is `0` for project configuration in the console and the `ApplicationParameters` parameter `foo` is `1`, the actual application startup parameters will be `bar=0 and foo=1`.
+ * @method string getHostUserId() Obtain [Multi-person Interaction] Homeowner's user ID, which is required in multi-person interaction mode.
+If the user is the homeowner, HostUserID must be the same as UserID.
+If the user is not the homeowner, HostUserID must be the homeowner's HostUserID.
+ * @method void setHostUserId(string $HostUserId) Set [Multi-person Interaction] Homeowner's user ID, which is required in multi-person interaction mode.
+If the user is the homeowner, HostUserID must be the same as UserID.
+If the user is not the homeowner, HostUserID must be the homeowner's HostUserID.
+ * @method string getRole() Obtain [Multi-person Interaction] Role.
+Player: a user who can operate the application via keyboard, mouse, etc.
+Viewer: a user who can only watch the video in the room but cannot operate the application.
+ * @method void setRole(string $Role) Set [Multi-person Interaction] Role.
+Player: a user who can operate the application via keyboard, mouse, etc.
+Viewer: a user who can only watch the video in the room but cannot operate the application.
  */
 class CreateSessionRequest extends AbstractModel
 {
     /**
-     * @var string The user’s unique ID. Tencent Cloud does not parse the ID. You need to manage your own user IDs. Based on your needs, you can either define unique IDs for users or use timestamps to generate random IDs. Make sure the same ID is used when a user reconnects to your application.
+     * @var string Unique user ID, which is customized by you and is not parsed by CAR. Based on your needs, you can either define unique IDs for users or use timestamps to generate random IDs. Make sure the same ID is used when a user reconnects to your application.
      */
     public $UserId;
 
     /**
-     * @var string Public IP of user’s application client, which is used for nearby scheduling.
+     * @var string Public IP address of the user's client, which is used for nearby scheduling.
      */
     public $UserIp;
 
     /**
-     * @var string The client-side session data, which is obtained from the SDK. If `RunMode` is `RunWithoutClient`, this parameter can be null.
+     * @var string Client-side session information, which is obtained from the SDK. If `RunMode` is `RunWithoutClient`, this parameter can be empty.
      */
     public $ClientSession;
 
     /**
-     * @var string The on-cloud running mode.
-`RunWithoutClient`: Keep the application running on the cloud even when there are no client connections.
-Empty string (default): Keep the application running on the cloud only when there are client connections.
+     * @var string On-cloud running mode.RunWithoutClient: Keeps the application running on the cloud even when there are no client connections.Empty string (default): Keeps the application running on the cloud only when there are client connections.
      */
     public $RunMode;
 
     /**
-     * @var string Application startup parameter.
-If the user requests a multi-application project or a prelaunch-disabled single-application project, this parameter takes effect.
- 
-If the user requests a prelaunch-enabled single-application project, this parameter is invalid.
-
-Note: When this parameter takes effect, the `ApplicationParameters` parameter will be appended to the end of the application startup parameter. The application startup parameter is set in the application or project configuration in the console.
-For example, for a prelaunch-disabled single-application project, if its application startup parameter `bar` is `0` and the `ApplicationParameters` parameter `foo` is `1`, the actual application startup parameters will be `bar=0 foo=1`.
+     * @var string Application startup parameters.This parameter is effective for multi-application projects.
+This parameter is effective for single-application projects with prelaunch disabled.This parameter is ineffective for single-application projects with prelaunch enabled.
+Note: When this parameter is effective, it will be appended to the startup parameters of application or project configuration in the console.
+For example, for a single-application project with prelaunch disabled, if its startup parameter `bar` is `0` for project configuration in the console and the `ApplicationParameters` parameter `foo` is `1`, the actual application startup parameters will be `bar=0 and foo=1`.
      */
     public $ApplicationParameters;
 
     /**
-     * @var string The user ID of the host in **multi-person interaction** scenarios, which is required.
-If the current user is the host, `HostUserId` must be the same as their `UserId`; otherwise, `HostUserId` should be the host's `UserId`.
+     * @var string [Multi-person Interaction] Homeowner's user ID, which is required in multi-person interaction mode.
+If the user is the homeowner, HostUserID must be the same as UserID.
+If the user is not the homeowner, HostUserID must be the homeowner's HostUserID.
      */
     public $HostUserId;
 
     /**
-     * @var string The role in **multi-person interaction** scenarios. Valid values:
-`Player`: A user who can operate an application by using a keyboard and mouse
-`Viewer`: A user who can only watch the video in the room but cannot operate the application
+     * @var string [Multi-person Interaction] Role.
+Player: a user who can operate the application via keyboard, mouse, etc.
+Viewer: a user who can only watch the video in the room but cannot operate the application.
      */
     public $Role;
 
     /**
-     * @param string $UserId The user’s unique ID. Tencent Cloud does not parse the ID. You need to manage your own user IDs. Based on your needs, you can either define unique IDs for users or use timestamps to generate random IDs. Make sure the same ID is used when a user reconnects to your application.
-     * @param string $UserIp Public IP of user’s application client, which is used for nearby scheduling.
-     * @param string $ClientSession The client-side session data, which is obtained from the SDK. If `RunMode` is `RunWithoutClient`, this parameter can be null.
-     * @param string $RunMode The on-cloud running mode.
-`RunWithoutClient`: Keep the application running on the cloud even when there are no client connections.
-Empty string (default): Keep the application running on the cloud only when there are client connections.
-     * @param string $ApplicationParameters Application startup parameter.
-If the user requests a multi-application project or a prelaunch-disabled single-application project, this parameter takes effect.
- 
-If the user requests a prelaunch-enabled single-application project, this parameter is invalid.
-
-Note: When this parameter takes effect, the `ApplicationParameters` parameter will be appended to the end of the application startup parameter. The application startup parameter is set in the application or project configuration in the console.
-For example, for a prelaunch-disabled single-application project, if its application startup parameter `bar` is `0` and the `ApplicationParameters` parameter `foo` is `1`, the actual application startup parameters will be `bar=0 foo=1`.
-     * @param string $HostUserId The user ID of the host in **multi-person interaction** scenarios, which is required.
-If the current user is the host, `HostUserId` must be the same as their `UserId`; otherwise, `HostUserId` should be the host's `UserId`.
-     * @param string $Role The role in **multi-person interaction** scenarios. Valid values:
-`Player`: A user who can operate an application by using a keyboard and mouse
-`Viewer`: A user who can only watch the video in the room but cannot operate the application
+     * @param string $UserId Unique user ID, which is customized by you and is not parsed by CAR. Based on your needs, you can either define unique IDs for users or use timestamps to generate random IDs. Make sure the same ID is used when a user reconnects to your application.
+     * @param string $UserIp Public IP address of the user's client, which is used for nearby scheduling.
+     * @param string $ClientSession Client-side session information, which is obtained from the SDK. If `RunMode` is `RunWithoutClient`, this parameter can be empty.
+     * @param string $RunMode On-cloud running mode.RunWithoutClient: Keeps the application running on the cloud even when there are no client connections.Empty string (default): Keeps the application running on the cloud only when there are client connections.
+     * @param string $ApplicationParameters Application startup parameters.This parameter is effective for multi-application projects.
+This parameter is effective for single-application projects with prelaunch disabled.This parameter is ineffective for single-application projects with prelaunch enabled.
+Note: When this parameter is effective, it will be appended to the startup parameters of application or project configuration in the console.
+For example, for a single-application project with prelaunch disabled, if its startup parameter `bar` is `0` for project configuration in the console and the `ApplicationParameters` parameter `foo` is `1`, the actual application startup parameters will be `bar=0 and foo=1`.
+     * @param string $HostUserId [Multi-person Interaction] Homeowner's user ID, which is required in multi-person interaction mode.
+If the user is the homeowner, HostUserID must be the same as UserID.
+If the user is not the homeowner, HostUserID must be the homeowner's HostUserID.
+     * @param string $Role [Multi-person Interaction] Role.
+Player: a user who can operate the application via keyboard, mouse, etc.
+Viewer: a user who can only watch the video in the room but cannot operate the application.
      */
     function __construct()
     {

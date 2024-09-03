@@ -23,13 +23,28 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Car\V20220110\Models as Models;
 
 /**
- * @method Models\ApplyConcurrentResponse ApplyConcurrent(Models\ApplyConcurrentRequest $req) This API is used to request a concurrency. The timeout period of the API is 20 seconds.
+ * @method Models\ApplyConcurrentResponse ApplyConcurrent(Models\ApplyConcurrentRequest $req) This API is used to request concurrency quota. The timeout period of the API is 20 seconds.
+ * @method Models\CreateApplicationResponse CreateApplication(Models\CreateApplicationRequest $req) This API is used to create an application.
+ * @method Models\CreateApplicationSnapshotResponse CreateApplicationSnapshot(Models\CreateApplicationSnapshotRequest $req) This API is used to create a cloud application version snapshot.
+ * @method Models\CreateApplicationVersionResponse CreateApplicationVersion(Models\CreateApplicationVersionRequest $req) This API is used to create a cloud application version.
  * @method Models\CreateSessionResponse CreateSession(Models\CreateSessionRequest $req) This API is used to create a session. The timeout period of the API is 5 seconds.
- * @method Models\DescribeConcurrentCountResponse DescribeConcurrentCount(Models\DescribeConcurrentCountRequest $req) Obtain the concurrency count.
- * @method Models\DestroySessionResponse DestroySession(Models\DestroySessionRequest $req) Terminate the session. If stream push has been initiated in this session, then the stream push will end upon session termination.
- * @method Models\StartPublishStreamResponse StartPublishStream(Models\StartPublishStreamRequest $req) Initiate stream push. The codec for the stream push is automatically adjusted based on the client's (SDK) capabilities, with a default order of H265, H264, VP8, and VP9.
- * @method Models\StartPublishStreamWithURLResponse StartPublishStreamWithURL(Models\StartPublishStreamWithURLRequest $req) Initiate stream push to the specified URL. The codec for the stream push is automatically adjusted based on the client's (SDK) capabilities, with a default order of H265, H264, VP8, and VP9. This stream push method will be charged separately. For details about the charging method, see [Charging for Stream Push to Specified URL](https://intl.cloud.tencent.com/document/product/1547/72168?from_cn_redirect=1#98ac188a-d122-4caf-88be-05268ecefdf6).
- * @method Models\StopPublishStreamResponse StopPublishStream(Models\StopPublishStreamRequest $req) This API is used to stop stream push.
+ * @method Models\DeleteApplicationResponse DeleteApplication(Models\DeleteApplicationRequest $req) This API is used to delete a cloud application.
+ * @method Models\DeleteApplicationVersionResponse DeleteApplicationVersion(Models\DeleteApplicationVersionRequest $req) This API is used to delete a cloud application version.
+ * @method Models\DescribeApplicationFileInfoResponse DescribeApplicationFileInfo(Models\DescribeApplicationFileInfoRequest $req) This API is used to query application file information.
+ * @method Models\DescribeApplicationListResponse DescribeApplicationList(Models\DescribeApplicationListRequest $req) This API is used to query the cloud application list.
+ * @method Models\DescribeApplicationPathListResponse DescribeApplicationPathList(Models\DescribeApplicationPathListRequest $req) This API is used to query the cloud application startup path list.
+ * @method Models\DescribeApplicationStatusResponse DescribeApplicationStatus(Models\DescribeApplicationStatusRequest $req) This API is used to query the running status of a cloud application and update status information.
+ * @method Models\DescribeApplicationVersionResponse DescribeApplicationVersion(Models\DescribeApplicationVersionRequest $req) This API is used to query the version information of a cloud application.
+ * @method Models\DescribeConcurrentCountResponse DescribeConcurrentCount(Models\DescribeConcurrentCountRequest $req) This API is used to obtain the concurrency count.
+ * @method Models\DescribeCosCredentialResponse DescribeCosCredential(Models\DescribeCosCredentialRequest $req) This API is used to query COS key information.
+ * @method Models\DestroySessionResponse DestroySession(Models\DestroySessionRequest $req) This API is used to terminate a session. If cloud-based streaming has been enabled for this session, the cloud-based streaming will end upon session termination.
+ * @method Models\ModifyApplicationBaseInfoResponse ModifyApplicationBaseInfo(Models\ModifyApplicationBaseInfoRequest $req) This API is used to modify basic information of a cloud application.
+ * @method Models\ModifyApplicationVersionResponse ModifyApplicationVersion(Models\ModifyApplicationVersionRequest $req) This API is used to modify the version information of a cloud application.
+ * @method Models\ModifyMobileApplicationInfoResponse ModifyMobileApplicationInfo(Models\ModifyMobileApplicationInfoRequest $req) This API is used to modify the mobile application data.
+ * @method Models\SetApplicationVersionOnlineResponse SetApplicationVersionOnline(Models\SetApplicationVersionOnlineRequest $req) This API is used to launch an application version.
+ * @method Models\StartPublishStreamResponse StartPublishStream(Models\StartPublishStreamRequest $req) This API is used to start cloud-based streaming. The codec for the cloud-based streaming is automatically selected based on the client's (SDK) capabilities, with a default order of H.265, H.264, VP8, and VP9.
+ * @method Models\StartPublishStreamWithURLResponse StartPublishStreamWithURL(Models\StartPublishStreamWithURLRequest $req) This API is used to start cloud-based streaming to the specified URL. The codec for the cloud-based streaming is automatically selected based on the client's (SDK) capabilities, with a default order of H.265, H.264, VP8, and VP9. This streaming method will be billed separately. For details about the billing method, see [Charging for Streaming to Specified URL](https://intl.cloud.tencent.com/document/product/1547/72168?from_cn_redirect=1#98ac188a-d122-4caf-88be-05268ecefdf6).
+ * @method Models\StopPublishStreamResponse StopPublishStream(Models\StopPublishStreamRequest $req) This API is used to stop cloud-based streaming.
  */
 
 class CarClient extends AbstractClient
