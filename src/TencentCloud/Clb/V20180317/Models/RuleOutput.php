@@ -40,8 +40,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setCertificate(CertificateOutput $Certificate) Set Certificate information
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getScheduler() Obtain Request forwarding method of the rule
- * @method void setScheduler(string $Scheduler) Set Request forwarding method of the rule
+ * @method string getScheduler() Obtain Request forwarding method in the rules.WRR, LEAST_CONN, and IP_HASH respectively indicate weighted round robin, least connections, and IP hash.
+ * @method void setScheduler(string $Scheduler) Set Request forwarding method in the rules.WRR, LEAST_CONN, and IP_HASH respectively indicate weighted round robin, least connections, and IP hash.
  * @method string getListenerId() Obtain ID of the listener to which the forwarding rule belongs
  * @method void setListenerId(string $ListenerId) Set ID of the listener to which the forwarding rule belongs
  * @method RewriteTarget getRewriteTarget() Obtain Redirect target information of a forwarding rule
@@ -60,8 +60,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
  * @method void setForwardType(string $ForwardType) Set Forwarding protocol between CLB and real server
  * @method string getCreateTime() Obtain Forwarding rule creation time
  * @method void setCreateTime(string $CreateTime) Set Forwarding rule creation time
- * @method string getTargetType() Obtain Real server type
- * @method void setTargetType(string $TargetType) Set Real server type
+ * @method string getTargetType() Obtain Real server type. NODE indicates binding to a general node, and TARGETGROUP indicates binding to a target group.
+ * @method void setTargetType(string $TargetType) Set Real server type. NODE indicates binding to a general node, and TARGETGROUP indicates binding to a target group.
  * @method BasicTargetGroupInfo getTargetGroup() Obtain Basic information of a bound target group. This field will be returned if a target group is bound to a rule.
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setTargetGroup(BasicTargetGroupInfo $TargetGroup) Set Basic information of a bound target group. This field will be returned if a target group is bound to a rule.
@@ -78,10 +78,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setTrpcFunc(string $TrpcFunc) Set TRPC calling service API, which is valid when `ForwardType` is `TRPC`. This is now only for internal usage.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getQuicStatus() Obtain QUIC status
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setQuicStatus(string $QuicStatus) Set QUIC status
-Note: this field may return null, indicating that no valid values can be obtained.
+ * @method string getQuicStatus() Obtain QUIC status. QUIC_ACTIVE indicates enabled, and QUIC_INACTIVE indicates disabled. Note: QUIC can be enabled only for HTTPS domain names.Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setQuicStatus(string $QuicStatus) Set QUIC status. QUIC_ACTIVE indicates enabled, and QUIC_INACTIVE indicates disabled. Note: QUIC can be enabled only for HTTPS domain names.Note: This field may return null, indicating that no valid values can be obtained.
  * @method array getDomains() Obtain List of domain names associated with the forwarding rule
 Note: This field may return `null`, indicating that no valid values can be obtained.
  * @method void setDomains(array $Domains) Set List of domain names associated with the forwarding rule
@@ -90,6 +88,8 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
  * @method void setTargetGroupList(array $TargetGroupList) Set List of bound target groups
 Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method OAuth getOAuth() Obtain OAuth configuration status information.Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setOAuth(OAuth $OAuth) Set OAuth configuration status information.Note: This field may return null, indicating that no valid values can be obtained.
  */
 class RuleOutput extends AbstractModel
 {
@@ -128,7 +128,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $Certificate;
 
     /**
-     * @var string Request forwarding method of the rule
+     * @var string Request forwarding method in the rules.WRR, LEAST_CONN, and IP_HASH respectively indicate weighted round robin, least connections, and IP hash.
      */
     public $Scheduler;
 
@@ -174,7 +174,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $CreateTime;
 
     /**
-     * @var string Real server type
+     * @var string Real server type. NODE indicates binding to a general node, and TARGETGROUP indicates binding to a target group.
      */
     public $TargetType;
 
@@ -203,8 +203,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $TrpcFunc;
 
     /**
-     * @var string QUIC status
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string QUIC status. QUIC_ACTIVE indicates enabled, and QUIC_INACTIVE indicates disabled. Note: QUIC can be enabled only for HTTPS domain names.Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $QuicStatus;
 
@@ -221,6 +220,11 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     public $TargetGroupList;
 
     /**
+     * @var OAuth OAuth configuration status information.Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $OAuth;
+
+    /**
      * @param string $LocationId Forwarding rule ID
      * @param string $Domain Domain name of the forwarding rule.
 Note: This field may return null, indicating that no valid values can be obtained.
@@ -231,7 +235,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param CertificateOutput $Certificate Certificate information
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Scheduler Request forwarding method of the rule
+     * @param string $Scheduler Request forwarding method in the rules.WRR, LEAST_CONN, and IP_HASH respectively indicate weighted round robin, least connections, and IP hash.
      * @param string $ListenerId ID of the listener to which the forwarding rule belongs
      * @param RewriteTarget $RewriteTarget Redirect target information of a forwarding rule
 Note: This field may return null, indicating that no valid values can be obtained.
@@ -241,7 +245,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param boolean $Http2 Whether to enable Http2
      * @param string $ForwardType Forwarding protocol between CLB and real server
      * @param string $CreateTime Forwarding rule creation time
-     * @param string $TargetType Real server type
+     * @param string $TargetType Real server type. NODE indicates binding to a general node, and TARGETGROUP indicates binding to a target group.
      * @param BasicTargetGroupInfo $TargetGroup Basic information of a bound target group. This field will be returned if a target group is bound to a rule.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $WafDomainId WAF instance ID
@@ -250,12 +254,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $TrpcFunc TRPC calling service API, which is valid when `ForwardType` is `TRPC`. This is now only for internal usage.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $QuicStatus QUIC status
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @param string $QuicStatus QUIC status. QUIC_ACTIVE indicates enabled, and QUIC_INACTIVE indicates disabled. Note: QUIC can be enabled only for HTTPS domain names.Note: This field may return null, indicating that no valid values can be obtained.
      * @param array $Domains List of domain names associated with the forwarding rule
 Note: This field may return `null`, indicating that no valid values can be obtained.
      * @param array $TargetGroupList List of bound target groups
 Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param OAuth $OAuth OAuth configuration status information.Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -369,6 +373,11 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                 $obj->deserialize($value);
                 array_push($this->TargetGroupList, $obj);
             }
+        }
+
+        if (array_key_exists("OAuth",$param) and $param["OAuth"] !== null) {
+            $this->OAuth = new OAuth();
+            $this->OAuth->deserialize($param["OAuth"]);
         }
     }
 }

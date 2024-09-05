@@ -42,8 +42,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setHealthNum(integer $HealthNum) Set Health threshold
  * @method integer getUnhealthNum() Obtain Unhealthy threshold
  * @method void setUnhealthNum(integer $UnhealthNum) Set Unhealthy threshold
- * @method string getHttpHash() Obtain A request balancing method for HTTP and HTTPS listeners of a public network classic CLB. wrr means weighted round robin, while ip_hash means consistent hashing based on source IPs of access requests.
- * @method void setHttpHash(string $HttpHash) Set A request balancing method for HTTP and HTTPS listeners of a public network classic CLB. wrr means weighted round robin, while ip_hash means consistent hashing based on source IPs of access requests.
+ * @method string getHttpHash() Obtain Request balancing method for listeners of the classic public network CLB. An empty string or wrr indicates weighted round robin. ip_hash indicates consistent hashing based on the accessed source IP address. least_conn indicates least connections.
+ * @method void setHttpHash(string $HttpHash) Set Request balancing method for listeners of the classic public network CLB. An empty string or wrr indicates weighted round robin. ip_hash indicates consistent hashing based on the accessed source IP address. least_conn indicates least connections.
  * @method integer getHttpCode() Obtain Health check return code for HTTP and HTTPS listeners of a public network classic CLB. For more information, see the explanation of the field in the listener creating API.
  * @method void setHttpCode(integer $HttpCode) Set Health check return code for HTTP and HTTPS listeners of a public network classic CLB. For more information, see the explanation of the field in the listener creating API.
  * @method string getHttpCheckPath() Obtain Health check path for HTTP and HTTPS listeners of a public network classic CLB
@@ -115,7 +115,7 @@ class ClassicalListener extends AbstractModel
     public $UnhealthNum;
 
     /**
-     * @var string A request balancing method for HTTP and HTTPS listeners of a public network classic CLB. wrr means weighted round robin, while ip_hash means consistent hashing based on source IPs of access requests.
+     * @var string Request balancing method for listeners of the classic public network CLB. An empty string or wrr indicates weighted round robin. ip_hash indicates consistent hashing based on the accessed source IP address. least_conn indicates least connections.
      */
     public $HttpHash;
 
@@ -161,7 +161,7 @@ class ClassicalListener extends AbstractModel
      * @param integer $IntervalTime Check interval
      * @param integer $HealthNum Health threshold
      * @param integer $UnhealthNum Unhealthy threshold
-     * @param string $HttpHash A request balancing method for HTTP and HTTPS listeners of a public network classic CLB. wrr means weighted round robin, while ip_hash means consistent hashing based on source IPs of access requests.
+     * @param string $HttpHash Request balancing method for listeners of the classic public network CLB. An empty string or wrr indicates weighted round robin. ip_hash indicates consistent hashing based on the accessed source IP address. least_conn indicates least connections.
      * @param integer $HttpCode Health check return code for HTTP and HTTPS listeners of a public network classic CLB. For more information, see the explanation of the field in the listener creating API.
      * @param string $HttpCheckPath Health check path for HTTP and HTTPS listeners of a public network classic CLB
      * @param string $SSLMode Authentication method for an HTTPS listener of a public network classic CLB

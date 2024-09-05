@@ -22,12 +22,14 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getLoadBalancerId() Obtain CLB instance ID
  * @method void setLoadBalancerId(string $LoadBalancerId) Set CLB instance ID
- * @method string getListenerId() Obtain Listener ID
- * @method void setListenerId(string $ListenerId) Set Listener ID
  * @method string getTargetGroupId() Obtain Target group ID
  * @method void setTargetGroupId(string $TargetGroupId) Set Target group ID
+ * @method string getListenerId() Obtain Listener ID. This parameter is required when the AssociateTargetGroups and DisassociateTargetGroups APIs are called.
+ * @method void setListenerId(string $ListenerId) Set Listener ID. This parameter is required when the AssociateTargetGroups and DisassociateTargetGroups APIs are called.
  * @method string getLocationId() Obtain Forwarding rule ID
  * @method void setLocationId(string $LocationId) Set Forwarding rule ID
+ * @method integer getWeight() Obtain Weight of the target group. Value range: [0, 100]. It takes effect only for binding v2 target groups. If not specified, it defaults to 10.
+ * @method void setWeight(integer $Weight) Set Weight of the target group. Value range: [0, 100]. It takes effect only for binding v2 target groups. If not specified, it defaults to 10.
  */
 class TargetGroupAssociation extends AbstractModel
 {
@@ -37,14 +39,14 @@ class TargetGroupAssociation extends AbstractModel
     public $LoadBalancerId;
 
     /**
-     * @var string Listener ID
-     */
-    public $ListenerId;
-
-    /**
      * @var string Target group ID
      */
     public $TargetGroupId;
+
+    /**
+     * @var string Listener ID. This parameter is required when the AssociateTargetGroups and DisassociateTargetGroups APIs are called.
+     */
+    public $ListenerId;
 
     /**
      * @var string Forwarding rule ID
@@ -52,10 +54,16 @@ class TargetGroupAssociation extends AbstractModel
     public $LocationId;
 
     /**
+     * @var integer Weight of the target group. Value range: [0, 100]. It takes effect only for binding v2 target groups. If not specified, it defaults to 10.
+     */
+    public $Weight;
+
+    /**
      * @param string $LoadBalancerId CLB instance ID
-     * @param string $ListenerId Listener ID
      * @param string $TargetGroupId Target group ID
+     * @param string $ListenerId Listener ID. This parameter is required when the AssociateTargetGroups and DisassociateTargetGroups APIs are called.
      * @param string $LocationId Forwarding rule ID
+     * @param integer $Weight Weight of the target group. Value range: [0, 100]. It takes effect only for binding v2 target groups. If not specified, it defaults to 10.
      */
     function __construct()
     {
@@ -74,16 +82,20 @@ class TargetGroupAssociation extends AbstractModel
             $this->LoadBalancerId = $param["LoadBalancerId"];
         }
 
-        if (array_key_exists("ListenerId",$param) and $param["ListenerId"] !== null) {
-            $this->ListenerId = $param["ListenerId"];
-        }
-
         if (array_key_exists("TargetGroupId",$param) and $param["TargetGroupId"] !== null) {
             $this->TargetGroupId = $param["TargetGroupId"];
         }
 
+        if (array_key_exists("ListenerId",$param) and $param["ListenerId"] !== null) {
+            $this->ListenerId = $param["ListenerId"];
+        }
+
         if (array_key_exists("LocationId",$param) and $param["LocationId"] !== null) {
             $this->LocationId = $param["LocationId"];
+        }
+
+        if (array_key_exists("Weight",$param) and $param["Weight"] !== null) {
+            $this->Weight = $param["Weight"];
         }
     }
 }

@@ -58,8 +58,8 @@ Basic network does not support queries by VpcId.
 Basic network does not support queries by VpcId.
  * @method string getSecurityGroup() Obtain Security group ID, e.g., `sg-m1cc****`.
  * @method void setSecurityGroup(string $SecurityGroup) Set Security group ID, e.g., `sg-m1cc****`.
- * @method string getMasterZone() Obtain Primary AZ ID, e.g., `100001` (Guangzhou Zone 1).
- * @method void setMasterZone(string $MasterZone) Set Primary AZ ID, e.g., `100001` (Guangzhou Zone 1).
+ * @method string getMasterZone() Obtain Primary availability zone ID, such as 100001 (corresponding to Guangzhou Zone 1). You can obtain the list of availability zones through [DescribeZones](https://intl.cloud.tencent.com/document/product/213/15707?from_cn_redirect=1).
+ * @method void setMasterZone(string $MasterZone) Set Primary availability zone ID, such as 100001 (corresponding to Guangzhou Zone 1). You can obtain the list of availability zones through [DescribeZones](https://intl.cloud.tencent.com/document/product/213/15707?from_cn_redirect=1).
  * @method array getFilters() Obtain Each request can have up to 10 `Filters` and 100 `Filter.Values`. Detailed filter conditions:
 <li> internet-charge-type - Type: String - Required: No - Filter by CLB network billing mode, including `TRAFFIC_POSTPAID_BY_HOUR`</li>
  * @method void setFilters(array $Filters) Set Each request can have up to 10 `Filters` and 100 `Filter.Values`. Detailed filter conditions:
@@ -155,7 +155,7 @@ Basic network does not support queries by VpcId.
     public $SecurityGroup;
 
     /**
-     * @var string Primary AZ ID, e.g., `100001` (Guangzhou Zone 1).
+     * @var string Primary availability zone ID, such as 100001 (corresponding to Guangzhou Zone 1). You can obtain the list of availability zones through [DescribeZones](https://intl.cloud.tencent.com/document/product/213/15707?from_cn_redirect=1).
      */
     public $MasterZone;
 
@@ -185,7 +185,7 @@ OPEN: public network; INTERNAL: private network.
      * @param string $VpcId VPC where a CLB instance resides, such as vpc-bhqkbhdx.
 Basic network does not support queries by VpcId.
      * @param string $SecurityGroup Security group ID, e.g., `sg-m1cc****`.
-     * @param string $MasterZone Primary AZ ID, e.g., `100001` (Guangzhou Zone 1).
+     * @param string $MasterZone Primary availability zone ID, such as 100001 (corresponding to Guangzhou Zone 1). You can obtain the list of availability zones through [DescribeZones](https://intl.cloud.tencent.com/document/product/213/15707?from_cn_redirect=1).
      * @param array $Filters Each request can have up to 10 `Filters` and 100 `Filter.Values`. Detailed filter conditions:
 <li> internet-charge-type - Type: String - Required: No - Filter by CLB network billing mode, including `TRAFFIC_POSTPAID_BY_HOUR`</li>
      */

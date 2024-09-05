@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTargetGroupName(string $TargetGroupName) Set Target group name (up to 50 characters)
  * @method string getVpcId() Obtain `vpcid` attribute of a target group. If this parameter is left empty, the default VPC will be used.
  * @method void setVpcId(string $VpcId) Set `vpcid` attribute of a target group. If this parameter is left empty, the default VPC will be used.
- * @method integer getPort() Obtain Default port of a target group, which can be used for subsequently added servers.
- * @method void setPort(integer $Port) Set Default port of a target group, which can be used for subsequently added servers.
+ * @method integer getPort() Obtain Default port of the target group, which can be used for adding servers subsequently. Either the Port or the port in TargetGroupInstances.N should be input.
+ * @method void setPort(integer $Port) Set Default port of the target group, which can be used for adding servers subsequently. Either the Port or the port in TargetGroupInstances.N should be input.
  * @method array getTargetGroupInstances() Obtain Real server bound to a target group
  * @method void setTargetGroupInstances(array $TargetGroupInstances) Set Real server bound to a target group
  */
@@ -42,7 +42,7 @@ class CreateTargetGroupRequest extends AbstractModel
     public $VpcId;
 
     /**
-     * @var integer Default port of a target group, which can be used for subsequently added servers.
+     * @var integer Default port of the target group, which can be used for adding servers subsequently. Either the Port or the port in TargetGroupInstances.N should be input.
      */
     public $Port;
 
@@ -54,7 +54,7 @@ class CreateTargetGroupRequest extends AbstractModel
     /**
      * @param string $TargetGroupName Target group name (up to 50 characters)
      * @param string $VpcId `vpcid` attribute of a target group. If this parameter is left empty, the default VPC will be used.
-     * @param integer $Port Default port of a target group, which can be used for subsequently added servers.
+     * @param integer $Port Default port of the target group, which can be used for adding servers subsequently. Either the Port or the port in TargetGroupInstances.N should be input.
      * @param array $TargetGroupInstances Real server bound to a target group
      */
     function __construct()

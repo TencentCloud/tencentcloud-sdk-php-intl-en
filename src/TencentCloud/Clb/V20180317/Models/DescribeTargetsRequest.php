@@ -28,12 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProtocol(string $Protocol) Set Listener protocol type
  * @method integer getPort() Obtain Listener port
  * @method void setPort(integer $Port) Set Listener port
- * @method array getFilters() Obtain Query the list of backend services associated with a load balancer
-<li> `location-id` - String - Optional - Rule ID, such as "loc-12345678".</li>
-<li> `private-ip-address` - String - Optional - Backend service private IP, such as `172.16.1.1`</li>
- * @method void setFilters(array $Filters) Set Query the list of backend services associated with a load balancer
-<li> `location-id` - String - Optional - Rule ID, such as "loc-12345678".</li>
-<li> `private-ip-address` - String - Optional - Backend service private IP, such as `172.16.1.1`</li>
+ * @method array getFilters() Obtain Conditions for querying the list of real servers bound to the CLB. The filter criteria are as follows:<li> location-id - String - Required: No - (Filter criterion) Filter by rule ID, such as loc-12345678.</li><li> private-ip-address - String - Required: No - (Filter criterion) Filter by private IP address of the real server, such as 172.16.1.1.</li><li> tag - String - Required: No - (Filter criterion) Filter by tag, such as tag-test.</li>
+ * @method void setFilters(array $Filters) Set Conditions for querying the list of real servers bound to the CLB. The filter criteria are as follows:<li> location-id - String - Required: No - (Filter criterion) Filter by rule ID, such as loc-12345678.</li><li> private-ip-address - String - Required: No - (Filter criterion) Filter by private IP address of the real server, such as 172.16.1.1.</li><li> tag - String - Required: No - (Filter criterion) Filter by tag, such as tag-test.</li>
  */
 class DescribeTargetsRequest extends AbstractModel
 {
@@ -58,9 +54,7 @@ class DescribeTargetsRequest extends AbstractModel
     public $Port;
 
     /**
-     * @var array Query the list of backend services associated with a load balancer
-<li> `location-id` - String - Optional - Rule ID, such as "loc-12345678".</li>
-<li> `private-ip-address` - String - Optional - Backend service private IP, such as `172.16.1.1`</li>
+     * @var array Conditions for querying the list of real servers bound to the CLB. The filter criteria are as follows:<li> location-id - String - Required: No - (Filter criterion) Filter by rule ID, such as loc-12345678.</li><li> private-ip-address - String - Required: No - (Filter criterion) Filter by private IP address of the real server, such as 172.16.1.1.</li><li> tag - String - Required: No - (Filter criterion) Filter by tag, such as tag-test.</li>
      */
     public $Filters;
 
@@ -69,9 +63,7 @@ class DescribeTargetsRequest extends AbstractModel
      * @param array $ListenerIds List of listener IDs (20 IDs at most).
      * @param string $Protocol Listener protocol type
      * @param integer $Port Listener port
-     * @param array $Filters Query the list of backend services associated with a load balancer
-<li> `location-id` - String - Optional - Rule ID, such as "loc-12345678".</li>
-<li> `private-ip-address` - String - Optional - Backend service private IP, such as `172.16.1.1`</li>
+     * @param array $Filters Conditions for querying the list of real servers bound to the CLB. The filter criteria are as follows:<li> location-id - String - Required: No - (Filter criterion) Filter by rule ID, such as loc-12345678.</li><li> private-ip-address - String - Required: No - (Filter criterion) Filter by private IP address of the real server, such as 172.16.1.1.</li><li> tag - String - Required: No - (Filter criterion) Filter by tag, such as tag-test.</li>
      */
     function __construct()
     {

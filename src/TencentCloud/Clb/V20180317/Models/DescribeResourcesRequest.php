@@ -24,12 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) Set Number of returned AZ resources. Default value: 20. Maximum value: 100.
  * @method integer getOffset() Obtain Starting offset of the returned AZ resource list. Default value: 0.
  * @method void setOffset(integer $Offset) Set Starting offset of the returned AZ resource list. Default value: 0.
- * @method array getFilters() Obtain Filter to query the list of AZ resources as detailed below:
-<li> `zone` - String - Optional - Filter by AZ, such as "ap-guangzhou-1".</li>
-<li> `isp` -- String - Optional - Filter by the ISP. Values: `BGP`, `CMCC`, `CUCC` and `CTCC`.</li>
- * @method void setFilters(array $Filters) Set Filter to query the list of AZ resources as detailed below:
-<li> `zone` - String - Optional - Filter by AZ, such as "ap-guangzhou-1".</li>
-<li> `isp` -- String - Optional - Filter by the ISP. Values: `BGP`, `CMCC`, `CUCC` and `CTCC`.</li>
+ * @method array getFilters() Obtain Conditions for querying the list of availability zone resources. Detailed filter criteria are as follows:<li>master-zone -- String - Required: No - (Filter criterion) Filter by region type, such as ap-guangzhou-2.</li><li>ip-version -- String - Required: No - (Filter criterion) Filter by IP type. Valid values: IPv4, IPv6, IPv6_Nat.</li><li> isp -- String - Required: No - (Filter criterion) Filter by ISP type, such as BGP, CMCC, CUCC, and CTCC.</li>
+ * @method void setFilters(array $Filters) Set Conditions for querying the list of availability zone resources. Detailed filter criteria are as follows:<li>master-zone -- String - Required: No - (Filter criterion) Filter by region type, such as ap-guangzhou-2.</li><li>ip-version -- String - Required: No - (Filter criterion) Filter by IP type. Valid values: IPv4, IPv6, IPv6_Nat.</li><li> isp -- String - Required: No - (Filter criterion) Filter by ISP type, such as BGP, CMCC, CUCC, and CTCC.</li>
  */
 class DescribeResourcesRequest extends AbstractModel
 {
@@ -44,18 +40,14 @@ class DescribeResourcesRequest extends AbstractModel
     public $Offset;
 
     /**
-     * @var array Filter to query the list of AZ resources as detailed below:
-<li> `zone` - String - Optional - Filter by AZ, such as "ap-guangzhou-1".</li>
-<li> `isp` -- String - Optional - Filter by the ISP. Values: `BGP`, `CMCC`, `CUCC` and `CTCC`.</li>
+     * @var array Conditions for querying the list of availability zone resources. Detailed filter criteria are as follows:<li>master-zone -- String - Required: No - (Filter criterion) Filter by region type, such as ap-guangzhou-2.</li><li>ip-version -- String - Required: No - (Filter criterion) Filter by IP type. Valid values: IPv4, IPv6, IPv6_Nat.</li><li> isp -- String - Required: No - (Filter criterion) Filter by ISP type, such as BGP, CMCC, CUCC, and CTCC.</li>
      */
     public $Filters;
 
     /**
      * @param integer $Limit Number of returned AZ resources. Default value: 20. Maximum value: 100.
      * @param integer $Offset Starting offset of the returned AZ resource list. Default value: 0.
-     * @param array $Filters Filter to query the list of AZ resources as detailed below:
-<li> `zone` - String - Optional - Filter by AZ, such as "ap-guangzhou-1".</li>
-<li> `isp` -- String - Optional - Filter by the ISP. Values: `BGP`, `CMCC`, `CUCC` and `CTCC`.</li>
+     * @param array $Filters Conditions for querying the list of availability zone resources. Detailed filter criteria are as follows:<li>master-zone -- String - Required: No - (Filter criterion) Filter by region type, such as ap-guangzhou-2.</li><li>ip-version -- String - Required: No - (Filter criterion) Filter by IP type. Valid values: IPv4, IPv6, IPv6_Nat.</li><li> isp -- String - Required: No - (Filter criterion) Filter by ISP type, such as BGP, CMCC, CUCC, and CTCC.</li>
      */
     function __construct()
     {

@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getLoadBalancerSla() Obtain CLB instance information.
  * @method void setLoadBalancerSla(array $LoadBalancerSla) Set CLB instance information.
+ * @method boolean getForce() Obtain Whether to force upgrade. The default is no.
+ * @method void setForce(boolean $Force) Set Whether to force upgrade. The default is no.
  */
 class ModifyLoadBalancerSlaRequest extends AbstractModel
 {
@@ -31,7 +33,13 @@ class ModifyLoadBalancerSlaRequest extends AbstractModel
     public $LoadBalancerSla;
 
     /**
+     * @var boolean Whether to force upgrade. The default is no.
+     */
+    public $Force;
+
+    /**
      * @param array $LoadBalancerSla CLB instance information.
+     * @param boolean $Force Whether to force upgrade. The default is no.
      */
     function __construct()
     {
@@ -53,6 +61,10 @@ class ModifyLoadBalancerSlaRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->LoadBalancerSla, $obj);
             }
+        }
+
+        if (array_key_exists("Force",$param) and $param["Force"] !== null) {
+            $this->Force = $param["Force"];
         }
     }
 }

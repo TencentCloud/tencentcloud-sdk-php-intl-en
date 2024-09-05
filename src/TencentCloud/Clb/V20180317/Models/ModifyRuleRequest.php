@@ -34,14 +34,16 @@ use TencentCloud\Common\AbstractModel;
 They represent weighted round robin, least connections, and IP hash, respectively. Default value: WRR.
  * @method void setScheduler(string $Scheduler) Set Request forwarding method of the rule. Value range: WRR, LEAST_CONN, IP_HASH
 They represent weighted round robin, least connections, and IP hash, respectively. Default value: WRR.
- * @method integer getSessionExpireTime() Obtain Session persistence time
- * @method void setSessionExpireTime(integer $SessionExpireTime) Set Session persistence time
- * @method string getForwardType() Obtain Forwarding protocol between CLB instance and real server. Default value: HTTP. Valid values: HTTP, HTTPS, and TRPC.
- * @method void setForwardType(string $ForwardType) Set Forwarding protocol between CLB instance and real server. Default value: HTTP. Valid values: HTTP, HTTPS, and TRPC.
+ * @method integer getSessionExpireTime() Obtain Session persistence duration, in seconds. Value range: 0 or 30-86400.
+ * @method void setSessionExpireTime(integer $SessionExpireTime) Set Session persistence duration, in seconds. Value range: 0 or 30-86400.
+ * @method string getForwardType() Obtain Forwarding protocol between a CLB instance and the real server. Default value: HTTP. Valid values: HTTP, HTTPS, GRPC. This parameter is valid only for HTTPS listeners.
+ * @method void setForwardType(string $ForwardType) Set Forwarding protocol between a CLB instance and the real server. Default value: HTTP. Valid values: HTTP, HTTPS, GRPC. This parameter is valid only for HTTPS listeners.
  * @method string getTrpcCallee() Obtain TRPC callee server route, which is required when `ForwardType` is "TRPC". This is now only for internal usage.
  * @method void setTrpcCallee(string $TrpcCallee) Set TRPC callee server route, which is required when `ForwardType` is "TRPC". This is now only for internal usage.
  * @method string getTrpcFunc() Obtain TRPC calling service API, which is required when `ForwardType` is "TRPC". This is now only for internal usage.
  * @method void setTrpcFunc(string $TrpcFunc) Set TRPC calling service API, which is required when `ForwardType` is "TRPC". This is now only for internal usage.
+ * @method OAuth getOAuth() Obtain OAuth configuration information.
+ * @method void setOAuth(OAuth $OAuth) Set OAuth configuration information.
  */
 class ModifyRuleRequest extends AbstractModel
 {
@@ -77,12 +79,12 @@ They represent weighted round robin, least connections, and IP hash, respectivel
     public $Scheduler;
 
     /**
-     * @var integer Session persistence time
+     * @var integer Session persistence duration, in seconds. Value range: 0 or 30-86400.
      */
     public $SessionExpireTime;
 
     /**
-     * @var string Forwarding protocol between CLB instance and real server. Default value: HTTP. Valid values: HTTP, HTTPS, and TRPC.
+     * @var string Forwarding protocol between a CLB instance and the real server. Default value: HTTP. Valid values: HTTP, HTTPS, GRPC. This parameter is valid only for HTTPS listeners.
      */
     public $ForwardType;
 
@@ -97,6 +99,11 @@ They represent weighted round robin, least connections, and IP hash, respectivel
     public $TrpcFunc;
 
     /**
+     * @var OAuth OAuth configuration information.
+     */
+    public $OAuth;
+
+    /**
      * @param string $LoadBalancerId CLB instance ID
      * @param string $ListenerId CLB listener ID
      * @param string $LocationId ID of the forwarding rule to be modified.
@@ -104,10 +111,11 @@ They represent weighted round robin, least connections, and IP hash, respectivel
      * @param HealthCheck $HealthCheck Health check information
      * @param string $Scheduler Request forwarding method of the rule. Value range: WRR, LEAST_CONN, IP_HASH
 They represent weighted round robin, least connections, and IP hash, respectively. Default value: WRR.
-     * @param integer $SessionExpireTime Session persistence time
-     * @param string $ForwardType Forwarding protocol between CLB instance and real server. Default value: HTTP. Valid values: HTTP, HTTPS, and TRPC.
+     * @param integer $SessionExpireTime Session persistence duration, in seconds. Value range: 0 or 30-86400.
+     * @param string $ForwardType Forwarding protocol between a CLB instance and the real server. Default value: HTTP. Valid values: HTTP, HTTPS, GRPC. This parameter is valid only for HTTPS listeners.
      * @param string $TrpcCallee TRPC callee server route, which is required when `ForwardType` is "TRPC". This is now only for internal usage.
      * @param string $TrpcFunc TRPC calling service API, which is required when `ForwardType` is "TRPC". This is now only for internal usage.
+     * @param OAuth $OAuth OAuth configuration information.
      */
     function __construct()
     {
@@ -161,6 +169,11 @@ They represent weighted round robin, least connections, and IP hash, respectivel
 
         if (array_key_exists("TrpcFunc",$param) and $param["TrpcFunc"] !== null) {
             $this->TrpcFunc = $param["TrpcFunc"];
+        }
+
+        if (array_key_exists("OAuth",$param) and $param["OAuth"] !== null) {
+            $this->OAuth = new OAuth();
+            $this->OAuth->deserialize($param["OAuth"]);
         }
     }
 }

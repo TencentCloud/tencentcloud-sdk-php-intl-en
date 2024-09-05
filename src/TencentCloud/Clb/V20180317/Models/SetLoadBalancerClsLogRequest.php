@@ -22,18 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getLoadBalancerId() Obtain CLB instance ID
  * @method void setLoadBalancerId(string $LoadBalancerId) Set CLB instance ID
- * @method string getLogSetId() Obtain CLS logset ID
-<li>Enter the ID of logset you need to add or update. You can acquire the ID by invoking [DescribeLogsets](https://intl.cloud.tencent.com/document/product/614/56454?from_cn_redirect=1).</li>
-<li>To delete the log set, set this parameter to `null`.</li>
- * @method void setLogSetId(string $LogSetId) Set CLS logset ID
-<li>Enter the ID of logset you need to add or update. You can acquire the ID by invoking [DescribeLogsets](https://intl.cloud.tencent.com/document/product/614/56454?from_cn_redirect=1).</li>
-<li>To delete the log set, set this parameter to `null`.</li>
- * @method string getLogTopicId() Obtain CLS log topic ID
-<li>Enter the ID of log topic you need to add or update. You can acquire the ID by invoking [DescribeTopics](https://intl.cloud.tencent.com/document/product/614/56454?from_cn_redirect=1).</li>
-<li>To delete the log set, set this parameter to `null`.</li>
- * @method void setLogTopicId(string $LogTopicId) Set CLS log topic ID
-<li>Enter the ID of log topic you need to add or update. You can acquire the ID by invoking [DescribeTopics](https://intl.cloud.tencent.com/document/product/614/56454?from_cn_redirect=1).</li>
-<li>To delete the log set, set this parameter to `null`.</li>
+ * @method string getLogSetId() Obtain Logset ID of the Cloud Log Service (CLS).<li>When adding or updating a log topic, call the [DescribeLogsets](https://intl.cloud.tencent.com/document/product/614/58624?from_cn_redirect=1) API to obtain the logset ID.</li><li>When deleting a log topic, set this parameter to null.</li>
+ * @method void setLogSetId(string $LogSetId) Set Logset ID of the Cloud Log Service (CLS).<li>When adding or updating a log topic, call the [DescribeLogsets](https://intl.cloud.tencent.com/document/product/614/58624?from_cn_redirect=1) API to obtain the logset ID.</li><li>When deleting a log topic, set this parameter to null.</li>
+ * @method string getLogTopicId() Obtain Log topic ID of the CLS.<li>When adding or updating a log topic, call the [DescribeTopics](https://intl.cloud.tencent.com/document/product/614/56454?from_cn_redirect=1) API to obtain the log topic ID.</li><li>When deleting a log topic, set this parameter to null.</li>
+ * @method void setLogTopicId(string $LogTopicId) Set Log topic ID of the CLS.<li>When adding or updating a log topic, call the [DescribeTopics](https://intl.cloud.tencent.com/document/product/614/56454?from_cn_redirect=1) API to obtain the log topic ID.</li><li>When deleting a log topic, set this parameter to null.</li>
  * @method string getLogType() Obtain Log type:
 <li>`ACCESS`: access logs</li>
 <li>`HEALTH`: health check logs</li>
@@ -51,16 +43,12 @@ class SetLoadBalancerClsLogRequest extends AbstractModel
     public $LoadBalancerId;
 
     /**
-     * @var string CLS logset ID
-<li>Enter the ID of logset you need to add or update. You can acquire the ID by invoking [DescribeLogsets](https://intl.cloud.tencent.com/document/product/614/56454?from_cn_redirect=1).</li>
-<li>To delete the log set, set this parameter to `null`.</li>
+     * @var string Logset ID of the Cloud Log Service (CLS).<li>When adding or updating a log topic, call the [DescribeLogsets](https://intl.cloud.tencent.com/document/product/614/58624?from_cn_redirect=1) API to obtain the logset ID.</li><li>When deleting a log topic, set this parameter to null.</li>
      */
     public $LogSetId;
 
     /**
-     * @var string CLS log topic ID
-<li>Enter the ID of log topic you need to add or update. You can acquire the ID by invoking [DescribeTopics](https://intl.cloud.tencent.com/document/product/614/56454?from_cn_redirect=1).</li>
-<li>To delete the log set, set this parameter to `null`.</li>
+     * @var string Log topic ID of the CLS.<li>When adding or updating a log topic, call the [DescribeTopics](https://intl.cloud.tencent.com/document/product/614/56454?from_cn_redirect=1) API to obtain the log topic ID.</li><li>When deleting a log topic, set this parameter to null.</li>
      */
     public $LogTopicId;
 
@@ -74,12 +62,8 @@ Default: `ACCESS`
 
     /**
      * @param string $LoadBalancerId CLB instance ID
-     * @param string $LogSetId CLS logset ID
-<li>Enter the ID of logset you need to add or update. You can acquire the ID by invoking [DescribeLogsets](https://intl.cloud.tencent.com/document/product/614/56454?from_cn_redirect=1).</li>
-<li>To delete the log set, set this parameter to `null`.</li>
-     * @param string $LogTopicId CLS log topic ID
-<li>Enter the ID of log topic you need to add or update. You can acquire the ID by invoking [DescribeTopics](https://intl.cloud.tencent.com/document/product/614/56454?from_cn_redirect=1).</li>
-<li>To delete the log set, set this parameter to `null`.</li>
+     * @param string $LogSetId Logset ID of the Cloud Log Service (CLS).<li>When adding or updating a log topic, call the [DescribeLogsets](https://intl.cloud.tencent.com/document/product/614/58624?from_cn_redirect=1) API to obtain the logset ID.</li><li>When deleting a log topic, set this parameter to null.</li>
+     * @param string $LogTopicId Log topic ID of the CLS.<li>When adding or updating a log topic, call the [DescribeTopics](https://intl.cloud.tencent.com/document/product/614/56454?from_cn_redirect=1) API to obtain the log topic ID.</li><li>When deleting a log topic, set this parameter to null.</li>
      * @param string $LogType Log type:
 <li>`ACCESS`: access logs</li>
 <li>`HEALTH`: health check logs</li>

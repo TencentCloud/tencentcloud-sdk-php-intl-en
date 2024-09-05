@@ -40,8 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNewDefaultServerDomain(string $NewDefaultServerDomain) Set Specifies a new default domain name for the listener. This field is used when the original default domain name is disabled. If there are multiple domain names, specify one of them.
  * @method array getNewDomains() Obtain The new domain names to modify. `NewDomain` and `NewDomains` can not be both specified.
  * @method void setNewDomains(array $NewDomains) Set The new domain names to modify. `NewDomain` and `NewDomains` can not be both specified.
- * @method MultiCertInfo getMultiCertInfo() Obtain Certificate information of the domain name. It is only applicable to listeners with SNI enabled. You can specify multiple server-side certificates with different algorithm types. `Certificate` and `MultiCertInfo` cannot be specified at the same time. 
- * @method void setMultiCertInfo(MultiCertInfo $MultiCertInfo) Set Certificate information of the domain name. It is only applicable to listeners with SNI enabled. You can specify multiple server-side certificates with different algorithm types. `Certificate` and `MultiCertInfo` cannot be specified at the same time. 
+ * @method MultiCertInfo getMultiCertInfo() Obtain Certificate information related to the domain name. Note: This applies only to listeners with SNI enabled. Multiple server certificates with different algorithm types can be input simultaneously, but this parameter cannot be input together with the Certificate.
+ * @method void setMultiCertInfo(MultiCertInfo $MultiCertInfo) Set Certificate information related to the domain name. Note: This applies only to listeners with SNI enabled. Multiple server certificates with different algorithm types can be input simultaneously, but this parameter cannot be input together with the Certificate.
  */
 class ModifyDomainAttributesRequest extends AbstractModel
 {
@@ -96,7 +96,7 @@ class ModifyDomainAttributesRequest extends AbstractModel
     public $NewDomains;
 
     /**
-     * @var MultiCertInfo Certificate information of the domain name. It is only applicable to listeners with SNI enabled. You can specify multiple server-side certificates with different algorithm types. `Certificate` and `MultiCertInfo` cannot be specified at the same time. 
+     * @var MultiCertInfo Certificate information related to the domain name. Note: This applies only to listeners with SNI enabled. Multiple server certificates with different algorithm types can be input simultaneously, but this parameter cannot be input together with the Certificate.
      */
     public $MultiCertInfo;
 
@@ -111,7 +111,7 @@ class ModifyDomainAttributesRequest extends AbstractModel
      * @param boolean $Quic Whether to enable QUIC. Note: QUIC can be enabled only for HTTPS domain names.
      * @param string $NewDefaultServerDomain Specifies a new default domain name for the listener. This field is used when the original default domain name is disabled. If there are multiple domain names, specify one of them.
      * @param array $NewDomains The new domain names to modify. `NewDomain` and `NewDomains` can not be both specified.
-     * @param MultiCertInfo $MultiCertInfo Certificate information of the domain name. It is only applicable to listeners with SNI enabled. You can specify multiple server-side certificates with different algorithm types. `Certificate` and `MultiCertInfo` cannot be specified at the same time. 
+     * @param MultiCertInfo $MultiCertInfo Certificate information related to the domain name. Note: This applies only to listeners with SNI enabled. Multiple server certificates with different algorithm types can be input simultaneously, but this parameter cannot be input together with the Certificate.
      */
     function __construct()
     {

@@ -22,24 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getLoadBalancerId() Obtain ID of the CLB instance
  * @method void setLoadBalancerId(string $LoadBalancerId) Set ID of the CLB instance
- * @method string getSlaType() Obtain LCU-supported instance specification. Value:
-<li>`SLA`: If you have activated Super Large LCU-supported instances, `SLA` indicates Super Large 4.</li>
-<li>`clb.c2.medium`: Standard</li>
-<li>`clb.c3.small`: Advanced 1</li>
-<li>`clb.c3.medium`: Advanced 2</li>
-<li>`clb.c4.small`: Super Large 1</li>
-<li>`clb.c4.medium`: Super Large 2</li>
-<li>`clb.c4.large`: Super Large 3</li>
-<li>`clb.c4.xlarge`: Super Large 4</li> For Super Large 2 and above specifications, please [submit a ticket](https://console.cloud.tencent.com/workorder/category). For more specifications, see [Specifications Comparison](https://intl.cloud.tencent.com/document/product/214/84689?from_cn_redirect=1)
- * @method void setSlaType(string $SlaType) Set LCU-supported instance specification. Value:
-<li>`SLA`: If you have activated Super Large LCU-supported instances, `SLA` indicates Super Large 4.</li>
-<li>`clb.c2.medium`: Standard</li>
-<li>`clb.c3.small`: Advanced 1</li>
-<li>`clb.c3.medium`: Advanced 2</li>
-<li>`clb.c4.small`: Super Large 1</li>
-<li>`clb.c4.medium`: Super Large 2</li>
-<li>`clb.c4.large`: Super Large 3</li>
-<li>`clb.c4.xlarge`: Super Large 4</li> For Super Large 2 and above specifications, please [submit a ticket](https://console.cloud.tencent.com/workorder/category). For more specifications, see [Specifications Comparison](https://intl.cloud.tencent.com/document/product/214/84689?from_cn_redirect=1)
+ * @method string getSlaType() Obtain Specification of the LCU-supported instance. Valid values:<li> clb.c2.medium: Standard </li><li> clb.c3.small: Advanced 1 </li><li> clb.c3.medium: Advanced 2 </li><li> clb.c4.small: Super Large 1 </li><li> clb.c4.medium: Super Large 2 </li><li> clb.c4.large: Super Large 3 </li><li> clb.c4.xlarge: Super Large 4 </li> For specification details, see [Instance Specifications Comparison](https://intl.cloud.tencent.com/document/product/214/84689?from_cn_redirect=1).
+ * @method void setSlaType(string $SlaType) Set Specification of the LCU-supported instance. Valid values:<li> clb.c2.medium: Standard </li><li> clb.c3.small: Advanced 1 </li><li> clb.c3.medium: Advanced 2 </li><li> clb.c4.small: Super Large 1 </li><li> clb.c4.medium: Super Large 2 </li><li> clb.c4.large: Super Large 3 </li><li> clb.c4.xlarge: Super Large 4 </li> For specification details, see [Instance Specifications Comparison](https://intl.cloud.tencent.com/document/product/214/84689?from_cn_redirect=1).
  */
 class SlaUpdateParam extends AbstractModel
 {
@@ -49,29 +33,13 @@ class SlaUpdateParam extends AbstractModel
     public $LoadBalancerId;
 
     /**
-     * @var string LCU-supported instance specification. Value:
-<li>`SLA`: If you have activated Super Large LCU-supported instances, `SLA` indicates Super Large 4.</li>
-<li>`clb.c2.medium`: Standard</li>
-<li>`clb.c3.small`: Advanced 1</li>
-<li>`clb.c3.medium`: Advanced 2</li>
-<li>`clb.c4.small`: Super Large 1</li>
-<li>`clb.c4.medium`: Super Large 2</li>
-<li>`clb.c4.large`: Super Large 3</li>
-<li>`clb.c4.xlarge`: Super Large 4</li> For Super Large 2 and above specifications, please [submit a ticket](https://console.cloud.tencent.com/workorder/category). For more specifications, see [Specifications Comparison](https://intl.cloud.tencent.com/document/product/214/84689?from_cn_redirect=1)
+     * @var string Specification of the LCU-supported instance. Valid values:<li> clb.c2.medium: Standard </li><li> clb.c3.small: Advanced 1 </li><li> clb.c3.medium: Advanced 2 </li><li> clb.c4.small: Super Large 1 </li><li> clb.c4.medium: Super Large 2 </li><li> clb.c4.large: Super Large 3 </li><li> clb.c4.xlarge: Super Large 4 </li> For specification details, see [Instance Specifications Comparison](https://intl.cloud.tencent.com/document/product/214/84689?from_cn_redirect=1).
      */
     public $SlaType;
 
     /**
      * @param string $LoadBalancerId ID of the CLB instance
-     * @param string $SlaType LCU-supported instance specification. Value:
-<li>`SLA`: If you have activated Super Large LCU-supported instances, `SLA` indicates Super Large 4.</li>
-<li>`clb.c2.medium`: Standard</li>
-<li>`clb.c3.small`: Advanced 1</li>
-<li>`clb.c3.medium`: Advanced 2</li>
-<li>`clb.c4.small`: Super Large 1</li>
-<li>`clb.c4.medium`: Super Large 2</li>
-<li>`clb.c4.large`: Super Large 3</li>
-<li>`clb.c4.xlarge`: Super Large 4</li> For Super Large 2 and above specifications, please [submit a ticket](https://console.cloud.tencent.com/workorder/category). For more specifications, see [Specifications Comparison](https://intl.cloud.tencent.com/document/product/214/84689?from_cn_redirect=1)
+     * @param string $SlaType Specification of the LCU-supported instance. Valid values:<li> clb.c2.medium: Standard </li><li> clb.c3.small: Advanced 1 </li><li> clb.c3.medium: Advanced 2 </li><li> clb.c4.small: Super Large 1 </li><li> clb.c4.medium: Super Large 2 </li><li> clb.c4.large: Super Large 3 </li><li> clb.c4.xlarge: Super Large 4 </li> For specification details, see [Instance Specifications Comparison](https://intl.cloud.tencent.com/document/product/214/84689?from_cn_redirect=1).
      */
     function __construct()
     {

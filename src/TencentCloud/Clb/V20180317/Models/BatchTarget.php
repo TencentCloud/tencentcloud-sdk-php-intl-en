@@ -32,8 +32,10 @@ Note: either `InstanceId` or `EniIp` must be passed in, which is required for bi
 Note: either `InstanceId` or `EniIp` must be passed in, which is required for binding a dual-stack IPv6 CVM instance.
  * @method integer getWeight() Obtain Weight of the CVM instance. Value range: [0, 100]. If it is not specified for binding the instance, 10 will be used by default.
  * @method void setWeight(integer $Weight) Set Weight of the CVM instance. Value range: [0, 100]. If it is not specified for binding the instance, 10 will be used by default.
- * @method string getLocationId() Obtain Layer-7 rule ID.
- * @method void setLocationId(string $LocationId) Set Layer-7 rule ID.
+ * @method string getLocationId() Obtain Layer-7 rule ID. This parameter is required for Layer-7 CLB.
+ * @method void setLocationId(string $LocationId) Set Layer-7 rule ID. This parameter is required for Layer-7 CLB.
+ * @method string getTag() Obtain Tag.
+ * @method void setTag(string $Tag) Set Tag.
  */
 class BatchTarget extends AbstractModel
 {
@@ -64,9 +66,14 @@ Note: either `InstanceId` or `EniIp` must be passed in, which is required for bi
     public $Weight;
 
     /**
-     * @var string Layer-7 rule ID.
+     * @var string Layer-7 rule ID. This parameter is required for Layer-7 CLB.
      */
     public $LocationId;
+
+    /**
+     * @var string Tag.
+     */
+    public $Tag;
 
     /**
      * @param string $ListenerId Listener ID.
@@ -75,7 +82,8 @@ Note: either `InstanceId` or `EniIp` must be passed in, which is required for bi
      * @param string $EniIp It is required for binding an IP. It supports an ENI IP or any other private IP. To bind an ENI IP, the ENI should be bound to a CVM instance before being bound to a CLB instance.
 Note: either `InstanceId` or `EniIp` must be passed in, which is required for binding a dual-stack IPv6 CVM instance.
      * @param integer $Weight Weight of the CVM instance. Value range: [0, 100]. If it is not specified for binding the instance, 10 will be used by default.
-     * @param string $LocationId Layer-7 rule ID.
+     * @param string $LocationId Layer-7 rule ID. This parameter is required for Layer-7 CLB.
+     * @param string $Tag Tag.
      */
     function __construct()
     {
@@ -112,6 +120,10 @@ Note: either `InstanceId` or `EniIp` must be passed in, which is required for bi
 
         if (array_key_exists("LocationId",$param) and $param["LocationId"] !== null) {
             $this->LocationId = $param["LocationId"];
+        }
+
+        if (array_key_exists("Tag",$param) and $param["Tag"] !== null) {
+            $this->Tag = $param["Tag"];
         }
     }
 }

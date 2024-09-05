@@ -56,10 +56,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setZone(string $Zone) Set Availability zone where the CLB instance resides.
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getAddressIsp() Obtain ISP to which the CLB IP address belongs.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setAddressIsp(string $AddressIsp) Set ISP to which the CLB IP address belongs.
-Note: this field may return null, indicating that no valid values can be obtained.
+ * @method string getAddressIsp() Obtain ISP for the IP address of the CLB instance. Valid values: BGP (multi-line), CMCC (China Mobile), CUCC (China Unicom), CTCC (China Telecom), INTERNAL (private network).Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setAddressIsp(string $AddressIsp) Set ISP for the IP address of the CLB instance. Valid values: BGP (multi-line), CMCC (China Mobile), CUCC (China Unicom), CTCC (China Telecom), INTERNAL (private network).Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getVpcId() Obtain ID of the VPC instance to which the CLB instance belongs.
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setVpcId(string $VpcId) Set ID of the VPC instance to which the CLB instance belongs.
@@ -72,10 +70,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setCreateTime(string $CreateTime) Set CLB instance creation time.
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getChargeType() Obtain CLB instance billing mode.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setChargeType(string $ChargeType) Set CLB instance billing mode.
-Note: this field may return null, indicating that no valid values can be obtained.
+ * @method string getChargeType() Obtain Billing type of a CLB instance. Valid values: PREPAID (prepaid), POSTPAID_BY_HOUR (pay-as-you-go).Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setChargeType(string $ChargeType) Set Billing type of a CLB instance. Valid values: PREPAID (prepaid), POSTPAID_BY_HOUR (pay-as-you-go).Note: This field may return null, indicating that no valid values can be obtained.
  * @method InternetAccessible getNetworkAttributes() Obtain CLB instance network attribute.
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setNetworkAttributes(InternetAccessible $NetworkAttributes) Set CLB instance network attribute.
@@ -144,10 +140,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method void setSecurityGroup(array $SecurityGroup) Set List of the security groups bound to the CLB instance.
 Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method integer getLoadBalancerPassToTarget() Obtain Whether the CLB instance is billed by IP.
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setLoadBalancerPassToTarget(integer $LoadBalancerPassToTarget) Set Whether the CLB instance is billed by IP.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method integer getLoadBalancerPassToTarget() Obtain Whether to enable moving up CLB security groups. Valid values: 1 (enabled), 0 (not enabled).Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setLoadBalancerPassToTarget(integer $LoadBalancerPassToTarget) Set Whether to enable moving up CLB security groups. Valid values: 1 (enabled), 0 (not enabled).Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getTargetHealth() Obtain Health status of the target real server.
 Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method void setTargetHealth(string $TargetHealth) Set Health status of the target real server.
@@ -176,6 +170,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return·null, indicating that no valid values can be obtained.
  * @method void setEgress(string $Egress) Set Network egress
 Note: This field may return·null, indicating that no valid values can be obtained.
+ * @method array getAttributeFlags() Obtain 
+ * @method void setAttributeFlags(array $AttributeFlags) Set 
+ * @method string getSlaType() Obtain 
+ * @method void setSlaType(string $SlaType) Set 
+ * @method integer getExclusive() Obtain 
+ * @method void setExclusive(integer $Exclusive) Set 
  */
 class LoadBalancerDetail extends AbstractModel
 {
@@ -234,8 +234,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $Zone;
 
     /**
-     * @var string ISP to which the CLB IP address belongs.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string ISP for the IP address of the CLB instance. Valid values: BGP (multi-line), CMCC (China Mobile), CUCC (China Unicom), CTCC (China Telecom), INTERNAL (private network).Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $AddressIsp;
 
@@ -258,8 +257,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $CreateTime;
 
     /**
-     * @var string CLB instance billing mode.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string Billing type of a CLB instance. Valid values: PREPAID (prepaid), POSTPAID_BY_HOUR (pay-as-you-go).Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ChargeType;
 
@@ -366,8 +364,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     public $SecurityGroup;
 
     /**
-     * @var integer Whether the CLB instance is billed by IP.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @var integer Whether to enable moving up CLB security groups. Valid values: 1 (enabled), 0 (not enabled).Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $LoadBalancerPassToTarget;
 
@@ -414,6 +411,21 @@ Note: This field may return·null, indicating that no valid values can be obtain
     public $Egress;
 
     /**
+     * @var array 
+     */
+    public $AttributeFlags;
+
+    /**
+     * @var string 
+     */
+    public $SlaType;
+
+    /**
+     * @var integer 
+     */
+    public $Exclusive;
+
+    /**
      * @param string $LoadBalancerId CLB instance ID.
      * @param string $LoadBalancerName CLB instance name.
      * @param string $LoadBalancerType CLB instance network type:
@@ -432,16 +444,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $Zone Availability zone where the CLB instance resides.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $AddressIsp ISP to which the CLB IP address belongs.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @param string $AddressIsp ISP for the IP address of the CLB instance. Valid values: BGP (multi-line), CMCC (China Mobile), CUCC (China Unicom), CTCC (China Telecom), INTERNAL (private network).Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $VpcId ID of the VPC instance to which the CLB instance belongs.
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param integer $ProjectId ID of the project to which the CLB instance belongs. 0: default project.
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $CreateTime CLB instance creation time.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $ChargeType CLB instance billing mode.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @param string $ChargeType Billing type of a CLB instance. Valid values: PREPAID (prepaid), POSTPAID_BY_HOUR (pay-as-you-go).Note: This field may return null, indicating that no valid values can be obtained.
      * @param InternetAccessible $NetworkAttributes CLB instance network attribute.
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param LBChargePrepaid $PrepaidAttributes Pay-as-you-go attribute of the CLB instance.
@@ -476,8 +486,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param array $SecurityGroup List of the security groups bound to the CLB instance.
 Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param integer $LoadBalancerPassToTarget Whether the CLB instance is billed by IP.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param integer $LoadBalancerPassToTarget Whether to enable moving up CLB security groups. Valid values: 1 (enabled), 0 (not enabled).Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $TargetHealth Health status of the target real server.
 Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param string $Domains List o domain names associated with the forwarding rule
@@ -492,6 +501,9 @@ Note: This field may return·null, indicating that no valid values can be obtain
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $Egress Network egress
 Note: This field may return·null, indicating that no valid values can be obtained.
+     * @param array $AttributeFlags 
+     * @param string $SlaType 
+     * @param integer $Exclusive 
      */
     function __construct()
     {
@@ -668,6 +680,18 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
         if (array_key_exists("Egress",$param) and $param["Egress"] !== null) {
             $this->Egress = $param["Egress"];
+        }
+
+        if (array_key_exists("AttributeFlags",$param) and $param["AttributeFlags"] !== null) {
+            $this->AttributeFlags = $param["AttributeFlags"];
+        }
+
+        if (array_key_exists("SlaType",$param) and $param["SlaType"] !== null) {
+            $this->SlaType = $param["SlaType"];
+        }
+
+        if (array_key_exists("Exclusive",$param) and $param["Exclusive"] !== null) {
+            $this->Exclusive = $param["Exclusive"];
         }
     }
 }

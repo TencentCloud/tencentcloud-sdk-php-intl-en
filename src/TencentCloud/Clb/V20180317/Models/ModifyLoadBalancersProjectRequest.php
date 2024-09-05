@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getLoadBalancerIds() Obtain IDs of CLB instances ID(s).
  * @method void setLoadBalancerIds(array $LoadBalancerIds) Set IDs of CLB instances ID(s).
- * @method integer getProjectId() Obtain Project ID
- * @method void setProjectId(integer $ProjectId) Set Project ID
+ * @method integer getProjectId() Obtain Project ID. You can obtain it through the [DescribeProject](https://intl.cloud.tencent.com/document/api/651/78725?from_cn_redirect=1) API.
+ * @method void setProjectId(integer $ProjectId) Set Project ID. You can obtain it through the [DescribeProject](https://intl.cloud.tencent.com/document/api/651/78725?from_cn_redirect=1) API.
  */
 class ModifyLoadBalancersProjectRequest extends AbstractModel
 {
@@ -33,13 +33,13 @@ class ModifyLoadBalancersProjectRequest extends AbstractModel
     public $LoadBalancerIds;
 
     /**
-     * @var integer Project ID
+     * @var integer Project ID. You can obtain it through the [DescribeProject](https://intl.cloud.tencent.com/document/api/651/78725?from_cn_redirect=1) API.
      */
     public $ProjectId;
 
     /**
      * @param array $LoadBalancerIds IDs of CLB instances ID(s).
-     * @param integer $ProjectId Project ID
+     * @param integer $ProjectId Project ID. You can obtain it through the [DescribeProject](https://intl.cloud.tencent.com/document/api/651/78725?from_cn_redirect=1) API.
      */
     function __construct()
     {

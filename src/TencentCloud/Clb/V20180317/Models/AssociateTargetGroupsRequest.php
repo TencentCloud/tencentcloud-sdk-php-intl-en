@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * AssociateTargetGroups request structure.
  *
- * @method array getAssociations() Obtain Association array
- * @method void setAssociations(array $Associations) Set Association array
+ * @method array getAssociations() Obtain Binding relationship array. A single request supports up to 20 items.
+ * @method void setAssociations(array $Associations) Set Binding relationship array. A single request supports up to 20 items.
  */
 class AssociateTargetGroupsRequest extends AbstractModel
 {
     /**
-     * @var array Association array
+     * @var array Binding relationship array. A single request supports up to 20 items.
      */
     public $Associations;
 
     /**
-     * @param array $Associations Association array
+     * @param array $Associations Binding relationship array. A single request supports up to 20 items.
      */
     function __construct()
     {

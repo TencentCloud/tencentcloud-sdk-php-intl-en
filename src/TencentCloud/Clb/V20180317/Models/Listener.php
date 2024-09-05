@@ -34,10 +34,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setHealthCheck(HealthCheck $HealthCheck) Set Health check information of the listener
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getScheduler() Obtain Request scheduling method
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setScheduler(string $Scheduler) Set Request scheduling method
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getScheduler() Obtain Request scheduling method. WRR, LEAST_CONN, and IP_HASH respectively indicate weighted round robin, least connections, and IP hash.Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setScheduler(string $Scheduler) Set Request scheduling method. WRR, LEAST_CONN, and IP_HASH respectively indicate weighted round robin, least connections, and IP hash.Note: This field may return null, indicating that no valid values can be obtained.
  * @method integer getSessionExpireTime() Obtain Session persistence time
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setSessionExpireTime(integer $SessionExpireTime) Set Session persistence time
@@ -106,6 +104,8 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
  * @method void setIdleConnectTimeout(integer $IdleConnectTimeout) Set Connection idle timeout period (in seconds). It’s only available to TCP listeners. Value range: 300-900 for shared and dedicated instances; 300-2000 for LCU-supported CLB instances. It defaults to 900.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method integer getRescheduleInterval() Obtain Scheduling time. After forced rescheduling is triggered, long connections will be disconnected and reassigned within the set scheduling time.Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setRescheduleInterval(integer $RescheduleInterval) Set Scheduling time. After forced rescheduling is triggered, long connections will be disconnected and reassigned within the set scheduling time.Note: This field may return null, indicating that no valid values can be obtained.
  */
 class Listener extends AbstractModel
 {
@@ -137,8 +137,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $HealthCheck;
 
     /**
-     * @var string Request scheduling method
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Request scheduling method. WRR, LEAST_CONN, and IP_HASH respectively indicate weighted round robin, least connections, and IP hash.Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Scheduler;
 
@@ -245,6 +244,11 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     public $IdleConnectTimeout;
 
     /**
+     * @var integer Scheduling time. After forced rescheduling is triggered, long connections will be disconnected and reassigned within the set scheduling time.Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $RescheduleInterval;
+
+    /**
      * @param string $ListenerId CLB listener ID
      * @param string $Protocol Listener protocol
      * @param integer $Port Listener port
@@ -252,8 +256,7 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param HealthCheck $HealthCheck Health check information of the listener
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Scheduler Request scheduling method
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $Scheduler Request scheduling method. WRR, LEAST_CONN, and IP_HASH respectively indicate weighted round robin, least connections, and IP hash.Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $SessionExpireTime Session persistence time
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $SniSwitch Whether to enable SNI. `1`: Enable; `0`: Do not enable. This parameter is only meaningful for HTTPS listeners.
@@ -288,6 +291,7 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
      * @param integer $IdleConnectTimeout Connection idle timeout period (in seconds). It’s only available to TCP listeners. Value range: 300-900 for shared and dedicated instances; 300-2000 for LCU-supported CLB instances. It defaults to 900.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param integer $RescheduleInterval Scheduling time. After forced rescheduling is triggered, long connections will be disconnected and reassigned within the set scheduling time.Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -405,6 +409,10 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 
         if (array_key_exists("IdleConnectTimeout",$param) and $param["IdleConnectTimeout"] !== null) {
             $this->IdleConnectTimeout = $param["IdleConnectTimeout"];
+        }
+
+        if (array_key_exists("RescheduleInterval",$param) and $param["RescheduleInterval"] !== null) {
+            $this->RescheduleInterval = $param["RescheduleInterval"];
         }
     }
 }

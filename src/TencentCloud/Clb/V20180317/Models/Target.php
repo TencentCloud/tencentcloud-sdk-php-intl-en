@@ -44,6 +44,8 @@ Note: This field may return `null`, indicating that no valid values can be obtai
  * @method void setEniIp(string $EniIp) Set It is required when binding an IP. ENI IPs and other private IPs are supported. To bind an ENI IP, the ENI should be bound to a CVM instance before being bound to a CLB instance.
 Note: Either `InstanceId` or `EniIp` can be passed in. `EniIp` is required in a cross-region binding or when the dual-stack IPV6 CVM is bound.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method string getTag() Obtain Tag.Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setTag(string $Tag) Set Tag.Note: This field may return null, indicating that no valid values can be obtained.
  */
 class Target extends AbstractModel
 {
@@ -80,6 +82,11 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     public $EniIp;
 
     /**
+     * @var string Tag.Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $Tag;
+
+    /**
      * @param integer $Port Listening port of a real server
 Note: this parameter is required when binding a CVM or ENI.
 Note: this field may return `null`, indicating that no valid values can be obtained.
@@ -92,6 +99,7 @@ Note: This field may return `null`, indicating that no valid values can be obtai
      * @param string $EniIp It is required when binding an IP. ENI IPs and other private IPs are supported. To bind an ENI IP, the ENI should be bound to a CVM instance before being bound to a CLB instance.
 Note: Either `InstanceId` or `EniIp` can be passed in. `EniIp` is required in a cross-region binding or when the dual-stack IPV6 CVM is bound.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param string $Tag Tag.Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -124,6 +132,10 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 
         if (array_key_exists("EniIp",$param) and $param["EniIp"] !== null) {
             $this->EniIp = $param["EniIp"];
+        }
+
+        if (array_key_exists("Tag",$param) and $param["Tag"] !== null) {
+            $this->Tag = $param["Tag"];
         }
     }
 }

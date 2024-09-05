@@ -30,10 +30,8 @@ OPEN: public network; INTERNAL: private network.
 OPEN: public network; INTERNAL: private network.
  * @method integer getForward() Obtain CLB type identifier. Value range: 1 (CLB); 0 (classic CLB).
  * @method void setForward(integer $Forward) Set CLB type identifier. Value range: 1 (CLB); 0 (classic CLB).
- * @method string getDomain() Obtain Domain name of the CLB instance. It is only available for public classic CLBs. This parameter will be discontinued soon. Please use `LoadBalancerDomain` instead.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setDomain(string $Domain) Set Domain name of the CLB instance. It is only available for public classic CLBs. This parameter will be discontinued soon. Please use `LoadBalancerDomain` instead.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getDomain() Obtain Domain name of the CLB instance. This field is provided only for classic public network CLB instances and domain name-based CLB instances. It is being gradually phased out, so use LoadBalancerDomain instead.Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setDomain(string $Domain) Set Domain name of the CLB instance. This field is provided only for classic public network CLB instances and domain name-based CLB instances. It is being gradually phased out, so use LoadBalancerDomain instead.Note: This field may return null, indicating that no valid values can be obtained.
  * @method array getLoadBalancerVips() Obtain List of VIPs of a CLB instance.
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setLoadBalancerVips(array $LoadBalancerVips) Set List of VIPs of a CLB instance.
@@ -102,10 +100,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setNumericalVpcId(integer $NumericalVpcId) Set VPC ID in a numeric form
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getVipIsp() Obtain ISP to which a CLB IP address belongs
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setVipIsp(string $VipIsp) Set ISP to which a CLB IP address belongs
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getVipIsp() Obtain ISP for the IP address of the CLB instance. Valid values: BGP, CMCC, CTCC, CUCC.Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setVipIsp(string $VipIsp) Set ISP for the IP address of the CLB instance. Valid values: BGP, CMCC, CTCC, CUCC.Note: This field may return null, indicating that no valid values can be obtained.
  * @method ZoneInfo getMasterZone() Obtain Primary AZ
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setMasterZone(ZoneInfo $MasterZone) Set Primary AZ
@@ -178,10 +174,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setSnatIps(array $SnatIps) Set `SnatIp` list after SnatPro load balancing is enabled.
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getSlaType() Obtain Specification of the LCU-supported instance.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setSlaType(string $SlaType) Set Specification of the LCU-supported instance.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getSlaType() Obtain Specification of the LCU-supported instance. <ul><li> clb.c2.medium: Standard </li><li> clb.c3.small: Advanced 1 </li><li> clb.c3.medium: Advanced 2 </li><li> clb.c4.small: Super Large 1 </li><li> clb.c4.medium: Super Large 2 </li><li> clb.c4.large: Super Large 3 </li><li> clb.c4.xlarge: Super Large 4 </li><li>null: Shared instance</li></ul>Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setSlaType(string $SlaType) Set Specification of the LCU-supported instance. <ul><li> clb.c2.medium: Standard </li><li> clb.c3.small: Advanced 1 </li><li> clb.c3.medium: Advanced 2 </li><li> clb.c4.small: Super Large 1 </li><li> clb.c4.medium: Super Large 2 </li><li> clb.c4.large: Super Large 3 </li><li> clb.c4.xlarge: Super Large 4 </li><li>null: Shared instance</li></ul>Note: This field may return null, indicating that no valid values can be obtained.
  * @method boolean getIsBlock() Obtain Whether VIP is blocked
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setIsBlock(boolean $IsBlock) Set Whether VIP is blocked
@@ -232,6 +226,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return·null, indicating that no valid values can be obtained.
  * @method void setEgress(string $Egress) Set Network egress
 Note: This field may return·null, indicating that no valid values can be obtained.
+ * @method integer getExclusive() Obtain 
+ * @method void setExclusive(integer $Exclusive) Set 
  */
 class LoadBalancer extends AbstractModel
 {
@@ -257,8 +253,7 @@ OPEN: public network; INTERNAL: private network.
     public $Forward;
 
     /**
-     * @var string Domain name of the CLB instance. It is only available for public classic CLBs. This parameter will be discontinued soon. Please use `LoadBalancerDomain` instead.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Domain name of the CLB instance. This field is provided only for classic public network CLB instances and domain name-based CLB instances. It is being gradually phased out, so use LoadBalancerDomain instead.Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Domain;
 
@@ -319,6 +314,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     /**
      * @var string Log information. Only the public network CLB that have HTTP or HTTPS listeners can generate logs.
 Note: This field may return null, indicating that no valid values can be obtained.
+     * @deprecated
      */
     public $Log;
 
@@ -365,8 +361,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $NumericalVpcId;
 
     /**
-     * @var string ISP to which a CLB IP address belongs
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string ISP for the IP address of the CLB instance. Valid values: BGP, CMCC, CTCC, CUCC.Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $VipIsp;
 
@@ -479,8 +474,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $SnatIps;
 
     /**
-     * @var string Specification of the LCU-supported instance.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Specification of the LCU-supported instance. <ul><li> clb.c2.medium: Standard </li><li> clb.c3.small: Advanced 1 </li><li> clb.c3.medium: Advanced 2 </li><li> clb.c4.small: Super Large 1 </li><li> clb.c4.medium: Super Large 2 </li><li> clb.c4.large: Super Large 3 </li><li> clb.c4.xlarge: Super Large 4 </li><li>null: Shared instance</li></ul>Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $SlaType;
 
@@ -562,13 +556,17 @@ Note: This field may return·null, indicating that no valid values can be obtain
     public $Egress;
 
     /**
+     * @var integer 
+     */
+    public $Exclusive;
+
+    /**
      * @param string $LoadBalancerId CLB instance ID.
      * @param string $LoadBalancerName CLB instance name.
      * @param string $LoadBalancerType CLB instance network type:
 OPEN: public network; INTERNAL: private network.
      * @param integer $Forward CLB type identifier. Value range: 1 (CLB); 0 (classic CLB).
-     * @param string $Domain Domain name of the CLB instance. It is only available for public classic CLBs. This parameter will be discontinued soon. Please use `LoadBalancerDomain` instead.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $Domain Domain name of the CLB instance. This field is provided only for classic public network CLB instances and domain name-based CLB instances. It is being gradually phased out, so use LoadBalancerDomain instead.Note: This field may return null, indicating that no valid values can be obtained.
      * @param array $LoadBalancerVips List of VIPs of a CLB instance.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $Status CLB instance status, including:
@@ -603,8 +601,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param integer $NumericalVpcId VPC ID in a numeric form
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $VipIsp ISP to which a CLB IP address belongs
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $VipIsp ISP for the IP address of the CLB instance. Valid values: BGP, CMCC, CTCC, CUCC.Note: This field may return null, indicating that no valid values can be obtained.
      * @param ZoneInfo $MasterZone Primary AZ
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param array $BackupZoneSet Secondary AZ
@@ -641,8 +638,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param array $SnatIps `SnatIp` list after SnatPro load balancing is enabled.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $SlaType Specification of the LCU-supported instance.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $SlaType Specification of the LCU-supported instance. <ul><li> clb.c2.medium: Standard </li><li> clb.c3.small: Advanced 1 </li><li> clb.c3.medium: Advanced 2 </li><li> clb.c4.small: Super Large 1 </li><li> clb.c4.medium: Super Large 2 </li><li> clb.c4.large: Super Large 3 </li><li> clb.c4.xlarge: Super Large 4 </li><li>null: Shared instance</li></ul>Note: This field may return null, indicating that no valid values can be obtained.
      * @param boolean $IsBlock Whether VIP is blocked
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $IsBlockTime Time blocked or unblocked
@@ -668,6 +664,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $Egress Network egress
 Note: This field may return·null, indicating that no valid values can be obtained.
+     * @param integer $Exclusive 
      */
     function __construct()
     {
@@ -921,6 +918,10 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
         if (array_key_exists("Egress",$param) and $param["Egress"] !== null) {
             $this->Egress = $param["Egress"];
+        }
+
+        if (array_key_exists("Exclusive",$param) and $param["Exclusive"] !== null) {
+            $this->Exclusive = $param["Exclusive"];
         }
     }
 }

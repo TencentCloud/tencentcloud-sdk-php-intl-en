@@ -34,10 +34,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
  * @method void setCreatedTime(string $CreatedTime) Set Target group creation time
  * @method string getUpdatedTime() Obtain Target group modification time
  * @method void setUpdatedTime(string $UpdatedTime) Set Target group modification time
- * @method array getAssociatedRule() Obtain Array of associated rules
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setAssociatedRule(array $AssociatedRule) Set Array of associated rules
-Note: this field may return null, indicating that no valid values can be obtained.
+ * @method array getAssociatedRule() Obtain Associated rule array. This parameter cannot be obtained when the DescribeTargetGroupList API is called.Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setAssociatedRule(array $AssociatedRule) Set Associated rule array. This parameter cannot be obtained when the DescribeTargetGroupList API is called.Note: This field may return null, indicating that no valid values can be obtained.
  */
 class TargetGroupInfo extends AbstractModel
 {
@@ -73,8 +71,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $UpdatedTime;
 
     /**
-     * @var array Array of associated rules
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var array Associated rule array. This parameter cannot be obtained when the DescribeTargetGroupList API is called.Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $AssociatedRule;
 
@@ -86,8 +83,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $CreatedTime Target group creation time
      * @param string $UpdatedTime Target group modification time
-     * @param array $AssociatedRule Array of associated rules
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @param array $AssociatedRule Associated rule array. This parameter cannot be obtained when the DescribeTargetGroupList API is called.Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

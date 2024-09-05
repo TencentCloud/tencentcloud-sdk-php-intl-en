@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Details of a real server bound to a listener
  *
- * @method string getType() Obtain Real server type. Valid values: CVM, ENI.
- * @method void setType(string $Type) Set Real server type. Valid values: CVM, ENI.
+ * @method string getType() Obtain Real server type. Valid values: CVM, ENI, CCN.
+ * @method void setType(string $Type) Set Real server type. Valid values: CVM, ENI, CCN.
  * @method string getInstanceId() Obtain Unique ID of a real server, which can be obtained from the unInstanceId field in the return of the DescribeInstances API
  * @method void setInstanceId(string $InstanceId) Set Unique ID of a real server, which can be obtained from the unInstanceId field in the return of the DescribeInstances API
  * @method integer getPort() Obtain Listening port of a real server
@@ -48,11 +48,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setEniId(string $EniId) Set Unique ENI ID
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getTag() Obtain Tag.Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setTag(string $Tag) Set Tag.Note: This field may return null, indicating that no valid values can be obtained.
  */
 class Backend extends AbstractModel
 {
     /**
-     * @var string Real server type. Valid values: CVM, ENI.
+     * @var string Real server type. Valid values: CVM, ENI, CCN.
      */
     public $Type;
 
@@ -102,7 +104,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $EniId;
 
     /**
-     * @param string $Type Real server type. Valid values: CVM, ENI.
+     * @var string Tag.Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $Tag;
+
+    /**
+     * @param string $Type Real server type. Valid values: CVM, ENI, CCN.
      * @param string $InstanceId Unique ID of a real server, which can be obtained from the unInstanceId field in the return of the DescribeInstances API
      * @param integer $Port Listening port of a real server
      * @param integer $Weight Forwarding weight of a real server. Value range: [0, 100]. Default value: 10.
@@ -116,6 +123,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $EniId Unique ENI ID
 Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $Tag Tag.Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -164,6 +172,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("EniId",$param) and $param["EniId"] !== null) {
             $this->EniId = $param["EniId"];
+        }
+
+        if (array_key_exists("Tag",$param) and $param["Tag"] !== null) {
+            $this->Tag = $param["Tag"];
         }
     }
 }

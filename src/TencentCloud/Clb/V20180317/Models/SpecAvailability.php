@@ -20,34 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Specification availability
  *
- * @method string getSpecType() Obtain Specification type
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setSpecType(string $SpecType) Set Specification type
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getAvailability() Obtain Specification availability
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setAvailability(string $Availability) Set Specification availability
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getSpecType() Obtain Specification type.<li>clb.c2.medium: Standard</li><li>clb.c3.small: Advanced 1</li><li>clb.c3.medium: Advanced 2</li><li>clb.c4.small: Super Large 1</li><li>clb.c4.medium: Super Large 2</li><li>clb.c4.large: Super Large 3</li><li>clb.c4.xlarge: Super Large 4</li><li>shared: Shared</li>Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setSpecType(string $SpecType) Set Specification type.<li>clb.c2.medium: Standard</li><li>clb.c3.small: Advanced 1</li><li>clb.c3.medium: Advanced 2</li><li>clb.c4.small: Super Large 1</li><li>clb.c4.medium: Super Large 2</li><li>clb.c4.large: Super Large 3</li><li>clb.c4.xlarge: Super Large 4</li><li>shared: Shared</li>Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getAvailability() Obtain Specification availability. It indicates the resource availability. Valid values: Available, Unavailable.Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setAvailability(string $Availability) Set Specification availability. It indicates the resource availability. Valid values: Available, Unavailable.Note: This field may return null, indicating that no valid values can be obtained.
  */
 class SpecAvailability extends AbstractModel
 {
     /**
-     * @var string Specification type
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Specification type.<li>clb.c2.medium: Standard</li><li>clb.c3.small: Advanced 1</li><li>clb.c3.medium: Advanced 2</li><li>clb.c4.small: Super Large 1</li><li>clb.c4.medium: Super Large 2</li><li>clb.c4.large: Super Large 3</li><li>clb.c4.xlarge: Super Large 4</li><li>shared: Shared</li>Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $SpecType;
 
     /**
-     * @var string Specification availability
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Specification availability. It indicates the resource availability. Valid values: Available, Unavailable.Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Availability;
 
     /**
-     * @param string $SpecType Specification type
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Availability Specification availability
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $SpecType Specification type.<li>clb.c2.medium: Standard</li><li>clb.c3.small: Advanced 1</li><li>clb.c3.medium: Advanced 2</li><li>clb.c4.small: Super Large 1</li><li>clb.c4.medium: Super Large 2</li><li>clb.c4.large: Super Large 3</li><li>clb.c4.xlarge: Super Large 4</li><li>shared: Shared</li>Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $Availability Specification availability. It indicates the resource availability. Valid values: Available, Unavailable.Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

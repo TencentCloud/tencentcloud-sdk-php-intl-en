@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUrl(string $Url) Set Forwarding rule path. Length: 1-200.
  * @method string getDomain() Obtain The domain name associated with the forwarding rule. It can contain 1-80 characters. Only one domain name can be entered. If you need to enter multiple domain names, use `Domains`.
  * @method void setDomain(string $Domain) Set The domain name associated with the forwarding rule. It can contain 1-80 characters. Only one domain name can be entered. If you need to enter multiple domain names, use `Domains`.
- * @method integer getSessionExpireTime() Obtain Session persistence time in seconds. Value range: 30-3,600. Setting it to 0 indicates that session persistence is disabled.
- * @method void setSessionExpireTime(integer $SessionExpireTime) Set Session persistence time in seconds. Value range: 30-3,600. Setting it to 0 indicates that session persistence is disabled.
+ * @method integer getSessionExpireTime() Obtain Session persistence duration, in seconds. 0 indicates that session persistence is disabled, and a value ranging from 30 to 86400 indicates that session persistence is enabled.
+ * @method void setSessionExpireTime(integer $SessionExpireTime) Set Session persistence duration, in seconds. 0 indicates that session persistence is disabled, and a value ranging from 30 to 86400 indicates that session persistence is enabled.
  * @method HealthCheck getHealthCheck() Obtain Health check information. For more information, please see [Health Check](https://intl.cloud.tencent.com/document/product/214/6097?from_cn_redirect=1)
  * @method void setHealthCheck(HealthCheck $HealthCheck) Set Health check information. For more information, please see [Health Check](https://intl.cloud.tencent.com/document/product/214/6097?from_cn_redirect=1)
  * @method CertificateInput getCertificate() Obtain Certificate information. `Certificate` and `MultiCertInfo` cannot be specified at the same time. 
@@ -66,7 +66,7 @@ class RuleInput extends AbstractModel
     public $Domain;
 
     /**
-     * @var integer Session persistence time in seconds. Value range: 30-3,600. Setting it to 0 indicates that session persistence is disabled.
+     * @var integer Session persistence duration, in seconds. 0 indicates that session persistence is disabled, and a value ranging from 30 to 86400 indicates that session persistence is enabled.
      */
     public $SessionExpireTime;
 
@@ -134,7 +134,7 @@ They represent weighted round robin, least connections, and IP hash, respectivel
     /**
      * @param string $Url Forwarding rule path. Length: 1-200.
      * @param string $Domain The domain name associated with the forwarding rule. It can contain 1-80 characters. Only one domain name can be entered. If you need to enter multiple domain names, use `Domains`.
-     * @param integer $SessionExpireTime Session persistence time in seconds. Value range: 30-3,600. Setting it to 0 indicates that session persistence is disabled.
+     * @param integer $SessionExpireTime Session persistence duration, in seconds. 0 indicates that session persistence is disabled, and a value ranging from 30 to 86400 indicates that session persistence is enabled.
      * @param HealthCheck $HealthCheck Health check information. For more information, please see [Health Check](https://intl.cloud.tencent.com/document/product/214/6097?from_cn_redirect=1)
      * @param CertificateInput $Certificate Certificate information. `Certificate` and `MultiCertInfo` cannot be specified at the same time. 
      * @param string $Scheduler Request forwarding method of the rule. Value range: WRR, LEAST_CONN, IP_HASH

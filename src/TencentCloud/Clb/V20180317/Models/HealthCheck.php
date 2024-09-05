@@ -23,74 +23,38 @@ Note: Custom check parameters are currently supported only in certain beta test 
  *
  * @method integer getHealthSwitch() Obtain Whether to enable health check. 1: enable; 0: disable.
  * @method void setHealthSwitch(integer $HealthSwitch) Set Whether to enable health check. 1: enable; 0: disable.
- * @method integer getTimeOut() Obtain Health check response timeout period in seconds (applicable only to layer-4 listeners). Value range: 2-60. Default value: 2. This parameter should be less than the check interval.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setTimeOut(integer $TimeOut) Set Health check response timeout period in seconds (applicable only to layer-4 listeners). Value range: 2-60. Default value: 2. This parameter should be less than the check interval.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getIntervalTime() Obtain Health check probing interval period. It defaults to `5`. For IPv4 CLB instances, the range is 2-300. For IPv6 CLB instances, the range is 5-300. Unit: second
-Note: For some IPv4 CLB instances created long ago, the range is 5-300.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setIntervalTime(integer $IntervalTime) Set Health check probing interval period. It defaults to `5`. For IPv4 CLB instances, the range is 2-300. For IPv6 CLB instances, the range is 5-300. Unit: second
-Note: For some IPv4 CLB instances created long ago, the range is 5-300.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getHealthNum() Obtain Health threshold. Default value: 3, indicating that if a forward is found healthy three consecutive times, it is considered to be normal. Value range: 2-10
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setHealthNum(integer $HealthNum) Set Health threshold. Default value: 3, indicating that if a forward is found healthy three consecutive times, it is considered to be normal. Value range: 2-10
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getUnHealthNum() Obtain Unhealthy threshold. Default value: 3, indicating that if a forward is found unhealthy three consecutive times, it is considered to be exceptional. Value range: 2-10
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setUnHealthNum(integer $UnHealthNum) Set Unhealthy threshold. Default value: 3, indicating that if a forward is found unhealthy three consecutive times, it is considered to be exceptional. Value range: 2-10
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getHttpCode() Obtain Health check status code (applicable only to HTTP/HTTPS forwarding rules and HTTP health checks of TCP listeners). Value range: 1-31. Default value: 31.
-`1`: Returns code 1xx for healthy status. `2`: Returns code 2xx for healthy status. `4`: Returns code 3xx for healthy status. `8`: Returns code 4xx for healthy status. `16`: Returns code 5xx for healthy status. If you want multiple return codes to represent healthy, sum up the corresponding values. 
-Note: This field may return `null`, indicating that no valid values can be obtained.
- * @method void setHttpCode(integer $HttpCode) Set Health check status code (applicable only to HTTP/HTTPS forwarding rules and HTTP health checks of TCP listeners). Value range: 1-31. Default value: 31.
-`1`: Returns code 1xx for healthy status. `2`: Returns code 2xx for healthy status. `4`: Returns code 3xx for healthy status. `8`: Returns code 4xx for healthy status. `16`: Returns code 5xx for healthy status. If you want multiple return codes to represent healthy, sum up the corresponding values. 
-Note: This field may return `null`, indicating that no valid values can be obtained.
- * @method string getHttpCheckPath() Obtain Health check path (applicable only to HTTP/HTTPS forwarding rules and HTTP health checks of TCP listeners).
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setHttpCheckPath(string $HttpCheckPath) Set Health check path (applicable only to HTTP/HTTPS forwarding rules and HTTP health checks of TCP listeners).
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getHttpCheckDomain() Obtain Health check domain name. It's applicable only to HTTP/HTTPS forwarding rules and HTTP health checks of TCP listeners. It's required for HTTP health check of TCP listeners.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setHttpCheckDomain(string $HttpCheckDomain) Set Health check domain name. It's applicable only to HTTP/HTTPS forwarding rules and HTTP health checks of TCP listeners. It's required for HTTP health check of TCP listeners.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getHttpCheckMethod() Obtain Health check method (applicable only to HTTP/HTTPS forwarding rules and HTTP health checks of TCP listeners). Value range: HEAD, GET. Default value: HEAD.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setHttpCheckMethod(string $HttpCheckMethod) Set Health check method (applicable only to HTTP/HTTPS forwarding rules and HTTP health checks of TCP listeners). Value range: HEAD, GET. Default value: HEAD.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getCheckPort() Obtain Health check port (a custom check parameter), which is the port of the real server by default. Unless you want to specify a port, it is recommended to leave it empty. (Applicable only to TCP/UDP listeners.)
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setCheckPort(integer $CheckPort) Set Health check port (a custom check parameter), which is the port of the real server by default. Unless you want to specify a port, it is recommended to leave it empty. (Applicable only to TCP/UDP listeners.)
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getContextType() Obtain Health check protocol (a custom check parameter), which is required if the value of CheckType is CUSTOM. This parameter represents the input format of the health check. Value range: HEX, TEXT. If the value is HEX, the characters of SendContext and RecvContext can only be selected from 0123456789ABCDEF and the length must be an even number. (Applicable only to TCP/UDP listeners.)
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setContextType(string $ContextType) Set Health check protocol (a custom check parameter), which is required if the value of CheckType is CUSTOM. This parameter represents the input format of the health check. Value range: HEX, TEXT. If the value is HEX, the characters of SendContext and RecvContext can only be selected from 0123456789ABCDEF and the length must be an even number. (Applicable only to TCP/UDP listeners.)
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getSendContext() Obtain Health check protocol (a custom check parameter), which is required if the value of CheckType is CUSTOM. This parameter represents the content of the request sent by the health check. Only ASCII visible characters are allowed, and the maximum length is 500. (Applicable only to TCP/UDP listeners.)
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setSendContext(string $SendContext) Set Health check protocol (a custom check parameter), which is required if the value of CheckType is CUSTOM. This parameter represents the content of the request sent by the health check. Only ASCII visible characters are allowed, and the maximum length is 500. (Applicable only to TCP/UDP listeners.)
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getRecvContext() Obtain Health check protocol (a custom check parameter), which is required if the value of CheckType is CUSTOM. This parameter represents the result returned by the health check. Only ASCII visible characters are allowed, and the maximum length is 500. (Applicable only to TCP/UDP listeners.)
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setRecvContext(string $RecvContext) Set Health check protocol (a custom check parameter), which is required if the value of CheckType is CUSTOM. This parameter represents the result returned by the health check. Only ASCII visible characters are allowed, and the maximum length is 500. (Applicable only to TCP/UDP listeners.)
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getCheckType() Obtain Health check protocol. Values: `TCP`, `HTTP`, `HTTPS`, `GRPC`, `PING`, and `CUSTOM`. UDP listeners support `PING`/`CUSTOM`. TCP listener support `TCP`/`HTTP`/`CUSTOM`. TCP_SSL and QUIC listeners support `TCP`/`HTTP`. HTTP rules support `HTTP`/`GRPC. HTTPS rules support `HTTP`/`HTTPS`/`GRPC`.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setCheckType(string $CheckType) Set Health check protocol. Values: `TCP`, `HTTP`, `HTTPS`, `GRPC`, `PING`, and `CUSTOM`. UDP listeners support `PING`/`CUSTOM`. TCP listener support `TCP`/`HTTP`/`CUSTOM`. TCP_SSL and QUIC listeners support `TCP`/`HTTP`. HTTP rules support `HTTP`/`GRPC. HTTPS rules support `HTTP`/`HTTPS`/`GRPC`.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getHttpVersion() Obtain HTTP version. HTTP version of the backend service. Values: `HTTP/1.0`, HTTP/1.1`. It is only applicable to TCP listeners, and is required when `CheckType`=`HTTP`. 
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setHttpVersion(string $HttpVersion) Set HTTP version. HTTP version of the backend service. Values: `HTTP/1.0`, HTTP/1.1`. It is only applicable to TCP listeners, and is required when `CheckType`=`HTTP`. 
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getSourceIpType() Obtain Specifies the type of health check source IP. `0` (default): CLB VIP. `1`: 100.64 IP range.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setSourceIpType(integer $SourceIpType) Set Specifies the type of health check source IP. `0` (default): CLB VIP. `1`: 100.64 IP range.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getExtendedCode() Obtain GRPC health check status code, which is only applicable to rules with GRPC as the backend forwarding protocol. It can be a single number (such as `20`), multiple numbers (such as `20,25`) or a range (such as `0-99`). The default value is `12`.
-Note: This field may return `null`, indicating that no valid values can be obtained.
- * @method void setExtendedCode(string $ExtendedCode) Set GRPC health check status code, which is only applicable to rules with GRPC as the backend forwarding protocol. It can be a single number (such as `20`), multiple numbers (such as `20,25`) or a range (such as `0-99`). The default value is `12`.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method integer getTimeOut() Obtain Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setTimeOut(integer $TimeOut) Set Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getIntervalTime() Obtain Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setIntervalTime(integer $IntervalTime) Set Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getHealthNum() Obtain Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setHealthNum(integer $HealthNum) Set Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getUnHealthNum() Obtain Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setUnHealthNum(integer $UnHealthNum) Set Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getHttpCode() Obtain Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setHttpCode(integer $HttpCode) Set Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getHttpCheckPath() Obtain Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setHttpCheckPath(string $HttpCheckPath) Set Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getHttpCheckDomain() Obtain Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setHttpCheckDomain(string $HttpCheckDomain) Set Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getHttpCheckMethod() Obtain Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setHttpCheckMethod(string $HttpCheckMethod) Set Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getCheckPort() Obtain Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setCheckPort(integer $CheckPort) Set Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getContextType() Obtain Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setContextType(string $ContextType) Set Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getSendContext() Obtain Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setSendContext(string $SendContext) Set Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getRecvContext() Obtain Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setRecvContext(string $RecvContext) Set Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getCheckType() Obtain Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setCheckType(string $CheckType) Set Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getHttpVersion() Obtain Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setHttpVersion(string $HttpVersion) Set Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getSourceIpType() Obtain Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setSourceIpType(integer $SourceIpType) Set Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getExtendedCode() Obtain Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setExtendedCode(string $ExtendedCode) Set Note: This field may return null, indicating that no valid values can be obtained.
  */
 class HealthCheck extends AbstractModel
 {
@@ -100,139 +64,103 @@ class HealthCheck extends AbstractModel
     public $HealthSwitch;
 
     /**
-     * @var integer Health check response timeout period in seconds (applicable only to layer-4 listeners). Value range: 2-60. Default value: 2. This parameter should be less than the check interval.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $TimeOut;
 
     /**
-     * @var integer Health check probing interval period. It defaults to `5`. For IPv4 CLB instances, the range is 2-300. For IPv6 CLB instances, the range is 5-300. Unit: second
-Note: For some IPv4 CLB instances created long ago, the range is 5-300.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $IntervalTime;
 
     /**
-     * @var integer Health threshold. Default value: 3, indicating that if a forward is found healthy three consecutive times, it is considered to be normal. Value range: 2-10
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $HealthNum;
 
     /**
-     * @var integer Unhealthy threshold. Default value: 3, indicating that if a forward is found unhealthy three consecutive times, it is considered to be exceptional. Value range: 2-10
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $UnHealthNum;
 
     /**
-     * @var integer Health check status code (applicable only to HTTP/HTTPS forwarding rules and HTTP health checks of TCP listeners). Value range: 1-31. Default value: 31.
-`1`: Returns code 1xx for healthy status. `2`: Returns code 2xx for healthy status. `4`: Returns code 3xx for healthy status. `8`: Returns code 4xx for healthy status. `16`: Returns code 5xx for healthy status. If you want multiple return codes to represent healthy, sum up the corresponding values. 
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @var integer Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $HttpCode;
 
     /**
-     * @var string Health check path (applicable only to HTTP/HTTPS forwarding rules and HTTP health checks of TCP listeners).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $HttpCheckPath;
 
     /**
-     * @var string Health check domain name. It's applicable only to HTTP/HTTPS forwarding rules and HTTP health checks of TCP listeners. It's required for HTTP health check of TCP listeners.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $HttpCheckDomain;
 
     /**
-     * @var string Health check method (applicable only to HTTP/HTTPS forwarding rules and HTTP health checks of TCP listeners). Value range: HEAD, GET. Default value: HEAD.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $HttpCheckMethod;
 
     /**
-     * @var integer Health check port (a custom check parameter), which is the port of the real server by default. Unless you want to specify a port, it is recommended to leave it empty. (Applicable only to TCP/UDP listeners.)
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $CheckPort;
 
     /**
-     * @var string Health check protocol (a custom check parameter), which is required if the value of CheckType is CUSTOM. This parameter represents the input format of the health check. Value range: HEX, TEXT. If the value is HEX, the characters of SendContext and RecvContext can only be selected from 0123456789ABCDEF and the length must be an even number. (Applicable only to TCP/UDP listeners.)
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ContextType;
 
     /**
-     * @var string Health check protocol (a custom check parameter), which is required if the value of CheckType is CUSTOM. This parameter represents the content of the request sent by the health check. Only ASCII visible characters are allowed, and the maximum length is 500. (Applicable only to TCP/UDP listeners.)
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $SendContext;
 
     /**
-     * @var string Health check protocol (a custom check parameter), which is required if the value of CheckType is CUSTOM. This parameter represents the result returned by the health check. Only ASCII visible characters are allowed, and the maximum length is 500. (Applicable only to TCP/UDP listeners.)
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $RecvContext;
 
     /**
-     * @var string Health check protocol. Values: `TCP`, `HTTP`, `HTTPS`, `GRPC`, `PING`, and `CUSTOM`. UDP listeners support `PING`/`CUSTOM`. TCP listener support `TCP`/`HTTP`/`CUSTOM`. TCP_SSL and QUIC listeners support `TCP`/`HTTP`. HTTP rules support `HTTP`/`GRPC. HTTPS rules support `HTTP`/`HTTPS`/`GRPC`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $CheckType;
 
     /**
-     * @var string HTTP version. HTTP version of the backend service. Values: `HTTP/1.0`, HTTP/1.1`. It is only applicable to TCP listeners, and is required when `CheckType`=`HTTP`. 
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $HttpVersion;
 
     /**
-     * @var integer Specifies the type of health check source IP. `0` (default): CLB VIP. `1`: 100.64 IP range.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $SourceIpType;
 
     /**
-     * @var string GRPC health check status code, which is only applicable to rules with GRPC as the backend forwarding protocol. It can be a single number (such as `20`), multiple numbers (such as `20,25`) or a range (such as `0-99`). The default value is `12`.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @var string Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ExtendedCode;
 
     /**
      * @param integer $HealthSwitch Whether to enable health check. 1: enable; 0: disable.
-     * @param integer $TimeOut Health check response timeout period in seconds (applicable only to layer-4 listeners). Value range: 2-60. Default value: 2. This parameter should be less than the check interval.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $IntervalTime Health check probing interval period. It defaults to `5`. For IPv4 CLB instances, the range is 2-300. For IPv6 CLB instances, the range is 5-300. Unit: second
-Note: For some IPv4 CLB instances created long ago, the range is 5-300.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $HealthNum Health threshold. Default value: 3, indicating that if a forward is found healthy three consecutive times, it is considered to be normal. Value range: 2-10
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $UnHealthNum Unhealthy threshold. Default value: 3, indicating that if a forward is found unhealthy three consecutive times, it is considered to be exceptional. Value range: 2-10
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $HttpCode Health check status code (applicable only to HTTP/HTTPS forwarding rules and HTTP health checks of TCP listeners). Value range: 1-31. Default value: 31.
-`1`: Returns code 1xx for healthy status. `2`: Returns code 2xx for healthy status. `4`: Returns code 3xx for healthy status. `8`: Returns code 4xx for healthy status. `16`: Returns code 5xx for healthy status. If you want multiple return codes to represent healthy, sum up the corresponding values. 
-Note: This field may return `null`, indicating that no valid values can be obtained.
-     * @param string $HttpCheckPath Health check path (applicable only to HTTP/HTTPS forwarding rules and HTTP health checks of TCP listeners).
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $HttpCheckDomain Health check domain name. It's applicable only to HTTP/HTTPS forwarding rules and HTTP health checks of TCP listeners. It's required for HTTP health check of TCP listeners.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $HttpCheckMethod Health check method (applicable only to HTTP/HTTPS forwarding rules and HTTP health checks of TCP listeners). Value range: HEAD, GET. Default value: HEAD.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $CheckPort Health check port (a custom check parameter), which is the port of the real server by default. Unless you want to specify a port, it is recommended to leave it empty. (Applicable only to TCP/UDP listeners.)
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $ContextType Health check protocol (a custom check parameter), which is required if the value of CheckType is CUSTOM. This parameter represents the input format of the health check. Value range: HEX, TEXT. If the value is HEX, the characters of SendContext and RecvContext can only be selected from 0123456789ABCDEF and the length must be an even number. (Applicable only to TCP/UDP listeners.)
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $SendContext Health check protocol (a custom check parameter), which is required if the value of CheckType is CUSTOM. This parameter represents the content of the request sent by the health check. Only ASCII visible characters are allowed, and the maximum length is 500. (Applicable only to TCP/UDP listeners.)
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $RecvContext Health check protocol (a custom check parameter), which is required if the value of CheckType is CUSTOM. This parameter represents the result returned by the health check. Only ASCII visible characters are allowed, and the maximum length is 500. (Applicable only to TCP/UDP listeners.)
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $CheckType Health check protocol. Values: `TCP`, `HTTP`, `HTTPS`, `GRPC`, `PING`, and `CUSTOM`. UDP listeners support `PING`/`CUSTOM`. TCP listener support `TCP`/`HTTP`/`CUSTOM`. TCP_SSL and QUIC listeners support `TCP`/`HTTP`. HTTP rules support `HTTP`/`GRPC. HTTPS rules support `HTTP`/`HTTPS`/`GRPC`.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $HttpVersion HTTP version. HTTP version of the backend service. Values: `HTTP/1.0`, HTTP/1.1`. It is only applicable to TCP listeners, and is required when `CheckType`=`HTTP`. 
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $SourceIpType Specifies the type of health check source IP. `0` (default): CLB VIP. `1`: 100.64 IP range.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $ExtendedCode GRPC health check status code, which is only applicable to rules with GRPC as the backend forwarding protocol. It can be a single number (such as `20`), multiple numbers (such as `20,25`) or a range (such as `0-99`). The default value is `12`.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param integer $TimeOut Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $IntervalTime Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $HealthNum Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $UnHealthNum Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $HttpCode Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $HttpCheckPath Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $HttpCheckDomain Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $HttpCheckMethod Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $CheckPort Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $ContextType Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $SendContext Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $RecvContext Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $CheckType Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $HttpVersion Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $SourceIpType Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $ExtendedCode Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

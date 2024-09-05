@@ -60,6 +60,8 @@ Default value: `WRR`. This parameter is only applicable to TCP, UDP, TCP_SSL and
  * @method void setIdleConnectTimeout(integer $IdleConnectTimeout) Set Connection idle timeout period (in seconds). It's only available to TCP listeners. Value range: 300-900 for shared and dedicated instances; 300-2000 for LCU-supported CLB instances. It defaults to 900. To set a period longer than 2000 seconds (up to 3600 seconds), please submit a [submit](https://console.cloud.tencent.com/workorder/category). 
  * @method boolean getSnatEnable() Obtain 
  * @method void setSnatEnable(boolean $SnatEnable) Set 
+ * @method array getFullEndPorts() Obtain 
+ * @method void setFullEndPorts(array $FullEndPorts) Set 
  */
 class CreateListenerRequest extends AbstractModel
 {
@@ -160,6 +162,11 @@ Default value: `WRR`. This parameter is only applicable to TCP, UDP, TCP_SSL and
     public $SnatEnable;
 
     /**
+     * @var array 
+     */
+    public $FullEndPorts;
+
+    /**
      * @param string $LoadBalancerId CLB instance ID
      * @param array $Ports Specifies for which ports to create listeners. Each port corresponds to a new listener.
      * @param string $Protocol Listener protocol. Values: TCP | UDP | HTTP | HTTPS | TCP_SSL | QUIC
@@ -180,6 +187,7 @@ Default value: `WRR`. This parameter is only applicable to TCP, UDP, TCP_SSL and
      * @param integer $MaxCps Maximum number of new listener connections. It's available for TCP/UDP/TCP_SSL/QUIC listeners. If it's set to `-1` or not specified, the listener speed is not limited. 
      * @param integer $IdleConnectTimeout Connection idle timeout period (in seconds). It's only available to TCP listeners. Value range: 300-900 for shared and dedicated instances; 300-2000 for LCU-supported CLB instances. It defaults to 900. To set a period longer than 2000 seconds (up to 3600 seconds), please submit a [submit](https://console.cloud.tencent.com/workorder/category). 
      * @param boolean $SnatEnable 
+     * @param array $FullEndPorts 
      */
     function __construct()
     {
@@ -271,6 +279,10 @@ Default value: `WRR`. This parameter is only applicable to TCP, UDP, TCP_SSL and
 
         if (array_key_exists("SnatEnable",$param) and $param["SnatEnable"] !== null) {
             $this->SnatEnable = $param["SnatEnable"];
+        }
+
+        if (array_key_exists("FullEndPorts",$param) and $param["FullEndPorts"] !== null) {
+            $this->FullEndPorts = $param["FullEndPorts"];
         }
     }
 }
