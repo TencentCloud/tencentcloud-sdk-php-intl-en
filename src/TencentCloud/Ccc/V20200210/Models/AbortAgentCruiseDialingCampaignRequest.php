@@ -18,14 +18,14 @@ namespace TencentCloud\Ccc\V20200210\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DeleteStaff request structure.
+ * AbortAgentCruiseDialingCampaign request structure.
  *
  * @method integer getSdkAppId() Obtain Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
  * @method void setSdkAppId(integer $SdkAppId) Set Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
- * @method array getStaffList() Obtain Customer service emails, supports up to 200 at a time.
- * @method void setStaffList(array $StaffList) Set Customer service emails, supports up to 200 at a time.
+ * @method integer getCampaignId() Obtain Task ID.
+ * @method void setCampaignId(integer $CampaignId) Set Task ID.
  */
-class DeleteStaffRequest extends AbstractModel
+class AbortAgentCruiseDialingCampaignRequest extends AbstractModel
 {
     /**
      * @var integer Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
@@ -33,13 +33,13 @@ class DeleteStaffRequest extends AbstractModel
     public $SdkAppId;
 
     /**
-     * @var array Customer service emails, supports up to 200 at a time.
+     * @var integer Task ID.
      */
-    public $StaffList;
+    public $CampaignId;
 
     /**
      * @param integer $SdkAppId Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
-     * @param array $StaffList Customer service emails, supports up to 200 at a time.
+     * @param integer $CampaignId Task ID.
      */
     function __construct()
     {
@@ -58,8 +58,8 @@ class DeleteStaffRequest extends AbstractModel
             $this->SdkAppId = $param["SdkAppId"];
         }
 
-        if (array_key_exists("StaffList",$param) and $param["StaffList"] !== null) {
-            $this->StaffList = $param["StaffList"];
+        if (array_key_exists("CampaignId",$param) and $param["CampaignId"] !== null) {
+            $this->CampaignId = $param["CampaignId"];
         }
     }
 }

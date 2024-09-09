@@ -34,12 +34,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRTPSettings(CreateOutputInfoRTPSettings $RTPSettings) Set The RTP relay configuration.
  * @method CreateOutputRTMPSettings getRTMPSettings() Obtain The RTMP relay configuration.
  * @method void setRTMPSettings(CreateOutputRTMPSettings $RTMPSettings) Set The RTMP relay configuration.
- * @method array getAllowIpList() Obtain The IP allowlist. The address must be in CIDR format, such as `0.0.0.0/0`.
-This parameter is valid if `Protocol` is set to `RTMP_PULL`. If it is left empty, there is no restriction on clients’ IP addresses.
- * @method void setAllowIpList(array $AllowIpList) Set The IP allowlist. The address must be in CIDR format, such as `0.0.0.0/0`.
-This parameter is valid if `Protocol` is set to `RTMP_PULL`. If it is left empty, there is no restriction on clients’ IP addresses.
- * @method integer getMaxConcurrent() Obtain 
- * @method void setMaxConcurrent(integer $MaxConcurrent) Set 
+ * @method array getAllowIpList() Obtain IP whitelist, in CIDR format, such as 0.0.0.0/0. This is valid when Protocol is RTMP_PULL, and empty means no restriction on client IP.
+ * @method void setAllowIpList(array $AllowIpList) Set IP whitelist, in CIDR format, such as 0.0.0.0/0. This is valid when Protocol is RTMP_PULL, and empty means no restriction on client IP.
+ * @method integer getMaxConcurrent() Obtain The maximum number of concurrent stream pulls is 4, and the default value is 4.
+ * @method void setMaxConcurrent(integer $MaxConcurrent) Set The maximum number of concurrent stream pulls is 4, and the default value is 4.
  * @method array getSecurityGroupIds() Obtain The bound security group IDs.
  * @method void setSecurityGroupIds(array $SecurityGroupIds) Set The bound security group IDs.
  */
@@ -81,13 +79,12 @@ class ModifyOutputInfo extends AbstractModel
     public $RTMPSettings;
 
     /**
-     * @var array The IP allowlist. The address must be in CIDR format, such as `0.0.0.0/0`.
-This parameter is valid if `Protocol` is set to `RTMP_PULL`. If it is left empty, there is no restriction on clients’ IP addresses.
+     * @var array IP whitelist, in CIDR format, such as 0.0.0.0/0. This is valid when Protocol is RTMP_PULL, and empty means no restriction on client IP.
      */
     public $AllowIpList;
 
     /**
-     * @var integer 
+     * @var integer The maximum number of concurrent stream pulls is 4, and the default value is 4.
      */
     public $MaxConcurrent;
 
@@ -104,9 +101,8 @@ This parameter is valid if `Protocol` is set to `RTMP_PULL`. If it is left empty
      * @param CreateOutputSrtSettings $SRTSettings The SRT relay configuration.
      * @param CreateOutputInfoRTPSettings $RTPSettings The RTP relay configuration.
      * @param CreateOutputRTMPSettings $RTMPSettings The RTMP relay configuration.
-     * @param array $AllowIpList The IP allowlist. The address must be in CIDR format, such as `0.0.0.0/0`.
-This parameter is valid if `Protocol` is set to `RTMP_PULL`. If it is left empty, there is no restriction on clients’ IP addresses.
-     * @param integer $MaxConcurrent 
+     * @param array $AllowIpList IP whitelist, in CIDR format, such as 0.0.0.0/0. This is valid when Protocol is RTMP_PULL, and empty means no restriction on client IP.
+     * @param integer $MaxConcurrent The maximum number of concurrent stream pulls is 4, and the default value is 4.
      * @param array $SecurityGroupIds The bound security group IDs.
      */
     function __construct()

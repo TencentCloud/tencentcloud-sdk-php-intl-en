@@ -18,7 +18,7 @@ namespace TencentCloud\Ccc\V20200210\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Agent user information.
+ * Agent User Information
  *
  * @method string getName() Obtain Agent name.
  * @method void setName(string $Name) Set Agent name.
@@ -28,16 +28,16 @@ use TencentCloud\Common\AbstractModel;
 Note: This field may return null, indicating that no valid value could be obtained.
  * @method void setStaffNumber(string $StaffNumber) Set Worker number.
 Note: This field may return null, indicating that no valid value could be obtained.
- * @method string getPhone() Obtain Agent phone number (preceded by 0086).
- * @method void setPhone(string $Phone) Set Agent phone number (preceded by 0086).
+ * @method string getPhone() Obtain Agent's Telephone Number (With 0086 Prefix)
+ * @method void setPhone(string $Phone) Set Agent's Telephone Number (With 0086 Prefix)
  * @method string getNick() Obtain Agent nickname.
  * @method void setNick(string $Nick) Set Agent nickname.
  * @method string getUserId() Obtain User ID
  * @method void setUserId(string $UserId) Set User ID
- * @method array getSkillGroupNameList() Obtain List of skill groups associated with the agent.
-Note: This field may return null, indicating that no valid value could be obtained.
- * @method void setSkillGroupNameList(array $SkillGroupNameList) Set List of skill groups associated with the agent.
-Note: This field may return null, indicating that no valid value could be obtained.
+ * @method array getSkillGroupNameList() Obtain List of skill groups associated with the seat
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setSkillGroupNameList(array $SkillGroupNameList) Set List of skill groups associated with the seat
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method integer getRole() Obtain 1: Admin.
 2: Quality inspector.
 3: Ordinary agent.
@@ -68,7 +68,7 @@ Note: This field may return null, indicating that no valid value could be obtain
     public $StaffNumber;
 
     /**
-     * @var string Agent phone number (preceded by 0086).
+     * @var string Agent's Telephone Number (With 0086 Prefix)
      */
     public $Phone;
 
@@ -83,8 +83,8 @@ Note: This field may return null, indicating that no valid value could be obtain
     public $UserId;
 
     /**
-     * @var array List of skill groups associated with the agent.
-Note: This field may return null, indicating that no valid value could be obtained.
+     * @var array List of skill groups associated with the seat
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $SkillGroupNameList;
 
@@ -102,11 +102,11 @@ Note: This field may return null, indicating that no valid value could be obtain
      * @param string $Mail Agent email.
      * @param string $StaffNumber Worker number.
 Note: This field may return null, indicating that no valid value could be obtained.
-     * @param string $Phone Agent phone number (preceded by 0086).
+     * @param string $Phone Agent's Telephone Number (With 0086 Prefix)
      * @param string $Nick Agent nickname.
      * @param string $UserId User ID
-     * @param array $SkillGroupNameList List of skill groups associated with the agent.
-Note: This field may return null, indicating that no valid value could be obtained.
+     * @param array $SkillGroupNameList List of skill groups associated with the seat
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $Role 1: Admin.
 2: Quality inspector.
 3: Ordinary agent.

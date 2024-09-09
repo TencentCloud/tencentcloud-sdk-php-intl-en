@@ -34,8 +34,18 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method integer getIvrId() Obtain IvrId used by the task.
  * @method void setIvrId(integer $IvrId) Set IvrId used by the task.
- * @method integer getState() Obtain Task status: 0 - initial, 1 - running, 2 - completed, 3 - ending, 4 - closed.
- * @method void setState(integer $State) Set Task status: 0 - initial, 1 - running, 2 - completed, 3 - ending, 4 - closed.
+ * @method integer getState() Obtain Task status:
+0 Initial: Task created, calling not started
+1 Running
+2  Completed: All calls in the task are completed
+3 Ending: The task is due, but some calls are still not finished
+4 Ended: Task terminated due to expiration
+ * @method void setState(integer $State) Set Task status:
+0 Initial: Task created, calling not started
+1 Running
+2  Completed: All calls in the task are completed
+3 Ending: The task is due, but some calls are still not finished
+4 Ended: Task terminated due to expiration
  * @method integer getTaskId() Obtain Task ID.
  * @method void setTaskId(integer $TaskId) Set Task ID.
  */
@@ -73,7 +83,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $IvrId;
 
     /**
-     * @var integer Task status: 0 - initial, 1 - running, 2 - completed, 3 - ending, 4 - closed.
+     * @var integer Task status:
+0 Initial: Task created, calling not started
+1 Running
+2  Completed: All calls in the task are completed
+3 Ending: The task is due, but some calls are still not finished
+4 Ended: Task terminated due to expiration
      */
     public $State;
 
@@ -90,7 +105,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @param integer $NotAfter End timestamp.
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param integer $IvrId IvrId used by the task.
-     * @param integer $State Task status: 0 - initial, 1 - running, 2 - completed, 3 - ending, 4 - closed.
+     * @param integer $State Task status:
+0 Initial: Task created, calling not started
+1 Running
+2  Completed: All calls in the task are completed
+3 Ending: The task is due, but some calls are still not finished
+4 Ended: Task terminated due to expiration
      * @param integer $TaskId Task ID.
      */
     function __construct()

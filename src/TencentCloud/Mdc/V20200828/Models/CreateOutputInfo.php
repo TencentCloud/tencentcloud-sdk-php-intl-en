@@ -34,14 +34,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRTMPSettings(CreateOutputRTMPSettings $RTMPSettings) Set The RTMP configuration.
  * @method CreateOutputInfoRTPSettings getRTPSettings() Obtain The RTP configuration.
  * @method void setRTPSettings(CreateOutputInfoRTPSettings $RTPSettings) Set The RTP configuration.
- * @method array getAllowIpList() Obtain The IP allowlist. The address must be in CIDR format, such as `0.0.0.0/0`.
-This parameter is valid if `Protocol` is set to `RTMP_PULL`. If it is left empty, there is no restriction on clients’ IP addresses.
- * @method void setAllowIpList(array $AllowIpList) Set The IP allowlist. The address must be in CIDR format, such as `0.0.0.0/0`.
-This parameter is valid if `Protocol` is set to `RTMP_PULL`. If it is left empty, there is no restriction on clients’ IP addresses.
- * @method integer getMaxConcurrent() Obtain 
- * @method void setMaxConcurrent(integer $MaxConcurrent) Set 
+ * @method array getAllowIpList() Obtain IP whitelist, in CIDR format, such as 0.0.0.0/0. This is valid when Protocol is RTMP_PULL, and empty means no restriction on client IP.
+ * @method void setAllowIpList(array $AllowIpList) Set IP whitelist, in CIDR format, such as 0.0.0.0/0. This is valid when Protocol is RTMP_PULL, and empty means no restriction on client IP.
+ * @method integer getMaxConcurrent() Obtain The maximum number of concurrent stream pulls is 4, and the default value is 4.
+ * @method void setMaxConcurrent(integer $MaxConcurrent) Set The maximum number of concurrent stream pulls is 4, and the default value is 4.
  * @method array getSecurityGroupIds() Obtain The bound security group IDs.
  * @method void setSecurityGroupIds(array $SecurityGroupIds) Set The bound security group IDs.
+ * @method array getZones() Obtain Availability zone: output supports at most one availability zone as input.
+ * @method void setZones(array $Zones) Set Availability zone: output supports at most one availability zone as input.
  */
 class CreateOutputInfo extends AbstractModel
 {
@@ -81,13 +81,12 @@ class CreateOutputInfo extends AbstractModel
     public $RTPSettings;
 
     /**
-     * @var array The IP allowlist. The address must be in CIDR format, such as `0.0.0.0/0`.
-This parameter is valid if `Protocol` is set to `RTMP_PULL`. If it is left empty, there is no restriction on clients’ IP addresses.
+     * @var array IP whitelist, in CIDR format, such as 0.0.0.0/0. This is valid when Protocol is RTMP_PULL, and empty means no restriction on client IP.
      */
     public $AllowIpList;
 
     /**
-     * @var integer 
+     * @var integer The maximum number of concurrent stream pulls is 4, and the default value is 4.
      */
     public $MaxConcurrent;
 
@@ -97,6 +96,11 @@ This parameter is valid if `Protocol` is set to `RTMP_PULL`. If it is left empty
     public $SecurityGroupIds;
 
     /**
+     * @var array Availability zone: output supports at most one availability zone as input.
+     */
+    public $Zones;
+
+    /**
      * @param string $OutputName The output name.
      * @param string $Description Description of the output.
      * @param string $Protocol The output protocol. Valid values: SRT, RTP, RTMP, RTMP_PULL.
@@ -104,10 +108,10 @@ This parameter is valid if `Protocol` is set to `RTMP_PULL`. If it is left empty
      * @param CreateOutputSrtSettings $SRTSettings The SRT configuration.
      * @param CreateOutputRTMPSettings $RTMPSettings The RTMP configuration.
      * @param CreateOutputInfoRTPSettings $RTPSettings The RTP configuration.
-     * @param array $AllowIpList The IP allowlist. The address must be in CIDR format, such as `0.0.0.0/0`.
-This parameter is valid if `Protocol` is set to `RTMP_PULL`. If it is left empty, there is no restriction on clients’ IP addresses.
-     * @param integer $MaxConcurrent 
+     * @param array $AllowIpList IP whitelist, in CIDR format, such as 0.0.0.0/0. This is valid when Protocol is RTMP_PULL, and empty means no restriction on client IP.
+     * @param integer $MaxConcurrent The maximum number of concurrent stream pulls is 4, and the default value is 4.
      * @param array $SecurityGroupIds The bound security group IDs.
+     * @param array $Zones Availability zone: output supports at most one availability zone as input.
      */
     function __construct()
     {
@@ -163,6 +167,10 @@ This parameter is valid if `Protocol` is set to `RTMP_PULL`. If it is left empty
 
         if (array_key_exists("SecurityGroupIds",$param) and $param["SecurityGroupIds"] !== null) {
             $this->SecurityGroupIds = $param["SecurityGroupIds"];
+        }
+
+        if (array_key_exists("Zones",$param) and $param["Zones"] !== null) {
+            $this->Zones = $param["Zones"];
         }
     }
 }

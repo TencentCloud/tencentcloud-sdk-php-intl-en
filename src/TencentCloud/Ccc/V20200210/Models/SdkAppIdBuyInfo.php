@@ -24,10 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSdkAppId(integer $SdkAppId) Set Application ID
  * @method string getName() Obtain Application Name
  * @method void setName(string $Name) Set Application Name
- * @method integer getStaffBuyNum() Obtain Number of agents purchased (still within the validity period).
- * @method void setStaffBuyNum(integer $StaffBuyNum) Set Number of agents purchased (still within the validity period).
- * @method array getStaffBuyList() Obtain List of agents purchased (still within the validity period).
- * @method void setStaffBuyList(array $StaffBuyList) Set List of agents purchased (still within the validity period).
+ * @method integer getStaffBuyNum() Obtain Agent Purchase Count (still within the validity period)
+ * @method void setStaffBuyNum(integer $StaffBuyNum) Set Agent Purchase Count (still within the validity period)
+ * @method array getStaffBuyList() Obtain Agent Purchase List (still within the validity period)
+ * @method void setStaffBuyList(array $StaffBuyList) Set Agent Purchase List (still within the validity period)
  * @method array getPhoneNumBuyList() Obtain List of numbers purchased.
  * @method void setPhoneNumBuyList(array $PhoneNumBuyList) Set List of numbers purchased.
  * @method integer getSipBuyNum() Obtain Number of office telephones purchased (still within the validity period).
@@ -48,12 +48,12 @@ class SdkAppIdBuyInfo extends AbstractModel
     public $Name;
 
     /**
-     * @var integer Number of agents purchased (still within the validity period).
+     * @var integer Agent Purchase Count (still within the validity period)
      */
     public $StaffBuyNum;
 
     /**
-     * @var array List of agents purchased (still within the validity period).
+     * @var array Agent Purchase List (still within the validity period)
      */
     public $StaffBuyList;
 
@@ -71,8 +71,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
     /**
      * @param integer $SdkAppId Application ID
      * @param string $Name Application Name
-     * @param integer $StaffBuyNum Number of agents purchased (still within the validity period).
-     * @param array $StaffBuyList List of agents purchased (still within the validity period).
+     * @param integer $StaffBuyNum Agent Purchase Count (still within the validity period)
+     * @param array $StaffBuyList Agent Purchase List (still within the validity period)
      * @param array $PhoneNumBuyList List of numbers purchased.
      * @param integer $SipBuyNum Number of office telephones purchased (still within the validity period).
 Note: this field may return null, indicating that no valid values can be obtained.

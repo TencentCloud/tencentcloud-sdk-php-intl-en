@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() Obtain Resource ID, which is the TCHouse-D resource ID used for table creation.
  * @method void setInstanceId(string $InstanceId) Set Resource ID, which is the TCHouse-D resource ID used for table creation.
- * @method string getDbName() Obtain The name of the database where the table belongs needs to be deleted
- * @method void setDbName(string $DbName) Set The name of the database where the table belongs needs to be deleted
+ * @method string getDbName() Obtain The name of the database where the table belongs needs to be deleted.
+ * @method void setDbName(string $DbName) Set The name of the database where the table belongs needs to be deleted.
  * @method string getTableName() Obtain Table name to be deleted
  * @method void setTableName(string $TableName) Set Table name to be deleted
  * @method string getUserName() Obtain Use the user who has corresponding permissions for operations. If the TCHouse-D cluster uses a kernel account registered by a CAM user, you do not need to fill it in.
@@ -41,7 +41,7 @@ class DeleteTableRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var string The name of the database where the table belongs needs to be deleted
+     * @var string The name of the database where the table belongs needs to be deleted.
      */
     public $DbName;
 
@@ -67,7 +67,7 @@ class DeleteTableRequest extends AbstractModel
 
     /**
      * @param string $InstanceId Resource ID, which is the TCHouse-D resource ID used for table creation.
-     * @param string $DbName The name of the database where the table belongs needs to be deleted
+     * @param string $DbName The name of the database where the table belongs needs to be deleted.
      * @param string $TableName Table name to be deleted
      * @param string $UserName Use the user who has corresponding permissions for operations. If the TCHouse-D cluster uses a kernel account registered by a CAM user, you do not need to fill it in.
      * @param string $PassWord Password corresponding to the user. If the TCHouse-D cluster uses a kernel account registered by a CAM user, you do not need to fill it in.

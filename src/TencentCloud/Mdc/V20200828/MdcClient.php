@@ -24,6 +24,7 @@ use TencentCloud\Mdc\V20200828\Models as Models;
 
 /**
  * @method Models\CreateStreamLinkFlowResponse CreateStreamLinkFlow(Models\CreateStreamLinkFlowRequest $req) This API is used to create a StreamLink flow.
+ * @method Models\CreateStreamLinkInputResponse CreateStreamLinkInput(Models\CreateStreamLinkInputRequest $req) Create an input configuration for the StreamLink.
  * @method Models\CreateStreamLinkOutputInfoResponse CreateStreamLinkOutputInfo(Models\CreateStreamLinkOutputInfoRequest $req) This API is used to create a StreamLink output.
  * @method Models\DeleteStreamLinkFlowResponse DeleteStreamLinkFlow(Models\DeleteStreamLinkFlowRequest $req) This API is used to delete a StreamLink flow.
  * @method Models\DeleteStreamLinkOutputResponse DeleteStreamLinkOutput(Models\DeleteStreamLinkOutputRequest $req) This API is used to delete an output of a StreamLink flow.

@@ -18,28 +18,28 @@ namespace TencentCloud\Ccc\V20200210\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Agent information with skill group priority.
+ * Agent Information with Skill Group Priority
  *
  * @method string getName() Obtain Agent name.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setName(string $Name) Set Agent name.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getMail() Obtain Agent email.
  * @method void setMail(string $Mail) Set Agent email.
- * @method string getPhone() Obtain Agent telephone number.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setPhone(string $Phone) Set Agent telephone number.
-Note: this field may return null, indicating that no valid values can be obtained.
+ * @method string getPhone() Obtain Agent's Telephone Number
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setPhone(string $Phone) Set Agent's Telephone Number
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getNick() Obtain Agent nickname.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setNick(string $Nick) Set Agent nickname.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getStaffNumber() Obtain Agent number.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setStaffNumber(string $StaffNumber) Set Agent number.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method integer getRoleId() Obtain 
- * @method void setRoleId(integer $RoleId) Set 
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getStaffNumber() Obtain Agent ID
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setStaffNumber(string $StaffNumber) Set Agent ID
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getRoleId() Obtain User Role ID
+ * @method void setRoleId(integer $RoleId) Set User Role ID
  * @method array getSkillGroupList() Obtain Affiliated Skill Group List.
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setSkillGroupList(array $SkillGroupList) Set Affiliated Skill Group List.
@@ -53,7 +53,7 @@ class StaffInfo extends AbstractModel
 {
     /**
      * @var string Agent name.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Name;
 
@@ -63,25 +63,25 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $Mail;
 
     /**
-     * @var string Agent telephone number.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string Agent's Telephone Number
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Phone;
 
     /**
      * @var string Agent nickname.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Nick;
 
     /**
-     * @var string Agent number.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string Agent ID
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $StaffNumber;
 
     /**
-     * @var integer 
+     * @var integer User Role ID
      */
     public $RoleId;
 
@@ -99,15 +99,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * @param string $Name Agent name.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $Mail Agent email.
-     * @param string $Phone Agent telephone number.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @param string $Phone Agent's Telephone Number
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $Nick Agent nickname.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $StaffNumber Agent number.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param integer $RoleId 
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $StaffNumber Agent ID
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $RoleId User Role ID
      * @param array $SkillGroupList Affiliated Skill Group List.
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param integer $LastModifyTimestamp Last modification time.

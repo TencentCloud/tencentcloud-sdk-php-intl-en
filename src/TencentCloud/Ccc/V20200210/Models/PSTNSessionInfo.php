@@ -34,10 +34,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAcceptTimestamp(string $AcceptTimestamp) Set Answer time. Unix timestamp.
  * @method string getStaffEmail() Obtain Agent email.
  * @method void setStaffEmail(string $StaffEmail) Set Agent email.
- * @method string getStaffNumber() Obtain Agent work number.
- * @method void setStaffNumber(string $StaffNumber) Set Agent work number.
- * @method string getSessionStatus() Obtain Agent status: inProgress for in progress.
- * @method void setSessionStatus(string $SessionStatus) Set Agent status: inProgress for in progress.
+ * @method string getStaffNumber() Obtain Agent ID
+ * @method void setStaffNumber(string $StaffNumber) Set Agent ID
+ * @method string getSessionStatus() Obtain Agent Status inProgress Ongoing
+ * @method void setSessionStatus(string $SessionStatus) Set Agent Status inProgress Ongoing
  * @method integer getDirection() Obtain Session call direction, 0 - Inbound | 1 - Outbound.
  * @method void setDirection(integer $Direction) Set Session call direction, 0 - Inbound | 1 - Outbound.
  * @method integer getRingTimestamp() Obtain Ring time. Unix timestamp.
@@ -85,12 +85,12 @@ class PSTNSessionInfo extends AbstractModel
     public $StaffEmail;
 
     /**
-     * @var string Agent work number.
+     * @var string Agent ID
      */
     public $StaffNumber;
 
     /**
-     * @var string Agent status: inProgress for in progress.
+     * @var string Agent Status inProgress Ongoing
      */
     public $SessionStatus;
 
@@ -122,8 +122,8 @@ class PSTNSessionInfo extends AbstractModel
      * @param string $StartTimestamp Start time. Unix timestamp.
      * @param string $AcceptTimestamp Answer time. Unix timestamp.
      * @param string $StaffEmail Agent email.
-     * @param string $StaffNumber Agent work number.
-     * @param string $SessionStatus Agent status: inProgress for in progress.
+     * @param string $StaffNumber Agent ID
+     * @param string $SessionStatus Agent Status inProgress Ongoing
      * @param integer $Direction Session call direction, 0 - Inbound | 1 - Outbound.
      * @param integer $RingTimestamp Ring time. Unix timestamp.
      * @param string $ProtectedCaller Caller number protection ID. Effective when the number protection map feature is activated, and the Caller field is empty.

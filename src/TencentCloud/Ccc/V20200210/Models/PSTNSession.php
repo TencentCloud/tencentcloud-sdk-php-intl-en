@@ -36,17 +36,17 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAcceptTimestamp(integer $AcceptTimestamp) Set Answer time. Unix timestamp.
  * @method string getStaffEmail() Obtain Agent email.
  * @method void setStaffEmail(string $StaffEmail) Set Agent email.
- * @method string getStaffNumber() Obtain Agent work number.
- * @method void setStaffNumber(string $StaffNumber) Set Agent work number.
- * @method string getSessionStatus() Obtain Session state.
-ringing - In progress.
-seatJoining - Waiting for agent to receive call.
-InProgress - Ongoing.
+ * @method string getStaffNumber() Obtain Agent ID
+ * @method void setStaffNumber(string $StaffNumber) Set Agent ID
+ * @method string getSessionStatus() Obtain Session Status
+ringing Ringing
+seatJoining  waiting for the agent to answer
+inProgress  Ongoing
 finished - Completed.
- * @method void setSessionStatus(string $SessionStatus) Set Session state.
-ringing - In progress.
-seatJoining - Waiting for agent to receive call.
-InProgress - Ongoing.
+ * @method void setSessionStatus(string $SessionStatus) Set Session Status
+ringing Ringing
+seatJoining  waiting for the agent to answer
+inProgress  Ongoing
 finished - Completed.
  * @method integer getDirection() Obtain Session call direction, 0 - Inbound | 1 - Outbound.
  * @method void setDirection(integer $Direction) Set Session call direction, 0 - Inbound | 1 - Outbound.
@@ -102,15 +102,15 @@ class PSTNSession extends AbstractModel
     public $StaffEmail;
 
     /**
-     * @var string Agent work number.
+     * @var string Agent ID
      */
     public $StaffNumber;
 
     /**
-     * @var string Session state.
-ringing - In progress.
-seatJoining - Waiting for agent to receive call.
-InProgress - Ongoing.
+     * @var string Session Status
+ringing Ringing
+seatJoining  waiting for the agent to answer
+inProgress  Ongoing
 finished - Completed.
      */
     public $SessionStatus;
@@ -149,11 +149,11 @@ finished - Completed.
      * @param integer $RingTimestamp Ring time. Unix timestamp.
      * @param integer $AcceptTimestamp Answer time. Unix timestamp.
      * @param string $StaffEmail Agent email.
-     * @param string $StaffNumber Agent work number.
-     * @param string $SessionStatus Session state.
-ringing - In progress.
-seatJoining - Waiting for agent to receive call.
-InProgress - Ongoing.
+     * @param string $StaffNumber Agent ID
+     * @param string $SessionStatus Session Status
+ringing Ringing
+seatJoining  waiting for the agent to answer
+inProgress  Ongoing
 finished - Completed.
      * @param integer $Direction Session call direction, 0 - Inbound | 1 - Outbound.
      * @param string $OutBoundCaller The number used for transferring to the external line (Outbound Caller).

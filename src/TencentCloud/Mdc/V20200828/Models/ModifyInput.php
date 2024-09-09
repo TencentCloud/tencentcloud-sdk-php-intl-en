@@ -42,16 +42,18 @@ If there is an RTMP input, the output must be SRT or RTMP.
 If there is an SRT input, the output must be SRT.
  * @method string getFailOver() Obtain Whether to enable input failover. Valid values: OPEN, CLOSE.
  * @method void setFailOver(string $FailOver) Set Whether to enable input failover. Valid values: OPEN, CLOSE.
- * @method CreateInputRTMPPullSettings getRTMPPullSettings() Obtain 
- * @method void setRTMPPullSettings(CreateInputRTMPPullSettings $RTMPPullSettings) Set 
- * @method CreateInputRTSPPullSettings getRTSPPullSettings() Obtain 
- * @method void setRTSPPullSettings(CreateInputRTSPPullSettings $RTSPPullSettings) Set 
- * @method CreateInputHLSPullSettings getHLSPullSettings() Obtain 
- * @method void setHLSPullSettings(CreateInputHLSPullSettings $HLSPullSettings) Set 
- * @method ResilientStreamConf getResilientStream() Obtain 
- * @method void setResilientStream(ResilientStreamConf $ResilientStream) Set 
- * @method array getSecurityGroupIds() Obtain The bound security group IDs. 
- * @method void setSecurityGroupIds(array $SecurityGroupIds) Set The bound security group IDs. 
+ * @method CreateInputRTMPPullSettings getRTMPPullSettings() Obtain Configuration information for RTMP_PULL.
+ * @method void setRTMPPullSettings(CreateInputRTMPPullSettings $RTMPPullSettings) Set Configuration information for RTMP_PULL.
+ * @method CreateInputRTSPPullSettings getRTSPPullSettings() Obtain Configuration information of RTSP_PULL.
+ * @method void setRTSPPullSettings(CreateInputRTSPPullSettings $RTSPPullSettings) Set Configuration information of RTSP_PULL.
+ * @method CreateInputHLSPullSettings getHLSPullSettings() Obtain HLS_PULL configuration information.
+ * @method void setHLSPullSettings(CreateInputHLSPullSettings $HLSPullSettings) Set HLS_PULL configuration information.
+ * @method ResilientStreamConf getResilientStream() Obtain Delayed broadcast smooth streaming configuration information.
+ * @method void setResilientStream(ResilientStreamConf $ResilientStream) Set Delayed broadcast smooth streaming configuration information.
+ * @method array getSecurityGroupIds() Obtain The ID of the input security group to bind. Only one security group can be associated.
+ * @method void setSecurityGroupIds(array $SecurityGroupIds) Set The ID of the input security group to bind. Only one security group can be associated.
+ * @method array getZones() Obtain Availability zone, optional, supports up to two availability zones. For interfaces that need to be changed, the second availability zone will participate in resource allocation. This is effective if disaster recovery is enabled for input or RTSP_PULL protocol switching is involved (addresses will be reallocated).
+ * @method void setZones(array $Zones) Set Availability zone, optional, supports up to two availability zones. For interfaces that need to be changed, the second availability zone will participate in resource allocation. This is effective if disaster recovery is enabled for input or RTSP_PULL protocol switching is involved (addresses will be reallocated).
  */
 class ModifyInput extends AbstractModel
 {
@@ -99,29 +101,34 @@ If there is an SRT input, the output must be SRT.
     public $FailOver;
 
     /**
-     * @var CreateInputRTMPPullSettings 
+     * @var CreateInputRTMPPullSettings Configuration information for RTMP_PULL.
      */
     public $RTMPPullSettings;
 
     /**
-     * @var CreateInputRTSPPullSettings 
+     * @var CreateInputRTSPPullSettings Configuration information of RTSP_PULL.
      */
     public $RTSPPullSettings;
 
     /**
-     * @var CreateInputHLSPullSettings 
+     * @var CreateInputHLSPullSettings HLS_PULL configuration information.
      */
     public $HLSPullSettings;
 
     /**
-     * @var ResilientStreamConf 
+     * @var ResilientStreamConf Delayed broadcast smooth streaming configuration information.
      */
     public $ResilientStream;
 
     /**
-     * @var array The bound security group IDs. 
+     * @var array The ID of the input security group to bind. Only one security group can be associated.
      */
     public $SecurityGroupIds;
+
+    /**
+     * @var array Availability zone, optional, supports up to two availability zones. For interfaces that need to be changed, the second availability zone will participate in resource allocation. This is effective if disaster recovery is enabled for input or RTSP_PULL protocol switching is involved (addresses will be reallocated).
+     */
+    public $Zones;
 
     /**
      * @param string $InputId The input ID.
@@ -135,11 +142,12 @@ If there is an RTP input, the output must be RTP.
 If there is an RTMP input, the output must be SRT or RTMP.
 If there is an SRT input, the output must be SRT.
      * @param string $FailOver Whether to enable input failover. Valid values: OPEN, CLOSE.
-     * @param CreateInputRTMPPullSettings $RTMPPullSettings 
-     * @param CreateInputRTSPPullSettings $RTSPPullSettings 
-     * @param CreateInputHLSPullSettings $HLSPullSettings 
-     * @param ResilientStreamConf $ResilientStream 
-     * @param array $SecurityGroupIds The bound security group IDs. 
+     * @param CreateInputRTMPPullSettings $RTMPPullSettings Configuration information for RTMP_PULL.
+     * @param CreateInputRTSPPullSettings $RTSPPullSettings Configuration information of RTSP_PULL.
+     * @param CreateInputHLSPullSettings $HLSPullSettings HLS_PULL configuration information.
+     * @param ResilientStreamConf $ResilientStream Delayed broadcast smooth streaming configuration information.
+     * @param array $SecurityGroupIds The ID of the input security group to bind. Only one security group can be associated.
+     * @param array $Zones Availability zone, optional, supports up to two availability zones. For interfaces that need to be changed, the second availability zone will participate in resource allocation. This is effective if disaster recovery is enabled for input or RTSP_PULL protocol switching is involved (addresses will be reallocated).
      */
     function __construct()
     {
@@ -210,6 +218,10 @@ If there is an SRT input, the output must be SRT.
 
         if (array_key_exists("SecurityGroupIds",$param) and $param["SecurityGroupIds"] !== null) {
             $this->SecurityGroupIds = $param["SecurityGroupIds"];
+        }
+
+        if (array_key_exists("Zones",$param) and $param["Zones"] !== null) {
+            $this->Zones = $param["Zones"];
         }
     }
 }

@@ -24,9 +24,9 @@ use TencentCloud\Common\AbstractModel;
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setMail(string $Mail) Set Agent email.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getPhone() Obtain Agent phone number.
+ * @method string getPhone() Obtain Agent Telephone
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setPhone(string $Phone) Set Agent phone number.
+ * @method void setPhone(string $Phone) Set Agent Telephone
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method integer getRingTimestamp() Obtain Ring timestamp. Unix second-level timestamp.
 Note: This field may return null, indicating that no valid values can be obtained.
@@ -40,25 +40,25 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setEndedTimestamp(integer $EndedTimestamp) Set End timestamp. Unix second-level timestamp.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getRecordId() Obtain Recording ID can be indexed to the agent side recording.
+ * @method string getRecordId() Obtain Recording ID, which can be used to index the recording on the agent side
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setRecordId(string $RecordId) Set Recording ID can be indexed to the agent side recording.
+ * @method void setRecordId(string $RecordId) Set Recording ID, which can be used to index the recording on the agent side
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getType() Obtain Participant type: "staffSeat", "outboundSeat", "staffPhoneSeat".
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setType(string $Type) Set Participant type: "staffSeat", "outboundSeat", "staffPhoneSeat".
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getTransferFrom() Obtain Transfer source agent information.
+ * @method string getTransferFrom() Obtain Transfer Source Agent Information
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setTransferFrom(string $TransferFrom) Set Transfer source agent information.
+ * @method void setTransferFrom(string $TransferFrom) Set Transfer Source Agent Information
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getTransferFromType() Obtain Transfer source participant type is consistent with the Type value.
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setTransferFromType(string $TransferFromType) Set Transfer source participant type is consistent with the Type value.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getTransferTo() Obtain Transfer destination agent information.
+ * @method string getTransferTo() Obtain Transfer Destination Agent Information
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setTransferTo(string $TransferTo) Set Transfer destination agent information.
+ * @method void setTransferTo(string $TransferTo) Set Transfer Destination Agent Information
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getTransferToType() Obtain Transfer destination participant type is consistent with Type values.
 Note: This field may return null, indicating that no valid values can be obtained.
@@ -102,7 +102,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $Mail;
 
     /**
-     * @var string Agent phone number.
+     * @var string Agent Telephone
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Phone;
@@ -126,7 +126,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $EndedTimestamp;
 
     /**
-     * @var string Recording ID can be indexed to the agent side recording.
+     * @var string Recording ID, which can be used to index the recording on the agent side
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $RecordId;
@@ -138,7 +138,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $Type;
 
     /**
-     * @var string Transfer source agent information.
+     * @var string Transfer Source Agent Information
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $TransferFrom;
@@ -150,7 +150,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $TransferFromType;
 
     /**
-     * @var string Transfer destination agent information.
+     * @var string Transfer Destination Agent Information
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $TransferTo;
@@ -206,7 +206,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     /**
      * @param string $Mail Agent email.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Phone Agent phone number.
+     * @param string $Phone Agent Telephone
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $RingTimestamp Ring timestamp. Unix second-level timestamp.
 Note: This field may return null, indicating that no valid values can be obtained.
@@ -214,15 +214,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $EndedTimestamp End timestamp. Unix second-level timestamp.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $RecordId Recording ID can be indexed to the agent side recording.
+     * @param string $RecordId Recording ID, which can be used to index the recording on the agent side
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $Type Participant type: "staffSeat", "outboundSeat", "staffPhoneSeat".
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $TransferFrom Transfer source agent information.
+     * @param string $TransferFrom Transfer Source Agent Information
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $TransferFromType Transfer source participant type is consistent with the Type value.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $TransferTo Transfer destination agent information.
+     * @param string $TransferTo Transfer Destination Agent Information
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $TransferToType Transfer destination participant type is consistent with Type values.
 Note: This field may return null, indicating that no valid values can be obtained.

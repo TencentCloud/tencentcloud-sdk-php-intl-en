@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStaffList(array $StaffList) Set Filter agent list. By default, do not pass all returned agent information.
  * @method array getGroupIdList() Obtain Filter skill group ID list.
  * @method void setGroupIdList(array $GroupIdList) Set Filter skill group ID list.
- * @method array getStatusList() Obtain Filter agent status list.
- * @method void setStatusList(array $StatusList) Set Filter agent status list.
+ * @method array getStatusList() Obtain Filter agent status list Agent status free Available | busy Busy | rest On Break | notReady Not Ready | afterCallWork Post-call Adjustment | offline Offline
+ * @method void setStatusList(array $StatusList) Set Filter agent status list Agent status free Available | busy Busy | rest On Break | notReady Not Ready | afterCallWork Post-call Adjustment | offline Offline
  */
 class DescribeStaffStatusMetricsRequest extends AbstractModel
 {
@@ -47,7 +47,7 @@ class DescribeStaffStatusMetricsRequest extends AbstractModel
     public $GroupIdList;
 
     /**
-     * @var array Filter agent status list.
+     * @var array Filter agent status list Agent status free Available | busy Busy | rest On Break | notReady Not Ready | afterCallWork Post-call Adjustment | offline Offline
      */
     public $StatusList;
 
@@ -55,7 +55,7 @@ class DescribeStaffStatusMetricsRequest extends AbstractModel
      * @param integer $SdkAppId Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
      * @param array $StaffList Filter agent list. By default, do not pass all returned agent information.
      * @param array $GroupIdList Filter skill group ID list.
-     * @param array $StatusList Filter agent status list.
+     * @param array $StatusList Filter agent status list Agent status free Available | busy Busy | rest On Break | notReady Not Ready | afterCallWork Post-call Adjustment | offline Offline
      */
     function __construct()
     {

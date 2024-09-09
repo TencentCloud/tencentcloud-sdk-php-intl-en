@@ -18,7 +18,7 @@ namespace TencentCloud\Ccc\V20200210\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Supplementary agent status information.
+ * Supplementary Information on Agent Status
  *
  * @method string getType() Obtain IM - Text | TEL - Cell phone | ALL - Full media.
  * @method void setType(string $Type) Set IM - Text | TEL - Cell phone | ALL - Full media.

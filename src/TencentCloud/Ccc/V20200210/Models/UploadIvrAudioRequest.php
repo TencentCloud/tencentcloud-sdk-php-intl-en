@@ -18,14 +18,14 @@ namespace TencentCloud\Ccc\V20200210\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DeleteStaff request structure.
+ * UploadIvrAudio request structure.
  *
  * @method integer getSdkAppId() Obtain Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
  * @method void setSdkAppId(integer $SdkAppId) Set Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
- * @method array getStaffList() Obtain Customer service emails, supports up to 200 at a time.
- * @method void setStaffList(array $StaffList) Set Customer service emails, supports up to 200 at a time.
+ * @method array getAudioList() Obtain Audio File List
+ * @method void setAudioList(array $AudioList) Set Audio File List
  */
-class DeleteStaffRequest extends AbstractModel
+class UploadIvrAudioRequest extends AbstractModel
 {
     /**
      * @var integer Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
@@ -33,13 +33,13 @@ class DeleteStaffRequest extends AbstractModel
     public $SdkAppId;
 
     /**
-     * @var array Customer service emails, supports up to 200 at a time.
+     * @var array Audio File List
      */
-    public $StaffList;
+    public $AudioList;
 
     /**
      * @param integer $SdkAppId Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
-     * @param array $StaffList Customer service emails, supports up to 200 at a time.
+     * @param array $AudioList Audio File List
      */
     function __construct()
     {
@@ -58,8 +58,13 @@ class DeleteStaffRequest extends AbstractModel
             $this->SdkAppId = $param["SdkAppId"];
         }
 
-        if (array_key_exists("StaffList",$param) and $param["StaffList"] !== null) {
-            $this->StaffList = $param["StaffList"];
+        if (array_key_exists("AudioList",$param) and $param["AudioList"] !== null) {
+            $this->AudioList = [];
+            foreach ($param["AudioList"] as $key => $value){
+                $obj = new UploadAudioInfo();
+                $obj->deserialize($value);
+                array_push($this->AudioList, $obj);
+            }
         }
     }
 }

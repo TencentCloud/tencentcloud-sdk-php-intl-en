@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeTelCdr request structure.
  *
- * @method integer getStartTimeStamp() Obtain Start timestamp. Unix second-level timestamp.
- * @method void setStartTimeStamp(integer $StartTimeStamp) Set Start timestamp. Unix second-level timestamp.
- * @method integer getEndTimeStamp() Obtain End timestamp. Unix second-level timestamp.
- * @method void setEndTimeStamp(integer $EndTimeStamp) Set End timestamp. Unix second-level timestamp.
+ * @method integer getStartTimeStamp() Obtain Start timestamp, Unix Timestamp in Seconds. Supports up to the past 180 days.
+ * @method void setStartTimeStamp(integer $StartTimeStamp) Set Start timestamp, Unix Timestamp in Seconds. Supports up to the past 180 days.
+ * @method integer getEndTimeStamp() Obtain End timestamp, Unix Timestamp in Seconds. The range between the end time and start time is less than 90 days.
+ * @method void setEndTimeStamp(integer $EndTimeStamp) Set End timestamp, Unix Timestamp in Seconds. The range between the end time and start time is less than 90 days.
  * @method integer getInstanceId() Obtain Instance ID (deprecated).
  * @method void setInstanceId(integer $InstanceId) Set Instance ID (deprecated).
  * @method integer getLimit() Obtain Maximum number of returned entries (deprecated).
@@ -44,12 +44,12 @@ use TencentCloud\Common\AbstractModel;
 class DescribeTelCdrRequest extends AbstractModel
 {
     /**
-     * @var integer Start timestamp. Unix second-level timestamp.
+     * @var integer Start timestamp, Unix Timestamp in Seconds. Supports up to the past 180 days.
      */
     public $StartTimeStamp;
 
     /**
-     * @var integer End timestamp. Unix second-level timestamp.
+     * @var integer End timestamp, Unix Timestamp in Seconds. The range between the end time and start time is less than 90 days.
      */
     public $EndTimeStamp;
 
@@ -95,8 +95,8 @@ class DescribeTelCdrRequest extends AbstractModel
     public $SessionIds;
 
     /**
-     * @param integer $StartTimeStamp Start timestamp. Unix second-level timestamp.
-     * @param integer $EndTimeStamp End timestamp. Unix second-level timestamp.
+     * @param integer $StartTimeStamp Start timestamp, Unix Timestamp in Seconds. Supports up to the past 180 days.
+     * @param integer $EndTimeStamp End timestamp, Unix Timestamp in Seconds. The range between the end time and start time is less than 90 days.
      * @param integer $InstanceId Instance ID (deprecated).
      * @param integer $Limit Maximum number of returned entries (deprecated).
      * @param integer $Offset Offset (deprecated).

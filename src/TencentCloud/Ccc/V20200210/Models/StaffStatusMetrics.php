@@ -18,14 +18,14 @@ namespace TencentCloud\Ccc\V20200210\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Agent status information.
+ * Agent status-related information
  *
  * @method string getEmail() Obtain Agent email.
  * @method void setEmail(string $Email) Set Agent email.
- * @method string getStatus() Obtain Agent status: Free for Available | busy for Busy | rest for Break | notReady for Not Ready | afterCallWork for After Call Work | offline for Offline.
- * @method void setStatus(string $Status) Set Agent status: Free for Available | busy for Busy | rest for Break | notReady for Not Ready | afterCallWork for After Call Work | offline for Offline.
- * @method StaffStatusExtra getStatusExtra() Obtain Supplementary agent status information.
- * @method void setStatusExtra(StaffStatusExtra $StatusExtra) Set Supplementary agent status information.
+ * @method string getStatus() Obtain Agent status free Available | busy Busy | rest On Break | notReady Not Ready | afterCallWork Post-call Adjustment | offline Offline
+ * @method void setStatus(string $Status) Set Agent status free Available | busy Busy | rest On Break | notReady Not Ready | afterCallWork Post-call Adjustment | offline Offline
+ * @method StaffStatusExtra getStatusExtra() Obtain Supplementary Information on Agent Status
+ * @method void setStatusExtra(StaffStatusExtra $StatusExtra) Set Supplementary Information on Agent Status
  * @method integer getOnlineDuration() Obtain Total Online duration of the day.
  * @method void setOnlineDuration(integer $OnlineDuration) Set Total Online duration of the day.
  * @method integer getFreeDuration() Obtain Total Available duration of the day.
@@ -65,12 +65,12 @@ class StaffStatusMetrics extends AbstractModel
     public $Email;
 
     /**
-     * @var string Agent status: Free for Available | busy for Busy | rest for Break | notReady for Not Ready | afterCallWork for After Call Work | offline for Offline.
+     * @var string Agent status free Available | busy Busy | rest On Break | notReady Not Ready | afterCallWork Post-call Adjustment | offline Offline
      */
     public $Status;
 
     /**
-     * @var StaffStatusExtra Supplementary agent status information.
+     * @var StaffStatusExtra Supplementary Information on Agent Status
      */
     public $StatusExtra;
 
@@ -143,8 +143,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * @param string $Email Agent email.
-     * @param string $Status Agent status: Free for Available | busy for Busy | rest for Break | notReady for Not Ready | afterCallWork for After Call Work | offline for Offline.
-     * @param StaffStatusExtra $StatusExtra Supplementary agent status information.
+     * @param string $Status Agent status free Available | busy Busy | rest On Break | notReady Not Ready | afterCallWork Post-call Adjustment | offline Offline
+     * @param StaffStatusExtra $StatusExtra Supplementary Information on Agent Status
      * @param integer $OnlineDuration Total Online duration of the day.
      * @param integer $FreeDuration Total Available duration of the day.
      * @param integer $BusyDuration Total Busy duration of the day.

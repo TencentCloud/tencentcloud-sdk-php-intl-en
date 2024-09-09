@@ -18,14 +18,16 @@ namespace TencentCloud\Ccc\V20200210\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DeleteStaff request structure.
+ * ModifyStaffPassword request structure.
  *
  * @method integer getSdkAppId() Obtain Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
  * @method void setSdkAppId(integer $SdkAppId) Set Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
- * @method array getStaffList() Obtain Customer service emails, supports up to 200 at a time.
- * @method void setStaffList(array $StaffList) Set Customer service emails, supports up to 200 at a time.
+ * @method string getEmail() Obtain Agent email.
+ * @method void setEmail(string $Email) Set Agent email.
+ * @method string getPassword() Obtain The set password 
+ * @method void setPassword(string $Password) Set The set password 
  */
-class DeleteStaffRequest extends AbstractModel
+class ModifyStaffPasswordRequest extends AbstractModel
 {
     /**
      * @var integer Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
@@ -33,13 +35,19 @@ class DeleteStaffRequest extends AbstractModel
     public $SdkAppId;
 
     /**
-     * @var array Customer service emails, supports up to 200 at a time.
+     * @var string Agent email.
      */
-    public $StaffList;
+    public $Email;
+
+    /**
+     * @var string The set password 
+     */
+    public $Password;
 
     /**
      * @param integer $SdkAppId Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
-     * @param array $StaffList Customer service emails, supports up to 200 at a time.
+     * @param string $Email Agent email.
+     * @param string $Password The set password 
      */
     function __construct()
     {
@@ -58,8 +66,12 @@ class DeleteStaffRequest extends AbstractModel
             $this->SdkAppId = $param["SdkAppId"];
         }
 
-        if (array_key_exists("StaffList",$param) and $param["StaffList"] !== null) {
-            $this->StaffList = $param["StaffList"];
+        if (array_key_exists("Email",$param) and $param["Email"] !== null) {
+            $this->Email = $param["Email"];
+        }
+
+        if (array_key_exists("Password",$param) and $param["Password"] !== null) {
+            $this->Password = $param["Password"];
         }
     }
 }

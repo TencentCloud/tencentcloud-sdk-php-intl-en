@@ -23,26 +23,31 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Ccc\V20200210\Models as Models;
 
 /**
- * @method Models\AbortPredictiveDialingCampaignResponse AbortPredictiveDialingCampaign(Models\AbortPredictiveDialingCampaignRequest $req) This API is used to pause the predictive outbound call task.
- * @method Models\BindNumberCallOutSkillGroupResponse BindNumberCallOutSkillGroup(Models\BindNumberCallOutSkillGroupRequest $req) This API is used to bind outbound skill group of number.
- * @method Models\BindStaffSkillGroupListResponse BindStaffSkillGroupList(Models\BindStaffSkillGroupListRequest $req) This API is used to bind the agent's skill group.
+ * @method Models\AbortAgentCruiseDialingCampaignResponse AbortAgentCruiseDialingCampaign(Models\AbortAgentCruiseDialingCampaignRequest $req) If you want to stop running agent's individual auto task, then call AbortAgentCruiseDialingCampaign to terminate.
+ * @method Models\AbortPredictiveDialingCampaignResponse AbortPredictiveDialingCampaign(Models\AbortPredictiveDialingCampaignRequest $req) This API is used to pause predictive dialing campaign
+ * @method Models\BindNumberCallOutSkillGroupResponse BindNumberCallOutSkillGroup(Models\BindNumberCallOutSkillGroupRequest $req) This API is used to assign outbound skill group(s) to your number
+ * @method Models\BindStaffSkillGroupListResponse BindStaffSkillGroupList(Models\BindStaffSkillGroupListRequest $req) This API is used to assign an agent to skill group
  * @method Models\CreateAdminURLResponse CreateAdminURL(Models\CreateAdminURLRequest $req) This API is used to create a management access link.
+ * @method Models\CreateAgentCruiseDialingCampaignResponse CreateAgentCruiseDialingCampaign(Models\CreateAgentCruiseDialingCampaignRequest $req) This document shows how to call API to create an individual auto dialing campaign for agent
  * @method Models\CreateAutoCalloutTaskResponse CreateAutoCalloutTask(Models\CreateAutoCalloutTaskRequest $req) This API is used to create the automatic outbound call task.
  * @method Models\CreateCCCSkillGroupResponse CreateCCCSkillGroup(Models\CreateCCCSkillGroupRequest $req) This API is used to create a new skill group.
  * @method Models\CreateCallOutSessionResponse CreateCallOutSession(Models\CreateCallOutSessionRequest $req) This API is used to create outbound sessions. Currently, only dual call is supported. That is, firstly, please use the platform number to call the agent's cell phone. After the agent answers, then please make outbound calls to the user. Due to ISP frequency restrictions, the agent's phone number must first be added to the allowlist to avoid frequency control which may lead to the failure of the outbound call.
  * @method Models\CreateExtensionResponse CreateExtension(Models\CreateExtensionRequest $req) This API is used to create the telephone account.
+ * @method Models\CreateIVRSessionResponse CreateIVRSession(Models\CreateIVRSessionRequest $req) Create a session associated with IVR. This feature is supported only in the Advanced Version. Currently, it supports inbound and automatic outbound IVR types. Upon receiving the request, TCCC will first attempt to call the callee, then enter the IVR flow.
  * @method Models\CreatePredictiveDialingCampaignResponse CreatePredictiveDialingCampaign(Models\CreatePredictiveDialingCampaignRequest $req) This API is used to create the predictive outbound call task.
  * @method Models\CreateSDKLoginTokenResponse CreateSDKLoginToken(Models\CreateSDKLoginTokenRequest $req) This API is used to create the SDK log-in token.
  * @method Models\CreateStaffResponse CreateStaff(Models\CreateStaffRequest $req) This API is used to create the customer service account.
  * @method Models\DeleteExtensionResponse DeleteExtension(Models\DeleteExtensionRequest $req) This API is used to delete telephone accounts.
  * @method Models\DeletePredictiveDialingCampaignResponse DeletePredictiveDialingCampaign(Models\DeletePredictiveDialingCampaignRequest $req) This API is used to delete the predictive outbound call task.
  * @method Models\DeleteStaffResponse DeleteStaff(Models\DeleteStaffRequest $req) This API is used to delete the agent information.
+ * @method Models\DescribeAgentCruiseDialingCampaignResponse DescribeAgentCruiseDialingCampaign(Models\DescribeAgentCruiseDialingCampaignRequest $req) Query Agent Cruise-style Outbound Call Task
  * @method Models\DescribeAutoCalloutTaskResponse DescribeAutoCalloutTask(Models\DescribeAutoCalloutTaskRequest $req) This API is used to query automatic outbound call task details.
- * @method Models\DescribeAutoCalloutTasksResponse DescribeAutoCalloutTasks(Models\DescribeAutoCalloutTasksRequest $req) This API is used to query auto-task outbound calls in batch.
+ * @method Models\DescribeAutoCalloutTasksResponse DescribeAutoCalloutTasks(Models\DescribeAutoCalloutTasksRequest $req) Batch Query Automatic Outbound Call Tasks
  * @method Models\DescribeCCCBuyInfoListResponse DescribeCCCBuyInfoList(Models\DescribeCCCBuyInfoListRequest $req) This API is used to access the user purchasing information list.
  * @method Models\DescribeCallInMetricsResponse DescribeCallInMetrics(Models\DescribeCallInMetricsRequest $req) This API is used to access the inbound real-time data statistical metrics.
  * @method Models\DescribeExtensionResponse DescribeExtension(Models\DescribeExtensionRequest $req) This API is used to access the telephone information.
  * @method Models\DescribeExtensionsResponse DescribeExtensions(Models\DescribeExtensionsRequest $req) This API is used to query the telephone list information.
+ * @method Models\DescribeIvrAudioListResponse DescribeIvrAudioList(Models\DescribeIvrAudioListRequest $req) Query IVR Audio File List Information
  * @method Models\DescribeNumbersResponse DescribeNumbers(Models\DescribeNumbersRequest $req) This API is used to query the number list.
  * @method Models\DescribePSTNActiveSessionListResponse DescribePSTNActiveSessionList(Models\DescribePSTNActiveSessionListRequest $req) This API is used to access the current calling session list.
  * @method Models\DescribePredictiveDialingCampaignResponse DescribePredictiveDialingCampaign(Models\DescribePredictiveDialingCampaignRequest $req) This API is used to query the predictive outbound call task.
@@ -52,13 +57,14 @@ use TencentCloud\Ccc\V20200210\Models as Models;
  * @method Models\DescribeSkillGroupInfoListResponse DescribeSkillGroupInfoList(Models\DescribeSkillGroupInfoListRequest $req) This API is used to access the skill group information list.
  * @method Models\DescribeStaffInfoListResponse DescribeStaffInfoList(Models\DescribeStaffInfoListRequest $req) This API is used to access the agent information list.
  * @method Models\DescribeStaffStatusMetricsResponse DescribeStaffStatusMetrics(Models\DescribeStaffStatusMetricsRequest $req) This API is used to access the real-time status statistics metrics of the agent.
- * @method Models\DescribeTelCallInfoResponse DescribeTelCallInfo(Models\DescribeTelCallInfoRequest $req) This API is used to access telephone consumption statistics by instance.
+ * @method Models\DescribeTelCallInfoResponse DescribeTelCallInfo(Models\DescribeTelCallInfoRequest $req) This API is used to access call detail records by application
  * @method Models\DescribeTelCdrResponse DescribeTelCdr(Models\DescribeTelCdrRequest $req) This API is used to access phone service records and recordings.
  * @method Models\DescribeTelSessionResponse DescribeTelSession(Models\DescribeTelSessionRequest $req) This API is used to access the PSTN session information.
  * @method Models\DisableCCCPhoneNumberResponse DisableCCCPhoneNumber(Models\DisableCCCPhoneNumberRequest $req) This API is used to disable numbers.
  * @method Models\HangUpCallResponse HangUpCall(Models\HangUpCallRequest $req) This API is used to hang up the phone.
  * @method Models\ModifyExtensionResponse ModifyExtension(Models\ModifyExtensionRequest $req) This API is used to modify telephone accounts (binding skill group, binding agent account).
- * @method Models\ModifyStaffResponse ModifyStaff(Models\ModifyStaffRequest $req) This API is used to modify the customer service account.
+ * @method Models\ModifyStaffResponse ModifyStaff(Models\ModifyStaffRequest $req) This API is used to modify  customer service / agent account.
+ * @method Models\ModifyStaffPasswordResponse ModifyStaffPassword(Models\ModifyStaffPasswordRequest $req) Modify Agent's Password
  * @method Models\PausePredictiveDialingCampaignResponse PausePredictiveDialingCampaign(Models\PausePredictiveDialingCampaignRequest $req) This API is used to pause the predictive outbound call task.
  * @method Models\ResetExtensionPasswordResponse ResetExtensionPassword(Models\ResetExtensionPasswordRequest $req) This API is used to reset the telephone register password.
  * @method Models\ResumePredictiveDialingCampaignResponse ResumePredictiveDialingCampaign(Models\ResumePredictiveDialingCampaignRequest $req) This API is used to resume the predictive outbound call task.
@@ -67,6 +73,7 @@ use TencentCloud\Ccc\V20200210\Models as Models;
  * @method Models\UnbindStaffSkillGroupListResponse UnbindStaffSkillGroupList(Models\UnbindStaffSkillGroupListRequest $req) This API is used to unbind the agent's skill group.
  * @method Models\UpdateCCCSkillGroupResponse UpdateCCCSkillGroup(Models\UpdateCCCSkillGroupRequest $req) This API is used to update the skill group.
  * @method Models\UpdatePredictiveDialingCampaignResponse UpdatePredictiveDialingCampaign(Models\UpdatePredictiveDialingCampaignRequest $req) This API is used to update the predictive outbound call task before it starts.
+ * @method Models\UploadIvrAudioResponse UploadIvrAudio(Models\UploadIvrAudioRequest $req) Upload audio files used in IVR, with a daily upload limit of 50 files. (It is recommended to use temporary links stored in Tencent Cloud Cos for the audio file URL in the parameters)
  */
 
 class CccClient extends AbstractClient

@@ -18,10 +18,10 @@ namespace TencentCloud\Ccc\V20200210\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Agent Purchase Information.
+ * Agent purchase information
  *
- * @method integer getNum() Obtain Number of agents purchased.
- * @method void setNum(integer $Num) Set Number of agents purchased.
+ * @method integer getNum() Obtain Number of agents purchased
+ * @method void setNum(integer $Num) Set Number of agents purchased
  * @method integer getBuyTime() Obtain Purchased timestamp.
  * @method void setBuyTime(integer $BuyTime) Set Purchased timestamp.
  * @method integer getEndTime() Obtain End timestamp.
@@ -34,7 +34,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 class StaffBuyInfo extends AbstractModel
 {
     /**
-     * @var integer Number of agents purchased.
+     * @var integer Number of agents purchased
      */
     public $Num;
 
@@ -55,7 +55,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $SipNum;
 
     /**
-     * @param integer $Num Number of agents purchased.
+     * @param integer $Num Number of agents purchased
      * @param integer $BuyTime Purchased timestamp.
      * @param integer $EndTime End timestamp.
      * @param integer $SipNum Number of office telephones purchased.

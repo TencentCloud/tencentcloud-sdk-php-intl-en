@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setOutputGroup(array $OutputGroup) Set Output group.
 Note: this field may return null, indicating that no valid values can be obtained.
+ * @method string getEventId() Obtain EventId of the StreamLink event associated with this Flow.
+ * @method void setEventId(string $EventId) Set EventId of the StreamLink event associated with this Flow.
  */
 class DescribeFlow extends AbstractModel
 {
@@ -69,6 +71,11 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $OutputGroup;
 
     /**
+     * @var string EventId of the StreamLink event associated with this Flow.
+     */
+    public $EventId;
+
+    /**
      * @param string $FlowId Flow ID.
      * @param string $FlowName Flow name.
      * @param string $State Flow status. Valid values: `IDLE`, `RUNNING`
@@ -76,6 +83,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @param array $InputGroup Input group.
      * @param array $OutputGroup Output group.
 Note: this field may return null, indicating that no valid values can be obtained.
+     * @param string $EventId EventId of the StreamLink event associated with this Flow.
      */
     function __construct()
     {
@@ -122,6 +130,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
                 $obj->deserialize($value);
                 array_push($this->OutputGroup, $obj);
             }
+        }
+
+        if (array_key_exists("EventId",$param) and $param["EventId"] !== null) {
+            $this->EventId = $param["EventId"];
         }
     }
 }

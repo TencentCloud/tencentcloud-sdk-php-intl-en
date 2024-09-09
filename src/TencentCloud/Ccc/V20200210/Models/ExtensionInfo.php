@@ -38,10 +38,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStatus(integer $Status) Set Telephone status (0 Offline, 100 Free, 200 Busy).
  * @method boolean getRegister() Obtain Whether to register.
  * @method void setRegister(boolean $Register) Set Whether to register.
- * @method string getRelation() Obtain Bind agent email.
- * @method void setRelation(string $Relation) Set Bind agent email.
- * @method string getRelationName() Obtain Bind agent name
- * @method void setRelationName(string $RelationName) Set Bind agent name
+ * @method string getRelation() Obtain Bind Agent Email
+ * @method void setRelation(string $Relation) Set Bind Agent Email
+ * @method string getRelationName() Obtain Bind Agent Name
+ * @method void setRelationName(string $RelationName) Set Bind Agent Name
  */
 class ExtensionInfo extends AbstractModel
 {
@@ -91,12 +91,12 @@ class ExtensionInfo extends AbstractModel
     public $Register;
 
     /**
-     * @var string Bind agent email.
+     * @var string Bind Agent Email
      */
     public $Relation;
 
     /**
-     * @var string Bind agent name
+     * @var string Bind Agent Name
      */
     public $RelationName;
 
@@ -110,8 +110,8 @@ class ExtensionInfo extends AbstractModel
      * @param integer $ModifyTime Last modification time.
      * @param integer $Status Telephone status (0 Offline, 100 Free, 200 Busy).
      * @param boolean $Register Whether to register.
-     * @param string $Relation Bind agent email.
-     * @param string $RelationName Bind agent name
+     * @param string $Relation Bind Agent Email
+     * @param string $RelationName Bind Agent Name
      */
     function __construct()
     {

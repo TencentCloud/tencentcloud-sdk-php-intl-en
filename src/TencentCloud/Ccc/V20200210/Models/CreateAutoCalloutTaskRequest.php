@@ -36,8 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDescription(string $Description) Set Task description.
  * @method integer getNotAfter() Obtain Task stop timestamp. Unix second-level timestamp.
  * @method void setNotAfter(integer $NotAfter) Set Task stop timestamp. Unix second-level timestamp.
- * @method integer getTries() Obtain Maximum attempts.
- * @method void setTries(integer $Tries) Set Maximum attempts.
+ * @method integer getTries() Obtain Maximum attempts, 1-3 times
+ * @method void setTries(integer $Tries) Set Maximum attempts, 1-3 times
  * @method array getVariables() Obtain Custom variables (supported only in advanced versions).
  * @method void setVariables(array $Variables) Set Custom variables (supported only in advanced versions).
  * @method string getUUI() Obtain UUI
@@ -88,7 +88,7 @@ class CreateAutoCalloutTaskRequest extends AbstractModel
     public $NotAfter;
 
     /**
-     * @var integer Maximum attempts.
+     * @var integer Maximum attempts, 1-3 times
      */
     public $Tries;
 
@@ -116,7 +116,7 @@ class CreateAutoCalloutTaskRequest extends AbstractModel
      * @param string $Name Task name.
      * @param string $Description Task description.
      * @param integer $NotAfter Task stop timestamp. Unix second-level timestamp.
-     * @param integer $Tries Maximum attempts.
+     * @param integer $Tries Maximum attempts, 1-3 times
      * @param array $Variables Custom variables (supported only in advanced versions).
      * @param string $UUI UUI
      * @param array $CalleeAttributes Property of the called.

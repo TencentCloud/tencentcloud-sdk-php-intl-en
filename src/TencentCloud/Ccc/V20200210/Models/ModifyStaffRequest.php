@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPhone(string $Phone) Set Agent phone number (preceded by 0086, example: 008618011111111).
  * @method string getNick() Obtain Agent nickname.
  * @method void setNick(string $Nick) Set Agent nickname.
+ * @method string getStaffNo() Obtain Agent ID
+ * @method void setStaffNo(string $StaffNo) Set Agent ID
  * @method array getSkillGroupIds() Obtain Bind skill group ID list.
  * @method void setSkillGroupIds(array $SkillGroupIds) Set Bind skill group ID list.
  * @method boolean getUseMobileCallOut() Obtain Whether the cell phone outbound call switch is enabled or not.
@@ -65,6 +67,11 @@ class ModifyStaffRequest extends AbstractModel
     public $Nick;
 
     /**
+     * @var string Agent ID
+     */
+    public $StaffNo;
+
+    /**
      * @var array Bind skill group ID list.
      */
     public $SkillGroupIds;
@@ -85,6 +92,7 @@ class ModifyStaffRequest extends AbstractModel
      * @param string $Name Agent name.
      * @param string $Phone Agent phone number (preceded by 0086, example: 008618011111111).
      * @param string $Nick Agent nickname.
+     * @param string $StaffNo Agent ID
      * @param array $SkillGroupIds Bind skill group ID list.
      * @param boolean $UseMobileCallOut Whether the cell phone outbound call switch is enabled or not.
      * @param integer $UseMobileAccept Cell phone answering pattern: 0 - Off | 1 - Only when Offline | 2 - Always.
@@ -120,6 +128,10 @@ class ModifyStaffRequest extends AbstractModel
 
         if (array_key_exists("Nick",$param) and $param["Nick"] !== null) {
             $this->Nick = $param["Nick"];
+        }
+
+        if (array_key_exists("StaffNo",$param) and $param["StaffNo"] !== null) {
+            $this->StaffNo = $param["StaffNo"];
         }
 
         if (array_key_exists("SkillGroupIds",$param) and $param["SkillGroupIds"] !== null) {

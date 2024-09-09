@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMaxBandwidth(integer $MaxBandwidth) Set Maximum bandwidth in bps. Valid values: `10000000`, `20000000`, `50000000`
  * @method array getInputGroup() Obtain Flow input group
  * @method void setInputGroup(array $InputGroup) Set Flow input group
+ * @method string getEventId() Obtain The media transmission event ID associated with the Flow. Each flow can only be associated with one event.
+ * @method void setEventId(string $EventId) Set The media transmission event ID associated with the Flow. Each flow can only be associated with one event.
  */
 class CreateStreamLinkFlowRequest extends AbstractModel
 {
@@ -45,9 +47,15 @@ class CreateStreamLinkFlowRequest extends AbstractModel
     public $InputGroup;
 
     /**
+     * @var string The media transmission event ID associated with the Flow. Each flow can only be associated with one event.
+     */
+    public $EventId;
+
+    /**
      * @param string $FlowName Flow name
      * @param integer $MaxBandwidth Maximum bandwidth in bps. Valid values: `10000000`, `20000000`, `50000000`
      * @param array $InputGroup Flow input group
+     * @param string $EventId The media transmission event ID associated with the Flow. Each flow can only be associated with one event.
      */
     function __construct()
     {
@@ -77,6 +85,10 @@ class CreateStreamLinkFlowRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->InputGroup, $obj);
             }
+        }
+
+        if (array_key_exists("EventId",$param) and $param["EventId"] !== null) {
+            $this->EventId = $param["EventId"];
         }
     }
 }

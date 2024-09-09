@@ -30,10 +30,10 @@ use TencentCloud\Common\AbstractModel;
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setRoutePolicy(string $RoutePolicy) Set Session allocation policy.
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method integer getUsingLastSeat() Obtain Whether the session is allocated to the last serviced agent first.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setUsingLastSeat(integer $UsingLastSeat) Set Whether the session is allocated to the last serviced agent first.
-Note: this field may return null, indicating that no valid values can be obtained.
+ * @method integer getUsingLastSeat() Obtain Should the conversation allocation prioritize the last service seat?
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setUsingLastSeat(integer $UsingLastSeat) Set Should the conversation allocation prioritize the last service seat?
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method integer getMaxConcurrency() Obtain Maximum concurrency number of single client service (default 1 for telephone type).
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setMaxConcurrency(integer $MaxConcurrency) Set Maximum concurrency number of single client service (default 1 for telephone type).
@@ -46,6 +46,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setSkillGroupType(integer $SkillGroupType) Set Skill group type 0-phone, 1-online, 3-audio, 4-video.
 Note: this field may return null, indicating that no valid values can be obtained.
+ * @method string getAlias() Obtain Extension number within the skill group
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setAlias(string $Alias) Set Extension number within the skill group
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class SkillGroupInfoItem extends AbstractModel
 {
@@ -71,8 +75,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $RoutePolicy;
 
     /**
-     * @var integer Whether the session is allocated to the last serviced agent first.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var integer Should the conversation allocation prioritize the last service seat?
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $UsingLastSeat;
 
@@ -95,19 +99,27 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $SkillGroupType;
 
     /**
+     * @var string Extension number within the skill group
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $Alias;
+
+    /**
      * @param integer $SkillGroupId Skill group ID.
      * @param string $SkillGroupName Skill group name.
      * @param string $Type (Deprecated) Type: IM, TEL, ALL (full media).
      * @param string $RoutePolicy Session allocation policy.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param integer $UsingLastSeat Whether the session is allocated to the last serviced agent first.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @param integer $UsingLastSeat Should the conversation allocation prioritize the last service seat?
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $MaxConcurrency Maximum concurrency number of single client service (default 1 for telephone type).
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param integer $LastModifyTimestamp Last modification time.
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param integer $SkillGroupType Skill group type 0-phone, 1-online, 3-audio, 4-video.
 Note: this field may return null, indicating that no valid values can be obtained.
+     * @param string $Alias Extension number within the skill group
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -152,6 +164,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("SkillGroupType",$param) and $param["SkillGroupType"] !== null) {
             $this->SkillGroupType = $param["SkillGroupType"];
+        }
+
+        if (array_key_exists("Alias",$param) and $param["Alias"] !== null) {
+            $this->Alias = $param["Alias"];
         }
     }
 }

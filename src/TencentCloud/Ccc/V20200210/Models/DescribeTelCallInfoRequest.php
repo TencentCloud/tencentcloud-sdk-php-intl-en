@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeTelCallInfo request structure.
  *
- * @method integer getStartTimeStamp() Obtain Start timestamp Unix timestamp (supports only day dimension. For example, for querying May 1st, you should pass a timestamp from "2023-05-01 00:00:00" to "2023-05-01 23:59:59" and for querying both May 1st and 2nd, you should pass a timestamp from "2023-05-01 00:00:00" to "2023-05-02 23:59:59").
- * @method void setStartTimeStamp(integer $StartTimeStamp) Set Start timestamp Unix timestamp (supports only day dimension. For example, for querying May 1st, you should pass a timestamp from "2023-05-01 00:00:00" to "2023-05-01 23:59:59" and for querying both May 1st and 2nd, you should pass a timestamp from "2023-05-01 00:00:00" to "2023-05-02 23:59:59").
- * @method integer getEndTimeStamp() Obtain End timestamp. Unix timestamp and the maximum query time range is 90 days (supports only day dimension, for example, for querying May 1st, you should pass timestamp from "2023-05-01 00:00:00" to "2023-05-01 23:59:59" and for querying both May 1st and May 2nd, you should pass timestamp from "2023-05-01 00:00:00" to "2023-05-02 23:59:59").
- * @method void setEndTimeStamp(integer $EndTimeStamp) Set End timestamp. Unix timestamp and the maximum query time range is 90 days (supports only day dimension, for example, for querying May 1st, you should pass timestamp from "2023-05-01 00:00:00" to "2023-05-01 23:59:59" and for querying both May 1st and May 2nd, you should pass timestamp from "2023-05-01 00:00:00" to "2023-05-02 23:59:59").
+ * @method integer getStartTimeStamp() Obtain Start timestamp, Unix timestamp (query dimension supports only daily. For example, to query May 1st, pass startTime:"2023-05-01 00:00:00","endTime":"2023-05-01 23:59:59" timestamp. To query May 1st and May 2nd, pass startTime:"2023-05-01 00:00:00","endTime":"2023-05-02 23:59:59" timestamp)
+ * @method void setStartTimeStamp(integer $StartTimeStamp) Set Start timestamp, Unix timestamp (query dimension supports only daily. For example, to query May 1st, pass startTime:"2023-05-01 00:00:00","endTime":"2023-05-01 23:59:59" timestamp. To query May 1st and May 2nd, pass startTime:"2023-05-01 00:00:00","endTime":"2023-05-02 23:59:59" timestamp)
+ * @method integer getEndTimeStamp() Obtain End timestamp, Unix timestamp, the query time range is up to 90 days (query dimension supports only daily. For example, to query May 1st, pass startTime:"2023-05-01 00:00:00","endTime":"2023-05-01 23:59:59" timestamp. To query May 1st and May 2nd, pass startTime:"2023-05-01 00:00:00","endTime":"2023-05-02 23:59:59" timestamp)
+ * @method void setEndTimeStamp(integer $EndTimeStamp) Set End timestamp, Unix timestamp, the query time range is up to 90 days (query dimension supports only daily. For example, to query May 1st, pass startTime:"2023-05-01 00:00:00","endTime":"2023-05-01 23:59:59" timestamp. To query May 1st and May 2nd, pass startTime:"2023-05-01 00:00:00","endTime":"2023-05-02 23:59:59" timestamp)
  * @method array getSdkAppIdList() Obtain Application ID list, when having multiple IDs, the returned value is the sum of all the IDs.
  * @method void setSdkAppIdList(array $SdkAppIdList) Set Application ID list, when having multiple IDs, the returned value is the sum of all the IDs.
  */
 class DescribeTelCallInfoRequest extends AbstractModel
 {
     /**
-     * @var integer Start timestamp Unix timestamp (supports only day dimension. For example, for querying May 1st, you should pass a timestamp from "2023-05-01 00:00:00" to "2023-05-01 23:59:59" and for querying both May 1st and 2nd, you should pass a timestamp from "2023-05-01 00:00:00" to "2023-05-02 23:59:59").
+     * @var integer Start timestamp, Unix timestamp (query dimension supports only daily. For example, to query May 1st, pass startTime:"2023-05-01 00:00:00","endTime":"2023-05-01 23:59:59" timestamp. To query May 1st and May 2nd, pass startTime:"2023-05-01 00:00:00","endTime":"2023-05-02 23:59:59" timestamp)
      */
     public $StartTimeStamp;
 
     /**
-     * @var integer End timestamp. Unix timestamp and the maximum query time range is 90 days (supports only day dimension, for example, for querying May 1st, you should pass timestamp from "2023-05-01 00:00:00" to "2023-05-01 23:59:59" and for querying both May 1st and May 2nd, you should pass timestamp from "2023-05-01 00:00:00" to "2023-05-02 23:59:59").
+     * @var integer End timestamp, Unix timestamp, the query time range is up to 90 days (query dimension supports only daily. For example, to query May 1st, pass startTime:"2023-05-01 00:00:00","endTime":"2023-05-01 23:59:59" timestamp. To query May 1st and May 2nd, pass startTime:"2023-05-01 00:00:00","endTime":"2023-05-02 23:59:59" timestamp)
      */
     public $EndTimeStamp;
 
@@ -45,8 +45,8 @@ class DescribeTelCallInfoRequest extends AbstractModel
     public $SdkAppIdList;
 
     /**
-     * @param integer $StartTimeStamp Start timestamp Unix timestamp (supports only day dimension. For example, for querying May 1st, you should pass a timestamp from "2023-05-01 00:00:00" to "2023-05-01 23:59:59" and for querying both May 1st and 2nd, you should pass a timestamp from "2023-05-01 00:00:00" to "2023-05-02 23:59:59").
-     * @param integer $EndTimeStamp End timestamp. Unix timestamp and the maximum query time range is 90 days (supports only day dimension, for example, for querying May 1st, you should pass timestamp from "2023-05-01 00:00:00" to "2023-05-01 23:59:59" and for querying both May 1st and May 2nd, you should pass timestamp from "2023-05-01 00:00:00" to "2023-05-02 23:59:59").
+     * @param integer $StartTimeStamp Start timestamp, Unix timestamp (query dimension supports only daily. For example, to query May 1st, pass startTime:"2023-05-01 00:00:00","endTime":"2023-05-01 23:59:59" timestamp. To query May 1st and May 2nd, pass startTime:"2023-05-01 00:00:00","endTime":"2023-05-02 23:59:59" timestamp)
+     * @param integer $EndTimeStamp End timestamp, Unix timestamp, the query time range is up to 90 days (query dimension supports only daily. For example, to query May 1st, pass startTime:"2023-05-01 00:00:00","endTime":"2023-05-01 23:59:59" timestamp. To query May 1st and May 2nd, pass startTime:"2023-05-01 00:00:00","endTime":"2023-05-02 23:59:59" timestamp)
      * @param array $SdkAppIdList Application ID list, when having multiple IDs, the returned value is the sum of all the IDs.
      */
     function __construct()
