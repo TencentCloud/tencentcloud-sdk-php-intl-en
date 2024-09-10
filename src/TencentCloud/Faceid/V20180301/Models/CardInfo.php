@@ -76,6 +76,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setMacaoIDCard(MacaoIDCard $MacaoIDCard) Set Macao ID Card
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method TaiWanIDCard getTaiWanIDCard() Obtain TaiWan ID Card
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setTaiWanIDCard(TaiWanIDCard $TaiWanIDCard) Set TaiWan ID Card
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method JapanIDCard getJapanIDCard() Obtain Japan ID Card
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setJapanIDCard(JapanIDCard $JapanIDCard) Set Japan ID Card
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class CardInfo extends AbstractModel
 {
@@ -164,6 +172,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $MacaoIDCard;
 
     /**
+     * @var TaiWanIDCard TaiWan ID Card
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $TaiWanIDCard;
+
+    /**
+     * @var JapanIDCard Japan ID Card
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $JapanIDCard;
+
+    /**
      * @param HKIDCard $HKIDCard Hong Kong ID Card
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param MLIDCard $MLIDCard Malaysia ID Card
@@ -191,6 +211,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param SingaporeIDCard $SingaporeIDCard Singapore ID Card
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param MacaoIDCard $MacaoIDCard Macao ID Card
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param TaiWanIDCard $TaiWanIDCard TaiWan ID Card
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param JapanIDCard $JapanIDCard Japan ID Card
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
@@ -274,6 +298,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (array_key_exists("MacaoIDCard",$param) and $param["MacaoIDCard"] !== null) {
             $this->MacaoIDCard = new MacaoIDCard();
             $this->MacaoIDCard->deserialize($param["MacaoIDCard"]);
+        }
+
+        if (array_key_exists("TaiWanIDCard",$param) and $param["TaiWanIDCard"] !== null) {
+            $this->TaiWanIDCard = new TaiWanIDCard();
+            $this->TaiWanIDCard->deserialize($param["TaiWanIDCard"]);
+        }
+
+        if (array_key_exists("JapanIDCard",$param) and $param["JapanIDCard"] !== null) {
+            $this->JapanIDCard = new JapanIDCard();
+            $this->JapanIDCard->deserialize($param["JapanIDCard"]);
         }
     }
 }

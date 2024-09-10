@@ -42,9 +42,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setDatabase(string $Database) Set Database name
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getSQLType() Obtain SQL type
+ * @method string getSQLType() Obtain SQL Type: 0 is non-query, 1 is query, -1 is unrestricted.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setSQLType(string $SQLType) Set SQL type
+ * @method void setSQLType(string $SQLType) Set SQL Type: 0 is non-query, 1 is query, -1 is unrestricted.
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getSQLStatement() Obtain SQL statement
 Note: This field may return null, indicating that no valid values can be obtained.
@@ -105,7 +105,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $Database;
 
     /**
-     * @var string SQL type
+     * @var string SQL Type: 0 is non-query, 1 is query, -1 is unrestricted.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $SQLType;
@@ -158,7 +158,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $Database Database name
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $SQLType SQL type
+     * @param string $SQLType SQL Type: 0 is non-query, 1 is query, -1 is unrestricted.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $SQLStatement SQL statement
 Note: This field may return null, indicating that no valid values can be obtained.

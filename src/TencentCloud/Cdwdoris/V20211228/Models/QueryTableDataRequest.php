@@ -34,6 +34,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUserName(string $UserName) Set Use the user who has corresponding permissions for operations. If the TCHouse-D cluster uses a kernel account registered by a CAM user, you do not need to fill it in.
  * @method string getPassWord() Obtain Password corresponding to the user. If the TCHouse-D cluster uses a kernel account registered by a CAM user, you do not need to fill it in.
  * @method void setPassWord(string $PassWord) Set Password corresponding to the user. If the TCHouse-D cluster uses a kernel account registered by a CAM user, you do not need to fill it in.
+ * @method string getCatalogName() Obtain Catalog name, defaults to 'internal' if not specified.
+
+ * @method void setCatalogName(string $CatalogName) Set Catalog name, defaults to 'internal' if not specified.
+
+ * @method string getInstanceId() Obtain InstanceId
+ * @method void setInstanceId(string $InstanceId) Set InstanceId
  */
 class QueryTableDataRequest extends AbstractModel
 {
@@ -73,6 +79,17 @@ class QueryTableDataRequest extends AbstractModel
     public $PassWord;
 
     /**
+     * @var string Catalog name, defaults to 'internal' if not specified.
+
+     */
+    public $CatalogName;
+
+    /**
+     * @var string InstanceId
+     */
+    public $InstanceId;
+
+    /**
      * @param string $Database Database name
      * @param string $Table Table name
      * @param array $SelectedFields Array of fields to be queried
@@ -80,6 +97,9 @@ class QueryTableDataRequest extends AbstractModel
      * @param integer $PageSize Number of records per page, which is 10 by default.
      * @param string $UserName Use the user who has corresponding permissions for operations. If the TCHouse-D cluster uses a kernel account registered by a CAM user, you do not need to fill it in.
      * @param string $PassWord Password corresponding to the user. If the TCHouse-D cluster uses a kernel account registered by a CAM user, you do not need to fill it in.
+     * @param string $CatalogName Catalog name, defaults to 'internal' if not specified.
+
+     * @param string $InstanceId InstanceId
      */
     function __construct()
     {
@@ -120,6 +140,14 @@ class QueryTableDataRequest extends AbstractModel
 
         if (array_key_exists("PassWord",$param) and $param["PassWord"] !== null) {
             $this->PassWord = $param["PassWord"];
+        }
+
+        if (array_key_exists("CatalogName",$param) and $param["CatalogName"] !== null) {
+            $this->CatalogName = $param["CatalogName"];
+        }
+
+        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
+            $this->InstanceId = $param["InstanceId"];
         }
     }
 }

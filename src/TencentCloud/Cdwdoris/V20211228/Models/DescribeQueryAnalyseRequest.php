@@ -42,6 +42,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSortField(string $SortField) Set Sorting field
  * @method string getSortOrder() Obtain Sorting order: asc (ascending) or desc (descending)
  * @method void setSortOrder(string $SortOrder) Set Sorting order: asc (ascending) or desc (descending)
+ * @method integer getQueryTime() Obtain Minimum query execution time, in milliseconds.
+ * @method void setQueryTime(integer $QueryTime) Set Minimum query execution time, in milliseconds.
  */
 class DescribeQueryAnalyseRequest extends AbstractModel
 {
@@ -101,6 +103,11 @@ class DescribeQueryAnalyseRequest extends AbstractModel
     public $SortOrder;
 
     /**
+     * @var integer Minimum query execution time, in milliseconds.
+     */
+    public $QueryTime;
+
+    /**
      * @param string $InstanceId Instance ID
      * @param string $UserName Use the user who has corresponding permissions for operations. If the TCHouse-D cluster uses a kernel account registered by a CAM user, you do not need to fill it in.
      * @param string $PassWord Password corresponding to the user. If the TCHouse-D cluster uses a kernel account registered by a CAM user, you do not need to fill it in.
@@ -112,6 +119,7 @@ class DescribeQueryAnalyseRequest extends AbstractModel
      * @param string $SQLTypeFilter SQL type filter criteria
      * @param string $SortField Sorting field
      * @param string $SortOrder Sorting order: asc (ascending) or desc (descending)
+     * @param integer $QueryTime Minimum query execution time, in milliseconds.
      */
     function __construct()
     {
@@ -168,6 +176,10 @@ class DescribeQueryAnalyseRequest extends AbstractModel
 
         if (array_key_exists("SortOrder",$param) and $param["SortOrder"] !== null) {
             $this->SortOrder = $param["SortOrder"];
+        }
+
+        if (array_key_exists("QueryTime",$param) and $param["QueryTime"] !== null) {
+            $this->QueryTime = $param["QueryTime"];
         }
     }
 }

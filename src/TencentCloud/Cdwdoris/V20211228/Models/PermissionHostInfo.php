@@ -36,6 +36,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
  * @method void setTablePermissions(array $TablePermissions) Set The key is the full name of the table, and the value is the permission list of the user on the table.
 
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method array getCatalogPermissions() Obtain The key is the full name of the catalog, and the value is the permission list of the user on the catalog.
+
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setCatalogPermissions(array $CatalogPermissions) Set The key is the full name of the catalog, and the value is the permission list of the user on the catalog.
+
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class PermissionHostInfo extends AbstractModel
 {
@@ -60,12 +66,22 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $TablePermissions;
 
     /**
+     * @var array The key is the full name of the catalog, and the value is the permission list of the user on the catalog.
+
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $CatalogPermissions;
+
+    /**
      * @param array $GlobalPermissions A list of user permissions in the global scope, which can be applied to all databases and tables.
 
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param array $DatabasePermissions The key is the database name, and the value is the permission list of the user on the database.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param array $TablePermissions The key is the full name of the table, and the value is the permission list of the user on the table.
+
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param array $CatalogPermissions The key is the full name of the catalog, and the value is the permission list of the user on the catalog.
 
 Note: This field may return null, indicating that no valid values can be obtained.
      */
@@ -101,6 +117,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 $obj = new TablePermissions();
                 $obj->deserialize($value);
                 array_push($this->TablePermissions, $obj);
+            }
+        }
+
+        if (array_key_exists("CatalogPermissions",$param) and $param["CatalogPermissions"] !== null) {
+            $this->CatalogPermissions = [];
+            foreach ($param["CatalogPermissions"] as $key => $value){
+                $obj = new CatalogPermission();
+                $obj->deserialize($value);
+                array_push($this->CatalogPermissions, $obj);
             }
         }
     }

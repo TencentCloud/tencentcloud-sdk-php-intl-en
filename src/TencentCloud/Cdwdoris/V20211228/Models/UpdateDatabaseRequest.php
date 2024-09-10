@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUserName(string $UserName) Set Use the user who has corresponding permissions for operations. If the TCHouse-D cluster uses a kernel account registered by a CAM user, you do not need to fill it in.
  * @method string getPassWord() Obtain Password corresponding to the user. If the TCHouse-D cluster uses a kernel account registered by a CAM user, you do not need to fill it in.
  * @method void setPassWord(string $PassWord) Set Password corresponding to the user. If the TCHouse-D cluster uses a kernel account registered by a CAM user, you do not need to fill it in.
+ * @method string getInstanceId() Obtain InstanceId
+ * @method void setInstanceId(string $InstanceId) Set InstanceId
  */
 class UpdateDatabaseRequest extends AbstractModel
 {
@@ -73,6 +75,11 @@ class UpdateDatabaseRequest extends AbstractModel
     public $PassWord;
 
     /**
+     * @var string InstanceId
+     */
+    public $InstanceId;
+
+    /**
      * @param string $DbName The database name to be modified
      * @param string $Operation Modify the operation type, such as SET_QUOTA, RENAME, SET_REPLICA_QUOTA, and SET_PROPERTIES. Modify the operation type, such as SET_QUOTA, RENAME, SET_REPLICA_QUOTA, and SET_PROPERTIES.
      * @param string $Quota Quota value, which is used to set the quota of data volume or replicas.
@@ -80,6 +87,7 @@ class UpdateDatabaseRequest extends AbstractModel
      * @param array $Properties Attribute key-value pair to be set
      * @param string $UserName Use the user who has corresponding permissions for operations. If the TCHouse-D cluster uses a kernel account registered by a CAM user, you do not need to fill it in.
      * @param string $PassWord Password corresponding to the user. If the TCHouse-D cluster uses a kernel account registered by a CAM user, you do not need to fill it in.
+     * @param string $InstanceId InstanceId
      */
     function __construct()
     {
@@ -125,6 +133,10 @@ class UpdateDatabaseRequest extends AbstractModel
 
         if (array_key_exists("PassWord",$param) and $param["PassWord"] !== null) {
             $this->PassWord = $param["PassWord"];
+        }
+
+        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
+            $this->InstanceId = $param["InstanceId"];
         }
     }
 }

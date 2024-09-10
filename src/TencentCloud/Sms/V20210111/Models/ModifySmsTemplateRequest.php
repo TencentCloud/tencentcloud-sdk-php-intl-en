@@ -27,9 +27,9 @@ use TencentCloud\Common\AbstractModel;
  * @method string getTemplateContent() Obtain New template content.
  * @method void setTemplateContent(string $TemplateContent) Set New template content.
  * @method integer getSmsType() Obtain SMS type. 1: Marketing SMS, 2: Notification SMS, 3: OTP SMS.
-Note: The "Regular SMS" type template currently still supports submission. However, in order to further improve the quality of SMS service and increase the approval rate of SMS templates, it is recommended to apply for a new template according to the "Notification SMS" type or the "OTP SMS" type. You can Refer to [Optimization of Tencent Cloud SMS Template Types](https://www.tencentcloud.com/document/product/382/60410).
+Note: To further improve the quality of SMS service and increase the approval rate of SMS templates, Tencent Cloud SMS template types will be optimized to "OTP", "Notification", and "Marketing" from May 16, 2024. You can Refer to [Optimization of Tencent Cloud SMS Template Types](https://www.tencentcloud.com/document/product/382/60410). Customers who newly register for SMS service must strictly refer to the new SMS type to apply for SMS template.
  * @method void setSmsType(integer $SmsType) Set SMS type. 1: Marketing SMS, 2: Notification SMS, 3: OTP SMS.
-Note: The "Regular SMS" type template currently still supports submission. However, in order to further improve the quality of SMS service and increase the approval rate of SMS templates, it is recommended to apply for a new template according to the "Notification SMS" type or the "OTP SMS" type. You can Refer to [Optimization of Tencent Cloud SMS Template Types](https://www.tencentcloud.com/document/product/382/60410).
+Note: To further improve the quality of SMS service and increase the approval rate of SMS templates, Tencent Cloud SMS template types will be optimized to "OTP", "Notification", and "Marketing" from May 16, 2024. You can Refer to [Optimization of Tencent Cloud SMS Template Types](https://www.tencentcloud.com/document/product/382/60410). Customers who newly register for SMS service must strictly refer to the new SMS type to apply for SMS template.
  * @method integer getInternational() Obtain Whether it is Global SMS:
 0: Mainland China SMS.
 1: Global SMS.
@@ -58,7 +58,7 @@ class ModifySmsTemplateRequest extends AbstractModel
 
     /**
      * @var integer SMS type. 1: Marketing SMS, 2: Notification SMS, 3: OTP SMS.
-Note: The "Regular SMS" type template currently still supports submission. However, in order to further improve the quality of SMS service and increase the approval rate of SMS templates, it is recommended to apply for a new template according to the "Notification SMS" type or the "OTP SMS" type. You can Refer to [Optimization of Tencent Cloud SMS Template Types](https://www.tencentcloud.com/document/product/382/60410).
+Note: To further improve the quality of SMS service and increase the approval rate of SMS templates, Tencent Cloud SMS template types will be optimized to "OTP", "Notification", and "Marketing" from May 16, 2024. You can Refer to [Optimization of Tencent Cloud SMS Template Types](https://www.tencentcloud.com/document/product/382/60410). Customers who newly register for SMS service must strictly refer to the new SMS type to apply for SMS template.
      */
     public $SmsType;
 
@@ -79,7 +79,7 @@ Note: The "Regular SMS" type template currently still supports submission. Howev
      * @param string $TemplateName New template name.
      * @param string $TemplateContent New template content.
      * @param integer $SmsType SMS type. 1: Marketing SMS, 2: Notification SMS, 3: OTP SMS.
-Note: The "Regular SMS" type template currently still supports submission. However, in order to further improve the quality of SMS service and increase the approval rate of SMS templates, it is recommended to apply for a new template according to the "Notification SMS" type or the "OTP SMS" type. You can Refer to [Optimization of Tencent Cloud SMS Template Types](https://www.tencentcloud.com/document/product/382/60410).
+Note: To further improve the quality of SMS service and increase the approval rate of SMS templates, Tencent Cloud SMS template types will be optimized to "OTP", "Notification", and "Marketing" from May 16, 2024. You can Refer to [Optimization of Tencent Cloud SMS Template Types](https://www.tencentcloud.com/document/product/382/60410). Customers who newly register for SMS service must strictly refer to the new SMS type to apply for SMS template.
      * @param integer $International Whether it is Global SMS:
 0: Mainland China SMS.
 1: Global SMS.

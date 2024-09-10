@@ -34,6 +34,9 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUserName(string $UserName) Set Use the user who has corresponding permissions for operations. If the TCHouse-D cluster uses a kernel account registered by a CAM user, you do not need to fill it in.
  * @method string getPassWord() Obtain Password corresponding to the user. If the TCHouse-D cluster uses a kernel account registered by a CAM user, you do not need to fill it in.
  * @method void setPassWord(string $PassWord) Set Password corresponding to the user. If the TCHouse-D cluster uses a kernel account registered by a CAM user, you do not need to fill it in.
+ * @method string getMessage() Obtain Information, deprecated.
+
+ * @method void setMessage(string $Message) Set Information, deprecated.
  */
 class DescribeInstanceOperationHistoryRequest extends AbstractModel
 {
@@ -73,6 +76,13 @@ class DescribeInstanceOperationHistoryRequest extends AbstractModel
     public $PassWord;
 
     /**
+     * @var string Information, deprecated.
+
+     * @deprecated
+     */
+    public $Message;
+
+    /**
      * @param string $InstanceId Cluster ID
      * @param integer $PageNum Page number, which is 1 by default.
      * @param integer $PageSize Number of records per page, which is 10 by default.
@@ -80,6 +90,7 @@ class DescribeInstanceOperationHistoryRequest extends AbstractModel
      * @param string $EndTime End time
      * @param string $UserName Use the user who has corresponding permissions for operations. If the TCHouse-D cluster uses a kernel account registered by a CAM user, you do not need to fill it in.
      * @param string $PassWord Password corresponding to the user. If the TCHouse-D cluster uses a kernel account registered by a CAM user, you do not need to fill it in.
+     * @param string $Message Information, deprecated.
      */
     function __construct()
     {
@@ -120,6 +131,10 @@ class DescribeInstanceOperationHistoryRequest extends AbstractModel
 
         if (array_key_exists("PassWord",$param) and $param["PassWord"] !== null) {
             $this->PassWord = $param["PassWord"];
+        }
+
+        if (array_key_exists("Message",$param) and $param["Message"] !== null) {
+            $this->Message = $param["Message"];
         }
     }
 }

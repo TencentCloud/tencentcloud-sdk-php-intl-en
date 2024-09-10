@@ -34,6 +34,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUserName(string $UserName) Set Use the user who has corresponding permissions for operations. If the TCHouse-D cluster uses a kernel account registered by a CAM user, you do not need to fill it in.
  * @method string getPassWord() Obtain Password corresponding to the user. If the TCHouse-D cluster uses a kernel account registered by a CAM user, you do not need to fill it in.
  * @method void setPassWord(string $PassWord) Set Password corresponding to the user. If the TCHouse-D cluster uses a kernel account registered by a CAM user, you do not need to fill it in.
+ * @method string getCatalogName() Obtain Catalog name, defaults to internal if not specified.
+ * @method void setCatalogName(string $CatalogName) Set Catalog name, defaults to internal if not specified.
+ * @method string getInstanceId() Obtain InstanceId
+ * @method void setInstanceId(string $InstanceId) Set InstanceId
+ * @method string getWhiteHost() Obtain Machine Group, defaults to % if not specified.
+ * @method void setWhiteHost(string $WhiteHost) Set Machine Group, defaults to % if not specified.
  */
 class ModifyDatabaseTableAccessRequest extends AbstractModel
 {
@@ -73,6 +79,21 @@ class ModifyDatabaseTableAccessRequest extends AbstractModel
     public $PassWord;
 
     /**
+     * @var string Catalog name, defaults to internal if not specified.
+     */
+    public $CatalogName;
+
+    /**
+     * @var string InstanceId
+     */
+    public $InstanceId;
+
+    /**
+     * @var string Machine Group, defaults to % if not specified.
+     */
+    public $WhiteHost;
+
+    /**
      * @param string $Database Database name
      * @param string $Table Table name. If it is null, it indicates that the entire database is authorized.
      * @param array $Privileges Permission list
@@ -80,6 +101,9 @@ class ModifyDatabaseTableAccessRequest extends AbstractModel
      * @param string $GrantOrRevoke Operation type: GRANT or REVOKE
      * @param string $UserName Use the user who has corresponding permissions for operations. If the TCHouse-D cluster uses a kernel account registered by a CAM user, you do not need to fill it in.
      * @param string $PassWord Password corresponding to the user. If the TCHouse-D cluster uses a kernel account registered by a CAM user, you do not need to fill it in.
+     * @param string $CatalogName Catalog name, defaults to internal if not specified.
+     * @param string $InstanceId InstanceId
+     * @param string $WhiteHost Machine Group, defaults to % if not specified.
      */
     function __construct()
     {
@@ -120,6 +144,18 @@ class ModifyDatabaseTableAccessRequest extends AbstractModel
 
         if (array_key_exists("PassWord",$param) and $param["PassWord"] !== null) {
             $this->PassWord = $param["PassWord"];
+        }
+
+        if (array_key_exists("CatalogName",$param) and $param["CatalogName"] !== null) {
+            $this->CatalogName = $param["CatalogName"];
+        }
+
+        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
+            $this->InstanceId = $param["InstanceId"];
+        }
+
+        if (array_key_exists("WhiteHost",$param) and $param["WhiteHost"] !== null) {
+            $this->WhiteHost = $param["WhiteHost"];
         }
     }
 }

@@ -38,8 +38,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUserName(string $UserName) Set Use the user who has corresponding permissions for operations. If the TCHouse-D cluster uses a kernel account registered by a CAM user, you do not need to fill it in.
  * @method string getPassWord() Obtain Password corresponding to the user. If the TCHouse-D cluster uses a kernel account registered by a CAM user, you do not need to fill it in.
  * @method void setPassWord(string $PassWord) Set Password corresponding to the user. If the TCHouse-D cluster uses a kernel account registered by a CAM user, you do not need to fill it in.
- * @method string getColumnTypes() Obtain Column type
- * @method void setColumnTypes(string $ColumnTypes) Set Column type
+ * @method string getColumnTypes() Obtain Column type, this field has been deprecated, please use Types
+ * @method void setColumnTypes(string $ColumnTypes) Set Column type, this field has been deprecated, please use Types
+ * @method array getTypes() Obtain Array of column types
+
+ * @method void setTypes(array $Types) Set Array of column types
+
+ * @method string getCatalogName() Obtain Catalog name, defaults to 'internal' if not specified.
+ * @method void setCatalogName(string $CatalogName) Set Catalog name, defaults to 'internal' if not specified.
+ * @method string getInstanceId() Obtain InstanceId
+ * @method void setInstanceId(string $InstanceId) Set InstanceId
  */
 class InsertDatasToTableRequest extends AbstractModel
 {
@@ -89,9 +97,26 @@ class InsertDatasToTableRequest extends AbstractModel
     public $PassWord;
 
     /**
-     * @var string Column type
+     * @var string Column type, this field has been deprecated, please use Types
+     * @deprecated
      */
     public $ColumnTypes;
+
+    /**
+     * @var array Array of column types
+
+     */
+    public $Types;
+
+    /**
+     * @var string Catalog name, defaults to 'internal' if not specified.
+     */
+    public $CatalogName;
+
+    /**
+     * @var string InstanceId
+     */
+    public $InstanceId;
 
     /**
      * @param string $Database Database name
@@ -103,7 +128,11 @@ class InsertDatasToTableRequest extends AbstractModel
      * @param string $Label Tags for inserting data
      * @param string $UserName Use the user who has corresponding permissions for operations. If the TCHouse-D cluster uses a kernel account registered by a CAM user, you do not need to fill it in.
      * @param string $PassWord Password corresponding to the user. If the TCHouse-D cluster uses a kernel account registered by a CAM user, you do not need to fill it in.
-     * @param string $ColumnTypes Column type
+     * @param string $ColumnTypes Column type, this field has been deprecated, please use Types
+     * @param array $Types Array of column types
+
+     * @param string $CatalogName Catalog name, defaults to 'internal' if not specified.
+     * @param string $InstanceId InstanceId
      */
     function __construct()
     {
@@ -161,6 +190,18 @@ class InsertDatasToTableRequest extends AbstractModel
 
         if (array_key_exists("ColumnTypes",$param) and $param["ColumnTypes"] !== null) {
             $this->ColumnTypes = $param["ColumnTypes"];
+        }
+
+        if (array_key_exists("Types",$param) and $param["Types"] !== null) {
+            $this->Types = $param["Types"];
+        }
+
+        if (array_key_exists("CatalogName",$param) and $param["CatalogName"] !== null) {
+            $this->CatalogName = $param["CatalogName"];
+        }
+
+        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
+            $this->InstanceId = $param["InstanceId"];
         }
     }
 }
