@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() Obtain Resource ID, which is the TCHouse-D resource ID used for table creation.
  * @method void setInstanceId(string $InstanceId) Set Resource ID, which is the TCHouse-D resource ID used for table creation.
- * @method string getCopiedFromDb() Obtain Name of the database where the source table is located
- * @method void setCopiedFromDb(string $CopiedFromDb) Set Name of the database where the source table is located
+ * @method string getCopiedFromDb() Obtain Name of the database where the source table is located.
+ * @method void setCopiedFromDb(string $CopiedFromDb) Set Name of the database where the source table is located.
  * @method string getCopiedFromTable() Obtain Source table name
  * @method void setCopiedFromTable(string $CopiedFromTable) Set Source table name
  * @method string getCopyToDb() Obtain Name of the database where the target table is located
@@ -45,7 +45,7 @@ class CopyTableDatasRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var string Name of the database where the source table is located
+     * @var string Name of the database where the source table is located.
      */
     public $CopiedFromDb;
 
@@ -81,7 +81,7 @@ class CopyTableDatasRequest extends AbstractModel
 
     /**
      * @param string $InstanceId Resource ID, which is the TCHouse-D resource ID used for table creation.
-     * @param string $CopiedFromDb Name of the database where the source table is located
+     * @param string $CopiedFromDb Name of the database where the source table is located.
      * @param string $CopiedFromTable Source table name
      * @param string $CopyToDb Name of the database where the target table is located
      * @param string $CopyToTable Target table name. If the table already exists, the structure of the source table and target table should be the same.

@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPassWord(string $PassWord) Set Password corresponding to the user. If the TCHouse-D cluster uses a kernel account registered by a CAM user, you do not need to fill it in.
  * @method string getStartTime() Obtain Start time of operation period
  * @method void setStartTime(string $StartTime) Set Start time of operation period
- * @method string getEndTime() Obtain End time of operation period
- * @method void setEndTime(string $EndTime) Set End time of operation period
+ * @method string getEndTime() Obtain End time of operation period.
+ * @method void setEndTime(string $EndTime) Set End time of operation period.
  * @method string getSQLFragment() Obtain SQL fragments (fuzzy query supported)
  * @method void setSQLFragment(string $SQLFragment) Set SQL fragments (fuzzy query supported)
  * @method string getCatalogFilter() Obtain Catalog filter condition
@@ -68,7 +68,7 @@ class DescribeQueryAnalyseRequest extends AbstractModel
     public $StartTime;
 
     /**
-     * @var string End time of operation period
+     * @var string End time of operation period.
      */
     public $EndTime;
 
@@ -112,7 +112,7 @@ class DescribeQueryAnalyseRequest extends AbstractModel
      * @param string $UserName Use the user who has corresponding permissions for operations. If the TCHouse-D cluster uses a kernel account registered by a CAM user, you do not need to fill it in.
      * @param string $PassWord Password corresponding to the user. If the TCHouse-D cluster uses a kernel account registered by a CAM user, you do not need to fill it in.
      * @param string $StartTime Start time of operation period
-     * @param string $EndTime End time of operation period
+     * @param string $EndTime End time of operation period.
      * @param string $SQLFragment SQL fragments (fuzzy query supported)
      * @param string $CatalogFilter Catalog filter condition
      * @param string $DatabaseFilter Database name filter condition
