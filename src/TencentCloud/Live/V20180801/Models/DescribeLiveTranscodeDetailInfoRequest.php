@@ -26,10 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStreamName(string $StreamName) Set Stream name.
  * @method string getDayTime() Obtain Query date (UTC+8)
 Format: yyyymmdd
-Note: you can query the statistics for a day in the past three months, with yesterday as the latest date allowed.
+Note: you can query the statistics for a day in the past one month, with yesterday as the latest date allowed.
  * @method void setDayTime(string $DayTime) Set Query date (UTC+8)
 Format: yyyymmdd
-Note: you can query the statistics for a day in the past three months, with yesterday as the latest date allowed.
+Note: you can query the statistics for a day in the past one month, with yesterday as the latest date allowed.
  * @method integer getPageNum() Obtain Number of pages. Default value: 1.
 Up to 100 pages.
  * @method void setPageNum(integer $PageNum) Set Number of pages. Default value: 1.
@@ -40,16 +40,16 @@ Value range: [10,1000].
 Value range: [10,1000].
  * @method string getStartDayTime() Obtain Start date (UTC+8)
 Format: yyyymmdd
-Note: details for the last three months can be queried.
+Note: details for the last one month can be queried.
  * @method void setStartDayTime(string $StartDayTime) Set Start date (UTC+8)
 Format: yyyymmdd
-Note: details for the last three months can be queried.
+Note: details for the last one month can be queried.
  * @method string getEndDayTime() Obtain End date (UTC+8)
 Format: yyyymmdd
-Note: you can query the statistics for a period in the past three months, with yesterday as the latest date allowed. You must specify either `DayTime`, or `StartDayTime` and `EndDayTime`. If you specify all three parameters, only `DayTime` will be applied.
+Note: you can query the statistics for a period in the past one month, with yesterday as the latest date allowed. You must specify either `DayTime`, or `StartDayTime` and `EndDayTime`. If you specify all three parameters, only `DayTime` will be applied.
  * @method void setEndDayTime(string $EndDayTime) Set End date (UTC+8)
 Format: yyyymmdd
-Note: you can query the statistics for a period in the past three months, with yesterday as the latest date allowed. You must specify either `DayTime`, or `StartDayTime` and `EndDayTime`. If you specify all three parameters, only `DayTime` will be applied.
+Note: you can query the statistics for a period in the past one month, with yesterday as the latest date allowed. You must specify either `DayTime`, or `StartDayTime` and `EndDayTime`. If you specify all three parameters, only `DayTime` will be applied.
  */
 class DescribeLiveTranscodeDetailInfoRequest extends AbstractModel
 {
@@ -66,7 +66,7 @@ class DescribeLiveTranscodeDetailInfoRequest extends AbstractModel
     /**
      * @var string Query date (UTC+8)
 Format: yyyymmdd
-Note: you can query the statistics for a day in the past three months, with yesterday as the latest date allowed.
+Note: you can query the statistics for a day in the past one month, with yesterday as the latest date allowed.
      */
     public $DayTime;
 
@@ -85,14 +85,14 @@ Value range: [10,1000].
     /**
      * @var string Start date (UTC+8)
 Format: yyyymmdd
-Note: details for the last three months can be queried.
+Note: details for the last one month can be queried.
      */
     public $StartDayTime;
 
     /**
      * @var string End date (UTC+8)
 Format: yyyymmdd
-Note: you can query the statistics for a period in the past three months, with yesterday as the latest date allowed. You must specify either `DayTime`, or `StartDayTime` and `EndDayTime`. If you specify all three parameters, only `DayTime` will be applied.
+Note: you can query the statistics for a period in the past one month, with yesterday as the latest date allowed. You must specify either `DayTime`, or `StartDayTime` and `EndDayTime`. If you specify all three parameters, only `DayTime` will be applied.
      */
     public $EndDayTime;
 
@@ -101,17 +101,17 @@ Note: you can query the statistics for a period in the past three months, with y
      * @param string $StreamName Stream name.
      * @param string $DayTime Query date (UTC+8)
 Format: yyyymmdd
-Note: you can query the statistics for a day in the past three months, with yesterday as the latest date allowed.
+Note: you can query the statistics for a day in the past one month, with yesterday as the latest date allowed.
      * @param integer $PageNum Number of pages. Default value: 1.
 Up to 100 pages.
      * @param integer $PageSize Number of entries per page. Default value: 20,
 Value range: [10,1000].
      * @param string $StartDayTime Start date (UTC+8)
 Format: yyyymmdd
-Note: details for the last three months can be queried.
+Note: details for the last one month can be queried.
      * @param string $EndDayTime End date (UTC+8)
 Format: yyyymmdd
-Note: you can query the statistics for a period in the past three months, with yesterday as the latest date allowed. You must specify either `DayTime`, or `StartDayTime` and `EndDayTime`. If you specify all three parameters, only `DayTime` will be applied.
+Note: you can query the statistics for a period in the past one month, with yesterday as the latest date allowed. You must specify either `DayTime`, or `StartDayTime` and `EndDayTime`. If you specify all three parameters, only `DayTime` will be applied.
      */
     function __construct()
     {

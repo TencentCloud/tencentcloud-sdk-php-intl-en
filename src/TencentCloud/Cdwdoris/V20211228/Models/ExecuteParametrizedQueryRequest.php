@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDatabase(string $Database) Set Database name
  * @method string getSql() Obtain SQL query statement
  * @method void setSql(string $Sql) Set SQL query statement
+ * @method string getInstanceId() Obtain InstanceId
+ * @method void setInstanceId(string $InstanceId) Set InstanceId
  * @method array getQueryParameter() Obtain Query parameter array.
  * @method void setQueryParameter(array $QueryParameter) Set Query parameter array.
  * @method integer getPageNum() Obtain Page number, which is 1 by default.
@@ -36,8 +38,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPassWord(string $PassWord) Set Password corresponding to the user. If the TCHouse-D cluster uses a kernel account registered by a CAM user, you do not need to fill it in.
  * @method string getCatalogName() Obtain Catalog name, defaults to 'internal' if not specified.
  * @method void setCatalogName(string $CatalogName) Set Catalog name, defaults to 'internal' if not specified.
- * @method string getInstanceId() Obtain InstanceId
- * @method void setInstanceId(string $InstanceId) Set InstanceId
  */
 class ExecuteParametrizedQueryRequest extends AbstractModel
 {
@@ -50,6 +50,11 @@ class ExecuteParametrizedQueryRequest extends AbstractModel
      * @var string SQL query statement
      */
     public $Sql;
+
+    /**
+     * @var string InstanceId
+     */
+    public $InstanceId;
 
     /**
      * @var array Query parameter array.
@@ -82,20 +87,15 @@ class ExecuteParametrizedQueryRequest extends AbstractModel
     public $CatalogName;
 
     /**
-     * @var string InstanceId
-     */
-    public $InstanceId;
-
-    /**
      * @param string $Database Database name
      * @param string $Sql SQL query statement
+     * @param string $InstanceId InstanceId
      * @param array $QueryParameter Query parameter array.
      * @param integer $PageNum Page number, which is 1 by default.
      * @param integer $PageSize Number of records per page, which is 10 by default.
      * @param string $UserName Use the user who has corresponding permissions for operations. If the TCHouse-D cluster uses a kernel account registered by a CAM user, you do not need to fill it in.
      * @param string $PassWord Password corresponding to the user. If the TCHouse-D cluster uses a kernel account registered by a CAM user, you do not need to fill it in.
      * @param string $CatalogName Catalog name, defaults to 'internal' if not specified.
-     * @param string $InstanceId InstanceId
      */
     function __construct()
     {
@@ -116,6 +116,10 @@ class ExecuteParametrizedQueryRequest extends AbstractModel
 
         if (array_key_exists("Sql",$param) and $param["Sql"] !== null) {
             $this->Sql = $param["Sql"];
+        }
+
+        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
+            $this->InstanceId = $param["InstanceId"];
         }
 
         if (array_key_exists("QueryParameter",$param) and $param["QueryParameter"] !== null) {
@@ -145,10 +149,6 @@ class ExecuteParametrizedQueryRequest extends AbstractModel
 
         if (array_key_exists("CatalogName",$param) and $param["CatalogName"] !== null) {
             $this->CatalogName = $param["CatalogName"];
-        }
-
-        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
-            $this->InstanceId = $param["InstanceId"];
         }
     }
 }

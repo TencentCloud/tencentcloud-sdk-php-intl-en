@@ -44,6 +44,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSortOrder(string $SortOrder) Set Sorting order: asc (ascending) or desc (descending)
  * @method integer getQueryTime() Obtain Minimum query execution time, in milliseconds.
  * @method void setQueryTime(integer $QueryTime) Set Minimum query execution time, in milliseconds.
+ * @method integer getPageNum() Obtain Page number, defaults to 1.
+ * @method void setPageNum(integer $PageNum) Set Page number, defaults to 1.
+ * @method integer getPageSize() Obtain Number of records per page, defaults to 10.
+ * @method void setPageSize(integer $PageSize) Set Number of records per page, defaults to 10.
  */
 class DescribeQueryAnalyseRequest extends AbstractModel
 {
@@ -108,6 +112,16 @@ class DescribeQueryAnalyseRequest extends AbstractModel
     public $QueryTime;
 
     /**
+     * @var integer Page number, defaults to 1.
+     */
+    public $PageNum;
+
+    /**
+     * @var integer Number of records per page, defaults to 10.
+     */
+    public $PageSize;
+
+    /**
      * @param string $InstanceId Instance ID
      * @param string $UserName Use the user who has corresponding permissions for operations. If the TCHouse-D cluster uses a kernel account registered by a CAM user, you do not need to fill it in.
      * @param string $PassWord Password corresponding to the user. If the TCHouse-D cluster uses a kernel account registered by a CAM user, you do not need to fill it in.
@@ -120,6 +134,8 @@ class DescribeQueryAnalyseRequest extends AbstractModel
      * @param string $SortField Sorting field
      * @param string $SortOrder Sorting order: asc (ascending) or desc (descending)
      * @param integer $QueryTime Minimum query execution time, in milliseconds.
+     * @param integer $PageNum Page number, defaults to 1.
+     * @param integer $PageSize Number of records per page, defaults to 10.
      */
     function __construct()
     {
@@ -180,6 +196,14 @@ class DescribeQueryAnalyseRequest extends AbstractModel
 
         if (array_key_exists("QueryTime",$param) and $param["QueryTime"] !== null) {
             $this->QueryTime = $param["QueryTime"];
+        }
+
+        if (array_key_exists("PageNum",$param) and $param["PageNum"] !== null) {
+            $this->PageNum = $param["PageNum"];
+        }
+
+        if (array_key_exists("PageSize",$param) and $param["PageSize"] !== null) {
+            $this->PageSize = $param["PageSize"];
         }
     }
 }

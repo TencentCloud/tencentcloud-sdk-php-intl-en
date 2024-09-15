@@ -22,20 +22,20 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() Obtain Resource ID, which is the TCHouse-D resource ID used for table creation.
  * @method void setInstanceId(string $InstanceId) Set Resource ID, which is the TCHouse-D resource ID used for table creation.
- * @method string getUserName() Obtain Use the user who has corresponding permissions for operations. If the TCHouse-D cluster uses a kernel account registered by a CAM user, you do not need to fill it in.
- * @method void setUserName(string $UserName) Set Use the user who has corresponding permissions for operations. If the TCHouse-D cluster uses a kernel account registered by a CAM user, you do not need to fill it in.
- * @method string getPassWord() Obtain Password corresponding to the user. If the TCHouse-D cluster uses a kernel account registered by a CAM user, you do not need to fill it in.
- * @method void setPassWord(string $PassWord) Set Password corresponding to the user. If the TCHouse-D cluster uses a kernel account registered by a CAM user, you do not need to fill it in.
  * @method string getDbName() Obtain Database name
  * @method void setDbName(string $DbName) Set Database name
  * @method string getTableName() Obtain Table name
  * @method void setTableName(string $TableName) Set Table name
  * @method array getColumns() Obtain Column
  * @method void setColumns(array $Columns) Set Column
- * @method array getIndexInfos() Obtain Index information. The inverted index and N-Gram index can be configured through this parameter. The Prefix index is related to the sort key and key column, and do not require additional configuration. Configure bloom_filter_columns in the table attribute when BloomFilter index is required.
- * @method void setIndexInfos(array $IndexInfos) Set Index information. The inverted index and N-Gram index can be configured through this parameter. The Prefix index is related to the sort key and key column, and do not require additional configuration. Configure bloom_filter_columns in the table attribute when BloomFilter index is required.
  * @method Distribution getDistribution() Obtain Bucket information
  * @method void setDistribution(Distribution $Distribution) Set Bucket information
+ * @method string getUserName() Obtain Use the user who has corresponding permissions for operations. If the TCHouse-D cluster uses a kernel account registered by a CAM user, you do not need to fill it in.
+ * @method void setUserName(string $UserName) Set Use the user who has corresponding permissions for operations. If the TCHouse-D cluster uses a kernel account registered by a CAM user, you do not need to fill it in.
+ * @method string getPassWord() Obtain Password corresponding to the user. If the TCHouse-D cluster uses a kernel account registered by a CAM user, you do not need to fill it in.
+ * @method void setPassWord(string $PassWord) Set Password corresponding to the user. If the TCHouse-D cluster uses a kernel account registered by a CAM user, you do not need to fill it in.
+ * @method array getIndexInfos() Obtain Index information. The inverted index and N-Gram index can be configured through this parameter. The Prefix index is related to the sort key and key column, and do not require additional configuration. Configure bloom_filter_columns in the table attribute when BloomFilter index is required.
+ * @method void setIndexInfos(array $IndexInfos) Set Index information. The inverted index and N-Gram index can be configured through this parameter. The Prefix index is related to the sort key and key column, and do not require additional configuration. Configure bloom_filter_columns in the table attribute when BloomFilter index is required.
  * @method string getTableComment() Obtain Table description
  * @method void setTableComment(string $TableComment) Set Table description
  * @method array getProperties() Obtain Table attribute
@@ -47,16 +47,6 @@ class UpdateTableSchemaRequest extends AbstractModel
      * @var string Resource ID, which is the TCHouse-D resource ID used for table creation.
      */
     public $InstanceId;
-
-    /**
-     * @var string Use the user who has corresponding permissions for operations. If the TCHouse-D cluster uses a kernel account registered by a CAM user, you do not need to fill it in.
-     */
-    public $UserName;
-
-    /**
-     * @var string Password corresponding to the user. If the TCHouse-D cluster uses a kernel account registered by a CAM user, you do not need to fill it in.
-     */
-    public $PassWord;
 
     /**
      * @var string Database name
@@ -74,14 +64,24 @@ class UpdateTableSchemaRequest extends AbstractModel
     public $Columns;
 
     /**
-     * @var array Index information. The inverted index and N-Gram index can be configured through this parameter. The Prefix index is related to the sort key and key column, and do not require additional configuration. Configure bloom_filter_columns in the table attribute when BloomFilter index is required.
-     */
-    public $IndexInfos;
-
-    /**
      * @var Distribution Bucket information
      */
     public $Distribution;
+
+    /**
+     * @var string Use the user who has corresponding permissions for operations. If the TCHouse-D cluster uses a kernel account registered by a CAM user, you do not need to fill it in.
+     */
+    public $UserName;
+
+    /**
+     * @var string Password corresponding to the user. If the TCHouse-D cluster uses a kernel account registered by a CAM user, you do not need to fill it in.
+     */
+    public $PassWord;
+
+    /**
+     * @var array Index information. The inverted index and N-Gram index can be configured through this parameter. The Prefix index is related to the sort key and key column, and do not require additional configuration. Configure bloom_filter_columns in the table attribute when BloomFilter index is required.
+     */
+    public $IndexInfos;
 
     /**
      * @var string Table description
@@ -95,13 +95,13 @@ class UpdateTableSchemaRequest extends AbstractModel
 
     /**
      * @param string $InstanceId Resource ID, which is the TCHouse-D resource ID used for table creation.
-     * @param string $UserName Use the user who has corresponding permissions for operations. If the TCHouse-D cluster uses a kernel account registered by a CAM user, you do not need to fill it in.
-     * @param string $PassWord Password corresponding to the user. If the TCHouse-D cluster uses a kernel account registered by a CAM user, you do not need to fill it in.
      * @param string $DbName Database name
      * @param string $TableName Table name
      * @param array $Columns Column
-     * @param array $IndexInfos Index information. The inverted index and N-Gram index can be configured through this parameter. The Prefix index is related to the sort key and key column, and do not require additional configuration. Configure bloom_filter_columns in the table attribute when BloomFilter index is required.
      * @param Distribution $Distribution Bucket information
+     * @param string $UserName Use the user who has corresponding permissions for operations. If the TCHouse-D cluster uses a kernel account registered by a CAM user, you do not need to fill it in.
+     * @param string $PassWord Password corresponding to the user. If the TCHouse-D cluster uses a kernel account registered by a CAM user, you do not need to fill it in.
+     * @param array $IndexInfos Index information. The inverted index and N-Gram index can be configured through this parameter. The Prefix index is related to the sort key and key column, and do not require additional configuration. Configure bloom_filter_columns in the table attribute when BloomFilter index is required.
      * @param string $TableComment Table description
      * @param array $Properties Table attribute
      */
@@ -122,14 +122,6 @@ class UpdateTableSchemaRequest extends AbstractModel
             $this->InstanceId = $param["InstanceId"];
         }
 
-        if (array_key_exists("UserName",$param) and $param["UserName"] !== null) {
-            $this->UserName = $param["UserName"];
-        }
-
-        if (array_key_exists("PassWord",$param) and $param["PassWord"] !== null) {
-            $this->PassWord = $param["PassWord"];
-        }
-
         if (array_key_exists("DbName",$param) and $param["DbName"] !== null) {
             $this->DbName = $param["DbName"];
         }
@@ -147,6 +139,19 @@ class UpdateTableSchemaRequest extends AbstractModel
             }
         }
 
+        if (array_key_exists("Distribution",$param) and $param["Distribution"] !== null) {
+            $this->Distribution = new Distribution();
+            $this->Distribution->deserialize($param["Distribution"]);
+        }
+
+        if (array_key_exists("UserName",$param) and $param["UserName"] !== null) {
+            $this->UserName = $param["UserName"];
+        }
+
+        if (array_key_exists("PassWord",$param) and $param["PassWord"] !== null) {
+            $this->PassWord = $param["PassWord"];
+        }
+
         if (array_key_exists("IndexInfos",$param) and $param["IndexInfos"] !== null) {
             $this->IndexInfos = [];
             foreach ($param["IndexInfos"] as $key => $value){
@@ -154,11 +159,6 @@ class UpdateTableSchemaRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->IndexInfos, $obj);
             }
-        }
-
-        if (array_key_exists("Distribution",$param) and $param["Distribution"] !== null) {
-            $this->Distribution = new Distribution();
-            $this->Distribution->deserialize($param["Distribution"]);
         }
 
         if (array_key_exists("TableComment",$param) and $param["TableComment"] !== null) {
