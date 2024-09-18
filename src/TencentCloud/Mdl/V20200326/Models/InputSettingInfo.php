@@ -50,10 +50,8 @@ Note: This field may return `null`, indicating that no valid value was found.
 Value range: 0 (default) or 10000-600000
 The value must be a multiple of 1,000.
 Note: This field may return `null`, indicating that no valid value was found.
- * @method string getInputDomain() Obtain The domain of an SRT_PUSH address. If this is a request parameter, you don’t need to specify it.
-Note: This field may return `null`, indicating that no valid value was found.
- * @method void setInputDomain(string $InputDomain) Set The domain of an SRT_PUSH address. If this is a request parameter, you don’t need to specify it.
-Note: This field may return `null`, indicating that no valid value was found.
+ * @method string getInputDomain() Obtain The domain name of the SRT_PUSH push address. No need to fill in the input parameter.
+ * @method void setInputDomain(string $InputDomain) Set The domain name of the SRT_PUSH push address. No need to fill in the input parameter.
  * @method string getUserName() Obtain The username, which is used for authentication.
 Note: This field may return `null`, indicating that no valid value was found.
  * @method void setUserName(string $UserName) Set The username, which is used for authentication.
@@ -62,6 +60,8 @@ Note: This field may return `null`, indicating that no valid value was found.
 Note: This field may return `null`, indicating that no valid value was found.
  * @method void setPassword(string $Password) Set The password, which is used for authentication.
 Note: This field may return `null`, indicating that no valid value was found.
+ * @method string getContentType() Obtain This parameter is valid when the input source is HLS_PULL and MP4_PULL. It indicates the type of file the source is. The optional values are: LIVE, VOD. Please note that if you do not enter this parameter, the system will take the default input value VOD.
+ * @method void setContentType(string $ContentType) Set This parameter is valid when the input source is HLS_PULL and MP4_PULL. It indicates the type of file the source is. The optional values are: LIVE, VOD. Please note that if you do not enter this parameter, the system will take the default input value VOD.
  */
 class InputSettingInfo extends AbstractModel
 {
@@ -104,8 +104,7 @@ Note: This field may return `null`, indicating that no valid value was found.
     public $DelayTime;
 
     /**
-     * @var string The domain of an SRT_PUSH address. If this is a request parameter, you don’t need to specify it.
-Note: This field may return `null`, indicating that no valid value was found.
+     * @var string The domain name of the SRT_PUSH push address. No need to fill in the input parameter.
      */
     public $InputDomain;
 
@@ -122,6 +121,11 @@ Note: This field may return `null`, indicating that no valid value was found.
     public $Password;
 
     /**
+     * @var string This parameter is valid when the input source is HLS_PULL and MP4_PULL. It indicates the type of file the source is. The optional values are: LIVE, VOD. Please note that if you do not enter this parameter, the system will take the default input value VOD.
+     */
+    public $ContentType;
+
+    /**
      * @param string $AppName Application name, which is valid if `Type` is `RTMP_PUSH` and can contain 1-32 letters and digits
 Note: This field may return `null`, indicating that no valid value was found.
      * @param string $StreamName Stream name, which is valid if `Type` is `RTMP_PUSH` and can contain 1-32 letters and digits
@@ -136,12 +140,12 @@ Note: this field may return `null`, indicating that no valid value was found.
 Value range: 0 (default) or 10000-600000
 The value must be a multiple of 1,000.
 Note: This field may return `null`, indicating that no valid value was found.
-     * @param string $InputDomain The domain of an SRT_PUSH address. If this is a request parameter, you don’t need to specify it.
-Note: This field may return `null`, indicating that no valid value was found.
+     * @param string $InputDomain The domain name of the SRT_PUSH push address. No need to fill in the input parameter.
      * @param string $UserName The username, which is used for authentication.
 Note: This field may return `null`, indicating that no valid value was found.
      * @param string $Password The password, which is used for authentication.
 Note: This field may return `null`, indicating that no valid value was found.
+     * @param string $ContentType This parameter is valid when the input source is HLS_PULL and MP4_PULL. It indicates the type of file the source is. The optional values are: LIVE, VOD. Please note that if you do not enter this parameter, the system will take the default input value VOD.
      */
     function __construct()
     {
@@ -190,6 +194,10 @@ Note: This field may return `null`, indicating that no valid value was found.
 
         if (array_key_exists("Password",$param) and $param["Password"] !== null) {
             $this->Password = $param["Password"];
+        }
+
+        if (array_key_exists("ContentType",$param) and $param["ContentType"] !== null) {
+            $this->ContentType = $param["ContentType"];
         }
     }
 }

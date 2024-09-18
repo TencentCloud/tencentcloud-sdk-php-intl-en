@@ -42,8 +42,22 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: This field may return `null`, indicating that no valid value was found.
  * @method void setSDMCSettings(SDMCSettingsInfo $SDMCSettings) Set SDMC key configuration. This parameter is used when `Scheme` is set to `SDMCDRM`.
 Note: This field may return `null`, indicating that no valid value was found.
- * @method string getDrmType() Obtain The DRM type. Valid values: `FAIRPLAY`, `WIDEVINE`, `AES128`, `PLAYREADY`. For HLS, this can be `FAIRPLAY` or `AES128` or `PLAYREADY`. For DASH, valid values: `WIDEVINE` or `PLAYREADY`. 
- * @method void setDrmType(string $DrmType) Set The DRM type. Valid values: `FAIRPLAY`, `WIDEVINE`, `AES128`, `PLAYREADY`. For HLS, this can be `FAIRPLAY` or `AES128` or `PLAYREADY`. For DASH, valid values: `WIDEVINE` or `PLAYREADY`. 
+ * @method string getDrmType() Obtain Optional Types:
+`FAIRPLAY`, `WIDEVINE`, `PLAYREADY`, `AES128`
+
+HLS-TS supports `FAIRPLAY` and `AES128`.
+
+HLS-FMP4 supports `FAIRPLAY`, `WIDEVINE`, `PLAYREADY`, `AES128`, and combinations of two or three from `FAIRPLAY`, `WIDEVINE`, and `PLAYREADY` (concatenated with commas, e.g., "FAIRPLAY,WIDEVINE,PLAYREADY").
+
+DASH supports `WIDEVINE`, `PLAYREADY`, and combinations of `PLAYREADY` and `WIDEVINE` (concatenated with commas, e.g., "PLAYREADY,WIDEVINE").
+ * @method void setDrmType(string $DrmType) Set Optional Types:
+`FAIRPLAY`, `WIDEVINE`, `PLAYREADY`, `AES128`
+
+HLS-TS supports `FAIRPLAY` and `AES128`.
+
+HLS-FMP4 supports `FAIRPLAY`, `WIDEVINE`, `PLAYREADY`, `AES128`, and combinations of two or three from `FAIRPLAY`, `WIDEVINE`, and `PLAYREADY` (concatenated with commas, e.g., "FAIRPLAY,WIDEVINE,PLAYREADY").
+
+DASH supports `WIDEVINE`, `PLAYREADY`, and combinations of `PLAYREADY` and `WIDEVINE` (concatenated with commas, e.g., "PLAYREADY,WIDEVINE").
  */
 class DrmSettingsInfo extends AbstractModel
 {
@@ -79,7 +93,14 @@ Note: This field may return `null`, indicating that no valid value was found.
     public $SDMCSettings;
 
     /**
-     * @var string The DRM type. Valid values: `FAIRPLAY`, `WIDEVINE`, `AES128`, `PLAYREADY`. For HLS, this can be `FAIRPLAY` or `AES128` or `PLAYREADY`. For DASH, valid values: `WIDEVINE` or `PLAYREADY`. 
+     * @var string Optional Types:
+`FAIRPLAY`, `WIDEVINE`, `PLAYREADY`, `AES128`
+
+HLS-TS supports `FAIRPLAY` and `AES128`.
+
+HLS-FMP4 supports `FAIRPLAY`, `WIDEVINE`, `PLAYREADY`, `AES128`, and combinations of two or three from `FAIRPLAY`, `WIDEVINE`, and `PLAYREADY` (concatenated with commas, e.g., "FAIRPLAY,WIDEVINE,PLAYREADY").
+
+DASH supports `WIDEVINE`, `PLAYREADY`, and combinations of `PLAYREADY` and `WIDEVINE` (concatenated with commas, e.g., "PLAYREADY,WIDEVINE").
      */
     public $DrmType;
 
@@ -95,7 +116,14 @@ If `Scheme` is set to `SDMCDRM`, this parameter is optional. It supports digits,
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param SDMCSettingsInfo $SDMCSettings SDMC key configuration. This parameter is used when `Scheme` is set to `SDMCDRM`.
 Note: This field may return `null`, indicating that no valid value was found.
-     * @param string $DrmType The DRM type. Valid values: `FAIRPLAY`, `WIDEVINE`, `AES128`, `PLAYREADY`. For HLS, this can be `FAIRPLAY` or `AES128` or `PLAYREADY`. For DASH, valid values: `WIDEVINE` or `PLAYREADY`. 
+     * @param string $DrmType Optional Types:
+`FAIRPLAY`, `WIDEVINE`, `PLAYREADY`, `AES128`
+
+HLS-TS supports `FAIRPLAY` and `AES128`.
+
+HLS-FMP4 supports `FAIRPLAY`, `WIDEVINE`, `PLAYREADY`, `AES128`, and combinations of two or three from `FAIRPLAY`, `WIDEVINE`, and `PLAYREADY` (concatenated with commas, e.g., "FAIRPLAY,WIDEVINE,PLAYREADY").
+
+DASH supports `WIDEVINE`, `PLAYREADY`, and combinations of `PLAYREADY` and `WIDEVINE` (concatenated with commas, e.g., "PLAYREADY,WIDEVINE").
      */
     function __construct()
     {

@@ -36,8 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTopSpeed(string $TopSpeed) Set Whether to enable top speed codec. Valid value: CLOSE/OPEN. Default value: CLOSE.
  * @method integer getBitrateCompressionRatio() Obtain Top speed codec compression ratio. Value range: [0,50]. The lower the compression ratio, the higher the image quality.
  * @method void setBitrateCompressionRatio(integer $BitrateCompressionRatio) Set Top speed codec compression ratio. Value range: [0,50]. The lower the compression ratio, the higher the image quality.
- * @method string getRateControlMode() Obtain Bitrate control mode. Valid values: `CBR`, `ABR` (default)
- * @method void setRateControlMode(string $RateControlMode) Set Bitrate control mode. Valid values: `CBR`, `ABR` (default)
+ * @method string getRateControlMode() Obtain Bitrate control mode. Valid values: `CBR`, `ABR` (default), `VBR`.
+ * @method void setRateControlMode(string $RateControlMode) Set Bitrate control mode. Valid values: `CBR`, `ABR` (default), `VBR`.
  * @method string getWatermarkId() Obtain Watermark ID
 Note: This field may return `null`, indicating that no valid value was found.
  * @method void setWatermarkId(string $WatermarkId) Set Watermark ID
@@ -58,6 +58,10 @@ Note: This field may return `null`, indicating that no valid value was found.
  * @method void setAdditionalRateSettings(AdditionalRateSetting $AdditionalRateSettings) Set Additional video bitrate configuration.
  * @method VideoCodecDetail getVideoCodecDetails() Obtain Video encoding configuration.
  * @method void setVideoCodecDetails(VideoCodecDetail $VideoCodecDetails) Set Video encoding configuration.
+ * @method integer getVideoEnhanceEnabled() Obtain 
+ * @method void setVideoEnhanceEnabled(integer $VideoEnhanceEnabled) Set 
+ * @method array getVideoEnhanceSettings() Obtain 
+ * @method void setVideoEnhanceSettings(array $VideoEnhanceSettings) Set 
  */
 class VideoTemplateInfo extends AbstractModel
 {
@@ -102,7 +106,7 @@ class VideoTemplateInfo extends AbstractModel
     public $BitrateCompressionRatio;
 
     /**
-     * @var string Bitrate control mode. Valid values: `CBR`, `ABR` (default)
+     * @var string Bitrate control mode. Valid values: `CBR`, `ABR` (default), `VBR`.
      */
     public $RateControlMode;
 
@@ -153,6 +157,16 @@ Note: This field may return `null`, indicating that no valid value was found.
     public $VideoCodecDetails;
 
     /**
+     * @var integer 
+     */
+    public $VideoEnhanceEnabled;
+
+    /**
+     * @var array 
+     */
+    public $VideoEnhanceSettings;
+
+    /**
      * @param string $Name Video transcoding template name, which can contain 1-20 letters and digits.
      * @param string $Vcodec Video codec. Valid values: H264/H265. If this parameter is left empty, the original value will be used.
      * @param integer $VideoBitrate Video bitrate. Value range: [50000,40000000]. The value can only be a multiple of 1,000. If this parameter is left empty, the original value will be used.
@@ -161,7 +175,7 @@ Note: This field may return `null`, indicating that no valid value was found.
      * @param integer $Fps Video frame rate. Value range: [1,240]. If this parameter is left empty, the original value will be used.
      * @param string $TopSpeed Whether to enable top speed codec. Valid value: CLOSE/OPEN. Default value: CLOSE.
      * @param integer $BitrateCompressionRatio Top speed codec compression ratio. Value range: [0,50]. The lower the compression ratio, the higher the image quality.
-     * @param string $RateControlMode Bitrate control mode. Valid values: `CBR`, `ABR` (default)
+     * @param string $RateControlMode Bitrate control mode. Valid values: `CBR`, `ABR` (default), `VBR`.
      * @param string $WatermarkId Watermark ID
 Note: This field may return `null`, indicating that no valid value was found.
      * @param integer $FaceBlurringEnabled Whether to enable the face blur function, 1 is on, 0 is off, and the default is 0.
@@ -172,6 +186,8 @@ Note: This field may return `null`, indicating that no valid value was found.
      * @param integer $RefFramesNum The number of reference frames can be selected from 1 to 16.
      * @param AdditionalRateSetting $AdditionalRateSettings Additional video bitrate configuration.
      * @param VideoCodecDetail $VideoCodecDetails Video encoding configuration.
+     * @param integer $VideoEnhanceEnabled 
+     * @param array $VideoEnhanceSettings 
      */
     function __construct()
     {
@@ -258,6 +274,19 @@ Note: This field may return `null`, indicating that no valid value was found.
         if (array_key_exists("VideoCodecDetails",$param) and $param["VideoCodecDetails"] !== null) {
             $this->VideoCodecDetails = new VideoCodecDetail();
             $this->VideoCodecDetails->deserialize($param["VideoCodecDetails"]);
+        }
+
+        if (array_key_exists("VideoEnhanceEnabled",$param) and $param["VideoEnhanceEnabled"] !== null) {
+            $this->VideoEnhanceEnabled = $param["VideoEnhanceEnabled"];
+        }
+
+        if (array_key_exists("VideoEnhanceSettings",$param) and $param["VideoEnhanceSettings"] !== null) {
+            $this->VideoEnhanceSettings = [];
+            foreach ($param["VideoEnhanceSettings"] as $key => $value){
+                $obj = new VideoEnhanceSetting();
+                $obj->deserialize($value);
+                array_push($this->VideoEnhanceSettings, $obj);
+            }
         }
     }
 }

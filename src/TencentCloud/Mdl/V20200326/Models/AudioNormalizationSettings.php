@@ -18,28 +18,28 @@ namespace TencentCloud\Mdl\V20200326\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Special configuration information for audio transcoding.
  *
- * @method integer getAudioNormalizationEnabled() Obtain 
- * @method void setAudioNormalizationEnabled(integer $AudioNormalizationEnabled) Set 
- * @method float getTargetLUFS() Obtain 
- * @method void setTargetLUFS(float $TargetLUFS) Set 
+ * @method integer getAudioNormalizationEnabled() Obtain Whether to enable special configuration for audio transcoding: 1: Enable 0: Disable, the default value is 0.
+ * @method void setAudioNormalizationEnabled(integer $AudioNormalizationEnabled) Set Whether to enable special configuration for audio transcoding: 1: Enable 0: Disable, the default value is 0.
+ * @method float getTargetLUFS() Obtain Loudness value, floating-point number, rounded to one decimal place, range -5 to -70.
+ * @method void setTargetLUFS(float $TargetLUFS) Set Loudness value, floating-point number, rounded to one decimal place, range -5 to -70.
  */
 class AudioNormalizationSettings extends AbstractModel
 {
     /**
-     * @var integer 
+     * @var integer Whether to enable special configuration for audio transcoding: 1: Enable 0: Disable, the default value is 0.
      */
     public $AudioNormalizationEnabled;
 
     /**
-     * @var float 
+     * @var float Loudness value, floating-point number, rounded to one decimal place, range -5 to -70.
      */
     public $TargetLUFS;
 
     /**
-     * @param integer $AudioNormalizationEnabled 
-     * @param float $TargetLUFS 
+     * @param integer $AudioNormalizationEnabled Whether to enable special configuration for audio transcoding: 1: Enable 0: Disable, the default value is 0.
+     * @param float $TargetLUFS Loudness value, floating-point number, rounded to one decimal place, range -5 to -70.
      */
     function __construct()
     {

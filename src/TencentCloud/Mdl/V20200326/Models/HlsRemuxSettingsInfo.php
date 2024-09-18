@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getSegmentDuration() Obtain Segment duration in ms. Value range: [1000,30000]. Default value: 4000. The value can only be a multiple of 1,000.
  * @method void setSegmentDuration(integer $SegmentDuration) Set Segment duration in ms. Value range: [1000,30000]. Default value: 4000. The value can only be a multiple of 1,000.
- * @method integer getSegmentNumber() Obtain Number of segments. Value range: [1,30]. Default value: 5.
- * @method void setSegmentNumber(integer $SegmentNumber) Set Number of segments. Value range: [1,30]. Default value: 5.
+ * @method integer getSegmentNumber() Obtain Number of segments. Value range: [3,30]. Default value: 5.
+ * @method void setSegmentNumber(integer $SegmentNumber) Set Number of segments. Value range: [3,30]. Default value: 5.
  * @method string getPdtInsertion() Obtain Whether to enable PDT insertion. Valid values: CLOSE/OPEN. Default value: CLOSE.
  * @method void setPdtInsertion(string $PdtInsertion) Set Whether to enable PDT insertion. Valid values: CLOSE/OPEN. Default value: CLOSE.
  * @method integer getPdtDuration() Obtain PDT duration in seconds. Value range: (0,3000]. Default value: 600.
@@ -55,7 +55,7 @@ class HlsRemuxSettingsInfo extends AbstractModel
     public $SegmentDuration;
 
     /**
-     * @var integer Number of segments. Value range: [1,30]. Default value: 5.
+     * @var integer Number of segments. Value range: [3,30]. Default value: 5.
      */
     public $SegmentNumber;
 
@@ -112,7 +112,7 @@ Currently, fMP4 segments do not support DRM or time shifting.
 
     /**
      * @param integer $SegmentDuration Segment duration in ms. Value range: [1000,30000]. Default value: 4000. The value can only be a multiple of 1,000.
-     * @param integer $SegmentNumber Number of segments. Value range: [1,30]. Default value: 5.
+     * @param integer $SegmentNumber Number of segments. Value range: [3,30]. Default value: 5.
      * @param string $PdtInsertion Whether to enable PDT insertion. Valid values: CLOSE/OPEN. Default value: CLOSE.
      * @param integer $PdtDuration PDT duration in seconds. Value range: (0,3000]. Default value: 600.
      * @param string $Scheme Audio/Video packaging scheme. Valid values: `SEPARATE`, `MERGE`. Default value is: SEPARATE.

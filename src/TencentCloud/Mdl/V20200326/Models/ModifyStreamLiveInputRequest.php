@@ -26,13 +26,21 @@ use TencentCloud\Common\AbstractModel;
  * @method void setName(string $Name) Set Input name, which can contain 1-32 case-sensitive letters, digits, and underscores and must be unique at the region level
  * @method array getSecurityGroupIds() Obtain List of the IDs of the security groups to attach
  * @method void setSecurityGroupIds(array $SecurityGroupIds) Set List of the IDs of the security groups to attach
- * @method array getInputSettings() Obtain Input settings
-For the type `RTMP_PUSH`, `RTMP_PULL`, `HLS_PULL`, or `MP4_PULL`, 1 or 2 inputs of the corresponding type can be configured.
+ * @method array getInputSettings() Obtain Input settings. 
+For the type:
+`RTMP_PUSH`, `RTMP_PULL`, `HLS_PULL`,`RTSP_PULL`,`SRT_PULL` or `MP4_PULL`, 1 or 2 inputs of the corresponding type can be configured.
+For the type:
+`SRT_PUSH`, 0 or 2 inputs of the corresponding type can be configured.
 This parameter can be left empty for RTP_PUSH and UDP_PUSH inputs.
+
 Note: If this parameter is not specified or empty, the original input settings will be used.
- * @method void setInputSettings(array $InputSettings) Set Input settings
-For the type `RTMP_PUSH`, `RTMP_PULL`, `HLS_PULL`, or `MP4_PULL`, 1 or 2 inputs of the corresponding type can be configured.
+ * @method void setInputSettings(array $InputSettings) Set Input settings. 
+For the type:
+`RTMP_PUSH`, `RTMP_PULL`, `HLS_PULL`,`RTSP_PULL`,`SRT_PULL` or `MP4_PULL`, 1 or 2 inputs of the corresponding type can be configured.
+For the type:
+`SRT_PUSH`, 0 or 2 inputs of the corresponding type can be configured.
 This parameter can be left empty for RTP_PUSH and UDP_PUSH inputs.
+
 Note: If this parameter is not specified or empty, the original input settings will be used.
  */
 class ModifyStreamLiveInputRequest extends AbstractModel
@@ -53,9 +61,13 @@ class ModifyStreamLiveInputRequest extends AbstractModel
     public $SecurityGroupIds;
 
     /**
-     * @var array Input settings
-For the type `RTMP_PUSH`, `RTMP_PULL`, `HLS_PULL`, or `MP4_PULL`, 1 or 2 inputs of the corresponding type can be configured.
+     * @var array Input settings. 
+For the type:
+`RTMP_PUSH`, `RTMP_PULL`, `HLS_PULL`,`RTSP_PULL`,`SRT_PULL` or `MP4_PULL`, 1 or 2 inputs of the corresponding type can be configured.
+For the type:
+`SRT_PUSH`, 0 or 2 inputs of the corresponding type can be configured.
 This parameter can be left empty for RTP_PUSH and UDP_PUSH inputs.
+
 Note: If this parameter is not specified or empty, the original input settings will be used.
      */
     public $InputSettings;
@@ -64,9 +76,13 @@ Note: If this parameter is not specified or empty, the original input settings w
      * @param string $Id Input ID
      * @param string $Name Input name, which can contain 1-32 case-sensitive letters, digits, and underscores and must be unique at the region level
      * @param array $SecurityGroupIds List of the IDs of the security groups to attach
-     * @param array $InputSettings Input settings
-For the type `RTMP_PUSH`, `RTMP_PULL`, `HLS_PULL`, or `MP4_PULL`, 1 or 2 inputs of the corresponding type can be configured.
+     * @param array $InputSettings Input settings. 
+For the type:
+`RTMP_PUSH`, `RTMP_PULL`, `HLS_PULL`,`RTSP_PULL`,`SRT_PULL` or `MP4_PULL`, 1 or 2 inputs of the corresponding type can be configured.
+For the type:
+`SRT_PUSH`, 0 or 2 inputs of the corresponding type can be configured.
 This parameter can be left empty for RTP_PUSH and UDP_PUSH inputs.
+
 Note: If this parameter is not specified or empty, the original input settings will be used.
      */
     function __construct()

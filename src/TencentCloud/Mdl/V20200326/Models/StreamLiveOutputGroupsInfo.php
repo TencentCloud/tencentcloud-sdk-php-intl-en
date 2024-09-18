@@ -23,9 +23,9 @@ use TencentCloud\Common\AbstractModel;
  * @method string getName() Obtain Output group name, which can contain 1-32 case-sensitive letters, digits, and underscores and must be unique at the channel level
  * @method void setName(string $Name) Set Output group name, which can contain 1-32 case-sensitive letters, digits, and underscores and must be unique at the channel level
  * @method string getType() Obtain Output protocol
-Valid values: `HLS`, `DASH`, `HLS_ARCHIVE`, `HLS_STREAM_PACKAGE`, `DASH_STREAM_PACKAGE`, `FRAME_CAPTURE`
+Valid values: `HLS`, `DASH`, `HLS_ARCHIVE`, `DASH_ARCHIVE`,`HLS_STREAM_PACKAGE`, `DASH_STREAM_PACKAGE`, `FRAME_CAPTURE`,`RTP`,`RTMP`.
  * @method void setType(string $Type) Set Output protocol
-Valid values: `HLS`, `DASH`, `HLS_ARCHIVE`, `HLS_STREAM_PACKAGE`, `DASH_STREAM_PACKAGE`, `FRAME_CAPTURE`
+Valid values: `HLS`, `DASH`, `HLS_ARCHIVE`, `DASH_ARCHIVE`,`HLS_STREAM_PACKAGE`, `DASH_STREAM_PACKAGE`, `FRAME_CAPTURE`,`RTP`,`RTMP`.
  * @method array getOutputs() Obtain Output information
 If the type is RTMP or RTP, only one output is allowed; if it is HLS or DASH, 1-10 outputs are allowed.
  * @method void setOutputs(array $Outputs) Set Output information
@@ -62,7 +62,7 @@ class StreamLiveOutputGroupsInfo extends AbstractModel
 
     /**
      * @var string Output protocol
-Valid values: `HLS`, `DASH`, `HLS_ARCHIVE`, `HLS_STREAM_PACKAGE`, `DASH_STREAM_PACKAGE`, `FRAME_CAPTURE`
+Valid values: `HLS`, `DASH`, `HLS_ARCHIVE`, `DASH_ARCHIVE`,`HLS_STREAM_PACKAGE`, `DASH_STREAM_PACKAGE`, `FRAME_CAPTURE`,`RTP`,`RTMP`.
      */
     public $Type;
 
@@ -110,7 +110,7 @@ Note: This field may return `null`, indicating that no valid value was found.
     /**
      * @param string $Name Output group name, which can contain 1-32 case-sensitive letters, digits, and underscores and must be unique at the channel level
      * @param string $Type Output protocol
-Valid values: `HLS`, `DASH`, `HLS_ARCHIVE`, `HLS_STREAM_PACKAGE`, `DASH_STREAM_PACKAGE`, `FRAME_CAPTURE`
+Valid values: `HLS`, `DASH`, `HLS_ARCHIVE`, `DASH_ARCHIVE`,`HLS_STREAM_PACKAGE`, `DASH_STREAM_PACKAGE`, `FRAME_CAPTURE`,`RTP`,`RTMP`.
      * @param array $Outputs Output information
 If the type is RTMP or RTP, only one output is allowed; if it is HLS or DASH, 1-10 outputs are allowed.
      * @param array $Destinations Relay destinations. Quantity: [1, 2]
