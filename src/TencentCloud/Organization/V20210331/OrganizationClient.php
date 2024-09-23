@@ -63,6 +63,7 @@ use TencentCloud\Organization\V20210331\Models as Models;
  * @method Models\GetUserSyncProvisioningResponse GetUserSyncProvisioning(Models\GetUserSyncProvisioningRequest $req) This API is used to query the CAM user synchronization.
  * @method Models\GetZoneSAMLServiceProviderInfoResponse GetZoneSAMLServiceProviderInfo(Models\GetZoneSAMLServiceProviderInfoRequest $req) This API is used to query the SAML service provider configuration information.
  * @method Models\GetZoneStatisticsResponse GetZoneStatistics(Models\GetZoneStatisticsRequest $req) This API is used to query space statistics.
+ * @method Models\InviteOrganizationMemberResponse InviteOrganizationMember(Models\InviteOrganizationMemberRequest $req) This API is used to invite a member.
  * @method Models\ListExternalSAMLIdPCertificatesResponse ListExternalSAMLIdPCertificates(Models\ListExternalSAMLIdPCertificatesRequest $req) This API is used to query the SAML signing certificate list.
  * @method Models\ListGroupMembersResponse ListGroupMembers(Models\ListGroupMembersRequest $req) This API is used to query the user list of the user group.
  * @method Models\ListGroupsResponse ListGroups(Models\ListGroupsRequest $req) This API is used to query the user group list.

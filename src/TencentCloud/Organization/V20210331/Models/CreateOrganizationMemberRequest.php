@@ -40,6 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIdentityRoleID(array $IdentityRoleID) Set List of member access identity IDs, which can be obtained through the `ListOrganizationIdentity` API. `1` indicates supported, which is the default value.
  * @method integer getAuthRelationId() Obtain Verified entity relationship ID, which is required during creating members for different entities.
  * @method void setAuthRelationId(integer $AuthRelationId) Set Verified entity relationship ID, which is required during creating members for different entities.
+ * @method array getTags() Obtain Member tag list, with a maximum of 10.
+ * @method void setTags(array $Tags) Set Member tag list, with a maximum of 10.
  */
 class CreateOrganizationMemberRequest extends AbstractModel
 {
@@ -94,6 +96,11 @@ class CreateOrganizationMemberRequest extends AbstractModel
     public $AuthRelationId;
 
     /**
+     * @var array Member tag list, with a maximum of 10.
+     */
+    public $Tags;
+
+    /**
      * @param string $Name Member name, which can contain up to 25 letters, digits, and symbols `+@&._[]-:,`.
      * @param string $PolicyType Relationship policy. Valid value: `Financial`.
      * @param array $PermissionIds List of member financial permission IDs. `7` indicates paying, which is the default value.
@@ -104,6 +111,7 @@ class CreateOrganizationMemberRequest extends AbstractModel
      * @param string $PayUin Payer UIN, which is required during paying for a member.
      * @param array $IdentityRoleID List of member access identity IDs, which can be obtained through the `ListOrganizationIdentity` API. `1` indicates supported, which is the default value.
      * @param integer $AuthRelationId Verified entity relationship ID, which is required during creating members for different entities.
+     * @param array $Tags Member tag list, with a maximum of 10.
      */
     function __construct()
     {
@@ -156,6 +164,15 @@ class CreateOrganizationMemberRequest extends AbstractModel
 
         if (array_key_exists("AuthRelationId",$param) and $param["AuthRelationId"] !== null) {
             $this->AuthRelationId = $param["AuthRelationId"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }

@@ -44,6 +44,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setUpdateTime(string $UpdateTime) Set Update time
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method array getTags() Obtain Member tag list.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setTags(array $Tags) Set Member tag list.
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class OrgNode extends AbstractModel
 {
@@ -84,6 +88,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $UpdateTime;
 
     /**
+     * @var array Member tag list.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $Tags;
+
+    /**
      * @param integer $NodeId Organization node ID
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $Name Name
@@ -95,6 +105,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $CreateTime Creation time
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $UpdateTime Update time
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param array $Tags Member tag list.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
@@ -132,6 +144,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("UpdateTime",$param) and $param["UpdateTime"] !== null) {
             $this->UpdateTime = $param["UpdateTime"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }

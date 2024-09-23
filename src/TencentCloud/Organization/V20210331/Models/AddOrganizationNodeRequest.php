@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setName(string $Name) Set Node name, which can contain up to 40 letters, digits, and symbols `+@&._[]-`.
  * @method string getRemark() Obtain Remarks.
  * @method void setRemark(string $Remark) Set Remarks.
+ * @method array getTags() Obtain Department tag list, with a maximum of 10.
+ * @method void setTags(array $Tags) Set Department tag list, with a maximum of 10.
  */
 class AddOrganizationNodeRequest extends AbstractModel
 {
@@ -45,9 +47,15 @@ class AddOrganizationNodeRequest extends AbstractModel
     public $Remark;
 
     /**
+     * @var array Department tag list, with a maximum of 10.
+     */
+    public $Tags;
+
+    /**
      * @param integer $ParentNodeId Parent node ID, which can be obtained through [DescribeOrganizationNodes](https://intl.cloud.tencent.com/document/product/850/82926?from_cn_redirect=1).
      * @param string $Name Node name, which can contain up to 40 letters, digits, and symbols `+@&._[]-`.
      * @param string $Remark Remarks.
+     * @param array $Tags Department tag list, with a maximum of 10.
      */
     function __construct()
     {
@@ -72,6 +80,15 @@ class AddOrganizationNodeRequest extends AbstractModel
 
         if (array_key_exists("Remark",$param) and $param["Remark"] !== null) {
             $this->Remark = $param["Remark"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }

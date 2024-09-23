@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) Set Maximum number of returned results. Maximum value: `50`.
  * @method integer getOffset() Obtain Offset. Its value must be an integer multiple of the limit. Default value: 0.
  * @method void setOffset(integer $Offset) Set Offset. Its value must be an integer multiple of the limit. Default value: 0.
+ * @method array getTags() Obtain Department tag search list, with a maximum of 10.
+ * @method void setTags(array $Tags) Set Department tag search list, with a maximum of 10.
  */
 class DescribeOrganizationNodesRequest extends AbstractModel
 {
@@ -38,8 +40,14 @@ class DescribeOrganizationNodesRequest extends AbstractModel
     public $Offset;
 
     /**
+     * @var array Department tag search list, with a maximum of 10.
+     */
+    public $Tags;
+
+    /**
      * @param integer $Limit Maximum number of returned results. Maximum value: `50`.
      * @param integer $Offset Offset. Its value must be an integer multiple of the limit. Default value: 0.
+     * @param array $Tags Department tag search list, with a maximum of 10.
      */
     function __construct()
     {
@@ -60,6 +68,15 @@ class DescribeOrganizationNodesRequest extends AbstractModel
 
         if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
             $this->Offset = $param["Offset"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }

@@ -88,6 +88,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setPermissionStatus(string $PermissionStatus) Set Member permission status. Valid values: `Confirmed`, `UnConfirmed`.
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method array getTags() Obtain Member tag list.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setTags(array $Tags) Set Member tag list.
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class OrgMember extends AbstractModel
 {
@@ -194,6 +198,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $PermissionStatus;
 
     /**
+     * @var array Member tag list.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $Tags;
+
+    /**
      * @param integer $MemberUin Member UIN
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $Name Member name
@@ -227,6 +237,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $BindStatus Security information binding status. Valid values: `Unbound`, `Valid`, `Success`, `Failed`.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $PermissionStatus Member permission status. Valid values: `Confirmed`, `UnConfirmed`.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param array $Tags Member tag list.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
@@ -318,6 +330,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("PermissionStatus",$param) and $param["PermissionStatus"] !== null) {
             $this->PermissionStatus = $param["PermissionStatus"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }
