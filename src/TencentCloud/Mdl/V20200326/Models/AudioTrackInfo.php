@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getTrackName() Obtain User input is limited to letters and numbers, the length should not exceed 20, and should not be repeated in the same channel.
  * @method void setTrackName(string $TrackName) Set User input is limited to letters and numbers, the length should not exceed 20, and should not be repeated in the same channel.
- * @method string getAudioCodec() Obtain Only AAC is supported.
- * @method void setAudioCodec(string $AudioCodec) Set Only AAC is supported.
+ * @method string getAudioCodec() Obtain Audio encoding format, only `AAC` and `PASSTHROUGH` are available, with `AAC` as the default.
+ * @method void setAudioCodec(string $AudioCodec) Set Audio encoding format, only `AAC` and `PASSTHROUGH` are available, with `AAC` as the default.
  * @method integer getAudioBitrate() Obtain Audio bitrate.
  * @method void setAudioBitrate(integer $AudioBitrate) Set Audio bitrate.
  * @method integer getAudioSampleRate() Obtain Audio sample rate.
@@ -43,7 +43,7 @@ class AudioTrackInfo extends AbstractModel
     public $TrackName;
 
     /**
-     * @var string Only AAC is supported.
+     * @var string Audio encoding format, only `AAC` and `PASSTHROUGH` are available, with `AAC` as the default.
      */
     public $AudioCodec;
 
@@ -74,7 +74,7 @@ class AudioTrackInfo extends AbstractModel
 
     /**
      * @param string $TrackName User input is limited to letters and numbers, the length should not exceed 20, and should not be repeated in the same channel.
-     * @param string $AudioCodec Only AAC is supported.
+     * @param string $AudioCodec Audio encoding format, only `AAC` and `PASSTHROUGH` are available, with `AAC` as the default.
      * @param integer $AudioBitrate Audio bitrate.
      * @param integer $AudioSampleRate Audio sample rate.
      * @param string $AudioSelectorName Only values defined by AttachedInputs.$.AudioSelectors.$.audioPidSelection.pid can be entered.

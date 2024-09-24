@@ -44,6 +44,12 @@ This parameter is valid only if `IsPersistence` is `1`.
  * @method void setSourceContext(string $SourceContext) Set The source context, which is used to pass through user request information. The [NewFileUpload](https://intl.cloud.tencent.com/document/product/266/7830?from_cn_redirect=1) callback will return the value of this parameter. It can contain up to 250 characters and is valid only if `IsPersistence` is `1`.
  * @method string getSessionContext() Obtain The session context, which is used to pass through user request information. If the `Procedure` parameter is specified, the [ProcedureStateChanged](https://intl.cloud.tencent.com/document/product/266/9636?from_cn_redirect=1) callback will return the value of this parameter. It can contain up to 1,000 characters and is valid only if `IsPersistence` is `1`.
  * @method void setSessionContext(string $SessionContext) Set The session context, which is used to pass through user request information. If the `Procedure` parameter is specified, the [ProcedureStateChanged](https://intl.cloud.tencent.com/document/product/266/9636?from_cn_redirect=1) callback will return the value of this parameter. It can contain up to 1,000 characters and is valid only if `IsPersistence` is `1`.
+ * @method string getPrecision() Obtain 
+ * @method void setPrecision(string $Precision) Set 
+ * @method string getOutputMediaType() Obtain 
+ * @method void setOutputMediaType(string $OutputMediaType) Set 
+ * @method string getExtInfo() Obtain 
+ * @method void setExtInfo(string $ExtInfo) Set 
  */
 class SimpleHlsClipRequest extends AbstractModel
 {
@@ -100,6 +106,21 @@ This parameter is valid only if `IsPersistence` is `1`.
     public $SessionContext;
 
     /**
+     * @var string 
+     */
+    public $Precision;
+
+    /**
+     * @var string 
+     */
+    public $OutputMediaType;
+
+    /**
+     * @var string 
+     */
+    public $ExtInfo;
+
+    /**
      * @param string $Url URL of the HLS video in VOD that needs to be clipped.
      * @param integer $SubAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
      * @param float $StartTimeOffset Start offset time of clipping in seconds. Default value: 0, which means to clip from the beginning of the video. A negative number indicates how many seconds from the end of the video clipping will start at. For example, -10 means that clipping will start at the 10th second from the end.
@@ -112,6 +133,9 @@ This parameter is valid only if `IsPersistence` is `1`.
 This parameter is valid only if `IsPersistence` is `1`.
      * @param string $SourceContext The source context, which is used to pass through user request information. The [NewFileUpload](https://intl.cloud.tencent.com/document/product/266/7830?from_cn_redirect=1) callback will return the value of this parameter. It can contain up to 250 characters and is valid only if `IsPersistence` is `1`.
      * @param string $SessionContext The session context, which is used to pass through user request information. If the `Procedure` parameter is specified, the [ProcedureStateChanged](https://intl.cloud.tencent.com/document/product/266/9636?from_cn_redirect=1) callback will return the value of this parameter. It can contain up to 1,000 characters and is valid only if `IsPersistence` is `1`.
+     * @param string $Precision 
+     * @param string $OutputMediaType 
+     * @param string $ExtInfo 
      */
     function __construct()
     {
@@ -164,6 +188,18 @@ This parameter is valid only if `IsPersistence` is `1`.
 
         if (array_key_exists("SessionContext",$param) and $param["SessionContext"] !== null) {
             $this->SessionContext = $param["SessionContext"];
+        }
+
+        if (array_key_exists("Precision",$param) and $param["Precision"] !== null) {
+            $this->Precision = $param["Precision"];
+        }
+
+        if (array_key_exists("OutputMediaType",$param) and $param["OutputMediaType"] !== null) {
+            $this->OutputMediaType = $param["OutputMediaType"];
+        }
+
+        if (array_key_exists("ExtInfo",$param) and $param["ExtInfo"] !== null) {
+            $this->ExtInfo = $param["ExtInfo"];
         }
     }
 }

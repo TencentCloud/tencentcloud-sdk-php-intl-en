@@ -38,8 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBitrateCompressionRatio(integer $BitrateCompressionRatio) Set Compression ratio for top speed codec transcoding. Value range: [0, 50]. The lower the compression ratio, the higher the image quality.
  * @method integer getNeedAudio() Obtain Whether audio is needed. `0`: not needed; `1`: needed
  * @method void setNeedAudio(integer $NeedAudio) Set Whether audio is needed. `0`: not needed; `1`: needed
- * @method string getAcodec() Obtain Audio codec. Valid value: `AAC` (default)
- * @method void setAcodec(string $Acodec) Set Audio codec. Valid value: `AAC` (default)
+ * @method string getAcodec() Obtain Audio encoding format, only `AAC` and `PASSTHROUGH` are available, with `AAC` as the default.
+ * @method void setAcodec(string $Acodec) Set Audio encoding format, only `AAC` and `PASSTHROUGH` are available, with `AAC` as the default.
  * @method integer getAudioBitrate() Obtain Audio bitrate. If this parameter is left empty, the original bitrate will be used.
 Valid values: `6000`, `7000`, `8000`, `10000`, `12000`, `14000`, `16000`, `20000`, `24000`, `28000`, `32000`, `40000`, `48000`, `56000`, `64000`, `80000`, `96000`, `112000`, `128000`, `160000`, `192000`, `224000`, `256000`, `288000`, `320000`, `384000`, `448000`, `512000`, `576000`, `640000`, `768000`, `896000`, `1024000`
  * @method void setAudioBitrate(integer $AudioBitrate) Set Audio bitrate. If this parameter is left empty, the original bitrate will be used.
@@ -147,7 +147,7 @@ class AVTemplate extends AbstractModel
     public $NeedAudio;
 
     /**
-     * @var string Audio codec. Valid value: `AAC` (default)
+     * @var string Audio encoding format, only `AAC` and `PASSTHROUGH` are available, with `AAC` as the default.
      */
     public $Acodec;
 
@@ -278,7 +278,7 @@ Valid values: `6000`, `7000`, `8000`, `10000`, `12000`, `14000`, `16000`, `20000
      * @param string $TopSpeed Whether to enable top speed codec transcoding. Valid values: `CLOSE` (disable), `OPEN` (enable). Default value: `CLOSE`
      * @param integer $BitrateCompressionRatio Compression ratio for top speed codec transcoding. Value range: [0, 50]. The lower the compression ratio, the higher the image quality.
      * @param integer $NeedAudio Whether audio is needed. `0`: not needed; `1`: needed
-     * @param string $Acodec Audio codec. Valid value: `AAC` (default)
+     * @param string $Acodec Audio encoding format, only `AAC` and `PASSTHROUGH` are available, with `AAC` as the default.
      * @param integer $AudioBitrate Audio bitrate. If this parameter is left empty, the original bitrate will be used.
 Valid values: `6000`, `7000`, `8000`, `10000`, `12000`, `14000`, `16000`, `20000`, `24000`, `28000`, `32000`, `40000`, `48000`, `56000`, `64000`, `80000`, `96000`, `112000`, `128000`, `160000`, `192000`, `224000`, `256000`, `288000`, `320000`, `384000`, `448000`, `512000`, `576000`, `640000`, `768000`, `896000`, `1024000`
      * @param integer $VideoBitrate Video bitrate. Value range: [50000, 40000000]. The value must be an integer multiple of 1000. If this parameter is left empty, the original bitrate will be used.

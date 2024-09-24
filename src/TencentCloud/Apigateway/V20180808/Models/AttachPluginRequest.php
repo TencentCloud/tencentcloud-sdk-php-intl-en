@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setServiceId(string $ServiceId) Set Service ID.
  * @method string getEnvironmentName() Obtain API environment.
  * @method void setEnvironmentName(string $EnvironmentName) Set API environment.
- * @method array getApiIds() Obtain List of APIs bound with the plugin.
- * @method void setApiIds(array $ApiIds) Set List of APIs bound with the plugin.
+ * @method array getApiIds() Obtain List of APIs bound with the plugin
+ * @method void setApiIds(array $ApiIds) Set List of APIs bound with the plugin
  */
 class AttachPluginRequest extends AbstractModel
 {
@@ -47,7 +47,7 @@ class AttachPluginRequest extends AbstractModel
     public $EnvironmentName;
 
     /**
-     * @var array List of APIs bound with the plugin.
+     * @var array List of APIs bound with the plugin
      */
     public $ApiIds;
 
@@ -55,7 +55,7 @@ class AttachPluginRequest extends AbstractModel
      * @param string $PluginId ID of the plugin to be bound.
      * @param string $ServiceId Service ID.
      * @param string $EnvironmentName API environment.
-     * @param array $ApiIds List of APIs bound with the plugin.
+     * @param array $ApiIds List of APIs bound with the plugin
      */
     function __construct()
     {

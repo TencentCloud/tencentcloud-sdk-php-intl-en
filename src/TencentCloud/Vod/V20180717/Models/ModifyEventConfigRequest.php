@@ -34,8 +34,10 @@ Note: If the NotificationUrl parameter is provided and the value is an empty str
  * @method void setUploadMediaCompleteEventSwitch(string $UploadMediaCompleteEventSwitch) Set Whether to receive the [Video Upload Completed](https://www.tencentcloud.com/document/product/266/33950) event notification. The default "OFF" is to ignore the event notification, and "ON" is to receive the event notification. 
  * @method string getDeleteMediaCompleteEventSwitch() Obtain Whether to receive [Video deletion completed](https://www.tencentcloud.com/document/product/266/33952) event notification, the default "OFF" means to ignore the event notification, "ON" means to receive the event notification .
  * @method void setDeleteMediaCompleteEventSwitch(string $DeleteMediaCompleteEventSwitch) Set Whether to receive [Video deletion completed](https://www.tencentcloud.com/document/product/266/33952) event notification, the default "OFF" means to ignore the event notification, "ON" means to receive the event notification .
- * @method integer getSubAppId() Obtain <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
- * @method void setSubAppId(integer $SubAppId) Set <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+ * @method string getPersistenceCompleteEventSwitch() Obtain Whether to receive the Persistence completed event notification, the default "OFF" means to ignore the event notification, "ON" means to receive the event notification.
+ * @method void setPersistenceCompleteEventSwitch(string $PersistenceCompleteEventSwitch) Set Whether to receive the Persistence completed event notification, the default "OFF" means to ignore the event notification, "ON" means to receive the event notification.
+ * @method integer getSubAppId() Obtain <b>The VOD [application](https://www.tencentcloud.com/document/product/266/33987) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+ * @method void setSubAppId(integer $SubAppId) Set <b>The VOD [application](https://www.tencentcloud.com/document/product/266/33987) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
  */
 class ModifyEventConfigRequest extends AbstractModel
 {
@@ -63,7 +65,12 @@ Note: If the NotificationUrl parameter is provided and the value is an empty str
     public $DeleteMediaCompleteEventSwitch;
 
     /**
-     * @var integer <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+     * @var string Whether to receive the Persistence completed event notification, the default "OFF" means to ignore the event notification, "ON" means to receive the event notification.
+     */
+    public $PersistenceCompleteEventSwitch;
+
+    /**
+     * @var integer <b>The VOD [application](https://www.tencentcloud.com/document/product/266/33987) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
      */
     public $SubAppId;
 
@@ -75,7 +82,8 @@ Note: If the NotificationUrl parameter is provided and the value is an empty str
 Note: If the NotificationUrl parameter is provided and the value is an empty string, the 3.0 format callback address will be cleared.
      * @param string $UploadMediaCompleteEventSwitch Whether to receive the [Video Upload Completed](https://www.tencentcloud.com/document/product/266/33950) event notification. The default "OFF" is to ignore the event notification, and "ON" is to receive the event notification. 
      * @param string $DeleteMediaCompleteEventSwitch Whether to receive [Video deletion completed](https://www.tencentcloud.com/document/product/266/33952) event notification, the default "OFF" means to ignore the event notification, "ON" means to receive the event notification .
-     * @param integer $SubAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+     * @param string $PersistenceCompleteEventSwitch Whether to receive the Persistence completed event notification, the default "OFF" means to ignore the event notification, "ON" means to receive the event notification.
+     * @param integer $SubAppId <b>The VOD [application](https://www.tencentcloud.com/document/product/266/33987) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
      */
     function __construct()
     {
@@ -104,6 +112,10 @@ Note: If the NotificationUrl parameter is provided and the value is an empty str
 
         if (array_key_exists("DeleteMediaCompleteEventSwitch",$param) and $param["DeleteMediaCompleteEventSwitch"] !== null) {
             $this->DeleteMediaCompleteEventSwitch = $param["DeleteMediaCompleteEventSwitch"];
+        }
+
+        if (array_key_exists("PersistenceCompleteEventSwitch",$param) and $param["PersistenceCompleteEventSwitch"] !== null) {
+            $this->PersistenceCompleteEventSwitch = $param["PersistenceCompleteEventSwitch"];
         }
 
         if (array_key_exists("SubAppId",$param) and $param["SubAppId"] !== null) {
