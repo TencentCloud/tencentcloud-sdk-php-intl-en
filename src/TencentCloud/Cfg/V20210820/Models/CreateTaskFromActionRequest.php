@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getTaskActionId() Obtain Action ID, which can be obtained by using the action list API DescribeActionLibraryList.
  * @method void setTaskActionId(integer $TaskActionId) Set Action ID, which can be obtained by using the action list API DescribeActionLibraryList.
- * @method array getTaskInstances() Obtain ID of the instance participating in the experiment
- * @method void setTaskInstances(array $TaskInstances) Set ID of the instance participating in the experiment
+ * @method array getTaskInstances() Obtain ID of the instance participating in the experiment.
+ * @method void setTaskInstances(array $TaskInstances) Set ID of the instance participating in the experiment.
  * @method string getTaskTitle() Obtain Experiment name. If this parameter is left blank, the action name is used by default.
  * @method void setTaskTitle(string $TaskTitle) Set Experiment name. If this parameter is left blank, the action name is used by default.
  * @method string getTaskDescription() Obtain Experiment description. If this parameter is left blank, the action description is used by default.
@@ -43,7 +43,7 @@ class CreateTaskFromActionRequest extends AbstractModel
     public $TaskActionId;
 
     /**
-     * @var array ID of the instance participating in the experiment
+     * @var array ID of the instance participating in the experiment.
      */
     public $TaskInstances;
 
@@ -74,7 +74,7 @@ class CreateTaskFromActionRequest extends AbstractModel
 
     /**
      * @param integer $TaskActionId Action ID, which can be obtained by using the action list API DescribeActionLibraryList.
-     * @param array $TaskInstances ID of the instance participating in the experiment
+     * @param array $TaskInstances ID of the instance participating in the experiment.
      * @param string $TaskTitle Experiment name. If this parameter is left blank, the action name is used by default.
      * @param string $TaskDescription Experiment description. If this parameter is left blank, the action description is used by default.
      * @param string $TaskActionGeneralConfiguration General action parameters, which need to be passed in after JSON serialization. The parameters can be obtained by using the action details API DescribeActionFieldConfigList. If this field is left blank, the default action parameters are used by default.
