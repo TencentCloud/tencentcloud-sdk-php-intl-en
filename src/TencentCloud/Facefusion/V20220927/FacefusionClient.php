@@ -28,8 +28,6 @@ use TencentCloud\Facefusion\V20220927\Models as Models;
 
 
 - The signature method in the public parameters must be specified as the V3 version. In other words, set the SignatureMethod parameter to TC3-HMAC-SHA256.
- * @method Models\QueryVideoFaceFusionJobResponse QueryVideoFaceFusionJob(Models\QueryVideoFaceFusionJobRequest $req) This API is used to query the progress and status of video face fusion tasks by Job ID.
- * @method Models\SubmitVideoFaceFusionJobResponse SubmitVideoFaceFusionJob(Models\SubmitVideoFaceFusionJobRequest $req) This API is used to submit asynchronous processing tasks of video face fusion. After a task is submitted, the Job ID, estimated completion time, and current queue length will be returned.
  */
 
 class FacefusionClient extends AbstractClient
