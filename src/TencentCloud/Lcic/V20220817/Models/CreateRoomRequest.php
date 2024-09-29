@@ -30,8 +30,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSdkAppId(integer $SdkAppId) Set LCIC SdkAppId
  * @method integer getResolution() Obtain 	Resolution. Valid values: 1: SD; 2: HD; 3: FHD
  * @method void setResolution(integer $Resolution) Set 	Resolution. Valid values: 1: SD; 2: HD; 3: FHD
- * @method integer getMaxMicNumber() Obtain Maximum number of mic-on users (excluding teachers). Value range: [0, 16]
- * @method void setMaxMicNumber(integer $MaxMicNumber) Set Maximum number of mic-on users (excluding teachers). Value range: [0, 16]
+ * @method integer getMaxMicNumber() Obtain Maximum number of mic-on users (excluding teachers). Value range: [0, 16]. This value affects billing, please set it according to the actual business situation. For billing rules, see "Billing Overview" under "Purchase Guide". Example:
+1: Billing based on the 1v1 rule;
+10: Billing based on the 1v7-12 rule.
+ * @method void setMaxMicNumber(integer $MaxMicNumber) Set Maximum number of mic-on users (excluding teachers). Value range: [0, 16]. This value affects billing, please set it according to the actual business situation. For billing rules, see "Billing Overview" under "Purchase Guide". Example:
+1: Billing based on the 1v1 rule;
+10: Billing based on the 1v7-12 rule.
  * @method string getSubType() Obtain The room subtype. Valid values: videodoc: Document + Video; video: Video only.
  * @method void setSubType(string $SubType) Set The room subtype. Valid values: videodoc: Document + Video; video: Video only.
  * @method string getTeacherId() Obtain The user ID of the teacher. User IDs are returned by the user registration APIs. The user specified will have teacher permissions in the room created.
@@ -82,6 +86,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRecordScene(string $RecordScene) Set Record customized scene, only recordlayout=9 this parameter is valid, the data content for the user-defined scene parameters, data format for the json key-value pairs, where the key-value pairs of the value for the string type.
  * @method string getRecordLang() Obtain Record customized language, only when recordlayout=9, this parameter is valid.
  * @method void setRecordLang(string $RecordLang) Set Record customized language, only when recordlayout=9, this parameter is valid.
+ * @method integer getRecordStream() Obtain Recording type. 0: Records only mixed streams (default); 1: Records mixed streams and single streams. In this mode, in addition to the mixed streams, the audio and video streams of the teacher and students on stage are recorded separately. Each recording incurs corresponding recording fees. Example: 0.
+ * @method void setRecordStream(integer $RecordStream) Set Recording type. 0: Records only mixed streams (default); 1: Records mixed streams and single streams. In this mode, in addition to the mixed streams, the audio and video streams of the teacher and students on stage are recorded separately. Each recording incurs corresponding recording fees. Example: 0.
  */
 class CreateRoomRequest extends AbstractModel
 {
@@ -111,7 +117,9 @@ class CreateRoomRequest extends AbstractModel
     public $Resolution;
 
     /**
-     * @var integer Maximum number of mic-on users (excluding teachers). Value range: [0, 16]
+     * @var integer Maximum number of mic-on users (excluding teachers). Value range: [0, 16]. This value affects billing, please set it according to the actual business situation. For billing rules, see "Billing Overview" under "Purchase Guide". Example:
+1: Billing based on the 1v1 rule;
+10: Billing based on the 1v7-12 rule.
      */
     public $MaxMicNumber;
 
@@ -234,12 +242,19 @@ class CreateRoomRequest extends AbstractModel
     public $RecordLang;
 
     /**
+     * @var integer Recording type. 0: Records only mixed streams (default); 1: Records mixed streams and single streams. In this mode, in addition to the mixed streams, the audio and video streams of the teacher and students on stage are recorded separately. Each recording incurs corresponding recording fees. Example: 0.
+     */
+    public $RecordStream;
+
+    /**
      * @param string $Name Room name
      * @param integer $StartTime Reserved room start time, in UNIX timestamp format
      * @param integer $EndTime Reserved room end time, in UNIX timestamp format
      * @param integer $SdkAppId LCIC SdkAppId
      * @param integer $Resolution 	Resolution. Valid values: 1: SD; 2: HD; 3: FHD
-     * @param integer $MaxMicNumber Maximum number of mic-on users (excluding teachers). Value range: [0, 16]
+     * @param integer $MaxMicNumber Maximum number of mic-on users (excluding teachers). Value range: [0, 16]. This value affects billing, please set it according to the actual business situation. For billing rules, see "Billing Overview" under "Purchase Guide". Example:
+1: Billing based on the 1v1 rule;
+10: Billing based on the 1v7-12 rule.
      * @param string $SubType The room subtype. Valid values: videodoc: Document + Video; video: Video only.
      * @param string $TeacherId The user ID of the teacher. User IDs are returned by the user registration APIs. The user specified will have teacher permissions in the room created.
      * @param integer $AutoMic Whether to automatically turn the mic on when the user enters a room. Valid values: 0: No (default value); 1: Yes.
@@ -265,6 +280,7 @@ class CreateRoomRequest extends AbstractModel
      * @param string $RecordBackground Recorded file background image, support png, jpg, jpeg, bmp format, does not support transparent channel for the time being
      * @param string $RecordScene Record customized scene, only recordlayout=9 this parameter is valid, the data content for the user-defined scene parameters, data format for the json key-value pairs, where the key-value pairs of the value for the string type.
      * @param string $RecordLang Record customized language, only when recordlayout=9, this parameter is valid.
+     * @param integer $RecordStream Recording type. 0: Records only mixed streams (default); 1: Records mixed streams and single streams. In this mode, in addition to the mixed streams, the audio and video streams of the teacher and students on stage are recorded separately. Each recording incurs corresponding recording fees. Example: 0.
      */
     function __construct()
     {
@@ -393,6 +409,10 @@ class CreateRoomRequest extends AbstractModel
 
         if (array_key_exists("RecordLang",$param) and $param["RecordLang"] !== null) {
             $this->RecordLang = $param["RecordLang"];
+        }
+
+        if (array_key_exists("RecordStream",$param) and $param["RecordStream"] !== null) {
+            $this->RecordStream = $param["RecordStream"];
         }
     }
 }

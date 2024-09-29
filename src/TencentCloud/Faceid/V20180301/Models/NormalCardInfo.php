@@ -88,6 +88,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setTaiWanIDCard(TaiWanIDCard $TaiWanIDCard) Set Taiwan ID Card
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method HMTPermit getHMTPermitCard() Obtain exit/entry permit (card) for traveling to and from Hong Kong, Macao, or Taiwan.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setHMTPermitCard(HMTPermit $HMTPermitCard) Set exit/entry permit (card) for traveling to and from Hong Kong, Macao, or Taiwan.
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class NormalCardInfo extends AbstractModel
 {
@@ -194,6 +198,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $TaiWanIDCard;
 
     /**
+     * @var HMTPermit exit/entry permit (card) for traveling to and from Hong Kong, Macao, or Taiwan.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $HMTPermitCard;
+
+    /**
      * @param NormalHKIDCard $HKIDCard Hong Kong ID Card
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param NormalMLIDCard $MLIDCard Malaysia ID Card
@@ -227,6 +237,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param JapanIDCard $JapanIDCard Japan ID Card
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param TaiWanIDCard $TaiWanIDCard Taiwan ID Card
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param HMTPermit $HMTPermitCard exit/entry permit (card) for traveling to and from Hong Kong, Macao, or Taiwan.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
@@ -325,6 +337,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (array_key_exists("TaiWanIDCard",$param) and $param["TaiWanIDCard"] !== null) {
             $this->TaiWanIDCard = new TaiWanIDCard();
             $this->TaiWanIDCard->deserialize($param["TaiWanIDCard"]);
+        }
+
+        if (array_key_exists("HMTPermitCard",$param) and $param["HMTPermitCard"] !== null) {
+            $this->HMTPermitCard = new HMTPermit();
+            $this->HMTPermitCard->deserialize($param["HMTPermitCard"]);
         }
     }
 }

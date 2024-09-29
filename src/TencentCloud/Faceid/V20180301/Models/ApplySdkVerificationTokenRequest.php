@@ -62,6 +62,8 @@ Default value: 4
 17.ThailandDrivingLicense: Thailand Driving License
 18.SingaporeDrivingLicense: Singapore Driving License
 19.JapanDrivingLicense: Japan Driving License
+20.TaiWanIDCard:Taiwan ID Card
+21.HMTPermit: exit/entry permit (card) for traveling to and from Hong Kong, Macao, or Taiwan
  * @method void setIdCardType(string $IdCardType) Set The identity document type. Valid values: 
 1. HK (default): Identity card of Hong Kong (China)
 2. ML: Malaysian identity card
@@ -82,6 +84,8 @@ Default value: 4
 17.ThailandDrivingLicense: Thailand Driving License
 18.SingaporeDrivingLicense: Singapore Driving License
 19.JapanDrivingLicense: Japan Driving License
+20.TaiWanIDCard:Taiwan ID Card
+21.HMTPermit: exit/entry permit (card) for traveling to and from Hong Kong, Macao, or Taiwan
  * @method string getCompareImage() Obtain The Base64-encoded value of the photo to compare, which is required only when `CheckMode` is set to `2`.
  * @method void setCompareImage(string $CompareImage) Set The Base64-encoded value of the photo to compare, which is required only when `CheckMode` is set to `2`.
  * @method boolean getNeedVerifyIdCard() Obtain Whether ID card authentication is required. If not, only document OCR will be performed. Currently, authentication is available only when the value of `IdCardType` is `HK`.
@@ -137,6 +141,8 @@ Default value: 4
 17.ThailandDrivingLicense: Thailand Driving License
 18.SingaporeDrivingLicense: Singapore Driving License
 19.JapanDrivingLicense: Japan Driving License
+20.TaiWanIDCard:Taiwan ID Card
+21.HMTPermit: exit/entry permit (card) for traveling to and from Hong Kong, Macao, or Taiwan
      */
     public $IdCardType;
 
@@ -199,6 +205,8 @@ Default value: 4
 17.ThailandDrivingLicense: Thailand Driving License
 18.SingaporeDrivingLicense: Singapore Driving License
 19.JapanDrivingLicense: Japan Driving License
+20.TaiWanIDCard:Taiwan ID Card
+21.HMTPermit: exit/entry permit (card) for traveling to and from Hong Kong, Macao, or Taiwan
      * @param string $CompareImage The Base64-encoded value of the photo to compare, which is required only when `CheckMode` is set to `2`.
      * @param boolean $NeedVerifyIdCard Whether ID card authentication is required. If not, only document OCR will be performed. Currently, authentication is available only when the value of `IdCardType` is `HK`.
      * @param boolean $DisableChangeOcrResult Whether to forbid the modification of the OCR result by users. Default value: `false` (modification allowed). (Currently, this parameter is not applied.)
