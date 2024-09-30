@@ -38,6 +38,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAiAnalysisTask(AiAnalysisTaskInput $AiAnalysisTask) Set A content analysis task.
  * @method AiRecognitionTaskInput getAiRecognitionTask() Obtain A content recognition task.
  * @method void setAiRecognitionTask(AiRecognitionTaskInput $AiRecognitionTask) Set A content recognition task.
+ * @method AiQualityControlTaskInput getQualityControlTask() Obtain Media quality inspection task.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setQualityControlTask(AiQualityControlTaskInput $QualityControlTask) Set Media quality inspection task.
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class ActivityPara extends AbstractModel
 {
@@ -87,6 +91,12 @@ class ActivityPara extends AbstractModel
     public $AiRecognitionTask;
 
     /**
+     * @var AiQualityControlTaskInput Media quality inspection task.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $QualityControlTask;
+
+    /**
      * @param TranscodeTaskInput $TranscodeTask A transcoding task.
      * @param AnimatedGraphicTaskInput $AnimatedGraphicTask An animated screenshot generation task.
      * @param SnapshotByTimeOffsetTaskInput $SnapshotByTimeOffsetTask A time point screencapturing task.
@@ -96,6 +106,8 @@ class ActivityPara extends AbstractModel
      * @param AiContentReviewTaskInput $AiContentReviewTask A content moderation task.
      * @param AiAnalysisTaskInput $AiAnalysisTask A content analysis task.
      * @param AiRecognitionTaskInput $AiRecognitionTask A content recognition task.
+     * @param AiQualityControlTaskInput $QualityControlTask Media quality inspection task.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -153,6 +165,11 @@ class ActivityPara extends AbstractModel
         if (array_key_exists("AiRecognitionTask",$param) and $param["AiRecognitionTask"] !== null) {
             $this->AiRecognitionTask = new AiRecognitionTaskInput();
             $this->AiRecognitionTask->deserialize($param["AiRecognitionTask"]);
+        }
+
+        if (array_key_exists("QualityControlTask",$param) and $param["QualityControlTask"] !== null) {
+            $this->QualityControlTask = new AiQualityControlTaskInput();
+            $this->QualityControlTask->deserialize($param["QualityControlTask"]);
         }
     }
 }

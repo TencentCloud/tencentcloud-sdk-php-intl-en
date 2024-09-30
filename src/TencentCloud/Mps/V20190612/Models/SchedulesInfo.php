@@ -70,6 +70,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setUpdateTime(string $UpdateTime) Set The last updated time in [ISO date format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getResourceId() Obtain Resource ID. For those without an associated resource ID, fill in with an account's primary resource ID.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setResourceId(string $ResourceId) Set Resource ID. For those without an associated resource ID, fill in with an account's primary resource ID.
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class SchedulesInfo extends AbstractModel
 {
@@ -143,6 +147,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $UpdateTime;
 
     /**
+     * @var string Resource ID. For those without an associated resource ID, fill in with an account's primary resource ID.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $ResourceId;
+
+    /**
      * @param integer $ScheduleId The scheme ID.
      * @param string $ScheduleName The scheme name.
 Note: This field may return null, indicating that no valid values can be obtained.
@@ -167,6 +177,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $CreateTime The creation time in [ISO date format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $UpdateTime The last updated time in [ISO date format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $ResourceId Resource ID. For those without an associated resource ID, fill in with an account's primary resource ID.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
@@ -232,6 +244,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("UpdateTime",$param) and $param["UpdateTime"] !== null) {
             $this->UpdateTime = $param["UpdateTime"];
+        }
+
+        if (array_key_exists("ResourceId",$param) and $param["ResourceId"] !== null) {
+            $this->ResourceId = $param["ResourceId"];
         }
     }
 }

@@ -26,26 +26,24 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSwitch(string $Switch) Set Whether to detect sensitive information in images. Valid values:
 <li>ON</li>
 <li>OFF</li>
- * @method array getLabelSet() Obtain The filter labels for sensitive information detection in images, which specify the types of sensitive information to return. If this parameter is left empty, the detection results for all labels are returned. Valid values:
-<li>guns</li>
-<li>crowd</li>
-<li>bloody</li>
-<li>police</li>
-<li>banners (sensitive flags)</li>
-<li>militant</li>
-<li>explosion</li>
-<li>terrorists</li>
-<li>scenario (sensitive scenes) </li>
- * @method void setLabelSet(array $LabelSet) Set The filter labels for sensitive information detection in images, which specify the types of sensitive information to return. If this parameter is left empty, the detection results for all labels are returned. Valid values:
-<li>guns</li>
-<li>crowd</li>
-<li>bloody</li>
-<li>police</li>
-<li>banners (sensitive flags)</li>
-<li>militant</li>
-<li>explosion</li>
-<li>terrorists</li>
-<li>scenario (sensitive scenes) </li>
+ * @method array getLabelSet() Obtain Sensitive content filter tags. The auditing results including the selected tags are returned. If the filter tag is empty, all auditing results will be returned. Valid values:
+<li>guns: weapons and guns;</li>
+<li>crowd: crowd gathering;</li>
+<li>bloody: bloodiness;</li>
+<li>police: police force;</li>
+<li>banners: sensitive flags;</li>
+<li>militant: militants;</li>
+<li>explosion: explosions and fires;</li>
+<li>terrorists: sensitive persons.</li>
+ * @method void setLabelSet(array $LabelSet) Set Sensitive content filter tags. The auditing results including the selected tags are returned. If the filter tag is empty, all auditing results will be returned. Valid values:
+<li>guns: weapons and guns;</li>
+<li>crowd: crowd gathering;</li>
+<li>bloody: bloodiness;</li>
+<li>police: police force;</li>
+<li>banners: sensitive flags;</li>
+<li>militant: militants;</li>
+<li>explosion: explosions and fires;</li>
+<li>terrorists: sensitive persons.</li>
  * @method integer getBlockConfidence() Obtain Threshold score for violation. If this score is reached or exceeded during intelligent audit, it will be deemed that a suspected violation has occurred. Value range: 0-100.
  * @method void setBlockConfidence(integer $BlockConfidence) Set Threshold score for violation. If this score is reached or exceeded during intelligent audit, it will be deemed that a suspected violation has occurred. Value range: 0-100.
  * @method integer getReviewConfidence() Obtain Threshold score for human audit. If this score is reached or exceeded during intelligent audit, human audit will be considered necessary. Value range: 0-100.
@@ -61,16 +59,15 @@ class TerrorismImgReviewTemplateInfoForUpdate extends AbstractModel
     public $Switch;
 
     /**
-     * @var array The filter labels for sensitive information detection in images, which specify the types of sensitive information to return. If this parameter is left empty, the detection results for all labels are returned. Valid values:
-<li>guns</li>
-<li>crowd</li>
-<li>bloody</li>
-<li>police</li>
-<li>banners (sensitive flags)</li>
-<li>militant</li>
-<li>explosion</li>
-<li>terrorists</li>
-<li>scenario (sensitive scenes) </li>
+     * @var array Sensitive content filter tags. The auditing results including the selected tags are returned. If the filter tag is empty, all auditing results will be returned. Valid values:
+<li>guns: weapons and guns;</li>
+<li>crowd: crowd gathering;</li>
+<li>bloody: bloodiness;</li>
+<li>police: police force;</li>
+<li>banners: sensitive flags;</li>
+<li>militant: militants;</li>
+<li>explosion: explosions and fires;</li>
+<li>terrorists: sensitive persons.</li>
      */
     public $LabelSet;
 
@@ -88,16 +85,15 @@ class TerrorismImgReviewTemplateInfoForUpdate extends AbstractModel
      * @param string $Switch Whether to detect sensitive information in images. Valid values:
 <li>ON</li>
 <li>OFF</li>
-     * @param array $LabelSet The filter labels for sensitive information detection in images, which specify the types of sensitive information to return. If this parameter is left empty, the detection results for all labels are returned. Valid values:
-<li>guns</li>
-<li>crowd</li>
-<li>bloody</li>
-<li>police</li>
-<li>banners (sensitive flags)</li>
-<li>militant</li>
-<li>explosion</li>
-<li>terrorists</li>
-<li>scenario (sensitive scenes) </li>
+     * @param array $LabelSet Sensitive content filter tags. The auditing results including the selected tags are returned. If the filter tag is empty, all auditing results will be returned. Valid values:
+<li>guns: weapons and guns;</li>
+<li>crowd: crowd gathering;</li>
+<li>bloody: bloodiness;</li>
+<li>police: police force;</li>
+<li>banners: sensitive flags;</li>
+<li>militant: militants;</li>
+<li>explosion: explosions and fires;</li>
+<li>terrorists: sensitive persons.</li>
      * @param integer $BlockConfidence Threshold score for violation. If this score is reached or exceeded during intelligent audit, it will be deemed that a suspected violation has occurred. Value range: 0-100.
      * @param integer $ReviewConfidence Threshold score for human audit. If this score is reached or exceeded during intelligent audit, human audit will be considered necessary. Value range: 0-100.
      */

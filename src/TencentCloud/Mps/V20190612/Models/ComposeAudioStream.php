@@ -42,6 +42,12 @@ u200c<li>`1`: Mono. </li>
  * @method void setAudioChannel(integer $AudioChannel) Set The number of sound channels. Valid values:
 u200c<li>`1`: Mono. </li>
 <li>`2`: Dual (default). </li>
+ * @method integer getBitrate() Obtain Reference bitrate, in kbps. Value range: 26-10000.
+If set, the encoder will try to encode at this bitrate.
+If not set, the service will automatically adopt a suitable bitrate based on audio parameters.
+ * @method void setBitrate(integer $Bitrate) Set Reference bitrate, in kbps. Value range: 26-10000.
+If set, the encoder will try to encode at this bitrate.
+If not set, the service will automatically adopt a suitable bitrate based on audio parameters.
  */
 class ComposeAudioStream extends AbstractModel
 {
@@ -69,6 +75,13 @@ u200c<li>`1`: Mono. </li>
     public $AudioChannel;
 
     /**
+     * @var integer Reference bitrate, in kbps. Value range: 26-10000.
+If set, the encoder will try to encode at this bitrate.
+If not set, the service will automatically adopt a suitable bitrate based on audio parameters.
+     */
+    public $Bitrate;
+
+    /**
      * @param string $Codec The codec of the audio stream. Valid values:
 <li>`AAC`: AAC (default), which is used for the MP4 container. </li>
 <li>`MP3`: MP3 codec, which is used for the MP3 container. </li>
@@ -80,6 +93,9 @@ u200c<li>`1`: Mono. </li>
      * @param integer $AudioChannel The number of sound channels. Valid values:
 u200c<li>`1`: Mono. </li>
 <li>`2`: Dual (default). </li>
+     * @param integer $Bitrate Reference bitrate, in kbps. Value range: 26-10000.
+If set, the encoder will try to encode at this bitrate.
+If not set, the service will automatically adopt a suitable bitrate based on audio parameters.
      */
     function __construct()
     {
@@ -104,6 +120,10 @@ u200c<li>`1`: Mono. </li>
 
         if (array_key_exists("AudioChannel",$param) and $param["AudioChannel"] !== null) {
             $this->AudioChannel = $param["AudioChannel"];
+        }
+
+        if (array_key_exists("Bitrate",$param) and $param["Bitrate"] !== null) {
+            $this->Bitrate = $param["Bitrate"];
         }
     }
 }

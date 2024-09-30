@@ -18,7 +18,7 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * The quality check output.
+ * Media quality inspection result output.
  *
  * @method boolean getNoAudio() Obtain Whether there is an audio track. `true` indicates that there isn't.
 Note: This field may return null, indicating that no valid values can be obtained.
@@ -32,9 +32,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setQualityEvaluationScore(integer $QualityEvaluationScore) Set The no-reference video quality score. Value range: 0-100.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method array getQualityControlResultSet() Obtain The issues detected by quality control.
+ * @method array getQualityControlResultSet() Obtain Exception items detected in content quality inspection.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setQualityControlResultSet(array $QualityControlResultSet) Set The issues detected by quality control.
+ * @method void setQualityControlResultSet(array $QualityControlResultSet) Set Exception items detected in content quality inspection.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method array getContainerDiagnoseResultSet() Obtain Exception items detected in format diagnosis.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setContainerDiagnoseResultSet(array $ContainerDiagnoseResultSet) Set Exception items detected in format diagnosis.
 Note: This field may return null, indicating that no valid values can be obtained.
  */
 class QualityControlData extends AbstractModel
@@ -58,10 +62,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $QualityEvaluationScore;
 
     /**
-     * @var array The issues detected by quality control.
+     * @var array Exception items detected in content quality inspection.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $QualityControlResultSet;
+
+    /**
+     * @var array Exception items detected in format diagnosis.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $ContainerDiagnoseResultSet;
 
     /**
      * @param boolean $NoAudio Whether there is an audio track. `true` indicates that there isn't.
@@ -70,7 +80,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $QualityEvaluationScore The no-reference video quality score. Value range: 0-100.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param array $QualityControlResultSet The issues detected by quality control.
+     * @param array $QualityControlResultSet Exception items detected in content quality inspection.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param array $ContainerDiagnoseResultSet Exception items detected in format diagnosis.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
@@ -104,6 +116,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 $obj = new QualityControlResult();
                 $obj->deserialize($value);
                 array_push($this->QualityControlResultSet, $obj);
+            }
+        }
+
+        if (array_key_exists("ContainerDiagnoseResultSet",$param) and $param["ContainerDiagnoseResultSet"] !== null) {
+            $this->ContainerDiagnoseResultSet = [];
+            foreach ($param["ContainerDiagnoseResultSet"] as $key => $value){
+                $obj = new ContainerDiagnoseResultItem();
+                $obj->deserialize($value);
+                array_push($this->ContainerDiagnoseResultSet, $obj);
             }
         }
     }

@@ -28,20 +28,22 @@ use TencentCloud\Common\AbstractModel;
 If you do not specify this parameter, the file will be saved to the directory specified in `InputInfo`.
  * @method void setOutputDir(string $OutputDir) Set The directory to save the media processing output file, which must start and end with `/`, such as `/movie/201907/`.
 If you do not specify this parameter, the file will be saved to the directory specified in `InputInfo`.
- * @method integer getScheduleId() Obtain The scheme ID.
-Note 1: About `OutputStorage` and `OutputDir`
-<li>If an output storage and directory are specified for a subtask of the scheme, those output settings will be applied.</li>
-<li>If an output storage and directory are not specified for the subtasks of a scheme, the output parameters passed in the `ProcessMedia` API will be applied.</li>
-Note 2: If `TaskNotifyConfig` is specified, the specified settings will be used instead of the default callback settings of the scheme.
+ * @method integer getScheduleId() Obtain Orchestration ID.
+Note 1: For parameters OutputStorage and OutputDir:
+<li>When a sub-task node in service orchestration has OutputStorage and OutputDir configured, the output configured in this sub-task node is used as the output of the sub-task.</li>
+<li>When a sub-task node in service orchestration does not have OutputStorage and OutputDir configured, if the task creation API (ProcessMedia) has specified an output, it will override the default output of the original orchestration.</li>
+<li>The priority of output settings is: Orchestration sub-task node > Output specified by the task API > Corresponding configuration within an orchestration.</li>
+Note 2: For the TaskNotifyConfig parameter, if the task creation API (ProcessMedia) has set this parameter, it will override the default callback of the original orchestration.
 
-Note 3: The trigger configured for a scheme is for automatically starting a scheme. It stops working when you manually call this API to start a scheme.
- * @method void setScheduleId(integer $ScheduleId) Set The scheme ID.
-Note 1: About `OutputStorage` and `OutputDir`
-<li>If an output storage and directory are specified for a subtask of the scheme, those output settings will be applied.</li>
-<li>If an output storage and directory are not specified for the subtasks of a scheme, the output parameters passed in the `ProcessMedia` API will be applied.</li>
-Note 2: If `TaskNotifyConfig` is specified, the specified settings will be used instead of the default callback settings of the scheme.
+Note 3: The trigger configured for an orchestration is for automatically starting the orchestration. It stops working when you manually call this API to start an orchestration.
+ * @method void setScheduleId(integer $ScheduleId) Set Orchestration ID.
+Note 1: For parameters OutputStorage and OutputDir:
+<li>When a sub-task node in service orchestration has OutputStorage and OutputDir configured, the output configured in this sub-task node is used as the output of the sub-task.</li>
+<li>When a sub-task node in service orchestration does not have OutputStorage and OutputDir configured, if the task creation API (ProcessMedia) has specified an output, it will override the default output of the original orchestration.</li>
+<li>The priority of output settings is: Orchestration sub-task node > Output specified by the task API > Corresponding configuration within an orchestration.</li>
+Note 2: For the TaskNotifyConfig parameter, if the task creation API (ProcessMedia) has set this parameter, it will override the default callback of the original orchestration.
 
-Note 3: The trigger configured for a scheme is for automatically starting a scheme. It stops working when you manually call this API to start a scheme.
+Note 3: The trigger configured for an orchestration is for automatically starting the orchestration. It stops working when you manually call this API to start an orchestration.
  * @method MediaProcessTaskInput getMediaProcessTask() Obtain The media processing parameters to use.
  * @method void setMediaProcessTask(MediaProcessTaskInput $MediaProcessTask) Set The media processing parameters to use.
  * @method AiContentReviewTaskInput getAiContentReviewTask() Obtain Type parameter of a video content audit task.
@@ -50,14 +52,14 @@ Note 3: The trigger configured for a scheme is for automatically starting a sche
  * @method void setAiAnalysisTask(AiAnalysisTaskInput $AiAnalysisTask) Set Video content analysis task parameter.
  * @method AiRecognitionTaskInput getAiRecognitionTask() Obtain Type parameter of a video content recognition task.
  * @method void setAiRecognitionTask(AiRecognitionTaskInput $AiRecognitionTask) Set Type parameter of a video content recognition task.
- * @method AiQualityControlTaskInput getAiQualityControlTask() Obtain The parameters of a quality control task.
- * @method void setAiQualityControlTask(AiQualityControlTaskInput $AiQualityControlTask) Set The parameters of a quality control task.
+ * @method AiQualityControlTaskInput getAiQualityControlTask() Obtain Media quality inspection type task parameters.
+ * @method void setAiQualityControlTask(AiQualityControlTaskInput $AiQualityControlTask) Set Media quality inspection type task parameters.
  * @method TaskNotifyConfig getTaskNotifyConfig() Obtain Event notification information of a task. If this parameter is left empty, no event notifications will be obtained.
  * @method void setTaskNotifyConfig(TaskNotifyConfig $TaskNotifyConfig) Set Event notification information of a task. If this parameter is left empty, no event notifications will be obtained.
  * @method integer getTasksPriority() Obtain Task flow priority. The higher the value, the higher the priority. Value range: [-10, 10]. If this parameter is left empty, 0 will be used.
  * @method void setTasksPriority(integer $TasksPriority) Set Task flow priority. The higher the value, the higher the priority. Value range: [-10, 10]. If this parameter is left empty, 0 will be used.
- * @method string getSessionId() Obtain The ID used for deduplication. If there was a request with the same ID in the last three days, the current request will return an error. The ID can contain up to 50 characters. If this parameter is left empty or an empty string is entered, no deduplication will be performed.
- * @method void setSessionId(string $SessionId) Set The ID used for deduplication. If there was a request with the same ID in the last three days, the current request will return an error. The ID can contain up to 50 characters. If this parameter is left empty or an empty string is entered, no deduplication will be performed.
+ * @method string getSessionId() Obtain Identification code for deduplication, up to 50 characters. If a request with the same identification code was made within the past 3 days, an error will be returned for the current request. If this parameter is not provided or is an empty string, deduplication will not be performed for this request.
+ * @method void setSessionId(string $SessionId) Set Identification code for deduplication, up to 50 characters. If a request with the same identification code was made within the past 3 days, an error will be returned for the current request. If this parameter is not provided or is an empty string, deduplication will not be performed for this request.
  * @method string getSessionContext() Obtain The source context which is used to pass through the user request information. The task flow status change callback will return the value of this field. It can contain up to 1,000 characters.
  * @method void setSessionContext(string $SessionContext) Set The source context which is used to pass through the user request information. The task flow status change callback will return the value of this field. It can contain up to 1,000 characters.
  * @method string getTaskType() Obtain The task type.
@@ -86,13 +88,14 @@ If you do not specify this parameter, the file will be saved to the directory sp
     public $OutputDir;
 
     /**
-     * @var integer The scheme ID.
-Note 1: About `OutputStorage` and `OutputDir`
-<li>If an output storage and directory are specified for a subtask of the scheme, those output settings will be applied.</li>
-<li>If an output storage and directory are not specified for the subtasks of a scheme, the output parameters passed in the `ProcessMedia` API will be applied.</li>
-Note 2: If `TaskNotifyConfig` is specified, the specified settings will be used instead of the default callback settings of the scheme.
+     * @var integer Orchestration ID.
+Note 1: For parameters OutputStorage and OutputDir:
+<li>When a sub-task node in service orchestration has OutputStorage and OutputDir configured, the output configured in this sub-task node is used as the output of the sub-task.</li>
+<li>When a sub-task node in service orchestration does not have OutputStorage and OutputDir configured, if the task creation API (ProcessMedia) has specified an output, it will override the default output of the original orchestration.</li>
+<li>The priority of output settings is: Orchestration sub-task node > Output specified by the task API > Corresponding configuration within an orchestration.</li>
+Note 2: For the TaskNotifyConfig parameter, if the task creation API (ProcessMedia) has set this parameter, it will override the default callback of the original orchestration.
 
-Note 3: The trigger configured for a scheme is for automatically starting a scheme. It stops working when you manually call this API to start a scheme.
+Note 3: The trigger configured for an orchestration is for automatically starting the orchestration. It stops working when you manually call this API to start an orchestration.
      */
     public $ScheduleId;
 
@@ -117,7 +120,7 @@ Note 3: The trigger configured for a scheme is for automatically starting a sche
     public $AiRecognitionTask;
 
     /**
-     * @var AiQualityControlTaskInput The parameters of a quality control task.
+     * @var AiQualityControlTaskInput Media quality inspection type task parameters.
      */
     public $AiQualityControlTask;
 
@@ -132,7 +135,7 @@ Note 3: The trigger configured for a scheme is for automatically starting a sche
     public $TasksPriority;
 
     /**
-     * @var string The ID used for deduplication. If there was a request with the same ID in the last three days, the current request will return an error. The ID can contain up to 50 characters. If this parameter is left empty or an empty string is entered, no deduplication will be performed.
+     * @var string Identification code for deduplication, up to 50 characters. If a request with the same identification code was made within the past 3 days, an error will be returned for the current request. If this parameter is not provided or is an empty string, deduplication will not be performed for this request.
      */
     public $SessionId;
 
@@ -153,21 +156,22 @@ Note 3: The trigger configured for a scheme is for automatically starting a sche
      * @param TaskOutputStorage $OutputStorage The storage location of the media processing output file. If this parameter is left empty, the storage location in `InputInfo` will be inherited.
      * @param string $OutputDir The directory to save the media processing output file, which must start and end with `/`, such as `/movie/201907/`.
 If you do not specify this parameter, the file will be saved to the directory specified in `InputInfo`.
-     * @param integer $ScheduleId The scheme ID.
-Note 1: About `OutputStorage` and `OutputDir`
-<li>If an output storage and directory are specified for a subtask of the scheme, those output settings will be applied.</li>
-<li>If an output storage and directory are not specified for the subtasks of a scheme, the output parameters passed in the `ProcessMedia` API will be applied.</li>
-Note 2: If `TaskNotifyConfig` is specified, the specified settings will be used instead of the default callback settings of the scheme.
+     * @param integer $ScheduleId Orchestration ID.
+Note 1: For parameters OutputStorage and OutputDir:
+<li>When a sub-task node in service orchestration has OutputStorage and OutputDir configured, the output configured in this sub-task node is used as the output of the sub-task.</li>
+<li>When a sub-task node in service orchestration does not have OutputStorage and OutputDir configured, if the task creation API (ProcessMedia) has specified an output, it will override the default output of the original orchestration.</li>
+<li>The priority of output settings is: Orchestration sub-task node > Output specified by the task API > Corresponding configuration within an orchestration.</li>
+Note 2: For the TaskNotifyConfig parameter, if the task creation API (ProcessMedia) has set this parameter, it will override the default callback of the original orchestration.
 
-Note 3: The trigger configured for a scheme is for automatically starting a scheme. It stops working when you manually call this API to start a scheme.
+Note 3: The trigger configured for an orchestration is for automatically starting the orchestration. It stops working when you manually call this API to start an orchestration.
      * @param MediaProcessTaskInput $MediaProcessTask The media processing parameters to use.
      * @param AiContentReviewTaskInput $AiContentReviewTask Type parameter of a video content audit task.
      * @param AiAnalysisTaskInput $AiAnalysisTask Video content analysis task parameter.
      * @param AiRecognitionTaskInput $AiRecognitionTask Type parameter of a video content recognition task.
-     * @param AiQualityControlTaskInput $AiQualityControlTask The parameters of a quality control task.
+     * @param AiQualityControlTaskInput $AiQualityControlTask Media quality inspection type task parameters.
      * @param TaskNotifyConfig $TaskNotifyConfig Event notification information of a task. If this parameter is left empty, no event notifications will be obtained.
      * @param integer $TasksPriority Task flow priority. The higher the value, the higher the priority. Value range: [-10, 10]. If this parameter is left empty, 0 will be used.
-     * @param string $SessionId The ID used for deduplication. If there was a request with the same ID in the last three days, the current request will return an error. The ID can contain up to 50 characters. If this parameter is left empty or an empty string is entered, no deduplication will be performed.
+     * @param string $SessionId Identification code for deduplication, up to 50 characters. If a request with the same identification code was made within the past 3 days, an error will be returned for the current request. If this parameter is not provided or is an empty string, deduplication will not be performed for this request.
      * @param string $SessionContext The source context which is used to pass through the user request information. The task flow status change callback will return the value of this field. It can contain up to 1,000 characters.
      * @param string $TaskType The task type.
 <li> `Online` (default): A task that is executed immediately.</li>

@@ -18,7 +18,7 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * The result of a quality control task.
+ * Media quality inspection task result type.
  *
  * @method string getStatus() Obtain The task status. Valid values: `PROCESSING`, `SUCCESS`, `FAIL`.
  * @method void setStatus(string $Status) Set The task status. Valid values: `PROCESSING`, `SUCCESS`, `FAIL`.
@@ -28,12 +28,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setErrCode(integer $ErrCode) Set The error code. `0` indicates the task is successful; other values indicate the task has failed. This parameter is not recommended. Please use `ErrCodeExt` instead.
  * @method string getMessage() Obtain The error message.
  * @method void setMessage(string $Message) Set The error message.
- * @method AiQualityControlTaskInput getInput() Obtain The input of the quality control task.
- * @method void setInput(AiQualityControlTaskInput $Input) Set The input of the quality control task.
- * @method QualityControlData getOutput() Obtain The output of the quality control task.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setOutput(QualityControlData $Output) Set The output of the quality control task.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method AiQualityControlTaskInput getInput() Obtain Media quality inspection task input.
+ * @method void setInput(AiQualityControlTaskInput $Input) Set Media quality inspection task input.
+ * @method QualityControlData getOutput() Obtain Media quality inspection task output.Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setOutput(QualityControlData $Output) Set Media quality inspection task output.Note: This field may return null, indicating that no valid values can be obtained.
  */
 class ScheduleQualityControlTaskResult extends AbstractModel
 {
@@ -58,13 +56,12 @@ class ScheduleQualityControlTaskResult extends AbstractModel
     public $Message;
 
     /**
-     * @var AiQualityControlTaskInput The input of the quality control task.
+     * @var AiQualityControlTaskInput Media quality inspection task input.
      */
     public $Input;
 
     /**
-     * @var QualityControlData The output of the quality control task.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var QualityControlData Media quality inspection task output.Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Output;
 
@@ -73,9 +70,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $ErrCodeExt The error code. An empty string indicates the task is successful; any other value indicates the task has failed. For details, see [Error Codes](https://www.tencentcloud.com/document/product/1041/40249).
      * @param integer $ErrCode The error code. `0` indicates the task is successful; other values indicate the task has failed. This parameter is not recommended. Please use `ErrCodeExt` instead.
      * @param string $Message The error message.
-     * @param AiQualityControlTaskInput $Input The input of the quality control task.
-     * @param QualityControlData $Output The output of the quality control task.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param AiQualityControlTaskInput $Input Media quality inspection task input.
+     * @param QualityControlData $Output Media quality inspection task output.Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

@@ -56,6 +56,16 @@ Note: this field may return `null`, indicating that no valid value was found.
 Note: This field may return `null`, indicating that no valid value was found.
  * @method void setHdrType(string $HdrType) Set HDR type
 Note: This field may return `null`, indicating that no valid value was found.
+ * @method string getCodecs() Obtain 
+ * @method void setCodecs(string $Codecs) Set 
+ * @method integer getFpsNumerator() Obtain Numerator of the frame rate.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setFpsNumerator(integer $FpsNumerator) Set Numerator of the frame rate.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getFpsDenominator() Obtain Denominator of the frame rate.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setFpsDenominator(integer $FpsDenominator) Set Denominator of the frame rate.
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class MediaVideoStreamItem extends AbstractModel
 {
@@ -114,6 +124,23 @@ Note: This field may return `null`, indicating that no valid value was found.
     public $HdrType;
 
     /**
+     * @var string 
+     */
+    public $Codecs;
+
+    /**
+     * @var integer Numerator of the frame rate.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $FpsNumerator;
+
+    /**
+     * @var integer Denominator of the frame rate.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $FpsDenominator;
+
+    /**
      * @param integer $Bitrate Bitrate of a video stream in bps.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $Height Height of a video stream in px.
@@ -132,6 +159,11 @@ Note: this field may return `null`, indicating that no valid value was found.
 Note: this field may return `null`, indicating that no valid value was found.
      * @param string $HdrType HDR type
 Note: This field may return `null`, indicating that no valid value was found.
+     * @param string $Codecs 
+     * @param integer $FpsNumerator Numerator of the frame rate.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $FpsDenominator Denominator of the frame rate.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -180,6 +212,18 @@ Note: This field may return `null`, indicating that no valid value was found.
 
         if (array_key_exists("HdrType",$param) and $param["HdrType"] !== null) {
             $this->HdrType = $param["HdrType"];
+        }
+
+        if (array_key_exists("Codecs",$param) and $param["Codecs"] !== null) {
+            $this->Codecs = $param["Codecs"];
+        }
+
+        if (array_key_exists("FpsNumerator",$param) and $param["FpsNumerator"] !== null) {
+            $this->FpsNumerator = $param["FpsNumerator"];
+        }
+
+        if (array_key_exists("FpsDenominator",$param) and $param["FpsDenominator"] !== null) {
+            $this->FpsDenominator = $param["FpsDenominator"];
         }
     }
 }

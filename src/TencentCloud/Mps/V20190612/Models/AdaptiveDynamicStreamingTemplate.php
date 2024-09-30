@@ -56,6 +56,28 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCreateTime(string $CreateTime) Set Creation time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
  * @method string getUpdateTime() Obtain Last modified time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
  * @method void setUpdateTime(string $UpdateTime) Set Last modified time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+ * @method integer getPureAudio() Obtain Whether it is an audio-only template. 0: video template. 1: audio-only template.Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setPureAudio(integer $PureAudio) Set Whether it is an audio-only template. 0: video template. 1: audio-only template.Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getSegmentType() Obtain HLS segment type. Valid values:
+<li>ts-segment: HLS+TS segment.</li>
+<li>ts-byterange: HLS+TS byte range.</li>
+<li>mp4-segment: HLS+MP4 segment.</li>
+<li>mp4-byterange: HLS+MP4 byte range.</li>
+<li>ts-packed-audio: TS+Packed audio.</li>
+<li>mp4-packed-audio: MP4+Packed audio.</li>
+Default value: ts-segment.
+
+Note: The HLS segment format for adaptive bitrate streaming is based on this field.Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setSegmentType(string $SegmentType) Set HLS segment type. Valid values:
+<li>ts-segment: HLS+TS segment.</li>
+<li>ts-byterange: HLS+TS byte range.</li>
+<li>mp4-segment: HLS+MP4 segment.</li>
+<li>mp4-byterange: HLS+MP4 byte range.</li>
+<li>ts-packed-audio: TS+Packed audio.</li>
+<li>mp4-packed-audio: MP4+Packed audio.</li>
+Default value: ts-segment.
+
+Note: The HLS segment format for adaptive bitrate streaming is based on this field.Note: This field may return null, indicating that no valid values can be obtained.
  */
 class AdaptiveDynamicStreamingTemplate extends AbstractModel
 {
@@ -118,6 +140,25 @@ class AdaptiveDynamicStreamingTemplate extends AbstractModel
     public $UpdateTime;
 
     /**
+     * @var integer Whether it is an audio-only template. 0: video template. 1: audio-only template.Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $PureAudio;
+
+    /**
+     * @var string HLS segment type. Valid values:
+<li>ts-segment: HLS+TS segment.</li>
+<li>ts-byterange: HLS+TS byte range.</li>
+<li>mp4-segment: HLS+MP4 segment.</li>
+<li>mp4-byterange: HLS+MP4 byte range.</li>
+<li>ts-packed-audio: TS+Packed audio.</li>
+<li>mp4-packed-audio: MP4+Packed audio.</li>
+Default value: ts-segment.
+
+Note: The HLS segment format for adaptive bitrate streaming is based on this field.Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $SegmentType;
+
+    /**
      * @param integer $Definition Unique ID of an adaptive bitrate streaming template.
      * @param string $Type Template type. Valid values:
 <li>Preset: preset template;</li>
@@ -136,6 +177,17 @@ class AdaptiveDynamicStreamingTemplate extends AbstractModel
 <li>1: yes.</li>
      * @param string $CreateTime Creation time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
      * @param string $UpdateTime Last modified time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @param integer $PureAudio Whether it is an audio-only template. 0: video template. 1: audio-only template.Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $SegmentType HLS segment type. Valid values:
+<li>ts-segment: HLS+TS segment.</li>
+<li>ts-byterange: HLS+TS byte range.</li>
+<li>mp4-segment: HLS+MP4 segment.</li>
+<li>mp4-byterange: HLS+MP4 byte range.</li>
+<li>ts-packed-audio: TS+Packed audio.</li>
+<li>mp4-packed-audio: MP4+Packed audio.</li>
+Default value: ts-segment.
+
+Note: The HLS segment format for adaptive bitrate streaming is based on this field.Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -193,6 +245,14 @@ class AdaptiveDynamicStreamingTemplate extends AbstractModel
 
         if (array_key_exists("UpdateTime",$param) and $param["UpdateTime"] !== null) {
             $this->UpdateTime = $param["UpdateTime"];
+        }
+
+        if (array_key_exists("PureAudio",$param) and $param["PureAudio"] !== null) {
+            $this->PureAudio = $param["PureAudio"];
+        }
+
+        if (array_key_exists("SegmentType",$param) and $param["SegmentType"] !== null) {
+            $this->SegmentType = $param["SegmentType"];
         }
     }
 }

@@ -48,6 +48,28 @@ Note: the frame rate of each stream must be consistent; otherwise, the frame rat
 Note: the frame rate of each stream must be consistent; otherwise, the frame rate of the first stream is used as the output frame rate.
  * @method string getComment() Obtain Template description. Length limit: 256 characters.
  * @method void setComment(string $Comment) Set Template description. Length limit: 256 characters.
+ * @method integer getPureAudio() Obtain Whether it is an audio-only template. 0: video template. 1: audio-only template.When the value is 1:
+1. StreamInfos.N.RemoveVideo=1
+2. StreamInfos.N.RemoveAudio=0
+3. StreamInfos.N.Video.Codec=copy
+
+When the value is 0:
+
+1. StreamInfos.N.Video.Codec cannot be copy.
+2. StreamInfos.N.Video.Fps cannot be null.
+ * @method void setPureAudio(integer $PureAudio) Set Whether it is an audio-only template. 0: video template. 1: audio-only template.When the value is 1:
+1. StreamInfos.N.RemoveVideo=1
+2. StreamInfos.N.RemoveAudio=0
+3. StreamInfos.N.Video.Codec=copy
+
+When the value is 0:
+
+1. StreamInfos.N.Video.Codec cannot be copy.
+2. StreamInfos.N.Video.Fps cannot be null.
+ * @method string getSegmentType() Obtain HLS segment type. Valid values: <li>ts-segment: HLS+TS segment.</li> <li>ts-byterange: HLS+TS byte range.</li> <li>mp4-segment: HLS+MP4 segment.</li> <li>mp4-byterange: HLS+MP4 byte range.</li> <li>ts-packed-audio: TS+Packed audio.</li> <li>mp4-packed-audio: MP4+Packed audio.</li> Default value: ts-segment.
+Note: The HLS segment format for adaptive bitrate streaming is based on this field.
+ * @method void setSegmentType(string $SegmentType) Set HLS segment type. Valid values: <li>ts-segment: HLS+TS segment.</li> <li>ts-byterange: HLS+TS byte range.</li> <li>mp4-segment: HLS+MP4 segment.</li> <li>mp4-byterange: HLS+MP4 byte range.</li> <li>ts-packed-audio: TS+Packed audio.</li> <li>mp4-packed-audio: MP4+Packed audio.</li> Default value: ts-segment.
+Note: The HLS segment format for adaptive bitrate streaming is based on this field.
  */
 class ModifyAdaptiveDynamicStreamingTemplateRequest extends AbstractModel
 {
@@ -94,6 +116,25 @@ Note: the frame rate of each stream must be consistent; otherwise, the frame rat
     public $Comment;
 
     /**
+     * @var integer Whether it is an audio-only template. 0: video template. 1: audio-only template.When the value is 1:
+1. StreamInfos.N.RemoveVideo=1
+2. StreamInfos.N.RemoveAudio=0
+3. StreamInfos.N.Video.Codec=copy
+
+When the value is 0:
+
+1. StreamInfos.N.Video.Codec cannot be copy.
+2. StreamInfos.N.Video.Fps cannot be null.
+     */
+    public $PureAudio;
+
+    /**
+     * @var string HLS segment type. Valid values: <li>ts-segment: HLS+TS segment.</li> <li>ts-byterange: HLS+TS byte range.</li> <li>mp4-segment: HLS+MP4 segment.</li> <li>mp4-byterange: HLS+MP4 byte range.</li> <li>ts-packed-audio: TS+Packed audio.</li> <li>mp4-packed-audio: MP4+Packed audio.</li> Default value: ts-segment.
+Note: The HLS segment format for adaptive bitrate streaming is based on this field.
+     */
+    public $SegmentType;
+
+    /**
      * @param integer $Definition Unique ID of an adaptive bitrate streaming template.
      * @param string $Name Template name. Length limit: 64 characters.
      * @param string $Format Adaptive bitrate streaming format. Valid values:
@@ -108,6 +149,17 @@ Note: the frame rate of each stream must be consistent; otherwise, the frame rat
      * @param array $StreamInfos Parameter information of input streams for transcoding to adaptive bitrate streaming. Up to 10 streams can be input.
 Note: the frame rate of each stream must be consistent; otherwise, the frame rate of the first stream is used as the output frame rate.
      * @param string $Comment Template description. Length limit: 256 characters.
+     * @param integer $PureAudio Whether it is an audio-only template. 0: video template. 1: audio-only template.When the value is 1:
+1. StreamInfos.N.RemoveVideo=1
+2. StreamInfos.N.RemoveAudio=0
+3. StreamInfos.N.Video.Codec=copy
+
+When the value is 0:
+
+1. StreamInfos.N.Video.Codec cannot be copy.
+2. StreamInfos.N.Video.Fps cannot be null.
+     * @param string $SegmentType HLS segment type. Valid values: <li>ts-segment: HLS+TS segment.</li> <li>ts-byterange: HLS+TS byte range.</li> <li>mp4-segment: HLS+MP4 segment.</li> <li>mp4-byterange: HLS+MP4 byte range.</li> <li>ts-packed-audio: TS+Packed audio.</li> <li>mp4-packed-audio: MP4+Packed audio.</li> Default value: ts-segment.
+Note: The HLS segment format for adaptive bitrate streaming is based on this field.
      */
     function __construct()
     {
@@ -153,6 +205,14 @@ Note: the frame rate of each stream must be consistent; otherwise, the frame rat
 
         if (array_key_exists("Comment",$param) and $param["Comment"] !== null) {
             $this->Comment = $param["Comment"];
+        }
+
+        if (array_key_exists("PureAudio",$param) and $param["PureAudio"] !== null) {
+            $this->PureAudio = $param["PureAudio"];
+        }
+
+        if (array_key_exists("SegmentType",$param) and $param["SegmentType"] !== null) {
+            $this->SegmentType = $param["SegmentType"];
         }
     }
 }

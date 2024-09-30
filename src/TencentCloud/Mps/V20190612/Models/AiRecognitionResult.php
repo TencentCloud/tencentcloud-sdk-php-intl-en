@@ -70,6 +70,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
  * @method void setTransTextTask(AiRecognitionTaskTransTextResult $TransTextTask) Set The translation result. This parameter is valid only if `Type` is
  `TransTextRecognition`.
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method AiRecognitionTaskObjectResult getObjectTask() Obtain Object recognition result, which is valid when Type is
+
+ObjectRecognition.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setObjectTask(AiRecognitionTaskObjectResult $ObjectTask) Set Object recognition result, which is valid when Type is
+
+ObjectRecognition.
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class AiRecognitionResult extends AbstractModel
 {
@@ -127,6 +135,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $TransTextTask;
 
     /**
+     * @var AiRecognitionTaskObjectResult Object recognition result, which is valid when Type is
+
+ObjectRecognition.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $ObjectTask;
+
+    /**
      * @param string $Type The task type. Valid values:
 <li>FaceRecognition: Face recognition</li>
 <li>AsrWordsRecognition: Speech keyword recognition</li>
@@ -151,6 +167,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param AiRecognitionTaskTransTextResult $TransTextTask The translation result. This parameter is valid only if `Type` is
  `TransTextRecognition`.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param AiRecognitionTaskObjectResult $ObjectTask Object recognition result, which is valid when Type is
+
+ObjectRecognition.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
@@ -198,6 +218,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (array_key_exists("TransTextTask",$param) and $param["TransTextTask"] !== null) {
             $this->TransTextTask = new AiRecognitionTaskTransTextResult();
             $this->TransTextTask->deserialize($param["TransTextTask"]);
+        }
+
+        if (array_key_exists("ObjectTask",$param) and $param["ObjectTask"] !== null) {
+            $this->ObjectTask = new AiRecognitionTaskObjectResult();
+            $this->ObjectTask->deserialize($param["ObjectTask"]);
         }
     }
 }

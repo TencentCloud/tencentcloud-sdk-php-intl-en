@@ -38,6 +38,8 @@ Note: If this parameter is left empty, the current `OutputDir` value will be inv
 Note: If this parameter is left empty, the current `OutputDir` value will be invalidated.
  * @method TaskNotifyConfig getTaskNotifyConfig() Obtain The notification configuration.
  * @method void setTaskNotifyConfig(TaskNotifyConfig $TaskNotifyConfig) Set The notification configuration.
+ * @method string getResourceId() Obtain Resource ID. Ensure the corresponding resource is in the enabled state.
+ * @method void setResourceId(string $ResourceId) Set Resource ID. Ensure the corresponding resource is in the enabled state.
  */
 class ModifyScheduleRequest extends AbstractModel
 {
@@ -79,6 +81,11 @@ Note: If this parameter is left empty, the current `OutputDir` value will be inv
     public $TaskNotifyConfig;
 
     /**
+     * @var string Resource ID. Ensure the corresponding resource is in the enabled state.
+     */
+    public $ResourceId;
+
+    /**
      * @param integer $ScheduleId The scheme ID.
      * @param string $ScheduleName The scheme name.
      * @param WorkflowTrigger $Trigger The trigger of the scheme.
@@ -88,6 +95,7 @@ Note: You need to pass in the full list of subtasks even if you want to change o
      * @param string $OutputDir The directory to save the media processing output file, which must start and end with `/`.
 Note: If this parameter is left empty, the current `OutputDir` value will be invalidated.
      * @param TaskNotifyConfig $TaskNotifyConfig The notification configuration.
+     * @param string $ResourceId Resource ID. Ensure the corresponding resource is in the enabled state.
      */
     function __construct()
     {
@@ -136,6 +144,10 @@ Note: If this parameter is left empty, the current `OutputDir` value will be inv
         if (array_key_exists("TaskNotifyConfig",$param) and $param["TaskNotifyConfig"] !== null) {
             $this->TaskNotifyConfig = new TaskNotifyConfig();
             $this->TaskNotifyConfig->deserialize($param["TaskNotifyConfig"]);
+        }
+
+        if (array_key_exists("ResourceId",$param) and $param["ResourceId"] !== null) {
+            $this->ResourceId = $param["ResourceId"];
         }
     }
 }

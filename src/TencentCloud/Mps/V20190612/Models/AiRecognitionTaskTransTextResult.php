@@ -34,6 +34,10 @@ use TencentCloud\Common\AbstractModel;
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setOutput(AiRecognitionTaskTransTextResultOutput $Output) Set The output of the translation task.
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getProgress() Obtain Task progress.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setProgress(integer $Progress) Set Task progress.
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class AiRecognitionTaskTransTextResult extends AbstractModel
 {
@@ -69,12 +73,20 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $Output;
 
     /**
+     * @var integer Task progress.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $Progress;
+
+    /**
      * @param string $Status The task status. Valid values: PROCESSING, SUCCESS, FAIL.
      * @param string $ErrCodeExt The error code. An empty string indicates the task is successful; any other value indicates the task has failed. For details, see [Error Codes](https://intl.cloud.tencent.com/document/product/1041/40249).
      * @param integer $ErrCode The error code. `0` indicates the task is successful; other values indicate the task has failed. This parameter is not recommended. Please use `ErrCodeExt` instead.
      * @param string $Message The error message.
      * @param AiRecognitionTaskTransTextResultInput $Input The input of the translation task.
      * @param AiRecognitionTaskTransTextResultOutput $Output The output of the translation task.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $Progress Task progress.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
@@ -114,6 +126,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (array_key_exists("Output",$param) and $param["Output"] !== null) {
             $this->Output = new AiRecognitionTaskTransTextResultOutput();
             $this->Output->deserialize($param["Output"]);
+        }
+
+        if (array_key_exists("Progress",$param) and $param["Progress"] !== null) {
+            $this->Progress = $param["Progress"];
         }
     }
 }

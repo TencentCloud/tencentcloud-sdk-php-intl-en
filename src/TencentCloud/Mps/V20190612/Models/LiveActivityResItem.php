@@ -24,6 +24,10 @@ use TencentCloud\Common\AbstractModel;
 Note: This field may return·null, indicating that no valid values can be obtained.
  * @method void setLiveRecordTask(LiveScheduleLiveRecordTaskResult $LiveRecordTask) Set The output of a live recording task.
 Note: This field may return·null, indicating that no valid values can be obtained.
+ * @method ScheduleQualityControlTaskResult getLiveQualityControlTask() Obtain Media quality inspection task output.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setLiveQualityControlTask(ScheduleQualityControlTaskResult $LiveQualityControlTask) Set Media quality inspection task output.
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class LiveActivityResItem extends AbstractModel
 {
@@ -34,8 +38,16 @@ Note: This field may return·null, indicating that no valid values can be obtain
     public $LiveRecordTask;
 
     /**
+     * @var ScheduleQualityControlTaskResult Media quality inspection task output.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $LiveQualityControlTask;
+
+    /**
      * @param LiveScheduleLiveRecordTaskResult $LiveRecordTask The output of a live recording task.
 Note: This field may return·null, indicating that no valid values can be obtained.
+     * @param ScheduleQualityControlTaskResult $LiveQualityControlTask Media quality inspection task output.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -53,6 +65,11 @@ Note: This field may return·null, indicating that no valid values can be obtain
         if (array_key_exists("LiveRecordTask",$param) and $param["LiveRecordTask"] !== null) {
             $this->LiveRecordTask = new LiveScheduleLiveRecordTaskResult();
             $this->LiveRecordTask->deserialize($param["LiveRecordTask"]);
+        }
+
+        if (array_key_exists("LiveQualityControlTask",$param) and $param["LiveQualityControlTask"] !== null) {
+            $this->LiveQualityControlTask = new ScheduleQualityControlTaskResult();
+            $this->LiveQualityControlTask->deserialize($param["LiveQualityControlTask"]);
         }
     }
 }

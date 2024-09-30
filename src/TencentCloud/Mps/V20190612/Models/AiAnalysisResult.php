@@ -21,17 +21,23 @@ use TencentCloud\Common\AbstractModel;
  * Intelligent analysis results
  *
  * @method string getType() Obtain Task type. Valid values:
-<li>Classification: intelligent categorization</li>
-<li>Cover: intelligent cover generating</li>
-<li>Tag: intelligent tagging</li>
-<li>FrameTag: intelligent frame-specific tagging</li>
-<li>Highlight: intelligent highlight generating</li>
+<li>Classification: intelligent classification.</li>
+<li>Cover: intelligent thumbnail generating.</li>
+<li>Tag: intelligent tagging.</li>
+<li>FrameTag: intelligent frame-by-frame tagging.</li>
+<li>Highlight: intelligent highlights generating.</li>
+
+<li>DeLogo: intelligent removal.</li>
+<li>Description: large model summarization.</li>
  * @method void setType(string $Type) Set Task type. Valid values:
-<li>Classification: intelligent categorization</li>
-<li>Cover: intelligent cover generating</li>
-<li>Tag: intelligent tagging</li>
-<li>FrameTag: intelligent frame-specific tagging</li>
-<li>Highlight: intelligent highlight generating</li>
+<li>Classification: intelligent classification.</li>
+<li>Cover: intelligent thumbnail generating.</li>
+<li>Tag: intelligent tagging.</li>
+<li>FrameTag: intelligent frame-by-frame tagging.</li>
+<li>Highlight: intelligent highlights generating.</li>
+
+<li>DeLogo: intelligent removal.</li>
+<li>Description: large model summarization.</li>
  * @method AiAnalysisTaskClassificationResult getClassificationTask() Obtain Query result of intelligent categorization task in video content analysis, which is valid if task type is `Classification`.
  * @method void setClassificationTask(AiAnalysisTaskClassificationResult $ClassificationTask) Set Query result of intelligent categorization task in video content analysis, which is valid if task type is `Classification`.
  * @method AiAnalysisTaskCoverResult getCoverTask() Obtain Query result of intelligent cover generating task in video content analysis, which is valid if task type is `Cover`.
@@ -44,16 +50,39 @@ use TencentCloud\Common\AbstractModel;
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setHighlightTask(AiAnalysisTaskHighlightResult $HighlightTask) Set The result of a highlight generation task. This parameter is valid if `Type` is `Highlight`.
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method AiAnalysisTaskDelLogoResult getDeLogoTask() Obtain The query result of an intelligent removal task for video analysis, which is valid when the task type is DeLogo.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setDeLogoTask(AiAnalysisTaskDelLogoResult $DeLogoTask) Set The query result of an intelligent removal task for video analysis, which is valid when the task type is DeLogo.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method AiAnalysisTaskSegmentResult getSegmentTask() Obtain The query result of a splitting task for video analysis, which is valid when the task type is SegmentRecognition.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setSegmentTask(AiAnalysisTaskSegmentResult $SegmentTask) Set The query result of a splitting task for video analysis, which is valid when the task type is SegmentRecognition.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method AiAnalysisTaskHeadTailResult getHeadTailTask() Obtain The query result of an opening and closing segments recognition task for video analysis, which is valid when the task type is HeadTailRecognition.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setHeadTailTask(AiAnalysisTaskHeadTailResult $HeadTailTask) Set The query result of an opening and closing segments recognition task for video analysis, which is valid when the task type is HeadTailRecognition.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method AiAnalysisTaskDescriptionResult getDescriptionTask() Obtain The query result of a video analysis summarization task, which is valid when the task type is Description.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setDescriptionTask(AiAnalysisTaskDescriptionResult $DescriptionTask) Set The query result of a video analysis summarization task, which is valid when the task type is Description.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method AiAnalysisTaskHorizontalToVerticalResult getHorizontalToVerticalTask() Obtain The query result of a landscape-to-portrait task for video analysis, which is valid when the task type is HorizontalToVertical.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setHorizontalToVerticalTask(AiAnalysisTaskHorizontalToVerticalResult $HorizontalToVerticalTask) Set The query result of a landscape-to-portrait task for video analysis, which is valid when the task type is HorizontalToVertical.
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class AiAnalysisResult extends AbstractModel
 {
     /**
      * @var string Task type. Valid values:
-<li>Classification: intelligent categorization</li>
-<li>Cover: intelligent cover generating</li>
-<li>Tag: intelligent tagging</li>
-<li>FrameTag: intelligent frame-specific tagging</li>
-<li>Highlight: intelligent highlight generating</li>
+<li>Classification: intelligent classification.</li>
+<li>Cover: intelligent thumbnail generating.</li>
+<li>Tag: intelligent tagging.</li>
+<li>FrameTag: intelligent frame-by-frame tagging.</li>
+<li>Highlight: intelligent highlights generating.</li>
+
+<li>DeLogo: intelligent removal.</li>
+<li>Description: large model summarization.</li>
      */
     public $Type;
 
@@ -84,17 +113,60 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $HighlightTask;
 
     /**
+     * @var AiAnalysisTaskDelLogoResult The query result of an intelligent removal task for video analysis, which is valid when the task type is DeLogo.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $DeLogoTask;
+
+    /**
+     * @var AiAnalysisTaskSegmentResult The query result of a splitting task for video analysis, which is valid when the task type is SegmentRecognition.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $SegmentTask;
+
+    /**
+     * @var AiAnalysisTaskHeadTailResult The query result of an opening and closing segments recognition task for video analysis, which is valid when the task type is HeadTailRecognition.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $HeadTailTask;
+
+    /**
+     * @var AiAnalysisTaskDescriptionResult The query result of a video analysis summarization task, which is valid when the task type is Description.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $DescriptionTask;
+
+    /**
+     * @var AiAnalysisTaskHorizontalToVerticalResult The query result of a landscape-to-portrait task for video analysis, which is valid when the task type is HorizontalToVertical.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $HorizontalToVerticalTask;
+
+    /**
      * @param string $Type Task type. Valid values:
-<li>Classification: intelligent categorization</li>
-<li>Cover: intelligent cover generating</li>
-<li>Tag: intelligent tagging</li>
-<li>FrameTag: intelligent frame-specific tagging</li>
-<li>Highlight: intelligent highlight generating</li>
+<li>Classification: intelligent classification.</li>
+<li>Cover: intelligent thumbnail generating.</li>
+<li>Tag: intelligent tagging.</li>
+<li>FrameTag: intelligent frame-by-frame tagging.</li>
+<li>Highlight: intelligent highlights generating.</li>
+
+<li>DeLogo: intelligent removal.</li>
+<li>Description: large model summarization.</li>
      * @param AiAnalysisTaskClassificationResult $ClassificationTask Query result of intelligent categorization task in video content analysis, which is valid if task type is `Classification`.
      * @param AiAnalysisTaskCoverResult $CoverTask Query result of intelligent cover generating task in video content analysis, which is valid if task type is `Cover`.
      * @param AiAnalysisTaskTagResult $TagTask Query result of intelligent tagging task in video content analysis, which is valid if task type is `Tag`.
      * @param AiAnalysisTaskFrameTagResult $FrameTagTask Query result of intelligent frame-specific tagging task in video content analysis, which is valid if task type is `FrameTag`.
      * @param AiAnalysisTaskHighlightResult $HighlightTask The result of a highlight generation task. This parameter is valid if `Type` is `Highlight`.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param AiAnalysisTaskDelLogoResult $DeLogoTask The query result of an intelligent removal task for video analysis, which is valid when the task type is DeLogo.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param AiAnalysisTaskSegmentResult $SegmentTask The query result of a splitting task for video analysis, which is valid when the task type is SegmentRecognition.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param AiAnalysisTaskHeadTailResult $HeadTailTask The query result of an opening and closing segments recognition task for video analysis, which is valid when the task type is HeadTailRecognition.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param AiAnalysisTaskDescriptionResult $DescriptionTask The query result of a video analysis summarization task, which is valid when the task type is Description.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param AiAnalysisTaskHorizontalToVerticalResult $HorizontalToVerticalTask The query result of a landscape-to-portrait task for video analysis, which is valid when the task type is HorizontalToVertical.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
@@ -137,6 +209,31 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (array_key_exists("HighlightTask",$param) and $param["HighlightTask"] !== null) {
             $this->HighlightTask = new AiAnalysisTaskHighlightResult();
             $this->HighlightTask->deserialize($param["HighlightTask"]);
+        }
+
+        if (array_key_exists("DeLogoTask",$param) and $param["DeLogoTask"] !== null) {
+            $this->DeLogoTask = new AiAnalysisTaskDelLogoResult();
+            $this->DeLogoTask->deserialize($param["DeLogoTask"]);
+        }
+
+        if (array_key_exists("SegmentTask",$param) and $param["SegmentTask"] !== null) {
+            $this->SegmentTask = new AiAnalysisTaskSegmentResult();
+            $this->SegmentTask->deserialize($param["SegmentTask"]);
+        }
+
+        if (array_key_exists("HeadTailTask",$param) and $param["HeadTailTask"] !== null) {
+            $this->HeadTailTask = new AiAnalysisTaskHeadTailResult();
+            $this->HeadTailTask->deserialize($param["HeadTailTask"]);
+        }
+
+        if (array_key_exists("DescriptionTask",$param) and $param["DescriptionTask"] !== null) {
+            $this->DescriptionTask = new AiAnalysisTaskDescriptionResult();
+            $this->DescriptionTask->deserialize($param["DescriptionTask"]);
+        }
+
+        if (array_key_exists("HorizontalToVerticalTask",$param) and $param["HorizontalToVerticalTask"] !== null) {
+            $this->HorizontalToVerticalTask = new AiAnalysisTaskHorizontalToVerticalResult();
+            $this->HorizontalToVerticalTask->deserialize($param["HorizontalToVerticalTask"]);
         }
     }
 }

@@ -20,20 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * AI-based live stream recognition result
  *
- * @method string getType() Obtain The result type. Valid values:
-<li>FaceRecognition: Face recognition</li>
-<li>AsrWordsRecognition: Speech keyword recognition</li>
-<li>OcrWordsRecognition: Text keyword recognition</li>
-<li>AsrFullTextRecognition: Full speech recognition</li>
-<li>OcrFullTextRecognition: Full text recognition</li>
-<li>TransTextRecognition: Speech translation</li>
- * @method void setType(string $Type) Set The result type. Valid values:
-<li>FaceRecognition: Face recognition</li>
-<li>AsrWordsRecognition: Speech keyword recognition</li>
-<li>OcrWordsRecognition: Text keyword recognition</li>
-<li>AsrFullTextRecognition: Full speech recognition</li>
-<li>OcrFullTextRecognition: Full text recognition</li>
-<li>TransTextRecognition: Speech translation</li>
+ * @method string getType() Obtain Result type. Valid values:
+<li>FaceRecognition: face recognition.</li>
+<li>AsrWordsRecognition: speech keyword recognition.</li>
+<li>OcrWordsRecognition: text keyword recognition.</li>
+<li>AsrFullTextRecognition: full speech recognition.</li>
+<li>OcrFullTextRecognition: full text recognition.</li>
+<li>TransTextRecognition: speech translation.</li>
+
+<li>ObjectRecognition: object recognition.</li>
+<li>TagRecognition: highlights marking.</li>
+ * @method void setType(string $Type) Set Result type. Valid values:
+<li>FaceRecognition: face recognition.</li>
+<li>AsrWordsRecognition: speech keyword recognition.</li>
+<li>OcrWordsRecognition: text keyword recognition.</li>
+<li>AsrFullTextRecognition: full speech recognition.</li>
+<li>OcrFullTextRecognition: full text recognition.</li>
+<li>TransTextRecognition: speech translation.</li>
+
+<li>ObjectRecognition: object recognition.</li>
+<li>TagRecognition: highlights marking.</li>
  * @method array getFaceRecognitionResultSet() Obtain Face recognition result, which is valid when `Type` is
 `FaceRecognition`.
  * @method void setFaceRecognitionResultSet(array $FaceRecognitionResultSet) Set Face recognition result, which is valid when `Type` is
@@ -56,17 +62,24 @@ use TencentCloud\Common\AbstractModel;
 `OcrFullTextRecognition`.
  * @method array getTransTextRecognitionResultSet() Obtain The translation result. This parameter is valid only if `Type` is `TransTextRecognition`.
  * @method void setTransTextRecognitionResultSet(array $TransTextRecognitionResultSet) Set The translation result. This parameter is valid only if `Type` is `TransTextRecognition`.
+ * @method array getObjectRecognitionResultSet() Obtain Object recognition result, which is valid when Type is ObjectRecognition.
+ * @method void setObjectRecognitionResultSet(array $ObjectRecognitionResultSet) Set Object recognition result, which is valid when Type is ObjectRecognition.
+ * @method array getTagRecognitionResultSet() Obtain 
+ * @method void setTagRecognitionResultSet(array $TagRecognitionResultSet) Set 
  */
 class LiveStreamAiRecognitionResultItem extends AbstractModel
 {
     /**
-     * @var string The result type. Valid values:
-<li>FaceRecognition: Face recognition</li>
-<li>AsrWordsRecognition: Speech keyword recognition</li>
-<li>OcrWordsRecognition: Text keyword recognition</li>
-<li>AsrFullTextRecognition: Full speech recognition</li>
-<li>OcrFullTextRecognition: Full text recognition</li>
-<li>TransTextRecognition: Speech translation</li>
+     * @var string Result type. Valid values:
+<li>FaceRecognition: face recognition.</li>
+<li>AsrWordsRecognition: speech keyword recognition.</li>
+<li>OcrWordsRecognition: text keyword recognition.</li>
+<li>AsrFullTextRecognition: full speech recognition.</li>
+<li>OcrFullTextRecognition: full text recognition.</li>
+<li>TransTextRecognition: speech translation.</li>
+
+<li>ObjectRecognition: object recognition.</li>
+<li>TagRecognition: highlights marking.</li>
      */
     public $Type;
 
@@ -106,13 +119,26 @@ class LiveStreamAiRecognitionResultItem extends AbstractModel
     public $TransTextRecognitionResultSet;
 
     /**
-     * @param string $Type The result type. Valid values:
-<li>FaceRecognition: Face recognition</li>
-<li>AsrWordsRecognition: Speech keyword recognition</li>
-<li>OcrWordsRecognition: Text keyword recognition</li>
-<li>AsrFullTextRecognition: Full speech recognition</li>
-<li>OcrFullTextRecognition: Full text recognition</li>
-<li>TransTextRecognition: Speech translation</li>
+     * @var array Object recognition result, which is valid when Type is ObjectRecognition.
+     */
+    public $ObjectRecognitionResultSet;
+
+    /**
+     * @var array 
+     */
+    public $TagRecognitionResultSet;
+
+    /**
+     * @param string $Type Result type. Valid values:
+<li>FaceRecognition: face recognition.</li>
+<li>AsrWordsRecognition: speech keyword recognition.</li>
+<li>OcrWordsRecognition: text keyword recognition.</li>
+<li>AsrFullTextRecognition: full speech recognition.</li>
+<li>OcrFullTextRecognition: full text recognition.</li>
+<li>TransTextRecognition: speech translation.</li>
+
+<li>ObjectRecognition: object recognition.</li>
+<li>TagRecognition: highlights marking.</li>
      * @param array $FaceRecognitionResultSet Face recognition result, which is valid when `Type` is
 `FaceRecognition`.
      * @param array $AsrWordsRecognitionResultSet Speech keyword recognition result, which is valid when `Type` is
@@ -124,6 +150,8 @@ class LiveStreamAiRecognitionResultItem extends AbstractModel
      * @param array $OcrFullTextRecognitionResultSet Full text recognition result, which is valid when `Type` is
 `OcrFullTextRecognition`.
      * @param array $TransTextRecognitionResultSet The translation result. This parameter is valid only if `Type` is `TransTextRecognition`.
+     * @param array $ObjectRecognitionResultSet Object recognition result, which is valid when Type is ObjectRecognition.
+     * @param array $TagRecognitionResultSet 
      */
     function __construct()
     {
@@ -193,6 +221,24 @@ class LiveStreamAiRecognitionResultItem extends AbstractModel
                 $obj = new LiveStreamTransTextRecognitionResult();
                 $obj->deserialize($value);
                 array_push($this->TransTextRecognitionResultSet, $obj);
+            }
+        }
+
+        if (array_key_exists("ObjectRecognitionResultSet",$param) and $param["ObjectRecognitionResultSet"] !== null) {
+            $this->ObjectRecognitionResultSet = [];
+            foreach ($param["ObjectRecognitionResultSet"] as $key => $value){
+                $obj = new LiveStreamObjectRecognitionResult();
+                $obj->deserialize($value);
+                array_push($this->ObjectRecognitionResultSet, $obj);
+            }
+        }
+
+        if (array_key_exists("TagRecognitionResultSet",$param) and $param["TagRecognitionResultSet"] !== null) {
+            $this->TagRecognitionResultSet = [];
+            foreach ($param["TagRecognitionResultSet"] as $key => $value){
+                $obj = new LiveStreamTagRecognitionResult();
+                $obj->deserialize($value);
+                array_push($this->TagRecognitionResultSet, $obj);
             }
         }
     }

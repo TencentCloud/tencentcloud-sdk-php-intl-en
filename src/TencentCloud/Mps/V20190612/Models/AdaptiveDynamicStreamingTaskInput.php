@@ -42,6 +42,14 @@ Note: This field may return·null, indicating that no valid values can be obtain
 Note: This field may return·null, indicating that no valid values can be obtained.
  * @method void setDrmInfo(DrmInfo $DrmInfo) Set 
 Note: This field may return·null, indicating that no valid values can be obtained.
+ * @method string getDefinitionType() Obtain Adaptive transcoding template type.
+Common: audio-video.
+PureAudio: audio-only.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setDefinitionType(string $DefinitionType) Set Adaptive transcoding template type.
+Common: audio-video.
+PureAudio: audio-only.
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class AdaptiveDynamicStreamingTaskInput extends AbstractModel
 {
@@ -89,6 +97,14 @@ Note: This field may return·null, indicating that no valid values can be obtain
     public $DrmInfo;
 
     /**
+     * @var string Adaptive transcoding template type.
+Common: audio-video.
+PureAudio: audio-only.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $DefinitionType;
+
+    /**
      * @param integer $Definition Adaptive bitrate streaming template ID.
      * @param array $WatermarkSet List of up to 10 image or text watermarks.
      * @param TaskOutputStorage $OutputStorage 
@@ -100,6 +116,10 @@ Note: This field may return·null, indicating that no valid values can be obtain
 Note: This field may return·null, indicating that no valid values can be obtained.
      * @param DrmInfo $DrmInfo 
 Note: This field may return·null, indicating that no valid values can be obtained.
+     * @param string $DefinitionType Adaptive transcoding template type.
+Common: audio-video.
+PureAudio: audio-only.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -156,6 +176,10 @@ Note: This field may return·null, indicating that no valid values can be obtain
         if (array_key_exists("DrmInfo",$param) and $param["DrmInfo"] !== null) {
             $this->DrmInfo = new DrmInfo();
             $this->DrmInfo->deserialize($param["DrmInfo"]);
+        }
+
+        if (array_key_exists("DefinitionType",$param) and $param["DefinitionType"] !== null) {
+            $this->DefinitionType = $param["DefinitionType"];
         }
     }
 }

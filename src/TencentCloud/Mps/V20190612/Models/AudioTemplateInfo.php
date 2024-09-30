@@ -20,36 +20,40 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Audio stream configuration parameter
  *
- * @method string getCodec() Obtain Audio stream codec.
-When the outer `Container` parameter is `mp3`, the valid value is:
-<li>libmp3lame.</li>
-When the outer `Container` parameter is `ogg` or `flac`, the valid value is:
+ * @method string getCodec() Obtain Audio stream encoding format.
+When audio transcoding is not needed, the value is:
+<li>copy.</li>
+When the outer parameter Container is mp3, the value is:
+<li>mp3.</li>
+When the outer parameter Container is ogg or flac, the value is:
 <li>flac.</li>
-When the outer `Container` parameter is `m4a`, the valid values include:
-<li>libfdk_aac;</li>
-<li>libmp3lame;</li>
+When the outer parameter Container is m4a, valid values are:
+<li>aac;</li>
 <li>ac3.</li>
-When the outer `Container` parameter is `mp4` or `flv`, the valid values include:
-<li>libfdk_aac: more suitable for mp4;</li>
-<li>libmp3lame: more suitable for flv.</li>
-When the outer `Container` parameter is `hls`, the valid values include:
-<li>libfdk_aac;</li>
-<li>libmp3lame.</li>
- * @method void setCodec(string $Codec) Set Audio stream codec.
-When the outer `Container` parameter is `mp3`, the valid value is:
-<li>libmp3lame.</li>
-When the outer `Container` parameter is `ogg` or `flac`, the valid value is:
+When the outer parameter Container is mp4 or flv, valid values are:
+<li>aac: more suitable for mp4;</li>
+<li>mp3: more suitable for flv;</li>
+<li>mp2.</li>
+When the outer parameter Container is hls, valid values are:
+<li>aac;</li>
+<li>mp3.</li>
+ * @method void setCodec(string $Codec) Set Audio stream encoding format.
+When audio transcoding is not needed, the value is:
+<li>copy.</li>
+When the outer parameter Container is mp3, the value is:
+<li>mp3.</li>
+When the outer parameter Container is ogg or flac, the value is:
 <li>flac.</li>
-When the outer `Container` parameter is `m4a`, the valid values include:
-<li>libfdk_aac;</li>
-<li>libmp3lame;</li>
+When the outer parameter Container is m4a, valid values are:
+<li>aac;</li>
 <li>ac3.</li>
-When the outer `Container` parameter is `mp4` or `flv`, the valid values include:
-<li>libfdk_aac: more suitable for mp4;</li>
-<li>libmp3lame: more suitable for flv.</li>
-When the outer `Container` parameter is `hls`, the valid values include:
-<li>libfdk_aac;</li>
-<li>libmp3lame.</li>
+When the outer parameter Container is mp4 or flv, valid values are:
+<li>aac: more suitable for mp4;</li>
+<li>mp3: more suitable for flv;</li>
+<li>mp2.</li>
+When the outer parameter Container is hls, valid values are:
+<li>aac;</li>
+<li>mp3.</li>
  * @method integer getBitrate() Obtain Audio stream bitrate in Kbps. Value range: 0 and [26, 256].
 If the value is 0, the bitrate of the audio stream will be the same as that of the original audio.
  * @method void setBitrate(integer $Bitrate) Set Audio stream bitrate in Kbps. Value range: 0 and [26, 256].
@@ -64,37 +68,39 @@ In Hz.
 <li>44,100</li>
 <li>48,000</li>
 In Hz.
- * @method integer getAudioChannel() Obtain Audio channel system. Valid values:
-<li>1: Mono</li>
-<li>2: Dual</li>
-<li>6: Stereo</li>
-When the media is packaged in audio format (FLAC, OGG, MP3, M4A), the sound channel cannot be set to stereo.
-Default value: 2
- * @method void setAudioChannel(integer $AudioChannel) Set Audio channel system. Valid values:
-<li>1: Mono</li>
-<li>2: Dual</li>
-<li>6: Stereo</li>
-When the media is packaged in audio format (FLAC, OGG, MP3, M4A), the sound channel cannot be set to stereo.
-Default value: 2
+ * @method integer getAudioChannel() Obtain Audio channel mode. Valid values:
+<li>1: single channel.</li>
+<li>2: dual channel.</li>
+<li>6: 5.1 surround sound.</li>
+When the media encapsulation format is audio (flac, ogg, mp3, and m4a), the number of channels cannot be set to 5.1 surround sound.
+Default value: 2.
+ * @method void setAudioChannel(integer $AudioChannel) Set Audio channel mode. Valid values:
+<li>1: single channel.</li>
+<li>2: dual channel.</li>
+<li>6: 5.1 surround sound.</li>
+When the media encapsulation format is audio (flac, ogg, mp3, and m4a), the number of channels cannot be set to 5.1 surround sound.
+Default value: 2.
  */
 class AudioTemplateInfo extends AbstractModel
 {
     /**
-     * @var string Audio stream codec.
-When the outer `Container` parameter is `mp3`, the valid value is:
-<li>libmp3lame.</li>
-When the outer `Container` parameter is `ogg` or `flac`, the valid value is:
+     * @var string Audio stream encoding format.
+When audio transcoding is not needed, the value is:
+<li>copy.</li>
+When the outer parameter Container is mp3, the value is:
+<li>mp3.</li>
+When the outer parameter Container is ogg or flac, the value is:
 <li>flac.</li>
-When the outer `Container` parameter is `m4a`, the valid values include:
-<li>libfdk_aac;</li>
-<li>libmp3lame;</li>
+When the outer parameter Container is m4a, valid values are:
+<li>aac;</li>
 <li>ac3.</li>
-When the outer `Container` parameter is `mp4` or `flv`, the valid values include:
-<li>libfdk_aac: more suitable for mp4;</li>
-<li>libmp3lame: more suitable for flv.</li>
-When the outer `Container` parameter is `hls`, the valid values include:
-<li>libfdk_aac;</li>
-<li>libmp3lame.</li>
+When the outer parameter Container is mp4 or flv, valid values are:
+<li>aac: more suitable for mp4;</li>
+<li>mp3: more suitable for flv;</li>
+<li>mp2.</li>
+When the outer parameter Container is hls, valid values are:
+<li>aac;</li>
+<li>mp3.</li>
      */
     public $Codec;
 
@@ -114,31 +120,33 @@ In Hz.
     public $SampleRate;
 
     /**
-     * @var integer Audio channel system. Valid values:
-<li>1: Mono</li>
-<li>2: Dual</li>
-<li>6: Stereo</li>
-When the media is packaged in audio format (FLAC, OGG, MP3, M4A), the sound channel cannot be set to stereo.
-Default value: 2
+     * @var integer Audio channel mode. Valid values:
+<li>1: single channel.</li>
+<li>2: dual channel.</li>
+<li>6: 5.1 surround sound.</li>
+When the media encapsulation format is audio (flac, ogg, mp3, and m4a), the number of channels cannot be set to 5.1 surround sound.
+Default value: 2.
      */
     public $AudioChannel;
 
     /**
-     * @param string $Codec Audio stream codec.
-When the outer `Container` parameter is `mp3`, the valid value is:
-<li>libmp3lame.</li>
-When the outer `Container` parameter is `ogg` or `flac`, the valid value is:
+     * @param string $Codec Audio stream encoding format.
+When audio transcoding is not needed, the value is:
+<li>copy.</li>
+When the outer parameter Container is mp3, the value is:
+<li>mp3.</li>
+When the outer parameter Container is ogg or flac, the value is:
 <li>flac.</li>
-When the outer `Container` parameter is `m4a`, the valid values include:
-<li>libfdk_aac;</li>
-<li>libmp3lame;</li>
+When the outer parameter Container is m4a, valid values are:
+<li>aac;</li>
 <li>ac3.</li>
-When the outer `Container` parameter is `mp4` or `flv`, the valid values include:
-<li>libfdk_aac: more suitable for mp4;</li>
-<li>libmp3lame: more suitable for flv.</li>
-When the outer `Container` parameter is `hls`, the valid values include:
-<li>libfdk_aac;</li>
-<li>libmp3lame.</li>
+When the outer parameter Container is mp4 or flv, valid values are:
+<li>aac: more suitable for mp4;</li>
+<li>mp3: more suitable for flv;</li>
+<li>mp2.</li>
+When the outer parameter Container is hls, valid values are:
+<li>aac;</li>
+<li>mp3.</li>
      * @param integer $Bitrate Audio stream bitrate in Kbps. Value range: 0 and [26, 256].
 If the value is 0, the bitrate of the audio stream will be the same as that of the original audio.
      * @param integer $SampleRate Audio stream sample rate. Valid values:
@@ -146,12 +154,12 @@ If the value is 0, the bitrate of the audio stream will be the same as that of t
 <li>44,100</li>
 <li>48,000</li>
 In Hz.
-     * @param integer $AudioChannel Audio channel system. Valid values:
-<li>1: Mono</li>
-<li>2: Dual</li>
-<li>6: Stereo</li>
-When the media is packaged in audio format (FLAC, OGG, MP3, M4A), the sound channel cannot be set to stereo.
-Default value: 2
+     * @param integer $AudioChannel Audio channel mode. Valid values:
+<li>1: single channel.</li>
+<li>2: dual channel.</li>
+<li>6: 5.1 surround sound.</li>
+When the media encapsulation format is audio (flac, ogg, mp3, and m4a), the number of channels cannot be set to 5.1 surround sound.
+Default value: 2.
      */
     function __construct()
     {

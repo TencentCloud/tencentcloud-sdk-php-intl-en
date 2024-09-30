@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setType(string $Type) Set Template type filter. Valid values:
 <li>Preset: Preset template;</li>
 <li>Custom: Custom template.</li>
+ * @method string getName() Obtain Filter condition for animated image generating template identifiers, with a length limit of 64 characters.
+ * @method void setName(string $Name) Set Filter condition for animated image generating template identifiers, with a length limit of 64 characters.
  */
 class DescribeAnimatedGraphicsTemplatesRequest extends AbstractModel
 {
@@ -58,12 +60,18 @@ class DescribeAnimatedGraphicsTemplatesRequest extends AbstractModel
     public $Type;
 
     /**
+     * @var string Filter condition for animated image generating template identifiers, with a length limit of 64 characters.
+     */
+    public $Name;
+
+    /**
      * @param array $Definitions Unique ID filter of animated image generating templates. Array length limit: 100.
      * @param integer $Offset Paging offset. Default value: 0.
      * @param integer $Limit Number of returned entries. Default value: 10. Maximum value: 100.
      * @param string $Type Template type filter. Valid values:
 <li>Preset: Preset template;</li>
 <li>Custom: Custom template.</li>
+     * @param string $Name Filter condition for animated image generating template identifiers, with a length limit of 64 characters.
      */
     function __construct()
     {
@@ -92,6 +100,10 @@ class DescribeAnimatedGraphicsTemplatesRequest extends AbstractModel
 
         if (array_key_exists("Type",$param) and $param["Type"] !== null) {
             $this->Type = $param["Type"];
+        }
+
+        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
+            $this->Name = $param["Name"];
         }
     }
 }

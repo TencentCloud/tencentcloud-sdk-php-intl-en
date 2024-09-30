@@ -20,12 +20,14 @@ use TencentCloud\Common\AbstractModel;
 /**
  * The output of a live scheme subtask.
  *
- * @method string getActivityType() Obtain The task type.
-<li>`LiveRecord`: Live recording. </li>
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setActivityType(string $ActivityType) Set The task type.
-<li>`LiveRecord`: Live recording. </li>
-Note: This field may return·null, indicating that no valid values can be obtained.
+ * @method string getActivityType() Obtain Atomic task type.
+<li>LiveRecord: live recording.</li>
+<li>AiQualityControl: media quality inspection.</li>
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setActivityType(string $ActivityType) Set Atomic task type.
+<li>LiveRecord: live recording.</li>
+<li>AiQualityControl: media quality inspection.</li>
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method LiveActivityResItem getLiveActivityResItem() Obtain The task output.
 Note: This field may return·null, indicating that no valid values can be obtained.
  * @method void setLiveActivityResItem(LiveActivityResItem $LiveActivityResItem) Set The task output.
@@ -34,9 +36,10 @@ Note: This field may return·null, indicating that no valid values can be obtain
 class LiveActivityResult extends AbstractModel
 {
     /**
-     * @var string The task type.
-<li>`LiveRecord`: Live recording. </li>
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var string Atomic task type.
+<li>LiveRecord: live recording.</li>
+<li>AiQualityControl: media quality inspection.</li>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ActivityType;
 
@@ -47,9 +50,10 @@ Note: This field may return·null, indicating that no valid values can be obtain
     public $LiveActivityResItem;
 
     /**
-     * @param string $ActivityType The task type.
-<li>`LiveRecord`: Live recording. </li>
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @param string $ActivityType Atomic task type.
+<li>LiveRecord: live recording.</li>
+<li>AiQualityControl: media quality inspection.</li>
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param LiveActivityResItem $LiveActivityResItem The task output.
 Note: This field may return·null, indicating that no valid values can be obtained.
      */

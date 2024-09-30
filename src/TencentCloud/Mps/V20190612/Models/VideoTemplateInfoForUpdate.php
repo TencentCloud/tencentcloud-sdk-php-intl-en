@@ -20,26 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Video stream configuration parameter
  *
- * @method string getCodec() Obtain The video codec. Valid values:
-<li>libx264: H.264</li>
-<li>libx265: H.265</li>
-<li>av1: AOMedia Video 1</li>
-Note: You must specify a resolution (not higher than 640 x 480) if the H.265 codec is used.
-Note: You can only use the AOMedia Video 1 codec for MP4 files.
- * @method void setCodec(string $Codec) Set The video codec. Valid values:
-<li>libx264: H.264</li>
-<li>libx265: H.265</li>
-<li>av1: AOMedia Video 1</li>
-Note: You must specify a resolution (not higher than 640 x 480) if the H.265 codec is used.
-Note: You can only use the AOMedia Video 1 codec for MP4 files.
- * @method integer getFps() Obtain Video frame rate in Hz. Value range: [0, 100].
-If the value is 0, the frame rate will be the same as that of the source video.
- * @method void setFps(integer $Fps) Set Video frame rate in Hz. Value range: [0, 100].
-If the value is 0, the frame rate will be the same as that of the source video.
- * @method integer getBitrate() Obtain Bitrate of a video stream in Kbps. Value range: 0 and [128, 35,000].
-If the value is 0, the bitrate of the video will be the same as that of the source video.
- * @method void setBitrate(integer $Bitrate) Set Bitrate of a video stream in Kbps. Value range: 0 and [128, 35,000].
-If the value is 0, the bitrate of the video will be the same as that of the source video.
+ * @method string getCodec() Obtain Video stream encoding format. Valid values:
+<li>h264: H.264 encoding.</li>
+<li>h265: H.265 encoding.</li>
+<li>h266: H.266 encoding.</li>
+<li>av1: AOMedia Video 1 encoding.</li>
+<li>vp8: VP8 encoding.</li>
+<li>vp9: VP9 encoding.</li>
+<li>mpeg2: MPEG2 encoding.</li>
+<li>dnxhd: DNxHD encoding.</li>
+<li>mv-hevc: MV-HEVC encoding.</li>
+Note: A resolution within 640x480 should be specified for H.265 encoding.
+
+Note: AV1 encoding containers only support mp4, webm, and mkv.
+Note: H.266 encoding containers only support mp4, hls, ts, and mov.
+Note: VP8 and VP9 encoding containers only support webm and mkv.
+Note: MPEG2 and DNxHD encoding containers only support mxf.
+Note: MV-HEVC encoding containers only support mp4, hls, and mov. Among them, the hls format only supports mp4 segmentation format.Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setCodec(string $Codec) Set Video stream encoding format. Valid values:
+<li>h264: H.264 encoding.</li>
+<li>h265: H.265 encoding.</li>
+<li>h266: H.266 encoding.</li>
+<li>av1: AOMedia Video 1 encoding.</li>
+<li>vp8: VP8 encoding.</li>
+<li>vp9: VP9 encoding.</li>
+<li>mpeg2: MPEG2 encoding.</li>
+<li>dnxhd: DNxHD encoding.</li>
+<li>mv-hevc: MV-HEVC encoding.</li>
+Note: A resolution within 640x480 should be specified for H.265 encoding.
+
+Note: AV1 encoding containers only support mp4, webm, and mkv.
+Note: H.266 encoding containers only support mp4, hls, ts, and mov.
+Note: VP8 and VP9 encoding containers only support webm and mkv.
+Note: MPEG2 and DNxHD encoding containers only support mxf.
+Note: MV-HEVC encoding containers only support mp4, hls, and mov. Among them, the hls format only supports mp4 segmentation format.Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getFps() Obtain Video frame rate. Value range:
+When FpsDenominator is empty, the range is [0, 120], in Hz.
+When FpsDenominator is not empty, the Fps/FpsDenominator range is [0, 120].
+If the value is 0, the frame rate will be the same as that of the source video.Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setFps(integer $Fps) Set Video frame rate. Value range:
+When FpsDenominator is empty, the range is [0, 120], in Hz.
+When FpsDenominator is not empty, the Fps/FpsDenominator range is [0, 120].
+If the value is 0, the frame rate will be the same as that of the source video.Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getBitrate() Obtain Bitrate of a video stream, in kbps. Value range: 0 and [128, 100000].If the value is 0, the bitrate of the video will be the same as that of the source video.Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setBitrate(integer $Bitrate) Set Bitrate of a video stream, in kbps. Value range: 0 and [128, 100000].If the value is 0, the bitrate of the video will be the same as that of the source video.Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getResolutionAdaptive() Obtain Resolution adaption. Valid values:
 <li>open: Enabled. When resolution adaption is enabled, `Width` indicates the long side of a video, while `Height` indicates the short side.</li>
 <li>close: Disabled. When resolution adaption is disabled, `Width` indicates the width of a video, while `Height` indicates the height.</li>
@@ -84,28 +108,72 @@ Default value: 0. If this parameter is set to `1`, multiple streams with differe
 <li>0: Disable</li>
 <li>1: Enable</li>
 Default value: 0. If this parameter is set to `1`, multiple streams with different resolutions and bitrates will be generated automatically. The highest resolution, bitrate, and quality of the streams are determined by the values of `width` and `height`, `Bitrate`, and `Vcrf` in `VideoTemplate` respectively. If these parameters are not set in `VideoTemplate`, the highest resolution generated will be the same as that of the source video, and the highest video quality will be close to VMAF 95. To use this parameter or learn about the billing details of adaptive encoding, please contact your sales rep.
+ * @method integer getSegmentType() Obtain HLS segment type. Valid values:
+<li>0: HLS+TS segment.</li>
+<li>2: HLS+TS byte range.</li>
+<li>7: HLS+MP4 segment.</li>
+<li>5: HLS+MP4 byte range.</li>
+Default value: 0
+
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setSegmentType(integer $SegmentType) Set HLS segment type. Valid values:
+<li>0: HLS+TS segment.</li>
+<li>2: HLS+TS byte range.</li>
+<li>7: HLS+MP4 segment.</li>
+<li>5: HLS+MP4 byte range.</li>
+Default value: 0
+
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getFpsDenominator() Obtain Denominator of the frame rate.
+Note: The value must be greater than 0.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setFpsDenominator(integer $FpsDenominator) Set Denominator of the frame rate.
+Note: The value must be greater than 0.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getStereo3dType() Obtain 3D video splicing mode, which is only valid for MV-HEVC 3D videos. Valid values:
+<li>side_by_side: side-by-side view.</li>
+<li>top_bottom: top-bottom view.</li>
+Default value: side_by_side.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setStereo3dType(string $Stereo3dType) Set 3D video splicing mode, which is only valid for MV-HEVC 3D videos. Valid values:
+<li>side_by_side: side-by-side view.</li>
+<li>top_bottom: top-bottom view.</li>
+Default value: side_by_side.
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class VideoTemplateInfoForUpdate extends AbstractModel
 {
     /**
-     * @var string The video codec. Valid values:
-<li>libx264: H.264</li>
-<li>libx265: H.265</li>
-<li>av1: AOMedia Video 1</li>
-Note: You must specify a resolution (not higher than 640 x 480) if the H.265 codec is used.
-Note: You can only use the AOMedia Video 1 codec for MP4 files.
+     * @var string Video stream encoding format. Valid values:
+<li>h264: H.264 encoding.</li>
+<li>h265: H.265 encoding.</li>
+<li>h266: H.266 encoding.</li>
+<li>av1: AOMedia Video 1 encoding.</li>
+<li>vp8: VP8 encoding.</li>
+<li>vp9: VP9 encoding.</li>
+<li>mpeg2: MPEG2 encoding.</li>
+<li>dnxhd: DNxHD encoding.</li>
+<li>mv-hevc: MV-HEVC encoding.</li>
+Note: A resolution within 640x480 should be specified for H.265 encoding.
+
+Note: AV1 encoding containers only support mp4, webm, and mkv.
+Note: H.266 encoding containers only support mp4, hls, ts, and mov.
+Note: VP8 and VP9 encoding containers only support webm and mkv.
+Note: MPEG2 and DNxHD encoding containers only support mxf.
+Note: MV-HEVC encoding containers only support mp4, hls, and mov. Among them, the hls format only supports mp4 segmentation format.Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Codec;
 
     /**
-     * @var integer Video frame rate in Hz. Value range: [0, 100].
-If the value is 0, the frame rate will be the same as that of the source video.
+     * @var integer Video frame rate. Value range:
+When FpsDenominator is empty, the range is [0, 120], in Hz.
+When FpsDenominator is not empty, the Fps/FpsDenominator range is [0, 120].
+If the value is 0, the frame rate will be the same as that of the source video.Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Fps;
 
     /**
-     * @var integer Bitrate of a video stream in Kbps. Value range: 0 and [128, 35,000].
-If the value is 0, the bitrate of the video will be the same as that of the source video.
+     * @var integer Bitrate of a video stream, in kbps. Value range: 0 and [128, 100000].If the value is 0, the bitrate of the video will be the same as that of the source video.Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Bitrate;
 
@@ -160,16 +228,56 @@ Default value: 0. If this parameter is set to `1`, multiple streams with differe
     public $ContentAdaptStream;
 
     /**
-     * @param string $Codec The video codec. Valid values:
-<li>libx264: H.264</li>
-<li>libx265: H.265</li>
-<li>av1: AOMedia Video 1</li>
-Note: You must specify a resolution (not higher than 640 x 480) if the H.265 codec is used.
-Note: You can only use the AOMedia Video 1 codec for MP4 files.
-     * @param integer $Fps Video frame rate in Hz. Value range: [0, 100].
-If the value is 0, the frame rate will be the same as that of the source video.
-     * @param integer $Bitrate Bitrate of a video stream in Kbps. Value range: 0 and [128, 35,000].
-If the value is 0, the bitrate of the video will be the same as that of the source video.
+     * @var integer HLS segment type. Valid values:
+<li>0: HLS+TS segment.</li>
+<li>2: HLS+TS byte range.</li>
+<li>7: HLS+MP4 segment.</li>
+<li>5: HLS+MP4 byte range.</li>
+Default value: 0
+
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $SegmentType;
+
+    /**
+     * @var integer Denominator of the frame rate.
+Note: The value must be greater than 0.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $FpsDenominator;
+
+    /**
+     * @var string 3D video splicing mode, which is only valid for MV-HEVC 3D videos. Valid values:
+<li>side_by_side: side-by-side view.</li>
+<li>top_bottom: top-bottom view.</li>
+Default value: side_by_side.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $Stereo3dType;
+
+    /**
+     * @param string $Codec Video stream encoding format. Valid values:
+<li>h264: H.264 encoding.</li>
+<li>h265: H.265 encoding.</li>
+<li>h266: H.266 encoding.</li>
+<li>av1: AOMedia Video 1 encoding.</li>
+<li>vp8: VP8 encoding.</li>
+<li>vp9: VP9 encoding.</li>
+<li>mpeg2: MPEG2 encoding.</li>
+<li>dnxhd: DNxHD encoding.</li>
+<li>mv-hevc: MV-HEVC encoding.</li>
+Note: A resolution within 640x480 should be specified for H.265 encoding.
+
+Note: AV1 encoding containers only support mp4, webm, and mkv.
+Note: H.266 encoding containers only support mp4, hls, ts, and mov.
+Note: VP8 and VP9 encoding containers only support webm and mkv.
+Note: MPEG2 and DNxHD encoding containers only support mxf.
+Note: MV-HEVC encoding containers only support mp4, hls, and mov. Among them, the hls format only supports mp4 segmentation format.Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $Fps Video frame rate. Value range:
+When FpsDenominator is empty, the range is [0, 120], in Hz.
+When FpsDenominator is not empty, the Fps/FpsDenominator range is [0, 120].
+If the value is 0, the frame rate will be the same as that of the source video.Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $Bitrate Bitrate of a video stream, in kbps. Value range: 0 and [128, 100000].If the value is 0, the bitrate of the video will be the same as that of the source video.Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $ResolutionAdaptive Resolution adaption. Valid values:
 <li>open: Enabled. When resolution adaption is enabled, `Width` indicates the long side of a video, while `Height` indicates the short side.</li>
 <li>close: Disabled. When resolution adaption is disabled, `Width` indicates the width of a video, while `Height` indicates the height.</li>
@@ -192,6 +300,22 @@ It is not recommended to specify this parameter if there are no special requirem
 <li>0: Disable</li>
 <li>1: Enable</li>
 Default value: 0. If this parameter is set to `1`, multiple streams with different resolutions and bitrates will be generated automatically. The highest resolution, bitrate, and quality of the streams are determined by the values of `width` and `height`, `Bitrate`, and `Vcrf` in `VideoTemplate` respectively. If these parameters are not set in `VideoTemplate`, the highest resolution generated will be the same as that of the source video, and the highest video quality will be close to VMAF 95. To use this parameter or learn about the billing details of adaptive encoding, please contact your sales rep.
+     * @param integer $SegmentType HLS segment type. Valid values:
+<li>0: HLS+TS segment.</li>
+<li>2: HLS+TS byte range.</li>
+<li>7: HLS+MP4 segment.</li>
+<li>5: HLS+MP4 byte range.</li>
+Default value: 0
+
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $FpsDenominator Denominator of the frame rate.
+Note: The value must be greater than 0.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $Stereo3dType 3D video splicing mode, which is only valid for MV-HEVC 3D videos. Valid values:
+<li>side_by_side: side-by-side view.</li>
+<li>top_bottom: top-bottom view.</li>
+Default value: side_by_side.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -244,6 +368,18 @@ Default value: 0. If this parameter is set to `1`, multiple streams with differe
 
         if (array_key_exists("ContentAdaptStream",$param) and $param["ContentAdaptStream"] !== null) {
             $this->ContentAdaptStream = $param["ContentAdaptStream"];
+        }
+
+        if (array_key_exists("SegmentType",$param) and $param["SegmentType"] !== null) {
+            $this->SegmentType = $param["SegmentType"];
+        }
+
+        if (array_key_exists("FpsDenominator",$param) and $param["FpsDenominator"] !== null) {
+            $this->FpsDenominator = $param["FpsDenominator"];
+        }
+
+        if (array_key_exists("Stereo3dType",$param) and $param["Stereo3dType"] !== null) {
+            $this->Stereo3dType = $param["Stereo3dType"];
         }
     }
 }

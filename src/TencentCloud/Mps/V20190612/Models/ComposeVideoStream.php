@@ -28,6 +28,12 @@ use TencentCloud\Common\AbstractModel;
 The default value is `0`, which means that the frame rate will be the same as that of the first video.
  * @method void setFps(integer $Fps) Set The video frame rate (Hz). Value range: 0–60.  
 The default value is `0`, which means that the frame rate will be the same as that of the first video.
+ * @method integer getBitrate() Obtain Reference bitrate, in kbps. Value range: 50-35000.
+If set, the encoder will try to encode at this bitrate.
+If not set, the service will automatically adopt a suitable bitrate based on the complexity of an image.
+ * @method void setBitrate(integer $Bitrate) Set Reference bitrate, in kbps. Value range: 50-35000.
+If set, the encoder will try to encode at this bitrate.
+If not set, the service will automatically adopt a suitable bitrate based on the complexity of an image.
  */
 class ComposeVideoStream extends AbstractModel
 {
@@ -44,10 +50,20 @@ The default value is `0`, which means that the frame rate will be the same as th
     public $Fps;
 
     /**
+     * @var integer Reference bitrate, in kbps. Value range: 50-35000.
+If set, the encoder will try to encode at this bitrate.
+If not set, the service will automatically adopt a suitable bitrate based on the complexity of an image.
+     */
+    public $Bitrate;
+
+    /**
      * @param string $Codec The codec. Valid values:
 <li>`H.264` (default) </li>
      * @param integer $Fps The video frame rate (Hz). Value range: 0–60.  
 The default value is `0`, which means that the frame rate will be the same as that of the first video.
+     * @param integer $Bitrate Reference bitrate, in kbps. Value range: 50-35000.
+If set, the encoder will try to encode at this bitrate.
+If not set, the service will automatically adopt a suitable bitrate based on the complexity of an image.
      */
     function __construct()
     {
@@ -68,6 +84,10 @@ The default value is `0`, which means that the frame rate will be the same as th
 
         if (array_key_exists("Fps",$param) and $param["Fps"] !== null) {
             $this->Fps = $param["Fps"];
+        }
+
+        if (array_key_exists("Bitrate",$param) and $param["Bitrate"] !== null) {
+            $this->Bitrate = $param["Bitrate"];
         }
     }
 }

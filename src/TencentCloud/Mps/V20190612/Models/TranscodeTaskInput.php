@@ -60,8 +60,20 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setOutputStorage(TaskOutputStorage $OutputStorage) Set Target bucket of an output file. If this parameter is left empty, the `OutputStorage` value of the upper folder will be inherited.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getOutputObjectPath() Obtain Path to a primary output file, which can be a relative path or an absolute path. If this parameter is left empty, the following relative path will be used by default: `{inputName}_transcode_{definition}.{format}`.
- * @method void setOutputObjectPath(string $OutputObjectPath) Set Path to a primary output file, which can be a relative path or an absolute path. If this parameter is left empty, the following relative path will be used by default: `{inputName}_transcode_{definition}.{format}`.
+ * @method string getOutputObjectPath() Obtain Output path of the main file after transcoding, which can be a relative or absolute path.
+If you need to define an output path, the path must end with `.{format}`. For variable names, refer to [Filename Variable](https://intl.cloud.tencent.com/document/product/862/37039?from_cn_redirect=1).Relative path example:
+<li>Filename_{Variable name}.{format}.</li>
+<li>Filename.{format}.</li>
+Absolute path example:
+<li>/Custom path/Filename_{Variable name}.{format}.</li>
+If left empty, a relative path is used by default: `{inputName}_transcode_{definition}.{format}`.
+ * @method void setOutputObjectPath(string $OutputObjectPath) Set Output path of the main file after transcoding, which can be a relative or absolute path.
+If you need to define an output path, the path must end with `.{format}`. For variable names, refer to [Filename Variable](https://intl.cloud.tencent.com/document/product/862/37039?from_cn_redirect=1).Relative path example:
+<li>Filename_{Variable name}.{format}.</li>
+<li>Filename.{format}.</li>
+Absolute path example:
+<li>/Custom path/Filename_{Variable name}.{format}.</li>
+If left empty, a relative path is used by default: `{inputName}_transcode_{definition}.{format}`.
  * @method string getSegmentObjectName() Obtain Path to an output file part (the path to ts during transcoding to HLS), which can only be a relative path. If this parameter is left empty, the following relative path will be used by default: `{inputName}_transcode_{definition}_{number}.{format}`.
  * @method void setSegmentObjectName(string $SegmentObjectName) Set Path to an output file part (the path to ts during transcoding to HLS), which can only be a relative path. If this parameter is left empty, the following relative path will be used by default: `{inputName}_transcode_{definition}_{number}.{format}`.
  * @method NumberFormat getObjectNumberFormat() Obtain Rule of the `{number}` variable in the output path after transcoding.
@@ -128,7 +140,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $OutputStorage;
 
     /**
-     * @var string Path to a primary output file, which can be a relative path or an absolute path. If this parameter is left empty, the following relative path will be used by default: `{inputName}_transcode_{definition}.{format}`.
+     * @var string Output path of the main file after transcoding, which can be a relative or absolute path.
+If you need to define an output path, the path must end with `.{format}`. For variable names, refer to [Filename Variable](https://intl.cloud.tencent.com/document/product/862/37039?from_cn_redirect=1).Relative path example:
+<li>Filename_{Variable name}.{format}.</li>
+<li>Filename.{format}.</li>
+Absolute path example:
+<li>/Custom path/Filename_{Variable name}.{format}.</li>
+If left empty, a relative path is used by default: `{inputName}_transcode_{definition}.{format}`.
      */
     public $OutputObjectPath;
 
@@ -170,7 +188,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
 <li>If this parameter is set to a negative number (-n for example), the transcoded video will end at the nth second before the end of the original video.</li>
      * @param TaskOutputStorage $OutputStorage Target bucket of an output file. If this parameter is left empty, the `OutputStorage` value of the upper folder will be inherited.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $OutputObjectPath Path to a primary output file, which can be a relative path or an absolute path. If this parameter is left empty, the following relative path will be used by default: `{inputName}_transcode_{definition}.{format}`.
+     * @param string $OutputObjectPath Output path of the main file after transcoding, which can be a relative or absolute path.
+If you need to define an output path, the path must end with `.{format}`. For variable names, refer to [Filename Variable](https://intl.cloud.tencent.com/document/product/862/37039?from_cn_redirect=1).Relative path example:
+<li>Filename_{Variable name}.{format}.</li>
+<li>Filename.{format}.</li>
+Absolute path example:
+<li>/Custom path/Filename_{Variable name}.{format}.</li>
+If left empty, a relative path is used by default: `{inputName}_transcode_{definition}.{format}`.
      * @param string $SegmentObjectName Path to an output file part (the path to ts during transcoding to HLS), which can only be a relative path. If this parameter is left empty, the following relative path will be used by default: `{inputName}_transcode_{definition}_{number}.{format}`.
      * @param NumberFormat $ObjectNumberFormat Rule of the `{number}` variable in the output path after transcoding.
 Note: This field may return null, indicating that no valid values can be obtained.

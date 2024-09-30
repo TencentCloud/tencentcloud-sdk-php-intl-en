@@ -26,6 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStartTimeOffset(float $StartTimeOffset) Set The start time offset of the segment.
  * @method float getEndTimeOffset() Obtain The end time offset of the segment.
  * @method void setEndTimeOffset(float $EndTimeOffset) Set The end time offset of the segment.
+ * @method array getSegmentTags() Obtain Segment tag.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setSegmentTags(array $SegmentTags) Set Segment tag.
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class HighlightSegmentItem extends AbstractModel
 {
@@ -45,9 +49,17 @@ class HighlightSegmentItem extends AbstractModel
     public $EndTimeOffset;
 
     /**
+     * @var array Segment tag.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $SegmentTags;
+
+    /**
      * @param float $Confidence The confidence score.
      * @param float $StartTimeOffset The start time offset of the segment.
      * @param float $EndTimeOffset The end time offset of the segment.
+     * @param array $SegmentTags Segment tag.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -72,6 +84,10 @@ class HighlightSegmentItem extends AbstractModel
 
         if (array_key_exists("EndTimeOffset",$param) and $param["EndTimeOffset"] !== null) {
             $this->EndTimeOffset = $param["EndTimeOffset"];
+        }
+
+        if (array_key_exists("SegmentTags",$param) and $param["SegmentTags"] !== null) {
+            $this->SegmentTags = $param["SegmentTags"];
         }
     }
 }

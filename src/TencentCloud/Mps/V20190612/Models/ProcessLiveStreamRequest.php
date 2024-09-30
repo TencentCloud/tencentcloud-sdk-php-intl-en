@@ -34,8 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAiRecognitionTask(AiRecognitionTaskInput $AiRecognitionTask) Set Type parameter of video content recognition task.
  * @method AiAnalysisTaskInput getAiAnalysisTask() Obtain 
  * @method void setAiAnalysisTask(AiAnalysisTaskInput $AiAnalysisTask) Set 
- * @method AiQualityControlTaskInput getAiQualityControlTask() Obtain 
- * @method void setAiQualityControlTask(AiQualityControlTaskInput $AiQualityControlTask) Set 
+ * @method AiQualityControlTaskInput getAiQualityControlTask() Obtain Media quality inspection type task parameters.
+ * @method void setAiQualityControlTask(AiQualityControlTaskInput $AiQualityControlTask) Set Media quality inspection type task parameters.
  * @method string getSessionId() Obtain The ID used for deduplication. If there was a request with the same ID in the last seven days, the current request will return an error. The ID can contain up to 50 characters. If this parameter is left empty or an empty string is entered, no deduplication will be performed.
  * @method void setSessionId(string $SessionId) Set The ID used for deduplication. If there was a request with the same ID in the last seven days, the current request will return an error. The ID can contain up to 50 characters. If this parameter is left empty or an empty string is entered, no deduplication will be performed.
  * @method string getSessionContext() Obtain The source context which is used to pass through the user request information. The task flow status change callback will return the value of this field. It can contain up to 1,000 characters.
@@ -89,7 +89,7 @@ class ProcessLiveStreamRequest extends AbstractModel
     public $AiAnalysisTask;
 
     /**
-     * @var AiQualityControlTaskInput 
+     * @var AiQualityControlTaskInput Media quality inspection type task parameters.
      */
     public $AiQualityControlTask;
 
@@ -120,7 +120,7 @@ Note 2: If `TaskNotifyConfig` is specified when `ProcessLiveStream` is called, t
      * @param AiContentReviewTaskInput $AiContentReviewTask Type parameter of a video content audit task.
      * @param AiRecognitionTaskInput $AiRecognitionTask Type parameter of video content recognition task.
      * @param AiAnalysisTaskInput $AiAnalysisTask 
-     * @param AiQualityControlTaskInput $AiQualityControlTask 
+     * @param AiQualityControlTaskInput $AiQualityControlTask Media quality inspection type task parameters.
      * @param string $SessionId The ID used for deduplication. If there was a request with the same ID in the last seven days, the current request will return an error. The ID can contain up to 50 characters. If this parameter is left empty or an empty string is entered, no deduplication will be performed.
      * @param string $SessionContext The source context which is used to pass through the user request information. The task flow status change callback will return the value of this field. It can contain up to 1,000 characters.
      * @param integer $ScheduleId The live scheme ID.

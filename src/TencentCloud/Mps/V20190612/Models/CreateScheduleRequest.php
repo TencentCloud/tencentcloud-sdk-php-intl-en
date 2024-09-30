@@ -34,6 +34,8 @@ If you do not specify this, the file will be saved to the trigger directory.
 If you do not specify this, the file will be saved to the trigger directory.
  * @method TaskNotifyConfig getTaskNotifyConfig() Obtain The notification configuration. If you do not specify this parameter, notifications will not be sent.
  * @method void setTaskNotifyConfig(TaskNotifyConfig $TaskNotifyConfig) Set The notification configuration. If you do not specify this parameter, notifications will not be sent.
+ * @method string getResourceId() Obtain Resource ID. Ensure the corresponding resource is in the enabled state. The default value is an account's primary resource ID.
+ * @method void setResourceId(string $ResourceId) Set Resource ID. Ensure the corresponding resource is in the enabled state. The default value is an account's primary resource ID.
  */
 class CreateScheduleRequest extends AbstractModel
 {
@@ -69,6 +71,11 @@ If you do not specify this, the file will be saved to the trigger directory.
     public $TaskNotifyConfig;
 
     /**
+     * @var string Resource ID. Ensure the corresponding resource is in the enabled state. The default value is an account's primary resource ID.
+     */
+    public $ResourceId;
+
+    /**
      * @param string $ScheduleName The scheme name (max 128 characters). This name should be unique across your account.
      * @param WorkflowTrigger $Trigger The trigger of the scheme. If a file is uploaded to the specified bucket, the scheme will be triggered.
      * @param array $Activities The subtasks of the scheme.
@@ -76,6 +83,7 @@ If you do not specify this, the file will be saved to the trigger directory.
      * @param string $OutputDir The directory to save the media processing output file, which must start and end with `/`, such as `/movie/201907/`.
 If you do not specify this, the file will be saved to the trigger directory.
      * @param TaskNotifyConfig $TaskNotifyConfig The notification configuration. If you do not specify this parameter, notifications will not be sent.
+     * @param string $ResourceId Resource ID. Ensure the corresponding resource is in the enabled state. The default value is an account's primary resource ID.
      */
     function __construct()
     {
@@ -120,6 +128,10 @@ If you do not specify this, the file will be saved to the trigger directory.
         if (array_key_exists("TaskNotifyConfig",$param) and $param["TaskNotifyConfig"] !== null) {
             $this->TaskNotifyConfig = new TaskNotifyConfig();
             $this->TaskNotifyConfig->deserialize($param["TaskNotifyConfig"]);
+        }
+
+        if (array_key_exists("ResourceId",$param) and $param["ResourceId"] !== null) {
+            $this->ResourceId = $param["ResourceId"];
         }
     }
 }

@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFontType(string $FontType) Set Font type. Currently, two types are supported:
 <li>simkai.ttf: Both Chinese and English are supported;</li>
 <li>arial.ttf: Only English is supported.</li>
- * @method string getFontSize() Obtain Font size in Npx format where N is a numeric value.
- * @method void setFontSize(string $FontSize) Set Font size in Npx format where N is a numeric value.
+ * @method string getFontSize() Obtain Font size, in the format of Npx. N is a numerical value with a value range of [0, 1] or [8, 4096].
+ * @method void setFontSize(string $FontSize) Set Font size, in the format of Npx. N is a numerical value with a value range of [0, 1] or [8, 4096].
  * @method string getFontColor() Obtain Font color in 0xRRGGBB format. Default value: 0xFFFFFF (white).
  * @method void setFontColor(string $FontColor) Set Font color in 0xRRGGBB format. Default value: 0xFFFFFF (white).
  * @method float getFontAlpha() Obtain Text transparency. Value range: (0, 1]
@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFontAlpha(float $FontAlpha) Set Text transparency. Value range: (0, 1]
 <li>0: Completely transparent</li>
 <li>1: Completely opaque</li>
+ * @method string getTextContent() Obtain Text content, up to 100 characters.
+ * @method void setTextContent(string $TextContent) Set Text content, up to 100 characters.
  */
 class TextWatermarkTemplateInputForUpdate extends AbstractModel
 {
@@ -47,7 +49,7 @@ class TextWatermarkTemplateInputForUpdate extends AbstractModel
     public $FontType;
 
     /**
-     * @var string Font size in Npx format where N is a numeric value.
+     * @var string Font size, in the format of Npx. N is a numerical value with a value range of [0, 1] or [8, 4096].
      */
     public $FontSize;
 
@@ -64,14 +66,20 @@ class TextWatermarkTemplateInputForUpdate extends AbstractModel
     public $FontAlpha;
 
     /**
+     * @var string Text content, up to 100 characters.
+     */
+    public $TextContent;
+
+    /**
      * @param string $FontType Font type. Currently, two types are supported:
 <li>simkai.ttf: Both Chinese and English are supported;</li>
 <li>arial.ttf: Only English is supported.</li>
-     * @param string $FontSize Font size in Npx format where N is a numeric value.
+     * @param string $FontSize Font size, in the format of Npx. N is a numerical value with a value range of [0, 1] or [8, 4096].
      * @param string $FontColor Font color in 0xRRGGBB format. Default value: 0xFFFFFF (white).
      * @param float $FontAlpha Text transparency. Value range: (0, 1]
 <li>0: Completely transparent</li>
 <li>1: Completely opaque</li>
+     * @param string $TextContent Text content, up to 100 characters.
      */
     function __construct()
     {
@@ -100,6 +108,10 @@ class TextWatermarkTemplateInputForUpdate extends AbstractModel
 
         if (array_key_exists("FontAlpha",$param) and $param["FontAlpha"] !== null) {
             $this->FontAlpha = $param["FontAlpha"];
+        }
+
+        if (array_key_exists("TextContent",$param) and $param["TextContent"] !== null) {
+            $this->TextContent = $param["TextContent"];
         }
     }
 }

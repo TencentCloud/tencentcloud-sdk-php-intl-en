@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateTranscodeTemplate request structure.
  *
- * @method string getContainer() Obtain Container format. Valid values: mp4; flv; hls; mp3; flac; ogg; m4a. Among them, mp3, flac, ogg, and m4a are for audio files.
- * @method void setContainer(string $Container) Set Container format. Valid values: mp4; flv; hls; mp3; flac; ogg; m4a. Among them, mp3, flac, ogg, and m4a are for audio files.
+ * @method string getContainer() Obtain Container format. Valid values: mp4, flv, hls, ts, webm, mkv, mxf, mov, mp3, flac, ogg, and m4a. Among them, mp3, flac, ogg, and m4a are for audio-only files.
+ * @method void setContainer(string $Container) Set Container format. Valid values: mp4, flv, hls, ts, webm, mkv, mxf, mov, mp3, flac, ogg, and m4a. Among them, mp3, flac, ogg, and m4a are for audio-only files.
  * @method string getName() Obtain Name of a transcoding template. Length limit: 64 characters.
  * @method void setName(string $Name) Set Name of a transcoding template. Length limit: 64 characters.
  * @method string getComment() Obtain Template description. Length limit: 256 characters.
@@ -54,7 +54,7 @@ Default value: 0.
 class CreateTranscodeTemplateRequest extends AbstractModel
 {
     /**
-     * @var string Container format. Valid values: mp4; flv; hls; mp3; flac; ogg; m4a. Among them, mp3, flac, ogg, and m4a are for audio files.
+     * @var string Container format. Valid values: mp4, flv, hls, ts, webm, mkv, mxf, mov, mp3, flac, ogg, and m4a. Among them, mp3, flac, ogg, and m4a are for audio-only files.
      */
     public $Container;
 
@@ -105,7 +105,7 @@ Default value: 0.
     public $EnhanceConfig;
 
     /**
-     * @param string $Container Container format. Valid values: mp4; flv; hls; mp3; flac; ogg; m4a. Among them, mp3, flac, ogg, and m4a are for audio files.
+     * @param string $Container Container format. Valid values: mp4, flv, hls, ts, webm, mkv, mxf, mov, mp3, flac, ogg, and m4a. Among them, mp3, flac, ogg, and m4a are for audio-only files.
      * @param string $Name Name of a transcoding template. Length limit: 64 characters.
      * @param string $Comment Template description. Length limit: 256 characters.
      * @param integer $RemoveVideo Whether to remove video data. Valid values:

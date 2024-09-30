@@ -34,6 +34,10 @@ use TencentCloud\Common\AbstractModel;
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setOutput(AiRecognitionTaskAsrFullTextResultOutput $Output) Set Output information of a full speech recognition task.
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getProgress() Obtain Task progress.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setProgress(integer $Progress) Set Task progress.
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class AiRecognitionTaskAsrFullTextResult extends AbstractModel
 {
@@ -69,12 +73,20 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $Output;
 
     /**
+     * @var integer Task progress.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $Progress;
+
+    /**
      * @param string $Status Task status. Valid values: PROCESSING, SUCCESS, FAIL.
      * @param string $ErrCodeExt The error code. An empty string indicates the task is successful; any other value returned indicates the task failed. For details, see [Error Codes](https://intl.cloud.tencent.com/document/product/1041/40249).
      * @param integer $ErrCode Error code. 0 indicates the task is successful; otherwise it is failed. This parameter is no longer recommended. Consider using the new error code parameter ErrCodeExt.
      * @param string $Message Error message.
      * @param AiRecognitionTaskAsrFullTextResultInput $Input Input information of a full speech recognition task.
      * @param AiRecognitionTaskAsrFullTextResultOutput $Output Output information of a full speech recognition task.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $Progress Task progress.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
@@ -114,6 +126,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (array_key_exists("Output",$param) and $param["Output"] !== null) {
             $this->Output = new AiRecognitionTaskAsrFullTextResultOutput();
             $this->Output->deserialize($param["Output"]);
+        }
+
+        if (array_key_exists("Progress",$param) and $param["Progress"] !== null) {
+            $this->Progress = $param["Progress"];
         }
     }
 }

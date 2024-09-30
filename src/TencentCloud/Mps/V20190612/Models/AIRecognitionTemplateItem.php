@@ -46,6 +46,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setAsrWordsConfigure(AsrWordsConfigureInfo $AsrWordsConfigure) Set Speech keyword recognition control parameter.
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method TranslateConfigureInfo getTranslateConfigure() Obtain Voice translation control parameters.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setTranslateConfigure(TranslateConfigureInfo $TranslateConfigure) Set Voice translation control parameters.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getCreateTime() Obtain Creation time of a template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
  * @method void setCreateTime(string $CreateTime) Set Creation time of a template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
  * @method string getUpdateTime() Obtain Last modified time of a template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
@@ -107,6 +111,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $AsrWordsConfigure;
 
     /**
+     * @var TranslateConfigureInfo Voice translation control parameters.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $TranslateConfigure;
+
+    /**
      * @var string Creation time of a template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
      */
     public $CreateTime;
@@ -137,6 +147,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param AsrFullTextConfigureInfo $AsrFullTextConfigure Full speech recognition control parameter.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param AsrWordsConfigureInfo $AsrWordsConfigure Speech keyword recognition control parameter.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param TranslateConfigureInfo $TranslateConfigure Voice translation control parameters.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $CreateTime Creation time of a template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
      * @param string $UpdateTime Last modified time of a template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
@@ -193,6 +205,11 @@ Note: This field may return `null`, indicating that no valid value can be obtain
         if (array_key_exists("AsrWordsConfigure",$param) and $param["AsrWordsConfigure"] !== null) {
             $this->AsrWordsConfigure = new AsrWordsConfigureInfo();
             $this->AsrWordsConfigure->deserialize($param["AsrWordsConfigure"]);
+        }
+
+        if (array_key_exists("TranslateConfigure",$param) and $param["TranslateConfigure"] !== null) {
+            $this->TranslateConfigure = new TranslateConfigureInfo();
+            $this->TranslateConfigure->deserialize($param["TranslateConfigure"]);
         }
 
         if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {

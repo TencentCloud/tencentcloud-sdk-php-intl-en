@@ -30,6 +30,7 @@ use TencentCloud\Mps\V20190612\Models as Models;
  * @method Models\CreateContentReviewTemplateResponse CreateContentReviewTemplate(Models\CreateContentReviewTemplateRequest $req) This API is used to create a custom content moderation template. Up to 50 templates can be created in total.
  * @method Models\CreateImageSpriteTemplateResponse CreateImageSpriteTemplate(Models\CreateImageSpriteTemplateRequest $req) This API is used to create a custom image sprite generating template. Up to 16 templates can be created.
  * @method Models\CreatePersonSampleResponse CreatePersonSample(Models\CreatePersonSampleRequest $req) This API is used to create image samples for video processing operations such as content recognition and inappropriate information detection with the help of technologies such as facial feature positioning.
+ * @method Models\CreateQualityControlTemplateResponse CreateQualityControlTemplate(Models\CreateQualityControlTemplateRequest $req) This API is used to create a media quality inspection template. Up to 50 templates can be created.
  * @method Models\CreateSampleSnapshotTemplateResponse CreateSampleSnapshotTemplate(Models\CreateSampleSnapshotTemplateRequest $req) This API is used to create a custom sampled screencapturing template. Up to 16 templates can be created.
  * @method Models\CreateScheduleResponse CreateSchedule(Models\CreateScheduleRequest $req) This API is used to create a scheme for media files uploaded to a specified COS bucket. A scheme may include the following tasks:
 1. Video transcoding (with watermark)
@@ -68,6 +69,7 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
  * @method Models\DeleteContentReviewTemplateResponse DeleteContentReviewTemplate(Models\DeleteContentReviewTemplateRequest $req) This API is used to delete a custom content moderation template.
  * @method Models\DeleteImageSpriteTemplateResponse DeleteImageSpriteTemplate(Models\DeleteImageSpriteTemplateRequest $req) This API is used to delete an image sprite generating template.
  * @method Models\DeletePersonSampleResponse DeletePersonSample(Models\DeletePersonSampleRequest $req) This API is used to delete image samples by image ID.
+ * @method Models\DeleteQualityControlTemplateResponse DeleteQualityControlTemplate(Models\DeleteQualityControlTemplateRequest $req) This API is used to delete a media quality inspection template.
  * @method Models\DeleteSampleSnapshotTemplateResponse DeleteSampleSnapshotTemplate(Models\DeleteSampleSnapshotTemplateRequest $req) This API is used to delete a custom sampled screencapturing template.
  * @method Models\DeleteScheduleResponse DeleteSchedule(Models\DeleteScheduleRequest $req) This API is used to delete a scheme.
  * @method Models\DeleteSnapshotByTimeOffsetTemplateResponse DeleteSnapshotByTimeOffsetTemplate(Models\DeleteSnapshotByTimeOffsetTemplateRequest $req) This API is used to delete a custom time point screencapturing template.
@@ -83,6 +85,7 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
  * @method Models\DescribeImageSpriteTemplatesResponse DescribeImageSpriteTemplates(Models\DescribeImageSpriteTemplatesRequest $req) This API is used to query the list of image sprite generating templates and supports paged queries by filters.
  * @method Models\DescribeMediaMetaDataResponse DescribeMediaMetaData(Models\DescribeMediaMetaDataRequest $req) This API is used to get the metadata of media, such as video image width/height, codec, length, and frame rate.
  * @method Models\DescribePersonSamplesResponse DescribePersonSamples(Models\DescribePersonSamplesRequest $req) This API is used to query the information of image samples. It supports paginated queries by image ID, name, and tag.
+ * @method Models\DescribeQualityControlTemplatesResponse DescribeQualityControlTemplates(Models\DescribeQualityControlTemplatesRequest $req) This API is used to query custom media quality inspection templates, supporting paged queries by conditions.
  * @method Models\DescribeSampleSnapshotTemplatesResponse DescribeSampleSnapshotTemplates(Models\DescribeSampleSnapshotTemplatesRequest $req) This API is used to query the list of sampled screencapturing templates and supports paged queries by filters.
  * @method Models\DescribeSchedulesResponse DescribeSchedules(Models\DescribeSchedulesRequest $req) This API is used to query a scheme.
  * @method Models\DescribeSnapshotByTimeOffsetTemplatesResponse DescribeSnapshotByTimeOffsetTemplates(Models\DescribeSnapshotByTimeOffsetTemplatesRequest $req) This API is used to query the list of time point screencapturing templates and supports paged queries by filters.
@@ -96,19 +99,19 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
  * @method Models\DescribeWorkflowsResponse DescribeWorkflows(Models\DescribeWorkflowsRequest $req) This API is used to get the list of workflow details by workflow ID.
  * @method Models\DisableScheduleResponse DisableSchedule(Models\DisableScheduleRequest $req) This API is used to disable a scheme.
  * @method Models\DisableWorkflowResponse DisableWorkflow(Models\DisableWorkflowRequest $req) This API is used to disable a workflow.
- * @method Models\EditMediaResponse EditMedia(Models\EditMediaRequest $req) This API is used to edit a video to generate a new video. Editing actions may include:
-  
+ * @method Models\EditMediaResponse EditMedia(Models\EditMediaRequest $req) This API is used to edit a video to generate a new one. Editing features include:
+ 
 
-1. **Simple editing**: Simple video editing such as clipping and splicing
-1.1 Clipping a file to generate a new video
-1.2 Splicing multiple files to generate a new video
-1.3 Clipping multiple files and then splicing the clips to generate a new video
+1. **Editing task**: simple video editing, such as clipping and splicing.
+1) Edit a file to generate a new video.
+2) Splice multiple files to generate a new video.
+3) Edit multiple files and then splice them to generate a new video.
 
-2. **Compositing**: Composing a new video as required
-2.1 Adding different tracks (video, audio, subtitles) or elements (video, image, audio, text, empty)
-2.2 Image: Adding, scaling, rotating, or mirroring an image
-2.3 Audio: Adjusting volume and adding audio effects such as fade and reverb
-2.4 Video: Adding transition effects, changing playback speed, splicing and clipping videos, adding subtitles, playing videos picture-in-picture, separating audio from videos, adding animation effects, etc.
+2. **Compositing task**: Generate a new video by describing information through APIs.
+1) Multi-track (video, audio, and subtitles) and multi-type elements (video, image, audio, text, and empty).
+2) Image level: mapping, zoom in/out, arbitrary rotation, mirroring, and more.
+3) Audio level: volume control, fade in/out, mixing, and more.
+4) Video level: transition, playback speed adjustment, splicing, clipping, subtitles, picture-in-picture, audio-video separation, entrance and exit animations, and more.
  * @method Models\EnableScheduleResponse EnableSchedule(Models\EnableScheduleRequest $req) This API is used to enable a scheme.
  * @method Models\EnableWorkflowResponse EnableWorkflow(Models\EnableWorkflowRequest $req) This API is used to enable a workflow.
  * @method Models\ExecuteFunctionResponse ExecuteFunction(Models\ExecuteFunctionRequest $req) This API is reserved for special circumstances. Do not use it unless you are directed to use it by technical support.
@@ -122,6 +125,7 @@ Note: templates with an ID below 10000 are preset and cannot be modified.
  * @method Models\ModifyContentReviewTemplateResponse ModifyContentReviewTemplate(Models\ModifyContentReviewTemplateRequest $req) This API is used to modify a custom content moderation template.
  * @method Models\ModifyImageSpriteTemplateResponse ModifyImageSpriteTemplate(Models\ModifyImageSpriteTemplateRequest $req) This API is used to modify a custom image sprite generating template.
  * @method Models\ModifyPersonSampleResponse ModifyPersonSample(Models\ModifyPersonSampleRequest $req) This API is used to modify image samples by image ID. You can use it to modify the name and description of an image sample and add/delete/reset facial features or tags. There must be at least one image left after the deletion of facial features; otherwise, please reset instead of delete the facial features.
+ * @method Models\ModifyQualityControlTemplateResponse ModifyQualityControlTemplate(Models\ModifyQualityControlTemplateRequest $req) This API is used to modify a media quality inspection template.
  * @method Models\ModifySampleSnapshotTemplateResponse ModifySampleSnapshotTemplate(Models\ModifySampleSnapshotTemplateRequest $req) This API is used to modify a custom sampled screencapturing template.
  * @method Models\ModifyScheduleResponse ModifySchedule(Models\ModifyScheduleRequest $req) This API is used to modify a scheme.
  * @method Models\ModifySnapshotByTimeOffsetTemplateResponse ModifySnapshotByTimeOffsetTemplate(Models\ModifySnapshotByTimeOffsetTemplateRequest $req) This API is used to modify a custom time point screencapturing template.
@@ -141,16 +145,18 @@ Instead of initiating a video processing task, this API is used to help generate
 * Recording
 
 HTTP callbacks are supported for live stream processing events. Notifications can also be written in real time to and read from a CMQ queue. The output files of processing tasks are saved to the storage you specify.
- * @method Models\ProcessMediaResponse ProcessMedia(Models\ProcessMediaRequest $req) This API is used to initiate processing tasks for media specified by a URL or in COS. Such tasks may include the following:
-1. Video transcoding (general transcoding, Top Speed Codec, audio/video enhancement)
-2. Animated image generating
-3. Time point screencapturing
-4. Sampled screencapturing
-5. Image sprite generating
-6. Adaptive bitrate streaming
-7. Intelligent content moderation (detection of pornographic and sensitive content)
-8. Intelligent content analysis (labeling, categorization, thumbnail generation, labeling by frame, splitting, highlight generation, opening and closing segment recognition)
-9. Intelligent content recognition (face, full text, text keyword, full speech, speech keyword, speech translation, object recognition)
+ * @method Models\ProcessMediaResponse ProcessMedia(Models\ProcessMediaRequest $req) This API is used to initiate a processing task for video URLs or media files in Cloud Object Storage (COS). Features include:
+1. Video transcoding (standard transcoding, TSC transcoding, and audio/video enhancement);
+2. Animated image generating;
+3. Screenshot taking at specified time points;
+4. Sampled screenshot taking;
+5. Sprite screenshot taking;
+6. Transcoding to adaptive bitrate streaming;
+7. Intelligent auditing (porn detection and sensitive information detection);
+8. Intelligent analysis (tagging, classification, thumbnail generating, frame-by-frame tagging, video splitting, highlights generating, opening and closing segments recognition, and game timestamping);
+9. Intelligent identification (face, full text, text keyword, full speech, speech keyword, speech translation, and object recognition);
+
+10. Media quality inspection (live stream format diagnosis, audio and video content detection (jitter, blur, low light, overexposure, black and white edges, black and white screens, screen glitch, noise, mosaic, QR code, and more), and no-reference scoring).
  * @method Models\ResetWorkflowResponse ResetWorkflow(Models\ResetWorkflowRequest $req) This API is used to reset an existing workflow that is disabled.
  */
 

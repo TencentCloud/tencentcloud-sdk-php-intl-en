@@ -32,6 +32,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setType(string $Type) Set Template type filter. Valid values:
 <li>Preset: preset template;</li>
 <li>Custom: custom template.</li>
+ * @method integer getPureAudio() Obtain Whether it is an audio-only template. 0: video template. 1: audio-only template.
+ * @method void setPureAudio(integer $PureAudio) Set Whether it is an audio-only template. 0: video template. 1: audio-only template.
+ * @method string getName() Obtain Filter condition for adaptive transcoding template identifiers, with a length limit of 64 characters.
+ * @method void setName(string $Name) Set Filter condition for adaptive transcoding template identifiers, with a length limit of 64 characters.
  */
 class DescribeAdaptiveDynamicStreamingTemplatesRequest extends AbstractModel
 {
@@ -58,12 +62,24 @@ class DescribeAdaptiveDynamicStreamingTemplatesRequest extends AbstractModel
     public $Type;
 
     /**
+     * @var integer Whether it is an audio-only template. 0: video template. 1: audio-only template.
+     */
+    public $PureAudio;
+
+    /**
+     * @var string Filter condition for adaptive transcoding template identifiers, with a length limit of 64 characters.
+     */
+    public $Name;
+
+    /**
      * @param array $Definitions Unique ID filter of adaptive bitrate streaming templates. Array length limit: 100.
      * @param integer $Offset Pagination offset. Default value: 0.
      * @param integer $Limit Number of returned entries. Default value: 10. Maximum value: 100.
      * @param string $Type Template type filter. Valid values:
 <li>Preset: preset template;</li>
 <li>Custom: custom template.</li>
+     * @param integer $PureAudio Whether it is an audio-only template. 0: video template. 1: audio-only template.
+     * @param string $Name Filter condition for adaptive transcoding template identifiers, with a length limit of 64 characters.
      */
     function __construct()
     {
@@ -92,6 +108,14 @@ class DescribeAdaptiveDynamicStreamingTemplatesRequest extends AbstractModel
 
         if (array_key_exists("Type",$param) and $param["Type"] !== null) {
             $this->Type = $param["Type"];
+        }
+
+        if (array_key_exists("PureAudio",$param) and $param["PureAudio"] !== null) {
+            $this->PureAudio = $param["PureAudio"];
+        }
+
+        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
+            $this->Name = $param["Name"];
         }
     }
 }

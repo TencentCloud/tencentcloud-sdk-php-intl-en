@@ -54,6 +54,8 @@ This parameter is left empty by default, which indicates to return all types of 
 <li>TEHD: TESHD template</li>
 <li>Enhance: Audio/Video enhancement template.</li>
 This parameter is left empty by default, which indicates to return all types of templates.
+ * @method string getName() Obtain Filter condition for transcoding template identifiers, with a length limit of 64 characters.	
+ * @method void setName(string $Name) Set Filter condition for transcoding template identifiers, with a length limit of 64 characters.	
  */
 class DescribeTranscodeTemplatesRequest extends AbstractModel
 {
@@ -103,6 +105,11 @@ This parameter is left empty by default, which indicates to return all types of 
     public $TranscodeType;
 
     /**
+     * @var string Filter condition for transcoding template identifiers, with a length limit of 64 characters.	
+     */
+    public $Name;
+
+    /**
      * @param array $Definitions Unique ID filter of transcoding templates. Array length limit: 100.
      * @param string $Type Template type filter. Valid values:
 <li>Preset: Preset template;</li>
@@ -120,6 +127,7 @@ This parameter is left empty by default, which indicates to return all types of 
 <li>TEHD: TESHD template</li>
 <li>Enhance: Audio/Video enhancement template.</li>
 This parameter is left empty by default, which indicates to return all types of templates.
+     * @param string $Name Filter condition for transcoding template identifiers, with a length limit of 64 characters.	
      */
     function __construct()
     {
@@ -160,6 +168,10 @@ This parameter is left empty by default, which indicates to return all types of 
 
         if (array_key_exists("TranscodeType",$param) and $param["TranscodeType"] !== null) {
             $this->TranscodeType = $param["TranscodeType"];
+        }
+
+        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
+            $this->Name = $param["Name"];
         }
     }
 }

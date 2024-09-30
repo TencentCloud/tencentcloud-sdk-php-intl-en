@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) Set Number of returned entries
 <li>Default value: 10;</li>
 <li>Maximum value: 100.</li>
+ * @method string getName() Obtain Filter condition for watermark template identifiers, with a length limit of 64 characters.
+ * @method void setName(string $Name) Set Filter condition for watermark template identifiers, with a length limit of 64 characters.
  */
 class DescribeWatermarkTemplatesRequest extends AbstractModel
 {
@@ -64,6 +66,11 @@ class DescribeWatermarkTemplatesRequest extends AbstractModel
     public $Limit;
 
     /**
+     * @var string Filter condition for watermark template identifiers, with a length limit of 64 characters.
+     */
+    public $Name;
+
+    /**
      * @param array $Definitions Unique ID filter of watermarking templates. Array length limit: 100.
      * @param string $Type Watermark type filter. Valid values:
 <li>image: Image watermark;</li>
@@ -72,6 +79,7 @@ class DescribeWatermarkTemplatesRequest extends AbstractModel
      * @param integer $Limit Number of returned entries
 <li>Default value: 10;</li>
 <li>Maximum value: 100.</li>
+     * @param string $Name Filter condition for watermark template identifiers, with a length limit of 64 characters.
      */
     function __construct()
     {
@@ -100,6 +108,10 @@ class DescribeWatermarkTemplatesRequest extends AbstractModel
 
         if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
             $this->Limit = $param["Limit"];
+        }
+
+        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
+            $this->Name = $param["Name"];
         }
     }
 }

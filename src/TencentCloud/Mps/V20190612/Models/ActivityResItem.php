@@ -28,9 +28,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setAnimatedGraphicTask(MediaProcessTaskAnimatedGraphicResult $AnimatedGraphicTask) Set The result of an animated image generating task.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method MediaProcessTaskSampleSnapshotResult getSnapshotByTimeOffsetTask() Obtain The result of a time point screenshot task.
+ * @method MediaProcessTaskSnapshotByTimeOffsetResult getSnapshotByTimeOffsetTask() Obtain The result of a time point screenshot task.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setSnapshotByTimeOffsetTask(MediaProcessTaskSampleSnapshotResult $SnapshotByTimeOffsetTask) Set The result of a time point screenshot task.
+ * @method void setSnapshotByTimeOffsetTask(MediaProcessTaskSnapshotByTimeOffsetResult $SnapshotByTimeOffsetTask) Set The result of a time point screenshot task.
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method MediaProcessTaskSampleSnapshotResult getSampleSnapshotTask() Obtain The result of a sampled screenshot task.
 Note: This field may return null, indicating that no valid values can be obtained.
@@ -56,6 +56,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setAnalysisTask(ScheduleAnalysisTaskResult $AnalysisTask) Set The result of a content analysis task.
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method ScheduleQualityControlTaskResult getQualityControlTask() Obtain Media quality inspection task output.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setQualityControlTask(ScheduleQualityControlTaskResult $QualityControlTask) Set Media quality inspection task output.
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class ActivityResItem extends AbstractModel
 {
@@ -72,7 +76,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $AnimatedGraphicTask;
 
     /**
-     * @var MediaProcessTaskSampleSnapshotResult The result of a time point screenshot task.
+     * @var MediaProcessTaskSnapshotByTimeOffsetResult The result of a time point screenshot task.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $SnapshotByTimeOffsetTask;
@@ -114,11 +118,17 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $AnalysisTask;
 
     /**
+     * @var ScheduleQualityControlTaskResult Media quality inspection task output.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $QualityControlTask;
+
+    /**
      * @param MediaProcessTaskTranscodeResult $TranscodeTask The result of a transcoding task.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param MediaProcessTaskAnimatedGraphicResult $AnimatedGraphicTask The result of an animated image generating task.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param MediaProcessTaskSampleSnapshotResult $SnapshotByTimeOffsetTask The result of a time point screenshot task.
+     * @param MediaProcessTaskSnapshotByTimeOffsetResult $SnapshotByTimeOffsetTask The result of a time point screenshot task.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param MediaProcessTaskSampleSnapshotResult $SampleSnapshotTask The result of a sampled screenshot task.
 Note: This field may return null, indicating that no valid values can be obtained.
@@ -131,6 +141,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param ScheduleReviewTaskResult $ReviewTask The result of a content moderation task.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param ScheduleAnalysisTaskResult $AnalysisTask The result of a content analysis task.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param ScheduleQualityControlTaskResult $QualityControlTask Media quality inspection task output.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
@@ -157,7 +169,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         }
 
         if (array_key_exists("SnapshotByTimeOffsetTask",$param) and $param["SnapshotByTimeOffsetTask"] !== null) {
-            $this->SnapshotByTimeOffsetTask = new MediaProcessTaskSampleSnapshotResult();
+            $this->SnapshotByTimeOffsetTask = new MediaProcessTaskSnapshotByTimeOffsetResult();
             $this->SnapshotByTimeOffsetTask->deserialize($param["SnapshotByTimeOffsetTask"]);
         }
 
@@ -189,6 +201,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (array_key_exists("AnalysisTask",$param) and $param["AnalysisTask"] !== null) {
             $this->AnalysisTask = new ScheduleAnalysisTaskResult();
             $this->AnalysisTask->deserialize($param["AnalysisTask"]);
+        }
+
+        if (array_key_exists("QualityControlTask",$param) and $param["QualityControlTask"] !== null) {
+            $this->QualityControlTask = new ScheduleQualityControlTaskResult();
+            $this->QualityControlTask->deserialize($param["QualityControlTask"]);
         }
     }
 }

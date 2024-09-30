@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setType(string $Type) Set The filter for querying templates. If this parameter is left empty, both preset and custom templates are returned. Valid values:
 * Preset
 * Custom
+ * @method string getName() Obtain Filter condition for video analysis template identifiers, with a length limit of 64 characters.
+ * @method void setName(string $Name) Set Filter condition for video analysis template identifiers, with a length limit of 64 characters.
  */
 class DescribeAIAnalysisTemplatesRequest extends AbstractModel
 {
@@ -58,12 +60,18 @@ class DescribeAIAnalysisTemplatesRequest extends AbstractModel
     public $Type;
 
     /**
+     * @var string Filter condition for video analysis template identifiers, with a length limit of 64 characters.
+     */
+    public $Name;
+
+    /**
      * @param array $Definitions Unique ID filter of video content analysis templates. Array length limit: 10.
      * @param integer $Offset Pagination offset. Default value: 0.
      * @param integer $Limit Number of returned entries. Default value: 10. Maximum value: 100.
      * @param string $Type The filter for querying templates. If this parameter is left empty, both preset and custom templates are returned. Valid values:
 * Preset
 * Custom
+     * @param string $Name Filter condition for video analysis template identifiers, with a length limit of 64 characters.
      */
     function __construct()
     {
@@ -92,6 +100,10 @@ class DescribeAIAnalysisTemplatesRequest extends AbstractModel
 
         if (array_key_exists("Type",$param) and $param["Type"] !== null) {
             $this->Type = $param["Type"];
+        }
+
+        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
+            $this->Name = $param["Name"];
         }
     }
 }
