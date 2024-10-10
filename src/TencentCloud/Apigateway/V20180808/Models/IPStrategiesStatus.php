@@ -18,28 +18,28 @@ namespace TencentCloud\Apigateway\V20180808\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * API list status description
+ * 
  *
- * @method integer getTotalCount() Obtain Number of eligible APIs.
- * @method void setTotalCount(integer $TotalCount) Set Number of eligible APIs.
- * @method array getApiIdStatusSet() Obtain API list.
- * @method void setApiIdStatusSet(array $ApiIdStatusSet) Set API list.
+ * @method integer getTotalCount() Obtain 
+ * @method void setTotalCount(integer $TotalCount) Set 
+ * @method array getStrategySet() Obtain 
+ * @method void setStrategySet(array $StrategySet) Set 
  */
-class ApisStatus extends AbstractModel
+class IPStrategiesStatus extends AbstractModel
 {
     /**
-     * @var integer Number of eligible APIs.
+     * @var integer 
      */
     public $TotalCount;
 
     /**
-     * @var array API list.
+     * @var array 
      */
-    public $ApiIdStatusSet;
+    public $StrategySet;
 
     /**
-     * @param integer $TotalCount Number of eligible APIs.
-     * @param array $ApiIdStatusSet API list.
+     * @param integer $TotalCount 
+     * @param array $StrategySet 
      */
     function __construct()
     {
@@ -58,12 +58,12 @@ class ApisStatus extends AbstractModel
             $this->TotalCount = $param["TotalCount"];
         }
 
-        if (array_key_exists("ApiIdStatusSet",$param) and $param["ApiIdStatusSet"] !== null) {
-            $this->ApiIdStatusSet = [];
-            foreach ($param["ApiIdStatusSet"] as $key => $value){
-                $obj = new DesApisStatus();
+        if (array_key_exists("StrategySet",$param) and $param["StrategySet"] !== null) {
+            $this->StrategySet = [];
+            foreach ($param["StrategySet"] as $key => $value){
+                $obj = new IPStrategy();
                 $obj->deserialize($value);
-                array_push($this->ApiIdStatusSet, $obj);
+                array_push($this->StrategySet, $obj);
             }
         }
     }

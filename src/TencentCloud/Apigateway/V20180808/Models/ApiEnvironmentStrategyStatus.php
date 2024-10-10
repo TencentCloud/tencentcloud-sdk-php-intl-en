@@ -18,36 +18,28 @@ namespace TencentCloud\Apigateway\V20180808\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * List of policies bound to API
+ * 
  *
- * @method integer getTotalCount() Obtain Number of throttling policies bound to API.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setTotalCount(integer $TotalCount) Set Number of throttling policies bound to API.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method array getApiEnvironmentStrategySet() Obtain List of throttling policies bound to API.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setApiEnvironmentStrategySet(array $ApiEnvironmentStrategySet) Set List of throttling policies bound to API.
-Note: this field may return null, indicating that no valid values can be obtained.
+ * @method integer getTotalCount() Obtain 
+ * @method void setTotalCount(integer $TotalCount) Set 
+ * @method array getApiEnvironmentStrategySet() Obtain 
+ * @method void setApiEnvironmentStrategySet(array $ApiEnvironmentStrategySet) Set 
  */
-class ApiEnvironmentStrategyStataus extends AbstractModel
+class ApiEnvironmentStrategyStatus extends AbstractModel
 {
     /**
-     * @var integer Number of throttling policies bound to API.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var integer 
      */
     public $TotalCount;
 
     /**
-     * @var array List of throttling policies bound to API.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var array 
      */
     public $ApiEnvironmentStrategySet;
 
     /**
-     * @param integer $TotalCount Number of throttling policies bound to API.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param array $ApiEnvironmentStrategySet List of throttling policies bound to API.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @param integer $TotalCount 
+     * @param array $ApiEnvironmentStrategySet 
      */
     function __construct()
     {

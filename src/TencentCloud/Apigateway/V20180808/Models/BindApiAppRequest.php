@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setApiAppId(string $ApiAppId) Set Unique ID of the application to be bound.
  * @method string getEnvironment() Obtain Environment to be bound.
  * @method void setEnvironment(string $Environment) Set Environment to be bound.
- * @method string getServiceId() Obtain Unique ID of the service to be bound.
- * @method void setServiceId(string $ServiceId) Set Unique ID of the service to be bound.
+ * @method string getServiceId() Obtain Unique ID of the service to be bound
+ * @method void setServiceId(string $ServiceId) Set Unique ID of the service to be bound
  * @method string getApiId() Obtain Unique ID of the API to be bound.
  * @method void setApiId(string $ApiId) Set Unique ID of the API to be bound.
  */
@@ -42,7 +42,7 @@ class BindApiAppRequest extends AbstractModel
     public $Environment;
 
     /**
-     * @var string Unique ID of the service to be bound.
+     * @var string Unique ID of the service to be bound
      */
     public $ServiceId;
 
@@ -54,7 +54,7 @@ class BindApiAppRequest extends AbstractModel
     /**
      * @param string $ApiAppId Unique ID of the application to be bound.
      * @param string $Environment Environment to be bound.
-     * @param string $ServiceId Unique ID of the service to be bound.
+     * @param string $ServiceId Unique ID of the service to be bound
      * @param string $ApiId Unique ID of the API to be bound.
      */
     function __construct()

@@ -186,6 +186,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     /**
      * @var array List of business APIs associated with authorization API.
 Note: this field may return null, indicating that no valid values can be obtained.
+     * @deprecated
      */
     public $RelationBuniessApiIds;
 

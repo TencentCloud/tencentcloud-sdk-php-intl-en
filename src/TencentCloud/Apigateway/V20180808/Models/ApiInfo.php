@@ -762,7 +762,7 @@ Note: This field may return `null`, indicating that no valid values can be obtai
         if (array_key_exists("ServiceParameters",$param) and $param["ServiceParameters"] !== null) {
             $this->ServiceParameters = [];
             foreach ($param["ServiceParameters"] as $key => $value){
-                $obj = new ServiceParameter();
+                $obj = new DescribeApiResultServiceParametersInfo();
                 $obj->deserialize($value);
                 array_push($this->ServiceParameters, $obj);
             }

@@ -44,10 +44,6 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setModifiedTime(string $ModifiedTime) Set Service modification time.
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getExclusiveSetName() Obtain Self-Deployed cluster name.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setExclusiveSetName(string $ExclusiveSetName) Set Self-Deployed cluster name.
-Note: this field may return null, indicating that no valid values can be obtained.
  * @method array getNetTypes() Obtain Network type list. INNER: private network access; OUTER: public network access.
  * @method void setNetTypes(array $NetTypes) Set Network type list. INNER: private network access; OUTER: public network access.
  * @method string getInternalSubDomain() Obtain Subdomain name for private network access.
@@ -134,12 +130,6 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $ModifiedTime;
-
-    /**
-     * @var string Self-Deployed cluster name.
-Note: this field may return null, indicating that no valid values can be obtained.
-     */
-    public $ExclusiveSetName;
 
     /**
      * @var array Network type list. INNER: private network access; OUTER: public network access.
@@ -232,8 +222,6 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $ModifiedTime Service modification time.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $ExclusiveSetName Self-Deployed cluster name.
-Note: this field may return null, indicating that no valid values can be obtained.
      * @param array $NetTypes Network type list. INNER: private network access; OUTER: public network access.
      * @param string $InternalSubDomain Subdomain name for private network access.
      * @param string $OuterSubDomain Subdomain name for public network access.
@@ -296,10 +284,6 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("ModifiedTime",$param) and $param["ModifiedTime"] !== null) {
             $this->ModifiedTime = $param["ModifiedTime"];
-        }
-
-        if (array_key_exists("ExclusiveSetName",$param) and $param["ExclusiveSetName"] !== null) {
-            $this->ExclusiveSetName = $param["ExclusiveSetName"];
         }
 
         if (array_key_exists("NetTypes",$param) and $param["NetTypes"] !== null) {

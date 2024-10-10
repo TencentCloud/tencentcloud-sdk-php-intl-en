@@ -18,35 +18,35 @@ namespace TencentCloud\Apigateway\V20180808\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Policy list
+ * Service version details
  *
- * @method integer getTotalCount() Obtain Number of policies.
+ * @method string getVersionName() Obtain Version ID.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setVersionName(string $VersionName) Set Version ID.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getVersionDesc() Obtain Version description. 
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setTotalCount(integer $TotalCount) Set Number of policies.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method array getStrategySet() Obtain Policy list.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setStrategySet(array $StrategySet) Set Policy list.
+ * @method void setVersionDesc(string $VersionDesc) Set Version description. 
 Note: this field may return null, indicating that no valid values can be obtained.
  */
-class IPStrategysStatus extends AbstractModel
+class DescribeServiceReleaseVersionResultVersionListInfo extends AbstractModel
 {
     /**
-     * @var integer Number of policies.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string Version ID.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
-    public $TotalCount;
+    public $VersionName;
 
     /**
-     * @var array Policy list.
+     * @var string Version description. 
 Note: this field may return null, indicating that no valid values can be obtained.
      */
-    public $StrategySet;
+    public $VersionDesc;
 
     /**
-     * @param integer $TotalCount Number of policies.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param array $StrategySet Policy list.
+     * @param string $VersionName Version ID.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $VersionDesc Version description. 
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
@@ -62,17 +62,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists("VersionName",$param) and $param["VersionName"] !== null) {
+            $this->VersionName = $param["VersionName"];
         }
 
-        if (array_key_exists("StrategySet",$param) and $param["StrategySet"] !== null) {
-            $this->StrategySet = [];
-            foreach ($param["StrategySet"] as $key => $value){
-                $obj = new IPStrategy();
-                $obj->deserialize($value);
-                array_push($this->StrategySet, $obj);
-            }
+        if (array_key_exists("VersionDesc",$param) and $param["VersionDesc"] !== null) {
+            $this->VersionDesc = $param["VersionDesc"];
         }
     }
 }

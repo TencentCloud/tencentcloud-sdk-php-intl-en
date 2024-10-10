@@ -20,8 +20,6 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyAPIDoc request structure.
  *
- * @method string getApiDocId() Obtain API document ID
- * @method void setApiDocId(string $ApiDocId) Set API document ID
  * @method string getApiDocName() Obtain API document name
  * @method void setApiDocName(string $ApiDocName) Set API document name
  * @method string getServiceId() Obtain Service name
@@ -30,14 +28,11 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEnvironment(string $Environment) Set Environment name
  * @method array getApiIds() Obtain List of APIs for which to generate documents
  * @method void setApiIds(array $ApiIds) Set List of APIs for which to generate documents
+ * @method string getApiDocId() Obtain API document ID
+ * @method void setApiDocId(string $ApiDocId) Set API document ID
  */
 class ModifyAPIDocRequest extends AbstractModel
 {
-    /**
-     * @var string API document ID
-     */
-    public $ApiDocId;
-
     /**
      * @var string API document name
      */
@@ -59,11 +54,16 @@ class ModifyAPIDocRequest extends AbstractModel
     public $ApiIds;
 
     /**
-     * @param string $ApiDocId API document ID
+     * @var string API document ID
+     */
+    public $ApiDocId;
+
+    /**
      * @param string $ApiDocName API document name
      * @param string $ServiceId Service name
      * @param string $Environment Environment name
      * @param array $ApiIds List of APIs for which to generate documents
+     * @param string $ApiDocId API document ID
      */
     function __construct()
     {
@@ -78,10 +78,6 @@ class ModifyAPIDocRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ApiDocId",$param) and $param["ApiDocId"] !== null) {
-            $this->ApiDocId = $param["ApiDocId"];
-        }
-
         if (array_key_exists("ApiDocName",$param) and $param["ApiDocName"] !== null) {
             $this->ApiDocName = $param["ApiDocName"];
         }
@@ -96,6 +92,10 @@ class ModifyAPIDocRequest extends AbstractModel
 
         if (array_key_exists("ApiIds",$param) and $param["ApiIds"] !== null) {
             $this->ApiIds = $param["ApiIds"];
+        }
+
+        if (array_key_exists("ApiDocId",$param) and $param["ApiDocId"] !== null) {
+            $this->ApiDocId = $param["ApiDocId"];
         }
     }
 }
