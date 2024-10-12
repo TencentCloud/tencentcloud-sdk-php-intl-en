@@ -36,6 +36,24 @@ Note: This field may return null, indicating that no valid values can be obtaine
  * @method void setCardCutImageBase64(string $CardCutImageBase64) Set Base64 of cropped image of ID card
  * @method string getCardBackCutImageBase64() Obtain Base64 of the cropped image on the reverse side of the ID card
  * @method void setCardBackCutImageBase64(string $CardBackCutImageBase64) Set Base64 of the cropped image on the reverse side of the ID card
+ * @method array getWarnCardInfos() Obtain Card Warning Information
+
+-9101 Alarm for covered certificate,
+-9102 Alarm for photocopied certificate,
+-9103 Alarm for photographed certificate,
+-9104 Alarm for PS certificate,
+-9107 Alarm for reflective certificate,
+-9108 Alarm for blurry image,
+-9109 This capability is not enabled.
+ * @method void setWarnCardInfos(array $WarnCardInfos) Set Card Warning Information
+
+-9101 Alarm for covered certificate,
+-9102 Alarm for photocopied certificate,
+-9103 Alarm for photographed certificate,
+-9104 Alarm for PS certificate,
+-9107 Alarm for reflective certificate,
+-9108 Alarm for blurry image,
+-9109 This capability is not enabled.
  */
 class OCRResult extends AbstractModel
 {
@@ -77,6 +95,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $CardBackCutImageBase64;
 
     /**
+     * @var array Card Warning Information
+
+-9101 Alarm for covered certificate,
+-9102 Alarm for photocopied certificate,
+-9103 Alarm for photographed certificate,
+-9104 Alarm for PS certificate,
+-9107 Alarm for reflective certificate,
+-9108 Alarm for blurry image,
+-9109 This capability is not enabled.
+     */
+    public $WarnCardInfos;
+
+    /**
      * @param boolean $IsPass Is the indentity verification or OCR process passed
      * @param string $CardImageBase64 The Base64 of ID card image
 Note: This field may return null, indicating that no valid values can be obtained.
@@ -85,6 +116,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $RequestId The request id
      * @param string $CardCutImageBase64 Base64 of cropped image of ID card
      * @param string $CardBackCutImageBase64 Base64 of the cropped image on the reverse side of the ID card
+     * @param array $WarnCardInfos Card Warning Information
+
+-9101 Alarm for covered certificate,
+-9102 Alarm for photocopied certificate,
+-9103 Alarm for photographed certificate,
+-9104 Alarm for PS certificate,
+-9107 Alarm for reflective certificate,
+-9108 Alarm for blurry image,
+-9109 This capability is not enabled.
      */
     function __construct()
     {
@@ -127,6 +167,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("CardBackCutImageBase64",$param) and $param["CardBackCutImageBase64"] !== null) {
             $this->CardBackCutImageBase64 = $param["CardBackCutImageBase64"];
+        }
+
+        if (array_key_exists("WarnCardInfos",$param) and $param["WarnCardInfos"] !== null) {
+            $this->WarnCardInfos = $param["WarnCardInfos"];
         }
     }
 }

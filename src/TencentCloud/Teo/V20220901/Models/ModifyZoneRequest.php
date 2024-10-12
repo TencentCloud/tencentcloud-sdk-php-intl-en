@@ -22,12 +22,14 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getZoneId() Obtain The site ID.
  * @method void setZoneId(string $ZoneId) Set The site ID.
- * @method string getType() Obtain Access mode of the site. Values:
-<li> `full`: Access through a name server.</li>
-<li> `partial`: Access through a CNAME record. A site using domainless access can only switch to CNAME access. </li>The original configuration applies if this field is not specified.
- * @method void setType(string $Type) Set Access mode of the site. Values:
-<li> `full`: Access through a name server.</li>
-<li> `partial`: Access through a CNAME record. A site using domainless access can only switch to CNAME access. </li>The original configuration applies if this field is not specified.
+ * @method string getType() Obtain Site access method. Valid values:
+<li>full: NS access.</li>
+<li>partial: CNAME access. If the site is currently accessed with no domain name, it can be switched only to CNAME access.</li>
+<li>dnsPodAccess: DNSPod hosted access. To use this access mode, your domain name should have been hosted on DNSPod.</li>If this parameter is not input, the original configuration is maintained.
+ * @method void setType(string $Type) Set Site access method. Valid values:
+<li>full: NS access.</li>
+<li>partial: CNAME access. If the site is currently accessed with no domain name, it can be switched only to CNAME access.</li>
+<li>dnsPodAccess: DNSPod hosted access. To use this access mode, your domain name should have been hosted on DNSPod.</li>If this parameter is not input, the original configuration is maintained.
  * @method VanityNameServers getVanityNameServers() Obtain The custom name servers. The original configuration applies if this field is not specified. It is not allowed to pass this field when a site is connected without using a domain name.
  * @method void setVanityNameServers(VanityNameServers $VanityNameServers) Set The custom name servers. The original configuration applies if this field is not specified. It is not allowed to pass this field when a site is connected without using a domain name.
  * @method string getAliasZoneName() Obtain The site alias. It can be up to 20 characters consisting of digits, letters, hyphens (-) and underscores (_).
@@ -51,9 +53,10 @@ class ModifyZoneRequest extends AbstractModel
     public $ZoneId;
 
     /**
-     * @var string Access mode of the site. Values:
-<li> `full`: Access through a name server.</li>
-<li> `partial`: Access through a CNAME record. A site using domainless access can only switch to CNAME access. </li>The original configuration applies if this field is not specified.
+     * @var string Site access method. Valid values:
+<li>full: NS access.</li>
+<li>partial: CNAME access. If the site is currently accessed with no domain name, it can be switched only to CNAME access.</li>
+<li>dnsPodAccess: DNSPod hosted access. To use this access mode, your domain name should have been hosted on DNSPod.</li>If this parameter is not input, the original configuration is maintained.
      */
     public $Type;
 
@@ -82,9 +85,10 @@ class ModifyZoneRequest extends AbstractModel
 
     /**
      * @param string $ZoneId The site ID.
-     * @param string $Type Access mode of the site. Values:
-<li> `full`: Access through a name server.</li>
-<li> `partial`: Access through a CNAME record. A site using domainless access can only switch to CNAME access. </li>The original configuration applies if this field is not specified.
+     * @param string $Type Site access method. Valid values:
+<li>full: NS access.</li>
+<li>partial: CNAME access. If the site is currently accessed with no domain name, it can be switched only to CNAME access.</li>
+<li>dnsPodAccess: DNSPod hosted access. To use this access mode, your domain name should have been hosted on DNSPod.</li>If this parameter is not input, the original configuration is maintained.
      * @param VanityNameServers $VanityNameServers The custom name servers. The original configuration applies if this field is not specified. It is not allowed to pass this field when a site is connected without using a domain name.
      * @param string $AliasZoneName The site alias. It can be up to 20 characters consisting of digits, letters, hyphens (-) and underscores (_).
      * @param string $Area The region where the site requests access. Values:

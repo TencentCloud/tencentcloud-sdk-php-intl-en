@@ -121,6 +121,7 @@ If it is not specified, the default value is off.
 
     /**
      * @var integer VODEO sub-application ID. This parameter is required when OriginType is VODEO.
+     * @deprecated
      */
     public $VodeoSubAppId;
 
@@ -128,11 +129,13 @@ If it is not specified, the default value is off.
      * @var string VOD on EO distribution range. This parameter is required when OriginType = VODEO. The values are: 
 <li>All: all buckets under the current application;</li> 
 <li>Bucket: a specified bucket.</li>
+     * @deprecated
      */
     public $VodeoDistributionRange;
 
     /**
      * @var string VODEO storage bucket ID. This parameter is required when OriginType is VODEO and VodeoDistributionRange is Bucket.
+     * @deprecated
      */
     public $VodeoBucketId;
 

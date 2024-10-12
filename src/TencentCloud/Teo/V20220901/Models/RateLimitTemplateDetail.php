@@ -20,58 +20,102 @@ use TencentCloud\Common\AbstractModel;
 /**
  * The settings of the rate limiting template
  *
- * @method string getMode() Obtain Note: This field may return null, which indicates a failure to obtain a valid value.
- * @method void setMode(string $Mode) Set Note: This field may return null, which indicates a failure to obtain a valid value.
- * @method integer getID() Obtain The unique ID.
- * @method void setID(integer $ID) Set The unique ID.
- * @method string getAction() Obtain Note: This field may return null, which indicates a failure to obtain a valid value.
- * @method void setAction(string $Action) Set Note: This field may return null, which indicates a failure to obtain a valid value.
- * @method integer getPunishTime() Obtain Note: This field may return null, which indicates a failure to obtain a valid value.
- * @method void setPunishTime(integer $PunishTime) Set Note: This field may return null, which indicates a failure to obtain a valid value.
- * @method integer getThreshold() Obtain The request threshold. Value range: 0-4294967294.
- * @method void setThreshold(integer $Threshold) Set The request threshold. Value range: 0-4294967294.
- * @method integer getPeriod() Obtain The statistical period. Value range: 0-120 seconds.
- * @method void setPeriod(integer $Period) Set The statistical period. Value range: 0-120 seconds.
+ * @method string getMode() Obtain Template level name. Valid values:
+<li>sup_loose: super loose;</li>
+<li>loose: loose;</li>
+<li>emergency: emergency;</li>
+<li>normal: normal;</li>
+<li>strict: strict;</li>
+<li>close: disabled, effective only for precise rate limiting.</li>
+Note: This field may return null, which indicates a failure to obtain a valid value.
+ * @method void setMode(string $Mode) Set Template level name. Valid values:
+<li>sup_loose: super loose;</li>
+<li>loose: loose;</li>
+<li>emergency: emergency;</li>
+<li>normal: normal;</li>
+<li>strict: strict;</li>
+<li>close: disabled, effective only for precise rate limiting.</li>
+Note: This field may return null, which indicates a failure to obtain a valid value.
+ * @method integer getID() Obtain Unique ID.
+ * @method void setID(integer $ID) Set Unique ID.
+ * @method string getAction() Obtain Template action. Valid values:
+<li>alg: JavaScript challenge;</li>
+<li>monitor: observation.</li>
+Note: This field may return null, which indicates a failure to obtain a valid value.
+ * @method void setAction(string $Action) Set Template action. Valid values:
+<li>alg: JavaScript challenge;</li>
+<li>monitor: observation.</li>
+Note: This field may return null, which indicates a failure to obtain a valid value.
+ * @method integer getPunishTime() Obtain Penalty duration, in seconds. Value range: 0-2 days.
+Note: This field may return null, which indicates a failure to obtain a valid value.
+ * @method void setPunishTime(integer $PunishTime) Set Penalty duration, in seconds. Value range: 0-2 days.
+Note: This field may return null, which indicates a failure to obtain a valid value.
+ * @method integer getThreshold() Obtain Statistical threshold, in times. Value range: 0-4294967294.
+ * @method void setThreshold(integer $Threshold) Set Statistical threshold, in times. Value range: 0-4294967294.
+ * @method integer getPeriod() Obtain Statistical cycle. Value range: 0-120 seconds.
+ * @method void setPeriod(integer $Period) Set Statistical cycle. Value range: 0-120 seconds.
  */
 class RateLimitTemplateDetail extends AbstractModel
 {
     /**
-     * @var string Note: This field may return null, which indicates a failure to obtain a valid value.
+     * @var string Template level name. Valid values:
+<li>sup_loose: super loose;</li>
+<li>loose: loose;</li>
+<li>emergency: emergency;</li>
+<li>normal: normal;</li>
+<li>strict: strict;</li>
+<li>close: disabled, effective only for precise rate limiting.</li>
+Note: This field may return null, which indicates a failure to obtain a valid value.
      */
     public $Mode;
 
     /**
-     * @var integer The unique ID.
+     * @var integer Unique ID.
      */
     public $ID;
 
     /**
-     * @var string Note: This field may return null, which indicates a failure to obtain a valid value.
+     * @var string Template action. Valid values:
+<li>alg: JavaScript challenge;</li>
+<li>monitor: observation.</li>
+Note: This field may return null, which indicates a failure to obtain a valid value.
      */
     public $Action;
 
     /**
-     * @var integer Note: This field may return null, which indicates a failure to obtain a valid value.
+     * @var integer Penalty duration, in seconds. Value range: 0-2 days.
+Note: This field may return null, which indicates a failure to obtain a valid value.
      */
     public $PunishTime;
 
     /**
-     * @var integer The request threshold. Value range: 0-4294967294.
+     * @var integer Statistical threshold, in times. Value range: 0-4294967294.
      */
     public $Threshold;
 
     /**
-     * @var integer The statistical period. Value range: 0-120 seconds.
+     * @var integer Statistical cycle. Value range: 0-120 seconds.
      */
     public $Period;
 
     /**
-     * @param string $Mode Note: This field may return null, which indicates a failure to obtain a valid value.
-     * @param integer $ID The unique ID.
-     * @param string $Action Note: This field may return null, which indicates a failure to obtain a valid value.
-     * @param integer $PunishTime Note: This field may return null, which indicates a failure to obtain a valid value.
-     * @param integer $Threshold The request threshold. Value range: 0-4294967294.
-     * @param integer $Period The statistical period. Value range: 0-120 seconds.
+     * @param string $Mode Template level name. Valid values:
+<li>sup_loose: super loose;</li>
+<li>loose: loose;</li>
+<li>emergency: emergency;</li>
+<li>normal: normal;</li>
+<li>strict: strict;</li>
+<li>close: disabled, effective only for precise rate limiting.</li>
+Note: This field may return null, which indicates a failure to obtain a valid value.
+     * @param integer $ID Unique ID.
+     * @param string $Action Template action. Valid values:
+<li>alg: JavaScript challenge;</li>
+<li>monitor: observation.</li>
+Note: This field may return null, which indicates a failure to obtain a valid value.
+     * @param integer $PunishTime Penalty duration, in seconds. Value range: 0-2 days.
+Note: This field may return null, which indicates a failure to obtain a valid value.
+     * @param integer $Threshold Statistical threshold, in times. Value range: 0-4294967294.
+     * @param integer $Period Statistical cycle. Value range: 0-120 seconds.
      */
     function __construct()
     {

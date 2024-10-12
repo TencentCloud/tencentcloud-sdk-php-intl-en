@@ -20,66 +20,66 @@ use TencentCloud\Common\AbstractModel;
 /**
  * The configuration information of real-time log delivery to a custom HTTP(S) interface
  *
- * @method string getUrl() Obtain The address of the custom HTTP interface for real-time log delivery. Currently, only HTTP and HTTPS protocols are supported.
- * @method void setUrl(string $Url) Set The address of the custom HTTP interface for real-time log delivery. Currently, only HTTP and HTTPS protocols are supported.
- * @method string getAccessId() Obtain Specifies the custom SecretId for generating an encrypted signature. This parameter is required if the origin server needs authentication.
- * @method void setAccessId(string $AccessId) Set Specifies the custom SecretId for generating an encrypted signature. This parameter is required if the origin server needs authentication.
- * @method string getAccessKey() Obtain Specifies the custom SecretKey for generating an encrypted signature. This parameter is required if the origin server needs authentication.
- * @method void setAccessKey(string $AccessKey) Set Specifies the custom SecretKey for generating an encrypted signature. This parameter is required if the origin server needs authentication.
- * @method string getCompressType() Obtain The type of data compression. Valid values:<li>gzip: gzip compression.</li>If this field is not filled in, compression is disabled.
- * @method void setCompressType(string $CompressType) Set The type of data compression. Valid values:<li>gzip: gzip compression.</li>If this field is not filled in, compression is disabled.
- * @method string getProtocol() Obtain The type of the application layer protocol used when POST requests log delivery. Valid values:
+ * @method string getUrl() Obtain Address of the custom HTTP API for real-time log shipping. Currently, only HTTP and HTTPS protocols are supported.
+ * @method void setUrl(string $Url) Set Address of the custom HTTP API for real-time log shipping. Currently, only HTTP and HTTPS protocols are supported.
+ * @method string getAccessId() Obtain Custom SecretId used for generating an encrypted signature. This parameter is required if the origin server needs authentication.
+ * @method void setAccessId(string $AccessId) Set Custom SecretId used for generating an encrypted signature. This parameter is required if the origin server needs authentication.
+ * @method string getAccessKey() Obtain Custom SecretKey used for generating an encrypted signature. This parameter is required if the origin server needs authentication.
+ * @method void setAccessKey(string $AccessKey) Set Custom SecretKey used for generating an encrypted signature. This parameter is required if the origin server needs authentication.
+ * @method string getCompressType() Obtain Type of data compression. Valid values:<li>gzip: gzip compression.</li>If this parameter is not input, compression is disabled.
+ * @method void setCompressType(string $CompressType) Set Type of data compression. Valid values:<li>gzip: gzip compression.</li>If this parameter is not input, compression is disabled.
+ * @method string getProtocol() Obtain Type of the application layer protocol used in POST requests for log shipping. Valid values: 
 <li>http: HTTP protocol;</li>
-<li>https: HTTPS protocol.</li>If this field is not filled in, the protocol type will be parsed from the URL field.
- * @method void setProtocol(string $Protocol) Set The type of the application layer protocol used when POST requests log delivery. Valid values:
+<li>https: HTTPS protocol.</li>If this parameter is not input, the protocol type is parsed from the URL field.	
+ * @method void setProtocol(string $Protocol) Set Type of the application layer protocol used in POST requests for log shipping. Valid values: 
 <li>http: HTTP protocol;</li>
-<li>https: HTTPS protocol.</li>If this field is not filled in, the protocol type will be parsed from the URL field.
- * @method array getHeaders() Obtain The custom request header carried during log delivery. If the header name you fill in is the default header carried by EdgeOne log delivery such as Content-Type, then the header value you fill in will override the default value. The header value supports referring to a single variable ${batchSize} to obtain the number of log entries included in each POST request.
- * @method void setHeaders(array $Headers) Set The custom request header carried during log delivery. If the header name you fill in is the default header carried by EdgeOne log delivery such as Content-Type, then the header value you fill in will override the default value. The header value supports referring to a single variable ${batchSize} to obtain the number of log entries included in each POST request.
+<li>https: HTTPS protocol.</li>If this parameter is not input, the protocol type is parsed from the URL field.	
+ * @method array getHeaders() Obtain Custom request header carried in log shipping. For a header carried by default in EdgeOne log pushing, such as Content-Type, the header value you input will overwrite the default value. The header value references a single variable ${batchSize} to obtain the number of log entries included in each POST request.
+ * @method void setHeaders(array $Headers) Set Custom request header carried in log shipping. For a header carried by default in EdgeOne log pushing, such as Content-Type, the header value you input will overwrite the default value. The header value references a single variable ${batchSize} to obtain the number of log entries included in each POST request.
  */
 class CustomEndpoint extends AbstractModel
 {
     /**
-     * @var string The address of the custom HTTP interface for real-time log delivery. Currently, only HTTP and HTTPS protocols are supported.
+     * @var string Address of the custom HTTP API for real-time log shipping. Currently, only HTTP and HTTPS protocols are supported.
      */
     public $Url;
 
     /**
-     * @var string Specifies the custom SecretId for generating an encrypted signature. This parameter is required if the origin server needs authentication.
+     * @var string Custom SecretId used for generating an encrypted signature. This parameter is required if the origin server needs authentication.
      */
     public $AccessId;
 
     /**
-     * @var string Specifies the custom SecretKey for generating an encrypted signature. This parameter is required if the origin server needs authentication.
+     * @var string Custom SecretKey used for generating an encrypted signature. This parameter is required if the origin server needs authentication.
      */
     public $AccessKey;
 
     /**
-     * @var string The type of data compression. Valid values:<li>gzip: gzip compression.</li>If this field is not filled in, compression is disabled.
+     * @var string Type of data compression. Valid values:<li>gzip: gzip compression.</li>If this parameter is not input, compression is disabled.
      */
     public $CompressType;
 
     /**
-     * @var string The type of the application layer protocol used when POST requests log delivery. Valid values:
+     * @var string Type of the application layer protocol used in POST requests for log shipping. Valid values: 
 <li>http: HTTP protocol;</li>
-<li>https: HTTPS protocol.</li>If this field is not filled in, the protocol type will be parsed from the URL field.
+<li>https: HTTPS protocol.</li>If this parameter is not input, the protocol type is parsed from the URL field.	
      */
     public $Protocol;
 
     /**
-     * @var array The custom request header carried during log delivery. If the header name you fill in is the default header carried by EdgeOne log delivery such as Content-Type, then the header value you fill in will override the default value. The header value supports referring to a single variable ${batchSize} to obtain the number of log entries included in each POST request.
+     * @var array Custom request header carried in log shipping. For a header carried by default in EdgeOne log pushing, such as Content-Type, the header value you input will overwrite the default value. The header value references a single variable ${batchSize} to obtain the number of log entries included in each POST request.
      */
     public $Headers;
 
     /**
-     * @param string $Url The address of the custom HTTP interface for real-time log delivery. Currently, only HTTP and HTTPS protocols are supported.
-     * @param string $AccessId Specifies the custom SecretId for generating an encrypted signature. This parameter is required if the origin server needs authentication.
-     * @param string $AccessKey Specifies the custom SecretKey for generating an encrypted signature. This parameter is required if the origin server needs authentication.
-     * @param string $CompressType The type of data compression. Valid values:<li>gzip: gzip compression.</li>If this field is not filled in, compression is disabled.
-     * @param string $Protocol The type of the application layer protocol used when POST requests log delivery. Valid values:
+     * @param string $Url Address of the custom HTTP API for real-time log shipping. Currently, only HTTP and HTTPS protocols are supported.
+     * @param string $AccessId Custom SecretId used for generating an encrypted signature. This parameter is required if the origin server needs authentication.
+     * @param string $AccessKey Custom SecretKey used for generating an encrypted signature. This parameter is required if the origin server needs authentication.
+     * @param string $CompressType Type of data compression. Valid values:<li>gzip: gzip compression.</li>If this parameter is not input, compression is disabled.
+     * @param string $Protocol Type of the application layer protocol used in POST requests for log shipping. Valid values: 
 <li>http: HTTP protocol;</li>
-<li>https: HTTPS protocol.</li>If this field is not filled in, the protocol type will be parsed from the URL field.
-     * @param array $Headers The custom request header carried during log delivery. If the header name you fill in is the default header carried by EdgeOne log delivery such as Content-Type, then the header value you fill in will override the default value. The header value supports referring to a single variable ${batchSize} to obtain the number of log entries included in each POST request.
+<li>https: HTTPS protocol.</li>If this parameter is not input, the protocol type is parsed from the URL field.	
+     * @param array $Headers Custom request header carried in log shipping. For a header carried by default in EdgeOne log pushing, such as Content-Type, the header value you input will overwrite the default value. The header value references a single variable ${batchSize} to obtain the number of log entries included in each POST request.
      */
     function __construct()
     {

@@ -48,12 +48,12 @@ use TencentCloud\Common\AbstractModel;
 <li>`5min`: 5 minutes;</li>
 <li>`hour`: 1 hour;</li>
 <li>`day`: 1 day.</li>If this field is not specified, the granularity will be determined based on the query period. <br>Period ≤ 1 hour: `min`; <br>1 hour < Period ≤ 2 days: `5min`; <br>2 days < period ≤ 7 days: `hour`; <br>Period > 7 days: `day`.
- * @method array getFilters() Obtain Filters
-<li>ruleId<br>   Filter by the specified <strong>forwarding rule ID</strong></li>
-<li>proxyId<br>   Filter by the specified <strong>L4 agent ID</strong></li>
- * @method void setFilters(array $Filters) Set Filters
-<li>ruleId<br>   Filter by the specified <strong>forwarding rule ID</strong></li>
-<li>proxyId<br>   Filter by the specified <strong>L4 agent ID</strong></li>
+ * @method array getFilters() Obtain Filter criteria. The detailed Key values of filter criteria are as follows:
+<li>ruleId: Filter by forwarding rule ID.</li>
+<li>proxyId: Filter by L4 proxy instance ID.</li>
+ * @method void setFilters(array $Filters) Set Filter criteria. The detailed Key values of filter criteria are as follows:
+<li>ruleId: Filter by forwarding rule ID.</li>
+<li>proxyId: Filter by L4 proxy instance ID.</li>
  * @method string getArea() Obtain Geolocation scope. Values:
 <li>`overseas`: Regions outside the Chinese mainland</li>
 <li>`mainland`: Chinese mainland</li>
@@ -104,9 +104,9 @@ class DescribeTimingL4DataRequest extends AbstractModel
     public $Interval;
 
     /**
-     * @var array Filters
-<li>ruleId<br>   Filter by the specified <strong>forwarding rule ID</strong></li>
-<li>proxyId<br>   Filter by the specified <strong>L4 agent ID</strong></li>
+     * @var array Filter criteria. The detailed Key values of filter criteria are as follows:
+<li>ruleId: Filter by forwarding rule ID.</li>
+<li>proxyId: Filter by L4 proxy instance ID.</li>
      */
     public $Filters;
 
@@ -133,9 +133,9 @@ class DescribeTimingL4DataRequest extends AbstractModel
 <li>`5min`: 5 minutes;</li>
 <li>`hour`: 1 hour;</li>
 <li>`day`: 1 day.</li>If this field is not specified, the granularity will be determined based on the query period. <br>Period ≤ 1 hour: `min`; <br>1 hour < Period ≤ 2 days: `5min`; <br>2 days < period ≤ 7 days: `hour`; <br>Period > 7 days: `day`.
-     * @param array $Filters Filters
-<li>ruleId<br>   Filter by the specified <strong>forwarding rule ID</strong></li>
-<li>proxyId<br>   Filter by the specified <strong>L4 agent ID</strong></li>
+     * @param array $Filters Filter criteria. The detailed Key values of filter criteria are as follows:
+<li>ruleId: Filter by forwarding rule ID.</li>
+<li>proxyId: Filter by L4 proxy instance ID.</li>
      * @param string $Area Geolocation scope. Values:
 <li>`overseas`: Regions outside the Chinese mainland</li>
 <li>`mainland`: Chinese mainland</li>

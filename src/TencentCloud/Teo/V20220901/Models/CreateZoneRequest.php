@@ -20,14 +20,16 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateZone request structure.
  *
- * @method string getType() Obtain Site access types. Options include:
-<li>`partial`: (Default) Access through a CNAME record</li>
-<li>`full`: Access through a name server</li>
-<li>`noDomainAccess`: Access without using a domain name</li>
- * @method void setType(string $Type) Set Site access types. Options include:
-<li>`partial`: (Default) Access through a CNAME record</li>
-<li>`full`: Access through a name server</li>
-<li>`noDomainAccess`: Access without using a domain name</li>
+ * @method string getType() Obtain Site access type. If this parameter is not input, the default value `partial` is used. Valid values of this parameter are as follows:
+<li>partial: CNAME access;</li>
+<li>full: NS access;</li>
+<li>noDomainAccess: access with no domain name.</li>
+<li>dnsPodAccess: DNSPod hosted access. To use this access mode, your domain name should have been hosted on DNSPod.</li>
+ * @method void setType(string $Type) Set Site access type. If this parameter is not input, the default value `partial` is used. Valid values of this parameter are as follows:
+<li>partial: CNAME access;</li>
+<li>full: NS access;</li>
+<li>noDomainAccess: access with no domain name.</li>
+<li>dnsPodAccess: DNSPod hosted access. To use this access mode, your domain name should have been hosted on DNSPod.</li>
  * @method string getZoneName() Obtain Site name. For sites connected via CNAME/NS, pass in the secondary domain name (example.com). Leave it blank if the site is connected without a domain name. 
  * @method void setZoneName(string $ZoneName) Set Site name. For sites connected via CNAME/NS, pass in the secondary domain name (example.com). Leave it blank if the site is connected without a domain name. 
  * @method string getArea() Obtain The acceleration area of the L7 domain name when `Type` is `partial` or `full`. When Type is `noDomainAccess`, please leave it blank.
@@ -56,10 +58,11 @@ use TencentCloud\Common\AbstractModel;
 class CreateZoneRequest extends AbstractModel
 {
     /**
-     * @var string Site access types. Options include:
-<li>`partial`: (Default) Access through a CNAME record</li>
-<li>`full`: Access through a name server</li>
-<li>`noDomainAccess`: Access without using a domain name</li>
+     * @var string Site access type. If this parameter is not input, the default value `partial` is used. Valid values of this parameter are as follows:
+<li>partial: CNAME access;</li>
+<li>full: NS access;</li>
+<li>noDomainAccess: access with no domain name.</li>
+<li>dnsPodAccess: DNSPod hosted access. To use this access mode, your domain name should have been hosted on DNSPod.</li>
      */
     public $Type;
 
@@ -106,10 +109,11 @@ class CreateZoneRequest extends AbstractModel
     public $JumpStart;
 
     /**
-     * @param string $Type Site access types. Options include:
-<li>`partial`: (Default) Access through a CNAME record</li>
-<li>`full`: Access through a name server</li>
-<li>`noDomainAccess`: Access without using a domain name</li>
+     * @param string $Type Site access type. If this parameter is not input, the default value `partial` is used. Valid values of this parameter are as follows:
+<li>partial: CNAME access;</li>
+<li>full: NS access;</li>
+<li>noDomainAccess: access with no domain name.</li>
+<li>dnsPodAccess: DNSPod hosted access. To use this access mode, your domain name should have been hosted on DNSPod.</li>
      * @param string $ZoneName Site name. For sites connected via CNAME/NS, pass in the secondary domain name (example.com). Leave it blank if the site is connected without a domain name. 
      * @param string $Area The acceleration area of the L7 domain name when `Type` is `partial` or `full`. When Type is `noDomainAccess`, please leave it blank.
 <li>`global`: Global AZs</li>

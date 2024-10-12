@@ -24,9 +24,9 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTasksList(array $TasksList) Set Canvas Task Information
  * @method array getLinksList() Obtain Canvas Task Link Information
  * @method void setLinksList(array $LinksList) Set Canvas Task Link Information
- * @method OpsTaskCanvasDto getCirculateTaskList() Obtain Canvas Cyclic Dependency Task Information
+ * @method array getCirculateTaskList() Obtain Canvas Cyclic Dependency Task Information
 Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setCirculateTaskList(OpsTaskCanvasDto $CirculateTaskList) Set Canvas Cyclic Dependency Task Information
+ * @method void setCirculateTaskList(array $CirculateTaskList) Set Canvas Cyclic Dependency Task Information
 Note: This field may return null, indicating that no valid value can be obtained.
  */
 class OpsTaskCanvasInfoList extends AbstractModel
@@ -42,7 +42,7 @@ class OpsTaskCanvasInfoList extends AbstractModel
     public $LinksList;
 
     /**
-     * @var OpsTaskCanvasDto Canvas Cyclic Dependency Task Information
+     * @var array Canvas Cyclic Dependency Task Information
 Note: This field may return null, indicating that no valid value can be obtained.
      */
     public $CirculateTaskList;
@@ -50,7 +50,7 @@ Note: This field may return null, indicating that no valid value can be obtained
     /**
      * @param array $TasksList Canvas Task Information
      * @param array $LinksList Canvas Task Link Information
-     * @param OpsTaskCanvasDto $CirculateTaskList Canvas Cyclic Dependency Task Information
+     * @param array $CirculateTaskList Canvas Cyclic Dependency Task Information
 Note: This field may return null, indicating that no valid value can be obtained.
      */
     function __construct()
@@ -85,8 +85,12 @@ Note: This field may return null, indicating that no valid value can be obtained
         }
 
         if (array_key_exists("CirculateTaskList",$param) and $param["CirculateTaskList"] !== null) {
-            $this->CirculateTaskList = new OpsTaskCanvasDto();
-            $this->CirculateTaskList->deserialize($param["CirculateTaskList"]);
+            $this->CirculateTaskList = [];
+            foreach ($param["CirculateTaskList"] as $key => $value){
+                $obj = new OpsTaskCanvasDto();
+                $obj->deserialize($value);
+                array_push($this->CirculateTaskList, $obj);
+            }
         }
     }
 }

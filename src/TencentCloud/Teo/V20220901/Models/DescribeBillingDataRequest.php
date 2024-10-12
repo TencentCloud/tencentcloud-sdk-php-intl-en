@@ -20,134 +20,146 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeBillingData request structure.
  *
- * @method string getStartTime() Obtain Start time of the query.
- * @method void setStartTime(string $StartTime) Set Start time of the query.
- * @method string getEndTime() Obtain End time of the query.
- * @method void setEndTime(string $EndTime) Set End time of the query.
- * @method array getZoneIds() Obtain Zone ID set. This parameter is required.
- * @method void setZoneIds(array $ZoneIds) Set Zone ID set. This parameter is required.
- * @method string getMetricName() Obtain Indicator list. Valid values:<li>acc_flux: Content acceleration traffic, in bytes;</li>
-<li>smt_flux: Smart acceleration traffic, in bytes;</li>
-<li>l4_flux: Layer 4 acceleration traffic, in bytes;</li>
-<li>sec_flux: Exclusive DDoS mitigation traffic, in bytes;</li>
-<li>zxctg_flux: Cross-MLC-border acceleration traffic, in bytes;</li>
-<li>acc_bandwidth: Content acceleration bandwidth, in bps;</li>
-<li>smt_bandwidth: Smart acceleration bandwidth, in bps;</li>
-<li>l4_bandwidth: Layer 4 acceleration bandwidth, in bps;</li>
-<li>sec_bandwidth: Exclusive DDoS mitigation bandwidth, in bps;</li>
-<li>zxctg_bandwidth: Cross-MLC-border acceleration bandwidth, in bps;</li><li>sec_request_clean: HTTP/HTTPS requests, in count;</li>
-<li>smt_request_clean: Smart acceleration requests, in count;</li>
-<li>quic_request: QUIC requests, in count;</li>
-<li>bot_request_clean: Bot requests, in count;</li>
-<li>cls_count: Real-time log delivery log counts, in count;</li>
-<li>ddos_bandwidth: Exclusive DDoS mitigation elastic bandwidth, in bps.</li>
- * @method void setMetricName(string $MetricName) Set Indicator list. Valid values:<li>acc_flux: Content acceleration traffic, in bytes;</li>
-<li>smt_flux: Smart acceleration traffic, in bytes;</li>
-<li>l4_flux: Layer 4 acceleration traffic, in bytes;</li>
-<li>sec_flux: Exclusive DDoS mitigation traffic, in bytes;</li>
-<li>zxctg_flux: Cross-MLC-border acceleration traffic, in bytes;</li>
-<li>acc_bandwidth: Content acceleration bandwidth, in bps;</li>
-<li>smt_bandwidth: Smart acceleration bandwidth, in bps;</li>
-<li>l4_bandwidth: Layer 4 acceleration bandwidth, in bps;</li>
-<li>sec_bandwidth: Exclusive DDoS mitigation bandwidth, in bps;</li>
-<li>zxctg_bandwidth: Cross-MLC-border acceleration bandwidth, in bps;</li><li>sec_request_clean: HTTP/HTTPS requests, in count;</li>
-<li>smt_request_clean: Smart acceleration requests, in count;</li>
-<li>quic_request: QUIC requests, in count;</li>
-<li>bot_request_clean: Bot requests, in count;</li>
-<li>cls_count: Real-time log delivery log counts, in count;</li>
-<li>ddos_bandwidth: Exclusive DDoS mitigation elastic bandwidth, in bps.</li>
- * @method string getInterval() Obtain Query granularity. Valid values:<li>5min: 5-minute granularity;</li>
-<li>hour: 1-hour granularity;</li>
-<li>day: 1-day granularity.</li>
- * @method void setInterval(string $Interval) Set Query granularity. Valid values:<li>5min: 5-minute granularity;</li>
-<li>hour: 1-hour granularity;</li>
-<li>day: 1-day granularity.</li>
- * @method array getFilters() Obtain Filter. The detailed filters are as follows:
-<li>host: Filter by Domain Name. Example: test.example.com.<br></li>
-<li>proxy-id: Filter by Layer 4 Proxy Instance ID. Example: sid-2rugn89bkla9.<br></li>
-<li>region-id: Filter by Billing Region.Options are:<br>   CH: Chinese mainland<br>   AF: Africa<br>   AS1: Asia-Pacific Region 1<br>   AS2: Asia-Pacific Region 2<br>   AS3: Asia-Pacific Region 3<br>  EU: Europe<br>   MidEast: Middle East<br>   NA: North America<br>   SA: South America</li>
- * @method void setFilters(array $Filters) Set Filter. The detailed filters are as follows:
-<li>host: Filter by Domain Name. Example: test.example.com.<br></li>
-<li>proxy-id: Filter by Layer 4 Proxy Instance ID. Example: sid-2rugn89bkla9.<br></li>
-<li>region-id: Filter by Billing Region.Options are:<br>   CH: Chinese mainland<br>   AF: Africa<br>   AS1: Asia-Pacific Region 1<br>   AS2: Asia-Pacific Region 2<br>   AS3: Asia-Pacific Region 3<br>  EU: Europe<br>   MidEast: Middle East<br>   NA: North America<br>   SA: South America</li>
+ * @method string getStartTime() Obtain Start time.
+ * @method void setStartTime(string $StartTime) Set Start time.
+ * @method string getEndTime() Obtain End time.
+ * @method void setEndTime(string $EndTime) Set End time.
+ * @method array getZoneIds() Obtain Site ID set. This parameter is required.
+ * @method void setZoneIds(array $ZoneIds) Set Site ID set. This parameter is required.
+ * @method string getMetricName() Obtain Metric list. Valid values:
+<li>acc_flux: content acceleration traffic, in bytes;</li>
+<li>smt_flux: smart acceleration traffic, in bytes;</li>
+<li>l4_flux: L4 acceleration traffic, in bytes;</li>
+<li>sec_flux: exclusive protection traffic, in bytes;</li>
+<li>zxctg_flux: network optimization traffic in the Chinese mainland, in bytes;</li>
+<li>acc_bandwidth: content acceleration bandwidth, in bps;</li>
+<li>smt_bandwidth: smart acceleration bandwidth, in bps;</li>
+<li>l4_bandwidth: L4 acceleration bandwidth, in bps;</li>
+<li>sec_bandwidth: exclusive protection bandwidth, in bps;</li>
+<li>zxctg_bandwidth: network optimization bandwidth in the Chinese mainland, in bps;</li>
+<li>sec_request_clean: number of HTTP/HTTPS requests;</li>
+<li>smt_request_clean: number of smart acceleration requests;</li>
+<li>quic_request: number of QUIC requests;</li>
+<li>bot_request_clean: number of Bot requests;</li>
+<li>cls_count: number of real-time log entries pushed;</li>
+<li>ddos_bandwidth: elastic DDoS protection bandwidth, in bps.</li>
+ * @method void setMetricName(string $MetricName) Set Metric list. Valid values:
+<li>acc_flux: content acceleration traffic, in bytes;</li>
+<li>smt_flux: smart acceleration traffic, in bytes;</li>
+<li>l4_flux: L4 acceleration traffic, in bytes;</li>
+<li>sec_flux: exclusive protection traffic, in bytes;</li>
+<li>zxctg_flux: network optimization traffic in the Chinese mainland, in bytes;</li>
+<li>acc_bandwidth: content acceleration bandwidth, in bps;</li>
+<li>smt_bandwidth: smart acceleration bandwidth, in bps;</li>
+<li>l4_bandwidth: L4 acceleration bandwidth, in bps;</li>
+<li>sec_bandwidth: exclusive protection bandwidth, in bps;</li>
+<li>zxctg_bandwidth: network optimization bandwidth in the Chinese mainland, in bps;</li>
+<li>sec_request_clean: number of HTTP/HTTPS requests;</li>
+<li>smt_request_clean: number of smart acceleration requests;</li>
+<li>quic_request: number of QUIC requests;</li>
+<li>bot_request_clean: number of Bot requests;</li>
+<li>cls_count: number of real-time log entries pushed;</li>
+<li>ddos_bandwidth: elastic DDoS protection bandwidth, in bps.</li>
+ * @method string getInterval() Obtain Time granularity of the query. Valid values:
+<li>5min: 5 minutes;</li>
+<li>hour: 1 hour;</li>
+<li>day: 1 day.</li>
+ * @method void setInterval(string $Interval) Set Time granularity of the query. Valid values:
+<li>5min: 5 minutes;</li>
+<li>hour: 1 hour;</li>
+<li>day: 1 day.</li>
+ * @method array getFilters() Obtain Filter criteria. The detailed values of filter criteria are as follows:
+<li>host: Filter by domain name, such as test.example.com.<br></li>
+<li>proxy-id: Filter by L4 proxy instance ID, such as sid-2rugn89bkla9.<br></li>
+<li>region-id: Filter by billing region. Options:<br>  CH: Chinese mainland<br>  AF: Africa<br>  AS1: Asia-Pacific Region 1<br>  AS2: Asia-Pacific Region 2<br>  AS3: Asia-Pacific Region 3<br>  EU: Europe<br>  MidEast: Middle East<br>  NA: North America<br>  SA: South America</li>
+ * @method void setFilters(array $Filters) Set Filter criteria. The detailed values of filter criteria are as follows:
+<li>host: Filter by domain name, such as test.example.com.<br></li>
+<li>proxy-id: Filter by L4 proxy instance ID, such as sid-2rugn89bkla9.<br></li>
+<li>region-id: Filter by billing region. Options:<br>  CH: Chinese mainland<br>  AF: Africa<br>  AS1: Asia-Pacific Region 1<br>  AS2: Asia-Pacific Region 2<br>  AS3: Asia-Pacific Region 3<br>  EU: Europe<br>  MidEast: Middle East<br>  NA: North America<br>  SA: South America</li>
  */
 class DescribeBillingDataRequest extends AbstractModel
 {
     /**
-     * @var string Start time of the query.
+     * @var string Start time.
      */
     public $StartTime;
 
     /**
-     * @var string End time of the query.
+     * @var string End time.
      */
     public $EndTime;
 
     /**
-     * @var array Zone ID set. This parameter is required.
+     * @var array Site ID set. This parameter is required.
      */
     public $ZoneIds;
 
     /**
-     * @var string Indicator list. Valid values:<li>acc_flux: Content acceleration traffic, in bytes;</li>
-<li>smt_flux: Smart acceleration traffic, in bytes;</li>
-<li>l4_flux: Layer 4 acceleration traffic, in bytes;</li>
-<li>sec_flux: Exclusive DDoS mitigation traffic, in bytes;</li>
-<li>zxctg_flux: Cross-MLC-border acceleration traffic, in bytes;</li>
-<li>acc_bandwidth: Content acceleration bandwidth, in bps;</li>
-<li>smt_bandwidth: Smart acceleration bandwidth, in bps;</li>
-<li>l4_bandwidth: Layer 4 acceleration bandwidth, in bps;</li>
-<li>sec_bandwidth: Exclusive DDoS mitigation bandwidth, in bps;</li>
-<li>zxctg_bandwidth: Cross-MLC-border acceleration bandwidth, in bps;</li><li>sec_request_clean: HTTP/HTTPS requests, in count;</li>
-<li>smt_request_clean: Smart acceleration requests, in count;</li>
-<li>quic_request: QUIC requests, in count;</li>
-<li>bot_request_clean: Bot requests, in count;</li>
-<li>cls_count: Real-time log delivery log counts, in count;</li>
-<li>ddos_bandwidth: Exclusive DDoS mitigation elastic bandwidth, in bps.</li>
+     * @var string Metric list. Valid values:
+<li>acc_flux: content acceleration traffic, in bytes;</li>
+<li>smt_flux: smart acceleration traffic, in bytes;</li>
+<li>l4_flux: L4 acceleration traffic, in bytes;</li>
+<li>sec_flux: exclusive protection traffic, in bytes;</li>
+<li>zxctg_flux: network optimization traffic in the Chinese mainland, in bytes;</li>
+<li>acc_bandwidth: content acceleration bandwidth, in bps;</li>
+<li>smt_bandwidth: smart acceleration bandwidth, in bps;</li>
+<li>l4_bandwidth: L4 acceleration bandwidth, in bps;</li>
+<li>sec_bandwidth: exclusive protection bandwidth, in bps;</li>
+<li>zxctg_bandwidth: network optimization bandwidth in the Chinese mainland, in bps;</li>
+<li>sec_request_clean: number of HTTP/HTTPS requests;</li>
+<li>smt_request_clean: number of smart acceleration requests;</li>
+<li>quic_request: number of QUIC requests;</li>
+<li>bot_request_clean: number of Bot requests;</li>
+<li>cls_count: number of real-time log entries pushed;</li>
+<li>ddos_bandwidth: elastic DDoS protection bandwidth, in bps.</li>
      */
     public $MetricName;
 
     /**
-     * @var string Query granularity. Valid values:<li>5min: 5-minute granularity;</li>
-<li>hour: 1-hour granularity;</li>
-<li>day: 1-day granularity.</li>
+     * @var string Time granularity of the query. Valid values:
+<li>5min: 5 minutes;</li>
+<li>hour: 1 hour;</li>
+<li>day: 1 day.</li>
      */
     public $Interval;
 
     /**
-     * @var array Filter. The detailed filters are as follows:
-<li>host: Filter by Domain Name. Example: test.example.com.<br></li>
-<li>proxy-id: Filter by Layer 4 Proxy Instance ID. Example: sid-2rugn89bkla9.<br></li>
-<li>region-id: Filter by Billing Region.Options are:<br>   CH: Chinese mainland<br>   AF: Africa<br>   AS1: Asia-Pacific Region 1<br>   AS2: Asia-Pacific Region 2<br>   AS3: Asia-Pacific Region 3<br>  EU: Europe<br>   MidEast: Middle East<br>   NA: North America<br>   SA: South America</li>
+     * @var array Filter criteria. The detailed values of filter criteria are as follows:
+<li>host: Filter by domain name, such as test.example.com.<br></li>
+<li>proxy-id: Filter by L4 proxy instance ID, such as sid-2rugn89bkla9.<br></li>
+<li>region-id: Filter by billing region. Options:<br>  CH: Chinese mainland<br>  AF: Africa<br>  AS1: Asia-Pacific Region 1<br>  AS2: Asia-Pacific Region 2<br>  AS3: Asia-Pacific Region 3<br>  EU: Europe<br>  MidEast: Middle East<br>  NA: North America<br>  SA: South America</li>
      */
     public $Filters;
 
     /**
-     * @param string $StartTime Start time of the query.
-     * @param string $EndTime End time of the query.
-     * @param array $ZoneIds Zone ID set. This parameter is required.
-     * @param string $MetricName Indicator list. Valid values:<li>acc_flux: Content acceleration traffic, in bytes;</li>
-<li>smt_flux: Smart acceleration traffic, in bytes;</li>
-<li>l4_flux: Layer 4 acceleration traffic, in bytes;</li>
-<li>sec_flux: Exclusive DDoS mitigation traffic, in bytes;</li>
-<li>zxctg_flux: Cross-MLC-border acceleration traffic, in bytes;</li>
-<li>acc_bandwidth: Content acceleration bandwidth, in bps;</li>
-<li>smt_bandwidth: Smart acceleration bandwidth, in bps;</li>
-<li>l4_bandwidth: Layer 4 acceleration bandwidth, in bps;</li>
-<li>sec_bandwidth: Exclusive DDoS mitigation bandwidth, in bps;</li>
-<li>zxctg_bandwidth: Cross-MLC-border acceleration bandwidth, in bps;</li><li>sec_request_clean: HTTP/HTTPS requests, in count;</li>
-<li>smt_request_clean: Smart acceleration requests, in count;</li>
-<li>quic_request: QUIC requests, in count;</li>
-<li>bot_request_clean: Bot requests, in count;</li>
-<li>cls_count: Real-time log delivery log counts, in count;</li>
-<li>ddos_bandwidth: Exclusive DDoS mitigation elastic bandwidth, in bps.</li>
-     * @param string $Interval Query granularity. Valid values:<li>5min: 5-minute granularity;</li>
-<li>hour: 1-hour granularity;</li>
-<li>day: 1-day granularity.</li>
-     * @param array $Filters Filter. The detailed filters are as follows:
-<li>host: Filter by Domain Name. Example: test.example.com.<br></li>
-<li>proxy-id: Filter by Layer 4 Proxy Instance ID. Example: sid-2rugn89bkla9.<br></li>
-<li>region-id: Filter by Billing Region.Options are:<br>   CH: Chinese mainland<br>   AF: Africa<br>   AS1: Asia-Pacific Region 1<br>   AS2: Asia-Pacific Region 2<br>   AS3: Asia-Pacific Region 3<br>  EU: Europe<br>   MidEast: Middle East<br>   NA: North America<br>   SA: South America</li>
+     * @param string $StartTime Start time.
+     * @param string $EndTime End time.
+     * @param array $ZoneIds Site ID set. This parameter is required.
+     * @param string $MetricName Metric list. Valid values:
+<li>acc_flux: content acceleration traffic, in bytes;</li>
+<li>smt_flux: smart acceleration traffic, in bytes;</li>
+<li>l4_flux: L4 acceleration traffic, in bytes;</li>
+<li>sec_flux: exclusive protection traffic, in bytes;</li>
+<li>zxctg_flux: network optimization traffic in the Chinese mainland, in bytes;</li>
+<li>acc_bandwidth: content acceleration bandwidth, in bps;</li>
+<li>smt_bandwidth: smart acceleration bandwidth, in bps;</li>
+<li>l4_bandwidth: L4 acceleration bandwidth, in bps;</li>
+<li>sec_bandwidth: exclusive protection bandwidth, in bps;</li>
+<li>zxctg_bandwidth: network optimization bandwidth in the Chinese mainland, in bps;</li>
+<li>sec_request_clean: number of HTTP/HTTPS requests;</li>
+<li>smt_request_clean: number of smart acceleration requests;</li>
+<li>quic_request: number of QUIC requests;</li>
+<li>bot_request_clean: number of Bot requests;</li>
+<li>cls_count: number of real-time log entries pushed;</li>
+<li>ddos_bandwidth: elastic DDoS protection bandwidth, in bps.</li>
+     * @param string $Interval Time granularity of the query. Valid values:
+<li>5min: 5 minutes;</li>
+<li>hour: 1 hour;</li>
+<li>day: 1 day.</li>
+     * @param array $Filters Filter criteria. The detailed values of filter criteria are as follows:
+<li>host: Filter by domain name, such as test.example.com.<br></li>
+<li>proxy-id: Filter by L4 proxy instance ID, such as sid-2rugn89bkla9.<br></li>
+<li>region-id: Filter by billing region. Options:<br>  CH: Chinese mainland<br>  AF: Africa<br>  AS1: Asia-Pacific Region 1<br>  AS2: Asia-Pacific Region 2<br>  AS3: Asia-Pacific Region 3<br>  EU: Europe<br>  MidEast: Middle East<br>  NA: North America<br>  SA: South America</li>
      */
     function __construct()
     {

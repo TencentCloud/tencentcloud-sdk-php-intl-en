@@ -20,23 +20,23 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyCustomErrorPage request structure.
  *
- * @method string getPageId() Obtain Custom response page ID.
- * @method void setPageId(string $PageId) Set Custom response page ID.
+ * @method string getPageId() Obtain Custom error page ID.
+ * @method void setPageId(string $PageId) Set Custom error page ID.
  * @method string getZoneId() Obtain Zone ID.
  * @method void setZoneId(string $ZoneId) Set Zone ID.
- * @method string getName() Obtain Custom response page name. The name must be 2-60 characters long.
- * @method void setName(string $Name) Set Custom response page name. The name must be 2-60 characters long.
- * @method string getDescription() Obtain Custom response page description, not exceeding 60 characters.
- * @method void setDescription(string $Description) Set Custom response page description, not exceeding 60 characters.
- * @method string getContentType() Obtain Custom response page type, with values:<li>text/html. </li><li>application/json.</li><li>plain/text.</li><li>text/xml.</li>
- * @method void setContentType(string $ContentType) Set Custom response page type, with values:<li>text/html. </li><li>application/json.</li><li>plain/text.</li><li>text/xml.</li>
- * @method string getContent() Obtain Custom response page content, not exceeding 2 KB.
- * @method void setContent(string $Content) Set Custom response page content, not exceeding 2 KB.
+ * @method string getName() Obtain Custom error page name. The name must be 2-60 characters long.
+ * @method void setName(string $Name) Set Custom error page name. The name must be 2-60 characters long.
+ * @method string getDescription() Obtain Custom error page description, not exceeding 60 characters.
+ * @method void setDescription(string $Description) Set Custom error page description, not exceeding 60 characters.
+ * @method string getContentType() Obtain Custom error page type, with values:<li>text/html. </li><li>application/json.</li><li>plain/text.</li><li>text/xml.</li>
+ * @method void setContentType(string $ContentType) Set Custom error page type, with values:<li>text/html. </li><li>application/json.</li><li>plain/text.</li><li>text/xml.</li>
+ * @method string getContent() Obtain Custom error page content, not exceeding 2 KB.
+ * @method void setContent(string $Content) Set Custom error page content, not exceeding 2 KB.
  */
 class ModifyCustomErrorPageRequest extends AbstractModel
 {
     /**
-     * @var string Custom response page ID.
+     * @var string Custom error page ID.
      */
     public $PageId;
 
@@ -46,32 +46,32 @@ class ModifyCustomErrorPageRequest extends AbstractModel
     public $ZoneId;
 
     /**
-     * @var string Custom response page name. The name must be 2-60 characters long.
+     * @var string Custom error page name. The name must be 2-60 characters long.
      */
     public $Name;
 
     /**
-     * @var string Custom response page description, not exceeding 60 characters.
+     * @var string Custom error page description, not exceeding 60 characters.
      */
     public $Description;
 
     /**
-     * @var string Custom response page type, with values:<li>text/html. </li><li>application/json.</li><li>plain/text.</li><li>text/xml.</li>
+     * @var string Custom error page type, with values:<li>text/html. </li><li>application/json.</li><li>plain/text.</li><li>text/xml.</li>
      */
     public $ContentType;
 
     /**
-     * @var string Custom response page content, not exceeding 2 KB.
+     * @var string Custom error page content, not exceeding 2 KB.
      */
     public $Content;
 
     /**
-     * @param string $PageId Custom response page ID.
+     * @param string $PageId Custom error page ID.
      * @param string $ZoneId Zone ID.
-     * @param string $Name Custom response page name. The name must be 2-60 characters long.
-     * @param string $Description Custom response page description, not exceeding 60 characters.
-     * @param string $ContentType Custom response page type, with values:<li>text/html. </li><li>application/json.</li><li>plain/text.</li><li>text/xml.</li>
-     * @param string $Content Custom response page content, not exceeding 2 KB.
+     * @param string $Name Custom error page name. The name must be 2-60 characters long.
+     * @param string $Description Custom error page description, not exceeding 60 characters.
+     * @param string $ContentType Custom error page type, with values:<li>text/html. </li><li>application/json.</li><li>plain/text.</li><li>text/xml.</li>
+     * @param string $Content Custom error page content, not exceeding 2 KB.
      */
     function __construct()
     {

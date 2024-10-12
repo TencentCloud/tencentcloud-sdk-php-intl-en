@@ -20,174 +20,174 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeOverviewL7Data request structure.
  *
- * @method string getStartTime() Obtain The start time.
- * @method void setStartTime(string $StartTime) Set The start time.
- * @method string getEndTime() Obtain The end time.
- * @method void setEndTime(string $EndTime) Set The end time.
- * @method array getMetricNames() Obtain The metric to query. Values:
-<li>`l7Flow_outFlux`: Traffic used for EdegOne responses</li>
-<li>`l7Flow_inFlux`: Traffic used for EdegOne requests</li>
-<li>`l7Flow_outBandwidth`: Bandwidth used for EdegOne responses</li>
-<li>`l7Flow_inBandwidth`: Bandwidth used for EdegOne requests</li>
-<li>`l7Flow_hit_outFlux`: Traffic used for cache hit</li>
-<li>`l7Flow_request`: Access requests</li>
-<li>`l7Flow_flux`: Upstream and downstream traffic used for client access</li>
-<li>`l7Flow_bandwidth`: Upstream and downstream bandwidth used for client access</li>
- * @method void setMetricNames(array $MetricNames) Set The metric to query. Values:
-<li>`l7Flow_outFlux`: Traffic used for EdegOne responses</li>
-<li>`l7Flow_inFlux`: Traffic used for EdegOne requests</li>
-<li>`l7Flow_outBandwidth`: Bandwidth used for EdegOne responses</li>
-<li>`l7Flow_inBandwidth`: Bandwidth used for EdegOne requests</li>
-<li>`l7Flow_hit_outFlux`: Traffic used for cache hit</li>
-<li>`l7Flow_request`: Access requests</li>
-<li>`l7Flow_flux`: Upstream and downstream traffic used for client access</li>
-<li>`l7Flow_bandwidth`: Upstream and downstream bandwidth used for client access</li>
- * @method array getZoneIds() Obtain ZoneId set. This parameter is required.
- * @method void setZoneIds(array $ZoneIds) Set ZoneId set. This parameter is required.
- * @method array getDomains() Obtain Queried domain name set. This parameter has been discarded.
- * @method void setDomains(array $Domains) Set Queried domain name set. This parameter has been discarded.
- * @method string getProtocol() Obtain The protocol type. Values:
-<li>`http`: HTTP protocol;</li>
-<li>`https`: HTTPS protocol;</li>
-<li>`http2`: HTTP2 protocol;</li>
-<li>`all`: All protocols. </li>If it's not specified, `all` is used. This parameter is not yet available now.
- * @method void setProtocol(string $Protocol) Set The protocol type. Values:
-<li>`http`: HTTP protocol;</li>
-<li>`https`: HTTPS protocol;</li>
-<li>`http2`: HTTP2 protocol;</li>
-<li>`all`: All protocols. </li>If it's not specified, `all` is used. This parameter is not yet available now.
- * @method string getInterval() Obtain The query granularity. Values:
-<li>`min`: 1 minute;</li>
-<li>`5min`: 5 minutes;</li>
-<li>`hour`: 1 hour;</li>
-<li>`day`: One day</li>If this field is not specified, the granularity will be determined based on the query period. <br>Period <= 1 hour: `min`; <br>1 hour < Period <= 2 days: `5min`; <br>2 days < period <= 7 days: `hour`; <br>Period > 7 days: `day`.
- * @method void setInterval(string $Interval) Set The query granularity. Values:
-<li>`min`: 1 minute;</li>
-<li>`5min`: 5 minutes;</li>
-<li>`hour`: 1 hour;</li>
-<li>`day`: One day</li>If this field is not specified, the granularity will be determined based on the query period. <br>Period <= 1 hour: `min`; <br>1 hour < Period <= 2 days: `5min`; <br>2 days < period <= 7 days: `hour`; <br>Period > 7 days: `day`.
- * @method array getFilters() Obtain Filtering condition. The detailed filtering condition key values are as follows: 
-<li>socket: Filter based on HTTP protocol type. Corresponding value options: <br> HTTP: HTTP protocol; <br> HTTPS: HTTPS protocol; <br> QUIC: QUIC protocol. </li>
-<li>domains: Filter based on domain name. </li>
-<li>tagKey: Filter based on Tag Key. </li>
-<li>tagValue: Filter based on Tag Value. </li>
- * @method void setFilters(array $Filters) Set Filtering condition. The detailed filtering condition key values are as follows: 
-<li>socket: Filter based on HTTP protocol type. Corresponding value options: <br> HTTP: HTTP protocol; <br> HTTPS: HTTPS protocol; <br> QUIC: QUIC protocol. </li>
-<li>domains: Filter based on domain name. </li>
-<li>tagKey: Filter based on Tag Key. </li>
-<li>tagValue: Filter based on Tag Value. </li>
- * @method string getArea() Obtain Geolocation scope. Values:
-<li>`overseas`: Regions outside the Chinese mainland</li>
-<li>`mainland`: Chinese mainland</li>
-<li>`global`: Global</li>If this field is not specified, the default value `global` is used.
- * @method void setArea(string $Area) Set Geolocation scope. Values:
-<li>`overseas`: Regions outside the Chinese mainland</li>
-<li>`mainland`: Chinese mainland</li>
-<li>`global`: Global</li>If this field is not specified, the default value `global` is used.
+ * @method string getStartTime() Obtain Start time.
+ * @method void setStartTime(string $StartTime) Set Start time.
+ * @method string getEndTime() Obtain End time.
+ * @method void setEndTime(string $EndTime) Set End time.
+ * @method array getMetricNames() Obtain Queried metric. Valid values:
+<li>l7Flow_outFlux: EdgeOne response traffic;</li>
+<li>l7Flow_inFlux: EdgeOne request traffic;</li>
+<li>l7Flow_outBandwidth: EdgeOne response bandwidth;</li>
+<li>l7Flow_inBandwidth: EdgeOne request traffic;</li>
+<li>l7Flow_hit_outFlux: cache hit traffic;</li>
+<li>l7Flow_request: number of access requests;</li>
+<li>l7Flow_flux: upstream and downstream traffic of access requests;</li>
+<li>l7Flow_bandwidth: upstream and downstream bandwidths of access requests.</li>
+ * @method void setMetricNames(array $MetricNames) Set Queried metric. Valid values:
+<li>l7Flow_outFlux: EdgeOne response traffic;</li>
+<li>l7Flow_inFlux: EdgeOne request traffic;</li>
+<li>l7Flow_outBandwidth: EdgeOne response bandwidth;</li>
+<li>l7Flow_inBandwidth: EdgeOne request traffic;</li>
+<li>l7Flow_hit_outFlux: cache hit traffic;</li>
+<li>l7Flow_request: number of access requests;</li>
+<li>l7Flow_flux: upstream and downstream traffic of access requests;</li>
+<li>l7Flow_bandwidth: upstream and downstream bandwidths of access requests.</li>
+ * @method array getZoneIds() Obtain Site ID set. This parameter is required.
+ * @method void setZoneIds(array $ZoneIds) Set Site ID set. This parameter is required.
+ * @method array getDomains() Obtain Queried domain name set. This parameter has been deprecated.
+ * @method void setDomains(array $Domains) Set Queried domain name set. This parameter has been deprecated.
+ * @method string getProtocol() Obtain Protocol type of the query. Valid values:
+<li>http: HTTP protocol;</li>
+<li>https: HTTPS protocol;</li>
+<li>http2: HTTP/2 protocol;</li>
+<li>all: all protocols.</li>If this parameter is not input, the default value `all` is used. This parameter is not yet effective.
+ * @method void setProtocol(string $Protocol) Set Protocol type of the query. Valid values:
+<li>http: HTTP protocol;</li>
+<li>https: HTTPS protocol;</li>
+<li>http2: HTTP/2 protocol;</li>
+<li>all: all protocols.</li>If this parameter is not input, the default value `all` is used. This parameter is not yet effective.
+ * @method string getInterval() Obtain Time granularity of the query. Valid values:
+<li>min: 1 minute;</li>
+<li>5min: 5 minutes;</li>
+<li>hour: 1 hour;</li>
+<li>day: 1 day.</li>If this parameter is not input, the granularity will be automatically inferred based on the interval between the start time and end time. Specifically, the granularity value is min, 5min, hour, and day respectively for queries of data within 1 hour, within 2 days, within 7 days, and over 7 days.
+ * @method void setInterval(string $Interval) Set Time granularity of the query. Valid values:
+<li>min: 1 minute;</li>
+<li>5min: 5 minutes;</li>
+<li>hour: 1 hour;</li>
+<li>day: 1 day.</li>If this parameter is not input, the granularity will be automatically inferred based on the interval between the start time and end time. Specifically, the granularity value is min, 5min, hour, and day respectively for queries of data within 1 hour, within 2 days, within 7 days, and over 7 days.
+ * @method array getFilters() Obtain Filter criteria. The detailed Key values of filter criteria are as follows:
+<li>socket:<br>   Filter by [<strong>HTTP protocol type</strong>].<br>   Valid values:<br>   HTTP: HTTP protocol; <br>   HTTPS: HTTPS protocol;<br>   QUIC: QUIC protocol.</li>
+<li>domain<br>?? Filter by [<strong>domain name</strong>].</li>
+<li>tagKey<br>?? Filter by [<strong>tag key</strong>].</li>
+<li>tagValue<br>?? Filter by [<strong>tag value</strong>].</li>
+ * @method void setFilters(array $Filters) Set Filter criteria. The detailed Key values of filter criteria are as follows:
+<li>socket:<br>   Filter by [<strong>HTTP protocol type</strong>].<br>   Valid values:<br>   HTTP: HTTP protocol; <br>   HTTPS: HTTPS protocol;<br>   QUIC: QUIC protocol.</li>
+<li>domain<br>?? Filter by [<strong>domain name</strong>].</li>
+<li>tagKey<br>?? Filter by [<strong>tag key</strong>].</li>
+<li>tagValue<br>?? Filter by [<strong>tag value</strong>].</li>
+ * @method string getArea() Obtain Data ownership area. Valid values:
+<li>overseas: global (excluding the Chinese mainland) data;</li>
+<li>mainland: Chinese mainland data;</li>
+<li>global: global data.</li>If this parameter is not input, the default value `global` is used.
+ * @method void setArea(string $Area) Set Data ownership area. Valid values:
+<li>overseas: global (excluding the Chinese mainland) data;</li>
+<li>mainland: Chinese mainland data;</li>
+<li>global: global data.</li>If this parameter is not input, the default value `global` is used.
  */
 class DescribeOverviewL7DataRequest extends AbstractModel
 {
     /**
-     * @var string The start time.
+     * @var string Start time.
      */
     public $StartTime;
 
     /**
-     * @var string The end time.
+     * @var string End time.
      */
     public $EndTime;
 
     /**
-     * @var array The metric to query. Values:
-<li>`l7Flow_outFlux`: Traffic used for EdegOne responses</li>
-<li>`l7Flow_inFlux`: Traffic used for EdegOne requests</li>
-<li>`l7Flow_outBandwidth`: Bandwidth used for EdegOne responses</li>
-<li>`l7Flow_inBandwidth`: Bandwidth used for EdegOne requests</li>
-<li>`l7Flow_hit_outFlux`: Traffic used for cache hit</li>
-<li>`l7Flow_request`: Access requests</li>
-<li>`l7Flow_flux`: Upstream and downstream traffic used for client access</li>
-<li>`l7Flow_bandwidth`: Upstream and downstream bandwidth used for client access</li>
+     * @var array Queried metric. Valid values:
+<li>l7Flow_outFlux: EdgeOne response traffic;</li>
+<li>l7Flow_inFlux: EdgeOne request traffic;</li>
+<li>l7Flow_outBandwidth: EdgeOne response bandwidth;</li>
+<li>l7Flow_inBandwidth: EdgeOne request traffic;</li>
+<li>l7Flow_hit_outFlux: cache hit traffic;</li>
+<li>l7Flow_request: number of access requests;</li>
+<li>l7Flow_flux: upstream and downstream traffic of access requests;</li>
+<li>l7Flow_bandwidth: upstream and downstream bandwidths of access requests.</li>
      */
     public $MetricNames;
 
     /**
-     * @var array ZoneId set. This parameter is required.
+     * @var array Site ID set. This parameter is required.
      */
     public $ZoneIds;
 
     /**
-     * @var array Queried domain name set. This parameter has been discarded.
+     * @var array Queried domain name set. This parameter has been deprecated.
      */
     public $Domains;
 
     /**
-     * @var string The protocol type. Values:
-<li>`http`: HTTP protocol;</li>
-<li>`https`: HTTPS protocol;</li>
-<li>`http2`: HTTP2 protocol;</li>
-<li>`all`: All protocols. </li>If it's not specified, `all` is used. This parameter is not yet available now.
+     * @var string Protocol type of the query. Valid values:
+<li>http: HTTP protocol;</li>
+<li>https: HTTPS protocol;</li>
+<li>http2: HTTP/2 protocol;</li>
+<li>all: all protocols.</li>If this parameter is not input, the default value `all` is used. This parameter is not yet effective.
      */
     public $Protocol;
 
     /**
-     * @var string The query granularity. Values:
-<li>`min`: 1 minute;</li>
-<li>`5min`: 5 minutes;</li>
-<li>`hour`: 1 hour;</li>
-<li>`day`: One day</li>If this field is not specified, the granularity will be determined based on the query period. <br>Period <= 1 hour: `min`; <br>1 hour < Period <= 2 days: `5min`; <br>2 days < period <= 7 days: `hour`; <br>Period > 7 days: `day`.
+     * @var string Time granularity of the query. Valid values:
+<li>min: 1 minute;</li>
+<li>5min: 5 minutes;</li>
+<li>hour: 1 hour;</li>
+<li>day: 1 day.</li>If this parameter is not input, the granularity will be automatically inferred based on the interval between the start time and end time. Specifically, the granularity value is min, 5min, hour, and day respectively for queries of data within 1 hour, within 2 days, within 7 days, and over 7 days.
      */
     public $Interval;
 
     /**
-     * @var array Filtering condition. The detailed filtering condition key values are as follows: 
-<li>socket: Filter based on HTTP protocol type. Corresponding value options: <br> HTTP: HTTP protocol; <br> HTTPS: HTTPS protocol; <br> QUIC: QUIC protocol. </li>
-<li>domains: Filter based on domain name. </li>
-<li>tagKey: Filter based on Tag Key. </li>
-<li>tagValue: Filter based on Tag Value. </li>
+     * @var array Filter criteria. The detailed Key values of filter criteria are as follows:
+<li>socket:<br>   Filter by [<strong>HTTP protocol type</strong>].<br>   Valid values:<br>   HTTP: HTTP protocol; <br>   HTTPS: HTTPS protocol;<br>   QUIC: QUIC protocol.</li>
+<li>domain<br>?? Filter by [<strong>domain name</strong>].</li>
+<li>tagKey<br>?? Filter by [<strong>tag key</strong>].</li>
+<li>tagValue<br>?? Filter by [<strong>tag value</strong>].</li>
      */
     public $Filters;
 
     /**
-     * @var string Geolocation scope. Values:
-<li>`overseas`: Regions outside the Chinese mainland</li>
-<li>`mainland`: Chinese mainland</li>
-<li>`global`: Global</li>If this field is not specified, the default value `global` is used.
+     * @var string Data ownership area. Valid values:
+<li>overseas: global (excluding the Chinese mainland) data;</li>
+<li>mainland: Chinese mainland data;</li>
+<li>global: global data.</li>If this parameter is not input, the default value `global` is used.
      */
     public $Area;
 
     /**
-     * @param string $StartTime The start time.
-     * @param string $EndTime The end time.
-     * @param array $MetricNames The metric to query. Values:
-<li>`l7Flow_outFlux`: Traffic used for EdegOne responses</li>
-<li>`l7Flow_inFlux`: Traffic used for EdegOne requests</li>
-<li>`l7Flow_outBandwidth`: Bandwidth used for EdegOne responses</li>
-<li>`l7Flow_inBandwidth`: Bandwidth used for EdegOne requests</li>
-<li>`l7Flow_hit_outFlux`: Traffic used for cache hit</li>
-<li>`l7Flow_request`: Access requests</li>
-<li>`l7Flow_flux`: Upstream and downstream traffic used for client access</li>
-<li>`l7Flow_bandwidth`: Upstream and downstream bandwidth used for client access</li>
-     * @param array $ZoneIds ZoneId set. This parameter is required.
-     * @param array $Domains Queried domain name set. This parameter has been discarded.
-     * @param string $Protocol The protocol type. Values:
-<li>`http`: HTTP protocol;</li>
-<li>`https`: HTTPS protocol;</li>
-<li>`http2`: HTTP2 protocol;</li>
-<li>`all`: All protocols. </li>If it's not specified, `all` is used. This parameter is not yet available now.
-     * @param string $Interval The query granularity. Values:
-<li>`min`: 1 minute;</li>
-<li>`5min`: 5 minutes;</li>
-<li>`hour`: 1 hour;</li>
-<li>`day`: One day</li>If this field is not specified, the granularity will be determined based on the query period. <br>Period <= 1 hour: `min`; <br>1 hour < Period <= 2 days: `5min`; <br>2 days < period <= 7 days: `hour`; <br>Period > 7 days: `day`.
-     * @param array $Filters Filtering condition. The detailed filtering condition key values are as follows: 
-<li>socket: Filter based on HTTP protocol type. Corresponding value options: <br> HTTP: HTTP protocol; <br> HTTPS: HTTPS protocol; <br> QUIC: QUIC protocol. </li>
-<li>domains: Filter based on domain name. </li>
-<li>tagKey: Filter based on Tag Key. </li>
-<li>tagValue: Filter based on Tag Value. </li>
-     * @param string $Area Geolocation scope. Values:
-<li>`overseas`: Regions outside the Chinese mainland</li>
-<li>`mainland`: Chinese mainland</li>
-<li>`global`: Global</li>If this field is not specified, the default value `global` is used.
+     * @param string $StartTime Start time.
+     * @param string $EndTime End time.
+     * @param array $MetricNames Queried metric. Valid values:
+<li>l7Flow_outFlux: EdgeOne response traffic;</li>
+<li>l7Flow_inFlux: EdgeOne request traffic;</li>
+<li>l7Flow_outBandwidth: EdgeOne response bandwidth;</li>
+<li>l7Flow_inBandwidth: EdgeOne request traffic;</li>
+<li>l7Flow_hit_outFlux: cache hit traffic;</li>
+<li>l7Flow_request: number of access requests;</li>
+<li>l7Flow_flux: upstream and downstream traffic of access requests;</li>
+<li>l7Flow_bandwidth: upstream and downstream bandwidths of access requests.</li>
+     * @param array $ZoneIds Site ID set. This parameter is required.
+     * @param array $Domains Queried domain name set. This parameter has been deprecated.
+     * @param string $Protocol Protocol type of the query. Valid values:
+<li>http: HTTP protocol;</li>
+<li>https: HTTPS protocol;</li>
+<li>http2: HTTP/2 protocol;</li>
+<li>all: all protocols.</li>If this parameter is not input, the default value `all` is used. This parameter is not yet effective.
+     * @param string $Interval Time granularity of the query. Valid values:
+<li>min: 1 minute;</li>
+<li>5min: 5 minutes;</li>
+<li>hour: 1 hour;</li>
+<li>day: 1 day.</li>If this parameter is not input, the granularity will be automatically inferred based on the interval between the start time and end time. Specifically, the granularity value is min, 5min, hour, and day respectively for queries of data within 1 hour, within 2 days, within 7 days, and over 7 days.
+     * @param array $Filters Filter criteria. The detailed Key values of filter criteria are as follows:
+<li>socket:<br>   Filter by [<strong>HTTP protocol type</strong>].<br>   Valid values:<br>   HTTP: HTTP protocol; <br>   HTTPS: HTTPS protocol;<br>   QUIC: QUIC protocol.</li>
+<li>domain<br>?? Filter by [<strong>domain name</strong>].</li>
+<li>tagKey<br>?? Filter by [<strong>tag key</strong>].</li>
+<li>tagValue<br>?? Filter by [<strong>tag value</strong>].</li>
+     * @param string $Area Data ownership area. Valid values:
+<li>overseas: global (excluding the Chinese mainland) data;</li>
+<li>mainland: Chinese mainland data;</li>
+<li>global: global data.</li>If this parameter is not input, the default value `global` is used.
      */
     function __construct()
     {

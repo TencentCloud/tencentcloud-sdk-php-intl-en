@@ -20,38 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Details of the origin.
  *
- * @method string getOriginType() Obtain Origin server type, with values:
+ * @method string getOriginType() Obtain Origin server type. Valid values:
 <li>IP_DOMAIN: IPv4, IPv6, or domain name type origin server;</li>
 <li>COS: Tencent Cloud COS origin server;</li>
-<li>AWS_S3: AWS S3 origin server;</li>
-<li>ORIGIN_GROUP: origin server group type origin server;</li>
-<li>VODEO: VOD on EO;</li>
+<li>AWS_S3: AWS S3 COS origin server;</li>
+<li>ORIGIN_GROUP: origin server group;</li>
 <li>VOD: Video on Demand;</li>
-<li>SPACE: origin server uninstallation. Currently only available to the allowlist;</li>
+<li>SPACE: origin server uninstallation, currently only available to the allowlist;</li>
 <li>LB: load balancing. Currently only available to the allowlist. </li>
- * @method void setOriginType(string $OriginType) Set Origin server type, with values:
+ * @method void setOriginType(string $OriginType) Set Origin server type. Valid values:
 <li>IP_DOMAIN: IPv4, IPv6, or domain name type origin server;</li>
 <li>COS: Tencent Cloud COS origin server;</li>
-<li>AWS_S3: AWS S3 origin server;</li>
-<li>ORIGIN_GROUP: origin server group type origin server;</li>
-<li>VODEO: VOD on EO;</li>
+<li>AWS_S3: AWS S3 COS origin server;</li>
+<li>ORIGIN_GROUP: origin server group;</li>
 <li>VOD: Video on Demand;</li>
-<li>SPACE: origin server uninstallation. Currently only available to the allowlist;</li>
+<li>SPACE: origin server uninstallation, currently only available to the allowlist;</li>
 <li>LB: load balancing. Currently only available to the allowlist. </li>
- * @method string getOrigin() Obtain Origin server address, which varies according to the value of OriginType:
-<li>When OriginType = IP_DOMAIN, this parameter should be an IPv4 address, an IPv6 address, or a domain name;</li>
-<li>When OriginType = COS, this parameter should be the access domain name of the COS bucket;</li>
-<li>When OriginType = AWS_S3, this parameter should be the access domain name of the S3 bucket;</li>
-<li>When OriginType = ORIGIN_GROUP, this parameter should be the origin server group ID;</li>
-<li>When OriginType = VOD, this parameter should be the VOD application ID;</li>
-<li>When OriginType = VODEO, if VodeoDistributionRange = ALL, then this parameter is "all-buckets-in-vodeo-application"; if VodeoDistributionRange = Bucket, then this parameter is the domain name of the corresponding bucket. </li>
- * @method void setOrigin(string $Origin) Set Origin server address, which varies according to the value of OriginType:
-<li>When OriginType = IP_DOMAIN, this parameter should be an IPv4 address, an IPv6 address, or a domain name;</li>
-<li>When OriginType = COS, this parameter should be the access domain name of the COS bucket;</li>
-<li>When OriginType = AWS_S3, this parameter should be the access domain name of the S3 bucket;</li>
-<li>When OriginType = ORIGIN_GROUP, this parameter should be the origin server group ID;</li>
-<li>When OriginType = VOD, this parameter should be the VOD application ID;</li>
-<li>When OriginType = VODEO, if VodeoDistributionRange = ALL, then this parameter is "all-buckets-in-vodeo-application"; if VodeoDistributionRange = Bucket, then this parameter is the domain name of the corresponding bucket. </li>
+ * @method string getOrigin() Obtain Origin server address, which varies with the value of OriginType:
+<li>When OriginType = IP_DOMAIN, this parameter is an IPv4 address, an IPv6 address, or a domain name.</li>
+<li>When OriginType = COS, this parameter is the access domain name of the COS bucket.</li>
+<li>When OriginType = AWS_S3, this parameter is the access domain name of the S3 bucket.</li>
+<li>When OriginType = ORIGIN_GROUP, this parameter is the origin server group ID.</li>
+<li>When OriginType = VOD, this parameter is the VOD application ID.</li>
+ * @method void setOrigin(string $Origin) Set Origin server address, which varies with the value of OriginType:
+<li>When OriginType = IP_DOMAIN, this parameter is an IPv4 address, an IPv6 address, or a domain name.</li>
+<li>When OriginType = COS, this parameter is the access domain name of the COS bucket.</li>
+<li>When OriginType = AWS_S3, this parameter is the access domain name of the S3 bucket.</li>
+<li>When OriginType = ORIGIN_GROUP, this parameter is the origin server group ID.</li>
+<li>When OriginType = VOD, this parameter is the VOD application ID.</li>
  * @method string getBackupOrigin() Obtain Secondary origin group ID. This parameter is valid only when OriginType is ORIGIN_GROUP and a secondary origin group is configured.
  * @method void setBackupOrigin(string $BackupOrigin) Set Secondary origin group ID. This parameter is valid only when OriginType is ORIGIN_GROUP and a secondary origin group is configured.
  * @method string getOriginGroupName() Obtain Primary origin group name. This parameter returns a value when OriginType is ORIGIN_GROUP.
@@ -80,26 +76,24 @@ Note: This field may return null, indicating that no valid values can be obtaine
 class OriginDetail extends AbstractModel
 {
     /**
-     * @var string Origin server type, with values:
+     * @var string Origin server type. Valid values:
 <li>IP_DOMAIN: IPv4, IPv6, or domain name type origin server;</li>
 <li>COS: Tencent Cloud COS origin server;</li>
-<li>AWS_S3: AWS S3 origin server;</li>
-<li>ORIGIN_GROUP: origin server group type origin server;</li>
-<li>VODEO: VOD on EO;</li>
+<li>AWS_S3: AWS S3 COS origin server;</li>
+<li>ORIGIN_GROUP: origin server group;</li>
 <li>VOD: Video on Demand;</li>
-<li>SPACE: origin server uninstallation. Currently only available to the allowlist;</li>
+<li>SPACE: origin server uninstallation, currently only available to the allowlist;</li>
 <li>LB: load balancing. Currently only available to the allowlist. </li>
      */
     public $OriginType;
 
     /**
-     * @var string Origin server address, which varies according to the value of OriginType:
-<li>When OriginType = IP_DOMAIN, this parameter should be an IPv4 address, an IPv6 address, or a domain name;</li>
-<li>When OriginType = COS, this parameter should be the access domain name of the COS bucket;</li>
-<li>When OriginType = AWS_S3, this parameter should be the access domain name of the S3 bucket;</li>
-<li>When OriginType = ORIGIN_GROUP, this parameter should be the origin server group ID;</li>
-<li>When OriginType = VOD, this parameter should be the VOD application ID;</li>
-<li>When OriginType = VODEO, if VodeoDistributionRange = ALL, then this parameter is "all-buckets-in-vodeo-application"; if VodeoDistributionRange = Bucket, then this parameter is the domain name of the corresponding bucket. </li>
+     * @var string Origin server address, which varies with the value of OriginType:
+<li>When OriginType = IP_DOMAIN, this parameter is an IPv4 address, an IPv6 address, or a domain name.</li>
+<li>When OriginType = COS, this parameter is the access domain name of the COS bucket.</li>
+<li>When OriginType = AWS_S3, this parameter is the access domain name of the S3 bucket.</li>
+<li>When OriginType = ORIGIN_GROUP, this parameter is the origin server group ID.</li>
+<li>When OriginType = VOD, this parameter is the VOD application ID.</li>
      */
     public $Origin;
 
@@ -134,36 +128,37 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * @var integer MO sub-application ID
+     * @deprecated
      */
     public $VodeoSubAppId;
 
     /**
      * @var string MO distribution range. Valid values: <li>All: all</li> <li>Bucket: bucket</li>
+     * @deprecated
      */
     public $VodeoDistributionRange;
 
     /**
      * @var string MO bucket ID, required when the distribution range (DistributionRange) is bucket (Bucket)
+     * @deprecated
      */
     public $VodeoBucketId;
 
     /**
-     * @param string $OriginType Origin server type, with values:
+     * @param string $OriginType Origin server type. Valid values:
 <li>IP_DOMAIN: IPv4, IPv6, or domain name type origin server;</li>
 <li>COS: Tencent Cloud COS origin server;</li>
-<li>AWS_S3: AWS S3 origin server;</li>
-<li>ORIGIN_GROUP: origin server group type origin server;</li>
-<li>VODEO: VOD on EO;</li>
+<li>AWS_S3: AWS S3 COS origin server;</li>
+<li>ORIGIN_GROUP: origin server group;</li>
 <li>VOD: Video on Demand;</li>
-<li>SPACE: origin server uninstallation. Currently only available to the allowlist;</li>
+<li>SPACE: origin server uninstallation, currently only available to the allowlist;</li>
 <li>LB: load balancing. Currently only available to the allowlist. </li>
-     * @param string $Origin Origin server address, which varies according to the value of OriginType:
-<li>When OriginType = IP_DOMAIN, this parameter should be an IPv4 address, an IPv6 address, or a domain name;</li>
-<li>When OriginType = COS, this parameter should be the access domain name of the COS bucket;</li>
-<li>When OriginType = AWS_S3, this parameter should be the access domain name of the S3 bucket;</li>
-<li>When OriginType = ORIGIN_GROUP, this parameter should be the origin server group ID;</li>
-<li>When OriginType = VOD, this parameter should be the VOD application ID;</li>
-<li>When OriginType = VODEO, if VodeoDistributionRange = ALL, then this parameter is "all-buckets-in-vodeo-application"; if VodeoDistributionRange = Bucket, then this parameter is the domain name of the corresponding bucket. </li>
+     * @param string $Origin Origin server address, which varies with the value of OriginType:
+<li>When OriginType = IP_DOMAIN, this parameter is an IPv4 address, an IPv6 address, or a domain name.</li>
+<li>When OriginType = COS, this parameter is the access domain name of the COS bucket.</li>
+<li>When OriginType = AWS_S3, this parameter is the access domain name of the S3 bucket.</li>
+<li>When OriginType = ORIGIN_GROUP, this parameter is the origin server group ID.</li>
+<li>When OriginType = VOD, this parameter is the VOD application ID.</li>
      * @param string $BackupOrigin Secondary origin group ID. This parameter is valid only when OriginType is ORIGIN_GROUP and a secondary origin group is configured.
      * @param string $OriginGroupName Primary origin group name. This parameter returns a value when OriginType is ORIGIN_GROUP.
      * @param string $BackOriginGroupName Secondary origin group name. This parameter is valid only when OriginType is ORIGIN_GROUP and a secondary origin group is configured.

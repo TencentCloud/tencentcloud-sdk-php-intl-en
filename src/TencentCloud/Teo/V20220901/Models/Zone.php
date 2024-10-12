@@ -40,16 +40,14 @@ u200c<li>`pending`: The name server is not switched.</li>
 u200c<li>`moved`: The name server is changed to other service providers.</li>
 u200c<li>`deactivated`: The site is blocked.</li>
 <li>`initializing`: The site is not bound with any plan. </li>
- * @method string getType() Obtain Site connection method, valid values:
-<li>full: Connect via NS;</li>
-<li>partial: Connect via CNAME;</li>
-<li>noDomainAccess: Connect without using a domain name;</li>
-<li>vodeo: Connect by default when VODEO is enabled.</li>
- * @method void setType(string $Type) Set Site connection method, valid values:
-<li>full: Connect via NS;</li>
-<li>partial: Connect via CNAME;</li>
-<li>noDomainAccess: Connect without using a domain name;</li>
-<li>vodeo: Connect by default when VODEO is enabled.</li>
+ * @method string getType() Obtain Site access method. Valid values:
+<li>full: NS access;</li>
+<li>partial: CNAME access;</li>
+<li>noDomainAccess: access with no domain name.</li>
+ * @method void setType(string $Type) Set Site access method. Valid values:
+<li>full: NS access;</li>
+<li>partial: CNAME access;</li>
+<li>noDomainAccess: access with no domain name.</li>
  * @method boolean getPaused() Obtain Whether the site is disabled.
  * @method void setPaused(boolean $Paused) Set Whether the site is disabled.
  * @method string getCnameSpeedUp() Obtain Whether CNAME acceleration is enabled. Values:
@@ -146,11 +144,10 @@ u200c<li>`deactivated`: The site is blocked.</li>
     public $Status;
 
     /**
-     * @var string Site connection method, valid values:
-<li>full: Connect via NS;</li>
-<li>partial: Connect via CNAME;</li>
-<li>noDomainAccess: Connect without using a domain name;</li>
-<li>vodeo: Connect by default when VODEO is enabled.</li>
+     * @var string Site access method. Valid values:
+<li>full: NS access;</li>
+<li>partial: CNAME access;</li>
+<li>noDomainAccess: access with no domain name.</li>
      */
     public $Type;
 
@@ -256,11 +253,10 @@ u200c<li>`pending`: The name server is not switched.</li>
 u200c<li>`moved`: The name server is changed to other service providers.</li>
 u200c<li>`deactivated`: The site is blocked.</li>
 <li>`initializing`: The site is not bound with any plan. </li>
-     * @param string $Type Site connection method, valid values:
-<li>full: Connect via NS;</li>
-<li>partial: Connect via CNAME;</li>
-<li>noDomainAccess: Connect without using a domain name;</li>
-<li>vodeo: Connect by default when VODEO is enabled.</li>
+     * @param string $Type Site access method. Valid values:
+<li>full: NS access;</li>
+<li>partial: CNAME access;</li>
+<li>noDomainAccess: access with no domain name.</li>
      * @param boolean $Paused Whether the site is disabled.
      * @param string $CnameSpeedUp Whether CNAME acceleration is enabled. Values:
 <li>`enabled`: Enabled</li>

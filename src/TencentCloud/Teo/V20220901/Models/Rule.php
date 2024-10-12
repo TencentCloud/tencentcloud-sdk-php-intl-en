@@ -20,46 +20,38 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Rule item of the rule engine. The items in the `Conditions` array are in `OR` relationship, and the items in the inner `Conditions` list are in `AND` relationship.
  *
- * @method array getConditions() Obtain Feature execution conditions.
-Note: If any condition in the array is met, the feature will run.
- * @method void setConditions(array $Conditions) Set Feature execution conditions.
-Note: If any condition in the array is met, the feature will run.
- * @method array getActions() Obtain Feature to be executed.
-Note: Actions and SubRules cannot both be empty.
- * @method void setActions(array $Actions) Set Feature to be executed.
-Note: Actions and SubRules cannot both be empty.
- * @method array getSubRules() Obtain The nested rule.
-Note: Actions and SubRules cannot both be empty.
- * @method void setSubRules(array $SubRules) Set The nested rule.
-Note: Actions and SubRules cannot both be empty.
+ * @method array getConditions() Obtain Judgment condition for executing the feature.
+Note: The feature can be executed if any condition in the array is met.
+ * @method void setConditions(array $Conditions) Set Judgment condition for executing the feature.
+Note: The feature can be executed if any condition in the array is met.
+ * @method array getActions() Obtain Executed feature. Note: Actions and SubRules cannot be both empty.
+ * @method void setActions(array $Actions) Set Executed feature. Note: Actions and SubRules cannot be both empty.
+ * @method array getSubRules() Obtain Nested rule. Note: SubRules and Actions cannot be both empty.
+ * @method void setSubRules(array $SubRules) Set Nested rule. Note: SubRules and Actions cannot be both empty.
  */
 class Rule extends AbstractModel
 {
     /**
-     * @var array Feature execution conditions.
-Note: If any condition in the array is met, the feature will run.
+     * @var array Judgment condition for executing the feature.
+Note: The feature can be executed if any condition in the array is met.
      */
     public $Conditions;
 
     /**
-     * @var array Feature to be executed.
-Note: Actions and SubRules cannot both be empty.
+     * @var array Executed feature. Note: Actions and SubRules cannot be both empty.
      */
     public $Actions;
 
     /**
-     * @var array The nested rule.
-Note: Actions and SubRules cannot both be empty.
+     * @var array Nested rule. Note: SubRules and Actions cannot be both empty.
      */
     public $SubRules;
 
     /**
-     * @param array $Conditions Feature execution conditions.
-Note: If any condition in the array is met, the feature will run.
-     * @param array $Actions Feature to be executed.
-Note: Actions and SubRules cannot both be empty.
-     * @param array $SubRules The nested rule.
-Note: Actions and SubRules cannot both be empty.
+     * @param array $Conditions Judgment condition for executing the feature.
+Note: The feature can be executed if any condition in the array is met.
+     * @param array $Actions Executed feature. Note: Actions and SubRules cannot be both empty.
+     * @param array $SubRules Nested rule. Note: SubRules and Actions cannot be both empty.
      */
     function __construct()
     {

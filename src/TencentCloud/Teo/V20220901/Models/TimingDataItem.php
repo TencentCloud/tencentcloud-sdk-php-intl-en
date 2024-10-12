@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Data items of the statistical curve
  *
- * @method integer getTimestamp() Obtain The query time recorded in seconds using UNIX timestamp.
- * @method void setTimestamp(integer $Timestamp) Set The query time recorded in seconds using UNIX timestamp.
+ * @method integer getTimestamp() Obtain Time point for returning data, in the format of Unix timestamp in seconds.
+ * @method void setTimestamp(integer $Timestamp) Set Time point for returning data, in the format of Unix timestamp in seconds.
  * @method integer getValue() Obtain The value.
  * @method void setValue(integer $Value) Set The value.
  */
 class TimingDataItem extends AbstractModel
 {
     /**
-     * @var integer The query time recorded in seconds using UNIX timestamp.
+     * @var integer Time point for returning data, in the format of Unix timestamp in seconds.
      */
     public $Timestamp;
 
@@ -38,7 +38,7 @@ class TimingDataItem extends AbstractModel
     public $Value;
 
     /**
-     * @param integer $Timestamp The query time recorded in seconds using UNIX timestamp.
+     * @param integer $Timestamp Time point for returning data, in the format of Unix timestamp in seconds.
      * @param integer $Value The value.
      */
     function __construct()

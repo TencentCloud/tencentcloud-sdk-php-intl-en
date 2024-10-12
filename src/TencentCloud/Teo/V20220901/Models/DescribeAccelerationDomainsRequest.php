@@ -26,26 +26,20 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) Set Offset for paginated queries. Default value: 0.
  * @method integer getLimit() Obtain Limit on paginated queries. Default value: 20. Maximum value: 200.
  * @method void setLimit(integer $Limit) Set Limit on paginated queries. Default value: 20. Maximum value: 200.
- * @method array getFilters() Obtain Filter conditions. The maximum value of Filters.Values is 20. If it is not specified, all domains related with the specific zone-id are returned.
-<li>domain-name: Filtering based on the acceleration domain name</li>
-<li>origin-type: Filtering based on the type of the origin server</li>
-<li>origin: Filtering based on the primary origin server address</li>
-<li>backup-origin: Filtering based on the secondary origin server address</li>
-<li>domain-cname: Filtering based on the CNAME</li>
-<li>share-cname: Filtering based on the shared CNAME</li>
-<li>vodeo-sub-app-id: Filtering based on [vodeo sub-application ID]</li>
-<li>vodeo-distribution-range: Filtering based on [vodeo distribution range]</li>
-<li>vodeo-bucket-id: Filtering based on [vodeo storage bucket ID];</li>
- * @method void setFilters(array $Filters) Set Filter conditions. The maximum value of Filters.Values is 20. If it is not specified, all domains related with the specific zone-id are returned.
-<li>domain-name: Filtering based on the acceleration domain name</li>
-<li>origin-type: Filtering based on the type of the origin server</li>
-<li>origin: Filtering based on the primary origin server address</li>
-<li>backup-origin: Filtering based on the secondary origin server address</li>
-<li>domain-cname: Filtering based on the CNAME</li>
-<li>share-cname: Filtering based on the shared CNAME</li>
-<li>vodeo-sub-app-id: Filtering based on [vodeo sub-application ID]</li>
-<li>vodeo-distribution-range: Filtering based on [vodeo distribution range]</li>
-<li>vodeo-bucket-id: Filtering based on [vodeo storage bucket ID];</li>
+ * @method array getFilters() Obtain Filter criteria. The maximum number of Filters.Values is 20. If this parameter is not input, all domain name information under the current zone-id will be returned. The detailed filter criteria are as follows:
+<li>domain-name: Filter by acceleration domain name;</li>
+<li>origin-type: Filter by origin server type;</li>
+<li>origin: Filter by primary origin server address;</li>
+<li>backup-origin: Filter by replica origin server address;</li>
+<li>domain-cname: Filter by CNAME;</li>
+<li>share-cname: Filter by shared CNAME.</li>
+ * @method void setFilters(array $Filters) Set Filter criteria. The maximum number of Filters.Values is 20. If this parameter is not input, all domain name information under the current zone-id will be returned. The detailed filter criteria are as follows:
+<li>domain-name: Filter by acceleration domain name;</li>
+<li>origin-type: Filter by origin server type;</li>
+<li>origin: Filter by primary origin server address;</li>
+<li>backup-origin: Filter by replica origin server address;</li>
+<li>domain-cname: Filter by CNAME;</li>
+<li>share-cname: Filter by shared CNAME.</li>
  * @method string getOrder() Obtain Sort the returned results according to this field. Values include:
 <li>`created_on`: Creation time of the acceleration domain name</li>
 <li>`domain-name`: (Default) Acceleration domain name.</li> 
@@ -83,16 +77,13 @@ class DescribeAccelerationDomainsRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @var array Filter conditions. The maximum value of Filters.Values is 20. If it is not specified, all domains related with the specific zone-id are returned.
-<li>domain-name: Filtering based on the acceleration domain name</li>
-<li>origin-type: Filtering based on the type of the origin server</li>
-<li>origin: Filtering based on the primary origin server address</li>
-<li>backup-origin: Filtering based on the secondary origin server address</li>
-<li>domain-cname: Filtering based on the CNAME</li>
-<li>share-cname: Filtering based on the shared CNAME</li>
-<li>vodeo-sub-app-id: Filtering based on [vodeo sub-application ID]</li>
-<li>vodeo-distribution-range: Filtering based on [vodeo distribution range]</li>
-<li>vodeo-bucket-id: Filtering based on [vodeo storage bucket ID];</li>
+     * @var array Filter criteria. The maximum number of Filters.Values is 20. If this parameter is not input, all domain name information under the current zone-id will be returned. The detailed filter criteria are as follows:
+<li>domain-name: Filter by acceleration domain name;</li>
+<li>origin-type: Filter by origin server type;</li>
+<li>origin: Filter by primary origin server address;</li>
+<li>backup-origin: Filter by replica origin server address;</li>
+<li>domain-cname: Filter by CNAME;</li>
+<li>share-cname: Filter by shared CNAME.</li>
      */
     public $Filters;
 
@@ -121,16 +112,13 @@ class DescribeAccelerationDomainsRequest extends AbstractModel
      * @param string $ZoneId ID of the site related with the acceleration domain name.
      * @param integer $Offset Offset for paginated queries. Default value: 0.
      * @param integer $Limit Limit on paginated queries. Default value: 20. Maximum value: 200.
-     * @param array $Filters Filter conditions. The maximum value of Filters.Values is 20. If it is not specified, all domains related with the specific zone-id are returned.
-<li>domain-name: Filtering based on the acceleration domain name</li>
-<li>origin-type: Filtering based on the type of the origin server</li>
-<li>origin: Filtering based on the primary origin server address</li>
-<li>backup-origin: Filtering based on the secondary origin server address</li>
-<li>domain-cname: Filtering based on the CNAME</li>
-<li>share-cname: Filtering based on the shared CNAME</li>
-<li>vodeo-sub-app-id: Filtering based on [vodeo sub-application ID]</li>
-<li>vodeo-distribution-range: Filtering based on [vodeo distribution range]</li>
-<li>vodeo-bucket-id: Filtering based on [vodeo storage bucket ID];</li>
+     * @param array $Filters Filter criteria. The maximum number of Filters.Values is 20. If this parameter is not input, all domain name information under the current zone-id will be returned. The detailed filter criteria are as follows:
+<li>domain-name: Filter by acceleration domain name;</li>
+<li>origin-type: Filter by origin server type;</li>
+<li>origin: Filter by primary origin server address;</li>
+<li>backup-origin: Filter by replica origin server address;</li>
+<li>domain-cname: Filter by CNAME;</li>
+<li>share-cname: Filter by shared CNAME.</li>
      * @param string $Order Sort the returned results according to this field. Values include:
 <li>`created_on`: Creation time of the acceleration domain name</li>
 <li>`domain-name`: (Default) Acceleration domain name.</li> 

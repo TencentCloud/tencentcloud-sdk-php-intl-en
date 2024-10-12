@@ -20,12 +20,12 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Output format for real-time log delivery. You can directly use the specified predefined log output format (JSON Lines / csv) through the FormatType parameter, or define a variant output format through additional parameters based on the predefined log output format.
  *
- * @method string getFormatType() Obtain Predefined output format type for log delivery. Valid values:
-<li>json: Use the predefined log output format JSON Lines, where fields in each log record are presented as key-value pairs;</li>
-<li>csv: Use the predefined log output format csv, where fields in each log record is only presented as field values, excluding field names. </li>
- * @method void setFormatType(string $FormatType) Set Predefined output format type for log delivery. Valid values:
-<li>json: Use the predefined log output format JSON Lines, where fields in each log record are presented as key-value pairs;</li>
-<li>csv: Use the predefined log output format csv, where fields in each log record is only presented as field values, excluding field names. </li>
+ * @method string getFormatType() Obtain Predefined output format for log shipping. Valid values:
+<li>json: Use JSON Lines as the predefined log output format. In each log entry, fields are displayed as key-value pairs.</li>
+<li>csv: Use the predefined log output format csv, where each log entry only is presented as field values only, excluding field names. </li>
+ * @method void setFormatType(string $FormatType) Set Predefined output format for log shipping. Valid values:
+<li>json: Use JSON Lines as the predefined log output format. In each log entry, fields are displayed as key-value pairs.</li>
+<li>csv: Use the predefined log output format csv, where each log entry only is presented as field values only, excluding field names. </li>
  * @method string getBatchPrefix() Obtain A string added before each log delivery batch. Each log delivery batch may contain multiple log records.
  * @method void setBatchPrefix(string $BatchPrefix) Set A string added before each log delivery batch. Each log delivery batch may contain multiple log records.
  * @method string getBatchSuffix() Obtain A string appended after each log delivery batch.
@@ -35,28 +35,28 @@ use TencentCloud\Common\AbstractModel;
  * @method string getRecordSuffix() Obtain A string appended after each log record.
  * @method void setRecordSuffix(string $RecordSuffix) Set A string appended after each log record.
  * @method string getRecordDelimiter() Obtain A string inserted between log records as a separator. Valid values:
-<li>\n: Line break;</li>
-<li>\t: Tab character;</li>
+<li>\n: line break;</li>
+<li>\t: tab character;</li>
 <li>,: Half-width comma. </li>
  * @method void setRecordDelimiter(string $RecordDelimiter) Set A string inserted between log records as a separator. Valid values:
-<li>\n: Line break;</li>
-<li>\t: Tab character;</li>
+<li>\n: line break;</li>
+<li>\t: tab character;</li>
 <li>,: Half-width comma. </li>
  * @method string getFieldDelimiter() Obtain A string inserted between fields as a separator within a single log record. Valid values:
-<li>\t: Tab character;</li>
-<li>,: Half-width comma;</li>
+<li>\t: tab character;</li>
+<li>,: half-width comma;</li>
 <li>;: Half-width semicolon. </li>
  * @method void setFieldDelimiter(string $FieldDelimiter) Set A string inserted between fields as a separator within a single log record. Valid values:
-<li>\t: Tab character;</li>
-<li>,: Half-width comma;</li>
+<li>\t: tab character;</li>
+<li>,: half-width comma;</li>
 <li>;: Half-width semicolon. </li>
  */
 class LogFormat extends AbstractModel
 {
     /**
-     * @var string Predefined output format type for log delivery. Valid values:
-<li>json: Use the predefined log output format JSON Lines, where fields in each log record are presented as key-value pairs;</li>
-<li>csv: Use the predefined log output format csv, where fields in each log record is only presented as field values, excluding field names. </li>
+     * @var string Predefined output format for log shipping. Valid values:
+<li>json: Use JSON Lines as the predefined log output format. In each log entry, fields are displayed as key-value pairs.</li>
+<li>csv: Use the predefined log output format csv, where each log entry only is presented as field values only, excluding field names. </li>
      */
     public $FormatType;
 
@@ -82,35 +82,35 @@ class LogFormat extends AbstractModel
 
     /**
      * @var string A string inserted between log records as a separator. Valid values:
-<li>\n: Line break;</li>
-<li>\t: Tab character;</li>
+<li>\n: line break;</li>
+<li>\t: tab character;</li>
 <li>,: Half-width comma. </li>
      */
     public $RecordDelimiter;
 
     /**
      * @var string A string inserted between fields as a separator within a single log record. Valid values:
-<li>\t: Tab character;</li>
-<li>,: Half-width comma;</li>
+<li>\t: tab character;</li>
+<li>,: half-width comma;</li>
 <li>;: Half-width semicolon. </li>
      */
     public $FieldDelimiter;
 
     /**
-     * @param string $FormatType Predefined output format type for log delivery. Valid values:
-<li>json: Use the predefined log output format JSON Lines, where fields in each log record are presented as key-value pairs;</li>
-<li>csv: Use the predefined log output format csv, where fields in each log record is only presented as field values, excluding field names. </li>
+     * @param string $FormatType Predefined output format for log shipping. Valid values:
+<li>json: Use JSON Lines as the predefined log output format. In each log entry, fields are displayed as key-value pairs.</li>
+<li>csv: Use the predefined log output format csv, where each log entry only is presented as field values only, excluding field names. </li>
      * @param string $BatchPrefix A string added before each log delivery batch. Each log delivery batch may contain multiple log records.
      * @param string $BatchSuffix A string appended after each log delivery batch.
      * @param string $RecordPrefix A string added before each log record.
      * @param string $RecordSuffix A string appended after each log record.
      * @param string $RecordDelimiter A string inserted between log records as a separator. Valid values:
-<li>\n: Line break;</li>
-<li>\t: Tab character;</li>
+<li>\n: line break;</li>
+<li>\t: tab character;</li>
 <li>,: Half-width comma. </li>
      * @param string $FieldDelimiter A string inserted between fields as a separator within a single log record. Valid values:
-<li>\t: Tab character;</li>
-<li>,: Half-width comma;</li>
+<li>\t: tab character;</li>
+<li>,: half-width comma;</li>
 <li>;: Half-width semicolon. </li>
      */
     function __construct()
