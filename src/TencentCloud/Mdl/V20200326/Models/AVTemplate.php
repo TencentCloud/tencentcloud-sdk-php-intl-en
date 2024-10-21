@@ -98,6 +98,10 @@ Valid values: `6000`, `7000`, `8000`, `10000`, `12000`, `14000`, `16000`, `20000
  * @method void setVideoEnhanceEnabled(integer $VideoEnhanceEnabled) Set 
  * @method array getVideoEnhanceSettings() Obtain 
  * @method void setVideoEnhanceSettings(array $VideoEnhanceSettings) Set 
+ * @method integer getGopSize() Obtain Key frame interval, 300-10000, optional.
+ * @method void setGopSize(integer $GopSize) Set Key frame interval, 300-10000, optional.
+ * @method string getGopSizeUnits() Obtain Keyframe units, only support MILLISECONDS (milliseconds).
+ * @method void setGopSizeUnits(string $GopSizeUnits) Set Keyframe units, only support MILLISECONDS (milliseconds).
  */
 class AVTemplate extends AbstractModel
 {
@@ -269,6 +273,16 @@ Valid values: `6000`, `7000`, `8000`, `10000`, `12000`, `14000`, `16000`, `20000
     public $VideoEnhanceSettings;
 
     /**
+     * @var integer Key frame interval, 300-10000, optional.
+     */
+    public $GopSize;
+
+    /**
+     * @var string Keyframe units, only support MILLISECONDS (milliseconds).
+     */
+    public $GopSizeUnits;
+
+    /**
      * @param string $Name Name of an audio/video transcoding template, which can contain 1-20 case-sensitive letters and digits
      * @param integer $NeedVideo Whether video is needed. `0`: not needed; `1`: needed
      * @param string $Vcodec Video codec. Valid values: `H264`, `H265`. If this parameter is left empty, the original video codec will be used.
@@ -308,6 +322,8 @@ Valid values: `6000`, `7000`, `8000`, `10000`, `12000`, `14000`, `16000`, `20000
      * @param array $AudioTracks Quantity limit 0-20 Valid when MultiAudioTrackEnabled is turned on.
      * @param integer $VideoEnhanceEnabled 
      * @param array $VideoEnhanceSettings 
+     * @param integer $GopSize Key frame interval, 300-10000, optional.
+     * @param string $GopSizeUnits Keyframe units, only support MILLISECONDS (milliseconds).
      */
     function __construct()
     {
@@ -462,6 +478,14 @@ Valid values: `6000`, `7000`, `8000`, `10000`, `12000`, `14000`, `16000`, `20000
                 $obj->deserialize($value);
                 array_push($this->VideoEnhanceSettings, $obj);
             }
+        }
+
+        if (array_key_exists("GopSize",$param) and $param["GopSize"] !== null) {
+            $this->GopSize = $param["GopSize"];
+        }
+
+        if (array_key_exists("GopSizeUnits",$param) and $param["GopSizeUnits"] !== null) {
+            $this->GopSizeUnits = $param["GopSizeUnits"];
         }
     }
 }
