@@ -42,8 +42,8 @@ Note: This field may return null, indicating that no valid value is found.
  * @method void setTypeName(string $TypeName) Set Model name.
  * @method array getLocalDiskTypeList() Obtain List of local disk specifications. If the parameter returns null, it means that local disks cannot be created.
  * @method void setLocalDiskTypeList(array $LocalDiskTypeList) Set List of local disk specifications. If the parameter returns null, it means that local disks cannot be created.
- * @method string getStatus() Obtain Whether an instance model is available. Valid values: <br><li>SELL: available <br><li>SOLD_OUT: sold out
- * @method void setStatus(string $Status) Set Whether an instance model is available. Valid values: <br><li>SELL: available <br><li>SOLD_OUT: sold out
+ * @method string getStatus() Obtain Whether an instance is for sale. Valid values:<br><li>SELL: The instance is available for purchase.<br></li>SOLD_OUT: The instance has been sold out.
+ * @method void setStatus(string $Status) Set Whether an instance is for sale. Valid values:<br><li>SELL: The instance is available for purchase.<br></li>SOLD_OUT: The instance has been sold out.
  * @method ItemPrice getPrice() Obtain Price of an instance model.
  * @method void setPrice(ItemPrice $Price) Set Price of an instance model.
  * @method string getSoldOutReason() Obtain Details of out-of-stock items
@@ -68,6 +68,18 @@ Note: this field may return null, indicating that no valid value is obtained.
  * @method void setGpuCount(float $GpuCount) Set 
  * @method string getFrequency() Obtain CPU clock rate of the instance
  * @method void setFrequency(string $Frequency) Set CPU clock rate of the instance
+ * @method string getStatusCategory() Obtain Inventory status. Valid values:
+<li>EnoughStock: Inventory is sufficient.</li> 
+<li>NormalStock: Supply is guaranteed.</li>
+<li>UnderStock: Inventory is about to sell out.</li> 
+<li>WithoutStock: Inventory is already sold out.</li>
+Note: This field may return null, indicating that no valid value is found.
+ * @method void setStatusCategory(string $StatusCategory) Set Inventory status. Valid values:
+<li>EnoughStock: Inventory is sufficient.</li> 
+<li>NormalStock: Supply is guaranteed.</li>
+<li>UnderStock: Inventory is about to sell out.</li> 
+<li>WithoutStock: Inventory is already sold out.</li>
+Note: This field may return null, indicating that no valid value is found.
  */
 class InstanceTypeQuotaItem extends AbstractModel
 {
@@ -123,7 +135,7 @@ Note: This field may return null, indicating that no valid value is found.
     public $LocalDiskTypeList;
 
     /**
-     * @var string Whether an instance model is available. Valid values: <br><li>SELL: available <br><li>SOLD_OUT: sold out
+     * @var string Whether an instance is for sale. Valid values:<br><li>SELL: The instance is available for purchase.<br></li>SOLD_OUT: The instance has been sold out.
      */
     public $Status;
 
@@ -184,6 +196,16 @@ Note: this field may return null, indicating that no valid value is obtained.
     public $Frequency;
 
     /**
+     * @var string Inventory status. Valid values:
+<li>EnoughStock: Inventory is sufficient.</li> 
+<li>NormalStock: Supply is guaranteed.</li>
+<li>UnderStock: Inventory is about to sell out.</li> 
+<li>WithoutStock: Inventory is already sold out.</li>
+Note: This field may return null, indicating that no valid value is found.
+     */
+    public $StatusCategory;
+
+    /**
      * @param string $Zone Availability zone.
      * @param string $InstanceType Instance model.
      * @param string $InstanceChargeType Instance billing plan. Valid values: <br><li>POSTPAID_BY_HOUR: pay after use. You are billed for your traffic by the hour.<br><li>`CDHPAID`: [`CDH`](https://intl.cloud.tencent.com/document/product/416?from_cn_redirect=1) billing plan. Applicable to `CDH` only, not the instances on the host.
@@ -195,7 +217,7 @@ Note: This field may return null, indicating that no valid value is found.
      * @param string $InstanceFamily Instance model family.
      * @param string $TypeName Model name.
      * @param array $LocalDiskTypeList List of local disk specifications. If the parameter returns null, it means that local disks cannot be created.
-     * @param string $Status Whether an instance model is available. Valid values: <br><li>SELL: available <br><li>SOLD_OUT: sold out
+     * @param string $Status Whether an instance is for sale. Valid values:<br><li>SELL: The instance is available for purchase.<br></li>SOLD_OUT: The instance has been sold out.
      * @param ItemPrice $Price Price of an instance model.
      * @param string $SoldOutReason Details of out-of-stock items
 Note: this field may return null, indicating that no valid value is obtained.
@@ -208,6 +230,12 @@ Note: this field may return null, indicating that no valid value is obtained.
      * @param string $Remark Descriptive information of the instance.
      * @param float $GpuCount 
      * @param string $Frequency CPU clock rate of the instance
+     * @param string $StatusCategory Inventory status. Valid values:
+<li>EnoughStock: Inventory is sufficient.</li> 
+<li>NormalStock: Supply is guaranteed.</li>
+<li>UnderStock: Inventory is about to sell out.</li> 
+<li>WithoutStock: Inventory is already sold out.</li>
+Note: This field may return null, indicating that no valid value is found.
      */
     function __construct()
     {
@@ -315,6 +343,10 @@ Note: this field may return null, indicating that no valid value is obtained.
 
         if (array_key_exists("Frequency",$param) and $param["Frequency"] !== null) {
             $this->Frequency = $param["Frequency"];
+        }
+
+        if (array_key_exists("StatusCategory",$param) and $param["StatusCategory"] !== null) {
+            $this->StatusCategory = $param["StatusCategory"];
         }
     }
 }

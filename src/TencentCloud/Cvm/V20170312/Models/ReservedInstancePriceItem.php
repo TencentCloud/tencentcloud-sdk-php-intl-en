@@ -38,6 +38,10 @@ Unit: second
 Valid value: `Linux`.
  * @method void setProductDescription(string $ProductDescription) Set The operating system of the reserved instance, such as `Linux`.
 Valid value: `Linux`.
+ * @method float getDiscountUsagePrice() Obtain Upfront total cost, in USD.
+ * @method void setDiscountUsagePrice(float $DiscountUsagePrice) Set Upfront total cost, in USD.
+ * @method float getDiscountFixedPrice() Obtain Discount price for subsequent total cost, in USD/hr.
+ * @method void setDiscountFixedPrice(float $DiscountFixedPrice) Set Discount price for subsequent total cost, in USD/hr.
  */
 class ReservedInstancePriceItem extends AbstractModel
 {
@@ -79,6 +83,16 @@ Valid value: `Linux`.
     public $ProductDescription;
 
     /**
+     * @var float Upfront total cost, in USD.
+     */
+    public $DiscountUsagePrice;
+
+    /**
+     * @var float Discount price for subsequent total cost, in USD/hr.
+     */
+    public $DiscountFixedPrice;
+
+    /**
      * @param string $OfferingType Payment method. Valid values: All Upfront, Partial Upfront, and No Upfront.
      * @param float $FixedPrice Upfront payment, in USD.
      * @param float $UsagePrice Subsequent unit price, in USD/hr.
@@ -88,6 +102,8 @@ Valid value: `Linux`.
 Unit: second
      * @param string $ProductDescription The operating system of the reserved instance, such as `Linux`.
 Valid value: `Linux`.
+     * @param float $DiscountUsagePrice Upfront total cost, in USD.
+     * @param float $DiscountFixedPrice Discount price for subsequent total cost, in USD/hr.
      */
     function __construct()
     {
@@ -128,6 +144,14 @@ Valid value: `Linux`.
 
         if (array_key_exists("ProductDescription",$param) and $param["ProductDescription"] !== null) {
             $this->ProductDescription = $param["ProductDescription"];
+        }
+
+        if (array_key_exists("DiscountUsagePrice",$param) and $param["DiscountUsagePrice"] !== null) {
+            $this->DiscountUsagePrice = $param["DiscountUsagePrice"];
+        }
+
+        if (array_key_exists("DiscountFixedPrice",$param) and $param["DiscountFixedPrice"] !== null) {
+            $this->DiscountFixedPrice = $param["DiscountFixedPrice"];
         }
     }
 }

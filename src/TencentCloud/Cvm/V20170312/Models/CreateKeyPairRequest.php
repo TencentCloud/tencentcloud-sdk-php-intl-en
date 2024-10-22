@@ -22,14 +22,16 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getKeyName() Obtain Name of the key pair, which can contain numbers, letters, and underscores, with a maximum length of 25 characters.
  * @method void setKeyName(string $KeyName) Set Name of the key pair, which can contain numbers, letters, and underscores, with a maximum length of 25 characters.
- * @method integer getProjectId() Obtain The ID of the project to which the new key pair belongs.
-You can query the project IDs in two ways:
-<li>Query the project IDs in the project list.
-<li>Call `DescribeProject` and look for `projectId` in the response.
- * @method void setProjectId(integer $ProjectId) Set The ID of the project to which the new key pair belongs.
-You can query the project IDs in two ways:
-<li>Query the project IDs in the project list.
-<li>Call `DescribeProject` and look for `projectId` in the response.
+ * @method integer getProjectId() Obtain ID of the project to which the created key pair belongs.
+
+You can obtain a project ID in the following ways:
+<li>Query the project ID through the project list.</li>
+<li>Call the [DescribeProjects](https://intl.cloud.tencent.com/document/api/651/78725?from_cn_redirect=1) API and obtain the `projectId` from the return information.</li>
+ * @method void setProjectId(integer $ProjectId) Set ID of the project to which the created key pair belongs.
+
+You can obtain a project ID in the following ways:
+<li>Query the project ID through the project list.</li>
+<li>Call the [DescribeProjects](https://intl.cloud.tencent.com/document/api/651/78725?from_cn_redirect=1) API and obtain the `projectId` from the return information.</li>
  * @method array getTagSpecification() Obtain Tag description list. This parameter is used to bind a tag to a key pair.
  * @method void setTagSpecification(array $TagSpecification) Set Tag description list. This parameter is used to bind a tag to a key pair.
  */
@@ -41,10 +43,11 @@ class CreateKeyPairRequest extends AbstractModel
     public $KeyName;
 
     /**
-     * @var integer The ID of the project to which the new key pair belongs.
-You can query the project IDs in two ways:
-<li>Query the project IDs in the project list.
-<li>Call `DescribeProject` and look for `projectId` in the response.
+     * @var integer ID of the project to which the created key pair belongs.
+
+You can obtain a project ID in the following ways:
+<li>Query the project ID through the project list.</li>
+<li>Call the [DescribeProjects](https://intl.cloud.tencent.com/document/api/651/78725?from_cn_redirect=1) API and obtain the `projectId` from the return information.</li>
      */
     public $ProjectId;
 
@@ -55,10 +58,11 @@ You can query the project IDs in two ways:
 
     /**
      * @param string $KeyName Name of the key pair, which can contain numbers, letters, and underscores, with a maximum length of 25 characters.
-     * @param integer $ProjectId The ID of the project to which the new key pair belongs.
-You can query the project IDs in two ways:
-<li>Query the project IDs in the project list.
-<li>Call `DescribeProject` and look for `projectId` in the response.
+     * @param integer $ProjectId ID of the project to which the created key pair belongs.
+
+You can obtain a project ID in the following ways:
+<li>Query the project ID through the project list.</li>
+<li>Call the [DescribeProjects](https://intl.cloud.tencent.com/document/api/651/78725?from_cn_redirect=1) API and obtain the `projectId` from the return information.</li>
      * @param array $TagSpecification Tag description list. This parameter is used to bind a tag to a key pair.
      */
     function __construct()

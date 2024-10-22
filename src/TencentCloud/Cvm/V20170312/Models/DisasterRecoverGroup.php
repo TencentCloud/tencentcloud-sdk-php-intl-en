@@ -24,8 +24,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDisasterRecoverGroupId(string $DisasterRecoverGroupId) Set ID of a spread placement group.
  * @method string getName() Obtain Name of a spread placement group, which must be 1-60 characters long.
  * @method void setName(string $Name) Set Name of a spread placement group, which must be 1-60 characters long.
- * @method string getType() Obtain Type of a spread placement group. Valid values: <br><li>HOST: physical machine <br><li>SW: switch <br><li>RACK: rack.
- * @method void setType(string $Type) Set Type of a spread placement group. Valid values: <br><li>HOST: physical machine <br><li>SW: switch <br><li>RACK: rack.
+ * @method string getType() Obtain Type of a spread placement group. Valid values:<br>
+<li>HOST: physical machine.<br></li>
+<li>SW: switch.<br></li>
+<li>RACK: rack.</li>
+ * @method void setType(string $Type) Set Type of a spread placement group. Valid values:<br>
+<li>HOST: physical machine.<br></li>
+<li>SW: switch.<br></li>
+<li>RACK: rack.</li>
  * @method integer getCvmQuotaTotal() Obtain The maximum number of CVMs that can be hosted in a spread placement group.
  * @method void setCvmQuotaTotal(integer $CvmQuotaTotal) Set The maximum number of CVMs that can be hosted in a spread placement group.
  * @method integer getCurrentNum() Obtain The current number of CVMs in a spread placement group.
@@ -52,7 +58,10 @@ class DisasterRecoverGroup extends AbstractModel
     public $Name;
 
     /**
-     * @var string Type of a spread placement group. Valid values: <br><li>HOST: physical machine <br><li>SW: switch <br><li>RACK: rack.
+     * @var string Type of a spread placement group. Valid values:<br>
+<li>HOST: physical machine.<br></li>
+<li>SW: switch.<br></li>
+<li>RACK: rack.</li>
      */
     public $Type;
 
@@ -81,7 +90,10 @@ Note: This field may return null, indicating that no valid value is found.
     /**
      * @param string $DisasterRecoverGroupId ID of a spread placement group.
      * @param string $Name Name of a spread placement group, which must be 1-60 characters long.
-     * @param string $Type Type of a spread placement group. Valid values: <br><li>HOST: physical machine <br><li>SW: switch <br><li>RACK: rack.
+     * @param string $Type Type of a spread placement group. Valid values:<br>
+<li>HOST: physical machine.<br></li>
+<li>SW: switch.<br></li>
+<li>RACK: rack.</li>
      * @param integer $CvmQuotaTotal The maximum number of CVMs that can be hosted in a spread placement group.
      * @param integer $CurrentNum The current number of CVMs in a spread placement group.
      * @param array $InstanceIds The list of CVM IDs in a spread placement group.

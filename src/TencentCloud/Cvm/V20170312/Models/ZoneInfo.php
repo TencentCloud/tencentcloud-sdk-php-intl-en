@@ -20,21 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Information on availability zones.
  *
- * @method string getZone() Obtain Availability zone name, such as `ap-guangzhou-3`.
-The following is a list of all availability zones:
+ * @method string getZone() Obtain Availability zone name, for example, ap-guangzhou-3.
+
+The names of availability zones across the network are as follows:
 <li> ap-chongqing-1 </li>
 <li> ap-seoul-1 </li>
 <li> ap-seoul-2 </li>
 <li> ap-chengdu-1 </li>
 <li> ap-chengdu-2 </li>
-<li> ap-hongkong-1 (resource out of stock)</li>
+<li> ap-hongkong-1 (sold out)</li>
 <li> ap-hongkong-2 </li>
 <li> ap-hongkong-3 </li>
 <li> ap-shenzhen-fsi-1 </li>
 <li> ap-shenzhen-fsi-2 </li>
-<li> ap-shenzhen-fsi-3 </li>
-<li> ap-guangzhou-1 (resource out of stock)</li>
-<li> ap-guangzhou-2 (resource out of stock)</li>
+<li> ap-shenzhen-fsi-3 (sold out)</li>
+<li> ap-guangzhou-1 (sold out)</li>
+<li> ap-guangzhou-2 (sold out)</li>
 <li> ap-guangzhou-3 </li>
 <li> ap-guangzhou-4 </li>
 <li> ap-guangzhou-6 </li>
@@ -50,7 +51,7 @@ The following is a list of all availability zones:
 <li> ap-shanghai-fsi-3 </li>
 <li> ap-bangkok-1 </li>
 <li> ap-bangkok-2 </li>
-<li> ap-shanghai-1 (resource out of stock) </li>
+<li> ap-shanghai-1 (sold out)</li>
 <li> ap-shanghai-2 </li>
 <li> ap-shanghai-3 </li>
 <li> ap-shanghai-4 </li>
@@ -59,7 +60,7 @@ The following is a list of all availability zones:
 <li> ap-mumbai-1 </li>
 <li> ap-mumbai-2 </li>
 <li> eu-moscow-1 </li>
-<li> ap-beijing-1 (resource out of stock) </li>
+<li> ap-beijing-1 (sold out)</li>
 <li> ap-beijing-2 </li>
 <li> ap-beijing-3 </li>
 <li> ap-beijing-4 </li>
@@ -70,7 +71,6 @@ The following is a list of all availability zones:
 <li> na-siliconvalley-2 </li>
 <li> eu-frankfurt-1 </li>
 <li> eu-frankfurt-2 </li>
-<li> na-toronto-1 </li>
 <li> na-ashburn-1 </li>
 <li> na-ashburn-2 </li>
 <li> ap-nanjing-1 </li>
@@ -79,21 +79,22 @@ The following is a list of all availability zones:
 <li> sa-saopaulo-1</li>
 <li> ap-jakarta-1 </li>
 <li> ap-jakarta-2 </li>
- * @method void setZone(string $Zone) Set Availability zone name, such as `ap-guangzhou-3`.
-The following is a list of all availability zones:
+ * @method void setZone(string $Zone) Set Availability zone name, for example, ap-guangzhou-3.
+
+The names of availability zones across the network are as follows:
 <li> ap-chongqing-1 </li>
 <li> ap-seoul-1 </li>
 <li> ap-seoul-2 </li>
 <li> ap-chengdu-1 </li>
 <li> ap-chengdu-2 </li>
-<li> ap-hongkong-1 (resource out of stock)</li>
+<li> ap-hongkong-1 (sold out)</li>
 <li> ap-hongkong-2 </li>
 <li> ap-hongkong-3 </li>
 <li> ap-shenzhen-fsi-1 </li>
 <li> ap-shenzhen-fsi-2 </li>
-<li> ap-shenzhen-fsi-3 </li>
-<li> ap-guangzhou-1 (resource out of stock)</li>
-<li> ap-guangzhou-2 (resource out of stock)</li>
+<li> ap-shenzhen-fsi-3 (sold out)</li>
+<li> ap-guangzhou-1 (sold out)</li>
+<li> ap-guangzhou-2 (sold out)</li>
 <li> ap-guangzhou-3 </li>
 <li> ap-guangzhou-4 </li>
 <li> ap-guangzhou-6 </li>
@@ -109,7 +110,7 @@ The following is a list of all availability zones:
 <li> ap-shanghai-fsi-3 </li>
 <li> ap-bangkok-1 </li>
 <li> ap-bangkok-2 </li>
-<li> ap-shanghai-1 (resource out of stock) </li>
+<li> ap-shanghai-1 (sold out)</li>
 <li> ap-shanghai-2 </li>
 <li> ap-shanghai-3 </li>
 <li> ap-shanghai-4 </li>
@@ -118,7 +119,7 @@ The following is a list of all availability zones:
 <li> ap-mumbai-1 </li>
 <li> ap-mumbai-2 </li>
 <li> eu-moscow-1 </li>
-<li> ap-beijing-1 (resource out of stock) </li>
+<li> ap-beijing-1 (sold out)</li>
 <li> ap-beijing-2 </li>
 <li> ap-beijing-3 </li>
 <li> ap-beijing-4 </li>
@@ -129,7 +130,6 @@ The following is a list of all availability zones:
 <li> na-siliconvalley-2 </li>
 <li> eu-frankfurt-1 </li>
 <li> eu-frankfurt-2 </li>
-<li> na-toronto-1 </li>
 <li> na-ashburn-1 </li>
 <li> na-ashburn-2 </li>
 <li> ap-nanjing-1 </li>
@@ -148,21 +148,22 @@ The following is a list of all availability zones:
 class ZoneInfo extends AbstractModel
 {
     /**
-     * @var string Availability zone name, such as `ap-guangzhou-3`.
-The following is a list of all availability zones:
+     * @var string Availability zone name, for example, ap-guangzhou-3.
+
+The names of availability zones across the network are as follows:
 <li> ap-chongqing-1 </li>
 <li> ap-seoul-1 </li>
 <li> ap-seoul-2 </li>
 <li> ap-chengdu-1 </li>
 <li> ap-chengdu-2 </li>
-<li> ap-hongkong-1 (resource out of stock)</li>
+<li> ap-hongkong-1 (sold out)</li>
 <li> ap-hongkong-2 </li>
 <li> ap-hongkong-3 </li>
 <li> ap-shenzhen-fsi-1 </li>
 <li> ap-shenzhen-fsi-2 </li>
-<li> ap-shenzhen-fsi-3 </li>
-<li> ap-guangzhou-1 (resource out of stock)</li>
-<li> ap-guangzhou-2 (resource out of stock)</li>
+<li> ap-shenzhen-fsi-3 (sold out)</li>
+<li> ap-guangzhou-1 (sold out)</li>
+<li> ap-guangzhou-2 (sold out)</li>
 <li> ap-guangzhou-3 </li>
 <li> ap-guangzhou-4 </li>
 <li> ap-guangzhou-6 </li>
@@ -178,7 +179,7 @@ The following is a list of all availability zones:
 <li> ap-shanghai-fsi-3 </li>
 <li> ap-bangkok-1 </li>
 <li> ap-bangkok-2 </li>
-<li> ap-shanghai-1 (resource out of stock) </li>
+<li> ap-shanghai-1 (sold out)</li>
 <li> ap-shanghai-2 </li>
 <li> ap-shanghai-3 </li>
 <li> ap-shanghai-4 </li>
@@ -187,7 +188,7 @@ The following is a list of all availability zones:
 <li> ap-mumbai-1 </li>
 <li> ap-mumbai-2 </li>
 <li> eu-moscow-1 </li>
-<li> ap-beijing-1 (resource out of stock) </li>
+<li> ap-beijing-1 (sold out)</li>
 <li> ap-beijing-2 </li>
 <li> ap-beijing-3 </li>
 <li> ap-beijing-4 </li>
@@ -198,7 +199,6 @@ The following is a list of all availability zones:
 <li> na-siliconvalley-2 </li>
 <li> eu-frankfurt-1 </li>
 <li> eu-frankfurt-2 </li>
-<li> na-toronto-1 </li>
 <li> na-ashburn-1 </li>
 <li> na-ashburn-2 </li>
 <li> ap-nanjing-1 </li>
@@ -226,21 +226,22 @@ The following is a list of all availability zones:
     public $ZoneState;
 
     /**
-     * @param string $Zone Availability zone name, such as `ap-guangzhou-3`.
-The following is a list of all availability zones:
+     * @param string $Zone Availability zone name, for example, ap-guangzhou-3.
+
+The names of availability zones across the network are as follows:
 <li> ap-chongqing-1 </li>
 <li> ap-seoul-1 </li>
 <li> ap-seoul-2 </li>
 <li> ap-chengdu-1 </li>
 <li> ap-chengdu-2 </li>
-<li> ap-hongkong-1 (resource out of stock)</li>
+<li> ap-hongkong-1 (sold out)</li>
 <li> ap-hongkong-2 </li>
 <li> ap-hongkong-3 </li>
 <li> ap-shenzhen-fsi-1 </li>
 <li> ap-shenzhen-fsi-2 </li>
-<li> ap-shenzhen-fsi-3 </li>
-<li> ap-guangzhou-1 (resource out of stock)</li>
-<li> ap-guangzhou-2 (resource out of stock)</li>
+<li> ap-shenzhen-fsi-3 (sold out)</li>
+<li> ap-guangzhou-1 (sold out)</li>
+<li> ap-guangzhou-2 (sold out)</li>
 <li> ap-guangzhou-3 </li>
 <li> ap-guangzhou-4 </li>
 <li> ap-guangzhou-6 </li>
@@ -256,7 +257,7 @@ The following is a list of all availability zones:
 <li> ap-shanghai-fsi-3 </li>
 <li> ap-bangkok-1 </li>
 <li> ap-bangkok-2 </li>
-<li> ap-shanghai-1 (resource out of stock) </li>
+<li> ap-shanghai-1 (sold out)</li>
 <li> ap-shanghai-2 </li>
 <li> ap-shanghai-3 </li>
 <li> ap-shanghai-4 </li>
@@ -265,7 +266,7 @@ The following is a list of all availability zones:
 <li> ap-mumbai-1 </li>
 <li> ap-mumbai-2 </li>
 <li> eu-moscow-1 </li>
-<li> ap-beijing-1 (resource out of stock) </li>
+<li> ap-beijing-1 (sold out)</li>
 <li> ap-beijing-2 </li>
 <li> ap-beijing-3 </li>
 <li> ap-beijing-4 </li>
@@ -276,7 +277,6 @@ The following is a list of all availability zones:
 <li> na-siliconvalley-2 </li>
 <li> eu-frankfurt-1 </li>
 <li> eu-frankfurt-2 </li>
-<li> na-toronto-1 </li>
 <li> na-ashburn-1 </li>
 <li> na-ashburn-2 </li>
 <li> ap-nanjing-1 </li>

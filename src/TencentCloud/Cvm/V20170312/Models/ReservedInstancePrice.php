@@ -28,6 +28,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOriginalUsagePrice(float $OriginalUsagePrice) Set Original subsequent unit price, in USD/hr.
  * @method float getDiscountUsagePrice() Obtain Discounted subsequent unit price, in USD/hr.
  * @method void setDiscountUsagePrice(float $DiscountUsagePrice) Set Discounted subsequent unit price, in USD/hr.
+ * @method float getFixedPriceDiscount() Obtain Discount on upfront cost. For example, 20.0 indicates 80% off. Note: This field may return null, indicating that no valid value is found.
+Note: This field may return null, indicating that no valid value is found.
+ * @method void setFixedPriceDiscount(float $FixedPriceDiscount) Set Discount on upfront cost. For example, 20.0 indicates 80% off. Note: This field may return null, indicating that no valid value is found.
+Note: This field may return null, indicating that no valid value is found.
+ * @method float getUsagePriceDiscount() Obtain Discount on subsequent cost. For example, 20.0 indicates 80% off. Note: This field may return null, indicating that no valid value is found.
+Note: This field may return null, indicating that no valid value is found.
+ * @method void setUsagePriceDiscount(float $UsagePriceDiscount) Set Discount on subsequent cost. For example, 20.0 indicates 80% off. Note: This field may return null, indicating that no valid value is found.
+Note: This field may return null, indicating that no valid value is found.
  */
 class ReservedInstancePrice extends AbstractModel
 {
@@ -52,10 +60,26 @@ class ReservedInstancePrice extends AbstractModel
     public $DiscountUsagePrice;
 
     /**
+     * @var float Discount on upfront cost. For example, 20.0 indicates 80% off. Note: This field may return null, indicating that no valid value is found.
+Note: This field may return null, indicating that no valid value is found.
+     */
+    public $FixedPriceDiscount;
+
+    /**
+     * @var float Discount on subsequent cost. For example, 20.0 indicates 80% off. Note: This field may return null, indicating that no valid value is found.
+Note: This field may return null, indicating that no valid value is found.
+     */
+    public $UsagePriceDiscount;
+
+    /**
      * @param float $OriginalFixedPrice Original upfront payment, in USD.
      * @param float $DiscountFixedPrice Discounted upfront payment, in USD.
      * @param float $OriginalUsagePrice Original subsequent unit price, in USD/hr.
      * @param float $DiscountUsagePrice Discounted subsequent unit price, in USD/hr.
+     * @param float $FixedPriceDiscount Discount on upfront cost. For example, 20.0 indicates 80% off. Note: This field may return null, indicating that no valid value is found.
+Note: This field may return null, indicating that no valid value is found.
+     * @param float $UsagePriceDiscount Discount on subsequent cost. For example, 20.0 indicates 80% off. Note: This field may return null, indicating that no valid value is found.
+Note: This field may return null, indicating that no valid value is found.
      */
     function __construct()
     {
@@ -84,6 +108,14 @@ class ReservedInstancePrice extends AbstractModel
 
         if (array_key_exists("DiscountUsagePrice",$param) and $param["DiscountUsagePrice"] !== null) {
             $this->DiscountUsagePrice = $param["DiscountUsagePrice"];
+        }
+
+        if (array_key_exists("FixedPriceDiscount",$param) and $param["FixedPriceDiscount"] !== null) {
+            $this->FixedPriceDiscount = $param["FixedPriceDiscount"];
+        }
+
+        if (array_key_exists("UsagePriceDiscount",$param) and $param["UsagePriceDiscount"] !== null) {
+            $this->UsagePriceDiscount = $param["UsagePriceDiscount"];
         }
     }
 }

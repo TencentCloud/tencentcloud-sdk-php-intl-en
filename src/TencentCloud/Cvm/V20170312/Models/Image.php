@@ -62,6 +62,10 @@ Note: This field may return `null`, indicating that no valid value was found.
 Note: This field may return `null`, indicating that no valid value was found.
  * @method string getLicenseType() Obtain Image license type
  * @method void setLicenseType(string $LicenseType) Set Image license type
+ * @method string getImageFamily() Obtain Image family, Note: This field may return empty
+ * @method void setImageFamily(string $ImageFamily) Set Image family, Note: This field may return empty
+ * @method boolean getImageDeprecated() Obtain Whether the image is deprecated
+ * @method void setImageDeprecated(boolean $ImageDeprecated) Set Whether the image is deprecated
  */
 class Image extends AbstractModel
 {
@@ -155,6 +159,16 @@ Note: This field may return `null`, indicating that no valid value was found.
     public $LicenseType;
 
     /**
+     * @var string Image family, Note: This field may return empty
+     */
+    public $ImageFamily;
+
+    /**
+     * @var boolean Whether the image is deprecated
+     */
+    public $ImageDeprecated;
+
+    /**
      * @param string $ImageId Image ID
      * @param string $OsName Operating system of the image
      * @param string $ImageType Image type
@@ -176,6 +190,8 @@ Note: This field may return null, indicating that no valid value is found.
      * @param array $Tags The list of tags bound to the image.
 Note: This field may return `null`, indicating that no valid value was found.
      * @param string $LicenseType Image license type
+     * @param string $ImageFamily Image family, Note: This field may return empty
+     * @param boolean $ImageDeprecated Whether the image is deprecated
      */
     function __construct()
     {
@@ -266,6 +282,14 @@ Note: This field may return `null`, indicating that no valid value was found.
 
         if (array_key_exists("LicenseType",$param) and $param["LicenseType"] !== null) {
             $this->LicenseType = $param["LicenseType"];
+        }
+
+        if (array_key_exists("ImageFamily",$param) and $param["ImageFamily"] !== null) {
+            $this->ImageFamily = $param["ImageFamily"];
+        }
+
+        if (array_key_exists("ImageDeprecated",$param) and $param["ImageDeprecated"] !== null) {
+            $this->ImageDeprecated = $param["ImageDeprecated"];
         }
     }
 }

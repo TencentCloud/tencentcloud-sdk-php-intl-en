@@ -102,6 +102,8 @@ Note: this field may return null, indicating that no valid value was found.
 Note: this field may return null, indicating that no valid value was found.
  * @method void setRdmaIpAddresses(array $RdmaIpAddresses) Set IP list of HPC cluster.
 Note: this field may return null, indicating that no valid value was found.
+ * @method string getDedicatedClusterId() Obtain 
+ * @method void setDedicatedClusterId(string $DedicatedClusterId) Set 
  * @method string getIsolatedSource() Obtain The isolation status of the instance. Valid values:<br><li>`ARREAR`: isolated due to overdue payment;<br></li><li>`EXPIRE`: isolated upon expiration;<br></li><li>`MANMADE`: isolated after manual returning;<br></li><li>`NOTISOLATED`: not isolated<br></li>
 Note: this field may return null, indicating that no valid value was found.
  * @method void setIsolatedSource(string $IsolatedSource) Set The isolation status of the instance. Valid values:<br><li>`ARREAR`: isolated due to overdue payment;<br></li><li>`EXPIRE`: isolated upon expiration;<br></li><li>`MANMADE`: isolated after manual returning;<br></li><li>`NOTISOLATED`: not isolated<br></li>
@@ -299,6 +301,11 @@ Note: this field may return null, indicating that no valid value was found.
     public $RdmaIpAddresses;
 
     /**
+     * @var string 
+     */
+    public $DedicatedClusterId;
+
+    /**
      * @var string The isolation status of the instance. Valid values:<br><li>`ARREAR`: isolated due to overdue payment;<br></li><li>`EXPIRE`: isolated upon expiration;<br></li><li>`MANMADE`: isolated after manual returning;<br></li><li>`NOTISOLATED`: not isolated<br></li>
 Note: this field may return null, indicating that no valid value was found.
      */
@@ -378,6 +385,7 @@ Note: this field may return null, indicating that no valid value is obtained.
 Note: this field may return null, indicating that no valid value was found.
      * @param array $RdmaIpAddresses IP list of HPC cluster.
 Note: this field may return null, indicating that no valid value was found.
+     * @param string $DedicatedClusterId 
      * @param string $IsolatedSource The isolation status of the instance. Valid values:<br><li>`ARREAR`: isolated due to overdue payment;<br></li><li>`EXPIRE`: isolated upon expiration;<br></li><li>`MANMADE`: isolated after manual returning;<br></li><li>`NOTISOLATED`: not isolated<br></li>
 Note: this field may return null, indicating that no valid value was found.
      * @param GPUInfo $GPUInfo GPU information. This field is only returned for GPU instances.
@@ -547,6 +555,10 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 
         if (array_key_exists("RdmaIpAddresses",$param) and $param["RdmaIpAddresses"] !== null) {
             $this->RdmaIpAddresses = $param["RdmaIpAddresses"];
+        }
+
+        if (array_key_exists("DedicatedClusterId",$param) and $param["DedicatedClusterId"] !== null) {
+            $this->DedicatedClusterId = $param["DedicatedClusterId"];
         }
 
         if (array_key_exists("IsolatedSource",$param) and $param["IsolatedSource"] !== null) {

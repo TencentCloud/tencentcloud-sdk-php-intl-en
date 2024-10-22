@@ -18,20 +18,32 @@ namespace TencentCloud\Faceid\V20180301\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Suspected attack detail
  *
- * @method string getType() Obtain 
- * @method void setType(string $Type) Set 
+ * @method string getType() Obtain Suspected attack trace types
+SuspectedSpoofingAttack: Suspected spoofing attack
+ SuspectedSynthesisImage: Suspected synthesis image SuspectedSynthesisVideo: Suspected synthesis video SuspectedeAnomalyAttack: Suspected anomaly attack SuspectedAdversarialAttack: Suspected adversarial attack SuspectedBlackIndustry: Suspected batch generation attack
+SuspectedWatermark: Suspected watermark
+ * @method void setType(string $Type) Set Suspected attack trace types
+SuspectedSpoofingAttack: Suspected spoofing attack
+ SuspectedSynthesisImage: Suspected synthesis image SuspectedSynthesisVideo: Suspected synthesis video SuspectedeAnomalyAttack: Suspected anomaly attack SuspectedAdversarialAttack: Suspected adversarial attack SuspectedBlackIndustry: Suspected batch generation attack
+SuspectedWatermark: Suspected watermark
  */
 class AttackRiskDetail extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Suspected attack trace types
+SuspectedSpoofingAttack: Suspected spoofing attack
+ SuspectedSynthesisImage: Suspected synthesis image SuspectedSynthesisVideo: Suspected synthesis video SuspectedeAnomalyAttack: Suspected anomaly attack SuspectedAdversarialAttack: Suspected adversarial attack SuspectedBlackIndustry: Suspected batch generation attack
+SuspectedWatermark: Suspected watermark
      */
     public $Type;
 
     /**
-     * @param string $Type 
+     * @param string $Type Suspected attack trace types
+SuspectedSpoofingAttack: Suspected spoofing attack
+ SuspectedSynthesisImage: Suspected synthesis image SuspectedSynthesisVideo: Suspected synthesis video SuspectedeAnomalyAttack: Suspected anomaly attack SuspectedAdversarialAttack: Suspected adversarial attack SuspectedBlackIndustry: Suspected batch generation attack
+SuspectedWatermark: Suspected watermark
      */
     function __construct()
     {

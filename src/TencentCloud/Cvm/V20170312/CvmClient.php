@@ -34,6 +34,7 @@ If you currently use a password to log in, you will no longer be able to do so a
  * @method Models\AssociateSecurityGroupsResponse AssociateSecurityGroups(Models\AssociateSecurityGroupsRequest $req) This API is used to associate security groups with specified instances.
  * @method Models\ConfigureChcAssistVpcResponse ConfigureChcAssistVpc(Models\ConfigureChcAssistVpcRequest $req) This API is used to configure the out-of-band network and deployment network of a CHC host.
  * @method Models\ConfigureChcDeployVpcResponse ConfigureChcDeployVpc(Models\ConfigureChcDeployVpcRequest $req) This API is used to configure the deployment network of a CHC host.
+ * @method Models\ConvertOperatingSystemsResponse ConvertOperatingSystems(Models\ConvertOperatingSystemsRequest $req) This API is used to switch the operating system of an instance with CentOS 7 or CentOS 8 as the source operating system.
  * @method Models\CreateDisasterRecoverGroupResponse CreateDisasterRecoverGroup(Models\CreateDisasterRecoverGroupRequest $req) This API is used to create a [spread placement group](https://intl.cloud.tencent.com/document/product/213/15486?from_cn_redirect=1). After you create one, you can specify it for an instance when you [create the instance](https://intl.cloud.tencent.com/document/api/213/15730?from_cn_redirect=1), 
  * @method Models\CreateImageResponse CreateImage(Models\CreateImageRequest $req) This API is used to create a new image with the system disk of an instance. The image can be used to create new instances.
  * @method Models\CreateKeyPairResponse CreateKeyPair(Models\CreateKeyPairRequest $req) This API is used to create an `OpenSSH RSA` key pair, which you can use to log in to a `Linux` instance.
@@ -63,6 +64,7 @@ If you currently use a password to log in, you will no longer be able to do so a
  * @method Models\DescribeDisasterRecoverGroupQuotaResponse DescribeDisasterRecoverGroupQuota(Models\DescribeDisasterRecoverGroupQuotaRequest $req) This API is used to query the quota of [spread placement groups](https://intl.cloud.tencent.com/document/product/213/15486?from_cn_redirect=1).
  * @method Models\DescribeDisasterRecoverGroupsResponse DescribeDisasterRecoverGroups(Models\DescribeDisasterRecoverGroupsRequest $req) This API is used to query the information on [spread placement groups](https://intl.cloud.tencent.com/document/product/213/15486?from_cn_redirect=1).
  * @method Models\DescribeHostsResponse DescribeHosts(Models\DescribeHostsRequest $req) This API is used to query the details of CDH instances.
+ * @method Models\DescribeImageFromFamilyResponse DescribeImageFromFamily(Models\DescribeImageFromFamilyRequest $req) This API is used to view information about available images within an image family.
  * @method Models\DescribeImageQuotaResponse DescribeImageQuota(Models\DescribeImageQuotaRequest $req) This API is used to query the image quota of an user account.
  * @method Models\DescribeImageSharePermissionResponse DescribeImageSharePermission(Models\DescribeImageSharePermissionRequest $req) This API is used to query image sharing information.
  * @method Models\DescribeImagesResponse DescribeImages(Models\DescribeImagesRequest $req) This API is used to view the list of images.
@@ -100,19 +102,21 @@ If you currently use a password to log in, you will no longer be able to do so a
 * If you did not set a password for the instance, you will not be able to log in via SSH after the unbinding. In this case, you can call [ResetInstancesPassword](https://intl.cloud.tencent.com/document/api/213/15736?from_cn_redirect=1) to set a login password.
 * Batch operations are supported. The maximum number of instances in each request is 100. If instances not available for the operation are selected, you will get an error code.
  * @method Models\DisassociateSecurityGroupsResponse DisassociateSecurityGroups(Models\DisassociateSecurityGroupsRequest $req) This API is used to disassociate security groups from instances.
+ * @method Models\EnterRescueModeResponse EnterRescueMode(Models\EnterRescueModeRequest $req) This API is used to enter the rescue mode.
+ * @method Models\ExitRescueModeResponse ExitRescueMode(Models\ExitRescueModeRequest $req) This API is used to exit the rescue mode.
  * @method Models\ExportImagesResponse ExportImages(Models\ExportImagesRequest $req) This API is used to export custom images to the specified COS bucket.
- * @method Models\ImportImageResponse ImportImage(Models\ImportImageRequest $req) The API is used to import an image. The image imported can be used to create instances. Currently, this API can import images in formats like RAW, VHD, QCOW2, and VMDK.
+ * @method Models\ImportImageResponse ImportImage(Models\ImportImageRequest $req) This API is used to import an image. The image imported can be used to create instances. Currently, this API supports RAW, VHD, QCOW2, and VMDK image formats.
  * @method Models\ImportKeyPairResponse ImportKeyPair(Models\ImportKeyPairRequest $req) This API is used to import key pairs.
 
 * You can use this API to import key pairs to a user account, but the key pairs will not be automatically associated with any instance. You may use [AssociasteInstancesKeyPair](https://intl.cloud.tencent.com/document/api/213/15698?from_cn_redirect=1) to associate key pairs with instances.
 * You need to specify the names of the key pairs and the content of the public keys.
 * If you only have private keys, you can convert them to public keys with the `SSL` tool before importing them.
  * @method Models\InquirePricePurchaseReservedInstancesOfferingResponse InquirePricePurchaseReservedInstancesOffering(Models\InquirePricePurchaseReservedInstancesOfferingRequest $req) This API is used to query the price of reserved instances. It only supports querying purchasable reserved instance offerings. Currently, RIs are only offered to beta users.
- * @method Models\InquiryPriceResetInstanceResponse InquiryPriceResetInstance(Models\InquiryPriceResetInstanceRequest $req) This API is used to query the price for reinstalling an instance.
+ * @method Models\InquiryPriceResetInstanceResponse InquiryPriceResetInstance(Models\InquiryPriceResetInstanceRequest $req) This API is used to inquire about the price for reinstalling an instance.
 
-* If you have specified the `ImageId` parameter, the price query is performed with the specified image. Otherwise, the image used by the current instance is used.
-* You can only query the price for reinstallation caused by switching between Linux and Windows OS. And the [system disk type](https://intl.cloud.tencent.com/document/api/213/15753?from_cn_redirect=1#SystemDisk) of the instance must be `CLOUD_BASIC`, `CLOUD_PREMIUM`, or `CLOUD_SSD`.
-* Currently, this API only supports instances in Mainland China regions.
+* If you have specified the parameter `ImageId`, inquire about the price for reinstallation by using the specified image. Otherwise, inquire about the price for reinstallation based on the image currently used by the instance.
+* Currently, only instances with a [system disk type](https://intl.cloud.tencent.com/document/api/213/15753?from_cn_redirect=1#SystemDisk) of `CLOUD_BSSD`, `CLOUD_PREMIUM`, or `CLOUD_SSD` are supported for inquiring about the price for reinstallation caused by switching between `Linux` and `Windows` operating systems through this API.
+* Currently, instances in regions outside the Chinese mainland are not supported for inquiring about the price for reinstallation caused by switching between `Linux` and `Windows` operating systems through this API.
  * @method Models\InquiryPriceResetInstancesInternetMaxBandwidthResponse InquiryPriceResetInstancesInternetMaxBandwidth(Models\InquiryPriceResetInstancesInternetMaxBandwidthRequest $req) This API is used to query the price for upgrading the public bandwidth cap of an instance.
 
 * The allowed bandwidth cap varies for different models. For details, see [Purchasing Network Bandwidth](https://intl.cloud.tencent.com/document/product/213/509?from_cn_redirect=1).
@@ -134,11 +138,10 @@ If you currently use a password to log in, you will no longer be able to do so a
 * Attributes of shared images cannot be modified.
  * @method Models\ModifyImageSharePermissionResponse ModifyImageSharePermission(Models\ModifyImageSharePermissionRequest $req) This API is used to modify image sharing information.
 
-* The accounts with which an image is shared can use the shared image to create instances.
-* Each custom image can be shared with up to 50 accounts.
-* You can use a shared image to create instances, but you cannot change its name and description.
-* If an image is shared with another account, the shared image will be in the same region as the original image.
-
+* The account with shared image access can use the image to create instances.
+* Each custom image can be shared with a maximum of 500 accounts.
+* Shared images cannot have their names or description changed. They can only be used to create instances.
+* Sharing is only supported within the same region as the recipient's account.
  * @method Models\ModifyInstancesAttributeResponse ModifyInstancesAttribute(Models\ModifyInstancesAttributeRequest $req) The API is used to modify the attributes of an instance. Only the name and the associated security groups can be modified for now.
 
 * An attribute must be specified in the request.
@@ -156,11 +159,13 @@ If you currently use a password to log in, you will no longer be able to do so a
 * This action will shut down the instance, and restart it after the modification is completed.
 * To migrate an instance to another VPC/subnet, specify the new VPC and subnet directly. Make sure that the instance to migrate is not bound to an [ENI](https://intl.cloud.tencent.com/document/product/576?from_cn_redirect=1) or [CLB](https://intl.cloud.tencent.com/document/product/214?from_cn_redirect=1) instances.
 * You can use the API [DescribeInstances](https://intl.cloud.tencent.com/document/api/213/15728?from_cn_redirect=1#.E7.A4.BA.E4.BE.8B3-.E6.9F.A5.E8.AF.A2.E5.AE.9E.E4.BE.8B.E7.9A.84.E6.9C.80.E6.96.B0.E6.93.8D.E4.BD.9C.E6.83.85.E5.86.B5) to query the operation result. If the `LatestOperationState` in the response is `SUCCESS`, the operation is successful.
- * @method Models\ModifyKeyPairAttributeResponse ModifyKeyPairAttribute(Models\ModifyKeyPairAttributeRequest $req) This API is used to modify the attributes of key pairs.
+ * @method Models\ModifyKeyPairAttributeResponse ModifyKeyPairAttribute(Models\ModifyKeyPairAttributeRequest $req) This API is used to modify attributes of a key pair.
 
-* This API modifies the name and description of the key pair identified by the key pair ID.
-* The name of the key pair must be unique.
-* Key pair ID is the unique identifier of a key pair and cannot be modified.
+* Modify the name and description information of the key pair specified by the key pair ID.
+* The key pair name should not be the same as the name of an existing key pair.
+* The key pair ID is the unique identifier of a key pair and cannot be modified.
+
+* Either the key pair name or description information should be specified, and both can also be specified simultaneously.
  * @method Models\ModifyLaunchTemplateDefaultVersionResponse ModifyLaunchTemplateDefaultVersion(Models\ModifyLaunchTemplateDefaultVersionRequest $req) This API is used to modify the default version of the instance launch template.
  * @method Models\PurchaseReservedInstancesOfferingResponse PurchaseReservedInstancesOffering(Models\PurchaseReservedInstancesOfferingRequest $req) This API is used to purchase one or more specific Reserved Instances.
  * @method Models\RebootInstancesResponse RebootInstances(Models\RebootInstancesRequest $req) This API is used to restart instances.
@@ -171,14 +176,15 @@ If you currently use a password to log in, you will no longer be able to do so a
 * Batch operations are supported. The maximum number of instances in each request is 100.
  * @method Models\RemoveChcAssistVpcResponse RemoveChcAssistVpc(Models\RemoveChcAssistVpcRequest $req) This API is used to remove the out-of-band network and deployment network of a CHC host.
  * @method Models\RemoveChcDeployVpcResponse RemoveChcDeployVpc(Models\RemoveChcDeployVpcRequest $req) This API is used to remove the deployment network of a CHC host.
- * @method Models\ResetInstanceResponse ResetInstance(Models\ResetInstanceRequest $req) This API is used to reinstall the operating system of the specified instance.
+ * @method Models\ResetInstanceResponse ResetInstance(Models\ResetInstanceRequest $req) This API (ResetInstance) is used to reinstall the operating system on a specified instance.
 
-* If you specify an `ImageId`, the specified image is used. Otherwise, the image used by the current instance is used.
-* The system disk will be formatted and reset. Therefore, make sure that no important files are stored on the system disk.
-* If the operating system switches between `Linux` and `Windows`, the system disk `ID` of the instance will change, and the snapshots that are associated with the system disk can no longer be used to roll back and restore data.
-* If no password is specified, you will get a random password via internal message.
-* You can only use this API to switch the operating system between `Linux` and `Windows` for instances whose [system disk type](https://intl.cloud.tencent.com/document/api/213/9452?from_cn_redirect=1#SystemDisk) is `CLOUD_BASIC`, `CLOUD_PREMIUM`, or `CLOUD_SSD`.
-* Currently, this API only supports instances in Mainland China regions.
+
+
+* If you have specified the parameter `ImageId`, use the specified image for reinstallation. Otherwise, perform reinstallation based on the image currently used by the instance.
+* The system disk will be formatted and reset. Ensure that there are no important files in the system disk.
+* If you do not specify a password, a random password will be sent via Message Center.
+* Currently, only instances with a [system disk type](https://intl.cloud.tencent.com/document/api/213/9452?from_cn_redirect=1#SystemDisk) of `CLOUD_BASIC`, `CLOUD_PREMIUM`, `CLOUD_SSD`, or `CLOUD_BSSD` are supported for implementing operating system switching through this API.
+* You can query the result of the instance operation by calling the API [DescribeInstances](https://intl.cloud.tencent.com/document/api/213/15728?from_cn_redirect=1#.E7.A4.BA.E4.BE.8B3-.E6.9F.A5.E8.AF.A2.E5.AE.9E.E4.BE.8B.E7.9A.84.E6.9C.80.E6.96.B0.E6.93.8D.E4.BD.9C.E6.83.85.E5.86.B5). If the latest operation status (LatestOperationState) of the instance is **SUCCESS**, the operation is successful.
  * @method Models\ResetInstancesInternetMaxBandwidthResponse ResetInstancesInternetMaxBandwidth(Models\ResetInstancesInternetMaxBandwidthRequest $req) This API is used to change the public bandwidth cap of an instance.
 
 * The allowed bandwidth cap varies for different models. For details, see [Purchasing Network Bandwidth](https://intl.cloud.tencent.com/document/product/213/509?from_cn_redirect=1).
@@ -214,11 +220,11 @@ If you currently use a password to log in, you will no longer be able to do so a
 * The instance status will become `STOPPING` when the API is called successfully and `STOPPED` when the instance is successfully shut down.
 * Forced shutdown is supported. A forced shutdown is similar to switching off the power of a physical computer. It may cause data loss or file system corruption. Be sure to only force shut down a CVM when it cannot be sht down normally.
 * Batch operations are supported. The maximum number of instances in each request is 100.
- * @method Models\SyncImagesResponse SyncImages(Models\SyncImagesRequest $req) This API is used to sync a custom image to other regions.
+ * @method Models\SyncImagesResponse SyncImages(Models\SyncImagesRequest $req) This API is used to synchronize custom images to other regions.
 
-* Each API call syncs a single image.
-* This API supports syncing an image to multiple regions.
-* Each account can have up to 10 custom images in each region. 
+* This API only supports synchronizing one image per call.
+* This API supports multiple synchronization regions.
+* A single account can have a maximum of 500 custom images in each region.
  * @method Models\TerminateInstancesResponse TerminateInstances(Models\TerminateInstancesRequest $req) This API is used to return instances.
 
 * Use this API to return instances that are no longer required.

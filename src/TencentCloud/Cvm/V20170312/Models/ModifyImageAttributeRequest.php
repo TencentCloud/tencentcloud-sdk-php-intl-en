@@ -20,34 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyImageAttribute request structure.
  *
- * @method string getImageId() Obtain Image ID such as `img-gvbnzy6f`. You can obtain the image IDs in two ways: <br><li>Call [DescribeImages](https://intl.cloud.tencent.com/document/api/213/15715?from_cn_redirect=1) and look for `ImageId` in the response. <br><li>Look for the information in the [Image Console](https://console.cloud.tencent.com/cvm/image).
- * @method void setImageId(string $ImageId) Set Image ID such as `img-gvbnzy6f`. You can obtain the image IDs in two ways: <br><li>Call [DescribeImages](https://intl.cloud.tencent.com/document/api/213/15715?from_cn_redirect=1) and look for `ImageId` in the response. <br><li>Look for the information in the [Image Console](https://console.cloud.tencent.com/cvm/image).
- * @method string getImageName() Obtain New image name, which must meet the following requirements: <br> <li>No more than 20 characters. <br> <li>Must be unique.
- * @method void setImageName(string $ImageName) Set New image name, which must meet the following requirements: <br> <li>No more than 20 characters. <br> <li>Must be unique.
- * @method string getImageDescription() Obtain New image description, which must meet the following requirement: <br> <li> No more than 60 characters.
- * @method void setImageDescription(string $ImageDescription) Set New image description, which must meet the following requirement: <br> <li> No more than 60 characters.
+ * @method string getImageId() Obtain Image ID, such as `img-gvbnzy6f`. You can obtain the image ID in the following ways:<li>Call the [DescribeImages](https://intl.cloud.tencent.com/document/api/213/15715?from_cn_redirect=1) API and find the value of `ImageId` in the response.</li><li>Obtain it in the [Image console](https://console.cloud.tencent.com/cvm/image).</li>
+ * @method void setImageId(string $ImageId) Set Image ID, such as `img-gvbnzy6f`. You can obtain the image ID in the following ways:<li>Call the [DescribeImages](https://intl.cloud.tencent.com/document/api/213/15715?from_cn_redirect=1) API and find the value of `ImageId` in the response.</li><li>Obtain it in the [Image console](https://console.cloud.tencent.com/cvm/image).</li>
+ * @method string getImageName() Obtain New image name, which should meet the following requirements:<li>It should not exceed 60 characters.</li><li>It should be unique.</li>
+ * @method void setImageName(string $ImageName) Set New image name, which should meet the following requirements:<li>It should not exceed 60 characters.</li><li>It should be unique.</li>
+ * @method string getImageDescription() Obtain New image description, which should meet the following requirement:<li>It should not exceed 256 characters.</li>
+ * @method void setImageDescription(string $ImageDescription) Set New image description, which should meet the following requirement:<li>It should not exceed 256 characters.</li>
+ * @method string getImageFamily() Obtain Sets the image family;
+ * @method void setImageFamily(string $ImageFamily) Set Sets the image family;
+ * @method boolean getImageDeprecated() Obtain Sets whether the image is deprecated;
+ * @method void setImageDeprecated(boolean $ImageDeprecated) Set Sets whether the image is deprecated;
  */
 class ModifyImageAttributeRequest extends AbstractModel
 {
     /**
-     * @var string Image ID such as `img-gvbnzy6f`. You can obtain the image IDs in two ways: <br><li>Call [DescribeImages](https://intl.cloud.tencent.com/document/api/213/15715?from_cn_redirect=1) and look for `ImageId` in the response. <br><li>Look for the information in the [Image Console](https://console.cloud.tencent.com/cvm/image).
+     * @var string Image ID, such as `img-gvbnzy6f`. You can obtain the image ID in the following ways:<li>Call the [DescribeImages](https://intl.cloud.tencent.com/document/api/213/15715?from_cn_redirect=1) API and find the value of `ImageId` in the response.</li><li>Obtain it in the [Image console](https://console.cloud.tencent.com/cvm/image).</li>
      */
     public $ImageId;
 
     /**
-     * @var string New image name, which must meet the following requirements: <br> <li>No more than 20 characters. <br> <li>Must be unique.
+     * @var string New image name, which should meet the following requirements:<li>It should not exceed 60 characters.</li><li>It should be unique.</li>
      */
     public $ImageName;
 
     /**
-     * @var string New image description, which must meet the following requirement: <br> <li> No more than 60 characters.
+     * @var string New image description, which should meet the following requirement:<li>It should not exceed 256 characters.</li>
      */
     public $ImageDescription;
 
     /**
-     * @param string $ImageId Image ID such as `img-gvbnzy6f`. You can obtain the image IDs in two ways: <br><li>Call [DescribeImages](https://intl.cloud.tencent.com/document/api/213/15715?from_cn_redirect=1) and look for `ImageId` in the response. <br><li>Look for the information in the [Image Console](https://console.cloud.tencent.com/cvm/image).
-     * @param string $ImageName New image name, which must meet the following requirements: <br> <li>No more than 20 characters. <br> <li>Must be unique.
-     * @param string $ImageDescription New image description, which must meet the following requirement: <br> <li> No more than 60 characters.
+     * @var string Sets the image family;
+     */
+    public $ImageFamily;
+
+    /**
+     * @var boolean Sets whether the image is deprecated;
+     */
+    public $ImageDeprecated;
+
+    /**
+     * @param string $ImageId Image ID, such as `img-gvbnzy6f`. You can obtain the image ID in the following ways:<li>Call the [DescribeImages](https://intl.cloud.tencent.com/document/api/213/15715?from_cn_redirect=1) API and find the value of `ImageId` in the response.</li><li>Obtain it in the [Image console](https://console.cloud.tencent.com/cvm/image).</li>
+     * @param string $ImageName New image name, which should meet the following requirements:<li>It should not exceed 60 characters.</li><li>It should be unique.</li>
+     * @param string $ImageDescription New image description, which should meet the following requirement:<li>It should not exceed 256 characters.</li>
+     * @param string $ImageFamily Sets the image family;
+     * @param boolean $ImageDeprecated Sets whether the image is deprecated;
      */
     function __construct()
     {
@@ -72,6 +88,14 @@ class ModifyImageAttributeRequest extends AbstractModel
 
         if (array_key_exists("ImageDescription",$param) and $param["ImageDescription"] !== null) {
             $this->ImageDescription = $param["ImageDescription"];
+        }
+
+        if (array_key_exists("ImageFamily",$param) and $param["ImageFamily"] !== null) {
+            $this->ImageFamily = $param["ImageFamily"];
+        }
+
+        if (array_key_exists("ImageDeprecated",$param) and $param["ImageDeprecated"] !== null) {
+            $this->ImageDeprecated = $param["ImageDeprecated"];
         }
     }
 }

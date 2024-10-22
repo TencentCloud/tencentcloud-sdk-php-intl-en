@@ -48,6 +48,8 @@ Valid values:
 `BYOL`: Bring Your Own License
  * @method string getBootMode() Obtain Boot mode
  * @method void setBootMode(string $BootMode) Set Boot mode
+ * @method string getImageFamily() Obtain Image family
+ * @method void setImageFamily(string $ImageFamily) Set Image family
  */
 class ImportImageRequest extends AbstractModel
 {
@@ -110,6 +112,11 @@ Valid values:
     public $BootMode;
 
     /**
+     * @var string Image family
+     */
+    public $ImageFamily;
+
+    /**
      * @param string $Architecture OS architecture of the image to be imported, `x86_64` or `i386`.
      * @param string $OsType OS type of the image to be imported. You can call `DescribeImportImageOs` to obtain the list of supported operating systems.
      * @param string $OsVersion OS version of the image to be imported. You can call `DescribeImportImageOs` to obtain the list of supported operating systems.
@@ -124,6 +131,7 @@ Valid values:
 `TencentCloud`: Tencent Cloud official license
 `BYOL`: Bring Your Own License
      * @param string $BootMode Boot mode
+     * @param string $ImageFamily Image family
      */
     function __construct()
     {
@@ -185,6 +193,10 @@ Valid values:
 
         if (array_key_exists("BootMode",$param) and $param["BootMode"] !== null) {
             $this->BootMode = $param["BootMode"];
+        }
+
+        if (array_key_exists("ImageFamily",$param) and $param["ImageFamily"] !== null) {
+            $this->ImageFamily = $param["ImageFamily"];
         }
     }
 }

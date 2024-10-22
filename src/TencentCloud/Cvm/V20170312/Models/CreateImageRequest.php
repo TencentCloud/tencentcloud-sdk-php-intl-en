@@ -26,8 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceId(string $InstanceId) Set ID of the instance from which an image will be created. This parameter is required when using instance to create an image.
  * @method string getImageDescription() Obtain Image description
  * @method void setImageDescription(string $ImageDescription) Set Image description
- * @method string getForcePoweroff() Obtain Whether to force shut down an instance to create an image when a soft shutdown fails
- * @method void setForcePoweroff(string $ForcePoweroff) Set Whether to force shut down an instance to create an image when a soft shutdown fails
+ * @method string getForcePoweroff() Obtain Whether to perform forced power-off operation to create an image.
+Valid values:<br><li>true: indicates that an image is created after forced power-off operation</li><br><li>false: indicates that an image is created in the power-on state</li><br><br>Default value: false.<br><br>Creating an image in the power-on state may result in some unbacked-up data, affecting data security.
+ * @method void setForcePoweroff(string $ForcePoweroff) Set Whether to perform forced power-off operation to create an image.
+Valid values:<br><li>true: indicates that an image is created after forced power-off operation</li><br><li>false: indicates that an image is created in the power-on state</li><br><br>Default value: false.<br><br>Creating an image in the power-on state may result in some unbacked-up data, affecting data security.
  * @method string getSysprep() Obtain Whether to enable Sysprep when creating a Windows image.
 Valid values: `TRUE` and `FALSE`; default value: `FALSE`.
 
@@ -44,6 +46,8 @@ Click [here](https://intl.cloud.tencent.com/document/product/213/43498?from_cn_r
  * @method void setDryRun(boolean $DryRun) Set Success status of this request, without affecting the resources involved
  * @method array getTagSpecification() Obtain Tag description list. This parameter is used to bind a tag to a custom image.
  * @method void setTagSpecification(array $TagSpecification) Set Tag description list. This parameter is used to bind a tag to a custom image.
+ * @method string getImageFamily() Obtain Image family
+ * @method void setImageFamily(string $ImageFamily) Set Image family
  */
 class CreateImageRequest extends AbstractModel
 {
@@ -63,7 +67,8 @@ class CreateImageRequest extends AbstractModel
     public $ImageDescription;
 
     /**
-     * @var string Whether to force shut down an instance to create an image when a soft shutdown fails
+     * @var string Whether to perform forced power-off operation to create an image.
+Valid values:<br><li>true: indicates that an image is created after forced power-off operation</li><br><li>false: indicates that an image is created in the power-on state</li><br><br>Default value: false.<br><br>Creating an image in the power-on state may result in some unbacked-up data, affecting data security.
      */
     public $ForcePoweroff;
 
@@ -96,10 +101,16 @@ Click [here](https://intl.cloud.tencent.com/document/product/213/43498?from_cn_r
     public $TagSpecification;
 
     /**
+     * @var string Image family
+     */
+    public $ImageFamily;
+
+    /**
      * @param string $ImageName Image name
      * @param string $InstanceId ID of the instance from which an image will be created. This parameter is required when using instance to create an image.
      * @param string $ImageDescription Image description
-     * @param string $ForcePoweroff Whether to force shut down an instance to create an image when a soft shutdown fails
+     * @param string $ForcePoweroff Whether to perform forced power-off operation to create an image.
+Valid values:<br><li>true: indicates that an image is created after forced power-off operation</li><br><li>false: indicates that an image is created in the power-on state</li><br><br>Default value: false.<br><br>Creating an image in the power-on state may result in some unbacked-up data, affecting data security.
      * @param string $Sysprep Whether to enable Sysprep when creating a Windows image.
 Valid values: `TRUE` and `FALSE`; default value: `FALSE`.
 
@@ -108,6 +119,7 @@ Click [here](https://intl.cloud.tencent.com/document/product/213/43498?from_cn_r
      * @param array $SnapshotIds Specified snapshot ID used to create an image. A system disk snapshot must be included. It cannot be passed together with `InstanceId`.
      * @param boolean $DryRun Success status of this request, without affecting the resources involved
      * @param array $TagSpecification Tag description list. This parameter is used to bind a tag to a custom image.
+     * @param string $ImageFamily Image family
      */
     function __construct()
     {
@@ -161,6 +173,10 @@ Click [here](https://intl.cloud.tencent.com/document/product/213/43498?from_cn_r
                 $obj->deserialize($value);
                 array_push($this->TagSpecification, $obj);
             }
+        }
+
+        if (array_key_exists("ImageFamily",$param) and $param["ImageFamily"] !== null) {
+            $this->ImageFamily = $param["ImageFamily"];
         }
     }
 }
