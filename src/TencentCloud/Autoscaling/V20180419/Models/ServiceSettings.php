@@ -32,6 +32,16 @@ WAKE_UP_STOPPED_SCALING: this scaling method first tries to start stopped instan
 Default value: CLASSIC_SCALING
  * @method boolean getReplaceLoadBalancerUnhealthy() Obtain Enable unhealthy instance replacement. If this feature is enabled, AS will replace instances that are found unhealthy in the CLB health check. If this parameter is not specified, the default value `False` will be used.
  * @method void setReplaceLoadBalancerUnhealthy(boolean $ReplaceLoadBalancerUnhealthy) Set Enable unhealthy instance replacement. If this feature is enabled, AS will replace instances that are found unhealthy in the CLB health check. If this parameter is not specified, the default value `False` will be used.
+ * @method string getReplaceMode() Obtain Replace mode of unhealthy replacement service. Valid values:
+RECREATE: Rebuild an instance to replace the original unhealthy instance.
+RESET: Performing a system reinstallation on unhealthy instances to keep information such as data disks, private IP addresses, and instance IDs unchanged. The instance login settings, HostName, enhanced services, and UserData will remain consistent with the current launch configuration.
+Default value: RECREATE.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setReplaceMode(string $ReplaceMode) Set Replace mode of unhealthy replacement service. Valid values:
+RECREATE: Rebuild an instance to replace the original unhealthy instance.
+RESET: Performing a system reinstallation on unhealthy instances to keep information such as data disks, private IP addresses, and instance IDs unchanged. The instance login settings, HostName, enhanced services, and UserData will remain consistent with the current launch configuration.
+Default value: RECREATE.
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class ServiceSettings extends AbstractModel
 {
@@ -54,12 +64,26 @@ Default value: CLASSIC_SCALING
     public $ReplaceLoadBalancerUnhealthy;
 
     /**
+     * @var string Replace mode of unhealthy replacement service. Valid values:
+RECREATE: Rebuild an instance to replace the original unhealthy instance.
+RESET: Performing a system reinstallation on unhealthy instances to keep information such as data disks, private IP addresses, and instance IDs unchanged. The instance login settings, HostName, enhanced services, and UserData will remain consistent with the current launch configuration.
+Default value: RECREATE.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $ReplaceMode;
+
+    /**
      * @param boolean $ReplaceMonitorUnhealthy Enables unhealthy instance replacement. If this feature is enabled, AS will replace instances that are flagged as unhealthy by Cloud Monitor. If this parameter is not specified, the value will be False by default.
      * @param string $ScalingMode Valid values: 
 CLASSIC_SCALING: this is the typical scaling method, which creates and terminates instances to perform scaling operations. 
 WAKE_UP_STOPPED_SCALING: this scaling method first tries to start stopped instances. If the number of instances woken up is insufficient, the system creates new instances for scale-out. For scale-in, instances are terminated as in the typical method. You can use the StopAutoScalingInstances API to stop instances in the scaling group. Scale-out operations triggered by alarms will still create new instances.
 Default value: CLASSIC_SCALING
      * @param boolean $ReplaceLoadBalancerUnhealthy Enable unhealthy instance replacement. If this feature is enabled, AS will replace instances that are found unhealthy in the CLB health check. If this parameter is not specified, the default value `False` will be used.
+     * @param string $ReplaceMode Replace mode of unhealthy replacement service. Valid values:
+RECREATE: Rebuild an instance to replace the original unhealthy instance.
+RESET: Performing a system reinstallation on unhealthy instances to keep information such as data disks, private IP addresses, and instance IDs unchanged. The instance login settings, HostName, enhanced services, and UserData will remain consistent with the current launch configuration.
+Default value: RECREATE.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -84,6 +108,10 @@ Default value: CLASSIC_SCALING
 
         if (array_key_exists("ReplaceLoadBalancerUnhealthy",$param) and $param["ReplaceLoadBalancerUnhealthy"] !== null) {
             $this->ReplaceLoadBalancerUnhealthy = $param["ReplaceLoadBalancerUnhealthy"];
+        }
+
+        if (array_key_exists("ReplaceMode",$param) and $param["ReplaceMode"] !== null) {
+            $this->ReplaceMode = $param["ReplaceMode"];
         }
     }
 }

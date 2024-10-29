@@ -60,18 +60,18 @@ Note that this project ID is not the same as the project ID of the scaling group
 `InstanceType` and `InstanceTypes` are mutually exclusive, and one and only one of them must be entered.
  * @method string getCamRoleName() Obtain CAM role name. This parameter can be obtained from the `roleName` field returned by DescribeRoleList API.
  * @method void setCamRoleName(string $CamRoleName) Set CAM role name. This parameter can be obtained from the `roleName` field returned by DescribeRoleList API.
- * @method string getInstanceTypesCheckPolicy() Obtain Instance type verification policy. Value range: ALL, ANY. Default value: ANY.
-<br><li> ALL: The verification will success only if all instance types (InstanceType) are available; otherwise, an error will be reported.
-<br><li> ANY: The verification will success if any instance type (InstanceType) is available; otherwise, an error will be reported.
+ * @method string getInstanceTypesCheckPolicy() Obtain InstanceType verification policy, whose valid values include ALL and ANY, with the default value being ANY.
+<li>ALL: Verification passes if all InstanceTypes are available; otherwise, a verification error will be reported.</li>
+<li>ANY: Verification passes if any InstanceType is available; otherwise, a verification error will be reported.</li>
 
-Common reasons why an instance type is unavailable include stock-out of the instance type or the corresponding cloud disk.
-If a model in InstanceTypes does not exist or has been discontinued, a verification error will be reported regardless of the value of InstanceTypesCheckPolicy.
- * @method void setInstanceTypesCheckPolicy(string $InstanceTypesCheckPolicy) Set Instance type verification policy. Value range: ALL, ANY. Default value: ANY.
-<br><li> ALL: The verification will success only if all instance types (InstanceType) are available; otherwise, an error will be reported.
-<br><li> ANY: The verification will success if any instance type (InstanceType) is available; otherwise, an error will be reported.
+Common reasons for unavailable InstanceTypes include the InstanceType being sold out, and the corresponding cloud disk being sold out.
+If a model in InstanceTypes does not exist or has been abolished, a verification error will be reported regardless of the valid values set for InstanceTypesCheckPolicy.
+ * @method void setInstanceTypesCheckPolicy(string $InstanceTypesCheckPolicy) Set InstanceType verification policy, whose valid values include ALL and ANY, with the default value being ANY.
+<li>ALL: Verification passes if all InstanceTypes are available; otherwise, a verification error will be reported.</li>
+<li>ANY: Verification passes if any InstanceType is available; otherwise, a verification error will be reported.</li>
 
-Common reasons why an instance type is unavailable include stock-out of the instance type or the corresponding cloud disk.
-If a model in InstanceTypes does not exist or has been discontinued, a verification error will be reported regardless of the value of InstanceTypesCheckPolicy.
+Common reasons for unavailable InstanceTypes include the InstanceType being sold out, and the corresponding cloud disk being sold out.
+If a model in InstanceTypes does not exist or has been abolished, a verification error will be reported regardless of the valid values set for InstanceTypesCheckPolicy.
  * @method array getInstanceTags() Obtain List of tags. This parameter is used to bind up to 10 tags to newly added instances.
  * @method void setInstanceTags(array $InstanceTags) Set List of tags. This parameter is used to bind up to 10 tags to newly added instances.
  * @method array getTags() Obtain List of tags. You can specify tags that you want to bind to the launch configuration. Each launch configuration can have up to 30 tags.
@@ -84,12 +84,12 @@ If this field is configured in a launch configuration, the `InstanceName` of a C
 If this field is configured in a launch configuration, the `InstanceName` of a CVM created by the scaling group will be generated according to the configuration; otherwise, it will be in the `as-{{AutoScalingGroupName }}` format.
  * @method InstanceChargePrepaid getInstanceChargePrepaid() Obtain Details of the monthly subscription, including the purchase period, auto-renewal. It is required if the `InstanceChargeType` is `PREPAID`.
  * @method void setInstanceChargePrepaid(InstanceChargePrepaid $InstanceChargePrepaid) Set Details of the monthly subscription, including the purchase period, auto-renewal. It is required if the `InstanceChargeType` is `PREPAID`.
- * @method string getDiskTypePolicy() Obtain Selection policy of cloud disks. Default value: ORIGINAL. Valid values:
-<br><li>ORIGINAL: uses the configured cloud disk type
-<br><li>AUTOMATIC: automatically chooses an available cloud disk type
- * @method void setDiskTypePolicy(string $DiskTypePolicy) Set Selection policy of cloud disks. Default value: ORIGINAL. Valid values:
-<br><li>ORIGINAL: uses the configured cloud disk type
-<br><li>AUTOMATIC: automatically chooses an available cloud disk type
+ * @method string getDiskTypePolicy() Obtain Cloud disk type selection policy, whose default value is ORIGINAL. Valid values:
+<li>ORIGINAL: Use the set cloud disk type.</li>
+<li>AUTOMATIC: Automatically select the currently available cloud disk type.</li>
+ * @method void setDiskTypePolicy(string $DiskTypePolicy) Set Cloud disk type selection policy, whose default value is ORIGINAL. Valid values:
+<li>ORIGINAL: Use the set cloud disk type.</li>
+<li>AUTOMATIC: Automatically select the currently available cloud disk type.</li>
  * @method string getHpcClusterId() Obtain HPC ID<br>
 Note: This field is default to empty
  * @method void setHpcClusterId(string $HpcClusterId) Set HPC ID<br>
@@ -98,6 +98,8 @@ Note: This field is default to empty
  * @method void setIPv6InternetAccessible(IPv6InternetAccessible $IPv6InternetAccessible) Set IPv6 public network bandwidth configuration. If the IPv6 address is available in the new instance, public network bandwidth can be allocated to the IPv6 address. This parameter is invalid if `Ipv6AddressCount` of the scaling group associated with the launch configuration is 0.
  * @method array getDisasterRecoverGroupIds() Obtain Placement group ID. Only one is allowed.
  * @method void setDisasterRecoverGroupIds(array $DisasterRecoverGroupIds) Set Placement group ID. Only one is allowed.
+ * @method string getImageFamily() Obtain Image family name. Either image ID or image family name should be filled in, and only one of which can be filled.
+ * @method void setImageFamily(string $ImageFamily) Set Image family name. Either image ID or image family name should be filled in, and only one of which can be filled.
  */
 class CreateLaunchConfigurationRequest extends AbstractModel
 {
@@ -182,12 +184,12 @@ Note that this project ID is not the same as the project ID of the scaling group
     public $CamRoleName;
 
     /**
-     * @var string Instance type verification policy. Value range: ALL, ANY. Default value: ANY.
-<br><li> ALL: The verification will success only if all instance types (InstanceType) are available; otherwise, an error will be reported.
-<br><li> ANY: The verification will success if any instance type (InstanceType) is available; otherwise, an error will be reported.
+     * @var string InstanceType verification policy, whose valid values include ALL and ANY, with the default value being ANY.
+<li>ALL: Verification passes if all InstanceTypes are available; otherwise, a verification error will be reported.</li>
+<li>ANY: Verification passes if any InstanceType is available; otherwise, a verification error will be reported.</li>
 
-Common reasons why an instance type is unavailable include stock-out of the instance type or the corresponding cloud disk.
-If a model in InstanceTypes does not exist or has been discontinued, a verification error will be reported regardless of the value of InstanceTypesCheckPolicy.
+Common reasons for unavailable InstanceTypes include the InstanceType being sold out, and the corresponding cloud disk being sold out.
+If a model in InstanceTypes does not exist or has been abolished, a verification error will be reported regardless of the valid values set for InstanceTypesCheckPolicy.
      */
     public $InstanceTypesCheckPolicy;
 
@@ -218,9 +220,9 @@ If this field is configured in a launch configuration, the `InstanceName` of a C
     public $InstanceChargePrepaid;
 
     /**
-     * @var string Selection policy of cloud disks. Default value: ORIGINAL. Valid values:
-<br><li>ORIGINAL: uses the configured cloud disk type
-<br><li>AUTOMATIC: automatically chooses an available cloud disk type
+     * @var string Cloud disk type selection policy, whose default value is ORIGINAL. Valid values:
+<li>ORIGINAL: Use the set cloud disk type.</li>
+<li>AUTOMATIC: Automatically select the currently available cloud disk type.</li>
      */
     public $DiskTypePolicy;
 
@@ -239,6 +241,11 @@ Note: This field is default to empty
      * @var array Placement group ID. Only one is allowed.
      */
     public $DisasterRecoverGroupIds;
+
+    /**
+     * @var string Image family name. Either image ID or image family name should be filled in, and only one of which can be filled.
+     */
+    public $ImageFamily;
 
     /**
      * @param string $LaunchConfigurationName Display name of the launch configuration, which can contain letters, digits, underscores and hyphens (-), and dots. Up to of 60 bytes allowed..
@@ -261,25 +268,26 @@ Note that this project ID is not the same as the project ID of the scaling group
      * @param array $InstanceTypes List of instance models. Different instance models specify different resource specifications. Up to 10 instance models can be supported.
 `InstanceType` and `InstanceTypes` are mutually exclusive, and one and only one of them must be entered.
      * @param string $CamRoleName CAM role name. This parameter can be obtained from the `roleName` field returned by DescribeRoleList API.
-     * @param string $InstanceTypesCheckPolicy Instance type verification policy. Value range: ALL, ANY. Default value: ANY.
-<br><li> ALL: The verification will success only if all instance types (InstanceType) are available; otherwise, an error will be reported.
-<br><li> ANY: The verification will success if any instance type (InstanceType) is available; otherwise, an error will be reported.
+     * @param string $InstanceTypesCheckPolicy InstanceType verification policy, whose valid values include ALL and ANY, with the default value being ANY.
+<li>ALL: Verification passes if all InstanceTypes are available; otherwise, a verification error will be reported.</li>
+<li>ANY: Verification passes if any InstanceType is available; otherwise, a verification error will be reported.</li>
 
-Common reasons why an instance type is unavailable include stock-out of the instance type or the corresponding cloud disk.
-If a model in InstanceTypes does not exist or has been discontinued, a verification error will be reported regardless of the value of InstanceTypesCheckPolicy.
+Common reasons for unavailable InstanceTypes include the InstanceType being sold out, and the corresponding cloud disk being sold out.
+If a model in InstanceTypes does not exist or has been abolished, a verification error will be reported regardless of the valid values set for InstanceTypesCheckPolicy.
      * @param array $InstanceTags List of tags. This parameter is used to bind up to 10 tags to newly added instances.
      * @param array $Tags List of tags. You can specify tags that you want to bind to the launch configuration. Each launch configuration can have up to 30 tags.
      * @param HostNameSettings $HostNameSettings CVM hostname settings.
      * @param InstanceNameSettings $InstanceNameSettings Settings of CVM instance names
 If this field is configured in a launch configuration, the `InstanceName` of a CVM created by the scaling group will be generated according to the configuration; otherwise, it will be in the `as-{{AutoScalingGroupName }}` format.
      * @param InstanceChargePrepaid $InstanceChargePrepaid Details of the monthly subscription, including the purchase period, auto-renewal. It is required if the `InstanceChargeType` is `PREPAID`.
-     * @param string $DiskTypePolicy Selection policy of cloud disks. Default value: ORIGINAL. Valid values:
-<br><li>ORIGINAL: uses the configured cloud disk type
-<br><li>AUTOMATIC: automatically chooses an available cloud disk type
+     * @param string $DiskTypePolicy Cloud disk type selection policy, whose default value is ORIGINAL. Valid values:
+<li>ORIGINAL: Use the set cloud disk type.</li>
+<li>AUTOMATIC: Automatically select the currently available cloud disk type.</li>
      * @param string $HpcClusterId HPC ID<br>
 Note: This field is default to empty
      * @param IPv6InternetAccessible $IPv6InternetAccessible IPv6 public network bandwidth configuration. If the IPv6 address is available in the new instance, public network bandwidth can be allocated to the IPv6 address. This parameter is invalid if `Ipv6AddressCount` of the scaling group associated with the launch configuration is 0.
      * @param array $DisasterRecoverGroupIds Placement group ID. Only one is allowed.
+     * @param string $ImageFamily Image family name. Either image ID or image family name should be filled in, and only one of which can be filled.
      */
     function __construct()
     {
@@ -416,6 +424,10 @@ Note: This field is default to empty
 
         if (array_key_exists("DisasterRecoverGroupIds",$param) and $param["DisasterRecoverGroupIds"] !== null) {
             $this->DisasterRecoverGroupIds = $param["DisasterRecoverGroupIds"];
+        }
+
+        if (array_key_exists("ImageFamily",$param) and $param["ImageFamily"] !== null) {
+            $this->ImageFamily = $param["ImageFamily"];
         }
     }
 }

@@ -90,6 +90,10 @@ Note: This field is default to empty
  * @method void setIPv6InternetAccessible(IPv6InternetAccessible $IPv6InternetAccessible) Set IPv6 public network bandwidth configuration.
  * @method array getDisasterRecoverGroupIds() Obtain Placement group ID, supporting specification of only one.
  * @method void setDisasterRecoverGroupIds(array $DisasterRecoverGroupIds) Set Placement group ID, supporting specification of only one.
+ * @method string getImageFamily() Obtain Image family name.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setImageFamily(string $ImageFamily) Set Image family name.
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class LaunchConfiguration extends AbstractModel
 {
@@ -253,6 +257,12 @@ Note: This field is default to empty
     public $DisasterRecoverGroupIds;
 
     /**
+     * @var string Image family name.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $ImageFamily;
+
+    /**
      * @param integer $ProjectId Project ID of the instance.
      * @param string $LaunchConfigurationId Launch configuration ID
      * @param string $LaunchConfigurationName Launch configuration name.
@@ -288,6 +298,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field is default to empty
      * @param IPv6InternetAccessible $IPv6InternetAccessible IPv6 public network bandwidth configuration.
      * @param array $DisasterRecoverGroupIds Placement group ID, supporting specification of only one.
+     * @param string $ImageFamily Image family name.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -453,6 +465,10 @@ Note: This field is default to empty
 
         if (array_key_exists("DisasterRecoverGroupIds",$param) and $param["DisasterRecoverGroupIds"] !== null) {
             $this->DisasterRecoverGroupIds = $param["DisasterRecoverGroupIds"];
+        }
+
+        if (array_key_exists("ImageFamily",$param) and $param["ImageFamily"] !== null) {
+            $this->ImageFamily = $param["ImageFamily"];
         }
     }
 }

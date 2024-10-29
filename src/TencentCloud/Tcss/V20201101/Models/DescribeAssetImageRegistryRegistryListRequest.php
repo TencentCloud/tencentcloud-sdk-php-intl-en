@@ -20,14 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeAssetImageRegistryRegistryList request structure.
  *
-
+ * @method integer getLimit() Obtain Number to return, default is 10, maximum is 100
+ * @method void setLimit(integer $Limit) Set Number to return, default is 10, maximum is 100
+ * @method integer getOffset() Obtain Offset, the default is 0
+ * @method void setOffset(integer $Offset) Set Offset, the default is 0
+ * @method array getFilters() Obtain Filter field IsAuthorized Whether to authorize. The value can be all, 0 unauthorized, 1 authorized
+ * @method void setFilters(array $Filters) Set Filter field IsAuthorized Whether to authorize. The value can be all, 0 unauthorized, 1 authorized
+ * @method string getBy() Obtain Sort field
+ * @method void setBy(string $By) Set Sort field
+ * @method string getOrder() Obtain Sort by asc, desc
+ * @method void setOrder(string $Order) Set Sort by asc, desc
  */
 class DescribeAssetImageRegistryRegistryListRequest extends AbstractModel
 {
-
+    /**
+     * @var integer Number to return, default is 10, maximum is 100
+     */
+    public $Limit;
 
     /**
+     * @var integer Offset, the default is 0
+     */
+    public $Offset;
 
+    /**
+     * @var array Filter field IsAuthorized Whether to authorize. The value can be all, 0 unauthorized, 1 authorized
+     */
+    public $Filters;
+
+    /**
+     * @var string Sort field
+     */
+    public $By;
+
+    /**
+     * @var string Sort by asc, desc
+     */
+    public $Order;
+
+    /**
+     * @param integer $Limit Number to return, default is 10, maximum is 100
+     * @param integer $Offset Offset, the default is 0
+     * @param array $Filters Filter field IsAuthorized Whether to authorize. The value can be all, 0 unauthorized, 1 authorized
+     * @param string $By Sort field
+     * @param string $Order Sort by asc, desc
      */
     function __construct()
     {
@@ -42,6 +78,29 @@ class DescribeAssetImageRegistryRegistryListRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
+            $this->Limit = $param["Limit"];
+        }
 
+        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
+            $this->Offset = $param["Offset"];
+        }
+
+        if (array_key_exists("Filters",$param) and $param["Filters"] !== null) {
+            $this->Filters = [];
+            foreach ($param["Filters"] as $key => $value){
+                $obj = new AssetFilters();
+                $obj->deserialize($value);
+                array_push($this->Filters, $obj);
+            }
+        }
+
+        if (array_key_exists("By",$param) and $param["By"] !== null) {
+            $this->By = $param["By"];
+        }
+
+        if (array_key_exists("Order",$param) and $param["Order"] !== null) {
+            $this->Order = $param["Order"];
+        }
     }
 }

@@ -69,6 +69,7 @@ This API is used to get an Anti-DDoS IP blocklist/allowlist.
  * @method Models\DescribeCcGeoIPBlockConfigListResponse DescribeCcGeoIPBlockConfigList(Models\DescribeCcGeoIPBlockConfigListRequest $req) This API is used to obtain a list of regional blocking configurations.
  * @method Models\DescribeDDoSTrendResponse DescribeDDoSTrend(Models\DescribeDDoSTrendRequest $req) This API is used to get DDoS attack traffic bandwidth and attack packet rate.
  * @method Models\DescribeDefaultAlarmThresholdResponse DescribeDefaultAlarmThreshold(Models\DescribeDefaultAlarmThresholdRequest $req) This API is used to get the default alarm threshold of an IP.
+ * @method Models\DescribeIpBlockListResponse DescribeIpBlockList(Models\DescribeIpBlockListRequest $req) 
  * @method Models\DescribeL7RulesBySSLCertIdResponse DescribeL7RulesBySSLCertId(Models\DescribeL7RulesBySSLCertIdRequest $req) This API is used to query layer-7 rules matched with certificate IDs.
  * @method Models\DescribeListBGPIPInstancesResponse DescribeListBGPIPInstances(Models\DescribeListBGPIPInstancesRequest $req) This API is used to get a list of Anti-DDoS Advanced instances.
 

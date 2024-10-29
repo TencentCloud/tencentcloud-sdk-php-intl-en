@@ -28,18 +28,16 @@ use TencentCloud\Common\AbstractModel;
 The launch configuration uses `InstanceType` to indicate one single instance type and `InstanceTypes` to indicate multiple instance types. Specifying the `InstanceTypes` field will invalidate the original `InstanceType`.
  * @method void setInstanceTypes(array $InstanceTypes) Set List of instance types. Each type specifies different resource specifications. This list contains up to 10 instance types.
 The launch configuration uses `InstanceType` to indicate one single instance type and `InstanceTypes` to indicate multiple instance types. Specifying the `InstanceTypes` field will invalidate the original `InstanceType`.
- * @method string getInstanceTypesCheckPolicy() Obtain Instance type verification policy which works when InstanceTypes is actually modified. Value range: ALL, ANY. Default value: ANY.
-<br><li> ALL: The verification will success only if all instance types (InstanceType) are available; otherwise, an error will be reported.
-<br><li> ANY: The verification will success if any instance type (InstanceType) is available; otherwise, an error will be reported.
-
-Common reasons why an instance type is unavailable include stock-out of the instance type or the corresponding cloud disk.
-If a model in InstanceTypes does not exist or has been discontinued, a verification error will be reported regardless of the value of InstanceTypesCheckPolicy.
- * @method void setInstanceTypesCheckPolicy(string $InstanceTypesCheckPolicy) Set Instance type verification policy which works when InstanceTypes is actually modified. Value range: ALL, ANY. Default value: ANY.
-<br><li> ALL: The verification will success only if all instance types (InstanceType) are available; otherwise, an error will be reported.
-<br><li> ANY: The verification will success if any instance type (InstanceType) is available; otherwise, an error will be reported.
-
-Common reasons why an instance type is unavailable include stock-out of the instance type or the corresponding cloud disk.
-If a model in InstanceTypes does not exist or has been discontinued, a verification error will be reported regardless of the value of InstanceTypesCheckPolicy.
+ * @method string getInstanceTypesCheckPolicy() Obtain InstanceType verification policy, which is effective when actual modification is made to InstanceTypes. Valid values include ALL and ANY and the default value is ANY.
+<li>ALL: Verification passes if all InstanceTypes are available; otherwise, a verification error will be reported.</li>
+<li>ANY: Verification passes if any InstanceType is available; otherwise, a verification error will be reported.</li>
+Common reasons for unavailable InstanceTypes include the InstanceType being sold out, and the corresponding cloud disk being sold out.
+If a model in InstanceTypes does not exist or has been abolished, a verification error will be reported regardless of the valid values set for InstanceTypesCheckPolicy.
+ * @method void setInstanceTypesCheckPolicy(string $InstanceTypesCheckPolicy) Set InstanceType verification policy, which is effective when actual modification is made to InstanceTypes. Valid values include ALL and ANY and the default value is ANY.
+<li>ALL: Verification passes if all InstanceTypes are available; otherwise, a verification error will be reported.</li>
+<li>ANY: Verification passes if any InstanceType is available; otherwise, a verification error will be reported.</li>
+Common reasons for unavailable InstanceTypes include the InstanceType being sold out, and the corresponding cloud disk being sold out.
+If a model in InstanceTypes does not exist or has been abolished, a verification error will be reported regardless of the valid values set for InstanceTypesCheckPolicy.
  * @method string getLaunchConfigurationName() Obtain Display name of the launch configuration, which can contain Chinese characters, letters, numbers, underscores, separators ("-"), and decimal points with a maximum length of 60 bytes.
  * @method void setLaunchConfigurationName(string $LaunchConfigurationName) Set Display name of the launch configuration, which can contain Chinese characters, letters, numbers, underscores, separators ("-"), and decimal points with a maximum length of 60 bytes.
  * @method string getUserData() Obtain Base64-encoded custom data of up to 16 KB. If you want to clear `UserData`, set it to an empty string.
@@ -74,12 +72,12 @@ This field can be modified only when the current billing mode is spot instance.
 This parameter is required when changing the instance billing mode to spot instance. It will be automatically discarded after you choose another instance billing mode.
 This field requires passing in the `MaxPrice` field under the `SpotOptions`. Other fields that are not passed in will use their default values.
 This field can be modified only when the current billing mode is spot instance.
- * @method string getDiskTypePolicy() Obtain Selection policy of cloud disks. Default value: ORIGINAL. Valid values:
-<br><li>ORIGINAL: uses the configured cloud disk type
-<br><li>AUTOMATIC: automatically chooses an available cloud disk type
- * @method void setDiskTypePolicy(string $DiskTypePolicy) Set Selection policy of cloud disks. Default value: ORIGINAL. Valid values:
-<br><li>ORIGINAL: uses the configured cloud disk type
-<br><li>AUTOMATIC: automatically chooses an available cloud disk type
+ * @method string getDiskTypePolicy() Obtain Cloud disk type selection policy. Valid values:
+<li>ORIGINAL: Use the set cloud disk type.</li>
+<li>AUTOMATIC: Automatically select the currently available cloud disk type.</li>
+ * @method void setDiskTypePolicy(string $DiskTypePolicy) Set Cloud disk type selection policy. Valid values:
+<li>ORIGINAL: Use the set cloud disk type.</li>
+<li>AUTOMATIC: Automatically select the currently available cloud disk type.</li>
  * @method SystemDisk getSystemDisk() Obtain Instance system disk configurations
  * @method void setSystemDisk(SystemDisk $SystemDisk) Set Instance system disk configurations
  * @method array getDataDisks() Obtain Configuration information of instance data disks.
@@ -114,6 +112,12 @@ Note: This field is default to empty
  * @method void setDisasterRecoverGroupIds(array $DisasterRecoverGroupIds) Set Placement group ID. Only one is allowed.
  * @method LoginSettings getLoginSettings() Obtain Instance login settings, which include passwords, keys, or the original login settings inherited from the image. <br>Please note that specifying new login settings will overwrite the existing ones. For instance, if you previously used a password for login and then use this parameter to switch the login settings to a key, the original password will be removed.
  * @method void setLoginSettings(LoginSettings $LoginSettings) Set Instance login settings, which include passwords, keys, or the original login settings inherited from the image. <br>Please note that specifying new login settings will overwrite the existing ones. For instance, if you previously used a password for login and then use this parameter to switch the login settings to a key, the original password will be removed.
+ * @method array getInstanceTags() Obtain Instance tag list. By specifying this parameter, the instances added through scale-out can be bound to the tag. Up to 10 Tags can be specified.
+This parameter will overwrite the original instance tag list. To add new tags, you need to pass the new tags along with the original tags.
+ * @method void setInstanceTags(array $InstanceTags) Set Instance tag list. By specifying this parameter, the instances added through scale-out can be bound to the tag. Up to 10 Tags can be specified.
+This parameter will overwrite the original instance tag list. To add new tags, you need to pass the new tags along with the original tags.
+ * @method string getImageFamily() Obtain Image family name.
+ * @method void setImageFamily(string $ImageFamily) Set Image family name.
  */
 class ModifyLaunchConfigurationAttributesRequest extends AbstractModel
 {
@@ -134,12 +138,11 @@ The launch configuration uses `InstanceType` to indicate one single instance typ
     public $InstanceTypes;
 
     /**
-     * @var string Instance type verification policy which works when InstanceTypes is actually modified. Value range: ALL, ANY. Default value: ANY.
-<br><li> ALL: The verification will success only if all instance types (InstanceType) are available; otherwise, an error will be reported.
-<br><li> ANY: The verification will success if any instance type (InstanceType) is available; otherwise, an error will be reported.
-
-Common reasons why an instance type is unavailable include stock-out of the instance type or the corresponding cloud disk.
-If a model in InstanceTypes does not exist or has been discontinued, a verification error will be reported regardless of the value of InstanceTypesCheckPolicy.
+     * @var string InstanceType verification policy, which is effective when actual modification is made to InstanceTypes. Valid values include ALL and ANY and the default value is ANY.
+<li>ALL: Verification passes if all InstanceTypes are available; otherwise, a verification error will be reported.</li>
+<li>ANY: Verification passes if any InstanceType is available; otherwise, a verification error will be reported.</li>
+Common reasons for unavailable InstanceTypes include the InstanceType being sold out, and the corresponding cloud disk being sold out.
+If a model in InstanceTypes does not exist or has been abolished, a verification error will be reported regardless of the valid values set for InstanceTypesCheckPolicy.
      */
     public $InstanceTypesCheckPolicy;
 
@@ -189,9 +192,9 @@ This field can be modified only when the current billing mode is spot instance.
     public $InstanceMarketOptions;
 
     /**
-     * @var string Selection policy of cloud disks. Default value: ORIGINAL. Valid values:
-<br><li>ORIGINAL: uses the configured cloud disk type
-<br><li>AUTOMATIC: automatically chooses an available cloud disk type
+     * @var string Cloud disk type selection policy. Valid values:
+<li>ORIGINAL: Use the set cloud disk type.</li>
+<li>AUTOMATIC: Automatically select the currently available cloud disk type.</li>
      */
     public $DiskTypePolicy;
 
@@ -253,16 +256,26 @@ Note: This field is default to empty
     public $LoginSettings;
 
     /**
+     * @var array Instance tag list. By specifying this parameter, the instances added through scale-out can be bound to the tag. Up to 10 Tags can be specified.
+This parameter will overwrite the original instance tag list. To add new tags, you need to pass the new tags along with the original tags.
+     */
+    public $InstanceTags;
+
+    /**
+     * @var string Image family name.
+     */
+    public $ImageFamily;
+
+    /**
      * @param string $LaunchConfigurationId Launch configuration ID
      * @param string $ImageId [Image](https://intl.cloud.tencent.com/document/product/213/4940?from_cn_redirect=1) ID in the format of `img-xxx`. There are three types of images: <br/><li>Public images </li><li>Custom images </li><li>Shared images </li><br/>You can obtain the image IDs in the [CVM console](https://console.cloud.tencent.com/cvm/image?rid=1&imageType=PUBLIC_IMAGE).</li><li>You can also use the [DescribeImages](https://intl.cloud.tencent.com/document/api/213/15715?from_cn_redirect=1) and look for `ImageId` in the response.</li>
      * @param array $InstanceTypes List of instance types. Each type specifies different resource specifications. This list contains up to 10 instance types.
 The launch configuration uses `InstanceType` to indicate one single instance type and `InstanceTypes` to indicate multiple instance types. Specifying the `InstanceTypes` field will invalidate the original `InstanceType`.
-     * @param string $InstanceTypesCheckPolicy Instance type verification policy which works when InstanceTypes is actually modified. Value range: ALL, ANY. Default value: ANY.
-<br><li> ALL: The verification will success only if all instance types (InstanceType) are available; otherwise, an error will be reported.
-<br><li> ANY: The verification will success if any instance type (InstanceType) is available; otherwise, an error will be reported.
-
-Common reasons why an instance type is unavailable include stock-out of the instance type or the corresponding cloud disk.
-If a model in InstanceTypes does not exist or has been discontinued, a verification error will be reported regardless of the value of InstanceTypesCheckPolicy.
+     * @param string $InstanceTypesCheckPolicy InstanceType verification policy, which is effective when actual modification is made to InstanceTypes. Valid values include ALL and ANY and the default value is ANY.
+<li>ALL: Verification passes if all InstanceTypes are available; otherwise, a verification error will be reported.</li>
+<li>ANY: Verification passes if any InstanceType is available; otherwise, a verification error will be reported.</li>
+Common reasons for unavailable InstanceTypes include the InstanceType being sold out, and the corresponding cloud disk being sold out.
+If a model in InstanceTypes does not exist or has been abolished, a verification error will be reported regardless of the valid values set for InstanceTypesCheckPolicy.
      * @param string $LaunchConfigurationName Display name of the launch configuration, which can contain Chinese characters, letters, numbers, underscores, separators ("-"), and decimal points with a maximum length of 60 bytes.
      * @param string $UserData Base64-encoded custom data of up to 16 KB. If you want to clear `UserData`, set it to an empty string.
      * @param array $SecurityGroupIds Security group to which the instance belongs. This parameter can be obtained from the `SecurityGroupId` field in the response of the [`DescribeSecurityGroups`](https://intl.cloud.tencent.com/document/api/215/15808?from_cn_redirect=1) API.
@@ -280,9 +293,9 @@ This field can be modified only when the current billing mode is monthly subscri
 This parameter is required when changing the instance billing mode to spot instance. It will be automatically discarded after you choose another instance billing mode.
 This field requires passing in the `MaxPrice` field under the `SpotOptions`. Other fields that are not passed in will use their default values.
 This field can be modified only when the current billing mode is spot instance.
-     * @param string $DiskTypePolicy Selection policy of cloud disks. Default value: ORIGINAL. Valid values:
-<br><li>ORIGINAL: uses the configured cloud disk type
-<br><li>AUTOMATIC: automatically chooses an available cloud disk type
+     * @param string $DiskTypePolicy Cloud disk type selection policy. Valid values:
+<li>ORIGINAL: Use the set cloud disk type.</li>
+<li>AUTOMATIC: Automatically select the currently available cloud disk type.</li>
      * @param SystemDisk $SystemDisk Instance system disk configurations
      * @param array $DataDisks Configuration information of instance data disks.
 Up to 11 data disks can be specified and will be collectively modified. Please provide all the new values for the modification.
@@ -300,6 +313,9 @@ Note: This field is default to empty
      * @param IPv6InternetAccessible $IPv6InternetAccessible IPv6 public network bandwidth configuration. If the IPv6 address is available in the new instance, public network bandwidth can be allocated to the IPv6 address. This parameter is invalid if `Ipv6AddressCount` of the scaling group associated with the launch configuration is 0.
      * @param array $DisasterRecoverGroupIds Placement group ID. Only one is allowed.
      * @param LoginSettings $LoginSettings Instance login settings, which include passwords, keys, or the original login settings inherited from the image. <br>Please note that specifying new login settings will overwrite the existing ones. For instance, if you previously used a password for login and then use this parameter to switch the login settings to a key, the original password will be removed.
+     * @param array $InstanceTags Instance tag list. By specifying this parameter, the instances added through scale-out can be bound to the tag. Up to 10 Tags can be specified.
+This parameter will overwrite the original instance tag list. To add new tags, you need to pass the new tags along with the original tags.
+     * @param string $ImageFamily Image family name.
      */
     function __construct()
     {
@@ -414,6 +430,19 @@ Note: This field is default to empty
         if (array_key_exists("LoginSettings",$param) and $param["LoginSettings"] !== null) {
             $this->LoginSettings = new LoginSettings();
             $this->LoginSettings->deserialize($param["LoginSettings"]);
+        }
+
+        if (array_key_exists("InstanceTags",$param) and $param["InstanceTags"] !== null) {
+            $this->InstanceTags = [];
+            foreach ($param["InstanceTags"] as $key => $value){
+                $obj = new InstanceTag();
+                $obj->deserialize($value);
+                array_push($this->InstanceTags, $obj);
+            }
+        }
+
+        if (array_key_exists("ImageFamily",$param) and $param["ImageFamily"] !== null) {
+            $this->ImageFamily = $param["ImageFamily"];
         }
     }
 }

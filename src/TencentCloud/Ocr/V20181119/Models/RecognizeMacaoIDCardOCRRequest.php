@@ -26,12 +26,16 @@ Supported image size: The downloaded image should not exceed 7M. The image downl
  * @method void setImageUrl(string $ImageUrl) Set The URL address of the image. 
 Supported image formats: PNG, JPG, JPEG. Not support GIF yet.
 Supported image size: The downloaded image should not exceed 7M. The image download takes no more than 3 seconds.Storing images in Tencent Cloud URLs can ensure higher download speed and stability. It is recommended that images be stored in Tencent Cloud. The URL speed and stability of non-Tencent cloud storage may be affected to a certain extent.
+ * @method string getBackImageUrl() Obtain The URL address of the image on the back of the card. Supported image formats: PNG, JPG, JPEG. The GIF format is not supported yet. Supported image size: The downloaded image does not exceed 7M after Base64 encoding. The image download takes no more than 3 seconds. Storing images in Tencent Cloud URLs can ensure higher download speed and stability. It is recommended that images be stored in Tencent Cloud. The URL speed and stability of non-Tencent cloud storage may be affected to a certain extent.
+ * @method void setBackImageUrl(string $BackImageUrl) Set The URL address of the image on the back of the card. Supported image formats: PNG, JPG, JPEG. The GIF format is not supported yet. Supported image size: The downloaded image does not exceed 7M after Base64 encoding. The image download takes no more than 3 seconds. Storing images in Tencent Cloud URLs can ensure higher download speed and stability. It is recommended that images be stored in Tencent Cloud. The URL speed and stability of non-Tencent cloud storage may be affected to a certain extent.
  * @method string getImageBase64() Obtain Base64 value of the image.Supported image formats: PNG, JPG, JPEG. Not support GIF yet.
 Supported image size: The downloaded image should not exceed 7M after Base64 encoding. The image download takes no more than 3 seconds.
 One of ImageUrl and ImageBase64 of the image must be provided. If both are provided, only ImageUrl will be used.
  * @method void setImageBase64(string $ImageBase64) Set Base64 value of the image.Supported image formats: PNG, JPG, JPEG. Not support GIF yet.
 Supported image size: The downloaded image should not exceed 7M after Base64 encoding. The image download takes no more than 3 seconds.
 One of ImageUrl and ImageBase64 of the image must be provided. If both are provided, only ImageUrl will be used.
+ * @method string getBackImageBase64() Obtain Base64 value of the image on the back of the card. Supported image formats: PNG, JPG, JPEG. The GIF format is not supported yet. Supported image size: The downloaded image does not exceed 7M after Base64 encoding. The image download takes no more than 3 seconds. One of ImageUrl and ImageBase64 of the image must be provided. If both are provided, only ImageUrl will be used.
+ * @method void setBackImageBase64(string $BackImageBase64) Set Base64 value of the image on the back of the card. Supported image formats: PNG, JPG, JPEG. The GIF format is not supported yet. Supported image size: The downloaded image does not exceed 7M after Base64 encoding. The image download takes no more than 3 seconds. One of ImageUrl and ImageBase64 of the image must be provided. If both are provided, only ImageUrl will be used.
  * @method string getConfig() Obtain The following optional fields are of string type and are empty by default: 
 RetImage: whether to return the processed image (base64 encrypted string); the value and meaning of RetImage are as follows: 1.preprocess returns the preprocessed image data 2.portrait Return portrait image data 3."" Do not return image data SDK setting method reference: Config = Json.stringify({"RetImage":"preprocess"}) API 3.0 Explorer setting method reference: Config = {"RetImage":"portrait" }
  * @method void setConfig(string $Config) Set The following optional fields are of string type and are empty by default: 
@@ -47,11 +51,21 @@ Supported image size: The downloaded image should not exceed 7M. The image downl
     public $ImageUrl;
 
     /**
+     * @var string The URL address of the image on the back of the card. Supported image formats: PNG, JPG, JPEG. The GIF format is not supported yet. Supported image size: The downloaded image does not exceed 7M after Base64 encoding. The image download takes no more than 3 seconds. Storing images in Tencent Cloud URLs can ensure higher download speed and stability. It is recommended that images be stored in Tencent Cloud. The URL speed and stability of non-Tencent cloud storage may be affected to a certain extent.
+     */
+    public $BackImageUrl;
+
+    /**
      * @var string Base64 value of the image.Supported image formats: PNG, JPG, JPEG. Not support GIF yet.
 Supported image size: The downloaded image should not exceed 7M after Base64 encoding. The image download takes no more than 3 seconds.
 One of ImageUrl and ImageBase64 of the image must be provided. If both are provided, only ImageUrl will be used.
      */
     public $ImageBase64;
+
+    /**
+     * @var string Base64 value of the image on the back of the card. Supported image formats: PNG, JPG, JPEG. The GIF format is not supported yet. Supported image size: The downloaded image does not exceed 7M after Base64 encoding. The image download takes no more than 3 seconds. One of ImageUrl and ImageBase64 of the image must be provided. If both are provided, only ImageUrl will be used.
+     */
+    public $BackImageBase64;
 
     /**
      * @var string The following optional fields are of string type and are empty by default: 
@@ -63,9 +77,11 @@ RetImage: whether to return the processed image (base64 encrypted string); the v
      * @param string $ImageUrl The URL address of the image. 
 Supported image formats: PNG, JPG, JPEG. Not support GIF yet.
 Supported image size: The downloaded image should not exceed 7M. The image download takes no more than 3 seconds.Storing images in Tencent Cloud URLs can ensure higher download speed and stability. It is recommended that images be stored in Tencent Cloud. The URL speed and stability of non-Tencent cloud storage may be affected to a certain extent.
+     * @param string $BackImageUrl The URL address of the image on the back of the card. Supported image formats: PNG, JPG, JPEG. The GIF format is not supported yet. Supported image size: The downloaded image does not exceed 7M after Base64 encoding. The image download takes no more than 3 seconds. Storing images in Tencent Cloud URLs can ensure higher download speed and stability. It is recommended that images be stored in Tencent Cloud. The URL speed and stability of non-Tencent cloud storage may be affected to a certain extent.
      * @param string $ImageBase64 Base64 value of the image.Supported image formats: PNG, JPG, JPEG. Not support GIF yet.
 Supported image size: The downloaded image should not exceed 7M after Base64 encoding. The image download takes no more than 3 seconds.
 One of ImageUrl and ImageBase64 of the image must be provided. If both are provided, only ImageUrl will be used.
+     * @param string $BackImageBase64 Base64 value of the image on the back of the card. Supported image formats: PNG, JPG, JPEG. The GIF format is not supported yet. Supported image size: The downloaded image does not exceed 7M after Base64 encoding. The image download takes no more than 3 seconds. One of ImageUrl and ImageBase64 of the image must be provided. If both are provided, only ImageUrl will be used.
      * @param string $Config The following optional fields are of string type and are empty by default: 
 RetImage: whether to return the processed image (base64 encrypted string); the value and meaning of RetImage are as follows: 1.preprocess returns the preprocessed image data 2.portrait Return portrait image data 3."" Do not return image data SDK setting method reference: Config = Json.stringify({"RetImage":"preprocess"}) API 3.0 Explorer setting method reference: Config = {"RetImage":"portrait" }
      */
@@ -86,8 +102,16 @@ RetImage: whether to return the processed image (base64 encrypted string); the v
             $this->ImageUrl = $param["ImageUrl"];
         }
 
+        if (array_key_exists("BackImageUrl",$param) and $param["BackImageUrl"] !== null) {
+            $this->BackImageUrl = $param["BackImageUrl"];
+        }
+
         if (array_key_exists("ImageBase64",$param) and $param["ImageBase64"] !== null) {
             $this->ImageBase64 = $param["ImageBase64"];
+        }
+
+        if (array_key_exists("BackImageBase64",$param) and $param["BackImageBase64"] !== null) {
+            $this->BackImageBase64 = $param["BackImageBase64"];
         }
 
         if (array_key_exists("Config",$param) and $param["Config"] !== null) {

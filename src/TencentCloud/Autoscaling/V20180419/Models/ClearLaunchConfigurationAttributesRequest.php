@@ -38,6 +38,10 @@ Setting it to `true` will clear the instance name settings, which means that CVM
 `True` means clearing placement group information. After that, no placement groups are specified for CVMs created based on the information.
  * @method void setClearDisasterRecoverGroupIds(boolean $ClearDisasterRecoverGroupIds) Set Whether to clear placement group information. This parameter is optional. Default value: `false`.
 `True` means clearing placement group information. After that, no placement groups are specified for CVMs created based on the information.
+ * @method boolean getClearInstanceTags() Obtain Whether to clear the instance tag list. This parameter is optional, and its default value is false.
+If true is filled in, it indicates that the instance tag list should be cleared. After the list is cleared, the CVMs created based on this will not be bound to the tags in the list.
+ * @method void setClearInstanceTags(boolean $ClearInstanceTags) Set Whether to clear the instance tag list. This parameter is optional, and its default value is false.
+If true is filled in, it indicates that the instance tag list should be cleared. After the list is cleared, the CVMs created based on this will not be bound to the tags in the list.
  */
 class ClearLaunchConfigurationAttributesRequest extends AbstractModel
 {
@@ -71,6 +75,12 @@ Setting it to `true` will clear the instance name settings, which means that CVM
     public $ClearDisasterRecoverGroupIds;
 
     /**
+     * @var boolean Whether to clear the instance tag list. This parameter is optional, and its default value is false.
+If true is filled in, it indicates that the instance tag list should be cleared. After the list is cleared, the CVMs created based on this will not be bound to the tags in the list.
+     */
+    public $ClearInstanceTags;
+
+    /**
      * @param string $LaunchConfigurationId Launch configuration ID
      * @param boolean $ClearDataDisks Whether to clear data disk information. This parameter is optional and the default value is `false`.
 Setting it to `true` will clear data disks, which means that CVM newly created on this launch configuration will have no data disk.
@@ -80,6 +90,8 @@ Setting it to `true` will clear the hostname settings, which means that CVM newl
 Setting it to `true` will clear the instance name settings, which means that CVM newly created on this launch configuration will be named in the “as-{{AutoScalingGroupName}} format.
      * @param boolean $ClearDisasterRecoverGroupIds Whether to clear placement group information. This parameter is optional. Default value: `false`.
 `True` means clearing placement group information. After that, no placement groups are specified for CVMs created based on the information.
+     * @param boolean $ClearInstanceTags Whether to clear the instance tag list. This parameter is optional, and its default value is false.
+If true is filled in, it indicates that the instance tag list should be cleared. After the list is cleared, the CVMs created based on this will not be bound to the tags in the list.
      */
     function __construct()
     {
@@ -112,6 +124,10 @@ Setting it to `true` will clear the instance name settings, which means that CVM
 
         if (array_key_exists("ClearDisasterRecoverGroupIds",$param) and $param["ClearDisasterRecoverGroupIds"] !== null) {
             $this->ClearDisasterRecoverGroupIds = $param["ClearDisasterRecoverGroupIds"];
+        }
+
+        if (array_key_exists("ClearInstanceTags",$param) and $param["ClearInstanceTags"] !== null) {
+            $this->ClearInstanceTags = $param["ClearInstanceTags"];
         }
     }
 }

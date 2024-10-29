@@ -20,42 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * AttachPlugin request structure.
  *
- * @method string getPluginId() Obtain ID of the plugin to be bound.
- * @method void setPluginId(string $PluginId) Set ID of the plugin to be bound.
- * @method string getServiceId() Obtain Service ID.
- * @method void setServiceId(string $ServiceId) Set Service ID.
- * @method string getEnvironmentName() Obtain API environment.
- * @method void setEnvironmentName(string $EnvironmentName) Set API environment.
- * @method array getApiIds() Obtain List of APIs bound with the plugin
- * @method void setApiIds(array $ApiIds) Set List of APIs bound with the plugin
+ * @method string getPluginId() Obtain ID of the bound API gateway plugin.
+ * @method void setPluginId(string $PluginId) Set ID of the bound API gateway plugin.
+ * @method string getServiceId() Obtain ID of the service to be operated
+ * @method void setServiceId(string $ServiceId) Set ID of the service to be operated
+ * @method string getEnvironmentName() Obtain Environment for operating the API.
+ * @method void setEnvironmentName(string $EnvironmentName) Set Environment for operating the API.
+ * @method array getApiIds() Obtain List of APIs to be bound.
+ * @method void setApiIds(array $ApiIds) Set List of APIs to be bound.
  */
 class AttachPluginRequest extends AbstractModel
 {
     /**
-     * @var string ID of the plugin to be bound.
+     * @var string ID of the bound API gateway plugin.
      */
     public $PluginId;
 
     /**
-     * @var string Service ID.
+     * @var string ID of the service to be operated
      */
     public $ServiceId;
 
     /**
-     * @var string API environment.
+     * @var string Environment for operating the API.
      */
     public $EnvironmentName;
 
     /**
-     * @var array List of APIs bound with the plugin
+     * @var array List of APIs to be bound.
      */
     public $ApiIds;
 
     /**
-     * @param string $PluginId ID of the plugin to be bound.
-     * @param string $ServiceId Service ID.
-     * @param string $EnvironmentName API environment.
-     * @param array $ApiIds List of APIs bound with the plugin
+     * @param string $PluginId ID of the bound API gateway plugin.
+     * @param string $ServiceId ID of the service to be operated
+     * @param string $EnvironmentName Environment for operating the API.
+     * @param array $ApiIds List of APIs to be bound.
      */
     function __construct()
     {

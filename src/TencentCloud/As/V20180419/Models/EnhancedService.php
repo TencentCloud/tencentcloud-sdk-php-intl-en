@@ -43,6 +43,7 @@ class EnhancedService extends AbstractModel
 
     /**
      * @var array Deprecated parameter.
+     * @deprecated
      */
     public $AutomationService;
 
