@@ -38,6 +38,8 @@ use TencentCloud\Common\AbstractModel;
 <font color='red'>Note: This parameter has been deprecated. Please use `SubtitleFormatsOperation` instead.</font>
  * @method string getSrcLanguage() Obtain Media source language value range: <li>zh: Mandarin </li> <li>en: English</li> <li>ja: Japanese </li> <li>zh-ca: Cantonese</li>
  * @method void setSrcLanguage(string $SrcLanguage) Set Media source language value range: <li>zh: Mandarin </li> <li>en: English</li> <li>ja: Japanese </li> <li>zh-ca: Cantonese</li>
+ * @method string getSubtitleName() Obtain Specify subtitle name, length limit: 64 characters. This value will be used for player display.
+ * @method void setSubtitleName(string $SubtitleName) Set Specify subtitle name, length limit: 64 characters. This value will be used for player display.
  */
 class AsrFullTextConfigureInfoForUpdate extends AbstractModel
 {
@@ -67,6 +69,11 @@ class AsrFullTextConfigureInfoForUpdate extends AbstractModel
     public $SrcLanguage;
 
     /**
+     * @var string Specify subtitle name, length limit: 64 characters. This value will be used for player display.
+     */
+    public $SubtitleName;
+
+    /**
      * @param string $Switch Switch of full speech recognition task. Valid values:
 <li>ON: enables intelligent full speech recognition task;</li>
 <li>OFF: disables intelligent full speech recognition task.</li>
@@ -76,6 +83,7 @@ class AsrFullTextConfigureInfoForUpdate extends AbstractModel
 <li>srt</li>
 <font color='red'>Note: This parameter has been deprecated. Please use `SubtitleFormatsOperation` instead.</font>
      * @param string $SrcLanguage Media source language value range: <li>zh: Mandarin </li> <li>en: English</li> <li>ja: Japanese </li> <li>zh-ca: Cantonese</li>
+     * @param string $SubtitleName Specify subtitle name, length limit: 64 characters. This value will be used for player display.
      */
     function __construct()
     {
@@ -105,6 +113,10 @@ class AsrFullTextConfigureInfoForUpdate extends AbstractModel
 
         if (array_key_exists("SrcLanguage",$param) and $param["SrcLanguage"] !== null) {
             $this->SrcLanguage = $param["SrcLanguage"];
+        }
+
+        if (array_key_exists("SubtitleName",$param) and $param["SubtitleName"] !== null) {
+            $this->SubtitleName = $param["SubtitleName"];
         }
     }
 }

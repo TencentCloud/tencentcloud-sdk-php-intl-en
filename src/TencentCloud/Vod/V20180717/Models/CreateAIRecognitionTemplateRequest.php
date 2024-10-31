@@ -40,6 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAsrFullTextConfigure(AsrFullTextConfigureInfo $AsrFullTextConfigure) Set Control parameter of full speech recognition.
  * @method AsrWordsConfigureInfo getAsrWordsConfigure() Obtain Control parameter of speech keyword recognition.
  * @method void setAsrWordsConfigure(AsrWordsConfigureInfo $AsrWordsConfigure) Set Control parameter of speech keyword recognition.
+ * @method AsrTranslateConfigureInfo getAsrTranslateConfigure() Obtain Control parameter of voice translation.
+ * @method void setAsrTranslateConfigure(AsrTranslateConfigureInfo $AsrTranslateConfigure) Set Control parameter of voice translation.
  * @method ObjectConfigureInfo getObjectConfigure() Obtain Control parameter of object recognition.
  * @method void setObjectConfigure(ObjectConfigureInfo $ObjectConfigure) Set Control parameter of object recognition.
  * @method float getScreenshotInterval() Obtain Frame capturing interval in seconds. If this parameter is left empty, 1 second will be used by default. Minimum value: 0.5 seconds.
@@ -98,6 +100,11 @@ class CreateAIRecognitionTemplateRequest extends AbstractModel
     public $AsrWordsConfigure;
 
     /**
+     * @var AsrTranslateConfigureInfo Control parameter of voice translation.
+     */
+    public $AsrTranslateConfigure;
+
+    /**
      * @var ObjectConfigureInfo Control parameter of object recognition.
      */
     public $ObjectConfigure;
@@ -118,6 +125,7 @@ class CreateAIRecognitionTemplateRequest extends AbstractModel
      * @param OcrWordsConfigureInfo $OcrWordsConfigure Control parameter of text keyword recognition.
      * @param AsrFullTextConfigureInfo $AsrFullTextConfigure Control parameter of full speech recognition.
      * @param AsrWordsConfigureInfo $AsrWordsConfigure Control parameter of speech keyword recognition.
+     * @param AsrTranslateConfigureInfo $AsrTranslateConfigure Control parameter of voice translation.
      * @param ObjectConfigureInfo $ObjectConfigure Control parameter of object recognition.
      * @param float $ScreenshotInterval Frame capturing interval in seconds. If this parameter is left empty, 1 second will be used by default. Minimum value: 0.5 seconds.
      */
@@ -179,6 +187,11 @@ class CreateAIRecognitionTemplateRequest extends AbstractModel
         if (array_key_exists("AsrWordsConfigure",$param) and $param["AsrWordsConfigure"] !== null) {
             $this->AsrWordsConfigure = new AsrWordsConfigureInfo();
             $this->AsrWordsConfigure->deserialize($param["AsrWordsConfigure"]);
+        }
+
+        if (array_key_exists("AsrTranslateConfigure",$param) and $param["AsrTranslateConfigure"] !== null) {
+            $this->AsrTranslateConfigure = new AsrTranslateConfigureInfo();
+            $this->AsrTranslateConfigure->deserialize($param["AsrTranslateConfigure"]);
         }
 
         if (array_key_exists("ObjectConfigure",$param) and $param["ObjectConfigure"] !== null) {

@@ -25,6 +25,7 @@ use TencentCloud\Common\AbstractModel;
 <li>AsrWordsRecognition: speech keyword recognition,</li>
 <li>OcrWordsRecognition: text keyword recognition,</li>
 <li>AsrFullTextRecognition: full speech recognition,</li>
+<li>AsrTranslateRecognition: voice translation recognition,</li>
 <li>OcrFullTextRecognition: full text recognition,</li>
 <li>HeadTailRecognition: video opening and ending credits recognition,</li>
 <li>ObjectRecognition: object recognition.</li>
@@ -33,6 +34,7 @@ use TencentCloud\Common\AbstractModel;
 <li>AsrWordsRecognition: speech keyword recognition,</li>
 <li>OcrWordsRecognition: text keyword recognition,</li>
 <li>AsrFullTextRecognition: full speech recognition,</li>
+<li>AsrTranslateRecognition: voice translation recognition,</li>
 <li>OcrFullTextRecognition: full text recognition,</li>
 <li>HeadTailRecognition: video opening and ending credits recognition,</li>
 <li>ObjectRecognition: object recognition.</li>
@@ -66,6 +68,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
  * @method void setAsrFullTextTask(AiRecognitionTaskAsrFullTextResult $AsrFullTextTask) Set Full speech recognition result, which is valid when `Type` is
  `AsrFullTextRecognition`.
 Note: this field may return null, indicating that no valid values can be obtained.
+ * @method AiRecognitionTaskAsrTranslateResult getAsrTranslateTask() Obtain Voice translation result, valid when Type is AsrTranslateRecognition.
+ * @method void setAsrTranslateTask(AiRecognitionTaskAsrTranslateResult $AsrTranslateTask) Set Voice translation result, valid when Type is AsrTranslateRecognition.
  * @method AiRecognitionTaskOcrWordsResult getOcrWordsTask() Obtain Text keyword recognition result, which is valid when `Type` is
  `OcrWordsRecognition`.
 Note: this field may return null, indicating that no valid values can be obtained.
@@ -93,6 +97,7 @@ class AiRecognitionResult extends AbstractModel
 <li>AsrWordsRecognition: speech keyword recognition,</li>
 <li>OcrWordsRecognition: text keyword recognition,</li>
 <li>AsrFullTextRecognition: full speech recognition,</li>
+<li>AsrTranslateRecognition: voice translation recognition,</li>
 <li>OcrFullTextRecognition: full text recognition,</li>
 <li>HeadTailRecognition: video opening and ending credits recognition,</li>
 <li>ObjectRecognition: object recognition.</li>
@@ -135,6 +140,11 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $AsrFullTextTask;
 
     /**
+     * @var AiRecognitionTaskAsrTranslateResult Voice translation result, valid when Type is AsrTranslateRecognition.
+     */
+    public $AsrTranslateTask;
+
+    /**
      * @var AiRecognitionTaskOcrWordsResult Text keyword recognition result, which is valid when `Type` is
  `OcrWordsRecognition`.
 Note: this field may return null, indicating that no valid values can be obtained.
@@ -161,6 +171,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 <li>AsrWordsRecognition: speech keyword recognition,</li>
 <li>OcrWordsRecognition: text keyword recognition,</li>
 <li>AsrFullTextRecognition: full speech recognition,</li>
+<li>AsrTranslateRecognition: voice translation recognition,</li>
 <li>OcrFullTextRecognition: full text recognition,</li>
 <li>HeadTailRecognition: video opening and ending credits recognition,</li>
 <li>ObjectRecognition: object recognition.</li>
@@ -179,6 +190,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @param AiRecognitionTaskAsrFullTextResult $AsrFullTextTask Full speech recognition result, which is valid when `Type` is
  `AsrFullTextRecognition`.
 Note: this field may return null, indicating that no valid values can be obtained.
+     * @param AiRecognitionTaskAsrTranslateResult $AsrTranslateTask Voice translation result, valid when Type is AsrTranslateRecognition.
      * @param AiRecognitionTaskOcrWordsResult $OcrWordsTask Text keyword recognition result, which is valid when `Type` is
  `OcrWordsRecognition`.
 Note: this field may return null, indicating that no valid values can be obtained.
@@ -229,6 +241,11 @@ Note: this field may return null, indicating that no valid values can be obtaine
         if (array_key_exists("AsrFullTextTask",$param) and $param["AsrFullTextTask"] !== null) {
             $this->AsrFullTextTask = new AiRecognitionTaskAsrFullTextResult();
             $this->AsrFullTextTask->deserialize($param["AsrFullTextTask"]);
+        }
+
+        if (array_key_exists("AsrTranslateTask",$param) and $param["AsrTranslateTask"] !== null) {
+            $this->AsrTranslateTask = new AiRecognitionTaskAsrTranslateResult();
+            $this->AsrTranslateTask->deserialize($param["AsrTranslateTask"]);
         }
 
         if (array_key_exists("OcrWordsTask",$param) and $param["OcrWordsTask"] !== null) {

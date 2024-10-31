@@ -18,7 +18,7 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Video content recognition template details
+ * Video content recognition template details.
  *
  * @method integer getDefinition() Obtain Unique ID of video content recognition template.
  * @method void setDefinition(integer $Definition) Set Unique ID of video content recognition template.
@@ -26,6 +26,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setName(string $Name) Set Video content recognition template name.
  * @method string getComment() Obtain Video content recognition template description.
  * @method void setComment(string $Comment) Set Video content recognition template description.
+ * @method string getType() Obtain Template type, values:
+<li>Preset: system preset template;</li>
+<li>Custom: user-defined template.</li>
+ * @method void setType(string $Type) Set Template type, values:
+<li>Preset: system preset template;</li>
+<li>Custom: user-defined template.</li>
  * @method HeadTailConfigureInfo getHeadTailConfigure() Obtain Control parameter of opening and closing credits recognition.
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setHeadTailConfigure(HeadTailConfigureInfo $HeadTailConfigure) Set Control parameter of opening and closing credits recognition.
@@ -54,6 +60,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setAsrWordsConfigure(AsrWordsConfigureInfo $AsrWordsConfigure) Set Speech keyword recognition control parameter.
 Note: this field may return null, indicating that no valid values can be obtained.
+ * @method AsrTranslateConfigureInfo getAsrTranslateConfigure() Obtain Voice translation control parameter.
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method void setAsrTranslateConfigure(AsrTranslateConfigureInfo $AsrTranslateConfigure) Set Voice translation control parameter.
+Note: this field may return null, indicating that no valid values can be obtained.
  * @method ObjectConfigureInfo getObjectConfigure() Obtain Control parameter of object recognition.
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setObjectConfigure(ObjectConfigureInfo $ObjectConfigure) Set Control parameter of object recognition.
@@ -81,6 +91,13 @@ class AIRecognitionTemplateItem extends AbstractModel
      * @var string Video content recognition template description.
      */
     public $Comment;
+
+    /**
+     * @var string Template type, values:
+<li>Preset: system preset template;</li>
+<li>Custom: user-defined template.</li>
+     */
+    public $Type;
 
     /**
      * @var HeadTailConfigureInfo Control parameter of opening and closing credits recognition.
@@ -125,6 +142,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $AsrWordsConfigure;
 
     /**
+     * @var AsrTranslateConfigureInfo Voice translation control parameter.
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public $AsrTranslateConfigure;
+
+    /**
      * @var ObjectConfigureInfo Control parameter of object recognition.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
@@ -149,6 +172,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @param integer $Definition Unique ID of video content recognition template.
      * @param string $Name Video content recognition template name.
      * @param string $Comment Video content recognition template description.
+     * @param string $Type Template type, values:
+<li>Preset: system preset template;</li>
+<li>Custom: user-defined template.</li>
      * @param HeadTailConfigureInfo $HeadTailConfigure Control parameter of opening and closing credits recognition.
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param SegmentConfigureInfo $SegmentConfigure Control parameter of splitting recognition.
@@ -162,6 +188,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @param AsrFullTextConfigureInfo $AsrFullTextConfigure Full speech recognition control parameter.
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param AsrWordsConfigureInfo $AsrWordsConfigure Speech keyword recognition control parameter.
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param AsrTranslateConfigureInfo $AsrTranslateConfigure Voice translation control parameter.
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param ObjectConfigureInfo $ObjectConfigure Control parameter of object recognition.
 Note: this field may return null, indicating that no valid values can be obtained.
@@ -192,6 +220,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("Comment",$param) and $param["Comment"] !== null) {
             $this->Comment = $param["Comment"];
+        }
+
+        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
+            $this->Type = $param["Type"];
         }
 
         if (array_key_exists("HeadTailConfigure",$param) and $param["HeadTailConfigure"] !== null) {
@@ -227,6 +259,11 @@ Note: this field may return null, indicating that no valid values can be obtaine
         if (array_key_exists("AsrWordsConfigure",$param) and $param["AsrWordsConfigure"] !== null) {
             $this->AsrWordsConfigure = new AsrWordsConfigureInfo();
             $this->AsrWordsConfigure->deserialize($param["AsrWordsConfigure"]);
+        }
+
+        if (array_key_exists("AsrTranslateConfigure",$param) and $param["AsrTranslateConfigure"] !== null) {
+            $this->AsrTranslateConfigure = new AsrTranslateConfigureInfo();
+            $this->AsrTranslateConfigure->deserialize($param["AsrTranslateConfigure"]);
         }
 
         if (array_key_exists("ObjectConfigure",$param) and $param["ObjectConfigure"] !== null) {

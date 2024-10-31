@@ -23,15 +23,33 @@ use TencentCloud\Common\AbstractModel;
  * @method string getName() Obtain Subtitle name. Length limit: 64 characters
  * @method void setName(string $Name) Set Subtitle name. Length limit: 64 characters
  * @method string getLanguage() Obtain Subtitle language. Common values:
-<li>`cn`: Chinese</li>
+<li>`zh`: Chinese</li>
+<li>`en`: English</li>
 <li>`ja`: Japanese</li>
-<li>`en-US`: English</li>
-For other valid values, see [RFC 5646](https://tools.ietf.org/html/rfc5646).
+<li>`ko`: Korean</li>
+<li>`vi`: Vietnamese</li>
+<li>`ms`: Malay</li>
+<li>`th`: Thai</li>
+<li>`pt`: Portuguese</li>
+<li>`tr`: Turkish</li>
+<li>`ar`: Arabic</li>
+<li>`es`: Spanish</li>
+<li>`hi`: Hindi</li>
+<li>`fr`: French</li>For other valid values, see [RFC 5646](https://tools.ietf.org/html/rfc5646).
  * @method void setLanguage(string $Language) Set Subtitle language. Common values:
-<li>`cn`: Chinese</li>
+<li>`zh`: Chinese</li>
+<li>`en`: English</li>
 <li>`ja`: Japanese</li>
-<li>`en-US`: English</li>
-For other valid values, see [RFC 5646](https://tools.ietf.org/html/rfc5646).
+<li>`ko`: Korean</li>
+<li>`vi`: Vietnamese</li>
+<li>`ms`: Malay</li>
+<li>`th`: Thai</li>
+<li>`pt`: Portuguese</li>
+<li>`tr`: Turkish</li>
+<li>`ar`: Arabic</li>
+<li>`es`: Spanish</li>
+<li>`hi`: Hindi</li>
+<li>`fr`: French</li>For other valid values, see [RFC 5646](https://tools.ietf.org/html/rfc5646).
  * @method string getFormat() Obtain Subtitle format. Valid value:
 <li>vtt</li>
  * @method void setFormat(string $Format) Set Subtitle format. Valid value:
@@ -50,10 +68,19 @@ class MediaSubtitleInput extends AbstractModel
 
     /**
      * @var string Subtitle language. Common values:
-<li>`cn`: Chinese</li>
+<li>`zh`: Chinese</li>
+<li>`en`: English</li>
 <li>`ja`: Japanese</li>
-<li>`en-US`: English</li>
-For other valid values, see [RFC 5646](https://tools.ietf.org/html/rfc5646).
+<li>`ko`: Korean</li>
+<li>`vi`: Vietnamese</li>
+<li>`ms`: Malay</li>
+<li>`th`: Thai</li>
+<li>`pt`: Portuguese</li>
+<li>`tr`: Turkish</li>
+<li>`ar`: Arabic</li>
+<li>`es`: Spanish</li>
+<li>`hi`: Hindi</li>
+<li>`fr`: French</li>For other valid values, see [RFC 5646](https://tools.ietf.org/html/rfc5646).
      */
     public $Language;
 
@@ -76,10 +103,19 @@ For other valid values, see [RFC 5646](https://tools.ietf.org/html/rfc5646).
     /**
      * @param string $Name Subtitle name. Length limit: 64 characters
      * @param string $Language Subtitle language. Common values:
-<li>`cn`: Chinese</li>
+<li>`zh`: Chinese</li>
+<li>`en`: English</li>
 <li>`ja`: Japanese</li>
-<li>`en-US`: English</li>
-For other valid values, see [RFC 5646](https://tools.ietf.org/html/rfc5646).
+<li>`ko`: Korean</li>
+<li>`vi`: Vietnamese</li>
+<li>`ms`: Malay</li>
+<li>`th`: Thai</li>
+<li>`pt`: Portuguese</li>
+<li>`tr`: Turkish</li>
+<li>`ar`: Arabic</li>
+<li>`es`: Spanish</li>
+<li>`hi`: Hindi</li>
+<li>`fr`: French</li>For other valid values, see [RFC 5646](https://tools.ietf.org/html/rfc5646).
      * @param string $Format Subtitle format. Valid value:
 <li>vtt</li>
      * @param string $Content Subtitle content, which is [Base64-encoded](https://tools.ietf.org/html/rfc4648) strings

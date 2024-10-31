@@ -34,16 +34,16 @@ Either the Base64 code or URL must be provided. If both are provided, URL prevai
 Image restrictions: The single-edge resolution must be less than 5,000 and greater than 50, and the size after Base64 encoding must be less than 8 MB. Supported formats include JPG, JPEG, PNG, BMP, TIFF and WEBP.
  * @method string getPrompt() Obtain Text description.
 It is used to increase the possibility that the generation result contains the described content.
-Chinese is recommended. A maximum of 256 UTF-8 characters are supported.
+A maximum of 256 UTF-8 characters are supported.
  * @method void setPrompt(string $Prompt) Set Text description.
 It is used to increase the possibility that the generation result contains the described content.
-Chinese is recommended. A maximum of 256 UTF-8 characters are supported.
+A maximum of 256 UTF-8 characters are supported.
  * @method string getNegativePrompt() Obtain Negative text description.
 It is used to reduce the possibility that the generation result contains the described content, but such content cannot be completely avoided.
-Chinese is recommended. A maximum of 256 UTF-8 characters are supported.
+English is recommended. A maximum of 256 UTF-8 characters are supported.
  * @method void setNegativePrompt(string $NegativePrompt) Set Negative text description.
 It is used to reduce the possibility that the generation result contains the described content, but such content cannot be completely avoided.
-Chinese is recommended. A maximum of 256 UTF-8 characters are supported.
+English is recommended. A maximum of 256 UTF-8 characters are supported.
  * @method array getStyles() Obtain Image style.
 Select the desired style from the [Image Style List](https://intl.cloud.tencent.com/document/product/1668/86250?from_cn_redirect=1) and enter the style number.
 It is recommended to use only one style. If no style is specified, 201 (anime style) is used by default.
@@ -85,11 +85,11 @@ The URL is valid for 1 hour.
  * @method integer getEnhanceImage() Obtain Switch indicating whether to  enhance image clarity. Default value: 0.
 1: on
 0: off
-If the switch is turned on, the image clarity will be enhanced, but the generation time will increase.
+If the switch is turned on, the image clarity will be enhanced and the generation time will increase.
  * @method void setEnhanceImage(integer $EnhanceImage) Set Switch indicating whether to  enhance image clarity. Default value: 0.
 1: on
 0: off
-If the switch is turned on, the image clarity will be enhanced, but the generation time will increase.
+If the switch is turned on, the image clarity will be enhanced and the generation time will increase.
  * @method integer getRestoreFace() Obtain Maximum number of faces for detail restoration. Value range: 0 - 6. Default value: 0.
 If the input value is greater than 0, the value will be used as the maximum number of faces with a small area can be restored in each image. The generation time will increase according to the actual number of faces restored.
  * @method void setRestoreFace(integer $RestoreFace) Set Maximum number of faces for detail restoration. Value range: 0 - 6. Default value: 0.
@@ -114,14 +114,14 @@ Image restrictions: The single-edge resolution must be less than 5,000 and great
     /**
      * @var string Text description.
 It is used to increase the possibility that the generation result contains the described content.
-Chinese is recommended. A maximum of 256 UTF-8 characters are supported.
+A maximum of 256 UTF-8 characters are supported.
      */
     public $Prompt;
 
     /**
      * @var string Negative text description.
 It is used to reduce the possibility that the generation result contains the described content, but such content cannot be completely avoided.
-Chinese is recommended. A maximum of 256 UTF-8 characters are supported.
+English is recommended. A maximum of 256 UTF-8 characters are supported.
      */
     public $NegativePrompt;
 
@@ -172,7 +172,7 @@ The URL is valid for 1 hour.
      * @var integer Switch indicating whether to  enhance image clarity. Default value: 0.
 1: on
 0: off
-If the switch is turned on, the image clarity will be enhanced, but the generation time will increase.
+If the switch is turned on, the image clarity will be enhanced and the generation time will increase.
      */
     public $EnhanceImage;
 
@@ -191,10 +191,10 @@ Either the Base64 code or URL must be provided. If both are provided, URL prevai
 Image restrictions: The single-edge resolution must be less than 5,000 and greater than 50, and the size after Base64 encoding must be less than 8 MB. Supported formats include JPG, JPEG, PNG, BMP, TIFF and WEBP.
      * @param string $Prompt Text description.
 It is used to increase the possibility that the generation result contains the described content.
-Chinese is recommended. A maximum of 256 UTF-8 characters are supported.
+A maximum of 256 UTF-8 characters are supported.
      * @param string $NegativePrompt Negative text description.
 It is used to reduce the possibility that the generation result contains the described content, but such content cannot be completely avoided.
-Chinese is recommended. A maximum of 256 UTF-8 characters are supported.
+English is recommended. A maximum of 256 UTF-8 characters are supported.
      * @param array $Styles Image style.
 Select the desired style from the [Image Style List](https://intl.cloud.tencent.com/document/product/1668/86250?from_cn_redirect=1) and enter the style number.
 It is recommended to use only one style. If no style is specified, 201 (anime style) is used by default.
@@ -217,7 +217,7 @@ The URL is valid for 1 hour.
      * @param integer $EnhanceImage Switch indicating whether to  enhance image clarity. Default value: 0.
 1: on
 0: off
-If the switch is turned on, the image clarity will be enhanced, but the generation time will increase.
+If the switch is turned on, the image clarity will be enhanced and the generation time will increase.
      * @param integer $RestoreFace Maximum number of faces for detail restoration. Value range: 0 - 6. Default value: 0.
 If the input value is greater than 0, the value will be used as the maximum number of faces with a small area can be restored in each image. The generation time will increase according to the actual number of faces restored.
      */

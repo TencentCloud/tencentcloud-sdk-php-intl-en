@@ -72,7 +72,6 @@ This operation will also be denied if the current environment has not been publi
  * @method Models\DescribeApiKeyResponse DescribeApiKey(Models\DescribeApiKeyRequest $req) This API is used to query the details of a key.
 After creating an API key, you can query its details by using this API.
  * @method Models\DescribeApiKeysStatusResponse DescribeApiKeysStatus(Models\DescribeApiKeysStatusRequest $req) This API is used to query the information of one or more API keys.
- 
  * @method Models\DescribeApiUsagePlanResponse DescribeApiUsagePlan(Models\DescribeApiUsagePlanRequest $req) This API is used to query the details of API usage plans in a service.
 To make authentication and throttling for a service take effect, you need to bind a usage plan to it. This API is used to query all usage plans bound to a service and APIs under it.
  * @method Models\DescribeApisStatusResponse DescribeApisStatus(Models\DescribeApisStatusRequest $req) This API is used to view a certain API or the list of all APIs under a service and relevant information.

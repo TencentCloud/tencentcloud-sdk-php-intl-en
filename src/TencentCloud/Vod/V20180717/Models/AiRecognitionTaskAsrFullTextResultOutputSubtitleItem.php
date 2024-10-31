@@ -18,8 +18,18 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * The subtitle information.
+ * Subtitle information.
  *
+ * @method string getId() Obtain Media asset subtitle ID, used for media asset subtitle management, only valid when Format is vtt.
+<font color=red>Note:</font> Tasks before 2024-11-01T10:00:00Z return this field as invalid.
+ * @method void setId(string $Id) Set Media asset subtitle ID, used for media asset subtitle management, only valid when Format is vtt.
+<font color=red>Note:</font> Tasks before 2024-11-01T10:00:00Z return this field as invalid.
+ * @method string getName() Obtain Media asset subtitle name, used for player display, only valid when Format is vtt.
+<font color=red>Note:</font> Tasks before 2024-11-01T10:00:00Z return this field as invalid.
+ * @method void setName(string $Name) Set Media asset subtitle name, used for player display, only valid when Format is vtt.
+<font color=red>Note:</font> Tasks before 2024-11-01T10:00:00Z return this field as invalid.
+ * @method string getLanguage() Obtain Subtitle Language.
+ * @method void setLanguage(string $Language) Set Subtitle Language.
  * @method string getFormat() Obtain The format of the subtitle files. Valid values:
 <li>vtt</li>
 <li>srt</li>
@@ -31,6 +41,23 @@ use TencentCloud\Common\AbstractModel;
  */
 class AiRecognitionTaskAsrFullTextResultOutputSubtitleItem extends AbstractModel
 {
+    /**
+     * @var string Media asset subtitle ID, used for media asset subtitle management, only valid when Format is vtt.
+<font color=red>Note:</font> Tasks before 2024-11-01T10:00:00Z return this field as invalid.
+     */
+    public $Id;
+
+    /**
+     * @var string Media asset subtitle name, used for player display, only valid when Format is vtt.
+<font color=red>Note:</font> Tasks before 2024-11-01T10:00:00Z return this field as invalid.
+     */
+    public $Name;
+
+    /**
+     * @var string Subtitle Language.
+     */
+    public $Language;
+
     /**
      * @var string The format of the subtitle files. Valid values:
 <li>vtt</li>
@@ -44,6 +71,11 @@ class AiRecognitionTaskAsrFullTextResultOutputSubtitleItem extends AbstractModel
     public $Url;
 
     /**
+     * @param string $Id Media asset subtitle ID, used for media asset subtitle management, only valid when Format is vtt.
+<font color=red>Note:</font> Tasks before 2024-11-01T10:00:00Z return this field as invalid.
+     * @param string $Name Media asset subtitle name, used for player display, only valid when Format is vtt.
+<font color=red>Note:</font> Tasks before 2024-11-01T10:00:00Z return this field as invalid.
+     * @param string $Language Subtitle Language.
      * @param string $Format The format of the subtitle files. Valid values:
 <li>vtt</li>
 <li>srt</li>
@@ -62,6 +94,18 @@ class AiRecognitionTaskAsrFullTextResultOutputSubtitleItem extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("Id",$param) and $param["Id"] !== null) {
+            $this->Id = $param["Id"];
+        }
+
+        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
+            $this->Name = $param["Name"];
+        }
+
+        if (array_key_exists("Language",$param) and $param["Language"] !== null) {
+            $this->Language = $param["Language"];
+        }
+
         if (array_key_exists("Format",$param) and $param["Format"] !== null) {
             $this->Format = $param["Format"];
         }

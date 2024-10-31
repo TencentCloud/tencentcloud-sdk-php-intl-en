@@ -40,8 +40,13 @@ use TencentCloud\Common\AbstractModel;
 <li>vtt</li>
 <li>srt</li>
 <font color='red'>Note: This parameter has been deprecated. Please use `SubtitleFormats` instead.</font>
- * @method string getSrcLanguage() Obtain Media source language value range: <li>zh: Mandarin </li> <li>en: English</li> <li>ja: Japanese </li> <li>zh-ca: Cantonese</li><font color=red>Note：</font> If it fills in an empty string or leave this parameter blank, it will be automatically recognized (it is recommended to fill in the language corresponding to the media to improve the recognition accuracy).
- * @method void setSrcLanguage(string $SrcLanguage) Set Media source language value range: <li>zh: Mandarin </li> <li>en: English</li> <li>ja: Japanese </li> <li>zh-ca: Cantonese</li><font color=red>Note：</font> If it fills in an empty string or leave this parameter blank, it will be automatically recognized (it is recommended to fill in the language corresponding to the media to improve the recognition accuracy).
+ * @method string getSrcLanguage() Obtain Media source language value range: <li>zh: Mandarin </li> <li>en: English</li> <li>ja: Japanese </li> <li>zh-ca: Cantonese</li><font color=red>Note: </font> If it fills in an empty string or leaves this parameter blank, it will be automatically recognized (it is recommended to fill in the language corresponding to the media to improve the recognition accuracy).
+ * @method void setSrcLanguage(string $SrcLanguage) Set Media source language value range: <li>zh: Mandarin </li> <li>en: English</li> <li>ja: Japanese </li> <li>zh-ca: Cantonese</li><font color=red>Note: </font> If it fills in an empty string or leaves this parameter blank, it will be automatically recognized (it is recommended to fill in the language corresponding to the media to improve the recognition accuracy).
+ * @method string getSubtitleName() Obtain Specify subtitle name, length limit: 64 characters. This value will be displayed by the player. If not provided, VOD will automatically generate it.
+<font color=red>Note:</font> This field is valid only when SubtitleFormats includes vtt.
+
+ * @method void setSubtitleName(string $SubtitleName) Set Specify subtitle name, length limit: 64 characters. This value will be displayed by the player. If not provided, VOD will automatically generate it.
+<font color=red>Note:</font> This field is valid only when SubtitleFormats includes vtt.
  */
 class AsrFullTextConfigureInfo extends AbstractModel
 {
@@ -68,9 +73,16 @@ class AsrFullTextConfigureInfo extends AbstractModel
     public $SubtitleFormat;
 
     /**
-     * @var string Media source language value range: <li>zh: Mandarin </li> <li>en: English</li> <li>ja: Japanese </li> <li>zh-ca: Cantonese</li><font color=red>Note：</font> If it fills in an empty string or leave this parameter blank, it will be automatically recognized (it is recommended to fill in the language corresponding to the media to improve the recognition accuracy).
+     * @var string Media source language value range: <li>zh: Mandarin </li> <li>en: English</li> <li>ja: Japanese </li> <li>zh-ca: Cantonese</li><font color=red>Note: </font> If it fills in an empty string or leaves this parameter blank, it will be automatically recognized (it is recommended to fill in the language corresponding to the media to improve the recognition accuracy).
      */
     public $SrcLanguage;
+
+    /**
+     * @var string Specify subtitle name, length limit: 64 characters. This value will be displayed by the player. If not provided, VOD will automatically generate it.
+<font color=red>Note:</font> This field is valid only when SubtitleFormats includes vtt.
+
+     */
+    public $SubtitleName;
 
     /**
      * @param string $Switch Switch of full speech recognition task. Valid values:
@@ -83,7 +95,9 @@ class AsrFullTextConfigureInfo extends AbstractModel
 <li>vtt</li>
 <li>srt</li>
 <font color='red'>Note: This parameter has been deprecated. Please use `SubtitleFormats` instead.</font>
-     * @param string $SrcLanguage Media source language value range: <li>zh: Mandarin </li> <li>en: English</li> <li>ja: Japanese </li> <li>zh-ca: Cantonese</li><font color=red>Note：</font> If it fills in an empty string or leave this parameter blank, it will be automatically recognized (it is recommended to fill in the language corresponding to the media to improve the recognition accuracy).
+     * @param string $SrcLanguage Media source language value range: <li>zh: Mandarin </li> <li>en: English</li> <li>ja: Japanese </li> <li>zh-ca: Cantonese</li><font color=red>Note: </font> If it fills in an empty string or leaves this parameter blank, it will be automatically recognized (it is recommended to fill in the language corresponding to the media to improve the recognition accuracy).
+     * @param string $SubtitleName Specify subtitle name, length limit: 64 characters. This value will be displayed by the player. If not provided, VOD will automatically generate it.
+<font color=red>Note:</font> This field is valid only when SubtitleFormats includes vtt.
      */
     function __construct()
     {
@@ -112,6 +126,10 @@ class AsrFullTextConfigureInfo extends AbstractModel
 
         if (array_key_exists("SrcLanguage",$param) and $param["SrcLanguage"] !== null) {
             $this->SrcLanguage = $param["SrcLanguage"];
+        }
+
+        if (array_key_exists("SubtitleName",$param) and $param["SubtitleName"] !== null) {
+            $this->SubtitleName = $param["SubtitleName"];
         }
     }
 }

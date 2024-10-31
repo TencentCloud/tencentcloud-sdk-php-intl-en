@@ -25,21 +25,45 @@ use TencentCloud\Common\AbstractModel;
  * @method string getName() Obtain Subtitle name
  * @method void setName(string $Name) Set Subtitle name
  * @method string getLanguage() Obtain Subtitle language. Common values:
-<li>`cn`: Chinese</li>
+<li>`zh`: Chinese</li>
+<li>`en`: English</li>
 <li>`ja`: Japanese</li>
-<li>`en-US`: English</li>
-For other values, see [RFC 5646](https://tools.ietf.org/html/rfc5646).
+<li>`ko`: Korean</li>
+<li>`vi`: Vietnamese</li>
+<li>`ms`: Malay</li>
+<li>`th`: Thai</li>
+<li>`pt`: Portuguese</li>
+<li>`tr`: Turkish</li>
+<li>`ar`: Arabic</li>
+<li>`es`: Spanish</li>
+<li>`hi`: Hindi</li>
+<li>`fr`: French</li>For other valid values, see [RFC 5646](https://tools.ietf.org/html/rfc5646).
  * @method void setLanguage(string $Language) Set Subtitle language. Common values:
-<li>`cn`: Chinese</li>
+<li>`zh`: Chinese</li>
+<li>`en`: English</li>
 <li>`ja`: Japanese</li>
-<li>`en-US`: English</li>
-For other values, see [RFC 5646](https://tools.ietf.org/html/rfc5646).
+<li>`ko`: Korean</li>
+<li>`vi`: Vietnamese</li>
+<li>`ms`: Malay</li>
+<li>`th`: Thai</li>
+<li>`pt`: Portuguese</li>
+<li>`tr`: Turkish</li>
+<li>`ar`: Arabic</li>
+<li>`es`: Spanish</li>
+<li>`hi`: Hindi</li>
+<li>`fr`: French</li>For other valid values, see [RFC 5646](https://tools.ietf.org/html/rfc5646).
  * @method string getFormat() Obtain Subtitle format. Valid value:
 <li>vtt</li>
  * @method void setFormat(string $Format) Set Subtitle format. Valid value:
 <li>vtt</li>
  * @method string getUrl() Obtain Subtitle URL
  * @method void setUrl(string $Url) Set Subtitle URL
+ * @method string getSource() Obtain Subtitle source, values:
+<li>UserUploaded: user uploaded;</li>
+<li>AIRecognition: AI recognition, generated through asr full text recognition or voice translation.</li>
+ * @method void setSource(string $Source) Set Subtitle source, values:
+<li>UserUploaded: user uploaded;</li>
+<li>AIRecognition: AI recognition, generated through asr full text recognition or voice translation.</li>
  */
 class MediaSubtitleItem extends AbstractModel
 {
@@ -55,10 +79,19 @@ class MediaSubtitleItem extends AbstractModel
 
     /**
      * @var string Subtitle language. Common values:
-<li>`cn`: Chinese</li>
+<li>`zh`: Chinese</li>
+<li>`en`: English</li>
 <li>`ja`: Japanese</li>
-<li>`en-US`: English</li>
-For other values, see [RFC 5646](https://tools.ietf.org/html/rfc5646).
+<li>`ko`: Korean</li>
+<li>`vi`: Vietnamese</li>
+<li>`ms`: Malay</li>
+<li>`th`: Thai</li>
+<li>`pt`: Portuguese</li>
+<li>`tr`: Turkish</li>
+<li>`ar`: Arabic</li>
+<li>`es`: Spanish</li>
+<li>`hi`: Hindi</li>
+<li>`fr`: French</li>For other valid values, see [RFC 5646](https://tools.ietf.org/html/rfc5646).
      */
     public $Language;
 
@@ -74,16 +107,35 @@ For other values, see [RFC 5646](https://tools.ietf.org/html/rfc5646).
     public $Url;
 
     /**
+     * @var string Subtitle source, values:
+<li>UserUploaded: user uploaded;</li>
+<li>AIRecognition: AI recognition, generated through asr full text recognition or voice translation.</li>
+     */
+    public $Source;
+
+    /**
      * @param string $Id Unique subtitle ID
      * @param string $Name Subtitle name
      * @param string $Language Subtitle language. Common values:
-<li>`cn`: Chinese</li>
+<li>`zh`: Chinese</li>
+<li>`en`: English</li>
 <li>`ja`: Japanese</li>
-<li>`en-US`: English</li>
-For other values, see [RFC 5646](https://tools.ietf.org/html/rfc5646).
+<li>`ko`: Korean</li>
+<li>`vi`: Vietnamese</li>
+<li>`ms`: Malay</li>
+<li>`th`: Thai</li>
+<li>`pt`: Portuguese</li>
+<li>`tr`: Turkish</li>
+<li>`ar`: Arabic</li>
+<li>`es`: Spanish</li>
+<li>`hi`: Hindi</li>
+<li>`fr`: French</li>For other valid values, see [RFC 5646](https://tools.ietf.org/html/rfc5646).
      * @param string $Format Subtitle format. Valid value:
 <li>vtt</li>
      * @param string $Url Subtitle URL
+     * @param string $Source Subtitle source, values:
+<li>UserUploaded: user uploaded;</li>
+<li>AIRecognition: AI recognition, generated through asr full text recognition or voice translation.</li>
      */
     function __construct()
     {
@@ -116,6 +168,10 @@ For other values, see [RFC 5646](https://tools.ietf.org/html/rfc5646).
 
         if (array_key_exists("Url",$param) and $param["Url"] !== null) {
             $this->Url = $param["Url"];
+        }
+
+        if (array_key_exists("Source",$param) and $param["Source"] !== null) {
+            $this->Source = $param["Source"];
         }
     }
 }
