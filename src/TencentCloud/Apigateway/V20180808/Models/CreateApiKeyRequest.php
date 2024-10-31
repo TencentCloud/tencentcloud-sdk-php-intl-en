@@ -24,10 +24,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSecretName(string $SecretName) Set Custom key name.
  * @method string getAccessKeyType() Obtain Key type. Valid values: auto, manual (custom key). Default value: auto.
  * @method void setAccessKeyType(string $AccessKeyType) Set Key type. Valid values: auto, manual (custom key). Default value: auto.
- * @method string getAccessKeyId() Obtain Custom key ID, which is required if `AccessKeyType` is `manual`. It can contain 5–50 letters, digits, and underscores.
- * @method void setAccessKeyId(string $AccessKeyId) Set Custom key ID, which is required if `AccessKeyType` is `manual`. It can contain 5–50 letters, digits, and underscores.
- * @method string getAccessKeySecret() Obtain Custom key, which is required if `AccessKeyType` is `manual`. It can contain 10–50 letters, digits, and underscores.
- * @method void setAccessKeySecret(string $AccessKeySecret) Set Custom key, which is required if `AccessKeyType` is `manual`. It can contain 10–50 letters, digits, and underscores.
+ * @method string getAccessKeyId() Obtain Custom key ID, which is required if `AccessKeyType` is `manual`. It can contain 5-50 letters, digits, and underscores.
+ * @method void setAccessKeyId(string $AccessKeyId) Set Custom key ID, which is required if `AccessKeyType` is `manual`. It can contain 5-50 letters, digits, and underscores.
+ * @method string getAccessKeySecret() Obtain Custom key, which is required if `AccessKeyType` is `manual`. It can contain 10-50 letters, digits, and underscores.
+ * @method void setAccessKeySecret(string $AccessKeySecret) Set Custom key, which is required if `AccessKeyType` is `manual`. It can contain 10-50 letters, digits, and underscores.
+ * @method array getTags() Obtain 
+ * @method void setTags(array $Tags) Set 
  */
 class CreateApiKeyRequest extends AbstractModel
 {
@@ -42,20 +44,26 @@ class CreateApiKeyRequest extends AbstractModel
     public $AccessKeyType;
 
     /**
-     * @var string Custom key ID, which is required if `AccessKeyType` is `manual`. It can contain 5–50 letters, digits, and underscores.
+     * @var string Custom key ID, which is required if `AccessKeyType` is `manual`. It can contain 5-50 letters, digits, and underscores.
      */
     public $AccessKeyId;
 
     /**
-     * @var string Custom key, which is required if `AccessKeyType` is `manual`. It can contain 10–50 letters, digits, and underscores.
+     * @var string Custom key, which is required if `AccessKeyType` is `manual`. It can contain 10-50 letters, digits, and underscores.
      */
     public $AccessKeySecret;
 
     /**
+     * @var array 
+     */
+    public $Tags;
+
+    /**
      * @param string $SecretName Custom key name.
      * @param string $AccessKeyType Key type. Valid values: auto, manual (custom key). Default value: auto.
-     * @param string $AccessKeyId Custom key ID, which is required if `AccessKeyType` is `manual`. It can contain 5–50 letters, digits, and underscores.
-     * @param string $AccessKeySecret Custom key, which is required if `AccessKeyType` is `manual`. It can contain 10–50 letters, digits, and underscores.
+     * @param string $AccessKeyId Custom key ID, which is required if `AccessKeyType` is `manual`. It can contain 5-50 letters, digits, and underscores.
+     * @param string $AccessKeySecret Custom key, which is required if `AccessKeyType` is `manual`. It can contain 10-50 letters, digits, and underscores.
+     * @param array $Tags 
      */
     function __construct()
     {
@@ -84,6 +92,15 @@ class CreateApiKeyRequest extends AbstractModel
 
         if (array_key_exists("AccessKeySecret",$param) and $param["AccessKeySecret"] !== null) {
             $this->AccessKeySecret = $param["AccessKeySecret"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }
