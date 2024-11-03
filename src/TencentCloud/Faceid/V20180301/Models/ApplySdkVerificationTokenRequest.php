@@ -98,6 +98,26 @@ This feature applies only to Hong Kong (China) identity cards, Malaysian identit
 This feature applies only to Hong Kong (China) identity cards, Malaysian identity cards, and passports.
  * @method string getExtra() Obtain A passthrough field, which is returned together with the verification result and can contain up to 1,024 bits.
  * @method void setExtra(string $Extra) Set A passthrough field, which is returned together with the verification result and can contain up to 1,024 bits.
+ * @method string getActionList() Obtain This interface is used to control th action sequences.
+Action types are as follows:
+"blink"
+"mouth"
+"nod"
+"shake"
+You can choose 1-2 actions out of the four.
+Single action example: "blink"
+Multiple action example: "blink,mouth"
+The default value is blink. The different action types passed in this parameter take effect only when the SecurityLevel is 2 or 4; otherwise, the interface reports an error.
+ * @method void setActionList(string $ActionList) Set This interface is used to control th action sequences.
+Action types are as follows:
+"blink"
+"mouth"
+"nod"
+"shake"
+You can choose 1-2 actions out of the four.
+Single action example: "blink"
+Multiple action example: "blink,mouth"
+The default value is blink. The different action types passed in this parameter take effect only when the SecurityLevel is 2 or 4; otherwise, the interface reports an error.
  */
 class ApplySdkVerificationTokenRequest extends AbstractModel
 {
@@ -174,6 +194,20 @@ This feature applies only to Hong Kong (China) identity cards, Malaysian identit
     public $Extra;
 
     /**
+     * @var string This interface is used to control th action sequences.
+Action types are as follows:
+"blink"
+"mouth"
+"nod"
+"shake"
+You can choose 1-2 actions out of the four.
+Single action example: "blink"
+Multiple action example: "blink,mouth"
+The default value is blink. The different action types passed in this parameter take effect only when the SecurityLevel is 2 or 4; otherwise, the interface reports an error.
+     */
+    public $ActionList;
+
+    /**
      * @param integer $CheckMode The verification mode. Valid values:
 1: OCR + liveness detection + face comparison
 2: Liveness detection + face comparison
@@ -213,6 +247,16 @@ Default value: 4
      * @param boolean $DisableCheckOcrWarnings Whether to disable the OCR warnings. Default value: `false` (not disable), where OCR warnings are enabled and the OCR result will not be returned if there is a warning.
 This feature applies only to Hong Kong (China) identity cards, Malaysian identity cards, and passports.
      * @param string $Extra A passthrough field, which is returned together with the verification result and can contain up to 1,024 bits.
+     * @param string $ActionList This interface is used to control th action sequences.
+Action types are as follows:
+"blink"
+"mouth"
+"nod"
+"shake"
+You can choose 1-2 actions out of the four.
+Single action example: "blink"
+Multiple action example: "blink,mouth"
+The default value is blink. The different action types passed in this parameter take effect only when the SecurityLevel is 2 or 4; otherwise, the interface reports an error.
      */
     function __construct()
     {
@@ -257,6 +301,10 @@ This feature applies only to Hong Kong (China) identity cards, Malaysian identit
 
         if (array_key_exists("Extra",$param) and $param["Extra"] !== null) {
             $this->Extra = $param["Extra"];
+        }
+
+        if (array_key_exists("ActionList",$param) and $param["ActionList"] !== null) {
+            $this->ActionList = $param["ActionList"];
         }
     }
 }

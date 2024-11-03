@@ -44,6 +44,26 @@ Default value: `4`.
  * @method void setImage(string $Image) Set The photo (in Base64) to compare. This parameter is required when the value of `CheckMode` is `compare`.
  * @method string getExtra() Obtain The pass-through parameter, which can be omitted if there are no special requirements.
  * @method void setExtra(string $Extra) Set The pass-through parameter, which can be omitted if there are no special requirements.
+ * @method string getActionList() Obtain This interface is used to control th action sequences.
+Action types are as follows:
+"blink"
+"mouth"
+"nod"
+"shake"
+You can choose 1-2 actions out of the four.
+Single action example: "blink"
+Multiple action example: "blink,mouth"
+The default value is blink. The different action types passed in this parameter take effect only when the SecurityLevel is 2 or 4; otherwise, the interface reports an error.
+ * @method void setActionList(string $ActionList) Set This interface is used to control th action sequences.
+Action types are as follows:
+"blink"
+"mouth"
+"nod"
+"shake"
+You can choose 1-2 actions out of the four.
+Single action example: "blink"
+Multiple action example: "blink,mouth"
+The default value is blink. The different action types passed in this parameter take effect only when the SecurityLevel is 2 or 4; otherwise, the interface reports an error.
  */
 class GetFaceIdTokenIntlRequest extends AbstractModel
 {
@@ -76,6 +96,20 @@ Default value: `4`.
     public $Extra;
 
     /**
+     * @var string This interface is used to control th action sequences.
+Action types are as follows:
+"blink"
+"mouth"
+"nod"
+"shake"
+You can choose 1-2 actions out of the four.
+Single action example: "blink"
+Multiple action example: "blink,mouth"
+The default value is blink. The different action types passed in this parameter take effect only when the SecurityLevel is 2 or 4; otherwise, the interface reports an error.
+     */
+    public $ActionList;
+
+    /**
      * @param string $CheckMode The detection mode. Valid values:
 `liveness`: Liveness detection only.
 `compare`: Liveness detection and face comparison.
@@ -88,6 +122,16 @@ Default value: `liveness`.
 Default value: `4`.
      * @param string $Image The photo (in Base64) to compare. This parameter is required when the value of `CheckMode` is `compare`.
      * @param string $Extra The pass-through parameter, which can be omitted if there are no special requirements.
+     * @param string $ActionList This interface is used to control th action sequences.
+Action types are as follows:
+"blink"
+"mouth"
+"nod"
+"shake"
+You can choose 1-2 actions out of the four.
+Single action example: "blink"
+Multiple action example: "blink,mouth"
+The default value is blink. The different action types passed in this parameter take effect only when the SecurityLevel is 2 or 4; otherwise, the interface reports an error.
      */
     function __construct()
     {
@@ -116,6 +160,10 @@ Default value: `4`.
 
         if (array_key_exists("Extra",$param) and $param["Extra"] !== null) {
             $this->Extra = $param["Extra"];
+        }
+
+        if (array_key_exists("ActionList",$param) and $param["ActionList"] !== null) {
+            $this->ActionList = $param["ActionList"];
         }
     }
 }

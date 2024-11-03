@@ -96,6 +96,26 @@ Example: HKIDCard
  * @method void setLanguage(string $Language) Set International language, the default value is en (English). Currently supported: th: Thai; en: English; zh-cn: Simplified Chinese; zh-tc: Tradionnal Chinese; id: Bahasa Indonesia.
  * @method integer getAutoDowngrade() Obtain Automatic downgrade mode, with the following parameter values: 1: Downgrade to silent live mode; 2: Disable downgrade mode. The default value is 1.
  * @method void setAutoDowngrade(integer $AutoDowngrade) Set Automatic downgrade mode, with the following parameter values: 1: Downgrade to silent live mode; 2: Disable downgrade mode. The default value is 1.
+ * @method string getActionList() Obtain This interface is used to control th action sequences.
+Action types are as follows:
+"blink"
+"mouth"
+"nod"
+"shake"
+You can choose 1-2 actions out of the four.
+Single action example: "blink"
+Multiple action example: "blink,mouth"
+The default value is blink. The different action types passed in this parameter take effect only when the SecurityLevel is 2, 4, or 5; otherwise, the interface reports an error.
+ * @method void setActionList(string $ActionList) Set This interface is used to control th action sequences.
+Action types are as follows:
+"blink"
+"mouth"
+"nod"
+"shake"
+You can choose 1-2 actions out of the four.
+Single action example: "blink"
+Multiple action example: "blink,mouth"
+The default value is blink. The different action types passed in this parameter take effect only when the SecurityLevel is 2, 4, or 5; otherwise, the interface reports an error.
  */
 class WebVerificationConfigIntl extends AbstractModel
 {
@@ -182,6 +202,20 @@ Example: HKIDCard
     public $AutoDowngrade;
 
     /**
+     * @var string This interface is used to control th action sequences.
+Action types are as follows:
+"blink"
+"mouth"
+"nod"
+"shake"
+You can choose 1-2 actions out of the four.
+Single action example: "blink"
+Multiple action example: "blink,mouth"
+The default value is blink. The different action types passed in this parameter take effect only when the SecurityLevel is 2, 4, or 5; otherwise, the interface reports an error.
+     */
+    public $ActionList;
+
+    /**
      * @param boolean $AutoSkipStartPage When starting verification, whether to skip the starting verification page. If true, enter the verification process directly. The default is false. This configuration will not take effect if the downgrade policy is triggered.
      * @param boolean $AutoSkip When the verification passed, whether to skip the result page and automatically jump to RedirectURL. The default value is false.
 Example value: false
@@ -220,6 +254,16 @@ Example: HKIDCard
      * @param string $ThemeColor Front-end theme color, in the format of RGB hexadecimal color code. The default value is "#2d72+1". If the format is incorrect, the default value color will be used.
      * @param string $Language International language, the default value is en (English). Currently supported: th: Thai; en: English; zh-cn: Simplified Chinese; zh-tc: Tradionnal Chinese; id: Bahasa Indonesia.
      * @param integer $AutoDowngrade Automatic downgrade mode, with the following parameter values: 1: Downgrade to silent live mode; 2: Disable downgrade mode. The default value is 1.
+     * @param string $ActionList This interface is used to control th action sequences.
+Action types are as follows:
+"blink"
+"mouth"
+"nod"
+"shake"
+You can choose 1-2 actions out of the four.
+Single action example: "blink"
+Multiple action example: "blink,mouth"
+The default value is blink. The different action types passed in this parameter take effect only when the SecurityLevel is 2, 4, or 5; otherwise, the interface reports an error.
      */
     function __construct()
     {
@@ -276,6 +320,10 @@ Example: HKIDCard
 
         if (array_key_exists("AutoDowngrade",$param) and $param["AutoDowngrade"] !== null) {
             $this->AutoDowngrade = $param["AutoDowngrade"];
+        }
+
+        if (array_key_exists("ActionList",$param) and $param["ActionList"] !== null) {
+            $this->ActionList = $param["ActionList"];
         }
     }
 }
