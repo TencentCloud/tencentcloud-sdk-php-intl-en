@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getAccessKeyId() Obtain ID of the key to be changed.
  * @method void setAccessKeyId(string $AccessKeyId) Set ID of the key to be changed.
- * @method string getAccessKeySecret() Obtain Key to be updated, which is required when a custom key is updated. It can contain 10–50 letters, digits, and underscores.
- * @method void setAccessKeySecret(string $AccessKeySecret) Set Key to be updated, which is required when a custom key is updated. It can contain 10–50 letters, digits, and underscores.
+ * @method string getAccessKeySecret() Obtain Key to be updated, which is required when a custom key is updated. It can contain 10-50 letters, digits, and underscores.
+ * @method void setAccessKeySecret(string $AccessKeySecret) Set Key to be updated, which is required when a custom key is updated. It can contain 10-50 letters, digits, and underscores.
  */
 class UpdateApiKeyRequest extends AbstractModel
 {
@@ -33,13 +33,13 @@ class UpdateApiKeyRequest extends AbstractModel
     public $AccessKeyId;
 
     /**
-     * @var string Key to be updated, which is required when a custom key is updated. It can contain 10–50 letters, digits, and underscores.
+     * @var string Key to be updated, which is required when a custom key is updated. It can contain 10-50 letters, digits, and underscores.
      */
     public $AccessKeySecret;
 
     /**
      * @param string $AccessKeyId ID of the key to be changed.
-     * @param string $AccessKeySecret Key to be updated, which is required when a custom key is updated. It can contain 10–50 letters, digits, and underscores.
+     * @param string $AccessKeySecret Key to be updated, which is required when a custom key is updated. It can contain 10-50 letters, digits, and underscores.
      */
     function __construct()
     {

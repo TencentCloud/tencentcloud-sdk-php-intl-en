@@ -52,6 +52,7 @@ use TencentCloud\Intlpartnersmgt\V20220928\Models as Models;
  * @method Models\QueryVoucherAmountByUinResponse QueryVoucherAmountByUin(Models\QueryVoucherAmountByUinRequest $req) This API is used to query the voucher quota based on the customer UIN.
  * @method Models\QueryVoucherListByUinResponse QueryVoucherListByUin(Models\QueryVoucherListByUinRequest $req) This API is used to query the voucher list based on the customer UIN.
  * @method Models\QueryVoucherPoolResponse QueryVoucherPool(Models\QueryVoucherPoolRequest $req) This API is used to query the voucher quota pool.
+ * @method Models\SendVerifyCodeResponse SendVerifyCode(Models\SendVerifyCodeRequest $req) This API is used to send a verification code for account registration.
  */
 
 class IntlpartnersmgtClient extends AbstractClient
