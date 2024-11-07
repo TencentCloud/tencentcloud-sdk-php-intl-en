@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Adaptive bitrate streaming parameter template
  *
- * @method VideoTemplateInfo getVideo() Obtain Video parameter information.
- * @method void setVideo(VideoTemplateInfo $Video) Set Video parameter information.
  * @method AudioTemplateInfo getAudio() Obtain Audio parameter information.
  * @method void setAudio(AudioTemplateInfo $Audio) Set Audio parameter information.
+ * @method VideoTemplateInfo getVideo() Obtain Video parameter information.
+ * @method void setVideo(VideoTemplateInfo $Video) Set Video parameter information.
  * @method integer getRemoveAudio() Obtain Whether to remove audio stream. Valid values:
 <li>0: no,</li>
 <li>1: yes.</li>
@@ -40,14 +40,14 @@ use TencentCloud\Common\AbstractModel;
 class AdaptiveStreamTemplate extends AbstractModel
 {
     /**
-     * @var VideoTemplateInfo Video parameter information.
-     */
-    public $Video;
-
-    /**
      * @var AudioTemplateInfo Audio parameter information.
      */
     public $Audio;
+
+    /**
+     * @var VideoTemplateInfo Video parameter information.
+     */
+    public $Video;
 
     /**
      * @var integer Whether to remove audio stream. Valid values:
@@ -64,8 +64,8 @@ class AdaptiveStreamTemplate extends AbstractModel
     public $RemoveVideo;
 
     /**
-     * @param VideoTemplateInfo $Video Video parameter information.
      * @param AudioTemplateInfo $Audio Audio parameter information.
+     * @param VideoTemplateInfo $Video Video parameter information.
      * @param integer $RemoveAudio Whether to remove audio stream. Valid values:
 <li>0: no,</li>
 <li>1: yes.</li>
@@ -86,14 +86,14 @@ class AdaptiveStreamTemplate extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Video",$param) and $param["Video"] !== null) {
-            $this->Video = new VideoTemplateInfo();
-            $this->Video->deserialize($param["Video"]);
-        }
-
         if (array_key_exists("Audio",$param) and $param["Audio"] !== null) {
             $this->Audio = new AudioTemplateInfo();
             $this->Audio->deserialize($param["Audio"]);
+        }
+
+        if (array_key_exists("Video",$param) and $param["Video"] !== null) {
+            $this->Video = new VideoTemplateInfo();
+            $this->Video->deserialize($param["Video"]);
         }
 
         if (array_key_exists("RemoveAudio",$param) and $param["RemoveAudio"] !== null) {

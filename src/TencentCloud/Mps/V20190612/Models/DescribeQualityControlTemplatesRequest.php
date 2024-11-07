@@ -32,8 +32,8 @@ use TencentCloud\Common\AbstractModel;
 
 <li>Default value: 10.</li>
 <li>Maximum value: 100.</li>
- * @method string getType() Obtain Preset: preset template. Custom: custom template.
- * @method void setType(string $Type) Set Preset: preset template. Custom: custom template.
+ * @method string getType() Obtain "Preset": preset template, "Custom": custom template
+ * @method void setType(string $Type) Set "Preset": preset template, "Custom": custom template
  * @method string getName() Obtain Filter condition for media quality inspection template identifiers, with a length limit of 64 characters.
  * @method void setName(string $Name) Set Filter condition for media quality inspection template identifiers, with a length limit of 64 characters.
  */
@@ -58,7 +58,7 @@ class DescribeQualityControlTemplatesRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @var string Preset: preset template. Custom: custom template.
+     * @var string "Preset": preset template, "Custom": custom template
      */
     public $Type;
 
@@ -74,7 +74,7 @@ class DescribeQualityControlTemplatesRequest extends AbstractModel
 
 <li>Default value: 10.</li>
 <li>Maximum value: 100.</li>
-     * @param string $Type Preset: preset template. Custom: custom template.
+     * @param string $Type "Preset": preset template, "Custom": custom template
      * @param string $Name Filter condition for media quality inspection template identifiers, with a length limit of 64 characters.
      */
     function __construct()

@@ -20,28 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Input parameter type of adaptive bitrate streaming
  *
- * @method integer getDefinition() Obtain Adaptive bitrate streaming template ID.
- * @method void setDefinition(integer $Definition) Set Adaptive bitrate streaming template ID.
- * @method array getWatermarkSet() Obtain List of up to 10 image or text watermarks.
- * @method void setWatermarkSet(array $WatermarkSet) Set List of up to 10 image or text watermarks.
- * @method TaskOutputStorage getOutputStorage() Obtain 
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setOutputStorage(TaskOutputStorage $OutputStorage) Set 
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method string getOutputObjectPath() Obtain The relative or absolute output path of the manifest file after being transcoded to adaptive bitrate streaming. If this parameter is left empty, a relative path in the following format will be used by default: `{inputName}_adaptiveDynamicStreaming_{definition}.{format}`.
- * @method void setOutputObjectPath(string $OutputObjectPath) Set The relative or absolute output path of the manifest file after being transcoded to adaptive bitrate streaming. If this parameter is left empty, a relative path in the following format will be used by default: `{inputName}_adaptiveDynamicStreaming_{definition}.{format}`.
- * @method string getSubStreamObjectName() Obtain The relative output path of the substream file after being transcoded to adaptive bitrate streaming. If this parameter is left empty, a relative path in the following format will be used by default: `{inputName}_adaptiveDynamicStreaming_{definition}_{subStreamNumber}.{format}`.
- * @method void setSubStreamObjectName(string $SubStreamObjectName) Set The relative output path of the substream file after being transcoded to adaptive bitrate streaming. If this parameter is left empty, a relative path in the following format will be used by default: `{inputName}_adaptiveDynamicStreaming_{definition}_{subStreamNumber}.{format}`.
- * @method string getSegmentObjectName() Obtain The relative output path of the segment file after being transcoded to adaptive bitrate streaming (in HLS format only). If this parameter is left empty, a relative path in the following format will be used by default: `{inputName}_adaptiveDynamicStreaming_{definition}_{subStreamNumber}_{segmentNumber}.{format}`.
- * @method void setSegmentObjectName(string $SegmentObjectName) Set The relative output path of the segment file after being transcoded to adaptive bitrate streaming (in HLS format only). If this parameter is left empty, a relative path in the following format will be used by default: `{inputName}_adaptiveDynamicStreaming_{definition}_{subStreamNumber}_{segmentNumber}.{format}`.
- * @method array getAddOnSubtitles() Obtain 
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setAddOnSubtitles(array $AddOnSubtitles) Set 
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method DrmInfo getDrmInfo() Obtain 
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setDrmInfo(DrmInfo $DrmInfo) Set 
-Note: This field may return·null, indicating that no valid values can be obtained.
+ * @method integer getDefinition() Obtain Adaptive dynamic streaming template ID.
+ * @method void setDefinition(integer $Definition) Set Adaptive dynamic streaming template ID.
+ * @method array getWatermarkSet() Obtain Watermark list. Multiple image or text watermarks up to a maximum of 10 are supported.
+ * @method void setWatermarkSet(array $WatermarkSet) Set Watermark list. Multiple image or text watermarks up to a maximum of 10 are supported.
+ * @method TaskOutputStorage getOutputStorage() Obtain Target storage for files after adaptive dynamic streaming. If left blank, it inherits the upper-level OutputStorage value.
+Note: This field may return null, indicating that no valid value can be obtained.
+ * @method void setOutputStorage(TaskOutputStorage $OutputStorage) Set Target storage for files after adaptive dynamic streaming. If left blank, it inherits the upper-level OutputStorage value.
+Note: This field may return null, indicating that no valid value can be obtained.
+ * @method string getOutputObjectPath() Obtain Output path for the manifest file after adaptive dynamic streaming. It can be either a relative path or an absolute path.
+If you need to define an output path, the path must end with `.{format}`. Refer to [Filename Variable Description](https://intl.cloud.tencent.com/document/product/862/37039?from_cn_redirect=1) for variable names.
+Example of relative path:
+<li>filename_{variable name}.{format}</li>
+<li>filename.{format}</li>
+Example of absolute path:
+<li>/custom path/filename_{variable name}.{format}</li>
+If not filled in, it is a relative path by default: {inputName}_adaptiveDynamicStreaming_{definition}.{format}.
+ * @method void setOutputObjectPath(string $OutputObjectPath) Set Output path for the manifest file after adaptive dynamic streaming. It can be either a relative path or an absolute path.
+If you need to define an output path, the path must end with `.{format}`. Refer to [Filename Variable Description](https://intl.cloud.tencent.com/document/product/862/37039?from_cn_redirect=1) for variable names.
+Example of relative path:
+<li>filename_{variable name}.{format}</li>
+<li>filename.{format}</li>
+Example of absolute path:
+<li>/custom path/filename_{variable name}.{format}</li>
+If not filled in, it is a relative path by default: {inputName}_adaptiveDynamicStreaming_{definition}.{format}.
+ * @method string getSubStreamObjectName() Obtain After adaptive dynamic streaming, the output path of substream files can only be a relative path. If not filled in, it is a relative path by default: `{inputName}_adaptiveDynamicStreaming_{definition}_{subStreamNumber}.{format}`.
+ * @method void setSubStreamObjectName(string $SubStreamObjectName) Set After adaptive dynamic streaming, the output path of substream files can only be a relative path. If not filled in, it is a relative path by default: `{inputName}_adaptiveDynamicStreaming_{definition}_{subStreamNumber}.{format}`.
+ * @method string getSegmentObjectName() Obtain After adaptive dynamic streaming (for HLS only), the output path of segment files can only be a relative path. If not filled in, it is a relative path by default: `{inputName}_adaptiveDynamicStreaming_{definition}_{subStreamNumber}_{segmentNumber}.{format}`.
+ * @method void setSegmentObjectName(string $SegmentObjectName) Set After adaptive dynamic streaming (for HLS only), the output path of segment files can only be a relative path. If not filled in, it is a relative path by default: `{inputName}_adaptiveDynamicStreaming_{definition}_{subStreamNumber}_{segmentNumber}.{format}`.
+ * @method array getAddOnSubtitles() Obtain Subtitle file to be inserted.
+Note: This field may return null, indicating that no valid value can be obtained.
+ * @method void setAddOnSubtitles(array $AddOnSubtitles) Set Subtitle file to be inserted.
+Note: This field may return null, indicating that no valid value can be obtained.
+ * @method DrmInfo getDrmInfo() Obtain Drm information.
+Note: This field may return null, indicating that no valid value can be obtained.
+ * @method void setDrmInfo(DrmInfo $DrmInfo) Set Drm information.
+Note: This field may return null, indicating that no valid value can be obtained.
  * @method string getDefinitionType() Obtain Adaptive transcoding template type.
 Common: audio-video.
 PureAudio: audio-only.
@@ -54,45 +68,52 @@ Note: This field may return null, indicating that no valid values can be obtaine
 class AdaptiveDynamicStreamingTaskInput extends AbstractModel
 {
     /**
-     * @var integer Adaptive bitrate streaming template ID.
+     * @var integer Adaptive dynamic streaming template ID.
      */
     public $Definition;
 
     /**
-     * @var array List of up to 10 image or text watermarks.
+     * @var array Watermark list. Multiple image or text watermarks up to a maximum of 10 are supported.
      */
     public $WatermarkSet;
 
     /**
-     * @var TaskOutputStorage 
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var TaskOutputStorage Target storage for files after adaptive dynamic streaming. If left blank, it inherits the upper-level OutputStorage value.
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public $OutputStorage;
 
     /**
-     * @var string The relative or absolute output path of the manifest file after being transcoded to adaptive bitrate streaming. If this parameter is left empty, a relative path in the following format will be used by default: `{inputName}_adaptiveDynamicStreaming_{definition}.{format}`.
+     * @var string Output path for the manifest file after adaptive dynamic streaming. It can be either a relative path or an absolute path.
+If you need to define an output path, the path must end with `.{format}`. Refer to [Filename Variable Description](https://intl.cloud.tencent.com/document/product/862/37039?from_cn_redirect=1) for variable names.
+Example of relative path:
+<li>filename_{variable name}.{format}</li>
+<li>filename.{format}</li>
+Example of absolute path:
+<li>/custom path/filename_{variable name}.{format}</li>
+If not filled in, it is a relative path by default: {inputName}_adaptiveDynamicStreaming_{definition}.{format}.
      */
     public $OutputObjectPath;
 
     /**
-     * @var string The relative output path of the substream file after being transcoded to adaptive bitrate streaming. If this parameter is left empty, a relative path in the following format will be used by default: `{inputName}_adaptiveDynamicStreaming_{definition}_{subStreamNumber}.{format}`.
+     * @var string After adaptive dynamic streaming, the output path of substream files can only be a relative path. If not filled in, it is a relative path by default: `{inputName}_adaptiveDynamicStreaming_{definition}_{subStreamNumber}.{format}`.
      */
     public $SubStreamObjectName;
 
     /**
-     * @var string The relative output path of the segment file after being transcoded to adaptive bitrate streaming (in HLS format only). If this parameter is left empty, a relative path in the following format will be used by default: `{inputName}_adaptiveDynamicStreaming_{definition}_{subStreamNumber}_{segmentNumber}.{format}`.
+     * @var string After adaptive dynamic streaming (for HLS only), the output path of segment files can only be a relative path. If not filled in, it is a relative path by default: `{inputName}_adaptiveDynamicStreaming_{definition}_{subStreamNumber}_{segmentNumber}.{format}`.
      */
     public $SegmentObjectName;
 
     /**
-     * @var array 
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var array Subtitle file to be inserted.
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public $AddOnSubtitles;
 
     /**
-     * @var DrmInfo 
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var DrmInfo Drm information.
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public $DrmInfo;
 
@@ -105,17 +126,24 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $DefinitionType;
 
     /**
-     * @param integer $Definition Adaptive bitrate streaming template ID.
-     * @param array $WatermarkSet List of up to 10 image or text watermarks.
-     * @param TaskOutputStorage $OutputStorage 
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param string $OutputObjectPath The relative or absolute output path of the manifest file after being transcoded to adaptive bitrate streaming. If this parameter is left empty, a relative path in the following format will be used by default: `{inputName}_adaptiveDynamicStreaming_{definition}.{format}`.
-     * @param string $SubStreamObjectName The relative output path of the substream file after being transcoded to adaptive bitrate streaming. If this parameter is left empty, a relative path in the following format will be used by default: `{inputName}_adaptiveDynamicStreaming_{definition}_{subStreamNumber}.{format}`.
-     * @param string $SegmentObjectName The relative output path of the segment file after being transcoded to adaptive bitrate streaming (in HLS format only). If this parameter is left empty, a relative path in the following format will be used by default: `{inputName}_adaptiveDynamicStreaming_{definition}_{subStreamNumber}_{segmentNumber}.{format}`.
-     * @param array $AddOnSubtitles 
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param DrmInfo $DrmInfo 
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @param integer $Definition Adaptive dynamic streaming template ID.
+     * @param array $WatermarkSet Watermark list. Multiple image or text watermarks up to a maximum of 10 are supported.
+     * @param TaskOutputStorage $OutputStorage Target storage for files after adaptive dynamic streaming. If left blank, it inherits the upper-level OutputStorage value.
+Note: This field may return null, indicating that no valid value can be obtained.
+     * @param string $OutputObjectPath Output path for the manifest file after adaptive dynamic streaming. It can be either a relative path or an absolute path.
+If you need to define an output path, the path must end with `.{format}`. Refer to [Filename Variable Description](https://intl.cloud.tencent.com/document/product/862/37039?from_cn_redirect=1) for variable names.
+Example of relative path:
+<li>filename_{variable name}.{format}</li>
+<li>filename.{format}</li>
+Example of absolute path:
+<li>/custom path/filename_{variable name}.{format}</li>
+If not filled in, it is a relative path by default: {inputName}_adaptiveDynamicStreaming_{definition}.{format}.
+     * @param string $SubStreamObjectName After adaptive dynamic streaming, the output path of substream files can only be a relative path. If not filled in, it is a relative path by default: `{inputName}_adaptiveDynamicStreaming_{definition}_{subStreamNumber}.{format}`.
+     * @param string $SegmentObjectName After adaptive dynamic streaming (for HLS only), the output path of segment files can only be a relative path. If not filled in, it is a relative path by default: `{inputName}_adaptiveDynamicStreaming_{definition}_{subStreamNumber}_{segmentNumber}.{format}`.
+     * @param array $AddOnSubtitles Subtitle file to be inserted.
+Note: This field may return null, indicating that no valid value can be obtained.
+     * @param DrmInfo $DrmInfo Drm information.
+Note: This field may return null, indicating that no valid value can be obtained.
      * @param string $DefinitionType Adaptive transcoding template type.
 Common: audio-video.
 PureAudio: audio-only.

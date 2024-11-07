@@ -24,8 +24,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSegmentSet(array $SegmentSet) Set The translated segments.
  * @method string getSubtitlePath() Obtain The subtitle URL.
  * @method void setSubtitlePath(string $SubtitlePath) Set The subtitle URL.
- * @method TaskOutputStorage getOutputStorage() Obtain The subtitle storage location.
- * @method void setOutputStorage(TaskOutputStorage $OutputStorage) Set The subtitle storage location.
  */
 class AiRecognitionTaskTransTextResultOutput extends AbstractModel
 {
@@ -40,14 +38,8 @@ class AiRecognitionTaskTransTextResultOutput extends AbstractModel
     public $SubtitlePath;
 
     /**
-     * @var TaskOutputStorage The subtitle storage location.
-     */
-    public $OutputStorage;
-
-    /**
      * @param array $SegmentSet The translated segments.
      * @param string $SubtitlePath The subtitle URL.
-     * @param TaskOutputStorage $OutputStorage The subtitle storage location.
      */
     function __construct()
     {
@@ -73,11 +65,6 @@ class AiRecognitionTaskTransTextResultOutput extends AbstractModel
 
         if (array_key_exists("SubtitlePath",$param) and $param["SubtitlePath"] !== null) {
             $this->SubtitlePath = $param["SubtitlePath"];
-        }
-
-        if (array_key_exists("OutputStorage",$param) and $param["OutputStorage"] !== null) {
-            $this->OutputStorage = new TaskOutputStorage();
-            $this->OutputStorage->deserialize($param["OutputStorage"]);
         }
     }
 }

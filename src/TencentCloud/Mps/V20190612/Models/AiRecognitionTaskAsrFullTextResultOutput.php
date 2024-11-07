@@ -41,6 +41,7 @@ class AiRecognitionTaskAsrFullTextResultOutput extends AbstractModel
 
     /**
      * @var TaskOutputStorage Subtitles file storage location.
+     * @deprecated
      */
     public $OutputStorage;
 

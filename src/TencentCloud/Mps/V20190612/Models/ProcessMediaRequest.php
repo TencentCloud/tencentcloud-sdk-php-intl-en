@@ -22,8 +22,12 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method MediaInputInfo getInputInfo() Obtain The information of the file to process.
  * @method void setInputInfo(MediaInputInfo $InputInfo) Set The information of the file to process.
- * @method TaskOutputStorage getOutputStorage() Obtain The storage location of the media processing output file. If this parameter is left empty, the storage location in `InputInfo` will be inherited.
- * @method void setOutputStorage(TaskOutputStorage $OutputStorage) Set The storage location of the media processing output file. If this parameter is left empty, the storage location in `InputInfo` will be inherited.
+ * @method TaskOutputStorage getOutputStorage() Obtain Target storage for Media Processing Service output files. If left blank, it inherits the storage location in InputInfo.
+
+Note: When InputInfo.Type is URL, this parameter is required.
+ * @method void setOutputStorage(TaskOutputStorage $OutputStorage) Set Target storage for Media Processing Service output files. If left blank, it inherits the storage location in InputInfo.
+
+Note: When InputInfo.Type is URL, this parameter is required.
  * @method string getOutputDir() Obtain The directory to save the media processing output file, which must start and end with `/`, such as `/movie/201907/`.
 If you do not specify this parameter, the file will be saved to the directory specified in `InputInfo`.
  * @method void setOutputDir(string $OutputDir) Set The directory to save the media processing output file, which must start and end with `/`, such as `/movie/201907/`.
@@ -77,7 +81,9 @@ class ProcessMediaRequest extends AbstractModel
     public $InputInfo;
 
     /**
-     * @var TaskOutputStorage The storage location of the media processing output file. If this parameter is left empty, the storage location in `InputInfo` will be inherited.
+     * @var TaskOutputStorage Target storage for Media Processing Service output files. If left blank, it inherits the storage location in InputInfo.
+
+Note: When InputInfo.Type is URL, this parameter is required.
      */
     public $OutputStorage;
 
@@ -153,7 +159,9 @@ Note 3: The trigger configured for an orchestration is for automatically startin
 
     /**
      * @param MediaInputInfo $InputInfo The information of the file to process.
-     * @param TaskOutputStorage $OutputStorage The storage location of the media processing output file. If this parameter is left empty, the storage location in `InputInfo` will be inherited.
+     * @param TaskOutputStorage $OutputStorage Target storage for Media Processing Service output files. If left blank, it inherits the storage location in InputInfo.
+
+Note: When InputInfo.Type is URL, this parameter is required.
      * @param string $OutputDir The directory to save the media processing output file, which must start and end with `/`, such as `/movie/201907/`.
 If you do not specify this parameter, the file will be saved to the directory specified in `InputInfo`.
      * @param integer $ScheduleId Orchestration ID.

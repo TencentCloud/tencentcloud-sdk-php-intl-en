@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * The parameters for detecting sensitive information.
  *
- * @method TerrorismOcrReviewTemplateInfo getOcrReviewInfo() Obtain The parameters for detecting sensitive information based on OCR.
- * @method void setOcrReviewInfo(TerrorismOcrReviewTemplateInfo $OcrReviewInfo) Set The parameters for detecting sensitive information based on OCR.
  * @method TerrorismImgReviewTemplateInfo getImgReviewInfo() Obtain The parameters for detecting sensitive information in images.
  * @method void setImgReviewInfo(TerrorismImgReviewTemplateInfo $ImgReviewInfo) Set The parameters for detecting sensitive information in images.
+ * @method TerrorismOcrReviewTemplateInfo getOcrReviewInfo() Obtain The parameters for detecting sensitive information based on OCR.
+ * @method void setOcrReviewInfo(TerrorismOcrReviewTemplateInfo $OcrReviewInfo) Set The parameters for detecting sensitive information based on OCR.
  */
 class TerrorismConfigureInfo extends AbstractModel
 {
-    /**
-     * @var TerrorismOcrReviewTemplateInfo The parameters for detecting sensitive information based on OCR.
-     */
-    public $OcrReviewInfo;
-
     /**
      * @var TerrorismImgReviewTemplateInfo The parameters for detecting sensitive information in images.
      */
     public $ImgReviewInfo;
 
     /**
-     * @param TerrorismOcrReviewTemplateInfo $OcrReviewInfo The parameters for detecting sensitive information based on OCR.
+     * @var TerrorismOcrReviewTemplateInfo The parameters for detecting sensitive information based on OCR.
+     */
+    public $OcrReviewInfo;
+
+    /**
      * @param TerrorismImgReviewTemplateInfo $ImgReviewInfo The parameters for detecting sensitive information in images.
+     * @param TerrorismOcrReviewTemplateInfo $OcrReviewInfo The parameters for detecting sensitive information based on OCR.
      */
     function __construct()
     {
@@ -54,14 +54,14 @@ class TerrorismConfigureInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("OcrReviewInfo",$param) and $param["OcrReviewInfo"] !== null) {
-            $this->OcrReviewInfo = new TerrorismOcrReviewTemplateInfo();
-            $this->OcrReviewInfo->deserialize($param["OcrReviewInfo"]);
-        }
-
         if (array_key_exists("ImgReviewInfo",$param) and $param["ImgReviewInfo"] !== null) {
             $this->ImgReviewInfo = new TerrorismImgReviewTemplateInfo();
             $this->ImgReviewInfo->deserialize($param["ImgReviewInfo"]);
+        }
+
+        if (array_key_exists("OcrReviewInfo",$param) and $param["OcrReviewInfo"] !== null) {
+            $this->OcrReviewInfo = new TerrorismOcrReviewTemplateInfo();
+            $this->OcrReviewInfo->deserialize($param["OcrReviewInfo"]);
         }
     }
 }

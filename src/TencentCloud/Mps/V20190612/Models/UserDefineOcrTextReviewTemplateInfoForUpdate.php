@@ -26,9 +26,9 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSwitch(string $Switch) Set Switch of a custom text audit task. Valid values:
 <li>ON: Enables a custom text audit task;</li>
 <li>OFF: Disables a custom text audit task.</li>
- * @method string getLabelSet() Obtain Custom text filter tag. If an audit result contains the selected tag, it will be returned; if the filter tag is empty, all audit results will be returned. To use the tag filtering feature, you need to add the corresponding tag when adding materials for custom text keywords.
+ * @method array getLabelSet() Obtain Custom text filter tag. If an audit result contains the selected tag, it will be returned; if the filter tag is empty, all audit results will be returned. To use the tag filtering feature, you need to add the corresponding tag when adding materials for custom text keywords.
 There can be up to 10 tags, each with a length limit of 16 characters.
- * @method void setLabelSet(string $LabelSet) Set Custom text filter tag. If an audit result contains the selected tag, it will be returned; if the filter tag is empty, all audit results will be returned. To use the tag filtering feature, you need to add the corresponding tag when adding materials for custom text keywords.
+ * @method void setLabelSet(array $LabelSet) Set Custom text filter tag. If an audit result contains the selected tag, it will be returned; if the filter tag is empty, all audit results will be returned. To use the tag filtering feature, you need to add the corresponding tag when adding materials for custom text keywords.
 There can be up to 10 tags, each with a length limit of 16 characters.
  * @method integer getBlockConfidence() Obtain Threshold score for violation. If this score is reached or exceeded during intelligent audit, it will be deemed that a suspected violation has occurred. Value range: 0-100.
  * @method void setBlockConfidence(integer $BlockConfidence) Set Threshold score for violation. If this score is reached or exceeded during intelligent audit, it will be deemed that a suspected violation has occurred. Value range: 0-100.
@@ -45,7 +45,7 @@ class UserDefineOcrTextReviewTemplateInfoForUpdate extends AbstractModel
     public $Switch;
 
     /**
-     * @var string Custom text filter tag. If an audit result contains the selected tag, it will be returned; if the filter tag is empty, all audit results will be returned. To use the tag filtering feature, you need to add the corresponding tag when adding materials for custom text keywords.
+     * @var array Custom text filter tag. If an audit result contains the selected tag, it will be returned; if the filter tag is empty, all audit results will be returned. To use the tag filtering feature, you need to add the corresponding tag when adding materials for custom text keywords.
 There can be up to 10 tags, each with a length limit of 16 characters.
      */
     public $LabelSet;
@@ -64,7 +64,7 @@ There can be up to 10 tags, each with a length limit of 16 characters.
      * @param string $Switch Switch of a custom text audit task. Valid values:
 <li>ON: Enables a custom text audit task;</li>
 <li>OFF: Disables a custom text audit task.</li>
-     * @param string $LabelSet Custom text filter tag. If an audit result contains the selected tag, it will be returned; if the filter tag is empty, all audit results will be returned. To use the tag filtering feature, you need to add the corresponding tag when adding materials for custom text keywords.
+     * @param array $LabelSet Custom text filter tag. If an audit result contains the selected tag, it will be returned; if the filter tag is empty, all audit results will be returned. To use the tag filtering feature, you need to add the corresponding tag when adding materials for custom text keywords.
 There can be up to 10 tags, each with a length limit of 16 characters.
      * @param integer $BlockConfidence Threshold score for violation. If this score is reached or exceeded during intelligent audit, it will be deemed that a suspected violation has occurred. Value range: 0-100.
      * @param integer $ReviewConfidence Threshold score for human audit. If this score is reached or exceeded during intelligent audit, human audit will be considered necessary. Value range: 0-100.
