@@ -23,6 +23,9 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Privatedns\V20201028\Models as Models;
 
 /**
+ * @method Models\CreateEndPointResponse CreateEndPoint(Models\CreateEndPointRequest $req) This API is used to create an endpoint.
+ * @method Models\CreateEndPointAndEndPointServiceResponse CreateEndPointAndEndPointService(Models\CreateEndPointAndEndPointServiceRequest $req) This API is used to create an endpoint and an endpoint service simultaneously.
+ * @method Models\CreateForwardRuleResponse CreateForwardRule(Models\CreateForwardRuleRequest $req) This API is used to create a custom forwarding rule.
  * @method Models\CreatePrivateDNSAccountResponse CreatePrivateDNSAccount(Models\CreatePrivateDNSAccountRequest $req) This API is used to create a Private DNS account.
  * @method Models\CreatePrivateZoneResponse CreatePrivateZone(Models\CreatePrivateZoneRequest $req) This API is used to create a private domain.
  * @method Models\CreatePrivateZoneRecordResponse CreatePrivateZoneRecord(Models\CreatePrivateZoneRecordRequest $req) This API is used to add a DNS record for a private domain.
@@ -30,6 +33,8 @@ use TencentCloud\Privatedns\V20201028\Models as Models;
  * @method Models\DescribeAccountVpcListResponse DescribeAccountVpcList(Models\DescribeAccountVpcListRequest $req) This API is used to get the VPC list of a Private DNS account.
  * @method Models\DescribeAuditLogResponse DescribeAuditLog(Models\DescribeAuditLogRequest $req) This API is used to get the list of operation logs.
  * @method Models\DescribeDashboardResponse DescribeDashboard(Models\DescribeDashboardRequest $req) This API is used to get the overview of private DNS records.
+ * @method Models\DescribeEndPointListResponse DescribeEndPointList(Models\DescribeEndPointListRequest $req) This API is used to obtain the endpoint list.
+ * @method Models\DescribeForwardRuleListResponse DescribeForwardRuleList(Models\DescribeForwardRuleListRequest $req) This API is used to query the forwarding rule list.
  * @method Models\DescribePrivateDNSAccountListResponse DescribePrivateDNSAccountList(Models\DescribePrivateDNSAccountListRequest $req) This API is used to get the list of Private DNS accounts.
  * @method Models\DescribePrivateZoneListResponse DescribePrivateZoneList(Models\DescribePrivateZoneListRequest $req) This API is used to get the list of private domains.
  * @method Models\DescribePrivateZoneRecordListResponse DescribePrivateZoneRecordList(Models\DescribePrivateZoneRecordListRequest $req) This API is used to get the list of records for a private domain.
