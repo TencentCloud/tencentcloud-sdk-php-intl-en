@@ -22,8 +22,16 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getBatchNumber() Obtain Batch quantity. The batch quantity should be a positive integer greater than 0, but cannot exceed the total number of instances pending refresh.
  * @method void setBatchNumber(integer $BatchNumber) Set Batch quantity. The batch quantity should be a positive integer greater than 0, but cannot exceed the total number of instances pending refresh.
- * @method string getBatchPause() Obtain Pause policy between batches. Default value: Automatic. Valid values: <br><li>FIRST_BATCH_PAUSE: Pause after the first batch update completes.</li> <li>BATCH_INTERVAL_PAUSE: Pause between each batch update.</li> <li>AUTOMATIC: No pauses.
- * @method void setBatchPause(string $BatchPause) Set Pause policy between batches. Default value: Automatic. Valid values: <br><li>FIRST_BATCH_PAUSE: Pause after the first batch update completes.</li> <li>BATCH_INTERVAL_PAUSE: Pause between each batch update.</li> <li>AUTOMATIC: No pauses.
+ * @method string getBatchPause() Obtain Pause policy between batches. Default value: Automatic. Valid values:
+<li>FIRST_BATCH_PAUSE: Pause after the first batch of updates is completed.</li>
+<li>BATCH_INTERVAL_PAUSE: Pause between batches.</li>
+<li>AUTOMATIC: Do not pause.</li>
+ * @method void setBatchPause(string $BatchPause) Set Pause policy between batches. Default value: Automatic. Valid values:
+<li>FIRST_BATCH_PAUSE: Pause after the first batch of updates is completed.</li>
+<li>BATCH_INTERVAL_PAUSE: Pause between batches.</li>
+<li>AUTOMATIC: Do not pause.</li>
+ * @method integer getMaxSurge() Obtain The maximum additional quantity of instances. After this parameter is set, create a batch of additional pay-as-you-go instances according to the launch configuration before the rolling update starts. After the rolling update is completed, the additional instances will be terminated.This parameter is used to ensure a certain number of instances available during the rolling update. The maximum additional quantity of instances cannot exceed the number of refreshing instances in a single batch of the rolling update. The rollback process does not support this parameter currently.
+ * @method void setMaxSurge(integer $MaxSurge) Set The maximum additional quantity of instances. After this parameter is set, create a batch of additional pay-as-you-go instances according to the launch configuration before the rolling update starts. After the rolling update is completed, the additional instances will be terminated.This parameter is used to ensure a certain number of instances available during the rolling update. The maximum additional quantity of instances cannot exceed the number of refreshing instances in a single batch of the rolling update. The rollback process does not support this parameter currently.
  */
 class RollingUpdateSettings extends AbstractModel
 {
@@ -33,13 +41,25 @@ class RollingUpdateSettings extends AbstractModel
     public $BatchNumber;
 
     /**
-     * @var string Pause policy between batches. Default value: Automatic. Valid values: <br><li>FIRST_BATCH_PAUSE: Pause after the first batch update completes.</li> <li>BATCH_INTERVAL_PAUSE: Pause between each batch update.</li> <li>AUTOMATIC: No pauses.
+     * @var string Pause policy between batches. Default value: Automatic. Valid values:
+<li>FIRST_BATCH_PAUSE: Pause after the first batch of updates is completed.</li>
+<li>BATCH_INTERVAL_PAUSE: Pause between batches.</li>
+<li>AUTOMATIC: Do not pause.</li>
      */
     public $BatchPause;
 
     /**
+     * @var integer The maximum additional quantity of instances. After this parameter is set, create a batch of additional pay-as-you-go instances according to the launch configuration before the rolling update starts. After the rolling update is completed, the additional instances will be terminated.This parameter is used to ensure a certain number of instances available during the rolling update. The maximum additional quantity of instances cannot exceed the number of refreshing instances in a single batch of the rolling update. The rollback process does not support this parameter currently.
+     */
+    public $MaxSurge;
+
+    /**
      * @param integer $BatchNumber Batch quantity. The batch quantity should be a positive integer greater than 0, but cannot exceed the total number of instances pending refresh.
-     * @param string $BatchPause Pause policy between batches. Default value: Automatic. Valid values: <br><li>FIRST_BATCH_PAUSE: Pause after the first batch update completes.</li> <li>BATCH_INTERVAL_PAUSE: Pause between each batch update.</li> <li>AUTOMATIC: No pauses.
+     * @param string $BatchPause Pause policy between batches. Default value: Automatic. Valid values:
+<li>FIRST_BATCH_PAUSE: Pause after the first batch of updates is completed.</li>
+<li>BATCH_INTERVAL_PAUSE: Pause between batches.</li>
+<li>AUTOMATIC: Do not pause.</li>
+     * @param integer $MaxSurge The maximum additional quantity of instances. After this parameter is set, create a batch of additional pay-as-you-go instances according to the launch configuration before the rolling update starts. After the rolling update is completed, the additional instances will be terminated.This parameter is used to ensure a certain number of instances available during the rolling update. The maximum additional quantity of instances cannot exceed the number of refreshing instances in a single batch of the rolling update. The rollback process does not support this parameter currently.
      */
     function __construct()
     {
@@ -60,6 +80,10 @@ class RollingUpdateSettings extends AbstractModel
 
         if (array_key_exists("BatchPause",$param) and $param["BatchPause"] !== null) {
             $this->BatchPause = $param["BatchPause"];
+        }
+
+        if (array_key_exists("MaxSurge",$param) and $param["MaxSurge"] !== null) {
+            $this->MaxSurge = $param["MaxSurge"];
         }
     }
 }

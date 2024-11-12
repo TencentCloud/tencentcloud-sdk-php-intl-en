@@ -29,9 +29,11 @@ use TencentCloud\As\V20180419\Models as Models;
 
  * @method Models\AttachLoadBalancersResponse AttachLoadBalancers(Models\AttachLoadBalancersRequest $req) This API is used to add CLBs to a security group.
  * @method Models\CancelInstanceRefreshResponse CancelInstanceRefresh(Models\CancelInstanceRefreshRequest $req) This API is used to cancel the instance refresh activity of the scaling group.
-* Batches that have already been refreshed or are currently being refreshed remain unaffected; batches pending refresh will be canceled.
-* If a refresh fails, the affected instances will remain in the standby status and require manual intervention by the user to either attempt to exit the standby status or destroy the instances.
-* Rollback operations are not allowed after cancellation, and resuming is also unsupported.
+* The batches that have already been refreshed or are currently being refreshed remain unaffected, but the batches pending refresh will be canceled.
+* If a refresh fails, the affected instances will remain in the secondary status, and require manual intervention to exit the secondary status or terminate the instances.
+* Rollback operations are not allowed after cancellation, and recovery is also unsupported.
+* The instances temporarily scaled out due to the MaxSurge parameter are automatically terminated after cancellation.
+* During scale-in, all instances have already been updated and cannot be canceled.
  * @method Models\ClearLaunchConfigurationAttributesResponse ClearLaunchConfigurationAttributes(Models\ClearLaunchConfigurationAttributesRequest $req) This API is used to clear specific attributes of the launch configuration.
  * @method Models\CompleteLifecycleActionResponse CompleteLifecycleAction(Models\CompleteLifecycleActionRequest $req) This API is used to complete a lifecycle action by setting the status of lifecycle hook to `CONTINUE` or `ABANDON`.
 
@@ -184,12 +186,15 @@ If the parameter is empty, a certain number (specified by `Limit` and 20 by defa
 * If the number of remaining `IN_SERVICE` instances in the scaling group is less than the minimum capacity, this API will return an error.
 * However, if the scaling group is in `DISABLED` status, the removal will not verify the relationship between the number of `IN_SERVICE` instances and the minimum capacity.
 * This removal will unassociate the CVM from the CLB instance that has been configured for the scaling group.
- * @method Models\ResumeInstanceRefreshResponse ResumeInstanceRefresh(Models\ResumeInstanceRefreshRequest $req) This API is used to resume the paused instance refresh activity, allowing it to retry failed instances in the current batch or proceed with refreshing subsequent batches. Note that calling this interface is ineffective when the activity is not in a paused status.
- * @method Models\RollbackInstanceRefreshResponse RollbackInstanceRefresh(Models\RollbackInstanceRefreshRequest $req) This API is used to generate a new instance refresh activity, which also supports batched refreshing and operations such as pausing, resuming, and canceling. The interface returns the RefreshActivityId for the rollback activity.
-* Instances pending refresh in the original activity are updated to a canceled status. Nonexistent instances are disregarded, while instances in all other statuses proceed to enter the rollback process.
-* Instances that were being refreshed in the original activity will not be immediately terminated; instead, the rollback activity will be executed after their refresh has been completed.
-* Rollback is supported for activities that are in a paused status or those with the most recent successful refresh; it is not supported for activities in other statuses.
-* When the original refresh activity involves reinstalling instances, for the ImageId parameter, it will automatically restore to the image ID before the rollback; for parameters such as UserData, EnhancedService, LoginSettings, and HostName, they will still be retrieved from the launch configuration, requiring users to manually modify the launch configuration before initiating the rollback.
+ * @method Models\ResumeInstanceRefreshResponse ResumeInstanceRefresh(Models\ResumeInstanceRefreshRequest $req) This API is used to resume the paused instance refresh activity, allowing it to retry failed instances in the current batch or proceed with refreshing subsequent batches. Note that calling this API is ineffective when the activity is not in a paused status.
+
+- When the MaxSurge parameter is used, the activity may be paused due to scale-out or scale-in failures. This API can also be used to retry scaling operations.
+ * @method Models\RollbackInstanceRefreshResponse RollbackInstanceRefresh(Models\RollbackInstanceRefreshRequest $req) This API is used to generate a new instance refresh activity, which also supports batch refreshing and operations such as pausing, resuming, and canceling. This API returns RefreshActivityId for the rollback activity.
+* The instances pending refresh in the original activity are updated to canceled status. Nonexistent instances are disregarded, while instances in all other statuses proceed to enter the rollback process.
+* The instances that are being refreshed in the original activity will not be immediately terminated. Instead, the rollback activity will be executed after their refresh complete.
+* Rollback is supported for activities that are in the paused status or those succeeded in refreshing last time. It is not supported for activities in other statuses.
+* When the original refresh activity involves reinstalling instances, for the ImageId parameter, it will automatically recover to the image ID before the rollback; for parameters such as UserData, EnhancedService, LoginSettings, and HostName, they will still be read from the launch configuration, requiring users to manually modify the launch configuration before initiating the rollback.
+* The rollback activity does not support the MaxSurge parameter currently.
  * @method Models\ScaleInInstancesResponse ScaleInInstances(Models\ScaleInInstancesRequest $req) This API is used to reduce the specified number of instances from the scaling group.
 * There is no on going scaling task.
 * This API is valid even when the scaling group is disabled. For more details, see [DisableAutoScalingGroup](https://intl.cloud.tencent.com/document/api/377/20435?from_cn_redirect=1).
@@ -221,7 +226,8 @@ When scale-in protection is enabled, the instance will not be removed in scale-i
 * This API supports batch operation. Up to 100 instances can be shut down in each request.
  * @method Models\StopInstanceRefreshResponse StopInstanceRefresh(Models\StopInstanceRefreshRequest $req) This API is used to pause the ongoing instance refresh activity.
 * In the paused status, the scaling group will also be disabled.
-* Instances that are currently being updated will not be paused, instances pending updates will have their updates paused.
+* The instances that are currently being updated or scaled out will not be paused, but instances pending updates will have their updates paused.
+* During scale-in, all instances have already been updated and cannot be paused.
  * @method Models\UpgradeLaunchConfigurationResponse UpgradeLaunchConfiguration(Models\UpgradeLaunchConfigurationRequest $req) 已有替代接口ModifyLaunchConfiguration。该接口存在覆盖参数风险，目前官网已隐藏
 
 There is a replacement API: ModifyLaunchConfiguration. This API carries the risk of parameter overwriting, and it has currently been hidden on the official website.

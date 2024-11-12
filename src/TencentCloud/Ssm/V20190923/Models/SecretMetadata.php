@@ -44,16 +44,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setNextRotationTime(integer $NextRotationTime) Set Start time of the next rotation in UNIX timestamp format
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method integer getSecretType() Obtain `0`: user-defined secret.
-`1`: Tencent Cloud services secret.
-`2`: SSH key secret.
-`3`: Tencent Cloud API key secret.
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setSecretType(integer $SecretType) Set `0`: user-defined secret.
-`1`: Tencent Cloud services secret.
-`2`: SSH key secret.
-`3`: Tencent Cloud API key secret.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method integer getSecretType() Obtain 0: custom secret;1: database credential;2: SSH key secret;3: cloud API key secret;4: Redis secret;Note: This field may return `null`, indicating no valid value can be obtained.
+ * @method void setSecretType(integer $SecretType) Set 0: custom secret;1: database credential;2: SSH key secret;3: cloud API key secret;4: Redis secret;Note: This field may return `null`, indicating no valid value can be obtained.
  * @method string getProductName() Obtain Tencent Cloud service name, which takes effect only when `SecretType` is 1 (Tencent Cloud service credential)
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setProductName(string $ProductName) Set Tencent Cloud service name, which takes effect only when `SecretType` is 1 (Tencent Cloud service credential)
@@ -142,11 +134,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $NextRotationTime;
 
     /**
-     * @var integer `0`: user-defined secret.
-`1`: Tencent Cloud services secret.
-`2`: SSH key secret.
-`3`: Tencent Cloud API key secret.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @var integer 0: custom secret;1: database credential;2: SSH key secret;3: cloud API key secret;4: Redis secret;Note: This field may return `null`, indicating no valid value can be obtained.
      */
     public $SecretType;
 
@@ -211,11 +199,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param integer $NextRotationTime Start time of the next rotation in UNIX timestamp format
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param integer $SecretType `0`: user-defined secret.
-`1`: Tencent Cloud services secret.
-`2`: SSH key secret.
-`3`: Tencent Cloud API key secret.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param integer $SecretType 0: custom secret;1: database credential;2: SSH key secret;3: cloud API key secret;4: Redis secret;Note: This field may return `null`, indicating no valid value can be obtained.
      * @param string $ProductName Tencent Cloud service name, which takes effect only when `SecretType` is 1 (Tencent Cloud service credential)
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $ResourceName Secret name. This field is only valid when the `SecretType` is set to `2` (SSH key secret).

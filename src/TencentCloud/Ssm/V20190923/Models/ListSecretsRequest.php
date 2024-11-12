@@ -54,16 +54,10 @@ The `PendingCreate` and `CreateFailed` status only take effect when `SecretType`
 `1`: Tencent Cloud services secret.
 `2`: SSH key secret.
 `3`: Tencent Cloud API key secret.
- * @method string getProductName() Obtain This parameter is valid only when SecretType is `1`.
- 
-An empty value indicates querying all types of Tencent Cloud service secrets.
-`Mysql`: queries MySQL database credentials.
-`Tdsql-mysql`: queries TDSQL MySQL database credentials.
- * @method void setProductName(string $ProductName) Set This parameter is valid only when SecretType is `1`.
- 
-An empty value indicates querying all types of Tencent Cloud service secrets.
-`Mysql`: queries MySQL database credentials.
-`Tdsql-mysql`: queries TDSQL MySQL database credentials.
+ * @method string getProductName() Obtain This parameter only takes effect when the value of the SecretType parameter is 1.\nWhen the value of SecretType is `1`:
+If the ProductName value is empty, it means querying all types of Tencent Cloud product secrets;If the ProductName value is a specific cloud product value such as MySQL, it means querying MySQL database credential;If the ProductName value is multiple cloud product values, such as: Mysql, Tdsql-mysql, Tdsql_C_Mysql (multiple values are separated by commas in English), it means querying the secrets of three cloud product types;To query the list of supported cloud products, use the interface: `DescribeSupportedProducts`.
+ * @method void setProductName(string $ProductName) Set This parameter only takes effect when the value of the SecretType parameter is 1.\nWhen the value of SecretType is `1`:
+If the ProductName value is empty, it means querying all types of Tencent Cloud product secrets;If the ProductName value is a specific cloud product value such as MySQL, it means querying MySQL database credential;If the ProductName value is multiple cloud product values, such as: Mysql, Tdsql-mysql, Tdsql_C_Mysql (multiple values are separated by commas in English), it means querying the secrets of three cloud product types;To query the list of supported cloud products, use the interface: `DescribeSupportedProducts`.
  */
 class ListSecretsRequest extends AbstractModel
 {
@@ -113,11 +107,8 @@ The `PendingCreate` and `CreateFailed` status only take effect when `SecretType`
     public $SecretType;
 
     /**
-     * @var string This parameter is valid only when SecretType is `1`.
- 
-An empty value indicates querying all types of Tencent Cloud service secrets.
-`Mysql`: queries MySQL database credentials.
-`Tdsql-mysql`: queries TDSQL MySQL database credentials.
+     * @var string This parameter only takes effect when the value of the SecretType parameter is 1.\nWhen the value of SecretType is `1`:
+If the ProductName value is empty, it means querying all types of Tencent Cloud product secrets;If the ProductName value is a specific cloud product value such as MySQL, it means querying MySQL database credential;If the ProductName value is multiple cloud product values, such as: Mysql, Tdsql-mysql, Tdsql_C_Mysql (multiple values are separated by commas in English), it means querying the secrets of three cloud product types;To query the list of supported cloud products, use the interface: `DescribeSupportedProducts`.
      */
     public $ProductName;
 
@@ -139,11 +130,8 @@ The `PendingCreate` and `CreateFailed` status only take effect when `SecretType`
 `1`: Tencent Cloud services secret.
 `2`: SSH key secret.
 `3`: Tencent Cloud API key secret.
-     * @param string $ProductName This parameter is valid only when SecretType is `1`.
- 
-An empty value indicates querying all types of Tencent Cloud service secrets.
-`Mysql`: queries MySQL database credentials.
-`Tdsql-mysql`: queries TDSQL MySQL database credentials.
+     * @param string $ProductName This parameter only takes effect when the value of the SecretType parameter is 1.\nWhen the value of SecretType is `1`:
+If the ProductName value is empty, it means querying all types of Tencent Cloud product secrets;If the ProductName value is a specific cloud product value such as MySQL, it means querying MySQL database credential;If the ProductName value is multiple cloud product values, such as: Mysql, Tdsql-mysql, Tdsql_C_Mysql (multiple values are separated by commas in English), it means querying the secrets of three cloud product types;To query the list of supported cloud products, use the interface: `DescribeSupportedProducts`.
      */
     function __construct()
     {
