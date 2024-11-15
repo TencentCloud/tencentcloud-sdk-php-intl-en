@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateEdgeCVMInstances request structure.
  *
- * @method string getClusterID() Obtain Cluster ID
- * @method void setClusterID(string $ClusterID) Set Cluster ID
+ * @method string getClusterID() Obtain Cluster ID. Edge clusters need to enable public network access before adding CVM nodes.
+ * @method void setClusterID(string $ClusterID) Set Cluster ID. Edge clusters need to enable public network access before adding CVM nodes.
  * @method string getRunInstancePara() Obtain Pass-through parameter for CVM creation in the format of a JSON string. To ensure the idempotency of requests for adding cluster nodes, you need to add the `ClientToken` field in this parameter. For more information, see the documentation for [RunInstances](https://intl.cloud.tencent.com/document/product/213/15730?from_cn_redirect=1) API.
  * @method void setRunInstancePara(string $RunInstancePara) Set Pass-through parameter for CVM creation in the format of a JSON string. To ensure the idempotency of requests for adding cluster nodes, you need to add the `ClientToken` field in this parameter. For more information, see the documentation for [RunInstances](https://intl.cloud.tencent.com/document/product/213/15730?from_cn_redirect=1) API.
  * @method string getCvmRegion() Obtain Region of the CVM instances to create
@@ -38,7 +38,7 @@ use TencentCloud\Common\AbstractModel;
 class CreateEdgeCVMInstancesRequest extends AbstractModel
 {
     /**
-     * @var string Cluster ID
+     * @var string Cluster ID. Edge clusters need to enable public network access before adding CVM nodes.
      */
     public $ClusterID;
 
@@ -73,7 +73,7 @@ class CreateEdgeCVMInstancesRequest extends AbstractModel
     public $EnableEni;
 
     /**
-     * @param string $ClusterID Cluster ID
+     * @param string $ClusterID Cluster ID. Edge clusters need to enable public network access before adding CVM nodes.
      * @param string $RunInstancePara Pass-through parameter for CVM creation in the format of a JSON string. To ensure the idempotency of requests for adding cluster nodes, you need to add the `ClientToken` field in this parameter. For more information, see the documentation for [RunInstances](https://intl.cloud.tencent.com/document/product/213/15730?from_cn_redirect=1) API.
      * @param string $CvmRegion Region of the CVM instances to create
      * @param integer $CvmCount Quantity of CVM instances to create

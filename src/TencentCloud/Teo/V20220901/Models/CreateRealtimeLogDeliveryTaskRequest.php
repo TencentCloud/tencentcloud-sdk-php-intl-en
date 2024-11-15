@@ -22,50 +22,50 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getZoneId() Obtain Zone ID.
  * @method void setZoneId(string $ZoneId) Set Zone ID.
- * @method string getTaskName() Obtain Name of a real-time log shipping task, which can contain up to 200 characters, including digits, English letters, hyphens (-) and underscores (_).
- * @method void setTaskName(string $TaskName) Set Name of a real-time log shipping task, which can contain up to 200 characters, including digits, English letters, hyphens (-) and underscores (_).
- * @method string getTaskType() Obtain Type of a real-time log shipping task. Valid values:
+ * @method string getTaskName() Obtain Name of a real-time log delivery task, which can contain up to 200 characters, including digits, English letters, hyphens (-) and underscores (_).
+ * @method void setTaskName(string $TaskName) Set Name of a real-time log delivery task, which can contain up to 200 characters, including digits, English letters, hyphens (-) and underscores (_).
+ * @method string getTaskType() Obtain Type of a real-time log delivery task. Valid values:
 <li>cls: push to Tencent Cloud CLS;</li>
 <li>custom_endpoint: push to a custom HTTP(S) address;</li>
 <li>s3: push to an AWS S3-compatible bucket address.</li>
- * @method void setTaskType(string $TaskType) Set Type of a real-time log shipping task. Valid values:
+ * @method void setTaskType(string $TaskType) Set Type of a real-time log delivery task. Valid values:
 <li>cls: push to Tencent Cloud CLS;</li>
 <li>custom_endpoint: push to a custom HTTP(S) address;</li>
 <li>s3: push to an AWS S3-compatible bucket address.</li>
- * @method array getEntityList() Obtain List of entities (L7 domain names or L4 proxy instances) corresponding to a real-time log shipping task. Valid value examples:
+ * @method array getEntityList() Obtain List of entities (L7 domain names or L4 proxy instances) corresponding to a real-time log delivery task. Valid value examples:
 <li>L7 domain name: domain.example.com;</li>
 <li>L4 proxy instance: sid-2s69eb5wcms7.</li>
- * @method void setEntityList(array $EntityList) Set List of entities (L7 domain names or L4 proxy instances) corresponding to a real-time log shipping task. Valid value examples:
+ * @method void setEntityList(array $EntityList) Set List of entities (L7 domain names or L4 proxy instances) corresponding to a real-time log delivery task. Valid value examples:
 <li>L7 domain name: domain.example.com;</li>
 <li>L4 proxy instance: sid-2s69eb5wcms7.</li>
- * @method string getLogType() Obtain Data shipping type. Valid values:
+ * @method string getLogType() Obtain Dataset type. Valid values:
 <li>domain: site acceleration logs;</li>
 <li>application: L4 proxy logs;</li>
 <li>web-rateLiming: rate limit and CC attack defense logs;</li>
 <li>web-attack: managed rule logs;</li>
 <li>web-rule: custom rule logs;</li>
 <li>web-bot: Bot management logs.</li>
- * @method void setLogType(string $LogType) Set Data shipping type. Valid values:
+ * @method void setLogType(string $LogType) Set Dataset type. Valid values:
 <li>domain: site acceleration logs;</li>
 <li>application: L4 proxy logs;</li>
 <li>web-rateLiming: rate limit and CC attack defense logs;</li>
 <li>web-attack: managed rule logs;</li>
 <li>web-rule: custom rule logs;</li>
 <li>web-bot: Bot management logs.</li>
- * @method string getArea() Obtain Data shipping area. Valid values:
+ * @method string getArea() Obtain Data area. Valid values:
 <li>mainland: within the Chinese mainland;</li>
 <li>overseas: global (excluding the Chinese mainland).</li>
- * @method void setArea(string $Area) Set Data shipping area. Valid values:
+ * @method void setArea(string $Area) Set Data area. Valid values:
 <li>mainland: within the Chinese mainland;</li>
 <li>overseas: global (excluding the Chinese mainland).</li>
- * @method array getFields() Obtain List of predefined fields for shipping.
- * @method void setFields(array $Fields) Set List of predefined fields for shipping.
- * @method array getCustomFields() Obtain List of custom fields for shipping. It supports extracting specified field values from HTTP request headers, response headers, and cookies. The name of each custom field must be unique and the maximum number of fields is 200.
- * @method void setCustomFields(array $CustomFields) Set List of custom fields for shipping. It supports extracting specified field values from HTTP request headers, response headers, and cookies. The name of each custom field must be unique and the maximum number of fields is 200.
- * @method array getDeliveryConditions() Obtain Filter criteria of log shipping. If this parameter is not input, all logs will be shipped.
- * @method void setDeliveryConditions(array $DeliveryConditions) Set Filter criteria of log shipping. If this parameter is not input, all logs will be shipped.
- * @method integer getSample() Obtain Sampling ratio in permille. Value range: 1-1000. For example, 605 indicates a sampling ratio of 60.5%. If this parameter is not input, the sampling ratio is 100%.
- * @method void setSample(integer $Sample) Set Sampling ratio in permille. Value range: 1-1000. For example, 605 indicates a sampling ratio of 60.5%. If this parameter is not input, the sampling ratio is 100%.
+ * @method array getFields() Obtain List of predefined fields for delivery.
+ * @method void setFields(array $Fields) Set List of predefined fields for delivery.
+ * @method array getCustomFields() Obtain The list of custom fields for log delivery, which supports extracting specified content from HTTP request headers, response headers, cookies, and request bodies. Custom field names must be unique. The number of custom fields cannot exceed a maximum of 200. A single real-time log delivery task can configure up to 5 custom fields of the request body type. Currently, only site acceleration logs (LogType=domain) support custom fields.
+ * @method void setCustomFields(array $CustomFields) Set The list of custom fields for log delivery, which supports extracting specified content from HTTP request headers, response headers, cookies, and request bodies. Custom field names must be unique. The number of custom fields cannot exceed a maximum of 200. A single real-time log delivery task can configure up to 5 custom fields of the request body type. Currently, only site acceleration logs (LogType=domain) support custom fields.
+ * @method array getDeliveryConditions() Obtain Filter criteria of log delivery. If this parameter is not specified, all logs will be shipped.
+ * @method void setDeliveryConditions(array $DeliveryConditions) Set Filter criteria of log delivery. If this parameter is not specified, all logs will be shipped.
+ * @method integer getSample() Obtain Sampling ratio in permille. Value range: 1-1000. For example, 605 indicates a sampling ratio of 60.5%. If this parameter is not specified, the sampling ratio is 100%.
+ * @method void setSample(integer $Sample) Set Sampling ratio in permille. Value range: 1-1000. For example, 605 indicates a sampling ratio of 60.5%. If this parameter is not specified, the sampling ratio is 100%.
  * @method LogFormat getLogFormat() Obtain Output format for log delivery. If this field is not specified, the default format is used, which works as follows:
 <li>When TaskType is 'custom_endpoint', the default format is an array of JSON objects, with each JSON object representing a log entry;</li>
 <li>When TaskType is 's3', the default format is JSON Lines;</li>Specifically, when TaskType is 'cls', the only allowed value for LogFormat.FormatType is 'json', and other parameters in LogFormat will be ignored. It is recommended not to transfer LogFormat.
@@ -87,12 +87,12 @@ class CreateRealtimeLogDeliveryTaskRequest extends AbstractModel
     public $ZoneId;
 
     /**
-     * @var string Name of a real-time log shipping task, which can contain up to 200 characters, including digits, English letters, hyphens (-) and underscores (_).
+     * @var string Name of a real-time log delivery task, which can contain up to 200 characters, including digits, English letters, hyphens (-) and underscores (_).
      */
     public $TaskName;
 
     /**
-     * @var string Type of a real-time log shipping task. Valid values:
+     * @var string Type of a real-time log delivery task. Valid values:
 <li>cls: push to Tencent Cloud CLS;</li>
 <li>custom_endpoint: push to a custom HTTP(S) address;</li>
 <li>s3: push to an AWS S3-compatible bucket address.</li>
@@ -100,14 +100,14 @@ class CreateRealtimeLogDeliveryTaskRequest extends AbstractModel
     public $TaskType;
 
     /**
-     * @var array List of entities (L7 domain names or L4 proxy instances) corresponding to a real-time log shipping task. Valid value examples:
+     * @var array List of entities (L7 domain names or L4 proxy instances) corresponding to a real-time log delivery task. Valid value examples:
 <li>L7 domain name: domain.example.com;</li>
 <li>L4 proxy instance: sid-2s69eb5wcms7.</li>
      */
     public $EntityList;
 
     /**
-     * @var string Data shipping type. Valid values:
+     * @var string Dataset type. Valid values:
 <li>domain: site acceleration logs;</li>
 <li>application: L4 proxy logs;</li>
 <li>web-rateLiming: rate limit and CC attack defense logs;</li>
@@ -118,29 +118,29 @@ class CreateRealtimeLogDeliveryTaskRequest extends AbstractModel
     public $LogType;
 
     /**
-     * @var string Data shipping area. Valid values:
+     * @var string Data area. Valid values:
 <li>mainland: within the Chinese mainland;</li>
 <li>overseas: global (excluding the Chinese mainland).</li>
      */
     public $Area;
 
     /**
-     * @var array List of predefined fields for shipping.
+     * @var array List of predefined fields for delivery.
      */
     public $Fields;
 
     /**
-     * @var array List of custom fields for shipping. It supports extracting specified field values from HTTP request headers, response headers, and cookies. The name of each custom field must be unique and the maximum number of fields is 200.
+     * @var array The list of custom fields for log delivery, which supports extracting specified content from HTTP request headers, response headers, cookies, and request bodies. Custom field names must be unique. The number of custom fields cannot exceed a maximum of 200. A single real-time log delivery task can configure up to 5 custom fields of the request body type. Currently, only site acceleration logs (LogType=domain) support custom fields.
      */
     public $CustomFields;
 
     /**
-     * @var array Filter criteria of log shipping. If this parameter is not input, all logs will be shipped.
+     * @var array Filter criteria of log delivery. If this parameter is not specified, all logs will be shipped.
      */
     public $DeliveryConditions;
 
     /**
-     * @var integer Sampling ratio in permille. Value range: 1-1000. For example, 605 indicates a sampling ratio of 60.5%. If this parameter is not input, the sampling ratio is 100%.
+     * @var integer Sampling ratio in permille. Value range: 1-1000. For example, 605 indicates a sampling ratio of 60.5%. If this parameter is not specified, the sampling ratio is 100%.
      */
     public $Sample;
 
@@ -168,28 +168,28 @@ class CreateRealtimeLogDeliveryTaskRequest extends AbstractModel
 
     /**
      * @param string $ZoneId Zone ID.
-     * @param string $TaskName Name of a real-time log shipping task, which can contain up to 200 characters, including digits, English letters, hyphens (-) and underscores (_).
-     * @param string $TaskType Type of a real-time log shipping task. Valid values:
+     * @param string $TaskName Name of a real-time log delivery task, which can contain up to 200 characters, including digits, English letters, hyphens (-) and underscores (_).
+     * @param string $TaskType Type of a real-time log delivery task. Valid values:
 <li>cls: push to Tencent Cloud CLS;</li>
 <li>custom_endpoint: push to a custom HTTP(S) address;</li>
 <li>s3: push to an AWS S3-compatible bucket address.</li>
-     * @param array $EntityList List of entities (L7 domain names or L4 proxy instances) corresponding to a real-time log shipping task. Valid value examples:
+     * @param array $EntityList List of entities (L7 domain names or L4 proxy instances) corresponding to a real-time log delivery task. Valid value examples:
 <li>L7 domain name: domain.example.com;</li>
 <li>L4 proxy instance: sid-2s69eb5wcms7.</li>
-     * @param string $LogType Data shipping type. Valid values:
+     * @param string $LogType Dataset type. Valid values:
 <li>domain: site acceleration logs;</li>
 <li>application: L4 proxy logs;</li>
 <li>web-rateLiming: rate limit and CC attack defense logs;</li>
 <li>web-attack: managed rule logs;</li>
 <li>web-rule: custom rule logs;</li>
 <li>web-bot: Bot management logs.</li>
-     * @param string $Area Data shipping area. Valid values:
+     * @param string $Area Data area. Valid values:
 <li>mainland: within the Chinese mainland;</li>
 <li>overseas: global (excluding the Chinese mainland).</li>
-     * @param array $Fields List of predefined fields for shipping.
-     * @param array $CustomFields List of custom fields for shipping. It supports extracting specified field values from HTTP request headers, response headers, and cookies. The name of each custom field must be unique and the maximum number of fields is 200.
-     * @param array $DeliveryConditions Filter criteria of log shipping. If this parameter is not input, all logs will be shipped.
-     * @param integer $Sample Sampling ratio in permille. Value range: 1-1000. For example, 605 indicates a sampling ratio of 60.5%. If this parameter is not input, the sampling ratio is 100%.
+     * @param array $Fields List of predefined fields for delivery.
+     * @param array $CustomFields The list of custom fields for log delivery, which supports extracting specified content from HTTP request headers, response headers, cookies, and request bodies. Custom field names must be unique. The number of custom fields cannot exceed a maximum of 200. A single real-time log delivery task can configure up to 5 custom fields of the request body type. Currently, only site acceleration logs (LogType=domain) support custom fields.
+     * @param array $DeliveryConditions Filter criteria of log delivery. If this parameter is not specified, all logs will be shipped.
+     * @param integer $Sample Sampling ratio in permille. Value range: 1-1000. For example, 605 indicates a sampling ratio of 60.5%. If this parameter is not specified, the sampling ratio is 100%.
      * @param LogFormat $LogFormat Output format for log delivery. If this field is not specified, the default format is used, which works as follows:
 <li>When TaskType is 'custom_endpoint', the default format is an array of JSON objects, with each JSON object representing a log entry;</li>
 <li>When TaskType is 's3', the default format is JSON Lines;</li>Specifically, when TaskType is 'cls', the only allowed value for LogFormat.FormatType is 'json', and other parameters in LogFormat will be ignored. It is recommended not to transfer LogFormat.

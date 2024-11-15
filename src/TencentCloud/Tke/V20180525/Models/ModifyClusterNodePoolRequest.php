@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLabels(array $Labels) Set Labels
  * @method array getTaints() Obtain Taints
  * @method void setTaints(array $Taints) Set Taints
+ * @method array getAnnotations() Obtain Node Annotation List
+ * @method void setAnnotations(array $Annotations) Set Node Annotation List
  * @method boolean getEnableAutoscale() Obtain Indicates whether auto scaling is enabled.
  * @method void setEnableAutoscale(boolean $EnableAutoscale) Set Indicates whether auto scaling is enabled.
  * @method string getOsName() Obtain Operating system name
@@ -56,6 +58,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDeletionProtection(boolean $DeletionProtection) Set Whether Deletion Protection is enabled
  * @method string getDockerGraphPath() Obtain Specified value of dockerd --graph. Default value: /var/lib/docker
  * @method void setDockerGraphPath(string $DockerGraphPath) Set Specified value of dockerd --graph. Default value: /var/lib/docker
+ * @method string getPreStartUserScript() Obtain Base64-encoded custom script
+ * @method void setPreStartUserScript(string $PreStartUserScript) Set Base64-encoded custom script
  */
 class ModifyClusterNodePoolRequest extends AbstractModel
 {
@@ -93,6 +97,11 @@ class ModifyClusterNodePoolRequest extends AbstractModel
      * @var array Taints
      */
     public $Taints;
+
+    /**
+     * @var array Node Annotation List
+     */
+    public $Annotations;
 
     /**
      * @var boolean Indicates whether auto scaling is enabled.
@@ -150,6 +159,11 @@ class ModifyClusterNodePoolRequest extends AbstractModel
     public $DockerGraphPath;
 
     /**
+     * @var string Base64-encoded custom script
+     */
+    public $PreStartUserScript;
+
+    /**
      * @param string $ClusterId Cluster ID
      * @param string $NodePoolId Node pool ID
      * @param string $Name Name
@@ -157,6 +171,7 @@ class ModifyClusterNodePoolRequest extends AbstractModel
      * @param integer $MinNodesNum Minimum number of nodes
      * @param array $Labels Labels
      * @param array $Taints Taints
+     * @param array $Annotations Node Annotation List
      * @param boolean $EnableAutoscale Indicates whether auto scaling is enabled.
      * @param string $OsName Operating system name
      * @param string $OsCustomizeType Image tag, `DOCKER_CUSTOMIZE` (container customized tag), `GENERAL` (general tag, default value)
@@ -168,6 +183,7 @@ class ModifyClusterNodePoolRequest extends AbstractModel
      * @param integer $Unschedulable Sets whether the added node is schedulable. 0 (default): schedulable; other values: unschedulable. After node initialization is completed, you can run `kubectl uncordon nodename` to enable this node for scheduling.
      * @param boolean $DeletionProtection Whether Deletion Protection is enabled
      * @param string $DockerGraphPath Specified value of dockerd --graph. Default value: /var/lib/docker
+     * @param string $PreStartUserScript Base64-encoded custom script
      */
     function __construct()
     {
@@ -220,6 +236,15 @@ class ModifyClusterNodePoolRequest extends AbstractModel
             }
         }
 
+        if (array_key_exists("Annotations",$param) and $param["Annotations"] !== null) {
+            $this->Annotations = [];
+            foreach ($param["Annotations"] as $key => $value){
+                $obj = new AnnotationValue();
+                $obj->deserialize($value);
+                array_push($this->Annotations, $obj);
+            }
+        }
+
         if (array_key_exists("EnableAutoscale",$param) and $param["EnableAutoscale"] !== null) {
             $this->EnableAutoscale = $param["EnableAutoscale"];
         }
@@ -269,6 +294,10 @@ class ModifyClusterNodePoolRequest extends AbstractModel
 
         if (array_key_exists("DockerGraphPath",$param) and $param["DockerGraphPath"] !== null) {
             $this->DockerGraphPath = $param["DockerGraphPath"];
+        }
+
+        if (array_key_exists("PreStartUserScript",$param) and $param["PreStartUserScript"] !== null) {
+            $this->PreStartUserScript = $param["PreStartUserScript"];
         }
     }
 }

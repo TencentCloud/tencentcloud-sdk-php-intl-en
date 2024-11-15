@@ -20,26 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * The policy to deal with resources in the cluster when the cluster is deleted.
  *
- * @method string getResourceType() Obtain Resource type, for example `CBS`
- * @method void setResourceType(string $ResourceType) Set Resource type, for example `CBS`
- * @method string getDeleteMode() Obtain Specifies the policy to deal with resources in the cluster when the cluster is deleted. It can be `terminate` or `retain`.
- * @method void setDeleteMode(string $DeleteMode) Set Specifies the policy to deal with resources in the cluster when the cluster is deleted. It can be `terminate` or `retain`.
+ * @method string getResourceType() Obtain Resource type, such as CBS, CLB, CVM
+ * @method void setResourceType(string $ResourceType) Set Resource type, such as CBS, CLB, CVM
+ * @method string getDeleteMode() Obtain Deletion mode for CBS resources when the cluster is deleted: terminate, retain. Other resources are terminated by default.
+ * @method void setDeleteMode(string $DeleteMode) Set Deletion mode for CBS resources when the cluster is deleted: terminate, retain. Other resources are terminated by default.
+ * @method boolean getSkipDeletionProtection() Obtain Whether to skip the resources with deletion protection enabled. It is false by default. When set to true, the resources with deletion protection enabled are not cleaned up. CLB with terminal nodes also belongs to the resources with deletion protection enabled.
+ * @method void setSkipDeletionProtection(boolean $SkipDeletionProtection) Set Whether to skip the resources with deletion protection enabled. It is false by default. When set to true, the resources with deletion protection enabled are not cleaned up. CLB with terminal nodes also belongs to the resources with deletion protection enabled.
  */
 class ResourceDeleteOption extends AbstractModel
 {
     /**
-     * @var string Resource type, for example `CBS`
+     * @var string Resource type, such as CBS, CLB, CVM
      */
     public $ResourceType;
 
     /**
-     * @var string Specifies the policy to deal with resources in the cluster when the cluster is deleted. It can be `terminate` or `retain`.
+     * @var string Deletion mode for CBS resources when the cluster is deleted: terminate, retain. Other resources are terminated by default.
      */
     public $DeleteMode;
 
     /**
-     * @param string $ResourceType Resource type, for example `CBS`
-     * @param string $DeleteMode Specifies the policy to deal with resources in the cluster when the cluster is deleted. It can be `terminate` or `retain`.
+     * @var boolean Whether to skip the resources with deletion protection enabled. It is false by default. When set to true, the resources with deletion protection enabled are not cleaned up. CLB with terminal nodes also belongs to the resources with deletion protection enabled.
+     */
+    public $SkipDeletionProtection;
+
+    /**
+     * @param string $ResourceType Resource type, such as CBS, CLB, CVM
+     * @param string $DeleteMode Deletion mode for CBS resources when the cluster is deleted: terminate, retain. Other resources are terminated by default.
+     * @param boolean $SkipDeletionProtection Whether to skip the resources with deletion protection enabled. It is false by default. When set to true, the resources with deletion protection enabled are not cleaned up. CLB with terminal nodes also belongs to the resources with deletion protection enabled.
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class ResourceDeleteOption extends AbstractModel
 
         if (array_key_exists("DeleteMode",$param) and $param["DeleteMode"] !== null) {
             $this->DeleteMode = $param["DeleteMode"];
+        }
+
+        if (array_key_exists("SkipDeletionProtection",$param) and $param["SkipDeletionProtection"] !== null) {
+            $this->SkipDeletionProtection = $param["SkipDeletionProtection"];
         }
     }
 }

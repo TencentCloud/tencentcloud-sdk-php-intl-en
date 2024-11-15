@@ -27,11 +27,11 @@ use TencentCloud\Common\AbstractModel;
  * @method string getTaskName() Obtain The name of the real-time log delivery task, which is a combination of numbers, English letters, - and _, containing up to 200 characters. If this field is not filled in, the original configuration will be retained.
  * @method void setTaskName(string $TaskName) Set The name of the real-time log delivery task, which is a combination of numbers, English letters, - and _, containing up to 200 characters. If this field is not filled in, the original configuration will be retained.
  * @method string getDeliveryStatus() Obtain The status of the real-time log delivery task. Valid values:
-<li>`enabled`: Enabled;</li>
-<li>`disabled`: Disabled.</li>If this field is not filled in, the original configuration will be retained.
+<li>enabled: Enabled;</li>
+<li>disabled: Disabled.</li>If this field is not filled in, the original configuration will be retained.
  * @method void setDeliveryStatus(string $DeliveryStatus) Set The status of the real-time log delivery task. Valid values:
-<li>`enabled`: Enabled;</li>
-<li>`disabled`: Disabled.</li>If this field is not filled in, the original configuration will be retained.
+<li>enabled: Enabled;</li>
+<li>disabled: Disabled.</li>If this field is not filled in, the original configuration will be retained.
  * @method array getEntityList() Obtain The list of entities (Layer 7 domains or Layer 4 proxy instances) corresponding to the real-time log delivery task. Valid value examples:
 <li>Layer 7 domain: domain.example.com;</li>
 <li>Layer 4 proxy instance: sid-2s69eb5wcms7.</li>If this field is not filled in, the original configuration will be retained.
@@ -40,14 +40,14 @@ use TencentCloud\Common\AbstractModel;
 <li>Layer 4 proxy instance: sid-2s69eb5wcms7.</li>If this field is not filled in, the original configuration will be retained.
  * @method array getFields() Obtain The list of predefined fields for delivery. If this field is not filled in, the original configuration will be retained.
  * @method void setFields(array $Fields) Set The list of predefined fields for delivery. If this field is not filled in, the original configuration will be retained.
- * @method array getCustomFields() Obtain The list of custom fields for delivery, supporting extracting specified field values from HTTP request headers, response headers, and cookies. Each custom field name must be unique and the maximum number of fields is 200. If this field is not filled in, the original configuration will be retained.
- * @method void setCustomFields(array $CustomFields) Set The list of custom fields for delivery, supporting extracting specified field values from HTTP request headers, response headers, and cookies. Each custom field name must be unique and the maximum number of fields is 200. If this field is not filled in, the original configuration will be retained.
+ * @method array getCustomFields() Obtain The list of custom fields for shipping, which supports extracting specified content from HTTP request headers, response headers, cookies, and request bodies. If this parameter is not filled in, the original configuration will be retained. The name of each custom field should be unique and the maximum number of fields is 200. Up to 5 custom fields of the request body type can be added for a single real-time log push task. Currently, adding custom fields is supported only for site acceleration logs (LogType=domain).
+ * @method void setCustomFields(array $CustomFields) Set The list of custom fields for shipping, which supports extracting specified content from HTTP request headers, response headers, cookies, and request bodies. If this parameter is not filled in, the original configuration will be retained. The name of each custom field should be unique and the maximum number of fields is 200. Up to 5 custom fields of the request body type can be added for a single real-time log push task. Currently, adding custom fields is supported only for site acceleration logs (LogType=domain).
  * @method array getDeliveryConditions() Obtain Log delivery filter conditions. If this field is not filled in, all logs will be delivered.
  * @method void setDeliveryConditions(array $DeliveryConditions) Set Log delivery filter conditions. If this field is not filled in, all logs will be delivered.
  * @method integer getSample() Obtain The sampling ratio in permille. Value range: 1 to 1000. For example, 605 represents a sampling ratio of 60.5%. If this field is not filled in, the original configuration will be retained.
  * @method void setSample(integer $Sample) Set The sampling ratio in permille. Value range: 1 to 1000. For example, 605 represents a sampling ratio of 60.5%. If this field is not filled in, the original configuration will be retained.
- * @method LogFormat getLogFormat() Obtain Output format for log delivery. If this field is not specified, the original configuration will be retained.Specifically, when TaskType is set to cls, the value of LogFormat.FormatType can only be json, and other parameters in LogFormat will be ignored. It is recommended not to input LogFormat.
- * @method void setLogFormat(LogFormat $LogFormat) Set Output format for log delivery. If this field is not specified, the original configuration will be retained.Specifically, when TaskType is set to cls, the value of LogFormat.FormatType can only be json, and other parameters in LogFormat will be ignored. It is recommended not to input LogFormat.
+ * @method LogFormat getLogFormat() Obtain Output format for log delivery. If this field is not specified, the original configuration will be retained. Specifically, when TaskType is cls, the value of LogFormat.FormatType can only be json, and other parameters in LogFormat will be ignored. It is recommended not to input LogFormat.
+ * @method void setLogFormat(LogFormat $LogFormat) Set Output format for log delivery. If this field is not specified, the original configuration will be retained. Specifically, when TaskType is cls, the value of LogFormat.FormatType can only be json, and other parameters in LogFormat will be ignored. It is recommended not to input LogFormat.
  * @method CustomEndpoint getCustomEndpoint() Obtain The configuration information of the custom HTTP service. If this field is not filled in, the original configuration will be retained.
  * @method void setCustomEndpoint(CustomEndpoint $CustomEndpoint) Set The configuration information of the custom HTTP service. If this field is not filled in, the original configuration will be retained.
  * @method S3 getS3() Obtain The configuration information of the AWS S3-compatible bucket. If this field is not filled in, the original configuration will be retained.
@@ -72,8 +72,8 @@ class ModifyRealtimeLogDeliveryTaskRequest extends AbstractModel
 
     /**
      * @var string The status of the real-time log delivery task. Valid values:
-<li>`enabled`: Enabled;</li>
-<li>`disabled`: Disabled.</li>If this field is not filled in, the original configuration will be retained.
+<li>enabled: Enabled;</li>
+<li>disabled: Disabled.</li>If this field is not filled in, the original configuration will be retained.
      */
     public $DeliveryStatus;
 
@@ -90,7 +90,7 @@ class ModifyRealtimeLogDeliveryTaskRequest extends AbstractModel
     public $Fields;
 
     /**
-     * @var array The list of custom fields for delivery, supporting extracting specified field values from HTTP request headers, response headers, and cookies. Each custom field name must be unique and the maximum number of fields is 200. If this field is not filled in, the original configuration will be retained.
+     * @var array The list of custom fields for shipping, which supports extracting specified content from HTTP request headers, response headers, cookies, and request bodies. If this parameter is not filled in, the original configuration will be retained. The name of each custom field should be unique and the maximum number of fields is 200. Up to 5 custom fields of the request body type can be added for a single real-time log push task. Currently, adding custom fields is supported only for site acceleration logs (LogType=domain).
      */
     public $CustomFields;
 
@@ -105,7 +105,7 @@ class ModifyRealtimeLogDeliveryTaskRequest extends AbstractModel
     public $Sample;
 
     /**
-     * @var LogFormat Output format for log delivery. If this field is not specified, the original configuration will be retained.Specifically, when TaskType is set to cls, the value of LogFormat.FormatType can only be json, and other parameters in LogFormat will be ignored. It is recommended not to input LogFormat.
+     * @var LogFormat Output format for log delivery. If this field is not specified, the original configuration will be retained. Specifically, when TaskType is cls, the value of LogFormat.FormatType can only be json, and other parameters in LogFormat will be ignored. It is recommended not to input LogFormat.
      */
     public $LogFormat;
 
@@ -124,16 +124,16 @@ class ModifyRealtimeLogDeliveryTaskRequest extends AbstractModel
      * @param string $TaskId The ID of the real-time log delivery task.
      * @param string $TaskName The name of the real-time log delivery task, which is a combination of numbers, English letters, - and _, containing up to 200 characters. If this field is not filled in, the original configuration will be retained.
      * @param string $DeliveryStatus The status of the real-time log delivery task. Valid values:
-<li>`enabled`: Enabled;</li>
-<li>`disabled`: Disabled.</li>If this field is not filled in, the original configuration will be retained.
+<li>enabled: Enabled;</li>
+<li>disabled: Disabled.</li>If this field is not filled in, the original configuration will be retained.
      * @param array $EntityList The list of entities (Layer 7 domains or Layer 4 proxy instances) corresponding to the real-time log delivery task. Valid value examples:
 <li>Layer 7 domain: domain.example.com;</li>
 <li>Layer 4 proxy instance: sid-2s69eb5wcms7.</li>If this field is not filled in, the original configuration will be retained.
      * @param array $Fields The list of predefined fields for delivery. If this field is not filled in, the original configuration will be retained.
-     * @param array $CustomFields The list of custom fields for delivery, supporting extracting specified field values from HTTP request headers, response headers, and cookies. Each custom field name must be unique and the maximum number of fields is 200. If this field is not filled in, the original configuration will be retained.
+     * @param array $CustomFields The list of custom fields for shipping, which supports extracting specified content from HTTP request headers, response headers, cookies, and request bodies. If this parameter is not filled in, the original configuration will be retained. The name of each custom field should be unique and the maximum number of fields is 200. Up to 5 custom fields of the request body type can be added for a single real-time log push task. Currently, adding custom fields is supported only for site acceleration logs (LogType=domain).
      * @param array $DeliveryConditions Log delivery filter conditions. If this field is not filled in, all logs will be delivered.
      * @param integer $Sample The sampling ratio in permille. Value range: 1 to 1000. For example, 605 represents a sampling ratio of 60.5%. If this field is not filled in, the original configuration will be retained.
-     * @param LogFormat $LogFormat Output format for log delivery. If this field is not specified, the original configuration will be retained.Specifically, when TaskType is set to cls, the value of LogFormat.FormatType can only be json, and other parameters in LogFormat will be ignored. It is recommended not to input LogFormat.
+     * @param LogFormat $LogFormat Output format for log delivery. If this field is not specified, the original configuration will be retained. Specifically, when TaskType is cls, the value of LogFormat.FormatType can only be json, and other parameters in LogFormat will be ignored. It is recommended not to input LogFormat.
      * @param CustomEndpoint $CustomEndpoint The configuration information of the custom HTTP service. If this field is not filled in, the original configuration will be retained.
      * @param S3 $S3 The configuration information of the AWS S3-compatible bucket. If this field is not filled in, the original configuration will be retained.
      */

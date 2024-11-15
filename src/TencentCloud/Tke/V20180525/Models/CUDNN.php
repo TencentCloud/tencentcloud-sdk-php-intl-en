@@ -21,41 +21,73 @@ use TencentCloud\Common\AbstractModel;
  * cuDNN version information
  *
  * @method string getVersion() Obtain cuDNN version
+
+Note: This field may return "null", indicating that no valid value can be obtained.
  * @method void setVersion(string $Version) Set cuDNN version
+
+Note: This field may return "null", indicating that no valid value can be obtained.
  * @method string getName() Obtain cuDNN name
+
+Note: This field may return "null", indicating that no valid value can be obtained.
  * @method void setName(string $Name) Set cuDNN name
+
+Note: This field may return "null", indicating that no valid value can be obtained.
  * @method string getDocName() Obtain Doc name of cuDNN
+
+Note: This field may return "null", indicating that no valid value can be obtained.
  * @method void setDocName(string $DocName) Set Doc name of cuDNN
+
+Note: This field may return "null", indicating that no valid value can be obtained.
  * @method string getDevName() Obtain Dev name of cuDNN
+
+Note: This field may return "null", indicating that no valid value can be obtained.
  * @method void setDevName(string $DevName) Set Dev name of cuDNN
+
+Note: This field may return "null", indicating that no valid value can be obtained.
  */
 class CUDNN extends AbstractModel
 {
     /**
      * @var string cuDNN version
+
+Note: This field may return "null", indicating that no valid value can be obtained.
      */
     public $Version;
 
     /**
      * @var string cuDNN name
+
+Note: This field may return "null", indicating that no valid value can be obtained.
      */
     public $Name;
 
     /**
      * @var string Doc name of cuDNN
+
+Note: This field may return "null", indicating that no valid value can be obtained.
      */
     public $DocName;
 
     /**
      * @var string Dev name of cuDNN
+
+Note: This field may return "null", indicating that no valid value can be obtained.
      */
     public $DevName;
 
     /**
      * @param string $Version cuDNN version
+
+Note: This field may return "null", indicating that no valid value can be obtained.
      * @param string $Name cuDNN name
+
+Note: This field may return "null", indicating that no valid value can be obtained.
      * @param string $DocName Doc name of cuDNN
+
+Note: This field may return "null", indicating that no valid value can be obtained.
      * @param string $DevName Dev name of cuDNN
+
+Note: This field may return "null", indicating that no valid value can be obtained.
      */
     function __construct()
     {

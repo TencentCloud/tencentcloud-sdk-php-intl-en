@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteAPIDoc request structure.
  *
- * @method string getApiDocId() Obtain API document ID
- * @method void setApiDocId(string $ApiDocId) Set API document ID
+ * @method string getApiDocId() Obtain API document ID.
+ * @method void setApiDocId(string $ApiDocId) Set API document ID.
  */
 class DeleteAPIDocRequest extends AbstractModel
 {
     /**
-     * @var string API document ID
+     * @var string API document ID.
      */
     public $ApiDocId;
 
     /**
-     * @param string $ApiDocId API document ID
+     * @param string $ApiDocId API document ID.
      */
     function __construct()
     {

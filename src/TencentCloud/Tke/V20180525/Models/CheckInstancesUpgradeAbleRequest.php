@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setClusterId(string $ClusterId) Set Cluster ID
  * @method array getInstanceIds() Obtain Specify the node list to check. If it’s not passed in, all nodes of the cluster will be checked.
  * @method void setInstanceIds(array $InstanceIds) Set Specify the node list to check. If it’s not passed in, all nodes of the cluster will be checked.
- * @method string getUpgradeType() Obtain Upgrade type
- * @method void setUpgradeType(string $UpgradeType) Set Upgrade type
+ * @method string getUpgradeType() Obtain Upgrade type, enum values: reset (Reinstallation and Upgrade, supports major and minor versions), hot (In-place Rolling Minor Version Upgrade), major (In-place Rolling Major Version Upgrade).
+ * @method void setUpgradeType(string $UpgradeType) Set Upgrade type, enum values: reset (Reinstallation and Upgrade, supports major and minor versions), hot (In-place Rolling Minor Version Upgrade), major (In-place Rolling Major Version Upgrade).
  * @method integer getOffset() Obtain Pagination offset
  * @method void setOffset(integer $Offset) Set Pagination offset
  * @method integer getLimit() Obtain Pagination limit
@@ -46,7 +46,7 @@ class CheckInstancesUpgradeAbleRequest extends AbstractModel
     public $InstanceIds;
 
     /**
-     * @var string Upgrade type
+     * @var string Upgrade type, enum values: reset (Reinstallation and Upgrade, supports major and minor versions), hot (In-place Rolling Minor Version Upgrade), major (In-place Rolling Major Version Upgrade).
      */
     public $UpgradeType;
 
@@ -68,7 +68,7 @@ class CheckInstancesUpgradeAbleRequest extends AbstractModel
     /**
      * @param string $ClusterId Cluster ID
      * @param array $InstanceIds Specify the node list to check. If it’s not passed in, all nodes of the cluster will be checked.
-     * @param string $UpgradeType Upgrade type
+     * @param string $UpgradeType Upgrade type, enum values: reset (Reinstallation and Upgrade, supports major and minor versions), hot (In-place Rolling Minor Version Upgrade), major (In-place Rolling Major Version Upgrade).
      * @param integer $Offset Pagination offset
      * @param integer $Limit Pagination limit
      * @param array $Filter Filtering

@@ -112,6 +112,10 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setStandardDebug(StandardDebug $StandardDebug) Set Standard debugging configuration.
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method JITVideoProcess getJITVideoProcess() Obtain Just-in-time media processing configuration.
+Note: This field may return null, which indicates a failure to obtain a valid value.
+ * @method void setJITVideoProcess(JITVideoProcess $JITVideoProcess) Set Just-in-time media processing configuration.
+Note: This field may return null, which indicates a failure to obtain a valid value.
  */
 class ZoneSetting extends AbstractModel
 {
@@ -254,6 +258,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $StandardDebug;
 
     /**
+     * @var JITVideoProcess Just-in-time media processing configuration.
+Note: This field may return null, which indicates a failure to obtain a valid value.
+     */
+    public $JITVideoProcess;
+
+    /**
      * @param string $ZoneName Name of the site
      * @param string $Area Site acceleration region. Values:
 <li>`mainland`: Acceleration in the Chinese mainland.</li>
@@ -300,6 +310,8 @@ Note: This field may return `null`, indicating that no valid value was found.
 Note: This field may return `null`, indicating that no valid values can be obtained.
      * @param StandardDebug $StandardDebug Standard debugging configuration.
 Note: This field may return null, indicating that no valid values can be obtained.
+     * @param JITVideoProcess $JITVideoProcess Just-in-time media processing configuration.
+Note: This field may return null, which indicates a failure to obtain a valid value.
      */
     function __construct()
     {
@@ -425,6 +437,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (array_key_exists("StandardDebug",$param) and $param["StandardDebug"] !== null) {
             $this->StandardDebug = new StandardDebug();
             $this->StandardDebug->deserialize($param["StandardDebug"]);
+        }
+
+        if (array_key_exists("JITVideoProcess",$param) and $param["JITVideoProcess"] !== null) {
+            $this->JITVideoProcess = new JITVideoProcess();
+            $this->JITVideoProcess->deserialize($param["JITVideoProcess"]);
         }
     }
 }

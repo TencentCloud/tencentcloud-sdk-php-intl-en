@@ -32,8 +32,8 @@ use TencentCloud\Common\AbstractModel;
 <li>`disable`: (Default) Do not configure the certificate</li>
 <li>`eofreecert`: Use a free certificate provided by EdgeOne</li>
 <li>`sslcert`: Configure an SSL certificate.</li>
- * @method array getServerCertInfo() Obtain ID of the SSL certificate. It takes effect when `mode=sslcert`. To check the certificate ID, go to the [SSL Certificate](https://console.cloud.tencent.com/certoview) console.
- * @method void setServerCertInfo(array $ServerCertInfo) Set ID of the SSL certificate. It takes effect when `mode=sslcert`. To check the certificate ID, go to the [SSL Certificate](https://console.cloud.tencent.com/certoview) console.
+ * @method array getServerCertInfo() Obtain SSL certificate configuration. This parameter is effective only when the mode is sslcert. You only need to provide the CertId of the corresponding certificate. You can check the CertId from the [SSL Certificate List](https://console.cloud.tencent.com/ssl).
+ * @method void setServerCertInfo(array $ServerCertInfo) Set SSL certificate configuration. This parameter is effective only when the mode is sslcert. You only need to provide the CertId of the corresponding certificate. You can check the CertId from the [SSL Certificate List](https://console.cloud.tencent.com/ssl).
  * @method string getApplyType() Obtain Whether the certificate is managed by EdgeOne. Values:
 <li>`none`: Not managed by EdgeOne</li>
 <li>`apply`: Managed by EdgeOne</li>
@@ -42,6 +42,8 @@ Default value: `none`.
 <li>`none`: Not managed by EdgeOne</li>
 <li>`apply`: Managed by EdgeOne</li>
 Default value: `none`.
+ * @method MutualTLS getClientCertInfo() Obtain In the Edge mTLS scenario, this field represents the client's CA certificate, which is deployed at the EO entry side for authenticating the client access to EO nodes. The original configuration applies if this field is not specified.
+ * @method void setClientCertInfo(MutualTLS $ClientCertInfo) Set In the Edge mTLS scenario, this field represents the client's CA certificate, which is deployed at the EO entry side for authenticating the client access to EO nodes. The original configuration applies if this field is not specified.
  */
 class ModifyHostsCertificateRequest extends AbstractModel
 {
@@ -64,7 +66,7 @@ class ModifyHostsCertificateRequest extends AbstractModel
     public $Mode;
 
     /**
-     * @var array ID of the SSL certificate. It takes effect when `mode=sslcert`. To check the certificate ID, go to the [SSL Certificate](https://console.cloud.tencent.com/certoview) console.
+     * @var array SSL certificate configuration. This parameter is effective only when the mode is sslcert. You only need to provide the CertId of the corresponding certificate. You can check the CertId from the [SSL Certificate List](https://console.cloud.tencent.com/ssl).
      */
     public $ServerCertInfo;
 
@@ -78,17 +80,23 @@ Default value: `none`.
     public $ApplyType;
 
     /**
+     * @var MutualTLS In the Edge mTLS scenario, this field represents the client's CA certificate, which is deployed at the EO entry side for authenticating the client access to EO nodes. The original configuration applies if this field is not specified.
+     */
+    public $ClientCertInfo;
+
+    /**
      * @param string $ZoneId ID of the site.
      * @param array $Hosts Domain names that you need to modify the certificate configuration
      * @param string $Mode Certificate configuration mode. Values:
 <li>`disable`: (Default) Do not configure the certificate</li>
 <li>`eofreecert`: Use a free certificate provided by EdgeOne</li>
 <li>`sslcert`: Configure an SSL certificate.</li>
-     * @param array $ServerCertInfo ID of the SSL certificate. It takes effect when `mode=sslcert`. To check the certificate ID, go to the [SSL Certificate](https://console.cloud.tencent.com/certoview) console.
+     * @param array $ServerCertInfo SSL certificate configuration. This parameter is effective only when the mode is sslcert. You only need to provide the CertId of the corresponding certificate. You can check the CertId from the [SSL Certificate List](https://console.cloud.tencent.com/ssl).
      * @param string $ApplyType Whether the certificate is managed by EdgeOne. Values:
 <li>`none`: Not managed by EdgeOne</li>
 <li>`apply`: Managed by EdgeOne</li>
 Default value: `none`.
+     * @param MutualTLS $ClientCertInfo In the Edge mTLS scenario, this field represents the client's CA certificate, which is deployed at the EO entry side for authenticating the client access to EO nodes. The original configuration applies if this field is not specified.
      */
     function __construct()
     {
@@ -126,6 +134,11 @@ Default value: `none`.
 
         if (array_key_exists("ApplyType",$param) and $param["ApplyType"] !== null) {
             $this->ApplyType = $param["ApplyType"];
+        }
+
+        if (array_key_exists("ClientCertInfo",$param) and $param["ClientCertInfo"] !== null) {
+            $this->ClientCertInfo = new MutualTLS();
+            $this->ClientCertInfo->deserialize($param["ClientCertInfo"]);
         }
     }
 }

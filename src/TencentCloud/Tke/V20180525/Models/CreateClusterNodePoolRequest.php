@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAutoScalingGroupPara(string $AutoScalingGroupPara) Set AS group parameters. For details, see https://intl.cloud.tencent.com/document/product/377/20440?from_cn_redirect=1
  * @method string getLaunchConfigurePara() Obtain Running parameters. For details, see https://intl.cloud.tencent.com/document/product/377/20447?from_cn_redirect=1
  * @method void setLaunchConfigurePara(string $LaunchConfigurePara) Set Running parameters. For details, see https://intl.cloud.tencent.com/document/product/377/20447?from_cn_redirect=1
- * @method InstanceAdvancedSettings getInstanceAdvancedSettings() Obtain Sample parameters
- * @method void setInstanceAdvancedSettings(InstanceAdvancedSettings $InstanceAdvancedSettings) Set Sample parameters
+ * @method InstanceAdvancedSettings getInstanceAdvancedSettings() Obtain InstanceAdvancedSettings
+ * @method void setInstanceAdvancedSettings(InstanceAdvancedSettings $InstanceAdvancedSettings) Set InstanceAdvancedSettings
  * @method boolean getEnableAutoscale() Obtain Indicates whether to enable auto scaling
  * @method void setEnableAutoscale(boolean $EnableAutoscale) Set Indicates whether to enable auto scaling
  * @method string getName() Obtain Node pool name
@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLabels(array $Labels) Set Labels
  * @method array getTaints() Obtain Taints
  * @method void setTaints(array $Taints) Set Taints
+ * @method array getAnnotations() Obtain Node Annotation List
+ * @method void setAnnotations(array $Annotations) Set Node Annotation List
  * @method string getContainerRuntime() Obtain Node pool runtime type and version
  * @method void setContainerRuntime(string $ContainerRuntime) Set Node pool runtime type and version
  * @method string getRuntimeVersion() Obtain Runtime version
@@ -67,7 +69,7 @@ class CreateClusterNodePoolRequest extends AbstractModel
     public $LaunchConfigurePara;
 
     /**
-     * @var InstanceAdvancedSettings Sample parameters
+     * @var InstanceAdvancedSettings InstanceAdvancedSettings
      */
     public $InstanceAdvancedSettings;
 
@@ -90,6 +92,11 @@ class CreateClusterNodePoolRequest extends AbstractModel
      * @var array Taints
      */
     public $Taints;
+
+    /**
+     * @var array Node Annotation List
+     */
+    public $Annotations;
 
     /**
      * @var string Node pool runtime type and version
@@ -125,11 +132,12 @@ class CreateClusterNodePoolRequest extends AbstractModel
      * @param string $ClusterId Cluster ID
      * @param string $AutoScalingGroupPara AS group parameters. For details, see https://intl.cloud.tencent.com/document/product/377/20440?from_cn_redirect=1
      * @param string $LaunchConfigurePara Running parameters. For details, see https://intl.cloud.tencent.com/document/product/377/20447?from_cn_redirect=1
-     * @param InstanceAdvancedSettings $InstanceAdvancedSettings Sample parameters
+     * @param InstanceAdvancedSettings $InstanceAdvancedSettings InstanceAdvancedSettings
      * @param boolean $EnableAutoscale Indicates whether to enable auto scaling
      * @param string $Name Node pool name
      * @param array $Labels Labels
      * @param array $Taints Taints
+     * @param array $Annotations Node Annotation List
      * @param string $ContainerRuntime Node pool runtime type and version
      * @param string $RuntimeVersion Runtime version
      * @param string $NodePoolOs Node pool operating system (enter the image ID for a custom image, and enter the OS name for a public image)
@@ -190,6 +198,15 @@ class CreateClusterNodePoolRequest extends AbstractModel
                 $obj = new Taint();
                 $obj->deserialize($value);
                 array_push($this->Taints, $obj);
+            }
+        }
+
+        if (array_key_exists("Annotations",$param) and $param["Annotations"] !== null) {
+            $this->Annotations = [];
+            foreach ($param["Annotations"] as $key => $value){
+                $obj = new AnnotationValue();
+                $obj->deserialize($value);
+                array_push($this->Annotations, $obj);
             }
         }
 

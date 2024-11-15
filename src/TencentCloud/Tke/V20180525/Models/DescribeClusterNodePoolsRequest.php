@@ -22,44 +22,42 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getClusterId() Obtain ClusterId (cluster ID)
  * @method void setClusterId(string $ClusterId) Set ClusterId (cluster ID)
- * @method array getFilters() Obtain ·  NodePoolsName
-    Filters by the node pool name
+ * @method array getFilters() Obtain · "Name":"NodePoolsName","Values": ["test"]
+    Filter by [Node Pool Name].
     Type: String
-    Required: No
+        Required: No
 
-·  NodePoolsId
-    Filters by the node pool ID
-    Type: String
-    Required: No
 
-·  tags
-    Filters by key-value pairs of tags
-    Type: String
-    Required: No
 
-·  tag:tag-key
-    Filters by key-value pairs of tags
+·  "Name":"NodePoolsId","Values": ["np-d2mb2zb"]
+    Filter by [Node Pool ID].
     Type: String
-    Required: No
- * @method void setFilters(array $Filters) Set ·  NodePoolsName
-    Filters by the node pool name
-    Type: String
-    Required: No
+        Required: No
 
-·  NodePoolsId
-    Filters by the node pool ID
-    Type: String
-    Required: No
 
-·  tags
-    Filters by key-value pairs of tags
-    Type: String
-    Required: No
 
-·  tag:tag-key
-    Filters by key-value pairs of tags
+·  "Name":"Tags","Values": ["abc:1"]
+    Filter by [Key-value Pairs of Tags].
     Type: String
-    Required: No
+        Required: No
+ * @method void setFilters(array $Filters) Set · "Name":"NodePoolsName","Values": ["test"]
+    Filter by [Node Pool Name].
+    Type: String
+        Required: No
+
+
+
+·  "Name":"NodePoolsId","Values": ["np-d2mb2zb"]
+    Filter by [Node Pool ID].
+    Type: String
+        Required: No
+
+
+
+·  "Name":"Tags","Values": ["abc:1"]
+    Filter by [Key-value Pairs of Tags].
+    Type: String
+        Required: No
  */
 class DescribeClusterNodePoolsRequest extends AbstractModel
 {
@@ -69,49 +67,47 @@ class DescribeClusterNodePoolsRequest extends AbstractModel
     public $ClusterId;
 
     /**
-     * @var array ·  NodePoolsName
-    Filters by the node pool name
+     * @var array · "Name":"NodePoolsName","Values": ["test"]
+    Filter by [Node Pool Name].
     Type: String
-    Required: No
+        Required: No
 
-·  NodePoolsId
-    Filters by the node pool ID
-    Type: String
-    Required: No
 
-·  tags
-    Filters by key-value pairs of tags
-    Type: String
-    Required: No
 
-·  tag:tag-key
-    Filters by key-value pairs of tags
+·  "Name":"NodePoolsId","Values": ["np-d2mb2zb"]
+    Filter by [Node Pool ID].
     Type: String
-    Required: No
+        Required: No
+
+
+
+·  "Name":"Tags","Values": ["abc:1"]
+    Filter by [Key-value Pairs of Tags].
+    Type: String
+        Required: No
      */
     public $Filters;
 
     /**
      * @param string $ClusterId ClusterId (cluster ID)
-     * @param array $Filters ·  NodePoolsName
-    Filters by the node pool name
+     * @param array $Filters · "Name":"NodePoolsName","Values": ["test"]
+    Filter by [Node Pool Name].
     Type: String
-    Required: No
+        Required: No
 
-·  NodePoolsId
-    Filters by the node pool ID
-    Type: String
-    Required: No
 
-·  tags
-    Filters by key-value pairs of tags
-    Type: String
-    Required: No
 
-·  tag:tag-key
-    Filters by key-value pairs of tags
+·  "Name":"NodePoolsId","Values": ["np-d2mb2zb"]
+    Filter by [Node Pool ID].
     Type: String
-    Required: No
+        Required: No
+
+
+
+·  "Name":"Tags","Values": ["abc:1"]
+    Filter by [Key-value Pairs of Tags].
+    Type: String
+        Required: No
      */
     function __construct()
     {

@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLabels(array $Labels) Set Labels
  * @method array getTaints() Obtain Array of taint
  * @method void setTaints(array $Taints) Set Array of taint
+ * @method array getAnnotations() Obtain Node Annotation List
+ * @method void setAnnotations(array $Annotations) Set Node Annotation List
  * @method NodeCountSummary getNodeCountSummary() Obtain Node list
  * @method void setNodeCountSummary(NodeCountSummary $NodeCountSummary) Set Node list
  * @method string getAutoscalingGroupStatus() Obtain 
@@ -52,6 +54,10 @@ Note: this field may return `null`, indicating that no valid value is obtained.
 Note: this field may return `null`, indicating that no valid value is obtained.
  * @method void setDesiredNodesNum(integer $DesiredNodesNum) Set Desired number of nodes
 Note: this field may return `null`, indicating that no valid value is obtained.
+ * @method RuntimeConfig getRuntimeConfig() Obtain Runtime Description
+Note: This field may return "null", indicating that no valid value can be obtained.
+ * @method void setRuntimeConfig(RuntimeConfig $RuntimeConfig) Set Runtime Description
+Note: This field may return "null", indicating that no valid value can be obtained.
  * @method string getNodePoolOs() Obtain The operating system of the node pool
 Note: this field may return `null`, indicating that no valid value is obtained.
  * @method void setNodePoolOs(string $NodePoolOs) Set The operating system of the node pool
@@ -80,6 +86,34 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method void setDeletionProtection(boolean $DeletionProtection) Set Whether Deletion Protection is enabled
 Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method InstanceExtraArgs getExtraArgs() Obtain Node Configuration
+
+Note: This field may return "null", indicating that no valid value can be obtained.
+ * @method void setExtraArgs(InstanceExtraArgs $ExtraArgs) Set Node Configuration
+
+Note: This field may return "null", indicating that no valid value can be obtained.
+ * @method GPUArgs getGPUArgs() Obtain GPU Driver-related Parameters
+Note: This field may return "null", indicating that no valid value can be obtained.
+ * @method void setGPUArgs(GPUArgs $GPUArgs) Set GPU Driver-related Parameters
+Note: This field may return "null", indicating that no valid value can be obtained.
+ * @method string getDockerGraphPath() Obtain Specified value of dockerd --graph. Default value: /var/lib/docker
+
+Note: This field may return "null", indicating that no valid value can be obtained.
+ * @method void setDockerGraphPath(string $DockerGraphPath) Set Specified value of dockerd --graph. Default value: /var/lib/docker
+
+Note: This field may return "null", indicating that no valid value can be obtained.
+ * @method array getDataDisks() Obtain Multiple Disk Data Disk Mount Information: When creating a new node, make sure that the CVM purchase parameters include the information of purchasing multiple data disks. For example, in the DataDisks under RunInstancesPara of CreateClusterInstances API, it must also be set to purchase multiple data disks. Refer to the example of adding cluster nodes (multiple data disks) of CreateClusterInstances API; when adding existing nodes, ensure that the specified partition information actually exists on the node.
+Note: This field may return "null", indicating that no valid value can be obtained.
+ * @method void setDataDisks(array $DataDisks) Set Multiple Disk Data Disk Mount Information: When creating a new node, make sure that the CVM purchase parameters include the information of purchasing multiple data disks. For example, in the DataDisks under RunInstancesPara of CreateClusterInstances API, it must also be set to purchase multiple data disks. Refer to the example of adding cluster nodes (multiple data disks) of CreateClusterInstances API; when adding existing nodes, ensure that the specified partition information actually exists on the node.
+Note: This field may return "null", indicating that no valid value can be obtained.
+ * @method integer getUnschedulable() Obtain Unschedulable or not
+Note: This field may return "null", indicating that no valid value can be obtained.
+ * @method void setUnschedulable(integer $Unschedulable) Set Unschedulable or not
+Note: This field may return "null", indicating that no valid value can be obtained.
+ * @method string getPreStartUserScript() Obtain Custom script, executed before UserScript
+Note: This field may return "null", indicating that no valid value can be obtained.
+ * @method void setPreStartUserScript(string $PreStartUserScript) Set Custom script, executed before UserScript
+Note: This field may return "null", indicating that no valid value can be obtained.
  */
 class NodePool extends AbstractModel
 {
@@ -124,6 +158,11 @@ class NodePool extends AbstractModel
     public $Taints;
 
     /**
+     * @var array Node Annotation List
+     */
+    public $Annotations;
+
+    /**
      * @var NodeCountSummary Node list
      */
     public $NodeCountSummary;
@@ -150,6 +189,12 @@ Note: this field may return `null`, indicating that no valid value is obtained.
 Note: this field may return `null`, indicating that no valid value is obtained.
      */
     public $DesiredNodesNum;
+
+    /**
+     * @var RuntimeConfig Runtime Description
+Note: This field may return "null", indicating that no valid value can be obtained.
+     */
+    public $RuntimeConfig;
 
     /**
      * @var string The operating system of the node pool
@@ -194,6 +239,44 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     public $DeletionProtection;
 
     /**
+     * @var InstanceExtraArgs Node Configuration
+
+Note: This field may return "null", indicating that no valid value can be obtained.
+     */
+    public $ExtraArgs;
+
+    /**
+     * @var GPUArgs GPU Driver-related Parameters
+Note: This field may return "null", indicating that no valid value can be obtained.
+     */
+    public $GPUArgs;
+
+    /**
+     * @var string Specified value of dockerd --graph. Default value: /var/lib/docker
+
+Note: This field may return "null", indicating that no valid value can be obtained.
+     */
+    public $DockerGraphPath;
+
+    /**
+     * @var array Multiple Disk Data Disk Mount Information: When creating a new node, make sure that the CVM purchase parameters include the information of purchasing multiple data disks. For example, in the DataDisks under RunInstancesPara of CreateClusterInstances API, it must also be set to purchase multiple data disks. Refer to the example of adding cluster nodes (multiple data disks) of CreateClusterInstances API; when adding existing nodes, ensure that the specified partition information actually exists on the node.
+Note: This field may return "null", indicating that no valid value can be obtained.
+     */
+    public $DataDisks;
+
+    /**
+     * @var integer Unschedulable or not
+Note: This field may return "null", indicating that no valid value can be obtained.
+     */
+    public $Unschedulable;
+
+    /**
+     * @var string Custom script, executed before UserScript
+Note: This field may return "null", indicating that no valid value can be obtained.
+     */
+    public $PreStartUserScript;
+
+    /**
      * @param string $NodePoolId Node pool ID
      * @param string $Name Node pool name
      * @param string $ClusterInstanceId Cluster instance ID
@@ -202,6 +285,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
      * @param string $AutoscalingGroupId Auto-scaling group ID
      * @param array $Labels Labels
      * @param array $Taints Array of taint
+     * @param array $Annotations Node Annotation List
      * @param NodeCountSummary $NodeCountSummary Node list
      * @param string $AutoscalingGroupStatus 
      * @param integer $MaxNodesNum Maximum number of nodes
@@ -210,6 +294,8 @@ Note: this field may return `null`, indicating that no valid value is obtained.
 Note: this field may return `null`, indicating that no valid value is obtained.
      * @param integer $DesiredNodesNum Desired number of nodes
 Note: this field may return `null`, indicating that no valid value is obtained.
+     * @param RuntimeConfig $RuntimeConfig Runtime Description
+Note: This field may return "null", indicating that no valid value can be obtained.
      * @param string $NodePoolOs The operating system of the node pool
 Note: this field may return `null`, indicating that no valid value is obtained.
      * @param string $OsCustomizeType Container image tag, `DOCKER_CUSTOMIZE` (container customized tag), `GENERAL` (general tag, default value)
@@ -224,6 +310,20 @@ Note: this field may return `null`, indicating that no valid value is obtained.
 Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param boolean $DeletionProtection Whether Deletion Protection is enabled
 Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param InstanceExtraArgs $ExtraArgs Node Configuration
+
+Note: This field may return "null", indicating that no valid value can be obtained.
+     * @param GPUArgs $GPUArgs GPU Driver-related Parameters
+Note: This field may return "null", indicating that no valid value can be obtained.
+     * @param string $DockerGraphPath Specified value of dockerd --graph. Default value: /var/lib/docker
+
+Note: This field may return "null", indicating that no valid value can be obtained.
+     * @param array $DataDisks Multiple Disk Data Disk Mount Information: When creating a new node, make sure that the CVM purchase parameters include the information of purchasing multiple data disks. For example, in the DataDisks under RunInstancesPara of CreateClusterInstances API, it must also be set to purchase multiple data disks. Refer to the example of adding cluster nodes (multiple data disks) of CreateClusterInstances API; when adding existing nodes, ensure that the specified partition information actually exists on the node.
+Note: This field may return "null", indicating that no valid value can be obtained.
+     * @param integer $Unschedulable Unschedulable or not
+Note: This field may return "null", indicating that no valid value can be obtained.
+     * @param string $PreStartUserScript Custom script, executed before UserScript
+Note: This field may return "null", indicating that no valid value can be obtained.
      */
     function __construct()
     {
@@ -280,6 +380,15 @@ Note: this field may return `null`, indicating that no valid values can be obtai
             }
         }
 
+        if (array_key_exists("Annotations",$param) and $param["Annotations"] !== null) {
+            $this->Annotations = [];
+            foreach ($param["Annotations"] as $key => $value){
+                $obj = new AnnotationValue();
+                $obj->deserialize($value);
+                array_push($this->Annotations, $obj);
+            }
+        }
+
         if (array_key_exists("NodeCountSummary",$param) and $param["NodeCountSummary"] !== null) {
             $this->NodeCountSummary = new NodeCountSummary();
             $this->NodeCountSummary->deserialize($param["NodeCountSummary"]);
@@ -299,6 +408,11 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
         if (array_key_exists("DesiredNodesNum",$param) and $param["DesiredNodesNum"] !== null) {
             $this->DesiredNodesNum = $param["DesiredNodesNum"];
+        }
+
+        if (array_key_exists("RuntimeConfig",$param) and $param["RuntimeConfig"] !== null) {
+            $this->RuntimeConfig = new RuntimeConfig();
+            $this->RuntimeConfig->deserialize($param["RuntimeConfig"]);
         }
 
         if (array_key_exists("NodePoolOs",$param) and $param["NodePoolOs"] !== null) {
@@ -332,6 +446,37 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
         if (array_key_exists("DeletionProtection",$param) and $param["DeletionProtection"] !== null) {
             $this->DeletionProtection = $param["DeletionProtection"];
+        }
+
+        if (array_key_exists("ExtraArgs",$param) and $param["ExtraArgs"] !== null) {
+            $this->ExtraArgs = new InstanceExtraArgs();
+            $this->ExtraArgs->deserialize($param["ExtraArgs"]);
+        }
+
+        if (array_key_exists("GPUArgs",$param) and $param["GPUArgs"] !== null) {
+            $this->GPUArgs = new GPUArgs();
+            $this->GPUArgs->deserialize($param["GPUArgs"]);
+        }
+
+        if (array_key_exists("DockerGraphPath",$param) and $param["DockerGraphPath"] !== null) {
+            $this->DockerGraphPath = $param["DockerGraphPath"];
+        }
+
+        if (array_key_exists("DataDisks",$param) and $param["DataDisks"] !== null) {
+            $this->DataDisks = [];
+            foreach ($param["DataDisks"] as $key => $value){
+                $obj = new DataDisk();
+                $obj->deserialize($value);
+                array_push($this->DataDisks, $obj);
+            }
+        }
+
+        if (array_key_exists("Unschedulable",$param) and $param["Unschedulable"] !== null) {
+            $this->Unschedulable = $param["Unschedulable"];
+        }
+
+        if (array_key_exists("PreStartUserScript",$param) and $param["PreStartUserScript"] !== null) {
+            $this->PreStartUserScript = $param["PreStartUserScript"];
         }
     }
 }

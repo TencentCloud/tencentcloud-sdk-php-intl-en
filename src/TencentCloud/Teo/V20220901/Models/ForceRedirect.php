@@ -18,7 +18,7 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Force HTTPS redirect configuration
+ * Forced HTTPS redirect configuration for access protocols.
  *
  * @method string getSwitch() Obtain Whether to enable force HTTPS redirect. Values:
 <li>`on`: Enable</li>

@@ -18,13 +18,13 @@ namespace TencentCloud\Ciam\V20220331\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Imported user information
-1. One of the eight attributes of `UserName`, `PhoneNumber`, `Email`, `WechatOpenId`, `WechatUnionId`, `AlipayUserId`, `QqOpenId`, and `QqUnionId` must be included during import and comply with the regular expression rules for initializing custom attributes. The regular expressions for `UserName`, `PhoneNumber`, and `Email` can be queried in the custom attributes in the console.
-2. For password import, the imported password supports plaintext import, MD5 ciphertext import, SHA1 ciphertext import, and BCRYPT ciphertext import. This needs to be specified in the `PasswordEncryptTypeEnum` field.
-3. `IdentityVerified` and `IdentityVerificationMethod` can be imported.
-If `IdentityVerified` is `true`, `IdentityVerificationMethod` is required.
-If `IdentityVerificationMethod` is `nameAndIdCard`, `Name` and `ResidentIdentityCard` are required.
-If `IdentityVerificationMethod` is `nameIdCardAndPhone`, `Name`, `PhoneNumber`, and `ResidentIdentityCard` are required.
+ * Import user information.
+1. At least one of the following nine attributes should be included during the import: UserName, PhoneNumber, Email, WeChatOpenId, WeChatUnionId, AlipayUserId, QQOpenId, QQUnionId, and WeComUserId. Each of these attributes should adhere to the regular expression rules for initial custom attributes. The regular expressions for UserName, PhoneNumber, and Email can be queried in Custom Attributes on the console.
+2. For the import of passwords, plaintext import, MD5 ciphertext import, SHA1 ciphertext import, and BCRYPT ciphertext import are supported. The import method should be specified in the PasswordEncryptTypeEnum field.
+3. IdentityVerified and IdentityVerificationMethod can be imported.
+When IdentityVerified is true, IdentityVerificationMethod should be entered.
+When IdentityVerificationMethod is nameAndIdCard, Name and ResidentIdentityCard should be entered.
+When IdentityVerificationMethod is nameIdCardAndPhone, Name, PhoneNumber, and ResidentIdentityCard should be entered.
  *
  * @method string getUserName() Obtain Username
  * @method void setUserName(string $UserName) Set Username
@@ -50,6 +50,8 @@ If `IdentityVerificationMethod` is `nameIdCardAndPhone`, `Name`, `PhoneNumber`, 
  * @method void setWechatUnionId(string $WechatUnionId) Set `wechatUnionId` on WeChat
  * @method string getAlipayUserId() Obtain `alipayUserId` on Alipay
  * @method void setAlipayUserId(string $AlipayUserId) Set `alipayUserId` on Alipay
+ * @method string getWeComUserId() Obtain WeCom user ID.
+ * @method void setWeComUserId(string $WeComUserId) Set WeCom user ID.
  * @method string getDescription() Obtain Description
  * @method void setDescription(string $Description) Set Description
  * @method string getBirthdate() Obtain Date of birth
@@ -150,6 +152,11 @@ class ImportUser extends AbstractModel
      * @var string `alipayUserId` on Alipay
      */
     public $AlipayUserId;
+
+    /**
+     * @var string WeCom user ID.
+     */
+    public $WeComUserId;
 
     /**
      * @var string Description
@@ -259,6 +266,7 @@ class ImportUser extends AbstractModel
      * @param string $WechatOpenId `wechatOpenId` on WeChat
      * @param string $WechatUnionId `wechatUnionId` on WeChat
      * @param string $AlipayUserId `alipayUserId` on Alipay
+     * @param string $WeComUserId WeCom user ID.
      * @param string $Description Description
      * @param string $Birthdate Date of birth
      * @param string $Name Name
@@ -338,6 +346,10 @@ class ImportUser extends AbstractModel
 
         if (array_key_exists("AlipayUserId",$param) and $param["AlipayUserId"] !== null) {
             $this->AlipayUserId = $param["AlipayUserId"];
+        }
+
+        if (array_key_exists("WeComUserId",$param) and $param["WeComUserId"] !== null) {
+            $this->WeComUserId = $param["WeComUserId"];
         }
 
         if (array_key_exists("Description",$param) and $param["Description"] !== null) {

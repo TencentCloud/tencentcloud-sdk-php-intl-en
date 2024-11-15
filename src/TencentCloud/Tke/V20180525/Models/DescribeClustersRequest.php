@@ -28,84 +28,8 @@ all clusters under the account will be obtained)
  * @method void setOffset(integer $Offset) Set Offset. Default value: 0
  * @method integer getLimit() Obtain Maximum number of output entries. Default value: 20
  * @method void setLimit(integer $Limit) Set Maximum number of output entries. Default value: 20
- * @method array getFilters() Obtain ·  ClusterName
-    Filters by the cluster name
-    Type: String
-    Required: No
-
-·  ClusterType
-    Filters by the cluster type
-    Type: String
-    Required: No
-
-·  ClusterStatus
-    Filters by the cluster status
-    Type: String
-    Required: No
-
-·  Tags
-    Filters by key-value pairs of tags
-    Type: String
-    Required: No
-
-·  vpc-id
-    Filters by the VPC ID
-    Type: String
-    Required: No
-
-·  tag-key
-    Filters by the tag key
-    Type: String
-    Required: No
-
-·  tag-value
-    Filters by the tag value
-    Type: String
-    Required: No
-
-·  tag:tag-key
-    Filters by key-value pairs of tags
-    Type: String
-    Required: No
- * @method void setFilters(array $Filters) Set ·  ClusterName
-    Filters by the cluster name
-    Type: String
-    Required: No
-
-·  ClusterType
-    Filters by the cluster type
-    Type: String
-    Required: No
-
-·  ClusterStatus
-    Filters by the cluster status
-    Type: String
-    Required: No
-
-·  Tags
-    Filters by key-value pairs of tags
-    Type: String
-    Required: No
-
-·  vpc-id
-    Filters by the VPC ID
-    Type: String
-    Required: No
-
-·  tag-key
-    Filters by the tag key
-    Type: String
-    Required: No
-
-·  tag-value
-    Filters by the tag value
-    Type: String
-    Required: No
-
-·  tag:tag-key
-    Filters by key-value pairs of tags
-    Type: String
-    Required: No
+ * @method array getFilters() Obtain · "Name":"ClusterName","Values": ["test"] Filter by the [cluster name]. Type: String Required: No · "Name":"ClusterType","Values": ["MANAGED_CLUSTER"] Filter by the [cluster type]. Type: String Required: No · "Name":"ClusterStatus","Values": ["Running"] Filter by the [cluster status]. Type: String Required: No · "Name":"vpc-id","Values": ["vpc-123qajzs"] Filter by the [VPC]. Type: String Required: No · "Name":"tag-key","Values": ["testKey"] Filter by the [tag key]. Type: String Required: No · "Name":"tag-value","Values": ["testValue"] Filter by the [tag value]. Type: String Required: No · "Name":"Tags","Values": ["abc:1"] Filter by [key-value pairs of tags]. Type: String Required: No
+ * @method void setFilters(array $Filters) Set · "Name":"ClusterName","Values": ["test"] Filter by the [cluster name]. Type: String Required: No · "Name":"ClusterType","Values": ["MANAGED_CLUSTER"] Filter by the [cluster type]. Type: String Required: No · "Name":"ClusterStatus","Values": ["Running"] Filter by the [cluster status]. Type: String Required: No · "Name":"vpc-id","Values": ["vpc-123qajzs"] Filter by the [VPC]. Type: String Required: No · "Name":"tag-key","Values": ["testKey"] Filter by the [tag key]. Type: String Required: No · "Name":"tag-value","Values": ["testValue"] Filter by the [tag value]. Type: String Required: No · "Name":"Tags","Values": ["abc:1"] Filter by [key-value pairs of tags]. Type: String Required: No
  * @method string getClusterType() Obtain Cluster type, such as `MANAGED_CLUSTER`
  * @method void setClusterType(string $ClusterType) Set Cluster type, such as `MANAGED_CLUSTER`
  */
@@ -128,45 +52,7 @@ all clusters under the account will be obtained)
     public $Limit;
 
     /**
-     * @var array ·  ClusterName
-    Filters by the cluster name
-    Type: String
-    Required: No
-
-·  ClusterType
-    Filters by the cluster type
-    Type: String
-    Required: No
-
-·  ClusterStatus
-    Filters by the cluster status
-    Type: String
-    Required: No
-
-·  Tags
-    Filters by key-value pairs of tags
-    Type: String
-    Required: No
-
-·  vpc-id
-    Filters by the VPC ID
-    Type: String
-    Required: No
-
-·  tag-key
-    Filters by the tag key
-    Type: String
-    Required: No
-
-·  tag-value
-    Filters by the tag value
-    Type: String
-    Required: No
-
-·  tag:tag-key
-    Filters by key-value pairs of tags
-    Type: String
-    Required: No
+     * @var array · "Name":"ClusterName","Values": ["test"] Filter by the [cluster name]. Type: String Required: No · "Name":"ClusterType","Values": ["MANAGED_CLUSTER"] Filter by the [cluster type]. Type: String Required: No · "Name":"ClusterStatus","Values": ["Running"] Filter by the [cluster status]. Type: String Required: No · "Name":"vpc-id","Values": ["vpc-123qajzs"] Filter by the [VPC]. Type: String Required: No · "Name":"tag-key","Values": ["testKey"] Filter by the [tag key]. Type: String Required: No · "Name":"tag-value","Values": ["testValue"] Filter by the [tag value]. Type: String Required: No · "Name":"Tags","Values": ["abc:1"] Filter by [key-value pairs of tags]. Type: String Required: No
      */
     public $Filters;
 
@@ -180,45 +66,7 @@ all clusters under the account will be obtained)
 all clusters under the account will be obtained)
      * @param integer $Offset Offset. Default value: 0
      * @param integer $Limit Maximum number of output entries. Default value: 20
-     * @param array $Filters ·  ClusterName
-    Filters by the cluster name
-    Type: String
-    Required: No
-
-·  ClusterType
-    Filters by the cluster type
-    Type: String
-    Required: No
-
-·  ClusterStatus
-    Filters by the cluster status
-    Type: String
-    Required: No
-
-·  Tags
-    Filters by key-value pairs of tags
-    Type: String
-    Required: No
-
-·  vpc-id
-    Filters by the VPC ID
-    Type: String
-    Required: No
-
-·  tag-key
-    Filters by the tag key
-    Type: String
-    Required: No
-
-·  tag-value
-    Filters by the tag value
-    Type: String
-    Required: No
-
-·  tag:tag-key
-    Filters by key-value pairs of tags
-    Type: String
-    Required: No
+     * @param array $Filters · "Name":"ClusterName","Values": ["test"] Filter by the [cluster name]. Type: String Required: No · "Name":"ClusterType","Values": ["MANAGED_CLUSTER"] Filter by the [cluster type]. Type: String Required: No · "Name":"ClusterStatus","Values": ["Running"] Filter by the [cluster status]. Type: String Required: No · "Name":"vpc-id","Values": ["vpc-123qajzs"] Filter by the [VPC]. Type: String Required: No · "Name":"tag-key","Values": ["testKey"] Filter by the [tag key]. Type: String Required: No · "Name":"tag-value","Values": ["testValue"] Filter by the [tag value]. Type: String Required: No · "Name":"Tags","Values": ["abc:1"] Filter by [key-value pairs of tags]. Type: String Required: No
      * @param string $ClusterType Cluster type, such as `MANAGED_CLUSTER`
      */
     function __construct()

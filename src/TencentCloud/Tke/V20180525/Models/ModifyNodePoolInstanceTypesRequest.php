@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setClusterId(string $ClusterId) Set Cluster ID
  * @method string getNodePoolId() Obtain Node pool ID
  * @method void setNodePoolId(string $NodePoolId) Set Node pool ID
- * @method array getInstanceTypes() Obtain List of instance types
- * @method void setInstanceTypes(array $InstanceTypes) Set List of instance types
+ * @method array getInstanceTypes() Obtain Model list, master instance model does not support modification.
+ * @method void setInstanceTypes(array $InstanceTypes) Set Model list, master instance model does not support modification.
  */
 class ModifyNodePoolInstanceTypesRequest extends AbstractModel
 {
@@ -40,14 +40,14 @@ class ModifyNodePoolInstanceTypesRequest extends AbstractModel
     public $NodePoolId;
 
     /**
-     * @var array List of instance types
+     * @var array Model list, master instance model does not support modification.
      */
     public $InstanceTypes;
 
     /**
      * @param string $ClusterId Cluster ID
      * @param string $NodePoolId Node pool ID
-     * @param array $InstanceTypes List of instance types
+     * @param array $InstanceTypes Model list, master instance model does not support modification.
      */
     function __construct()
     {

@@ -92,6 +92,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setAlipayUserId(string $AlipayUserId) Set `AlipayUserId` on Alipay
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getWeComUserId() Obtain WeCom user ID.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setWeComUserId(string $WeComUserId) Set WeCom user ID.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getDescription() Obtain Description
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setDescription(string $Description) Set Description
@@ -296,6 +300,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $AlipayUserId;
 
     /**
+     * @var string WeCom user ID.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $WeComUserId;
+
+    /**
      * @var string Description
 Note: This field may return null, indicating that no valid values can be obtained.
      */
@@ -458,6 +468,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $AlipayUserId `AlipayUserId` on Alipay
 Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $WeComUserId WeCom user ID.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $Description Description
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $Name Name
@@ -597,6 +609,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("AlipayUserId",$param) and $param["AlipayUserId"] !== null) {
             $this->AlipayUserId = $param["AlipayUserId"];
+        }
+
+        if (array_key_exists("WeComUserId",$param) and $param["WeComUserId"] !== null) {
+            $this->WeComUserId = $param["WeComUserId"];
         }
 
         if (array_key_exists("Description",$param) and $param["Description"] !== null) {

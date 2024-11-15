@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateCluster request structure.
  *
- * @method ClusterCIDRSettings getClusterCIDRSettings() Obtain Container networking configuration information for the cluster
- * @method void setClusterCIDRSettings(ClusterCIDRSettings $ClusterCIDRSettings) Set Container networking configuration information for the cluster
  * @method string getClusterType() Obtain Cluster type. Managed cluster: MANAGED_CLUSTER; self-deployed cluster: INDEPENDENT_CLUSTER.
  * @method void setClusterType(string $ClusterType) Set Cluster type. Managed cluster: MANAGED_CLUSTER; self-deployed cluster: INDEPENDENT_CLUSTER.
+ * @method ClusterCIDRSettings getClusterCIDRSettings() Obtain Container networking configuration information for the cluster
+ * @method void setClusterCIDRSettings(ClusterCIDRSettings $ClusterCIDRSettings) Set Container networking configuration information for the cluster
  * @method array getRunInstancesForNode() Obtain Pass-through parameter for CVM creation in the format of a JSON string. For more information, see the API for [creating a CVM instance](https://intl.cloud.tencent.com/document/product/213/15730?from_cn_redirect=1).
  * @method void setRunInstancesForNode(array $RunInstancesForNode) Set Pass-through parameter for CVM creation in the format of a JSON string. For more information, see the API for [creating a CVM instance](https://intl.cloud.tencent.com/document/product/213/15730?from_cn_redirect=1).
  * @method ClusterBasicSettings getClusterBasicSettings() Obtain Basic configuration information of the cluster
@@ -38,18 +38,20 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceDataDiskMountSettings(array $InstanceDataDiskMountSettings) Set CVM type and the corresponding data disk mounting configuration information.
  * @method array getExtensionAddons() Obtain Information of the add-on to be installed
  * @method void setExtensionAddons(array $ExtensionAddons) Set Information of the add-on to be installed
+ * @method string getCdcId() Obtain CDC Id
+ * @method void setCdcId(string $CdcId) Set CDC Id
  */
 class CreateClusterRequest extends AbstractModel
 {
     /**
-     * @var ClusterCIDRSettings Container networking configuration information for the cluster
-     */
-    public $ClusterCIDRSettings;
-
-    /**
      * @var string Cluster type. Managed cluster: MANAGED_CLUSTER; self-deployed cluster: INDEPENDENT_CLUSTER.
      */
     public $ClusterType;
+
+    /**
+     * @var ClusterCIDRSettings Container networking configuration information for the cluster
+     */
+    public $ClusterCIDRSettings;
 
     /**
      * @var array Pass-through parameter for CVM creation in the format of a JSON string. For more information, see the API for [creating a CVM instance](https://intl.cloud.tencent.com/document/product/213/15730?from_cn_redirect=1).
@@ -87,8 +89,13 @@ class CreateClusterRequest extends AbstractModel
     public $ExtensionAddons;
 
     /**
-     * @param ClusterCIDRSettings $ClusterCIDRSettings Container networking configuration information for the cluster
+     * @var string CDC Id
+     */
+    public $CdcId;
+
+    /**
      * @param string $ClusterType Cluster type. Managed cluster: MANAGED_CLUSTER; self-deployed cluster: INDEPENDENT_CLUSTER.
+     * @param ClusterCIDRSettings $ClusterCIDRSettings Container networking configuration information for the cluster
      * @param array $RunInstancesForNode Pass-through parameter for CVM creation in the format of a JSON string. For more information, see the API for [creating a CVM instance](https://intl.cloud.tencent.com/document/product/213/15730?from_cn_redirect=1).
      * @param ClusterBasicSettings $ClusterBasicSettings Basic configuration information of the cluster
      * @param ClusterAdvancedSettings $ClusterAdvancedSettings Advanced configuration information of the cluster
@@ -96,6 +103,7 @@ class CreateClusterRequest extends AbstractModel
      * @param array $ExistedInstancesForNode The configuration information for existing instances. All instances must be in the same VPC. Up to 100 instances are allowed in one VPC. Spot instances are not supported.
      * @param array $InstanceDataDiskMountSettings CVM type and the corresponding data disk mounting configuration information.
      * @param array $ExtensionAddons Information of the add-on to be installed
+     * @param string $CdcId CDC Id
      */
     function __construct()
     {
@@ -110,13 +118,13 @@ class CreateClusterRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("ClusterType",$param) and $param["ClusterType"] !== null) {
+            $this->ClusterType = $param["ClusterType"];
+        }
+
         if (array_key_exists("ClusterCIDRSettings",$param) and $param["ClusterCIDRSettings"] !== null) {
             $this->ClusterCIDRSettings = new ClusterCIDRSettings();
             $this->ClusterCIDRSettings->deserialize($param["ClusterCIDRSettings"]);
-        }
-
-        if (array_key_exists("ClusterType",$param) and $param["ClusterType"] !== null) {
-            $this->ClusterType = $param["ClusterType"];
         }
 
         if (array_key_exists("RunInstancesForNode",$param) and $param["RunInstancesForNode"] !== null) {
@@ -168,6 +176,10 @@ class CreateClusterRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->ExtensionAddons, $obj);
             }
+        }
+
+        if (array_key_exists("CdcId",$param) and $param["CdcId"] !== null) {
+            $this->CdcId = $param["CdcId"];
         }
     }
 }

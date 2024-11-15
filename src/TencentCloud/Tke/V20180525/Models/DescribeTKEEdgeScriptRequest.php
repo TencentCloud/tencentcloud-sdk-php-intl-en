@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getClusterId() Obtain Cluster ID
  * @method void setClusterId(string $ClusterId) Set Cluster ID
- * @method string getInterface() Obtain ENI
- * @method void setInterface(string $Interface) Set ENI
+ * @method string getInterface() Obtain Network Card Name, specifies the network card used by the kubelet on edge nodes to register with the apiserver.
+ * @method void setInterface(string $Interface) Set Network Card Name, specifies the network card used by the kubelet on edge nodes to register with the apiserver.
  * @method string getNodeName() Obtain Name of the name
  * @method void setNodeName(string $NodeName) Set Name of the name
  * @method string getConfig() Obtain Node configuration in JSON format 
@@ -39,7 +39,7 @@ class DescribeTKEEdgeScriptRequest extends AbstractModel
     public $ClusterId;
 
     /**
-     * @var string ENI
+     * @var string Network Card Name, specifies the network card used by the kubelet on edge nodes to register with the apiserver.
      */
     public $Interface;
 
@@ -60,7 +60,7 @@ class DescribeTKEEdgeScriptRequest extends AbstractModel
 
     /**
      * @param string $ClusterId Cluster ID
-     * @param string $Interface ENI
+     * @param string $Interface Network Card Name, specifies the network card used by the kubelet on edge nodes to register with the apiserver.
      * @param string $NodeName Name of the name
      * @param string $Config Node configuration in JSON format 
      * @param string $ScriptVersion A legacy version of edgectl script can be downloaded. The latest version is downloaded by default. The version information can be checked in the script.

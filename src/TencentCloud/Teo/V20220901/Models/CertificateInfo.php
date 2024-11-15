@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * HTTPS server certificate configuration
  *
- * @method string getCertId() Obtain ID of the server certificate.
- * @method void setCertId(string $CertId) Set ID of the server certificate.
+ * @method string getCertId() Obtain Certificate ID, which originates from the SSL side. You can check the CertId from the [SSL Certificate List](https://console.cloud.tencent.com/ssl).
+ * @method void setCertId(string $CertId) Set Certificate ID, which originates from the SSL side. You can check the CertId from the [SSL Certificate List](https://console.cloud.tencent.com/ssl).
  * @method string getAlias() Obtain Alias of the certificate.
  * @method void setAlias(string $Alias) Set Alias of the certificate.
  * @method string getType() Obtain Type of the certificate. Values:
@@ -54,7 +54,7 @@ u200c<li>`failed`: Application rejected</li>
 class CertificateInfo extends AbstractModel
 {
     /**
-     * @var string ID of the server certificate.
+     * @var string Certificate ID, which originates from the SSL side. You can check the CertId from the [SSL Certificate List](https://console.cloud.tencent.com/ssl).
      */
     public $CertId;
 
@@ -97,7 +97,7 @@ u200c<li>`failed`: Application rejected</li>
     public $Status;
 
     /**
-     * @param string $CertId ID of the server certificate.
+     * @param string $CertId Certificate ID, which originates from the SSL side. You can check the CertId from the [SSL Certificate List](https://console.cloud.tencent.com/ssl).
      * @param string $Alias Alias of the certificate.
      * @param string $Type Type of the certificate. Values:
 <li>`default`: Default certificate</li>

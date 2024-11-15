@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateECMInstances request structure.
  *
- * @method string getClusterID() Obtain Cluster ID
- * @method void setClusterID(string $ClusterID) Set Cluster ID
- * @method string getModuleId() Obtain Module ID
- * @method void setModuleId(string $ModuleId) Set Module ID
+ * @method string getClusterID() Obtain Cluster ID. Edge clusters need to enable public network access before adding ECM nodes.
+ * @method void setClusterID(string $ClusterID) Set Cluster ID. Edge clusters need to enable public network access before adding ECM nodes.
+ * @method string getModuleId() Obtain Edge module ID
+ * @method void setModuleId(string $ModuleId) Set Edge module ID
  * @method array getZoneInstanceCountISPSet() Obtain Instance AZ, number of instances and ISP
  * @method void setZoneInstanceCountISPSet(array $ZoneInstanceCountISPSet) Set Instance AZ, number of instances and ISP
  * @method string getPassword() Obtain Password
@@ -48,12 +48,12 @@ use TencentCloud\Common\AbstractModel;
 class CreateECMInstancesRequest extends AbstractModel
 {
     /**
-     * @var string Cluster ID
+     * @var string Cluster ID. Edge clusters need to enable public network access before adding ECM nodes.
      */
     public $ClusterID;
 
     /**
-     * @var string Module ID
+     * @var string Edge module ID
      */
     public $ModuleId;
 
@@ -108,8 +108,8 @@ class CreateECMInstancesRequest extends AbstractModel
     public $SecurityGroupIds;
 
     /**
-     * @param string $ClusterID Cluster ID
-     * @param string $ModuleId Module ID
+     * @param string $ClusterID Cluster ID. Edge clusters need to enable public network access before adding ECM nodes.
+     * @param string $ModuleId Edge module ID
      * @param array $ZoneInstanceCountISPSet Instance AZ, number of instances and ISP
      * @param string $Password Password
      * @param integer $InternetMaxBandwidthOut Public network bandwidth

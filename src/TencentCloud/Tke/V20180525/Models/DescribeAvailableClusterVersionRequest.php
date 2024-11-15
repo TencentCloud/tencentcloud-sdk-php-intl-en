@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeAvailableClusterVersion request structure.
  *
- * @method string getClusterId() Obtain Cluster ID
- * @method void setClusterId(string $ClusterId) Set Cluster ID
- * @method array getClusterIds() Obtain List of cluster IDs
- * @method void setClusterIds(array $ClusterIds) Set List of cluster IDs
+ * @method string getClusterId() Obtain Cluster ID. If you need to query the upgradable version of a specific cluster, this field is required.
+ * @method void setClusterId(string $ClusterId) Set Cluster ID. If you need to query the upgradable version of a specific cluster, this field is required.
+ * @method array getClusterIds() Obtain Cluster ID list. If you need to query the upgradable versions of multiple clusters, this field is required.
+ * @method void setClusterIds(array $ClusterIds) Set Cluster ID list. If you need to query the upgradable versions of multiple clusters, this field is required.
  */
 class DescribeAvailableClusterVersionRequest extends AbstractModel
 {
     /**
-     * @var string Cluster ID
+     * @var string Cluster ID. If you need to query the upgradable version of a specific cluster, this field is required.
      */
     public $ClusterId;
 
     /**
-     * @var array List of cluster IDs
+     * @var array Cluster ID list. If you need to query the upgradable versions of multiple clusters, this field is required.
      */
     public $ClusterIds;
 
     /**
-     * @param string $ClusterId Cluster ID
-     * @param array $ClusterIds List of cluster IDs
+     * @param string $ClusterId Cluster ID. If you need to query the upgradable version of a specific cluster, this field is required.
+     * @param array $ClusterIds Cluster ID list. If you need to query the upgradable versions of multiple clusters, this field is required.
      */
     function __construct()
     {

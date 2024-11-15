@@ -24,10 +24,10 @@ use TencentCloud\Common\AbstractModel;
 Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method void setDesiredPodNumber(integer $DesiredPodNumber) Set When the custom PodCIDR mode is enabled for the cluster, you can specify the maximum number of pods per node.
 Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method GPUArgs getGPUArgs() Obtain GPU driver parameters
-Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method void setGPUArgs(GPUArgs $GPUArgs) Set GPU driver parameters
-Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method GPUArgs getGPUArgs() Obtain GPU driver-related parameters. Relevant GPU parameters can be found at: https://intl.cloud.tencent.com/document/api/213/15715?from_cn_redirect=1
+Note: This field may return "null", indicating that no valid value can be obtained.
+ * @method void setGPUArgs(GPUArgs $GPUArgs) Set GPU driver-related parameters. Relevant GPU parameters can be found at: https://intl.cloud.tencent.com/document/api/213/15715?from_cn_redirect=1
+Note: This field may return "null", indicating that no valid value can be obtained.
  * @method string getPreStartUserScript() Obtain Specifies the base64-encoded custom script to be executed before initialization of the node. It’s only valid for adding existing nodes for now.
 Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method void setPreStartUserScript(string $PreStartUserScript) Set Specifies the base64-encoded custom script to be executed before initialization of the node. It’s only valid for adding existing nodes for now.
@@ -74,8 +74,8 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     public $DesiredPodNumber;
 
     /**
-     * @var GPUArgs GPU driver parameters
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @var GPUArgs GPU driver-related parameters. Relevant GPU parameters can be found at: https://intl.cloud.tencent.com/document/api/213/15715?from_cn_redirect=1
+Note: This field may return "null", indicating that no valid value can be obtained.
      */
     public $GPUArgs;
 
@@ -136,8 +136,8 @@ Note: This field may return null, indicating that no valid value was found.
     /**
      * @param integer $DesiredPodNumber When the custom PodCIDR mode is enabled for the cluster, you can specify the maximum number of pods per node.
 Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param GPUArgs $GPUArgs GPU driver parameters
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param GPUArgs $GPUArgs GPU driver-related parameters. Relevant GPU parameters can be found at: https://intl.cloud.tencent.com/document/api/213/15715?from_cn_redirect=1
+Note: This field may return "null", indicating that no valid value can be obtained.
      * @param string $PreStartUserScript Specifies the base64-encoded custom script to be executed before initialization of the node. It’s only valid for adding existing nodes for now.
 Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param array $Taints Node taint

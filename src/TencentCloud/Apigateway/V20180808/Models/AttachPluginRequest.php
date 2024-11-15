@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getPluginId() Obtain ID of the bound API gateway plugin.
  * @method void setPluginId(string $PluginId) Set ID of the bound API gateway plugin.
- * @method string getServiceId() Obtain ID of the service to be operated
- * @method void setServiceId(string $ServiceId) Set ID of the service to be operated
+ * @method string getServiceId() Obtain ID of the service to be operated.
+ * @method void setServiceId(string $ServiceId) Set ID of the service to be operated.
  * @method string getEnvironmentName() Obtain Environment for operating the API.
  * @method void setEnvironmentName(string $EnvironmentName) Set Environment for operating the API.
  * @method array getApiIds() Obtain List of APIs to be bound.
@@ -37,7 +37,7 @@ class AttachPluginRequest extends AbstractModel
     public $PluginId;
 
     /**
-     * @var string ID of the service to be operated
+     * @var string ID of the service to be operated.
      */
     public $ServiceId;
 
@@ -53,7 +53,7 @@ class AttachPluginRequest extends AbstractModel
 
     /**
      * @param string $PluginId ID of the bound API gateway plugin.
-     * @param string $ServiceId ID of the service to be operated
+     * @param string $ServiceId ID of the service to be operated.
      * @param string $EnvironmentName Environment for operating the API.
      * @param array $ApiIds List of APIs to be bound.
      */

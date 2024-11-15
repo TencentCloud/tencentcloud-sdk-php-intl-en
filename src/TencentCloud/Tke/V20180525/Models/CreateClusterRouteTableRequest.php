@@ -20,19 +20,19 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateClusterRouteTable request structure.
  *
- * @method string getRouteTableName() Obtain Route table name
- * @method void setRouteTableName(string $RouteTableName) Set Route table name
+ * @method string getRouteTableName() Obtain Route table name, usually the cluster ID
+ * @method void setRouteTableName(string $RouteTableName) Set Route table name, usually the cluster ID
  * @method string getRouteTableCidrBlock() Obtain Route table CIDR
  * @method void setRouteTableCidrBlock(string $RouteTableCidrBlock) Set Route table CIDR
  * @method string getVpcId() Obtain VPC bound to the route table
  * @method void setVpcId(string $VpcId) Set VPC bound to the route table
- * @method integer getIgnoreClusterCidrConflict() Obtain Whether to ignore CIDR conflicts
- * @method void setIgnoreClusterCidrConflict(integer $IgnoreClusterCidrConflict) Set Whether to ignore CIDR conflicts
+ * @method integer getIgnoreClusterCidrConflict() Obtain Whether to ignore CIDR and VPC route table conflicts, 0 means not to ignore, 1 means to ignore. The default is not to ignore.
+ * @method void setIgnoreClusterCidrConflict(integer $IgnoreClusterCidrConflict) Set Whether to ignore CIDR and VPC route table conflicts, 0 means not to ignore, 1 means to ignore. The default is not to ignore.
  */
 class CreateClusterRouteTableRequest extends AbstractModel
 {
     /**
-     * @var string Route table name
+     * @var string Route table name, usually the cluster ID
      */
     public $RouteTableName;
 
@@ -47,15 +47,15 @@ class CreateClusterRouteTableRequest extends AbstractModel
     public $VpcId;
 
     /**
-     * @var integer Whether to ignore CIDR conflicts
+     * @var integer Whether to ignore CIDR and VPC route table conflicts, 0 means not to ignore, 1 means to ignore. The default is not to ignore.
      */
     public $IgnoreClusterCidrConflict;
 
     /**
-     * @param string $RouteTableName Route table name
+     * @param string $RouteTableName Route table name, usually the cluster ID
      * @param string $RouteTableCidrBlock Route table CIDR
      * @param string $VpcId VPC bound to the route table
-     * @param integer $IgnoreClusterCidrConflict Whether to ignore CIDR conflicts
+     * @param integer $IgnoreClusterCidrConflict Whether to ignore CIDR and VPC route table conflicts, 0 means not to ignore, 1 means to ignore. The default is not to ignore.
      */
     function __construct()
     {

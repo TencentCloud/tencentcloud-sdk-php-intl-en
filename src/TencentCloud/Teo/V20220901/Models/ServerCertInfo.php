@@ -20,10 +20,12 @@ use TencentCloud\Common\AbstractModel;
 /**
  * HTTPS server certificate configuration
  *
- * @method string getCertId() Obtain ID of the server certificate.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setCertId(string $CertId) Set ID of the server certificate.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getCertId() Obtain Server certificate ID, which originates from the SSL side. You can check the CertId from the [SSL Certificate List](https://console.cloud.tencent.com/ssl).
+
+Note: This field may return null, which indicates a failure to obtain a valid value.
+ * @method void setCertId(string $CertId) Set Server certificate ID, which originates from the SSL side. You can check the CertId from the [SSL Certificate List](https://console.cloud.tencent.com/ssl).
+
+Note: This field may return null, which indicates a failure to obtain a valid value.
  * @method string getAlias() Obtain Alias of the certificate.
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setAlias(string $Alias) Set Alias of the certificate.
@@ -58,8 +60,9 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 class ServerCertInfo extends AbstractModel
 {
     /**
-     * @var string ID of the server certificate.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Server certificate ID, which originates from the SSL side. You can check the CertId from the [SSL Certificate List](https://console.cloud.tencent.com/ssl).
+
+Note: This field may return null, which indicates a failure to obtain a valid value.
      */
     public $CertId;
 
@@ -103,8 +106,9 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     public $CommonName;
 
     /**
-     * @param string $CertId ID of the server certificate.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $CertId Server certificate ID, which originates from the SSL side. You can check the CertId from the [SSL Certificate List](https://console.cloud.tencent.com/ssl).
+
+Note: This field may return null, which indicates a failure to obtain a valid value.
      * @param string $Alias Alias of the certificate.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $Type Type of the certificate. Values:

@@ -18,7 +18,7 @@ namespace TencentCloud\Tke\V20180525\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Virtual node
+ * Super Node
  *
  * @method string getDisplayName() Obtain Node display name
  * @method void setDisplayName(string $DisplayName) Set Node display name

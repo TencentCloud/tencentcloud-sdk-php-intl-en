@@ -32,6 +32,10 @@ Note: this field may return `null`, indicating that no valid value can be obtain
 Note: this field may return `null`, indicating that no valid value can be obtained.
  * @method void setTKEDirectENI(integer $TKEDirectENI) Set The number of Pods supported by TKE independent ENI mode
 Note: this field may return `null`, indicating that no valid value can be obtained.
+ * @method integer getTKESubENI() Obtain Number of Pods supported by TKE relay network card mode
+Note: This field may return "null", indicating that no valid value can be obtained.
+ * @method void setTKESubENI(integer $TKESubENI) Set Number of Pods supported by TKE relay network card mode
+Note: This field may return "null", indicating that no valid value can be obtained.
  */
 class PodLimitsByType extends AbstractModel
 {
@@ -54,12 +58,20 @@ Note: this field may return `null`, indicating that no valid value can be obtain
     public $TKEDirectENI;
 
     /**
+     * @var integer Number of Pods supported by TKE relay network card mode
+Note: This field may return "null", indicating that no valid value can be obtained.
+     */
+    public $TKESubENI;
+
+    /**
      * @param integer $TKERouteENINonStaticIP The number of Pods supported by a TKE shared ENI in non-static IP address mode
 Note: this field may return `null`, indicating that no valid value can be obtained.
      * @param integer $TKERouteENIStaticIP The number of Pods supported by a TKE shared ENI in static IP address mode
 Note: this field may return `null`, indicating that no valid value can be obtained.
      * @param integer $TKEDirectENI The number of Pods supported by TKE independent ENI mode
 Note: this field may return `null`, indicating that no valid value can be obtained.
+     * @param integer $TKESubENI Number of Pods supported by TKE relay network card mode
+Note: This field may return "null", indicating that no valid value can be obtained.
      */
     function __construct()
     {
@@ -84,6 +96,10 @@ Note: this field may return `null`, indicating that no valid value can be obtain
 
         if (array_key_exists("TKEDirectENI",$param) and $param["TKEDirectENI"] !== null) {
             $this->TKEDirectENI = $param["TKEDirectENI"];
+        }
+
+        if (array_key_exists("TKESubENI",$param) and $param["TKESubENI"] !== null) {
+            $this->TKESubENI = $param["TKESubENI"];
         }
     }
 }

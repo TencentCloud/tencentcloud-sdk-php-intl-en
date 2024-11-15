@@ -90,6 +90,10 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid values can be obtained.
  * @method void setClusterEtcdNodeNum(integer $ClusterEtcdNodeNum) Set Number of current etcd in the cluster
 Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method string getCdcId() Obtain CDC Id
+Note: This field may return "null", indicating that no valid value can be obtained.
+ * @method void setCdcId(string $CdcId) Set CDC Id
+Note: This field may return "null", indicating that no valid value can be obtained.
  */
 class Cluster extends AbstractModel
 {
@@ -225,6 +229,12 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     public $ClusterEtcdNodeNum;
 
     /**
+     * @var string CDC Id
+Note: This field may return "null", indicating that no valid value can be obtained.
+     */
+    public $CdcId;
+
+    /**
      * @param string $ClusterId Cluster ID
      * @param string $ClusterName Cluster name
      * @param string $ClusterDescription Cluster description
@@ -260,6 +270,8 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param integer $ClusterEtcdNodeNum Number of current etcd in the cluster
 Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param string $CdcId CDC Id
+Note: This field may return "null", indicating that no valid value can be obtained.
      */
     function __construct()
     {
@@ -374,6 +386,10 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 
         if (array_key_exists("ClusterEtcdNodeNum",$param) and $param["ClusterEtcdNodeNum"] !== null) {
             $this->ClusterEtcdNodeNum = $param["ClusterEtcdNodeNum"];
+        }
+
+        if (array_key_exists("CdcId",$param) and $param["CdcId"] !== null) {
+            $this->CdcId = $param["CdcId"];
         }
     }
 }

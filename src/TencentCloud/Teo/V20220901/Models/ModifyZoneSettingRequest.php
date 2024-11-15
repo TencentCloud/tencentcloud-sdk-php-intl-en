@@ -100,6 +100,8 @@ It is disabled if this parameter is not specified.
 It is disabled if this parameter is not specified.
  * @method StandardDebug getStandardDebug() Obtain Standard debugging configuration.
  * @method void setStandardDebug(StandardDebug $StandardDebug) Set Standard debugging configuration.
+ * @method JITVideoProcess getJITVideoProcess() Obtain Just-in-time media processing configuration. The original configuration applies if this field is not specified.
+ * @method void setJITVideoProcess(JITVideoProcess $JITVideoProcess) Set Just-in-time media processing configuration. The original configuration applies if this field is not specified.
  */
 class ModifyZoneSettingRequest extends AbstractModel
 {
@@ -228,6 +230,11 @@ It is disabled if this parameter is not specified.
     public $StandardDebug;
 
     /**
+     * @var JITVideoProcess Just-in-time media processing configuration. The original configuration applies if this field is not specified.
+     */
+    public $JITVideoProcess;
+
+    /**
      * @param string $ZoneId Site ID to modify.
      * @param CacheConfig $CacheConfig Cache expiration time configuration
 The original configuration will apply if this field is not specified.
@@ -268,6 +275,7 @@ The original configuration will apply if it is not specified.
      * @param ImageOptimize $ImageOptimize Image optimization. 
 It is disabled if this parameter is not specified.
      * @param StandardDebug $StandardDebug Standard debugging configuration.
+     * @param JITVideoProcess $JITVideoProcess Just-in-time media processing configuration. The original configuration applies if this field is not specified.
      */
     function __construct()
     {
@@ -384,6 +392,11 @@ It is disabled if this parameter is not specified.
         if (array_key_exists("StandardDebug",$param) and $param["StandardDebug"] !== null) {
             $this->StandardDebug = new StandardDebug();
             $this->StandardDebug->deserialize($param["StandardDebug"]);
+        }
+
+        if (array_key_exists("JITVideoProcess",$param) and $param["JITVideoProcess"] !== null) {
+            $this->JITVideoProcess = new JITVideoProcess();
+            $this->JITVideoProcess->deserialize($param["JITVideoProcess"]);
         }
     }
 }

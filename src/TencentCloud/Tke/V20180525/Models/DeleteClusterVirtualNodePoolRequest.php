@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getClusterId() Obtain Cluster ID
  * @method void setClusterId(string $ClusterId) Set Cluster ID
- * @method array getNodePoolIds() Obtain List of virtual node pool IDs
- * @method void setNodePoolIds(array $NodePoolIds) Set List of virtual node pool IDs
- * @method boolean getForce() Obtain Whether to forcibly delete the nodes with pods. Values: `true`, `false`.
- * @method void setForce(boolean $Force) Set Whether to forcibly delete the nodes with pods. Values: `true`, `false`.
+ * @method array getNodePoolIds() Obtain Super Node Pool ID list
+ * @method void setNodePoolIds(array $NodePoolIds) Set Super Node Pool ID list
+ * @method boolean getForce() Obtain Mandatory deletion or not. If there are pods on the super node, and you choose non-mandatory deletion, the deletion will fail.
+ * @method void setForce(boolean $Force) Set Mandatory deletion or not. If there are pods on the super node, and you choose non-mandatory deletion, the deletion will fail.
  */
 class DeleteClusterVirtualNodePoolRequest extends AbstractModel
 {
@@ -35,19 +35,19 @@ class DeleteClusterVirtualNodePoolRequest extends AbstractModel
     public $ClusterId;
 
     /**
-     * @var array List of virtual node pool IDs
+     * @var array Super Node Pool ID list
      */
     public $NodePoolIds;
 
     /**
-     * @var boolean Whether to forcibly delete the nodes with pods. Values: `true`, `false`.
+     * @var boolean Mandatory deletion or not. If there are pods on the super node, and you choose non-mandatory deletion, the deletion will fail.
      */
     public $Force;
 
     /**
      * @param string $ClusterId Cluster ID
-     * @param array $NodePoolIds List of virtual node pool IDs
-     * @param boolean $Force Whether to forcibly delete the nodes with pods. Values: `true`, `false`.
+     * @param array $NodePoolIds Super Node Pool ID list
+     * @param boolean $Force Mandatory deletion or not. If there are pods on the super node, and you choose non-mandatory deletion, the deletion will fail.
      */
     function __construct()
     {

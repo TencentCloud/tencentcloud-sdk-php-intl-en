@@ -18,7 +18,7 @@ namespace TencentCloud\Tke\V20180525\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Nodes that are added in scale-out
+ * Nodes for automatic scaling
  *
  * @method integer getJoining() Obtain Number of nodes that are being added
  * @method void setJoining(integer $Joining) Set Number of nodes that are being added

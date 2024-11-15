@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getInstanceIds() Obtain Cluster ID
  * @method void setInstanceIds(array $InstanceIds) Set Cluster ID
- * @method InstanceAdvancedSettings getInstanceAdvancedSettings() Obtain Additional parameter to be set for the instance
- * @method void setInstanceAdvancedSettings(InstanceAdvancedSettings $InstanceAdvancedSettings) Set Additional parameter to be set for the instance
+ * @method InstanceAdvancedSettings getInstanceAdvancedSettings() Obtain Additional parameter information required for the instance (currently not supported by the backend, we will implement this in future versions)
+ * @method void setInstanceAdvancedSettings(InstanceAdvancedSettings $InstanceAdvancedSettings) Set Additional parameter information required for the instance (currently not supported by the backend, we will implement this in future versions)
  * @method EnhancedService getEnhancedService() Obtain Enhanced services. This parameter is used to specify whether to enable Cloud Security, Cloud Monitor and other services. If this parameter is not specified, Cloud Monitor and Cloud Security are enabled by default.
  * @method void setEnhancedService(EnhancedService $EnhancedService) Set Enhanced services. This parameter is used to specify whether to enable Cloud Security, Cloud Monitor and other services. If this parameter is not specified, Cloud Monitor and Cloud Security are enabled by default.
  * @method LoginSettings getLoginSettings() Obtain Node login information (currently only supports using Password or single KeyIds)
@@ -41,7 +41,7 @@ class ExistedInstancesPara extends AbstractModel
     public $InstanceIds;
 
     /**
-     * @var InstanceAdvancedSettings Additional parameter to be set for the instance
+     * @var InstanceAdvancedSettings Additional parameter information required for the instance (currently not supported by the backend, we will implement this in future versions)
      */
     public $InstanceAdvancedSettings;
 
@@ -67,7 +67,7 @@ class ExistedInstancesPara extends AbstractModel
 
     /**
      * @param array $InstanceIds Cluster ID
-     * @param InstanceAdvancedSettings $InstanceAdvancedSettings Additional parameter to be set for the instance
+     * @param InstanceAdvancedSettings $InstanceAdvancedSettings Additional parameter information required for the instance (currently not supported by the backend, we will implement this in future versions)
      * @param EnhancedService $EnhancedService Enhanced services. This parameter is used to specify whether to enable Cloud Security, Cloud Monitor and other services. If this parameter is not specified, Cloud Monitor and Cloud Security are enabled by default.
      * @param LoginSettings $LoginSettings Node login information (currently only supports using Password or single KeyIds)
      * @param array $SecurityGroupIds Security group to which the instance belongs. This parameter can be obtained from the sgId field in the returned values of DescribeSecurityGroups. If this parameter is not specified, the default security group is bound. (Currently, you can only set a single sgId)

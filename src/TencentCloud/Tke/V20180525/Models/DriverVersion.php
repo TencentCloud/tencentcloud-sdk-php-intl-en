@@ -21,25 +21,41 @@ use TencentCloud\Common\AbstractModel;
  * Version information of GPU driver and CUDA
  *
  * @method string getVersion() Obtain Version of GPU driver or CUDA
+
+Note: This field may return "null", indicating that no valid value can be obtained.
  * @method void setVersion(string $Version) Set Version of GPU driver or CUDA
+
+Note: This field may return "null", indicating that no valid value can be obtained.
  * @method string getName() Obtain Name of GPU driver or CUDA
+
+Note: This field may return "null", indicating that no valid value can be obtained.
  * @method void setName(string $Name) Set Name of GPU driver or CUDA
+
+Note: This field may return "null", indicating that no valid value can be obtained.
  */
 class DriverVersion extends AbstractModel
 {
     /**
      * @var string Version of GPU driver or CUDA
+
+Note: This field may return "null", indicating that no valid value can be obtained.
      */
     public $Version;
 
     /**
      * @var string Name of GPU driver or CUDA
+
+Note: This field may return "null", indicating that no valid value can be obtained.
      */
     public $Name;
 
     /**
      * @param string $Version Version of GPU driver or CUDA
+
+Note: This field may return "null", indicating that no valid value can be obtained.
      * @param string $Name Name of GPU driver or CUDA
+
+Note: This field may return "null", indicating that no valid value can be obtained.
      */
     function __construct()
     {
