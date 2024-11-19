@@ -20,42 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyStreamPackageChannel request structure.
  *
- * @method string getId() Obtain Channel ID
- * @method void setId(string $Id) Set Channel ID
- * @method string getName() Obtain New channel name
- * @method void setName(string $Name) Set New channel name
- * @method string getProtocol() Obtain New channel protocol. Valid values: HLS, DASH
- * @method void setProtocol(string $Protocol) Set New channel protocol. Valid values: HLS, DASH
- * @method CacheInfo getCacheInfo() Obtain Cache configuration
- * @method void setCacheInfo(CacheInfo $CacheInfo) Set Cache configuration
+ * @method string getId() Obtain Channel ID.
+ * @method void setId(string $Id) Set Channel ID.
+ * @method string getName() Obtain New channel name.
+ * @method void setName(string $Name) Set New channel name.
+ * @method string getProtocol() Obtain New channel protocol. Valid values: HLS, DASH, CMAF.
+ * @method void setProtocol(string $Protocol) Set New channel protocol. Valid values: HLS, DASH, CMAF.
+ * @method CacheInfo getCacheInfo() Obtain Cache configuration.
+ * @method void setCacheInfo(CacheInfo $CacheInfo) Set Cache configuration.
  */
 class ModifyStreamPackageChannelRequest extends AbstractModel
 {
     /**
-     * @var string Channel ID
+     * @var string Channel ID.
      */
     public $Id;
 
     /**
-     * @var string New channel name
+     * @var string New channel name.
      */
     public $Name;
 
     /**
-     * @var string New channel protocol. Valid values: HLS, DASH
+     * @var string New channel protocol. Valid values: HLS, DASH, CMAF.
      */
     public $Protocol;
 
     /**
-     * @var CacheInfo Cache configuration
+     * @var CacheInfo Cache configuration.
      */
     public $CacheInfo;
 
     /**
-     * @param string $Id Channel ID
-     * @param string $Name New channel name
-     * @param string $Protocol New channel protocol. Valid values: HLS, DASH
-     * @param CacheInfo $CacheInfo Cache configuration
+     * @param string $Id Channel ID.
+     * @param string $Name New channel name.
+     * @param string $Protocol New channel protocol. Valid values: HLS, DASH, CMAF.
+     * @param CacheInfo $CacheInfo Cache configuration.
      */
     function __construct()
     {

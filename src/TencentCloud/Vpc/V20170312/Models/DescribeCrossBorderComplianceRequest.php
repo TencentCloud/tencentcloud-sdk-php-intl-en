@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUniformSocialCreditCode(string $UniformSocialCreditCode) Set (Fuzzy match) Unified Social Credit Code.
  * @method string getLegalPerson() Obtain (Fuzzy match) Legal person.
  * @method void setLegalPerson(string $LegalPerson) Set (Fuzzy match) Legal person.
+ * @method string getLegalPersonId() Obtain 
+ * @method void setLegalPersonId(string $LegalPersonId) Set 
  * @method string getIssuingAuthority() Obtain (Fuzzy match) Issuing authority.
  * @method void setIssuingAuthority(string $IssuingAuthority) Set (Fuzzy match) Issuing authority.
  * @method string getBusinessAddress() Obtain (Fuzzy match) Business address.
@@ -83,6 +85,11 @@ class DescribeCrossBorderComplianceRequest extends AbstractModel
      * @var string (Fuzzy match) Legal person.
      */
     public $LegalPerson;
+
+    /**
+     * @var string 
+     */
+    public $LegalPersonId;
 
     /**
      * @var string (Fuzzy match) Issuing authority.
@@ -155,6 +162,7 @@ class DescribeCrossBorderComplianceRequest extends AbstractModel
      * @param string $Company (Fuzzy match) Company name.
      * @param string $UniformSocialCreditCode (Fuzzy match) Unified Social Credit Code.
      * @param string $LegalPerson (Fuzzy match) Legal person.
+     * @param string $LegalPersonId 
      * @param string $IssuingAuthority (Fuzzy match) Issuing authority.
      * @param string $BusinessAddress (Fuzzy match) Business address.
      * @param integer $PostCode (Exact match) Zip code.
@@ -200,6 +208,10 @@ class DescribeCrossBorderComplianceRequest extends AbstractModel
 
         if (array_key_exists("LegalPerson",$param) and $param["LegalPerson"] !== null) {
             $this->LegalPerson = $param["LegalPerson"];
+        }
+
+        if (array_key_exists("LegalPersonId",$param) and $param["LegalPersonId"] !== null) {
+            $this->LegalPersonId = $param["LegalPersonId"];
         }
 
         if (array_key_exists("IssuingAuthority",$param) and $param["IssuingAuthority"] !== null) {

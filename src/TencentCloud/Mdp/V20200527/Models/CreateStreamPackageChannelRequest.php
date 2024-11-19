@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateStreamPackageChannel request structure.
  *
- * @method string getName() Obtain Channel name
- * @method void setName(string $Name) Set Channel name
- * @method string getProtocol() Obtain Channel protocol. Valid values: HLS, DASH
- * @method void setProtocol(string $Protocol) Set Channel protocol. Valid values: HLS, DASH
- * @method CacheInfo getCacheInfo() Obtain Cache configuration
- * @method void setCacheInfo(CacheInfo $CacheInfo) Set Cache configuration
+ * @method string getName() Obtain Channel name.
+ * @method void setName(string $Name) Set Channel name.
+ * @method string getProtocol() Obtain Channel protocol. Valid values: HLS, DASH, CMAF.
+ * @method void setProtocol(string $Protocol) Set Channel protocol. Valid values: HLS, DASH, CMAF.
+ * @method CacheInfo getCacheInfo() Obtain Cache configuration.
+ * @method void setCacheInfo(CacheInfo $CacheInfo) Set Cache configuration.
  */
 class CreateStreamPackageChannelRequest extends AbstractModel
 {
     /**
-     * @var string Channel name
+     * @var string Channel name.
      */
     public $Name;
 
     /**
-     * @var string Channel protocol. Valid values: HLS, DASH
+     * @var string Channel protocol. Valid values: HLS, DASH, CMAF.
      */
     public $Protocol;
 
     /**
-     * @var CacheInfo Cache configuration
+     * @var CacheInfo Cache configuration.
      */
     public $CacheInfo;
 
     /**
-     * @param string $Name Channel name
-     * @param string $Protocol Channel protocol. Valid values: HLS, DASH
-     * @param CacheInfo $CacheInfo Cache configuration
+     * @param string $Name Channel name.
+     * @param string $Protocol Channel protocol. Valid values: HLS, DASH, CMAF.
+     * @param CacheInfo $CacheInfo Cache configuration.
      */
     function __construct()
     {

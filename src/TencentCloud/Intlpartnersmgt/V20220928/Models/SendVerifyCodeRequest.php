@@ -21,7 +21,9 @@ use TencentCloud\Common\AbstractModel;
  * SendVerifyCode request structure.
  *
  * @method string getCountryCode() Obtain Country code.
+Parameter value is not allowed to be 7,380,86.
  * @method void setCountryCode(string $CountryCode) Set Country code.
+Parameter value is not allowed to be 7,380,86.
  * @method string getPhoneNum() Obtain Mobile number.
  * @method void setPhoneNum(string $PhoneNum) Set Mobile number.
  */
@@ -29,6 +31,7 @@ class SendVerifyCodeRequest extends AbstractModel
 {
     /**
      * @var string Country code.
+Parameter value is not allowed to be 7,380,86.
      */
     public $CountryCode;
 
@@ -39,6 +42,7 @@ class SendVerifyCodeRequest extends AbstractModel
 
     /**
      * @param string $CountryCode Country code.
+Parameter value is not allowed to be 7,380,86.
      * @param string $PhoneNum Mobile number.
      */
     function __construct()

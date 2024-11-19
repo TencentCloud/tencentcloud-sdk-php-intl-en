@@ -27,17 +27,45 @@ use TencentCloud\Mdp\V20200527\Models as Models;
  * @method Models\CreateStreamPackageChannelResponse CreateStreamPackageChannel(Models\CreateStreamPackageChannelRequest $req) This API is used to create a StreamPackage channel.
  * @method Models\CreateStreamPackageChannelEndpointResponse CreateStreamPackageChannelEndpoint(Models\CreateStreamPackageChannelEndpointRequest $req) This API is used to create an endpoint on a StreamPackage channel.
  * @method Models\CreateStreamPackageHarvestJobResponse CreateStreamPackageHarvestJob(Models\CreateStreamPackageHarvestJobRequest $req) Create HarvestJob.
+ * @method Models\CreateStreamPackageLinearAssemblyChannelResponse CreateStreamPackageLinearAssemblyChannel(Models\CreateStreamPackageLinearAssemblyChannelRequest $req) Create a linear assembly channel.
+ * @method Models\CreateStreamPackageLinearAssemblyProgramResponse CreateStreamPackageLinearAssemblyProgram(Models\CreateStreamPackageLinearAssemblyProgramRequest $req) Create a linear assembly program.
+ * @method Models\CreateStreamPackageSourceResponse CreateStreamPackageSource(Models\CreateStreamPackageSourceRequest $req) Create channel linear assembly Source.
+ * @method Models\CreateStreamPackageSourceLocationResponse CreateStreamPackageSourceLocation(Models\CreateStreamPackageSourceLocationRequest $req) Create Linear Assembly SourceLocation.
  * @method Models\DeleteStreamPackageChannelEndpointsResponse DeleteStreamPackageChannelEndpoints(Models\DeleteStreamPackageChannelEndpointsRequest $req) This API is used to delete endpoints from a StreamPackage channel in batches.
  * @method Models\DeleteStreamPackageChannelsResponse DeleteStreamPackageChannels(Models\DeleteStreamPackageChannelsRequest $req) This API is used to delete StreamPackage channels in batches.
  * @method Models\DeleteStreamPackageHarvestJobResponse DeleteStreamPackageHarvestJob(Models\DeleteStreamPackageHarvestJobRequest $req) Delete HarvestJob.
  * @method Models\DeleteStreamPackageHarvestJobsResponse DeleteStreamPackageHarvestJobs(Models\DeleteStreamPackageHarvestJobsRequest $req) Deleting HarvestJobs in Batch.
+ * @method Models\DeleteStreamPackageLinearAssemblyChannelResponse DeleteStreamPackageLinearAssemblyChannel(Models\DeleteStreamPackageLinearAssemblyChannelRequest $req) Delete channel linear assemblyChannel.
+ * @method Models\DeleteStreamPackageLinearAssemblyChannelsResponse DeleteStreamPackageLinearAssemblyChannels(Models\DeleteStreamPackageLinearAssemblyChannelsRequest $req) Delete channels in batches and linearly assemble channels.
+ * @method Models\DeleteStreamPackageLinearAssemblyProgramResponse DeleteStreamPackageLinearAssemblyProgram(Models\DeleteStreamPackageLinearAssemblyProgramRequest $req) Delete Channel Linear Assembly Program.
+ * @method Models\DeleteStreamPackageLinearAssemblyProgramsResponse DeleteStreamPackageLinearAssemblyPrograms(Models\DeleteStreamPackageLinearAssemblyProgramsRequest $req) Batch deletion of channels linear assembly program.
+ * @method Models\DeleteStreamPackageSourceResponse DeleteStreamPackageSource(Models\DeleteStreamPackageSourceRequest $req) Delete channel linear assembly Source.
+ * @method Models\DeleteStreamPackageSourceLocationResponse DeleteStreamPackageSourceLocation(Models\DeleteStreamPackageSourceLocationRequest $req) Batch delete media packaging SourceLocation.
  * @method Models\DescribeStreamPackageChannelResponse DescribeStreamPackageChannel(Models\DescribeStreamPackageChannelRequest $req) This API is used to query the information of a StreamPackage channel.
  * @method Models\DescribeStreamPackageChannelsResponse DescribeStreamPackageChannels(Models\DescribeStreamPackageChannelsRequest $req) This API is used to query the information of multiple StreamPackage channels.
  * @method Models\DescribeStreamPackageHarvestJobResponse DescribeStreamPackageHarvestJob(Models\DescribeStreamPackageHarvestJobRequest $req) Query HarvestJob.
  * @method Models\DescribeStreamPackageHarvestJobsResponse DescribeStreamPackageHarvestJobs(Models\DescribeStreamPackageHarvestJobsRequest $req) Batch query HarvestJob.
+ * @method Models\DescribeStreamPackageLinearAssemblyChannelResponse DescribeStreamPackageLinearAssemblyChannel(Models\DescribeStreamPackageLinearAssemblyChannelRequest $req) Query channel linear assembly Channel information.
+ * @method Models\DescribeStreamPackageLinearAssemblyChannelAlertsResponse DescribeStreamPackageLinearAssemblyChannelAlerts(Models\DescribeStreamPackageLinearAssemblyChannelAlertsRequest $req) Query linear assembly channel alarm information.
+ * @method Models\DescribeStreamPackageLinearAssemblyChannelsResponse DescribeStreamPackageLinearAssemblyChannels(Models\DescribeStreamPackageLinearAssemblyChannelsRequest $req) Query channel linear assembly Channel information list.
+ * @method Models\DescribeStreamPackageLinearAssemblyProgramResponse DescribeStreamPackageLinearAssemblyProgram(Models\DescribeStreamPackageLinearAssemblyProgramRequest $req) Query channel linear assembly program information.
+ * @method Models\DescribeStreamPackageLinearAssemblyProgramSchedulesResponse DescribeStreamPackageLinearAssemblyProgramSchedules(Models\DescribeStreamPackageLinearAssemblyProgramSchedulesRequest $req) Query channel linear assembly Programl assembly scheduling information list.
+ * @method Models\DescribeStreamPackageLinearAssemblyProgramsResponse DescribeStreamPackageLinearAssemblyPrograms(Models\DescribeStreamPackageLinearAssemblyProgramsRequest $req) Query channel linear assembly Programl information list.
+ * @method Models\DescribeStreamPackageSourceResponse DescribeStreamPackageSource(Models\DescribeStreamPackageSourceRequest $req) Query channel linear assembly Source information.
+ * @method Models\DescribeStreamPackageSourceAlertsResponse DescribeStreamPackageSourceAlerts(Models\DescribeStreamPackageSourceAlertsRequest $req) Query channel linear assembly Source alarm information.
+ * @method Models\DescribeStreamPackageSourceLocationResponse DescribeStreamPackageSourceLocation(Models\DescribeStreamPackageSourceLocationRequest $req) Query channel linear assembly sourceLocation information.
+ * @method Models\DescribeStreamPackageSourceLocationAlertsResponse DescribeStreamPackageSourceLocationAlerts(Models\DescribeStreamPackageSourceLocationAlertsRequest $req) Query channel linear assembly Location alarm information.
+ * @method Models\DescribeStreamPackageSourceLocationsResponse DescribeStreamPackageSourceLocations(Models\DescribeStreamPackageSourceLocationsRequest $req) Query channel linear assembly SourceLocation information list.
+ * @method Models\DescribeStreamPackageSourcesResponse DescribeStreamPackageSources(Models\DescribeStreamPackageSourcesRequest $req) Query channel linear assembly Source information list.
  * @method Models\ModifyStreamPackageChannelResponse ModifyStreamPackageChannel(Models\ModifyStreamPackageChannelRequest $req) This API is used to modify a StreamPackage channel.
  * @method Models\ModifyStreamPackageChannelEndpointResponse ModifyStreamPackageChannelEndpoint(Models\ModifyStreamPackageChannelEndpointRequest $req) This API is used to modify an endpoint of a StreamPackage channel.
  * @method Models\ModifyStreamPackageChannelInputAuthInfoResponse ModifyStreamPackageChannelInputAuthInfo(Models\ModifyStreamPackageChannelInputAuthInfoRequest $req) This API is used to modify the input authentication information of a StreamPackage channel.
+ * @method Models\ModifyStreamPackageLinearAssemblyChannelResponse ModifyStreamPackageLinearAssemblyChannel(Models\ModifyStreamPackageLinearAssemblyChannelRequest $req) Modify channel linear assembly Channel configuration.
+ * @method Models\ModifyStreamPackageLinearAssemblyProgramResponse ModifyStreamPackageLinearAssemblyProgram(Models\ModifyStreamPackageLinearAssemblyProgramRequest $req) Modify channel linear assembly Program configuration.
+ * @method Models\ModifyStreamPackageSourceResponse ModifyStreamPackageSource(Models\ModifyStreamPackageSourceRequest $req) Modify channel linear assembly Source configuration.
+ * @method Models\ModifyStreamPackageSourceLocationResponse ModifyStreamPackageSourceLocation(Models\ModifyStreamPackageSourceLocationRequest $req) Modify channel linear assembly SourceLocation configuration
+ * @method Models\StartStreamPackageLinearAssemblyChannelResponse StartStreamPackageLinearAssemblyChannel(Models\StartStreamPackageLinearAssemblyChannelRequest $req) Start Linear Assembly Channel.
+ * @method Models\StopStreamPackageLinearAssemblyChannelResponse StopStreamPackageLinearAssemblyChannel(Models\StopStreamPackageLinearAssemblyChannelRequest $req) Stop linear assembly channel.
  * @method Models\UnbindCdnDomainWithChannelResponse UnbindCdnDomainWithChannel(Models\UnbindCdnDomainWithChannelRequest $req) This API is used to unbind a CDN playback domain name from a channel.
  */
 
