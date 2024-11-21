@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTaskId(string $TaskId) Set The unique Id of the task, will return after successfully starting the task.
  * @method string getStreamUrl() Obtain The new url of the media resource.
  * @method void setStreamUrl(string $StreamUrl) Set The new url of the media resource.
+ * @method integer getVolume() Obtain Volume. Valid value range: [0, 100], default value is 100, indicating the original volume.
+ * @method void setVolume(integer $Volume) Set Volume. Valid value range: [0, 100], default value is 100, indicating the original volume.
  */
 class UpdateStreamIngestRequest extends AbstractModel
 {
@@ -45,9 +47,15 @@ class UpdateStreamIngestRequest extends AbstractModel
     public $StreamUrl;
 
     /**
+     * @var integer Volume. Valid value range: [0, 100], default value is 100, indicating the original volume.
+     */
+    public $Volume;
+
+    /**
      * @param integer $SdkAppId The SDKAppId of TRTC should be the same as the SDKAppId corresponding to the task room.
      * @param string $TaskId The unique Id of the task, will return after successfully starting the task.
      * @param string $StreamUrl The new url of the media resource.
+     * @param integer $Volume Volume. Valid value range: [0, 100], default value is 100, indicating the original volume.
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class UpdateStreamIngestRequest extends AbstractModel
 
         if (array_key_exists("StreamUrl",$param) and $param["StreamUrl"] !== null) {
             $this->StreamUrl = $param["StreamUrl"];
+        }
+
+        if (array_key_exists("Volume",$param) and $param["Volume"] !== null) {
+            $this->Volume = $param["Volume"];
         }
     }
 }

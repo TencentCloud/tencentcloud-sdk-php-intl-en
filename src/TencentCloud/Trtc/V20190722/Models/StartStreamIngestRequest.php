@@ -50,6 +50,8 @@ Source URL. Example value: https://a.b/test.mp4
  * @method void setRepeatNum(integer $RepeatNum) Set Loop playback count, value range: [-1, 1000], default is 1 time. - 0 is an invalid value - -1 is for loop playback, task termination requires actively calling the stop interface or setting MaxDuration.
  * @method integer getMaxDuration() Obtain Loop playback maximum duration, only effective when RepeatNum is set to -1, valid value range: [1, 10080], unit: minutes
  * @method void setMaxDuration(integer $MaxDuration) Set Loop playback maximum duration, only effective when RepeatNum is set to -1, valid value range: [1, 10080], unit: minutes
+ * @method integer getVolume() Obtain Volume. Valid value range: [0, 100], default value is 100, indicating the original volume.
+ * @method void setVolume(integer $Volume) Set Volume. Valid value range: [0, 100], default value is 100, indicating the original volume.
  */
 class StartStreamIngestRequest extends AbstractModel
 {
@@ -128,6 +130,11 @@ Source URL. Example value: https://a.b/test.mp4
     public $MaxDuration;
 
     /**
+     * @var integer Volume. Valid value range: [0, 100], default value is 100, indicating the original volume.
+     */
+    public $Volume;
+
+    /**
      * @param integer $SdkAppId TRTC's [SdkAppId](https://intl.cloud.tencent.com/document/product/647/46351?from_cn_redirect=1#sdkappid), the same as the SdkAppId corresponding to the Record room.
      * @param string $RoomId TRTC's [RoomId](https://intl.cloud.tencent.com/document/product/647/46351?from_cn_redirect=1#roomid), the RoomId corresponding to the Record TRTC room.
      * @param integer $RoomIdType Type of TRTC RoomId. [*Note] Must be the same as the RoomId type corresponding to the Record room: 0: String type RoomId 1: 32-bit Integer type RoomId (default)
@@ -143,6 +150,7 @@ Source URL. Example value: https://a.b/test.mp4
      * @param boolean $AutoPush Enable auto relay to cdn, please make sure that this feature has been enabled in the console.
      * @param integer $RepeatNum Loop playback count, value range: [-1, 1000], default is 1 time. - 0 is an invalid value - -1 is for loop playback, task termination requires actively calling the stop interface or setting MaxDuration.
      * @param integer $MaxDuration Loop playback maximum duration, only effective when RepeatNum is set to -1, valid value range: [1, 10080], unit: minutes
+     * @param integer $Volume Volume. Valid value range: [0, 100], default value is 100, indicating the original volume.
      */
     function __construct()
     {
@@ -213,6 +221,10 @@ Source URL. Example value: https://a.b/test.mp4
 
         if (array_key_exists("MaxDuration",$param) and $param["MaxDuration"] !== null) {
             $this->MaxDuration = $param["MaxDuration"];
+        }
+
+        if (array_key_exists("Volume",$param) and $param["Volume"] !== null) {
+            $this->Volume = $param["Volume"];
         }
     }
 }
