@@ -23,6 +23,7 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Tag\V20180813\Models as Models;
 
 /**
+ * @method Models\AddProjectResponse AddProject(Models\AddProjectRequest $req) Creates a project
  * @method Models\AddResourceTagResponse AddResourceTag(Models\AddResourceTagRequest $req) This API is used to associate resources with tags.
  * @method Models\AttachResourcesTagResponse AttachResourcesTag(Models\AttachResourcesTagRequest $req) This API is used to associate a tag with multiple resources.
  * @method Models\CreateTagResponse CreateTag(Models\CreateTagRequest $req) This API is used to create a tag key and tag value pair.
