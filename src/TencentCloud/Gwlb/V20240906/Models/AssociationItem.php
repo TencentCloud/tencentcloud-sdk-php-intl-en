@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Rule associated with target group
  *
- * @method string getLoadBalancerId() Obtain ID of associated CLB instance
- * @method void setLoadBalancerId(string $LoadBalancerId) Set ID of associated CLB instance
- * @method string getLoadBalancerName() Obtain CLB name
- * @method void setLoadBalancerName(string $LoadBalancerName) Set CLB name
+ * @method string getLoadBalancerId() Obtain Associated GWLB instance ID
+ * @method void setLoadBalancerId(string $LoadBalancerId) Set Associated GWLB instance ID
+ * @method string getLoadBalancerName() Obtain GWLB instance name
+ * @method void setLoadBalancerName(string $LoadBalancerName) Set GWLB instance name
  */
 class AssociationItem extends AbstractModel
 {
     /**
-     * @var string ID of associated CLB instance
+     * @var string Associated GWLB instance ID
      */
     public $LoadBalancerId;
 
     /**
-     * @var string CLB name
+     * @var string GWLB instance name
      */
     public $LoadBalancerName;
 
     /**
-     * @param string $LoadBalancerId ID of associated CLB instance
-     * @param string $LoadBalancerName CLB name
+     * @param string $LoadBalancerId Associated GWLB instance ID
+     * @param string $LoadBalancerName GWLB instance name
      */
     function __construct()
     {

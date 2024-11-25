@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setResourceSet(array $ResourceSet) Set The resource information of the bandwidth package.
  * @method integer getBandwidth() Obtain The limit of the bandwidth package in Mbps. The value '-1' indicates there is no limit.
  * @method void setBandwidth(integer $Bandwidth) Set The limit of the bandwidth package in Mbps. The value '-1' indicates there is no limit.
+ * @method string getEgress() Obtain 
+ * @method void setEgress(string $Egress) Set 
  */
 class BandwidthPackage extends AbstractModel
 {
@@ -80,6 +82,11 @@ class BandwidthPackage extends AbstractModel
     public $Bandwidth;
 
     /**
+     * @var string 
+     */
+    public $Egress;
+
+    /**
      * @param string $BandwidthPackageId The unique ID of the bandwidth package.
      * @param string $NetworkType Bandwidth package type. Values: `BGP`, `SINGLEISP`, `ANYCAST`, `SINGLEISP_CMCC`, `SINGLEISP_CTCC`, `SINGLEISP_CUCC`
      * @param string $ChargeType The bandwidth package billing mode. Valid values: 'TOP5_POSTPAID_BY_MONTH' and 'PERCENT95_POSTPAID_BY_MONTH'
@@ -88,6 +95,7 @@ class BandwidthPackage extends AbstractModel
      * @param string $Status The status of the bandwidth package. Valid values: 'CREATING', 'CREATED', 'DELETING', and 'DELETED'.
      * @param array $ResourceSet The resource information of the bandwidth package.
      * @param integer $Bandwidth The limit of the bandwidth package in Mbps. The value '-1' indicates there is no limit.
+     * @param string $Egress 
      */
     function __construct()
     {
@@ -137,6 +145,10 @@ class BandwidthPackage extends AbstractModel
 
         if (array_key_exists("Bandwidth",$param) and $param["Bandwidth"] !== null) {
             $this->Bandwidth = $param["Bandwidth"];
+        }
+
+        if (array_key_exists("Egress",$param) and $param["Egress"] !== null) {
+            $this->Egress = $param["Egress"];
         }
     }
 }

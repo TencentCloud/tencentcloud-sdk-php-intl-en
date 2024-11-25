@@ -22,8 +22,14 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method boolean getHealthSwitch() Obtain Whether to enable the health check.
  * @method void setHealthSwitch(boolean $HealthSwitch) Set Whether to enable the health check.
- * @method string getProtocol() Obtain Protocol used for health checks. ICMP and TCP are supported, and the default is ICMP.
- * @method void setProtocol(string $Protocol) Set Protocol used for health checks. ICMP and TCP are supported, and the default is ICMP.
+ * @method string getProtocol() Obtain Protocol used for health check, which supports PING and TCP and is PING by default.
+
+- PING: icmp
+- TCP: tcp
+ * @method void setProtocol(string $Protocol) Set Protocol used for health check, which supports PING and TCP and is PING by default.
+
+- PING: icmp
+- TCP: tcp
  * @method integer getPort() Obtain Health check port, which is required when the probe protocol is TCP.
  * @method void setPort(integer $Port) Set Health check port, which is required when the probe protocol is TCP.
  * @method integer getTimeout() Obtain Health check timeout. The default is 2 seconds. Value range: 2-30 seconds.
@@ -43,7 +49,10 @@ class TargetGroupHealthCheck extends AbstractModel
     public $HealthSwitch;
 
     /**
-     * @var string Protocol used for health checks. ICMP and TCP are supported, and the default is ICMP.
+     * @var string Protocol used for health check, which supports PING and TCP and is PING by default.
+
+- PING: icmp
+- TCP: tcp
      */
     public $Protocol;
 
@@ -74,7 +83,10 @@ class TargetGroupHealthCheck extends AbstractModel
 
     /**
      * @param boolean $HealthSwitch Whether to enable the health check.
-     * @param string $Protocol Protocol used for health checks. ICMP and TCP are supported, and the default is ICMP.
+     * @param string $Protocol Protocol used for health check, which supports PING and TCP and is PING by default.
+
+- PING: icmp
+- TCP: tcp
      * @param integer $Port Health check port, which is required when the probe protocol is TCP.
      * @param integer $Timeout Health check timeout. The default is 2 seconds. Value range: 2-30 seconds.
      * @param integer $IntervalTime Detection interval time. The default is 5 seconds. Value range: 2-300 seconds.

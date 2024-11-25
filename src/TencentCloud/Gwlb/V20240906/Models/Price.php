@@ -22,8 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method ItemPrice getInstancePrice() Obtain It describes the instance price.Note: This field may return null, indicating that no valid value can be obtained.
  * @method void setInstancePrice(ItemPrice $InstancePrice) Set It describes the instance price.Note: This field may return null, indicating that no valid value can be obtained.
- * @method ItemPrice getLcuPrice() Obtain It describes the instance price.Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setLcuPrice(ItemPrice $LcuPrice) Set It describes the instance price.Note: This field may return null, indicating that no valid value can be obtained.
+ * @method ItemPrice getLcuPrice() Obtain It describes the price of GLCU.
+Note: This field may return null, indicating that no valid value can be obtained.
+ * @method void setLcuPrice(ItemPrice $LcuPrice) Set It describes the price of GLCU.
+Note: This field may return null, indicating that no valid value can be obtained.
  */
 class Price extends AbstractModel
 {
@@ -33,13 +35,15 @@ class Price extends AbstractModel
     public $InstancePrice;
 
     /**
-     * @var ItemPrice It describes the instance price.Note: This field may return null, indicating that no valid value can be obtained.
+     * @var ItemPrice It describes the price of GLCU.
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public $LcuPrice;
 
     /**
      * @param ItemPrice $InstancePrice It describes the instance price.Note: This field may return null, indicating that no valid value can be obtained.
-     * @param ItemPrice $LcuPrice It describes the instance price.Note: This field may return null, indicating that no valid value can be obtained.
+     * @param ItemPrice $LcuPrice It describes the price of GLCU.
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     function __construct()
     {

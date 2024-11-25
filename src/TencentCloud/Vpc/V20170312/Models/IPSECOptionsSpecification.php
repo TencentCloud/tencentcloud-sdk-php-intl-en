@@ -40,6 +40,7 @@ class IPSECOptionsSpecification extends AbstractModel
 
     /**
      * @var string Authentication algorithm. Valid values: `MD5`, `SHA1` and `SHA-256`; default value: `SHA1`.
+     * @deprecated
      */
     public $IntegrityAlgorith;
 

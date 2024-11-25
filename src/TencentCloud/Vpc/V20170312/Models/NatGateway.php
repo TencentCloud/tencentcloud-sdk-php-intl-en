@@ -80,6 +80,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setNatProductVersion(integer $NatProductVersion) Set NAT gateway major version. `1`: Classic, `2`: Standard
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method boolean getSmartScheduleMode() Obtain 
+ * @method void setSmartScheduleMode(boolean $SmartScheduleMode) Set 
  */
 class NatGateway extends AbstractModel
 {
@@ -194,6 +196,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $NatProductVersion;
 
     /**
+     * @var boolean 
+     */
+    public $SmartScheduleMode;
+
+    /**
      * @param string $NatGatewayId NAT gateway ID.
      * @param string $NatGatewayName NAT gateway name.
      * @param string $CreatedTime NAT gateway creation time.
@@ -224,6 +231,7 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $NatProductVersion NAT gateway major version. `1`: Classic, `2`: Standard
 Note: This field may return null, indicating that no valid values can be obtained.
+     * @param boolean $SmartScheduleMode 
      */
     function __construct()
     {
@@ -336,6 +344,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("NatProductVersion",$param) and $param["NatProductVersion"] !== null) {
             $this->NatProductVersion = $param["NatProductVersion"];
+        }
+
+        if (array_key_exists("SmartScheduleMode",$param) and $param["SmartScheduleMode"] !== null) {
+            $this->SmartScheduleMode = $param["SmartScheduleMode"];
         }
     }
 }

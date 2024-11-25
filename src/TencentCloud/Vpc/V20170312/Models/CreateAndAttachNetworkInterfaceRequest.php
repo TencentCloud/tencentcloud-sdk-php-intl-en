@@ -32,8 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPrivateIpAddresses(array $PrivateIpAddresses) Set The information of the specified private IPs. You can specify a maximum of 10 IPs each time.
  * @method integer getSecondaryPrivateIpAddressCount() Obtain The number of private IP addresses you apply for. The total number of private IP addresses cannot exceed the quota.
  * @method void setSecondaryPrivateIpAddressCount(integer $SecondaryPrivateIpAddressCount) Set The number of private IP addresses you apply for. The total number of private IP addresses cannot exceed the quota.
- * @method string getQosLevel() Obtain IP u200dservice level. It is used together with `SecondaryPrivateIpAddressCount`. Values: `PT` u200d(Gold), `AU` u200d(Silver), `AG` (Bronze) and `DEFAULT` (Default).
- * @method void setQosLevel(string $QosLevel) Set IP u200dservice level. It is used together with `SecondaryPrivateIpAddressCount`. Values: `PT` u200d(Gold), `AU` u200d(Silver), `AG` (Bronze) and `DEFAULT` (Default).
+ * @method string getQosLevel() Obtain IP service level. It is used together with `SecondaryPrivateIpAddressCount`. Values: `PT` (Gold), `AU` (Silver), `AG` (Bronze) and `DEFAULT` (Default).
+ * @method void setQosLevel(string $QosLevel) Set IP service level. It is used together with `SecondaryPrivateIpAddressCount`. Values: `PT` (Gold), `AU` (Silver), `AG` (Bronze) and `DEFAULT` (Default).
  * @method array getSecurityGroupIds() Obtain The security group to be bound with, such as ['sg-1dd51d'].
  * @method void setSecurityGroupIds(array $SecurityGroupIds) Set The security group to be bound with, such as ['sg-1dd51d'].
  * @method string getNetworkInterfaceDescription() Obtain The ENI description. You can enter any information within 60 characters.
@@ -42,6 +42,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTags(array $Tags) Set Bound tags, such as [{"Key": "city", "Value": "shanghai"}].
  * @method integer getAttachType() Obtain ENI mounting type. Valid values: `0` (standard); `1` (extension); default value: `0`
  * @method void setAttachType(integer $AttachType) Set ENI mounting type. Valid values: `0` (standard); `1` (extension); default value: `0`
+ * @method string getClientToken() Obtain 
+ * @method void setClientToken(string $ClientToken) Set 
  */
 class CreateAndAttachNetworkInterfaceRequest extends AbstractModel
 {
@@ -76,7 +78,7 @@ class CreateAndAttachNetworkInterfaceRequest extends AbstractModel
     public $SecondaryPrivateIpAddressCount;
 
     /**
-     * @var string IP u200dservice level. It is used together with `SecondaryPrivateIpAddressCount`. Values: `PT` u200d(Gold), `AU` u200d(Silver), `AG` (Bronze) and `DEFAULT` (Default).
+     * @var string IP service level. It is used together with `SecondaryPrivateIpAddressCount`. Values: `PT` (Gold), `AU` (Silver), `AG` (Bronze) and `DEFAULT` (Default).
      */
     public $QosLevel;
 
@@ -101,17 +103,23 @@ class CreateAndAttachNetworkInterfaceRequest extends AbstractModel
     public $AttachType;
 
     /**
+     * @var string 
+     */
+    public $ClientToken;
+
+    /**
      * @param string $VpcId The ID of the VPC instance. You can obtain the parameter value from the `VpcId` field in the returned result of the `DescribeVpcs` API.
      * @param string $NetworkInterfaceName The name of the ENI. The maximum length is 60 bytes.
      * @param string $SubnetId The subnet instance ID of the ENI, such as 'subnet-0ap8nwca'.
      * @param string $InstanceId CVM instance ID.
      * @param array $PrivateIpAddresses The information of the specified private IPs. You can specify a maximum of 10 IPs each time.
      * @param integer $SecondaryPrivateIpAddressCount The number of private IP addresses you apply for. The total number of private IP addresses cannot exceed the quota.
-     * @param string $QosLevel IP u200dservice level. It is used together with `SecondaryPrivateIpAddressCount`. Values: `PT` u200d(Gold), `AU` u200d(Silver), `AG` (Bronze) and `DEFAULT` (Default).
+     * @param string $QosLevel IP service level. It is used together with `SecondaryPrivateIpAddressCount`. Values: `PT` (Gold), `AU` (Silver), `AG` (Bronze) and `DEFAULT` (Default).
      * @param array $SecurityGroupIds The security group to be bound with, such as ['sg-1dd51d'].
      * @param string $NetworkInterfaceDescription The ENI description. You can enter any information within 60 characters.
      * @param array $Tags Bound tags, such as [{"Key": "city", "Value": "shanghai"}].
      * @param integer $AttachType ENI mounting type. Valid values: `0` (standard); `1` (extension); default value: `0`
+     * @param string $ClientToken 
      */
     function __construct()
     {
@@ -178,6 +186,10 @@ class CreateAndAttachNetworkInterfaceRequest extends AbstractModel
 
         if (array_key_exists("AttachType",$param) and $param["AttachType"] !== null) {
             $this->AttachType = $param["AttachType"];
+        }
+
+        if (array_key_exists("ClientToken",$param) and $param["ClientToken"] !== null) {
+            $this->ClientToken = $param["ClientToken"];
         }
     }
 }

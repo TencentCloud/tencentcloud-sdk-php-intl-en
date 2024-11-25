@@ -20,27 +20,35 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateTargetGroup request structure.
  *
- * @method string getTargetGroupName() Obtain Target group name, up to 50 characters
- * @method void setTargetGroupName(string $TargetGroupName) Set Target group name, up to 50 characters
+ * @method string getTargetGroupName() Obtain Target group name, limited to 60 characters.
+ * @method void setTargetGroupName(string $TargetGroupName) Set Target group name, limited to 60 characters.
  * @method string getVpcId() Obtain VPCID attribute of target group. If this parameter is left blank, the default VPC will be used.
  * @method void setVpcId(string $VpcId) Set VPCID attribute of target group. If this parameter is left blank, the default VPC will be used.
- * @method integer getPort() Obtain Default port of target group. This default port can be used when servers are added subsequently. Either Port or port in TargetGroupInstances.N is required.
- * @method void setPort(integer $Port) Set Default port of target group. This default port can be used when servers are added subsequently. Either Port or port in TargetGroupInstances.N is required.
+ * @method integer getPort() Obtain Default port of the target group, which can be used when servers are added later. Either 'Port' or 'TargetGroupInstances.N.port' must be filled in.
+ * @method void setPort(integer $Port) Set Default port of the target group, which can be used when servers are added later. Either 'Port' or 'TargetGroupInstances.N.port' must be filled in.
  * @method array getTargetGroupInstances() Obtain Real server bound to a target group
  * @method void setTargetGroupInstances(array $TargetGroupInstances) Set Real server bound to a target group
- * @method string getProtocol() Obtain GWLB target group protocol.- AWS_GENEVE: GENEVE compatible protocol - TENCENT_GENEVE: GENEVE standard protocol
- * @method void setProtocol(string $Protocol) Set GWLB target group protocol.- AWS_GENEVE: GENEVE compatible protocol - TENCENT_GENEVE: GENEVE standard protocol
- * @method TargetGroupHealthCheck getHealthCheck() Obtain Health check.
- * @method void setHealthCheck(TargetGroupHealthCheck $HealthCheck) Set Health check.
- * @method string getScheduleAlgorithm() Obtain RS scheduling algorithm.- IP_HASH_3_ELASTIC: elastic hashing
- * @method void setScheduleAlgorithm(string $ScheduleAlgorithm) Set RS scheduling algorithm.- IP_HASH_3_ELASTIC: elastic hashing
+ * @method string getProtocol() Obtain GWLB target group protocol.
+- TENCENT_GENEVE: GENEVE standard protocol
+
+- AWS_GENEVE: GENEVE compatibility protocol (a ticket is required for allowlisting)
+ * @method void setProtocol(string $Protocol) Set GWLB target group protocol.
+- TENCENT_GENEVE: GENEVE standard protocol
+
+- AWS_GENEVE: GENEVE compatibility protocol (a ticket is required for allowlisting)
+ * @method TargetGroupHealthCheck getHealthCheck() Obtain Health check settings.
+ * @method void setHealthCheck(TargetGroupHealthCheck $HealthCheck) Set Health check settings.
+ * @method string getScheduleAlgorithm() Obtain Load balancing algorithm.
+- IP_HASH_3_ELASTIC: elastic hashing
+ * @method void setScheduleAlgorithm(string $ScheduleAlgorithm) Set Load balancing algorithm.
+- IP_HASH_3_ELASTIC: elastic hashing
  * @method boolean getAllDeadToAlive() Obtain Whether "All Dead, All Alive" is supported. It is supported by default.
  * @method void setAllDeadToAlive(boolean $AllDeadToAlive) Set Whether "All Dead, All Alive" is supported. It is supported by default.
  */
 class CreateTargetGroupRequest extends AbstractModel
 {
     /**
-     * @var string Target group name, up to 50 characters
+     * @var string Target group name, limited to 60 characters.
      */
     public $TargetGroupName;
 
@@ -50,7 +58,7 @@ class CreateTargetGroupRequest extends AbstractModel
     public $VpcId;
 
     /**
-     * @var integer Default port of target group. This default port can be used when servers are added subsequently. Either Port or port in TargetGroupInstances.N is required.
+     * @var integer Default port of the target group, which can be used when servers are added later. Either 'Port' or 'TargetGroupInstances.N.port' must be filled in.
      */
     public $Port;
 
@@ -60,17 +68,21 @@ class CreateTargetGroupRequest extends AbstractModel
     public $TargetGroupInstances;
 
     /**
-     * @var string GWLB target group protocol.- AWS_GENEVE: GENEVE compatible protocol - TENCENT_GENEVE: GENEVE standard protocol
+     * @var string GWLB target group protocol.
+- TENCENT_GENEVE: GENEVE standard protocol
+
+- AWS_GENEVE: GENEVE compatibility protocol (a ticket is required for allowlisting)
      */
     public $Protocol;
 
     /**
-     * @var TargetGroupHealthCheck Health check.
+     * @var TargetGroupHealthCheck Health check settings.
      */
     public $HealthCheck;
 
     /**
-     * @var string RS scheduling algorithm.- IP_HASH_3_ELASTIC: elastic hashing
+     * @var string Load balancing algorithm.
+- IP_HASH_3_ELASTIC: elastic hashing
      */
     public $ScheduleAlgorithm;
 
@@ -80,13 +92,17 @@ class CreateTargetGroupRequest extends AbstractModel
     public $AllDeadToAlive;
 
     /**
-     * @param string $TargetGroupName Target group name, up to 50 characters
+     * @param string $TargetGroupName Target group name, limited to 60 characters.
      * @param string $VpcId VPCID attribute of target group. If this parameter is left blank, the default VPC will be used.
-     * @param integer $Port Default port of target group. This default port can be used when servers are added subsequently. Either Port or port in TargetGroupInstances.N is required.
+     * @param integer $Port Default port of the target group, which can be used when servers are added later. Either 'Port' or 'TargetGroupInstances.N.port' must be filled in.
      * @param array $TargetGroupInstances Real server bound to a target group
-     * @param string $Protocol GWLB target group protocol.- AWS_GENEVE: GENEVE compatible protocol - TENCENT_GENEVE: GENEVE standard protocol
-     * @param TargetGroupHealthCheck $HealthCheck Health check.
-     * @param string $ScheduleAlgorithm RS scheduling algorithm.- IP_HASH_3_ELASTIC: elastic hashing
+     * @param string $Protocol GWLB target group protocol.
+- TENCENT_GENEVE: GENEVE standard protocol
+
+- AWS_GENEVE: GENEVE compatibility protocol (a ticket is required for allowlisting)
+     * @param TargetGroupHealthCheck $HealthCheck Health check settings.
+     * @param string $ScheduleAlgorithm Load balancing algorithm.
+- IP_HASH_3_ELASTIC: elastic hashing
      * @param boolean $AllDeadToAlive Whether "All Dead, All Alive" is supported. It is supported by default.
      */
     function __construct()

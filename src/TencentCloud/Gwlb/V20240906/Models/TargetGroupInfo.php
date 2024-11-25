@@ -40,8 +40,12 @@ Note: This field may return null, indicating that no valid value can be obtained
  * @method void setAssociatedRule(array $AssociatedRule) Set Associated rule array. This parameter cannot be obtained when the DescribeTargetGroupList API is called.Note: This field may return null, indicating that no valid value can be obtained.
  * @method string getProtocol() Obtain Backend protocol type.Note: This field may return null, indicating that no valid value can be obtained.
  * @method void setProtocol(string $Protocol) Set Backend protocol type.Note: This field may return null, indicating that no valid value can be obtained.
- * @method string getScheduleAlgorithm() Obtain Scheduling algorithm.ip_hash_3: 3-tuple symmetric elastic hashingip_hash_3_consistent: 3-tuple symmetric consistent hashingNote: This field may return null, indicating that no valid value can be obtained.
- * @method void setScheduleAlgorithm(string $ScheduleAlgorithm) Set Scheduling algorithm.ip_hash_3: 3-tuple symmetric elastic hashingip_hash_3_consistent: 3-tuple symmetric consistent hashingNote: This field may return null, indicating that no valid value can be obtained.
+ * @method string getScheduleAlgorithm() Obtain Scheduling algorithm.
+ip_hash_3: elastic hashing
+Note: This field may return null, indicating that no valid value can be obtained.
+ * @method void setScheduleAlgorithm(string $ScheduleAlgorithm) Set Scheduling algorithm.
+ip_hash_3: elastic hashing
+Note: This field may return null, indicating that no valid value can be obtained.
  * @method TargetGroupHealthCheck getHealthCheck() Obtain Health check details.Note: This field may return null, indicating that no valid value can be obtained.
  * @method void setHealthCheck(TargetGroupHealthCheck $HealthCheck) Set Health check details.Note: This field may return null, indicating that no valid value can be obtained.
  * @method boolean getAllDeadToAlive() Obtain Whether "All Dead, All Alive" is supported.Note: This field may return null, indicating that no valid value can be obtained.
@@ -96,7 +100,9 @@ Note: This field may return null, indicating that no valid value can be obtained
     public $Protocol;
 
     /**
-     * @var string Scheduling algorithm.ip_hash_3: 3-tuple symmetric elastic hashingip_hash_3_consistent: 3-tuple symmetric consistent hashingNote: This field may return null, indicating that no valid value can be obtained.
+     * @var string Scheduling algorithm.
+ip_hash_3: elastic hashing
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public $ScheduleAlgorithm;
 
@@ -131,7 +137,9 @@ Note: This field may return null, indicating that no valid value can be obtained
      * @param string $UpdatedTime Target group modification time
      * @param array $AssociatedRule Associated rule array. This parameter cannot be obtained when the DescribeTargetGroupList API is called.Note: This field may return null, indicating that no valid value can be obtained.
      * @param string $Protocol Backend protocol type.Note: This field may return null, indicating that no valid value can be obtained.
-     * @param string $ScheduleAlgorithm Scheduling algorithm.ip_hash_3: 3-tuple symmetric elastic hashingip_hash_3_consistent: 3-tuple symmetric consistent hashingNote: This field may return null, indicating that no valid value can be obtained.
+     * @param string $ScheduleAlgorithm Scheduling algorithm.
+ip_hash_3: elastic hashing
+Note: This field may return null, indicating that no valid value can be obtained.
      * @param TargetGroupHealthCheck $HealthCheck Health check details.Note: This field may return null, indicating that no valid value can be obtained.
      * @param boolean $AllDeadToAlive Whether "All Dead, All Alive" is supported.Note: This field may return null, indicating that no valid value can be obtained.
      * @param integer $AssociatedRuleCount Number of rules associated with the target group.Note: This field may return null, indicating that no valid value can be obtained.

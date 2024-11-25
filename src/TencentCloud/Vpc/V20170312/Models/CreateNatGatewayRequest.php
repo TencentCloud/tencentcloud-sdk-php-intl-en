@@ -44,8 +44,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPublicIpAddressesBandwidthOut(integer $PublicIpAddressesBandwidthOut) Set The size of the public network IP bandwidth to be applied for (in Mbps), which defaults to the maximum value applicable for the current user type.
  * @method boolean getPublicIpFromSameZone() Obtain Whether the public IP and the NAT gateway must be in the same availability zone. Valid values: `true` and `false`. This parameter is valid only when `Zone` is specified.
  * @method void setPublicIpFromSameZone(boolean $PublicIpFromSameZone) Set Whether the public IP and the NAT gateway must be in the same availability zone. Valid values: `true` and `false`. This parameter is valid only when `Zone` is specified.
- * @method integer getNatProductVersion() Obtain 
- * @method void setNatProductVersion(integer $NatProductVersion) Set 
+ * @method integer getNatProductVersion() Obtain NAT gateway major version. `1`: Classic, `2`: Standard
+ * @method void setNatProductVersion(integer $NatProductVersion) Set NAT gateway major version. `1`: Classic, `2`: Standard
  */
 class CreateNatGatewayRequest extends AbstractModel
 {
@@ -91,6 +91,7 @@ class CreateNatGatewayRequest extends AbstractModel
 
     /**
      * @var string Subnet of the NAT gateway
+     * @deprecated
      */
     public $SubnetId;
 
@@ -110,7 +111,7 @@ class CreateNatGatewayRequest extends AbstractModel
     public $PublicIpFromSameZone;
 
     /**
-     * @var integer 
+     * @var integer NAT gateway major version. `1`: Classic, `2`: Standard
      */
     public $NatProductVersion;
 
@@ -127,7 +128,7 @@ class CreateNatGatewayRequest extends AbstractModel
      * @param integer $StockPublicIpAddressesBandwidthOut The bandwidth size (in Mbps) of the EIP bound to the NAT gateway, which defaults to the maximum value applicable for the current user type.
      * @param integer $PublicIpAddressesBandwidthOut The size of the public network IP bandwidth to be applied for (in Mbps), which defaults to the maximum value applicable for the current user type.
      * @param boolean $PublicIpFromSameZone Whether the public IP and the NAT gateway must be in the same availability zone. Valid values: `true` and `false`. This parameter is valid only when `Zone` is specified.
-     * @param integer $NatProductVersion 
+     * @param integer $NatProductVersion NAT gateway major version. `1`: Classic, `2`: Standard
      */
     function __construct()
     {

@@ -20,8 +20,6 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Network ACL rules.
  *
- * @method string getModifyTime() Obtain Modification time.
- * @method void setModifyTime(string $ModifyTime) Set Modification time.
  * @method string getProtocol() Obtain Protocol. Valid values: TCP, UDP, ICMP, ALL.
  * @method void setProtocol(string $Protocol) Set Protocol. Valid values: TCP, UDP, ICMP, ALL.
  * @method string getPort() Obtain Port. Valid values: all, single port, range. When Protocol takes the value `ALL` or `ICMP`, Port cannot be specified.
@@ -34,14 +32,11 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAction(string $Action) Set ACCEPT or DROP.
  * @method string getDescription() Obtain Rule description, which is up to 100 bytes.
  * @method void setDescription(string $Description) Set Rule description, which is up to 100 bytes.
+ * @method string getModifyTime() Obtain Modification time.
+ * @method void setModifyTime(string $ModifyTime) Set Modification time.
  */
 class NetworkAclEntry extends AbstractModel
 {
-    /**
-     * @var string Modification time.
-     */
-    public $ModifyTime;
-
     /**
      * @var string Protocol. Valid values: TCP, UDP, ICMP, ALL.
      */
@@ -73,13 +68,18 @@ class NetworkAclEntry extends AbstractModel
     public $Description;
 
     /**
-     * @param string $ModifyTime Modification time.
+     * @var string Modification time.
+     */
+    public $ModifyTime;
+
+    /**
      * @param string $Protocol Protocol. Valid values: TCP, UDP, ICMP, ALL.
      * @param string $Port Port. Valid values: all, single port, range. When Protocol takes the value `ALL` or `ICMP`, Port cannot be specified.
      * @param string $CidrBlock IP range or IP address (mutually exclusive).
      * @param string $Ipv6CidrBlock CIDR block or IPv6 address (mutually exclusive).
      * @param string $Action ACCEPT or DROP.
      * @param string $Description Rule description, which is up to 100 bytes.
+     * @param string $ModifyTime Modification time.
      */
     function __construct()
     {
@@ -94,10 +94,6 @@ class NetworkAclEntry extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ModifyTime",$param) and $param["ModifyTime"] !== null) {
-            $this->ModifyTime = $param["ModifyTime"];
-        }
-
         if (array_key_exists("Protocol",$param) and $param["Protocol"] !== null) {
             $this->Protocol = $param["Protocol"];
         }
@@ -120,6 +116,10 @@ class NetworkAclEntry extends AbstractModel
 
         if (array_key_exists("Description",$param) and $param["Description"] !== null) {
             $this->Description = $param["Description"];
+        }
+
+        if (array_key_exists("ModifyTime",$param) and $param["ModifyTime"] !== null) {
+            $this->ModifyTime = $param["ModifyTime"];
         }
     }
 }

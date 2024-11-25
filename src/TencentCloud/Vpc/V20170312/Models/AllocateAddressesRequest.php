@@ -70,6 +70,8 @@ use TencentCloud\Common\AbstractModel;
 <ul style="margin:0"><li>Valid for users who have activated AIA. Values:<ul><li>ANYCAST_ZONE_GLOBAL: global publishing region </li><li>ANYCAST_ZONE_OVERSEAS: overseas publishing region</li><li><b>**[Disused]**</b> ANYCAST_ZONE_A: publishing region A (updated to ANYCAST_ZONE_GLOBAL)</li><li><b>**[Disused]**</b> ANYCAST_ZONE_B: publishing region B (updated to ANYCAST_ZONE_GLOBAL)</li></ul>Default: ANYCAST_ZONE_OVERSEAS.</li></ul>
  * @method void setAnycastZone(string $AnycastZone) Set Anycast publishing region
 <ul style="margin:0"><li>Valid for users who have activated AIA. Values:<ul><li>ANYCAST_ZONE_GLOBAL: global publishing region </li><li>ANYCAST_ZONE_OVERSEAS: overseas publishing region</li><li><b>**[Disused]**</b> ANYCAST_ZONE_A: publishing region A (updated to ANYCAST_ZONE_GLOBAL)</li><li><b>**[Disused]**</b> ANYCAST_ZONE_B: publishing region B (updated to ANYCAST_ZONE_GLOBAL)</li></ul>Default: ANYCAST_ZONE_OVERSEAS.</li></ul>
+ * @method array getVipCluster() Obtain 
+ * @method void setVipCluster(array $VipCluster) Set 
  * @method boolean getApplicableForCLB() Obtain <b>**[Disused]**</b>
 Whether the Anycast EIP can be bound to CLB instances.
 <ul style="margin:0"><li>Valid for users who have activated the AIA. Values:<ul><li>TRUE: the Anycast EIP can be bound to CLB instances.</li>
@@ -84,6 +86,8 @@ Whether the Anycast EIP can be bound to CLB instances.
  * @method void setBandwidthPackageId(string $BandwidthPackageId) Set The unique ID of a BGP bandwidth package. If you configure this parameter and set InternetChargeType as BANDWIDTH_PACKAGE, the new EIP is added to this package and billed by the bandwidth package mode.
  * @method string getAddressName() Obtain EIP name, which is the custom EIP name given by the user when applying for the EIP. Default: not named
  * @method void setAddressName(string $AddressName) Set EIP name, which is the custom EIP name given by the user when applying for the EIP. Default: not named
+ * @method string getDedicatedClusterId() Obtain 
+ * @method void setDedicatedClusterId(string $DedicatedClusterId) Set 
  * @method string getEgress() Obtain Network egress. It defaults to `center_egress1`.
  * @method void setEgress(string $Egress) Set Network egress. It defaults to `center_egress1`.
  * @method string getAntiDDoSPackageId() Obtain Anti-DDoS service package ID. This is required when you want to request an Anti-DDoS IP.
@@ -147,6 +151,11 @@ class AllocateAddressesRequest extends AbstractModel
     public $AnycastZone;
 
     /**
+     * @var array 
+     */
+    public $VipCluster;
+
+    /**
      * @var boolean <b>**[Disused]**</b>
 Whether the Anycast EIP can be bound to CLB instances.
 <ul style="margin:0"><li>Valid for users who have activated the AIA. Values:<ul><li>TRUE: the Anycast EIP can be bound to CLB instances.</li>
@@ -168,6 +177,11 @@ Whether the Anycast EIP can be bound to CLB instances.
      * @var string EIP name, which is the custom EIP name given by the user when applying for the EIP. Default: not named
      */
     public $AddressName;
+
+    /**
+     * @var string 
+     */
+    public $DedicatedClusterId;
 
     /**
      * @var string Network egress. It defaults to `center_egress1`.
@@ -210,6 +224,7 @@ Whether the Anycast EIP can be bound to CLB instances.
 <ul style="margin:0"><li>For beta users of Anti-DDoS IP, the value can be: <ul><li>`AntiDDoSEIP`: Anti-DDoS EIP</li></ul>Note that Anti-DDoS IPs are only available in partial regions. </li></ul>
      * @param string $AnycastZone Anycast publishing region
 <ul style="margin:0"><li>Valid for users who have activated AIA. Values:<ul><li>ANYCAST_ZONE_GLOBAL: global publishing region </li><li>ANYCAST_ZONE_OVERSEAS: overseas publishing region</li><li><b>**[Disused]**</b> ANYCAST_ZONE_A: publishing region A (updated to ANYCAST_ZONE_GLOBAL)</li><li><b>**[Disused]**</b> ANYCAST_ZONE_B: publishing region B (updated to ANYCAST_ZONE_GLOBAL)</li></ul>Default: ANYCAST_ZONE_OVERSEAS.</li></ul>
+     * @param array $VipCluster 
      * @param boolean $ApplicableForCLB <b>**[Disused]**</b>
 Whether the Anycast EIP can be bound to CLB instances.
 <ul style="margin:0"><li>Valid for users who have activated the AIA. Values:<ul><li>TRUE: the Anycast EIP can be bound to CLB instances.</li>
@@ -217,6 +232,7 @@ Whether the Anycast EIP can be bound to CLB instances.
      * @param array $Tags List of tags to be bound.
      * @param string $BandwidthPackageId The unique ID of a BGP bandwidth package. If you configure this parameter and set InternetChargeType as BANDWIDTH_PACKAGE, the new EIP is added to this package and billed by the bandwidth package mode.
      * @param string $AddressName EIP name, which is the custom EIP name given by the user when applying for the EIP. Default: not named
+     * @param string $DedicatedClusterId 
      * @param string $Egress Network egress. It defaults to `center_egress1`.
      * @param string $AntiDDoSPackageId Anti-DDoS service package ID. This is required when you want to request an Anti-DDoS IP.
      * @param string $ClientToken A string used to ensure the idempotency of the request. Generate a value based on your client. This can ensure that the value is unique for different requests. It only supports ASCII characters and can contain up to 64 characters. 
@@ -263,6 +279,10 @@ Whether the Anycast EIP can be bound to CLB instances.
             $this->AnycastZone = $param["AnycastZone"];
         }
 
+        if (array_key_exists("VipCluster",$param) and $param["VipCluster"] !== null) {
+            $this->VipCluster = $param["VipCluster"];
+        }
+
         if (array_key_exists("ApplicableForCLB",$param) and $param["ApplicableForCLB"] !== null) {
             $this->ApplicableForCLB = $param["ApplicableForCLB"];
         }
@@ -282,6 +302,10 @@ Whether the Anycast EIP can be bound to CLB instances.
 
         if (array_key_exists("AddressName",$param) and $param["AddressName"] !== null) {
             $this->AddressName = $param["AddressName"];
+        }
+
+        if (array_key_exists("DedicatedClusterId",$param) and $param["DedicatedClusterId"] !== null) {
+            $this->DedicatedClusterId = $param["DedicatedClusterId"];
         }
 
         if (array_key_exists("Egress",$param) and $param["Egress"] !== null) {

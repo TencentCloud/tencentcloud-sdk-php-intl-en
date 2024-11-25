@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Current billable usage of a pay-as-you-go bandwidth package
  *
- * @method integer getBandwidthUsage() Obtain Current billable usage, in Mbps
- * @method void setBandwidthUsage(integer $BandwidthUsage) Set Current billable usage, in Mbps
+ * @method float getBandwidthUsage() Obtain Current billable usage, in Mbps
+ * @method void setBandwidthUsage(float $BandwidthUsage) Set Current billable usage, in Mbps
  */
 class BandwidthPackageBillBandwidth extends AbstractModel
 {
     /**
-     * @var integer Current billable usage, in Mbps
+     * @var float Current billable usage, in Mbps
      */
     public $BandwidthUsage;
 
     /**
-     * @param integer $BandwidthUsage Current billable usage, in Mbps
+     * @param float $BandwidthUsage Current billable usage, in Mbps
      */
     function __construct()
     {

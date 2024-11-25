@@ -40,6 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(string $Offset) Set Offset.
  * @method string getLimit() Obtain The number of request objects.
  * @method void setLimit(string $Limit) Set The number of request objects.
+ * @method boolean getNeedRouterInfo() Obtain 
+ * @method void setNeedRouterInfo(boolean $NeedRouterInfo) Set 
  */
 class DescribeRouteTablesRequest extends AbstractModel
 {
@@ -70,6 +72,11 @@ class DescribeRouteTablesRequest extends AbstractModel
     public $Limit;
 
     /**
+     * @var boolean 
+     */
+    public $NeedRouterInfo;
+
+    /**
      * @param array $Filters Filter condition. `RouteTableIds` and `Filters` cannot be specified at the same time.
 <li>route-table-id - String - (Filter condition) Route table instance ID.</li>
 <li>route-table-name - String - (Filter condition) Route table name.</li>
@@ -80,6 +87,7 @@ class DescribeRouteTablesRequest extends AbstractModel
      * @param array $RouteTableIds The route table instance ID, such as `rtb-azd4dt1c`.
      * @param string $Offset Offset.
      * @param string $Limit The number of request objects.
+     * @param boolean $NeedRouterInfo 
      */
     function __construct()
     {
@@ -113,6 +121,10 @@ class DescribeRouteTablesRequest extends AbstractModel
 
         if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
             $this->Limit = $param["Limit"];
+        }
+
+        if (array_key_exists("NeedRouterInfo",$param) and $param["NeedRouterInfo"] !== null) {
+            $this->NeedRouterInfo = $param["NeedRouterInfo"];
         }
     }
 }

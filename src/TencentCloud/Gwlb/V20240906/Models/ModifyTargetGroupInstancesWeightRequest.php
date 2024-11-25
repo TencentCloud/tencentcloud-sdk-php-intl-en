@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getTargetGroupId() Obtain Target group ID.
  * @method void setTargetGroupId(string $TargetGroupId) Set Target group ID.
- * @method array getTargetGroupInstances() Obtain Array of servers whose weight is to be modified.
- * @method void setTargetGroupInstances(array $TargetGroupInstances) Set Array of servers whose weight is to be modified.
+ * @method array getTargetGroupInstances() Obtain Instance binding configuration array.
+ * @method void setTargetGroupInstances(array $TargetGroupInstances) Set Instance binding configuration array.
  */
 class ModifyTargetGroupInstancesWeightRequest extends AbstractModel
 {
@@ -33,13 +33,13 @@ class ModifyTargetGroupInstancesWeightRequest extends AbstractModel
     public $TargetGroupId;
 
     /**
-     * @var array Array of servers whose weight is to be modified.
+     * @var array Instance binding configuration array.
      */
     public $TargetGroupInstances;
 
     /**
      * @param string $TargetGroupId Target group ID.
-     * @param array $TargetGroupInstances Array of servers whose weight is to be modified.
+     * @param array $TargetGroupInstances Instance binding configuration array.
      */
     function __construct()
     {

@@ -26,8 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPrivateIpAddresses(array $PrivateIpAddresses) Set The information on private IP addresses, of which you can specify a maximum of 10 at a time. You should provide either this parameter or SecondaryPrivateIpAddressCount, or both.
  * @method integer getSecondaryPrivateIpAddressCount() Obtain The number of newly-applied private IP addresses. You should provide either this parameter or PrivateIpAddresses, or both. The total number of private IP addresses cannot exceed the quota. For more information, see<a href="/document/product/576/18527">ENI Use Limits</a>.
  * @method void setSecondaryPrivateIpAddressCount(integer $SecondaryPrivateIpAddressCount) Set The number of newly-applied private IP addresses. You should provide either this parameter or PrivateIpAddresses, or both. The total number of private IP addresses cannot exceed the quota. For more information, see<a href="/document/product/576/18527">ENI Use Limits</a>.
- * @method string getQosLevel() Obtain IP u200dservice level. It is used together with `SecondaryPrivateIpAddressCount`. Values: PT` u200d(Gold), `AU` u200d(Silver), `AG `(Bronze) and DEFAULT (Default).
- * @method void setQosLevel(string $QosLevel) Set IP u200dservice level. It is used together with `SecondaryPrivateIpAddressCount`. Values: PT` u200d(Gold), `AU` u200d(Silver), `AG `(Bronze) and DEFAULT (Default).
+ * @method string getQosLevel() Obtain IP service level. It is used together with `SecondaryPrivateIpAddressCount`. Values: PT` (Gold), `AU` (Silver), `AG `(Bronze) and DEFAULT (Default).
+ * @method void setQosLevel(string $QosLevel) Set IP service level. It is used together with `SecondaryPrivateIpAddressCount`. Values: PT` (Gold), `AU` (Silver), `AG `(Bronze) and DEFAULT (Default).
+ * @method string getClientToken() Obtain 
+ * @method void setClientToken(string $ClientToken) Set 
  */
 class AssignPrivateIpAddressesRequest extends AbstractModel
 {
@@ -47,15 +49,21 @@ class AssignPrivateIpAddressesRequest extends AbstractModel
     public $SecondaryPrivateIpAddressCount;
 
     /**
-     * @var string IP u200dservice level. It is used together with `SecondaryPrivateIpAddressCount`. Values: PT` u200d(Gold), `AU` u200d(Silver), `AG `(Bronze) and DEFAULT (Default).
+     * @var string IP service level. It is used together with `SecondaryPrivateIpAddressCount`. Values: PT` (Gold), `AU` (Silver), `AG `(Bronze) and DEFAULT (Default).
      */
     public $QosLevel;
+
+    /**
+     * @var string 
+     */
+    public $ClientToken;
 
     /**
      * @param string $NetworkInterfaceId The ID of the ENI instance, such as `eni-m6dyj72l`.
      * @param array $PrivateIpAddresses The information on private IP addresses, of which you can specify a maximum of 10 at a time. You should provide either this parameter or SecondaryPrivateIpAddressCount, or both.
      * @param integer $SecondaryPrivateIpAddressCount The number of newly-applied private IP addresses. You should provide either this parameter or PrivateIpAddresses, or both. The total number of private IP addresses cannot exceed the quota. For more information, see<a href="/document/product/576/18527">ENI Use Limits</a>.
-     * @param string $QosLevel IP u200dservice level. It is used together with `SecondaryPrivateIpAddressCount`. Values: PT` u200d(Gold), `AU` u200d(Silver), `AG `(Bronze) and DEFAULT (Default).
+     * @param string $QosLevel IP service level. It is used together with `SecondaryPrivateIpAddressCount`. Values: PT` (Gold), `AU` (Silver), `AG `(Bronze) and DEFAULT (Default).
+     * @param string $ClientToken 
      */
     function __construct()
     {
@@ -89,6 +97,10 @@ class AssignPrivateIpAddressesRequest extends AbstractModel
 
         if (array_key_exists("QosLevel",$param) and $param["QosLevel"] !== null) {
             $this->QosLevel = $param["QosLevel"];
+        }
+
+        if (array_key_exists("ClientToken",$param) and $param["ClientToken"] !== null) {
+            $this->ClientToken = $param["ClientToken"];
         }
     }
 }

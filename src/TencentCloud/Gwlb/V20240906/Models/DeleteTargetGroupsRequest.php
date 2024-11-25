@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteTargetGroups request structure.
  *
- * @method array getTargetGroupIds() Obtain Target group list.
- * @method void setTargetGroupIds(array $TargetGroupIds) Set Target group list.
+ * @method array getTargetGroupIds() Obtain Target group ID list.
+ * @method void setTargetGroupIds(array $TargetGroupIds) Set Target group ID list.
  */
 class DeleteTargetGroupsRequest extends AbstractModel
 {
     /**
-     * @var array Target group list.
+     * @var array Target group ID list.
      */
     public $TargetGroupIds;
 
     /**
-     * @param array $TargetGroupIds Target group list.
+     * @param array $TargetGroupIds Target group ID list.
      */
     function __construct()
     {

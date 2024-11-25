@@ -20,10 +20,6 @@ use TencentCloud\Common\AbstractModel;
 /**
  * The instance object associated with a CCN.
  *
- * @method string getInstanceId() Obtain The ID of the associated instance.
- * @method void setInstanceId(string $InstanceId) Set The ID of the associated instance.
- * @method string getInstanceRegion() Obtain The region to which the associated instance ID belongs, such as `ap-guangzhou`.
- * @method void setInstanceRegion(string $InstanceRegion) Set The region to which the associated instance ID belongs, such as `ap-guangzhou`.
  * @method string getInstanceType() Obtain The type of the associated instance. Available values are:
 <li>`VPC`: VPC</li>
 <li>`DIRECTCONNECT`: Direct Connect</li>
@@ -32,6 +28,10 @@ use TencentCloud\Common\AbstractModel;
 <li>`VPC`: VPC</li>
 <li>`DIRECTCONNECT`: Direct Connect</li>
 <li>`BMVPC`: BM VPC</li>
+ * @method string getInstanceId() Obtain The ID of the associated instance.
+ * @method void setInstanceId(string $InstanceId) Set The ID of the associated instance.
+ * @method string getInstanceRegion() Obtain The region to which the associated instance ID belongs, such as `ap-guangzhou`.
+ * @method void setInstanceRegion(string $InstanceRegion) Set The region to which the associated instance ID belongs, such as `ap-guangzhou`.
  * @method string getDescription() Obtain Description
  * @method void setDescription(string $Description) Set Description
  * @method string getRouteTableId() Obtain The ID of the route table associated with the instance
@@ -42,6 +42,14 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 class CcnInstance extends AbstractModel
 {
     /**
+     * @var string The type of the associated instance. Available values are:
+<li>`VPC`: VPC</li>
+<li>`DIRECTCONNECT`: Direct Connect</li>
+<li>`BMVPC`: BM VPC</li>
+     */
+    public $InstanceType;
+
+    /**
      * @var string The ID of the associated instance.
      */
     public $InstanceId;
@@ -50,14 +58,6 @@ class CcnInstance extends AbstractModel
      * @var string The region to which the associated instance ID belongs, such as `ap-guangzhou`.
      */
     public $InstanceRegion;
-
-    /**
-     * @var string The type of the associated instance. Available values are:
-<li>`VPC`: VPC</li>
-<li>`DIRECTCONNECT`: Direct Connect</li>
-<li>`BMVPC`: BM VPC</li>
-     */
-    public $InstanceType;
 
     /**
      * @var string Description
@@ -71,12 +71,12 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     public $RouteTableId;
 
     /**
-     * @param string $InstanceId The ID of the associated instance.
-     * @param string $InstanceRegion The region to which the associated instance ID belongs, such as `ap-guangzhou`.
      * @param string $InstanceType The type of the associated instance. Available values are:
 <li>`VPC`: VPC</li>
 <li>`DIRECTCONNECT`: Direct Connect</li>
 <li>`BMVPC`: BM VPC</li>
+     * @param string $InstanceId The ID of the associated instance.
+     * @param string $InstanceRegion The region to which the associated instance ID belongs, such as `ap-guangzhou`.
      * @param string $Description Description
      * @param string $RouteTableId The ID of the route table associated with the instance
 Note: this field may return `null`, indicating that no valid values can be obtained.
@@ -94,16 +94,16 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         if ($param === null) {
             return;
         }
+        if (array_key_exists("InstanceType",$param) and $param["InstanceType"] !== null) {
+            $this->InstanceType = $param["InstanceType"];
+        }
+
         if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
             $this->InstanceId = $param["InstanceId"];
         }
 
         if (array_key_exists("InstanceRegion",$param) and $param["InstanceRegion"] !== null) {
             $this->InstanceRegion = $param["InstanceRegion"];
-        }
-
-        if (array_key_exists("InstanceType",$param) and $param["InstanceType"] !== null) {
-            $this->InstanceType = $param["InstanceType"];
         }
 
         if (array_key_exists("Description",$param) and $param["Description"] !== null) {

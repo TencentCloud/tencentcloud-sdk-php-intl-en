@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getVpcId() Obtain The `ID` of the VPC to which the `HAVIP` belongs.
  * @method void setVpcId(string $VpcId) Set The `ID` of the VPC to which the `HAVIP` belongs.
- * @method string getSubnetId() Obtain The `ID` of the subnet to which the `HAVIP` belongs.
- * @method void setSubnetId(string $SubnetId) Set The `ID` of the subnet to which the `HAVIP` belongs.
  * @method string getHaVipName() Obtain The name of the `HAVIP`.
  * @method void setHaVipName(string $HaVipName) Set The name of the `HAVIP`.
+ * @method string getSubnetId() Obtain The `ID` of the subnet to which the `HAVIP` belongs.
+ * @method void setSubnetId(string $SubnetId) Set The `ID` of the subnet to which the `HAVIP` belongs.
  * @method string getVip() Obtain The specified virtual IP address, which must be within the IP range of the `VPC` and not in use. It will be automatically assigned if not specified.
  * @method void setVip(string $Vip) Set The specified virtual IP address, which must be within the IP range of the `VPC` and not in use. It will be automatically assigned if not specified.
  * @method string getNetworkInterfaceId() Obtain The ID of the ENI associated with the HAVIP.
@@ -39,14 +39,14 @@ class CreateHaVipRequest extends AbstractModel
     public $VpcId;
 
     /**
-     * @var string The `ID` of the subnet to which the `HAVIP` belongs.
-     */
-    public $SubnetId;
-
-    /**
      * @var string The name of the `HAVIP`.
      */
     public $HaVipName;
+
+    /**
+     * @var string The `ID` of the subnet to which the `HAVIP` belongs.
+     */
+    public $SubnetId;
 
     /**
      * @var string The specified virtual IP address, which must be within the IP range of the `VPC` and not in use. It will be automatically assigned if not specified.
@@ -60,8 +60,8 @@ class CreateHaVipRequest extends AbstractModel
 
     /**
      * @param string $VpcId The `ID` of the VPC to which the `HAVIP` belongs.
-     * @param string $SubnetId The `ID` of the subnet to which the `HAVIP` belongs.
      * @param string $HaVipName The name of the `HAVIP`.
+     * @param string $SubnetId The `ID` of the subnet to which the `HAVIP` belongs.
      * @param string $Vip The specified virtual IP address, which must be within the IP range of the `VPC` and not in use. It will be automatically assigned if not specified.
      * @param string $NetworkInterfaceId The ID of the ENI associated with the HAVIP.
      */
@@ -82,12 +82,12 @@ class CreateHaVipRequest extends AbstractModel
             $this->VpcId = $param["VpcId"];
         }
 
-        if (array_key_exists("SubnetId",$param) and $param["SubnetId"] !== null) {
-            $this->SubnetId = $param["SubnetId"];
-        }
-
         if (array_key_exists("HaVipName",$param) and $param["HaVipName"] !== null) {
             $this->HaVipName = $param["HaVipName"];
+        }
+
+        if (array_key_exists("SubnetId",$param) and $param["SubnetId"] !== null) {
+            $this->SubnetId = $param["SubnetId"];
         }
 
         if (array_key_exists("Vip",$param) and $param["Vip"] !== null) {

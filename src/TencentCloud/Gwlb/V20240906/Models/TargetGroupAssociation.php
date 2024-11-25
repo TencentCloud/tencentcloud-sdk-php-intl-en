@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Association relationship between rules and target groups.
  *
- * @method string getLoadBalancerId() Obtain CLB ID.
- * @method void setLoadBalancerId(string $LoadBalancerId) Set CLB ID.
+ * @method string getLoadBalancerId() Obtain GWLB instance ID.
+ * @method void setLoadBalancerId(string $LoadBalancerId) Set GWLB instance ID.
  * @method string getTargetGroupId() Obtain Target group ID.
  * @method void setTargetGroupId(string $TargetGroupId) Set Target group ID.
  */
 class TargetGroupAssociation extends AbstractModel
 {
     /**
-     * @var string CLB ID.
+     * @var string GWLB instance ID.
      */
     public $LoadBalancerId;
 
@@ -38,7 +38,7 @@ class TargetGroupAssociation extends AbstractModel
     public $TargetGroupId;
 
     /**
-     * @param string $LoadBalancerId CLB ID.
+     * @param string $LoadBalancerId GWLB instance ID.
      * @param string $TargetGroupId Target group ID.
      */
     function __construct()

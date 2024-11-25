@@ -44,6 +44,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTags(array $Tags) Set The list of tags to be bound.
  * @method string getProtocol() Obtain The protocol type of the bandwidth package. Valid values: 'ipv4' and 'ipv6'. Default value: 'ipv4'.
  * @method void setProtocol(string $Protocol) Set The protocol type of the bandwidth package. Valid values: 'ipv4' and 'ipv6'. Default value: 'ipv4'.
+ * @method integer getTimeSpan() Obtain 
+ * @method void setTimeSpan(integer $TimeSpan) Set 
  */
 class CreateBandwidthPackageRequest extends AbstractModel
 {
@@ -88,6 +90,11 @@ class CreateBandwidthPackageRequest extends AbstractModel
     public $Protocol;
 
     /**
+     * @var integer 
+     */
+    public $TimeSpan;
+
+    /**
      * @param string $NetworkType The network type of the bandwidth package. Default value: `BGP`. Valid values:
 `BGP` 
 `HIGH_QUALITY_BGP`
@@ -100,6 +107,7 @@ class CreateBandwidthPackageRequest extends AbstractModel
      * @param integer $InternetMaxBandwidth The limit of the bandwidth package in Mbps. The value '-1' indicates there is no limit. This feature is currently in beta.
      * @param array $Tags The list of tags to be bound.
      * @param string $Protocol The protocol type of the bandwidth package. Valid values: 'ipv4' and 'ipv6'. Default value: 'ipv4'.
+     * @param integer $TimeSpan 
      */
     function __construct()
     {
@@ -145,6 +153,10 @@ class CreateBandwidthPackageRequest extends AbstractModel
 
         if (array_key_exists("Protocol",$param) and $param["Protocol"] !== null) {
             $this->Protocol = $param["Protocol"];
+        }
+
+        if (array_key_exists("TimeSpan",$param) and $param["TimeSpan"] !== null) {
+            $this->TimeSpan = $param["TimeSpan"];
         }
     }
 }

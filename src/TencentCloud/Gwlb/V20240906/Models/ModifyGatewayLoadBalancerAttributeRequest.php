@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getLoadBalancerId() Obtain Unique GWLB ID.
  * @method void setLoadBalancerId(string $LoadBalancerId) Set Unique GWLB ID.
- * @method string getLoadBalancerName() Obtain GWLB name.
- * @method void setLoadBalancerName(string $LoadBalancerName) Set GWLB name.
+ * @method string getLoadBalancerName() Obtain GWLB instance name. It supports input of 1 to 60 characters.
+ * @method void setLoadBalancerName(string $LoadBalancerName) Set GWLB instance name. It supports input of 1 to 60 characters.
  */
 class ModifyGatewayLoadBalancerAttributeRequest extends AbstractModel
 {
@@ -33,13 +33,13 @@ class ModifyGatewayLoadBalancerAttributeRequest extends AbstractModel
     public $LoadBalancerId;
 
     /**
-     * @var string GWLB name.
+     * @var string GWLB instance name. It supports input of 1 to 60 characters.
      */
     public $LoadBalancerName;
 
     /**
      * @param string $LoadBalancerId Unique GWLB ID.
-     * @param string $LoadBalancerName GWLB name.
+     * @param string $LoadBalancerName GWLB instance name. It supports input of 1 to 60 characters.
      */
     function __construct()
     {
