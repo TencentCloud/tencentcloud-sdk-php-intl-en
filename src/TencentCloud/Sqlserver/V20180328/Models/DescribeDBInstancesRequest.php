@@ -76,6 +76,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUidSet(array $UidSet) Set Unique Uid of an instance
  * @method string getInstanceType() Obtain Instance type. Valid values: `HA` (high-availability), `RO` (read-only), `SI` (basic edition), `BI` (business intelligence service).
  * @method void setInstanceType(string $InstanceType) Set Instance type. Valid values: `HA` (high-availability), `RO` (read-only), `SI` (basic edition), `BI` (business intelligence service).
+ * @method string getPaginationType() Obtain 
+ * @method void setPaginationType(string $PaginationType) Set 
  */
 class DescribeDBInstancesRequest extends AbstractModel
 {
@@ -172,6 +174,11 @@ class DescribeDBInstancesRequest extends AbstractModel
     public $InstanceType;
 
     /**
+     * @var string 
+     */
+    public $PaginationType;
+
+    /**
      * @param integer $ProjectId Project ID
      * @param integer $Status Instance status. Valid values:
 <li>1: applying</li>
@@ -200,6 +207,7 @@ class DescribeDBInstancesRequest extends AbstractModel
      * @param string $SearchKey Keyword used for fuzzy match, including instance ID, instance name, and instance private IP
      * @param array $UidSet Unique Uid of an instance
      * @param string $InstanceType Instance type. Valid values: `HA` (high-availability), `RO` (read-only), `SI` (basic edition), `BI` (business intelligence service).
+     * @param string $PaginationType 
      */
     function __construct()
     {
@@ -276,6 +284,10 @@ class DescribeDBInstancesRequest extends AbstractModel
 
         if (array_key_exists("InstanceType",$param) and $param["InstanceType"] !== null) {
             $this->InstanceType = $param["InstanceType"];
+        }
+
+        if (array_key_exists("PaginationType",$param) and $param["PaginationType"] !== null) {
+            $this->PaginationType = $param["PaginationType"];
         }
     }
 }

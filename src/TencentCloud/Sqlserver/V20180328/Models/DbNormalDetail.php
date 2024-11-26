@@ -98,6 +98,7 @@ class DbNormalDetail extends AbstractModel
 
     /**
      * @var string Whether full-text indexes are enabled. Valid values: `0` (no), `1` (yes)
+     * @deprecated
      */
     public $IsFulltextEnabled;
 

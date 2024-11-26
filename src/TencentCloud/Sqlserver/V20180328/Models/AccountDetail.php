@@ -18,7 +18,7 @@ namespace TencentCloud\Sqlserver\V20180328\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Account details
+ * Account information details
  *
  * @method string getName() Obtain Account name
  * @method void setName(string $Name) Set Account name
@@ -38,6 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDbs(array $Dbs) Set Information of read and write permissions of this account on relevant databases
  * @method boolean getIsAdmin() Obtain Whether it is an admin account
  * @method void setIsAdmin(boolean $IsAdmin) Set Whether it is an admin account
+ * @method boolean getIsCam() Obtain Whether it is a CAM managed account
+ * @method void setIsCam(boolean $IsCam) Set Whether it is a CAM managed account
  * @method string getAuthentication() Obtain Valid values: `win-windows authentication`, `sql-sqlserver authentication`.
  * @method void setAuthentication(string $Authentication) Set Valid values: `win-windows authentication`, `sql-sqlserver authentication`.
  * @method string getHost() Obtain The host required for `win-windows authentication` account
@@ -93,6 +95,11 @@ class AccountDetail extends AbstractModel
     public $IsAdmin;
 
     /**
+     * @var boolean Whether it is a CAM managed account
+     */
+    public $IsCam;
+
+    /**
      * @var string Valid values: `win-windows authentication`, `sql-sqlserver authentication`.
      */
     public $Authentication;
@@ -117,6 +124,7 @@ class AccountDetail extends AbstractModel
      * @param string $InternalStatus Internal account status, which should be `enable` normally
      * @param array $Dbs Information of read and write permissions of this account on relevant databases
      * @param boolean $IsAdmin Whether it is an admin account
+     * @param boolean $IsCam Whether it is a CAM managed account
      * @param string $Authentication Valid values: `win-windows authentication`, `sql-sqlserver authentication`.
      * @param string $Host The host required for `win-windows authentication` account
      * @param string $AccountType Account type. Valid values: `L0` (admin account, only for basic edition), `L1` (privileged account), `L2` (designated account), `L3` (standard account).
@@ -173,6 +181,10 @@ class AccountDetail extends AbstractModel
 
         if (array_key_exists("IsAdmin",$param) and $param["IsAdmin"] !== null) {
             $this->IsAdmin = $param["IsAdmin"];
+        }
+
+        if (array_key_exists("IsCam",$param) and $param["IsCam"] !== null) {
+            $this->IsCam = $param["IsCam"];
         }
 
         if (array_key_exists("Authentication",$param) and $param["Authentication"] !== null) {

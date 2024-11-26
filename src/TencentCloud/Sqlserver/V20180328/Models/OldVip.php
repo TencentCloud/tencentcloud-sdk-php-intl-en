@@ -18,36 +18,40 @@ namespace TencentCloud\Sqlserver\V20180328\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * This API is used to return the number of unrecovered IP addresses for the instance.
  *
- * @method string getVip() Obtain 
- * @method void setVip(string $Vip) Set 
- * @method string getRecycleTime() Obtain 
- * @method void setRecycleTime(string $RecycleTime) Set 
- * @method integer getOldIpRetainTime() Obtain 
- * @method void setOldIpRetainTime(integer $OldIpRetainTime) Set 
+ * @method string getVip() Obtain Unrecovered old IP addresses
+ * @method void setVip(string $Vip) Set Unrecovered old IP addresses
+ * @method string getRecycleTime() Obtain IP recovery time
+ * @method void setRecycleTime(string $RecycleTime) Set IP recovery time
+ * @method integer getOldIpRetainTime() Obtain Old IP retention time (hours)
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setOldIpRetainTime(integer $OldIpRetainTime) Set Old IP retention time (hours)
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class OldVip extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Unrecovered old IP addresses
      */
     public $Vip;
 
     /**
-     * @var string 
+     * @var string IP recovery time
      */
     public $RecycleTime;
 
     /**
-     * @var integer 
+     * @var integer Old IP retention time (hours)
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $OldIpRetainTime;
 
     /**
-     * @param string $Vip 
-     * @param string $RecycleTime 
-     * @param integer $OldIpRetainTime 
+     * @param string $Vip Unrecovered old IP addresses
+     * @param string $RecycleTime IP recovery time
+     * @param integer $OldIpRetainTime Old IP retention time (hours)
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

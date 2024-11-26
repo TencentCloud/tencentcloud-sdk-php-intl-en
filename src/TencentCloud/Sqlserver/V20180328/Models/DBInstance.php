@@ -84,34 +84,20 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUniqVpcId(string $UniqVpcId) Set Unique string-type ID of instance VPC in the format of `vpc-xxx`, which is an empty string if the basic network is used
  * @method string getUniqSubnetId() Obtain Unique string-type ID of instance subnet in the format of `subnet-xxx`, which is an empty string if the basic network is used
  * @method void setUniqSubnetId(string $UniqSubnetId) Set Unique string-type ID of instance subnet in the format of `subnet-xxx`, which is an empty string if the basic network is used
- * @method string getIsolateOperator() Obtain Instance isolation.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setIsolateOperator(string $IsolateOperator) Set Instance isolation.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getSubFlag() Obtain Pub/sub flag. Valid values: SUB (subscribe instance), PUB (publish instance). If it is left empty, it refers to a regular instance without a pub/sub design.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setSubFlag(string $SubFlag) Set Pub/sub flag. Valid values: SUB (subscribe instance), PUB (publish instance). If it is left empty, it refers to a regular instance without a pub/sub design.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getROFlag() Obtain Read-only flag. Valid values: RO (read-only instance), MASTER (primary instance with read-only instances). If it is left empty, it refers to an instance which is not read-only and has no RO group.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setROFlag(string $ROFlag) Set Read-only flag. Valid values: RO (read-only instance), MASTER (primary instance with read-only instances). If it is left empty, it refers to an instance which is not read-only and has no RO group.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getHAFlag() Obtain Disaster recovery type. Valid values: MIRROR (image), ALWAYSON (AlwaysOn), SINGLE (singleton).
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setHAFlag(string $HAFlag) Set Disaster recovery type. Valid values: MIRROR (image), ALWAYSON (AlwaysOn), SINGLE (singleton).
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method array getResourceTags() Obtain The list of tags associated with the instance
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setResourceTags(array $ResourceTags) Set The list of tags associated with the instance
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method string getBackupModel() Obtain Backup mode. Valid values: `master_pkg` (archive the backup files of the primary node (default value)), `master_no_pkg` (do not archive the backup files of the primary node), `slave_pkg` (archive the backup files of the replica node (valid for Always On clusters)), `slave_no_pkg` (do not archive the backup files of the replica node (valid for Always On clusters)). This parameter is invalid for read-only instances.
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setBackupModel(string $BackupModel) Set Backup mode. Valid values: `master_pkg` (archive the backup files of the primary node (default value)), `master_no_pkg` (do not archive the backup files of the primary node), `slave_pkg` (archive the backup files of the replica node (valid for Always On clusters)), `slave_no_pkg` (do not archive the backup files of the replica node (valid for Always On clusters)). This parameter is invalid for read-only instances.
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method string getInstanceNote() Obtain Instance backup info
-Note: This field may return `null`, indicating that no valid values can be obtained.
- * @method void setInstanceNote(string $InstanceNote) Set Instance backup info
-Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method string getIsolateOperator() Obtain Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setIsolateOperator(string $IsolateOperator) Set Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getSubFlag() Obtain Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setSubFlag(string $SubFlag) Set Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getROFlag() Obtain Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setROFlag(string $ROFlag) Set Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getHAFlag() Obtain Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setHAFlag(string $HAFlag) Set Note: This field may return null, indicating that no valid values can be obtained.
+ * @method array getResourceTags() Obtain Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setResourceTags(array $ResourceTags) Set Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getBackupModel() Obtain Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setBackupModel(string $BackupModel) Set Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getInstanceNote() Obtain Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setInstanceNote(string $InstanceNote) Set Note: This field may return null, indicating that no valid values can be obtained.
  * @method array getBackupCycle() Obtain Backup cycle
  * @method void setBackupCycle(array $BackupCycle) Set Backup cycle
  * @method string getBackupCycleType() Obtain Backup cycle type. Valid values: `daily`, `weekly`, `monthly`.
@@ -136,18 +122,12 @@ Note: This field may return `null`, indicating that no valid values can be obtai
  * @method void setTimeZone(string $TimeZone) Set System time zone. Default value: `China Standard Time`.
  * @method boolean getIsDrZone() Obtain Whether the instance is deployed across AZs
  * @method void setIsDrZone(boolean $IsDrZone) Set Whether the instance is deployed across AZs
- * @method SlaveZones getSlaveZones() Obtain Replica AZ information
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setSlaveZones(SlaveZones $SlaveZones) Set Replica AZ information
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getArchitecture() Obtain Architecture type. Valid values: `SINGLE` (single-node), `DOUBLE` (two-node).
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
- * @method void setArchitecture(string $Architecture) Set Architecture type. Valid values: `SINGLE` (single-node), `DOUBLE` (two-node).
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
- * @method string getStyle() Obtain Instance type. Valid values: `EXCLUSIVE` (dedicated), `SHARED` (shared)
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setStyle(string $Style) Set Instance type. Valid values: `EXCLUSIVE` (dedicated), `SHARED` (shared)
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method SlaveZones getSlaveZones() Obtain Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setSlaveZones(SlaveZones $SlaveZones) Set Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getArchitecture() Obtain Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setArchitecture(string $Architecture) Set Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getStyle() Obtain Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setStyle(string $Style) Set Note: This field may return null, indicating that no valid values can be obtained.
  */
 class DBInstance extends AbstractModel
 {
@@ -312,44 +292,37 @@ class DBInstance extends AbstractModel
     public $UniqSubnetId;
 
     /**
-     * @var string Instance isolation.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $IsolateOperator;
 
     /**
-     * @var string Pub/sub flag. Valid values: SUB (subscribe instance), PUB (publish instance). If it is left empty, it refers to a regular instance without a pub/sub design.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $SubFlag;
 
     /**
-     * @var string Read-only flag. Valid values: RO (read-only instance), MASTER (primary instance with read-only instances). If it is left empty, it refers to an instance which is not read-only and has no RO group.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ROFlag;
 
     /**
-     * @var string Disaster recovery type. Valid values: MIRROR (image), ALWAYSON (AlwaysOn), SINGLE (singleton).
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $HAFlag;
 
     /**
-     * @var array The list of tags associated with the instance
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @var array Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ResourceTags;
 
     /**
-     * @var string Backup mode. Valid values: `master_pkg` (archive the backup files of the primary node (default value)), `master_no_pkg` (do not archive the backup files of the primary node), `slave_pkg` (archive the backup files of the replica node (valid for Always On clusters)), `slave_no_pkg` (do not archive the backup files of the replica node (valid for Always On clusters)). This parameter is invalid for read-only instances.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @var string Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $BackupModel;
 
     /**
-     * @var string Instance backup info
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @var string Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $InstanceNote;
 
@@ -414,20 +387,17 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     public $IsDrZone;
 
     /**
-     * @var SlaveZones Replica AZ information
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var SlaveZones Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $SlaveZones;
 
     /**
-     * @var string Architecture type. Valid values: `SINGLE` (single-node), `DOUBLE` (two-node).
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
+     * @var string Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Architecture;
 
     /**
-     * @var string Instance type. Valid values: `EXCLUSIVE` (dedicated), `SHARED` (shared)
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Style;
 
@@ -464,20 +434,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param integer $Pid Billing ID
      * @param string $UniqVpcId Unique string-type ID of instance VPC in the format of `vpc-xxx`, which is an empty string if the basic network is used
      * @param string $UniqSubnetId Unique string-type ID of instance subnet in the format of `subnet-xxx`, which is an empty string if the basic network is used
-     * @param string $IsolateOperator Instance isolation.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $SubFlag Pub/sub flag. Valid values: SUB (subscribe instance), PUB (publish instance). If it is left empty, it refers to a regular instance without a pub/sub design.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $ROFlag Read-only flag. Valid values: RO (read-only instance), MASTER (primary instance with read-only instances). If it is left empty, it refers to an instance which is not read-only and has no RO group.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $HAFlag Disaster recovery type. Valid values: MIRROR (image), ALWAYSON (AlwaysOn), SINGLE (singleton).
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param array $ResourceTags The list of tags associated with the instance
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param string $BackupModel Backup mode. Valid values: `master_pkg` (archive the backup files of the primary node (default value)), `master_no_pkg` (do not archive the backup files of the primary node), `slave_pkg` (archive the backup files of the replica node (valid for Always On clusters)), `slave_no_pkg` (do not archive the backup files of the replica node (valid for Always On clusters)). This parameter is invalid for read-only instances.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param string $InstanceNote Instance backup info
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param string $IsolateOperator Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $SubFlag Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $ROFlag Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $HAFlag Note: This field may return null, indicating that no valid values can be obtained.
+     * @param array $ResourceTags Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $BackupModel Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $InstanceNote Note: This field may return null, indicating that no valid values can be obtained.
      * @param array $BackupCycle Backup cycle
      * @param string $BackupCycleType Backup cycle type. Valid values: `daily`, `weekly`, `monthly`.
      * @param integer $BackupSaveDays Data (log) backup retention period
@@ -490,12 +453,9 @@ Note: This field may return `null`, indicating that no valid values can be obtai
      * @param string $Collation Collation of system character sets. Default value: `Chinese_PRC_CI_AS`.
      * @param string $TimeZone System time zone. Default value: `China Standard Time`.
      * @param boolean $IsDrZone Whether the instance is deployed across AZs
-     * @param SlaveZones $SlaveZones Replica AZ information
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Architecture Architecture type. Valid values: `SINGLE` (single-node), `DOUBLE` (two-node).
-Note: u200dThis field may return null, indicating that no valid values can be obtained.
-     * @param string $Style Instance type. Valid values: `EXCLUSIVE` (dedicated), `SHARED` (shared)
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param SlaveZones $SlaveZones Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $Architecture Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $Style Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

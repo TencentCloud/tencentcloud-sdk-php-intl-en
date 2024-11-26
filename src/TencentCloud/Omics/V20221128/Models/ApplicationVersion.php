@@ -110,6 +110,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     /**
      * @var string Git information
 Note: This field may return null, indicating that no valid values can be obtained.
+     * @deprecated
      */
     public $GitInfo;
 

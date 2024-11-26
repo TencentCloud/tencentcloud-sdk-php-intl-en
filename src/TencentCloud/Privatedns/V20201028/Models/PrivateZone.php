@@ -18,51 +18,79 @@ namespace TencentCloud\Privatedns\V20201028\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Private domain information
+ * Private domain information.
  *
- * @method string getZoneId() Obtain Private domain ID: zone-xxxxxxxx
- * @method void setZoneId(string $ZoneId) Set Private domain ID: zone-xxxxxxxx
- * @method integer getOwnerUin() Obtain Domain name owner UIN
- * @method void setOwnerUin(integer $OwnerUin) Set Domain name owner UIN
- * @method string getDomain() Obtain Private domain
- * @method void setDomain(string $Domain) Set Private domain
+ * @method string getZoneId() Obtain Private domain ID, which is in zone-xxxxxxxx format.
+ * @method void setZoneId(string $ZoneId) Set Private domain ID, which is in zone-xxxxxxxx format.
+ * @method integer getOwnerUin() Obtain UIN of the domain name owner.
+ * @method void setOwnerUin(integer $OwnerUin) Set UIN of the domain name owner.
+ * @method string getDomain() Obtain Private domain name.
+ * @method void setDomain(string $Domain) Set Private domain name.
  * @method string getCreatedOn() Obtain Creation time
  * @method void setCreatedOn(string $CreatedOn) Set Creation time
  * @method string getUpdatedOn() Obtain Modification time
  * @method void setUpdatedOn(string $UpdatedOn) Set Modification time
- * @method integer getRecordCount() Obtain Number of results
- * @method void setRecordCount(integer $RecordCount) Set Number of results
- * @method string getRemark() Obtain Remarks
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setRemark(string $Remark) Set Remarks
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method array getVpcSet() Obtain List of bound VPCs
- * @method void setVpcSet(array $VpcSet) Set List of bound VPCs
- * @method string getStatus() Obtain Private domain status. Valid values: ENABLED (DNS enabled); SUSPEND (DNS paused); FROZEN (locked)
- * @method void setStatus(string $Status) Set Private domain status. Valid values: ENABLED (DNS enabled); SUSPEND (DNS paused); FROZEN (locked)
- * @method string getDnsForwardStatus() Obtain Subdomain recursive DNS status. Valid values: ENABLED, DISABLED
- * @method void setDnsForwardStatus(string $DnsForwardStatus) Set Subdomain recursive DNS status. Valid values: ENABLED, DISABLED
- * @method array getTags() Obtain Set of tag key-value pairs
- * @method void setTags(array $Tags) Set Set of tag key-value pairs
- * @method array getAccountVpcSet() Obtain List of authorized accounts' VPCs associated with the private domain
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setAccountVpcSet(array $AccountVpcSet) Set List of authorized accounts' VPCs associated with the private domain
-Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method integer getRecordCount() Obtain Number of records.
+ * @method void setRecordCount(integer $RecordCount) Set Number of records.
+ * @method string getRemark() Obtain Remarks.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setRemark(string $Remark) Set Remarks.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method array getVpcSet() Obtain List of bound VPCs.
+ * @method void setVpcSet(array $VpcSet) Set List of bound VPCs.
+ * @method string getStatus() Obtain Status of the VPC bound with the private domain. SUSPEND: The VPC is not associated; ENABLED: the VPC has been associated.
+, FAILED: the VPC fails to be associated.
+ * @method void setStatus(string $Status) Set Status of the VPC bound with the private domain. SUSPEND: The VPC is not associated; ENABLED: the VPC has been associated.
+, FAILED: the VPC fails to be associated.
+ * @method string getDnsForwardStatus() Obtain Recursive resolution status of the domain name. ENABLED: enabled; DISABLED: disabled.
+ * @method void setDnsForwardStatus(string $DnsForwardStatus) Set Recursive resolution status of the domain name. ENABLED: enabled; DISABLED: disabled.
+ * @method array getTags() Obtain Tag key-value pair collection.
+ * @method void setTags(array $Tags) Set Tag key-value pair collection.
+ * @method array getAccountVpcSet() Obtain List of bound VPCs of the associated account.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setAccountVpcSet(array $AccountVpcSet) Set List of bound VPCs of the associated account.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method boolean getIsCustomTld() Obtain Whether the TLD is a custom one.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setIsCustomTld(boolean $IsCustomTld) Set Whether the TLD is a custom one.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getCnameSpeedupStatus() Obtain CNAME acceleration status. ENABLED: enabled; DISABLED: disabled.
+ * @method void setCnameSpeedupStatus(string $CnameSpeedupStatus) Set CNAME acceleration status. ENABLED: enabled; DISABLED: disabled.
+ * @method string getForwardRuleName() Obtain Forwarding rule name.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setForwardRuleName(string $ForwardRuleName) Set Forwarding rule name.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getForwardRuleType() Obtain Forwarding rule type. DOWN: from cloud to off-cloud; UP: from off-cloud to cloud. Currently, only DOWN is supported.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setForwardRuleType(string $ForwardRuleType) Set Forwarding rule type. DOWN: from cloud to off-cloud; UP: from off-cloud to cloud. Currently, only DOWN is supported.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getForwardAddress() Obtain Forwarding address.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setForwardAddress(string $ForwardAddress) Set Forwarding address.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getEndPointName() Obtain Endpoint name.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setEndPointName(string $EndPointName) Set Endpoint name.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method array getDeletedVpcSet() Obtain Deleted VPC.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setDeletedVpcSet(array $DeletedVpcSet) Set Deleted VPC.
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class PrivateZone extends AbstractModel
 {
     /**
-     * @var string Private domain ID: zone-xxxxxxxx
+     * @var string Private domain ID, which is in zone-xxxxxxxx format.
      */
     public $ZoneId;
 
     /**
-     * @var integer Domain name owner UIN
+     * @var integer UIN of the domain name owner.
      */
     public $OwnerUin;
 
     /**
-     * @var string Private domain
+     * @var string Private domain name.
      */
     public $Domain;
 
@@ -77,57 +105,113 @@ class PrivateZone extends AbstractModel
     public $UpdatedOn;
 
     /**
-     * @var integer Number of results
+     * @var integer Number of records.
      */
     public $RecordCount;
 
     /**
-     * @var string Remarks
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string Remarks.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Remark;
 
     /**
-     * @var array List of bound VPCs
+     * @var array List of bound VPCs.
      */
     public $VpcSet;
 
     /**
-     * @var string Private domain status. Valid values: ENABLED (DNS enabled); SUSPEND (DNS paused); FROZEN (locked)
+     * @var string Status of the VPC bound with the private domain. SUSPEND: The VPC is not associated; ENABLED: the VPC has been associated.
+, FAILED: the VPC fails to be associated.
      */
     public $Status;
 
     /**
-     * @var string Subdomain recursive DNS status. Valid values: ENABLED, DISABLED
+     * @var string Recursive resolution status of the domain name. ENABLED: enabled; DISABLED: disabled.
      */
     public $DnsForwardStatus;
 
     /**
-     * @var array Set of tag key-value pairs
+     * @var array Tag key-value pair collection.
      */
     public $Tags;
 
     /**
-     * @var array List of authorized accounts' VPCs associated with the private domain
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @var array List of bound VPCs of the associated account.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $AccountVpcSet;
 
     /**
-     * @param string $ZoneId Private domain ID: zone-xxxxxxxx
-     * @param integer $OwnerUin Domain name owner UIN
-     * @param string $Domain Private domain
+     * @var boolean Whether the TLD is a custom one.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $IsCustomTld;
+
+    /**
+     * @var string CNAME acceleration status. ENABLED: enabled; DISABLED: disabled.
+     */
+    public $CnameSpeedupStatus;
+
+    /**
+     * @var string Forwarding rule name.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $ForwardRuleName;
+
+    /**
+     * @var string Forwarding rule type. DOWN: from cloud to off-cloud; UP: from off-cloud to cloud. Currently, only DOWN is supported.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $ForwardRuleType;
+
+    /**
+     * @var string Forwarding address.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $ForwardAddress;
+
+    /**
+     * @var string Endpoint name.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $EndPointName;
+
+    /**
+     * @var array Deleted VPC.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $DeletedVpcSet;
+
+    /**
+     * @param string $ZoneId Private domain ID, which is in zone-xxxxxxxx format.
+     * @param integer $OwnerUin UIN of the domain name owner.
+     * @param string $Domain Private domain name.
      * @param string $CreatedOn Creation time
      * @param string $UpdatedOn Modification time
-     * @param integer $RecordCount Number of results
-     * @param string $Remark Remarks
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param array $VpcSet List of bound VPCs
-     * @param string $Status Private domain status. Valid values: ENABLED (DNS enabled); SUSPEND (DNS paused); FROZEN (locked)
-     * @param string $DnsForwardStatus Subdomain recursive DNS status. Valid values: ENABLED, DISABLED
-     * @param array $Tags Set of tag key-value pairs
-     * @param array $AccountVpcSet List of authorized accounts' VPCs associated with the private domain
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param integer $RecordCount Number of records.
+     * @param string $Remark Remarks.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param array $VpcSet List of bound VPCs.
+     * @param string $Status Status of the VPC bound with the private domain. SUSPEND: The VPC is not associated; ENABLED: the VPC has been associated.
+, FAILED: the VPC fails to be associated.
+     * @param string $DnsForwardStatus Recursive resolution status of the domain name. ENABLED: enabled; DISABLED: disabled.
+     * @param array $Tags Tag key-value pair collection.
+     * @param array $AccountVpcSet List of bound VPCs of the associated account.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param boolean $IsCustomTld Whether the TLD is a custom one.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $CnameSpeedupStatus CNAME acceleration status. ENABLED: enabled; DISABLED: disabled.
+     * @param string $ForwardRuleName Forwarding rule name.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $ForwardRuleType Forwarding rule type. DOWN: from cloud to off-cloud; UP: from off-cloud to cloud. Currently, only DOWN is supported.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $ForwardAddress Forwarding address.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $EndPointName Endpoint name.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param array $DeletedVpcSet Deleted VPC.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -202,6 +286,39 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                 $obj = new AccountVpcInfoOutput();
                 $obj->deserialize($value);
                 array_push($this->AccountVpcSet, $obj);
+            }
+        }
+
+        if (array_key_exists("IsCustomTld",$param) and $param["IsCustomTld"] !== null) {
+            $this->IsCustomTld = $param["IsCustomTld"];
+        }
+
+        if (array_key_exists("CnameSpeedupStatus",$param) and $param["CnameSpeedupStatus"] !== null) {
+            $this->CnameSpeedupStatus = $param["CnameSpeedupStatus"];
+        }
+
+        if (array_key_exists("ForwardRuleName",$param) and $param["ForwardRuleName"] !== null) {
+            $this->ForwardRuleName = $param["ForwardRuleName"];
+        }
+
+        if (array_key_exists("ForwardRuleType",$param) and $param["ForwardRuleType"] !== null) {
+            $this->ForwardRuleType = $param["ForwardRuleType"];
+        }
+
+        if (array_key_exists("ForwardAddress",$param) and $param["ForwardAddress"] !== null) {
+            $this->ForwardAddress = $param["ForwardAddress"];
+        }
+
+        if (array_key_exists("EndPointName",$param) and $param["EndPointName"] !== null) {
+            $this->EndPointName = $param["EndPointName"];
+        }
+
+        if (array_key_exists("DeletedVpcSet",$param) and $param["DeletedVpcSet"] !== null) {
+            $this->DeletedVpcSet = [];
+            foreach ($param["DeletedVpcSet"] as $key => $value){
+                $obj = new VpcInfo();
+                $obj->deserialize($value);
+                array_push($this->DeletedVpcSet, $obj);
             }
         }
     }

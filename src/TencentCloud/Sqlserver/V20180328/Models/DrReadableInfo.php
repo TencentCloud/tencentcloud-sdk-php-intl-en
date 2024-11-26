@@ -18,60 +18,84 @@ namespace TencentCloud\Sqlserver\V20180328\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Replica server read-only information
  *
- * @method string getSlaveStatus() Obtain 
- * @method void setSlaveStatus(string $SlaveStatus) Set 
- * @method string getReadableStatus() Obtain 
- * @method void setReadableStatus(string $ReadableStatus) Set 
- * @method string getVip() Obtain 
- * @method void setVip(string $Vip) Set 
- * @method integer getVPort() Obtain 
- * @method void setVPort(integer $VPort) Set 
- * @method string getUniqVpcId() Obtain 
- * @method void setUniqVpcId(string $UniqVpcId) Set 
- * @method string getUniqSubnetId() Obtain 
- * @method void setUniqSubnetId(string $UniqSubnetId) Set 
+ * @method string getSlaveStatus() Obtain Replica server status. Valid values: enable - running; disable - unavailable
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setSlaveStatus(string $SlaveStatus) Set Replica server status. Valid values: enable - running; disable - unavailable
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getReadableStatus() Obtain Replica server readable status. Valid values: enable - enabled; disable - disabled
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setReadableStatus(string $ReadableStatus) Set Replica server readable status. Valid values: enable - enabled; disable - disabled
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getVip() Obtain Replica server read-only VIP
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setVip(string $Vip) Set Replica server read-only VIP
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getVPort() Obtain Replica server read-only port
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setVPort(integer $VPort) Set Replica server read-only port
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getUniqVpcId() Obtain Replica server VPC ID
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setUniqVpcId(string $UniqVpcId) Set Replica server VPC ID
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getUniqSubnetId() Obtain Replica server VPC subnet ID
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setUniqSubnetId(string $UniqSubnetId) Set Replica server VPC subnet ID
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class DrReadableInfo extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Replica server status. Valid values: enable - running; disable - unavailable
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $SlaveStatus;
 
     /**
-     * @var string 
+     * @var string Replica server readable status. Valid values: enable - enabled; disable - disabled
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ReadableStatus;
 
     /**
-     * @var string 
+     * @var string Replica server read-only VIP
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Vip;
 
     /**
-     * @var integer 
+     * @var integer Replica server read-only port
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $VPort;
 
     /**
-     * @var string 
+     * @var string Replica server VPC ID
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $UniqVpcId;
 
     /**
-     * @var string 
+     * @var string Replica server VPC subnet ID
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $UniqSubnetId;
 
     /**
-     * @param string $SlaveStatus 
-     * @param string $ReadableStatus 
-     * @param string $Vip 
-     * @param integer $VPort 
-     * @param string $UniqVpcId 
-     * @param string $UniqSubnetId 
+     * @param string $SlaveStatus Replica server status. Valid values: enable - running; disable - unavailable
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $ReadableStatus Replica server readable status. Valid values: enable - enabled; disable - disabled
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $Vip Replica server read-only VIP
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $VPort Replica server read-only port
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $UniqVpcId Replica server VPC ID
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $UniqSubnetId Replica server VPC subnet ID
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

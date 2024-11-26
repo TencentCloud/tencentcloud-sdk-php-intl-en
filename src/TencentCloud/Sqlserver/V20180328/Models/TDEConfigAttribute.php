@@ -24,10 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEncryption(string $Encryption) Set TDE status. Valid values: `enable` (enabled), `disable` (disabled).
  * @method string getCertificateAttribution() Obtain Certificate ownership. Valid values: `self` (certificate of the this account), `others` (certificate of the other account), `none` (no certificate).
  * @method void setCertificateAttribution(string $CertificateAttribution) Set Certificate ownership. Valid values: `self` (certificate of the this account), `others` (certificate of the other account), `none` (no certificate).
- * @method string getQuoteUin() Obtain ID of the other referenced root account when enabling TDE
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setQuoteUin(string $QuoteUin) Set ID of the other referenced root account when enabling TDE
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getQuoteUin() Obtain Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setQuoteUin(string $QuoteUin) Set Note: This field may return null, indicating that no valid values can be obtained.
  */
 class TDEConfigAttribute extends AbstractModel
 {
@@ -42,16 +40,14 @@ class TDEConfigAttribute extends AbstractModel
     public $CertificateAttribution;
 
     /**
-     * @var string ID of the other referenced root account when enabling TDE
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $QuoteUin;
 
     /**
      * @param string $Encryption TDE status. Valid values: `enable` (enabled), `disable` (disabled).
      * @param string $CertificateAttribution Certificate ownership. Valid values: `self` (certificate of the this account), `others` (certificate of the other account), `none` (no certificate).
-     * @param string $QuoteUin ID of the other referenced root account when enabling TDE
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $QuoteUin Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

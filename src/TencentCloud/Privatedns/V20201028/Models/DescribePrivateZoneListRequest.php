@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribePrivateZoneList request structure.
  *
- * @method integer getOffset() Obtain Pagination offset, starting from 0
- * @method void setOffset(integer $Offset) Set Pagination offset, starting from 0
- * @method integer getLimit() Obtain Number of entries per page. Maximum value: 100. Default value: 20
- * @method void setLimit(integer $Limit) Set Number of entries per page. Maximum value: 100. Default value: 20
- * @method array getFilters() Obtain Filter parameter
- * @method void setFilters(array $Filters) Set Filter parameter
+ * @method integer getOffset() Obtain Pagination offset, starting from 0.
+ * @method void setOffset(integer $Offset) Set Pagination offset, starting from 0.
+ * @method integer getLimit() Obtain Pagination limit. Maximum value: 100. Default value: 20.
+ * @method void setLimit(integer $Limit) Set Pagination limit. Maximum value: 100. Default value: 20.
+ * @method array getFilters() Obtain Filter parameters.
+ * @method void setFilters(array $Filters) Set Filter parameters.
  */
 class DescribePrivateZoneListRequest extends AbstractModel
 {
     /**
-     * @var integer Pagination offset, starting from 0
+     * @var integer Pagination offset, starting from 0.
      */
     public $Offset;
 
     /**
-     * @var integer Number of entries per page. Maximum value: 100. Default value: 20
+     * @var integer Pagination limit. Maximum value: 100. Default value: 20.
      */
     public $Limit;
 
     /**
-     * @var array Filter parameter
+     * @var array Filter parameters.
      */
     public $Filters;
 
     /**
-     * @param integer $Offset Pagination offset, starting from 0
-     * @param integer $Limit Number of entries per page. Maximum value: 100. Default value: 20
-     * @param array $Filters Filter parameter
+     * @param integer $Offset Pagination offset, starting from 0.
+     * @param integer $Limit Pagination limit. Maximum value: 100. Default value: 20.
+     * @param array $Filters Filter parameters.
      */
     function __construct()
     {
