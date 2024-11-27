@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) Set Paging offset, a multiple of limit. The minimum value is 0, and the maximum value is Total/Limit rounded up.
  * @method integer getLimit() Obtain Number of returned domains
  * @method void setLimit(integer $Limit) Set Number of returned domains
- * @method array getFilters() Obtain Filter array
- * @method void setFilters(array $Filters) Set Filter array
+ * @method array getFilters() Obtain Filter array. The filter fields are as follows. Edition: instance version, which can be set to sparta-waf or clb-waf; Domain: domain name; DomainId: domain name ID; InstanceName: instance name; InstanceId: instance ID; FlowMode: traffic access mode, which supports only CLB WAF; FlowCheckMode: traffic inspection mode, which supports only CLB WAF; ClsStatus: log switch; Status: WAF switch; BotStatus: BOT switch; ApiStatus: API security switch; Engine: engine mode; UpstreamIP: origin server IP address, which supports only SaaS WAF; UpstreamDomain: origin server domain name, which supports only SaaS WAF; DomainState: domain name status, which supports only SaaS WAF; SgState: security group status, which supports only SaaS WAF; Label: group tag, which supports the filtering of only one tag at a time.
+ * @method void setFilters(array $Filters) Set Filter array. The filter fields are as follows. Edition: instance version, which can be set to sparta-waf or clb-waf; Domain: domain name; DomainId: domain name ID; InstanceName: instance name; InstanceId: instance ID; FlowMode: traffic access mode, which supports only CLB WAF; FlowCheckMode: traffic inspection mode, which supports only CLB WAF; ClsStatus: log switch; Status: WAF switch; BotStatus: BOT switch; ApiStatus: API security switch; Engine: engine mode; UpstreamIP: origin server IP address, which supports only SaaS WAF; UpstreamDomain: origin server domain name, which supports only SaaS WAF; DomainState: domain name status, which supports only SaaS WAF; SgState: security group status, which supports only SaaS WAF; Label: group tag, which supports the filtering of only one tag at a time.
  */
 class DescribeDomainsRequest extends AbstractModel
 {
@@ -40,14 +40,14 @@ class DescribeDomainsRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @var array Filter array
+     * @var array Filter array. The filter fields are as follows. Edition: instance version, which can be set to sparta-waf or clb-waf; Domain: domain name; DomainId: domain name ID; InstanceName: instance name; InstanceId: instance ID; FlowMode: traffic access mode, which supports only CLB WAF; FlowCheckMode: traffic inspection mode, which supports only CLB WAF; ClsStatus: log switch; Status: WAF switch; BotStatus: BOT switch; ApiStatus: API security switch; Engine: engine mode; UpstreamIP: origin server IP address, which supports only SaaS WAF; UpstreamDomain: origin server domain name, which supports only SaaS WAF; DomainState: domain name status, which supports only SaaS WAF; SgState: security group status, which supports only SaaS WAF; Label: group tag, which supports the filtering of only one tag at a time.
      */
     public $Filters;
 
     /**
      * @param integer $Offset Paging offset, a multiple of limit. The minimum value is 0, and the maximum value is Total/Limit rounded up.
      * @param integer $Limit Number of returned domains
-     * @param array $Filters Filter array
+     * @param array $Filters Filter array. The filter fields are as follows. Edition: instance version, which can be set to sparta-waf or clb-waf; Domain: domain name; DomainId: domain name ID; InstanceName: instance name; InstanceId: instance ID; FlowMode: traffic access mode, which supports only CLB WAF; FlowCheckMode: traffic inspection mode, which supports only CLB WAF; ClsStatus: log switch; Status: WAF switch; BotStatus: BOT switch; ApiStatus: API security switch; Engine: engine mode; UpstreamIP: origin server IP address, which supports only SaaS WAF; UpstreamDomain: origin server domain name, which supports only SaaS WAF; DomainState: domain name status, which supports only SaaS WAF; SgState: security group status, which supports only SaaS WAF; Label: group tag, which supports the filtering of only one tag at a time.
      */
     function __construct()
     {

@@ -14,32 +14,32 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Waf\V20180125\Models;
+namespace TencentCloud\Cdc\V20201214\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeAntiFakeUrl request structure.
+ * Information of RegionZoneInfo
  *
- * @method string getDomain() Obtain Domain name
- * @method void setDomain(string $Domain) Set Domain name
- * @method PageInfo getPageInfo() Obtain Page turning parameters
- * @method void setPageInfo(PageInfo $PageInfo) Set Page turning parameters
+ * @method integer getRegionId() Obtain Region id
+ * @method void setRegionId(integer $RegionId) Set Region id
+ * @method array getZones() Obtain ZoneInfo array
+ * @method void setZones(array $Zones) Set ZoneInfo array
  */
-class DescribeAntiFakeUrlRequest extends AbstractModel
+class RegionZoneInfo extends AbstractModel
 {
     /**
-     * @var string Domain name
+     * @var integer Region id
      */
-    public $Domain;
+    public $RegionId;
 
     /**
-     * @var PageInfo Page turning parameters
+     * @var array ZoneInfo array
      */
-    public $PageInfo;
+    public $Zones;
 
     /**
-     * @param string $Domain Domain name
-     * @param PageInfo $PageInfo Page turning parameters
+     * @param integer $RegionId Region id
+     * @param array $Zones ZoneInfo array
      */
     function __construct()
     {
@@ -54,13 +54,17 @@ class DescribeAntiFakeUrlRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Domain",$param) and $param["Domain"] !== null) {
-            $this->Domain = $param["Domain"];
+        if (array_key_exists("RegionId",$param) and $param["RegionId"] !== null) {
+            $this->RegionId = $param["RegionId"];
         }
 
-        if (array_key_exists("PageInfo",$param) and $param["PageInfo"] !== null) {
-            $this->PageInfo = new PageInfo();
-            $this->PageInfo->deserialize($param["PageInfo"]);
+        if (array_key_exists("Zones",$param) and $param["Zones"] !== null) {
+            $this->Zones = [];
+            foreach ($param["Zones"] as $key => $value){
+                $obj = new ZoneInfo();
+                $obj->deserialize($value);
+                array_push($this->Zones, $obj);
+            }
         }
     }
 }

@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CheckTaskNameExist request structure.
  *
- * @method string getProjectId() Obtain Project ID/Workspace ID
- * @method void setProjectId(string $ProjectId) Set Project ID/Workspace ID
- * @method integer getTypeId() Obtain Task Type (consistent with scheduling parameters)
- * @method void setTypeId(integer $TypeId) Set Task Type (consistent with scheduling parameters)
- * @method string getTaskName() Obtain Task Name
- * @method void setTaskName(string $TaskName) Set Task Name
+ * @method string getProjectId() Obtain Project ID/Workspace ID.
+ * @method void setProjectId(string $ProjectId) Set Project ID/Workspace ID.
+ * @method integer getTypeId() Obtain Task Type (consistent with scheduling parameters).
+ * @method void setTypeId(integer $TypeId) Set Task Type (consistent with scheduling parameters).
+ * @method string getTaskName() Obtain Task Name.
+ * @method void setTaskName(string $TaskName) Set Task Name.
  */
 class CheckTaskNameExistRequest extends AbstractModel
 {
     /**
-     * @var string Project ID/Workspace ID
+     * @var string Project ID/Workspace ID.
      */
     public $ProjectId;
 
     /**
-     * @var integer Task Type (consistent with scheduling parameters)
+     * @var integer Task Type (consistent with scheduling parameters).
      */
     public $TypeId;
 
     /**
-     * @var string Task Name
+     * @var string Task Name.
      */
     public $TaskName;
 
     /**
-     * @param string $ProjectId Project ID/Workspace ID
-     * @param integer $TypeId Task Type (consistent with scheduling parameters)
-     * @param string $TaskName Task Name
+     * @param string $ProjectId Project ID/Workspace ID.
+     * @param integer $TypeId Task Type (consistent with scheduling parameters).
+     * @param string $TaskName Task Name.
      */
     function __construct()
     {

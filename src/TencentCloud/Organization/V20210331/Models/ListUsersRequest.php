@@ -38,6 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSortField(string $SortField) Set Sorting field, which currently only supports CreateTime. The default is the CreateTime field.
  * @method string getSortType() Obtain Sorting type. Desc: descending order; Asc: ascending order. It should be set along with SortField.
  * @method void setSortType(string $SortType) Set Sorting type. Desc: descending order; Asc: ascending order. It should be set along with SortField.
+ * @method integer getOffset() Obtain Pagination offset. Do not use it together with NextToken, prioritizing using NextToken.
+ * @method void setOffset(integer $Offset) Set Pagination offset. Do not use it together with NextToken, prioritizing using NextToken.
  */
 class ListUsersRequest extends AbstractModel
 {
@@ -87,6 +89,11 @@ class ListUsersRequest extends AbstractModel
     public $SortType;
 
     /**
+     * @var integer Pagination offset. Do not use it together with NextToken, prioritizing using NextToken.
+     */
+    public $Offset;
+
+    /**
      * @param string $ZoneId Space ID.
      * @param string $UserStatus User status: Enabled, Disabled.
      * @param string $UserType User type. Manual: manually created; Synchronized: externally imported.
@@ -96,6 +103,7 @@ class ListUsersRequest extends AbstractModel
      * @param array $FilterGroups Filtered user group. IsSelected=1 will be returned for the sub-user associated with this user group.
      * @param string $SortField Sorting field, which currently only supports CreateTime. The default is the CreateTime field.
      * @param string $SortType Sorting type. Desc: descending order; Asc: ascending order. It should be set along with SortField.
+     * @param integer $Offset Pagination offset. Do not use it together with NextToken, prioritizing using NextToken.
      */
     function __construct()
     {
@@ -144,6 +152,10 @@ class ListUsersRequest extends AbstractModel
 
         if (array_key_exists("SortType",$param) and $param["SortType"] !== null) {
             $this->SortType = $param["SortType"];
+        }
+
+        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
+            $this->Offset = $param["Offset"];
         }
     }
 }

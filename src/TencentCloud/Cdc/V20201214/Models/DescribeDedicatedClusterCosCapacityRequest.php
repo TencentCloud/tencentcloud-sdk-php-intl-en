@@ -14,32 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Waf\V20180125\Models;
+namespace TencentCloud\Cdc\V20201214\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Common paging parameters
+ * DescribeDedicatedClusterCosCapacity request structure.
  *
- * @method string getPageNumber() Obtain Page number
- * @method void setPageNumber(string $PageNumber) Set Page number
- * @method string getPageSize() Obtain Page Entry Quantity
- * @method void setPageSize(string $PageSize) Set Page Entry Quantity
+ * @method string getDedicatedClusterId() Obtain Queried CDC id
+ * @method void setDedicatedClusterId(string $DedicatedClusterId) Set Queried CDC id
  */
-class PageInfo extends AbstractModel
+class DescribeDedicatedClusterCosCapacityRequest extends AbstractModel
 {
     /**
-     * @var string Page number
+     * @var string Queried CDC id
      */
-    public $PageNumber;
+    public $DedicatedClusterId;
 
     /**
-     * @var string Page Entry Quantity
-     */
-    public $PageSize;
-
-    /**
-     * @param string $PageNumber Page number
-     * @param string $PageSize Page Entry Quantity
+     * @param string $DedicatedClusterId Queried CDC id
      */
     function __construct()
     {
@@ -54,12 +46,8 @@ class PageInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("PageNumber",$param) and $param["PageNumber"] !== null) {
-            $this->PageNumber = $param["PageNumber"];
-        }
-
-        if (array_key_exists("PageSize",$param) and $param["PageSize"] !== null) {
-            $this->PageSize = $param["PageSize"];
+        if (array_key_exists("DedicatedClusterId",$param) and $param["DedicatedClusterId"] !== null) {
+            $this->DedicatedClusterId = $param["DedicatedClusterId"];
         }
     }
 }

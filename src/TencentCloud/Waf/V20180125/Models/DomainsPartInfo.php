@@ -236,6 +236,38 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setProxyBuffer(integer $ProxyBuffer) Set Whether to enable caching. 0: disable; 1: enable.
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getGmType() Obtain Whether to enable SM. 0: do not enable SM; 1: add support for SM based on the existing TLS option; 2: enable SM and support only SM client access.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setGmType(integer $GmType) Set Whether to enable SM. 0: do not enable SM; 1: add support for SM based on the existing TLS option; 2: enable SM and support only SM client access.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getGmCertType() Obtain SM certificate type. 0: no SM certificate is available; 1: the certificate is a self-owned SM certificate; 2: the certificate is a managed SM certificate.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setGmCertType(integer $GmCertType) Set SM certificate type. 0: no SM certificate is available; 1: the certificate is a self-owned SM certificate; 2: the certificate is a managed SM certificate.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getGmCert() Obtain When GmCertType is 1, this parameter needs to be set, indicating the certificate chain of the self-owned SM certificate.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setGmCert(string $GmCert) Set When GmCertType is 1, this parameter needs to be set, indicating the certificate chain of the self-owned SM certificate.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getGmPrivateKey() Obtain When GmCertType is 1, this parameter needs to be set, indicating the private key of the self-owned SM certificate.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setGmPrivateKey(string $GmPrivateKey) Set When GmCertType is 1, this parameter needs to be set, indicating the private key of the self-owned SM certificate.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getGmEncCert() Obtain When GmCertType is 1, this parameter needs to be set, indicating the encryption certificate of the self-owned SM certificate.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setGmEncCert(string $GmEncCert) Set When GmCertType is 1, this parameter needs to be set, indicating the encryption certificate of the self-owned SM certificate.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getGmEncPrivateKey() Obtain When GmCertType is 1, this parameter needs to be set, indicating the private key of the encryption certificate for the self-owned SM certificate.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setGmEncPrivateKey(string $GmEncPrivateKey) Set When GmCertType is 1, this parameter needs to be set, indicating the private key of the encryption certificate for the self-owned SM certificate.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getGmSSLId() Obtain When GmCertType is 2, this parameter needs to be set, indicating the ID of the certificate managed by the Tencent Cloud SSL platform.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setGmSSLId(string $GmSSLId) Set When GmCertType is 2, this parameter needs to be set, indicating the ID of the certificate managed by the Tencent Cloud SSL platform.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method array getLabels() Obtain Domain name tag.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setLabels(array $Labels) Set Domain name tag.
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class DomainsPartInfo extends AbstractModel
 {
@@ -516,6 +548,54 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $ProxyBuffer;
 
     /**
+     * @var integer Whether to enable SM. 0: do not enable SM; 1: add support for SM based on the existing TLS option; 2: enable SM and support only SM client access.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $GmType;
+
+    /**
+     * @var integer SM certificate type. 0: no SM certificate is available; 1: the certificate is a self-owned SM certificate; 2: the certificate is a managed SM certificate.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $GmCertType;
+
+    /**
+     * @var string When GmCertType is 1, this parameter needs to be set, indicating the certificate chain of the self-owned SM certificate.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $GmCert;
+
+    /**
+     * @var string When GmCertType is 1, this parameter needs to be set, indicating the private key of the self-owned SM certificate.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $GmPrivateKey;
+
+    /**
+     * @var string When GmCertType is 1, this parameter needs to be set, indicating the encryption certificate of the self-owned SM certificate.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $GmEncCert;
+
+    /**
+     * @var string When GmCertType is 1, this parameter needs to be set, indicating the private key of the encryption certificate for the self-owned SM certificate.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $GmEncPrivateKey;
+
+    /**
+     * @var string When GmCertType is 2, this parameter needs to be set, indicating the ID of the certificate managed by the Tencent Cloud SSL platform.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $GmSSLId;
+
+    /**
+     * @var array Domain name tag.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $Labels;
+
+    /**
      * @param string $Domain Domain name
      * @param string $DomainId Unique domain name ID
      * @param string $InstanceId Unique instance ID of the domain name
@@ -623,6 +703,22 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $Level Protection rule
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $ProxyBuffer Whether to enable caching. 0: disable; 1: enable.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $GmType Whether to enable SM. 0: do not enable SM; 1: add support for SM based on the existing TLS option; 2: enable SM and support only SM client access.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $GmCertType SM certificate type. 0: no SM certificate is available; 1: the certificate is a self-owned SM certificate; 2: the certificate is a managed SM certificate.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $GmCert When GmCertType is 1, this parameter needs to be set, indicating the certificate chain of the self-owned SM certificate.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $GmPrivateKey When GmCertType is 1, this parameter needs to be set, indicating the private key of the self-owned SM certificate.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $GmEncCert When GmCertType is 1, this parameter needs to be set, indicating the encryption certificate of the self-owned SM certificate.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $GmEncPrivateKey When GmCertType is 1, this parameter needs to be set, indicating the private key of the encryption certificate for the self-owned SM certificate.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $GmSSLId When GmCertType is 2, this parameter needs to be set, indicating the ID of the certificate managed by the Tencent Cloud SSL platform.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param array $Labels Domain name tag.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
@@ -809,6 +905,38 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("ProxyBuffer",$param) and $param["ProxyBuffer"] !== null) {
             $this->ProxyBuffer = $param["ProxyBuffer"];
+        }
+
+        if (array_key_exists("GmType",$param) and $param["GmType"] !== null) {
+            $this->GmType = $param["GmType"];
+        }
+
+        if (array_key_exists("GmCertType",$param) and $param["GmCertType"] !== null) {
+            $this->GmCertType = $param["GmCertType"];
+        }
+
+        if (array_key_exists("GmCert",$param) and $param["GmCert"] !== null) {
+            $this->GmCert = $param["GmCert"];
+        }
+
+        if (array_key_exists("GmPrivateKey",$param) and $param["GmPrivateKey"] !== null) {
+            $this->GmPrivateKey = $param["GmPrivateKey"];
+        }
+
+        if (array_key_exists("GmEncCert",$param) and $param["GmEncCert"] !== null) {
+            $this->GmEncCert = $param["GmEncCert"];
+        }
+
+        if (array_key_exists("GmEncPrivateKey",$param) and $param["GmEncPrivateKey"] !== null) {
+            $this->GmEncPrivateKey = $param["GmEncPrivateKey"];
+        }
+
+        if (array_key_exists("GmSSLId",$param) and $param["GmSSLId"] !== null) {
+            $this->GmSSLId = $param["GmSSLId"];
+        }
+
+        if (array_key_exists("Labels",$param) and $param["Labels"] !== null) {
+            $this->Labels = $param["Labels"];
         }
     }
 }

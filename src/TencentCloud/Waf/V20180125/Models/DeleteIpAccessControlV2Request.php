@@ -22,14 +22,14 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getDomain() Obtain Domain name
  * @method void setDomain(string $Domain) Set Domain name
- * @method array getRuleIds() Obtain Rule ID list, which supports deletion in batches.
- * @method void setRuleIds(array $RuleIds) Set Rule ID list, which supports deletion in batches.
- * @method boolean getDeleteAll() Obtain Whether to delete all IP blocklists/allowlists under the corresponding domain. True indicates deleting all; false indicates only deleting a specified IP list.
- * @method void setDeleteAll(boolean $DeleteAll) Set Whether to delete all IP blocklists/allowlists under the corresponding domain. True indicates deleting all; false indicates only deleting a specified IP list.
+ * @method array getRuleIds() Obtain Rule ID list. Batch deletion is supported. This parameter does not need to be specified when DeleteAll is true.
+ * @method void setRuleIds(array $RuleIds) Set Rule ID list. Batch deletion is supported. This parameter does not need to be specified when DeleteAll is true.
+ * @method boolean getDeleteAll() Obtain Whether to delete all IP blocklists/allowlists under the corresponding domain name. true: delete all lists; false: delete only the specified lists. Batch protection is not supported.
+ * @method void setDeleteAll(boolean $DeleteAll) Set Whether to delete all IP blocklists/allowlists under the corresponding domain name. true: delete all lists; false: delete only the specified lists. Batch protection is not supported.
  * @method string getSourceType() Obtain batch: indicates batch protection IP allowlists/blocklists.
  * @method void setSourceType(string $SourceType) Set batch: indicates batch protection IP allowlists/blocklists.
- * @method integer getActionType() Obtain IP allowlist/blocklist type. 40: IP allowlist; 42: IP blocklist.
- * @method void setActionType(integer $ActionType) Set IP allowlist/blocklist type. 40: IP allowlist; 42: IP blocklist.
+ * @method integer getActionType() Obtain IP blocklist/allowlist type. 40: IP allowlist; 42: IP blocklist. This parameter should be passed in when DeleteAll is true.
+ * @method void setActionType(integer $ActionType) Set IP blocklist/allowlist type. 40: IP allowlist; 42: IP blocklist. This parameter should be passed in when DeleteAll is true.
  */
 class DeleteIpAccessControlV2Request extends AbstractModel
 {
@@ -39,12 +39,12 @@ class DeleteIpAccessControlV2Request extends AbstractModel
     public $Domain;
 
     /**
-     * @var array Rule ID list, which supports deletion in batches.
+     * @var array Rule ID list. Batch deletion is supported. This parameter does not need to be specified when DeleteAll is true.
      */
     public $RuleIds;
 
     /**
-     * @var boolean Whether to delete all IP blocklists/allowlists under the corresponding domain. True indicates deleting all; false indicates only deleting a specified IP list.
+     * @var boolean Whether to delete all IP blocklists/allowlists under the corresponding domain name. true: delete all lists; false: delete only the specified lists. Batch protection is not supported.
      */
     public $DeleteAll;
 
@@ -54,16 +54,16 @@ class DeleteIpAccessControlV2Request extends AbstractModel
     public $SourceType;
 
     /**
-     * @var integer IP allowlist/blocklist type. 40: IP allowlist; 42: IP blocklist.
+     * @var integer IP blocklist/allowlist type. 40: IP allowlist; 42: IP blocklist. This parameter should be passed in when DeleteAll is true.
      */
     public $ActionType;
 
     /**
      * @param string $Domain Domain name
-     * @param array $RuleIds Rule ID list, which supports deletion in batches.
-     * @param boolean $DeleteAll Whether to delete all IP blocklists/allowlists under the corresponding domain. True indicates deleting all; false indicates only deleting a specified IP list.
+     * @param array $RuleIds Rule ID list. Batch deletion is supported. This parameter does not need to be specified when DeleteAll is true.
+     * @param boolean $DeleteAll Whether to delete all IP blocklists/allowlists under the corresponding domain name. true: delete all lists; false: delete only the specified lists. Batch protection is not supported.
      * @param string $SourceType batch: indicates batch protection IP allowlists/blocklists.
-     * @param integer $ActionType IP allowlist/blocklist type. 40: IP allowlist; 42: IP blocklist.
+     * @param integer $ActionType IP blocklist/allowlist type. 40: IP allowlist; 42: IP blocklist. This parameter should be passed in when DeleteAll is true.
      */
     function __construct()
     {

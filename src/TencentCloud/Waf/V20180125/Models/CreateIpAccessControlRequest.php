@@ -63,6 +63,7 @@ Global domain name, that is, global.
 
     /**
      * @var integer valid_ts indicates a valid date. Its value is a second-level timestamp, such as 1680570420, which indicates 2023-04-04 09:07:00.
+     * @deprecated
      */
     public $ValidTS;
 

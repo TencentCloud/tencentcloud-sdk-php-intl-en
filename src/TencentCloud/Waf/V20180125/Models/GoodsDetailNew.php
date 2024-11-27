@@ -170,6 +170,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
  * @method void setResourceId(string $ResourceId) Set Resource ID
 
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getMicroVersion() Obtain CLB WAF or SaaS WAF mode.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setMicroVersion(string $MicroVersion) Set CLB WAF or SaaS WAF mode.
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class GoodsDetailNew extends AbstractModel
 {
@@ -297,6 +301,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $ResourceId;
 
     /**
+     * @var string CLB WAF or SaaS WAF mode.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $MicroVersion;
+
+    /**
      * @param integer $TimeSpan Time interval
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $TimeUnit Unit, support for purchasing d, m, y, i.e., (day, month, year)
@@ -372,6 +382,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $ResourceId Resource ID
 
 Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $MicroVersion CLB WAF or SaaS WAF mode.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -432,6 +444,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("ResourceId",$param) and $param["ResourceId"] !== null) {
             $this->ResourceId = $param["ResourceId"];
+        }
+
+        if (array_key_exists("MicroVersion",$param) and $param["MicroVersion"] !== null) {
+            $this->MicroVersion = $param["MicroVersion"];
         }
     }
 }

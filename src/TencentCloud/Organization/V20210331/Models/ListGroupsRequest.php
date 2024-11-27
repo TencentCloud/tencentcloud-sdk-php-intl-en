@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSortField(string $SortField) Set Sorting field, which currently only supports CreateTime. The default is the CreateTime field.
  * @method string getSortType() Obtain Sorting type. Desc: descending order; Asc: ascending order. It should be set along with SortField.
  * @method void setSortType(string $SortType) Set Sorting type. Desc: descending order; Asc: ascending order. It should be set along with SortField.
+ * @method integer getOffset() Obtain Pagination offset. Do not use it together with NextToken, prioritizing using NextToken.
+ * @method void setOffset(integer $Offset) Set Pagination offset. Do not use it together with NextToken, prioritizing using NextToken.
  */
 class ListGroupsRequest extends AbstractModel
 {
@@ -80,6 +82,11 @@ class ListGroupsRequest extends AbstractModel
     public $SortType;
 
     /**
+     * @var integer Pagination offset. Do not use it together with NextToken, prioritizing using NextToken.
+     */
+    public $Offset;
+
+    /**
      * @param string $ZoneId Space ID.
      * @param string $NextToken Token for querying the next page of returned results. During use of the API for the first time, NextToken is not needed. When you call the API for the first time, if the total number of returned data entries exceeds the MaxResults limit, the data is truncated and only MaxResults data entries are returned. Meanwhile, the return parameter IsTruncated is true and a NextToken is returned. You can use the NextToken returned last time to continue calling the API with other request parameters unchanged, to query the truncated data. You can use this method for multiple queries until IsTruncated is false, indicating that all data has been queried.
      * @param integer $MaxResults Maximum number of data entries per page. Value range: 1-100. Default value: 10.
@@ -88,6 +95,7 @@ class ListGroupsRequest extends AbstractModel
      * @param array $FilterUsers Filtered user. IsSelected=1 will be returned for the user group associated with this user.
      * @param string $SortField Sorting field, which currently only supports CreateTime. The default is the CreateTime field.
      * @param string $SortType Sorting type. Desc: descending order; Asc: ascending order. It should be set along with SortField.
+     * @param integer $Offset Pagination offset. Do not use it together with NextToken, prioritizing using NextToken.
      */
     function __construct()
     {
@@ -132,6 +140,10 @@ class ListGroupsRequest extends AbstractModel
 
         if (array_key_exists("SortType",$param) and $param["SortType"] !== null) {
             $this->SortType = $param["SortType"];
+        }
+
+        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
+            $this->Offset = $param["Offset"];
         }
     }
 }

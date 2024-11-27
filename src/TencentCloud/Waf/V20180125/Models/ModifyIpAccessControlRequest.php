@@ -28,10 +28,10 @@ Global domain name, that is, global.
  * @method void setIpList(array $IpList) Set IP parameter list.
  * @method integer getActionType() Obtain 42: blocklist; 40: allowlist.
  * @method void setActionType(integer $ActionType) Set 42: blocklist; 40: allowlist.
- * @method integer getValidTS() Obtain valid_ts indicates a valid date. Its value is a second-level timestamp, such as 1680570420, which indicates 2023-04-04 09:07:00.
- * @method void setValidTS(integer $ValidTS) Set valid_ts indicates a valid date. Its value is a second-level timestamp, such as 1680570420, which indicates 2023-04-04 09:07:00.
  * @method integer getRuleId() Obtain Rule ID
  * @method void setRuleId(integer $RuleId) Set Rule ID
+ * @method integer getValidTS() Obtain valid_ts indicates a valid date. Its value is a second-level timestamp, such as 1680570420, which indicates 2023-04-04 09:07:00.
+ * @method void setValidTS(integer $ValidTS) Set valid_ts indicates a valid date. Its value is a second-level timestamp, such as 1680570420, which indicates 2023-04-04 09:07:00.
  * @method string getInstanceId() Obtain Instance ID
  * @method void setInstanceId(string $InstanceId) Set Instance ID
  * @method string getEdition() Obtain WAF instance type: sparta-waf for SaaS WAF, clb-waf for CLB WAF.
@@ -64,14 +64,15 @@ Global domain name, that is, global.
     public $ActionType;
 
     /**
-     * @var integer valid_ts indicates a valid date. Its value is a second-level timestamp, such as 1680570420, which indicates 2023-04-04 09:07:00.
-     */
-    public $ValidTS;
-
-    /**
      * @var integer Rule ID
      */
     public $RuleId;
+
+    /**
+     * @var integer valid_ts indicates a valid date. Its value is a second-level timestamp, such as 1680570420, which indicates 2023-04-04 09:07:00.
+     * @deprecated
+     */
+    public $ValidTS;
 
     /**
      * @var string Instance ID
@@ -108,8 +109,8 @@ Global domain name, that is, global.
 Global domain name, that is, global.
      * @param array $IpList IP parameter list.
      * @param integer $ActionType 42: blocklist; 40: allowlist.
-     * @param integer $ValidTS valid_ts indicates a valid date. Its value is a second-level timestamp, such as 1680570420, which indicates 2023-04-04 09:07:00.
      * @param integer $RuleId Rule ID
+     * @param integer $ValidTS valid_ts indicates a valid date. Its value is a second-level timestamp, such as 1680570420, which indicates 2023-04-04 09:07:00.
      * @param string $InstanceId Instance ID
      * @param string $Edition WAF instance type: sparta-waf for SaaS WAF, clb-waf for CLB WAF.
      * @param string $SourceType Batch protection IP blocklists/allowlists or not. If yes, the value is batch; otherwise, it is empty.
@@ -142,12 +143,12 @@ Global domain name, that is, global.
             $this->ActionType = $param["ActionType"];
         }
 
-        if (array_key_exists("ValidTS",$param) and $param["ValidTS"] !== null) {
-            $this->ValidTS = $param["ValidTS"];
-        }
-
         if (array_key_exists("RuleId",$param) and $param["RuleId"] !== null) {
             $this->RuleId = $param["RuleId"];
+        }
+
+        if (array_key_exists("ValidTS",$param) and $param["ValidTS"] !== null) {
+            $this->ValidTS = $param["ValidTS"];
         }
 
         if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {

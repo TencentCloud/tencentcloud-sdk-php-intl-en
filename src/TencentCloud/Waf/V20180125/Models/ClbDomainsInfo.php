@@ -66,6 +66,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setNote(string $Note) Set Domain name remarks
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method array getLabels() Obtain Domain name tag.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setLabels(array $Labels) Set Domain name tag.
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class ClbDomainsInfo extends AbstractModel
 {
@@ -149,6 +153,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $Note;
 
     /**
+     * @var array Domain name tag.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $Labels;
+
+    /**
      * @param string $Domain Domain name
      * @param string $DomainId Unique domain name ID
      * @param string $InstanceId Instance ID of the domain name
@@ -171,6 +181,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $Note Domain name remarks
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param array $Labels Domain name tag.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
@@ -245,6 +257,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("Note",$param) and $param["Note"] !== null) {
             $this->Note = $param["Note"];
+        }
+
+        if (array_key_exists("Labels",$param) and $param["Labels"] !== null) {
+            $this->Labels = $param["Labels"];
         }
     }
 }

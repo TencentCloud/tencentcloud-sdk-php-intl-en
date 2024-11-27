@@ -266,6 +266,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setAccessStatus(integer $AccessStatus) Set CLB WAF access status
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method array getLabels() Obtain Domain name tag.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setLabels(array $Labels) Set Domain name tag.
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class DomainInfo extends AbstractModel
 {
@@ -533,6 +537,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $AccessStatus;
 
     /**
+     * @var array Domain name tag.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $Labels;
+
+    /**
      * @param string $Domain Domain name
      * @param string $DomainId Domain ID
      * @param string $InstanceId Instance ID
@@ -655,6 +665,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $SgID Security group ID
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $AccessStatus CLB WAF access status
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param array $Labels Domain name tag.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
@@ -818,6 +830,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("AccessStatus",$param) and $param["AccessStatus"] !== null) {
             $this->AccessStatus = $param["AccessStatus"];
+        }
+
+        if (array_key_exists("Labels",$param) and $param["Labels"] !== null) {
+            $this->Labels = $param["Labels"];
         }
     }
 }

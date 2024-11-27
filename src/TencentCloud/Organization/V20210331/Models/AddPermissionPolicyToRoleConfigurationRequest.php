@@ -24,12 +24,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setZoneId(string $ZoneId) Set Space ID.
  * @method string getRoleConfigurationId() Obtain Permission configuration ID.
  * @method void setRoleConfigurationId(string $RoleConfigurationId) Set Permission configuration ID.
- * @method string getRolePolicyType() Obtain Permission policy type. Valid values: System: system policy, namely the CAM system policy reused; Custom: custom policy, namely the custom policy prepared according to the CAM permission policy syntax and structure. Only the system policy is supported at the early stage, and the custom policy will be supported later.
- * @method void setRolePolicyType(string $RolePolicyType) Set Permission policy type. Valid values: System: system policy, namely the CAM system policy reused; Custom: custom policy, namely the custom policy prepared according to the CAM permission policy syntax and structure. Only the system policy is supported at the early stage, and the custom policy will be supported later.
- * @method array getRolePolicyNames() Obtain Permission policy name, which includes up to 20 policies, each containing up to 32 characters.
- * @method void setRolePolicyNames(array $RolePolicyNames) Set Permission policy name, which includes up to 20 policies, each containing up to 32 characters.
- * @method array getRolePolicies() Obtain Policy details.
- * @method void setRolePolicies(array $RolePolicies) Set Policy details.
+ * @method string getRolePolicyType() Obtain Permission policy type. Valid values: System: system policy, namely the CAM system policy reused; Custom: custom policy, namely the custom policy prepared according to the CAM permission policy syntax and structure.  
+ * @method void setRolePolicyType(string $RolePolicyType) Set Permission policy type. Valid values: System: system policy, namely the CAM system policy reused; Custom: custom policy, namely the custom policy prepared according to the CAM permission policy syntax and structure.  
+ * @method array getRolePolicyNames() Obtain Permission policy name, supporting up to 20 policies, with each policy having a maximum of 32 characters. If you need to add a system policy, it is recommended to use the RolePolicies parameter. For custom policies, the array length is up to 1.
+ * @method void setRolePolicyNames(array $RolePolicyNames) Set Permission policy name, supporting up to 20 policies, with each policy having a maximum of 32 characters. If you need to add a system policy, it is recommended to use the RolePolicies parameter. For custom policies, the array length is up to 1.
+ * @method array getRolePolicies() Obtain Details of an added system policy.
+ * @method void setRolePolicies(array $RolePolicies) Set Details of an added system policy.
  * @method string getCustomPolicyDocument() Obtain Custom policy content, which contains up to 4096 characters. When RolePolicyType is Inline, this parameter must be configured. For details, see the permission policy syntax and structure.
  * @method void setCustomPolicyDocument(string $CustomPolicyDocument) Set Custom policy content, which contains up to 4096 characters. When RolePolicyType is Inline, this parameter must be configured. For details, see the permission policy syntax and structure.
  */
@@ -46,17 +46,17 @@ class AddPermissionPolicyToRoleConfigurationRequest extends AbstractModel
     public $RoleConfigurationId;
 
     /**
-     * @var string Permission policy type. Valid values: System: system policy, namely the CAM system policy reused; Custom: custom policy, namely the custom policy prepared according to the CAM permission policy syntax and structure. Only the system policy is supported at the early stage, and the custom policy will be supported later.
+     * @var string Permission policy type. Valid values: System: system policy, namely the CAM system policy reused; Custom: custom policy, namely the custom policy prepared according to the CAM permission policy syntax and structure.  
      */
     public $RolePolicyType;
 
     /**
-     * @var array Permission policy name, which includes up to 20 policies, each containing up to 32 characters.
+     * @var array Permission policy name, supporting up to 20 policies, with each policy having a maximum of 32 characters. If you need to add a system policy, it is recommended to use the RolePolicies parameter. For custom policies, the array length is up to 1.
      */
     public $RolePolicyNames;
 
     /**
-     * @var array Policy details.
+     * @var array Details of an added system policy.
      */
     public $RolePolicies;
 
@@ -68,9 +68,9 @@ class AddPermissionPolicyToRoleConfigurationRequest extends AbstractModel
     /**
      * @param string $ZoneId Space ID.
      * @param string $RoleConfigurationId Permission configuration ID.
-     * @param string $RolePolicyType Permission policy type. Valid values: System: system policy, namely the CAM system policy reused; Custom: custom policy, namely the custom policy prepared according to the CAM permission policy syntax and structure. Only the system policy is supported at the early stage, and the custom policy will be supported later.
-     * @param array $RolePolicyNames Permission policy name, which includes up to 20 policies, each containing up to 32 characters.
-     * @param array $RolePolicies Policy details.
+     * @param string $RolePolicyType Permission policy type. Valid values: System: system policy, namely the CAM system policy reused; Custom: custom policy, namely the custom policy prepared according to the CAM permission policy syntax and structure.  
+     * @param array $RolePolicyNames Permission policy name, supporting up to 20 policies, with each policy having a maximum of 32 characters. If you need to add a system policy, it is recommended to use the RolePolicies parameter. For custom policies, the array length is up to 1.
+     * @param array $RolePolicies Details of an added system policy.
      * @param string $CustomPolicyDocument Custom policy content, which contains up to 4096 characters. When RolePolicyType is Inline, this parameter must be configured. For details, see the permission policy syntax and structure.
      */
     function __construct()

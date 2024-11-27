@@ -36,8 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setResolution(string $Resolution) Set Resolution, in the format of widthxheight, such as 1920x1080.
  * @method integer getFPS() Obtain Frame rate.
  * @method void setFPS(integer $FPS) Set Frame rate.
- * @method string getPreloadDuration() Obtain Waiting time for application pre-launch.
- * @method void setPreloadDuration(string $PreloadDuration) Set Waiting time for application pre-launch.
+ * @method string getPreloadDuration() Obtain Waiting time for pre-launch.
+ * @method void setPreloadDuration(string $PreloadDuration) Set Waiting time for pre-launch.
  * @method string getReconnectTimeout() Obtain Waiting time for reconnection.
  * @method void setReconnectTimeout(string $ReconnectTimeout) Set Waiting time for reconnection.
  * @method integer getMinBitrate() Obtain Minimum bitrate, in Mbps.
@@ -98,7 +98,7 @@ class ModifyApplicationProjectRequest extends AbstractModel
     public $FPS;
 
     /**
-     * @var string Waiting time for application pre-launch.
+     * @var string Waiting time for pre-launch.
      */
     public $PreloadDuration;
 
@@ -151,7 +151,7 @@ class ModifyApplicationProjectRequest extends AbstractModel
      * @param string $Description Cloud application project description.
      * @param string $Resolution Resolution, in the format of widthxheight, such as 1920x1080.
      * @param integer $FPS Frame rate.
-     * @param string $PreloadDuration Waiting time for application pre-launch.
+     * @param string $PreloadDuration Waiting time for pre-launch.
      * @param string $ReconnectTimeout Waiting time for reconnection.
      * @param integer $MinBitrate Minimum bitrate, in Mbps.
      * @param integer $MaxBitrate Maximum bitrate, in Mbps.

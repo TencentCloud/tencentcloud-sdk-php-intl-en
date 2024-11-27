@@ -100,6 +100,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
         ARGS_HEADER (Header parameter value)
 
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getCaseNotSensitive() Obtain 0: case-sensitive.
+1: case-insensitive.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setCaseNotSensitive(integer $CaseNotSensitive) Set 0: case-sensitive.
+1: case-insensitive.
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class Strategy extends AbstractModel
 {
@@ -160,6 +166,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $Arg;
 
     /**
+     * @var integer 0: case-sensitive.
+1: case-insensitive.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $CaseNotSensitive;
+
+    /**
      * @param string $Field Matching field
 
     Different matching fields result in different matching parameters, logical operators, and matching contents. The details are as follows:
@@ -200,6 +213,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         ARGS_HEADER (Header parameter value)
 
 Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $CaseNotSensitive 0: case-sensitive.
+1: case-insensitive.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -228,6 +244,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("Arg",$param) and $param["Arg"] !== null) {
             $this->Arg = $param["Arg"];
+        }
+
+        if (array_key_exists("CaseNotSensitive",$param) and $param["CaseNotSensitive"] !== null) {
+            $this->CaseNotSensitive = $param["CaseNotSensitive"];
         }
     }
 }

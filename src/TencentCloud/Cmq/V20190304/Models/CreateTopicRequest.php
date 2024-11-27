@@ -22,12 +22,12 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getTopicName() Obtain Topic name, which is unique under the same account in an individual region. It is a string of up to 64 characters, which must begin with a letter and can contain letters, digits, and dashes (`-`).
  * @method void setTopicName(string $TopicName) Set Topic name, which is unique under the same account in an individual region. It is a string of up to 64 characters, which must begin with a letter and can contain letters, digits, and dashes (`-`).
- * @method integer getMaxMsgSize() Obtain Maximum message length. Value range: 1024–65536 bytes (i.e., 1–64 KB). Default value: 65536.
- * @method void setMaxMsgSize(integer $MaxMsgSize) Set Maximum message length. Value range: 1024–65536 bytes (i.e., 1–64 KB). Default value: 65536.
+ * @method integer getMaxMsgSize() Obtain Maximum message length. Value range: 1024-65536 bytes (i.e., 1-64 KB). Default value: 65536.
+ * @method void setMaxMsgSize(integer $MaxMsgSize) Set Maximum message length. Value range: 1024-65536 bytes (i.e., 1-64 KB). Default value: 65536.
  * @method integer getFilterType() Obtain Message match policy for a specified topic.
  * @method void setFilterType(integer $FilterType) Set Message match policy for a specified topic.
- * @method integer getMsgRetentionSeconds() Obtain Message retention period. Value range: 60–86400 seconds (i.e., 1 minute–1 day). Default value: 86400.
- * @method void setMsgRetentionSeconds(integer $MsgRetentionSeconds) Set Message retention period. Value range: 60–86400 seconds (i.e., 1 minute–1 day). Default value: 86400.
+ * @method integer getMsgRetentionSeconds() Obtain Message retention period. Value range: 60-86400 seconds (i.e., 1 minute-1 day). Default value: 86400.
+ * @method void setMsgRetentionSeconds(integer $MsgRetentionSeconds) Set Message retention period. Value range: 60-86400 seconds (i.e., 1 minute-1 day). Default value: 86400.
  * @method boolean getTrace() Obtain Whether to enable message trace. true: yes, false: no. If this field is left empty, the feature will not be enabled.
  * @method void setTrace(boolean $Trace) Set Whether to enable message trace. true: yes, false: no. If this field is left empty, the feature will not be enabled.
  */
@@ -39,7 +39,7 @@ class CreateTopicRequest extends AbstractModel
     public $TopicName;
 
     /**
-     * @var integer Maximum message length. Value range: 1024–65536 bytes (i.e., 1–64 KB). Default value: 65536.
+     * @var integer Maximum message length. Value range: 1024-65536 bytes (i.e., 1-64 KB). Default value: 65536.
      */
     public $MaxMsgSize;
 
@@ -49,7 +49,7 @@ class CreateTopicRequest extends AbstractModel
     public $FilterType;
 
     /**
-     * @var integer Message retention period. Value range: 60–86400 seconds (i.e., 1 minute–1 day). Default value: 86400.
+     * @var integer Message retention period. Value range: 60-86400 seconds (i.e., 1 minute-1 day). Default value: 86400.
      */
     public $MsgRetentionSeconds;
 
@@ -60,9 +60,9 @@ class CreateTopicRequest extends AbstractModel
 
     /**
      * @param string $TopicName Topic name, which is unique under the same account in an individual region. It is a string of up to 64 characters, which must begin with a letter and can contain letters, digits, and dashes (`-`).
-     * @param integer $MaxMsgSize Maximum message length. Value range: 1024–65536 bytes (i.e., 1–64 KB). Default value: 65536.
+     * @param integer $MaxMsgSize Maximum message length. Value range: 1024-65536 bytes (i.e., 1-64 KB). Default value: 65536.
      * @param integer $FilterType Message match policy for a specified topic.
-     * @param integer $MsgRetentionSeconds Message retention period. Value range: 60–86400 seconds (i.e., 1 minute–1 day). Default value: 86400.
+     * @param integer $MsgRetentionSeconds Message retention period. Value range: 60-86400 seconds (i.e., 1 minute-1 day). Default value: 86400.
      * @param boolean $Trace Whether to enable message trace. true: yes, false: no. If this field is left empty, the feature will not be enabled.
      */
     function __construct()

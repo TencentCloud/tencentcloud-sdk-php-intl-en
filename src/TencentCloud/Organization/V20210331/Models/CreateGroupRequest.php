@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setGroupName(string $GroupName) Set User group name, which contains up to 128 characters, including English letters, digits, and special characters (-).
  * @method string getDescription() Obtain User group description, which contains up to 1024 characters.
  * @method void setDescription(string $Description) Set User group description, which contains up to 1024 characters.
+ * @method string getGroupType() Obtain User group type. Manual: manually created, Synchronized: imported from external sources.
+ * @method void setGroupType(string $GroupType) Set User group type. Manual: manually created, Synchronized: imported from external sources.
  */
 class CreateGroupRequest extends AbstractModel
 {
@@ -45,9 +47,15 @@ class CreateGroupRequest extends AbstractModel
     public $Description;
 
     /**
+     * @var string User group type. Manual: manually created, Synchronized: imported from external sources.
+     */
+    public $GroupType;
+
+    /**
      * @param string $ZoneId Space ID.
      * @param string $GroupName User group name, which contains up to 128 characters, including English letters, digits, and special characters (-).
      * @param string $Description User group description, which contains up to 1024 characters.
+     * @param string $GroupType User group type. Manual: manually created, Synchronized: imported from external sources.
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class CreateGroupRequest extends AbstractModel
 
         if (array_key_exists("Description",$param) and $param["Description"] !== null) {
             $this->Description = $param["Description"];
+        }
+
+        if (array_key_exists("GroupType",$param) and $param["GroupType"] !== null) {
+            $this->GroupType = $param["GroupType"];
         }
     }
 }

@@ -80,6 +80,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method integer getObjectFlowMode() Obtain Object access mode. 0: image mode; 1: cleaning mode; 2: examination mode. By default, the cleaning mode is used.Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setObjectFlowMode(integer $ObjectFlowMode) Set Object access mode. 0: image mode; 1: cleaning mode; 2: examination mode. By default, the cleaning mode is used.Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getNumericalVpcId() Obtain VPC ID in numerical format
+
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setNumericalVpcId(integer $NumericalVpcId) Set VPC ID in numerical format
+
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class ClbObject extends AbstractModel
 {
@@ -202,6 +208,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $ObjectFlowMode;
 
     /**
+     * @var integer VPC ID in numerical format
+
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $NumericalVpcId;
+
+    /**
      * @param string $ObjectId Object ID
      * @param string $InstanceId Instance ID
      * @param string $InstanceName Instance name
@@ -232,6 +245,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param integer $ApiStatus API protection switch
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $ObjectFlowMode Object access mode. 0: image mode; 1: cleaning mode; 2: examination mode. By default, the cleaning mode is used.Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $NumericalVpcId VPC ID in numerical format
+
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -332,6 +348,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("ObjectFlowMode",$param) and $param["ObjectFlowMode"] !== null) {
             $this->ObjectFlowMode = $param["ObjectFlowMode"];
+        }
+
+        if (array_key_exists("NumericalVpcId",$param) and $param["NumericalVpcId"] !== null) {
+            $this->NumericalVpcId = $param["NumericalVpcId"];
         }
     }
 }

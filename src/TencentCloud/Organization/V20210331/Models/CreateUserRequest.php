@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEmail(string $Email) Set Email address of the user, which must be unique within the directory and contains up to 128 characters.
  * @method string getUserStatus() Obtain User status. Valid values: Enabled (default), Disabled.
  * @method void setUserStatus(string $UserStatus) Set User status. Valid values: Enabled (default), Disabled.
+ * @method string getUserType() Obtain User type. Manual: manually created, Synchronized: imported from external sources.
+ * @method void setUserType(string $UserType) Set User type. Manual: manually created, Synchronized: imported from external sources.
  */
 class CreateUserRequest extends AbstractModel
 {
@@ -80,6 +82,11 @@ class CreateUserRequest extends AbstractModel
     public $UserStatus;
 
     /**
+     * @var string User type. Manual: manually created, Synchronized: imported from external sources.
+     */
+    public $UserType;
+
+    /**
      * @param string $ZoneId Space ID.
      * @param string $UserName User name, which must be unique within the space and cannot be modified. It contains up to 64 characters, including digits, English letters, and special characters such as plus signs (+), equal signs (=), commas (,), periods (.), at signs (@), hyphens (-), and underscores (_).
      * @param string $FirstName Last name of the user, which contains up to 64 characters.
@@ -88,6 +95,7 @@ class CreateUserRequest extends AbstractModel
      * @param string $Description User description, which contains up to 1024 characters.
      * @param string $Email Email address of the user, which must be unique within the directory and contains up to 128 characters.
      * @param string $UserStatus User status. Valid values: Enabled (default), Disabled.
+     * @param string $UserType User type. Manual: manually created, Synchronized: imported from external sources.
      */
     function __construct()
     {
@@ -132,6 +140,10 @@ class CreateUserRequest extends AbstractModel
 
         if (array_key_exists("UserStatus",$param) and $param["UserStatus"] !== null) {
             $this->UserStatus = $param["UserStatus"];
+        }
+
+        if (array_key_exists("UserType",$param) and $param["UserType"] !== null) {
+            $this->UserType = $param["UserType"];
         }
     }
 }

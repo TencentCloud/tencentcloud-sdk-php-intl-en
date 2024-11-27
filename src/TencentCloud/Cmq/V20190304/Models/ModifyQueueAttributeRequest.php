@@ -22,26 +22,26 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getQueueName() Obtain Queue name, which is unique under the same account in an individual region. It is a string of up to 64 characters, which must begin with a letter and can contain letters, digits, and dashes (`-`).
  * @method void setQueueName(string $QueueName) Set Queue name, which is unique under the same account in an individual region. It is a string of up to 64 characters, which must begin with a letter and can contain letters, digits, and dashes (`-`).
- * @method integer getMaxMsgHeapNum() Obtain Maximum number of heaped messages. The value range is 1,000,000–10,000,000 during the beta test and can be 1,000,000–1,000,000,000 after the product is officially released. The default value is 10,000,000 during the beta test and will be 100,000,000 after the product is officially released.
- * @method void setMaxMsgHeapNum(integer $MaxMsgHeapNum) Set Maximum number of heaped messages. The value range is 1,000,000–10,000,000 during the beta test and can be 1,000,000–1,000,000,000 after the product is officially released. The default value is 10,000,000 during the beta test and will be 100,000,000 after the product is officially released.
- * @method integer getPollingWaitSeconds() Obtain Long polling wait time for message reception. Value range: 0–30 seconds. Default value: 0.
- * @method void setPollingWaitSeconds(integer $PollingWaitSeconds) Set Long polling wait time for message reception. Value range: 0–30 seconds. Default value: 0.
- * @method integer getVisibilityTimeout() Obtain Message visibility timeout period. Value range: 1–43200 seconds (i.e., 12 hours). Default value: 30.
- * @method void setVisibilityTimeout(integer $VisibilityTimeout) Set Message visibility timeout period. Value range: 1–43200 seconds (i.e., 12 hours). Default value: 30.
- * @method integer getMaxMsgSize() Obtain Maximum message length. Value range: 1024–65536 bytes (i.e., 1–64 KB). Default value: 65536.
- * @method void setMaxMsgSize(integer $MaxMsgSize) Set Maximum message length. Value range: 1024–65536 bytes (i.e., 1–64 KB). Default value: 65536.
- * @method integer getMsgRetentionSeconds() Obtain Message retention period. Value range: 60–1296000 seconds (i.e., 1 minute–15 days). Default value: 345600 (i.e., 4 days).
- * @method void setMsgRetentionSeconds(integer $MsgRetentionSeconds) Set Message retention period. Value range: 60–1296000 seconds (i.e., 1 minute–15 days). Default value: 345600 (i.e., 4 days).
- * @method integer getRewindSeconds() Obtain Maximum message rewindable period. Value range: 0–msgRetentionSeconds (maximum message retention period of a queue). 0 means not to enable message rewinding.
- * @method void setRewindSeconds(integer $RewindSeconds) Set Maximum message rewindable period. Value range: 0–msgRetentionSeconds (maximum message retention period of a queue). 0 means not to enable message rewinding.
+ * @method integer getMaxMsgHeapNum() Obtain Maximum number of heaped messages. The value range is 1,000,000-10,000,000 during the beta test and can be 1,000,000-1,000,000,000 after the product is officially released. The default value is 10,000,000 during the beta test and will be 100,000,000 after the product is officially released.
+ * @method void setMaxMsgHeapNum(integer $MaxMsgHeapNum) Set Maximum number of heaped messages. The value range is 1,000,000-10,000,000 during the beta test and can be 1,000,000-1,000,000,000 after the product is officially released. The default value is 10,000,000 during the beta test and will be 100,000,000 after the product is officially released.
+ * @method integer getPollingWaitSeconds() Obtain Long polling wait time for message reception. Value range: 0-30 seconds. Default value: 0.
+ * @method void setPollingWaitSeconds(integer $PollingWaitSeconds) Set Long polling wait time for message reception. Value range: 0-30 seconds. Default value: 0.
+ * @method integer getVisibilityTimeout() Obtain Message visibility timeout period. Value range: 1-43200 seconds (i.e., 12 hours). Default value: 30.
+ * @method void setVisibilityTimeout(integer $VisibilityTimeout) Set Message visibility timeout period. Value range: 1-43200 seconds (i.e., 12 hours). Default value: 30.
+ * @method integer getMaxMsgSize() Obtain Maximum message length. Value range: 1024-65536 bytes (i.e., 1-64 KB). Default value: 65536.
+ * @method void setMaxMsgSize(integer $MaxMsgSize) Set Maximum message length. Value range: 1024-65536 bytes (i.e., 1-64 KB). Default value: 65536.
+ * @method integer getMsgRetentionSeconds() Obtain Message retention period. Value range: 60-1296000 seconds (i.e., 1 minute-15 days). Default value: 345600 (i.e., 4 days).
+ * @method void setMsgRetentionSeconds(integer $MsgRetentionSeconds) Set Message retention period. Value range: 60-1296000 seconds (i.e., 1 minute-15 days). Default value: 345600 (i.e., 4 days).
+ * @method integer getRewindSeconds() Obtain Maximum message rewindable period. Value range: 0-msgRetentionSeconds (maximum message retention period of a queue). 0 means not to enable message rewinding.
+ * @method void setRewindSeconds(integer $RewindSeconds) Set Maximum message rewindable period. Value range: 0-msgRetentionSeconds (maximum message retention period of a queue). 0 means not to enable message rewinding.
  * @method integer getFirstQueryInterval() Obtain First query time
  * @method void setFirstQueryInterval(integer $FirstQueryInterval) Set First query time
  * @method integer getMaxQueryCount() Obtain Maximum number of queries
  * @method void setMaxQueryCount(integer $MaxQueryCount) Set Maximum number of queries
  * @method string getDeadLetterQueueName() Obtain Dead letter queue name
  * @method void setDeadLetterQueueName(string $DeadLetterQueueName) Set Dead letter queue name
- * @method integer getMaxTimeToLive() Obtain Maximum period in seconds before an unconsumed message expires, which is required if `MaxTimeToLivepolicy` is 1. Value range: 300–43200. This value should be smaller than `MsgRetentionSeconds` (maximum message retention period)
- * @method void setMaxTimeToLive(integer $MaxTimeToLive) Set Maximum period in seconds before an unconsumed message expires, which is required if `MaxTimeToLivepolicy` is 1. Value range: 300–43200. This value should be smaller than `MsgRetentionSeconds` (maximum message retention period)
+ * @method integer getMaxTimeToLive() Obtain Maximum period in seconds before an unconsumed message expires, which is required if `MaxTimeToLivepolicy` is 1. Value range: 300-43200. This value should be smaller than `MsgRetentionSeconds` (maximum message retention period)
+ * @method void setMaxTimeToLive(integer $MaxTimeToLive) Set Maximum period in seconds before an unconsumed message expires, which is required if `MaxTimeToLivepolicy` is 1. Value range: 300-43200. This value should be smaller than `MsgRetentionSeconds` (maximum message retention period)
  * @method integer getMaxReceiveCount() Obtain Maximum number of receipts
  * @method void setMaxReceiveCount(integer $MaxReceiveCount) Set Maximum number of receipts
  * @method integer getPolicy() Obtain Dead letter queue policy
@@ -57,32 +57,32 @@ class ModifyQueueAttributeRequest extends AbstractModel
     public $QueueName;
 
     /**
-     * @var integer Maximum number of heaped messages. The value range is 1,000,000–10,000,000 during the beta test and can be 1,000,000–1,000,000,000 after the product is officially released. The default value is 10,000,000 during the beta test and will be 100,000,000 after the product is officially released.
+     * @var integer Maximum number of heaped messages. The value range is 1,000,000-10,000,000 during the beta test and can be 1,000,000-1,000,000,000 after the product is officially released. The default value is 10,000,000 during the beta test and will be 100,000,000 after the product is officially released.
      */
     public $MaxMsgHeapNum;
 
     /**
-     * @var integer Long polling wait time for message reception. Value range: 0–30 seconds. Default value: 0.
+     * @var integer Long polling wait time for message reception. Value range: 0-30 seconds. Default value: 0.
      */
     public $PollingWaitSeconds;
 
     /**
-     * @var integer Message visibility timeout period. Value range: 1–43200 seconds (i.e., 12 hours). Default value: 30.
+     * @var integer Message visibility timeout period. Value range: 1-43200 seconds (i.e., 12 hours). Default value: 30.
      */
     public $VisibilityTimeout;
 
     /**
-     * @var integer Maximum message length. Value range: 1024–65536 bytes (i.e., 1–64 KB). Default value: 65536.
+     * @var integer Maximum message length. Value range: 1024-65536 bytes (i.e., 1-64 KB). Default value: 65536.
      */
     public $MaxMsgSize;
 
     /**
-     * @var integer Message retention period. Value range: 60–1296000 seconds (i.e., 1 minute–15 days). Default value: 345600 (i.e., 4 days).
+     * @var integer Message retention period. Value range: 60-1296000 seconds (i.e., 1 minute-15 days). Default value: 345600 (i.e., 4 days).
      */
     public $MsgRetentionSeconds;
 
     /**
-     * @var integer Maximum message rewindable period. Value range: 0–msgRetentionSeconds (maximum message retention period of a queue). 0 means not to enable message rewinding.
+     * @var integer Maximum message rewindable period. Value range: 0-msgRetentionSeconds (maximum message retention period of a queue). 0 means not to enable message rewinding.
      */
     public $RewindSeconds;
 
@@ -102,7 +102,7 @@ class ModifyQueueAttributeRequest extends AbstractModel
     public $DeadLetterQueueName;
 
     /**
-     * @var integer Maximum period in seconds before an unconsumed message expires, which is required if `MaxTimeToLivepolicy` is 1. Value range: 300–43200. This value should be smaller than `MsgRetentionSeconds` (maximum message retention period)
+     * @var integer Maximum period in seconds before an unconsumed message expires, which is required if `MaxTimeToLivepolicy` is 1. Value range: 300-43200. This value should be smaller than `MsgRetentionSeconds` (maximum message retention period)
      */
     public $MaxTimeToLive;
 
@@ -123,16 +123,16 @@ class ModifyQueueAttributeRequest extends AbstractModel
 
     /**
      * @param string $QueueName Queue name, which is unique under the same account in an individual region. It is a string of up to 64 characters, which must begin with a letter and can contain letters, digits, and dashes (`-`).
-     * @param integer $MaxMsgHeapNum Maximum number of heaped messages. The value range is 1,000,000–10,000,000 during the beta test and can be 1,000,000–1,000,000,000 after the product is officially released. The default value is 10,000,000 during the beta test and will be 100,000,000 after the product is officially released.
-     * @param integer $PollingWaitSeconds Long polling wait time for message reception. Value range: 0–30 seconds. Default value: 0.
-     * @param integer $VisibilityTimeout Message visibility timeout period. Value range: 1–43200 seconds (i.e., 12 hours). Default value: 30.
-     * @param integer $MaxMsgSize Maximum message length. Value range: 1024–65536 bytes (i.e., 1–64 KB). Default value: 65536.
-     * @param integer $MsgRetentionSeconds Message retention period. Value range: 60–1296000 seconds (i.e., 1 minute–15 days). Default value: 345600 (i.e., 4 days).
-     * @param integer $RewindSeconds Maximum message rewindable period. Value range: 0–msgRetentionSeconds (maximum message retention period of a queue). 0 means not to enable message rewinding.
+     * @param integer $MaxMsgHeapNum Maximum number of heaped messages. The value range is 1,000,000-10,000,000 during the beta test and can be 1,000,000-1,000,000,000 after the product is officially released. The default value is 10,000,000 during the beta test and will be 100,000,000 after the product is officially released.
+     * @param integer $PollingWaitSeconds Long polling wait time for message reception. Value range: 0-30 seconds. Default value: 0.
+     * @param integer $VisibilityTimeout Message visibility timeout period. Value range: 1-43200 seconds (i.e., 12 hours). Default value: 30.
+     * @param integer $MaxMsgSize Maximum message length. Value range: 1024-65536 bytes (i.e., 1-64 KB). Default value: 65536.
+     * @param integer $MsgRetentionSeconds Message retention period. Value range: 60-1296000 seconds (i.e., 1 minute-15 days). Default value: 345600 (i.e., 4 days).
+     * @param integer $RewindSeconds Maximum message rewindable period. Value range: 0-msgRetentionSeconds (maximum message retention period of a queue). 0 means not to enable message rewinding.
      * @param integer $FirstQueryInterval First query time
      * @param integer $MaxQueryCount Maximum number of queries
      * @param string $DeadLetterQueueName Dead letter queue name
-     * @param integer $MaxTimeToLive Maximum period in seconds before an unconsumed message expires, which is required if `MaxTimeToLivepolicy` is 1. Value range: 300–43200. This value should be smaller than `MsgRetentionSeconds` (maximum message retention period)
+     * @param integer $MaxTimeToLive Maximum period in seconds before an unconsumed message expires, which is required if `MaxTimeToLivepolicy` is 1. Value range: 300-43200. This value should be smaller than `MsgRetentionSeconds` (maximum message retention period)
      * @param integer $MaxReceiveCount Maximum number of receipts
      * @param integer $Policy Dead letter queue policy
      * @param boolean $Trace Whether to enable message trace. true: yes, false: no. If this field is left empty, the feature will not be enabled.

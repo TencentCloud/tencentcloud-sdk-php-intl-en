@@ -26,7 +26,6 @@ use TencentCloud\Cmq\V20190304\Models as Models;
  * @method Models\ClearQueueResponse ClearQueue(Models\ClearQueueRequest $req) This API is used to clear all messages in a queue.
  * @method Models\ClearSubscriptionFilterTagsResponse ClearSubscriptionFilterTags(Models\ClearSubscriptionFilterTagsRequest $req) This API is used to clear the message tags of a subscriber.
  * @method Models\CreateQueueResponse CreateQueue(Models\CreateQueueRequest $req) This API is used to create a queue.
-
  * @method Models\CreateSubscribeResponse CreateSubscribe(Models\CreateSubscribeRequest $req) This API is used to create a subscription.
  * @method Models\CreateTopicResponse CreateTopic(Models\CreateTopicRequest $req) This API is used to create a topic.
  * @method Models\DeleteQueueResponse DeleteQueue(Models\DeleteQueueRequest $req) This API is used to delete a queue.

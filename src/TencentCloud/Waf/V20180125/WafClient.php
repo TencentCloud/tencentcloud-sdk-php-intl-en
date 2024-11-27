@@ -41,17 +41,8 @@ use TencentCloud\Waf\V20180125\Models as Models;
  * @method Models\DeleteSessionResponse DeleteSession(Models\DeleteSessionRequest $req) Delete CC attack session settings
  * @method Models\DeleteSpartaProtectionResponse DeleteSpartaProtection(Models\DeleteSpartaProtectionRequest $req) This API is used to delete a domain name protected by SaaS WAF.
  * @method Models\DescribeAntiFakeRulesResponse DescribeAntiFakeRules(Models\DescribeAntiFakeRulesRequest $req) Obtain a tamper-proof URL
- * @method Models\DescribeAntiFakeUrlResponse DescribeAntiFakeUrl(Models\DescribeAntiFakeUrlRequest $req) 废弃接口
-
-This API has been deprecated.
-
-Obtain a tamper-proof URL
- * @method Models\DescribeAntiInfoLeakRulesResponse DescribeAntiInfoLeakRules(Models\DescribeAntiInfoLeakRulesRequest $req) 老接口已经不再使用。
-
-The old API is no longer in use.
-
-Obtain the information leakage prevention rule list
  * @method Models\DescribeAntiInfoLeakageRulesResponse DescribeAntiInfoLeakageRules(Models\DescribeAntiInfoLeakageRulesRequest $req) Obtain the information leakage prevention rule list
+ * @method Models\DescribeAttackOverviewResponse DescribeAttackOverview(Models\DescribeAttackOverviewRequest $req) This API is used to describe the attack overview.
  * @method Models\DescribeAttackTypeResponse DescribeAttackType(Models\DescribeAttackTypeRequest $req) Query the top N attack types for a specified domain
  * @method Models\DescribeBatchIpAccessControlResponse DescribeBatchIpAccessControl(Models\DescribeBatchIpAccessControlRequest $req) This API is used to query the IP blocklist and allowlist for WAF batch protection.
  * @method Models\DescribeCCRuleResponse DescribeCCRule(Models\DescribeCCRuleRequest $req) WAF CC V2 query API
@@ -89,6 +80,7 @@ Obtain the information leakage prevention rule list
  * @method Models\DescribeWebshellStatusResponse DescribeWebshellStatus(Models\DescribeWebshellStatusRequest $req) Obtain the webshell status of a domain
  * @method Models\FreshAntiFakeUrlResponse FreshAntiFakeUrl(Models\FreshAntiFakeUrlRequest $req) Refresh a tamper-proof URL
  * @method Models\GenerateDealsAndPayNewResponse GenerateDealsAndPayNew(Models\GenerateDealsAndPayNewRequest $req) Billing Resource Purchase, Renewal Order API
+ * @method Models\GetAttackHistogramResponse GetAttackHistogram(Models\GetAttackHistogramRequest $req) This API is used to generate a bar chart for the generation time of attack logs.
  * @method Models\GetAttackTotalCountResponse GetAttackTotalCount(Models\GetAttackTotalCountRequest $req) Display total attack count by querying based on conditions
  * @method Models\GetInstanceQpsLimitResponse GetInstanceQpsLimit(Models\GetInstanceQpsLimitRequest $req) Obtain the elastic QPS limit of package instances
  * @method Models\ImportIpAccessControlResponse ImportIpAccessControl(Models\ImportIpAccessControlRequest $req) This API is used to import IP allowlists/blocklists.
@@ -103,6 +95,7 @@ Obtain the information leakage prevention rule list
  * @method Models\ModifyCustomWhiteRuleResponse ModifyCustomWhiteRule(Models\ModifyCustomWhiteRuleRequest $req) This API is used to edit a precise allowlist.
  * @method Models\ModifyCustomWhiteRuleStatusResponse ModifyCustomWhiteRuleStatus(Models\ModifyCustomWhiteRuleStatusRequest $req) Enable or disable a precision allowlist
  * @method Models\ModifyDomainIpv6StatusResponse ModifyDomainIpv6Status(Models\ModifyDomainIpv6StatusRequest $req) Toggle the IPv6 switch
+ * @method Models\ModifyDomainPostActionResponse ModifyDomainPostAction(Models\ModifyDomainPostActionRequest $req) This API is used to modify the domain shipping status.
  * @method Models\ModifyDomainsCLSStatusResponse ModifyDomainsCLSStatus(Models\ModifyDomainsCLSStatusRequest $req) Enable or disable access log for domain list
  * @method Models\ModifyHostResponse ModifyHost(Models\ModifyHostRequest $req) This API is used to edit the configuration of domain names protected by CLB WAF.
  * @method Models\ModifyHostFlowModeResponse ModifyHostFlowMode(Models\ModifyHostFlowModeRequest $req) This API is used to set the traffic mode for domain names protected by CLB WAF. The mode can be mirror mode or cleaning mode.
@@ -123,6 +116,7 @@ Batch operation is supported.
  * @method Models\ModifyUserSignatureRuleResponse ModifyUserSignatureRule(Models\ModifyUserSignatureRuleRequest $req) Modify user protection rules, turn on/off specific rules
  * @method Models\ModifyWebshellStatusResponse ModifyWebshellStatus(Models\ModifyWebshellStatusRequest $req) Set the Webshell status of a domain.
  * @method Models\RefreshAccessCheckResultResponse RefreshAccessCheckResult(Models\RefreshAccessCheckResultRequest $req) Refresh integration check results. The backend will generate integration check tasks
+ * @method Models\SearchAttackLogResponse SearchAttackLog(Models\SearchAttackLogRequest $req) The new version of the CLS API has parameter changes, with query changed to query_string to support Lucene syntax for API search queries.
  * @method Models\SwitchElasticModeResponse SwitchElasticMode(Models\SwitchElasticModeRequest $req) Toggle elasticity switch
  * @method Models\UpsertCCRuleResponse UpsertCCRule(Models\UpsertCCRuleRequest $req) WAF CC V2 upsert API
  * @method Models\UpsertSessionResponse UpsertSession(Models\UpsertSessionRequest $req) WAF session definition upsert API

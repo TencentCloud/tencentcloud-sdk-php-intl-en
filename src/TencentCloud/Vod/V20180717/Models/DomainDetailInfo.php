@@ -54,6 +54,12 @@ Note: this field may return `null`, indicating that no valid value is obtained.
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setQUICConfig(DomainQUICConfig $QUICConfig) Set The QUIC configuration for the domain.
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method IPFilterPolicy getIPFilterPolicy() Obtain 
+ * @method void setIPFilterPolicy(IPFilterPolicy $IPFilterPolicy) Set 
+ * @method string getType() Obtain Domain type. Valid values:
+<li>`VOD`: Domain name distributed using the VOD product;</li> <li>`EdgeOne`: Domain name distributed using the EdgeOne product.</li>
+ * @method void setType(string $Type) Set Domain type. Valid values:
+<li>`VOD`: Domain name distributed using the VOD product;</li> <li>`EdgeOne`: Domain name distributed using the EdgeOne product.</li>
  */
 class DomainDetailInfo extends AbstractModel
 {
@@ -107,6 +113,17 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $QUICConfig;
 
     /**
+     * @var IPFilterPolicy 
+     */
+    public $IPFilterPolicy;
+
+    /**
+     * @var string Domain type. Valid values:
+<li>`VOD`: Domain name distributed using the VOD product;</li> <li>`EdgeOne`: Domain name distributed using the EdgeOne product.</li>
+     */
+    public $Type;
+
+    /**
      * @param string $Domain Domain name
      * @param array $AccelerateAreaInfos Acceleration region information
 Note: this field may return `null`, indicating that no valid value is obtained.
@@ -124,6 +141,9 @@ Note: this field may return `null`, indicating that no valid value is obtained.
 <li>The time is in [ISO 8601 date format](https://intl.cloud.tencent.com/document/product/266/11732).</li>
      * @param DomainQUICConfig $QUICConfig The QUIC configuration for the domain.
 Note: This field may return null, indicating that no valid values can be obtained.
+     * @param IPFilterPolicy $IPFilterPolicy 
+     * @param string $Type Domain type. Valid values:
+<li>`VOD`: Domain name distributed using the VOD product;</li> <li>`EdgeOne`: Domain name distributed using the EdgeOne product.</li>
      */
     function __construct()
     {
@@ -177,6 +197,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (array_key_exists("QUICConfig",$param) and $param["QUICConfig"] !== null) {
             $this->QUICConfig = new DomainQUICConfig();
             $this->QUICConfig->deserialize($param["QUICConfig"]);
+        }
+
+        if (array_key_exists("IPFilterPolicy",$param) and $param["IPFilterPolicy"] !== null) {
+            $this->IPFilterPolicy = new IPFilterPolicy();
+            $this->IPFilterPolicy->deserialize($param["IPFilterPolicy"]);
+        }
+
+        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
+            $this->Type = $param["Type"];
         }
     }
 }

@@ -104,8 +104,22 @@ https: Use the HTTPS protocol for origin-pull.
  * @method void setUpstreamHost(string $UpstreamHost) Set Custom upstream host. The default value is a null string, indicating that the protected domain name is used as the upstream host.
  * @method integer getProxyBuffer() Obtain Whether to enable caching. 0: disable; 1: enable.
  * @method void setProxyBuffer(integer $ProxyBuffer) Set Whether to enable caching. 0: disable; 1: enable.
- * @method integer getProbeStatus() Obtain 0: Disable probe test; 1: Enable probe test. The probe test is enabled by default.
- * @method void setProbeStatus(integer $ProbeStatus) Set 0: Disable probe test; 1: Enable probe test. The probe test is enabled by default.
+ * @method integer getProbeStatus() Obtain Whether to enable the test. 0: disable; 1: enable. The test is enabled by default.
+ * @method void setProbeStatus(integer $ProbeStatus) Set Whether to enable the test. 0: disable; 1: enable. The test is enabled by default.
+ * @method integer getGmType() Obtain SM option. 0: do not enable SM; 1: add support for SM based on the existing TLS option; 2: enable SM and support only SM client access.
+ * @method void setGmType(integer $GmType) Set SM option. 0: do not enable SM; 1: add support for SM based on the existing TLS option; 2: enable SM and support only SM client access.
+ * @method integer getGmCertType() Obtain SM certificate type. 0: no SM certificate is available; 1: the certificate is a self-owned SM certificate; 2: the certificate is a managed SM certificate.
+ * @method void setGmCertType(integer $GmCertType) Set SM certificate type. 0: no SM certificate is available; 1: the certificate is a self-owned SM certificate; 2: the certificate is a managed SM certificate.
+ * @method string getGmCert() Obtain When GmCertType is 1, this parameter needs to be set, indicating the certificate chain of the self-owned SM certificate.
+ * @method void setGmCert(string $GmCert) Set When GmCertType is 1, this parameter needs to be set, indicating the certificate chain of the self-owned SM certificate.
+ * @method string getGmPrivateKey() Obtain When GmCertType is 1, this parameter needs to be set, indicating the private key of the self-owned SM certificate.
+ * @method void setGmPrivateKey(string $GmPrivateKey) Set When GmCertType is 1, this parameter needs to be set, indicating the private key of the self-owned SM certificate.
+ * @method string getGmEncCert() Obtain When GmCertType is 1, this parameter needs to be set, indicating the encryption certificate of the self-owned SM certificate.
+ * @method void setGmEncCert(string $GmEncCert) Set When GmCertType is 1, this parameter needs to be set, indicating the encryption certificate of the self-owned SM certificate.
+ * @method string getGmEncPrivateKey() Obtain When GmCertType is 1, this parameter needs to be set, indicating the private key of the encryption certificate for the self-owned SM certificate.
+ * @method void setGmEncPrivateKey(string $GmEncPrivateKey) Set When GmCertType is 1, this parameter needs to be set, indicating the private key of the encryption certificate for the self-owned SM certificate.
+ * @method string getGmSSLId() Obtain When GmCertType is 2, this parameter needs to be set, indicating the ID of the certificate managed by the Tencent Cloud SSL platform.
+ * @method void setGmSSLId(string $GmSSLId) Set When GmCertType is 2, this parameter needs to be set, indicating the ID of the certificate managed by the Tencent Cloud SSL platform.
  */
 class ModifySpartaProtectionRequest extends AbstractModel
 {
@@ -296,9 +310,44 @@ https: Use the HTTPS protocol for origin-pull.
     public $ProxyBuffer;
 
     /**
-     * @var integer 0: Disable probe test; 1: Enable probe test. The probe test is enabled by default.
+     * @var integer Whether to enable the test. 0: disable; 1: enable. The test is enabled by default.
      */
     public $ProbeStatus;
+
+    /**
+     * @var integer SM option. 0: do not enable SM; 1: add support for SM based on the existing TLS option; 2: enable SM and support only SM client access.
+     */
+    public $GmType;
+
+    /**
+     * @var integer SM certificate type. 0: no SM certificate is available; 1: the certificate is a self-owned SM certificate; 2: the certificate is a managed SM certificate.
+     */
+    public $GmCertType;
+
+    /**
+     * @var string When GmCertType is 1, this parameter needs to be set, indicating the certificate chain of the self-owned SM certificate.
+     */
+    public $GmCert;
+
+    /**
+     * @var string When GmCertType is 1, this parameter needs to be set, indicating the private key of the self-owned SM certificate.
+     */
+    public $GmPrivateKey;
+
+    /**
+     * @var string When GmCertType is 1, this parameter needs to be set, indicating the encryption certificate of the self-owned SM certificate.
+     */
+    public $GmEncCert;
+
+    /**
+     * @var string When GmCertType is 1, this parameter needs to be set, indicating the private key of the encryption certificate for the self-owned SM certificate.
+     */
+    public $GmEncPrivateKey;
+
+    /**
+     * @var string When GmCertType is 2, this parameter needs to be set, indicating the ID of the certificate managed by the Tencent Cloud SSL platform.
+     */
+    public $GmSSLId;
 
     /**
      * @param string $Domain Domain name
@@ -343,7 +392,14 @@ https: Use the HTTPS protocol for origin-pull.
      * @param string $Note Domain name remarks
      * @param string $UpstreamHost Custom upstream host. The default value is a null string, indicating that the protected domain name is used as the upstream host.
      * @param integer $ProxyBuffer Whether to enable caching. 0: disable; 1: enable.
-     * @param integer $ProbeStatus 0: Disable probe test; 1: Enable probe test. The probe test is enabled by default.
+     * @param integer $ProbeStatus Whether to enable the test. 0: disable; 1: enable. The test is enabled by default.
+     * @param integer $GmType SM option. 0: do not enable SM; 1: add support for SM based on the existing TLS option; 2: enable SM and support only SM client access.
+     * @param integer $GmCertType SM certificate type. 0: no SM certificate is available; 1: the certificate is a self-owned SM certificate; 2: the certificate is a managed SM certificate.
+     * @param string $GmCert When GmCertType is 1, this parameter needs to be set, indicating the certificate chain of the self-owned SM certificate.
+     * @param string $GmPrivateKey When GmCertType is 1, this parameter needs to be set, indicating the private key of the self-owned SM certificate.
+     * @param string $GmEncCert When GmCertType is 1, this parameter needs to be set, indicating the encryption certificate of the self-owned SM certificate.
+     * @param string $GmEncPrivateKey When GmCertType is 1, this parameter needs to be set, indicating the private key of the encryption certificate for the self-owned SM certificate.
+     * @param string $GmSSLId When GmCertType is 2, this parameter needs to be set, indicating the ID of the certificate managed by the Tencent Cloud SSL platform.
      */
     function __construct()
     {
@@ -509,6 +565,34 @@ https: Use the HTTPS protocol for origin-pull.
 
         if (array_key_exists("ProbeStatus",$param) and $param["ProbeStatus"] !== null) {
             $this->ProbeStatus = $param["ProbeStatus"];
+        }
+
+        if (array_key_exists("GmType",$param) and $param["GmType"] !== null) {
+            $this->GmType = $param["GmType"];
+        }
+
+        if (array_key_exists("GmCertType",$param) and $param["GmCertType"] !== null) {
+            $this->GmCertType = $param["GmCertType"];
+        }
+
+        if (array_key_exists("GmCert",$param) and $param["GmCert"] !== null) {
+            $this->GmCert = $param["GmCert"];
+        }
+
+        if (array_key_exists("GmPrivateKey",$param) and $param["GmPrivateKey"] !== null) {
+            $this->GmPrivateKey = $param["GmPrivateKey"];
+        }
+
+        if (array_key_exists("GmEncCert",$param) and $param["GmEncCert"] !== null) {
+            $this->GmEncCert = $param["GmEncCert"];
+        }
+
+        if (array_key_exists("GmEncPrivateKey",$param) and $param["GmEncPrivateKey"] !== null) {
+            $this->GmEncPrivateKey = $param["GmEncPrivateKey"];
+        }
+
+        if (array_key_exists("GmSSLId",$param) and $param["GmSSLId"] !== null) {
+            $this->GmSSLId = $param["GmSSLId"];
         }
     }
 }

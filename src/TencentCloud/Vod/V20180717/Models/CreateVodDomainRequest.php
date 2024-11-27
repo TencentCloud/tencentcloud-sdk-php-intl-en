@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getDomain() Obtain Domain name to add to VOD. Note: a wildcard domain name is not supported.
  * @method void setDomain(string $Domain) Set Domain name to add to VOD. Note: a wildcard domain name is not supported.
+ * @method integer getSubAppId() Obtain <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+ * @method void setSubAppId(integer $SubAppId) Set <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
  * @method string getAccelerateArea() Obtain Region to enable acceleration. Valid values:
 <li>`Chinese Mainland`</li>
 <li>`Outside Chinese Mainland`</li>
@@ -32,8 +34,10 @@ If `AccelerateArea` is not specified, VOD will enable acceleration in or outside
 <li>`Outside Chinese Mainland`</li>
 <li>`Global`</li>
 If `AccelerateArea` is not specified, VOD will enable acceleration in or outside Chinese mainland based on the regional information a user has configured with Tencent Cloud.
- * @method integer getSubAppId() Obtain <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
- * @method void setSubAppId(integer $SubAppId) Set <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+ * @method string getType() Obtain Domain type. Valid values:
+<li>`VOD`: Domain name distributed using the VOD product;</li> <li>`EdgeOne`: Domain name distributed using the EdgeOne product.</li>default value: VOD. 
+ * @method void setType(string $Type) Set Domain type. Valid values:
+<li>`VOD`: Domain name distributed using the VOD product;</li> <li>`EdgeOne`: Domain name distributed using the EdgeOne product.</li>default value: VOD. 
  */
 class CreateVodDomainRequest extends AbstractModel
 {
@@ -41,6 +45,11 @@ class CreateVodDomainRequest extends AbstractModel
      * @var string Domain name to add to VOD. Note: a wildcard domain name is not supported.
      */
     public $Domain;
+
+    /**
+     * @var integer <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+     */
+    public $SubAppId;
 
     /**
      * @var string Region to enable acceleration. Valid values:
@@ -52,18 +61,21 @@ If `AccelerateArea` is not specified, VOD will enable acceleration in or outside
     public $AccelerateArea;
 
     /**
-     * @var integer <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+     * @var string Domain type. Valid values:
+<li>`VOD`: Domain name distributed using the VOD product;</li> <li>`EdgeOne`: Domain name distributed using the EdgeOne product.</li>default value: VOD. 
      */
-    public $SubAppId;
+    public $Type;
 
     /**
      * @param string $Domain Domain name to add to VOD. Note: a wildcard domain name is not supported.
+     * @param integer $SubAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
      * @param string $AccelerateArea Region to enable acceleration. Valid values:
 <li>`Chinese Mainland`</li>
 <li>`Outside Chinese Mainland`</li>
 <li>`Global`</li>
 If `AccelerateArea` is not specified, VOD will enable acceleration in or outside Chinese mainland based on the regional information a user has configured with Tencent Cloud.
-     * @param integer $SubAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+     * @param string $Type Domain type. Valid values:
+<li>`VOD`: Domain name distributed using the VOD product;</li> <li>`EdgeOne`: Domain name distributed using the EdgeOne product.</li>default value: VOD. 
      */
     function __construct()
     {
@@ -82,12 +94,16 @@ If `AccelerateArea` is not specified, VOD will enable acceleration in or outside
             $this->Domain = $param["Domain"];
         }
 
+        if (array_key_exists("SubAppId",$param) and $param["SubAppId"] !== null) {
+            $this->SubAppId = $param["SubAppId"];
+        }
+
         if (array_key_exists("AccelerateArea",$param) and $param["AccelerateArea"] !== null) {
             $this->AccelerateArea = $param["AccelerateArea"];
         }
 
-        if (array_key_exists("SubAppId",$param) and $param["SubAppId"] !== null) {
-            $this->SubAppId = $param["SubAppId"];
+        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
+            $this->Type = $param["Type"];
         }
     }
 }

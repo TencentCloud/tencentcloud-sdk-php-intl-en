@@ -22,14 +22,14 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getZoneId() Obtain Space ID.
  * @method void setZoneId(string $ZoneId) Set Space ID.
- * @method string getRoleConfigurationName() Obtain Access configuration name, which contains up to 128 characters, including English letters, digits, and hyphens (-).
- * @method void setRoleConfigurationName(string $RoleConfigurationName) Set Access configuration name, which contains up to 128 characters, including English letters, digits, and hyphens (-).
- * @method string getDescription() Obtain Access configuration description, which contains up to 1024 characters.
- * @method void setDescription(string $Description) Set Access configuration description, which contains up to 1024 characters.
- * @method integer getSessionDuration() Obtain Session duration. It indicates the maximum session duration when CIC users use the access configuration to access the target account of the Tencent Cloud Organization. Unit: seconds. Value range: 900-43,200 (15 minutes to 12 hours). Default value: 3600 (1 hour).
- * @method void setSessionDuration(integer $SessionDuration) Set Session duration. It indicates the maximum session duration when CIC users use the access configuration to access the target account of the Tencent Cloud Organization. Unit: seconds. Value range: 900-43,200 (15 minutes to 12 hours). Default value: 3600 (1 hour).
- * @method string getRelayState() Obtain Initial access page. It indicates the initial access page URL when CIC users use the access configuration to access the target account of the Tencent Cloud Organization. This page must be the Tencent Cloud console page. The default is null, which indicates navigating to the home page of the Tencent Cloud console.
- * @method void setRelayState(string $RelayState) Set Initial access page. It indicates the initial access page URL when CIC users use the access configuration to access the target account of the Tencent Cloud Organization. This page must be the Tencent Cloud console page. The default is null, which indicates navigating to the home page of the Tencent Cloud console.
+ * @method string getRoleConfigurationName() Obtain Permission configuration name, which contains up to 128 characters, including English letters, digits, and hyphens (-).
+ * @method void setRoleConfigurationName(string $RoleConfigurationName) Set Permission configuration name, which contains up to 128 characters, including English letters, digits, and hyphens (-).
+ * @method string getDescription() Obtain Permission configuration description, which contains up to 1,024 characters.
+ * @method void setDescription(string $Description) Set Permission configuration description, which contains up to 1,024 characters.
+ * @method integer getSessionDuration() Obtain Session duration, in seconds. It is the maximum time a CIC user can maintain a session while using permission configurations to access a target account in TCO. Value range: 900 to 43200 (15 minutes to 12 hours). Default: 3600 (1 hour).
+ * @method void setSessionDuration(integer $SessionDuration) Set Session duration, in seconds. It is the maximum time a CIC user can maintain a session while using permission configurations to access a target account in TCO. Value range: 900 to 43200 (15 minutes to 12 hours). Default: 3600 (1 hour).
+ * @method string getRelayState() Obtain Initial access page. It is the initial page address when a CIC user uses permission configurations to access a target account in TCO. This page must be a Tencent Cloud console page. The default value is empty, representing a redirection to the home page of the Tencent Cloud console.
+ * @method void setRelayState(string $RelayState) Set Initial access page. It is the initial page address when a CIC user uses permission configurations to access a target account in TCO. This page must be a Tencent Cloud console page. The default value is empty, representing a redirection to the home page of the Tencent Cloud console.
  */
 class CreateRoleConfigurationRequest extends AbstractModel
 {
@@ -39,31 +39,31 @@ class CreateRoleConfigurationRequest extends AbstractModel
     public $ZoneId;
 
     /**
-     * @var string Access configuration name, which contains up to 128 characters, including English letters, digits, and hyphens (-).
+     * @var string Permission configuration name, which contains up to 128 characters, including English letters, digits, and hyphens (-).
      */
     public $RoleConfigurationName;
 
     /**
-     * @var string Access configuration description, which contains up to 1024 characters.
+     * @var string Permission configuration description, which contains up to 1,024 characters.
      */
     public $Description;
 
     /**
-     * @var integer Session duration. It indicates the maximum session duration when CIC users use the access configuration to access the target account of the Tencent Cloud Organization. Unit: seconds. Value range: 900-43,200 (15 minutes to 12 hours). Default value: 3600 (1 hour).
+     * @var integer Session duration, in seconds. It is the maximum time a CIC user can maintain a session while using permission configurations to access a target account in TCO. Value range: 900 to 43200 (15 minutes to 12 hours). Default: 3600 (1 hour).
      */
     public $SessionDuration;
 
     /**
-     * @var string Initial access page. It indicates the initial access page URL when CIC users use the access configuration to access the target account of the Tencent Cloud Organization. This page must be the Tencent Cloud console page. The default is null, which indicates navigating to the home page of the Tencent Cloud console.
+     * @var string Initial access page. It is the initial page address when a CIC user uses permission configurations to access a target account in TCO. This page must be a Tencent Cloud console page. The default value is empty, representing a redirection to the home page of the Tencent Cloud console.
      */
     public $RelayState;
 
     /**
      * @param string $ZoneId Space ID.
-     * @param string $RoleConfigurationName Access configuration name, which contains up to 128 characters, including English letters, digits, and hyphens (-).
-     * @param string $Description Access configuration description, which contains up to 1024 characters.
-     * @param integer $SessionDuration Session duration. It indicates the maximum session duration when CIC users use the access configuration to access the target account of the Tencent Cloud Organization. Unit: seconds. Value range: 900-43,200 (15 minutes to 12 hours). Default value: 3600 (1 hour).
-     * @param string $RelayState Initial access page. It indicates the initial access page URL when CIC users use the access configuration to access the target account of the Tencent Cloud Organization. This page must be the Tencent Cloud console page. The default is null, which indicates navigating to the home page of the Tencent Cloud console.
+     * @param string $RoleConfigurationName Permission configuration name, which contains up to 128 characters, including English letters, digits, and hyphens (-).
+     * @param string $Description Permission configuration description, which contains up to 1,024 characters.
+     * @param integer $SessionDuration Session duration, in seconds. It is the maximum time a CIC user can maintain a session while using permission configurations to access a target account in TCO. Value range: 900 to 43200 (15 minutes to 12 hours). Default: 3600 (1 hour).
+     * @param string $RelayState Initial access page. It is the initial page address when a CIC user uses permission configurations to access a target account in TCO. This page must be a Tencent Cloud console page. The default value is empty, representing a redirection to the home page of the Tencent Cloud console.
      */
     function __construct()
     {

@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeUserClbWafRegions request structure.
  *
- * @method string getAlbType() Obtain 
- * @method void setAlbType(string $AlbType) Set 
+ * @method string getAlbType() Obtain Traffic source. The default value is clb if not specified. clb: Cloud Load Balancer; tsegw: cloud-native API gateway; scf: Serverless Cloud Function; apisix: other gateways on Tencent Cloud.
+ * @method void setAlbType(string $AlbType) Set Traffic source. The default value is clb if not specified. clb: Cloud Load Balancer; tsegw: cloud-native API gateway; scf: Serverless Cloud Function; apisix: other gateways on Tencent Cloud.
  */
 class DescribeUserClbWafRegionsRequest extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Traffic source. The default value is clb if not specified. clb: Cloud Load Balancer; tsegw: cloud-native API gateway; scf: Serverless Cloud Function; apisix: other gateways on Tencent Cloud.
      */
     public $AlbType;
 
     /**
-     * @param string $AlbType 
+     * @param string $AlbType Traffic source. The default value is clb if not specified. clb: Cloud Load Balancer; tsegw: cloud-native API gateway; scf: Serverless Cloud Function; apisix: other gateways on Tencent Cloud.
      */
     function __construct()
     {

@@ -28,12 +28,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTargetType(string $TargetType) Set Type of the synchronized target account of the Tencent Cloud Organization. ManagerUin: admin account; MemberUin: member account.
  * @method integer getTargetUin() Obtain UIN of the target account of the Tencent Cloud Organization.
  * @method void setTargetUin(integer $TargetUin) Set UIN of the target account of the Tencent Cloud Organization.
- * @method string getPrincipalType() Obtain Identity type for the CAM user synchronization. Valid values: User: indicates that the identity for the CAM user synchronization is a CIC user; Group: indicates that the identity for the CAM user synchronization is a CIC user group.
- * @method void setPrincipalType(string $PrincipalType) Set Identity type for the CAM user synchronization. Valid values: User: indicates that the identity for the CAM user synchronization is a CIC user; Group: indicates that the identity for the CAM user synchronization is a CIC user group.
- * @method string getPrincipalId() Obtain Identity ID for the CAM user synchronization. Valid values: When the PrincipalType value is Group, it is the CIC user group ID (g-********). When the PrincipalType value is User, it is the CIC user ID (u-********).  	
- * @method void setPrincipalId(string $PrincipalId) Set Identity ID for the CAM user synchronization. Valid values: When the PrincipalType value is Group, it is the CIC user group ID (g-********). When the PrincipalType value is User, it is the CIC user ID (u-********).  	
- * @method string getDeprovisionStrategy() Obtain Whether to undeploy an access configuration synchronously when you remove the last authorization for using this access configuration on the target account of the Tencent Cloud Organization. Valid values: DeprovisionForLastRoleAssignmentOnAccount: Undeploy the access configuration; None (default): Do not undeploy access configuration.
- * @method void setDeprovisionStrategy(string $DeprovisionStrategy) Set Whether to undeploy an access configuration synchronously when you remove the last authorization for using this access configuration on the target account of the Tencent Cloud Organization. Valid values: DeprovisionForLastRoleAssignmentOnAccount: Undeploy the access configuration; None (default): Do not undeploy access configuration.
+ * @method string getPrincipalType() Obtain Identity types synchronized for CAM users. Valid values: User: indicates the synchronized identity is a user. Group: indicates the synchronized identity is a user group.
+ * @method void setPrincipalType(string $PrincipalType) Set Identity types synchronized for CAM users. Valid values: User: indicates the synchronized identity is a user. Group: indicates the synchronized identity is a user group.
+ * @method string getPrincipalId() Obtain User synchronization ID. Valid values: When PrincipalType is Group, it is a user group ID (g-********). When PrincipalType is User, it is a user ID (u-********).
+ * @method void setPrincipalId(string $PrincipalId) Set User synchronization ID. Valid values: When PrincipalType is Group, it is a user group ID (g-********). When PrincipalType is User, it is a user ID (u-********).
+ * @method string getDeprovisionStrategy() Obtain Whether to remove the permission configuration deployment when removing the last authorization with a certain permission configuration from a target account in TCO. Valid values: DeprovisionForLastRoleAssignmentOnAccount: Remove the permission configuration deployment. None (default): Do not remove the permission configuration deployment.
+ * @method void setDeprovisionStrategy(string $DeprovisionStrategy) Set Whether to remove the permission configuration deployment when removing the last authorization with a certain permission configuration from a target account in TCO. Valid values: DeprovisionForLastRoleAssignmentOnAccount: Remove the permission configuration deployment. None (default): Do not remove the permission configuration deployment.
  */
 class DeleteRoleAssignmentRequest extends AbstractModel
 {
@@ -58,17 +58,17 @@ class DeleteRoleAssignmentRequest extends AbstractModel
     public $TargetUin;
 
     /**
-     * @var string Identity type for the CAM user synchronization. Valid values: User: indicates that the identity for the CAM user synchronization is a CIC user; Group: indicates that the identity for the CAM user synchronization is a CIC user group.
+     * @var string Identity types synchronized for CAM users. Valid values: User: indicates the synchronized identity is a user. Group: indicates the synchronized identity is a user group.
      */
     public $PrincipalType;
 
     /**
-     * @var string Identity ID for the CAM user synchronization. Valid values: When the PrincipalType value is Group, it is the CIC user group ID (g-********). When the PrincipalType value is User, it is the CIC user ID (u-********).  	
+     * @var string User synchronization ID. Valid values: When PrincipalType is Group, it is a user group ID (g-********). When PrincipalType is User, it is a user ID (u-********).
      */
     public $PrincipalId;
 
     /**
-     * @var string Whether to undeploy an access configuration synchronously when you remove the last authorization for using this access configuration on the target account of the Tencent Cloud Organization. Valid values: DeprovisionForLastRoleAssignmentOnAccount: Undeploy the access configuration; None (default): Do not undeploy access configuration.
+     * @var string Whether to remove the permission configuration deployment when removing the last authorization with a certain permission configuration from a target account in TCO. Valid values: DeprovisionForLastRoleAssignmentOnAccount: Remove the permission configuration deployment. None (default): Do not remove the permission configuration deployment.
      */
     public $DeprovisionStrategy;
 
@@ -77,9 +77,9 @@ class DeleteRoleAssignmentRequest extends AbstractModel
      * @param string $RoleConfigurationId Permission configuration ID.
      * @param string $TargetType Type of the synchronized target account of the Tencent Cloud Organization. ManagerUin: admin account; MemberUin: member account.
      * @param integer $TargetUin UIN of the target account of the Tencent Cloud Organization.
-     * @param string $PrincipalType Identity type for the CAM user synchronization. Valid values: User: indicates that the identity for the CAM user synchronization is a CIC user; Group: indicates that the identity for the CAM user synchronization is a CIC user group.
-     * @param string $PrincipalId Identity ID for the CAM user synchronization. Valid values: When the PrincipalType value is Group, it is the CIC user group ID (g-********). When the PrincipalType value is User, it is the CIC user ID (u-********).  	
-     * @param string $DeprovisionStrategy Whether to undeploy an access configuration synchronously when you remove the last authorization for using this access configuration on the target account of the Tencent Cloud Organization. Valid values: DeprovisionForLastRoleAssignmentOnAccount: Undeploy the access configuration; None (default): Do not undeploy access configuration.
+     * @param string $PrincipalType Identity types synchronized for CAM users. Valid values: User: indicates the synchronized identity is a user. Group: indicates the synchronized identity is a user group.
+     * @param string $PrincipalId User synchronization ID. Valid values: When PrincipalType is Group, it is a user group ID (g-********). When PrincipalType is User, it is a user ID (u-********).
+     * @param string $DeprovisionStrategy Whether to remove the permission configuration deployment when removing the last authorization with a certain permission configuration from a target account in TCO. Valid values: DeprovisionForLastRoleAssignmentOnAccount: Remove the permission configuration deployment. None (default): Do not remove the permission configuration deployment.
      */
     function __construct()
     {
