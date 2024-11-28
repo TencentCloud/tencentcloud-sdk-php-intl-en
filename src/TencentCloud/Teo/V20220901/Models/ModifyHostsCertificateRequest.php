@@ -42,8 +42,8 @@ Default value: `none`.
 <li>`none`: Not managed by EdgeOne</li>
 <li>`apply`: Managed by EdgeOne</li>
 Default value: `none`.
- * @method MutualTLS getClientCertInfo() Obtain In the Edge mTLS scenario, this field represents the client's CA certificate, which is deployed at the EO entry side for authenticating the client access to EO nodes. The original configuration applies if this field is not specified.
- * @method void setClientCertInfo(MutualTLS $ClientCertInfo) Set In the Edge mTLS scenario, this field represents the client's CA certificate, which is deployed at the EO entry side for authenticating the client access to EO nodes. The original configuration applies if this field is not specified.
+ * @method MutualTLS getClientCertInfo() Obtain In the mutual authentication scenario, this field represents the client's CA certificate, which is deployed inside the EO node and used for the client to authenticate the EO node. By default, it is disabled. If it is left blank, it indicates retaining the original configuration.
+ * @method void setClientCertInfo(MutualTLS $ClientCertInfo) Set In the mutual authentication scenario, this field represents the client's CA certificate, which is deployed inside the EO node and used for the client to authenticate the EO node. By default, it is disabled. If it is left blank, it indicates retaining the original configuration.
  */
 class ModifyHostsCertificateRequest extends AbstractModel
 {
@@ -80,7 +80,7 @@ Default value: `none`.
     public $ApplyType;
 
     /**
-     * @var MutualTLS In the Edge mTLS scenario, this field represents the client's CA certificate, which is deployed at the EO entry side for authenticating the client access to EO nodes. The original configuration applies if this field is not specified.
+     * @var MutualTLS In the mutual authentication scenario, this field represents the client's CA certificate, which is deployed inside the EO node and used for the client to authenticate the EO node. By default, it is disabled. If it is left blank, it indicates retaining the original configuration.
      */
     public $ClientCertInfo;
 
@@ -96,7 +96,7 @@ Default value: `none`.
 <li>`none`: Not managed by EdgeOne</li>
 <li>`apply`: Managed by EdgeOne</li>
 Default value: `none`.
-     * @param MutualTLS $ClientCertInfo In the Edge mTLS scenario, this field represents the client's CA certificate, which is deployed at the EO entry side for authenticating the client access to EO nodes. The original configuration applies if this field is not specified.
+     * @param MutualTLS $ClientCertInfo In the mutual authentication scenario, this field represents the client's CA certificate, which is deployed inside the EO node and used for the client to authenticate the EO node. By default, it is disabled. If it is left blank, it indicates retaining the original configuration.
      */
     function __construct()
     {

@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Information of domain name ownership verification.
  *
- * @method DnsVerification getDnsVerification() Obtain u200cInformation required for authentication using DNS resolution. It's applicable to sites connected via CNAME. See [Ownership Verification](https://intl.cloud.tencent.com/document/product/1552/70789?from_cn_redirect=1#7af6ecf8-afca-4e35-8811-b5797ed1bde5).
- 
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setDnsVerification(DnsVerification $DnsVerification) Set u200cInformation required for authentication using DNS resolution. It's applicable to sites connected via CNAME. See [Ownership Verification](https://intl.cloud.tencent.com/document/product/1552/70789?from_cn_redirect=1#7af6ecf8-afca-4e35-8811-b5797ed1bde5).
- 
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method FileVerification getFileVerification() Obtain u200cInformation required for verifying via a file. It's applicable to sites connected via CNAMEs. See [Ownership Verification](https://intl.cloud.tencent.com/document/product/1552/70789?from_cn_redirect=1#7af6ecf8-afca-4e35-8811-b5797ed1bde5).
- 
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setFileVerification(FileVerification $FileVerification) Set u200cInformation required for verifying via a file. It's applicable to sites connected via CNAMEs. See [Ownership Verification](https://intl.cloud.tencent.com/document/product/1552/70789?from_cn_redirect=1#7af6ecf8-afca-4e35-8811-b5797ed1bde5).
- 
-Note: This field may return·null, indicating that no valid values can be obtained.
+ * @method DnsVerification getDnsVerification() Obtain CNAME, when there is no domain name access, the information required for DNS resolution verification is used. For details, refer to [Site/Domain Ownership Verification
+](https://intl.cloud.tencent.com/document/product/1552/70789?from_cn_redirect=1#7af6ecf8-afca-4e35-8811-b5797ed1bde5).
+Note: This field may return null, which indicates a failure to obtain a valid value.
+ * @method void setDnsVerification(DnsVerification $DnsVerification) Set CNAME, when there is no domain name access, the information required for DNS resolution verification is used. For details, refer to [Site/Domain Ownership Verification
+](https://intl.cloud.tencent.com/document/product/1552/70789?from_cn_redirect=1#7af6ecf8-afca-4e35-8811-b5797ed1bde5).
+Note: This field may return null, which indicates a failure to obtain a valid value.
+ * @method FileVerification getFileVerification() Obtain CNAME, when there is no domain name access, the information required for file verification is used. For details, refer to [Site/Domain Ownership Verification
+](https://intl.cloud.tencent.com/document/product/1552/70789?from_cn_redirect=1#7af6ecf8-afca-4e35-8811-b5797ed1bde5).
+Note: This field may return null, which indicates a failure to obtain a valid value.
+ * @method void setFileVerification(FileVerification $FileVerification) Set CNAME, when there is no domain name access, the information required for file verification is used. For details, refer to [Site/Domain Ownership Verification
+](https://intl.cloud.tencent.com/document/product/1552/70789?from_cn_redirect=1#7af6ecf8-afca-4e35-8811-b5797ed1bde5).
+Note: This field may return null, which indicates a failure to obtain a valid value.
  * @method NsVerification getNsVerification() Obtain u200cInformation required for switching DNS servers. It's applicable to sites connected via NSs. For details, see [Modifying DNS Server](https://intl.cloud.tencent.com/document/product/1552/90452?from_cn_redirect=1).
 Note: This field may return·null, indicating that no valid values can be obtained.
  * @method void setNsVerification(NsVerification $NsVerification) Set u200cInformation required for switching DNS servers. It's applicable to sites connected via NSs. For details, see [Modifying DNS Server](https://intl.cloud.tencent.com/document/product/1552/90452?from_cn_redirect=1).
@@ -40,16 +40,16 @@ Note: This field may return·null, indicating that no valid values can be obtain
 class OwnershipVerification extends AbstractModel
 {
     /**
-     * @var DnsVerification u200cInformation required for authentication using DNS resolution. It's applicable to sites connected via CNAME. See [Ownership Verification](https://intl.cloud.tencent.com/document/product/1552/70789?from_cn_redirect=1#7af6ecf8-afca-4e35-8811-b5797ed1bde5).
- 
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var DnsVerification CNAME, when there is no domain name access, the information required for DNS resolution verification is used. For details, refer to [Site/Domain Ownership Verification
+](https://intl.cloud.tencent.com/document/product/1552/70789?from_cn_redirect=1#7af6ecf8-afca-4e35-8811-b5797ed1bde5).
+Note: This field may return null, which indicates a failure to obtain a valid value.
      */
     public $DnsVerification;
 
     /**
-     * @var FileVerification u200cInformation required for verifying via a file. It's applicable to sites connected via CNAMEs. See [Ownership Verification](https://intl.cloud.tencent.com/document/product/1552/70789?from_cn_redirect=1#7af6ecf8-afca-4e35-8811-b5797ed1bde5).
- 
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var FileVerification CNAME, when there is no domain name access, the information required for file verification is used. For details, refer to [Site/Domain Ownership Verification
+](https://intl.cloud.tencent.com/document/product/1552/70789?from_cn_redirect=1#7af6ecf8-afca-4e35-8811-b5797ed1bde5).
+Note: This field may return null, which indicates a failure to obtain a valid value.
      */
     public $FileVerification;
 
@@ -60,12 +60,12 @@ Note: This field may return·null, indicating that no valid values can be obtain
     public $NsVerification;
 
     /**
-     * @param DnsVerification $DnsVerification u200cInformation required for authentication using DNS resolution. It's applicable to sites connected via CNAME. See [Ownership Verification](https://intl.cloud.tencent.com/document/product/1552/70789?from_cn_redirect=1#7af6ecf8-afca-4e35-8811-b5797ed1bde5).
- 
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param FileVerification $FileVerification u200cInformation required for verifying via a file. It's applicable to sites connected via CNAMEs. See [Ownership Verification](https://intl.cloud.tencent.com/document/product/1552/70789?from_cn_redirect=1#7af6ecf8-afca-4e35-8811-b5797ed1bde5).
- 
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @param DnsVerification $DnsVerification CNAME, when there is no domain name access, the information required for DNS resolution verification is used. For details, refer to [Site/Domain Ownership Verification
+](https://intl.cloud.tencent.com/document/product/1552/70789?from_cn_redirect=1#7af6ecf8-afca-4e35-8811-b5797ed1bde5).
+Note: This field may return null, which indicates a failure to obtain a valid value.
+     * @param FileVerification $FileVerification CNAME, when there is no domain name access, the information required for file verification is used. For details, refer to [Site/Domain Ownership Verification
+](https://intl.cloud.tencent.com/document/product/1552/70789?from_cn_redirect=1#7af6ecf8-afca-4e35-8811-b5797ed1bde5).
+Note: This field may return null, which indicates a failure to obtain a valid value.
      * @param NsVerification $NsVerification u200cInformation required for switching DNS servers. It's applicable to sites connected via NSs. For details, see [Modifying DNS Server](https://intl.cloud.tencent.com/document/product/1552/90452?from_cn_redirect=1).
 Note: This field may return·null, indicating that no valid values can be obtained.
      */

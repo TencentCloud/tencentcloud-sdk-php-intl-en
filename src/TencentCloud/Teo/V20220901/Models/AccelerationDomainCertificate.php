@@ -22,10 +22,14 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getMode() Obtain Certificate configuration mode. Values: <li>`disable`: Do not configure the certificate;</li><li>`eofreecert`: Use a free certificate provided by EdgeOne; </li><li>`sslcert`: Configure an SSL certificate.</li>
  * @method void setMode(string $Mode) Set Certificate configuration mode. Values: <li>`disable`: Do not configure the certificate;</li><li>`eofreecert`: Use a free certificate provided by EdgeOne; </li><li>`sslcert`: Configure an SSL certificate.</li>
- * @method array getList() Obtain List of certificates
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setList(array $List) Set List of certificates
-Note: This field may return·null, indicating that no valid values can be obtained.
+ * @method array getList() Obtain List of server certificates. The relevant certificates are deployed on the entrance side of the EO.
+Note: This field may return null, which indicates a failure to obtain a valid value.
+ * @method void setList(array $List) Set List of server certificates. The relevant certificates are deployed on the entrance side of the EO.
+Note: This field may return null, which indicates a failure to obtain a valid value.
+ * @method MutualTLS getClientCertInfo() Obtain In the edge mutual authentication scenario, this field represents the client's CA certificate, which is deployed inside the EO node and used for EO node authentication of the client certificate.
+ * @method void setClientCertInfo(MutualTLS $ClientCertInfo) Set In the edge mutual authentication scenario, this field represents the client's CA certificate, which is deployed inside the EO node and used for EO node authentication of the client certificate.
+ * @method UpstreamCertInfo getUpstreamCertInfo() Obtain The certificate carried during EO node origin-pull is used when the origin server enables the mutual authentication handshake to validate the client certificate, ensuring that the request originates from a trusted EO node.
+ * @method void setUpstreamCertInfo(UpstreamCertInfo $UpstreamCertInfo) Set The certificate carried during EO node origin-pull is used when the origin server enables the mutual authentication handshake to validate the client certificate, ensuring that the request originates from a trusted EO node.
  */
 class AccelerationDomainCertificate extends AbstractModel
 {
@@ -35,15 +39,27 @@ class AccelerationDomainCertificate extends AbstractModel
     public $Mode;
 
     /**
-     * @var array List of certificates
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var array List of server certificates. The relevant certificates are deployed on the entrance side of the EO.
+Note: This field may return null, which indicates a failure to obtain a valid value.
      */
     public $List;
 
     /**
+     * @var MutualTLS In the edge mutual authentication scenario, this field represents the client's CA certificate, which is deployed inside the EO node and used for EO node authentication of the client certificate.
+     */
+    public $ClientCertInfo;
+
+    /**
+     * @var UpstreamCertInfo The certificate carried during EO node origin-pull is used when the origin server enables the mutual authentication handshake to validate the client certificate, ensuring that the request originates from a trusted EO node.
+     */
+    public $UpstreamCertInfo;
+
+    /**
      * @param string $Mode Certificate configuration mode. Values: <li>`disable`: Do not configure the certificate;</li><li>`eofreecert`: Use a free certificate provided by EdgeOne; </li><li>`sslcert`: Configure an SSL certificate.</li>
-     * @param array $List List of certificates
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @param array $List List of server certificates. The relevant certificates are deployed on the entrance side of the EO.
+Note: This field may return null, which indicates a failure to obtain a valid value.
+     * @param MutualTLS $ClientCertInfo In the edge mutual authentication scenario, this field represents the client's CA certificate, which is deployed inside the EO node and used for EO node authentication of the client certificate.
+     * @param UpstreamCertInfo $UpstreamCertInfo The certificate carried during EO node origin-pull is used when the origin server enables the mutual authentication handshake to validate the client certificate, ensuring that the request originates from a trusted EO node.
      */
     function __construct()
     {
@@ -69,6 +85,16 @@ Note: This field may return·null, indicating that no valid values can be obtain
                 $obj->deserialize($value);
                 array_push($this->List, $obj);
             }
+        }
+
+        if (array_key_exists("ClientCertInfo",$param) and $param["ClientCertInfo"] !== null) {
+            $this->ClientCertInfo = new MutualTLS();
+            $this->ClientCertInfo->deserialize($param["ClientCertInfo"]);
+        }
+
+        if (array_key_exists("UpstreamCertInfo",$param) and $param["UpstreamCertInfo"] !== null) {
+            $this->UpstreamCertInfo = new UpstreamCertInfo();
+            $this->UpstreamCertInfo->deserialize($param["UpstreamCertInfo"]);
         }
     }
 }
