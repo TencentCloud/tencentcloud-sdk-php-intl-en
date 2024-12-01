@@ -68,6 +68,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAppId(integer $AppId) Set Application ID
  * @method float getBandwidthLimit() Obtain The upper limit on the file system’s throughput, which is determined based on its current usage, and bound resource packs for both storage and throughput
  * @method void setBandwidthLimit(float $BandwidthLimit) Set The upper limit on the file system’s throughput, which is determined based on its current usage, and bound resource packs for both storage and throughput
+ * @method string getAutoSnapshotPolicyId() Obtain 
+ * @method void setAutoSnapshotPolicyId(string $AutoSnapshotPolicyId) Set 
+ * @method string getSnapStatus() Obtain 
+ * @method void setSnapStatus(string $SnapStatus) Set 
  * @method integer getCapacity() Obtain Total capacity of the file system
  * @method void setCapacity(integer $Capacity) Set Total capacity of the file system
  * @method array getTags() Obtain File system tag list
@@ -78,6 +82,8 @@ use TencentCloud\Common\AbstractModel;
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setTieringDetail(TieringDetailInfo $TieringDetail) Set The details about tiered storage.
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method AutoScaleUpRule getAutoScaleUpRule() Obtain 
+ * @method void setAutoScaleUpRule(AutoScaleUpRule $AutoScaleUpRule) Set 
  */
 class FileSystemInfo extends AbstractModel
 {
@@ -178,6 +184,16 @@ class FileSystemInfo extends AbstractModel
     public $BandwidthLimit;
 
     /**
+     * @var string 
+     */
+    public $AutoSnapshotPolicyId;
+
+    /**
+     * @var string 
+     */
+    public $SnapStatus;
+
+    /**
      * @var integer Total capacity of the file system
      */
     public $Capacity;
@@ -197,6 +213,11 @@ class FileSystemInfo extends AbstractModel
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $TieringDetail;
+
+    /**
+     * @var AutoScaleUpRule 
+     */
+    public $AutoScaleUpRule;
 
     /**
      * @param string $CreationTime Creation time
@@ -223,11 +244,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $KmsKeyId Key used for encryption, which can be the key ID or ARN
      * @param integer $AppId Application ID
      * @param float $BandwidthLimit The upper limit on the file system’s throughput, which is determined based on its current usage, and bound resource packs for both storage and throughput
+     * @param string $AutoSnapshotPolicyId 
+     * @param string $SnapStatus 
      * @param integer $Capacity Total capacity of the file system
      * @param array $Tags File system tag list
      * @param string $TieringState The lifecycle management status of a file system.
      * @param TieringDetailInfo $TieringDetail The details about tiered storage.
 Note: This field may return null, indicating that no valid values can be obtained.
+     * @param AutoScaleUpRule $AutoScaleUpRule 
      */
     function __construct()
     {
@@ -315,6 +339,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
             $this->BandwidthLimit = $param["BandwidthLimit"];
         }
 
+        if (array_key_exists("AutoSnapshotPolicyId",$param) and $param["AutoSnapshotPolicyId"] !== null) {
+            $this->AutoSnapshotPolicyId = $param["AutoSnapshotPolicyId"];
+        }
+
+        if (array_key_exists("SnapStatus",$param) and $param["SnapStatus"] !== null) {
+            $this->SnapStatus = $param["SnapStatus"];
+        }
+
         if (array_key_exists("Capacity",$param) and $param["Capacity"] !== null) {
             $this->Capacity = $param["Capacity"];
         }
@@ -335,6 +367,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (array_key_exists("TieringDetail",$param) and $param["TieringDetail"] !== null) {
             $this->TieringDetail = new TieringDetailInfo();
             $this->TieringDetail->deserialize($param["TieringDetail"]);
+        }
+
+        if (array_key_exists("AutoScaleUpRule",$param) and $param["AutoScaleUpRule"] !== null) {
+            $this->AutoScaleUpRule = new AutoScaleUpRule();
+            $this->AutoScaleUpRule->deserialize($param["AutoScaleUpRule"]);
         }
     }
 }

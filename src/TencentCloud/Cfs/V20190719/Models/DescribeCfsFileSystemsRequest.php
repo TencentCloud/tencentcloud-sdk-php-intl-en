@@ -26,6 +26,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVpcId(string $VpcId) Set VPC ID
  * @method string getSubnetId() Obtain Subnet ID
  * @method void setSubnetId(string $SubnetId) Set Subnet ID
+ * @method integer getOffset() Obtain 
+ * @method void setOffset(integer $Offset) Set 
+ * @method integer getLimit() Obtain 
+ * @method void setLimit(integer $Limit) Set 
+ * @method string getCreationToken() Obtain 
+ * @method void setCreationToken(string $CreationToken) Set 
  */
 class DescribeCfsFileSystemsRequest extends AbstractModel
 {
@@ -45,9 +51,27 @@ class DescribeCfsFileSystemsRequest extends AbstractModel
     public $SubnetId;
 
     /**
+     * @var integer 
+     */
+    public $Offset;
+
+    /**
+     * @var integer 
+     */
+    public $Limit;
+
+    /**
+     * @var string 
+     */
+    public $CreationToken;
+
+    /**
      * @param string $FileSystemId File system ID
      * @param string $VpcId VPC ID
      * @param string $SubnetId Subnet ID
+     * @param integer $Offset 
+     * @param integer $Limit 
+     * @param string $CreationToken 
      */
     function __construct()
     {
@@ -72,6 +96,18 @@ class DescribeCfsFileSystemsRequest extends AbstractModel
 
         if (array_key_exists("SubnetId",$param) and $param["SubnetId"] !== null) {
             $this->SubnetId = $param["SubnetId"];
+        }
+
+        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
+            $this->Offset = $param["Offset"];
+        }
+
+        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
+            $this->Limit = $param["Limit"];
+        }
+
+        if (array_key_exists("CreationToken",$param) and $param["CreationToken"] !== null) {
+            $this->CreationToken = $param["CreationToken"];
         }
     }
 }
