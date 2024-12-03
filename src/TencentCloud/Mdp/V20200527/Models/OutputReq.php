@@ -26,8 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setGroupName(string $GroupName) Set The output group name can be associated with the source group name.
  * @method string getManifestName() Obtain The file name output by the channel program after scheduling.
  * @method void setManifestName(string $ManifestName) Set The file name output by the channel program after scheduling.
- * @method ManifestInfo getManifestConf() Obtain Advertisement configuration.
- * @method void setManifestConf(ManifestInfo $ManifestConf) Set Advertisement configuration.
+ * @method ManifestInfo getManifestConf() Obtain The manifest info, used when Type is HLS.
+ * @method void setManifestConf(ManifestInfo $ManifestConf) Set The manifest info, used when Type is HLS.
+ * @method DashManifestInfo getDashManifestConf() Obtain The manifest info, used when Type is DASH.
+ * @method void setDashManifestConf(DashManifestInfo $DashManifestConf) Set The manifest info, used when Type is DASH.
  */
 class OutputReq extends AbstractModel
 {
@@ -47,15 +49,21 @@ class OutputReq extends AbstractModel
     public $ManifestName;
 
     /**
-     * @var ManifestInfo Advertisement configuration.
+     * @var ManifestInfo The manifest info, used when Type is HLS.
      */
     public $ManifestConf;
+
+    /**
+     * @var DashManifestInfo The manifest info, used when Type is DASH.
+     */
+    public $DashManifestConf;
 
     /**
      * @param string $Type Output type, distinguish HLS DASH.
      * @param string $GroupName The output group name can be associated with the source group name.
      * @param string $ManifestName The file name output by the channel program after scheduling.
-     * @param ManifestInfo $ManifestConf Advertisement configuration.
+     * @param ManifestInfo $ManifestConf The manifest info, used when Type is HLS.
+     * @param DashManifestInfo $DashManifestConf The manifest info, used when Type is DASH.
      */
     function __construct()
     {
@@ -85,6 +93,11 @@ class OutputReq extends AbstractModel
         if (array_key_exists("ManifestConf",$param) and $param["ManifestConf"] !== null) {
             $this->ManifestConf = new ManifestInfo();
             $this->ManifestConf->deserialize($param["ManifestConf"]);
+        }
+
+        if (array_key_exists("DashManifestConf",$param) and $param["DashManifestConf"] !== null) {
+            $this->DashManifestConf = new DashManifestInfo();
+            $this->DashManifestConf->deserialize($param["DashManifestConf"]);
         }
     }
 }

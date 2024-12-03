@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getBusinessCodeName() Obtain Product name: The name of a Tencent Cloud product purchased by the user, such as CVM.
  * @method void setBusinessCodeName(string $BusinessCodeName) Set Product name: The name of a Tencent Cloud product purchased by the user, such as CVM.
- * @method string getProductCodeName() Obtain Subproduct name: The subcategory of a Tencent Cloud product purchased by the user, such as CVM – Standard S1.
- * @method void setProductCodeName(string $ProductCodeName) Set Subproduct name: The subcategory of a Tencent Cloud product purchased by the user, such as CVM – Standard S1.
+ * @method string getProductCodeName() Obtain Subproduct name: The subcategory of a Tencent Cloud product purchased by the user, such as CVM Computing C5t.
+ * @method void setProductCodeName(string $ProductCodeName) Set Subproduct name: The subcategory of a Tencent Cloud product purchased by the user, such as CVM Computing C5t.
  * @method string getPayModeName() Obtain Billing mode, which can be monthly subscription or pay-as-you-go.
  * @method void setPayModeName(string $PayModeName) Set Billing mode, which can be monthly subscription or pay-as-you-go.
  * @method string getProjectName() Obtain Project name: The project to which a resource belongs, which is user-designated. If a resource has not been assigned to a project, it will automatically belong to the default project.
@@ -58,16 +58,20 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDiscount(string $Discount) Set Discount multiplier: The discount multiplier applied to the cost of the resource. If a customer has applied for a fixed preferential price or contract price or applied for a refund, this parameter will not be displayed by default.
  * @method string getReduceType() Obtain Offer type
  * @method void setReduceType(string $ReduceType) Set Offer type
- * @method string getRealTotalCost() Obtain Total amount after discount
- * @method void setRealTotalCost(string $RealTotalCost) Set Total amount after discount
+ * @method string getRealTotalCost() Obtain Total amount after discount (Including Tax):  = Total Amount After Discount (Excluding Tax) + TaxAmount
+ * @method void setRealTotalCost(string $RealTotalCost) Set Total amount after discount (Including Tax):  = Total Amount After Discount (Excluding Tax) + TaxAmount
  * @method string getVoucherPayAmount() Obtain Voucher payment: The voucher deduction amount
  * @method void setVoucherPayAmount(string $VoucherPayAmount) Set Voucher payment: The voucher deduction amount
- * @method string getCashPayAmount() Obtain Cash credit: The amount paid from the user’s cash account
- * @method void setCashPayAmount(string $CashPayAmount) Set Cash credit: The amount paid from the user’s cash account
- * @method string getIncentivePayAmount() Obtain Free credit: The amount paid with the user’s free credit
- * @method void setIncentivePayAmount(string $IncentivePayAmount) Set Free credit: The amount paid with the user’s free credit
- * @method string getTransferPayAmount() Obtain Commission credit: The amount paid with the user’s commission credit. Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setTransferPayAmount(string $TransferPayAmount) Set Commission credit: The amount paid with the user’s commission credit. Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getCashPayAmount() Obtain Cash credit: The amount paid from the user's cash account
+
+ * @method void setCashPayAmount(string $CashPayAmount) Set Cash credit: The amount paid from the user's cash account
+
+ * @method string getIncentivePayAmount() Obtain Free credit: The amount paid with the user's free credit
+
+ * @method void setIncentivePayAmount(string $IncentivePayAmount) Set Free credit: The amount paid with the user's free credit
+
+ * @method string getTransferPayAmount() Obtain Commission credit: The amount paid with the user's commission credit. Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setTransferPayAmount(string $TransferPayAmount) Set Commission credit: The amount paid with the user's commission credit. Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getExtendField3() Obtain Extended field 3: Extended attribute information of a product, which is displayed on the resource bill only.
  * @method void setExtendField3(string $ExtendField3) Set Extended field 3: Extended attribute information of a product, which is displayed on the resource bill only.
  * @method string getExtendField4() Obtain Extended field 4: Extended attribute information of a product, which is displayed on the resource bill only.
@@ -107,7 +111,7 @@ class BillResourceSummary extends AbstractModel
     public $BusinessCodeName;
 
     /**
-     * @var string Subproduct name: The subcategory of a Tencent Cloud product purchased by the user, such as CVM – Standard S1.
+     * @var string Subproduct name: The subcategory of a Tencent Cloud product purchased by the user, such as CVM Computing C5t.
      */
     public $ProductCodeName;
 
@@ -197,7 +201,7 @@ class BillResourceSummary extends AbstractModel
     public $ReduceType;
 
     /**
-     * @var string Total amount after discount
+     * @var string Total amount after discount (Including Tax):  = Total Amount After Discount (Excluding Tax) + TaxAmount
      */
     public $RealTotalCost;
 
@@ -207,17 +211,19 @@ class BillResourceSummary extends AbstractModel
     public $VoucherPayAmount;
 
     /**
-     * @var string Cash credit: The amount paid from the user’s cash account
+     * @var string Cash credit: The amount paid from the user's cash account
+
      */
     public $CashPayAmount;
 
     /**
-     * @var string Free credit: The amount paid with the user’s free credit
+     * @var string Free credit: The amount paid with the user's free credit
+
      */
     public $IncentivePayAmount;
 
     /**
-     * @var string Commission credit: The amount paid with the user’s commission credit. Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Commission credit: The amount paid with the user's commission credit. Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $TransferPayAmount;
 
@@ -299,7 +305,7 @@ class BillResourceSummary extends AbstractModel
 
     /**
      * @param string $BusinessCodeName Product name: The name of a Tencent Cloud product purchased by the user, such as CVM.
-     * @param string $ProductCodeName Subproduct name: The subcategory of a Tencent Cloud product purchased by the user, such as CVM – Standard S1.
+     * @param string $ProductCodeName Subproduct name: The subcategory of a Tencent Cloud product purchased by the user, such as CVM Computing C5t.
      * @param string $PayModeName Billing mode, which can be monthly subscription or pay-as-you-go.
      * @param string $ProjectName Project name: The project to which a resource belongs, which is user-designated. If a resource has not been assigned to a project, it will automatically belong to the default project.
      * @param string $RegionName Region: The region to which a resource belongs, such as South China (Guangzhou).
@@ -317,11 +323,13 @@ class BillResourceSummary extends AbstractModel
      * @param string $TotalCost Original cost: The original cost of a resource, which is "List price x Usage x Usage duration". If a customer has applied for a fixed preferential price or contract price or applied for a refund, this parameter will not be displayed by default.
      * @param string $Discount Discount multiplier: The discount multiplier applied to the cost of the resource. If a customer has applied for a fixed preferential price or contract price or applied for a refund, this parameter will not be displayed by default.
      * @param string $ReduceType Offer type
-     * @param string $RealTotalCost Total amount after discount
+     * @param string $RealTotalCost Total amount after discount (Including Tax):  = Total Amount After Discount (Excluding Tax) + TaxAmount
      * @param string $VoucherPayAmount Voucher payment: The voucher deduction amount
-     * @param string $CashPayAmount Cash credit: The amount paid from the user’s cash account
-     * @param string $IncentivePayAmount Free credit: The amount paid with the user’s free credit
-     * @param string $TransferPayAmount Commission credit: The amount paid with the user’s commission credit. Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $CashPayAmount Cash credit: The amount paid from the user's cash account
+
+     * @param string $IncentivePayAmount Free credit: The amount paid with the user's free credit
+
+     * @param string $TransferPayAmount Commission credit: The amount paid with the user's commission credit. Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $ExtendField3 Extended field 3: Extended attribute information of a product, which is displayed on the resource bill only.
      * @param string $ExtendField4 Extended field 4: Extended attribute information of a product, which is displayed on the resource bill only.
      * @param string $ExtendField5 Extended field 5: Extended attribute information of a product, which is displayed on the resource bill only.

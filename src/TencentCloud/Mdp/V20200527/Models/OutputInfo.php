@@ -26,10 +26,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setGroupName(string $GroupName) Set The output group name can be associated with the source group name.
  * @method string getManifestName() Obtain The file name output by the channel program after scheduling.
  * @method void setManifestName(string $ManifestName) Set The file name output by the channel program after scheduling.
- * @method ManifestInfo getManifestConf() Obtain Advertisement configuration.
- * @method void setManifestConf(ManifestInfo $ManifestConf) Set Advertisement configuration.
+ * @method ManifestInfo getManifestConf() Obtain The manifest info, used when Type is HLS.
+ * @method void setManifestConf(ManifestInfo $ManifestConf) Set The manifest info, used when Type is HLS.
  * @method string getPlaybackURL() Obtain Playback address.
  * @method void setPlaybackURL(string $PlaybackURL) Set Playback address.
+ * @method DashManifestInfo getDashManifestConf() Obtain The manifest info, used when Type is DASH.
+ * @method void setDashManifestConf(DashManifestInfo $DashManifestConf) Set The manifest info, used when Type is DASH.
  */
 class OutputInfo extends AbstractModel
 {
@@ -49,7 +51,7 @@ class OutputInfo extends AbstractModel
     public $ManifestName;
 
     /**
-     * @var ManifestInfo Advertisement configuration.
+     * @var ManifestInfo The manifest info, used when Type is HLS.
      */
     public $ManifestConf;
 
@@ -59,11 +61,17 @@ class OutputInfo extends AbstractModel
     public $PlaybackURL;
 
     /**
+     * @var DashManifestInfo The manifest info, used when Type is DASH.
+     */
+    public $DashManifestConf;
+
+    /**
      * @param string $Type HLS DASH.
      * @param string $GroupName The output group name can be associated with the source group name.
      * @param string $ManifestName The file name output by the channel program after scheduling.
-     * @param ManifestInfo $ManifestConf Advertisement configuration.
+     * @param ManifestInfo $ManifestConf The manifest info, used when Type is HLS.
      * @param string $PlaybackURL Playback address.
+     * @param DashManifestInfo $DashManifestConf The manifest info, used when Type is DASH.
      */
     function __construct()
     {
@@ -97,6 +105,11 @@ class OutputInfo extends AbstractModel
 
         if (array_key_exists("PlaybackURL",$param) and $param["PlaybackURL"] !== null) {
             $this->PlaybackURL = $param["PlaybackURL"];
+        }
+
+        if (array_key_exists("DashManifestConf",$param) and $param["DashManifestConf"] !== null) {
+            $this->DashManifestConf = new DashManifestInfo();
+            $this->DashManifestConf->deserialize($param["DashManifestConf"]);
         }
     }
 }

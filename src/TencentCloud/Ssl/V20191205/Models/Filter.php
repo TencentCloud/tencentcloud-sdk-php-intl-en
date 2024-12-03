@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getFilterKey() Obtain The key of the filter parameter.
  * @method void setFilterKey(string $FilterKey) Set The key of the filter parameter.
- * @method string getFilterValue() Obtain u200cThe value of the filter parameter.
- * @method void setFilterValue(string $FilterValue) Set u200cThe value of the filter parameter.
+ * @method string getFilterValue() Obtain The value of the filter parameter.
+ * @method void setFilterValue(string $FilterValue) Set The value of the filter parameter.
  */
 class Filter extends AbstractModel
 {
@@ -33,13 +33,13 @@ class Filter extends AbstractModel
     public $FilterKey;
 
     /**
-     * @var string u200cThe value of the filter parameter.
+     * @var string The value of the filter parameter.
      */
     public $FilterValue;
 
     /**
      * @param string $FilterKey The key of the filter parameter.
-     * @param string $FilterValue u200cThe value of the filter parameter.
+     * @param string $FilterValue The value of the filter parameter.
      */
     function __construct()
     {

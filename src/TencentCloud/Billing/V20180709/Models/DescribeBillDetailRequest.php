@@ -66,48 +66,36 @@ ccli billing DescribeBillDetail --cli-unfold-argument --Offset 1 --Limit 100 --M
  * @method void setPayMode(string $PayMode) Set Billing mode: prePay/postPay
  * @method string getResourceId() Obtain Queries information on a specified resource
  * @method void setResourceId(string $ResourceId) Set Queries information on a specified resource
- * @method string getActionType() Obtain Action type to query. Valid values:
-Purchase
-Renewal
-Modify
-Refund
-Deduction
-Hourly settlement
+ * @method string getActionType() Obtain Hourly settlement
 Daily settlement
 Monthly settlement
-Offline project deduction
-Offline deduction
-adjust-CR
-adjust-DR
-One-off RI Fee
 Spot
-Hourly RI fee
 New monthly subscription
 Monthly subscription renewal
 Monthly subscription specification adjustment
-Monthly subscription specification adjustment
 Monthly subscription refund
- * @method void setActionType(string $ActionType) Set Action type to query. Valid values:
-Purchase
-Renewal
-Modify
-Refund
-Deduction
-Hourly settlement
+Adjustment - deduction
+Adjustment - refund
+Hourly RI fee
+One-off RI Fee
+Hourly Savings Plan fee
+Offline project deduction
+Offline product deduction
+ * @method void setActionType(string $ActionType) Set Hourly settlement
 Daily settlement
 Monthly settlement
-Offline project deduction
-Offline deduction
-adjust-CR
-adjust-DR
-One-off RI Fee
 Spot
-Hourly RI fee
 New monthly subscription
 Monthly subscription renewal
 Monthly subscription specification adjustment
-Monthly subscription specification adjustment
 Monthly subscription refund
+Adjustment - deduction
+Adjustment - refund
+Hourly RI fee
+One-off RI Fee
+Hourly Savings Plan fee
+Offline project deduction
+Offline product deduction
  * @method integer getProjectId() Obtain Project ID: ID of the project to which the resource belongs
  * @method void setProjectId(integer $ProjectId) Set Project ID: ID of the project to which the resource belongs
  * @method string getBusinessCode() Obtain Product code
@@ -186,27 +174,21 @@ ccli billing DescribeBillDetail --cli-unfold-argument --Offset 1 --Limit 100 --M
     public $ResourceId;
 
     /**
-     * @var string Action type to query. Valid values:
-Purchase
-Renewal
-Modify
-Refund
-Deduction
-Hourly settlement
+     * @var string Hourly settlement
 Daily settlement
 Monthly settlement
-Offline project deduction
-Offline deduction
-adjust-CR
-adjust-DR
-One-off RI Fee
 Spot
-Hourly RI fee
 New monthly subscription
 Monthly subscription renewal
 Monthly subscription specification adjustment
-Monthly subscription specification adjustment
 Monthly subscription refund
+Adjustment - deduction
+Adjustment - refund
+Hourly RI fee
+One-off RI Fee
+Hourly Savings Plan fee
+Offline project deduction
+Offline product deduction
      */
     public $ActionType;
 
@@ -255,27 +237,21 @@ ccli billing DescribeBillDetail --cli-unfold-argument --Offset 1 --Limit 100 --M
      * @param string $ProductCode Queries information on a specified product
      * @param string $PayMode Billing mode: prePay/postPay
      * @param string $ResourceId Queries information on a specified resource
-     * @param string $ActionType Action type to query. Valid values:
-Purchase
-Renewal
-Modify
-Refund
-Deduction
-Hourly settlement
+     * @param string $ActionType Hourly settlement
 Daily settlement
 Monthly settlement
-Offline project deduction
-Offline deduction
-adjust-CR
-adjust-DR
-One-off RI Fee
 Spot
-Hourly RI fee
 New monthly subscription
 Monthly subscription renewal
 Monthly subscription specification adjustment
-Monthly subscription specification adjustment
 Monthly subscription refund
+Adjustment - deduction
+Adjustment - refund
+Hourly RI fee
+One-off RI Fee
+Hourly Savings Plan fee
+Offline project deduction
+Offline product deduction
      * @param integer $ProjectId Project ID: ID of the project to which the resource belongs
      * @param string $BusinessCode Product code
 Note: To query the product codes used in the current month, call <a href="https://intl.cloud.tencent.com/document/product/555/35761?from_cn_redirect=1">DescribeBillSummaryByProduct</a>.

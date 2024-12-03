@@ -52,12 +52,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRealCost(string $RealCost) Set Total amount after discount: Total amount after discount = (Original cost - RI deduction (cost) - SP deduction (cost)) x Discount multiplier
  * @method string getVoucherPayAmount() Obtain Voucher payment: The voucher deduction amount
  * @method void setVoucherPayAmount(string $VoucherPayAmount) Set Voucher payment: The voucher deduction amount
- * @method string getCashPayAmount() Obtain Cash credit: The amount paid from the user’s cash account
- * @method void setCashPayAmount(string $CashPayAmount) Set Cash credit: The amount paid from the user’s cash account
- * @method string getIncentivePayAmount() Obtain Free credit: The amount paid with the user’s free credit
- * @method void setIncentivePayAmount(string $IncentivePayAmount) Set Free credit: The amount paid with the user’s free credit
- * @method string getTransferPayAmount() Obtain Commission credit: The amount paid with the user’s commission credit. Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setTransferPayAmount(string $TransferPayAmount) Set Commission credit: The amount paid with the user’s commission credit. Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getCashPayAmount() Obtain Cash credit: The amount paid from the user's cash account
+
+ * @method void setCashPayAmount(string $CashPayAmount) Set Cash credit: The amount paid from the user's cash account
+
+ * @method string getIncentivePayAmount() Obtain Free credit: The amount paid with the user's free credit
+
+ * @method void setIncentivePayAmount(string $IncentivePayAmount) Set Free credit: The amount paid with the user's free credit
+
+ * @method string getTransferPayAmount() Obtain Commission credit: The amount paid with the user's commission credit. Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setTransferPayAmount(string $TransferPayAmount) Set Commission credit: The amount paid with the user's commission credit. Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getItemCode() Obtain Component type code. Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setItemCode(string $ItemCode) Set Component type code. Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getComponentCode() Obtain Component name code. Note: This field may return null, indicating that no valid values can be obtained.
@@ -82,6 +86,12 @@ use TencentCloud\Common\AbstractModel;
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setComponentConfig(array $ComponentConfig) Set Configuration description: The specification configuration of an instance.
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getTaxRate() Obtain The tax rate.
+ * @method void setTaxRate(string $TaxRate) Set The tax rate.
+ * @method string getTaxAmount() Obtain The tax amount.
+ * @method void setTaxAmount(string $TaxAmount) Set The tax amount.
+ * @method string getCurrency() Obtain The currency used for the settlement of a component.
+ * @method void setCurrency(string $Currency) Set The currency used for the settlement of a component.
  */
 class BillDetailComponent extends AbstractModel
 {
@@ -167,17 +177,19 @@ class BillDetailComponent extends AbstractModel
     public $VoucherPayAmount;
 
     /**
-     * @var string Cash credit: The amount paid from the user’s cash account
+     * @var string Cash credit: The amount paid from the user's cash account
+
      */
     public $CashPayAmount;
 
     /**
-     * @var string Free credit: The amount paid with the user’s free credit
+     * @var string Free credit: The amount paid with the user's free credit
+
      */
     public $IncentivePayAmount;
 
     /**
-     * @var string Commission credit: The amount paid with the user’s commission credit. Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Commission credit: The amount paid with the user's commission credit. Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $TransferPayAmount;
 
@@ -239,6 +251,21 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $ComponentConfig;
 
     /**
+     * @var string The tax rate.
+     */
+    public $TaxRate;
+
+    /**
+     * @var string The tax amount.
+     */
+    public $TaxAmount;
+
+    /**
+     * @var string The currency used for the settlement of a component.
+     */
+    public $Currency;
+
+    /**
      * @param string $ComponentCodeName Component type: The component type of a product or service purchased, such as CVM instance components including CPU and memory.
      * @param string $ItemCodeName Component name: The specific component of a product or service purchased
      * @param string $SinglePrice Component list price: The listed unit price of a component. If a customer has applied for a fixed preferential price or contract price, this parameter will not be displayed by default.
@@ -255,9 +282,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $ReduceType Offer type
      * @param string $RealCost Total amount after discount: Total amount after discount = (Original cost - RI deduction (cost) - SP deduction (cost)) x Discount multiplier
      * @param string $VoucherPayAmount Voucher payment: The voucher deduction amount
-     * @param string $CashPayAmount Cash credit: The amount paid from the user’s cash account
-     * @param string $IncentivePayAmount Free credit: The amount paid with the user’s free credit
-     * @param string $TransferPayAmount Commission credit: The amount paid with the user’s commission credit. Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $CashPayAmount Cash credit: The amount paid from the user's cash account
+
+     * @param string $IncentivePayAmount Free credit: The amount paid with the user's free credit
+
+     * @param string $TransferPayAmount Commission credit: The amount paid with the user's commission credit. Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $ItemCode Component type code. Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $ComponentCode Component name code. Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $ContractPrice Component contracted price: The contracted unit price of a component, which is "List price x Discount". Note: This field may return null, indicating that no valid values can be obtained.
@@ -270,6 +299,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $BlendedDiscount Blended discount multiplier: The final discount multiplier that is applied after combining multiple discount types, which is "Total amount after discount / Original cost". Note: This field may return null, indicating that no valid values can be obtained.
      * @param array $ComponentConfig Configuration description: The specification configuration of an instance.
 Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $TaxRate The tax rate.
+     * @param string $TaxAmount The tax amount.
+     * @param string $Currency The currency used for the settlement of a component.
      */
     function __construct()
     {
@@ -407,6 +439,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 $obj->deserialize($value);
                 array_push($this->ComponentConfig, $obj);
             }
+        }
+
+        if (array_key_exists("TaxRate",$param) and $param["TaxRate"] !== null) {
+            $this->TaxRate = $param["TaxRate"];
+        }
+
+        if (array_key_exists("TaxAmount",$param) and $param["TaxAmount"] !== null) {
+            $this->TaxAmount = $param["TaxAmount"];
+        }
+
+        if (array_key_exists("Currency",$param) and $param["Currency"] !== null) {
+            $this->Currency = $param["Currency"];
         }
     }
 }
