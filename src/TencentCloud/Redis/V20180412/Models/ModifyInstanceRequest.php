@@ -20,52 +20,73 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyInstance request structure.
  *
- * @method string getOperation() Obtain Instance modification type. rename: rename an instance; modifyProject: modify the project of an instance; modifyAutoRenew: modify the auto-renewal flag of an instance.
- * @method void setOperation(string $Operation) Set Instance modification type. rename: rename an instance; modifyProject: modify the project of an instance; modifyAutoRenew: modify the auto-renewal flag of an instance.
- * @method array getInstanceIds() Obtain Instance ID
- * @method void setInstanceIds(array $InstanceIds) Set Instance ID
- * @method array getInstanceNames() Obtain New name of the instance
- * @method void setInstanceNames(array $InstanceNames) Set New name of the instance
- * @method integer getProjectId() Obtain Project ID
- * @method void setProjectId(integer $ProjectId) Set Project ID
- * @method array getAutoRenews() Obtain Auto-renewal flag. 0: default status (manual renewal); 1: auto-renewal enabled; 2: auto-renewal disabled
- * @method void setAutoRenews(array $AutoRenews) Set Auto-renewal flag. 0: default status (manual renewal); 1: auto-renewal enabled; 2: auto-renewal disabled
- * @method string getInstanceId() Obtain Disused
- * @method void setInstanceId(string $InstanceId) Set Disused
+ * @method string getOperation() Obtain Instance modification operation. Valid values:
+- rename: Rename the instance.
+- modifyProject: Modify the project to which the instance belongs.
+- modifyAutoRenew: Modify the instance renewal flag.
+ * @method void setOperation(string $Operation) Set Instance modification operation. Valid values:
+- rename: Rename the instance.
+- modifyProject: Modify the project to which the instance belongs.
+- modifyAutoRenew: Modify the instance renewal flag.
+ * @method array getInstanceIds() Obtain Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list. The maximum number of instances per request is 10.
+ * @method void setInstanceIds(array $InstanceIds) Set Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list. The maximum number of instances per request is 10.
+ * @method array getInstanceNames() Obtain New name of the instance.
+ * @method void setInstanceNames(array $InstanceNames) Set New name of the instance.
+ * @method integer getProjectId() Obtain Project ID. Log in to the [Project Management](https://console.tencentcloud.com/project) page of the Redis console and copy the project ID in **Project Name**.
+ * @method void setProjectId(integer $ProjectId) Set Project ID. Log in to the [Project Management](https://console.tencentcloud.com/project) page of the Redis console and copy the project ID in **Project Name**.
+ * @method array getAutoRenews() Obtain Auto-renewal flag.
+
+- 0: default status (manual renewal).
+- 1: automatic renewal.
+- 2: no automatic renewal.
+ * @method void setAutoRenews(array $AutoRenews) Set Auto-renewal flag.
+
+- 0: default status (manual renewal).
+- 1: automatic renewal.
+- 2: no automatic renewal.
+ * @method string getInstanceId() Obtain This parameter is currently being deprecated and can still be used by existing users. It is recommended that new users use InstanceIds.
+ * @method void setInstanceId(string $InstanceId) Set This parameter is currently being deprecated and can still be used by existing users. It is recommended that new users use InstanceIds.
  * @method string getInstanceName() Obtain Disused
  * @method void setInstanceName(string $InstanceName) Set Disused
- * @method integer getAutoRenew() Obtain Disused
- * @method void setAutoRenew(integer $AutoRenew) Set Disused
+ * @method integer getAutoRenew() Obtain This parameter has been deprecated.
+ * @method void setAutoRenew(integer $AutoRenew) Set This parameter has been deprecated.
  */
 class ModifyInstanceRequest extends AbstractModel
 {
     /**
-     * @var string Instance modification type. rename: rename an instance; modifyProject: modify the project of an instance; modifyAutoRenew: modify the auto-renewal flag of an instance.
+     * @var string Instance modification operation. Valid values:
+- rename: Rename the instance.
+- modifyProject: Modify the project to which the instance belongs.
+- modifyAutoRenew: Modify the instance renewal flag.
      */
     public $Operation;
 
     /**
-     * @var array Instance ID
+     * @var array Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list. The maximum number of instances per request is 10.
      */
     public $InstanceIds;
 
     /**
-     * @var array New name of the instance
+     * @var array New name of the instance.
      */
     public $InstanceNames;
 
     /**
-     * @var integer Project ID
+     * @var integer Project ID. Log in to the [Project Management](https://console.tencentcloud.com/project) page of the Redis console and copy the project ID in **Project Name**.
      */
     public $ProjectId;
 
     /**
-     * @var array Auto-renewal flag. 0: default status (manual renewal); 1: auto-renewal enabled; 2: auto-renewal disabled
+     * @var array Auto-renewal flag.
+
+- 0: default status (manual renewal).
+- 1: automatic renewal.
+- 2: no automatic renewal.
      */
     public $AutoRenews;
 
     /**
-     * @var string Disused
+     * @var string This parameter is currently being deprecated and can still be used by existing users. It is recommended that new users use InstanceIds.
      */
     public $InstanceId;
 
@@ -75,19 +96,26 @@ class ModifyInstanceRequest extends AbstractModel
     public $InstanceName;
 
     /**
-     * @var integer Disused
+     * @var integer This parameter has been deprecated.
      */
     public $AutoRenew;
 
     /**
-     * @param string $Operation Instance modification type. rename: rename an instance; modifyProject: modify the project of an instance; modifyAutoRenew: modify the auto-renewal flag of an instance.
-     * @param array $InstanceIds Instance ID
-     * @param array $InstanceNames New name of the instance
-     * @param integer $ProjectId Project ID
-     * @param array $AutoRenews Auto-renewal flag. 0: default status (manual renewal); 1: auto-renewal enabled; 2: auto-renewal disabled
-     * @param string $InstanceId Disused
+     * @param string $Operation Instance modification operation. Valid values:
+- rename: Rename the instance.
+- modifyProject: Modify the project to which the instance belongs.
+- modifyAutoRenew: Modify the instance renewal flag.
+     * @param array $InstanceIds Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list. The maximum number of instances per request is 10.
+     * @param array $InstanceNames New name of the instance.
+     * @param integer $ProjectId Project ID. Log in to the [Project Management](https://console.tencentcloud.com/project) page of the Redis console and copy the project ID in **Project Name**.
+     * @param array $AutoRenews Auto-renewal flag.
+
+- 0: default status (manual renewal).
+- 1: automatic renewal.
+- 2: no automatic renewal.
+     * @param string $InstanceId This parameter is currently being deprecated and can still be used by existing users. It is recommended that new users use InstanceIds.
      * @param string $InstanceName Disused
-     * @param integer $AutoRenew Disused
+     * @param integer $AutoRenew This parameter has been deprecated.
      */
     function __construct()
     {

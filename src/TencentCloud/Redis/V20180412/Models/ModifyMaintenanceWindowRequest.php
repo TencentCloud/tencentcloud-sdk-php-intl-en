@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyMaintenanceWindow request structure.
  *
- * @method string getInstanceId() Obtain Instance ID
- * @method void setInstanceId(string $InstanceId) Set Instance ID
- * @method string getStartTime() Obtain Maintenance start time, such as 17:00
- * @method void setStartTime(string $StartTime) Set Maintenance start time, such as 17:00
- * @method string getEndTime() Obtain Maintenance end time, such as 19:00
- * @method void setEndTime(string $EndTime) Set Maintenance end time, such as 19:00
+ * @method string getInstanceId() Obtain Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
+ * @method void setInstanceId(string $InstanceId) Set Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
+ * @method string getStartTime() Obtain Start time of the maintenance window, for example, 17:00.
+ * @method void setStartTime(string $StartTime) Set Start time of the maintenance window, for example, 17:00.
+ * @method string getEndTime() Obtain End time of the maintenance window, for example, 19:00.
+ * @method void setEndTime(string $EndTime) Set End time of the maintenance window, for example, 19:00.
  */
 class ModifyMaintenanceWindowRequest extends AbstractModel
 {
     /**
-     * @var string Instance ID
+     * @var string Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
      */
     public $InstanceId;
 
     /**
-     * @var string Maintenance start time, such as 17:00
+     * @var string Start time of the maintenance window, for example, 17:00.
      */
     public $StartTime;
 
     /**
-     * @var string Maintenance end time, such as 19:00
+     * @var string End time of the maintenance window, for example, 19:00.
      */
     public $EndTime;
 
     /**
-     * @param string $InstanceId Instance ID
-     * @param string $StartTime Maintenance start time, such as 17:00
-     * @param string $EndTime Maintenance end time, such as 19:00
+     * @param string $InstanceId Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
+     * @param string $StartTime Start time of the maintenance window, for example, 17:00.
+     * @param string $EndTime End time of the maintenance window, for example, 19:00.
      */
     function __construct()
     {

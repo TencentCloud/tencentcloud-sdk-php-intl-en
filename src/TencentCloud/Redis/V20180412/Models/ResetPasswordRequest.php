@@ -20,34 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ResetPassword request structure.
  *
- * @method string getInstanceId() Obtain Redis instance ID
- * @method void setInstanceId(string $InstanceId) Set Redis instance ID
- * @method string getPassword() Obtain Password reset (this parameter can be left blank when switching to password-free instance mode and is required in other cases)
- * @method void setPassword(string $Password) Set Password reset (this parameter can be left blank when switching to password-free instance mode and is required in other cases)
- * @method boolean getNoAuth() Obtain Whether to switch to password-free instance mode. false: switch to password-enabled instance mode; true: switch to password-free instance mode. Default value: false.
- * @method void setNoAuth(boolean $NoAuth) Set Whether to switch to password-free instance mode. false: switch to password-enabled instance mode; true: switch to password-free instance mode. Default value: false.
+ * @method string getInstanceId() Obtain Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
+ * @method void setInstanceId(string $InstanceId) Set Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
+ * @method string getPassword() Obtain Reset password. This parameter can be left blank when a password-free instance is used. It is required in other cases.
+ * @method void setPassword(string $Password) Set Reset password. This parameter can be left blank when a password-free instance is used. It is required in other cases.
+ * @method boolean getNoAuth() Obtain Whether to switch to a password-free instance.
+- false: Switch to a non-password-free instance.
+- true: Switch to a password-free instance. Default value: false.
+ * @method void setNoAuth(boolean $NoAuth) Set Whether to switch to a password-free instance.
+- false: Switch to a non-password-free instance.
+- true: Switch to a password-free instance. Default value: false.
  */
 class ResetPasswordRequest extends AbstractModel
 {
     /**
-     * @var string Redis instance ID
+     * @var string Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
      */
     public $InstanceId;
 
     /**
-     * @var string Password reset (this parameter can be left blank when switching to password-free instance mode and is required in other cases)
+     * @var string Reset password. This parameter can be left blank when a password-free instance is used. It is required in other cases.
      */
     public $Password;
 
     /**
-     * @var boolean Whether to switch to password-free instance mode. false: switch to password-enabled instance mode; true: switch to password-free instance mode. Default value: false.
+     * @var boolean Whether to switch to a password-free instance.
+- false: Switch to a non-password-free instance.
+- true: Switch to a password-free instance. Default value: false.
      */
     public $NoAuth;
 
     /**
-     * @param string $InstanceId Redis instance ID
-     * @param string $Password Password reset (this parameter can be left blank when switching to password-free instance mode and is required in other cases)
-     * @param boolean $NoAuth Whether to switch to password-free instance mode. false: switch to password-enabled instance mode; true: switch to password-free instance mode. Default value: false.
+     * @param string $InstanceId Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
+     * @param string $Password Reset password. This parameter can be left blank when a password-free instance is used. It is required in other cases.
+     * @param boolean $NoAuth Whether to switch to a password-free instance.
+- false: Switch to a non-password-free instance.
+- true: Switch to a password-free instance. Default value: false.
      */
     function __construct()
     {

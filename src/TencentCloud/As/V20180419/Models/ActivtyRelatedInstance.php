@@ -22,16 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() Obtain Instance ID.
  * @method void setInstanceId(string $InstanceId) Set Instance ID.
- * @method string getInstanceStatus() Obtain Status of the instance in the scaling activity. Value range:
-<li>INIT: initializing
-<li>RUNNING: running
-<li>SUCCESSFUL: succeeded
-<li>FAILED: failed
- * @method void setInstanceStatus(string $InstanceStatus) Set Status of the instance in the scaling activity. Value range:
-<li>INIT: initializing
-<li>RUNNING: running
-<li>SUCCESSFUL: succeeded
-<li>FAILED: failed
+ * @method string getInstanceStatus() Obtain Status of the instance in the scaling activity. Valid values: <br><li>INIT: initializing;</li> <li>RUNNING: instance in operation;</li> <li>SUCCESSFUL: activity successful;</li> <li>FAILED: activity failed.
+ * @method void setInstanceStatus(string $InstanceStatus) Set Status of the instance in the scaling activity. Valid values: <br><li>INIT: initializing;</li> <li>RUNNING: instance in operation;</li> <li>SUCCESSFUL: activity successful;</li> <li>FAILED: activity failed.
  */
 class ActivtyRelatedInstance extends AbstractModel
 {
@@ -41,21 +33,13 @@ class ActivtyRelatedInstance extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var string Status of the instance in the scaling activity. Value range:
-<li>INIT: initializing
-<li>RUNNING: running
-<li>SUCCESSFUL: succeeded
-<li>FAILED: failed
+     * @var string Status of the instance in the scaling activity. Valid values: <br><li>INIT: initializing;</li> <li>RUNNING: instance in operation;</li> <li>SUCCESSFUL: activity successful;</li> <li>FAILED: activity failed.
      */
     public $InstanceStatus;
 
     /**
      * @param string $InstanceId Instance ID.
-     * @param string $InstanceStatus Status of the instance in the scaling activity. Value range:
-<li>INIT: initializing
-<li>RUNNING: running
-<li>SUCCESSFUL: succeeded
-<li>FAILED: failed
+     * @param string $InstanceStatus Status of the instance in the scaling activity. Valid values: <br><li>INIT: initializing;</li> <li>RUNNING: instance in operation;</li> <li>SUCCESSFUL: activity successful;</li> <li>FAILED: activity failed.
      */
     function __construct()
     {

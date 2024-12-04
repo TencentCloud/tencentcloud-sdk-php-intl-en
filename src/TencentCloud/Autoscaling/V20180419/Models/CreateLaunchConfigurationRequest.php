@@ -100,6 +100,8 @@ Note: This field is default to empty
  * @method void setDisasterRecoverGroupIds(array $DisasterRecoverGroupIds) Set Placement group ID. Only one is allowed.
  * @method string getImageFamily() Obtain Image family name. Either image ID or image family name should be filled in, and only one of which can be filled.
  * @method void setImageFamily(string $ImageFamily) Set Image family name. Either image ID or image family name should be filled in, and only one of which can be filled.
+ * @method string getDedicatedClusterId() Obtain CDC ID.
+ * @method void setDedicatedClusterId(string $DedicatedClusterId) Set CDC ID.
  */
 class CreateLaunchConfigurationRequest extends AbstractModel
 {
@@ -248,6 +250,11 @@ Note: This field is default to empty
     public $ImageFamily;
 
     /**
+     * @var string CDC ID.
+     */
+    public $DedicatedClusterId;
+
+    /**
      * @param string $LaunchConfigurationName Display name of the launch configuration, which can contain letters, digits, underscores and hyphens (-), and dots. Up to of 60 bytes allowed..
      * @param string $ImageId [Image](https://intl.cloud.tencent.com/document/product/213/4940?from_cn_redirect=1) ID in the format of `img-xxx`. There are three types of images: <br/><li>Public images </li><li>Custom images </li><li>Shared images </li><br/>You can obtain the image IDs in the [CVM console](https://console.cloud.tencent.com/cvm/image?rid=1&imageType=PUBLIC_IMAGE).</li><li>You can also use the [DescribeImages](https://intl.cloud.tencent.com/document/api/213/15715?from_cn_redirect=1) and look for `ImageId` in the response.</li>
      * @param integer $ProjectId Project ID of the launch configuration. The default project is used if it’s left blank.
@@ -288,6 +295,7 @@ Note: This field is default to empty
      * @param IPv6InternetAccessible $IPv6InternetAccessible IPv6 public network bandwidth configuration. If the IPv6 address is available in the new instance, public network bandwidth can be allocated to the IPv6 address. This parameter is invalid if `Ipv6AddressCount` of the scaling group associated with the launch configuration is 0.
      * @param array $DisasterRecoverGroupIds Placement group ID. Only one is allowed.
      * @param string $ImageFamily Image family name. Either image ID or image family name should be filled in, and only one of which can be filled.
+     * @param string $DedicatedClusterId CDC ID.
      */
     function __construct()
     {
@@ -428,6 +436,10 @@ Note: This field is default to empty
 
         if (array_key_exists("ImageFamily",$param) and $param["ImageFamily"] !== null) {
             $this->ImageFamily = $param["ImageFamily"];
+        }
+
+        if (array_key_exists("DedicatedClusterId",$param) and $param["DedicatedClusterId"] !== null) {
+            $this->DedicatedClusterId = $param["DedicatedClusterId"];
         }
     }
 }

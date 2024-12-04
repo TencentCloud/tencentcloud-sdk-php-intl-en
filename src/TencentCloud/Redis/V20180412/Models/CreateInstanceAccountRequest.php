@@ -20,21 +20,23 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateInstanceAccount request structure.
  *
- * @method string getInstanceId() Obtain Instance ID.
- * @method void setInstanceId(string $InstanceId) Set Instance ID.
- * @method string getAccountName() Obtain Custom the name of the database to access.
-- Contains only letters, digits, underscores, and hyphens.
+ * @method string getInstanceId() Obtain Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
+ * @method void setInstanceId(string $InstanceId) Set Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
+ * @method string getAccountName() Obtain Custom account name for accessing the database.
+- It contains only letters, digits, underscores (_), and hyphens (-).
 - The length cannot exceed 32 characters.
- * @method void setAccountName(string $AccountName) Set Custom the name of the database to access.
-- Contains only letters, digits, underscores, and hyphens.
+ * @method void setAccountName(string $AccountName) Set Custom account name for accessing the database.
+- It contains only letters, digits, underscores (_), and hyphens (-).
 - The length cannot exceed 32 characters.
- * @method string getAccountPassword() Obtain Set a password for the customized account. The password complexity requirements are as follows:
-- Value range: [8, 32].
-- Contains at least two types of characters from the following categories: lowercase letters, uppercase letters, digits, and characters ()`~!@#$%^&*-+=_|{}[]:;<>,.? /.- Cannot start with "/".
+ * @method string getAccountPassword() Obtain Password of the custom account. The password complexity requirements are as follows:
+- It can contain 8 to 64 characters.
+- It should contain at least two of the following types: lowercase letters, uppercase letters, digits, and special characters (such as ()`~!@#$%^&*-+=_|{}[]:;<>,.?/).
+- It cannot start with a forward slash (/).
 
- * @method void setAccountPassword(string $AccountPassword) Set Set a password for the customized account. The password complexity requirements are as follows:
-- Value range: [8, 32].
-- Contains at least two types of characters from the following categories: lowercase letters, uppercase letters, digits, and characters ()`~!@#$%^&*-+=_|{}[]:;<>,.? /.- Cannot start with "/".
+ * @method void setAccountPassword(string $AccountPassword) Set Password of the custom account. The password complexity requirements are as follows:
+- It can contain 8 to 64 characters.
+- It should contain at least two of the following types: lowercase letters, uppercase letters, digits, and special characters (such as ()`~!@#$%^&*-+=_|{}[]:;<>,.?/).
+- It cannot start with a forward slash (/).
 
  * @method array getReadonlyPolicy() Obtain The read requests for the designated account are routed to either the master node or replica nodes. If the Read-Only Replica is not enabled, the selection of replica nodes is not supported.
 - master: Master node.- replication: Replica node.
@@ -52,21 +54,22 @@ use TencentCloud\Common\AbstractModel;
 class CreateInstanceAccountRequest extends AbstractModel
 {
     /**
-     * @var string Instance ID.
+     * @var string Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
      */
     public $InstanceId;
 
     /**
-     * @var string Custom the name of the database to access.
-- Contains only letters, digits, underscores, and hyphens.
+     * @var string Custom account name for accessing the database.
+- It contains only letters, digits, underscores (_), and hyphens (-).
 - The length cannot exceed 32 characters.
      */
     public $AccountName;
 
     /**
-     * @var string Set a password for the customized account. The password complexity requirements are as follows:
-- Value range: [8, 32].
-- Contains at least two types of characters from the following categories: lowercase letters, uppercase letters, digits, and characters ()`~!@#$%^&*-+=_|{}[]:;<>,.? /.- Cannot start with "/".
+     * @var string Password of the custom account. The password complexity requirements are as follows:
+- It can contain 8 to 64 characters.
+- It should contain at least two of the following types: lowercase letters, uppercase letters, digits, and special characters (such as ()`~!@#$%^&*-+=_|{}[]:;<>,.?/).
+- It cannot start with a forward slash (/).
 
      */
     public $AccountPassword;
@@ -90,13 +93,14 @@ class CreateInstanceAccountRequest extends AbstractModel
     public $Remark;
 
     /**
-     * @param string $InstanceId Instance ID.
-     * @param string $AccountName Custom the name of the database to access.
-- Contains only letters, digits, underscores, and hyphens.
+     * @param string $InstanceId Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
+     * @param string $AccountName Custom account name for accessing the database.
+- It contains only letters, digits, underscores (_), and hyphens (-).
 - The length cannot exceed 32 characters.
-     * @param string $AccountPassword Set a password for the customized account. The password complexity requirements are as follows:
-- Value range: [8, 32].
-- Contains at least two types of characters from the following categories: lowercase letters, uppercase letters, digits, and characters ()`~!@#$%^&*-+=_|{}[]:;<>,.? /.- Cannot start with "/".
+     * @param string $AccountPassword Password of the custom account. The password complexity requirements are as follows:
+- It can contain 8 to 64 characters.
+- It should contain at least two of the following types: lowercase letters, uppercase letters, digits, and special characters (such as ()`~!@#$%^&*-+=_|{}[]:;<>,.?/).
+- It cannot start with a forward slash (/).
 
      * @param array $ReadonlyPolicy The read requests for the designated account are routed to either the master node or replica nodes. If the Read-Only Replica is not enabled, the selection of replica nodes is not supported.
 - master: Master node.- replication: Replica node.

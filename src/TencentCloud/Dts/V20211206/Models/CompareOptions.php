@@ -20,10 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Consistency check options
  *
- * @method string getMethod() Obtain Comparison type: (`dataCheck`: Full data comparison; `sampleDataCheck`: Sampling data comparison; `rowsCount`: Row count comparison)
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setMethod(string $Method) Set Comparison type: (`dataCheck`: Full data comparison; `sampleDataCheck`: Sampling data comparison; `rowsCount`: Row count comparison)
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getMethod() Obtain Comparative Method: dataCheck (Complete Data Comparison), sampleDataCheck (Sampling Data Comparison), rowsCount (Row Count Comparison)Note: This field may return null, indicating that no valid value can be obtained.
+ * @method void setMethod(string $Method) Set Comparative Method: dataCheck (Complete Data Comparison), sampleDataCheck (Sampling Data Comparison), rowsCount (Row Count Comparison)Note: This field may return null, indicating that no valid value can be obtained.
  * @method integer getSampleRate() Obtain Sampling rate. Value range: 0-100%.
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setSampleRate(integer $SampleRate) Set Sampling rate. Value range: 0-100%.
@@ -36,8 +34,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 class CompareOptions extends AbstractModel
 {
     /**
-     * @var string Comparison type: (`dataCheck`: Full data comparison; `sampleDataCheck`: Sampling data comparison; `rowsCount`: Row count comparison)
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Comparative Method: dataCheck (Complete Data Comparison), sampleDataCheck (Sampling Data Comparison), rowsCount (Row Count Comparison)Note: This field may return null, indicating that no valid value can be obtained.
      */
     public $Method;
 
@@ -54,8 +51,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $ThreadCount;
 
     /**
-     * @param string $Method Comparison type: (`dataCheck`: Full data comparison; `sampleDataCheck`: Sampling data comparison; `rowsCount`: Row count comparison)
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $Method Comparative Method: dataCheck (Complete Data Comparison), sampleDataCheck (Sampling Data Comparison), rowsCount (Row Count Comparison)Note: This field may return null, indicating that no valid value can be obtained.
      * @param integer $SampleRate Sampling rate. Value range: 0-100%.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $ThreadCount The number of threads, which defaults to 1. Value range: 1-5.

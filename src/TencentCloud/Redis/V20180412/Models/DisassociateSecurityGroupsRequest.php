@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getProduct() Obtain Database engine name, which is `redis` for this API.
  * @method void setProduct(string $Product) Set Database engine name, which is `redis` for this API.
- * @method string getSecurityGroupId() Obtain Security group ID
- * @method void setSecurityGroupId(string $SecurityGroupId) Set Security group ID
- * @method array getInstanceIds() Obtain List of instance IDs, which is an array of one or more instance IDs.
- * @method void setInstanceIds(array $InstanceIds) Set List of instance IDs, which is an array of one or more instance IDs.
+ * @method string getSecurityGroupId() Obtain Security group ID, which can be obtained through the sub-parameter **SecurityGroupId** of the response parameter InstanceSecurityGroupsDetail of the API [DescribeInstanceSecurityGroup](https://intl.cloud.tencent.com/document/product/239/34447?from_cn_redirect=1).
+ * @method void setSecurityGroupId(string $SecurityGroupId) Set Security group ID, which can be obtained through the sub-parameter **SecurityGroupId** of the response parameter InstanceSecurityGroupsDetail of the API [DescribeInstanceSecurityGroup](https://intl.cloud.tencent.com/document/product/239/34447?from_cn_redirect=1).
+ * @method array getInstanceIds() Obtain Instance ID list, which is an array of one or more instance IDs. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
+ * @method void setInstanceIds(array $InstanceIds) Set Instance ID list, which is an array of one or more instance IDs. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
  */
 class DisassociateSecurityGroupsRequest extends AbstractModel
 {
@@ -35,19 +35,19 @@ class DisassociateSecurityGroupsRequest extends AbstractModel
     public $Product;
 
     /**
-     * @var string Security group ID
+     * @var string Security group ID, which can be obtained through the sub-parameter **SecurityGroupId** of the response parameter InstanceSecurityGroupsDetail of the API [DescribeInstanceSecurityGroup](https://intl.cloud.tencent.com/document/product/239/34447?from_cn_redirect=1).
      */
     public $SecurityGroupId;
 
     /**
-     * @var array List of instance IDs, which is an array of one or more instance IDs.
+     * @var array Instance ID list, which is an array of one or more instance IDs. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
      */
     public $InstanceIds;
 
     /**
      * @param string $Product Database engine name, which is `redis` for this API.
-     * @param string $SecurityGroupId Security group ID
-     * @param array $InstanceIds List of instance IDs, which is an array of one or more instance IDs.
+     * @param string $SecurityGroupId Security group ID, which can be obtained through the sub-parameter **SecurityGroupId** of the response parameter InstanceSecurityGroupsDetail of the API [DescribeInstanceSecurityGroup](https://intl.cloud.tencent.com/document/product/239/34447?from_cn_redirect=1).
+     * @param array $InstanceIds Instance ID list, which is an array of one or more instance IDs. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
      */
     function __construct()
     {

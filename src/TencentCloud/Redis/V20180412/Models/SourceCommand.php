@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Access command
  *
- * @method string getCmd() Obtain Command
- * @method void setCmd(string $Cmd) Set Command
- * @method integer getCount() Obtain Number of executions
- * @method void setCount(integer $Count) Set Number of executions
+ * @method string getCmd() Obtain Command name.
+ * @method void setCmd(string $Cmd) Set Command name.
+ * @method integer getCount() Obtain Number of executions.
+ * @method void setCount(integer $Count) Set Number of executions.
  */
 class SourceCommand extends AbstractModel
 {
     /**
-     * @var string Command
+     * @var string Command name.
      */
     public $Cmd;
 
     /**
-     * @var integer Number of executions
+     * @var integer Number of executions.
      */
     public $Count;
 
     /**
-     * @param string $Cmd Command
-     * @param integer $Count Number of executions
+     * @param string $Cmd Command name.
+     * @param integer $Count Number of executions.
      */
     function __construct()
     {

@@ -25,7 +25,9 @@ Parameter value is not allowed to be 7,380,86.
  * @method void setCountryCode(string $CountryCode) Set Country code.
 Parameter value is not allowed to be 7,380,86.
  * @method string getPhoneNum() Obtain Mobile number.
+The caller needs to ensure the validity and correctness of the mobile number. A global mobile number within a range of 1-32 digits is allowed.No need to add CountryCode before mobile number.
  * @method void setPhoneNum(string $PhoneNum) Set Mobile number.
+The caller needs to ensure the validity and correctness of the mobile number. A global mobile number within a range of 1-32 digits is allowed.No need to add CountryCode before mobile number.
  */
 class SendVerifyCodeRequest extends AbstractModel
 {
@@ -37,6 +39,7 @@ Parameter value is not allowed to be 7,380,86.
 
     /**
      * @var string Mobile number.
+The caller needs to ensure the validity and correctness of the mobile number. A global mobile number within a range of 1-32 digits is allowed.No need to add CountryCode before mobile number.
      */
     public $PhoneNum;
 
@@ -44,6 +47,7 @@ Parameter value is not allowed to be 7,380,86.
      * @param string $CountryCode Country code.
 Parameter value is not allowed to be 7,380,86.
      * @param string $PhoneNum Mobile number.
+The caller needs to ensure the validity and correctness of the mobile number. A global mobile number within a range of 1-32 digits is allowed.No need to add CountryCode before mobile number.
      */
     function __construct()
     {

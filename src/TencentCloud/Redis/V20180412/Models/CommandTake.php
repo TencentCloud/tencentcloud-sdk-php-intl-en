@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Command duration
  *
- * @method string getCmd() Obtain Command
- * @method void setCmd(string $Cmd) Set Command
- * @method integer getTook() Obtain Duration
- * @method void setTook(integer $Took) Set Duration
+ * @method string getCmd() Obtain Command name.
+ * @method void setCmd(string $Cmd) Set Command name.
+ * @method integer getTook() Obtain Time consumed. Unit: ms.
+ * @method void setTook(integer $Took) Set Time consumed. Unit: ms.
  */
 class CommandTake extends AbstractModel
 {
     /**
-     * @var string Command
+     * @var string Command name.
      */
     public $Cmd;
 
     /**
-     * @var integer Duration
+     * @var integer Time consumed. Unit: ms.
      */
     public $Took;
 
     /**
-     * @param string $Cmd Command
-     * @param integer $Took Duration
+     * @param string $Cmd Command name.
+     * @param integer $Took Time consumed. Unit: ms.
      */
     function __construct()
     {

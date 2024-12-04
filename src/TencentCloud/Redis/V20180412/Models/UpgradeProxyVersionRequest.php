@@ -20,42 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * UpgradeProxyVersion request structure.
  *
- * @method string getInstanceId() Obtain Instance ID
- * @method void setInstanceId(string $InstanceId) Set Instance ID
- * @method string getCurrentProxyVersion() Obtain The current proxy version
- * @method void setCurrentProxyVersion(string $CurrentProxyVersion) Set The current proxy version
- * @method string getUpgradeProxyVersion() Obtain Upgradeable redis version
- * @method void setUpgradeProxyVersion(string $UpgradeProxyVersion) Set Upgradeable redis version
- * @method integer getInstanceTypeUpgradeNow() Obtain `1` (upgrade immediately), `0` (upgrade during maintenance time)
- * @method void setInstanceTypeUpgradeNow(integer $InstanceTypeUpgradeNow) Set `1` (upgrade immediately), `0` (upgrade during maintenance time)
+ * @method string getInstanceId() Obtain Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
+ * @method void setInstanceId(string $InstanceId) Set Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
+ * @method string getCurrentProxyVersion() Obtain Current Proxy version.
+ * @method void setCurrentProxyVersion(string $CurrentProxyVersion) Set Current Proxy version.
+ * @method string getUpgradeProxyVersion() Obtain Upgradable Redis version.
+ * @method void setUpgradeProxyVersion(string $UpgradeProxyVersion) Set Upgradable Redis version.
+ * @method integer getInstanceTypeUpgradeNow() Obtain Specifies whether to upgrade immediately.
+- 1: Upgrade immediately.
+- 0: Upgrade during the maintenance window.
+ * @method void setInstanceTypeUpgradeNow(integer $InstanceTypeUpgradeNow) Set Specifies whether to upgrade immediately.
+- 1: Upgrade immediately.
+- 0: Upgrade during the maintenance window.
  */
 class UpgradeProxyVersionRequest extends AbstractModel
 {
     /**
-     * @var string Instance ID
+     * @var string Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
      */
     public $InstanceId;
 
     /**
-     * @var string The current proxy version
+     * @var string Current Proxy version.
      */
     public $CurrentProxyVersion;
 
     /**
-     * @var string Upgradeable redis version
+     * @var string Upgradable Redis version.
      */
     public $UpgradeProxyVersion;
 
     /**
-     * @var integer `1` (upgrade immediately), `0` (upgrade during maintenance time)
+     * @var integer Specifies whether to upgrade immediately.
+- 1: Upgrade immediately.
+- 0: Upgrade during the maintenance window.
      */
     public $InstanceTypeUpgradeNow;
 
     /**
-     * @param string $InstanceId Instance ID
-     * @param string $CurrentProxyVersion The current proxy version
-     * @param string $UpgradeProxyVersion Upgradeable redis version
-     * @param integer $InstanceTypeUpgradeNow `1` (upgrade immediately), `0` (upgrade during maintenance time)
+     * @param string $InstanceId Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
+     * @param string $CurrentProxyVersion Current Proxy version.
+     * @param string $UpgradeProxyVersion Upgradable Redis version.
+     * @param integer $InstanceTypeUpgradeNow Specifies whether to upgrade immediately.
+- 1: Upgrade immediately.
+- 0: Upgrade during the maintenance window.
      */
     function __construct()
     {

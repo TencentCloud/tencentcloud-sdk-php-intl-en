@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getProduct() Obtain Database engine name, which is `redis` for this API.
  * @method void setProduct(string $Product) Set Database engine name, which is `redis` for this API.
- * @method integer getProjectId() Obtain Project ID
- * @method void setProjectId(integer $ProjectId) Set Project ID
+ * @method integer getProjectId() Obtain Project ID. Log in to the [Project Management](https://console.tencentcloud.com/project) page of the Redis console and copy the project ID in **Project Name**.
+ * @method void setProjectId(integer $ProjectId) Set Project ID. Log in to the [Project Management](https://console.tencentcloud.com/project) page of the Redis console and copy the project ID in **Project Name**.
  * @method integer getOffset() Obtain Offset, which is an integral multiple of `Limit`.
  * @method void setOffset(integer $Offset) Set Offset, which is an integral multiple of `Limit`.
  * @method integer getLimit() Obtain The number of security groups to be pulled. Default value: `20`.
@@ -39,7 +39,7 @@ class DescribeProjectSecurityGroupsRequest extends AbstractModel
     public $Product;
 
     /**
-     * @var integer Project ID
+     * @var integer Project ID. Log in to the [Project Management](https://console.tencentcloud.com/project) page of the Redis console and copy the project ID in **Project Name**.
      */
     public $ProjectId;
 
@@ -60,7 +60,7 @@ class DescribeProjectSecurityGroupsRequest extends AbstractModel
 
     /**
      * @param string $Product Database engine name, which is `redis` for this API.
-     * @param integer $ProjectId Project ID
+     * @param integer $ProjectId Project ID. Log in to the [Project Management](https://console.tencentcloud.com/project) page of the Redis console and copy the project ID in **Project Name**.
      * @param integer $Offset Offset, which is an integral multiple of `Limit`.
      * @param integer $Limit The number of security groups to be pulled. Default value: `20`.
      * @param string $SearchKey Search criteria. You can enter a security group ID or name.

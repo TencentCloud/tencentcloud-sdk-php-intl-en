@@ -24,30 +24,42 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAutoScalingGroupId(string $AutoScalingGroupId) Set Auto scaling group ID.
  * @method string getActivityId() Obtain Scaling activity ID.
  * @method void setActivityId(string $ActivityId) Set Scaling activity ID.
- * @method string getActivityType() Obtain Type of the scaling activity. Valid values:<br>
-<li>`SCALE_OUT`: Scale out. <li>`SCALE_IN`: Scale in. <li>`ATTACH_INSTANCES`: Add instances. <li>`REMOVE_INSTANCES`: Terminate instances. <li>`DETACH_INSTANCES`: Remove instances. <li>`TERMINATE_INSTANCES_UNEXPECTEDLY`: Terminate instances in the CVM console. <li>`REPLACE_UNHEALTHY_INSTANCE`: Replace an unhealthy instance.
-<li>`START_INSTANCES`: Starts up instances.
-<li>`STOP_INSTANCES`: Shut down instances.
-<li>`INVOKE_COMMAND`: Execute commands
- * @method void setActivityType(string $ActivityType) Set Type of the scaling activity. Valid values:<br>
-<li>`SCALE_OUT`: Scale out. <li>`SCALE_IN`: Scale in. <li>`ATTACH_INSTANCES`: Add instances. <li>`REMOVE_INSTANCES`: Terminate instances. <li>`DETACH_INSTANCES`: Remove instances. <li>`TERMINATE_INSTANCES_UNEXPECTEDLY`: Terminate instances in the CVM console. <li>`REPLACE_UNHEALTHY_INSTANCE`: Replace an unhealthy instance.
-<li>`START_INSTANCES`: Starts up instances.
-<li>`STOP_INSTANCES`: Shut down instances.
-<li>`INVOKE_COMMAND`: Execute commands
- * @method string getStatusCode() Obtain Scaling activity status. Value range:<br>
-<li>INIT: initializing
-<li>RUNNING: running
-<li>SUCCESSFUL: succeeded
-<li>PARTIALLY_SUCCESSFUL: partially succeeded
-<li>FAILED: failed
-<li>CANCELLED: canceled
- * @method void setStatusCode(string $StatusCode) Set Scaling activity status. Value range:<br>
-<li>INIT: initializing
-<li>RUNNING: running
-<li>SUCCESSFUL: succeeded
-<li>PARTIALLY_SUCCESSFUL: partially succeeded
-<li>FAILED: failed
-<li>CANCELLED: canceled
+ * @method string getActivityType() Obtain Scaling activity type. Valid values:
+<li>SCALE_OUT: Scale out an instance.</li>
+<li>SCALE_IN: Scale in an instance.</li>
+<li>ATTACH_INSTANCES: Add an instance.</li>
+<li>REMOVE_INSTANCES: Terminate an instance.</li>
+<li>DETACH_INSTANCES: Remove an instance.</li>
+<li>TERMINATE_INSTANCES_UNEXPECTEDLY: Terminate an instance in the CVM console.</li>
+<li>REPLACE_UNHEALTHY_INSTANCE: Replace an unhealthy instance.</li>
+<li>START_INSTANCES: Start an instance.</li>
+<li>STOP_INSTANCES: Stop an instance.</li>
+<li>INVOKE_COMMAND: Execute a command.</li>
+ * @method void setActivityType(string $ActivityType) Set Scaling activity type. Valid values:
+<li>SCALE_OUT: Scale out an instance.</li>
+<li>SCALE_IN: Scale in an instance.</li>
+<li>ATTACH_INSTANCES: Add an instance.</li>
+<li>REMOVE_INSTANCES: Terminate an instance.</li>
+<li>DETACH_INSTANCES: Remove an instance.</li>
+<li>TERMINATE_INSTANCES_UNEXPECTEDLY: Terminate an instance in the CVM console.</li>
+<li>REPLACE_UNHEALTHY_INSTANCE: Replace an unhealthy instance.</li>
+<li>START_INSTANCES: Start an instance.</li>
+<li>STOP_INSTANCES: Stop an instance.</li>
+<li>INVOKE_COMMAND: Execute a command.</li>
+ * @method string getStatusCode() Obtain Scaling activity status. Valid values:
+<li>INIT: initializing.</li>
+<li>RUNNING: running.</li>
+<li>SUCCESSFUL: successful.</li>
+<li>PARTIALLY_SUCCESSFUL: partially successful.</li>
+<li>FAILED: failed.</li>
+<li>CANCELLED: canceled.</li>
+ * @method void setStatusCode(string $StatusCode) Set Scaling activity status. Valid values:
+<li>INIT: initializing.</li>
+<li>RUNNING: running.</li>
+<li>SUCCESSFUL: successful.</li>
+<li>PARTIALLY_SUCCESSFUL: partially successful.</li>
+<li>FAILED: failed.</li>
+<li>CANCELLED: canceled.</li>
  * @method string getStatusMessage() Obtain Description of the scaling activity status.
  * @method void setStatusMessage(string $StatusMessage) Set Description of the scaling activity status.
  * @method string getCause() Obtain Cause of the scaling activity.
@@ -86,22 +98,28 @@ class Activity extends AbstractModel
     public $ActivityId;
 
     /**
-     * @var string Type of the scaling activity. Valid values:<br>
-<li>`SCALE_OUT`: Scale out. <li>`SCALE_IN`: Scale in. <li>`ATTACH_INSTANCES`: Add instances. <li>`REMOVE_INSTANCES`: Terminate instances. <li>`DETACH_INSTANCES`: Remove instances. <li>`TERMINATE_INSTANCES_UNEXPECTEDLY`: Terminate instances in the CVM console. <li>`REPLACE_UNHEALTHY_INSTANCE`: Replace an unhealthy instance.
-<li>`START_INSTANCES`: Starts up instances.
-<li>`STOP_INSTANCES`: Shut down instances.
-<li>`INVOKE_COMMAND`: Execute commands
+     * @var string Scaling activity type. Valid values:
+<li>SCALE_OUT: Scale out an instance.</li>
+<li>SCALE_IN: Scale in an instance.</li>
+<li>ATTACH_INSTANCES: Add an instance.</li>
+<li>REMOVE_INSTANCES: Terminate an instance.</li>
+<li>DETACH_INSTANCES: Remove an instance.</li>
+<li>TERMINATE_INSTANCES_UNEXPECTEDLY: Terminate an instance in the CVM console.</li>
+<li>REPLACE_UNHEALTHY_INSTANCE: Replace an unhealthy instance.</li>
+<li>START_INSTANCES: Start an instance.</li>
+<li>STOP_INSTANCES: Stop an instance.</li>
+<li>INVOKE_COMMAND: Execute a command.</li>
      */
     public $ActivityType;
 
     /**
-     * @var string Scaling activity status. Value range:<br>
-<li>INIT: initializing
-<li>RUNNING: running
-<li>SUCCESSFUL: succeeded
-<li>PARTIALLY_SUCCESSFUL: partially succeeded
-<li>FAILED: failed
-<li>CANCELLED: canceled
+     * @var string Scaling activity status. Valid values:
+<li>INIT: initializing.</li>
+<li>RUNNING: running.</li>
+<li>SUCCESSFUL: successful.</li>
+<li>PARTIALLY_SUCCESSFUL: partially successful.</li>
+<li>FAILED: failed.</li>
+<li>CANCELLED: canceled.</li>
      */
     public $StatusCode;
 
@@ -169,18 +187,24 @@ class Activity extends AbstractModel
     /**
      * @param string $AutoScalingGroupId Auto scaling group ID.
      * @param string $ActivityId Scaling activity ID.
-     * @param string $ActivityType Type of the scaling activity. Valid values:<br>
-<li>`SCALE_OUT`: Scale out. <li>`SCALE_IN`: Scale in. <li>`ATTACH_INSTANCES`: Add instances. <li>`REMOVE_INSTANCES`: Terminate instances. <li>`DETACH_INSTANCES`: Remove instances. <li>`TERMINATE_INSTANCES_UNEXPECTEDLY`: Terminate instances in the CVM console. <li>`REPLACE_UNHEALTHY_INSTANCE`: Replace an unhealthy instance.
-<li>`START_INSTANCES`: Starts up instances.
-<li>`STOP_INSTANCES`: Shut down instances.
-<li>`INVOKE_COMMAND`: Execute commands
-     * @param string $StatusCode Scaling activity status. Value range:<br>
-<li>INIT: initializing
-<li>RUNNING: running
-<li>SUCCESSFUL: succeeded
-<li>PARTIALLY_SUCCESSFUL: partially succeeded
-<li>FAILED: failed
-<li>CANCELLED: canceled
+     * @param string $ActivityType Scaling activity type. Valid values:
+<li>SCALE_OUT: Scale out an instance.</li>
+<li>SCALE_IN: Scale in an instance.</li>
+<li>ATTACH_INSTANCES: Add an instance.</li>
+<li>REMOVE_INSTANCES: Terminate an instance.</li>
+<li>DETACH_INSTANCES: Remove an instance.</li>
+<li>TERMINATE_INSTANCES_UNEXPECTEDLY: Terminate an instance in the CVM console.</li>
+<li>REPLACE_UNHEALTHY_INSTANCE: Replace an unhealthy instance.</li>
+<li>START_INSTANCES: Start an instance.</li>
+<li>STOP_INSTANCES: Stop an instance.</li>
+<li>INVOKE_COMMAND: Execute a command.</li>
+     * @param string $StatusCode Scaling activity status. Valid values:
+<li>INIT: initializing.</li>
+<li>RUNNING: running.</li>
+<li>SUCCESSFUL: successful.</li>
+<li>PARTIALLY_SUCCESSFUL: partially successful.</li>
+<li>FAILED: failed.</li>
+<li>CANCELLED: canceled.</li>
      * @param string $StatusMessage Description of the scaling activity status.
      * @param string $Cause Cause of the scaling activity.
      * @param string $Description Description of the scaling activity.

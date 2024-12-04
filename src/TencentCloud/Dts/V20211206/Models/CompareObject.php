@@ -28,10 +28,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setObjectItems(array $ObjectItems) Set Object list
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method array getAdvancedObjects() Obtain Advanced object type (`account`: Account; `index`: Index; `shardkey`: Shard key, which may be adjusted later; `schema`: Database/table structure)
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setAdvancedObjects(array $AdvancedObjects) Set Advanced object type (`account`: Account; `index`: Index; `shardkey`: Shard key, which may be adjusted later; `schema`: Database/table structure)
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method array getAdvancedObjects() Obtain Advanced object types, such as account, index, shardkey, schema.Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setAdvancedObjects(array $AdvancedObjects) Set Advanced object types, such as account, index, shardkey, schema.Note: This field may return null, indicating that no valid values can be obtained.
  */
 class CompareObject extends AbstractModel
 {
@@ -48,8 +46,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $ObjectItems;
 
     /**
-     * @var array Advanced object type (`account`: Account; `index`: Index; `shardkey`: Shard key, which may be adjusted later; `schema`: Database/table structure)
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array Advanced object types, such as account, index, shardkey, schema.Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $AdvancedObjects;
 
@@ -58,8 +55,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param array $ObjectItems Object list
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param array $AdvancedObjects Advanced object type (`account`: Account; `index`: Index; `shardkey`: Shard key, which may be adjusted later; `schema`: Database/table structure)
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param array $AdvancedObjects Advanced object types, such as account, index, shardkey, schema.Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

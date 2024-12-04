@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setGroupName(string $GroupName) Set Node group name, which is empty for the master node
  * @method string getZoneId() Obtain Node AZ ID, such as ap-guangzhou-1
  * @method void setZoneId(string $ZoneId) Set Node AZ ID, such as ap-guangzhou-1
- * @method string getRole() Obtain Node group type. Valid values: master (master node group); replica (replica node group)
- * @method void setRole(string $Role) Set Node group type. Valid values: master (master node group); replica (replica node group)
+ * @method string getRole() Obtain Node group type. master: primary node; replica: replica node.
+ * @method void setRole(string $Role) Set Node group type. master: primary node; replica: replica node.
  * @method array getRedisNodes() Obtain List of nodes in the node group
  * @method void setRedisNodes(array $RedisNodes) Set List of nodes in the node group
  */
@@ -49,7 +49,7 @@ class ReplicaGroup extends AbstractModel
     public $ZoneId;
 
     /**
-     * @var string Node group type. Valid values: master (master node group); replica (replica node group)
+     * @var string Node group type. master: primary node; replica: replica node.
      */
     public $Role;
 
@@ -62,7 +62,7 @@ class ReplicaGroup extends AbstractModel
      * @param integer $GroupId Node group ID
      * @param string $GroupName Node group name, which is empty for the master node
      * @param string $ZoneId Node AZ ID, such as ap-guangzhou-1
-     * @param string $Role Node group type. Valid values: master (master node group); replica (replica node group)
+     * @param string $Role Node group type. master: primary node; replica: replica node.
      * @param array $RedisNodes List of nodes in the node group
      */
     function __construct()

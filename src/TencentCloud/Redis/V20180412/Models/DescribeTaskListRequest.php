@@ -30,12 +30,128 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) Set Pagination offset, which is an integral multiple of `Limit`. Calculation formula:  `offset` = `limit` * (page number - 1).
  * @method array getProjectIds() Obtain Project ID Log in to the [Redis console](https://console.cloud.tencent.com/redis#/), go to the account information menu in the top-right corner, and select **Project Management** to query the project ID.
  * @method void setProjectIds(array $ProjectIds) Set Project ID Log in to the [Redis console](https://console.cloud.tencent.com/redis#/), go to the account information menu in the top-right corner, and select **Project Management** to query the project ID.
- * @method array getTaskTypes() Obtain Task type. Valid values:  - `FLOW_CREATE`: Create an instance. - `FLOW_MODIFYCONNECTIONCONFIG`: Adjust the number of bandwidth connections. - `FLOW_MODIFYINSTANCEPASSWORDFREE`: Modify the process of password-free access. - `FLOW_CLEARNETWORK`: Returning VPC - `FLOW_SETPWD`: Set the access password. - `FLOW_EXPORSHR`: Expand or reduce the capacity. - `FLOW_UpgradeArch`: Upgrade the instance architecture. - `FLOW_MODIFYINSTANCEPARAMS`: Modify the instance parameters. - `FLOW_MODIFYINSTACEREADONLY`: Modify read-only process. - `FLOW_CLOSE`: Disable the instance. - `FLOW_DELETE`: Delete the instance. - `FLOW_OPEN_WAN`: Enable the public network. - `FLOW_FLOW_CLEAN`: Clear the instance. - `FLOW_MODIFYINSTANCEACCOUNT`: Modify the instance account. - `FLOW_ENABLEINSTANCE_REPLICATE`: Enable the replica read-only feature. - `FLOW_DISABLEINSTANCE_REPLICATE`: Disable the replica read-only feature. - `FLOW_SWITCHINSTANCEVIP`: Swap the VIPs of instances. - FLOW_CHANGE_REPLICA_TO_MSTER: Promote the replica node to the mater node. - `FLOW_BACKUPINSTANCE`: Back up an instance.
- * @method void setTaskTypes(array $TaskTypes) Set Task type. Valid values:  - `FLOW_CREATE`: Create an instance. - `FLOW_MODIFYCONNECTIONCONFIG`: Adjust the number of bandwidth connections. - `FLOW_MODIFYINSTANCEPASSWORDFREE`: Modify the process of password-free access. - `FLOW_CLEARNETWORK`: Returning VPC - `FLOW_SETPWD`: Set the access password. - `FLOW_EXPORSHR`: Expand or reduce the capacity. - `FLOW_UpgradeArch`: Upgrade the instance architecture. - `FLOW_MODIFYINSTANCEPARAMS`: Modify the instance parameters. - `FLOW_MODIFYINSTACEREADONLY`: Modify read-only process. - `FLOW_CLOSE`: Disable the instance. - `FLOW_DELETE`: Delete the instance. - `FLOW_OPEN_WAN`: Enable the public network. - `FLOW_FLOW_CLEAN`: Clear the instance. - `FLOW_MODIFYINSTANCEACCOUNT`: Modify the instance account. - `FLOW_ENABLEINSTANCE_REPLICATE`: Enable the replica read-only feature. - `FLOW_DISABLEINSTANCE_REPLICATE`: Disable the replica read-only feature. - `FLOW_SWITCHINSTANCEVIP`: Swap the VIPs of instances. - FLOW_CHANGE_REPLICA_TO_MSTER: Promote the replica node to the mater node. - `FLOW_BACKUPINSTANCE`: Back up an instance.
- * @method string getBeginTime() Obtain Start time for executing a task,  in the format of  “2020-10-12 00:00:00”.
- * @method void setBeginTime(string $BeginTime) Set Start time for executing a task,  in the format of  “2020-10-12 00:00:00”.
- * @method string getEndTime() Obtain End time for executing a task,  in the format of  “2021-12-30 20:59:35”.
- * @method void setEndTime(string $EndTime) Set End time for executing a task,  in the format of  “2021-12-30 20:59:35”.
+ * @method array getTaskTypes() Obtain Task type.
+
+
+
+- FLOW_CREATE: "001" - Create an instance.
+- FLOW_RESIZE: "002" - Change the configuration.
+- FLOW_CLOSE: "003" - Close an instance.
+- FLOW_CLEAN: "004" - Clear an instance.
+- FLOW_STARTUP: "005" - Enable an instance.
+- FLOW_DELETE: "006" - Delete an instance.
+- FLOW_SETPWD: "007" - Reset the password.
+- FLOW_EXPORTBACKUP: "009" - Export the backup file.
+- FLOW_RESTOREBACKUP: "010" - Restore the backup.
+- FLOW_BACKUPINSTANCE: "012" - Back up an instance.
+- FLOW_MIGRATEINSTANCE: "013" - Migrate an instance.
+- FLOW_DELBACKUP: "014" - Delete the backup.
+- FLOW_EXCHANGEINSTANCE: "016" - Switch an instance.
+- FLOW_AUTOBACKUP: "017" - Automatically backup an instance.
+- FLOW_MIGRATECHECK: "022" - Verify migration parameters.
+- FLOW_MIGRATETASK: "023" - Migrate data in progress.
+- FLOW_CLEANDB: "025" - Clear a database.
+- FLOW_CLONEBACKUP: "026" - Clone the backup.
+- FLOW_CHANGEVIP: "027" - Change the VIP.
+- FLOW_EXPORSHR: "028" - Perform scaling.
+- FLOW_ADDNODES: "029" - Add or remove a node.
+- FLOW_CHANGENET: "031" - Change the network type.
+- FLOW_MODIFYINSTACEREADONLY: "033" - Modify the read-only policy.
+- FLOW_MODIFYINSTANCEPARAMS: "034" - Modify instance parameters.
+- FLOW_MODIFYINSTANCEPASSWORDFREE: "035" - Set password-free access.
+- FLOW_SWITCHINSTANCEVIP: "036" - Switch the instance VIP.
+- FLOW_MODIFYINSTANCEACCOUNT: "037" - Modify the instance account.
+- FLOW_MODIFYINSTANCEBANDWIDTH: "038" - Modify the instance bandwidth.
+- FLOW_ENABLEINSTANCE_REPLICATE: "039" - Enable read-only replica.
+- FLOW_DISABLEINSTANCE_REPLICATE: "040" - Disable read-only replica.
+- FLOW_UpgradeArch: "041" - Upgrade the instance architecture from primary-secondary to cluster.
+- FLOW_DowngradeArch: "042" - Downgrade the instance architecture from cluster to primary-secondary.
+- FLOW_UpgradeVersion: "043" - Upgrade the version.
+- FLOW_MODIFYCONNECTIONCONFIG: "044" - Modify the number of bandwidth connections.
+- FLOW_CLEARNETWORK: "045" - Change the network.
+- FLOW_REMOVE_BACKUP_FILE: "046" - Delete the backup.
+- FLOW_UPGRADE_SUPPORT_MULTI_AZ: "047" - Upgrade an instance to support multiple AZs.
+- FLOW_SHUTDOWN_MASTER: "048" - Simulate a fault.
+- FLOW_CHANGE_REPLICA_TO_MASTER: "049" - Manually promote the replica node to the primary node.
+- FLOW_CODE_ADD_REPLICATION_INSTANCE: "050" - Add a replication group.
+- FLOW_OPEN_WAN: "052" - Enable the public network.
+- FLOW_CLOSE_WAN: "053" - Disable the public network. - FLOW_UPDATE_WAN: "054" - Update the public network.
+- FLOW_CODE_DELETE_REPLICATION_INSTANCE: "055" - Unbind the replication group.
+- FLOW_CODE_CHANGE_MASTER_INSTANCE: "056" - Switch to the primary instance in the replication group.
+- FLOW_CODE_CHANGE_INSTANCE_ROLE: "057" - Change the roles of instances in the replication group.
+- FLOW_MIGRATE_NODE: "058" - Migrate a node.
+- FLOW_SWITCH_NODE: "059" - Switch a node.
+- FLOW_UPGRADE_SMALL_VERSION: "060" - Upgrade the Redis version.
+- FLOW_UPGRADE_PROXY_VERSION: "061" - Upgrade the Proxy version.
+- FLOW_MODIFY_INSTANCE_NETWORK: "062" - Modify the instance network.
+- FLOW_MIGRATE_PROXY_NODE: "063" - Migrate the Proxy node.
+- FLOW_MIGRATION_INSTANCE_ZONE: "066" - Migrate the instance AZ in progress.
+- FLOW_UPGRADE_INSTANCE_CACHE_AND_PROXY: "067" - Upgrade the instance version in progress.
+- FLOW_MODIFY_PROXY_NUM: "069" - Add or remove a Proxy node.
+- FLOW_MODIFYBACKUPMOD: "070" - Change the instance backup mode.
+ * @method void setTaskTypes(array $TaskTypes) Set Task type.
+
+
+
+- FLOW_CREATE: "001" - Create an instance.
+- FLOW_RESIZE: "002" - Change the configuration.
+- FLOW_CLOSE: "003" - Close an instance.
+- FLOW_CLEAN: "004" - Clear an instance.
+- FLOW_STARTUP: "005" - Enable an instance.
+- FLOW_DELETE: "006" - Delete an instance.
+- FLOW_SETPWD: "007" - Reset the password.
+- FLOW_EXPORTBACKUP: "009" - Export the backup file.
+- FLOW_RESTOREBACKUP: "010" - Restore the backup.
+- FLOW_BACKUPINSTANCE: "012" - Back up an instance.
+- FLOW_MIGRATEINSTANCE: "013" - Migrate an instance.
+- FLOW_DELBACKUP: "014" - Delete the backup.
+- FLOW_EXCHANGEINSTANCE: "016" - Switch an instance.
+- FLOW_AUTOBACKUP: "017" - Automatically backup an instance.
+- FLOW_MIGRATECHECK: "022" - Verify migration parameters.
+- FLOW_MIGRATETASK: "023" - Migrate data in progress.
+- FLOW_CLEANDB: "025" - Clear a database.
+- FLOW_CLONEBACKUP: "026" - Clone the backup.
+- FLOW_CHANGEVIP: "027" - Change the VIP.
+- FLOW_EXPORSHR: "028" - Perform scaling.
+- FLOW_ADDNODES: "029" - Add or remove a node.
+- FLOW_CHANGENET: "031" - Change the network type.
+- FLOW_MODIFYINSTACEREADONLY: "033" - Modify the read-only policy.
+- FLOW_MODIFYINSTANCEPARAMS: "034" - Modify instance parameters.
+- FLOW_MODIFYINSTANCEPASSWORDFREE: "035" - Set password-free access.
+- FLOW_SWITCHINSTANCEVIP: "036" - Switch the instance VIP.
+- FLOW_MODIFYINSTANCEACCOUNT: "037" - Modify the instance account.
+- FLOW_MODIFYINSTANCEBANDWIDTH: "038" - Modify the instance bandwidth.
+- FLOW_ENABLEINSTANCE_REPLICATE: "039" - Enable read-only replica.
+- FLOW_DISABLEINSTANCE_REPLICATE: "040" - Disable read-only replica.
+- FLOW_UpgradeArch: "041" - Upgrade the instance architecture from primary-secondary to cluster.
+- FLOW_DowngradeArch: "042" - Downgrade the instance architecture from cluster to primary-secondary.
+- FLOW_UpgradeVersion: "043" - Upgrade the version.
+- FLOW_MODIFYCONNECTIONCONFIG: "044" - Modify the number of bandwidth connections.
+- FLOW_CLEARNETWORK: "045" - Change the network.
+- FLOW_REMOVE_BACKUP_FILE: "046" - Delete the backup.
+- FLOW_UPGRADE_SUPPORT_MULTI_AZ: "047" - Upgrade an instance to support multiple AZs.
+- FLOW_SHUTDOWN_MASTER: "048" - Simulate a fault.
+- FLOW_CHANGE_REPLICA_TO_MASTER: "049" - Manually promote the replica node to the primary node.
+- FLOW_CODE_ADD_REPLICATION_INSTANCE: "050" - Add a replication group.
+- FLOW_OPEN_WAN: "052" - Enable the public network.
+- FLOW_CLOSE_WAN: "053" - Disable the public network. - FLOW_UPDATE_WAN: "054" - Update the public network.
+- FLOW_CODE_DELETE_REPLICATION_INSTANCE: "055" - Unbind the replication group.
+- FLOW_CODE_CHANGE_MASTER_INSTANCE: "056" - Switch to the primary instance in the replication group.
+- FLOW_CODE_CHANGE_INSTANCE_ROLE: "057" - Change the roles of instances in the replication group.
+- FLOW_MIGRATE_NODE: "058" - Migrate a node.
+- FLOW_SWITCH_NODE: "059" - Switch a node.
+- FLOW_UPGRADE_SMALL_VERSION: "060" - Upgrade the Redis version.
+- FLOW_UPGRADE_PROXY_VERSION: "061" - Upgrade the Proxy version.
+- FLOW_MODIFY_INSTANCE_NETWORK: "062" - Modify the instance network.
+- FLOW_MIGRATE_PROXY_NODE: "063" - Migrate the Proxy node.
+- FLOW_MIGRATION_INSTANCE_ZONE: "066" - Migrate the instance AZ in progress.
+- FLOW_UPGRADE_INSTANCE_CACHE_AND_PROXY: "067" - Upgrade the instance version in progress.
+- FLOW_MODIFY_PROXY_NUM: "069" - Add or remove a Proxy node.
+- FLOW_MODIFYBACKUPMOD: "070" - Change the instance backup mode.
+ * @method string getBeginTime() Obtain Start time of the task, for example, in the format of 2021-12-30 00:00:00. Data in the last 30 days can be queried.
+ * @method void setBeginTime(string $BeginTime) Set Start time of the task, for example, in the format of 2021-12-30 00:00:00. Data in the last 30 days can be queried.
+ * @method string getEndTime() Obtain End time of the task, for example, in the format of 2021-12-30 20:59:35. Data in the last 30 days can be queried.
+ * @method void setEndTime(string $EndTime) Set End time of the task, for example, in the format of 2021-12-30 20:59:35. Data in the last 30 days can be queried.
  * @method array getTaskStatus() Obtain This parameter is only for internal use and can be ignored.
  * @method void setTaskStatus(array $TaskStatus) Set This parameter is only for internal use and can be ignored.
  * @method array getResult() Obtain Task execution status. Valid values: - `0` (initilized) - `1` (executing) - `2` (completed) - `4` (failed)
@@ -73,17 +189,75 @@ class DescribeTaskListRequest extends AbstractModel
     public $ProjectIds;
 
     /**
-     * @var array Task type. Valid values:  - `FLOW_CREATE`: Create an instance. - `FLOW_MODIFYCONNECTIONCONFIG`: Adjust the number of bandwidth connections. - `FLOW_MODIFYINSTANCEPASSWORDFREE`: Modify the process of password-free access. - `FLOW_CLEARNETWORK`: Returning VPC - `FLOW_SETPWD`: Set the access password. - `FLOW_EXPORSHR`: Expand or reduce the capacity. - `FLOW_UpgradeArch`: Upgrade the instance architecture. - `FLOW_MODIFYINSTANCEPARAMS`: Modify the instance parameters. - `FLOW_MODIFYINSTACEREADONLY`: Modify read-only process. - `FLOW_CLOSE`: Disable the instance. - `FLOW_DELETE`: Delete the instance. - `FLOW_OPEN_WAN`: Enable the public network. - `FLOW_FLOW_CLEAN`: Clear the instance. - `FLOW_MODIFYINSTANCEACCOUNT`: Modify the instance account. - `FLOW_ENABLEINSTANCE_REPLICATE`: Enable the replica read-only feature. - `FLOW_DISABLEINSTANCE_REPLICATE`: Disable the replica read-only feature. - `FLOW_SWITCHINSTANCEVIP`: Swap the VIPs of instances. - FLOW_CHANGE_REPLICA_TO_MSTER: Promote the replica node to the mater node. - `FLOW_BACKUPINSTANCE`: Back up an instance.
+     * @var array Task type.
+
+
+
+- FLOW_CREATE: "001" - Create an instance.
+- FLOW_RESIZE: "002" - Change the configuration.
+- FLOW_CLOSE: "003" - Close an instance.
+- FLOW_CLEAN: "004" - Clear an instance.
+- FLOW_STARTUP: "005" - Enable an instance.
+- FLOW_DELETE: "006" - Delete an instance.
+- FLOW_SETPWD: "007" - Reset the password.
+- FLOW_EXPORTBACKUP: "009" - Export the backup file.
+- FLOW_RESTOREBACKUP: "010" - Restore the backup.
+- FLOW_BACKUPINSTANCE: "012" - Back up an instance.
+- FLOW_MIGRATEINSTANCE: "013" - Migrate an instance.
+- FLOW_DELBACKUP: "014" - Delete the backup.
+- FLOW_EXCHANGEINSTANCE: "016" - Switch an instance.
+- FLOW_AUTOBACKUP: "017" - Automatically backup an instance.
+- FLOW_MIGRATECHECK: "022" - Verify migration parameters.
+- FLOW_MIGRATETASK: "023" - Migrate data in progress.
+- FLOW_CLEANDB: "025" - Clear a database.
+- FLOW_CLONEBACKUP: "026" - Clone the backup.
+- FLOW_CHANGEVIP: "027" - Change the VIP.
+- FLOW_EXPORSHR: "028" - Perform scaling.
+- FLOW_ADDNODES: "029" - Add or remove a node.
+- FLOW_CHANGENET: "031" - Change the network type.
+- FLOW_MODIFYINSTACEREADONLY: "033" - Modify the read-only policy.
+- FLOW_MODIFYINSTANCEPARAMS: "034" - Modify instance parameters.
+- FLOW_MODIFYINSTANCEPASSWORDFREE: "035" - Set password-free access.
+- FLOW_SWITCHINSTANCEVIP: "036" - Switch the instance VIP.
+- FLOW_MODIFYINSTANCEACCOUNT: "037" - Modify the instance account.
+- FLOW_MODIFYINSTANCEBANDWIDTH: "038" - Modify the instance bandwidth.
+- FLOW_ENABLEINSTANCE_REPLICATE: "039" - Enable read-only replica.
+- FLOW_DISABLEINSTANCE_REPLICATE: "040" - Disable read-only replica.
+- FLOW_UpgradeArch: "041" - Upgrade the instance architecture from primary-secondary to cluster.
+- FLOW_DowngradeArch: "042" - Downgrade the instance architecture from cluster to primary-secondary.
+- FLOW_UpgradeVersion: "043" - Upgrade the version.
+- FLOW_MODIFYCONNECTIONCONFIG: "044" - Modify the number of bandwidth connections.
+- FLOW_CLEARNETWORK: "045" - Change the network.
+- FLOW_REMOVE_BACKUP_FILE: "046" - Delete the backup.
+- FLOW_UPGRADE_SUPPORT_MULTI_AZ: "047" - Upgrade an instance to support multiple AZs.
+- FLOW_SHUTDOWN_MASTER: "048" - Simulate a fault.
+- FLOW_CHANGE_REPLICA_TO_MASTER: "049" - Manually promote the replica node to the primary node.
+- FLOW_CODE_ADD_REPLICATION_INSTANCE: "050" - Add a replication group.
+- FLOW_OPEN_WAN: "052" - Enable the public network.
+- FLOW_CLOSE_WAN: "053" - Disable the public network. - FLOW_UPDATE_WAN: "054" - Update the public network.
+- FLOW_CODE_DELETE_REPLICATION_INSTANCE: "055" - Unbind the replication group.
+- FLOW_CODE_CHANGE_MASTER_INSTANCE: "056" - Switch to the primary instance in the replication group.
+- FLOW_CODE_CHANGE_INSTANCE_ROLE: "057" - Change the roles of instances in the replication group.
+- FLOW_MIGRATE_NODE: "058" - Migrate a node.
+- FLOW_SWITCH_NODE: "059" - Switch a node.
+- FLOW_UPGRADE_SMALL_VERSION: "060" - Upgrade the Redis version.
+- FLOW_UPGRADE_PROXY_VERSION: "061" - Upgrade the Proxy version.
+- FLOW_MODIFY_INSTANCE_NETWORK: "062" - Modify the instance network.
+- FLOW_MIGRATE_PROXY_NODE: "063" - Migrate the Proxy node.
+- FLOW_MIGRATION_INSTANCE_ZONE: "066" - Migrate the instance AZ in progress.
+- FLOW_UPGRADE_INSTANCE_CACHE_AND_PROXY: "067" - Upgrade the instance version in progress.
+- FLOW_MODIFY_PROXY_NUM: "069" - Add or remove a Proxy node.
+- FLOW_MODIFYBACKUPMOD: "070" - Change the instance backup mode.
      */
     public $TaskTypes;
 
     /**
-     * @var string Start time for executing a task,  in the format of  “2020-10-12 00:00:00”.
+     * @var string Start time of the task, for example, in the format of 2021-12-30 00:00:00. Data in the last 30 days can be queried.
      */
     public $BeginTime;
 
     /**
-     * @var string End time for executing a task,  in the format of  “2021-12-30 20:59:35”.
+     * @var string End time of the task, for example, in the format of 2021-12-30 20:59:35. Data in the last 30 days can be queried.
      */
     public $EndTime;
 
@@ -113,9 +287,67 @@ class DescribeTaskListRequest extends AbstractModel
      * @param integer $Limit Number of taskss returned per page.  Default value: `20`. Maximum value: `100`.
      * @param integer $Offset Pagination offset, which is an integral multiple of `Limit`. Calculation formula:  `offset` = `limit` * (page number - 1).
      * @param array $ProjectIds Project ID Log in to the [Redis console](https://console.cloud.tencent.com/redis#/), go to the account information menu in the top-right corner, and select **Project Management** to query the project ID.
-     * @param array $TaskTypes Task type. Valid values:  - `FLOW_CREATE`: Create an instance. - `FLOW_MODIFYCONNECTIONCONFIG`: Adjust the number of bandwidth connections. - `FLOW_MODIFYINSTANCEPASSWORDFREE`: Modify the process of password-free access. - `FLOW_CLEARNETWORK`: Returning VPC - `FLOW_SETPWD`: Set the access password. - `FLOW_EXPORSHR`: Expand or reduce the capacity. - `FLOW_UpgradeArch`: Upgrade the instance architecture. - `FLOW_MODIFYINSTANCEPARAMS`: Modify the instance parameters. - `FLOW_MODIFYINSTACEREADONLY`: Modify read-only process. - `FLOW_CLOSE`: Disable the instance. - `FLOW_DELETE`: Delete the instance. - `FLOW_OPEN_WAN`: Enable the public network. - `FLOW_FLOW_CLEAN`: Clear the instance. - `FLOW_MODIFYINSTANCEACCOUNT`: Modify the instance account. - `FLOW_ENABLEINSTANCE_REPLICATE`: Enable the replica read-only feature. - `FLOW_DISABLEINSTANCE_REPLICATE`: Disable the replica read-only feature. - `FLOW_SWITCHINSTANCEVIP`: Swap the VIPs of instances. - FLOW_CHANGE_REPLICA_TO_MSTER: Promote the replica node to the mater node. - `FLOW_BACKUPINSTANCE`: Back up an instance.
-     * @param string $BeginTime Start time for executing a task,  in the format of  “2020-10-12 00:00:00”.
-     * @param string $EndTime End time for executing a task,  in the format of  “2021-12-30 20:59:35”.
+     * @param array $TaskTypes Task type.
+
+
+
+- FLOW_CREATE: "001" - Create an instance.
+- FLOW_RESIZE: "002" - Change the configuration.
+- FLOW_CLOSE: "003" - Close an instance.
+- FLOW_CLEAN: "004" - Clear an instance.
+- FLOW_STARTUP: "005" - Enable an instance.
+- FLOW_DELETE: "006" - Delete an instance.
+- FLOW_SETPWD: "007" - Reset the password.
+- FLOW_EXPORTBACKUP: "009" - Export the backup file.
+- FLOW_RESTOREBACKUP: "010" - Restore the backup.
+- FLOW_BACKUPINSTANCE: "012" - Back up an instance.
+- FLOW_MIGRATEINSTANCE: "013" - Migrate an instance.
+- FLOW_DELBACKUP: "014" - Delete the backup.
+- FLOW_EXCHANGEINSTANCE: "016" - Switch an instance.
+- FLOW_AUTOBACKUP: "017" - Automatically backup an instance.
+- FLOW_MIGRATECHECK: "022" - Verify migration parameters.
+- FLOW_MIGRATETASK: "023" - Migrate data in progress.
+- FLOW_CLEANDB: "025" - Clear a database.
+- FLOW_CLONEBACKUP: "026" - Clone the backup.
+- FLOW_CHANGEVIP: "027" - Change the VIP.
+- FLOW_EXPORSHR: "028" - Perform scaling.
+- FLOW_ADDNODES: "029" - Add or remove a node.
+- FLOW_CHANGENET: "031" - Change the network type.
+- FLOW_MODIFYINSTACEREADONLY: "033" - Modify the read-only policy.
+- FLOW_MODIFYINSTANCEPARAMS: "034" - Modify instance parameters.
+- FLOW_MODIFYINSTANCEPASSWORDFREE: "035" - Set password-free access.
+- FLOW_SWITCHINSTANCEVIP: "036" - Switch the instance VIP.
+- FLOW_MODIFYINSTANCEACCOUNT: "037" - Modify the instance account.
+- FLOW_MODIFYINSTANCEBANDWIDTH: "038" - Modify the instance bandwidth.
+- FLOW_ENABLEINSTANCE_REPLICATE: "039" - Enable read-only replica.
+- FLOW_DISABLEINSTANCE_REPLICATE: "040" - Disable read-only replica.
+- FLOW_UpgradeArch: "041" - Upgrade the instance architecture from primary-secondary to cluster.
+- FLOW_DowngradeArch: "042" - Downgrade the instance architecture from cluster to primary-secondary.
+- FLOW_UpgradeVersion: "043" - Upgrade the version.
+- FLOW_MODIFYCONNECTIONCONFIG: "044" - Modify the number of bandwidth connections.
+- FLOW_CLEARNETWORK: "045" - Change the network.
+- FLOW_REMOVE_BACKUP_FILE: "046" - Delete the backup.
+- FLOW_UPGRADE_SUPPORT_MULTI_AZ: "047" - Upgrade an instance to support multiple AZs.
+- FLOW_SHUTDOWN_MASTER: "048" - Simulate a fault.
+- FLOW_CHANGE_REPLICA_TO_MASTER: "049" - Manually promote the replica node to the primary node.
+- FLOW_CODE_ADD_REPLICATION_INSTANCE: "050" - Add a replication group.
+- FLOW_OPEN_WAN: "052" - Enable the public network.
+- FLOW_CLOSE_WAN: "053" - Disable the public network. - FLOW_UPDATE_WAN: "054" - Update the public network.
+- FLOW_CODE_DELETE_REPLICATION_INSTANCE: "055" - Unbind the replication group.
+- FLOW_CODE_CHANGE_MASTER_INSTANCE: "056" - Switch to the primary instance in the replication group.
+- FLOW_CODE_CHANGE_INSTANCE_ROLE: "057" - Change the roles of instances in the replication group.
+- FLOW_MIGRATE_NODE: "058" - Migrate a node.
+- FLOW_SWITCH_NODE: "059" - Switch a node.
+- FLOW_UPGRADE_SMALL_VERSION: "060" - Upgrade the Redis version.
+- FLOW_UPGRADE_PROXY_VERSION: "061" - Upgrade the Proxy version.
+- FLOW_MODIFY_INSTANCE_NETWORK: "062" - Modify the instance network.
+- FLOW_MIGRATE_PROXY_NODE: "063" - Migrate the Proxy node.
+- FLOW_MIGRATION_INSTANCE_ZONE: "066" - Migrate the instance AZ in progress.
+- FLOW_UPGRADE_INSTANCE_CACHE_AND_PROXY: "067" - Upgrade the instance version in progress.
+- FLOW_MODIFY_PROXY_NUM: "069" - Add or remove a Proxy node.
+- FLOW_MODIFYBACKUPMOD: "070" - Change the instance backup mode.
+     * @param string $BeginTime Start time of the task, for example, in the format of 2021-12-30 00:00:00. Data in the last 30 days can be queried.
+     * @param string $EndTime End time of the task, for example, in the format of 2021-12-30 20:59:35. Data in the last 30 days can be queried.
      * @param array $TaskStatus This parameter is only for internal use and can be ignored.
      * @param array $Result Task execution status. Valid values: - `0` (initilized) - `1` (executing) - `2` (completed) - `4` (failed)
      * @param array $OperatorUin The field `OperatorUin` has been disused and replaced by `OperateUin`.

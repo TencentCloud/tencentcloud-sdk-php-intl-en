@@ -20,34 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ChangeInstanceRole request structure.
  *
- * @method string getGroupId() Obtain Replication group ID
- * @method void setGroupId(string $GroupId) Set Replication group ID
- * @method string getInstanceId() Obtain Instance ID
- * @method void setInstanceId(string $InstanceId) Set Instance ID
- * @method string getInstanceRole() Obtain Instance role. Valid values: `rw` (read-write), `r`( read-only).
- * @method void setInstanceRole(string $InstanceRole) Set Instance role. Valid values: `rw` (read-write), `r`( read-only).
+ * @method string getGroupId() Obtain Replication group ID. Log in to the [global replication](https://console.tencentcloud.com/redis/replication) page of the Redis console and obtain it.
+ * @method void setGroupId(string $GroupId) Set Replication group ID. Log in to the [global replication](https://console.tencentcloud.com/redis/replication) page of the Redis console and obtain it.
+ * @method string getInstanceId() Obtain Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
+ * @method void setInstanceId(string $InstanceId) Set Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
+ * @method string getInstanceRole() Obtain Instance role.
+- rw: read/write.
+- r: read-only.
+ * @method void setInstanceRole(string $InstanceRole) Set Instance role.
+- rw: read/write.
+- r: read-only.
  */
 class ChangeInstanceRoleRequest extends AbstractModel
 {
     /**
-     * @var string Replication group ID
+     * @var string Replication group ID. Log in to the [global replication](https://console.tencentcloud.com/redis/replication) page of the Redis console and obtain it.
      */
     public $GroupId;
 
     /**
-     * @var string Instance ID
+     * @var string Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
      */
     public $InstanceId;
 
     /**
-     * @var string Instance role. Valid values: `rw` (read-write), `r`( read-only).
+     * @var string Instance role.
+- rw: read/write.
+- r: read-only.
      */
     public $InstanceRole;
 
     /**
-     * @param string $GroupId Replication group ID
-     * @param string $InstanceId Instance ID
-     * @param string $InstanceRole Instance role. Valid values: `rw` (read-write), `r`( read-only).
+     * @param string $GroupId Replication group ID. Log in to the [global replication](https://console.tencentcloud.com/redis/replication) page of the Redis console and obtain it.
+     * @param string $InstanceId Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
+     * @param string $InstanceRole Instance role.
+- rw: read/write.
+- r: read-only.
      */
     function __construct()
     {

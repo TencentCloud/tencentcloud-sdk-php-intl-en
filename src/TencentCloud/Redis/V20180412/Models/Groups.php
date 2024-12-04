@@ -22,42 +22,40 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getAppId() Obtain User APPID, which is the unique application ID that matches an account. Some Tencent Cloud products use this APPID.
  * @method void setAppId(integer $AppId) Set User APPID, which is the unique application ID that matches an account. Some Tencent Cloud products use this APPID.
- * @method integer getRegionId() Obtain Region ID. Valid values:
-- `1`: Guangzhou 
-- `4`: Shanghai 
-- `5`: Hong Kong (China) 
-- `6`: Toronto 
-- `7`: Shanghai Finance 
-- `8`: Beijing 
-- `9`: Singapore
-- `11`: Shenzhen Finance
-- `15`: Silicon Valley (West US)
-- `16`: Chengdu 
-- `17`: Germany 
-- `18`: South Korea 
-- `19`: Chongqing 
-- `21`: India 
-- `22`: Virginia (East US)
-- `23`: Thailand 
-- `25`: Japan
- * @method void setRegionId(integer $RegionId) Set Region ID. Valid values:
-- `1`: Guangzhou 
-- `4`: Shanghai 
-- `5`: Hong Kong (China) 
-- `6`: Toronto 
-- `7`: Shanghai Finance 
-- `8`: Beijing 
-- `9`: Singapore
-- `11`: Shenzhen Finance
-- `15`: Silicon Valley (West US)
-- `16`: Chengdu 
-- `17`: Germany 
-- `18`: South Korea 
-- `19`: Chongqing 
-- `21`: India 
-- `22`: Virginia (East US)
-- `23`: Thailand 
-- `25`: Japan
+ * @method integer getRegionId() Obtain Region ID.
+- 1: Guangzhou.
+- 4: Shanghai.
+- 5: Hong Kong (China).
+- 7: Shanghai Finance.
+- 8: Beijing.
+- 9: Singapore.
+- 11: Shenzhen Finance.
+- 15: Western United States (Silicon Valley).
+- 16: Chengdu.
+- 17: Germany.
+- 18: South Korea.
+- 19: Chongqing.
+- 21: India.
+- 22: Eastern United States (Virginia).
+- 23: Thailand.
+- 25: Japan.
+ * @method void setRegionId(integer $RegionId) Set Region ID.
+- 1: Guangzhou.
+- 4: Shanghai.
+- 5: Hong Kong (China).
+- 7: Shanghai Finance.
+- 8: Beijing.
+- 9: Singapore.
+- 11: Shenzhen Finance.
+- 15: Western United States (Silicon Valley).
+- 16: Chengdu.
+- 17: Germany.
+- 18: South Korea.
+- 19: Chongqing.
+- 21: India.
+- 22: Eastern United States (Virginia).
+- 23: Thailand.
+- 25: Japan.
  * @method string getGroupId() Obtain Replication group ID in the format of "crs-rpl-deind****"
  * @method void setGroupId(string $GroupId) Set Replication group ID in the format of "crs-rpl-deind****"
  * @method string getGroupName() Obtain Replication group name
@@ -95,24 +93,23 @@ class Groups extends AbstractModel
     public $AppId;
 
     /**
-     * @var integer Region ID. Valid values:
-- `1`: Guangzhou 
-- `4`: Shanghai 
-- `5`: Hong Kong (China) 
-- `6`: Toronto 
-- `7`: Shanghai Finance 
-- `8`: Beijing 
-- `9`: Singapore
-- `11`: Shenzhen Finance
-- `15`: Silicon Valley (West US)
-- `16`: Chengdu 
-- `17`: Germany 
-- `18`: South Korea 
-- `19`: Chongqing 
-- `21`: India 
-- `22`: Virginia (East US)
-- `23`: Thailand 
-- `25`: Japan
+     * @var integer Region ID.
+- 1: Guangzhou.
+- 4: Shanghai.
+- 5: Hong Kong (China).
+- 7: Shanghai Finance.
+- 8: Beijing.
+- 9: Singapore.
+- 11: Shenzhen Finance.
+- 15: Western United States (Silicon Valley).
+- 16: Chengdu.
+- 17: Germany.
+- 18: South Korea.
+- 19: Chongqing.
+- 21: India.
+- 22: Eastern United States (Virginia).
+- 23: Thailand.
+- 25: Japan.
      */
     public $RegionId;
 
@@ -156,24 +153,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * @param integer $AppId User APPID, which is the unique application ID that matches an account. Some Tencent Cloud products use this APPID.
-     * @param integer $RegionId Region ID. Valid values:
-- `1`: Guangzhou 
-- `4`: Shanghai 
-- `5`: Hong Kong (China) 
-- `6`: Toronto 
-- `7`: Shanghai Finance 
-- `8`: Beijing 
-- `9`: Singapore
-- `11`: Shenzhen Finance
-- `15`: Silicon Valley (West US)
-- `16`: Chengdu 
-- `17`: Germany 
-- `18`: South Korea 
-- `19`: Chongqing 
-- `21`: India 
-- `22`: Virginia (East US)
-- `23`: Thailand 
-- `25`: Japan
+     * @param integer $RegionId Region ID.
+- 1: Guangzhou.
+- 4: Shanghai.
+- 5: Hong Kong (China).
+- 7: Shanghai Finance.
+- 8: Beijing.
+- 9: Singapore.
+- 11: Shenzhen Finance.
+- 15: Western United States (Silicon Valley).
+- 16: Chengdu.
+- 17: Germany.
+- 18: South Korea.
+- 19: Chongqing.
+- 21: India.
+- 22: Eastern United States (Virginia).
+- 23: Thailand.
+- 25: Japan.
      * @param string $GroupId Replication group ID in the format of "crs-rpl-deind****"
      * @param string $GroupName Replication group name
 Note: This field may return null, indicating that no valid values can be obtained.

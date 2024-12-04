@@ -20,26 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeInstanceMonitorTopNCmd request structure.
  *
- * @method string getInstanceId() Obtain Instance ID
- * @method void setInstanceId(string $InstanceId) Set Instance ID
- * @method integer getSpanType() Obtain Time span. 1: real time; 2: last 30 minutes; 3: last 6 hours; 4: last 24 hours
- * @method void setSpanType(integer $SpanType) Set Time span. 1: real time; 2: last 30 minutes; 3: last 6 hours; 4: last 24 hours
+ * @method string getInstanceId() Obtain Instance ID.
+ * @method void setInstanceId(string $InstanceId) Set Instance ID.
+ * @method integer getSpanType() Obtain Time range.
+- 1: real-time.
+- 2: last 30 minutes.
+- 3: last 6 hours.
+- 4: last 24 hours.
+ * @method void setSpanType(integer $SpanType) Set Time range.
+- 1: real-time.
+- 2: last 30 minutes.
+- 3: last 6 hours.
+- 4: last 24 hours.
  */
 class DescribeInstanceMonitorTopNCmdRequest extends AbstractModel
 {
     /**
-     * @var string Instance ID
+     * @var string Instance ID.
      */
     public $InstanceId;
 
     /**
-     * @var integer Time span. 1: real time; 2: last 30 minutes; 3: last 6 hours; 4: last 24 hours
+     * @var integer Time range.
+- 1: real-time.
+- 2: last 30 minutes.
+- 3: last 6 hours.
+- 4: last 24 hours.
      */
     public $SpanType;
 
     /**
-     * @param string $InstanceId Instance ID
-     * @param integer $SpanType Time span. 1: real time; 2: last 30 minutes; 3: last 6 hours; 4: last 24 hours
+     * @param string $InstanceId Instance ID.
+     * @param integer $SpanType Time range.
+- 1: real-time.
+- 2: last 30 minutes.
+- 3: last 6 hours.
+- 4: last 24 hours.
      */
     function __construct()
     {

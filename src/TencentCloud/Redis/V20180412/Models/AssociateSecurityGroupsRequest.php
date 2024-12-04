@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getProduct() Obtain Database engine name, which is `redis` for this API.
  * @method void setProduct(string $Product) Set Database engine name, which is `redis` for this API.
- * @method string getSecurityGroupId() Obtain ID of the security group to be associated in the format of sg-efil73jd.
- * @method void setSecurityGroupId(string $SecurityGroupId) Set ID of the security group to be associated in the format of sg-efil73jd.
- * @method array getInstanceIds() Obtain ID(s) of the instance(s) to be associated in the format of ins-lesecurk. You can specify multiple instances.
- * @method void setInstanceIds(array $InstanceIds) Set ID(s) of the instance(s) to be associated in the format of ins-lesecurk. You can specify multiple instances.
+ * @method string getSecurityGroupId() Obtain ID of the security group to be bound. Obtain it on the [security group](https://console.tencentcloud.com/vpc/security-group) page of the console.
+ * @method void setSecurityGroupId(string $SecurityGroupId) Set ID of the security group to be bound. Obtain it on the [security group](https://console.tencentcloud.com/vpc/security-group) page of the console.
+ * @method array getInstanceIds() Obtain ID of the bound instance. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list. You can specify multiple instance IDs.
+ * @method void setInstanceIds(array $InstanceIds) Set ID of the bound instance. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list. You can specify multiple instance IDs.
  */
 class AssociateSecurityGroupsRequest extends AbstractModel
 {
@@ -35,19 +35,19 @@ class AssociateSecurityGroupsRequest extends AbstractModel
     public $Product;
 
     /**
-     * @var string ID of the security group to be associated in the format of sg-efil73jd.
+     * @var string ID of the security group to be bound. Obtain it on the [security group](https://console.tencentcloud.com/vpc/security-group) page of the console.
      */
     public $SecurityGroupId;
 
     /**
-     * @var array ID(s) of the instance(s) to be associated in the format of ins-lesecurk. You can specify multiple instances.
+     * @var array ID of the bound instance. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list. You can specify multiple instance IDs.
      */
     public $InstanceIds;
 
     /**
      * @param string $Product Database engine name, which is `redis` for this API.
-     * @param string $SecurityGroupId ID of the security group to be associated in the format of sg-efil73jd.
-     * @param array $InstanceIds ID(s) of the instance(s) to be associated in the format of ins-lesecurk. You can specify multiple instances.
+     * @param string $SecurityGroupId ID of the security group to be bound. Obtain it on the [security group](https://console.tencentcloud.com/vpc/security-group) page of the console.
+     * @param array $InstanceIds ID of the bound instance. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list. You can specify multiple instance IDs.
      */
     function __construct()
     {

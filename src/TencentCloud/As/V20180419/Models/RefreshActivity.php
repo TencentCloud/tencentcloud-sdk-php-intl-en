@@ -34,10 +34,30 @@ Note: This field may return null, indicating that no valid value can be obtained
  * @method void setRefreshMode(string $RefreshMode) Set Refresh mode.
  * @method RefreshSettings getRefreshSettings() Obtain Instance update setting parameters.
  * @method void setRefreshSettings(RefreshSettings $RefreshSettings) Set Instance update setting parameters.
- * @method string getActivityType() Obtain Refresh activity type. Valid values: <br><li>NORMAL: Normal refresh activity.</li> <li>ROLLBACK: Rollback refresh activity.
- * @method void setActivityType(string $ActivityType) Set Refresh activity type. Valid values: <br><li>NORMAL: Normal refresh activity.</li> <li>ROLLBACK: Rollback refresh activity.
- * @method string getStatus() Obtain Refresh activity status. Valid values: <br><li>INIT: Initializing.</li> <li>RUNNING: Running.</li> <li>SUCCESSFUL: Activity successful.</li> <li>FAILED_PAUSE: Paused due to a failed refresh batch.</li> <li>AUTO_PAUSE: Automatically paused according to pause policy.</li> <li>MANUAL_PAUSE: Manually paused.</li> <li>CANCELLED: Activity canceled.</li> <li>FAILED: Activity failed.
- * @method void setStatus(string $Status) Set Refresh activity status. Valid values: <br><li>INIT: Initializing.</li> <li>RUNNING: Running.</li> <li>SUCCESSFUL: Activity successful.</li> <li>FAILED_PAUSE: Paused due to a failed refresh batch.</li> <li>AUTO_PAUSE: Automatically paused according to pause policy.</li> <li>MANUAL_PAUSE: Manually paused.</li> <li>CANCELLED: Activity canceled.</li> <li>FAILED: Activity failed.
+ * @method string getActivityType() Obtain Refresh activity type. Valid values:
+<li>NORMAL: normal refresh activity.</li>
+<li>ROLLBACK: rollback refresh activity.</li>
+ * @method void setActivityType(string $ActivityType) Set Refresh activity type. Valid values:
+<li>NORMAL: normal refresh activity.</li>
+<li>ROLLBACK: rollback refresh activity.</li>
+ * @method string getStatus() Obtain Refresh activity status. Valid values:
+<li>INIT: initializing.</li>
+<li>RUNNING: running.</li>
+<li>SUCCESSFUL: successful.</li>
+<li>FAILED_PAUSE: paused due to the failure of a refresh batch.</li>
+<li>AUTO_PAUSE: automatically paused due to the pause policy.</li>
+<li>MANUAL_PAUSE: manually paused.</li>
+<li>CANCELLED: canceled.</li>
+<li>FAILED: failed.</li>
+ * @method void setStatus(string $Status) Set Refresh activity status. Valid values:
+<li>INIT: initializing.</li>
+<li>RUNNING: running.</li>
+<li>SUCCESSFUL: successful.</li>
+<li>FAILED_PAUSE: paused due to the failure of a refresh batch.</li>
+<li>AUTO_PAUSE: automatically paused due to the pause policy.</li>
+<li>MANUAL_PAUSE: manually paused.</li>
+<li>CANCELLED: canceled.</li>
+<li>FAILED: failed.</li>
  * @method integer getCurrentRefreshBatchNum() Obtain Current refresh batch number. For example, a value of 2 indicates that the current activity is refreshing the second batch of instances.
 Note: This field may return null, indicating that no valid value can be obtained.
  * @method void setCurrentRefreshBatchNum(integer $CurrentRefreshBatchNum) Set Current refresh batch number. For example, a value of 2 indicates that the current activity is refreshing the second batch of instances.
@@ -89,12 +109,22 @@ Note: This field may return null, indicating that no valid value can be obtained
     public $RefreshSettings;
 
     /**
-     * @var string Refresh activity type. Valid values: <br><li>NORMAL: Normal refresh activity.</li> <li>ROLLBACK: Rollback refresh activity.
+     * @var string Refresh activity type. Valid values:
+<li>NORMAL: normal refresh activity.</li>
+<li>ROLLBACK: rollback refresh activity.</li>
      */
     public $ActivityType;
 
     /**
-     * @var string Refresh activity status. Valid values: <br><li>INIT: Initializing.</li> <li>RUNNING: Running.</li> <li>SUCCESSFUL: Activity successful.</li> <li>FAILED_PAUSE: Paused due to a failed refresh batch.</li> <li>AUTO_PAUSE: Automatically paused according to pause policy.</li> <li>MANUAL_PAUSE: Manually paused.</li> <li>CANCELLED: Activity canceled.</li> <li>FAILED: Activity failed.
+     * @var string Refresh activity status. Valid values:
+<li>INIT: initializing.</li>
+<li>RUNNING: running.</li>
+<li>SUCCESSFUL: successful.</li>
+<li>FAILED_PAUSE: paused due to the failure of a refresh batch.</li>
+<li>AUTO_PAUSE: automatically paused due to the pause policy.</li>
+<li>MANUAL_PAUSE: manually paused.</li>
+<li>CANCELLED: canceled.</li>
+<li>FAILED: failed.</li>
      */
     public $Status;
 
@@ -130,8 +160,18 @@ Note: This field may return null, indicating that no valid value can be obtained
      * @param array $RefreshBatchSet Refresh batch information list.
      * @param string $RefreshMode Refresh mode.
      * @param RefreshSettings $RefreshSettings Instance update setting parameters.
-     * @param string $ActivityType Refresh activity type. Valid values: <br><li>NORMAL: Normal refresh activity.</li> <li>ROLLBACK: Rollback refresh activity.
-     * @param string $Status Refresh activity status. Valid values: <br><li>INIT: Initializing.</li> <li>RUNNING: Running.</li> <li>SUCCESSFUL: Activity successful.</li> <li>FAILED_PAUSE: Paused due to a failed refresh batch.</li> <li>AUTO_PAUSE: Automatically paused according to pause policy.</li> <li>MANUAL_PAUSE: Manually paused.</li> <li>CANCELLED: Activity canceled.</li> <li>FAILED: Activity failed.
+     * @param string $ActivityType Refresh activity type. Valid values:
+<li>NORMAL: normal refresh activity.</li>
+<li>ROLLBACK: rollback refresh activity.</li>
+     * @param string $Status Refresh activity status. Valid values:
+<li>INIT: initializing.</li>
+<li>RUNNING: running.</li>
+<li>SUCCESSFUL: successful.</li>
+<li>FAILED_PAUSE: paused due to the failure of a refresh batch.</li>
+<li>AUTO_PAUSE: automatically paused due to the pause policy.</li>
+<li>MANUAL_PAUSE: manually paused.</li>
+<li>CANCELLED: canceled.</li>
+<li>FAILED: failed.</li>
      * @param integer $CurrentRefreshBatchNum Current refresh batch number. For example, a value of 2 indicates that the current activity is refreshing the second batch of instances.
 Note: This field may return null, indicating that no valid value can be obtained.
      * @param string $StartTime Refresh activity start time.

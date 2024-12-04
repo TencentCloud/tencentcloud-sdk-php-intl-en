@@ -118,6 +118,8 @@ This parameter will overwrite the original instance tag list. To add new tags, y
 This parameter will overwrite the original instance tag list. To add new tags, you need to pass the new tags along with the original tags.
  * @method string getImageFamily() Obtain Image family name.
  * @method void setImageFamily(string $ImageFamily) Set Image family name.
+ * @method string getDedicatedClusterId() Obtain Cloud Dedicated Cluster (CDC) ID.
+ * @method void setDedicatedClusterId(string $DedicatedClusterId) Set Cloud Dedicated Cluster (CDC) ID.
  */
 class ModifyLaunchConfigurationAttributesRequest extends AbstractModel
 {
@@ -267,6 +269,11 @@ This parameter will overwrite the original instance tag list. To add new tags, y
     public $ImageFamily;
 
     /**
+     * @var string Cloud Dedicated Cluster (CDC) ID.
+     */
+    public $DedicatedClusterId;
+
+    /**
      * @param string $LaunchConfigurationId Launch configuration ID
      * @param string $ImageId [Image](https://intl.cloud.tencent.com/document/product/213/4940?from_cn_redirect=1) ID in the format of `img-xxx`. There are three types of images: <br/><li>Public images </li><li>Custom images </li><li>Shared images </li><br/>You can obtain the image IDs in the [CVM console](https://console.cloud.tencent.com/cvm/image?rid=1&imageType=PUBLIC_IMAGE).</li><li>You can also use the [DescribeImages](https://intl.cloud.tencent.com/document/api/213/15715?from_cn_redirect=1) and look for `ImageId` in the response.</li>
      * @param array $InstanceTypes List of instance types. Each type specifies different resource specifications. This list contains up to 10 instance types.
@@ -316,6 +323,7 @@ Note: This field is default to empty
      * @param array $InstanceTags Instance tag list. By specifying this parameter, the instances added through scale-out can be bound to the tag. Up to 10 Tags can be specified.
 This parameter will overwrite the original instance tag list. To add new tags, you need to pass the new tags along with the original tags.
      * @param string $ImageFamily Image family name.
+     * @param string $DedicatedClusterId Cloud Dedicated Cluster (CDC) ID.
      */
     function __construct()
     {
@@ -443,6 +451,10 @@ This parameter will overwrite the original instance tag list. To add new tags, y
 
         if (array_key_exists("ImageFamily",$param) and $param["ImageFamily"] !== null) {
             $this->ImageFamily = $param["ImageFamily"];
+        }
+
+        if (array_key_exists("DedicatedClusterId",$param) and $param["DedicatedClusterId"] !== null) {
+            $this->DedicatedClusterId = $param["DedicatedClusterId"];
         }
     }
 }

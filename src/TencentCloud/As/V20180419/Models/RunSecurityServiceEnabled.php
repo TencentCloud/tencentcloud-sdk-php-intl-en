@@ -20,21 +20,33 @@ use TencentCloud\Common\AbstractModel;
 /**
  * This describes the information on the Cloud Security service
  *
- * @method boolean getEnabled() Obtain Whether to enable the [Cloud Security](https://intl.cloud.tencent.com/document/product/296?from_cn_redirect=1) service. Value range: <br><li>TRUE: Cloud Security is enabled <br><li>FALSE: Cloud Security is disabled <br><br>Default value: TRUE.
+ * @method boolean getEnabled() Obtain Whether to enable the [Cloud Workload Protection Platform](https://www.tencentcloud.com/document/product/296?lang=en&pg=) service. Valid values:
+<li>TRUE: enable.</li>
+<li>FALSE: disable.</li>
+Default value: TRUE.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setEnabled(boolean $Enabled) Set Whether to enable the [Cloud Security](https://intl.cloud.tencent.com/document/product/296?from_cn_redirect=1) service. Value range: <br><li>TRUE: Cloud Security is enabled <br><li>FALSE: Cloud Security is disabled <br><br>Default value: TRUE.
+ * @method void setEnabled(boolean $Enabled) Set Whether to enable the [Cloud Workload Protection Platform](https://www.tencentcloud.com/document/product/296?lang=en&pg=) service. Valid values:
+<li>TRUE: enable.</li>
+<li>FALSE: disable.</li>
+Default value: TRUE.
 Note: This field may return null, indicating that no valid values can be obtained.
  */
 class RunSecurityServiceEnabled extends AbstractModel
 {
     /**
-     * @var boolean Whether to enable the [Cloud Security](https://intl.cloud.tencent.com/document/product/296?from_cn_redirect=1) service. Value range: <br><li>TRUE: Cloud Security is enabled <br><li>FALSE: Cloud Security is disabled <br><br>Default value: TRUE.
+     * @var boolean Whether to enable the [Cloud Workload Protection Platform](https://www.tencentcloud.com/document/product/296?lang=en&pg=) service. Valid values:
+<li>TRUE: enable.</li>
+<li>FALSE: disable.</li>
+Default value: TRUE.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Enabled;
 
     /**
-     * @param boolean $Enabled Whether to enable the [Cloud Security](https://intl.cloud.tencent.com/document/product/296?from_cn_redirect=1) service. Value range: <br><li>TRUE: Cloud Security is enabled <br><li>FALSE: Cloud Security is disabled <br><br>Default value: TRUE.
+     * @param boolean $Enabled Whether to enable the [Cloud Workload Protection Platform](https://www.tencentcloud.com/document/product/296?lang=en&pg=) service. Valid values:
+<li>TRUE: enable.</li>
+<li>FALSE: disable.</li>
+Default value: TRUE.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()

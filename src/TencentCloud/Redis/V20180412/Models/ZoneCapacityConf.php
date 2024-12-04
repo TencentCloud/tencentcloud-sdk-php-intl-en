@@ -22,14 +22,20 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getZoneId() Obtain AZ ID, such as ap-guangzhou-3
  * @method void setZoneId(string $ZoneId) Set AZ ID, such as ap-guangzhou-3
- * @method string getZoneName() Obtain AZ name
- * @method void setZoneName(string $ZoneName) Set AZ name
- * @method boolean getIsSaleout() Obtain Whether a product is sold out in an AZ
- * @method void setIsSaleout(boolean $IsSaleout) Set Whether a product is sold out in an AZ
- * @method boolean getIsDefault() Obtain Whether it is a default AZ
- * @method void setIsDefault(boolean $IsDefault) Set Whether it is a default AZ
- * @method array getNetWorkType() Obtain Network type. basenet: basic network; vpcnet: VPC
- * @method void setNetWorkType(array $NetWorkType) Set Network type. basenet: basic network; vpcnet: VPC
+ * @method string getZoneName() Obtain Availability zone name.
+ * @method void setZoneName(string $ZoneName) Set Availability zone name.
+ * @method boolean getIsSaleout() Obtain Whether the AZ is sold out.
+ * @method void setIsSaleout(boolean $IsSaleout) Set Whether the AZ is sold out.
+ * @method boolean getIsDefault() Obtain Whether the default AZ is used.
+ * @method void setIsDefault(boolean $IsDefault) Set Whether the default AZ is used.
+ * @method array getNetWorkType() Obtain Network type.
+
+- basenet: basic network.
+- vpcnet: VPC.
+ * @method void setNetWorkType(array $NetWorkType) Set Network type.
+
+- basenet: basic network.
+- vpcnet: VPC.
  * @method array getProductSet() Obtain Information of an AZ, such as product specifications in it
  * @method void setProductSet(array $ProductSet) Set Information of an AZ, such as product specifications in it
  * @method integer getOldZoneId() Obtain AZ ID, such as 100003
@@ -43,22 +49,25 @@ class ZoneCapacityConf extends AbstractModel
     public $ZoneId;
 
     /**
-     * @var string AZ name
+     * @var string Availability zone name.
      */
     public $ZoneName;
 
     /**
-     * @var boolean Whether a product is sold out in an AZ
+     * @var boolean Whether the AZ is sold out.
      */
     public $IsSaleout;
 
     /**
-     * @var boolean Whether it is a default AZ
+     * @var boolean Whether the default AZ is used.
      */
     public $IsDefault;
 
     /**
-     * @var array Network type. basenet: basic network; vpcnet: VPC
+     * @var array Network type.
+
+- basenet: basic network.
+- vpcnet: VPC.
      */
     public $NetWorkType;
 
@@ -74,10 +83,13 @@ class ZoneCapacityConf extends AbstractModel
 
     /**
      * @param string $ZoneId AZ ID, such as ap-guangzhou-3
-     * @param string $ZoneName AZ name
-     * @param boolean $IsSaleout Whether a product is sold out in an AZ
-     * @param boolean $IsDefault Whether it is a default AZ
-     * @param array $NetWorkType Network type. basenet: basic network; vpcnet: VPC
+     * @param string $ZoneName Availability zone name.
+     * @param boolean $IsSaleout Whether the AZ is sold out.
+     * @param boolean $IsDefault Whether the default AZ is used.
+     * @param array $NetWorkType Network type.
+
+- basenet: basic network.
+- vpcnet: VPC.
      * @param array $ProductSet Information of an AZ, such as product specifications in it
      * @param integer $OldZoneId AZ ID, such as 100003
      */

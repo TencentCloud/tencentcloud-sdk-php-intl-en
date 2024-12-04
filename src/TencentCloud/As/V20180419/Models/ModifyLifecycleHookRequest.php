@@ -24,18 +24,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLifecycleHookId(string $LifecycleHookId) Set Lifecycle hook ID.
  * @method string getLifecycleHookName() Obtain Lifecycle hook name.
  * @method void setLifecycleHookName(string $LifecycleHookName) Set Lifecycle hook name.
- * @method string getLifecycleTransition() Obtain The time when the lifecycle hook is applied. Valid values:
-<li> `INSTANCE_LAUNCHING`: After the instance launch
-<li> `INSTANCE_TERMINATING`: Before the instance termination
- * @method void setLifecycleTransition(string $LifecycleTransition) Set The time when the lifecycle hook is applied. Valid values:
-<li> `INSTANCE_LAUNCHING`: After the instance launch
-<li> `INSTANCE_TERMINATING`: Before the instance termination
- * @method string getDefaultResult() Obtain Actions after the lifecycle hook times out. Valid values:
-<li> `CONTINUE`: Continue the scaling activity after the timeout
-<li> `ABANDON`: Terminate the scaling activity after the timeout
- * @method void setDefaultResult(string $DefaultResult) Set Actions after the lifecycle hook times out. Valid values:
-<li> `CONTINUE`: Continue the scaling activity after the timeout
-<li> `ABANDON`: Terminate the scaling activity after the timeout
+ * @method string getLifecycleTransition() Obtain Scenario for entering the lifecycle hook. Valid values:
+<li>INSTANCE_LAUNCHING: after the instance is launched.</li>
+<li>INSTANCE_TERMINATING: before the instance is terminated.</li>
+ * @method void setLifecycleTransition(string $LifecycleTransition) Set Scenario for entering the lifecycle hook. Valid values:
+<li>INSTANCE_LAUNCHING: after the instance is launched.</li>
+<li>INSTANCE_TERMINATING: before the instance is terminated.</li>
+ * @method string getDefaultResult() Obtain Action to be taken by the scaling group in case of lifecycle hook timeout. Valid values:
+<li>CONTINUE: Continue the scaling activity after timeout.</li>
+<li>ABANDON: Terminate the scaling activity after timeout.</li>
+ * @method void setDefaultResult(string $DefaultResult) Set Action to be taken by the scaling group in case of lifecycle hook timeout. Valid values:
+<li>CONTINUE: Continue the scaling activity after timeout.</li>
+<li>ABANDON: Terminate the scaling activity after timeout.</li>
  * @method integer getHeartbeatTimeout() Obtain The maximum length of time (in seconds) that can elapse before the lifecycle hook times out. Value range: 30 - 7,200 seconds.
  * @method void setHeartbeatTimeout(integer $HeartbeatTimeout) Set The maximum length of time (in seconds) that can elapse before the lifecycle hook times out. Value range: 30 - 7,200 seconds.
  * @method string getNotificationMetadata() Obtain Additional information sent by AS to the notification target.
@@ -60,16 +60,16 @@ class ModifyLifecycleHookRequest extends AbstractModel
     public $LifecycleHookName;
 
     /**
-     * @var string The time when the lifecycle hook is applied. Valid values:
-<li> `INSTANCE_LAUNCHING`: After the instance launch
-<li> `INSTANCE_TERMINATING`: Before the instance termination
+     * @var string Scenario for entering the lifecycle hook. Valid values:
+<li>INSTANCE_LAUNCHING: after the instance is launched.</li>
+<li>INSTANCE_TERMINATING: before the instance is terminated.</li>
      */
     public $LifecycleTransition;
 
     /**
-     * @var string Actions after the lifecycle hook times out. Valid values:
-<li> `CONTINUE`: Continue the scaling activity after the timeout
-<li> `ABANDON`: Terminate the scaling activity after the timeout
+     * @var string Action to be taken by the scaling group in case of lifecycle hook timeout. Valid values:
+<li>CONTINUE: Continue the scaling activity after timeout.</li>
+<li>ABANDON: Terminate the scaling activity after timeout.</li>
      */
     public $DefaultResult;
 
@@ -101,12 +101,12 @@ class ModifyLifecycleHookRequest extends AbstractModel
     /**
      * @param string $LifecycleHookId Lifecycle hook ID.
      * @param string $LifecycleHookName Lifecycle hook name.
-     * @param string $LifecycleTransition The time when the lifecycle hook is applied. Valid values:
-<li> `INSTANCE_LAUNCHING`: After the instance launch
-<li> `INSTANCE_TERMINATING`: Before the instance termination
-     * @param string $DefaultResult Actions after the lifecycle hook times out. Valid values:
-<li> `CONTINUE`: Continue the scaling activity after the timeout
-<li> `ABANDON`: Terminate the scaling activity after the timeout
+     * @param string $LifecycleTransition Scenario for entering the lifecycle hook. Valid values:
+<li>INSTANCE_LAUNCHING: after the instance is launched.</li>
+<li>INSTANCE_TERMINATING: before the instance is terminated.</li>
+     * @param string $DefaultResult Action to be taken by the scaling group in case of lifecycle hook timeout. Valid values:
+<li>CONTINUE: Continue the scaling activity after timeout.</li>
+<li>ABANDON: Terminate the scaling activity after timeout.</li>
      * @param integer $HeartbeatTimeout The maximum length of time (in seconds) that can elapse before the lifecycle hook times out. Value range: 30 - 7,200 seconds.
      * @param string $NotificationMetadata Additional information sent by AS to the notification target.
      * @param string $LifecycleTransitionType The scenario where the lifecycle hook is applied. `EXTENSION`: The lifecycle hook will be triggered when `AttachInstances`, `DetachInstances` or `RemoveInstances` is called. `NORMAL`: The lifecycle hook is not triggered by the above APIs.

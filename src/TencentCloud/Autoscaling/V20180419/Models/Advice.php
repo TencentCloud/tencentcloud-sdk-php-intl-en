@@ -26,12 +26,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDetail(string $Detail) Set Problem Details
  * @method string getSolution() Obtain Recommended resolutions
  * @method void setSolution(string $Solution) Set Recommended resolutions
- * @method string getLevel() Obtain Risk level of the scaling group configuration. Valid values: <br>
-<li>WARNING<br>
-<li>CRITICAL<br>
- * @method void setLevel(string $Level) Set Risk level of the scaling group configuration. Valid values: <br>
-<li>WARNING<br>
-<li>CRITICAL<br>
+ * @method string getLevel() Obtain Scaling suggestion warning level. Valid values:
+<li>WARNING: warning.</li>
+<li>CRITICAL: critical.</li>
+ * @method void setLevel(string $Level) Set Scaling suggestion warning level. Valid values:
+<li>WARNING: warning.</li>
+<li>CRITICAL: critical.</li>
  */
 class Advice extends AbstractModel
 {
@@ -51,9 +51,9 @@ class Advice extends AbstractModel
     public $Solution;
 
     /**
-     * @var string Risk level of the scaling group configuration. Valid values: <br>
-<li>WARNING<br>
-<li>CRITICAL<br>
+     * @var string Scaling suggestion warning level. Valid values:
+<li>WARNING: warning.</li>
+<li>CRITICAL: critical.</li>
      */
     public $Level;
 
@@ -61,9 +61,9 @@ class Advice extends AbstractModel
      * @param string $Problem Problem Description
      * @param string $Detail Problem Details
      * @param string $Solution Recommended resolutions
-     * @param string $Level Risk level of the scaling group configuration. Valid values: <br>
-<li>WARNING<br>
-<li>CRITICAL<br>
+     * @param string $Level Scaling suggestion warning level. Valid values:
+<li>WARNING: warning.</li>
+<li>CRITICAL: critical.</li>
      */
     function __construct()
     {

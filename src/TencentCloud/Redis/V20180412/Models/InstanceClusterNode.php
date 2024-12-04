@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Instance node type
  *
- * @method string getName() Obtain Node name
- * @method void setName(string $Name) Set Node name
+ * @method string getName() Obtain Node group name.
+ * @method void setName(string $Name) Set Node group name.
  * @method string getRunId() Obtain ID of the runtime node of an instance
  * @method void setRunId(string $RunId) Set ID of the runtime node of an instance
  * @method integer getRole() Obtain Cluster role. Valid values:  - `0` (master) - `1` (replica)
@@ -50,7 +50,7 @@ use TencentCloud\Common\AbstractModel;
 class InstanceClusterNode extends AbstractModel
 {
     /**
-     * @var string Node name
+     * @var string Node group name.
      */
     public $Name;
 
@@ -115,7 +115,7 @@ class InstanceClusterNode extends AbstractModel
     public $StorageSlope;
 
     /**
-     * @param string $Name Node name
+     * @param string $Name Node group name.
      * @param string $RunId ID of the runtime node of an instance
      * @param integer $Role Cluster role. Valid values:  - `0` (master) - `1` (replica)
      * @param integer $Status Node status. Valid values:  - `0` (read/write) - `1` (read) - `2` (backup)

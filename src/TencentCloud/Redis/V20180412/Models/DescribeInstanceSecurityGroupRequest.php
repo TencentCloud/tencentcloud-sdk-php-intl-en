@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeInstanceSecurityGroup request structure.
  *
- * @method array getInstanceIds() Obtain List of instance IDs,  such as "crs-f2ho5rsz\n".
- * @method void setInstanceIds(array $InstanceIds) Set List of instance IDs,  such as "crs-f2ho5rsz\n".
+ * @method array getInstanceIds() Obtain Instance ID list, with the array length ranging from 0 to 100, for example, ["crs-f2ho5rsz\n"].
+ * @method void setInstanceIds(array $InstanceIds) Set Instance ID list, with the array length ranging from 0 to 100, for example, ["crs-f2ho5rsz\n"].
  */
 class DescribeInstanceSecurityGroupRequest extends AbstractModel
 {
     /**
-     * @var array List of instance IDs,  such as "crs-f2ho5rsz\n".
+     * @var array Instance ID list, with the array length ranging from 0 to 100, for example, ["crs-f2ho5rsz\n"].
      */
     public $InstanceIds;
 
     /**
-     * @param array $InstanceIds List of instance IDs,  such as "crs-f2ho5rsz\n".
+     * @param array $InstanceIds Instance ID list, with the array length ranging from 0 to 100, for example, ["crs-f2ho5rsz\n"].
      */
     function __construct()
     {

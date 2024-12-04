@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSubnetIds(array $SubnetIds) Set List of subnet IDs
  * @method integer getPayMode() Obtain List of billing modes. 0: monthly subscription; 1: pay-as-you-go
  * @method void setPayMode(integer $PayMode) Set List of billing modes. 0: monthly subscription; 1: pay-as-you-go
- * @method array getInstanceIds() Obtain List of instance IDs
- * @method void setInstanceIds(array $InstanceIds) Set List of instance IDs
+ * @method array getInstanceIds() Obtain Instance ID filter information list, with a maximum array length of 100.
+ * @method void setInstanceIds(array $InstanceIds) Set Instance ID filter information list, with a maximum array length of 100.
  * @method array getInstanceNames() Obtain List of instance names
  * @method void setInstanceNames(array $InstanceNames) Set List of instance names
  * @method array getStatus() Obtain List of instance status
@@ -65,7 +65,7 @@ class DescribeCommonDBInstancesRequest extends AbstractModel
     public $PayMode;
 
     /**
-     * @var array List of instance IDs
+     * @var array Instance ID filter information list, with a maximum array length of 100.
      */
     public $InstanceIds;
 
@@ -118,7 +118,7 @@ class DescribeCommonDBInstancesRequest extends AbstractModel
      * @param array $VpcIds List of VPC IDs
      * @param array $SubnetIds List of subnet IDs
      * @param integer $PayMode List of billing modes. 0: monthly subscription; 1: pay-as-you-go
-     * @param array $InstanceIds List of instance IDs
+     * @param array $InstanceIds Instance ID filter information list, with a maximum array length of 100.
      * @param array $InstanceNames List of instance names
      * @param array $Status List of instance status
      * @param string $OrderBy Sorting field

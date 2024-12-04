@@ -26,12 +26,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLoadBalancerIds(array $LoadBalancerIds) Set List of classic CLB IDs. Currently, the maximum length is 20. You cannot specify LoadBalancerIds and ForwardLoadBalancers at the same time.
  * @method array getForwardLoadBalancers() Obtain List of application CLBs. Up to 100 CLBs are allowed. `LoadBalancerIds` and `ForwardLoadBalancers` cannot be specified at the same time.
  * @method void setForwardLoadBalancers(array $ForwardLoadBalancers) Set List of application CLBs. Up to 100 CLBs are allowed. `LoadBalancerIds` and `ForwardLoadBalancers` cannot be specified at the same time.
- * @method string getLoadBalancersCheckPolicy() Obtain CLB verification policy. Valid values: "ALL" and "DIFF". Default value: "ALL"
-<br><li> ALL. Verification is successful only when all CLBs are valid. Otherwise, verification fails.
-<br><li> DIFF. Only the changes in the CLB parameters are verified. If valid, the verification is successful. Otherwise, verification fails.
- * @method void setLoadBalancersCheckPolicy(string $LoadBalancersCheckPolicy) Set CLB verification policy. Valid values: "ALL" and "DIFF". Default value: "ALL"
-<br><li> ALL. Verification is successful only when all CLBs are valid. Otherwise, verification fails.
-<br><li> DIFF. Only the changes in the CLB parameters are verified. If valid, the verification is successful. Otherwise, verification fails.
+ * @method string getLoadBalancersCheckPolicy() Obtain CLB verification policy. Valid values: ALL and DIFF. Default value: ALL.
+<li>ALL: The CLB passes the verification only when all CLB parameters are valid. Otherwise, a verification error occurs.</li>
+<li>DIFF: The CLB passes the verification only when the CLB parameters with changes are valid. Otherwise, a verification error occurs.</li>
+ * @method void setLoadBalancersCheckPolicy(string $LoadBalancersCheckPolicy) Set CLB verification policy. Valid values: ALL and DIFF. Default value: ALL.
+<li>ALL: The CLB passes the verification only when all CLB parameters are valid. Otherwise, a verification error occurs.</li>
+<li>DIFF: The CLB passes the verification only when the CLB parameters with changes are valid. Otherwise, a verification error occurs.</li>
  */
 class ModifyLoadBalancersRequest extends AbstractModel
 {
@@ -51,9 +51,9 @@ class ModifyLoadBalancersRequest extends AbstractModel
     public $ForwardLoadBalancers;
 
     /**
-     * @var string CLB verification policy. Valid values: "ALL" and "DIFF". Default value: "ALL"
-<br><li> ALL. Verification is successful only when all CLBs are valid. Otherwise, verification fails.
-<br><li> DIFF. Only the changes in the CLB parameters are verified. If valid, the verification is successful. Otherwise, verification fails.
+     * @var string CLB verification policy. Valid values: ALL and DIFF. Default value: ALL.
+<li>ALL: The CLB passes the verification only when all CLB parameters are valid. Otherwise, a verification error occurs.</li>
+<li>DIFF: The CLB passes the verification only when the CLB parameters with changes are valid. Otherwise, a verification error occurs.</li>
      */
     public $LoadBalancersCheckPolicy;
 
@@ -61,9 +61,9 @@ class ModifyLoadBalancersRequest extends AbstractModel
      * @param string $AutoScalingGroupId Auto scaling group ID
      * @param array $LoadBalancerIds List of classic CLB IDs. Currently, the maximum length is 20. You cannot specify LoadBalancerIds and ForwardLoadBalancers at the same time.
      * @param array $ForwardLoadBalancers List of application CLBs. Up to 100 CLBs are allowed. `LoadBalancerIds` and `ForwardLoadBalancers` cannot be specified at the same time.
-     * @param string $LoadBalancersCheckPolicy CLB verification policy. Valid values: "ALL" and "DIFF". Default value: "ALL"
-<br><li> ALL. Verification is successful only when all CLBs are valid. Otherwise, verification fails.
-<br><li> DIFF. Only the changes in the CLB parameters are verified. If valid, the verification is successful. Otherwise, verification fails.
+     * @param string $LoadBalancersCheckPolicy CLB verification policy. Valid values: ALL and DIFF. Default value: ALL.
+<li>ALL: The CLB passes the verification only when all CLB parameters are valid. Otherwise, a verification error occurs.</li>
+<li>DIFF: The CLB passes the verification only when the CLB parameters with changes are valid. Otherwise, a verification error occurs.</li>
      */
     function __construct()
     {

@@ -20,17 +20,21 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyConnectionConfig request structure.
  *
- * @method string getInstanceId() Obtain Instance ID, which can contain 12 to 36 characters.
- * @method void setInstanceId(string $InstanceId) Set Instance ID, which can contain 12 to 36 characters.
+ * @method string getInstanceId() Obtain Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
+ * @method void setInstanceId(string $InstanceId) Set Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
  * @method integer getBandwidth() Obtain Additional bandwidth in MB, which should be greater than 0.
  * @method void setBandwidth(integer $Bandwidth) Set Additional bandwidth in MB, which should be greater than 0.
- * @method integer getClientLimit() Obtain Total number of connections of a single shard.When read-only replicas are not enabled, the lower limit is 10,000, and the upper limit is 40,000.When read-only replicas are enabled, the lower limit is 10,000, and the upper limit is 10,000 × (the number of read-only replicas + 3).
- * @method void setClientLimit(integer $ClientLimit) Set Total number of connections of a single shard.When read-only replicas are not enabled, the lower limit is 10,000, and the upper limit is 40,000.When read-only replicas are enabled, the lower limit is 10,000, and the upper limit is 10,000 × (the number of read-only replicas + 3).
+ * @method integer getClientLimit() Obtain Total number of connections per shard.
+- When read-only replicas are not enabled, the lower limit is 10,000 and the upper limit is 40,000.
+- When read-only replicas are enabled, the lower limit is 10,000, and the upper limit is calculated as follows: 10,000 x (Number of read-only replicas + 3).
+ * @method void setClientLimit(integer $ClientLimit) Set Total number of connections per shard.
+- When read-only replicas are not enabled, the lower limit is 10,000 and the upper limit is 40,000.
+- When read-only replicas are enabled, the lower limit is 10,000, and the upper limit is calculated as follows: 10,000 x (Number of read-only replicas + 3).
  */
 class ModifyConnectionConfigRequest extends AbstractModel
 {
     /**
-     * @var string Instance ID, which can contain 12 to 36 characters.
+     * @var string Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
      */
     public $InstanceId;
 
@@ -40,14 +44,18 @@ class ModifyConnectionConfigRequest extends AbstractModel
     public $Bandwidth;
 
     /**
-     * @var integer Total number of connections of a single shard.When read-only replicas are not enabled, the lower limit is 10,000, and the upper limit is 40,000.When read-only replicas are enabled, the lower limit is 10,000, and the upper limit is 10,000 × (the number of read-only replicas + 3).
+     * @var integer Total number of connections per shard.
+- When read-only replicas are not enabled, the lower limit is 10,000 and the upper limit is 40,000.
+- When read-only replicas are enabled, the lower limit is 10,000, and the upper limit is calculated as follows: 10,000 x (Number of read-only replicas + 3).
      */
     public $ClientLimit;
 
     /**
-     * @param string $InstanceId Instance ID, which can contain 12 to 36 characters.
+     * @param string $InstanceId Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
      * @param integer $Bandwidth Additional bandwidth in MB, which should be greater than 0.
-     * @param integer $ClientLimit Total number of connections of a single shard.When read-only replicas are not enabled, the lower limit is 10,000, and the upper limit is 40,000.When read-only replicas are enabled, the lower limit is 10,000, and the upper limit is 10,000 × (the number of read-only replicas + 3).
+     * @param integer $ClientLimit Total number of connections per shard.
+- When read-only replicas are not enabled, the lower limit is 10,000 and the upper limit is 40,000.
+- When read-only replicas are enabled, the lower limit is 10,000, and the upper limit is calculated as follows: 10,000 x (Number of read-only replicas + 3).
      */
     function __construct()
     {

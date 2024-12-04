@@ -20,42 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * UpgradeSmallVersion request structure.
  *
- * @method string getInstanceId() Obtain Instance ID
- * @method void setInstanceId(string $InstanceId) Set Instance ID
- * @method string getCurrentRedisVersion() Obtain The current redis version
- * @method void setCurrentRedisVersion(string $CurrentRedisVersion) Set The current redis version
- * @method string getUpgradeRedisVersion() Obtain Upgradeable redis version
- * @method void setUpgradeRedisVersion(string $UpgradeRedisVersion) Set Upgradeable redis version
- * @method integer getInstanceTypeUpgradeNow() Obtain `1` (upgrade immediately), `0` (upgrade during maintenance time)
- * @method void setInstanceTypeUpgradeNow(integer $InstanceTypeUpgradeNow) Set `1` (upgrade immediately), `0` (upgrade during maintenance time)
+ * @method string getInstanceId() Obtain Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
+ * @method void setInstanceId(string $InstanceId) Set Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
+ * @method string getCurrentRedisVersion() Obtain Current Redis minor version. For minor version information, see [Upgrading Instance Version](https://www.tencentcloud.com/document/product/239/37710).
+ * @method void setCurrentRedisVersion(string $CurrentRedisVersion) Set Current Redis minor version. For minor version information, see [Upgrading Instance Version](https://www.tencentcloud.com/document/product/239/37710).
+ * @method string getUpgradeRedisVersion() Obtain Upgraded Redis minor version. For minor version information, see [Upgrading Instance Version](https://www.tencentcloud.com/document/product/239/37710).
+ * @method void setUpgradeRedisVersion(string $UpgradeRedisVersion) Set Upgraded Redis minor version. For minor version information, see [Upgrading Instance Version](https://www.tencentcloud.com/document/product/239/37710).
+ * @method integer getInstanceTypeUpgradeNow() Obtain Whether to upgrade immediately.
+- 1: Upgrade immediately.
+- 0: Upgrade during the maintenance window.
+ * @method void setInstanceTypeUpgradeNow(integer $InstanceTypeUpgradeNow) Set Whether to upgrade immediately.
+- 1: Upgrade immediately.
+- 0: Upgrade during the maintenance window.
  */
 class UpgradeSmallVersionRequest extends AbstractModel
 {
     /**
-     * @var string Instance ID
+     * @var string Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
      */
     public $InstanceId;
 
     /**
-     * @var string The current redis version
+     * @var string Current Redis minor version. For minor version information, see [Upgrading Instance Version](https://www.tencentcloud.com/document/product/239/37710).
      */
     public $CurrentRedisVersion;
 
     /**
-     * @var string Upgradeable redis version
+     * @var string Upgraded Redis minor version. For minor version information, see [Upgrading Instance Version](https://www.tencentcloud.com/document/product/239/37710).
      */
     public $UpgradeRedisVersion;
 
     /**
-     * @var integer `1` (upgrade immediately), `0` (upgrade during maintenance time)
+     * @var integer Whether to upgrade immediately.
+- 1: Upgrade immediately.
+- 0: Upgrade during the maintenance window.
      */
     public $InstanceTypeUpgradeNow;
 
     /**
-     * @param string $InstanceId Instance ID
-     * @param string $CurrentRedisVersion The current redis version
-     * @param string $UpgradeRedisVersion Upgradeable redis version
-     * @param integer $InstanceTypeUpgradeNow `1` (upgrade immediately), `0` (upgrade during maintenance time)
+     * @param string $InstanceId Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
+     * @param string $CurrentRedisVersion Current Redis minor version. For minor version information, see [Upgrading Instance Version](https://www.tencentcloud.com/document/product/239/37710).
+     * @param string $UpgradeRedisVersion Upgraded Redis minor version. For minor version information, see [Upgrading Instance Version](https://www.tencentcloud.com/document/product/239/37710).
+     * @param integer $InstanceTypeUpgradeNow Whether to upgrade immediately.
+- 1: Upgrade immediately.
+- 0: Upgrade during the maintenance window.
      */
     function __construct()
     {

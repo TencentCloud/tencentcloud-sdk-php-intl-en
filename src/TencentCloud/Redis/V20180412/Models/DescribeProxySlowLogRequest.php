@@ -24,16 +24,16 @@ use TencentCloud\Common\AbstractModel;
 
  * @method void setInstanceId(string $InstanceId) Set ID of a specified instance,  such as  "crs-xjhsdj****" Log in to the [Redis console](https://console.cloud.tencent.com/redis) and copy the instance ID in the instance list.
 
- * @method string getBeginTime() Obtain Start time of slow query
- * @method void setBeginTime(string $BeginTime) Set Start time of slow query
- * @method string getEndTime() Obtain End time of slow query
- * @method void setEndTime(string $EndTime) Set End time of slow query
+ * @method string getBeginTime() Obtain Start time of a slow query, with a maximum query span of 30 days.
+ * @method void setBeginTime(string $BeginTime) Set Start time of a slow query, with a maximum query span of 30 days.
+ * @method string getEndTime() Obtain End time of a slow query, with a maximum query span of 30 days.
+ * @method void setEndTime(string $EndTime) Set End time of a slow query, with a maximum query span of 30 days.
  * @method integer getMinQueryTime() Obtain Slow query threshold  in milliseconds
  * @method void setMinQueryTime(integer $MinQueryTime) Set Slow query threshold  in milliseconds
- * @method integer getLimit() Obtain Number of results per page.  Default value: `20`. Value range: [20,1000].
- * @method void setLimit(integer $Limit) Set Number of results per page.  Default value: `20`. Value range: [20,1000].
- * @method integer getOffset() Obtain Offset, which is an integral multiple of `Limit`.
- * @method void setOffset(integer $Offset) Set Offset, which is an integral multiple of `Limit`.
+ * @method integer getLimit() Obtain Number of tasks output on each page. Default value: 20. Maximum value: 100.
+ * @method void setLimit(integer $Limit) Set Number of tasks output on each page. Default value: 20. Maximum value: 100.
+ * @method integer getOffset() Obtain Pagination offset, which is an integer multiple of Limit. Calculation formula: Offset = Limit x (Page number - 1).
+ * @method void setOffset(integer $Offset) Set Pagination offset, which is an integer multiple of Limit. Calculation formula: Offset = Limit x (Page number - 1).
  */
 class DescribeProxySlowLogRequest extends AbstractModel
 {
@@ -44,12 +44,12 @@ class DescribeProxySlowLogRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var string Start time of slow query
+     * @var string Start time of a slow query, with a maximum query span of 30 days.
      */
     public $BeginTime;
 
     /**
-     * @var string End time of slow query
+     * @var string End time of a slow query, with a maximum query span of 30 days.
      */
     public $EndTime;
 
@@ -59,23 +59,23 @@ class DescribeProxySlowLogRequest extends AbstractModel
     public $MinQueryTime;
 
     /**
-     * @var integer Number of results per page.  Default value: `20`. Value range: [20,1000].
+     * @var integer Number of tasks output on each page. Default value: 20. Maximum value: 100.
      */
     public $Limit;
 
     /**
-     * @var integer Offset, which is an integral multiple of `Limit`.
+     * @var integer Pagination offset, which is an integer multiple of Limit. Calculation formula: Offset = Limit x (Page number - 1).
      */
     public $Offset;
 
     /**
      * @param string $InstanceId ID of a specified instance,  such as  "crs-xjhsdj****" Log in to the [Redis console](https://console.cloud.tencent.com/redis) and copy the instance ID in the instance list.
 
-     * @param string $BeginTime Start time of slow query
-     * @param string $EndTime End time of slow query
+     * @param string $BeginTime Start time of a slow query, with a maximum query span of 30 days.
+     * @param string $EndTime End time of a slow query, with a maximum query span of 30 days.
      * @param integer $MinQueryTime Slow query threshold  in milliseconds
-     * @param integer $Limit Number of results per page.  Default value: `20`. Value range: [20,1000].
-     * @param integer $Offset Offset, which is an integral multiple of `Limit`.
+     * @param integer $Limit Number of tasks output on each page. Default value: 20. Maximum value: 100.
+     * @param integer $Offset Pagination offset, which is an integer multiple of Limit. Calculation formula: Offset = Limit x (Page number - 1).
      */
     function __construct()
     {

@@ -24,14 +24,14 @@ use TencentCloud\Common\AbstractModel;
 
  * @method void setInstanceId(string $InstanceId) Set ID of a specified instance,  such as  "crs-xjhsdj****" Log in to the [Redis console](https://console.cloud.tencent.com/redis) and copy the instance ID in the instance list.
 
- * @method string getBeginTime() Obtain Start time for prequerying a slow log
- * @method void setBeginTime(string $BeginTime) Set Start time for prequerying a slow log
- * @method string getEndTime() Obtain End time for prequerying a slow log
- * @method void setEndTime(string $EndTime) Set End time for prequerying a slow log
+ * @method string getBeginTime() Obtain Start time for pre-querying slow query logs, with a maximum query span of 30 days.
+ * @method void setBeginTime(string $BeginTime) Set Start time for pre-querying slow query logs, with a maximum query span of 30 days.
+ * @method string getEndTime() Obtain End time for pre-querying slow query logs, with a maximum query span of 30 days.
+ * @method void setEndTime(string $EndTime) Set End time for pre-querying slow query logs, with a maximum query span of 30 days.
  * @method integer getMinQueryTime() Obtain The average execution time threshold of slow query  in microseconds
  * @method void setMinQueryTime(integer $MinQueryTime) Set The average execution time threshold of slow query  in microseconds
- * @method integer getLimit() Obtain Number of slow queries displayed per page. Default value: `20`. Value range:  [20,1000].
- * @method void setLimit(integer $Limit) Set Number of slow queries displayed per page. Default value: `20`. Value range:  [20,1000].
+ * @method integer getLimit() Obtain Number of slow query logs displayed per page. Default value: 20. Maximum value: 100.
+ * @method void setLimit(integer $Limit) Set Number of slow query logs displayed per page. Default value: 20. Maximum value: 100.
  * @method integer getOffset() Obtain Slow query offset, which is an integral multiple of `Limit`. Calculation formula:  `offset` = `limit` * (page number - 1).
  * @method void setOffset(integer $Offset) Set Slow query offset, which is an integral multiple of `Limit`. Calculation formula:  `offset` = `limit` * (page number - 1).
  * @method string getRole() Obtain Node role.
@@ -48,12 +48,12 @@ class DescribeSlowLogRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var string Start time for prequerying a slow log
+     * @var string Start time for pre-querying slow query logs, with a maximum query span of 30 days.
      */
     public $BeginTime;
 
     /**
-     * @var string End time for prequerying a slow log
+     * @var string End time for pre-querying slow query logs, with a maximum query span of 30 days.
      */
     public $EndTime;
 
@@ -63,7 +63,7 @@ class DescribeSlowLogRequest extends AbstractModel
     public $MinQueryTime;
 
     /**
-     * @var integer Number of slow queries displayed per page. Default value: `20`. Value range:  [20,1000].
+     * @var integer Number of slow query logs displayed per page. Default value: 20. Maximum value: 100.
      */
     public $Limit;
 
@@ -81,10 +81,10 @@ class DescribeSlowLogRequest extends AbstractModel
     /**
      * @param string $InstanceId ID of a specified instance,  such as  "crs-xjhsdj****" Log in to the [Redis console](https://console.cloud.tencent.com/redis) and copy the instance ID in the instance list.
 
-     * @param string $BeginTime Start time for prequerying a slow log
-     * @param string $EndTime End time for prequerying a slow log
+     * @param string $BeginTime Start time for pre-querying slow query logs, with a maximum query span of 30 days.
+     * @param string $EndTime End time for pre-querying slow query logs, with a maximum query span of 30 days.
      * @param integer $MinQueryTime The average execution time threshold of slow query  in microseconds
-     * @param integer $Limit Number of slow queries displayed per page. Default value: `20`. Value range:  [20,1000].
+     * @param integer $Limit Number of slow query logs displayed per page. Default value: 20. Maximum value: 100.
      * @param integer $Offset Slow query offset, which is an integral multiple of `Limit`. Calculation formula:  `offset` = `limit` * (page number - 1).
      * @param string $Role Node role.
 - master: Master node.- slave: Replica node.

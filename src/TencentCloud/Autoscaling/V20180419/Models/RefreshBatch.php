@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getRefreshBatchNum() Obtain Refresh batch number. For example, a value of 2 indicates that the current batch of instances will be refreshed in the second batch.
  * @method void setRefreshBatchNum(integer $RefreshBatchNum) Set Refresh batch number. For example, a value of 2 indicates that the current batch of instances will be refreshed in the second batch.
- * @method string getRefreshBatchStatus() Obtain Refresh batch status. Valid values: <br><li>WAITING: Pending refresh.</li> <li>INIT: Initializing.</li> <li>RUNNING: Refreshing.</li> <li>FAILED: Refresh failed.</li> <li>PARTIALLY_SUCCESSFUL: Partially successful in the batch.</li> <li>CANCELLED: Canceled.</li> <li>SUCCESSFUL: Refreshed.
- * @method void setRefreshBatchStatus(string $RefreshBatchStatus) Set Refresh batch status. Valid values: <br><li>WAITING: Pending refresh.</li> <li>INIT: Initializing.</li> <li>RUNNING: Refreshing.</li> <li>FAILED: Refresh failed.</li> <li>PARTIALLY_SUCCESSFUL: Partially successful in the batch.</li> <li>CANCELLED: Canceled.</li> <li>SUCCESSFUL: Refreshed.
+ * @method string getRefreshBatchStatus() Obtain Refresh batch status. Valid values: <li>WAITING: pending refresh;</li> <li>INIT: initializing;</li> <li>RUNNING: refreshing;</li> <li>FAILED: refresh failed;</li> <li>PARTIALLY_SUCCESSFUL: partially successful in the batch;</li> <li>CANCELLED: cancelled;</li> <li>SUCCESSFUL: refresh successful.</li>
+ * @method void setRefreshBatchStatus(string $RefreshBatchStatus) Set Refresh batch status. Valid values: <li>WAITING: pending refresh;</li> <li>INIT: initializing;</li> <li>RUNNING: refreshing;</li> <li>FAILED: refresh failed;</li> <li>PARTIALLY_SUCCESSFUL: partially successful in the batch;</li> <li>CANCELLED: cancelled;</li> <li>SUCCESSFUL: refresh successful.</li>
  * @method array getRefreshBatchRelatedInstanceSet() Obtain List of instances linked to a refresh batch.
  * @method void setRefreshBatchRelatedInstanceSet(array $RefreshBatchRelatedInstanceSet) Set List of instances linked to a refresh batch.
  * @method string getStartTime() Obtain Refresh batch start time.
@@ -43,7 +43,7 @@ class RefreshBatch extends AbstractModel
     public $RefreshBatchNum;
 
     /**
-     * @var string Refresh batch status. Valid values: <br><li>WAITING: Pending refresh.</li> <li>INIT: Initializing.</li> <li>RUNNING: Refreshing.</li> <li>FAILED: Refresh failed.</li> <li>PARTIALLY_SUCCESSFUL: Partially successful in the batch.</li> <li>CANCELLED: Canceled.</li> <li>SUCCESSFUL: Refreshed.
+     * @var string Refresh batch status. Valid values: <li>WAITING: pending refresh;</li> <li>INIT: initializing;</li> <li>RUNNING: refreshing;</li> <li>FAILED: refresh failed;</li> <li>PARTIALLY_SUCCESSFUL: partially successful in the batch;</li> <li>CANCELLED: cancelled;</li> <li>SUCCESSFUL: refresh successful.</li>
      */
     public $RefreshBatchStatus;
 
@@ -66,7 +66,7 @@ Note: This field may return null, indicating that no valid value can be obtained
 
     /**
      * @param integer $RefreshBatchNum Refresh batch number. For example, a value of 2 indicates that the current batch of instances will be refreshed in the second batch.
-     * @param string $RefreshBatchStatus Refresh batch status. Valid values: <br><li>WAITING: Pending refresh.</li> <li>INIT: Initializing.</li> <li>RUNNING: Refreshing.</li> <li>FAILED: Refresh failed.</li> <li>PARTIALLY_SUCCESSFUL: Partially successful in the batch.</li> <li>CANCELLED: Canceled.</li> <li>SUCCESSFUL: Refreshed.
+     * @param string $RefreshBatchStatus Refresh batch status. Valid values: <li>WAITING: pending refresh;</li> <li>INIT: initializing;</li> <li>RUNNING: refreshing;</li> <li>FAILED: refresh failed;</li> <li>PARTIALLY_SUCCESSFUL: partially successful in the batch;</li> <li>CANCELLED: cancelled;</li> <li>SUCCESSFUL: refresh successful.</li>
      * @param array $RefreshBatchRelatedInstanceSet List of instances linked to a refresh batch.
      * @param string $StartTime Refresh batch start time.
 Note: This field may return null, indicating that no valid value can be obtained.

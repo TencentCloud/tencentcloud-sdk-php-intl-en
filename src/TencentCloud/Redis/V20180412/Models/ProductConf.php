@@ -54,8 +54,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSaleout(boolean $Saleout) Set Whether a product is sold out
 - `true`: Sold out.
 - `false`: Not sold out.
- * @method string getEngine() Obtain Product engines, including Tencent Cloud CKV and Redis Community Edition.
- * @method void setEngine(string $Engine) Set Product engines, including Tencent Cloud CKV and Redis Community Edition.
+ * @method string getEngine() Obtain Product engine. Valid values: Redis and CKV.
+ * @method void setEngine(string $Engine) Set Product engine. Valid values: Redis and CKV.
  * @method string getVersion() Obtain Compatible versions, including Redis 2.8, 3.2, 4.0, 5.0, and 6.2.
  * @method void setVersion(string $Version) Set Compatible versions, including Redis 2.8, 3.2, 4.0, 5.0, and 6.2.
  * @method array getTotalSize() Obtain Total capacity in GB
@@ -127,7 +127,7 @@ class ProductConf extends AbstractModel
     public $Saleout;
 
     /**
-     * @var string Product engines, including Tencent Cloud CKV and Redis Community Edition.
+     * @var string Product engine. Valid values: Redis and CKV.
      */
     public $Engine;
 
@@ -196,7 +196,7 @@ Note: This field may return null, indicating that no valid value can be obtained
      * @param boolean $Saleout Whether a product is sold out
 - `true`: Sold out.
 - `false`: Not sold out.
-     * @param string $Engine Product engines, including Tencent Cloud CKV and Redis Community Edition.
+     * @param string $Engine Product engine. Valid values: Redis and CKV.
      * @param string $Version Compatible versions, including Redis 2.8, 3.2, 4.0, 5.0, and 6.2.
      * @param array $TotalSize Total capacity in GB
      * @param array $ShardSize Shard size in GB

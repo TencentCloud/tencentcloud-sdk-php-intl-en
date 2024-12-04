@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyInstanceParams request structure.
  *
- * @method string getInstanceId() Obtain Instance ID
- * @method void setInstanceId(string $InstanceId) Set Instance ID
+ * @method string getInstanceId() Obtain Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
+ * @method void setInstanceId(string $InstanceId) Set Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
  * @method array getInstanceParams() Obtain List of instance parameters modified
  * @method void setInstanceParams(array $InstanceParams) Set List of instance parameters modified
  */
 class ModifyInstanceParamsRequest extends AbstractModel
 {
     /**
-     * @var string Instance ID
+     * @var string Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
      */
     public $InstanceId;
 
@@ -38,7 +38,7 @@ class ModifyInstanceParamsRequest extends AbstractModel
     public $InstanceParams;
 
     /**
-     * @param string $InstanceId Instance ID
+     * @param string $InstanceId Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
      * @param array $InstanceParams List of instance parameters modified
      */
     function __construct()

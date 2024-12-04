@@ -20,26 +20,38 @@ use TencentCloud\Common\AbstractModel;
 /**
  * EnableReplicaReadonly request structure.
  *
- * @method string getInstanceId() Obtain Instance ID
- * @method void setInstanceId(string $InstanceId) Set Instance ID
- * @method array getReadonlyPolicy() Obtain Account routing policy. If `master` or `replication` is entered, it means to route to the master or replica node; if this parameter is left empty, it means to write into the master node and read from the replica node by default.
- * @method void setReadonlyPolicy(array $ReadonlyPolicy) Set Account routing policy. If `master` or `replication` is entered, it means to route to the master or replica node; if this parameter is left empty, it means to write into the master node and read from the replica node by default.
+ * @method string getInstanceId() Obtain Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
+ * @method void setInstanceId(string $InstanceId) Set Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
+ * @method array getReadonlyPolicy() Obtain Read-only routing policy.
+- master: read-only routing to the primary node.
+- replication: read-only routing to the secondary node.
+- Default policy: writing to the primary node and reading from the secondary node.
+ * @method void setReadonlyPolicy(array $ReadonlyPolicy) Set Read-only routing policy.
+- master: read-only routing to the primary node.
+- replication: read-only routing to the secondary node.
+- Default policy: writing to the primary node and reading from the secondary node.
  */
 class EnableReplicaReadonlyRequest extends AbstractModel
 {
     /**
-     * @var string Instance ID
+     * @var string Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
      */
     public $InstanceId;
 
     /**
-     * @var array Account routing policy. If `master` or `replication` is entered, it means to route to the master or replica node; if this parameter is left empty, it means to write into the master node and read from the replica node by default.
+     * @var array Read-only routing policy.
+- master: read-only routing to the primary node.
+- replication: read-only routing to the secondary node.
+- Default policy: writing to the primary node and reading from the secondary node.
      */
     public $ReadonlyPolicy;
 
     /**
-     * @param string $InstanceId Instance ID
-     * @param array $ReadonlyPolicy Account routing policy. If `master` or `replication` is entered, it means to route to the master or replica node; if this parameter is left empty, it means to write into the master node and read from the replica node by default.
+     * @param string $InstanceId Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
+     * @param array $ReadonlyPolicy Read-only routing policy.
+- master: read-only routing to the primary node.
+- replication: read-only routing to the secondary node.
+- Default policy: writing to the primary node and reading from the secondary node.
      */
     function __construct()
     {

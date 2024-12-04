@@ -20,26 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ClearInstance request structure.
  *
- * @method string getInstanceId() Obtain Instance ID
- * @method void setInstanceId(string $InstanceId) Set Instance ID
- * @method string getPassword() Obtain Redis instance password (this parameter is required for password-enabled instances but not for password-free instances)
- * @method void setPassword(string $Password) Set Redis instance password (this parameter is required for password-enabled instances but not for password-free instances)
+ * @method string getInstanceId() Obtain Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
+ * @method void setInstanceId(string $InstanceId) Set Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
+ * @method string getPassword() Obtain Instance access password.
+- Password-free access: No configuration is required.
+- Password authentication: The password is required. It cannot start with a forward slash (/) and should contain 8 to 64 characters, including at least two of the following types: lowercase letters, uppercase letters, digits, and special characters (such as ()`~!@#$%^&*-+=_|{}[]:;<>,.?/).
+ * @method void setPassword(string $Password) Set Instance access password.
+- Password-free access: No configuration is required.
+- Password authentication: The password is required. It cannot start with a forward slash (/) and should contain 8 to 64 characters, including at least two of the following types: lowercase letters, uppercase letters, digits, and special characters (such as ()`~!@#$%^&*-+=_|{}[]:;<>,.?/).
  */
 class ClearInstanceRequest extends AbstractModel
 {
     /**
-     * @var string Instance ID
+     * @var string Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
      */
     public $InstanceId;
 
     /**
-     * @var string Redis instance password (this parameter is required for password-enabled instances but not for password-free instances)
+     * @var string Instance access password.
+- Password-free access: No configuration is required.
+- Password authentication: The password is required. It cannot start with a forward slash (/) and should contain 8 to 64 characters, including at least two of the following types: lowercase letters, uppercase letters, digits, and special characters (such as ()`~!@#$%^&*-+=_|{}[]:;<>,.?/).
      */
     public $Password;
 
     /**
-     * @param string $InstanceId Instance ID
-     * @param string $Password Redis instance password (this parameter is required for password-enabled instances but not for password-free instances)
+     * @param string $InstanceId Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
+     * @param string $Password Instance access password.
+- Password-free access: No configuration is required.
+- Password authentication: The password is required. It cannot start with a forward slash (/) and should contain 8 to 64 characters, including at least two of the following types: lowercase letters, uppercase letters, digits, and special characters (such as ()`~!@#$%^&*-+=_|{}[]:;<>,.?/).
      */
     function __construct()
     {

@@ -20,26 +20,38 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeProjectSecurityGroup request structure.
  *
- * @method integer getProjectId() Obtain 0: default project; -1: all projects; >0: specified project
- * @method void setProjectId(integer $ProjectId) Set 0: default project; -1: all projects; >0: specified project
- * @method string getSecurityGroupId() Obtain Security group ID
- * @method void setSecurityGroupId(string $SecurityGroupId) Set Security group ID
+ * @method integer getProjectId() Obtain Project ID for query.
+- 0: default project.
+- -1: all projects.
+- Greater than 0: specific project. Log in to the [project management](https://console.tencentcloud.com/project) page of the Redis console and copy the project ID in **Project Name**.
+ * @method void setProjectId(integer $ProjectId) Set Project ID for query.
+- 0: default project.
+- -1: all projects.
+- Greater than 0: specific project. Log in to the [project management](https://console.tencentcloud.com/project) page of the Redis console and copy the project ID in **Project Name**.
+ * @method string getSecurityGroupId() Obtain Security group ID, which can be obtained through the sub-parameter **SecurityGroupId** of the response parameter **InstanceSecurityGroupsDetail** of the API [DescribeInstanceSecurityGroup](https://intl.cloud.tencent.com/document/product/239/34447?from_cn_redirect=1).
+ * @method void setSecurityGroupId(string $SecurityGroupId) Set Security group ID, which can be obtained through the sub-parameter **SecurityGroupId** of the response parameter **InstanceSecurityGroupsDetail** of the API [DescribeInstanceSecurityGroup](https://intl.cloud.tencent.com/document/product/239/34447?from_cn_redirect=1).
  */
 class DescribeProjectSecurityGroupRequest extends AbstractModel
 {
     /**
-     * @var integer 0: default project; -1: all projects; >0: specified project
+     * @var integer Project ID for query.
+- 0: default project.
+- -1: all projects.
+- Greater than 0: specific project. Log in to the [project management](https://console.tencentcloud.com/project) page of the Redis console and copy the project ID in **Project Name**.
      */
     public $ProjectId;
 
     /**
-     * @var string Security group ID
+     * @var string Security group ID, which can be obtained through the sub-parameter **SecurityGroupId** of the response parameter **InstanceSecurityGroupsDetail** of the API [DescribeInstanceSecurityGroup](https://intl.cloud.tencent.com/document/product/239/34447?from_cn_redirect=1).
      */
     public $SecurityGroupId;
 
     /**
-     * @param integer $ProjectId 0: default project; -1: all projects; >0: specified project
-     * @param string $SecurityGroupId Security group ID
+     * @param integer $ProjectId Project ID for query.
+- 0: default project.
+- -1: all projects.
+- Greater than 0: specific project. Log in to the [project management](https://console.tencentcloud.com/project) page of the Redis console and copy the project ID in **Project Name**.
+     * @param string $SecurityGroupId Security group ID, which can be obtained through the sub-parameter **SecurityGroupId** of the response parameter **InstanceSecurityGroupsDetail** of the API [DescribeInstanceSecurityGroup](https://intl.cloud.tencent.com/document/product/239/34447?from_cn_redirect=1).
      */
     function __construct()
     {

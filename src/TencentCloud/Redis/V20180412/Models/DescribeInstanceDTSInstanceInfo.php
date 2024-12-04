@@ -20,106 +20,106 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Details of instances in the DTS task
  *
- * @method integer getRegionId() Obtain Region ID
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setRegionId(integer $RegionId) Set Region ID
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getInstanceId() Obtain Instance ID
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setInstanceId(string $InstanceId) Set Instance ID
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getSetId() Obtain Repository ID
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setSetId(integer $SetId) Set Repository ID
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getZoneId() Obtain AZ ID
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setZoneId(integer $ZoneId) Set AZ ID
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getType() Obtain Instance type
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setType(integer $Type) Set Instance type
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getInstanceName() Obtain Instance name
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setInstanceName(string $InstanceName) Set Instance name
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getVip() Obtain Instance access address
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setVip(string $Vip) Set Instance access address
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getStatus() Obtain Status
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setStatus(integer $Status) Set Status
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getRegionId() Obtain Region ID.
+Note: This field may return null, indicating that no valid value can be obtained.
+ * @method void setRegionId(integer $RegionId) Set Region ID.
+Note: This field may return null, indicating that no valid value can be obtained.
+ * @method string getInstanceId() Obtain Instance ID.
+Note: This field may return null, indicating that no valid value can be obtained.
+ * @method void setInstanceId(string $InstanceId) Set Instance ID.
+Note: This field may return null, indicating that no valid value can be obtained.
+ * @method integer getSetId() Obtain Warehouse ID.
+Note: This field may return null, indicating that no valid value can be obtained.
+ * @method void setSetId(integer $SetId) Set Warehouse ID.
+Note: This field may return null, indicating that no valid value can be obtained.
+ * @method integer getZoneId() Obtain AZ ID.
+Note: This field may return null, indicating that no valid value can be obtained.
+ * @method void setZoneId(integer $ZoneId) Set AZ ID.
+Note: This field may return null, indicating that no valid value can be obtained.
+ * @method integer getType() Obtain Instance type.
+Note: This field may return null, indicating that no valid value can be obtained.
+ * @method void setType(integer $Type) Set Instance type.
+Note: This field may return null, indicating that no valid value can be obtained.
+ * @method string getInstanceName() Obtain Instance name.
+Note: This field may return null, indicating that no valid value can be obtained.
+ * @method void setInstanceName(string $InstanceName) Set Instance name.
+Note: This field may return null, indicating that no valid value can be obtained.
+ * @method string getVip() Obtain Instance access address.
+Note: This field may return null, indicating that no valid value can be obtained.
+ * @method void setVip(string $Vip) Set Instance access address.
+Note: This field may return null, indicating that no valid value can be obtained.
+ * @method integer getStatus() Obtain Status.
+Note: This field may return null, indicating that no valid value can be obtained.
+ * @method void setStatus(integer $Status) Set Status.
+Note: This field may return null, indicating that no valid value can be obtained.
  */
 class DescribeInstanceDTSInstanceInfo extends AbstractModel
 {
     /**
-     * @var integer Region ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Region ID.
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public $RegionId;
 
     /**
-     * @var string Instance ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Instance ID.
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public $InstanceId;
 
     /**
-     * @var integer Repository ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Warehouse ID.
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public $SetId;
 
     /**
-     * @var integer AZ ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer AZ ID.
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public $ZoneId;
 
     /**
-     * @var integer Instance type
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Instance type.
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public $Type;
 
     /**
-     * @var string Instance name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Instance name.
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public $InstanceName;
 
     /**
-     * @var string Instance access address
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Instance access address.
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public $Vip;
 
     /**
-     * @var integer Status
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Status.
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public $Status;
 
     /**
-     * @param integer $RegionId Region ID
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $InstanceId Instance ID
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $SetId Repository ID
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $ZoneId AZ ID
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $Type Instance type
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $InstanceName Instance name
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Vip Instance access address
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $Status Status
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $RegionId Region ID.
+Note: This field may return null, indicating that no valid value can be obtained.
+     * @param string $InstanceId Instance ID.
+Note: This field may return null, indicating that no valid value can be obtained.
+     * @param integer $SetId Warehouse ID.
+Note: This field may return null, indicating that no valid value can be obtained.
+     * @param integer $ZoneId AZ ID.
+Note: This field may return null, indicating that no valid value can be obtained.
+     * @param integer $Type Instance type.
+Note: This field may return null, indicating that no valid value can be obtained.
+     * @param string $InstanceName Instance name.
+Note: This field may return null, indicating that no valid value can be obtained.
+     * @param string $Vip Instance access address.
+Note: This field may return null, indicating that no valid value can be obtained.
+     * @param integer $Status Status.
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     function __construct()
     {

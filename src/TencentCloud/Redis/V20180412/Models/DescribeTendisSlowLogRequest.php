@@ -20,33 +20,33 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeTendisSlowLog request structure.
  *
- * @method string getInstanceId() Obtain Instance ID in the format of crs-ngvou0i1
- * @method void setInstanceId(string $InstanceId) Set Instance ID in the format of crs-ngvou0i1
- * @method string getBeginTime() Obtain Start time in the format of 2019-09-08 12:12:41
- * @method void setBeginTime(string $BeginTime) Set Start time in the format of 2019-09-08 12:12:41
- * @method string getEndTime() Obtain End time in the format of 2019-09-09 12:12:41
- * @method void setEndTime(string $EndTime) Set End time in the format of 2019-09-09 12:12:41
+ * @method string getInstanceId() Obtain Instance ID. Log in to the [Tendis console](https://console.cloud.tencent.com/tendis) and copy it in the instance list.
+ * @method void setInstanceId(string $InstanceId) Set Instance ID. Log in to the [Tendis console](https://console.cloud.tencent.com/tendis) and copy it in the instance list.
+ * @method string getBeginTime() Obtain Start time for a query, for example, 2019-09-08 12:12:41, with a maximum query span of 30 days.
+ * @method void setBeginTime(string $BeginTime) Set Start time for a query, for example, 2019-09-08 12:12:41, with a maximum query span of 30 days.
+ * @method string getEndTime() Obtain End time for a query, for example, 2019-09-09 12:12:41, with a maximum query span of 30 days.
+ * @method void setEndTime(string $EndTime) Set End time for a query, for example, 2019-09-09 12:12:41, with a maximum query span of 30 days.
  * @method integer getMinQueryTime() Obtain Slow query threshold in ms
  * @method void setMinQueryTime(integer $MinQueryTime) Set Slow query threshold in ms
- * @method integer getLimit() Obtain Maximum number of results returned per page. Default value: 20.
- * @method void setLimit(integer $Limit) Set Maximum number of results returned per page. Default value: 20.
- * @method integer getOffset() Obtain Offset, which is an integral multiple of `Limit`.
- * @method void setOffset(integer $Offset) Set Offset, which is an integral multiple of `Limit`.
+ * @method integer getLimit() Obtain Page size. Default value 20. Maximum value 100.
+ * @method void setLimit(integer $Limit) Set Page size. Default value 20. Maximum value 100.
+ * @method integer getOffset() Obtain Pagination offset, which is an integer multiple of Limit. Calculation formula: Offset = Limit x (Page number - 1).
+ * @method void setOffset(integer $Offset) Set Pagination offset, which is an integer multiple of Limit. Calculation formula: Offset = Limit x (Page number - 1).
  */
 class DescribeTendisSlowLogRequest extends AbstractModel
 {
     /**
-     * @var string Instance ID in the format of crs-ngvou0i1
+     * @var string Instance ID. Log in to the [Tendis console](https://console.cloud.tencent.com/tendis) and copy it in the instance list.
      */
     public $InstanceId;
 
     /**
-     * @var string Start time in the format of 2019-09-08 12:12:41
+     * @var string Start time for a query, for example, 2019-09-08 12:12:41, with a maximum query span of 30 days.
      */
     public $BeginTime;
 
     /**
-     * @var string End time in the format of 2019-09-09 12:12:41
+     * @var string End time for a query, for example, 2019-09-09 12:12:41, with a maximum query span of 30 days.
      */
     public $EndTime;
 
@@ -56,22 +56,22 @@ class DescribeTendisSlowLogRequest extends AbstractModel
     public $MinQueryTime;
 
     /**
-     * @var integer Maximum number of results returned per page. Default value: 20.
+     * @var integer Page size. Default value 20. Maximum value 100.
      */
     public $Limit;
 
     /**
-     * @var integer Offset, which is an integral multiple of `Limit`.
+     * @var integer Pagination offset, which is an integer multiple of Limit. Calculation formula: Offset = Limit x (Page number - 1).
      */
     public $Offset;
 
     /**
-     * @param string $InstanceId Instance ID in the format of crs-ngvou0i1
-     * @param string $BeginTime Start time in the format of 2019-09-08 12:12:41
-     * @param string $EndTime End time in the format of 2019-09-09 12:12:41
+     * @param string $InstanceId Instance ID. Log in to the [Tendis console](https://console.cloud.tencent.com/tendis) and copy it in the instance list.
+     * @param string $BeginTime Start time for a query, for example, 2019-09-08 12:12:41, with a maximum query span of 30 days.
+     * @param string $EndTime End time for a query, for example, 2019-09-09 12:12:41, with a maximum query span of 30 days.
      * @param integer $MinQueryTime Slow query threshold in ms
-     * @param integer $Limit Maximum number of results returned per page. Default value: 20.
-     * @param integer $Offset Offset, which is an integral multiple of `Limit`.
+     * @param integer $Limit Page size. Default value 20. Maximum value 100.
+     * @param integer $Offset Pagination offset, which is an integer multiple of Limit. Calculation formula: Offset = Limit x (Page number - 1).
      */
     function __construct()
     {

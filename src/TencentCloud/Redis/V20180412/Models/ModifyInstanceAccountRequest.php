@@ -20,35 +20,49 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyInstanceAccount request structure.
  *
- * @method string getInstanceId() Obtain Instance ID
- * @method void setInstanceId(string $InstanceId) Set Instance ID
- * @method string getAccountName() Obtain Sub-account name. If the root account is to be modified, enter `root`.
- * @method void setAccountName(string $AccountName) Set Sub-account name. If the root account is to be modified, enter `root`.
- * @method string getAccountPassword() Obtain Sub-account password
- * @method void setAccountPassword(string $AccountPassword) Set Sub-account password
+ * @method string getInstanceId() Obtain Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
+ * @method void setInstanceId(string $InstanceId) Set Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
+ * @method string getAccountName() Obtain Sub-account name. If you want to change it to the root account, fill in root.
+ * @method void setAccountName(string $AccountName) Set Sub-account name. If you want to change it to the root account, fill in root.
+ * @method string getAccountPassword() Obtain Sub-account password.
+ * @method void setAccountPassword(string $AccountPassword) Set Sub-account password.
  * @method string getRemark() Obtain Sub-account description information
  * @method void setRemark(string $Remark) Set Sub-account description information
- * @method array getReadonlyPolicy() Obtain Routing policy. Valid values: master (master node); replication (replica node)
- * @method void setReadonlyPolicy(array $ReadonlyPolicy) Set Routing policy. Valid values: master (master node); replication (replica node)
- * @method string getPrivilege() Obtain Sub-account read/write policy. Valid values: r (read-only); w (write-only); rw (read/write).
- * @method void setPrivilege(string $Privilege) Set Sub-account read/write policy. Valid values: r (read-only); w (write-only); rw (read/write).
- * @method boolean getNoAuth() Obtain true: make the root account password-free. This is applicable to root accounts only. Sub-accounts cannot be made password-free.
- * @method void setNoAuth(boolean $NoAuth) Set true: make the root account password-free. This is applicable to root accounts only. Sub-accounts cannot be made password-free.
+ * @method array getReadonlyPolicy() Obtain Account read/write routing policy.
+- master: primary node.
+- replication: secondary node.
+ * @method void setReadonlyPolicy(array $ReadonlyPolicy) Set Account read/write routing policy.
+- master: primary node.
+- replication: secondary node.
+ * @method string getPrivilege() Obtain Sub-account read/write policy.
+- r: read-only.
+- w: write-only.
+- rw: read/write.
+ * @method void setPrivilege(string $Privilege) Set Sub-account read/write policy.
+- r: read-only.
+- w: write-only.
+- rw: read/write.
+ * @method boolean getNoAuth() Obtain Whether to switch the root account to a password-free account. This applies only to the root account. Sub-accounts do not support password-free access.
+- true: Switch the root account to a password-free account.
+- false: Do not switch it.
+ * @method void setNoAuth(boolean $NoAuth) Set Whether to switch the root account to a password-free account. This applies only to the root account. Sub-accounts do not support password-free access.
+- true: Switch the root account to a password-free account.
+- false: Do not switch it.
  */
 class ModifyInstanceAccountRequest extends AbstractModel
 {
     /**
-     * @var string Instance ID
+     * @var string Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
      */
     public $InstanceId;
 
     /**
-     * @var string Sub-account name. If the root account is to be modified, enter `root`.
+     * @var string Sub-account name. If you want to change it to the root account, fill in root.
      */
     public $AccountName;
 
     /**
-     * @var string Sub-account password
+     * @var string Sub-account password.
      */
     public $AccountPassword;
 
@@ -58,28 +72,42 @@ class ModifyInstanceAccountRequest extends AbstractModel
     public $Remark;
 
     /**
-     * @var array Routing policy. Valid values: master (master node); replication (replica node)
+     * @var array Account read/write routing policy.
+- master: primary node.
+- replication: secondary node.
      */
     public $ReadonlyPolicy;
 
     /**
-     * @var string Sub-account read/write policy. Valid values: r (read-only); w (write-only); rw (read/write).
+     * @var string Sub-account read/write policy.
+- r: read-only.
+- w: write-only.
+- rw: read/write.
      */
     public $Privilege;
 
     /**
-     * @var boolean true: make the root account password-free. This is applicable to root accounts only. Sub-accounts cannot be made password-free.
+     * @var boolean Whether to switch the root account to a password-free account. This applies only to the root account. Sub-accounts do not support password-free access.
+- true: Switch the root account to a password-free account.
+- false: Do not switch it.
      */
     public $NoAuth;
 
     /**
-     * @param string $InstanceId Instance ID
-     * @param string $AccountName Sub-account name. If the root account is to be modified, enter `root`.
-     * @param string $AccountPassword Sub-account password
+     * @param string $InstanceId Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
+     * @param string $AccountName Sub-account name. If you want to change it to the root account, fill in root.
+     * @param string $AccountPassword Sub-account password.
      * @param string $Remark Sub-account description information
-     * @param array $ReadonlyPolicy Routing policy. Valid values: master (master node); replication (replica node)
-     * @param string $Privilege Sub-account read/write policy. Valid values: r (read-only); w (write-only); rw (read/write).
-     * @param boolean $NoAuth true: make the root account password-free. This is applicable to root accounts only. Sub-accounts cannot be made password-free.
+     * @param array $ReadonlyPolicy Account read/write routing policy.
+- master: primary node.
+- replication: secondary node.
+     * @param string $Privilege Sub-account read/write policy.
+- r: read-only.
+- w: write-only.
+- rw: read/write.
+     * @param boolean $NoAuth Whether to switch the root account to a password-free account. This applies only to the root account. Sub-accounts do not support password-free access.
+- true: Switch the root account to a password-free account.
+- false: Do not switch it.
      */
     function __construct()
     {

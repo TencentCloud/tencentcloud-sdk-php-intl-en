@@ -40,8 +40,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMinSize(integer $MinSize) Set Minimum number of instances set by the scheduled task.
  * @method string getCreatedTime() Obtain Creation time of the scheduled task. The value is in `UTC time` in the format of `YYYY-MM-DDThh:mm:ssZ` according to the `ISO8601` standard.
  * @method void setCreatedTime(string $CreatedTime) Set Creation time of the scheduled task. The value is in `UTC time` in the format of `YYYY-MM-DDThh:mm:ssZ` according to the `ISO8601` standard.
- * @method string getScheduledType() Obtain Specifies how the scheduled action is executed. <br><li>`CRONTAB`: execute repeatedly <br><li>`ONCE`: execute only once
- * @method void setScheduledType(string $ScheduledType) Set Specifies how the scheduled action is executed. <br><li>`CRONTAB`: execute repeatedly <br><li>`ONCE`: execute only once
+ * @method string getScheduledType() Obtain Scheduled task execution type. Valid values:
+<li>CRONTAB: repeated execution.</li>
+<li>ONCE: single execution.</li>
+ * @method void setScheduledType(string $ScheduledType) Set Scheduled task execution type. Valid values:
+<li>CRONTAB: repeated execution.</li>
+<li>ONCE: single execution.</li>
  */
 class ScheduledAction extends AbstractModel
 {
@@ -96,7 +100,9 @@ class ScheduledAction extends AbstractModel
     public $CreatedTime;
 
     /**
-     * @var string Specifies how the scheduled action is executed. <br><li>`CRONTAB`: execute repeatedly <br><li>`ONCE`: execute only once
+     * @var string Scheduled task execution type. Valid values:
+<li>CRONTAB: repeated execution.</li>
+<li>ONCE: single execution.</li>
      */
     public $ScheduledType;
 
@@ -111,7 +117,9 @@ class ScheduledAction extends AbstractModel
      * @param integer $DesiredCapacity Desired number of instances set by the scheduled task.
      * @param integer $MinSize Minimum number of instances set by the scheduled task.
      * @param string $CreatedTime Creation time of the scheduled task. The value is in `UTC time` in the format of `YYYY-MM-DDThh:mm:ssZ` according to the `ISO8601` standard.
-     * @param string $ScheduledType Specifies how the scheduled action is executed. <br><li>`CRONTAB`: execute repeatedly <br><li>`ONCE`: execute only once
+     * @param string $ScheduledType Scheduled task execution type. Valid values:
+<li>CRONTAB: repeated execution.</li>
+<li>ONCE: single execution.</li>
      */
     function __construct()
     {

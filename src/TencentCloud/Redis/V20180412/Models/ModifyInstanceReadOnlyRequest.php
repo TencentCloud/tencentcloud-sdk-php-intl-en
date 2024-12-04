@@ -20,26 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyInstanceReadOnly request structure.
  *
- * @method string getInstanceId() Obtain Instance ID
- * @method void setInstanceId(string $InstanceId) Set Instance ID
- * @method string getInputMode() Obtain Instance input mode. Valid values: `0` (read/write), `1` (read-only)
- * @method void setInputMode(string $InputMode) Set Instance input mode. Valid values: `0` (read/write), `1` (read-only)
+ * @method string getInstanceId() Obtain Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
+ * @method void setInstanceId(string $InstanceId) Set Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
+ * @method string getInputMode() Obtain Instance input mode.
+- 0: read/write.
+- 1: read-only.
+ * @method void setInputMode(string $InputMode) Set Instance input mode.
+- 0: read/write.
+- 1: read-only.
  */
 class ModifyInstanceReadOnlyRequest extends AbstractModel
 {
     /**
-     * @var string Instance ID
+     * @var string Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
      */
     public $InstanceId;
 
     /**
-     * @var string Instance input mode. Valid values: `0` (read/write), `1` (read-only)
+     * @var string Instance input mode.
+- 0: read/write.
+- 1: read-only.
      */
     public $InputMode;
 
     /**
-     * @param string $InstanceId Instance ID
-     * @param string $InputMode Instance input mode. Valid values: `0` (read/write), `1` (read-only)
+     * @param string $InstanceId Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
+     * @param string $InputMode Instance input mode.
+- 0: read/write.
+- 1: read-only.
      */
     function __construct()
     {

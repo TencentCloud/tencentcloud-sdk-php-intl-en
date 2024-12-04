@@ -24,6 +24,10 @@ use TencentCloud\Common\AbstractModel;
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setTableName(string $TableName) Set Table name
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getColumnMode() Obtain In column mode, all refers to all data, while partial refers to part of the data (this parameter is only valid for data sync tasks).Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setColumnMode(string $ColumnMode) Set In column mode, all refers to all data, while partial refers to part of the data (this parameter is only valid for data sync tasks).Note: This field may return null, indicating that no valid values can be obtained.
+ * @method array getColumns() Obtain This field is required when ColumnMode is set to partial (this parameter is only valid for data sync tasks).Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setColumns(array $Columns) Set This field is required when ColumnMode is set to partial (this parameter is only valid for data sync tasks).Note: This field may return null, indicating that no valid values can be obtained.
  */
 class CompareTableItem extends AbstractModel
 {
@@ -34,8 +38,20 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $TableName;
 
     /**
+     * @var string In column mode, all refers to all data, while partial refers to part of the data (this parameter is only valid for data sync tasks).Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $ColumnMode;
+
+    /**
+     * @var array This field is required when ColumnMode is set to partial (this parameter is only valid for data sync tasks).Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $Columns;
+
+    /**
      * @param string $TableName Table name
 Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $ColumnMode In column mode, all refers to all data, while partial refers to part of the data (this parameter is only valid for data sync tasks).Note: This field may return null, indicating that no valid values can be obtained.
+     * @param array $Columns This field is required when ColumnMode is set to partial (this parameter is only valid for data sync tasks).Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -52,6 +68,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
         }
         if (array_key_exists("TableName",$param) and $param["TableName"] !== null) {
             $this->TableName = $param["TableName"];
+        }
+
+        if (array_key_exists("ColumnMode",$param) and $param["ColumnMode"] !== null) {
+            $this->ColumnMode = $param["ColumnMode"];
+        }
+
+        if (array_key_exists("Columns",$param) and $param["Columns"] !== null) {
+            $this->Columns = [];
+            foreach ($param["Columns"] as $key => $value){
+                $obj = new CompareColumnItem();
+                $obj->deserialize($value);
+                array_push($this->Columns, $obj);
+            }
         }
     }
 }

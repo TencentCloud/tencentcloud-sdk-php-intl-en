@@ -40,14 +40,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setTables(array $Tables) Set Table configuration for data consistency check, which is required if `TableMode` is `partial`.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getViewMode() Obtain View selection mode. Valid values: `all`, `partial`.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setViewMode(string $ViewMode) Set View selection mode. Valid values: `all`, `partial`.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method array getViews() Obtain View configuration for data consistency check, which is required if `ViewMode` is `partial`.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setViews(array $Views) Set View configuration for data consistency check, which is required if `ViewMode` is `partial`.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getViewMode() Obtain View selection mode: all refers to all view objects under the current object, partial refers to partial view objects (consistency check does not check views, and the current parameters are disabled).Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setViewMode(string $ViewMode) Set View selection mode: all refers to all view objects under the current object, partial refers to partial view objects (consistency check does not check views, and the current parameters are disabled).Note: This field may return null, indicating that no valid values can be obtained.
+ * @method array getViews() Obtain View configuration used for consistency check. When ViewMode is partial, it needs to be filled in (consistency check does not check views, and the current parameters are disabled).Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setViews(array $Views) Set View configuration used for consistency check. When ViewMode is partial, it needs to be filled in (consistency check does not check views, and the current parameters are disabled).Note: This field may return null, indicating that no valid values can be obtained.
  */
 class CompareObjectItem extends AbstractModel
 {
@@ -82,14 +78,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $Tables;
 
     /**
-     * @var string View selection mode. Valid values: `all`, `partial`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string View selection mode: all refers to all view objects under the current object, partial refers to partial view objects (consistency check does not check views, and the current parameters are disabled).Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ViewMode;
 
     /**
-     * @var array View configuration for data consistency check, which is required if `ViewMode` is `partial`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array View configuration used for consistency check. When ViewMode is partial, it needs to be filled in (consistency check does not check views, and the current parameters are disabled).Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Views;
 
@@ -104,10 +98,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param array $Tables Table configuration for data consistency check, which is required if `TableMode` is `partial`.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $ViewMode View selection mode. Valid values: `all`, `partial`.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param array $Views View configuration for data consistency check, which is required if `ViewMode` is `partial`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $ViewMode View selection mode: all refers to all view objects under the current object, partial refers to partial view objects (consistency check does not check views, and the current parameters are disabled).Note: This field may return null, indicating that no valid values can be obtained.
+     * @param array $Views View configuration used for consistency check. When ViewMode is partial, it needs to be filled in (consistency check does not check views, and the current parameters are disabled).Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

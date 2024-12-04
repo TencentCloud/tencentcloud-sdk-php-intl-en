@@ -94,6 +94,8 @@ Note: This field is default to empty
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setImageFamily(string $ImageFamily) Set Image family name.
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getDedicatedClusterId() Obtain CDC ID.
+ * @method void setDedicatedClusterId(string $DedicatedClusterId) Set CDC ID.
  */
 class LaunchConfiguration extends AbstractModel
 {
@@ -263,6 +265,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $ImageFamily;
 
     /**
+     * @var string CDC ID.
+     */
+    public $DedicatedClusterId;
+
+    /**
      * @param integer $ProjectId Project ID of the instance.
      * @param string $LaunchConfigurationId Launch configuration ID
      * @param string $LaunchConfigurationName Launch configuration name.
@@ -300,6 +307,7 @@ Note: This field is default to empty
      * @param array $DisasterRecoverGroupIds Placement group ID, supporting specification of only one.
      * @param string $ImageFamily Image family name.
 Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $DedicatedClusterId CDC ID.
      */
     function __construct()
     {
@@ -469,6 +477,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("ImageFamily",$param) and $param["ImageFamily"] !== null) {
             $this->ImageFamily = $param["ImageFamily"];
+        }
+
+        if (array_key_exists("DedicatedClusterId",$param) and $param["DedicatedClusterId"] !== null) {
+            $this->DedicatedClusterId = $param["DedicatedClusterId"];
         }
     }
 }

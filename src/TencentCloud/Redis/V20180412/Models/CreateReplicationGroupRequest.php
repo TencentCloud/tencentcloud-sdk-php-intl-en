@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateReplicationGroup request structure.
  *
- * @method string getInstanceId() Obtain Specifies the ID of the primary instance in the replication group.
- * @method void setInstanceId(string $InstanceId) Set Specifies the ID of the primary instance in the replication group.
- * @method string getGroupName() Obtain Replication group name. It supports only Chinese characters, letters, digits, underscores (_), and hyphens (-), with a length of 2-64 characters.
- * @method void setGroupName(string $GroupName) Set Replication group name. It supports only Chinese characters, letters, digits, underscores (_), and hyphens (-), with a length of 2-64 characters.
+ * @method string getInstanceId() Obtain ID of the primary instance in the replication group. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
+ * @method void setInstanceId(string $InstanceId) Set ID of the primary instance in the replication group. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
+ * @method string getGroupName() Obtain Replication group name. The name should contain 2 to 64 characters, including only letters, digits, underscores (_), and hyphens (-).
+ * @method void setGroupName(string $GroupName) Set Replication group name. The name should contain 2 to 64 characters, including only letters, digits, underscores (_), and hyphens (-).
  * @method string getRemark() Obtain Remark information.
  * @method void setRemark(string $Remark) Set Remark information.
  */
 class CreateReplicationGroupRequest extends AbstractModel
 {
     /**
-     * @var string Specifies the ID of the primary instance in the replication group.
+     * @var string ID of the primary instance in the replication group. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
      */
     public $InstanceId;
 
     /**
-     * @var string Replication group name. It supports only Chinese characters, letters, digits, underscores (_), and hyphens (-), with a length of 2-64 characters.
+     * @var string Replication group name. The name should contain 2 to 64 characters, including only letters, digits, underscores (_), and hyphens (-).
      */
     public $GroupName;
 
@@ -45,8 +45,8 @@ class CreateReplicationGroupRequest extends AbstractModel
     public $Remark;
 
     /**
-     * @param string $InstanceId Specifies the ID of the primary instance in the replication group.
-     * @param string $GroupName Replication group name. It supports only Chinese characters, letters, digits, underscores (_), and hyphens (-), with a length of 2-64 characters.
+     * @param string $InstanceId ID of the primary instance in the replication group. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
+     * @param string $GroupName Replication group name. The name should contain 2 to 64 characters, including only letters, digits, underscores (_), and hyphens (-).
      * @param string $Remark Remark information.
      */
     function __construct()

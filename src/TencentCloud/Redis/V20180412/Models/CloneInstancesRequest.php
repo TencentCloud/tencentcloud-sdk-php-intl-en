@@ -66,6 +66,11 @@ use TencentCloud\Common\AbstractModel;
 - You can query the parameter template list of the instance to get the template ID through the [DescribeParamTemplates](https://intl.cloud.tencent.com/document/product/239/58750?from_cn_redirect=1) API.
  * @method array getAlarmPolicyList() Obtain The alarm policy ID of the instance to be cloned. Log in to the [Tencent Cloud Observable Platform console](https://console.cloud.tencent.com/monitor/alarm2/policy), and get the policy ID in <b>Alarm Management</b> > <b>Policy Management</b>.
  * @method void setAlarmPolicyList(array $AlarmPolicyList) Set The alarm policy ID of the instance to be cloned. Log in to the [Tencent Cloud Observable Platform console](https://console.cloud.tencent.com/monitor/alarm2/policy), and get the policy ID in <b>Alarm Management</b> > <b>Policy Management</b>.
+ * @method string getCloneTime() Obtain Time to restore data for cloning.
+Only instances with second-level backup enabled are supported.
+
+ * @method void setCloneTime(string $CloneTime) Set Time to restore data for cloning.
+Only instances with second-level backup enabled are supported.
  */
 class CloneInstancesRequest extends AbstractModel
 {
@@ -169,6 +174,13 @@ class CloneInstancesRequest extends AbstractModel
     public $AlarmPolicyList;
 
     /**
+     * @var string Time to restore data for cloning.
+Only instances with second-level backup enabled are supported.
+
+     */
+    public $CloneTime;
+
+    /**
      * @param string $InstanceId The ID of the source instance to be cloned, such as "crs-xjhsdj****". Log in to the [Redis console](https://console.cloud.tencent.com/redis) and copy the instance ID in the instance list.
      * @param integer $GoodsNum The number of clone instances at a time
 - The maximum number of monthly subscribed instances is 100 for each purchase.
@@ -192,6 +204,8 @@ class CloneInstancesRequest extends AbstractModel
 - If this parameter is not configured, the system will automatically adapt the corresponding default template based on the selected compatible version and architecture.
 - You can query the parameter template list of the instance to get the template ID through the [DescribeParamTemplates](https://intl.cloud.tencent.com/document/product/239/58750?from_cn_redirect=1) API.
      * @param array $AlarmPolicyList The alarm policy ID of the instance to be cloned. Log in to the [Tencent Cloud Observable Platform console](https://console.cloud.tencent.com/monitor/alarm2/policy), and get the policy ID in <b>Alarm Management</b> > <b>Policy Management</b>.
+     * @param string $CloneTime Time to restore data for cloning.
+Only instances with second-level backup enabled are supported.
      */
     function __construct()
     {
@@ -290,6 +304,10 @@ class CloneInstancesRequest extends AbstractModel
 
         if (array_key_exists("AlarmPolicyList",$param) and $param["AlarmPolicyList"] !== null) {
             $this->AlarmPolicyList = $param["AlarmPolicyList"];
+        }
+
+        if (array_key_exists("CloneTime",$param) and $param["CloneTime"] !== null) {
+            $this->CloneTime = $param["CloneTime"];
         }
     }
 }

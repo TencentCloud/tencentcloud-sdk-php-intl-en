@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyNetworkConfig request structure.
  *
- * @method string getInstanceId() Obtain Instance ID
- * @method void setInstanceId(string $InstanceId) Set Instance ID
+ * @method string getInstanceId() Obtain Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
+ * @method void setInstanceId(string $InstanceId) Set Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
  * @method string getOperation() Obtain Network change type. Valid values:
 - `changeVip`: VPC change, including the private IPv4 address and port.
 - `changeVpc`: Subnet change.
@@ -34,27 +34,35 @@ use TencentCloud\Common\AbstractModel;
 - `changeVPort`: Port change.
  * @method string getVip() Obtain Private IPv4 address of the instance, which is required if `Operation` is `changeVip`.
  * @method void setVip(string $Vip) Set Private IPv4 address of the instance, which is required if `Operation` is `changeVip`.
- * @method string getVpcId() Obtain VPC ID after the change, which is required if `Operation` is `changeVpc` or `changeBaseToVpc`.
- * @method void setVpcId(string $VpcId) Set VPC ID after the change, which is required if `Operation` is `changeVpc` or `changeBaseToVpc`.
- * @method string getSubnetId() Obtain Subnet ID after the change, which is required if `Operation` is `changeVpc` or `changeBaseToVpc`.
- * @method void setSubnetId(string $SubnetId) Set Subnet ID after the change, which is required if `Operation` is `changeVpc` or `changeBaseToVpc`.
- * @method integer getRecycle() Obtain Retention period of the original private IPv4 address
-- Unit: Days.
-- Valid values: `0`, `1`, `2`, `3`, `7`, `15`.
+ * @method string getVpcId() Obtain VPC ID after the modification.
+- Configure this parameter when **Operation** is set to **changeVpc** or **changeBaseToVpc**.
+- Log in to the [Redis console](https://console.tencentcloud.com/redis/instance), switch to the **Instance Details** page, and click the VPC name next to the associated network in the **Network Information** area to obtain the VPC ID.
 
-**Note**: You can set the retention period of the original address only in the latest SDK. In earlier SDKs, the original address is released immediately. To view the SDK version, go to [SDK Center](https://intl.cloud.tencent.com/document/sdk?from_cn_redirect=1).
- * @method void setRecycle(integer $Recycle) Set Retention period of the original private IPv4 address
-- Unit: Days.
-- Valid values: `0`, `1`, `2`, `3`, `7`, `15`.
+ * @method void setVpcId(string $VpcId) Set VPC ID after the modification.
+- Configure this parameter when **Operation** is set to **changeVpc** or **changeBaseToVpc**.
+- Log in to the [Redis console](https://console.tencentcloud.com/redis/instance), switch to the **Instance Details** page, and click the VPC name next to the associated network in the **Network Information** area to obtain the VPC ID.
 
-**Note**: You can set the retention period of the original address only in the latest SDK. In earlier SDKs, the original address is released immediately. To view the SDK version, go to [SDK Center](https://intl.cloud.tencent.com/document/sdk?from_cn_redirect=1).
+ * @method string getSubnetId() Obtain ID of the subnet to which the VPC belongs after the modification.
+- Configure this parameter when **Operation** is set to **changeVpc** or **changeBaseToVpc**.
+- Log in to the [Redis console](https://console.tencentcloud.com/redis/instance), switch to the **Instance Details** page, and click the subnet name next to the associated network in the **Network Information** area to obtain the subnet ID.
+ * @method void setSubnetId(string $SubnetId) Set ID of the subnet to which the VPC belongs after the modification.
+- Configure this parameter when **Operation** is set to **changeVpc** or **changeBaseToVpc**.
+- Log in to the [Redis console](https://console.tencentcloud.com/redis/instance), switch to the **Instance Details** page, and click the subnet name next to the associated network in the **Network Information** area to obtain the subnet ID.
+ * @method integer getRecycle() Obtain Retention duration of the original private IPv4 address.
+- Unit: day.
+- Valid values: 0, 1, 2, 3, 7, and 15.
+
+ * @method void setRecycle(integer $Recycle) Set Retention duration of the original private IPv4 address.
+- Unit: day.
+- Valid values: 0, 1, 2, 3, 7, and 15.
+
  * @method integer getVPort() Obtain Network port after the change, which is required if `Operation` is `changeVPort` or `changeVip`. Value range: [1024,65535].
  * @method void setVPort(integer $VPort) Set Network port after the change, which is required if `Operation` is `changeVPort` or `changeVip`. Value range: [1024,65535].
  */
 class ModifyNetworkConfigRequest extends AbstractModel
 {
     /**
-     * @var string Instance ID
+     * @var string Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
      */
     public $InstanceId;
 
@@ -73,21 +81,25 @@ class ModifyNetworkConfigRequest extends AbstractModel
     public $Vip;
 
     /**
-     * @var string VPC ID after the change, which is required if `Operation` is `changeVpc` or `changeBaseToVpc`.
+     * @var string VPC ID after the modification.
+- Configure this parameter when **Operation** is set to **changeVpc** or **changeBaseToVpc**.
+- Log in to the [Redis console](https://console.tencentcloud.com/redis/instance), switch to the **Instance Details** page, and click the VPC name next to the associated network in the **Network Information** area to obtain the VPC ID.
+
      */
     public $VpcId;
 
     /**
-     * @var string Subnet ID after the change, which is required if `Operation` is `changeVpc` or `changeBaseToVpc`.
+     * @var string ID of the subnet to which the VPC belongs after the modification.
+- Configure this parameter when **Operation** is set to **changeVpc** or **changeBaseToVpc**.
+- Log in to the [Redis console](https://console.tencentcloud.com/redis/instance), switch to the **Instance Details** page, and click the subnet name next to the associated network in the **Network Information** area to obtain the subnet ID.
      */
     public $SubnetId;
 
     /**
-     * @var integer Retention period of the original private IPv4 address
-- Unit: Days.
-- Valid values: `0`, `1`, `2`, `3`, `7`, `15`.
+     * @var integer Retention duration of the original private IPv4 address.
+- Unit: day.
+- Valid values: 0, 1, 2, 3, 7, and 15.
 
-**Note**: You can set the retention period of the original address only in the latest SDK. In earlier SDKs, the original address is released immediately. To view the SDK version, go to [SDK Center](https://intl.cloud.tencent.com/document/sdk?from_cn_redirect=1).
      */
     public $Recycle;
 
@@ -97,20 +109,24 @@ class ModifyNetworkConfigRequest extends AbstractModel
     public $VPort;
 
     /**
-     * @param string $InstanceId Instance ID
+     * @param string $InstanceId Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
      * @param string $Operation Network change type. Valid values:
 - `changeVip`: VPC change, including the private IPv4 address and port.
 - `changeVpc`: Subnet change.
 - `changeBaseToVpc`: Change from classic network to VPC.
 - `changeVPort`: Port change.
      * @param string $Vip Private IPv4 address of the instance, which is required if `Operation` is `changeVip`.
-     * @param string $VpcId VPC ID after the change, which is required if `Operation` is `changeVpc` or `changeBaseToVpc`.
-     * @param string $SubnetId Subnet ID after the change, which is required if `Operation` is `changeVpc` or `changeBaseToVpc`.
-     * @param integer $Recycle Retention period of the original private IPv4 address
-- Unit: Days.
-- Valid values: `0`, `1`, `2`, `3`, `7`, `15`.
+     * @param string $VpcId VPC ID after the modification.
+- Configure this parameter when **Operation** is set to **changeVpc** or **changeBaseToVpc**.
+- Log in to the [Redis console](https://console.tencentcloud.com/redis/instance), switch to the **Instance Details** page, and click the VPC name next to the associated network in the **Network Information** area to obtain the VPC ID.
 
-**Note**: You can set the retention period of the original address only in the latest SDK. In earlier SDKs, the original address is released immediately. To view the SDK version, go to [SDK Center](https://intl.cloud.tencent.com/document/sdk?from_cn_redirect=1).
+     * @param string $SubnetId ID of the subnet to which the VPC belongs after the modification.
+- Configure this parameter when **Operation** is set to **changeVpc** or **changeBaseToVpc**.
+- Log in to the [Redis console](https://console.tencentcloud.com/redis/instance), switch to the **Instance Details** page, and click the subnet name next to the associated network in the **Network Information** area to obtain the subnet ID.
+     * @param integer $Recycle Retention duration of the original private IPv4 address.
+- Unit: day.
+- Valid values: 0, 1, 2, 3, 7, and 15.
+
      * @param integer $VPort Network port after the change, which is required if `Operation` is `changeVPort` or `changeVip`. Value range: [1024,65535].
      */
     function __construct()

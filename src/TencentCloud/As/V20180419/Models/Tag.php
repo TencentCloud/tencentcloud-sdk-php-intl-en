@@ -24,9 +24,9 @@ use TencentCloud\Common\AbstractModel;
  * @method void setKey(string $Key) Set Tag key
  * @method string getValue() Obtain Tag value
  * @method void setValue(string $Value) Set Tag value
- * @method string getResourceType() Obtain Type of the resource binded to the tag. Currently supported types include "auto-scaling-group"
+ * @method string getResourceType() Obtain Resource type bound with tags. Valid values: auto-scaling-group and launch-configuration.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setResourceType(string $ResourceType) Set Type of the resource binded to the tag. Currently supported types include "auto-scaling-group"
+ * @method void setResourceType(string $ResourceType) Set Resource type bound with tags. Valid values: auto-scaling-group and launch-configuration.
 Note: This field may return null, indicating that no valid values can be obtained.
  */
 class Tag extends AbstractModel
@@ -42,7 +42,7 @@ class Tag extends AbstractModel
     public $Value;
 
     /**
-     * @var string Type of the resource binded to the tag. Currently supported types include "auto-scaling-group"
+     * @var string Resource type bound with tags. Valid values: auto-scaling-group and launch-configuration.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ResourceType;
@@ -50,7 +50,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     /**
      * @param string $Key Tag key
      * @param string $Value Tag value
-     * @param string $ResourceType Type of the resource binded to the tag. Currently supported types include "auto-scaling-group"
+     * @param string $ResourceType Resource type bound with tags. Valid values: auto-scaling-group and launch-configuration.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()

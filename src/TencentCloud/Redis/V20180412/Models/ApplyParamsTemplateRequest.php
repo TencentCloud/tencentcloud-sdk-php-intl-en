@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ApplyParamsTemplate request structure.
  *
- * @method array getInstanceIds() Obtain List of instance IDs
- * @method void setInstanceIds(array $InstanceIds) Set List of instance IDs
- * @method string getTemplateId() Obtain ID of the parameter template to be applied
- * @method void setTemplateId(string $TemplateId) Set ID of the parameter template to be applied
+ * @method array getInstanceIds() Obtain Instance ID list. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy the instance ID in the instance list.
+ * @method void setInstanceIds(array $InstanceIds) Set Instance ID list. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy the instance ID in the instance list.
+ * @method string getTemplateId() Obtain ID of the applied parameter template, which can be obtained through the response parameter **TemplateId** of the API [DescribeParamTemplateInfo](https://intl.cloud.tencent.com/document/product/239/58748?from_cn_redirect=1).
+ * @method void setTemplateId(string $TemplateId) Set ID of the applied parameter template, which can be obtained through the response parameter **TemplateId** of the API [DescribeParamTemplateInfo](https://intl.cloud.tencent.com/document/product/239/58748?from_cn_redirect=1).
  */
 class ApplyParamsTemplateRequest extends AbstractModel
 {
     /**
-     * @var array List of instance IDs
+     * @var array Instance ID list. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy the instance ID in the instance list.
      */
     public $InstanceIds;
 
     /**
-     * @var string ID of the parameter template to be applied
+     * @var string ID of the applied parameter template, which can be obtained through the response parameter **TemplateId** of the API [DescribeParamTemplateInfo](https://intl.cloud.tencent.com/document/product/239/58748?from_cn_redirect=1).
      */
     public $TemplateId;
 
     /**
-     * @param array $InstanceIds List of instance IDs
-     * @param string $TemplateId ID of the parameter template to be applied
+     * @param array $InstanceIds Instance ID list. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy the instance ID in the instance list.
+     * @param string $TemplateId ID of the applied parameter template, which can be obtained through the response parameter **TemplateId** of the API [DescribeParamTemplateInfo](https://intl.cloud.tencent.com/document/product/239/58748?from_cn_redirect=1).
      */
     function __construct()
     {

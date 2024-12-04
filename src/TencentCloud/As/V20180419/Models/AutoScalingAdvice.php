@@ -22,14 +22,14 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getAutoScalingGroupId() Obtain Scaling group ID
  * @method void setAutoScalingGroupId(string $AutoScalingGroupId) Set Scaling group ID
- * @method string getLevel() Obtain Scaling group warning level. Valid values:<br>
-<li>NORMAL: Normal<br>
-<li>WARNING: Warning<br>
-<li>CRITICAL: Serious warning<br>
- * @method void setLevel(string $Level) Set Scaling group warning level. Valid values:<br>
-<li>NORMAL: Normal<br>
-<li>WARNING: Warning<br>
-<li>CRITICAL: Serious warning<br>
+ * @method string getLevel() Obtain Scaling group warning level. Valid values:
+<li>NORMAL: normal.</li>
+<li>WARNING: warning.</li>
+<li>CRITICAL: critical.</li>
+ * @method void setLevel(string $Level) Set Scaling group warning level. Valid values:
+<li>NORMAL: normal.</li>
+<li>WARNING: warning.</li>
+<li>CRITICAL: critical.</li>
  * @method array getAdvices() Obtain A collection of suggestions for scaling group configurations.
  * @method void setAdvices(array $Advices) Set A collection of suggestions for scaling group configurations.
  */
@@ -41,10 +41,10 @@ class AutoScalingAdvice extends AbstractModel
     public $AutoScalingGroupId;
 
     /**
-     * @var string Scaling group warning level. Valid values:<br>
-<li>NORMAL: Normal<br>
-<li>WARNING: Warning<br>
-<li>CRITICAL: Serious warning<br>
+     * @var string Scaling group warning level. Valid values:
+<li>NORMAL: normal.</li>
+<li>WARNING: warning.</li>
+<li>CRITICAL: critical.</li>
      */
     public $Level;
 
@@ -55,10 +55,10 @@ class AutoScalingAdvice extends AbstractModel
 
     /**
      * @param string $AutoScalingGroupId Scaling group ID
-     * @param string $Level Scaling group warning level. Valid values:<br>
-<li>NORMAL: Normal<br>
-<li>WARNING: Warning<br>
-<li>CRITICAL: Serious warning<br>
+     * @param string $Level Scaling group warning level. Valid values:
+<li>NORMAL: normal.</li>
+<li>WARNING: warning.</li>
+<li>CRITICAL: critical.</li>
      * @param array $Advices A collection of suggestions for scaling group configurations.
      */
     function __construct()
