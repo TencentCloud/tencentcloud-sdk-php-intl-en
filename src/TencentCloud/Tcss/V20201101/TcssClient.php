@@ -89,7 +89,9 @@ use TencentCloud\Tcss\V20201101\Models as Models;
  * @method Models\DeleteComplianceAssetPolicySetFromWhitelistResponse DeleteComplianceAssetPolicySetFromWhitelist(Models\DeleteComplianceAssetPolicySetFromWhitelistRequest $req) This API is used to unignore the specified asset IDs and check item IDs so as to show the assets contained in the specified check items.
 `AddCompliancePolicyAssetSetToWhitelist` is the reference API. Except for the input field, others should be the same, and if not, it may be due to the definition.
  * @method Models\DeleteCompliancePolicyAssetSetFromWhitelistResponse DeleteCompliancePolicyAssetSetFromWhitelist(Models\DeleteCompliancePolicyAssetSetFromWhitelistRequest $req) This API is used to unignore the specified asset IDs and check item IDs so as to show the assets contained in the specified check items.
- * @method Models\DeleteCompliancePolicyItemFromWhitelistResponse DeleteCompliancePolicyItemFromWhitelist(Models\DeleteCompliancePolicyItemFromWhitelistRequest $req) This API is used to remove the specified check item from the allowlist.
+ * @method Models\DeleteCompliancePolicyItemFromWhitelistResponse DeleteCompliancePolicyItemFromWhitelist(Models\DeleteCompliancePolicyItemFromWhitelistRequest $req) 产品重构优化，这几个接口已经没有调用了
+
+This API is used to remove the specified check item from the allowlist.
  * @method Models\DeleteEscapeWhiteListResponse DeleteEscapeWhiteList(Models\DeleteEscapeWhiteListRequest $req) This API is used to delete an allowed escape.
  * @method Models\DeleteIgnoreVulResponse DeleteIgnoreVul(Models\DeleteIgnoreVulRequest $req) This API is used to unignore vulnerabilities in a vulnerability scan.
  * @method Models\DeleteK8sApiAbnormalRuleResponse DeleteK8sApiAbnormalRule(Models\DeleteK8sApiAbnormalRuleRequest $req) This API is used to delete a K8sApi abnormal event rules.
@@ -104,17 +106,23 @@ use TencentCloud\Tcss\V20201101\Models as Models;
  * @method Models\DescribeAbnormalProcessDetailResponse DescribeAbnormalProcessDetail(Models\DescribeAbnormalProcessDetailRequest $req) This API is used to query the details of an abnormal process event at runtime.
  * @method Models\DescribeAbnormalProcessEventTendencyResponse DescribeAbnormalProcessEventTendency(Models\DescribeAbnormalProcessEventTendencyRequest $req) This API is used to query the trend of pending abnormal process events.
  * @method Models\DescribeAbnormalProcessEventsResponse DescribeAbnormalProcessEvents(Models\DescribeAbnormalProcessEventsRequest $req) This API is used to query the list of abnormal process events at runtime.
- * @method Models\DescribeAbnormalProcessEventsExportResponse DescribeAbnormalProcessEventsExport(Models\DescribeAbnormalProcessEventsExportRequest $req) This API is used to query and export the list of abnormal process events at runtime.
+ * @method Models\DescribeAbnormalProcessEventsExportResponse DescribeAbnormalProcessEventsExport(Models\DescribeAbnormalProcessEventsExportRequest $req) 接口已废弃
+
+This API is used to query and export the list of abnormal process events at runtime.
  * @method Models\DescribeAbnormalProcessLevelSummaryResponse DescribeAbnormalProcessLevelSummary(Models\DescribeAbnormalProcessLevelSummaryRequest $req) This API is used to count the number of pending abnormal process events at each severity level.
  * @method Models\DescribeAbnormalProcessRuleDetailResponse DescribeAbnormalProcessRuleDetail(Models\DescribeAbnormalProcessRuleDetailRequest $req) This API is used to query the details of an abnormal process policy at runtime.
  * @method Models\DescribeAbnormalProcessRulesResponse DescribeAbnormalProcessRules(Models\DescribeAbnormalProcessRulesRequest $req) This API is used to query the list of abnormal process policies at runtime.
- * @method Models\DescribeAbnormalProcessRulesExportResponse DescribeAbnormalProcessRulesExport(Models\DescribeAbnormalProcessRulesExportRequest $req) This API is used to query and export the list of abnormal process policies at runtime.
+ * @method Models\DescribeAbnormalProcessRulesExportResponse DescribeAbnormalProcessRulesExport(Models\DescribeAbnormalProcessRulesExportRequest $req) 接口已废弃
+
+This API is used to query and export the list of abnormal process policies at runtime.
  * @method Models\DescribeAccessControlDetailResponse DescribeAccessControlDetail(Models\DescribeAccessControlDetailRequest $req) This API is used to query the details of an access control event at runtime.
  * @method Models\DescribeAccessControlEventsResponse DescribeAccessControlEvents(Models\DescribeAccessControlEventsRequest $req) This API is used to query the list of access control events at runtime.
  * @method Models\DescribeAccessControlEventsExportResponse DescribeAccessControlEventsExport(Models\DescribeAccessControlEventsExportRequest $req) This API is used to export the list of access control events at runtime.
  * @method Models\DescribeAccessControlRuleDetailResponse DescribeAccessControlRuleDetail(Models\DescribeAccessControlRuleDetailRequest $req) This API is used to query the details of an access control policy at runtime.
  * @method Models\DescribeAccessControlRulesResponse DescribeAccessControlRules(Models\DescribeAccessControlRulesRequest $req) This API is used to query the list of access control policies at runtime.
- * @method Models\DescribeAccessControlRulesExportResponse DescribeAccessControlRulesExport(Models\DescribeAccessControlRulesExportRequest $req) This API is used to export the list of access control policies at runtime.
+ * @method Models\DescribeAccessControlRulesExportResponse DescribeAccessControlRulesExport(Models\DescribeAccessControlRulesExportRequest $req) 接口已废弃
+
+This API is used to export the list of access control policies at runtime.
  * @method Models\DescribeAffectedClusterCountResponse DescribeAffectedClusterCount(Models\DescribeAffectedClusterCountRequest $req) This API is used to get and return the number of affected clusters.
  * @method Models\DescribeAffectedNodeListResponse DescribeAffectedNodeList(Models\DescribeAffectedNodeListRequest $req) This API is used to query affected node types and return the node list.
  * @method Models\DescribeAffectedWorkloadListResponse DescribeAffectedWorkloadList(Models\DescribeAffectedWorkloadListRequest $req) This API is used to query affected workload types and return the workload list.
@@ -132,7 +140,9 @@ use TencentCloud\Tcss\V20201101\Models as Models;
  * @method Models\DescribeAssetImageDetailResponse DescribeAssetImageDetail(Models\DescribeAssetImageDetailRequest $req) This API is used to query the details of an image.
  * @method Models\DescribeAssetImageHostListResponse DescribeAssetImageHostList(Models\DescribeAssetImageHostListRequest $req) This API is used to query the servers associated with an image.
  * @method Models\DescribeAssetImageListResponse DescribeAssetImageList(Models\DescribeAssetImageListRequest $req) This API is used to query the list of images.
- * @method Models\DescribeAssetImageListExportResponse DescribeAssetImageListExport(Models\DescribeAssetImageListExportRequest $req) This API is used to export the list of images.
+ * @method Models\DescribeAssetImageListExportResponse DescribeAssetImageListExport(Models\DescribeAssetImageListExportRequest $req) 接口已废弃
+
+This API is used to export the list of images.
  * @method Models\DescribeAssetImageRegistryAssetStatusResponse DescribeAssetImageRegistryAssetStatus(Models\DescribeAssetImageRegistryAssetStatusRequest $req) This API is used to view the update progress of the assets in an image repository.
  * @method Models\DescribeAssetImageRegistryDetailResponse DescribeAssetImageRegistryDetail(Models\DescribeAssetImageRegistryDetailRequest $req) This API is used to query the image repository details.
  * @method Models\DescribeAssetImageRegistryListResponse DescribeAssetImageRegistryList(Models\DescribeAssetImageRegistryListRequest $req) This API is used to query the list of image repositories.
@@ -185,7 +195,9 @@ use TencentCloud\Tcss\V20201101\Models as Models;
  * @method Models\DescribeEscapeEventInfoResponse DescribeEscapeEventInfo(Models\DescribeEscapeEventInfoRequest $req) This API is used to query the list of container escape events.
  * @method Models\DescribeEscapeEventTendencyResponse DescribeEscapeEventTendency(Models\DescribeEscapeEventTendencyRequest $req) This API is used to query the trend of pending escape events.
  * @method Models\DescribeEscapeEventTypeSummaryResponse DescribeEscapeEventTypeSummary(Models\DescribeEscapeEventTypeSummaryRequest $req) This API is used to query the types of container escape events and the number of pending events.
- * @method Models\DescribeEscapeEventsExportResponse DescribeEscapeEventsExport(Models\DescribeEscapeEventsExportRequest $req) This API is used to export the list of container escape events.
+ * @method Models\DescribeEscapeEventsExportResponse DescribeEscapeEventsExport(Models\DescribeEscapeEventsExportRequest $req) 接口已废弃
+
+This API is used to export the list of container escape events.
  * @method Models\DescribeEscapeRuleInfoResponse DescribeEscapeRuleInfo(Models\DescribeEscapeRuleInfoRequest $req) This API is used to query the information of a container escape scan rule.
  * @method Models\DescribeEscapeSafeStateResponse DescribeEscapeSafeState(Models\DescribeEscapeSafeStateRequest $req) This API is used to query the container escape security status.
  * @method Models\DescribeEscapeWhiteListResponse DescribeEscapeWhiteList(Models\DescribeEscapeWhiteListRequest $req) This API is used to query the allowlist of escapes.

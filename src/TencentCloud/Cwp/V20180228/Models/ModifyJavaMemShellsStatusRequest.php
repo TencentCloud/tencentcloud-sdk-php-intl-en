@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyJavaMemShellsStatus request structure.
  *
- * @method array getIds() Obtain Event ID Array
- * @method void setIds(array $Ids) Set Event ID Array
  * @method integer getStatus() Obtain Target Processing Status: 0 - Pending, 1 - Allowlisted, 2 - Deleted, 3 - Ignored, 4 - Manually Processed
  * @method void setStatus(integer $Status) Set Target Processing Status: 0 - Pending, 1 - Allowlisted, 2 - Deleted, 3 - Ignored, 4 - Manually Processed
+ * @method array getIds() Obtain Event ID Array
+ * @method void setIds(array $Ids) Set Event ID Array
  */
 class ModifyJavaMemShellsStatusRequest extends AbstractModel
 {
-    /**
-     * @var array Event ID Array
-     */
-    public $Ids;
-
     /**
      * @var integer Target Processing Status: 0 - Pending, 1 - Allowlisted, 2 - Deleted, 3 - Ignored, 4 - Manually Processed
      */
     public $Status;
 
     /**
-     * @param array $Ids Event ID Array
+     * @var array Event ID Array
+     */
+    public $Ids;
+
+    /**
      * @param integer $Status Target Processing Status: 0 - Pending, 1 - Allowlisted, 2 - Deleted, 3 - Ignored, 4 - Manually Processed
+     * @param array $Ids Event ID Array
      */
     function __construct()
     {
@@ -54,12 +54,12 @@ class ModifyJavaMemShellsStatusRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Ids",$param) and $param["Ids"] !== null) {
-            $this->Ids = $param["Ids"];
-        }
-
         if (array_key_exists("Status",$param) and $param["Status"] !== null) {
             $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("Ids",$param) and $param["Ids"] !== null) {
+            $this->Ids = $param["Ids"];
         }
     }
 }

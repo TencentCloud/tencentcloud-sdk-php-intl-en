@@ -36,9 +36,6 @@ use TencentCloud\Cwp\V20180228\Models as Models;
  * @method Models\CreateBanWhiteListResponse CreateBanWhiteList(Models\CreateBanWhiteListRequest $req) This API is used to add the list of block allowlists.
  * @method Models\CreateBaselineStrategyResponse CreateBaselineStrategy(Models\CreateBaselineStrategyRequest $req) This API is used to create a baseline policy based on the policy information.
  * @method Models\CreateBuyBindTaskResponse CreateBuyBindTask(Models\CreateBuyBindTaskRequest $req) This API is used to create an automatic binding task for newly purchased authorizations.
- * @method Models\CreateCloudProtectServiceOrderRecordResponse CreateCloudProtectServiceOrderRecord(Models\CreateCloudProtectServiceOrderRecordRequest $req) 云护航计费产品已下线
-
-This API is used to confirm the receipt after using the cloud escort service.
  * @method Models\CreateEmergencyVulScanResponse CreateEmergencyVulScan(Models\CreateEmergencyVulScanRequest $req) This API is used to create emergency vulnerability scan tasks.
  * @method Models\CreateIncidentBacktrackingResponse CreateIncidentBacktracking(Models\CreateIncidentBacktrackingRequest $req) This API is used to trigger event investigation and alarm backtracking for Ultimate Edition machines.
  * @method Models\CreateLicenseOrderResponse CreateLicenseOrder(Models\CreateLicenseOrderRequest $req) This API is used to create Professional/Flagship edition orders
@@ -143,9 +140,15 @@ This API is used to call the billing payment API for payment since prepaid order
  * @method Models\DescribeAssetWebServiceProcessListResponse DescribeAssetWebServiceProcessList(Models\DescribeAssetWebServiceProcessListRequest $req) This API is used to obtain the list of processes associated with Web services.
  * @method Models\DescribeAttackEventInfoResponse DescribeAttackEventInfo(Models\DescribeAttackEventInfoRequest $req) This API is used to obtain network attack details.
  * @method Models\DescribeAttackEventsResponse DescribeAttackEvents(Models\DescribeAttackEventsRequest $req) This API is used to display the list of network attack detection events in pagination.
- * @method Models\DescribeAttackLogsResponse DescribeAttackLogs(Models\DescribeAttackLogsRequest $req) This API is used to display the list of network attack logs in pagination.
- * @method Models\DescribeAttackSourceResponse DescribeAttackSource(Models\DescribeAttackSourceRequest $req) This API is used to backtrack attacks.
- * @method Models\DescribeAttackSourceEventsResponse DescribeAttackSourceEvents(Models\DescribeAttackSourceEventsRequest $req) This API is used to query attack backtracking events.
+ * @method Models\DescribeAttackLogsResponse DescribeAttackLogs(Models\DescribeAttackLogsRequest $req) DescribeAttackEvents 代替
+
+This API is used to display the list of network attack logs in pagination.
+ * @method Models\DescribeAttackSourceResponse DescribeAttackSource(Models\DescribeAttackSourceRequest $req) 已废弃
+
+This API is used to backtrack attacks.
+ * @method Models\DescribeAttackSourceEventsResponse DescribeAttackSourceEvents(Models\DescribeAttackSourceEventsRequest $req) 已废弃
+
+This API is used to query attack backtracking events.
  * @method Models\DescribeAttackStatisticsResponse DescribeAttackStatistics(Models\DescribeAttackStatisticsRequest $req) This API is used to obtain the statistics of network attack data.
  * @method Models\DescribeAttackTopResponse DescribeAttackTop(Models\DescribeAttackTopRequest $req) This API is used to obtain the list of Top 5 network attacks.
  * @method Models\DescribeAttackTrendsResponse DescribeAttackTrends(Models\DescribeAttackTrendsRequest $req) This API is used to obtain the network attack trend data.
@@ -182,10 +185,9 @@ This API is used to call the billing payment API for payment since prepaid order
  * @method Models\DescribeCanFixVulMachineResponse DescribeCanFixVulMachine(Models\DescribeCanFixVulMachineRequest $req) This API is used to query the fixable host information.
  * @method Models\DescribeCanNotSeparateMachineResponse DescribeCanNotSeparateMachine(Models\DescribeCanNotSeparateMachineRequest $req) This API is used to obtain hosts where Trojans cannot be isolated.
  * @method Models\DescribeClientExceptionResponse DescribeClientException(Models\DescribeClientExceptionRequest $req) This API is used to obtain client exception events.
- * @method Models\DescribeCloudProtectServiceOrderListResponse DescribeCloudProtectServiceOrderList(Models\DescribeCloudProtectServiceOrderListRequest $req) 云护航计费产品已下线
+ * @method Models\DescribeComponentStatisticsResponse DescribeComponentStatistics(Models\DescribeComponentStatisticsRequest $req) 接口已无效
 
-This API is used to query the list of cloud escort service orders.
- * @method Models\DescribeComponentStatisticsResponse DescribeComponentStatistics(Models\DescribeComponentStatisticsRequest $req) This API is used to obtain the data of the component statistics list.
+This API is used to obtain the data of the component statistics list.
  * @method Models\DescribeDefenceEventDetailResponse DescribeDefenceEventDetail(Models\DescribeDefenceEventDetailRequest $req) This API is used to obtain vulnerability defense event details.
  * @method Models\DescribeDirectConnectInstallCommandResponse DescribeDirectConnectInstallCommand(Models\DescribeDirectConnectInstallCommandRequest $req) This API is used to obtain DC agent installation command, including the token.
  * @method Models\DescribeESAggregationsResponse DescribeESAggregations(Models\DescribeESAggregationsRequest $req) This API is used to obtain the aggregation result of the ES field.
@@ -210,7 +212,9 @@ This API is used to query the list of cloud escort service orders.
  * @method Models\DescribeIgnoreBaselineRuleResponse DescribeIgnoreBaselineRule(Models\DescribeIgnoreBaselineRuleRequest $req) This API is used to query the information of ignored inspection items.
  * @method Models\DescribeIgnoreHostAndItemConfigResponse DescribeIgnoreHostAndItemConfig(Models\DescribeIgnoreHostAndItemConfigRequest $req) This API is used to obtain the information of affected inspection items and hosts ignored with one click.
  * @method Models\DescribeIgnoreRuleEffectHostListResponse DescribeIgnoreRuleEffectHostList(Models\DescribeIgnoreRuleEffectHostListRequest $req) This API is used to query the information on the list of hosts affected by ignored detection items based on detection item IDs and filter criteria.
- * @method Models\DescribeIndexListResponse DescribeIndexList(Models\DescribeIndexListRequest $req) This API is used to obtain the index list.
+ * @method Models\DescribeIndexListResponse DescribeIndexList(Models\DescribeIndexListRequest $req) 接口已废弃
+
+This API is used to obtain the index list.
  * @method Models\DescribeJavaMemShellInfoResponse DescribeJavaMemShellInfo(Models\DescribeJavaMemShellInfoRequest $req) This API is used to query Java webshell event details.
  * @method Models\DescribeJavaMemShellListResponse DescribeJavaMemShellList(Models\DescribeJavaMemShellListRequest $req) This API is used to query the list of Java webshell events.
  * @method Models\DescribeJavaMemShellPluginInfoResponse DescribeJavaMemShellPluginInfo(Models\DescribeJavaMemShellPluginInfoRequest $req) This API is used to query the Java webshell plugin information of the given host.
@@ -313,7 +317,9 @@ This API is used to query the list of cloud escort service orders.
  * @method Models\DescribeSecurityDynamicsResponse DescribeSecurityDynamics(Models\DescribeSecurityDynamicsRequest $req) This API is used to obtain the dynamic message data of security events.
  * @method Models\DescribeSecurityEventStatResponse DescribeSecurityEventStat(Models\DescribeSecurityEventStatRequest $req) This API is used to obtain the statistics of security events.
  * @method Models\DescribeSecurityEventsCntResponse DescribeSecurityEventsCnt(Models\DescribeSecurityEventsCntRequest $req) This API is used to obtain the statistics data of security overview-related events.
- * @method Models\DescribeSecurityProtectionStatResponse DescribeSecurityProtectionStat(Models\DescribeSecurityProtectionStatRequest $req) This API is used to obtain the summary of security protection statuses.
+ * @method Models\DescribeSecurityProtectionStatResponse DescribeSecurityProtectionStat(Models\DescribeSecurityProtectionStatRequest $req) 接口已无效
+
+This API is used to obtain the summary of security protection statuses.
  * @method Models\DescribeSecurityTrendsResponse DescribeSecurityTrends(Models\DescribeSecurityTrendsRequest $req) This API is used to obtain the security event statistics data.
  * @method Models\DescribeServersAndRiskAndFirstInfoResponse DescribeServersAndRiskAndFirstInfo(Models\DescribeServersAndRiskAndFirstInfoRequest $req) This API is used to obtain the number of risky files pending to be processed + the number of affected servers + whether to try to detect + last detection time.
  * @method Models\DescribeStrategyExistResponse DescribeStrategyExist(Models\DescribeStrategyExistRequest $req) This API is used to query whether a policy exists by policy name.

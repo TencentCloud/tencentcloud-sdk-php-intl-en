@@ -70,26 +70,31 @@ class DescribeMachineGeneralResponse extends AbstractModel
 
     /**
      * @var integer Number of Tencent Cloud machines
+     * @deprecated
      */
     public $TencentCloudMachineCnt;
 
     /**
      * @var integer Number of Alibaba Cloud machines
+     * @deprecated
      */
     public $AliCloudMachineCnt;
 
     /**
      * @var integer Number of Baidu Cloud machines
+     * @deprecated
      */
     public $BaiduCloudMachineCnt;
 
     /**
      * @var integer Number of IDC machines
+     * @deprecated
      */
     public $IDCMachineCnt;
 
     /**
      * @var integer Number of machines from other cloud service vendors
+     * @deprecated
      */
     public $OtherCloudMachineCnt;
 

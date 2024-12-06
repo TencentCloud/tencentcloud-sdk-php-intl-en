@@ -174,8 +174,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
  * @method void setInnerIP(string $InnerIP) Set Node private IP
  * @method string getNodeUniqueID() Obtain UID of the node
  * @method void setNodeUniqueID(string $NodeUniqueID) Set UID of the node
- * @method string getHostID() Obtain ID for u200dthe general node
- * @method void setHostID(string $HostID) Set ID for u200dthe general node
+ * @method string getHostID() Obtain ID for the general node
+ * @method void setHostID(string $HostID) Set ID for the general node
  * @method string getClusterName() Obtain Cluster name
  * @method void setClusterName(string $ClusterName) Set Cluster name
  */
@@ -379,7 +379,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $NodeUniqueID;
 
     /**
-     * @var string ID for u200dthe general node
+     * @var string ID for the general node
      */
     public $HostID;
 
@@ -466,7 +466,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $PublicIP Public IP of the node
      * @param string $InnerIP Node private IP
      * @param string $NodeUniqueID UID of the node
-     * @param string $HostID ID for u200dthe general node
+     * @param string $HostID ID for the general node
      * @param string $ClusterName Cluster name
      */
     function __construct()

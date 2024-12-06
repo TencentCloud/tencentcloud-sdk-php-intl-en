@@ -22,86 +22,26 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getDiskSize() Obtain Data disk size (in GB). The minimum adjustment increment is 10 GB. The value range varies by data disk type. For more information on limits, see [Storage Overview](https://intl.cloud.tencent.com/document/product/213/4952?from_cn_redirect=1). The default value is 0, indicating that no data disk is purchased. For more information, see the product documentation.
  * @method void setDiskSize(integer $DiskSize) Set Data disk size (in GB). The minimum adjustment increment is 10 GB. The value range varies by data disk type. For more information on limits, see [Storage Overview](https://intl.cloud.tencent.com/document/product/213/4952?from_cn_redirect=1). The default value is 0, indicating that no data disk is purchased. For more information, see the product documentation.
- * @method string getDiskType() Obtain Data disk type. For restrictions on data disk types, refer to [Storage Overview](https://intl.cloud.tencent.com/document/product/213/4952?from_cn_redirect=1). Valid values:<br/>
-<li>
-  LOCAL_BASIC: local disk.<br/>
-  <li>
-    LOCAL_SSD: local SSD.<br/>
-    <li>
-      LOCAL_NVME: local NVMe disk, which is closely related to InstanceType, and cannot be specified.<br/>
-      <li>
-        LOCAL_PRO: local HDD, which is closely related to InstanceType, and cannot be specified.<br/>
-        <li>
-          CLOUD_BASIC: basic cloud disk.<br/>
-          <li>
-            CLOUD_PREMIUM: premium cloud disk.<br/>
-            <li>
-              CLOUD_SSD: cloud SSD.<br />
-              <li>
-                CLOUD_HSSD: enhanced SSD.<br/>
-                <li>
-                  CLOUD_TSSD: tremendous SSD.<br/>
-                  <li>
-                    CLOUD_BSSD: balanced SSD.<br/><br/>Default value: LOCAL_BASIC.<br/><br/>This parameter is invalid for the `ResizeInstanceDisk` API.
-                  </li>
-                </li>
-              </li>
-            </li>
-          </li>
-        </li>
-      </li>
-    </li>
-  </li>
-</li>
- * @method void setDiskType(string $DiskType) Set Data disk type. For restrictions on data disk types, refer to [Storage Overview](https://intl.cloud.tencent.com/document/product/213/4952?from_cn_redirect=1). Valid values:<br/>
-<li>
-  LOCAL_BASIC: local disk.<br/>
-  <li>
-    LOCAL_SSD: local SSD.<br/>
-    <li>
-      LOCAL_NVME: local NVMe disk, which is closely related to InstanceType, and cannot be specified.<br/>
-      <li>
-        LOCAL_PRO: local HDD, which is closely related to InstanceType, and cannot be specified.<br/>
-        <li>
-          CLOUD_BASIC: basic cloud disk.<br/>
-          <li>
-            CLOUD_PREMIUM: premium cloud disk.<br/>
-            <li>
-              CLOUD_SSD: cloud SSD.<br />
-              <li>
-                CLOUD_HSSD: enhanced SSD.<br/>
-                <li>
-                  CLOUD_TSSD: tremendous SSD.<br/>
-                  <li>
-                    CLOUD_BSSD: balanced SSD.<br/><br/>Default value: LOCAL_BASIC.<br/><br/>This parameter is invalid for the `ResizeInstanceDisk` API.
-                  </li>
-                </li>
-              </li>
-            </li>
-          </li>
-        </li>
-      </li>
-    </li>
-  </li>
-</li>
+ * @method string getDiskType() Obtain Data disk type. For the detailed restrictions on the data disk type, refer to [Storage Overview] (https://intl.cloud.tencent.com/document/product/213/4952?from_cn_redirect=1). Value range: <br /><li>LOCAL_BASIC: Local Disk <br /><li>LOCAL_SSD: Local SSD Disk <br /><li>LOCAL_NVME: Local NVME Disk, which is strongly related with InstanceType and can not be specified <br /><li>LOCAL_PRO: Local HDD Disk, which is strongly related with InstanceType and can not be specified <br /><li>CLOUD_BASIC: HDD Cloud Disk <br /><li>CLOUD_PREMIUM: Premium Cloud Disk <br /><li>CLOUD_SSD: Cloud SSD <br /><li>CLOUD_HSSD: Enhanced SSD <br /><li>CLOUD_TSSD: ulTra SSD <br /><li>CLOUD_BSSD: Balanced SSD <br /><br />Default value: LOCAL_BASIC. <br /><br />This parameter is invalid for the `ResizeInstanceDisk` API.</li></li></li> </li> </li></li></li></li></li></li>
+ * @method void setDiskType(string $DiskType) Set Data disk type. For the detailed restrictions on the data disk type, refer to [Storage Overview] (https://intl.cloud.tencent.com/document/product/213/4952?from_cn_redirect=1). Value range: <br /><li>LOCAL_BASIC: Local Disk <br /><li>LOCAL_SSD: Local SSD Disk <br /><li>LOCAL_NVME: Local NVME Disk, which is strongly related with InstanceType and can not be specified <br /><li>LOCAL_PRO: Local HDD Disk, which is strongly related with InstanceType and can not be specified <br /><li>CLOUD_BASIC: HDD Cloud Disk <br /><li>CLOUD_PREMIUM: Premium Cloud Disk <br /><li>CLOUD_SSD: Cloud SSD <br /><li>CLOUD_HSSD: Enhanced SSD <br /><li>CLOUD_TSSD: ulTra SSD <br /><li>CLOUD_BSSD: Balanced SSD <br /><br />Default value: LOCAL_BASIC. <br /><br />This parameter is invalid for the `ResizeInstanceDisk` API.</li></li></li> </li> </li></li></li></li></li></li>
  * @method string getDiskId() Obtain Data disk ID. Note that it’s not available for `LOCAL_BASIC` and `LOCAL_SSD` disks.
 It is only used as a response parameter for APIs such as `DescribeInstances`, and cannot be used as a request parameter for APIs such as `RunInstances`.
  * @method void setDiskId(string $DiskId) Set Data disk ID. Note that it’s not available for `LOCAL_BASIC` and `LOCAL_SSD` disks.
 It is only used as a response parameter for APIs such as `DescribeInstances`, and cannot be used as a request parameter for APIs such as `RunInstances`.
- * @method boolean getDeleteWithInstance() Obtain Whether a data disk is terminated when the associated CVM instance is terminated. Valid values:
-<li>TRUE: The data disk is terminated when the associated CVM instance is terminated. This only supports pay-as-you-go cloud disks that are billed by hour.</li>
+ * @method boolean getDeleteWithInstance() Obtain Whether the data disk is destroyed with the Cloud Virtual Machine (CVM). Value range:
+<li>true: Destroy the data disk when the CVM is destroyed. Only the pay-as-you-go cloud disk billed by hour is supported.</li>
 <li>
-  FALSE: The data disk is retained when the associated CVM instance is terminated.<br/>
-  Default value: TRUE.<br/>
-  This parameter is currently used only in the `RunInstances` API.
+  false: Retain the data disk when the CVM is destroyed.<br />
+  Default value: true.<br />
+  This parameter is currently only used for the `RunInstances` API.
 </li>
 Note: This field may return null, indicating that no valid value is found.
- * @method void setDeleteWithInstance(boolean $DeleteWithInstance) Set Whether a data disk is terminated when the associated CVM instance is terminated. Valid values:
-<li>TRUE: The data disk is terminated when the associated CVM instance is terminated. This only supports pay-as-you-go cloud disks that are billed by hour.</li>
+ * @method void setDeleteWithInstance(boolean $DeleteWithInstance) Set Whether the data disk is destroyed with the Cloud Virtual Machine (CVM). Value range:
+<li>true: Destroy the data disk when the CVM is destroyed. Only the pay-as-you-go cloud disk billed by hour is supported.</li>
 <li>
-  FALSE: The data disk is retained when the associated CVM instance is terminated.<br/>
-  Default value: TRUE.<br/>
-  This parameter is currently used only in the `RunInstances` API.
+  false: Retain the data disk when the CVM is destroyed.<br />
+  Default value: true.<br />
+  This parameter is currently only used for the `RunInstances` API.
 </li>
 Note: This field may return null, indicating that no valid value is found.
  * @method string getSnapshotId() Obtain Data disk snapshot ID. The size of the selected data disk snapshot must be smaller than that of the data disk.
@@ -148,6 +88,12 @@ Note: This field may return null, indicating that no valid value is found.
 
  <b>Note: This field is in beta test.</b>
 Note: This field may return null, indicating that no valid value is found.
+ * @method string getDiskName() Obtain Disk name, with a length of not more than 128 characters.
+
+This parameter is in invite-only testing and is not yet open for use.
+ * @method void setDiskName(string $DiskName) Set Disk name, with a length of not more than 128 characters.
+
+This parameter is in invite-only testing and is not yet open for use.
  */
 class DataDisk extends AbstractModel
 {
@@ -157,37 +103,7 @@ class DataDisk extends AbstractModel
     public $DiskSize;
 
     /**
-     * @var string Data disk type. For restrictions on data disk types, refer to [Storage Overview](https://intl.cloud.tencent.com/document/product/213/4952?from_cn_redirect=1). Valid values:<br/>
-<li>
-  LOCAL_BASIC: local disk.<br/>
-  <li>
-    LOCAL_SSD: local SSD.<br/>
-    <li>
-      LOCAL_NVME: local NVMe disk, which is closely related to InstanceType, and cannot be specified.<br/>
-      <li>
-        LOCAL_PRO: local HDD, which is closely related to InstanceType, and cannot be specified.<br/>
-        <li>
-          CLOUD_BASIC: basic cloud disk.<br/>
-          <li>
-            CLOUD_PREMIUM: premium cloud disk.<br/>
-            <li>
-              CLOUD_SSD: cloud SSD.<br />
-              <li>
-                CLOUD_HSSD: enhanced SSD.<br/>
-                <li>
-                  CLOUD_TSSD: tremendous SSD.<br/>
-                  <li>
-                    CLOUD_BSSD: balanced SSD.<br/><br/>Default value: LOCAL_BASIC.<br/><br/>This parameter is invalid for the `ResizeInstanceDisk` API.
-                  </li>
-                </li>
-              </li>
-            </li>
-          </li>
-        </li>
-      </li>
-    </li>
-  </li>
-</li>
+     * @var string Data disk type. For the detailed restrictions on the data disk type, refer to [Storage Overview] (https://intl.cloud.tencent.com/document/product/213/4952?from_cn_redirect=1). Value range: <br /><li>LOCAL_BASIC: Local Disk <br /><li>LOCAL_SSD: Local SSD Disk <br /><li>LOCAL_NVME: Local NVME Disk, which is strongly related with InstanceType and can not be specified <br /><li>LOCAL_PRO: Local HDD Disk, which is strongly related with InstanceType and can not be specified <br /><li>CLOUD_BASIC: HDD Cloud Disk <br /><li>CLOUD_PREMIUM: Premium Cloud Disk <br /><li>CLOUD_SSD: Cloud SSD <br /><li>CLOUD_HSSD: Enhanced SSD <br /><li>CLOUD_TSSD: ulTra SSD <br /><li>CLOUD_BSSD: Balanced SSD <br /><br />Default value: LOCAL_BASIC. <br /><br />This parameter is invalid for the `ResizeInstanceDisk` API.</li></li></li> </li> </li></li></li></li></li></li>
      */
     public $DiskType;
 
@@ -198,12 +114,12 @@ It is only used as a response parameter for APIs such as `DescribeInstances`, an
     public $DiskId;
 
     /**
-     * @var boolean Whether a data disk is terminated when the associated CVM instance is terminated. Valid values:
-<li>TRUE: The data disk is terminated when the associated CVM instance is terminated. This only supports pay-as-you-go cloud disks that are billed by hour.</li>
+     * @var boolean Whether the data disk is destroyed with the Cloud Virtual Machine (CVM). Value range:
+<li>true: Destroy the data disk when the CVM is destroyed. Only the pay-as-you-go cloud disk billed by hour is supported.</li>
 <li>
-  FALSE: The data disk is retained when the associated CVM instance is terminated.<br/>
-  Default value: TRUE.<br/>
-  This parameter is currently used only in the `RunInstances` API.
+  false: Retain the data disk when the CVM is destroyed.<br />
+  Default value: true.<br />
+  This parameter is currently only used for the `RunInstances` API.
 </li>
 Note: This field may return null, indicating that no valid value is found.
      */
@@ -256,46 +172,23 @@ Note: This field may return null, indicating that no valid value is found.
     public $BurstPerformance;
 
     /**
+     * @var string Disk name, with a length of not more than 128 characters.
+
+This parameter is in invite-only testing and is not yet open for use.
+     */
+    public $DiskName;
+
+    /**
      * @param integer $DiskSize Data disk size (in GB). The minimum adjustment increment is 10 GB. The value range varies by data disk type. For more information on limits, see [Storage Overview](https://intl.cloud.tencent.com/document/product/213/4952?from_cn_redirect=1). The default value is 0, indicating that no data disk is purchased. For more information, see the product documentation.
-     * @param string $DiskType Data disk type. For restrictions on data disk types, refer to [Storage Overview](https://intl.cloud.tencent.com/document/product/213/4952?from_cn_redirect=1). Valid values:<br/>
-<li>
-  LOCAL_BASIC: local disk.<br/>
-  <li>
-    LOCAL_SSD: local SSD.<br/>
-    <li>
-      LOCAL_NVME: local NVMe disk, which is closely related to InstanceType, and cannot be specified.<br/>
-      <li>
-        LOCAL_PRO: local HDD, which is closely related to InstanceType, and cannot be specified.<br/>
-        <li>
-          CLOUD_BASIC: basic cloud disk.<br/>
-          <li>
-            CLOUD_PREMIUM: premium cloud disk.<br/>
-            <li>
-              CLOUD_SSD: cloud SSD.<br />
-              <li>
-                CLOUD_HSSD: enhanced SSD.<br/>
-                <li>
-                  CLOUD_TSSD: tremendous SSD.<br/>
-                  <li>
-                    CLOUD_BSSD: balanced SSD.<br/><br/>Default value: LOCAL_BASIC.<br/><br/>This parameter is invalid for the `ResizeInstanceDisk` API.
-                  </li>
-                </li>
-              </li>
-            </li>
-          </li>
-        </li>
-      </li>
-    </li>
-  </li>
-</li>
+     * @param string $DiskType Data disk type. For the detailed restrictions on the data disk type, refer to [Storage Overview] (https://intl.cloud.tencent.com/document/product/213/4952?from_cn_redirect=1). Value range: <br /><li>LOCAL_BASIC: Local Disk <br /><li>LOCAL_SSD: Local SSD Disk <br /><li>LOCAL_NVME: Local NVME Disk, which is strongly related with InstanceType and can not be specified <br /><li>LOCAL_PRO: Local HDD Disk, which is strongly related with InstanceType and can not be specified <br /><li>CLOUD_BASIC: HDD Cloud Disk <br /><li>CLOUD_PREMIUM: Premium Cloud Disk <br /><li>CLOUD_SSD: Cloud SSD <br /><li>CLOUD_HSSD: Enhanced SSD <br /><li>CLOUD_TSSD: ulTra SSD <br /><li>CLOUD_BSSD: Balanced SSD <br /><br />Default value: LOCAL_BASIC. <br /><br />This parameter is invalid for the `ResizeInstanceDisk` API.</li></li></li> </li> </li></li></li></li></li></li>
      * @param string $DiskId Data disk ID. Note that it’s not available for `LOCAL_BASIC` and `LOCAL_SSD` disks.
 It is only used as a response parameter for APIs such as `DescribeInstances`, and cannot be used as a request parameter for APIs such as `RunInstances`.
-     * @param boolean $DeleteWithInstance Whether a data disk is terminated when the associated CVM instance is terminated. Valid values:
-<li>TRUE: The data disk is terminated when the associated CVM instance is terminated. This only supports pay-as-you-go cloud disks that are billed by hour.</li>
+     * @param boolean $DeleteWithInstance Whether the data disk is destroyed with the Cloud Virtual Machine (CVM). Value range:
+<li>true: Destroy the data disk when the CVM is destroyed. Only the pay-as-you-go cloud disk billed by hour is supported.</li>
 <li>
-  FALSE: The data disk is retained when the associated CVM instance is terminated.<br/>
-  Default value: TRUE.<br/>
-  This parameter is currently used only in the `RunInstances` API.
+  false: Retain the data disk when the CVM is destroyed.<br />
+  Default value: true.<br />
+  This parameter is currently only used for the `RunInstances` API.
 </li>
 Note: This field may return null, indicating that no valid value is found.
      * @param string $SnapshotId Data disk snapshot ID. The size of the selected data disk snapshot must be smaller than that of the data disk.
@@ -320,6 +213,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
  <b>Note: This field is in beta test.</b>
 Note: This field may return null, indicating that no valid value is found.
+     * @param string $DiskName Disk name, with a length of not more than 128 characters.
+
+This parameter is in invite-only testing and is not yet open for use.
      */
     function __construct()
     {
@@ -372,6 +268,10 @@ Note: This field may return null, indicating that no valid value is found.
 
         if (array_key_exists("BurstPerformance",$param) and $param["BurstPerformance"] !== null) {
             $this->BurstPerformance = $param["BurstPerformance"];
+        }
+
+        if (array_key_exists("DiskName",$param) and $param["DiskName"] !== null) {
+            $this->DiskName = $param["DiskName"];
         }
     }
 }

@@ -18,7 +18,7 @@ namespace TencentCloud\Tcss\V20201101\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * This API is used to query the list of repository images u200daffected by a specific vulnerability.
+ * This API is used to query the list of repository images affected by a specific vulnerability.
  *
  * @method string getImageID() Obtain Image ID
  * @method void setImageID(string $ImageID) Set Image ID

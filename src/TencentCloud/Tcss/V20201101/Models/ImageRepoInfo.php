@@ -176,6 +176,7 @@ class ImageRepoInfo extends AbstractModel
 
     /**
      * @var integer Number of sensitive data items
+     * @deprecated
      */
     public $SentiveInfoCnt;
 

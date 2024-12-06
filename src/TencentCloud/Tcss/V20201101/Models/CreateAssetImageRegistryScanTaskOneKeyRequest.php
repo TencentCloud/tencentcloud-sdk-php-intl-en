@@ -33,6 +33,7 @@ class CreateAssetImageRegistryScanTaskOneKeyRequest extends AbstractModel
 {
     /**
      * @var boolean Whether to scan all images
+     * @deprecated
      */
     public $All;
 

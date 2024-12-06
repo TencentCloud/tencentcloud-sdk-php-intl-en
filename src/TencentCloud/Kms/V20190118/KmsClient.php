@@ -23,7 +23,7 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Kms\V20190118\Models as Models;
 
 /**
- * @method Models\ArchiveKeyResponse ArchiveKey(Models\ArchiveKeyRequest $req) This API is used to archive keys. The archived keys can only be used for decryption but not encryption.
+ * @method Models\ArchiveKeyResponse ArchiveKey(Models\ArchiveKeyRequest $req) This API is used to archive keys.The archived keys can only be used for decryption but not encryption.
  * @method Models\AsymmetricRsaDecryptResponse AsymmetricRsaDecrypt(Models\AsymmetricRsaDecryptRequest $req) This API is used to decrypt data with the specified private key that is encrypted with RSA asymmetric cryptographic algorithm. The ciphertext must be encrypted with the corresponding public key. The asymmetric key must be in `Enabled` state for decryption.
  * @method Models\AsymmetricSm2DecryptResponse AsymmetricSm2Decrypt(Models\AsymmetricSm2DecryptRequest $req) This API is used to decrypt data with the specified private key that is encrypted with SM2 asymmetric cryptographic algorithm. The ciphertext must be encrypted with the corresponding public key. The asymmetric key must be in `Enabled` state for decryption. The length of the ciphertext passed in cannot exceed 256 bytes.
  * @method Models\BindCloudResourceResponse BindCloudResource(Models\BindCloudResourceRequest $req) This API is used to bind a key with a Tencent Cloud resource. If the key has been set to be expired automatically, the setting will be canceled to ensure that the key will not be invalid automatically. If the key and the resource has already been bound, the call will still be successful.

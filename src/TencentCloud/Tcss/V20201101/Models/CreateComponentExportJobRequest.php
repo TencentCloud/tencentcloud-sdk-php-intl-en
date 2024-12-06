@@ -22,8 +22,6 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getImageID() Obtain Image ID
  * @method void setImageID(string $ImageID) Set Image ID
- * @method array getExportField() Obtain Export field
- * @method void setExportField(array $ExportField) Set Export field
  * @method integer getLimit() Obtain Number of results to be returned. Default value: `10000`. Maximum value: `10000`.
  * @method void setLimit(integer $Limit) Set Number of results to be returned. Default value: `10000`. Maximum value: `10000`.
  * @method integer getOffset() Obtain Offset. Default value: `0`.
@@ -36,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBy(string $By) Set Sorting field
  * @method string getOrder() Obtain Sorting order. Valid values: `desc`, `asc`.
  * @method void setOrder(string $Order) Set Sorting order. Valid values: `desc`, `asc`.
+ * @method array getExportField() Obtain Export field
+ * @method void setExportField(array $ExportField) Set Export field
  */
 class CreateComponentExportJobRequest extends AbstractModel
 {
@@ -43,11 +43,6 @@ class CreateComponentExportJobRequest extends AbstractModel
      * @var string Image ID
      */
     public $ImageID;
-
-    /**
-     * @var array Export field
-     */
-    public $ExportField;
 
     /**
      * @var integer Number of results to be returned. Default value: `10000`. Maximum value: `10000`.
@@ -76,14 +71,19 @@ class CreateComponentExportJobRequest extends AbstractModel
     public $Order;
 
     /**
+     * @var array Export field
+     */
+    public $ExportField;
+
+    /**
      * @param string $ImageID Image ID
-     * @param array $ExportField Export field
      * @param integer $Limit Number of results to be returned. Default value: `10000`. Maximum value: `10000`.
      * @param integer $Offset Offset. Default value: `0`.
      * @param array $Filters Filter
 <li>ComponentName- String - Required: No - Image component name</li><li>ComponentVersion- String - Required: No - Image component version</li><li>ComponentType- String - Required: No - Image component type</li><li>VulLevel- String - Required: No - Vulnerability severity</li><li>HasVul- String - Required: No - Whether there is a vulnerability. Valid values: `true` (yes); `false` (no). If `ComponentName` is not passed in or is `ALL`, it indicates all.</li>
      * @param string $By Sorting field
      * @param string $Order Sorting order. Valid values: `desc`, `asc`.
+     * @param array $ExportField Export field
      */
     function __construct()
     {
@@ -100,10 +100,6 @@ class CreateComponentExportJobRequest extends AbstractModel
         }
         if (array_key_exists("ImageID",$param) and $param["ImageID"] !== null) {
             $this->ImageID = $param["ImageID"];
-        }
-
-        if (array_key_exists("ExportField",$param) and $param["ExportField"] !== null) {
-            $this->ExportField = $param["ExportField"];
         }
 
         if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
@@ -129,6 +125,10 @@ class CreateComponentExportJobRequest extends AbstractModel
 
         if (array_key_exists("Order",$param) and $param["Order"] !== null) {
             $this->Order = $param["Order"];
+        }
+
+        if (array_key_exists("ExportField",$param) and $param["ExportField"] !== null) {
+            $this->ExportField = $param["ExportField"];
         }
     }
 }

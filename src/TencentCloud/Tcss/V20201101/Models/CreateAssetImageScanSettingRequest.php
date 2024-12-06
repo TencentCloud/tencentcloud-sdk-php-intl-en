@@ -71,6 +71,7 @@ class CreateAssetImageScanSettingRequest extends AbstractModel
 
     /**
      * @var boolean All images
+     * @deprecated
      */
     public $All;
 
