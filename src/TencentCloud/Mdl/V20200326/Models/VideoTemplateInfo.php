@@ -62,6 +62,8 @@ Note: This field may return `null`, indicating that no valid value was found.
  * @method void setVideoEnhanceEnabled(integer $VideoEnhanceEnabled) Set 
  * @method array getVideoEnhanceSettings() Obtain 
  * @method void setVideoEnhanceSettings(array $VideoEnhanceSettings) Set 
+ * @method ColorSpaceSetting getColorSpaceSettings() Obtain Color space setting.
+ * @method void setColorSpaceSettings(ColorSpaceSetting $ColorSpaceSettings) Set Color space setting.
  */
 class VideoTemplateInfo extends AbstractModel
 {
@@ -167,6 +169,11 @@ Note: This field may return `null`, indicating that no valid value was found.
     public $VideoEnhanceSettings;
 
     /**
+     * @var ColorSpaceSetting Color space setting.
+     */
+    public $ColorSpaceSettings;
+
+    /**
      * @param string $Name Video transcoding template name, which can contain 1-20 letters and digits.
      * @param string $Vcodec Video codec. Valid values: H264/H265. If this parameter is left empty, the original value will be used.
      * @param integer $VideoBitrate Video bitrate. Value range: [50000,40000000]. The value can only be a multiple of 1,000. If this parameter is left empty, the original value will be used.
@@ -188,6 +195,7 @@ Note: This field may return `null`, indicating that no valid value was found.
      * @param VideoCodecDetail $VideoCodecDetails Video encoding configuration.
      * @param integer $VideoEnhanceEnabled 
      * @param array $VideoEnhanceSettings 
+     * @param ColorSpaceSetting $ColorSpaceSettings Color space setting.
      */
     function __construct()
     {
@@ -287,6 +295,11 @@ Note: This field may return `null`, indicating that no valid value was found.
                 $obj->deserialize($value);
                 array_push($this->VideoEnhanceSettings, $obj);
             }
+        }
+
+        if (array_key_exists("ColorSpaceSettings",$param) and $param["ColorSpaceSettings"] !== null) {
+            $this->ColorSpaceSettings = new ColorSpaceSetting();
+            $this->ColorSpaceSettings->deserialize($param["ColorSpaceSettings"]);
         }
     }
 }

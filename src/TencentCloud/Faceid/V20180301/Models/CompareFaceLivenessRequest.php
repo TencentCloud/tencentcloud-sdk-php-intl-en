@@ -36,11 +36,11 @@ Example values: "/9j/4AAQSk... (total length:61944)KiiK//2Q=="
 The size of videos data encoded by Base64 shall not exceed 8M, only mp4,avi,flv are supported. 
 Please use standard Base64 encoding (use = for padding). Refer to RFC4648 for encoding specifications. 
 Example values: "/9j/4AAQSk... (total length:61944)KiiK//2Q=="
- * @method string getLivenessType() Obtain The liveness detection type. Valid values: `LIP`, `ACTION`, and `SILENT`.
-`LIP`: Numeric mode; `ACTION`: Motion mode; `SILENT`: silent mode. Select one of them.
+ * @method string getLivenessType() Obtain The liveness detection type. Valid values: `ACTION`, and `SILENT`.
+`ACTION`: Motion mode; `SILENT`: silent mode. Select one of them.
 Example value: "SILENT"
- * @method void setLivenessType(string $LivenessType) Set The liveness detection type. Valid values: `LIP`, `ACTION`, and `SILENT`.
-`LIP`: Numeric mode; `ACTION`: Motion mode; `SILENT`: silent mode. Select one of them.
+ * @method void setLivenessType(string $LivenessType) Set The liveness detection type. Valid values: `ACTION`, and `SILENT`.
+`ACTION`: Motion mode; `SILENT`: silent mode. Select one of them.
 Example value: "SILENT"
  * @method string getValidateData() Obtain When the "LivenessType" parameter is "ACTION", it must be specified.
 It is used to control the action sequence. Action types: 
@@ -84,8 +84,8 @@ Example values: "/9j/4AAQSk... (total length:61944)KiiK//2Q=="
     public $VideoBase64;
 
     /**
-     * @var string The liveness detection type. Valid values: `LIP`, `ACTION`, and `SILENT`.
-`LIP`: Numeric mode; `ACTION`: Motion mode; `SILENT`: silent mode. Select one of them.
+     * @var string The liveness detection type. Valid values: `ACTION`, and `SILENT`.
+`ACTION`: Motion mode; `SILENT`: silent mode. Select one of them.
 Example value: "SILENT"
      */
     public $LivenessType;
@@ -114,8 +114,8 @@ Example values: "/9j/4AAQSk... (total length:61944)KiiK//2Q=="
 The size of videos data encoded by Base64 shall not exceed 8M, only mp4,avi,flv are supported. 
 Please use standard Base64 encoding (use = for padding). Refer to RFC4648 for encoding specifications. 
 Example values: "/9j/4AAQSk... (total length:61944)KiiK//2Q=="
-     * @param string $LivenessType The liveness detection type. Valid values: `LIP`, `ACTION`, and `SILENT`.
-`LIP`: Numeric mode; `ACTION`: Motion mode; `SILENT`: silent mode. Select one of them.
+     * @param string $LivenessType The liveness detection type. Valid values: `ACTION`, and `SILENT`.
+`ACTION`: Motion mode; `SILENT`: silent mode. Select one of them.
 Example value: "SILENT"
      * @param string $ValidateData When the "LivenessType" parameter is "ACTION", it must be specified.
 It is used to control the action sequence. Action types: 

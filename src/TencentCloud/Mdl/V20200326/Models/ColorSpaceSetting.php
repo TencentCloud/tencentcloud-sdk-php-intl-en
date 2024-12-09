@@ -14,32 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Csip\V20221121\Models;
+namespace TencentCloud\Mdl\V20200326\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeClusterPodAssets request structure.
+ * Color space setting.
  *
- * @method array getMemberId() Obtain Member id
- * @method void setMemberId(array $MemberId) Set Member id
- * @method Filter getFilter() Obtain Filter conditions
- * @method void setFilter(Filter $Filter) Set Filter conditions
+ * @method string getColorSpace() Obtain Color space, supports `PASSTHROUGH` (transparent transmission, only supports H265); optional.
+ * @method void setColorSpace(string $ColorSpace) Set Color space, supports `PASSTHROUGH` (transparent transmission, only supports H265); optional.
  */
-class DescribeClusterPodAssetsRequest extends AbstractModel
+class ColorSpaceSetting extends AbstractModel
 {
     /**
-     * @var array Member id
+     * @var string Color space, supports `PASSTHROUGH` (transparent transmission, only supports H265); optional.
      */
-    public $MemberId;
+    public $ColorSpace;
 
     /**
-     * @var Filter Filter conditions
-     */
-    public $Filter;
-
-    /**
-     * @param array $MemberId Member id
-     * @param Filter $Filter Filter conditions
+     * @param string $ColorSpace Color space, supports `PASSTHROUGH` (transparent transmission, only supports H265); optional.
      */
     function __construct()
     {
@@ -54,13 +46,8 @@ class DescribeClusterPodAssetsRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("MemberId",$param) and $param["MemberId"] !== null) {
-            $this->MemberId = $param["MemberId"];
-        }
-
-        if (array_key_exists("Filter",$param) and $param["Filter"] !== null) {
-            $this->Filter = new Filter();
-            $this->Filter->deserialize($param["Filter"]);
+        if (array_key_exists("ColorSpace",$param) and $param["ColorSpace"] !== null) {
+            $this->ColorSpace = $param["ColorSpace"];
         }
     }
 }

@@ -102,6 +102,8 @@ Valid values: `6000`, `7000`, `8000`, `10000`, `12000`, `14000`, `16000`, `20000
  * @method void setGopSize(integer $GopSize) Set Key frame interval, 300-10000, optional.
  * @method string getGopSizeUnits() Obtain Keyframe units, only support MILLISECONDS (milliseconds).
  * @method void setGopSizeUnits(string $GopSizeUnits) Set Keyframe units, only support MILLISECONDS (milliseconds).
+ * @method ColorSpaceSetting getColorSpaceSettings() Obtain Color space setting.
+ * @method void setColorSpaceSettings(ColorSpaceSetting $ColorSpaceSettings) Set Color space setting.
  */
 class AVTemplate extends AbstractModel
 {
@@ -283,6 +285,11 @@ Valid values: `6000`, `7000`, `8000`, `10000`, `12000`, `14000`, `16000`, `20000
     public $GopSizeUnits;
 
     /**
+     * @var ColorSpaceSetting Color space setting.
+     */
+    public $ColorSpaceSettings;
+
+    /**
      * @param string $Name Name of an audio/video transcoding template, which can contain 1-20 case-sensitive letters and digits
      * @param integer $NeedVideo Whether video is needed. `0`: not needed; `1`: needed
      * @param string $Vcodec Video codec. Valid values: `H264`, `H265`. If this parameter is left empty, the original video codec will be used.
@@ -324,6 +331,7 @@ Valid values: `6000`, `7000`, `8000`, `10000`, `12000`, `14000`, `16000`, `20000
      * @param array $VideoEnhanceSettings 
      * @param integer $GopSize Key frame interval, 300-10000, optional.
      * @param string $GopSizeUnits Keyframe units, only support MILLISECONDS (milliseconds).
+     * @param ColorSpaceSetting $ColorSpaceSettings Color space setting.
      */
     function __construct()
     {
@@ -486,6 +494,11 @@ Valid values: `6000`, `7000`, `8000`, `10000`, `12000`, `14000`, `16000`, `20000
 
         if (array_key_exists("GopSizeUnits",$param) and $param["GopSizeUnits"] !== null) {
             $this->GopSizeUnits = $param["GopSizeUnits"];
+        }
+
+        if (array_key_exists("ColorSpaceSettings",$param) and $param["ColorSpaceSettings"] !== null) {
+            $this->ColorSpaceSettings = new ColorSpaceSetting();
+            $this->ColorSpaceSettings->deserialize($param["ColorSpaceSettings"]);
         }
     }
 }
