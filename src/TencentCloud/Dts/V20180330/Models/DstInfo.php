@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Target instance information, which is correlated with the migration task type
  *
- * @method string getInstanceId() Obtain Target instance ID, such as cdb-jd92ijd8
- * @method void setInstanceId(string $InstanceId) Set Target instance ID, such as cdb-jd92ijd8
  * @method string getRegion() Obtain Target instance region, such as ap-guangzhou
  * @method void setRegion(string $Region) Set Target instance region, such as ap-guangzhou
+ * @method string getInstanceId() Obtain Target instance ID, such as cdb-jd92ijd8
+ * @method void setInstanceId(string $InstanceId) Set Target instance ID, such as cdb-jd92ijd8
  * @method string getIp() Obtain Target instance VIP, which has been disused and does not need to be entered
  * @method void setIp(string $Ip) Set Target instance VIP, which has been disused and does not need to be entered
  * @method integer getPort() Obtain Target instance Vport, which has been disused and does not need to be entered
@@ -38,14 +38,14 @@ use TencentCloud\Common\AbstractModel;
 class DstInfo extends AbstractModel
 {
     /**
-     * @var string Target instance ID, such as cdb-jd92ijd8
-     */
-    public $InstanceId;
-
-    /**
      * @var string Target instance region, such as ap-guangzhou
      */
     public $Region;
+
+    /**
+     * @var string Target instance ID, such as cdb-jd92ijd8
+     */
+    public $InstanceId;
 
     /**
      * @var string Target instance VIP, which has been disused and does not need to be entered
@@ -73,8 +73,8 @@ class DstInfo extends AbstractModel
     public $Password;
 
     /**
-     * @param string $InstanceId Target instance ID, such as cdb-jd92ijd8
      * @param string $Region Target instance region, such as ap-guangzhou
+     * @param string $InstanceId Target instance ID, such as cdb-jd92ijd8
      * @param string $Ip Target instance VIP, which has been disused and does not need to be entered
      * @param integer $Port Target instance Vport, which has been disused and does not need to be entered
      * @param integer $ReadOnly Only valid for MySQL currently. For instance-level migration, the value range is: 1 (read-only), 0 (read/write)
@@ -94,12 +94,12 @@ class DstInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
-            $this->InstanceId = $param["InstanceId"];
-        }
-
         if (array_key_exists("Region",$param) and $param["Region"] !== null) {
             $this->Region = $param["Region"];
+        }
+
+        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
+            $this->InstanceId = $param["InstanceId"];
         }
 
         if (array_key_exists("Ip",$param) and $param["Ip"] !== null) {

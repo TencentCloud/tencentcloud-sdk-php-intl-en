@@ -25,8 +25,7 @@ use TencentCloud\Dts\V20211206\Models as Models;
 /**
  * @method Models\CompleteMigrateJobResponse CompleteMigrateJob(Models\CompleteMigrateJobRequest $req) This API is used to complete a data migration task.
 For tasks in incremental migration mode, you need to call this API before migration gets ready for completion to stop migrating incremental data.
-If the task status queried through the `DescribeMigrationJobs` API is ready (`Status` = `readyComplete), you can call this API to complete the migration task.
-
+If the task status queried through the `DescribeMigrationJobs` API is ready (`Status` = `readyComplete`), you can call this API to complete the migration task.
  * @method Models\ConfigureSubscribeJobResponse ConfigureSubscribeJob(Models\ConfigureSubscribeJobRequest $req) This API is used to configure data subscription instances.
  * @method Models\ConfigureSyncJobResponse ConfigureSyncJob(Models\ConfigureSyncJobRequest $req) This API is used to configure a sync task.
  * @method Models\ContinueMigrateJobResponse ContinueMigrateJob(Models\ContinueMigrateJobRequest $req) This API is used to resume a paused migration task.

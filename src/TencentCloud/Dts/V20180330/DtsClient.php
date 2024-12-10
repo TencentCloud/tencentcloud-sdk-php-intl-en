@@ -44,7 +44,6 @@ If the check succeeds, you can call the StartMigrateJob API to start migration.
 If the check fails, the reason can be queried. Please modify the migration configuration or adjust relevant parameters of the source/target instances through the ModifyMigrateJob API based on the error message.
  * @method Models\DescribeMigrateJobsResponse DescribeMigrateJobs(Models\DescribeMigrateJobsRequest $req) This API is used to query data migration tasks.
 For a finance zone linkage, please use the domain name https://dts.ap-shenzhen-fsi.tencentcloudapi.com.
- * @method Models\DescribeRegionConfResponse DescribeRegionConf(Models\DescribeRegionConfRequest $req) This API is used to query the purchasable subscription instance regions.
  * @method Models\DescribeSubscribeConfResponse DescribeSubscribeConf(Models\DescribeSubscribeConfRequest $req) This API is used to query the subscription instance configuration.
  * @method Models\DescribeSubscribesResponse DescribeSubscribes(Models\DescribeSubscribesRequest $req) This API is used to get the information list of data subscription instances. Pagination is enabled by default with 20 results returned each time.
  * @method Models\IsolateSubscribeResponse IsolateSubscribe(Models\IsolateSubscribeRequest $req) This API is used to isolate an hourly billed subscription instance. After this API is called, the instance will become unavailable and billing will stop for it.

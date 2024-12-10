@@ -72,6 +72,8 @@ IKAD   Work permit
 MyKid   Kid card
  * @method string getBirthday() Obtain Date of birth. This field is available only for work permits (i-Kad) and ID cards (MyKad).
  * @method void setBirthday(string $Birthday) Set Date of birth. This field is available only for work permits (i-Kad) and ID cards (MyKad).
+ * @method string getMyKadNumber() Obtain Number on the back of Malaysia ID card 
+ * @method void setMyKadNumber(string $MyKadNumber) Set Number on the back of Malaysia ID card 
  * @method array getWarnCardInfos() Obtain Card Warning Information
 
 -9101 Alarm for covered certificate,
@@ -159,6 +161,11 @@ MyKid   Kid card
     public $Birthday;
 
     /**
+     * @var string Number on the back of Malaysia ID card 
+     */
+    public $MyKadNumber;
+
+    /**
      * @var array Card Warning Information
 
 -9101 Alarm for covered certificate,
@@ -203,6 +210,7 @@ POLIS  Police card
 IKAD   Work permit
 MyKid   Kid card
      * @param string $Birthday Date of birth. This field is available only for work permits (i-Kad) and ID cards (MyKad).
+     * @param string $MyKadNumber Number on the back of Malaysia ID card 
      * @param array $WarnCardInfos Card Warning Information
 
 -9101 Alarm for covered certificate,
@@ -261,6 +269,10 @@ MyKid   Kid card
 
         if (array_key_exists("Birthday",$param) and $param["Birthday"] !== null) {
             $this->Birthday = $param["Birthday"];
+        }
+
+        if (array_key_exists("MyKadNumber",$param) and $param["MyKadNumber"] !== null) {
+            $this->MyKadNumber = $param["MyKadNumber"];
         }
 
         if (array_key_exists("WarnCardInfos",$param) and $param["WarnCardInfos"] !== null) {
