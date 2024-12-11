@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setText(string $Text) Set The text transcript.
  * @method string getTrans() Obtain The translation.
  * @method void setTrans(string $Trans) Set The translation.
+ * @method array getWordlist() Obtain Word timestamp information.
+ * @method void setWordlist(array $Wordlist) Set Word timestamp information.
  */
 class AiRecognitionTaskTransTextSegmentItem extends AbstractModel
 {
@@ -59,11 +61,17 @@ class AiRecognitionTaskTransTextSegmentItem extends AbstractModel
     public $Trans;
 
     /**
+     * @var array Word timestamp information.
+     */
+    public $Wordlist;
+
+    /**
      * @param float $Confidence The confidence score for a segment. Value range: 0-100.
      * @param float $StartTimeOffset The start time offset (seconds) of a segment.
      * @param float $EndTimeOffset The end time offset (seconds) of a segment.
      * @param string $Text The text transcript.
      * @param string $Trans The translation.
+     * @param array $Wordlist Word timestamp information.
      */
     function __construct()
     {
@@ -96,6 +104,15 @@ class AiRecognitionTaskTransTextSegmentItem extends AbstractModel
 
         if (array_key_exists("Trans",$param) and $param["Trans"] !== null) {
             $this->Trans = $param["Trans"];
+        }
+
+        if (array_key_exists("Wordlist",$param) and $param["Wordlist"] !== null) {
+            $this->Wordlist = [];
+            foreach ($param["Wordlist"] as $key => $value){
+                $obj = new WordResult();
+                $obj->deserialize($value);
+                array_push($this->Wordlist, $obj);
+            }
         }
     }
 }

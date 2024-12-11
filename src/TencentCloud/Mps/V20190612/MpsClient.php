@@ -136,6 +136,9 @@ Note: templates with an ID below 10000 are preset and cannot be modified.
 Instead of initiating a video processing task, this API is used to help generate SDKs for various programming languages. You can parse the event notification based on the analytic function of the SDKs.
  * @method Models\ParseNotificationResponse ParseNotification(Models\ParseNotificationRequest $req) This API is used to parse the content of an MPS event notification from the `msgBody` field in the message received from CMQ.
 Instead of initiating a video processing task, this API is used to help generate SDKs for various programming languages. You can parse the event notification based on the analytic function of the SDKs.
+ * @method Models\ProcessImageResponse ProcessImage(Models\ProcessImageRequest $req) This API is used to initiate image processing. Its features include:
+1. Format conversion;
+2. Image enhancement;
  * @method Models\ProcessLiveStreamResponse ProcessLiveStream(Models\ProcessLiveStreamRequest $req) This API is used to initiate live stream processing tasks. Such tasks may include the following:
 
 * Intelligent content moderation (detection of pornographic content in images and audio, detection of sensitive information)

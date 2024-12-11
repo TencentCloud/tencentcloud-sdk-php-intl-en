@@ -24,10 +24,16 @@ use TencentCloud\Common\AbstractModel;
 Note: This field may return·null, indicating that no valid values can be obtained.
  * @method void setContainer(string $Container) Set The container. Valid values: `mp4` (default), `hls`, `mov`, `flv`, `avi`.
 Note: This field may return·null, indicating that no valid values can be obtained.
- * @method string getType() Obtain The clip mode. Valid values: `normal` (default), `fast`.
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setType(string $Type) Set The clip mode. Valid values: `normal` (default), `fast`.
-Note: This field may return·null, indicating that no valid values can be obtained.
+ * @method string getType() Obtain Editing mode. Optional values:
+normal (default): Precise editing
+fast: Fast editing, with faster processing speed but lower precision to some extent
+Note: fast only supports individual files, and the default output transcoding format of normal is h264.
+Note: This field may return null, indicating that no valid value can be obtained.
+ * @method void setType(string $Type) Set Editing mode. Optional values:
+normal (default): Precise editing
+fast: Fast editing, with faster processing speed but lower precision to some extent
+Note: fast only supports individual files, and the default output transcoding format of normal is h264.
+Note: This field may return null, indicating that no valid value can be obtained.
  */
 class EditMediaOutputConfig extends AbstractModel
 {
@@ -38,16 +44,22 @@ Note: This field may return·null, indicating that no valid values can be obtain
     public $Container;
 
     /**
-     * @var string The clip mode. Valid values: `normal` (default), `fast`.
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var string Editing mode. Optional values:
+normal (default): Precise editing
+fast: Fast editing, with faster processing speed but lower precision to some extent
+Note: fast only supports individual files, and the default output transcoding format of normal is h264.
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public $Type;
 
     /**
      * @param string $Container The container. Valid values: `mp4` (default), `hls`, `mov`, `flv`, `avi`.
 Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param string $Type The clip mode. Valid values: `normal` (default), `fast`.
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @param string $Type Editing mode. Optional values:
+normal (default): Precise editing
+fast: Fast editing, with faster processing speed but lower precision to some extent
+Note: fast only supports individual files, and the default output transcoding format of normal is h264.
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     function __construct()
     {

@@ -76,6 +76,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setEnhanceConfig(EnhanceConfig $EnhanceConfig) Set Audio/Video enhancement configuration.
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getAliasName() Obtain Transcoding template alias.
+Note: This field may return null, indicating that no valid value can be obtained.
+ * @method void setAliasName(string $AliasName) Set Transcoding template alias.
+Note: This field may return null, indicating that no valid value can be obtained.
  */
 class TranscodeTemplate extends AbstractModel
 {
@@ -164,6 +168,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $EnhanceConfig;
 
     /**
+     * @var string Transcoding template alias.
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public $AliasName;
+
+    /**
      * @param string $Definition Unique ID of a transcoding template.
      * @param string $Container Container format. Valid values: mp4, flv, hls, mp3, flac, ogg.
      * @param string $Name Name of a transcoding template.
@@ -192,6 +202,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $UpdateTime Last modified time of a template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
      * @param EnhanceConfig $EnhanceConfig Audio/Video enhancement configuration.
 Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $AliasName Transcoding template alias.
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     function __construct()
     {
@@ -264,6 +276,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (array_key_exists("EnhanceConfig",$param) and $param["EnhanceConfig"] !== null) {
             $this->EnhanceConfig = new EnhanceConfig();
             $this->EnhanceConfig->deserialize($param["EnhanceConfig"]);
+        }
+
+        if (array_key_exists("AliasName",$param) and $param["AliasName"] !== null) {
+            $this->AliasName = $param["AliasName"];
         }
     }
 }

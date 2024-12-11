@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getDefinition() Obtain Intelligent video recognition template ID.
  * @method void setDefinition(integer $Definition) Set Intelligent video recognition template ID.
+ * @method string getUserExtPara() Obtain User extension field, which does not need to be filled in for general scenarios.
+ * @method void setUserExtPara(string $UserExtPara) Set User extension field, which does not need to be filled in for general scenarios.
  */
 class AiRecognitionTaskInput extends AbstractModel
 {
@@ -31,7 +33,13 @@ class AiRecognitionTaskInput extends AbstractModel
     public $Definition;
 
     /**
+     * @var string User extension field, which does not need to be filled in for general scenarios.
+     */
+    public $UserExtPara;
+
+    /**
      * @param integer $Definition Intelligent video recognition template ID.
+     * @param string $UserExtPara User extension field, which does not need to be filled in for general scenarios.
      */
     function __construct()
     {
@@ -48,6 +56,10 @@ class AiRecognitionTaskInput extends AbstractModel
         }
         if (array_key_exists("Definition",$param) and $param["Definition"] !== null) {
             $this->Definition = $param["Definition"];
+        }
+
+        if (array_key_exists("UserExtPara",$param) and $param["UserExtPara"] !== null) {
+            $this->UserExtPara = $param["UserExtPara"];
         }
     }
 }

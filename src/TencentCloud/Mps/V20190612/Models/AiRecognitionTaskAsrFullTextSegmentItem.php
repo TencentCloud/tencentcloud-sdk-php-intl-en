@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEndTimeOffset(float $EndTimeOffset) Set End time offset of a recognition segment in seconds.
  * @method string getText() Obtain Recognized text.
  * @method void setText(string $Text) Set Recognized text.
+ * @method array getWordlist() Obtain Word timestamp information.
+ * @method void setWordlist(array $Wordlist) Set Word timestamp information.
  */
 class AiRecognitionTaskAsrFullTextSegmentItem extends AbstractModel
 {
@@ -52,10 +54,16 @@ class AiRecognitionTaskAsrFullTextSegmentItem extends AbstractModel
     public $Text;
 
     /**
+     * @var array Word timestamp information.
+     */
+    public $Wordlist;
+
+    /**
      * @param float $Confidence Confidence of a recognition segment. Value range: 0-100.
      * @param float $StartTimeOffset Start time offset of a recognition segment in seconds.
      * @param float $EndTimeOffset End time offset of a recognition segment in seconds.
      * @param string $Text Recognized text.
+     * @param array $Wordlist Word timestamp information.
      */
     function __construct()
     {
@@ -84,6 +92,15 @@ class AiRecognitionTaskAsrFullTextSegmentItem extends AbstractModel
 
         if (array_key_exists("Text",$param) and $param["Text"] !== null) {
             $this->Text = $param["Text"];
+        }
+
+        if (array_key_exists("Wordlist",$param) and $param["Wordlist"] !== null) {
+            $this->Wordlist = [];
+            foreach ($param["Wordlist"] as $key => $value){
+                $obj = new WordResult();
+                $obj->deserialize($value);
+                array_push($this->Wordlist, $obj);
+            }
         }
     }
 }
