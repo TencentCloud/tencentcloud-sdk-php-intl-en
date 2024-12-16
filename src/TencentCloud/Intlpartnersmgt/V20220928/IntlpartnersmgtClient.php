@@ -53,6 +53,7 @@ use TencentCloud\Intlpartnersmgt\V20220928\Models as Models;
  * @method Models\QueryCustomersCreditResponse QueryCustomersCredit(Models\QueryCustomersCreditRequest $req) This API is used for a partner to the credits and basic information of cutomers.
  * @method Models\QueryDirectCustomersCreditResponse QueryDirectCustomersCredit(Models\QueryDirectCustomersCreditRequest $req) This API is used to query the credits of direct customers.
  * @method Models\QueryPartnerCreditResponse QueryPartnerCredit(Models\QueryPartnerCreditRequest $req) This API is used for a partner to query its own total credit, available credit, and used credit in USD.
+ * @method Models\QueryPolicyProductListByCodeResponse QueryPolicyProductListByCode(Models\QueryPolicyProductListByCodeRequest $req) This API is used to query the product list information within the specified policy range. To call this API, contact your account manager to add it to the allowlist.
  * @method Models\QueryVoucherAmountByUinResponse QueryVoucherAmountByUin(Models\QueryVoucherAmountByUinRequest $req) This API is used to query the voucher quota based on the customer UIN.
  * @method Models\QueryVoucherListByUinResponse QueryVoucherListByUin(Models\QueryVoucherListByUinRequest $req) This API is used to query the voucher list based on the customer UIN.
  * @method Models\QueryVoucherPoolResponse QueryVoucherPool(Models\QueryVoucherPoolRequest $req) This API is used to query the voucher quota pool.

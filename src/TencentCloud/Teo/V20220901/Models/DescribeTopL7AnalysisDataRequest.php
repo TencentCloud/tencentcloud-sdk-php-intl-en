@@ -24,53 +24,53 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStartTime(string $StartTime) Set The start time.
  * @method string getEndTime() Obtain The end time.
  * @method void setEndTime(string $EndTime) Set The end time.
- * @method string getMetricName() Obtain The metrics queried. Valid values:
-<li> l7Flow_outFlux_country: statistics of the L7 EdgeOne response traffic by country/region;</li>
-<li> l7Flow_outFlux_province: statistics of the L7 EdgeOne response traffic by province within the Chinese mainland;</li>
-<li> l7Flow_outFlux_statusCode: statistics of the L7 EdgeOne response traffic by status code;</li>
-<li> l7Flow_outFlux_domain: statistics of the L7 EdgeOne response traffic by domain name;</li>
-<li> l7Flow_outFlux_url: statistics of the L7 EdgeOne response traffic by URL path;</li>
-<li> l7Flow_outFlux_resourceType: statistics of the L7 EdgeOne response traffic by resource type;</li>
-<li> l7Flow_outFlux_sip: statistics of the L7 EdgeOne response traffic by client IP;</li>
-<li> l7Flow_outFlux_referers: statistics of the L7 EdgeOne response traffic by Referer;</li>
-<li> l7Flow_outFlux_ua_device: statistics of the L7 EdgeOne response traffic by device type;</li>
-<li> l7Flow_outFlux_ua_browser: statistics of the L7 EdgeOne response traffic by browser type;</li>
-<li> l7Flow_outFlux_us_os: statistics of the L7 EdgeOne response traffic by operating system type;</li>
-<li> l7Flow_request_country: statistics of the L7 access request count by country/region;</li>
-<li> l7Flow_request_province: statistics of the L7 access request count by province within the Chinese mainland;</li>
-<li> l7Flow_request_statusCode: statistics of the L7 access request count by status code;</li>
-<li> l7Flow_request_domain: statistics of the L7 access request count by domain name;</li>
-<li> l7Flow_request_url: statistics of the L7 access request count by URL path;</li>
-<li> l7Flow_request_resourceType: statistics of the L7 access request count by resource type;</li>
-<li> l7Flow_request_sip: statistics of the L7 access request count by client IP;</li>
-<li> l7Flow_request_referer: statistics of the L7 access request count by Referer;</li>
-<li> l7Flow_request_ua_device: statistics of the L7 access request count by device type;</li>
-<li> l7Flow_request_ua_browser: statistics of the L7 access request count by browser type;</li>
-<li> l7Flow_request_us_os: statistics of the L7 access request count by operating system type.</li>
+ * @method string getMetricName() Obtain Queried metric. Valid values:
+<li> l7Flow_outFlux_country: L7 EdgeOne response traffic metric counted by the country/region dimension;</li>
+<li> l7Flow_outFlux_province: L7 EdgeOne response traffic metric counted by the dimension of provinces in Chinese mainland;</li>
+<li> l7Flow_outFlux_statusCode: L7 EdgeOne response traffic metric counted by the status code dimension;</li>
+<li> l7Flow_outFlux_domain: L7 EdgeOne response traffic metric counted by the domain name dimension;</li>
+<li> l7Flow_outFlux_url: L7 EdgeOne response traffic metric counted by the URL path dimension;</li>
+<li> l7Flow_outFlux_resourceType: L7 EdgeOne response traffic metric counted by the resource type dimension;</li>
+<li> l7Flow_outFlux_sip: L7 EdgeOne response traffic metric counted by the client IP dimension;</li>
+<li> l7Flow_outFlux_referers: L7 EdgeOne response traffic metric counted by the referer dimension;</li>
+<li> l7Flow_outFlux_ua_device: L7 EdgeOne response traffic metric counted by the device type dimension;</li>
+<li> l7Flow_outFlux_ua_browser: L7 EdgeOne response traffic metric counted by the browser type dimension;</li>
+<li> l7Flow_outFlux_ua_os: L7 EdgeOne response traffic metric counted by the operating system type dimension;</li>
+<li> l7Flow_request_country: L7 access request count metric counted by the country/region dimension;</li>
+<li> l7Flow_request_province: L7 access request count metric counted by the dimension of provinces in the Chinese mainland;</li>
+<li> l7Flow_request_statusCode: L7 access request count metric counted by the status code dimension;</li>
+<li> l7Flow_request_domain: L7 access request count metric counted by the domain name dimension;</li>
+<li> l7Flow_request_url: L7 access request count metrics counted by the URL path dimension;</li>
+<li> l7Flow_request_resourceType: L7 access request count metric counted by the resource type dimension;</li>
+<li> l7Flow_request_sip: L7 access request count metric counted by the client IP dimension;</li>
+<li> l7Flow_request_referer: L7 access request count metric counted by the referer dimension;</li>
+<li> l7Flow_request_ua_device: L7 access request count metric counted by the device type dimension;</li>
+<li> l7Flow_request_ua_browser: L7 access request count metric counted by the browser type dimension;</li>
+<li> l7Flow_request_ua_os: L7 access request count metric counted by the operating system type dimension.</li>
 
- * @method void setMetricName(string $MetricName) Set The metrics queried. Valid values:
-<li> l7Flow_outFlux_country: statistics of the L7 EdgeOne response traffic by country/region;</li>
-<li> l7Flow_outFlux_province: statistics of the L7 EdgeOne response traffic by province within the Chinese mainland;</li>
-<li> l7Flow_outFlux_statusCode: statistics of the L7 EdgeOne response traffic by status code;</li>
-<li> l7Flow_outFlux_domain: statistics of the L7 EdgeOne response traffic by domain name;</li>
-<li> l7Flow_outFlux_url: statistics of the L7 EdgeOne response traffic by URL path;</li>
-<li> l7Flow_outFlux_resourceType: statistics of the L7 EdgeOne response traffic by resource type;</li>
-<li> l7Flow_outFlux_sip: statistics of the L7 EdgeOne response traffic by client IP;</li>
-<li> l7Flow_outFlux_referers: statistics of the L7 EdgeOne response traffic by Referer;</li>
-<li> l7Flow_outFlux_ua_device: statistics of the L7 EdgeOne response traffic by device type;</li>
-<li> l7Flow_outFlux_ua_browser: statistics of the L7 EdgeOne response traffic by browser type;</li>
-<li> l7Flow_outFlux_us_os: statistics of the L7 EdgeOne response traffic by operating system type;</li>
-<li> l7Flow_request_country: statistics of the L7 access request count by country/region;</li>
-<li> l7Flow_request_province: statistics of the L7 access request count by province within the Chinese mainland;</li>
-<li> l7Flow_request_statusCode: statistics of the L7 access request count by status code;</li>
-<li> l7Flow_request_domain: statistics of the L7 access request count by domain name;</li>
-<li> l7Flow_request_url: statistics of the L7 access request count by URL path;</li>
-<li> l7Flow_request_resourceType: statistics of the L7 access request count by resource type;</li>
-<li> l7Flow_request_sip: statistics of the L7 access request count by client IP;</li>
-<li> l7Flow_request_referer: statistics of the L7 access request count by Referer;</li>
-<li> l7Flow_request_ua_device: statistics of the L7 access request count by device type;</li>
-<li> l7Flow_request_ua_browser: statistics of the L7 access request count by browser type;</li>
-<li> l7Flow_request_us_os: statistics of the L7 access request count by operating system type.</li>
+ * @method void setMetricName(string $MetricName) Set Queried metric. Valid values:
+<li> l7Flow_outFlux_country: L7 EdgeOne response traffic metric counted by the country/region dimension;</li>
+<li> l7Flow_outFlux_province: L7 EdgeOne response traffic metric counted by the dimension of provinces in Chinese mainland;</li>
+<li> l7Flow_outFlux_statusCode: L7 EdgeOne response traffic metric counted by the status code dimension;</li>
+<li> l7Flow_outFlux_domain: L7 EdgeOne response traffic metric counted by the domain name dimension;</li>
+<li> l7Flow_outFlux_url: L7 EdgeOne response traffic metric counted by the URL path dimension;</li>
+<li> l7Flow_outFlux_resourceType: L7 EdgeOne response traffic metric counted by the resource type dimension;</li>
+<li> l7Flow_outFlux_sip: L7 EdgeOne response traffic metric counted by the client IP dimension;</li>
+<li> l7Flow_outFlux_referers: L7 EdgeOne response traffic metric counted by the referer dimension;</li>
+<li> l7Flow_outFlux_ua_device: L7 EdgeOne response traffic metric counted by the device type dimension;</li>
+<li> l7Flow_outFlux_ua_browser: L7 EdgeOne response traffic metric counted by the browser type dimension;</li>
+<li> l7Flow_outFlux_ua_os: L7 EdgeOne response traffic metric counted by the operating system type dimension;</li>
+<li> l7Flow_request_country: L7 access request count metric counted by the country/region dimension;</li>
+<li> l7Flow_request_province: L7 access request count metric counted by the dimension of provinces in the Chinese mainland;</li>
+<li> l7Flow_request_statusCode: L7 access request count metric counted by the status code dimension;</li>
+<li> l7Flow_request_domain: L7 access request count metric counted by the domain name dimension;</li>
+<li> l7Flow_request_url: L7 access request count metrics counted by the URL path dimension;</li>
+<li> l7Flow_request_resourceType: L7 access request count metric counted by the resource type dimension;</li>
+<li> l7Flow_request_sip: L7 access request count metric counted by the client IP dimension;</li>
+<li> l7Flow_request_referer: L7 access request count metric counted by the referer dimension;</li>
+<li> l7Flow_request_ua_device: L7 access request count metric counted by the device type dimension;</li>
+<li> l7Flow_request_ua_browser: L7 access request count metric counted by the browser type dimension;</li>
+<li> l7Flow_request_ua_os: L7 access request count metric counted by the operating system type dimension.</li>
 
  * @method array getZoneIds() Obtain ZoneId set. This parameter is required.
  * @method void setZoneIds(array $ZoneIds) Set ZoneId set. This parameter is required.
@@ -144,29 +144,29 @@ class DescribeTopL7AnalysisDataRequest extends AbstractModel
     public $EndTime;
 
     /**
-     * @var string The metrics queried. Valid values:
-<li> l7Flow_outFlux_country: statistics of the L7 EdgeOne response traffic by country/region;</li>
-<li> l7Flow_outFlux_province: statistics of the L7 EdgeOne response traffic by province within the Chinese mainland;</li>
-<li> l7Flow_outFlux_statusCode: statistics of the L7 EdgeOne response traffic by status code;</li>
-<li> l7Flow_outFlux_domain: statistics of the L7 EdgeOne response traffic by domain name;</li>
-<li> l7Flow_outFlux_url: statistics of the L7 EdgeOne response traffic by URL path;</li>
-<li> l7Flow_outFlux_resourceType: statistics of the L7 EdgeOne response traffic by resource type;</li>
-<li> l7Flow_outFlux_sip: statistics of the L7 EdgeOne response traffic by client IP;</li>
-<li> l7Flow_outFlux_referers: statistics of the L7 EdgeOne response traffic by Referer;</li>
-<li> l7Flow_outFlux_ua_device: statistics of the L7 EdgeOne response traffic by device type;</li>
-<li> l7Flow_outFlux_ua_browser: statistics of the L7 EdgeOne response traffic by browser type;</li>
-<li> l7Flow_outFlux_us_os: statistics of the L7 EdgeOne response traffic by operating system type;</li>
-<li> l7Flow_request_country: statistics of the L7 access request count by country/region;</li>
-<li> l7Flow_request_province: statistics of the L7 access request count by province within the Chinese mainland;</li>
-<li> l7Flow_request_statusCode: statistics of the L7 access request count by status code;</li>
-<li> l7Flow_request_domain: statistics of the L7 access request count by domain name;</li>
-<li> l7Flow_request_url: statistics of the L7 access request count by URL path;</li>
-<li> l7Flow_request_resourceType: statistics of the L7 access request count by resource type;</li>
-<li> l7Flow_request_sip: statistics of the L7 access request count by client IP;</li>
-<li> l7Flow_request_referer: statistics of the L7 access request count by Referer;</li>
-<li> l7Flow_request_ua_device: statistics of the L7 access request count by device type;</li>
-<li> l7Flow_request_ua_browser: statistics of the L7 access request count by browser type;</li>
-<li> l7Flow_request_us_os: statistics of the L7 access request count by operating system type.</li>
+     * @var string Queried metric. Valid values:
+<li> l7Flow_outFlux_country: L7 EdgeOne response traffic metric counted by the country/region dimension;</li>
+<li> l7Flow_outFlux_province: L7 EdgeOne response traffic metric counted by the dimension of provinces in Chinese mainland;</li>
+<li> l7Flow_outFlux_statusCode: L7 EdgeOne response traffic metric counted by the status code dimension;</li>
+<li> l7Flow_outFlux_domain: L7 EdgeOne response traffic metric counted by the domain name dimension;</li>
+<li> l7Flow_outFlux_url: L7 EdgeOne response traffic metric counted by the URL path dimension;</li>
+<li> l7Flow_outFlux_resourceType: L7 EdgeOne response traffic metric counted by the resource type dimension;</li>
+<li> l7Flow_outFlux_sip: L7 EdgeOne response traffic metric counted by the client IP dimension;</li>
+<li> l7Flow_outFlux_referers: L7 EdgeOne response traffic metric counted by the referer dimension;</li>
+<li> l7Flow_outFlux_ua_device: L7 EdgeOne response traffic metric counted by the device type dimension;</li>
+<li> l7Flow_outFlux_ua_browser: L7 EdgeOne response traffic metric counted by the browser type dimension;</li>
+<li> l7Flow_outFlux_ua_os: L7 EdgeOne response traffic metric counted by the operating system type dimension;</li>
+<li> l7Flow_request_country: L7 access request count metric counted by the country/region dimension;</li>
+<li> l7Flow_request_province: L7 access request count metric counted by the dimension of provinces in the Chinese mainland;</li>
+<li> l7Flow_request_statusCode: L7 access request count metric counted by the status code dimension;</li>
+<li> l7Flow_request_domain: L7 access request count metric counted by the domain name dimension;</li>
+<li> l7Flow_request_url: L7 access request count metrics counted by the URL path dimension;</li>
+<li> l7Flow_request_resourceType: L7 access request count metric counted by the resource type dimension;</li>
+<li> l7Flow_request_sip: L7 access request count metric counted by the client IP dimension;</li>
+<li> l7Flow_request_referer: L7 access request count metric counted by the referer dimension;</li>
+<li> l7Flow_request_ua_device: L7 access request count metric counted by the device type dimension;</li>
+<li> l7Flow_request_ua_browser: L7 access request count metric counted by the browser type dimension;</li>
+<li> l7Flow_request_ua_os: L7 access request count metric counted by the operating system type dimension.</li>
 
      */
     public $MetricName;
@@ -223,29 +223,29 @@ class DescribeTopL7AnalysisDataRequest extends AbstractModel
     /**
      * @param string $StartTime The start time.
      * @param string $EndTime The end time.
-     * @param string $MetricName The metrics queried. Valid values:
-<li> l7Flow_outFlux_country: statistics of the L7 EdgeOne response traffic by country/region;</li>
-<li> l7Flow_outFlux_province: statistics of the L7 EdgeOne response traffic by province within the Chinese mainland;</li>
-<li> l7Flow_outFlux_statusCode: statistics of the L7 EdgeOne response traffic by status code;</li>
-<li> l7Flow_outFlux_domain: statistics of the L7 EdgeOne response traffic by domain name;</li>
-<li> l7Flow_outFlux_url: statistics of the L7 EdgeOne response traffic by URL path;</li>
-<li> l7Flow_outFlux_resourceType: statistics of the L7 EdgeOne response traffic by resource type;</li>
-<li> l7Flow_outFlux_sip: statistics of the L7 EdgeOne response traffic by client IP;</li>
-<li> l7Flow_outFlux_referers: statistics of the L7 EdgeOne response traffic by Referer;</li>
-<li> l7Flow_outFlux_ua_device: statistics of the L7 EdgeOne response traffic by device type;</li>
-<li> l7Flow_outFlux_ua_browser: statistics of the L7 EdgeOne response traffic by browser type;</li>
-<li> l7Flow_outFlux_us_os: statistics of the L7 EdgeOne response traffic by operating system type;</li>
-<li> l7Flow_request_country: statistics of the L7 access request count by country/region;</li>
-<li> l7Flow_request_province: statistics of the L7 access request count by province within the Chinese mainland;</li>
-<li> l7Flow_request_statusCode: statistics of the L7 access request count by status code;</li>
-<li> l7Flow_request_domain: statistics of the L7 access request count by domain name;</li>
-<li> l7Flow_request_url: statistics of the L7 access request count by URL path;</li>
-<li> l7Flow_request_resourceType: statistics of the L7 access request count by resource type;</li>
-<li> l7Flow_request_sip: statistics of the L7 access request count by client IP;</li>
-<li> l7Flow_request_referer: statistics of the L7 access request count by Referer;</li>
-<li> l7Flow_request_ua_device: statistics of the L7 access request count by device type;</li>
-<li> l7Flow_request_ua_browser: statistics of the L7 access request count by browser type;</li>
-<li> l7Flow_request_us_os: statistics of the L7 access request count by operating system type.</li>
+     * @param string $MetricName Queried metric. Valid values:
+<li> l7Flow_outFlux_country: L7 EdgeOne response traffic metric counted by the country/region dimension;</li>
+<li> l7Flow_outFlux_province: L7 EdgeOne response traffic metric counted by the dimension of provinces in Chinese mainland;</li>
+<li> l7Flow_outFlux_statusCode: L7 EdgeOne response traffic metric counted by the status code dimension;</li>
+<li> l7Flow_outFlux_domain: L7 EdgeOne response traffic metric counted by the domain name dimension;</li>
+<li> l7Flow_outFlux_url: L7 EdgeOne response traffic metric counted by the URL path dimension;</li>
+<li> l7Flow_outFlux_resourceType: L7 EdgeOne response traffic metric counted by the resource type dimension;</li>
+<li> l7Flow_outFlux_sip: L7 EdgeOne response traffic metric counted by the client IP dimension;</li>
+<li> l7Flow_outFlux_referers: L7 EdgeOne response traffic metric counted by the referer dimension;</li>
+<li> l7Flow_outFlux_ua_device: L7 EdgeOne response traffic metric counted by the device type dimension;</li>
+<li> l7Flow_outFlux_ua_browser: L7 EdgeOne response traffic metric counted by the browser type dimension;</li>
+<li> l7Flow_outFlux_ua_os: L7 EdgeOne response traffic metric counted by the operating system type dimension;</li>
+<li> l7Flow_request_country: L7 access request count metric counted by the country/region dimension;</li>
+<li> l7Flow_request_province: L7 access request count metric counted by the dimension of provinces in the Chinese mainland;</li>
+<li> l7Flow_request_statusCode: L7 access request count metric counted by the status code dimension;</li>
+<li> l7Flow_request_domain: L7 access request count metric counted by the domain name dimension;</li>
+<li> l7Flow_request_url: L7 access request count metrics counted by the URL path dimension;</li>
+<li> l7Flow_request_resourceType: L7 access request count metric counted by the resource type dimension;</li>
+<li> l7Flow_request_sip: L7 access request count metric counted by the client IP dimension;</li>
+<li> l7Flow_request_referer: L7 access request count metric counted by the referer dimension;</li>
+<li> l7Flow_request_ua_device: L7 access request count metric counted by the device type dimension;</li>
+<li> l7Flow_request_ua_browser: L7 access request count metric counted by the browser type dimension;</li>
+<li> l7Flow_request_ua_os: L7 access request count metric counted by the operating system type dimension.</li>
 
      * @param array $ZoneIds ZoneId set. This parameter is required.
      * @param integer $Limit Indicates the top N data to be queried. The maximum value is 1000. If this parameter is not input, the default value is 10, indicating querying the top 10 data.
