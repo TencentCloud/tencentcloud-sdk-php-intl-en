@@ -25,9 +25,9 @@ Valid values: `personal`, `company`.
  * @method void setAccountType(string $AccountType) Set Account type of a new customer.
 Valid values: `personal`, `company`.
  * @method string getMail() Obtain Registered email address, which should be valid and correct.
-For example, account@qq.com.
+such as "account@qq.com"
  * @method void setMail(string $Mail) Set Registered email address, which should be valid and correct.
-For example, account@qq.com.
+such as "account@qq.com"
  * @method string getPassword() Obtain Account password.
 Length limit: 8-20 characters
 A password must contain numbers, letters, and symbols (!@#$%^&*()). Space is not allowed.
@@ -36,26 +36,24 @@ Length limit: 8-20 characters
 A password must contain numbers, letters, and symbols (!@#$%^&*()). Space is not allowed.
  * @method string getConfirmPassword() Obtain The confirmed password, which must be the same as that entered in the `Password` field.
  * @method void setConfirmPassword(string $ConfirmPassword) Set The confirmed password, which must be the same as that entered in the `Password` field.
- * @method string getPhoneNum() Obtain Customer's mobile number. 
-The caller needs to ensure the validity and correctness of the mobile number. A global mobile number within a range of 1-32 digits is allowed. 
+ * @method string getPhoneNum() Obtain Customer's mobile number.
+The caller needs to ensure the validity and correctness of the mobile number. A global mobile number within a range of 1-32 digits is allowed.
 The system will perform binding limit verification of the mobile number you provide, allowing a maximum of 5 accounts per mobile number.
- * @method void setPhoneNum(string $PhoneNum) Set Customer's mobile number. 
-The caller needs to ensure the validity and correctness of the mobile number. A global mobile number within a range of 1-32 digits is allowed. 
+ * @method void setPhoneNum(string $PhoneNum) Set Customer's mobile number.
+The caller needs to ensure the validity and correctness of the mobile number. A global mobile number within a range of 1-32 digits is allowed.
 The system will perform binding limit verification of the mobile number you provide, allowing a maximum of 5 accounts per mobile number.
- * @method string getCountryCode() Obtain Customer's country/region code, which can be obtained via the `GetCountryCodes` API, such as "852".
+ * @method string getCountryCode() Obtain Customer's country/region code, which can be obtained via the  [GetCountryCodes API](https://www.tencentcloud.com/document/product/1085/51416), such as "852".
 Parameter value is not allowed to be 7,380,86.
- * @method void setCountryCode(string $CountryCode) Set Customer's country/region code, which can be obtained via the `GetCountryCodes` API, such as "852".
+ * @method void setCountryCode(string $CountryCode) Set Customer's country/region code, which can be obtained via the  [GetCountryCodes API](https://www.tencentcloud.com/document/product/1085/51416), such as "852".
 Parameter value is not allowed to be 7,380,86.
- * @method string getArea() Obtain Customer's ISO2 standard country/region code, which can be obtained via the `GetCountryCodes` API. It should correspond to the `CountryCode` field, such as `HK`.
- * @method void setArea(string $Area) Set Customer's ISO2 standard country/region code, which can be obtained via the `GetCountryCodes` API. It should correspond to the `CountryCode` field, such as `HK`.
+ * @method string getArea() Obtain Customer's ISO2 standard country/region code, which can be obtained via the [GetCountryCodes API](https://www.tencentcloud.com/document/product/1085/51416). It should correspond to the `CountryCode` field, such as `HK`.
+ * @method void setArea(string $Area) Set Customer's ISO2 standard country/region code, which can be obtained via the [GetCountryCodes API](https://www.tencentcloud.com/document/product/1085/51416). It should correspond to the `CountryCode` field, such as `HK`.
  * @method string getExtended() Obtain Extension field, which is left empty by default.
  * @method void setExtended(string $Extended) Set Extension field, which is left empty by default.
- * @method string getVerifyCode() Obtain Verification code. 
-It will be used to verify the validity of the mobile number you provide. 
-When the interface is requested for the first time, a null value can be passed in. The interface will send a 6-digit verification code by SMS to the mobile number you provide, and you need to pass it in again together with other parameters after you receive it.
- * @method void setVerifyCode(string $VerifyCode) Set Verification code. 
-It will be used to verify the validity of the mobile number you provide. 
-When the interface is requested for the first time, a null value can be passed in. The interface will send a 6-digit verification code by SMS to the mobile number you provide, and you need to pass it in again together with other parameters after you receive it.
+ * @method string getVerifyCode() Obtain VerifyCode. This field is required. 
+Use the [SendVerifyCode API](https://www.tencentcloud.com/document/product/1085/65907) to obtain the verifycode.The SendVerifyCode API sends a 6-digit verifycode to your specified mobile number via SMS. After receiving it, you need to pass it along with other parameters.
+ * @method void setVerifyCode(string $VerifyCode) Set VerifyCode. This field is required. 
+Use the [SendVerifyCode API](https://www.tencentcloud.com/document/product/1085/65907) to obtain the verifycode.The SendVerifyCode API sends a 6-digit verifycode to your specified mobile number via SMS. After receiving it, you need to pass it along with other parameters.
  */
 class CreateAccountRequest extends AbstractModel
 {
@@ -67,7 +65,7 @@ Valid values: `personal`, `company`.
 
     /**
      * @var string Registered email address, which should be valid and correct.
-For example, account@qq.com.
+such as "account@qq.com"
      */
     public $Mail;
 
@@ -84,20 +82,20 @@ A password must contain numbers, letters, and symbols (!@#$%^&*()). Space is not
     public $ConfirmPassword;
 
     /**
-     * @var string Customer's mobile number. 
-The caller needs to ensure the validity and correctness of the mobile number. A global mobile number within a range of 1-32 digits is allowed. 
+     * @var string Customer's mobile number.
+The caller needs to ensure the validity and correctness of the mobile number. A global mobile number within a range of 1-32 digits is allowed.
 The system will perform binding limit verification of the mobile number you provide, allowing a maximum of 5 accounts per mobile number.
      */
     public $PhoneNum;
 
     /**
-     * @var string Customer's country/region code, which can be obtained via the `GetCountryCodes` API, such as "852".
+     * @var string Customer's country/region code, which can be obtained via the  [GetCountryCodes API](https://www.tencentcloud.com/document/product/1085/51416), such as "852".
 Parameter value is not allowed to be 7,380,86.
      */
     public $CountryCode;
 
     /**
-     * @var string Customer's ISO2 standard country/region code, which can be obtained via the `GetCountryCodes` API. It should correspond to the `CountryCode` field, such as `HK`.
+     * @var string Customer's ISO2 standard country/region code, which can be obtained via the [GetCountryCodes API](https://www.tencentcloud.com/document/product/1085/51416). It should correspond to the `CountryCode` field, such as `HK`.
      */
     public $Area;
 
@@ -107,9 +105,8 @@ Parameter value is not allowed to be 7,380,86.
     public $Extended;
 
     /**
-     * @var string Verification code. 
-It will be used to verify the validity of the mobile number you provide. 
-When the interface is requested for the first time, a null value can be passed in. The interface will send a 6-digit verification code by SMS to the mobile number you provide, and you need to pass it in again together with other parameters after you receive it.
+     * @var string VerifyCode. This field is required. 
+Use the [SendVerifyCode API](https://www.tencentcloud.com/document/product/1085/65907) to obtain the verifycode.The SendVerifyCode API sends a 6-digit verifycode to your specified mobile number via SMS. After receiving it, you need to pass it along with other parameters.
      */
     public $VerifyCode;
 
@@ -117,21 +114,20 @@ When the interface is requested for the first time, a null value can be passed i
      * @param string $AccountType Account type of a new customer.
 Valid values: `personal`, `company`.
      * @param string $Mail Registered email address, which should be valid and correct.
-For example, account@qq.com.
+such as "account@qq.com"
      * @param string $Password Account password.
 Length limit: 8-20 characters
 A password must contain numbers, letters, and symbols (!@#$%^&*()). Space is not allowed.
      * @param string $ConfirmPassword The confirmed password, which must be the same as that entered in the `Password` field.
-     * @param string $PhoneNum Customer's mobile number. 
-The caller needs to ensure the validity and correctness of the mobile number. A global mobile number within a range of 1-32 digits is allowed. 
+     * @param string $PhoneNum Customer's mobile number.
+The caller needs to ensure the validity and correctness of the mobile number. A global mobile number within a range of 1-32 digits is allowed.
 The system will perform binding limit verification of the mobile number you provide, allowing a maximum of 5 accounts per mobile number.
-     * @param string $CountryCode Customer's country/region code, which can be obtained via the `GetCountryCodes` API, such as "852".
+     * @param string $CountryCode Customer's country/region code, which can be obtained via the  [GetCountryCodes API](https://www.tencentcloud.com/document/product/1085/51416), such as "852".
 Parameter value is not allowed to be 7,380,86.
-     * @param string $Area Customer's ISO2 standard country/region code, which can be obtained via the `GetCountryCodes` API. It should correspond to the `CountryCode` field, such as `HK`.
+     * @param string $Area Customer's ISO2 standard country/region code, which can be obtained via the [GetCountryCodes API](https://www.tencentcloud.com/document/product/1085/51416). It should correspond to the `CountryCode` field, such as `HK`.
      * @param string $Extended Extension field, which is left empty by default.
-     * @param string $VerifyCode Verification code. 
-It will be used to verify the validity of the mobile number you provide. 
-When the interface is requested for the first time, a null value can be passed in. The interface will send a 6-digit verification code by SMS to the mobile number you provide, and you need to pass it in again together with other parameters after you receive it.
+     * @param string $VerifyCode VerifyCode. This field is required. 
+Use the [SendVerifyCode API](https://www.tencentcloud.com/document/product/1085/65907) to obtain the verifycode.The SendVerifyCode API sends a 6-digit verifycode to your specified mobile number via SMS. After receiving it, you need to pass it along with other parameters.
      */
     function __construct()
     {

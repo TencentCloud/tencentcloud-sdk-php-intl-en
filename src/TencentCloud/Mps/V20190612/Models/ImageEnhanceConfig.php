@@ -21,45 +21,55 @@ use TencentCloud\Common\AbstractModel;
  * Image enhancement parameters
  *
  * @method SuperResolutionConfig getSuperResolution() Obtain Super-resolution configuration.
-Note: This field may return null, indicating that no valid value can be obtained.
+
  * @method void setSuperResolution(SuperResolutionConfig $SuperResolution) Set Super-resolution configuration.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method ColorEnhanceConfig getColorEnhance() Obtain 
- * @method void setColorEnhance(ColorEnhanceConfig $ColorEnhance) Set 
- * @method SharpEnhanceConfig getSharpEnhance() Obtain 
- * @method void setSharpEnhance(SharpEnhanceConfig $SharpEnhance) Set 
- * @method FaceEnhanceConfig getFaceEnhance() Obtain 
- * @method void setFaceEnhance(FaceEnhanceConfig $FaceEnhance) Set 
+
+ * @method ColorEnhanceConfig getColorEnhance() Obtain Color enhancement configuration.
+
+ * @method void setColorEnhance(ColorEnhanceConfig $ColorEnhance) Set Color enhancement configuration.
+
+ * @method SharpEnhanceConfig getSharpEnhance() Obtain Detail enhancement configuration.
+
+ * @method void setSharpEnhance(SharpEnhanceConfig $SharpEnhance) Set Detail enhancement configuration.
+
+ * @method FaceEnhanceConfig getFaceEnhance() Obtain Face enhancement configuration.
+
+ * @method void setFaceEnhance(FaceEnhanceConfig $FaceEnhance) Set Face enhancement configuration.
  */
 class ImageEnhanceConfig extends AbstractModel
 {
     /**
      * @var SuperResolutionConfig Super-resolution configuration.
-Note: This field may return null, indicating that no valid value can be obtained.
+
      */
     public $SuperResolution;
 
     /**
-     * @var ColorEnhanceConfig 
+     * @var ColorEnhanceConfig Color enhancement configuration.
+
      */
     public $ColorEnhance;
 
     /**
-     * @var SharpEnhanceConfig 
+     * @var SharpEnhanceConfig Detail enhancement configuration.
+
      */
     public $SharpEnhance;
 
     /**
-     * @var FaceEnhanceConfig 
+     * @var FaceEnhanceConfig Face enhancement configuration.
+
      */
     public $FaceEnhance;
 
     /**
      * @param SuperResolutionConfig $SuperResolution Super-resolution configuration.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param ColorEnhanceConfig $ColorEnhance 
-     * @param SharpEnhanceConfig $SharpEnhance 
-     * @param FaceEnhanceConfig $FaceEnhance 
+
+     * @param ColorEnhanceConfig $ColorEnhance Color enhancement configuration.
+
+     * @param SharpEnhanceConfig $SharpEnhance Detail enhancement configuration.
+
+     * @param FaceEnhanceConfig $FaceEnhance Face enhancement configuration.
      */
     function __construct()
     {

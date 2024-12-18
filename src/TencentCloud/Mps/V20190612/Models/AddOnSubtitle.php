@@ -24,16 +24,20 @@ use TencentCloud\Common\AbstractModel;
 <li>`subtitle-stream`: Add a subtitle track.</li>
 <li>`close-caption-708`: Embed CEA-708 subtitles in SEI frames.</li>
 <li>`close-caption-608`: Embed CEA-608 subtitles in SEI frames.</li>
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setType(string $Type) Set The mode. Valid values:
 <li>`subtitle-stream`: Add a subtitle track.</li>
 <li>`close-caption-708`: Embed CEA-708 subtitles in SEI frames.</li>
 <li>`close-caption-608`: Embed CEA-608 subtitles in SEI frames.</li>
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method MediaInputInfo getSubtitle() Obtain The subtitle file.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setSubtitle(MediaInputInfo $Subtitle) Set The subtitle file.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getSubtitleName() Obtain Subtitle name.	
+Note: This field may return null, indicating that no valid value can be obtained.
+ * @method void setSubtitleName(string $SubtitleName) Set Subtitle name.	
+Note: This field may return null, indicating that no valid value can be obtained.
  */
 class AddOnSubtitle extends AbstractModel
 {
@@ -42,24 +46,32 @@ class AddOnSubtitle extends AbstractModel
 <li>`subtitle-stream`: Add a subtitle track.</li>
 <li>`close-caption-708`: Embed CEA-708 subtitles in SEI frames.</li>
 <li>`close-caption-608`: Embed CEA-608 subtitles in SEI frames.</li>
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Type;
 
     /**
      * @var MediaInputInfo The subtitle file.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Subtitle;
+
+    /**
+     * @var string Subtitle name.	
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public $SubtitleName;
 
     /**
      * @param string $Type The mode. Valid values:
 <li>`subtitle-stream`: Add a subtitle track.</li>
 <li>`close-caption-708`: Embed CEA-708 subtitles in SEI frames.</li>
 <li>`close-caption-608`: Embed CEA-608 subtitles in SEI frames.</li>
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param MediaInputInfo $Subtitle The subtitle file.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $SubtitleName Subtitle name.	
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     function __construct()
     {
@@ -81,6 +93,10 @@ Note: This field may return·null, indicating that no valid values can be obtain
         if (array_key_exists("Subtitle",$param) and $param["Subtitle"] !== null) {
             $this->Subtitle = new MediaInputInfo();
             $this->Subtitle->deserialize($param["Subtitle"]);
+        }
+
+        if (array_key_exists("SubtitleName",$param) and $param["SubtitleName"] !== null) {
+            $this->SubtitleName = $param["SubtitleName"];
         }
     }
 }
