@@ -33,6 +33,12 @@ use TencentCloud\Intlpartnersmgt\V20220928\Models as Models;
 1. Create a Tencent Cloud account. The entered email address and mobile phone number need to be verified by the partner for validity.
 2.  Customers need to add personal information when logging in for the first time.
 3.  This interface needs to be applied for allowlist usage. Please contact the channel manager to initiate the application process.
+ * @method Models\CreateAndSendClientInvitationMailResponse CreateAndSendClientInvitationMail(Models\CreateAndSendClientInvitationMailRequest $req) This API is used to apply for the allowlist. If needed, please contact your business representative.Directions:
+1.This API is used to create an invitation link, which you can send to a specified email address.
+2.Customer need to click the invitation link in the email, fill in and submit the required information.
+3.You can review the customer's application in customer management  after submission.
+
+Note:This API is used to manually send the invitation link to the customer if the specified email does not receive it.
  * @method Models\DescribeBillDetailResponse DescribeBillDetail(Models\DescribeBillDetailRequest $req) This API is used to query bill details by customers.
  * @method Models\DescribeBillDownloadUrlResponse DescribeBillDownloadUrl(Models\DescribeBillDownloadUrlRequest $req) This API is used to download billing files and return billing file URLs by customers.
  * @method Models\DescribeBillSummaryResponse DescribeBillSummary(Models\DescribeBillSummaryRequest $req) External API for the L1 billing of the customer billing center

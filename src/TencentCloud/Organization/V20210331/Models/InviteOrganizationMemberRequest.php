@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setName(string $Name) Set Member name, which contains up to 25 characters, including English letters, digits, and symbols `+@&._[]-:,`.
  * @method string getPolicyType() Obtain Relationship policy. Valid value: `Financial`.
  * @method void setPolicyType(string $PolicyType) Set Relationship policy. Valid value: `Financial`.
- * @method array getPermissionIds() Obtain List of member financial permission IDs. Valid values: 1: View bills. 2: View balance. 3: Transfer funds. 4: Consolidate bills. 5: Issue invoice. 6: Inherit discounts. 7: Pay on behalf. 1 and 2 are required by default.
- * @method void setPermissionIds(array $PermissionIds) Set List of member financial permission IDs. Valid values: 1: View bills. 2: View balance. 3: Transfer funds. 4: Consolidate bills. 5: Issue invoice. 6: Inherit discounts. 7: Pay on behalf. 1 and 2 are required by default.
+ * @method array getPermissionIds() Obtain Member Finanace Authorization. Valid values: 1: View Bills. 2: View Balance.  4: Consolidate Bills. 5: Invoice. 6: Inherit Offer. 7: Pay On Behalf. 8: Cost Explorer. 9: Budget Management.  1 and 2 are required.
+ * @method void setPermissionIds(array $PermissionIds) Set Member Finanace Authorization. Valid values: 1: View Bills. 2: View Balance.  4: Consolidate Bills. 5: Invoice. 6: Inherit Offer. 7: Pay On Behalf. 8: Cost Explorer. 9: Budget Management.  1 and 2 are required.
  * @method integer getNodeId() Obtain Node ID of the member's department, which can be obtained through [DescribeOrganizationNodes](https://intl.cloud.tencent.com/document/product/850/82926?from_cn_redirect=1).
  * @method void setNodeId(integer $NodeId) Set Node ID of the member's department, which can be obtained through [DescribeOrganizationNodes](https://intl.cloud.tencent.com/document/product/850/82926?from_cn_redirect=1).
  * @method string getRemark() Obtain Remarks.
@@ -61,7 +61,7 @@ class InviteOrganizationMemberRequest extends AbstractModel
     public $PolicyType;
 
     /**
-     * @var array List of member financial permission IDs. Valid values: 1: View bills. 2: View balance. 3: Transfer funds. 4: Consolidate bills. 5: Issue invoice. 6: Inherit discounts. 7: Pay on behalf. 1 and 2 are required by default.
+     * @var array Member Finanace Authorization. Valid values: 1: View Bills. 2: View Balance.  4: Consolidate Bills. 5: Invoice. 6: Inherit Offer. 7: Pay On Behalf. 8: Cost Explorer. 9: Budget Management.  1 and 2 are required.
      */
     public $PermissionIds;
 
@@ -104,7 +104,7 @@ class InviteOrganizationMemberRequest extends AbstractModel
      * @param integer $MemberUin UIN of an invited account.
      * @param string $Name Member name, which contains up to 25 characters, including English letters, digits, and symbols `+@&._[]-:,`.
      * @param string $PolicyType Relationship policy. Valid value: `Financial`.
-     * @param array $PermissionIds List of member financial permission IDs. Valid values: 1: View bills. 2: View balance. 3: Transfer funds. 4: Consolidate bills. 5: Issue invoice. 6: Inherit discounts. 7: Pay on behalf. 1 and 2 are required by default.
+     * @param array $PermissionIds Member Finanace Authorization. Valid values: 1: View Bills. 2: View Balance.  4: Consolidate Bills. 5: Invoice. 6: Inherit Offer. 7: Pay On Behalf. 8: Cost Explorer. 9: Budget Management.  1 and 2 are required.
      * @param integer $NodeId Node ID of the member's department, which can be obtained through [DescribeOrganizationNodes](https://intl.cloud.tencent.com/document/product/850/82926?from_cn_redirect=1).
      * @param string $Remark Remarks.
      * @param string $IsAllowQuit Whether to allow a member to exit. Valid values: Allow, Denied.

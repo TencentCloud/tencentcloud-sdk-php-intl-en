@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setName(string $Name) Set Member name, which can contain up to 25 letters, digits, and symbols `+@&._[]-:,`.
  * @method string getPolicyType() Obtain Relationship policy. Valid value: `Financial`.
  * @method void setPolicyType(string $PolicyType) Set Relationship policy. Valid value: `Financial`.
- * @method array getPermissionIds() Obtain List of member financial permission IDs. `7` indicates paying, which is the default value.
- * @method void setPermissionIds(array $PermissionIds) Set List of member financial permission IDs. `7` indicates paying, which is the default value.
+ * @method array getPermissionIds() Obtain Member Finanace Authorization. Valid values: 1: View Bills. 2: View Balance.  4: Consolidate Bills. 5: Invoice. 6: Inherit Offer. 7: Pay On Behalf. 8: Cost Explorer. 9: Budget Management.  1, 2 and 7 are required.
+ * @method void setPermissionIds(array $PermissionIds) Set Member Finanace Authorization. Valid values: 1: View Bills. 2: View Balance.  4: Consolidate Bills. 5: Invoice. 6: Inherit Offer. 7: Pay On Behalf. 8: Cost Explorer. 9: Budget Management.  1, 2 and 7 are required.
  * @method integer getNodeId() Obtain Node ID of the member's department, which can be obtained through [DescribeOrganizationNodes](https://intl.cloud.tencent.com/document/product/850/82926?from_cn_redirect=1).
  * @method void setNodeId(integer $NodeId) Set Node ID of the member's department, which can be obtained through [DescribeOrganizationNodes](https://intl.cloud.tencent.com/document/product/850/82926?from_cn_redirect=1).
  * @method string getAccountName() Obtain Account name, which can contain up to 25 letters, digits, and symbols `+@&._[]-:,`.
@@ -56,7 +56,7 @@ class CreateOrganizationMemberRequest extends AbstractModel
     public $PolicyType;
 
     /**
-     * @var array List of member financial permission IDs. `7` indicates paying, which is the default value.
+     * @var array Member Finanace Authorization. Valid values: 1: View Bills. 2: View Balance.  4: Consolidate Bills. 5: Invoice. 6: Inherit Offer. 7: Pay On Behalf. 8: Cost Explorer. 9: Budget Management.  1, 2 and 7 are required.
      */
     public $PermissionIds;
 
@@ -103,7 +103,7 @@ class CreateOrganizationMemberRequest extends AbstractModel
     /**
      * @param string $Name Member name, which can contain up to 25 letters, digits, and symbols `+@&._[]-:,`.
      * @param string $PolicyType Relationship policy. Valid value: `Financial`.
-     * @param array $PermissionIds List of member financial permission IDs. `7` indicates paying, which is the default value.
+     * @param array $PermissionIds Member Finanace Authorization. Valid values: 1: View Bills. 2: View Balance.  4: Consolidate Bills. 5: Invoice. 6: Inherit Offer. 7: Pay On Behalf. 8: Cost Explorer. 9: Budget Management.  1, 2 and 7 are required.
      * @param integer $NodeId Node ID of the member's department, which can be obtained through [DescribeOrganizationNodes](https://intl.cloud.tencent.com/document/product/850/82926?from_cn_redirect=1).
      * @param string $AccountName Account name, which can contain up to 25 letters, digits, and symbols `+@&._[]-:,`.
      * @param string $Remark Remarks.
