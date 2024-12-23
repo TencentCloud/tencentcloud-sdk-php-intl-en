@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() Obtain Anti-DDoS instance ID (only Anti-DDoS Advanced). For example, `bgpip-0000011x`.
  * @method void setInstanceId(string $InstanceId) Set Anti-DDoS instance ID (only Anti-DDoS Advanced). For example, `bgpip-0000011x`.
- * @method string getEip() Obtain EIP of the Anti-DDoS instance ID
- * @method void setEip(string $Eip) Set EIP of the Anti-DDoS instance ID
+ * @method string getEip() Obtain EIP of the Anti-DDoS instance ID.
+ * @method void setEip(string $Eip) Set EIP of the Anti-DDoS instance ID.
  * @method string getCvmInstanceID() Obtain Instance ID to bind. For example, `ins-11112222`. It can be queried in the console or obtained from `InstanceId` returned by `DescribeInstances`.
  * @method void setCvmInstanceID(string $CvmInstanceID) Set Instance ID to bind. For example, `ins-11112222`. It can be queried in the console or obtained from `InstanceId` returned by `DescribeInstances`.
  * @method string getCvmRegion() Obtain Region of the CVM instance. For example, `ap-hongkong`.
@@ -37,7 +37,7 @@ class AssociateDDoSEipAddressRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var string EIP of the Anti-DDoS instance ID
+     * @var string EIP of the Anti-DDoS instance ID.
      */
     public $Eip;
 
@@ -53,7 +53,7 @@ class AssociateDDoSEipAddressRequest extends AbstractModel
 
     /**
      * @param string $InstanceId Anti-DDoS instance ID (only Anti-DDoS Advanced). For example, `bgpip-0000011x`.
-     * @param string $Eip EIP of the Anti-DDoS instance ID
+     * @param string $Eip EIP of the Anti-DDoS instance ID.
      * @param string $CvmInstanceID Instance ID to bind. For example, `ins-11112222`. It can be queried in the console or obtained from `InstanceId` returned by `DescribeInstances`.
      * @param string $CvmRegion Region of the CVM instance. For example, `ap-hongkong`.
      */

@@ -110,64 +110,58 @@ frame: indicates frame
 second: indicates second
 Default value: frame
 Note: This field may return null, indicating that no valid value can be obtained.
- * @method string getFillType() Obtain Filling mode. When the configured aspect ratio parameter for video streams differs from the aspect ratio of the original video, the processing method for transcoding is "filling". Optional filling modes:
-<li>stretch: Each frame is stretched to fill the entire screen, which may cause the transcoded video to be "flattened" or "stretched".</li>
-<li>black: The aspect ratio of the video is kept unchanged, and the rest of the edges is filled with black.</li>
-<li>white: The aspect ratio of the video is kept unchanged, and the rest of the edges is filled with white.</li>
-<li>gauss: The aspect ratio of the video is kept unchanged, and the rest of the edges is filled with a Gaussian blur.</li>
+ * @method string getFillType() Obtain Padding method. When the video stream configuration width and height parameters are inconsistent with the aspect ratio of the original video, the transcoding processing method is "padding". Optional filling method:
+<li> stretch: Stretch. The screenshot will be stretched frame by frame to match the aspect ratio of the source video, which may make the screenshot "shorter" or "longer";</li>
+<li>black: Fill with black. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with black color blocks.</li>
+<li>white: Fill with white. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with white color blocks.</li>
+<li>gauss: applies Gaussian blur to the uncovered area, without changing the image's aspect ratio.</li>
 
 <li>smarttailor: Video images are smartly selected to ensure proportional image cropping.</li>
 Default value: black.
-Note: Only stretch and black are supported for adaptive bitrate streaming.
- * @method void setFillType(string $FillType) Set Filling mode. When the configured aspect ratio parameter for video streams differs from the aspect ratio of the original video, the processing method for transcoding is "filling". Optional filling modes:
-<li>stretch: Each frame is stretched to fill the entire screen, which may cause the transcoded video to be "flattened" or "stretched".</li>
-<li>black: The aspect ratio of the video is kept unchanged, and the rest of the edges is filled with black.</li>
-<li>white: The aspect ratio of the video is kept unchanged, and the rest of the edges is filled with white.</li>
-<li>gauss: The aspect ratio of the video is kept unchanged, and the rest of the edges is filled with a Gaussian blur.</li>
+ * @method void setFillType(string $FillType) Set Padding method. When the video stream configuration width and height parameters are inconsistent with the aspect ratio of the original video, the transcoding processing method is "padding". Optional filling method:
+<li> stretch: Stretch. The screenshot will be stretched frame by frame to match the aspect ratio of the source video, which may make the screenshot "shorter" or "longer";</li>
+<li>black: Fill with black. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with black color blocks.</li>
+<li>white: Fill with white. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with white color blocks.</li>
+<li>gauss: applies Gaussian blur to the uncovered area, without changing the image's aspect ratio.</li>
 
 <li>smarttailor: Video images are smartly selected to ensure proportional image cropping.</li>
 Default value: black.
-Note: Only stretch and black are supported for adaptive bitrate streaming.
- * @method integer getVcrf() Obtain Control factor for constant video bitrate. Value range: [0, 51].
-If this parameter is specified, the bitrate control mode for the CRF will be used for transcoding (the video bitrate will no longer take effect).
-It is recommended not to specify this parameter if there are no special requirements.
-
-Note:
-If Mode is set to ABR, the Vcrf value does not need to be configured.
-If Mode is set to CBR, the Vcrf value does not need to be configured.
+ * @method integer getVcrf() Obtain Specifies the constant bitrate control factor for the video. Value range: [0, 51]. Leaving this parameter blank sets it to "Automatic". It is recommended not to specify this parameter unless necessary.
+If the Mode parameter is set to VBR and the Vcrf value is also configured, MPS will process the video in VBR mode, considering both Vcrf and Bitrate parameters to balance video quality, bitrate, transcoding efficiency, and file size.
+If the Mode parameter is set to CRF, the Bitrate setting will be invalid, and encoding will be based on the Vcrf value.
+If the Mode parameter is set to ABR or CBR, the Vcrf value does not need to be configured.
 Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setVcrf(integer $Vcrf) Set Control factor for constant video bitrate. Value range: [0, 51].
-If this parameter is specified, the bitrate control mode for the CRF will be used for transcoding (the video bitrate will no longer take effect).
-It is recommended not to specify this parameter if there are no special requirements.
-
-Note:
-If Mode is set to ABR, the Vcrf value does not need to be configured.
-If Mode is set to CBR, the Vcrf value does not need to be configured.
+ * @method void setVcrf(integer $Vcrf) Set Specifies the constant bitrate control factor for the video. Value range: [0, 51]. Leaving this parameter blank sets it to "Automatic". It is recommended not to specify this parameter unless necessary.
+If the Mode parameter is set to VBR and the Vcrf value is also configured, MPS will process the video in VBR mode, considering both Vcrf and Bitrate parameters to balance video quality, bitrate, transcoding efficiency, and file size.
+If the Mode parameter is set to CRF, the Bitrate setting will be invalid, and encoding will be based on the Vcrf value.
+If the Mode parameter is set to ABR or CBR, the Vcrf value does not need to be configured.
 Note: This field may return null, indicating that no valid value can be obtained.
- * @method integer getHlsTime() Obtain Average segment duration. Value range: (0-10], unit: second
-Default value: 10
+ * @method integer getHlsTime() Obtain Average segment duration. Value range: (0-10], unit: second.
+This parameter will be set to automatic if not specified. The segment duration will be automatically selected based on the GOP and other characteristics of the video.
 Note: It can be used only in the container format of hls.
 Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setHlsTime(integer $HlsTime) Set Average segment duration. Value range: (0-10], unit: second
-Default value: 10
+ * @method void setHlsTime(integer $HlsTime) Set Average segment duration. Value range: (0-10], unit: second.
+This parameter will be set to automatic if not specified. The segment duration will be automatically selected based on the GOP and other characteristics of the video.
 Note: It can be used only in the container format of hls.
 Note: This field may return null, indicating that no valid value can be obtained.
  * @method integer getSegmentType() Obtain HLS segment type. Valid values:
-<li>0: HLS+TS segment.</li>
-<li>2: HLS+TS byte range.</li>
-<li>7: HLS+MP4 segment.</li>
-<li>5: HLS+MP4 byte range.</li>
+<li>0: HLS+TS segment</li>
+<li>2: HLS+TS byte range</li>
+<li>7: HLS+MP4 segment</li>
+<li>5: HLS+MP4 byte range</li>
 Default value: 0
 
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field is used for normal/TSC transcoding settings and does not apply to adaptive bitrate streaming. To configure the segment type for adaptive bitrate streaming, use the outer field.
+Note: This field may return null, indicating that no valid value can be obtained.
  * @method void setSegmentType(integer $SegmentType) Set HLS segment type. Valid values:
-<li>0: HLS+TS segment.</li>
-<li>2: HLS+TS byte range.</li>
-<li>7: HLS+MP4 segment.</li>
-<li>5: HLS+MP4 byte range.</li>
+<li>0: HLS+TS segment</li>
+<li>2: HLS+TS byte range</li>
+<li>7: HLS+MP4 segment</li>
+<li>5: HLS+MP4 byte range</li>
 Default value: 0
 
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field is used for normal/TSC transcoding settings and does not apply to adaptive bitrate streaming. To configure the segment type for adaptive bitrate streaming, use the outer field.
+Note: This field may return null, indicating that no valid value can be obtained.
  * @method integer getFpsDenominator() Obtain Denominator of the frame rate.
 Note: The value must be greater than 0.
 Note: This field may return null, indicating that no valid values can be obtained.
@@ -266,57 +260,63 @@ Note: This field may return null, indicating that no valid value can be obtained
  * @method void setCompress(integer $Compress) Set Proportional compression bitrate. When it is enabled, the bitrate of the output video will be adjusted according to the proportion. After the compression ratio is entered, the system will automatically calculate the target output bitrate based on the source video bitrate. Compression ratio range: 0-100
 Leaving this value blank means it is not enabled by default.
 Note: This field may return null, indicating that no valid value can be obtained.
- * @method SegmentSpecificInfo getSegmentSpecificInfo() Obtain Special segment configuration
+ * @method SegmentSpecificInfo getSegmentSpecificInfo() Obtain Segment duration at startup.
 Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setSegmentSpecificInfo(SegmentSpecificInfo $SegmentSpecificInfo) Set Special segment configuration
+ * @method void setSegmentSpecificInfo(SegmentSpecificInfo $SegmentSpecificInfo) Set Segment duration at startup.
 Note: This field may return null, indicating that no valid value can be obtained.
- * @method integer getScenarioBased() Obtain Whether to enable scenario-based settings for the template 
-0: disable 
+ * @method integer getScenarioBased() Obtain Whether the template enables scenario-based settings. 
+0: disable. 
 1: enable 
  
 Default value: 0	
 	
+Note: The values of SceneType and CompressType fields only take effect when this field value is 1.
 Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setScenarioBased(integer $ScenarioBased) Set Whether to enable scenario-based settings for the template 
-0: disable 
+ * @method void setScenarioBased(integer $ScenarioBased) Set Whether the template enables scenario-based settings. 
+0: disable. 
 1: enable 
  
 Default value: 0	
 	
+Note: The values of SceneType and CompressType fields only take effect when this field value is 1.
 Note: This field may return null, indicating that no valid value can be obtained.
- * @method string getSceneType() Obtain Video scenario. Optional values: 
+ * @method string getSceneType() Obtain Video scenario. Valid values: 
 normal: General transcoding scenario: General transcoding and compression scenario.
 pgc: PGC HD TV shows and movies: At the time of compression, focus is placed on the viewing experience of TV shows and movies and ROI encoding is performed according to their characteristics, while high-quality contents of videos and audio are retained. 
 materials_video: HD materials: Scenario involving material resources, where requirements for image quality are extremely high and there are many transparent images, with almost no visual loss during compression. 
 ugc: UGC content: It is suitable for a wide range of UGC/short video scenarios, with an optimized encoding bitrate for short video characteristics, improved image quality, and enhanced business QOS/QOE metrics. 
 e-commerce_video: Fashion show/e-commerce: At the time of compression, emphasis is placed on detail clarity and ROI enhancement, with a particular focus on maintaining the image quality of the face region. 
 educational_video: Education: At the time of compression, emphasis is placed on the clarity and readability of text and images to help students better understand the content, ensuring that the teaching content is clearly conveyed. 
-Default value: normal
+Default value: normal.
+Note: To use this value, the value of ScenarioBased must be 1; otherwise, this value will not take effect.
 Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setSceneType(string $SceneType) Set Video scenario. Optional values: 
+ * @method void setSceneType(string $SceneType) Set Video scenario. Valid values: 
 normal: General transcoding scenario: General transcoding and compression scenario.
 pgc: PGC HD TV shows and movies: At the time of compression, focus is placed on the viewing experience of TV shows and movies and ROI encoding is performed according to their characteristics, while high-quality contents of videos and audio are retained. 
 materials_video: HD materials: Scenario involving material resources, where requirements for image quality are extremely high and there are many transparent images, with almost no visual loss during compression. 
 ugc: UGC content: It is suitable for a wide range of UGC/short video scenarios, with an optimized encoding bitrate for short video characteristics, improved image quality, and enhanced business QOS/QOE metrics. 
 e-commerce_video: Fashion show/e-commerce: At the time of compression, emphasis is placed on detail clarity and ROI enhancement, with a particular focus on maintaining the image quality of the face region. 
 educational_video: Education: At the time of compression, emphasis is placed on the clarity and readability of text and images to help students better understand the content, ensuring that the teaching content is clearly conveyed. 
-Default value: normal
+Default value: normal.
+Note: To use this value, the value of ScenarioBased must be 1; otherwise, this value will not take effect.
 Note: This field may return null, indicating that no valid value can be obtained.
- * @method string getCompressType() Obtain Transcoding policy. Optional values: 
+ * @method string getCompressType() Obtain Transcoding policy. Valid values: 
 ultra_compress: Extreme compression: Compared to standard compression, this policy can maximize bitrate compression while ensuring a certain level of image quality, thus greatly saving bandwidth and storage costs. 
-standard_compress: Comprehensively optimal: The compression ratio and image quality are balanced, and files are compressed as much as possible without a noticeable reduction in subjective image quality. Only audio and video TSC transcoding fees are charged for this policy. 
-high_compress: Bitrate priority: Priority is given to reducing file size, which may result in certain image quality loss. Only audio and video TSC transcoding fees are charged for this policy. 
-low_compress: Image quality priority: Priority is given to ensuring image quality, and the size of compressed files may be relatively large. Only audio and video TSC transcoding fees are charged for this policy. 
-Default value: standard_compress 
-Note: If you need to watch videos on TV, it is recommended no to use the ultra_compress policy. The billing standard for the ultra_compress policy is TSC transcoding + audio and video enhancement - artifacts removal.
+standard_compress: Comprehensively optimal: Balances compression ratio and image quality, compressing files as much as possible without a noticeable reduction in subjective image quality. Only audio and video TSC transcoding fees are charged for this policy. 
+high_compress: Bitrate priority: Prioritizes reducing file size, which may result in certain image quality loss. Only audio and video TSC transcoding fees are charged for this policy. 
+low_compress: Image quality priority: Prioritizes ensuring image quality, and the size of compressed files may be relatively large. Only audio and video TSC transcoding fees are charged for this policy. 
+Default value: standard_compress. 
+Note: If you need to watch videos on TV, it is recommended not to use the ultra_compress policy. The billing standard for the ultra_compress policy is TSC transcoding + audio and video enhancement - artifacts removal.
+Note: To use this value, the value of ScenarioBased must be 1; otherwise, this value will not take effect.
 Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setCompressType(string $CompressType) Set Transcoding policy. Optional values: 
+ * @method void setCompressType(string $CompressType) Set Transcoding policy. Valid values: 
 ultra_compress: Extreme compression: Compared to standard compression, this policy can maximize bitrate compression while ensuring a certain level of image quality, thus greatly saving bandwidth and storage costs. 
-standard_compress: Comprehensively optimal: The compression ratio and image quality are balanced, and files are compressed as much as possible without a noticeable reduction in subjective image quality. Only audio and video TSC transcoding fees are charged for this policy. 
-high_compress: Bitrate priority: Priority is given to reducing file size, which may result in certain image quality loss. Only audio and video TSC transcoding fees are charged for this policy. 
-low_compress: Image quality priority: Priority is given to ensuring image quality, and the size of compressed files may be relatively large. Only audio and video TSC transcoding fees are charged for this policy. 
-Default value: standard_compress 
-Note: If you need to watch videos on TV, it is recommended no to use the ultra_compress policy. The billing standard for the ultra_compress policy is TSC transcoding + audio and video enhancement - artifacts removal.
+standard_compress: Comprehensively optimal: Balances compression ratio and image quality, compressing files as much as possible without a noticeable reduction in subjective image quality. Only audio and video TSC transcoding fees are charged for this policy. 
+high_compress: Bitrate priority: Prioritizes reducing file size, which may result in certain image quality loss. Only audio and video TSC transcoding fees are charged for this policy. 
+low_compress: Image quality priority: Prioritizes ensuring image quality, and the size of compressed files may be relatively large. Only audio and video TSC transcoding fees are charged for this policy. 
+Default value: standard_compress. 
+Note: If you need to watch videos on TV, it is recommended not to use the ultra_compress policy. The billing standard for the ultra_compress policy is TSC transcoding + audio and video enhancement - artifacts removal.
+Note: To use this value, the value of ScenarioBased must be 1; otherwise, this value will not take effect.
 Note: This field may return null, indicating that no valid value can be obtained.
  */
 class VideoTemplateInfo extends AbstractModel
@@ -399,33 +399,29 @@ Note: This field may return null, indicating that no valid value can be obtained
     public $GopUnit;
 
     /**
-     * @var string Filling mode. When the configured aspect ratio parameter for video streams differs from the aspect ratio of the original video, the processing method for transcoding is "filling". Optional filling modes:
-<li>stretch: Each frame is stretched to fill the entire screen, which may cause the transcoded video to be "flattened" or "stretched".</li>
-<li>black: The aspect ratio of the video is kept unchanged, and the rest of the edges is filled with black.</li>
-<li>white: The aspect ratio of the video is kept unchanged, and the rest of the edges is filled with white.</li>
-<li>gauss: The aspect ratio of the video is kept unchanged, and the rest of the edges is filled with a Gaussian blur.</li>
+     * @var string Padding method. When the video stream configuration width and height parameters are inconsistent with the aspect ratio of the original video, the transcoding processing method is "padding". Optional filling method:
+<li> stretch: Stretch. The screenshot will be stretched frame by frame to match the aspect ratio of the source video, which may make the screenshot "shorter" or "longer";</li>
+<li>black: Fill with black. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with black color blocks.</li>
+<li>white: Fill with white. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with white color blocks.</li>
+<li>gauss: applies Gaussian blur to the uncovered area, without changing the image's aspect ratio.</li>
 
 <li>smarttailor: Video images are smartly selected to ensure proportional image cropping.</li>
 Default value: black.
-Note: Only stretch and black are supported for adaptive bitrate streaming.
      */
     public $FillType;
 
     /**
-     * @var integer Control factor for constant video bitrate. Value range: [0, 51].
-If this parameter is specified, the bitrate control mode for the CRF will be used for transcoding (the video bitrate will no longer take effect).
-It is recommended not to specify this parameter if there are no special requirements.
-
-Note:
-If Mode is set to ABR, the Vcrf value does not need to be configured.
-If Mode is set to CBR, the Vcrf value does not need to be configured.
+     * @var integer Specifies the constant bitrate control factor for the video. Value range: [0, 51]. Leaving this parameter blank sets it to "Automatic". It is recommended not to specify this parameter unless necessary.
+If the Mode parameter is set to VBR and the Vcrf value is also configured, MPS will process the video in VBR mode, considering both Vcrf and Bitrate parameters to balance video quality, bitrate, transcoding efficiency, and file size.
+If the Mode parameter is set to CRF, the Bitrate setting will be invalid, and encoding will be based on the Vcrf value.
+If the Mode parameter is set to ABR or CBR, the Vcrf value does not need to be configured.
 Note: This field may return null, indicating that no valid value can be obtained.
      */
     public $Vcrf;
 
     /**
-     * @var integer Average segment duration. Value range: (0-10], unit: second
-Default value: 10
+     * @var integer Average segment duration. Value range: (0-10], unit: second.
+This parameter will be set to automatic if not specified. The segment duration will be automatically selected based on the GOP and other characteristics of the video.
 Note: It can be used only in the container format of hls.
 Note: This field may return null, indicating that no valid value can be obtained.
      */
@@ -433,13 +429,14 @@ Note: This field may return null, indicating that no valid value can be obtained
 
     /**
      * @var integer HLS segment type. Valid values:
-<li>0: HLS+TS segment.</li>
-<li>2: HLS+TS byte range.</li>
-<li>7: HLS+MP4 segment.</li>
-<li>5: HLS+MP4 byte range.</li>
+<li>0: HLS+TS segment</li>
+<li>2: HLS+TS byte range</li>
+<li>7: HLS+MP4 segment</li>
+<li>5: HLS+MP4 byte range</li>
 Default value: 0
 
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field is used for normal/TSC transcoding settings and does not apply to adaptive bitrate streaming. To configure the segment type for adaptive bitrate streaming, use the outer field.
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public $SegmentType;
 
@@ -537,43 +534,46 @@ Note: This field may return null, indicating that no valid value can be obtained
     public $Compress;
 
     /**
-     * @var SegmentSpecificInfo Special segment configuration
+     * @var SegmentSpecificInfo Segment duration at startup.
 Note: This field may return null, indicating that no valid value can be obtained.
      */
     public $SegmentSpecificInfo;
 
     /**
-     * @var integer Whether to enable scenario-based settings for the template 
-0: disable 
+     * @var integer Whether the template enables scenario-based settings. 
+0: disable. 
 1: enable 
  
 Default value: 0	
 	
+Note: The values of SceneType and CompressType fields only take effect when this field value is 1.
 Note: This field may return null, indicating that no valid value can be obtained.
      */
     public $ScenarioBased;
 
     /**
-     * @var string Video scenario. Optional values: 
+     * @var string Video scenario. Valid values: 
 normal: General transcoding scenario: General transcoding and compression scenario.
 pgc: PGC HD TV shows and movies: At the time of compression, focus is placed on the viewing experience of TV shows and movies and ROI encoding is performed according to their characteristics, while high-quality contents of videos and audio are retained. 
 materials_video: HD materials: Scenario involving material resources, where requirements for image quality are extremely high and there are many transparent images, with almost no visual loss during compression. 
 ugc: UGC content: It is suitable for a wide range of UGC/short video scenarios, with an optimized encoding bitrate for short video characteristics, improved image quality, and enhanced business QOS/QOE metrics. 
 e-commerce_video: Fashion show/e-commerce: At the time of compression, emphasis is placed on detail clarity and ROI enhancement, with a particular focus on maintaining the image quality of the face region. 
 educational_video: Education: At the time of compression, emphasis is placed on the clarity and readability of text and images to help students better understand the content, ensuring that the teaching content is clearly conveyed. 
-Default value: normal
+Default value: normal.
+Note: To use this value, the value of ScenarioBased must be 1; otherwise, this value will not take effect.
 Note: This field may return null, indicating that no valid value can be obtained.
      */
     public $SceneType;
 
     /**
-     * @var string Transcoding policy. Optional values: 
+     * @var string Transcoding policy. Valid values: 
 ultra_compress: Extreme compression: Compared to standard compression, this policy can maximize bitrate compression while ensuring a certain level of image quality, thus greatly saving bandwidth and storage costs. 
-standard_compress: Comprehensively optimal: The compression ratio and image quality are balanced, and files are compressed as much as possible without a noticeable reduction in subjective image quality. Only audio and video TSC transcoding fees are charged for this policy. 
-high_compress: Bitrate priority: Priority is given to reducing file size, which may result in certain image quality loss. Only audio and video TSC transcoding fees are charged for this policy. 
-low_compress: Image quality priority: Priority is given to ensuring image quality, and the size of compressed files may be relatively large. Only audio and video TSC transcoding fees are charged for this policy. 
-Default value: standard_compress 
-Note: If you need to watch videos on TV, it is recommended no to use the ultra_compress policy. The billing standard for the ultra_compress policy is TSC transcoding + audio and video enhancement - artifacts removal.
+standard_compress: Comprehensively optimal: Balances compression ratio and image quality, compressing files as much as possible without a noticeable reduction in subjective image quality. Only audio and video TSC transcoding fees are charged for this policy. 
+high_compress: Bitrate priority: Prioritizes reducing file size, which may result in certain image quality loss. Only audio and video TSC transcoding fees are charged for this policy. 
+low_compress: Image quality priority: Prioritizes ensuring image quality, and the size of compressed files may be relatively large. Only audio and video TSC transcoding fees are charged for this policy. 
+Default value: standard_compress. 
+Note: If you need to watch videos on TV, it is recommended not to use the ultra_compress policy. The billing standard for the ultra_compress policy is TSC transcoding + audio and video enhancement - artifacts removal.
+Note: To use this value, the value of ScenarioBased must be 1; otherwise, this value will not take effect.
 Note: This field may return null, indicating that no valid value can be obtained.
      */
     public $CompressType;
@@ -624,35 +624,32 @@ frame: indicates frame
 second: indicates second
 Default value: frame
 Note: This field may return null, indicating that no valid value can be obtained.
-     * @param string $FillType Filling mode. When the configured aspect ratio parameter for video streams differs from the aspect ratio of the original video, the processing method for transcoding is "filling". Optional filling modes:
-<li>stretch: Each frame is stretched to fill the entire screen, which may cause the transcoded video to be "flattened" or "stretched".</li>
-<li>black: The aspect ratio of the video is kept unchanged, and the rest of the edges is filled with black.</li>
-<li>white: The aspect ratio of the video is kept unchanged, and the rest of the edges is filled with white.</li>
-<li>gauss: The aspect ratio of the video is kept unchanged, and the rest of the edges is filled with a Gaussian blur.</li>
+     * @param string $FillType Padding method. When the video stream configuration width and height parameters are inconsistent with the aspect ratio of the original video, the transcoding processing method is "padding". Optional filling method:
+<li> stretch: Stretch. The screenshot will be stretched frame by frame to match the aspect ratio of the source video, which may make the screenshot "shorter" or "longer";</li>
+<li>black: Fill with black. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with black color blocks.</li>
+<li>white: Fill with white. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with white color blocks.</li>
+<li>gauss: applies Gaussian blur to the uncovered area, without changing the image's aspect ratio.</li>
 
 <li>smarttailor: Video images are smartly selected to ensure proportional image cropping.</li>
 Default value: black.
-Note: Only stretch and black are supported for adaptive bitrate streaming.
-     * @param integer $Vcrf Control factor for constant video bitrate. Value range: [0, 51].
-If this parameter is specified, the bitrate control mode for the CRF will be used for transcoding (the video bitrate will no longer take effect).
-It is recommended not to specify this parameter if there are no special requirements.
-
-Note:
-If Mode is set to ABR, the Vcrf value does not need to be configured.
-If Mode is set to CBR, the Vcrf value does not need to be configured.
+     * @param integer $Vcrf Specifies the constant bitrate control factor for the video. Value range: [0, 51]. Leaving this parameter blank sets it to "Automatic". It is recommended not to specify this parameter unless necessary.
+If the Mode parameter is set to VBR and the Vcrf value is also configured, MPS will process the video in VBR mode, considering both Vcrf and Bitrate parameters to balance video quality, bitrate, transcoding efficiency, and file size.
+If the Mode parameter is set to CRF, the Bitrate setting will be invalid, and encoding will be based on the Vcrf value.
+If the Mode parameter is set to ABR or CBR, the Vcrf value does not need to be configured.
 Note: This field may return null, indicating that no valid value can be obtained.
-     * @param integer $HlsTime Average segment duration. Value range: (0-10], unit: second
-Default value: 10
+     * @param integer $HlsTime Average segment duration. Value range: (0-10], unit: second.
+This parameter will be set to automatic if not specified. The segment duration will be automatically selected based on the GOP and other characteristics of the video.
 Note: It can be used only in the container format of hls.
 Note: This field may return null, indicating that no valid value can be obtained.
      * @param integer $SegmentType HLS segment type. Valid values:
-<li>0: HLS+TS segment.</li>
-<li>2: HLS+TS byte range.</li>
-<li>7: HLS+MP4 segment.</li>
-<li>5: HLS+MP4 byte range.</li>
+<li>0: HLS+TS segment</li>
+<li>2: HLS+TS byte range</li>
+<li>7: HLS+MP4 segment</li>
+<li>5: HLS+MP4 byte range</li>
 Default value: 0
 
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field is used for normal/TSC transcoding settings and does not apply to adaptive bitrate streaming. To configure the segment type for adaptive bitrate streaming, use the outer field.
+Note: This field may return null, indicating that no valid value can be obtained.
      * @param integer $FpsDenominator Denominator of the frame rate.
 Note: The value must be greater than 0.
 Note: This field may return null, indicating that no valid values can be obtained.
@@ -702,31 +699,34 @@ Note: This field may return null, indicating that no valid value can be obtained
      * @param integer $Compress Proportional compression bitrate. When it is enabled, the bitrate of the output video will be adjusted according to the proportion. After the compression ratio is entered, the system will automatically calculate the target output bitrate based on the source video bitrate. Compression ratio range: 0-100
 Leaving this value blank means it is not enabled by default.
 Note: This field may return null, indicating that no valid value can be obtained.
-     * @param SegmentSpecificInfo $SegmentSpecificInfo Special segment configuration
+     * @param SegmentSpecificInfo $SegmentSpecificInfo Segment duration at startup.
 Note: This field may return null, indicating that no valid value can be obtained.
-     * @param integer $ScenarioBased Whether to enable scenario-based settings for the template 
-0: disable 
+     * @param integer $ScenarioBased Whether the template enables scenario-based settings. 
+0: disable. 
 1: enable 
  
 Default value: 0	
 	
+Note: The values of SceneType and CompressType fields only take effect when this field value is 1.
 Note: This field may return null, indicating that no valid value can be obtained.
-     * @param string $SceneType Video scenario. Optional values: 
+     * @param string $SceneType Video scenario. Valid values: 
 normal: General transcoding scenario: General transcoding and compression scenario.
 pgc: PGC HD TV shows and movies: At the time of compression, focus is placed on the viewing experience of TV shows and movies and ROI encoding is performed according to their characteristics, while high-quality contents of videos and audio are retained. 
 materials_video: HD materials: Scenario involving material resources, where requirements for image quality are extremely high and there are many transparent images, with almost no visual loss during compression. 
 ugc: UGC content: It is suitable for a wide range of UGC/short video scenarios, with an optimized encoding bitrate for short video characteristics, improved image quality, and enhanced business QOS/QOE metrics. 
 e-commerce_video: Fashion show/e-commerce: At the time of compression, emphasis is placed on detail clarity and ROI enhancement, with a particular focus on maintaining the image quality of the face region. 
 educational_video: Education: At the time of compression, emphasis is placed on the clarity and readability of text and images to help students better understand the content, ensuring that the teaching content is clearly conveyed. 
-Default value: normal
+Default value: normal.
+Note: To use this value, the value of ScenarioBased must be 1; otherwise, this value will not take effect.
 Note: This field may return null, indicating that no valid value can be obtained.
-     * @param string $CompressType Transcoding policy. Optional values: 
+     * @param string $CompressType Transcoding policy. Valid values: 
 ultra_compress: Extreme compression: Compared to standard compression, this policy can maximize bitrate compression while ensuring a certain level of image quality, thus greatly saving bandwidth and storage costs. 
-standard_compress: Comprehensively optimal: The compression ratio and image quality are balanced, and files are compressed as much as possible without a noticeable reduction in subjective image quality. Only audio and video TSC transcoding fees are charged for this policy. 
-high_compress: Bitrate priority: Priority is given to reducing file size, which may result in certain image quality loss. Only audio and video TSC transcoding fees are charged for this policy. 
-low_compress: Image quality priority: Priority is given to ensuring image quality, and the size of compressed files may be relatively large. Only audio and video TSC transcoding fees are charged for this policy. 
-Default value: standard_compress 
-Note: If you need to watch videos on TV, it is recommended no to use the ultra_compress policy. The billing standard for the ultra_compress policy is TSC transcoding + audio and video enhancement - artifacts removal.
+standard_compress: Comprehensively optimal: Balances compression ratio and image quality, compressing files as much as possible without a noticeable reduction in subjective image quality. Only audio and video TSC transcoding fees are charged for this policy. 
+high_compress: Bitrate priority: Prioritizes reducing file size, which may result in certain image quality loss. Only audio and video TSC transcoding fees are charged for this policy. 
+low_compress: Image quality priority: Prioritizes ensuring image quality, and the size of compressed files may be relatively large. Only audio and video TSC transcoding fees are charged for this policy. 
+Default value: standard_compress. 
+Note: If you need to watch videos on TV, it is recommended not to use the ultra_compress policy. The billing standard for the ultra_compress policy is TSC transcoding + audio and video enhancement - artifacts removal.
+Note: To use this value, the value of ScenarioBased must be 1; otherwise, this value will not take effect.
 Note: This field may return null, indicating that no valid value can be obtained.
      */
     function __construct()

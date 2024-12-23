@@ -50,6 +50,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: This field may return `null`, indicating that no valid values can be obtained.
  * @method void setTags(array $Tags) Set Tags.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method string getRoleArn() Obtain The Role Arn 
+ * @method void setRoleArn(string $RoleArn) Set The Role Arn 
  */
 class RoleInfo extends AbstractModel
 {
@@ -113,6 +115,11 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     public $Tags;
 
     /**
+     * @var string The Role Arn 
+     */
+    public $RoleArn;
+
+    /**
      * @param string $RoleId Role ID
      * @param string $RoleName Role name
      * @param string $PolicyDocument Role policy document
@@ -128,6 +135,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param array $Tags Tags.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param string $RoleArn The Role Arn 
      */
     function __construct()
     {
@@ -189,6 +197,10 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                 $obj->deserialize($value);
                 array_push($this->Tags, $obj);
             }
+        }
+
+        if (array_key_exists("RoleArn",$param) and $param["RoleArn"] !== null) {
+            $this->RoleArn = $param["RoleArn"];
         }
     }
 }

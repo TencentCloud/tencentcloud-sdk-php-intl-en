@@ -38,7 +38,6 @@ use TencentCloud\Cfw\V20190904\Models as Models;
  * @method Models\DescribeAcListsResponse DescribeAcLists(Models\DescribeAcListsRequest $req) This API is used to get the access control list.
  * @method Models\DescribeAssociatedInstanceListResponse DescribeAssociatedInstanceList(Models\DescribeAssociatedInstanceListRequest $req) This API is used to get the list of instances associated with a security group.
  * @method Models\DescribeBlockByIpTimesListResponse DescribeBlockByIpTimesList(Models\DescribeBlockByIpTimesListRequest $req) This API is used to get blocked IP data.
-
  * @method Models\DescribeBlockIgnoreListResponse DescribeBlockIgnoreList(Models\DescribeBlockIgnoreListRequest $req) This API is used to get allowlists or blocklists for intrusion prevention.
  * @method Models\DescribeBlockStaticListResponse DescribeBlockStaticList(Models\DescribeBlockStaticListRequest $req) This API is used to get the most frequent attacker.
 

@@ -20,30 +20,25 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeBlockByIpTimesList request structure.
  *
- * @method string getStartTime() Obtain Start time
- * @method void setStartTime(string $StartTime) Set Start time
  * @method string getEndTime() Obtain End time
  * @method void setEndTime(string $EndTime) Set End time
  * @method string getIp() Obtain IP search criteria
  * @method void setIp(string $Ip) Set IP search criteria
- * @method string getZone() Obtain Region
- * @method void setZone(string $Zone) Set Region
+ * @method string getStartTime() Obtain Start time
+ * @method void setStartTime(string $StartTime) Set Start time
  * @method string getDirection() Obtain Direction
  * @method void setDirection(string $Direction) Set Direction
- * @method string getSource() Obtain Source
- * @method void setSource(string $Source) Set Source
  * @method string getEdgeId() Obtain Inter-VPC firewall toggle edge ID
  * @method void setEdgeId(string $EdgeId) Set Inter-VPC firewall toggle edge ID
  * @method string getLogSource() Obtain Log source. move: inter-VPC firewall
  * @method void setLogSource(string $LogSource) Set Log source. move: inter-VPC firewall
+ * @method string getSource() Obtain Source
+ * @method void setSource(string $Source) Set Source
+ * @method string getZone() Obtain Region
+ * @method void setZone(string $Zone) Set Region
  */
 class DescribeBlockByIpTimesListRequest extends AbstractModel
 {
-    /**
-     * @var string Start time
-     */
-    public $StartTime;
-
     /**
      * @var string End time
      */
@@ -55,19 +50,14 @@ class DescribeBlockByIpTimesListRequest extends AbstractModel
     public $Ip;
 
     /**
-     * @var string Region
+     * @var string Start time
      */
-    public $Zone;
+    public $StartTime;
 
     /**
      * @var string Direction
      */
     public $Direction;
-
-    /**
-     * @var string Source
-     */
-    public $Source;
 
     /**
      * @var string Inter-VPC firewall toggle edge ID
@@ -80,14 +70,24 @@ class DescribeBlockByIpTimesListRequest extends AbstractModel
     public $LogSource;
 
     /**
-     * @param string $StartTime Start time
+     * @var string Source
+     */
+    public $Source;
+
+    /**
+     * @var string Region
+     */
+    public $Zone;
+
+    /**
      * @param string $EndTime End time
      * @param string $Ip IP search criteria
-     * @param string $Zone Region
+     * @param string $StartTime Start time
      * @param string $Direction Direction
-     * @param string $Source Source
      * @param string $EdgeId Inter-VPC firewall toggle edge ID
      * @param string $LogSource Log source. move: inter-VPC firewall
+     * @param string $Source Source
+     * @param string $Zone Region
      */
     function __construct()
     {
@@ -102,10 +102,6 @@ class DescribeBlockByIpTimesListRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("StartTime",$param) and $param["StartTime"] !== null) {
-            $this->StartTime = $param["StartTime"];
-        }
-
         if (array_key_exists("EndTime",$param) and $param["EndTime"] !== null) {
             $this->EndTime = $param["EndTime"];
         }
@@ -114,16 +110,12 @@ class DescribeBlockByIpTimesListRequest extends AbstractModel
             $this->Ip = $param["Ip"];
         }
 
-        if (array_key_exists("Zone",$param) and $param["Zone"] !== null) {
-            $this->Zone = $param["Zone"];
+        if (array_key_exists("StartTime",$param) and $param["StartTime"] !== null) {
+            $this->StartTime = $param["StartTime"];
         }
 
         if (array_key_exists("Direction",$param) and $param["Direction"] !== null) {
             $this->Direction = $param["Direction"];
-        }
-
-        if (array_key_exists("Source",$param) and $param["Source"] !== null) {
-            $this->Source = $param["Source"];
         }
 
         if (array_key_exists("EdgeId",$param) and $param["EdgeId"] !== null) {
@@ -132,6 +124,14 @@ class DescribeBlockByIpTimesListRequest extends AbstractModel
 
         if (array_key_exists("LogSource",$param) and $param["LogSource"] !== null) {
             $this->LogSource = $param["LogSource"];
+        }
+
+        if (array_key_exists("Source",$param) and $param["Source"] !== null) {
+            $this->Source = $param["Source"];
+        }
+
+        if (array_key_exists("Zone",$param) and $param["Zone"] !== null) {
+            $this->Zone = $param["Zone"];
         }
     }
 }

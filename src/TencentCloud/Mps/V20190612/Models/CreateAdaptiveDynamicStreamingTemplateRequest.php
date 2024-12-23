@@ -50,24 +50,30 @@ Default value: 0.
 Default value: 0.
  * @method string getComment() Obtain Template description. Length limit: 256 characters.
  * @method void setComment(string $Comment) Set Template description. Length limit: 256 characters.
- * @method integer getPureAudio() Obtain Whether it is an audio-only template. 0: video template. 1: audio-only template.When the value is 1:
+ * @method integer getPureAudio() Obtain Indicates whether it is audio-only. 0 means video template, 1 means audio-only template.
+When the value is 1.
 1. StreamInfos.N.RemoveVideo=1
 2. StreamInfos.N.RemoveAudio=0
 3. StreamInfos.N.Video.Codec=copy
-
-When the value is 0:
-
+When the value is 0.
 1. StreamInfos.N.Video.Codec cannot be copy.
 2. StreamInfos.N.Video.Fps cannot be null.
- * @method void setPureAudio(integer $PureAudio) Set Whether it is an audio-only template. 0: video template. 1: audio-only template.When the value is 1:
+
+Note:
+
+This value only distinguishes template types. The task uses the values of RemoveAudio and RemoveVideo.
+ * @method void setPureAudio(integer $PureAudio) Set Indicates whether it is audio-only. 0 means video template, 1 means audio-only template.
+When the value is 1.
 1. StreamInfos.N.RemoveVideo=1
 2. StreamInfos.N.RemoveAudio=0
 3. StreamInfos.N.Video.Codec=copy
-
-When the value is 0:
-
+When the value is 0.
 1. StreamInfos.N.Video.Codec cannot be copy.
 2. StreamInfos.N.Video.Fps cannot be null.
+
+Note:
+
+This value only distinguishes template types. The task uses the values of RemoveAudio and RemoveVideo.
  * @method string getSegmentType() Obtain HLS segment type. Valid values: <li>ts-segment: HLS+TS segment.</li> <li>ts-byterange: HLS+TS byte range.</li> <li>mp4-segment: HLS+MP4 segment.</li> <li>mp4-byterange: HLS+MP4 byte range.</li> <li>ts-packed-audio: TS+Packed audio.</li> <li>mp4-packed-audio: MP4+Packed audio.</li> Default value: ts-segment.
 Note: The HLS segment format for adaptive bitrate streaming is based on this field.
  * @method void setSegmentType(string $SegmentType) Set HLS segment type. Valid values: <li>ts-segment: HLS+TS segment.</li> <li>ts-byterange: HLS+TS byte range.</li> <li>mp4-segment: HLS+MP4 segment.</li> <li>mp4-byterange: HLS+MP4 byte range.</li> <li>ts-packed-audio: TS+Packed audio.</li> <li>mp4-packed-audio: MP4+Packed audio.</li> Default value: ts-segment.
@@ -115,15 +121,18 @@ Default value: 0.
     public $Comment;
 
     /**
-     * @var integer Whether it is an audio-only template. 0: video template. 1: audio-only template.When the value is 1:
+     * @var integer Indicates whether it is audio-only. 0 means video template, 1 means audio-only template.
+When the value is 1.
 1. StreamInfos.N.RemoveVideo=1
 2. StreamInfos.N.RemoveAudio=0
 3. StreamInfos.N.Video.Codec=copy
-
-When the value is 0:
-
+When the value is 0.
 1. StreamInfos.N.Video.Codec cannot be copy.
 2. StreamInfos.N.Video.Fps cannot be null.
+
+Note:
+
+This value only distinguishes template types. The task uses the values of RemoveAudio and RemoveVideo.
      */
     public $PureAudio;
 
@@ -149,15 +158,18 @@ Default value: 0.
 <li>1: yes.</li>
 Default value: 0.
      * @param string $Comment Template description. Length limit: 256 characters.
-     * @param integer $PureAudio Whether it is an audio-only template. 0: video template. 1: audio-only template.When the value is 1:
+     * @param integer $PureAudio Indicates whether it is audio-only. 0 means video template, 1 means audio-only template.
+When the value is 1.
 1. StreamInfos.N.RemoveVideo=1
 2. StreamInfos.N.RemoveAudio=0
 3. StreamInfos.N.Video.Codec=copy
-
-When the value is 0:
-
+When the value is 0.
 1. StreamInfos.N.Video.Codec cannot be copy.
 2. StreamInfos.N.Video.Fps cannot be null.
+
+Note:
+
+This value only distinguishes template types. The task uses the values of RemoveAudio and RemoveVideo.
      * @param string $SegmentType HLS segment type. Valid values: <li>ts-segment: HLS+TS segment.</li> <li>ts-byterange: HLS+TS byte range.</li> <li>mp4-segment: HLS+MP4 segment.</li> <li>mp4-byterange: HLS+MP4 byte range.</li> <li>ts-packed-audio: TS+Packed audio.</li> <li>mp4-packed-audio: MP4+Packed audio.</li> Default value: ts-segment.
 Note: The HLS segment format for adaptive bitrate streaming is based on this field.
      */

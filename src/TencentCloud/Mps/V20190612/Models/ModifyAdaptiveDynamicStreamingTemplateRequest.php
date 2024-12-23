@@ -43,29 +43,43 @@ use TencentCloud\Common\AbstractModel;
 <li>0: no,</li>
 <li>1: yes.</li>
  * @method array getStreamInfos() Obtain Parameter information of input streams for transcoding to adaptive bitrate streaming. Up to 10 streams can be input.
-Note: the frame rate of each stream must be consistent; otherwise, the frame rate of the first stream is used as the output frame rate.
+
+Note:
+
+1. The frame rate of each stream must be consistent; otherwise, the frame rate of the first stream is used as the output frame rate.
+2. When modifying substream information, all field values must be fully modified and added; otherwise, fields not filled in will use default values.
  * @method void setStreamInfos(array $StreamInfos) Set Parameter information of input streams for transcoding to adaptive bitrate streaming. Up to 10 streams can be input.
-Note: the frame rate of each stream must be consistent; otherwise, the frame rate of the first stream is used as the output frame rate.
+
+Note:
+
+1. The frame rate of each stream must be consistent; otherwise, the frame rate of the first stream is used as the output frame rate.
+2. When modifying substream information, all field values must be fully modified and added; otherwise, fields not filled in will use default values.
  * @method string getComment() Obtain Template description. Length limit: 256 characters.
  * @method void setComment(string $Comment) Set Template description. Length limit: 256 characters.
- * @method integer getPureAudio() Obtain Whether it is an audio-only template. 0: video template. 1: audio-only template.When the value is 1:
+ * @method integer getPureAudio() Obtain Indicates whether it is audio-only. 0 means video template, 1 means audio-only template.
+When the value is 1.
 1. StreamInfos.N.RemoveVideo=1
 2. StreamInfos.N.RemoveAudio=0
 3. StreamInfos.N.Video.Codec=copy
-
-When the value is 0:
-
+When the value is 0.
 1. StreamInfos.N.Video.Codec cannot be copy.
 2. StreamInfos.N.Video.Fps cannot be null.
- * @method void setPureAudio(integer $PureAudio) Set Whether it is an audio-only template. 0: video template. 1: audio-only template.When the value is 1:
+
+Note:
+
+This value only distinguishes template types. The task uses the values of RemoveAudio and RemoveVideo.
+ * @method void setPureAudio(integer $PureAudio) Set Indicates whether it is audio-only. 0 means video template, 1 means audio-only template.
+When the value is 1.
 1. StreamInfos.N.RemoveVideo=1
 2. StreamInfos.N.RemoveAudio=0
 3. StreamInfos.N.Video.Codec=copy
-
-When the value is 0:
-
+When the value is 0.
 1. StreamInfos.N.Video.Codec cannot be copy.
 2. StreamInfos.N.Video.Fps cannot be null.
+
+Note:
+
+This value only distinguishes template types. The task uses the values of RemoveAudio and RemoveVideo.
  * @method string getSegmentType() Obtain HLS segment type. Valid values: <li>ts-segment: HLS+TS segment.</li> <li>ts-byterange: HLS+TS byte range.</li> <li>mp4-segment: HLS+MP4 segment.</li> <li>mp4-byterange: HLS+MP4 byte range.</li> <li>ts-packed-audio: TS+Packed audio.</li> <li>mp4-packed-audio: MP4+Packed audio.</li> Default value: ts-segment.
 Note: The HLS segment format for adaptive bitrate streaming is based on this field.
  * @method void setSegmentType(string $SegmentType) Set HLS segment type. Valid values: <li>ts-segment: HLS+TS segment.</li> <li>ts-byterange: HLS+TS byte range.</li> <li>mp4-segment: HLS+MP4 segment.</li> <li>mp4-byterange: HLS+MP4 byte range.</li> <li>ts-packed-audio: TS+Packed audio.</li> <li>mp4-packed-audio: MP4+Packed audio.</li> Default value: ts-segment.
@@ -106,7 +120,11 @@ class ModifyAdaptiveDynamicStreamingTemplateRequest extends AbstractModel
 
     /**
      * @var array Parameter information of input streams for transcoding to adaptive bitrate streaming. Up to 10 streams can be input.
-Note: the frame rate of each stream must be consistent; otherwise, the frame rate of the first stream is used as the output frame rate.
+
+Note:
+
+1. The frame rate of each stream must be consistent; otherwise, the frame rate of the first stream is used as the output frame rate.
+2. When modifying substream information, all field values must be fully modified and added; otherwise, fields not filled in will use default values.
      */
     public $StreamInfos;
 
@@ -116,15 +134,18 @@ Note: the frame rate of each stream must be consistent; otherwise, the frame rat
     public $Comment;
 
     /**
-     * @var integer Whether it is an audio-only template. 0: video template. 1: audio-only template.When the value is 1:
+     * @var integer Indicates whether it is audio-only. 0 means video template, 1 means audio-only template.
+When the value is 1.
 1. StreamInfos.N.RemoveVideo=1
 2. StreamInfos.N.RemoveAudio=0
 3. StreamInfos.N.Video.Codec=copy
-
-When the value is 0:
-
+When the value is 0.
 1. StreamInfos.N.Video.Codec cannot be copy.
 2. StreamInfos.N.Video.Fps cannot be null.
+
+Note:
+
+This value only distinguishes template types. The task uses the values of RemoveAudio and RemoveVideo.
      */
     public $PureAudio;
 
@@ -147,17 +168,24 @@ Note: The HLS segment format for adaptive bitrate streaming is based on this fie
 <li>0: no,</li>
 <li>1: yes.</li>
      * @param array $StreamInfos Parameter information of input streams for transcoding to adaptive bitrate streaming. Up to 10 streams can be input.
-Note: the frame rate of each stream must be consistent; otherwise, the frame rate of the first stream is used as the output frame rate.
+
+Note:
+
+1. The frame rate of each stream must be consistent; otherwise, the frame rate of the first stream is used as the output frame rate.
+2. When modifying substream information, all field values must be fully modified and added; otherwise, fields not filled in will use default values.
      * @param string $Comment Template description. Length limit: 256 characters.
-     * @param integer $PureAudio Whether it is an audio-only template. 0: video template. 1: audio-only template.When the value is 1:
+     * @param integer $PureAudio Indicates whether it is audio-only. 0 means video template, 1 means audio-only template.
+When the value is 1.
 1. StreamInfos.N.RemoveVideo=1
 2. StreamInfos.N.RemoveAudio=0
 3. StreamInfos.N.Video.Codec=copy
-
-When the value is 0:
-
+When the value is 0.
 1. StreamInfos.N.Video.Codec cannot be copy.
 2. StreamInfos.N.Video.Fps cannot be null.
+
+Note:
+
+This value only distinguishes template types. The task uses the values of RemoveAudio and RemoveVideo.
      * @param string $SegmentType HLS segment type. Valid values: <li>ts-segment: HLS+TS segment.</li> <li>ts-byterange: HLS+TS byte range.</li> <li>mp4-segment: HLS+MP4 segment.</li> <li>mp4-byterange: HLS+MP4 byte range.</li> <li>ts-packed-audio: TS+Packed audio.</li> <li>mp4-packed-audio: MP4+Packed audio.</li> Default value: ts-segment.
 Note: The HLS segment format for adaptive bitrate streaming is based on this field.
      */

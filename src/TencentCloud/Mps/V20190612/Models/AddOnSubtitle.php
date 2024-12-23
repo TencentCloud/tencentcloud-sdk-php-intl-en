@@ -34,9 +34,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setSubtitle(MediaInputInfo $Subtitle) Set The subtitle file.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getSubtitleName() Obtain Subtitle name.	
+ * @method string getSubtitleName() Obtain Subtitle name.
+Note: supports Chinese characters, letters, digits, spaces, underscores (_), hyphens (-), periods (.), and parentheses. Max 64 characters.
 Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setSubtitleName(string $SubtitleName) Set Subtitle name.	
+ * @method void setSubtitleName(string $SubtitleName) Set Subtitle name.
+Note: supports Chinese characters, letters, digits, spaces, underscores (_), hyphens (-), periods (.), and parentheses. Max 64 characters.
 Note: This field may return null, indicating that no valid value can be obtained.
  */
 class AddOnSubtitle extends AbstractModel
@@ -57,7 +59,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $Subtitle;
 
     /**
-     * @var string Subtitle name.	
+     * @var string Subtitle name.
+Note: supports Chinese characters, letters, digits, spaces, underscores (_), hyphens (-), periods (.), and parentheses. Max 64 characters.
 Note: This field may return null, indicating that no valid value can be obtained.
      */
     public $SubtitleName;
@@ -70,7 +73,8 @@ Note: This field may return null, indicating that no valid value can be obtained
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param MediaInputInfo $Subtitle The subtitle file.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $SubtitleName Subtitle name.	
+     * @param string $SubtitleName Subtitle name.
+Note: supports Chinese characters, letters, digits, spaces, underscores (_), hyphens (-), periods (.), and parentheses. Max 64 characters.
 Note: This field may return null, indicating that no valid value can be obtained.
      */
     function __construct()
