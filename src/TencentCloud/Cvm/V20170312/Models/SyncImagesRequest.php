@@ -38,6 +38,18 @@ Default value: false.
  * @method void setImageSetRequired(boolean $ImageSetRequired) Set Whether to return the ID of the image created in the target region.
 
 Default value: false.
+ * @method boolean getEncrypt() Obtain Whether to synchronize as an encrypted custom image.
+Default value is `false`.
+Synchronization to an encrypted custom image is only supported within the same region.
+ * @method void setEncrypt(boolean $Encrypt) Set Whether to synchronize as an encrypted custom image.
+Default value is `false`.
+Synchronization to an encrypted custom image is only supported within the same region.
+ * @method string getKmsKeyId() Obtain KMS key ID used when synchronizing to an encrypted custom image. 
+This parameter is valid only synchronizing to an encrypted image.
+If KmsKeyId is not specified, the default CBS cloud product KMS key is used.
+ * @method void setKmsKeyId(string $KmsKeyId) Set KMS key ID used when synchronizing to an encrypted custom image. 
+This parameter is valid only synchronizing to an encrypted image.
+If KmsKeyId is not specified, the default CBS cloud product KMS key is used.
  */
 class SyncImagesRequest extends AbstractModel
 {
@@ -71,6 +83,20 @@ Default value: false.
     public $ImageSetRequired;
 
     /**
+     * @var boolean Whether to synchronize as an encrypted custom image.
+Default value is `false`.
+Synchronization to an encrypted custom image is only supported within the same region.
+     */
+    public $Encrypt;
+
+    /**
+     * @var string KMS key ID used when synchronizing to an encrypted custom image. 
+This parameter is valid only synchronizing to an encrypted image.
+If KmsKeyId is not specified, the default CBS cloud product KMS key is used.
+     */
+    public $KmsKeyId;
+
+    /**
      * @param array $ImageIds Image ID list. You can obtain the image IDs in the following ways:<br><li>Call the [DescribeImages](https://intl.cloud.tencent.com/document/api/213/15715?from_cn_redirect=1) API and find the value of `ImageId` in the response.</li><li>Obtain the image IDs in the [Image console](https://console.cloud.tencent.com/cvm/image).<br>The image IDs should meet the following requirement:</li><li>The image ID should correspond to an image in the `NORMAL` state.</li>For more information on image status, see [Image Data Table](https://intl.cloud.tencent.com/document/product/213/15753?from_cn_redirect=1#Image).
      * @param array $DestinationRegions List of target synchronization regions, which should meet the following requirements:<br><li>It should be a valid region.</li><li>If it is a custom image, the target synchronization region cannot be the source region.</li><li>If it is a shared image, the target synchronization region only supports the source region, meaning the shared image will be copied as a custom image in the source region.</li><li>Partial region synchronization is not supported currently. For details, see [Copying Images](https://intl.cloud.tencent.com/document/product/213/4943?from_cn_redirect=1#.E5.A4.8D.E5.88.B6.E8.AF.B4.E6.98.8E).</li>For specific regional parameters, refer to [Region](https://intl.cloud.tencent.com/document/product/213/6091?from_cn_redirect=1).
      * @param boolean $DryRun Checks whether image synchronization can be initiated.
@@ -80,6 +106,12 @@ Default value: false.
      * @param boolean $ImageSetRequired Whether to return the ID of the image created in the target region.
 
 Default value: false.
+     * @param boolean $Encrypt Whether to synchronize as an encrypted custom image.
+Default value is `false`.
+Synchronization to an encrypted custom image is only supported within the same region.
+     * @param string $KmsKeyId KMS key ID used when synchronizing to an encrypted custom image. 
+This parameter is valid only synchronizing to an encrypted image.
+If KmsKeyId is not specified, the default CBS cloud product KMS key is used.
      */
     function __construct()
     {
@@ -112,6 +144,14 @@ Default value: false.
 
         if (array_key_exists("ImageSetRequired",$param) and $param["ImageSetRequired"] !== null) {
             $this->ImageSetRequired = $param["ImageSetRequired"];
+        }
+
+        if (array_key_exists("Encrypt",$param) and $param["Encrypt"] !== null) {
+            $this->Encrypt = $param["Encrypt"];
+        }
+
+        if (array_key_exists("KmsKeyId",$param) and $param["KmsKeyId"] !== null) {
+            $this->KmsKeyId = $param["KmsKeyId"];
         }
     }
 }
