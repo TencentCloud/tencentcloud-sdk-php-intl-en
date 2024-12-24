@@ -30,12 +30,14 @@ Example value: false
 1: OCR+living detection & face comparison;
 2: Living detection & face comparison;
 3: Living detection;
+4: OCR;
 The default value is 2.
 Example value: 3
  * @method void setCheckMode(integer $CheckMode) Set Detection mode, parameter values are as follows:
 1: OCR+living detection & face comparison;
 2: Living detection & face comparison;
 3: Living detection;
+4: OCR;
 The default value is 2.
 Example value: 3
  * @method string getIDCardType() Obtain The type of lisence used for verification. The following types are supported.
@@ -135,6 +137,7 @@ Example value: false
 1: OCR+living detection & face comparison;
 2: Living detection & face comparison;
 3: Living detection;
+4: OCR;
 The default value is 2.
 Example value: 3
      */
@@ -223,6 +226,7 @@ Example value: false
 1: OCR+living detection & face comparison;
 2: Living detection & face comparison;
 3: Living detection;
+4: OCR;
 The default value is 2.
 Example value: 3
      * @param string $IDCardType The type of lisence used for verification. The following types are supported.
