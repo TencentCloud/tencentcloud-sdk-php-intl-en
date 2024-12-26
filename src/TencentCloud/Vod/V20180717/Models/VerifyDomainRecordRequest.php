@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getDomain() Obtain Need to access the VOD acceleration domain name.
  * @method void setDomain(string $Domain) Set Need to access the VOD acceleration domain name.
+ * @method integer getSubAppId() Obtain <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2024, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+ * @method void setSubAppId(integer $SubAppId) Set <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2024, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
  * @method string getVerifyType() Obtain VerifyType:
 <li>dns: DNS Parse verification; </li>
 <li>fIle: Document verification.</li>
@@ -41,6 +43,11 @@ class VerifyDomainRecordRequest extends AbstractModel
     public $Domain;
 
     /**
+     * @var integer <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2024, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+     */
+    public $SubAppId;
+
+    /**
      * @var string VerifyType:
 <li>dns: DNS Parse verification; </li>
 <li>fIle: Document verification.</li>
@@ -51,6 +58,7 @@ Default value: dns.
 
     /**
      * @param string $Domain Need to access the VOD acceleration domain name.
+     * @param integer $SubAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2024, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
      * @param string $VerifyType VerifyType:
 <li>dns: DNS Parse verification; </li>
 <li>fIle: Document verification.</li>
@@ -72,6 +80,10 @@ Default value: dns.
         }
         if (array_key_exists("Domain",$param) and $param["Domain"] !== null) {
             $this->Domain = $param["Domain"];
+        }
+
+        if (array_key_exists("SubAppId",$param) and $param["SubAppId"] !== null) {
+            $this->SubAppId = $param["SubAppId"];
         }
 
         if (array_key_exists("VerifyType",$param) and $param["VerifyType"] !== null) {
