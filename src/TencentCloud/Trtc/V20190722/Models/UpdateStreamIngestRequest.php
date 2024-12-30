@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStreamUrl(string $StreamUrl) Set The new url of the media resource.
  * @method integer getVolume() Obtain Volume. Valid value range: [0, 100], default value is 100, indicating the original volume.
  * @method void setVolume(integer $Volume) Set Volume. Valid value range: [0, 100], default value is 100, indicating the original volume.
+ * @method boolean getIsPause() Obtain Whether to pause, the default value of false indicates no pause. During the pause, the task is still in progress and is billed. If you want to terminate the task, please call the stop interface.
+ * @method void setIsPause(boolean $IsPause) Set Whether to pause, the default value of false indicates no pause. During the pause, the task is still in progress and is billed. If you want to terminate the task, please call the stop interface.
  */
 class UpdateStreamIngestRequest extends AbstractModel
 {
@@ -52,10 +54,16 @@ class UpdateStreamIngestRequest extends AbstractModel
     public $Volume;
 
     /**
+     * @var boolean Whether to pause, the default value of false indicates no pause. During the pause, the task is still in progress and is billed. If you want to terminate the task, please call the stop interface.
+     */
+    public $IsPause;
+
+    /**
      * @param integer $SdkAppId The SDKAppId of TRTC should be the same as the SDKAppId corresponding to the task room.
      * @param string $TaskId The unique Id of the task, will return after successfully starting the task.
      * @param string $StreamUrl The new url of the media resource.
      * @param integer $Volume Volume. Valid value range: [0, 100], default value is 100, indicating the original volume.
+     * @param boolean $IsPause Whether to pause, the default value of false indicates no pause. During the pause, the task is still in progress and is billed. If you want to terminate the task, please call the stop interface.
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class UpdateStreamIngestRequest extends AbstractModel
 
         if (array_key_exists("Volume",$param) and $param["Volume"] !== null) {
             $this->Volume = $param["Volume"];
+        }
+
+        if (array_key_exists("IsPause",$param) and $param["IsPause"] !== null) {
+            $this->IsPause = $param["IsPause"];
         }
     }
 }
