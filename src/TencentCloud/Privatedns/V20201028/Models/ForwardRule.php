@@ -39,15 +39,11 @@ use TencentCloud\Common\AbstractModel;
  * @method array getForwardAddress() Obtain Forwarding address.
  * @method void setForwardAddress(array $ForwardAddress) Set Forwarding address.
  * @method array getVpcSet() Obtain List of VPCs bound to the private domain.
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setVpcSet(array $VpcSet) Set List of VPCs bound to the private domain.
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getZoneId() Obtain ID of the bound private domain.
  * @method void setZoneId(string $ZoneId) Set ID of the bound private domain.
- * @method array getTags() Obtain Tag.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setTags(array $Tags) Set Tag.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method array getTags() Obtain Tag
+ * @method void setTags(array $Tags) Set Tag
  */
 class ForwardRule extends AbstractModel
 {
@@ -98,7 +94,6 @@ class ForwardRule extends AbstractModel
 
     /**
      * @var array List of VPCs bound to the private domain.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $VpcSet;
 
@@ -108,8 +103,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $ZoneId;
 
     /**
-     * @var array Tag.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array Tag
      */
     public $Tags;
 
@@ -124,10 +118,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $EndPointId Endpoint ID.
      * @param array $ForwardAddress Forwarding address.
      * @param array $VpcSet List of VPCs bound to the private domain.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $ZoneId ID of the bound private domain.
-     * @param array $Tags Tag.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param array $Tags Tag
      */
     function __construct()
     {
