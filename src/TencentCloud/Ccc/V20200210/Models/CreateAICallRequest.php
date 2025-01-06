@@ -294,6 +294,8 @@ Currently, the supported languages are as follows. The English name of the langu
  * @method void setNotifyDuration(integer $NotifyDuration) Set The duration after which the user hasn't spoken to trigger a notification, minimum 10 seconds, default 10 seconds
  * @method string getNotifyMessage() Obtain The AI prompt when NotifyDuration has passed without the user speaking, default is "Sorry, I didn't hear you clearly. Can you repeat that?"
  * @method void setNotifyMessage(string $NotifyMessage) Set The AI prompt when NotifyDuration has passed without the user speaking, default is "Sorry, I didn't hear you clearly. Can you repeat that?"
+ * @method integer getNotifyMaxCount() Obtain 
+ * @method void setNotifyMaxCount(integer $NotifyMaxCount) Set 
  * @method string getCustomTTSConfig() Obtain <p>And VoiceType field needs to select one, here is to use your own custom TTS, VoiceType is some built-in sound qualities</p>
 <ul>
 <li>Tencent TTS<br>
@@ -669,6 +671,11 @@ Currently, the supported languages are as follows. The English name of the langu
     public $NotifyMessage;
 
     /**
+     * @var integer 
+     */
+    public $NotifyMaxCount;
+
+    /**
      * @var string <p>And VoiceType field needs to select one, here is to use your own custom TTS, VoiceType is some built-in sound qualities</p>
 <ul>
 <li>Tencent TTS<br>
@@ -889,6 +896,7 @@ Currently, the supported languages are as follows. The English name of the langu
      * @param string $EndFunctionDesc Effective when EndFunctionEnable is true; the description of call_end function calling, default is "End the call when user has to leave (like says bye) or you are instructed to do so."
      * @param integer $NotifyDuration The duration after which the user hasn't spoken to trigger a notification, minimum 10 seconds, default 10 seconds
      * @param string $NotifyMessage The AI prompt when NotifyDuration has passed without the user speaking, default is "Sorry, I didn't hear you clearly. Can you repeat that?"
+     * @param integer $NotifyMaxCount 
      * @param string $CustomTTSConfig <p>And VoiceType field needs to select one, here is to use your own custom TTS, VoiceType is some built-in sound qualities</p>
 <ul>
 <li>Tencent TTS<br>
@@ -1056,6 +1064,10 @@ Please refer to the specific protocol standards in the <a href="https://doc.weix
 
         if (array_key_exists("NotifyMessage",$param) and $param["NotifyMessage"] !== null) {
             $this->NotifyMessage = $param["NotifyMessage"];
+        }
+
+        if (array_key_exists("NotifyMaxCount",$param) and $param["NotifyMaxCount"] !== null) {
+            $this->NotifyMaxCount = $param["NotifyMaxCount"];
         }
 
         if (array_key_exists("CustomTTSConfig",$param) and $param["CustomTTSConfig"] !== null) {
