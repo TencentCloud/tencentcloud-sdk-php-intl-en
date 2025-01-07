@@ -267,6 +267,9 @@ A maximum of 5 requests can be initiated per second for this API.
  * @method Models\SmartStructuralOCRV2Response SmartStructuralOCRV2(Models\SmartStructuralOCRV2Request $req) This API is used to recognize fields from cards, documents, bills, forms, contracts, and other structured information. It is flexible and efficient to use, without any configuration required. This API is suitable for recognizing structured information.
 
 A maximum of 10 requests can be initiated per second for this API.
+ * @method Models\SmartStructuralProResponse SmartStructuralPro(Models\SmartStructuralProRequest $req) This API is used to recognize fields from cards, documents, bills, forms, contracts, and other structured information. It is flexible and efficient to use, without any configuration required. This API is suitable for recognizing structured information.
+
+A maximum of 10 requests can be initiated per second for this API.
  * @method Models\TableOCRResponse TableOCR(Models\TableOCRRequest $req) This API is used to detect and recognize Chinese and English forms in images. It can return the text content of each cell and save the recognition result as Excel.
 
 This API is not fully available for the time being. For more information, please contact your [Tencent Cloud sales rep](https://intl.cloud.tencent.com/contact-sales).
