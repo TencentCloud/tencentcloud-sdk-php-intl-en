@@ -32,6 +32,22 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
  * @method void setExternals(Externals $Externals) Set Extended data
 Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method string getActionTimerId() Obtain Timer ID.
+ * @method void setActionTimerId(string $ActionTimerId) Set Timer ID.
+ * @method string getStatus() Obtain Timer status. Valid values:
+
+UNDO: Not triggered.
+DOING: Triggering.
+DONE: Triggered already.
+
+ * @method void setStatus(string $Status) Set Timer status. Valid values:
+
+UNDO: Not triggered.
+DOING: Triggering.
+DONE: Triggered already.
+
+ * @method string getInstanceId() Obtain Instance ID corresponding to a timer.
+ * @method void setInstanceId(string $InstanceId) Set Instance ID corresponding to a timer.
  */
 class ActionTimer extends AbstractModel
 {
@@ -54,12 +70,40 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     public $Externals;
 
     /**
+     * @var string Timer ID.
+     */
+    public $ActionTimerId;
+
+    /**
+     * @var string Timer status. Valid values:
+
+UNDO: Not triggered.
+DOING: Triggering.
+DONE: Triggered already.
+
+     */
+    public $Status;
+
+    /**
+     * @var string Instance ID corresponding to a timer.
+     */
+    public $InstanceId;
+
+    /**
      * @param string $TimerAction Timer action. Valid value: `TerminateInstances`.
 Note: This field may return `null`, indicating that no valid values can be obtained.
      * @param string $ActionTime Action time, which follows the ISO8601 standard and uses UTC time. It must be 5 minutes later than the current time. Format: YYYY-MM-DDThh:mm:ssZ. For example: 2018-05-29T11:26:40Z.
 Note: This field may return `null`, indicating that no valid values can be obtained.
      * @param Externals $Externals Extended data
 Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param string $ActionTimerId Timer ID.
+     * @param string $Status Timer status. Valid values:
+
+UNDO: Not triggered.
+DOING: Triggering.
+DONE: Triggered already.
+
+     * @param string $InstanceId Instance ID corresponding to a timer.
      */
     function __construct()
     {
@@ -85,6 +129,18 @@ Note: This field may return `null`, indicating that no valid values can be obtai
         if (array_key_exists("Externals",$param) and $param["Externals"] !== null) {
             $this->Externals = new Externals();
             $this->Externals->deserialize($param["Externals"]);
+        }
+
+        if (array_key_exists("ActionTimerId",$param) and $param["ActionTimerId"] !== null) {
+            $this->ActionTimerId = $param["ActionTimerId"];
+        }
+
+        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
+            $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
+            $this->InstanceId = $param["InstanceId"];
         }
     }
 }

@@ -34,6 +34,7 @@ Note: Accounts with the same username but different hosts are different accounts
  * @method Models\CreateDCDBInstanceResponse CreateDCDBInstance(Models\CreateDCDBInstanceRequest $req) This API is used to create a monthly subscribed TDSQL instance by passing in information such as instance specifications, database version number, and purchased duration.
  * @method Models\CreateDedicatedClusterDCDBInstanceResponse CreateDedicatedClusterDCDBInstance(Models\CreateDedicatedClusterDCDBInstanceRequest $req) This API is used to create a dedicated TDSQL cluster instance.
  * @method Models\CreateHourDCDBInstanceResponse CreateHourDCDBInstance(Models\CreateHourDCDBInstanceRequest $req) This API is used to create a pay-as-you-go TDSQL instance.
+ * @method Models\CreateOnlineDDLJobResponse CreateOnlineDDLJob(Models\CreateOnlineDDLJobRequest $req) This API is used to create an online DDL job.
  * @method Models\DeleteAccountResponse DeleteAccount(Models\DeleteAccountRequest $req) This API is used to delete a TencentDB account, which is uniquely identified by username and host.
  * @method Models\DescribeAccountPrivilegesResponse DescribeAccountPrivileges(Models\DescribeAccountPrivilegesRequest $req) This API is used to query the permissions of a TencentDB account.
 Note: Accounts with the same username but different hosts are considered as different accounts.

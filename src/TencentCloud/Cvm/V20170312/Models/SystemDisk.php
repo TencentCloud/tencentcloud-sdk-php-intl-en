@@ -20,25 +20,25 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Describes information on the block device where the operating system is stored, i.e., the system disk.
  *
- * @method string getDiskType() Obtain System disk type. For the restrictions on the system disk type, refer to [Storage Overview] (https://intl.cloud.tencent.com/document/product/213/4952?from_cn_redirect=1). Value range:<br>
+ * @method string getDiskType() Obtain System disk type. For the restrictions on the system disk type, refer to [Storage Overview](https://intl.cloud.tencent.com/document/product/213/4952?from_cn_redirect=1). Value values:<br>
 <li>LOCAL_BASIC: Local Disk</li>
-<li>LOCAL_SSD: Local SSD Disk</li>
-<li>CLOUD_BASIC: HDD Cloud Disk</li>
+<li>LOCAL_SSD: Local SSD</li>
+<li>CLOUD_BASIC: Basic Cloud Disk</li>
 <li>CLOUD_SSD: Cloud SSD</li>
-<li>CLOUD_PREMIUM: Premium Cloud Disk</li>
+<li>CLOUD_PREMIUM: Premium Disk</li>
 <li>CLOUD_BSSD: Balanced SSD</li>
 <li>CLOUD_HSSD: Enhanced SSD</li>
-<li>CLOUD_TSSD: ulTra SSD</li><br>
+<li>CLOUD_TSSD: Tremendous SSD</li><br>
 Default value: Current disk types with inventory available.
- * @method void setDiskType(string $DiskType) Set System disk type. For the restrictions on the system disk type, refer to [Storage Overview] (https://intl.cloud.tencent.com/document/product/213/4952?from_cn_redirect=1). Value range:<br>
+ * @method void setDiskType(string $DiskType) Set System disk type. For the restrictions on the system disk type, refer to [Storage Overview](https://intl.cloud.tencent.com/document/product/213/4952?from_cn_redirect=1). Value values:<br>
 <li>LOCAL_BASIC: Local Disk</li>
-<li>LOCAL_SSD: Local SSD Disk</li>
-<li>CLOUD_BASIC: HDD Cloud Disk</li>
+<li>LOCAL_SSD: Local SSD</li>
+<li>CLOUD_BASIC: Basic Cloud Disk</li>
 <li>CLOUD_SSD: Cloud SSD</li>
-<li>CLOUD_PREMIUM: Premium Cloud Disk</li>
+<li>CLOUD_PREMIUM: Premium Disk</li>
 <li>CLOUD_BSSD: Balanced SSD</li>
 <li>CLOUD_HSSD: Enhanced SSD</li>
-<li>CLOUD_TSSD: ulTra SSD</li><br>
+<li>CLOUD_TSSD: Tremendous SSD</li><br>
 Default value: Current disk types with inventory available.
  * @method string getDiskId() Obtain System disk ID. System disks whose type is `LOCAL_BASIC` or `LOCAL_SSD` do not have an ID and do not support this parameter.
 It is only used as a response parameter for APIs such as `DescribeInstances`, and cannot be used as a request parameter for APIs such as `RunInstances`.
@@ -60,15 +60,15 @@ Note: This field may return null, indicating that no valid value is found.
 class SystemDisk extends AbstractModel
 {
     /**
-     * @var string System disk type. For the restrictions on the system disk type, refer to [Storage Overview] (https://intl.cloud.tencent.com/document/product/213/4952?from_cn_redirect=1). Value range:<br>
+     * @var string System disk type. For the restrictions on the system disk type, refer to [Storage Overview](https://intl.cloud.tencent.com/document/product/213/4952?from_cn_redirect=1). Value values:<br>
 <li>LOCAL_BASIC: Local Disk</li>
-<li>LOCAL_SSD: Local SSD Disk</li>
-<li>CLOUD_BASIC: HDD Cloud Disk</li>
+<li>LOCAL_SSD: Local SSD</li>
+<li>CLOUD_BASIC: Basic Cloud Disk</li>
 <li>CLOUD_SSD: Cloud SSD</li>
-<li>CLOUD_PREMIUM: Premium Cloud Disk</li>
+<li>CLOUD_PREMIUM: Premium Disk</li>
 <li>CLOUD_BSSD: Balanced SSD</li>
 <li>CLOUD_HSSD: Enhanced SSD</li>
-<li>CLOUD_TSSD: ulTra SSD</li><br>
+<li>CLOUD_TSSD: Tremendous SSD</li><br>
 Default value: Current disk types with inventory available.
      */
     public $DiskType;
@@ -98,15 +98,15 @@ Note: This field may return null, indicating that no valid value is found.
     public $DiskName;
 
     /**
-     * @param string $DiskType System disk type. For the restrictions on the system disk type, refer to [Storage Overview] (https://intl.cloud.tencent.com/document/product/213/4952?from_cn_redirect=1). Value range:<br>
+     * @param string $DiskType System disk type. For the restrictions on the system disk type, refer to [Storage Overview](https://intl.cloud.tencent.com/document/product/213/4952?from_cn_redirect=1). Value values:<br>
 <li>LOCAL_BASIC: Local Disk</li>
-<li>LOCAL_SSD: Local SSD Disk</li>
-<li>CLOUD_BASIC: HDD Cloud Disk</li>
+<li>LOCAL_SSD: Local SSD</li>
+<li>CLOUD_BASIC: Basic Cloud Disk</li>
 <li>CLOUD_SSD: Cloud SSD</li>
-<li>CLOUD_PREMIUM: Premium Cloud Disk</li>
+<li>CLOUD_PREMIUM: Premium Disk</li>
 <li>CLOUD_BSSD: Balanced SSD</li>
 <li>CLOUD_HSSD: Enhanced SSD</li>
-<li>CLOUD_TSSD: ulTra SSD</li><br>
+<li>CLOUD_TSSD: Tremendous SSD</li><br>
 Default value: Current disk types with inventory available.
      * @param string $DiskId System disk ID. System disks whose type is `LOCAL_BASIC` or `LOCAL_SSD` do not have an ID and do not support this parameter.
 It is only used as a response parameter for APIs such as `DescribeInstances`, and cannot be used as a request parameter for APIs such as `RunInstances`.
