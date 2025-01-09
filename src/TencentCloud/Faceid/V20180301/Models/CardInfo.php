@@ -84,6 +84,26 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setJapanIDCard(JapanIDCard $JapanIDCard) Set Japan ID Card
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method BangladeshIDCard getBangladeshIDCard() Obtain Bangladesh ID Card
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setBangladeshIDCard(BangladeshIDCard $BangladeshIDCard) Set Bangladesh ID Card
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method NigeriaIDCard getNigeriaIDCard() Obtain Nigeria ID Card
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setNigeriaIDCard(NigeriaIDCard $NigeriaIDCard) Set Nigeria ID Card
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method NigeriaDrivingLicense getNigeriaDrivingLicense() Obtain Nigeria driving license
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setNigeriaDrivingLicense(NigeriaDrivingLicense $NigeriaDrivingLicense) Set Nigeria driving license
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method PakistanIDCard getPakistanIDCard() Obtain Pakistan ID Card
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setPakistanIDCard(PakistanIDCard $PakistanIDCard) Set Pakistan ID Card
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method PakistanDrivingLicense getPakistanDrivingLicense() Obtain Pakistan driving license
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setPakistanDrivingLicense(PakistanDrivingLicense $PakistanDrivingLicense) Set Pakistan driving license
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class CardInfo extends AbstractModel
 {
@@ -184,6 +204,36 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $JapanIDCard;
 
     /**
+     * @var BangladeshIDCard Bangladesh ID Card
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $BangladeshIDCard;
+
+    /**
+     * @var NigeriaIDCard Nigeria ID Card
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $NigeriaIDCard;
+
+    /**
+     * @var NigeriaDrivingLicense Nigeria driving license
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $NigeriaDrivingLicense;
+
+    /**
+     * @var PakistanIDCard Pakistan ID Card
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $PakistanIDCard;
+
+    /**
+     * @var PakistanDrivingLicense Pakistan driving license
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $PakistanDrivingLicense;
+
+    /**
      * @param HKIDCard $HKIDCard Hong Kong ID Card
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param MLIDCard $MLIDCard Malaysia ID Card
@@ -215,6 +265,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param TaiWanIDCard $TaiWanIDCard TaiWan ID Card
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param JapanIDCard $JapanIDCard Japan ID Card
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param BangladeshIDCard $BangladeshIDCard Bangladesh ID Card
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param NigeriaIDCard $NigeriaIDCard Nigeria ID Card
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param NigeriaDrivingLicense $NigeriaDrivingLicense Nigeria driving license
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param PakistanIDCard $PakistanIDCard Pakistan ID Card
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param PakistanDrivingLicense $PakistanDrivingLicense Pakistan driving license
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
@@ -308,6 +368,31 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (array_key_exists("JapanIDCard",$param) and $param["JapanIDCard"] !== null) {
             $this->JapanIDCard = new JapanIDCard();
             $this->JapanIDCard->deserialize($param["JapanIDCard"]);
+        }
+
+        if (array_key_exists("BangladeshIDCard",$param) and $param["BangladeshIDCard"] !== null) {
+            $this->BangladeshIDCard = new BangladeshIDCard();
+            $this->BangladeshIDCard->deserialize($param["BangladeshIDCard"]);
+        }
+
+        if (array_key_exists("NigeriaIDCard",$param) and $param["NigeriaIDCard"] !== null) {
+            $this->NigeriaIDCard = new NigeriaIDCard();
+            $this->NigeriaIDCard->deserialize($param["NigeriaIDCard"]);
+        }
+
+        if (array_key_exists("NigeriaDrivingLicense",$param) and $param["NigeriaDrivingLicense"] !== null) {
+            $this->NigeriaDrivingLicense = new NigeriaDrivingLicense();
+            $this->NigeriaDrivingLicense->deserialize($param["NigeriaDrivingLicense"]);
+        }
+
+        if (array_key_exists("PakistanIDCard",$param) and $param["PakistanIDCard"] !== null) {
+            $this->PakistanIDCard = new PakistanIDCard();
+            $this->PakistanIDCard->deserialize($param["PakistanIDCard"]);
+        }
+
+        if (array_key_exists("PakistanDrivingLicense",$param) and $param["PakistanDrivingLicense"] !== null) {
+            $this->PakistanDrivingLicense = new PakistanDrivingLicense();
+            $this->PakistanDrivingLicense->deserialize($param["PakistanDrivingLicense"]);
         }
     }
 }

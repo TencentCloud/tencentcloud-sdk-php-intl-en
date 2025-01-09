@@ -28,6 +28,9 @@ MYS: Malaysia
 SGP: Singapore
 JPN: Japan
 TWN:Taiwan
+BGD:Bangladesh 
+NGA:Nigeria
+PAK:Pakistan
 AUTO: Automatic Identification
  * @method void setNationality(string $Nationality) Set Please select the country code of ID document.
 IDN: Indonesia
@@ -37,6 +40,9 @@ MYS: Malaysia
 SGP: Singapore
 JPN: Japan
 TWN:Taiwan
+BGD:Bangladesh 
+NGA:Nigeria
+PAK:Pakistan
 AUTO: Automatic Identification
  * @method string getCardType() Obtain Please select the type of ID document. The supported options are:
 ID_CARD
@@ -78,6 +84,9 @@ MYS: Malaysia
 SGP: Singapore
 JPN: Japan
 TWN:Taiwan
+BGD:Bangladesh 
+NGA:Nigeria
+PAK:Pakistan
 AUTO: Automatic Identification
      */
     public $Nationality;
@@ -125,6 +134,9 @@ MYS: Malaysia
 SGP: Singapore
 JPN: Japan
 TWN:Taiwan
+BGD:Bangladesh 
+NGA:Nigeria
+PAK:Pakistan
 AUTO: Automatic Identification
      * @param string $CardType Please select the type of ID document. The supported options are:
 ID_CARD
