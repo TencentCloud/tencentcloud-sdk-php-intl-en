@@ -290,6 +290,10 @@ Currently, the supported languages are as follows. The English name of the langu
  * @method void setEndFunctionEnable(boolean $EndFunctionEnable) Set Whether the model supports (or enables) call_end function calling
  * @method string getEndFunctionDesc() Obtain Effective when EndFunctionEnable is true; the description of call_end function calling, default is "End the call when user has to leave (like says bye) or you are instructed to do so."
  * @method void setEndFunctionDesc(string $EndFunctionDesc) Set Effective when EndFunctionEnable is true; the description of call_end function calling, default is "End the call when user has to leave (like says bye) or you are instructed to do so."
+ * @method boolean getTransferFunctionEnable() Obtain 
+ * @method void setTransferFunctionEnable(boolean $TransferFunctionEnable) Set 
+ * @method array getTransferItems() Obtain 
+ * @method void setTransferItems(array $TransferItems) Set 
  * @method integer getNotifyDuration() Obtain The duration after which the user hasn't spoken to trigger a notification, minimum 10 seconds, default 10 seconds
  * @method void setNotifyDuration(integer $NotifyDuration) Set The duration after which the user hasn't spoken to trigger a notification, minimum 10 seconds, default 10 seconds
  * @method string getNotifyMessage() Obtain The AI prompt when NotifyDuration has passed without the user speaking, default is "Sorry, I didn't hear you clearly. Can you repeat that?"
@@ -454,6 +458,8 @@ Please refer to the specific protocol standards in the <a href="https://doc.weix
 </code></pre>
 
 </div></div>
+ * @method array getPromptVariables() Obtain 
+ * @method void setPromptVariables(array $PromptVariables) Set 
  */
 class CreateAICallRequest extends AbstractModel
 {
@@ -661,6 +667,16 @@ Currently, the supported languages are as follows. The English name of the langu
     public $EndFunctionDesc;
 
     /**
+     * @var boolean 
+     */
+    public $TransferFunctionEnable;
+
+    /**
+     * @var array 
+     */
+    public $TransferItems;
+
+    /**
      * @var integer The duration after which the user hasn't spoken to trigger a notification, minimum 10 seconds, default 10 seconds
      */
     public $NotifyDuration;
@@ -757,6 +773,11 @@ Please refer to the specific protocol standards in the <a href="https://doc.weix
 </div></div>
      */
     public $CustomTTSConfig;
+
+    /**
+     * @var array 
+     */
+    public $PromptVariables;
 
     /**
      * @param integer $SdkAppId Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
@@ -894,6 +915,8 @@ Currently, the supported languages are as follows. The English name of the langu
      * @param integer $InterruptSpeechDuration Used when InterruptMode is 0, unit in milliseconds, default is 500ms. It means that the server-side detects ongoing vocal input for the InterruptSpeechDuration milliseconds and then interrupts.
      * @param boolean $EndFunctionEnable Whether the model supports (or enables) call_end function calling
      * @param string $EndFunctionDesc Effective when EndFunctionEnable is true; the description of call_end function calling, default is "End the call when user has to leave (like says bye) or you are instructed to do so."
+     * @param boolean $TransferFunctionEnable 
+     * @param array $TransferItems 
      * @param integer $NotifyDuration The duration after which the user hasn't spoken to trigger a notification, minimum 10 seconds, default 10 seconds
      * @param string $NotifyMessage The AI prompt when NotifyDuration has passed without the user speaking, default is "Sorry, I didn't hear you clearly. Can you repeat that?"
      * @param integer $NotifyMaxCount 
@@ -976,6 +999,7 @@ Please refer to the specific protocol standards in the <a href="https://doc.weix
 </code></pre>
 
 </div></div>
+     * @param array $PromptVariables 
      */
     function __construct()
     {
@@ -1058,6 +1082,19 @@ Please refer to the specific protocol standards in the <a href="https://doc.weix
             $this->EndFunctionDesc = $param["EndFunctionDesc"];
         }
 
+        if (array_key_exists("TransferFunctionEnable",$param) and $param["TransferFunctionEnable"] !== null) {
+            $this->TransferFunctionEnable = $param["TransferFunctionEnable"];
+        }
+
+        if (array_key_exists("TransferItems",$param) and $param["TransferItems"] !== null) {
+            $this->TransferItems = [];
+            foreach ($param["TransferItems"] as $key => $value){
+                $obj = new AITransferItem();
+                $obj->deserialize($value);
+                array_push($this->TransferItems, $obj);
+            }
+        }
+
         if (array_key_exists("NotifyDuration",$param) and $param["NotifyDuration"] !== null) {
             $this->NotifyDuration = $param["NotifyDuration"];
         }
@@ -1072,6 +1109,15 @@ Please refer to the specific protocol standards in the <a href="https://doc.weix
 
         if (array_key_exists("CustomTTSConfig",$param) and $param["CustomTTSConfig"] !== null) {
             $this->CustomTTSConfig = $param["CustomTTSConfig"];
+        }
+
+        if (array_key_exists("PromptVariables",$param) and $param["PromptVariables"] !== null) {
+            $this->PromptVariables = [];
+            foreach ($param["PromptVariables"] as $key => $value){
+                $obj = new Variable();
+                $obj->deserialize($value);
+                array_push($this->PromptVariables, $obj);
+            }
         }
     }
 }
