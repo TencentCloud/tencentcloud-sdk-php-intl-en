@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getCertificateId() Obtain Certificate ID
  * @method void setCertificateId(string $CertificateId) Set Certificate ID
+ * @method boolean getIsCheckResource() Obtain 
+ * @method void setIsCheckResource(boolean $IsCheckResource) Set 
  */
 class DeleteCertificateRequest extends AbstractModel
 {
@@ -31,7 +33,13 @@ class DeleteCertificateRequest extends AbstractModel
     public $CertificateId;
 
     /**
+     * @var boolean 
+     */
+    public $IsCheckResource;
+
+    /**
      * @param string $CertificateId Certificate ID
+     * @param boolean $IsCheckResource 
      */
     function __construct()
     {
@@ -48,6 +56,10 @@ class DeleteCertificateRequest extends AbstractModel
         }
         if (array_key_exists("CertificateId",$param) and $param["CertificateId"] !== null) {
             $this->CertificateId = $param["CertificateId"];
+        }
+
+        if (array_key_exists("IsCheckResource",$param) and $param["IsCheckResource"] !== null) {
+            $this->IsCheckResource = $param["IsCheckResource"];
         }
     }
 }
