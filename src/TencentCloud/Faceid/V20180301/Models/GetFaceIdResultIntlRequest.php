@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * GetFaceIdResultIntl request structure.
  *
- * @method string getSdkToken() Obtain The ID of the SDK-based liveness detection and face comparison process, which is generated when the `GetFaceIdTokenIntl` API is called.	
- * @method void setSdkToken(string $SdkToken) Set The ID of the SDK-based liveness detection and face comparison process, which is generated when the `GetFaceIdTokenIntl` API is called.	
+ * @method string getSdkToken() Obtain The ID of the SDK-based selfie verification process, which is generated when the `GetFaceIdTokenIntl` API is called.	
+ * @method void setSdkToken(string $SdkToken) Set The ID of the SDK-based selfie verification process, which is generated when the `GetFaceIdTokenIntl` API is called.	
  */
 class GetFaceIdResultIntlRequest extends AbstractModel
 {
     /**
-     * @var string The ID of the SDK-based liveness detection and face comparison process, which is generated when the `GetFaceIdTokenIntl` API is called.	
+     * @var string The ID of the SDK-based selfie verification process, which is generated when the `GetFaceIdTokenIntl` API is called.	
      */
     public $SdkToken;
 
     /**
-     * @param string $SdkToken The ID of the SDK-based liveness detection and face comparison process, which is generated when the `GetFaceIdTokenIntl` API is called.	
+     * @param string $SdkToken The ID of the SDK-based selfie verification process, which is generated when the `GetFaceIdTokenIntl` API is called.	
      */
     function __construct()
     {

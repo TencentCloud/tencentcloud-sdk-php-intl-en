@@ -23,7 +23,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getResult() Obtain The return code of the verification result.
 0: Succeeded.
 1001: System error.
-1004: Liveness detection and face comparison failed.
+1004: Selfie verification comparison failed.
 2004: The image passed in is too large or too small.
 2012: Several faces were detected.
 2013: No face was detected, or the face detected was incomplete.
@@ -34,7 +34,7 @@ use TencentCloud\Common\AbstractModel;
  * @method void setResult(string $Result) Set The return code of the verification result.
 0: Succeeded.
 1001: System error.
-1004: Liveness detection and face comparison failed.
+1004: Selfie verification comparison failed.
 2004: The image passed in is too large or too small.
 2012: Several faces were detected.
 2013: No face was detected, or the face detected was incomplete.
@@ -48,9 +48,9 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBestFrame(string $BestFrame) Set The best frame screenshot (in Base64) obtained during the verification.
  * @method string getVideo() Obtain The video file (Base64) for verification.
  * @method void setVideo(string $Video) Set The video file (Base64) for verification.
- * @method float getSimilarity() Obtain The similarity, with a value range of 0-100. A greater value indicates higher similarity. This parameter is returned only in the `compare` (liveness detection and face comparison) mode.
+ * @method float getSimilarity() Obtain The similarity, with a value range of 0-100. A greater value indicates higher similarity. This parameter is returned only in the `compare` (selfie verification) mode.
 Note: This field may return `null`, indicating that no valid values can be obtained.
- * @method void setSimilarity(float $Similarity) Set The similarity, with a value range of 0-100. A greater value indicates higher similarity. This parameter is returned only in the `compare` (liveness detection and face comparison) mode.
+ * @method void setSimilarity(float $Similarity) Set The similarity, with a value range of 0-100. A greater value indicates higher similarity. This parameter is returned only in the `compare` (selfie verification) mode.
 Note: This field may return `null`, indicating that no valid values can be obtained.
  * @method string getExtra() Obtain The pass-through parameter.
 Note: This field may return null, indicating that no valid values can be obtained.
@@ -65,7 +65,7 @@ class GetFaceIdResultIntlResponse extends AbstractModel
      * @var string The return code of the verification result.
 0: Succeeded.
 1001: System error.
-1004: Liveness detection and face comparison failed.
+1004: Selfie verification comparison failed.
 2004: The image passed in is too large or too small.
 2012: Several faces were detected.
 2013: No face was detected, or the face detected was incomplete.
@@ -92,7 +92,7 @@ class GetFaceIdResultIntlResponse extends AbstractModel
     public $Video;
 
     /**
-     * @var float The similarity, with a value range of 0-100. A greater value indicates higher similarity. This parameter is returned only in the `compare` (liveness detection and face comparison) mode.
+     * @var float The similarity, with a value range of 0-100. A greater value indicates higher similarity. This parameter is returned only in the `compare` (selfie verification) mode.
 Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public $Similarity;
@@ -112,7 +112,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $Result The return code of the verification result.
 0: Succeeded.
 1001: System error.
-1004: Liveness detection and face comparison failed.
+1004: Selfie verification comparison failed.
 2004: The image passed in is too large or too small.
 2012: Several faces were detected.
 2013: No face was detected, or the face detected was incomplete.
@@ -123,7 +123,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $Description The description of the verification result.
      * @param string $BestFrame The best frame screenshot (in Base64) obtained during the verification.
      * @param string $Video The video file (Base64) for verification.
-     * @param float $Similarity The similarity, with a value range of 0-100. A greater value indicates higher similarity. This parameter is returned only in the `compare` (liveness detection and face comparison) mode.
+     * @param float $Similarity The similarity, with a value range of 0-100. A greater value indicates higher similarity. This parameter is returned only in the `compare` (selfie verification) mode.
 Note: This field may return `null`, indicating that no valid values can be obtained.
      * @param string $Extra The pass-through parameter.
 Note: This field may return null, indicating that no valid values can be obtained.

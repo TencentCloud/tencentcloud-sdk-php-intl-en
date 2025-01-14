@@ -22,11 +22,11 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getCheckMode() Obtain The detection mode. Valid values:
 `liveness`: Liveness detection only.
-`compare`: Liveness detection and face comparison.
+`compare`: Selfie verification.
 Default value: `liveness`.
  * @method void setCheckMode(string $CheckMode) Set The detection mode. Valid values:
 `liveness`: Liveness detection only.
-`compare`: Liveness detection and face comparison.
+`compare`: Selfie verification.
 Default value: `liveness`.
  * @method string getSecureLevel() Obtain The verification security level. Valid values:
 `1`: Video-based liveness detection.
@@ -70,7 +70,7 @@ class GetFaceIdTokenIntlRequest extends AbstractModel
     /**
      * @var string The detection mode. Valid values:
 `liveness`: Liveness detection only.
-`compare`: Liveness detection and face comparison.
+`compare`: Selfie verification.
 Default value: `liveness`.
      */
     public $CheckMode;
@@ -112,7 +112,7 @@ The default value is blink. The different action types passed in this parameter 
     /**
      * @param string $CheckMode The detection mode. Valid values:
 `liveness`: Liveness detection only.
-`compare`: Liveness detection and face comparison.
+`compare`: Selfie verification.
 Default value: `liveness`.
      * @param string $SecureLevel The verification security level. Valid values:
 `1`: Video-based liveness detection.

@@ -20,24 +20,28 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CompareFaceLiveness response structure.
  *
- * @method string getResult() Obtain Service error code. When the return value is "Success", it indicates that the liveness detection and face comparison succeeded. It is determined that they are the same person. When the return value is "FailedOperation.CompareLowSimilarity", it indicates that the liveness detection succeeded, and the face comparison similarity is lower than 70 points. It is determined that they are not the same person. For other error cases, please refer to Liveness Face Comparison (Pure API) Error Code (https://www.tencentcloud.com/document/product/1061/55390). 
-Example Value: "Success".
- * @method void setResult(string $Result) Set Service error code. When the return value is "Success", it indicates that the liveness detection and face comparison succeeded. It is determined that they are the same person. When the return value is "FailedOperation.CompareLowSimilarity", it indicates that the liveness detection succeeded, and the face comparison similarity is lower than 70 points. It is determined that they are not the same person. For other error cases, please refer to Liveness Face Comparison (Pure API) Error Code (https://www.tencentcloud.com/document/product/1061/55390). 
-Example Value: "Success".
- * @method string getDescription() Obtain Description of business results. 
-Example value: "Success"
- * @method void setDescription(string $Description) Set Description of business results. 
-Example value: "Success"
- * @method float getSim() Obtain This value is valid when the "Result" parameter is "Success" or "FailedOperation.CompareLowSimilarity." 
-This value indicates the similarity of face comparison. Value range: [0.00, 100.00]. The false pass rate for threshold 70 is 1 in 1,000, and the false pass rate for threshold 80 is 1 in 10,000. 
-Example value: 80.00
- * @method void setSim(float $Sim) Set This value is valid when the "Result" parameter is "Success" or "FailedOperation.CompareLowSimilarity." 
-This value indicates the similarity of face comparison. Value range: [0.00, 100.00]. The false pass rate for threshold 70 is 1 in 1,000, and the false pass rate for threshold 80 is 1 in 10,000. 
-Example value: 80.00
- * @method string getBestFrameBase64() Obtain The optimal screenshot of the video after verification is the value encoded by BASE64, jpg format. 
+ * @method string getResult() Obtain Business Error Codes.
+-When the return value is "Success", it indicates that liveness detection and face comparison passed. Determined to be the same person.
+-When the return value is "FailedOperation.CompareLowSimilarity", it indicates that liveness detection passed, but face comparison similarity is below 70. Determined not to be the same person.
+-For other error cases, please refer to [Liveness Face Comparison (API only) Error Codes](https://www.tencentcloud.com/zh/document/product/1061/55390?lang=zh&pg=#97df7537-87fe-4266-87e9-02c816d41ee2)
+ * @method void setResult(string $Result) Set Business Error Codes.
+-When the return value is "Success", it indicates that liveness detection and face comparison passed. Determined to be the same person.
+-When the return value is "FailedOperation.CompareLowSimilarity", it indicates that liveness detection passed, but face comparison similarity is below 70. Determined not to be the same person.
+-For other error cases, please refer to [Liveness Face Comparison (API only) Error Codes](https://www.tencentcloud.com/zh/document/product/1061/55390?lang=zh&pg=#97df7537-87fe-4266-87e9-02c816d41ee2)
+ * @method string getDescription() Obtain The service result description
+ * @method void setDescription(string $Description) Set The service result description
+ * @method float getSim() Obtain This value indicates the similarity of face comparison. Value range: 0.00-100.00.
+- The false acceptance rate for a threshold of 70 is 0.1%, and for a threshold of 80, it is 0.01%.
+- This value is valid when the Result parameter is "Success" or "FailedOperation.CompareLowSimilarity".
+ * @method void setSim(float $Sim) Set This value indicates the similarity of face comparison. Value range: 0.00-100.00.
+- The false acceptance rate for a threshold of 70 is 0.1%, and for a threshold of 80, it is 0.01%.
+- This value is valid when the Result parameter is "Success" or "FailedOperation.CompareLowSimilarity".
+ * @method string getBestFrameBase64() Obtain The best screenshot photo from the video after verification, encoded in BASE64, in jpg format.
+The optimal screenshot of the video after verification is the value encoded by BASE64, jpg format. 
 Note: This field may return "null", indicating that no valid value can be obtained. 
 Example values: "/9j/4AAQSk... (total length:142036)s97n//2Q=="
- * @method void setBestFrameBase64(string $BestFrameBase64) Set The optimal screenshot of the video after verification is the value encoded by BASE64, jpg format. 
+ * @method void setBestFrameBase64(string $BestFrameBase64) Set The best screenshot photo from the video after verification, encoded in BASE64, in jpg format.
+The optimal screenshot of the video after verification is the value encoded by BASE64, jpg format. 
 Note: This field may return "null", indicating that no valid value can be obtained. 
 Example values: "/9j/4AAQSk... (total length:142036)s97n//2Q=="
  * @method string getRequestId() Obtain The unique request ID, generated by the server, will be returned for every request (if the request fails to reach the server for other reasons, the request will not obtain a RequestId). RequestId is required for locating a problem.
@@ -46,26 +50,28 @@ Example values: "/9j/4AAQSk... (total length:142036)s97n//2Q=="
 class CompareFaceLivenessResponse extends AbstractModel
 {
     /**
-     * @var string Service error code. When the return value is "Success", it indicates that the liveness detection and face comparison succeeded. It is determined that they are the same person. When the return value is "FailedOperation.CompareLowSimilarity", it indicates that the liveness detection succeeded, and the face comparison similarity is lower than 70 points. It is determined that they are not the same person. For other error cases, please refer to Liveness Face Comparison (Pure API) Error Code (https://www.tencentcloud.com/document/product/1061/55390). 
-Example Value: "Success".
+     * @var string Business Error Codes.
+-When the return value is "Success", it indicates that liveness detection and face comparison passed. Determined to be the same person.
+-When the return value is "FailedOperation.CompareLowSimilarity", it indicates that liveness detection passed, but face comparison similarity is below 70. Determined not to be the same person.
+-For other error cases, please refer to [Liveness Face Comparison (API only) Error Codes](https://www.tencentcloud.com/zh/document/product/1061/55390?lang=zh&pg=#97df7537-87fe-4266-87e9-02c816d41ee2)
      */
     public $Result;
 
     /**
-     * @var string Description of business results. 
-Example value: "Success"
+     * @var string The service result description
      */
     public $Description;
 
     /**
-     * @var float This value is valid when the "Result" parameter is "Success" or "FailedOperation.CompareLowSimilarity." 
-This value indicates the similarity of face comparison. Value range: [0.00, 100.00]. The false pass rate for threshold 70 is 1 in 1,000, and the false pass rate for threshold 80 is 1 in 10,000. 
-Example value: 80.00
+     * @var float This value indicates the similarity of face comparison. Value range: 0.00-100.00.
+- The false acceptance rate for a threshold of 70 is 0.1%, and for a threshold of 80, it is 0.01%.
+- This value is valid when the Result parameter is "Success" or "FailedOperation.CompareLowSimilarity".
      */
     public $Sim;
 
     /**
-     * @var string The optimal screenshot of the video after verification is the value encoded by BASE64, jpg format. 
+     * @var string The best screenshot photo from the video after verification, encoded in BASE64, in jpg format.
+The optimal screenshot of the video after verification is the value encoded by BASE64, jpg format. 
 Note: This field may return "null", indicating that no valid value can be obtained. 
 Example values: "/9j/4AAQSk... (total length:142036)s97n//2Q=="
      */
@@ -77,14 +83,16 @@ Example values: "/9j/4AAQSk... (total length:142036)s97n//2Q=="
     public $RequestId;
 
     /**
-     * @param string $Result Service error code. When the return value is "Success", it indicates that the liveness detection and face comparison succeeded. It is determined that they are the same person. When the return value is "FailedOperation.CompareLowSimilarity", it indicates that the liveness detection succeeded, and the face comparison similarity is lower than 70 points. It is determined that they are not the same person. For other error cases, please refer to Liveness Face Comparison (Pure API) Error Code (https://www.tencentcloud.com/document/product/1061/55390). 
-Example Value: "Success".
-     * @param string $Description Description of business results. 
-Example value: "Success"
-     * @param float $Sim This value is valid when the "Result" parameter is "Success" or "FailedOperation.CompareLowSimilarity." 
-This value indicates the similarity of face comparison. Value range: [0.00, 100.00]. The false pass rate for threshold 70 is 1 in 1,000, and the false pass rate for threshold 80 is 1 in 10,000. 
-Example value: 80.00
-     * @param string $BestFrameBase64 The optimal screenshot of the video after verification is the value encoded by BASE64, jpg format. 
+     * @param string $Result Business Error Codes.
+-When the return value is "Success", it indicates that liveness detection and face comparison passed. Determined to be the same person.
+-When the return value is "FailedOperation.CompareLowSimilarity", it indicates that liveness detection passed, but face comparison similarity is below 70. Determined not to be the same person.
+-For other error cases, please refer to [Liveness Face Comparison (API only) Error Codes](https://www.tencentcloud.com/zh/document/product/1061/55390?lang=zh&pg=#97df7537-87fe-4266-87e9-02c816d41ee2)
+     * @param string $Description The service result description
+     * @param float $Sim This value indicates the similarity of face comparison. Value range: 0.00-100.00.
+- The false acceptance rate for a threshold of 70 is 0.1%, and for a threshold of 80, it is 0.01%.
+- This value is valid when the Result parameter is "Success" or "FailedOperation.CompareLowSimilarity".
+     * @param string $BestFrameBase64 The best screenshot photo from the video after verification, encoded in BASE64, in jpg format.
+The optimal screenshot of the video after verification is the value encoded by BASE64, jpg format. 
 Note: This field may return "null", indicating that no valid value can be obtained. 
 Example values: "/9j/4AAQSk... (total length:142036)s97n//2Q=="
      * @param string $RequestId The unique request ID, generated by the server, will be returned for every request (if the request fails to reach the server for other reasons, the request will not obtain a RequestId). RequestId is required for locating a problem.

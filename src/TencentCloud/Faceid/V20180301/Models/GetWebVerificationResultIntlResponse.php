@@ -21,10 +21,10 @@ use TencentCloud\Common\AbstractModel;
  * GetWebVerificationResultIntl response structure.
  *
  * @method integer getErrorCode() Obtain The final result of this verification. `0` indicates that the person is the same as that in the photo.
-For other error codes, see <a href="https://www.tencentcloud.com/document/product/1061/55390?lang=en&pg=#8a960e1e-39c0-42cb-b181-b3164d77f81e">Liveness Detection and Face Comparison (Mobile HTML5) Error Codes</a>
+For other error codes, see <a href="https://www.tencentcloud.com/document/product/1061/55390?lang=en&pg=#8a960e1e-39c0-42cb-b181-b3164d77f81e">Selfie Verification (Mobile HTML5) Error Codes</a>
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setErrorCode(integer $ErrorCode) Set The final result of this verification. `0` indicates that the person is the same as that in the photo.
-For other error codes, see <a href="https://www.tencentcloud.com/document/product/1061/55390?lang=en&pg=#8a960e1e-39c0-42cb-b181-b3164d77f81e">Liveness Detection and Face Comparison (Mobile HTML5) Error Codes</a>
+For other error codes, see <a href="https://www.tencentcloud.com/document/product/1061/55390?lang=en&pg=#8a960e1e-39c0-42cb-b181-b3164d77f81e">Selfie Verification (Mobile HTML5) Error Codes</a>
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getErrorMsg() Obtain The description of the final verification result.
 Note: This field may return null, indicating that no valid values can be obtained.
@@ -55,7 +55,7 @@ class GetWebVerificationResultIntlResponse extends AbstractModel
 {
     /**
      * @var integer The final result of this verification. `0` indicates that the person is the same as that in the photo.
-For other error codes, see <a href="https://www.tencentcloud.com/document/product/1061/55390?lang=en&pg=#8a960e1e-39c0-42cb-b181-b3164d77f81e">Liveness Detection and Face Comparison (Mobile HTML5) Error Codes</a>
+For other error codes, see <a href="https://www.tencentcloud.com/document/product/1061/55390?lang=en&pg=#8a960e1e-39c0-42cb-b181-b3164d77f81e">Selfie Verification (Mobile HTML5) Error Codes</a>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ErrorCode;
@@ -102,7 +102,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * @param integer $ErrorCode The final result of this verification. `0` indicates that the person is the same as that in the photo.
-For other error codes, see <a href="https://www.tencentcloud.com/document/product/1061/55390?lang=en&pg=#8a960e1e-39c0-42cb-b181-b3164d77f81e">Liveness Detection and Face Comparison (Mobile HTML5) Error Codes</a>
+For other error codes, see <a href="https://www.tencentcloud.com/document/product/1061/55390?lang=en&pg=#8a960e1e-39c0-42cb-b181-b3164d77f81e">Selfie Verification (Mobile HTML5) Error Codes</a>
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $ErrorMsg The description of the final verification result.
 Note: This field may return null, indicating that no valid values can be obtained.
