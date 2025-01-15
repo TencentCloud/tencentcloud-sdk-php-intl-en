@@ -25,6 +25,7 @@ use TencentCloud\Config\V20220802\Models as Models;
 /**
  * @method Models\DescribeDiscoveredResourceResponse DescribeDiscoveredResource(Models\DescribeDiscoveredResourceRequest $req) Resource details.
  * @method Models\ListAggregateConfigRulesResponse ListAggregateConfigRules(Models\ListAggregateConfigRulesRequest $req) This API is used to get the account group rule list.
+ * @method Models\ListAggregateDiscoveredResourcesResponse ListAggregateDiscoveredResources(Models\ListAggregateDiscoveredResourcesRequest $req) Account Group access the list of resources.
  * @method Models\ListConfigRulesResponse ListConfigRules(Models\ListConfigRulesRequest $req) This API is used to get the rule list.
  * @method Models\ListDiscoveredResourcesResponse ListDiscoveredResources(Models\ListDiscoveredResourcesRequest $req) This API is used to get the resource list.
  * @method Models\PutEvaluationsResponse PutEvaluations(Models\PutEvaluationsRequest $req) This API is used to report custom rule evaluation results.
