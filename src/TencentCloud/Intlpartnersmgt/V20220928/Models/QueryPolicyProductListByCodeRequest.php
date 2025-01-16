@@ -20,50 +20,66 @@ use TencentCloud\Common\AbstractModel;
 /**
  * QueryPolicyProductListByCode request structure.
  *
- * @method string getPolicyCode() Obtain Policy code
- * @method void setPolicyCode(string $PolicyCode) Set Policy code
- * @method string getProductCode() Obtain Product code
- * @method void setProductCode(string $ProductCode) Set Product code
- * @method string getProductName() Obtain Product name
- * @method void setProductName(string $ProductName) Set Product name
- * @method string getSubProductCode() Obtain Subproduct code
- * @method void setSubProductCode(string $SubProductCode) Set Subproduct code
- * @method string getSubProductName() Obtain Subproduct name
- * @method void setSubProductName(string $SubProductName) Set Subproduct name
+ * @method string getPolicyCode() Obtain Dealer policy code.
+ * @method void setPolicyCode(string $PolicyCode) Set Dealer policy code.
+ * @method string getProductCode() Obtain Product level 1 code.
+ * @method void setProductCode(string $ProductCode) Set Product level 1 code.
+ * @method string getProductName() Obtain Product level 1 name.
+ * @method void setProductName(string $ProductName) Set Product level 1 name.
+ * @method string getSubProductCode() Obtain Product level 2 code.
+ * @method void setSubProductCode(string $SubProductCode) Set Product level 2 code.
+ * @method string getSubProductName() Obtain Product level 2 name.
+ * @method void setSubProductName(string $SubProductName) Set Product level 2 name.
+ * @method integer getPage() Obtain Page parameter: current page number. The minimum value is 1.
+ * @method void setPage(integer $Page) Set Page parameter: current page number. The minimum value is 1.
+ * @method integer getPageSize() Obtain Page parameter: Indicates the number of entries per page. Value range: [1, 200], default is 200.
+ * @method void setPageSize(integer $PageSize) Set Page parameter: Indicates the number of entries per page. Value range: [1, 200], default is 200.
  */
 class QueryPolicyProductListByCodeRequest extends AbstractModel
 {
     /**
-     * @var string Policy code
+     * @var string Dealer policy code.
      */
     public $PolicyCode;
 
     /**
-     * @var string Product code
+     * @var string Product level 1 code.
      */
     public $ProductCode;
 
     /**
-     * @var string Product name
+     * @var string Product level 1 name.
      */
     public $ProductName;
 
     /**
-     * @var string Subproduct code
+     * @var string Product level 2 code.
      */
     public $SubProductCode;
 
     /**
-     * @var string Subproduct name
+     * @var string Product level 2 name.
      */
     public $SubProductName;
 
     /**
-     * @param string $PolicyCode Policy code
-     * @param string $ProductCode Product code
-     * @param string $ProductName Product name
-     * @param string $SubProductCode Subproduct code
-     * @param string $SubProductName Subproduct name
+     * @var integer Page parameter: current page number. The minimum value is 1.
+     */
+    public $Page;
+
+    /**
+     * @var integer Page parameter: Indicates the number of entries per page. Value range: [1, 200], default is 200.
+     */
+    public $PageSize;
+
+    /**
+     * @param string $PolicyCode Dealer policy code.
+     * @param string $ProductCode Product level 1 code.
+     * @param string $ProductName Product level 1 name.
+     * @param string $SubProductCode Product level 2 code.
+     * @param string $SubProductName Product level 2 name.
+     * @param integer $Page Page parameter: current page number. The minimum value is 1.
+     * @param integer $PageSize Page parameter: Indicates the number of entries per page. Value range: [1, 200], default is 200.
      */
     function __construct()
     {
@@ -96,6 +112,14 @@ class QueryPolicyProductListByCodeRequest extends AbstractModel
 
         if (array_key_exists("SubProductName",$param) and $param["SubProductName"] !== null) {
             $this->SubProductName = $param["SubProductName"];
+        }
+
+        if (array_key_exists("Page",$param) and $param["Page"] !== null) {
+            $this->Page = $param["Page"];
+        }
+
+        if (array_key_exists("PageSize",$param) and $param["PageSize"] !== null) {
+            $this->PageSize = $param["PageSize"];
         }
     }
 }

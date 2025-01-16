@@ -18,100 +18,100 @@ namespace TencentCloud\Intlpartnersmgt\V20220928\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Policy product list entity response parameters structure.
  *
- * @method string getPolicyCode() Obtain Policy code.
- * @method void setPolicyCode(string $PolicyCode) Set Policy code.
- * @method string getProductCode() Obtain Product code, if the return is *, any item under this level is included in the policy product scope.
- * @method void setProductCode(string $ProductCode) Set Product code, if the return is *, any item under this level is included in the policy product scope.
- * @method string getProductName() Obtain Product name, if the return is *, any item under this level is included in the policy product scope.
- * @method void setProductName(string $ProductName) Set Product name, if the return is *, any item under this level is included in the policy product scope.
- * @method string getSubProductCode() Obtain SubProduct code, if the return is *, any item under this level is included in the policy product scope.
- * @method void setSubProductCode(string $SubProductCode) Set SubProduct code, if the return is *, any item under this level is included in the policy product scope.
- * @method string getSubProductName() Obtain SubProduct name, if the return is *, any item under this level is included in the policy product scope.
- * @method void setSubProductName(string $SubProductName) Set SubProduct name, if the return is *, any item under this level is included in the policy product scope.
- * @method string getComponentTypeCode() Obtain Component type code, if the return is *, any item under this level is included in the policy product scope.
- * @method void setComponentTypeCode(string $ComponentTypeCode) Set Component type code, if the return is *, any item under this level is included in the policy product scope.
- * @method string getComponentTypeName() Obtain Component type name, if the return is *, any item under this level is included in the policy product scope.
- * @method void setComponentTypeName(string $ComponentTypeName) Set Component type name, if the return is *, any item under this level is included in the policy product scope.
- * @method string getComponentCode() Obtain Component code, if the return is *, any item under this level is included in the policy product scope.
- * @method void setComponentCode(string $ComponentCode) Set Component code, if the return is *, any item under this level is included in the policy product scope.
- * @method string getComponentName() Obtain Component name, if the return is *, any item under this level is included in the policy product scope.
- * @method void setComponentName(string $ComponentName) Set Component name, if the return is *, any item under this level is included in the policy product scope.
- * @method string getStartDate() Obtain Policy effective date.
- * @method void setStartDate(string $StartDate) Set Policy effective date.
- * @method string getEndDate() Obtain Policy expiration date.
- * @method void setEndDate(string $EndDate) Set Policy expiration date.
+ * @method string getPolicyCode() Obtain Dealer policy code.
+ * @method void setPolicyCode(string $PolicyCode) Set Dealer policy code.
+ * @method string getProductCode() Obtain Product level 1 code. If the return value is *, any item at this level is included in the policy product range.
+ * @method void setProductCode(string $ProductCode) Set Product level 1 code. If the return value is *, any item at this level is included in the policy product range.
+ * @method string getProductName() Obtain Product level 1 name. If the return value is *, any item at this level is included in the policy product range.
+ * @method void setProductName(string $ProductName) Set Product level 1 name. If the return value is *, any item at this level is included in the policy product range.
+ * @method string getSubProductCode() Obtain Product level 2 code. If the return value is *, any item at this level is included in the policy product range.
+ * @method void setSubProductCode(string $SubProductCode) Set Product level 2 code. If the return value is *, any item at this level is included in the policy product range.
+ * @method string getSubProductName() Obtain Product level 2 name. If the return value is *, any item at this level is included in the policy product range.
+ * @method void setSubProductName(string $SubProductName) Set Product level 2 name. If the return value is *, any item at this level is included in the policy product range.
+ * @method string getComponentTypeCode() Obtain Product level 3 code. If the return value is *, any item at this level is included in the policy product range.
+ * @method void setComponentTypeCode(string $ComponentTypeCode) Set Product level 3 code. If the return value is *, any item at this level is included in the policy product range.
+ * @method string getComponentTypeName() Obtain Product level 3 name. If the return value is *, any item at this level is included in the policy product range.
+ * @method void setComponentTypeName(string $ComponentTypeName) Set Product level 3 name. If the return value is *, any item at this level is included in the policy product range.
+ * @method string getComponentCode() Obtain Product level 4 code. If the return value is *, any item at this level is included in the policy product range.
+ * @method void setComponentCode(string $ComponentCode) Set Product level 4 code. If the return value is *, any item at this level is included in the policy product range.
+ * @method string getComponentName() Obtain Product fourth-level name. If the return value is *, any item under this level is included in the policy product scope.
+ * @method void setComponentName(string $ComponentName) Set Product fourth-level name. If the return value is *, any item under this level is included in the policy product scope.
+ * @method string getStartDate() Obtain Policy effective time.
+ * @method void setStartDate(string $StartDate) Set Policy effective time.
+ * @method string getEndDate() Obtain Policy expiration time.
+ * @method void setEndDate(string $EndDate) Set Policy expiration time.
  */
 class PolicyProductList extends AbstractModel
 {
     /**
-     * @var string Policy code.
+     * @var string Dealer policy code.
      */
     public $PolicyCode;
 
     /**
-     * @var string Product code, if the return is *, any item under this level is included in the policy product scope.
+     * @var string Product level 1 code. If the return value is *, any item at this level is included in the policy product range.
      */
     public $ProductCode;
 
     /**
-     * @var string Product name, if the return is *, any item under this level is included in the policy product scope.
+     * @var string Product level 1 name. If the return value is *, any item at this level is included in the policy product range.
      */
     public $ProductName;
 
     /**
-     * @var string SubProduct code, if the return is *, any item under this level is included in the policy product scope.
+     * @var string Product level 2 code. If the return value is *, any item at this level is included in the policy product range.
      */
     public $SubProductCode;
 
     /**
-     * @var string SubProduct name, if the return is *, any item under this level is included in the policy product scope.
+     * @var string Product level 2 name. If the return value is *, any item at this level is included in the policy product range.
      */
     public $SubProductName;
 
     /**
-     * @var string Component type code, if the return is *, any item under this level is included in the policy product scope.
+     * @var string Product level 3 code. If the return value is *, any item at this level is included in the policy product range.
      */
     public $ComponentTypeCode;
 
     /**
-     * @var string Component type name, if the return is *, any item under this level is included in the policy product scope.
+     * @var string Product level 3 name. If the return value is *, any item at this level is included in the policy product range.
      */
     public $ComponentTypeName;
 
     /**
-     * @var string Component code, if the return is *, any item under this level is included in the policy product scope.
+     * @var string Product level 4 code. If the return value is *, any item at this level is included in the policy product range.
      */
     public $ComponentCode;
 
     /**
-     * @var string Component name, if the return is *, any item under this level is included in the policy product scope.
+     * @var string Product fourth-level name. If the return value is *, any item under this level is included in the policy product scope.
      */
     public $ComponentName;
 
     /**
-     * @var string Policy effective date.
+     * @var string Policy effective time.
      */
     public $StartDate;
 
     /**
-     * @var string Policy expiration date.
+     * @var string Policy expiration time.
      */
     public $EndDate;
 
     /**
-     * @param string $PolicyCode Policy code.
-     * @param string $ProductCode Product code, if the return is *, any item under this level is included in the policy product scope.
-     * @param string $ProductName Product name, if the return is *, any item under this level is included in the policy product scope.
-     * @param string $SubProductCode SubProduct code, if the return is *, any item under this level is included in the policy product scope.
-     * @param string $SubProductName SubProduct name, if the return is *, any item under this level is included in the policy product scope.
-     * @param string $ComponentTypeCode Component type code, if the return is *, any item under this level is included in the policy product scope.
-     * @param string $ComponentTypeName Component type name, if the return is *, any item under this level is included in the policy product scope.
-     * @param string $ComponentCode Component code, if the return is *, any item under this level is included in the policy product scope.
-     * @param string $ComponentName Component name, if the return is *, any item under this level is included in the policy product scope.
-     * @param string $StartDate Policy effective date.
-     * @param string $EndDate Policy expiration date.
+     * @param string $PolicyCode Dealer policy code.
+     * @param string $ProductCode Product level 1 code. If the return value is *, any item at this level is included in the policy product range.
+     * @param string $ProductName Product level 1 name. If the return value is *, any item at this level is included in the policy product range.
+     * @param string $SubProductCode Product level 2 code. If the return value is *, any item at this level is included in the policy product range.
+     * @param string $SubProductName Product level 2 name. If the return value is *, any item at this level is included in the policy product range.
+     * @param string $ComponentTypeCode Product level 3 code. If the return value is *, any item at this level is included in the policy product range.
+     * @param string $ComponentTypeName Product level 3 name. If the return value is *, any item at this level is included in the policy product range.
+     * @param string $ComponentCode Product level 4 code. If the return value is *, any item at this level is included in the policy product range.
+     * @param string $ComponentName Product fourth-level name. If the return value is *, any item under this level is included in the policy product scope.
+     * @param string $StartDate Policy effective time.
+     * @param string $EndDate Policy expiration time.
      */
     function __construct()
     {
