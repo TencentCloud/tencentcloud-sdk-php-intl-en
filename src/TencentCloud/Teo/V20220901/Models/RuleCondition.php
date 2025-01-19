@@ -21,12 +21,12 @@ use TencentCloud\Common\AbstractModel;
  * Rule engine condition parameters
  *
  * @method string getOperator() Obtain Operator. Valid values:
-<li>`equals`: Equals</li>
+<li>`equal`: Equal</li>
 <li>`notEquals`: Does not equal</li>
 <li>`exist`: Exists</li>
 <li>`notexist`: Does not exist</li>
  * @method void setOperator(string $Operator) Set Operator. Valid values:
-<li>`equals`: Equals</li>
+<li>`equal`: Equal</li>
 <li>`notEquals`: Does not equal</li>
 <li>`exist`: Exists</li>
 <li>`notexist`: Does not exist</li>
@@ -75,7 +75,7 @@ class RuleCondition extends AbstractModel
 {
     /**
      * @var string Operator. Valid values:
-<li>`equals`: Equals</li>
+<li>`equal`: Equal</li>
 <li>`notEquals`: Does not equal</li>
 <li>`exist`: Exists</li>
 <li>`notexist`: Does not exist</li>
@@ -125,7 +125,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * @param string $Operator Operator. Valid values:
-<li>`equals`: Equals</li>
+<li>`equal`: Equal</li>
 <li>`notEquals`: Does not equal</li>
 <li>`exist`: Exists</li>
 <li>`notexist`: Does not exist</li>
