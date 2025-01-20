@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeDisasterRecoverGroups request structure.
  *
- * @method array getDisasterRecoverGroupIds() Obtain ID list of spread placement groups. You can operate up to 100 spread placement groups in each request.
- * @method void setDisasterRecoverGroupIds(array $DisasterRecoverGroupIds) Set ID list of spread placement groups. You can operate up to 100 spread placement groups in each request.
+ * @method array getDisasterRecoverGroupIds() Obtain ID list of spread placement groups. You can operate up to 10 spread placement groups in each request.
+ * @method void setDisasterRecoverGroupIds(array $DisasterRecoverGroupIds) Set ID list of spread placement groups. You can operate up to 10 spread placement groups in each request.
  * @method string getName() Obtain Name of a spread placement group. Fuzzy match is supported.
  * @method void setName(string $Name) Set Name of a spread placement group. Fuzzy match is supported.
  * @method integer getOffset() Obtain Offset; default value: 0. For more information on `Offset`, see the corresponding section in API [Introduction](https://intl.cloud.tencent.com/document/product/377).
@@ -32,7 +32,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeDisasterRecoverGroupsRequest extends AbstractModel
 {
     /**
-     * @var array ID list of spread placement groups. You can operate up to 100 spread placement groups in each request.
+     * @var array ID list of spread placement groups. You can operate up to 10 spread placement groups in each request.
      */
     public $DisasterRecoverGroupIds;
 
@@ -52,7 +52,7 @@ class DescribeDisasterRecoverGroupsRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @param array $DisasterRecoverGroupIds ID list of spread placement groups. You can operate up to 100 spread placement groups in each request.
+     * @param array $DisasterRecoverGroupIds ID list of spread placement groups. You can operate up to 10 spread placement groups in each request.
      * @param string $Name Name of a spread placement group. Fuzzy match is supported.
      * @param integer $Offset Offset; default value: 0. For more information on `Offset`, see the corresponding section in API [Introduction](https://intl.cloud.tencent.com/document/product/377).
      * @param integer $Limit Number of results returned; default value: 20; maximum: 100. For more information on `Limit`, see the corresponding section in API [Introduction](https://intl.cloud.tencent.com/document/product/377). 
