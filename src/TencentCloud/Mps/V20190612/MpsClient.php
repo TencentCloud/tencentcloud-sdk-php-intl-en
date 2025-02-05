@@ -92,6 +92,7 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
  * @method Models\DescribeSampleSnapshotTemplatesResponse DescribeSampleSnapshotTemplates(Models\DescribeSampleSnapshotTemplatesRequest $req) This API is used to query the list of sampled screencapturing templates and supports paged queries by filters.
  * @method Models\DescribeSchedulesResponse DescribeSchedules(Models\DescribeSchedulesRequest $req) This API is used to query a scheme.
  * @method Models\DescribeSnapshotByTimeOffsetTemplatesResponse DescribeSnapshotByTimeOffsetTemplates(Models\DescribeSnapshotByTimeOffsetTemplatesRequest $req) This API is used to query the list of time point screencapturing templates and supports paged queries by filters.
+ * @method Models\DescribeStreamLinkSecurityGroupResponse DescribeStreamLinkSecurityGroup(Models\DescribeStreamLinkSecurityGroupRequest $req) This API is used to query a security group.
  * @method Models\DescribeTaskDetailResponse DescribeTaskDetail(Models\DescribeTaskDetailRequest $req) This API is used to query the details of execution status and result of a task submitted in the last 3 days by task ID.
  * @method Models\DescribeTasksResponse DescribeTasks(Models\DescribeTasksRequest $req) * This API is used to query tasks.
 * If the data is large, one API call may not be able to obtain all the tasks in the query. You can use the `ScrollToken` parameter to query tasks with multiple calls.

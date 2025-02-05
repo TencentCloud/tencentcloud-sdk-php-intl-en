@@ -42,6 +42,8 @@ RECREATE: Rebuild an instance to replace the original unhealthy instance.
 RESET: Performing a system reinstallation on unhealthy instances to keep information such as data disks, private IP addresses, and instance IDs unchanged. The instance login settings, HostName, enhanced services, and UserData will remain consistent with the current launch configuration.
 Default value: RECREATE.
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method boolean getAutoUpdateInstanceTags() Obtain Automatic instance tag update. The default value is false. If this feature is enabled, tags of running instances in a scaling group will be updated as well if the scaling group tags are updated. (This feature takes effect for tag creation and editing but not tag deletion.) The update does not take effect immediately due to certain latency.
+ * @method void setAutoUpdateInstanceTags(boolean $AutoUpdateInstanceTags) Set Automatic instance tag update. The default value is false. If this feature is enabled, tags of running instances in a scaling group will be updated as well if the scaling group tags are updated. (This feature takes effect for tag creation and editing but not tag deletion.) The update does not take effect immediately due to certain latency.
  */
 class ServiceSettings extends AbstractModel
 {
@@ -73,6 +75,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $ReplaceMode;
 
     /**
+     * @var boolean Automatic instance tag update. The default value is false. If this feature is enabled, tags of running instances in a scaling group will be updated as well if the scaling group tags are updated. (This feature takes effect for tag creation and editing but not tag deletion.) The update does not take effect immediately due to certain latency.
+     */
+    public $AutoUpdateInstanceTags;
+
+    /**
      * @param boolean $ReplaceMonitorUnhealthy Enables unhealthy instance replacement. If this feature is enabled, AS will replace instances that are flagged as unhealthy by Cloud Monitor. If this parameter is not specified, the value will be False by default.
      * @param string $ScalingMode Valid values: 
 CLASSIC_SCALING: this is the typical scaling method, which creates and terminates instances to perform scaling operations. 
@@ -84,6 +91,7 @@ RECREATE: Rebuild an instance to replace the original unhealthy instance.
 RESET: Performing a system reinstallation on unhealthy instances to keep information such as data disks, private IP addresses, and instance IDs unchanged. The instance login settings, HostName, enhanced services, and UserData will remain consistent with the current launch configuration.
 Default value: RECREATE.
 Note: This field may return null, indicating that no valid values can be obtained.
+     * @param boolean $AutoUpdateInstanceTags Automatic instance tag update. The default value is false. If this feature is enabled, tags of running instances in a scaling group will be updated as well if the scaling group tags are updated. (This feature takes effect for tag creation and editing but not tag deletion.) The update does not take effect immediately due to certain latency.
      */
     function __construct()
     {
@@ -112,6 +120,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("ReplaceMode",$param) and $param["ReplaceMode"] !== null) {
             $this->ReplaceMode = $param["ReplaceMode"];
+        }
+
+        if (array_key_exists("AutoUpdateInstanceTags",$param) and $param["AutoUpdateInstanceTags"] !== null) {
+            $this->AutoUpdateInstanceTags = $param["AutoUpdateInstanceTags"];
         }
     }
 }

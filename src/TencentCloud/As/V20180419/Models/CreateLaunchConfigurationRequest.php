@@ -24,9 +24,9 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLaunchConfigurationName(string $LaunchConfigurationName) Set Display name of the launch configuration, which can contain letters, digits, underscores and hyphens (-), and dots. Up to of 60 bytes allowed..
  * @method string getImageId() Obtain [Image](https://intl.cloud.tencent.com/document/product/213/4940?from_cn_redirect=1) ID in the format of `img-xxx`. There are three types of images: <br/><li>Public images </li><li>Custom images </li><li>Shared images </li><br/>You can obtain the image IDs in the [CVM console](https://console.cloud.tencent.com/cvm/image?rid=1&imageType=PUBLIC_IMAGE).</li><li>You can also use the [DescribeImages](https://intl.cloud.tencent.com/document/api/213/15715?from_cn_redirect=1) and look for `ImageId` in the response.</li>
  * @method void setImageId(string $ImageId) Set [Image](https://intl.cloud.tencent.com/document/product/213/4940?from_cn_redirect=1) ID in the format of `img-xxx`. There are three types of images: <br/><li>Public images </li><li>Custom images </li><li>Shared images </li><br/>You can obtain the image IDs in the [CVM console](https://console.cloud.tencent.com/cvm/image?rid=1&imageType=PUBLIC_IMAGE).</li><li>You can also use the [DescribeImages](https://intl.cloud.tencent.com/document/api/213/15715?from_cn_redirect=1) and look for `ImageId` in the response.</li>
- * @method integer getProjectId() Obtain Project ID of the launch configuration. The default project is used if it’s left blank.
+ * @method integer getProjectId() Obtain Project ID of the launch configuration. The default project is used if it is left blank.
 Note that this project ID is not the same as the project ID of the scaling group. 
- * @method void setProjectId(integer $ProjectId) Set Project ID of the launch configuration. The default project is used if it’s left blank.
+ * @method void setProjectId(integer $ProjectId) Set Project ID of the launch configuration. The default project is used if it is left blank.
 Note that this project ID is not the same as the project ID of the scaling group. 
  * @method string getInstanceType() Obtain Instance model. Different instance models specify different resource specifications. The specific value can be obtained by calling the [DescribeInstanceTypeConfigs](https://intl.cloud.tencent.com/document/api/213/15749?from_cn_redirect=1) API to get the latest specification table or referring to the descriptions in [Instance Types](https://intl.cloud.tencent.com/document/product/213/11518?from_cn_redirect=1).
 `InstanceType` and `InstanceTypes` are mutually exclusive, and one and only one of them must be entered.
@@ -102,6 +102,8 @@ Note: This field is default to empty
  * @method void setImageFamily(string $ImageFamily) Set Image family name. Either image ID or image family name should be filled in, and only one of which can be filled.
  * @method string getDedicatedClusterId() Obtain CDC ID.
  * @method void setDedicatedClusterId(string $DedicatedClusterId) Set CDC ID.
+ * @method Metadata getMetadata() Obtain Custom metadata.
+ * @method void setMetadata(Metadata $Metadata) Set Custom metadata.
  */
 class CreateLaunchConfigurationRequest extends AbstractModel
 {
@@ -116,7 +118,7 @@ class CreateLaunchConfigurationRequest extends AbstractModel
     public $ImageId;
 
     /**
-     * @var integer Project ID of the launch configuration. The default project is used if it’s left blank.
+     * @var integer Project ID of the launch configuration. The default project is used if it is left blank.
 Note that this project ID is not the same as the project ID of the scaling group. 
      */
     public $ProjectId;
@@ -255,9 +257,14 @@ Note: This field is default to empty
     public $DedicatedClusterId;
 
     /**
+     * @var Metadata Custom metadata.
+     */
+    public $Metadata;
+
+    /**
      * @param string $LaunchConfigurationName Display name of the launch configuration, which can contain letters, digits, underscores and hyphens (-), and dots. Up to of 60 bytes allowed..
      * @param string $ImageId [Image](https://intl.cloud.tencent.com/document/product/213/4940?from_cn_redirect=1) ID in the format of `img-xxx`. There are three types of images: <br/><li>Public images </li><li>Custom images </li><li>Shared images </li><br/>You can obtain the image IDs in the [CVM console](https://console.cloud.tencent.com/cvm/image?rid=1&imageType=PUBLIC_IMAGE).</li><li>You can also use the [DescribeImages](https://intl.cloud.tencent.com/document/api/213/15715?from_cn_redirect=1) and look for `ImageId` in the response.</li>
-     * @param integer $ProjectId Project ID of the launch configuration. The default project is used if it’s left blank.
+     * @param integer $ProjectId Project ID of the launch configuration. The default project is used if it is left blank.
 Note that this project ID is not the same as the project ID of the scaling group. 
      * @param string $InstanceType Instance model. Different instance models specify different resource specifications. The specific value can be obtained by calling the [DescribeInstanceTypeConfigs](https://intl.cloud.tencent.com/document/api/213/15749?from_cn_redirect=1) API to get the latest specification table or referring to the descriptions in [Instance Types](https://intl.cloud.tencent.com/document/product/213/11518?from_cn_redirect=1).
 `InstanceType` and `InstanceTypes` are mutually exclusive, and one and only one of them must be entered.
@@ -296,6 +303,7 @@ Note: This field is default to empty
      * @param array $DisasterRecoverGroupIds Placement group ID. Only one is allowed.
      * @param string $ImageFamily Image family name. Either image ID or image family name should be filled in, and only one of which can be filled.
      * @param string $DedicatedClusterId CDC ID.
+     * @param Metadata $Metadata Custom metadata.
      */
     function __construct()
     {
@@ -440,6 +448,11 @@ Note: This field is default to empty
 
         if (array_key_exists("DedicatedClusterId",$param) and $param["DedicatedClusterId"] !== null) {
             $this->DedicatedClusterId = $param["DedicatedClusterId"];
+        }
+
+        if (array_key_exists("Metadata",$param) and $param["Metadata"] !== null) {
+            $this->Metadata = new Metadata();
+            $this->Metadata->deserialize($param["Metadata"]);
         }
     }
 }

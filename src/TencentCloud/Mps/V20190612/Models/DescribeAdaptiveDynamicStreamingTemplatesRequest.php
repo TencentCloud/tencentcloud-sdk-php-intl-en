@@ -33,7 +33,11 @@ use TencentCloud\Common\AbstractModel;
 <li>Preset: preset template;</li>
 <li>Custom: custom template.</li>
  * @method integer getPureAudio() Obtain Whether it is an audio-only template. 0: video template. 1: audio-only template.
+
+Default value: 0
  * @method void setPureAudio(integer $PureAudio) Set Whether it is an audio-only template. 0: video template. 1: audio-only template.
+
+Default value: 0
  * @method string getName() Obtain Filter condition for adaptive transcoding template identifiers, with a length limit of 64 characters.
  * @method void setName(string $Name) Set Filter condition for adaptive transcoding template identifiers, with a length limit of 64 characters.
  */
@@ -63,6 +67,8 @@ class DescribeAdaptiveDynamicStreamingTemplatesRequest extends AbstractModel
 
     /**
      * @var integer Whether it is an audio-only template. 0: video template. 1: audio-only template.
+
+Default value: 0
      */
     public $PureAudio;
 
@@ -79,6 +85,8 @@ class DescribeAdaptiveDynamicStreamingTemplatesRequest extends AbstractModel
 <li>Preset: preset template;</li>
 <li>Custom: custom template.</li>
      * @param integer $PureAudio Whether it is an audio-only template. 0: video template. 1: audio-only template.
+
+Default value: 0
      * @param string $Name Filter condition for adaptive transcoding template identifiers, with a length limit of 64 characters.
      */
     function __construct()

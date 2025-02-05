@@ -31,9 +31,9 @@ Setting it to `true` will clear the hostname settings, which means that CVM newl
  * @method void setClearHostNameSettings(boolean $ClearHostNameSettings) Set Whether to clear the CVM hostname settings. This parameter is optional and the default value is `false`.
 Setting it to `true` will clear the hostname settings, which means that CVM newly created on this launch configuration will have no hostname.
  * @method boolean getClearInstanceNameSettings() Obtain Whether to clear the CVM instance name settings. This parameter is optional and the default value is `false`.
-Setting it to `true` will clear the instance name settings, which means that CVM newly created on this launch configuration will be named in the “as-{{AutoScalingGroupName}} format.
+Setting it to `true` will clear the instance name settings, which means that CVM newly created on this launch configuration will be named in the as-{{AutoScalingGroupName}} format.
  * @method void setClearInstanceNameSettings(boolean $ClearInstanceNameSettings) Set Whether to clear the CVM instance name settings. This parameter is optional and the default value is `false`.
-Setting it to `true` will clear the instance name settings, which means that CVM newly created on this launch configuration will be named in the “as-{{AutoScalingGroupName}} format.
+Setting it to `true` will clear the instance name settings, which means that CVM newly created on this launch configuration will be named in the as-{{AutoScalingGroupName}} format.
  * @method boolean getClearDisasterRecoverGroupIds() Obtain Whether to clear placement group information. This parameter is optional. Default value: `false`.
 `True` means clearing placement group information. After that, no placement groups are specified for CVMs created based on the information.
  * @method void setClearDisasterRecoverGroupIds(boolean $ClearDisasterRecoverGroupIds) Set Whether to clear placement group information. This parameter is optional. Default value: `false`.
@@ -42,6 +42,8 @@ Setting it to `true` will clear the instance name settings, which means that CVM
 If true is filled in, it indicates that the instance tag list should be cleared. After the list is cleared, the CVMs created based on this will not be bound to the tags in the list.
  * @method void setClearInstanceTags(boolean $ClearInstanceTags) Set Whether to clear the instance tag list. This parameter is optional, and its default value is false.
 If true is filled in, it indicates that the instance tag list should be cleared. After the list is cleared, the CVMs created based on this will not be bound to the tags in the list.
+ * @method boolean getClearMetadata() Obtain Whether to clear metadata, optional, defaults to false. Setting it to true will clear metadata, the CVMs created based on this will not be associated with custom metadata.
+ * @method void setClearMetadata(boolean $ClearMetadata) Set Whether to clear metadata, optional, defaults to false. Setting it to true will clear metadata, the CVMs created based on this will not be associated with custom metadata.
  */
 class ClearLaunchConfigurationAttributesRequest extends AbstractModel
 {
@@ -64,7 +66,7 @@ Setting it to `true` will clear the hostname settings, which means that CVM newl
 
     /**
      * @var boolean Whether to clear the CVM instance name settings. This parameter is optional and the default value is `false`.
-Setting it to `true` will clear the instance name settings, which means that CVM newly created on this launch configuration will be named in the “as-{{AutoScalingGroupName}} format.
+Setting it to `true` will clear the instance name settings, which means that CVM newly created on this launch configuration will be named in the as-{{AutoScalingGroupName}} format.
      */
     public $ClearInstanceNameSettings;
 
@@ -81,17 +83,23 @@ If true is filled in, it indicates that the instance tag list should be cleared.
     public $ClearInstanceTags;
 
     /**
+     * @var boolean Whether to clear metadata, optional, defaults to false. Setting it to true will clear metadata, the CVMs created based on this will not be associated with custom metadata.
+     */
+    public $ClearMetadata;
+
+    /**
      * @param string $LaunchConfigurationId Launch configuration ID
      * @param boolean $ClearDataDisks Whether to clear data disk information. This parameter is optional and the default value is `false`.
 Setting it to `true` will clear data disks, which means that CVM newly created on this launch configuration will have no data disk.
      * @param boolean $ClearHostNameSettings Whether to clear the CVM hostname settings. This parameter is optional and the default value is `false`.
 Setting it to `true` will clear the hostname settings, which means that CVM newly created on this launch configuration will have no hostname.
      * @param boolean $ClearInstanceNameSettings Whether to clear the CVM instance name settings. This parameter is optional and the default value is `false`.
-Setting it to `true` will clear the instance name settings, which means that CVM newly created on this launch configuration will be named in the “as-{{AutoScalingGroupName}} format.
+Setting it to `true` will clear the instance name settings, which means that CVM newly created on this launch configuration will be named in the as-{{AutoScalingGroupName}} format.
      * @param boolean $ClearDisasterRecoverGroupIds Whether to clear placement group information. This parameter is optional. Default value: `false`.
 `True` means clearing placement group information. After that, no placement groups are specified for CVMs created based on the information.
      * @param boolean $ClearInstanceTags Whether to clear the instance tag list. This parameter is optional, and its default value is false.
 If true is filled in, it indicates that the instance tag list should be cleared. After the list is cleared, the CVMs created based on this will not be bound to the tags in the list.
+     * @param boolean $ClearMetadata Whether to clear metadata, optional, defaults to false. Setting it to true will clear metadata, the CVMs created based on this will not be associated with custom metadata.
      */
     function __construct()
     {
@@ -128,6 +136,10 @@ If true is filled in, it indicates that the instance tag list should be cleared.
 
         if (array_key_exists("ClearInstanceTags",$param) and $param["ClearInstanceTags"] !== null) {
             $this->ClearInstanceTags = $param["ClearInstanceTags"];
+        }
+
+        if (array_key_exists("ClearMetadata",$param) and $param["ClearMetadata"] !== null) {
+            $this->ClearMetadata = $param["ClearMetadata"];
         }
     }
 }

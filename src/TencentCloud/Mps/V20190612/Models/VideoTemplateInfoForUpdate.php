@@ -76,18 +76,26 @@ Note: When resolution adaption is enabled, `Width` cannot be smaller than `Heigh
 <li>open: Enabled. When resolution adaption is enabled, `Width` indicates the long side of a video, while `Height` indicates the short side.</li>
 <li>close: Disabled. When resolution adaption is disabled, `Width` indicates the width of a video, while `Height` indicates the height.</li>
 Note: When resolution adaption is enabled, `Width` cannot be smaller than `Height`.
- * @method integer getWidth() Obtain Maximum value of the width (or long side) of a video stream in px. Value range: 0 and [128, 4,096].
-<li>If both `Width` and `Height` are 0, the resolution will be the same as that of the source video;</li>
-<li>If `Width` is 0, but `Height` is not 0, `Width` will be proportionally scaled;</li>
-<li>If `Width` is not 0, but `Height` is 0, `Height` will be proportionally scaled;</li>
-<li>If both `Width` and `Height` are not 0, the custom resolution will be used.</li>
- * @method void setWidth(integer $Width) Set Maximum value of the width (or long side) of a video stream in px. Value range: 0 and [128, 4,096].
-<li>If both `Width` and `Height` are 0, the resolution will be the same as that of the source video;</li>
-<li>If `Width` is 0, but `Height` is not 0, `Width` will be proportionally scaled;</li>
-<li>If `Width` is not 0, but `Height` is 0, `Height` will be proportionally scaled;</li>
-<li>If both `Width` and `Height` are not 0, the custom resolution will be used.</li>
- * @method integer getHeight() Obtain Maximum value of the height (or short side) of a video stream in px. Value range: 0 and [128, 4,096].
- * @method void setHeight(integer $Height) Set Maximum value of the height (or short side) of a video stream in px. Value range: 0 and [128, 4,096].
+ * @method integer getWidth() Obtain Maximum value of the video stream width (or long edge) in px. Value range: 0 and [128, 4096].
+<li>If both Width and Height are 0, the resolution is the same as the source.</li>
+<li>If Width is 0 but Height is not 0, the width will be proportionally scaled.</li>
+<li>If Width is not 0 but Height is 0, the height will be proportionally scaled.</li>
+<li>If both Width and Height are not 0, the resolution is as specified by the user.</li>
+Note: If Codec is set to MV-HEVC, the maximum value can be 7680.
+Note: This field may return null, indicating that no valid value can be obtained.
+ * @method void setWidth(integer $Width) Set Maximum value of the video stream width (or long edge) in px. Value range: 0 and [128, 4096].
+<li>If both Width and Height are 0, the resolution is the same as the source.</li>
+<li>If Width is 0 but Height is not 0, the width will be proportionally scaled.</li>
+<li>If Width is not 0 but Height is 0, the height will be proportionally scaled.</li>
+<li>If both Width and Height are not 0, the resolution is as specified by the user.</li>
+Note: If Codec is set to MV-HEVC, the maximum value can be 7680.
+Note: This field may return null, indicating that no valid value can be obtained.
+ * @method integer getHeight() Obtain Maximum value of the video stream height (or short edge) in px. Value range: 0 and [128, 4,096].
+Note: If Codec is set to MV-HEVC, the maximum value can be 7680.
+Note: This field may return null, indicating that no valid value can be obtained.
+ * @method void setHeight(integer $Height) Set Maximum value of the video stream height (or short edge) in px. Value range: 0 and [128, 4,096].
+Note: If Codec is set to MV-HEVC, the maximum value can be 7680.
+Note: This field may return null, indicating that no valid value can be obtained.
  * @method integer getGop() Obtain Interval between I-frames (keyframes), which can be customized in frames or seconds. GOP value range: 0 and [1, 100000].
 If this parameter is 0, the system will automatically set the GOP length.
 Note: This field may return null, indicating that no valid value can be obtained.
@@ -378,16 +386,20 @@ Note: When resolution adaption is enabled, `Width` cannot be smaller than `Heigh
     public $ResolutionAdaptive;
 
     /**
-     * @var integer Maximum value of the width (or long side) of a video stream in px. Value range: 0 and [128, 4,096].
-<li>If both `Width` and `Height` are 0, the resolution will be the same as that of the source video;</li>
-<li>If `Width` is 0, but `Height` is not 0, `Width` will be proportionally scaled;</li>
-<li>If `Width` is not 0, but `Height` is 0, `Height` will be proportionally scaled;</li>
-<li>If both `Width` and `Height` are not 0, the custom resolution will be used.</li>
+     * @var integer Maximum value of the video stream width (or long edge) in px. Value range: 0 and [128, 4096].
+<li>If both Width and Height are 0, the resolution is the same as the source.</li>
+<li>If Width is 0 but Height is not 0, the width will be proportionally scaled.</li>
+<li>If Width is not 0 but Height is 0, the height will be proportionally scaled.</li>
+<li>If both Width and Height are not 0, the resolution is as specified by the user.</li>
+Note: If Codec is set to MV-HEVC, the maximum value can be 7680.
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public $Width;
 
     /**
-     * @var integer Maximum value of the height (or short side) of a video stream in px. Value range: 0 and [128, 4,096].
+     * @var integer Maximum value of the video stream height (or short edge) in px. Value range: 0 and [128, 4,096].
+Note: If Codec is set to MV-HEVC, the maximum value can be 7680.
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public $Height;
 
@@ -629,12 +641,16 @@ If the value is 0, the frame rate will be the same as that of the source video.N
 <li>open: Enabled. When resolution adaption is enabled, `Width` indicates the long side of a video, while `Height` indicates the short side.</li>
 <li>close: Disabled. When resolution adaption is disabled, `Width` indicates the width of a video, while `Height` indicates the height.</li>
 Note: When resolution adaption is enabled, `Width` cannot be smaller than `Height`.
-     * @param integer $Width Maximum value of the width (or long side) of a video stream in px. Value range: 0 and [128, 4,096].
-<li>If both `Width` and `Height` are 0, the resolution will be the same as that of the source video;</li>
-<li>If `Width` is 0, but `Height` is not 0, `Width` will be proportionally scaled;</li>
-<li>If `Width` is not 0, but `Height` is 0, `Height` will be proportionally scaled;</li>
-<li>If both `Width` and `Height` are not 0, the custom resolution will be used.</li>
-     * @param integer $Height Maximum value of the height (or short side) of a video stream in px. Value range: 0 and [128, 4,096].
+     * @param integer $Width Maximum value of the video stream width (or long edge) in px. Value range: 0 and [128, 4096].
+<li>If both Width and Height are 0, the resolution is the same as the source.</li>
+<li>If Width is 0 but Height is not 0, the width will be proportionally scaled.</li>
+<li>If Width is not 0 but Height is 0, the height will be proportionally scaled.</li>
+<li>If both Width and Height are not 0, the resolution is as specified by the user.</li>
+Note: If Codec is set to MV-HEVC, the maximum value can be 7680.
+Note: This field may return null, indicating that no valid value can be obtained.
+     * @param integer $Height Maximum value of the video stream height (or short edge) in px. Value range: 0 and [128, 4,096].
+Note: If Codec is set to MV-HEVC, the maximum value can be 7680.
+Note: This field may return null, indicating that no valid value can be obtained.
      * @param integer $Gop Interval between I-frames (keyframes), which can be customized in frames or seconds. GOP value range: 0 and [1, 100000].
 If this parameter is 0, the system will automatically set the GOP length.
 Note: This field may return null, indicating that no valid value can be obtained.
