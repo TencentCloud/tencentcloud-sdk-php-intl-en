@@ -63,6 +63,9 @@ Note:Reseller need to be allowlisted to use the API, please contact your busines
  * @method Models\QueryCreditAllocationHistoryResponse QueryCreditAllocationHistory(Models\QueryCreditAllocationHistoryRequest $req) This API is used to query all the credit allocation records of a single customer.
  * @method Models\QueryCreditByUinListResponse QueryCreditByUinList(Models\QueryCreditByUinListRequest $req) This API is used to query the credit of users in the list.
  * @method Models\QueryCreditQuotaResponse QueryCreditQuota(Models\QueryCreditQuotaRequest $req) This API is used to query customer credits.
+ * @method Models\QueryCustomerBillingQuotaResponse QueryCustomerBillingQuota(Models\QueryCustomerBillingQuotaRequest $req) Description: This API is used for a sub-customer to real-time query its own total credit and remaining credit in USD.
+
+Callable roles: Sub-customer
  * @method Models\QueryCustomersCreditResponse QueryCustomersCredit(Models\QueryCustomersCreditRequest $req) This API is used for a partner to the credits and basic information of cutomers.
  * @method Models\QueryDirectCustomersCreditResponse QueryDirectCustomersCredit(Models\QueryDirectCustomersCreditRequest $req) This API is used to query the credits of direct customers.
  * @method Models\QueryPartnerCreditResponse QueryPartnerCredit(Models\QueryPartnerCreditRequest $req) This API is used for a partner to query its own total credit, available credit, and used credit in USD.
