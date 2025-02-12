@@ -24,12 +24,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAdsUrl(string $AdsUrl) Set Advertising Decision Server URL (ADS).
  * @method array getConfigAliases() Obtain Parameter configuration.
  * @method void setConfigAliases(array $ConfigAliases) Set Parameter configuration.
- * @method string getSlateAd() Obtain Default advertising url.
- * @method void setSlateAd(string $SlateAd) Set Default advertising url.
- * @method integer getThreshold() Obtain Maximum unfilled duration, unit: seconds.
- * @method void setThreshold(integer $Threshold) Set Maximum unfilled duration, unit: seconds.
- * @method boolean getDashMPDLocation() Obtain Whether to enable mpd location, true corresponds to enable, false corresponds to disable.
- * @method void setDashMPDLocation(boolean $DashMPDLocation) Set Whether to enable mpd location, true corresponds to enable, false corresponds to disable.
  * @method boolean getAdMarkerPassthrough() Obtain Whether to enable transparent transmission of advertising tags.
  * @method void setAdMarkerPassthrough(boolean $AdMarkerPassthrough) Set Whether to enable transparent transmission of advertising tags.
  * @method integer getSCTE35AdType() Obtain How to process tags in advertisements, optional values: [1,2] 
@@ -38,6 +32,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSCTE35AdType(integer $SCTE35AdType) Set How to process tags in advertisements, optional values: [1,2] 
 1: Process all SCTE-35 type tags - all (default) 
 2: SCTE-35enhanced, parse some types.
+ * @method string getSlateAd() Obtain Default advertising url.
+ * @method void setSlateAd(string $SlateAd) Set Default advertising url.
+ * @method integer getThreshold() Obtain Maximum unfilled duration, unit: seconds.
+ * @method void setThreshold(integer $Threshold) Set Maximum unfilled duration, unit: seconds.
+ * @method boolean getDashMPDLocation() Obtain Whether to enable mpd location, true corresponds to enable, false corresponds to disable.
+ * @method void setDashMPDLocation(boolean $DashMPDLocation) Set Whether to enable mpd location, true corresponds to enable, false corresponds to disable.
  * @method array getAdTriggers() Obtain The type of tag that is regarded as an advertisement, optional values: [1,8]
 1. Splice insert 
 2. Provider advertisement 
@@ -66,6 +66,10 @@ use TencentCloud\Common\AbstractModel;
 2:Restricted (default) 
 3:Unrestricted 
 4.Both.
+ * @method string getSourceCDNPrefix() Obtain Source CDN prefix, needs to start with http:// or https://
+ * @method void setSourceCDNPrefix(string $SourceCDNPrefix) Set Source CDN prefix, needs to start with http:// or https://
+ * @method string getAdCDNPrefix() Obtain Advertising CDN prefix needs to start with http:// or https://
+ * @method void setAdCDNPrefix(string $AdCDNPrefix) Set Advertising CDN prefix needs to start with http:// or https://
  */
 class SSAIConf extends AbstractModel
 {
@@ -78,6 +82,18 @@ class SSAIConf extends AbstractModel
      * @var array Parameter configuration.
      */
     public $ConfigAliases;
+
+    /**
+     * @var boolean Whether to enable transparent transmission of advertising tags.
+     */
+    public $AdMarkerPassthrough;
+
+    /**
+     * @var integer How to process tags in advertisements, optional values: [1,2] 
+1: Process all SCTE-35 type tags - all (default) 
+2: SCTE-35enhanced, parse some types.
+     */
+    public $SCTE35AdType;
 
     /**
      * @var string Default advertising url.
@@ -93,18 +109,6 @@ class SSAIConf extends AbstractModel
      * @var boolean Whether to enable mpd location, true corresponds to enable, false corresponds to disable.
      */
     public $DashMPDLocation;
-
-    /**
-     * @var boolean Whether to enable transparent transmission of advertising tags.
-     */
-    public $AdMarkerPassthrough;
-
-    /**
-     * @var integer How to process tags in advertisements, optional values: [1,2] 
-1: Process all SCTE-35 type tags - all (default) 
-2: SCTE-35enhanced, parse some types.
-     */
-    public $SCTE35AdType;
 
     /**
      * @var array The type of tag that is regarded as an advertisement, optional values: [1,8]
@@ -129,15 +133,25 @@ class SSAIConf extends AbstractModel
     public $DeliveryRestrictions;
 
     /**
+     * @var string Source CDN prefix, needs to start with http:// or https://
+     */
+    public $SourceCDNPrefix;
+
+    /**
+     * @var string Advertising CDN prefix needs to start with http:// or https://
+     */
+    public $AdCDNPrefix;
+
+    /**
      * @param string $AdsUrl Advertising Decision Server URL (ADS).
      * @param array $ConfigAliases Parameter configuration.
-     * @param string $SlateAd Default advertising url.
-     * @param integer $Threshold Maximum unfilled duration, unit: seconds.
-     * @param boolean $DashMPDLocation Whether to enable mpd location, true corresponds to enable, false corresponds to disable.
      * @param boolean $AdMarkerPassthrough Whether to enable transparent transmission of advertising tags.
      * @param integer $SCTE35AdType How to process tags in advertisements, optional values: [1,2] 
 1: Process all SCTE-35 type tags - all (default) 
 2: SCTE-35enhanced, parse some types.
+     * @param string $SlateAd Default advertising url.
+     * @param integer $Threshold Maximum unfilled duration, unit: seconds.
+     * @param boolean $DashMPDLocation Whether to enable mpd location, true corresponds to enable, false corresponds to disable.
      * @param array $AdTriggers The type of tag that is regarded as an advertisement, optional values: [1,8]
 1. Splice insert 
 2. Provider advertisement 
@@ -152,6 +166,8 @@ class SSAIConf extends AbstractModel
 2:Restricted (default) 
 3:Unrestricted 
 4.Both.
+     * @param string $SourceCDNPrefix Source CDN prefix, needs to start with http:// or https://
+     * @param string $AdCDNPrefix Advertising CDN prefix needs to start with http:// or https://
      */
     function __construct()
     {
@@ -179,6 +195,14 @@ class SSAIConf extends AbstractModel
             }
         }
 
+        if (array_key_exists("AdMarkerPassthrough",$param) and $param["AdMarkerPassthrough"] !== null) {
+            $this->AdMarkerPassthrough = $param["AdMarkerPassthrough"];
+        }
+
+        if (array_key_exists("SCTE35AdType",$param) and $param["SCTE35AdType"] !== null) {
+            $this->SCTE35AdType = $param["SCTE35AdType"];
+        }
+
         if (array_key_exists("SlateAd",$param) and $param["SlateAd"] !== null) {
             $this->SlateAd = $param["SlateAd"];
         }
@@ -191,20 +215,20 @@ class SSAIConf extends AbstractModel
             $this->DashMPDLocation = $param["DashMPDLocation"];
         }
 
-        if (array_key_exists("AdMarkerPassthrough",$param) and $param["AdMarkerPassthrough"] !== null) {
-            $this->AdMarkerPassthrough = $param["AdMarkerPassthrough"];
-        }
-
-        if (array_key_exists("SCTE35AdType",$param) and $param["SCTE35AdType"] !== null) {
-            $this->SCTE35AdType = $param["SCTE35AdType"];
-        }
-
         if (array_key_exists("AdTriggers",$param) and $param["AdTriggers"] !== null) {
             $this->AdTriggers = $param["AdTriggers"];
         }
 
         if (array_key_exists("DeliveryRestrictions",$param) and $param["DeliveryRestrictions"] !== null) {
             $this->DeliveryRestrictions = $param["DeliveryRestrictions"];
+        }
+
+        if (array_key_exists("SourceCDNPrefix",$param) and $param["SourceCDNPrefix"] !== null) {
+            $this->SourceCDNPrefix = $param["SourceCDNPrefix"];
+        }
+
+        if (array_key_exists("AdCDNPrefix",$param) and $param["AdCDNPrefix"] !== null) {
+            $this->AdCDNPrefix = $param["AdCDNPrefix"];
         }
     }
 }

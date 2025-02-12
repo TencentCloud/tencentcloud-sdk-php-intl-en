@@ -29,6 +29,7 @@ use TencentCloud\Mdp\V20200527\Models as Models;
  * @method Models\CreateStreamPackageHarvestJobResponse CreateStreamPackageHarvestJob(Models\CreateStreamPackageHarvestJobRequest $req) Create HarvestJob.
  * @method Models\CreateStreamPackageLinearAssemblyChannelResponse CreateStreamPackageLinearAssemblyChannel(Models\CreateStreamPackageLinearAssemblyChannelRequest $req) Create a linear assembly channel.
  * @method Models\CreateStreamPackageLinearAssemblyProgramResponse CreateStreamPackageLinearAssemblyProgram(Models\CreateStreamPackageLinearAssemblyProgramRequest $req) Create a linear assembly program.
+ * @method Models\CreateStreamPackageSSAIChannelResponse CreateStreamPackageSSAIChannel(Models\CreateStreamPackageSSAIChannelRequest $req) CreateStreamPackageSSAIChannel
  * @method Models\CreateStreamPackageSourceResponse CreateStreamPackageSource(Models\CreateStreamPackageSourceRequest $req) Create channel linear assembly Source.
  * @method Models\CreateStreamPackageSourceLocationResponse CreateStreamPackageSourceLocation(Models\CreateStreamPackageSourceLocationRequest $req) Create Linear Assembly SourceLocation.
  * @method Models\DeleteStreamPackageChannelEndpointsResponse DeleteStreamPackageChannelEndpoints(Models\DeleteStreamPackageChannelEndpointsRequest $req) This API is used to delete endpoints from a StreamPackage channel in batches.
@@ -39,6 +40,7 @@ use TencentCloud\Mdp\V20200527\Models as Models;
  * @method Models\DeleteStreamPackageLinearAssemblyChannelsResponse DeleteStreamPackageLinearAssemblyChannels(Models\DeleteStreamPackageLinearAssemblyChannelsRequest $req) Delete channels in batches and linearly assemble channels.
  * @method Models\DeleteStreamPackageLinearAssemblyProgramResponse DeleteStreamPackageLinearAssemblyProgram(Models\DeleteStreamPackageLinearAssemblyProgramRequest $req) Delete Channel Linear Assembly Program.
  * @method Models\DeleteStreamPackageLinearAssemblyProgramsResponse DeleteStreamPackageLinearAssemblyPrograms(Models\DeleteStreamPackageLinearAssemblyProgramsRequest $req) Batch deletion of channels linear assembly program.
+ * @method Models\DeleteStreamPackageSSAIChannelResponse DeleteStreamPackageSSAIChannel(Models\DeleteStreamPackageSSAIChannelRequest $req) DeleteStreamPackageSSAIChannel
  * @method Models\DeleteStreamPackageSourceResponse DeleteStreamPackageSource(Models\DeleteStreamPackageSourceRequest $req) Delete channel linear assembly Source.
  * @method Models\DeleteStreamPackageSourceLocationResponse DeleteStreamPackageSourceLocation(Models\DeleteStreamPackageSourceLocationRequest $req) Batch delete media packaging SourceLocation.
  * @method Models\DescribeStreamPackageChannelResponse DescribeStreamPackageChannel(Models\DescribeStreamPackageChannelRequest $req) This API is used to query the information of a StreamPackage channel.
@@ -51,6 +53,8 @@ use TencentCloud\Mdp\V20200527\Models as Models;
  * @method Models\DescribeStreamPackageLinearAssemblyProgramResponse DescribeStreamPackageLinearAssemblyProgram(Models\DescribeStreamPackageLinearAssemblyProgramRequest $req) Query channel linear assembly program information.
  * @method Models\DescribeStreamPackageLinearAssemblyProgramSchedulesResponse DescribeStreamPackageLinearAssemblyProgramSchedules(Models\DescribeStreamPackageLinearAssemblyProgramSchedulesRequest $req) Query channel linear assembly Programl assembly scheduling information list.
  * @method Models\DescribeStreamPackageLinearAssemblyProgramsResponse DescribeStreamPackageLinearAssemblyPrograms(Models\DescribeStreamPackageLinearAssemblyProgramsRequest $req) Query channel linear assembly Programl information list.
+ * @method Models\DescribeStreamPackageSSAIChannelResponse DescribeStreamPackageSSAIChannel(Models\DescribeStreamPackageSSAIChannelRequest $req) DescribeStreamPackageSSAIChannel
+ * @method Models\DescribeStreamPackageSSAIChannelsResponse DescribeStreamPackageSSAIChannels(Models\DescribeStreamPackageSSAIChannelsRequest $req) DescribeStreamPackageSSAIChannels
  * @method Models\DescribeStreamPackageSourceResponse DescribeStreamPackageSource(Models\DescribeStreamPackageSourceRequest $req) Query channel linear assembly Source information.
  * @method Models\DescribeStreamPackageSourceAlertsResponse DescribeStreamPackageSourceAlerts(Models\DescribeStreamPackageSourceAlertsRequest $req) Query channel linear assembly Source alarm information.
  * @method Models\DescribeStreamPackageSourceLocationResponse DescribeStreamPackageSourceLocation(Models\DescribeStreamPackageSourceLocationRequest $req) Query channel linear assembly sourceLocation information.
@@ -62,6 +66,7 @@ use TencentCloud\Mdp\V20200527\Models as Models;
  * @method Models\ModifyStreamPackageChannelInputAuthInfoResponse ModifyStreamPackageChannelInputAuthInfo(Models\ModifyStreamPackageChannelInputAuthInfoRequest $req) This API is used to modify the input authentication information of a StreamPackage channel.
  * @method Models\ModifyStreamPackageLinearAssemblyChannelResponse ModifyStreamPackageLinearAssemblyChannel(Models\ModifyStreamPackageLinearAssemblyChannelRequest $req) Modify channel linear assembly Channel configuration.
  * @method Models\ModifyStreamPackageLinearAssemblyProgramResponse ModifyStreamPackageLinearAssemblyProgram(Models\ModifyStreamPackageLinearAssemblyProgramRequest $req) Modify channel linear assembly Program configuration.
+ * @method Models\ModifyStreamPackageSSAIChannelResponse ModifyStreamPackageSSAIChannel(Models\ModifyStreamPackageSSAIChannelRequest $req) ModifyStreamPackageSSAIChannel
  * @method Models\ModifyStreamPackageSourceResponse ModifyStreamPackageSource(Models\ModifyStreamPackageSourceRequest $req) Modify channel linear assembly Source configuration.
  * @method Models\ModifyStreamPackageSourceLocationResponse ModifyStreamPackageSourceLocation(Models\ModifyStreamPackageSourceLocationRequest $req) Modify channel linear assembly SourceLocation configuration
  * @method Models\StartStreamPackageLinearAssemblyChannelResponse StartStreamPackageLinearAssemblyChannel(Models\StartStreamPackageLinearAssemblyChannelRequest $req) Start Linear Assembly Channel.
