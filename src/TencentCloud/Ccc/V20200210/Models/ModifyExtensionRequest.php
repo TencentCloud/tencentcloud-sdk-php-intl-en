@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyExtension request structure.
  *
- * @method integer getSdkAppId() Obtain TCCC instance application ID.
- * @method void setSdkAppId(integer $SdkAppId) Set TCCC instance application ID.
- * @method string getExtensionId() Obtain Extension
- * @method void setExtensionId(string $ExtensionId) Set Extension
+ * @method integer getSdkAppId() Obtain Application id (required) can be found at https://console.cloud.tencent.com/ccc.
+ * @method void setSdkAppId(integer $SdkAppId) Set Application id (required) can be found at https://console.cloud.tencent.com/ccc.
+ * @method string getExtensionId() Obtain Extension.
+ * @method void setExtensionId(string $ExtensionId) Set Extension.
  * @method string getExtensionName() Obtain Extension name.
  * @method void setExtensionName(string $ExtensionName) Set Extension name.
  * @method array getSkillGroupIds() Obtain Affiliated skill group list.
@@ -34,12 +34,12 @@ use TencentCloud\Common\AbstractModel;
 class ModifyExtensionRequest extends AbstractModel
 {
     /**
-     * @var integer TCCC instance application ID.
+     * @var integer Application id (required) can be found at https://console.cloud.tencent.com/ccc.
      */
     public $SdkAppId;
 
     /**
-     * @var string Extension
+     * @var string Extension.
      */
     public $ExtensionId;
 
@@ -59,8 +59,8 @@ class ModifyExtensionRequest extends AbstractModel
     public $Relation;
 
     /**
-     * @param integer $SdkAppId TCCC instance application ID.
-     * @param string $ExtensionId Extension
+     * @param integer $SdkAppId Application id (required) can be found at https://console.cloud.tencent.com/ccc.
+     * @param string $ExtensionId Extension.
      * @param string $ExtensionName Extension name.
      * @param array $SkillGroupIds Affiliated skill group list.
      * @param string $Relation Bind agent email account.

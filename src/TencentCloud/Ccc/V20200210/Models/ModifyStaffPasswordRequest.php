@@ -20,17 +20,17 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyStaffPassword request structure.
  *
- * @method integer getSdkAppId() Obtain Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
- * @method void setSdkAppId(integer $SdkAppId) Set Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
+ * @method integer getSdkAppId() Obtain Application id (required) can be found at https://console.cloud.tencent.com/ccc.
+ * @method void setSdkAppId(integer $SdkAppId) Set Application id (required) can be found at https://console.cloud.tencent.com/ccc.
  * @method string getEmail() Obtain Agent email.
  * @method void setEmail(string $Email) Set Agent email.
- * @method string getPassword() Obtain The set password 
- * @method void setPassword(string $Password) Set The set password 
+ * @method string getPassword() Obtain The set password.
+ * @method void setPassword(string $Password) Set The set password.
  */
 class ModifyStaffPasswordRequest extends AbstractModel
 {
     /**
-     * @var integer Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
+     * @var integer Application id (required) can be found at https://console.cloud.tencent.com/ccc.
      */
     public $SdkAppId;
 
@@ -40,14 +40,14 @@ class ModifyStaffPasswordRequest extends AbstractModel
     public $Email;
 
     /**
-     * @var string The set password 
+     * @var string The set password.
      */
     public $Password;
 
     /**
-     * @param integer $SdkAppId Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
+     * @param integer $SdkAppId Application id (required) can be found at https://console.cloud.tencent.com/ccc.
      * @param string $Email Agent email.
-     * @param string $Password The set password 
+     * @param string $Password The set password.
      */
     function __construct()
     {

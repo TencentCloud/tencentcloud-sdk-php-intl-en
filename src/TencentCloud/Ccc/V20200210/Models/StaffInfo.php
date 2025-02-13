@@ -21,39 +21,28 @@ use TencentCloud\Common\AbstractModel;
  * Agent Information with Skill Group Priority
  *
  * @method string getName() Obtain Agent name.
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setName(string $Name) Set Agent name.
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getMail() Obtain Agent email.
  * @method void setMail(string $Mail) Set Agent email.
- * @method string getPhone() Obtain Agent's Telephone Number
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setPhone(string $Phone) Set Agent's Telephone Number
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getPhone() Obtain Agent phone number.
+ * @method void setPhone(string $Phone) Set Agent phone number.
  * @method string getNick() Obtain Agent nickname.
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setNick(string $Nick) Set Agent nickname.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getStaffNumber() Obtain Agent ID
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setStaffNumber(string $StaffNumber) Set Agent ID
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getRoleId() Obtain User Role ID
- * @method void setRoleId(integer $RoleId) Set User Role ID
- * @method array getSkillGroupList() Obtain Affiliated Skill Group List.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setSkillGroupList(array $SkillGroupList) Set Affiliated Skill Group List.
-Note: this field may return null, indicating that no valid values can be obtained.
+ * @method string getStaffNumber() Obtain Agent id.
+ * @method void setStaffNumber(string $StaffNumber) Set Agent id.
+ * @method integer getRoleId() Obtain User role id.
+ * @method void setRoleId(integer $RoleId) Set User role id.
+ * @method array getSkillGroupList() Obtain Affiliated skill group list.
+ * @method void setSkillGroupList(array $SkillGroupList) Set Affiliated skill group list.
  * @method integer getLastModifyTimestamp() Obtain Last modification time.
-Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setLastModifyTimestamp(integer $LastModifyTimestamp) Set Last modification time.
-Note: this field may return null, indicating that no valid values can be obtained.
+ * @method string getExtensionNumber() Obtain Agent extension number (starting with 1 to 8, 4 - 6 digits).
+ * @method void setExtensionNumber(string $ExtensionNumber) Set Agent extension number (starting with 1 to 8, 4 - 6 digits).
  */
 class StaffInfo extends AbstractModel
 {
     /**
      * @var string Agent name.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Name;
 
@@ -63,55 +52,50 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $Mail;
 
     /**
-     * @var string Agent's Telephone Number
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Agent phone number.
      */
     public $Phone;
 
     /**
      * @var string Agent nickname.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Nick;
 
     /**
-     * @var string Agent ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Agent id.
      */
     public $StaffNumber;
 
     /**
-     * @var integer User Role ID
+     * @var integer User role id.
      */
     public $RoleId;
 
     /**
-     * @var array Affiliated Skill Group List.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var array Affiliated skill group list.
      */
     public $SkillGroupList;
 
     /**
      * @var integer Last modification time.
-Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $LastModifyTimestamp;
 
     /**
+     * @var string Agent extension number (starting with 1 to 8, 4 - 6 digits).
+     */
+    public $ExtensionNumber;
+
+    /**
      * @param string $Name Agent name.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $Mail Agent email.
-     * @param string $Phone Agent's Telephone Number
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $Phone Agent phone number.
      * @param string $Nick Agent nickname.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $StaffNumber Agent ID
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $RoleId User Role ID
-     * @param array $SkillGroupList Affiliated Skill Group List.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @param string $StaffNumber Agent id.
+     * @param integer $RoleId User role id.
+     * @param array $SkillGroupList Affiliated skill group list.
      * @param integer $LastModifyTimestamp Last modification time.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @param string $ExtensionNumber Agent extension number (starting with 1 to 8, 4 - 6 digits).
      */
     function __construct()
     {
@@ -161,6 +145,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("LastModifyTimestamp",$param) and $param["LastModifyTimestamp"] !== null) {
             $this->LastModifyTimestamp = $param["LastModifyTimestamp"];
+        }
+
+        if (array_key_exists("ExtensionNumber",$param) and $param["ExtensionNumber"] !== null) {
+            $this->ExtensionNumber = $param["ExtensionNumber"];
         }
     }
 }

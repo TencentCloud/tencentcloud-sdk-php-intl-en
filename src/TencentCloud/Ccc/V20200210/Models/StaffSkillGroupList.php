@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Bound skill group list for agents.
  *
- * @method integer getSkillGroupId() Obtain Skill group ID.
- * @method void setSkillGroupId(integer $SkillGroupId) Set Skill group ID.
+ * @method integer getSkillGroupId() Obtain Skill group id.
+ * @method void setSkillGroupId(integer $SkillGroupId) Set Skill group id.
  * @method integer getPriority() Obtain Priority of the agent in the skill group (1 is the highest, 5 is the lowest, 3 by default).
  * @method void setPriority(integer $Priority) Set Priority of the agent in the skill group (1 is the highest, 5 is the lowest, 3 by default).
  */
 class StaffSkillGroupList extends AbstractModel
 {
     /**
-     * @var integer Skill group ID.
+     * @var integer Skill group id.
      */
     public $SkillGroupId;
 
@@ -38,7 +38,7 @@ class StaffSkillGroupList extends AbstractModel
     public $Priority;
 
     /**
-     * @param integer $SkillGroupId Skill group ID.
+     * @param integer $SkillGroupId Skill group id.
      * @param integer $Priority Priority of the agent in the skill group (1 is the highest, 5 is the lowest, 3 by default).
      */
     function __construct()

@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * UnbindStaffSkillGroupList request structure.
  *
- * @method integer getSdkAppId() Obtain Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
- * @method void setSdkAppId(integer $SdkAppId) Set Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
+ * @method integer getSdkAppId() Obtain Application id (required) can be found at https://console.cloud.tencent.com/ccc.
+ * @method void setSdkAppId(integer $SdkAppId) Set Application id (required) can be found at https://console.cloud.tencent.com/ccc.
  * @method string getStaffEmail() Obtain Customer service email.
  * @method void setStaffEmail(string $StaffEmail) Set Customer service email.
  * @method array getSkillGroupList() Obtain Unbound skill group list.
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class UnbindStaffSkillGroupListRequest extends AbstractModel
 {
     /**
-     * @var integer Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
+     * @var integer Application id (required) can be found at https://console.cloud.tencent.com/ccc.
      */
     public $SdkAppId;
 
@@ -45,7 +45,7 @@ class UnbindStaffSkillGroupListRequest extends AbstractModel
     public $SkillGroupList;
 
     /**
-     * @param integer $SdkAppId Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
+     * @param integer $SdkAppId Application id (required) can be found at https://console.cloud.tencent.com/ccc.
      * @param string $StaffEmail Customer service email.
      * @param array $SkillGroupList Unbound skill group list.
      */

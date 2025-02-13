@@ -20,21 +20,21 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribePredictiveDialingCampaigns request structure.
  *
- * @method integer getSdkAppId() Obtain Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
- * @method void setSdkAppId(integer $SdkAppId) Set Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
+ * @method integer getSdkAppId() Obtain Application id (required) can be found at https://console.cloud.tencent.com/ccc.
+ * @method void setSdkAppId(integer $SdkAppId) Set Application id (required) can be found at https://console.cloud.tencent.com/ccc.
  * @method integer getPageSize() Obtain Page size, 100 maximum.
  * @method void setPageSize(integer $PageSize) Set Page size, 100 maximum.
  * @method integer getPageNumber() Obtain Page number starting from 0.
  * @method void setPageNumber(integer $PageNumber) Set Page number starting from 0.
  * @method string getName() Obtain Query the task list name keyword.
  * @method void setName(string $Name) Set Query the task list name keyword.
- * @method integer getSkillGroupId() Obtain Query task list skill group ID.
- * @method void setSkillGroupId(integer $SkillGroupId) Set Query task list skill group ID.
+ * @method integer getSkillGroupId() Obtain Query task list skill group id.
+ * @method void setSkillGroupId(integer $SkillGroupId) Set Query task list skill group id.
  */
 class DescribePredictiveDialingCampaignsRequest extends AbstractModel
 {
     /**
-     * @var integer Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
+     * @var integer Application id (required) can be found at https://console.cloud.tencent.com/ccc.
      */
     public $SdkAppId;
 
@@ -54,16 +54,16 @@ class DescribePredictiveDialingCampaignsRequest extends AbstractModel
     public $Name;
 
     /**
-     * @var integer Query task list skill group ID.
+     * @var integer Query task list skill group id.
      */
     public $SkillGroupId;
 
     /**
-     * @param integer $SdkAppId Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
+     * @param integer $SdkAppId Application id (required) can be found at https://console.cloud.tencent.com/ccc.
      * @param integer $PageSize Page size, 100 maximum.
      * @param integer $PageNumber Page number starting from 0.
      * @param string $Name Query the task list name keyword.
-     * @param integer $SkillGroupId Query task list skill group ID.
+     * @param integer $SkillGroupId Query task list skill group id.
      */
     function __construct()
     {

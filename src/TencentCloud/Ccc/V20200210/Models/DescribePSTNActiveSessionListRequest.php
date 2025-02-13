@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribePSTNActiveSessionList request structure.
  *
- * @method integer getSdkAppId() Obtain Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
- * @method void setSdkAppId(integer $SdkAppId) Set Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
+ * @method integer getSdkAppId() Obtain Application id (required) can be found at https://console.cloud.tencent.com/ccc.
+ * @method void setSdkAppId(integer $SdkAppId) Set Application id (required) can be found at https://console.cloud.tencent.com/ccc.
  * @method integer getOffset() Obtain Data offset.
  * @method void setOffset(integer $Offset) Set Data offset.
  * @method integer getLimit() Obtain Number of returned data entries, up to 25.
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribePSTNActiveSessionListRequest extends AbstractModel
 {
     /**
-     * @var integer Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
+     * @var integer Application id (required) can be found at https://console.cloud.tencent.com/ccc.
      */
     public $SdkAppId;
 
@@ -45,7 +45,7 @@ class DescribePSTNActiveSessionListRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @param integer $SdkAppId Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
+     * @param integer $SdkAppId Application id (required) can be found at https://console.cloud.tencent.com/ccc.
      * @param integer $Offset Data offset.
      * @param integer $Limit Number of returned data entries, up to 25.
      */

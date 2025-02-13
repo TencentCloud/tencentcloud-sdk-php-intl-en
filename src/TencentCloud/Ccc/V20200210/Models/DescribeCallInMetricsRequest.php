@@ -20,29 +20,29 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeCallInMetrics request structure.
  *
- * @method integer getSdkAppId() Obtain Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
- * @method void setSdkAppId(integer $SdkAppId) Set Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
- * @method boolean getEnabledSkillGroup() Obtain Whether to return skill group dimension information or not (the default is "Yes").
- * @method void setEnabledSkillGroup(boolean $EnabledSkillGroup) Set Whether to return skill group dimension information or not (the default is "Yes").
- * @method boolean getEnabledNumber() Obtain Whether to return line dimension information or not (the default is "No").
- * @method void setEnabledNumber(boolean $EnabledNumber) Set Whether to return line dimension information or not (the default is "No").
+ * @method integer getSdkAppId() Obtain Application id (required) can be found at https://console.cloud.tencent.com/ccc.
+ * @method void setSdkAppId(integer $SdkAppId) Set Application id (required) can be found at https://console.cloud.tencent.com/ccc.
+ * @method boolean getEnabledSkillGroup() Obtain Whether to return skill group dimension information or not (the default is "yes").
+ * @method void setEnabledSkillGroup(boolean $EnabledSkillGroup) Set Whether to return skill group dimension information or not (the default is "yes").
+ * @method boolean getEnabledNumber() Obtain Whether to return line dimension information or not (the default is "no").
+ * @method void setEnabledNumber(boolean $EnabledNumber) Set Whether to return line dimension information or not (the default is "no").
  * @method array getGroupIdList() Obtain Filter skill group list.
  * @method void setGroupIdList(array $GroupIdList) Set Filter skill group list.
  */
 class DescribeCallInMetricsRequest extends AbstractModel
 {
     /**
-     * @var integer Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
+     * @var integer Application id (required) can be found at https://console.cloud.tencent.com/ccc.
      */
     public $SdkAppId;
 
     /**
-     * @var boolean Whether to return skill group dimension information or not (the default is "Yes").
+     * @var boolean Whether to return skill group dimension information or not (the default is "yes").
      */
     public $EnabledSkillGroup;
 
     /**
-     * @var boolean Whether to return line dimension information or not (the default is "No").
+     * @var boolean Whether to return line dimension information or not (the default is "no").
      */
     public $EnabledNumber;
 
@@ -52,9 +52,9 @@ class DescribeCallInMetricsRequest extends AbstractModel
     public $GroupIdList;
 
     /**
-     * @param integer $SdkAppId Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
-     * @param boolean $EnabledSkillGroup Whether to return skill group dimension information or not (the default is "Yes").
-     * @param boolean $EnabledNumber Whether to return line dimension information or not (the default is "No").
+     * @param integer $SdkAppId Application id (required) can be found at https://console.cloud.tencent.com/ccc.
+     * @param boolean $EnabledSkillGroup Whether to return skill group dimension information or not (the default is "yes").
+     * @param boolean $EnabledNumber Whether to return line dimension information or not (the default is "no").
      * @param array $GroupIdList Filter skill group list.
      */
     function __construct()

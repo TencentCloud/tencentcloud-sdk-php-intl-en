@@ -20,23 +20,23 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateIVRSession request structure.
  *
- * @method integer getSdkAppId() Obtain Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
- * @method void setSdkAppId(integer $SdkAppId) Set Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
+ * @method integer getSdkAppId() Obtain Application id (required) can be found at https://console.cloud.tencent.com/ccc.
+ * @method void setSdkAppId(integer $SdkAppId) Set Application id (required) can be found at https://console.cloud.tencent.com/ccc.
  * @method string getCallee() Obtain Called.
  * @method void setCallee(string $Callee) Set Called.
- * @method integer getIVRId() Obtain Specified IVR Id. Currently, it supports inbound and automatic outbound types
- * @method void setIVRId(integer $IVRId) Set Specified IVR Id. Currently, it supports inbound and automatic outbound types
+ * @method integer getIVRId() Obtain Specified ivr id. currently, it supports inbound and automatic outbound types.
+ * @method void setIVRId(integer $IVRId) Set Specified ivr id. currently, it supports inbound and automatic outbound types.
  * @method array getCallers() Obtain List of calling numbers.
  * @method void setCallers(array $Callers) Set List of calling numbers.
- * @method array getVariables() Obtain Custom variable
- * @method void setVariables(array $Variables) Set Custom variable
- * @method string getUUI() Obtain User Data
- * @method void setUUI(string $UUI) Set User Data
+ * @method array getVariables() Obtain Custom variable.
+ * @method void setVariables(array $Variables) Set Custom variable.
+ * @method string getUUI() Obtain User data.
+ * @method void setUUI(string $UUI) Set User data.
  */
 class CreateIVRSessionRequest extends AbstractModel
 {
     /**
-     * @var integer Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
+     * @var integer Application id (required) can be found at https://console.cloud.tencent.com/ccc.
      */
     public $SdkAppId;
 
@@ -46,7 +46,7 @@ class CreateIVRSessionRequest extends AbstractModel
     public $Callee;
 
     /**
-     * @var integer Specified IVR Id. Currently, it supports inbound and automatic outbound types
+     * @var integer Specified ivr id. currently, it supports inbound and automatic outbound types.
      */
     public $IVRId;
 
@@ -56,22 +56,22 @@ class CreateIVRSessionRequest extends AbstractModel
     public $Callers;
 
     /**
-     * @var array Custom variable
+     * @var array Custom variable.
      */
     public $Variables;
 
     /**
-     * @var string User Data
+     * @var string User data.
      */
     public $UUI;
 
     /**
-     * @param integer $SdkAppId Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
+     * @param integer $SdkAppId Application id (required) can be found at https://console.cloud.tencent.com/ccc.
      * @param string $Callee Called.
-     * @param integer $IVRId Specified IVR Id. Currently, it supports inbound and automatic outbound types
+     * @param integer $IVRId Specified ivr id. currently, it supports inbound and automatic outbound types.
      * @param array $Callers List of calling numbers.
-     * @param array $Variables Custom variable
-     * @param string $UUI User Data
+     * @param array $Variables Custom variable.
+     * @param string $UUI User data.
      */
     function __construct()
     {

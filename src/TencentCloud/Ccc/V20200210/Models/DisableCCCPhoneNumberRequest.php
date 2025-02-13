@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPhoneNumbers(array $PhoneNumbers) Set Number list starting with 0086.
  * @method integer getDisabled() Obtain Disable switch: 0 for enable, 1 for disable.
  * @method void setDisabled(integer $Disabled) Set Disable switch: 0 for enable, 1 for disable.
- * @method integer getSdkAppId() Obtain TCCC instance application ID.
- * @method void setSdkAppId(integer $SdkAppId) Set TCCC instance application ID.
+ * @method integer getSdkAppId() Obtain TCCC instance application id.
+ * @method void setSdkAppId(integer $SdkAppId) Set TCCC instance application id.
  */
 class DisableCCCPhoneNumberRequest extends AbstractModel
 {
@@ -40,14 +40,14 @@ class DisableCCCPhoneNumberRequest extends AbstractModel
     public $Disabled;
 
     /**
-     * @var integer TCCC instance application ID.
+     * @var integer TCCC instance application id.
      */
     public $SdkAppId;
 
     /**
      * @param array $PhoneNumbers Number list starting with 0086.
      * @param integer $Disabled Disable switch: 0 for enable, 1 for disable.
-     * @param integer $SdkAppId TCCC instance application ID.
+     * @param integer $SdkAppId TCCC instance application id.
      */
     function __construct()
     {

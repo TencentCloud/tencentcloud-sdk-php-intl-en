@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeAutoCalloutTasks request structure.
  *
- * @method integer getSdkAppId() Obtain Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
- * @method void setSdkAppId(integer $SdkAppId) Set Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
- * @method integer getPageSize() Obtain Page size
- * @method void setPageSize(integer $PageSize) Set Page size
- * @method integer getPageNumber() Obtain Page number
- * @method void setPageNumber(integer $PageNumber) Set Page number
+ * @method integer getSdkAppId() Obtain Application id (required) can be found at https://console.cloud.tencent.com/ccc.
+ * @method void setSdkAppId(integer $SdkAppId) Set Application id (required) can be found at https://console.cloud.tencent.com/ccc.
+ * @method integer getPageSize() Obtain <Page size>.
+ * @method void setPageSize(integer $PageSize) Set <Page size>.
+ * @method integer getPageNumber() Obtain Page number.
+ * @method void setPageNumber(integer $PageNumber) Set Page number.
  */
 class DescribeAutoCalloutTasksRequest extends AbstractModel
 {
     /**
-     * @var integer Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
+     * @var integer Application id (required) can be found at https://console.cloud.tencent.com/ccc.
      */
     public $SdkAppId;
 
     /**
-     * @var integer Page size
+     * @var integer <Page size>.
      */
     public $PageSize;
 
     /**
-     * @var integer Page number
+     * @var integer Page number.
      */
     public $PageNumber;
 
     /**
-     * @param integer $SdkAppId Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
-     * @param integer $PageSize Page size
-     * @param integer $PageNumber Page number
+     * @param integer $SdkAppId Application id (required) can be found at https://console.cloud.tencent.com/ccc.
+     * @param integer $PageSize <Page size>.
+     * @param integer $PageNumber Page number.
      */
     function __construct()
     {

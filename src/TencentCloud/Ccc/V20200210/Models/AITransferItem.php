@@ -18,36 +18,36 @@ namespace TencentCloud\Ccc\V20200210\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * AI to human configuration item.
  *
- * @method string getTransferFunctionName() Obtain 
- * @method void setTransferFunctionName(string $TransferFunctionName) Set 
- * @method string getTransferFunctionDesc() Obtain 
- * @method void setTransferFunctionDesc(string $TransferFunctionDesc) Set 
- * @method integer getTransferSkillGroupId() Obtain 
- * @method void setTransferSkillGroupId(integer $TransferSkillGroupId) Set 
+ * @method string getTransferFunctionName() Obtain Name of the function calling for transfer to human.
+ * @method void setTransferFunctionName(string $TransferFunctionName) Set Name of the function calling for transfer to human.
+ * @method string getTransferFunctionDesc() Obtain Takes effect when transferfunctionenable is true; the description of transfer_to_human function calling defaults to "transfer to human when the user has to transfer to human (like says transfer to human) or you are instructed to do so.".
+ * @method void setTransferFunctionDesc(string $TransferFunctionDesc) Set Takes effect when transferfunctionenable is true; the description of transfer_to_human function calling defaults to "transfer to human when the user has to transfer to human (like says transfer to human) or you are instructed to do so.".
+ * @method integer getTransferSkillGroupId() Obtain Skill group id for transferring to human agent.
+ * @method void setTransferSkillGroupId(integer $TransferSkillGroupId) Set Skill group id for transferring to human agent.
  */
 class AITransferItem extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Name of the function calling for transfer to human.
      */
     public $TransferFunctionName;
 
     /**
-     * @var string 
+     * @var string Takes effect when transferfunctionenable is true; the description of transfer_to_human function calling defaults to "transfer to human when the user has to transfer to human (like says transfer to human) or you are instructed to do so.".
      */
     public $TransferFunctionDesc;
 
     /**
-     * @var integer 
+     * @var integer Skill group id for transferring to human agent.
      */
     public $TransferSkillGroupId;
 
     /**
-     * @param string $TransferFunctionName 
-     * @param string $TransferFunctionDesc 
-     * @param integer $TransferSkillGroupId 
+     * @param string $TransferFunctionName Name of the function calling for transfer to human.
+     * @param string $TransferFunctionDesc Takes effect when transferfunctionenable is true; the description of transfer_to_human function calling defaults to "transfer to human when the user has to transfer to human (like says transfer to human) or you are instructed to do so.".
+     * @param integer $TransferSkillGroupId Skill group id for transferring to human agent.
      */
     function __construct()
     {

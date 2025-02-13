@@ -20,42 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * PSTN Session Information.
  *
- * @method string getSessionID() Obtain Session ID.
- * @method void setSessionID(string $SessionID) Set Session ID.
- * @method string getRoomID() Obtain Temporary room ID for session.
- * @method void setRoomID(string $RoomID) Set Temporary room ID for session.
+ * @method string getSessionID() Obtain Session id.
+ * @method void setSessionID(string $SessionID) Set Session id.
+ * @method string getRoomID() Obtain Temporary room id for session.
+ * @method void setRoomID(string $RoomID) Set Temporary room id for session.
  * @method string getCaller() Obtain Caller.
  * @method void setCaller(string $Caller) Set Caller.
  * @method string getCallee() Obtain Called.
  * @method void setCallee(string $Callee) Set Called.
- * @method string getStartTimestamp() Obtain Start time. Unix timestamp.
- * @method void setStartTimestamp(string $StartTimestamp) Set Start time. Unix timestamp.
- * @method string getAcceptTimestamp() Obtain Answer time. Unix timestamp.
- * @method void setAcceptTimestamp(string $AcceptTimestamp) Set Answer time. Unix timestamp.
+ * @method string getStartTimestamp() Obtain Start time. unix timestamp.
+ * @method void setStartTimestamp(string $StartTimestamp) Set Start time. unix timestamp.
+ * @method string getAcceptTimestamp() Obtain Answer time. unix timestamp.
+ * @method void setAcceptTimestamp(string $AcceptTimestamp) Set Answer time. unix timestamp.
  * @method string getStaffEmail() Obtain Agent email.
  * @method void setStaffEmail(string $StaffEmail) Set Agent email.
- * @method string getStaffNumber() Obtain Agent ID
- * @method void setStaffNumber(string $StaffNumber) Set Agent ID
- * @method string getSessionStatus() Obtain Agent Status inProgress Ongoing
- * @method void setSessionStatus(string $SessionStatus) Set Agent Status inProgress Ongoing
- * @method integer getDirection() Obtain Session call direction, 0 - Inbound | 1 - Outbound.
- * @method void setDirection(integer $Direction) Set Session call direction, 0 - Inbound | 1 - Outbound.
- * @method integer getRingTimestamp() Obtain Ring time. Unix timestamp.
- * @method void setRingTimestamp(integer $RingTimestamp) Set Ring time. Unix timestamp.
- * @method string getProtectedCaller() Obtain Caller number protection ID. Effective when the number protection map feature is activated, and the Caller field is empty.
- * @method void setProtectedCaller(string $ProtectedCaller) Set Caller number protection ID. Effective when the number protection map feature is activated, and the Caller field is empty.
- * @method string getProtectedCallee() Obtain Called number protection ID. Effective when the number protection map feature is activated, and the Callee field is empty.
- * @method void setProtectedCallee(string $ProtectedCallee) Set Called number protection ID. Effective when the number protection map feature is activated, and the Callee field is empty.
+ * @method string getStaffNumber() Obtain Agent id.
+ * @method void setStaffNumber(string $StaffNumber) Set Agent id.
+ * @method string getSessionStatus() Obtain Agent status inprogress ongoing.
+ * @method void setSessionStatus(string $SessionStatus) Set Agent status inprogress ongoing.
+ * @method integer getDirection() Obtain Session call direction, 0 - inbound | 1 - outbound.
+ * @method void setDirection(integer $Direction) Set Session call direction, 0 - inbound | 1 - outbound.
+ * @method integer getRingTimestamp() Obtain Ring time. unix timestamp.
+ * @method void setRingTimestamp(integer $RingTimestamp) Set Ring time. unix timestamp.
+ * @method string getProtectedCaller() Obtain Caller number protection id. effective when the number protection map feature is activated, and the caller field is empty.
+ * @method void setProtectedCaller(string $ProtectedCaller) Set Caller number protection id. effective when the number protection map feature is activated, and the caller field is empty.
+ * @method string getProtectedCallee() Obtain Called number protection id. effective when the number protection map feature is activated, and the callee field is empty.
+ * @method void setProtectedCallee(string $ProtectedCallee) Set Called number protection id. effective when the number protection map feature is activated, and the callee field is empty.
  */
 class PSTNSessionInfo extends AbstractModel
 {
     /**
-     * @var string Session ID.
+     * @var string Session id.
      */
     public $SessionID;
 
     /**
-     * @var string Temporary room ID for session.
+     * @var string Temporary room id for session.
      */
     public $RoomID;
 
@@ -70,12 +70,12 @@ class PSTNSessionInfo extends AbstractModel
     public $Callee;
 
     /**
-     * @var string Start time. Unix timestamp.
+     * @var string Start time. unix timestamp.
      */
     public $StartTimestamp;
 
     /**
-     * @var string Answer time. Unix timestamp.
+     * @var string Answer time. unix timestamp.
      */
     public $AcceptTimestamp;
 
@@ -85,49 +85,49 @@ class PSTNSessionInfo extends AbstractModel
     public $StaffEmail;
 
     /**
-     * @var string Agent ID
+     * @var string Agent id.
      */
     public $StaffNumber;
 
     /**
-     * @var string Agent Status inProgress Ongoing
+     * @var string Agent status inprogress ongoing.
      */
     public $SessionStatus;
 
     /**
-     * @var integer Session call direction, 0 - Inbound | 1 - Outbound.
+     * @var integer Session call direction, 0 - inbound | 1 - outbound.
      */
     public $Direction;
 
     /**
-     * @var integer Ring time. Unix timestamp.
+     * @var integer Ring time. unix timestamp.
      */
     public $RingTimestamp;
 
     /**
-     * @var string Caller number protection ID. Effective when the number protection map feature is activated, and the Caller field is empty.
+     * @var string Caller number protection id. effective when the number protection map feature is activated, and the caller field is empty.
      */
     public $ProtectedCaller;
 
     /**
-     * @var string Called number protection ID. Effective when the number protection map feature is activated, and the Callee field is empty.
+     * @var string Called number protection id. effective when the number protection map feature is activated, and the callee field is empty.
      */
     public $ProtectedCallee;
 
     /**
-     * @param string $SessionID Session ID.
-     * @param string $RoomID Temporary room ID for session.
+     * @param string $SessionID Session id.
+     * @param string $RoomID Temporary room id for session.
      * @param string $Caller Caller.
      * @param string $Callee Called.
-     * @param string $StartTimestamp Start time. Unix timestamp.
-     * @param string $AcceptTimestamp Answer time. Unix timestamp.
+     * @param string $StartTimestamp Start time. unix timestamp.
+     * @param string $AcceptTimestamp Answer time. unix timestamp.
      * @param string $StaffEmail Agent email.
-     * @param string $StaffNumber Agent ID
-     * @param string $SessionStatus Agent Status inProgress Ongoing
-     * @param integer $Direction Session call direction, 0 - Inbound | 1 - Outbound.
-     * @param integer $RingTimestamp Ring time. Unix timestamp.
-     * @param string $ProtectedCaller Caller number protection ID. Effective when the number protection map feature is activated, and the Caller field is empty.
-     * @param string $ProtectedCallee Called number protection ID. Effective when the number protection map feature is activated, and the Callee field is empty.
+     * @param string $StaffNumber Agent id.
+     * @param string $SessionStatus Agent status inprogress ongoing.
+     * @param integer $Direction Session call direction, 0 - inbound | 1 - outbound.
+     * @param integer $RingTimestamp Ring time. unix timestamp.
+     * @param string $ProtectedCaller Caller number protection id. effective when the number protection map feature is activated, and the caller field is empty.
+     * @param string $ProtectedCallee Called number protection id. effective when the number protection map feature is activated, and the callee field is empty.
      */
     function __construct()
     {

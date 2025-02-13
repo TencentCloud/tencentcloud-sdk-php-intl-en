@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteStaff request structure.
  *
- * @method integer getSdkAppId() Obtain Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
- * @method void setSdkAppId(integer $SdkAppId) Set Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
- * @method array getStaffList() Obtain Customer service emails, supports up to 200 at a time.
- * @method void setStaffList(array $StaffList) Set Customer service emails, supports up to 200 at a time.
+ * @method integer getSdkAppId() Obtain Application id (required) can be found at https://console.cloud.tencent.com/ccc.
+ * @method void setSdkAppId(integer $SdkAppId) Set Application id (required) can be found at https://console.cloud.tencent.com/ccc.
+ * @method array getStaffList() Obtain List of customer service emails to be deleted, supports up to 200 at a time.
+ * @method void setStaffList(array $StaffList) Set List of customer service emails to be deleted, supports up to 200 at a time.
  */
 class DeleteStaffRequest extends AbstractModel
 {
     /**
-     * @var integer Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
+     * @var integer Application id (required) can be found at https://console.cloud.tencent.com/ccc.
      */
     public $SdkAppId;
 
     /**
-     * @var array Customer service emails, supports up to 200 at a time.
+     * @var array List of customer service emails to be deleted, supports up to 200 at a time.
      */
     public $StaffList;
 
     /**
-     * @param integer $SdkAppId Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
-     * @param array $StaffList Customer service emails, supports up to 200 at a time.
+     * @param integer $SdkAppId Application id (required) can be found at https://console.cloud.tencent.com/ccc.
+     * @param array $StaffList List of customer service emails to be deleted, supports up to 200 at a time.
      */
     function __construct()
     {

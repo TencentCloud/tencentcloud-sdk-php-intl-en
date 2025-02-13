@@ -25,29 +25,25 @@ use TencentCloud\Common\AbstractModel;
  * @method string getMail() Obtain Agent email.
  * @method void setMail(string $Mail) Set Agent email.
  * @method string getStaffNumber() Obtain Worker number.
-Note: This field may return null, indicating that no valid value could be obtained.
  * @method void setStaffNumber(string $StaffNumber) Set Worker number.
-Note: This field may return null, indicating that no valid value could be obtained.
- * @method string getPhone() Obtain Agent's Telephone Number (With 0086 Prefix)
- * @method void setPhone(string $Phone) Set Agent's Telephone Number (With 0086 Prefix)
+ * @method string getPhone() Obtain Agent'S telephone number (with 0086 prefix).
+ * @method void setPhone(string $Phone) Set Agent'S telephone number (with 0086 prefix).
  * @method string getNick() Obtain Agent nickname.
  * @method void setNick(string $Nick) Set Agent nickname.
- * @method string getUserId() Obtain User ID
- * @method void setUserId(string $UserId) Set User ID
- * @method array getSkillGroupNameList() Obtain List of skill groups associated with the seat
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setSkillGroupNameList(array $SkillGroupNameList) Set List of skill groups associated with the seat
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getRole() Obtain 1: Admin.
-2: Quality inspector.
-3: Ordinary agent.
-else: Custom Role ID.
-Note: This field may return null, indicating that no valid value could be obtained.
- * @method void setRole(integer $Role) Set 1: Admin.
-2: Quality inspector.
-3: Ordinary agent.
-else: Custom Role ID.
-Note: This field may return null, indicating that no valid value could be obtained.
+ * @method string getUserId() Obtain User id.
+ * @method void setUserId(string $UserId) Set User id.
+ * @method array getSkillGroupNameList() Obtain List of skill groups associated with the agent.
+ * @method void setSkillGroupNameList(array $SkillGroupNameList) Set List of skill groups associated with the agent.
+ * @method integer getRole() Obtain 1: admin.
+2: quality inspector.
+3: ordinary agent.
+Else: custom role id.
+ * @method void setRole(integer $Role) Set 1: admin.
+2: quality inspector.
+3: ordinary agent.
+Else: custom role id.
+ * @method string getExtensionNumber() Obtain Agent extension number (starting with 1 to 8, 4 - 6 digits).
+ * @method void setExtensionNumber(string $ExtensionNumber) Set Agent extension number (starting with 1 to 8, 4 - 6 digits).
  */
 class SeatUserInfo extends AbstractModel
 {
@@ -63,12 +59,11 @@ class SeatUserInfo extends AbstractModel
 
     /**
      * @var string Worker number.
-Note: This field may return null, indicating that no valid value could be obtained.
      */
     public $StaffNumber;
 
     /**
-     * @var string Agent's Telephone Number (With 0086 Prefix)
+     * @var string Agent'S telephone number (with 0086 prefix).
      */
     public $Phone;
 
@@ -78,40 +73,41 @@ Note: This field may return null, indicating that no valid value could be obtain
     public $Nick;
 
     /**
-     * @var string User ID
+     * @var string User id.
      */
     public $UserId;
 
     /**
-     * @var array List of skill groups associated with the seat
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array List of skill groups associated with the agent.
      */
     public $SkillGroupNameList;
 
     /**
-     * @var integer 1: Admin.
-2: Quality inspector.
-3: Ordinary agent.
-else: Custom Role ID.
-Note: This field may return null, indicating that no valid value could be obtained.
+     * @var integer 1: admin.
+2: quality inspector.
+3: ordinary agent.
+Else: custom role id.
      */
     public $Role;
+
+    /**
+     * @var string Agent extension number (starting with 1 to 8, 4 - 6 digits).
+     */
+    public $ExtensionNumber;
 
     /**
      * @param string $Name Agent name.
      * @param string $Mail Agent email.
      * @param string $StaffNumber Worker number.
-Note: This field may return null, indicating that no valid value could be obtained.
-     * @param string $Phone Agent's Telephone Number (With 0086 Prefix)
+     * @param string $Phone Agent'S telephone number (with 0086 prefix).
      * @param string $Nick Agent nickname.
-     * @param string $UserId User ID
-     * @param array $SkillGroupNameList List of skill groups associated with the seat
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $Role 1: Admin.
-2: Quality inspector.
-3: Ordinary agent.
-else: Custom Role ID.
-Note: This field may return null, indicating that no valid value could be obtained.
+     * @param string $UserId User id.
+     * @param array $SkillGroupNameList List of skill groups associated with the agent.
+     * @param integer $Role 1: admin.
+2: quality inspector.
+3: ordinary agent.
+Else: custom role id.
+     * @param string $ExtensionNumber Agent extension number (starting with 1 to 8, 4 - 6 digits).
      */
     function __construct()
     {
@@ -156,6 +152,10 @@ Note: This field may return null, indicating that no valid value could be obtain
 
         if (array_key_exists("Role",$param) and $param["Role"] !== null) {
             $this->Role = $param["Role"];
+        }
+
+        if (array_key_exists("ExtensionNumber",$param) and $param["ExtensionNumber"] !== null) {
+            $this->ExtensionNumber = $param["ExtensionNumber"];
         }
     }
 }

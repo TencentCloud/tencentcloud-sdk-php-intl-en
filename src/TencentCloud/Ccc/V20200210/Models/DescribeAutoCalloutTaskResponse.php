@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeAutoCalloutTask response structure.
  *
- * @method string getName() Obtain Task Name
- * @method void setName(string $Name) Set Task Name
- * @method string getDescription() Obtain Task Description.
- * @method void setDescription(string $Description) Set Task Description.
+ * @method string getName() Obtain Task name.
+ * @method void setName(string $Name) Set Task name.
+ * @method string getDescription() Obtain <Task description>.
+ * @method void setDescription(string $Description) Set <Task description>.
  * @method integer getNotBefore() Obtain Task start timestamp.
  * @method void setNotBefore(integer $NotBefore) Set Task start timestamp.
  * @method integer getNotAfter() Obtain Task end timestamp.
@@ -44,12 +44,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
 class DescribeAutoCalloutTaskResponse extends AbstractModel
 {
     /**
-     * @var string Task Name
+     * @var string Task name.
      */
     public $Name;
 
     /**
-     * @var string Task Description.
+     * @var string <Task description>.
      */
     public $Description;
 
@@ -90,8 +90,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $RequestId;
 
     /**
-     * @param string $Name Task Name
-     * @param string $Description Task Description.
+     * @param string $Name Task name.
+     * @param string $Description <Task description>.
      * @param integer $NotBefore Task start timestamp.
      * @param integer $NotAfter Task end timestamp.
 Note: this field may return null, indicating that no valid values can be obtained.

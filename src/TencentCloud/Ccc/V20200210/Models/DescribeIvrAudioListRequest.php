@@ -20,28 +20,28 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeIvrAudioList request structure.
  *
- * @method integer getSdkAppId() Obtain Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
- * @method void setSdkAppId(integer $SdkAppId) Set Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
- * @method integer getPageSize() Obtain Page size, upper limit 50
- * @method void setPageSize(integer $PageSize) Set Page size, upper limit 50
+ * @method integer getSdkAppId() Obtain Application id (required) can be found at https://console.cloud.tencent.com/ccc.
+ * @method void setSdkAppId(integer $SdkAppId) Set Application id (required) can be found at https://console.cloud.tencent.com/ccc.
+ * @method integer getPageSize() Obtain Page size, upper limit 50.
+ * @method void setPageSize(integer $PageSize) Set Page size, upper limit 50.
  * @method integer getPageNumber() Obtain Page number starting from 0.
  * @method void setPageNumber(integer $PageNumber) Set Page number starting from 0.
- * @method array getCustomFileName() Obtain File alias
- * @method void setCustomFileName(array $CustomFileName) Set File alias
- * @method array getAudioFileName() Obtain Filename
- * @method void setAudioFileName(array $AudioFileName) Set Filename
- * @method array getFileId() Obtain File ID
- * @method void setFileId(array $FileId) Set File ID
+ * @method array getCustomFileName() Obtain File alias.
+ * @method void setCustomFileName(array $CustomFileName) Set File alias.
+ * @method array getAudioFileName() Obtain Filename.
+ * @method void setAudioFileName(array $AudioFileName) Set Filename.
+ * @method array getFileId() Obtain File id.
+ * @method void setFileId(array $FileId) Set File id.
  */
 class DescribeIvrAudioListRequest extends AbstractModel
 {
     /**
-     * @var integer Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
+     * @var integer Application id (required) can be found at https://console.cloud.tencent.com/ccc.
      */
     public $SdkAppId;
 
     /**
-     * @var integer Page size, upper limit 50
+     * @var integer Page size, upper limit 50.
      */
     public $PageSize;
 
@@ -51,27 +51,27 @@ class DescribeIvrAudioListRequest extends AbstractModel
     public $PageNumber;
 
     /**
-     * @var array File alias
+     * @var array File alias.
      */
     public $CustomFileName;
 
     /**
-     * @var array Filename
+     * @var array Filename.
      */
     public $AudioFileName;
 
     /**
-     * @var array File ID
+     * @var array File id.
      */
     public $FileId;
 
     /**
-     * @param integer $SdkAppId Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
-     * @param integer $PageSize Page size, upper limit 50
+     * @param integer $SdkAppId Application id (required) can be found at https://console.cloud.tencent.com/ccc.
+     * @param integer $PageSize Page size, upper limit 50.
      * @param integer $PageNumber Page number starting from 0.
-     * @param array $CustomFileName File alias
-     * @param array $AudioFileName Filename
-     * @param array $FileId File ID
+     * @param array $CustomFileName File alias.
+     * @param array $AudioFileName Filename.
+     * @param array $FileId File id.
      */
     function __construct()
     {

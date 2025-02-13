@@ -20,17 +20,17 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateSDKLoginToken request structure.
  *
- * @method integer getSdkAppId() Obtain Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
- * @method void setSdkAppId(integer $SdkAppId) Set Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
+ * @method integer getSdkAppId() Obtain Application id (required) can be found at https://console.cloud.tencent.com/ccc.
+ * @method void setSdkAppId(integer $SdkAppId) Set Application id (required) can be found at https://console.cloud.tencent.com/ccc.
  * @method string getSeatUserId() Obtain Agent account.
  * @method void setSeatUserId(string $SeatUserId) Set Agent account.
- * @method boolean getOnlyOnce() Obtain Whether the generated token is for one-time verification?
- * @method void setOnlyOnce(boolean $OnlyOnce) Set Whether the generated token is for one-time verification?
+ * @method boolean getOnlyOnce() Obtain Whether the generated token is for one-time verification?.
+ * @method void setOnlyOnce(boolean $OnlyOnce) Set Whether the generated token is for one-time verification?.
  */
 class CreateSDKLoginTokenRequest extends AbstractModel
 {
     /**
-     * @var integer Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
+     * @var integer Application id (required) can be found at https://console.cloud.tencent.com/ccc.
      */
     public $SdkAppId;
 
@@ -40,14 +40,14 @@ class CreateSDKLoginTokenRequest extends AbstractModel
     public $SeatUserId;
 
     /**
-     * @var boolean Whether the generated token is for one-time verification?
+     * @var boolean Whether the generated token is for one-time verification?.
      */
     public $OnlyOnce;
 
     /**
-     * @param integer $SdkAppId Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
+     * @param integer $SdkAppId Application id (required) can be found at https://console.cloud.tencent.com/ccc.
      * @param string $SeatUserId Agent account.
-     * @param boolean $OnlyOnce Whether the generated token is for one-time verification?
+     * @param boolean $OnlyOnce Whether the generated token is for one-time verification?.
      */
     function __construct()
     {

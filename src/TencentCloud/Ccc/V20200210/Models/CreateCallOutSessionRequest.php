@@ -20,16 +20,16 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateCallOutSession request structure.
  *
- * @method integer getSdkAppId() Obtain Application ID
- * @method void setSdkAppId(integer $SdkAppId) Set Application ID
- * @method string getUserId() Obtain Customer Service User ID usually refers to the customer service email.
- * @method void setUserId(string $UserId) Set Customer Service User ID usually refers to the customer service email.
+ * @method integer getSdkAppId() Obtain Application id.
+ * @method void setSdkAppId(integer $SdkAppId) Set Application id.
+ * @method string getUserId() Obtain Customer service user id usually refers to the customer service email.
+ * @method void setUserId(string $UserId) Set Customer service user id usually refers to the customer service email.
  * @method string getCallee() Obtain Called number must be preceded by 0086.
  * @method void setCallee(string $Callee) Set Called number must be preceded by 0086.
- * @method string getCaller() Obtain Caller number (obsolete one and use Callers) must be preceded by 0086.
- * @method void setCaller(string $Caller) Set Caller number (obsolete one and use Callers) must be preceded by 0086.
- * @method array getCallers() Obtain Designated caller number list. If the prior number fails, it will automatically switch to the next number that must be preceded by 0086.
- * @method void setCallers(array $Callers) Set Designated caller number list. If the prior number fails, it will automatically switch to the next number that must be preceded by 0086.
+ * @method string getCaller() Obtain Caller number (obsolete one and use callers) must be preceded by 0086.
+ * @method void setCaller(string $Caller) Set Caller number (obsolete one and use callers) must be preceded by 0086.
+ * @method array getCallers() Obtain Designated caller number list. if the prior number fails, it will automatically switch to the next number that must be preceded by 0086.
+ * @method void setCallers(array $Callers) Set Designated caller number list. if the prior number fails, it will automatically switch to the next number that must be preceded by 0086.
  * @method boolean getIsForceUseMobile() Obtain Whether to force the use of cell phone outbound call or not, currently only supports true, if true, please ensure that the allowlist has been configured.
  * @method void setIsForceUseMobile(boolean $IsForceUseMobile) Set Whether to force the use of cell phone outbound call or not, currently only supports true, if true, please ensure that the allowlist has been configured.
  * @method string getUui() Obtain Custom data, length limited to 1024 bytes.
@@ -40,12 +40,12 @@ use TencentCloud\Common\AbstractModel;
 class CreateCallOutSessionRequest extends AbstractModel
 {
     /**
-     * @var integer Application ID
+     * @var integer Application id.
      */
     public $SdkAppId;
 
     /**
-     * @var string Customer Service User ID usually refers to the customer service email.
+     * @var string Customer service user id usually refers to the customer service email.
      */
     public $UserId;
 
@@ -55,12 +55,12 @@ class CreateCallOutSessionRequest extends AbstractModel
     public $Callee;
 
     /**
-     * @var string Caller number (obsolete one and use Callers) must be preceded by 0086.
+     * @var string Caller number (obsolete one and use callers) must be preceded by 0086.
      */
     public $Caller;
 
     /**
-     * @var array Designated caller number list. If the prior number fails, it will automatically switch to the next number that must be preceded by 0086.
+     * @var array Designated caller number list. if the prior number fails, it will automatically switch to the next number that must be preceded by 0086.
      */
     public $Callers;
 
@@ -81,11 +81,11 @@ class CreateCallOutSessionRequest extends AbstractModel
     public $UUI;
 
     /**
-     * @param integer $SdkAppId Application ID
-     * @param string $UserId Customer Service User ID usually refers to the customer service email.
+     * @param integer $SdkAppId Application id.
+     * @param string $UserId Customer service user id usually refers to the customer service email.
      * @param string $Callee Called number must be preceded by 0086.
-     * @param string $Caller Caller number (obsolete one and use Callers) must be preceded by 0086.
-     * @param array $Callers Designated caller number list. If the prior number fails, it will automatically switch to the next number that must be preceded by 0086.
+     * @param string $Caller Caller number (obsolete one and use callers) must be preceded by 0086.
+     * @param array $Callers Designated caller number list. if the prior number fails, it will automatically switch to the next number that must be preceded by 0086.
      * @param boolean $IsForceUseMobile Whether to force the use of cell phone outbound call or not, currently only supports true, if true, please ensure that the allowlist has been configured.
      * @param string $Uui Custom data, length limited to 1024 bytes.
      * @param string $UUI Custom data, length limited to 1024 bytes.

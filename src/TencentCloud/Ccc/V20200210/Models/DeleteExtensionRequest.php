@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteExtension request structure.
  *
- * @method integer getSdkAppId() Obtain TCCC instance application ID.
- * @method void setSdkAppId(integer $SdkAppId) Set TCCC instance application ID.
- * @method string getExtensionId() Obtain Extension
- * @method void setExtensionId(string $ExtensionId) Set Extension
+ * @method integer getSdkAppId() Obtain Application id (required) can be found at https://console.cloud.tencent.com/ccc.
+ * @method void setSdkAppId(integer $SdkAppId) Set Application id (required) can be found at https://console.cloud.tencent.com/ccc.
+ * @method string getExtensionId() Obtain Extension.
+ * @method void setExtensionId(string $ExtensionId) Set Extension.
  */
 class DeleteExtensionRequest extends AbstractModel
 {
     /**
-     * @var integer TCCC instance application ID.
+     * @var integer Application id (required) can be found at https://console.cloud.tencent.com/ccc.
      */
     public $SdkAppId;
 
     /**
-     * @var string Extension
+     * @var string Extension.
      */
     public $ExtensionId;
 
     /**
-     * @param integer $SdkAppId TCCC instance application ID.
-     * @param string $ExtensionId Extension
+     * @param integer $SdkAppId Application id (required) can be found at https://console.cloud.tencent.com/ccc.
+     * @param string $ExtensionId Extension.
      */
     function __construct()
     {

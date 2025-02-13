@@ -20,58 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Audio file review information
  *
- * @method integer getFileId() Obtain File ID
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setFileId(integer $FileId) Set File ID
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getCustomFileName() Obtain File alias
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setCustomFileName(string $CustomFileName) Set File alias
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getAudioFileName() Obtain Filename
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setAudioFileName(string $AudioFileName) Set Filename
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getStatus() Obtain Review status, 0-Not reviewed, 1-Approved, 2-Rejected
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setStatus(integer $Status) Set Review status, 0-Not reviewed, 1-Approved, 2-Rejected
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getFileId() Obtain File id.
+ * @method void setFileId(integer $FileId) Set File id.
+ * @method string getCustomFileName() Obtain File alias.
+ * @method void setCustomFileName(string $CustomFileName) Set File alias.
+ * @method string getAudioFileName() Obtain Filename.
+ * @method void setAudioFileName(string $AudioFileName) Set Filename.
+ * @method integer getStatus() Obtain Review status: 0 - unreviewed, 1 - approved, 2 - rejected.
+ * @method void setStatus(integer $Status) Set Review status: 0 - unreviewed, 1 - approved, 2 - rejected.
  */
 class AudioFileInfo extends AbstractModel
 {
     /**
-     * @var integer File ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer File id.
      */
     public $FileId;
 
     /**
-     * @var string File alias
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string File alias.
      */
     public $CustomFileName;
 
     /**
-     * @var string Filename
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Filename.
      */
     public $AudioFileName;
 
     /**
-     * @var integer Review status, 0-Not reviewed, 1-Approved, 2-Rejected
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Review status: 0 - unreviewed, 1 - approved, 2 - rejected.
      */
     public $Status;
 
     /**
-     * @param integer $FileId File ID
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $CustomFileName File alias
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $AudioFileName Filename
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $Status Review status, 0-Not reviewed, 1-Approved, 2-Rejected
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $FileId File id.
+     * @param string $CustomFileName File alias.
+     * @param string $AudioFileName Filename.
+     * @param integer $Status Review status: 0 - unreviewed, 1 - approved, 2 - rejected.
      */
     function __construct()
     {

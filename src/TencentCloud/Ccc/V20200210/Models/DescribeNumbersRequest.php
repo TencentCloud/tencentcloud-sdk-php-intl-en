@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeNumbers request structure.
  *
- * @method integer getSdkAppId() Obtain Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
- * @method void setSdkAppId(integer $SdkAppId) Set Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
+ * @method integer getSdkAppId() Obtain Application id (required) can be found at https://console.cloud.tencent.com/ccc.
+ * @method void setSdkAppId(integer $SdkAppId) Set Application id (required) can be found at https://console.cloud.tencent.com/ccc.
  * @method integer getPageNumber() Obtain Page number, starting from 0.
  * @method void setPageNumber(integer $PageNumber) Set Page number, starting from 0.
  * @method integer getPageSize() Obtain Page size, default 20.
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeNumbersRequest extends AbstractModel
 {
     /**
-     * @var integer Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
+     * @var integer Application id (required) can be found at https://console.cloud.tencent.com/ccc.
      */
     public $SdkAppId;
 
@@ -45,7 +45,7 @@ class DescribeNumbersRequest extends AbstractModel
     public $PageSize;
 
     /**
-     * @param integer $SdkAppId Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
+     * @param integer $SdkAppId Application id (required) can be found at https://console.cloud.tencent.com/ccc.
      * @param integer $PageNumber Page number, starting from 0.
      * @param integer $PageSize Page size, default 20.
      */

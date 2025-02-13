@@ -20,23 +20,23 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeSkillGroupInfoList request structure.
  *
- * @method integer getSdkAppId() Obtain Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
- * @method void setSdkAppId(integer $SdkAppId) Set Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
+ * @method integer getSdkAppId() Obtain Application id (required) can be found at https://console.cloud.tencent.com/ccc.
+ * @method void setSdkAppId(integer $SdkAppId) Set Application id (required) can be found at https://console.cloud.tencent.com/ccc.
  * @method integer getPageSize() Obtain Page size, upper limit 100.
  * @method void setPageSize(integer $PageSize) Set Page size, upper limit 100.
- * @method integer getPageNumber() Obtain Page number starting from 0.
- * @method void setPageNumber(integer $PageNumber) Set Page number starting from 0.
- * @method integer getSkillGroupId() Obtain Using skill group ID when querying a single skill group.
- * @method void setSkillGroupId(integer $SkillGroupId) Set Using skill group ID when querying a single skill group.
- * @method integer getModifiedTime() Obtain Used when querying skill groups with a modified time greater or equal to ModifiedTime.
- * @method void setModifiedTime(integer $ModifiedTime) Set Used when querying skill groups with a modified time greater or equal to ModifiedTime.
+ * @method integer getPageNumber() Obtain <Page number starting from 0.>.
+ * @method void setPageNumber(integer $PageNumber) Set <Page number starting from 0.>.
+ * @method integer getSkillGroupId() Obtain Using skill group id when querying a single skill group.
+ * @method void setSkillGroupId(integer $SkillGroupId) Set Using skill group id when querying a single skill group.
+ * @method integer getModifiedTime() Obtain Used when querying skill groups with a modified time greater or equal to modifiedtime.
+ * @method void setModifiedTime(integer $ModifiedTime) Set Used when querying skill groups with a modified time greater or equal to modifiedtime.
  * @method string getSkillGroupName() Obtain Skill group name.
  * @method void setSkillGroupName(string $SkillGroupName) Set Skill group name.
  */
 class DescribeSkillGroupInfoListRequest extends AbstractModel
 {
     /**
-     * @var integer Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
+     * @var integer Application id (required) can be found at https://console.cloud.tencent.com/ccc.
      */
     public $SdkAppId;
 
@@ -46,17 +46,17 @@ class DescribeSkillGroupInfoListRequest extends AbstractModel
     public $PageSize;
 
     /**
-     * @var integer Page number starting from 0.
+     * @var integer <Page number starting from 0.>.
      */
     public $PageNumber;
 
     /**
-     * @var integer Using skill group ID when querying a single skill group.
+     * @var integer Using skill group id when querying a single skill group.
      */
     public $SkillGroupId;
 
     /**
-     * @var integer Used when querying skill groups with a modified time greater or equal to ModifiedTime.
+     * @var integer Used when querying skill groups with a modified time greater or equal to modifiedtime.
      */
     public $ModifiedTime;
 
@@ -66,11 +66,11 @@ class DescribeSkillGroupInfoListRequest extends AbstractModel
     public $SkillGroupName;
 
     /**
-     * @param integer $SdkAppId Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
+     * @param integer $SdkAppId Application id (required) can be found at https://console.cloud.tencent.com/ccc.
      * @param integer $PageSize Page size, upper limit 100.
-     * @param integer $PageNumber Page number starting from 0.
-     * @param integer $SkillGroupId Using skill group ID when querying a single skill group.
-     * @param integer $ModifiedTime Used when querying skill groups with a modified time greater or equal to ModifiedTime.
+     * @param integer $PageNumber <Page number starting from 0.>.
+     * @param integer $SkillGroupId Using skill group id when querying a single skill group.
+     * @param integer $ModifiedTime Used when querying skill groups with a modified time greater or equal to modifiedtime.
      * @param string $SkillGroupName Skill group name.
      */
     function __construct()

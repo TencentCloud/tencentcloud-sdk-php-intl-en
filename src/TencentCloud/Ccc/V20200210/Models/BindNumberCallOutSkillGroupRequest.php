@@ -20,17 +20,17 @@ use TencentCloud\Common\AbstractModel;
 /**
  * BindNumberCallOutSkillGroup request structure.
  *
- * @method integer getSdkAppId() Obtain Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
- * @method void setSdkAppId(integer $SdkAppId) Set Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
+ * @method integer getSdkAppId() Obtain Application id (required) can be found at https://console.cloud.tencent.com/ccc.
+ * @method void setSdkAppId(integer $SdkAppId) Set Application id (required) can be found at https://console.cloud.tencent.com/ccc.
  * @method string getNumber() Obtain Number to be bound.
  * @method void setNumber(string $Number) Set Number to be bound.
- * @method array getSkillGroupIds() Obtain Skill group ID list to be bound.
- * @method void setSkillGroupIds(array $SkillGroupIds) Set Skill group ID list to be bound.
+ * @method array getSkillGroupIds() Obtain Skill group id list to be bound.
+ * @method void setSkillGroupIds(array $SkillGroupIds) Set Skill group id list to be bound.
  */
 class BindNumberCallOutSkillGroupRequest extends AbstractModel
 {
     /**
-     * @var integer Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
+     * @var integer Application id (required) can be found at https://console.cloud.tencent.com/ccc.
      */
     public $SdkAppId;
 
@@ -40,14 +40,14 @@ class BindNumberCallOutSkillGroupRequest extends AbstractModel
     public $Number;
 
     /**
-     * @var array Skill group ID list to be bound.
+     * @var array Skill group id list to be bound.
      */
     public $SkillGroupIds;
 
     /**
-     * @param integer $SdkAppId Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
+     * @param integer $SdkAppId Application id (required) can be found at https://console.cloud.tencent.com/ccc.
      * @param string $Number Number to be bound.
-     * @param array $SkillGroupIds Skill group ID list to be bound.
+     * @param array $SkillGroupIds Skill group id list to be bound.
      */
     function __construct()
     {

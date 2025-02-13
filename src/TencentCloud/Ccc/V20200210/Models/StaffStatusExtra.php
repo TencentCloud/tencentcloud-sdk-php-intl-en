@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Supplementary Information on Agent Status
  *
- * @method string getType() Obtain IM - Text | TEL - Cell phone | ALL - Full media.
- * @method void setType(string $Type) Set IM - Text | TEL - Cell phone | ALL - Full media.
- * @method string getDirect() Obtain IN - Inbound | OUT - Outbound.
- * @method void setDirect(string $Direct) Set IN - Inbound | OUT - Outbound.
+ * @method string getType() Obtain IM - text | tel - cell phone | all - full media.
+ * @method void setType(string $Type) Set IM - text | tel - cell phone | all - full media.
+ * @method string getDirect() Obtain IN - inbound | out - outbound.
+ * @method void setDirect(string $Direct) Set IN - inbound | out - outbound.
  */
 class StaffStatusExtra extends AbstractModel
 {
     /**
-     * @var string IM - Text | TEL - Cell phone | ALL - Full media.
+     * @var string IM - text | tel - cell phone | all - full media.
      */
     public $Type;
 
     /**
-     * @var string IN - Inbound | OUT - Outbound.
+     * @var string IN - inbound | out - outbound.
      */
     public $Direct;
 
     /**
-     * @param string $Type IM - Text | TEL - Cell phone | ALL - Full media.
-     * @param string $Direct IN - Inbound | OUT - Outbound.
+     * @param string $Type IM - text | tel - cell phone | all - full media.
+     * @param string $Direct IN - inbound | out - outbound.
      */
     function __construct()
     {

@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeCCCBuyInfoList request structure.
  *
- * @method array getSdkAppIds() Obtain Application ID list, query all applications when not transmitted.
- * @method void setSdkAppIds(array $SdkAppIds) Set Application ID list, query all applications when not transmitted.
+ * @method array getSdkAppIds() Obtain Application id list, query all applications when not transmitted.
+ * @method void setSdkAppIds(array $SdkAppIds) Set Application id list, query all applications when not transmitted.
  */
 class DescribeCCCBuyInfoListRequest extends AbstractModel
 {
     /**
-     * @var array Application ID list, query all applications when not transmitted.
+     * @var array Application id list, query all applications when not transmitted.
      */
     public $SdkAppIds;
 
     /**
-     * @param array $SdkAppIds Application ID list, query all applications when not transmitted.
+     * @param array $SdkAppIds Application id list, query all applications when not transmitted.
      */
     function __construct()
     {

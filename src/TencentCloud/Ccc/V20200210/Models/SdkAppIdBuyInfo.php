@@ -20,40 +20,38 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Application purchase information.
  *
- * @method integer getSdkAppId() Obtain Application ID
- * @method void setSdkAppId(integer $SdkAppId) Set Application ID
- * @method string getName() Obtain Application Name
- * @method void setName(string $Name) Set Application Name
- * @method integer getStaffBuyNum() Obtain Agent Purchase Count (still within the validity period)
- * @method void setStaffBuyNum(integer $StaffBuyNum) Set Agent Purchase Count (still within the validity period)
- * @method array getStaffBuyList() Obtain Agent Purchase List (still within the validity period)
- * @method void setStaffBuyList(array $StaffBuyList) Set Agent Purchase List (still within the validity period)
+ * @method integer getSdkAppId() Obtain Application id.
+ * @method void setSdkAppId(integer $SdkAppId) Set Application id.
+ * @method string getName() Obtain Application name.
+ * @method void setName(string $Name) Set Application name.
+ * @method integer getStaffBuyNum() Obtain Agent purchase count (still within the validity period).
+ * @method void setStaffBuyNum(integer $StaffBuyNum) Set Agent purchase count (still within the validity period).
+ * @method array getStaffBuyList() Obtain Agent purchase list (still within the validity period).
+ * @method void setStaffBuyList(array $StaffBuyList) Set Agent purchase list (still within the validity period).
  * @method array getPhoneNumBuyList() Obtain List of numbers purchased.
  * @method void setPhoneNumBuyList(array $PhoneNumBuyList) Set List of numbers purchased.
  * @method integer getSipBuyNum() Obtain Number of office telephones purchased (still within the validity period).
-Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setSipBuyNum(integer $SipBuyNum) Set Number of office telephones purchased (still within the validity period).
-Note: this field may return null, indicating that no valid values can be obtained.
  */
 class SdkAppIdBuyInfo extends AbstractModel
 {
     /**
-     * @var integer Application ID
+     * @var integer Application id.
      */
     public $SdkAppId;
 
     /**
-     * @var string Application Name
+     * @var string Application name.
      */
     public $Name;
 
     /**
-     * @var integer Agent Purchase Count (still within the validity period)
+     * @var integer Agent purchase count (still within the validity period).
      */
     public $StaffBuyNum;
 
     /**
-     * @var array Agent Purchase List (still within the validity period)
+     * @var array Agent purchase list (still within the validity period).
      */
     public $StaffBuyList;
 
@@ -64,18 +62,16 @@ class SdkAppIdBuyInfo extends AbstractModel
 
     /**
      * @var integer Number of office telephones purchased (still within the validity period).
-Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $SipBuyNum;
 
     /**
-     * @param integer $SdkAppId Application ID
-     * @param string $Name Application Name
-     * @param integer $StaffBuyNum Agent Purchase Count (still within the validity period)
-     * @param array $StaffBuyList Agent Purchase List (still within the validity period)
+     * @param integer $SdkAppId Application id.
+     * @param string $Name Application name.
+     * @param integer $StaffBuyNum Agent purchase count (still within the validity period).
+     * @param array $StaffBuyList Agent purchase list (still within the validity period).
      * @param array $PhoneNumBuyList List of numbers purchased.
      * @param integer $SipBuyNum Number of office telephones purchased (still within the validity period).
-Note: this field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

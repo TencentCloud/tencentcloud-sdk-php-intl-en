@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeExtension response structure.
  *
- * @method string getExtensionId() Obtain Extension
- * @method void setExtensionId(string $ExtensionId) Set Extension
- * @method string getExtensionDomain() Obtain Domain name
- * @method void setExtensionDomain(string $ExtensionDomain) Set Domain name
+ * @method string getExtensionId() Obtain Extension.
+ * @method void setExtensionId(string $ExtensionId) Set Extension.
+ * @method string getExtensionDomain() Obtain Domain name.
+ * @method void setExtensionDomain(string $ExtensionDomain) Set Domain name.
  * @method string getPassword() Obtain Registered password.
  * @method void setPassword(string $Password) Set Registered password.
  * @method string getOutboundProxy() Obtain Proxy server address.
@@ -36,12 +36,12 @@ use TencentCloud\Common\AbstractModel;
 class DescribeExtensionResponse extends AbstractModel
 {
     /**
-     * @var string Extension
+     * @var string Extension.
      */
     public $ExtensionId;
 
     /**
-     * @var string Domain name
+     * @var string Domain name.
      */
     public $ExtensionDomain;
 
@@ -66,8 +66,8 @@ class DescribeExtensionResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $ExtensionId Extension
-     * @param string $ExtensionDomain Domain name
+     * @param string $ExtensionId Extension.
+     * @param string $ExtensionDomain Domain name.
      * @param string $Password Registered password.
      * @param string $OutboundProxy Proxy server address.
      * @param string $Transport Transfer protocol.

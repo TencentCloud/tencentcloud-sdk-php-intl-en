@@ -20,17 +20,17 @@ use TencentCloud\Common\AbstractModel;
 /**
  * UnbindNumberCallOutSkillGroup request structure.
  *
- * @method integer getSdkAppId() Obtain Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
- * @method void setSdkAppId(integer $SdkAppId) Set Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
+ * @method integer getSdkAppId() Obtain Application id (required) can be found at https://console.cloud.tencent.com/ccc.
+ * @method void setSdkAppId(integer $SdkAppId) Set Application id (required) can be found at https://console.cloud.tencent.com/ccc.
  * @method string getNumber() Obtain Number to be unbound.
  * @method void setNumber(string $Number) Set Number to be unbound.
- * @method array getSkillGroupIds() Obtain List of skill group IDs to be unbound.
- * @method void setSkillGroupIds(array $SkillGroupIds) Set List of skill group IDs to be unbound.
+ * @method array getSkillGroupIds() Obtain List of skill group ids to be unbound.
+ * @method void setSkillGroupIds(array $SkillGroupIds) Set List of skill group ids to be unbound.
  */
 class UnbindNumberCallOutSkillGroupRequest extends AbstractModel
 {
     /**
-     * @var integer Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
+     * @var integer Application id (required) can be found at https://console.cloud.tencent.com/ccc.
      */
     public $SdkAppId;
 
@@ -40,14 +40,14 @@ class UnbindNumberCallOutSkillGroupRequest extends AbstractModel
     public $Number;
 
     /**
-     * @var array List of skill group IDs to be unbound.
+     * @var array List of skill group ids to be unbound.
      */
     public $SkillGroupIds;
 
     /**
-     * @param integer $SdkAppId Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
+     * @param integer $SdkAppId Application id (required) can be found at https://console.cloud.tencent.com/ccc.
      * @param string $Number Number to be unbound.
-     * @param array $SkillGroupIds List of skill group IDs to be unbound.
+     * @param array $SkillGroupIds List of skill group ids to be unbound.
      */
     function __construct()
     {

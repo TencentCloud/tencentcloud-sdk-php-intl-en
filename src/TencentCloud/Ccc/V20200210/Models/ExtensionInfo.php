@@ -20,33 +20,33 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Telephone information.
  *
- * @method integer getSdkAppId() Obtain Instance ID.
- * @method void setSdkAppId(integer $SdkAppId) Set Instance ID.
+ * @method integer getSdkAppId() Obtain Instance id.
+ * @method void setSdkAppId(integer $SdkAppId) Set Instance id.
  * @method string getFullExtensionId() Obtain Extension full name.
  * @method void setFullExtensionId(string $FullExtensionId) Set Extension full name.
- * @method string getExtensionId() Obtain Extension
- * @method void setExtensionId(string $ExtensionId) Set Extension
+ * @method string getExtensionId() Obtain Extension.
+ * @method void setExtensionId(string $ExtensionId) Set Extension.
  * @method string getSkillGroupId() Obtain Affiliated skill group list.
  * @method void setSkillGroupId(string $SkillGroupId) Set Affiliated skill group list.
  * @method string getExtensionName() Obtain Extension name.
  * @method void setExtensionName(string $ExtensionName) Set Extension name.
- * @method integer getCreateTime() Obtain Creation Time
- * @method void setCreateTime(integer $CreateTime) Set Creation Time
+ * @method integer getCreateTime() Obtain Creation time.
+ * @method void setCreateTime(integer $CreateTime) Set Creation time.
  * @method integer getModifyTime() Obtain Last modification time.
  * @method void setModifyTime(integer $ModifyTime) Set Last modification time.
- * @method integer getStatus() Obtain Telephone status (0 Offline, 100 Free, 200 Busy).
- * @method void setStatus(integer $Status) Set Telephone status (0 Offline, 100 Free, 200 Busy).
+ * @method integer getStatus() Obtain Telephone status (0 offline, 100 free, 200 busy).
+ * @method void setStatus(integer $Status) Set Telephone status (0 offline, 100 free, 200 busy).
  * @method boolean getRegister() Obtain Whether to register.
  * @method void setRegister(boolean $Register) Set Whether to register.
- * @method string getRelation() Obtain Bind Agent Email
- * @method void setRelation(string $Relation) Set Bind Agent Email
- * @method string getRelationName() Obtain Bind Agent Name
- * @method void setRelationName(string $RelationName) Set Bind Agent Name
+ * @method string getRelation() Obtain Bind agent email.
+ * @method void setRelation(string $Relation) Set Bind agent email.
+ * @method string getRelationName() Obtain Bind agent name.
+ * @method void setRelationName(string $RelationName) Set Bind agent name.
  */
 class ExtensionInfo extends AbstractModel
 {
     /**
-     * @var integer Instance ID.
+     * @var integer Instance id.
      */
     public $SdkAppId;
 
@@ -56,7 +56,7 @@ class ExtensionInfo extends AbstractModel
     public $FullExtensionId;
 
     /**
-     * @var string Extension
+     * @var string Extension.
      */
     public $ExtensionId;
 
@@ -71,7 +71,7 @@ class ExtensionInfo extends AbstractModel
     public $ExtensionName;
 
     /**
-     * @var integer Creation Time
+     * @var integer Creation time.
      */
     public $CreateTime;
 
@@ -81,7 +81,7 @@ class ExtensionInfo extends AbstractModel
     public $ModifyTime;
 
     /**
-     * @var integer Telephone status (0 Offline, 100 Free, 200 Busy).
+     * @var integer Telephone status (0 offline, 100 free, 200 busy).
      */
     public $Status;
 
@@ -91,27 +91,27 @@ class ExtensionInfo extends AbstractModel
     public $Register;
 
     /**
-     * @var string Bind Agent Email
+     * @var string Bind agent email.
      */
     public $Relation;
 
     /**
-     * @var string Bind Agent Name
+     * @var string Bind agent name.
      */
     public $RelationName;
 
     /**
-     * @param integer $SdkAppId Instance ID.
+     * @param integer $SdkAppId Instance id.
      * @param string $FullExtensionId Extension full name.
-     * @param string $ExtensionId Extension
+     * @param string $ExtensionId Extension.
      * @param string $SkillGroupId Affiliated skill group list.
      * @param string $ExtensionName Extension name.
-     * @param integer $CreateTime Creation Time
+     * @param integer $CreateTime Creation time.
      * @param integer $ModifyTime Last modification time.
-     * @param integer $Status Telephone status (0 Offline, 100 Free, 200 Busy).
+     * @param integer $Status Telephone status (0 offline, 100 free, 200 busy).
      * @param boolean $Register Whether to register.
-     * @param string $Relation Bind Agent Email
-     * @param string $RelationName Bind Agent Name
+     * @param string $Relation Bind agent email.
+     * @param string $RelationName Bind agent name.
      */
     function __construct()
     {

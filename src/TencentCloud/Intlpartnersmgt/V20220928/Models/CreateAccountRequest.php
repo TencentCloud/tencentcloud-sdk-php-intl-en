@@ -50,9 +50,9 @@ Parameter value is not allowed to be 7,380,86.
  * @method void setArea(string $Area) Set Customer's ISO2 standard country/region code, which can be obtained via the [GetCountryCodes API](https://www.tencentcloud.com/document/product/1085/51416). It should correspond to the `CountryCode` field, such as `HK`.
  * @method string getExtended() Obtain Extension field, which is left empty by default.
  * @method void setExtended(string $Extended) Set Extension field, which is left empty by default.
- * @method string getVerifyCode() Obtain VerifyCode. This field is required. 
+ * @method string getVerifyCode() Obtain VerifyCode. This parameter is required. 
 Use the [SendVerifyCode API](https://www.tencentcloud.com/document/product/1085/65907) to obtain the verifycode.The SendVerifyCode API sends a 6-digit verifycode to your specified mobile number via SMS. After receiving it, you need to pass it along with other parameters.
- * @method void setVerifyCode(string $VerifyCode) Set VerifyCode. This field is required. 
+ * @method void setVerifyCode(string $VerifyCode) Set VerifyCode. This parameter is required. 
 Use the [SendVerifyCode API](https://www.tencentcloud.com/document/product/1085/65907) to obtain the verifycode.The SendVerifyCode API sends a 6-digit verifycode to your specified mobile number via SMS. After receiving it, you need to pass it along with other parameters.
  */
 class CreateAccountRequest extends AbstractModel
@@ -105,7 +105,7 @@ Parameter value is not allowed to be 7,380,86.
     public $Extended;
 
     /**
-     * @var string VerifyCode. This field is required. 
+     * @var string VerifyCode. This parameter is required. 
 Use the [SendVerifyCode API](https://www.tencentcloud.com/document/product/1085/65907) to obtain the verifycode.The SendVerifyCode API sends a 6-digit verifycode to your specified mobile number via SMS. After receiving it, you need to pass it along with other parameters.
      */
     public $VerifyCode;
@@ -126,7 +126,7 @@ The system will perform binding limit verification of the mobile number you prov
 Parameter value is not allowed to be 7,380,86.
      * @param string $Area Customer's ISO2 standard country/region code, which can be obtained via the [GetCountryCodes API](https://www.tencentcloud.com/document/product/1085/51416). It should correspond to the `CountryCode` field, such as `HK`.
      * @param string $Extended Extension field, which is left empty by default.
-     * @param string $VerifyCode VerifyCode. This field is required. 
+     * @param string $VerifyCode VerifyCode. This parameter is required. 
 Use the [SendVerifyCode API](https://www.tencentcloud.com/document/product/1085/65907) to obtain the verifycode.The SendVerifyCode API sends a 6-digit verifycode to your specified mobile number via SMS. After receiving it, you need to pass it along with other parameters.
      */
     function __construct()

@@ -20,19 +20,19 @@ use TencentCloud\Common\AbstractModel;
 /**
  * BindStaffSkillGroupList request structure.
  *
- * @method integer getSdkAppId() Obtain Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
- * @method void setSdkAppId(integer $SdkAppId) Set Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
+ * @method integer getSdkAppId() Obtain Application id (required) can be found at https://console.cloud.tencent.com/ccc.
+ * @method void setSdkAppId(integer $SdkAppId) Set Application id (required) can be found at https://console.cloud.tencent.com/ccc.
  * @method string getStaffEmail() Obtain Agent email.
  * @method void setStaffEmail(string $StaffEmail) Set Agent email.
- * @method array getSkillGroupList() Obtain Bound skill group list
- * @method void setSkillGroupList(array $SkillGroupList) Set Bound skill group list
+ * @method array getSkillGroupList() Obtain Bound skill group list.
+ * @method void setSkillGroupList(array $SkillGroupList) Set Bound skill group list.
  * @method array getStaffSkillGroupList() Obtain Bound skill group list (required).
  * @method void setStaffSkillGroupList(array $StaffSkillGroupList) Set Bound skill group list (required).
  */
 class BindStaffSkillGroupListRequest extends AbstractModel
 {
     /**
-     * @var integer Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
+     * @var integer Application id (required) can be found at https://console.cloud.tencent.com/ccc.
      */
     public $SdkAppId;
 
@@ -42,7 +42,7 @@ class BindStaffSkillGroupListRequest extends AbstractModel
     public $StaffEmail;
 
     /**
-     * @var array Bound skill group list
+     * @var array Bound skill group list.
      * @deprecated
      */
     public $SkillGroupList;
@@ -53,9 +53,9 @@ class BindStaffSkillGroupListRequest extends AbstractModel
     public $StaffSkillGroupList;
 
     /**
-     * @param integer $SdkAppId Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
+     * @param integer $SdkAppId Application id (required) can be found at https://console.cloud.tencent.com/ccc.
      * @param string $StaffEmail Agent email.
-     * @param array $SkillGroupList Bound skill group list
+     * @param array $SkillGroupList Bound skill group list.
      * @param array $StaffSkillGroupList Bound skill group list (required).
      */
     function __construct()

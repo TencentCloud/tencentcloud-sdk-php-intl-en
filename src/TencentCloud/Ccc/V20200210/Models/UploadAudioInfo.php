@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Upload Audio File Information
  *
- * @method string getCustomFileName() Obtain File Alias (can be duplicated)
- * @method void setCustomFileName(string $CustomFileName) Set File Alias (can be duplicated)
- * @method string getAudioUrl() Obtain Audio File Link (supports mp3 and wav formats, file size not exceeding 5MB)
- * @method void setAudioUrl(string $AudioUrl) Set Audio File Link (supports mp3 and wav formats, file size not exceeding 5MB)
+ * @method string getCustomFileName() Obtain File alias (can be duplicated).
+ * @method void setCustomFileName(string $CustomFileName) Set File alias (can be duplicated).
+ * @method string getAudioUrl() Obtain Audio file link (supports mp3 and wav formats, file size not exceeding 5mb).
+ * @method void setAudioUrl(string $AudioUrl) Set Audio file link (supports mp3 and wav formats, file size not exceeding 5mb).
  */
 class UploadAudioInfo extends AbstractModel
 {
     /**
-     * @var string File Alias (can be duplicated)
+     * @var string File alias (can be duplicated).
      */
     public $CustomFileName;
 
     /**
-     * @var string Audio File Link (supports mp3 and wav formats, file size not exceeding 5MB)
+     * @var string Audio file link (supports mp3 and wav formats, file size not exceeding 5mb).
      */
     public $AudioUrl;
 
     /**
-     * @param string $CustomFileName File Alias (can be duplicated)
-     * @param string $AudioUrl Audio File Link (supports mp3 and wav formats, file size not exceeding 5MB)
+     * @param string $CustomFileName File alias (can be duplicated).
+     * @param string $AudioUrl Audio file link (supports mp3 and wav formats, file size not exceeding 5mb).
      */
     function __construct()
     {

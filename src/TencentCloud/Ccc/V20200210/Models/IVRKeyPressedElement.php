@@ -20,34 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * IVR Key Information.
  *
- * @method string getKey() Obtain Key.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setKey(string $Key) Set Key.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getLabel() Obtain Tag associated with key.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setLabel(string $Label) Set Tag associated with key.
-Note: this field may return null, indicating that no valid values can be obtained.
+ * @method string getKey() Obtain Hit keyword or press.
+ * @method void setKey(string $Key) Set Hit keyword or press.
+ * @method string getLabel() Obtain Tag associated with the key.
+ * @method void setLabel(string $Label) Set Tag associated with the key.
+ * @method integer getTimestamp() Obtain UNIX millisecond timestamp.
+ * @method void setTimestamp(integer $Timestamp) Set UNIX millisecond timestamp.
+ * @method string getNodeLabel() Obtain Node tags.
+ * @method void setNodeLabel(string $NodeLabel) Set Node tags.
+ * @method string getOriginalContent() Obtain User'S original input.
+ * @method void setOriginalContent(string $OriginalContent) Set User'S original input.
+ * @method string getTTSPrompt() Obtain TTS prompt content.
+ * @method void setTTSPrompt(string $TTSPrompt) Set TTS prompt content.
  */
 class IVRKeyPressedElement extends AbstractModel
 {
     /**
-     * @var string Key.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string Hit keyword or press.
      */
     public $Key;
 
     /**
-     * @var string Tag associated with key.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string Tag associated with the key.
      */
     public $Label;
 
     /**
-     * @param string $Key Key.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $Label Tag associated with key.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var integer UNIX millisecond timestamp.
+     */
+    public $Timestamp;
+
+    /**
+     * @var string Node tags.
+     */
+    public $NodeLabel;
+
+    /**
+     * @var string User'S original input.
+     */
+    public $OriginalContent;
+
+    /**
+     * @var string TTS prompt content.
+     */
+    public $TTSPrompt;
+
+    /**
+     * @param string $Key Hit keyword or press.
+     * @param string $Label Tag associated with the key.
+     * @param integer $Timestamp UNIX millisecond timestamp.
+     * @param string $NodeLabel Node tags.
+     * @param string $OriginalContent User'S original input.
+     * @param string $TTSPrompt TTS prompt content.
      */
     function __construct()
     {
@@ -68,6 +92,22 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("Label",$param) and $param["Label"] !== null) {
             $this->Label = $param["Label"];
+        }
+
+        if (array_key_exists("Timestamp",$param) and $param["Timestamp"] !== null) {
+            $this->Timestamp = $param["Timestamp"];
+        }
+
+        if (array_key_exists("NodeLabel",$param) and $param["NodeLabel"] !== null) {
+            $this->NodeLabel = $param["NodeLabel"];
+        }
+
+        if (array_key_exists("OriginalContent",$param) and $param["OriginalContent"] !== null) {
+            $this->OriginalContent = $param["OriginalContent"];
+        }
+
+        if (array_key_exists("TTSPrompt",$param) and $param["TTSPrompt"] !== null) {
+            $this->TTSPrompt = $param["TTSPrompt"];
         }
     }
 }

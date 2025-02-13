@@ -20,21 +20,19 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Agent purchase information
  *
- * @method integer getNum() Obtain Number of agents purchased
- * @method void setNum(integer $Num) Set Number of agents purchased
+ * @method integer getNum() Obtain Number of agents purchased.
+ * @method void setNum(integer $Num) Set Number of agents purchased.
  * @method integer getBuyTime() Obtain Purchased timestamp.
  * @method void setBuyTime(integer $BuyTime) Set Purchased timestamp.
- * @method integer getEndTime() Obtain End timestamp.
- * @method void setEndTime(integer $EndTime) Set End timestamp.
- * @method integer getSipNum() Obtain Number of office telephones purchased.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setSipNum(integer $SipNum) Set Number of office telephones purchased.
-Note: this field may return null, indicating that no valid values can be obtained.
+ * @method integer getEndTime() Obtain Deadline timestamp.
+ * @method void setEndTime(integer $EndTime) Set Deadline timestamp.
+ * @method integer getSipNum() Obtain Quantity of office telephones purchased.
+ * @method void setSipNum(integer $SipNum) Set Quantity of office telephones purchased.
  */
 class StaffBuyInfo extends AbstractModel
 {
     /**
-     * @var integer Number of agents purchased
+     * @var integer Number of agents purchased.
      */
     public $Num;
 
@@ -44,22 +42,20 @@ class StaffBuyInfo extends AbstractModel
     public $BuyTime;
 
     /**
-     * @var integer End timestamp.
+     * @var integer Deadline timestamp.
      */
     public $EndTime;
 
     /**
-     * @var integer Number of office telephones purchased.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var integer Quantity of office telephones purchased.
      */
     public $SipNum;
 
     /**
-     * @param integer $Num Number of agents purchased
+     * @param integer $Num Number of agents purchased.
      * @param integer $BuyTime Purchased timestamp.
-     * @param integer $EndTime End timestamp.
-     * @param integer $SipNum Number of office telephones purchased.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @param integer $EndTime Deadline timestamp.
+     * @param integer $SipNum Quantity of office telephones purchased.
      */
     function __construct()
     {

@@ -20,12 +20,12 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeProtectedTelCdr request structure.
  *
- * @method integer getStartTimeStamp() Obtain Start timestamp. Unix second-level timestamp.
- * @method void setStartTimeStamp(integer $StartTimeStamp) Set Start timestamp. Unix second-level timestamp.
- * @method integer getEndTimeStamp() Obtain End timestamp. Unix second-level timestamp.
- * @method void setEndTimeStamp(integer $EndTimeStamp) Set End timestamp. Unix second-level timestamp.
- * @method integer getSdkAppId() Obtain For the Application ID, go to https://console.cloud.tencent.com/ccc.
- * @method void setSdkAppId(integer $SdkAppId) Set For the Application ID, go to https://console.cloud.tencent.com/ccc.
+ * @method integer getStartTimeStamp() Obtain Start timestamp. unix second-level timestamp.
+ * @method void setStartTimeStamp(integer $StartTimeStamp) Set Start timestamp. unix second-level timestamp.
+ * @method integer getEndTimeStamp() Obtain End timestamp. unix second-level timestamp.
+ * @method void setEndTimeStamp(integer $EndTimeStamp) Set End timestamp. unix second-level timestamp.
+ * @method integer getSdkAppId() Obtain For the application id, you can check https://console.cloud.tencent.com/ccc.
+ * @method void setSdkAppId(integer $SdkAppId) Set For the application id, you can check https://console.cloud.tencent.com/ccc.
  * @method integer getPageSize() Obtain Page size, upper limit 100.
  * @method void setPageSize(integer $PageSize) Set Page size, upper limit 100.
  * @method integer getPageNumber() Obtain Page number starting from 0.
@@ -34,17 +34,17 @@ use TencentCloud\Common\AbstractModel;
 class DescribeProtectedTelCdrRequest extends AbstractModel
 {
     /**
-     * @var integer Start timestamp. Unix second-level timestamp.
+     * @var integer Start timestamp. unix second-level timestamp.
      */
     public $StartTimeStamp;
 
     /**
-     * @var integer End timestamp. Unix second-level timestamp.
+     * @var integer End timestamp. unix second-level timestamp.
      */
     public $EndTimeStamp;
 
     /**
-     * @var integer For the Application ID, go to https://console.cloud.tencent.com/ccc.
+     * @var integer For the application id, you can check https://console.cloud.tencent.com/ccc.
      */
     public $SdkAppId;
 
@@ -59,9 +59,9 @@ class DescribeProtectedTelCdrRequest extends AbstractModel
     public $PageNumber;
 
     /**
-     * @param integer $StartTimeStamp Start timestamp. Unix second-level timestamp.
-     * @param integer $EndTimeStamp End timestamp. Unix second-level timestamp.
-     * @param integer $SdkAppId For the Application ID, go to https://console.cloud.tencent.com/ccc.
+     * @param integer $StartTimeStamp Start timestamp. unix second-level timestamp.
+     * @param integer $EndTimeStamp End timestamp. unix second-level timestamp.
+     * @param integer $SdkAppId For the application id, you can check https://console.cloud.tencent.com/ccc.
      * @param integer $PageSize Page size, upper limit 100.
      * @param integer $PageNumber Page number starting from 0.
      */

@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * When adding customer service personnel in batches, information of the customer service personnel with an error is returned.
  *
- * @method string getStaffEmail() Obtain Agent Email Address
- * @method void setStaffEmail(string $StaffEmail) Set Agent Email Address
+ * @method string getStaffEmail() Obtain Agent email address.
+ * @method void setStaffEmail(string $StaffEmail) Set Agent email address.
  * @method string getCode() Obtain Error code.
  * @method void setCode(string $Code) Set Error code.
  * @method string getMessage() Obtain Error description.
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class ErrStaffItem extends AbstractModel
 {
     /**
-     * @var string Agent Email Address
+     * @var string Agent email address.
      */
     public $StaffEmail;
 
@@ -45,7 +45,7 @@ class ErrStaffItem extends AbstractModel
     public $Message;
 
     /**
-     * @param string $StaffEmail Agent Email Address
+     * @param string $StaffEmail Agent email address.
      * @param string $Code Error code.
      * @param string $Message Error description.
      */

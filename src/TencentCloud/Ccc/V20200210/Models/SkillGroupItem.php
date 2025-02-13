@@ -20,19 +20,19 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Skill group information.
  *
- * @method integer getSkillGroupId() Obtain Skill group ID.
- * @method void setSkillGroupId(integer $SkillGroupId) Set Skill group ID.
+ * @method integer getSkillGroupId() Obtain Skill group id.
+ * @method void setSkillGroupId(integer $SkillGroupId) Set Skill group id.
  * @method string getSkillGroupName() Obtain Skill group name.
  * @method void setSkillGroupName(string $SkillGroupName) Set Skill group name.
- * @method integer getPriority() Obtain Priority
- * @method void setPriority(integer $Priority) Set Priority
- * @method string getType() Obtain Type: IM, TEL, ALL (full media).
- * @method void setType(string $Type) Set Type: IM, TEL, ALL (full media).
+ * @method integer getPriority() Obtain Priority.
+ * @method void setPriority(integer $Priority) Set Priority.
+ * @method string getType() Obtain Type: im, tel, all (full media).
+ * @method void setType(string $Type) Set Type: im, tel, all (full media).
  */
 class SkillGroupItem extends AbstractModel
 {
     /**
-     * @var integer Skill group ID.
+     * @var integer Skill group id.
      */
     public $SkillGroupId;
 
@@ -42,20 +42,20 @@ class SkillGroupItem extends AbstractModel
     public $SkillGroupName;
 
     /**
-     * @var integer Priority
+     * @var integer Priority.
      */
     public $Priority;
 
     /**
-     * @var string Type: IM, TEL, ALL (full media).
+     * @var string Type: im, tel, all (full media).
      */
     public $Type;
 
     /**
-     * @param integer $SkillGroupId Skill group ID.
+     * @param integer $SkillGroupId Skill group id.
      * @param string $SkillGroupName Skill group name.
-     * @param integer $Priority Priority
-     * @param string $Type Type: IM, TEL, ALL (full media).
+     * @param integer $Priority Priority.
+     * @param string $Type Type: im, tel, all (full media).
      */
     function __construct()
     {

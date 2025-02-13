@@ -20,14 +20,14 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Real-Time inbound metric.
  *
- * @method integer getIvrCount() Obtain Number of IVR residency.
- * @method void setIvrCount(integer $IvrCount) Set Number of IVR residency.
+ * @method integer getIvrCount() Obtain Number of ivr residency.
+ * @method void setIvrCount(integer $IvrCount) Set Number of ivr residency.
  * @method integer getQueueCount() Obtain Number in queue.
  * @method void setQueueCount(integer $QueueCount) Set Number in queue.
  * @method integer getRingCount() Obtain Number in ringing.
  * @method void setRingCount(integer $RingCount) Set Number in ringing.
- * @method integer getAcceptCount() Obtain Number in connection.
- * @method void setAcceptCount(integer $AcceptCount) Set Number in connection.
+ * @method integer getAcceptCount() Obtain Number of connections.
+ * @method void setAcceptCount(integer $AcceptCount) Set Number of connections.
  * @method integer getTransferOuterCount() Obtain Number of customer service transferring to the external line.
  * @method void setTransferOuterCount(integer $TransferOuterCount) Set Number of customer service transferring to the external line.
  * @method integer getMaxQueueDuration() Obtain Maximum queue duration.
@@ -46,7 +46,7 @@ use TencentCloud\Common\AbstractModel;
 class CallInMetrics extends AbstractModel
 {
     /**
-     * @var integer Number of IVR residency.
+     * @var integer Number of ivr residency.
      */
     public $IvrCount;
 
@@ -61,7 +61,7 @@ class CallInMetrics extends AbstractModel
     public $RingCount;
 
     /**
-     * @var integer Number in connection.
+     * @var integer Number of connections.
      */
     public $AcceptCount;
 
@@ -101,10 +101,10 @@ class CallInMetrics extends AbstractModel
     public $AvgAcceptDuration;
 
     /**
-     * @param integer $IvrCount Number of IVR residency.
+     * @param integer $IvrCount Number of ivr residency.
      * @param integer $QueueCount Number in queue.
      * @param integer $RingCount Number in ringing.
-     * @param integer $AcceptCount Number in connection.
+     * @param integer $AcceptCount Number of connections.
      * @param integer $TransferOuterCount Number of customer service transferring to the external line.
      * @param integer $MaxQueueDuration Maximum queue duration.
      * @param integer $AvgQueueDuration Average queue duration.

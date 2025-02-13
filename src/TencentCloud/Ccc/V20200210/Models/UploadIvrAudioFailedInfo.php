@@ -20,34 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Failed to upload audio file information
  *
- * @method string getFileName() Obtain Filename
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setFileName(string $FileName) Set Filename
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getFailedMsg() Obtain Reason for failure
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setFailedMsg(string $FailedMsg) Set Reason for failure
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getFileName() Obtain Filename.
+ * @method void setFileName(string $FileName) Set Filename.
+ * @method string getFailedMsg() Obtain Reason for failure.
+ * @method void setFailedMsg(string $FailedMsg) Set Reason for failure.
  */
 class UploadIvrAudioFailedInfo extends AbstractModel
 {
     /**
-     * @var string Filename
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Filename.
      */
     public $FileName;
 
     /**
-     * @var string Reason for failure
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Reason for failure.
      */
     public $FailedMsg;
 
     /**
-     * @param string $FileName Filename
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $FailedMsg Reason for failure
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $FileName Filename.
+     * @param string $FailedMsg Reason for failure.
      */
     function __construct()
     {

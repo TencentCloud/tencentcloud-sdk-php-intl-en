@@ -20,42 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeStaffStatusMetrics request structure.
  *
- * @method integer getSdkAppId() Obtain Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
- * @method void setSdkAppId(integer $SdkAppId) Set Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
- * @method array getStaffList() Obtain Filter agent list. By default, do not pass all returned agent information.
- * @method void setStaffList(array $StaffList) Set Filter agent list. By default, do not pass all returned agent information.
- * @method array getGroupIdList() Obtain Filter skill group ID list.
- * @method void setGroupIdList(array $GroupIdList) Set Filter skill group ID list.
- * @method array getStatusList() Obtain Filter agent status list Agent status free Available | busy Busy | rest On Break | notReady Not Ready | afterCallWork Post-call Adjustment | offline Offline
- * @method void setStatusList(array $StatusList) Set Filter agent status list Agent status free Available | busy Busy | rest On Break | notReady Not Ready | afterCallWork Post-call Adjustment | offline Offline
+ * @method integer getSdkAppId() Obtain Application id (required) can be found at https://console.cloud.tencent.com/ccc.
+ * @method void setSdkAppId(integer $SdkAppId) Set Application id (required) can be found at https://console.cloud.tencent.com/ccc.
+ * @method array getStaffList() Obtain Filter agent list. by default, do not pass all returned agent information.
+ * @method void setStaffList(array $StaffList) Set Filter agent list. by default, do not pass all returned agent information.
+ * @method array getGroupIdList() Obtain Filter skill group id list.
+ * @method void setGroupIdList(array $GroupIdList) Set Filter skill group id list.
+ * @method array getStatusList() Obtain Filter agent status list agent status free available | busy busy | rest on break | notready not ready | aftercallwork post-call adjustment | offline offline . 
+ * @method void setStatusList(array $StatusList) Set Filter agent status list agent status free available | busy busy | rest on break | notready not ready | aftercallwork post-call adjustment | offline offline . 
  */
 class DescribeStaffStatusMetricsRequest extends AbstractModel
 {
     /**
-     * @var integer Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
+     * @var integer Application id (required) can be found at https://console.cloud.tencent.com/ccc.
      */
     public $SdkAppId;
 
     /**
-     * @var array Filter agent list. By default, do not pass all returned agent information.
+     * @var array Filter agent list. by default, do not pass all returned agent information.
      */
     public $StaffList;
 
     /**
-     * @var array Filter skill group ID list.
+     * @var array Filter skill group id list.
      */
     public $GroupIdList;
 
     /**
-     * @var array Filter agent status list Agent status free Available | busy Busy | rest On Break | notReady Not Ready | afterCallWork Post-call Adjustment | offline Offline
+     * @var array Filter agent status list agent status free available | busy busy | rest on break | notready not ready | aftercallwork post-call adjustment | offline offline . 
      */
     public $StatusList;
 
     /**
-     * @param integer $SdkAppId Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
-     * @param array $StaffList Filter agent list. By default, do not pass all returned agent information.
-     * @param array $GroupIdList Filter skill group ID list.
-     * @param array $StatusList Filter agent status list Agent status free Available | busy Busy | rest On Break | notReady Not Ready | afterCallWork Post-call Adjustment | offline Offline
+     * @param integer $SdkAppId Application id (required) can be found at https://console.cloud.tencent.com/ccc.
+     * @param array $StaffList Filter agent list. by default, do not pass all returned agent information.
+     * @param array $GroupIdList Filter skill group id list.
+     * @param array $StatusList Filter agent status list agent status free available | busy busy | rest on break | notready not ready | aftercallwork post-call adjustment | offline offline . 
      */
     function __construct()
     {

@@ -20,54 +20,54 @@ use TencentCloud\Common\AbstractModel;
 /**
  * PSTN session type.
  *
- * @method string getSessionID() Obtain Session ID.
- * @method void setSessionID(string $SessionID) Set Session ID.
- * @method string getRoomID() Obtain Temporary room ID for session.
- * @method void setRoomID(string $RoomID) Set Temporary room ID for session.
+ * @method string getSessionID() Obtain Session id.
+ * @method void setSessionID(string $SessionID) Set Session id.
+ * @method string getRoomID() Obtain Temporary room id for session.
+ * @method void setRoomID(string $RoomID) Set Temporary room id for session.
  * @method string getCaller() Obtain Caller.
  * @method void setCaller(string $Caller) Set Caller.
  * @method string getCallee() Obtain Called.
  * @method void setCallee(string $Callee) Set Called.
- * @method integer getStartTimestamp() Obtain Start time. Unix timestamp.
- * @method void setStartTimestamp(integer $StartTimestamp) Set Start time. Unix timestamp.
- * @method integer getRingTimestamp() Obtain Ring time. Unix timestamp.
- * @method void setRingTimestamp(integer $RingTimestamp) Set Ring time. Unix timestamp.
- * @method integer getAcceptTimestamp() Obtain Answer time. Unix timestamp.
- * @method void setAcceptTimestamp(integer $AcceptTimestamp) Set Answer time. Unix timestamp.
+ * @method integer getStartTimestamp() Obtain Start time. unix timestamp.
+ * @method void setStartTimestamp(integer $StartTimestamp) Set Start time. unix timestamp.
+ * @method integer getRingTimestamp() Obtain Ring time. unix timestamp.
+ * @method void setRingTimestamp(integer $RingTimestamp) Set Ring time. unix timestamp.
+ * @method integer getAcceptTimestamp() Obtain Answer time. unix timestamp.
+ * @method void setAcceptTimestamp(integer $AcceptTimestamp) Set Answer time. unix timestamp.
  * @method string getStaffEmail() Obtain Agent email.
  * @method void setStaffEmail(string $StaffEmail) Set Agent email.
- * @method string getStaffNumber() Obtain Agent ID
- * @method void setStaffNumber(string $StaffNumber) Set Agent ID
- * @method string getSessionStatus() Obtain Session Status
-ringing Ringing
-seatJoining  waiting for the agent to answer
-inProgress  Ongoing
-finished - Completed.
- * @method void setSessionStatus(string $SessionStatus) Set Session Status
-ringing Ringing
-seatJoining  waiting for the agent to answer
-inProgress  Ongoing
-finished - Completed.
- * @method integer getDirection() Obtain Session call direction, 0 - Inbound | 1 - Outbound.
- * @method void setDirection(integer $Direction) Set Session call direction, 0 - Inbound | 1 - Outbound.
- * @method string getOutBoundCaller() Obtain The number used for transferring to the external line (Outbound Caller).
- * @method void setOutBoundCaller(string $OutBoundCaller) Set The number used for transferring to the external line (Outbound Caller).
+ * @method string getStaffNumber() Obtain Agent id.
+ * @method void setStaffNumber(string $StaffNumber) Set Agent id.
+ * @method string getSessionStatus() Obtain Session status.
+Ringing - in progress.
+SeatJoining - waiting for the agent to answer.
+InProgress: in progress.
+Finished - completed.
+ * @method void setSessionStatus(string $SessionStatus) Set Session status.
+Ringing - in progress.
+SeatJoining - waiting for the agent to answer.
+InProgress: in progress.
+Finished - completed.
+ * @method integer getDirection() Obtain Session call direction, 0 - inbound | 1 - outbound.
+ * @method void setDirection(integer $Direction) Set Session call direction, 0 - inbound | 1 - outbound.
+ * @method string getOutBoundCaller() Obtain The number used for transferring to the external line (outbound caller).
+ * @method void setOutBoundCaller(string $OutBoundCaller) Set The number used for transferring to the external line (outbound caller).
  * @method string getOutBoundCallee() Obtain Outbound callee.
  * @method void setOutBoundCallee(string $OutBoundCallee) Set Outbound callee.
- * @method string getProtectedCaller() Obtain Caller number protection ID. Effective when the number protection map feature is activated, and the Caller field is empty.
- * @method void setProtectedCaller(string $ProtectedCaller) Set Caller number protection ID. Effective when the number protection map feature is activated, and the Caller field is empty.
- * @method string getProtectedCallee() Obtain Called number protection ID. Effective when the number protection map feature is activated, and the Callee field is empty.
- * @method void setProtectedCallee(string $ProtectedCallee) Set Called number protection ID. Effective when the number protection map feature is activated, and the Callee field is empty.
+ * @method string getProtectedCaller() Obtain Caller number protection id. effective when the number protection map feature is activated, and the caller field is empty.
+ * @method void setProtectedCaller(string $ProtectedCaller) Set Caller number protection id. effective when the number protection map feature is activated, and the caller field is empty.
+ * @method string getProtectedCallee() Obtain Called number protection id. effective when the number protection map feature is activated, and the callee field is empty.
+ * @method void setProtectedCallee(string $ProtectedCallee) Set Called number protection id. effective when the number protection map feature is activated, and the callee field is empty.
  */
 class PSTNSession extends AbstractModel
 {
     /**
-     * @var string Session ID.
+     * @var string Session id.
      */
     public $SessionID;
 
     /**
-     * @var string Temporary room ID for session.
+     * @var string Temporary room id for session.
      */
     public $RoomID;
 
@@ -82,17 +82,17 @@ class PSTNSession extends AbstractModel
     public $Callee;
 
     /**
-     * @var integer Start time. Unix timestamp.
+     * @var integer Start time. unix timestamp.
      */
     public $StartTimestamp;
 
     /**
-     * @var integer Ring time. Unix timestamp.
+     * @var integer Ring time. unix timestamp.
      */
     public $RingTimestamp;
 
     /**
-     * @var integer Answer time. Unix timestamp.
+     * @var integer Answer time. unix timestamp.
      */
     public $AcceptTimestamp;
 
@@ -102,26 +102,26 @@ class PSTNSession extends AbstractModel
     public $StaffEmail;
 
     /**
-     * @var string Agent ID
+     * @var string Agent id.
      */
     public $StaffNumber;
 
     /**
-     * @var string Session Status
-ringing Ringing
-seatJoining  waiting for the agent to answer
-inProgress  Ongoing
-finished - Completed.
+     * @var string Session status.
+Ringing - in progress.
+SeatJoining - waiting for the agent to answer.
+InProgress: in progress.
+Finished - completed.
      */
     public $SessionStatus;
 
     /**
-     * @var integer Session call direction, 0 - Inbound | 1 - Outbound.
+     * @var integer Session call direction, 0 - inbound | 1 - outbound.
      */
     public $Direction;
 
     /**
-     * @var string The number used for transferring to the external line (Outbound Caller).
+     * @var string The number used for transferring to the external line (outbound caller).
      */
     public $OutBoundCaller;
 
@@ -131,35 +131,35 @@ finished - Completed.
     public $OutBoundCallee;
 
     /**
-     * @var string Caller number protection ID. Effective when the number protection map feature is activated, and the Caller field is empty.
+     * @var string Caller number protection id. effective when the number protection map feature is activated, and the caller field is empty.
      */
     public $ProtectedCaller;
 
     /**
-     * @var string Called number protection ID. Effective when the number protection map feature is activated, and the Callee field is empty.
+     * @var string Called number protection id. effective when the number protection map feature is activated, and the callee field is empty.
      */
     public $ProtectedCallee;
 
     /**
-     * @param string $SessionID Session ID.
-     * @param string $RoomID Temporary room ID for session.
+     * @param string $SessionID Session id.
+     * @param string $RoomID Temporary room id for session.
      * @param string $Caller Caller.
      * @param string $Callee Called.
-     * @param integer $StartTimestamp Start time. Unix timestamp.
-     * @param integer $RingTimestamp Ring time. Unix timestamp.
-     * @param integer $AcceptTimestamp Answer time. Unix timestamp.
+     * @param integer $StartTimestamp Start time. unix timestamp.
+     * @param integer $RingTimestamp Ring time. unix timestamp.
+     * @param integer $AcceptTimestamp Answer time. unix timestamp.
      * @param string $StaffEmail Agent email.
-     * @param string $StaffNumber Agent ID
-     * @param string $SessionStatus Session Status
-ringing Ringing
-seatJoining  waiting for the agent to answer
-inProgress  Ongoing
-finished - Completed.
-     * @param integer $Direction Session call direction, 0 - Inbound | 1 - Outbound.
-     * @param string $OutBoundCaller The number used for transferring to the external line (Outbound Caller).
+     * @param string $StaffNumber Agent id.
+     * @param string $SessionStatus Session status.
+Ringing - in progress.
+SeatJoining - waiting for the agent to answer.
+InProgress: in progress.
+Finished - completed.
+     * @param integer $Direction Session call direction, 0 - inbound | 1 - outbound.
+     * @param string $OutBoundCaller The number used for transferring to the external line (outbound caller).
      * @param string $OutBoundCallee Outbound callee.
-     * @param string $ProtectedCaller Caller number protection ID. Effective when the number protection map feature is activated, and the Caller field is empty.
-     * @param string $ProtectedCallee Called number protection ID. Effective when the number protection map feature is activated, and the Callee field is empty.
+     * @param string $ProtectedCaller Caller number protection id. effective when the number protection map feature is activated, and the caller field is empty.
+     * @param string $ProtectedCallee Called number protection id. effective when the number protection map feature is activated, and the callee field is empty.
      */
     function __construct()
     {

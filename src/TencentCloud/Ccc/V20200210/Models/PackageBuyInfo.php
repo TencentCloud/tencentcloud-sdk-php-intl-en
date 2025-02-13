@@ -20,38 +20,38 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Package purchase information.
  *
- * @method string getPackageId() Obtain Package ID.
- * @method void setPackageId(string $PackageId) Set Package ID.
- * @method integer getType() Obtain Package type, 0 - Outbound call package | 1 - 400 inbound call package.
- * @method void setType(integer $Type) Set Package type, 0 - Outbound call package | 1 - 400 inbound call package.
- * @method integer getCapacitySize() Obtain Total package.
- * @method void setCapacitySize(integer $CapacitySize) Set Total package.
- * @method integer getCapacityRemain() Obtain Remaining package.
- * @method void setCapacityRemain(integer $CapacityRemain) Set Remaining package.
+ * @method string getPackageId() Obtain Package id.
+ * @method void setPackageId(string $PackageId) Set Package id.
+ * @method integer getType() Obtain Package type, 0 - outbound call package | 1 - 400 inbound call package.
+ * @method void setType(integer $Type) Set Package type, 0 - outbound call package | 1 - 400 inbound call package.
+ * @method integer getCapacitySize() Obtain <TOTAL_PACKAGE>.
+ * @method void setCapacitySize(integer $CapacitySize) Set <TOTAL_PACKAGE>.
+ * @method integer getCapacityRemain() Obtain Remaining package balance.
+ * @method void setCapacityRemain(integer $CapacityRemain) Set Remaining package balance.
  * @method integer getBuyTime() Obtain Purchased timestamp.
  * @method void setBuyTime(integer $BuyTime) Set Purchased timestamp.
- * @method integer getEndTime() Obtain End timestamp.
- * @method void setEndTime(integer $EndTime) Set End timestamp.
+ * @method integer getEndTime() Obtain Deadline timestamp.
+ * @method void setEndTime(integer $EndTime) Set Deadline timestamp.
  */
 class PackageBuyInfo extends AbstractModel
 {
     /**
-     * @var string Package ID.
+     * @var string Package id.
      */
     public $PackageId;
 
     /**
-     * @var integer Package type, 0 - Outbound call package | 1 - 400 inbound call package.
+     * @var integer Package type, 0 - outbound call package | 1 - 400 inbound call package.
      */
     public $Type;
 
     /**
-     * @var integer Total package.
+     * @var integer <TOTAL_PACKAGE>.
      */
     public $CapacitySize;
 
     /**
-     * @var integer Remaining package.
+     * @var integer Remaining package balance.
      */
     public $CapacityRemain;
 
@@ -61,17 +61,17 @@ class PackageBuyInfo extends AbstractModel
     public $BuyTime;
 
     /**
-     * @var integer End timestamp.
+     * @var integer Deadline timestamp.
      */
     public $EndTime;
 
     /**
-     * @param string $PackageId Package ID.
-     * @param integer $Type Package type, 0 - Outbound call package | 1 - 400 inbound call package.
-     * @param integer $CapacitySize Total package.
-     * @param integer $CapacityRemain Remaining package.
+     * @param string $PackageId Package id.
+     * @param integer $Type Package type, 0 - outbound call package | 1 - 400 inbound call package.
+     * @param integer $CapacitySize <TOTAL_PACKAGE>.
+     * @param integer $CapacityRemain Remaining package balance.
      * @param integer $BuyTime Purchased timestamp.
-     * @param integer $EndTime End timestamp.
+     * @param integer $EndTime Deadline timestamp.
      */
     function __construct()
     {

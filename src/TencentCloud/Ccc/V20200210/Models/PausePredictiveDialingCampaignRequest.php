@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * PausePredictiveDialingCampaign request structure.
  *
- * @method integer getSdkAppId() Obtain Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
- * @method void setSdkAppId(integer $SdkAppId) Set Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
- * @method integer getCampaignId() Obtain Task ID.
- * @method void setCampaignId(integer $CampaignId) Set Task ID.
+ * @method integer getSdkAppId() Obtain Application id (required) can be found at https://console.cloud.tencent.com/ccc.
+ * @method void setSdkAppId(integer $SdkAppId) Set Application id (required) can be found at https://console.cloud.tencent.com/ccc.
+ * @method integer getCampaignId() Obtain Task id.
+ * @method void setCampaignId(integer $CampaignId) Set Task id.
  */
 class PausePredictiveDialingCampaignRequest extends AbstractModel
 {
     /**
-     * @var integer Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
+     * @var integer Application id (required) can be found at https://console.cloud.tencent.com/ccc.
      */
     public $SdkAppId;
 
     /**
-     * @var integer Task ID.
+     * @var integer Task id.
      */
     public $CampaignId;
 
     /**
-     * @param integer $SdkAppId Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
-     * @param integer $CampaignId Task ID.
+     * @param integer $SdkAppId Application id (required) can be found at https://console.cloud.tencent.com/ccc.
+     * @param integer $CampaignId Task id.
      */
     function __construct()
     {

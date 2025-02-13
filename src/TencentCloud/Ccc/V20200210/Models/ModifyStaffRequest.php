@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyStaff request structure.
  *
- * @method integer getSdkAppId() Obtain Application ID
- * @method void setSdkAppId(integer $SdkAppId) Set Application ID
+ * @method integer getSdkAppId() Obtain Application id (required) can be found at https://console.cloud.tencent.com/ccc.
+ * @method void setSdkAppId(integer $SdkAppId) Set Application id (required) can be found at https://console.cloud.tencent.com/ccc.
  * @method string getEmail() Obtain Agent account.
  * @method void setEmail(string $Email) Set Agent account.
  * @method string getName() Obtain Agent name.
@@ -30,19 +30,21 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPhone(string $Phone) Set Agent phone number (preceded by 0086, example: 008618011111111).
  * @method string getNick() Obtain Agent nickname.
  * @method void setNick(string $Nick) Set Agent nickname.
- * @method string getStaffNo() Obtain Agent ID
- * @method void setStaffNo(string $StaffNo) Set Agent ID
- * @method array getSkillGroupIds() Obtain Bind skill group ID list.
- * @method void setSkillGroupIds(array $SkillGroupIds) Set Bind skill group ID list.
+ * @method string getStaffNo() Obtain Agent id.
+ * @method void setStaffNo(string $StaffNo) Set Agent id.
+ * @method array getSkillGroupIds() Obtain Bind skill group id list.
+ * @method void setSkillGroupIds(array $SkillGroupIds) Set Bind skill group id list.
  * @method boolean getUseMobileCallOut() Obtain Whether the cell phone outbound call switch is enabled or not.
  * @method void setUseMobileCallOut(boolean $UseMobileCallOut) Set Whether the cell phone outbound call switch is enabled or not.
- * @method integer getUseMobileAccept() Obtain Cell phone answering pattern: 0 - Off | 1 - Only when Offline | 2 - Always.
- * @method void setUseMobileAccept(integer $UseMobileAccept) Set Cell phone answering pattern: 0 - Off | 1 - Only when Offline | 2 - Always.
+ * @method integer getUseMobileAccept() Obtain Cell phone answering pattern: 0 - off | 1 - only when offline | 2 - always.
+ * @method void setUseMobileAccept(integer $UseMobileAccept) Set Cell phone answering pattern: 0 - off | 1 - only when offline | 2 - always.
+ * @method string getExtensionNumber() Obtain Agent extension number (starting with 1 to 8, 4 - 6 digits).
+ * @method void setExtensionNumber(string $ExtensionNumber) Set Agent extension number (starting with 1 to 8, 4 - 6 digits).
  */
 class ModifyStaffRequest extends AbstractModel
 {
     /**
-     * @var integer Application ID
+     * @var integer Application id (required) can be found at https://console.cloud.tencent.com/ccc.
      */
     public $SdkAppId;
 
@@ -67,12 +69,12 @@ class ModifyStaffRequest extends AbstractModel
     public $Nick;
 
     /**
-     * @var string Agent ID
+     * @var string Agent id.
      */
     public $StaffNo;
 
     /**
-     * @var array Bind skill group ID list.
+     * @var array Bind skill group id list.
      */
     public $SkillGroupIds;
 
@@ -82,20 +84,26 @@ class ModifyStaffRequest extends AbstractModel
     public $UseMobileCallOut;
 
     /**
-     * @var integer Cell phone answering pattern: 0 - Off | 1 - Only when Offline | 2 - Always.
+     * @var integer Cell phone answering pattern: 0 - off | 1 - only when offline | 2 - always.
      */
     public $UseMobileAccept;
 
     /**
-     * @param integer $SdkAppId Application ID
+     * @var string Agent extension number (starting with 1 to 8, 4 - 6 digits).
+     */
+    public $ExtensionNumber;
+
+    /**
+     * @param integer $SdkAppId Application id (required) can be found at https://console.cloud.tencent.com/ccc.
      * @param string $Email Agent account.
      * @param string $Name Agent name.
      * @param string $Phone Agent phone number (preceded by 0086, example: 008618011111111).
      * @param string $Nick Agent nickname.
-     * @param string $StaffNo Agent ID
-     * @param array $SkillGroupIds Bind skill group ID list.
+     * @param string $StaffNo Agent id.
+     * @param array $SkillGroupIds Bind skill group id list.
      * @param boolean $UseMobileCallOut Whether the cell phone outbound call switch is enabled or not.
-     * @param integer $UseMobileAccept Cell phone answering pattern: 0 - Off | 1 - Only when Offline | 2 - Always.
+     * @param integer $UseMobileAccept Cell phone answering pattern: 0 - off | 1 - only when offline | 2 - always.
+     * @param string $ExtensionNumber Agent extension number (starting with 1 to 8, 4 - 6 digits).
      */
     function __construct()
     {
@@ -144,6 +152,10 @@ class ModifyStaffRequest extends AbstractModel
 
         if (array_key_exists("UseMobileAccept",$param) and $param["UseMobileAccept"] !== null) {
             $this->UseMobileAccept = $param["UseMobileAccept"];
+        }
+
+        if (array_key_exists("ExtensionNumber",$param) and $param["ExtensionNumber"] !== null) {
+            $this->ExtensionNumber = $param["ExtensionNumber"];
         }
     }
 }

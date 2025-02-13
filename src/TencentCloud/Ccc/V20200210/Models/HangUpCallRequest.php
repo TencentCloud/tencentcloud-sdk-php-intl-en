@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * HangUpCall request structure.
  *
- * @method integer getSdkAppId() Obtain TCCC instance application ID.
- * @method void setSdkAppId(integer $SdkAppId) Set TCCC instance application ID.
- * @method string getSessionId() Obtain Session ID.
- * @method void setSessionId(string $SessionId) Set Session ID.
+ * @method integer getSdkAppId() Obtain Application id (required) can be found at https://console.cloud.tencent.com/ccc.
+ * @method void setSdkAppId(integer $SdkAppId) Set Application id (required) can be found at https://console.cloud.tencent.com/ccc.
+ * @method string getSessionId() Obtain Session id.
+ * @method void setSessionId(string $SessionId) Set Session id.
  */
 class HangUpCallRequest extends AbstractModel
 {
     /**
-     * @var integer TCCC instance application ID.
+     * @var integer Application id (required) can be found at https://console.cloud.tencent.com/ccc.
      */
     public $SdkAppId;
 
     /**
-     * @var string Session ID.
+     * @var string Session id.
      */
     public $SessionId;
 
     /**
-     * @param integer $SdkAppId TCCC instance application ID.
-     * @param string $SessionId Session ID.
+     * @param integer $SdkAppId Application id (required) can be found at https://console.cloud.tencent.com/ccc.
+     * @param string $SessionId Session id.
      */
     function __construct()
     {

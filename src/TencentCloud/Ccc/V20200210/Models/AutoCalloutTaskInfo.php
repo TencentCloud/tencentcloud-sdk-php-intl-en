@@ -20,44 +20,46 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Automatic outbound call task list item.
  *
- * @method string getName() Obtain Task Name
- * @method void setName(string $Name) Set Task Name
- * @method integer getCalleeCount() Obtain Number of calls.
- * @method void setCalleeCount(integer $CalleeCount) Set Number of calls.
+ * @method string getName() Obtain Task name.
+ * @method void setName(string $Name) Set Task name.
+ * @method integer getCalleeCount() Obtain Number of called parties.
+ * @method void setCalleeCount(integer $CalleeCount) Set Number of called parties.
  * @method array getCallers() Obtain List of calling numbers.
  * @method void setCallers(array $Callers) Set List of calling numbers.
  * @method integer getNotBefore() Obtain Start timestamp.
  * @method void setNotBefore(integer $NotBefore) Set Start timestamp.
- * @method integer getNotAfter() Obtain End timestamp.
+ * @method integer getNotAfter() Obtain End timestamp
+.
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setNotAfter(integer $NotAfter) Set End timestamp.
+ * @method void setNotAfter(integer $NotAfter) Set End timestamp
+.
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method integer getIvrId() Obtain IvrId used by the task.
  * @method void setIvrId(integer $IvrId) Set IvrId used by the task.
- * @method integer getState() Obtain Task status:
-0 Initial: Task created, calling not started
-1 Running
-2  Completed: All calls in the task are completed
-3 Ending: The task is due, but some calls are still not finished
-4 Ended: Task terminated due to expiration
- * @method void setState(integer $State) Set Task status:
-0 Initial: Task created, calling not started
-1 Running
-2  Completed: All calls in the task are completed
-3 Ending: The task is due, but some calls are still not finished
-4 Ended: Task terminated due to expiration
- * @method integer getTaskId() Obtain Task ID.
- * @method void setTaskId(integer $TaskId) Set Task ID.
+ * @method integer getState() Obtain Task status:.
+0 initial: task creation, call not started.
+1 running.
+2 completed: all calls in the task are completed.
+3 ending: the task has expired, but there are still some calls not ended.
+4 ended: task terminated due to expiration.
+ * @method void setState(integer $State) Set Task status:.
+0 initial: task creation, call not started.
+1 running.
+2 completed: all calls in the task are completed.
+3 ending: the task has expired, but there are still some calls not ended.
+4 ended: task terminated due to expiration.
+ * @method integer getTaskId() Obtain <Task id>.
+ * @method void setTaskId(integer $TaskId) Set <Task id>.
  */
 class AutoCalloutTaskInfo extends AbstractModel
 {
     /**
-     * @var string Task Name
+     * @var string Task name.
      */
     public $Name;
 
     /**
-     * @var integer Number of calls.
+     * @var integer Number of called parties.
      */
     public $CalleeCount;
 
@@ -72,7 +74,8 @@ class AutoCalloutTaskInfo extends AbstractModel
     public $NotBefore;
 
     /**
-     * @var integer End timestamp.
+     * @var integer End timestamp
+.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $NotAfter;
@@ -83,35 +86,36 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $IvrId;
 
     /**
-     * @var integer Task status:
-0 Initial: Task created, calling not started
-1 Running
-2  Completed: All calls in the task are completed
-3 Ending: The task is due, but some calls are still not finished
-4 Ended: Task terminated due to expiration
+     * @var integer Task status:.
+0 initial: task creation, call not started.
+1 running.
+2 completed: all calls in the task are completed.
+3 ending: the task has expired, but there are still some calls not ended.
+4 ended: task terminated due to expiration.
      */
     public $State;
 
     /**
-     * @var integer Task ID.
+     * @var integer <Task id>.
      */
     public $TaskId;
 
     /**
-     * @param string $Name Task Name
-     * @param integer $CalleeCount Number of calls.
+     * @param string $Name Task name.
+     * @param integer $CalleeCount Number of called parties.
      * @param array $Callers List of calling numbers.
      * @param integer $NotBefore Start timestamp.
-     * @param integer $NotAfter End timestamp.
+     * @param integer $NotAfter End timestamp
+.
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param integer $IvrId IvrId used by the task.
-     * @param integer $State Task status:
-0 Initial: Task created, calling not started
-1 Running
-2  Completed: All calls in the task are completed
-3 Ending: The task is due, but some calls are still not finished
-4 Ended: Task terminated due to expiration
-     * @param integer $TaskId Task ID.
+     * @param integer $State Task status:.
+0 initial: task creation, call not started.
+1 running.
+2 completed: all calls in the task are completed.
+3 ending: the task has expired, but there are still some calls not ended.
+4 ended: task terminated due to expiration.
+     * @param integer $TaskId <Task id>.
      */
     function __construct()
     {

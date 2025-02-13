@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getCallee() Obtain Called number.
  * @method void setCallee(string $Callee) Set Called number.
- * @method string getUUI() Obtain Associate data.
- * @method void setUUI(string $UUI) Set Associate data.
- * @method array getVariables() Obtain Parameter
- * @method void setVariables(array $Variables) Set Parameter
+ * @method string getUUI() Obtain Accompanying data.
+ * @method void setUUI(string $UUI) Set Accompanying data.
+ * @method array getVariables() Obtain Parameter.
+ * @method void setVariables(array $Variables) Set Parameter.
  */
 class CalleeAttribute extends AbstractModel
 {
@@ -35,19 +35,19 @@ class CalleeAttribute extends AbstractModel
     public $Callee;
 
     /**
-     * @var string Associate data.
+     * @var string Accompanying data.
      */
     public $UUI;
 
     /**
-     * @var array Parameter
+     * @var array Parameter.
      */
     public $Variables;
 
     /**
      * @param string $Callee Called number.
-     * @param string $UUI Associate data.
-     * @param array $Variables Parameter
+     * @param string $UUI Accompanying data.
+     * @param array $Variables Parameter.
      */
     function __construct()
     {

@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getCallee() Obtain Called number.
  * @method void setCallee(string $Callee) Set Called number.
- * @method integer getState() Obtain Call status 0 - Initial, 1 - Answered, 2 - Unanswered, 3 - Calling, 4 - Pending Retry.
- * @method void setState(integer $State) Set Call status 0 - Initial, 1 - Answered, 2 - Unanswered, 3 - Calling, 4 - Pending Retry.
- * @method array getSessions() Obtain List of session IDs.
- * @method void setSessions(array $Sessions) Set List of session IDs.
+ * @method integer getState() Obtain Call status 0 - initial, 1 - answered, 2 - unanswered, 3 - calling, 4 - pending retry.
+ * @method void setState(integer $State) Set Call status 0 - initial, 1 - answered, 2 - unanswered, 3 - calling, 4 - pending retry.
+ * @method array getSessions() Obtain List of session ids.
+ * @method void setSessions(array $Sessions) Set List of session ids.
  */
 class AutoCalloutTaskCalleeInfo extends AbstractModel
 {
@@ -35,19 +35,19 @@ class AutoCalloutTaskCalleeInfo extends AbstractModel
     public $Callee;
 
     /**
-     * @var integer Call status 0 - Initial, 1 - Answered, 2 - Unanswered, 3 - Calling, 4 - Pending Retry.
+     * @var integer Call status 0 - initial, 1 - answered, 2 - unanswered, 3 - calling, 4 - pending retry.
      */
     public $State;
 
     /**
-     * @var array List of session IDs.
+     * @var array List of session ids.
      */
     public $Sessions;
 
     /**
      * @param string $Callee Called number.
-     * @param integer $State Call status 0 - Initial, 1 - Answered, 2 - Unanswered, 3 - Calling, 4 - Pending Retry.
-     * @param array $Sessions List of session IDs.
+     * @param integer $State Call status 0 - initial, 1 - answered, 2 - unanswered, 3 - calling, 4 - pending retry.
+     * @param array $Sessions List of session ids.
      */
     function __construct()
     {

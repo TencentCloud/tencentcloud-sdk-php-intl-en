@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * StopAutoCalloutTask request structure.
  *
- * @method integer getSdkAppId() Obtain Call Center Instance ID.
- * @method void setSdkAppId(integer $SdkAppId) Set Call Center Instance ID.
- * @method integer getTaskId() Obtain Task ID.
- * @method void setTaskId(integer $TaskId) Set Task ID.
+ * @method integer getSdkAppId() Obtain Application id (required) can be found at https://console.cloud.tencent.com/ccc.
+ * @method void setSdkAppId(integer $SdkAppId) Set Application id (required) can be found at https://console.cloud.tencent.com/ccc.
+ * @method integer getTaskId() Obtain Task id.
+ * @method void setTaskId(integer $TaskId) Set Task id.
  */
 class StopAutoCalloutTaskRequest extends AbstractModel
 {
     /**
-     * @var integer Call Center Instance ID.
+     * @var integer Application id (required) can be found at https://console.cloud.tencent.com/ccc.
      */
     public $SdkAppId;
 
     /**
-     * @var integer Task ID.
+     * @var integer Task id.
      */
     public $TaskId;
 
     /**
-     * @param integer $SdkAppId Call Center Instance ID.
-     * @param integer $TaskId Task ID.
+     * @param integer $SdkAppId Application id (required) can be found at https://console.cloud.tencent.com/ccc.
+     * @param integer $TaskId Task id.
      */
     function __construct()
     {

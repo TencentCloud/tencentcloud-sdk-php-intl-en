@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * UpdateCCCSkillGroup request structure.
  *
- * @method integer getSdkAppId() Obtain Application ID (required).
- * @method void setSdkAppId(integer $SdkAppId) Set Application ID (required).
- * @method integer getSkillGroupID() Obtain Skill group ID.
- * @method void setSkillGroupID(integer $SkillGroupID) Set Skill group ID.
+ * @method integer getSdkAppId() Obtain Application id (required) can be found at https://console.cloud.tencent.com/ccc.
+ * @method void setSdkAppId(integer $SdkAppId) Set Application id (required) can be found at https://console.cloud.tencent.com/ccc.
+ * @method integer getSkillGroupID() Obtain Skill group id.
+ * @method void setSkillGroupID(integer $SkillGroupID) Set Skill group id.
  * @method string getSkillGroupName() Obtain Modified skill group name.
  * @method void setSkillGroupName(string $SkillGroupName) Set Modified skill group name.
- * @method integer getMaxConcurrency() Obtain Modified maximum concurrency and the maximum synchronization is 2.
- * @method void setMaxConcurrency(integer $MaxConcurrency) Set Modified maximum concurrency and the maximum synchronization is 2.
+ * @method integer getMaxConcurrency() Obtain Modified maximum concurrency, with the maximum synchronization being 2.
+ * @method void setMaxConcurrency(integer $MaxConcurrency) Set Modified maximum concurrency, with the maximum synchronization being 2.
  * @method boolean getRingAll() Obtain True for simultaneous ringing, false for sequential ringing.
  * @method void setRingAll(boolean $RingAll) Set True for simultaneous ringing, false for sequential ringing.
  */
 class UpdateCCCSkillGroupRequest extends AbstractModel
 {
     /**
-     * @var integer Application ID (required).
+     * @var integer Application id (required) can be found at https://console.cloud.tencent.com/ccc.
      */
     public $SdkAppId;
 
     /**
-     * @var integer Skill group ID.
+     * @var integer Skill group id.
      */
     public $SkillGroupID;
 
@@ -49,7 +49,7 @@ class UpdateCCCSkillGroupRequest extends AbstractModel
     public $SkillGroupName;
 
     /**
-     * @var integer Modified maximum concurrency and the maximum synchronization is 2.
+     * @var integer Modified maximum concurrency, with the maximum synchronization being 2.
      */
     public $MaxConcurrency;
 
@@ -59,10 +59,10 @@ class UpdateCCCSkillGroupRequest extends AbstractModel
     public $RingAll;
 
     /**
-     * @param integer $SdkAppId Application ID (required).
-     * @param integer $SkillGroupID Skill group ID.
+     * @param integer $SdkAppId Application id (required) can be found at https://console.cloud.tencent.com/ccc.
+     * @param integer $SkillGroupID Skill group id.
      * @param string $SkillGroupName Modified skill group name.
-     * @param integer $MaxConcurrency Modified maximum concurrency and the maximum synchronization is 2.
+     * @param integer $MaxConcurrency Modified maximum concurrency, with the maximum synchronization being 2.
      * @param boolean $RingAll True for simultaneous ringing, false for sequential ringing.
      */
     function __construct()

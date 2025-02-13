@@ -20,28 +20,28 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeStaffInfoList request structure.
  *
- * @method integer getSdkAppId() Obtain Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
- * @method void setSdkAppId(integer $SdkAppId) Set Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
- * @method integer getPageSize() Obtain Page size, upper limit 9,999
- * @method void setPageSize(integer $PageSize) Set Page size, upper limit 9,999
+ * @method integer getSdkAppId() Obtain Application id (required) can be found at https://console.cloud.tencent.com/ccc.
+ * @method void setSdkAppId(integer $SdkAppId) Set Application id (required) can be found at https://console.cloud.tencent.com/ccc.
+ * @method integer getPageSize() Obtain Page size, upper limit 9,999.
+ * @method void setPageSize(integer $PageSize) Set Page size, upper limit 9,999.
  * @method integer getPageNumber() Obtain Page number starting from 0.
  * @method void setPageNumber(integer $PageNumber) Set Page number starting from 0.
  * @method string getStaffMail() Obtain Agent account used when querying a single agent.
  * @method void setStaffMail(string $StaffMail) Set Agent account used when querying a single agent.
- * @method integer getModifiedTime() Obtain Use when querying for agents with a modification time greater or equal to ModifiedTime.
- * @method void setModifiedTime(integer $ModifiedTime) Set Use when querying for agents with a modification time greater or equal to ModifiedTime.
- * @method integer getSkillGroupId() Obtain Skill group ID.
- * @method void setSkillGroupId(integer $SkillGroupId) Set Skill group ID.
+ * @method integer getModifiedTime() Obtain Use when querying for agents with a modification time greater or equal to modifiedtime.
+ * @method void setModifiedTime(integer $ModifiedTime) Set Use when querying for agents with a modification time greater or equal to modifiedtime.
+ * @method integer getSkillGroupId() Obtain Skill group id.
+ * @method void setSkillGroupId(integer $SkillGroupId) Set Skill group id.
  */
 class DescribeStaffInfoListRequest extends AbstractModel
 {
     /**
-     * @var integer Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
+     * @var integer Application id (required) can be found at https://console.cloud.tencent.com/ccc.
      */
     public $SdkAppId;
 
     /**
-     * @var integer Page size, upper limit 9,999
+     * @var integer Page size, upper limit 9,999.
      */
     public $PageSize;
 
@@ -56,22 +56,22 @@ class DescribeStaffInfoListRequest extends AbstractModel
     public $StaffMail;
 
     /**
-     * @var integer Use when querying for agents with a modification time greater or equal to ModifiedTime.
+     * @var integer Use when querying for agents with a modification time greater or equal to modifiedtime.
      */
     public $ModifiedTime;
 
     /**
-     * @var integer Skill group ID.
+     * @var integer Skill group id.
      */
     public $SkillGroupId;
 
     /**
-     * @param integer $SdkAppId Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
-     * @param integer $PageSize Page size, upper limit 9,999
+     * @param integer $SdkAppId Application id (required) can be found at https://console.cloud.tencent.com/ccc.
+     * @param integer $PageSize Page size, upper limit 9,999.
      * @param integer $PageNumber Page number starting from 0.
      * @param string $StaffMail Agent account used when querying a single agent.
-     * @param integer $ModifiedTime Use when querying for agents with a modification time greater or equal to ModifiedTime.
-     * @param integer $SkillGroupId Skill group ID.
+     * @param integer $ModifiedTime Use when querying for agents with a modification time greater or equal to modifiedtime.
+     * @param integer $SkillGroupId Skill group id.
      */
     function __construct()
     {

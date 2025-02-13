@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateAutoCalloutTask request structure.
  *
- * @method integer getSdkAppId() Obtain Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
- * @method void setSdkAppId(integer $SdkAppId) Set Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
- * @method integer getNotBefore() Obtain Task starting timestamp. Unix second-level timestamp.
- * @method void setNotBefore(integer $NotBefore) Set Task starting timestamp. Unix second-level timestamp.
+ * @method integer getSdkAppId() Obtain Application id (required) can be found at https://console.cloud.tencent.com/ccc.
+ * @method void setSdkAppId(integer $SdkAppId) Set Application id (required) can be found at https://console.cloud.tencent.com/ccc.
+ * @method integer getNotBefore() Obtain Task starting timestamp. unix second-level timestamp.
+ * @method void setNotBefore(integer $NotBefore) Set Task starting timestamp. unix second-level timestamp.
  * @method array getCallees() Obtain List of called numbers.
  * @method void setCallees(array $Callees) Set List of called numbers.
  * @method array getCallers() Obtain List of calling numbers.
@@ -32,12 +32,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIvrId(integer $IvrId) Set IVR used for calling.
  * @method string getName() Obtain Task name.
  * @method void setName(string $Name) Set Task name.
- * @method string getDescription() Obtain Task description.
- * @method void setDescription(string $Description) Set Task description.
- * @method integer getNotAfter() Obtain Task stop timestamp. Unix second-level timestamp.
- * @method void setNotAfter(integer $NotAfter) Set Task stop timestamp. Unix second-level timestamp.
- * @method integer getTries() Obtain Maximum attempts, 1-3 times
- * @method void setTries(integer $Tries) Set Maximum attempts, 1-3 times
+ * @method string getDescription() Obtain <Task description>.
+ * @method void setDescription(string $Description) Set <Task description>.
+ * @method integer getNotAfter() Obtain Task stop timestamp. unix second-level timestamp.
+ * @method void setNotAfter(integer $NotAfter) Set Task stop timestamp. unix second-level timestamp.
+ * @method integer getTries() Obtain Maximum attempts, 1-3 times.
+ * @method void setTries(integer $Tries) Set Maximum attempts, 1-3 times.
  * @method array getVariables() Obtain Custom variables (supported only in advanced versions).
  * @method void setVariables(array $Variables) Set Custom variables (supported only in advanced versions).
  * @method string getUUI() Obtain UUI
@@ -48,12 +48,12 @@ use TencentCloud\Common\AbstractModel;
 class CreateAutoCalloutTaskRequest extends AbstractModel
 {
     /**
-     * @var integer Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
+     * @var integer Application id (required) can be found at https://console.cloud.tencent.com/ccc.
      */
     public $SdkAppId;
 
     /**
-     * @var integer Task starting timestamp. Unix second-level timestamp.
+     * @var integer Task starting timestamp. unix second-level timestamp.
      */
     public $NotBefore;
 
@@ -78,17 +78,17 @@ class CreateAutoCalloutTaskRequest extends AbstractModel
     public $Name;
 
     /**
-     * @var string Task description.
+     * @var string <Task description>.
      */
     public $Description;
 
     /**
-     * @var integer Task stop timestamp. Unix second-level timestamp.
+     * @var integer Task stop timestamp. unix second-level timestamp.
      */
     public $NotAfter;
 
     /**
-     * @var integer Maximum attempts, 1-3 times
+     * @var integer Maximum attempts, 1-3 times.
      */
     public $Tries;
 
@@ -108,15 +108,15 @@ class CreateAutoCalloutTaskRequest extends AbstractModel
     public $CalleeAttributes;
 
     /**
-     * @param integer $SdkAppId Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
-     * @param integer $NotBefore Task starting timestamp. Unix second-level timestamp.
+     * @param integer $SdkAppId Application id (required) can be found at https://console.cloud.tencent.com/ccc.
+     * @param integer $NotBefore Task starting timestamp. unix second-level timestamp.
      * @param array $Callees List of called numbers.
      * @param array $Callers List of calling numbers.
      * @param integer $IvrId IVR used for calling.
      * @param string $Name Task name.
-     * @param string $Description Task description.
-     * @param integer $NotAfter Task stop timestamp. Unix second-level timestamp.
-     * @param integer $Tries Maximum attempts, 1-3 times
+     * @param string $Description <Task description>.
+     * @param integer $NotAfter Task stop timestamp. unix second-level timestamp.
+     * @param integer $Tries Maximum attempts, 1-3 times.
      * @param array $Variables Custom variables (supported only in advanced versions).
      * @param string $UUI UUI
      * @param array $CalleeAttributes Property of the called.

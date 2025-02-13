@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Inbound capability group metrics.
  *
- * @method integer getSkillGroupId() Obtain Skill group ID.
- * @method void setSkillGroupId(integer $SkillGroupId) Set Skill group ID.
+ * @method integer getSkillGroupId() Obtain Skill group id.
+ * @method void setSkillGroupId(integer $SkillGroupId) Set Skill group id.
  * @method CallInMetrics getMetrics() Obtain Data metrics.
  * @method void setMetrics(CallInMetrics $Metrics) Set Data metrics.
  * @method string getName() Obtain Skill group name.
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class CallInSkillGroupMetrics extends AbstractModel
 {
     /**
-     * @var integer Skill group ID.
+     * @var integer Skill group id.
      */
     public $SkillGroupId;
 
@@ -45,7 +45,7 @@ class CallInSkillGroupMetrics extends AbstractModel
     public $Name;
 
     /**
-     * @param integer $SkillGroupId Skill group ID.
+     * @param integer $SkillGroupId Skill group id.
      * @param CallInMetrics $Metrics Data metrics.
      * @param string $Name Skill group name.
      */

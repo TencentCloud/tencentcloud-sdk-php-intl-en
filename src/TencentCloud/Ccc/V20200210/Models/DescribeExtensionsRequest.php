@@ -20,14 +20,14 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeExtensions request structure.
  *
- * @method integer getSdkAppId() Obtain TCCC instance application ID.
- * @method void setSdkAppId(integer $SdkAppId) Set TCCC instance application ID.
- * @method integer getPageNumber() Obtain Page number (starting from 0)
- * @method void setPageNumber(integer $PageNumber) Set Page number (starting from 0)
- * @method array getExtensionIds() Obtain Filtering extension number list
- * @method void setExtensionIds(array $ExtensionIds) Set Filtering extension number list
- * @method integer getPageSize() Obtain Page size
- * @method void setPageSize(integer $PageSize) Set Page size
+ * @method integer getSdkAppId() Obtain Application id (required) can be found at https://console.cloud.tencent.com/ccc.
+ * @method void setSdkAppId(integer $SdkAppId) Set Application id (required) can be found at https://console.cloud.tencent.com/ccc.
+ * @method integer getPageNumber() Obtain Page number (starting from 0).
+ * @method void setPageNumber(integer $PageNumber) Set Page number (starting from 0).
+ * @method array getExtensionIds() Obtain Filtering extension number list.
+ * @method void setExtensionIds(array $ExtensionIds) Set Filtering extension number list.
+ * @method integer getPageSize() Obtain Page size.
+ * @method void setPageSize(integer $PageSize) Set Page size.
  * @method string getFuzzingKeyWord() Obtain Fuzzy query field (fuzzy query for extension number, extension name, agent email, and agent name).
  * @method void setFuzzingKeyWord(string $FuzzingKeyWord) Set Fuzzy query field (fuzzy query for extension number, extension name, agent email, and agent name).
  * @method boolean getIsNeedStatus() Obtain Whether to return the current status of the telephone or not.
@@ -36,22 +36,22 @@ use TencentCloud\Common\AbstractModel;
 class DescribeExtensionsRequest extends AbstractModel
 {
     /**
-     * @var integer TCCC instance application ID.
+     * @var integer Application id (required) can be found at https://console.cloud.tencent.com/ccc.
      */
     public $SdkAppId;
 
     /**
-     * @var integer Page number (starting from 0)
+     * @var integer Page number (starting from 0).
      */
     public $PageNumber;
 
     /**
-     * @var array Filtering extension number list
+     * @var array Filtering extension number list.
      */
     public $ExtensionIds;
 
     /**
-     * @var integer Page size
+     * @var integer Page size.
      */
     public $PageSize;
 
@@ -66,10 +66,10 @@ class DescribeExtensionsRequest extends AbstractModel
     public $IsNeedStatus;
 
     /**
-     * @param integer $SdkAppId TCCC instance application ID.
-     * @param integer $PageNumber Page number (starting from 0)
-     * @param array $ExtensionIds Filtering extension number list
-     * @param integer $PageSize Page size
+     * @param integer $SdkAppId Application id (required) can be found at https://console.cloud.tencent.com/ccc.
+     * @param integer $PageNumber Page number (starting from 0).
+     * @param array $ExtensionIds Filtering extension number list.
+     * @param integer $PageSize Page size.
      * @param string $FuzzingKeyWord Fuzzy query field (fuzzy query for extension number, extension name, agent email, and agent name).
      * @param boolean $IsNeedStatus Whether to return the current status of the telephone or not.
      */

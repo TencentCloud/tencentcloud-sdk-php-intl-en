@@ -20,17 +20,17 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateStaff request structure.
  *
- * @method integer getSdkAppId() Obtain Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
- * @method void setSdkAppId(integer $SdkAppId) Set Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
+ * @method integer getSdkAppId() Obtain Application id (required) can be found at https://console.cloud.tencent.com/ccc.
+ * @method void setSdkAppId(integer $SdkAppId) Set Application id (required) can be found at https://console.cloud.tencent.com/ccc.
  * @method array getStaffs() Obtain Customer information, no more than 10.
  * @method void setStaffs(array $Staffs) Set Customer information, no more than 10.
- * @method boolean getSendPassword() Obtain Whether to send a password mail or not (the default is true)
- * @method void setSendPassword(boolean $SendPassword) Set Whether to send a password mail or not (the default is true)
+ * @method boolean getSendPassword() Obtain Whether to send a password mail or not (the default is true).
+ * @method void setSendPassword(boolean $SendPassword) Set Whether to send a password mail or not (the default is true).
  */
 class CreateStaffRequest extends AbstractModel
 {
     /**
-     * @var integer Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
+     * @var integer Application id (required) can be found at https://console.cloud.tencent.com/ccc.
      */
     public $SdkAppId;
 
@@ -40,14 +40,14 @@ class CreateStaffRequest extends AbstractModel
     public $Staffs;
 
     /**
-     * @var boolean Whether to send a password mail or not (the default is true)
+     * @var boolean Whether to send a password mail or not (the default is true).
      */
     public $SendPassword;
 
     /**
-     * @param integer $SdkAppId Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
+     * @param integer $SdkAppId Application id (required) can be found at https://console.cloud.tencent.com/ccc.
      * @param array $Staffs Customer information, no more than 10.
-     * @param boolean $SendPassword Whether to send a password mail or not (the default is true)
+     * @param boolean $SendPassword Whether to send a password mail or not (the default is true).
      */
     function __construct()
     {

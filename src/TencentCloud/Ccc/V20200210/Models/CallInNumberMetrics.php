@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getNumber() Obtain Line number.
  * @method void setNumber(string $Number) Set Line number.
- * @method CallInMetrics getMetrics() Obtain Line-related metrics.
- * @method void setMetrics(CallInMetrics $Metrics) Set Line-related metrics.
+ * @method CallInMetrics getMetrics() Obtain Line-Related metrics.
+ * @method void setMetrics(CallInMetrics $Metrics) Set Line-Related metrics.
  * @method array getSkillGroupMetrics() Obtain Bound skill group metrics.
  * @method void setSkillGroupMetrics(array $SkillGroupMetrics) Set Bound skill group metrics.
  */
@@ -35,7 +35,7 @@ class CallInNumberMetrics extends AbstractModel
     public $Number;
 
     /**
-     * @var CallInMetrics Line-related metrics.
+     * @var CallInMetrics Line-Related metrics.
      */
     public $Metrics;
 
@@ -46,7 +46,7 @@ class CallInNumberMetrics extends AbstractModel
 
     /**
      * @param string $Number Line number.
-     * @param CallInMetrics $Metrics Line-related metrics.
+     * @param CallInMetrics $Metrics Line-Related metrics.
      * @param array $SkillGroupMetrics Bound skill group metrics.
      */
     function __construct()

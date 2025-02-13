@@ -20,41 +20,29 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Skill group information.
  *
- * @method integer getSkillGroupId() Obtain Skill group ID.
- * @method void setSkillGroupId(integer $SkillGroupId) Set Skill group ID.
+ * @method integer getSkillGroupId() Obtain Skill group id.
+ * @method void setSkillGroupId(integer $SkillGroupId) Set Skill group id.
  * @method string getSkillGroupName() Obtain Skill group name.
  * @method void setSkillGroupName(string $SkillGroupName) Set Skill group name.
- * @method string getType() Obtain (Deprecated) Type: IM, TEL, ALL (full media).
- * @method void setType(string $Type) Set (Deprecated) Type: IM, TEL, ALL (full media).
+ * @method string getType() Obtain (Deprecated) type: im, tel, all (full media).
+ * @method void setType(string $Type) Set (Deprecated) type: im, tel, all (full media).
  * @method string getRoutePolicy() Obtain Session allocation policy.
-Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setRoutePolicy(string $RoutePolicy) Set Session allocation policy.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method integer getUsingLastSeat() Obtain Should the conversation allocation prioritize the last service seat?
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setUsingLastSeat(integer $UsingLastSeat) Set Should the conversation allocation prioritize the last service seat?
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getUsingLastSeat() Obtain Whether the session is allocated to the last serviced agent first.
+ * @method void setUsingLastSeat(integer $UsingLastSeat) Set Whether the session is allocated to the last serviced agent first.
  * @method integer getMaxConcurrency() Obtain Maximum concurrency number of single client service (default 1 for telephone type).
-Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setMaxConcurrency(integer $MaxConcurrency) Set Maximum concurrency number of single client service (default 1 for telephone type).
-Note: this field may return null, indicating that no valid values can be obtained.
  * @method integer getLastModifyTimestamp() Obtain Last modification time.
-Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setLastModifyTimestamp(integer $LastModifyTimestamp) Set Last modification time.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method integer getSkillGroupType() Obtain Skill group type 0-phone, 1-online, 3-audio, 4-video.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setSkillGroupType(integer $SkillGroupType) Set Skill group type 0-phone, 1-online, 3-audio, 4-video.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getAlias() Obtain Extension number within the skill group
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setAlias(string $Alias) Set Extension number within the skill group
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getSkillGroupType() Obtain Skill group type 0-cell phone, 1-online, 3-audio, 4-video.	.	
+ * @method void setSkillGroupType(integer $SkillGroupType) Set Skill group type 0-cell phone, 1-online, 3-audio, 4-video.	.	
+ * @method string getAlias() Obtain Intra-Skill group line number.
+ * @method void setAlias(string $Alias) Set Intra-Skill group line number.
  */
 class SkillGroupInfoItem extends AbstractModel
 {
     /**
-     * @var integer Skill group ID.
+     * @var integer Skill group id.
      */
     public $SkillGroupId;
 
@@ -64,62 +52,50 @@ class SkillGroupInfoItem extends AbstractModel
     public $SkillGroupName;
 
     /**
-     * @var string (Deprecated) Type: IM, TEL, ALL (full media).
+     * @var string (Deprecated) type: im, tel, all (full media).
      */
     public $Type;
 
     /**
      * @var string Session allocation policy.
-Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $RoutePolicy;
 
     /**
-     * @var integer Should the conversation allocation prioritize the last service seat?
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Whether the session is allocated to the last serviced agent first.
      */
     public $UsingLastSeat;
 
     /**
      * @var integer Maximum concurrency number of single client service (default 1 for telephone type).
-Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $MaxConcurrency;
 
     /**
      * @var integer Last modification time.
-Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $LastModifyTimestamp;
 
     /**
-     * @var integer Skill group type 0-phone, 1-online, 3-audio, 4-video.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var integer Skill group type 0-cell phone, 1-online, 3-audio, 4-video.	.	
      */
     public $SkillGroupType;
 
     /**
-     * @var string Extension number within the skill group
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Intra-Skill group line number.
      */
     public $Alias;
 
     /**
-     * @param integer $SkillGroupId Skill group ID.
+     * @param integer $SkillGroupId Skill group id.
      * @param string $SkillGroupName Skill group name.
-     * @param string $Type (Deprecated) Type: IM, TEL, ALL (full media).
+     * @param string $Type (Deprecated) type: im, tel, all (full media).
      * @param string $RoutePolicy Session allocation policy.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param integer $UsingLastSeat Should the conversation allocation prioritize the last service seat?
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $UsingLastSeat Whether the session is allocated to the last serviced agent first.
      * @param integer $MaxConcurrency Maximum concurrency number of single client service (default 1 for telephone type).
-Note: this field may return null, indicating that no valid values can be obtained.
      * @param integer $LastModifyTimestamp Last modification time.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param integer $SkillGroupType Skill group type 0-phone, 1-online, 3-audio, 4-video.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $Alias Extension number within the skill group
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $SkillGroupType Skill group type 0-cell phone, 1-online, 3-audio, 4-video.	.	
+     * @param string $Alias Intra-Skill group line number.
      */
     function __construct()
     {

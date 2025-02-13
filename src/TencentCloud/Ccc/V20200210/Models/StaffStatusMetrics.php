@@ -22,40 +22,40 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getEmail() Obtain Agent email.
  * @method void setEmail(string $Email) Set Agent email.
- * @method string getStatus() Obtain Agent status free Available | busy Busy | rest On Break | notReady Not Ready | afterCallWork Post-call Adjustment | offline Offline
- * @method void setStatus(string $Status) Set Agent status free Available | busy Busy | rest On Break | notReady Not Ready | afterCallWork Post-call Adjustment | offline Offline
- * @method StaffStatusExtra getStatusExtra() Obtain Supplementary Information on Agent Status
- * @method void setStatusExtra(StaffStatusExtra $StatusExtra) Set Supplementary Information on Agent Status
- * @method integer getOnlineDuration() Obtain Total Online duration of the day.
- * @method void setOnlineDuration(integer $OnlineDuration) Set Total Online duration of the day.
- * @method integer getFreeDuration() Obtain Total Available duration of the day.
- * @method void setFreeDuration(integer $FreeDuration) Set Total Available duration of the day.
- * @method integer getBusyDuration() Obtain Total Busy duration of the day.
- * @method void setBusyDuration(integer $BusyDuration) Set Total Busy duration of the day.
- * @method integer getNotReadyDuration() Obtain Total Not Ready status duration of the day.
- * @method void setNotReadyDuration(integer $NotReadyDuration) Set Total Not Ready status duration of the day.
- * @method integer getRestDuration() Obtain Total Break duration of the day.
- * @method void setRestDuration(integer $RestDuration) Set Total Break duration of the day.
- * @method integer getAfterCallWorkDuration() Obtain Total After Call Work duration of the day.
- * @method void setAfterCallWorkDuration(integer $AfterCallWorkDuration) Set Total After Call Work duration of the day.
- * @method string getReason() Obtain Reason for Break.
- * @method void setReason(string $Reason) Set Reason for Break.
- * @method boolean getReserveRest() Obtain Whether to reserve Break status.
- * @method void setReserveRest(boolean $ReserveRest) Set Whether to reserve Break status.
- * @method boolean getReserveNotReady() Obtain Whether to reserve Not Ready status.
- * @method void setReserveNotReady(boolean $ReserveNotReady) Set Whether to reserve Not Ready status.
- * @method integer getUseMobileAccept() Obtain Cell phone answering pattern: 0 - Off | 1 - Only when Offline | 2 - Always.
- * @method void setUseMobileAccept(integer $UseMobileAccept) Set Cell phone answering pattern: 0 - Off | 1 - Only when Offline | 2 - Always.
+ * @method string getStatus() Obtain Agent status free available | busy busy | rest on break | notready not ready | aftercallwork post-call adjustment | offline offline.
+ * @method void setStatus(string $Status) Set Agent status free available | busy busy | rest on break | notready not ready | aftercallwork post-call adjustment | offline offline.
+ * @method StaffStatusExtra getStatusExtra() Obtain Supplementary information on agent status.
+ * @method void setStatusExtra(StaffStatusExtra $StatusExtra) Set Supplementary information on agent status.
+ * @method integer getOnlineDuration() Obtain Total online duration of the day.
+ * @method void setOnlineDuration(integer $OnlineDuration) Set Total online duration of the day.
+ * @method integer getFreeDuration() Obtain Total available duration of the day.
+ * @method void setFreeDuration(integer $FreeDuration) Set Total available duration of the day.
+ * @method integer getBusyDuration() Obtain Total busy duration of the day.
+ * @method void setBusyDuration(integer $BusyDuration) Set Total busy duration of the day.
+ * @method integer getNotReadyDuration() Obtain Total not ready status duration of the day.
+ * @method void setNotReadyDuration(integer $NotReadyDuration) Set Total not ready status duration of the day.
+ * @method integer getRestDuration() Obtain Total break duration of the day.
+ * @method void setRestDuration(integer $RestDuration) Set Total break duration of the day.
+ * @method integer getAfterCallWorkDuration() Obtain Adjust the total duration of after-call work for the day.
+ * @method void setAfterCallWorkDuration(integer $AfterCallWorkDuration) Set Adjust the total duration of after-call work for the day.
+ * @method string getReason() Obtain Reason for break.
+ * @method void setReason(string $Reason) Set Reason for break.
+ * @method boolean getReserveRest() Obtain Whether to reserve break status.
+ * @method void setReserveRest(boolean $ReserveRest) Set Whether to reserve break status.
+ * @method boolean getReserveNotReady() Obtain Whether to reserve not ready status.
+ * @method void setReserveNotReady(boolean $ReserveNotReady) Set Whether to reserve not ready status.
+ * @method integer getUseMobileAccept() Obtain Cell phone answering pattern: 0 - off | 1 - only when offline | 2 - always.
+ * @method void setUseMobileAccept(integer $UseMobileAccept) Set Cell phone answering pattern: 0 - off | 1 - only when offline | 2 - always.
  * @method boolean getUseMobileCallOut() Obtain Cell phone outbound call switch.
  * @method void setUseMobileCallOut(boolean $UseMobileCallOut) Set Cell phone outbound call switch.
  * @method integer getLastOnlineTimestamp() Obtain Last online timestamp.
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setLastOnlineTimestamp(integer $LastOnlineTimestamp) Set Last online timestamp.
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: this field may return null, indicating that no valid values can be obtained.
  * @method integer getLastStatusTimestamp() Obtain Last status timestamp.
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setLastStatusTimestamp(integer $LastStatusTimestamp) Set Last status timestamp.
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: this field may return null, indicating that no valid values can be obtained.
  */
 class StaffStatusMetrics extends AbstractModel
 {
@@ -65,62 +65,62 @@ class StaffStatusMetrics extends AbstractModel
     public $Email;
 
     /**
-     * @var string Agent status free Available | busy Busy | rest On Break | notReady Not Ready | afterCallWork Post-call Adjustment | offline Offline
+     * @var string Agent status free available | busy busy | rest on break | notready not ready | aftercallwork post-call adjustment | offline offline.
      */
     public $Status;
 
     /**
-     * @var StaffStatusExtra Supplementary Information on Agent Status
+     * @var StaffStatusExtra Supplementary information on agent status.
      */
     public $StatusExtra;
 
     /**
-     * @var integer Total Online duration of the day.
+     * @var integer Total online duration of the day.
      */
     public $OnlineDuration;
 
     /**
-     * @var integer Total Available duration of the day.
+     * @var integer Total available duration of the day.
      */
     public $FreeDuration;
 
     /**
-     * @var integer Total Busy duration of the day.
+     * @var integer Total busy duration of the day.
      */
     public $BusyDuration;
 
     /**
-     * @var integer Total Not Ready status duration of the day.
+     * @var integer Total not ready status duration of the day.
      */
     public $NotReadyDuration;
 
     /**
-     * @var integer Total Break duration of the day.
+     * @var integer Total break duration of the day.
      */
     public $RestDuration;
 
     /**
-     * @var integer Total After Call Work duration of the day.
+     * @var integer Adjust the total duration of after-call work for the day.
      */
     public $AfterCallWorkDuration;
 
     /**
-     * @var string Reason for Break.
+     * @var string Reason for break.
      */
     public $Reason;
 
     /**
-     * @var boolean Whether to reserve Break status.
+     * @var boolean Whether to reserve break status.
      */
     public $ReserveRest;
 
     /**
-     * @var boolean Whether to reserve Not Ready status.
+     * @var boolean Whether to reserve not ready status.
      */
     public $ReserveNotReady;
 
     /**
-     * @var integer Cell phone answering pattern: 0 - Off | 1 - Only when Offline | 2 - Always.
+     * @var integer Cell phone answering pattern: 0 - off | 1 - only when offline | 2 - always.
      */
     public $UseMobileAccept;
 
@@ -131,35 +131,35 @@ class StaffStatusMetrics extends AbstractModel
 
     /**
      * @var integer Last online timestamp.
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $LastOnlineTimestamp;
 
     /**
      * @var integer Last status timestamp.
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $LastStatusTimestamp;
 
     /**
      * @param string $Email Agent email.
-     * @param string $Status Agent status free Available | busy Busy | rest On Break | notReady Not Ready | afterCallWork Post-call Adjustment | offline Offline
-     * @param StaffStatusExtra $StatusExtra Supplementary Information on Agent Status
-     * @param integer $OnlineDuration Total Online duration of the day.
-     * @param integer $FreeDuration Total Available duration of the day.
-     * @param integer $BusyDuration Total Busy duration of the day.
-     * @param integer $NotReadyDuration Total Not Ready status duration of the day.
-     * @param integer $RestDuration Total Break duration of the day.
-     * @param integer $AfterCallWorkDuration Total After Call Work duration of the day.
-     * @param string $Reason Reason for Break.
-     * @param boolean $ReserveRest Whether to reserve Break status.
-     * @param boolean $ReserveNotReady Whether to reserve Not Ready status.
-     * @param integer $UseMobileAccept Cell phone answering pattern: 0 - Off | 1 - Only when Offline | 2 - Always.
+     * @param string $Status Agent status free available | busy busy | rest on break | notready not ready | aftercallwork post-call adjustment | offline offline.
+     * @param StaffStatusExtra $StatusExtra Supplementary information on agent status.
+     * @param integer $OnlineDuration Total online duration of the day.
+     * @param integer $FreeDuration Total available duration of the day.
+     * @param integer $BusyDuration Total busy duration of the day.
+     * @param integer $NotReadyDuration Total not ready status duration of the day.
+     * @param integer $RestDuration Total break duration of the day.
+     * @param integer $AfterCallWorkDuration Adjust the total duration of after-call work for the day.
+     * @param string $Reason Reason for break.
+     * @param boolean $ReserveRest Whether to reserve break status.
+     * @param boolean $ReserveNotReady Whether to reserve not ready status.
+     * @param integer $UseMobileAccept Cell phone answering pattern: 0 - off | 1 - only when offline | 2 - always.
      * @param boolean $UseMobileCallOut Cell phone outbound call switch.
      * @param integer $LastOnlineTimestamp Last online timestamp.
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: this field may return null, indicating that no valid values can be obtained.
      * @param integer $LastStatusTimestamp Last status timestamp.
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

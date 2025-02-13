@@ -20,29 +20,29 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribePredictiveDialingSessions request structure.
  *
- * @method integer getSdkAppId() Obtain Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
- * @method void setSdkAppId(integer $SdkAppId) Set Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
- * @method integer getCampaignId() Obtain Generated task ID.
- * @method void setCampaignId(integer $CampaignId) Set Generated task ID.
- * @method integer getPageSize() Obtain Page size, maximum of 1000
- * @method void setPageSize(integer $PageSize) Set Page size, maximum of 1000
+ * @method integer getSdkAppId() Obtain Application id (required) can be found at https://console.cloud.tencent.com/ccc.
+ * @method void setSdkAppId(integer $SdkAppId) Set Application id (required) can be found at https://console.cloud.tencent.com/ccc.
+ * @method integer getCampaignId() Obtain Generated task id.
+ * @method void setCampaignId(integer $CampaignId) Set Generated task id.
+ * @method integer getPageSize() Obtain Page size, maximum of 1000.
+ * @method void setPageSize(integer $PageSize) Set Page size, maximum of 1000.
  * @method integer getPageNumber() Obtain Page number starting from 0.
  * @method void setPageNumber(integer $PageNumber) Set Page number starting from 0.
  */
 class DescribePredictiveDialingSessionsRequest extends AbstractModel
 {
     /**
-     * @var integer Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
+     * @var integer Application id (required) can be found at https://console.cloud.tencent.com/ccc.
      */
     public $SdkAppId;
 
     /**
-     * @var integer Generated task ID.
+     * @var integer Generated task id.
      */
     public $CampaignId;
 
     /**
-     * @var integer Page size, maximum of 1000
+     * @var integer Page size, maximum of 1000.
      */
     public $PageSize;
 
@@ -52,9 +52,9 @@ class DescribePredictiveDialingSessionsRequest extends AbstractModel
     public $PageNumber;
 
     /**
-     * @param integer $SdkAppId Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
-     * @param integer $CampaignId Generated task ID.
-     * @param integer $PageSize Page size, maximum of 1000
+     * @param integer $SdkAppId Application id (required) can be found at https://console.cloud.tencent.com/ccc.
+     * @param integer $CampaignId Generated task id.
+     * @param integer $PageSize Page size, maximum of 1000.
      * @param integer $PageNumber Page number starting from 0.
      */
     function __construct()

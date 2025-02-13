@@ -21,225 +21,153 @@ use TencentCloud\Common\AbstractModel;
  * Participant information.
  *
  * @method string getMail() Obtain Agent email.
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setMail(string $Mail) Set Agent email.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getPhone() Obtain Agent Telephone
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setPhone(string $Phone) Set Agent Telephone
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getRingTimestamp() Obtain Ring timestamp. Unix second-level timestamp.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setRingTimestamp(integer $RingTimestamp) Set Ring timestamp. Unix second-level timestamp.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getAcceptTimestamp() Obtain Answer timestamp. Unix second-level timestamp.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setAcceptTimestamp(integer $AcceptTimestamp) Set Answer timestamp. Unix second-level timestamp.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getEndedTimestamp() Obtain End timestamp. Unix second-level timestamp.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setEndedTimestamp(integer $EndedTimestamp) Set End timestamp. Unix second-level timestamp.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getRecordId() Obtain Recording ID, which can be used to index the recording on the agent side
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setRecordId(string $RecordId) Set Recording ID, which can be used to index the recording on the agent side
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getType() Obtain Participant type: "staffSeat", "outboundSeat", "staffPhoneSeat".
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setType(string $Type) Set Participant type: "staffSeat", "outboundSeat", "staffPhoneSeat".
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getTransferFrom() Obtain Transfer Source Agent Information
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setTransferFrom(string $TransferFrom) Set Transfer Source Agent Information
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getTransferFromType() Obtain Transfer source participant type is consistent with the Type value.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setTransferFromType(string $TransferFromType) Set Transfer source participant type is consistent with the Type value.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getTransferTo() Obtain Transfer Destination Agent Information
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setTransferTo(string $TransferTo) Set Transfer Destination Agent Information
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getTransferToType() Obtain Transfer destination participant type is consistent with Type values.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setTransferToType(string $TransferToType) Set Transfer destination participant type is consistent with Type values.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getSkillGroupId() Obtain Skill group ID.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setSkillGroupId(integer $SkillGroupId) Set Skill group ID.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getPhone() Obtain Agent phone number.
+ * @method void setPhone(string $Phone) Set Agent phone number.
+ * @method integer getRingTimestamp() Obtain Ringing timestamp, unix second-level timestamp.
+ * @method void setRingTimestamp(integer $RingTimestamp) Set Ringing timestamp, unix second-level timestamp.
+ * @method integer getAcceptTimestamp() Obtain Answer timestamp. unix second-level timestamp.
+ * @method void setAcceptTimestamp(integer $AcceptTimestamp) Set Answer timestamp. unix second-level timestamp.
+ * @method integer getEndedTimestamp() Obtain End timestamp. unix second-level timestamp.
+ * @method void setEndedTimestamp(integer $EndedTimestamp) Set End timestamp. unix second-level timestamp.
+ * @method string getRecordId() Obtain Recording id can be indexed to the agent side recording.
+ * @method void setRecordId(string $RecordId) Set Recording id can be indexed to the agent side recording.
+ * @method string getType() Obtain Participant type: "staffseat", "outboundseat", "staffphoneseat".
+ * @method void setType(string $Type) Set Participant type: "staffseat", "outboundseat", "staffphoneseat".
+ * @method string getTransferFrom() Obtain Transfer source agent information.
+ * @method void setTransferFrom(string $TransferFrom) Set Transfer source agent information.
+ * @method string getTransferFromType() Obtain Transfer source participant type is consistent with the type value.
+ * @method void setTransferFromType(string $TransferFromType) Set Transfer source participant type is consistent with the type value.
+ * @method string getTransferTo() Obtain Transfer destination agent information.
+ * @method void setTransferTo(string $TransferTo) Set Transfer destination agent information.
+ * @method string getTransferToType() Obtain Transfer destination participant type, which is consistent with type values.
+ * @method void setTransferToType(string $TransferToType) Set Transfer destination participant type, which is consistent with type values.
+ * @method integer getSkillGroupId() Obtain Skill group id.
+ * @method void setSkillGroupId(integer $SkillGroupId) Set Skill group id.
  * @method string getEndStatusString() Obtain Ending status.
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setEndStatusString(string $EndStatusString) Set Ending status.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getRecordURL() Obtain Recording URL.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setRecordURL(string $RecordURL) Set Recording URL.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getRecordURL() Obtain Recording url.
+ * @method void setRecordURL(string $RecordURL) Set Recording url.
  * @method integer getSequence() Obtain Participant sequence number, starting from 0.
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setSequence(integer $Sequence) Set Participant sequence number, starting from 0.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getStartTimestamp() Obtain Start timestamp. Unix second-level timestamp.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setStartTimestamp(integer $StartTimestamp) Set Start timestamp. Unix second-level timestamp.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getSkillGroupName() Obtain Skill Group name.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setSkillGroupName(string $SkillGroupName) Set Skill Group name.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getCustomRecordURL() Obtain Address of the third party COS for transferring recording.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setCustomRecordURL(string $CustomRecordURL) Set Address of the third party COS for transferring recording.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getStartTimestamp() Obtain Start timestamp. unix second-level timestamp.
+ * @method void setStartTimestamp(integer $StartTimestamp) Set Start timestamp. unix second-level timestamp.
+ * @method string getSkillGroupName() Obtain Skill group name.
+ * @method void setSkillGroupName(string $SkillGroupName) Set Skill group name.
+ * @method string getCustomRecordURL() Obtain Address of the third-party cos for transferring recording.
+ * @method void setCustomRecordURL(string $CustomRecordURL) Set Address of the third-party cos for transferring recording.
  */
 class ServeParticipant extends AbstractModel
 {
     /**
      * @var string Agent email.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Mail;
 
     /**
-     * @var string Agent Telephone
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Agent phone number.
      */
     public $Phone;
 
     /**
-     * @var integer Ring timestamp. Unix second-level timestamp.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Ringing timestamp, unix second-level timestamp.
      */
     public $RingTimestamp;
 
     /**
-     * @var integer Answer timestamp. Unix second-level timestamp.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Answer timestamp. unix second-level timestamp.
      */
     public $AcceptTimestamp;
 
     /**
-     * @var integer End timestamp. Unix second-level timestamp.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer End timestamp. unix second-level timestamp.
      */
     public $EndedTimestamp;
 
     /**
-     * @var string Recording ID, which can be used to index the recording on the agent side
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Recording id can be indexed to the agent side recording.
      */
     public $RecordId;
 
     /**
-     * @var string Participant type: "staffSeat", "outboundSeat", "staffPhoneSeat".
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Participant type: "staffseat", "outboundseat", "staffphoneseat".
      */
     public $Type;
 
     /**
-     * @var string Transfer Source Agent Information
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Transfer source agent information.
      */
     public $TransferFrom;
 
     /**
-     * @var string Transfer source participant type is consistent with the Type value.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Transfer source participant type is consistent with the type value.
      */
     public $TransferFromType;
 
     /**
-     * @var string Transfer Destination Agent Information
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Transfer destination agent information.
      */
     public $TransferTo;
 
     /**
-     * @var string Transfer destination participant type is consistent with Type values.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Transfer destination participant type, which is consistent with type values.
      */
     public $TransferToType;
 
     /**
-     * @var integer Skill group ID.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Skill group id.
      */
     public $SkillGroupId;
 
     /**
      * @var string Ending status.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $EndStatusString;
 
     /**
-     * @var string Recording URL.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Recording url.
      */
     public $RecordURL;
 
     /**
      * @var integer Participant sequence number, starting from 0.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Sequence;
 
     /**
-     * @var integer Start timestamp. Unix second-level timestamp.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Start timestamp. unix second-level timestamp.
      */
     public $StartTimestamp;
 
     /**
-     * @var string Skill Group name.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Skill group name.
      */
     public $SkillGroupName;
 
     /**
-     * @var string Address of the third party COS for transferring recording.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Address of the third-party cos for transferring recording.
      */
     public $CustomRecordURL;
 
     /**
      * @param string $Mail Agent email.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Phone Agent Telephone
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $RingTimestamp Ring timestamp. Unix second-level timestamp.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $AcceptTimestamp Answer timestamp. Unix second-level timestamp.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $EndedTimestamp End timestamp. Unix second-level timestamp.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $RecordId Recording ID, which can be used to index the recording on the agent side
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Type Participant type: "staffSeat", "outboundSeat", "staffPhoneSeat".
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $TransferFrom Transfer Source Agent Information
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $TransferFromType Transfer source participant type is consistent with the Type value.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $TransferTo Transfer Destination Agent Information
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $TransferToType Transfer destination participant type is consistent with Type values.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $SkillGroupId Skill group ID.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $Phone Agent phone number.
+     * @param integer $RingTimestamp Ringing timestamp, unix second-level timestamp.
+     * @param integer $AcceptTimestamp Answer timestamp. unix second-level timestamp.
+     * @param integer $EndedTimestamp End timestamp. unix second-level timestamp.
+     * @param string $RecordId Recording id can be indexed to the agent side recording.
+     * @param string $Type Participant type: "staffseat", "outboundseat", "staffphoneseat".
+     * @param string $TransferFrom Transfer source agent information.
+     * @param string $TransferFromType Transfer source participant type is consistent with the type value.
+     * @param string $TransferTo Transfer destination agent information.
+     * @param string $TransferToType Transfer destination participant type, which is consistent with type values.
+     * @param integer $SkillGroupId Skill group id.
      * @param string $EndStatusString Ending status.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $RecordURL Recording URL.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $RecordURL Recording url.
      * @param integer $Sequence Participant sequence number, starting from 0.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $StartTimestamp Start timestamp. Unix second-level timestamp.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $SkillGroupName Skill Group name.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $CustomRecordURL Address of the third party COS for transferring recording.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $StartTimestamp Start timestamp. unix second-level timestamp.
+     * @param string $SkillGroupName Skill group name.
+     * @param string $CustomRecordURL Address of the third-party cos for transferring recording.
      */
     function __construct()
     {

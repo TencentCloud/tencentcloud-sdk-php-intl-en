@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * UploadIvrAudio request structure.
  *
- * @method integer getSdkAppId() Obtain Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
- * @method void setSdkAppId(integer $SdkAppId) Set Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
- * @method array getAudioList() Obtain Audio File List
- * @method void setAudioList(array $AudioList) Set Audio File List
+ * @method integer getSdkAppId() Obtain Application id (required) can be found at https://console.cloud.tencent.com/ccc.
+ * @method void setSdkAppId(integer $SdkAppId) Set Application id (required) can be found at https://console.cloud.tencent.com/ccc.
+ * @method array getAudioList() Obtain Audio file list.
+ * @method void setAudioList(array $AudioList) Set Audio file list.
  */
 class UploadIvrAudioRequest extends AbstractModel
 {
     /**
-     * @var integer Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
+     * @var integer Application id (required) can be found at https://console.cloud.tencent.com/ccc.
      */
     public $SdkAppId;
 
     /**
-     * @var array Audio File List
+     * @var array Audio file list.
      */
     public $AudioList;
 
     /**
-     * @param integer $SdkAppId Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
-     * @param array $AudioList Audio File List
+     * @param integer $SdkAppId Application id (required) can be found at https://console.cloud.tencent.com/ccc.
+     * @param array $AudioList Audio file list.
      */
     function __construct()
     {

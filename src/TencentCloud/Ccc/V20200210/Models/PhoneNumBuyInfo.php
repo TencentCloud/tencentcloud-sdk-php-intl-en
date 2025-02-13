@@ -20,33 +20,33 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Number purchase information.
  *
- * @method string getPhoneNum() Obtain Telephone Number
- * @method void setPhoneNum(string $PhoneNum) Set Telephone Number
- * @method integer getType() Obtain Number type, 0 - Landline | 1 - Virtual Business Number | 2 - ISP Number | 3 - 400 Number.
- * @method void setType(integer $Type) Set Number type, 0 - Landline | 1 - Virtual Business Number | 2 - ISP Number | 3 - 400 Number.
- * @method integer getCallType() Obtain Call type of the number, 1 - Inbound | 2 - Outbound | 3 - Inbound and outbound.
- * @method void setCallType(integer $CallType) Set Call type of the number, 1 - Inbound | 2 - Outbound | 3 - Inbound and outbound.
+ * @method string getPhoneNum() Obtain Telephone number.
+ * @method void setPhoneNum(string $PhoneNum) Set Telephone number.
+ * @method integer getType() Obtain Number type, 0 - landline | 1 - virtual business number | 2 - ISP number | 3 - 400 number.
+ * @method void setType(integer $Type) Set Number type, 0 - landline | 1 - virtual business number | 2 - ISP number | 3 - 400 number.
+ * @method integer getCallType() Obtain Call type of the number, 1 - inbound | 2 - outbound | 3 - inbound and outbound.
+ * @method void setCallType(integer $CallType) Set Call type of the number, 1 - inbound | 2 - outbound | 3 - inbound and outbound.
  * @method integer getBuyTime() Obtain Purchased timestamp.
  * @method void setBuyTime(integer $BuyTime) Set Purchased timestamp.
- * @method integer getEndTime() Obtain End timestamp.
- * @method void setEndTime(integer $EndTime) Set End timestamp.
- * @method integer getState() Obtain Number status, 1-Normal | 2-Suspended due to non-payment | 4-Admin suspended | 5-Suspended due to violation.
- * @method void setState(integer $State) Set Number status, 1-Normal | 2-Suspended due to non-payment | 4-Admin suspended | 5-Suspended due to violation.
+ * @method integer getEndTime() Obtain Deadline timestamp.
+ * @method void setEndTime(integer $EndTime) Set Deadline timestamp.
+ * @method integer getState() Obtain Number status, 1-normal | 2-suspended due to non-payment | 4-admin suspended | 5-suspended due to violation.
+ * @method void setState(integer $State) Set Number status, 1-normal | 2-suspended due to non-payment | 4-admin suspended | 5-suspended due to violation.
  */
 class PhoneNumBuyInfo extends AbstractModel
 {
     /**
-     * @var string Telephone Number
+     * @var string Telephone number.
      */
     public $PhoneNum;
 
     /**
-     * @var integer Number type, 0 - Landline | 1 - Virtual Business Number | 2 - ISP Number | 3 - 400 Number.
+     * @var integer Number type, 0 - landline | 1 - virtual business number | 2 - ISP number | 3 - 400 number.
      */
     public $Type;
 
     /**
-     * @var integer Call type of the number, 1 - Inbound | 2 - Outbound | 3 - Inbound and outbound.
+     * @var integer Call type of the number, 1 - inbound | 2 - outbound | 3 - inbound and outbound.
      */
     public $CallType;
 
@@ -56,22 +56,22 @@ class PhoneNumBuyInfo extends AbstractModel
     public $BuyTime;
 
     /**
-     * @var integer End timestamp.
+     * @var integer Deadline timestamp.
      */
     public $EndTime;
 
     /**
-     * @var integer Number status, 1-Normal | 2-Suspended due to non-payment | 4-Admin suspended | 5-Suspended due to violation.
+     * @var integer Number status, 1-normal | 2-suspended due to non-payment | 4-admin suspended | 5-suspended due to violation.
      */
     public $State;
 
     /**
-     * @param string $PhoneNum Telephone Number
-     * @param integer $Type Number type, 0 - Landline | 1 - Virtual Business Number | 2 - ISP Number | 3 - 400 Number.
-     * @param integer $CallType Call type of the number, 1 - Inbound | 2 - Outbound | 3 - Inbound and outbound.
+     * @param string $PhoneNum Telephone number.
+     * @param integer $Type Number type, 0 - landline | 1 - virtual business number | 2 - ISP number | 3 - 400 number.
+     * @param integer $CallType Call type of the number, 1 - inbound | 2 - outbound | 3 - inbound and outbound.
      * @param integer $BuyTime Purchased timestamp.
-     * @param integer $EndTime End timestamp.
-     * @param integer $State Number status, 1-Normal | 2-Suspended due to non-payment | 4-Admin suspended | 5-Suspended due to violation.
+     * @param integer $EndTime Deadline timestamp.
+     * @param integer $State Number status, 1-normal | 2-suspended due to non-payment | 4-admin suspended | 5-suspended due to violation.
      */
     function __construct()
     {
