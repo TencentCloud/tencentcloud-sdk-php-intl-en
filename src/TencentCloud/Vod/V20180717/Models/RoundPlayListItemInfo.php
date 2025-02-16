@@ -18,7 +18,7 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Carousel media file information
+ * Carousel program information
  *
  * @method string getFileId() Obtain The file ID.
  * @method void setFileId(string $FileId) Set The file ID.
@@ -30,8 +30,10 @@ The file must be in HLS format.
 <li>`Transcode`: A transcoding output. Because a file may be bound to multiple transcoding templates, you need to specify `Definition` if the type is `Transcode`.</li>
 <li>`Original`: The original file.</li>
 The file must be in HLS format.
- * @method integer getDefinition() Obtain The transcoding template used to generate the transcoding output played. This parameter is required if `AudioVideoType` is `Transcode`.
- * @method void setDefinition(integer $Definition) Set The transcoding template used to generate the transcoding output played. This parameter is required if `AudioVideoType` is `Transcode`.
+ * @method string getItemId() Obtain ID of the program to be played, assigned by the system.
+ * @method void setItemId(string $ItemId) Set ID of the program to be played, assigned by the system.
+ * @method integer getDefinition() Obtain The transcoding template to be played is specified. this parameter is required if `audiovideotype` is `transcode`.
+ * @method void setDefinition(integer $Definition) Set The transcoding template to be played is specified. this parameter is required if `audiovideotype` is `transcode`.
  */
 class RoundPlayListItemInfo extends AbstractModel
 {
@@ -49,7 +51,12 @@ The file must be in HLS format.
     public $AudioVideoType;
 
     /**
-     * @var integer The transcoding template used to generate the transcoding output played. This parameter is required if `AudioVideoType` is `Transcode`.
+     * @var string ID of the program to be played, assigned by the system.
+     */
+    public $ItemId;
+
+    /**
+     * @var integer The transcoding template to be played is specified. this parameter is required if `audiovideotype` is `transcode`.
      */
     public $Definition;
 
@@ -59,7 +66,8 @@ The file must be in HLS format.
 <li>`Transcode`: A transcoding output. Because a file may be bound to multiple transcoding templates, you need to specify `Definition` if the type is `Transcode`.</li>
 <li>`Original`: The original file.</li>
 The file must be in HLS format.
-     * @param integer $Definition The transcoding template used to generate the transcoding output played. This parameter is required if `AudioVideoType` is `Transcode`.
+     * @param string $ItemId ID of the program to be played, assigned by the system.
+     * @param integer $Definition The transcoding template to be played is specified. this parameter is required if `audiovideotype` is `transcode`.
      */
     function __construct()
     {
@@ -80,6 +88,10 @@ The file must be in HLS format.
 
         if (array_key_exists("AudioVideoType",$param) and $param["AudioVideoType"] !== null) {
             $this->AudioVideoType = $param["AudioVideoType"];
+        }
+
+        if (array_key_exists("ItemId",$param) and $param["ItemId"] !== null) {
+            $this->ItemId = $param["ItemId"];
         }
 
         if (array_key_exists("Definition",$param) and $param["Definition"] !== null) {

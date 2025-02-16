@@ -20,53 +20,51 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyRoundPlay request structure.
  *
- * @method string getRoundPlayId() Obtain The playlist ID, which is unique.
- * @method void setRoundPlayId(string $RoundPlayId) Set The playlist ID, which is unique.
- * @method integer getSubAppId() Obtain <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
- * @method void setSubAppId(integer $SubAppId) Set <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
- * @method string getStartTime() Obtain The playback start time, in [ISO 8601 date format](https://intl.cloud.tencent.com/document/product/266/11732?lang=en&pg=).
- * @method void setStartTime(string $StartTime) Set The playback start time, in [ISO 8601 date format](https://intl.cloud.tencent.com/document/product/266/11732?lang=en&pg=).
- * @method array getRoundPlaylist() Obtain The files on the list.
-<li>Array length limit: 100.</li>
- * @method void setRoundPlaylist(array $RoundPlaylist) Set The files on the list.
-<li>Array length limit: 100.</li>
+ * @method string getRoundPlayId() Obtain The unique identifier of the playlist.
+ * @method void setRoundPlayId(string $RoundPlayId) Set The unique identifier of the playlist.
+ * @method integer getSubAppId() Obtain <B>VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) id. starting from december 25, 2023, for customers who enable vod, if you want to access resources in the vod application (whether it is the default application or a newly created application), you must enter the application id in this field.</b>.
+ * @method void setSubAppId(integer $SubAppId) Set <B>VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) id. starting from december 25, 2023, for customers who enable vod, if you want to access resources in the vod application (whether it is the default application or a newly created application), you must enter the application id in this field.</b>.
+ * @method string getStartTime() Obtain The playback start time, in [iso 8601 date format](https://www.tencentcloud.com/document/product/266/11732?has_map=2#iso-date-format).
+ * @method void setStartTime(string $StartTime) Set The playback start time, in [iso 8601 date format](https://www.tencentcloud.com/document/product/266/11732?has_map=2#iso-date-format).
+ * @method array getRoundPlaylist() Obtain The program list.
+<Li>Array length limit: 100.</li>.
+ * @method void setRoundPlaylist(array $RoundPlaylist) Set The program list.
+<Li>Array length limit: 100.</li>.
  * @method string getName() Obtain The playlist name (not longer than 64 characters).
  * @method void setName(string $Name) Set The playlist name (not longer than 64 characters).
  * @method string getDesc() Obtain The playlist description (not longer than 256 characters).
  * @method void setDesc(string $Desc) Set The playlist description (not longer than 256 characters).
- * @method string getStatus() Obtain Playback status, optional values: 
-<li>Disabled: End playback, and the carousel task cannot be started again after the end. </li>
-
- * @method void setStatus(string $Status) Set Playback status, optional values: 
-<li>Disabled: End playback, and the carousel task cannot be started again after the end. </li>
-
- * @method string getPlayBackMode() Obtain Play mode, optional values:
-<li>Loop: Play the playlist in a loop;</li>
-<li>Linear: Play once, stop playing after the playlist is played. </li>
- * @method void setPlayBackMode(string $PlayBackMode) Set Play mode, optional values:
-<li>Loop: Play the playlist in a loop;</li>
-<li>Linear: Play once, stop playing after the playlist is played. </li>
+ * @method string getStatus() Obtain Playback status, optional values:<li>disabled: stop playback.</li><li>enabled: start playback after the duration has elapsed.</li>.
+ * @method void setStatus(string $Status) Set Playback status, optional values:<li>disabled: stop playback.</li><li>enabled: start playback after the duration has elapsed.</li>.
+ * @method string getPlayBackMode() Obtain Play mode, optional values:.
+<Li>Loop: loop the playlist;</li>.
+<Li>Linear: single play, stop playback after the playlist finishes.</li>.
+ * @method void setPlayBackMode(string $PlayBackMode) Set Play mode, optional values:.
+<Li>Loop: loop the playlist;</li>.
+<Li>Linear: single play, stop playback after the playlist finishes.</li>.
+ * @method string getExpiredTime() Obtain Expiration time, in iso 8601 format. for details, see [iso date format](https://www.tencentcloud.com/document/product/266/11732?has_map=2#iso-date-format). the playback will stop after expiration. "9999-12-31t23:59:59+08:00" means no expiration.
+ * @method void setExpiredTime(string $ExpiredTime) Set Expiration time, in iso 8601 format. for details, see [iso date format](https://www.tencentcloud.com/document/product/266/11732?has_map=2#iso-date-format). the playback will stop after expiration. "9999-12-31t23:59:59+08:00" means no expiration.
  */
 class ModifyRoundPlayRequest extends AbstractModel
 {
     /**
-     * @var string The playlist ID, which is unique.
+     * @var string The unique identifier of the playlist.
      */
     public $RoundPlayId;
 
     /**
-     * @var integer <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+     * @var integer <B>VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) id. starting from december 25, 2023, for customers who enable vod, if you want to access resources in the vod application (whether it is the default application or a newly created application), you must enter the application id in this field.</b>.
      */
     public $SubAppId;
 
     /**
-     * @var string The playback start time, in [ISO 8601 date format](https://intl.cloud.tencent.com/document/product/266/11732?lang=en&pg=).
+     * @var string The playback start time, in [iso 8601 date format](https://www.tencentcloud.com/document/product/266/11732?has_map=2#iso-date-format).
      */
     public $StartTime;
 
     /**
-     * @var array The files on the list.
-<li>Array length limit: 100.</li>
+     * @var array The program list.
+<Li>Array length limit: 100.</li>.
      */
     public $RoundPlaylist;
 
@@ -81,33 +79,35 @@ class ModifyRoundPlayRequest extends AbstractModel
     public $Desc;
 
     /**
-     * @var string Playback status, optional values: 
-<li>Disabled: End playback, and the carousel task cannot be started again after the end. </li>
-
+     * @var string Playback status, optional values:<li>disabled: stop playback.</li><li>enabled: start playback after the duration has elapsed.</li>.
      */
     public $Status;
 
     /**
-     * @var string Play mode, optional values:
-<li>Loop: Play the playlist in a loop;</li>
-<li>Linear: Play once, stop playing after the playlist is played. </li>
+     * @var string Play mode, optional values:.
+<Li>Loop: loop the playlist;</li>.
+<Li>Linear: single play, stop playback after the playlist finishes.</li>.
      */
     public $PlayBackMode;
 
     /**
-     * @param string $RoundPlayId The playlist ID, which is unique.
-     * @param integer $SubAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
-     * @param string $StartTime The playback start time, in [ISO 8601 date format](https://intl.cloud.tencent.com/document/product/266/11732?lang=en&pg=).
-     * @param array $RoundPlaylist The files on the list.
-<li>Array length limit: 100.</li>
+     * @var string Expiration time, in iso 8601 format. for details, see [iso date format](https://www.tencentcloud.com/document/product/266/11732?has_map=2#iso-date-format). the playback will stop after expiration. "9999-12-31t23:59:59+08:00" means no expiration.
+     */
+    public $ExpiredTime;
+
+    /**
+     * @param string $RoundPlayId The unique identifier of the playlist.
+     * @param integer $SubAppId <B>VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) id. starting from december 25, 2023, for customers who enable vod, if you want to access resources in the vod application (whether it is the default application or a newly created application), you must enter the application id in this field.</b>.
+     * @param string $StartTime The playback start time, in [iso 8601 date format](https://www.tencentcloud.com/document/product/266/11732?has_map=2#iso-date-format).
+     * @param array $RoundPlaylist The program list.
+<Li>Array length limit: 100.</li>.
      * @param string $Name The playlist name (not longer than 64 characters).
      * @param string $Desc The playlist description (not longer than 256 characters).
-     * @param string $Status Playback status, optional values: 
-<li>Disabled: End playback, and the carousel task cannot be started again after the end. </li>
-
-     * @param string $PlayBackMode Play mode, optional values:
-<li>Loop: Play the playlist in a loop;</li>
-<li>Linear: Play once, stop playing after the playlist is played. </li>
+     * @param string $Status Playback status, optional values:<li>disabled: stop playback.</li><li>enabled: start playback after the duration has elapsed.</li>.
+     * @param string $PlayBackMode Play mode, optional values:.
+<Li>Loop: loop the playlist;</li>.
+<Li>Linear: single play, stop playback after the playlist finishes.</li>.
+     * @param string $ExpiredTime Expiration time, in iso 8601 format. for details, see [iso date format](https://www.tencentcloud.com/document/product/266/11732?has_map=2#iso-date-format). the playback will stop after expiration. "9999-12-31t23:59:59+08:00" means no expiration.
      */
     function __construct()
     {
@@ -157,6 +157,10 @@ class ModifyRoundPlayRequest extends AbstractModel
 
         if (array_key_exists("PlayBackMode",$param) and $param["PlayBackMode"] !== null) {
             $this->PlayBackMode = $param["PlayBackMode"];
+        }
+
+        if (array_key_exists("ExpiredTime",$param) and $param["ExpiredTime"] !== null) {
+            $this->ExpiredTime = $param["ExpiredTime"];
         }
     }
 }

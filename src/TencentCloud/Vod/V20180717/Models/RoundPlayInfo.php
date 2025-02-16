@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getRoundPlayId() Obtain The playlist ID.
  * @method void setRoundPlayId(string $RoundPlayId) Set The playlist ID.
- * @method string getStartTime() Obtain The playback start time, in [ISO 8601 date format](https://intl.cloud.tencent.com/document/product/266/11732?lang=en&pg=).
- * @method void setStartTime(string $StartTime) Set The playback start time, in [ISO 8601 date format](https://intl.cloud.tencent.com/document/product/266/11732?lang=en&pg=).
+ * @method string getStartTime() Obtain The playback start time, in [ISO 8601 date format](https://www.tencentcloud.com/document/product/266/11732?has_map=2#iso-date-format).
+ * @method void setStartTime(string $StartTime) Set The playback start time, in [ISO 8601 date format](https://www.tencentcloud.com/document/product/266/11732?has_map=2#iso-date-format).
  * @method array getRoundPlaylist() Obtain The files on the list.
  * @method void setRoundPlaylist(array $RoundPlaylist) Set The files on the list.
  * @method string getName() Obtain The playlist name (not longer than 64 characters).
@@ -48,6 +48,12 @@ Default value: Loop.
 Default value: Loop.
  * @method string getUrl() Obtain Carousel playback address.
  * @method void setUrl(string $Url) Set Carousel playback address.
+ * @method string getCreateTime() Obtain Creation time, in iso 8601 format. for details, see [iso date format](https://www.tencentcloud.com/document/product/266/11732?has_map=2#iso-date-format).
+ * @method void setCreateTime(string $CreateTime) Set Creation time, in iso 8601 format. for details, see [iso date format](https://www.tencentcloud.com/document/product/266/11732?has_map=2#iso-date-format).
+ * @method string getUpdateTime() Obtain Update time, in iso 8601 format. for details, see [iso date format](https://www.tencentcloud.com/document/product/266/11732?has_map=2#iso-date-format).
+ * @method void setUpdateTime(string $UpdateTime) Set Update time, in iso 8601 format. for details, see [iso date format](https://www.tencentcloud.com/document/product/266/11732?has_map=2#iso-date-format).
+ * @method string getExpiredTime() Obtain Expiration time, in iso 8601 format. for details, see [iso date format](https://www.tencentcloud.com/document/product/266/11732?has_map=2#iso-date-format). the playback of the playlist will stop after expiration. "9999-12-31t23:59:59+08:00" means never expire.
+ * @method void setExpiredTime(string $ExpiredTime) Set Expiration time, in iso 8601 format. for details, see [iso date format](https://www.tencentcloud.com/document/product/266/11732?has_map=2#iso-date-format). the playback of the playlist will stop after expiration. "9999-12-31t23:59:59+08:00" means never expire.
  */
 class RoundPlayInfo extends AbstractModel
 {
@@ -57,7 +63,7 @@ class RoundPlayInfo extends AbstractModel
     public $RoundPlayId;
 
     /**
-     * @var string The playback start time, in [ISO 8601 date format](https://intl.cloud.tencent.com/document/product/266/11732?lang=en&pg=).
+     * @var string The playback start time, in [ISO 8601 date format](https://www.tencentcloud.com/document/product/266/11732?has_map=2#iso-date-format).
      */
     public $StartTime;
 
@@ -98,8 +104,23 @@ Default value: Loop.
     public $Url;
 
     /**
+     * @var string Creation time, in iso 8601 format. for details, see [iso date format](https://www.tencentcloud.com/document/product/266/11732?has_map=2#iso-date-format).
+     */
+    public $CreateTime;
+
+    /**
+     * @var string Update time, in iso 8601 format. for details, see [iso date format](https://www.tencentcloud.com/document/product/266/11732?has_map=2#iso-date-format).
+     */
+    public $UpdateTime;
+
+    /**
+     * @var string Expiration time, in iso 8601 format. for details, see [iso date format](https://www.tencentcloud.com/document/product/266/11732?has_map=2#iso-date-format). the playback of the playlist will stop after expiration. "9999-12-31t23:59:59+08:00" means never expire.
+     */
+    public $ExpiredTime;
+
+    /**
      * @param string $RoundPlayId The playlist ID.
-     * @param string $StartTime The playback start time, in [ISO 8601 date format](https://intl.cloud.tencent.com/document/product/266/11732?lang=en&pg=).
+     * @param string $StartTime The playback start time, in [ISO 8601 date format](https://www.tencentcloud.com/document/product/266/11732?has_map=2#iso-date-format).
      * @param array $RoundPlaylist The files on the list.
      * @param string $Name The playlist name (not longer than 64 characters).
      * @param string $Desc The playlist description (not longer than 256 characters).
@@ -112,6 +133,9 @@ Default value: Enabled.
 <li>Linear: Play once, stop playing after the playlist is played. </li>
 Default value: Loop.
      * @param string $Url Carousel playback address.
+     * @param string $CreateTime Creation time, in iso 8601 format. for details, see [iso date format](https://www.tencentcloud.com/document/product/266/11732?has_map=2#iso-date-format).
+     * @param string $UpdateTime Update time, in iso 8601 format. for details, see [iso date format](https://www.tencentcloud.com/document/product/266/11732?has_map=2#iso-date-format).
+     * @param string $ExpiredTime Expiration time, in iso 8601 format. for details, see [iso date format](https://www.tencentcloud.com/document/product/266/11732?has_map=2#iso-date-format). the playback of the playlist will stop after expiration. "9999-12-31t23:59:59+08:00" means never expire.
      */
     function __construct()
     {
@@ -161,6 +185,18 @@ Default value: Loop.
 
         if (array_key_exists("Url",$param) and $param["Url"] !== null) {
             $this->Url = $param["Url"];
+        }
+
+        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
+            $this->CreateTime = $param["CreateTime"];
+        }
+
+        if (array_key_exists("UpdateTime",$param) and $param["UpdateTime"] !== null) {
+            $this->UpdateTime = $param["UpdateTime"];
+        }
+
+        if (array_key_exists("ExpiredTime",$param) and $param["ExpiredTime"] !== null) {
+            $this->ExpiredTime = $param["ExpiredTime"];
         }
     }
 }
