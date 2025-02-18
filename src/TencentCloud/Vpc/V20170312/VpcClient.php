@@ -30,6 +30,15 @@ use TencentCloud\Vpc\V20170312\Models as Models;
 * An EIP is a static IP address that is dedicated for dynamic cloud computing. You can quickly re-map an EIP to another instance under your account to protect against instance failures.
 * Your EIP is associated with your Tencent Cloud account rather than an instance. It remains associated with your Tencent Cloud account until you choose to explicitly release it or your account is in arrears for more than 24 hours.
 * The maximum number of EIPs that can be applied for a Tencent Cloud account in each region is restricted. For more information, see [EIP Product Introduction](https://intl.cloud.tencent.com/document/product/213/5733?from_cn_redirect=1). You can get the quota information through the DescribeAddressQuota API.
+ * @method Models\AllocateIPv6AddressesResponse AllocateIPv6Addresses(Models\AllocateIPv6AddressesRequest $req) This API is used to apply for one or more Elastic IPv6 (EIPv6) instances.
+
+- EIPv6 is a fixed public IPv6 address that can be independently applied for and held in a Tencent Cloud region, providing a consistent product experience with Elastic IPv4.
+- You can quickly bind an EIPv6 instance to the private IPv6 address of a cloud resource, so as to quickly enable IPv6 public bandwidth for the cloud resource.
+- You can also bind an EIPv6 instance to other cloud resources as needed, so as to shield instance failures.
+ * @method Models\AllocateIp6AddressesBandwidthResponse AllocateIp6AddressesBandwidth(Models\AllocateIp6AddressesBandwidthRequest $req) This API is used to allocate IPv6 public network bandwidth for classic elastic public IPv6 addresses.
+
+- Classic elastic public IPv6 addresses only have the private network communication capability by default. They can have the IPv6 public network communication capability and be displayed in the list of Classic Elastic Public IPv6 only after IPv6 public network bandwidth is allocated in the console or by calling this API. 
+- You can allocate public network bandwidth for one or multiple Classic elastic public IPv6 addresses each time.
  * @method Models\AssignIpv6AddressesResponse AssignIpv6Addresses(Models\AssignIpv6AddressesRequest $req) This API is used to apply for an IPv6 address for the ENI. <br />
 This API is completed asynchronously. If you need to query the execution result of an async task, please use the `RequestId` returned by this API to poll the `DescribeVpcTaskResult` API.
 * The number of IPs bound with an ENI is limited. For more information, see <a href="/document/product/576/18527">ENI Use Limits</a>.
@@ -56,6 +65,10 @@ This API is completed asynchronously. If you need to query the execution result 
 * An EIP cannot be bound if it’s overdue or blocked
 * Only EIP in the `UNBIND` status can be bound.
  * @method Models\AssociateDirectConnectGatewayNatGatewayResponse AssociateDirectConnectGatewayNatGateway(Models\AssociateDirectConnectGatewayNatGatewayRequest $req) This API is used to bind a direct connect gateway with a NAT gateway,  and direct its default route to the NAT Gateway.
+ * @method Models\AssociateIPv6AddressResponse AssociateIPv6Address(Models\AssociateIPv6AddressRequest $req) This API is used to bind an EIPv6 instance to the private IPv6 address configured on the CVM or ENI.
+
+- Binding an EIPv6 to the CVM essentially indicates binding the EIPv6 to the private IPv6 address configured on the ENI of the CVM.
+- Before binding an EIPv6 to the private IPv6 of a specified ENI, ensure that the private IPv6 address is unbound before the binding operation is performed.
  * @method Models\AssociateNatGatewayAddressResponse AssociateNatGatewayAddress(Models\AssociateNatGatewayAddressRequest $req) This API is used to bind an EIP to a NAT gateway.
  * @method Models\AssociateNetworkAclSubnetsResponse AssociateNetworkAclSubnets(Models\AssociateNetworkAclSubnetsRequest $req) This API is used to associate a network ACL with subnets in a VPC instance.
  * @method Models\AssociateNetworkInterfaceSecurityGroupsResponse AssociateNetworkInterfaceSecurityGroups(Models\AssociateNetworkInterfaceSecurityGroupsRequest $req) This API (AssociateNetworkInterfaceSecurityGroups) is used to attach a security group to an ENI.
@@ -285,6 +298,11 @@ A service provider can query all review requests created by any `APPID` under it
 * If the gateway has traffic, but no data is returned when this API is called, please check whether gateway traffic monitoring has been enabled in the corresponding gateway details page in the console.
  * @method Models\DescribeGatewayFlowQosResponse DescribeGatewayFlowQos(Models\DescribeGatewayFlowQosRequest $req) This API is used to query the inbound IP bandwidth limit of a gateway.
  * @method Models\DescribeHaVipsResponse DescribeHaVips(Models\DescribeHaVipsRequest $req) This API (DescribeHaVips) is used to query the list of highly available virtual IPs (HAVIP).
+ * @method Models\DescribeIPv6AddressesResponse DescribeIPv6Addresses(Models\DescribeIPv6AddressesRequest $req) This API is used to query detailed information of one or more EIPv6 instances.
+
+- You can query EIPv6 and traditional EIPv6 instance information in a specified region.
+- The system returns a certain number (as specified by the Limit, the default value is 20) of EIPv6 instances of the current user if the parameter is empty.
+ * @method Models\DescribeIp6AddressesResponse DescribeIp6Addresses(Models\DescribeIp6AddressesRequest $req) This API is used to query the detailed information on one or multiple classic elastic public IPv6 instances.
  * @method Models\DescribeIpGeolocationDatabaseUrlResponse DescribeIpGeolocationDatabaseUrl(Models\DescribeIpGeolocationDatabaseUrlRequest $req) This API is used to obtain the download link of an IP location database.
 <font color="#FF0000">This API will be discontinued soon and is only available for existing users.</font>
  * @method Models\DescribeIpGeolocationInfosResponse DescribeIpGeolocationInfos(Models\DescribeIpGeolocationInfosRequest $req) This API is used to query the location and network information of one or more IP addresses.
@@ -351,6 +369,10 @@ This API is completed asynchronously. If you need to query the execution result 
 * Only EIPs in BIND or BIND_ENI status can be unbound.
 * Blocked EIPs cannot be unbound.
  * @method Models\DisassociateDirectConnectGatewayNatGatewayResponse DisassociateDirectConnectGatewayNatGateway(Models\DisassociateDirectConnectGatewayNatGatewayRequest $req) This API is used to unbind a direct connect gateway from a NAT Gateway. After unbinding, the direct connect gateway cannot access internet through the NAT Gateway.
+ * @method Models\DisassociateIPv6AddressResponse DisassociateIPv6Address(Models\DisassociateIPv6AddressRequest $req) This API is used to unbind an EIPv6 instance.
+
+- You can unbind EIPv6 instances bound to Cloud Virtual Machine (CVM) or Elastic Network Interface (ENI).
+- Only EIPv6 instances in BIND or BIND_ENI status can be unbound.
  * @method Models\DisassociateNatGatewayAddressResponse DisassociateNatGatewayAddress(Models\DisassociateNatGatewayAddressRequest $req) This API is used to unbind an EIP from a NAT gateway.
  * @method Models\DisassociateNetworkAclSubnetsResponse DisassociateNetworkAclSubnets(Models\DisassociateNetworkAclSubnetsRequest $req) This API is used to disassociate a network ACL from subnets in a VPC instance.
  * @method Models\DisassociateNetworkInterfaceSecurityGroupsResponse DisassociateNetworkInterfaceSecurityGroups(Models\DisassociateNetworkInterfaceSecurityGroupsRequest $req) This API (DisassociateNetworkInterfaceSecurityGroups) is used to detach (or fully detach if possible) a security group from an ENI.
@@ -401,6 +423,14 @@ This API is completed asynchronously. If you need to query the execution result 
  * @method Models\ModifyFlowLogAttributeResponse ModifyFlowLogAttribute(Models\ModifyFlowLogAttributeRequest $req) This API is used to modify the attributes of a flow log.
  * @method Models\ModifyGatewayFlowQosResponse ModifyGatewayFlowQos(Models\ModifyGatewayFlowQosRequest $req) This API is used to adjust the bandwidth limit of a gateway.
  * @method Models\ModifyHaVipAttributeResponse ModifyHaVipAttribute(Models\ModifyHaVipAttributeRequest $req) This API (ModifyHaVipAttribute) is used to modify HAVIP attributes.
+ * @method Models\ModifyIPv6AddressesAttributesResponse ModifyIPv6AddressesAttributes(Models\ModifyIPv6AddressesAttributesRequest $req) This API is used to modify the name of an EIPv6 instance.
+
+- You can modify the name of both EIPv6 and traditional EIPv6 instances.
+ * @method Models\ModifyIPv6AddressesBandwidthResponse ModifyIPv6AddressesBandwidth(Models\ModifyIPv6AddressesBandwidthRequest $req) This API is used to modify the bandwidth cap of an EIPv6 instance.
+ * @method Models\ModifyIp6AddressesBandwidthResponse ModifyIp6AddressesBandwidth(Models\ModifyIp6AddressesBandwidthRequest $req) This API is used to adjust the bandwidth limit of a classic elastic public IPv6 instance.
+
+- You can adjust the bandwidth limit of only classic elastic public IPv6 instances.
+- To adjust the bandwidth limit of an elastic public IPv6 instance, call the ModifyIPv6AddressesBandwidth API.
  * @method Models\ModifyIpv6AddressesAttributeResponse ModifyIpv6AddressesAttribute(Models\ModifyIpv6AddressesAttributeRequest $req) This API (ModifyIpv6AddressesAttribute) is used to modify the private IPv6 address attributes of an ENI.
  * @method Models\ModifyLocalGatewayResponse ModifyLocalGateway(Models\ModifyLocalGatewayRequest $req) This API is used to modify the local gateway of a CDC instance.
  * @method Models\ModifyNatGatewayAttributeResponse ModifyNatGatewayAttribute(Models\ModifyNatGatewayAttributeRequest $req) This API is used to modify the attributes of a NAT gateway.
@@ -454,6 +484,14 @@ This API is completed asynchronously. If you need to query the execution result 
  * @method Models\ReleaseAddressesResponse ReleaseAddresses(Models\ReleaseAddressesRequest $req) This API (ReleaseAddresses) is used to release one or multiple [Elastic IPs](https://intl.cloud.tencent.com/document/product/213/1941?from_cn_redirect=1).
 * This operation is irreversible. Once you release an EIP, the IP address associated with the EIP no longer belongs to you.
 * Only EIPs in UNBIND status can be released.
+ * @method Models\ReleaseIPv6AddressesResponse ReleaseIPv6Addresses(Models\ReleaseIPv6AddressesRequest $req) This API is used to release one or more EIPv6 instances.
+
+- You can release the obtained EIPv6 instances. To use them again, please reapply.
+- Only EIPv6 instances in UNBIND status can be released.
+ * @method Models\ReleaseIp6AddressesBandwidthResponse ReleaseIp6AddressesBandwidth(Models\ReleaseIp6AddressesBandwidthRequest $req) This API is used to release the IPv6 public network bandwidth of classic elastic public IPv6 instances.
+
+- Classic elastic public IPv6 addresses still have the IPv6 private network communication capability after the public network bandwidth is released.
+- To allocate IPV6 public network bandwidth, call the AllocateIp6AddressesBandwidth API.
  * @method Models\RemoveBandwidthPackageResourcesResponse RemoveBandwidthPackageResources(Models\RemoveBandwidthPackageResourcesRequest $req) This API is used to delete a bandwidth package resource, including [Elastic IP](https://intl.cloud.tencent.com/document/product/213/1941?from_cn_redirect=1), [Cloud Load Balancer](https://intl.cloud.tencent.com/document/product/214/517?from_cn_redirect=1), and so on.
  * @method Models\RenewVpnGatewayResponse RenewVpnGateway(Models\RenewVpnGatewayRequest $req) This API (RenewVpnGateway) is used to renew prepaid (monthly subscription) VPN gateways. Currently, only IPSEC gateways are supported.
  * @method Models\ReplaceDirectConnectGatewayCcnRoutesResponse ReplaceDirectConnectGatewayCcnRoutes(Models\ReplaceDirectConnectGatewayCcnRoutesRequest $req) This API (ReplaceDirectConnectGatewayCcnRoutes) is used to modify the specified route according to the route ID. Batch modification is supported.
