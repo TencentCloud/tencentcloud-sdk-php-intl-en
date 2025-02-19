@@ -24,6 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDescription(string $Description) Set Intelligent description.
  * @method float getConfidence() Obtain Confidence of the intelligent description, with a value range from 0 to 100.
  * @method void setConfidence(float $Confidence) Set Confidence of the intelligent description, with a value range from 0 to 100.
+ * @method string getTitle() Obtain Intelligent description title.
+ * @method void setTitle(string $Title) Set Intelligent description title.
+ * @method array getKeywords() Obtain Intelligent description keywords.
+ * @method void setKeywords(array $Keywords) Set Intelligent description keywords.
  * @method array getParagraphs() Obtain Segmentation result.
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setParagraphs(array $Paragraphs) Set Segmentation result.
@@ -42,6 +46,16 @@ class MediaAiAnalysisDescriptionItem extends AbstractModel
     public $Confidence;
 
     /**
+     * @var string Intelligent description title.
+     */
+    public $Title;
+
+    /**
+     * @var array Intelligent description keywords.
+     */
+    public $Keywords;
+
+    /**
      * @var array Segmentation result.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
@@ -50,6 +64,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     /**
      * @param string $Description Intelligent description.
      * @param float $Confidence Confidence of the intelligent description, with a value range from 0 to 100.
+     * @param string $Title Intelligent description title.
+     * @param array $Keywords Intelligent description keywords.
      * @param array $Paragraphs Segmentation result.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
@@ -72,6 +88,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("Confidence",$param) and $param["Confidence"] !== null) {
             $this->Confidence = $param["Confidence"];
+        }
+
+        if (array_key_exists("Title",$param) and $param["Title"] !== null) {
+            $this->Title = $param["Title"];
+        }
+
+        if (array_key_exists("Keywords",$param) and $param["Keywords"] !== null) {
+            $this->Keywords = $param["Keywords"];
         }
 
         if (array_key_exists("Paragraphs",$param) and $param["Paragraphs"] !== null) {

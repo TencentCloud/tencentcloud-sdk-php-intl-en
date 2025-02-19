@@ -24,6 +24,10 @@ use TencentCloud\Common\AbstractModel;
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setSummary(string $Summary) Set Segment summary.
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getTitle() Obtain Segment title.
+ * @method void setTitle(string $Title) Set Segment title.
+ * @method array getKeywords() Obtain Segment keywords.
+ * @method void setKeywords(array $Keywords) Set Segment keywords.
  * @method float getStartTimeOffset() Obtain Segmentation start time point, in seconds.
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setStartTimeOffset(float $StartTimeOffset) Set Segmentation start time point, in seconds.
@@ -42,6 +46,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $Summary;
 
     /**
+     * @var string Segment title.
+     */
+    public $Title;
+
+    /**
+     * @var array Segment keywords.
+     */
+    public $Keywords;
+
+    /**
      * @var float Segmentation start time point, in seconds.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
@@ -56,6 +70,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     /**
      * @param string $Summary Segment summary.
 Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $Title Segment title.
+     * @param array $Keywords Segment keywords.
      * @param float $StartTimeOffset Segmentation start time point, in seconds.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param float $EndTimeOffset Segmentation end time point, in seconds.
@@ -76,6 +92,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
         }
         if (array_key_exists("Summary",$param) and $param["Summary"] !== null) {
             $this->Summary = $param["Summary"];
+        }
+
+        if (array_key_exists("Title",$param) and $param["Title"] !== null) {
+            $this->Title = $param["Title"];
+        }
+
+        if (array_key_exists("Keywords",$param) and $param["Keywords"] !== null) {
+            $this->Keywords = $param["Keywords"];
         }
 
         if (array_key_exists("StartTimeOffset",$param) and $param["StartTimeOffset"] !== null) {
