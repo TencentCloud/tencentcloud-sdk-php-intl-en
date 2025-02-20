@@ -24,22 +24,26 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStartTime(string $StartTime) Set The start time.
  * @method string getEndTime() Obtain The end time.
  * @method void setEndTime(string $EndTime) Set The end time.
- * @method array getMetricNames() Obtain Metric list. Valid values:
-<li>l7Flow_outFlux: L7 EdgeOne response traffic;</li>
-<li>l7Flow_inFlux: L7 client request traffic;</li>
-<li>l7Flow_flux: L7 total access traffic (including the EdgeOne response traffic and client request traffic);</li>
-<li>l7Flow_outBandwidth: L7 EdgeOne response bandwidth;</li>
-<li>l7Flow_inBandwidth: L7 client request bandwidth;</li>
-<li>l7Flow_bandwidth: L7 total access bandwidth (including the EdgeOne response bandwidth and client request bandwidth);</li>
-<li>l7Flow_request: L7 access request count.</li>
- * @method void setMetricNames(array $MetricNames) Set Metric list. Valid values:
-<li>l7Flow_outFlux: L7 EdgeOne response traffic;</li>
-<li>l7Flow_inFlux: L7 client request traffic;</li>
-<li>l7Flow_flux: L7 total access traffic (including the EdgeOne response traffic and client request traffic);</li>
-<li>l7Flow_outBandwidth: L7 EdgeOne response bandwidth;</li>
-<li>l7Flow_inBandwidth: L7 client request bandwidth;</li>
-<li>l7Flow_bandwidth: L7 total access bandwidth (including the EdgeOne response bandwidth and client request bandwidth);</li>
-<li>l7Flow_request: L7 access request count.</li>
+ * @method array getMetricNames() Obtain Metric list. valid values:.
+<Li>L7Flow_outFlux: l7 edgeone response traffic, unit: byte;</li>.
+<Li>L7Flow_inFlux: l7 client request traffic, unit: byte;</li>.
+<Li>L7Flow_flux: l7 total access traffic (including the edgeone response traffic and client request traffic), unit: byte;</li>.
+<Li>L7Flow_outBandwidth: l7 edgeone response bandwidth, unit: bps;</li>.
+<Li>L7Flow_inBandwidth: l7 client request bandwidth, unit: bps;</li>.
+<Li>L7Flow_bandwidth: l7 total access bandwidth (including the edgeone response bandwidth and client request bandwidth), unit: bps;</li>.
+<Li>L7Flow_request: l7 access request count, unit: times;</li>.
+<Li> l7flow_avgresponsetime: l7 average response time, unit: ms (milliseconds);</li>.
+<Li> l7flow_avgfirstbyteresponsetime: l7 average first byte response time for access, unit: ms.</li>.
+ * @method void setMetricNames(array $MetricNames) Set Metric list. valid values:.
+<Li>L7Flow_outFlux: l7 edgeone response traffic, unit: byte;</li>.
+<Li>L7Flow_inFlux: l7 client request traffic, unit: byte;</li>.
+<Li>L7Flow_flux: l7 total access traffic (including the edgeone response traffic and client request traffic), unit: byte;</li>.
+<Li>L7Flow_outBandwidth: l7 edgeone response bandwidth, unit: bps;</li>.
+<Li>L7Flow_inBandwidth: l7 client request bandwidth, unit: bps;</li>.
+<Li>L7Flow_bandwidth: l7 total access bandwidth (including the edgeone response bandwidth and client request bandwidth), unit: bps;</li>.
+<Li>L7Flow_request: l7 access request count, unit: times;</li>.
+<Li> l7flow_avgresponsetime: l7 average response time, unit: ms (milliseconds);</li>.
+<Li> l7flow_avgfirstbyteresponsetime: l7 average first byte response time for access, unit: ms.</li>.
  * @method array getZoneIds() Obtain Zone ID set. This parameter is required.
  * @method void setZoneIds(array $ZoneIds) Set Zone ID set. This parameter is required.
  * @method string getInterval() Obtain Query period granularity. Valid values:
@@ -110,14 +114,16 @@ class DescribeTimingL7AnalysisDataRequest extends AbstractModel
     public $EndTime;
 
     /**
-     * @var array Metric list. Valid values:
-<li>l7Flow_outFlux: L7 EdgeOne response traffic;</li>
-<li>l7Flow_inFlux: L7 client request traffic;</li>
-<li>l7Flow_flux: L7 total access traffic (including the EdgeOne response traffic and client request traffic);</li>
-<li>l7Flow_outBandwidth: L7 EdgeOne response bandwidth;</li>
-<li>l7Flow_inBandwidth: L7 client request bandwidth;</li>
-<li>l7Flow_bandwidth: L7 total access bandwidth (including the EdgeOne response bandwidth and client request bandwidth);</li>
-<li>l7Flow_request: L7 access request count.</li>
+     * @var array Metric list. valid values:.
+<Li>L7Flow_outFlux: l7 edgeone response traffic, unit: byte;</li>.
+<Li>L7Flow_inFlux: l7 client request traffic, unit: byte;</li>.
+<Li>L7Flow_flux: l7 total access traffic (including the edgeone response traffic and client request traffic), unit: byte;</li>.
+<Li>L7Flow_outBandwidth: l7 edgeone response bandwidth, unit: bps;</li>.
+<Li>L7Flow_inBandwidth: l7 client request bandwidth, unit: bps;</li>.
+<Li>L7Flow_bandwidth: l7 total access bandwidth (including the edgeone response bandwidth and client request bandwidth), unit: bps;</li>.
+<Li>L7Flow_request: l7 access request count, unit: times;</li>.
+<Li> l7flow_avgresponsetime: l7 average response time, unit: ms (milliseconds);</li>.
+<Li> l7flow_avgfirstbyteresponsetime: l7 average first byte response time for access, unit: ms.</li>.
      */
     public $MetricNames;
 
@@ -168,14 +174,16 @@ If this parameter is not filled in, the default value is global.
     /**
      * @param string $StartTime The start time.
      * @param string $EndTime The end time.
-     * @param array $MetricNames Metric list. Valid values:
-<li>l7Flow_outFlux: L7 EdgeOne response traffic;</li>
-<li>l7Flow_inFlux: L7 client request traffic;</li>
-<li>l7Flow_flux: L7 total access traffic (including the EdgeOne response traffic and client request traffic);</li>
-<li>l7Flow_outBandwidth: L7 EdgeOne response bandwidth;</li>
-<li>l7Flow_inBandwidth: L7 client request bandwidth;</li>
-<li>l7Flow_bandwidth: L7 total access bandwidth (including the EdgeOne response bandwidth and client request bandwidth);</li>
-<li>l7Flow_request: L7 access request count.</li>
+     * @param array $MetricNames Metric list. valid values:.
+<Li>L7Flow_outFlux: l7 edgeone response traffic, unit: byte;</li>.
+<Li>L7Flow_inFlux: l7 client request traffic, unit: byte;</li>.
+<Li>L7Flow_flux: l7 total access traffic (including the edgeone response traffic and client request traffic), unit: byte;</li>.
+<Li>L7Flow_outBandwidth: l7 edgeone response bandwidth, unit: bps;</li>.
+<Li>L7Flow_inBandwidth: l7 client request bandwidth, unit: bps;</li>.
+<Li>L7Flow_bandwidth: l7 total access bandwidth (including the edgeone response bandwidth and client request bandwidth), unit: bps;</li>.
+<Li>L7Flow_request: l7 access request count, unit: times;</li>.
+<Li> l7flow_avgresponsetime: l7 average response time, unit: ms (milliseconds);</li>.
+<Li> l7flow_avgfirstbyteresponsetime: l7 average first byte response time for access, unit: ms.</li>.
      * @param array $ZoneIds Zone ID set. This parameter is required.
      * @param string $Interval Query period granularity. Valid values:
 <li>min: 1 minute;</li>

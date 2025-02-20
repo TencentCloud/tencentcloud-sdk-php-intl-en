@@ -26,26 +26,20 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSwitch(string $Switch) Set Whether to enable the configuration of following the origin server. Valid values:
 <li>`on`: Enable</li>
 <li>`off`: Disable</li>
- * @method string getDefaultCache() Obtain Whether to cache when an origin server does not return the Cache-Control header. This field is required when Switch is on; otherwise, it is ineffective. Valid values:
-<li>on: Cache.</li>
-<li>off: Do not cache.</li>
-Note: This field may return null, which indicates a failure to obtain a valid value.
- * @method void setDefaultCache(string $DefaultCache) Set Whether to cache when an origin server does not return the Cache-Control header. This field is required when Switch is on; otherwise, it is ineffective. Valid values:
-<li>on: Cache.</li>
-<li>off: Do not cache.</li>
-Note: This field may return null, which indicates a failure to obtain a valid value.
- * @method string getDefaultCacheStrategy() Obtain Whether to use the default caching policy when an origin server does not return the Cache-Control header. This field is required when DefaultCache is set to on; otherwise, it is ineffective. When DefaultCacheTime is not 0, this field should be off. Valid values:
-<li>on: Use the default caching policy.</li>
-<li>off: Do not use the default caching policy.</li>
-Note: This field may return null, which indicates a failure to obtain a valid value.
- * @method void setDefaultCacheStrategy(string $DefaultCacheStrategy) Set Whether to use the default caching policy when an origin server does not return the Cache-Control header. This field is required when DefaultCache is set to on; otherwise, it is ineffective. When DefaultCacheTime is not 0, this field should be off. Valid values:
-<li>on: Use the default caching policy.</li>
-<li>off: Do not use the default caching policy.</li>
-Note: This field may return null, which indicates a failure to obtain a valid value.
- * @method integer getDefaultCacheTime() Obtain The default cache time in seconds when an origin server does not return the Cache-Control header. The value ranges from 0 to 315360000. This field is required when DefaultCache is set to on; otherwise, it is ineffective. When DefaultCacheStrategy is on, this field should be 0.
-Note: This field may return null, which indicates a failure to obtain a valid value.
- * @method void setDefaultCacheTime(integer $DefaultCacheTime) Set The default cache time in seconds when an origin server does not return the Cache-Control header. The value ranges from 0 to 315360000. This field is required when DefaultCache is set to on; otherwise, it is ineffective. When DefaultCacheStrategy is on, this field should be 0.
-Note: This field may return null, which indicates a failure to obtain a valid value.
+ * @method string getDefaultCache() Obtain Whether to cache when an origin server does not return the cache-control header. this field is required when switch is on; when switch is off, this field is not required and will be ineffective if filled. valid values:.
+<Li>On: cache;</li>.
+<Li>Off: do not cache.</li>.
+ * @method void setDefaultCache(string $DefaultCache) Set Whether to cache when an origin server does not return the cache-control header. this field is required when switch is on; when switch is off, this field is not required and will be ineffective if filled. valid values:.
+<Li>On: cache;</li>.
+<Li>Off: do not cache.</li>.
+ * @method string getDefaultCacheStrategy() Obtain Whether to use the default caching policy when an origin server does not return the cache-control header. this field is required when defaultcache is set to on; otherwise, it is ineffective. when defaultcachetime is not 0, this field should be off. valid values:.
+<Li>On: use the default caching policy.</li>.
+<Li>Off: do not use the default caching policy.</li>.
+ * @method void setDefaultCacheStrategy(string $DefaultCacheStrategy) Set Whether to use the default caching policy when an origin server does not return the cache-control header. this field is required when defaultcache is set to on; otherwise, it is ineffective. when defaultcachetime is not 0, this field should be off. valid values:.
+<Li>On: use the default caching policy.</li>.
+<Li>Off: do not use the default caching policy.</li>.
+ * @method integer getDefaultCacheTime() Obtain The default cache time in seconds when an origin server does not return the cache-control header. the value ranges from 0 to 315360000. this field is required when defaultcache is set to on; otherwise, it is ineffective. when defaultcachestrategy is on, this field should be 0.
+ * @method void setDefaultCacheTime(integer $DefaultCacheTime) Set The default cache time in seconds when an origin server does not return the cache-control header. the value ranges from 0 to 315360000. this field is required when defaultcache is set to on; otherwise, it is ineffective. when defaultcachestrategy is on, this field should be 0.
  */
 class FollowOrigin extends AbstractModel
 {
@@ -57,24 +51,21 @@ class FollowOrigin extends AbstractModel
     public $Switch;
 
     /**
-     * @var string Whether to cache when an origin server does not return the Cache-Control header. This field is required when Switch is on; otherwise, it is ineffective. Valid values:
-<li>on: Cache.</li>
-<li>off: Do not cache.</li>
-Note: This field may return null, which indicates a failure to obtain a valid value.
+     * @var string Whether to cache when an origin server does not return the cache-control header. this field is required when switch is on; when switch is off, this field is not required and will be ineffective if filled. valid values:.
+<Li>On: cache;</li>.
+<Li>Off: do not cache.</li>.
      */
     public $DefaultCache;
 
     /**
-     * @var string Whether to use the default caching policy when an origin server does not return the Cache-Control header. This field is required when DefaultCache is set to on; otherwise, it is ineffective. When DefaultCacheTime is not 0, this field should be off. Valid values:
-<li>on: Use the default caching policy.</li>
-<li>off: Do not use the default caching policy.</li>
-Note: This field may return null, which indicates a failure to obtain a valid value.
+     * @var string Whether to use the default caching policy when an origin server does not return the cache-control header. this field is required when defaultcache is set to on; otherwise, it is ineffective. when defaultcachetime is not 0, this field should be off. valid values:.
+<Li>On: use the default caching policy.</li>.
+<Li>Off: do not use the default caching policy.</li>.
      */
     public $DefaultCacheStrategy;
 
     /**
-     * @var integer The default cache time in seconds when an origin server does not return the Cache-Control header. The value ranges from 0 to 315360000. This field is required when DefaultCache is set to on; otherwise, it is ineffective. When DefaultCacheStrategy is on, this field should be 0.
-Note: This field may return null, which indicates a failure to obtain a valid value.
+     * @var integer The default cache time in seconds when an origin server does not return the cache-control header. the value ranges from 0 to 315360000. this field is required when defaultcache is set to on; otherwise, it is ineffective. when defaultcachestrategy is on, this field should be 0.
      */
     public $DefaultCacheTime;
 
@@ -82,16 +73,13 @@ Note: This field may return null, which indicates a failure to obtain a valid va
      * @param string $Switch Whether to enable the configuration of following the origin server. Valid values:
 <li>`on`: Enable</li>
 <li>`off`: Disable</li>
-     * @param string $DefaultCache Whether to cache when an origin server does not return the Cache-Control header. This field is required when Switch is on; otherwise, it is ineffective. Valid values:
-<li>on: Cache.</li>
-<li>off: Do not cache.</li>
-Note: This field may return null, which indicates a failure to obtain a valid value.
-     * @param string $DefaultCacheStrategy Whether to use the default caching policy when an origin server does not return the Cache-Control header. This field is required when DefaultCache is set to on; otherwise, it is ineffective. When DefaultCacheTime is not 0, this field should be off. Valid values:
-<li>on: Use the default caching policy.</li>
-<li>off: Do not use the default caching policy.</li>
-Note: This field may return null, which indicates a failure to obtain a valid value.
-     * @param integer $DefaultCacheTime The default cache time in seconds when an origin server does not return the Cache-Control header. The value ranges from 0 to 315360000. This field is required when DefaultCache is set to on; otherwise, it is ineffective. When DefaultCacheStrategy is on, this field should be 0.
-Note: This field may return null, which indicates a failure to obtain a valid value.
+     * @param string $DefaultCache Whether to cache when an origin server does not return the cache-control header. this field is required when switch is on; when switch is off, this field is not required and will be ineffective if filled. valid values:.
+<Li>On: cache;</li>.
+<Li>Off: do not cache.</li>.
+     * @param string $DefaultCacheStrategy Whether to use the default caching policy when an origin server does not return the cache-control header. this field is required when defaultcache is set to on; otherwise, it is ineffective. when defaultcachetime is not 0, this field should be off. valid values:.
+<Li>On: use the default caching policy.</li>.
+<Li>Off: do not use the default caching policy.</li>.
+     * @param integer $DefaultCacheTime The default cache time in seconds when an origin server does not return the cache-control header. the value ranges from 0 to 315360000. this field is required when defaultcache is set to on; otherwise, it is ineffective. when defaultcachestrategy is on, this field should be 0.
      */
     function __construct()
     {

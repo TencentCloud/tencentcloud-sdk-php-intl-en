@@ -20,110 +20,66 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeDnsRecords request structure.
  *
- * @method string getZoneId() Obtain The site ID of the DNS record.
- * @method void setZoneId(string $ZoneId) Set The site ID of the DNS record.
- * @method integer getOffset() Obtain The page offset. Default value: 0
- * @method void setOffset(integer $Offset) Set The page offset. Default value: 0
- * @method integer getLimit() Obtain The paginated query limit. Default value: 20. Maximum value: 1000.
- * @method void setLimit(integer $Limit) Set The paginated query limit. Default value: 20. Maximum value: 1000.
- * @method array getFilters() Obtain The upper limit of Filters.Values is 20. The detailed filtering conditions are as follows: <li>id: Filter by DNS record ID, supports fuzzy query;</li><li>name: Filter by DNS record name, supports fuzzy query;</li><li>content: Filter by DNS record content, supports fuzzy query;</li><li>type: Filter by DNS record type, does not support fuzzy query. Options:<br> A: Point the domain name to an external IPv4 address, such as 8.8.8.8;<br> AAAA: Point the domain name to an external IPv6 address;<br> CNAME: Point the domain name to another domain name, which then resolves to the final IP address;<br> TXT: Identify and describe the domain name, often used for domain verification and SPF records (anti-spam);<br> NS: If you need to delegate subdomain resolution to another DNS service provider, you need to add an NS record. Root domains cannot add NS records;<br> CAA: Specify the CA that can issue certificates for this site;<br> SRV: Identify a server using a specific service, commonly used in Microsoft's directory management;<br> MX: Specify the recipient's mail server.</li><li>ttl: Filter by the time-to-live (TTL) of the record, does not support fuzzy query.</li>
- * @method void setFilters(array $Filters) Set The upper limit of Filters.Values is 20. The detailed filtering conditions are as follows: <li>id: Filter by DNS record ID, supports fuzzy query;</li><li>name: Filter by DNS record name, supports fuzzy query;</li><li>content: Filter by DNS record content, supports fuzzy query;</li><li>type: Filter by DNS record type, does not support fuzzy query. Options:<br> A: Point the domain name to an external IPv4 address, such as 8.8.8.8;<br> AAAA: Point the domain name to an external IPv6 address;<br> CNAME: Point the domain name to another domain name, which then resolves to the final IP address;<br> TXT: Identify and describe the domain name, often used for domain verification and SPF records (anti-spam);<br> NS: If you need to delegate subdomain resolution to another DNS service provider, you need to add an NS record. Root domains cannot add NS records;<br> CAA: Specify the CA that can issue certificates for this site;<br> SRV: Identify a server using a specific service, commonly used in Microsoft's directory management;<br> MX: Specify the recipient's mail server.</li><li>ttl: Filter by the time-to-live (TTL) of the record, does not support fuzzy query.</li>
- * @method string getSortBy() Obtain Sort criteria, with possible values:
-<li>content: DNS record content;</li>
-<li>created-on: DNS record creation time;</li>
-<li>name: DNS record name;</li>
-<li>ttl: Time-to-live (TTL);</li>
-<li>type: DNS record type.</li>
-The default sorting is based on a combination of type and name attributes.
- * @method void setSortBy(string $SortBy) Set Sort criteria, with possible values:
-<li>content: DNS record content;</li>
-<li>created-on: DNS record creation time;</li>
-<li>name: DNS record name;</li>
-<li>ttl: Time-to-live (TTL);</li>
-<li>type: DNS record type.</li>
-The default sorting is based on a combination of type and name attributes.
- * @method string getSortOrder() Obtain List sorting order, with possible values:
-<li>asc: Ascending order;</li>
-<li>desc: Descending order.</li>
-The default value is asc.
- * @method void setSortOrder(string $SortOrder) Set List sorting order, with possible values:
-<li>asc: Ascending order;</li>
-<li>desc: Descending order.</li>
-The default value is asc.
- * @method string getMatch() Obtain The match mode. Values:
-<li>`all`: Return all records that match the specified filter.</li>
-<li>`any`: Return any record that matches the specified filter.</li>Default value: all.
- * @method void setMatch(string $Match) Set The match mode. Values:
-<li>`all`: Return all records that match the specified filter.</li>
-<li>`any`: Return any record that matches the specified filter.</li>Default value: all.
+ * @method string getZoneId() Obtain Zone id.
+ * @method void setZoneId(string $ZoneId) Set Zone id.
+ * @method integer getOffset() Obtain Offset of paginated query. default value: 0.
+ * @method void setOffset(integer $Offset) Set Offset of paginated query. default value: 0.
+ * @method integer getLimit() Obtain Number limit of paginated query. default value: 20. maximum value: 1000.
+ * @method void setLimit(integer $Limit) Set Number limit of paginated query. default value: 20. maximum value: 1000.
+ * @method array getFilters() Obtain Filter conditions. up to 20 values for each filter. detailed filter conditions are as follows: <li>id: filter by dns record id, supports fuzzy search;</li><li>name: filter by dns record name, supports fuzzy search;</li><li>content: filter by dns record content, supports fuzzy search;</li><li>type: filter by dns record type, does not support fuzzy search. valid values:<br>   a: points the domain name to an external ipv4 address, such as 8.8.8.8;<br>   aaaa: points the domain name to an external ipv6 address;<br>   cname: points the domain name to another domain name, which then resolves to the final ip address;<br>   txt: identifies and describes the domain name, commonly used for domain verification and spf records (anti-spam);<br>   ns: if you need to delegate the subdomain to another dns service provider, you need to add an ns record. root domain cannot add ns records;<br>   caa: specifies the ca that can issue certificates for this site;<br>   srv: identifies a server using a specific service, commonly used in microsoft's directory management;<br>   mx: specifies the recipient's mail server.</li><li>ttl: filter by resolution effective time, does not support fuzzy search.</li>.
+ * @method void setFilters(array $Filters) Set Filter conditions. up to 20 values for each filter. detailed filter conditions are as follows: <li>id: filter by dns record id, supports fuzzy search;</li><li>name: filter by dns record name, supports fuzzy search;</li><li>content: filter by dns record content, supports fuzzy search;</li><li>type: filter by dns record type, does not support fuzzy search. valid values:<br>   a: points the domain name to an external ipv4 address, such as 8.8.8.8;<br>   aaaa: points the domain name to an external ipv6 address;<br>   cname: points the domain name to another domain name, which then resolves to the final ip address;<br>   txt: identifies and describes the domain name, commonly used for domain verification and spf records (anti-spam);<br>   ns: if you need to delegate the subdomain to another dns service provider, you need to add an ns record. root domain cannot add ns records;<br>   caa: specifies the ca that can issue certificates for this site;<br>   srv: identifies a server using a specific service, commonly used in microsoft's directory management;<br>   mx: specifies the recipient's mail server.</li><li>ttl: filter by resolution effective time, does not support fuzzy search.</li>.
+ * @method string getSortBy() Obtain Sorting basis. values include: <li>`content`: dns record content</li><li>`created-on`: dns record creation time</li><li>`name`: dns record name</li><li>`ttl`: cache time</li><li>`type`: dns record type</li> default sorting is by the combination of `type`, `name`.
+ * @method void setSortBy(string $SortBy) Set Sorting basis. values include: <li>`content`: dns record content</li><li>`created-on`: dns record creation time</li><li>`name`: dns record name</li><li>`ttl`: cache time</li><li>`type`: dns record type</li> default sorting is by the combination of `type`, `name`.
+ * @method string getSortOrder() Obtain List sort method. values: <li>`asc`: ascending order</li><li>`desc`: sort in descending order</li> default value: `asc`.
+ * @method void setSortOrder(string $SortOrder) Set List sort method. values: <li>`asc`: ascending order</li><li>`desc`: sort in descending order</li> default value: `asc`.
+ * @method string getMatch() Obtain Match method. values: <li>`all`: return records that match all query conditions</li><li>`any`: return records that match any query condition</li> default value: `all`.
+ * @method void setMatch(string $Match) Set Match method. values: <li>`all`: return records that match all query conditions</li><li>`any`: return records that match any query condition</li> default value: `all`.
  */
 class DescribeDnsRecordsRequest extends AbstractModel
 {
     /**
-     * @var string The site ID of the DNS record.
+     * @var string Zone id.
      */
     public $ZoneId;
 
     /**
-     * @var integer The page offset. Default value: 0
+     * @var integer Offset of paginated query. default value: 0.
      */
     public $Offset;
 
     /**
-     * @var integer The paginated query limit. Default value: 20. Maximum value: 1000.
+     * @var integer Number limit of paginated query. default value: 20. maximum value: 1000.
      */
     public $Limit;
 
     /**
-     * @var array The upper limit of Filters.Values is 20. The detailed filtering conditions are as follows: <li>id: Filter by DNS record ID, supports fuzzy query;</li><li>name: Filter by DNS record name, supports fuzzy query;</li><li>content: Filter by DNS record content, supports fuzzy query;</li><li>type: Filter by DNS record type, does not support fuzzy query. Options:<br> A: Point the domain name to an external IPv4 address, such as 8.8.8.8;<br> AAAA: Point the domain name to an external IPv6 address;<br> CNAME: Point the domain name to another domain name, which then resolves to the final IP address;<br> TXT: Identify and describe the domain name, often used for domain verification and SPF records (anti-spam);<br> NS: If you need to delegate subdomain resolution to another DNS service provider, you need to add an NS record. Root domains cannot add NS records;<br> CAA: Specify the CA that can issue certificates for this site;<br> SRV: Identify a server using a specific service, commonly used in Microsoft's directory management;<br> MX: Specify the recipient's mail server.</li><li>ttl: Filter by the time-to-live (TTL) of the record, does not support fuzzy query.</li>
+     * @var array Filter conditions. up to 20 values for each filter. detailed filter conditions are as follows: <li>id: filter by dns record id, supports fuzzy search;</li><li>name: filter by dns record name, supports fuzzy search;</li><li>content: filter by dns record content, supports fuzzy search;</li><li>type: filter by dns record type, does not support fuzzy search. valid values:<br>   a: points the domain name to an external ipv4 address, such as 8.8.8.8;<br>   aaaa: points the domain name to an external ipv6 address;<br>   cname: points the domain name to another domain name, which then resolves to the final ip address;<br>   txt: identifies and describes the domain name, commonly used for domain verification and spf records (anti-spam);<br>   ns: if you need to delegate the subdomain to another dns service provider, you need to add an ns record. root domain cannot add ns records;<br>   caa: specifies the ca that can issue certificates for this site;<br>   srv: identifies a server using a specific service, commonly used in microsoft's directory management;<br>   mx: specifies the recipient's mail server.</li><li>ttl: filter by resolution effective time, does not support fuzzy search.</li>.
      */
     public $Filters;
 
     /**
-     * @var string Sort criteria, with possible values:
-<li>content: DNS record content;</li>
-<li>created-on: DNS record creation time;</li>
-<li>name: DNS record name;</li>
-<li>ttl: Time-to-live (TTL);</li>
-<li>type: DNS record type.</li>
-The default sorting is based on a combination of type and name attributes.
+     * @var string Sorting basis. values include: <li>`content`: dns record content</li><li>`created-on`: dns record creation time</li><li>`name`: dns record name</li><li>`ttl`: cache time</li><li>`type`: dns record type</li> default sorting is by the combination of `type`, `name`.
      */
     public $SortBy;
 
     /**
-     * @var string List sorting order, with possible values:
-<li>asc: Ascending order;</li>
-<li>desc: Descending order.</li>
-The default value is asc.
+     * @var string List sort method. values: <li>`asc`: ascending order</li><li>`desc`: sort in descending order</li> default value: `asc`.
      */
     public $SortOrder;
 
     /**
-     * @var string The match mode. Values:
-<li>`all`: Return all records that match the specified filter.</li>
-<li>`any`: Return any record that matches the specified filter.</li>Default value: all.
+     * @var string Match method. values: <li>`all`: return records that match all query conditions</li><li>`any`: return records that match any query condition</li> default value: `all`.
      */
     public $Match;
 
     /**
-     * @param string $ZoneId The site ID of the DNS record.
-     * @param integer $Offset The page offset. Default value: 0
-     * @param integer $Limit The paginated query limit. Default value: 20. Maximum value: 1000.
-     * @param array $Filters The upper limit of Filters.Values is 20. The detailed filtering conditions are as follows: <li>id: Filter by DNS record ID, supports fuzzy query;</li><li>name: Filter by DNS record name, supports fuzzy query;</li><li>content: Filter by DNS record content, supports fuzzy query;</li><li>type: Filter by DNS record type, does not support fuzzy query. Options:<br> A: Point the domain name to an external IPv4 address, such as 8.8.8.8;<br> AAAA: Point the domain name to an external IPv6 address;<br> CNAME: Point the domain name to another domain name, which then resolves to the final IP address;<br> TXT: Identify and describe the domain name, often used for domain verification and SPF records (anti-spam);<br> NS: If you need to delegate subdomain resolution to another DNS service provider, you need to add an NS record. Root domains cannot add NS records;<br> CAA: Specify the CA that can issue certificates for this site;<br> SRV: Identify a server using a specific service, commonly used in Microsoft's directory management;<br> MX: Specify the recipient's mail server.</li><li>ttl: Filter by the time-to-live (TTL) of the record, does not support fuzzy query.</li>
-     * @param string $SortBy Sort criteria, with possible values:
-<li>content: DNS record content;</li>
-<li>created-on: DNS record creation time;</li>
-<li>name: DNS record name;</li>
-<li>ttl: Time-to-live (TTL);</li>
-<li>type: DNS record type.</li>
-The default sorting is based on a combination of type and name attributes.
-     * @param string $SortOrder List sorting order, with possible values:
-<li>asc: Ascending order;</li>
-<li>desc: Descending order.</li>
-The default value is asc.
-     * @param string $Match The match mode. Values:
-<li>`all`: Return all records that match the specified filter.</li>
-<li>`any`: Return any record that matches the specified filter.</li>Default value: all.
+     * @param string $ZoneId Zone id.
+     * @param integer $Offset Offset of paginated query. default value: 0.
+     * @param integer $Limit Number limit of paginated query. default value: 20. maximum value: 1000.
+     * @param array $Filters Filter conditions. up to 20 values for each filter. detailed filter conditions are as follows: <li>id: filter by dns record id, supports fuzzy search;</li><li>name: filter by dns record name, supports fuzzy search;</li><li>content: filter by dns record content, supports fuzzy search;</li><li>type: filter by dns record type, does not support fuzzy search. valid values:<br>   a: points the domain name to an external ipv4 address, such as 8.8.8.8;<br>   aaaa: points the domain name to an external ipv6 address;<br>   cname: points the domain name to another domain name, which then resolves to the final ip address;<br>   txt: identifies and describes the domain name, commonly used for domain verification and spf records (anti-spam);<br>   ns: if you need to delegate the subdomain to another dns service provider, you need to add an ns record. root domain cannot add ns records;<br>   caa: specifies the ca that can issue certificates for this site;<br>   srv: identifies a server using a specific service, commonly used in microsoft's directory management;<br>   mx: specifies the recipient's mail server.</li><li>ttl: filter by resolution effective time, does not support fuzzy search.</li>.
+     * @param string $SortBy Sorting basis. values include: <li>`content`: dns record content</li><li>`created-on`: dns record creation time</li><li>`name`: dns record name</li><li>`ttl`: cache time</li><li>`type`: dns record type</li> default sorting is by the combination of `type`, `name`.
+     * @param string $SortOrder List sort method. values: <li>`asc`: ascending order</li><li>`desc`: sort in descending order</li> default value: `asc`.
+     * @param string $Match Match method. values: <li>`all`: return records that match all query conditions</li><li>`any`: return records that match any query condition</li> default value: `all`.
      */
     function __construct()
     {

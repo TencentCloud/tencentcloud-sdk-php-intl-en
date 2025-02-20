@@ -29,17 +29,17 @@ Note: If `Type` is `CUSTOM_NUM` or `CUSTOM_STRING`, this parameter will be an em
  * @method void setChoicesValue(array $ChoicesValue) Set Valid parameter values.
 Note: If `Type` is `CUSTOM_NUM` or `CUSTOM_STRING`, this parameter will be an empty array.
  * @method string getType() Obtain The parameter value type.
-<li>`CHOICE`: `If Type=CHOICE`, choose a value in `ChoiceValue`.</li>
-<li>`TOGGLE`: If `Type=TOGGLE`, choose `on` or `off` from `ChoicesValue`.</li>
-<li>`OBJECT`: Specify an object. If this is specified, `ChoiceProperties` includes attributes of the specified object. See [Example 2. Create a rule with Type=OBJECT](https://intl.cloud.tencent.com/document/product/1552/80622?from_cn_redirect=1#.E7.A4.BA.E4.BE.8B2-.E5.8F.82.E6.95.B0.E4.B8.BA-OBJECT-.E7.B1.BB.E5.9E.8B.E7.9A.84.E5.88.9B.E5.BB.BA)</li>
-<li>`CUSTOM_NUM`: (Integer) Custom value.</li>
-<li>`CUSTOM_STRING`: (String) Custom value.</li>
+<Li>`CHOICE`: the parameter value can only be selected from `choicesvalue`.</li>.
+<Li>TOGGLE: the parameter value is of switch type and can be selected from `choicesvalue`.</li>.
+<Li>OBJECT: the parameter value is of object type, and `choiceproperties` are the properties associated with this object type.</li>.
+<Li>`CUSTOM_NUM`: (integer) custom value.</li>.
+<Li> custom_string: parameter value is user-customized, string type.</li> note: when the parameter type is object, please refer to [example 2: creating a parameter of object type](https://intl.cloud.tencent.com/document/product/1552/80622?from_cn_redirect=1#.e7.a4.ba.e4.be.8b2-.e4.bf.ae.e6.94.b9.e6.ba.90.e7.ab.99.e4.b8.baip.e5.9f.9f.e5.90.8d).
  * @method void setType(string $Type) Set The parameter value type.
-<li>`CHOICE`: `If Type=CHOICE`, choose a value in `ChoiceValue`.</li>
-<li>`TOGGLE`: If `Type=TOGGLE`, choose `on` or `off` from `ChoicesValue`.</li>
-<li>`OBJECT`: Specify an object. If this is specified, `ChoiceProperties` includes attributes of the specified object. See [Example 2. Create a rule with Type=OBJECT](https://intl.cloud.tencent.com/document/product/1552/80622?from_cn_redirect=1#.E7.A4.BA.E4.BE.8B2-.E5.8F.82.E6.95.B0.E4.B8.BA-OBJECT-.E7.B1.BB.E5.9E.8B.E7.9A.84.E5.88.9B.E5.BB.BA)</li>
-<li>`CUSTOM_NUM`: (Integer) Custom value.</li>
-<li>`CUSTOM_STRING`: (String) Custom value.</li>
+<Li>`CHOICE`: the parameter value can only be selected from `choicesvalue`.</li>.
+<Li>TOGGLE: the parameter value is of switch type and can be selected from `choicesvalue`.</li>.
+<Li>OBJECT: the parameter value is of object type, and `choiceproperties` are the properties associated with this object type.</li>.
+<Li>`CUSTOM_NUM`: (integer) custom value.</li>.
+<Li> custom_string: parameter value is user-customized, string type.</li> note: when the parameter type is object, please refer to [example 2: creating a parameter of object type](https://intl.cloud.tencent.com/document/product/1552/80622?from_cn_redirect=1#.e7.a4.ba.e4.be.8b2-.e4.bf.ae.e6.94.b9.e6.ba.90.e7.ab.99.e4.b8.baip.e5.9f.9f.e5.90.8d).
  * @method integer getMax() Obtain Maximum value. If both `Min` and `Max` are set to `0`, this parameter does not take effect.
  * @method void setMax(integer $Max) Set Maximum value. If both `Min` and `Max` are set to `0`, this parameter does not take effect.
  * @method boolean getIsMultiple() Obtain Whether multiple values can be selected or entered.
@@ -75,11 +75,11 @@ Note: If `Type` is `CUSTOM_NUM` or `CUSTOM_STRING`, this parameter will be an em
 
     /**
      * @var string The parameter value type.
-<li>`CHOICE`: `If Type=CHOICE`, choose a value in `ChoiceValue`.</li>
-<li>`TOGGLE`: If `Type=TOGGLE`, choose `on` or `off` from `ChoicesValue`.</li>
-<li>`OBJECT`: Specify an object. If this is specified, `ChoiceProperties` includes attributes of the specified object. See [Example 2. Create a rule with Type=OBJECT](https://intl.cloud.tencent.com/document/product/1552/80622?from_cn_redirect=1#.E7.A4.BA.E4.BE.8B2-.E5.8F.82.E6.95.B0.E4.B8.BA-OBJECT-.E7.B1.BB.E5.9E.8B.E7.9A.84.E5.88.9B.E5.BB.BA)</li>
-<li>`CUSTOM_NUM`: (Integer) Custom value.</li>
-<li>`CUSTOM_STRING`: (String) Custom value.</li>
+<Li>`CHOICE`: the parameter value can only be selected from `choicesvalue`.</li>.
+<Li>TOGGLE: the parameter value is of switch type and can be selected from `choicesvalue`.</li>.
+<Li>OBJECT: the parameter value is of object type, and `choiceproperties` are the properties associated with this object type.</li>.
+<Li>`CUSTOM_NUM`: (integer) custom value.</li>.
+<Li> custom_string: parameter value is user-customized, string type.</li> note: when the parameter type is object, please refer to [example 2: creating a parameter of object type](https://intl.cloud.tencent.com/document/product/1552/80622?from_cn_redirect=1#.e7.a4.ba.e4.be.8b2-.e4.bf.ae.e6.94.b9.e6.ba.90.e7.ab.99.e4.b8.baip.e5.9f.9f.e5.90.8d).
      */
     public $Type;
 
@@ -116,11 +116,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param array $ChoicesValue Valid parameter values.
 Note: If `Type` is `CUSTOM_NUM` or `CUSTOM_STRING`, this parameter will be an empty array.
      * @param string $Type The parameter value type.
-<li>`CHOICE`: `If Type=CHOICE`, choose a value in `ChoiceValue`.</li>
-<li>`TOGGLE`: If `Type=TOGGLE`, choose `on` or `off` from `ChoicesValue`.</li>
-<li>`OBJECT`: Specify an object. If this is specified, `ChoiceProperties` includes attributes of the specified object. See [Example 2. Create a rule with Type=OBJECT](https://intl.cloud.tencent.com/document/product/1552/80622?from_cn_redirect=1#.E7.A4.BA.E4.BE.8B2-.E5.8F.82.E6.95.B0.E4.B8.BA-OBJECT-.E7.B1.BB.E5.9E.8B.E7.9A.84.E5.88.9B.E5.BB.BA)</li>
-<li>`CUSTOM_NUM`: (Integer) Custom value.</li>
-<li>`CUSTOM_STRING`: (String) Custom value.</li>
+<Li>`CHOICE`: the parameter value can only be selected from `choicesvalue`.</li>.
+<Li>TOGGLE: the parameter value is of switch type and can be selected from `choicesvalue`.</li>.
+<Li>OBJECT: the parameter value is of object type, and `choiceproperties` are the properties associated with this object type.</li>.
+<Li>`CUSTOM_NUM`: (integer) custom value.</li>.
+<Li> custom_string: parameter value is user-customized, string type.</li> note: when the parameter type is object, please refer to [example 2: creating a parameter of object type](https://intl.cloud.tencent.com/document/product/1552/80622?from_cn_redirect=1#.e7.a4.ba.e4.be.8b2-.e4.bf.ae.e6.94.b9.e6.ba.90.e7.ab.99.e4.b8.baip.e5.9f.9f.e5.90.8d).
      * @param integer $Max Maximum value. If both `Min` and `Max` are set to `0`, this parameter does not take effect.
      * @param boolean $IsMultiple Whether multiple values can be selected or entered.
      * @param boolean $IsAllowEmpty Whether the parameter can be left empty.

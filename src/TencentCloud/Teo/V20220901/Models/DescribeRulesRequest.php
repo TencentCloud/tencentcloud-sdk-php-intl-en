@@ -22,10 +22,12 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getZoneId() Obtain ID of the site
  * @method void setZoneId(string $ZoneId) Set ID of the site
- * @method array getFilters() Obtain Filter conditions. Each filter condition can have up to 20 entries. See below for details:
-<li>`rule-id`:<br>   Filter by the <strong>rule ID</strong><br>   Type: String<br>   Required: No</li>
- * @method void setFilters(array $Filters) Set Filter conditions. Each filter condition can have up to 20 entries. See below for details:
-<li>`rule-id`:<br>   Filter by the <strong>rule ID</strong><br>   Type: String<br>   Required: No</li>
+ * @method array getFilters() Obtain Filter criteria. the maximum value of filters.values is 20. the detailed filter criteria are as follows:
+.
+<Li>Rule-Id: filter by rule id.</li>.
+ * @method void setFilters(array $Filters) Set Filter criteria. the maximum value of filters.values is 20. the detailed filter criteria are as follows:
+.
+<Li>Rule-Id: filter by rule id.</li>.
  */
 class DescribeRulesRequest extends AbstractModel
 {
@@ -35,15 +37,17 @@ class DescribeRulesRequest extends AbstractModel
     public $ZoneId;
 
     /**
-     * @var array Filter conditions. Each filter condition can have up to 20 entries. See below for details:
-<li>`rule-id`:<br>   Filter by the <strong>rule ID</strong><br>   Type: String<br>   Required: No</li>
+     * @var array Filter criteria. the maximum value of filters.values is 20. the detailed filter criteria are as follows:
+.
+<Li>Rule-Id: filter by rule id.</li>.
      */
     public $Filters;
 
     /**
      * @param string $ZoneId ID of the site
-     * @param array $Filters Filter conditions. Each filter condition can have up to 20 entries. See below for details:
-<li>`rule-id`:<br>   Filter by the <strong>rule ID</strong><br>   Type: String<br>   Required: No</li>
+     * @param array $Filters Filter criteria. the maximum value of filters.values is 20. the detailed filter criteria are as follows:
+.
+<Li>Rule-Id: filter by rule id.</li>.
      */
     function __construct()
     {

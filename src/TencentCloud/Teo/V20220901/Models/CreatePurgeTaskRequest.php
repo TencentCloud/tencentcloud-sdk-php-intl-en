@@ -20,8 +20,12 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreatePurgeTask request structure.
  *
- * @method string getZoneId() Obtain ID of the site.
- * @method void setZoneId(string $ZoneId) Set ID of the site.
+ * @method string getZoneId() Obtain Zone id.
+.
+If you want to quickly submit targets urls under different sites, you can set it to *, but the account calling this api must have permission for all site resources under the main account.
+ * @method void setZoneId(string $ZoneId) Set Zone id.
+.
+If you want to quickly submit targets urls under different sites, you can set it to *, but the account calling this api must have permission for all site resources under the main account.
  * @method string getType() Obtain Type of cache purging. Values:
 <li>`purge_url`: Purge by the URL</li>
 <li>`purge_prefix`: Purge by the directory</li>
@@ -48,7 +52,9 @@ Note that if it’s enabled, the purging is based on the converted URLs.
 class CreatePurgeTaskRequest extends AbstractModel
 {
     /**
-     * @var string ID of the site.
+     * @var string Zone id.
+.
+If you want to quickly submit targets urls under different sites, you can set it to *, but the account calling this api must have permission for all site resources under the main account.
      */
     public $ZoneId;
 
@@ -85,7 +91,9 @@ Note that if it’s enabled, the purging is based on the converted URLs.
     public $CacheTag;
 
     /**
-     * @param string $ZoneId ID of the site.
+     * @param string $ZoneId Zone id.
+.
+If you want to quickly submit targets urls under different sites, you can set it to *, but the account calling this api must have permission for all site resources under the main account.
      * @param string $Type Type of cache purging. Values:
 <li>`purge_url`: Purge by the URL</li>
 <li>`purge_prefix`: Purge by the directory</li>
