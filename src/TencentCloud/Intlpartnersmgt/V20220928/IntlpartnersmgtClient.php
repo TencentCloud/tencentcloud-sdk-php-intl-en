@@ -34,8 +34,10 @@ use TencentCloud\Intlpartnersmgt\V20220928\Models as Models;
 Callable roles: Reseller, Distributer, Second-level reseller
  * @method Models\CreateAccountResponse CreateAccount(Models\CreateAccountRequest $req) This API is used to create Tencent Cloud customer accounts for distributor/second-level resellers.After the account is created, it will be automatically bound to the partner account.Note:
 1. Create a Tencent Cloud account. The entered email address and mobile phone number need to be verified by the partner for validity.
-2.  Customers need to add personal information when logging in for the first time.
-3.  This interface needs to be applied for allowlist usage. Please contact the channel manager to initiate the application process.
+2. Customers need to add personal information when logging in for the first time.
+3. This interface needs to be applied for allowlist usage. Please contact the channel manager to initiate the application process.
+
+Callable roles: distributor, second-level reseller, reseller
  * @method Models\CreateAndSendClientInvitationMailResponse CreateAndSendClientInvitationMail(Models\CreateAndSendClientInvitationMailRequest $req) This API is used to apply for the allowlist. If needed, please contact your business representative.Directions:
 1.This API is used to create an invitation link, which you can send to a specified email address.
 2.Customer need to click the invitation link in the email, fill in and submit the required information.
@@ -58,6 +60,7 @@ Note:This API is used to manually send the invitation link to the customer if th
  * @method Models\ForceQNResponse ForceQN(Models\ForceQNRequest $req) This API is used to set and cancel forced service suspension.
 Note:Reseller need to be allowlisted to use the API, please contact your business representative to apply for allowlist.
  * @method Models\GetCountryCodesResponse GetCountryCodes(Models\GetCountryCodesRequest $req) This API is used to obtain country/region codes.
+ * @method Models\GetTradeConfigListResponse GetTradeConfigList(Models\GetTradeConfigListRequest $req) This API is used to query industry information, including layer-1 industry and layer-2 industry.
  * @method Models\ModifyClientRemarkResponse ModifyClientRemark(Models\ModifyClientRemarkRequest $req) This API is used to modify customer remarks.
  * @method Models\QueryAccountVerificationStatusResponse QueryAccountVerificationStatus(Models\QueryAccountVerificationStatusRequest $req) This API is used to query the account verification status.
  * @method Models\QueryCreditAllocationHistoryResponse QueryCreditAllocationHistory(Models\QueryCreditAllocationHistoryRequest $req) This API is used to query all the credit allocation records of a single customer.
