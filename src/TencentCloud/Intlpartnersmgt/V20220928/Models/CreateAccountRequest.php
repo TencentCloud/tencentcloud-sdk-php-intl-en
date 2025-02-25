@@ -54,10 +54,14 @@ Parameter value is not allowed to be 7,380,86.
 Use the [SendVerifyCode API](https://www.tencentcloud.com/document/product/1085/65907) to obtain the verifycode.The SendVerifyCode API sends a 6-digit verifycode to your specified mobile number via SMS. After receiving it, you need to pass it along with other parameters.
  * @method void setVerifyCode(string $VerifyCode) Set VerifyCode. This parameter is required. 
 Use the [SendVerifyCode API](https://www.tencentcloud.com/document/product/1085/65907) to obtain the verifycode.The SendVerifyCode API sends a 6-digit verifycode to your specified mobile number via SMS. After receiving it, you need to pass it along with other parameters.
- * @method string getTradeOne() Obtain Layer-1 industry id. This is a required item and can be obtained via the [ GetTradeConfigList  API](https://www.tencentcloud.com/zh/document/product/1085/68181).
- * @method void setTradeOne(string $TradeOne) Set Layer-1 industry id. This is a required item and can be obtained via the [ GetTradeConfigList  API](https://www.tencentcloud.com/zh/document/product/1085/68181).
- * @method string getTradeTwo() Obtain Layer-2 industry id. This is a required item and can be obtained via the [ GetTradeConfigList API](https://www.tencentcloud.com/zh/document/product/1085/68181).
- * @method void setTradeTwo(string $TradeTwo) Set Layer-2 industry id. This is a required item and can be obtained via the [ GetTradeConfigList API](https://www.tencentcloud.com/zh/document/product/1085/68181).
+ * @method string getTradeOne() Obtain Layer-1 industry id. This is a required item and can be obtained via the [ GetTradeConfigList  API](https://www.tencentcloud.com/zh/document/product/1085/68181),
+such as "kghy_01".
+ * @method void setTradeOne(string $TradeOne) Set Layer-1 industry id. This is a required item and can be obtained via the [ GetTradeConfigList  API](https://www.tencentcloud.com/zh/document/product/1085/68181),
+such as "kghy_01".
+ * @method string getTradeTwo() Obtain Layer-2 industry id. This is a required item and can be obtained via the [ GetTradeConfigList API](https://www.tencentcloud.com/zh/document/product/1085/68181),
+such as "kghy_0101"
+ * @method void setTradeTwo(string $TradeTwo) Set Layer-2 industry id. This is a required item and can be obtained via the [ GetTradeConfigList API](https://www.tencentcloud.com/zh/document/product/1085/68181),
+such as "kghy_0101"
  */
 class CreateAccountRequest extends AbstractModel
 {
@@ -115,12 +119,14 @@ Use the [SendVerifyCode API](https://www.tencentcloud.com/document/product/1085/
     public $VerifyCode;
 
     /**
-     * @var string Layer-1 industry id. This is a required item and can be obtained via the [ GetTradeConfigList  API](https://www.tencentcloud.com/zh/document/product/1085/68181).
+     * @var string Layer-1 industry id. This is a required item and can be obtained via the [ GetTradeConfigList  API](https://www.tencentcloud.com/zh/document/product/1085/68181),
+such as "kghy_01".
      */
     public $TradeOne;
 
     /**
-     * @var string Layer-2 industry id. This is a required item and can be obtained via the [ GetTradeConfigList API](https://www.tencentcloud.com/zh/document/product/1085/68181).
+     * @var string Layer-2 industry id. This is a required item and can be obtained via the [ GetTradeConfigList API](https://www.tencentcloud.com/zh/document/product/1085/68181),
+such as "kghy_0101"
      */
     public $TradeTwo;
 
@@ -142,8 +148,10 @@ Parameter value is not allowed to be 7,380,86.
      * @param string $Extended Extension field, which is left empty by default.
      * @param string $VerifyCode VerifyCode. This parameter is required. 
 Use the [SendVerifyCode API](https://www.tencentcloud.com/document/product/1085/65907) to obtain the verifycode.The SendVerifyCode API sends a 6-digit verifycode to your specified mobile number via SMS. After receiving it, you need to pass it along with other parameters.
-     * @param string $TradeOne Layer-1 industry id. This is a required item and can be obtained via the [ GetTradeConfigList  API](https://www.tencentcloud.com/zh/document/product/1085/68181).
-     * @param string $TradeTwo Layer-2 industry id. This is a required item and can be obtained via the [ GetTradeConfigList API](https://www.tencentcloud.com/zh/document/product/1085/68181).
+     * @param string $TradeOne Layer-1 industry id. This is a required item and can be obtained via the [ GetTradeConfigList  API](https://www.tencentcloud.com/zh/document/product/1085/68181),
+such as "kghy_01".
+     * @param string $TradeTwo Layer-2 industry id. This is a required item and can be obtained via the [ GetTradeConfigList API](https://www.tencentcloud.com/zh/document/product/1085/68181),
+such as "kghy_0101"
      */
     function __construct()
     {
