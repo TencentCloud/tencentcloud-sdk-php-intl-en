@@ -20,10 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Sub-rule branch.
  *
- * @method string getCondition() Obtain [Match condition].
-](Https://Cloud.Tencent.Com/Document/Product/1552/90438#33f65828-C6c6-4b66-A011-25a20b548d5d).
- * @method void setCondition(string $Condition) Set [Match condition].
-](Https://Cloud.Tencent.Com/Document/Product/1552/90438#33f65828-C6c6-4b66-A011-25a20b548d5d).
+ * @method string getCondition() Obtain [Match condition](https://www.tencentcloud.com/document/product/1145/54759).
+ * @method void setCondition(string $Condition) Set [Match condition](https://www.tencentcloud.com/document/product/1145/54759).
  * @method array getActions() Obtain [Operations](Https://Cloud.Tencent.Com/Document/Product/1552/90438#C7bd7e02-9247-4a72-B0e4-11c27cadb198).<Br>Note: actions and subrules cannot both be empty.
 Note: this field may return null, which indicates a failure to obtain a valid value.
  * @method void setActions(array $Actions) Set [Operations](Https://Cloud.Tencent.Com/Document/Product/1552/90438#C7bd7e02-9247-4a72-B0e4-11c27cadb198).<Br>Note: actions and subrules cannot both be empty.
@@ -36,8 +34,7 @@ Note: this field may return null, which indicates a failure to obtain a valid va
 class RuleBranch extends AbstractModel
 {
     /**
-     * @var string [Match condition].
-](Https://Cloud.Tencent.Com/Document/Product/1552/90438#33f65828-C6c6-4b66-A011-25a20b548d5d).
+     * @var string [Match condition](https://www.tencentcloud.com/document/product/1145/54759).
      */
     public $Condition;
 
@@ -54,8 +51,7 @@ Note: this field may return null, which indicates a failure to obtain a valid va
     public $SubRules;
 
     /**
-     * @param string $Condition [Match condition].
-](Https://Cloud.Tencent.Com/Document/Product/1552/90438#33f65828-C6c6-4b66-A011-25a20b548d5d).
+     * @param string $Condition [Match condition](https://www.tencentcloud.com/document/product/1145/54759).
      * @param array $Actions [Operations](Https://Cloud.Tencent.Com/Document/Product/1552/90438#C7bd7e02-9247-4a72-B0e4-11c27cadb198).<Br>Note: actions and subrules cannot both be empty.
 Note: this field may return null, which indicates a failure to obtain a valid value.
      * @param array $SubRules List of sub-rules. multiple rules exist in this list and are executed sequentially from top to bottom.<br>note: subrules and actions cannot both be empty. currently, only one layer of subrules is supported.

@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteOrgServiceAssign request structure.
  *
- * @method integer getServiceId() Obtain Organization service ID, which can be obtained through [ListOrganizationService](https://intl.cloud.tencent.com/document/product/850/109561?from_cn_redirect=1).
- * @method void setServiceId(integer $ServiceId) Set Organization service ID, which can be obtained through [ListOrganizationService](https://intl.cloud.tencent.com/document/product/850/109561?from_cn_redirect=1).
  * @method integer getMemberUin() Obtain Uin of the delegated admin.
  * @method void setMemberUin(integer $MemberUin) Set Uin of the delegated admin.
+ * @method integer getServiceId() Obtain Organization service ID, which can be obtained through [ListOrganizationService](https://intl.cloud.tencent.com/document/product/850/109561?from_cn_redirect=1).
+ * @method void setServiceId(integer $ServiceId) Set Organization service ID, which can be obtained through [ListOrganizationService](https://intl.cloud.tencent.com/document/product/850/109561?from_cn_redirect=1).
  */
 class DeleteOrgServiceAssignRequest extends AbstractModel
 {
-    /**
-     * @var integer Organization service ID, which can be obtained through [ListOrganizationService](https://intl.cloud.tencent.com/document/product/850/109561?from_cn_redirect=1).
-     */
-    public $ServiceId;
-
     /**
      * @var integer Uin of the delegated admin.
      */
     public $MemberUin;
 
     /**
-     * @param integer $ServiceId Organization service ID, which can be obtained through [ListOrganizationService](https://intl.cloud.tencent.com/document/product/850/109561?from_cn_redirect=1).
+     * @var integer Organization service ID, which can be obtained through [ListOrganizationService](https://intl.cloud.tencent.com/document/product/850/109561?from_cn_redirect=1).
+     */
+    public $ServiceId;
+
+    /**
      * @param integer $MemberUin Uin of the delegated admin.
+     * @param integer $ServiceId Organization service ID, which can be obtained through [ListOrganizationService](https://intl.cloud.tencent.com/document/product/850/109561?from_cn_redirect=1).
      */
     function __construct()
     {
@@ -54,12 +54,12 @@ class DeleteOrgServiceAssignRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ServiceId",$param) and $param["ServiceId"] !== null) {
-            $this->ServiceId = $param["ServiceId"];
-        }
-
         if (array_key_exists("MemberUin",$param) and $param["MemberUin"] !== null) {
             $this->MemberUin = $param["MemberUin"];
+        }
+
+        if (array_key_exists("ServiceId",$param) and $param["ServiceId"] !== null) {
+            $this->ServiceId = $param["ServiceId"];
         }
     }
 }

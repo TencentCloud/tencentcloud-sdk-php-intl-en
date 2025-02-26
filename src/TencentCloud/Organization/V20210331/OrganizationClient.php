@@ -23,9 +23,13 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Organization\V20210331\Models as Models;
 
 /**
+ * @method Models\AcceptJoinShareUnitInvitationResponse AcceptJoinShareUnitInvitation(Models\AcceptJoinShareUnitInvitationRequest $req) This API is used to accept an invitation to join a shared unit.
  * @method Models\AddExternalSAMLIdPCertificateResponse AddExternalSAMLIdPCertificate(Models\AddExternalSAMLIdPCertificateRequest $req) This API is used to add SAML signing certificates.
  * @method Models\AddOrganizationNodeResponse AddOrganizationNode(Models\AddOrganizationNodeRequest $req) This API is used to add an organization node.
  * @method Models\AddPermissionPolicyToRoleConfigurationResponse AddPermissionPolicyToRoleConfiguration(Models\AddPermissionPolicyToRoleConfigurationRequest $req) This API is used to add policies to permission configurations.
+ * @method Models\AddShareUnitResponse AddShareUnit(Models\AddShareUnitRequest $req) This API is used to create a shared unit.
+ * @method Models\AddShareUnitMembersResponse AddShareUnitMembers(Models\AddShareUnitMembersRequest $req) This API is used to add a shared unit member.
+ * @method Models\AddShareUnitResourcesResponse AddShareUnitResources(Models\AddShareUnitResourcesRequest $req) This API is used to add resources to a shared unit.
  * @method Models\AddUserToGroupResponse AddUserToGroup(Models\AddUserToGroupRequest $req) This API is used to add users to a user group.
  * @method Models\BindOrganizationMemberAuthAccountResponse BindOrganizationMemberAuthAccount(Models\BindOrganizationMemberAuthAccountRequest $req) This API is used to bind an organization member to a sub-account of the organization admin.
  * @method Models\CancelOrganizationMemberAuthAccountResponse CancelOrganizationMemberAuthAccount(Models\CancelOrganizationMemberAuthAccountRequest $req) This API is used to unbind an organization member from a sub-account of the organization admin.
@@ -54,6 +58,9 @@ use TencentCloud\Organization\V20210331\Models as Models;
  * @method Models\DeleteRoleAssignmentResponse DeleteRoleAssignment(Models\DeleteRoleAssignmentRequest $req) This API is used to remove authorizations on member accounts.
  * @method Models\DeleteRoleConfigurationResponse DeleteRoleConfiguration(Models\DeleteRoleConfigurationRequest $req) This API is used to delete the permission configuration information.
  * @method Models\DeleteSCIMCredentialResponse DeleteSCIMCredential(Models\DeleteSCIMCredentialRequest $req) This API is used to delete a SCIM key.
+ * @method Models\DeleteShareUnitResponse DeleteShareUnit(Models\DeleteShareUnitRequest $req) This API is used to delete a shared unit.
+ * @method Models\DeleteShareUnitMembersResponse DeleteShareUnitMembers(Models\DeleteShareUnitMembersRequest $req) This API is used to delete a shared unit member.
+ * @method Models\DeleteShareUnitResourcesResponse DeleteShareUnitResources(Models\DeleteShareUnitResourcesRequest $req) This API is used to delete shared unit resources.
  * @method Models\DeleteUserResponse DeleteUser(Models\DeleteUserRequest $req) This API is used to delete a user.
  * @method Models\DeleteUserSyncProvisioningResponse DeleteUserSyncProvisioning(Models\DeleteUserSyncProvisioningRequest $req) This API is used to delete sub-user synchronization tasks.
  * @method Models\DescribeIdentityCenterResponse DescribeIdentityCenter(Models\DescribeIdentityCenterRequest $req) This API is used to obtain TCO Identity Center service information.
@@ -63,6 +70,10 @@ use TencentCloud\Organization\V20210331\Models as Models;
  * @method Models\DescribeOrganizationMemberPoliciesResponse DescribeOrganizationMemberPolicies(Models\DescribeOrganizationMemberPoliciesRequest $req) This API is used to get the list of authorization policies of an organization member.
  * @method Models\DescribeOrganizationMembersResponse DescribeOrganizationMembers(Models\DescribeOrganizationMembersRequest $req) This API is used to get the list of organization members.
  * @method Models\DescribeOrganizationNodesResponse DescribeOrganizationNodes(Models\DescribeOrganizationNodesRequest $req) This API is used to get the list of organization nodes.
+ * @method Models\DescribeShareAreasResponse DescribeShareAreas(Models\DescribeShareAreasRequest $req) This API is used to obtain a list of shareable regions.
+ * @method Models\DescribeShareUnitMembersResponse DescribeShareUnitMembers(Models\DescribeShareUnitMembersRequest $req) This API is used to obtain the member list of a shared unit.
+ * @method Models\DescribeShareUnitResourcesResponse DescribeShareUnitResources(Models\DescribeShareUnitResourcesRequest $req) This API is used to obtain the resource list of a shared unit.
+ * @method Models\DescribeShareUnitsResponse DescribeShareUnits(Models\DescribeShareUnitsRequest $req) This API is used to obtain a list of shared units.
  * @method Models\DismantleRoleConfigurationResponse DismantleRoleConfiguration(Models\DismantleRoleConfigurationRequest $req) This API is used to undeploy permission configurations on member accounts.
  * @method Models\GetExternalSAMLIdentityProviderResponse GetExternalSAMLIdentityProvider(Models\GetExternalSAMLIdentityProviderRequest $req) This API is used to query the SAML identity provider configuration information.
  * @method Models\GetGroupResponse GetGroup(Models\GetGroupRequest $req) This API is used to query the user group information.
@@ -94,6 +105,7 @@ use TencentCloud\Organization\V20210331\Models as Models;
  * @method Models\OpenIdentityCenterResponse OpenIdentityCenter(Models\OpenIdentityCenterRequest $req) This API is used to activate Identity Center service (CIC).
  * @method Models\ProvisionRoleConfigurationResponse ProvisionRoleConfiguration(Models\ProvisionRoleConfigurationRequest $req) This API is used to deploy permission configurations on member accounts.
  * @method Models\QuitOrganizationResponse QuitOrganization(Models\QuitOrganizationRequest $req) This API is used to exit an organization.
+ * @method Models\RejectJoinShareUnitInvitationResponse RejectJoinShareUnitInvitation(Models\RejectJoinShareUnitInvitationRequest $req) This API is used to reject an invitation to join a shared unit.
  * @method Models\RemoveExternalSAMLIdPCertificateResponse RemoveExternalSAMLIdPCertificate(Models\RemoveExternalSAMLIdPCertificateRequest $req) This API is used to remove SAML signing certificates.
  * @method Models\RemovePermissionPolicyFromRoleConfigurationResponse RemovePermissionPolicyFromRoleConfiguration(Models\RemovePermissionPolicyFromRoleConfigurationRequest $req) This API is used to remove policies from permission configurations.
  * @method Models\RemoveUserFromGroupResponse RemoveUserFromGroup(Models\RemoveUserFromGroupRequest $req) This API is used to removes users from a user group.
@@ -106,6 +118,7 @@ use TencentCloud\Organization\V20210331\Models as Models;
  * @method Models\UpdateRoleConfigurationResponse UpdateRoleConfiguration(Models\UpdateRoleConfigurationRequest $req) This API is used to modify the permission configuration information.
  * @method Models\UpdateSCIMCredentialStatusResponse UpdateSCIMCredentialStatus(Models\UpdateSCIMCredentialStatusRequest $req) This API is used to enable or disable a SCIM key.
  * @method Models\UpdateSCIMSynchronizationStatusResponse UpdateSCIMSynchronizationStatus(Models\UpdateSCIMSynchronizationStatusRequest $req) This API is used to enable or disable user SCIM synchronization.
+ * @method Models\UpdateShareUnitResponse UpdateShareUnit(Models\UpdateShareUnitRequest $req) This API is used to update a shared unit.
  * @method Models\UpdateUserResponse UpdateUser(Models\UpdateUserRequest $req) This API is used to modify user information.
  * @method Models\UpdateUserStatusResponse UpdateUserStatus(Models\UpdateUserStatusRequest $req) This API is used to modify the user status.
  * @method Models\UpdateUserSyncProvisioningResponse UpdateUserSyncProvisioning(Models\UpdateUserSyncProvisioningRequest $req) This API is used to create sub-user synchronization tasks.
