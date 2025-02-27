@@ -26,6 +26,10 @@ use TencentCloud\Common\AbstractModel;
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setEnvironments(array $Environments) Set The list of TCB environments.
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getError() Obtain Whether to query exceptions.
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method void setError(string $Error) Set Whether to query exceptions.
+Note: this field may return null, indicating that no valid values can be obtained.
  */
 class TCBInstanceList extends AbstractModel
 {
@@ -41,9 +45,17 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $Environments;
 
     /**
+     * @var string Whether to query exceptions.
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public $Error;
+
+    /**
      * @param string $Region The region.
      * @param array $Environments The list of TCB environments.
 Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $Error Whether to query exceptions.
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -69,6 +81,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 $obj->deserialize($value);
                 array_push($this->Environments, $obj);
             }
+        }
+
+        if (array_key_exists("Error",$param) and $param["Error"] !== null) {
+            $this->Error = $param["Error"];
         }
     }
 }

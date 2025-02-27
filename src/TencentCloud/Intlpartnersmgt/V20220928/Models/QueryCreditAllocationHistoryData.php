@@ -28,10 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCredit(float $Credit) Set Allocated credit value
  * @method float getAllocatedCredit() Obtain The allocated total credit
  * @method void setAllocatedCredit(float $AllocatedCredit) Set The allocated total credit
- * @method float getClientCreditAfter() Obtain Available credits after allocation
-Note: The return value may be null, indicating that no valid data can be obtained.
- * @method void setClientCreditAfter(float $ClientCreditAfter) Set Available credits after allocation
-Note: The return value may be null, indicating that no valid data can be obtained.
+ * @method float getClientCreditAfter() Obtain Available credits after allocation.
+ * @method void setClientCreditAfter(float $ClientCreditAfter) Set Available credits after allocation.
  */
 class QueryCreditAllocationHistoryData extends AbstractModel
 {
@@ -56,8 +54,7 @@ class QueryCreditAllocationHistoryData extends AbstractModel
     public $AllocatedCredit;
 
     /**
-     * @var float Available credits after allocation
-Note: The return value may be null, indicating that no valid data can be obtained.
+     * @var float Available credits after allocation.
      */
     public $ClientCreditAfter;
 
@@ -66,8 +63,7 @@ Note: The return value may be null, indicating that no valid data can be obtaine
      * @param string $Operator Operator
      * @param float $Credit Allocated credit value
      * @param float $AllocatedCredit The allocated total credit
-     * @param float $ClientCreditAfter Available credits after allocation
-Note: The return value may be null, indicating that no valid data can be obtained.
+     * @param float $ClientCreditAfter Available credits after allocation.
      */
     function __construct()
     {

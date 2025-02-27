@@ -26,8 +26,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRoomId(integer $RoomId) Set The room ID (number).
  * @method string getUserId() Obtain The user ID.
  * @method void setUserId(string $UserId) Set The user ID.
- * @method integer getIsMute() Obtain Whether to disable the user’s audio and video. 0: Enable; 1: Disable.
- * @method void setIsMute(integer $IsMute) Set Whether to disable the user’s audio and video. 0: Enable; 1: Disable.
+ * @method integer getIsMute() Obtain Controls the activation state of audio and video.
+0: Enable audio and video,
+1: Disable audio and video,
+2: Disable audio only,
+3: Disable video only.
+ * @method void setIsMute(integer $IsMute) Set Controls the activation state of audio and video.
+0: Enable audio and video,
+1: Disable audio and video,
+2: Disable audio only,
+3: Disable video only.
  */
 class SetUserBlockedRequest extends AbstractModel
 {
@@ -47,7 +55,11 @@ class SetUserBlockedRequest extends AbstractModel
     public $UserId;
 
     /**
-     * @var integer Whether to disable the user’s audio and video. 0: Enable; 1: Disable.
+     * @var integer Controls the activation state of audio and video.
+0: Enable audio and video,
+1: Disable audio and video,
+2: Disable audio only,
+3: Disable video only.
      */
     public $IsMute;
 
@@ -55,7 +67,11 @@ class SetUserBlockedRequest extends AbstractModel
      * @param integer $SdkAppId The application ID.
      * @param integer $RoomId The room ID (number).
      * @param string $UserId The user ID.
-     * @param integer $IsMute Whether to disable the user’s audio and video. 0: Enable; 1: Disable.
+     * @param integer $IsMute Controls the activation state of audio and video.
+0: Enable audio and video,
+1: Disable audio and video,
+2: Disable audio only,
+3: Disable video only.
      */
     function __construct()
     {

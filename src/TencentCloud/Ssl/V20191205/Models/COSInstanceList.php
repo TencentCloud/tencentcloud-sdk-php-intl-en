@@ -18,44 +18,44 @@ namespace TencentCloud\Ssl\V20191205\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Details of CLB instances - data structure of an async task for querying associated cloud resources
+ * COS instance details - asynchronous association of cloud resource data structure.
  *
- * @method string getRegion() Obtain The region.
- * @method void setRegion(string $Region) Set The region.
- * @method array getInstanceList() Obtain CLB instance details.
- * @method void setInstanceList(array $InstanceList) Set CLB instance details.
- * @method integer getTotalCount() Obtain The total number of CLB instances in this region.
- * @method void setTotalCount(integer $TotalCount) Set The total number of CLB instances in this region.
- * @method string getError() Obtain Whether to query exceptions.
- * @method void setError(string $Error) Set Whether to query exceptions.
+ * @method string getRegion() Obtain Region.
+ * @method void setRegion(string $Region) Set Region.
+ * @method array getInstanceList() Obtain Instance details.
+ * @method void setInstanceList(array $InstanceList) Set Instance details.
+ * @method integer getTotalCount() Obtain Total number under the region.
+ * @method void setTotalCount(integer $TotalCount) Set Total number under the region.
+ * @method string getError() Obtain Error message.
+ * @method void setError(string $Error) Set Error message.
  */
-class ClbInstanceList extends AbstractModel
+class COSInstanceList extends AbstractModel
 {
     /**
-     * @var string The region.
+     * @var string Region.
      */
     public $Region;
 
     /**
-     * @var array CLB instance details.
+     * @var array Instance details.
      */
     public $InstanceList;
 
     /**
-     * @var integer The total number of CLB instances in this region.
+     * @var integer Total number under the region.
      */
     public $TotalCount;
 
     /**
-     * @var string Whether to query exceptions.
+     * @var string Error message.
      */
     public $Error;
 
     /**
-     * @param string $Region The region.
-     * @param array $InstanceList CLB instance details.
-     * @param integer $TotalCount The total number of CLB instances in this region.
-     * @param string $Error Whether to query exceptions.
+     * @param string $Region Region.
+     * @param array $InstanceList Instance details.
+     * @param integer $TotalCount Total number under the region.
+     * @param string $Error Error message.
      */
     function __construct()
     {
@@ -77,7 +77,7 @@ class ClbInstanceList extends AbstractModel
         if (array_key_exists("InstanceList",$param) and $param["InstanceList"] !== null) {
             $this->InstanceList = [];
             foreach ($param["InstanceList"] as $key => $value){
-                $obj = new ClbInstanceDetail();
+                $obj = new CosInstanceDetail();
                 $obj->deserialize($value);
                 array_push($this->InstanceList, $obj);
             }

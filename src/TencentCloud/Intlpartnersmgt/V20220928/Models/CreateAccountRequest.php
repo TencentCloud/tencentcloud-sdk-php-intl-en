@@ -48,12 +48,12 @@ Parameter value is not allowed to be 7,380,86.
 Parameter value is not allowed to be 7,380,86.
  * @method string getArea() Obtain Customer's ISO2 standard country/region code, which can be obtained via the [GetCountryCodes API](https://www.tencentcloud.com/document/product/1085/51416). It should correspond to the `CountryCode` field, such as `HK`.
  * @method void setArea(string $Area) Set Customer's ISO2 standard country/region code, which can be obtained via the [GetCountryCodes API](https://www.tencentcloud.com/document/product/1085/51416). It should correspond to the `CountryCode` field, such as `HK`.
- * @method string getExtended() Obtain Extension field, which is left empty by default.
- * @method void setExtended(string $Extended) Set Extension field, which is left empty by default.
  * @method string getVerifyCode() Obtain VerifyCode. This parameter is required. 
 Use the [SendVerifyCode API](https://www.tencentcloud.com/document/product/1085/65907) to obtain the verifycode.The SendVerifyCode API sends a 6-digit verifycode to your specified mobile number via SMS. After receiving it, you need to pass it along with other parameters.
  * @method void setVerifyCode(string $VerifyCode) Set VerifyCode. This parameter is required. 
 Use the [SendVerifyCode API](https://www.tencentcloud.com/document/product/1085/65907) to obtain the verifycode.The SendVerifyCode API sends a 6-digit verifycode to your specified mobile number via SMS. After receiving it, you need to pass it along with other parameters.
+ * @method string getExtended() Obtain Extension field, which is left empty by default.
+ * @method void setExtended(string $Extended) Set Extension field, which is left empty by default.
  * @method string getTradeOne() Obtain Layer-1 industry id. This is a required item and can be obtained via the [ GetTradeConfigList  API](https://www.tencentcloud.com/zh/document/product/1085/68181),
 such as "kghy_01".
  * @method void setTradeOne(string $TradeOne) Set Layer-1 industry id. This is a required item and can be obtained via the [ GetTradeConfigList  API](https://www.tencentcloud.com/zh/document/product/1085/68181),
@@ -108,15 +108,15 @@ Parameter value is not allowed to be 7,380,86.
     public $Area;
 
     /**
-     * @var string Extension field, which is left empty by default.
-     */
-    public $Extended;
-
-    /**
      * @var string VerifyCode. This parameter is required. 
 Use the [SendVerifyCode API](https://www.tencentcloud.com/document/product/1085/65907) to obtain the verifycode.The SendVerifyCode API sends a 6-digit verifycode to your specified mobile number via SMS. After receiving it, you need to pass it along with other parameters.
      */
     public $VerifyCode;
+
+    /**
+     * @var string Extension field, which is left empty by default.
+     */
+    public $Extended;
 
     /**
      * @var string Layer-1 industry id. This is a required item and can be obtained via the [ GetTradeConfigList  API](https://www.tencentcloud.com/zh/document/product/1085/68181),
@@ -145,9 +145,9 @@ The system will perform binding limit verification of the mobile number you prov
      * @param string $CountryCode Customer's country/region code, which can be obtained via the  [GetCountryCodes API](https://www.tencentcloud.com/document/product/1085/51416), such as "852".
 Parameter value is not allowed to be 7,380,86.
      * @param string $Area Customer's ISO2 standard country/region code, which can be obtained via the [GetCountryCodes API](https://www.tencentcloud.com/document/product/1085/51416). It should correspond to the `CountryCode` field, such as `HK`.
-     * @param string $Extended Extension field, which is left empty by default.
      * @param string $VerifyCode VerifyCode. This parameter is required. 
 Use the [SendVerifyCode API](https://www.tencentcloud.com/document/product/1085/65907) to obtain the verifycode.The SendVerifyCode API sends a 6-digit verifycode to your specified mobile number via SMS. After receiving it, you need to pass it along with other parameters.
+     * @param string $Extended Extension field, which is left empty by default.
      * @param string $TradeOne Layer-1 industry id. This is a required item and can be obtained via the [ GetTradeConfigList  API](https://www.tencentcloud.com/zh/document/product/1085/68181),
 such as "kghy_01".
      * @param string $TradeTwo Layer-2 industry id. This is a required item and can be obtained via the [ GetTradeConfigList API](https://www.tencentcloud.com/zh/document/product/1085/68181),
@@ -194,12 +194,12 @@ such as "kghy_0101"
             $this->Area = $param["Area"];
         }
 
-        if (array_key_exists("Extended",$param) and $param["Extended"] !== null) {
-            $this->Extended = $param["Extended"];
-        }
-
         if (array_key_exists("VerifyCode",$param) and $param["VerifyCode"] !== null) {
             $this->VerifyCode = $param["VerifyCode"];
+        }
+
+        if (array_key_exists("Extended",$param) and $param["Extended"] !== null) {
+            $this->Extended = $param["Extended"];
         }
 
         if (array_key_exists("TradeOne",$param) and $param["TradeOne"] !== null) {

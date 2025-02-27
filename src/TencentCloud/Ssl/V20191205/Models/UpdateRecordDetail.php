@@ -20,24 +20,62 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Update record details
  *
- * @method integer getId() Obtain Detail record ID
- * @method void setId(integer $Id) Set Detail record ID
- * @method string getCertId() Obtain New certificate ID
- * @method void setCertId(string $CertId) Set New certificate ID
- * @method string getOldCertId() Obtain Old certificate ID
- * @method void setOldCertId(string $OldCertId) Set Old certificate ID
+ * @method integer getId() Obtain Update detail record id.
+ * @method void setId(integer $Id) Set Update detail record id.
+ * @method string getCertId() Obtain New and old certificate update - new certificate id.
+ * @method void setCertId(string $CertId) Set New and old certificate update - new certificate id.
+ * @method string getOldCertId() Obtain Old and new certificate update - old certificate id.
+ * @method void setOldCertId(string $OldCertId) Set Old and new certificate update - old certificate id.
  * @method array getDomains() Obtain Deployment domain name list
 Note: This field may return null, indicating that no valid value can be obtained.
  * @method void setDomains(array $Domains) Set Deployment domain name list
 Note: This field may return null, indicating that no valid value can be obtained.
- * @method string getResourceType() Obtain Deployment resource type
- * @method void setResourceType(string $ResourceType) Set Deployment resource type
+ * @method string getResourceType() Obtain Type of cloud resource for updating old and new certs.
+- clb.
+- cdn.
+- ddos.
+- live.
+- vod.
+- waf.
+- apigateway.
+- teo.
+- tke.
+- cos.
+- tse.
+- tcb.
+ * @method void setResourceType(string $ResourceType) Set Type of cloud resource for updating old and new certs.
+- clb.
+- cdn.
+- ddos.
+- live.
+- vod.
+- waf.
+- apigateway.
+- teo.
+- tke.
+- cos.
+- tse.
+- tcb.
  * @method string getRegion() Obtain Deployment region
 Note: This field may return null, indicating that no valid value can be obtained.
  * @method void setRegion(string $Region) Set Deployment region
 Note: This field may return null, indicating that no valid value can be obtained.
- * @method integer getStatus() Obtain Deployment status
- * @method void setStatus(integer $Status) Set Deployment status
+ * @method integer getStatus() Obtain Deployment status. valid values:.
+0: To be deployed.
+1: Deployment successful.
+2: Deployment failed.
+3: Deploying.
+4: Rollback succeeded.
+5: Rollback failure.
+6: No resource, no need for deployment.
+ * @method void setStatus(integer $Status) Set Deployment status. valid values:.
+0: To be deployed.
+1: Deployment successful.
+2: Deployment failed.
+3: Deploying.
+4: Rollback succeeded.
+5: Rollback failure.
+6: No resource, no need for deployment.
  * @method string getErrorMsg() Obtain Deployment error message
 Note: This field may return null, indicating that no valid value can be obtained.
  * @method void setErrorMsg(string $ErrorMsg) Set Deployment error message
@@ -94,21 +132,25 @@ Note: This field may return null, indicating that no valid value can be obtained
 Note: This field may return null, indicating that no valid value can be obtained.
  * @method void setTCBType(string $TCBType) Set TCB deployment type
 Note: This field may return null, indicating that no valid value can be obtained.
+ * @method string getUrl() Obtain Listener url (only for CLB).
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method void setUrl(string $Url) Set Listener url (only for CLB).
+Note: this field may return null, indicating that no valid values can be obtained.
  */
 class UpdateRecordDetail extends AbstractModel
 {
     /**
-     * @var integer Detail record ID
+     * @var integer Update detail record id.
      */
     public $Id;
 
     /**
-     * @var string New certificate ID
+     * @var string New and old certificate update - new certificate id.
      */
     public $CertId;
 
     /**
-     * @var string Old certificate ID
+     * @var string Old and new certificate update - old certificate id.
      */
     public $OldCertId;
 
@@ -119,7 +161,19 @@ Note: This field may return null, indicating that no valid value can be obtained
     public $Domains;
 
     /**
-     * @var string Deployment resource type
+     * @var string Type of cloud resource for updating old and new certs.
+- clb.
+- cdn.
+- ddos.
+- live.
+- vod.
+- waf.
+- apigateway.
+- teo.
+- tke.
+- cos.
+- tse.
+- tcb.
      */
     public $ResourceType;
 
@@ -130,7 +184,14 @@ Note: This field may return null, indicating that no valid value can be obtained
     public $Region;
 
     /**
-     * @var integer Deployment status
+     * @var integer Deployment status. valid values:.
+0: To be deployed.
+1: Deployment successful.
+2: Deployment failed.
+3: Deploying.
+4: Rollback succeeded.
+5: Rollback failure.
+6: No resource, no need for deployment.
      */
     public $Status;
 
@@ -223,15 +284,40 @@ Note: This field may return null, indicating that no valid value can be obtained
     public $TCBType;
 
     /**
-     * @param integer $Id Detail record ID
-     * @param string $CertId New certificate ID
-     * @param string $OldCertId Old certificate ID
+     * @var string Listener url (only for CLB).
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public $Url;
+
+    /**
+     * @param integer $Id Update detail record id.
+     * @param string $CertId New and old certificate update - new certificate id.
+     * @param string $OldCertId Old and new certificate update - old certificate id.
      * @param array $Domains Deployment domain name list
 Note: This field may return null, indicating that no valid value can be obtained.
-     * @param string $ResourceType Deployment resource type
+     * @param string $ResourceType Type of cloud resource for updating old and new certs.
+- clb.
+- cdn.
+- ddos.
+- live.
+- vod.
+- waf.
+- apigateway.
+- teo.
+- tke.
+- cos.
+- tse.
+- tcb.
      * @param string $Region Deployment region
 Note: This field may return null, indicating that no valid value can be obtained.
-     * @param integer $Status Deployment status
+     * @param integer $Status Deployment status. valid values:.
+0: To be deployed.
+1: Deployment successful.
+2: Deployment failed.
+3: Deploying.
+4: Rollback succeeded.
+5: Rollback failure.
+6: No resource, no need for deployment.
      * @param string $ErrorMsg Deployment error message
 Note: This field may return null, indicating that no valid value can be obtained.
      * @param string $CreateTime Deployment time
@@ -260,6 +346,8 @@ Note: This field may return null, indicating that no valid value can be obtained
 Note: This field may return null, indicating that no valid value can be obtained.
      * @param string $TCBType TCB deployment type
 Note: This field may return null, indicating that no valid value can be obtained.
+     * @param string $Url Listener url (only for CLB).
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -360,6 +448,10 @@ Note: This field may return null, indicating that no valid value can be obtained
 
         if (array_key_exists("TCBType",$param) and $param["TCBType"] !== null) {
             $this->TCBType = $param["TCBType"];
+        }
+
+        if (array_key_exists("Url",$param) and $param["Url"] !== null) {
+            $this->Url = $param["Url"];
         }
     }
 }

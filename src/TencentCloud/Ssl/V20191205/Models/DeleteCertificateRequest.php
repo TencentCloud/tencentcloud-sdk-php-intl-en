@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getCertificateId() Obtain Certificate ID
  * @method void setCertificateId(string $CertificateId) Set Certificate ID
- * @method boolean getIsCheckResource() Obtain 
- * @method void setIsCheckResource(boolean $IsCheckResource) Set 
+ * @method boolean getIsCheckResource() Obtain When deleting, check whether the certificate is associated with cloud resources. By default, no check is performed. if you choose to check (the authorization service role SSL_QCSLinkedRoleInReplaceLoadCertificate is required), the deletion will become asynchronous, and the API will return an asynchronous task id. you need to use the DescribeDeleteCertificatesTaskResult API to check whether the deletion is successful.
+ * @method void setIsCheckResource(boolean $IsCheckResource) Set When deleting, check whether the certificate is associated with cloud resources. By default, no check is performed. if you choose to check (the authorization service role SSL_QCSLinkedRoleInReplaceLoadCertificate is required), the deletion will become asynchronous, and the API will return an asynchronous task id. you need to use the DescribeDeleteCertificatesTaskResult API to check whether the deletion is successful.
  */
 class DeleteCertificateRequest extends AbstractModel
 {
@@ -33,13 +33,13 @@ class DeleteCertificateRequest extends AbstractModel
     public $CertificateId;
 
     /**
-     * @var boolean 
+     * @var boolean When deleting, check whether the certificate is associated with cloud resources. By default, no check is performed. if you choose to check (the authorization service role SSL_QCSLinkedRoleInReplaceLoadCertificate is required), the deletion will become asynchronous, and the API will return an asynchronous task id. you need to use the DescribeDeleteCertificatesTaskResult API to check whether the deletion is successful.
      */
     public $IsCheckResource;
 
     /**
      * @param string $CertificateId Certificate ID
-     * @param boolean $IsCheckResource 
+     * @param boolean $IsCheckResource When deleting, check whether the certificate is associated with cloud resources. By default, no check is performed. if you choose to check (the authorization service role SSL_QCSLinkedRoleInReplaceLoadCertificate is required), the deletion will become asynchronous, and the API will return an asynchronous task id. you need to use the DescribeDeleteCertificatesTaskResult API to check whether the deletion is successful.
      */
     function __construct()
     {

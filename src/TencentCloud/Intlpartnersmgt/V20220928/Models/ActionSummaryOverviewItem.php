@@ -20,70 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Transaction type details in the customer bill data totaled by payment mode
  *
- * @method string getActionType() Obtain Transaction type code
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setActionType(string $ActionType) Set Transaction type code
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getActionTypeName() Obtain Transaction type name
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setActionTypeName(string $ActionTypeName) Set Transaction type name
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getOriginalCost() Obtain The actual total consumption amount accurate down to eight decimal places
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setOriginalCost(string $OriginalCost) Set The actual total consumption amount accurate down to eight decimal places
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getVoucherPayAmount() Obtain The deducted voucher amount accurate down to eight decimal places
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setVoucherPayAmount(string $VoucherPayAmount) Set The deducted voucher amount accurate down to eight decimal places
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getTotalCost() Obtain Total consumption amount accurate down to eight decimal places
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setTotalCost(string $TotalCost) Set Total consumption amount accurate down to eight decimal places
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getActionType() Obtain Transaction type code.
+ * @method void setActionType(string $ActionType) Set Transaction type code.
+ * @method string getActionTypeName() Obtain Transaction type name.
+ * @method void setActionTypeName(string $ActionTypeName) Set Transaction type name.
+ * @method string getOriginalCost() Obtain Actual total consumption, up to 8 decimal places.
+ * @method void setOriginalCost(string $OriginalCost) Set Actual total consumption, up to 8 decimal places.
+ * @method string getVoucherPayAmount() Obtain Voucher payment amount, up to 8 decimal places.
+ * @method void setVoucherPayAmount(string $VoucherPayAmount) Set Voucher payment amount, up to 8 decimal places.
+ * @method string getTotalCost() Obtain Total consumption, up to 8 decimal places.
+ * @method void setTotalCost(string $TotalCost) Set Total consumption, up to 8 decimal places.
  */
 class ActionSummaryOverviewItem extends AbstractModel
 {
     /**
-     * @var string Transaction type code
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Transaction type code.
      */
     public $ActionType;
 
     /**
-     * @var string Transaction type name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Transaction type name.
      */
     public $ActionTypeName;
 
     /**
-     * @var string The actual total consumption amount accurate down to eight decimal places
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Actual total consumption, up to 8 decimal places.
      */
     public $OriginalCost;
 
     /**
-     * @var string The deducted voucher amount accurate down to eight decimal places
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Voucher payment amount, up to 8 decimal places.
      */
     public $VoucherPayAmount;
 
     /**
-     * @var string Total consumption amount accurate down to eight decimal places
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Total consumption, up to 8 decimal places.
      */
     public $TotalCost;
 
     /**
-     * @param string $ActionType Transaction type code
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $ActionTypeName Transaction type name
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $OriginalCost The actual total consumption amount accurate down to eight decimal places
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $VoucherPayAmount The deducted voucher amount accurate down to eight decimal places
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $TotalCost Total consumption amount accurate down to eight decimal places
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $ActionType Transaction type code.
+     * @param string $ActionTypeName Transaction type name.
+     * @param string $OriginalCost Actual total consumption, up to 8 decimal places.
+     * @param string $VoucherPayAmount Voucher payment amount, up to 8 decimal places.
+     * @param string $TotalCost Total consumption, up to 8 decimal places.
      */
     function __construct()
     {

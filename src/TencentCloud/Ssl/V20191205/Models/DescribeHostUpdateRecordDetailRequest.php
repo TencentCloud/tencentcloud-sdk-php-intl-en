@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeHostUpdateRecordDetail request structure.
  *
- * @method string getDeployRecordId() Obtain One-click update record ID
- * @method void setDeployRecordId(string $DeployRecordId) Set One-click update record ID
- * @method string getLimit() Obtain Number per page, 10 by default.
- * @method void setLimit(string $Limit) Set Number per page, 10 by default.
- * @method string getOffset() Obtain Paging offset, starting from 0
- * @method void setOffset(string $Offset) Set Paging offset, starting from 0
+ * @method string getDeployRecordId() Obtain Deployment record id, which is the record id returned by calling the UpdateCertificateInstance api, or the record id returned by calling the UpdateCertificateRecordRollback rollback api.
+ * @method void setDeployRecordId(string $DeployRecordId) Set Deployment record id, which is the record id returned by calling the UpdateCertificateInstance api, or the record id returned by calling the UpdateCertificateRecordRollback rollback api.
+ * @method string getLimit() Obtain Number of items per page. the default is 10. the maximum value is 200.
+ * @method void setLimit(string $Limit) Set Number of items per page. the default is 10. the maximum value is 200.
+ * @method string getOffset() Obtain Pagination offset, starting from 0. default is 0.
+ * @method void setOffset(string $Offset) Set Pagination offset, starting from 0. default is 0.
  */
 class DescribeHostUpdateRecordDetailRequest extends AbstractModel
 {
     /**
-     * @var string One-click update record ID
+     * @var string Deployment record id, which is the record id returned by calling the UpdateCertificateInstance api, or the record id returned by calling the UpdateCertificateRecordRollback rollback api.
      */
     public $DeployRecordId;
 
     /**
-     * @var string Number per page, 10 by default.
+     * @var string Number of items per page. the default is 10. the maximum value is 200.
      */
     public $Limit;
 
     /**
-     * @var string Paging offset, starting from 0
+     * @var string Pagination offset, starting from 0. default is 0.
      */
     public $Offset;
 
     /**
-     * @param string $DeployRecordId One-click update record ID
-     * @param string $Limit Number per page, 10 by default.
-     * @param string $Offset Paging offset, starting from 0
+     * @param string $DeployRecordId Deployment record id, which is the record id returned by calling the UpdateCertificateInstance api, or the record id returned by calling the UpdateCertificateRecordRollback rollback api.
+     * @param string $Limit Number of items per page. the default is 10. the maximum value is 200.
+     * @param string $Offset Pagination offset, starting from 0. default is 0.
      */
     function __construct()
     {

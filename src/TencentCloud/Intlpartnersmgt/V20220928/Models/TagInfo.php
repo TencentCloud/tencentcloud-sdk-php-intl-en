@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Cost Allocation Tags
  *
- * @method string getTagKey() Obtain Tag keyNote: This field may return null, indicating that no valid values can be obtained.
- * @method void setTagKey(string $TagKey) Set Tag keyNote: This field may return null, indicating that no valid values can be obtained.
- * @method string getTagValue() Obtain Tag valueNote: This field may return null, indicating that no valid values can be obtained.
- * @method void setTagValue(string $TagValue) Set Tag valueNote: This field may return null, indicating that no valid values can be obtained.
+ * @method string getTagKey() Obtain Tag key.
+ * @method void setTagKey(string $TagKey) Set Tag key.
+ * @method string getTagValue() Obtain Tag value.
+ * @method void setTagValue(string $TagValue) Set Tag value.
  */
 class TagInfo extends AbstractModel
 {
     /**
-     * @var string Tag keyNote: This field may return null, indicating that no valid values can be obtained.
+     * @var string Tag key.
      */
     public $TagKey;
 
     /**
-     * @var string Tag valueNote: This field may return null, indicating that no valid values can be obtained.
+     * @var string Tag value.
      */
     public $TagValue;
 
     /**
-     * @param string $TagKey Tag keyNote: This field may return null, indicating that no valid values can be obtained.
-     * @param string $TagValue Tag valueNote: This field may return null, indicating that no valid values can be obtained.
+     * @param string $TagKey Tag key.
+     * @param string $TagValue Tag value.
      */
     function __construct()
     {

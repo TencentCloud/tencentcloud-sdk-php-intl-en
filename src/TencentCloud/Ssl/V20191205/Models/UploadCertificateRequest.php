@@ -30,12 +30,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAlias(string $Alias) Set Alias
  * @method integer getProjectId() Obtain Project ID
  * @method void setProjectId(integer $ProjectId) Set Project ID
- * @method string getCertificateUse() Obtain 
- * @method void setCertificateUse(string $CertificateUse) Set 
+ * @method string getCertificateUse() Obtain Certificate Usage/Source, such as CLB, CDN, WAF, LIVE, DDOS.
+ * @method void setCertificateUse(string $CertificateUse) Set Certificate Usage/Source, such as CLB, CDN, WAF, LIVE, DDOS.
  * @method array getTags() Obtain The list of tags.
  * @method void setTags(array $Tags) Set The list of tags.
- * @method boolean getRepeatable() Obtain Whether a certificate can be repeatedly uploaded.
- * @method void setRepeatable(boolean $Repeatable) Set Whether a certificate can be repeatedly uploaded.
+ * @method boolean getRepeatable() Obtain Whether to allow duplicate upload of the same certificate, true: allow uploading certificates with the same fingerprint; false: do not allow uploading certificates with the same fingerprint. default value: true.
+ * @method void setRepeatable(boolean $Repeatable) Set Whether to allow duplicate upload of the same certificate, true: allow uploading certificates with the same fingerprint; false: do not allow uploading certificates with the same fingerprint. default value: true.
  */
 class UploadCertificateRequest extends AbstractModel
 {
@@ -65,7 +65,7 @@ class UploadCertificateRequest extends AbstractModel
     public $ProjectId;
 
     /**
-     * @var string 
+     * @var string Certificate Usage/Source, such as CLB, CDN, WAF, LIVE, DDOS.
      */
     public $CertificateUse;
 
@@ -75,7 +75,7 @@ class UploadCertificateRequest extends AbstractModel
     public $Tags;
 
     /**
-     * @var boolean Whether a certificate can be repeatedly uploaded.
+     * @var boolean Whether to allow duplicate upload of the same certificate, true: allow uploading certificates with the same fingerprint; false: do not allow uploading certificates with the same fingerprint. default value: true.
      */
     public $Repeatable;
 
@@ -85,9 +85,9 @@ class UploadCertificateRequest extends AbstractModel
      * @param string $CertificateType Certificate type. Valid values: `CA` (CA certificate) and `SVR` (server certificate). Default value: `SVR`
      * @param string $Alias Alias
      * @param integer $ProjectId Project ID
-     * @param string $CertificateUse 
+     * @param string $CertificateUse Certificate Usage/Source, such as CLB, CDN, WAF, LIVE, DDOS.
      * @param array $Tags The list of tags.
-     * @param boolean $Repeatable Whether a certificate can be repeatedly uploaded.
+     * @param boolean $Repeatable Whether to allow duplicate upload of the same certificate, true: allow uploading certificates with the same fingerprint; false: do not allow uploading certificates with the same fingerprint. default value: true.
      */
     function __construct()
     {

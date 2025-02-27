@@ -26,10 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setServiceName(string $ServiceName) Set The instance name.
  * @method string getDomain() Obtain The domain.
  * @method void setDomain(string $Domain) Set The domain.
- * @method string getCertId() Obtain The certificate ID.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setCertId(string $CertId) Set The certificate ID.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getCertId() Obtain Certificate id.
+ * @method void setCertId(string $CertId) Set Certificate id.
  * @method string getProtocol() Obtain The protocol.
  * @method void setProtocol(string $Protocol) Set The protocol.
  */
@@ -51,8 +49,7 @@ class ApiGatewayInstanceDetail extends AbstractModel
     public $Domain;
 
     /**
-     * @var string The certificate ID.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Certificate id.
      */
     public $CertId;
 
@@ -65,8 +62,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $ServiceId The instance ID.
      * @param string $ServiceName The instance name.
      * @param string $Domain The domain.
-     * @param string $CertId The certificate ID.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $CertId Certificate id.
      * @param string $Protocol The protocol.
      */
     function __construct()

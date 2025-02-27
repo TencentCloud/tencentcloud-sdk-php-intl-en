@@ -20,410 +20,298 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Customer bill details
  *
- * @method integer getPayerAccountId() Obtain Reseller account
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setPayerAccountId(integer $PayerAccountId) Set Reseller account
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getOwnerAccountId() Obtain Customer account
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setOwnerAccountId(integer $OwnerAccountId) Set Customer account
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getOperatorAccountId() Obtain Operator account
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setOperatorAccountId(integer $OperatorAccountId) Set Operator account
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getProductName() Obtain Product name
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setProductName(string $ProductName) Set Product name
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getPayerAccountId() Obtain reseller account.
+ * @method void setPayerAccountId(integer $PayerAccountId) Set reseller account.
+ * @method integer getOwnerAccountId() Obtain Subaccount.
+ * @method void setOwnerAccountId(integer $OwnerAccountId) Set Subaccount.
+ * @method integer getOperatorAccountId() Obtain Operator account.
+ * @method void setOperatorAccountId(integer $OperatorAccountId) Set Operator account.
+ * @method string getProductName() Obtain Product name.
+ * @method void setProductName(string $ProductName) Set Product name.
  * @method string getBillingMode() Obtain Billing mode
-`Monthly subscription` (Monthly subscription)
-`Pay-As-You-Go resources` (Pay-as-you-go)
-`Standard RI` (Reserved instance)
-Note: This field may return null, indicating that no valid values can be obtained.
+.
+Monthly subscription (annual and monthly).
+Pay-As-You-Go resources.
+Standard ri reserved instance.
  * @method void setBillingMode(string $BillingMode) Set Billing mode
-`Monthly subscription` (Monthly subscription)
-`Pay-As-You-Go resources` (Pay-as-you-go)
-`Standard RI` (Reserved instance)
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getProjectName() Obtain Project name
+.
+Monthly subscription (annual and monthly).
+Pay-As-You-Go resources.
+Standard ri reserved instance.
+ * @method string getProjectName() Obtain Project name.
+.
 
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setProjectName(string $ProjectName) Set Project name
+ * @method void setProjectName(string $ProjectName) Set Project name.
+.
 
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getRegion() Obtain Resource region
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setRegion(string $Region) Set Resource region
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getAvailabilityZone() Obtain Resource AZ
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setAvailabilityZone(string $AvailabilityZone) Set Resource AZ
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getInstanceId() Obtain Instance ID
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setInstanceId(string $InstanceId) Set Instance ID
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getInstanceName() Obtain Instance name
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setInstanceName(string $InstanceName) Set Instance name
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getSubProductName() Obtain Subproduct name
+ * @method string getRegion() Obtain Resource region.
+ * @method void setRegion(string $Region) Set Resource region.
+ * @method string getAvailabilityZone() Obtain Resource available zone.
+ * @method void setAvailabilityZone(string $AvailabilityZone) Set Resource available zone.
+ * @method string getInstanceId() Obtain Instance id.
+ * @method void setInstanceId(string $InstanceId) Set Instance id.
+ * @method string getInstanceName() Obtain Instance name.
+ * @method void setInstanceName(string $InstanceName) Set Instance name.
+ * @method string getSubProductName() Obtain Sub-Product name
+.
 
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setSubProductName(string $SubProductName) Set Subproduct name
+ * @method void setSubProductName(string $SubProductName) Set Sub-Product name
+.
 
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getTransactionType() Obtain Settlement type
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setTransactionType(string $TransactionType) Set Settlement type
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getTransactionId() Obtain Transaction ID
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setTransactionId(string $TransactionId) Set Transaction ID
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getTransactionTime() Obtain Settlement time
+ * @method string getTransactionType() Obtain Settlement type.
+ * @method void setTransactionType(string $TransactionType) Set Settlement type.
+ * @method string getTransactionId() Obtain <Transaction id>.
+ * @method void setTransactionId(string $TransactionId) Set <Transaction id>.
+ * @method string getTransactionTime() Obtain Settlement time.
 
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setTransactionTime(string $TransactionTime) Set Settlement time
+ * @method void setTransactionTime(string $TransactionTime) Set Settlement time.
 
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getUsageStartTime() Obtain Start time of resource use
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setUsageStartTime(string $UsageStartTime) Set Start time of resource use
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getUsageEndTime() Obtain End time of resource use
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setUsageEndTime(string $UsageEndTime) Set End time of resource use
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getComponentType() Obtain Component
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setComponentType(string $ComponentType) Set Component
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getComponentName() Obtain Component name
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setComponentName(string $ComponentName) Set Component name
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getComponentListPrice() Obtain Component list price
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setComponentListPrice(string $ComponentListPrice) Set Component list price
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getComponentPriceMeasurementUnit() Obtain Price unit
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setComponentPriceMeasurementUnit(string $ComponentPriceMeasurementUnit) Set Price unit
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getComponentUsage() Obtain Component usage
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setComponentUsage(string $ComponentUsage) Set Component usage
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getComponentUsageUnit() Obtain Component usage unit
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setComponentUsageUnit(string $ComponentUsageUnit) Set Component usage unit
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getUsageDuration() Obtain Resource usage duration
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setUsageDuration(string $UsageDuration) Set Resource usage duration
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getDurationUnit() Obtain Duration unit
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setDurationUnit(string $DurationUnit) Set Duration unit
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getOriginalCost() Obtain Original cost
-Original cost = component list price * component usage * usage duration
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setOriginalCost(string $OriginalCost) Set Original cost
-Original cost = component list price * component usage * usage duration
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getDiscountRate() Obtain Discount, which defaults to `1`, indicating there is no discount.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setDiscountRate(string $DiscountRate) Set Discount, which defaults to `1`, indicating there is no discount.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getCurrency() Obtain Currency
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setCurrency(string $Currency) Set Currency
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getTotalAmountAfterDiscount() Obtain Discounted total
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setTotalAmountAfterDiscount(string $TotalAmountAfterDiscount) Set Discounted total
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getVoucherDeduction() Obtain Voucher deduction
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setVoucherDeduction(string $VoucherDeduction) Set Voucher deduction
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getTotalCost() Obtain Total cost = discounted total - voucher deduction
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setTotalCost(string $TotalCost) Set Total cost = discounted total - voucher deduction
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getId() Obtain ID
-Note: The return value may be null, indicating that no valid data can be obtained.
- * @method void setId(string $Id) Set ID
-Note: The return value may be null, indicating that no valid data can be obtained.
+ * @method string getUsageStartTime() Obtain <Resource start time>.
+ * @method void setUsageStartTime(string $UsageStartTime) Set <Resource start time>.
+ * @method string getUsageEndTime() Obtain <Resource end usage time>.
+ * @method void setUsageEndTime(string $UsageEndTime) Set <Resource end usage time>.
+ * @method string getComponentType() Obtain Component.
+ * @method void setComponentType(string $ComponentType) Set Component.
+ * @method string getComponentName() Obtain Component name.
+ * @method void setComponentName(string $ComponentName) Set Component name.
+ * @method string getComponentListPrice() Obtain Component list price.
+ * @method void setComponentListPrice(string $ComponentListPrice) Set Component list price.
+ * @method string getComponentPriceMeasurementUnit() Obtain Price unit.
+ * @method void setComponentPriceMeasurementUnit(string $ComponentPriceMeasurementUnit) Set Price unit.
+ * @method string getComponentUsage() Obtain Component usage.
+ * @method void setComponentUsage(string $ComponentUsage) Set Component usage.
+ * @method string getComponentUsageUnit() Obtain Component usage unit.
+ * @method void setComponentUsageUnit(string $ComponentUsageUnit) Set Component usage unit.
+ * @method string getUsageDuration() Obtain Resource usage duration.
+ * @method void setUsageDuration(string $UsageDuration) Set Resource usage duration.
+ * @method string getDurationUnit() Obtain duration unit.
+ * @method void setDurationUnit(string $DurationUnit) Set duration unit.
+ * @method string getOriginalCost() Obtain Total original price.
+Original cost = component list price * component usage * usage duration.
+ * @method void setOriginalCost(string $OriginalCost) Set Total original price.
+Original cost = component list price * component usage * usage duration.
+ * @method string getDiscountRate() Obtain Discount (default is 1).
+ * @method void setDiscountRate(string $DiscountRate) Set Discount (default is 1).
+ * @method string getCurrency() Obtain Currency.
+ * @method void setCurrency(string $Currency) Set Currency.
+ * @method string getTotalAmountAfterDiscount() Obtain Total cost after discount.
+ * @method void setTotalAmountAfterDiscount(string $TotalAmountAfterDiscount) Set Total cost after discount.
+ * @method string getVoucherDeduction() Obtain Voucher deduction amount.
+ * @method void setVoucherDeduction(string $VoucherDeduction) Set Voucher deduction amount.
+ * @method string getTotalCost() Obtain = Total Amount After Discount - Voucher Deduction
+ * @method void setTotalCost(string $TotalCost) Set = Total Amount After Discount - Voucher Deduction
+ * @method string getId() Obtain Identifier (id).
+ * @method void setId(string $Id) Set Identifier (id).
  */
 class BillDetailData extends AbstractModel
 {
     /**
-     * @var integer Reseller account
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer reseller account.
      */
     public $PayerAccountId;
 
     /**
-     * @var integer Customer account
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Subaccount.
      */
     public $OwnerAccountId;
 
     /**
-     * @var integer Operator account
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Operator account.
      */
     public $OperatorAccountId;
 
     /**
-     * @var string Product name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Product name.
      */
     public $ProductName;
 
     /**
      * @var string Billing mode
-`Monthly subscription` (Monthly subscription)
-`Pay-As-You-Go resources` (Pay-as-you-go)
-`Standard RI` (Reserved instance)
-Note: This field may return null, indicating that no valid values can be obtained.
+.
+Monthly subscription (annual and monthly).
+Pay-As-You-Go resources.
+Standard ri reserved instance.
      */
     public $BillingMode;
 
     /**
-     * @var string Project name
+     * @var string Project name.
+.
 
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ProjectName;
 
     /**
-     * @var string Resource region
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Resource region.
      */
     public $Region;
 
     /**
-     * @var string Resource AZ
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Resource available zone.
      */
     public $AvailabilityZone;
 
     /**
-     * @var string Instance ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Instance id.
      */
     public $InstanceId;
 
     /**
-     * @var string Instance name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Instance name.
      */
     public $InstanceName;
 
     /**
-     * @var string Subproduct name
+     * @var string Sub-Product name
+.
 
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $SubProductName;
 
     /**
-     * @var string Settlement type
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Settlement type.
      */
     public $TransactionType;
 
     /**
-     * @var string Transaction ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string <Transaction id>.
      */
     public $TransactionId;
 
     /**
-     * @var string Settlement time
+     * @var string Settlement time.
 
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $TransactionTime;
 
     /**
-     * @var string Start time of resource use
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string <Resource start time>.
      */
     public $UsageStartTime;
 
     /**
-     * @var string End time of resource use
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string <Resource end usage time>.
      */
     public $UsageEndTime;
 
     /**
-     * @var string Component
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Component.
      */
     public $ComponentType;
 
     /**
-     * @var string Component name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Component name.
      */
     public $ComponentName;
 
     /**
-     * @var string Component list price
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Component list price.
      */
     public $ComponentListPrice;
 
     /**
-     * @var string Price unit
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Price unit.
      */
     public $ComponentPriceMeasurementUnit;
 
     /**
-     * @var string Component usage
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Component usage.
      */
     public $ComponentUsage;
 
     /**
-     * @var string Component usage unit
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Component usage unit.
      */
     public $ComponentUsageUnit;
 
     /**
-     * @var string Resource usage duration
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Resource usage duration.
      */
     public $UsageDuration;
 
     /**
-     * @var string Duration unit
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string duration unit.
      */
     public $DurationUnit;
 
     /**
-     * @var string Original cost
-Original cost = component list price * component usage * usage duration
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Total original price.
+Original cost = component list price * component usage * usage duration.
      */
     public $OriginalCost;
 
     /**
-     * @var string Discount, which defaults to `1`, indicating there is no discount.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Discount (default is 1).
      */
     public $DiscountRate;
 
     /**
-     * @var string Currency
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Currency.
      */
     public $Currency;
 
     /**
-     * @var string Discounted total
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Total cost after discount.
      */
     public $TotalAmountAfterDiscount;
 
     /**
-     * @var string Voucher deduction
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Voucher deduction amount.
      */
     public $VoucherDeduction;
 
     /**
-     * @var string Total cost = discounted total - voucher deduction
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string = Total Amount After Discount - Voucher Deduction
      */
     public $TotalCost;
 
     /**
-     * @var string ID
-Note: The return value may be null, indicating that no valid data can be obtained.
+     * @var string Identifier (id).
      */
     public $Id;
 
     /**
-     * @param integer $PayerAccountId Reseller account
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $OwnerAccountId Customer account
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $OperatorAccountId Operator account
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $ProductName Product name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $PayerAccountId reseller account.
+     * @param integer $OwnerAccountId Subaccount.
+     * @param integer $OperatorAccountId Operator account.
+     * @param string $ProductName Product name.
      * @param string $BillingMode Billing mode
-`Monthly subscription` (Monthly subscription)
-`Pay-As-You-Go resources` (Pay-as-you-go)
-`Standard RI` (Reserved instance)
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $ProjectName Project name
+.
+Monthly subscription (annual and monthly).
+Pay-As-You-Go resources.
+Standard ri reserved instance.
+     * @param string $ProjectName Project name.
+.
 
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Region Resource region
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $AvailabilityZone Resource AZ
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $InstanceId Instance ID
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $InstanceName Instance name
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $SubProductName Subproduct name
+     * @param string $Region Resource region.
+     * @param string $AvailabilityZone Resource available zone.
+     * @param string $InstanceId Instance id.
+     * @param string $InstanceName Instance name.
+     * @param string $SubProductName Sub-Product name
+.
 
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $TransactionType Settlement type
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $TransactionId Transaction ID
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $TransactionTime Settlement time
+     * @param string $TransactionType Settlement type.
+     * @param string $TransactionId <Transaction id>.
+     * @param string $TransactionTime Settlement time.
 
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $UsageStartTime Start time of resource use
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $UsageEndTime End time of resource use
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $ComponentType Component
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $ComponentName Component name
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $ComponentListPrice Component list price
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $ComponentPriceMeasurementUnit Price unit
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $ComponentUsage Component usage
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $ComponentUsageUnit Component usage unit
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $UsageDuration Resource usage duration
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $DurationUnit Duration unit
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $OriginalCost Original cost
-Original cost = component list price * component usage * usage duration
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $DiscountRate Discount, which defaults to `1`, indicating there is no discount.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Currency Currency
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $TotalAmountAfterDiscount Discounted total
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $VoucherDeduction Voucher deduction
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $TotalCost Total cost = discounted total - voucher deduction
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Id ID
-Note: The return value may be null, indicating that no valid data can be obtained.
+     * @param string $UsageStartTime <Resource start time>.
+     * @param string $UsageEndTime <Resource end usage time>.
+     * @param string $ComponentType Component.
+     * @param string $ComponentName Component name.
+     * @param string $ComponentListPrice Component list price.
+     * @param string $ComponentPriceMeasurementUnit Price unit.
+     * @param string $ComponentUsage Component usage.
+     * @param string $ComponentUsageUnit Component usage unit.
+     * @param string $UsageDuration Resource usage duration.
+     * @param string $DurationUnit duration unit.
+     * @param string $OriginalCost Total original price.
+Original cost = component list price * component usage * usage duration.
+     * @param string $DiscountRate Discount (default is 1).
+     * @param string $Currency Currency.
+     * @param string $TotalAmountAfterDiscount Total cost after discount.
+     * @param string $VoucherDeduction Voucher deduction amount.
+     * @param string $TotalCost = Total Amount After Discount - Voucher Deduction
+     * @param string $Id Identifier (id).
      */
     function __construct()
     {

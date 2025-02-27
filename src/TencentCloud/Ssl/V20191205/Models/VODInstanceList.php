@@ -26,6 +26,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method integer getTotalCount() Obtain The total number of VOD instances in this region.	
  * @method void setTotalCount(integer $TotalCount) Set The total number of VOD instances in this region.	
+ * @method string getError() Obtain Whether to query exceptions.
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method void setError(string $Error) Set Whether to query exceptions.
+Note: this field may return null, indicating that no valid values can be obtained.
  */
 class VODInstanceList extends AbstractModel
 {
@@ -41,9 +45,17 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $TotalCount;
 
     /**
+     * @var string Whether to query exceptions.
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public $Error;
+
+    /**
      * @param array $InstanceList The list of VOD instances.	
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $TotalCount The total number of VOD instances in this region.	
+     * @param string $Error Whether to query exceptions.
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -69,6 +81,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
             $this->TotalCount = $param["TotalCount"];
+        }
+
+        if (array_key_exists("Error",$param) and $param["Error"] !== null) {
+            $this->Error = $param["Error"];
         }
     }
 }

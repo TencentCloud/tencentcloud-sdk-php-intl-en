@@ -20,82 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Payment mode details in the customer bill data totaled by payment mode
  *
- * @method string getPayMode() Obtain Billing mode
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setPayMode(string $PayMode) Set Billing mode
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getPayModeName() Obtain Billing mode name
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setPayModeName(string $PayModeName) Set Billing mode name
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getOriginalCost() Obtain The actual total consumption amount accurate down to eight decimal places
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setOriginalCost(string $OriginalCost) Set The actual total consumption amount accurate down to eight decimal places
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method array getDetail() Obtain Bill details in each payment mode
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setDetail(array $Detail) Set Bill details in each payment mode
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getVoucherPayAmount() Obtain The deducted voucher amount accurate down to eight decimal places
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setVoucherPayAmount(string $VoucherPayAmount) Set The deducted voucher amount accurate down to eight decimal places
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getTotalCost() Obtain Total consumption amount accurate down to eight decimal places
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setTotalCost(string $TotalCost) Set Total consumption amount accurate down to eight decimal places
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getPayMode() Obtain Payment mode.
+ * @method void setPayMode(string $PayMode) Set Payment mode.
+ * @method string getPayModeName() Obtain Payment mode name.
+ * @method void setPayModeName(string $PayModeName) Set Payment mode name.
+ * @method string getOriginalCost() Obtain Actual total consumption, up to 8 decimal places.
+ * @method void setOriginalCost(string $OriginalCost) Set Actual total consumption, up to 8 decimal places.
+ * @method array getDetail() Obtain Bill details in each payment mode.
+ * @method void setDetail(array $Detail) Set Bill details in each payment mode.
+ * @method string getVoucherPayAmount() Obtain Voucher payment amount, up to 8 decimal places.
+ * @method void setVoucherPayAmount(string $VoucherPayAmount) Set Voucher payment amount, up to 8 decimal places.
+ * @method string getTotalCost() Obtain Total consumption, up to 8 decimal places.
+ * @method void setTotalCost(string $TotalCost) Set Total consumption, up to 8 decimal places.
  */
 class PayModeSummaryOverviewItem extends AbstractModel
 {
     /**
-     * @var string Billing mode
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Payment mode.
      */
     public $PayMode;
 
     /**
-     * @var string Billing mode name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Payment mode name.
      */
     public $PayModeName;
 
     /**
-     * @var string The actual total consumption amount accurate down to eight decimal places
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Actual total consumption, up to 8 decimal places.
      */
     public $OriginalCost;
 
     /**
-     * @var array Bill details in each payment mode
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array Bill details in each payment mode.
      */
     public $Detail;
 
     /**
-     * @var string The deducted voucher amount accurate down to eight decimal places
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Voucher payment amount, up to 8 decimal places.
      */
     public $VoucherPayAmount;
 
     /**
-     * @var string Total consumption amount accurate down to eight decimal places
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Total consumption, up to 8 decimal places.
      */
     public $TotalCost;
 
     /**
-     * @param string $PayMode Billing mode
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $PayModeName Billing mode name
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $OriginalCost The actual total consumption amount accurate down to eight decimal places
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param array $Detail Bill details in each payment mode
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $VoucherPayAmount The deducted voucher amount accurate down to eight decimal places
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $TotalCost Total consumption amount accurate down to eight decimal places
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $PayMode Payment mode.
+     * @param string $PayModeName Payment mode name.
+     * @param string $OriginalCost Actual total consumption, up to 8 decimal places.
+     * @param array $Detail Bill details in each payment mode.
+     * @param string $VoucherPayAmount Voucher payment amount, up to 8 decimal places.
+     * @param string $TotalCost Total consumption, up to 8 decimal places.
      */
     function __construct()
     {

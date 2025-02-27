@@ -24,14 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCertId(string $CertId) Set The certificate ID.
  * @method array getDnsNames() Obtain The list of domains bound to the certificate.
  * @method void setDnsNames(array $DnsNames) Set The list of domains bound to the certificate.
- * @method string getCertCaId() Obtain The root certificate ID.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setCertCaId(string $CertCaId) Set The root certificate ID.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getSSLMode() Obtain The authentication type. Valid values: `UNIDIRECTIONAL` (one-way authentication) and `MUTUAL` (two-way authentication).
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setSSLMode(string $SSLMode) Set The authentication type. Valid values: `UNIDIRECTIONAL` (one-way authentication) and `MUTUAL` (two-way authentication).
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getCertCaId() Obtain Root certificate id.
+ * @method void setCertCaId(string $CertCaId) Set Root certificate id.
+ * @method string getSSLMode() Obtain Certificate authentication mode: unidirectional one-way authentication, mutual mutual authentication.
+ * @method void setSSLMode(string $SSLMode) Set Certificate authentication mode: unidirectional one-way authentication, mutual mutual authentication.
  */
 class Certificate extends AbstractModel
 {
@@ -46,24 +42,20 @@ class Certificate extends AbstractModel
     public $DnsNames;
 
     /**
-     * @var string The root certificate ID.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Root certificate id.
      */
     public $CertCaId;
 
     /**
-     * @var string The authentication type. Valid values: `UNIDIRECTIONAL` (one-way authentication) and `MUTUAL` (two-way authentication).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Certificate authentication mode: unidirectional one-way authentication, mutual mutual authentication.
      */
     public $SSLMode;
 
     /**
      * @param string $CertId The certificate ID.
      * @param array $DnsNames The list of domains bound to the certificate.
-     * @param string $CertCaId The root certificate ID.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $SSLMode The authentication type. Valid values: `UNIDIRECTIONAL` (one-way authentication) and `MUTUAL` (two-way authentication).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $CertCaId Root certificate id.
+     * @param string $SSLMode Certificate authentication mode: unidirectional one-way authentication, mutual mutual authentication.
      */
     function __construct()
     {

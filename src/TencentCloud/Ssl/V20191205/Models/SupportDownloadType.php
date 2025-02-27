@@ -18,68 +18,68 @@ namespace TencentCloud\Ssl\V20191205\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Supported types for download.
  *
- * @method boolean getNGINX() Obtain 
- * @method void setNGINX(boolean $NGINX) Set 
- * @method boolean getAPACHE() Obtain 
- * @method void setAPACHE(boolean $APACHE) Set 
- * @method boolean getTOMCAT() Obtain 
- * @method void setTOMCAT(boolean $TOMCAT) Set 
- * @method boolean getIIS() Obtain 
- * @method void setIIS(boolean $IIS) Set 
- * @method boolean getJKS() Obtain 
- * @method void setJKS(boolean $JKS) Set 
- * @method boolean getOTHER() Obtain 
- * @method void setOTHER(boolean $OTHER) Set 
- * @method boolean getROOT() Obtain 
- * @method void setROOT(boolean $ROOT) Set 
+ * @method boolean getNGINX() Obtain Whether the available format of nginx can be downloaded.
+ * @method void setNGINX(boolean $NGINX) Set Whether the available format of nginx can be downloaded.
+ * @method boolean getAPACHE() Obtain Whether the available format of apache can be downloaded.
+ * @method void setAPACHE(boolean $APACHE) Set Whether the available format of apache can be downloaded.
+ * @method boolean getTOMCAT() Obtain Whether the available format of tomcat can be downloaded.
+ * @method void setTOMCAT(boolean $TOMCAT) Set Whether the available format of tomcat can be downloaded.
+ * @method boolean getIIS() Obtain Whether the available format of iis can be downloaded.
+ * @method void setIIS(boolean $IIS) Set Whether the available format of iis can be downloaded.
+ * @method boolean getJKS() Obtain Indicates whether the jks format can be downloaded.
+ * @method void setJKS(boolean $JKS) Set Indicates whether the jks format can be downloaded.
+ * @method boolean getOTHER() Obtain Indicates whether other formats can be downloaded.
+ * @method void setOTHER(boolean $OTHER) Set Indicates whether other formats can be downloaded.
+ * @method boolean getROOT() Obtain Indicates whether the root certificate can be downloaded.
+ * @method void setROOT(boolean $ROOT) Set Indicates whether the root certificate can be downloaded.
  */
 class SupportDownloadType extends AbstractModel
 {
     /**
-     * @var boolean 
+     * @var boolean Whether the available format of nginx can be downloaded.
      */
     public $NGINX;
 
     /**
-     * @var boolean 
+     * @var boolean Whether the available format of apache can be downloaded.
      */
     public $APACHE;
 
     /**
-     * @var boolean 
+     * @var boolean Whether the available format of tomcat can be downloaded.
      */
     public $TOMCAT;
 
     /**
-     * @var boolean 
+     * @var boolean Whether the available format of iis can be downloaded.
      */
     public $IIS;
 
     /**
-     * @var boolean 
+     * @var boolean Indicates whether the jks format can be downloaded.
      */
     public $JKS;
 
     /**
-     * @var boolean 
+     * @var boolean Indicates whether other formats can be downloaded.
      */
     public $OTHER;
 
     /**
-     * @var boolean 
+     * @var boolean Indicates whether the root certificate can be downloaded.
      */
     public $ROOT;
 
     /**
-     * @param boolean $NGINX 
-     * @param boolean $APACHE 
-     * @param boolean $TOMCAT 
-     * @param boolean $IIS 
-     * @param boolean $JKS 
-     * @param boolean $OTHER 
-     * @param boolean $ROOT 
+     * @param boolean $NGINX Whether the available format of nginx can be downloaded.
+     * @param boolean $APACHE Whether the available format of apache can be downloaded.
+     * @param boolean $TOMCAT Whether the available format of tomcat can be downloaded.
+     * @param boolean $IIS Whether the available format of iis can be downloaded.
+     * @param boolean $JKS Indicates whether the jks format can be downloaded.
+     * @param boolean $OTHER Indicates whether other formats can be downloaded.
+     * @param boolean $ROOT Indicates whether the root certificate can be downloaded.
      */
     function __construct()
     {

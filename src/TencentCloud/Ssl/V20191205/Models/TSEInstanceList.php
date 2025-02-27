@@ -28,6 +28,10 @@ Note: This field may return null, indicating that no valid value can be obtained
  * @method void setTotalCount(integer $TotalCount) Set Total TSE instances in this region	
  * @method string getRegion() Obtain Region	
  * @method void setRegion(string $Region) Set Region	
+ * @method string getError() Obtain Whether to query exceptions.
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method void setError(string $Error) Set Whether to query exceptions.
+Note: this field may return null, indicating that no valid values can be obtained.
  */
 class TSEInstanceList extends AbstractModel
 {
@@ -48,10 +52,18 @@ Note: This field may return null, indicating that no valid value can be obtained
     public $Region;
 
     /**
+     * @var string Whether to query exceptions.
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public $Error;
+
+    /**
      * @param array $InstanceList TSE instance details
 Note: This field may return null, indicating that no valid value can be obtained.
      * @param integer $TotalCount Total TSE instances in this region	
      * @param string $Region Region	
+     * @param string $Error Whether to query exceptions.
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -81,6 +93,10 @@ Note: This field may return null, indicating that no valid value can be obtained
 
         if (array_key_exists("Region",$param) and $param["Region"] !== null) {
             $this->Region = $param["Region"];
+        }
+
+        if (array_key_exists("Error",$param) and $param["Error"] !== null) {
+            $this->Error = $param["Error"];
         }
     }
 }

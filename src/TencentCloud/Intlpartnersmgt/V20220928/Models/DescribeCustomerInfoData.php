@@ -20,114 +20,110 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Customer information
  *
- * @method string getCustomerUin() Obtain Customer UIN Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setCustomerUin(string $CustomerUin) Set Customer UIN Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getEmail() Obtain Email Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setEmail(string $Email) Set Email Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getPhone() Obtain Mobile number Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setPhone(string $Phone) Set Mobile number Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getMark() Obtain Remarks Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setMark(string $Mark) Set Remarks Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getName() Obtain Displayed name Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setName(string $Name) Set Displayed name Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getBindTime() Obtain Binding time Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setBindTime(string $BindTime) Set Binding time Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getCustomerUin() Obtain Sub-Account uin.
+ * @method void setCustomerUin(string $CustomerUin) Set Sub-Account uin.
+ * @method string getEmail() Obtain Contact email.
+ * @method void setEmail(string $Email) Set Contact email.
+ * @method string getPhone() Obtain Contact phone number.
+ * @method void setPhone(string $Phone) Set Contact phone number.
+ * @method string getMark() Obtain Remarks.
+ * @method void setMark(string $Mark) Set Remarks.
+ * @method string getName() Obtain Display name.
+ * @method void setName(string $Name) Set Display name.
+ * @method string getBindTime() Obtain Binding time.
+ * @method void setBindTime(string $BindTime) Set Binding time.
  * @method string getAccountStatus() Obtain Account status
-0: Normal
-1: Forcibly mandatory (this function is not supported yet)
-2. Mandatory arrears
-Note: The return value may be null, indicating that no valid data can be obtained.
+.
+0: normal.
+1: forcibly mandatory (this function is not supported yet).
+2: mandatory arrears. 
  * @method void setAccountStatus(string $AccountStatus) Set Account status
-0: Normal
-1: Forcibly mandatory (this function is not supported yet)
-2. Mandatory arrears
-Note: The return value may be null, indicating that no valid data can be obtained.
- * @method string getAuthStatus() Obtain Identity verification status
--1: Files not uploaded
-0: Not submitted for review
-1: Under review
-2: Review error
-3: Approved
-Note: The return value may be null, indicating that no valid data can be obtained.
- * @method void setAuthStatus(string $AuthStatus) Set Identity verification status
--1: Files not uploaded
-0: Not submitted for review
-1: Under review
-2: Review error
-3: Approved
-Note: The return value may be null, indicating that no valid data can be obtained.
+.
+0: normal.
+1: forcibly mandatory (this function is not supported yet).
+2: mandatory arrears. 
+ * @method string getAuthStatus() Obtain Identity verification status.
+-1: files not uploaded.
+0: not submitted for review.
+1: under review.
+2: review error.
+3: approved.
+ * @method void setAuthStatus(string $AuthStatus) Set Identity verification status.
+-1: files not uploaded.
+0: not submitted for review.
+1: under review.
+2: review error.
+3: approved.
  */
 class DescribeCustomerInfoData extends AbstractModel
 {
     /**
-     * @var string Customer UIN Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Sub-Account uin.
      */
     public $CustomerUin;
 
     /**
-     * @var string Email Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Contact email.
      */
     public $Email;
 
     /**
-     * @var string Mobile number Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Contact phone number.
      */
     public $Phone;
 
     /**
-     * @var string Remarks Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Remarks.
      */
     public $Mark;
 
     /**
-     * @var string Displayed name Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Display name.
      */
     public $Name;
 
     /**
-     * @var string Binding time Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Binding time.
      */
     public $BindTime;
 
     /**
      * @var string Account status
-0: Normal
-1: Forcibly mandatory (this function is not supported yet)
-2. Mandatory arrears
-Note: The return value may be null, indicating that no valid data can be obtained.
+.
+0: normal.
+1: forcibly mandatory (this function is not supported yet).
+2: mandatory arrears. 
      */
     public $AccountStatus;
 
     /**
-     * @var string Identity verification status
--1: Files not uploaded
-0: Not submitted for review
-1: Under review
-2: Review error
-3: Approved
-Note: The return value may be null, indicating that no valid data can be obtained.
+     * @var string Identity verification status.
+-1: files not uploaded.
+0: not submitted for review.
+1: under review.
+2: review error.
+3: approved.
      */
     public $AuthStatus;
 
     /**
-     * @param string $CustomerUin Customer UIN Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Email Email Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Phone Mobile number Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Mark Remarks Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Name Displayed name Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $BindTime Binding time Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $CustomerUin Sub-Account uin.
+     * @param string $Email Contact email.
+     * @param string $Phone Contact phone number.
+     * @param string $Mark Remarks.
+     * @param string $Name Display name.
+     * @param string $BindTime Binding time.
      * @param string $AccountStatus Account status
-0: Normal
-1: Forcibly mandatory (this function is not supported yet)
-2. Mandatory arrears
-Note: The return value may be null, indicating that no valid data can be obtained.
-     * @param string $AuthStatus Identity verification status
--1: Files not uploaded
-0: Not submitted for review
-1: Under review
-2: Review error
-3: Approved
-Note: The return value may be null, indicating that no valid data can be obtained.
+.
+0: normal.
+1: forcibly mandatory (this function is not supported yet).
+2: mandatory arrears. 
+     * @param string $AuthStatus Identity verification status.
+-1: files not uploaded.
+0: not submitted for review.
+1: under review.
+2: review error.
+3: approved.
      */
     function __construct()
     {

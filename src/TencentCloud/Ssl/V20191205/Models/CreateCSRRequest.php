@@ -44,6 +44,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setKeyPassword(string $KeyPassword) Set The password of the private key.
  * @method string getRemark() Obtain The remarks.
  * @method void setRemark(string $Remark) Set The remarks.
+ * @method array getTags() Obtain 
+ * @method void setTags(array $Tags) Set 
  */
 class CreateCSRRequest extends AbstractModel
 {
@@ -108,6 +110,11 @@ class CreateCSRRequest extends AbstractModel
     public $Remark;
 
     /**
+     * @var array 
+     */
+    public $Tags;
+
+    /**
      * @param string $Domain The domain.
      * @param string $Organization The organization name.
      * @param string $Department The department.
@@ -120,6 +127,7 @@ class CreateCSRRequest extends AbstractModel
      * @param boolean $Generate Whether to generate the CSR content. Once the CSR content is generated, the CSR record cannot be modified.
      * @param string $KeyPassword The password of the private key.
      * @param string $Remark The remarks.
+     * @param array $Tags 
      */
     function __construct()
     {
@@ -180,6 +188,15 @@ class CreateCSRRequest extends AbstractModel
 
         if (array_key_exists("Remark",$param) and $param["Remark"] !== null) {
             $this->Remark = $param["Remark"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tags();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }

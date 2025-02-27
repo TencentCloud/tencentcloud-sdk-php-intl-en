@@ -20,81 +20,93 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Content of the `DvAuths` parameter
  *
- * @method string getDvAuthKey() Obtain DV authentication key
+ * @method string getDvAuthKey() Obtain Certificate domain name verification record key.
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setDvAuthKey(string $DvAuthKey) Set DV authentication key
+ * @method void setDvAuthKey(string $DvAuthKey) Set Certificate domain name verification record key.
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getDvAuthValue() Obtain DV authentication value
+ * @method string getDvAuthValue() Obtain Certificate domain name verification record value.
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setDvAuthValue(string $DvAuthValue) Set DV authentication value
+ * @method void setDvAuthValue(string $DvAuthValue) Set Certificate domain name verification record value.
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getDvAuthDomain() Obtain Domain name of the DV authentication value
+ * @method string getDvAuthDomain() Obtain Certificate domain name verification domain value.
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setDvAuthDomain(string $DvAuthDomain) Set Domain name of the DV authentication value
+ * @method void setDvAuthDomain(string $DvAuthDomain) Set Certificate domain name verification domain value.
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getDvAuthPath() Obtain Path of the DV authentication value
+ * @method string getDvAuthPath() Obtain Certificate domain name verification file path, used only for file and file_proxy.
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setDvAuthPath(string $DvAuthPath) Set Path of the DV authentication value
+ * @method void setDvAuthPath(string $DvAuthPath) Set Certificate domain name verification file path, used only for file and file_proxy.
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getDvAuthSubDomain() Obtain DV authentication sub-domain name
+ * @method string getDvAuthSubDomain() Obtain Certificate domain name verification subdomain.
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setDvAuthSubDomain(string $DvAuthSubDomain) Set DV authentication sub-domain name
+ * @method void setDvAuthSubDomain(string $DvAuthSubDomain) Set Certificate domain name verification subdomain.
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getDvAuthVerifyType() Obtain DV authentication type
+ * @method string getDvAuthVerifyType() Obtain Certificate domain verification type, valid values:.
+TXT: add txt record for dns domain verification.
+FILE: domain file verification.
+CNAME: add cname record for dns domain verification.
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setDvAuthVerifyType(string $DvAuthVerifyType) Set DV authentication type
+ * @method void setDvAuthVerifyType(string $DvAuthVerifyType) Set Certificate domain verification type, valid values:.
+TXT: add txt record for dns domain verification.
+FILE: domain file verification.
+CNAME: add cname record for dns domain verification.
 Note: this field may return null, indicating that no valid values can be obtained.
  */
 class DvAuths extends AbstractModel
 {
     /**
-     * @var string DV authentication key
+     * @var string Certificate domain name verification record key.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $DvAuthKey;
 
     /**
-     * @var string DV authentication value
+     * @var string Certificate domain name verification record value.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $DvAuthValue;
 
     /**
-     * @var string Domain name of the DV authentication value
+     * @var string Certificate domain name verification domain value.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $DvAuthDomain;
 
     /**
-     * @var string Path of the DV authentication value
+     * @var string Certificate domain name verification file path, used only for file and file_proxy.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $DvAuthPath;
 
     /**
-     * @var string DV authentication sub-domain name
+     * @var string Certificate domain name verification subdomain.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $DvAuthSubDomain;
 
     /**
-     * @var string DV authentication type
+     * @var string Certificate domain verification type, valid values:.
+TXT: add txt record for dns domain verification.
+FILE: domain file verification.
+CNAME: add cname record for dns domain verification.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $DvAuthVerifyType;
 
     /**
-     * @param string $DvAuthKey DV authentication key
+     * @param string $DvAuthKey Certificate domain name verification record key.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $DvAuthValue DV authentication value
+     * @param string $DvAuthValue Certificate domain name verification record value.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $DvAuthDomain Domain name of the DV authentication value
+     * @param string $DvAuthDomain Certificate domain name verification domain value.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $DvAuthPath Path of the DV authentication value
+     * @param string $DvAuthPath Certificate domain name verification file path, used only for file and file_proxy.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $DvAuthSubDomain DV authentication sub-domain name
+     * @param string $DvAuthSubDomain Certificate domain name verification subdomain.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $DvAuthVerifyType DV authentication type
+     * @param string $DvAuthVerifyType Certificate domain verification type, valid values:.
+TXT: add txt record for dns domain verification.
+FILE: domain file verification.
+CNAME: add cname record for dns domain verification.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     function __construct()

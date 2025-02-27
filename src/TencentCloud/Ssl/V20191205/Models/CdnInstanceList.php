@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getTotalCount() Obtain The total number of CDN domains in this region.	
  * @method void setTotalCount(integer $TotalCount) Set The total number of CDN domains in this region.	
- * @method array getInstanceList() Obtain The list of CDN domains.	
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setInstanceList(array $InstanceList) Set The list of CDN domains.	
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method array getInstanceList() Obtain CDN domain name details.	
+ * @method void setInstanceList(array $InstanceList) Set CDN domain name details.	
+ * @method string getError() Obtain Whether to query exceptions.
+ * @method void setError(string $Error) Set Whether to query exceptions.
  */
 class CdnInstanceList extends AbstractModel
 {
@@ -35,15 +35,19 @@ class CdnInstanceList extends AbstractModel
     public $TotalCount;
 
     /**
-     * @var array The list of CDN domains.	
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array CDN domain name details.	
      */
     public $InstanceList;
 
     /**
+     * @var string Whether to query exceptions.
+     */
+    public $Error;
+
+    /**
      * @param integer $TotalCount The total number of CDN domains in this region.	
-     * @param array $InstanceList The list of CDN domains.	
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param array $InstanceList CDN domain name details.	
+     * @param string $Error Whether to query exceptions.
      */
     function __construct()
     {
@@ -69,6 +73,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 $obj->deserialize($value);
                 array_push($this->InstanceList, $obj);
             }
+        }
+
+        if (array_key_exists("Error",$param) and $param["Error"] !== null) {
+            $this->Error = $param["Error"];
         }
     }
 }

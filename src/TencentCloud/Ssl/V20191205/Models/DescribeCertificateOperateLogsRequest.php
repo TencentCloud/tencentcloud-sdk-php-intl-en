@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getOffset() Obtain Offset. The default value is 0.
  * @method void setOffset(integer $Offset) Set Offset. The default value is 0.
- * @method integer getLimit() Obtain Number of requested logs. The default value is 20.
- * @method void setLimit(integer $Limit) Set Number of requested logs. The default value is 20.
+ * @method integer getLimit() Obtain Number of requested logs, 20 by default, with a maximum value of 1000. if it exceeds 1000, it will be treated as 1000.
+ * @method void setLimit(integer $Limit) Set Number of requested logs, 20 by default, with a maximum value of 1000. if it exceeds 1000, it will be treated as 1000.
  * @method string getStartTime() Obtain Start time. The default value is 15 days ago.
  * @method void setStartTime(string $StartTime) Set Start time. The default value is 15 days ago.
  * @method string getEndTime() Obtain End time. The default value is the current time.
@@ -37,7 +37,7 @@ class DescribeCertificateOperateLogsRequest extends AbstractModel
     public $Offset;
 
     /**
-     * @var integer Number of requested logs. The default value is 20.
+     * @var integer Number of requested logs, 20 by default, with a maximum value of 1000. if it exceeds 1000, it will be treated as 1000.
      */
     public $Limit;
 
@@ -53,7 +53,7 @@ class DescribeCertificateOperateLogsRequest extends AbstractModel
 
     /**
      * @param integer $Offset Offset. The default value is 0.
-     * @param integer $Limit Number of requested logs. The default value is 20.
+     * @param integer $Limit Number of requested logs, 20 by default, with a maximum value of 1000. if it exceeds 1000, it will be treated as 1000.
      * @param string $StartTime Start time. The default value is 15 days ago.
      * @param string $EndTime End time. The default value is the current time.
      */

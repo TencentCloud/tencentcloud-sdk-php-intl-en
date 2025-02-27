@@ -28,18 +28,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSniSwitch(integer $SniSwitch) Set Whether to enable SNI. Valid values: `1` (enable) and `0` (disable).
  * @method string getProtocol() Obtain The listener protocol type. Valid values: `HTTPS` and `TCP_SSL`.
  * @method void setProtocol(string $Protocol) Set The listener protocol type. Valid values: `HTTPS` and `TCP_SSL`.
- * @method Certificate getCertificate() Obtain The information of the certificate bound to the listener.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setCertificate(Certificate $Certificate) Set The information of the certificate bound to the listener.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method array getRules() Obtain The list of the listener rules.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setRules(array $Rules) Set The list of the listener rules.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method array getNoMatchDomains() Obtain The list of non-matching domains.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setNoMatchDomains(array $NoMatchDomains) Set The list of non-matching domains.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method Certificate getCertificate() Obtain Data of certificate bound to the listener.
+ * @method void setCertificate(Certificate $Certificate) Set Data of certificate bound to the listener.
+ * @method array getRules() Obtain List of listener rules.
+ * @method void setRules(array $Rules) Set List of listener rules.
+ * @method array getNoMatchDomains() Obtain Domain list not matched.
+ * @method void setNoMatchDomains(array $NoMatchDomains) Set Domain list not matched.
  */
 class ClbListener extends AbstractModel
 {
@@ -64,20 +58,17 @@ class ClbListener extends AbstractModel
     public $Protocol;
 
     /**
-     * @var Certificate The information of the certificate bound to the listener.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var Certificate Data of certificate bound to the listener.
      */
     public $Certificate;
 
     /**
-     * @var array The list of the listener rules.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array List of listener rules.
      */
     public $Rules;
 
     /**
-     * @var array The list of non-matching domains.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array Domain list not matched.
      */
     public $NoMatchDomains;
 
@@ -86,12 +77,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $ListenerName The listener name.
      * @param integer $SniSwitch Whether to enable SNI. Valid values: `1` (enable) and `0` (disable).
      * @param string $Protocol The listener protocol type. Valid values: `HTTPS` and `TCP_SSL`.
-     * @param Certificate $Certificate The information of the certificate bound to the listener.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param array $Rules The list of the listener rules.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param array $NoMatchDomains The list of non-matching domains.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Certificate $Certificate Data of certificate bound to the listener.
+     * @param array $Rules List of listener rules.
+     * @param array $NoMatchDomains Domain list not matched.
      */
     function __construct()
     {

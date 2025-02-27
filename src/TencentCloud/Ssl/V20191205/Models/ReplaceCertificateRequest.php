@@ -24,10 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCertificateId(string $CertificateId) Set Certificate ID
  * @method string getValidType() Obtain Validation type. `DNS_AUTO`: automatic DNS validation; `DNS`: manual DNS validation; `FILE`: file validation
  * @method void setValidType(string $ValidType) Set Validation type. `DNS_AUTO`: automatic DNS validation; `DNS`: manual DNS validation; `FILE`: file validation
- * @method string getCsrType() Obtain Type. `original`: original certificate CSR; `upload`: uploaded manually; `online`: generated online. The default value is original.
- * @method void setCsrType(string $CsrType) Set Type. `original`: original certificate CSR; `upload`: uploaded manually; `online`: generated online. The default value is original.
- * @method string getCsrContent() Obtain CSR content
- * @method void setCsrContent(string $CsrContent) Set CSR content
+ * @method string getCsrType() Obtain Type. `Original`: original certificate CSR; `Upload`: uploaded manually; `Online`: generated online. The default value is original.
+ * @method void setCsrType(string $CsrType) Set Type. `Original`: original certificate CSR; `Upload`: uploaded manually; `Online`: generated online. The default value is original.
+ * @method string getCsrContent() Obtain CSR content, required when uploading manually.
+ * @method void setCsrContent(string $CsrContent) Set CSR content, required when uploading manually.
  * @method string getCsrkeyPassword() Obtain Password of the key
  * @method void setCsrkeyPassword(string $CsrkeyPassword) Set Password of the key
  * @method string getReason() Obtain Reissue reason
@@ -52,12 +52,12 @@ class ReplaceCertificateRequest extends AbstractModel
     public $ValidType;
 
     /**
-     * @var string Type. `original`: original certificate CSR; `upload`: uploaded manually; `online`: generated online. The default value is original.
+     * @var string Type. `Original`: original certificate CSR; `Upload`: uploaded manually; `Online`: generated online. The default value is original.
      */
     public $CsrType;
 
     /**
-     * @var string CSR content
+     * @var string CSR content, required when uploading manually.
      */
     public $CsrContent;
 
@@ -85,8 +85,8 @@ This parameter is available for selection only when the value of `CsrType` is `O
     /**
      * @param string $CertificateId Certificate ID
      * @param string $ValidType Validation type. `DNS_AUTO`: automatic DNS validation; `DNS`: manual DNS validation; `FILE`: file validation
-     * @param string $CsrType Type. `original`: original certificate CSR; `upload`: uploaded manually; `online`: generated online. The default value is original.
-     * @param string $CsrContent CSR content
+     * @param string $CsrType Type. `Original`: original certificate CSR; `Upload`: uploaded manually; `Online`: generated online. The default value is original.
+     * @param string $CsrContent CSR content, required when uploading manually.
      * @param string $CsrkeyPassword Password of the key
      * @param string $Reason Reissue reason
      * @param string $CertCSREncryptAlgo The CSR encryption algorithm. Valid values: `RSA` (default), `ECC1`, and `SM2`.

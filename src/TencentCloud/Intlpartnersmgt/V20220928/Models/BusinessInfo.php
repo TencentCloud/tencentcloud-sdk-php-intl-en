@@ -20,74 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Product information
  *
- * @method string getBusinessCodeName() Obtain ProductNote: This field may return null, indicating that no valid values can be obtained.
- * @method void setBusinessCodeName(string $BusinessCodeName) Set ProductNote: This field may return null, indicating that no valid values can be obtained.
- * @method string getBusinessCode() Obtain Product codeNote: This field may return null, indicating that no valid values can be obtained.
- * @method void setBusinessCode(string $BusinessCode) Set Product codeNote: This field may return null, indicating that no valid values can be obtained.
- * @method string getOriginalCost() Obtain Original price
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setOriginalCost(string $OriginalCost) Set Original price
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getVoucherPayAmount() Obtain Voucher amount
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setVoucherPayAmount(string $VoucherPayAmount) Set Voucher amount
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getRICost() Obtain Daily deduction
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setRICost(string $RICost) Set Daily deduction
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getTotalCost() Obtain Total amount
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setTotalCost(string $TotalCost) Set Total amount
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getBusinessCodeName() Obtain Product name.
+ * @method void setBusinessCodeName(string $BusinessCodeName) Set Product name.
+ * @method string getBusinessCode() Obtain Product code.
+ * @method void setBusinessCode(string $BusinessCode) Set Product code.
+ * @method string getOriginalCost() Obtain Original price.
+ * @method void setOriginalCost(string $OriginalCost) Set Original price.
+ * @method string getVoucherPayAmount() Obtain Voucher amount.
+ * @method void setVoucherPayAmount(string $VoucherPayAmount) Set Voucher amount.
+ * @method string getRICost() Obtain RI deduction.
+ * @method void setRICost(string $RICost) Set RI deduction.
+ * @method string getTotalCost() Obtain Total amount.
+ * @method void setTotalCost(string $TotalCost) Set Total amount.
  */
 class BusinessInfo extends AbstractModel
 {
     /**
-     * @var string ProductNote: This field may return null, indicating that no valid values can be obtained.
+     * @var string Product name.
      */
     public $BusinessCodeName;
 
     /**
-     * @var string Product codeNote: This field may return null, indicating that no valid values can be obtained.
+     * @var string Product code.
      */
     public $BusinessCode;
 
     /**
-     * @var string Original price
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Original price.
      */
     public $OriginalCost;
 
     /**
-     * @var string Voucher amount
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Voucher amount.
      */
     public $VoucherPayAmount;
 
     /**
-     * @var string Daily deduction
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string RI deduction.
      */
     public $RICost;
 
     /**
-     * @var string Total amount
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Total amount.
      */
     public $TotalCost;
 
     /**
-     * @param string $BusinessCodeName ProductNote: This field may return null, indicating that no valid values can be obtained.
-     * @param string $BusinessCode Product codeNote: This field may return null, indicating that no valid values can be obtained.
-     * @param string $OriginalCost Original price
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $VoucherPayAmount Voucher amount
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $RICost Daily deduction
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $TotalCost Total amount
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $BusinessCodeName Product name.
+     * @param string $BusinessCode Product code.
+     * @param string $OriginalCost Original price.
+     * @param string $VoucherPayAmount Voucher amount.
+     * @param string $RICost RI deduction.
+     * @param string $TotalCost Total amount.
      */
     function __construct()
     {

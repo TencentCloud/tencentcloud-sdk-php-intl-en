@@ -26,14 +26,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDomain(string $Domain) Set The domains bound.
  * @method boolean getIsMatch() Obtain Whether the rule matches the domains to be associated with a certificate.
  * @method void setIsMatch(boolean $IsMatch) Set Whether the rule matches the domains to be associated with a certificate.
- * @method Certificate getCertificate() Obtain The certificates associated with the rule.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setCertificate(Certificate $Certificate) Set The certificates associated with the rule.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method array getNoMatchDomains() Obtain The list of non-matching domains.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setNoMatchDomains(array $NoMatchDomains) Set The list of non-matching domains.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method Certificate getCertificate() Obtain Certificate data bound to the rule.
+ * @method void setCertificate(Certificate $Certificate) Set Certificate data bound to the rule.
+ * @method array getNoMatchDomains() Obtain Domain list not matched.
+ * @method void setNoMatchDomains(array $NoMatchDomains) Set Domain list not matched.
+ * @method string getUrl() Obtain Rule binding path.
+ * @method void setUrl(string $Url) Set Rule binding path.
  */
 class ClbListenerRule extends AbstractModel
 {
@@ -53,25 +51,27 @@ class ClbListenerRule extends AbstractModel
     public $IsMatch;
 
     /**
-     * @var Certificate The certificates associated with the rule.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var Certificate Certificate data bound to the rule.
      */
     public $Certificate;
 
     /**
-     * @var array The list of non-matching domains.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array Domain list not matched.
      */
     public $NoMatchDomains;
+
+    /**
+     * @var string Rule binding path.
+     */
+    public $Url;
 
     /**
      * @param string $LocationId The rule ID.
      * @param string $Domain The domains bound.
      * @param boolean $IsMatch Whether the rule matches the domains to be associated with a certificate.
-     * @param Certificate $Certificate The certificates associated with the rule.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param array $NoMatchDomains The list of non-matching domains.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Certificate $Certificate Certificate data bound to the rule.
+     * @param array $NoMatchDomains Domain list not matched.
+     * @param string $Url Rule binding path.
      */
     function __construct()
     {
@@ -105,6 +105,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("NoMatchDomains",$param) and $param["NoMatchDomains"] !== null) {
             $this->NoMatchDomains = $param["NoMatchDomains"];
+        }
+
+        if (array_key_exists("Url",$param) and $param["Url"] !== null) {
+            $this->Url = $param["Url"];
         }
     }
 }

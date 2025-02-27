@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * UpdateCertificateRecordRetry request structure.
  *
- * @method integer getDeployRecordId() Obtain To-be-redeployed record ID
- * @method void setDeployRecordId(integer $DeployRecordId) Set To-be-redeployed record ID
- * @method integer getDeployRecordDetailId() Obtain To-be-redeployed record detail ID
- * @method void setDeployRecordDetailId(integer $DeployRecordDetailId) Set To-be-redeployed record detail ID
+ * @method integer getDeployRecordId() Obtain Record ID for pending retry deployment, which can be obtained through UpdateCertificateInstance. if this parameter is not provided, DeployRecordDetailId must be provided.
+ * @method void setDeployRecordId(integer $DeployRecordId) Set Record ID for pending retry deployment, which can be obtained through UpdateCertificateInstance. if this parameter is not provided, DeployRecordDetailId must be provided.
+ * @method integer getDeployRecordDetailId() Obtain Detail ID for pending retry deployment record, which can be obtained through the DescribeHostUpdateRecordDetail api. if this parameter is not provided, DeployRecordId must be provided.
+ * @method void setDeployRecordDetailId(integer $DeployRecordDetailId) Set Detail ID for pending retry deployment record, which can be obtained through the DescribeHostUpdateRecordDetail api. if this parameter is not provided, DeployRecordId must be provided.
  */
 class UpdateCertificateRecordRetryRequest extends AbstractModel
 {
     /**
-     * @var integer To-be-redeployed record ID
+     * @var integer Record ID for pending retry deployment, which can be obtained through UpdateCertificateInstance. if this parameter is not provided, DeployRecordDetailId must be provided.
      */
     public $DeployRecordId;
 
     /**
-     * @var integer To-be-redeployed record detail ID
+     * @var integer Detail ID for pending retry deployment record, which can be obtained through the DescribeHostUpdateRecordDetail api. if this parameter is not provided, DeployRecordId must be provided.
      */
     public $DeployRecordDetailId;
 
     /**
-     * @param integer $DeployRecordId To-be-redeployed record ID
-     * @param integer $DeployRecordDetailId To-be-redeployed record detail ID
+     * @param integer $DeployRecordId Record ID for pending retry deployment, which can be obtained through UpdateCertificateInstance. if this parameter is not provided, DeployRecordDetailId must be provided.
+     * @param integer $DeployRecordDetailId Detail ID for pending retry deployment record, which can be obtained through the DescribeHostUpdateRecordDetail api. if this parameter is not provided, DeployRecordId must be provided.
      */
     function __construct()
     {

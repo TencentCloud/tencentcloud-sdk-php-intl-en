@@ -18,44 +18,64 @@ namespace TencentCloud\Ssl\V20191205\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Update the progress of asynchronous task.
  *
- * @method string getRegion() Obtain 
- * @method void setRegion(string $Region) Set 
- * @method integer getTotalCount() Obtain 
- * @method void setTotalCount(integer $TotalCount) Set 
- * @method integer getOffsetCount() Obtain 
- * @method void setOffsetCount(integer $OffsetCount) Set 
- * @method integer getStatus() Obtain 
- * @method void setStatus(integer $Status) Set 
+ * @method string getRegion() Obtain Resource type.
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method void setRegion(string $Region) Set Resource type.
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method integer getTotalCount() Obtain Total number
+.
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method void setTotalCount(integer $TotalCount) Set Total number
+.
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method integer getOffsetCount() Obtain Quantity of executions completed.
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method void setOffsetCount(integer $OffsetCount) Set Quantity of executions completed.
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method integer getStatus() Obtain Asynchronous update progress status: 0, pending, 1 processed, 3 processing.
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method void setStatus(integer $Status) Set Asynchronous update progress status: 0, pending, 1 processed, 3 processing.
+Note: this field may return null, indicating that no valid values can be obtained.
  */
 class UpdateSyncProgressRegion extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Resource type.
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $Region;
 
     /**
-     * @var integer 
+     * @var integer Total number
+.
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $TotalCount;
 
     /**
-     * @var integer 
+     * @var integer Quantity of executions completed.
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $OffsetCount;
 
     /**
-     * @var integer 
+     * @var integer Asynchronous update progress status: 0, pending, 1 processed, 3 processing.
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $Status;
 
     /**
-     * @param string $Region 
-     * @param integer $TotalCount 
-     * @param integer $OffsetCount 
-     * @param integer $Status 
+     * @param string $Region Resource type.
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param integer $TotalCount Total number
+.
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param integer $OffsetCount Quantity of executions completed.
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param integer $Status Asynchronous update progress status: 0, pending, 1 processed, 3 processing.
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

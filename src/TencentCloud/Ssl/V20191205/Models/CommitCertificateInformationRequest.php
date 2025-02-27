@@ -20,26 +20,38 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CommitCertificateInformation request structure.
  *
- * @method string getCertificateId() Obtain Certificate ID
- * @method void setCertificateId(string $CertificateId) Set Certificate ID
- * @method string getVerifyType() Obtain Domain validation method
- * @method void setVerifyType(string $VerifyType) Set Domain validation method
+ * @method string getCertificateId() Obtain Paid certificate id of materials to be submitted.	
+ * @method void setCertificateId(string $CertificateId) Set Paid certificate id of materials to be submitted.	
+ * @method string getVerifyType() Obtain Certificate domain name verification method:.
+DNS_AUTO: automatically adds domain dns verification, requiring user domain name resolution to be hosted on [cloud dns](https://console.cloud.tencent.com/cns) and under the same tencent cloud account as the certificate application.
+DNS: manually add domain dns verification, which requires users to manually add verification values to the domain resolution service provider.
+FILE: manual addition of domain name file verification. requires the user to manually add a specified path file in the root directory of the domain site for file verification, and either http or https passing is acceptable; the domain site needs to be accessible by overseas ca institutions, with the specific access allowlist being: 64.78.193.238, 216.168.247.9, 216.168.249.9, 54.189.196.217.
+ * @method void setVerifyType(string $VerifyType) Set Certificate domain name verification method:.
+DNS_AUTO: automatically adds domain dns verification, requiring user domain name resolution to be hosted on [cloud dns](https://console.cloud.tencent.com/cns) and under the same tencent cloud account as the certificate application.
+DNS: manually add domain dns verification, which requires users to manually add verification values to the domain resolution service provider.
+FILE: manual addition of domain name file verification. requires the user to manually add a specified path file in the root directory of the domain site for file verification, and either http or https passing is acceptable; the domain site needs to be accessible by overseas ca institutions, with the specific access allowlist being: 64.78.193.238, 216.168.247.9, 216.168.249.9, 54.189.196.217.
  */
 class CommitCertificateInformationRequest extends AbstractModel
 {
     /**
-     * @var string Certificate ID
+     * @var string Paid certificate id of materials to be submitted.	
      */
     public $CertificateId;
 
     /**
-     * @var string Domain validation method
+     * @var string Certificate domain name verification method:.
+DNS_AUTO: automatically adds domain dns verification, requiring user domain name resolution to be hosted on [cloud dns](https://console.cloud.tencent.com/cns) and under the same tencent cloud account as the certificate application.
+DNS: manually add domain dns verification, which requires users to manually add verification values to the domain resolution service provider.
+FILE: manual addition of domain name file verification. requires the user to manually add a specified path file in the root directory of the domain site for file verification, and either http or https passing is acceptable; the domain site needs to be accessible by overseas ca institutions, with the specific access allowlist being: 64.78.193.238, 216.168.247.9, 216.168.249.9, 54.189.196.217.
      */
     public $VerifyType;
 
     /**
-     * @param string $CertificateId Certificate ID
-     * @param string $VerifyType Domain validation method
+     * @param string $CertificateId Paid certificate id of materials to be submitted.	
+     * @param string $VerifyType Certificate domain name verification method:.
+DNS_AUTO: automatically adds domain dns verification, requiring user domain name resolution to be hosted on [cloud dns](https://console.cloud.tencent.com/cns) and under the same tencent cloud account as the certificate application.
+DNS: manually add domain dns verification, which requires users to manually add verification values to the domain resolution service provider.
+FILE: manual addition of domain name file verification. requires the user to manually add a specified path file in the root directory of the domain site for file verification, and either http or https passing is acceptable; the domain site needs to be accessible by overseas ca institutions, with the specific access allowlist being: 64.78.193.238, 216.168.247.9, 216.168.249.9, 54.189.196.217.
      */
     function __construct()
     {

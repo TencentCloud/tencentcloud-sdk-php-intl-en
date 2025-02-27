@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setThaiName(string $ThaiName) Set Name in Thai
  * @method string getEnName() Obtain Name in English
  * @method void setEnName(string $EnName) Set Name in English
+ * @method string getThaiSurName() Obtain Surname in Thai
+ * @method void setThaiSurName(string $ThaiSurName) Set Surname in Thai
  * @method string getThaiDOB() Obtain Date of birth in Thai
  * @method void setThaiDOB(string $ThaiDOB) Set Date of birth in Thai
  * @method string getEnDOB() Obtain Date of birth in English
@@ -78,6 +80,11 @@ class RecognizeThaiPinkCardResponse extends AbstractModel
      * @var string Name in English
      */
     public $EnName;
+
+    /**
+     * @var string Surname in Thai
+     */
+    public $ThaiSurName;
 
     /**
      * @var string Date of birth in Thai
@@ -150,6 +157,7 @@ class RecognizeThaiPinkCardResponse extends AbstractModel
      * @param string $IDNumber ID number
      * @param string $ThaiName Name in Thai
      * @param string $EnName Name in English
+     * @param string $ThaiSurName Surname in Thai
      * @param string $ThaiDOB Date of birth in Thai
      * @param string $EnDOB Date of birth in English
      * @param string $PhotoNumber Photo number
@@ -192,6 +200,10 @@ class RecognizeThaiPinkCardResponse extends AbstractModel
 
         if (array_key_exists("EnName",$param) and $param["EnName"] !== null) {
             $this->EnName = $param["EnName"];
+        }
+
+        if (array_key_exists("ThaiSurName",$param) and $param["ThaiSurName"] !== null) {
+            $this->ThaiSurName = $param["ThaiSurName"];
         }
 
         if (array_key_exists("ThaiDOB",$param) and $param["ThaiDOB"] !== null) {

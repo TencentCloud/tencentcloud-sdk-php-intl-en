@@ -20,90 +20,66 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Detailed summary by billing dimension
  *
- * @method array getBusiness() Obtain Product information list
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setBusiness(array $Business) Set Product information list
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getOriginalCost() Obtain Original price
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setOriginalCost(string $OriginalCost) Set Original price
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getVoucherPayAmount() Obtain Voucher amount
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setVoucherPayAmount(string $VoucherPayAmount) Set Voucher amount
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getRICost() Obtain Daily deduction
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setRICost(string $RICost) Set Daily deduction
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getTotalCost() Obtain Total amount
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setTotalCost(string $TotalCost) Set Total amount
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getGroupKey() Obtain Summary key by classification dimension Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setGroupKey(string $GroupKey) Set Summary key by classification dimension Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getGroupValue() Obtain  Summary value by classification dimension
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setGroupValue(string $GroupValue) Set  Summary value by classification dimension
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method array getBusiness() Obtain Product information list.
+ * @method void setBusiness(array $Business) Set Product information list.
+ * @method string getOriginalCost() Obtain Original price.
+ * @method void setOriginalCost(string $OriginalCost) Set Original price.
+ * @method string getVoucherPayAmount() Obtain Voucher amount.
+ * @method void setVoucherPayAmount(string $VoucherPayAmount) Set Voucher amount.
+ * @method string getRICost() Obtain RI deduction.
+ * @method void setRICost(string $RICost) Set RI deduction.
+ * @method string getTotalCost() Obtain <TOTAL_AMOUNT>.
+ * @method void setTotalCost(string $TotalCost) Set <TOTAL_AMOUNT>.
+ * @method string getGroupKey() Obtain Classification dimension summary key.
+ * @method void setGroupKey(string $GroupKey) Set Classification dimension summary key.
+ * @method string getGroupValue() Obtain Summary value by classification dimension.
+ * @method void setGroupValue(string $GroupValue) Set Summary value by classification dimension.
  */
 class SummaryDetails extends AbstractModel
 {
     /**
-     * @var array Product information list
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array Product information list.
      */
     public $Business;
 
     /**
-     * @var string Original price
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Original price.
      */
     public $OriginalCost;
 
     /**
-     * @var string Voucher amount
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Voucher amount.
      */
     public $VoucherPayAmount;
 
     /**
-     * @var string Daily deduction
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string RI deduction.
      */
     public $RICost;
 
     /**
-     * @var string Total amount
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string <TOTAL_AMOUNT>.
      */
     public $TotalCost;
 
     /**
-     * @var string Summary key by classification dimension Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Classification dimension summary key.
      */
     public $GroupKey;
 
     /**
-     * @var string  Summary value by classification dimension
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Summary value by classification dimension.
      */
     public $GroupValue;
 
     /**
-     * @param array $Business Product information list
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $OriginalCost Original price
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $VoucherPayAmount Voucher amount
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $RICost Daily deduction
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $TotalCost Total amount
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $GroupKey Summary key by classification dimension Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $GroupValue  Summary value by classification dimension
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param array $Business Product information list.
+     * @param string $OriginalCost Original price.
+     * @param string $VoucherPayAmount Voucher amount.
+     * @param string $RICost RI deduction.
+     * @param string $TotalCost <TOTAL_AMOUNT>.
+     * @param string $GroupKey Classification dimension summary key.
+     * @param string $GroupValue Summary value by classification dimension.
      */
     function __construct()
     {

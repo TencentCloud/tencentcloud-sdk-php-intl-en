@@ -30,12 +30,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFilters(array $Filters) Set The list of filter parameters. FilterKey: domainMatch (query the list of instances with matching or non-matching domains). FilterValue: `1` (default; query the list of instances with matching domains) or `0` (query the list of instances with non-matching domains).
  * @method string getOldCertificateId() Obtain The ID of the deployed certificate.
  * @method void setOldCertificateId(string $OldCertificateId) Set The ID of the deployed certificate.
- * @method integer getOffset() Obtain The pagination offset, starting from 0.
- * @method void setOffset(integer $Offset) Set The pagination offset, starting from 0.
- * @method integer getLimit() Obtain The number of instances on each page. Default value: 10.	
- * @method void setLimit(integer $Limit) Set The number of instances on each page. Default value: 10.	
- * @method integer getAsyncCache() Obtain Whether the query is asynchronous.
- * @method void setAsyncCache(integer $AsyncCache) Set Whether the query is asynchronous.
+ * @method integer getOffset() Obtain Paging offset. default value: 0.
+ * @method void setOffset(integer $Offset) Set Paging offset. default value: 0.
+ * @method integer getLimit() Obtain Number of items per page. default: 10. maximum value: 200.	
+ * @method void setLimit(integer $Limit) Set Number of items per page. default: 10. maximum value: 200.	
+ * @method integer getAsyncCache() Obtain Asynchronous or not. 1 means yes, 0 means no. default: 0.
+ * @method void setAsyncCache(integer $AsyncCache) Set Asynchronous or not. 1 means yes, 0 means no. default: 0.
  */
 class DescribeHostTeoInstanceListRequest extends AbstractModel
 {
@@ -46,6 +46,7 @@ class DescribeHostTeoInstanceListRequest extends AbstractModel
 
     /**
      * @var string The type of resource for certificate deployment.
+     * @deprecated
      */
     public $ResourceType;
 
@@ -65,17 +66,17 @@ class DescribeHostTeoInstanceListRequest extends AbstractModel
     public $OldCertificateId;
 
     /**
-     * @var integer The pagination offset, starting from 0.
+     * @var integer Paging offset. default value: 0.
      */
     public $Offset;
 
     /**
-     * @var integer The number of instances on each page. Default value: 10.	
+     * @var integer Number of items per page. default: 10. maximum value: 200.	
      */
     public $Limit;
 
     /**
-     * @var integer Whether the query is asynchronous.
+     * @var integer Asynchronous or not. 1 means yes, 0 means no. default: 0.
      */
     public $AsyncCache;
 
@@ -85,9 +86,9 @@ class DescribeHostTeoInstanceListRequest extends AbstractModel
      * @param integer $IsCache Whether to query the cached results. Valid values: `1` (yes) and `0` (no). By default, the cached results within 30 minutes are queried.
      * @param array $Filters The list of filter parameters. FilterKey: domainMatch (query the list of instances with matching or non-matching domains). FilterValue: `1` (default; query the list of instances with matching domains) or `0` (query the list of instances with non-matching domains).
      * @param string $OldCertificateId The ID of the deployed certificate.
-     * @param integer $Offset The pagination offset, starting from 0.
-     * @param integer $Limit The number of instances on each page. Default value: 10.	
-     * @param integer $AsyncCache Whether the query is asynchronous.
+     * @param integer $Offset Paging offset. default value: 0.
+     * @param integer $Limit Number of items per page. default: 10. maximum value: 200.	
+     * @param integer $AsyncCache Asynchronous or not. 1 means yes, 0 means no. default: 0.
      */
     function __construct()
     {

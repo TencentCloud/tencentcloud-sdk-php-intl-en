@@ -18,36 +18,48 @@ namespace TencentCloud\Ssl\V20191205\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Update the progress of asynchronous task.
  *
- * @method string getResourceType() Obtain 
- * @method void setResourceType(string $ResourceType) Set 
- * @method array getUpdateSyncProgressRegions() Obtain 
- * @method void setUpdateSyncProgressRegions(array $UpdateSyncProgressRegions) Set 
- * @method integer getStatus() Obtain 
- * @method void setStatus(integer $Status) Set 
+ * @method string getResourceType() Obtain Resource type.
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method void setResourceType(string $ResourceType) Set Resource type.
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method array getUpdateSyncProgressRegions() Obtain Region result list.
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method void setUpdateSyncProgressRegions(array $UpdateSyncProgressRegions) Set Region result list.
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method integer getStatus() Obtain Asynchronous update progress status: 0, pending, 1 processed, 3 processing.
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method void setStatus(integer $Status) Set Asynchronous update progress status: 0, pending, 1 processed, 3 processing.
+Note: this field may return null, indicating that no valid values can be obtained.
  */
 class UpdateSyncProgress extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Resource type.
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $ResourceType;
 
     /**
-     * @var array 
+     * @var array Region result list.
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $UpdateSyncProgressRegions;
 
     /**
-     * @var integer 
+     * @var integer Asynchronous update progress status: 0, pending, 1 processed, 3 processing.
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $Status;
 
     /**
-     * @param string $ResourceType 
-     * @param array $UpdateSyncProgressRegions 
-     * @param integer $Status 
+     * @param string $ResourceType Resource type.
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param array $UpdateSyncProgressRegions Region result list.
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param integer $Status Asynchronous update progress status: 0, pending, 1 processed, 3 processing.
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

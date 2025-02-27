@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeBillSummary request structure.
  *
- * @method string getMonth() Obtain Bill month in the format of "yyyy-mm".
- * @method void setMonth(string $Month) Set Bill month in the format of "yyyy-mm".
+ * @method string getMonth() Obtain The month to which the bill belongs, formatted as YYYY-MM.
+ * @method void setMonth(string $Month) Set The month to which the bill belongs, formatted as YYYY-MM.
  * @method string getGroupType() Obtain Billing dimension. Optional parameters: product, project, tag
  * @method void setGroupType(string $GroupType) Set Billing dimension. Optional parameters: product, project, tag
  * @method array getTagKey() Obtain Tag value list
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeBillSummaryRequest extends AbstractModel
 {
     /**
-     * @var string Bill month in the format of "yyyy-mm".
+     * @var string The month to which the bill belongs, formatted as YYYY-MM.
      */
     public $Month;
 
@@ -45,7 +45,7 @@ class DescribeBillSummaryRequest extends AbstractModel
     public $TagKey;
 
     /**
-     * @param string $Month Bill month in the format of "yyyy-mm".
+     * @param string $Month The month to which the bill belongs, formatted as YYYY-MM.
      * @param string $GroupType Billing dimension. Optional parameters: product, project, tag
      * @param array $TagKey Tag value list
      */

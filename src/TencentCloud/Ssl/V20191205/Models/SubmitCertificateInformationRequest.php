@@ -20,118 +20,129 @@ use TencentCloud\Common\AbstractModel;
 /**
  * SubmitCertificateInformation request structure.
  *
- * @method string getCertificateId() Obtain Certificate ID
- * @method void setCertificateId(string $CertificateId) Set Certificate ID
- * @method string getCsrType() Obtain CSR generation mode. `online`: generated online; `parse`: uploaded manually
- * @method void setCsrType(string $CsrType) Set CSR generation mode. `online`: generated online; `parse`: uploaded manually
- * @method string getCsrContent() Obtain Uploaded CSR content
- * @method void setCsrContent(string $CsrContent) Set Uploaded CSR content
- * @method string getCertificateDomain() Obtain Domain name bound with the certificate
- * @method void setCertificateDomain(string $CertificateDomain) Set Domain name bound with the certificate
- * @method array getDomainList() Obtain Uploaded domain name array (can be uploaded for a multi-domain certificate)
- * @method void setDomainList(array $DomainList) Set Uploaded domain name array (can be uploaded for a multi-domain certificate)
- * @method string getKeyPassword() Obtain Password of the private key
- * @method void setKeyPassword(string $KeyPassword) Set Password of the private key
- * @method string getOrganizationName() Obtain Organization name
- * @method void setOrganizationName(string $OrganizationName) Set Organization name
- * @method string getOrganizationDivision() Obtain Division name
- * @method void setOrganizationDivision(string $OrganizationDivision) Set Division name
- * @method string getOrganizationAddress() Obtain Detailed address of the organization
- * @method void setOrganizationAddress(string $OrganizationAddress) Set Detailed address of the organization
- * @method string getOrganizationCountry() Obtain Country where the organization is located, for example, CN (China)
- * @method void setOrganizationCountry(string $OrganizationCountry) Set Country where the organization is located, for example, CN (China)
- * @method string getOrganizationCity() Obtain City where the organization is located
- * @method void setOrganizationCity(string $OrganizationCity) Set City where the organization is located
- * @method string getOrganizationRegion() Obtain Province where the organization is located
- * @method void setOrganizationRegion(string $OrganizationRegion) Set Province where the organization is located
+ * @method string getCertificateId() Obtain Paid certificate id of materials to be submitted.
+ * @method void setCertificateId(string $CertificateId) Set Paid certificate id of materials to be submitted.
+ * @method string getCsrType() Obtain This field is required. Generation method of CSR, valid values are:
+online: tencent cloud generates the CSR and private key based on the submitted parameter information and stores them encryptedly.
+parse: generate the CSR and private key by itself, and apply for a certificate by uploading the CSR.
+ * @method void setCsrType(string $CsrType) Set This field is required. Generation method of CSR, valid values are:
+online: tencent cloud generates the CSR and private key based on the submitted parameter information and stores them encryptedly.
+parse: generate the CSR and private key by itself, and apply for a certificate by uploading the CSR.
+ * @method string getCsrContent() Obtain The content of the uploaded csr.
+If CsrType is parse, this field is required.
+ * @method void setCsrContent(string $CsrContent) Set The content of the uploaded csr.
+If CsrType is parse, this field is required.
+ * @method string getCertificateDomain() Obtain The common name bound to the certificate. if a CSR is uploaded, the domain name must be consistent with the common name resolved from the CSR.
+ * @method void setCertificateDomain(string $CertificateDomain) Set The common name bound to the certificate. if a CSR is uploaded, the domain name must be consistent with the common name resolved from the CSR.
+ * @method array getDomainList() Obtain Other domain names bound to the certificate. not required for single domain and wildcard domain certificates. required for multiple domain names and multiple wildcard domain names.
+ * @method void setDomainList(array $DomainList) Set Other domain names bound to the certificate. not required for single domain and wildcard domain certificates. required for multiple domain names and multiple wildcard domain names.
+ * @method string getKeyPassword() Obtain Private key password, which is currently only used for the password when generating jks and pfx format certificates; other formats of private key certificates are not encrypted.	
+ * @method void setKeyPassword(string $KeyPassword) Set Private key password, which is currently only used for the password when generating jks and pfx format certificates; other formats of private key certificates are not encrypted.	
+ * @method string getOrganizationName() Obtain This field is required. Company name.
+ * @method void setOrganizationName(string $OrganizationName) Set This field is required. Company name.
+ * @method string getOrganizationDivision() Obtain This field is required.  Department name.
+ * @method void setOrganizationDivision(string $OrganizationDivision) Set This field is required.  Department name.
+ * @method string getOrganizationAddress() Obtain This field is required. Company's detailed address.
+ * @method void setOrganizationAddress(string $OrganizationAddress) Set This field is required. Company's detailed address.
+ * @method string getOrganizationCountry() Obtain This field is required.Country name such as CN.
+ * @method void setOrganizationCountry(string $OrganizationCountry) Set This field is required.Country name such as CN.
+ * @method string getOrganizationCity() Obtain This field is required, which specifies the city where the company is located.
+ * @method void setOrganizationCity(string $OrganizationCity) Set This field is required, which specifies the city where the company is located.
+ * @method string getOrganizationRegion() Obtain This field is required, specifying the province where the company is located.
+ * @method void setOrganizationRegion(string $OrganizationRegion) Set This field is required, specifying the province where the company is located.
  * @method string getPostalCode() Obtain Postal code of the organization
  * @method void setPostalCode(string $PostalCode) Set Postal code of the organization
- * @method string getPhoneAreaCode() Obtain Area code of the fixed-line phone number of the organization
- * @method void setPhoneAreaCode(string $PhoneAreaCode) Set Area code of the fixed-line phone number of the organization
- * @method string getPhoneNumber() Obtain Fixed-line phone number of the organization
- * @method void setPhoneNumber(string $PhoneNumber) Set Fixed-line phone number of the organization
- * @method string getVerifyType() Obtain Certificate validation method
- * @method void setVerifyType(string $VerifyType) Set Certificate validation method
- * @method string getAdminFirstName() Obtain Last name of the administrator
- * @method void setAdminFirstName(string $AdminFirstName) Set Last name of the administrator
- * @method string getAdminLastName() Obtain First name of the administrator
- * @method void setAdminLastName(string $AdminLastName) Set First name of the administrator
- * @method string getAdminPhoneNum() Obtain Mobile number of the administrator
- * @method void setAdminPhoneNum(string $AdminPhoneNum) Set Mobile number of the administrator
- * @method string getAdminEmail() Obtain Email of the administrator
- * @method void setAdminEmail(string $AdminEmail) Set Email of the administrator
- * @method string getAdminPosition() Obtain Position of the administrator
- * @method void setAdminPosition(string $AdminPosition) Set Position of the administrator
- * @method string getContactFirstName() Obtain Last name of the contact
- * @method void setContactFirstName(string $ContactFirstName) Set Last name of the contact
- * @method string getContactLastName() Obtain First name of the contact
- * @method void setContactLastName(string $ContactLastName) Set First name of the contact
- * @method string getContactEmail() Obtain Email of the contact
- * @method void setContactEmail(string $ContactEmail) Set Email of the contact
- * @method string getContactNumber() Obtain Mobile number of the contact
- * @method void setContactNumber(string $ContactNumber) Set Mobile number of the contact
- * @method string getContactPosition() Obtain Position of the contact
- * @method void setContactPosition(string $ContactPosition) Set Position of the contact
+ * @method string getPhoneAreaCode() Obtain This field is required, the company's fixed-line phone area code.
+ * @method void setPhoneAreaCode(string $PhoneAreaCode) Set This field is required, the company's fixed-line phone area code.
+ * @method string getPhoneNumber() Obtain This field is required, the company's landline number.
+ * @method void setPhoneNumber(string $PhoneNumber) Set This field is required, the company's landline number.
+ * @method string getVerifyType() Obtain Certificate validation method. Validation types: DNS_AUTO = Automatic DNS validation (only supported for domains resolved by Tencent Cloud DNS with a normal resolution status), DNS = Manual DNS validation, FILE = File validation.
+ * @method void setVerifyType(string $VerifyType) Set Certificate validation method. Validation types: DNS_AUTO = Automatic DNS validation (only supported for domains resolved by Tencent Cloud DNS with a normal resolution status), DNS = Manual DNS validation, FILE = File validation.
+ * @method string getAdminFirstName() Obtain This field is required, manager name.
+ * @method void setAdminFirstName(string $AdminFirstName) Set This field is required, manager name.
+ * @method string getAdminLastName() Obtain This field is required, the manager's surname.
+ * @method void setAdminLastName(string $AdminLastName) Set This field is required, the manager's surname.
+ * @method string getAdminPhoneNum() Obtain This field is required, the manager's mobile phone number.
+ * @method void setAdminPhoneNum(string $AdminPhoneNum) Set This field is required, the manager's mobile phone number.
+ * @method string getAdminEmail() Obtain This field is required, the manager's email address.
+ * @method void setAdminEmail(string $AdminEmail) Set This field is required, the manager's email address.
+ * @method string getAdminPosition() Obtain This field is required, the manager position.
+ * @method void setAdminPosition(string $AdminPosition) Set This field is required, the manager position.
+ * @method string getContactFirstName() Obtain This field is required, the contact person name.
+ * @method void setContactFirstName(string $ContactFirstName) Set This field is required, the contact person name.
+ * @method string getContactLastName() Obtain This field is required, the contact person's surname.
+ * @method void setContactLastName(string $ContactLastName) Set This field is required, the contact person's surname.
+ * @method string getContactEmail() Obtain This field is required, the contact person's email address.
+ * @method void setContactEmail(string $ContactEmail) Set This field is required, the contact person's email address.
+ * @method string getContactNumber() Obtain This field is required, the contact person's mobile phone number.
+ * @method void setContactNumber(string $ContactNumber) Set This field is required, the contact person's mobile phone number.
+ * @method string getContactPosition() Obtain This field is required, the contact person position.
+ * @method void setContactPosition(string $ContactPosition) Set This field is required, the contact person position.
+ * @method boolean getIsDV() Obtain Indicates whether it is a dv certificate. default value is false.
+ * @method void setIsDV(boolean $IsDV) Set Indicates whether it is a dv certificate. default value is false.
  */
 class SubmitCertificateInformationRequest extends AbstractModel
 {
     /**
-     * @var string Certificate ID
+     * @var string Paid certificate id of materials to be submitted.
      */
     public $CertificateId;
 
     /**
-     * @var string CSR generation mode. `online`: generated online; `parse`: uploaded manually
+     * @var string This field is required. Generation method of CSR, valid values are:
+online: tencent cloud generates the CSR and private key based on the submitted parameter information and stores them encryptedly.
+parse: generate the CSR and private key by itself, and apply for a certificate by uploading the CSR.
      */
     public $CsrType;
 
     /**
-     * @var string Uploaded CSR content
+     * @var string The content of the uploaded csr.
+If CsrType is parse, this field is required.
      */
     public $CsrContent;
 
     /**
-     * @var string Domain name bound with the certificate
+     * @var string The common name bound to the certificate. if a CSR is uploaded, the domain name must be consistent with the common name resolved from the CSR.
      */
     public $CertificateDomain;
 
     /**
-     * @var array Uploaded domain name array (can be uploaded for a multi-domain certificate)
+     * @var array Other domain names bound to the certificate. not required for single domain and wildcard domain certificates. required for multiple domain names and multiple wildcard domain names.
      */
     public $DomainList;
 
     /**
-     * @var string Password of the private key
+     * @var string Private key password, which is currently only used for the password when generating jks and pfx format certificates; other formats of private key certificates are not encrypted.	
      */
     public $KeyPassword;
 
     /**
-     * @var string Organization name
+     * @var string This field is required. Company name.
      */
     public $OrganizationName;
 
     /**
-     * @var string Division name
+     * @var string This field is required.  Department name.
      */
     public $OrganizationDivision;
 
     /**
-     * @var string Detailed address of the organization
+     * @var string This field is required. Company's detailed address.
      */
     public $OrganizationAddress;
 
     /**
-     * @var string Country where the organization is located, for example, CN (China)
+     * @var string This field is required.Country name such as CN.
      */
     public $OrganizationCountry;
 
     /**
-     * @var string City where the organization is located
+     * @var string This field is required, which specifies the city where the company is located.
      */
     public $OrganizationCity;
 
     /**
-     * @var string Province where the organization is located
+     * @var string This field is required, specifying the province where the company is located.
      */
     public $OrganizationRegion;
 
@@ -141,97 +152,106 @@ class SubmitCertificateInformationRequest extends AbstractModel
     public $PostalCode;
 
     /**
-     * @var string Area code of the fixed-line phone number of the organization
+     * @var string This field is required, the company's fixed-line phone area code.
      */
     public $PhoneAreaCode;
 
     /**
-     * @var string Fixed-line phone number of the organization
+     * @var string This field is required, the company's landline number.
      */
     public $PhoneNumber;
 
     /**
-     * @var string Certificate validation method
+     * @var string Certificate validation method. Validation types: DNS_AUTO = Automatic DNS validation (only supported for domains resolved by Tencent Cloud DNS with a normal resolution status), DNS = Manual DNS validation, FILE = File validation.
      */
     public $VerifyType;
 
     /**
-     * @var string Last name of the administrator
+     * @var string This field is required, manager name.
      */
     public $AdminFirstName;
 
     /**
-     * @var string First name of the administrator
+     * @var string This field is required, the manager's surname.
      */
     public $AdminLastName;
 
     /**
-     * @var string Mobile number of the administrator
+     * @var string This field is required, the manager's mobile phone number.
      */
     public $AdminPhoneNum;
 
     /**
-     * @var string Email of the administrator
+     * @var string This field is required, the manager's email address.
      */
     public $AdminEmail;
 
     /**
-     * @var string Position of the administrator
+     * @var string This field is required, the manager position.
      */
     public $AdminPosition;
 
     /**
-     * @var string Last name of the contact
+     * @var string This field is required, the contact person name.
      */
     public $ContactFirstName;
 
     /**
-     * @var string First name of the contact
+     * @var string This field is required, the contact person's surname.
      */
     public $ContactLastName;
 
     /**
-     * @var string Email of the contact
+     * @var string This field is required, the contact person's email address.
      */
     public $ContactEmail;
 
     /**
-     * @var string Mobile number of the contact
+     * @var string This field is required, the contact person's mobile phone number.
      */
     public $ContactNumber;
 
     /**
-     * @var string Position of the contact
+     * @var string This field is required, the contact person position.
      */
     public $ContactPosition;
 
     /**
-     * @param string $CertificateId Certificate ID
-     * @param string $CsrType CSR generation mode. `online`: generated online; `parse`: uploaded manually
-     * @param string $CsrContent Uploaded CSR content
-     * @param string $CertificateDomain Domain name bound with the certificate
-     * @param array $DomainList Uploaded domain name array (can be uploaded for a multi-domain certificate)
-     * @param string $KeyPassword Password of the private key
-     * @param string $OrganizationName Organization name
-     * @param string $OrganizationDivision Division name
-     * @param string $OrganizationAddress Detailed address of the organization
-     * @param string $OrganizationCountry Country where the organization is located, for example, CN (China)
-     * @param string $OrganizationCity City where the organization is located
-     * @param string $OrganizationRegion Province where the organization is located
+     * @var boolean Indicates whether it is a dv certificate. default value is false.
+     */
+    public $IsDV;
+
+    /**
+     * @param string $CertificateId Paid certificate id of materials to be submitted.
+     * @param string $CsrType This field is required. Generation method of CSR, valid values are:
+online: tencent cloud generates the CSR and private key based on the submitted parameter information and stores them encryptedly.
+parse: generate the CSR and private key by itself, and apply for a certificate by uploading the CSR.
+     * @param string $CsrContent The content of the uploaded csr.
+If CsrType is parse, this field is required.
+     * @param string $CertificateDomain The common name bound to the certificate. if a CSR is uploaded, the domain name must be consistent with the common name resolved from the CSR.
+     * @param array $DomainList Other domain names bound to the certificate. not required for single domain and wildcard domain certificates. required for multiple domain names and multiple wildcard domain names.
+     * @param string $KeyPassword Private key password, which is currently only used for the password when generating jks and pfx format certificates; other formats of private key certificates are not encrypted.	
+     * @param string $OrganizationName This field is required. Company name.
+     * @param string $OrganizationDivision This field is required.  Department name.
+     * @param string $OrganizationAddress This field is required. Company's detailed address.
+     * @param string $OrganizationCountry This field is required.Country name such as CN.
+     * @param string $OrganizationCity This field is required, which specifies the city where the company is located.
+     * @param string $OrganizationRegion This field is required, specifying the province where the company is located.
      * @param string $PostalCode Postal code of the organization
-     * @param string $PhoneAreaCode Area code of the fixed-line phone number of the organization
-     * @param string $PhoneNumber Fixed-line phone number of the organization
-     * @param string $VerifyType Certificate validation method
-     * @param string $AdminFirstName Last name of the administrator
-     * @param string $AdminLastName First name of the administrator
-     * @param string $AdminPhoneNum Mobile number of the administrator
-     * @param string $AdminEmail Email of the administrator
-     * @param string $AdminPosition Position of the administrator
-     * @param string $ContactFirstName Last name of the contact
-     * @param string $ContactLastName First name of the contact
-     * @param string $ContactEmail Email of the contact
-     * @param string $ContactNumber Mobile number of the contact
-     * @param string $ContactPosition Position of the contact
+     * @param string $PhoneAreaCode This field is required, the company's fixed-line phone area code.
+     * @param string $PhoneNumber This field is required, the company's landline number.
+     * @param string $VerifyType Certificate validation method. Validation types: DNS_AUTO = Automatic DNS validation (only supported for domains resolved by Tencent Cloud DNS with a normal resolution status), DNS = Manual DNS validation, FILE = File validation.
+     * @param string $AdminFirstName This field is required, manager name.
+     * @param string $AdminLastName This field is required, the manager's surname.
+     * @param string $AdminPhoneNum This field is required, the manager's mobile phone number.
+     * @param string $AdminEmail This field is required, the manager's email address.
+     * @param string $AdminPosition This field is required, the manager position.
+     * @param string $ContactFirstName This field is required, the contact person name.
+     * @param string $ContactLastName This field is required, the contact person's surname.
+     * @param string $ContactEmail This field is required, the contact person's email address.
+     * @param string $ContactNumber This field is required, the contact person's mobile phone number.
+     * @param string $ContactPosition This field is required, the contact person position.
+     * @param boolean $IsDV Indicates whether it is a dv certificate. default value is false.
      */
     function __construct()
     {
@@ -348,6 +368,10 @@ class SubmitCertificateInformationRequest extends AbstractModel
 
         if (array_key_exists("ContactPosition",$param) and $param["ContactPosition"] !== null) {
             $this->ContactPosition = $param["ContactPosition"];
+        }
+
+        if (array_key_exists("IsDV",$param) and $param["IsDV"] !== null) {
+            $this->IsDV = $param["IsDV"];
         }
     }
 }

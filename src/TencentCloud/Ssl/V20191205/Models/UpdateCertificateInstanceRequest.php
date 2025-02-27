@@ -20,45 +20,45 @@ use TencentCloud\Common\AbstractModel;
 /**
  * UpdateCertificateInstance request structure.
  *
- * @method string getOldCertificateId() Obtain One-click update old certificate ID
- * @method void setOldCertificateId(string $OldCertificateId) Set One-click update old certificate ID
- * @method array getResourceTypes() Obtain Type of the resource that needs to be deployed. The following parameter values are optional: clb, cdn, waf, live, ddos, teo, apigateway, vod, tke, and tcb.
- * @method void setResourceTypes(array $ResourceTypes) Set Type of the resource that needs to be deployed. The following parameter values are optional: clb, cdn, waf, live, ddos, teo, apigateway, vod, tke, and tcb.
- * @method string getCertificateId() Obtain One-click update new certificate ID
- * @method void setCertificateId(string $CertificateId) Set One-click update new certificate ID
+ * @method string getOldCertificateId() Obtain The old certificate id for one-click update. by querying the cloud resources bound to this certificate id, and then updating these cloud resources with the new certificate.
+ * @method void setOldCertificateId(string $OldCertificateId) Set The old certificate id for one-click update. by querying the cloud resources bound to this certificate id, and then updating these cloud resources with the new certificate.
+ * @method array getResourceTypes() Obtain Resource types that need to be deployed, with optional parameter values (lowercase): clb, cdn, waf, live, ddos, teo, apigateway, vod, tke, tcb, tse, cos.
+ * @method void setResourceTypes(array $ResourceTypes) Set Resource types that need to be deployed, with optional parameter values (lowercase): clb, cdn, waf, live, ddos, teo, apigateway, vod, tke, tcb, tse, cos.
+ * @method string getCertificateId() Obtain New certificate id for one-click update. if this parameter is not provided, the public key certificate and private key certificate must be provided.
+ * @method void setCertificateId(string $CertificateId) Set New certificate id for one-click update. if this parameter is not provided, the public key certificate and private key certificate must be provided.
  * @method array getRegions() Obtain List of regions that need to be deployed (deprecated)
  * @method void setRegions(array $Regions) Set List of regions that need to be deployed (deprecated)
- * @method array getResourceTypesRegions() Obtain List of regions for which cloud resources need to be deployed
- * @method void setResourceTypesRegions(array $ResourceTypesRegions) Set List of regions for which cloud resources need to be deployed
- * @method string getCertificatePublicKey() Obtain Public key of the certificate. If the public key of the certificate is uploaded, CertificateId does not need to be uploaded.
- * @method void setCertificatePublicKey(string $CertificatePublicKey) Set Public key of the certificate. If the public key of the certificate is uploaded, CertificateId does not need to be uploaded.
- * @method string getCertificatePrivateKey() Obtain Private key of the certificate. If the public key of the certificate is uploaded, the private key of the certificate is required.
- * @method void setCertificatePrivateKey(string $CertificatePrivateKey) Set Private key of the certificate. If the public key of the certificate is uploaded, the private key of the certificate is required.
- * @method integer getExpiringNotificationSwitch() Obtain Whether an expiration reminder is ignored for the old certificate. 0: The notification is not ignored. 1: The notification is ignored.
- * @method void setExpiringNotificationSwitch(integer $ExpiringNotificationSwitch) Set Whether an expiration reminder is ignored for the old certificate. 0: The notification is not ignored. 1: The notification is ignored.
- * @method boolean getRepeatable() Obtain Whether repeated uploading of the same certificate is allowed. If the public key of the certificate is uploaded, this parameter can be configured.
- * @method void setRepeatable(boolean $Repeatable) Set Whether repeated uploading of the same certificate is allowed. If the public key of the certificate is uploaded, this parameter can be configured.
- * @method boolean getAllowDownload() Obtain Whether downloading is allowed. If the public key of the certificate is uploaded, this parameter can be configured.
- * @method void setAllowDownload(boolean $AllowDownload) Set Whether downloading is allowed. If the public key of the certificate is uploaded, this parameter can be configured.
- * @method array getTags() Obtain Tag list. If the public key of the certificate is uploaded, this parameter can be configured.
- * @method void setTags(array $Tags) Set Tag list. If the public key of the certificate is uploaded, this parameter can be configured.
- * @method integer getProjectId() Obtain Project ID. If the public key of the certificate is uploaded, this parameter can be configured.
- * @method void setProjectId(integer $ProjectId) Set Project ID. If the public key of the certificate is uploaded, this parameter can be configured.
+ * @method array getResourceTypesRegions() Obtain List of regions where cloud resources need to be deployed. the cloud resource type of the supported region must be passed. valid values: clb, tke, apigateway, waf, tcb, tse, cos.
+ * @method void setResourceTypesRegions(array $ResourceTypesRegions) Set List of regions where cloud resources need to be deployed. the cloud resource type of the supported region must be passed. valid values: clb, tke, apigateway, waf, tcb, tse, cos.
+ * @method string getCertificatePublicKey() Obtain If a public key certificate is uploaded, the private key certificate must also be uploaded, and the CertificateId does not need to be transmitted.
+ * @method void setCertificatePublicKey(string $CertificatePublicKey) Set If a public key certificate is uploaded, the private key certificate must also be uploaded, and the CertificateId does not need to be transmitted.
+ * @method string getCertificatePrivateKey() Obtain If a private key certificate is uploaded, then a public key certificate must be uploaded; CertificateId is not required.
+ * @method void setCertificatePrivateKey(string $CertificatePrivateKey) Set If a private key certificate is uploaded, then a public key certificate must be uploaded; CertificateId is not required.
+ * @method integer getExpiringNotificationSwitch() Obtain Whether to ignore expiration reminder for old certificate  0: do not ignore the notification. 1: ignore the notification, ignore the expiration reminder of OldCertificateId.
+ * @method void setExpiringNotificationSwitch(integer $ExpiringNotificationSwitch) Set Whether to ignore expiration reminder for old certificate  0: do not ignore the notification. 1: ignore the notification, ignore the expiration reminder of OldCertificateId.
+ * @method boolean getRepeatable() Obtain It specifies whether the same certificate is allowed to be uploaded repeatedly. If the public key and private key certificates are selected for upload, this parameter can be configured. If there are duplicate certificates, the update task will fail.
+ * @method void setRepeatable(boolean $Repeatable) Set It specifies whether the same certificate is allowed to be uploaded repeatedly. If the public key and private key certificates are selected for upload, this parameter can be configured. If there are duplicate certificates, the update task will fail.
+ * @method boolean getAllowDownload() Obtain Whether to allow downloading. If you choose to upload a public/private key certificate, this parameter can be configured.
+ * @method void setAllowDownload(boolean $AllowDownload) Set Whether to allow downloading. If you choose to upload a public/private key certificate, this parameter can be configured.
+ * @method array getTags() Obtain Tag list. If you choose to upload a public/private key certificate, you can configure this parameter.
+ * @method void setTags(array $Tags) Set Tag list. If you choose to upload a public/private key certificate, you can configure this parameter.
+ * @method integer getProjectId() Obtain Project id. If you choose to upload a public/private key certificate, you can configure this parameter.
+ * @method void setProjectId(integer $ProjectId) Set Project id. If you choose to upload a public/private key certificate, you can configure this parameter.
  */
 class UpdateCertificateInstanceRequest extends AbstractModel
 {
     /**
-     * @var string One-click update old certificate ID
+     * @var string The old certificate id for one-click update. by querying the cloud resources bound to this certificate id, and then updating these cloud resources with the new certificate.
      */
     public $OldCertificateId;
 
     /**
-     * @var array Type of the resource that needs to be deployed. The following parameter values are optional: clb, cdn, waf, live, ddos, teo, apigateway, vod, tke, and tcb.
+     * @var array Resource types that need to be deployed, with optional parameter values (lowercase): clb, cdn, waf, live, ddos, teo, apigateway, vod, tke, tcb, tse, cos.
      */
     public $ResourceTypes;
 
     /**
-     * @var string One-click update new certificate ID
+     * @var string New certificate id for one-click update. if this parameter is not provided, the public key certificate and private key certificate must be provided.
      */
     public $CertificateId;
 
@@ -69,58 +69,58 @@ class UpdateCertificateInstanceRequest extends AbstractModel
     public $Regions;
 
     /**
-     * @var array List of regions for which cloud resources need to be deployed
+     * @var array List of regions where cloud resources need to be deployed. the cloud resource type of the supported region must be passed. valid values: clb, tke, apigateway, waf, tcb, tse, cos.
      */
     public $ResourceTypesRegions;
 
     /**
-     * @var string Public key of the certificate. If the public key of the certificate is uploaded, CertificateId does not need to be uploaded.
+     * @var string If a public key certificate is uploaded, the private key certificate must also be uploaded, and the CertificateId does not need to be transmitted.
      */
     public $CertificatePublicKey;
 
     /**
-     * @var string Private key of the certificate. If the public key of the certificate is uploaded, the private key of the certificate is required.
+     * @var string If a private key certificate is uploaded, then a public key certificate must be uploaded; CertificateId is not required.
      */
     public $CertificatePrivateKey;
 
     /**
-     * @var integer Whether an expiration reminder is ignored for the old certificate. 0: The notification is not ignored. 1: The notification is ignored.
+     * @var integer Whether to ignore expiration reminder for old certificate  0: do not ignore the notification. 1: ignore the notification, ignore the expiration reminder of OldCertificateId.
      */
     public $ExpiringNotificationSwitch;
 
     /**
-     * @var boolean Whether repeated uploading of the same certificate is allowed. If the public key of the certificate is uploaded, this parameter can be configured.
+     * @var boolean It specifies whether the same certificate is allowed to be uploaded repeatedly. If the public key and private key certificates are selected for upload, this parameter can be configured. If there are duplicate certificates, the update task will fail.
      */
     public $Repeatable;
 
     /**
-     * @var boolean Whether downloading is allowed. If the public key of the certificate is uploaded, this parameter can be configured.
+     * @var boolean Whether to allow downloading. If you choose to upload a public/private key certificate, this parameter can be configured.
      */
     public $AllowDownload;
 
     /**
-     * @var array Tag list. If the public key of the certificate is uploaded, this parameter can be configured.
+     * @var array Tag list. If you choose to upload a public/private key certificate, you can configure this parameter.
      */
     public $Tags;
 
     /**
-     * @var integer Project ID. If the public key of the certificate is uploaded, this parameter can be configured.
+     * @var integer Project id. If you choose to upload a public/private key certificate, you can configure this parameter.
      */
     public $ProjectId;
 
     /**
-     * @param string $OldCertificateId One-click update old certificate ID
-     * @param array $ResourceTypes Type of the resource that needs to be deployed. The following parameter values are optional: clb, cdn, waf, live, ddos, teo, apigateway, vod, tke, and tcb.
-     * @param string $CertificateId One-click update new certificate ID
+     * @param string $OldCertificateId The old certificate id for one-click update. by querying the cloud resources bound to this certificate id, and then updating these cloud resources with the new certificate.
+     * @param array $ResourceTypes Resource types that need to be deployed, with optional parameter values (lowercase): clb, cdn, waf, live, ddos, teo, apigateway, vod, tke, tcb, tse, cos.
+     * @param string $CertificateId New certificate id for one-click update. if this parameter is not provided, the public key certificate and private key certificate must be provided.
      * @param array $Regions List of regions that need to be deployed (deprecated)
-     * @param array $ResourceTypesRegions List of regions for which cloud resources need to be deployed
-     * @param string $CertificatePublicKey Public key of the certificate. If the public key of the certificate is uploaded, CertificateId does not need to be uploaded.
-     * @param string $CertificatePrivateKey Private key of the certificate. If the public key of the certificate is uploaded, the private key of the certificate is required.
-     * @param integer $ExpiringNotificationSwitch Whether an expiration reminder is ignored for the old certificate. 0: The notification is not ignored. 1: The notification is ignored.
-     * @param boolean $Repeatable Whether repeated uploading of the same certificate is allowed. If the public key of the certificate is uploaded, this parameter can be configured.
-     * @param boolean $AllowDownload Whether downloading is allowed. If the public key of the certificate is uploaded, this parameter can be configured.
-     * @param array $Tags Tag list. If the public key of the certificate is uploaded, this parameter can be configured.
-     * @param integer $ProjectId Project ID. If the public key of the certificate is uploaded, this parameter can be configured.
+     * @param array $ResourceTypesRegions List of regions where cloud resources need to be deployed. the cloud resource type of the supported region must be passed. valid values: clb, tke, apigateway, waf, tcb, tse, cos.
+     * @param string $CertificatePublicKey If a public key certificate is uploaded, the private key certificate must also be uploaded, and the CertificateId does not need to be transmitted.
+     * @param string $CertificatePrivateKey If a private key certificate is uploaded, then a public key certificate must be uploaded; CertificateId is not required.
+     * @param integer $ExpiringNotificationSwitch Whether to ignore expiration reminder for old certificate  0: do not ignore the notification. 1: ignore the notification, ignore the expiration reminder of OldCertificateId.
+     * @param boolean $Repeatable It specifies whether the same certificate is allowed to be uploaded repeatedly. If the public key and private key certificates are selected for upload, this parameter can be configured. If there are duplicate certificates, the update task will fail.
+     * @param boolean $AllowDownload Whether to allow downloading. If you choose to upload a public/private key certificate, this parameter can be configured.
+     * @param array $Tags Tag list. If you choose to upload a public/private key certificate, you can configure this parameter.
+     * @param integer $ProjectId Project id. If you choose to upload a public/private key certificate, you can configure this parameter.
      */
     function __construct()
     {

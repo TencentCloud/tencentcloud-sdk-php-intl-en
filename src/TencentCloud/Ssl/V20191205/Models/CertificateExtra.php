@@ -20,45 +20,38 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Content of the `CertificateExtra` parameter. `CertificateExtra` is an element of `Certificates` array which is returned by `DescribeCertificates`.
  *
- * @method string getDomainNumber() Obtain Number of domain names which can be associated with the certificate
+ * @method string getDomainNumber() Obtain Quantity of configurable domain names for the certificate.
+ * @method void setDomainNumber(string $DomainNumber) Set Quantity of configurable domain names for the certificate.
+ * @method string getOriginCertificateId() Obtain Renew the original certificate id.
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setDomainNumber(string $DomainNumber) Set Number of domain names which can be associated with the certificate
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getOriginCertificateId() Obtain Original certificate ID
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setOriginCertificateId(string $OriginCertificateId) Set Original certificate ID
+ * @method void setOriginCertificateId(string $OriginCertificateId) Set Renew the original certificate id.
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method string getReplacedBy() Obtain Original ID of the new certificate
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setReplacedBy(string $ReplacedBy) Set Original ID of the new certificate
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getReplacedFor() Obtain New ID of the new certificate
+ * @method string getReplacedFor() Obtain Reissue certificate id.
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setReplacedFor(string $ReplacedFor) Set New ID of the new certificate
+ * @method void setReplacedFor(string $ReplacedFor) Set Reissue certificate id.
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getRenewOrder() Obtain Certificate ID of the new order
+ * @method string getRenewOrder() Obtain Renewal certificate id.
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setRenewOrder(string $RenewOrder) Set Certificate ID of the new order
+ * @method void setRenewOrder(string $RenewOrder) Set Renewal certificate id.
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method integer getSMCert() Obtain Whether the certificate is a Chinese SM certificate.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setSMCert(integer $SMCert) Set Whether the certificate is a Chinese SM certificate.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getCompanyType() Obtain Company type
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setCompanyType(integer $CompanyType) Set Company type
-Note: This field may return null, indicating that no valid value can be obtained.
+ * @method integer getSMCert() Obtain Whether it is a China SM certificate.
+ * @method void setSMCert(integer $SMCert) Set Whether it is a China SM certificate.
+ * @method integer getCompanyType() Obtain Company type, valid values: 1 (individual); 2 (company).
+ * @method void setCompanyType(integer $CompanyType) Set Company type, valid values: 1 (individual); 2 (company).
  */
 class CertificateExtra extends AbstractModel
 {
     /**
-     * @var string Number of domain names which can be associated with the certificate
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string Quantity of configurable domain names for the certificate.
      */
     public $DomainNumber;
 
     /**
-     * @var string Original certificate ID
+     * @var string Renew the original certificate id.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $OriginCertificateId;
@@ -70,44 +63,39 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $ReplacedBy;
 
     /**
-     * @var string New ID of the new certificate
+     * @var string Reissue certificate id.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $ReplacedFor;
 
     /**
-     * @var string Certificate ID of the new order
+     * @var string Renewal certificate id.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $RenewOrder;
 
     /**
-     * @var integer Whether the certificate is a Chinese SM certificate.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Whether it is a China SM certificate.
      */
     public $SMCert;
 
     /**
-     * @var integer Company type
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @var integer Company type, valid values: 1 (individual); 2 (company).
      */
     public $CompanyType;
 
     /**
-     * @param string $DomainNumber Number of domain names which can be associated with the certificate
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $OriginCertificateId Original certificate ID
+     * @param string $DomainNumber Quantity of configurable domain names for the certificate.
+     * @param string $OriginCertificateId Renew the original certificate id.
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $ReplacedBy Original ID of the new certificate
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $ReplacedFor New ID of the new certificate
+     * @param string $ReplacedFor Reissue certificate id.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $RenewOrder Certificate ID of the new order
+     * @param string $RenewOrder Renewal certificate id.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param integer $SMCert Whether the certificate is a Chinese SM certificate.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $CompanyType Company type
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @param integer $SMCert Whether it is a China SM certificate.
+     * @param integer $CompanyType Company type, valid values: 1 (individual); 2 (company).
      */
     function __construct()
     {

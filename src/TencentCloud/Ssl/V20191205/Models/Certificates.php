@@ -20,638 +20,810 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Content of the `Certificates` parameter returned by `DescribeCertificates`
  *
- * @method string getOwnerUin() Obtain User UIN
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setOwnerUin(string $OwnerUin) Set User UIN
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getProjectId() Obtain Project ID
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setProjectId(string $ProjectId) Set Project ID
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getFrom() Obtain Certificate source
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setFrom(string $From) Set Certificate source
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getPackageType() Obtain The certificate plan type. Valid values:
-null: Certificates uploaded by users (no plan type)
-`1`: GeoTrust DV SSL CA - G3; `2`: TrustAsia TLS RSA CA; `3`: SecureSite EV Pro; `4`: SecureSite EV; `5`: SecureSite OV Pro; `6`: SecureSite OV; `7`: SecureSite OV wildcard; `8`: GeoTrust EV; `9`: GeoTrust OV; `10`: GeoTrust OV wildcard; `11`: TrustAsia DV multi-domain; `12`: TrustAsia DV wildcard; `13`: TrustAsia OV wildcard D3; `14`: TrustAsia OV D3; `15`: TrustAsia OV multi-domain D3; `16`: TrustAsia EV D3; `17`: TrustAsia EV multi-domain D3; `18`: GlobalSign OV; `19`: GlobalSign OV wildcard; `20`: GlobalSign EV; `21`: TrustAsia OV wildcard multi-domain D3; `22`: GlobalSign OV multi-domain; `23`: GlobalSign OV wildcard multi-domain; `24`: GlobalSign EV multi-domain
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setPackageType(string $PackageType) Set The certificate plan type. Valid values:
-null: Certificates uploaded by users (no plan type)
-`1`: GeoTrust DV SSL CA - G3; `2`: TrustAsia TLS RSA CA; `3`: SecureSite EV Pro; `4`: SecureSite EV; `5`: SecureSite OV Pro; `6`: SecureSite OV; `7`: SecureSite OV wildcard; `8`: GeoTrust EV; `9`: GeoTrust OV; `10`: GeoTrust OV wildcard; `11`: TrustAsia DV multi-domain; `12`: TrustAsia DV wildcard; `13`: TrustAsia OV wildcard D3; `14`: TrustAsia OV D3; `15`: TrustAsia OV multi-domain D3; `16`: TrustAsia EV D3; `17`: TrustAsia EV multi-domain D3; `18`: GlobalSign OV; `19`: GlobalSign OV wildcard; `20`: GlobalSign EV; `21`: TrustAsia OV wildcard multi-domain D3; `22`: GlobalSign OV multi-domain; `23`: GlobalSign OV wildcard multi-domain; `24`: GlobalSign EV multi-domain
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getCertificateType() Obtain Certificate type. `CA`: client certificate; `SVR`: server certificate
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setCertificateType(string $CertificateType) Set Certificate type. `CA`: client certificate; `SVR`: server certificate
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getProductZhName() Obtain Issuer
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setProductZhName(string $ProductZhName) Set Issuer
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getDomain() Obtain Primary domain name
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setDomain(string $Domain) Set Primary domain name
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getAlias() Obtain Alias
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setAlias(string $Alias) Set Alias
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method integer getStatus() Obtain Status. `0`: Reviewing; `1`: Approved; `2`: Unapproved; `3`: Expired; `4`: DNS record added for domain names of the DNS_AUTO verification type; `5`: Enterprise-grade certificate, pending submission; `6`: Canceling order; `7`: Canceled; `8`: Information submitted, pending confirmation letter upload; `9`: Revoking certificate; `10`: Revoked; `11`: Reissuing; `12`: Pending revocation confirmation letter upload; `13`: Pending information submission for the free certificate; `14`: Refunded.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setStatus(integer $Status) Set Status. `0`: Reviewing; `1`: Approved; `2`: Unapproved; `3`: Expired; `4`: DNS record added for domain names of the DNS_AUTO verification type; `5`: Enterprise-grade certificate, pending submission; `6`: Canceling order; `7`: Canceled; `8`: Information submitted, pending confirmation letter upload; `9`: Revoking certificate; `10`: Revoked; `11`: Reissuing; `12`: Pending revocation confirmation letter upload; `13`: Pending information submission for the free certificate; `14`: Refunded.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method CertificateExtra getCertificateExtra() Obtain Extended information of the certificate
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setCertificateExtra(CertificateExtra $CertificateExtra) Set Extended information of the certificate
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getVulnerabilityStatus() Obtain Vulnerability scanning status. `INACTIVE`: not activated; `ACTIVE`: activated
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setVulnerabilityStatus(string $VulnerabilityStatus) Set Vulnerability scanning status. `INACTIVE`: not activated; `ACTIVE`: activated
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getStatusMsg() Obtain Status information
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setStatusMsg(string $StatusMsg) Set Status information
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getVerifyType() Obtain Validation type. `DNS_AUTO`: automatic DNS validation; `DNS`: manual DNS validation; `FILE`: file validation; `EMAIL`: email validation
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setVerifyType(string $VerifyType) Set Validation type. `DNS_AUTO`: automatic DNS validation; `DNS`: manual DNS validation; `FILE`: file validation; `EMAIL`: email validation
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getCertBeginTime() Obtain Time when the certificate takes effect
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setCertBeginTime(string $CertBeginTime) Set Time when the certificate takes effect
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getCertEndTime() Obtain Time when the certificate expires
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setCertEndTime(string $CertEndTime) Set Time when the certificate expires
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getValidityPeriod() Obtain Validity period of the certificate, in months
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setValidityPeriod(string $ValidityPeriod) Set Validity period of the certificate, in months
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getInsertTime() Obtain Creation time
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setInsertTime(string $InsertTime) Set Creation time
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getCertificateId() Obtain Certificate ID
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setCertificateId(string $CertificateId) Set Certificate ID
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method array getSubjectAltName() Obtain Domain names associated with the certificate (including the primary domain name)
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setSubjectAltName(array $SubjectAltName) Set Domain names associated with the certificate (including the primary domain name)
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getPackageTypeName() Obtain Certificate type name
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setPackageTypeName(string $PackageTypeName) Set Certificate type name
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getStatusName() Obtain Status description
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setStatusName(string $StatusName) Set Status description
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method boolean getIsVip() Obtain Whether the customer is a VIP customer
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setIsVip(boolean $IsVip) Set Whether the customer is a VIP customer
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method boolean getIsDv() Obtain Whether the certificate is a DV certificate
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setIsDv(boolean $IsDv) Set Whether the certificate is a DV certificate
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method boolean getIsWildcard() Obtain Whether the certificate is a wildcard certificate
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setIsWildcard(boolean $IsWildcard) Set Whether the certificate is a wildcard certificate
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method boolean getIsVulnerability() Obtain Whether the vulnerability scanning feature is enabled
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setIsVulnerability(boolean $IsVulnerability) Set Whether the vulnerability scanning feature is enabled
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method boolean getRenewAble() Obtain Whether it can be renewed 
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setRenewAble(boolean $RenewAble) Set Whether it can be renewed 
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method ProjectInfo getProjectInfo() Obtain Project information
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setProjectInfo(ProjectInfo $ProjectInfo) Set Project information
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method array getBoundResource() Obtain Associated Tencent Cloud services. Currently, this parameter is unavailable.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setBoundResource(array $BoundResource) Set Associated Tencent Cloud services. Currently, this parameter is unavailable.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method boolean getDeployable() Obtain Whether the certificate can be deployed
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setDeployable(boolean $Deployable) Set Whether the certificate can be deployed
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method array getTags() Obtain List of tags
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setTags(array $Tags) Set List of tags
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method boolean getIsIgnore() Obtain Whether the expiration notification was ignored
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setIsIgnore(boolean $IsIgnore) Set Whether the expiration notification was ignored
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method boolean getIsSM() Obtain Whether the certificate is a Chinese SM certificate
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setIsSM(boolean $IsSM) Set Whether the certificate is a Chinese SM certificate
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getEncryptAlgorithm() Obtain Certificate algorithm
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setEncryptAlgorithm(string $EncryptAlgorithm) Set Certificate algorithm
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method array getCAEncryptAlgorithms() Obtain Encryption algorithm of the uploaded CA certificate
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setCAEncryptAlgorithms(array $CAEncryptAlgorithms) Set Encryption algorithm of the uploaded CA certificate
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method array getCAEndTimes() Obtain Expiration time of the uploaded CA certificate
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setCAEndTimes(array $CAEndTimes) Set Expiration time of the uploaded CA certificate
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method array getCACommonNames() Obtain Generic name of the uploaded CA certificate
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setCACommonNames(array $CACommonNames) Set Generic name of the uploaded CA certificate
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method PreAuditInfo getPreAuditInfo() Obtain Prereview information of the certificate
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setPreAuditInfo(PreAuditInfo $PreAuditInfo) Set Prereview information of the certificate
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getAutoRenewFlag() Obtain Whether auto-renewal is enabled.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setAutoRenewFlag(integer $AutoRenewFlag) Set Whether auto-renewal is enabled.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method integer getHostingStatus() Obtain The hosting status. Valid values: `0` (hosting), `5` (replacing resources), `10` (hosting completed), and `-1` (not hosted). 
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setHostingStatus(integer $HostingStatus) Set The hosting status. Valid values: `0` (hosting), `5` (replacing resources), `10` (hosting completed), and `-1` (not hosted). 
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getHostingCompleteTime() Obtain The hosting completion time.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setHostingCompleteTime(string $HostingCompleteTime) Set The hosting completion time.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getHostingRenewCertId() Obtain The hosted new certificate ID.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setHostingRenewCertId(string $HostingRenewCertId) Set The hosted new certificate ID.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getHasRenewOrder() Obtain Existing renewed certificate ID
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setHasRenewOrder(string $HasRenewOrder) Set Existing renewed certificate ID
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method boolean getReplaceOriCertIsDelete() Obtain Whether the original certificate is deleted when a certificate is reissued.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setReplaceOriCertIsDelete(boolean $ReplaceOriCertIsDelete) Set Whether the original certificate is deleted when a certificate is reissued.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method boolean getIsExpiring() Obtain Whether the certificate is expiring soon. A certificate is considered to be expiring soon when there are 30 days or less left.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setIsExpiring(boolean $IsExpiring) Set Whether the certificate is expiring soon. A certificate is considered to be expiring soon when there are 30 days or less left.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method string getDVAuthDeadline() Obtain Validation expiration time for the addition of the DV certificate
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setDVAuthDeadline(string $DVAuthDeadline) Set Validation expiration time for the addition of the DV certificate
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method string getValidationPassedTime() Obtain Domain name validation pass time
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setValidationPassedTime(string $ValidationPassedTime) Set Domain name validation pass time
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method array getCertSANs() Obtain Multiple domain names with which the certificate is associated
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setCertSANs(array $CertSANs) Set Multiple domain names with which the certificate is associated
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method string getAwaitingValidationMsg() Obtain Domain name validation rejection information
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setAwaitingValidationMsg(string $AwaitingValidationMsg) Set Domain name validation rejection information
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method boolean getAllowDownload() Obtain Whether downloading is allowed
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setAllowDownload(boolean $AllowDownload) Set Whether downloading is allowed
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method boolean getIsDNSPODResolve() Obtain 
- * @method void setIsDNSPODResolve(boolean $IsDNSPODResolve) Set 
- * @method boolean getIsPackage() Obtain 
- * @method void setIsPackage(boolean $IsPackage) Set 
- * @method boolean getKeyPasswordCustomFlag() Obtain 
- * @method void setKeyPasswordCustomFlag(boolean $KeyPasswordCustomFlag) Set 
- * @method SupportDownloadType getSupportDownloadType() Obtain 
- * @method void setSupportDownloadType(SupportDownloadType $SupportDownloadType) Set 
+ * @method string getOwnerUin() Obtain User uin.
+ * @method void setOwnerUin(string $OwnerUin) Set User uin.
+ * @method string getProjectId() Obtain Project id.
+ * @method void setProjectId(string $ProjectId) Set Project id.
+ * @method string getFrom() Obtain Certificate source:.
+trustasia.
+upload.
+wosign.
+sheca.
+ * @method void setFrom(string $From) Set Certificate source:.
+trustasia.
+upload.
+wosign.
+sheca.
+ * @method string getPackageType() Obtain Certificate package type:.
+Null: user uploads a certificate (without package type),.
+2: trustasia tls rsa ca,. 
+3: securesite enhanced enterprise edition (ev pro),. 
+4: securesite enhanced (ev). 
+5: securesite enterprise professional edition (ov pro).
+6: securesite enterprise (ov). 
+7: securesite enterprise (ov) wildcard. 
+8: geotrust enhanced (ev). 
+9: geotrust enterprise (ov) cert. 
+10: geotrust enterprise (ov) wildcard cert. 
+11: trustasia domain name-based multiple domain names ssl certificate. 
+12: trustasia domain name-based (dv) wildcard cert. 
+13: trustasia enterprise wildcard (ov) ssl certificate (d3). 
+14: trustasia enterprise (ov) ssl certificate (d3). 
+15: trustasia enterprise multiple domain names (ov) ssl certificate (d3). 
+16: trustasia enhanced (ev) ssl certificate (d3). 
+17: trustasia enhanced multiple domain names (ev) ssl certificate (d3). 
+18: globalsign enterprise (ov) ssl certificate. 
+19: globalsign enterprise wildcard (ov) ssl certificate. 
+20: globalsign enhanced (ev) ssl certificate. 
+21: trustasia enterprise wildcard multiple domain names (ov) ssl certificate (d3). 
+22: globalsign enterprise multiple domain names (ov) ssl certificate. 
+23: globalsign enterprise wildcard multiple domain names (ov) ssl certificate.
+24: globalsign enhanced multiple domain name (ev) ssl certificate.
+25: wotrus domain name cert.
+26: wotrus domain name multiple domain name cert.
+27: wotrus domain name wildcard cert.
+28: wotrus enterprise cert.
+29: wotrus enterprise multi - domain name certificate.
+30: wotrus enterprise wildcard certificate.
+31: wotrus enhanced certificate.
+32: wotrus enhanced multi - domain name certificate.
+33: wotrus - national cryptography domain - type certificate.
+34: wotrus-national cryptography domain certificate (multiple domain names).
+35: wotrus-national cryptography domain certificate (wildcard).
+37: wotrus-national cryptography enterprise certificate.
+38: wotrus-national cryptography enterprise certificate (multiple domain names).
+39: wotrus-national cryptography enterprise certificate (wildcard).
+40: wotrus - enhanced national cryptography certificate.
+41: wotrus - enhanced national cryptography certificate (multiple domain names).
+42: trustasia - domain name type certificate (wildcard multiple domain names).
+43: DNSPod - enterprise (ov) ssl certificate.
+44: DNSPod - enterprise (ov) wildcard ssl certificate.
+45: DNSPod - enterprise (ov) multiple domain names ssl certificate.
+46: DNSPod - enhanced (ev) ssl certificate.
+47: DNSPod - enhanced (ev) multiple domain names ssl certificate.
+48: DNSPod - domain name-based (dv) ssl certificate.
+49: DNSPod - domain name-based (dv) wildcard ssl certificate.
+50: DNSPod - domain name-based (dv) multiple domain names ssl certificate.
+51: DNSPod (national cryptography) - enterprise (ov) ssl certificate.
+52: DNSPod (national cryptography) - enterprise (ov) wildcard ssl certificate.
+53: DNSPod (national cryptography) - enterprise (ov) multiple domain names ssl certificate.
+54: DNSPod (national cryptography) - domain name-based (dv) ssl certificate.
+55: DNSPod (national cryptography) - domain name-based (dv) wildcard ssl certificate.
+56: DNSPod (national cryptography) - domain name-based (dv) multiple domain names ssl certificate.
+57: securesite enterprise professional edition multiple domain names (ov pro).
+58: securesite enterprise multiple domain names (ov).
+59: securesite enhanced professional edition multiple domain names (ev pro).
+60: securesite enhanced multiple domain names (ev).
+61: geotrust enhanced multiple domain names (ev).
+75: securesite enterprise (ov).
+76: securesite enterprise (ov) wildcard.
+77: securesite enhanced (ev).
+78: geotrust enterprise (ov).
+79: geotrust enterprise wildcard (ov).
+80: geotrust enhanced (ev).
+81: globalsign enterprise (ov) ssl certificate.
+82: globalsign enterprise wildcard (ov) ssl certificate.
+83: trustasia c1 dv free.
+85: globalsign enhanced (ev) ssl certificate.
+88: globalsign enterprise wildcard multiple domain names (ov) ssl certificate.
+89: globalsign enterprise multiple domain names (ov) ssl certificate.
+90: globalsign enhanced multiple domain names (ev) ssl certificate.
+91: geotrust enhanced multiple domain names (ev).
+92: securesite enterprise pro multiple domain names (ov pro).
+93: securesite enterprise multiple domain names (ov).
+94: securesite enhanced pro multiple domain names (ev pro).
+95: securesite enhanced multiple domain names (ev).
+96: securesite ev pro.
+97: securesite enterprise professional edition (ov pro).
+98: cfca enterprise (ov) ssl certificate.
+99: cfca enterprise ov ssl certificate for multiple domain names.
+100: cfca ov wildcard ssl certificate.
+101: cfca enhanced (ev) ssl certificate.
+ * @method void setPackageType(string $PackageType) Set Certificate package type:.
+Null: user uploads a certificate (without package type),.
+2: trustasia tls rsa ca,. 
+3: securesite enhanced enterprise edition (ev pro),. 
+4: securesite enhanced (ev). 
+5: securesite enterprise professional edition (ov pro).
+6: securesite enterprise (ov). 
+7: securesite enterprise (ov) wildcard. 
+8: geotrust enhanced (ev). 
+9: geotrust enterprise (ov) cert. 
+10: geotrust enterprise (ov) wildcard cert. 
+11: trustasia domain name-based multiple domain names ssl certificate. 
+12: trustasia domain name-based (dv) wildcard cert. 
+13: trustasia enterprise wildcard (ov) ssl certificate (d3). 
+14: trustasia enterprise (ov) ssl certificate (d3). 
+15: trustasia enterprise multiple domain names (ov) ssl certificate (d3). 
+16: trustasia enhanced (ev) ssl certificate (d3). 
+17: trustasia enhanced multiple domain names (ev) ssl certificate (d3). 
+18: globalsign enterprise (ov) ssl certificate. 
+19: globalsign enterprise wildcard (ov) ssl certificate. 
+20: globalsign enhanced (ev) ssl certificate. 
+21: trustasia enterprise wildcard multiple domain names (ov) ssl certificate (d3). 
+22: globalsign enterprise multiple domain names (ov) ssl certificate. 
+23: globalsign enterprise wildcard multiple domain names (ov) ssl certificate.
+24: globalsign enhanced multiple domain name (ev) ssl certificate.
+25: wotrus domain name cert.
+26: wotrus domain name multiple domain name cert.
+27: wotrus domain name wildcard cert.
+28: wotrus enterprise cert.
+29: wotrus enterprise multi - domain name certificate.
+30: wotrus enterprise wildcard certificate.
+31: wotrus enhanced certificate.
+32: wotrus enhanced multi - domain name certificate.
+33: wotrus - national cryptography domain - type certificate.
+34: wotrus-national cryptography domain certificate (multiple domain names).
+35: wotrus-national cryptography domain certificate (wildcard).
+37: wotrus-national cryptography enterprise certificate.
+38: wotrus-national cryptography enterprise certificate (multiple domain names).
+39: wotrus-national cryptography enterprise certificate (wildcard).
+40: wotrus - enhanced national cryptography certificate.
+41: wotrus - enhanced national cryptography certificate (multiple domain names).
+42: trustasia - domain name type certificate (wildcard multiple domain names).
+43: DNSPod - enterprise (ov) ssl certificate.
+44: DNSPod - enterprise (ov) wildcard ssl certificate.
+45: DNSPod - enterprise (ov) multiple domain names ssl certificate.
+46: DNSPod - enhanced (ev) ssl certificate.
+47: DNSPod - enhanced (ev) multiple domain names ssl certificate.
+48: DNSPod - domain name-based (dv) ssl certificate.
+49: DNSPod - domain name-based (dv) wildcard ssl certificate.
+50: DNSPod - domain name-based (dv) multiple domain names ssl certificate.
+51: DNSPod (national cryptography) - enterprise (ov) ssl certificate.
+52: DNSPod (national cryptography) - enterprise (ov) wildcard ssl certificate.
+53: DNSPod (national cryptography) - enterprise (ov) multiple domain names ssl certificate.
+54: DNSPod (national cryptography) - domain name-based (dv) ssl certificate.
+55: DNSPod (national cryptography) - domain name-based (dv) wildcard ssl certificate.
+56: DNSPod (national cryptography) - domain name-based (dv) multiple domain names ssl certificate.
+57: securesite enterprise professional edition multiple domain names (ov pro).
+58: securesite enterprise multiple domain names (ov).
+59: securesite enhanced professional edition multiple domain names (ev pro).
+60: securesite enhanced multiple domain names (ev).
+61: geotrust enhanced multiple domain names (ev).
+75: securesite enterprise (ov).
+76: securesite enterprise (ov) wildcard.
+77: securesite enhanced (ev).
+78: geotrust enterprise (ov).
+79: geotrust enterprise wildcard (ov).
+80: geotrust enhanced (ev).
+81: globalsign enterprise (ov) ssl certificate.
+82: globalsign enterprise wildcard (ov) ssl certificate.
+83: trustasia c1 dv free.
+85: globalsign enhanced (ev) ssl certificate.
+88: globalsign enterprise wildcard multiple domain names (ov) ssl certificate.
+89: globalsign enterprise multiple domain names (ov) ssl certificate.
+90: globalsign enhanced multiple domain names (ev) ssl certificate.
+91: geotrust enhanced multiple domain names (ev).
+92: securesite enterprise pro multiple domain names (ov pro).
+93: securesite enterprise multiple domain names (ov).
+94: securesite enhanced pro multiple domain names (ev pro).
+95: securesite enhanced multiple domain names (ev).
+96: securesite ev pro.
+97: securesite enterprise professional edition (ov pro).
+98: cfca enterprise (ov) ssl certificate.
+99: cfca enterprise ov ssl certificate for multiple domain names.
+100: cfca ov wildcard ssl certificate.
+101: cfca enhanced (ev) ssl certificate.
+ * @method string getCertificateType() Obtain Certificate type. ca = client certificate; svr = server certificate.
+ * @method void setCertificateType(string $CertificateType) Set Certificate type. ca = client certificate; svr = server certificate.
+ * @method string getProductZhName() Obtain Certificate product name.
+ * @method void setProductZhName(string $ProductZhName) Set Certificate product name.
+ * @method string getDomain() Obtain Primary domain name.
+ * @method void setDomain(string $Domain) Set Primary domain name.
+ * @method string getAlias() Obtain Remark name.
+ * @method void setAlias(string $Alias) Set Remark name.
+ * @method integer getStatus() Obtain Certificate status: 0 = under review, 1 = approved, 2 = review failed, 3 = expired, 4 = dns record added automatically, 5 = enterprise certificate, pending documentation submission, 6 = order cancellation in progress, 7 = canceled, 8 = documents submitted, pending upload of confirmation letter, 9 = certificate revocation in progress, 10 = revoked, 11 = reissue in progress, 12 = pending upload of revocation confirmation letter, 13 = free certificate pending documentation submission, 14 = certificate refunded, 15 = certificate migration in progress.
+ * @method void setStatus(integer $Status) Set Certificate status: 0 = under review, 1 = approved, 2 = review failed, 3 = expired, 4 = dns record added automatically, 5 = enterprise certificate, pending documentation submission, 6 = order cancellation in progress, 7 = canceled, 8 = documents submitted, pending upload of confirmation letter, 9 = certificate revocation in progress, 10 = revoked, 11 = reissue in progress, 12 = pending upload of revocation confirmation letter, 13 = free certificate pending documentation submission, 14 = certificate refunded, 15 = certificate migration in progress.
+ * @method CertificateExtra getCertificateExtra() Obtain Certificate extended information.
+ * @method void setCertificateExtra(CertificateExtra $CertificateExtra) Set Certificate extended information.
+ * @method string getVulnerabilityStatus() Obtain Vulnerability scanning status: INACTIVE = not enabled, ACTIVE = enabled.
+ * @method void setVulnerabilityStatus(string $VulnerabilityStatus) Set Vulnerability scanning status: INACTIVE = not enabled, ACTIVE = enabled.
+ * @method string getStatusMsg() Obtain Status information.
+ * @method void setStatusMsg(string $StatusMsg) Set Status information.
+ * @method string getVerifyType() Obtain Validation type: DNS_AUTO = automatic dns validation, DNS = manual dns validation, FILE = file verification, DNS_PROXY = dns proxy validation, FILE_PROXY = file proxy verification.
+ * @method void setVerifyType(string $VerifyType) Set Validation type: DNS_AUTO = automatic dns validation, DNS = manual dns validation, FILE = file verification, DNS_PROXY = dns proxy validation, FILE_PROXY = file proxy verification.
+ * @method string getCertBeginTime() Obtain Certificate validation time.
+ * @method void setCertBeginTime(string $CertBeginTime) Set Certificate validation time.
+ * @method string getCertEndTime() Obtain Certificate expiration time.
+ * @method void setCertEndTime(string $CertEndTime) Set Certificate expiration time.
+ * @method string getValidityPeriod() Obtain Certificate validity period (month).
+ * @method void setValidityPeriod(string $ValidityPeriod) Set Certificate validity period (month).
+ * @method string getInsertTime() Obtain Creation time.
+ * @method void setInsertTime(string $InsertTime) Set Creation time.
+ * @method string getCertificateId() Obtain Certificate id.
+ * @method void setCertificateId(string $CertificateId) Set Certificate id.
+ * @method array getSubjectAltName() Obtain Multiple domain names contained in the certificate (including the primary domain name).
+ * @method void setSubjectAltName(array $SubjectAltName) Set Multiple domain names contained in the certificate (including the primary domain name).
+ * @method string getPackageTypeName() Obtain Certificate type name.
+ * @method void setPackageTypeName(string $PackageTypeName) Set Certificate type name.
+ * @method string getStatusName() Obtain Status name.
+ * @method void setStatusName(string $StatusName) Set Status name.
+ * @method boolean getIsVip() Obtain Specifies whether the customer is a vip customer. true indicates yes and false indicates no.
+ * @method void setIsVip(boolean $IsVip) Set Specifies whether the customer is a vip customer. true indicates yes and false indicates no.
+ * @method boolean getIsDv() Obtain Specifies whether it is a dv version certificate. true indicates yes and false indicates no.
+ * @method void setIsDv(boolean $IsDv) Set Specifies whether it is a dv version certificate. true indicates yes and false indicates no.
+ * @method boolean getIsWildcard() Obtain Specifies whether it is a wildcard domain name certificate. true indicates yes and false indicates no.
+ * @method void setIsWildcard(boolean $IsWildcard) Set Specifies whether it is a wildcard domain name certificate. true indicates yes and false indicates no.
+ * @method boolean getIsVulnerability() Obtain Whether the vulnerability scanning feature is enabled.
+ * @method void setIsVulnerability(boolean $IsVulnerability) Set Whether the vulnerability scanning feature is enabled.
+ * @method boolean getRenewAble() Obtain Whether it is renewable.
+ * @method void setRenewAble(boolean $RenewAble) Set Whether it is renewable.
+ * @method ProjectInfo getProjectInfo() Obtain Project information.
+ * @method void setProjectInfo(ProjectInfo $ProjectInfo) Set Project information.
+ * @method array getBoundResource() Obtain Associated cloud resources are temporarily unavailable.
+ * @method void setBoundResource(array $BoundResource) Set Associated cloud resources are temporarily unavailable.
+ * @method boolean getDeployable() Obtain Whether it can be deployed.
+ * @method void setDeployable(boolean $Deployable) Set Whether it can be deployed.
+ * @method array getTags() Obtain Tag list.
+ * @method void setTags(array $Tags) Set Tag list.
+ * @method boolean getIsIgnore() Obtain Whether expiration notice has been ignored.
+ * @method void setIsIgnore(boolean $IsIgnore) Set Whether expiration notice has been ignored.
+ * @method boolean getIsSM() Obtain Whether it is a China SM certificate.
+ * @method void setIsSM(boolean $IsSM) Set Whether it is a China SM certificate.
+ * @method string getEncryptAlgorithm() Obtain Certificate algorithm.
+ * @method void setEncryptAlgorithm(string $EncryptAlgorithm) Set Certificate algorithm.
+ * @method array getCAEncryptAlgorithms() Obtain Encryption algorithm for upload ca certificate.
+ * @method void setCAEncryptAlgorithms(array $CAEncryptAlgorithms) Set Encryption algorithm for upload ca certificate.
+ * @method array getCAEndTimes() Obtain Expiration time for upload ca certificate.
+ * @method void setCAEndTimes(array $CAEndTimes) Set Expiration time for upload ca certificate.
+ * @method array getCACommonNames() Obtain Common name of the upload ca certificate.
+ * @method void setCACommonNames(array $CACommonNames) Set Common name of the upload ca certificate.
+ * @method PreAuditInfo getPreAuditInfo() Obtain Certificate prereview information.
+ * @method void setPreAuditInfo(PreAuditInfo $PreAuditInfo) Set Certificate prereview information.
+ * @method integer getAutoRenewFlag() Obtain Whether to auto-renew.
+ * @method void setAutoRenewFlag(integer $AutoRenewFlag) Set Whether to auto-renew.
+ * @method integer getHostingStatus() Obtain Hosting status: 0, hosting; 5, resource replacement; 10, hosting completed; -1, not hosted. 
+ * @method void setHostingStatus(integer $HostingStatus) Set Hosting status: 0, hosting; 5, resource replacement; 10, hosting completed; -1, not hosted. 
+ * @method string getHostingCompleteTime() Obtain Hosting completion time.
+ * @method void setHostingCompleteTime(string $HostingCompleteTime) Set Hosting completion time.
+ * @method string getHostingRenewCertId() Obtain Manage the new certificate id.
+ * @method void setHostingRenewCertId(string $HostingRenewCertId) Set Manage the new certificate id.
+ * @method string getHasRenewOrder() Obtain Existing renewal certificate id.
+ * @method void setHasRenewOrder(string $HasRenewOrder) Set Existing renewal certificate id.
+ * @method boolean getReplaceOriCertIsDelete() Obtain Indicates whether the original certificate is deleted during reissue.
+ * @method void setReplaceOriCertIsDelete(boolean $ReplaceOriCertIsDelete) Set Indicates whether the original certificate is deleted during reissue.
+ * @method boolean getIsExpiring() Obtain Indicates whether it is about to expire. a certificate is about to expire if it will expire within 30 days.
+ * @method void setIsExpiring(boolean $IsExpiring) Set Indicates whether it is about to expire. a certificate is about to expire if it will expire within 30 days.
+ * @method string getDVAuthDeadline() Obtain Add validation expiration date for DV certificate
+ * @method void setDVAuthDeadline(string $DVAuthDeadline) Set Add validation expiration date for DV certificate
+ * @method string getValidationPassedTime() Obtain Domain verification passed time.
+ * @method void setValidationPassedTime(string $ValidationPassedTime) Set Domain verification passed time.
+ * @method array getCertSANs() Obtain Multiple domain names associated with the certificate.
+ * @method void setCertSANs(array $CertSANs) Set Multiple domain names associated with the certificate.
+ * @method string getAwaitingValidationMsg() Obtain Domain verification rejection information.
+ * @method void setAwaitingValidationMsg(string $AwaitingValidationMsg) Set Domain verification rejection information.
+ * @method boolean getAllowDownload() Obtain Whether to allow downloading.
+ * @method void setAllowDownload(boolean $AllowDownload) Set Whether to allow downloading.
+ * @method boolean getIsDNSPODResolve() Obtain Whether all certificate domain names are managed and resolved by dnspod.
+ * @method void setIsDNSPODResolve(boolean $IsDNSPODResolve) Set Whether all certificate domain names are managed and resolved by dnspod.
+ * @method boolean getIsPackage() Obtain Whether the certificate is purchased with benefit points.
+ * @method void setIsPackage(boolean $IsPackage) Set Whether the certificate is purchased with benefit points.
+ * @method boolean getKeyPasswordCustomFlag() Obtain Whether there is a private key password.
+ * @method void setKeyPasswordCustomFlag(boolean $KeyPasswordCustomFlag) Set Whether there is a private key password.
+ * @method SupportDownloadType getSupportDownloadType() Obtain Types of web servers supported for download: nginx, apache, iis, tomcat, jks, root, other.
+ * @method void setSupportDownloadType(SupportDownloadType $SupportDownloadType) Set Types of web servers supported for download: nginx, apache, iis, tomcat, jks, root, other.
+ * @method string getCertRevokedTime() Obtain Certificate revocation completion time.
+ * @method void setCertRevokedTime(string $CertRevokedTime) Set Certificate revocation completion time.
+ * @method array getHostingResourceTypes() Obtain Hosted resource type list.
+ * @method void setHostingResourceTypes(array $HostingResourceTypes) Set Hosted resource type list.
+ * @method HostingConfig getHostingConfig() Obtain Managed configuration information.
+ * @method void setHostingConfig(HostingConfig $HostingConfig) Set Managed configuration information.
  */
 class Certificates extends AbstractModel
 {
     /**
-     * @var string User UIN
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string User uin.
      */
     public $OwnerUin;
 
     /**
-     * @var string Project ID
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string Project id.
      */
     public $ProjectId;
 
     /**
-     * @var string Certificate source
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string Certificate source:.
+trustasia.
+upload.
+wosign.
+sheca.
      */
     public $From;
 
     /**
-     * @var string The certificate plan type. Valid values:
-null: Certificates uploaded by users (no plan type)
-`1`: GeoTrust DV SSL CA - G3; `2`: TrustAsia TLS RSA CA; `3`: SecureSite EV Pro; `4`: SecureSite EV; `5`: SecureSite OV Pro; `6`: SecureSite OV; `7`: SecureSite OV wildcard; `8`: GeoTrust EV; `9`: GeoTrust OV; `10`: GeoTrust OV wildcard; `11`: TrustAsia DV multi-domain; `12`: TrustAsia DV wildcard; `13`: TrustAsia OV wildcard D3; `14`: TrustAsia OV D3; `15`: TrustAsia OV multi-domain D3; `16`: TrustAsia EV D3; `17`: TrustAsia EV multi-domain D3; `18`: GlobalSign OV; `19`: GlobalSign OV wildcard; `20`: GlobalSign EV; `21`: TrustAsia OV wildcard multi-domain D3; `22`: GlobalSign OV multi-domain; `23`: GlobalSign OV wildcard multi-domain; `24`: GlobalSign EV multi-domain
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Certificate package type:.
+Null: user uploads a certificate (without package type),.
+2: trustasia tls rsa ca,. 
+3: securesite enhanced enterprise edition (ev pro),. 
+4: securesite enhanced (ev). 
+5: securesite enterprise professional edition (ov pro).
+6: securesite enterprise (ov). 
+7: securesite enterprise (ov) wildcard. 
+8: geotrust enhanced (ev). 
+9: geotrust enterprise (ov) cert. 
+10: geotrust enterprise (ov) wildcard cert. 
+11: trustasia domain name-based multiple domain names ssl certificate. 
+12: trustasia domain name-based (dv) wildcard cert. 
+13: trustasia enterprise wildcard (ov) ssl certificate (d3). 
+14: trustasia enterprise (ov) ssl certificate (d3). 
+15: trustasia enterprise multiple domain names (ov) ssl certificate (d3). 
+16: trustasia enhanced (ev) ssl certificate (d3). 
+17: trustasia enhanced multiple domain names (ev) ssl certificate (d3). 
+18: globalsign enterprise (ov) ssl certificate. 
+19: globalsign enterprise wildcard (ov) ssl certificate. 
+20: globalsign enhanced (ev) ssl certificate. 
+21: trustasia enterprise wildcard multiple domain names (ov) ssl certificate (d3). 
+22: globalsign enterprise multiple domain names (ov) ssl certificate. 
+23: globalsign enterprise wildcard multiple domain names (ov) ssl certificate.
+24: globalsign enhanced multiple domain name (ev) ssl certificate.
+25: wotrus domain name cert.
+26: wotrus domain name multiple domain name cert.
+27: wotrus domain name wildcard cert.
+28: wotrus enterprise cert.
+29: wotrus enterprise multi - domain name certificate.
+30: wotrus enterprise wildcard certificate.
+31: wotrus enhanced certificate.
+32: wotrus enhanced multi - domain name certificate.
+33: wotrus - national cryptography domain - type certificate.
+34: wotrus-national cryptography domain certificate (multiple domain names).
+35: wotrus-national cryptography domain certificate (wildcard).
+37: wotrus-national cryptography enterprise certificate.
+38: wotrus-national cryptography enterprise certificate (multiple domain names).
+39: wotrus-national cryptography enterprise certificate (wildcard).
+40: wotrus - enhanced national cryptography certificate.
+41: wotrus - enhanced national cryptography certificate (multiple domain names).
+42: trustasia - domain name type certificate (wildcard multiple domain names).
+43: DNSPod - enterprise (ov) ssl certificate.
+44: DNSPod - enterprise (ov) wildcard ssl certificate.
+45: DNSPod - enterprise (ov) multiple domain names ssl certificate.
+46: DNSPod - enhanced (ev) ssl certificate.
+47: DNSPod - enhanced (ev) multiple domain names ssl certificate.
+48: DNSPod - domain name-based (dv) ssl certificate.
+49: DNSPod - domain name-based (dv) wildcard ssl certificate.
+50: DNSPod - domain name-based (dv) multiple domain names ssl certificate.
+51: DNSPod (national cryptography) - enterprise (ov) ssl certificate.
+52: DNSPod (national cryptography) - enterprise (ov) wildcard ssl certificate.
+53: DNSPod (national cryptography) - enterprise (ov) multiple domain names ssl certificate.
+54: DNSPod (national cryptography) - domain name-based (dv) ssl certificate.
+55: DNSPod (national cryptography) - domain name-based (dv) wildcard ssl certificate.
+56: DNSPod (national cryptography) - domain name-based (dv) multiple domain names ssl certificate.
+57: securesite enterprise professional edition multiple domain names (ov pro).
+58: securesite enterprise multiple domain names (ov).
+59: securesite enhanced professional edition multiple domain names (ev pro).
+60: securesite enhanced multiple domain names (ev).
+61: geotrust enhanced multiple domain names (ev).
+75: securesite enterprise (ov).
+76: securesite enterprise (ov) wildcard.
+77: securesite enhanced (ev).
+78: geotrust enterprise (ov).
+79: geotrust enterprise wildcard (ov).
+80: geotrust enhanced (ev).
+81: globalsign enterprise (ov) ssl certificate.
+82: globalsign enterprise wildcard (ov) ssl certificate.
+83: trustasia c1 dv free.
+85: globalsign enhanced (ev) ssl certificate.
+88: globalsign enterprise wildcard multiple domain names (ov) ssl certificate.
+89: globalsign enterprise multiple domain names (ov) ssl certificate.
+90: globalsign enhanced multiple domain names (ev) ssl certificate.
+91: geotrust enhanced multiple domain names (ev).
+92: securesite enterprise pro multiple domain names (ov pro).
+93: securesite enterprise multiple domain names (ov).
+94: securesite enhanced pro multiple domain names (ev pro).
+95: securesite enhanced multiple domain names (ev).
+96: securesite ev pro.
+97: securesite enterprise professional edition (ov pro).
+98: cfca enterprise (ov) ssl certificate.
+99: cfca enterprise ov ssl certificate for multiple domain names.
+100: cfca ov wildcard ssl certificate.
+101: cfca enhanced (ev) ssl certificate.
      */
     public $PackageType;
 
     /**
-     * @var string Certificate type. `CA`: client certificate; `SVR`: server certificate
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string Certificate type. ca = client certificate; svr = server certificate.
      */
     public $CertificateType;
 
     /**
-     * @var string Issuer
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string Certificate product name.
      */
     public $ProductZhName;
 
     /**
-     * @var string Primary domain name
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string Primary domain name.
      */
     public $Domain;
 
     /**
-     * @var string Alias
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string Remark name.
      */
     public $Alias;
 
     /**
-     * @var integer Status. `0`: Reviewing; `1`: Approved; `2`: Unapproved; `3`: Expired; `4`: DNS record added for domain names of the DNS_AUTO verification type; `5`: Enterprise-grade certificate, pending submission; `6`: Canceling order; `7`: Canceled; `8`: Information submitted, pending confirmation letter upload; `9`: Revoking certificate; `10`: Revoked; `11`: Reissuing; `12`: Pending revocation confirmation letter upload; `13`: Pending information submission for the free certificate; `14`: Refunded.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Certificate status: 0 = under review, 1 = approved, 2 = review failed, 3 = expired, 4 = dns record added automatically, 5 = enterprise certificate, pending documentation submission, 6 = order cancellation in progress, 7 = canceled, 8 = documents submitted, pending upload of confirmation letter, 9 = certificate revocation in progress, 10 = revoked, 11 = reissue in progress, 12 = pending upload of revocation confirmation letter, 13 = free certificate pending documentation submission, 14 = certificate refunded, 15 = certificate migration in progress.
      */
     public $Status;
 
     /**
-     * @var CertificateExtra Extended information of the certificate
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var CertificateExtra Certificate extended information.
      */
     public $CertificateExtra;
 
     /**
-     * @var string Vulnerability scanning status. `INACTIVE`: not activated; `ACTIVE`: activated
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string Vulnerability scanning status: INACTIVE = not enabled, ACTIVE = enabled.
      */
     public $VulnerabilityStatus;
 
     /**
-     * @var string Status information
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string Status information.
      */
     public $StatusMsg;
 
     /**
-     * @var string Validation type. `DNS_AUTO`: automatic DNS validation; `DNS`: manual DNS validation; `FILE`: file validation; `EMAIL`: email validation
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string Validation type: DNS_AUTO = automatic dns validation, DNS = manual dns validation, FILE = file verification, DNS_PROXY = dns proxy validation, FILE_PROXY = file proxy verification.
      */
     public $VerifyType;
 
     /**
-     * @var string Time when the certificate takes effect
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string Certificate validation time.
      */
     public $CertBeginTime;
 
     /**
-     * @var string Time when the certificate expires
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string Certificate expiration time.
      */
     public $CertEndTime;
 
     /**
-     * @var string Validity period of the certificate, in months
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string Certificate validity period (month).
      */
     public $ValidityPeriod;
 
     /**
-     * @var string Creation time
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string Creation time.
      */
     public $InsertTime;
 
     /**
-     * @var string Certificate ID
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string Certificate id.
      */
     public $CertificateId;
 
     /**
-     * @var array Domain names associated with the certificate (including the primary domain name)
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var array Multiple domain names contained in the certificate (including the primary domain name).
      */
     public $SubjectAltName;
 
     /**
-     * @var string Certificate type name
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string Certificate type name.
      */
     public $PackageTypeName;
 
     /**
-     * @var string Status description
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string Status name.
      */
     public $StatusName;
 
     /**
-     * @var boolean Whether the customer is a VIP customer
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var boolean Specifies whether the customer is a vip customer. true indicates yes and false indicates no.
      */
     public $IsVip;
 
     /**
-     * @var boolean Whether the certificate is a DV certificate
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var boolean Specifies whether it is a dv version certificate. true indicates yes and false indicates no.
      */
     public $IsDv;
 
     /**
-     * @var boolean Whether the certificate is a wildcard certificate
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var boolean Specifies whether it is a wildcard domain name certificate. true indicates yes and false indicates no.
      */
     public $IsWildcard;
 
     /**
-     * @var boolean Whether the vulnerability scanning feature is enabled
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var boolean Whether the vulnerability scanning feature is enabled.
      */
     public $IsVulnerability;
 
     /**
-     * @var boolean Whether it can be renewed 
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @var boolean Whether it is renewable.
      */
     public $RenewAble;
 
     /**
-     * @var ProjectInfo Project information
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var ProjectInfo Project information.
      */
     public $ProjectInfo;
 
     /**
-     * @var array Associated Tencent Cloud services. Currently, this parameter is unavailable.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var array Associated cloud resources are temporarily unavailable.
      */
     public $BoundResource;
 
     /**
-     * @var boolean Whether the certificate can be deployed
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var boolean Whether it can be deployed.
      */
     public $Deployable;
 
     /**
-     * @var array List of tags
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @var array Tag list.
      */
     public $Tags;
 
     /**
-     * @var boolean Whether the expiration notification was ignored
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var boolean Whether expiration notice has been ignored.
      */
     public $IsIgnore;
 
     /**
-     * @var boolean Whether the certificate is a Chinese SM certificate
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var boolean Whether it is a China SM certificate.
      */
     public $IsSM;
 
     /**
-     * @var string Certificate algorithm
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Certificate algorithm.
      */
     public $EncryptAlgorithm;
 
     /**
-     * @var array Encryption algorithm of the uploaded CA certificate
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array Encryption algorithm for upload ca certificate.
      */
     public $CAEncryptAlgorithms;
 
     /**
-     * @var array Expiration time of the uploaded CA certificate
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array Expiration time for upload ca certificate.
      */
     public $CAEndTimes;
 
     /**
-     * @var array Generic name of the uploaded CA certificate
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array Common name of the upload ca certificate.
      */
     public $CACommonNames;
 
     /**
-     * @var PreAuditInfo Prereview information of the certificate
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var PreAuditInfo Certificate prereview information.
      */
     public $PreAuditInfo;
 
     /**
-     * @var integer Whether auto-renewal is enabled.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @var integer Whether to auto-renew.
      */
     public $AutoRenewFlag;
 
     /**
-     * @var integer The hosting status. Valid values: `0` (hosting), `5` (replacing resources), `10` (hosting completed), and `-1` (not hosted). 
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Hosting status: 0, hosting; 5, resource replacement; 10, hosting completed; -1, not hosted. 
      */
     public $HostingStatus;
 
     /**
-     * @var string The hosting completion time.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Hosting completion time.
      */
     public $HostingCompleteTime;
 
     /**
-     * @var string The hosted new certificate ID.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Manage the new certificate id.
      */
     public $HostingRenewCertId;
 
     /**
-     * @var string Existing renewed certificate ID
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @var string Existing renewal certificate id.
      */
     public $HasRenewOrder;
 
     /**
-     * @var boolean Whether the original certificate is deleted when a certificate is reissued.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @var boolean Indicates whether the original certificate is deleted during reissue.
      */
     public $ReplaceOriCertIsDelete;
 
     /**
-     * @var boolean Whether the certificate is expiring soon. A certificate is considered to be expiring soon when there are 30 days or less left.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @var boolean Indicates whether it is about to expire. a certificate is about to expire if it will expire within 30 days.
      */
     public $IsExpiring;
 
     /**
-     * @var string Validation expiration time for the addition of the DV certificate
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @var string Add validation expiration date for DV certificate
      */
     public $DVAuthDeadline;
 
     /**
-     * @var string Domain name validation pass time
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @var string Domain verification passed time.
      */
     public $ValidationPassedTime;
 
     /**
-     * @var array Multiple domain names with which the certificate is associated
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @var array Multiple domain names associated with the certificate.
      */
     public $CertSANs;
 
     /**
-     * @var string Domain name validation rejection information
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @var string Domain verification rejection information.
      */
     public $AwaitingValidationMsg;
 
     /**
-     * @var boolean Whether downloading is allowed
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @var boolean Whether to allow downloading.
      */
     public $AllowDownload;
 
     /**
-     * @var boolean 
+     * @var boolean Whether all certificate domain names are managed and resolved by dnspod.
      */
     public $IsDNSPODResolve;
 
     /**
-     * @var boolean 
+     * @var boolean Whether the certificate is purchased with benefit points.
      */
     public $IsPackage;
 
     /**
-     * @var boolean 
+     * @var boolean Whether there is a private key password.
      */
     public $KeyPasswordCustomFlag;
 
     /**
-     * @var SupportDownloadType 
+     * @var SupportDownloadType Types of web servers supported for download: nginx, apache, iis, tomcat, jks, root, other.
      */
     public $SupportDownloadType;
 
     /**
-     * @param string $OwnerUin User UIN
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $ProjectId Project ID
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $From Certificate source
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $PackageType The certificate plan type. Valid values:
-null: Certificates uploaded by users (no plan type)
-`1`: GeoTrust DV SSL CA - G3; `2`: TrustAsia TLS RSA CA; `3`: SecureSite EV Pro; `4`: SecureSite EV; `5`: SecureSite OV Pro; `6`: SecureSite OV; `7`: SecureSite OV wildcard; `8`: GeoTrust EV; `9`: GeoTrust OV; `10`: GeoTrust OV wildcard; `11`: TrustAsia DV multi-domain; `12`: TrustAsia DV wildcard; `13`: TrustAsia OV wildcard D3; `14`: TrustAsia OV D3; `15`: TrustAsia OV multi-domain D3; `16`: TrustAsia EV D3; `17`: TrustAsia EV multi-domain D3; `18`: GlobalSign OV; `19`: GlobalSign OV wildcard; `20`: GlobalSign EV; `21`: TrustAsia OV wildcard multi-domain D3; `22`: GlobalSign OV multi-domain; `23`: GlobalSign OV wildcard multi-domain; `24`: GlobalSign EV multi-domain
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $CertificateType Certificate type. `CA`: client certificate; `SVR`: server certificate
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $ProductZhName Issuer
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $Domain Primary domain name
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $Alias Alias
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param integer $Status Status. `0`: Reviewing; `1`: Approved; `2`: Unapproved; `3`: Expired; `4`: DNS record added for domain names of the DNS_AUTO verification type; `5`: Enterprise-grade certificate, pending submission; `6`: Canceling order; `7`: Canceled; `8`: Information submitted, pending confirmation letter upload; `9`: Revoking certificate; `10`: Revoked; `11`: Reissuing; `12`: Pending revocation confirmation letter upload; `13`: Pending information submission for the free certificate; `14`: Refunded.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param CertificateExtra $CertificateExtra Extended information of the certificate
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $VulnerabilityStatus Vulnerability scanning status. `INACTIVE`: not activated; `ACTIVE`: activated
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $StatusMsg Status information
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $VerifyType Validation type. `DNS_AUTO`: automatic DNS validation; `DNS`: manual DNS validation; `FILE`: file validation; `EMAIL`: email validation
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $CertBeginTime Time when the certificate takes effect
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $CertEndTime Time when the certificate expires
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $ValidityPeriod Validity period of the certificate, in months
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $InsertTime Creation time
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $CertificateId Certificate ID
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param array $SubjectAltName Domain names associated with the certificate (including the primary domain name)
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $PackageTypeName Certificate type name
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $StatusName Status description
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param boolean $IsVip Whether the customer is a VIP customer
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param boolean $IsDv Whether the certificate is a DV certificate
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param boolean $IsWildcard Whether the certificate is a wildcard certificate
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param boolean $IsVulnerability Whether the vulnerability scanning feature is enabled
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param boolean $RenewAble Whether it can be renewed 
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param ProjectInfo $ProjectInfo Project information
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param array $BoundResource Associated Tencent Cloud services. Currently, this parameter is unavailable.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param boolean $Deployable Whether the certificate can be deployed
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param array $Tags List of tags
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param boolean $IsIgnore Whether the expiration notification was ignored
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param boolean $IsSM Whether the certificate is a Chinese SM certificate
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $EncryptAlgorithm Certificate algorithm
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param array $CAEncryptAlgorithms Encryption algorithm of the uploaded CA certificate
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param array $CAEndTimes Expiration time of the uploaded CA certificate
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param array $CACommonNames Generic name of the uploaded CA certificate
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param PreAuditInfo $PreAuditInfo Prereview information of the certificate
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $AutoRenewFlag Whether auto-renewal is enabled.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param integer $HostingStatus The hosting status. Valid values: `0` (hosting), `5` (replacing resources), `10` (hosting completed), and `-1` (not hosted). 
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $HostingCompleteTime The hosting completion time.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $HostingRenewCertId The hosted new certificate ID.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $HasRenewOrder Existing renewed certificate ID
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param boolean $ReplaceOriCertIsDelete Whether the original certificate is deleted when a certificate is reissued.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param boolean $IsExpiring Whether the certificate is expiring soon. A certificate is considered to be expiring soon when there are 30 days or less left.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param string $DVAuthDeadline Validation expiration time for the addition of the DV certificate
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param string $ValidationPassedTime Domain name validation pass time
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param array $CertSANs Multiple domain names with which the certificate is associated
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param string $AwaitingValidationMsg Domain name validation rejection information
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param boolean $AllowDownload Whether downloading is allowed
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param boolean $IsDNSPODResolve 
-     * @param boolean $IsPackage 
-     * @param boolean $KeyPasswordCustomFlag 
-     * @param SupportDownloadType $SupportDownloadType 
+     * @var string Certificate revocation completion time.
+     */
+    public $CertRevokedTime;
+
+    /**
+     * @var array Hosted resource type list.
+     */
+    public $HostingResourceTypes;
+
+    /**
+     * @var HostingConfig Managed configuration information.
+     */
+    public $HostingConfig;
+
+    /**
+     * @param string $OwnerUin User uin.
+     * @param string $ProjectId Project id.
+     * @param string $From Certificate source:.
+trustasia.
+upload.
+wosign.
+sheca.
+     * @param string $PackageType Certificate package type:.
+Null: user uploads a certificate (without package type),.
+2: trustasia tls rsa ca,. 
+3: securesite enhanced enterprise edition (ev pro),. 
+4: securesite enhanced (ev). 
+5: securesite enterprise professional edition (ov pro).
+6: securesite enterprise (ov). 
+7: securesite enterprise (ov) wildcard. 
+8: geotrust enhanced (ev). 
+9: geotrust enterprise (ov) cert. 
+10: geotrust enterprise (ov) wildcard cert. 
+11: trustasia domain name-based multiple domain names ssl certificate. 
+12: trustasia domain name-based (dv) wildcard cert. 
+13: trustasia enterprise wildcard (ov) ssl certificate (d3). 
+14: trustasia enterprise (ov) ssl certificate (d3). 
+15: trustasia enterprise multiple domain names (ov) ssl certificate (d3). 
+16: trustasia enhanced (ev) ssl certificate (d3). 
+17: trustasia enhanced multiple domain names (ev) ssl certificate (d3). 
+18: globalsign enterprise (ov) ssl certificate. 
+19: globalsign enterprise wildcard (ov) ssl certificate. 
+20: globalsign enhanced (ev) ssl certificate. 
+21: trustasia enterprise wildcard multiple domain names (ov) ssl certificate (d3). 
+22: globalsign enterprise multiple domain names (ov) ssl certificate. 
+23: globalsign enterprise wildcard multiple domain names (ov) ssl certificate.
+24: globalsign enhanced multiple domain name (ev) ssl certificate.
+25: wotrus domain name cert.
+26: wotrus domain name multiple domain name cert.
+27: wotrus domain name wildcard cert.
+28: wotrus enterprise cert.
+29: wotrus enterprise multi - domain name certificate.
+30: wotrus enterprise wildcard certificate.
+31: wotrus enhanced certificate.
+32: wotrus enhanced multi - domain name certificate.
+33: wotrus - national cryptography domain - type certificate.
+34: wotrus-national cryptography domain certificate (multiple domain names).
+35: wotrus-national cryptography domain certificate (wildcard).
+37: wotrus-national cryptography enterprise certificate.
+38: wotrus-national cryptography enterprise certificate (multiple domain names).
+39: wotrus-national cryptography enterprise certificate (wildcard).
+40: wotrus - enhanced national cryptography certificate.
+41: wotrus - enhanced national cryptography certificate (multiple domain names).
+42: trustasia - domain name type certificate (wildcard multiple domain names).
+43: DNSPod - enterprise (ov) ssl certificate.
+44: DNSPod - enterprise (ov) wildcard ssl certificate.
+45: DNSPod - enterprise (ov) multiple domain names ssl certificate.
+46: DNSPod - enhanced (ev) ssl certificate.
+47: DNSPod - enhanced (ev) multiple domain names ssl certificate.
+48: DNSPod - domain name-based (dv) ssl certificate.
+49: DNSPod - domain name-based (dv) wildcard ssl certificate.
+50: DNSPod - domain name-based (dv) multiple domain names ssl certificate.
+51: DNSPod (national cryptography) - enterprise (ov) ssl certificate.
+52: DNSPod (national cryptography) - enterprise (ov) wildcard ssl certificate.
+53: DNSPod (national cryptography) - enterprise (ov) multiple domain names ssl certificate.
+54: DNSPod (national cryptography) - domain name-based (dv) ssl certificate.
+55: DNSPod (national cryptography) - domain name-based (dv) wildcard ssl certificate.
+56: DNSPod (national cryptography) - domain name-based (dv) multiple domain names ssl certificate.
+57: securesite enterprise professional edition multiple domain names (ov pro).
+58: securesite enterprise multiple domain names (ov).
+59: securesite enhanced professional edition multiple domain names (ev pro).
+60: securesite enhanced multiple domain names (ev).
+61: geotrust enhanced multiple domain names (ev).
+75: securesite enterprise (ov).
+76: securesite enterprise (ov) wildcard.
+77: securesite enhanced (ev).
+78: geotrust enterprise (ov).
+79: geotrust enterprise wildcard (ov).
+80: geotrust enhanced (ev).
+81: globalsign enterprise (ov) ssl certificate.
+82: globalsign enterprise wildcard (ov) ssl certificate.
+83: trustasia c1 dv free.
+85: globalsign enhanced (ev) ssl certificate.
+88: globalsign enterprise wildcard multiple domain names (ov) ssl certificate.
+89: globalsign enterprise multiple domain names (ov) ssl certificate.
+90: globalsign enhanced multiple domain names (ev) ssl certificate.
+91: geotrust enhanced multiple domain names (ev).
+92: securesite enterprise pro multiple domain names (ov pro).
+93: securesite enterprise multiple domain names (ov).
+94: securesite enhanced pro multiple domain names (ev pro).
+95: securesite enhanced multiple domain names (ev).
+96: securesite ev pro.
+97: securesite enterprise professional edition (ov pro).
+98: cfca enterprise (ov) ssl certificate.
+99: cfca enterprise ov ssl certificate for multiple domain names.
+100: cfca ov wildcard ssl certificate.
+101: cfca enhanced (ev) ssl certificate.
+     * @param string $CertificateType Certificate type. ca = client certificate; svr = server certificate.
+     * @param string $ProductZhName Certificate product name.
+     * @param string $Domain Primary domain name.
+     * @param string $Alias Remark name.
+     * @param integer $Status Certificate status: 0 = under review, 1 = approved, 2 = review failed, 3 = expired, 4 = dns record added automatically, 5 = enterprise certificate, pending documentation submission, 6 = order cancellation in progress, 7 = canceled, 8 = documents submitted, pending upload of confirmation letter, 9 = certificate revocation in progress, 10 = revoked, 11 = reissue in progress, 12 = pending upload of revocation confirmation letter, 13 = free certificate pending documentation submission, 14 = certificate refunded, 15 = certificate migration in progress.
+     * @param CertificateExtra $CertificateExtra Certificate extended information.
+     * @param string $VulnerabilityStatus Vulnerability scanning status: INACTIVE = not enabled, ACTIVE = enabled.
+     * @param string $StatusMsg Status information.
+     * @param string $VerifyType Validation type: DNS_AUTO = automatic dns validation, DNS = manual dns validation, FILE = file verification, DNS_PROXY = dns proxy validation, FILE_PROXY = file proxy verification.
+     * @param string $CertBeginTime Certificate validation time.
+     * @param string $CertEndTime Certificate expiration time.
+     * @param string $ValidityPeriod Certificate validity period (month).
+     * @param string $InsertTime Creation time.
+     * @param string $CertificateId Certificate id.
+     * @param array $SubjectAltName Multiple domain names contained in the certificate (including the primary domain name).
+     * @param string $PackageTypeName Certificate type name.
+     * @param string $StatusName Status name.
+     * @param boolean $IsVip Specifies whether the customer is a vip customer. true indicates yes and false indicates no.
+     * @param boolean $IsDv Specifies whether it is a dv version certificate. true indicates yes and false indicates no.
+     * @param boolean $IsWildcard Specifies whether it is a wildcard domain name certificate. true indicates yes and false indicates no.
+     * @param boolean $IsVulnerability Whether the vulnerability scanning feature is enabled.
+     * @param boolean $RenewAble Whether it is renewable.
+     * @param ProjectInfo $ProjectInfo Project information.
+     * @param array $BoundResource Associated cloud resources are temporarily unavailable.
+     * @param boolean $Deployable Whether it can be deployed.
+     * @param array $Tags Tag list.
+     * @param boolean $IsIgnore Whether expiration notice has been ignored.
+     * @param boolean $IsSM Whether it is a China SM certificate.
+     * @param string $EncryptAlgorithm Certificate algorithm.
+     * @param array $CAEncryptAlgorithms Encryption algorithm for upload ca certificate.
+     * @param array $CAEndTimes Expiration time for upload ca certificate.
+     * @param array $CACommonNames Common name of the upload ca certificate.
+     * @param PreAuditInfo $PreAuditInfo Certificate prereview information.
+     * @param integer $AutoRenewFlag Whether to auto-renew.
+     * @param integer $HostingStatus Hosting status: 0, hosting; 5, resource replacement; 10, hosting completed; -1, not hosted. 
+     * @param string $HostingCompleteTime Hosting completion time.
+     * @param string $HostingRenewCertId Manage the new certificate id.
+     * @param string $HasRenewOrder Existing renewal certificate id.
+     * @param boolean $ReplaceOriCertIsDelete Indicates whether the original certificate is deleted during reissue.
+     * @param boolean $IsExpiring Indicates whether it is about to expire. a certificate is about to expire if it will expire within 30 days.
+     * @param string $DVAuthDeadline Add validation expiration date for DV certificate
+     * @param string $ValidationPassedTime Domain verification passed time.
+     * @param array $CertSANs Multiple domain names associated with the certificate.
+     * @param string $AwaitingValidationMsg Domain verification rejection information.
+     * @param boolean $AllowDownload Whether to allow downloading.
+     * @param boolean $IsDNSPODResolve Whether all certificate domain names are managed and resolved by dnspod.
+     * @param boolean $IsPackage Whether the certificate is purchased with benefit points.
+     * @param boolean $KeyPasswordCustomFlag Whether there is a private key password.
+     * @param SupportDownloadType $SupportDownloadType Types of web servers supported for download: nginx, apache, iis, tomcat, jks, root, other.
+     * @param string $CertRevokedTime Certificate revocation completion time.
+     * @param array $HostingResourceTypes Hosted resource type list.
+     * @param HostingConfig $HostingConfig Managed configuration information.
      */
     function __construct()
     {
@@ -885,6 +1057,19 @@ Note: This field may return null, indicating that no valid value can be obtained
         if (array_key_exists("SupportDownloadType",$param) and $param["SupportDownloadType"] !== null) {
             $this->SupportDownloadType = new SupportDownloadType();
             $this->SupportDownloadType->deserialize($param["SupportDownloadType"]);
+        }
+
+        if (array_key_exists("CertRevokedTime",$param) and $param["CertRevokedTime"] !== null) {
+            $this->CertRevokedTime = $param["CertRevokedTime"];
+        }
+
+        if (array_key_exists("HostingResourceTypes",$param) and $param["HostingResourceTypes"] !== null) {
+            $this->HostingResourceTypes = $param["HostingResourceTypes"];
+        }
+
+        if (array_key_exists("HostingConfig",$param) and $param["HostingConfig"] !== null) {
+            $this->HostingConfig = new HostingConfig();
+            $this->HostingConfig->deserialize($param["HostingConfig"]);
         }
     }
 }

@@ -24,11 +24,14 @@ use TencentCloud\Intlpartnersmgt\V20220928\Models as Models;
 
 /**
  * @method Models\AllocateCreditPoolResponse AllocateCreditPool(Models\AllocateCreditPoolRequest $req) This API is used to allocate credit pools to second-level resellers by distributors.
+Callable roles: Distributor
  * @method Models\AllocateCustomerCreditResponse AllocateCustomerCredit(Models\AllocateCustomerCreditRequest $req) This API is used for a partner to set credit for a customer, such as increasing or lowering the credit and setting it to 0.
 1. The credit is valid permanently and will not be zeroed regularly.
 2. The customer's service will be suspended when its available credit is set to 0, so caution should be exercised with this operation.
 3. To prevent the customer from making new purchases without affecting their use of previously purchased products, the partner can set their available credit to 0 after obtaining the non-stop feature privilege from the channel manager.
 4. The set credit is an increment of the current available credit and cannot exceed the remaining allocable credit. Setting the credit to a negative value indicates that it will be repossessed. The available credit can be set to 0 at the minimum.
+
+Callable roles: Distributor, Second-level reseller, Reseller
  * @method Models\ApproveClientApplyResponse ApproveClientApply(Models\ApproveClientApplyRequest $req) Description: This API is used by resellers to review applications to become sub-customers. Note: This API is used to apply for the allowlist. If needed, please contact your business representative.
 
 Callable roles: Reseller, Distributer, Second-level reseller
@@ -37,49 +40,79 @@ Callable roles: Reseller, Distributer, Second-level reseller
 2. Customers need to add personal information when logging in for the first time.
 3. This interface needs to be applied for allowlist usage. Please contact the channel manager to initiate the application process.
 
-Callable roles: distributor, second-level reseller, reseller
+Callable roles: Distributor, Second-level reseller, Reseller
  * @method Models\CreateAndSendClientInvitationMailResponse CreateAndSendClientInvitationMail(Models\CreateAndSendClientInvitationMailRequest $req) This API is used to apply for the allowlist. If needed, please contact your business representative.Directions:
 1.This API is used to create an invitation link, which you can send to a specified email address.
 2.Customer need to click the invitation link in the email, fill in and submit the required information.
 3.You can review the customer's application in customer management  after submission.
 
 Note:This API is used to manually send the invitation link to the customer if the specified email does not receive it.
- * @method Models\DescribeBillDetailResponse DescribeBillDetail(Models\DescribeBillDetailRequest $req) This API is used to query bill details by customers.
- * @method Models\DescribeBillDownloadUrlResponse DescribeBillDownloadUrl(Models\DescribeBillDownloadUrlRequest $req) This API is used to download billing files and return billing file URLs by customers.
- * @method Models\DescribeBillSummaryResponse DescribeBillSummary(Models\DescribeBillSummaryRequest $req) External API for the L1 billing of the customer billing center
+
+Callable roles: Distributor, Second-level reseller, Reseller
+ * @method Models\DescribeBillDetailResponse DescribeBillDetail(Models\DescribeBillDetailRequest $req) Description: End-customer queries its own bill details.
+Callable role: End-customer.
+ * @method Models\DescribeBillDownloadUrlResponse DescribeBillDownloadUrl(Models\DescribeBillDownloadUrlRequest $req) Description: This API is used to download billing files and return billing file URLs for sub-customers.
+Callable role: Enb-customer.
+ * @method Models\DescribeBillSummaryResponse DescribeBillSummary(Models\DescribeBillSummaryRequest $req) Description: External API for L1 billing of Sub-customer billing center.
+Callable role: End-customer.
  * @method Models\DescribeBillSummaryByPayModeResponse DescribeBillSummaryByPayMode(Models\DescribeBillSummaryByPayModeRequest $req) This API is used to obtain the total amount of customer bills by payment mode.
- * @method Models\DescribeBillSummaryByProductResponse DescribeBillSummaryByProduct(Models\DescribeBillSummaryByProductRequest $req) This API is used to obtain the total amount of customer bills by product.
- * @method Models\DescribeBillSummaryByRegionResponse DescribeBillSummaryByRegion(Models\DescribeBillSummaryByRegionRequest $req) This API is used to obtain the total amount of customer bills by region.
+Callable roles: Distributor, Second-level reseller, Reseller
+ * @method Models\DescribeBillSummaryByProductResponse DescribeBillSummaryByProduct(Models\DescribeBillSummaryByProductRequest $req) Description: Obtain the summarized value of sub - account bills by product dimension.
+Callable roles: Distributor, Second-level reseller, Reseller
+ * @method Models\DescribeBillSummaryByRegionResponse DescribeBillSummaryByRegion(Models\DescribeBillSummaryByRegionRequest $req) Description: Obtain the summarized value of sub - account bills by region through API.
+Callable roles: Distributor, Second-level reseller, Reseller
  * @method Models\DescribeCustomerBillDetailResponse DescribeCustomerBillDetail(Models\DescribeCustomerBillDetailRequest $req) This API is used to query the customer bill details by resellers.
+Callable roles: Distributor, Second-level reseller, Reseller
  * @method Models\DescribeCustomerBillDownloadUrlResponse DescribeCustomerBillDownloadUrl(Models\DescribeCustomerBillDownloadUrlRequest $req) This API is used to get the URL for downloading the customer bill file by reseller. The download conditions are as follows:
 1. Detailed bills (billDetail and billDetailPack) can be downloaded starting from June 2022; resource bills (billResource and billResourcePack) can be downloaded starting from November 2023.
 2. Bill packages (billDetailPack and billResourcePack) can only be downloaded after billing.
  * @method Models\DescribeCustomerBillSummaryResponse DescribeCustomerBillSummary(Models\DescribeCustomerBillSummaryRequest $req) This API is used to query the total amount of customer bills.
+Callable roles: Distributor, Second-level reseller, Reseller
  * @method Models\DescribeCustomerInfoResponse DescribeCustomerInfo(Models\DescribeCustomerInfoRequest $req) This API is used to query the customer information.
+
+Callable roles: Distributor, Reseller
  * @method Models\DescribeCustomerUinResponse DescribeCustomerUin(Models\DescribeCustomerUinRequest $req) This API is used to query the list of customer UINs.
- * @method Models\ForceQNResponse ForceQN(Models\ForceQNRequest $req) This API is used to set and cancel forced service suspension.
-Note:Reseller need to be allowlisted to use the API, please contact your business representative to apply for allowlist.
+ * @method Models\ForceQNResponse ForceQN(Models\ForceQNRequest $req) Forced Service Suspension settings and cancellation can be used only after the reseller is whitelisted.
+
+Callable roles: Distributor, Second-level reseller, Reseller
  * @method Models\GetCountryCodesResponse GetCountryCodes(Models\GetCountryCodesRequest $req) This API is used to obtain country/region codes.
  * @method Models\GetTradeConfigListResponse GetTradeConfigList(Models\GetTradeConfigListRequest $req) This API is used to query industry information, including layer-1 industry and layer-2 industry.
+
+Callable roles: Distributor, Second-level reseller, Reseller,End-customer
  * @method Models\ModifyClientRemarkResponse ModifyClientRemark(Models\ModifyClientRemarkRequest $req) This API is used to modify customer remarks.
+
+Callable roles: Distributor, Second-level reseller, Reseller
  * @method Models\QueryAccountVerificationStatusResponse QueryAccountVerificationStatus(Models\QueryAccountVerificationStatusRequest $req) This API is used to query the account verification status.
+Callable roles: Distributor, Reseller
  * @method Models\QueryCreditAllocationHistoryResponse QueryCreditAllocationHistory(Models\QueryCreditAllocationHistoryRequest $req) This API is used to query all the credit allocation records of a single customer.
+Callable roles: Distributor, Second-level reseller, Reseller
  * @method Models\QueryCreditByUinListResponse QueryCreditByUinList(Models\QueryCreditByUinListRequest $req) This API is used to query the credit of users in the list.
- * @method Models\QueryCreditQuotaResponse QueryCreditQuota(Models\QueryCreditQuotaRequest $req) This API is used to query customer credits.
+Callable roles: Distributor, Second-level reseller, Reseller
  * @method Models\QueryCustomerBillingQuotaResponse QueryCustomerBillingQuota(Models\QueryCustomerBillingQuotaRequest $req) Description: This API is used for a sub-customer to real-time query its own total credit and remaining credit in USD.
 
 Callable roles: Sub-customer
  * @method Models\QueryCustomersCreditResponse QueryCustomersCredit(Models\QueryCustomersCreditRequest $req) This API is used for a partner to the credits and basic information of cutomers.
+
+Callable roles: Distributor, Second-level reseller, Reseller
  * @method Models\QueryDirectCustomersCreditResponse QueryDirectCustomersCredit(Models\QueryDirectCustomersCreditRequest $req) This API is used to query the credits of direct customers.
+Callable roles: Distributor, Second-level reseller, Reseller
  * @method Models\QueryPartnerCreditResponse QueryPartnerCredit(Models\QueryPartnerCreditRequest $req) This API is used for a partner to query its own total credit, available credit, and used credit in USD.
+
+Callable roles: Distributor, Second-level reseller, Reseller
  * @method Models\QueryPendingClientsV2Response QueryPendingClientsV2(Models\QueryPendingClientsV2Request $req) Description: This API is used by resellers to query the list of sub-customers pending review. Note: This API is used to apply for the allowlist. If needed, please contact your business representative.
 
 Callable roles: Reseller, Distributer, Second-level reseller
- * @method Models\QueryPolicyProductListByCodeResponse QueryPolicyProductListByCode(Models\QueryPolicyProductListByCodeRequest $req) This API is used to query the product list information within the specified policy range. To call this API, contact your account manager to add it to the allowlist.
- * @method Models\QueryVoucherAmountByUinResponse QueryVoucherAmountByUin(Models\QueryVoucherAmountByUinRequest $req) This API is used to query the voucher quota based on the customer UIN.
- * @method Models\QueryVoucherListByUinResponse QueryVoucherListByUin(Models\QueryVoucherListByUinRequest $req) This API is used to query the voucher list based on the customer UIN.
- * @method Models\QueryVoucherPoolResponse QueryVoucherPool(Models\QueryVoucherPoolRequest $req) This API is used to query the voucher quota pool.
+ * @method Models\QueryPolicyProductListByCodeResponse QueryPolicyProductListByCode(Models\QueryPolicyProductListByCodeRequest $req) This API is used to query the product list information within the specified policy range. To call this API, contact your business manager to apply for adding it to the allowlist.
+Callable roles: Distributor, Second-level reseller, Reseller
+ * @method Models\QueryVoucherAmountByUinResponse QueryVoucherAmountByUin(Models\QueryVoucherAmountByUinRequest $req) This API is used by primary/secondary resellers to query the voucher quota based on the customer UIN.
+Callable roles: Reseller, Distributor, Second-level reseller
+ * @method Models\QueryVoucherListByUinResponse QueryVoucherListByUin(Models\QueryVoucherListByUinRequest $req) This API is used by primary/secondary resellers to query the voucher list based on the customer UIN.
+Callable roles: Reseller, Distributor, Second-level reseller
+ * @method Models\QueryVoucherPoolResponse QueryVoucherPool(Models\QueryVoucherPoolRequest $req) This API is used by primary/secondary resellers to query the voucher quota pool.
+Callable roles: Distributor, First-level reseller, Second-level reseller
  * @method Models\SendVerifyCodeResponse SendVerifyCode(Models\SendVerifyCodeRequest $req) This API is used to send a verification code for account registration.
+
+Callable roles: Distributor, Second-level reseller, Reseller,End-customer
  */
 
 class IntlpartnersmgtClient extends AbstractClient

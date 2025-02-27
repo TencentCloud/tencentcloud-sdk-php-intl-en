@@ -24,10 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLoadBalancerId(string $LoadBalancerId) Set The CLB instance ID.
  * @method string getLoadBalancerName() Obtain The CLB instance name.
  * @method void setLoadBalancerName(string $LoadBalancerName) Set The CLB instance name.
- * @method array getListeners() Obtain The list of CLB listeners.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setListeners(array $Listeners) Set The list of CLB listeners.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method array getListeners() Obtain CLB listener list.
+ * @method void setListeners(array $Listeners) Set CLB listener list.
  */
 class ClbInstanceDetail extends AbstractModel
 {
@@ -42,16 +40,14 @@ class ClbInstanceDetail extends AbstractModel
     public $LoadBalancerName;
 
     /**
-     * @var array The list of CLB listeners.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array CLB listener list.
      */
     public $Listeners;
 
     /**
      * @param string $LoadBalancerId The CLB instance ID.
      * @param string $LoadBalancerName The CLB instance name.
-     * @param array $Listeners The list of CLB listeners.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param array $Listeners CLB listener list.
      */
     function __construct()
     {

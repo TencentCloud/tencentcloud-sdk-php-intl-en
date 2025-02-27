@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getCustomerUin() Obtain Customer UIN
  * @method void setCustomerUin(integer $CustomerUin) Set Customer UIN
- * @method string getMonth() Obtain The queried month in “YYYY-MM” format, such as 2023-01.
- * @method void setMonth(string $Month) Set The queried month in “YYYY-MM” format, such as 2023-01.
+ * @method string getMonth() Obtain The queried month in "YYYY-MM" format, such as 2023-01.
+ * @method void setMonth(string $Month) Set The queried month in "YYYY-MM" format, such as 2023-01.
  * @method string getPayMode() Obtain Billing mode. Valid values:
 `prePay` (Monthly subscription)
 `postPay` (Pay-as-you-go)
@@ -99,7 +99,7 @@ class DescribeCustomerBillSummaryRequest extends AbstractModel
     public $CustomerUin;
 
     /**
-     * @var string The queried month in “YYYY-MM” format, such as 2023-01.
+     * @var string The queried month in "YYYY-MM" format, such as 2023-01.
      */
     public $Month;
 
@@ -150,7 +150,7 @@ class DescribeCustomerBillSummaryRequest extends AbstractModel
 
     /**
      * @param integer $CustomerUin Customer UIN
-     * @param string $Month The queried month in “YYYY-MM” format, such as 2023-01.
+     * @param string $Month The queried month in "YYYY-MM" format, such as 2023-01.
      * @param string $PayMode Billing mode. Valid values:
 `prePay` (Monthly subscription)
 `postPay` (Pay-as-you-go)

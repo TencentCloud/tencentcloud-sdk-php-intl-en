@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Cloud resource region list
  *
- * @method string getResourceType() Obtain Cloud resource type
- * @method void setResourceType(string $ResourceType) Set Cloud resource type
+ * @method string getResourceType() Obtain Cloud resource types, which support clb, waf, api gateway, cos, tke, tse, and tcb.
+ * @method void setResourceType(string $ResourceType) Set Cloud resource types, which support clb, waf, api gateway, cos, tke, tse, and tcb.
  * @method array getRegions() Obtain Region list
  * @method void setRegions(array $Regions) Set Region list
  */
 class ResourceTypeRegions extends AbstractModel
 {
     /**
-     * @var string Cloud resource type
+     * @var string Cloud resource types, which support clb, waf, api gateway, cos, tke, tse, and tcb.
      */
     public $ResourceType;
 
@@ -38,7 +38,7 @@ class ResourceTypeRegions extends AbstractModel
     public $Regions;
 
     /**
-     * @param string $ResourceType Cloud resource type
+     * @param string $ResourceType Cloud resource types, which support clb, waf, api gateway, cos, tke, tse, and tcb.
      * @param array $Regions Region list
      */
     function __construct()

@@ -22,12 +22,12 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getRegion() Obtain The region.
  * @method void setRegion(string $Region) Set The region.
- * @method array getInstanceList() Obtain The list of APIGATEWAY instances.	
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setInstanceList(array $InstanceList) Set The list of APIGATEWAY instances.	
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method array getInstanceList() Obtain API gateway instance details.	
+ * @method void setInstanceList(array $InstanceList) Set API gateway instance details.	
  * @method integer getTotalCount() Obtain The total number of APIGATEWAY instances in this region.	
  * @method void setTotalCount(integer $TotalCount) Set The total number of APIGATEWAY instances in this region.	
+ * @method string getError() Obtain Whether to query exceptions.
+ * @method void setError(string $Error) Set Whether to query exceptions.
  */
 class ApiGatewayInstanceList extends AbstractModel
 {
@@ -37,8 +37,7 @@ class ApiGatewayInstanceList extends AbstractModel
     public $Region;
 
     /**
-     * @var array The list of APIGATEWAY instances.	
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array API gateway instance details.	
      */
     public $InstanceList;
 
@@ -48,10 +47,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $TotalCount;
 
     /**
+     * @var string Whether to query exceptions.
+     */
+    public $Error;
+
+    /**
      * @param string $Region The region.
-     * @param array $InstanceList The list of APIGATEWAY instances.	
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param array $InstanceList API gateway instance details.	
      * @param integer $TotalCount The total number of APIGATEWAY instances in this region.	
+     * @param string $Error Whether to query exceptions.
      */
     function __construct()
     {
@@ -81,6 +85,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
             $this->TotalCount = $param["TotalCount"];
+        }
+
+        if (array_key_exists("Error",$param) and $param["Error"] !== null) {
+            $this->Error = $param["Error"];
         }
     }
 }

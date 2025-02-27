@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeBillDownloadUrl request structure.
  *
- * @method string getMonth() Obtain Bill month in the format of "yyyy-mm"; the earliest month available for query is June, 2022. Current month's billing data may be inaccurate; please download the current month's bill after it is generated at 1:00 on the 5th of the next month.
- * @method void setMonth(string $Month) Set Bill month in the format of "yyyy-mm"; the earliest month available for query is June, 2022. Current month's billing data may be inaccurate; please download the current month's bill after it is generated at 1:00 on the 5th of the next month.
+ * @method string getMonth() Obtain The month to which the bill belongs, formatted as YYYY-MM; the earliest month available for query is June, 2022. Current month's billing data may be inaccurate; please download the current month's bill after it is generated at 1:00 on the 5th of the next month.
+ * @method void setMonth(string $Month) Set The month to which the bill belongs, formatted as YYYY-MM; the earliest month available for query is June, 2022. Current month's billing data may be inaccurate; please download the current month's bill after it is generated at 1:00 on the 5th of the next month.
  * @method string getFileType() Obtain Type of bill. Valid values: L2 or L3
  * @method void setFileType(string $FileType) Set Type of bill. Valid values: L2 or L3
  */
 class DescribeBillDownloadUrlRequest extends AbstractModel
 {
     /**
-     * @var string Bill month in the format of "yyyy-mm"; the earliest month available for query is June, 2022. Current month's billing data may be inaccurate; please download the current month's bill after it is generated at 1:00 on the 5th of the next month.
+     * @var string The month to which the bill belongs, formatted as YYYY-MM; the earliest month available for query is June, 2022. Current month's billing data may be inaccurate; please download the current month's bill after it is generated at 1:00 on the 5th of the next month.
      */
     public $Month;
 
@@ -38,7 +38,7 @@ class DescribeBillDownloadUrlRequest extends AbstractModel
     public $FileType;
 
     /**
-     * @param string $Month Bill month in the format of "yyyy-mm"; the earliest month available for query is June, 2022. Current month's billing data may be inaccurate; please download the current month's bill after it is generated at 1:00 on the 5th of the next month.
+     * @param string $Month The month to which the bill belongs, formatted as YYYY-MM; the earliest month available for query is June, 2022. Current month's billing data may be inaccurate; please download the current month's bill after it is generated at 1:00 on the 5th of the next month.
      * @param string $FileType Type of bill. Valid values: L2 or L3
      */
     function __construct()

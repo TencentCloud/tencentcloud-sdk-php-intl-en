@@ -20,70 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Product details in the customer bill data totaled by product
  *
- * @method string getBusinessCode() Obtain Product code
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setBusinessCode(string $BusinessCode) Set Product code
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getBusinessCodeName() Obtain Product name
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setBusinessCodeName(string $BusinessCodeName) Set Product name
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getOriginalCost() Obtain List price accurate down to eight decimal places
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setOriginalCost(string $OriginalCost) Set List price accurate down to eight decimal places
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getVoucherPayAmount() Obtain The deducted voucher amount accurate down to eight decimal places
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setVoucherPayAmount(string $VoucherPayAmount) Set The deducted voucher amount accurate down to eight decimal places
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getTotalCost() Obtain Consumption amount accurate down to eight decimal places
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setTotalCost(string $TotalCost) Set Consumption amount accurate down to eight decimal places
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getBusinessCode() Obtain Product code.
+ * @method void setBusinessCode(string $BusinessCode) Set Product code.
+ * @method string getBusinessCodeName() Obtain Product name.
+ * @method void setBusinessCodeName(string $BusinessCodeName) Set Product name.
+ * @method string getOriginalCost() Obtain List price, keep 8 decimal places.
+ * @method void setOriginalCost(string $OriginalCost) Set List price, keep 8 decimal places.
+ * @method string getVoucherPayAmount() Obtain Voucher payment amount, keep 8 decimal places.
+ * @method void setVoucherPayAmount(string $VoucherPayAmount) Set Voucher payment amount, keep 8 decimal places.
+ * @method string getTotalCost() Obtain Consumption amount, keep 8 decimal places.
+ * @method void setTotalCost(string $TotalCost) Set Consumption amount, keep 8 decimal places.
  */
 class BusinessSummaryOverviewItem extends AbstractModel
 {
     /**
-     * @var string Product code
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Product code.
      */
     public $BusinessCode;
 
     /**
-     * @var string Product name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Product name.
      */
     public $BusinessCodeName;
 
     /**
-     * @var string List price accurate down to eight decimal places
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string List price, keep 8 decimal places.
      */
     public $OriginalCost;
 
     /**
-     * @var string The deducted voucher amount accurate down to eight decimal places
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Voucher payment amount, keep 8 decimal places.
      */
     public $VoucherPayAmount;
 
     /**
-     * @var string Consumption amount accurate down to eight decimal places
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Consumption amount, keep 8 decimal places.
      */
     public $TotalCost;
 
     /**
-     * @param string $BusinessCode Product code
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $BusinessCodeName Product name
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $OriginalCost List price accurate down to eight decimal places
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $VoucherPayAmount The deducted voucher amount accurate down to eight decimal places
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $TotalCost Consumption amount accurate down to eight decimal places
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $BusinessCode Product code.
+     * @param string $BusinessCodeName Product name.
+     * @param string $OriginalCost List price, keep 8 decimal places.
+     * @param string $VoucherPayAmount Voucher payment amount, keep 8 decimal places.
+     * @param string $TotalCost Consumption amount, keep 8 decimal places.
      */
     function __construct()
     {

@@ -28,8 +28,18 @@ use TencentCloud\Common\AbstractModel;
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setZoneId(string $ZoneId) Set The AZ ID.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getStatus() Obtain The status of the domain.
- * @method void setStatus(string $Status) Set The status of the domain.
+ * @method string getStatus() Obtain Domain status.
+`Deployed`: deployed;.
+`Processing`: deploying;.
+`Applying`: applying;.
+`Failed`: application failed;.
+`Issued`: binding failed.
+ * @method void setStatus(string $Status) Set Domain status.
+`Deployed`: deployed;.
+`Processing`: deploying;.
+`Applying`: applying;.
+`Failed`: application failed;.
+`Issued`: binding failed.
  */
 class TeoInstanceDetail extends AbstractModel
 {
@@ -50,7 +60,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $ZoneId;
 
     /**
-     * @var string The status of the domain.
+     * @var string Domain status.
+`Deployed`: deployed;.
+`Processing`: deploying;.
+`Applying`: applying;.
+`Failed`: application failed;.
+`Issued`: binding failed.
      */
     public $Status;
 
@@ -59,7 +74,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $CertId The certificate ID.
      * @param string $ZoneId The AZ ID.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Status The status of the domain.
+     * @param string $Status Domain status.
+`Deployed`: deployed;.
+`Processing`: deploying;.
+`Applying`: applying;.
+`Failed`: application failed;.
+`Issued`: binding failed.
      */
     function __construct()
     {

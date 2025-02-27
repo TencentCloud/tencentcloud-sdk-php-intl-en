@@ -26,10 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceId(string $InstanceId) Set The instance ID.
  * @method string getProtocol() Obtain The protocol type.
  * @method void setProtocol(string $Protocol) Set The protocol type.
- * @method string getCertId() Obtain The certificate ID.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setCertId(string $CertId) Set The certificate ID.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getCertId() Obtain Certificate id.
+ * @method void setCertId(string $CertId) Set Certificate id.
  * @method string getVirtualPort() Obtain The forwarding port.
  * @method void setVirtualPort(string $VirtualPort) Set The forwarding port.
  */
@@ -51,8 +49,7 @@ class DdosInstanceDetail extends AbstractModel
     public $Protocol;
 
     /**
-     * @var string The certificate ID.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Certificate id.
      */
     public $CertId;
 
@@ -65,8 +62,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $Domain The domain.
      * @param string $InstanceId The instance ID.
      * @param string $Protocol The protocol type.
-     * @param string $CertId The certificate ID.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $CertId Certificate id.
      * @param string $VirtualPort The forwarding port.
      */
     function __construct()

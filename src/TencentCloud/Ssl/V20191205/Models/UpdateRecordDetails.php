@@ -18,36 +18,84 @@ namespace TencentCloud\Ssl\V20191205\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Update record detail list
+ * Details of update records.
  *
- * @method string getResourceType() Obtain Deployment resource type
- * @method void setResourceType(string $ResourceType) Set Deployment resource type
- * @method array getList() Obtain Deployment resource detail list
- * @method void setList(array $List) Set Deployment resource detail list
- * @method integer getTotalCount() Obtain Total deployment resource count
- * @method void setTotalCount(integer $TotalCount) Set Total deployment resource count
+ * @method string getResourceType() Obtain Type of cloud resource for updating old and new certs.
+- clb.
+- cdn.
+- ddos.
+- live.
+- vod.
+- waf.
+- apigateway.
+- teo.
+- tke.
+- cos.
+- tse.
+- tcb.
+ * @method void setResourceType(string $ResourceType) Set Type of cloud resource for updating old and new certs.
+- clb.
+- cdn.
+- ddos.
+- live.
+- vod.
+- waf.
+- apigateway.
+- teo.
+- tke.
+- cos.
+- tse.
+- tcb.
+ * @method array getList() Obtain The update details of the cloud resource.
+ * @method void setList(array $List) Set The update details of the cloud resource.
+ * @method integer getTotalCount() Obtain The update of the total number of cloud resources.
+ * @method void setTotalCount(integer $TotalCount) Set The update of the total number of cloud resources.
  */
 class UpdateRecordDetails extends AbstractModel
 {
     /**
-     * @var string Deployment resource type
+     * @var string Type of cloud resource for updating old and new certs.
+- clb.
+- cdn.
+- ddos.
+- live.
+- vod.
+- waf.
+- apigateway.
+- teo.
+- tke.
+- cos.
+- tse.
+- tcb.
      */
     public $ResourceType;
 
     /**
-     * @var array Deployment resource detail list
+     * @var array The update details of the cloud resource.
      */
     public $List;
 
     /**
-     * @var integer Total deployment resource count
+     * @var integer The update of the total number of cloud resources.
      */
     public $TotalCount;
 
     /**
-     * @param string $ResourceType Deployment resource type
-     * @param array $List Deployment resource detail list
-     * @param integer $TotalCount Total deployment resource count
+     * @param string $ResourceType Type of cloud resource for updating old and new certs.
+- clb.
+- cdn.
+- ddos.
+- live.
+- vod.
+- waf.
+- apigateway.
+- teo.
+- tke.
+- cos.
+- tse.
+- tcb.
+     * @param array $List The update details of the cloud resource.
+     * @param integer $TotalCount The update of the total number of cloud resources.
      */
     function __construct()
     {

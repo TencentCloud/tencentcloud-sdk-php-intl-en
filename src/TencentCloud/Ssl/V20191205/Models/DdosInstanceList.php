@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getTotalCount() Obtain The total number of DDOS instances in this region.	
  * @method void setTotalCount(integer $TotalCount) Set The total number of DDOS instances in this region.	
- * @method array getInstanceList() Obtain The list of DDOS instances.	
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setInstanceList(array $InstanceList) Set The list of DDOS instances.	
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method array getInstanceList() Obtain DDOS instance details.	
+ * @method void setInstanceList(array $InstanceList) Set DDOS instance details.	
+ * @method string getError() Obtain Whether to query exceptions.
+ * @method void setError(string $Error) Set Whether to query exceptions.
  */
 class DdosInstanceList extends AbstractModel
 {
@@ -35,15 +35,19 @@ class DdosInstanceList extends AbstractModel
     public $TotalCount;
 
     /**
-     * @var array The list of DDOS instances.	
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array DDOS instance details.	
      */
     public $InstanceList;
 
     /**
+     * @var string Whether to query exceptions.
+     */
+    public $Error;
+
+    /**
      * @param integer $TotalCount The total number of DDOS instances in this region.	
-     * @param array $InstanceList The list of DDOS instances.	
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param array $InstanceList DDOS instance details.	
+     * @param string $Error Whether to query exceptions.
      */
     function __construct()
     {
@@ -69,6 +73,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 $obj->deserialize($value);
                 array_push($this->InstanceList, $obj);
             }
+        }
+
+        if (array_key_exists("Error",$param) and $param["Error"] !== null) {
+            $this->Error = $param["Error"];
         }
     }
 }

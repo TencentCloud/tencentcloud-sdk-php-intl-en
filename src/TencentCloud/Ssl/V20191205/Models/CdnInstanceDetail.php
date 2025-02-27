@@ -24,10 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDomain(string $Domain) Set The domain.
  * @method string getCertId() Obtain The ID of the deployed certificate.
  * @method void setCertId(string $CertId) Set The ID of the deployed certificate.
- * @method string getStatus() Obtain The status of the domain.
- * @method void setStatus(string $Status) Set The status of the domain.
- * @method string getHttpsBillingSwitch() Obtain The billing status of the domain.
- * @method void setHttpsBillingSwitch(string $HttpsBillingSwitch) Set The billing status of the domain.
+ * @method string getStatus() Obtain Domain name status: rejected - the domain name failed the review or its registration has expired/been canceled; processing - deploying; online - started; offline - closed.
+ * @method void setStatus(string $Status) Set Domain name status: rejected - the domain name failed the review or its registration has expired/been canceled; processing - deploying; online - started; offline - closed.
+ * @method string getHttpsBillingSwitch() Obtain Domain billing status, where on indicates enable and off indicates disable.
+ * @method void setHttpsBillingSwitch(string $HttpsBillingSwitch) Set Domain billing status, where on indicates enable and off indicates disable.
  */
 class CdnInstanceDetail extends AbstractModel
 {
@@ -42,20 +42,20 @@ class CdnInstanceDetail extends AbstractModel
     public $CertId;
 
     /**
-     * @var string The status of the domain.
+     * @var string Domain name status: rejected - the domain name failed the review or its registration has expired/been canceled; processing - deploying; online - started; offline - closed.
      */
     public $Status;
 
     /**
-     * @var string The billing status of the domain.
+     * @var string Domain billing status, where on indicates enable and off indicates disable.
      */
     public $HttpsBillingSwitch;
 
     /**
      * @param string $Domain The domain.
      * @param string $CertId The ID of the deployed certificate.
-     * @param string $Status The status of the domain.
-     * @param string $HttpsBillingSwitch The billing status of the domain.
+     * @param string $Status Domain name status: rejected - the domain name failed the review or its registration has expired/been canceled; processing - deploying; online - started; offline - closed.
+     * @param string $HttpsBillingSwitch Domain billing status, where on indicates enable and off indicates disable.
      */
     function __construct()
     {
