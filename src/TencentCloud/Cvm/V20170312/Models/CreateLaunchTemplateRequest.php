@@ -82,6 +82,10 @@ false (default value): send a normal request and create instance(s) if all the r
  * @method void setInstanceChargeType(string $InstanceChargeType) Set Instance [Billing Mode](https://intl.cloud.tencent.com/document/product/213/2180?from_cn_redirect=1). Valid values: <br><li>`PREPAID`: prepaid, i.e., billed for monthly-subscribed instances <br><li>`POSTPAID_BY_HOUR`: pay-as-you-go on an hourly basis <br><li>`CDHPAID`: billed for CDH instances, not the CVMs running on the CDHs. <br><li>`SPOTPAID`: billed for spot instances. <br>Default value: POSTPAID_BY_HOUR.
  * @method InstanceChargePrepaid getInstanceChargePrepaid() Obtain Details of the monthly subscription, including the purchase period, auto-renewal. It is required if the `InstanceChargeType` is `PREPAID`.
  * @method void setInstanceChargePrepaid(InstanceChargePrepaid $InstanceChargePrepaid) Set Details of the monthly subscription, including the purchase period, auto-renewal. It is required if the `InstanceChargeType` is `PREPAID`.
+ * @method boolean getDisableApiTermination() Obtain 
+ * @method void setDisableApiTermination(boolean $DisableApiTermination) Set 
+ * @method array getLaunchTemplateTagSpecification() Obtain Instance launch template tag description list. By specifying the TemplateTag parameter, you can bind tags to the instance launch template.
+ * @method void setLaunchTemplateTagSpecification(array $LaunchTemplateTagSpecification) Set Instance launch template tag description list. By specifying the TemplateTag parameter, you can bind tags to the instance launch template.
  */
 class CreateLaunchTemplateRequest extends AbstractModel
 {
@@ -221,6 +225,16 @@ false (default value): send a normal request and create instance(s) if all the r
     public $InstanceChargePrepaid;
 
     /**
+     * @var boolean 
+     */
+    public $DisableApiTermination;
+
+    /**
+     * @var array Instance launch template tag description list. By specifying the TemplateTag parameter, you can bind tags to the instance launch template.
+     */
+    public $LaunchTemplateTagSpecification;
+
+    /**
      * @param string $LaunchTemplateName Instance launch template name. It can include 2-128 characters.
      * @param Placement $Placement Location of the instance. You can use this parameter to specify the attributes of the instance, such as its availability zone, project, and CDH (for dedicated CVMs)
      * @param string $ImageId The [image](https://intl.cloud.tencent.com/document/product/213/4940?from_cn_redirect=1) ID in the format of `img-xxx`. There are four types of images:<br/><li>Public images</li><li>Custom images</li><li>Shared images</li><li>Marketplace images (for Chinese mainland only)</li><br/>To check the image ID:<br/><li>For public images, custom images, and shared images, go to the [console](https://console.cloud.tencent.com/cvm/image?rid=1&imageType=PUBLIC_IMAGE). For marketplace images, go to [Cloud Marketplace](https://market.cloud.tencent.com/list). </li><li>Call [DescribeImages](https://intl.cloud.tencent.com/document/api/213/15715?from_cn_redirect=1), pass in `InstanceType` to retrieve the list of images supported by the current model, and then find the `ImageId` in the response.</li>
@@ -252,6 +266,8 @@ false (default value): send a normal request and create instance(s) if all the r
      * @param string $HpcClusterId HPC cluster ID. The HPC cluster must and can only be specified for a high-performance computing instance.
      * @param string $InstanceChargeType Instance [Billing Mode](https://intl.cloud.tencent.com/document/product/213/2180?from_cn_redirect=1). Valid values: <br><li>`PREPAID`: prepaid, i.e., billed for monthly-subscribed instances <br><li>`POSTPAID_BY_HOUR`: pay-as-you-go on an hourly basis <br><li>`CDHPAID`: billed for CDH instances, not the CVMs running on the CDHs. <br><li>`SPOTPAID`: billed for spot instances. <br>Default value: POSTPAID_BY_HOUR.
      * @param InstanceChargePrepaid $InstanceChargePrepaid Details of the monthly subscription, including the purchase period, auto-renewal. It is required if the `InstanceChargeType` is `PREPAID`.
+     * @param boolean $DisableApiTermination 
+     * @param array $LaunchTemplateTagSpecification Instance launch template tag description list. By specifying the TemplateTag parameter, you can bind tags to the instance launch template.
      */
     function __construct()
     {
@@ -387,6 +403,19 @@ false (default value): send a normal request and create instance(s) if all the r
         if (array_key_exists("InstanceChargePrepaid",$param) and $param["InstanceChargePrepaid"] !== null) {
             $this->InstanceChargePrepaid = new InstanceChargePrepaid();
             $this->InstanceChargePrepaid->deserialize($param["InstanceChargePrepaid"]);
+        }
+
+        if (array_key_exists("DisableApiTermination",$param) and $param["DisableApiTermination"] !== null) {
+            $this->DisableApiTermination = $param["DisableApiTermination"];
+        }
+
+        if (array_key_exists("LaunchTemplateTagSpecification",$param) and $param["LaunchTemplateTagSpecification"] !== null) {
+            $this->LaunchTemplateTagSpecification = [];
+            foreach ($param["LaunchTemplateTagSpecification"] as $key => $value){
+                $obj = new TagSpecification();
+                $obj->deserialize($value);
+                array_push($this->LaunchTemplateTagSpecification, $obj);
+            }
         }
     }
 }
