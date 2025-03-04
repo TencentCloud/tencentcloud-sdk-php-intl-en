@@ -20,24 +20,24 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Policy product list entity response parameters structure.
  *
- * @method string getPolicyCode() Obtain Dealer policy code.
- * @method void setPolicyCode(string $PolicyCode) Set Dealer policy code.
- * @method string getProductCode() Obtain Product level 1 code. If the return value is *, any item at this level is included in the policy product range.
- * @method void setProductCode(string $ProductCode) Set Product level 1 code. If the return value is *, any item at this level is included in the policy product range.
- * @method string getProductName() Obtain Product level 1 name. If the return value is *, any item at this level is included in the policy product range.
- * @method void setProductName(string $ProductName) Set Product level 1 name. If the return value is *, any item at this level is included in the policy product range.
- * @method string getSubProductCode() Obtain Product level 2 code. If the return value is *, any item at this level is included in the policy product range.
- * @method void setSubProductCode(string $SubProductCode) Set Product level 2 code. If the return value is *, any item at this level is included in the policy product range.
- * @method string getSubProductName() Obtain Product level 2 name. If the return value is *, any item at this level is included in the policy product range.
- * @method void setSubProductName(string $SubProductName) Set Product level 2 name. If the return value is *, any item at this level is included in the policy product range.
- * @method string getComponentTypeCode() Obtain Product level 3 code. If the return value is *, any item at this level is included in the policy product range.
- * @method void setComponentTypeCode(string $ComponentTypeCode) Set Product level 3 code. If the return value is *, any item at this level is included in the policy product range.
- * @method string getComponentTypeName() Obtain Product level 3 name. If the return value is *, any item at this level is included in the policy product range.
- * @method void setComponentTypeName(string $ComponentTypeName) Set Product level 3 name. If the return value is *, any item at this level is included in the policy product range.
- * @method string getComponentCode() Obtain Product level 4 code. If the return value is *, any item at this level is included in the policy product range.
- * @method void setComponentCode(string $ComponentCode) Set Product level 4 code. If the return value is *, any item at this level is included in the policy product range.
- * @method string getComponentName() Obtain Product fourth-level name. If the return value is *, any item under this level is included in the policy product scope.
- * @method void setComponentName(string $ComponentName) Set Product fourth-level name. If the return value is *, any item under this level is included in the policy product scope.
+ * @method string getPolicyCode() Obtain  Policy code.
+ * @method void setPolicyCode(string $PolicyCode) Set  Policy code.
+ * @method string getProductCode() Obtain The code of the ProductName field in the  bill data. If the return value is *, any item at this level is included in the policy product range.
+ * @method void setProductCode(string $ProductCode) Set The code of the ProductName field in the  bill data. If the return value is *, any item at this level is included in the policy product range.
+ * @method string getProductName() Obtain The ProductName field value in the billing data. If the return value is *, any item at this level is included in the policy product range.
+ * @method void setProductName(string $ProductName) Set The ProductName field value in the billing data. If the return value is *, any item at this level is included in the policy product range.
+ * @method string getSubProductCode() Obtain The code of the SubProduct field in the  bill data. If the return value is *, any item at this level is included in the policy product range.
+ * @method void setSubProductCode(string $SubProductCode) Set The code of the SubProduct field in the  bill data. If the return value is *, any item at this level is included in the policy product range.
+ * @method string getSubProductName() Obtain The SubProduct field value in the billing data. If the return value is *, any item at this level is included in the policy product range.
+ * @method void setSubProductName(string $SubProductName) Set The SubProduct field value in the billing data. If the return value is *, any item at this level is included in the policy product range.
+ * @method string getComponentTypeCode() Obtain The code of the ComponentType field in the  bill data. If the return value is *, any item at this level is included in the policy product range.
+ * @method void setComponentTypeCode(string $ComponentTypeCode) Set The code of the ComponentType field in the  bill data. If the return value is *, any item at this level is included in the policy product range.
+ * @method string getComponentTypeName() Obtain The ComponentType field value in the billing data. If the return value is *, any item at this level is included in the policy product range.
+ * @method void setComponentTypeName(string $ComponentTypeName) Set The ComponentType field value in the billing data. If the return value is *, any item at this level is included in the policy product range.
+ * @method string getComponentCode() Obtain The code of the Component field in the  bill data. If the return value is *, any item at this level is included in the policy product range.
+ * @method void setComponentCode(string $ComponentCode) Set The code of the Component field in the  bill data. If the return value is *, any item at this level is included in the policy product range.
+ * @method string getComponentName() Obtain The Component field value in the billing data. If the return value is *, any item at this level is included in the policy product range.
+ * @method void setComponentName(string $ComponentName) Set The Component field value in the billing data. If the return value is *, any item at this level is included in the policy product range.
  * @method string getStartDate() Obtain Policy effective time.
  * @method void setStartDate(string $StartDate) Set Policy effective time.
  * @method string getEndDate() Obtain Policy expiration time.
@@ -46,47 +46,47 @@ use TencentCloud\Common\AbstractModel;
 class PolicyProductList extends AbstractModel
 {
     /**
-     * @var string Dealer policy code.
+     * @var string  Policy code.
      */
     public $PolicyCode;
 
     /**
-     * @var string Product level 1 code. If the return value is *, any item at this level is included in the policy product range.
+     * @var string The code of the ProductName field in the  bill data. If the return value is *, any item at this level is included in the policy product range.
      */
     public $ProductCode;
 
     /**
-     * @var string Product level 1 name. If the return value is *, any item at this level is included in the policy product range.
+     * @var string The ProductName field value in the billing data. If the return value is *, any item at this level is included in the policy product range.
      */
     public $ProductName;
 
     /**
-     * @var string Product level 2 code. If the return value is *, any item at this level is included in the policy product range.
+     * @var string The code of the SubProduct field in the  bill data. If the return value is *, any item at this level is included in the policy product range.
      */
     public $SubProductCode;
 
     /**
-     * @var string Product level 2 name. If the return value is *, any item at this level is included in the policy product range.
+     * @var string The SubProduct field value in the billing data. If the return value is *, any item at this level is included in the policy product range.
      */
     public $SubProductName;
 
     /**
-     * @var string Product level 3 code. If the return value is *, any item at this level is included in the policy product range.
+     * @var string The code of the ComponentType field in the  bill data. If the return value is *, any item at this level is included in the policy product range.
      */
     public $ComponentTypeCode;
 
     /**
-     * @var string Product level 3 name. If the return value is *, any item at this level is included in the policy product range.
+     * @var string The ComponentType field value in the billing data. If the return value is *, any item at this level is included in the policy product range.
      */
     public $ComponentTypeName;
 
     /**
-     * @var string Product level 4 code. If the return value is *, any item at this level is included in the policy product range.
+     * @var string The code of the Component field in the  bill data. If the return value is *, any item at this level is included in the policy product range.
      */
     public $ComponentCode;
 
     /**
-     * @var string Product fourth-level name. If the return value is *, any item under this level is included in the policy product scope.
+     * @var string The Component field value in the billing data. If the return value is *, any item at this level is included in the policy product range.
      */
     public $ComponentName;
 
@@ -101,15 +101,15 @@ class PolicyProductList extends AbstractModel
     public $EndDate;
 
     /**
-     * @param string $PolicyCode Dealer policy code.
-     * @param string $ProductCode Product level 1 code. If the return value is *, any item at this level is included in the policy product range.
-     * @param string $ProductName Product level 1 name. If the return value is *, any item at this level is included in the policy product range.
-     * @param string $SubProductCode Product level 2 code. If the return value is *, any item at this level is included in the policy product range.
-     * @param string $SubProductName Product level 2 name. If the return value is *, any item at this level is included in the policy product range.
-     * @param string $ComponentTypeCode Product level 3 code. If the return value is *, any item at this level is included in the policy product range.
-     * @param string $ComponentTypeName Product level 3 name. If the return value is *, any item at this level is included in the policy product range.
-     * @param string $ComponentCode Product level 4 code. If the return value is *, any item at this level is included in the policy product range.
-     * @param string $ComponentName Product fourth-level name. If the return value is *, any item under this level is included in the policy product scope.
+     * @param string $PolicyCode  Policy code.
+     * @param string $ProductCode The code of the ProductName field in the  bill data. If the return value is *, any item at this level is included in the policy product range.
+     * @param string $ProductName The ProductName field value in the billing data. If the return value is *, any item at this level is included in the policy product range.
+     * @param string $SubProductCode The code of the SubProduct field in the  bill data. If the return value is *, any item at this level is included in the policy product range.
+     * @param string $SubProductName The SubProduct field value in the billing data. If the return value is *, any item at this level is included in the policy product range.
+     * @param string $ComponentTypeCode The code of the ComponentType field in the  bill data. If the return value is *, any item at this level is included in the policy product range.
+     * @param string $ComponentTypeName The ComponentType field value in the billing data. If the return value is *, any item at this level is included in the policy product range.
+     * @param string $ComponentCode The code of the Component field in the  bill data. If the return value is *, any item at this level is included in the policy product range.
+     * @param string $ComponentName The Component field value in the billing data. If the return value is *, any item at this level is included in the policy product range.
      * @param string $StartDate Policy effective time.
      * @param string $EndDate Policy expiration time.
      */

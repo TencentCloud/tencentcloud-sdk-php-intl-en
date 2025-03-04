@@ -20,16 +20,16 @@ use TencentCloud\Common\AbstractModel;
 /**
  * QueryPolicyProductListByCode request structure.
  *
- * @method string getPolicyCode() Obtain Dealer policy code.
- * @method void setPolicyCode(string $PolicyCode) Set Dealer policy code.
- * @method string getProductCode() Obtain Product level 1 code.
- * @method void setProductCode(string $ProductCode) Set Product level 1 code.
- * @method string getProductName() Obtain Product level 1 name.
- * @method void setProductName(string $ProductName) Set Product level 1 name.
- * @method string getSubProductCode() Obtain Product level 2 code.
- * @method void setSubProductCode(string $SubProductCode) Set Product level 2 code.
- * @method string getSubProductName() Obtain Product level 2 name.
- * @method void setSubProductName(string $SubProductName) Set Product level 2 name.
+ * @method string getPolicyCode() Obtain Policy code.
+ * @method void setPolicyCode(string $PolicyCode) Set Policy code.
+ * @method string getProductCode() Obtain The code of the ProductName field in the  bill data.
+ * @method void setProductCode(string $ProductCode) Set The code of the ProductName field in the  bill data.
+ * @method string getProductName() Obtain The ProductName field value in the billing data.
+ * @method void setProductName(string $ProductName) Set The ProductName field value in the billing data.
+ * @method string getSubProductCode() Obtain The code of the SubProductName field in the  bill data.
+ * @method void setSubProductCode(string $SubProductCode) Set The code of the SubProductName field in the  bill data.
+ * @method string getSubProductName() Obtain The SubProductName field value in the billing data.
+ * @method void setSubProductName(string $SubProductName) Set The SubProductName field value in the billing data.
  * @method integer getPage() Obtain Page parameter: current page number. The minimum value is 1.
  * @method void setPage(integer $Page) Set Page parameter: current page number. The minimum value is 1.
  * @method integer getPageSize() Obtain Page parameter: Indicates the number of entries per page. Value range: [1, 200], default is 200.
@@ -38,27 +38,27 @@ use TencentCloud\Common\AbstractModel;
 class QueryPolicyProductListByCodeRequest extends AbstractModel
 {
     /**
-     * @var string Dealer policy code.
+     * @var string Policy code.
      */
     public $PolicyCode;
 
     /**
-     * @var string Product level 1 code.
+     * @var string The code of the ProductName field in the  bill data.
      */
     public $ProductCode;
 
     /**
-     * @var string Product level 1 name.
+     * @var string The ProductName field value in the billing data.
      */
     public $ProductName;
 
     /**
-     * @var string Product level 2 code.
+     * @var string The code of the SubProductName field in the  bill data.
      */
     public $SubProductCode;
 
     /**
-     * @var string Product level 2 name.
+     * @var string The SubProductName field value in the billing data.
      */
     public $SubProductName;
 
@@ -73,11 +73,11 @@ class QueryPolicyProductListByCodeRequest extends AbstractModel
     public $PageSize;
 
     /**
-     * @param string $PolicyCode Dealer policy code.
-     * @param string $ProductCode Product level 1 code.
-     * @param string $ProductName Product level 1 name.
-     * @param string $SubProductCode Product level 2 code.
-     * @param string $SubProductName Product level 2 name.
+     * @param string $PolicyCode Policy code.
+     * @param string $ProductCode The code of the ProductName field in the  bill data.
+     * @param string $ProductName The ProductName field value in the billing data.
+     * @param string $SubProductCode The code of the SubProductName field in the  bill data.
+     * @param string $SubProductName The SubProductName field value in the billing data.
      * @param integer $Page Page parameter: current page number. The minimum value is 1.
      * @param integer $PageSize Page parameter: Indicates the number of entries per page. Value range: [1, 200], default is 200.
      */

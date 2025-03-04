@@ -44,6 +44,8 @@ Note: This field may return null, indicating that no valid value was found.
 Note: This field may return null, indicating that no valid value is found.
  * @method void setCreateTime(string $CreateTime) Set Creation time of a spread placement group.
 Note: This field may return null, indicating that no valid value is found.
+ * @method array getTags() Obtain List of tags associated with the placement group.
+ * @method void setTags(array $Tags) Set List of tags associated with the placement group.
  */
 class DisasterRecoverGroup extends AbstractModel
 {
@@ -88,6 +90,11 @@ Note: This field may return null, indicating that no valid value is found.
     public $CreateTime;
 
     /**
+     * @var array List of tags associated with the placement group.
+     */
+    public $Tags;
+
+    /**
      * @param string $DisasterRecoverGroupId ID of a spread placement group.
      * @param string $Name Name of a spread placement group, which must be 1-60 characters long.
      * @param string $Type Type of a spread placement group. Valid values:<br>
@@ -100,6 +107,7 @@ Note: This field may return null, indicating that no valid value is found.
 Note: This field may return null, indicating that no valid value was found.
      * @param string $CreateTime Creation time of a spread placement group.
 Note: This field may return null, indicating that no valid value is found.
+     * @param array $Tags List of tags associated with the placement group.
      */
     function __construct()
     {
@@ -140,6 +148,15 @@ Note: This field may return null, indicating that no valid value is found.
 
         if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
             $this->CreateTime = $param["CreateTime"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }
