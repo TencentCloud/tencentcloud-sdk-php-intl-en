@@ -23,6 +23,7 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Mdp\V20200527\Models as Models;
 
 /**
+ * @method Models\BindLinearAssemblyCDNDomainWithChannelResponse BindLinearAssemblyCDNDomainWithChannel(Models\BindLinearAssemblyCDNDomainWithChannelRequest $req) Linear Assembly channel is bound to CDN playback domain name.
  * @method Models\BindNewLVBDomainWithChannelResponse BindNewLVBDomainWithChannel(Models\BindNewLVBDomainWithChannelRequest $req) This API is used to bind an LVB domain name to a channel.
  * @method Models\CreateStreamPackageChannelResponse CreateStreamPackageChannel(Models\CreateStreamPackageChannelRequest $req) This API is used to create a StreamPackage channel.
  * @method Models\CreateStreamPackageChannelEndpointResponse CreateStreamPackageChannelEndpoint(Models\CreateStreamPackageChannelEndpointRequest $req) This API is used to create an endpoint on a StreamPackage channel.
@@ -43,6 +44,8 @@ use TencentCloud\Mdp\V20200527\Models as Models;
  * @method Models\DeleteStreamPackageSSAIChannelResponse DeleteStreamPackageSSAIChannel(Models\DeleteStreamPackageSSAIChannelRequest $req) DeleteStreamPackageSSAIChannel
  * @method Models\DeleteStreamPackageSourceResponse DeleteStreamPackageSource(Models\DeleteStreamPackageSourceRequest $req) Delete channel linear assembly Source.
  * @method Models\DeleteStreamPackageSourceLocationResponse DeleteStreamPackageSourceLocation(Models\DeleteStreamPackageSourceLocationRequest $req) Batch delete media packaging SourceLocation.
+ * @method Models\DescribeLinearAssemblyCDNDomainWithChannelResponse DescribeLinearAssemblyCDNDomainWithChannel(Models\DescribeLinearAssemblyCDNDomainWithChannelRequest $req) Query the CDN domain name associated with the LinearAssembly channel.
+ * @method Models\DescribeLinearAssemblyCDNDomainWithChannelsResponse DescribeLinearAssemblyCDNDomainWithChannels(Models\DescribeLinearAssemblyCDNDomainWithChannelsRequest $req) Query the CDN domain names associated with all LinearAssembly channels.
  * @method Models\DescribeStreamPackageChannelResponse DescribeStreamPackageChannel(Models\DescribeStreamPackageChannelRequest $req) This API is used to query the information of a StreamPackage channel.
  * @method Models\DescribeStreamPackageChannelsResponse DescribeStreamPackageChannels(Models\DescribeStreamPackageChannelsRequest $req) This API is used to query the information of multiple StreamPackage channels.
  * @method Models\DescribeStreamPackageHarvestJobResponse DescribeStreamPackageHarvestJob(Models\DescribeStreamPackageHarvestJobRequest $req) Query HarvestJob.
@@ -72,6 +75,7 @@ use TencentCloud\Mdp\V20200527\Models as Models;
  * @method Models\StartStreamPackageLinearAssemblyChannelResponse StartStreamPackageLinearAssemblyChannel(Models\StartStreamPackageLinearAssemblyChannelRequest $req) Start Linear Assembly Channel.
  * @method Models\StopStreamPackageLinearAssemblyChannelResponse StopStreamPackageLinearAssemblyChannel(Models\StopStreamPackageLinearAssemblyChannelRequest $req) Stop linear assembly channel.
  * @method Models\UnbindCdnDomainWithChannelResponse UnbindCdnDomainWithChannel(Models\UnbindCdnDomainWithChannelRequest $req) This API is used to unbind a CDN playback domain name from a channel.
+ * @method Models\UnbindLinearAssemblyCDNDomainWithChannelResponse UnbindLinearAssemblyCDNDomainWithChannel(Models\UnbindLinearAssemblyCDNDomainWithChannelRequest $req) Unbind LinearAssembly channel with CDN domain name.
  */
 
 class MdpClient extends AbstractClient

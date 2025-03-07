@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUrl(string $Url) Set Endpoint URL.
  * @method EndpointAuthInfo getAuthInfo() Obtain Endpoint authentication information.
  * @method void setAuthInfo(EndpointAuthInfo $AuthInfo) Set Endpoint authentication information.
- * @method string getProtocol() Obtain Endpoint protocol.
- * @method void setProtocol(string $Protocol) Set Endpoint protocol.
+ * @method string getProtocol() Obtain Endpoint protocol, supports `HLS`, `CMAF`, `CMAF-HLS`.
+ * @method void setProtocol(string $Protocol) Set Endpoint protocol, supports `HLS`, `CMAF`, `CMAF-HLS`.
  * @method string getManifest() Obtain Manifest name, default is main.
  * @method void setManifest(string $Manifest) Set Manifest name, default is main.
  * @method boolean getTimeShiftEnable() Obtain Whether to turn on the time shift function, true: on, false: off, the default is off.
@@ -44,6 +44,10 @@ use TencentCloud\Common\AbstractModel;
 The parameters can only contain digits, letters, underscores (_), and hyphens (-), with a length of 1 to 64 chars.
  * @method void setCustomUrlParam(string $CustomUrlParam) Set Customer-defined url parameters are inserted into the specified position of the Endpoint url based on the CustomUrlParamIndex.
 The parameters can only contain digits, letters, underscores (_), and hyphens (-), with a length of 1 to 64 chars.
+ * @method boolean getDRMEnabled() Obtain DRM switch. If it is turned on, only CMAF will take effect.
+ * @method void setDRMEnabled(boolean $DRMEnabled) Set DRM switch. If it is turned on, only CMAF will take effect.
+ * @method DRMInfo getDRMInfo() Obtain DRM configuration information.
+ * @method void setDRMInfo(DRMInfo $DRMInfo) Set DRM configuration information.
  */
 class EndpointInfo extends AbstractModel
 {
@@ -63,7 +67,7 @@ class EndpointInfo extends AbstractModel
     public $AuthInfo;
 
     /**
-     * @var string Endpoint protocol.
+     * @var string Endpoint protocol, supports `HLS`, `CMAF`, `CMAF-HLS`.
      */
     public $Protocol;
 
@@ -104,10 +108,20 @@ The parameters can only contain digits, letters, underscores (_), and hyphens (-
     public $CustomUrlParam;
 
     /**
+     * @var boolean DRM switch. If it is turned on, only CMAF will take effect.
+     */
+    public $DRMEnabled;
+
+    /**
+     * @var DRMInfo DRM configuration information.
+     */
+    public $DRMInfo;
+
+    /**
      * @param string $Name Endpoint name.
      * @param string $Url Endpoint URL.
      * @param EndpointAuthInfo $AuthInfo Endpoint authentication information.
-     * @param string $Protocol Endpoint protocol.
+     * @param string $Protocol Endpoint protocol, supports `HLS`, `CMAF`, `CMAF-HLS`.
      * @param string $Manifest Manifest name, default is main.
      * @param boolean $TimeShiftEnable Whether to turn on the time shift function, true: on, false: off, the default is off.
      * @param integer $TimeShiftDuration The number of days in the time shift window, up to 30 days. Valid when TimeShiftEnable is turned on.
@@ -116,6 +130,8 @@ The parameters can only contain digits, letters, underscores (_), and hyphens (-
      * @param integer $CustomUrlParamIndex The customer-defined url parameter is inserted into the subscript at the specified position of the Endpoint url. The optional range of the subscript is: [0,3].
      * @param string $CustomUrlParam Customer-defined url parameters are inserted into the specified position of the Endpoint url based on the CustomUrlParamIndex.
 The parameters can only contain digits, letters, underscores (_), and hyphens (-), with a length of 1 to 64 chars.
+     * @param boolean $DRMEnabled DRM switch. If it is turned on, only CMAF will take effect.
+     * @param DRMInfo $DRMInfo DRM configuration information.
      */
     function __construct()
     {
@@ -174,6 +190,15 @@ The parameters can only contain digits, letters, underscores (_), and hyphens (-
 
         if (array_key_exists("CustomUrlParam",$param) and $param["CustomUrlParam"] !== null) {
             $this->CustomUrlParam = $param["CustomUrlParam"];
+        }
+
+        if (array_key_exists("DRMEnabled",$param) and $param["DRMEnabled"] !== null) {
+            $this->DRMEnabled = $param["DRMEnabled"];
+        }
+
+        if (array_key_exists("DRMInfo",$param) and $param["DRMInfo"] !== null) {
+            $this->DRMInfo = new DRMInfo();
+            $this->DRMInfo->deserialize($param["DRMInfo"]);
         }
     }
 }

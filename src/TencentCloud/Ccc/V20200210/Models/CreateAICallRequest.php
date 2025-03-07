@@ -118,14 +118,14 @@ If at any time the user showed anger or wanted a human agent, call transfer_call
 "deepseek-chat".
  * @method string getAPIKey() Obtain Model API key, for authentication information, please refer to the respective model's official website
 
-- OpenAI protocol: [GPT](https://help.openai.com/en/articles/4936850-where-do-i-find-my-openai-api-key), [Hunyuan](https://intl.cloud.tencent.com/document/product/1729/111008?from_cn_redirect=1), [DeepSeek](https://api-docs.deepseek.com/zh-cn/);
+- OpenAI protocol: [GPT](https://help.openai.com/en/articles/4936850-where-do-i-find-my-openai-api-key), [DeepSeek](https://api-docs.deepseek.com/zh-cn/);
 
 - Azure protocol: [Azure GPT](https://learn.microsoft.com/en-us/azure/ai-services/openai/chatgpt-quickstart?tabs=command-line%2Ctypescript%2Cpython-new&pivots=programming-language-studio#key-settings);
 
 - Minimax:[Minimax](https://platform.minimaxi.com/document/Fast%20access?key=66701cf51d57f38758d581b2)
  * @method void setAPIKey(string $APIKey) Set Model API key, for authentication information, please refer to the respective model's official website
 
-- OpenAI protocol: [GPT](https://help.openai.com/en/articles/4936850-where-do-i-find-my-openai-api-key), [Hunyuan](https://intl.cloud.tencent.com/document/product/1729/111008?from_cn_redirect=1), [DeepSeek](https://api-docs.deepseek.com/zh-cn/);
+- OpenAI protocol: [GPT](https://help.openai.com/en/articles/4936850-where-do-i-find-my-openai-api-key), [DeepSeek](https://api-docs.deepseek.com/zh-cn/);
 
 - Azure protocol: [Azure GPT](https://learn.microsoft.com/en-us/azure/ai-services/openai/chatgpt-quickstart?tabs=command-line%2Ctypescript%2Cpython-new&pivots=programming-language-studio#key-settings);
 
@@ -224,8 +224,8 @@ HoaiMy
 
  * @method array getCallers() Obtain Caller number list
  * @method void setCallers(array $Callers) Set Caller number list
- * @method string getWelcomeMessage() Obtain Used to set the AI Agent Greeting.
- * @method void setWelcomeMessage(string $WelcomeMessage) Set Used to set the AI Agent Greeting.
+ * @method string getWelcomeMessage() Obtain Used to set the AI Agent Welcome Message.
+ * @method void setWelcomeMessage(string $WelcomeMessage) Set Used to set the AI Agent Welcome Message.
  * @method integer getWelcomeType() Obtain 0: Use welcomeMessage (if empty, the callee speaks first; if not empty, the bot speaks first)
 1:   Use AI to automatically generate welcomeMessage and speak first based on the prompt
  * @method void setWelcomeType(integer $WelcomeType) Set 0: Use welcomeMessage (if empty, the callee speaks first; if not empty, the bot speaks first)
@@ -480,7 +480,7 @@ If at any time the user showed anger or wanted a human agent, call transfer_call
     /**
      * @var string Model API key, for authentication information, please refer to the respective model's official website
 
-- OpenAI protocol: [GPT](https://help.openai.com/en/articles/4936850-where-do-i-find-my-openai-api-key), [Hunyuan](https://intl.cloud.tencent.com/document/product/1729/111008?from_cn_redirect=1), [DeepSeek](https://api-docs.deepseek.com/zh-cn/);
+- OpenAI protocol: [GPT](https://help.openai.com/en/articles/4936850-where-do-i-find-my-openai-api-key), [DeepSeek](https://api-docs.deepseek.com/zh-cn/);
 
 - Azure protocol: [Azure GPT](https://learn.microsoft.com/en-us/azure/ai-services/openai/chatgpt-quickstart?tabs=command-line%2Ctypescript%2Cpython-new&pivots=programming-language-studio#key-settings);
 
@@ -548,7 +548,7 @@ HoaiMy
     public $Callers;
 
     /**
-     * @var string Used to set the AI Agent Greeting.
+     * @var string Used to set the AI Agent Welcome Message.
      */
     public $WelcomeMessage;
 
@@ -761,7 +761,7 @@ If at any time the user showed anger or wanted a human agent, call transfer_call
 "deepseek-chat".
      * @param string $APIKey Model API key, for authentication information, please refer to the respective model's official website
 
-- OpenAI protocol: [GPT](https://help.openai.com/en/articles/4936850-where-do-i-find-my-openai-api-key), [Hunyuan](https://intl.cloud.tencent.com/document/product/1729/111008?from_cn_redirect=1), [DeepSeek](https://api-docs.deepseek.com/zh-cn/);
+- OpenAI protocol: [GPT](https://help.openai.com/en/articles/4936850-where-do-i-find-my-openai-api-key), [DeepSeek](https://api-docs.deepseek.com/zh-cn/);
 
 - Azure protocol: [Azure GPT](https://learn.microsoft.com/en-us/azure/ai-services/openai/chatgpt-quickstart?tabs=command-line%2Ctypescript%2Cpython-new&pivots=programming-language-studio#key-settings);
 
@@ -813,7 +813,7 @@ HoaiMy
 
 
      * @param array $Callers Caller number list
-     * @param string $WelcomeMessage Used to set the AI Agent Greeting.
+     * @param string $WelcomeMessage Used to set the AI Agent Welcome Message.
      * @param integer $WelcomeType 0: Use welcomeMessage (if empty, the callee speaks first; if not empty, the bot speaks first)
 1:   Use AI to automatically generate welcomeMessage and speak first based on the prompt
      * @param integer $WelcomeMessagePriority 0: interruptible by default, 1: high priority and not interruptible.
