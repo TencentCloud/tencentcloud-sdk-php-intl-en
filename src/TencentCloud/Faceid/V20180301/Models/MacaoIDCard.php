@@ -18,7 +18,7 @@ namespace TencentCloud\Faceid\V20180301\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Macao ID Card
+ * Macao (China) IDCard
  *
  * @method string getFirstName() Obtain First name
 Note: This field may return null, indicating that no valid values can be obtained.

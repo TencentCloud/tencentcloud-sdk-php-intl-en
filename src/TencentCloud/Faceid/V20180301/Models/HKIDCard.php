@@ -18,10 +18,14 @@ namespace TencentCloud\Faceid\V20180301\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Hong Kong ID card.
+ * Hong Kong (China) ID card.
  *
- * @method string getCnName() Obtain 
- * @method void setCnName(string $CnName) Set 
+ * @method string getCnName() Obtain Chinese name
+Note: This field may return null, indicating that no valid values can be obtained.
+Example:  SAN, Nan
+ * @method void setCnName(string $CnName) Set Chinese name
+Note: This field may return null, indicating that no valid values can be obtained.
+Example:  SAN, Nan
  * @method string getEnName() Obtain English name
 Note: This field may return null, indicating that no valid values can be obtained.
 Example: SAN, Nan
@@ -68,7 +72,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
 class HKIDCard extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Chinese name
+Note: This field may return null, indicating that no valid values can be obtained.
+Example:  SAN, Nan
      */
     public $CnName;
 
@@ -130,7 +136,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $CurrentIssueDate;
 
     /**
-     * @param string $CnName 
+     * @param string $CnName Chinese name
+Note: This field may return null, indicating that no valid values can be obtained.
+Example:  SAN, Nan
      * @param string $EnName English name
 Note: This field may return null, indicating that no valid values can be obtained.
 Example: SAN, Nan

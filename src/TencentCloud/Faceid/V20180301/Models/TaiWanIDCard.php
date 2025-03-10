@@ -18,7 +18,7 @@ namespace TencentCloud\Faceid\V20180301\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Taiwan ID card.
+ * Taiwan (China) ID card.
  *
  * @method string getFullName() Obtain Full name
 Note: This field may return null, indicating that no valid values can be obtained.

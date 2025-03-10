@@ -18,7 +18,7 @@ namespace TencentCloud\Faceid\V20180301\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Mainland ID Card OCR
+ * Mainland (China) ID Card OCR
  *
  * @method string getFullName() Obtain Chinese name
 Note: This field may return null, indicating that no valid values can be obtained.

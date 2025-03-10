@@ -18,7 +18,7 @@ namespace TencentCloud\Faceid\V20180301\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Exit/entry permit (card) for traveling to and from Hong Kong, Macao, or Taiwan
+ * Exit/entry permit (card) for traveling to and from Hong Kong (China), Macao (China), or Taiwan (China)
  *
  * @method string getName() Obtain Name
  * @method void setName(string $Name) Set Name

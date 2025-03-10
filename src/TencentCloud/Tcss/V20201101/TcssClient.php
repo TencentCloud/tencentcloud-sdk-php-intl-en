@@ -89,9 +89,7 @@ use TencentCloud\Tcss\V20201101\Models as Models;
  * @method Models\DeleteComplianceAssetPolicySetFromWhitelistResponse DeleteComplianceAssetPolicySetFromWhitelist(Models\DeleteComplianceAssetPolicySetFromWhitelistRequest $req) This API is used to unignore the specified asset IDs and check item IDs so as to show the assets contained in the specified check items.
 `AddCompliancePolicyAssetSetToWhitelist` is the reference API. Except for the input field, others should be the same, and if not, it may be due to the definition.
  * @method Models\DeleteCompliancePolicyAssetSetFromWhitelistResponse DeleteCompliancePolicyAssetSetFromWhitelist(Models\DeleteCompliancePolicyAssetSetFromWhitelistRequest $req) This API is used to unignore the specified asset IDs and check item IDs so as to show the assets contained in the specified check items.
- * @method Models\DeleteCompliancePolicyItemFromWhitelistResponse DeleteCompliancePolicyItemFromWhitelist(Models\DeleteCompliancePolicyItemFromWhitelistRequest $req) 产品重构优化，这几个接口已经没有调用了
-
-This API is used to remove the specified check item from the allowlist.
+ * @method Models\DeleteCompliancePolicyItemFromWhitelistResponse DeleteCompliancePolicyItemFromWhitelist(Models\DeleteCompliancePolicyItemFromWhitelistRequest $req) This API is used to remove the specified check item from the allowlist.
  * @method Models\DeleteEscapeWhiteListResponse DeleteEscapeWhiteList(Models\DeleteEscapeWhiteListRequest $req) This API is used to delete an allowed escape.
  * @method Models\DeleteIgnoreVulResponse DeleteIgnoreVul(Models\DeleteIgnoreVulRequest $req) This API is used to unignore vulnerabilities in a vulnerability scan.
  * @method Models\DeleteK8sApiAbnormalRuleResponse DeleteK8sApiAbnormalRule(Models\DeleteK8sApiAbnormalRuleRequest $req) This API is used to delete a K8sApi abnormal event rules.

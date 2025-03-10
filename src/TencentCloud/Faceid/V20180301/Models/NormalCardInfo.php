@@ -20,9 +20,9 @@ use TencentCloud\Common\AbstractModel;
 /**
  * License OCR result
  *
- * @method NormalHKIDCard getHKIDCard() Obtain Hong Kong ID Card
+ * @method NormalHKIDCard getHKIDCard() Obtain Hong Kong (China) ID Card
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setHKIDCard(NormalHKIDCard $HKIDCard) Set Hong Kong ID Card
+ * @method void setHKIDCard(NormalHKIDCard $HKIDCard) Set Hong Kong (China) ID Card
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method NormalMLIDCard getMLIDCard() Obtain Malaysia ID Card
 Note: This field may return null, indicating that no valid values can be obtained.
@@ -52,9 +52,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setPhilippinesUMID(PhilippinesUMID $PhilippinesUMID) Set Philippines UMID
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method InternationalIDPassport getInternationalIDPassport() Obtain ID Cards of Hong Kong, Macao and Taiwan (China), and International Passport
+ * @method InternationalIDPassport getInternationalIDPassport() Obtain ID Cards of Hong Kong (China), Macao (China) and Taiwan (China), and International Passport
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setInternationalIDPassport(InternationalIDPassport $InternationalIDPassport) Set ID Cards of Hong Kong, Macao and Taiwan (China), and International Passport
+ * @method void setInternationalIDPassport(InternationalIDPassport $InternationalIDPassport) Set ID Cards of Hong Kong (China), Macao (China) and Taiwan (China), and International Passport
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method GeneralCard getGeneralCard() Obtain General license information
 Note: This field may return null, indicating that no valid values can be obtained.
@@ -72,31 +72,31 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setSingaporeIDCard(SingaporeIDCard $SingaporeIDCard) Set Singapore ID Card
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method MacaoIDCard getMacaoIDCard() Obtain Macao ID Card
+ * @method MacaoIDCard getMacaoIDCard() Obtain Macao (China) ID Card
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setMacaoIDCard(MacaoIDCard $MacaoIDCard) Set Macao ID Card
+ * @method void setMacaoIDCard(MacaoIDCard $MacaoIDCard) Set Macao (China) ID Card
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method MainlandIDCard getMainlandIDCard() Obtain Mainland ID Card
+ * @method MainlandIDCard getMainlandIDCard() Obtain Mainland (China) ID Card
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setMainlandIDCard(MainlandIDCard $MainlandIDCard) Set Mainland ID Card
+ * @method void setMainlandIDCard(MainlandIDCard $MainlandIDCard) Set Mainland (China) ID Card
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method JapanIDCard getJapanIDCard() Obtain Japan ID Card
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setJapanIDCard(JapanIDCard $JapanIDCard) Set Japan ID Card
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method TaiWanIDCard getTaiWanIDCard() Obtain Taiwan ID Card
+ * @method TaiWanIDCard getTaiWanIDCard() Obtain Taiwan (China) ID Card
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setTaiWanIDCard(TaiWanIDCard $TaiWanIDCard) Set Taiwan ID Card
+ * @method void setTaiWanIDCard(TaiWanIDCard $TaiWanIDCard) Set Taiwan (China) ID Card
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method HMTPermit getHMTPermitCard() Obtain exit/entry permit (card) for traveling to and from Hong Kong, Macao, or Taiwan.
+ * @method HMTPermit getHMTPermitCard() Obtain exit/entry permit (card) for traveling to and from Hong Kong (China), Macao (China), or Taiwan (China).
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setHMTPermitCard(HMTPermit $HMTPermitCard) Set exit/entry permit (card) for traveling to and from Hong Kong, Macao, or Taiwan.
+ * @method void setHMTPermitCard(HMTPermit $HMTPermitCard) Set exit/entry permit (card) for traveling to and from Hong Kong (China), Macao (China), or Taiwan (China).
 Note: This field may return null, indicating that no valid values can be obtained.
  */
 class NormalCardInfo extends AbstractModel
 {
     /**
-     * @var NormalHKIDCard Hong Kong ID Card
+     * @var NormalHKIDCard Hong Kong (China) ID Card
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $HKIDCard;
@@ -144,7 +144,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $PhilippinesUMID;
 
     /**
-     * @var InternationalIDPassport ID Cards of Hong Kong, Macao and Taiwan (China), and International Passport
+     * @var InternationalIDPassport ID Cards of Hong Kong (China), Macao (China) and Taiwan (China), and International Passport
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $InternationalIDPassport;
@@ -174,13 +174,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $SingaporeIDCard;
 
     /**
-     * @var MacaoIDCard Macao ID Card
+     * @var MacaoIDCard Macao (China) ID Card
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $MacaoIDCard;
 
     /**
-     * @var MainlandIDCard Mainland ID Card
+     * @var MainlandIDCard Mainland (China) ID Card
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $MainlandIDCard;
@@ -192,19 +192,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $JapanIDCard;
 
     /**
-     * @var TaiWanIDCard Taiwan ID Card
+     * @var TaiWanIDCard Taiwan (China) ID Card
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $TaiWanIDCard;
 
     /**
-     * @var HMTPermit exit/entry permit (card) for traveling to and from Hong Kong, Macao, or Taiwan.
+     * @var HMTPermit exit/entry permit (card) for traveling to and from Hong Kong (China), Macao (China), or Taiwan (China).
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $HMTPermitCard;
 
     /**
-     * @param NormalHKIDCard $HKIDCard Hong Kong ID Card
+     * @param NormalHKIDCard $HKIDCard Hong Kong (China) ID Card
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param NormalMLIDCard $MLIDCard Malaysia ID Card
 Note: This field may return null, indicating that no valid values can be obtained.
@@ -220,7 +220,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param PhilippinesUMID $PhilippinesUMID Philippines UMID
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param InternationalIDPassport $InternationalIDPassport ID Cards of Hong Kong, Macao and Taiwan (China), and International Passport
+     * @param InternationalIDPassport $InternationalIDPassport ID Cards of Hong Kong (China), Macao (China) and Taiwan (China), and International Passport
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param GeneralCard $GeneralCard General license information
 Note: This field may return null, indicating that no valid values can be obtained.
@@ -230,15 +230,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param SingaporeIDCard $SingaporeIDCard Singapore ID Card
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param MacaoIDCard $MacaoIDCard Macao ID Card
+     * @param MacaoIDCard $MacaoIDCard Macao (China) ID Card
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param MainlandIDCard $MainlandIDCard Mainland ID Card
+     * @param MainlandIDCard $MainlandIDCard Mainland (China) ID Card
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param JapanIDCard $JapanIDCard Japan ID Card
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param TaiWanIDCard $TaiWanIDCard Taiwan ID Card
+     * @param TaiWanIDCard $TaiWanIDCard Taiwan (China) ID Card
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param HMTPermit $HMTPermitCard exit/entry permit (card) for traveling to and from Hong Kong, Macao, or Taiwan.
+     * @param HMTPermit $HMTPermitCard exit/entry permit (card) for traveling to and from Hong Kong (China), Macao (China), or Taiwan (China).
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()

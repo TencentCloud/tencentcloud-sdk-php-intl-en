@@ -67,6 +67,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getPreview() Obtain Document preview address
  * @method void setPreview(string $Preview) Set Document preview address
+ * @method string getResolution() Obtain Document resolution.Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setResolution(string $Resolution) Set Document resolution.Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getMinScaleResolution() Obtain Minimum resolution of a transcoded document, consistent with the parameters provided when the document is created.Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setMinScaleResolution(string $MinScaleResolution) Set Minimum resolution of a transcoded document, consistent with the parameters provided when the document is created.Note: This field may return null, indicating that no valid values can be obtained.
  */
 class DocumentInfo extends AbstractModel
 {
@@ -170,6 +174,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $Preview;
 
     /**
+     * @var string Document resolution.Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $Resolution;
+
+    /**
+     * @var string Minimum resolution of a transcoded document, consistent with the parameters provided when the document is created.Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $MinScaleResolution;
+
+    /**
      * @param string $DocumentId The document ID. Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $DocumentUrl The document's original URL. Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $DocumentName The document title. Note: This field may return null, indicating that no valid values can be obtained.
@@ -193,6 +207,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $Cover The thumbnail. Only transcoded courseware has thumbnails.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $Preview Document preview address
+     * @param string $Resolution Document resolution.Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $MinScaleResolution Minimum resolution of a transcoded document, consistent with the parameters provided when the document is created.Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -281,6 +297,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("Preview",$param) and $param["Preview"] !== null) {
             $this->Preview = $param["Preview"];
+        }
+
+        if (array_key_exists("Resolution",$param) and $param["Resolution"] !== null) {
+            $this->Resolution = $param["Resolution"];
+        }
+
+        if (array_key_exists("MinScaleResolution",$param) and $param["MinScaleResolution"] !== null) {
+            $this->MinScaleResolution = $param["MinScaleResolution"];
         }
     }
 }

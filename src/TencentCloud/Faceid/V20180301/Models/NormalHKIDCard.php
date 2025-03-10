@@ -18,7 +18,7 @@ namespace TencentCloud\Faceid\V20180301\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Hong Kong ID card.
+ * Hong Kong (China) ID card.
  *
  * @method string getChineseName() Obtain Chinese name
 Note: This field may return null, indicating that no valid values can be obtained.

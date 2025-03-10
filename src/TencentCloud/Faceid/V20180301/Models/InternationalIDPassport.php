@@ -18,7 +18,7 @@ namespace TencentCloud\Faceid\V20180301\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * ID cards of Hong Kong, Macao and Taiwan (China), and international passport.
+ * ID cards of Hong Kong (China), Macao (China) and Taiwan (China), and international passport.
  *
  * @method string getLicenseNumber() Obtain Passport ID
 Note: This field may return null, indicating that no valid values can be obtained.

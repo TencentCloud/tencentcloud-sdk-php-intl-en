@@ -63,9 +63,7 @@ A maximum of 20 requests can be initiated per second for this API.
  * @method Models\DescribeDeveloperResponse DescribeDeveloper(Models\DescribeDeveloperRequest $req) This API is used to get developer information.
  * @method Models\DescribeDocumentResponse DescribeDocument(Models\DescribeDocumentRequest $req) This API is used to get the information of a specific document.
 A maximum of 20 requests can be initiated per second for this API.
- * @method Models\DescribeDocumentsResponse DescribeDocuments(Models\DescribeDocumentsRequest $req) 有新接口替换
-
-A new API is offered for this action now.
+ * @method Models\DescribeDocumentsResponse DescribeDocuments(Models\DescribeDocumentsRequest $req) A new API is offered for this action now.
 
 This API is used to query courseware. It has been deprecated. Please use `BatchDescribeDocument` instead.
  * @method Models\DescribeDocumentsByRoomResponse DescribeDocumentsByRoom(Models\DescribeDocumentsByRoomRequest $req) This API is used to get the document list of a specific room.
