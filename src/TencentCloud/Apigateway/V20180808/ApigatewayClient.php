@@ -79,6 +79,7 @@ To make authentication and throttling for a service take effect, you need to bin
  * @method Models\DescribeIPStrategyResponse DescribeIPStrategy(Models\DescribeIPStrategyRequest $req) This API is used to query IP policy details.
  * @method Models\DescribeIPStrategyApisStatusResponse DescribeIPStrategyApisStatus(Models\DescribeIPStrategyApisStatusRequest $req) This API is used to query the list of APIs to which an IP policy can be bound, i.e., the difference set between all APIs under the service and the APIs already bound to the policy.
  * @method Models\DescribeIPStrategysStatusResponse DescribeIPStrategysStatus(Models\DescribeIPStrategysStatusRequest $req) This API is used to query the list of service IP policies.
+ * @method Models\DescribeInstancesNetworkConfigResponse DescribeInstancesNetworkConfig(Models\DescribeInstancesNetworkConfigRequest $req) This API is used to obtain the network configuration list of a dedicated instance.
  * @method Models\DescribeLogSearchResponse DescribeLogSearch(Models\DescribeLogSearchRequest $req) This API is used to search for logs.
  * @method Models\DescribePluginResponse DescribePlugin(Models\DescribePluginRequest $req) This API is used to query the plugin details by plugin ID.
  * @method Models\DescribePluginApisResponse DescribePluginApis(Models\DescribePluginApisRequest $req) This API is used to query APIs bound with a specified plugin.
