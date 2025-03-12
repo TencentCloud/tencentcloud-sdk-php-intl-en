@@ -54,6 +54,12 @@ It can contain up to 150 Chinese characters (a full-width punctuation as a Chine
  * @method void setEnableSubtitle(boolean $EnableSubtitle) Set Whether to enable the timestamp feature. Default value: `false`.
  * @method integer getSegmentRate() Obtain The threshold of speech segmentation sensibility, which can be `0` (default), `1`, or `2`. A larger value indicates fewer segments, and the model tends to only segment sentences based on punctuation marks. We recommend you not change this parameter to avoid adverse effect on speech synthesis.
  * @method void setSegmentRate(integer $SegmentRate) Set The threshold of speech segmentation sensibility, which can be `0` (default), `1`, or `2`. A larger value indicates fewer segments, and the model tends to only segment sentences based on punctuation marks. We recommend you not change this parameter to avoid adverse effect on speech synthesis.
+ * @method string getEmotionCategory() Obtain 
+ * @method void setEmotionCategory(string $EmotionCategory) Set 
+ * @method integer getEmotionIntensity() Obtain 
+ * @method void setEmotionIntensity(integer $EmotionIntensity) Set 
+ * @method string getFastVoiceType() Obtain 
+ * @method void setFastVoiceType(string $FastVoiceType) Set 
  */
 class TextToVoiceRequest extends AbstractModel
 {
@@ -123,6 +129,21 @@ It can contain up to 150 Chinese characters (a full-width punctuation as a Chine
     public $SegmentRate;
 
     /**
+     * @var string 
+     */
+    public $EmotionCategory;
+
+    /**
+     * @var integer 
+     */
+    public $EmotionIntensity;
+
+    /**
+     * @var string 
+     */
+    public $FastVoiceType;
+
+    /**
      * @param string $Text The source text for synthesizing speech, which is encoded in UTF-8.
 It can contain up to 150 Chinese characters (a full-width punctuation as a Chinese character) or 500 letters ( a half-width punctuation as a letter).
      * @param string $SessionId The `SessionId` of a request, which will be returned as-is. We recommend that you pass characters like uuid to prevent repetition.
@@ -140,6 +161,9 @@ It can contain up to 150 Chinese characters (a full-width punctuation as a Chine
      * @param string $Codec Format of returned audio. Valid values: WAV (default), MP3, and PCM.
      * @param boolean $EnableSubtitle Whether to enable the timestamp feature. Default value: `false`.
      * @param integer $SegmentRate The threshold of speech segmentation sensibility, which can be `0` (default), `1`, or `2`. A larger value indicates fewer segments, and the model tends to only segment sentences based on punctuation marks. We recommend you not change this parameter to avoid adverse effect on speech synthesis.
+     * @param string $EmotionCategory 
+     * @param integer $EmotionIntensity 
+     * @param string $FastVoiceType 
      */
     function __construct()
     {
@@ -200,6 +224,18 @@ It can contain up to 150 Chinese characters (a full-width punctuation as a Chine
 
         if (array_key_exists("SegmentRate",$param) and $param["SegmentRate"] !== null) {
             $this->SegmentRate = $param["SegmentRate"];
+        }
+
+        if (array_key_exists("EmotionCategory",$param) and $param["EmotionCategory"] !== null) {
+            $this->EmotionCategory = $param["EmotionCategory"];
+        }
+
+        if (array_key_exists("EmotionIntensity",$param) and $param["EmotionIntensity"] !== null) {
+            $this->EmotionIntensity = $param["EmotionIntensity"];
+        }
+
+        if (array_key_exists("FastVoiceType",$param) and $param["FastVoiceType"] !== null) {
+            $this->FastVoiceType = $param["FastVoiceType"];
         }
     }
 }

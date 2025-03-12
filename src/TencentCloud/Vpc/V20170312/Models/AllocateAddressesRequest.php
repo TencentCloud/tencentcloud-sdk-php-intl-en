@@ -88,6 +88,8 @@ Whether the Anycast EIP can be bound to CLB instances.
  * @method void setAddressName(string $AddressName) Set EIP name, which is the custom EIP name given by the user when applying for the EIP. Default: not named
  * @method string getDedicatedClusterId() Obtain 
  * @method void setDedicatedClusterId(string $DedicatedClusterId) Set 
+ * @method boolean getIsDedicatedAddressPool() Obtain 
+ * @method void setIsDedicatedAddressPool(boolean $IsDedicatedAddressPool) Set 
  * @method string getEgress() Obtain Network egress. It defaults to `center_egress1`.
  * @method void setEgress(string $Egress) Set Network egress. It defaults to `center_egress1`.
  * @method string getAntiDDoSPackageId() Obtain Anti-DDoS service package ID. This is required when you want to request an Anti-DDoS IP.
@@ -184,6 +186,11 @@ Whether the Anycast EIP can be bound to CLB instances.
     public $DedicatedClusterId;
 
     /**
+     * @var boolean 
+     */
+    public $IsDedicatedAddressPool;
+
+    /**
      * @var string Network egress. It defaults to `center_egress1`.
      */
     public $Egress;
@@ -233,6 +240,7 @@ Whether the Anycast EIP can be bound to CLB instances.
      * @param string $BandwidthPackageId The unique ID of a BGP bandwidth package. If you configure this parameter and set InternetChargeType as BANDWIDTH_PACKAGE, the new EIP is added to this package and billed by the bandwidth package mode.
      * @param string $AddressName EIP name, which is the custom EIP name given by the user when applying for the EIP. Default: not named
      * @param string $DedicatedClusterId 
+     * @param boolean $IsDedicatedAddressPool 
      * @param string $Egress Network egress. It defaults to `center_egress1`.
      * @param string $AntiDDoSPackageId Anti-DDoS service package ID. This is required when you want to request an Anti-DDoS IP.
      * @param string $ClientToken A string used to ensure the idempotency of the request. Generate a value based on your client. This can ensure that the value is unique for different requests. It only supports ASCII characters and can contain up to 64 characters. 
@@ -306,6 +314,10 @@ Whether the Anycast EIP can be bound to CLB instances.
 
         if (array_key_exists("DedicatedClusterId",$param) and $param["DedicatedClusterId"] !== null) {
             $this->DedicatedClusterId = $param["DedicatedClusterId"];
+        }
+
+        if (array_key_exists("IsDedicatedAddressPool",$param) and $param["IsDedicatedAddressPool"] !== null) {
+            $this->IsDedicatedAddressPool = $param["IsDedicatedAddressPool"];
         }
 
         if (array_key_exists("Egress",$param) and $param["Egress"] !== null) {
