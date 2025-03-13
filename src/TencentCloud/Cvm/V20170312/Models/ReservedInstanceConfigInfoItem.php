@@ -18,7 +18,7 @@ namespace TencentCloud\Cvm\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Static configurations of the reserved instance. Currently, RIs are only offered to beta users.
+ * Static configurations of the reserved instance.
  *
  * @method string getType() Obtain Abbreviation name of the instance type.
  * @method void setType(string $Type) Set Abbreviation name of the instance type.

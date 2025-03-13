@@ -18,7 +18,7 @@ namespace TencentCloud\Cvm\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Price information of the reserved instance based on the payment method. Currently, RIs are only offered to beta users.
+ * Price information of the reserved instance based on the payment method.
  *
  * @method string getOfferingType() Obtain Payment method. Valid values: All Upfront, Partial Upfront, and No Upfront.
  * @method void setOfferingType(string $OfferingType) Set Payment method. Valid values: All Upfront, Partial Upfront, and No Upfront.
@@ -38,10 +38,10 @@ Unit: second
 Valid value: `Linux`.
  * @method void setProductDescription(string $ProductDescription) Set The operating system of the reserved instance, such as `Linux`.
 Valid value: `Linux`.
- * @method float getDiscountUsagePrice() Obtain Upfront total cost, in USD.
- * @method void setDiscountUsagePrice(float $DiscountUsagePrice) Set Upfront total cost, in USD.
- * @method float getDiscountFixedPrice() Obtain Discount price for subsequent total cost, in USD/hr.
- * @method void setDiscountFixedPrice(float $DiscountFixedPrice) Set Discount price for subsequent total cost, in USD/hr.
+ * @method float getDiscountUsagePrice() Obtain Discount price for subsequent total cost, in USD/hr.
+ * @method void setDiscountUsagePrice(float $DiscountUsagePrice) Set Discount price for subsequent total cost, in USD/hr.
+ * @method float getDiscountFixedPrice() Obtain Discount price for upfront total cost, in USD.
+ * @method void setDiscountFixedPrice(float $DiscountFixedPrice) Set Discount price for upfront total cost, in USD.
  */
 class ReservedInstancePriceItem extends AbstractModel
 {
@@ -83,12 +83,12 @@ Valid value: `Linux`.
     public $ProductDescription;
 
     /**
-     * @var float Upfront total cost, in USD.
+     * @var float Discount price for subsequent total cost, in USD/hr.
      */
     public $DiscountUsagePrice;
 
     /**
-     * @var float Discount price for subsequent total cost, in USD/hr.
+     * @var float Discount price for upfront total cost, in USD.
      */
     public $DiscountFixedPrice;
 
@@ -102,8 +102,8 @@ Valid value: `Linux`.
 Unit: second
      * @param string $ProductDescription The operating system of the reserved instance, such as `Linux`.
 Valid value: `Linux`.
-     * @param float $DiscountUsagePrice Upfront total cost, in USD.
-     * @param float $DiscountFixedPrice Discount price for subsequent total cost, in USD/hr.
+     * @param float $DiscountUsagePrice Discount price for subsequent total cost, in USD/hr.
+     * @param float $DiscountFixedPrice Discount price for upfront total cost, in USD.
      */
     function __construct()
     {

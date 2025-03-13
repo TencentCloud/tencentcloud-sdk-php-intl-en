@@ -51,11 +51,13 @@ When the public outbound network bandwidth is 0 Mbps, assigning a public IP is n
  * @method void setInternetAccessible(InternetAccessible $InternetAccessible) Set Information of the public network bandwidth configuration.
 When the public outbound network bandwidth is 0 Mbps, assigning a public IP is not allowed. Accordingly, if a public IP is assigned, the new public network outbound bandwidth must be greater than 0 Mbps.
  * @method string getInstanceChargeType() Obtain Instance billing mode. Valid values:
-<br><li>POSTPAID_BY_HOUR: pay-as-you-go hourly
-<br><li>SPOTPAID: spot instance
+<li>POSTPAID_BY_HOUR: pay-as-you-go hourly</li>
+<li>SPOTPAID: spot instance</li>
+<li> CDCPAID: dedicated cluster</li>
  * @method void setInstanceChargeType(string $InstanceChargeType) Set Instance billing mode. Valid values:
-<br><li>POSTPAID_BY_HOUR: pay-as-you-go hourly
-<br><li>SPOTPAID: spot instance
+<li>POSTPAID_BY_HOUR: pay-as-you-go hourly</li>
+<li>SPOTPAID: spot instance</li>
+<li> CDCPAID: dedicated cluster</li>
  * @method InstanceChargePrepaid getInstanceChargePrepaid() Obtain Parameter setting for the prepaid mode (monthly subscription mode). This parameter can specify the renewal period, whether to set the auto-renewal, and other attributes of the monthly-subscribed instances.
 This parameter is required when changing the instance billing mode to monthly subscription. It will be automatically discarded after you choose another billing mode.
 This field requires passing in the `Period` field. Other fields that are not passed in will use their default values.
@@ -174,8 +176,9 @@ When the public outbound network bandwidth is 0 Mbps, assigning a public IP is n
 
     /**
      * @var string Instance billing mode. Valid values:
-<br><li>POSTPAID_BY_HOUR: pay-as-you-go hourly
-<br><li>SPOTPAID: spot instance
+<li>POSTPAID_BY_HOUR: pay-as-you-go hourly</li>
+<li>SPOTPAID: spot instance</li>
+<li> CDCPAID: dedicated cluster</li>
      */
     public $InstanceChargeType;
 
@@ -297,8 +300,9 @@ At least one security group is required for this parameter. The security group s
      * @param InternetAccessible $InternetAccessible Information of the public network bandwidth configuration.
 When the public outbound network bandwidth is 0 Mbps, assigning a public IP is not allowed. Accordingly, if a public IP is assigned, the new public network outbound bandwidth must be greater than 0 Mbps.
      * @param string $InstanceChargeType Instance billing mode. Valid values:
-<br><li>POSTPAID_BY_HOUR: pay-as-you-go hourly
-<br><li>SPOTPAID: spot instance
+<li>POSTPAID_BY_HOUR: pay-as-you-go hourly</li>
+<li>SPOTPAID: spot instance</li>
+<li> CDCPAID: dedicated cluster</li>
      * @param InstanceChargePrepaid $InstanceChargePrepaid Parameter setting for the prepaid mode (monthly subscription mode). This parameter can specify the renewal period, whether to set the auto-renewal, and other attributes of the monthly-subscribed instances.
 This parameter is required when changing the instance billing mode to monthly subscription. It will be automatically discarded after you choose another billing mode.
 This field requires passing in the `Period` field. Other fields that are not passed in will use their default values.

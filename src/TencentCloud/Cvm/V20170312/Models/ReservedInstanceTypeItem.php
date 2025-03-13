@@ -18,7 +18,7 @@ namespace TencentCloud\Cvm\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Reserved instance specification. Currently, RIs are only offered to beta users.
+ * Reserved instance specification.
  *
  * @method string getInstanceType() Obtain Instance type.
  * @method void setInstanceType(string $InstanceType) Set Instance type.

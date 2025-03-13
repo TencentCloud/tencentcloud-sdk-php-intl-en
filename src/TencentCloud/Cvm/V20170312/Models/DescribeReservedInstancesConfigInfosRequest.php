@@ -20,37 +20,37 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeReservedInstancesConfigInfos request structure.
  *
- * @method array getFilters() Obtain zone
+ * @method array getFilters() Obtain <li><strong>zone</li></strong>
 Filters by the availability zones in which the reserved instance can be purchased, such as `ap-guangzhou-1`.
 Type: String
 Required: no
 Valid values: list of regions/availability zones
 
-product-description
+<li><strong>product-description</li></strong>
 Filters by the platform description (operating system) of the reserved instance, such as `linux`.
 Type: String
 Required: no
 Valid value: linux
 
-duration
+<li><strong>duration</li></strong>
 Filters by the **validity** of the reserved instance, which is the purchased usage period. For example, `31536000`.
 Type: Integer
 Unit: second
 Required: no
 Valid value: 31536000 (1 year)
- * @method void setFilters(array $Filters) Set zone
+ * @method void setFilters(array $Filters) Set <li><strong>zone</li></strong>
 Filters by the availability zones in which the reserved instance can be purchased, such as `ap-guangzhou-1`.
 Type: String
 Required: no
 Valid values: list of regions/availability zones
 
-product-description
+<li><strong>product-description</li></strong>
 Filters by the platform description (operating system) of the reserved instance, such as `linux`.
 Type: String
 Required: no
 Valid value: linux
 
-duration
+<li><strong>duration</li></strong>
 Filters by the **validity** of the reserved instance, which is the purchased usage period. For example, `31536000`.
 Type: Integer
 Unit: second
@@ -60,19 +60,19 @@ Valid value: 31536000 (1 year)
 class DescribeReservedInstancesConfigInfosRequest extends AbstractModel
 {
     /**
-     * @var array zone
+     * @var array <li><strong>zone</li></strong>
 Filters by the availability zones in which the reserved instance can be purchased, such as `ap-guangzhou-1`.
 Type: String
 Required: no
 Valid values: list of regions/availability zones
 
-product-description
+<li><strong>product-description</li></strong>
 Filters by the platform description (operating system) of the reserved instance, such as `linux`.
 Type: String
 Required: no
 Valid value: linux
 
-duration
+<li><strong>duration</li></strong>
 Filters by the **validity** of the reserved instance, which is the purchased usage period. For example, `31536000`.
 Type: Integer
 Unit: second
@@ -82,19 +82,19 @@ Valid value: 31536000 (1 year)
     public $Filters;
 
     /**
-     * @param array $Filters zone
+     * @param array $Filters <li><strong>zone</li></strong>
 Filters by the availability zones in which the reserved instance can be purchased, such as `ap-guangzhou-1`.
 Type: String
 Required: no
 Valid values: list of regions/availability zones
 
-product-description
+<li><strong>product-description</li></strong>
 Filters by the platform description (operating system) of the reserved instance, such as `linux`.
 Type: String
 Required: no
 Valid value: linux
 
-duration
+<li><strong>duration</li></strong>
 Filters by the **validity** of the reserved instance, which is the purchased usage period. For example, `31536000`.
 Type: Integer
 Unit: second

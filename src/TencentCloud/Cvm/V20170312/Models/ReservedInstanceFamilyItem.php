@@ -18,7 +18,7 @@ namespace TencentCloud\Cvm\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * RI-related instance family. Currently, RIs are only offered to beta users.
+ * RI-related instance family.
  *
  * @method string getInstanceFamily() Obtain Instance family.
  * @method void setInstanceFamily(string $InstanceFamily) Set Instance family.
