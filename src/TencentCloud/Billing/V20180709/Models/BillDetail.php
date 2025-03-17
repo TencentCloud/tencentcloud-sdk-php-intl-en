@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getBusinessCodeName() Obtain Product name: The name of a Tencent Cloud product purchased by the user, such as CVM.
  * @method void setBusinessCodeName(string $BusinessCodeName) Set Product name: The name of a Tencent Cloud product purchased by the user, such as CVM.
- * @method string getProductCodeName() Obtain Subproduct name: The subcategory of a Tencent Cloud product purchased by the user, such as CVM – Standard S1.
- * @method void setProductCodeName(string $ProductCodeName) Set Subproduct name: The subcategory of a Tencent Cloud product purchased by the user, such as CVM – Standard S1.
+ * @method string getProductCodeName() Obtain Subproduct name: The subcategory of a Tencent Cloud product purchased by the user, such as CVM Standard S1.
+ * @method void setProductCodeName(string $ProductCodeName) Set Subproduct name: The subcategory of a Tencent Cloud product purchased by the user, such as CVM Standard S1.
  * @method string getPayModeName() Obtain Billing mode, which can be monthly subscription or pay-as-you-go.
  * @method void setPayModeName(string $PayModeName) Set Billing mode, which can be monthly subscription or pay-as-you-go.
  * @method string getProjectName() Obtain Project name: The project to which a resource belongs, which is user-designated. If a resource has not been assigned to a project, it will automatically belong to the default project.
@@ -96,6 +96,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
  * @method void setRegionTypeName(string $RegionTypeName) Set Domestic and International: The region type to which the resource belongs (domestic, international)Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getReserveDetail() Obtain Note attributes (instance configuration): Other note information, such as the reserved instance, the reserved instance type, the transaction type, and the region information on both ends of the CCN product.Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setReserveDetail(string $ReserveDetail) Set Note attributes (instance configuration): Other note information, such as the reserved instance, the reserved instance type, the transaction type, and the region information on both ends of the CCN product.Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getDiscountObject() Obtain the discount object for the current consumption item, such as official website discount, user discount, and event discount.
+ * @method void setDiscountObject(string $DiscountObject) Set the discount object for the current consumption item, such as official website discount, user discount, and event discount.
+ * @method string getDiscountType() Obtain the discount type for the current consumption item, such as discount and contract price.
+
+ * @method void setDiscountType(string $DiscountType) Set the discount type for the current consumption item, such as discount and contract price.
+
+ * @method string getDiscountContent() Obtain supplementary description of the discount type, such as 0.2.
+ * @method void setDiscountContent(string $DiscountContent) Set supplementary description of the discount type, such as 0.2.
  */
 class BillDetail extends AbstractModel
 {
@@ -105,7 +113,7 @@ class BillDetail extends AbstractModel
     public $BusinessCodeName;
 
     /**
-     * @var string Subproduct name: The subcategory of a Tencent Cloud product purchased by the user, such as CVM – Standard S1.
+     * @var string Subproduct name: The subcategory of a Tencent Cloud product purchased by the user, such as CVM Standard S1.
      */
     public $ProductCodeName;
 
@@ -274,8 +282,24 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $ReserveDetail;
 
     /**
+     * @var string the discount object for the current consumption item, such as official website discount, user discount, and event discount.
+     */
+    public $DiscountObject;
+
+    /**
+     * @var string the discount type for the current consumption item, such as discount and contract price.
+
+     */
+    public $DiscountType;
+
+    /**
+     * @var string supplementary description of the discount type, such as 0.2.
+     */
+    public $DiscountContent;
+
+    /**
      * @param string $BusinessCodeName Product name: The name of a Tencent Cloud product purchased by the user, such as CVM.
-     * @param string $ProductCodeName Subproduct name: The subcategory of a Tencent Cloud product purchased by the user, such as CVM – Standard S1.
+     * @param string $ProductCodeName Subproduct name: The subcategory of a Tencent Cloud product purchased by the user, such as CVM Standard S1.
      * @param string $PayModeName Billing mode, which can be monthly subscription or pay-as-you-go.
      * @param string $ProjectName Project name: The project to which a resource belongs, which is user-designated. If a resource has not been assigned to a project, it will automatically belong to the default project.
      * @param string $RegionName Region: The region to which a resource belongs, such as South China (Guangzhou).
@@ -312,6 +336,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $RegionType Domestic and international codesNote: This field may return null, indicating that no valid values can be obtained.
      * @param string $RegionTypeName Domestic and International: The region type to which the resource belongs (domestic, international)Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $ReserveDetail Note attributes (instance configuration): Other note information, such as the reserved instance, the reserved instance type, the transaction type, and the region information on both ends of the CCN product.Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $DiscountObject the discount object for the current consumption item, such as official website discount, user discount, and event discount.
+     * @param string $DiscountType the discount type for the current consumption item, such as discount and contract price.
+
+     * @param string $DiscountContent supplementary description of the discount type, such as 0.2.
      */
     function __construct()
     {
@@ -471,6 +499,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("ReserveDetail",$param) and $param["ReserveDetail"] !== null) {
             $this->ReserveDetail = $param["ReserveDetail"];
+        }
+
+        if (array_key_exists("DiscountObject",$param) and $param["DiscountObject"] !== null) {
+            $this->DiscountObject = $param["DiscountObject"];
+        }
+
+        if (array_key_exists("DiscountType",$param) and $param["DiscountType"] !== null) {
+            $this->DiscountType = $param["DiscountType"];
+        }
+
+        if (array_key_exists("DiscountContent",$param) and $param["DiscountContent"] !== null) {
+            $this->DiscountContent = $param["DiscountContent"];
         }
     }
 }

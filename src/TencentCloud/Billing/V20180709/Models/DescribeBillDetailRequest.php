@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getOffset() Obtain Offset
  * @method void setOffset(integer $Offset) Set Offset
- * @method integer getLimit() Obtain Quantity, maximum is 100
- * @method void setLimit(integer $Limit) Set Quantity, maximum is 100
+ * @method integer getLimit() Obtain Quantity, maximum is 300
+ * @method void setLimit(integer $Limit) Set Quantity, maximum is 300
  * @method string getPeriodType() Obtain The period type. byUsedTime: By usage period; byPayTime: By payment period. Must be the same as the period of the current monthly bill of the Billing Center. You can check your bill statistics period type at the top of the [Bill Overview](https://console.cloud.tencent.com/expense/bill/overview) page. 
  * @method void setPeriodType(string $PeriodType) Set The period type. byUsedTime: By usage period; byPayTime: By payment period. Must be the same as the period of the current monthly bill of the Billing Center. You can check your bill statistics period type at the top of the [Bill Overview](https://console.cloud.tencent.com/expense/bill/overview) page. 
  * @method string getMonth() Obtain Month; format: yyyy-mm. You only have to enter either Month or BeginTime and EndTime. When you enter values for BeginTime and EndTime, Month becomes invalid. This value must be no earlier than the month when Bill 2.0 is activated; last 24 months data are available.
@@ -115,7 +115,7 @@ class DescribeBillDetailRequest extends AbstractModel
     public $Offset;
 
     /**
-     * @var integer Quantity, maximum is 100
+     * @var integer Quantity, maximum is 300
      */
     public $Limit;
 
@@ -215,7 +215,7 @@ Note: To query the product codes used in the current month, call <a href="https:
 
     /**
      * @param integer $Offset Offset
-     * @param integer $Limit Quantity, maximum is 100
+     * @param integer $Limit Quantity, maximum is 300
      * @param string $PeriodType The period type. byUsedTime: By usage period; byPayTime: By payment period. Must be the same as the period of the current monthly bill of the Billing Center. You can check your bill statistics period type at the top of the [Bill Overview](https://console.cloud.tencent.com/expense/bill/overview) page. 
      * @param string $Month Month; format: yyyy-mm. You only have to enter either Month or BeginTime and EndTime. When you enter values for BeginTime and EndTime, Month becomes invalid. This value must be no earlier than the month when Bill 2.0 is activated; last 24 months data are available.
      * @param string $BeginTime The start time of the query range, which should be in the format Y-m-d H:i:s . The query range must be in the last 18 months and cannot be earlier than May 2018 (when Bill 2.0 was introduced). The start time and end time must be in the same month.
