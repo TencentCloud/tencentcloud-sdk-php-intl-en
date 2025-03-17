@@ -124,6 +124,14 @@ Note: This field may return null, indicating that no valid value can be obtained
 Note: This field may return null, indicating that no valid value can be obtained.
  * @method void setDatabaseId(string $DatabaseId) Set DatabaseId
 Note: This field may return null, indicating that no valid value can be obtained.
+ * @method string getDataFromType() Obtain Data source.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setDataFromType(string $DataFromType) Set Data source.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getCollectJobId() Obtain Collection id.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setCollectJobId(string $CollectJobId) Set Collection id.
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class TableLineageInfo extends AbstractModel
 {
@@ -284,6 +292,18 @@ Note: This field may return null, indicating that no valid value can be obtained
     public $DatabaseId;
 
     /**
+     * @var string Data source.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $DataFromType;
+
+    /**
+     * @var string Collection id.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $CollectJobId;
+
+    /**
      * @param string $MetastoreType Metadata Type
 Note: This field may return null, indicating that no valid value can be obtained.
      * @param string $ProjectId Space ID
@@ -336,6 +356,10 @@ Note: This field may return null, indicating that no valid value can be obtained
 Note: This field may return null, indicating that no valid value can be obtained.
      * @param string $DatabaseId DatabaseId
 Note: This field may return null, indicating that no valid value can be obtained.
+     * @param string $DataFromType Data source.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $CollectJobId Collection id.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -462,6 +486,14 @@ Note: This field may return null, indicating that no valid value can be obtained
 
         if (array_key_exists("DatabaseId",$param) and $param["DatabaseId"] !== null) {
             $this->DatabaseId = $param["DatabaseId"];
+        }
+
+        if (array_key_exists("DataFromType",$param) and $param["DataFromType"] !== null) {
+            $this->DataFromType = $param["DataFromType"];
+        }
+
+        if (array_key_exists("CollectJobId",$param) and $param["CollectJobId"] !== null) {
+            $this->CollectJobId = $param["CollectJobId"];
         }
     }
 }

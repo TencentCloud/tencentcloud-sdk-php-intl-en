@@ -139,6 +139,8 @@ use TencentCloud\Wedata\V20210820\Models as Models;
  * @method Models\DescribeRealTimeTaskInstanceNodeInfoResponse DescribeRealTimeTaskInstanceNodeInfo(Models\DescribeRealTimeTaskInstanceNodeInfoRequest $req) Query Real-time Task Instance Node Information
  * @method Models\DescribeRealTimeTaskMetricOverviewResponse DescribeRealTimeTaskMetricOverview(Models\DescribeRealTimeTaskMetricOverviewRequest $req) Real-time Task Running Metrics Overview
  * @method Models\DescribeRealTimeTaskSpeedResponse DescribeRealTimeTaskSpeed(Models\DescribeRealTimeTaskSpeedRequest $req) Real-time task synchronization speed trend
+ * @method Models\DescribeReportTaskDetailResponse DescribeReportTaskDetail(Models\DescribeReportTaskDetailRequest $req) This API is used to query task details for reports.
+ * @method Models\DescribeReportTaskListResponse DescribeReportTaskList(Models\DescribeReportTaskListRequest $req) This API is used to query the task submission list.
  * @method Models\DescribeResourceManagePathTreesResponse DescribeResourceManagePathTrees(Models\DescribeResourceManagePathTreesRequest $req) Retrieve resource management directory tree
  * @method Models\DescribeRuleResponse DescribeRule(Models\DescribeRuleRequest $req) Queries rule details
  * @method Models\DescribeRuleDimStatResponse DescribeRuleDimStat(Models\DescribeRuleDimStatRequest $req) Data Quality Overview Page Triggers Dimension Distribution Statistics Interface

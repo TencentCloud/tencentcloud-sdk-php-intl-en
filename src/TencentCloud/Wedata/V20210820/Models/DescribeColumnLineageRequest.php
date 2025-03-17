@@ -20,8 +20,16 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeColumnLineage request structure.
  *
- * @method string getDirection() Obtain Query Direction, INPUT, OUTPUT, BOTH enumerated values
- * @method void setDirection(string $Direction) Set Query Direction, INPUT, OUTPUT, BOTH enumerated values
+ * @method string getDirection() Obtain Enumeration value of query direction.
+
+- INPUT
+- OUTPUT
+- BOTH
+ * @method void setDirection(string $Direction) Set Enumeration value of query direction.
+
+- INPUT
+- OUTPUT
+- BOTH
  * @method ColumnLineageInfo getData() Obtain Field Information
  * @method void setData(ColumnLineageInfo $Data) Set Field Information
  * @method integer getInputDepth() Obtain Single Query Indegree
@@ -36,7 +44,11 @@ use TencentCloud\Common\AbstractModel;
 class DescribeColumnLineageRequest extends AbstractModel
 {
     /**
-     * @var string Query Direction, INPUT, OUTPUT, BOTH enumerated values
+     * @var string Enumeration value of query direction.
+
+- INPUT
+- OUTPUT
+- BOTH
      */
     public $Direction;
 
@@ -66,7 +78,11 @@ class DescribeColumnLineageRequest extends AbstractModel
     public $IgnoreTemp;
 
     /**
-     * @param string $Direction Query Direction, INPUT, OUTPUT, BOTH enumerated values
+     * @param string $Direction Enumeration value of query direction.
+
+- INPUT
+- OUTPUT
+- BOTH
      * @param ColumnLineageInfo $Data Field Information
      * @param integer $InputDepth Single Query Indegree
      * @param integer $OutputDepth Single Query Outdegree
