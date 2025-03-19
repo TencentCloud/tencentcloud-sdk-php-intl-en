@@ -82,3 +82,7 @@ If there is a problem with your PHP environment certificate, errors similar to `
 ## php_curl Extension
 
 GuzzleHttp, which this SDK depends on, needs to have the php_curl extension enabled. Check whether the php.ini environment in your environment is enabled. For example, on Linux with PHP 7.1, for services hosted under Apache, you can open `/etc/php/7.1/apache2/php.ini` to see whether the `extension=php_curl.dll` configuration item has been commented. Please delete the comment before it and restart Apache.
+
+# Compliance Notice
+
+Please prioritize using the ​default domain names configured in the SDK for each product. If using other domains, note that ​overseas domains may pose ​data compliance risks.
