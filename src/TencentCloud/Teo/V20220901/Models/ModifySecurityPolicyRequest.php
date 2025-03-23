@@ -20,66 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifySecurityPolicy request structure.
  *
- * @method string getZoneId() Obtain The site ID.
- * @method void setZoneId(string $ZoneId) Set The site ID.
- * @method SecurityConfig getSecurityConfig() Obtain Security configuration.
- * @method void setSecurityConfig(SecurityConfig $SecurityConfig) Set Security configuration.
- * @method string getEntity() Obtain Subdomain/application name.
-
-Note: When both this parameter and the TemplateId parameter are specified, this parameter will not take effect. Do not specify this parameter and the TemplateId parameter at the same time.
- * @method void setEntity(string $Entity) Set Subdomain/application name.
-
-Note: When both this parameter and the TemplateId parameter are specified, this parameter will not take effect. Do not specify this parameter and the TemplateId parameter at the same time.
- * @method string getTemplateId() Obtain Specifies the policy template ID, or the site's global policy.
-- To configure a policy template, specify the policy template ID.
-- To configure the site's global policy, use the @ZoneLevel@Domain parameter value.
-
-Note: When this parameter is used, the Entity parameter will not take effect. Do not use this parameter and the Entity parameter at the same time.
- * @method void setTemplateId(string $TemplateId) Set Specifies the policy template ID, or the site's global policy.
-- To configure a policy template, specify the policy template ID.
-- To configure the site's global policy, use the @ZoneLevel@Domain parameter value.
-
-Note: When this parameter is used, the Entity parameter will not take effect. Do not use this parameter and the Entity parameter at the same time.
+ * @method string getZoneId() Obtain Zone ID.
+ * @method void setZoneId(string $ZoneId) Set Zone ID.
+ * @method SecurityConfig getSecurityConfig() Obtain Security policy configuration. <li>When the `CustomRule` in the `SecurityPolicy` parameter is set, the `AclConfg` and `IpTableConfg` in the `SecurityConfig` parameter will be ignored;</li> <li>when the `ManagedRule` in the `SecurityPolicy` parameter is set, the `WafConfig` in the `SecurityConfig` parameter will be ignored.</li> <li>For custom rules and managed rule policy configuration, using `SecurityPolicy` parameter to configure settings is recommended.</li>
+ * @method void setSecurityConfig(SecurityConfig $SecurityConfig) Set Security policy configuration. <li>When the `CustomRule` in the `SecurityPolicy` parameter is set, the `AclConfg` and `IpTableConfg` in the `SecurityConfig` parameter will be ignored;</li> <li>when the `ManagedRule` in the `SecurityPolicy` parameter is set, the `WafConfig` in the `SecurityConfig` parameter will be ignored.</li> <li>For custom rules and managed rule policy configuration, using `SecurityPolicy` parameter to configure settings is recommended.</li>
+ * @method SecurityPolicy getSecurityPolicy() Obtain Security policy configuration. The parameter is recommended to use for custom policies and managed rule configurations of web protection, it supports configuring security policies with expression grammar.	
+ * @method void setSecurityPolicy(SecurityPolicy $SecurityPolicy) Set Security policy configuration. The parameter is recommended to use for custom policies and managed rule configurations of web protection, it supports configuring security policies with expression grammar.	
+ * @method string getEntity() Obtain `SecurityPolicy` type, the following parameter values can be used for query: <li>`ZoneDefaultPolicy`: used to specify a query for site-level policies;</li> <li>`Template`: used to specify a query for policy templates. the `TemplateId` parameter needs to be specified simultaneously;</li> <li>`Host`: used to specify a query for domain-level policies (note: when using `Host` to specify a domain name service policy, only domain name services or policy templates that have been applied domain-level policies are supported).</li>	
+ * @method void setEntity(string $Entity) Set `SecurityPolicy` type, the following parameter values can be used for query: <li>`ZoneDefaultPolicy`: used to specify a query for site-level policies;</li> <li>`Template`: used to specify a query for policy templates. the `TemplateId` parameter needs to be specified simultaneously;</li> <li>`Host`: used to specify a query for domain-level policies (note: when using `Host` to specify a domain name service policy, only domain name services or policy templates that have been applied domain-level policies are supported).</li>	
+ * @method string getHost() Obtain Specify the domain name. When the `Entity` parameter value is set to `Host`, use the domain-level policy specified by this parameter to query the domain configuration. For example, use `www.example.com` to configure the domain-level policy for that domain name.
+ * @method void setHost(string $Host) Set Specify the domain name. When the `Entity` parameter value is set to `Host`, use the domain-level policy specified by this parameter to query the domain configuration. For example, use `www.example.com` to configure the domain-level policy for that domain name.
+ * @method string getTemplateId() Obtain Specify the policy template ID. Use this parameter to specify the ID of the policy Template to query the Template configuration when the `Entity` parameter value is set to `Template`.
+ * @method void setTemplateId(string $TemplateId) Set Specify the policy template ID. Use this parameter to specify the ID of the policy Template to query the Template configuration when the `Entity` parameter value is set to `Template`.
  */
 class ModifySecurityPolicyRequest extends AbstractModel
 {
     /**
-     * @var string The site ID.
+     * @var string Zone ID.
      */
     public $ZoneId;
 
     /**
-     * @var SecurityConfig Security configuration.
+     * @var SecurityConfig Security policy configuration. <li>When the `CustomRule` in the `SecurityPolicy` parameter is set, the `AclConfg` and `IpTableConfg` in the `SecurityConfig` parameter will be ignored;</li> <li>when the `ManagedRule` in the `SecurityPolicy` parameter is set, the `WafConfig` in the `SecurityConfig` parameter will be ignored.</li> <li>For custom rules and managed rule policy configuration, using `SecurityPolicy` parameter to configure settings is recommended.</li>
      */
     public $SecurityConfig;
 
     /**
-     * @var string Subdomain/application name.
+     * @var SecurityPolicy Security policy configuration. The parameter is recommended to use for custom policies and managed rule configurations of web protection, it supports configuring security policies with expression grammar.	
+     */
+    public $SecurityPolicy;
 
-Note: When both this parameter and the TemplateId parameter are specified, this parameter will not take effect. Do not specify this parameter and the TemplateId parameter at the same time.
+    /**
+     * @var string `SecurityPolicy` type, the following parameter values can be used for query: <li>`ZoneDefaultPolicy`: used to specify a query for site-level policies;</li> <li>`Template`: used to specify a query for policy templates. the `TemplateId` parameter needs to be specified simultaneously;</li> <li>`Host`: used to specify a query for domain-level policies (note: when using `Host` to specify a domain name service policy, only domain name services or policy templates that have been applied domain-level policies are supported).</li>	
      */
     public $Entity;
 
     /**
-     * @var string Specifies the policy template ID, or the site's global policy.
-- To configure a policy template, specify the policy template ID.
-- To configure the site's global policy, use the @ZoneLevel@Domain parameter value.
+     * @var string Specify the domain name. When the `Entity` parameter value is set to `Host`, use the domain-level policy specified by this parameter to query the domain configuration. For example, use `www.example.com` to configure the domain-level policy for that domain name.
+     */
+    public $Host;
 
-Note: When this parameter is used, the Entity parameter will not take effect. Do not use this parameter and the Entity parameter at the same time.
+    /**
+     * @var string Specify the policy template ID. Use this parameter to specify the ID of the policy Template to query the Template configuration when the `Entity` parameter value is set to `Template`.
      */
     public $TemplateId;
 
     /**
-     * @param string $ZoneId The site ID.
-     * @param SecurityConfig $SecurityConfig Security configuration.
-     * @param string $Entity Subdomain/application name.
-
-Note: When both this parameter and the TemplateId parameter are specified, this parameter will not take effect. Do not specify this parameter and the TemplateId parameter at the same time.
-     * @param string $TemplateId Specifies the policy template ID, or the site's global policy.
-- To configure a policy template, specify the policy template ID.
-- To configure the site's global policy, use the @ZoneLevel@Domain parameter value.
-
-Note: When this parameter is used, the Entity parameter will not take effect. Do not use this parameter and the Entity parameter at the same time.
+     * @param string $ZoneId Zone ID.
+     * @param SecurityConfig $SecurityConfig Security policy configuration. <li>When the `CustomRule` in the `SecurityPolicy` parameter is set, the `AclConfg` and `IpTableConfg` in the `SecurityConfig` parameter will be ignored;</li> <li>when the `ManagedRule` in the `SecurityPolicy` parameter is set, the `WafConfig` in the `SecurityConfig` parameter will be ignored.</li> <li>For custom rules and managed rule policy configuration, using `SecurityPolicy` parameter to configure settings is recommended.</li>
+     * @param SecurityPolicy $SecurityPolicy Security policy configuration. The parameter is recommended to use for custom policies and managed rule configurations of web protection, it supports configuring security policies with expression grammar.	
+     * @param string $Entity `SecurityPolicy` type, the following parameter values can be used for query: <li>`ZoneDefaultPolicy`: used to specify a query for site-level policies;</li> <li>`Template`: used to specify a query for policy templates. the `TemplateId` parameter needs to be specified simultaneously;</li> <li>`Host`: used to specify a query for domain-level policies (note: when using `Host` to specify a domain name service policy, only domain name services or policy templates that have been applied domain-level policies are supported).</li>	
+     * @param string $Host Specify the domain name. When the `Entity` parameter value is set to `Host`, use the domain-level policy specified by this parameter to query the domain configuration. For example, use `www.example.com` to configure the domain-level policy for that domain name.
+     * @param string $TemplateId Specify the policy template ID. Use this parameter to specify the ID of the policy Template to query the Template configuration when the `Entity` parameter value is set to `Template`.
      */
     function __construct()
     {
@@ -103,8 +95,17 @@ Note: When this parameter is used, the Entity parameter will not take effect. Do
             $this->SecurityConfig->deserialize($param["SecurityConfig"]);
         }
 
+        if (array_key_exists("SecurityPolicy",$param) and $param["SecurityPolicy"] !== null) {
+            $this->SecurityPolicy = new SecurityPolicy();
+            $this->SecurityPolicy->deserialize($param["SecurityPolicy"]);
+        }
+
         if (array_key_exists("Entity",$param) and $param["Entity"] !== null) {
             $this->Entity = $param["Entity"];
+        }
+
+        if (array_key_exists("Host",$param) and $param["Host"] !== null) {
+            $this->Host = $param["Host"];
         }
 
         if (array_key_exists("TemplateId",$param) and $param["TemplateId"] !== null) {

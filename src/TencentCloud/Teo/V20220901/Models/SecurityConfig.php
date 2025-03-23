@@ -18,7 +18,7 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Security configuration
+ * Web security configuration.
  *
  * @method WafConfig getWafConfig() Obtain Managed rule. If the parameter is null or not filled, the configuration last set will be used by default.
 Note: This field may return null, indicating that no valid value can be obtained.
@@ -52,6 +52,10 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method SlowPostConfig getSlowPostConfig() Obtain Settings for slow attack defense. If the parameter is null or not filled, the configuration last set will be used by default.Note: This field may return null, indicating that no valid value can be obtained.
  * @method void setSlowPostConfig(SlowPostConfig $SlowPostConfig) Set Settings for slow attack defense. If the parameter is null or not filled, the configuration last set will be used by default.Note: This field may return null, indicating that no valid value can be obtained.
+ * @method DetectLengthLimitConfig getDetectLengthLimitConfig() Obtain Detect the length limit configuration, output parameter only.
+Note: This field may return null, which indicates a failure to obtain a valid value.
+ * @method void setDetectLengthLimitConfig(DetectLengthLimitConfig $DetectLengthLimitConfig) Set Detect the length limit configuration, output parameter only.
+Note: This field may return null, which indicates a failure to obtain a valid value.
  */
 class SecurityConfig extends AbstractModel
 {
@@ -112,6 +116,12 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     public $SlowPostConfig;
 
     /**
+     * @var DetectLengthLimitConfig Detect the length limit configuration, output parameter only.
+Note: This field may return null, which indicates a failure to obtain a valid value.
+     */
+    public $DetectLengthLimitConfig;
+
+    /**
      * @param WafConfig $WafConfig Managed rule. If the parameter is null or not filled, the configuration last set will be used by default.
 Note: This field may return null, indicating that no valid value can be obtained.
      * @param RateLimitConfig $RateLimitConfig Rate limiting. If the parameter is null or not filled, the configuration last set will be used by default.
@@ -128,6 +138,8 @@ Note: This field may return null, indicating that no valid value can be obtained
      * @param TemplateConfig $TemplateConfig Security template settings
 Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param SlowPostConfig $SlowPostConfig Settings for slow attack defense. If the parameter is null or not filled, the configuration last set will be used by default.Note: This field may return null, indicating that no valid value can be obtained.
+     * @param DetectLengthLimitConfig $DetectLengthLimitConfig Detect the length limit configuration, output parameter only.
+Note: This field may return null, which indicates a failure to obtain a valid value.
      */
     function __construct()
     {
@@ -190,6 +202,11 @@ Note: This field may return `null`, indicating that no valid value can be obtain
         if (array_key_exists("SlowPostConfig",$param) and $param["SlowPostConfig"] !== null) {
             $this->SlowPostConfig = new SlowPostConfig();
             $this->SlowPostConfig->deserialize($param["SlowPostConfig"]);
+        }
+
+        if (array_key_exists("DetectLengthLimitConfig",$param) and $param["DetectLengthLimitConfig"] !== null) {
+            $this->DetectLengthLimitConfig = new DetectLengthLimitConfig();
+            $this->DetectLengthLimitConfig->deserialize($param["DetectLengthLimitConfig"]);
         }
     }
 }

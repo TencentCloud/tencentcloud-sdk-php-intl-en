@@ -122,6 +122,7 @@ If there are already EdgeOne plans under the current account, it is recommended 
 ](https://intl.cloud.tencent.com/document/product/1552/105866?from_cn_redirect=1).
 
 This API is used to query the configuration information of an IP group, including the IP group name, IP group content, and the site the IP group belongs to.
+ * @method Models\DescribeSecurityPolicyResponse DescribeSecurityPolicy(Models\DescribeSecurityPolicyRequest $req) This API is used to query the web and security protection configurations.
  * @method Models\DescribeSecurityTemplateBindingsResponse DescribeSecurityTemplateBindings(Models\DescribeSecurityTemplateBindingsRequest $req) This API is used to query bindings of a policy template.
  * @method Models\DescribeTimingL4DataResponse DescribeTimingL4Data(Models\DescribeTimingL4DataRequest $req) This API is used to query the list of L4 traffic data recorded over time.
  * @method Models\DescribeTimingL7AnalysisDataResponse DescribeTimingL7AnalysisData(Models\DescribeTimingL7AnalysisDataRequest $req) This API is used to query the time series data of the L7 domain name. Note that there is a delay of about 10 minutes for this API. It is recommended to pull data from 10 minutes before the current time.
