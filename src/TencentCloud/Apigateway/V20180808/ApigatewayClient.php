@@ -144,7 +144,7 @@ class ApigatewayClient extends AbstractClient
     /**
      * @var string
      */
-    protected $endpoint = "apigateway.tencentcloudapi.com";
+    protected $endpoint = "apigateway.intl.tencentcloudapi.com";
 
     /**
      * @var string

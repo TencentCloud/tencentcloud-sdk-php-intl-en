@@ -115,7 +115,7 @@ class SqlserverClient extends AbstractClient
     /**
      * @var string
      */
-    protected $endpoint = "sqlserver.tencentcloudapi.com";
+    protected $endpoint = "sqlserver.intl.tencentcloudapi.com";
 
     /**
      * @var string

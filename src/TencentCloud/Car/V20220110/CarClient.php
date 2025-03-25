@@ -63,7 +63,7 @@ class CarClient extends AbstractClient
     /**
      * @var string
      */
-    protected $endpoint = "car.tencentcloudapi.com";
+    protected $endpoint = "car.intl.tencentcloudapi.com";
 
     /**
      * @var string

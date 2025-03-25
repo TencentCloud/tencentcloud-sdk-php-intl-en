@@ -121,7 +121,7 @@ class CdnClient extends AbstractClient
     /**
      * @var string
      */
-    protected $endpoint = "cdn.tencentcloudapi.com";
+    protected $endpoint = "cdn.intl.tencentcloudapi.com";
 
     /**
      * @var string

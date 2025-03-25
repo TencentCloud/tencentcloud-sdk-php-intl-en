@@ -86,7 +86,7 @@ class TcaplusdbClient extends AbstractClient
     /**
      * @var string
      */
-    protected $endpoint = "tcaplusdb.tencentcloudapi.com";
+    protected $endpoint = "tcaplusdb.intl.tencentcloudapi.com";
 
     /**
      * @var string

@@ -78,7 +78,7 @@ class PtsClient extends AbstractClient
     /**
      * @var string
      */
-    protected $endpoint = "pts.tencentcloudapi.com";
+    protected $endpoint = "pts.intl.tencentcloudapi.com";
 
     /**
      * @var string

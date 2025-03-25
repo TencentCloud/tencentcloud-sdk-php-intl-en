@@ -48,7 +48,7 @@ class GpmClient extends AbstractClient
     /**
      * @var string
      */
-    protected $endpoint = "gpm.tencentcloudapi.com";
+    protected $endpoint = "gpm.intl.tencentcloudapi.com";
 
     /**
      * @var string

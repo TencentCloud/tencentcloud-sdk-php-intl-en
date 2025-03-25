@@ -106,7 +106,7 @@ class CfwClient extends AbstractClient
     /**
      * @var string
      */
-    protected $endpoint = "cfw.tencentcloudapi.com";
+    protected $endpoint = "cfw.intl.tencentcloudapi.com";
 
     /**
      * @var string

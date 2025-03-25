@@ -63,7 +63,7 @@ class MdlClient extends AbstractClient
     /**
      * @var string
      */
-    protected $endpoint = "mdl.tencentcloudapi.com";
+    protected $endpoint = "mdl.intl.tencentcloudapi.com";
 
     /**
      * @var string

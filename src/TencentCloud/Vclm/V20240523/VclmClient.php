@@ -32,7 +32,7 @@ class VclmClient extends AbstractClient
     /**
      * @var string
      */
-    protected $endpoint = "vclm.tencentcloudapi.com";
+    protected $endpoint = "vclm.intl.tencentcloudapi.com";
 
     /**
      * @var string

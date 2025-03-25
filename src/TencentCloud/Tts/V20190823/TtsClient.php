@@ -35,7 +35,7 @@ class TtsClient extends AbstractClient
     /**
      * @var string
      */
-    protected $endpoint = "tts.tencentcloudapi.com";
+    protected $endpoint = "tts.intl.tencentcloudapi.com";
 
     /**
      * @var string

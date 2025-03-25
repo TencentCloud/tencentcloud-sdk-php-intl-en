@@ -98,7 +98,7 @@ class DcdbClient extends AbstractClient
     /**
      * @var string
      */
-    protected $endpoint = "dcdb.tencentcloudapi.com";
+    protected $endpoint = "dcdb.intl.tencentcloudapi.com";
 
     /**
      * @var string

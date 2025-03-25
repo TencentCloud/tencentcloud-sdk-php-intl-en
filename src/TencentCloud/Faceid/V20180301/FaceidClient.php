@@ -54,7 +54,7 @@ class FaceidClient extends AbstractClient
     /**
      * @var string
      */
-    protected $endpoint = "faceid.tencentcloudapi.com";
+    protected $endpoint = "faceid.intl.tencentcloudapi.com";
 
     /**
      * @var string

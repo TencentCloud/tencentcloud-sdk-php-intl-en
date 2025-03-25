@@ -67,7 +67,7 @@ class DnspodClient extends AbstractClient
     /**
      * @var string
      */
-    protected $endpoint = "dnspod.tencentcloudapi.com";
+    protected $endpoint = "dnspod.intl.tencentcloudapi.com";
 
     /**
      * @var string

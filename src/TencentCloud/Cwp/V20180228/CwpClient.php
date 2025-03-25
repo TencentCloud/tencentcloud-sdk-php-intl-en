@@ -514,7 +514,7 @@ class CwpClient extends AbstractClient
     /**
      * @var string
      */
-    protected $endpoint = "cwp.tencentcloudapi.com";
+    protected $endpoint = "cwp.intl.tencentcloudapi.com";
 
     /**
      * @var string

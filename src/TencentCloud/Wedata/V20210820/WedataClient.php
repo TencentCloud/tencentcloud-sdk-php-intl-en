@@ -265,7 +265,7 @@ class WedataClient extends AbstractClient
     /**
      * @var string
      */
-    protected $endpoint = "wedata.tencentcloudapi.com";
+    protected $endpoint = "wedata.intl.tencentcloudapi.com";
 
     /**
      * @var string

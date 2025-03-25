@@ -91,7 +91,7 @@ class CccClient extends AbstractClient
     /**
      * @var string
      */
-    protected $endpoint = "ccc.tencentcloudapi.com";
+    protected $endpoint = "ccc.intl.tencentcloudapi.com";
 
     /**
      * @var string

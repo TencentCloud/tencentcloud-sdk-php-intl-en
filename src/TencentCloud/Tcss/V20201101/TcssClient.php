@@ -373,7 +373,7 @@ class TcssClient extends AbstractClient
     /**
      * @var string
      */
-    protected $endpoint = "tcss.tencentcloudapi.com";
+    protected $endpoint = "tcss.intl.tencentcloudapi.com";
 
     /**
      * @var string

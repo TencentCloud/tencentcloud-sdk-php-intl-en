@@ -78,7 +78,7 @@ class EcdnClient extends AbstractClient
     /**
      * @var string
      */
-    protected $endpoint = "ecdn.tencentcloudapi.com";
+    protected $endpoint = "ecdn.intl.tencentcloudapi.com";
 
     /**
      * @var string

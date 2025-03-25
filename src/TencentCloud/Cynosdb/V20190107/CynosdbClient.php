@@ -146,7 +146,7 @@ class CynosdbClient extends AbstractClient
     /**
      * @var string
      */
-    protected $endpoint = "cynosdb.tencentcloudapi.com";
+    protected $endpoint = "cynosdb.intl.tencentcloudapi.com";
 
     /**
      * @var string

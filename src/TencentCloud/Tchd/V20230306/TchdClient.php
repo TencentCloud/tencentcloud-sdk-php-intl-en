@@ -31,7 +31,7 @@ class TchdClient extends AbstractClient
     /**
      * @var string
      */
-    protected $endpoint = "tchd.tencentcloudapi.com";
+    protected $endpoint = "tchd.intl.tencentcloudapi.com";
 
     /**
      * @var string

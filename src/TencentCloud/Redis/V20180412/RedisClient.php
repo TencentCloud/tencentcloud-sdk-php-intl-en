@@ -136,7 +136,7 @@ class RedisClient extends AbstractClient
     /**
      * @var string
      */
-    protected $endpoint = "redis.tencentcloudapi.com";
+    protected $endpoint = "redis.intl.tencentcloudapi.com";
 
     /**
      * @var string

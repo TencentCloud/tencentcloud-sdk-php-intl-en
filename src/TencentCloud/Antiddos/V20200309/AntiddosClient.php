@@ -107,7 +107,7 @@ class AntiddosClient extends AbstractClient
     /**
      * @var string
      */
-    protected $endpoint = "antiddos.tencentcloudapi.com";
+    protected $endpoint = "antiddos.intl.tencentcloudapi.com";
 
     /**
      * @var string

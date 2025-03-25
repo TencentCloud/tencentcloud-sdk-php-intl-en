@@ -61,7 +61,7 @@ class CsipClient extends AbstractClient
     /**
      * @var string
      */
-    protected $endpoint = "csip.tencentcloudapi.com";
+    protected $endpoint = "csip.intl.tencentcloudapi.com";
 
     /**
      * @var string

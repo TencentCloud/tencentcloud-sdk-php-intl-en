@@ -32,7 +32,7 @@ class DmsClient extends AbstractClient
     /**
      * @var string
      */
-    protected $endpoint = "dms.tencentcloudapi.com";
+    protected $endpoint = "dms.intl.tencentcloudapi.com";
 
     /**
      * @var string

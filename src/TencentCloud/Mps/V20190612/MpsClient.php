@@ -173,7 +173,7 @@ class MpsClient extends AbstractClient
     /**
      * @var string
      */
-    protected $endpoint = "mps.tencentcloudapi.com";
+    protected $endpoint = "mps.intl.tencentcloudapi.com";
 
     /**
      * @var string

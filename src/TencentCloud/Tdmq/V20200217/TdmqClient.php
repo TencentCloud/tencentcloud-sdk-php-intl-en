@@ -147,7 +147,7 @@ class TdmqClient extends AbstractClient
     /**
      * @var string
      */
-    protected $endpoint = "tdmq.tencentcloudapi.com";
+    protected $endpoint = "tdmq.intl.tencentcloudapi.com";
 
     /**
      * @var string

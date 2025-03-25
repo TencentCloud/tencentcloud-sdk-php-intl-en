@@ -37,7 +37,7 @@ class MspClient extends AbstractClient
     /**
      * @var string
      */
-    protected $endpoint = "msp.tencentcloudapi.com";
+    protected $endpoint = "msp.intl.tencentcloudapi.com";
 
     /**
      * @var string

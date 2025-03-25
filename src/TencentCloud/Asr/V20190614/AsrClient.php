@@ -47,7 +47,7 @@ class AsrClient extends AbstractClient
     /**
      * @var string
      */
-    protected $endpoint = "asr.tencentcloudapi.com";
+    protected $endpoint = "asr.intl.tencentcloudapi.com";
 
     /**
      * @var string

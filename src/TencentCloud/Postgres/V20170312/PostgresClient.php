@@ -130,7 +130,7 @@ class PostgresClient extends AbstractClient
     /**
      * @var string
      */
-    protected $endpoint = "postgres.tencentcloudapi.com";
+    protected $endpoint = "postgres.intl.tencentcloudapi.com";
 
     /**
      * @var string

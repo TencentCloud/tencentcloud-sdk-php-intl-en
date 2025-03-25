@@ -32,7 +32,7 @@ class TmtClient extends AbstractClient
     /**
      * @var string
      */
-    protected $endpoint = "tmt.tencentcloudapi.com";
+    protected $endpoint = "tmt.intl.tencentcloudapi.com";
 
     /**
      * @var string

@@ -533,7 +533,7 @@ class VpcClient extends AbstractClient
     /**
      * @var string
      */
-    protected $endpoint = "vpc.tencentcloudapi.com";
+    protected $endpoint = "vpc.intl.tencentcloudapi.com";
 
     /**
      * @var string

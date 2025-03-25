@@ -57,7 +57,7 @@ class EmrClient extends AbstractClient
     /**
      * @var string
      */
-    protected $endpoint = "emr.tencentcloudapi.com";
+    protected $endpoint = "emr.intl.tencentcloudapi.com";
 
     /**
      * @var string

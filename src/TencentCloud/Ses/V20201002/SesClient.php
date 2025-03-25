@@ -57,7 +57,7 @@ class SesClient extends AbstractClient
     /**
      * @var string
      */
-    protected $endpoint = "ses.tencentcloudapi.com";
+    protected $endpoint = "ses.intl.tencentcloudapi.com";
 
     /**
      * @var string

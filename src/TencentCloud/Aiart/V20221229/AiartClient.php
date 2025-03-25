@@ -32,7 +32,7 @@ class AiartClient extends AbstractClient
     /**
      * @var string
      */
-    protected $endpoint = "aiart.tencentcloudapi.com";
+    protected $endpoint = "aiart.intl.tencentcloudapi.com";
 
     /**
      * @var string

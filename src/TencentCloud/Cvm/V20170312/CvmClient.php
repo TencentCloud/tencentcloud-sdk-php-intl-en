@@ -82,6 +82,7 @@ When a template is created, it defaults to Version 1. You can use `CreateLaunchT
 
 * You can filter the query results with the instance `ID`, name, or billing method. See `Filter` for more information.
 * If no parameter is defined, a certain number of instances under the current account will be returned. The number is specified by `Limit` and is 20 by default.
+ * @method Models\DescribeInstancesAttributesResponse DescribeInstancesAttributes(Models\DescribeInstancesAttributesRequest $req) This API is used to obtain the attributes of specified instances. Currently, it supports querying the custom data UserData of instances.
  * @method Models\DescribeInstancesOperationLimitResponse DescribeInstancesOperationLimit(Models\DescribeInstancesOperationLimitRequest $req) This API is used to query limitations on operations on an instance.
 
 * Currently you can use this API to query the maximum number of times you can modify the configuration of an instance.
@@ -248,7 +249,7 @@ class CvmClient extends AbstractClient
     /**
      * @var string
      */
-    protected $endpoint = "cvm.tencentcloudapi.com";
+    protected $endpoint = "cvm.intl.tencentcloudapi.com";
 
     /**
      * @var string

@@ -46,7 +46,7 @@ class TemClient extends AbstractClient
     /**
      * @var string
      */
-    protected $endpoint = "tem.tencentcloudapi.com";
+    protected $endpoint = "tem.intl.tencentcloudapi.com";
 
     /**
      * @var string

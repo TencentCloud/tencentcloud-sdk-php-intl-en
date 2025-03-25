@@ -53,7 +53,7 @@ class DcClient extends AbstractClient
     /**
      * @var string
      */
-    protected $endpoint = "dc.tencentcloudapi.com";
+    protected $endpoint = "dc.intl.tencentcloudapi.com";
 
     /**
      * @var string

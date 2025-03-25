@@ -50,7 +50,7 @@ class IotcloudClient extends AbstractClient
     /**
      * @var string
      */
-    protected $endpoint = "iotcloud.tencentcloudapi.com";
+    protected $endpoint = "iotcloud.intl.tencentcloudapi.com";
 
     /**
      * @var string

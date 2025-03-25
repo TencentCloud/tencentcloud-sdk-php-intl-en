@@ -209,7 +209,7 @@ class CdbClient extends AbstractClient
     /**
      * @var string
      */
-    protected $endpoint = "cdb.tencentcloudapi.com";
+    protected $endpoint = "cdb.intl.tencentcloudapi.com";
 
     /**
      * @var string

@@ -86,7 +86,7 @@ class CkafkaClient extends AbstractClient
     /**
      * @var string
      */
-    protected $endpoint = "ckafka.tencentcloudapi.com";
+    protected $endpoint = "ckafka.intl.tencentcloudapi.com";
 
     /**
      * @var string

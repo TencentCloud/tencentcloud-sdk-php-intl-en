@@ -74,7 +74,7 @@ class CfsClient extends AbstractClient
     /**
      * @var string
      */
-    protected $endpoint = "cfs.tencentcloudapi.com";
+    protected $endpoint = "cfs.intl.tencentcloudapi.com";
 
     /**
      * @var string

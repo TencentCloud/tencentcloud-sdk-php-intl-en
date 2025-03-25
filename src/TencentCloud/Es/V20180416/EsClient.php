@@ -58,7 +58,7 @@ class EsClient extends AbstractClient
     /**
      * @var string
      */
-    protected $endpoint = "es.tencentcloudapi.com";
+    protected $endpoint = "es.intl.tencentcloudapi.com";
 
     /**
      * @var string

@@ -72,7 +72,7 @@ class DbbrainClient extends AbstractClient
     /**
      * @var string
      */
-    protected $endpoint = "dbbrain.tencentcloudapi.com";
+    protected $endpoint = "dbbrain.intl.tencentcloudapi.com";
 
     /**
      * @var string

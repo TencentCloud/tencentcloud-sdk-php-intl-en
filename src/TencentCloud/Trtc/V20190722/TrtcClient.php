@@ -200,7 +200,7 @@ class TrtcClient extends AbstractClient
     /**
      * @var string
      */
-    protected $endpoint = "trtc.tencentcloudapi.com";
+    protected $endpoint = "trtc.intl.tencentcloudapi.com";
 
     /**
      * @var string

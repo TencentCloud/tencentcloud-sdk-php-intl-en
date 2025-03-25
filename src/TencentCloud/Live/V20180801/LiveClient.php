@@ -243,7 +243,7 @@ class LiveClient extends AbstractClient
     /**
      * @var string
      */
-    protected $endpoint = "live.tencentcloudapi.com";
+    protected $endpoint = "live.intl.tencentcloudapi.com";
 
     /**
      * @var string

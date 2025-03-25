@@ -61,7 +61,7 @@ class TagClient extends AbstractClient
     /**
      * @var string
      */
-    protected $endpoint = "tag.tencentcloudapi.com";
+    protected $endpoint = "tag.intl.tencentcloudapi.com";
 
     /**
      * @var string

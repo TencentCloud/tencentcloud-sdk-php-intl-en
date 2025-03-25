@@ -31,7 +31,7 @@ class RceClient extends AbstractClient
     /**
      * @var string
      */
-    protected $endpoint = "rce.tencentcloudapi.com";
+    protected $endpoint = "rce.intl.tencentcloudapi.com";
 
     /**
      * @var string

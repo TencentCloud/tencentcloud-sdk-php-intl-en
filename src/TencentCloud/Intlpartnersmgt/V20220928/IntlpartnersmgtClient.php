@@ -120,7 +120,7 @@ class IntlpartnersmgtClient extends AbstractClient
     /**
      * @var string
      */
-    protected $endpoint = "intlpartnersmgt.tencentcloudapi.com";
+    protected $endpoint = "intlpartnersmgt.intl.tencentcloudapi.com";
 
     /**
      * @var string

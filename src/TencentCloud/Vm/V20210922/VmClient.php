@@ -36,7 +36,7 @@ class VmClient extends AbstractClient
     /**
      * @var string
      */
-    protected $endpoint = "vm.tencentcloudapi.com";
+    protected $endpoint = "vm.intl.tencentcloudapi.com";
 
     /**
      * @var string

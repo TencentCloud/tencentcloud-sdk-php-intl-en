@@ -66,7 +66,7 @@ class TatClient extends AbstractClient
     /**
      * @var string
      */
-    protected $endpoint = "tat.tencentcloudapi.com";
+    protected $endpoint = "tat.intl.tencentcloudapi.com";
 
     /**
      * @var string

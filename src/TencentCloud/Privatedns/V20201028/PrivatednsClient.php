@@ -60,7 +60,7 @@ class PrivatednsClient extends AbstractClient
     /**
      * @var string
      */
-    protected $endpoint = "privatedns.tencentcloudapi.com";
+    protected $endpoint = "privatedns.intl.tencentcloudapi.com";
 
     /**
      * @var string

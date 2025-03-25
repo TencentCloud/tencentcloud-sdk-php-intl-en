@@ -109,7 +109,7 @@ class DtsClient extends AbstractClient
     /**
      * @var string
      */
-    protected $endpoint = "dts.tencentcloudapi.com";
+    protected $endpoint = "dts.intl.tencentcloudapi.com";
 
     /**
      * @var string

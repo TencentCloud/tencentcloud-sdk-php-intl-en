@@ -54,7 +54,7 @@ class SmsClient extends AbstractClient
     /**
      * @var string
      */
-    protected $endpoint = "sms.tencentcloudapi.com";
+    protected $endpoint = "sms.intl.tencentcloudapi.com";
 
     /**
      * @var string

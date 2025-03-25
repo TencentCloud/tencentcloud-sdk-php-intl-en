@@ -47,7 +47,7 @@ class CmqClient extends AbstractClient
     /**
      * @var string
      */
-    protected $endpoint = "cmq.tencentcloudapi.com";
+    protected $endpoint = "cmq.intl.tencentcloudapi.com";
 
     /**
      * @var string

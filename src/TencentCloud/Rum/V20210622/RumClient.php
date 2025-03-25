@@ -103,7 +103,7 @@ class RumClient extends AbstractClient
     /**
      * @var string
      */
-    protected $endpoint = "rum.tencentcloudapi.com";
+    protected $endpoint = "rum.intl.tencentcloudapi.com";
 
     /**
      * @var string

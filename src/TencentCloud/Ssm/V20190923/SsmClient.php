@@ -64,7 +64,7 @@ class SsmClient extends AbstractClient
     /**
      * @var string
      */
-    protected $endpoint = "ssm.tencentcloudapi.com";
+    protected $endpoint = "ssm.intl.tencentcloudapi.com";
 
     /**
      * @var string

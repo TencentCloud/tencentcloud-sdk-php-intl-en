@@ -61,7 +61,7 @@ class BillingClient extends AbstractClient
     /**
      * @var string
      */
-    protected $endpoint = "billing.tencentcloudapi.com";
+    protected $endpoint = "billing.intl.tencentcloudapi.com";
 
     /**
      * @var string

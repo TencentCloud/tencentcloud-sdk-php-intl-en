@@ -59,7 +59,7 @@ class ChdfsClient extends AbstractClient
     /**
      * @var string
      */
-    protected $endpoint = "chdfs.tencentcloudapi.com";
+    protected $endpoint = "chdfs.intl.tencentcloudapi.com";
 
     /**
      * @var string

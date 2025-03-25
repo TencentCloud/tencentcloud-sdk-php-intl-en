@@ -61,7 +61,7 @@ class ImsClient extends AbstractClient
     /**
      * @var string
      */
-    protected $endpoint = "ims.tencentcloudapi.com";
+    protected $endpoint = "ims.intl.tencentcloudapi.com";
 
     /**
      * @var string

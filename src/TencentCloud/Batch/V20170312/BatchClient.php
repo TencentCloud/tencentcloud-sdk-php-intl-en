@@ -74,7 +74,7 @@ class BatchClient extends AbstractClient
     /**
      * @var string
      */
-    protected $endpoint = "batch.tencentcloudapi.com";
+    protected $endpoint = "batch.intl.tencentcloudapi.com";
 
     /**
      * @var string

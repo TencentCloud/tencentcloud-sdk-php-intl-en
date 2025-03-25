@@ -50,7 +50,7 @@ class CdcClient extends AbstractClient
     /**
      * @var string
      */
-    protected $endpoint = "cdc.tencentcloudapi.com";
+    protected $endpoint = "cdc.intl.tencentcloudapi.com";
 
     /**
      * @var string

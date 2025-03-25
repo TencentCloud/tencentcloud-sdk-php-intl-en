@@ -118,7 +118,7 @@ class TeoClient extends AbstractClient
     /**
      * @var string
      */
-    protected $endpoint = "teo.tencentcloudapi.com";
+    protected $endpoint = "teo.intl.tencentcloudapi.com";
 
     /**
      * @var string

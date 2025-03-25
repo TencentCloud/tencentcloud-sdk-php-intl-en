@@ -127,7 +127,7 @@ class WafClient extends AbstractClient
     /**
      * @var string
      */
-    protected $endpoint = "waf.tencentcloudapi.com";
+    protected $endpoint = "waf.intl.tencentcloudapi.com";
 
     /**
      * @var string

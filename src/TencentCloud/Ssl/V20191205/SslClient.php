@@ -62,7 +62,7 @@ class SslClient extends AbstractClient
     /**
      * @var string
      */
-    protected $endpoint = "ssl.tencentcloudapi.com";
+    protected $endpoint = "ssl.intl.tencentcloudapi.com";
 
     /**
      * @var string

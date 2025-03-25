@@ -287,7 +287,7 @@ class OcrClient extends AbstractClient
     /**
      * @var string
      */
-    protected $endpoint = "ocr.tencentcloudapi.com";
+    protected $endpoint = "ocr.intl.tencentcloudapi.com";
 
     /**
      * @var string

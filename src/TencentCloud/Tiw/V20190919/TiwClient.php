@@ -88,7 +88,7 @@ class TiwClient extends AbstractClient
     /**
      * @var string
      */
-    protected $endpoint = "tiw.tencentcloudapi.com";
+    protected $endpoint = "tiw.intl.tencentcloudapi.com";
 
     /**
      * @var string

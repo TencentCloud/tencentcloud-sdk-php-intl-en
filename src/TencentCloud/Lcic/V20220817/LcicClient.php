@@ -113,7 +113,7 @@ class LcicClient extends AbstractClient
     /**
      * @var string
      */
-    protected $endpoint = "lcic.tencentcloudapi.com";
+    protected $endpoint = "lcic.intl.tencentcloudapi.com";
 
     /**
      * @var string

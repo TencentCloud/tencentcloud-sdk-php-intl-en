@@ -47,7 +47,7 @@ class TmsClient extends AbstractClient
     /**
      * @var string
      */
-    protected $endpoint = "tms.tencentcloudapi.com";
+    protected $endpoint = "tms.intl.tencentcloudapi.com";
 
     /**
      * @var string

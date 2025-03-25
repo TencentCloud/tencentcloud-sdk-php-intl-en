@@ -121,7 +121,7 @@ class GaapClient extends AbstractClient
     /**
      * @var string
      */
-    protected $endpoint = "gaap.tencentcloudapi.com";
+    protected $endpoint = "gaap.intl.tencentcloudapi.com";
 
     /**
      * @var string

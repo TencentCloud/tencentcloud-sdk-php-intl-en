@@ -465,7 +465,7 @@ class VodClient extends AbstractClient
     /**
      * @var string
      */
-    protected $endpoint = "vod.tencentcloudapi.com";
+    protected $endpoint = "vod.intl.tencentcloudapi.com";
 
     /**
      * @var string

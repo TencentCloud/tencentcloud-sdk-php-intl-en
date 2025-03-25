@@ -134,7 +134,7 @@ class TcmppClient extends AbstractClient
     /**
      * @var string
      */
-    protected $endpoint = "tcmpp.tencentcloudapi.com";
+    protected $endpoint = "tcmpp.intl.tencentcloudapi.com";
 
     /**
      * @var string

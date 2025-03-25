@@ -56,7 +56,7 @@ class CloudauditClient extends AbstractClient
     /**
      * @var string
      */
-    protected $endpoint = "cloudaudit.tencentcloudapi.com";
+    protected $endpoint = "cloudaudit.intl.tencentcloudapi.com";
 
     /**
      * @var string

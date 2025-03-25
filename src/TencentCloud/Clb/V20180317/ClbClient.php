@@ -170,7 +170,7 @@ class ClbClient extends AbstractClient
     /**
      * @var string
      */
-    protected $endpoint = "clb.tencentcloudapi.com";
+    protected $endpoint = "clb.intl.tencentcloudapi.com";
 
     /**
      * @var string

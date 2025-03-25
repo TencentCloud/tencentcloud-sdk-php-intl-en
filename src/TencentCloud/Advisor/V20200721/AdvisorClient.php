@@ -32,7 +32,7 @@ class AdvisorClient extends AbstractClient
     /**
      * @var string
      */
-    protected $endpoint = "advisor.tencentcloudapi.com";
+    protected $endpoint = "advisor.intl.tencentcloudapi.com";
 
     /**
      * @var string

@@ -41,7 +41,7 @@ class TkeClient extends AbstractClient
     /**
      * @var string
      */
-    protected $endpoint = "tke.tencentcloudapi.com";
+    protected $endpoint = "tke.intl.tencentcloudapi.com";
 
     /**
      * @var string

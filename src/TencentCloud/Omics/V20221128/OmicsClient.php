@@ -50,7 +50,7 @@ class OmicsClient extends AbstractClient
     /**
      * @var string
      */
-    protected $endpoint = "omics.tencentcloudapi.com";
+    protected $endpoint = "omics.intl.tencentcloudapi.com";
 
     /**
      * @var string

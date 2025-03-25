@@ -157,7 +157,7 @@ class CbsClient extends AbstractClient
     /**
      * @var string
      */
-    protected $endpoint = "cbs.tencentcloudapi.com";
+    protected $endpoint = "cbs.intl.tencentcloudapi.com";
 
     /**
      * @var string

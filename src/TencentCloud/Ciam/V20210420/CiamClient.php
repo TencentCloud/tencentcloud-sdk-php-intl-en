@@ -31,7 +31,7 @@ class CiamClient extends AbstractClient
     /**
      * @var string
      */
-    protected $endpoint = "ciam.tencentcloudapi.com";
+    protected $endpoint = "ciam.intl.tencentcloudapi.com";
 
     /**
      * @var string

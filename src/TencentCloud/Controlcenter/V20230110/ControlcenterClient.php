@@ -31,7 +31,7 @@ class ControlcenterClient extends AbstractClient
     /**
      * @var string
      */
-    protected $endpoint = "controlcenter.tencentcloudapi.com";
+    protected $endpoint = "controlcenter.intl.tencentcloudapi.com";
 
     /**
      * @var string

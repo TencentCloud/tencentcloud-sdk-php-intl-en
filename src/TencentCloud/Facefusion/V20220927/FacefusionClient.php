@@ -37,7 +37,7 @@ class FacefusionClient extends AbstractClient
     /**
      * @var string
      */
-    protected $endpoint = "facefusion.tencentcloudapi.com";
+    protected $endpoint = "facefusion.intl.tencentcloudapi.com";
 
     /**
      * @var string

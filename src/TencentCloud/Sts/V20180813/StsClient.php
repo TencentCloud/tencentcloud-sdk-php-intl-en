@@ -36,7 +36,7 @@ class StsClient extends AbstractClient
     /**
      * @var string
      */
-    protected $endpoint = "sts.tencentcloudapi.com";
+    protected $endpoint = "sts.intl.tencentcloudapi.com";
 
     /**
      * @var string

@@ -59,7 +59,7 @@ class MongodbClient extends AbstractClient
     /**
      * @var string
      */
-    protected $endpoint = "mongodb.tencentcloudapi.com";
+    protected $endpoint = "mongodb.intl.tencentcloudapi.com";
 
     /**
      * @var string

@@ -31,7 +31,7 @@ class CaptchaClient extends AbstractClient
     /**
      * @var string
      */
-    protected $endpoint = "captcha.tencentcloudapi.com";
+    protected $endpoint = "captcha.intl.tencentcloudapi.com";
 
     /**
      * @var string

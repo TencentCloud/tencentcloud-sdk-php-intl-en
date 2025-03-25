@@ -38,7 +38,7 @@ class CdwpgClient extends AbstractClient
     /**
      * @var string
      */
-    protected $endpoint = "cdwpg.tencentcloudapi.com";
+    protected $endpoint = "cdwpg.intl.tencentcloudapi.com";
 
     /**
      * @var string

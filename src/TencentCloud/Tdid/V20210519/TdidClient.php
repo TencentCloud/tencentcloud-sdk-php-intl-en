@@ -84,7 +84,7 @@ class TdidClient extends AbstractClient
     /**
      * @var string
      */
-    protected $endpoint = "tdid.tencentcloudapi.com";
+    protected $endpoint = "tdid.intl.tencentcloudapi.com";
 
     /**
      * @var string

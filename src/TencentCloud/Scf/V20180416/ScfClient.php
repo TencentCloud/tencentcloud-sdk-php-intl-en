@@ -79,7 +79,7 @@ class ScfClient extends AbstractClient
     /**
      * @var string
      */
-    protected $endpoint = "scf.tencentcloudapi.com";
+    protected $endpoint = "scf.intl.tencentcloudapi.com";
 
     /**
      * @var string

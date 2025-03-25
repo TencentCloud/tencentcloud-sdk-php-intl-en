@@ -242,7 +242,7 @@ class AutoscalingClient extends AbstractClient
     /**
      * @var string
      */
-    protected $endpoint = "as.tencentcloudapi.com";
+    protected $endpoint = "as.intl.tencentcloudapi.com";
 
     /**
      * @var string

@@ -49,7 +49,7 @@ class GwlbClient extends AbstractClient
     /**
      * @var string
      */
-    protected $endpoint = "gwlb.tencentcloudapi.com";
+    protected $endpoint = "gwlb.intl.tencentcloudapi.com";
 
     /**
      * @var string

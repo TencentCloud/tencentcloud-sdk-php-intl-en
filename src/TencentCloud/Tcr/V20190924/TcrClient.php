@@ -108,7 +108,7 @@ class TcrClient extends AbstractClient
     /**
      * @var string
      */
-    protected $endpoint = "tcr.tencentcloudapi.com";
+    protected $endpoint = "tcr.intl.tencentcloudapi.com";
 
     /**
      * @var string

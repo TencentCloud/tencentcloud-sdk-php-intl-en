@@ -134,7 +134,7 @@ class DayuClient extends AbstractClient
     /**
      * @var string
      */
-    protected $endpoint = "dayu.tencentcloudapi.com";
+    protected $endpoint = "dayu.intl.tencentcloudapi.com";
 
     /**
      * @var string

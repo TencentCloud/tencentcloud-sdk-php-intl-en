@@ -50,7 +50,7 @@ class OrganizationClient extends AbstractClient
     /**
      * @var string
      */
-    protected $endpoint = "organization.tencentcloudapi.com";
+    protected $endpoint = "organization.intl.tencentcloudapi.com";
 
     /**
      * @var string

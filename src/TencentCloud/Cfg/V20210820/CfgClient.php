@@ -46,7 +46,7 @@ class CfgClient extends AbstractClient
     /**
      * @var string
      */
-    protected $endpoint = "cfg.tencentcloudapi.com";
+    protected $endpoint = "cfg.intl.tencentcloudapi.com";
 
     /**
      * @var string

@@ -197,7 +197,7 @@ class IaiClient extends AbstractClient
     /**
      * @var string
      */
-    protected $endpoint = "iai.tencentcloudapi.com";
+    protected $endpoint = "iai.intl.tencentcloudapi.com";
 
     /**
      * @var string

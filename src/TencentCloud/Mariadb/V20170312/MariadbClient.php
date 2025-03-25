@@ -86,7 +86,7 @@ class MariadbClient extends AbstractClient
     /**
      * @var string
      */
-    protected $endpoint = "mariadb.tencentcloudapi.com";
+    protected $endpoint = "mariadb.intl.tencentcloudapi.com";
 
     /**
      * @var string

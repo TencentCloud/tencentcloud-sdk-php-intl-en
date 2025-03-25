@@ -83,7 +83,7 @@ class MdpClient extends AbstractClient
     /**
      * @var string
      */
-    protected $endpoint = "mdp.tencentcloudapi.com";
+    protected $endpoint = "mdp.intl.tencentcloudapi.com";
 
     /**
      * @var string

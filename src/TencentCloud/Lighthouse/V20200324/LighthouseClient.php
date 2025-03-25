@@ -232,7 +232,7 @@ class LighthouseClient extends AbstractClient
     /**
      * @var string
      */
-    protected $endpoint = "lighthouse.tencentcloudapi.com";
+    protected $endpoint = "lighthouse.intl.tencentcloudapi.com";
 
     /**
      * @var string

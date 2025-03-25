@@ -85,7 +85,7 @@ class KmsClient extends AbstractClient
     /**
      * @var string
      */
-    protected $endpoint = "kms.tencentcloudapi.com";
+    protected $endpoint = "kms.intl.tencentcloudapi.com";
 
     /**
      * @var string

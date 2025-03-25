@@ -44,7 +44,7 @@ class ApmClient extends AbstractClient
     /**
      * @var string
      */
-    protected $endpoint = "apm.tencentcloudapi.com";
+    protected $endpoint = "apm.intl.tencentcloudapi.com";
 
     /**
      * @var string

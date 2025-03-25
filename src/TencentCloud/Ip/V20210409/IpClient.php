@@ -44,7 +44,7 @@ class IpClient extends AbstractClient
     /**
      * @var string
      */
-    protected $endpoint = "ip.tencentcloudapi.com";
+    protected $endpoint = "ip.intl.tencentcloudapi.com";
 
     /**
      * @var string

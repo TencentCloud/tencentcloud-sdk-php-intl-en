@@ -272,7 +272,7 @@ class ClsClient extends AbstractClient
     /**
      * @var string
      */
-    protected $endpoint = "cls.tencentcloudapi.com";
+    protected $endpoint = "cls.intl.tencentcloudapi.com";
 
     /**
      * @var string

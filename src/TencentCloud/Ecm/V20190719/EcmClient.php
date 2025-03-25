@@ -189,7 +189,7 @@ class EcmClient extends AbstractClient
     /**
      * @var string
      */
-    protected $endpoint = "ecm.tencentcloudapi.com";
+    protected $endpoint = "ecm.intl.tencentcloudapi.com";
 
     /**
      * @var string

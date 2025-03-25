@@ -104,7 +104,7 @@ class YunjingClient extends AbstractClient
     /**
      * @var string
      */
-    protected $endpoint = "yunjing.tencentcloudapi.com";
+    protected $endpoint = "yunjing.intl.tencentcloudapi.com";
 
     /**
      * @var string

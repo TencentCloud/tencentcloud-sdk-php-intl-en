@@ -113,7 +113,7 @@ class CamClient extends AbstractClient
     /**
      * @var string
      */
-    protected $endpoint = "cam.tencentcloudapi.com";
+    protected $endpoint = "cam.intl.tencentcloudapi.com";
 
     /**
      * @var string

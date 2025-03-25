@@ -70,7 +70,7 @@ class EiamClient extends AbstractClient
     /**
      * @var string
      */
-    protected $endpoint = "eiam.tencentcloudapi.com";
+    protected $endpoint = "eiam.intl.tencentcloudapi.com";
 
     /**
      * @var string

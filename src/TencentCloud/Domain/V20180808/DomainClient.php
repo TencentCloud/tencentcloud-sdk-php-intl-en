@@ -54,7 +54,7 @@ class DomainClient extends AbstractClient
     /**
      * @var string
      */
-    protected $endpoint = "domain.tencentcloudapi.com";
+    protected $endpoint = "domain.intl.tencentcloudapi.com";
 
     /**
      * @var string

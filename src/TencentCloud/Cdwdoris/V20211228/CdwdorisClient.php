@@ -107,7 +107,7 @@ class CdwdorisClient extends AbstractClient
     /**
      * @var string
      */
-    protected $endpoint = "cdwdoris.tencentcloudapi.com";
+    protected $endpoint = "cdwdoris.intl.tencentcloudapi.com";
 
     /**
      * @var string

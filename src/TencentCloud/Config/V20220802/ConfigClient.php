@@ -36,7 +36,7 @@ class ConfigClient extends AbstractClient
     /**
      * @var string
      */
-    protected $endpoint = "config.tencentcloudapi.com";
+    protected $endpoint = "config.intl.tencentcloudapi.com";
 
     /**
      * @var string

@@ -49,7 +49,7 @@ class TrroClient extends AbstractClient
     /**
      * @var string
      */
-    protected $endpoint = "trro.tencentcloudapi.com";
+    protected $endpoint = "trro.intl.tencentcloudapi.com";
 
     /**
      * @var string

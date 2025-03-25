@@ -133,7 +133,7 @@ class DlcClient extends AbstractClient
     /**
      * @var string
      */
-    protected $endpoint = "dlc.tencentcloudapi.com";
+    protected $endpoint = "dlc.intl.tencentcloudapi.com";
 
     /**
      * @var string

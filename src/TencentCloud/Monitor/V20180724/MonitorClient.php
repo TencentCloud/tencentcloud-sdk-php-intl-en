@@ -193,7 +193,7 @@ class MonitorClient extends AbstractClient
     /**
      * @var string
      */
-    protected $endpoint = "monitor.tencentcloudapi.com";
+    protected $endpoint = "monitor.intl.tencentcloudapi.com";
 
     /**
      * @var string

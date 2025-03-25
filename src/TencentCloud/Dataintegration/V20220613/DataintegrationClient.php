@@ -31,7 +31,7 @@ class DataintegrationClient extends AbstractClient
     /**
      * @var string
      */
-    protected $endpoint = "dataintegration.tencentcloudapi.com";
+    protected $endpoint = "dataintegration.intl.tencentcloudapi.com";
 
     /**
      * @var string

@@ -60,7 +60,7 @@ class GseClient extends AbstractClient
     /**
      * @var string
      */
-    protected $endpoint = "gse.tencentcloudapi.com";
+    protected $endpoint = "gse.intl.tencentcloudapi.com";
 
     /**
      * @var string
