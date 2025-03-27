@@ -4,7 +4,7 @@ Tencent Cloud SDK for PHP helps PHP developers debug and use TencentCloud APIs w
 # Dependent Environment
 1. PHP 5.6.33 or higher
 2. Activate your product in the Tencent Cloud Console
-3. Get the `SecretID`, `SecretKey`, and `endpoint`. The general format of endpoint is `*.tencentcloudapi.com`. For example, the `endpoint` of CVM is `cvm.intl.tencentcloudapi.com`. For more information, please see the documentation of the specified product.
+3. Get the `SecretID`, `SecretKey`, and `endpoint`. The general format of endpoint is `*.intl.tencentcloudapi.com`. For example, the `endpoint` of CVM is `cvm.intl.tencentcloudapi.com`. For more information, please see the documentation of the specified product.
 
 # Installation
 Before installing Tencent Cloud SDK for PHP and using TencentCloud API, you need to apply for security credentials in the Tencent Cloud Console, which consists of `SecretID` and `SecretKey`. `SecretID` is for identifying the API requester. `SecretKey` is a key used for signature string encryption and authentication by the server. Please keep your `SecretKey` private and do not disclose it to others.
