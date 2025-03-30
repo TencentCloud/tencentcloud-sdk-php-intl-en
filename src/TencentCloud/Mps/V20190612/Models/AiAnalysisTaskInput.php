@@ -22,12 +22,20 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getDefinition() Obtain Video content analysis template ID.
  * @method void setDefinition(integer $Definition) Set Video content analysis template ID.
- * @method string getExtendedParameter() Obtain An extended parameter, whose value is a stringfied JSON.
-Note: This parameter is for customers with special requirements. It needs to be customized offline.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setExtendedParameter(string $ExtendedParameter) Set An extended parameter, whose value is a stringfied JSON.
-Note: This parameter is for customers with special requirements. It needs to be customized offline.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getExtendedParameter() Obtain Additional parameter. Its value is a serialized JSON string.
+Note: This parameter is used to meet customization requirements. References:
+Smart erase: https://intl.cloud.tencent.com/document/product/862/101530?from_cn_redirect=1
+Video splitting: https://intl.cloud.tencent.com/document/product/862/112098?from_cn_redirect=1
+Intelligent highlights: https://intl.cloud.tencent.com/document/product/862/107280?from_cn_redirect=1
+Horizontal-to-vertical video transformation: https://intl.cloud.tencent.com/document/product/862/112112?from_cn_redirect=1
+Note: This field may return null, indicating that no valid value can be obtained.
+ * @method void setExtendedParameter(string $ExtendedParameter) Set Additional parameter. Its value is a serialized JSON string.
+Note: This parameter is used to meet customization requirements. References:
+Smart erase: https://intl.cloud.tencent.com/document/product/862/101530?from_cn_redirect=1
+Video splitting: https://intl.cloud.tencent.com/document/product/862/112098?from_cn_redirect=1
+Intelligent highlights: https://intl.cloud.tencent.com/document/product/862/107280?from_cn_redirect=1
+Horizontal-to-vertical video transformation: https://intl.cloud.tencent.com/document/product/862/112112?from_cn_redirect=1
+Note: This field may return null, indicating that no valid value can be obtained.
  */
 class AiAnalysisTaskInput extends AbstractModel
 {
@@ -37,17 +45,25 @@ class AiAnalysisTaskInput extends AbstractModel
     public $Definition;
 
     /**
-     * @var string An extended parameter, whose value is a stringfied JSON.
-Note: This parameter is for customers with special requirements. It needs to be customized offline.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Additional parameter. Its value is a serialized JSON string.
+Note: This parameter is used to meet customization requirements. References:
+Smart erase: https://intl.cloud.tencent.com/document/product/862/101530?from_cn_redirect=1
+Video splitting: https://intl.cloud.tencent.com/document/product/862/112098?from_cn_redirect=1
+Intelligent highlights: https://intl.cloud.tencent.com/document/product/862/107280?from_cn_redirect=1
+Horizontal-to-vertical video transformation: https://intl.cloud.tencent.com/document/product/862/112112?from_cn_redirect=1
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public $ExtendedParameter;
 
     /**
      * @param integer $Definition Video content analysis template ID.
-     * @param string $ExtendedParameter An extended parameter, whose value is a stringfied JSON.
-Note: This parameter is for customers with special requirements. It needs to be customized offline.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $ExtendedParameter Additional parameter. Its value is a serialized JSON string.
+Note: This parameter is used to meet customization requirements. References:
+Smart erase: https://intl.cloud.tencent.com/document/product/862/101530?from_cn_redirect=1
+Video splitting: https://intl.cloud.tencent.com/document/product/862/112098?from_cn_redirect=1
+Intelligent highlights: https://intl.cloud.tencent.com/document/product/862/107280?from_cn_redirect=1
+Horizontal-to-vertical video transformation: https://intl.cloud.tencent.com/document/product/862/112112?from_cn_redirect=1
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     function __construct()
     {

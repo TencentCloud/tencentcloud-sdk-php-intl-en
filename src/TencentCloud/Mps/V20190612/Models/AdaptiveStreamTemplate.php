@@ -36,6 +36,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRemoveVideo(integer $RemoveVideo) Set Whether to remove video stream. Valid values:
 <li>0: no,</li>
 <li>1: yes.</li>
+ * @method array getAudioList() Obtain List of audio parameter information.
+The parameter array has a maximum length of 64.
+Note: This field may return null, indicating that no valid value can be obtained.
+ * @method void setAudioList(array $AudioList) Set List of audio parameter information.
+The parameter array has a maximum length of 64.
+Note: This field may return null, indicating that no valid value can be obtained.
  */
 class AdaptiveStreamTemplate extends AbstractModel
 {
@@ -64,6 +70,13 @@ class AdaptiveStreamTemplate extends AbstractModel
     public $RemoveVideo;
 
     /**
+     * @var array List of audio parameter information.
+The parameter array has a maximum length of 64.
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public $AudioList;
+
+    /**
      * @param AudioTemplateInfo $Audio Audio parameter information.
      * @param VideoTemplateInfo $Video Video parameter information.
      * @param integer $RemoveAudio Whether to remove audio stream. Valid values:
@@ -72,6 +85,9 @@ class AdaptiveStreamTemplate extends AbstractModel
      * @param integer $RemoveVideo Whether to remove video stream. Valid values:
 <li>0: no,</li>
 <li>1: yes.</li>
+     * @param array $AudioList List of audio parameter information.
+The parameter array has a maximum length of 64.
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     function __construct()
     {
@@ -102,6 +118,15 @@ class AdaptiveStreamTemplate extends AbstractModel
 
         if (array_key_exists("RemoveVideo",$param) and $param["RemoveVideo"] !== null) {
             $this->RemoveVideo = $param["RemoveVideo"];
+        }
+
+        if (array_key_exists("AudioList",$param) and $param["AudioList"] !== null) {
+            $this->AudioList = [];
+            foreach ($param["AudioList"] as $key => $value){
+                $obj = new AudioTemplateInfo();
+                $obj->deserialize($value);
+                array_push($this->AudioList, $obj);
+            }
         }
     }
 }

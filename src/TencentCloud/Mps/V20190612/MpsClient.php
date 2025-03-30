@@ -27,6 +27,7 @@ use TencentCloud\Mps\V20190612\Models as Models;
  * @method Models\CreateAIRecognitionTemplateResponse CreateAIRecognitionTemplate(Models\CreateAIRecognitionTemplateRequest $req) This API is used to create a custom content recognition template. Up to 50 templates can be created.
  * @method Models\CreateAdaptiveDynamicStreamingTemplateResponse CreateAdaptiveDynamicStreamingTemplate(Models\CreateAdaptiveDynamicStreamingTemplateRequest $req) This API is used to create an adaptive bitrate streaming template. Up up to 100 such templates can be created.
  * @method Models\CreateAnimatedGraphicsTemplateResponse CreateAnimatedGraphicsTemplate(Models\CreateAnimatedGraphicsTemplateRequest $req) This API is used to create a custom animated image generating template. Up to 16 templates can be created.
+ * @method Models\CreateAsrHotwordsResponse CreateAsrHotwords(Models\CreateAsrHotwordsRequest $req) This API is used to create a smart subtitle hotword lexicon.
  * @method Models\CreateContentReviewTemplateResponse CreateContentReviewTemplate(Models\CreateContentReviewTemplateRequest $req) This API is used to create a custom content moderation template. Up to 50 templates can be created in total.
  * @method Models\CreateImageSpriteTemplateResponse CreateImageSpriteTemplate(Models\CreateImageSpriteTemplateRequest $req) This API is used to create a custom image sprite generating template. Up to 16 templates can be created.
  * @method Models\CreateLiveRecordTemplateResponse CreateLiveRecordTemplate(Models\CreateLiveRecordTemplateRequest $req) This API is used to create a live recording template.
@@ -45,6 +46,7 @@ use TencentCloud\Mps\V20190612\Models as Models;
 9. Intelligent content recognition (face, full text, text keyword, full speech, and speech keyword)
 
 Note: A scheme is disabled upon creation. You need to manually enable it.
+ * @method Models\CreateSmartSubtitleTemplateResponse CreateSmartSubtitleTemplate(Models\CreateSmartSubtitleTemplateRequest $req) This API is used to create a custom smart subtitle template.
  * @method Models\CreateSnapshotByTimeOffsetTemplateResponse CreateSnapshotByTimeOffsetTemplate(Models\CreateSnapshotByTimeOffsetTemplateRequest $req) This API is used to create a custom time point screencapturing template. Up to 16 templates can be created.
  * @method Models\CreateTranscodeTemplateResponse CreateTranscodeTemplate(Models\CreateTranscodeTemplateRequest $req) This API is used to create a custom transcoding template. Up to 1,000 templates can be created.
  * @method Models\CreateWatermarkTemplateResponse CreateWatermarkTemplate(Models\CreateWatermarkTemplateRequest $req) This API is used to create a custom watermarking template. Up to 1,000 templates can be created.
@@ -67,6 +69,7 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
  * @method Models\DeleteAIRecognitionTemplateResponse DeleteAIRecognitionTemplate(Models\DeleteAIRecognitionTemplateRequest $req) This API is used to delete a custom content recognition template.
  * @method Models\DeleteAdaptiveDynamicStreamingTemplateResponse DeleteAdaptiveDynamicStreamingTemplate(Models\DeleteAdaptiveDynamicStreamingTemplateRequest $req) This API is used to delete an adaptive bitrate streaming template.
  * @method Models\DeleteAnimatedGraphicsTemplateResponse DeleteAnimatedGraphicsTemplate(Models\DeleteAnimatedGraphicsTemplateRequest $req) This API is used to delete a custom animated image generating template.
+ * @method Models\DeleteAsrHotwordsResponse DeleteAsrHotwords(Models\DeleteAsrHotwordsRequest $req) This API is used to delete a smart subtitle hotword lexicon.
  * @method Models\DeleteContentReviewTemplateResponse DeleteContentReviewTemplate(Models\DeleteContentReviewTemplateRequest $req) This API is used to delete a custom content moderation template.
  * @method Models\DeleteImageSpriteTemplateResponse DeleteImageSpriteTemplate(Models\DeleteImageSpriteTemplateRequest $req) This API is used to delete an image sprite generating template.
  * @method Models\DeleteLiveRecordTemplateResponse DeleteLiveRecordTemplate(Models\DeleteLiveRecordTemplateRequest $req) This API is used to delete a live recording template.
@@ -74,6 +77,7 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
  * @method Models\DeleteQualityControlTemplateResponse DeleteQualityControlTemplate(Models\DeleteQualityControlTemplateRequest $req) This API is used to delete a media quality inspection template.
  * @method Models\DeleteSampleSnapshotTemplateResponse DeleteSampleSnapshotTemplate(Models\DeleteSampleSnapshotTemplateRequest $req) This API is used to delete a custom sampled screencapturing template.
  * @method Models\DeleteScheduleResponse DeleteSchedule(Models\DeleteScheduleRequest $req) This API is used to delete a scheme.
+ * @method Models\DeleteSmartSubtitleTemplateResponse DeleteSmartSubtitleTemplate(Models\DeleteSmartSubtitleTemplateRequest $req) This API is used to delete a user-defined smart subtitle template.
  * @method Models\DeleteSnapshotByTimeOffsetTemplateResponse DeleteSnapshotByTimeOffsetTemplate(Models\DeleteSnapshotByTimeOffsetTemplateRequest $req) This API is used to delete a custom time point screencapturing template.
  * @method Models\DeleteTranscodeTemplateResponse DeleteTranscodeTemplate(Models\DeleteTranscodeTemplateRequest $req) This API is used to delete a custom transcoding template.
  * @method Models\DeleteWatermarkTemplateResponse DeleteWatermarkTemplate(Models\DeleteWatermarkTemplateRequest $req) This API is used to delete a custom watermarking template.
@@ -83,6 +87,8 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
  * @method Models\DescribeAIRecognitionTemplatesResponse DescribeAIRecognitionTemplates(Models\DescribeAIRecognitionTemplatesRequest $req) This API is used to get the list of content recognition templates based on unique template ID. The return result includes all eligible custom and preset content recognition templates.
  * @method Models\DescribeAdaptiveDynamicStreamingTemplatesResponse DescribeAdaptiveDynamicStreamingTemplates(Models\DescribeAdaptiveDynamicStreamingTemplatesRequest $req) This API is used to query the list of adaptive bitrate streaming templates and supports paginated queries by filters.
  * @method Models\DescribeAnimatedGraphicsTemplatesResponse DescribeAnimatedGraphicsTemplates(Models\DescribeAnimatedGraphicsTemplatesRequest $req) This API is used to query the list of animated image generating templates and supports paged queries by filters.
+ * @method Models\DescribeAsrHotwordsResponse DescribeAsrHotwords(Models\DescribeAsrHotwordsRequest $req) This API is used to query a smart subtitle hotword lexicon.
+ * @method Models\DescribeAsrHotwordsListResponse DescribeAsrHotwordsList(Models\DescribeAsrHotwordsListRequest $req) This API is used to obtain the hotword lexicon list.
  * @method Models\DescribeContentReviewTemplatesResponse DescribeContentReviewTemplates(Models\DescribeContentReviewTemplatesRequest $req) This API is used to query content moderation templates by template ID. Both custom and preset templates that match the template IDs passed in will be returned.
  * @method Models\DescribeImageSpriteTemplatesResponse DescribeImageSpriteTemplates(Models\DescribeImageSpriteTemplatesRequest $req) This API is used to query the list of image sprite generating templates and supports paged queries by filters.
  * @method Models\DescribeLiveRecordTemplatesResponse DescribeLiveRecordTemplates(Models\DescribeLiveRecordTemplatesRequest $req) This API is used to get a live recording template.
@@ -91,6 +97,7 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
  * @method Models\DescribeQualityControlTemplatesResponse DescribeQualityControlTemplates(Models\DescribeQualityControlTemplatesRequest $req) This API is used to query custom media quality inspection templates, supporting paged queries by conditions.
  * @method Models\DescribeSampleSnapshotTemplatesResponse DescribeSampleSnapshotTemplates(Models\DescribeSampleSnapshotTemplatesRequest $req) This API is used to query the list of sampled screencapturing templates and supports paged queries by filters.
  * @method Models\DescribeSchedulesResponse DescribeSchedules(Models\DescribeSchedulesRequest $req) This API is used to query a scheme.
+ * @method Models\DescribeSmartSubtitleTemplatesResponse DescribeSmartSubtitleTemplates(Models\DescribeSmartSubtitleTemplatesRequest $req) This API is used to obtain the list of smart subtitle templates based on template unique identifier. The returned result includes all matching user-defined smart subtitle templates and system preset smart subtitle templates.
  * @method Models\DescribeSnapshotByTimeOffsetTemplatesResponse DescribeSnapshotByTimeOffsetTemplates(Models\DescribeSnapshotByTimeOffsetTemplatesRequest $req) This API is used to query the list of time point screencapturing templates and supports paged queries by filters.
  * @method Models\DescribeStreamLinkSecurityGroupResponse DescribeStreamLinkSecurityGroup(Models\DescribeStreamLinkSecurityGroupRequest $req) This API is used to query a security group.
  * @method Models\DescribeTaskDetailResponse DescribeTaskDetail(Models\DescribeTaskDetailRequest $req) This API is used to query the details of execution status and result of a task submitted in the last 3 days by task ID.
@@ -126,6 +133,7 @@ Note: templates with an ID below 10000 are preset and cannot be modified.
  * @method Models\ModifyAIRecognitionTemplateResponse ModifyAIRecognitionTemplate(Models\ModifyAIRecognitionTemplateRequest $req) This API is used to modify a custom content recognition template.
  * @method Models\ModifyAdaptiveDynamicStreamingTemplateResponse ModifyAdaptiveDynamicStreamingTemplate(Models\ModifyAdaptiveDynamicStreamingTemplateRequest $req) This API is used to modify an adaptive bitrate streaming template.
  * @method Models\ModifyAnimatedGraphicsTemplateResponse ModifyAnimatedGraphicsTemplate(Models\ModifyAnimatedGraphicsTemplateRequest $req) This API is used to modify a custom animated image generating template.
+ * @method Models\ModifyAsrHotwordsResponse ModifyAsrHotwords(Models\ModifyAsrHotwordsRequest $req) This API is used to update a smart subtitle hotword lexicon.
  * @method Models\ModifyContentReviewTemplateResponse ModifyContentReviewTemplate(Models\ModifyContentReviewTemplateRequest $req) This API is used to modify a custom content moderation template.
  * @method Models\ModifyImageSpriteTemplateResponse ModifyImageSpriteTemplate(Models\ModifyImageSpriteTemplateRequest $req) This API is used to modify a custom image sprite generating template.
  * @method Models\ModifyLiveRecordTemplateResponse ModifyLiveRecordTemplate(Models\ModifyLiveRecordTemplateRequest $req) This API is used to modify a live recording template.
@@ -133,6 +141,7 @@ Note: templates with an ID below 10000 are preset and cannot be modified.
  * @method Models\ModifyQualityControlTemplateResponse ModifyQualityControlTemplate(Models\ModifyQualityControlTemplateRequest $req) This API is used to modify a media quality inspection template.
  * @method Models\ModifySampleSnapshotTemplateResponse ModifySampleSnapshotTemplate(Models\ModifySampleSnapshotTemplateRequest $req) This API is used to modify a custom sampled screencapturing template.
  * @method Models\ModifyScheduleResponse ModifySchedule(Models\ModifyScheduleRequest $req) This API is used to modify a scheme.
+ * @method Models\ModifySmartSubtitleTemplateResponse ModifySmartSubtitleTemplate(Models\ModifySmartSubtitleTemplateRequest $req) This API is used to modify a user-defined smart subtitle template.
  * @method Models\ModifySnapshotByTimeOffsetTemplateResponse ModifySnapshotByTimeOffsetTemplate(Models\ModifySnapshotByTimeOffsetTemplateRequest $req) This API is used to modify a custom time point screencapturing template.
  * @method Models\ModifyTranscodeTemplateResponse ModifyTranscodeTemplate(Models\ModifyTranscodeTemplateRequest $req) This API is used to modify a custom transcoding template.
  * @method Models\ModifyWatermarkTemplateResponse ModifyWatermarkTemplate(Models\ModifyWatermarkTemplateRequest $req) This API is used to modify a custom watermarking template. The watermark type cannot be modified.
@@ -153,18 +162,19 @@ Instead of initiating a video processing task, this API is used to help generate
 * Recording
 
 HTTP callbacks are supported for live stream processing events. Notifications can also be written in real time to and read from a CMQ queue. The output files of processing tasks are saved to the storage you specify.
- * @method Models\ProcessMediaResponse ProcessMedia(Models\ProcessMediaRequest $req) This API is used to initiate a processing task for video URLs or media files in Cloud Object Storage (COS). Features include:
-1. Video transcoding (standard transcoding, TSC transcoding, and audio/video enhancement);
-2. Animated image generating;
-3. Screenshot taking at specified time points;
-4. Sampled screenshot taking;
-5. Sprite screenshot taking;
-6. Transcoding to adaptive bitrate streaming;
-7. Intelligent auditing (porn detection and sensitive information detection);
-8. Intelligent analysis (tagging, classification, thumbnail generating, frame-by-frame tagging, video splitting, highlights generating, opening and closing segments recognition, and game timestamping);
-9. Intelligent identification (face, full text, text keyword, full speech, speech keyword, speech translation, and object recognition);
-
+ * @method Models\ProcessMediaResponse ProcessMedia(Models\ProcessMediaRequest $req) This API is used to initiate a processing task for video URLs or media files in COS. Features include:
+1. Video transcoding (standard transcoding, TSC transcoding, and audio/video enhancement).
+2. Video-to-GIF conversion.
+3. Time point screenshot of videos.
+4. Sampled screenshot of videos.
+5. Image sprite of videos.
+6. Adaptive bitrate stream conversion for videos.
+7. Intelligent content moderation (pornography detection and sensitive information detection).
+8. Intelligent content analysis (tag, category, cover, frame tag, video splitting, highlight, opening and ending clips, and game tracking).
+9. Intelligent content recognition (human face, full text, text keyword, full speech, speech keyword, speech translation, and object).
 10. Media quality inspection (live stream format diagnosis, audio and video content detection (jitter, blur, low light, overexposure, black and white edges, black and white screens, screen glitch, noise, mosaic, QR code, and more), and no-reference scoring).
+
+11. Smart subtitle (full speech, speech hotword, and speech translation).
  * @method Models\ResetWorkflowResponse ResetWorkflow(Models\ResetWorkflowRequest $req) This API is used to reset an existing workflow that is disabled.
  */
 

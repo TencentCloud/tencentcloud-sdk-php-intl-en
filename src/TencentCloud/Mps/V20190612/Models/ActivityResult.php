@@ -21,29 +21,31 @@ use TencentCloud\Common\AbstractModel;
  * The execution result of a scheme.
  *
  * @method string getActivityType() Obtain Atomic task type.
-<li>Transcode: transcoding.</li>
-<li>SampleSnapshot: sampled screenshot taking.</li>
-<li>AnimatedGraphics: animated image generating.</li>
-<li>SnapshotByTimeOffset: time point screenshot taking.</li>
-<li>ImageSprites: sprite image generating.</li>
-<li>AdaptiveDynamicStreaming: adaptive bitrate streaming.</li>
-<li>AiContentReview: content moderation.</li>
-<li>AIRecognition: intelligent identification.</li>
-<li>AIAnalysis: intelligent analysis.</li>
-
+<Li>Transcode: transcoding</li>
+<Li>SampleSnapshot: sampled screenshot</li>
+<Li>AnimatedGraphics: conversion to GIF</li>
+<Li>SnapshotByTimeOffset: time point screenshot</li>
+<Li>ImageSprites: image sprite</li>
+<Li>AdaptiveDynamicStreaming: adaptive bitrate stream</li>
+<Li>AiContentReview: content review</li>
+<Li>AIRecognition: intelligent recognition</li>
+<Li>AIAnalysis: intelligent analysis</li>
 <li>AiQualityControl: media quality inspection.</li>
+
+<Li>SmartSubtitles: smart subtitle</li>
  * @method void setActivityType(string $ActivityType) Set Atomic task type.
-<li>Transcode: transcoding.</li>
-<li>SampleSnapshot: sampled screenshot taking.</li>
-<li>AnimatedGraphics: animated image generating.</li>
-<li>SnapshotByTimeOffset: time point screenshot taking.</li>
-<li>ImageSprites: sprite image generating.</li>
-<li>AdaptiveDynamicStreaming: adaptive bitrate streaming.</li>
-<li>AiContentReview: content moderation.</li>
-<li>AIRecognition: intelligent identification.</li>
-<li>AIAnalysis: intelligent analysis.</li>
-
+<Li>Transcode: transcoding</li>
+<Li>SampleSnapshot: sampled screenshot</li>
+<Li>AnimatedGraphics: conversion to GIF</li>
+<Li>SnapshotByTimeOffset: time point screenshot</li>
+<Li>ImageSprites: image sprite</li>
+<Li>AdaptiveDynamicStreaming: adaptive bitrate stream</li>
+<Li>AiContentReview: content review</li>
+<Li>AIRecognition: intelligent recognition</li>
+<Li>AIAnalysis: intelligent analysis</li>
 <li>AiQualityControl: media quality inspection.</li>
+
+<Li>SmartSubtitles: smart subtitle</li>
  * @method ActivityResItem getActivityResItem() Obtain The execution results of the subtasks of the scheme.
  * @method void setActivityResItem(ActivityResItem $ActivityResItem) Set The execution results of the subtasks of the scheme.
  */
@@ -51,17 +53,18 @@ class ActivityResult extends AbstractModel
 {
     /**
      * @var string Atomic task type.
-<li>Transcode: transcoding.</li>
-<li>SampleSnapshot: sampled screenshot taking.</li>
-<li>AnimatedGraphics: animated image generating.</li>
-<li>SnapshotByTimeOffset: time point screenshot taking.</li>
-<li>ImageSprites: sprite image generating.</li>
-<li>AdaptiveDynamicStreaming: adaptive bitrate streaming.</li>
-<li>AiContentReview: content moderation.</li>
-<li>AIRecognition: intelligent identification.</li>
-<li>AIAnalysis: intelligent analysis.</li>
-
+<Li>Transcode: transcoding</li>
+<Li>SampleSnapshot: sampled screenshot</li>
+<Li>AnimatedGraphics: conversion to GIF</li>
+<Li>SnapshotByTimeOffset: time point screenshot</li>
+<Li>ImageSprites: image sprite</li>
+<Li>AdaptiveDynamicStreaming: adaptive bitrate stream</li>
+<Li>AiContentReview: content review</li>
+<Li>AIRecognition: intelligent recognition</li>
+<Li>AIAnalysis: intelligent analysis</li>
 <li>AiQualityControl: media quality inspection.</li>
+
+<Li>SmartSubtitles: smart subtitle</li>
      */
     public $ActivityType;
 
@@ -72,17 +75,18 @@ class ActivityResult extends AbstractModel
 
     /**
      * @param string $ActivityType Atomic task type.
-<li>Transcode: transcoding.</li>
-<li>SampleSnapshot: sampled screenshot taking.</li>
-<li>AnimatedGraphics: animated image generating.</li>
-<li>SnapshotByTimeOffset: time point screenshot taking.</li>
-<li>ImageSprites: sprite image generating.</li>
-<li>AdaptiveDynamicStreaming: adaptive bitrate streaming.</li>
-<li>AiContentReview: content moderation.</li>
-<li>AIRecognition: intelligent identification.</li>
-<li>AIAnalysis: intelligent analysis.</li>
-
+<Li>Transcode: transcoding</li>
+<Li>SampleSnapshot: sampled screenshot</li>
+<Li>AnimatedGraphics: conversion to GIF</li>
+<Li>SnapshotByTimeOffset: time point screenshot</li>
+<Li>ImageSprites: image sprite</li>
+<Li>AdaptiveDynamicStreaming: adaptive bitrate stream</li>
+<Li>AiContentReview: content review</li>
+<Li>AIRecognition: intelligent recognition</li>
+<Li>AIAnalysis: intelligent analysis</li>
 <li>AiQualityControl: media quality inspection.</li>
+
+<Li>SmartSubtitles: smart subtitle</li>
      * @param ActivityResItem $ActivityResItem The execution results of the subtasks of the scheme.
      */
     function __construct()

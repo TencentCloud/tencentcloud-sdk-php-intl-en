@@ -80,6 +80,12 @@ Default value: 2.
 <li>6: 5.1 surround sound.</li>
 When the media encapsulation format is audio (flac, ogg, mp3, and m4a), the number of channels cannot be set to 5.1 surround sound.
 Default value: 2.
+ * @method AudioTrackChannelInfo getTrackChannelInfo() Obtain Merge audio track information.
+This field only takes effec in adaptive bitrate transcoding.
+Note: This field may return null, indicating that no valid value can be obtained.
+ * @method void setTrackChannelInfo(AudioTrackChannelInfo $TrackChannelInfo) Set Merge audio track information.
+This field only takes effec in adaptive bitrate transcoding.
+Note: This field may return null, indicating that no valid value can be obtained.
  */
 class AudioTemplateInfo extends AbstractModel
 {
@@ -130,6 +136,13 @@ Default value: 2.
     public $AudioChannel;
 
     /**
+     * @var AudioTrackChannelInfo Merge audio track information.
+This field only takes effec in adaptive bitrate transcoding.
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public $TrackChannelInfo;
+
+    /**
      * @param string $Codec Audio stream encoding format.
 When audio transcoding is not needed, the value is:
 <li>copy.</li>
@@ -160,6 +173,9 @@ In Hz.
 <li>6: 5.1 surround sound.</li>
 When the media encapsulation format is audio (flac, ogg, mp3, and m4a), the number of channels cannot be set to 5.1 surround sound.
 Default value: 2.
+     * @param AudioTrackChannelInfo $TrackChannelInfo Merge audio track information.
+This field only takes effec in adaptive bitrate transcoding.
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     function __construct()
     {
@@ -188,6 +204,11 @@ Default value: 2.
 
         if (array_key_exists("AudioChannel",$param) and $param["AudioChannel"] !== null) {
             $this->AudioChannel = $param["AudioChannel"];
+        }
+
+        if (array_key_exists("TrackChannelInfo",$param) and $param["TrackChannelInfo"] !== null) {
+            $this->TrackChannelInfo = new AudioTrackChannelInfo();
+            $this->TrackChannelInfo->deserialize($param["TrackChannelInfo"]);
         }
     }
 }

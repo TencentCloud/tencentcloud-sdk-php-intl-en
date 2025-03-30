@@ -50,6 +50,8 @@ Note: This field may return null, indicating that no valid value can be obtained
 Note: This field may return null, indicating that no valid value can be obtained.
  * @method void setEndTime(string $EndTime) Set The end time of a live streaming segment, in the ISO date format.
 Note: This field may return null, indicating that no valid value can be obtained.
+ * @method string getPersonId() Obtain Specifies the character ID.
+ * @method void setPersonId(string $PersonId) Set Specifies the character ID.
  */
 class SegmentRecognitionItem extends AbstractModel
 {
@@ -109,6 +111,11 @@ Note: This field may return null, indicating that no valid value can be obtained
     public $EndTime;
 
     /**
+     * @var string Specifies the character ID.
+     */
+    public $PersonId;
+
+    /**
      * @param float $Confidence 
      * @param float $StartTimeOffset 
      * @param float $EndTimeOffset 
@@ -124,6 +131,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid value can be obtained.
      * @param string $EndTime The end time of a live streaming segment, in the ISO date format.
 Note: This field may return null, indicating that no valid value can be obtained.
+     * @param string $PersonId Specifies the character ID.
      */
     function __construct()
     {
@@ -176,6 +184,10 @@ Note: This field may return null, indicating that no valid value can be obtained
 
         if (array_key_exists("EndTime",$param) and $param["EndTime"] !== null) {
             $this->EndTime = $param["EndTime"];
+        }
+
+        if (array_key_exists("PersonId",$param) and $param["PersonId"] !== null) {
+            $this->PersonId = $param["PersonId"];
         }
     }
 }

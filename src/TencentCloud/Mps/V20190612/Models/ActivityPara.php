@@ -42,6 +42,10 @@ use TencentCloud\Common\AbstractModel;
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setQualityControlTask(AiQualityControlTaskInput $QualityControlTask) Set Media quality inspection task.
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method SmartSubtitlesTaskInput getSmartSubtitlesTask() Obtain Smart subtitle task.
+Note: This field may return null, indicating that no valid value can be obtained.
+ * @method void setSmartSubtitlesTask(SmartSubtitlesTaskInput $SmartSubtitlesTask) Set Smart subtitle task.
+Note: This field may return null, indicating that no valid value can be obtained.
  */
 class ActivityPara extends AbstractModel
 {
@@ -97,6 +101,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $QualityControlTask;
 
     /**
+     * @var SmartSubtitlesTaskInput Smart subtitle task.
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public $SmartSubtitlesTask;
+
+    /**
      * @param TranscodeTaskInput $TranscodeTask A transcoding task.
      * @param AnimatedGraphicTaskInput $AnimatedGraphicTask An animated screenshot generation task.
      * @param SnapshotByTimeOffsetTaskInput $SnapshotByTimeOffsetTask A time point screencapturing task.
@@ -108,6 +118,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param AiRecognitionTaskInput $AiRecognitionTask A content recognition task.
      * @param AiQualityControlTaskInput $QualityControlTask Media quality inspection task.
 Note: This field may return null, indicating that no valid values can be obtained.
+     * @param SmartSubtitlesTaskInput $SmartSubtitlesTask Smart subtitle task.
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     function __construct()
     {
@@ -170,6 +182,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (array_key_exists("QualityControlTask",$param) and $param["QualityControlTask"] !== null) {
             $this->QualityControlTask = new AiQualityControlTaskInput();
             $this->QualityControlTask->deserialize($param["QualityControlTask"]);
+        }
+
+        if (array_key_exists("SmartSubtitlesTask",$param) and $param["SmartSubtitlesTask"] !== null) {
+            $this->SmartSubtitlesTask = new SmartSubtitlesTaskInput();
+            $this->SmartSubtitlesTask->deserialize($param["SmartSubtitlesTask"]);
         }
     }
 }

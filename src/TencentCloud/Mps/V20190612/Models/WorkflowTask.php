@@ -52,6 +52,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setAiQualityControlTaskResult(ScheduleQualityControlTaskResult $AiQualityControlTaskResult) Set Execution status and results of a media quality inspection task.
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method array getSmartSubtitlesTaskResult() Obtain Execution result of the smart subtitle task.
+Note: This field may return null, indicating that no valid value can be obtained.
+ * @method void setSmartSubtitlesTaskResult(array $SmartSubtitlesTaskResult) Set Execution result of the smart subtitle task.
+Note: This field may return null, indicating that no valid value can be obtained.
  */
 class WorkflowTask extends AbstractModel
 {
@@ -116,6 +120,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $AiQualityControlTaskResult;
 
     /**
+     * @var array Execution result of the smart subtitle task.
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public $SmartSubtitlesTaskResult;
+
+    /**
      * @param string $TaskId The media processing task ID.
      * @param string $Status Task flow status. Valid values:
 <li>PROCESSING: Processing;</li>
@@ -132,6 +142,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param array $AiRecognitionResultSet Execution status and result of a video content recognition task.
      * @param ScheduleQualityControlTaskResult $AiQualityControlTaskResult Execution status and results of a media quality inspection task.
 Note: This field may return null, indicating that no valid values can be obtained.
+     * @param array $SmartSubtitlesTaskResult Execution result of the smart subtitle task.
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     function __construct()
     {
@@ -211,6 +223,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (array_key_exists("AiQualityControlTaskResult",$param) and $param["AiQualityControlTaskResult"] !== null) {
             $this->AiQualityControlTaskResult = new ScheduleQualityControlTaskResult();
             $this->AiQualityControlTaskResult->deserialize($param["AiQualityControlTaskResult"]);
+        }
+
+        if (array_key_exists("SmartSubtitlesTaskResult",$param) and $param["SmartSubtitlesTaskResult"] !== null) {
+            $this->SmartSubtitlesTaskResult = [];
+            foreach ($param["SmartSubtitlesTaskResult"] as $key => $value){
+                $obj = new SmartSubtitlesResult();
+                $obj->deserialize($value);
+                array_push($this->SmartSubtitlesTaskResult, $obj);
+            }
         }
     }
 }

@@ -20,23 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * The DRM encryption details.
  *
- * @method string getType() Obtain The encryption type.
-<li>`simpleaes`: AES-128 encryption.</li>
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setType(string $Type) Set The encryption type.
-<li>`simpleaes`: AES-128 encryption.</li>
-Note: This field may return·null, indicating that no valid values can be obtained.
+ * @method string getType() Obtain Encryption type.
+<li>simpleaes: AES-128 encryption</li>
+<li> widevine</li>
+<li>fairplay: not supported for DASH streams</li>
+<li> playready</li>
+Note: This field may return null, indicating that no valid value can be obtained.
+ * @method void setType(string $Type) Set Encryption type.
+<li>simpleaes: AES-128 encryption</li>
+<li> widevine</li>
+<li>fairplay: not supported for DASH streams</li>
+<li> playready</li>
+Note: This field may return null, indicating that no valid value can be obtained.
  * @method SimpleAesDrm getSimpleAesDrm() Obtain The AES-128 encryption details.
 Note: This field may return·null, indicating that no valid values can be obtained.
  * @method void setSimpleAesDrm(SimpleAesDrm $SimpleAesDrm) Set The AES-128 encryption details.
 Note: This field may return·null, indicating that no valid values can be obtained.
+ * @method SpekeDrm getSpekeDrm() Obtain Information about FairPlay, WideVine, and PlayReady encryption.
+ * @method void setSpekeDrm(SpekeDrm $SpekeDrm) Set Information about FairPlay, WideVine, and PlayReady encryption.
  */
 class DrmInfo extends AbstractModel
 {
     /**
-     * @var string The encryption type.
-<li>`simpleaes`: AES-128 encryption.</li>
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var string Encryption type.
+<li>simpleaes: AES-128 encryption</li>
+<li> widevine</li>
+<li>fairplay: not supported for DASH streams</li>
+<li> playready</li>
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public $Type;
 
@@ -47,11 +58,20 @@ Note: This field may return·null, indicating that no valid values can be obtain
     public $SimpleAesDrm;
 
     /**
-     * @param string $Type The encryption type.
-<li>`simpleaes`: AES-128 encryption.</li>
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var SpekeDrm Information about FairPlay, WideVine, and PlayReady encryption.
+     */
+    public $SpekeDrm;
+
+    /**
+     * @param string $Type Encryption type.
+<li>simpleaes: AES-128 encryption</li>
+<li> widevine</li>
+<li>fairplay: not supported for DASH streams</li>
+<li> playready</li>
+Note: This field may return null, indicating that no valid value can be obtained.
      * @param SimpleAesDrm $SimpleAesDrm The AES-128 encryption details.
 Note: This field may return·null, indicating that no valid values can be obtained.
+     * @param SpekeDrm $SpekeDrm Information about FairPlay, WideVine, and PlayReady encryption.
      */
     function __construct()
     {
@@ -73,6 +93,11 @@ Note: This field may return·null, indicating that no valid values can be obtain
         if (array_key_exists("SimpleAesDrm",$param) and $param["SimpleAesDrm"] !== null) {
             $this->SimpleAesDrm = new SimpleAesDrm();
             $this->SimpleAesDrm->deserialize($param["SimpleAesDrm"]);
+        }
+
+        if (array_key_exists("SpekeDrm",$param) and $param["SpekeDrm"] !== null) {
+            $this->SpekeDrm = new SpekeDrm();
+            $this->SpekeDrm->deserialize($param["SpekeDrm"]);
         }
     }
 }

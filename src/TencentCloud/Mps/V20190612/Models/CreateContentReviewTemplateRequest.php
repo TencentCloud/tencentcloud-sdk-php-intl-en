@@ -24,12 +24,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setName(string $Name) Set The name of the content moderation template. Length limit: 64 characters.
  * @method string getComment() Obtain The template description. Length limit: 256 characters.
  * @method void setComment(string $Comment) Set The template description. Length limit: 256 characters.
- * @method PornConfigureInfo getPornConfigure() Obtain Control parameter for porn information
- * @method void setPornConfigure(PornConfigureInfo $PornConfigure) Set Control parameter for porn information
- * @method TerrorismConfigureInfo getTerrorismConfigure() Obtain Control parameter for terrorism information
- * @method void setTerrorismConfigure(TerrorismConfigureInfo $TerrorismConfigure) Set Control parameter for terrorism information
- * @method PoliticalConfigureInfo getPoliticalConfigure() Obtain Control parameter for politically sensitive information
- * @method void setPoliticalConfigure(PoliticalConfigureInfo $PoliticalConfigure) Set Control parameter for politically sensitive information
+ * @method PornConfigureInfo getPornConfigure() Obtain Control parameter for a pornography detection task.
+ * @method void setPornConfigure(PornConfigureInfo $PornConfigure) Set Control parameter for a pornography detection task.
+ * @method TerrorismConfigureInfo getTerrorismConfigure() Obtain Control parameter for a violence detection task.
+ * @method void setTerrorismConfigure(TerrorismConfigureInfo $TerrorismConfigure) Set Control parameter for a violence detection task.
+ * @method PoliticalConfigureInfo getPoliticalConfigure() Obtain Control parameter for a sensitive content detection task.
+ * @method void setPoliticalConfigure(PoliticalConfigureInfo $PoliticalConfigure) Set Control parameter for a sensitive content detection task.
  * @method ProhibitedConfigureInfo getProhibitedConfigure() Obtain Control parameter of prohibited information detection. Prohibited information includes:
 <li>Abusive;</li>
 <li>Drug-related.</li>
@@ -54,17 +54,17 @@ class CreateContentReviewTemplateRequest extends AbstractModel
     public $Comment;
 
     /**
-     * @var PornConfigureInfo Control parameter for porn information
+     * @var PornConfigureInfo Control parameter for a pornography detection task.
      */
     public $PornConfigure;
 
     /**
-     * @var TerrorismConfigureInfo Control parameter for terrorism information
+     * @var TerrorismConfigureInfo Control parameter for a violence detection task.
      */
     public $TerrorismConfigure;
 
     /**
-     * @var PoliticalConfigureInfo Control parameter for politically sensitive information
+     * @var PoliticalConfigureInfo Control parameter for a sensitive content detection task.
      */
     public $PoliticalConfigure;
 
@@ -84,9 +84,9 @@ Note: this parameter is not supported yet.
     /**
      * @param string $Name The name of the content moderation template. Length limit: 64 characters.
      * @param string $Comment The template description. Length limit: 256 characters.
-     * @param PornConfigureInfo $PornConfigure Control parameter for porn information
-     * @param TerrorismConfigureInfo $TerrorismConfigure Control parameter for terrorism information
-     * @param PoliticalConfigureInfo $PoliticalConfigure Control parameter for politically sensitive information
+     * @param PornConfigureInfo $PornConfigure Control parameter for a pornography detection task.
+     * @param TerrorismConfigureInfo $TerrorismConfigure Control parameter for a violence detection task.
+     * @param PoliticalConfigureInfo $PoliticalConfigure Control parameter for a sensitive content detection task.
      * @param ProhibitedConfigureInfo $ProhibitedConfigure Control parameter of prohibited information detection. Prohibited information includes:
 <li>Abusive;</li>
 <li>Drug-related.</li>

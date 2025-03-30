@@ -48,6 +48,32 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setVideoStreamSet(array $VideoStreamSet) Set Video stream information.
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getCallBackExtInfo() Obtain Enhancement items used for video transcoding. Descriptions of enhancement items:
+<li>hdr: HDR configuration</li>
+<li>wd_fps: configuration of frame interpolation for higher frame rate</li>
+<li>video_super_resolution: 	super-resolution configuration</li>
+<li>repair: comprehensive enhancement configuration</li>
+<li>denoise: video denoising configuration</li>
+<Li>color_enhance: color enhancement configuration</li>
+<Li>scratch: scratch removal configuration</li>
+<li>artifact: artifact (glitch) removal configuration</li>
+<li>sharp: detail enhancement configuration</li>
+<Li>low_light: low-light enhancement configuration</li>
+<Li>face_enhance: face enhancement configuration</li>
+Note: This field may return null, indicating that no valid value can be obtained.
+ * @method void setCallBackExtInfo(string $CallBackExtInfo) Set Enhancement items used for video transcoding. Descriptions of enhancement items:
+<li>hdr: HDR configuration</li>
+<li>wd_fps: configuration of frame interpolation for higher frame rate</li>
+<li>video_super_resolution: 	super-resolution configuration</li>
+<li>repair: comprehensive enhancement configuration</li>
+<li>denoise: video denoising configuration</li>
+<Li>color_enhance: color enhancement configuration</li>
+<Li>scratch: scratch removal configuration</li>
+<li>artifact: artifact (glitch) removal configuration</li>
+<li>sharp: detail enhancement configuration</li>
+<Li>low_light: low-light enhancement configuration</li>
+<Li>face_enhance: face enhancement configuration</li>
+Note: This field may return null, indicating that no valid value can be obtained.
  */
 class MediaTranscodeItem extends AbstractModel
 {
@@ -114,6 +140,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $VideoStreamSet;
 
     /**
+     * @var string Enhancement items used for video transcoding. Descriptions of enhancement items:
+<li>hdr: HDR configuration</li>
+<li>wd_fps: configuration of frame interpolation for higher frame rate</li>
+<li>video_super_resolution: 	super-resolution configuration</li>
+<li>repair: comprehensive enhancement configuration</li>
+<li>denoise: video denoising configuration</li>
+<Li>color_enhance: color enhancement configuration</li>
+<Li>scratch: scratch removal configuration</li>
+<li>artifact: artifact (glitch) removal configuration</li>
+<li>sharp: detail enhancement configuration</li>
+<Li>low_light: low-light enhancement configuration</li>
+<Li>face_enhance: face enhancement configuration</li>
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public $CallBackExtInfo;
+
+    /**
      * @param TaskOutputStorage $OutputStorage Target bucket of an output file.
      * @param string $Path Path to an output video file.
      * @param integer $Definition Transcoding specification ID. For more information, please see [Transcoding Parameter Template](https://intl.cloud.tencent.com/document/product/266/33478?from_cn_redirect=1#.E8.BD.AC.E7.A0.81.E6.A8.A1.E6.9D.BF).
@@ -128,6 +171,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param array $VideoStreamSet Video stream information.
 Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $CallBackExtInfo Enhancement items used for video transcoding. Descriptions of enhancement items:
+<li>hdr: HDR configuration</li>
+<li>wd_fps: configuration of frame interpolation for higher frame rate</li>
+<li>video_super_resolution: 	super-resolution configuration</li>
+<li>repair: comprehensive enhancement configuration</li>
+<li>denoise: video denoising configuration</li>
+<Li>color_enhance: color enhancement configuration</li>
+<Li>scratch: scratch removal configuration</li>
+<li>artifact: artifact (glitch) removal configuration</li>
+<li>sharp: detail enhancement configuration</li>
+<Li>low_light: low-light enhancement configuration</li>
+<Li>face_enhance: face enhancement configuration</li>
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     function __construct()
     {
@@ -199,6 +255,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 $obj->deserialize($value);
                 array_push($this->VideoStreamSet, $obj);
             }
+        }
+
+        if (array_key_exists("CallBackExtInfo",$param) and $param["CallBackExtInfo"] !== null) {
+            $this->CallBackExtInfo = $param["CallBackExtInfo"];
         }
     }
 }

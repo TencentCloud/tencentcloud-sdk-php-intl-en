@@ -60,6 +60,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setQualityControlTask(ScheduleQualityControlTaskResult $QualityControlTask) Set Media quality inspection task output.
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method ScheduleSmartSubtitleTaskResult getSmartSubtitlesTask() Obtain Smart subtitle task output.
+Note: This field may return null, indicating that no valid value can be obtained.
+ * @method void setSmartSubtitlesTask(ScheduleSmartSubtitleTaskResult $SmartSubtitlesTask) Set Smart subtitle task output.
+Note: This field may return null, indicating that no valid value can be obtained.
  */
 class ActivityResItem extends AbstractModel
 {
@@ -124,6 +128,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $QualityControlTask;
 
     /**
+     * @var ScheduleSmartSubtitleTaskResult Smart subtitle task output.
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public $SmartSubtitlesTask;
+
+    /**
      * @param MediaProcessTaskTranscodeResult $TranscodeTask The result of a transcoding task.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param MediaProcessTaskAnimatedGraphicResult $AnimatedGraphicTask The result of an animated image generating task.
@@ -144,6 +154,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param ScheduleQualityControlTaskResult $QualityControlTask Media quality inspection task output.
 Note: This field may return null, indicating that no valid values can be obtained.
+     * @param ScheduleSmartSubtitleTaskResult $SmartSubtitlesTask Smart subtitle task output.
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     function __construct()
     {
@@ -206,6 +218,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (array_key_exists("QualityControlTask",$param) and $param["QualityControlTask"] !== null) {
             $this->QualityControlTask = new ScheduleQualityControlTaskResult();
             $this->QualityControlTask->deserialize($param["QualityControlTask"]);
+        }
+
+        if (array_key_exists("SmartSubtitlesTask",$param) and $param["SmartSubtitlesTask"] !== null) {
+            $this->SmartSubtitlesTask = new ScheduleSmartSubtitleTaskResult();
+            $this->SmartSubtitlesTask->deserialize($param["SmartSubtitlesTask"]);
         }
     }
 }

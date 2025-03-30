@@ -72,6 +72,18 @@ Note 3: The trigger configured for an orchestration is for automatically startin
  * @method void setTaskType(string $TaskType) Set The task type.
 <li> `Online` (default): A task that is executed immediately.</li>
 <li> `Offline`: A task that is executed when the system is idle (within three days by default).</li>
+ * @method string getResourceId() Obtain Resource ID. Ensure the corresponding resource is in the enabled state. The default value is an account's primary resource ID.
+ * @method void setResourceId(string $ResourceId) Set Resource ID. Ensure the corresponding resource is in the enabled state. The default value is an account's primary resource ID.
+ * @method SmartSubtitlesTaskInput getSmartSubtitlesTask() Obtain Smart subtitle task.
+ * @method void setSmartSubtitlesTask(SmartSubtitlesTaskInput $SmartSubtitlesTask) Set Smart subtitle task.
+ * @method integer getSkipMateData() Obtain Whether to skip metadata acquisition. Valid values:
+0: do not skip
+1: skip
+Default value: 0		
+ * @method void setSkipMateData(integer $SkipMateData) Set Whether to skip metadata acquisition. Valid values:
+0: do not skip
+1: skip
+Default value: 0		
  */
 class ProcessMediaRequest extends AbstractModel
 {
@@ -158,6 +170,24 @@ Note 3: The trigger configured for an orchestration is for automatically startin
     public $TaskType;
 
     /**
+     * @var string Resource ID. Ensure the corresponding resource is in the enabled state. The default value is an account's primary resource ID.
+     */
+    public $ResourceId;
+
+    /**
+     * @var SmartSubtitlesTaskInput Smart subtitle task.
+     */
+    public $SmartSubtitlesTask;
+
+    /**
+     * @var integer Whether to skip metadata acquisition. Valid values:
+0: do not skip
+1: skip
+Default value: 0		
+     */
+    public $SkipMateData;
+
+    /**
      * @param MediaInputInfo $InputInfo The information of the file to process.
      * @param TaskOutputStorage $OutputStorage Target storage for Media Processing Service output files. If left blank, it inherits the storage location in InputInfo.
 
@@ -184,6 +214,12 @@ Note 3: The trigger configured for an orchestration is for automatically startin
      * @param string $TaskType The task type.
 <li> `Online` (default): A task that is executed immediately.</li>
 <li> `Offline`: A task that is executed when the system is idle (within three days by default).</li>
+     * @param string $ResourceId Resource ID. Ensure the corresponding resource is in the enabled state. The default value is an account's primary resource ID.
+     * @param SmartSubtitlesTaskInput $SmartSubtitlesTask Smart subtitle task.
+     * @param integer $SkipMateData Whether to skip metadata acquisition. Valid values:
+0: do not skip
+1: skip
+Default value: 0		
      */
     function __construct()
     {
@@ -260,6 +296,19 @@ Note 3: The trigger configured for an orchestration is for automatically startin
 
         if (array_key_exists("TaskType",$param) and $param["TaskType"] !== null) {
             $this->TaskType = $param["TaskType"];
+        }
+
+        if (array_key_exists("ResourceId",$param) and $param["ResourceId"] !== null) {
+            $this->ResourceId = $param["ResourceId"];
+        }
+
+        if (array_key_exists("SmartSubtitlesTask",$param) and $param["SmartSubtitlesTask"] !== null) {
+            $this->SmartSubtitlesTask = new SmartSubtitlesTaskInput();
+            $this->SmartSubtitlesTask->deserialize($param["SmartSubtitlesTask"]);
+        }
+
+        if (array_key_exists("SkipMateData",$param) and $param["SkipMateData"] !== null) {
+            $this->SkipMateData = $param["SkipMateData"];
         }
     }
 }
