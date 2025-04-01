@@ -362,6 +362,7 @@ This API is completed asynchronously. If you need to query the execution result 
  * @method Models\DisableCcnRoutesResponse DisableCcnRoutes(Models\DisableCcnRoutesRequest $req) This API (DisableCcnRoutes) is used to disable CCN routes that are already enabled.
  * @method Models\DisableFlowLogsResponse DisableFlowLogs(Models\DisableFlowLogsRequest $req) This API is used to disable flow log.
  * @method Models\DisableGatewayFlowMonitorResponse DisableGatewayFlowMonitor(Models\DisableGatewayFlowMonitorRequest $req) This API is used to disable gateway traffic monitor.
+ * @method Models\DisableRoutesResponse DisableRoutes(Models\DisableRoutesRequest $req) This API is used to disable enabled subnet routes.
  * @method Models\DisableSnapshotPoliciesResponse DisableSnapshotPolicies(Models\DisableSnapshotPoliciesRequest $req) This API is used to disable specified snapshot policies.
  * @method Models\DisassociateAddressResponse DisassociateAddress(Models\DisassociateAddressRequest $req) This API is used to unbind an [Elastic IP](https://intl.cloud.tencent.com/document/product/213/1941?from_cn_redirect=1) (EIP for short).
 * This API supports unbinding an EIP from CVM instances and ENIs.
@@ -382,6 +383,8 @@ This API is completed asynchronously. If you need to query the execution result 
 This API is used to verify whether there will be conflict with an existing route after a CCN route is enabled. If there is a conflict, the route will not be enabled, and the process will fail. When a conflict occurs, you must disable the conflicting route before you can enable the desired route.
  * @method Models\EnableFlowLogsResponse EnableFlowLogs(Models\EnableFlowLogsRequest $req) This API is used to enable flow log.
  * @method Models\EnableGatewayFlowMonitorResponse EnableGatewayFlowMonitor(Models\EnableGatewayFlowMonitorRequest $req) This API is used to enable gateway traffic monitor.
+ * @method Models\EnableRoutesResponse EnableRoutes(Models\EnableRoutesRequest $req) This API is used to enable disabled subnet routes.<br />
+The API is used to verify whether the enabled route conflicts with existing routes. If they conflict, the new route cannot be enabled and will result in a failure. When a route conflict occurs, you need to first disable the conflicting route before you can enable the new one.
  * @method Models\EnableSnapshotPoliciesResponse EnableSnapshotPolicies(Models\EnableSnapshotPoliciesRequest $req) This API is used to enable specified snapshot policies. 
  * @method Models\EnableVpcEndPointConnectResponse EnableVpcEndPointConnect(Models\EnableVpcEndPointConnectRequest $req) This API is used to determine whether to accept the request of connecting with an endpoint.
  * @method Models\GenerateVpnConnectionDefaultHealthCheckIpResponse GenerateVpnConnectionDefaultHealthCheckIp(Models\GenerateVpnConnectionDefaultHealthCheckIpRequest $req) This API is used to get a pair of VPN tunnel health check addresses. 
