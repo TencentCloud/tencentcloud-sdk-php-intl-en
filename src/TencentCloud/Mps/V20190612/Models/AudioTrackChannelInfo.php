@@ -34,13 +34,13 @@ Default value: 0
 Note: This field may return null, indicating that no valid value can be obtained.
  * @method string getSelectType() Obtain Audio track input type. valid values:.
 trask: indicates usage of the audio track id.
-Task_channel: indicates usage of the audio track id and sound channel id.
+trask_channel: indicates usage of the audio track id and sound channel id.
 Default: trask.
 If the original aduio track is multichannel, recommend using trask_channel.
 Note: This field may return null, indicating that no valid value can be obtained.
  * @method void setSelectType(string $SelectType) Set Audio track input type. valid values:.
 trask: indicates usage of the audio track id.
-Task_channel: indicates usage of the audio track id and sound channel id.
+trask_channel: indicates usage of the audio track id and sound channel id.
 Default: trask.
 If the original aduio track is multichannel, recommend using trask_channel.
 Note: This field may return null, indicating that no valid value can be obtained.
@@ -64,7 +64,7 @@ Note: This field may return null, indicating that no valid value can be obtained
     /**
      * @var string Audio track input type. valid values:.
 trask: indicates usage of the audio track id.
-Task_channel: indicates usage of the audio track id and sound channel id.
+trask_channel: indicates usage of the audio track id and sound channel id.
 Default: trask.
 If the original aduio track is multichannel, recommend using trask_channel.
 Note: This field may return null, indicating that no valid value can be obtained.
@@ -86,7 +86,7 @@ Default value: 0
 Note: This field may return null, indicating that no valid value can be obtained.
      * @param string $SelectType Audio track input type. valid values:.
 trask: indicates usage of the audio track id.
-Task_channel: indicates usage of the audio track id and sound channel id.
+trask_channel: indicates usage of the audio track id and sound channel id.
 Default: trask.
 If the original aduio track is multichannel, recommend using trask_channel.
 Note: This field may return null, indicating that no valid value can be obtained.
