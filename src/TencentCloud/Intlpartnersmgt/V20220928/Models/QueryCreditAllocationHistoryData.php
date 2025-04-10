@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAllocatedCredit(float $AllocatedCredit) Set The allocated total credit
  * @method float getClientCreditAfter() Obtain Available credits after allocation.
  * @method void setClientCreditAfter(float $ClientCreditAfter) Set Available credits after allocation.
+ * @method string getRemark() Obtain Remark
+ * @method void setRemark(string $Remark) Set Remark
  */
 class QueryCreditAllocationHistoryData extends AbstractModel
 {
@@ -59,11 +61,17 @@ class QueryCreditAllocationHistoryData extends AbstractModel
     public $ClientCreditAfter;
 
     /**
+     * @var string Remark
+     */
+    public $Remark;
+
+    /**
      * @param string $AllocatedTime Allocation time
      * @param string $Operator Operator
      * @param float $Credit Allocated credit value
      * @param float $AllocatedCredit The allocated total credit
      * @param float $ClientCreditAfter Available credits after allocation.
+     * @param string $Remark Remark
      */
     function __construct()
     {
@@ -96,6 +104,10 @@ class QueryCreditAllocationHistoryData extends AbstractModel
 
         if (array_key_exists("ClientCreditAfter",$param) and $param["ClientCreditAfter"] !== null) {
             $this->ClientCreditAfter = $param["ClientCreditAfter"];
+        }
+
+        if (array_key_exists("Remark",$param) and $param["Remark"] !== null) {
+            $this->Remark = $param["Remark"];
         }
     }
 }

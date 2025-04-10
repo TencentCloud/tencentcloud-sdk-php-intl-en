@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAddedCredit(float $AddedCredit) Set Specific value of the credit allocated to the customer
  * @method integer getClientUin() Obtain Customer UIN
  * @method void setClientUin(integer $ClientUin) Set Customer UIN
+ * @method string getRemark() Obtain Remark
+ * @method void setRemark(string $Remark) Set Remark
  */
 class AllocateCustomerCreditRequest extends AbstractModel
 {
@@ -38,8 +40,14 @@ class AllocateCustomerCreditRequest extends AbstractModel
     public $ClientUin;
 
     /**
+     * @var string Remark
+     */
+    public $Remark;
+
+    /**
      * @param float $AddedCredit Specific value of the credit allocated to the customer
      * @param integer $ClientUin Customer UIN
+     * @param string $Remark Remark
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class AllocateCustomerCreditRequest extends AbstractModel
 
         if (array_key_exists("ClientUin",$param) and $param["ClientUin"] !== null) {
             $this->ClientUin = $param["ClientUin"];
+        }
+
+        if (array_key_exists("Remark",$param) and $param["Remark"] !== null) {
+            $this->Remark = $param["Remark"];
         }
     }
 }
