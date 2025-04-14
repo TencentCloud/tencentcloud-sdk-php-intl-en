@@ -186,16 +186,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
  * @method void setFpsDenominator(integer $FpsDenominator) Set Denominator of the frame rate.
 Note: The value must be greater than 0.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getStereo3dType() Obtain 3D video splicing mode, which is only valid for MV-HEVC 3D videos. Valid values:
-<li>side_by_side: side-by-side view.</li>
-<li>top_bottom: top-bottom view.</li>
+ * @method string getStereo3dType() Obtain 3D video splicing mode, applicable only to mv-hevc and effective for 3d videos. valid values:.
+<Li>Side_by_side: the original video content is arranged in a left-right layout.</li>.
+<Li>Top_bottom: layout arrangement of the original video content from top to bottom.</li>.
+The usage and charges will be reported based on the segmented resolution dimensions.
 Default value: side_by_side.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setStereo3dType(string $Stereo3dType) Set 3D video splicing mode, which is only valid for MV-HEVC 3D videos. Valid values:
-<li>side_by_side: side-by-side view.</li>
-<li>top_bottom: top-bottom view.</li>
+Note: This field may return null, indicating that no valid value can be obtained.
+ * @method void setStereo3dType(string $Stereo3dType) Set 3D video splicing mode, applicable only to mv-hevc and effective for 3d videos. valid values:.
+<Li>Side_by_side: the original video content is arranged in a left-right layout.</li>.
+<Li>Top_bottom: layout arrangement of the original video content from top to bottom.</li>.
+The usage and charges will be reported based on the segmented resolution dimensions.
 Default value: side_by_side.
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid value can be obtained.
  * @method string getVideoProfile() Obtain Profile, suitable for different scenarios. 
 baseline: It only supports I/P-frames and non-interlaced scenarios, and is suitable for scenarios such as video calls and mobile videos. 
 main: It offers I-frames, P-frames, and B-frames, and supports both interlaced and non-interlaced modes. It is mainly used in mainstream audio and video consumption products such as video players and streaming media transmission devices. 
@@ -481,11 +483,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $FpsDenominator;
 
     /**
-     * @var string 3D video splicing mode, which is only valid for MV-HEVC 3D videos. Valid values:
-<li>side_by_side: side-by-side view.</li>
-<li>top_bottom: top-bottom view.</li>
+     * @var string 3D video splicing mode, applicable only to mv-hevc and effective for 3d videos. valid values:.
+<Li>Side_by_side: the original video content is arranged in a left-right layout.</li>.
+<Li>Top_bottom: layout arrangement of the original video content from top to bottom.</li>.
+The usage and charges will be reported based on the segmented resolution dimensions.
 Default value: side_by_side.
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public $Stereo3dType;
 
@@ -696,11 +699,12 @@ Note: This field may return null, indicating that no valid value can be obtained
      * @param integer $FpsDenominator Denominator of the frame rate.
 Note: The value must be greater than 0.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Stereo3dType 3D video splicing mode, which is only valid for MV-HEVC 3D videos. Valid values:
-<li>side_by_side: side-by-side view.</li>
-<li>top_bottom: top-bottom view.</li>
+     * @param string $Stereo3dType 3D video splicing mode, applicable only to mv-hevc and effective for 3d videos. valid values:.
+<Li>Side_by_side: the original video content is arranged in a left-right layout.</li>.
+<Li>Top_bottom: layout arrangement of the original video content from top to bottom.</li>.
+The usage and charges will be reported based on the segmented resolution dimensions.
 Default value: side_by_side.
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid value can be obtained.
      * @param string $VideoProfile Profile, suitable for different scenarios. 
 baseline: It only supports I/P-frames and non-interlaced scenarios, and is suitable for scenarios such as video calls and mobile videos. 
 main: It offers I-frames, P-frames, and B-frames, and supports both interlaced and non-interlaced modes. It is mainly used in mainstream audio and video consumption products such as video players and streaming media transmission devices. 

@@ -36,11 +36,11 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRemoveVideo(integer $RemoveVideo) Set Whether to remove video stream. Valid values:
 <li>0: no,</li>
 <li>1: yes.</li>
- * @method array getAudioList() Obtain List of audio parameter information.
-The parameter array has a maximum length of 64.
+ * @method array getAudioList() Obtain Audio parameter information list.
+The parameter is only used when merging multiple audio tracks with self-adaptive transcoding. the maximum length of the parameter array is 64.
 Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setAudioList(array $AudioList) Set List of audio parameter information.
-The parameter array has a maximum length of 64.
+ * @method void setAudioList(array $AudioList) Set Audio parameter information list.
+The parameter is only used when merging multiple audio tracks with self-adaptive transcoding. the maximum length of the parameter array is 64.
 Note: This field may return null, indicating that no valid value can be obtained.
  */
 class AdaptiveStreamTemplate extends AbstractModel
@@ -70,8 +70,8 @@ class AdaptiveStreamTemplate extends AbstractModel
     public $RemoveVideo;
 
     /**
-     * @var array List of audio parameter information.
-The parameter array has a maximum length of 64.
+     * @var array Audio parameter information list.
+The parameter is only used when merging multiple audio tracks with self-adaptive transcoding. the maximum length of the parameter array is 64.
 Note: This field may return null, indicating that no valid value can be obtained.
      */
     public $AudioList;
@@ -85,8 +85,8 @@ Note: This field may return null, indicating that no valid value can be obtained
      * @param integer $RemoveVideo Whether to remove video stream. Valid values:
 <li>0: no,</li>
 <li>1: yes.</li>
-     * @param array $AudioList List of audio parameter information.
-The parameter array has a maximum length of 64.
+     * @param array $AudioList Audio parameter information list.
+The parameter is only used when merging multiple audio tracks with self-adaptive transcoding. the maximum length of the parameter array is 64.
 Note: This field may return null, indicating that no valid value can be obtained.
      */
     function __construct()

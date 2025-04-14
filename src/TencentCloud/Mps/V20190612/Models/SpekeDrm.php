@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * FairPlay, WideVine, PlayReady, and other DRM encryption technologies.
  *
- * @method string getResourceId() Obtain Resource ID.
+ * @method string getResourceId() Obtain Resource tagging. the field content is user-customized.
 It supports 1 to 128 characters consisting of digits, letters, underscores (_), and hyphens (-).
- * @method void setResourceId(string $ResourceId) Set Resource ID.
+ * @method void setResourceId(string $ResourceId) Set Resource tagging. the field content is user-customized.
 It supports 1 to 128 characters consisting of digits, letters, underscores (_), and hyphens (-).
- * @method string getKeyServerUrl() Obtain Access address of the DRM vendor.
+ * @method string getKeyServerUrl() Obtain DRM manufacturer access address. the field content is obtained from the drm manufacturer.
 
-Note: Different DRM vendors have different limits on the number of substreams. For example, PallyCon limits the number of substreams to no more than 5, and DRMtoday supports encryption of up to 9 substreams.
- * @method void setKeyServerUrl(string $KeyServerUrl) Set Access address of the DRM vendor.
+Note: different DRM manufacturers have different limitations on the number of substreams. for example, PallyCon limits the number of substreams to no more than 5, and DRMtoday only supports encryption of up to 9 substreams.
+ * @method void setKeyServerUrl(string $KeyServerUrl) Set DRM manufacturer access address. the field content is obtained from the drm manufacturer.
 
-Note: Different DRM vendors have different limits on the number of substreams. For example, PallyCon limits the number of substreams to no more than 5, and DRMtoday supports encryption of up to 9 substreams.
- * @method string getVector() Obtain Initialization vector (32-byte string) for encryption.
- * @method void setVector(string $Vector) Set Initialization vector (32-byte string) for encryption.
+Note: different DRM manufacturers have different limitations on the number of substreams. for example, PallyCon limits the number of substreams to no more than 5, and DRMtoday only supports encryption of up to 9 substreams.
+ * @method string getVector() Obtain Encryption initialization vector (32-byte string). the field content is user-customized.
+ * @method void setVector(string $Vector) Set Encryption initialization vector (32-byte string). the field content is user-customized.
  * @method string getEncryptionMethod() Obtain Encryption method. cbcs: default method of FairPlay; cenc: default method of PlayReady and Widevine.
 
 cbcs: supported by PlayReady, Widevine, and FairPlay
@@ -51,20 +51,20 @@ preset1: use different keys for each substream
 class SpekeDrm extends AbstractModel
 {
     /**
-     * @var string Resource ID.
+     * @var string Resource tagging. the field content is user-customized.
 It supports 1 to 128 characters consisting of digits, letters, underscores (_), and hyphens (-).
      */
     public $ResourceId;
 
     /**
-     * @var string Access address of the DRM vendor.
+     * @var string DRM manufacturer access address. the field content is obtained from the drm manufacturer.
 
-Note: Different DRM vendors have different limits on the number of substreams. For example, PallyCon limits the number of substreams to no more than 5, and DRMtoday supports encryption of up to 9 substreams.
+Note: different DRM manufacturers have different limitations on the number of substreams. for example, PallyCon limits the number of substreams to no more than 5, and DRMtoday only supports encryption of up to 9 substreams.
      */
     public $KeyServerUrl;
 
     /**
-     * @var string Initialization vector (32-byte string) for encryption.
+     * @var string Encryption initialization vector (32-byte string). the field content is user-customized.
      */
     public $Vector;
 
@@ -85,12 +85,12 @@ preset1: use different keys for each substream
     public $EncryptionPreset;
 
     /**
-     * @param string $ResourceId Resource ID.
+     * @param string $ResourceId Resource tagging. the field content is user-customized.
 It supports 1 to 128 characters consisting of digits, letters, underscores (_), and hyphens (-).
-     * @param string $KeyServerUrl Access address of the DRM vendor.
+     * @param string $KeyServerUrl DRM manufacturer access address. the field content is obtained from the drm manufacturer.
 
-Note: Different DRM vendors have different limits on the number of substreams. For example, PallyCon limits the number of substreams to no more than 5, and DRMtoday supports encryption of up to 9 substreams.
-     * @param string $Vector Initialization vector (32-byte string) for encryption.
+Note: different DRM manufacturers have different limitations on the number of substreams. for example, PallyCon limits the number of substreams to no more than 5, and DRMtoday only supports encryption of up to 9 substreams.
+     * @param string $Vector Encryption initialization vector (32-byte string). the field content is user-customized.
      * @param string $EncryptionMethod Encryption method. cbcs: default method of FairPlay; cenc: default method of PlayReady and Widevine.
 
 cbcs: supported by PlayReady, Widevine, and FairPlay
