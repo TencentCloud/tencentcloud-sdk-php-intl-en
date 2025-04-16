@@ -20,77 +20,85 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Audio track information.
  *
- * @method integer getChannelsRemix() Obtain Whether to enable the feature of multi-audio track mixing. valid values:
-0: indicates not enabling multi-audio track mix.
-1: Indicates enabling multi-audio track mixing.
-Default value: 0
+ * @method integer getChannelsRemix() Obtain Whether to enable the feature of multi-audio track mixing. Valid values:
+<li>0: To disable the multi-audio track mixing feature.
+<li>1: To enable the multi-audio track mixing feature. 
+<li>Default value: 0.
 
 Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setChannelsRemix(integer $ChannelsRemix) Set Whether to enable the feature of multi-audio track mixing. valid values:
-0: indicates not enabling multi-audio track mix.
-1: Indicates enabling multi-audio track mixing.
-Default value: 0
+ * @method void setChannelsRemix(integer $ChannelsRemix) Set Whether to enable the feature of multi-audio track mixing. Valid values:
+<li>0: To disable the multi-audio track mixing feature.
+<li>1: To enable the multi-audio track mixing feature. 
+<li>Default value: 0.
 
 Note: This field may return null, indicating that no valid value can be obtained.
- * @method string getSelectType() Obtain Set the selector type for the input audio track. valid values:
-Track: indicates the usage of audio track id;.
-Track_channel: indicates the usage of the audio track id and sound channel id.
-Default: track.
-If the original video has multiple channels, it is recommended to use track_channel.
+ * @method string getSelectType() Obtain Set the selector type for the input audio track. Valid values:
+<li>track: indicates the usage of audio track id to identify the track to be used.
+<li>track_channel: indicates the usage of both the audio track id and sound channel id to identify the track and channel to be used.
+<li>Default value: track.
+If the original audio track has multiple sound channels, please use track_channel.
+
 Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setSelectType(string $SelectType) Set Set the selector type for the input audio track. valid values:
-Track: indicates the usage of audio track id;.
-Track_channel: indicates the usage of the audio track id and sound channel id.
-Default: track.
-If the original video has multiple channels, it is recommended to use track_channel.
+ * @method void setSelectType(string $SelectType) Set Set the selector type for the input audio track. Valid values:
+<li>track: indicates the usage of audio track id to identify the track to be used.
+<li>track_channel: indicates the usage of both the audio track id and sound channel id to identify the track and channel to be used.
+<li>Default value: track.
+If the original audio track has multiple sound channels, please use track_channel.
+
 Note: This field may return null, indicating that no valid value can be obtained.
  * @method array getInputTrackInfo() Obtain Audio track information.
+
 Note: This field may return null, indicating that no valid value can be obtained.
  * @method void setInputTrackInfo(array $InputTrackInfo) Set Audio track information.
+
 Note: This field may return null, indicating that no valid value can be obtained.
  */
 class AudioTrackChannelInfo extends AbstractModel
 {
     /**
-     * @var integer Whether to enable the feature of multi-audio track mixing. valid values:
-0: indicates not enabling multi-audio track mix.
-1: Indicates enabling multi-audio track mixing.
-Default value: 0
+     * @var integer Whether to enable the feature of multi-audio track mixing. Valid values:
+<li>0: To disable the multi-audio track mixing feature.
+<li>1: To enable the multi-audio track mixing feature. 
+<li>Default value: 0.
 
 Note: This field may return null, indicating that no valid value can be obtained.
      */
     public $ChannelsRemix;
 
     /**
-     * @var string Set the selector type for the input audio track. valid values:
-Track: indicates the usage of audio track id;.
-Track_channel: indicates the usage of the audio track id and sound channel id.
-Default: track.
-If the original video has multiple channels, it is recommended to use track_channel.
+     * @var string Set the selector type for the input audio track. Valid values:
+<li>track: indicates the usage of audio track id to identify the track to be used.
+<li>track_channel: indicates the usage of both the audio track id and sound channel id to identify the track and channel to be used.
+<li>Default value: track.
+If the original audio track has multiple sound channels, please use track_channel.
+
 Note: This field may return null, indicating that no valid value can be obtained.
      */
     public $SelectType;
 
     /**
      * @var array Audio track information.
+
 Note: This field may return null, indicating that no valid value can be obtained.
      */
     public $InputTrackInfo;
 
     /**
-     * @param integer $ChannelsRemix Whether to enable the feature of multi-audio track mixing. valid values:
-0: indicates not enabling multi-audio track mix.
-1: Indicates enabling multi-audio track mixing.
-Default value: 0
+     * @param integer $ChannelsRemix Whether to enable the feature of multi-audio track mixing. Valid values:
+<li>0: To disable the multi-audio track mixing feature.
+<li>1: To enable the multi-audio track mixing feature. 
+<li>Default value: 0.
 
 Note: This field may return null, indicating that no valid value can be obtained.
-     * @param string $SelectType Set the selector type for the input audio track. valid values:
-Track: indicates the usage of audio track id;.
-Track_channel: indicates the usage of the audio track id and sound channel id.
-Default: track.
-If the original video has multiple channels, it is recommended to use track_channel.
+     * @param string $SelectType Set the selector type for the input audio track. Valid values:
+<li>track: indicates the usage of audio track id to identify the track to be used.
+<li>track_channel: indicates the usage of both the audio track id and sound channel id to identify the track and channel to be used.
+<li>Default value: track.
+If the original audio track has multiple sound channels, please use track_channel.
+
 Note: This field may return null, indicating that no valid value can be obtained.
      * @param array $InputTrackInfo Audio track information.
+
 Note: This field may return null, indicating that no valid value can be obtained.
      */
     function __construct()

@@ -70,6 +70,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSourceCDNPrefix(string $SourceCDNPrefix) Set Source CDN prefix, needs to start with http:// or https://
  * @method string getAdCDNPrefix() Obtain Advertising CDN prefix needs to start with http:// or https://
  * @method void setAdCDNPrefix(string $AdCDNPrefix) Set Advertising CDN prefix needs to start with http:// or https://
+ * @method string getPreRollAdsUrl() Obtain Pre-roll ad decision service address.
+ * @method void setPreRollAdsUrl(string $PreRollAdsUrl) Set Pre-roll ad decision service address.
+ * @method integer getPreRollMaxAllowedDuration() Obtain The maximum allowed duration of pre-roll ads, (0, 3600].
+ * @method void setPreRollMaxAllowedDuration(integer $PreRollMaxAllowedDuration) Set The maximum allowed duration of pre-roll ads, (0, 3600].
  */
 class SSAIConf extends AbstractModel
 {
@@ -143,6 +147,16 @@ class SSAIConf extends AbstractModel
     public $AdCDNPrefix;
 
     /**
+     * @var string Pre-roll ad decision service address.
+     */
+    public $PreRollAdsUrl;
+
+    /**
+     * @var integer The maximum allowed duration of pre-roll ads, (0, 3600].
+     */
+    public $PreRollMaxAllowedDuration;
+
+    /**
      * @param string $AdsUrl Advertising Decision Server URL (ADS).
      * @param array $ConfigAliases Parameter configuration.
      * @param boolean $AdMarkerPassthrough Whether to enable transparent transmission of advertising tags.
@@ -168,6 +182,8 @@ class SSAIConf extends AbstractModel
 4.Both.
      * @param string $SourceCDNPrefix Source CDN prefix, needs to start with http:// or https://
      * @param string $AdCDNPrefix Advertising CDN prefix needs to start with http:// or https://
+     * @param string $PreRollAdsUrl Pre-roll ad decision service address.
+     * @param integer $PreRollMaxAllowedDuration The maximum allowed duration of pre-roll ads, (0, 3600].
      */
     function __construct()
     {
@@ -229,6 +245,14 @@ class SSAIConf extends AbstractModel
 
         if (array_key_exists("AdCDNPrefix",$param) and $param["AdCDNPrefix"] !== null) {
             $this->AdCDNPrefix = $param["AdCDNPrefix"];
+        }
+
+        if (array_key_exists("PreRollAdsUrl",$param) and $param["PreRollAdsUrl"] !== null) {
+            $this->PreRollAdsUrl = $param["PreRollAdsUrl"];
+        }
+
+        if (array_key_exists("PreRollMaxAllowedDuration",$param) and $param["PreRollMaxAllowedDuration"] !== null) {
+            $this->PreRollMaxAllowedDuration = $param["PreRollMaxAllowedDuration"];
         }
     }
 }

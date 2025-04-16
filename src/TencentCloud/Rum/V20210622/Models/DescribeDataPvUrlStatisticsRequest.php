@@ -62,6 +62,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBrowser(string $Browser) Set Browser
  * @method string getEnv() Obtain Environment
  * @method void setEnv(string $Env) Set Environment
+ * @method integer getGroupByType() Obtain 
+ * @method void setGroupByType(integer $GroupByType) Set 
+ * @method integer getIsNewData() Obtain 
+ * @method void setIsNewData(integer $IsNewData) Set 
  */
 class DescribeDataPvUrlStatisticsRequest extends AbstractModel
 {
@@ -171,6 +175,16 @@ class DescribeDataPvUrlStatisticsRequest extends AbstractModel
     public $Env;
 
     /**
+     * @var integer 
+     */
+    public $GroupByType;
+
+    /**
+     * @var integer 
+     */
+    public $IsNewData;
+
+    /**
      * @param integer $StartTime Start time
      * @param string $Type `allcount`; performance view; `day`: 14-day data, `vp`: performance; `ckuv`: UV; `ckpv`: PV; `condition`: condition list; `nettype`/`version`/`platform`/`isp`/`region`/`device`/`browser`/`ext1`/`ext2`/`ext3`/`ret`/`status`/`from`/`url`/`env`: network/platform view; version view; device view; ISP view; region view; browser view; custom view, and so on.
      * @param integer $EndTime End time
@@ -192,6 +206,8 @@ class DescribeDataPvUrlStatisticsRequest extends AbstractModel
      * @param string $Os OS
      * @param string $Browser Browser
      * @param string $Env Environment
+     * @param integer $GroupByType 
+     * @param integer $IsNewData 
      */
     function __construct()
     {
@@ -288,6 +304,14 @@ class DescribeDataPvUrlStatisticsRequest extends AbstractModel
 
         if (array_key_exists("Env",$param) and $param["Env"] !== null) {
             $this->Env = $param["Env"];
+        }
+
+        if (array_key_exists("GroupByType",$param) and $param["GroupByType"] !== null) {
+            $this->GroupByType = $param["GroupByType"];
+        }
+
+        if (array_key_exists("IsNewData",$param) and $param["IsNewData"] !== null) {
+            $this->IsNewData = $param["IsNewData"];
         }
     }
 }

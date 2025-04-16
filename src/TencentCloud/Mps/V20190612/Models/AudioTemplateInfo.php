@@ -81,22 +81,24 @@ Please ensure that the sampling rate of the source audio stream is within the va
 Unit: Hz.
 Please ensure that the sampling rate of the source audio stream is within the value range of the above options. otherwise, transcoding failure may occur.
  * @method integer getAudioChannel() Obtain Audio channel mode. Valid values:
-<li>1: single channel.</li>
-<li>2: dual channel.</li>
-<li>6: 5.1 surround sound.</li>
-When the media encapsulation format is audio (flac, ogg, mp3, and m4a), the number of channels cannot be set to 5.1 surround sound.
-Default value: 2.
+<li>1: mono-channel.</li>
+<li>2: dual-channel.</li>
+<li>6: 5.1 surround sound.
+<li>Default value: 2.
+When the container format is audio (flac, ogg, mp3, and m4a), the audio channel cannot be set to 5.1 surround sound.
  * @method void setAudioChannel(integer $AudioChannel) Set Audio channel mode. Valid values:
-<li>1: single channel.</li>
-<li>2: dual channel.</li>
-<li>6: 5.1 surround sound.</li>
-When the media encapsulation format is audio (flac, ogg, mp3, and m4a), the number of channels cannot be set to 5.1 surround sound.
-Default value: 2.
+<li>1: mono-channel.</li>
+<li>2: dual-channel.</li>
+<li>6: 5.1 surround sound.
+<li>Default value: 2.
+When the container format is audio (flac, ogg, mp3, and m4a), the audio channel cannot be set to 5.1 surround sound.
  * @method AudioTrackChannelInfo getTrackChannelInfo() Obtain Merge audio track information.
-This field only takes effec in adaptive bitrate transcoding.
+This field only takes effect in adaptive bitrate transcoding.
+
 Note: This field may return null, indicating that no valid value can be obtained.
  * @method void setTrackChannelInfo(AudioTrackChannelInfo $TrackChannelInfo) Set Merge audio track information.
-This field only takes effec in adaptive bitrate transcoding.
+This field only takes effect in adaptive bitrate transcoding.
+
 Note: This field may return null, indicating that no valid value can be obtained.
  */
 class AudioTemplateInfo extends AbstractModel
@@ -145,17 +147,18 @@ Please ensure that the sampling rate of the source audio stream is within the va
 
     /**
      * @var integer Audio channel mode. Valid values:
-<li>1: single channel.</li>
-<li>2: dual channel.</li>
-<li>6: 5.1 surround sound.</li>
-When the media encapsulation format is audio (flac, ogg, mp3, and m4a), the number of channels cannot be set to 5.1 surround sound.
-Default value: 2.
+<li>1: mono-channel.</li>
+<li>2: dual-channel.</li>
+<li>6: 5.1 surround sound.
+<li>Default value: 2.
+When the container format is audio (flac, ogg, mp3, and m4a), the audio channel cannot be set to 5.1 surround sound.
      */
     public $AudioChannel;
 
     /**
      * @var AudioTrackChannelInfo Merge audio track information.
-This field only takes effec in adaptive bitrate transcoding.
+This field only takes effect in adaptive bitrate transcoding.
+
 Note: This field may return null, indicating that no valid value can be obtained.
      */
     public $TrackChannelInfo;
@@ -192,13 +195,14 @@ Cannot be set to 0.
 Unit: Hz.
 Please ensure that the sampling rate of the source audio stream is within the value range of the above options. otherwise, transcoding failure may occur.
      * @param integer $AudioChannel Audio channel mode. Valid values:
-<li>1: single channel.</li>
-<li>2: dual channel.</li>
-<li>6: 5.1 surround sound.</li>
-When the media encapsulation format is audio (flac, ogg, mp3, and m4a), the number of channels cannot be set to 5.1 surround sound.
-Default value: 2.
+<li>1: mono-channel.</li>
+<li>2: dual-channel.</li>
+<li>6: 5.1 surround sound.
+<li>Default value: 2.
+When the container format is audio (flac, ogg, mp3, and m4a), the audio channel cannot be set to 5.1 surround sound.
      * @param AudioTrackChannelInfo $TrackChannelInfo Merge audio track information.
-This field only takes effec in adaptive bitrate transcoding.
+This field only takes effect in adaptive bitrate transcoding.
+
 Note: This field may return null, indicating that no valid value can be obtained.
      */
     function __construct()

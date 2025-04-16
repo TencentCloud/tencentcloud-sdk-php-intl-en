@@ -37,10 +37,12 @@ use TencentCloud\Common\AbstractModel;
 <li>0: no,</li>
 <li>1: yes.</li>
  * @method array getAudioList() Obtain Audio parameter information list.
-The parameter is only used when merging multiple audio tracks with self-adaptive transcoding. the maximum length of the parameter array is 64.
+The parameter is only used when merging multiple audio tracks in adaptive bitrate transcoding. the maximum length of the parameter array is 64.
+
 Note: This field may return null, indicating that no valid value can be obtained.
  * @method void setAudioList(array $AudioList) Set Audio parameter information list.
-The parameter is only used when merging multiple audio tracks with self-adaptive transcoding. the maximum length of the parameter array is 64.
+The parameter is only used when merging multiple audio tracks in adaptive bitrate transcoding. the maximum length of the parameter array is 64.
+
 Note: This field may return null, indicating that no valid value can be obtained.
  */
 class AdaptiveStreamTemplate extends AbstractModel
@@ -71,7 +73,8 @@ class AdaptiveStreamTemplate extends AbstractModel
 
     /**
      * @var array Audio parameter information list.
-The parameter is only used when merging multiple audio tracks with self-adaptive transcoding. the maximum length of the parameter array is 64.
+The parameter is only used when merging multiple audio tracks in adaptive bitrate transcoding. the maximum length of the parameter array is 64.
+
 Note: This field may return null, indicating that no valid value can be obtained.
      */
     public $AudioList;
@@ -86,7 +89,8 @@ Note: This field may return null, indicating that no valid value can be obtained
 <li>0: no,</li>
 <li>1: yes.</li>
      * @param array $AudioList Audio parameter information list.
-The parameter is only used when merging multiple audio tracks with self-adaptive transcoding. the maximum length of the parameter array is 64.
+The parameter is only used when merging multiple audio tracks in adaptive bitrate transcoding. the maximum length of the parameter array is 64.
+
 Note: This field may return null, indicating that no valid value can be obtained.
      */
     function __construct()

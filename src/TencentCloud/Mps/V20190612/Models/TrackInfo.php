@@ -20,72 +20,76 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Audio track info.
  *
- * @method string getTrackNum() Obtain Audio track and sound channel serial number, description:
-When the SelectType value is trask, this value is of the integer type, for example: 1.
-When the SelectType value is trask_channel, this value is of the decimal type, for example: 1.0.
-Default value: `1.0`.
-The integer part represents the audio track serial number, and the decimal part represents the sound channel. The audio track serial number is the stream index of the audio track, and input of 0 and positive integers is supported. The decimal part supports up to 2 decimal places, and only 0 - 63 is supported. However, when the Codec is aac/eac3/ac3, only 0 - 15 is supported for the decimal part. For example: for an audio track with a stream index of 1, 1.0 represents the first sound channel of this audio track, and 1.1 represents the second sound channel of this audio track.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setTrackNum(string $TrackNum) Set Audio track and sound channel serial number, description:
-When the SelectType value is trask, this value is of the integer type, for example: 1.
-When the SelectType value is trask_channel, this value is of the decimal type, for example: 1.0.
-Default value: `1.0`.
-The integer part represents the audio track serial number, and the decimal part represents the sound channel. The audio track serial number is the stream index of the audio track, and input of 0 and positive integers is supported. The decimal part supports up to 2 decimal places, and only 0 - 63 is supported. However, when the Codec is aac/eac3/ac3, only 0 - 15 is supported for the decimal part. For example: for an audio track with a stream index of 1, 1.0 represents the first sound channel of this audio track, and 1.1 represents the second sound channel of this audio track.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method array getChannelVolume() Obtain Sound channel volume. specifies the volume of the sound channel.
-Specifies that when the value of AudioChannel is 1, the length of this array is 1, for example: [6].
-Specifies that when the value of AudioChannel is 2, the array length is 2. for example: [0,6].
-When the value of AudioChannel is 6, the length of this array is greater than 2 and less than 16, for example: [-60,0,0,6].
-Specifies the value array of this parameter. the value range is [-60, 6]. among them, -60 indicates mute, 0 indicates keeping the original volume, and 6 indicates doubling the original volume. the default value is -60.
-Note: supports 3 decimal places.
+ * @method string getTrackNum() Obtain The serial number of the audio track and sound channel.
+<li>When the value of SelectType is track, this value is an integer, for example: 1.
+<li>When the value of SelectType is track_channel, this value is a decimal, for example: 1.0.
+<li>Default value: 1.0.
+The integer part represents the audio track serial number, and the decimal part represents the sound channel. The audio track serial number is the stream index value of the audio track, which can be 0 or a positive integer. The decimal part supports up to 2 decimal places, and only 0 - 63 is supported. However, when the Codec is aac/eac3/ac3, only 0 - 15 is supported for the decimal part. For example: for an audio track with a stream index value of 1, 1.0 represents the first sound channel of this audio track, and 1.1 represents the second sound channel of this audio track.
 
 Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setChannelVolume(array $ChannelVolume) Set Sound channel volume. specifies the volume of the sound channel.
-Specifies that when the value of AudioChannel is 1, the length of this array is 1, for example: [6].
-Specifies that when the value of AudioChannel is 2, the array length is 2. for example: [0,6].
-When the value of AudioChannel is 6, the length of this array is greater than 2 and less than 16, for example: [-60,0,0,6].
-Specifies the value array of this parameter. the value range is [-60, 6]. among them, -60 indicates mute, 0 indicates keeping the original volume, and 6 indicates doubling the original volume. the default value is -60.
-Note: supports 3 decimal places.
+ * @method void setTrackNum(string $TrackNum) Set The serial number of the audio track and sound channel.
+<li>When the value of SelectType is track, this value is an integer, for example: 1.
+<li>When the value of SelectType is track_channel, this value is a decimal, for example: 1.0.
+<li>Default value: 1.0.
+The integer part represents the audio track serial number, and the decimal part represents the sound channel. The audio track serial number is the stream index value of the audio track, which can be 0 or a positive integer. The decimal part supports up to 2 decimal places, and only 0 - 63 is supported. However, when the Codec is aac/eac3/ac3, only 0 - 15 is supported for the decimal part. For example: for an audio track with a stream index value of 1, 1.0 represents the first sound channel of this audio track, and 1.1 represents the second sound channel of this audio track.
+
+Note: This field may return null, indicating that no valid value can be obtained.
+ * @method array getChannelVolume() Obtain The volume of the sound channel.
+<li>When the value of AudioChannel is 1, the length of this array is 1. For example: [6].
+<li>When the value of AudioChannel is 2, the length of this array is 2. For example: [0,6].
+<li>When the value of AudioChannel is 6, the length of this array is greater than 2 and less than 16. For example: [-60,0,0,6].
+
+Please specify the value array for this parameter. The value range is between -60 and 6, where -60 indicates mute, 0 maintains the original volume, and 6 doubles the original volume. The default value is -60. Please note: This field supports up to 3 decimal places.
+
+Note: This field may return null, indicating that no valid value can be obtained.
+ * @method void setChannelVolume(array $ChannelVolume) Set The volume of the sound channel.
+<li>When the value of AudioChannel is 1, the length of this array is 1. For example: [6].
+<li>When the value of AudioChannel is 2, the length of this array is 2. For example: [0,6].
+<li>When the value of AudioChannel is 6, the length of this array is greater than 2 and less than 16. For example: [-60,0,0,6].
+
+Please specify the value array for this parameter. The value range is between -60 and 6, where -60 indicates mute, 0 maintains the original volume, and 6 doubles the original volume. The default value is -60. Please note: This field supports up to 3 decimal places.
 
 Note: This field may return null, indicating that no valid value can be obtained.
  */
 class TrackInfo extends AbstractModel
 {
     /**
-     * @var string Audio track and sound channel serial number, description:
-When the SelectType value is trask, this value is of the integer type, for example: 1.
-When the SelectType value is trask_channel, this value is of the decimal type, for example: 1.0.
-Default value: `1.0`.
-The integer part represents the audio track serial number, and the decimal part represents the sound channel. The audio track serial number is the stream index of the audio track, and input of 0 and positive integers is supported. The decimal part supports up to 2 decimal places, and only 0 - 63 is supported. However, when the Codec is aac/eac3/ac3, only 0 - 15 is supported for the decimal part. For example: for an audio track with a stream index of 1, 1.0 represents the first sound channel of this audio track, and 1.1 represents the second sound channel of this audio track.
+     * @var string The serial number of the audio track and sound channel.
+<li>When the value of SelectType is track, this value is an integer, for example: 1.
+<li>When the value of SelectType is track_channel, this value is a decimal, for example: 1.0.
+<li>Default value: 1.0.
+The integer part represents the audio track serial number, and the decimal part represents the sound channel. The audio track serial number is the stream index value of the audio track, which can be 0 or a positive integer. The decimal part supports up to 2 decimal places, and only 0 - 63 is supported. However, when the Codec is aac/eac3/ac3, only 0 - 15 is supported for the decimal part. For example: for an audio track with a stream index value of 1, 1.0 represents the first sound channel of this audio track, and 1.1 represents the second sound channel of this audio track.
+
 Note: This field may return null, indicating that no valid value can be obtained.
      */
     public $TrackNum;
 
     /**
-     * @var array Sound channel volume. specifies the volume of the sound channel.
-Specifies that when the value of AudioChannel is 1, the length of this array is 1, for example: [6].
-Specifies that when the value of AudioChannel is 2, the array length is 2. for example: [0,6].
-When the value of AudioChannel is 6, the length of this array is greater than 2 and less than 16, for example: [-60,0,0,6].
-Specifies the value array of this parameter. the value range is [-60, 6]. among them, -60 indicates mute, 0 indicates keeping the original volume, and 6 indicates doubling the original volume. the default value is -60.
-Note: supports 3 decimal places.
+     * @var array The volume of the sound channel.
+<li>When the value of AudioChannel is 1, the length of this array is 1. For example: [6].
+<li>When the value of AudioChannel is 2, the length of this array is 2. For example: [0,6].
+<li>When the value of AudioChannel is 6, the length of this array is greater than 2 and less than 16. For example: [-60,0,0,6].
+
+Please specify the value array for this parameter. The value range is between -60 and 6, where -60 indicates mute, 0 maintains the original volume, and 6 doubles the original volume. The default value is -60. Please note: This field supports up to 3 decimal places.
 
 Note: This field may return null, indicating that no valid value can be obtained.
      */
     public $ChannelVolume;
 
     /**
-     * @param string $TrackNum Audio track and sound channel serial number, description:
-When the SelectType value is trask, this value is of the integer type, for example: 1.
-When the SelectType value is trask_channel, this value is of the decimal type, for example: 1.0.
-Default value: `1.0`.
-The integer part represents the audio track serial number, and the decimal part represents the sound channel. The audio track serial number is the stream index of the audio track, and input of 0 and positive integers is supported. The decimal part supports up to 2 decimal places, and only 0 - 63 is supported. However, when the Codec is aac/eac3/ac3, only 0 - 15 is supported for the decimal part. For example: for an audio track with a stream index of 1, 1.0 represents the first sound channel of this audio track, and 1.1 represents the second sound channel of this audio track.
+     * @param string $TrackNum The serial number of the audio track and sound channel.
+<li>When the value of SelectType is track, this value is an integer, for example: 1.
+<li>When the value of SelectType is track_channel, this value is a decimal, for example: 1.0.
+<li>Default value: 1.0.
+The integer part represents the audio track serial number, and the decimal part represents the sound channel. The audio track serial number is the stream index value of the audio track, which can be 0 or a positive integer. The decimal part supports up to 2 decimal places, and only 0 - 63 is supported. However, when the Codec is aac/eac3/ac3, only 0 - 15 is supported for the decimal part. For example: for an audio track with a stream index value of 1, 1.0 represents the first sound channel of this audio track, and 1.1 represents the second sound channel of this audio track.
+
 Note: This field may return null, indicating that no valid value can be obtained.
-     * @param array $ChannelVolume Sound channel volume. specifies the volume of the sound channel.
-Specifies that when the value of AudioChannel is 1, the length of this array is 1, for example: [6].
-Specifies that when the value of AudioChannel is 2, the array length is 2. for example: [0,6].
-When the value of AudioChannel is 6, the length of this array is greater than 2 and less than 16, for example: [-60,0,0,6].
-Specifies the value array of this parameter. the value range is [-60, 6]. among them, -60 indicates mute, 0 indicates keeping the original volume, and 6 indicates doubling the original volume. the default value is -60.
-Note: supports 3 decimal places.
+     * @param array $ChannelVolume The volume of the sound channel.
+<li>When the value of AudioChannel is 1, the length of this array is 1. For example: [6].
+<li>When the value of AudioChannel is 2, the length of this array is 2. For example: [0,6].
+<li>When the value of AudioChannel is 6, the length of this array is greater than 2 and less than 16. For example: [-60,0,0,6].
+
+Please specify the value array for this parameter. The value range is between -60 and 6, where -60 indicates mute, 0 maintains the original volume, and 6 doubles the original volume. The default value is -60. Please note: This field supports up to 3 decimal places.
 
 Note: This field may return null, indicating that no valid value can be obtained.
      */

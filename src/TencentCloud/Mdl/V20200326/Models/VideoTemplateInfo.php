@@ -26,10 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVcodec(string $Vcodec) Set Video codec. Valid values: H264/H265. If this parameter is left empty, the original value will be used.
  * @method integer getVideoBitrate() Obtain Video bitrate. Value range: [50000,40000000]. The value can only be a multiple of 1,000. If this parameter is left empty, the original value will be used.
  * @method void setVideoBitrate(integer $VideoBitrate) Set Video bitrate. Value range: [50000,40000000]. The value can only be a multiple of 1,000. If this parameter is left empty, the original value will be used.
- * @method integer getWidth() Obtain Video width. Value range: (0,3000]. The value can only be a multiple of 4. If this parameter is left empty, the original value will be used.
- * @method void setWidth(integer $Width) Set Video width. Value range: (0,3000]. The value can only be a multiple of 4. If this parameter is left empty, the original value will be used.
- * @method integer getHeight() Obtain Video height. Value range: (0,3000]. The value can only be a multiple of 4. If this parameter is left empty, the original value will be used.
- * @method void setHeight(integer $Height) Set Video height. Value range: (0,3000]. The value can only be a multiple of 4. If this parameter is left empty, the original value will be used.
+ * @method integer getWidth() Obtain Video width. Value range: (0,4096]. The value can only be a multiple of 2. If this parameter is left empty, the original value will be used.
+ * @method void setWidth(integer $Width) Set Video width. Value range: (0,4096]. The value can only be a multiple of 2. If this parameter is left empty, the original value will be used.
+ * @method integer getHeight() Obtain Video height. Value range: (0,4096]. The value can only be a multiple of 2. If this parameter is left empty, the original value will be used.
+ * @method void setHeight(integer $Height) Set Video height. Value range: (0,4096]. The value can only be a multiple of 2. If this parameter is left empty, the original value will be used.
  * @method integer getFps() Obtain Video frame rate. Value range: [1,240]. If this parameter is left empty, the original value will be used.
  * @method void setFps(integer $Fps) Set Video frame rate. Value range: [1,240]. If this parameter is left empty, the original value will be used.
  * @method string getTopSpeed() Obtain Whether to enable top speed codec. Valid value: CLOSE/OPEN. Default value: CLOSE.
@@ -83,12 +83,12 @@ class VideoTemplateInfo extends AbstractModel
     public $VideoBitrate;
 
     /**
-     * @var integer Video width. Value range: (0,3000]. The value can only be a multiple of 4. If this parameter is left empty, the original value will be used.
+     * @var integer Video width. Value range: (0,4096]. The value can only be a multiple of 2. If this parameter is left empty, the original value will be used.
      */
     public $Width;
 
     /**
-     * @var integer Video height. Value range: (0,3000]. The value can only be a multiple of 4. If this parameter is left empty, the original value will be used.
+     * @var integer Video height. Value range: (0,4096]. The value can only be a multiple of 2. If this parameter is left empty, the original value will be used.
      */
     public $Height;
 
@@ -177,8 +177,8 @@ Note: This field may return `null`, indicating that no valid value was found.
      * @param string $Name Video transcoding template name, which can contain 1-20 letters and digits.
      * @param string $Vcodec Video codec. Valid values: H264/H265. If this parameter is left empty, the original value will be used.
      * @param integer $VideoBitrate Video bitrate. Value range: [50000,40000000]. The value can only be a multiple of 1,000. If this parameter is left empty, the original value will be used.
-     * @param integer $Width Video width. Value range: (0,3000]. The value can only be a multiple of 4. If this parameter is left empty, the original value will be used.
-     * @param integer $Height Video height. Value range: (0,3000]. The value can only be a multiple of 4. If this parameter is left empty, the original value will be used.
+     * @param integer $Width Video width. Value range: (0,4096]. The value can only be a multiple of 2. If this parameter is left empty, the original value will be used.
+     * @param integer $Height Video height. Value range: (0,4096]. The value can only be a multiple of 2. If this parameter is left empty, the original value will be used.
      * @param integer $Fps Video frame rate. Value range: [1,240]. If this parameter is left empty, the original value will be used.
      * @param string $TopSpeed Whether to enable top speed codec. Valid value: CLOSE/OPEN. Default value: CLOSE.
      * @param integer $BitrateCompressionRatio Top speed codec compression ratio. Value range: [0,50]. The lower the compression ratio, the higher the image quality.

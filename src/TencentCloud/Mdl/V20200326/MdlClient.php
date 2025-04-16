@@ -33,7 +33,6 @@ use TencentCloud\Mdl\V20200326\Models as Models;
  * @method Models\DeleteStreamLiveInputSecurityGroupResponse DeleteStreamLiveInputSecurityGroup(Models\DeleteStreamLiveInputSecurityGroupRequest $req) This API is used to delete an input security group.
  * @method Models\DeleteStreamLivePlanResponse DeleteStreamLivePlan(Models\DeleteStreamLivePlanRequest $req) This API is used to delete a StreamLive event.
  * @method Models\DeleteStreamLiveWatermarkResponse DeleteStreamLiveWatermark(Models\DeleteStreamLiveWatermarkRequest $req) This API is used to delete a watermark.
- * @method Models\DescribeMediaLiveHighlightResultResponse DescribeMediaLiveHighlightResult(Models\DescribeMediaLiveHighlightResultRequest $req) Query the highlight result information corresponding to the media live broadcast channel.
  * @method Models\DescribeStreamLiveChannelResponse DescribeStreamLiveChannel(Models\DescribeStreamLiveChannelRequest $req) This API is used to query a StreamLive channel.
  * @method Models\DescribeStreamLiveChannelAlertsResponse DescribeStreamLiveChannelAlerts(Models\DescribeStreamLiveChannelAlertsRequest $req) This API is used to query the alarm information of a StreamLive channel.
  * @method Models\DescribeStreamLiveChannelInputStatisticsResponse DescribeStreamLiveChannelInputStatistics(Models\DescribeStreamLiveChannelInputStatisticsRequest $req) This API is used to query input statistics.

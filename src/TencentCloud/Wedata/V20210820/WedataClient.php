@@ -201,11 +201,14 @@ use TencentCloud\Wedata\V20210820\Models as Models;
  * @method Models\FreezeTasksByWorkflowIdsResponse FreezeTasksByWorkflowIds(Models\FreezeTasksByWorkflowIdsRequest $req) Pause All Tasks Under Workflow
  * @method Models\GenHiveTableDDLSqlResponse GenHiveTableDDLSql(Models\GenHiveTableDDLSqlRequest $req) Generate SQL for Creating Hive Table
  * @method Models\GetFileInfoResponse GetFileInfo(Models\GetFileInfoRequest $req) Development Space - Obtain data development script information
+ * @method Models\GetInstanceLogResponse GetInstanceLog(Models\GetInstanceLogRequest $req) This API is used to obtain instance lists.
  * @method Models\GetIntegrationNodeColumnSchemaResponse GetIntegrationNodeColumnSchema(Models\GetIntegrationNodeColumnSchemaRequest $req) Extracting DataInLong Node Field Schema
  * @method Models\GetOfflineDIInstanceListResponse GetOfflineDIInstanceList(Models\GetOfflineDIInstanceListRequest $req) Get Offline Task Instance List (New)
  * @method Models\GetOfflineInstanceListResponse GetOfflineInstanceList(Models\GetOfflineInstanceListRequest $req) Obtain Offline Task Instances
+ * @method Models\GetTaskInstanceResponse GetTaskInstance(Models\GetTaskInstanceRequest $req) This API is used to obtain instance lists.
  * @method Models\KillOpsMakePlanInstancesResponse KillOpsMakePlanInstances(Models\KillOpsMakePlanInstancesRequest $req) Batch Termination of Instances by Supplement Plan.
  * @method Models\KillScheduleInstancesResponse KillScheduleInstances(Models\KillScheduleInstancesRequest $req) Batch Termination of Instances
+ * @method Models\ListInstancesResponse ListInstances(Models\ListInstancesRequest $req) This API is used to obtain instance lists.
  * @method Models\LockIntegrationTaskResponse LockIntegrationTask(Models\LockIntegrationTaskRequest $req) Lock Integration Task
  * @method Models\ModifyApproveStatusResponse ModifyApproveStatus(Models\ModifyApproveStatusRequest $req) Modify Approval Form Status
  * @method Models\ModifyDataSourceResponse ModifyDataSource(Models\ModifyDataSourceRequest $req) Modify Data Source

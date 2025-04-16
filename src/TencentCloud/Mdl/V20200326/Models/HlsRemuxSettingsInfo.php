@@ -48,6 +48,8 @@ Currently, fMP4 segments do not support DRM or time shifting.
  * @method void setVideoResolution(integer $VideoResolution) Set Whether the Hls main m3u8 file contains resolution information, optional values: 1: INCLUDE includes video resolution; 2: EXCLUDE does not include video resolution. Default value: 1.
  * @method integer getEndListTag() Obtain Whether to include the `EXT-X-ENDLIST` tag, 1 includes  `EXT-X-ENDLIST` tag, 2 does not include  `EXT-X-ENDLIST` tag; the default value is 1.
  * @method void setEndListTag(integer $EndListTag) Set Whether to include the `EXT-X-ENDLIST` tag, 1 includes  `EXT-X-ENDLIST` tag, 2 does not include  `EXT-X-ENDLIST` tag; the default value is 1.
+ * @method string getAdMarkupType() Obtain Optional: `ENHANCED_SCTE35`, `DATERANGE`; default value: `ENHANCED_SCTE35`.
+ * @method void setAdMarkupType(string $AdMarkupType) Set Optional: `ENHANCED_SCTE35`, `DATERANGE`; default value: `ENHANCED_SCTE35`.
  */
 class HlsRemuxSettingsInfo extends AbstractModel
 {
@@ -118,6 +120,11 @@ Currently, fMP4 segments do not support DRM or time shifting.
     public $EndListTag;
 
     /**
+     * @var string Optional: `ENHANCED_SCTE35`, `DATERANGE`; default value: `ENHANCED_SCTE35`.
+     */
+    public $AdMarkupType;
+
+    /**
      * @param integer $SegmentDuration Segment duration in ms. Value range: [1000,30000]. Default value: 4000. The value can only be a multiple of 1,000.
      * @param integer $SegmentNumber Number of segments. Value range: [3,30]. Default value: 5.
      * @param string $PdtInsertion Whether to enable PDT insertion. Valid values: CLOSE/OPEN. Default value: CLOSE.
@@ -132,6 +139,7 @@ Currently, fMP4 segments do not support DRM or time shifting.
      * @param integer $StreamOrder Hls main m3u8 file sorting rules by bitrate, optional values: 1: video bitrate ascending order; 2: video bitrate descending order. Default value: 1.
      * @param integer $VideoResolution Whether the Hls main m3u8 file contains resolution information, optional values: 1: INCLUDE includes video resolution; 2: EXCLUDE does not include video resolution. Default value: 1.
      * @param integer $EndListTag Whether to include the `EXT-X-ENDLIST` tag, 1 includes  `EXT-X-ENDLIST` tag, 2 does not include  `EXT-X-ENDLIST` tag; the default value is 1.
+     * @param string $AdMarkupType Optional: `ENHANCED_SCTE35`, `DATERANGE`; default value: `ENHANCED_SCTE35`.
      */
     function __construct()
     {
@@ -196,6 +204,10 @@ Currently, fMP4 segments do not support DRM or time shifting.
 
         if (array_key_exists("EndListTag",$param) and $param["EndListTag"] !== null) {
             $this->EndListTag = $param["EndListTag"];
+        }
+
+        if (array_key_exists("AdMarkupType",$param) and $param["AdMarkupType"] !== null) {
+            $this->AdMarkupType = $param["AdMarkupType"];
         }
     }
 }
