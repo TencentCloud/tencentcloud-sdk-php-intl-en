@@ -18,59 +18,59 @@ namespace TencentCloud\Cdwpg\V20201230\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Resource information.
+ * ParamItem information
  *
- * @method string getSpecName() Obtain Resource name.
+ * @method string getNodeType() Obtain Node type. Valid values: cn and dn.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setSpecName(string $SpecName) Set Resource name.
+ * @method void setNodeType(string $NodeType) Set Node type. Valid values: cn and dn.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getCount() Obtain Resource count.
+ * @method string getNodeName() Obtain Node name.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setCount(integer $Count) Set Resource count.
+ * @method void setNodeName(string $NodeName) Set Node name.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method CBSSpecInfo getDiskSpec() Obtain Disk information.
+ * @method integer getTotalCount() Obtain Number of parameters.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setDiskSpec(CBSSpecInfo $DiskSpec) Set Disk information.
+ * @method void setTotalCount(integer $TotalCount) Set Number of parameters.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getType() Obtain Node type. Valid values: cn and dn.
+ * @method array getDetails() Obtain Parameter information.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setType(string $Type) Set Node type. Valid values: cn and dn.
+ * @method void setDetails(array $Details) Set Parameter information.
 Note: This field may return null, indicating that no valid values can be obtained.
  */
-class ResourceInfo extends AbstractModel
+class ParamItem extends AbstractModel
 {
-    /**
-     * @var string Resource name.
-Note: This field may return null, indicating that no valid values can be obtained.
-     */
-    public $SpecName;
-
-    /**
-     * @var integer Resource count.
-Note: This field may return null, indicating that no valid values can be obtained.
-     */
-    public $Count;
-
-    /**
-     * @var CBSSpecInfo Disk information.
-Note: This field may return null, indicating that no valid values can be obtained.
-     */
-    public $DiskSpec;
-
     /**
      * @var string Node type. Valid values: cn and dn.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
-    public $Type;
+    public $NodeType;
 
     /**
-     * @param string $SpecName Resource name.
+     * @var string Node name.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $Count Resource count.
+     */
+    public $NodeName;
+
+    /**
+     * @var integer Number of parameters.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param CBSSpecInfo $DiskSpec Disk information.
+     */
+    public $TotalCount;
+
+    /**
+     * @var array Parameter information.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Type Node type. Valid values: cn and dn.
+     */
+    public $Details;
+
+    /**
+     * @param string $NodeType Node type. Valid values: cn and dn.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $NodeName Node name.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $TotalCount Number of parameters.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param array $Details Parameter information.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
@@ -86,21 +86,25 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if ($param === null) {
             return;
         }
-        if (array_key_exists("SpecName",$param) and $param["SpecName"] !== null) {
-            $this->SpecName = $param["SpecName"];
+        if (array_key_exists("NodeType",$param) and $param["NodeType"] !== null) {
+            $this->NodeType = $param["NodeType"];
         }
 
-        if (array_key_exists("Count",$param) and $param["Count"] !== null) {
-            $this->Count = $param["Count"];
+        if (array_key_exists("NodeName",$param) and $param["NodeName"] !== null) {
+            $this->NodeName = $param["NodeName"];
         }
 
-        if (array_key_exists("DiskSpec",$param) and $param["DiskSpec"] !== null) {
-            $this->DiskSpec = new CBSSpecInfo();
-            $this->DiskSpec->deserialize($param["DiskSpec"]);
+        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
+            $this->TotalCount = $param["TotalCount"];
         }
 
-        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
-            $this->Type = $param["Type"];
+        if (array_key_exists("Details",$param) and $param["Details"] !== null) {
+            $this->Details = [];
+            foreach ($param["Details"] as $key => $value){
+                $obj = new ParamDetail();
+                $obj->deserialize($value);
+                array_push($this->Details, $obj);
+            }
         }
     }
 }

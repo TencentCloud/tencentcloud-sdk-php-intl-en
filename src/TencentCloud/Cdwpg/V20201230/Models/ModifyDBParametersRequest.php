@@ -18,14 +18,14 @@ namespace TencentCloud\Cdwpg\V20201230\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * ModifyInstance request structure.
+ * ModifyDBParameters request structure.
  *
  * @method string getInstanceId() Obtain InstanceId.
  * @method void setInstanceId(string $InstanceId) Set InstanceId.
- * @method string getInstanceName() Obtain Name of the newly modified instance.
- * @method void setInstanceName(string $InstanceName) Set Name of the newly modified instance.
+ * @method array getNodeConfigParams() Obtain Node parameter.
+ * @method void setNodeConfigParams(array $NodeConfigParams) Set Node parameter.
  */
-class ModifyInstanceRequest extends AbstractModel
+class ModifyDBParametersRequest extends AbstractModel
 {
     /**
      * @var string InstanceId.
@@ -33,13 +33,13 @@ class ModifyInstanceRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var string Name of the newly modified instance.
+     * @var array Node parameter.
      */
-    public $InstanceName;
+    public $NodeConfigParams;
 
     /**
      * @param string $InstanceId InstanceId.
-     * @param string $InstanceName Name of the newly modified instance.
+     * @param array $NodeConfigParams Node parameter.
      */
     function __construct()
     {
@@ -58,8 +58,13 @@ class ModifyInstanceRequest extends AbstractModel
             $this->InstanceId = $param["InstanceId"];
         }
 
-        if (array_key_exists("InstanceName",$param) and $param["InstanceName"] !== null) {
-            $this->InstanceName = $param["InstanceName"];
+        if (array_key_exists("NodeConfigParams",$param) and $param["NodeConfigParams"] !== null) {
+            $this->NodeConfigParams = [];
+            foreach ($param["NodeConfigParams"] as $key => $value){
+                $obj = new NodeConfigParams();
+                $obj->deserialize($value);
+                array_push($this->NodeConfigParams, $obj);
+            }
         }
     }
 }

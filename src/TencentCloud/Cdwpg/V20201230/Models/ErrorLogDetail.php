@@ -18,59 +18,63 @@ namespace TencentCloud\Cdwpg\V20201230\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Disk specifications.
+ * Error log details
  *
- * @method string getDiskType() Obtain Disk type.
+ * @method string getUserName() Obtain Username.
 
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setDiskType(string $DiskType) Set Disk type.
+ * @method void setUserName(string $UserName) Set Username.
 
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getDiskSize() Obtain Size.
-
+ * @method string getDatabase() Obtain Database.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setDiskSize(integer $DiskSize) Set Size.
-
+ * @method void setDatabase(string $Database) Set Database.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getDiskCount() Obtain Number.
-
+ * @method string getErrorTime() Obtain The time an error was reported.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setDiskCount(integer $DiskCount) Set Number.
-
+ * @method void setErrorTime(string $ErrorTime) Set The time an error was reported.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getErrorMessage() Obtain Error message.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setErrorMessage(string $ErrorMessage) Set Error message.
 Note: This field may return null, indicating that no valid values can be obtained.
  */
-class CBSSpec extends AbstractModel
+class ErrorLogDetail extends AbstractModel
 {
     /**
-     * @var string Disk type.
+     * @var string Username.
 
 Note: This field may return null, indicating that no valid values can be obtained.
      */
-    public $DiskType;
+    public $UserName;
 
     /**
-     * @var integer Size.
-
+     * @var string Database.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
-    public $DiskSize;
+    public $Database;
 
     /**
-     * @var integer Number.
-
+     * @var string The time an error was reported.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
-    public $DiskCount;
+    public $ErrorTime;
 
     /**
-     * @param string $DiskType Disk type.
+     * @var string Error message.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $ErrorMessage;
+
+    /**
+     * @param string $UserName Username.
 
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $DiskSize Size.
-
+     * @param string $Database Database.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $DiskCount Number.
-
+     * @param string $ErrorTime The time an error was reported.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $ErrorMessage Error message.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
@@ -86,16 +90,20 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DiskType",$param) and $param["DiskType"] !== null) {
-            $this->DiskType = $param["DiskType"];
+        if (array_key_exists("UserName",$param) and $param["UserName"] !== null) {
+            $this->UserName = $param["UserName"];
         }
 
-        if (array_key_exists("DiskSize",$param) and $param["DiskSize"] !== null) {
-            $this->DiskSize = $param["DiskSize"];
+        if (array_key_exists("Database",$param) and $param["Database"] !== null) {
+            $this->Database = $param["Database"];
         }
 
-        if (array_key_exists("DiskCount",$param) and $param["DiskCount"] !== null) {
-            $this->DiskCount = $param["DiskCount"];
+        if (array_key_exists("ErrorTime",$param) and $param["ErrorTime"] !== null) {
+            $this->ErrorTime = $param["ErrorTime"];
+        }
+
+        if (array_key_exists("ErrorMessage",$param) and $param["ErrorMessage"] !== null) {
+            $this->ErrorMessage = $param["ErrorMessage"];
         }
     }
 }

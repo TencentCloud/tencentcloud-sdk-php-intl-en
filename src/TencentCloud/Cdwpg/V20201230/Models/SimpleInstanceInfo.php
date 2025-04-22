@@ -24,65 +24,81 @@ use TencentCloud\Common\AbstractModel;
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setID(integer $ID) Set ID
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getInstanceId() Obtain Instance Id
+ * @method string getInstanceId() Obtain Cluster ID.
+
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setInstanceId(string $InstanceId) Set Instance Id
+ * @method void setInstanceId(string $InstanceId) Set Cluster ID.
+
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getInstanceName() Obtain Instance Name
+ * @method string getInstanceName() Obtain Cluster name.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setInstanceName(string $InstanceName) Set Instance Name
+ * @method void setInstanceName(string $InstanceName) Set Cluster name.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getVersion() Obtain Version
+ * @method string getVersion() Obtain Kernel version.
+
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setVersion(string $Version) Set Version
+ * @method void setVersion(string $Version) Set Kernel version.
+
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getRegion() Obtain Region
+ * @method string getRegion() Obtain Region.
+
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setRegion(string $Region) Set Region
+ * @method void setRegion(string $Region) Set Region.
+
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getZone() Obtain Zone
+ * @method string getZone() Obtain Region.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setZone(string $Zone) Set Zone
+ * @method void setZone(string $Zone) Set Region.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getUserVPCID() Obtain User VPC ID
+ * @method string getUserVPCID() Obtain Virtual Private Cloud (VPC).
+
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setUserVPCID(string $UserVPCID) Set User VPC ID
+ * @method void setUserVPCID(string $UserVPCID) Set Virtual Private Cloud (VPC).
+
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getUserSubnetID() Obtain User Subnet ID
+ * @method string getUserSubnetID() Obtain Subnet.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setUserSubnetID(string $UserSubnetID) Set User Subnet ID
+ * @method void setUserSubnetID(string $UserSubnetID) Set Subnet.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getCreateTime() Obtain CreateTime
+ * @method string getCreateTime() Obtain Start time.
+
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setCreateTime(string $CreateTime) Set CreateTime
+ * @method void setCreateTime(string $CreateTime) Set Start time.
+
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getExpireTime() Obtain ExpireTime
+ * @method string getExpireTime() Obtain Expiration time.
+
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setExpireTime(string $ExpireTime) Set ExpireTime
+ * @method void setExpireTime(string $ExpireTime) Set Expiration time.
+
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getAccessInfo() Obtain Access Infomation
+ * @method string getAccessInfo() Obtain Access address.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setAccessInfo(string $AccessInfo) Set Access Infomation
+ * @method void setAccessInfo(string $AccessInfo) Set Access address.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getRenewFlag() Obtain Renew Flag
+ * @method integer getRenewFlag() Obtain Automatic renewal switch. 0 indicates automatic renewal is not enabled, and 1 indicates automatic renewal is enabled.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setRenewFlag(integer $RenewFlag) Set Renew Flag
+ * @method void setRenewFlag(integer $RenewFlag) Set Automatic renewal switch. 0 indicates automatic renewal is not enabled, and 1 indicates automatic renewal is enabled.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method ChargeProperties getChargeProperties() Obtain Charge Properties
+ * @method ChargeProperties getChargeProperties() Obtain Billing mode.
+
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setChargeProperties(ChargeProperties $ChargeProperties) Set Charge Properties
+ * @method void setChargeProperties(ChargeProperties $ChargeProperties) Set Billing mode.
+
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method array getResources() Obtain Resources
+ * @method array getResources() Obtain Resource collection.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setResources(array $Resources) Set Resources
+ * @method void setResources(array $Resources) Set Resource collection.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method array getTags() Obtain Tags
+ * @method array getTags() Obtain Tag list.
+
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setTags(array $Tags) Set Tags
+ * @method void setTags(array $Tags) Set Tag list.
+
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getStatus() Obtain Status
+ * @method integer getStatus() Obtain Cluster status.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setStatus(integer $Status) Set Status
+ * @method void setStatus(integer $Status) Set Cluster status.
 Note: This field may return null, indicating that no valid values can be obtained.
  */
 class SimpleInstanceInfo extends AbstractModel
@@ -94,91 +110,99 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $ID;
 
     /**
-     * @var string Instance Id
+     * @var string Cluster ID.
+
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $InstanceId;
 
     /**
-     * @var string Instance Name
+     * @var string Cluster name.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $InstanceName;
 
     /**
-     * @var string Version
+     * @var string Kernel version.
+
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Version;
 
     /**
-     * @var string Region
+     * @var string Region.
+
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Region;
 
     /**
-     * @var string Zone
+     * @var string Region.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Zone;
 
     /**
-     * @var string User VPC ID
+     * @var string Virtual Private Cloud (VPC).
+
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $UserVPCID;
 
     /**
-     * @var string User Subnet ID
+     * @var string Subnet.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $UserSubnetID;
 
     /**
-     * @var string CreateTime
+     * @var string Start time.
+
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $CreateTime;
 
     /**
-     * @var string ExpireTime
+     * @var string Expiration time.
+
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ExpireTime;
 
     /**
-     * @var string Access Infomation
+     * @var string Access address.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $AccessInfo;
 
     /**
-     * @var integer Renew Flag
+     * @var integer Automatic renewal switch. 0 indicates automatic renewal is not enabled, and 1 indicates automatic renewal is enabled.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $RenewFlag;
 
     /**
-     * @var ChargeProperties Charge Properties
+     * @var ChargeProperties Billing mode.
+
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ChargeProperties;
 
     /**
-     * @var array Resources
+     * @var array Resource collection.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Resources;
 
     /**
-     * @var array Tags
+     * @var array Tag list.
+
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Tags;
 
     /**
-     * @var integer Status
+     * @var integer Cluster status.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Status;
@@ -186,35 +210,43 @@ Note: This field may return null, indicating that no valid values can be obtaine
     /**
      * @param integer $ID ID
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $InstanceId Instance Id
+     * @param string $InstanceId Cluster ID.
+
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $InstanceName Instance Name
+     * @param string $InstanceName Cluster name.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Version Version
+     * @param string $Version Kernel version.
+
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Region Region
+     * @param string $Region Region.
+
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Zone Zone
+     * @param string $Zone Region.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $UserVPCID User VPC ID
+     * @param string $UserVPCID Virtual Private Cloud (VPC).
+
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $UserSubnetID User Subnet ID
+     * @param string $UserSubnetID Subnet.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $CreateTime CreateTime
+     * @param string $CreateTime Start time.
+
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $ExpireTime ExpireTime
+     * @param string $ExpireTime Expiration time.
+
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $AccessInfo Access Infomation
+     * @param string $AccessInfo Access address.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $RenewFlag Renew Flag
+     * @param integer $RenewFlag Automatic renewal switch. 0 indicates automatic renewal is not enabled, and 1 indicates automatic renewal is enabled.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ChargeProperties $ChargeProperties Charge Properties
+     * @param ChargeProperties $ChargeProperties Billing mode.
+
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param array $Resources Resources
+     * @param array $Resources Resource collection.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param array $Tags Tags
+     * @param array $Tags Tag list.
+
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $Status Status
+     * @param integer $Status Cluster status.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()

@@ -34,10 +34,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAdminPassword(string $AdminPassword) Set Instance password.
  * @method array getResources() Obtain Resource information.
  * @method void setResources(array $Resources) Set Resource information.
- * @method Tag getTags() Obtain Tag list.
- * @method void setTags(Tag $Tags) Set Tag list.
+ * @method Tag getTags() Obtain Tag list.Deprecated, use TagItems.
+ * @method void setTags(Tag $Tags) Set Tag list.Deprecated, use TagItems.
  * @method string getProductVersion() Obtain Version.
  * @method void setProductVersion(string $ProductVersion) Set Version.
+ * @method array getTagItems() Obtain  TagItems list.
+ * @method void setTagItems(array $TagItems) Set  TagItems list.
  */
 class CreateInstanceByApiRequest extends AbstractModel
 {
@@ -77,7 +79,7 @@ class CreateInstanceByApiRequest extends AbstractModel
     public $Resources;
 
     /**
-     * @var Tag Tag list.
+     * @var Tag Tag list.Deprecated, use TagItems.
      */
     public $Tags;
 
@@ -87,6 +89,11 @@ class CreateInstanceByApiRequest extends AbstractModel
     public $ProductVersion;
 
     /**
+     * @var array  TagItems list.
+     */
+    public $TagItems;
+
+    /**
      * @param string $InstanceName Instance name.
      * @param string $Zone Availability zone.
      * @param string $UserVPCId Virtual Private Cloud (VPC).
@@ -94,8 +101,9 @@ class CreateInstanceByApiRequest extends AbstractModel
      * @param ChargeProperties $ChargeProperties Billing method.
      * @param string $AdminPassword Instance password.
      * @param array $Resources Resource information.
-     * @param Tag $Tags Tag list.
+     * @param Tag $Tags Tag list.Deprecated, use TagItems.
      * @param string $ProductVersion Version.
+     * @param array $TagItems  TagItems list.
      */
     function __construct()
     {
@@ -151,6 +159,15 @@ class CreateInstanceByApiRequest extends AbstractModel
 
         if (array_key_exists("ProductVersion",$param) and $param["ProductVersion"] !== null) {
             $this->ProductVersion = $param["ProductVersion"];
+        }
+
+        if (array_key_exists("TagItems",$param) and $param["TagItems"] !== null) {
+            $this->TagItems = [];
+            foreach ($param["TagItems"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->TagItems, $obj);
+            }
         }
     }
 }

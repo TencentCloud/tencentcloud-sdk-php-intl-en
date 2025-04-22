@@ -20,45 +20,53 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Instance node information.
  *
- * @method string getSpecName() Obtain Spec Name
+ * @method string getSpecName() Obtain Model.
+
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setSpecName(string $SpecName) Set Spec Name
+ * @method void setSpecName(string $SpecName) Set Model.
+
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method DiskSpecPlus getDataDisk() Obtain Data Disk
+ * @method DiskSpecPlus getDataDisk() Obtain Disk information.
+
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setDataDisk(DiskSpecPlus $DataDisk) Set Data Disk
+ * @method void setDataDisk(DiskSpecPlus $DataDisk) Set Disk information.
+
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getCvmCount() Obtain Cvm Count
+ * @method integer getCvmCount() Obtain Number of machines.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setCvmCount(integer $CvmCount) Set Cvm Count
+ * @method void setCvmCount(integer $CvmCount) Set Number of machines.
 Note: This field may return null, indicating that no valid values can be obtained.
  */
 class InstanceNodeGroup extends AbstractModel
 {
     /**
-     * @var string Spec Name
+     * @var string Model.
+
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $SpecName;
 
     /**
-     * @var DiskSpecPlus Data Disk
+     * @var DiskSpecPlus Disk information.
+
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $DataDisk;
 
     /**
-     * @var integer Cvm Count
+     * @var integer Number of machines.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $CvmCount;
 
     /**
-     * @param string $SpecName Spec Name
+     * @param string $SpecName Model.
+
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param DiskSpecPlus $DataDisk Data Disk
+     * @param DiskSpecPlus $DataDisk Disk information.
+
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $CvmCount Cvm Count
+     * @param integer $CvmCount Number of machines.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()

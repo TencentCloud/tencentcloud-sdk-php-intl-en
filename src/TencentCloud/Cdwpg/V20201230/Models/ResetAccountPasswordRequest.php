@@ -18,28 +18,36 @@ namespace TencentCloud\Cdwpg\V20201230\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * ModifyInstance request structure.
+ * ResetAccountPassword request structure.
  *
- * @method string getInstanceId() Obtain InstanceId.
- * @method void setInstanceId(string $InstanceId) Set InstanceId.
- * @method string getInstanceName() Obtain Name of the newly modified instance.
- * @method void setInstanceName(string $InstanceName) Set Name of the newly modified instance.
+ * @method string getInstanceId() Obtain Instanceid.
+ * @method void setInstanceId(string $InstanceId) Set Instanceid.
+ * @method string getUserName() Obtain The username to be modified.
+ * @method void setUserName(string $UserName) Set The username to be modified.
+ * @method string getNewPassword() Obtain New password.
+ * @method void setNewPassword(string $NewPassword) Set New password.
  */
-class ModifyInstanceRequest extends AbstractModel
+class ResetAccountPasswordRequest extends AbstractModel
 {
     /**
-     * @var string InstanceId.
+     * @var string Instanceid.
      */
     public $InstanceId;
 
     /**
-     * @var string Name of the newly modified instance.
+     * @var string The username to be modified.
      */
-    public $InstanceName;
+    public $UserName;
 
     /**
-     * @param string $InstanceId InstanceId.
-     * @param string $InstanceName Name of the newly modified instance.
+     * @var string New password.
+     */
+    public $NewPassword;
+
+    /**
+     * @param string $InstanceId Instanceid.
+     * @param string $UserName The username to be modified.
+     * @param string $NewPassword New password.
      */
     function __construct()
     {
@@ -58,8 +66,12 @@ class ModifyInstanceRequest extends AbstractModel
             $this->InstanceId = $param["InstanceId"];
         }
 
-        if (array_key_exists("InstanceName",$param) and $param["InstanceName"] !== null) {
-            $this->InstanceName = $param["InstanceName"];
+        if (array_key_exists("UserName",$param) and $param["UserName"] !== null) {
+            $this->UserName = $param["UserName"];
+        }
+
+        if (array_key_exists("NewPassword",$param) and $param["NewPassword"] !== null) {
+            $this->NewPassword = $param["NewPassword"];
         }
     }
 }

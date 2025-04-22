@@ -52,13 +52,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setBackupStatus(integer $BackupStatus) Set Indicates whether there is a backup task in the instance. 1 indicates yes and 0 indicates no.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getRequestId() Obtain Request Id
+ * @method string getRequestId() Obtain Request ID.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setRequestId(string $RequestId) Set Request Id
+ * @method void setRequestId(string $RequestId) Set Request ID.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getBackupOpenStatus() Obtain Backup Open Status
+ * @method integer getBackupOpenStatus() Obtain Indicates whether there is a backup task in the cluster. 1 indicates yes and 0 indicates no.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setBackupOpenStatus(integer $BackupOpenStatus) Set Backup Open Status
+ * @method void setBackupOpenStatus(integer $BackupOpenStatus) Set Indicates whether there is a backup task in the cluster. 1 indicates yes and 0 indicates no.
 Note: This field may return null, indicating that no valid values can be obtained.
  */
 class InstanceStateInfo extends AbstractModel
@@ -112,13 +112,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $BackupStatus;
 
     /**
-     * @var string Request Id
+     * @var string Request ID.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $RequestId;
 
     /**
-     * @var integer Backup Open Status
+     * @var integer Indicates whether there is a backup task in the cluster. 1 indicates yes and 0 indicates no.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $BackupOpenStatus;
@@ -140,9 +140,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $BackupStatus Indicates whether there is a backup task in the instance. 1 indicates yes and 0 indicates no.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $RequestId Request Id
+     * @param string $RequestId Request ID.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $BackupOpenStatus Backup Open Status
+     * @param integer $BackupOpenStatus Indicates whether there is a backup task in the cluster. 1 indicates yes and 0 indicates no.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()

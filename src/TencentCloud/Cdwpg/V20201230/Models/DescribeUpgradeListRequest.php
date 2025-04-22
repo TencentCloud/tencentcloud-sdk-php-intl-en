@@ -18,14 +18,16 @@ namespace TencentCloud\Cdwpg\V20201230\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * ModifyInstance request structure.
+ * DescribeUpgradeList request structure.
  *
  * @method string getInstanceId() Obtain InstanceId.
  * @method void setInstanceId(string $InstanceId) Set InstanceId.
- * @method string getInstanceName() Obtain Name of the newly modified instance.
- * @method void setInstanceName(string $InstanceName) Set Name of the newly modified instance.
+ * @method integer getOffset() Obtain Offset.
+ * @method void setOffset(integer $Offset) Set Offset.
+ * @method integer getLimit() Obtain Limit.
+ * @method void setLimit(integer $Limit) Set Limit.
  */
-class ModifyInstanceRequest extends AbstractModel
+class DescribeUpgradeListRequest extends AbstractModel
 {
     /**
      * @var string InstanceId.
@@ -33,13 +35,19 @@ class ModifyInstanceRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var string Name of the newly modified instance.
+     * @var integer Offset.
      */
-    public $InstanceName;
+    public $Offset;
+
+    /**
+     * @var integer Limit.
+     */
+    public $Limit;
 
     /**
      * @param string $InstanceId InstanceId.
-     * @param string $InstanceName Name of the newly modified instance.
+     * @param integer $Offset Offset.
+     * @param integer $Limit Limit.
      */
     function __construct()
     {
@@ -58,8 +66,12 @@ class ModifyInstanceRequest extends AbstractModel
             $this->InstanceId = $param["InstanceId"];
         }
 
-        if (array_key_exists("InstanceName",$param) and $param["InstanceName"] !== null) {
-            $this->InstanceName = $param["InstanceName"];
+        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
+            $this->Offset = $param["Offset"];
+        }
+
+        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
+            $this->Limit = $param["Limit"];
         }
     }
 }

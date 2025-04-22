@@ -18,59 +18,55 @@ namespace TencentCloud\Cdwpg\V20201230\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Disk specifications.
+ * Parameters
  *
- * @method string getDiskType() Obtain Disk type.
+ * @method string getParameterName() Obtain Name.
 
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setDiskType(string $DiskType) Set Disk type.
+ * @method void setParameterName(string $ParameterName) Set Name.
 
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getDiskSize() Obtain Size.
+ * @method string getParameterValue() Obtain Value.
 
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setDiskSize(integer $DiskSize) Set Size.
+ * @method void setParameterValue(string $ParameterValue) Set Value.
 
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getDiskCount() Obtain Number.
-
+ * @method string getParameterOldValue() Obtain Value before modification.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setDiskCount(integer $DiskCount) Set Number.
-
+ * @method void setParameterOldValue(string $ParameterOldValue) Set Value before modification.
 Note: This field may return null, indicating that no valid values can be obtained.
  */
-class CBSSpec extends AbstractModel
+class ConfigParams extends AbstractModel
 {
     /**
-     * @var string Disk type.
+     * @var string Name.
 
 Note: This field may return null, indicating that no valid values can be obtained.
      */
-    public $DiskType;
+    public $ParameterName;
 
     /**
-     * @var integer Size.
+     * @var string Value.
 
 Note: This field may return null, indicating that no valid values can be obtained.
      */
-    public $DiskSize;
+    public $ParameterValue;
 
     /**
-     * @var integer Number.
-
+     * @var string Value before modification.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
-    public $DiskCount;
+    public $ParameterOldValue;
 
     /**
-     * @param string $DiskType Disk type.
+     * @param string $ParameterName Name.
 
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $DiskSize Size.
+     * @param string $ParameterValue Value.
 
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $DiskCount Number.
-
+     * @param string $ParameterOldValue Value before modification.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
@@ -86,16 +82,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DiskType",$param) and $param["DiskType"] !== null) {
-            $this->DiskType = $param["DiskType"];
+        if (array_key_exists("ParameterName",$param) and $param["ParameterName"] !== null) {
+            $this->ParameterName = $param["ParameterName"];
         }
 
-        if (array_key_exists("DiskSize",$param) and $param["DiskSize"] !== null) {
-            $this->DiskSize = $param["DiskSize"];
+        if (array_key_exists("ParameterValue",$param) and $param["ParameterValue"] !== null) {
+            $this->ParameterValue = $param["ParameterValue"];
         }
 
-        if (array_key_exists("DiskCount",$param) and $param["DiskCount"] !== null) {
-            $this->DiskCount = $param["DiskCount"];
+        if (array_key_exists("ParameterOldValue",$param) and $param["ParameterOldValue"] !== null) {
+            $this->ParameterOldValue = $param["ParameterOldValue"];
         }
     }
 }

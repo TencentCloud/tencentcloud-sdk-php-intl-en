@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFlowName(string $FlowName) Set Instance operation name.Note: This field may return null, indicating that no valid values can be obtained.
  * @method float getFlowProgress() Obtain Instance operation progress.Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setFlowProgress(float $FlowProgress) Set Instance operation progress.Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getInstanceStateDesc() Obtain Cluster status description. Example: running.Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setInstanceStateDesc(string $InstanceStateDesc) Set Cluster status description. Example: running.Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getInstanceStateDesc() Obtain Instance status description. Example: running.Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setInstanceStateDesc(string $InstanceStateDesc) Set Instance status description. Example: running.Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getFlowMsg() Obtain Instance process error messages. Example: "Creation failed, insufficient resources."
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setFlowMsg(string $FlowMsg) Set Instance process error messages. Example: "Creation failed, insufficient resources."
@@ -64,7 +64,7 @@ class DescribeInstanceStateResponse extends AbstractModel
     public $FlowProgress;
 
     /**
-     * @var string Cluster status description. Example: running.Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Instance status description. Example: running.Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $InstanceStateDesc;
 
@@ -94,7 +94,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $FlowCreateTime Creation time of instance operation.Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $FlowName Instance operation name.Note: This field may return null, indicating that no valid values can be obtained.
      * @param float $FlowProgress Instance operation progress.Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $InstanceStateDesc Cluster status description. Example: running.Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $InstanceStateDesc Instance status description. Example: running.Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $FlowMsg Instance process error messages. Example: "Creation failed, insufficient resources."
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $ProcessName The name of the current step. Example: "Purchasing resources."Note: This field may return null, indicating that no valid values can be obtained.

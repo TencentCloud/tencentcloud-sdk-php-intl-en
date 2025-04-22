@@ -18,28 +18,36 @@ namespace TencentCloud\Cdwpg\V20201230\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * ModifyInstance request structure.
+ * Instance node
  *
- * @method string getInstanceId() Obtain InstanceId.
- * @method void setInstanceId(string $InstanceId) Set InstanceId.
- * @method string getInstanceName() Obtain Name of the newly modified instance.
- * @method void setInstanceName(string $InstanceName) Set Name of the newly modified instance.
+ * @method integer getNodeId() Obtain id
+ * @method void setNodeId(integer $NodeId) Set id
+ * @method string getNodeType() Obtain cn
+ * @method void setNodeType(string $NodeType) Set cn
+ * @method string getNodeIp() Obtain ip
+ * @method void setNodeIp(string $NodeIp) Set ip
  */
-class ModifyInstanceRequest extends AbstractModel
+class InstanceNode extends AbstractModel
 {
     /**
-     * @var string InstanceId.
+     * @var integer id
      */
-    public $InstanceId;
+    public $NodeId;
 
     /**
-     * @var string Name of the newly modified instance.
+     * @var string cn
      */
-    public $InstanceName;
+    public $NodeType;
 
     /**
-     * @param string $InstanceId InstanceId.
-     * @param string $InstanceName Name of the newly modified instance.
+     * @var string ip
+     */
+    public $NodeIp;
+
+    /**
+     * @param integer $NodeId id
+     * @param string $NodeType cn
+     * @param string $NodeIp ip
      */
     function __construct()
     {
@@ -54,12 +62,16 @@ class ModifyInstanceRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
-            $this->InstanceId = $param["InstanceId"];
+        if (array_key_exists("NodeId",$param) and $param["NodeId"] !== null) {
+            $this->NodeId = $param["NodeId"];
         }
 
-        if (array_key_exists("InstanceName",$param) and $param["InstanceName"] !== null) {
-            $this->InstanceName = $param["InstanceName"];
+        if (array_key_exists("NodeType",$param) and $param["NodeType"] !== null) {
+            $this->NodeType = $param["NodeType"];
+        }
+
+        if (array_key_exists("NodeIp",$param) and $param["NodeIp"] !== null) {
+            $this->NodeIp = $param["NodeIp"];
         }
     }
 }

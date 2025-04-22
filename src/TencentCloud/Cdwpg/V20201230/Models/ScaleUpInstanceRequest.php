@@ -18,14 +18,18 @@ namespace TencentCloud\Cdwpg\V20201230\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * ModifyInstance request structure.
+ * ScaleUpInstance request structure.
  *
  * @method string getInstanceId() Obtain InstanceId.
  * @method void setInstanceId(string $InstanceId) Set InstanceId.
- * @method string getInstanceName() Obtain Name of the newly modified instance.
- * @method void setInstanceName(string $InstanceName) Set Name of the newly modified instance.
+ * @method string getCase() Obtain Modifies the resource type.
+ * @method void setCase(string $Case) Set Modifies the resource type.
+ * @method CNResourceSpec getModifySpec() Obtain Modified parameters.
+ * @method void setModifySpec(CNResourceSpec $ModifySpec) Set Modified parameters.
+ * @method string getInstanceName() Obtain Instance name.
+ * @method void setInstanceName(string $InstanceName) Set Instance name.
  */
-class ModifyInstanceRequest extends AbstractModel
+class ScaleUpInstanceRequest extends AbstractModel
 {
     /**
      * @var string InstanceId.
@@ -33,13 +37,25 @@ class ModifyInstanceRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var string Name of the newly modified instance.
+     * @var string Modifies the resource type.
+     */
+    public $Case;
+
+    /**
+     * @var CNResourceSpec Modified parameters.
+     */
+    public $ModifySpec;
+
+    /**
+     * @var string Instance name.
      */
     public $InstanceName;
 
     /**
      * @param string $InstanceId InstanceId.
-     * @param string $InstanceName Name of the newly modified instance.
+     * @param string $Case Modifies the resource type.
+     * @param CNResourceSpec $ModifySpec Modified parameters.
+     * @param string $InstanceName Instance name.
      */
     function __construct()
     {
@@ -56,6 +72,15 @@ class ModifyInstanceRequest extends AbstractModel
         }
         if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
             $this->InstanceId = $param["InstanceId"];
+        }
+
+        if (array_key_exists("Case",$param) and $param["Case"] !== null) {
+            $this->Case = $param["Case"];
+        }
+
+        if (array_key_exists("ModifySpec",$param) and $param["ModifySpec"] !== null) {
+            $this->ModifySpec = new CNResourceSpec();
+            $this->ModifySpec->deserialize($param["ModifySpec"]);
         }
 
         if (array_key_exists("InstanceName",$param) and $param["InstanceName"] !== null) {

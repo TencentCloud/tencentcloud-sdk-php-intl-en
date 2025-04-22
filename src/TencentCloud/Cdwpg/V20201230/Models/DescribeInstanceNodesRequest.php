@@ -18,14 +18,12 @@ namespace TencentCloud\Cdwpg\V20201230\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * ModifyInstance request structure.
+ * DescribeInstanceNodes request structure.
  *
  * @method string getInstanceId() Obtain InstanceId.
  * @method void setInstanceId(string $InstanceId) Set InstanceId.
- * @method string getInstanceName() Obtain Name of the newly modified instance.
- * @method void setInstanceName(string $InstanceName) Set Name of the newly modified instance.
  */
-class ModifyInstanceRequest extends AbstractModel
+class DescribeInstanceNodesRequest extends AbstractModel
 {
     /**
      * @var string InstanceId.
@@ -33,13 +31,7 @@ class ModifyInstanceRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var string Name of the newly modified instance.
-     */
-    public $InstanceName;
-
-    /**
      * @param string $InstanceId InstanceId.
-     * @param string $InstanceName Name of the newly modified instance.
      */
     function __construct()
     {
@@ -56,10 +48,6 @@ class ModifyInstanceRequest extends AbstractModel
         }
         if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
             $this->InstanceId = $param["InstanceId"];
-        }
-
-        if (array_key_exists("InstanceName",$param) and $param["InstanceName"] !== null) {
-            $this->InstanceName = $param["InstanceName"];
         }
     }
 }

@@ -18,28 +18,28 @@ namespace TencentCloud\Cdwpg\V20201230\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * ModifyInstance request structure.
+ * Node parameter
  *
- * @method string getInstanceId() Obtain InstanceId.
- * @method void setInstanceId(string $InstanceId) Set InstanceId.
- * @method string getInstanceName() Obtain Name of the newly modified instance.
- * @method void setInstanceName(string $InstanceName) Set Name of the newly modified instance.
+ * @method string getNodeType() Obtain Node type.
+ * @method void setNodeType(string $NodeType) Set Node type.
+ * @method array getConfigParams() Obtain Parameter.
+ * @method void setConfigParams(array $ConfigParams) Set Parameter.
  */
-class ModifyInstanceRequest extends AbstractModel
+class NodeConfigParams extends AbstractModel
 {
     /**
-     * @var string InstanceId.
+     * @var string Node type.
      */
-    public $InstanceId;
+    public $NodeType;
 
     /**
-     * @var string Name of the newly modified instance.
+     * @var array Parameter.
      */
-    public $InstanceName;
+    public $ConfigParams;
 
     /**
-     * @param string $InstanceId InstanceId.
-     * @param string $InstanceName Name of the newly modified instance.
+     * @param string $NodeType Node type.
+     * @param array $ConfigParams Parameter.
      */
     function __construct()
     {
@@ -54,12 +54,17 @@ class ModifyInstanceRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
-            $this->InstanceId = $param["InstanceId"];
+        if (array_key_exists("NodeType",$param) and $param["NodeType"] !== null) {
+            $this->NodeType = $param["NodeType"];
         }
 
-        if (array_key_exists("InstanceName",$param) and $param["InstanceName"] !== null) {
-            $this->InstanceName = $param["InstanceName"];
+        if (array_key_exists("ConfigParams",$param) and $param["ConfigParams"] !== null) {
+            $this->ConfigParams = [];
+            foreach ($param["ConfigParams"] as $key => $value){
+                $obj = new ConfigParams();
+                $obj->deserialize($value);
+                array_push($this->ConfigParams, $obj);
+            }
         }
     }
 }

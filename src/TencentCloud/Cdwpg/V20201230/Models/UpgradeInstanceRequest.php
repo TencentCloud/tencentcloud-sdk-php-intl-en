@@ -18,14 +18,14 @@ namespace TencentCloud\Cdwpg\V20201230\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * ModifyInstance request structure.
+ * UpgradeInstance request structure.
  *
  * @method string getInstanceId() Obtain InstanceId.
  * @method void setInstanceId(string $InstanceId) Set InstanceId.
- * @method string getInstanceName() Obtain Name of the newly modified instance.
- * @method void setInstanceName(string $InstanceName) Set Name of the newly modified instance.
+ * @method string getPackageVersion() Obtain Installation package version.
+ * @method void setPackageVersion(string $PackageVersion) Set Installation package version.
  */
-class ModifyInstanceRequest extends AbstractModel
+class UpgradeInstanceRequest extends AbstractModel
 {
     /**
      * @var string InstanceId.
@@ -33,13 +33,13 @@ class ModifyInstanceRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var string Name of the newly modified instance.
+     * @var string Installation package version.
      */
-    public $InstanceName;
+    public $PackageVersion;
 
     /**
      * @param string $InstanceId InstanceId.
-     * @param string $InstanceName Name of the newly modified instance.
+     * @param string $PackageVersion Installation package version.
      */
     function __construct()
     {
@@ -58,8 +58,8 @@ class ModifyInstanceRequest extends AbstractModel
             $this->InstanceId = $param["InstanceId"];
         }
 
-        if (array_key_exists("InstanceName",$param) and $param["InstanceName"] !== null) {
-            $this->InstanceName = $param["InstanceName"];
+        if (array_key_exists("PackageVersion",$param) and $param["PackageVersion"] !== null) {
+            $this->PackageVersion = $param["PackageVersion"];
         }
     }
 }

@@ -18,28 +18,36 @@ namespace TencentCloud\Cdwpg\V20201230\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * ModifyInstance request structure.
+ * DescribeAccounts request structure.
  *
- * @method string getInstanceId() Obtain InstanceId.
- * @method void setInstanceId(string $InstanceId) Set InstanceId.
- * @method string getInstanceName() Obtain Name of the newly modified instance.
- * @method void setInstanceName(string $InstanceName) Set Name of the newly modified instance.
+ * @method string getInstanceId() Obtain Instance ID.
+ * @method void setInstanceId(string $InstanceId) Set Instance ID.
+ * @method integer getOffset() Obtain Offset. Default value: 0.
+ * @method void setOffset(integer $Offset) Set Offset. Default value: 0.
+ * @method integer getLimit() Obtain Limit.
+ * @method void setLimit(integer $Limit) Set Limit.
  */
-class ModifyInstanceRequest extends AbstractModel
+class DescribeAccountsRequest extends AbstractModel
 {
     /**
-     * @var string InstanceId.
+     * @var string Instance ID.
      */
     public $InstanceId;
 
     /**
-     * @var string Name of the newly modified instance.
+     * @var integer Offset. Default value: 0.
      */
-    public $InstanceName;
+    public $Offset;
 
     /**
-     * @param string $InstanceId InstanceId.
-     * @param string $InstanceName Name of the newly modified instance.
+     * @var integer Limit.
+     */
+    public $Limit;
+
+    /**
+     * @param string $InstanceId Instance ID.
+     * @param integer $Offset Offset. Default value: 0.
+     * @param integer $Limit Limit.
      */
     function __construct()
     {
@@ -58,8 +66,12 @@ class ModifyInstanceRequest extends AbstractModel
             $this->InstanceId = $param["InstanceId"];
         }
 
-        if (array_key_exists("InstanceName",$param) and $param["InstanceName"] !== null) {
-            $this->InstanceName = $param["InstanceName"];
+        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
+            $this->Offset = $param["Offset"];
+        }
+
+        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
+            $this->Limit = $param["Limit"];
         }
     }
 }

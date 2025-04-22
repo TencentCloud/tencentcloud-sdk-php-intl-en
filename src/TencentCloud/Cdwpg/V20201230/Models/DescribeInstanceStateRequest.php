@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeInstanceState request structure.
  *
- * @method string getInstanceId() Obtain  Instance id
- * @method void setInstanceId(string $InstanceId) Set  Instance id
+ * @method string getInstanceId() Obtain  InstanceId.
+ * @method void setInstanceId(string $InstanceId) Set  InstanceId.
  */
 class DescribeInstanceStateRequest extends AbstractModel
 {
     /**
-     * @var string  Instance id
+     * @var string  InstanceId.
      */
     public $InstanceId;
 
     /**
-     * @param string $InstanceId  Instance id
+     * @param string $InstanceId  InstanceId.
      */
     function __construct()
     {

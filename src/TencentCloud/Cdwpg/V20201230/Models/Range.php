@@ -18,59 +18,35 @@ namespace TencentCloud\Cdwpg\V20201230\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Disk specifications.
+ * Range
  *
- * @method string getDiskType() Obtain Disk type.
-
+ * @method string getMin() Obtain Minimum value.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setDiskType(string $DiskType) Set Disk type.
-
+ * @method void setMin(string $Min) Set Minimum value.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getDiskSize() Obtain Size.
-
+ * @method string getMax() Obtain Maximum value.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setDiskSize(integer $DiskSize) Set Size.
-
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getDiskCount() Obtain Number.
-
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setDiskCount(integer $DiskCount) Set Number.
-
+ * @method void setMax(string $Max) Set Maximum value.
 Note: This field may return null, indicating that no valid values can be obtained.
  */
-class CBSSpec extends AbstractModel
+class Range extends AbstractModel
 {
     /**
-     * @var string Disk type.
-
+     * @var string Minimum value.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
-    public $DiskType;
+    public $Min;
 
     /**
-     * @var integer Size.
-
+     * @var string Maximum value.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
-    public $DiskSize;
+    public $Max;
 
     /**
-     * @var integer Number.
-
+     * @param string $Min Minimum value.
 Note: This field may return null, indicating that no valid values can be obtained.
-     */
-    public $DiskCount;
-
-    /**
-     * @param string $DiskType Disk type.
-
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $DiskSize Size.
-
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $DiskCount Number.
-
+     * @param string $Max Maximum value.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
@@ -86,16 +62,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DiskType",$param) and $param["DiskType"] !== null) {
-            $this->DiskType = $param["DiskType"];
+        if (array_key_exists("Min",$param) and $param["Min"] !== null) {
+            $this->Min = $param["Min"];
         }
 
-        if (array_key_exists("DiskSize",$param) and $param["DiskSize"] !== null) {
-            $this->DiskSize = $param["DiskSize"];
-        }
-
-        if (array_key_exists("DiskCount",$param) and $param["DiskCount"] !== null) {
-            $this->DiskCount = $param["DiskCount"];
+        if (array_key_exists("Max",$param) and $param["Max"] !== null) {
+            $this->Max = $param["Max"];
         }
     }
 }

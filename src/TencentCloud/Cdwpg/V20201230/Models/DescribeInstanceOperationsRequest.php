@@ -18,30 +18,25 @@ namespace TencentCloud\Cdwpg\V20201230\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeSimpleInstances request structure.
+ * DescribeInstanceOperations request structure.
  *
- * @method string getSearchInstanceId() Obtain Searches by instance ID.
- * @method void setSearchInstanceId(string $SearchInstanceId) Set Searches by instance ID.
- * @method string getSearchInstanceName() Obtain Searches by instance name.
- * @method void setSearchInstanceName(string $SearchInstanceName) Set Searches by instance name.
+ * @method string getInstanceId() Obtain InstanceId.
+ * @method void setInstanceId(string $InstanceId) Set InstanceId.
  * @method integer getOffset() Obtain Offset.
  * @method void setOffset(integer $Offset) Set Offset.
  * @method integer getLimit() Obtain Limit.
  * @method void setLimit(integer $Limit) Set Limit.
- * @method array getSearchTags() Obtain Searches by tag list.
- * @method void setSearchTags(array $SearchTags) Set Searches by tag list.
+ * @method string getStartTime() Obtain Start time.
+ * @method void setStartTime(string $StartTime) Set Start time.
+ * @method string getEndTime() Obtain End time.
+ * @method void setEndTime(string $EndTime) Set End time.
  */
-class DescribeSimpleInstancesRequest extends AbstractModel
+class DescribeInstanceOperationsRequest extends AbstractModel
 {
     /**
-     * @var string Searches by instance ID.
+     * @var string InstanceId.
      */
-    public $SearchInstanceId;
-
-    /**
-     * @var string Searches by instance name.
-     */
-    public $SearchInstanceName;
+    public $InstanceId;
 
     /**
      * @var integer Offset.
@@ -54,16 +49,21 @@ class DescribeSimpleInstancesRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @var array Searches by tag list.
+     * @var string Start time.
      */
-    public $SearchTags;
+    public $StartTime;
 
     /**
-     * @param string $SearchInstanceId Searches by instance ID.
-     * @param string $SearchInstanceName Searches by instance name.
+     * @var string End time.
+     */
+    public $EndTime;
+
+    /**
+     * @param string $InstanceId InstanceId.
      * @param integer $Offset Offset.
      * @param integer $Limit Limit.
-     * @param array $SearchTags Searches by tag list.
+     * @param string $StartTime Start time.
+     * @param string $EndTime End time.
      */
     function __construct()
     {
@@ -78,12 +78,8 @@ class DescribeSimpleInstancesRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("SearchInstanceId",$param) and $param["SearchInstanceId"] !== null) {
-            $this->SearchInstanceId = $param["SearchInstanceId"];
-        }
-
-        if (array_key_exists("SearchInstanceName",$param) and $param["SearchInstanceName"] !== null) {
-            $this->SearchInstanceName = $param["SearchInstanceName"];
+        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
+            $this->InstanceId = $param["InstanceId"];
         }
 
         if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
@@ -94,8 +90,12 @@ class DescribeSimpleInstancesRequest extends AbstractModel
             $this->Limit = $param["Limit"];
         }
 
-        if (array_key_exists("SearchTags",$param) and $param["SearchTags"] !== null) {
-            $this->SearchTags = $param["SearchTags"];
+        if (array_key_exists("StartTime",$param) and $param["StartTime"] !== null) {
+            $this->StartTime = $param["StartTime"];
+        }
+
+        if (array_key_exists("EndTime",$param) and $param["EndTime"] !== null) {
+            $this->EndTime = $param["EndTime"];
         }
     }
 }

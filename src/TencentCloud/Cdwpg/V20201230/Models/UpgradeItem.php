@@ -18,83 +18,103 @@ namespace TencentCloud\Cdwpg\V20201230\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Disk specifications.
+ * Upgrade information
  *
- * @method integer getDiskCount() Obtain Number of disks.
+ * @method string getTaskName() Obtain Task name.
+
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setDiskCount(integer $DiskCount) Set Number of disks.
+ * @method void setTaskName(string $TaskName) Set Task name.
+
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getMaxDiskSize() Obtain Maximum disk capacity.
+ * @method string getSourceVersion() Obtain Original kernel version.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setMaxDiskSize(integer $MaxDiskSize) Set Maximum disk capacity.
+ * @method void setSourceVersion(string $SourceVersion) Set Original kernel version.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getMinDiskSize() Obtain Minimum disk capacity.
+ * @method string getTargetVersion() Obtain Target kernel version.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setMinDiskSize(integer $MinDiskSize) Set Minimum disk capacity.
+ * @method void setTargetVersion(string $TargetVersion) Set Target kernel version.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getDiskType() Obtain Disk type.
+ * @method string getCreateTime() Obtain Task creation time.
+
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setDiskType(string $DiskType) Set Disk type.
+ * @method void setCreateTime(string $CreateTime) Set Task creation time.
+
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getDiskDesc() Obtain Disk type details.
+ * @method string getEndTime() Obtain Task end time.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setDiskDesc(string $DiskDesc) Set Disk type details.
+ * @method void setEndTime(string $EndTime) Set Task end time.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getCvmClass() Obtain Model type.
+ * @method string getStatus() Obtain Task completion status.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setCvmClass(string $CvmClass) Set Model type.
+ * @method void setStatus(string $Status) Set Task completion status.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getOperateUin() Obtain Operator.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setOperateUin(string $OperateUin) Set Operator.
 Note: This field may return null, indicating that no valid values can be obtained.
  */
-class DiskSpecPlus extends AbstractModel
+class UpgradeItem extends AbstractModel
 {
     /**
-     * @var integer Number of disks.
+     * @var string Task name.
+
 Note: This field may return null, indicating that no valid values can be obtained.
      */
-    public $DiskCount;
+    public $TaskName;
 
     /**
-     * @var integer Maximum disk capacity.
+     * @var string Original kernel version.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
-    public $MaxDiskSize;
+    public $SourceVersion;
 
     /**
-     * @var integer Minimum disk capacity.
+     * @var string Target kernel version.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
-    public $MinDiskSize;
+    public $TargetVersion;
 
     /**
-     * @var string Disk type.
+     * @var string Task creation time.
+
 Note: This field may return null, indicating that no valid values can be obtained.
      */
-    public $DiskType;
+    public $CreateTime;
 
     /**
-     * @var string Disk type details.
+     * @var string Task end time.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
-    public $DiskDesc;
+    public $EndTime;
 
     /**
-     * @var string Model type.
+     * @var string Task completion status.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
-    public $CvmClass;
+    public $Status;
 
     /**
-     * @param integer $DiskCount Number of disks.
+     * @var string Operator.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $MaxDiskSize Maximum disk capacity.
+     */
+    public $OperateUin;
+
+    /**
+     * @param string $TaskName Task name.
+
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $MinDiskSize Minimum disk capacity.
+     * @param string $SourceVersion Original kernel version.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $DiskType Disk type.
+     * @param string $TargetVersion Target kernel version.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $DiskDesc Disk type details.
+     * @param string $CreateTime Task creation time.
+
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $CvmClass Model type.
+     * @param string $EndTime Task end time.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $Status Task completion status.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $OperateUin Operator.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
@@ -110,28 +130,32 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DiskCount",$param) and $param["DiskCount"] !== null) {
-            $this->DiskCount = $param["DiskCount"];
+        if (array_key_exists("TaskName",$param) and $param["TaskName"] !== null) {
+            $this->TaskName = $param["TaskName"];
         }
 
-        if (array_key_exists("MaxDiskSize",$param) and $param["MaxDiskSize"] !== null) {
-            $this->MaxDiskSize = $param["MaxDiskSize"];
+        if (array_key_exists("SourceVersion",$param) and $param["SourceVersion"] !== null) {
+            $this->SourceVersion = $param["SourceVersion"];
         }
 
-        if (array_key_exists("MinDiskSize",$param) and $param["MinDiskSize"] !== null) {
-            $this->MinDiskSize = $param["MinDiskSize"];
+        if (array_key_exists("TargetVersion",$param) and $param["TargetVersion"] !== null) {
+            $this->TargetVersion = $param["TargetVersion"];
         }
 
-        if (array_key_exists("DiskType",$param) and $param["DiskType"] !== null) {
-            $this->DiskType = $param["DiskType"];
+        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
+            $this->CreateTime = $param["CreateTime"];
         }
 
-        if (array_key_exists("DiskDesc",$param) and $param["DiskDesc"] !== null) {
-            $this->DiskDesc = $param["DiskDesc"];
+        if (array_key_exists("EndTime",$param) and $param["EndTime"] !== null) {
+            $this->EndTime = $param["EndTime"];
         }
 
-        if (array_key_exists("CvmClass",$param) and $param["CvmClass"] !== null) {
-            $this->CvmClass = $param["CvmClass"];
+        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
+            $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("OperateUin",$param) and $param["OperateUin"] !== null) {
+            $this->OperateUin = $param["OperateUin"];
         }
     }
 }

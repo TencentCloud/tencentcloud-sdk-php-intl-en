@@ -20,36 +20,36 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeInstances request structure.
  *
- * @method string getSearchInstanceId() Obtain The name of the Instance ID for the search.
- * @method void setSearchInstanceId(string $SearchInstanceId) Set The name of the Instance ID for the search.
- * @method string getSearchInstanceName() Obtain The instance name for the search.
- * @method void setSearchInstanceName(string $SearchInstanceName) Set The instance name for the search.
- * @method integer getOffset() Obtain Pagination parameter. The first page is 0, and the second page is 10.
- * @method void setOffset(integer $Offset) Set Pagination parameter. The first page is 0, and the second page is 10.
- * @method integer getLimit() Obtain Pagination parameter. Pagination step length. It is 10 by default.
- * @method void setLimit(integer $Limit) Set Pagination parameter. Pagination step length. It is 10 by default.
+ * @method string getSearchInstanceId() Obtain Searches by instance ID.
+ * @method void setSearchInstanceId(string $SearchInstanceId) Set Searches by instance ID.
+ * @method string getSearchInstanceName() Obtain Searches by instance name.
+ * @method void setSearchInstanceName(string $SearchInstanceName) Set Searches by instance name.
+ * @method integer getOffset() Obtain Offset.
+ * @method void setOffset(integer $Offset) Set Offset.
+ * @method integer getLimit() Obtain Limit.
+ * @method void setLimit(integer $Limit) Set Limit.
  * @method array getSearchTags() Obtain Searched tag list.
  * @method void setSearchTags(array $SearchTags) Set Searched tag list.
  */
 class DescribeInstancesRequest extends AbstractModel
 {
     /**
-     * @var string The name of the Instance ID for the search.
+     * @var string Searches by instance ID.
      */
     public $SearchInstanceId;
 
     /**
-     * @var string The instance name for the search.
+     * @var string Searches by instance name.
      */
     public $SearchInstanceName;
 
     /**
-     * @var integer Pagination parameter. The first page is 0, and the second page is 10.
+     * @var integer Offset.
      */
     public $Offset;
 
     /**
-     * @var integer Pagination parameter. Pagination step length. It is 10 by default.
+     * @var integer Limit.
      */
     public $Limit;
 
@@ -59,10 +59,10 @@ class DescribeInstancesRequest extends AbstractModel
     public $SearchTags;
 
     /**
-     * @param string $SearchInstanceId The name of the Instance ID for the search.
-     * @param string $SearchInstanceName The instance name for the search.
-     * @param integer $Offset Pagination parameter. The first page is 0, and the second page is 10.
-     * @param integer $Limit Pagination parameter. Pagination step length. It is 10 by default.
+     * @param string $SearchInstanceId Searches by instance ID.
+     * @param string $SearchInstanceName Searches by instance name.
+     * @param integer $Offset Offset.
+     * @param integer $Limit Limit.
      * @param array $SearchTags Searched tag list.
      */
     function __construct()

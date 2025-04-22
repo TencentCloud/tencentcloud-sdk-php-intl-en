@@ -18,12 +18,18 @@ namespace TencentCloud\Cdwpg\V20201230\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeInstanceInfo request structure.
+ * Description of the account name and instance IDs under the account
  *
  * @method string getInstanceId() Obtain Instance ID.
  * @method void setInstanceId(string $InstanceId) Set Instance ID.
+ * @method string getUserName() Obtain Account name.
+ * @method void setUserName(string $UserName) Set Account name.
+ * @method array getPerms() Obtain Account attribute.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setPerms(array $Perms) Set Account attribute.
+Note: This field may return null, indicating that no valid values can be obtained.
  */
-class DescribeInstanceInfoRequest extends AbstractModel
+class AccountInfo extends AbstractModel
 {
     /**
      * @var string Instance ID.
@@ -31,7 +37,21 @@ class DescribeInstanceInfoRequest extends AbstractModel
     public $InstanceId;
 
     /**
+     * @var string Account name.
+     */
+    public $UserName;
+
+    /**
+     * @var array Account attribute.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $Perms;
+
+    /**
      * @param string $InstanceId Instance ID.
+     * @param string $UserName Account name.
+     * @param array $Perms Account attribute.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -48,6 +68,14 @@ class DescribeInstanceInfoRequest extends AbstractModel
         }
         if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
             $this->InstanceId = $param["InstanceId"];
+        }
+
+        if (array_key_exists("UserName",$param) and $param["UserName"] !== null) {
+            $this->UserName = $param["UserName"];
+        }
+
+        if (array_key_exists("Perms",$param) and $param["Perms"] !== null) {
+            $this->Perms = $param["Perms"];
         }
     }
 }

@@ -18,14 +18,16 @@ namespace TencentCloud\Cdwpg\V20201230\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * ModifyInstance request structure.
+ * ScaleOutInstance request structure.
  *
  * @method string getInstanceId() Obtain InstanceId.
  * @method void setInstanceId(string $InstanceId) Set InstanceId.
- * @method string getInstanceName() Obtain Name of the newly modified instance.
- * @method void setInstanceName(string $InstanceName) Set Name of the newly modified instance.
+ * @method string getNodeType() Obtain Node type.
+ * @method void setNodeType(string $NodeType) Set Node type.
+ * @method integer getScaleOutCount() Obtain Number of scale-out nodes.
+ * @method void setScaleOutCount(integer $ScaleOutCount) Set Number of scale-out nodes.
  */
-class ModifyInstanceRequest extends AbstractModel
+class ScaleOutInstanceRequest extends AbstractModel
 {
     /**
      * @var string InstanceId.
@@ -33,13 +35,19 @@ class ModifyInstanceRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var string Name of the newly modified instance.
+     * @var string Node type.
      */
-    public $InstanceName;
+    public $NodeType;
+
+    /**
+     * @var integer Number of scale-out nodes.
+     */
+    public $ScaleOutCount;
 
     /**
      * @param string $InstanceId InstanceId.
-     * @param string $InstanceName Name of the newly modified instance.
+     * @param string $NodeType Node type.
+     * @param integer $ScaleOutCount Number of scale-out nodes.
      */
     function __construct()
     {
@@ -58,8 +66,12 @@ class ModifyInstanceRequest extends AbstractModel
             $this->InstanceId = $param["InstanceId"];
         }
 
-        if (array_key_exists("InstanceName",$param) and $param["InstanceName"] !== null) {
-            $this->InstanceName = $param["InstanceName"];
+        if (array_key_exists("NodeType",$param) and $param["NodeType"] !== null) {
+            $this->NodeType = $param["NodeType"];
+        }
+
+        if (array_key_exists("ScaleOutCount",$param) and $param["ScaleOutCount"] !== null) {
+            $this->ScaleOutCount = $param["ScaleOutCount"];
         }
     }
 }
