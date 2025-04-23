@@ -68,9 +68,8 @@ Callable roles: Distributor, Second-level reseller, Reseller
 2. Bill packages (billDetailPack and billResourcePack) can only be downloaded after billing.
  * @method Models\DescribeCustomerBillSummaryResponse DescribeCustomerBillSummary(Models\DescribeCustomerBillSummaryRequest $req) This API is used to query the total amount of customer bills.
 Callable roles: Distributor, Second-level reseller, Reseller
- * @method Models\DescribeCustomerInfoResponse DescribeCustomerInfo(Models\DescribeCustomerInfoRequest $req) This API is used to query the customer information.
-
-Callable roles: Distributor, Reseller
+ * @method Models\DescribeCustomerInfoResponse DescribeCustomerInfo(Models\DescribeCustomerInfoRequest $req) This API is used to query sub-customer information.
+Invocation roles: reseller, first-level distributor.
  * @method Models\DescribeCustomerUinResponse DescribeCustomerUin(Models\DescribeCustomerUinRequest $req) This API is used to query the list of customer UINs.
  * @method Models\ForceQNResponse ForceQN(Models\ForceQNRequest $req) Forced Service Suspension settings and cancellation can be used only after the reseller is whitelisted.
 

@@ -32,28 +32,46 @@ use TencentCloud\Common\AbstractModel;
  * @method void setName(string $Name) Set Display name.
  * @method string getBindTime() Obtain Binding time.
  * @method void setBindTime(string $BindTime) Set Binding time.
- * @method string getAccountStatus() Obtain Account status
-.
+ * @method string getAccountStatus() Obtain Account status.
 0: normal.
 1: forcibly mandatory (this function is not supported yet).
 2: mandatory arrears. 
- * @method void setAccountStatus(string $AccountStatus) Set Account status
-.
+ * @method void setAccountStatus(string $AccountStatus) Set Account status.
 0: normal.
 1: forcibly mandatory (this function is not supported yet).
 2: mandatory arrears. 
- * @method string getAuthStatus() Obtain Identity verification status.
--1: files not uploaded.
-0: not submitted for review.
-1: under review.
-2: review error.
-3: approved.
- * @method void setAuthStatus(string $AuthStatus) Set Identity verification status.
--1: files not uploaded.
-0: not submitted for review.
-1: under review.
-2: review error.
-3: approved.
+ * @method string getAuthStatus() Obtain Specifies the identity verification status.
+-999: account information not found.
+-1: file not uploaded.
+0: pending review.
+Under review.
+Error in review: 2.
+3: pass review.
+ * @method void setAuthStatus(string $AuthStatus) Set Specifies the identity verification status.
+-999: account information not found.
+-1: file not uploaded.
+0: pending review.
+Under review.
+Error in review: 2.
+3: pass review.
+ * @method integer getAuthType() Obtain Real-Name type.
+-1: default value. no such information. 
+0: personal type. 
+1: enterprise type.
+ * @method void setAuthType(integer $AuthType) Set Real-Name type.
+-1: default value. no such information. 
+0: personal type. 
+1: enterprise type.
+ * @method string getCidRegisterTime() Obtain Specifies the registration time of the cid.
+ * @method void setCidRegisterTime(string $CidRegisterTime) Set Specifies the registration time of the cid.
+ * @method string getUinRegisterTime() Obtain Specifies the registration time of the uin.
+ * @method void setUinRegisterTime(string $UinRegisterTime) Set Specifies the registration time of the uin.
+ * @method string getAuthPassTime() Obtain Time when real-name authentication passed.
+ * @method void setAuthPassTime(string $AuthPassTime) Set Time when real-name authentication passed.
+ * @method integer getHasExpense() Obtain Whether there is consumption.
+0: no consumption; 1: consumption.
+ * @method void setHasExpense(integer $HasExpense) Set Whether there is consumption.
+0: no consumption; 1: consumption.
  */
 class DescribeCustomerInfoData extends AbstractModel
 {
@@ -88,8 +106,7 @@ class DescribeCustomerInfoData extends AbstractModel
     public $BindTime;
 
     /**
-     * @var string Account status
-.
+     * @var string Account status.
 0: normal.
 1: forcibly mandatory (this function is not supported yet).
 2: mandatory arrears. 
@@ -97,14 +114,44 @@ class DescribeCustomerInfoData extends AbstractModel
     public $AccountStatus;
 
     /**
-     * @var string Identity verification status.
--1: files not uploaded.
-0: not submitted for review.
-1: under review.
-2: review error.
-3: approved.
+     * @var string Specifies the identity verification status.
+-999: account information not found.
+-1: file not uploaded.
+0: pending review.
+Under review.
+Error in review: 2.
+3: pass review.
      */
     public $AuthStatus;
+
+    /**
+     * @var integer Real-Name type.
+-1: default value. no such information. 
+0: personal type. 
+1: enterprise type.
+     */
+    public $AuthType;
+
+    /**
+     * @var string Specifies the registration time of the cid.
+     */
+    public $CidRegisterTime;
+
+    /**
+     * @var string Specifies the registration time of the uin.
+     */
+    public $UinRegisterTime;
+
+    /**
+     * @var string Time when real-name authentication passed.
+     */
+    public $AuthPassTime;
+
+    /**
+     * @var integer Whether there is consumption.
+0: no consumption; 1: consumption.
+     */
+    public $HasExpense;
 
     /**
      * @param string $CustomerUin Sub-Account uin.
@@ -113,17 +160,26 @@ class DescribeCustomerInfoData extends AbstractModel
      * @param string $Mark Remarks.
      * @param string $Name Display name.
      * @param string $BindTime Binding time.
-     * @param string $AccountStatus Account status
-.
+     * @param string $AccountStatus Account status.
 0: normal.
 1: forcibly mandatory (this function is not supported yet).
 2: mandatory arrears. 
-     * @param string $AuthStatus Identity verification status.
--1: files not uploaded.
-0: not submitted for review.
-1: under review.
-2: review error.
-3: approved.
+     * @param string $AuthStatus Specifies the identity verification status.
+-999: account information not found.
+-1: file not uploaded.
+0: pending review.
+Under review.
+Error in review: 2.
+3: pass review.
+     * @param integer $AuthType Real-Name type.
+-1: default value. no such information. 
+0: personal type. 
+1: enterprise type.
+     * @param string $CidRegisterTime Specifies the registration time of the cid.
+     * @param string $UinRegisterTime Specifies the registration time of the uin.
+     * @param string $AuthPassTime Time when real-name authentication passed.
+     * @param integer $HasExpense Whether there is consumption.
+0: no consumption; 1: consumption.
      */
     function __construct()
     {
@@ -168,6 +224,26 @@ class DescribeCustomerInfoData extends AbstractModel
 
         if (array_key_exists("AuthStatus",$param) and $param["AuthStatus"] !== null) {
             $this->AuthStatus = $param["AuthStatus"];
+        }
+
+        if (array_key_exists("AuthType",$param) and $param["AuthType"] !== null) {
+            $this->AuthType = $param["AuthType"];
+        }
+
+        if (array_key_exists("CidRegisterTime",$param) and $param["CidRegisterTime"] !== null) {
+            $this->CidRegisterTime = $param["CidRegisterTime"];
+        }
+
+        if (array_key_exists("UinRegisterTime",$param) and $param["UinRegisterTime"] !== null) {
+            $this->UinRegisterTime = $param["UinRegisterTime"];
+        }
+
+        if (array_key_exists("AuthPassTime",$param) and $param["AuthPassTime"] !== null) {
+            $this->AuthPassTime = $param["AuthPassTime"];
+        }
+
+        if (array_key_exists("HasExpense",$param) and $param["HasExpense"] !== null) {
+            $this->HasExpense = $param["HasExpense"];
         }
     }
 }
