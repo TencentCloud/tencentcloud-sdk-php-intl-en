@@ -21,23 +21,31 @@ use TencentCloud\Common\AbstractModel;
  * CreateBandwidthPackage request structure.
  *
  * @method string getNetworkType() Obtain The network type of the bandwidth package. Default value: `BGP`. Valid values:
-`BGP` 
+`BGP`
 `HIGH_QUALITY_BGP`
  * @method void setNetworkType(string $NetworkType) Set The network type of the bandwidth package. Default value: `BGP`. Valid values:
-`BGP` 
+`BGP`
 `HIGH_QUALITY_BGP`
- * @method string getChargeType() Obtain The billing mode of the bandwidth package. Default value: `TOP5_POSTPAID_BY_MONTH`. Valid values:
-<li>`TOP5_POSTPAID_BY_MONTH`: monthly top 5 </li>
-<li>`PERCENT95_POSTPAID_BY_MONTH`: monthly 95th percentile</li>
-<li>`FIXED_PREPAID_BY_MONTH`: monthly subscription</li>
- * @method void setChargeType(string $ChargeType) Set The billing mode of the bandwidth package. Default value: `TOP5_POSTPAID_BY_MONTH`. Valid values:
-<li>`TOP5_POSTPAID_BY_MONTH`: monthly top 5 </li>
-<li>`PERCENT95_POSTPAID_BY_MONTH`: monthly 95th percentile</li>
-<li>`FIXED_PREPAID_BY_MONTH`: monthly subscription</li>
+ * @method string getChargeType() Obtain The billing mode of the bandwidth package. Default value: `ENHANCED95_POSTPAID_BY_MONTH`. Valid values:
+<li>`ENHANCED95_POSTPAID_BY_MONTH`: Pay-as-you-go - Enhanced 95th percentile</li>
+<li>`PRIMARY_TRAFFIC_POSTPAID_BY_HOUR`: Postpaid - Main Traffic Billing</li>
+<li>`BANDWIDTH_POSTPAID_BY_DAY`: General BGP, Pay-as-you-go - Bandwidth-based</li>
+<li>`PEAK_BANDWIDTH_POSTPAID_BY_DAY`: Static single-line, Pay-as-you-go - Daily billed</li>
+<li>`TOP5_POSTPAID_BY_MONTH`: Pay-as-you-go - Monthly top 5th, If you need to use this Bglling mode, please submit a ticket.</li>
+
+
+ * @method void setChargeType(string $ChargeType) Set The billing mode of the bandwidth package. Default value: `ENHANCED95_POSTPAID_BY_MONTH`. Valid values:
+<li>`ENHANCED95_POSTPAID_BY_MONTH`: Pay-as-you-go - Enhanced 95th percentile</li>
+<li>`PRIMARY_TRAFFIC_POSTPAID_BY_HOUR`: Postpaid - Main Traffic Billing</li>
+<li>`BANDWIDTH_POSTPAID_BY_DAY`: General BGP, Pay-as-you-go - Bandwidth-based</li>
+<li>`PEAK_BANDWIDTH_POSTPAID_BY_DAY`: Static single-line, Pay-as-you-go - Daily billed</li>
+<li>`TOP5_POSTPAID_BY_MONTH`: Pay-as-you-go - Monthly top 5th, If you need to use this Bglling mode, please submit a ticket.</li>
+
+
  * @method string getBandwidthPackageName() Obtain The name of the bandwidth package.
  * @method void setBandwidthPackageName(string $BandwidthPackageName) Set The name of the bandwidth package.
- * @method integer getBandwidthPackageCount() Obtain The number of bandwidth packages to create. Valid range: 1-20. It can only be “1” for bill-by-CVM accounts.
- * @method void setBandwidthPackageCount(integer $BandwidthPackageCount) Set The number of bandwidth packages to create. Valid range: 1-20. It can only be “1” for bill-by-CVM accounts.
+ * @method integer getBandwidthPackageCount() Obtain The number of bandwidth packages to create. Valid range: 1-20. It can only be "1" for bill-by-CVM accounts.
+ * @method void setBandwidthPackageCount(integer $BandwidthPackageCount) Set The number of bandwidth packages to create. Valid range: 1-20. It can only be "1" for bill-by-CVM accounts.
  * @method integer getInternetMaxBandwidth() Obtain The limit of the bandwidth package in Mbps. The value '-1' indicates there is no limit. This feature is currently in beta.
  * @method void setInternetMaxBandwidth(integer $InternetMaxBandwidth) Set The limit of the bandwidth package in Mbps. The value '-1' indicates there is no limit. This feature is currently in beta.
  * @method array getTags() Obtain The list of tags to be bound.
@@ -46,21 +54,30 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProtocol(string $Protocol) Set The protocol type of the bandwidth package. Valid values: 'ipv4' and 'ipv6'. Default value: 'ipv4'.
  * @method integer getTimeSpan() Obtain 
  * @method void setTimeSpan(integer $TimeSpan) Set 
+ * @method string getEgress() Obtain     Network egress. It defaults to `center_egress1`. Valid values:
+center_egress1,center_egress2,center_egress3
+
+ * @method void setEgress(string $Egress) Set     Network egress. It defaults to `center_egress1`. Valid values:
+center_egress1,center_egress2,center_egress3
  */
 class CreateBandwidthPackageRequest extends AbstractModel
 {
     /**
      * @var string The network type of the bandwidth package. Default value: `BGP`. Valid values:
-`BGP` 
+`BGP`
 `HIGH_QUALITY_BGP`
      */
     public $NetworkType;
 
     /**
-     * @var string The billing mode of the bandwidth package. Default value: `TOP5_POSTPAID_BY_MONTH`. Valid values:
-<li>`TOP5_POSTPAID_BY_MONTH`: monthly top 5 </li>
-<li>`PERCENT95_POSTPAID_BY_MONTH`: monthly 95th percentile</li>
-<li>`FIXED_PREPAID_BY_MONTH`: monthly subscription</li>
+     * @var string The billing mode of the bandwidth package. Default value: `ENHANCED95_POSTPAID_BY_MONTH`. Valid values:
+<li>`ENHANCED95_POSTPAID_BY_MONTH`: Pay-as-you-go - Enhanced 95th percentile</li>
+<li>`PRIMARY_TRAFFIC_POSTPAID_BY_HOUR`: Postpaid - Main Traffic Billing</li>
+<li>`BANDWIDTH_POSTPAID_BY_DAY`: General BGP, Pay-as-you-go - Bandwidth-based</li>
+<li>`PEAK_BANDWIDTH_POSTPAID_BY_DAY`: Static single-line, Pay-as-you-go - Daily billed</li>
+<li>`TOP5_POSTPAID_BY_MONTH`: Pay-as-you-go - Monthly top 5th, If you need to use this Bglling mode, please submit a ticket.</li>
+
+
      */
     public $ChargeType;
 
@@ -70,7 +87,7 @@ class CreateBandwidthPackageRequest extends AbstractModel
     public $BandwidthPackageName;
 
     /**
-     * @var integer The number of bandwidth packages to create. Valid range: 1-20. It can only be “1” for bill-by-CVM accounts.
+     * @var integer The number of bandwidth packages to create. Valid range: 1-20. It can only be "1" for bill-by-CVM accounts.
      */
     public $BandwidthPackageCount;
 
@@ -95,19 +112,32 @@ class CreateBandwidthPackageRequest extends AbstractModel
     public $TimeSpan;
 
     /**
+     * @var string     Network egress. It defaults to `center_egress1`. Valid values:
+center_egress1,center_egress2,center_egress3
+
+     */
+    public $Egress;
+
+    /**
      * @param string $NetworkType The network type of the bandwidth package. Default value: `BGP`. Valid values:
-`BGP` 
+`BGP`
 `HIGH_QUALITY_BGP`
-     * @param string $ChargeType The billing mode of the bandwidth package. Default value: `TOP5_POSTPAID_BY_MONTH`. Valid values:
-<li>`TOP5_POSTPAID_BY_MONTH`: monthly top 5 </li>
-<li>`PERCENT95_POSTPAID_BY_MONTH`: monthly 95th percentile</li>
-<li>`FIXED_PREPAID_BY_MONTH`: monthly subscription</li>
+     * @param string $ChargeType The billing mode of the bandwidth package. Default value: `ENHANCED95_POSTPAID_BY_MONTH`. Valid values:
+<li>`ENHANCED95_POSTPAID_BY_MONTH`: Pay-as-you-go - Enhanced 95th percentile</li>
+<li>`PRIMARY_TRAFFIC_POSTPAID_BY_HOUR`: Postpaid - Main Traffic Billing</li>
+<li>`BANDWIDTH_POSTPAID_BY_DAY`: General BGP, Pay-as-you-go - Bandwidth-based</li>
+<li>`PEAK_BANDWIDTH_POSTPAID_BY_DAY`: Static single-line, Pay-as-you-go - Daily billed</li>
+<li>`TOP5_POSTPAID_BY_MONTH`: Pay-as-you-go - Monthly top 5th, If you need to use this Bglling mode, please submit a ticket.</li>
+
+
      * @param string $BandwidthPackageName The name of the bandwidth package.
-     * @param integer $BandwidthPackageCount The number of bandwidth packages to create. Valid range: 1-20. It can only be “1” for bill-by-CVM accounts.
+     * @param integer $BandwidthPackageCount The number of bandwidth packages to create. Valid range: 1-20. It can only be "1" for bill-by-CVM accounts.
      * @param integer $InternetMaxBandwidth The limit of the bandwidth package in Mbps. The value '-1' indicates there is no limit. This feature is currently in beta.
      * @param array $Tags The list of tags to be bound.
      * @param string $Protocol The protocol type of the bandwidth package. Valid values: 'ipv4' and 'ipv6'. Default value: 'ipv4'.
      * @param integer $TimeSpan 
+     * @param string $Egress     Network egress. It defaults to `center_egress1`. Valid values:
+center_egress1,center_egress2,center_egress3
      */
     function __construct()
     {
@@ -157,6 +187,10 @@ class CreateBandwidthPackageRequest extends AbstractModel
 
         if (array_key_exists("TimeSpan",$param) and $param["TimeSpan"] !== null) {
             $this->TimeSpan = $param["TimeSpan"];
+        }
+
+        if (array_key_exists("Egress",$param) and $param["Egress"] !== null) {
+            $this->Egress = $param["Egress"];
         }
     }
 }

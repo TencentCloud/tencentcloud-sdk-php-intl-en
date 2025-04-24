@@ -68,6 +68,7 @@ class StaffInfo extends AbstractModel
 
     /**
      * @var integer User role id.
+     * @deprecated
      */
     public $RoleId;
 

@@ -55,6 +55,7 @@ class CreateAIAgentCallRequest extends AbstractModel
 
     /**
      * @var array Prompt variable.
+     * @deprecated
      */
     public $PromptVariables;
 

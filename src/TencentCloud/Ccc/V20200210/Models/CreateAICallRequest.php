@@ -24,6 +24,52 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSdkAppId(integer $SdkAppId) Set Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
  * @method string getCallee() Obtain Called number.
  * @method void setCallee(string $Callee) Set Called number.
+ * @method string getLLMType() Obtain Model interface protocol types, currently compatible with three protocol types:
+
+- OpenAI protocol (including GPT, DeepSeek, etc.):"openai"
+- Azure protocol:"azure"
+- Minimax protocol:"minimax"
+ * @method void setLLMType(string $LLMType) Set Model interface protocol types, currently compatible with three protocol types:
+
+- OpenAI protocol (including GPT, DeepSeek, etc.):"openai"
+- Azure protocol:"azure"
+- Minimax protocol:"minimax"
+ * @method string getAPIKey() Obtain Model API key, for authentication information, please refer to the respective model's official website
+
+- OpenAI protocol: [GPT](https://help.openai.com/en/articles/4936850-where-do-i-find-my-openai-api-key), [DeepSeek](https://api-docs.deepseek.com/zh-cn/);
+
+- Azure protocol: [Azure GPT](https://learn.microsoft.com/en-us/azure/ai-services/openai/chatgpt-quickstart?tabs=command-line%2Ctypescript%2Cpython-new&pivots=programming-language-studio#key-settings);
+
+- Minimax:[Minimax](https://platform.minimaxi.com/document/Fast%20access?key=66701cf51d57f38758d581b2)
+ * @method void setAPIKey(string $APIKey) Set Model API key, for authentication information, please refer to the respective model's official website
+
+- OpenAI protocol: [GPT](https://help.openai.com/en/articles/4936850-where-do-i-find-my-openai-api-key), [DeepSeek](https://api-docs.deepseek.com/zh-cn/);
+
+- Azure protocol: [Azure GPT](https://learn.microsoft.com/en-us/azure/ai-services/openai/chatgpt-quickstart?tabs=command-line%2Ctypescript%2Cpython-new&pivots=programming-language-studio#key-settings);
+
+- Minimax:[Minimax](https://platform.minimaxi.com/document/Fast%20access?key=66701cf51d57f38758d581b2)
+ * @method string getAPIUrl() Obtain Model interface address
+
+- OpenAI protocol
+GPT:"https://api.openai.com/v1/"
+Deepseek:"https://api.deepseek.com/v1"
+
+- Azure protocol
+ "https://{your-resource-name}.openai.azure.com?api-version={api-version}"
+
+- Minimax protocol
+"https://api.minimax.chat/v1"
+ * @method void setAPIUrl(string $APIUrl) Set Model interface address
+
+- OpenAI protocol
+GPT:"https://api.openai.com/v1/"
+Deepseek:"https://api.deepseek.com/v1"
+
+- Azure protocol
+ "https://{your-resource-name}.openai.azure.com?api-version={api-version}"
+
+- Minimax protocol
+"https://api.minimax.chat/v1"
  * @method string getSystemPrompt() Obtain ## Identity
 You are Kate from the appointment department at Retell Health calling Cindy over the phone to prepare for the annual checkup coming up. You are a pleasant and friendly receptionist caring deeply for the user. You don't provide medical advice but would use the medical knowledge to understand user responses.
 
@@ -86,16 +132,6 @@ If at any time the user showed anger or wanted a human agent, call transfer_call
 5. Ask Cindy if she has any questions, and if so, answer them until there are no questions.
   - If user asks something you do not know, let them know you don't have the answer. Ask them if they have any other questions.
   - If user do not have any questions, call function end_call to hang up.
- * @method string getLLMType() Obtain Model interface protocol types, currently compatible with three protocol types:
-
-- OpenAI protocol (including GPT, DeepSeek, etc.):"openai"
-- Azure protocol:"azure"
-- Minimax protocol:"minimax"
- * @method void setLLMType(string $LLMType) Set Model interface protocol types, currently compatible with three protocol types:
-
-- OpenAI protocol (including GPT, DeepSeek, etc.):"openai"
-- Azure protocol:"azure"
-- Minimax protocol:"minimax"
  * @method string getModel() Obtain Model name, such as
 
 - OpenAI protocol
@@ -116,42 +152,6 @@ If at any time the user showed anger or wanted a human agent, call transfer_call
 
 - Minimax protocol
 "deepseek-chat".
- * @method string getAPIKey() Obtain Model API key, for authentication information, please refer to the respective model's official website
-
-- OpenAI protocol: [GPT](https://help.openai.com/en/articles/4936850-where-do-i-find-my-openai-api-key), [DeepSeek](https://api-docs.deepseek.com/zh-cn/);
-
-- Azure protocol: [Azure GPT](https://learn.microsoft.com/en-us/azure/ai-services/openai/chatgpt-quickstart?tabs=command-line%2Ctypescript%2Cpython-new&pivots=programming-language-studio#key-settings);
-
-- Minimax:[Minimax](https://platform.minimaxi.com/document/Fast%20access?key=66701cf51d57f38758d581b2)
- * @method void setAPIKey(string $APIKey) Set Model API key, for authentication information, please refer to the respective model's official website
-
-- OpenAI protocol: [GPT](https://help.openai.com/en/articles/4936850-where-do-i-find-my-openai-api-key), [DeepSeek](https://api-docs.deepseek.com/zh-cn/);
-
-- Azure protocol: [Azure GPT](https://learn.microsoft.com/en-us/azure/ai-services/openai/chatgpt-quickstart?tabs=command-line%2Ctypescript%2Cpython-new&pivots=programming-language-studio#key-settings);
-
-- Minimax:[Minimax](https://platform.minimaxi.com/document/Fast%20access?key=66701cf51d57f38758d581b2)
- * @method string getAPIUrl() Obtain Model interface address
-
-- OpenAI protocol
-GPT:"https://api.openai.com/v1/"
-Deepseek:"https://api.deepseek.com/v1"
-
-- Azure protocol
- "https://{your-resource-name}.openai.azure.com?api-version={api-version}"
-
-- Minimax protocol
-"https://api.minimax.chat/v1"
- * @method void setAPIUrl(string $APIUrl) Set Model interface address
-
-- OpenAI protocol
-GPT:"https://api.openai.com/v1/"
-Deepseek:"https://api.deepseek.com/v1"
-
-- Azure protocol
- "https://{your-resource-name}.openai.azure.com?api-version={api-version}"
-
-- Minimax protocol
-"https://api.minimax.chat/v1"
  * @method string getVoiceType() Obtain The following voice parameter values are available by default. If you wish to customize the voice type, please leave VoiceType blank and configure it in the CustomTTSConfig parameter.
 
 Chinese:
@@ -420,6 +420,41 @@ class CreateAICallRequest extends AbstractModel
     public $Callee;
 
     /**
+     * @var string Model interface protocol types, currently compatible with three protocol types:
+
+- OpenAI protocol (including GPT, DeepSeek, etc.):"openai"
+- Azure protocol:"azure"
+- Minimax protocol:"minimax"
+     */
+    public $LLMType;
+
+    /**
+     * @var string Model API key, for authentication information, please refer to the respective model's official website
+
+- OpenAI protocol: [GPT](https://help.openai.com/en/articles/4936850-where-do-i-find-my-openai-api-key), [DeepSeek](https://api-docs.deepseek.com/zh-cn/);
+
+- Azure protocol: [Azure GPT](https://learn.microsoft.com/en-us/azure/ai-services/openai/chatgpt-quickstart?tabs=command-line%2Ctypescript%2Cpython-new&pivots=programming-language-studio#key-settings);
+
+- Minimax:[Minimax](https://platform.minimaxi.com/document/Fast%20access?key=66701cf51d57f38758d581b2)
+     */
+    public $APIKey;
+
+    /**
+     * @var string Model interface address
+
+- OpenAI protocol
+GPT:"https://api.openai.com/v1/"
+Deepseek:"https://api.deepseek.com/v1"
+
+- Azure protocol
+ "https://{your-resource-name}.openai.azure.com?api-version={api-version}"
+
+- Minimax protocol
+"https://api.minimax.chat/v1"
+     */
+    public $APIUrl;
+
+    /**
      * @var string ## Identity
 You are Kate from the appointment department at Retell Health calling Cindy over the phone to prepare for the annual checkup coming up. You are a pleasant and friendly receptionist caring deeply for the user. You don't provide medical advice but would use the medical knowledge to understand user responses.
 
@@ -455,15 +490,6 @@ If at any time the user showed anger or wanted a human agent, call transfer_call
     public $SystemPrompt;
 
     /**
-     * @var string Model interface protocol types, currently compatible with three protocol types:
-
-- OpenAI protocol (including GPT, DeepSeek, etc.):"openai"
-- Azure protocol:"azure"
-- Minimax protocol:"minimax"
-     */
-    public $LLMType;
-
-    /**
      * @var string Model name, such as
 
 - OpenAI protocol
@@ -476,32 +502,6 @@ If at any time the user showed anger or wanted a human agent, call transfer_call
 "deepseek-chat".
      */
     public $Model;
-
-    /**
-     * @var string Model API key, for authentication information, please refer to the respective model's official website
-
-- OpenAI protocol: [GPT](https://help.openai.com/en/articles/4936850-where-do-i-find-my-openai-api-key), [DeepSeek](https://api-docs.deepseek.com/zh-cn/);
-
-- Azure protocol: [Azure GPT](https://learn.microsoft.com/en-us/azure/ai-services/openai/chatgpt-quickstart?tabs=command-line%2Ctypescript%2Cpython-new&pivots=programming-language-studio#key-settings);
-
-- Minimax:[Minimax](https://platform.minimaxi.com/document/Fast%20access?key=66701cf51d57f38758d581b2)
-     */
-    public $APIKey;
-
-    /**
-     * @var string Model interface address
-
-- OpenAI protocol
-GPT:"https://api.openai.com/v1/"
-Deepseek:"https://api.deepseek.com/v1"
-
-- Azure protocol
- "https://{your-resource-name}.openai.azure.com?api-version={api-version}"
-
-- Minimax protocol
-"https://api.minimax.chat/v1"
-     */
-    public $APIUrl;
 
     /**
      * @var string The following voice parameter values are available by default. If you wish to customize the voice type, please leave VoiceType blank and configure it in the CustomTTSConfig parameter.
@@ -697,6 +697,7 @@ Please refer to the specific protocol standards in the <a href="https://doc.weix
 
     /**
      * @var array Prompt word variable.
+     * @deprecated
      */
     public $PromptVariables;
 
@@ -713,6 +714,29 @@ Please refer to the specific protocol standards in the <a href="https://doc.weix
     /**
      * @param integer $SdkAppId Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
      * @param string $Callee Called number.
+     * @param string $LLMType Model interface protocol types, currently compatible with three protocol types:
+
+- OpenAI protocol (including GPT, DeepSeek, etc.):"openai"
+- Azure protocol:"azure"
+- Minimax protocol:"minimax"
+     * @param string $APIKey Model API key, for authentication information, please refer to the respective model's official website
+
+- OpenAI protocol: [GPT](https://help.openai.com/en/articles/4936850-where-do-i-find-my-openai-api-key), [DeepSeek](https://api-docs.deepseek.com/zh-cn/);
+
+- Azure protocol: [Azure GPT](https://learn.microsoft.com/en-us/azure/ai-services/openai/chatgpt-quickstart?tabs=command-line%2Ctypescript%2Cpython-new&pivots=programming-language-studio#key-settings);
+
+- Minimax:[Minimax](https://platform.minimaxi.com/document/Fast%20access?key=66701cf51d57f38758d581b2)
+     * @param string $APIUrl Model interface address
+
+- OpenAI protocol
+GPT:"https://api.openai.com/v1/"
+Deepseek:"https://api.deepseek.com/v1"
+
+- Azure protocol
+ "https://{your-resource-name}.openai.azure.com?api-version={api-version}"
+
+- Minimax protocol
+"https://api.minimax.chat/v1"
      * @param string $SystemPrompt ## Identity
 You are Kate from the appointment department at Retell Health calling Cindy over the phone to prepare for the annual checkup coming up. You are a pleasant and friendly receptionist caring deeply for the user. You don't provide medical advice but would use the medical knowledge to understand user responses.
 
@@ -744,11 +768,6 @@ If at any time the user showed anger or wanted a human agent, call transfer_call
 5. Ask Cindy if she has any questions, and if so, answer them until there are no questions.
   - If user asks something you do not know, let them know you don't have the answer. Ask them if they have any other questions.
   - If user do not have any questions, call function end_call to hang up.
-     * @param string $LLMType Model interface protocol types, currently compatible with three protocol types:
-
-- OpenAI protocol (including GPT, DeepSeek, etc.):"openai"
-- Azure protocol:"azure"
-- Minimax protocol:"minimax"
      * @param string $Model Model name, such as
 
 - OpenAI protocol
@@ -759,24 +778,6 @@ If at any time the user showed anger or wanted a human agent, call transfer_call
 
 - Minimax protocol
 "deepseek-chat".
-     * @param string $APIKey Model API key, for authentication information, please refer to the respective model's official website
-
-- OpenAI protocol: [GPT](https://help.openai.com/en/articles/4936850-where-do-i-find-my-openai-api-key), [DeepSeek](https://api-docs.deepseek.com/zh-cn/);
-
-- Azure protocol: [Azure GPT](https://learn.microsoft.com/en-us/azure/ai-services/openai/chatgpt-quickstart?tabs=command-line%2Ctypescript%2Cpython-new&pivots=programming-language-studio#key-settings);
-
-- Minimax:[Minimax](https://platform.minimaxi.com/document/Fast%20access?key=66701cf51d57f38758d581b2)
-     * @param string $APIUrl Model interface address
-
-- OpenAI protocol
-GPT:"https://api.openai.com/v1/"
-Deepseek:"https://api.deepseek.com/v1"
-
-- Azure protocol
- "https://{your-resource-name}.openai.azure.com?api-version={api-version}"
-
-- Minimax protocol
-"https://api.minimax.chat/v1"
      * @param string $VoiceType The following voice parameter values are available by default. If you wish to customize the voice type, please leave VoiceType blank and configure it in the CustomTTSConfig parameter.
 
 Chinese:
@@ -926,16 +927,8 @@ Please refer to the specific protocol standards in the <a href="https://doc.weix
             $this->Callee = $param["Callee"];
         }
 
-        if (array_key_exists("SystemPrompt",$param) and $param["SystemPrompt"] !== null) {
-            $this->SystemPrompt = $param["SystemPrompt"];
-        }
-
         if (array_key_exists("LLMType",$param) and $param["LLMType"] !== null) {
             $this->LLMType = $param["LLMType"];
-        }
-
-        if (array_key_exists("Model",$param) and $param["Model"] !== null) {
-            $this->Model = $param["Model"];
         }
 
         if (array_key_exists("APIKey",$param) and $param["APIKey"] !== null) {
@@ -944,6 +937,14 @@ Please refer to the specific protocol standards in the <a href="https://doc.weix
 
         if (array_key_exists("APIUrl",$param) and $param["APIUrl"] !== null) {
             $this->APIUrl = $param["APIUrl"];
+        }
+
+        if (array_key_exists("SystemPrompt",$param) and $param["SystemPrompt"] !== null) {
+            $this->SystemPrompt = $param["SystemPrompt"];
+        }
+
+        if (array_key_exists("Model",$param) and $param["Model"] !== null) {
+            $this->Model = $param["Model"];
         }
 
         if (array_key_exists("VoiceType",$param) and $param["VoiceType"] !== null) {
