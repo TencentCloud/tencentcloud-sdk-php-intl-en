@@ -302,6 +302,10 @@ A service provider can query all review requests created by any `APPID` under it
 
 - You can query EIPv6 and traditional EIPv6 instance information in a specified region.
 - The system returns a certain number (as specified by the Limit, the default value is 20) of EIPv6 instances of the current user if the parameter is empty.
+ * @method Models\DescribeInstanceJumboResponse DescribeInstanceJumbo(Models\DescribeInstanceJumboRequest $req) This API is used to check whether Cloud Virtual Machines support jumbo frames.
+Usage limits.
+This API is used to perform operations that require CAM policy authorization and read access to the corresponding instance. The API accesses CVM instances, so it verifies whether there are CAM permissions for the instance. For example: CAM action allows vpc:DescribeInstanceJumbo; resource allows qcs::cvm:ap-guangzhou:uin/2126195383:instance/*.
+This API is used to check the jumbo frame status before and after instance migration. The status returned by this API may be inconsistent before and after migration. You need to check whether the host machines of the instance before and after migration both support jumbo frames. One possible reason is that the instance has been migrated to a host machine that does not support jumbo frames.
  * @method Models\DescribeIp6AddressesResponse DescribeIp6Addresses(Models\DescribeIp6AddressesRequest $req) This API is used to query the detailed information on one or multiple classic elastic public IPv6 instances.
  * @method Models\DescribeIpGeolocationDatabaseUrlResponse DescribeIpGeolocationDatabaseUrl(Models\DescribeIpGeolocationDatabaseUrlRequest $req) This API is used to obtain the download link of an IP location database.
 <font color="#FF0000">This API will be discontinued soon and is only available for existing users.</font>
