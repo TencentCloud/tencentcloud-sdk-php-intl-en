@@ -71,6 +71,8 @@ Callable roles: Distributor, Second-level reseller, Reseller
  * @method Models\DescribeCustomerInfoResponse DescribeCustomerInfo(Models\DescribeCustomerInfoRequest $req) This API is used to query sub-customer information.
 Invocation roles: reseller, first-level distributor.
  * @method Models\DescribeCustomerUinResponse DescribeCustomerUin(Models\DescribeCustomerUinRequest $req) This API is used to query the list of customer UINs.
+ * @method Models\DescribeRebateDownloadUrlResponse DescribeRebateDownloadUrl(Models\DescribeRebateDownloadUrlRequest $req) This API is used to download the commission bill file by resellers/agents. The file URL is returned.
+Resellers/Agents can call this API.
  * @method Models\ForceQNResponse ForceQN(Models\ForceQNRequest $req) Forced Service Suspension settings and cancellation can be used only after the reseller is whitelisted.
 
 Callable roles: Distributor, Second-level reseller, Reseller
