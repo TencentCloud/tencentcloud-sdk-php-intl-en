@@ -20,58 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeAdaptiveDynamicStreamingTemplates request structure.
  *
- * @method integer getSubAppId() Obtain <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
- * @method void setSubAppId(integer $SubAppId) Set <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
- * @method array getDefinitions() Obtain Unique ID filter of transcoding to adaptive bitrate streaming templates. Array length limit: 100.
- * @method void setDefinitions(array $Definitions) Set Unique ID filter of transcoding to adaptive bitrate streaming templates. Array length limit: 100.
- * @method integer getOffset() Obtain Paged offset. Default value: 0.
- * @method void setOffset(integer $Offset) Set Paged offset. Default value: 0.
- * @method integer getLimit() Obtain Number of returned entries. Default value: 10. Maximum value: 100.
- * @method void setLimit(integer $Limit) Set Number of returned entries. Default value: 10. Maximum value: 100.
- * @method string getType() Obtain Template type filter. Valid values:
-<li>Preset: preset template;</li>
-<li>Custom: custom template.</li>
- * @method void setType(string $Type) Set Template type filter. Valid values:
-<li>Preset: preset template;</li>
-<li>Custom: custom template.</li>
+ * @method integer getSubAppId() Obtain <B>VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) id. starting from december 25, 2023, if you want to access resources in the vod application (whether it is the default application or a newly created application), you must enter the application id in this field.</b>.
+ * @method void setSubAppId(integer $SubAppId) Set <B>VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) id. starting from december 25, 2023, if you want to access resources in the vod application (whether it is the default application or a newly created application), you must enter the application id in this field.</b>.
+ * @method array getDefinitions() Obtain Unique id filter of transcoding to adaptive bitrate streaming templates. array length limit: 100.
+ * @method void setDefinitions(array $Definitions) Set Unique id filter of transcoding to adaptive bitrate streaming templates. array length limit: 100.
+ * @method integer getOffset() Obtain Pagination offset. default value: 0.
+ * @method void setOffset(integer $Offset) Set Pagination offset. default value: 0.
+ * @method integer getLimit() Obtain Number of returned entries. default value: 10. maximum value: 100.
+ * @method void setLimit(integer $Limit) Set Number of returned entries. default value: 10. maximum value: 100.
+ * @method string getType() Obtain Template type filter. valid values:.
+<Li>Preset: system preset template;</li>.
+<Li>Custom: user-defined template.</li>.
+ * @method void setType(string $Type) Set Template type filter. valid values:.
+<Li>Preset: system preset template;</li>.
+<Li>Custom: user-defined template.</li>.
  */
 class DescribeAdaptiveDynamicStreamingTemplatesRequest extends AbstractModel
 {
     /**
-     * @var integer <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+     * @var integer <B>VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) id. starting from december 25, 2023, if you want to access resources in the vod application (whether it is the default application or a newly created application), you must enter the application id in this field.</b>.
      */
     public $SubAppId;
 
     /**
-     * @var array Unique ID filter of transcoding to adaptive bitrate streaming templates. Array length limit: 100.
+     * @var array Unique id filter of transcoding to adaptive bitrate streaming templates. array length limit: 100.
      */
     public $Definitions;
 
     /**
-     * @var integer Paged offset. Default value: 0.
+     * @var integer Pagination offset. default value: 0.
      */
     public $Offset;
 
     /**
-     * @var integer Number of returned entries. Default value: 10. Maximum value: 100.
+     * @var integer Number of returned entries. default value: 10. maximum value: 100.
      */
     public $Limit;
 
     /**
-     * @var string Template type filter. Valid values:
-<li>Preset: preset template;</li>
-<li>Custom: custom template.</li>
+     * @var string Template type filter. valid values:.
+<Li>Preset: system preset template;</li>.
+<Li>Custom: user-defined template.</li>.
      */
     public $Type;
 
     /**
-     * @param integer $SubAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
-     * @param array $Definitions Unique ID filter of transcoding to adaptive bitrate streaming templates. Array length limit: 100.
-     * @param integer $Offset Paged offset. Default value: 0.
-     * @param integer $Limit Number of returned entries. Default value: 10. Maximum value: 100.
-     * @param string $Type Template type filter. Valid values:
-<li>Preset: preset template;</li>
-<li>Custom: custom template.</li>
+     * @param integer $SubAppId <B>VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) id. starting from december 25, 2023, if you want to access resources in the vod application (whether it is the default application or a newly created application), you must enter the application id in this field.</b>.
+     * @param array $Definitions Unique id filter of transcoding to adaptive bitrate streaming templates. array length limit: 100.
+     * @param integer $Offset Pagination offset. default value: 0.
+     * @param integer $Limit Number of returned entries. default value: 10. maximum value: 100.
+     * @param string $Type Template type filter. valid values:.
+<Li>Preset: system preset template;</li>.
+<Li>Custom: user-defined template.</li>.
      */
     function __construct()
     {

@@ -23,6 +23,7 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Wedata\V20210820\Models as Models;
 
 /**
+ * @method Models\AddProjectUserRoleResponse AddProjectUserRole(Models\AddProjectUserRoleRequest $req) This API is used to add a user role to a project.
  * @method Models\BatchCreateIntegrationTaskAlarmsResponse BatchCreateIntegrationTaskAlarms(Models\BatchCreateIntegrationTaskAlarmsRequest $req) Bulk Create Task Alert Rules
  * @method Models\BatchDeleteIntegrationTasksResponse BatchDeleteIntegrationTasks(Models\BatchDeleteIntegrationTasksRequest $req) Batch Delete Integration Tasks.
  * @method Models\BatchDeleteOpsTasksResponse BatchDeleteOpsTasks(Models\BatchDeleteOpsTasksRequest $req) Task Operation and Maintenance - Batch Delete Tasks
@@ -142,6 +143,7 @@ use TencentCloud\Wedata\V20210820\Models as Models;
  * @method Models\DescribeReportTaskDetailResponse DescribeReportTaskDetail(Models\DescribeReportTaskDetailRequest $req) This API is used to query task details for reports.
  * @method Models\DescribeReportTaskListResponse DescribeReportTaskList(Models\DescribeReportTaskListRequest $req) This API is used to query the task submission list.
  * @method Models\DescribeResourceManagePathTreesResponse DescribeResourceManagePathTrees(Models\DescribeResourceManagePathTreesRequest $req) Retrieve resource management directory tree
+ * @method Models\DescribeRoleListResponse DescribeRoleList(Models\DescribeRoleListRequest $req) This API is used to retrieve role list information.
  * @method Models\DescribeRuleResponse DescribeRule(Models\DescribeRuleRequest $req) Queries rule details
  * @method Models\DescribeRuleDimStatResponse DescribeRuleDimStat(Models\DescribeRuleDimStatRequest $req) Data Quality Overview Page Triggers Dimension Distribution Statistics Interface
  * @method Models\DescribeRuleExecDetailResponse DescribeRuleExecDetail(Models\DescribeRuleExecDetailRequest $req) Query Rule Execution Result Details
@@ -259,6 +261,7 @@ Submit a Task
  * @method Models\TriggerEventResponse TriggerEvent(Models\TriggerEventRequest $req) <p style="color:red;">[Note: This version is only available to a portion of allowlist customers in the Guangzhou Region]</p>
 Trigger events
  * @method Models\UnlockIntegrationTaskResponse UnlockIntegrationTask(Models\UnlockIntegrationTaskRequest $req) Unlock Integration Task
+ * @method Models\UpdateProjectUserRoleResponse UpdateProjectUserRole(Models\UpdateProjectUserRoleRequest $req) This API is used to modify user roles in a project.
  * @method Models\UpdateWorkflowOwnerResponse UpdateWorkflowOwner(Models\UpdateWorkflowOwnerRequest $req) Modifying Workflow Person in Charge
  * @method Models\UploadContentResponse UploadContent(Models\UploadContentRequest $req) Save Task Information
  */

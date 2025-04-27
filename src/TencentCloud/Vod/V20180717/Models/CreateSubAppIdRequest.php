@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setName(string $Name) Set Subapplication name. Length limit: 40 characters.
  * @method string getDescription() Obtain Subapplication overview. Length limit: 300 characters.
  * @method void setDescription(string $Description) Set Subapplication overview. Length limit: 300 characters.
+ * @method string getType() Obtain 
+ * @method void setType(string $Type) Set 
  */
 class CreateSubAppIdRequest extends AbstractModel
 {
@@ -38,8 +40,14 @@ class CreateSubAppIdRequest extends AbstractModel
     public $Description;
 
     /**
+     * @var string 
+     */
+    public $Type;
+
+    /**
      * @param string $Name Subapplication name. Length limit: 40 characters.
      * @param string $Description Subapplication overview. Length limit: 300 characters.
+     * @param string $Type 
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class CreateSubAppIdRequest extends AbstractModel
 
         if (array_key_exists("Description",$param) and $param["Description"] !== null) {
             $this->Description = $param["Description"];
+        }
+
+        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
+            $this->Type = $param["Type"];
         }
     }
 }

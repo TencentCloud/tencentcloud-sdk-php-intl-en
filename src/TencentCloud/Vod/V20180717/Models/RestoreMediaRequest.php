@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getFileIds() Obtain Media file unique identifier list, maximum length: 100.
  * @method void setFileIds(array $FileIds) Set Media file unique identifier list, maximum length: 100.
- * @method integer getSubAppId() Obtain <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
- * @method void setSubAppId(integer $SubAppId) Set <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
  * @method integer getRestoreDay() Obtain The accessible duration of the unfrozen temporary media files must be greater than 0, and the unit is "days".
  * @method void setRestoreDay(integer $RestoreDay) Set The accessible duration of the unfrozen temporary media files must be greater than 0, and the unit is "days".
+ * @method integer getSubAppId() Obtain <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+ * @method void setSubAppId(integer $SubAppId) Set <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
  * @method string getRestoreTier() Obtain The retrieval mode. If the current storage class is ARCHIVE, the valid values for this parameter are as follows:
 <li>Expedited: The files are made available in five minutes.</li>
 <li>Standard: The files are made available in five hours.</li>
@@ -49,14 +49,14 @@ class RestoreMediaRequest extends AbstractModel
     public $FileIds;
 
     /**
-     * @var integer <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
-     */
-    public $SubAppId;
-
-    /**
      * @var integer The accessible duration of the unfrozen temporary media files must be greater than 0, and the unit is "days".
      */
     public $RestoreDay;
+
+    /**
+     * @var integer <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+     */
+    public $SubAppId;
 
     /**
      * @var string The retrieval mode. If the current storage class is ARCHIVE, the valid values for this parameter are as follows:
@@ -71,8 +71,8 @@ If the current storage class is DEEP ARCHIVE, the valid values for this paramete
 
     /**
      * @param array $FileIds Media file unique identifier list, maximum length: 100.
-     * @param integer $SubAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
      * @param integer $RestoreDay The accessible duration of the unfrozen temporary media files must be greater than 0, and the unit is "days".
+     * @param integer $SubAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
      * @param string $RestoreTier The retrieval mode. If the current storage class is ARCHIVE, the valid values for this parameter are as follows:
 <li>Expedited: The files are made available in five minutes.</li>
 <li>Standard: The files are made available in five hours.</li>
@@ -98,12 +98,12 @@ If the current storage class is DEEP ARCHIVE, the valid values for this paramete
             $this->FileIds = $param["FileIds"];
         }
 
-        if (array_key_exists("SubAppId",$param) and $param["SubAppId"] !== null) {
-            $this->SubAppId = $param["SubAppId"];
-        }
-
         if (array_key_exists("RestoreDay",$param) and $param["RestoreDay"] !== null) {
             $this->RestoreDay = $param["RestoreDay"];
+        }
+
+        if (array_key_exists("SubAppId",$param) and $param["SubAppId"] !== null) {
+            $this->SubAppId = $param["SubAppId"];
         }
 
         if (array_key_exists("RestoreTier",$param) and $param["RestoreTier"] !== null) {
