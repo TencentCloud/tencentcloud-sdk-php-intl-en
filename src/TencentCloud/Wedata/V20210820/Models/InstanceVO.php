@@ -94,9 +94,9 @@ Supports filtering multiple conditions with an or relationship between them.
 * I: MINUTE_CYCLE
 * C: CRONTAB_CYCLE
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getCurRunDate() Obtain Standard data time.
+ * @method string getCurRunDate() Obtain Instance data time.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setCurRunDate(string $CurRunDate) Set Standard data time.
+ * @method void setCurRunDate(string $CurRunDate) Set Instance data time.
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method integer getTryLimit() Obtain Specifies the limit on the number of retries issued each time a running failure occurs.
 Note: This field may return null, indicating that no valid values can be obtained.
@@ -126,7 +126,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method integer getInstanceState() Obtain Indicates the status of an instance.
 
--Indicates waiting for event.
+-[0]Indicates waiting for event.
 -[12] indicates waiting for upstream.
 -[6, 7, 9, 10, 18] indicates awaiting execution.
 -[1, 19, 22]: running.
@@ -137,7 +137,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setInstanceState(integer $InstanceState) Set Indicates the status of an instance.
 
--Indicates waiting for event.
+-[0]Indicates waiting for event.
 -[12] indicates waiting for upstream.
 -[6, 7, 9, 10, 18] indicates awaiting execution.
 -[1, 19, 22]: running.
@@ -257,7 +257,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $TaskCycleType;
 
     /**
-     * @var string Standard data time.
+     * @var string Instance data time.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $CurRunDate;
@@ -294,7 +294,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     /**
      * @var integer Indicates the status of an instance.
 
--Indicates waiting for event.
+-[0]Indicates waiting for event.
 -[12] indicates waiting for upstream.
 -[6, 7, 9, 10, 18] indicates awaiting execution.
 -[1, 19, 22]: running.
@@ -381,7 +381,7 @@ Supports filtering multiple conditions with an or relationship between them.
 * I: MINUTE_CYCLE
 * C: CRONTAB_CYCLE
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $CurRunDate Standard data time.
+     * @param string $CurRunDate Instance data time.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $TryLimit Specifies the limit on the number of retries issued each time a running failure occurs.
 Note: This field may return null, indicating that no valid values can be obtained.
@@ -398,7 +398,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $InstanceState Indicates the status of an instance.
 
--Indicates waiting for event.
+-[0]Indicates waiting for event.
 -[12] indicates waiting for upstream.
 -[6, 7, 9, 10, 18] indicates awaiting execution.
 -[1, 19, 22]: running.

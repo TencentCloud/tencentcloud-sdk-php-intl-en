@@ -22,14 +22,14 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getProjectId() Obtain **Project ID**.
  * @method void setProjectId(string $ProjectId) Set **Project ID**.
- * @method string getScheduleTimeFrom() Obtain Instance plan scheduling time.
-Filter start time. the time format is yyyy-MM-dd HH:MM:ss.
- * @method void setScheduleTimeFrom(string $ScheduleTimeFrom) Set Instance plan scheduling time.
-Filter start time. the time format is yyyy-MM-dd HH:MM:ss.
- * @method string getScheduleTimeTo() Obtain Instance plan scheduling time.
-Filter expiration time. time format: yyyy-MM-dd HH:MM:ss.
- * @method void setScheduleTimeTo(string $ScheduleTimeTo) Set Instance plan scheduling time.
-Filter expiration time. time format: yyyy-MM-dd HH:MM:ss.
+ * @method string getScheduleTimeFrom() Obtain Filter criteria for instance planned scheduling time.
+Specifies the start time for filtering. the time format is yyyy-MM-dd HH:MM:ss.
+ * @method void setScheduleTimeFrom(string $ScheduleTimeFrom) Set Filter criteria for instance planned scheduling time.
+Specifies the start time for filtering. the time format is yyyy-MM-dd HH:MM:ss.
+ * @method string getScheduleTimeTo() Obtain Filter criteria for instance planned scheduling time.
+Filter expiration time. the time format is yyyy-MM-dd HH:MM:ss.
+ * @method void setScheduleTimeTo(string $ScheduleTimeTo) Set Filter criteria for instance planned scheduling time.
+Filter expiration time. the time format is yyyy-MM-dd HH:MM:ss.
  * @method integer getPageNumber() Obtain Page number, integer.
 Use in conjunction with pageSize and cannot be less than 1. the default value is 1.
  * @method void setPageNumber(integer $PageNumber) Set Page number, integer.
@@ -38,18 +38,18 @@ Use in conjunction with pageSize and cannot be less than 1. the default value is
 Use in conjunction with pageNumber and should not exceed 200. default value: 10.
  * @method void setPageSize(integer $PageSize) Set Number of items per page, integer.
 Use in conjunction with pageNumber and should not exceed 200. default value: 10.
- * @method string getSortColumn() Obtain Field used to sort query results.
+ * @method string getSortColumn() Obtain Sorting field for query results.
 
--SCHEDULE_DATE indicates the planned scheduling time.
--START_TIME indicates the start execution time of an instance.
--END_TIME indicates the execution end time of the instance.
--COST_TIME indicates the execution duration of an instance.
- * @method void setSortColumn(string $SortColumn) Set Field used to sort query results.
+-SCHEDULE_DATE indicates sorting based on the planned scheduling time.
+-START_TIME indicates sorting by the instance's start execution time.
+-END_TIME indicates sorting based on the instance execution end time.
+-COST_TIME indicates sorting based on instance execution duration.
+ * @method void setSortColumn(string $SortColumn) Set Sorting field for query results.
 
--SCHEDULE_DATE indicates the planned scheduling time.
--START_TIME indicates the start execution time of an instance.
--END_TIME indicates the execution end time of the instance.
--COST_TIME indicates the execution duration of an instance.
+-SCHEDULE_DATE indicates sorting based on the planned scheduling time.
+-START_TIME indicates sorting by the instance's start execution time.
+-END_TIME indicates sorting based on the instance execution end time.
+-COST_TIME indicates sorting based on instance execution duration.
  * @method string getSortType() Obtain Instance sorting order.
 
 - ASC 
@@ -60,21 +60,21 @@ Use in conjunction with pageNumber and should not exceed 200. default value: 10.
 - DESC
  * @method integer getInstanceType() Obtain Instance type.
 
--0 indicates the supplementary entry type.
--1 indicates a periodic instance.
--2 indicates a non-periodic instance.
+-0 indicates Replenished Instance.
+-1 indicates Periodic Instance.
+-2 indicates Non-Periodic instance.
  * @method void setInstanceType(integer $InstanceType) Set Instance type.
 
--0 indicates the supplementary entry type.
--1 indicates a periodic instance.
--2 indicates a non-periodic instance.
+-0 indicates Replenished Instance.
+-1 indicates Periodic Instance.
+-2 indicates Non-Periodic instance.
  * @method array getInstanceStateList() Obtain Instance execution status.
 Support filtering multiple items with an "or" relationship between conditions.
 
--Indicates waiting for event.
+-[0] Indicates waiting for event.
 -[12] indicates waiting for upstream.
 -[6, 7, 9, 10, 18] indicates awaiting execution.
--1, 19, 22 indicate running.
+-[1, 19, 22] indicate running.
 -[21] indicates skipping running.
 -[3] indicates retry on failure.
 -[8, 4, 5, 13] indicates a failure.
@@ -82,10 +82,10 @@ Support filtering multiple items with an "or" relationship between conditions.
  * @method void setInstanceStateList(array $InstanceStateList) Set Instance execution status.
 Support filtering multiple items with an "or" relationship between conditions.
 
--Indicates waiting for event.
+-[0] Indicates waiting for event.
 -[12] indicates waiting for upstream.
 -[6, 7, 9, 10, 18] indicates awaiting execution.
--1, 19, 22 indicate running.
+-[1, 19, 22] indicate running.
 -[21] indicates skipping running.
 -[3] indicates retry on failure.
 -[8, 4, 5, 13] indicates a failure.
@@ -146,14 +146,14 @@ The DescribeNormalIntegrationExecutorGroups API can be used to obtain the list o
 Supports filtering multiple conditions with an or relationship between them.
 The scheduling resource group list under the project can be obtained through the DescribeNormalSchedulerExecutorGroups api.
 The DescribeNormalIntegrationExecutorGroups API can be used to obtain the list of all integration resource groups under a project.
- * @method string getStartTimeFrom() Obtain **Start time**.
-Filter start time. the time format is yyyy-MM-dd HH:MM:ss.
- * @method void setStartTimeFrom(string $StartTimeFrom) Set **Start time**.
-Filter start time. the time format is yyyy-MM-dd HH:MM:ss.
- * @method string getStartTimeTo() Obtain **Start time**.
-Filter expiration time. time format: yyyy-MM-dd HH:MM:ss.
- * @method void setStartTimeTo(string $StartTimeTo) Set **Start time**.
-Filter expiration time. time format: yyyy-MM-dd HH:MM:ss.
+ * @method string getStartTimeFrom() Obtain Instance execution start time filter criteria.
+Specifies the start time for filtering. the time format is yyyy-MM-dd HH:MM:ss.
+ * @method void setStartTimeFrom(string $StartTimeFrom) Set Instance execution start time filter criteria.
+Specifies the start time for filtering. the time format is yyyy-MM-dd HH:MM:ss.
+ * @method string getStartTimeTo() Obtain Instance execution start time filter criteria.
+Filter expiration time. the time format is yyyy-MM-dd HH:MM:ss.
+ * @method void setStartTimeTo(string $StartTimeTo) Set Instance execution start time filter criteria.
+Filter expiration time. the time format is yyyy-MM-dd HH:MM:ss.
  * @method string getScheduleTimeZone() Obtain Time zone.
 Time zone. specifies the time zone. the default value is UTC+8.
  * @method void setScheduleTimeZone(string $ScheduleTimeZone) Set Time zone.
@@ -167,14 +167,14 @@ class ListInstancesRequest extends AbstractModel
     public $ProjectId;
 
     /**
-     * @var string Instance plan scheduling time.
-Filter start time. the time format is yyyy-MM-dd HH:MM:ss.
+     * @var string Filter criteria for instance planned scheduling time.
+Specifies the start time for filtering. the time format is yyyy-MM-dd HH:MM:ss.
      */
     public $ScheduleTimeFrom;
 
     /**
-     * @var string Instance plan scheduling time.
-Filter expiration time. time format: yyyy-MM-dd HH:MM:ss.
+     * @var string Filter criteria for instance planned scheduling time.
+Filter expiration time. the time format is yyyy-MM-dd HH:MM:ss.
      */
     public $ScheduleTimeTo;
 
@@ -191,12 +191,12 @@ Use in conjunction with pageNumber and should not exceed 200. default value: 10.
     public $PageSize;
 
     /**
-     * @var string Field used to sort query results.
+     * @var string Sorting field for query results.
 
--SCHEDULE_DATE indicates the planned scheduling time.
--START_TIME indicates the start execution time of an instance.
--END_TIME indicates the execution end time of the instance.
--COST_TIME indicates the execution duration of an instance.
+-SCHEDULE_DATE indicates sorting based on the planned scheduling time.
+-START_TIME indicates sorting by the instance's start execution time.
+-END_TIME indicates sorting based on the instance execution end time.
+-COST_TIME indicates sorting based on instance execution duration.
      */
     public $SortColumn;
 
@@ -211,9 +211,9 @@ Use in conjunction with pageNumber and should not exceed 200. default value: 10.
     /**
      * @var integer Instance type.
 
--0 indicates the supplementary entry type.
--1 indicates a periodic instance.
--2 indicates a non-periodic instance.
+-0 indicates Replenished Instance.
+-1 indicates Periodic Instance.
+-2 indicates Non-Periodic instance.
      */
     public $InstanceType;
 
@@ -221,10 +221,10 @@ Use in conjunction with pageNumber and should not exceed 200. default value: 10.
      * @var array Instance execution status.
 Support filtering multiple items with an "or" relationship between conditions.
 
--Indicates waiting for event.
+-[0] Indicates waiting for event.
 -[12] indicates waiting for upstream.
 -[6, 7, 9, 10, 18] indicates awaiting execution.
--1, 19, 22 indicate running.
+-[1, 19, 22] indicate running.
 -[21] indicates skipping running.
 -[3] indicates retry on failure.
 -[8, 4, 5, 13] indicates a failure.
@@ -289,14 +289,14 @@ The DescribeNormalIntegrationExecutorGroups API can be used to obtain the list o
     public $ExecutorGroupIdList;
 
     /**
-     * @var string **Start time**.
-Filter start time. the time format is yyyy-MM-dd HH:MM:ss.
+     * @var string Instance execution start time filter criteria.
+Specifies the start time for filtering. the time format is yyyy-MM-dd HH:MM:ss.
      */
     public $StartTimeFrom;
 
     /**
-     * @var string **Start time**.
-Filter expiration time. time format: yyyy-MM-dd HH:MM:ss.
+     * @var string Instance execution start time filter criteria.
+Filter expiration time. the time format is yyyy-MM-dd HH:MM:ss.
      */
     public $StartTimeTo;
 
@@ -308,36 +308,36 @@ Time zone. specifies the time zone. the default value is UTC+8.
 
     /**
      * @param string $ProjectId **Project ID**.
-     * @param string $ScheduleTimeFrom Instance plan scheduling time.
-Filter start time. the time format is yyyy-MM-dd HH:MM:ss.
-     * @param string $ScheduleTimeTo Instance plan scheduling time.
-Filter expiration time. time format: yyyy-MM-dd HH:MM:ss.
+     * @param string $ScheduleTimeFrom Filter criteria for instance planned scheduling time.
+Specifies the start time for filtering. the time format is yyyy-MM-dd HH:MM:ss.
+     * @param string $ScheduleTimeTo Filter criteria for instance planned scheduling time.
+Filter expiration time. the time format is yyyy-MM-dd HH:MM:ss.
      * @param integer $PageNumber Page number, integer.
 Use in conjunction with pageSize and cannot be less than 1. the default value is 1.
      * @param integer $PageSize Number of items per page, integer.
 Use in conjunction with pageNumber and should not exceed 200. default value: 10.
-     * @param string $SortColumn Field used to sort query results.
+     * @param string $SortColumn Sorting field for query results.
 
--SCHEDULE_DATE indicates the planned scheduling time.
--START_TIME indicates the start execution time of an instance.
--END_TIME indicates the execution end time of the instance.
--COST_TIME indicates the execution duration of an instance.
+-SCHEDULE_DATE indicates sorting based on the planned scheduling time.
+-START_TIME indicates sorting by the instance's start execution time.
+-END_TIME indicates sorting based on the instance execution end time.
+-COST_TIME indicates sorting based on instance execution duration.
      * @param string $SortType Instance sorting order.
 
 - ASC 
 - DESC
      * @param integer $InstanceType Instance type.
 
--0 indicates the supplementary entry type.
--1 indicates a periodic instance.
--2 indicates a non-periodic instance.
+-0 indicates Replenished Instance.
+-1 indicates Periodic Instance.
+-2 indicates Non-Periodic instance.
      * @param array $InstanceStateList Instance execution status.
 Support filtering multiple items with an "or" relationship between conditions.
 
--Indicates waiting for event.
+-[0] Indicates waiting for event.
 -[12] indicates waiting for upstream.
 -[6, 7, 9, 10, 18] indicates awaiting execution.
--1, 19, 22 indicate running.
+-[1, 19, 22] indicate running.
 -[21] indicates skipping running.
 -[3] indicates retry on failure.
 -[8, 4, 5, 13] indicates a failure.
@@ -370,10 +370,10 @@ The workflow list under a project can be obtained through the DescribeOpsWorkflo
 Supports filtering multiple conditions with an or relationship between them.
 The scheduling resource group list under the project can be obtained through the DescribeNormalSchedulerExecutorGroups api.
 The DescribeNormalIntegrationExecutorGroups API can be used to obtain the list of all integration resource groups under a project.
-     * @param string $StartTimeFrom **Start time**.
-Filter start time. the time format is yyyy-MM-dd HH:MM:ss.
-     * @param string $StartTimeTo **Start time**.
-Filter expiration time. time format: yyyy-MM-dd HH:MM:ss.
+     * @param string $StartTimeFrom Instance execution start time filter criteria.
+Specifies the start time for filtering. the time format is yyyy-MM-dd HH:MM:ss.
+     * @param string $StartTimeTo Instance execution start time filter criteria.
+Filter expiration time. the time format is yyyy-MM-dd HH:MM:ss.
      * @param string $ScheduleTimeZone Time zone.
 Time zone. specifies the time zone. the default value is UTC+8.
      */

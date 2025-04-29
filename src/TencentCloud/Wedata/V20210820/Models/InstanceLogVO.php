@@ -32,34 +32,34 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method integer getInstanceState() Obtain **Instance status**.
 
--Indicates waiting for event.
+-[0] Indicates waiting for event.
 -[12] indicates waiting for upstream.
 -[6, 7, 9, 10, 18] indicates awaiting execution.
--1, 19, 22 indicate running.
--21: skip running.
+-[1, 19, 22] indicate running.
+-[21] skip running.
 -[3] indicates retry on failure.
 -[8, 4, 5, 13] indicates a failure.
 -[2] indicates a success.
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setInstanceState(integer $InstanceState) Set **Instance status**.
 
--Indicates waiting for event.
+-[0] Indicates waiting for event.
 -[12] indicates waiting for upstream.
 -[6, 7, 9, 10, 18] indicates awaiting execution.
--1, 19, 22 indicate running.
--21: skip running.
+-[1, 19, 22] indicate running.
+-[21] skip running.
 -[3] indicates retry on failure.
 -[8, 4, 5, 13] indicates a failure.
 -[2] indicates a success.
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getRunType() Obtain Instance running trigger type.
 
--RERUN indicates rerunning.
+-RERUN indicates data replenishment.
 -ADDITION indicates supplementary recording.
 -PERIODIC indicates a period.
 -APERIODIC indicates non-periodic.
 -RERUN_SKIP_RUN means empty run for re-run.
--ADDITION_SKIP_RUN indicates a supplementary run - empty run.
+-ADDITION_SKIP_RUN indicates data replenishment - empty run.
 -PERIODIC_SKIP_RUN indicates an empty run in a periodic cycle.
 -APERIODIC_SKIP_RUN indicates a non-periodic empty run.
 -MANUAL_TRIGGER indicates manual triggering.
@@ -67,12 +67,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setRunType(string $RunType) Set Instance running trigger type.
 
--RERUN indicates rerunning.
+-RERUN indicates data replenishment.
 -ADDITION indicates supplementary recording.
 -PERIODIC indicates a period.
 -APERIODIC indicates non-periodic.
 -RERUN_SKIP_RUN means empty run for re-run.
--ADDITION_SKIP_RUN indicates a supplementary run - empty run.
+-ADDITION_SKIP_RUN indicates data replenishment - empty run.
 -PERIODIC_SKIP_RUN indicates an empty run in a periodic cycle.
 -APERIODIC_SKIP_RUN indicates a non-periodic empty run.
 -MANUAL_TRIGGER indicates manual triggering.
@@ -114,9 +114,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setLineCount(integer $LineCount) Set Row count of returned logs this time.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getExtInfo() Obtain Execute platform log pagination query parameters, transparently input for each request. the value is an empty string when querying the first page.
+ * @method string getExtInfo() Obtain Used when performing a paging query for logs. it has no specific business meaning.
+
+Specifies that the value is null for the first query. 
+Specifies that you can use the field value of ExtInfo in the returned information from the previous query for the second and subsequent queries.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setExtInfo(string $ExtInfo) Set Execute platform log pagination query parameters, transparently input for each request. the value is an empty string when querying the first page.
+ * @method void setExtInfo(string $ExtInfo) Set Used when performing a paging query for logs. it has no specific business meaning.
+
+Specifies that the value is null for the first query. 
+Specifies that you can use the field value of ExtInfo in the returned information from the previous query for the second and subsequent queries.
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method boolean getIsEnd() Obtain Paging query for logs. indicates whether it is the last page.
 Note: This field may return null, indicating that no valid values can be obtained.
@@ -141,11 +147,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
     /**
      * @var integer **Instance status**.
 
--Indicates waiting for event.
+-[0] Indicates waiting for event.
 -[12] indicates waiting for upstream.
 -[6, 7, 9, 10, 18] indicates awaiting execution.
--1, 19, 22 indicate running.
--21: skip running.
+-[1, 19, 22] indicate running.
+-[21] skip running.
 -[3] indicates retry on failure.
 -[8, 4, 5, 13] indicates a failure.
 -[2] indicates a success.
@@ -156,12 +162,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
     /**
      * @var string Instance running trigger type.
 
--RERUN indicates rerunning.
+-RERUN indicates data replenishment.
 -ADDITION indicates supplementary recording.
 -PERIODIC indicates a period.
 -APERIODIC indicates non-periodic.
 -RERUN_SKIP_RUN means empty run for re-run.
--ADDITION_SKIP_RUN indicates a supplementary run - empty run.
+-ADDITION_SKIP_RUN indicates data replenishment - empty run.
 -PERIODIC_SKIP_RUN indicates an empty run in a periodic cycle.
 -APERIODIC_SKIP_RUN indicates a non-periodic empty run.
 -MANUAL_TRIGGER indicates manual triggering.
@@ -221,7 +227,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $LineCount;
 
     /**
-     * @var string Execute platform log pagination query parameters, transparently input for each request. the value is an empty string when querying the first page.
+     * @var string Used when performing a paging query for logs. it has no specific business meaning.
+
+Specifies that the value is null for the first query. 
+Specifies that you can use the field value of ExtInfo in the returned information from the previous query for the second and subsequent queries.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ExtInfo;
@@ -240,23 +249,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $InstanceState **Instance status**.
 
--Indicates waiting for event.
+-[0] Indicates waiting for event.
 -[12] indicates waiting for upstream.
 -[6, 7, 9, 10, 18] indicates awaiting execution.
--1, 19, 22 indicate running.
--21: skip running.
+-[1, 19, 22] indicate running.
+-[21] skip running.
 -[3] indicates retry on failure.
 -[8, 4, 5, 13] indicates a failure.
 -[2] indicates a success.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $RunType Instance running trigger type.
 
--RERUN indicates rerunning.
+-RERUN indicates data replenishment.
 -ADDITION indicates supplementary recording.
 -PERIODIC indicates a period.
 -APERIODIC indicates non-periodic.
 -RERUN_SKIP_RUN means empty run for re-run.
--ADDITION_SKIP_RUN indicates a supplementary run - empty run.
+-ADDITION_SKIP_RUN indicates data replenishment - empty run.
 -PERIODIC_SKIP_RUN indicates an empty run in a periodic cycle.
 -APERIODIC_SKIP_RUN indicates a non-periodic empty run.
 -MANUAL_TRIGGER indicates manual triggering.
@@ -280,7 +289,10 @@ KB.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $LineCount Row count of returned logs this time.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $ExtInfo Execute platform log pagination query parameters, transparently input for each request. the value is an empty string when querying the first page.
+     * @param string $ExtInfo Used when performing a paging query for logs. it has no specific business meaning.
+
+Specifies that the value is null for the first query. 
+Specifies that you can use the field value of ExtInfo in the returned information from the previous query for the second and subsequent queries.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param boolean $IsEnd Paging query for logs. indicates whether it is the last page.
 Note: This field may return null, indicating that no valid values can be obtained.

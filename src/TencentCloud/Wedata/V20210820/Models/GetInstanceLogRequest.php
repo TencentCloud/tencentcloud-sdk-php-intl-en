@@ -24,8 +24,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProjectId(string $ProjectId) Set **Project ID**.
  * @method string getInstanceKey() Obtain Unique identifier of an instance.
  * @method void setInstanceKey(string $InstanceKey) Set Unique identifier of an instance.
- * @method integer getLifeRoundNum() Obtain Lifecycle no.
- * @method void setLifeRoundNum(integer $LifeRoundNum) Set Lifecycle no.
+ * @method integer getLifeRoundNum() Obtain Instance lifetime number, which identifies one-time execution of the instance.
+
+For example: the number of the first run of a periodic instance is 0. when the user reruns the instance later, the number of the second execution is 1.
+ * @method void setLifeRoundNum(integer $LifeRoundNum) Set Instance lifetime number, which identifies one-time execution of the instance.
+
+For example: the number of the first run of a periodic instance is 0. when the user reruns the instance later, the number of the second execution is 1.
  * @method string getScheduleTimeZone() Obtain Time zone.
 Time zone. specifies the time zone. the default value is UTC+8.
  * @method void setScheduleTimeZone(string $ScheduleTimeZone) Set Time zone.
@@ -68,6 +72,14 @@ The default is 1.
 The default value is 10000.
  * @method void setEndLineCount(integer $EndLineCount) Set End line number for obtaining logs.
 The default value is 10000.
+ * @method string getExtInfo() Obtain Used when performing a paging query for logs. it has no specific business meaning.
+
+Specifies that the value is null for the first query. 
+Use the ExtInfo field value in the returned information from the previous query for the second and subsequent queries.
+ * @method void setExtInfo(string $ExtInfo) Set Used when performing a paging query for logs. it has no specific business meaning.
+
+Specifies that the value is null for the first query. 
+Use the ExtInfo field value in the returned information from the previous query for the second and subsequent queries.
  */
 class GetInstanceLogRequest extends AbstractModel
 {
@@ -82,7 +94,9 @@ class GetInstanceLogRequest extends AbstractModel
     public $InstanceKey;
 
     /**
-     * @var integer Lifecycle no.
+     * @var integer Instance lifetime number, which identifies one-time execution of the instance.
+
+For example: the number of the first run of a periodic instance is 0. when the user reruns the instance later, the number of the second execution is 1.
      */
     public $LifeRoundNum;
 
@@ -136,9 +150,19 @@ The default value is 10000.
     public $EndLineCount;
 
     /**
+     * @var string Used when performing a paging query for logs. it has no specific business meaning.
+
+Specifies that the value is null for the first query. 
+Use the ExtInfo field value in the returned information from the previous query for the second and subsequent queries.
+     */
+    public $ExtInfo;
+
+    /**
      * @param string $ProjectId **Project ID**.
      * @param string $InstanceKey Unique identifier of an instance.
-     * @param integer $LifeRoundNum Lifecycle no.
+     * @param integer $LifeRoundNum Instance lifetime number, which identifies one-time execution of the instance.
+
+For example: the number of the first run of a periodic instance is 0. when the user reruns the instance later, the number of the second execution is 1.
      * @param string $ScheduleTimeZone Time zone.
 Time zone. specifies the time zone. the default value is UTC+8.
      * @param string $BrokerIp Indicates the Ip address of the executor where the log is located.
@@ -160,6 +184,10 @@ Default All.
 The default is 1.
      * @param integer $EndLineCount End line number for obtaining logs.
 The default value is 10000.
+     * @param string $ExtInfo Used when performing a paging query for logs. it has no specific business meaning.
+
+Specifies that the value is null for the first query. 
+Use the ExtInfo field value in the returned information from the previous query for the second and subsequent queries.
      */
     function __construct()
     {
@@ -212,6 +240,10 @@ The default value is 10000.
 
         if (array_key_exists("EndLineCount",$param) and $param["EndLineCount"] !== null) {
             $this->EndLineCount = $param["EndLineCount"];
+        }
+
+        if (array_key_exists("ExtInfo",$param) and $param["ExtInfo"] !== null) {
+            $this->ExtInfo = $param["ExtInfo"];
         }
     }
 }

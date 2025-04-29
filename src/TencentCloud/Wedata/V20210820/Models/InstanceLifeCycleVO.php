@@ -26,38 +26,42 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method integer getInstanceState() Obtain Instance status.
 
--Indicates waiting for event.
+-[0] Indicates waiting for event.
 -[12] indicates waiting for upstream.
 -[6, 7, 9, 10, 18] indicates awaiting execution.
--1, 19, 22 indicate running.
--21: skip running.
+-[1, 19, 22] indicate running.
+-[21] skip running.
 -[3] indicates retry on failure.
 -[8, 4, 5, 13] indicates a failure.
 -[2] indicates a success.
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setInstanceState(integer $InstanceState) Set Instance status.
 
--Indicates waiting for event.
+-[0] Indicates waiting for event.
 -[12] indicates waiting for upstream.
 -[6, 7, 9, 10, 18] indicates awaiting execution.
--1, 19, 22 indicate running.
--21: skip running.
+-[1, 19, 22] indicate running.
+-[21] skip running.
 -[3] indicates retry on failure.
 -[8, 4, 5, 13] indicates a failure.
 -[2] indicates a success.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getLifeRoundNum() Obtain Lifecycle no.
+ * @method integer getLifeRoundNum() Obtain Instance lifetime number, which identifies one-time execution of the instance.
+
+For example: the number of the first run of a periodic instance is 0. when the user reruns the instance later, the number of the second execution is 1.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setLifeRoundNum(integer $LifeRoundNum) Set Lifecycle no.
+ * @method void setLifeRoundNum(integer $LifeRoundNum) Set Instance lifetime number, which identifies one-time execution of the instance.
+
+For example: the number of the first run of a periodic instance is 0. when the user reruns the instance later, the number of the second execution is 1.
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getRunType() Obtain Instance running trigger type.
 
 -RERUN indicates rerunning.
--ADDITION indicates supplementary recording.
+-ADDITION indicates data replenishment.
 -PERIODIC indicates a period.
 -APERIODIC indicates non-periodic.
 -RERUN_SKIP_RUN means empty run for re-run.
--ADDITION_SKIP_RUN indicates a supplementary run - empty run.
+-ADDITION_SKIP_RUN indicates data replenishment - empty run.
 -PERIODIC_SKIP_RUN indicates an empty run in a periodic cycle.
 -APERIODIC_SKIP_RUN indicates a non-periodic empty run.
 -MANUAL_TRIGGER indicates manual triggering.
@@ -66,11 +70,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
  * @method void setRunType(string $RunType) Set Instance running trigger type.
 
 -RERUN indicates rerunning.
--ADDITION indicates supplementary recording.
+-ADDITION indicates data replenishment.
 -PERIODIC indicates a period.
 -APERIODIC indicates non-periodic.
 -RERUN_SKIP_RUN means empty run for re-run.
--ADDITION_SKIP_RUN indicates a supplementary run - empty run.
+-ADDITION_SKIP_RUN indicates data replenishment - empty run.
 -PERIODIC_SKIP_RUN indicates an empty run in a periodic cycle.
 -APERIODIC_SKIP_RUN indicates a non-periodic empty run.
 -MANUAL_TRIGGER indicates manual triggering.
@@ -91,8 +95,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
 The file content specifies the code used for running the execution instance this time. only some tasks support it.
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getExecutionJobId() Obtain Dispatch execution ID.
+The unified execution platform dispatches execution to the new version executor with a unique ID to identify a specific execution, while the existing old executors do not have this ID when dispatching execution.
+If it is unknown whether the executor version supports this ID, contact tencent cloud's operations team.
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setExecutionJobId(string $ExecutionJobId) Set Dispatch execution ID.
+The unified execution platform dispatches execution to the new version executor with a unique ID to identify a specific execution, while the existing old executors do not have this ID when dispatching execution.
+If it is unknown whether the executor version supports this ID, contact tencent cloud's operations team.
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getBrokerIp() Obtain The execution node where the log resides.
 Note: This field may return null, indicating that no valid values can be obtained.
@@ -128,11 +136,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
     /**
      * @var integer Instance status.
 
--Indicates waiting for event.
+-[0] Indicates waiting for event.
 -[12] indicates waiting for upstream.
 -[6, 7, 9, 10, 18] indicates awaiting execution.
--1, 19, 22 indicate running.
--21: skip running.
+-[1, 19, 22] indicate running.
+-[21] skip running.
 -[3] indicates retry on failure.
 -[8, 4, 5, 13] indicates a failure.
 -[2] indicates a success.
@@ -141,7 +149,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $InstanceState;
 
     /**
-     * @var integer Lifecycle no.
+     * @var integer Instance lifetime number, which identifies one-time execution of the instance.
+
+For example: the number of the first run of a periodic instance is 0. when the user reruns the instance later, the number of the second execution is 1.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $LifeRoundNum;
@@ -150,11 +160,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @var string Instance running trigger type.
 
 -RERUN indicates rerunning.
--ADDITION indicates supplementary recording.
+-ADDITION indicates data replenishment.
 -PERIODIC indicates a period.
 -APERIODIC indicates non-periodic.
 -RERUN_SKIP_RUN means empty run for re-run.
--ADDITION_SKIP_RUN indicates a supplementary run - empty run.
+-ADDITION_SKIP_RUN indicates data replenishment - empty run.
 -PERIODIC_SKIP_RUN indicates an empty run in a periodic cycle.
 -APERIODIC_SKIP_RUN indicates a non-periodic empty run.
 -MANUAL_TRIGGER indicates manual triggering.
@@ -184,6 +194,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * @var string Dispatch execution ID.
+The unified execution platform dispatches execution to the new version executor with a unique ID to identify a specific execution, while the existing old executors do not have this ID when dispatching execution.
+If it is unknown whether the executor version supports this ID, contact tencent cloud's operations team.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ExecutionJobId;
@@ -220,25 +232,27 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $InstanceState Instance status.
 
--Indicates waiting for event.
+-[0] Indicates waiting for event.
 -[12] indicates waiting for upstream.
 -[6, 7, 9, 10, 18] indicates awaiting execution.
--1, 19, 22 indicate running.
--21: skip running.
+-[1, 19, 22] indicate running.
+-[21] skip running.
 -[3] indicates retry on failure.
 -[8, 4, 5, 13] indicates a failure.
 -[2] indicates a success.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $LifeRoundNum Lifecycle no.
+     * @param integer $LifeRoundNum Instance lifetime number, which identifies one-time execution of the instance.
+
+For example: the number of the first run of a periodic instance is 0. when the user reruns the instance later, the number of the second execution is 1.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $RunType Instance running trigger type.
 
 -RERUN indicates rerunning.
--ADDITION indicates supplementary recording.
+-ADDITION indicates data replenishment.
 -PERIODIC indicates a period.
 -APERIODIC indicates non-periodic.
 -RERUN_SKIP_RUN means empty run for re-run.
--ADDITION_SKIP_RUN indicates a supplementary run - empty run.
+-ADDITION_SKIP_RUN indicates data replenishment - empty run.
 -PERIODIC_SKIP_RUN indicates an empty run in a periodic cycle.
 -APERIODIC_SKIP_RUN indicates a non-periodic empty run.
 -MANUAL_TRIGGER indicates manual triggering.
@@ -252,6 +266,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
 The file content specifies the code used for running the execution instance this time. only some tasks support it.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $ExecutionJobId Dispatch execution ID.
+The unified execution platform dispatches execution to the new version executor with a unique ID to identify a specific execution, while the existing old executors do not have this ID when dispatching execution.
+If it is unknown whether the executor version supports this ID, contact tencent cloud's operations team.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $BrokerIp The execution node where the log resides.
 Note: This field may return null, indicating that no valid values can be obtained.
