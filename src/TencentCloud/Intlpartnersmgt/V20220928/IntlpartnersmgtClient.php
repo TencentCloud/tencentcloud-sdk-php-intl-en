@@ -109,8 +109,8 @@ Callable roles: Reseller, Distributer, Second-level reseller
 Callable roles: Distributor, Second-level reseller, Reseller
  * @method Models\QuerySubAgentsDetailV2Response QuerySubAgentsDetailV2(Models\QuerySubAgentsDetailV2Request $req) This API is used to query information of second-level resellers.
 Invocation Role:Distributor.
- * @method Models\QueryT1IndirectCustomersDetailResponse QueryT1IndirectCustomersDetail(Models\QueryT1IndirectCustomersDetailRequest $req) This API is used to query the indirect sub-customers of a first-level distributor.
-Invokable role type: first-level reseller.
+ * @method Models\QueryT1IndirectCustomersDetailResponse QueryT1IndirectCustomersDetail(Models\QueryT1IndirectCustomersDetailRequest $req) This API is used to query the indirect sub-customers of a distributor.
+Invokable role type: Distributor
  * @method Models\QueryVoucherAmountByUinResponse QueryVoucherAmountByUin(Models\QueryVoucherAmountByUinRequest $req) This API is used by primary/secondary resellers to query the voucher quota based on the customer UIN.
 Callable roles: Reseller, Distributor, Second-level reseller
  * @method Models\QueryVoucherListByUinResponse QueryVoucherListByUin(Models\QueryVoucherListByUinRequest $req) This API is used by primary/secondary resellers to query the voucher list based on the customer UIN.

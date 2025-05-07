@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * QueryT1IndirectCustomersDetail response structure.
  *
- * @method integer getTotal() Obtain The number of indirect sub-customers of a first-level distributor.
- * @method void setTotal(integer $Total) Set The number of indirect sub-customers of a first-level distributor.
+ * @method integer getTotal() Obtain The number of indirect sub-customers of a distributor.
+ * @method void setTotal(integer $Total) Set The number of indirect sub-customers of a distributor.
  * @method integer getSubAgentUin() Obtain Second-level reseller UIN.
  * @method void setSubAgentUin(integer $SubAgentUin) Set Second-level reseller UIN.
  * @method string getSubAgentName() Obtain Second-Level reseller name.
@@ -34,7 +34,7 @@ use TencentCloud\Common\AbstractModel;
 class QueryT1IndirectCustomersDetailResponse extends AbstractModel
 {
     /**
-     * @var integer The number of indirect sub-customers of a first-level distributor.
+     * @var integer The number of indirect sub-customers of a distributor.
      */
     public $Total;
 
@@ -59,7 +59,7 @@ class QueryT1IndirectCustomersDetailResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $Total The number of indirect sub-customers of a first-level distributor.
+     * @param integer $Total The number of indirect sub-customers of a distributor.
      * @param integer $SubAgentUin Second-level reseller UIN.
      * @param string $SubAgentName Second-Level reseller name.
      * @param array $Data Indirect sub-customer information.
