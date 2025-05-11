@@ -22,6 +22,18 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getEmail() Obtain Email address that receives the customer invitation link.
  * @method void setEmail(string $Email) Set Email address that receives the customer invitation link.
+ * @method string getInvitationRole() Obtain Invite a role.
+Note: if no value is passed, it defaults to the sub - customer.
+Client: customer.
+SubAgent: second-level reseller.
+ * @method void setInvitationRole(string $InvitationRole) Set Invite a role.
+Note: if no value is passed, it defaults to the sub - customer.
+Client: customer.
+SubAgent: second-level reseller.
+ * @method string getMaterialUrl() Obtain Specifies the application material.
+Note: this field takes effect only in the scenario of inviting a second-level reseller.
+ * @method void setMaterialUrl(string $MaterialUrl) Set Specifies the application material.
+Note: this field takes effect only in the scenario of inviting a second-level reseller.
  */
 class CreateAndSendClientInvitationMailRequest extends AbstractModel
 {
@@ -31,7 +43,27 @@ class CreateAndSendClientInvitationMailRequest extends AbstractModel
     public $Email;
 
     /**
+     * @var string Invite a role.
+Note: if no value is passed, it defaults to the sub - customer.
+Client: customer.
+SubAgent: second-level reseller.
+     */
+    public $InvitationRole;
+
+    /**
+     * @var string Specifies the application material.
+Note: this field takes effect only in the scenario of inviting a second-level reseller.
+     */
+    public $MaterialUrl;
+
+    /**
      * @param string $Email Email address that receives the customer invitation link.
+     * @param string $InvitationRole Invite a role.
+Note: if no value is passed, it defaults to the sub - customer.
+Client: customer.
+SubAgent: second-level reseller.
+     * @param string $MaterialUrl Specifies the application material.
+Note: this field takes effect only in the scenario of inviting a second-level reseller.
      */
     function __construct()
     {
@@ -48,6 +80,14 @@ class CreateAndSendClientInvitationMailRequest extends AbstractModel
         }
         if (array_key_exists("Email",$param) and $param["Email"] !== null) {
             $this->Email = $param["Email"];
+        }
+
+        if (array_key_exists("InvitationRole",$param) and $param["InvitationRole"] !== null) {
+            $this->InvitationRole = $param["InvitationRole"];
+        }
+
+        if (array_key_exists("MaterialUrl",$param) and $param["MaterialUrl"] !== null) {
+            $this->MaterialUrl = $param["MaterialUrl"];
         }
     }
 }

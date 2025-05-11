@@ -35,20 +35,21 @@ Callable roles: Distributor, Second-level reseller, Reseller
  * @method Models\ApproveClientApplyResponse ApproveClientApply(Models\ApproveClientApplyRequest $req) Description: This API is used by resellers to review applications to become sub-customers. Note: This API is used to apply for the allowlist. If needed, please contact your business representative.
 
 Callable roles: Reseller, Distributer, Second-level reseller
+ * @method Models\ApproveSubAgentApplyResponse ApproveSubAgentApply(Models\ApproveSubAgentApplyRequest $req) This API is used to approve applications for second-level resellers.
+Invocation Role: Distributor.
  * @method Models\CreateAccountResponse CreateAccount(Models\CreateAccountRequest $req) This API is used to create Tencent Cloud customer accounts for distributor/second-level resellers.After the account is created, it will be automatically bound to the partner account.Note:
 1. Create a Tencent Cloud account. The entered email address and mobile phone number need to be verified by the partner for validity.
 2. Customers need to add personal information when logging in for the first time.
 3. This interface needs to be applied for allowlist usage. Please contact the channel manager to initiate the application process.
 
 Callable roles: Distributor, Second-level reseller, Reseller
- * @method Models\CreateAndSendClientInvitationMailResponse CreateAndSendClientInvitationMail(Models\CreateAndSendClientInvitationMailRequest $req) This API is used to apply for the allowlist. If needed, please contact your business representative.Directions:
-1.This API is used to create an invitation link, which you can send to a specified email address.
-2.Customer need to click the invitation link in the email, fill in and submit the required information.
-3.You can review the customer's application in customer management  after submission.
+ * @method Models\CreateAndSendClientInvitationMailResponse CreateAndSendClientInvitationMail(Models\CreateAndSendClientInvitationMailRequest $req) This API is used to perform operations. Application for allowlist is required before usage. If needed, contact your business representative to request allowlisting. The specific usage process is as follows;.
+This API is used to create an invitation link. You can send the invitation link to your designated email address.
+2. Customers need to click the invitation link in the mailbox, fill in and submit relevant information.
+3. After customer submission, you can view the application of this sub-customer on the customer management page and review it.
 
-Note:This API is used to manually send the invitation link to the customer if the specified email does not receive it.
-
-Callable roles: Distributor, Second-level reseller, Reseller
+This API is used to handle cases where if the designated mailbox does not receive the invitation link, you can send the invitation link returned by the API to the customer manually.
+Invocation roles: resellers, distributors, second-level reseller.
  * @method Models\DescribeBillDetailResponse DescribeBillDetail(Models\DescribeBillDetailRequest $req) Description: End-customer queries its own bill details.
 Callable role: End-customer.
  * @method Models\DescribeBillDownloadUrlResponse DescribeBillDownloadUrl(Models\DescribeBillDownloadUrlRequest $req) Description: This API is used to download billing files and return billing file URLs for sub-customers.
@@ -105,6 +106,8 @@ Callable roles: Distributor, Second-level reseller, Reseller
  * @method Models\QueryPendingClientsV2Response QueryPendingClientsV2(Models\QueryPendingClientsV2Request $req) Description: This API is used by resellers to query the list of sub-customers pending review. Note: This API is used to apply for the allowlist. If needed, please contact your business representative.
 
 Callable roles: Reseller, Distributer, Second-level reseller
+ * @method Models\QueryPendingSubAgentsV2Response QueryPendingSubAgentsV2(Models\QueryPendingSubAgentsV2Request $req) This API is used to query information of second-level resellers in application.
+Invocation Role: Distributor.
  * @method Models\QueryPolicyProductListByCodeResponse QueryPolicyProductListByCode(Models\QueryPolicyProductListByCodeRequest $req) This API is used to query the product list information within the specified policy range. To call this API, contact your business manager to apply for adding it to the allowlist.
 Callable roles: Distributor, Second-level reseller, Reseller
  * @method Models\QuerySubAgentsDetailV2Response QuerySubAgentsDetailV2(Models\QuerySubAgentsDetailV2Request $req) This API is used to query information of second-level resellers.

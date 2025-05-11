@@ -20,87 +20,45 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Describes data disk information.
  *
- * @method integer getDiskSize() Obtain Data disk size (in GB). The minimum adjustment increment is 10 GB. The value range varies by data disk type. For more information on limits, see [Storage Overview](https://intl.cloud.tencent.com/document/product/213/4952?from_cn_redirect=1). The default value is 0, indicating that no data disk is purchased. For more information, see the product documentation.
- * @method void setDiskSize(integer $DiskSize) Set Data disk size (in GB). The minimum adjustment increment is 10 GB. The value range varies by data disk type. For more information on limits, see [Storage Overview](https://intl.cloud.tencent.com/document/product/213/4952?from_cn_redirect=1). The default value is 0, indicating that no data disk is purchased. For more information, see the product documentation.
+ * @method integer getDiskSize() Obtain Data disk size, unit: GiB. the minimum adjustment step size is 10 GiB. the value ranges of different data disk types vary. for specific limitations, see the storage overview (https://intl.cloud.tencent.com/document/product/213/4952?from_cn_redirect=1). the default value is 0, which means no data disk purchase. for more restrictions, see the product document.
+ * @method void setDiskSize(integer $DiskSize) Set Data disk size, unit: GiB. the minimum adjustment step size is 10 GiB. the value ranges of different data disk types vary. for specific limitations, see the storage overview (https://intl.cloud.tencent.com/document/product/213/4952?from_cn_redirect=1). the default value is 0, which means no data disk purchase. for more restrictions, see the product document.
  * @method string getDiskType() Obtain Data disk type. For the detailed restrictions on the data disk type, refer to [Storage Overview](https://cloud.tencent.com/document/product/213/4952). Valid values: <br /><li>LOCAL_BASIC: Local Disk <br /><li>LOCAL_SSD: Local SSD <br /><li>LOCAL_NVME: Local NVMe Disk, which is strongly related with InstanceType and can not be specified <br /><li>LOCAL_PRO: Local HDD, which is strongly related with InstanceType and can not be specified <br /><li>CLOUD_BASIC: Basic Cloud Disk <br /><li>CLOUD_PREMIUM: Premium Disk <br /><li>CLOUD_SSD: Cloud SSD <br /><li>CLOUD_HSSD: Enhanced SSD <br /><li>CLOUD_TSSD: Tremendous SSD <br /><li>CLOUD_BSSD: Balanced SSD <br /><br />Default value: LOCAL_BASIC. <br /><br />This parameter is invalid for the `ResizeInstanceDisk` API.</li></li></li> </li> </li></li></li></li></li></li>
  * @method void setDiskType(string $DiskType) Set Data disk type. For the detailed restrictions on the data disk type, refer to [Storage Overview](https://cloud.tencent.com/document/product/213/4952). Valid values: <br /><li>LOCAL_BASIC: Local Disk <br /><li>LOCAL_SSD: Local SSD <br /><li>LOCAL_NVME: Local NVMe Disk, which is strongly related with InstanceType and can not be specified <br /><li>LOCAL_PRO: Local HDD, which is strongly related with InstanceType and can not be specified <br /><li>CLOUD_BASIC: Basic Cloud Disk <br /><li>CLOUD_PREMIUM: Premium Disk <br /><li>CLOUD_SSD: Cloud SSD <br /><li>CLOUD_HSSD: Enhanced SSD <br /><li>CLOUD_TSSD: Tremendous SSD <br /><li>CLOUD_BSSD: Balanced SSD <br /><br />Default value: LOCAL_BASIC. <br /><br />This parameter is invalid for the `ResizeInstanceDisk` API.</li></li></li> </li> </li></li></li></li></li></li>
- * @method string getDiskId() Obtain Data disk ID. Note that it's not available for `LOCAL_BASIC` and `LOCAL_SSD` disks.
-It is only used as a response parameter for APIs such as `DescribeInstances`, and cannot be used as a request parameter for APIs such as `RunInstances`.
- * @method void setDiskId(string $DiskId) Set Data disk ID. Note that it's not available for `LOCAL_BASIC` and `LOCAL_SSD` disks.
-It is only used as a response parameter for APIs such as `DescribeInstances`, and cannot be used as a request parameter for APIs such as `RunInstances`.
- * @method boolean getDeleteWithInstance() Obtain Whether the data disk is terminated with the Cloud Virtual Machine (CVM). Valid values:
+ * @method string getDiskId() Obtain Specifies the data disk ID.
+This parameter currently only serves as a response parameter for query apis such as `DescribeInstances`, and cannot be used as an input parameter for write apis such as `RunInstances`.
+ * @method void setDiskId(string $DiskId) Set Specifies the data disk ID.
+This parameter currently only serves as a response parameter for query apis such as `DescribeInstances`, and cannot be used as an input parameter for write apis such as `RunInstances`.
+ * @method boolean getDeleteWithInstance() Obtain Whether the data disk is terminated with the instance. value range: <li>true: when the instance is terminated, the data disk is also terminated. only hourly postpaid cloud disks are supported. <li>false: when the instance is terminated, the data disk is retained. <br>default value: true <br>currently, this parameter is only used for the API `RunInstances`.
+ * @method void setDeleteWithInstance(boolean $DeleteWithInstance) Set Whether the data disk is terminated with the instance. value range: <li>true: when the instance is terminated, the data disk is also terminated. only hourly postpaid cloud disks are supported. <li>false: when the instance is terminated, the data disk is retained. <br>default value: true <br>currently, this parameter is only used for the API `RunInstances`.
+ * @method string getSnapshotId() Obtain Data disk snapshot ID. the size of the selected data disk snapshot must be less than the data disk size.
+ * @method void setSnapshotId(string $SnapshotId) Set Data disk snapshot ID. the size of the selected data disk snapshot must be less than the data disk size.
+ * @method boolean getEncrypt() Obtain Specifies whether the data disk is encrypted. value range: <li>true: encrypted</li> <li>false: unencrypted</li><br/> default value: false<br/> this parameter is currently only used for the `RunInstances` api.
+ * @method void setEncrypt(boolean $Encrypt) Set Specifies whether the data disk is encrypted. value range: <li>true: encrypted</li> <li>false: unencrypted</li><br/> default value: false<br/> this parameter is currently only used for the `RunInstances` api.
+ * @method string getKmsKeyId() Obtain Custom CMK's corresponding ID, with a value of UUID or something similar to kms - abcd1234. used for encrypting cloud disks.
 
-<li>true: Terminate the data disk when the CVM is terminated. Only the pay-as-you-go cloud disk billed by hour is supported.</li>
-<li>
-  false: Retain the data disk when the CVM is terminated.<br />
-  Default value: true.<br />
-  This parameter is currently only used for the `RunInstances` API.
-</li>
-Note: This field may return null, indicating that no valid value is found.
- * @method void setDeleteWithInstance(boolean $DeleteWithInstance) Set Whether the data disk is terminated with the Cloud Virtual Machine (CVM). Valid values:
+This parameter is currently only used for the `RunInstances` api.
+ * @method void setKmsKeyId(string $KmsKeyId) Set Custom CMK's corresponding ID, with a value of UUID or something similar to kms - abcd1234. used for encrypting cloud disks.
 
-<li>true: Terminate the data disk when the CVM is terminated. Only the pay-as-you-go cloud disk billed by hour is supported.</li>
-<li>
-  false: Retain the data disk when the CVM is terminated.<br />
-  Default value: true.<br />
-  This parameter is currently only used for the `RunInstances` API.
-</li>
-Note: This field may return null, indicating that no valid value is found.
- * @method string getSnapshotId() Obtain Data disk snapshot ID. The size of the selected data disk snapshot must be smaller than that of the data disk.
-Note: This field may return null, indicating that no valid value is found.
- * @method void setSnapshotId(string $SnapshotId) Set Data disk snapshot ID. The size of the selected data disk snapshot must be smaller than that of the data disk.
-Note: This field may return null, indicating that no valid value is found.
- * @method boolean getEncrypt() Obtain Whether a data disk is encrypted. Valid values:
-<li>true: encrypted.</li>
-<li>
-  false: not encrypted.<br/>
-  Default value: false.<br/>
-  This parameter is currently used only in the `RunInstances` API.
-</li>
-Note: This field may return null, indicating that no valid value is found.
- * @method void setEncrypt(boolean $Encrypt) Set Whether a data disk is encrypted. Valid values:
-<li>true: encrypted.</li>
-<li>
-  false: not encrypted.<br/>
-  Default value: false.<br/>
-  This parameter is currently used only in the `RunInstances` API.
-</li>
-Note: This field may return null, indicating that no valid value is found.
- * @method string getKmsKeyId() Obtain ID of the custom CMK in the format of UUID or "kms-abcd1234". This parameter is used to encrypt cloud disks.
-
-Currently, this parameter is only used in the `RunInstances` API.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setKmsKeyId(string $KmsKeyId) Set ID of the custom CMK in the format of UUID or "kms-abcd1234". This parameter is used to encrypt cloud disks.
-
-Currently, this parameter is only used in the `RunInstances` API.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method integer getThroughputPerformance() Obtain Cloud disk performance, in MB/s
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setThroughputPerformance(integer $ThroughputPerformance) Set Cloud disk performance, in MB/s
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method string getCdcId() Obtain ID of the dedicated cluster to which the instance belongs.
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setCdcId(string $CdcId) Set ID of the dedicated cluster to which the instance belongs.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+This parameter is currently only used for the `RunInstances` api.
+ * @method integer getThroughputPerformance() Obtain Specifies the cloud disk performance (unit: MiB/s). using this parameter allows you to purchase additional performance for the cloud disk.
+Currently only supports ultra-fast CLOUD disk (CLOUD_TSSD) and enhanced SSD CLOUD disk (CLOUD_HSSD).
+ * @method void setThroughputPerformance(integer $ThroughputPerformance) Set Specifies the cloud disk performance (unit: MiB/s). using this parameter allows you to purchase additional performance for the cloud disk.
+Currently only supports ultra-fast CLOUD disk (CLOUD_TSSD) and enhanced SSD CLOUD disk (CLOUD_HSSD).
+ * @method string getCdcId() Obtain Specifies the exclusive cluster ID it belongs to.
+ * @method void setCdcId(string $CdcId) Set Specifies the exclusive cluster ID it belongs to.
  * @method boolean getBurstPerformance() Obtain Burst performance.
 
- <b>Note: This field is in beta test.</b>
-Note: This field may return null, indicating that no valid value is found.
+<B>Note: this feature is in beta test.</b>.
  * @method void setBurstPerformance(boolean $BurstPerformance) Set Burst performance.
 
- <b>Note: This field is in beta test.</b>
-Note: This field may return null, indicating that no valid value is found.
- * @method string getDiskName() Obtain Disk name, with a length of not more than 128 characters.
-
-This parameter is in invite-only testing and is not yet open for use.
- * @method void setDiskName(string $DiskName) Set Disk name, with a length of not more than 128 characters.
-
-This parameter is in invite-only testing and is not yet open for use.
+<B>Note: this feature is in beta test.</b>.
+ * @method string getDiskName() Obtain Disk name, with a length not exceeding 128 characters.
+ * @method void setDiskName(string $DiskName) Set Disk name, with a length not exceeding 128 characters.
  */
 class DataDisk extends AbstractModel
 {
     /**
-     * @var integer Data disk size (in GB). The minimum adjustment increment is 10 GB. The value range varies by data disk type. For more information on limits, see [Storage Overview](https://intl.cloud.tencent.com/document/product/213/4952?from_cn_redirect=1). The default value is 0, indicating that no data disk is purchased. For more information, see the product documentation.
+     * @var integer Data disk size, unit: GiB. the minimum adjustment step size is 10 GiB. the value ranges of different data disk types vary. for specific limitations, see the storage overview (https://intl.cloud.tencent.com/document/product/213/4952?from_cn_redirect=1). the default value is 0, which means no data disk purchase. for more restrictions, see the product document.
      */
     public $DiskSize;
 
@@ -110,116 +68,74 @@ class DataDisk extends AbstractModel
     public $DiskType;
 
     /**
-     * @var string Data disk ID. Note that it's not available for `LOCAL_BASIC` and `LOCAL_SSD` disks.
-It is only used as a response parameter for APIs such as `DescribeInstances`, and cannot be used as a request parameter for APIs such as `RunInstances`.
+     * @var string Specifies the data disk ID.
+This parameter currently only serves as a response parameter for query apis such as `DescribeInstances`, and cannot be used as an input parameter for write apis such as `RunInstances`.
      */
     public $DiskId;
 
     /**
-     * @var boolean Whether the data disk is terminated with the Cloud Virtual Machine (CVM). Valid values:
-
-<li>true: Terminate the data disk when the CVM is terminated. Only the pay-as-you-go cloud disk billed by hour is supported.</li>
-<li>
-  false: Retain the data disk when the CVM is terminated.<br />
-  Default value: true.<br />
-  This parameter is currently only used for the `RunInstances` API.
-</li>
-Note: This field may return null, indicating that no valid value is found.
+     * @var boolean Whether the data disk is terminated with the instance. value range: <li>true: when the instance is terminated, the data disk is also terminated. only hourly postpaid cloud disks are supported. <li>false: when the instance is terminated, the data disk is retained. <br>default value: true <br>currently, this parameter is only used for the API `RunInstances`.
      */
     public $DeleteWithInstance;
 
     /**
-     * @var string Data disk snapshot ID. The size of the selected data disk snapshot must be smaller than that of the data disk.
-Note: This field may return null, indicating that no valid value is found.
+     * @var string Data disk snapshot ID. the size of the selected data disk snapshot must be less than the data disk size.
      */
     public $SnapshotId;
 
     /**
-     * @var boolean Whether a data disk is encrypted. Valid values:
-<li>true: encrypted.</li>
-<li>
-  false: not encrypted.<br/>
-  Default value: false.<br/>
-  This parameter is currently used only in the `RunInstances` API.
-</li>
-Note: This field may return null, indicating that no valid value is found.
+     * @var boolean Specifies whether the data disk is encrypted. value range: <li>true: encrypted</li> <li>false: unencrypted</li><br/> default value: false<br/> this parameter is currently only used for the `RunInstances` api.
      */
     public $Encrypt;
 
     /**
-     * @var string ID of the custom CMK in the format of UUID or "kms-abcd1234". This parameter is used to encrypt cloud disks.
+     * @var string Custom CMK's corresponding ID, with a value of UUID or something similar to kms - abcd1234. used for encrypting cloud disks.
 
-Currently, this parameter is only used in the `RunInstances` API.
-Note: this field may return null, indicating that no valid values can be obtained.
+This parameter is currently only used for the `RunInstances` api.
      */
     public $KmsKeyId;
 
     /**
-     * @var integer Cloud disk performance, in MB/s
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @var integer Specifies the cloud disk performance (unit: MiB/s). using this parameter allows you to purchase additional performance for the cloud disk.
+Currently only supports ultra-fast CLOUD disk (CLOUD_TSSD) and enhanced SSD CLOUD disk (CLOUD_HSSD).
      */
     public $ThroughputPerformance;
 
     /**
-     * @var string ID of the dedicated cluster to which the instance belongs.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @var string Specifies the exclusive cluster ID it belongs to.
      */
     public $CdcId;
 
     /**
      * @var boolean Burst performance.
 
- <b>Note: This field is in beta test.</b>
-Note: This field may return null, indicating that no valid value is found.
+<B>Note: this feature is in beta test.</b>.
      */
     public $BurstPerformance;
 
     /**
-     * @var string Disk name, with a length of not more than 128 characters.
-
-This parameter is in invite-only testing and is not yet open for use.
+     * @var string Disk name, with a length not exceeding 128 characters.
      */
     public $DiskName;
 
     /**
-     * @param integer $DiskSize Data disk size (in GB). The minimum adjustment increment is 10 GB. The value range varies by data disk type. For more information on limits, see [Storage Overview](https://intl.cloud.tencent.com/document/product/213/4952?from_cn_redirect=1). The default value is 0, indicating that no data disk is purchased. For more information, see the product documentation.
+     * @param integer $DiskSize Data disk size, unit: GiB. the minimum adjustment step size is 10 GiB. the value ranges of different data disk types vary. for specific limitations, see the storage overview (https://intl.cloud.tencent.com/document/product/213/4952?from_cn_redirect=1). the default value is 0, which means no data disk purchase. for more restrictions, see the product document.
      * @param string $DiskType Data disk type. For the detailed restrictions on the data disk type, refer to [Storage Overview](https://cloud.tencent.com/document/product/213/4952). Valid values: <br /><li>LOCAL_BASIC: Local Disk <br /><li>LOCAL_SSD: Local SSD <br /><li>LOCAL_NVME: Local NVMe Disk, which is strongly related with InstanceType and can not be specified <br /><li>LOCAL_PRO: Local HDD, which is strongly related with InstanceType and can not be specified <br /><li>CLOUD_BASIC: Basic Cloud Disk <br /><li>CLOUD_PREMIUM: Premium Disk <br /><li>CLOUD_SSD: Cloud SSD <br /><li>CLOUD_HSSD: Enhanced SSD <br /><li>CLOUD_TSSD: Tremendous SSD <br /><li>CLOUD_BSSD: Balanced SSD <br /><br />Default value: LOCAL_BASIC. <br /><br />This parameter is invalid for the `ResizeInstanceDisk` API.</li></li></li> </li> </li></li></li></li></li></li>
-     * @param string $DiskId Data disk ID. Note that it's not available for `LOCAL_BASIC` and `LOCAL_SSD` disks.
-It is only used as a response parameter for APIs such as `DescribeInstances`, and cannot be used as a request parameter for APIs such as `RunInstances`.
-     * @param boolean $DeleteWithInstance Whether the data disk is terminated with the Cloud Virtual Machine (CVM). Valid values:
+     * @param string $DiskId Specifies the data disk ID.
+This parameter currently only serves as a response parameter for query apis such as `DescribeInstances`, and cannot be used as an input parameter for write apis such as `RunInstances`.
+     * @param boolean $DeleteWithInstance Whether the data disk is terminated with the instance. value range: <li>true: when the instance is terminated, the data disk is also terminated. only hourly postpaid cloud disks are supported. <li>false: when the instance is terminated, the data disk is retained. <br>default value: true <br>currently, this parameter is only used for the API `RunInstances`.
+     * @param string $SnapshotId Data disk snapshot ID. the size of the selected data disk snapshot must be less than the data disk size.
+     * @param boolean $Encrypt Specifies whether the data disk is encrypted. value range: <li>true: encrypted</li> <li>false: unencrypted</li><br/> default value: false<br/> this parameter is currently only used for the `RunInstances` api.
+     * @param string $KmsKeyId Custom CMK's corresponding ID, with a value of UUID or something similar to kms - abcd1234. used for encrypting cloud disks.
 
-<li>true: Terminate the data disk when the CVM is terminated. Only the pay-as-you-go cloud disk billed by hour is supported.</li>
-<li>
-  false: Retain the data disk when the CVM is terminated.<br />
-  Default value: true.<br />
-  This parameter is currently only used for the `RunInstances` API.
-</li>
-Note: This field may return null, indicating that no valid value is found.
-     * @param string $SnapshotId Data disk snapshot ID. The size of the selected data disk snapshot must be smaller than that of the data disk.
-Note: This field may return null, indicating that no valid value is found.
-     * @param boolean $Encrypt Whether a data disk is encrypted. Valid values:
-<li>true: encrypted.</li>
-<li>
-  false: not encrypted.<br/>
-  Default value: false.<br/>
-  This parameter is currently used only in the `RunInstances` API.
-</li>
-Note: This field may return null, indicating that no valid value is found.
-     * @param string $KmsKeyId ID of the custom CMK in the format of UUID or "kms-abcd1234". This parameter is used to encrypt cloud disks.
-
-Currently, this parameter is only used in the `RunInstances` API.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param integer $ThroughputPerformance Cloud disk performance, in MB/s
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param string $CdcId ID of the dedicated cluster to which the instance belongs.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+This parameter is currently only used for the `RunInstances` api.
+     * @param integer $ThroughputPerformance Specifies the cloud disk performance (unit: MiB/s). using this parameter allows you to purchase additional performance for the cloud disk.
+Currently only supports ultra-fast CLOUD disk (CLOUD_TSSD) and enhanced SSD CLOUD disk (CLOUD_HSSD).
+     * @param string $CdcId Specifies the exclusive cluster ID it belongs to.
      * @param boolean $BurstPerformance Burst performance.
 
- <b>Note: This field is in beta test.</b>
-Note: This field may return null, indicating that no valid value is found.
-     * @param string $DiskName Disk name, with a length of not more than 128 characters.
-
-This parameter is in invite-only testing and is not yet open for use.
+<B>Note: this feature is in beta test.</b>.
+     * @param string $DiskName Disk name, with a length not exceeding 128 characters.
      */
     function __construct()
     {

@@ -20,34 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Description of tags associated with resource instances during instance creation.
  *
- * @method string getResourceType() Obtain Resource type. Valid values: `instance` (CVM), `host` (CDH), `image` (for image), and `keypair` (for key).
-Note: This field may return `null`, indicating that no valid values can be obtained.
- * @method void setResourceType(string $ResourceType) Set Resource type. Valid values: `instance` (CVM), `host` (CDH), `image` (for image), and `keypair` (for key).
-Note: This field may return `null`, indicating that no valid values can be obtained.
- * @method array getTags() Obtain Tag pairs
-Note: This field may return `null`, indicating that no valid values can be obtained.
- * @method void setTags(array $Tags) Set Tag pairs
-Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method string getResourceType() Obtain Tag-Bound resource type. "instance" for cloud virtual machine, "host" for cdh, "image" for mirror, and "keypair" for key.
+ * @method void setResourceType(string $ResourceType) Set Tag-Bound resource type. "instance" for cloud virtual machine, "host" for cdh, "image" for mirror, and "keypair" for key.
+ * @method array getTags() Obtain Tag pair list
+ * @method void setTags(array $Tags) Set Tag pair list
  */
 class TagSpecification extends AbstractModel
 {
     /**
-     * @var string Resource type. Valid values: `instance` (CVM), `host` (CDH), `image` (for image), and `keypair` (for key).
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @var string Tag-Bound resource type. "instance" for cloud virtual machine, "host" for cdh, "image" for mirror, and "keypair" for key.
      */
     public $ResourceType;
 
     /**
-     * @var array Tag pairs
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @var array Tag pair list
      */
     public $Tags;
 
     /**
-     * @param string $ResourceType Resource type. Valid values: `instance` (CVM), `host` (CDH), `image` (for image), and `keypair` (for key).
-Note: This field may return `null`, indicating that no valid values can be obtained.
-     * @param array $Tags Tag pairs
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param string $ResourceType Tag-Bound resource type. "instance" for cloud virtual machine, "host" for cdh, "image" for mirror, and "keypair" for key.
+     * @param array $Tags Tag pair list
      */
     function __construct()
     {

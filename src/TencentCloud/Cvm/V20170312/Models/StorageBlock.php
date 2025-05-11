@@ -20,46 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Information on local HDD storage.
  *
- * @method string getType() Obtain Local HDD storage type. Value: LOCAL_PRO.
-Note: This field may return null, indicating that no valid value is found.
- * @method void setType(string $Type) Set Local HDD storage type. Value: LOCAL_PRO.
-Note: This field may return null, indicating that no valid value is found.
- * @method integer getMinSize() Obtain Minimum capacity of local HDD storage
-Note: This field may return null, indicating that no valid value is found.
- * @method void setMinSize(integer $MinSize) Set Minimum capacity of local HDD storage
-Note: This field may return null, indicating that no valid value is found.
- * @method integer getMaxSize() Obtain Maximum capacity of local HDD storage
-Note: This field may return null, indicating that no valid value is found.
- * @method void setMaxSize(integer $MaxSize) Set Maximum capacity of local HDD storage
-Note: This field may return null, indicating that no valid value is found.
+ * @method string getType() Obtain HDD LOCAL storage type specifies the value: LOCAL_PRO.
+ * @method void setType(string $Type) Set HDD LOCAL storage type specifies the value: LOCAL_PRO.
+ * @method integer getMinSize() Obtain Specifies the minimum HDD local storage capacity. measurement unit: GiB.
+ * @method void setMinSize(integer $MinSize) Set Specifies the minimum HDD local storage capacity. measurement unit: GiB.
+ * @method integer getMaxSize() Obtain Specifies the maximum capacity of HDD local storage. measurement unit: GiB.
+ * @method void setMaxSize(integer $MaxSize) Set Specifies the maximum capacity of HDD local storage. measurement unit: GiB.
  */
 class StorageBlock extends AbstractModel
 {
     /**
-     * @var string Local HDD storage type. Value: LOCAL_PRO.
-Note: This field may return null, indicating that no valid value is found.
+     * @var string HDD LOCAL storage type specifies the value: LOCAL_PRO.
      */
     public $Type;
 
     /**
-     * @var integer Minimum capacity of local HDD storage
-Note: This field may return null, indicating that no valid value is found.
+     * @var integer Specifies the minimum HDD local storage capacity. measurement unit: GiB.
      */
     public $MinSize;
 
     /**
-     * @var integer Maximum capacity of local HDD storage
-Note: This field may return null, indicating that no valid value is found.
+     * @var integer Specifies the maximum capacity of HDD local storage. measurement unit: GiB.
      */
     public $MaxSize;
 
     /**
-     * @param string $Type Local HDD storage type. Value: LOCAL_PRO.
-Note: This field may return null, indicating that no valid value is found.
-     * @param integer $MinSize Minimum capacity of local HDD storage
-Note: This field may return null, indicating that no valid value is found.
-     * @param integer $MaxSize Maximum capacity of local HDD storage
-Note: This field may return null, indicating that no valid value is found.
+     * @param string $Type HDD LOCAL storage type specifies the value: LOCAL_PRO.
+     * @param integer $MinSize Specifies the minimum HDD local storage capacity. measurement unit: GiB.
+     * @param integer $MaxSize Specifies the maximum capacity of HDD local storage. measurement unit: GiB.
      */
     function __construct()
     {

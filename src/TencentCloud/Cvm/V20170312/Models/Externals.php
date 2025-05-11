@@ -20,46 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Additional data
  *
- * @method boolean getReleaseAddress() Obtain Release address
-Note: This field may return null, indicating that no valid value is found.
- * @method void setReleaseAddress(boolean $ReleaseAddress) Set Release address
-Note: This field may return null, indicating that no valid value is found.
- * @method array getUnsupportNetworks() Obtain Not supported network. Value: <br><li>BASIC: classic network<br><li>VPC1.0: VPC1.0
-Note: This field may return null, indicating that no valid value was found.
- * @method void setUnsupportNetworks(array $UnsupportNetworks) Set Not supported network. Value: <br><li>BASIC: classic network<br><li>VPC1.0: VPC1.0
-Note: This field may return null, indicating that no valid value was found.
- * @method StorageBlock getStorageBlockAttr() Obtain Attributes of local HDD storage
-Note: This field may return null, indicating that no valid value is found.
- * @method void setStorageBlockAttr(StorageBlock $StorageBlockAttr) Set Attributes of local HDD storage
-Note: This field may return null, indicating that no valid value is found.
+ * @method boolean getReleaseAddress() Obtain Release Address
+ * @method void setReleaseAddress(boolean $ReleaseAddress) Set Release Address
+ * @method array getUnsupportNetworks() Obtain Unsupported network type. valid values: <br><li>BASIC: BASIC network</li><li>VPC1.0: private network VPC1.0</li>.
+ * @method void setUnsupportNetworks(array $UnsupportNetworks) Set Unsupported network type. valid values: <br><li>BASIC: BASIC network</li><li>VPC1.0: private network VPC1.0</li>.
+ * @method StorageBlock getStorageBlockAttr() Obtain Specifies the HDD local storage attributes.
+ * @method void setStorageBlockAttr(StorageBlock $StorageBlockAttr) Set Specifies the HDD local storage attributes.
  */
 class Externals extends AbstractModel
 {
     /**
-     * @var boolean Release address
-Note: This field may return null, indicating that no valid value is found.
+     * @var boolean Release Address
      */
     public $ReleaseAddress;
 
     /**
-     * @var array Not supported network. Value: <br><li>BASIC: classic network<br><li>VPC1.0: VPC1.0
-Note: This field may return null, indicating that no valid value was found.
+     * @var array Unsupported network type. valid values: <br><li>BASIC: BASIC network</li><li>VPC1.0: private network VPC1.0</li>.
      */
     public $UnsupportNetworks;
 
     /**
-     * @var StorageBlock Attributes of local HDD storage
-Note: This field may return null, indicating that no valid value is found.
+     * @var StorageBlock Specifies the HDD local storage attributes.
      */
     public $StorageBlockAttr;
 
     /**
-     * @param boolean $ReleaseAddress Release address
-Note: This field may return null, indicating that no valid value is found.
-     * @param array $UnsupportNetworks Not supported network. Value: <br><li>BASIC: classic network<br><li>VPC1.0: VPC1.0
-Note: This field may return null, indicating that no valid value was found.
-     * @param StorageBlock $StorageBlockAttr Attributes of local HDD storage
-Note: This field may return null, indicating that no valid value is found.
+     * @param boolean $ReleaseAddress Release Address
+     * @param array $UnsupportNetworks Unsupported network type. valid values: <br><li>BASIC: BASIC network</li><li>VPC1.0: private network VPC1.0</li>.
+     * @param StorageBlock $StorageBlockAttr Specifies the HDD local storage attributes.
      */
     function __construct()
     {

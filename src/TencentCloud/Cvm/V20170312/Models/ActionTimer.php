@@ -20,90 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Scheduled tasks.
  *
- * @method string getTimerAction() Obtain Timer action. Valid value: `TerminateInstances`.
-Note: This field may return `null`, indicating that no valid values can be obtained.
- * @method void setTimerAction(string $TimerAction) Set Timer action. Valid value: `TerminateInstances`.
-Note: This field may return `null`, indicating that no valid values can be obtained.
- * @method string getActionTime() Obtain Action time, which follows the ISO8601 standard and uses UTC time. It must be 5 minutes later than the current time. Format: YYYY-MM-DDThh:mm:ssZ. For example: 2018-05-29T11:26:40Z.
-Note: This field may return `null`, indicating that no valid values can be obtained.
- * @method void setActionTime(string $ActionTime) Set Action time, which follows the ISO8601 standard and uses UTC time. It must be 5 minutes later than the current time. Format: YYYY-MM-DDThh:mm:ssZ. For example: 2018-05-29T11:26:40Z.
-Note: This field may return `null`, indicating that no valid values can be obtained.
- * @method Externals getExternals() Obtain Extended data
-Note: This field may return `null`, indicating that no valid values can be obtained.
- * @method void setExternals(Externals $Externals) Set Extended data
-Note: This field may return `null`, indicating that no valid values can be obtained.
- * @method string getActionTimerId() Obtain Timer ID.
- * @method void setActionTimerId(string $ActionTimerId) Set Timer ID.
- * @method string getStatus() Obtain Timer status. Valid values:
-
-UNDO: Not triggered.
-DOING: Triggering.
-DONE: Triggered already.
-
- * @method void setStatus(string $Status) Set Timer status. Valid values:
-
-UNDO: Not triggered.
-DOING: Triggering.
-DONE: Triggered already.
-
- * @method string getInstanceId() Obtain Instance ID corresponding to a timer.
- * @method void setInstanceId(string $InstanceId) Set Instance ID corresponding to a timer.
+ * @method string getTimerAction() Obtain Timer action currently only supports terminating one value: TerminateInstances.
+ * @method void setTimerAction(string $TimerAction) Set Timer action currently only supports terminating one value: TerminateInstances.
+ * @method string getActionTime() Obtain Execution time, in standard ISO8601 representation and using UTC time. format: YYYY-MM-DDThh:MM:ssZ. for example, 2018-05-29T11:26:40Z. the execution time must be later than the current time by 5 minutes.
+ * @method void setActionTime(string $ActionTime) Set Execution time, in standard ISO8601 representation and using UTC time. format: YYYY-MM-DDThh:MM:ssZ. for example, 2018-05-29T11:26:40Z. the execution time must be later than the current time by 5 minutes.
+ * @method Externals getExternals() Obtain Extension data. only used as output usage.
+ * @method void setExternals(Externals $Externals) Set Extension data. only used as output usage.
+ * @method string getActionTimerId() Obtain Timer ID. only used as output usage.
+ * @method void setActionTimerId(string $ActionTimerId) Set Timer ID. only used as output usage.
+ * @method string getStatus() Obtain Timer status, for output usage only. value ranges from: <li>UNDO: unexecuted</li> <li>DOING: executing</li> <li>DONE: execution completed.</li>.
+ * @method void setStatus(string $Status) Set Timer status, for output usage only. value ranges from: <li>UNDO: unexecuted</li> <li>DOING: executing</li> <li>DONE: execution completed.</li>.
+ * @method string getInstanceId() Obtain Instance ID corresponding to a timer. used only for output.
+ * @method void setInstanceId(string $InstanceId) Set Instance ID corresponding to a timer. used only for output.
  */
 class ActionTimer extends AbstractModel
 {
     /**
-     * @var string Timer action. Valid value: `TerminateInstances`.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @var string Timer action currently only supports terminating one value: TerminateInstances.
      */
     public $TimerAction;
 
     /**
-     * @var string Action time, which follows the ISO8601 standard and uses UTC time. It must be 5 minutes later than the current time. Format: YYYY-MM-DDThh:mm:ssZ. For example: 2018-05-29T11:26:40Z.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @var string Execution time, in standard ISO8601 representation and using UTC time. format: YYYY-MM-DDThh:MM:ssZ. for example, 2018-05-29T11:26:40Z. the execution time must be later than the current time by 5 minutes.
      */
     public $ActionTime;
 
     /**
-     * @var Externals Extended data
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @var Externals Extension data. only used as output usage.
      */
     public $Externals;
 
     /**
-     * @var string Timer ID.
+     * @var string Timer ID. only used as output usage.
      */
     public $ActionTimerId;
 
     /**
-     * @var string Timer status. Valid values:
-
-UNDO: Not triggered.
-DOING: Triggering.
-DONE: Triggered already.
-
+     * @var string Timer status, for output usage only. value ranges from: <li>UNDO: unexecuted</li> <li>DOING: executing</li> <li>DONE: execution completed.</li>.
      */
     public $Status;
 
     /**
-     * @var string Instance ID corresponding to a timer.
+     * @var string Instance ID corresponding to a timer. used only for output.
      */
     public $InstanceId;
 
     /**
-     * @param string $TimerAction Timer action. Valid value: `TerminateInstances`.
-Note: This field may return `null`, indicating that no valid values can be obtained.
-     * @param string $ActionTime Action time, which follows the ISO8601 standard and uses UTC time. It must be 5 minutes later than the current time. Format: YYYY-MM-DDThh:mm:ssZ. For example: 2018-05-29T11:26:40Z.
-Note: This field may return `null`, indicating that no valid values can be obtained.
-     * @param Externals $Externals Extended data
-Note: This field may return `null`, indicating that no valid values can be obtained.
-     * @param string $ActionTimerId Timer ID.
-     * @param string $Status Timer status. Valid values:
-
-UNDO: Not triggered.
-DOING: Triggering.
-DONE: Triggered already.
-
-     * @param string $InstanceId Instance ID corresponding to a timer.
+     * @param string $TimerAction Timer action currently only supports terminating one value: TerminateInstances.
+     * @param string $ActionTime Execution time, in standard ISO8601 representation and using UTC time. format: YYYY-MM-DDThh:MM:ssZ. for example, 2018-05-29T11:26:40Z. the execution time must be later than the current time by 5 minutes.
+     * @param Externals $Externals Extension data. only used as output usage.
+     * @param string $ActionTimerId Timer ID. only used as output usage.
+     * @param string $Status Timer status, for output usage only. value ranges from: <li>UNDO: unexecuted</li> <li>DOING: executing</li> <li>DONE: execution completed.</li>.
+     * @param string $InstanceId Instance ID corresponding to a timer. used only for output.
      */
     function __construct()
     {

@@ -20,34 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Options related to bidding requests
  *
- * @method SpotMarketOptions getSpotOptions() Obtain Spot-related options
-Note: This field may return `null`, indicating that no valid values can be obtained.
- * @method void setSpotOptions(SpotMarketOptions $SpotOptions) Set Spot-related options
-Note: This field may return `null`, indicating that no valid values can be obtained.
- * @method string getMarketType() Obtain Market type. Valid value: `spot`.
-Note: This field may return `null`, indicating that no valid values can be obtained.
- * @method void setMarketType(string $MarketType) Set Market type. Valid value: `spot`.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method SpotMarketOptions getSpotOptions() Obtain Relevant options for spot instances.
+ * @method void setSpotOptions(SpotMarketOptions $SpotOptions) Set Relevant options for spot instances.
+ * @method string getMarketType() Obtain Market option type. The value can only be spot currently.
+ * @method void setMarketType(string $MarketType) Set Market option type. The value can only be spot currently.
  */
 class InstanceMarketOptionsRequest extends AbstractModel
 {
     /**
-     * @var SpotMarketOptions Spot-related options
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @var SpotMarketOptions Relevant options for spot instances.
      */
     public $SpotOptions;
 
     /**
-     * @var string Market type. Valid value: `spot`.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @var string Market option type. The value can only be spot currently.
      */
     public $MarketType;
 
     /**
-     * @param SpotMarketOptions $SpotOptions Spot-related options
-Note: This field may return `null`, indicating that no valid values can be obtained.
-     * @param string $MarketType Market type. Valid value: `spot`.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param SpotMarketOptions $SpotOptions Relevant options for spot instances.
+     * @param string $MarketType Market option type. The value can only be spot currently.
      */
     function __construct()
     {
