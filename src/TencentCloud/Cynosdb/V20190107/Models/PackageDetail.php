@@ -20,74 +20,74 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Resource pack details
  *
- * @method integer getAppId() Obtain Account ID of `AppId` Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setAppId(integer $AppId) Set Account ID of `AppId` Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getPackageId() Obtain The unique ID of a resource pack Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setPackageId(string $PackageId) Set The unique ID of a resource pack Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getInstanceId() Obtain Instance ID Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setInstanceId(string $InstanceId) Set Instance ID Note: This field may return null, indicating that no valid values can be obtained.
- * @method float getSuccessDeductSpec() Obtain The successfully deducted capacity Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setSuccessDeductSpec(float $SuccessDeductSpec) Set The successfully deducted capacity Note: This field may return null, indicating that no valid values can be obtained.
- * @method float getPackageTotalUsedSpec() Obtain Used capacity of a resource pack as of now Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setPackageTotalUsedSpec(float $PackageTotalUsedSpec) Set Used capacity of a resource pack as of now Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getStartTime() Obtain Deduction start time Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setStartTime(string $StartTime) Set Deduction start time Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getEndTime() Obtain Deduction end time Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setEndTime(string $EndTime) Set Deduction end time Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getExtendInfo() Obtain Extended information Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setExtendInfo(string $ExtendInfo) Set Extended information Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getAppId() Obtain AppId account ID.
+ * @method void setAppId(integer $AppId) Set AppId account ID.
+ * @method string getPackageId() Obtain The unique ID of the resource package.
+ * @method void setPackageId(string $PackageId) Set The unique ID of the resource package.
+ * @method string getInstanceId() Obtain Instance ID
+ * @method void setInstanceId(string $InstanceId) Set Instance ID
+ * @method float getSuccessDeductSpec() Obtain Successfully deduct capacity.
+ * @method void setSuccessDeductSpec(float $SuccessDeductSpec) Set Successfully deduct capacity.
+ * @method float getPackageTotalUsedSpec() Obtain The used capacity of the resource package up to the present.
+ * @method void setPackageTotalUsedSpec(float $PackageTotalUsedSpec) Set The used capacity of the resource package up to the present.
+ * @method string getStartTime() Obtain Deduction start time.
+ * @method void setStartTime(string $StartTime) Set Deduction start time.
+ * @method string getEndTime() Obtain Deduction end time.
+ * @method void setEndTime(string $EndTime) Set Deduction end time.
+ * @method string getExtendInfo() Obtain Extension Information
+ * @method void setExtendInfo(string $ExtendInfo) Set Extension Information
  */
 class PackageDetail extends AbstractModel
 {
     /**
-     * @var integer Account ID of `AppId` Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer AppId account ID.
      */
     public $AppId;
 
     /**
-     * @var string The unique ID of a resource pack Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string The unique ID of the resource package.
      */
     public $PackageId;
 
     /**
-     * @var string Instance ID Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Instance ID
      */
     public $InstanceId;
 
     /**
-     * @var float The successfully deducted capacity Note: This field may return null, indicating that no valid values can be obtained.
+     * @var float Successfully deduct capacity.
      */
     public $SuccessDeductSpec;
 
     /**
-     * @var float Used capacity of a resource pack as of now Note: This field may return null, indicating that no valid values can be obtained.
+     * @var float The used capacity of the resource package up to the present.
      */
     public $PackageTotalUsedSpec;
 
     /**
-     * @var string Deduction start time Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Deduction start time.
      */
     public $StartTime;
 
     /**
-     * @var string Deduction end time Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Deduction end time.
      */
     public $EndTime;
 
     /**
-     * @var string Extended information Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Extension Information
      */
     public $ExtendInfo;
 
     /**
-     * @param integer $AppId Account ID of `AppId` Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $PackageId The unique ID of a resource pack Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $InstanceId Instance ID Note: This field may return null, indicating that no valid values can be obtained.
-     * @param float $SuccessDeductSpec The successfully deducted capacity Note: This field may return null, indicating that no valid values can be obtained.
-     * @param float $PackageTotalUsedSpec Used capacity of a resource pack as of now Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $StartTime Deduction start time Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $EndTime Deduction end time Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $ExtendInfo Extended information Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $AppId AppId account ID.
+     * @param string $PackageId The unique ID of the resource package.
+     * @param string $InstanceId Instance ID
+     * @param float $SuccessDeductSpec Successfully deduct capacity.
+     * @param float $PackageTotalUsedSpec The used capacity of the resource package up to the present.
+     * @param string $StartTime Deduction start time.
+     * @param string $EndTime Deduction end time.
+     * @param string $ExtendInfo Extension Information
      */
     function __construct()
     {

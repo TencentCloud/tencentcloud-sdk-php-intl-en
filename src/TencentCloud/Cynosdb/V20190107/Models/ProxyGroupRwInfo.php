@@ -32,10 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAutoAddRo(string $AutoAddRo) Set Whether to automatically add read-only instance. Valid value: `yes`, `no`.
  * @method array getInstanceWeights() Obtain Instance weight array
  * @method void setInstanceWeights(array $InstanceWeights) Set Instance weight array
- * @method string getOpenRw() Obtain Whether to enable read-write node. Valid values: `yes`, `no`.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setOpenRw(string $OpenRw) Set Whether to enable read-write node. Valid values: `yes`, `no`.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getOpenRw() Obtain Whether to enable read-write nodes. valid values: yes, no.
+ * @method void setOpenRw(string $OpenRw) Set Whether to enable read-write nodes. valid values: yes, no.
  * @method string getRwType() Obtain Read/write attribute. Valid values: `READWRITE`, `READONLY`.
  * @method void setRwType(string $RwType) Set Read/write attribute. Valid values: `READWRITE`, `READONLY`.
  * @method boolean getTransSplit() Obtain Transaction split
@@ -76,8 +74,7 @@ class ProxyGroupRwInfo extends AbstractModel
     public $InstanceWeights;
 
     /**
-     * @var string Whether to enable read-write node. Valid values: `yes`, `no`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Whether to enable read-write nodes. valid values: yes, no.
      */
     public $OpenRw;
 
@@ -103,8 +100,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $FailOver Whether to enable failover
      * @param string $AutoAddRo Whether to automatically add read-only instance. Valid value: `yes`, `no`.
      * @param array $InstanceWeights Instance weight array
-     * @param string $OpenRw Whether to enable read-write node. Valid values: `yes`, `no`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $OpenRw Whether to enable read-write nodes. valid values: yes, no.
      * @param string $RwType Read/write attribute. Valid values: `READWRITE`, `READONLY`.
      * @param boolean $TransSplit Transaction split
      * @param string $AccessMode Connection mode. Valid values: `balance`, `nearby`.

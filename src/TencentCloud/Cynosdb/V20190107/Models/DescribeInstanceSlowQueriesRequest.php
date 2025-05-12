@@ -40,6 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOrderBy(string $OrderBy) Set Sorting field. Valid values: QueryTime, LockTime, RowsExamined, RowsSent.
  * @method string getOrderByType() Obtain Sorting order. Valid values: asc, desc.
  * @method void setOrderByType(string $OrderByType) Set Sorting order. Valid values: asc, desc.
+ * @method string getSqlText() Obtain sql statement.
+ * @method void setSqlText(string $SqlText) Set sql statement.
  */
 class DescribeInstanceSlowQueriesRequest extends AbstractModel
 {
@@ -94,6 +96,11 @@ class DescribeInstanceSlowQueriesRequest extends AbstractModel
     public $OrderByType;
 
     /**
+     * @var string sql statement.
+     */
+    public $SqlText;
+
+    /**
      * @param string $InstanceId Instance ID
      * @param string $StartTime Transaction start time
      * @param string $EndTime Transaction end time
@@ -104,6 +111,7 @@ class DescribeInstanceSlowQueriesRequest extends AbstractModel
      * @param string $Database Database name
      * @param string $OrderBy Sorting field. Valid values: QueryTime, LockTime, RowsExamined, RowsSent.
      * @param string $OrderByType Sorting order. Valid values: asc, desc.
+     * @param string $SqlText sql statement.
      */
     function __construct()
     {
@@ -156,6 +164,10 @@ class DescribeInstanceSlowQueriesRequest extends AbstractModel
 
         if (array_key_exists("OrderByType",$param) and $param["OrderByType"] !== null) {
             $this->OrderByType = $param["OrderByType"];
+        }
+
+        if (array_key_exists("SqlText",$param) and $param["SqlText"] !== null) {
+            $this->SqlText = $param["SqlText"];
         }
     }
 }

@@ -20,138 +20,98 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Instance network information
  *
- * @method string getInstanceGroupType() Obtain Network type
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setInstanceGroupType(string $InstanceGroupType) Set Network type
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getInstanceGroupType() Obtain Network type.
+ * @method void setInstanceGroupType(string $InstanceGroupType) Set Network type.
  * @method string getInstanceGroupId() Obtain Instance group ID
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setInstanceGroupId(string $InstanceGroupId) Set Instance group ID
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getVpcId() Obtain VPC ID
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setVpcId(string $VpcId) Set VPC ID
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getSubnetId() Obtain Subnet ID
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setSubnetId(string $SubnetId) Set Subnet ID
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getNetType() Obtain Network type
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setNetType(integer $NetType) Set Network type
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getVip() Obtain VPC IP
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setVip(string $Vip) Set VPC IP
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getVport() Obtain VPC port
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setVport(integer $Vport) Set VPC port
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getWanDomain() Obtain Public network domain name
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setWanDomain(string $WanDomain) Set Public network domain name
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getWanIP() Obtain 
- * @method void setWanIP(string $WanIP) Set 
- * @method integer getWanPort() Obtain Public network port
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setWanPort(integer $WanPort) Set Public network port
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getWanStatus() Obtain Public network status
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setWanStatus(string $WanStatus) Set Public network status
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getVpcId() Obtain Specifies the virtual private cloud ID.
+ * @method void setVpcId(string $VpcId) Set Specifies the virtual private cloud ID.
+ * @method string getSubnetId() Obtain Specifies the subnet ID.
+ * @method void setSubnetId(string $SubnetId) Set Specifies the subnet ID.
+ * @method integer getNetType() Obtain Network type. valid values: 0 (basic network), 1 (vpc network), 2 (blackstone network).
+ * @method void setNetType(integer $NetType) Set Network type. valid values: 0 (basic network), 1 (vpc network), 2 (blackstone network).
+ * @method string getVip() Obtain VPC IP.
+ * @method void setVip(string $Vip) Set VPC IP.
+ * @method integer getVport() Obtain VPC port.
+ * @method void setVport(integer $Vport) Set VPC port.
+ * @method string getWanDomain() Obtain Specifies the public network domain name.
+ * @method void setWanDomain(string $WanDomain) Set Specifies the public network domain name.
+ * @method string getWanIP() Obtain Public IP address
+ * @method void setWanIP(string $WanIP) Set Public IP address
+ * @method integer getWanPort() Obtain Public network port.
+ * @method void setWanPort(integer $WanPort) Set Public network port.
+ * @method string getWanStatus() Obtain Public network enabled status.
+ * @method void setWanStatus(string $WanStatus) Set Public network enabled status.
  */
 class InstanceNetInfo extends AbstractModel
 {
     /**
-     * @var string Network type
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Network type.
      */
     public $InstanceGroupType;
 
     /**
      * @var string Instance group ID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $InstanceGroupId;
 
     /**
-     * @var string VPC ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Specifies the virtual private cloud ID.
      */
     public $VpcId;
 
     /**
-     * @var string Subnet ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Specifies the subnet ID.
      */
     public $SubnetId;
 
     /**
-     * @var integer Network type
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Network type. valid values: 0 (basic network), 1 (vpc network), 2 (blackstone network).
      */
     public $NetType;
 
     /**
-     * @var string VPC IP
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string VPC IP.
      */
     public $Vip;
 
     /**
-     * @var integer VPC port
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer VPC port.
      */
     public $Vport;
 
     /**
-     * @var string Public network domain name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Specifies the public network domain name.
      */
     public $WanDomain;
 
     /**
-     * @var string 
+     * @var string Public IP address
      */
     public $WanIP;
 
     /**
-     * @var integer Public network port
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Public network port.
      */
     public $WanPort;
 
     /**
-     * @var string Public network status
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Public network enabled status.
      */
     public $WanStatus;
 
     /**
-     * @param string $InstanceGroupType Network type
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $InstanceGroupType Network type.
      * @param string $InstanceGroupId Instance group ID
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $VpcId VPC ID
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $SubnetId Subnet ID
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $NetType Network type
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Vip VPC IP
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $Vport VPC port
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $WanDomain Public network domain name
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $WanIP 
-     * @param integer $WanPort Public network port
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $WanStatus Public network status
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $VpcId Specifies the virtual private cloud ID.
+     * @param string $SubnetId Specifies the subnet ID.
+     * @param integer $NetType Network type. valid values: 0 (basic network), 1 (vpc network), 2 (blackstone network).
+     * @param string $Vip VPC IP.
+     * @param integer $Vport VPC port.
+     * @param string $WanDomain Specifies the public network domain name.
+     * @param string $WanIP Public IP address
+     * @param integer $WanPort Public network port.
+     * @param string $WanStatus Public network enabled status.
      */
     function __construct()
     {

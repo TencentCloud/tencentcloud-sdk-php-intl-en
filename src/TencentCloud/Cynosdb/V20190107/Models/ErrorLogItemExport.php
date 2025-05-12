@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * The export format for an error log
  *
- * @method string getTimestamp() Obtain Time Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setTimestamp(string $Timestamp) Set Time Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getLevel() Obtain Log level. Valid values: `error`, `warning`, `note`. Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setLevel(string $Level) Set Log level. Valid values: `error`, `warning`, `note`. Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getContent() Obtain Log content Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setContent(string $Content) Set Log content Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getTimestamp() Obtain Time
+ * @method void setTimestamp(string $Timestamp) Set Time
+ * @method string getLevel() Obtain Specifies the log level. valid values are note, warning, and error.
+ * @method void setLevel(string $Level) Set Specifies the log level. valid values are note, warning, and error.
+ * @method string getContent() Obtain Log content.
+ * @method void setContent(string $Content) Set Log content.
  */
 class ErrorLogItemExport extends AbstractModel
 {
     /**
-     * @var string Time Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Time
      */
     public $Timestamp;
 
     /**
-     * @var string Log level. Valid values: `error`, `warning`, `note`. Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Specifies the log level. valid values are note, warning, and error.
      */
     public $Level;
 
     /**
-     * @var string Log content Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Log content.
      */
     public $Content;
 
     /**
-     * @param string $Timestamp Time Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Level Log level. Valid values: `error`, `warning`, `note`. Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Content Log content Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $Timestamp Time
+     * @param string $Level Specifies the log level. valid values are note, warning, and error.
+     * @param string $Content Log content.
      */
     function __construct()
     {

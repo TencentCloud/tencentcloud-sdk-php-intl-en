@@ -44,6 +44,7 @@ class ModifyVipVportRequest extends AbstractModel
 
     /**
      * @var string Instance group ID
+     * @deprecated
      */
     public $InstanceGrpId;
 

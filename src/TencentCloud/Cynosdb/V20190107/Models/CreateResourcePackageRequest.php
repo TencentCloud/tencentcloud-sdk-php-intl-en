@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateResourcePackage request structure.
  *
- * @method string getInstanceType() Obtain Instance type
- * @method void setInstanceType(string $InstanceType) Set Instance type
- * @method string getPackageRegion() Obtain Region of the resource pack. Valid values: `China` (Chinese mainland), `overseas` (outside Chinese mainland).
- * @method void setPackageRegion(string $PackageRegion) Set Region of the resource pack. Valid values: `China` (Chinese mainland), `overseas` (outside Chinese mainland).
+ * @method string getInstanceType() Obtain Instance type. currently fixed to cynosdb-serverless.
+ * @method void setInstanceType(string $InstanceType) Set Instance type. currently fixed to cynosdb-serverless.
+ * @method string getPackageRegion() Obtain Resource package region of use: chineseMainland - common in the chinese mainland. overseas - universally applicable in hong kong (china), macao (china), taiwan (china), and overseas.
+ * @method void setPackageRegion(string $PackageRegion) Set Resource package region of use: chineseMainland - common in the chinese mainland. overseas - universally applicable in hong kong (china), macao (china), taiwan (china), and overseas.
  * @method string getPackageType() Obtain Resource pack type. Valid values: `CCU` (compute resource pack), `DISK` (storage resource pack).
  * @method void setPackageType(string $PackageType) Set Resource pack type. Valid values: `CCU` (compute resource pack), `DISK` (storage resource pack).
  * @method string getPackageVersion() Obtain Resource pack edition. Valid values: `base` (basic edition), `common` (general edition), `enterprise` (enterprise edition).
@@ -40,12 +40,12 @@ use TencentCloud\Common\AbstractModel;
 class CreateResourcePackageRequest extends AbstractModel
 {
     /**
-     * @var string Instance type
+     * @var string Instance type. currently fixed to cynosdb-serverless.
      */
     public $InstanceType;
 
     /**
-     * @var string Region of the resource pack. Valid values: `China` (Chinese mainland), `overseas` (outside Chinese mainland).
+     * @var string Resource package region of use: chineseMainland - common in the chinese mainland. overseas - universally applicable in hong kong (china), macao (china), taiwan (china), and overseas.
      */
     public $PackageRegion;
 
@@ -80,8 +80,8 @@ class CreateResourcePackageRequest extends AbstractModel
     public $PackageName;
 
     /**
-     * @param string $InstanceType Instance type
-     * @param string $PackageRegion Region of the resource pack. Valid values: `China` (Chinese mainland), `overseas` (outside Chinese mainland).
+     * @param string $InstanceType Instance type. currently fixed to cynosdb-serverless.
+     * @param string $PackageRegion Resource package region of use: chineseMainland - common in the chinese mainland. overseas - universally applicable in hong kong (china), macao (china), taiwan (china), and overseas.
      * @param string $PackageType Resource pack type. Valid values: `CCU` (compute resource pack), `DISK` (storage resource pack).
      * @param string $PackageVersion Resource pack edition. Valid values: `base` (basic edition), `common` (general edition), `enterprise` (enterprise edition).
      * @param float $PackageSpec Resource pack size. Unit of the compute resource pack: Ten thousand.  Unit of the storage resource pack:  GB

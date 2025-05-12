@@ -24,18 +24,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCurrentValue(string $CurrentValue) Set Current value
  * @method string getDefault() Obtain Default value
  * @method void setDefault(string $Default) Set Default value
- * @method array getEnumValue() Obtain The collection of valid value types when parameter type is `enum`.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setEnumValue(array $EnumValue) Set The collection of valid value types when parameter type is `enum`.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getMax() Obtain Maximum value when parameter type is `float` or `integer`.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setMax(string $Max) Set Maximum value when parameter type is `float` or `integer`.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getMin() Obtain Minimum value when parameter type is `float` or `integer`.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setMin(string $Min) Set Minimum value when parameter type is `float` or `integer`.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method array getEnumValue() Obtain The collection of optional value types when the parameter type is `enum`.
+ * @method void setEnumValue(array $EnumValue) Set The collection of optional value types when the parameter type is `enum`.
+ * @method string getMax() Obtain The maximum value when the parameter type is float/integer.
+ * @method void setMax(string $Max) Set The maximum value when the parameter type is float/integer.
+ * @method string getMin() Obtain Minimum value when the parameter type is float/integer.
+ * @method void setMin(string $Min) Set Minimum value when the parameter type is float/integer.
  * @method string getParamName() Obtain Parameter name
  * @method void setParamName(string $ParamName) Set Parameter name
  * @method integer getNeedReboot() Obtain Whether to restart the instance for the parameter to take effect
@@ -58,20 +52,17 @@ class TemplateParamInfo extends AbstractModel
     public $Default;
 
     /**
-     * @var array The collection of valid value types when parameter type is `enum`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array The collection of optional value types when the parameter type is `enum`.
      */
     public $EnumValue;
 
     /**
-     * @var string Maximum value when parameter type is `float` or `integer`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string The maximum value when the parameter type is float/integer.
      */
     public $Max;
 
     /**
-     * @var string Minimum value when parameter type is `float` or `integer`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Minimum value when the parameter type is float/integer.
      */
     public $Min;
 
@@ -98,12 +89,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     /**
      * @param string $CurrentValue Current value
      * @param string $Default Default value
-     * @param array $EnumValue The collection of valid value types when parameter type is `enum`.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Max Maximum value when parameter type is `float` or `integer`.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Min Minimum value when parameter type is `float` or `integer`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param array $EnumValue The collection of optional value types when the parameter type is `enum`.
+     * @param string $Max The maximum value when the parameter type is float/integer.
+     * @param string $Min Minimum value when the parameter type is float/integer.
      * @param string $ParamName Parameter name
      * @param integer $NeedReboot Whether to restart the instance for the parameter to take effect
      * @param string $Description Parameter description

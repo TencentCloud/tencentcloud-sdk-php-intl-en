@@ -44,6 +44,8 @@ Number of CPU cores of normal instance
 Memory of a non-serverless instance in GB
  * @method void setMemory(integer $Memory) Set It is required when `DbMode` is set to `NORMAL` or left empty.
 Memory of a non-serverless instance in GB
+ * @method integer getInstanceCount() Obtain Instance count. valid values: a quantity range from 0 to 16. the default value is 2 (that is, one rw instance + one ro instance). the transmitted n represents 1 rw instance + (n - 1) ro instances (with identical specifications). if a more precise cluster composition collocation is required, please use InstanceInitInfos.
+ * @method void setInstanceCount(integer $InstanceCount) Set Instance count. valid values: a quantity range from 0 to 16. the default value is 2 (that is, one rw instance + one ro instance). the transmitted n represents 1 rw instance + (n - 1) ro instances (with identical specifications). if a more precise cluster composition collocation is required, please use InstanceInitInfos.
  * @method integer getStorage() Obtain This parameter has been deprecated.
 Storage capacity in GB
  * @method void setStorage(integer $Storage) Set This parameter has been deprecated.
@@ -80,14 +82,14 @@ Specified allowed time range for time point rollback
 If `DbType` is `MYSQL` and the storage billing mode is monthly subscription, the parameter value can’t exceed the maximum storage corresponding to the CPU and memory specifications.
  * @method void setStorageLimit(integer $StorageLimit) Set Storage upper limit of normal instance in GB
 If `DbType` is `MYSQL` and the storage billing mode is monthly subscription, the parameter value can’t exceed the maximum storage corresponding to the CPU and memory specifications.
- * @method integer getInstanceCount() Obtain Number of Instances. Valid range: (0,16]
- * @method void setInstanceCount(integer $InstanceCount) Set Number of Instances. Valid range: (0,16]
  * @method integer getTimeSpan() Obtain Purchase duration of monthly subscription plan
  * @method void setTimeSpan(integer $TimeSpan) Set Purchase duration of monthly subscription plan
  * @method string getTimeUnit() Obtain Duration unit of monthly subscription. Valid values: `s`, `d`, `m`, `y`
  * @method void setTimeUnit(string $TimeUnit) Set Duration unit of monthly subscription. Valid values: `s`, `d`, `m`, `y`
- * @method integer getAutoRenewFlag() Obtain Whether auto-renewal is enabled for monthly subscription plan. Default value: `0`
- * @method void setAutoRenewFlag(integer $AutoRenewFlag) Set Whether auto-renewal is enabled for monthly subscription plan. Default value: `0`
+ * @method integer getAutoRenewFlag() Obtain Specifies whether the annual/monthly subscription is auto-renewed. the default value is 0.
+0 indicates the default renewal method. 1 means auto-renewal. 2 means no auto-renewal.
+ * @method void setAutoRenewFlag(integer $AutoRenewFlag) Set Specifies whether the annual/monthly subscription is auto-renewed. the default value is 0.
+0 indicates the default renewal method. 1 means auto-renewal. 2 means no auto-renewal.
  * @method integer getAutoVoucher() Obtain Whether to automatically select a voucher. `1`: yes; `0`: no. Default value: `0`
  * @method void setAutoVoucher(integer $AutoVoucher) Set Whether to automatically select a voucher. `1`: yes; `0`: no. Default value: `0`
  * @method integer getHaCount() Obtain Number of instances (this parameter has been disused and is retained only for compatibility with existing instances)
@@ -192,6 +194,11 @@ Memory of a non-serverless instance in GB
     public $Memory;
 
     /**
+     * @var integer Instance count. valid values: a quantity range from 0 to 16. the default value is 2 (that is, one rw instance + one ro instance). the transmitted n represents 1 rw instance + (n - 1) ro instances (with identical specifications). if a more precise cluster composition collocation is required, please use InstanceInitInfos.
+     */
+    public $InstanceCount;
+
+    /**
      * @var integer This parameter has been deprecated.
 Storage capacity in GB
      */
@@ -258,11 +265,6 @@ If `DbType` is `MYSQL` and the storage billing mode is monthly subscription, the
     public $StorageLimit;
 
     /**
-     * @var integer Number of Instances. Valid range: (0,16]
-     */
-    public $InstanceCount;
-
-    /**
      * @var integer Purchase duration of monthly subscription plan
      */
     public $TimeSpan;
@@ -273,7 +275,8 @@ If `DbType` is `MYSQL` and the storage billing mode is monthly subscription, the
     public $TimeUnit;
 
     /**
-     * @var integer Whether auto-renewal is enabled for monthly subscription plan. Default value: `0`
+     * @var integer Specifies whether the annual/monthly subscription is auto-renewed. the default value is 0.
+0 indicates the default renewal method. 1 means auto-renewal. 2 means no auto-renewal.
      */
     public $AutoRenewFlag;
 
@@ -386,6 +389,7 @@ Clusters with storage billed in monthly subscription can’t be cloned or rolled
 Number of CPU cores of normal instance
      * @param integer $Memory It is required when `DbMode` is set to `NORMAL` or left empty.
 Memory of a non-serverless instance in GB
+     * @param integer $InstanceCount Instance count. valid values: a quantity range from 0 to 16. the default value is 2 (that is, one rw instance + one ro instance). the transmitted n represents 1 rw instance + (n - 1) ro instances (with identical specifications). if a more precise cluster composition collocation is required, please use InstanceInitInfos.
      * @param integer $Storage This parameter has been deprecated.
 Storage capacity in GB
      * @param string $ClusterName Cluster name, which can contain less than 64 letters, digits, or symbols (-_.).
@@ -404,10 +408,10 @@ timeRollback: rollback by time point
 Specified allowed time range for time point rollback
      * @param integer $StorageLimit Storage upper limit of normal instance in GB
 If `DbType` is `MYSQL` and the storage billing mode is monthly subscription, the parameter value can’t exceed the maximum storage corresponding to the CPU and memory specifications.
-     * @param integer $InstanceCount Number of Instances. Valid range: (0,16]
      * @param integer $TimeSpan Purchase duration of monthly subscription plan
      * @param string $TimeUnit Duration unit of monthly subscription. Valid values: `s`, `d`, `m`, `y`
-     * @param integer $AutoRenewFlag Whether auto-renewal is enabled for monthly subscription plan. Default value: `0`
+     * @param integer $AutoRenewFlag Specifies whether the annual/monthly subscription is auto-renewed. the default value is 0.
+0 indicates the default renewal method. 1 means auto-renewal. 2 means no auto-renewal.
      * @param integer $AutoVoucher Whether to automatically select a voucher. `1`: yes; `0`: no. Default value: `0`
      * @param integer $HaCount Number of instances (this parameter has been disused and is retained only for compatibility with existing instances)
      * @param string $OrderSource Order source
@@ -482,6 +486,10 @@ Clusters with storage billed in monthly subscription can’t be cloned or rolled
             $this->Memory = $param["Memory"];
         }
 
+        if (array_key_exists("InstanceCount",$param) and $param["InstanceCount"] !== null) {
+            $this->InstanceCount = $param["InstanceCount"];
+        }
+
         if (array_key_exists("Storage",$param) and $param["Storage"] !== null) {
             $this->Storage = $param["Storage"];
         }
@@ -528,10 +536,6 @@ Clusters with storage billed in monthly subscription can’t be cloned or rolled
 
         if (array_key_exists("StorageLimit",$param) and $param["StorageLimit"] !== null) {
             $this->StorageLimit = $param["StorageLimit"];
-        }
-
-        if (array_key_exists("InstanceCount",$param) and $param["InstanceCount"] !== null) {
-            $this->InstanceCount = $param["InstanceCount"];
         }
 
         if (array_key_exists("TimeSpan",$param) and $param["TimeSpan"] !== null) {

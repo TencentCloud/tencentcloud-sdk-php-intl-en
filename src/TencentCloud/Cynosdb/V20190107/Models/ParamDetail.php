@@ -38,20 +38,22 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMax(string $Max) Set Maximum value of the parameter
  * @method string getMin() Obtain Minimum value of the parameter
  * @method void setMin(string $Min) Set Minimum value of the parameter
- * @method array getEnumValue() Obtain Enumerated values of the parameter.  It is null if the parameter is non-enumerated. Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setEnumValue(array $EnumValue) Set Enumerated values of the parameter.  It is null if the parameter is non-enumerated. Note: This field may return null, indicating that no valid values can be obtained.
+ * @method array getEnumValue() Obtain Optional enumerated values of the parameter. if it is a non-enumerated value, it is empty.
+ * @method void setEnumValue(array $EnumValue) Set Optional enumerated values of the parameter. if it is a non-enumerated value, it is empty.
  * @method integer getIsGlobal() Obtain Valid values: `1` (global parameter),  `0`  (non-global parameter).
  * @method void setIsGlobal(integer $IsGlobal) Set Valid values: `1` (global parameter),  `0`  (non-global parameter).
  * @method string getMatchType() Obtain The match type. Valid value: `multiVal`.
  * @method void setMatchType(string $MatchType) Set The match type. Valid value: `multiVal`.
  * @method string getMatchValue() Obtain Match values, which will be separated by comma when `MatchType` is `multiVal`.
  * @method void setMatchValue(string $MatchValue) Set Match values, which will be separated by comma when `MatchType` is `multiVal`.
- * @method boolean getIsFunc() Obtain Whether it is a `func` type. Valid values: `true` (yes), `false` (no). Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setIsFunc(boolean $IsFunc) Set Whether it is a `func` type. Valid values: `true` (yes), `false` (no). Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getFunc() Obtain Formula content returned when `ParamType` is `func`. Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setFunc(string $Func) Set Formula content returned when `ParamType` is `func`. Note: This field may return null, indicating that no valid values can be obtained.
- * @method ModifiableInfo getModifiableInfo() Obtain Whether the parameter can be modified Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setModifiableInfo(ModifiableInfo $ModifiableInfo) Set Whether the parameter can be modified Note: This field may return null, indicating that no valid values can be obtained.
+ * @method boolean getIsFunc() Obtain true - indicates a formula. false - indicates it is not a formula.
+ * @method void setIsFunc(boolean $IsFunc) Set true - indicates a formula. false - indicates it is not a formula.
+ * @method string getFunc() Obtain Specifies that when the parameter is set as a formula, Func returns the set formula content.
+ * @method void setFunc(string $Func) Set Specifies that when the parameter is set as a formula, Func returns the set formula content.
+ * @method ModifiableInfo getModifiableInfo() Obtain Whether the parameter is modifiable.
+ * @method void setModifiableInfo(ModifiableInfo $ModifiableInfo) Set Whether the parameter is modifiable.
+ * @method string getFuncPattern() Obtain The default formula style of parameters that support formulas.
+ * @method void setFuncPattern(string $FuncPattern) Set The default formula style of parameters that support formulas.
  */
 class ParamDetail extends AbstractModel
 {
@@ -101,7 +103,7 @@ class ParamDetail extends AbstractModel
     public $Min;
 
     /**
-     * @var array Enumerated values of the parameter.  It is null if the parameter is non-enumerated. Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array Optional enumerated values of the parameter. if it is a non-enumerated value, it is empty.
      */
     public $EnumValue;
 
@@ -121,19 +123,24 @@ class ParamDetail extends AbstractModel
     public $MatchValue;
 
     /**
-     * @var boolean Whether it is a `func` type. Valid values: `true` (yes), `false` (no). Note: This field may return null, indicating that no valid values can be obtained.
+     * @var boolean true - indicates a formula. false - indicates it is not a formula.
      */
     public $IsFunc;
 
     /**
-     * @var string Formula content returned when `ParamType` is `func`. Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Specifies that when the parameter is set as a formula, Func returns the set formula content.
      */
     public $Func;
 
     /**
-     * @var ModifiableInfo Whether the parameter can be modified Note: This field may return null, indicating that no valid values can be obtained.
+     * @var ModifiableInfo Whether the parameter is modifiable.
      */
     public $ModifiableInfo;
+
+    /**
+     * @var string The default formula style of parameters that support formulas.
+     */
+    public $FuncPattern;
 
     /**
      * @param string $ParamName Parameter name
@@ -145,13 +152,14 @@ class ParamDetail extends AbstractModel
      * @param integer $NeedReboot Whether to restart the database for the modified parameters to take effect. Valid values:  `0` (no), `1` (yes).
      * @param string $Max Maximum value of the parameter
      * @param string $Min Minimum value of the parameter
-     * @param array $EnumValue Enumerated values of the parameter.  It is null if the parameter is non-enumerated. Note: This field may return null, indicating that no valid values can be obtained.
+     * @param array $EnumValue Optional enumerated values of the parameter. if it is a non-enumerated value, it is empty.
      * @param integer $IsGlobal Valid values: `1` (global parameter),  `0`  (non-global parameter).
      * @param string $MatchType The match type. Valid value: `multiVal`.
      * @param string $MatchValue Match values, which will be separated by comma when `MatchType` is `multiVal`.
-     * @param boolean $IsFunc Whether it is a `func` type. Valid values: `true` (yes), `false` (no). Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Func Formula content returned when `ParamType` is `func`. Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ModifiableInfo $ModifiableInfo Whether the parameter can be modified Note: This field may return null, indicating that no valid values can be obtained.
+     * @param boolean $IsFunc true - indicates a formula. false - indicates it is not a formula.
+     * @param string $Func Specifies that when the parameter is set as a formula, Func returns the set formula content.
+     * @param ModifiableInfo $ModifiableInfo Whether the parameter is modifiable.
+     * @param string $FuncPattern The default formula style of parameters that support formulas.
      */
     function __construct()
     {
@@ -229,6 +237,10 @@ class ParamDetail extends AbstractModel
         if (array_key_exists("ModifiableInfo",$param) and $param["ModifiableInfo"] !== null) {
             $this->ModifiableInfo = new ModifiableInfo();
             $this->ModifiableInfo->deserialize($param["ModifiableInfo"]);
+        }
+
+        if (array_key_exists("FuncPattern",$param) and $param["FuncPattern"] !== null) {
+            $this->FuncPattern = $param["FuncPattern"];
         }
     }
 }

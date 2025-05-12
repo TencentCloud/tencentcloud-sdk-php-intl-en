@@ -28,10 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRegion(string $Region) Set Region
  * @method string getZone() Obtain AZ
  * @method void setZone(string $Zone) Set AZ
- * @method string getPhysicalZone() Obtain Physical AZ
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setPhysicalZone(string $PhysicalZone) Set Physical AZ
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getPhysicalZone() Obtain Physical availability zone.
+ * @method void setPhysicalZone(string $PhysicalZone) Set Physical availability zone.
  * @method string getStatus() Obtain Status
  * @method void setStatus(string $Status) Set Status
  * @method string getStatusDesc() Obtain Status description
@@ -46,26 +44,16 @@ resume
 resuming
 pause
 pausing
- * @method string getStorageId() Obtain Storage ID
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setStorageId(string $StorageId) Set Storage ID
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getStorage() Obtain Storage capacity in GB
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setStorage(integer $Storage) Set Storage capacity in GB
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getMaxStorageSize() Obtain Maximum storage specification in GB
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setMaxStorageSize(integer $MaxStorageSize) Set Maximum storage specification in GB
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getMinStorageSize() Obtain Minimum storage specification in GB
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setMinStorageSize(integer $MinStorageSize) Set Minimum storage specification in GB
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getStoragePayMode() Obtain Storage billing mode. Valid values: `1` (monthly subscription), `0` (pay-as-you-go).
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setStoragePayMode(integer $StoragePayMode) Set Storage billing mode. Valid values: `1` (monthly subscription), `0` (pay-as-you-go).
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getStorageId() Obtain Storage Id.
+ * @method void setStorageId(string $StorageId) Set Storage Id.
+ * @method integer getStorage() Obtain Storage size in gb.
+ * @method void setStorage(integer $Storage) Set Storage size in gb.
+ * @method integer getMaxStorageSize() Obtain Maximum storage specification, in gb.
+ * @method void setMaxStorageSize(integer $MaxStorageSize) Set Maximum storage specification, in gb.
+ * @method integer getMinStorageSize() Obtain Specifies the minimum storage specification, in gb.
+ * @method void setMinStorageSize(integer $MinStorageSize) Set Specifies the minimum storage specification, in gb.
+ * @method integer getStoragePayMode() Obtain Storage billing type. 1 indicates monthly subscription, and 0 indicates pay-as-you-go.
+ * @method void setStoragePayMode(integer $StoragePayMode) Set Storage billing type. 1 indicates monthly subscription, and 0 indicates pay-as-you-go.
  * @method string getVpcName() Obtain VPC name
  * @method void setVpcName(string $VpcName) Set VPC name
  * @method string getVpcId() Obtain Unique VPC ID
@@ -80,16 +68,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
  * @method void setCreateTime(string $CreateTime) Set Creation time
  * @method string getDbType() Obtain Database type
  * @method void setDbType(string $DbType) Set Database type
- * @method string getDbMode() Obtain Database type. Valid values: `normal`, `serverless`.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setDbMode(string $DbMode) Set Database type. Valid values: `normal`, `serverless`.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getDbMode() Obtain Db type: <li>NORMAL</li> <li>SERVERLESS</li>.
+ * @method void setDbMode(string $DbMode) Set Db type: <li>NORMAL</li> <li>SERVERLESS</li>.
  * @method string getDbVersion() Obtain Database version
  * @method void setDbVersion(string $DbVersion) Set Database version
- * @method integer getStorageLimit() Obtain Maximum storage space
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setStorageLimit(integer $StorageLimit) Set Maximum storage space
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getStorageLimit() Obtain Specifies the maximum storage space.
+ * @method void setStorageLimit(integer $StorageLimit) Set Specifies the maximum storage space.
  * @method integer getUsedStorage() Obtain Used capacity
  * @method void setUsedStorage(integer $UsedStorage) Set Used capacity
  * @method string getVip() Obtain VIP
@@ -98,38 +82,22 @@ Note: This field may return null, indicating that no valid values can be obtaine
  * @method void setVport(integer $Vport) Set vport
  * @method array getRoAddr() Obtain VIP and vport of the read-only instance in a cluster
  * @method void setRoAddr(array $RoAddr) Set VIP and vport of the read-only instance in a cluster
- * @method Ability getAbility() Obtain Features supported by the cluster
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setAbility(Ability $Ability) Set Features supported by the cluster
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getCynosVersion() Obtain TDSQL-C version
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setCynosVersion(string $CynosVersion) Set TDSQL-C version
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getBusinessType() Obtain Business type
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setBusinessType(string $BusinessType) Set Business type
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getHasSlaveZone() Obtain Whether there is a secondary AZ
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setHasSlaveZone(string $HasSlaveZone) Set Whether there is a secondary AZ
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getIsFreeze() Obtain Whether to freeze
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setIsFreeze(string $IsFreeze) Set Whether to freeze
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method array getTasks() Obtain Task list
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setTasks(array $Tasks) Set Task list
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getMasterZone() Obtain Primary AZ
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setMasterZone(string $MasterZone) Set Primary AZ
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method array getSlaveZones() Obtain Secondary AZ list
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setSlaveZones(array $SlaveZones) Set Secondary AZ list
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method Ability getAbility() Obtain Functions supported by the cluster.
+ * @method void setAbility(Ability $Ability) Set Functions supported by the cluster.
+ * @method string getCynosVersion() Obtain Specifies the cynos version.
+ * @method void setCynosVersion(string $CynosVersion) Set Specifies the cynos version.
+ * @method string getBusinessType() Obtain Business type.
+ * @method void setBusinessType(string $BusinessType) Set Business type.
+ * @method string getHasSlaveZone() Obtain Whether there is an availability zone.
+ * @method void setHasSlaveZone(string $HasSlaveZone) Set Whether there is an availability zone.
+ * @method string getIsFreeze() Obtain Whether to freeze.
+ * @method void setIsFreeze(string $IsFreeze) Set Whether to freeze.
+ * @method array getTasks() Obtain Task list.
+ * @method void setTasks(array $Tasks) Set Task list.
+ * @method string getMasterZone() Obtain Primary AZ.
+ * @method void setMasterZone(string $MasterZone) Set Primary AZ.
+ * @method array getSlaveZones() Obtain Availability zone list.
+ * @method void setSlaveZones(array $SlaveZones) Set Availability zone list.
  * @method array getInstanceSet() Obtain Instance information
  * @method void setInstanceSet(array $InstanceSet) Set Instance information
  * @method integer getPayMode() Obtain Billing mode
@@ -140,38 +108,28 @@ Note: This field may return null, indicating that no valid values can be obtaine
  * @method void setProjectID(integer $ProjectID) Set Project ID
  * @method array getResourceTags() Obtain Array of tags bound to instance
  * @method void setResourceTags(array $ResourceTags) Set Array of tags bound to instance
- * @method string getProxyStatus() Obtain Proxy status
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setProxyStatus(string $ProxyStatus) Set Proxy status
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getLogBin() Obtain Binlog switch. Valid values: `ON`, `OFF`.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setLogBin(string $LogBin) Set Binlog switch. Valid values: `ON`, `OFF`.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getIsSkipTrade() Obtain Whether to skip the transaction
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setIsSkipTrade(string $IsSkipTrade) Set Whether to skip the transaction
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getPitrType() Obtain PITR type. Valid values: `normal`, `redo_pitr`.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setPitrType(string $PitrType) Set PITR type. Valid values: `normal`, `redo_pitr`.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getIsOpenPasswordComplexity() Obtain Whether to enable password complexity
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setIsOpenPasswordComplexity(string $IsOpenPasswordComplexity) Set Whether to enable password complexity
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getNetworkStatus() Obtain Network type
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setNetworkStatus(string $NetworkStatus) Set Network type
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method array getResourcePackages() Obtain Information of the resource pack bound to a cluster Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setResourcePackages(array $ResourcePackages) Set Information of the resource pack bound to a cluster Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getRenewFlag() Obtain The auto-renewal flag. Valid values: `0`: (manual renewal, default), `1` (auto-renewal). Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setRenewFlag(integer $RenewFlag) Set The auto-renewal flag. Valid values: `0`: (manual renewal, default), `1` (auto-renewal). Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getNetworkType() Obtain 
- * @method void setNetworkType(string $NetworkType) Set 
- * @method array getSlaveZoneAttr() Obtain 
- * @method void setSlaveZoneAttr(array $SlaveZoneAttr) Set 
+ * @method string getProxyStatus() Obtain Proxy status.
+ * @method void setProxyStatus(string $ProxyStatus) Set Proxy status.
+ * @method string getLogBin() Obtain binlog switch. valid values: ON, OFF.
+ * @method void setLogBin(string $LogBin) Set binlog switch. valid values: ON, OFF.
+ * @method string getIsSkipTrade() Obtain Specifies whether to skip the transaction.
+ * @method void setIsSkipTrade(string $IsSkipTrade) Set Specifies whether to skip the transaction.
+ * @method string getPitrType() Obtain PITR type: valid values: normal, redo_pitr.
+ * @method void setPitrType(string $PitrType) Set PITR type: valid values: normal, redo_pitr.
+ * @method string getIsOpenPasswordComplexity() Obtain Whether to enable password complexity.
+ * @method void setIsOpenPasswordComplexity(string $IsOpenPasswordComplexity) Set Whether to enable password complexity.
+ * @method string getNetworkStatus() Obtain Network type.
+ * @method void setNetworkStatus(string $NetworkStatus) Set Network type.
+ * @method array getResourcePackages() Obtain The resource package information that is bound to the cluster.	
+ * @method void setResourcePackages(array $ResourcePackages) Set The resource package information that is bound to the cluster.	
+ * @method integer getRenewFlag() Obtain Auto-Renewal flag. 1 indicates auto-renewal. 0 indicates non-renewal upon expiration.
+ * @method void setRenewFlag(integer $RenewFlag) Set Auto-Renewal flag. 1 indicates auto-renewal. 0 indicates non-renewal upon expiration.
+ * @method string getNetworkType() Obtain Specifies the node network type.
+ * @method void setNetworkType(string $NetworkType) Set Specifies the node network type.
+ * @method array getSlaveZoneAttr() Obtain Secondary availability zone property.
+ * @method void setSlaveZoneAttr(array $SlaveZoneAttr) Set Secondary availability zone property.
+ * @method string getCynosVersionTag() Obtain Version Tag.
+ * @method void setCynosVersionTag(string $CynosVersionTag) Set Version Tag.
  */
 class CynosdbClusterDetail extends AbstractModel
 {
@@ -196,8 +154,7 @@ class CynosdbClusterDetail extends AbstractModel
     public $Zone;
 
     /**
-     * @var string Physical AZ
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Physical availability zone.
      */
     public $PhysicalZone;
 
@@ -221,32 +178,27 @@ pausing
     public $ServerlessStatus;
 
     /**
-     * @var string Storage ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Storage Id.
      */
     public $StorageId;
 
     /**
-     * @var integer Storage capacity in GB
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Storage size in gb.
      */
     public $Storage;
 
     /**
-     * @var integer Maximum storage specification in GB
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Maximum storage specification, in gb.
      */
     public $MaxStorageSize;
 
     /**
-     * @var integer Minimum storage specification in GB
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Specifies the minimum storage specification, in gb.
      */
     public $MinStorageSize;
 
     /**
-     * @var integer Storage billing mode. Valid values: `1` (monthly subscription), `0` (pay-as-you-go).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Storage billing type. 1 indicates monthly subscription, and 0 indicates pay-as-you-go.
      */
     public $StoragePayMode;
 
@@ -286,8 +238,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $DbType;
 
     /**
-     * @var string Database type. Valid values: `normal`, `serverless`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Db type: <li>NORMAL</li> <li>SERVERLESS</li>.
      */
     public $DbMode;
 
@@ -297,8 +248,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $DbVersion;
 
     /**
-     * @var integer Maximum storage space
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Specifies the maximum storage space.
      */
     public $StorageLimit;
 
@@ -323,50 +273,42 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $RoAddr;
 
     /**
-     * @var Ability Features supported by the cluster
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var Ability Functions supported by the cluster.
      */
     public $Ability;
 
     /**
-     * @var string TDSQL-C version
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Specifies the cynos version.
      */
     public $CynosVersion;
 
     /**
-     * @var string Business type
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Business type.
      */
     public $BusinessType;
 
     /**
-     * @var string Whether there is a secondary AZ
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Whether there is an availability zone.
      */
     public $HasSlaveZone;
 
     /**
-     * @var string Whether to freeze
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Whether to freeze.
      */
     public $IsFreeze;
 
     /**
-     * @var array Task list
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array Task list.
      */
     public $Tasks;
 
     /**
-     * @var string Primary AZ
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Primary AZ.
      */
     public $MasterZone;
 
     /**
-     * @var array Secondary AZ list
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array Availability zone list.
      */
     public $SlaveZones;
 
@@ -396,68 +338,66 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $ResourceTags;
 
     /**
-     * @var string Proxy status
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Proxy status.
      */
     public $ProxyStatus;
 
     /**
-     * @var string Binlog switch. Valid values: `ON`, `OFF`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string binlog switch. valid values: ON, OFF.
      */
     public $LogBin;
 
     /**
-     * @var string Whether to skip the transaction
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Specifies whether to skip the transaction.
      */
     public $IsSkipTrade;
 
     /**
-     * @var string PITR type. Valid values: `normal`, `redo_pitr`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string PITR type: valid values: normal, redo_pitr.
      */
     public $PitrType;
 
     /**
-     * @var string Whether to enable password complexity
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Whether to enable password complexity.
      */
     public $IsOpenPasswordComplexity;
 
     /**
-     * @var string Network type
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Network type.
      */
     public $NetworkStatus;
 
     /**
-     * @var array Information of the resource pack bound to a cluster Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array The resource package information that is bound to the cluster.	
      */
     public $ResourcePackages;
 
     /**
-     * @var integer The auto-renewal flag. Valid values: `0`: (manual renewal, default), `1` (auto-renewal). Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Auto-Renewal flag. 1 indicates auto-renewal. 0 indicates non-renewal upon expiration.
      */
     public $RenewFlag;
 
     /**
-     * @var string 
+     * @var string Specifies the node network type.
      */
     public $NetworkType;
 
     /**
-     * @var array 
+     * @var array Secondary availability zone property.
      */
     public $SlaveZoneAttr;
+
+    /**
+     * @var string Version Tag.
+     */
+    public $CynosVersionTag;
 
     /**
      * @param string $ClusterId Cluster ID
      * @param string $ClusterName Cluster name
      * @param string $Region Region
      * @param string $Zone AZ
-     * @param string $PhysicalZone Physical AZ
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $PhysicalZone Physical availability zone.
      * @param string $Status Status
      * @param string $StatusDesc Status description
      * @param string $ServerlessStatus Serverless cluster status when the database type is `SERVERLESS`. Valid values:
@@ -465,16 +405,11 @@ resume
 resuming
 pause
 pausing
-     * @param string $StorageId Storage ID
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $Storage Storage capacity in GB
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $MaxStorageSize Maximum storage specification in GB
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $MinStorageSize Minimum storage specification in GB
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $StoragePayMode Storage billing mode. Valid values: `1` (monthly subscription), `0` (pay-as-you-go).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $StorageId Storage Id.
+     * @param integer $Storage Storage size in gb.
+     * @param integer $MaxStorageSize Maximum storage specification, in gb.
+     * @param integer $MinStorageSize Specifies the minimum storage specification, in gb.
+     * @param integer $StoragePayMode Storage billing type. 1 indicates monthly subscription, and 0 indicates pay-as-you-go.
      * @param string $VpcName VPC name
      * @param string $VpcId Unique VPC ID
      * @param string $SubnetName Subnet name
@@ -482,52 +417,37 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $Charset Character set
      * @param string $CreateTime Creation time
      * @param string $DbType Database type
-     * @param string $DbMode Database type. Valid values: `normal`, `serverless`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $DbMode Db type: <li>NORMAL</li> <li>SERVERLESS</li>.
      * @param string $DbVersion Database version
-     * @param integer $StorageLimit Maximum storage space
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $StorageLimit Specifies the maximum storage space.
      * @param integer $UsedStorage Used capacity
      * @param string $Vip VIP
      * @param integer $Vport vport
      * @param array $RoAddr VIP and vport of the read-only instance in a cluster
-     * @param Ability $Ability Features supported by the cluster
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $CynosVersion TDSQL-C version
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $BusinessType Business type
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $HasSlaveZone Whether there is a secondary AZ
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $IsFreeze Whether to freeze
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param array $Tasks Task list
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $MasterZone Primary AZ
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param array $SlaveZones Secondary AZ list
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Ability $Ability Functions supported by the cluster.
+     * @param string $CynosVersion Specifies the cynos version.
+     * @param string $BusinessType Business type.
+     * @param string $HasSlaveZone Whether there is an availability zone.
+     * @param string $IsFreeze Whether to freeze.
+     * @param array $Tasks Task list.
+     * @param string $MasterZone Primary AZ.
+     * @param array $SlaveZones Availability zone list.
      * @param array $InstanceSet Instance information
      * @param integer $PayMode Billing mode
      * @param string $PeriodEndTime Expiration time
      * @param integer $ProjectID Project ID
      * @param array $ResourceTags Array of tags bound to instance
-     * @param string $ProxyStatus Proxy status
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $LogBin Binlog switch. Valid values: `ON`, `OFF`.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $IsSkipTrade Whether to skip the transaction
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $PitrType PITR type. Valid values: `normal`, `redo_pitr`.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $IsOpenPasswordComplexity Whether to enable password complexity
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $NetworkStatus Network type
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param array $ResourcePackages Information of the resource pack bound to a cluster Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $RenewFlag The auto-renewal flag. Valid values: `0`: (manual renewal, default), `1` (auto-renewal). Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $NetworkType 
-     * @param array $SlaveZoneAttr 
+     * @param string $ProxyStatus Proxy status.
+     * @param string $LogBin binlog switch. valid values: ON, OFF.
+     * @param string $IsSkipTrade Specifies whether to skip the transaction.
+     * @param string $PitrType PITR type: valid values: normal, redo_pitr.
+     * @param string $IsOpenPasswordComplexity Whether to enable password complexity.
+     * @param string $NetworkStatus Network type.
+     * @param array $ResourcePackages The resource package information that is bound to the cluster.	
+     * @param integer $RenewFlag Auto-Renewal flag. 1 indicates auto-renewal. 0 indicates non-renewal upon expiration.
+     * @param string $NetworkType Specifies the node network type.
+     * @param array $SlaveZoneAttr Secondary availability zone property.
+     * @param string $CynosVersionTag Version Tag.
      */
     function __construct()
     {
@@ -771,6 +691,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 $obj->deserialize($value);
                 array_push($this->SlaveZoneAttr, $obj);
             }
+        }
+
+        if (array_key_exists("CynosVersionTag",$param) and $param["CynosVersionTag"] !== null) {
+            $this->CynosVersionTag = $param["CynosVersionTag"];
         }
     }
 }

@@ -20,32 +20,23 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Billing details
  *
- * @method integer getTotalPrice() Obtain The non-discounted total price of monthly subscribed resources (unit: 0.000001 cent)
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setTotalPrice(integer $TotalPrice) Set The non-discounted total price of monthly subscribed resources (unit: 0.000001 cent)
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getTotalPrice() Obtain Resource total price under prepaid mode, excluding discounts. unit: cent.
+ * @method void setTotalPrice(integer $TotalPrice) Set Resource total price under prepaid mode, excluding discounts. unit: cent.
  * @method float getDiscount() Obtain Total discount. `100` means no discount.
  * @method void setDiscount(float $Discount) Set Total discount. `100` means no discount.
- * @method integer getTotalPriceDiscount() Obtain The discounted total price of monthly subscribed resources (unit: 0.000001 cent). If a discount is applied, `TotalPriceDiscount` will be the product of `TotalPrice` and `Discount`.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setTotalPriceDiscount(integer $TotalPriceDiscount) Set The discounted total price of monthly subscribed resources (unit: 0.000001 cent). If a discount is applied, `TotalPriceDiscount` will be the product of `TotalPrice` and `Discount`.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getUnitPrice() Obtain The non-discounted unit price of pay-as-you-go resources (unit: 0.000001 cent)
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setUnitPrice(integer $UnitPrice) Set The non-discounted unit price of pay-as-you-go resources (unit: 0.000001 cent)
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getUnitPriceDiscount() Obtain The discounted unit price of pay-as-you-go resources (unit: 0.000001 cent). If a discount is applied, `UnitPriceDiscount` will be the product of `UnitPrice` and `Discount`.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setUnitPriceDiscount(integer $UnitPriceDiscount) Set The discounted unit price of pay-as-you-go resources (unit: 0.000001 cent). If a discount is applied, `UnitPriceDiscount` will be the product of `UnitPrice` and `Discount`.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getTotalPriceDiscount() Obtain Discounted total price under prepaid mode, unit: fen. for example, the user enjoys a Discount = TotalPrice × Discount.
+ * @method void setTotalPriceDiscount(integer $TotalPriceDiscount) Set Discounted total price under prepaid mode, unit: fen. for example, the user enjoys a Discount = TotalPrice × Discount.
+ * @method integer getUnitPrice() Obtain Unit resource price in postpaid mode, excluding discounts. unit: cent.
+ * @method void setUnitPrice(integer $UnitPrice) Set Unit resource price in postpaid mode, excluding discounts. unit: cent.
+ * @method integer getUnitPriceDiscount() Obtain Unit resource price in postpaid mode after Discount, unit: fen. for example, the user enjoys a Discount = unitprice × Discount.
+ * @method void setUnitPriceDiscount(integer $UnitPriceDiscount) Set Unit resource price in postpaid mode after Discount, unit: fen. for example, the user enjoys a Discount = unitprice × Discount.
  * @method string getChargeUnit() Obtain Price unit
  * @method void setChargeUnit(string $ChargeUnit) Set Price unit
  */
 class TradePrice extends AbstractModel
 {
     /**
-     * @var integer The non-discounted total price of monthly subscribed resources (unit: 0.000001 cent)
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Resource total price under prepaid mode, excluding discounts. unit: cent.
      */
     public $TotalPrice;
 
@@ -55,20 +46,17 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $Discount;
 
     /**
-     * @var integer The discounted total price of monthly subscribed resources (unit: 0.000001 cent). If a discount is applied, `TotalPriceDiscount` will be the product of `TotalPrice` and `Discount`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Discounted total price under prepaid mode, unit: fen. for example, the user enjoys a Discount = TotalPrice × Discount.
      */
     public $TotalPriceDiscount;
 
     /**
-     * @var integer The non-discounted unit price of pay-as-you-go resources (unit: 0.000001 cent)
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Unit resource price in postpaid mode, excluding discounts. unit: cent.
      */
     public $UnitPrice;
 
     /**
-     * @var integer The discounted unit price of pay-as-you-go resources (unit: 0.000001 cent). If a discount is applied, `UnitPriceDiscount` will be the product of `UnitPrice` and `Discount`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Unit resource price in postpaid mode after Discount, unit: fen. for example, the user enjoys a Discount = unitprice × Discount.
      */
     public $UnitPriceDiscount;
 
@@ -78,15 +66,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $ChargeUnit;
 
     /**
-     * @param integer $TotalPrice The non-discounted total price of monthly subscribed resources (unit: 0.000001 cent)
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $TotalPrice Resource total price under prepaid mode, excluding discounts. unit: cent.
      * @param float $Discount Total discount. `100` means no discount.
-     * @param integer $TotalPriceDiscount The discounted total price of monthly subscribed resources (unit: 0.000001 cent). If a discount is applied, `TotalPriceDiscount` will be the product of `TotalPrice` and `Discount`.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $UnitPrice The non-discounted unit price of pay-as-you-go resources (unit: 0.000001 cent)
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $UnitPriceDiscount The discounted unit price of pay-as-you-go resources (unit: 0.000001 cent). If a discount is applied, `UnitPriceDiscount` will be the product of `UnitPrice` and `Discount`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $TotalPriceDiscount Discounted total price under prepaid mode, unit: fen. for example, the user enjoys a Discount = TotalPrice × Discount.
+     * @param integer $UnitPrice Unit resource price in postpaid mode, excluding discounts. unit: cent.
+     * @param integer $UnitPriceDiscount Unit resource price in postpaid mode after Discount, unit: fen. for example, the user enjoys a Discount = unitprice × Discount.
      * @param string $ChargeUnit Price unit
      */
     function __construct()

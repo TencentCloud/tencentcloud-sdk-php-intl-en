@@ -106,44 +106,44 @@ pause
  * @method void setServerlessStatus(string $ServerlessStatus) Set Serverless instance status. Valid values:
 resume
 pause
- * @method string getStorageId() Obtain Prepaid storage ID
-Note: this field may return `null`, indicating that no valid value can be obtained.
- * @method void setStorageId(string $StorageId) Set Prepaid storage ID
-Note: this field may return `null`, indicating that no valid value can be obtained.
+ * @method string getStorageId() Obtain Prepayment storage Id.
+ * @method void setStorageId(string $StorageId) Set Prepayment storage Id.
  * @method integer getStoragePayMode() Obtain Storage billing mode
  * @method void setStoragePayMode(integer $StoragePayMode) Set Storage billing mode
  * @method string getPhysicalZone() Obtain Physical zone
  * @method void setPhysicalZone(string $PhysicalZone) Set Physical zone
- * @method string getBusinessType() Obtain Business type
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setBusinessType(string $BusinessType) Set Business type
-Note: This field may return null, indicating that no valid value can be obtained.
+ * @method string getBusinessType() Obtain Business type.
+ * @method void setBusinessType(string $BusinessType) Set Business type.
  * @method array getTasks() Obtain Task
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setTasks(array $Tasks) Set Task
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getIsFreeze() Obtain Whether to freeze
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setIsFreeze(string $IsFreeze) Set Whether to freeze
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getIsFreeze() Obtain Whether to freeze.
+ * @method void setIsFreeze(string $IsFreeze) Set Whether to freeze.
  * @method array getResourceTags() Obtain The resource tag
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setResourceTags(array $ResourceTags) Set The resource tag
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getMasterZone() Obtain Source AZ
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setMasterZone(string $MasterZone) Set Source AZ
-Note: This field may return null, indicating that no valid value can be obtained.
+ * @method string getMasterZone() Obtain Primary AZ.
+ * @method void setMasterZone(string $MasterZone) Set Primary AZ.
  * @method array getSlaveZones() Obtain Replica AZ
 Note: This field may return null, indicating that no valid value can be obtained.
  * @method void setSlaveZones(array $SlaveZones) Set Replica AZ
 Note: This field may return null, indicating that no valid value can be obtained.
- * @method array getInstanceNetInfo() Obtain Instance network information
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setInstanceNetInfo(array $InstanceNetInfo) Set Instance network information
-Note: This field may return null, indicating that no valid value can be obtained.
+ * @method array getInstanceNetInfo() Obtain Network information of the instance.
+ * @method void setInstanceNetInfo(array $InstanceNetInfo) Set Network information of the instance.
  * @method array getResourcePackages() Obtain Information of the resource pack bound to an instance when `packageType` is `CCU`. Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setResourcePackages(array $ResourcePackages) Set Information of the resource pack bound to an instance when `packageType` is `CCU`. Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getInstanceIndexMode() Obtain Specifies the instance index form. valid values include mixedRowColumn (row and column hybrid storage) and onlyRowIndex (row-only storage).
+ * @method void setInstanceIndexMode(string $InstanceIndexMode) Set Specifies the instance index form. valid values include mixedRowColumn (row and column hybrid storage) and onlyRowIndex (row-only storage).
+ * @method InstanceAbility getInstanceAbility() Obtain Supported capabilities of the existing instance.
+ * @method void setInstanceAbility(InstanceAbility $InstanceAbility) Set Supported capabilities of the existing instance.
+ * @method string getDeviceType() Obtain Instance machine type.
+ * @method void setDeviceType(string $DeviceType) Set Instance machine type.
+ * @method string getInstanceStorageType() Obtain Specifies the instance storage type.
+ * @method void setInstanceStorageType(string $InstanceStorageType) Set Specifies the instance storage type.
+ * @method string getCynosVersionTag() Obtain Unknown field.
+ * @method void setCynosVersionTag(string $CynosVersionTag) Set Unknown field.
+ * @method array getNodeList() Obtain Specifies the node information of libradb.
+ * @method void setNodeList(array $NodeList) Set Specifies the node information of libradb.
  */
 class CynosdbInstance extends AbstractModel
 {
@@ -355,8 +355,7 @@ pause
     public $ServerlessStatus;
 
     /**
-     * @var string Prepaid storage ID
-Note: this field may return `null`, indicating that no valid value can be obtained.
+     * @var string Prepayment storage Id.
      */
     public $StorageId;
 
@@ -371,20 +370,17 @@ Note: this field may return `null`, indicating that no valid value can be obtain
     public $PhysicalZone;
 
     /**
-     * @var string Business type
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @var string Business type.
      */
     public $BusinessType;
 
     /**
      * @var array Task
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Tasks;
 
     /**
-     * @var string Whether to freeze
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Whether to freeze.
      */
     public $IsFreeze;
 
@@ -395,8 +391,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $ResourceTags;
 
     /**
-     * @var string Source AZ
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @var string Primary AZ.
      */
     public $MasterZone;
 
@@ -407,8 +402,7 @@ Note: This field may return null, indicating that no valid value can be obtained
     public $SlaveZones;
 
     /**
-     * @var array Instance network information
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @var array Network information of the instance.
      */
     public $InstanceNetInfo;
 
@@ -416,6 +410,36 @@ Note: This field may return null, indicating that no valid value can be obtained
      * @var array Information of the resource pack bound to an instance when `packageType` is `CCU`. Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ResourcePackages;
+
+    /**
+     * @var string Specifies the instance index form. valid values include mixedRowColumn (row and column hybrid storage) and onlyRowIndex (row-only storage).
+     */
+    public $InstanceIndexMode;
+
+    /**
+     * @var InstanceAbility Supported capabilities of the existing instance.
+     */
+    public $InstanceAbility;
+
+    /**
+     * @var string Instance machine type.
+     */
+    public $DeviceType;
+
+    /**
+     * @var string Specifies the instance storage type.
+     */
+    public $InstanceStorageType;
+
+    /**
+     * @var string Unknown field.
+     */
+    public $CynosVersionTag;
+
+    /**
+     * @var array Specifies the node information of libradb.
+     */
+    public $NodeList;
 
     /**
      * @param string $Uin User `Uin`
@@ -461,25 +485,25 @@ Note: This field may return null, indicating that no valid value can be obtained
      * @param string $ServerlessStatus Serverless instance status. Valid values:
 resume
 pause
-     * @param string $StorageId Prepaid storage ID
-Note: this field may return `null`, indicating that no valid value can be obtained.
+     * @param string $StorageId Prepayment storage Id.
      * @param integer $StoragePayMode Storage billing mode
      * @param string $PhysicalZone Physical zone
-     * @param string $BusinessType Business type
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @param string $BusinessType Business type.
      * @param array $Tasks Task
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $IsFreeze Whether to freeze
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $IsFreeze Whether to freeze.
      * @param array $ResourceTags The resource tag
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $MasterZone Source AZ
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @param string $MasterZone Primary AZ.
      * @param array $SlaveZones Replica AZ
 Note: This field may return null, indicating that no valid value can be obtained.
-     * @param array $InstanceNetInfo Instance network information
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @param array $InstanceNetInfo Network information of the instance.
      * @param array $ResourcePackages Information of the resource pack bound to an instance when `packageType` is `CCU`. Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $InstanceIndexMode Specifies the instance index form. valid values include mixedRowColumn (row and column hybrid storage) and onlyRowIndex (row-only storage).
+     * @param InstanceAbility $InstanceAbility Supported capabilities of the existing instance.
+     * @param string $DeviceType Instance machine type.
+     * @param string $InstanceStorageType Specifies the instance storage type.
+     * @param string $CynosVersionTag Unknown field.
+     * @param array $NodeList Specifies the node information of libradb.
      */
     function __construct()
     {
@@ -720,6 +744,31 @@ Note: This field may return null, indicating that no valid value can be obtained
                 $obj->deserialize($value);
                 array_push($this->ResourcePackages, $obj);
             }
+        }
+
+        if (array_key_exists("InstanceIndexMode",$param) and $param["InstanceIndexMode"] !== null) {
+            $this->InstanceIndexMode = $param["InstanceIndexMode"];
+        }
+
+        if (array_key_exists("InstanceAbility",$param) and $param["InstanceAbility"] !== null) {
+            $this->InstanceAbility = new InstanceAbility();
+            $this->InstanceAbility->deserialize($param["InstanceAbility"]);
+        }
+
+        if (array_key_exists("DeviceType",$param) and $param["DeviceType"] !== null) {
+            $this->DeviceType = $param["DeviceType"];
+        }
+
+        if (array_key_exists("InstanceStorageType",$param) and $param["InstanceStorageType"] !== null) {
+            $this->InstanceStorageType = $param["InstanceStorageType"];
+        }
+
+        if (array_key_exists("CynosVersionTag",$param) and $param["CynosVersionTag"] !== null) {
+            $this->CynosVersionTag = $param["CynosVersionTag"];
+        }
+
+        if (array_key_exists("NodeList",$param) and $param["NodeList"] !== null) {
+            $this->NodeList = $param["NodeList"];
         }
     }
 }

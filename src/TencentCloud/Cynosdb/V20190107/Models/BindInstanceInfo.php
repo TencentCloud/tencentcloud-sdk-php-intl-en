@@ -20,50 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Information of the instance bound to the resource pack
  *
- * @method string getInstanceId() Obtain ID of the bound cluster
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setInstanceId(string $InstanceId) Set ID of the bound cluster
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getInstanceRegion() Obtain Region of the instance bound Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setInstanceRegion(string $InstanceRegion) Set Region of the instance bound Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getInstanceType() Obtain Type of the instance bound Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setInstanceType(string $InstanceType) Set Type of the instance bound Note: This field may return null, indicating that no valid values can be obtained.
- * @method array getExtendIds() Obtain ID of the instance in the bound cluster
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setExtendIds(array $ExtendIds) Set ID of the instance in the bound cluster
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getInstanceId() Obtain ID of the bound cluster.
+ * @method void setInstanceId(string $InstanceId) Set ID of the bound cluster.
+ * @method string getInstanceRegion() Obtain The region where the bound instance is located.
+ * @method void setInstanceRegion(string $InstanceRegion) Set The region where the bound instance is located.
+ * @method string getInstanceType() Obtain Type of the bound instance.
+ * @method void setInstanceType(string $InstanceType) Set Type of the bound instance.
+ * @method array getExtendIds() Obtain The instance ID under the bound cluster.
+ * @method void setExtendIds(array $ExtendIds) Set The instance ID under the bound cluster.
  */
 class BindInstanceInfo extends AbstractModel
 {
     /**
-     * @var string ID of the bound cluster
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string ID of the bound cluster.
      */
     public $InstanceId;
 
     /**
-     * @var string Region of the instance bound Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string The region where the bound instance is located.
      */
     public $InstanceRegion;
 
     /**
-     * @var string Type of the instance bound Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Type of the bound instance.
      */
     public $InstanceType;
 
     /**
-     * @var array ID of the instance in the bound cluster
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array The instance ID under the bound cluster.
      */
     public $ExtendIds;
 
     /**
-     * @param string $InstanceId ID of the bound cluster
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $InstanceRegion Region of the instance bound Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $InstanceType Type of the instance bound Note: This field may return null, indicating that no valid values can be obtained.
-     * @param array $ExtendIds ID of the instance in the bound cluster
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $InstanceId ID of the bound cluster.
+     * @param string $InstanceRegion The region where the bound instance is located.
+     * @param string $InstanceType Type of the bound instance.
+     * @param array $ExtendIds The instance ID under the bound cluster.
      */
     function __construct()
     {

@@ -20,14 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Details of whether the parameter can be modified
  *
-
+ * @method integer getIsModifiable() Obtain 
+ * @method void setIsModifiable(integer $IsModifiable) Set 
  */
 class ModifiableInfo extends AbstractModel
 {
-
+    /**
+     * @var integer 
+     */
+    public $IsModifiable;
 
     /**
-
+     * @param integer $IsModifiable 
      */
     function __construct()
     {
@@ -42,6 +46,8 @@ class ModifiableInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-
+        if (array_key_exists("IsModifiable",$param) and $param["IsModifiable"] !== null) {
+            $this->IsModifiable = $param["IsModifiable"];
+        }
     }
 }

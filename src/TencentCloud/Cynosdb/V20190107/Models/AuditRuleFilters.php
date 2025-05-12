@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Filter of rule audit
  *
- * @method array getRuleFilters() Obtain Audit rule
- * @method void setRuleFilters(array $RuleFilters) Set Audit rule
+ * @method array getRuleFilters() Obtain A single audit rule.
+ * @method void setRuleFilters(array $RuleFilters) Set A single audit rule.
  */
 class AuditRuleFilters extends AbstractModel
 {
     /**
-     * @var array Audit rule
+     * @var array A single audit rule.
      */
     public $RuleFilters;
 
     /**
-     * @param array $RuleFilters Audit rule
+     * @param array $RuleFilters A single audit rule.
      */
     function __construct()
     {

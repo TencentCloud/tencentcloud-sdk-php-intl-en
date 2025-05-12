@@ -40,12 +40,12 @@ use TencentCloud\Common\AbstractModel;
 `1`: Yes
  * @method string getPhysicalZone() Obtain Physical zone
  * @method void setPhysicalZone(string $PhysicalZone) Set Physical zone
- * @method boolean getHasPermission() Obtain Whether the user has AZ permission
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setHasPermission(boolean $HasPermission) Set Whether the user has AZ permission
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method boolean getHasPermission() Obtain Whether the user has AZ permission.
+ * @method void setHasPermission(boolean $HasPermission) Set Whether the user has AZ permission.
  * @method string getIsWholeRdmaZone() Obtain Whether it is a full-linkage RDMA AZ.
  * @method void setIsWholeRdmaZone(string $IsWholeRdmaZone) Set Whether it is a full-linkage RDMA AZ.
+ * @method integer getIsSupportCreateCluster() Obtain Specifies whether a newly purchased cluster is allowed in the current availability zone. valid values: 1 (allowed), 0 (not allowed).
+ * @method void setIsSupportCreateCluster(integer $IsSupportCreateCluster) Set Specifies whether a newly purchased cluster is allowed in the current availability zone. valid values: 1 (allowed), 0 (not allowed).
  */
 class SaleZone extends AbstractModel
 {
@@ -84,8 +84,7 @@ class SaleZone extends AbstractModel
     public $PhysicalZone;
 
     /**
-     * @var boolean Whether the user has AZ permission
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var boolean Whether the user has AZ permission.
      */
     public $HasPermission;
 
@@ -93,6 +92,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @var string Whether it is a full-linkage RDMA AZ.
      */
     public $IsWholeRdmaZone;
+
+    /**
+     * @var integer Specifies whether a newly purchased cluster is allowed in the current availability zone. valid values: 1 (allowed), 0 (not allowed).
+     */
+    public $IsSupportCreateCluster;
 
     /**
      * @param string $Zone AZ name
@@ -105,9 +109,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
 `0`: No<br>
 `1`: Yes
      * @param string $PhysicalZone Physical zone
-     * @param boolean $HasPermission Whether the user has AZ permission
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param boolean $HasPermission Whether the user has AZ permission.
      * @param string $IsWholeRdmaZone Whether it is a full-linkage RDMA AZ.
+     * @param integer $IsSupportCreateCluster Specifies whether a newly purchased cluster is allowed in the current availability zone. valid values: 1 (allowed), 0 (not allowed).
      */
     function __construct()
     {
@@ -152,6 +156,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("IsWholeRdmaZone",$param) and $param["IsWholeRdmaZone"] !== null) {
             $this->IsWholeRdmaZone = $param["IsWholeRdmaZone"];
+        }
+
+        if (array_key_exists("IsSupportCreateCluster",$param) and $param["IsSupportCreateCluster"] !== null) {
+            $this->IsSupportCreateCluster = $param["IsSupportCreateCluster"];
         }
     }
 }

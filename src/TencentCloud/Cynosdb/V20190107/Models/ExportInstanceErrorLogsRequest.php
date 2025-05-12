@@ -38,8 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFileType(string $FileType) Set The template type. Valid values: `csv`, `original`.
  * @method string getOrderBy() Obtain Valid value: `Timestamp`
  * @method void setOrderBy(string $OrderBy) Set Valid value: `Timestamp`
- * @method string getOrderByType() Obtain Valid values: `ASC` or `DESC`.
- * @method void setOrderByType(string $OrderByType) Set Valid values: `ASC` or `DESC`.
+ * @method string getOrderByType() Obtain Sorting type. valid values: ASC or DESC.
+ * @method void setOrderByType(string $OrderByType) Set Sorting type. valid values: ASC or DESC.
  */
 class ExportInstanceErrorLogsRequest extends AbstractModel
 {
@@ -89,7 +89,7 @@ class ExportInstanceErrorLogsRequest extends AbstractModel
     public $OrderBy;
 
     /**
-     * @var string Valid values: `ASC` or `DESC`.
+     * @var string Sorting type. valid values: ASC or DESC.
      */
     public $OrderByType;
 
@@ -103,7 +103,7 @@ class ExportInstanceErrorLogsRequest extends AbstractModel
      * @param array $KeyWords 
      * @param string $FileType The template type. Valid values: `csv`, `original`.
      * @param string $OrderBy Valid value: `Timestamp`
-     * @param string $OrderByType Valid values: `ASC` or `DESC`.
+     * @param string $OrderByType Sorting type. valid values: ASC or DESC.
      */
     function __construct()
     {

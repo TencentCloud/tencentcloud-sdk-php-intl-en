@@ -20,46 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Connection pool information for the database proxy
  *
- * @method integer getConnectionPoolTimeOut() Obtain Connection persistence timeout in seconds
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setConnectionPoolTimeOut(integer $ConnectionPoolTimeOut) Set Connection persistence timeout in seconds
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getOpenConnectionPool() Obtain Whether the connection pool is enabled
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setOpenConnectionPool(string $OpenConnectionPool) Set Whether the connection pool is enabled
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getConnectionPoolType() Obtain Connection pool type. Valid value: `SessionConnectionPool` (session-level).
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setConnectionPoolType(string $ConnectionPoolType) Set Connection pool type. Valid value: `SessionConnectionPool` (session-level).
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getConnectionPoolTimeOut() Obtain Specifies the persistence threshold of the connection pool. the unit is seconds.
+ * @method void setConnectionPoolTimeOut(integer $ConnectionPoolTimeOut) Set Specifies the persistence threshold of the connection pool. the unit is seconds.
+ * @method string getOpenConnectionPool() Obtain Whether the connection pool is enabled.
+ * @method void setOpenConnectionPool(string $OpenConnectionPool) Set Whether the connection pool is enabled.
+ * @method string getConnectionPoolType() Obtain Specifies the connection pool type. valid values: SessionConnectionPool (session-level connection pool).
+ * @method void setConnectionPoolType(string $ConnectionPoolType) Set Specifies the connection pool type. valid values: SessionConnectionPool (session-level connection pool).
  */
 class ProxyConnectionPoolInfo extends AbstractModel
 {
     /**
-     * @var integer Connection persistence timeout in seconds
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Specifies the persistence threshold of the connection pool. the unit is seconds.
      */
     public $ConnectionPoolTimeOut;
 
     /**
-     * @var string Whether the connection pool is enabled
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Whether the connection pool is enabled.
      */
     public $OpenConnectionPool;
 
     /**
-     * @var string Connection pool type. Valid value: `SessionConnectionPool` (session-level).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Specifies the connection pool type. valid values: SessionConnectionPool (session-level connection pool).
      */
     public $ConnectionPoolType;
 
     /**
-     * @param integer $ConnectionPoolTimeOut Connection persistence timeout in seconds
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $OpenConnectionPool Whether the connection pool is enabled
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $ConnectionPoolType Connection pool type. Valid value: `SessionConnectionPool` (session-level).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $ConnectionPoolTimeOut Specifies the persistence threshold of the connection pool. the unit is seconds.
+     * @param string $OpenConnectionPool Whether the connection pool is enabled.
+     * @param string $ConnectionPoolType Specifies the connection pool type. valid values: SessionConnectionPool (session-level connection pool).
      */
     function __construct()
     {

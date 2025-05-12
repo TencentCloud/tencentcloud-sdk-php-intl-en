@@ -20,58 +20,70 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Resource pack details
  *
- * @method string getPackageRegion() Obtain Region of the resource pack Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setPackageRegion(string $PackageRegion) Set Region of the resource pack Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getPackageType() Obtain Resource pack type. Valid values: `CCU` (compute resource pack), `DISK` (storage resource pack). Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setPackageType(string $PackageType) Set Resource pack type. Valid values: `CCU` (compute resource pack), `DISK` (storage resource pack). Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getPackageVersion() Obtain Resource pack edition. Valid values: `base` (basic edition), `common` (general edition), `enterprise` (enterprise edition). Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setPackageVersion(string $PackageVersion) Set Resource pack edition. Valid values: `base` (basic edition), `common` (general edition), `enterprise` (enterprise edition). Note: This field may return null, indicating that no valid values can be obtained.
- * @method float getMinPackageSpec() Obtain Minimum number of resources for the current edition of the resource pack.  Unit of the compute resources: pcs.  Unit of the storage resources: GB. Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setMinPackageSpec(float $MinPackageSpec) Set Minimum number of resources for the current edition of the resource pack.  Unit of the compute resources: pcs.  Unit of the storage resources: GB. Note: This field may return null, indicating that no valid values can be obtained.
- * @method float getMaxPackageSpec() Obtain Maximum number of resources for the current edition of the resource pack.  Unit of the compute resources: pcs.  Unit of the storage resources: GB. Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setMaxPackageSpec(float $MaxPackageSpec) Set Maximum number of resources for the current edition of the resource pack.  Unit of the compute resources: pcs.  Unit of the storage resources: GB. Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getExpireDay() Obtain Validity period of a resource pack in days Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setExpireDay(integer $ExpireDay) Set Validity period of a resource pack in days Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getPackageRegion() Obtain Resource package region of use.
+ * @method void setPackageRegion(string $PackageRegion) Set Resource package region of use.
+ * @method string getPackageType() Obtain Specifies the resource package type.
+CCU - compute resource package.
+Storage resource package.
+ * @method void setPackageType(string $PackageType) Set Specifies the resource package type.
+CCU - compute resource package.
+Storage resource package.
+ * @method string getPackageVersion() Obtain Resource pack version.
+base - basic version; common - general version; enterprise - enterprise edition.
+ * @method void setPackageVersion(string $PackageVersion) Set Resource pack version.
+base - basic version; common - general version; enterprise - enterprise edition.
+ * @method float getMinPackageSpec() Obtain Minimum number of resources in the current version of the resource package. compute resource unit: pieces; storage resource: GB.
+ * @method void setMinPackageSpec(float $MinPackageSpec) Set Minimum number of resources in the current version of the resource package. compute resource unit: pieces; storage resource: GB.
+ * @method float getMaxPackageSpec() Obtain Specifies the maximum number of resources in the current version of the resource package. valid values: compute resource unit: pieces; storage resource: GB.
+ * @method void setMaxPackageSpec(float $MaxPackageSpec) Set Specifies the maximum number of resources in the current version of the resource package. valid values: compute resource unit: pieces; storage resource: GB.
+ * @method integer getExpireDay() Obtain Specifies the resource pack validity period. the measurement unit is day.
+ * @method void setExpireDay(integer $ExpireDay) Set Specifies the resource pack validity period. the measurement unit is day.
  */
 class SalePackageSpec extends AbstractModel
 {
     /**
-     * @var string Region of the resource pack Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Resource package region of use.
      */
     public $PackageRegion;
 
     /**
-     * @var string Resource pack type. Valid values: `CCU` (compute resource pack), `DISK` (storage resource pack). Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Specifies the resource package type.
+CCU - compute resource package.
+Storage resource package.
      */
     public $PackageType;
 
     /**
-     * @var string Resource pack edition. Valid values: `base` (basic edition), `common` (general edition), `enterprise` (enterprise edition). Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Resource pack version.
+base - basic version; common - general version; enterprise - enterprise edition.
      */
     public $PackageVersion;
 
     /**
-     * @var float Minimum number of resources for the current edition of the resource pack.  Unit of the compute resources: pcs.  Unit of the storage resources: GB. Note: This field may return null, indicating that no valid values can be obtained.
+     * @var float Minimum number of resources in the current version of the resource package. compute resource unit: pieces; storage resource: GB.
      */
     public $MinPackageSpec;
 
     /**
-     * @var float Maximum number of resources for the current edition of the resource pack.  Unit of the compute resources: pcs.  Unit of the storage resources: GB. Note: This field may return null, indicating that no valid values can be obtained.
+     * @var float Specifies the maximum number of resources in the current version of the resource package. valid values: compute resource unit: pieces; storage resource: GB.
      */
     public $MaxPackageSpec;
 
     /**
-     * @var integer Validity period of a resource pack in days Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Specifies the resource pack validity period. the measurement unit is day.
      */
     public $ExpireDay;
 
     /**
-     * @param string $PackageRegion Region of the resource pack Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $PackageType Resource pack type. Valid values: `CCU` (compute resource pack), `DISK` (storage resource pack). Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $PackageVersion Resource pack edition. Valid values: `base` (basic edition), `common` (general edition), `enterprise` (enterprise edition). Note: This field may return null, indicating that no valid values can be obtained.
-     * @param float $MinPackageSpec Minimum number of resources for the current edition of the resource pack.  Unit of the compute resources: pcs.  Unit of the storage resources: GB. Note: This field may return null, indicating that no valid values can be obtained.
-     * @param float $MaxPackageSpec Maximum number of resources for the current edition of the resource pack.  Unit of the compute resources: pcs.  Unit of the storage resources: GB. Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $ExpireDay Validity period of a resource pack in days Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $PackageRegion Resource package region of use.
+     * @param string $PackageType Specifies the resource package type.
+CCU - compute resource package.
+Storage resource package.
+     * @param string $PackageVersion Resource pack version.
+base - basic version; common - general version; enterprise - enterprise edition.
+     * @param float $MinPackageSpec Minimum number of resources in the current version of the resource package. compute resource unit: pieces; storage resource: GB.
+     * @param float $MaxPackageSpec Specifies the maximum number of resources in the current version of the resource package. valid values: compute resource unit: pieces; storage resource: GB.
+     * @param integer $ExpireDay Specifies the resource pack validity period. the measurement unit is day.
      */
     function __construct()
     {

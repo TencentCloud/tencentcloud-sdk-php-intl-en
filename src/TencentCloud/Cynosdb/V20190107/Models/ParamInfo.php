@@ -24,10 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCurrentValue(string $CurrentValue) Set Current value
  * @method string getDefault() Obtain Default value
  * @method void setDefault(string $Default) Set Default value
- * @method array getEnumValue() Obtain List of valid values when parameter type is `enum`, `string` or `bool`.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setEnumValue(array $EnumValue) Set List of valid values when parameter type is `enum`, `string` or `bool`.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method array getEnumValue() Obtain If the parameter is of type enum/string/bool, the available options list.
+ * @method void setEnumValue(array $EnumValue) Set If the parameter is of type enum/string/bool, the available options list.
  * @method string getMax() Obtain Maximum value when parameter type is `float` or `integer`.
  * @method void setMax(string $Max) Set Maximum value when parameter type is `float` or `integer`.
  * @method string getMin() Obtain Minimum value when parameter type is `float` or `integer`.
@@ -44,22 +42,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
  * @method void setMatchValue(string $MatchValue) Set Match values, which will be separated by semicolon when match type is `multiVal`.
  * @method string getDescription() Obtain Parameter description
  * @method void setDescription(string $Description) Set Parameter description
- * @method integer getIsGlobal() Obtain Whether it is global parameter
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setIsGlobal(integer $IsGlobal) Set Whether it is global parameter
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method ModifiableInfo getModifiableInfo() Obtain Whether the parameter can be modified
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setModifiableInfo(ModifiableInfo $ModifiableInfo) Set Whether the parameter can be modified
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method boolean getIsFunc() Obtain Whether it is a function
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setIsFunc(boolean $IsFunc) Set Whether it is a function
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getFunc() Obtain Function
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setFunc(string $Func) Set Function
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getIsGlobal() Obtain Whether it is a global parameter.
+ * @method void setIsGlobal(integer $IsGlobal) Set Whether it is a global parameter.
+ * @method ModifiableInfo getModifiableInfo() Obtain Whether the parameter is modifiable.
+ * @method void setModifiableInfo(ModifiableInfo $ModifiableInfo) Set Whether the parameter is modifiable.
+ * @method boolean getIsFunc() Obtain Whether it is a function.
+ * @method void setIsFunc(boolean $IsFunc) Set Whether it is a function.
+ * @method string getFunc() Obtain Function.
+ * @method void setFunc(string $Func) Set Function.
+ * @method string getFuncPattern() Obtain The default formula style of parameters that support formulas.
+ * @method void setFuncPattern(string $FuncPattern) Set The default formula style of parameters that support formulas.
  */
 class ParamInfo extends AbstractModel
 {
@@ -74,8 +66,7 @@ class ParamInfo extends AbstractModel
     public $Default;
 
     /**
-     * @var array List of valid values when parameter type is `enum`, `string` or `bool`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array If the parameter is of type enum/string/bool, the available options list.
      */
     public $EnumValue;
 
@@ -120,34 +111,34 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $Description;
 
     /**
-     * @var integer Whether it is global parameter
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Whether it is a global parameter.
      */
     public $IsGlobal;
 
     /**
-     * @var ModifiableInfo Whether the parameter can be modified
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var ModifiableInfo Whether the parameter is modifiable.
      */
     public $ModifiableInfo;
 
     /**
-     * @var boolean Whether it is a function
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var boolean Whether it is a function.
      */
     public $IsFunc;
 
     /**
-     * @var string Function
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Function.
      */
     public $Func;
 
     /**
+     * @var string The default formula style of parameters that support formulas.
+     */
+    public $FuncPattern;
+
+    /**
      * @param string $CurrentValue Current value
      * @param string $Default Default value
-     * @param array $EnumValue List of valid values when parameter type is `enum`, `string` or `bool`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param array $EnumValue If the parameter is of type enum/string/bool, the available options list.
      * @param string $Max Maximum value when parameter type is `float` or `integer`.
      * @param string $Min Minimum value when parameter type is `float` or `integer`.
      * @param string $ParamName Parameter name
@@ -156,14 +147,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $MatchType Match type. Regex can be used when parameter type is `string`. Valid value: `multiVal`.
      * @param string $MatchValue Match values, which will be separated by semicolon when match type is `multiVal`.
      * @param string $Description Parameter description
-     * @param integer $IsGlobal Whether it is global parameter
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ModifiableInfo $ModifiableInfo Whether the parameter can be modified
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param boolean $IsFunc Whether it is a function
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Func Function
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $IsGlobal Whether it is a global parameter.
+     * @param ModifiableInfo $ModifiableInfo Whether the parameter is modifiable.
+     * @param boolean $IsFunc Whether it is a function.
+     * @param string $Func Function.
+     * @param string $FuncPattern The default formula style of parameters that support formulas.
      */
     function __construct()
     {
@@ -237,6 +225,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("Func",$param) and $param["Func"] !== null) {
             $this->Func = $param["Func"];
+        }
+
+        if (array_key_exists("FuncPattern",$param) and $param["FuncPattern"] !== null) {
+            $this->FuncPattern = $param["FuncPattern"];
         }
     }
 }

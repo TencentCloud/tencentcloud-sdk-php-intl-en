@@ -20,58 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * OpenReadOnlyInstanceExclusiveAccess request structure.
  *
- * @method string getClusterId() Obtain Cluster ID
- * @method void setClusterId(string $ClusterId) Set Cluster ID
- * @method string getInstanceId() Obtain ID of the read-only instance with dedicated access to be enabled
- * @method void setInstanceId(string $InstanceId) Set ID of the read-only instance with dedicated access to be enabled
- * @method string getVpcId() Obtain Specified VPC ID
- * @method void setVpcId(string $VpcId) Set Specified VPC ID
- * @method string getSubnetId() Obtain Specified subnet ID
- * @method void setSubnetId(string $SubnetId) Set Specified subnet ID
- * @method integer getPort() Obtain Port
- * @method void setPort(integer $Port) Set Port
- * @method array getSecurityGroupIds() Obtain Security group
- * @method void setSecurityGroupIds(array $SecurityGroupIds) Set Security group
+ * @method string getClusterId() Obtain Please use the cluster information description (https://intl.cloud.tencent.com/document/api/1003/48086?from_cn_redirect=1) to obtain the clusterId.
+ * @method void setClusterId(string $ClusterId) Set Please use the cluster information description (https://intl.cloud.tencent.com/document/api/1003/48086?from_cn_redirect=1) to obtain the clusterId.
+ * @method string getInstanceId() Obtain Please use the cluster information description (https://intl.cloud.tencent.com/document/api/1003/48086?from_cn_redirect=1) to obtain the instanceId.
+ * @method void setInstanceId(string $InstanceId) Set Please use the cluster information description (https://intl.cloud.tencent.com/document/api/1003/48086?from_cn_redirect=1) to obtain the instanceId.
+ * @method string getVpcId() Obtain Specifies the designated vpc ID. please use the "query vpc list" to obtain the vpc ID.
+ * @method void setVpcId(string $VpcId) Set Specifies the designated vpc ID. please use the "query vpc list" to obtain the vpc ID.
+ * @method string getSubnetId() Obtain Specified subnet ID. if vpc ID is set, SubnetId is required. please use query subnet list (https://intl.cloud.tencent.com/document/api/215/15784?from_cn_redirect=1) to get SubnetId.
+ * @method void setSubnetId(string $SubnetId) Set Specified subnet ID. if vpc ID is set, SubnetId is required. please use query subnet list (https://intl.cloud.tencent.com/document/api/215/15784?from_cn_redirect=1) to get SubnetId.
+ * @method integer getPort() Obtain User-Defined port.
+ * @method void setPort(integer $Port) Set User-Defined port.
+ * @method array getSecurityGroupIds() Obtain Security group ID. use [view security group](https://intl.cloud.tencent.com/document/api/215/15808?from_cn_redirect=1) to obtain the SecurityGroupId.
+ * @method void setSecurityGroupIds(array $SecurityGroupIds) Set Security group ID. use [view security group](https://intl.cloud.tencent.com/document/api/215/15808?from_cn_redirect=1) to obtain the SecurityGroupId.
  */
 class OpenReadOnlyInstanceExclusiveAccessRequest extends AbstractModel
 {
     /**
-     * @var string Cluster ID
+     * @var string Please use the cluster information description (https://intl.cloud.tencent.com/document/api/1003/48086?from_cn_redirect=1) to obtain the clusterId.
      */
     public $ClusterId;
 
     /**
-     * @var string ID of the read-only instance with dedicated access to be enabled
+     * @var string Please use the cluster information description (https://intl.cloud.tencent.com/document/api/1003/48086?from_cn_redirect=1) to obtain the instanceId.
      */
     public $InstanceId;
 
     /**
-     * @var string Specified VPC ID
+     * @var string Specifies the designated vpc ID. please use the "query vpc list" to obtain the vpc ID.
      */
     public $VpcId;
 
     /**
-     * @var string Specified subnet ID
+     * @var string Specified subnet ID. if vpc ID is set, SubnetId is required. please use query subnet list (https://intl.cloud.tencent.com/document/api/215/15784?from_cn_redirect=1) to get SubnetId.
      */
     public $SubnetId;
 
     /**
-     * @var integer Port
+     * @var integer User-Defined port.
      */
     public $Port;
 
     /**
-     * @var array Security group
+     * @var array Security group ID. use [view security group](https://intl.cloud.tencent.com/document/api/215/15808?from_cn_redirect=1) to obtain the SecurityGroupId.
      */
     public $SecurityGroupIds;
 
     /**
-     * @param string $ClusterId Cluster ID
-     * @param string $InstanceId ID of the read-only instance with dedicated access to be enabled
-     * @param string $VpcId Specified VPC ID
-     * @param string $SubnetId Specified subnet ID
-     * @param integer $Port Port
-     * @param array $SecurityGroupIds Security group
+     * @param string $ClusterId Please use the cluster information description (https://intl.cloud.tencent.com/document/api/1003/48086?from_cn_redirect=1) to obtain the clusterId.
+     * @param string $InstanceId Please use the cluster information description (https://intl.cloud.tencent.com/document/api/1003/48086?from_cn_redirect=1) to obtain the instanceId.
+     * @param string $VpcId Specifies the designated vpc ID. please use the "query vpc list" to obtain the vpc ID.
+     * @param string $SubnetId Specified subnet ID. if vpc ID is set, SubnetId is required. please use query subnet list (https://intl.cloud.tencent.com/document/api/215/15784?from_cn_redirect=1) to get SubnetId.
+     * @param integer $Port User-Defined port.
+     * @param array $SecurityGroupIds Security group ID. use [view security group](https://intl.cloud.tencent.com/document/api/215/15808?from_cn_redirect=1) to obtain the SecurityGroupId.
      */
     function __construct()
     {

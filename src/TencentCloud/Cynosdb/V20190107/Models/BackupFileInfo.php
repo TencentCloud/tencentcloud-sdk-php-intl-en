@@ -38,16 +38,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBackupStatus(string $BackupStatus) Set Backup file status. success: backup succeeded; fail: backup failed; creating: creating backup file; deleting: deleting backup file
  * @method string getSnapshotTime() Obtain Backup file time
  * @method void setSnapshotTime(string $SnapshotTime) Set Backup file time
- * @method integer getBackupId() Obtain Backup ID
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setBackupId(integer $BackupId) Set Backup ID
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getSnapShotType() Obtain 
- * @method void setSnapShotType(string $SnapShotType) Set 
- * @method string getBackupName() Obtain Backup file alias
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setBackupName(string $BackupName) Set Backup file alias
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getBackupId() Obtain Backup ID.
+ * @method void setBackupId(integer $BackupId) Set Backup ID.
+ * @method string getSnapShotType() Obtain Specifies the snapshot type. valid values: full (full snapshot); increment (incremental snapshot).
+ * @method void setSnapShotType(string $SnapShotType) Set Specifies the snapshot type. valid values: full (full snapshot); increment (incremental snapshot).
+ * @method string getBackupName() Obtain Specifies the remark of the backup file.
+ * @method void setBackupName(string $BackupName) Set Specifies the remark of the backup file.
  */
 class BackupFileInfo extends AbstractModel
 {
@@ -97,19 +93,17 @@ class BackupFileInfo extends AbstractModel
     public $SnapshotTime;
 
     /**
-     * @var integer Backup ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Backup ID.
      */
     public $BackupId;
 
     /**
-     * @var string 
+     * @var string Specifies the snapshot type. valid values: full (full snapshot); increment (incremental snapshot).
      */
     public $SnapShotType;
 
     /**
-     * @var string Backup file alias
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Specifies the remark of the backup file.
      */
     public $BackupName;
 
@@ -123,11 +117,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $BackupMethod Back mode. auto: auto backup; manual: manual backup
      * @param string $BackupStatus Backup file status. success: backup succeeded; fail: backup failed; creating: creating backup file; deleting: deleting backup file
      * @param string $SnapshotTime Backup file time
-     * @param integer $BackupId Backup ID
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $SnapShotType 
-     * @param string $BackupName Backup file alias
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $BackupId Backup ID.
+     * @param string $SnapShotType Specifies the snapshot type. valid values: full (full snapshot); increment (incremental snapshot).
+     * @param string $BackupName Specifies the remark of the backup file.
      */
     function __construct()
     {

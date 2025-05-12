@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Types of the returned error logs for an instance
  *
- * @method integer getTimestamp() Obtain Log timestamp Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setTimestamp(integer $Timestamp) Set Log timestamp Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getLevel() Obtain Log level Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setLevel(string $Level) Set Log level Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getContent() Obtain Log content Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setContent(string $Content) Set Log content Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getTimestamp() Obtain Log timestamp.
+ * @method void setTimestamp(integer $Timestamp) Set Log timestamp.
+ * @method string getLevel() Obtain Log level.
+ * @method void setLevel(string $Level) Set Log level.
+ * @method string getContent() Obtain Log content.
+ * @method void setContent(string $Content) Set Log content.
  */
 class CynosdbErrorLogItem extends AbstractModel
 {
     /**
-     * @var integer Log timestamp Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Log timestamp.
      */
     public $Timestamp;
 
     /**
-     * @var string Log level Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Log level.
      */
     public $Level;
 
     /**
-     * @var string Log content Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Log content.
      */
     public $Content;
 
     /**
-     * @param integer $Timestamp Log timestamp Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Level Log level Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Content Log content Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $Timestamp Log timestamp.
+     * @param string $Level Log level.
+     * @param string $Content Log content.
      */
     function __construct()
     {

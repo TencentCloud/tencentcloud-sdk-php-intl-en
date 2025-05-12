@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * Database table information
  *
  * @method string getDatabase() Obtain Database name
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setDatabase(string $Database) Set Database name
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method array getTables() Obtain Table name list
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setTables(array $Tables) Set Table name list
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method array getTables() Obtain Table name list.
+ * @method void setTables(array $Tables) Set Table name list.
  */
 class DatabaseTables extends AbstractModel
 {
     /**
      * @var string Database name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Database;
 
     /**
-     * @var array Table name list
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array Table name list.
      */
     public $Tables;
 
     /**
      * @param string $Database Database name
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param array $Tables Table name list
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param array $Tables Table name list.
      */
     function __construct()
     {

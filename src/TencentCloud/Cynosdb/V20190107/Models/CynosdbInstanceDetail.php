@@ -42,6 +42,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStatus(string $Status) Set Instance status
  * @method string getStatusDesc() Obtain Instance status description
  * @method void setStatusDesc(string $StatusDesc) Set Instance status description
+ * @method string getServerlessStatus() Obtain Serverless instance status. Valid values:
+resume
+pause
+ * @method void setServerlessStatus(string $ServerlessStatus) Set Serverless instance status. Valid values:
+resume
+pause
  * @method string getDbType() Obtain Database type
  * @method void setDbType(string $DbType) Set Database type
  * @method string getDbVersion() Obtain Database version
@@ -86,12 +92,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMinCpu(float $MinCpu) Set The minimum number of CPU cores for a serverless instance
  * @method float getMaxCpu() Obtain The maximum number of CPU cores for a serverless instance
  * @method void setMaxCpu(float $MaxCpu) Set The maximum number of CPU cores for a serverless instance
- * @method string getServerlessStatus() Obtain Serverless instance status. Valid values:
-resume
-pause
- * @method void setServerlessStatus(string $ServerlessStatus) Set Serverless instance status. Valid values:
-resume
-pause
+ * @method string getDbMode() Obtain Db type: <li>NORMAL</li> <li>SERVERLESS</li>.
+ * @method void setDbMode(string $DbMode) Set Db type: <li>NORMAL</li> <li>SERVERLESS</li>.
  */
 class CynosdbInstanceDetail extends AbstractModel
 {
@@ -149,6 +151,13 @@ class CynosdbInstanceDetail extends AbstractModel
      * @var string Instance status description
      */
     public $StatusDesc;
+
+    /**
+     * @var string Serverless instance status. Valid values:
+resume
+pause
+     */
+    public $ServerlessStatus;
 
     /**
      * @var string Database type
@@ -261,11 +270,9 @@ class CynosdbInstanceDetail extends AbstractModel
     public $MaxCpu;
 
     /**
-     * @var string Serverless instance status. Valid values:
-resume
-pause
+     * @var string Db type: <li>NORMAL</li> <li>SERVERLESS</li>.
      */
-    public $ServerlessStatus;
+    public $DbMode;
 
     /**
      * @param string $Uin User `Uin`
@@ -279,6 +286,9 @@ pause
      * @param string $Zone AZ
      * @param string $Status Instance status
      * @param string $StatusDesc Instance status description
+     * @param string $ServerlessStatus Serverless instance status. Valid values:
+resume
+pause
      * @param string $DbType Database type
      * @param string $DbVersion Database version
      * @param integer $Cpu Number of CPU cores
@@ -301,9 +311,7 @@ pause
      * @param integer $RenewFlag Renewal flag
      * @param float $MinCpu The minimum number of CPU cores for a serverless instance
      * @param float $MaxCpu The maximum number of CPU cores for a serverless instance
-     * @param string $ServerlessStatus Serverless instance status. Valid values:
-resume
-pause
+     * @param string $DbMode Db type: <li>NORMAL</li> <li>SERVERLESS</li>.
      */
     function __construct()
     {
@@ -360,6 +368,10 @@ pause
 
         if (array_key_exists("StatusDesc",$param) and $param["StatusDesc"] !== null) {
             $this->StatusDesc = $param["StatusDesc"];
+        }
+
+        if (array_key_exists("ServerlessStatus",$param) and $param["ServerlessStatus"] !== null) {
+            $this->ServerlessStatus = $param["ServerlessStatus"];
         }
 
         if (array_key_exists("DbType",$param) and $param["DbType"] !== null) {
@@ -450,8 +462,8 @@ pause
             $this->MaxCpu = $param["MaxCpu"];
         }
 
-        if (array_key_exists("ServerlessStatus",$param) and $param["ServerlessStatus"] !== null) {
-            $this->ServerlessStatus = $param["ServerlessStatus"];
+        if (array_key_exists("DbMode",$param) and $param["DbMode"] !== null) {
+            $this->DbMode = $param["DbMode"];
         }
     }
 }

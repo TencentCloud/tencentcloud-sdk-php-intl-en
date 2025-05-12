@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 
  *
- * @method string getZone() Obtain 
- * @method void setZone(string $Zone) Set 
- * @method string getBinlogSyncWay() Obtain 
- * @method void setBinlogSyncWay(string $BinlogSyncWay) Set 
+ * @method string getZone() Obtain Availability zone
+ * @method void setZone(string $Zone) Set Availability zone
+ * @method string getBinlogSyncWay() Obtain binlog synchronization mode.
+ * @method void setBinlogSyncWay(string $BinlogSyncWay) Set binlog synchronization mode.
  */
 class SlaveZoneAttrItem extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Availability zone
      */
     public $Zone;
 
     /**
-     * @var string 
+     * @var string binlog synchronization mode.
      */
     public $BinlogSyncWay;
 
     /**
-     * @param string $Zone 
-     * @param string $BinlogSyncWay 
+     * @param string $Zone Availability zone
+     * @param string $BinlogSyncWay binlog synchronization mode.
      */
     function __construct()
     {

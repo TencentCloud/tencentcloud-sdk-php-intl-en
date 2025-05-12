@@ -36,14 +36,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMaxIops(integer $MaxIops) Set Maximum IOPS
  * @method integer getMaxIoBandWidth() Obtain Maximum bandwidth
  * @method void setMaxIoBandWidth(integer $MaxIoBandWidth) Set Maximum bandwidth
- * @method array getZoneStockInfos() Obtain Inventory information in a region
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setZoneStockInfos(array $ZoneStockInfos) Set Inventory information in a region
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getStockCount() Obtain Quantity in stock
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setStockCount(integer $StockCount) Set Quantity in stock
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method array getZoneStockInfos() Obtain Regional inventory information.
+ * @method void setZoneStockInfos(array $ZoneStockInfos) Set Regional inventory information.
+ * @method integer getStockCount() Obtain Inventory quantity.
+ * @method void setStockCount(integer $StockCount) Set Inventory quantity.
  */
 class InstanceSpec extends AbstractModel
 {
@@ -88,14 +84,12 @@ class InstanceSpec extends AbstractModel
     public $MaxIoBandWidth;
 
     /**
-     * @var array Inventory information in a region
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array Regional inventory information.
      */
     public $ZoneStockInfos;
 
     /**
-     * @var integer Quantity in stock
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Inventory quantity.
      */
     public $StockCount;
 
@@ -108,10 +102,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $MachineType Machine type
      * @param integer $MaxIops Maximum IOPS
      * @param integer $MaxIoBandWidth Maximum bandwidth
-     * @param array $ZoneStockInfos Inventory information in a region
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $StockCount Quantity in stock
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param array $ZoneStockInfos Regional inventory information.
+     * @param integer $StockCount Inventory quantity.
      */
     function __construct()
     {

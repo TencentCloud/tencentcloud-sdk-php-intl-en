@@ -21,45 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * Database address
  *
  * @method string getVip() Obtain IP
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setVip(string $Vip) Set IP
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method integer getVport() Obtain Port
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setVport(integer $Vport) Set Port
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getReturnTime() Obtain Expected valid hours of old IPs
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setReturnTime(string $ReturnTime) Set Expected valid hours of old IPs
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getReturnTime() Obtain Expect recycle time.
+ * @method void setReturnTime(string $ReturnTime) Set Expect recycle time.
  */
 class OldAddrInfo extends AbstractModel
 {
     /**
      * @var string IP
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Vip;
 
     /**
      * @var integer Port
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Vport;
 
     /**
-     * @var string Expected valid hours of old IPs
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Expect recycle time.
      */
     public $ReturnTime;
 
     /**
      * @param string $Vip IP
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $Vport Port
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $ReturnTime Expected valid hours of old IPs
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $ReturnTime Expect recycle time.
      */
     function __construct()
     {

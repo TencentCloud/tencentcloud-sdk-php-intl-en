@@ -24,10 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setParamName(string $ParamName) Set Parameter name
  * @method string getCurrentValue() Obtain Current parameter value
  * @method void setCurrentValue(string $CurrentValue) Set Current parameter value
- * @method string getOldValue() Obtain Old parameter value, which is used only in output parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setOldValue(string $OldValue) Set Old parameter value, which is used only in output parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getOldValue() Obtain Old parameter value (useful only in output parameters).
+ * @method void setOldValue(string $OldValue) Set Old parameter value (useful only in output parameters).
+ * @method string getComponent() Obtain libra component type.
+ * @method void setComponent(string $Component) Set libra component type.
  */
 class ModifyParamItem extends AbstractModel
 {
@@ -42,16 +42,20 @@ class ModifyParamItem extends AbstractModel
     public $CurrentValue;
 
     /**
-     * @var string Old parameter value, which is used only in output parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Old parameter value (useful only in output parameters).
      */
     public $OldValue;
 
     /**
+     * @var string libra component type.
+     */
+    public $Component;
+
+    /**
      * @param string $ParamName Parameter name
      * @param string $CurrentValue Current parameter value
-     * @param string $OldValue Old parameter value, which is used only in output parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $OldValue Old parameter value (useful only in output parameters).
+     * @param string $Component libra component type.
      */
     function __construct()
     {
@@ -76,6 +80,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("OldValue",$param) and $param["OldValue"] !== null) {
             $this->OldValue = $param["OldValue"];
+        }
+
+        if (array_key_exists("Component",$param) and $param["Component"] !== null) {
+            $this->Component = $param["Component"];
         }
     }
 }

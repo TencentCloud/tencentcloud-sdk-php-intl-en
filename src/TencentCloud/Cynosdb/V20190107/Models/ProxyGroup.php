@@ -33,17 +33,11 @@ use TencentCloud\Common\AbstractModel;
  * @method string getCurrentProxyVersion() Obtain Current proxy version
  * @method void setCurrentProxyVersion(string $CurrentProxyVersion) Set Current proxy version
  * @method string getClusterId() Obtain Cluster ID
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setClusterId(string $ClusterId) Set Cluster ID
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getAppId() Obtain User `AppId`
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setAppId(integer $AppId) Set User `AppId`
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getOpenRw() Obtain Enabling read/write separation for database proxy
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setOpenRw(string $OpenRw) Set Enabling read/write separation for database proxy
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getAppId() Obtain User AppId
+ * @method void setAppId(integer $AppId) Set User AppId
+ * @method string getOpenRw() Obtain Specifies that a read-write node activates the database proxy.
+ * @method void setOpenRw(string $OpenRw) Set Specifies that a read-write node activates the database proxy.
  */
 class ProxyGroup extends AbstractModel
 {
@@ -79,19 +73,16 @@ class ProxyGroup extends AbstractModel
 
     /**
      * @var string Cluster ID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ClusterId;
 
     /**
-     * @var integer User `AppId`
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer User AppId
      */
     public $AppId;
 
     /**
-     * @var string Enabling read/write separation for database proxy
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Specifies that a read-write node activates the database proxy.
      */
     public $OpenRw;
 
@@ -103,11 +94,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $Zone AZ
      * @param string $CurrentProxyVersion Current proxy version
      * @param string $ClusterId Cluster ID
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $AppId User `AppId`
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $OpenRw Enabling read/write separation for database proxy
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $AppId User AppId
+     * @param string $OpenRw Specifies that a read-write node activates the database proxy.
      */
     function __construct()
     {

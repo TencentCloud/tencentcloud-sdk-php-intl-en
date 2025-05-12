@@ -42,6 +42,34 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSqlTemplate(string $SqlTemplate) Set SQL template
  * @method string getSqlMd5() Obtain MD5 value of the SQL statement
  * @method void setSqlMd5(string $SqlMd5) Set MD5 value of the SQL statement
+ * @method integer getSyncReadCountRemote() Obtain Remote reading count.
+Specifies that the database kernel version is larger than 3.1.12.
+ * @method void setSyncReadCountRemote(integer $SyncReadCountRemote) Set Remote reading count.
+Specifies that the database kernel version is larger than 3.1.12.
+ * @method integer getSyncReadBytesRemote() Obtain Number of remote read bytes.
+Specifies that the database kernel version is larger than 3.1.12.
+ * @method void setSyncReadBytesRemote(integer $SyncReadBytesRemote) Set Number of remote read bytes.
+Specifies that the database kernel version is larger than 3.1.12.
+ * @method integer getSyncReadTimeRemote() Obtain Time spent on remote reads (µs).
+Specifies that the database kernel version is larger than 3.1.12.
+ * @method void setSyncReadTimeRemote(integer $SyncReadTimeRemote) Set Time spent on remote reads (µs).
+Specifies that the database kernel version is larger than 3.1.12.
+ * @method integer getSyncWriteCountRemote() Obtain Remote write count.
+Specifies that the database kernel version is larger than 3.1.12.
+ * @method void setSyncWriteCountRemote(integer $SyncWriteCountRemote) Set Remote write count.
+Specifies that the database kernel version is larger than 3.1.12.
+ * @method integer getSyncWriteBytesRemote() Obtain Specifies the number of remote written bytes.
+Specifies that the database kernel version is larger than 3.1.12.
+ * @method void setSyncWriteBytesRemote(integer $SyncWriteBytesRemote) Set Specifies the number of remote written bytes.
+Specifies that the database kernel version is larger than 3.1.12.
+ * @method integer getSyncWriteTimeRemote() Obtain Time spent on remote writing (µs).
+Specifies that the database kernel version is larger than 3.1.12.
+ * @method void setSyncWriteTimeRemote(integer $SyncWriteTimeRemote) Set Time spent on remote writing (µs).
+Specifies that the database kernel version is larger than 3.1.12.
+ * @method integer getTrxCommitDelay() Obtain Transaction submission delay (µs).
+Specifies that the database kernel version is larger than 3.1.12.
+ * @method void setTrxCommitDelay(integer $TrxCommitDelay) Set Transaction submission delay (µs).
+Specifies that the database kernel version is larger than 3.1.12.
  */
 class SlowQueriesItem extends AbstractModel
 {
@@ -101,6 +129,48 @@ class SlowQueriesItem extends AbstractModel
     public $SqlMd5;
 
     /**
+     * @var integer Remote reading count.
+Specifies that the database kernel version is larger than 3.1.12.
+     */
+    public $SyncReadCountRemote;
+
+    /**
+     * @var integer Number of remote read bytes.
+Specifies that the database kernel version is larger than 3.1.12.
+     */
+    public $SyncReadBytesRemote;
+
+    /**
+     * @var integer Time spent on remote reads (µs).
+Specifies that the database kernel version is larger than 3.1.12.
+     */
+    public $SyncReadTimeRemote;
+
+    /**
+     * @var integer Remote write count.
+Specifies that the database kernel version is larger than 3.1.12.
+     */
+    public $SyncWriteCountRemote;
+
+    /**
+     * @var integer Specifies the number of remote written bytes.
+Specifies that the database kernel version is larger than 3.1.12.
+     */
+    public $SyncWriteBytesRemote;
+
+    /**
+     * @var integer Time spent on remote writing (µs).
+Specifies that the database kernel version is larger than 3.1.12.
+     */
+    public $SyncWriteTimeRemote;
+
+    /**
+     * @var integer Transaction submission delay (µs).
+Specifies that the database kernel version is larger than 3.1.12.
+     */
+    public $TrxCommitDelay;
+
+    /**
      * @param integer $Timestamp Execution timestamp
      * @param float $QueryTime Execution duration in seconds
      * @param string $SqlText SQL statement
@@ -112,6 +182,20 @@ class SlowQueriesItem extends AbstractModel
      * @param integer $RowsSent Number of returned rows
      * @param string $SqlTemplate SQL template
      * @param string $SqlMd5 MD5 value of the SQL statement
+     * @param integer $SyncReadCountRemote Remote reading count.
+Specifies that the database kernel version is larger than 3.1.12.
+     * @param integer $SyncReadBytesRemote Number of remote read bytes.
+Specifies that the database kernel version is larger than 3.1.12.
+     * @param integer $SyncReadTimeRemote Time spent on remote reads (µs).
+Specifies that the database kernel version is larger than 3.1.12.
+     * @param integer $SyncWriteCountRemote Remote write count.
+Specifies that the database kernel version is larger than 3.1.12.
+     * @param integer $SyncWriteBytesRemote Specifies the number of remote written bytes.
+Specifies that the database kernel version is larger than 3.1.12.
+     * @param integer $SyncWriteTimeRemote Time spent on remote writing (µs).
+Specifies that the database kernel version is larger than 3.1.12.
+     * @param integer $TrxCommitDelay Transaction submission delay (µs).
+Specifies that the database kernel version is larger than 3.1.12.
      */
     function __construct()
     {
@@ -168,6 +252,34 @@ class SlowQueriesItem extends AbstractModel
 
         if (array_key_exists("SqlMd5",$param) and $param["SqlMd5"] !== null) {
             $this->SqlMd5 = $param["SqlMd5"];
+        }
+
+        if (array_key_exists("SyncReadCountRemote",$param) and $param["SyncReadCountRemote"] !== null) {
+            $this->SyncReadCountRemote = $param["SyncReadCountRemote"];
+        }
+
+        if (array_key_exists("SyncReadBytesRemote",$param) and $param["SyncReadBytesRemote"] !== null) {
+            $this->SyncReadBytesRemote = $param["SyncReadBytesRemote"];
+        }
+
+        if (array_key_exists("SyncReadTimeRemote",$param) and $param["SyncReadTimeRemote"] !== null) {
+            $this->SyncReadTimeRemote = $param["SyncReadTimeRemote"];
+        }
+
+        if (array_key_exists("SyncWriteCountRemote",$param) and $param["SyncWriteCountRemote"] !== null) {
+            $this->SyncWriteCountRemote = $param["SyncWriteCountRemote"];
+        }
+
+        if (array_key_exists("SyncWriteBytesRemote",$param) and $param["SyncWriteBytesRemote"] !== null) {
+            $this->SyncWriteBytesRemote = $param["SyncWriteBytesRemote"];
+        }
+
+        if (array_key_exists("SyncWriteTimeRemote",$param) and $param["SyncWriteTimeRemote"] !== null) {
+            $this->SyncWriteTimeRemote = $param["SyncWriteTimeRemote"];
+        }
+
+        if (array_key_exists("TrxCommitDelay",$param) and $param["TrxCommitDelay"] !== null) {
+            $this->TrxCommitDelay = $param["TrxCommitDelay"];
         }
     }
 }

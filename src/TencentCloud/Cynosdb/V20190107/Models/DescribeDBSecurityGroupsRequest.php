@@ -20,18 +20,27 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeDBSecurityGroups request structure.
  *
- * @method string getInstanceId() Obtain Instance group ID
- * @method void setInstanceId(string $InstanceId) Set Instance group ID
+ * @method string getInstanceId() Obtain Specifies that the instance ID must be provided by selecting either InstanceId or InstanceGroupId.
+ * @method void setInstanceId(string $InstanceId) Set Specifies that the instance ID must be provided by selecting either InstanceId or InstanceGroupId.
+ * @method string getInstanceGroupId() Obtain Specifies that the instance group ID must be provided by selecting either InstanceId or InstanceGroupId.
+ * @method void setInstanceGroupId(string $InstanceGroupId) Set Specifies that the instance group ID must be provided by selecting either InstanceId or InstanceGroupId.
  */
 class DescribeDBSecurityGroupsRequest extends AbstractModel
 {
     /**
-     * @var string Instance group ID
+     * @var string Specifies that the instance ID must be provided by selecting either InstanceId or InstanceGroupId.
+     * @deprecated
      */
     public $InstanceId;
 
     /**
-     * @param string $InstanceId Instance group ID
+     * @var string Specifies that the instance group ID must be provided by selecting either InstanceId or InstanceGroupId.
+     */
+    public $InstanceGroupId;
+
+    /**
+     * @param string $InstanceId Specifies that the instance ID must be provided by selecting either InstanceId or InstanceGroupId.
+     * @param string $InstanceGroupId Specifies that the instance group ID must be provided by selecting either InstanceId or InstanceGroupId.
      */
     function __construct()
     {
@@ -48,6 +57,10 @@ class DescribeDBSecurityGroupsRequest extends AbstractModel
         }
         if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
             $this->InstanceId = $param["InstanceId"];
+        }
+
+        if (array_key_exists("InstanceGroupId",$param) and $param["InstanceGroupId"] !== null) {
+            $this->InstanceGroupId = $param["InstanceGroupId"];
         }
     }
 }

@@ -79,6 +79,7 @@ class AddInstancesRequest extends AbstractModel
 
     /**
      * @var string Instance group ID, which will be used when you add an instance in an existing RO group. If this parameter is left empty, an RO group will be created. But it is not recommended to pass in this parameter for the current version, as this version has been disused.
+     * @deprecated
      */
     public $InstanceGrpId;
 

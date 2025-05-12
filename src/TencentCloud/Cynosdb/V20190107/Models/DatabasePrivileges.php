@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Database permission list
  *
- * @method string getDb() Obtain Database
- * @method void setDb(string $Db) Set Database
+ * @method string getDb() Obtain Database.
+ * @method void setDb(string $Db) Set Database.
  * @method array getPrivileges() Obtain Permission list
  * @method void setPrivileges(array $Privileges) Set Permission list
  */
 class DatabasePrivileges extends AbstractModel
 {
     /**
-     * @var string Database
+     * @var string Database.
      */
     public $Db;
 
@@ -38,7 +38,7 @@ class DatabasePrivileges extends AbstractModel
     public $Privileges;
 
     /**
-     * @param string $Db Database
+     * @param string $Db Database.
      * @param array $Privileges Permission list
      */
     function __construct()

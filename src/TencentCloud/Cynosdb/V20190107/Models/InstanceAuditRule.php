@@ -22,14 +22,14 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() Obtain Instance ID.
  * @method void setInstanceId(string $InstanceId) Set Instance ID.
- * @method boolean getAuditRule() Obtain Whether the audit is rule audit. Valid values: `true` (rule audit), `false` (full audit).
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setAuditRule(boolean $AuditRule) Set Whether the audit is rule audit. Valid values: `true` (rule audit), `false` (full audit).
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method array getAuditRuleFilters() Obtain Audit rule details, which is valid only when `AuditRule` is `true`.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setAuditRuleFilters(array $AuditRuleFilters) Set Audit rule details, which is valid only when `AuditRule` is `true`.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method boolean getAuditRule() Obtain Specifies whether it is a rule-based audit. true - rule-based audit; false - comprehensive audit.
+ * @method void setAuditRule(boolean $AuditRule) Set Specifies whether it is a rule-based audit. true - rule-based audit; false - comprehensive audit.
+ * @method array getAuditRuleFilters() Obtain Specifies the audit rule details. valid when AuditRule=true.
+ * @method void setAuditRuleFilters(array $AuditRuleFilters) Set Specifies the audit rule details. valid when AuditRule=true.
+ * @method boolean getOldRule() Obtain Whether it is an audit policy.
+ * @method void setOldRule(boolean $OldRule) Set Whether it is an audit policy.
+ * @method array getRuleTemplates() Obtain The rule template details of the instance application.
+ * @method void setRuleTemplates(array $RuleTemplates) Set The rule template details of the instance application.
  */
 class InstanceAuditRule extends AbstractModel
 {
@@ -39,23 +39,31 @@ class InstanceAuditRule extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var boolean Whether the audit is rule audit. Valid values: `true` (rule audit), `false` (full audit).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var boolean Specifies whether it is a rule-based audit. true - rule-based audit; false - comprehensive audit.
      */
     public $AuditRule;
 
     /**
-     * @var array Audit rule details, which is valid only when `AuditRule` is `true`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array Specifies the audit rule details. valid when AuditRule=true.
      */
     public $AuditRuleFilters;
 
     /**
+     * @var boolean Whether it is an audit policy.
+     */
+    public $OldRule;
+
+    /**
+     * @var array The rule template details of the instance application.
+     */
+    public $RuleTemplates;
+
+    /**
      * @param string $InstanceId Instance ID.
-     * @param boolean $AuditRule Whether the audit is rule audit. Valid values: `true` (rule audit), `false` (full audit).
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param array $AuditRuleFilters Audit rule details, which is valid only when `AuditRule` is `true`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param boolean $AuditRule Specifies whether it is a rule-based audit. true - rule-based audit; false - comprehensive audit.
+     * @param array $AuditRuleFilters Specifies the audit rule details. valid when AuditRule=true.
+     * @param boolean $OldRule Whether it is an audit policy.
+     * @param array $RuleTemplates The rule template details of the instance application.
      */
     function __construct()
     {
@@ -84,6 +92,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 $obj = new AuditRuleFilters();
                 $obj->deserialize($value);
                 array_push($this->AuditRuleFilters, $obj);
+            }
+        }
+
+        if (array_key_exists("OldRule",$param) and $param["OldRule"] !== null) {
+            $this->OldRule = $param["OldRule"];
+        }
+
+        if (array_key_exists("RuleTemplates",$param) and $param["RuleTemplates"] !== null) {
+            $this->RuleTemplates = [];
+            foreach ($param["RuleTemplates"] as $key => $value){
+                $obj = new RuleTemplateInfo();
+                $obj->deserialize($value);
+                array_push($this->RuleTemplates, $obj);
             }
         }
     }

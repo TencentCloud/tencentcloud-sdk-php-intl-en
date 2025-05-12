@@ -20,110 +20,146 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Resource pack
  *
- * @method integer getAppId() Obtain AppID Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setAppId(integer $AppId) Set AppID Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getPackageId() Obtain The unique ID of a resource pack Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setPackageId(string $PackageId) Set The unique ID of a resource pack Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getPackageName() Obtain Resource pack name Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setPackageName(string $PackageName) Set Resource pack name Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getPackageType() Obtain Resource pack type. Valid values: `CCU` (compute resource pack), `DISK` (storage resource pack). Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setPackageType(string $PackageType) Set Resource pack type. Valid values: `CCU` (compute resource pack), `DISK` (storage resource pack). Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getPackageRegion() Obtain Region of the resource pack. Valid values: `China` (Chinese mainland), `overseas` (outside Chinese mainland). Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setPackageRegion(string $PackageRegion) Set Region of the resource pack. Valid values: `China` (Chinese mainland), `overseas` (outside Chinese mainland). Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getStatus() Obtain Resource pack status. Valid values: `creating`, `using`, `expired`, `normal_finish` (used up), `apply_refund` (requesting a refund), `refund` (refunded). 
-Note:  This field may return null, indicating that no valid values can be obtained.
- * @method void setStatus(string $Status) Set Resource pack status. Valid values: `creating`, `using`, `expired`, `normal_finish` (used up), `apply_refund` (requesting a refund), `refund` (refunded). 
-Note:  This field may return null, indicating that no valid values can be obtained.
- * @method float getPackageTotalSpec() Obtain Total number of resource packs Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setPackageTotalSpec(float $PackageTotalSpec) Set Total number of resource packs Note: This field may return null, indicating that no valid values can be obtained.
- * @method float getPackageUsedSpec() Obtain Consumed usage of resource packs Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setPackageUsedSpec(float $PackageUsedSpec) Set Consumed usage of resource packs Note: This field may return null, indicating that no valid values can be obtained.
- * @method boolean getHasQuota() Obtain Remaining usage of resource packs Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setHasQuota(boolean $HasQuota) Set Remaining usage of resource packs Note: This field may return null, indicating that no valid values can be obtained.
- * @method array getBindInstanceInfos() Obtain Information of the instance bound Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setBindInstanceInfos(array $BindInstanceInfos) Set Information of the instance bound Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getStartTime() Obtain Validity time:  2022-07-01 00:00:00 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setStartTime(string $StartTime) Set Validity time:  2022-07-01 00:00:00 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getExpireTime() Obtain Validity time:  2022-08-01 00:00:00 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setExpireTime(string $ExpireTime) Set Validity time:  2022-08-01 00:00:00 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getAppId() Obtain AppID
+ * @method void setAppId(integer $AppId) Set AppID
+ * @method string getPackageId() Obtain The unique ID of the resource package.
+ * @method void setPackageId(string $PackageId) Set The unique ID of the resource package.
+ * @method string getPackageName() Obtain Resource package name.
+ * @method void setPackageName(string $PackageName) Set Resource package name.
+ * @method string getPackageType() Obtain Specifies the resource package type.
+CCU: compute resource package. DISK: storage resource package.
+ * @method void setPackageType(string $PackageType) Set Specifies the resource package type.
+CCU: compute resource package. DISK: storage resource package.
+ * @method string getPackageRegion() Obtain Resource package region of use.
+China - common in the chinese mainland. overseas - universally applicable in hong kong (china), macao (china), taiwan (china), and overseas.
+ * @method void setPackageRegion(string $PackageRegion) Set Resource package region of use.
+China - common in the chinese mainland. overseas - universally applicable in hong kong (china), macao (china), taiwan (china), and overseas.
+ * @method string getStatus() Obtain Specifies the status of the resource package.
+creating - indicates that it is in the process of being created.
+{using} specifies that it is in use.
+expired-expired;.
+normal_finish - specifies that it is used up.
+`Apply_refund`: apply for a refund.
+Specifies that the fee has been refunded.
+ * @method void setStatus(string $Status) Set Specifies the status of the resource package.
+creating - indicates that it is in the process of being created.
+{using} specifies that it is in use.
+expired-expired;.
+normal_finish - specifies that it is used up.
+`Apply_refund`: apply for a refund.
+Specifies that the fee has been refunded.
+ * @method float getPackageTotalSpec() Obtain Total resource package quantity.
+ * @method void setPackageTotalSpec(float $PackageTotalSpec) Set Total resource package quantity.
+ * @method float getPackageUsedSpec() Obtain Used amount of resource package.
+ * @method void setPackageUsedSpec(float $PackageUsedSpec) Set Used amount of resource package.
+ * @method boolean getHasQuota() Obtain Whether there is inventory surplus.
+ * @method void setHasQuota(boolean $HasQuota) Set Whether there is inventory surplus.
+ * @method array getBindInstanceInfos() Obtain Specifies the bound instance information.
+ * @method void setBindInstanceInfos(array $BindInstanceInfos) Set Specifies the bound instance information.
+ * @method string getStartTime() Obtain Specifies the effective time: 2022-07-01 00:00:00.
+ * @method void setStartTime(string $StartTime) Set Specifies the effective time: 2022-07-01 00:00:00.
+ * @method string getExpireTime() Obtain Specifies the expiration time: 2022-08-01 00:00:00.
+ * @method void setExpireTime(string $ExpireTime) Set Specifies the expiration time: 2022-08-01 00:00:00.
+ * @method array getHistoryBindResourceInfos() Obtain Information of the instance historically bound (now unbound) to the resource pack.
+ * @method void setHistoryBindResourceInfos(array $HistoryBindResourceInfos) Set Information of the instance historically bound (now unbound) to the resource pack.
  */
 class Package extends AbstractModel
 {
     /**
-     * @var integer AppID Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer AppID
      */
     public $AppId;
 
     /**
-     * @var string The unique ID of a resource pack Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string The unique ID of the resource package.
      */
     public $PackageId;
 
     /**
-     * @var string Resource pack name Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Resource package name.
      */
     public $PackageName;
 
     /**
-     * @var string Resource pack type. Valid values: `CCU` (compute resource pack), `DISK` (storage resource pack). Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Specifies the resource package type.
+CCU: compute resource package. DISK: storage resource package.
      */
     public $PackageType;
 
     /**
-     * @var string Region of the resource pack. Valid values: `China` (Chinese mainland), `overseas` (outside Chinese mainland). Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Resource package region of use.
+China - common in the chinese mainland. overseas - universally applicable in hong kong (china), macao (china), taiwan (china), and overseas.
      */
     public $PackageRegion;
 
     /**
-     * @var string Resource pack status. Valid values: `creating`, `using`, `expired`, `normal_finish` (used up), `apply_refund` (requesting a refund), `refund` (refunded). 
-Note:  This field may return null, indicating that no valid values can be obtained.
+     * @var string Specifies the status of the resource package.
+creating - indicates that it is in the process of being created.
+{using} specifies that it is in use.
+expired-expired;.
+normal_finish - specifies that it is used up.
+`Apply_refund`: apply for a refund.
+Specifies that the fee has been refunded.
      */
     public $Status;
 
     /**
-     * @var float Total number of resource packs Note: This field may return null, indicating that no valid values can be obtained.
+     * @var float Total resource package quantity.
      */
     public $PackageTotalSpec;
 
     /**
-     * @var float Consumed usage of resource packs Note: This field may return null, indicating that no valid values can be obtained.
+     * @var float Used amount of resource package.
      */
     public $PackageUsedSpec;
 
     /**
-     * @var boolean Remaining usage of resource packs Note: This field may return null, indicating that no valid values can be obtained.
+     * @var boolean Whether there is inventory surplus.
      */
     public $HasQuota;
 
     /**
-     * @var array Information of the instance bound Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array Specifies the bound instance information.
      */
     public $BindInstanceInfos;
 
     /**
-     * @var string Validity time:  2022-07-01 00:00:00 Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Specifies the effective time: 2022-07-01 00:00:00.
      */
     public $StartTime;
 
     /**
-     * @var string Validity time:  2022-08-01 00:00:00 Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Specifies the expiration time: 2022-08-01 00:00:00.
      */
     public $ExpireTime;
 
     /**
-     * @param integer $AppId AppID Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $PackageId The unique ID of a resource pack Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $PackageName Resource pack name Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $PackageType Resource pack type. Valid values: `CCU` (compute resource pack), `DISK` (storage resource pack). Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $PackageRegion Region of the resource pack. Valid values: `China` (Chinese mainland), `overseas` (outside Chinese mainland). Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Status Resource pack status. Valid values: `creating`, `using`, `expired`, `normal_finish` (used up), `apply_refund` (requesting a refund), `refund` (refunded). 
-Note:  This field may return null, indicating that no valid values can be obtained.
-     * @param float $PackageTotalSpec Total number of resource packs Note: This field may return null, indicating that no valid values can be obtained.
-     * @param float $PackageUsedSpec Consumed usage of resource packs Note: This field may return null, indicating that no valid values can be obtained.
-     * @param boolean $HasQuota Remaining usage of resource packs Note: This field may return null, indicating that no valid values can be obtained.
-     * @param array $BindInstanceInfos Information of the instance bound Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $StartTime Validity time:  2022-07-01 00:00:00 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $ExpireTime Validity time:  2022-08-01 00:00:00 Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array Information of the instance historically bound (now unbound) to the resource pack.
+     */
+    public $HistoryBindResourceInfos;
+
+    /**
+     * @param integer $AppId AppID
+     * @param string $PackageId The unique ID of the resource package.
+     * @param string $PackageName Resource package name.
+     * @param string $PackageType Specifies the resource package type.
+CCU: compute resource package. DISK: storage resource package.
+     * @param string $PackageRegion Resource package region of use.
+China - common in the chinese mainland. overseas - universally applicable in hong kong (china), macao (china), taiwan (china), and overseas.
+     * @param string $Status Specifies the status of the resource package.
+creating - indicates that it is in the process of being created.
+{using} specifies that it is in use.
+expired-expired;.
+normal_finish - specifies that it is used up.
+`Apply_refund`: apply for a refund.
+Specifies that the fee has been refunded.
+     * @param float $PackageTotalSpec Total resource package quantity.
+     * @param float $PackageUsedSpec Used amount of resource package.
+     * @param boolean $HasQuota Whether there is inventory surplus.
+     * @param array $BindInstanceInfos Specifies the bound instance information.
+     * @param string $StartTime Specifies the effective time: 2022-07-01 00:00:00.
+     * @param string $ExpireTime Specifies the expiration time: 2022-08-01 00:00:00.
+     * @param array $HistoryBindResourceInfos Information of the instance historically bound (now unbound) to the resource pack.
      */
     function __construct()
     {
@@ -189,6 +225,15 @@ Note:  This field may return null, indicating that no valid values can be obtain
 
         if (array_key_exists("ExpireTime",$param) and $param["ExpireTime"] !== null) {
             $this->ExpireTime = $param["ExpireTime"];
+        }
+
+        if (array_key_exists("HistoryBindResourceInfos",$param) and $param["HistoryBindResourceInfos"] !== null) {
+            $this->HistoryBindResourceInfos = [];
+            foreach ($param["HistoryBindResourceInfos"] as $key => $value){
+                $obj = new BindInstanceInfo();
+                $obj->deserialize($value);
+                array_push($this->HistoryBindResourceInfos, $obj);
+            }
         }
     }
 }

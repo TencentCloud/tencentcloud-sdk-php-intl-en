@@ -20,70 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Task information
  *
- * @method integer getTaskId() Obtain Auto-Incrementing task ID
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setTaskId(integer $TaskId) Set Auto-Incrementing task ID
-Note: this field may return null, indicating that no valid values can be obtained.
+ * @method integer getTaskId() Obtain Task auto-increment ID.
+ * @method void setTaskId(integer $TaskId) Set Task auto-increment ID.
  * @method string getTaskType() Obtain Task type
-Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setTaskType(string $TaskType) Set Task type
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getTaskStatus() Obtain Task status
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setTaskStatus(string $TaskStatus) Set Task status
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getObjectId() Obtain Task ID (cluster ID | instance group ID | instance ID)
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setObjectId(string $ObjectId) Set Task ID (cluster ID | instance group ID | instance ID)
-Note: this field may return null, indicating that no valid values can be obtained.
+ * @method string getTaskStatus() Obtain Status of tasks.
+ * @method void setTaskStatus(string $TaskStatus) Set Status of tasks.
+ * @method string getObjectId() Obtain Task ID (cluster ID | instance group ID | instance ID).
+ * @method void setObjectId(string $ObjectId) Set Task ID (cluster ID | instance group ID | instance ID).
  * @method string getObjectType() Obtain Task type
-Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setObjectType(string $ObjectType) Set Task type
-Note: this field may return null, indicating that no valid values can be obtained.
  */
 class ObjectTask extends AbstractModel
 {
     /**
-     * @var integer Auto-Incrementing task ID
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var integer Task auto-increment ID.
      */
     public $TaskId;
 
     /**
      * @var string Task type
-Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $TaskType;
 
     /**
-     * @var string Task status
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string Status of tasks.
      */
     public $TaskStatus;
 
     /**
-     * @var string Task ID (cluster ID | instance group ID | instance ID)
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string Task ID (cluster ID | instance group ID | instance ID).
      */
     public $ObjectId;
 
     /**
      * @var string Task type
-Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $ObjectType;
 
     /**
-     * @param integer $TaskId Auto-Incrementing task ID
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @param integer $TaskId Task auto-increment ID.
      * @param string $TaskType Task type
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $TaskStatus Task status
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $ObjectId Task ID (cluster ID | instance group ID | instance ID)
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @param string $TaskStatus Status of tasks.
+     * @param string $ObjectId Task ID (cluster ID | instance group ID | instance ID).
      * @param string $ObjectType Task type
-Note: this field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

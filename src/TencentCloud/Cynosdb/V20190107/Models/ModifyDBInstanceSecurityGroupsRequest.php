@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyDBInstanceSecurityGroups request structure.
  *
- * @method string getInstanceId() Obtain Instance group ID
- * @method void setInstanceId(string $InstanceId) Set Instance group ID
+ * @method string getInstanceId() Obtain Network group id (starting with the cynosdbmysql-grp- prefix) or cluster id.
+ * @method void setInstanceId(string $InstanceId) Set Network group id (starting with the cynosdbmysql-grp- prefix) or cluster id.
  * @method array getSecurityGroupIds() Obtain List of IDs of security groups to be modified, which is an array of one or more security group IDs.
  * @method void setSecurityGroupIds(array $SecurityGroupIds) Set List of IDs of security groups to be modified, which is an array of one or more security group IDs.
  * @method string getZone() Obtain AZ
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class ModifyDBInstanceSecurityGroupsRequest extends AbstractModel
 {
     /**
-     * @var string Instance group ID
+     * @var string Network group id (starting with the cynosdbmysql-grp- prefix) or cluster id.
      */
     public $InstanceId;
 
@@ -45,7 +45,7 @@ class ModifyDBInstanceSecurityGroupsRequest extends AbstractModel
     public $Zone;
 
     /**
-     * @param string $InstanceId Instance group ID
+     * @param string $InstanceId Network group id (starting with the cynosdbmysql-grp- prefix) or cluster id.
      * @param array $SecurityGroupIds List of IDs of security groups to be modified, which is an array of one or more security group IDs.
      * @param string $Zone AZ
      */

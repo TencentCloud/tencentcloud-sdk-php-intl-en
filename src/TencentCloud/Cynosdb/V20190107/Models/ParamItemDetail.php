@@ -40,10 +40,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setParamType(string $ParamType) Set Parameter type. Valid values:  `integer`, `enum`, `float`, `string`, `func`.
  * @method string getDescription() Obtain Parameter description
  * @method void setDescription(string $Description) Set Parameter description
- * @method boolean getIsFunc() Obtain Whether `ParamType` is a `func` Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setIsFunc(boolean $IsFunc) Set Whether `ParamType` is a `func` Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getFunc() Obtain Parameter configuration formula Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setFunc(string $Func) Set Parameter configuration formula Note: This field may return null, indicating that no valid values can be obtained.
+ * @method boolean getIsFunc() Obtain Whether the type is a formula.
+ * @method void setIsFunc(boolean $IsFunc) Set Whether the type is a formula.
+ * @method string getFunc() Obtain Parameter configuration formula.
+ * @method void setFunc(string $Func) Set Parameter configuration formula.
+ * @method string getFuncPattern() Obtain The default formula style of parameters that support formulas.
+ * @method void setFuncPattern(string $FuncPattern) Set The default formula style of parameters that support formulas.
  */
 class ParamItemDetail extends AbstractModel
 {
@@ -98,14 +100,19 @@ class ParamItemDetail extends AbstractModel
     public $Description;
 
     /**
-     * @var boolean Whether `ParamType` is a `func` Note: This field may return null, indicating that no valid values can be obtained.
+     * @var boolean Whether the type is a formula.
      */
     public $IsFunc;
 
     /**
-     * @var string Parameter configuration formula Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Parameter configuration formula.
      */
     public $Func;
+
+    /**
+     * @var string The default formula style of parameters that support formulas.
+     */
+    public $FuncPattern;
 
     /**
      * @param string $CurrentValue Current value
@@ -118,8 +125,9 @@ class ParamItemDetail extends AbstractModel
      * @param string $ParamName Parameter name
      * @param string $ParamType Parameter type. Valid values:  `integer`, `enum`, `float`, `string`, `func`.
      * @param string $Description Parameter description
-     * @param boolean $IsFunc Whether `ParamType` is a `func` Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Func Parameter configuration formula Note: This field may return null, indicating that no valid values can be obtained.
+     * @param boolean $IsFunc Whether the type is a formula.
+     * @param string $Func Parameter configuration formula.
+     * @param string $FuncPattern The default formula style of parameters that support formulas.
      */
     function __construct()
     {
@@ -180,6 +188,10 @@ class ParamItemDetail extends AbstractModel
 
         if (array_key_exists("Func",$param) and $param["Func"] !== null) {
             $this->Func = $param["Func"];
+        }
+
+        if (array_key_exists("FuncPattern",$param) and $param["FuncPattern"] !== null) {
+            $this->FuncPattern = $param["FuncPattern"];
         }
     }
 }

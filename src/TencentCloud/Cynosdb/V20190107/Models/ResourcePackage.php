@@ -20,26 +20,38 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Information of a resource pack
  *
- * @method string getPackageId() Obtain The unique ID of a resource pack Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setPackageId(string $PackageId) Set The unique ID of a resource pack Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getPackageType() Obtain Resource pack type. Valid values:  `CCU` (compute resource pack),  `DISK`  (storage resource pack). Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setPackageType(string $PackageType) Set Resource pack type. Valid values:  `CCU` (compute resource pack),  `DISK`  (storage resource pack). Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getPackageId() Obtain The unique ID of the resource package.
+ * @method void setPackageId(string $PackageId) Set The unique ID of the resource package.
+ * @method string getPackageType() Obtain Resource package type: CCU: compute resource package.
+DISK: storage resource package.
+ * @method void setPackageType(string $PackageType) Set Resource package type: CCU: compute resource package.
+DISK: storage resource package.
+ * @method integer getDeductionPriority() Obtain Deduction priority of the current resource package bound to the current instance.
+ * @method void setDeductionPriority(integer $DeductionPriority) Set Deduction priority of the current resource package bound to the current instance.
  */
 class ResourcePackage extends AbstractModel
 {
     /**
-     * @var string The unique ID of a resource pack Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string The unique ID of the resource package.
      */
     public $PackageId;
 
     /**
-     * @var string Resource pack type. Valid values:  `CCU` (compute resource pack),  `DISK`  (storage resource pack). Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Resource package type: CCU: compute resource package.
+DISK: storage resource package.
      */
     public $PackageType;
 
     /**
-     * @param string $PackageId The unique ID of a resource pack Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $PackageType Resource pack type. Valid values:  `CCU` (compute resource pack),  `DISK`  (storage resource pack). Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Deduction priority of the current resource package bound to the current instance.
+     */
+    public $DeductionPriority;
+
+    /**
+     * @param string $PackageId The unique ID of the resource package.
+     * @param string $PackageType Resource package type: CCU: compute resource package.
+DISK: storage resource package.
+     * @param integer $DeductionPriority Deduction priority of the current resource package bound to the current instance.
      */
     function __construct()
     {
@@ -60,6 +72,10 @@ class ResourcePackage extends AbstractModel
 
         if (array_key_exists("PackageType",$param) and $param["PackageType"] !== null) {
             $this->PackageType = $param["PackageType"];
+        }
+
+        if (array_key_exists("DeductionPriority",$param) and $param["DeductionPriority"] !== null) {
+            $this->DeductionPriority = $param["DeductionPriority"];
         }
     }
 }

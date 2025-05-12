@@ -38,26 +38,24 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceStorage(integer $InstanceStorage) Set Disk
  * @method string getInstanceRole() Obtain Instance role
  * @method void setInstanceRole(string $InstanceRole) Set Instance role
- * @method integer getMaintainStartTime() Obtain Execution start time in seconds from 0:00	
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setMaintainStartTime(integer $MaintainStartTime) Set Execution start time in seconds from 0:00	
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getMaintainDuration() Obtain Duration in seconds	
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setMaintainDuration(integer $MaintainDuration) Set Duration in seconds	
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method array getMaintainWeekDays() Obtain Execution time. Valid values: `Mon`, `Tue`, `Wed`, `Thu`, `Fri`, Sat`, `Sun`.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setMaintainWeekDays(array $MaintainWeekDays) Set Execution time. Valid values: `Mon`, `Tue`, `Wed`, `Thu`, `Fri`, Sat`, `Sun`.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getServerlessStatus() Obtain Serverless instance enablement status
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setServerlessStatus(string $ServerlessStatus) Set Serverless instance enablement status
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method array getInstanceTasks() Obtain 
- * @method void setInstanceTasks(array $InstanceTasks) Set 
- * @method string getInstanceDeviceType() Obtain 
- * @method void setInstanceDeviceType(string $InstanceDeviceType) Set 
+ * @method integer getMaintainStartTime() Obtain Execution start time (seconds from 0 o'clock).	
+ * @method void setMaintainStartTime(integer $MaintainStartTime) Set Execution start time (seconds from 0 o'clock).	
+ * @method integer getMaintainDuration() Obtain Specifies the continuous time. the unit is second.	
+ * @method void setMaintainDuration(integer $MaintainDuration) Set Specifies the continuous time. the unit is second.	
+ * @method array getMaintainWeekDays() Obtain Specifies the time when it can be executed. valid values: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"].
+ * @method void setMaintainWeekDays(array $MaintainWeekDays) Set Specifies the time when it can be executed. valid values: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"].
+ * @method string getServerlessStatus() Obtain serverless instance substatus.
+ * @method void setServerlessStatus(string $ServerlessStatus) Set serverless instance substatus.
+ * @method array getInstanceTasks() Obtain Instance task information.
+ * @method void setInstanceTasks(array $InstanceTasks) Set Instance task information.
+ * @method string getInstanceDeviceType() Obtain Instance machine type.
+ * @method void setInstanceDeviceType(string $InstanceDeviceType) Set Instance machine type.
+ * @method string getInstanceStorageType() Obtain Instance storage type.
+ * @method void setInstanceStorageType(string $InstanceStorageType) Set Instance storage type.
+ * @method string getDbMode() Obtain Database type.
+ * @method void setDbMode(string $DbMode) Set Database type.
+ * @method array getNodeList() Obtain Node list
+ * @method void setNodeList(array $NodeList) Set Node list
  */
 class ClusterInstanceDetail extends AbstractModel
 {
@@ -107,38 +105,49 @@ class ClusterInstanceDetail extends AbstractModel
     public $InstanceRole;
 
     /**
-     * @var integer Execution start time in seconds from 0:00	
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Execution start time (seconds from 0 o'clock).	
      */
     public $MaintainStartTime;
 
     /**
-     * @var integer Duration in seconds	
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Specifies the continuous time. the unit is second.	
      */
     public $MaintainDuration;
 
     /**
-     * @var array Execution time. Valid values: `Mon`, `Tue`, `Wed`, `Thu`, `Fri`, Sat`, `Sun`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array Specifies the time when it can be executed. valid values: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"].
      */
     public $MaintainWeekDays;
 
     /**
-     * @var string Serverless instance enablement status
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string serverless instance substatus.
      */
     public $ServerlessStatus;
 
     /**
-     * @var array 
+     * @var array Instance task information.
      */
     public $InstanceTasks;
 
     /**
-     * @var string 
+     * @var string Instance machine type.
      */
     public $InstanceDeviceType;
+
+    /**
+     * @var string Instance storage type.
+     */
+    public $InstanceStorageType;
+
+    /**
+     * @var string Database type.
+     */
+    public $DbMode;
+
+    /**
+     * @var array Node list
+     */
+    public $NodeList;
 
     /**
      * @param string $InstanceId Instance ID
@@ -150,16 +159,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param integer $InstanceMemory Memory
      * @param integer $InstanceStorage Disk
      * @param string $InstanceRole Instance role
-     * @param integer $MaintainStartTime Execution start time in seconds from 0:00	
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $MaintainDuration Duration in seconds	
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param array $MaintainWeekDays Execution time. Valid values: `Mon`, `Tue`, `Wed`, `Thu`, `Fri`, Sat`, `Sun`.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $ServerlessStatus Serverless instance enablement status
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param array $InstanceTasks 
-     * @param string $InstanceDeviceType 
+     * @param integer $MaintainStartTime Execution start time (seconds from 0 o'clock).	
+     * @param integer $MaintainDuration Specifies the continuous time. the unit is second.	
+     * @param array $MaintainWeekDays Specifies the time when it can be executed. valid values: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"].
+     * @param string $ServerlessStatus serverless instance substatus.
+     * @param array $InstanceTasks Instance task information.
+     * @param string $InstanceDeviceType Instance machine type.
+     * @param string $InstanceStorageType Instance storage type.
+     * @param string $DbMode Database type.
+     * @param array $NodeList Node list
      */
     function __construct()
     {
@@ -237,6 +245,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("InstanceDeviceType",$param) and $param["InstanceDeviceType"] !== null) {
             $this->InstanceDeviceType = $param["InstanceDeviceType"];
+        }
+
+        if (array_key_exists("InstanceStorageType",$param) and $param["InstanceStorageType"] !== null) {
+            $this->InstanceStorageType = $param["InstanceStorageType"];
+        }
+
+        if (array_key_exists("DbMode",$param) and $param["DbMode"] !== null) {
+            $this->DbMode = $param["DbMode"];
+        }
+
+        if (array_key_exists("NodeList",$param) and $param["NodeList"] !== null) {
+            $this->NodeList = $param["NodeList"];
         }
     }
 }

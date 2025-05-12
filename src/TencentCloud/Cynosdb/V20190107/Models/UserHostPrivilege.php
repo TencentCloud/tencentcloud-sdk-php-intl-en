@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getDbUserName() Obtain Authorized user
  * @method void setDbUserName(string $DbUserName) Set Authorized user
- * @method string getDbHost() Obtain Client IP Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setDbHost(string $DbHost) Set Client IP Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getDbPrivilege() Obtain User permissions Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setDbPrivilege(string $DbPrivilege) Set User permissions Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getDbHost() Obtain Client IP
+ * @method void setDbHost(string $DbHost) Set Client IP
+ * @method string getDbPrivilege() Obtain User permission
+ * @method void setDbPrivilege(string $DbPrivilege) Set User permission
  */
 class UserHostPrivilege extends AbstractModel
 {
@@ -35,19 +35,19 @@ class UserHostPrivilege extends AbstractModel
     public $DbUserName;
 
     /**
-     * @var string Client IP Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Client IP
      */
     public $DbHost;
 
     /**
-     * @var string User permissions Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string User permission
      */
     public $DbPrivilege;
 
     /**
      * @param string $DbUserName Authorized user
-     * @param string $DbHost Client IP Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $DbPrivilege User permissions Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $DbHost Client IP
+     * @param string $DbPrivilege User permission
      */
     function __construct()
     {

@@ -28,22 +28,22 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStatus(string $Status) Set Database status
  * @method string getCollateRule() Obtain Collation
  * @method void setCollateRule(string $CollateRule) Set Collation
- * @method string getDescription() Obtain Database remarks Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setDescription(string $Description) Set Database remarks Note: This field may return null, indicating that no valid values can be obtained.
- * @method array getUserHostPrivileges() Obtain User permissions Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setUserHostPrivileges(array $UserHostPrivileges) Set User permissions Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getDbId() Obtain Database ID Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setDbId(integer $DbId) Set Database ID Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getCreateTime() Obtain Creation time Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setCreateTime(string $CreateTime) Set Creation time Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getUpdateTime() Obtain Update time Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setUpdateTime(string $UpdateTime) Set Update time Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getAppId() Obtain User appid Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setAppId(integer $AppId) Set User appid Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getUin() Obtain User Uin Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setUin(string $Uin) Set User Uin Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getClusterId() Obtain Cluster ID Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setClusterId(string $ClusterId) Set Cluster ID Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getDescription() Obtain Specifies the remark of the database.
+ * @method void setDescription(string $Description) Set Specifies the remark of the database.
+ * @method array getUserHostPrivileges() Obtain User permission
+ * @method void setUserHostPrivileges(array $UserHostPrivileges) Set User permission
+ * @method integer getDbId() Obtain Database ID
+ * @method void setDbId(integer $DbId) Set Database ID
+ * @method string getCreateTime() Obtain Creation time
+ * @method void setCreateTime(string $CreateTime) Set Creation time
+ * @method string getUpdateTime() Obtain Update time.
+ * @method void setUpdateTime(string $UpdateTime) Set Update time.
+ * @method integer getAppId() Obtain User appid.
+ * @method void setAppId(integer $AppId) Set User appid.
+ * @method string getUin() Obtain User UIN
+ * @method void setUin(string $Uin) Set User UIN
+ * @method string getClusterId() Obtain Cluster ID
+ * @method void setClusterId(string $ClusterId) Set Cluster ID
  */
 class DbInfo extends AbstractModel
 {
@@ -68,42 +68,42 @@ class DbInfo extends AbstractModel
     public $CollateRule;
 
     /**
-     * @var string Database remarks Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Specifies the remark of the database.
      */
     public $Description;
 
     /**
-     * @var array User permissions Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array User permission
      */
     public $UserHostPrivileges;
 
     /**
-     * @var integer Database ID Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Database ID
      */
     public $DbId;
 
     /**
-     * @var string Creation time Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Creation time
      */
     public $CreateTime;
 
     /**
-     * @var string Update time Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Update time.
      */
     public $UpdateTime;
 
     /**
-     * @var integer User appid Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer User appid.
      */
     public $AppId;
 
     /**
-     * @var string User Uin Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string User UIN
      */
     public $Uin;
 
     /**
-     * @var string Cluster ID Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Cluster ID
      */
     public $ClusterId;
 
@@ -112,14 +112,14 @@ class DbInfo extends AbstractModel
      * @param string $CharacterSet Character set
      * @param string $Status Database status
      * @param string $CollateRule Collation
-     * @param string $Description Database remarks Note: This field may return null, indicating that no valid values can be obtained.
-     * @param array $UserHostPrivileges User permissions Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $DbId Database ID Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $CreateTime Creation time Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $UpdateTime Update time Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $AppId User appid Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Uin User Uin Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $ClusterId Cluster ID Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $Description Specifies the remark of the database.
+     * @param array $UserHostPrivileges User permission
+     * @param integer $DbId Database ID
+     * @param string $CreateTime Creation time
+     * @param string $UpdateTime Update time.
+     * @param integer $AppId User appid.
+     * @param string $Uin User UIN
+     * @param string $ClusterId Cluster ID
      */
     function __construct()
     {

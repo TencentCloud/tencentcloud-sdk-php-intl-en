@@ -18,16 +18,14 @@ namespace TencentCloud\Cynosdb\V20190107\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeRollbackTimeValidity request structure.
+ * CloseProxyEndPoint request structure.
  *
  * @method string getClusterId() Obtain Cluster ID
  * @method void setClusterId(string $ClusterId) Set Cluster ID
- * @method string getExpectTime() Obtain Expected time point to roll back to
- * @method void setExpectTime(string $ExpectTime) Set Expected time point to roll back to
- * @method integer getExpectTimeThresh() Obtain Error tolerance range for rollback time point
- * @method void setExpectTimeThresh(integer $ExpectTimeThresh) Set Error tolerance range for rollback time point
+ * @method string getProxyGroupId() Obtain Database proxy group ID.
+ * @method void setProxyGroupId(string $ProxyGroupId) Set Database proxy group ID.
  */
-class DescribeRollbackTimeValidityRequest extends AbstractModel
+class CloseProxyEndPointRequest extends AbstractModel
 {
     /**
      * @var string Cluster ID
@@ -35,19 +33,13 @@ class DescribeRollbackTimeValidityRequest extends AbstractModel
     public $ClusterId;
 
     /**
-     * @var string Expected time point to roll back to
+     * @var string Database proxy group ID.
      */
-    public $ExpectTime;
-
-    /**
-     * @var integer Error tolerance range for rollback time point
-     */
-    public $ExpectTimeThresh;
+    public $ProxyGroupId;
 
     /**
      * @param string $ClusterId Cluster ID
-     * @param string $ExpectTime Expected time point to roll back to
-     * @param integer $ExpectTimeThresh Error tolerance range for rollback time point
+     * @param string $ProxyGroupId Database proxy group ID.
      */
     function __construct()
     {
@@ -66,12 +58,8 @@ class DescribeRollbackTimeValidityRequest extends AbstractModel
             $this->ClusterId = $param["ClusterId"];
         }
 
-        if (array_key_exists("ExpectTime",$param) and $param["ExpectTime"] !== null) {
-            $this->ExpectTime = $param["ExpectTime"];
-        }
-
-        if (array_key_exists("ExpectTimeThresh",$param) and $param["ExpectTimeThresh"] !== null) {
-            $this->ExpectTimeThresh = $param["ExpectTimeThresh"];
+        if (array_key_exists("ProxyGroupId",$param) and $param["ProxyGroupId"] !== null) {
+            $this->ProxyGroupId = $param["ProxyGroupId"];
         }
     }
 }

@@ -40,6 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRegion(string $Region) Set Region
  * @method string getZone() Obtain AZ
  * @method void setZone(string $Zone) Set AZ
+ * @method string getOssProxyNodeName() Obtain 
+ * @method void setOssProxyNodeName(string $OssProxyNodeName) Set 
  */
 class ProxyNodeInfo extends AbstractModel
 {
@@ -94,6 +96,11 @@ class ProxyNodeInfo extends AbstractModel
     public $Zone;
 
     /**
+     * @var string 
+     */
+    public $OssProxyNodeName;
+
+    /**
      * @param string $ProxyNodeId Database proxy node ID
      * @param integer $ProxyNodeConnections Current node connections, which is not returned by the `DescribeProxyNodes` API.
      * @param integer $Cpu CPU of the database proxy node
@@ -104,6 +111,7 @@ class ProxyNodeInfo extends AbstractModel
      * @param integer $AppId User AppID
      * @param string $Region Region
      * @param string $Zone AZ
+     * @param string $OssProxyNodeName 
      */
     function __construct()
     {
@@ -156,6 +164,10 @@ class ProxyNodeInfo extends AbstractModel
 
         if (array_key_exists("Zone",$param) and $param["Zone"] !== null) {
             $this->Zone = $param["Zone"];
+        }
+
+        if (array_key_exists("OssProxyNodeName",$param) and $param["OssProxyNodeName"] !== null) {
+            $this->OssProxyNodeName = $param["OssProxyNodeName"];
         }
     }
 }

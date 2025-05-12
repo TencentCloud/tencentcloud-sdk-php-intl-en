@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeProxies request structure.
  *
- * @method string getClusterId() Obtain Cluster ID
- * @method void setClusterId(string $ClusterId) Set Cluster ID
+ * @method string getClusterId() Obtain Cluster ID (this parameter is required. for example, cynosdbmysql-2u2mh111).
+ * @method void setClusterId(string $ClusterId) Set Cluster ID (this parameter is required. for example, cynosdbmysql-2u2mh111).
  * @method integer getLimit() Obtain Number of returned results. Default value: `20`. Maximum value: `100`,
  * @method void setLimit(integer $Limit) Set Number of returned results. Default value: `20`. Maximum value: `100`,
  * @method integer getOffset() Obtain Record offset. Default value: `0`.
@@ -44,7 +44,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeProxiesRequest extends AbstractModel
 {
     /**
-     * @var string Cluster ID
+     * @var string Cluster ID (this parameter is required. for example, cynosdbmysql-2u2mh111).
      */
     public $ClusterId;
 
@@ -78,7 +78,7 @@ class DescribeProxiesRequest extends AbstractModel
     public $Filters;
 
     /**
-     * @param string $ClusterId Cluster ID
+     * @param string $ClusterId Cluster ID (this parameter is required. for example, cynosdbmysql-2u2mh111).
      * @param integer $Limit Number of returned results. Default value: `20`. Maximum value: `100`,
      * @param integer $Offset Record offset. Default value: `0`.
      * @param string $OrderBy Sorting field. Valid values:
