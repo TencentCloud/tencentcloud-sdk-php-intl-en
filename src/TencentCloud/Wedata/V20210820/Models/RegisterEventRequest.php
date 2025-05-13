@@ -32,10 +32,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTimeUnit(string $TimeUnit) Set For cycle types of day and hour: HOURS, For minutes: MINUTES, For seconds: SECONDS
  * @method string getOwner() Obtain Event Owner
  * @method void setOwner(string $Owner) Set Event Owner
- * @method string getEventType() Obtain Event Type, default value: TIME_SERIES
- * @method void setEventType(string $EventType) Set Event Type, default value: TIME_SERIES
- * @method string getDimensionFormat() Obtain Corresponding DAY: yyyyMMdd, Corresponding HOUR: yyyyMMddHH, Corresponding MIN: yyyyMMddHHmm, Corresponding SECOND: yyyyMMddHHmmss
- * @method void setDimensionFormat(string $DimensionFormat) Set Corresponding DAY: yyyyMMdd, Corresponding HOUR: yyyyMMddHH, Corresponding MIN: yyyyMMddHHmm, Corresponding SECOND: yyyyMMddHHmmss
+ * @method string getEventType() Obtain Required. event type. default value: TIME_SERIES.
+ * @method void setEventType(string $EventType) Set Required. event type. default value: TIME_SERIES.
+ * @method string getDimensionFormat() Obtain Required. corresponds to day: yyyyMMdd, corresponds to HOUR: yyyyMMddHH, corresponds to MIN: yyyyMMddHHmm, corresponds to SECOND: yyyyMMddHHmmss. default value: yyyyMMdd.
+ * @method void setDimensionFormat(string $DimensionFormat) Set Required. corresponds to day: yyyyMMdd, corresponds to HOUR: yyyyMMddHH, corresponds to MIN: yyyyMMddHHmm, corresponds to SECOND: yyyyMMddHHmmss. default value: yyyyMMdd.
  * @method integer getTimeToLive() Obtain Uptime
  * @method void setTimeToLive(integer $TimeToLive) Set Uptime
  * @method string getDescription() Obtain Event Description
@@ -74,12 +74,12 @@ class RegisterEventRequest extends AbstractModel
     public $Owner;
 
     /**
-     * @var string Event Type, default value: TIME_SERIES
+     * @var string Required. event type. default value: TIME_SERIES.
      */
     public $EventType;
 
     /**
-     * @var string Corresponding DAY: yyyyMMdd, Corresponding HOUR: yyyyMMddHH, Corresponding MIN: yyyyMMddHHmm, Corresponding SECOND: yyyyMMddHHmmss
+     * @var string Required. corresponds to day: yyyyMMdd, corresponds to HOUR: yyyyMMddHH, corresponds to MIN: yyyyMMddHHmm, corresponds to SECOND: yyyyMMddHHmmss. default value: yyyyMMdd.
      */
     public $DimensionFormat;
 
@@ -100,8 +100,8 @@ class RegisterEventRequest extends AbstractModel
      * @param string $EventBroadcastType Broadcast: BROADCAST, Unicast: SINGLE
      * @param string $TimeUnit For cycle types of day and hour: HOURS, For minutes: MINUTES, For seconds: SECONDS
      * @param string $Owner Event Owner
-     * @param string $EventType Event Type, default value: TIME_SERIES
-     * @param string $DimensionFormat Corresponding DAY: yyyyMMdd, Corresponding HOUR: yyyyMMddHH, Corresponding MIN: yyyyMMddHHmm, Corresponding SECOND: yyyyMMddHHmmss
+     * @param string $EventType Required. event type. default value: TIME_SERIES.
+     * @param string $DimensionFormat Required. corresponds to day: yyyyMMdd, corresponds to HOUR: yyyyMMddHH, corresponds to MIN: yyyyMMddHHmm, corresponds to SECOND: yyyyMMddHHmmss. default value: yyyyMMdd.
      * @param integer $TimeToLive Uptime
      * @param string $Description Event Description
      */

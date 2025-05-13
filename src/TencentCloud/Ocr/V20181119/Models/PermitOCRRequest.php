@@ -38,6 +38,8 @@ Supported image formats: PNG, JPG, and JPEG. GIF is currently not supported.
 Supported image size: The downloaded image after Base64 encoding can be up to 7 MB. The download time of the image cannot exceed 3s.
 We recommend that you store the image in Tencent Cloud for higher download speed and stability.
 The download speed and stability of non-Tencent Cloud URLs may be low.
+ * @method boolean getCropPortrait() Obtain Whether to return the profile photo, default is false.
+ * @method void setCropPortrait(boolean $CropPortrait) Set Whether to return the profile photo, default is false.
  */
 class PermitOCRRequest extends AbstractModel
 {
@@ -59,6 +61,11 @@ The download speed and stability of non-Tencent Cloud URLs may be low.
     public $ImageUrl;
 
     /**
+     * @var boolean Whether to return the profile photo, default is false.
+     */
+    public $CropPortrait;
+
+    /**
      * @param string $ImageBase64 The Base64-encoded value of the image.
 Supported image formats: PNG, JPG, and JPEG. GIF is currently not supported.
 Supported image size: The downloaded image after Base64 encoding can be up to 7 MB. The download time of the image cannot exceed 3s.
@@ -68,6 +75,7 @@ Supported image formats: PNG, JPG, and JPEG. GIF is currently not supported.
 Supported image size: The downloaded image after Base64 encoding can be up to 7 MB. The download time of the image cannot exceed 3s.
 We recommend that you store the image in Tencent Cloud for higher download speed and stability.
 The download speed and stability of non-Tencent Cloud URLs may be low.
+     * @param boolean $CropPortrait Whether to return the profile photo, default is false.
      */
     function __construct()
     {
@@ -88,6 +96,10 @@ The download speed and stability of non-Tencent Cloud URLs may be low.
 
         if (array_key_exists("ImageUrl",$param) and $param["ImageUrl"] !== null) {
             $this->ImageUrl = $param["ImageUrl"];
+        }
+
+        if (array_key_exists("CropPortrait",$param) and $param["CropPortrait"] !== null) {
+            $this->CropPortrait = $param["CropPortrait"];
         }
     }
 }

@@ -32,6 +32,10 @@ Note: This field may return null, indicating that no valid value can be obtained
 Note: This field may return null, indicating that no valid value can be obtained.
  * @method void setTotalCount(integer $TotalCount) Set Total number of batch operations
 Note: This field may return null, indicating that no valid value can be obtained.
+ * @method string getAsyncActionId() Obtain Unique id of the asynchronous operation record.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setAsyncActionId(string $AsyncActionId) Set Unique id of the asynchronous operation record.
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class BatchOperationOpsDto extends AbstractModel
 {
@@ -54,12 +58,20 @@ Note: This field may return null, indicating that no valid value can be obtained
     public $TotalCount;
 
     /**
+     * @var string Unique id of the asynchronous operation record.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $AsyncActionId;
+
+    /**
      * @param integer $SuccessCount Number of successful batch operations
 Note: This field may return null, indicating that no valid value can be obtained.
      * @param integer $FailedCount Number of failed batch operations
 Note: This field may return null, indicating that no valid value can be obtained.
      * @param integer $TotalCount Total number of batch operations
 Note: This field may return null, indicating that no valid value can be obtained.
+     * @param string $AsyncActionId Unique id of the asynchronous operation record.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -84,6 +96,10 @@ Note: This field may return null, indicating that no valid value can be obtained
 
         if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
             $this->TotalCount = $param["TotalCount"];
+        }
+
+        if (array_key_exists("AsyncActionId",$param) and $param["AsyncActionId"] !== null) {
+            $this->AsyncActionId = $param["AsyncActionId"];
         }
     }
 }

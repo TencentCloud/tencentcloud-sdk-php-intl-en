@@ -25,6 +25,7 @@ use TencentCloud\Wedata\V20210820\Models as Models;
 /**
  * @method Models\AddProjectUserRoleResponse AddProjectUserRole(Models\AddProjectUserRoleRequest $req) This API is used to add a user role to a project.
  * @method Models\BatchCreateIntegrationTaskAlarmsResponse BatchCreateIntegrationTaskAlarms(Models\BatchCreateIntegrationTaskAlarmsRequest $req) Bulk Create Task Alert Rules
+ * @method Models\BatchCreateTaskVersionAsyncResponse BatchCreateTaskVersionAsync(Models\BatchCreateTaskVersionAsyncRequest $req) This API is used to asynchronously create task versions in batches.
  * @method Models\BatchDeleteIntegrationTasksResponse BatchDeleteIntegrationTasks(Models\BatchDeleteIntegrationTasksRequest $req) Batch Delete Integration Tasks.
  * @method Models\BatchDeleteOpsTasksResponse BatchDeleteOpsTasks(Models\BatchDeleteOpsTasksRequest $req) Task Operation and Maintenance - Batch Delete Tasks
  * @method Models\BatchForceSuccessIntegrationTaskInstancesResponse BatchForceSuccessIntegrationTaskInstances(Models\BatchForceSuccessIntegrationTaskInstancesRequest $req) Batch set successful integration task instances
@@ -58,9 +59,10 @@ use TencentCloud\Wedata\V20210820\Models as Models;
  * @method Models\CreateOpsMakePlanResponse CreateOpsMakePlan(Models\CreateOpsMakePlanRequest $req) Bulk Data Supplement (Create Supplementary Entry Task)
  * @method Models\CreateRuleResponse CreateRule(Models\CreateRuleRequest $req) Create quality rule interface
  * @method Models\CreateRuleTemplateResponse CreateRuleTemplate(Models\CreateRuleTemplateRequest $req) Create Rule Template
- * @method Models\CreateTaskResponse CreateTask(Models\CreateTaskRequest $req) Creating task
+ * @method Models\CreateTaskResponse CreateTask(Models\CreateTaskRequest $req) This API is used to create a task. This API is deprecated. Use the CreateTaskNew API.
  * @method Models\CreateTaskAlarmRegularResponse CreateTaskAlarmRegular(Models\CreateTaskAlarmRegularRequest $req) Create task alert rules
  * @method Models\CreateTaskFolderResponse CreateTaskFolder(Models\CreateTaskFolderRequest $req) Orchestration Space - Workflow - Create Task Folder
+ * @method Models\CreateTaskNewResponse CreateTaskNew(Models\CreateTaskNewRequest $req) This API is used to aggregate task creation.
  * @method Models\CreateTaskVersionDsResponse CreateTaskVersionDs(Models\CreateTaskVersionDsRequest $req) Submit Task Version
  * @method Models\CreateWorkflowDsResponse CreateWorkflowDs(Models\CreateWorkflowDsRequest $req) Creating workflow
  * @method Models\DagInstancesResponse DagInstances(Models\DagInstancesRequest $req) Pull DAG Instance
@@ -226,19 +228,23 @@ use TencentCloud\Wedata\V20210820\Models as Models;
  * @method Models\ModifyTaskAlarmRegularResponse ModifyTaskAlarmRegular(Models\ModifyTaskAlarmRegularRequest $req) Modify task alert rules
  * @method Models\ModifyTaskInfoResponse ModifyTaskInfo(Models\ModifyTaskInfoRequest $req) <p style="color:red;">[Note: This version is only available to a portion of allowlist customers in the Guangzhou Region]</p>
 Update Task
- * @method Models\ModifyTaskLinksResponse ModifyTaskLinks(Models\ModifyTaskLinksRequest $req) <p style="color:red;">[Note: This version is only available to a portion of allowlist customers in the Guangzhou Region]</p>
-Add Parent Task Dependency
+ * @method Models\ModifyTaskLinksResponse ModifyTaskLinks(Models\ModifyTaskLinksRequest $req) <p style="color:red;">[Note: This version is only available to some whitelist customers in the Guangzhou zone]</p>.
+Add parent task dependency. This API is deprecated. Use API ModifyTaskLinksDs.
+ * @method Models\ModifyTaskLinksDsResponse ModifyTaskLinksDs(Models\ModifyTaskLinksDsRequest $req) This API is used to add parent task dependency.
  * @method Models\ModifyTaskNameResponse ModifyTaskName(Models\ModifyTaskNameRequest $req) Rename Task (Task Editing)
  * @method Models\ModifyTaskScriptResponse ModifyTaskScript(Models\ModifyTaskScriptRequest $req) <p style="color:red;">[Note: This version is only available to a portion of allowlist customers in the Guangzhou Region]</p>
 Modify Task Script
- * @method Models\ModifyWorkflowInfoResponse ModifyWorkflowInfo(Models\ModifyWorkflowInfoRequest $req) Update Workflow Information
- * @method Models\ModifyWorkflowScheduleResponse ModifyWorkflowSchedule(Models\ModifyWorkflowScheduleRequest $req) Update Workflow Scheduling
+ * @method Models\ModifyWorkflowInfoResponse ModifyWorkflowInfo(Models\ModifyWorkflowInfoRequest $req) This API is used to update workflow information. (deprecated). Use API UpdateWorkflowInfo.
+ * @method Models\ModifyWorkflowScheduleResponse ModifyWorkflowSchedule(Models\ModifyWorkflowScheduleRequest $req) This API is used to update workflow scheduling. This API is deprecated. Use the RenewWorkflowSchedulerInfoDs API instead.
  * @method Models\MoveTasksToFolderResponse MoveTasksToFolder(Models\MoveTasksToFolderRequest $req) Orchestration Space - Workflow - Move Task to Workflow Folder
- * @method Models\RegisterEventResponse RegisterEvent(Models\RegisterEventRequest $req) <p style="color:red;">[Note: This version is only available to a portion of allowlist customers in the Guangzhou Region]</p>
-Registration Event
+ * @method Models\RegisterDsEventResponse RegisterDsEvent(Models\RegisterDsEventRequest $req) This API is used to register an event.
+ * @method Models\RegisterEventResponse RegisterEvent(Models\RegisterEventRequest $req) <p style="color:red;">[Note: This version is only available for partial allowlisted customers in the Guangzhou region]</p>.
+This API is used to register events. This API is deprecated. Use API RegisterDsEvent.
  * @method Models\RegisterEventListenerResponse RegisterEventListener(Models\RegisterEventListenerRequest $req) <p style="color:red;">[Note: This version is only available to a portion of allowlist customers in the Guangzhou Region]</p>
 Register Event Listener
  * @method Models\RemoveWorkflowDsResponse RemoveWorkflowDs(Models\RemoveWorkflowDsRequest $req) Delete orchestration space workflow
+ * @method Models\RenewWorkflowOwnerDsResponse RenewWorkflowOwnerDs(Models\RenewWorkflowOwnerDsRequest $req) This API is used to batch update the task owner under a workflow.
+ * @method Models\RenewWorkflowSchedulerInfoDsResponse RenewWorkflowSchedulerInfoDs(Models\RenewWorkflowSchedulerInfoDsRequest $req) This API is used to update task scheduling information under a workflow.
  * @method Models\ResumeIntegrationTaskResponse ResumeIntegrationTask(Models\ResumeIntegrationTaskRequest $req) Continue Integration Task
  * @method Models\RobAndLockIntegrationTaskResponse RobAndLockIntegrationTask(Models\RobAndLockIntegrationTaskRequest $req) Preemptive locking of integration tasks
  * @method Models\RunForceSucScheduleInstancesResponse RunForceSucScheduleInstances(Models\RunForceSucScheduleInstancesRequest $req) Instance Batch Successfully Configured
@@ -251,18 +257,20 @@ Set Task Alerts, Create/Update Alert Information (Latest)
  * @method Models\StopIntegrationTaskResponse StopIntegrationTask(Models\StopIntegrationTaskRequest $req) Stop Integration Task
  * @method Models\SubmitCustomFunctionResponse SubmitCustomFunction(Models\SubmitCustomFunctionRequest $req) Submit Custom Definition Function
  * @method Models\SubmitSqlTaskResponse SubmitSqlTask(Models\SubmitSqlTaskRequest $req) Ad Hoc Analysis - Submit SQL Task
- * @method Models\SubmitTaskResponse SubmitTask(Models\SubmitTaskRequest $req) <p style="color:red;">[Note: This version is only available to a portion of allowlist customers in the Guangzhou Region]</p>
-Submit a Task
+ * @method Models\SubmitTaskResponse SubmitTask(Models\SubmitTaskRequest $req) <p style="color:red;">[Note: This version is only available for partial whitelist customers in the Guangzhou zone]</p>.
+This API is used to submit tasks. This API is deprecated. Use the CreateTaskVersionDs API.
  * @method Models\SubmitTaskTestRunResponse SubmitTaskTestRun(Models\SubmitTaskTestRunRequest $req) No
- * @method Models\SubmitWorkflowResponse SubmitWorkflow(Models\SubmitWorkflowRequest $req) Submit Workflow
+ * @method Models\SubmitWorkflowResponse SubmitWorkflow(Models\SubmitWorkflowRequest $req) Submit a workflow. This API is deprecated. Use the BatchCreateTaskVersionAsync API.
  * @method Models\SuspendIntegrationTaskResponse SuspendIntegrationTask(Models\SuspendIntegrationTaskRequest $req) Pause Integration Task
  * @method Models\TaskLogResponse TaskLog(Models\TaskLogRequest $req) Query Inlong Manager Logs
  * @method Models\TriggerDsEventResponse TriggerDsEvent(Models\TriggerDsEventRequest $req) Event Management - Triggered Events
- * @method Models\TriggerEventResponse TriggerEvent(Models\TriggerEventRequest $req) <p style="color:red;">[Note: This version is only available to a portion of allowlist customers in the Guangzhou Region]</p>
-Trigger events
+ * @method Models\TriggerEventResponse TriggerEvent(Models\TriggerEventRequest $req) <p style="color:red;">[Note: This version is only available to some allowlisted customers in the Guangzhou region]</p>.
+This API is used to trigger event. This API is deprecated. Use API TriggerDsEvent.
  * @method Models\UnlockIntegrationTaskResponse UnlockIntegrationTask(Models\UnlockIntegrationTaskRequest $req) Unlock Integration Task
  * @method Models\UpdateProjectUserRoleResponse UpdateProjectUserRole(Models\UpdateProjectUserRoleRequest $req) This API is used to modify user roles in a project.
- * @method Models\UpdateWorkflowOwnerResponse UpdateWorkflowOwner(Models\UpdateWorkflowOwnerRequest $req) Modifying Workflow Person in Charge
+ * @method Models\UpdateWorkflowInfoResponse UpdateWorkflowInfo(Models\UpdateWorkflowInfoRequest $req) This API is developed in ds.
+This API is used to update a workflow, including its basic information and workflow parameters.
+ * @method Models\UpdateWorkflowOwnerResponse UpdateWorkflowOwner(Models\UpdateWorkflowOwnerRequest $req) This API is used to modify the workflow owner. Deprecated. Use the RenewWorkflowOwnerDs API.
  * @method Models\UploadContentResponse UploadContent(Models\UploadContentRequest $req) Save Task Information
  */
 
