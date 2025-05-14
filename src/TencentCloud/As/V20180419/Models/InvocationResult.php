@@ -21,81 +21,57 @@ use TencentCloud\Common\AbstractModel;
  * Result of the command execution
  *
  * @method string getInstanceId() Obtain Instance ID.
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setInstanceId(string $InstanceId) Set Instance ID.
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getInvocationId() Obtain Execution activity ID.
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setInvocationId(string $InvocationId) Set Execution activity ID.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getInvocationTaskId() Obtain Execution task ID.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setInvocationTaskId(string $InvocationTaskId) Set Execution task ID.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getInvocationTaskId() Obtain Task ID.
+ * @method void setInvocationTaskId(string $InvocationTaskId) Set Task ID.
  * @method string getCommandId() Obtain Command ID.
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setCommandId(string $CommandId) Set Command ID.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getTaskStatus() Obtain Execution Status
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setTaskStatus(string $TaskStatus) Set Execution Status
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getErrorMessage() Obtain Execution exception information
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setErrorMessage(string $ErrorMessage) Set Execution exception information
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getTaskStatus() Obtain Specifies the execution task status.
+ * @method void setTaskStatus(string $TaskStatus) Set Specifies the execution task status.
+ * @method string getErrorMessage() Obtain Specifies the exception information during execution.
+ * @method void setErrorMessage(string $ErrorMessage) Set Specifies the exception information during execution.
  */
 class InvocationResult extends AbstractModel
 {
     /**
      * @var string Instance ID.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $InstanceId;
 
     /**
      * @var string Execution activity ID.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $InvocationId;
 
     /**
-     * @var string Execution task ID.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Task ID.
      */
     public $InvocationTaskId;
 
     /**
      * @var string Command ID.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $CommandId;
 
     /**
-     * @var string Execution Status
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Specifies the execution task status.
      */
     public $TaskStatus;
 
     /**
-     * @var string Execution exception information
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Specifies the exception information during execution.
      */
     public $ErrorMessage;
 
     /**
      * @param string $InstanceId Instance ID.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $InvocationId Execution activity ID.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $InvocationTaskId Execution task ID.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $InvocationTaskId Task ID.
      * @param string $CommandId Command ID.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $TaskStatus Execution Status
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $ErrorMessage Execution exception information
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $TaskStatus Specifies the execution task status.
+     * @param string $ErrorMessage Specifies the exception information during execution.
      */
     function __construct()
     {

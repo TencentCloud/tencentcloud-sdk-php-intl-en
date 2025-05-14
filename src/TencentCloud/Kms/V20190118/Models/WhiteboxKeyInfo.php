@@ -42,10 +42,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDecryptKey(string $DecryptKey) Set Base64-encoded white-box decryption key
  * @method string getResourceId() Obtain Resource ID in the format of `creatorUin/$creatorUin/$keyId`
  * @method void setResourceId(string $ResourceId) Set Resource ID in the format of `creatorUin/$creatorUin/$keyId`
- * @method boolean getDeviceFingerprintBind() Obtain Whether there is a device fingerprint bound to the current key
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setDeviceFingerprintBind(boolean $DeviceFingerprintBind) Set Whether there is a device fingerprint bound to the current key
-Note: this field may return null, indicating that no valid values can be obtained.
+ * @method boolean getDeviceFingerprintBind() Obtain Specifies whether there is a device fingerprint bound to the current key.
+ * @method void setDeviceFingerprintBind(boolean $DeviceFingerprintBind) Set Specifies whether there is a device fingerprint bound to the current key.
  */
 class WhiteboxKeyInfo extends AbstractModel
 {
@@ -105,8 +103,7 @@ class WhiteboxKeyInfo extends AbstractModel
     public $ResourceId;
 
     /**
-     * @var boolean Whether there is a device fingerprint bound to the current key
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var boolean Specifies whether there is a device fingerprint bound to the current key.
      */
     public $DeviceFingerprintBind;
 
@@ -122,8 +119,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @param string $EncryptKey Base64-encoded white-box encryption key
      * @param string $DecryptKey Base64-encoded white-box decryption key
      * @param string $ResourceId Resource ID in the format of `creatorUin/$creatorUin/$keyId`
-     * @param boolean $DeviceFingerprintBind Whether there is a device fingerprint bound to the current key
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @param boolean $DeviceFingerprintBind Specifies whether there is a device fingerprint bound to the current key.
      */
     function __construct()
     {

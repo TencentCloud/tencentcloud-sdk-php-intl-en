@@ -20,34 +20,30 @@ use TencentCloud\Common\AbstractModel;
 /**
  * This describes the information on the Cloud Security service
  *
- * @method boolean getEnabled() Obtain Whether to enable the [Cloud Workload Protection Platform](https://www.tencentcloud.com/document/product/296?lang=en&pg=) service. Valid values:
-<li>TRUE: enable.</li>
-<li>FALSE: disable.</li>
+ * @method boolean getEnabled() Obtain Whether to enable [Cloud Workload Protection Platform (CWPP)](https://intl.cloud.tencent.com/document/product/296?from_cn_redirect=1). Valid values:
+<li>TRUE: enable CWPP.</li>
+<li>FALSE: disable CWPP.</li>
 Default value: TRUE.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setEnabled(boolean $Enabled) Set Whether to enable the [Cloud Workload Protection Platform](https://www.tencentcloud.com/document/product/296?lang=en&pg=) service. Valid values:
-<li>TRUE: enable.</li>
-<li>FALSE: disable.</li>
+ * @method void setEnabled(boolean $Enabled) Set Whether to enable [Cloud Workload Protection Platform (CWPP)](https://intl.cloud.tencent.com/document/product/296?from_cn_redirect=1). Valid values:
+<li>TRUE: enable CWPP.</li>
+<li>FALSE: disable CWPP.</li>
 Default value: TRUE.
-Note: This field may return null, indicating that no valid values can be obtained.
  */
 class RunSecurityServiceEnabled extends AbstractModel
 {
     /**
-     * @var boolean Whether to enable the [Cloud Workload Protection Platform](https://www.tencentcloud.com/document/product/296?lang=en&pg=) service. Valid values:
-<li>TRUE: enable.</li>
-<li>FALSE: disable.</li>
+     * @var boolean Whether to enable [Cloud Workload Protection Platform (CWPP)](https://intl.cloud.tencent.com/document/product/296?from_cn_redirect=1). Valid values:
+<li>TRUE: enable CWPP.</li>
+<li>FALSE: disable CWPP.</li>
 Default value: TRUE.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Enabled;
 
     /**
-     * @param boolean $Enabled Whether to enable the [Cloud Workload Protection Platform](https://www.tencentcloud.com/document/product/296?lang=en&pg=) service. Valid values:
-<li>TRUE: enable.</li>
-<li>FALSE: disable.</li>
+     * @param boolean $Enabled Whether to enable [Cloud Workload Protection Platform (CWPP)](https://intl.cloud.tencent.com/document/product/296?from_cn_redirect=1). Valid values:
+<li>TRUE: enable CWPP.</li>
+<li>FALSE: disable CWPP.</li>
 Default value: TRUE.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

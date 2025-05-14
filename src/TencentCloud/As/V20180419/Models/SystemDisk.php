@@ -20,34 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * System disk configuration of the launch configuration. If this parameter is not specified, the default value is assigned to it.
  *
- * @method string getDiskType() Obtain System disk type. For more information on limits of system disk types, see [Cloud Disk Types](https://intl.cloud.tencent.com/document/product/362/31636). Valid values:<br><li>`LOCAL_BASIC`: local disk <br><li>`LOCAL_SSD`: local SSD disk <br><li>`CLOUD_BASIC`: HDD cloud disk <br><li>`CLOUD_PREMIUM`: premium cloud storage<br><li>`CLOUD_SSD`: SSD cloud disk <br><br>Default value: `CLOUD_PREMIUM`.
-Note: this field may return `null`, indicating that no valid value can be obtained.
- * @method void setDiskType(string $DiskType) Set System disk type. For more information on limits of system disk types, see [Cloud Disk Types](https://intl.cloud.tencent.com/document/product/362/31636). Valid values:<br><li>`LOCAL_BASIC`: local disk <br><li>`LOCAL_SSD`: local SSD disk <br><li>`CLOUD_BASIC`: HDD cloud disk <br><li>`CLOUD_PREMIUM`: premium cloud storage<br><li>`CLOUD_SSD`: SSD cloud disk <br><br>Default value: `CLOUD_PREMIUM`.
-Note: this field may return `null`, indicating that no valid value can be obtained.
- * @method integer getDiskSize() Obtain System disk size in GB. Default value: 50
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setDiskSize(integer $DiskSize) Set System disk size in GB. Default value: 50
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getDiskType() Obtain System disk type. For restrictions on the system disk type, see [cloud block storage types](https://intl.cloud.tencent.com/document/product/362/2353?from_cn_redirect=1). Valid values:
+<li>LOCAL_BASIC: Local Disk.</li>
+<li>LOCAL_SSD: Local SSD.</li>
+<li>CLOUD_BASIC: Basic Cloud Disk.</li>
+<li>CLOUD_PREMIUM: Premium Disk.</li>
+<li>CLOUD_SSD: Cloud SSD.</li>
+<li>Default value: CLOUD_PREMIUM.</li>
+ * @method void setDiskType(string $DiskType) Set System disk type. For restrictions on the system disk type, see [cloud block storage types](https://intl.cloud.tencent.com/document/product/362/2353?from_cn_redirect=1). Valid values:
+<li>LOCAL_BASIC: Local Disk.</li>
+<li>LOCAL_SSD: Local SSD.</li>
+<li>CLOUD_BASIC: Basic Cloud Disk.</li>
+<li>CLOUD_PREMIUM: Premium Disk.</li>
+<li>CLOUD_SSD: Cloud SSD.</li>
+<li>Default value: CLOUD_PREMIUM.</li>
+ * @method integer getDiskSize() Obtain System disk size, in GB. Default value: 50.
+ * @method void setDiskSize(integer $DiskSize) Set System disk size, in GB. Default value: 50.
  */
 class SystemDisk extends AbstractModel
 {
     /**
-     * @var string System disk type. For more information on limits of system disk types, see [Cloud Disk Types](https://intl.cloud.tencent.com/document/product/362/31636). Valid values:<br><li>`LOCAL_BASIC`: local disk <br><li>`LOCAL_SSD`: local SSD disk <br><li>`CLOUD_BASIC`: HDD cloud disk <br><li>`CLOUD_PREMIUM`: premium cloud storage<br><li>`CLOUD_SSD`: SSD cloud disk <br><br>Default value: `CLOUD_PREMIUM`.
-Note: this field may return `null`, indicating that no valid value can be obtained.
+     * @var string System disk type. For restrictions on the system disk type, see [cloud block storage types](https://intl.cloud.tencent.com/document/product/362/2353?from_cn_redirect=1). Valid values:
+<li>LOCAL_BASIC: Local Disk.</li>
+<li>LOCAL_SSD: Local SSD.</li>
+<li>CLOUD_BASIC: Basic Cloud Disk.</li>
+<li>CLOUD_PREMIUM: Premium Disk.</li>
+<li>CLOUD_SSD: Cloud SSD.</li>
+<li>Default value: CLOUD_PREMIUM.</li>
      */
     public $DiskType;
 
     /**
-     * @var integer System disk size in GB. Default value: 50
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer System disk size, in GB. Default value: 50.
      */
     public $DiskSize;
 
     /**
-     * @param string $DiskType System disk type. For more information on limits of system disk types, see [Cloud Disk Types](https://intl.cloud.tencent.com/document/product/362/31636). Valid values:<br><li>`LOCAL_BASIC`: local disk <br><li>`LOCAL_SSD`: local SSD disk <br><li>`CLOUD_BASIC`: HDD cloud disk <br><li>`CLOUD_PREMIUM`: premium cloud storage<br><li>`CLOUD_SSD`: SSD cloud disk <br><br>Default value: `CLOUD_PREMIUM`.
-Note: this field may return `null`, indicating that no valid value can be obtained.
-     * @param integer $DiskSize System disk size in GB. Default value: 50
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $DiskType System disk type. For restrictions on the system disk type, see [cloud block storage types](https://intl.cloud.tencent.com/document/product/362/2353?from_cn_redirect=1). Valid values:
+<li>LOCAL_BASIC: Local Disk.</li>
+<li>LOCAL_SSD: Local SSD.</li>
+<li>CLOUD_BASIC: Basic Cloud Disk.</li>
+<li>CLOUD_PREMIUM: Premium Disk.</li>
+<li>CLOUD_SSD: Cloud SSD.</li>
+<li>Default value: CLOUD_PREMIUM.</li>
+     * @param integer $DiskSize System disk size, in GB. Default value: 50.
      */
     function __construct()
     {

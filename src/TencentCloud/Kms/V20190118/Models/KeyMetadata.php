@@ -42,22 +42,20 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOwner(string $Owner) Set CMK creator. The value of this parameter is `user` if the CMK is created by the user, or the corresponding service name if it is created automatically by an authorized Tencent Cloud service.
  * @method integer getNextRotateTime() Obtain Time of next rotation if key rotation is enabled
  * @method void setNextRotateTime(integer $NextRotateTime) Set Time of next rotation if key rotation is enabled
- * @method integer getDeletionDate() Obtain Scheduled deletion time
- * @method void setDeletionDate(integer $DeletionDate) Set Scheduled deletion time
- * @method string getOrigin() Obtain CMK key material type. TENCENT_KMS: created by KMS; EXTERNAL: imported by user.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setOrigin(string $Origin) Set CMK key material type. TENCENT_KMS: created by KMS; EXTERNAL: imported by user.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getValidTo() Obtain It's valid when `Origin` is `EXTERNAL`, indicating the expiration date of key material. 0 means valid forever.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setValidTo(integer $ValidTo) Set It's valid when `Origin` is `EXTERNAL`, indicating the expiration date of key material. 0 means valid forever.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getDeletionDate() Obtain The time when scheduled deletion occurs.
+ * @method void setDeletionDate(integer $DeletionDate) Set The time when scheduled deletion occurs.
+ * @method string getOrigin() Obtain CMK key material type. the type created by KMS is TENCENT_KMS. the user-imported type is EXTERNAL.
+ * @method void setOrigin(string $Origin) Set CMK key material type. the type created by KMS is TENCENT_KMS. the user-imported type is EXTERNAL.
+ * @method integer getValidTo() Obtain Valid when Origin is EXTERNAL. indicates the validity date of the key material. 0 means no expiration.
+ * @method void setValidTo(integer $ValidTo) Set Valid when Origin is EXTERNAL. indicates the validity date of the key material. 0 means no expiration.
  * @method string getResourceId() Obtain Resource ID in the format of `creatorUin/$creatorUin/$keyId`.
  * @method void setResourceId(string $ResourceId) Set Resource ID in the format of `creatorUin/$creatorUin/$keyId`.
- * @method string getHsmClusterId() Obtain ID of the HSM cluster. This field is only valid for Exclusive and Managed KMS instances.
-Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method void setHsmClusterId(string $HsmClusterId) Set ID of the HSM cluster. This field is only valid for Exclusive and Managed KMS instances.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method string getHsmClusterId() Obtain HSM cluster ID (valid only for exclusive or managed version KMS service instances).
+ * @method void setHsmClusterId(string $HsmClusterId) Set HSM cluster ID (valid only for exclusive or managed version KMS service instances).
+ * @method integer getRotateDays() Obtain Key rotation period (days).
+ * @method void setRotateDays(integer $RotateDays) Set Key rotation period (days).
+ * @method integer getLastRotateTime() Obtain Last disorderly rotation time (Unix timestamp).
+ * @method void setLastRotateTime(integer $LastRotateTime) Set Last disorderly rotation time (Unix timestamp).
  */
 class KeyMetadata extends AbstractModel
 {
@@ -117,19 +115,17 @@ class KeyMetadata extends AbstractModel
     public $NextRotateTime;
 
     /**
-     * @var integer Scheduled deletion time
+     * @var integer The time when scheduled deletion occurs.
      */
     public $DeletionDate;
 
     /**
-     * @var string CMK key material type. TENCENT_KMS: created by KMS; EXTERNAL: imported by user.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string CMK key material type. the type created by KMS is TENCENT_KMS. the user-imported type is EXTERNAL.
      */
     public $Origin;
 
     /**
-     * @var integer It's valid when `Origin` is `EXTERNAL`, indicating the expiration date of key material. 0 means valid forever.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Valid when Origin is EXTERNAL. indicates the validity date of the key material. 0 means no expiration.
      */
     public $ValidTo;
 
@@ -139,10 +135,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $ResourceId;
 
     /**
-     * @var string ID of the HSM cluster. This field is only valid for Exclusive and Managed KMS instances.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @var string HSM cluster ID (valid only for exclusive or managed version KMS service instances).
      */
     public $HsmClusterId;
+
+    /**
+     * @var integer Key rotation period (days).
+     */
+    public $RotateDays;
+
+    /**
+     * @var integer Last disorderly rotation time (Unix timestamp).
+     */
+    public $LastRotateTime;
 
     /**
      * @param string $KeyId Globally unique CMK ID
@@ -156,14 +161,13 @@ Note: This field may return `null`, indicating that no valid value can be obtain
      * @param boolean $KeyRotationEnabled Whether key rotation is enabled
      * @param string $Owner CMK creator. The value of this parameter is `user` if the CMK is created by the user, or the corresponding service name if it is created automatically by an authorized Tencent Cloud service.
      * @param integer $NextRotateTime Time of next rotation if key rotation is enabled
-     * @param integer $DeletionDate Scheduled deletion time
-     * @param string $Origin CMK key material type. TENCENT_KMS: created by KMS; EXTERNAL: imported by user.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $ValidTo It's valid when `Origin` is `EXTERNAL`, indicating the expiration date of key material. 0 means valid forever.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $DeletionDate The time when scheduled deletion occurs.
+     * @param string $Origin CMK key material type. the type created by KMS is TENCENT_KMS. the user-imported type is EXTERNAL.
+     * @param integer $ValidTo Valid when Origin is EXTERNAL. indicates the validity date of the key material. 0 means no expiration.
      * @param string $ResourceId Resource ID in the format of `creatorUin/$creatorUin/$keyId`.
-     * @param string $HsmClusterId ID of the HSM cluster. This field is only valid for Exclusive and Managed KMS instances.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param string $HsmClusterId HSM cluster ID (valid only for exclusive or managed version KMS service instances).
+     * @param integer $RotateDays Key rotation period (days).
+     * @param integer $LastRotateTime Last disorderly rotation time (Unix timestamp).
      */
     function __construct()
     {
@@ -240,6 +244,14 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 
         if (array_key_exists("HsmClusterId",$param) and $param["HsmClusterId"] !== null) {
             $this->HsmClusterId = $param["HsmClusterId"];
+        }
+
+        if (array_key_exists("RotateDays",$param) and $param["RotateDays"] !== null) {
+            $this->RotateDays = $param["RotateDays"];
+        }
+
+        if (array_key_exists("LastRotateTime",$param) and $param["LastRotateTime"] !== null) {
+            $this->LastRotateTime = $param["LastRotateTime"];
         }
     }
 }

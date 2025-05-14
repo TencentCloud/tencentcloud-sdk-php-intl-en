@@ -22,10 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method SpotMarketOptions getSpotOptions() Obtain Bidding-related options
  * @method void setSpotOptions(SpotMarketOptions $SpotOptions) Set Bidding-related options
- * @method string getMarketType() Obtain Market option type. Currently, this only supports the value "spot"
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setMarketType(string $MarketType) Set Market option type. Currently, this only supports the value "spot"
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getMarketType() Obtain Market option type. The value can only be spot currently.
+ * @method void setMarketType(string $MarketType) Set Market option type. The value can only be spot currently.
  */
 class InstanceMarketOptionsRequest extends AbstractModel
 {
@@ -35,15 +33,13 @@ class InstanceMarketOptionsRequest extends AbstractModel
     public $SpotOptions;
 
     /**
-     * @var string Market option type. Currently, this only supports the value "spot"
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Market option type. The value can only be spot currently.
      */
     public $MarketType;
 
     /**
      * @param SpotMarketOptions $SpotOptions Bidding-related options
-     * @param string $MarketType Market option type. Currently, this only supports the value "spot"
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $MarketType Market option type. The value can only be spot currently.
      */
     function __construct()
     {

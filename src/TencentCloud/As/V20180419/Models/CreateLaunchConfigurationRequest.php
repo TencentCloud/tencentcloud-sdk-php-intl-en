@@ -47,11 +47,13 @@ Note that this project ID is not the same as the project ID of the scaling group
  * @method string getUserData() Obtain Base64-encoded custom data of up to 16 KB.
  * @method void setUserData(string $UserData) Set Base64-encoded custom data of up to 16 KB.
  * @method string getInstanceChargeType() Obtain Instance billing mode. CVM instances take `POSTPAID_BY_HOUR` by default. Valid values:
-<br><li>POSTPAID_BY_HOUR: pay-as-you-go hourly
-<br><li>SPOTPAID: spot instance
+<li>POSTPAID_BY_HOUR: pay-as-you-go hourly</li>
+<li>SPOTPAID: spot instance</li>
+<li> CDCPAID: dedicated cluster</li>
  * @method void setInstanceChargeType(string $InstanceChargeType) Set Instance billing mode. CVM instances take `POSTPAID_BY_HOUR` by default. Valid values:
-<br><li>POSTPAID_BY_HOUR: pay-as-you-go hourly
-<br><li>SPOTPAID: spot instance
+<li>POSTPAID_BY_HOUR: pay-as-you-go hourly</li>
+<li>SPOTPAID: spot instance</li>
+<li> CDCPAID: dedicated cluster</li>
  * @method InstanceMarketOptionsRequest getInstanceMarketOptions() Obtain Market options of the instance, such as parameters related to spot instances. This parameter is required for spot instances.
  * @method void setInstanceMarketOptions(InstanceMarketOptionsRequest $InstanceMarketOptions) Set Market options of the instance, such as parameters related to spot instances. This parameter is required for spot instances.
  * @method array getInstanceTypes() Obtain List of instance models. Different instance models specify different resource specifications. Up to 10 instance models can be supported.
@@ -166,8 +168,9 @@ Note that this project ID is not the same as the project ID of the scaling group
 
     /**
      * @var string Instance billing mode. CVM instances take `POSTPAID_BY_HOUR` by default. Valid values:
-<br><li>POSTPAID_BY_HOUR: pay-as-you-go hourly
-<br><li>SPOTPAID: spot instance
+<li>POSTPAID_BY_HOUR: pay-as-you-go hourly</li>
+<li>SPOTPAID: spot instance</li>
+<li> CDCPAID: dedicated cluster</li>
      */
     public $InstanceChargeType;
 
@@ -276,8 +279,9 @@ Note that this project ID is not the same as the project ID of the scaling group
      * @param EnhancedService $EnhancedService Enhanced services. You can use this parameter to specify whether to enable services such as Cloud Security and Cloud Monitor. If this parameter is not specified, Cloud Monitor and Cloud Security will be enabled by default.
      * @param string $UserData Base64-encoded custom data of up to 16 KB.
      * @param string $InstanceChargeType Instance billing mode. CVM instances take `POSTPAID_BY_HOUR` by default. Valid values:
-<br><li>POSTPAID_BY_HOUR: pay-as-you-go hourly
-<br><li>SPOTPAID: spot instance
+<li>POSTPAID_BY_HOUR: pay-as-you-go hourly</li>
+<li>SPOTPAID: spot instance</li>
+<li> CDCPAID: dedicated cluster</li>
      * @param InstanceMarketOptionsRequest $InstanceMarketOptions Market options of the instance, such as parameters related to spot instances. This parameter is required for spot instances.
      * @param array $InstanceTypes List of instance models. Different instance models specify different resource specifications. Up to 10 instance models can be supported.
 `InstanceType` and `InstanceTypes` are mutually exclusive, and one and only one of them must be entered.

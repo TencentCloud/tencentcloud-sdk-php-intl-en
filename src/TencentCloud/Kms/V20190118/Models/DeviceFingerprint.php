@@ -22,10 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getIdentity() Obtain Fingerprint information collected by device fingerprint collector. Its format must be in the following regular expression: ^[0-9a-f]{8}[\-][0-9a-f]{14}[\-][0-9a-f]{14}[\-][0-9a-f]{14}[\-][0-9a-f]{16}$
  * @method void setIdentity(string $Identity) Set Fingerprint information collected by device fingerprint collector. Its format must be in the following regular expression: ^[0-9a-f]{8}[\-][0-9a-f]{14}[\-][0-9a-f]{14}[\-][0-9a-f]{14}[\-][0-9a-f]{16}$
- * @method string getDescription() Obtain Description, such as IP and device name. Length limit: 1,024 bytes
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setDescription(string $Description) Set Description, such as IP and device name. Length limit: 1,024 bytes
-Note: this field may return null, indicating that no valid values can be obtained.
+ * @method string getDescription() Obtain Description information, such as IP and device name, with a maximum of 1024 bytes.
+ * @method void setDescription(string $Description) Set Description information, such as IP and device name, with a maximum of 1024 bytes.
  */
 class DeviceFingerprint extends AbstractModel
 {
@@ -35,15 +33,13 @@ class DeviceFingerprint extends AbstractModel
     public $Identity;
 
     /**
-     * @var string Description, such as IP and device name. Length limit: 1,024 bytes
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string Description information, such as IP and device name, with a maximum of 1024 bytes.
      */
     public $Description;
 
     /**
      * @param string $Identity Fingerprint information collected by device fingerprint collector. Its format must be in the following regular expression: ^[0-9a-f]{8}[\-][0-9a-f]{14}[\-][0-9a-f]{14}[\-][0-9a-f]{14}[\-][0-9a-f]{16}$
-     * @param string $Description Description, such as IP and device name. Length limit: 1,024 bytes
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @param string $Description Description information, such as IP and device name, with a maximum of 1024 bytes.
      */
     function __construct()
     {

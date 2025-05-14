@@ -20,34 +20,30 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Information related to Tencent Cloud Observability Platform (TCOP, formerly Cloud Monitor).
  *
- * @method boolean getEnabled() Obtain Whether [TCOP (formerly Cloud Monitor)](https://intl.cloud.tencent.com/document/product/248?from_cn_redirect=1) is enabled. Valid values:
-<li>TRUE: enabled</li>
-<li>FALSE: disabled</li>
+ * @method boolean getEnabled() Obtain Whether to enable [Tencent Cloud Observability Platform (formerly Cloud Monitor)](https://intl.cloud.tencent.com/document/product/248?from_cn_redirect=1) (TCOP). Valid values:
+<li>TRUE: enable TCOP.</li>
+<li>FALSE: disable TCOP.</li>
 Default value: TRUE.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setEnabled(boolean $Enabled) Set Whether [TCOP (formerly Cloud Monitor)](https://intl.cloud.tencent.com/document/product/248?from_cn_redirect=1) is enabled. Valid values:
-<li>TRUE: enabled</li>
-<li>FALSE: disabled</li>
+ * @method void setEnabled(boolean $Enabled) Set Whether to enable [Tencent Cloud Observability Platform (formerly Cloud Monitor)](https://intl.cloud.tencent.com/document/product/248?from_cn_redirect=1) (TCOP). Valid values:
+<li>TRUE: enable TCOP.</li>
+<li>FALSE: disable TCOP.</li>
 Default value: TRUE.
-Note: This field may return null, indicating that no valid values can be obtained.
  */
 class RunMonitorServiceEnabled extends AbstractModel
 {
     /**
-     * @var boolean Whether [TCOP (formerly Cloud Monitor)](https://intl.cloud.tencent.com/document/product/248?from_cn_redirect=1) is enabled. Valid values:
-<li>TRUE: enabled</li>
-<li>FALSE: disabled</li>
+     * @var boolean Whether to enable [Tencent Cloud Observability Platform (formerly Cloud Monitor)](https://intl.cloud.tencent.com/document/product/248?from_cn_redirect=1) (TCOP). Valid values:
+<li>TRUE: enable TCOP.</li>
+<li>FALSE: disable TCOP.</li>
 Default value: TRUE.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Enabled;
 
     /**
-     * @param boolean $Enabled Whether [TCOP (formerly Cloud Monitor)](https://intl.cloud.tencent.com/document/product/248?from_cn_redirect=1) is enabled. Valid values:
-<li>TRUE: enabled</li>
-<li>FALSE: disabled</li>
+     * @param boolean $Enabled Whether to enable [Tencent Cloud Observability Platform (formerly Cloud Monitor)](https://intl.cloud.tencent.com/document/product/248?from_cn_redirect=1) (TCOP). Valid values:
+<li>TRUE: enable TCOP.</li>
+<li>FALSE: disable TCOP.</li>
 Default value: TRUE.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

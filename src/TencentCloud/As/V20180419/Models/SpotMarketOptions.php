@@ -22,10 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getMaxPrice() Obtain Bidding price such as "1.05"
  * @method void setMaxPrice(string $MaxPrice) Set Bidding price such as "1.05"
- * @method string getSpotInstanceType() Obtain Bid request type. Currently, only "one-time" type is supported. Default value: one-time
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setSpotInstanceType(string $SpotInstanceType) Set Bid request type. Currently, only "one-time" type is supported. Default value: one-time
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getSpotInstanceType() Obtain Spot instance type. The value can only be one-time currently. Default value: one-time.
+ * @method void setSpotInstanceType(string $SpotInstanceType) Set Spot instance type. The value can only be one-time currently. Default value: one-time.
  */
 class SpotMarketOptions extends AbstractModel
 {
@@ -35,15 +33,13 @@ class SpotMarketOptions extends AbstractModel
     public $MaxPrice;
 
     /**
-     * @var string Bid request type. Currently, only "one-time" type is supported. Default value: one-time
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Spot instance type. The value can only be one-time currently. Default value: one-time.
      */
     public $SpotInstanceType;
 
     /**
      * @param string $MaxPrice Bidding price such as "1.05"
-     * @param string $SpotInstanceType Bid request type. Currently, only "one-time" type is supported. Default value: one-time
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $SpotInstanceType Spot instance type. The value can only be one-time currently. Default value: one-time.
      */
     function __construct()
     {

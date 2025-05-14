@@ -22,34 +22,28 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method boolean getServiceEnabled() Obtain Whether the KMS service has been activated. true: activated
  * @method void setServiceEnabled(boolean $ServiceEnabled) Set Whether the KMS service has been activated. true: activated
- * @method integer getInvalidType() Obtain Service unavailability type. 0: not purchased; 1: normal; 2: suspended due to arrears; 3: resource released
- * @method void setInvalidType(integer $InvalidType) Set Service unavailability type. 0: not purchased; 1: normal; 2: suspended due to arrears; 3: resource released
+ * @method integer getInvalidType() Obtain Service unavailability type: 0-not purchased, 1-normal, 2-service suspended due to overdue payments, 3-resource release.
+ * @method void setInvalidType(integer $InvalidType) Set Service unavailability type: 0-not purchased, 1-normal, 2-service suspended due to overdue payments, 3-resource release.
  * @method integer getUserLevel() Obtain 0: Basic Edition, 1: Ultimate Edition
  * @method void setUserLevel(integer $UserLevel) Set 0: Basic Edition, 1: Ultimate Edition
- * @method integer getProExpireTime() Obtain Expiration time of the KMS Ultimate edition. It’s represented in a Unix Epoch timestamp.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setProExpireTime(integer $ProExpireTime) Set Expiration time of the KMS Ultimate edition. It’s represented in a Unix Epoch timestamp.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getProRenewFlag() Obtain Whether to automatically renew Ultimate Edition. 0: no, 1: yes
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setProRenewFlag(integer $ProRenewFlag) Set Whether to automatically renew Ultimate Edition. 0: no, 1: yes
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getProResourceId() Obtain Unique ID of the Ultimate Edition purchase record. If the Ultimate Edition is not activated, the returned value will be null.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setProResourceId(string $ProResourceId) Set Unique ID of the Ultimate Edition purchase record. If the Ultimate Edition is not activated, the returned value will be null.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method boolean getExclusiveVSMEnabled() Obtain Whether to activate Managed KMS
-Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method void setExclusiveVSMEnabled(boolean $ExclusiveVSMEnabled) Set Whether to activate Managed KMS
-Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method boolean getExclusiveHSMEnabled() Obtain Whether to activate Exclusive KMS
-Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method void setExclusiveHSMEnabled(boolean $ExclusiveHSMEnabled) Set Whether to activate Exclusive KMS
-Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method string getSubscriptionInfo() Obtain KMS subscription information.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setSubscriptionInfo(string $SubscriptionInfo) Set KMS subscription information.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getProExpireTime() Obtain Specifies the expiry time (Epoch Unix Timestamp) of the flagship edition.
+ * @method void setProExpireTime(integer $ProExpireTime) Set Specifies the expiry time (Epoch Unix Timestamp) of the flagship edition.
+ * @method integer getProRenewFlag() Obtain Specifies whether the flagship edition is automatically renewed: 0 - no automatic renewal, 1 - automatic renewal.
+ * @method void setProRenewFlag(integer $ProRenewFlag) Set Specifies whether the flagship edition is automatically renewed: 0 - no automatic renewal, 1 - automatic renewal.
+ * @method string getProResourceId() Obtain Unique identifier for the purchase record of the flagship edition. if the flagship edition is enabled, the return value is null.
+ * @method void setProResourceId(string $ProResourceId) Set Unique identifier for the purchase record of the flagship edition. if the flagship edition is enabled, the return value is null.
+ * @method boolean getExclusiveVSMEnabled() Obtain Whether to enable the KMS-managed version.
+ * @method void setExclusiveVSMEnabled(boolean $ExclusiveVSMEnabled) Set Whether to enable the KMS-managed version.
+ * @method boolean getExclusiveHSMEnabled() Obtain Whether to enable the exclusive edition of KMS.
+ * @method void setExclusiveHSMEnabled(boolean $ExclusiveHSMEnabled) Set Whether to enable the exclusive edition of KMS.
+ * @method string getSubscriptionInfo() Obtain Specifies the KMS subscription information.
+ * @method void setSubscriptionInfo(string $SubscriptionInfo) Set Specifies the KMS subscription information.
+ * @method integer getCmkUserCount() Obtain Returns the amount of KMS user secret keys used.
+ * @method void setCmkUserCount(integer $CmkUserCount) Set Returns the amount of KMS user secret keys used.
+ * @method integer getCmkLimit() Obtain Returns the specification quantity of KMS user secret keys.
+ * @method void setCmkLimit(integer $CmkLimit) Set Returns the specification quantity of KMS user secret keys.
+ * @method array getExclusiveHSMList() Obtain Return dedicated cluster group.
+ * @method void setExclusiveHSMList(array $ExclusiveHSMList) Set Return dedicated cluster group.
  * @method string getRequestId() Obtain The unique request ID, generated by the server, will be returned for every request (if the request fails to reach the server for other reasons, the request will not obtain a RequestId). RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, generated by the server, will be returned for every request (if the request fails to reach the server for other reasons, the request will not obtain a RequestId). RequestId is required for locating a problem.
  */
@@ -61,7 +55,7 @@ class GetServiceStatusResponse extends AbstractModel
     public $ServiceEnabled;
 
     /**
-     * @var integer Service unavailability type. 0: not purchased; 1: normal; 2: suspended due to arrears; 3: resource released
+     * @var integer Service unavailability type: 0-not purchased, 1-normal, 2-service suspended due to overdue payments, 3-resource release.
      */
     public $InvalidType;
 
@@ -71,40 +65,49 @@ class GetServiceStatusResponse extends AbstractModel
     public $UserLevel;
 
     /**
-     * @var integer Expiration time of the KMS Ultimate edition. It’s represented in a Unix Epoch timestamp.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Specifies the expiry time (Epoch Unix Timestamp) of the flagship edition.
      */
     public $ProExpireTime;
 
     /**
-     * @var integer Whether to automatically renew Ultimate Edition. 0: no, 1: yes
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var integer Specifies whether the flagship edition is automatically renewed: 0 - no automatic renewal, 1 - automatic renewal.
      */
     public $ProRenewFlag;
 
     /**
-     * @var string Unique ID of the Ultimate Edition purchase record. If the Ultimate Edition is not activated, the returned value will be null.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string Unique identifier for the purchase record of the flagship edition. if the flagship edition is enabled, the return value is null.
      */
     public $ProResourceId;
 
     /**
-     * @var boolean Whether to activate Managed KMS
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @var boolean Whether to enable the KMS-managed version.
      */
     public $ExclusiveVSMEnabled;
 
     /**
-     * @var boolean Whether to activate Exclusive KMS
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @var boolean Whether to enable the exclusive edition of KMS.
      */
     public $ExclusiveHSMEnabled;
 
     /**
-     * @var string KMS subscription information.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Specifies the KMS subscription information.
      */
     public $SubscriptionInfo;
+
+    /**
+     * @var integer Returns the amount of KMS user secret keys used.
+     */
+    public $CmkUserCount;
+
+    /**
+     * @var integer Returns the specification quantity of KMS user secret keys.
+     */
+    public $CmkLimit;
+
+    /**
+     * @var array Return dedicated cluster group.
+     */
+    public $ExclusiveHSMList;
 
     /**
      * @var string The unique request ID, generated by the server, will be returned for every request (if the request fails to reach the server for other reasons, the request will not obtain a RequestId). RequestId is required for locating a problem.
@@ -113,20 +116,17 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * @param boolean $ServiceEnabled Whether the KMS service has been activated. true: activated
-     * @param integer $InvalidType Service unavailability type. 0: not purchased; 1: normal; 2: suspended due to arrears; 3: resource released
+     * @param integer $InvalidType Service unavailability type: 0-not purchased, 1-normal, 2-service suspended due to overdue payments, 3-resource release.
      * @param integer $UserLevel 0: Basic Edition, 1: Ultimate Edition
-     * @param integer $ProExpireTime Expiration time of the KMS Ultimate edition. It’s represented in a Unix Epoch timestamp.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $ProRenewFlag Whether to automatically renew Ultimate Edition. 0: no, 1: yes
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $ProResourceId Unique ID of the Ultimate Edition purchase record. If the Ultimate Edition is not activated, the returned value will be null.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param boolean $ExclusiveVSMEnabled Whether to activate Managed KMS
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param boolean $ExclusiveHSMEnabled Whether to activate Exclusive KMS
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param string $SubscriptionInfo KMS subscription information.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $ProExpireTime Specifies the expiry time (Epoch Unix Timestamp) of the flagship edition.
+     * @param integer $ProRenewFlag Specifies whether the flagship edition is automatically renewed: 0 - no automatic renewal, 1 - automatic renewal.
+     * @param string $ProResourceId Unique identifier for the purchase record of the flagship edition. if the flagship edition is enabled, the return value is null.
+     * @param boolean $ExclusiveVSMEnabled Whether to enable the KMS-managed version.
+     * @param boolean $ExclusiveHSMEnabled Whether to enable the exclusive edition of KMS.
+     * @param string $SubscriptionInfo Specifies the KMS subscription information.
+     * @param integer $CmkUserCount Returns the amount of KMS user secret keys used.
+     * @param integer $CmkLimit Returns the specification quantity of KMS user secret keys.
+     * @param array $ExclusiveHSMList Return dedicated cluster group.
      * @param string $RequestId The unique request ID, generated by the server, will be returned for every request (if the request fails to reach the server for other reasons, the request will not obtain a RequestId). RequestId is required for locating a problem.
      */
     function __construct()
@@ -176,6 +176,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("SubscriptionInfo",$param) and $param["SubscriptionInfo"] !== null) {
             $this->SubscriptionInfo = $param["SubscriptionInfo"];
+        }
+
+        if (array_key_exists("CmkUserCount",$param) and $param["CmkUserCount"] !== null) {
+            $this->CmkUserCount = $param["CmkUserCount"];
+        }
+
+        if (array_key_exists("CmkLimit",$param) and $param["CmkLimit"] !== null) {
+            $this->CmkLimit = $param["CmkLimit"];
+        }
+
+        if (array_key_exists("ExclusiveHSMList",$param) and $param["ExclusiveHSMList"] !== null) {
+            $this->ExclusiveHSMList = [];
+            foreach ($param["ExclusiveHSMList"] as $key => $value){
+                $obj = new ExclusiveHSM();
+                $obj->deserialize($value);
+                array_push($this->ExclusiveHSMList, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

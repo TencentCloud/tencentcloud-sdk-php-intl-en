@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setKeyId(string $KeyId) Set CMK ID
  * @method string getProductId() Obtain Unique ID of a Tencent Cloud service
  * @method void setProductId(string $ProductId) Set Unique ID of a Tencent Cloud service
- * @method string getResourceId() Obtain Resource/instance ID, which is stored as a string and defined by the caller based on the Tencent Cloud service’s features.
- * @method void setResourceId(string $ResourceId) Set Resource/instance ID, which is stored as a string and defined by the caller based on the Tencent Cloud service’s features.
+ * @method string getResourceId() Obtain Resource/instance ID, which is stored as a string and defined by the caller based on the Tencent Cloud service's features.
+ * @method void setResourceId(string $ResourceId) Set Resource/instance ID, which is stored as a string and defined by the caller based on the Tencent Cloud service's features.
  */
 class UnbindCloudResourceRequest extends AbstractModel
 {
@@ -40,14 +40,14 @@ class UnbindCloudResourceRequest extends AbstractModel
     public $ProductId;
 
     /**
-     * @var string Resource/instance ID, which is stored as a string and defined by the caller based on the Tencent Cloud service’s features.
+     * @var string Resource/instance ID, which is stored as a string and defined by the caller based on the Tencent Cloud service's features.
      */
     public $ResourceId;
 
     /**
      * @param string $KeyId CMK ID
      * @param string $ProductId Unique ID of a Tencent Cloud service
-     * @param string $ResourceId Resource/instance ID, which is stored as a string and defined by the caller based on the Tencent Cloud service’s features.
+     * @param string $ResourceId Resource/instance ID, which is stored as a string and defined by the caller based on the Tencent Cloud service's features.
      */
     function __construct()
     {

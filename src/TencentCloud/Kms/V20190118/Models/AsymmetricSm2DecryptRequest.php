@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getKeyId() Obtain Unique CMK ID
  * @method void setKeyId(string $KeyId) Set Unique CMK ID
- * @method string getCiphertext() Obtain Base64-encoded ciphertext encrypted with `PublicKey`, whose length cannot exceed 256 bytes.
- * @method void setCiphertext(string $Ciphertext) Set Base64-encoded ciphertext encrypted with `PublicKey`, whose length cannot exceed 256 bytes.
+ * @method string getCiphertext() Obtain Specifies that the ciphertext encrypted with PublicKey is Base64 encoded. the original ciphertext format needs to be C1C3C2_ASN1. the length of the original ciphertext cannot exceed 256 bytes.
+ * @method void setCiphertext(string $Ciphertext) Set Specifies that the ciphertext encrypted with PublicKey is Base64 encoded. the original ciphertext format needs to be C1C3C2_ASN1. the length of the original ciphertext cannot exceed 256 bytes.
  */
 class AsymmetricSm2DecryptRequest extends AbstractModel
 {
@@ -33,13 +33,13 @@ class AsymmetricSm2DecryptRequest extends AbstractModel
     public $KeyId;
 
     /**
-     * @var string Base64-encoded ciphertext encrypted with `PublicKey`, whose length cannot exceed 256 bytes.
+     * @var string Specifies that the ciphertext encrypted with PublicKey is Base64 encoded. the original ciphertext format needs to be C1C3C2_ASN1. the length of the original ciphertext cannot exceed 256 bytes.
      */
     public $Ciphertext;
 
     /**
      * @param string $KeyId Unique CMK ID
-     * @param string $Ciphertext Base64-encoded ciphertext encrypted with `PublicKey`, whose length cannot exceed 256 bytes.
+     * @param string $Ciphertext Specifies that the ciphertext encrypted with PublicKey is Base64 encoded. the original ciphertext format needs to be C1C3C2_ASN1. the length of the original ciphertext cannot exceed 256 bytes.
      */
     function __construct()
     {

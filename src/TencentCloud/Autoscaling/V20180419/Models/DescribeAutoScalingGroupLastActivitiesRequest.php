@@ -20,18 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeAutoScalingGroupLastActivities request structure.
  *
- * @method array getAutoScalingGroupIds() Obtain ID list of an auto scaling group.
- * @method void setAutoScalingGroupIds(array $AutoScalingGroupIds) Set ID list of an auto scaling group.
+ * @method array getAutoScalingGroupIds() Obtain ID list of auto scaling groups.
+ * @method void setAutoScalingGroupIds(array $AutoScalingGroupIds) Set ID list of auto scaling groups.
+ * @method boolean getExcludeCancelledActivity() Obtain Excludes cancelled type activities when querying. Default value is false, which means cancelled type activities are not excluded.
+ * @method void setExcludeCancelledActivity(boolean $ExcludeCancelledActivity) Set Excludes cancelled type activities when querying. Default value is false, which means cancelled type activities are not excluded.
  */
 class DescribeAutoScalingGroupLastActivitiesRequest extends AbstractModel
 {
     /**
-     * @var array ID list of an auto scaling group.
+     * @var array ID list of auto scaling groups.
      */
     public $AutoScalingGroupIds;
 
     /**
-     * @param array $AutoScalingGroupIds ID list of an auto scaling group.
+     * @var boolean Excludes cancelled type activities when querying. Default value is false, which means cancelled type activities are not excluded.
+     */
+    public $ExcludeCancelledActivity;
+
+    /**
+     * @param array $AutoScalingGroupIds ID list of auto scaling groups.
+     * @param boolean $ExcludeCancelledActivity Excludes cancelled type activities when querying. Default value is false, which means cancelled type activities are not excluded.
      */
     function __construct()
     {
@@ -48,6 +56,10 @@ class DescribeAutoScalingGroupLastActivitiesRequest extends AbstractModel
         }
         if (array_key_exists("AutoScalingGroupIds",$param) and $param["AutoScalingGroupIds"] !== null) {
             $this->AutoScalingGroupIds = $param["AutoScalingGroupIds"];
+        }
+
+        if (array_key_exists("ExcludeCancelledActivity",$param) and $param["ExcludeCancelledActivity"] !== null) {
+            $this->ExcludeCancelledActivity = $param["ExcludeCancelledActivity"];
         }
     }
 }

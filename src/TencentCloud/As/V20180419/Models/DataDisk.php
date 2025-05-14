@@ -20,30 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Configuration information of data disk in launch configuration. If this parameter is not specified, no data disk will be purchased by default. You can specify only one data disk when purchasing it.
  *
- * @method string getDiskType() Obtain Data disk type. For restrictions on data disk type, see [Cloud Block Storage Types](https://intl.cloud.tencent.com/document/product/362/2353?from_cn_redirect=1). Valid values:
-<li>LOCAL_BASIC: Local hard disk.</li>
+ * @method string getDiskType() Obtain Data disk type. For restrictions on the data disk type, see [cloud block storage types](https://intl.cloud.tencent.com/document/product/362/2353?from_cn_redirect=1). Valid values:
+<li>LOCAL_BASIC: Local Disk.</li>
 <li>LOCAL_SSD: Local SSD.</li>
-<li>CLOUD_BASIC: General cloud disk.</li>
-<li>CLOUD_PREMIUM: Premium cloud disk.</li>
+<li>CLOUD_BASIC: Basic Cloud Disk.</li>
+<li>CLOUD_PREMIUM: Premium Disk.</li>
 <li>CLOUD_SSD: Cloud SSD.</li>
 <li>CLOUD_HSSD: Enhanced SSD.</li>
-<li>CLOUD_TSSD: Ultra SSD.</li>
+<li>CLOUD_TSSD: Tremendous SSD.</li>
 The default value is consistent with the system disk type (SystemDisk.DiskType).
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setDiskType(string $DiskType) Set Data disk type. For restrictions on data disk type, see [Cloud Block Storage Types](https://intl.cloud.tencent.com/document/product/362/2353?from_cn_redirect=1). Valid values:
-<li>LOCAL_BASIC: Local hard disk.</li>
+ * @method void setDiskType(string $DiskType) Set Data disk type. For restrictions on the data disk type, see [cloud block storage types](https://intl.cloud.tencent.com/document/product/362/2353?from_cn_redirect=1). Valid values:
+<li>LOCAL_BASIC: Local Disk.</li>
 <li>LOCAL_SSD: Local SSD.</li>
-<li>CLOUD_BASIC: General cloud disk.</li>
-<li>CLOUD_PREMIUM: Premium cloud disk.</li>
+<li>CLOUD_BASIC: Basic Cloud Disk.</li>
+<li>CLOUD_PREMIUM: Premium Disk.</li>
 <li>CLOUD_SSD: Cloud SSD.</li>
 <li>CLOUD_HSSD: Enhanced SSD.</li>
-<li>CLOUD_TSSD: Ultra SSD.</li>
+<li>CLOUD_TSSD: Tremendous SSD.</li>
 The default value is consistent with the system disk type (SystemDisk.DiskType).
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getDiskSize() Obtain Data disk size (in GB). The minimum adjustment increment is 10 GB. The value range varies by data disk type. For more information on limits, see [CVM Instance Configuration](https://intl.cloud.tencent.com/document/product/213/2177?from_cn_redirect=1). The default value is 0, indicating that no data disk is purchased. For more information, see the product documentation.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setDiskSize(integer $DiskSize) Set Data disk size (in GB). The minimum adjustment increment is 10 GB. The value range varies by data disk type. For more information on limits, see [CVM Instance Configuration](https://intl.cloud.tencent.com/document/product/213/2177?from_cn_redirect=1). The default value is 0, indicating that no data disk is purchased. For more information, see the product documentation.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getDiskSize() Obtain Data disk size, in GB. The minimum adjustment step size is 10 GB. The value range varies according to the data disk type. For specific restrictions, see [CVM instance configuration](https://intl.cloud.tencent.com/document/product/213/2177?from_cn_redirect=1). Default value: 0, which means that no data disk is purchased. For more restrictions, see the product documentation.
+ * @method void setDiskSize(integer $DiskSize) Set Data disk size, in GB. The minimum adjustment step size is 10 GB. The value range varies according to the data disk type. For specific restrictions, see [CVM instance configuration](https://intl.cloud.tencent.com/document/product/213/2177?from_cn_redirect=1). Default value: 0, which means that no data disk is purchased. For more restrictions, see the product documentation.
  * @method string getSnapshotId() Obtain Data disk snapshot ID, such as `snap-l8psqwnt`.
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setSnapshotId(string $SnapshotId) Set Data disk snapshot ID, such as `snap-l8psqwnt`.
@@ -82,22 +78,20 @@ Note: This field may return null, indicating that no valid values can be obtaine
 class DataDisk extends AbstractModel
 {
     /**
-     * @var string Data disk type. For restrictions on data disk type, see [Cloud Block Storage Types](https://intl.cloud.tencent.com/document/product/362/2353?from_cn_redirect=1). Valid values:
-<li>LOCAL_BASIC: Local hard disk.</li>
+     * @var string Data disk type. For restrictions on the data disk type, see [cloud block storage types](https://intl.cloud.tencent.com/document/product/362/2353?from_cn_redirect=1). Valid values:
+<li>LOCAL_BASIC: Local Disk.</li>
 <li>LOCAL_SSD: Local SSD.</li>
-<li>CLOUD_BASIC: General cloud disk.</li>
-<li>CLOUD_PREMIUM: Premium cloud disk.</li>
+<li>CLOUD_BASIC: Basic Cloud Disk.</li>
+<li>CLOUD_PREMIUM: Premium Disk.</li>
 <li>CLOUD_SSD: Cloud SSD.</li>
 <li>CLOUD_HSSD: Enhanced SSD.</li>
-<li>CLOUD_TSSD: Ultra SSD.</li>
+<li>CLOUD_TSSD: Tremendous SSD.</li>
 The default value is consistent with the system disk type (SystemDisk.DiskType).
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $DiskType;
 
     /**
-     * @var integer Data disk size (in GB). The minimum adjustment increment is 10 GB. The value range varies by data disk type. For more information on limits, see [CVM Instance Configuration](https://intl.cloud.tencent.com/document/product/213/2177?from_cn_redirect=1). The default value is 0, indicating that no data disk is purchased. For more information, see the product documentation.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Data disk size, in GB. The minimum adjustment step size is 10 GB. The value range varies according to the data disk type. For specific restrictions, see [CVM instance configuration](https://intl.cloud.tencent.com/document/product/213/2177?from_cn_redirect=1). Default value: 0, which means that no data disk is purchased. For more restrictions, see the product documentation.
      */
     public $DiskSize;
 
@@ -139,18 +133,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $BurstPerformance;
 
     /**
-     * @param string $DiskType Data disk type. For restrictions on data disk type, see [Cloud Block Storage Types](https://intl.cloud.tencent.com/document/product/362/2353?from_cn_redirect=1). Valid values:
-<li>LOCAL_BASIC: Local hard disk.</li>
+     * @param string $DiskType Data disk type. For restrictions on the data disk type, see [cloud block storage types](https://intl.cloud.tencent.com/document/product/362/2353?from_cn_redirect=1). Valid values:
+<li>LOCAL_BASIC: Local Disk.</li>
 <li>LOCAL_SSD: Local SSD.</li>
-<li>CLOUD_BASIC: General cloud disk.</li>
-<li>CLOUD_PREMIUM: Premium cloud disk.</li>
+<li>CLOUD_BASIC: Basic Cloud Disk.</li>
+<li>CLOUD_PREMIUM: Premium Disk.</li>
 <li>CLOUD_SSD: Cloud SSD.</li>
 <li>CLOUD_HSSD: Enhanced SSD.</li>
-<li>CLOUD_TSSD: Ultra SSD.</li>
+<li>CLOUD_TSSD: Tremendous SSD.</li>
 The default value is consistent with the system disk type (SystemDisk.DiskType).
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $DiskSize Data disk size (in GB). The minimum adjustment increment is 10 GB. The value range varies by data disk type. For more information on limits, see [CVM Instance Configuration](https://intl.cloud.tencent.com/document/product/213/2177?from_cn_redirect=1). The default value is 0, indicating that no data disk is purchased. For more information, see the product documentation.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $DiskSize Data disk size, in GB. The minimum adjustment step size is 10 GB. The value range varies according to the data disk type. For specific restrictions, see [CVM instance configuration](https://intl.cloud.tencent.com/document/product/213/2177?from_cn_redirect=1). Default value: 0, which means that no data disk is purchased. For more restrictions, see the product documentation.
      * @param string $SnapshotId Data disk snapshot ID, such as `snap-l8psqwnt`.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param boolean $DeleteWithInstance Whether the data disk is terminated along with the instance. Valid values:
