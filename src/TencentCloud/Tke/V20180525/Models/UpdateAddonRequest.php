@@ -24,10 +24,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setClusterId(string $ClusterId) Set Cluster ID
  * @method string getAddonName() Obtain Add-on name
  * @method void setAddonName(string $AddonName) Set Add-on name
- * @method string getAddonVersion() Obtain Add-on version. The add-on version is not updated if this parameter is not specified.
- * @method void setAddonVersion(string $AddonVersion) Set Add-on version. The add-on version is not updated if this parameter is not specified.
- * @method string getRawValues() Obtain Add-on parameters in a base64-encoded JSON string. You can query add-on parameters via `DescribeAddonValues`.
- * @method void setRawValues(string $RawValues) Set Add-on parameters in a base64-encoded JSON string. You can query add-on parameters via `DescribeAddonValues`.
+ * @method string getAddonVersion() Obtain addon version (default does not update if not passed. if AddonVersion is not passed, RawValues must be passed.).
+ * @method void setAddonVersion(string $AddonVersion) Set addon version (default does not update if not passed. if AddonVersion is not passed, RawValues must be passed.).
+ * @method string getRawValues() Obtain Parameters of the addon, which is a base64-transcoded string in json format. (the addon parameters are obtained through DescribeAddonValues. when RawValues is not passed, AddonVersion must be provided.).
+ * @method void setRawValues(string $RawValues) Set Parameters of the addon, which is a base64-transcoded string in json format. (the addon parameters are obtained through DescribeAddonValues. when RawValues is not passed, AddonVersion must be provided.).
+ * @method string getUpdateStrategy() Obtain The update policy for the addon parameter supports two strategies: replace and merge. the default value is merge, which is compatible with old version apis. replace: use new RawValues to fully replace the original RawValues of the addon. merge: add or update the corresponding parameters in the original RawValues of the addon based on new RawValues.
+ * @method void setUpdateStrategy(string $UpdateStrategy) Set The update policy for the addon parameter supports two strategies: replace and merge. the default value is merge, which is compatible with old version apis. replace: use new RawValues to fully replace the original RawValues of the addon. merge: add or update the corresponding parameters in the original RawValues of the addon based on new RawValues.
+ * @method boolean getDryRun() Obtain Specifies whether to only perform an update check. when set to true, only the check is performed without updating the component.
+ * @method void setDryRun(boolean $DryRun) Set Specifies whether to only perform an update check. when set to true, only the check is performed without updating the component.
  */
 class UpdateAddonRequest extends AbstractModel
 {
@@ -42,20 +46,32 @@ class UpdateAddonRequest extends AbstractModel
     public $AddonName;
 
     /**
-     * @var string Add-on version. The add-on version is not updated if this parameter is not specified.
+     * @var string addon version (default does not update if not passed. if AddonVersion is not passed, RawValues must be passed.).
      */
     public $AddonVersion;
 
     /**
-     * @var string Add-on parameters in a base64-encoded JSON string. You can query add-on parameters via `DescribeAddonValues`.
+     * @var string Parameters of the addon, which is a base64-transcoded string in json format. (the addon parameters are obtained through DescribeAddonValues. when RawValues is not passed, AddonVersion must be provided.).
      */
     public $RawValues;
 
     /**
+     * @var string The update policy for the addon parameter supports two strategies: replace and merge. the default value is merge, which is compatible with old version apis. replace: use new RawValues to fully replace the original RawValues of the addon. merge: add or update the corresponding parameters in the original RawValues of the addon based on new RawValues.
+     */
+    public $UpdateStrategy;
+
+    /**
+     * @var boolean Specifies whether to only perform an update check. when set to true, only the check is performed without updating the component.
+     */
+    public $DryRun;
+
+    /**
      * @param string $ClusterId Cluster ID
      * @param string $AddonName Add-on name
-     * @param string $AddonVersion Add-on version. The add-on version is not updated if this parameter is not specified.
-     * @param string $RawValues Add-on parameters in a base64-encoded JSON string. You can query add-on parameters via `DescribeAddonValues`.
+     * @param string $AddonVersion addon version (default does not update if not passed. if AddonVersion is not passed, RawValues must be passed.).
+     * @param string $RawValues Parameters of the addon, which is a base64-transcoded string in json format. (the addon parameters are obtained through DescribeAddonValues. when RawValues is not passed, AddonVersion must be provided.).
+     * @param string $UpdateStrategy The update policy for the addon parameter supports two strategies: replace and merge. the default value is merge, which is compatible with old version apis. replace: use new RawValues to fully replace the original RawValues of the addon. merge: add or update the corresponding parameters in the original RawValues of the addon based on new RawValues.
+     * @param boolean $DryRun Specifies whether to only perform an update check. when set to true, only the check is performed without updating the component.
      */
     function __construct()
     {
@@ -84,6 +100,14 @@ class UpdateAddonRequest extends AbstractModel
 
         if (array_key_exists("RawValues",$param) and $param["RawValues"] !== null) {
             $this->RawValues = $param["RawValues"];
+        }
+
+        if (array_key_exists("UpdateStrategy",$param) and $param["UpdateStrategy"] !== null) {
+            $this->UpdateStrategy = $param["UpdateStrategy"];
+        }
+
+        if (array_key_exists("DryRun",$param) and $param["DryRun"] !== null) {
+            $this->DryRun = $param["DryRun"];
         }
     }
 }

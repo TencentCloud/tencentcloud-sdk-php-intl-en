@@ -20,19 +20,21 @@ use TencentCloud\Common\AbstractModel;
 /**
  * InstallAddon request structure.
  *
- * @method string getClusterId() Obtain Cluster ID
- * @method void setClusterId(string $ClusterId) Set Cluster ID
+ * @method string getClusterId() Obtain Cluster ID (only supported for standard tke clusters).
+ * @method void setClusterId(string $ClusterId) Set Cluster ID (only supported for standard tke clusters).
  * @method string getAddonName() Obtain Add-on name
  * @method void setAddonName(string $AddonName) Set Add-on name
  * @method string getAddonVersion() Obtain Add-on version. If it is not specified, the latest version is installed by default.
  * @method void setAddonVersion(string $AddonVersion) Set Add-on version. If it is not specified, the latest version is installed by default.
  * @method string getRawValues() Obtain Add-on parameters in a base64-encoded JSON string. You can query add-on parameters via `DescribeAddonValues`.
  * @method void setRawValues(string $RawValues) Set Add-on parameters in a base64-encoded JSON string. You can query add-on parameters via `DescribeAddonValues`.
+ * @method boolean getDryRun() Obtain Specifies whether to perform only an installation check. when set to true, only checks are performed without installing components.
+ * @method void setDryRun(boolean $DryRun) Set Specifies whether to perform only an installation check. when set to true, only checks are performed without installing components.
  */
 class InstallAddonRequest extends AbstractModel
 {
     /**
-     * @var string Cluster ID
+     * @var string Cluster ID (only supported for standard tke clusters).
      */
     public $ClusterId;
 
@@ -52,10 +54,16 @@ class InstallAddonRequest extends AbstractModel
     public $RawValues;
 
     /**
-     * @param string $ClusterId Cluster ID
+     * @var boolean Specifies whether to perform only an installation check. when set to true, only checks are performed without installing components.
+     */
+    public $DryRun;
+
+    /**
+     * @param string $ClusterId Cluster ID (only supported for standard tke clusters).
      * @param string $AddonName Add-on name
      * @param string $AddonVersion Add-on version. If it is not specified, the latest version is installed by default.
      * @param string $RawValues Add-on parameters in a base64-encoded JSON string. You can query add-on parameters via `DescribeAddonValues`.
+     * @param boolean $DryRun Specifies whether to perform only an installation check. when set to true, only checks are performed without installing components.
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class InstallAddonRequest extends AbstractModel
 
         if (array_key_exists("RawValues",$param) and $param["RawValues"] !== null) {
             $this->RawValues = $param["RawValues"];
+        }
+
+        if (array_key_exists("DryRun",$param) and $param["DryRun"] !== null) {
+            $this->DryRun = $param["DryRun"];
         }
     }
 }

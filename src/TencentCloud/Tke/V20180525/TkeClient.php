@@ -127,6 +127,7 @@ use TencentCloud\Tke\V20180525\Models as Models;
  * @method Models\EnableVpcCniNetworkTypeResponse EnableVpcCniNetworkType(Models\EnableVpcCniNetworkTypeRequest $req) This API is used to enable the VPC-CNI network mode for GR clusters.
  * @method Models\ForwardTKEEdgeApplicationRequestV3Response ForwardTKEEdgeApplicationRequestV3(Models\ForwardTKEEdgeApplicationRequestV3Request $req) This API is used to work with the add-ons of a TKE Edge cluster.
  * @method Models\GetClusterLevelPriceResponse GetClusterLevelPrice(Models\GetClusterLevelPriceRequest $req) Obtaining the price of specified cluster model
+ * @method Models\GetTkeAppChartListResponse GetTkeAppChartList(Models\GetTkeAppChartListRequest $req) This API is used to retrieve the App List supported by TKE.
  * @method Models\GetUpgradeInstanceProgressResponse GetUpgradeInstanceProgress(Models\GetUpgradeInstanceProgressRequest $req) This API is used to obtain the current progress of node upgrade. If the cluster is not in node upgrade status, the API will report an error: Task not found.
  * @method Models\InstallAddonResponse InstallAddon(Models\InstallAddonRequest $req) This API is used to install an add-on on the target cluster.
  * @method Models\InstallEdgeLogAgentResponse InstallEdgeLogAgent(Models\InstallEdgeLogAgentRequest $req) This API is used to install the log collection add-on on TKE Edge cluster nodes.
