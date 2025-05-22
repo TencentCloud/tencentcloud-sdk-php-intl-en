@@ -20,34 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Monthly subscription configuration of a CLB instance
  *
- * @method string getRenewFlag() Obtain Renewal type. AUTO_RENEW: automatic renewal; MANUAL_RENEW: manual renewal
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setRenewFlag(string $RenewFlag) Set Renewal type. AUTO_RENEW: automatic renewal; MANUAL_RENEW: manual renewal
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getPeriod() Obtain Cycle, indicating the number of months (reserved field)
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setPeriod(integer $Period) Set Cycle, indicating the number of months (reserved field)
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getRenewFlag() Obtain Reserved field.
+ * @method void setRenewFlag(string $RenewFlag) Set Reserved field.
+ * @method integer getPeriod() Obtain Reserved field.
+ * @method void setPeriod(integer $Period) Set Reserved field.
  */
 class LBChargePrepaid extends AbstractModel
 {
     /**
-     * @var string Renewal type. AUTO_RENEW: automatic renewal; MANUAL_RENEW: manual renewal
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Reserved field.
      */
     public $RenewFlag;
 
     /**
-     * @var integer Cycle, indicating the number of months (reserved field)
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Reserved field.
      */
     public $Period;
 
     /**
-     * @param string $RenewFlag Renewal type. AUTO_RENEW: automatic renewal; MANUAL_RENEW: manual renewal
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $Period Cycle, indicating the number of months (reserved field)
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $RenewFlag Reserved field.
+     * @param integer $Period Reserved field.
      */
     function __construct()
     {

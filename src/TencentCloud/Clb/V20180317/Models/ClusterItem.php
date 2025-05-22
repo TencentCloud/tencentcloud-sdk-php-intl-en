@@ -22,10 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getClusterId() Obtain Unique cluster ID
  * @method void setClusterId(string $ClusterId) Set Unique cluster ID
- * @method string getClusterName() Obtain Cluster name
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setClusterName(string $ClusterName) Set Cluster name
-Note: this field may return null, indicating that no valid values can be obtained.
+ * @method string getClusterName() Obtain Cluster name.
+ * @method void setClusterName(string $ClusterName) Set Cluster name.
  * @method string getZone() Obtain Cluster AZ, such as ap-guangzhou-1
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setZone(string $Zone) Set Cluster AZ, such as ap-guangzhou-1
@@ -39,8 +37,7 @@ class ClusterItem extends AbstractModel
     public $ClusterId;
 
     /**
-     * @var string Cluster name
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string Cluster name.
      */
     public $ClusterName;
 
@@ -52,8 +49,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * @param string $ClusterId Unique cluster ID
-     * @param string $ClusterName Cluster name
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @param string $ClusterName Cluster name.
      * @param string $Zone Cluster AZ, such as ap-guangzhou-1
 Note: this field may return null, indicating that no valid values can be obtained.
      */
