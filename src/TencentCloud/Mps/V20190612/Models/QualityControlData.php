@@ -28,10 +28,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setNoVideo(boolean $NoVideo) Set Whether there is a video track. `true` indicates that there isn't.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getQualityEvaluationScore() Obtain The no-reference video quality score. Value range: 0-100.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setQualityEvaluationScore(integer $QualityEvaluationScore) Set The no-reference video quality score. Value range: 0-100.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getQualityEvaluationScore() Obtain No-reference quality score of the video (100 points in total).
+Note: This field may return null, indicating that no valid value can be obtained.
+ * @method void setQualityEvaluationScore(integer $QualityEvaluationScore) Set No-reference quality score of the video (100 points in total).
+Note: This field may return null, indicating that no valid value can be obtained.
+ * @method float getQualityEvaluationMeanOpinionScore() Obtain No-reference quality score of the video (MOS).
+Note: This field may return null, indicating that no valid value can be obtained.
+ * @method void setQualityEvaluationMeanOpinionScore(float $QualityEvaluationMeanOpinionScore) Set No-reference quality score of the video (MOS).
+Note: This field may return null, indicating that no valid value can be obtained.
  * @method array getQualityControlResultSet() Obtain Exception items detected in content quality inspection.
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setQualityControlResultSet(array $QualityControlResultSet) Set Exception items detected in content quality inspection.
@@ -56,10 +60,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $NoVideo;
 
     /**
-     * @var integer The no-reference video quality score. Value range: 0-100.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer No-reference quality score of the video (100 points in total).
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public $QualityEvaluationScore;
+
+    /**
+     * @var float No-reference quality score of the video (MOS).
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public $QualityEvaluationMeanOpinionScore;
 
     /**
      * @var array Exception items detected in content quality inspection.
@@ -78,8 +88,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param boolean $NoVideo Whether there is a video track. `true` indicates that there isn't.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $QualityEvaluationScore The no-reference video quality score. Value range: 0-100.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $QualityEvaluationScore No-reference quality score of the video (100 points in total).
+Note: This field may return null, indicating that no valid value can be obtained.
+     * @param float $QualityEvaluationMeanOpinionScore No-reference quality score of the video (MOS).
+Note: This field may return null, indicating that no valid value can be obtained.
      * @param array $QualityControlResultSet Exception items detected in content quality inspection.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param array $ContainerDiagnoseResultSet Exception items detected in format diagnosis.
@@ -108,6 +120,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("QualityEvaluationScore",$param) and $param["QualityEvaluationScore"] !== null) {
             $this->QualityEvaluationScore = $param["QualityEvaluationScore"];
+        }
+
+        if (array_key_exists("QualityEvaluationMeanOpinionScore",$param) and $param["QualityEvaluationMeanOpinionScore"] !== null) {
+            $this->QualityEvaluationMeanOpinionScore = $param["QualityEvaluationMeanOpinionScore"];
         }
 
         if (array_key_exists("QualityControlResultSet",$param) and $param["QualityControlResultSet"] !== null) {

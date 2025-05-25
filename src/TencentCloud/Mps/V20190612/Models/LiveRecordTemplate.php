@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDefinition(integer $Definition) Set Specifies the recording template unique identifier.
  * @method HLSConfigureInfo getHLSConfigure() Obtain HLS configuration parameters
  * @method void setHLSConfigure(HLSConfigureInfo $HLSConfigure) Set HLS configuration parameters
+ * @method MP4ConfigureInfo getMP4Configure() Obtain MP4 configuration parameter.
+ * @method void setMP4Configure(MP4ConfigureInfo $MP4Configure) Set MP4 configuration parameter.
  * @method string getName() Obtain Recording template name.
  * @method void setName(string $Name) Set Recording template name.
  * @method string getComment() Obtain Template description.
@@ -52,6 +54,11 @@ class LiveRecordTemplate extends AbstractModel
      * @var HLSConfigureInfo HLS configuration parameters
      */
     public $HLSConfigure;
+
+    /**
+     * @var MP4ConfigureInfo MP4 configuration parameter.
+     */
+    public $MP4Configure;
 
     /**
      * @var string Recording template name.
@@ -84,6 +91,7 @@ class LiveRecordTemplate extends AbstractModel
     /**
      * @param integer $Definition Specifies the recording template unique identifier.
      * @param HLSConfigureInfo $HLSConfigure HLS configuration parameters
+     * @param MP4ConfigureInfo $MP4Configure MP4 configuration parameter.
      * @param string $Name Recording template name.
      * @param string $Comment Template description.
 
@@ -113,6 +121,11 @@ class LiveRecordTemplate extends AbstractModel
         if (array_key_exists("HLSConfigure",$param) and $param["HLSConfigure"] !== null) {
             $this->HLSConfigure = new HLSConfigureInfo();
             $this->HLSConfigure->deserialize($param["HLSConfigure"]);
+        }
+
+        if (array_key_exists("MP4Configure",$param) and $param["MP4Configure"] !== null) {
+            $this->MP4Configure = new MP4ConfigureInfo();
+            $this->MP4Configure->deserialize($param["MP4Configure"]);
         }
 
         if (array_key_exists("Name",$param) and $param["Name"] !== null) {

@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeSmartSubtitleTemplates request structure.
  *
- * @method array getDefinitions() Obtain Condition for filtering smart subtitle templates by unique identifier. The array can contain up to 10 unique identifiers.
- * @method void setDefinitions(array $Definitions) Set Condition for filtering smart subtitle templates by unique identifier. The array can contain up to 10 unique identifiers.
+ * @method array getDefinitions() Obtain Unique identifiers of smart subtitle templates for filtering. The array can contain up to 100 unique identifiers.
+ * @method void setDefinitions(array $Definitions) Set Unique identifiers of smart subtitle templates for filtering. The array can contain up to 100 unique identifiers.
  * @method integer getOffset() Obtain Paging offset. Default value: 0.
  * @method void setOffset(integer $Offset) Set Paging offset. Default value: 0.
  * @method integer getLimit() Obtain Number of returned entries. Default value: 10. Maximum value: 100.
@@ -38,7 +38,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeSmartSubtitleTemplatesRequest extends AbstractModel
 {
     /**
-     * @var array Condition for filtering smart subtitle templates by unique identifier. The array can contain up to 10 unique identifiers.
+     * @var array Unique identifiers of smart subtitle templates for filtering. The array can contain up to 100 unique identifiers.
      */
     public $Definitions;
 
@@ -65,7 +65,7 @@ class DescribeSmartSubtitleTemplatesRequest extends AbstractModel
     public $Name;
 
     /**
-     * @param array $Definitions Condition for filtering smart subtitle templates by unique identifier. The array can contain up to 10 unique identifiers.
+     * @param array $Definitions Unique identifiers of smart subtitle templates for filtering. The array can contain up to 100 unique identifiers.
      * @param integer $Offset Paging offset. Default value: 0.
      * @param integer $Limit Number of returned entries. Default value: 10. Maximum value: 100.
      * @param string $Type Condition for filtering templates by type. If this field is not specified, all templates are returned. Valid values:

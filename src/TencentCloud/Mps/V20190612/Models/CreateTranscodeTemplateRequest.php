@@ -50,6 +50,8 @@ Default value: 0.
  * @method void setTEHDConfig(TEHDConfig $TEHDConfig) Set TESHD transcoding parameter. To enable it, please contact your Tencent Cloud sales rep.
  * @method EnhanceConfig getEnhanceConfig() Obtain Audio/Video enhancement configuration.
  * @method void setEnhanceConfig(EnhanceConfig $EnhanceConfig) Set Audio/Video enhancement configuration.
+ * @method string getStdExtInfo() Obtain 
+ * @method void setStdExtInfo(string $StdExtInfo) Set 
  */
 class CreateTranscodeTemplateRequest extends AbstractModel
 {
@@ -105,6 +107,11 @@ Default value: 0.
     public $EnhanceConfig;
 
     /**
+     * @var string 
+     */
+    public $StdExtInfo;
+
+    /**
      * @param string $Container Container format. Valid values: mp4, flv, hls, ts, webm, mkv, mxf, mov, mp3, flac, ogg, and m4a. Among them, mp3, flac, ogg, and m4a are for audio-only files.
      * @param string $Name Name of a transcoding template. Length limit: 64 characters.
      * @param string $Comment Template description. Length limit: 256 characters.
@@ -120,6 +127,7 @@ Default value: 0.
      * @param AudioTemplateInfo $AudioTemplate Audio stream configuration parameter. This field is required when `RemoveAudio` is 0.
      * @param TEHDConfig $TEHDConfig TESHD transcoding parameter. To enable it, please contact your Tencent Cloud sales rep.
      * @param EnhanceConfig $EnhanceConfig Audio/Video enhancement configuration.
+     * @param string $StdExtInfo 
      */
     function __construct()
     {
@@ -172,6 +180,10 @@ Default value: 0.
         if (array_key_exists("EnhanceConfig",$param) and $param["EnhanceConfig"] !== null) {
             $this->EnhanceConfig = new EnhanceConfig();
             $this->EnhanceConfig->deserialize($param["EnhanceConfig"]);
+        }
+
+        if (array_key_exists("StdExtInfo",$param) and $param["StdExtInfo"] !== null) {
+            $this->StdExtInfo = $param["StdExtInfo"];
         }
     }
 }

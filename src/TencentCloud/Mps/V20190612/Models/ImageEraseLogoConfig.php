@@ -18,47 +18,55 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Image task input parameters
+ * Icon erasing configuration.
  *
- * @method ImageEncodeConfig getEncodeConfig() Obtain Image encoding configuration.
+ * @method string getSwitch() Obtain Capability configuration enabling status. Valid values:
+<li>ON: enabled</li>
+<li>OFF: disabled</li>
+Default value: ON.
 Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setEncodeConfig(ImageEncodeConfig $EncodeConfig) Set Image encoding configuration.
+ * @method void setSwitch(string $Switch) Set Capability configuration enabling status. Valid values:
+<li>ON: enabled</li>
+<li>OFF: disabled</li>
+Default value: ON.
 Note: This field may return null, indicating that no valid value can be obtained.
- * @method ImageEnhanceConfig getEnhanceConfig() Obtain Image enhancement configuration.
+ * @method array getImageAreaBoxes() Obtain Multiple box selection areas to be erased. Note: The value array of this parameter can contain up to 2 values.
 Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setEnhanceConfig(ImageEnhanceConfig $EnhanceConfig) Set Image enhancement configuration.
+
 Note: This field may return null, indicating that no valid value can be obtained.
- * @method ImageEraseConfig getEraseConfig() Obtain Image erasing configuration.
+ * @method void setImageAreaBoxes(array $ImageAreaBoxes) Set Multiple box selection areas to be erased. Note: The value array of this parameter can contain up to 2 values.
 Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setEraseConfig(ImageEraseConfig $EraseConfig) Set Image erasing configuration.
+
 Note: This field may return null, indicating that no valid value can be obtained.
  */
-class ImageTaskInput extends AbstractModel
+class ImageEraseLogoConfig extends AbstractModel
 {
     /**
-     * @var ImageEncodeConfig Image encoding configuration.
+     * @var string Capability configuration enabling status. Valid values:
+<li>ON: enabled</li>
+<li>OFF: disabled</li>
+Default value: ON.
 Note: This field may return null, indicating that no valid value can be obtained.
      */
-    public $EncodeConfig;
+    public $Switch;
 
     /**
-     * @var ImageEnhanceConfig Image enhancement configuration.
+     * @var array Multiple box selection areas to be erased. Note: The value array of this parameter can contain up to 2 values.
+Note: This field may return null, indicating that no valid value can be obtained.
+
 Note: This field may return null, indicating that no valid value can be obtained.
      */
-    public $EnhanceConfig;
+    public $ImageAreaBoxes;
 
     /**
-     * @var ImageEraseConfig Image erasing configuration.
+     * @param string $Switch Capability configuration enabling status. Valid values:
+<li>ON: enabled</li>
+<li>OFF: disabled</li>
+Default value: ON.
 Note: This field may return null, indicating that no valid value can be obtained.
-     */
-    public $EraseConfig;
+     * @param array $ImageAreaBoxes Multiple box selection areas to be erased. Note: The value array of this parameter can contain up to 2 values.
+Note: This field may return null, indicating that no valid value can be obtained.
 
-    /**
-     * @param ImageEncodeConfig $EncodeConfig Image encoding configuration.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param ImageEnhanceConfig $EnhanceConfig Image enhancement configuration.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param ImageEraseConfig $EraseConfig Image erasing configuration.
 Note: This field may return null, indicating that no valid value can be obtained.
      */
     function __construct()
@@ -74,19 +82,17 @@ Note: This field may return null, indicating that no valid value can be obtained
         if ($param === null) {
             return;
         }
-        if (array_key_exists("EncodeConfig",$param) and $param["EncodeConfig"] !== null) {
-            $this->EncodeConfig = new ImageEncodeConfig();
-            $this->EncodeConfig->deserialize($param["EncodeConfig"]);
+        if (array_key_exists("Switch",$param) and $param["Switch"] !== null) {
+            $this->Switch = $param["Switch"];
         }
 
-        if (array_key_exists("EnhanceConfig",$param) and $param["EnhanceConfig"] !== null) {
-            $this->EnhanceConfig = new ImageEnhanceConfig();
-            $this->EnhanceConfig->deserialize($param["EnhanceConfig"]);
-        }
-
-        if (array_key_exists("EraseConfig",$param) and $param["EraseConfig"] !== null) {
-            $this->EraseConfig = new ImageEraseConfig();
-            $this->EraseConfig->deserialize($param["EraseConfig"]);
+        if (array_key_exists("ImageAreaBoxes",$param) and $param["ImageAreaBoxes"] !== null) {
+            $this->ImageAreaBoxes = [];
+            foreach ($param["ImageAreaBoxes"] as $key => $value){
+                $obj = new ImageAreaBoxInfo();
+                $obj->deserialize($value);
+                array_push($this->ImageAreaBoxes, $obj);
+            }
         }
     }
 }

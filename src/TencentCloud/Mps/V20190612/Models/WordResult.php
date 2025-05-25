@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStart(float $Start) Set Word start timestamp, in seconds.
  * @method float getEnd() Obtain Word end timestamp, in seconds.
  * @method void setEnd(float $End) Set Word end timestamp, in seconds.
+ * @method string getTrans() Obtain Text after translation.
+ * @method void setTrans(string $Trans) Set Text after translation.
  */
 class WordResult extends AbstractModel
 {
@@ -45,9 +47,15 @@ class WordResult extends AbstractModel
     public $End;
 
     /**
+     * @var string Text after translation.
+     */
+    public $Trans;
+
+    /**
      * @param string $Word Word text.
      * @param float $Start Word start timestamp, in seconds.
      * @param float $End Word end timestamp, in seconds.
+     * @param string $Trans Text after translation.
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class WordResult extends AbstractModel
 
         if (array_key_exists("End",$param) and $param["End"] !== null) {
             $this->End = $param["End"];
+        }
+
+        if (array_key_exists("Trans",$param) and $param["Trans"] !== null) {
+            $this->Trans = $param["Trans"];
         }
     }
 }

@@ -20,8 +20,16 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyAsrHotwords request structure.
  *
- * @method string getHotwordsId() Obtain Hotword lexicon ID.
- * @method void setHotwordsId(string $HotwordsId) Set Hotword lexicon ID.
+ * @method string getHotwordsId() Obtain Hotword lexicon ID. 
+ 
+Either Name or Content should be specified if the hotword lexicon is a text-based hotword lexicon.
+One of Name, FileContent, and FileName should be specified if the hotword lexicon is a file-based hotword lexicon.
+
+ * @method void setHotwordsId(string $HotwordsId) Set Hotword lexicon ID. 
+ 
+Either Name or Content should be specified if the hotword lexicon is a text-based hotword lexicon.
+One of Name, FileContent, and FileName should be specified if the hotword lexicon is a file-based hotword lexicon.
+
  * @method string getName() Obtain Hotword lexicon name.
  * @method void setName(string $Name) Set Hotword lexicon name.
  * @method string getContent() Obtain Hotword lexicon text.
@@ -40,7 +48,11 @@ use TencentCloud\Common\AbstractModel;
 class ModifyAsrHotwordsRequest extends AbstractModel
 {
     /**
-     * @var string Hotword lexicon ID.
+     * @var string Hotword lexicon ID. 
+ 
+Either Name or Content should be specified if the hotword lexicon is a text-based hotword lexicon.
+One of Name, FileContent, and FileName should be specified if the hotword lexicon is a file-based hotword lexicon.
+
      */
     public $HotwordsId;
 
@@ -68,7 +80,11 @@ class ModifyAsrHotwordsRequest extends AbstractModel
     public $FileName;
 
     /**
-     * @param string $HotwordsId Hotword lexicon ID.
+     * @param string $HotwordsId Hotword lexicon ID. 
+ 
+Either Name or Content should be specified if the hotword lexicon is a text-based hotword lexicon.
+One of Name, FileContent, and FileName should be specified if the hotword lexicon is a file-based hotword lexicon.
+
      * @param string $Name Hotword lexicon name.
      * @param string $Content Hotword lexicon text.
      * @param string $FileContent Base64-encoded content of the hotword file. This field is required if Type is set to 1.

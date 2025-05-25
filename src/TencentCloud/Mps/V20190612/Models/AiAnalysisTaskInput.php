@@ -24,17 +24,17 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDefinition(integer $Definition) Set Video content analysis template ID.
  * @method string getExtendedParameter() Obtain Additional parameter. Its value is a serialized JSON string.
 Note: This parameter is used to meet customization requirements. References:
-Smart erase: https://intl.cloud.tencent.com/document/product/862/101530?from_cn_redirect=1
-Video splitting: https://intl.cloud.tencent.com/document/product/862/112098?from_cn_redirect=1
-Intelligent highlights: https://intl.cloud.tencent.com/document/product/862/107280?from_cn_redirect=1
-Horizontal-to-vertical video transformation: https://intl.cloud.tencent.com/document/product/862/112112?from_cn_redirect=1
+[Smart Erase Tutorial]: https://intl.cloud.tencent.com/document/product/862/101530?from_cn_redirect=1
+[Video Splitting (Long Videos to Short Videos) Tutorial](https://intl.cloud.tencent.com/document/product/862/112098?from_cn_redirect=1)
+[Intelligent Highlights Tutorial](https://intl.cloud.tencent.com/document/product/862/107280?from_cn_redirect=1)
+[Horizontal-to-Vertical Video Transformation Tutorial](https://intl.cloud.tencent.com/document/product/862/112112?from_cn_redirect=1)
 Note: This field may return null, indicating that no valid value can be obtained.
  * @method void setExtendedParameter(string $ExtendedParameter) Set Additional parameter. Its value is a serialized JSON string.
 Note: This parameter is used to meet customization requirements. References:
-Smart erase: https://intl.cloud.tencent.com/document/product/862/101530?from_cn_redirect=1
-Video splitting: https://intl.cloud.tencent.com/document/product/862/112098?from_cn_redirect=1
-Intelligent highlights: https://intl.cloud.tencent.com/document/product/862/107280?from_cn_redirect=1
-Horizontal-to-vertical video transformation: https://intl.cloud.tencent.com/document/product/862/112112?from_cn_redirect=1
+[Smart Erase Tutorial]: https://intl.cloud.tencent.com/document/product/862/101530?from_cn_redirect=1
+[Video Splitting (Long Videos to Short Videos) Tutorial](https://intl.cloud.tencent.com/document/product/862/112098?from_cn_redirect=1)
+[Intelligent Highlights Tutorial](https://intl.cloud.tencent.com/document/product/862/107280?from_cn_redirect=1)
+[Horizontal-to-Vertical Video Transformation Tutorial](https://intl.cloud.tencent.com/document/product/862/112112?from_cn_redirect=1)
 Note: This field may return null, indicating that no valid value can be obtained.
  */
 class AiAnalysisTaskInput extends AbstractModel
@@ -47,10 +47,10 @@ class AiAnalysisTaskInput extends AbstractModel
     /**
      * @var string Additional parameter. Its value is a serialized JSON string.
 Note: This parameter is used to meet customization requirements. References:
-Smart erase: https://intl.cloud.tencent.com/document/product/862/101530?from_cn_redirect=1
-Video splitting: https://intl.cloud.tencent.com/document/product/862/112098?from_cn_redirect=1
-Intelligent highlights: https://intl.cloud.tencent.com/document/product/862/107280?from_cn_redirect=1
-Horizontal-to-vertical video transformation: https://intl.cloud.tencent.com/document/product/862/112112?from_cn_redirect=1
+[Smart Erase Tutorial]: https://intl.cloud.tencent.com/document/product/862/101530?from_cn_redirect=1
+[Video Splitting (Long Videos to Short Videos) Tutorial](https://intl.cloud.tencent.com/document/product/862/112098?from_cn_redirect=1)
+[Intelligent Highlights Tutorial](https://intl.cloud.tencent.com/document/product/862/107280?from_cn_redirect=1)
+[Horizontal-to-Vertical Video Transformation Tutorial](https://intl.cloud.tencent.com/document/product/862/112112?from_cn_redirect=1)
 Note: This field may return null, indicating that no valid value can be obtained.
      */
     public $ExtendedParameter;
@@ -59,10 +59,10 @@ Note: This field may return null, indicating that no valid value can be obtained
      * @param integer $Definition Video content analysis template ID.
      * @param string $ExtendedParameter Additional parameter. Its value is a serialized JSON string.
 Note: This parameter is used to meet customization requirements. References:
-Smart erase: https://intl.cloud.tencent.com/document/product/862/101530?from_cn_redirect=1
-Video splitting: https://intl.cloud.tencent.com/document/product/862/112098?from_cn_redirect=1
-Intelligent highlights: https://intl.cloud.tencent.com/document/product/862/107280?from_cn_redirect=1
-Horizontal-to-vertical video transformation: https://intl.cloud.tencent.com/document/product/862/112112?from_cn_redirect=1
+[Smart Erase Tutorial]: https://intl.cloud.tencent.com/document/product/862/101530?from_cn_redirect=1
+[Video Splitting (Long Videos to Short Videos) Tutorial](https://intl.cloud.tencent.com/document/product/862/112098?from_cn_redirect=1)
+[Intelligent Highlights Tutorial](https://intl.cloud.tencent.com/document/product/862/107280?from_cn_redirect=1)
+[Horizontal-to-Vertical Video Transformation Tutorial](https://intl.cloud.tencent.com/document/product/862/112112?from_cn_redirect=1)
 Note: This field may return null, indicating that no valid value can be obtained.
      */
     function __construct()
