@@ -26,6 +26,7 @@ use TencentCloud\Billing\V20180709\Models as Models;
  * @method Models\CreateAllocationTagResponse CreateAllocationTag(Models\CreateAllocationTagRequest $req) This API is used to batch set cost allocation tags.
  * @method Models\DeleteAllocationTagResponse DeleteAllocationTag(Models\DeleteAllocationTagRequest $req) u200cThis API is used to batch cancel cost allocation tags.
  * @method Models\DescribeAccountBalanceResponse DescribeAccountBalance(Models\DescribeAccountBalanceRequest $req) This API is used to check the Tencent Cloud account balance.
+ * @method Models\DescribeAllocationUnitDetailResponse DescribeAllocationUnitDetail(Models\DescribeAllocationUnitDetailRequest $req) Query the details of a cost allocation unit.
  * @method Models\DescribeBillAdjustInfoResponse DescribeBillAdjustInfo(Models\DescribeBillAdjustInfoRequest $req) This API is used to check whether the current UIN has any adjustment, enabling customers to proactively obtain the adjustment status faster.
  * @method Models\DescribeBillDetailResponse DescribeBillDetail(Models\DescribeBillDetailRequest $req) u200cThis API is used to get bill details.
 Note:
