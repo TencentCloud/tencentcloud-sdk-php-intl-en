@@ -25,21 +25,23 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getPageSize() Obtain Number of items per page. supports up to 100.
  * @method void setPageSize(integer $PageSize) Set Number of items per page. supports up to 100.
  * @method string getFilterType() Obtain Filter criteria, support the following filter parameters.
-Note: Email, SubAgentUin, and ClientUin only support exact search. other conditions support fuzzy retrieval.
-Name: filter criteria based on customer name.
+Note: Email, SubAgentUin, and ClientUin only support exact search. other conditions support fuzzy retrieval.The following are the definitions of filtering  items:
+
+Name: specifies second-level reseller name.
 SubAgentUin: specifies the uin of the second-level reseller.
-Remark: remark.
+Remark: specifies remark.
 Mobile: specifies the mobile number.
-Specifies the mailbox.
-ClientUin: specifies the sub-customer uin.
+Email: specifies email address.
+ClientUin: specifies the Indirect customer uin.
  * @method void setFilterType(string $FilterType) Set Filter criteria, support the following filter parameters.
-Note: Email, SubAgentUin, and ClientUin only support exact search. other conditions support fuzzy retrieval.
-Name: filter criteria based on customer name.
+Note: Email, SubAgentUin, and ClientUin only support exact search. other conditions support fuzzy retrieval.The following are the definitions of filtering  items:
+
+Name: specifies second-level reseller name.
 SubAgentUin: specifies the uin of the second-level reseller.
-Remark: remark.
+Remark: specifies remark.
 Mobile: specifies the mobile number.
-Specifies the mailbox.
-ClientUin: specifies the sub-customer uin.
+Email: specifies email address.
+ClientUin: specifies the Indirect customer uin.
  * @method string getFilter() Obtain Filter value
  * @method void setFilter(string $Filter) Set Filter value
  * @method string getOrder() Obtain Sorting method. sorts by binding time in ascending or descending order. defaults to descending order if not specified.
@@ -63,13 +65,14 @@ class QuerySubAgentsDetailV2Request extends AbstractModel
 
     /**
      * @var string Filter criteria, support the following filter parameters.
-Note: Email, SubAgentUin, and ClientUin only support exact search. other conditions support fuzzy retrieval.
-Name: filter criteria based on customer name.
+Note: Email, SubAgentUin, and ClientUin only support exact search. other conditions support fuzzy retrieval.The following are the definitions of filtering  items:
+
+Name: specifies second-level reseller name.
 SubAgentUin: specifies the uin of the second-level reseller.
-Remark: remark.
+Remark: specifies remark.
 Mobile: specifies the mobile number.
-Specifies the mailbox.
-ClientUin: specifies the sub-customer uin.
+Email: specifies email address.
+ClientUin: specifies the Indirect customer uin.
      */
     public $FilterType;
 
@@ -89,13 +92,14 @@ acs: ascending.
      * @param integer $Page Page number. starts from 1.
      * @param integer $PageSize Number of items per page. supports up to 100.
      * @param string $FilterType Filter criteria, support the following filter parameters.
-Note: Email, SubAgentUin, and ClientUin only support exact search. other conditions support fuzzy retrieval.
-Name: filter criteria based on customer name.
+Note: Email, SubAgentUin, and ClientUin only support exact search. other conditions support fuzzy retrieval.The following are the definitions of filtering  items:
+
+Name: specifies second-level reseller name.
 SubAgentUin: specifies the uin of the second-level reseller.
-Remark: remark.
+Remark: specifies remark.
 Mobile: specifies the mobile number.
-Specifies the mailbox.
-ClientUin: specifies the sub-customer uin.
+Email: specifies email address.
+ClientUin: specifies the Indirect customer uin.
      * @param string $Filter Filter value
      * @param string $Order Sorting method. sorts by binding time in ascending or descending order. defaults to descending order if not specified.
 Desc: descending order.

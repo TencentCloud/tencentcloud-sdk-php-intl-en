@@ -19,16 +19,16 @@ use TencentCloud\Common\AbstractModel;
 
 /**
  * The input settings.
-The format of an RTMP_PUSH address is ${InputAddress}/${AppName}/${StreamName}.
+The format of an RTMP_PUSH/RTMPS_PUSH address is ${InputAddress}/${AppName}/${StreamName}.
 The format of an SRT_PUSH address is ${InputAddress}?streamid=${StreamName},h=${InputDomain}.
  *
- * @method string getAppName() Obtain Application name, which is valid if `Type` is `RTMP_PUSH` and can contain 1-32 letters and digits
+ * @method string getAppName() Obtain Application name, which is valid if `Type` is `RTMP_PUSH` or `RTMPS_PUSH`, and can contain 1-32 letters and digits
 Note: This field may return `null`, indicating that no valid value was found.
- * @method void setAppName(string $AppName) Set Application name, which is valid if `Type` is `RTMP_PUSH` and can contain 1-32 letters and digits
+ * @method void setAppName(string $AppName) Set Application name, which is valid if `Type` is `RTMP_PUSH` or `RTMPS_PUSH`, and can contain 1-32 letters and digits
 Note: This field may return `null`, indicating that no valid value was found.
- * @method string getStreamName() Obtain Stream name, which is valid if `Type` is `RTMP_PUSH` and can contain 1-32 letters and digits
+ * @method string getStreamName() Obtain Stream name, which is valid if `Type` is `RTMP_PUSH` or `RTMPS_PUSH`, and can contain 1-32 letters and digits
 Note: This field may return `null`, indicating that no valid value was found.
- * @method void setStreamName(string $StreamName) Set Stream name, which is valid if `Type` is `RTMP_PUSH` and can contain 1-32 letters and digits
+ * @method void setStreamName(string $StreamName) Set Stream name, which is valid if `Type` is `RTMP_PUSH` or `RTMPS_PUSH`, and can contain 1-32 letters and digits
 Note: This field may return `null`, indicating that no valid value was found.
  * @method string getSourceUrl() Obtain Source URL, which is valid if `Type` is `RTMP_PULL`, `HLS_PULL`,  `MP4_PULL`, `RTSP_PULL` or `SRT_PULL`, and can contain 1-512 characters
 Note: This field may return `null`, indicating that no valid value was found.
@@ -42,12 +42,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return `null`, indicating that no valid value was found.
  * @method void setSourceType(string $SourceType) Set Source type for stream pulling and relaying. To pull content from private-read COS buckets under the current account, set this parameter to `TencentCOS`; otherwise, leave it empty.
 Note: this field may return `null`, indicating that no valid value was found.
- * @method integer getDelayTime() Obtain Delayed time (ms) for playback, which is valid if `Type` is `RTMP_PUSH`
-Value range: 0 (default) or 10000-600000
+ * @method integer getDelayTime() Obtain Delayed time (ms) for playback, which is valid if `Type` is `RTMP_PUSH` or `RTMPS_PUSH`.
+Value range: 0 (default) or 10000-600000.
 The value must be a multiple of 1,000.
 Note: This field may return `null`, indicating that no valid value was found.
- * @method void setDelayTime(integer $DelayTime) Set Delayed time (ms) for playback, which is valid if `Type` is `RTMP_PUSH`
-Value range: 0 (default) or 10000-600000
+ * @method void setDelayTime(integer $DelayTime) Set Delayed time (ms) for playback, which is valid if `Type` is `RTMP_PUSH` or `RTMPS_PUSH`.
+Value range: 0 (default) or 10000-600000.
 The value must be a multiple of 1,000.
 Note: This field may return `null`, indicating that no valid value was found.
  * @method string getInputDomain() Obtain The domain name of the SRT_PUSH push address. No need to fill in the input parameter.
@@ -66,13 +66,13 @@ Note: This field may return `null`, indicating that no valid value was found.
 class InputSettingInfo extends AbstractModel
 {
     /**
-     * @var string Application name, which is valid if `Type` is `RTMP_PUSH` and can contain 1-32 letters and digits
+     * @var string Application name, which is valid if `Type` is `RTMP_PUSH` or `RTMPS_PUSH`, and can contain 1-32 letters and digits
 Note: This field may return `null`, indicating that no valid value was found.
      */
     public $AppName;
 
     /**
-     * @var string Stream name, which is valid if `Type` is `RTMP_PUSH` and can contain 1-32 letters and digits
+     * @var string Stream name, which is valid if `Type` is `RTMP_PUSH` or `RTMPS_PUSH`, and can contain 1-32 letters and digits
 Note: This field may return `null`, indicating that no valid value was found.
      */
     public $StreamName;
@@ -96,8 +96,8 @@ Note: this field may return `null`, indicating that no valid value was found.
     public $SourceType;
 
     /**
-     * @var integer Delayed time (ms) for playback, which is valid if `Type` is `RTMP_PUSH`
-Value range: 0 (default) or 10000-600000
+     * @var integer Delayed time (ms) for playback, which is valid if `Type` is `RTMP_PUSH` or `RTMPS_PUSH`.
+Value range: 0 (default) or 10000-600000.
 The value must be a multiple of 1,000.
 Note: This field may return `null`, indicating that no valid value was found.
      */
@@ -126,9 +126,9 @@ Note: This field may return `null`, indicating that no valid value was found.
     public $ContentType;
 
     /**
-     * @param string $AppName Application name, which is valid if `Type` is `RTMP_PUSH` and can contain 1-32 letters and digits
+     * @param string $AppName Application name, which is valid if `Type` is `RTMP_PUSH` or `RTMPS_PUSH`, and can contain 1-32 letters and digits
 Note: This field may return `null`, indicating that no valid value was found.
-     * @param string $StreamName Stream name, which is valid if `Type` is `RTMP_PUSH` and can contain 1-32 letters and digits
+     * @param string $StreamName Stream name, which is valid if `Type` is `RTMP_PUSH` or `RTMPS_PUSH`, and can contain 1-32 letters and digits
 Note: This field may return `null`, indicating that no valid value was found.
      * @param string $SourceUrl Source URL, which is valid if `Type` is `RTMP_PULL`, `HLS_PULL`,  `MP4_PULL`, `RTSP_PULL` or `SRT_PULL`, and can contain 1-512 characters
 Note: This field may return `null`, indicating that no valid value was found.
@@ -136,8 +136,8 @@ Note: This field may return `null`, indicating that no valid value was found.
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $SourceType Source type for stream pulling and relaying. To pull content from private-read COS buckets under the current account, set this parameter to `TencentCOS`; otherwise, leave it empty.
 Note: this field may return `null`, indicating that no valid value was found.
-     * @param integer $DelayTime Delayed time (ms) for playback, which is valid if `Type` is `RTMP_PUSH`
-Value range: 0 (default) or 10000-600000
+     * @param integer $DelayTime Delayed time (ms) for playback, which is valid if `Type` is `RTMP_PUSH` or `RTMPS_PUSH`.
+Value range: 0 (default) or 10000-600000.
 The value must be a multiple of 1,000.
 Note: This field may return `null`, indicating that no valid value was found.
      * @param string $InputDomain The domain name of the SRT_PUSH push address. No need to fill in the input parameter.
