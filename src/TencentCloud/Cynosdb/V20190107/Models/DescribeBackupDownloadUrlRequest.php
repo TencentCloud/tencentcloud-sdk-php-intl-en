@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setClusterId(string $ClusterId) Set Cluster ID
  * @method integer getBackupId() Obtain Backup ID
  * @method void setBackupId(integer $BackupId) Set Backup ID
+ * @method BackupLimitRestriction getDownloadRestriction() Obtain Backup download source restriction condition.
+ * @method void setDownloadRestriction(BackupLimitRestriction $DownloadRestriction) Set Backup download source restriction condition.
  */
 class DescribeBackupDownloadUrlRequest extends AbstractModel
 {
@@ -38,8 +40,14 @@ class DescribeBackupDownloadUrlRequest extends AbstractModel
     public $BackupId;
 
     /**
+     * @var BackupLimitRestriction Backup download source restriction condition.
+     */
+    public $DownloadRestriction;
+
+    /**
      * @param string $ClusterId Cluster ID
      * @param integer $BackupId Backup ID
+     * @param BackupLimitRestriction $DownloadRestriction Backup download source restriction condition.
      */
     function __construct()
     {
@@ -60,6 +68,11 @@ class DescribeBackupDownloadUrlRequest extends AbstractModel
 
         if (array_key_exists("BackupId",$param) and $param["BackupId"] !== null) {
             $this->BackupId = $param["BackupId"];
+        }
+
+        if (array_key_exists("DownloadRestriction",$param) and $param["DownloadRestriction"] !== null) {
+            $this->DownloadRestriction = new BackupLimitRestriction();
+            $this->DownloadRestriction->deserialize($param["DownloadRestriction"]);
         }
     }
 }

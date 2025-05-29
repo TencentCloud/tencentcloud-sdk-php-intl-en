@@ -50,6 +50,7 @@ class OpenAuditServiceRequest extends AbstractModel
 
     /**
      * @var array Audit rule. If both this parameter and `RuleTemplateIds` are left empty, full audit will be applied.
+     * @deprecated
      */
     public $AuditRuleFilters;
 

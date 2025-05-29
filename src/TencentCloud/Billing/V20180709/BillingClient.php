@@ -24,7 +24,9 @@ use TencentCloud\Billing\V20180709\Models as Models;
 
 /**
  * @method Models\CreateAllocationTagResponse CreateAllocationTag(Models\CreateAllocationTagRequest $req) This API is used to batch set cost allocation tags.
+ * @method Models\CreateAllocationUnitResponse CreateAllocationUnit(Models\CreateAllocationUnitRequest $req) This API is used to create allocation units.
  * @method Models\DeleteAllocationTagResponse DeleteAllocationTag(Models\DeleteAllocationTagRequest $req) u200cThis API is used to batch cancel cost allocation tags.
+ * @method Models\DeleteAllocationUnitResponse DeleteAllocationUnit(Models\DeleteAllocationUnitRequest $req) Delete a cost allocation unit.
  * @method Models\DescribeAccountBalanceResponse DescribeAccountBalance(Models\DescribeAccountBalanceRequest $req) This API is used to check the Tencent Cloud account balance.
  * @method Models\DescribeAllocationUnitDetailResponse DescribeAllocationUnitDetail(Models\DescribeAllocationUnitDetailRequest $req) Query the details of a cost allocation unit.
  * @method Models\DescribeBillAdjustInfoResponse DescribeBillAdjustInfo(Models\DescribeBillAdjustInfoRequest $req) This API is used to check whether the current UIN has any adjustment, enabling customers to proactively obtain the adjustment status faster.
@@ -55,6 +57,7 @@ Note: The API request may fail due to network instability or other exceptions. I
  * @method Models\DescribeTagListResponse DescribeTagList(Models\DescribeTagListRequest $req) This API is used to get cost allocation tags.
  * @method Models\DescribeVoucherInfoResponse DescribeVoucherInfo(Models\DescribeVoucherInfoRequest $req) This API is used to query vouchers.
  * @method Models\DescribeVoucherUsageDetailsResponse DescribeVoucherUsageDetails(Models\DescribeVoucherUsageDetailsRequest $req) This API is used to query voucher usage details.
+ * @method Models\ModifyAllocationUnitResponse ModifyAllocationUnit(Models\ModifyAllocationUnitRequest $req) This API is used to modify cost allocation unit information.
  */
 
 class BillingClient extends AbstractClient
