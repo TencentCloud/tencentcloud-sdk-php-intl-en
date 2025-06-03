@@ -48,6 +48,7 @@ use TencentCloud\Mdl\V20200326\Models as Models;
  * @method Models\DescribeStreamLiveTranscodeDetailResponse DescribeStreamLiveTranscodeDetail(Models\DescribeStreamLiveTranscodeDetailRequest $req) This API is used to query the transcoding information of StreamLive streams.
  * @method Models\DescribeStreamLiveWatermarkResponse DescribeStreamLiveWatermark(Models\DescribeStreamLiveWatermarkRequest $req) This API is used to query a watermark.
  * @method Models\DescribeStreamLiveWatermarksResponse DescribeStreamLiveWatermarks(Models\DescribeStreamLiveWatermarksRequest $req) This API is used to query multiple watermarks at a time.
+ * @method Models\GetAbWatermarkPlayUrlResponse GetAbWatermarkPlayUrl(Models\GetAbWatermarkPlayUrlRequest $req) Get AB watermark play url.
  * @method Models\ModifyStreamLiveChannelResponse ModifyStreamLiveChannel(Models\ModifyStreamLiveChannelRequest $req) This API is used to modify a StreamLive channel.
  * @method Models\ModifyStreamLiveInputResponse ModifyStreamLiveInput(Models\ModifyStreamLiveInputRequest $req) This API is used to modify a StreamLive input.
  * @method Models\ModifyStreamLiveInputSecurityGroupResponse ModifyStreamLiveInputSecurityGroup(Models\ModifyStreamLiveInputSecurityGroupRequest $req) This API is used to modify an input security group.
