@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * GetAbWatermarkPlayUrl request structure.
  *
- * @method integer getUuid() Obtain Client UUID, 32-bit unsigned integer.
- * @method void setUuid(integer $Uuid) Set Client UUID, 32-bit unsigned integer.
+ * @method integer getUuid() Obtain Client UUID, 32-bit unsigned integer, [0, 4294967295].
+ * @method void setUuid(integer $Uuid) Set Client UUID, 32-bit unsigned integer, [0, 4294967295].
  * @method string getStreamPackageChannelId() Obtain Channel ID of Stream Package.
  * @method void setStreamPackageChannelId(string $StreamPackageChannelId) Set Channel ID of Stream Package.
  * @method string getUrl() Obtain Original play URL.
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class GetAbWatermarkPlayUrlRequest extends AbstractModel
 {
     /**
-     * @var integer Client UUID, 32-bit unsigned integer.
+     * @var integer Client UUID, 32-bit unsigned integer, [0, 4294967295].
      */
     public $Uuid;
 
@@ -45,7 +45,7 @@ class GetAbWatermarkPlayUrlRequest extends AbstractModel
     public $Url;
 
     /**
-     * @param integer $Uuid Client UUID, 32-bit unsigned integer.
+     * @param integer $Uuid Client UUID, 32-bit unsigned integer, [0, 4294967295].
      * @param string $StreamPackageChannelId Channel ID of Stream Package.
      * @param string $Url Original play URL.
      */
