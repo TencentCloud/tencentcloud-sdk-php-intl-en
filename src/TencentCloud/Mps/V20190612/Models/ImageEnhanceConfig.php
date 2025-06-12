@@ -24,6 +24,14 @@ use TencentCloud\Common\AbstractModel;
 
  * @method void setSuperResolution(SuperResolutionConfig $SuperResolution) Set Super-resolution configuration.
 
+ * @method ImageDenoiseConfig getDenoise() Obtain Denoising configuration.
+Note: This field may return null, indicating that no valid value can be obtained.
+ * @method void setDenoise(ImageDenoiseConfig $Denoise) Set Denoising configuration.
+Note: This field may return null, indicating that no valid value can be obtained.
+ * @method ImageQualityEnhanceConfig getImageQualityEnhance() Obtain Comprehensive enhancement configuration.
+Note: This field may return null, indicating that no valid value can be obtained.
+ * @method void setImageQualityEnhance(ImageQualityEnhanceConfig $ImageQualityEnhance) Set Comprehensive enhancement configuration.
+Note: This field may return null, indicating that no valid value can be obtained.
  * @method ColorEnhanceConfig getColorEnhance() Obtain Color enhancement configuration.
 
  * @method void setColorEnhance(ColorEnhanceConfig $ColorEnhance) Set Color enhancement configuration.
@@ -35,6 +43,11 @@ use TencentCloud\Common\AbstractModel;
  * @method FaceEnhanceConfig getFaceEnhance() Obtain Face enhancement configuration.
 
  * @method void setFaceEnhance(FaceEnhanceConfig $FaceEnhance) Set Face enhancement configuration.
+
+ * @method LowLightEnhanceConfig getLowLightEnhance() Obtain Low-light enhancement configuration.
+Note: This field may return null, indicating that no valid value can be obtained.
+ * @method void setLowLightEnhance(LowLightEnhanceConfig $LowLightEnhance) Set Low-light enhancement configuration.
+Note: This field may return null, indicating that no valid value can be obtained.
  */
 class ImageEnhanceConfig extends AbstractModel
 {
@@ -43,6 +56,18 @@ class ImageEnhanceConfig extends AbstractModel
 
      */
     public $SuperResolution;
+
+    /**
+     * @var ImageDenoiseConfig Denoising configuration.
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public $Denoise;
+
+    /**
+     * @var ImageQualityEnhanceConfig Comprehensive enhancement configuration.
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public $ImageQualityEnhance;
 
     /**
      * @var ColorEnhanceConfig Color enhancement configuration.
@@ -63,13 +88,26 @@ class ImageEnhanceConfig extends AbstractModel
     public $FaceEnhance;
 
     /**
+     * @var LowLightEnhanceConfig Low-light enhancement configuration.
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public $LowLightEnhance;
+
+    /**
      * @param SuperResolutionConfig $SuperResolution Super-resolution configuration.
 
+     * @param ImageDenoiseConfig $Denoise Denoising configuration.
+Note: This field may return null, indicating that no valid value can be obtained.
+     * @param ImageQualityEnhanceConfig $ImageQualityEnhance Comprehensive enhancement configuration.
+Note: This field may return null, indicating that no valid value can be obtained.
      * @param ColorEnhanceConfig $ColorEnhance Color enhancement configuration.
 
      * @param SharpEnhanceConfig $SharpEnhance Detail enhancement configuration.
 
      * @param FaceEnhanceConfig $FaceEnhance Face enhancement configuration.
+
+     * @param LowLightEnhanceConfig $LowLightEnhance Low-light enhancement configuration.
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     function __construct()
     {
@@ -89,6 +127,16 @@ class ImageEnhanceConfig extends AbstractModel
             $this->SuperResolution->deserialize($param["SuperResolution"]);
         }
 
+        if (array_key_exists("Denoise",$param) and $param["Denoise"] !== null) {
+            $this->Denoise = new ImageDenoiseConfig();
+            $this->Denoise->deserialize($param["Denoise"]);
+        }
+
+        if (array_key_exists("ImageQualityEnhance",$param) and $param["ImageQualityEnhance"] !== null) {
+            $this->ImageQualityEnhance = new ImageQualityEnhanceConfig();
+            $this->ImageQualityEnhance->deserialize($param["ImageQualityEnhance"]);
+        }
+
         if (array_key_exists("ColorEnhance",$param) and $param["ColorEnhance"] !== null) {
             $this->ColorEnhance = new ColorEnhanceConfig();
             $this->ColorEnhance->deserialize($param["ColorEnhance"]);
@@ -102,6 +150,11 @@ class ImageEnhanceConfig extends AbstractModel
         if (array_key_exists("FaceEnhance",$param) and $param["FaceEnhance"] !== null) {
             $this->FaceEnhance = new FaceEnhanceConfig();
             $this->FaceEnhance->deserialize($param["FaceEnhance"]);
+        }
+
+        if (array_key_exists("LowLightEnhance",$param) and $param["LowLightEnhance"] !== null) {
+            $this->LowLightEnhance = new LowLightEnhanceConfig();
+            $this->LowLightEnhance->deserialize($param["LowLightEnhance"]);
         }
     }
 }

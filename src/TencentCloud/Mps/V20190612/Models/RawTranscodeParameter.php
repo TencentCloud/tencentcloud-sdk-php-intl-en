@@ -44,6 +44,14 @@ Default value: 0.
  * @method void setAudioTemplate(AudioTemplateInfo $AudioTemplate) Set Audio stream configuration parameter. This field is required when `RemoveAudio` is 0.
  * @method TEHDConfig getTEHDConfig() Obtain TESHD transcoding parameter.
  * @method void setTEHDConfig(TEHDConfig $TEHDConfig) Set TESHD transcoding parameter.
+ * @method string getStdExtInfo() Obtain Additional parameter, which is a serialized JSON string.
+Note: This field may return null, indicating that no valid value can be obtained.
+ * @method void setStdExtInfo(string $StdExtInfo) Set Additional parameter, which is a serialized JSON string.
+Note: This field may return null, indicating that no valid value can be obtained.
+ * @method EnhanceConfig getEnhanceConfig() Obtain Audio/Video enhancement configuration.
+Note: This field may return null, indicating that no valid value can be obtained.
+ * @method void setEnhanceConfig(EnhanceConfig $EnhanceConfig) Set Audio/Video enhancement configuration.
+Note: This field may return null, indicating that no valid value can be obtained.
  */
 class RawTranscodeParameter extends AbstractModel
 {
@@ -84,6 +92,18 @@ Default value: 0.
     public $TEHDConfig;
 
     /**
+     * @var string Additional parameter, which is a serialized JSON string.
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public $StdExtInfo;
+
+    /**
+     * @var EnhanceConfig Audio/Video enhancement configuration.
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public $EnhanceConfig;
+
+    /**
      * @param string $Container Container. Valid values: mp4; flv; hls; mp3; flac; ogg; m4a. Among them, mp3, flac, ogg, and m4a are for audio files.
      * @param integer $RemoveVideo Whether to remove video data. Valid values:
 <li>0: retain;</li>
@@ -96,6 +116,10 @@ Default value: 0.
      * @param VideoTemplateInfo $VideoTemplate Video stream configuration parameter. This field is required when `RemoveVideo` is 0.
      * @param AudioTemplateInfo $AudioTemplate Audio stream configuration parameter. This field is required when `RemoveAudio` is 0.
      * @param TEHDConfig $TEHDConfig TESHD transcoding parameter.
+     * @param string $StdExtInfo Additional parameter, which is a serialized JSON string.
+Note: This field may return null, indicating that no valid value can be obtained.
+     * @param EnhanceConfig $EnhanceConfig Audio/Video enhancement configuration.
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     function __construct()
     {
@@ -135,6 +159,15 @@ Default value: 0.
         if (array_key_exists("TEHDConfig",$param) and $param["TEHDConfig"] !== null) {
             $this->TEHDConfig = new TEHDConfig();
             $this->TEHDConfig->deserialize($param["TEHDConfig"]);
+        }
+
+        if (array_key_exists("StdExtInfo",$param) and $param["StdExtInfo"] !== null) {
+            $this->StdExtInfo = $param["StdExtInfo"];
+        }
+
+        if (array_key_exists("EnhanceConfig",$param) and $param["EnhanceConfig"] !== null) {
+            $this->EnhanceConfig = new EnhanceConfig();
+            $this->EnhanceConfig->deserialize($param["EnhanceConfig"]);
         }
     }
 }

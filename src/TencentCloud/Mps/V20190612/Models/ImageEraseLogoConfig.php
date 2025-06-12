@@ -30,11 +30,11 @@ Note: This field may return null, indicating that no valid value can be obtained
 <li>OFF: disabled</li>
 Default value: ON.
 Note: This field may return null, indicating that no valid value can be obtained.
- * @method array getImageAreaBoxes() Obtain Multiple box selection areas to be erased. Note: The value array of this parameter can contain up to 2 values.
+ * @method array getImageAreaBoxes() Obtain Multiple box selection areas that need to be erased, with a maximum of 16 areas available.
 Note: This field may return null, indicating that no valid value can be obtained.
 
 Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setImageAreaBoxes(array $ImageAreaBoxes) Set Multiple box selection areas to be erased. Note: The value array of this parameter can contain up to 2 values.
+ * @method void setImageAreaBoxes(array $ImageAreaBoxes) Set Multiple box selection areas that need to be erased, with a maximum of 16 areas available.
 Note: This field may return null, indicating that no valid value can be obtained.
 
 Note: This field may return null, indicating that no valid value can be obtained.
@@ -51,7 +51,7 @@ Note: This field may return null, indicating that no valid value can be obtained
     public $Switch;
 
     /**
-     * @var array Multiple box selection areas to be erased. Note: The value array of this parameter can contain up to 2 values.
+     * @var array Multiple box selection areas that need to be erased, with a maximum of 16 areas available.
 Note: This field may return null, indicating that no valid value can be obtained.
 
 Note: This field may return null, indicating that no valid value can be obtained.
@@ -64,7 +64,7 @@ Note: This field may return null, indicating that no valid value can be obtained
 <li>OFF: disabled</li>
 Default value: ON.
 Note: This field may return null, indicating that no valid value can be obtained.
-     * @param array $ImageAreaBoxes Multiple box selection areas to be erased. Note: The value array of this parameter can contain up to 2 values.
+     * @param array $ImageAreaBoxes Multiple box selection areas that need to be erased, with a maximum of 16 areas available.
 Note: This field may return null, indicating that no valid value can be obtained.
 
 Note: This field may return null, indicating that no valid value can be obtained.

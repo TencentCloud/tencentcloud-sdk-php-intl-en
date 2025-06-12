@@ -48,7 +48,7 @@ yue: Cantonese
 vi: Vietnamese
 ms: Malay
 id: Indonesian
-fli: Filipino
+fil: Filipino
 th: Thai
 pt: Portuguese
 tr: Turkish
@@ -70,7 +70,7 @@ yue: Cantonese
 vi: Vietnamese
 ms: Malay
 id: Indonesian
-fli: Filipino
+fil: Filipino
 th: Thai
 pt: Portuguese
 tr: Turkish
@@ -176,7 +176,7 @@ yue: Cantonese
 vi: Vietnamese
 ms: Malay
 id: Indonesian
-fli: Filipino
+fil: Filipino
 th: Thai
 pt: Portuguese
 tr: Turkish
@@ -254,7 +254,7 @@ yue: Cantonese
 vi: Vietnamese
 ms: Malay
 id: Indonesian
-fli: Filipino
+fil: Filipino
 th: Thai
 pt: Portuguese
 tr: Turkish

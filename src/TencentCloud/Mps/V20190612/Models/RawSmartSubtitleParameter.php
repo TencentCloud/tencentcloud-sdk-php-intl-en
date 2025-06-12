@@ -21,13 +21,15 @@ use TencentCloud\Common\AbstractModel;
  * Custom smart subtitle parameter.
  *
  * @method integer getSubtitleType() Obtain Smart subtitle language type.
-0: source language1: target language
+0: source language
+1: target language
 2: source language + target language
-The value can only be 0 when TranslateSwitch is set to OFF.The value can only be 1 or 2 when TranslateSwitch is set to ON.
+The value can only be 0 when TranslateSwitch is set to OFF. The value can only be 1 or 2 when TranslateSwitch is set to ON.
  * @method void setSubtitleType(integer $SubtitleType) Set Smart subtitle language type.
-0: source language1: target language
+0: source language
+1: target language
 2: source language + target language
-The value can only be 0 when TranslateSwitch is set to OFF.The value can only be 1 or 2 when TranslateSwitch is set to ON.
+The value can only be 0 when TranslateSwitch is set to OFF. The value can only be 1 or 2 when TranslateSwitch is set to ON.
  * @method string getVideoSrcLanguage() Obtain Source language of the video with smart subtitles.
 Supported languages:
 zh: Simplified Chinese
@@ -40,7 +42,7 @@ yue: Cantonese
 vi: Vietnamese
 ms: Malay
 id: Indonesian
-fli: Filipino
+fil: Filipino
 th: Thai
 pt: Portuguese
 tr: Turkish
@@ -62,7 +64,7 @@ yue: Cantonese
 vi: Vietnamese
 ms: Malay
 id: Indonesian
-fli: Filipino
+fil: Filipino
 th: Thai
 pt: Portuguese
 tr: Turkish
@@ -141,9 +143,10 @@ class RawSmartSubtitleParameter extends AbstractModel
 {
     /**
      * @var integer Smart subtitle language type.
-0: source language1: target language
+0: source language
+1: target language
 2: source language + target language
-The value can only be 0 when TranslateSwitch is set to OFF.The value can only be 1 or 2 when TranslateSwitch is set to ON.
+The value can only be 0 when TranslateSwitch is set to OFF. The value can only be 1 or 2 when TranslateSwitch is set to ON.
      */
     public $SubtitleType;
 
@@ -160,7 +163,7 @@ yue: Cantonese
 vi: Vietnamese
 ms: Malay
 id: Indonesian
-fli: Filipino
+fil: Filipino
 th: Thai
 pt: Portuguese
 tr: Turkish
@@ -227,9 +230,10 @@ Note: This field may return null, indicating that no valid value can be obtained
 
     /**
      * @param integer $SubtitleType Smart subtitle language type.
-0: source language1: target language
+0: source language
+1: target language
 2: source language + target language
-The value can only be 0 when TranslateSwitch is set to OFF.The value can only be 1 or 2 when TranslateSwitch is set to ON.
+The value can only be 0 when TranslateSwitch is set to OFF. The value can only be 1 or 2 when TranslateSwitch is set to ON.
      * @param string $VideoSrcLanguage Source language of the video with smart subtitles.
 Supported languages:
 zh: Simplified Chinese
@@ -242,7 +246,7 @@ yue: Cantonese
 vi: Vietnamese
 ms: Malay
 id: Indonesian
-fli: Filipino
+fil: Filipino
 th: Thai
 pt: Portuguese
 tr: Turkish

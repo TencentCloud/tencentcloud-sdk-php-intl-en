@@ -63,7 +63,7 @@ Callable roles: Distributor, Second-level reseller, Reseller
  * @method Models\DescribeBillSummaryByRegionResponse DescribeBillSummaryByRegion(Models\DescribeBillSummaryByRegionRequest $req) Description: Obtain the summarized value of sub - account bills by region through API.
 Callable roles: Distributor, Second-level reseller, Reseller
  * @method Models\DescribeCustomerBillDetailResponse DescribeCustomerBillDetail(Models\DescribeCustomerBillDetailRequest $req) This API is used to query the customer bill details by resellers.
-Callable roles: Distributor, Second-level reseller, Reseller
+Callable roles: Distributor, Second-level reseller, Reseller.
  * @method Models\DescribeCustomerBillDownloadUrlResponse DescribeCustomerBillDownloadUrl(Models\DescribeCustomerBillDownloadUrlRequest $req) This API is used to get the URL for downloading the customer bill file by reseller. The download conditions are as follows:
 1. Detailed bills (billDetail and billDetailPack) can be downloaded starting from June 2022; resource bills (billResource and billResourcePack) can be downloaded starting from November 2023.
 2. Bill packages (billDetailPack and billResourcePack) can only be downloaded after billing.

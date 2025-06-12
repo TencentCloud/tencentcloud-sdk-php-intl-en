@@ -50,8 +50,8 @@ Default value: 0.
  * @method void setTEHDConfig(TEHDConfig $TEHDConfig) Set TESHD transcoding parameter. To enable it, please contact your Tencent Cloud sales rep.
  * @method EnhanceConfig getEnhanceConfig() Obtain Audio/Video enhancement configuration.
  * @method void setEnhanceConfig(EnhanceConfig $EnhanceConfig) Set Audio/Video enhancement configuration.
- * @method string getStdExtInfo() Obtain 
- * @method void setStdExtInfo(string $StdExtInfo) Set 
+ * @method string getStdExtInfo() Obtain Additional parameter, which is a serialized JSON string.
+ * @method void setStdExtInfo(string $StdExtInfo) Set Additional parameter, which is a serialized JSON string.
  */
 class CreateTranscodeTemplateRequest extends AbstractModel
 {
@@ -107,7 +107,7 @@ Default value: 0.
     public $EnhanceConfig;
 
     /**
-     * @var string 
+     * @var string Additional parameter, which is a serialized JSON string.
      */
     public $StdExtInfo;
 
@@ -127,7 +127,7 @@ Default value: 0.
      * @param AudioTemplateInfo $AudioTemplate Audio stream configuration parameter. This field is required when `RemoveAudio` is 0.
      * @param TEHDConfig $TEHDConfig TESHD transcoding parameter. To enable it, please contact your Tencent Cloud sales rep.
      * @param EnhanceConfig $EnhanceConfig Audio/Video enhancement configuration.
-     * @param string $StdExtInfo 
+     * @param string $StdExtInfo Additional parameter, which is a serialized JSON string.
      */
     function __construct()
     {

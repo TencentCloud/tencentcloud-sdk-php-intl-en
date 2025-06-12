@@ -21,13 +21,13 @@ use TencentCloud\Common\AbstractModel;
  * Information on the box selection area in an image.
  *
  * @method string getType() Obtain Type of the box selection area in the image. Valid values:
-<li>logo: icon</li>
-<li>text: text</li>
+<li>logo: icon.</li>
+<li>Text: text.</li>
 Default value: logo.
 Note: This field may return null, indicating that no valid value can be obtained.
  * @method void setType(string $Type) Set Type of the box selection area in the image. Valid values:
-<li>logo: icon</li>
-<li>text: text</li>
+<li>logo: icon.</li>
+<li>Text: text.</li>
 Default value: logo.
 Note: This field may return null, indicating that no valid value can be obtained.
  * @method array getAreaCoordSet() Obtain Coordinates (pixel-level) of the box selection area in the image. Format: [x1, y1, x2, y2], which indicates the coordinates of the top left corner and the bottom right corner.
@@ -36,15 +36,21 @@ Note: This field may return null, indicating that no valid value can be obtained
  * @method void setAreaCoordSet(array $AreaCoordSet) Set Coordinates (pixel-level) of the box selection area in the image. Format: [x1, y1, x2, y2], which indicates the coordinates of the top left corner and the bottom right corner.
 For example, [101, 85, 111, 95].
 Note: This field may return null, indicating that no valid value can be obtained.
- * @method array getBoundingBox() Obtain 
- * @method void setBoundingBox(array $BoundingBox) Set 
+ * @method array getBoundingBox() Obtain Coordinates of the box selection area in the image. Format: [x1, y1, x2, y2], which indicates the coordinates of the top left corner and the bottom right corner. This parameter takes effect when AreaCoordSet is not specified.
+ - [0.1, 0.1, 0.3, 0.3]: Indicates the ratio (values are less than 1).
+ -[50, 50, 350, 280]: Indicates the pixel (values are greater than or equal to 1).
+Note: This field may return null, indicating that no valid value can be obtained.
+ * @method void setBoundingBox(array $BoundingBox) Set Coordinates of the box selection area in the image. Format: [x1, y1, x2, y2], which indicates the coordinates of the top left corner and the bottom right corner. This parameter takes effect when AreaCoordSet is not specified.
+ - [0.1, 0.1, 0.3, 0.3]: Indicates the ratio (values are less than 1).
+ -[50, 50, 350, 280]: Indicates the pixel (values are greater than or equal to 1).
+Note: This field may return null, indicating that no valid value can be obtained.
  */
 class ImageAreaBoxInfo extends AbstractModel
 {
     /**
      * @var string Type of the box selection area in the image. Valid values:
-<li>logo: icon</li>
-<li>text: text</li>
+<li>logo: icon.</li>
+<li>Text: text.</li>
 Default value: logo.
 Note: This field may return null, indicating that no valid value can be obtained.
      */
@@ -58,20 +64,26 @@ Note: This field may return null, indicating that no valid value can be obtained
     public $AreaCoordSet;
 
     /**
-     * @var array 
+     * @var array Coordinates of the box selection area in the image. Format: [x1, y1, x2, y2], which indicates the coordinates of the top left corner and the bottom right corner. This parameter takes effect when AreaCoordSet is not specified.
+ - [0.1, 0.1, 0.3, 0.3]: Indicates the ratio (values are less than 1).
+ -[50, 50, 350, 280]: Indicates the pixel (values are greater than or equal to 1).
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public $BoundingBox;
 
     /**
      * @param string $Type Type of the box selection area in the image. Valid values:
-<li>logo: icon</li>
-<li>text: text</li>
+<li>logo: icon.</li>
+<li>Text: text.</li>
 Default value: logo.
 Note: This field may return null, indicating that no valid value can be obtained.
      * @param array $AreaCoordSet Coordinates (pixel-level) of the box selection area in the image. Format: [x1, y1, x2, y2], which indicates the coordinates of the top left corner and the bottom right corner.
 For example, [101, 85, 111, 95].
 Note: This field may return null, indicating that no valid value can be obtained.
-     * @param array $BoundingBox 
+     * @param array $BoundingBox Coordinates of the box selection area in the image. Format: [x1, y1, x2, y2], which indicates the coordinates of the top left corner and the bottom right corner. This parameter takes effect when AreaCoordSet is not specified.
+ - [0.1, 0.1, 0.3, 0.3]: Indicates the ratio (values are less than 1).
+ -[50, 50, 350, 280]: Indicates the pixel (values are greater than or equal to 1).
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     function __construct()
     {

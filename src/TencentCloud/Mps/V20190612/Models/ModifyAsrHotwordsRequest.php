@@ -22,13 +22,13 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getHotwordsId() Obtain Hotword lexicon ID. 
  
-Either Name or Content should be specified if the hotword lexicon is a text-based hotword lexicon.
-One of Name, FileContent, and FileName should be specified if the hotword lexicon is a file-based hotword lexicon.
+Either Name or Content should be specified if the hotword lexicon is a temporary hotword lexicon.
+Either Name, FileContent, or FileName should be specified if the hotword lexicon is a file-based hotword lexicon.
 
  * @method void setHotwordsId(string $HotwordsId) Set Hotword lexicon ID. 
  
-Either Name or Content should be specified if the hotword lexicon is a text-based hotword lexicon.
-One of Name, FileContent, and FileName should be specified if the hotword lexicon is a file-based hotword lexicon.
+Either Name or Content should be specified if the hotword lexicon is a temporary hotword lexicon.
+Either Name, FileContent, or FileName should be specified if the hotword lexicon is a file-based hotword lexicon.
 
  * @method string getName() Obtain Hotword lexicon name.
  * @method void setName(string $Name) Set Hotword lexicon name.
@@ -50,8 +50,8 @@ class ModifyAsrHotwordsRequest extends AbstractModel
     /**
      * @var string Hotword lexicon ID. 
  
-Either Name or Content should be specified if the hotword lexicon is a text-based hotword lexicon.
-One of Name, FileContent, and FileName should be specified if the hotword lexicon is a file-based hotword lexicon.
+Either Name or Content should be specified if the hotword lexicon is a temporary hotword lexicon.
+Either Name, FileContent, or FileName should be specified if the hotword lexicon is a file-based hotword lexicon.
 
      */
     public $HotwordsId;
@@ -82,8 +82,8 @@ One of Name, FileContent, and FileName should be specified if the hotword lexico
     /**
      * @param string $HotwordsId Hotword lexicon ID. 
  
-Either Name or Content should be specified if the hotword lexicon is a text-based hotword lexicon.
-One of Name, FileContent, and FileName should be specified if the hotword lexicon is a file-based hotword lexicon.
+Either Name or Content should be specified if the hotword lexicon is a temporary hotword lexicon.
+Either Name, FileContent, or FileName should be specified if the hotword lexicon is a file-based hotword lexicon.
 
      * @param string $Name Hotword lexicon name.
      * @param string $Content Hotword lexicon text.
