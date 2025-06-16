@@ -23,41 +23,77 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Lke\V20231130\Models as Models;
 
 /**
+ * @method Models\CheckAttributeLabelExistResponse CheckAttributeLabelExist(Models\CheckAttributeLabelExistRequest $req) This API is used to check if the label name under an attribute exist.
+ * @method Models\CheckAttributeLabelReferResponse CheckAttributeLabelRefer(Models\CheckAttributeLabelReferRequest $req) This API is used to check attribute label references.
+ * @method Models\CreateAppResponse CreateApp(Models\CreateAppRequest $req) This API is used to create knowledge engine applications.
+ * @method Models\CreateAttributeLabelResponse CreateAttributeLabel(Models\CreateAttributeLabelRequest $req) This API is used to create attributes.
  * @method Models\CreateCorpResponse CreateCorp(Models\CreateCorpRequest $req) This API is used to create enterprises.
+ * @method Models\CreateDocCateResponse CreateDocCate(Models\CreateDocCateRequest $req) This API is used to create doc categories.
+ * @method Models\CreateQAResponse CreateQA(Models\CreateQARequest $req) This API is used to enter Q&As.
+ * @method Models\CreateQACateResponse CreateQACate(Models\CreateQACateRequest $req) This API is used to create Q&A categories.
  * @method Models\CreateReconstructDocumentFlowResponse CreateReconstructDocumentFlow(Models\CreateReconstructDocumentFlowRequest $req) This API is used to initiate requests for this asynchronous API, for initiating document parsing tasks.
 Document parsing supports converting images or PDF files into Markdown format files, and can parse content elements including tables, formulas, images, headings, paragraphs, headers, and footers, and intelligently convert the content into reading order.
 During the trial period, the QPS limit for a single account is only 1. If you need to access officially, please contact our R&D team.
+ * @method Models\CreateRejectedQuestionResponse CreateRejectedQuestion(Models\CreateRejectedQuestionRequest $req) This API is used to create rejected questions.
  * @method Models\CreateReleaseResponse CreateRelease(Models\CreateReleaseRequest $req) This API is used to create a release.
  * @method Models\DeleteAppResponse DeleteApp(Models\DeleteAppRequest $req) This API is used to delete applications.
+ * @method Models\DeleteAttributeLabelResponse DeleteAttributeLabel(Models\DeleteAttributeLabelRequest $req) This API is used to delete attribute labels.
  * @method Models\DeleteDocResponse DeleteDoc(Models\DeleteDocRequest $req) This API is used to delete documents.
+ * @method Models\DeleteDocCateResponse DeleteDocCate(Models\DeleteDocCateRequest $req) This API is used to delete Doc categories.
  * @method Models\DeleteQAResponse DeleteQA(Models\DeleteQARequest $req) This API is used to delete Q&As.
  * @method Models\DeleteQACateResponse DeleteQACate(Models\DeleteQACateRequest $req) This API is used to delete categories.
  * @method Models\DeleteRejectedQuestionResponse DeleteRejectedQuestion(Models\DeleteRejectedQuestionRequest $req) This API is used to delete rejected questions.
+ * @method Models\DescribeAppResponse DescribeApp(Models\DescribeAppRequest $req) This API is used to obtain application details under the corporate.
  * @method Models\DescribeAttributeLabelResponse DescribeAttributeLabel(Models\DescribeAttributeLabelRequest $req) This API is used to query attribute label details.
  * @method Models\DescribeCallStatsGraphResponse DescribeCallStatsGraph(Models\DescribeCallStatsGraphRequest $req) This API is used to show line chart of API calls.
  * @method Models\DescribeConcurrencyUsageResponse DescribeConcurrencyUsage(Models\DescribeConcurrencyUsageRequest $req) This API is used to response to concurrent calls.
  * @method Models\DescribeConcurrencyUsageGraphResponse DescribeConcurrencyUsageGraph(Models\DescribeConcurrencyUsageGraphRequest $req) This API is used to show line chart of concurrent calls.
+ * @method Models\DescribeCorpResponse DescribeCorp(Models\DescribeCorpRequest $req) This API is used to query corporate details.
  * @method Models\DescribeDocResponse DescribeDoc(Models\DescribeDocRequest $req) This API is used to query document details.
  * @method Models\DescribeKnowledgeUsageResponse DescribeKnowledgeUsage(Models\DescribeKnowledgeUsageRequest $req) This API is used to query the knowledge library usage.
  * @method Models\DescribeKnowledgeUsagePieGraphResponse DescribeKnowledgeUsagePieGraph(Models\DescribeKnowledgeUsagePieGraphRequest $req) This API is used to query pie chart of the enterprise knowledge base capacity .
+ * @method Models\DescribeQAResponse DescribeQA(Models\DescribeQARequest $req) This API is used to query Q&A details.
+ * @method Models\DescribeReferResponse DescribeRefer(Models\DescribeReferRequest $req) This API is used to get the reference source details list.
  * @method Models\DescribeReleaseResponse DescribeRelease(Models\DescribeReleaseRequest $req) This API is used to query release details.
+ * @method Models\DescribeReleaseInfoResponse DescribeReleaseInfo(Models\DescribeReleaseInfoRequest $req) This API is used to pull the release button status and last release time.
  * @method Models\DescribeRobotBizIDByAppKeyResponse DescribeRobotBizIDByAppKey(Models\DescribeRobotBizIDByAppKeyRequest $req) This API is used to get application business ID through appKey.
  * @method Models\DescribeSearchStatsGraphResponse DescribeSearchStatsGraph(Models\DescribeSearchStatsGraphRequest $req) This API is used to query line chart of search service calls.
+ * @method Models\DescribeSegmentsResponse DescribeSegments(Models\DescribeSegmentsRequest $req) This API is used to get fragment details.
+ * @method Models\DescribeStorageCredentialResponse DescribeStorageCredential(Models\DescribeStorageCredentialRequest $req) This API is used to get the temporary key for file upload.
  * @method Models\DescribeTokenUsageResponse DescribeTokenUsage(Models\DescribeTokenUsageRequest $req) This API is used to query API call token details.
  * @method Models\DescribeTokenUsageGraphResponse DescribeTokenUsageGraph(Models\DescribeTokenUsageGraphRequest $req) This API is used to show API call token line chart.
  * @method Models\DescribeUnsatisfiedReplyContextResponse DescribeUnsatisfiedReplyContext(Models\DescribeUnsatisfiedReplyContextRequest $req) This API is used to get the context of dissatisfied responses.
+ * @method Models\ExportAttributeLabelResponse ExportAttributeLabel(Models\ExportAttributeLabelRequest $req) This API is used to export attribute labels.
  * @method Models\ExportQAListResponse ExportQAList(Models\ExportQAListRequest $req) This API is used to export Q&A list.
  * @method Models\ExportUnsatisfiedReplyResponse ExportUnsatisfiedReply(Models\ExportUnsatisfiedReplyRequest $req) This API is used to export dissatisfied responses.
  * @method Models\GenerateQAResponse GenerateQA(Models\GenerateQARequest $req) This API is used to generate Q%A from document.
+ * @method Models\GetAnswerTypeDataCountResponse GetAnswerTypeDataCount(Models\GetAnswerTypeDataCountRequest $req) This API is used to get response type data statistics.
+ * @method Models\GetAppKnowledgeCountResponse GetAppKnowledgeCount(Models\GetAppKnowledgeCountRequest $req) This API is used to get a model list.
+ * @method Models\GetAppSecretResponse GetAppSecret(Models\GetAppSecretRequest $req) This API is used to get application secret keys.
+ * @method Models\GetDocPreviewResponse GetDocPreview(Models\GetDocPreviewRequest $req) This API is used to get document preview information.
+ * @method Models\GetLikeDataCountResponse GetLikeDataCount(Models\GetLikeDataCountRequest $req) This API is used to get likes and dislikes data statistics.
  * @method Models\GetMsgRecordResponse GetMsgRecord(Models\GetMsgRecordRequest $req) This API is used to obtain chat history based on the session ID (only historical session data within the past 180 days will be retained).
+ * @method Models\GetReconstructDocumentResultResponse GetReconstructDocumentResult(Models\GetReconstructDocumentResultRequest $req) This is an asynchronous APIs, used to get document parsing task results.
  * @method Models\GetTaskStatusResponse GetTaskStatus(Models\GetTaskStatusRequest $req) This API is used to get the task status.
  * @method Models\GetWsTokenResponse GetWsToken(Models\GetWsTokenRequest $req) This API is used to get ws token.
+ * @method Models\GroupDocResponse GroupDoc(Models\GroupDocRequest $req) DocGroup.
+ * @method Models\GroupQAResponse GroupQA(Models\GroupQARequest $req) Q&A Group.
  * @method Models\IgnoreUnsatisfiedReplyResponse IgnoreUnsatisfiedReply(Models\IgnoreUnsatisfiedReplyRequest $req) This API is used to ignore dissatisfied responses.
  * @method Models\ListAppResponse ListApp(Models\ListAppRequest $req) This API is used to get the application list under the corporate.
+ * @method Models\ListAppCategoryResponse ListAppCategory(Models\ListAppCategoryRequest $req) This API is used to get list of application types.
+ * @method Models\ListAppKnowledgeDetailResponse ListAppKnowledgeDetail(Models\ListAppKnowledgeDetailRequest $req) This API is used to query the knowledge base capacity details in a list.
  * @method Models\ListAttributeLabelResponse ListAttributeLabel(Models\ListAttributeLabelRequest $req) This API is used to query attribute label lists.
+ * @method Models\ListDocResponse ListDoc(Models\ListDocRequest $req) This API is used to get document list.
+ * @method Models\ListDocCateResponse ListDocCate(Models\ListDocCateRequest $req) This API is used to get document category.
+ * @method Models\ListModelResponse ListModel(Models\ListModelRequest $req) This API is used to get the model list.
+ * @method Models\ListQAResponse ListQA(Models\ListQARequest $req) This API is used to query Q&A lists.
  * @method Models\ListQACateResponse ListQACate(Models\ListQACateRequest $req) This API is used to get Q&A categories.
  * @method Models\ListRejectedQuestionResponse ListRejectedQuestion(Models\ListRejectedQuestionRequest $req) This API is used to get rejected questions.
+ * @method Models\ListRejectedQuestionPreviewResponse ListRejectedQuestionPreview(Models\ListRejectedQuestionPreviewRequest $req) This API is used to release a preview of rejected questions.
+ * @method Models\ListReleaseResponse ListRelease(Models\ListReleaseRequest $req) This API is used to get the release list.
  * @method Models\ListReleaseConfigPreviewResponse ListReleaseConfigPreview(Models\ListReleaseConfigPreviewRequest $req) This API is used to preview the release configuration items.
+ * @method Models\ListReleaseDocPreviewResponse ListReleaseDocPreview(Models\ListReleaseDocPreviewRequest $req) This API is used to preview released documents.
+ * @method Models\ListReleaseQAPreviewResponse ListReleaseQAPreview(Models\ListReleaseQAPreviewRequest $req) List of documents.
  * @method Models\ListSelectDocResponse ListSelectDoc(Models\ListSelectDocRequest $req) This API is used to get account information.
  * @method Models\ListUnsatisfiedReplyResponse ListUnsatisfiedReply(Models\ListUnsatisfiedReplyRequest $req) This API is used to query a list of dissatisfied responses.
  * @method Models\ListUsageCallDetailResponse ListUsageCallDetail(Models\ListUsageCallDetailRequest $req) This API is used to query single call details in a list.
@@ -71,6 +107,7 @@ During the trial period, the QPS limit for a single account is only 1. If you ne
  * @method Models\ModifyQACateResponse ModifyQACate(Models\ModifyQACateRequest $req) This API is used to modify Q&A categories.
  * @method Models\ModifyRejectedQuestionResponse ModifyRejectedQuestion(Models\ModifyRejectedQuestionRequest $req) This API is used to modify rejected questions.
  * @method Models\RateMsgRecordResponse RateMsgRecord(Models\RateMsgRecordRequest $req) This API is used to show messages for likes and dislikes.
+ * @method Models\RenameDocResponse RenameDoc(Models\RenameDocRequest $req) This API is used to rename a document.
  * @method Models\RetryDocAuditResponse RetryDocAudit(Models\RetryDocAuditRequest $req) This API is used to retry document parsing.
  * @method Models\RetryDocParseResponse RetryDocParse(Models\RetryDocParseRequest $req) This API is used to retry document parsing.
  * @method Models\RetryReleaseResponse RetryRelease(Models\RetryReleaseRequest $req) This API is used to retry after release suspension.
