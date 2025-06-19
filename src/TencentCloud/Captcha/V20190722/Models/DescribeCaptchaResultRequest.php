@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeCaptchaResult request structure.
  *
- * @method integer getCaptchaType() Obtain It must be `9` here.
- * @method void setCaptchaType(integer $CaptchaType) Set It must be `9` here.
+ * @method integer getCaptchaType() Obtain Fill with fixed value: 9.
+ * @method void setCaptchaType(integer $CaptchaType) Set Fill with fixed value: 9.
  * @method string getTicket() Obtain The user verification ticket returned by the frontend callback function
  * @method void setTicket(string $Ticket) Set The user verification ticket returned by the frontend callback function
  * @method string getUserIp() Obtain The user public IP obtained from the customer backend server
@@ -46,7 +46,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeCaptchaResultRequest extends AbstractModel
 {
     /**
-     * @var integer It must be `9` here.
+     * @var integer Fill with fixed value: 9.
      */
     public $CaptchaType;
 
@@ -101,7 +101,7 @@ class DescribeCaptchaResultRequest extends AbstractModel
     public $NeedGetCaptchaTime;
 
     /**
-     * @param integer $CaptchaType It must be `9` here.
+     * @param integer $CaptchaType Fill with fixed value: 9.
      * @param string $Ticket The user verification ticket returned by the frontend callback function
      * @param string $UserIp The user public IP obtained from the customer backend server
      * @param string $Randstr A random string returned by the frontend callback function
