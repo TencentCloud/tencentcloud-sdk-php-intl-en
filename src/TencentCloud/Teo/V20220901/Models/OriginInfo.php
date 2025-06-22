@@ -64,6 +64,16 @@ If it is not specified, the default value is off.
 If it is not specified, the default value is off.
  * @method array getPrivateParameters() Obtain Private authentication parameter. This parameter is valid only when PrivateAccess is on.
  * @method void setPrivateParameters(array $PrivateParameters) Set Private authentication parameter. This parameter is valid only when PrivateAccess is on.
+ * @method string getHostHeader() Obtain Custom origin HOST header, this parameter only takes effect when OriginType=IP_DOMAIN. 
+
+- If OriginType=COS or AWS_S3, the origin HOST header will be consistent with the origin domain name. 
+- If OriginType=ORIGIN_GROUP, the origin HOST header follows the configuration within the origin group;if not configured, it defaults to the acceleration domain name. 
+- If OriginType=VOD or SPACE, there is no need to configure this header, and it will take effect according to the corresponding origin domain name.
+ * @method void setHostHeader(string $HostHeader) Set Custom origin HOST header, this parameter only takes effect when OriginType=IP_DOMAIN. 
+
+- If OriginType=COS or AWS_S3, the origin HOST header will be consistent with the origin domain name. 
+- If OriginType=ORIGIN_GROUP, the origin HOST header follows the configuration within the origin group;if not configured, it defaults to the acceleration domain name. 
+- If OriginType=VOD or SPACE, there is no need to configure this header, and it will take effect according to the corresponding origin domain name.
  * @method integer getVodeoSubAppId() Obtain VODEO sub-application ID. This parameter is required when OriginType is VODEO.
  * @method void setVodeoSubAppId(integer $VodeoSubAppId) Set VODEO sub-application ID. This parameter is required when OriginType is VODEO.
  * @method string getVodeoDistributionRange() Obtain VOD on EO distribution range. This parameter is required when OriginType = VODEO. The values are: 
@@ -74,6 +84,12 @@ If it is not specified, the default value is off.
 <li>Bucket: a specified bucket.</li>
  * @method string getVodeoBucketId() Obtain VODEO storage bucket ID. This parameter is required when OriginType is VODEO and VodeoDistributionRange is Bucket.
  * @method void setVodeoBucketId(string $VodeoBucketId) Set VODEO storage bucket ID. This parameter is required when OriginType is VODEO and VodeoDistributionRange is Bucket.
+ * @method string getVodOriginScope() Obtain VOD origin-pull scope. this parameter is valid only when OriginType = VOD. valid values: <li>all: all files in the VOD application corresponding to the current origin server. the default value is all;</li> <li>bucket: files in a specified bucket under the VOD application corresponding to the current origin server. specify the bucket by the parameter VodBucketId.</li>.
+</li>
+ * @method void setVodOriginScope(string $VodOriginScope) Set VOD origin-pull scope. this parameter is valid only when OriginType = VOD. valid values: <li>all: all files in the VOD application corresponding to the current origin server. the default value is all;</li> <li>bucket: files in a specified bucket under the VOD application corresponding to the current origin server. specify the bucket by the parameter VodBucketId.</li>.
+</li>
+ * @method string getVodBucketId() Obtain VOD bucket ID. this parameter is required when OriginType = VOD and VodOriginScope = bucket. data source: storage ID of the bucket under the VOD professional edition application.
+ * @method void setVodBucketId(string $VodBucketId) Set VOD bucket ID. this parameter is required when OriginType = VOD and VodOriginScope = bucket. data source: storage ID of the bucket under the VOD professional edition application.
  */
 class OriginInfo extends AbstractModel
 {
@@ -120,6 +136,15 @@ If it is not specified, the default value is off.
     public $PrivateParameters;
 
     /**
+     * @var string Custom origin HOST header, this parameter only takes effect when OriginType=IP_DOMAIN. 
+
+- If OriginType=COS or AWS_S3, the origin HOST header will be consistent with the origin domain name. 
+- If OriginType=ORIGIN_GROUP, the origin HOST header follows the configuration within the origin group;if not configured, it defaults to the acceleration domain name. 
+- If OriginType=VOD or SPACE, there is no need to configure this header, and it will take effect according to the corresponding origin domain name.
+     */
+    public $HostHeader;
+
+    /**
      * @var integer VODEO sub-application ID. This parameter is required when OriginType is VODEO.
      * @deprecated
      */
@@ -138,6 +163,17 @@ If it is not specified, the default value is off.
      * @deprecated
      */
     public $VodeoBucketId;
+
+    /**
+     * @var string VOD origin-pull scope. this parameter is valid only when OriginType = VOD. valid values: <li>all: all files in the VOD application corresponding to the current origin server. the default value is all;</li> <li>bucket: files in a specified bucket under the VOD application corresponding to the current origin server. specify the bucket by the parameter VodBucketId.</li>.
+</li>
+     */
+    public $VodOriginScope;
+
+    /**
+     * @var string VOD bucket ID. this parameter is required when OriginType = VOD and VodOriginScope = bucket. data source: storage ID of the bucket under the VOD professional edition application.
+     */
+    public $VodBucketId;
 
     /**
      * @param string $OriginType Origin server type, with values:
@@ -162,11 +198,19 @@ If it is not specified, the default value is off.
 <li>off: Disable private authentication.</li>
 If it is not specified, the default value is off.
      * @param array $PrivateParameters Private authentication parameter. This parameter is valid only when PrivateAccess is on.
+     * @param string $HostHeader Custom origin HOST header, this parameter only takes effect when OriginType=IP_DOMAIN. 
+
+- If OriginType=COS or AWS_S3, the origin HOST header will be consistent with the origin domain name. 
+- If OriginType=ORIGIN_GROUP, the origin HOST header follows the configuration within the origin group;if not configured, it defaults to the acceleration domain name. 
+- If OriginType=VOD or SPACE, there is no need to configure this header, and it will take effect according to the corresponding origin domain name.
      * @param integer $VodeoSubAppId VODEO sub-application ID. This parameter is required when OriginType is VODEO.
      * @param string $VodeoDistributionRange VOD on EO distribution range. This parameter is required when OriginType = VODEO. The values are: 
 <li>All: all buckets under the current application;</li> 
 <li>Bucket: a specified bucket.</li>
      * @param string $VodeoBucketId VODEO storage bucket ID. This parameter is required when OriginType is VODEO and VodeoDistributionRange is Bucket.
+     * @param string $VodOriginScope VOD origin-pull scope. this parameter is valid only when OriginType = VOD. valid values: <li>all: all files in the VOD application corresponding to the current origin server. the default value is all;</li> <li>bucket: files in a specified bucket under the VOD application corresponding to the current origin server. specify the bucket by the parameter VodBucketId.</li>.
+</li>
+     * @param string $VodBucketId VOD bucket ID. this parameter is required when OriginType = VOD and VodOriginScope = bucket. data source: storage ID of the bucket under the VOD professional edition application.
      */
     function __construct()
     {
@@ -206,6 +250,10 @@ If it is not specified, the default value is off.
             }
         }
 
+        if (array_key_exists("HostHeader",$param) and $param["HostHeader"] !== null) {
+            $this->HostHeader = $param["HostHeader"];
+        }
+
         if (array_key_exists("VodeoSubAppId",$param) and $param["VodeoSubAppId"] !== null) {
             $this->VodeoSubAppId = $param["VodeoSubAppId"];
         }
@@ -216,6 +264,14 @@ If it is not specified, the default value is off.
 
         if (array_key_exists("VodeoBucketId",$param) and $param["VodeoBucketId"] !== null) {
             $this->VodeoBucketId = $param["VodeoBucketId"];
+        }
+
+        if (array_key_exists("VodOriginScope",$param) and $param["VodOriginScope"] !== null) {
+            $this->VodOriginScope = $param["VodOriginScope"];
+        }
+
+        if (array_key_exists("VodBucketId",$param) and $param["VodBucketId"] !== null) {
+            $this->VodBucketId = $param["VodBucketId"];
         }
     }
 }

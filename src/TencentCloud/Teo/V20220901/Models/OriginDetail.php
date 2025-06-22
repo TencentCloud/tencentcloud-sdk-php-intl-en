@@ -66,12 +66,20 @@ If this field is not specified, the default value 'off' will be used.
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setPrivateParameters(array $PrivateParameters) Set Private authentication parameter. This parameter is valid only when PrivateAccess is on.
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getHostHeader() Obtain current configured origin HOST header.
+ * @method void setHostHeader(string $HostHeader) Set current configured origin HOST header.
  * @method integer getVodeoSubAppId() Obtain MO sub-application ID
  * @method void setVodeoSubAppId(integer $VodeoSubAppId) Set MO sub-application ID
  * @method string getVodeoDistributionRange() Obtain MO distribution range. Valid values: <li>All: all</li> <li>Bucket: bucket</li>
  * @method void setVodeoDistributionRange(string $VodeoDistributionRange) Set MO distribution range. Valid values: <li>All: all</li> <li>Bucket: bucket</li>
  * @method string getVodeoBucketId() Obtain MO bucket ID, required when the distribution range (DistributionRange) is bucket (Bucket)
  * @method void setVodeoBucketId(string $VodeoBucketId) Set MO bucket ID, required when the distribution range (DistributionRange) is bucket (Bucket)
+ * @method string getVodOriginScope() Obtain VOD origin-pull range. this parameter returns a value when OriginType = VOD. valid values: <li>all: all files in the VOD application corresponding to the current origin server. the default value is all;</li> <li>bucket: files in a specified bucket under the VOD application corresponding to the current origin server. specify the bucket by the VodBucketId parameter.</li>.
+</li>
+ * @method void setVodOriginScope(string $VodOriginScope) Set VOD origin-pull range. this parameter returns a value when OriginType = VOD. valid values: <li>all: all files in the VOD application corresponding to the current origin server. the default value is all;</li> <li>bucket: files in a specified bucket under the VOD application corresponding to the current origin server. specify the bucket by the VodBucketId parameter.</li>.
+</li>
+ * @method string getVodBucketId() Obtain VOD bucket ID. this parameter is required when OriginType = VOD and VodOriginScope = bucket. data source: storage ID of the bucket under the VOD professional application.
+ * @method void setVodBucketId(string $VodBucketId) Set VOD bucket ID. this parameter is required when OriginType = VOD and VodOriginScope = bucket. data source: storage ID of the bucket under the VOD professional application.
  */
 class OriginDetail extends AbstractModel
 {
@@ -127,6 +135,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $PrivateParameters;
 
     /**
+     * @var string current configured origin HOST header.
+     */
+    public $HostHeader;
+
+    /**
      * @var integer MO sub-application ID
      * @deprecated
      */
@@ -143,6 +156,17 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @deprecated
      */
     public $VodeoBucketId;
+
+    /**
+     * @var string VOD origin-pull range. this parameter returns a value when OriginType = VOD. valid values: <li>all: all files in the VOD application corresponding to the current origin server. the default value is all;</li> <li>bucket: files in a specified bucket under the VOD application corresponding to the current origin server. specify the bucket by the VodBucketId parameter.</li>.
+</li>
+     */
+    public $VodOriginScope;
+
+    /**
+     * @var string VOD bucket ID. this parameter is required when OriginType = VOD and VodOriginScope = bucket. data source: storage ID of the bucket under the VOD professional application.
+     */
+    public $VodBucketId;
 
     /**
      * @param string $OriginType Origin server type. Valid values:
@@ -168,9 +192,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
 If this field is not specified, the default value 'off' will be used.
      * @param array $PrivateParameters Private authentication parameter. This parameter is valid only when PrivateAccess is on.
 Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $HostHeader current configured origin HOST header.
      * @param integer $VodeoSubAppId MO sub-application ID
      * @param string $VodeoDistributionRange MO distribution range. Valid values: <li>All: all</li> <li>Bucket: bucket</li>
      * @param string $VodeoBucketId MO bucket ID, required when the distribution range (DistributionRange) is bucket (Bucket)
+     * @param string $VodOriginScope VOD origin-pull range. this parameter returns a value when OriginType = VOD. valid values: <li>all: all files in the VOD application corresponding to the current origin server. the default value is all;</li> <li>bucket: files in a specified bucket under the VOD application corresponding to the current origin server. specify the bucket by the VodBucketId parameter.</li>.
+</li>
+     * @param string $VodBucketId VOD bucket ID. this parameter is required when OriginType = VOD and VodOriginScope = bucket. data source: storage ID of the bucket under the VOD professional application.
      */
     function __construct()
     {
@@ -218,6 +246,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
             }
         }
 
+        if (array_key_exists("HostHeader",$param) and $param["HostHeader"] !== null) {
+            $this->HostHeader = $param["HostHeader"];
+        }
+
         if (array_key_exists("VodeoSubAppId",$param) and $param["VodeoSubAppId"] !== null) {
             $this->VodeoSubAppId = $param["VodeoSubAppId"];
         }
@@ -228,6 +260,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("VodeoBucketId",$param) and $param["VodeoBucketId"] !== null) {
             $this->VodeoBucketId = $param["VodeoBucketId"];
+        }
+
+        if (array_key_exists("VodOriginScope",$param) and $param["VodOriginScope"] !== null) {
+            $this->VodOriginScope = $param["VodOriginScope"];
+        }
+
+        if (array_key_exists("VodBucketId",$param) and $param["VodBucketId"] !== null) {
+            $this->VodBucketId = $param["VodBucketId"];
         }
     }
 }

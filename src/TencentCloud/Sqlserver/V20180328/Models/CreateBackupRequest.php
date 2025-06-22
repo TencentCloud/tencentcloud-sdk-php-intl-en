@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceId(string $InstanceId) Set (Required) Instance ID in the format of mssql-i1z41iwd
  * @method string getBackupName() Obtain Backup name. If this parameter is left empty, a backup name in the format of "[Instance ID]_[Backup start timestamp]" will be automatically generated.
  * @method void setBackupName(string $BackupName) Set Backup name. If this parameter is left empty, a backup name in the format of "[Instance ID]_[Backup start timestamp]" will be automatically generated.
- * @method integer getStorageStrategy() Obtain 
- * @method void setStorageStrategy(integer $StorageStrategy) Set 
+ * @method integer getStorageStrategy() Obtain Backup storage policy. 0: Follow the custom backup retention policy; 1: Follow the instance lifecycle until the instance is eliminated. Default value: 0.
+ * @method void setStorageStrategy(integer $StorageStrategy) Set Backup storage policy. 0: Follow the custom backup retention policy; 1: Follow the instance lifecycle until the instance is eliminated. Default value: 0.
  */
 class CreateBackupRequest extends AbstractModel
 {
@@ -54,7 +54,7 @@ class CreateBackupRequest extends AbstractModel
     public $BackupName;
 
     /**
-     * @var integer 
+     * @var integer Backup storage policy. 0: Follow the custom backup retention policy; 1: Follow the instance lifecycle until the instance is eliminated. Default value: 0.
      */
     public $StorageStrategy;
 
@@ -63,7 +63,7 @@ class CreateBackupRequest extends AbstractModel
      * @param array $DBNames List of names of databases to be backed up (required only for multi-database backup)
      * @param string $InstanceId (Required) Instance ID in the format of mssql-i1z41iwd
      * @param string $BackupName Backup name. If this parameter is left empty, a backup name in the format of "[Instance ID]_[Backup start timestamp]" will be automatically generated.
-     * @param integer $StorageStrategy 
+     * @param integer $StorageStrategy Backup storage policy. 0: Follow the custom backup retention policy; 1: Follow the instance lifecycle until the instance is eliminated. Default value: 0.
      */
     function __construct()
     {
