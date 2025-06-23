@@ -32,12 +32,12 @@ Default value: `ON`.
 <li>`loudNorm`: Loudness normalization.</li>
 <li>`gainControl`: Volume leveling.</li>
 Default value: `loudNorm`.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setType(string $Type) Set The type. Valid values:
 <li>`loudNorm`: Loudness normalization.</li>
 <li>`gainControl`: Volume leveling.</li>
 Default value: `loudNorm`.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class VolumeBalanceConfig extends AbstractModel
 {
@@ -54,7 +54,7 @@ Default value: `ON`.
 <li>`loudNorm`: Loudness normalization.</li>
 <li>`gainControl`: Volume leveling.</li>
 Default value: `loudNorm`.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Type;
 
@@ -67,7 +67,7 @@ Default value: `ON`.
 <li>`loudNorm`: Loudness normalization.</li>
 <li>`gainControl`: Volume leveling.</li>
 Default value: `loudNorm`.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

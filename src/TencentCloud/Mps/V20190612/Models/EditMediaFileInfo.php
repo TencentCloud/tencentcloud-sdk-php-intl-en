@@ -29,11 +29,11 @@ use TencentCloud\Common\AbstractModel;
  * @method string getId() Obtain The ID of the material associated with an element. This parameter is required for video compositing tasks.
 
 Note: The ID can be up to 32 characters long and can contain letters, digits, and special characters -_
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setId(string $Id) Set The ID of the material associated with an element. This parameter is required for video compositing tasks.
 
 Note: The ID can be up to 32 characters long and can contain letters, digits, and special characters -_
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class EditMediaFileInfo extends AbstractModel
 {
@@ -56,7 +56,7 @@ class EditMediaFileInfo extends AbstractModel
      * @var string The ID of the material associated with an element. This parameter is required for video compositing tasks.
 
 Note: The ID can be up to 32 characters long and can contain letters, digits, and special characters -_
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Id;
 
@@ -67,7 +67,7 @@ Note: This field may return·null, indicating that no valid values can be obtain
      * @param string $Id The ID of the material associated with an element. This parameter is required for video compositing tasks.
 
 Note: The ID can be up to 32 characters long and can contain letters, digits, and special characters -_
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

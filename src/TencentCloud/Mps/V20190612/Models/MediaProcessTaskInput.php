@@ -22,14 +22,14 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getTranscodeTaskSet() Obtain List of transcoding tasks.
  * @method void setTranscodeTaskSet(array $TranscodeTaskSet) Set List of transcoding tasks.
- * @method array getAnimatedGraphicTaskSet() Obtain List of animated image generating tasks.
- * @method void setAnimatedGraphicTaskSet(array $AnimatedGraphicTaskSet) Set List of animated image generating tasks.
- * @method array getSnapshotByTimeOffsetTaskSet() Obtain List of time point screencapturing tasks.
- * @method void setSnapshotByTimeOffsetTaskSet(array $SnapshotByTimeOffsetTaskSet) Set List of time point screencapturing tasks.
- * @method array getSampleSnapshotTaskSet() Obtain List of sampled screencapturing tasks.
- * @method void setSampleSnapshotTaskSet(array $SampleSnapshotTaskSet) Set List of sampled screencapturing tasks.
- * @method array getImageSpriteTaskSet() Obtain List of image sprite generating tasks.
- * @method void setImageSpriteTaskSet(array $ImageSpriteTaskSet) Set List of image sprite generating tasks.
+ * @method array getAnimatedGraphicTaskSet() Obtain List of animated image screenshot tasks.
+ * @method void setAnimatedGraphicTaskSet(array $AnimatedGraphicTaskSet) Set List of animated image screenshot tasks.
+ * @method array getSnapshotByTimeOffsetTaskSet() Obtain List of time point screenshot tasks.
+ * @method void setSnapshotByTimeOffsetTaskSet(array $SnapshotByTimeOffsetTaskSet) Set List of time point screenshot tasks.
+ * @method array getSampleSnapshotTaskSet() Obtain List of sampled screenshot tasks.
+ * @method void setSampleSnapshotTaskSet(array $SampleSnapshotTaskSet) Set List of sampled screenshot tasks.
+ * @method array getImageSpriteTaskSet() Obtain List of image sprite screenshot tasks.
+ * @method void setImageSpriteTaskSet(array $ImageSpriteTaskSet) Set List of image sprite screenshot tasks.
  * @method array getAdaptiveDynamicStreamingTaskSet() Obtain List of adaptive bitrate streaming tasks.
  * @method void setAdaptiveDynamicStreamingTaskSet(array $AdaptiveDynamicStreamingTaskSet) Set List of adaptive bitrate streaming tasks.
  */
@@ -41,22 +41,22 @@ class MediaProcessTaskInput extends AbstractModel
     public $TranscodeTaskSet;
 
     /**
-     * @var array List of animated image generating tasks.
+     * @var array List of animated image screenshot tasks.
      */
     public $AnimatedGraphicTaskSet;
 
     /**
-     * @var array List of time point screencapturing tasks.
+     * @var array List of time point screenshot tasks.
      */
     public $SnapshotByTimeOffsetTaskSet;
 
     /**
-     * @var array List of sampled screencapturing tasks.
+     * @var array List of sampled screenshot tasks.
      */
     public $SampleSnapshotTaskSet;
 
     /**
-     * @var array List of image sprite generating tasks.
+     * @var array List of image sprite screenshot tasks.
      */
     public $ImageSpriteTaskSet;
 
@@ -67,10 +67,10 @@ class MediaProcessTaskInput extends AbstractModel
 
     /**
      * @param array $TranscodeTaskSet List of transcoding tasks.
-     * @param array $AnimatedGraphicTaskSet List of animated image generating tasks.
-     * @param array $SnapshotByTimeOffsetTaskSet List of time point screencapturing tasks.
-     * @param array $SampleSnapshotTaskSet List of sampled screencapturing tasks.
-     * @param array $ImageSpriteTaskSet List of image sprite generating tasks.
+     * @param array $AnimatedGraphicTaskSet List of animated image screenshot tasks.
+     * @param array $SnapshotByTimeOffsetTaskSet List of time point screenshot tasks.
+     * @param array $SampleSnapshotTaskSet List of sampled screenshot tasks.
+     * @param array $ImageSpriteTaskSet List of image sprite screenshot tasks.
      * @param array $AdaptiveDynamicStreamingTaskSet List of adaptive bitrate streaming tasks.
      */
     function __construct()

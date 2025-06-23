@@ -29,11 +29,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
  * @method string getType() Obtain The scheme type. Valid values:
  <li>`Preset`</li>
 <li>`Custom` </li>
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setType(string $Type) Set The scheme type. Valid values:
  <li>`Preset`</li>
 <li>`Custom` </li>
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getStatus() Obtain The scheme status. Valid values:
 `Enabled`
 `Disabled`
@@ -92,7 +92,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @var string The scheme type. Valid values:
  <li>`Preset`</li>
 <li>`Custom` </li>
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Type;
 
@@ -159,7 +159,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $Type The scheme type. Valid values:
  <li>`Preset`</li>
 <li>`Custom` </li>
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $Status The scheme status. Valid values:
 `Enabled`
 `Disabled`

@@ -273,6 +273,7 @@ class DescribeTaskListRequest extends AbstractModel
 
     /**
      * @var array The field `OperatorUin` has been disused and replaced by `OperateUin`.
+     * @deprecated
      */
     public $OperatorUin;
 

@@ -39,10 +39,8 @@ Monthly subscription (annual and monthly).
 Pay-As-You-Go resources.
 Standard ri reserved instance.
  * @method string getProjectName() Obtain Project name.
-.
 
  * @method void setProjectName(string $ProjectName) Set Project name.
-.
 
  * @method string getRegion() Obtain Resource region.
  * @method void setRegion(string $Region) Set Resource region.
@@ -90,8 +88,8 @@ Standard ri reserved instance.
 Original cost = component list price * component usage * usage duration.
  * @method void setOriginalCost(string $OriginalCost) Set Total original price.
 Original cost = component list price * component usage * usage duration.
- * @method string getDiscountRate() Obtain Discount (default is 1).
- * @method void setDiscountRate(string $DiscountRate) Set Discount (default is 1).
+ * @method string getDiscountRate() Obtain Discount (default is 1) - abandoned.
+ * @method void setDiscountRate(string $DiscountRate) Set Discount (default is 1) - abandoned.
  * @method string getCurrency() Obtain Currency.
  * @method void setCurrency(string $Currency) Set Currency.
  * @method string getTotalAmountAfterDiscount() Obtain Total cost after discount.
@@ -102,6 +100,8 @@ Original cost = component list price * component usage * usage duration.
  * @method void setTotalCost(string $TotalCost) Set = Total Amount After Discount - Voucher Deduction
  * @method string getId() Obtain Identifier (id).
  * @method void setId(string $Id) Set Identifier (id).
+ * @method string getCustomerDiscountRate() Obtain customer discount rate. The discount rate applied to the reseller's customer, which set by reseller, default value equal to 1.
+ * @method void setCustomerDiscountRate(string $CustomerDiscountRate) Set customer discount rate. The discount rate applied to the reseller's customer, which set by reseller, default value equal to 1.
  */
 class BillDetailData extends AbstractModel
 {
@@ -136,7 +136,6 @@ Standard ri reserved instance.
 
     /**
      * @var string Project name.
-.
 
      */
     public $ProjectName;
@@ -241,7 +240,7 @@ Original cost = component list price * component usage * usage duration.
     public $OriginalCost;
 
     /**
-     * @var string Discount (default is 1).
+     * @var string Discount (default is 1) - abandoned.
      */
     public $DiscountRate;
 
@@ -271,6 +270,11 @@ Original cost = component list price * component usage * usage duration.
     public $Id;
 
     /**
+     * @var string customer discount rate. The discount rate applied to the reseller's customer, which set by reseller, default value equal to 1.
+     */
+    public $CustomerDiscountRate;
+
+    /**
      * @param integer $PayerAccountId reseller account.
      * @param integer $OwnerAccountId Subaccount.
      * @param integer $OperatorAccountId Operator account.
@@ -281,7 +285,6 @@ Monthly subscription (annual and monthly).
 Pay-As-You-Go resources.
 Standard ri reserved instance.
      * @param string $ProjectName Project name.
-.
 
      * @param string $Region Resource region.
      * @param string $AvailabilityZone Resource available zone.
@@ -306,12 +309,13 @@ Standard ri reserved instance.
      * @param string $DurationUnit duration unit.
      * @param string $OriginalCost Total original price.
 Original cost = component list price * component usage * usage duration.
-     * @param string $DiscountRate Discount (default is 1).
+     * @param string $DiscountRate Discount (default is 1) - abandoned.
      * @param string $Currency Currency.
      * @param string $TotalAmountAfterDiscount Total cost after discount.
      * @param string $VoucherDeduction Voucher deduction amount.
      * @param string $TotalCost = Total Amount After Discount - Voucher Deduction
      * @param string $Id Identifier (id).
+     * @param string $CustomerDiscountRate customer discount rate. The discount rate applied to the reseller's customer, which set by reseller, default value equal to 1.
      */
     function __construct()
     {
@@ -448,6 +452,10 @@ Original cost = component list price * component usage * usage duration.
 
         if (array_key_exists("Id",$param) and $param["Id"] !== null) {
             $this->Id = $param["Id"];
+        }
+
+        if (array_key_exists("CustomerDiscountRate",$param) and $param["CustomerDiscountRate"] !== null) {
+            $this->CustomerDiscountRate = $param["CustomerDiscountRate"];
         }
     }
 }

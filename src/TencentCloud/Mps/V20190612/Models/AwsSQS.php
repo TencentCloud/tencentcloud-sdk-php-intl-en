@@ -21,57 +21,57 @@ use TencentCloud\Common\AbstractModel;
  * The information of an AWS SQS queue.
  *
  * @method string getSQSRegion() Obtain The region of the SQS queue.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setSQSRegion(string $SQSRegion) Set The region of the SQS queue.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getSQSQueueName() Obtain The name of the SQS queue.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setSQSQueueName(string $SQSQueueName) Set The name of the SQS queue.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getS3SecretId() Obtain The key ID required to read from/write to the SQS queue.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setS3SecretId(string $S3SecretId) Set The key ID required to read from/write to the SQS queue.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getS3SecretKey() Obtain The key required to read from/write to the SQS queue.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setS3SecretKey(string $S3SecretKey) Set The key required to read from/write to the SQS queue.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class AwsSQS extends AbstractModel
 {
     /**
      * @var string The region of the SQS queue.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $SQSRegion;
 
     /**
      * @var string The name of the SQS queue.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $SQSQueueName;
 
     /**
      * @var string The key ID required to read from/write to the SQS queue.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $S3SecretId;
 
     /**
      * @var string The key required to read from/write to the SQS queue.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $S3SecretKey;
 
     /**
      * @param string $SQSRegion The region of the SQS queue.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $SQSQueueName The name of the SQS queue.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $S3SecretId The key ID required to read from/write to the SQS queue.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $S3SecretKey The key required to read from/write to the SQS queue.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

@@ -167,6 +167,7 @@ class ProductConf extends AbstractModel
      * @var boolean Due to spelling inconsistency in this parameter name, it is recommended to use the **EnableReplicaReadOnly** parameter instead. Its meaning refers to whether the Read-Only Replica is supported.
 - true: Supported.
 - false: Not supported.
+     * @deprecated
      */
     public $EnableRepicaReadOnly;
 

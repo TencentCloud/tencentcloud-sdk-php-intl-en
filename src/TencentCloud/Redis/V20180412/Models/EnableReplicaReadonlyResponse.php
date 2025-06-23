@@ -36,6 +36,7 @@ class EnableReplicaReadonlyResponse extends AbstractModel
     /**
      * @var string Valid values: `ERROR`, `OK`. This field has been disused.
 Note: This field may return null, indicating that no valid values can be obtained.
+     * @deprecated
      */
     public $Status;
 

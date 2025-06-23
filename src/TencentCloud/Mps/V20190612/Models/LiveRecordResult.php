@@ -21,33 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * The live recording result.
  *
  * @method TaskOutputStorage getOutputStorage() Obtain The storage of the recording file.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setOutputStorage(TaskOutputStorage $OutputStorage) Set The storage of the recording file.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method array getFileList() Obtain The recording segments.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setFileList(array $FileList) Set The recording segments.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class LiveRecordResult extends AbstractModel
 {
     /**
      * @var TaskOutputStorage The storage of the recording file.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $OutputStorage;
 
     /**
      * @var array The recording segments.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $FileList;
 
     /**
      * @param TaskOutputStorage $OutputStorage The storage of the recording file.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param array $FileList The recording segments.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

@@ -18,7 +18,7 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Result type of a time point screencapturing task
+ * Result type of a time point screenshot task
  *
  * @method string getStatus() Obtain Task status. Valid values: PROCESSING, SUCCESS, FAIL.
  * @method void setStatus(string $Status) Set Task status. Valid values: PROCESSING, SUCCESS, FAIL.
@@ -28,12 +28,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setErrCode(integer $ErrCode) Set Error code. 0 indicates the task is successful; otherwise it is failed. This parameter is no longer recommended. Consider using the new error code parameter ErrCodeExt.
  * @method string getMessage() Obtain Error message.
  * @method void setMessage(string $Message) Set Error message.
- * @method SnapshotByTimeOffsetTaskInput getInput() Obtain Input for a time point screencapturing task.
- * @method void setInput(SnapshotByTimeOffsetTaskInput $Input) Set Input for a time point screencapturing task.
- * @method MediaSnapshotByTimeOffsetItem getOutput() Obtain Output of a time point screencapturing task.
+ * @method SnapshotByTimeOffsetTaskInput getInput() Obtain Input for a time point screenshot task.
+ * @method void setInput(SnapshotByTimeOffsetTaskInput $Input) Set Input for a time point screenshot task.
+ * @method MediaSnapshotByTimeOffsetItem getOutput() Obtain Output of a time point screenshot task.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setOutput(MediaSnapshotByTimeOffsetItem $Output) Set Output of a time point screencapturing task.
+ * @method void setOutput(MediaSnapshotByTimeOffsetItem $Output) Set Output of a time point screenshot task.
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getBeginProcessTime() Obtain The time when the task started executing, in ISO date format.
+ * @method void setBeginProcessTime(string $BeginProcessTime) Set The time when the task started executing, in ISO date format.
+ * @method string getFinishTime() Obtain The time when the task finished, in ISO date format.
+ * @method void setFinishTime(string $FinishTime) Set The time when the task finished, in ISO date format.
  */
 class MediaProcessTaskSnapshotByTimeOffsetResult extends AbstractModel
 {
@@ -58,24 +62,36 @@ class MediaProcessTaskSnapshotByTimeOffsetResult extends AbstractModel
     public $Message;
 
     /**
-     * @var SnapshotByTimeOffsetTaskInput Input for a time point screencapturing task.
+     * @var SnapshotByTimeOffsetTaskInput Input for a time point screenshot task.
      */
     public $Input;
 
     /**
-     * @var MediaSnapshotByTimeOffsetItem Output of a time point screencapturing task.
+     * @var MediaSnapshotByTimeOffsetItem Output of a time point screenshot task.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Output;
+
+    /**
+     * @var string The time when the task started executing, in ISO date format.
+     */
+    public $BeginProcessTime;
+
+    /**
+     * @var string The time when the task finished, in ISO date format.
+     */
+    public $FinishTime;
 
     /**
      * @param string $Status Task status. Valid values: PROCESSING, SUCCESS, FAIL.
      * @param string $ErrCodeExt The error code. An empty string indicates the task is successful; any other value returned indicates the task failed. For details, see [Error Codes](https://intl.cloud.tencent.com/document/product/1041/40249).
      * @param integer $ErrCode Error code. 0 indicates the task is successful; otherwise it is failed. This parameter is no longer recommended. Consider using the new error code parameter ErrCodeExt.
      * @param string $Message Error message.
-     * @param SnapshotByTimeOffsetTaskInput $Input Input for a time point screencapturing task.
-     * @param MediaSnapshotByTimeOffsetItem $Output Output of a time point screencapturing task.
+     * @param SnapshotByTimeOffsetTaskInput $Input Input for a time point screenshot task.
+     * @param MediaSnapshotByTimeOffsetItem $Output Output of a time point screenshot task.
 Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $BeginProcessTime The time when the task started executing, in ISO date format.
+     * @param string $FinishTime The time when the task finished, in ISO date format.
      */
     function __construct()
     {
@@ -114,6 +130,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (array_key_exists("Output",$param) and $param["Output"] !== null) {
             $this->Output = new MediaSnapshotByTimeOffsetItem();
             $this->Output->deserialize($param["Output"]);
+        }
+
+        if (array_key_exists("BeginProcessTime",$param) and $param["BeginProcessTime"] !== null) {
+            $this->BeginProcessTime = $param["BeginProcessTime"];
+        }
+
+        if (array_key_exists("FinishTime",$param) and $param["FinishTime"] !== null) {
+            $this->FinishTime = $param["FinishTime"];
         }
     }
 }

@@ -22,18 +22,22 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getTimeSpan() Obtain How long the instance will be renewed for, which needs to be used together with `TimeUnit`.
  * @method void setTimeSpan(integer $TimeSpan) Set How long the instance will be renewed for, which needs to be used together with `TimeUnit`.
- * @method array getResourceIds() Obtain List of resource IDs of the node to be renewed. The resource ID is in the format of `emr-vm-xxxxxxxx`. A valid resource ID can be queried in the [console](https://console.cloud.tencent.com/emr/static/hardware).
- * @method void setResourceIds(array $ResourceIds) Set List of resource IDs of the node to be renewed. The resource ID is in the format of `emr-vm-xxxxxxxx`. A valid resource ID can be queried in the [console](https://console.cloud.tencent.com/emr/static/hardware).
- * @method Placement getPlacement() Obtain Location of the instance. This parameter is used to specify the AZ, project, and other attributes of the instance.
- * @method void setPlacement(Placement $Placement) Set Location of the instance. This parameter is used to specify the AZ, project, and other attributes of the instance.
  * @method integer getPayMode() Obtain Instance billing mode.
  * @method void setPayMode(integer $PayMode) Set Instance billing mode.
+ * @method array getResourceIds() Obtain List of resource IDs of the node to be renewed. The resource ID is in the format of `emr-vm-xxxxxxxx`. A valid resource ID can be queried in the [console](https://console.cloud.tencent.com/emr/static/hardware).
+ * @method void setResourceIds(array $ResourceIds) Set List of resource IDs of the node to be renewed. The resource ID is in the format of `emr-vm-xxxxxxxx`. A valid resource ID can be queried in the [console](https://console.cloud.tencent.com/emr/static/hardware).
  * @method string getTimeUnit() Obtain Unit of time for instance renewal.
  * @method void setTimeUnit(string $TimeUnit) Set Unit of time for instance renewal.
  * @method string getCurrency() Obtain Currency.
  * @method void setCurrency(string $Currency) Set Currency.
+ * @method Placement getPlacement() Obtain Location of the instance. This parameter is used to specify the AZ, project, and other attributes of the instance.
+ * @method void setPlacement(Placement $Placement) Set Location of the instance. This parameter is used to specify the AZ, project, and other attributes of the instance.
  * @method integer getModifyPayMode() Obtain Whether to change from pay-as-you-go billing to monthly subscription billing. `0`: no; `1`: yes
  * @method void setModifyPayMode(integer $ModifyPayMode) Set Whether to change from pay-as-you-go billing to monthly subscription billing. `0`: no; `1`: yes
+ * @method boolean getNeedDetail() Obtain 
+ * @method void setNeedDetail(boolean $NeedDetail) Set 
+ * @method string getInstanceId() Obtain 
+ * @method void setInstanceId(string $InstanceId) Set 
  */
 class InquiryPriceRenewInstanceRequest extends AbstractModel
 {
@@ -43,19 +47,14 @@ class InquiryPriceRenewInstanceRequest extends AbstractModel
     public $TimeSpan;
 
     /**
-     * @var array List of resource IDs of the node to be renewed. The resource ID is in the format of `emr-vm-xxxxxxxx`. A valid resource ID can be queried in the [console](https://console.cloud.tencent.com/emr/static/hardware).
-     */
-    public $ResourceIds;
-
-    /**
-     * @var Placement Location of the instance. This parameter is used to specify the AZ, project, and other attributes of the instance.
-     */
-    public $Placement;
-
-    /**
      * @var integer Instance billing mode.
      */
     public $PayMode;
+
+    /**
+     * @var array List of resource IDs of the node to be renewed. The resource ID is in the format of `emr-vm-xxxxxxxx`. A valid resource ID can be queried in the [console](https://console.cloud.tencent.com/emr/static/hardware).
+     */
+    public $ResourceIds;
 
     /**
      * @var string Unit of time for instance renewal.
@@ -68,18 +67,35 @@ class InquiryPriceRenewInstanceRequest extends AbstractModel
     public $Currency;
 
     /**
+     * @var Placement Location of the instance. This parameter is used to specify the AZ, project, and other attributes of the instance.
+     */
+    public $Placement;
+
+    /**
      * @var integer Whether to change from pay-as-you-go billing to monthly subscription billing. `0`: no; `1`: yes
      */
     public $ModifyPayMode;
 
     /**
+     * @var boolean 
+     */
+    public $NeedDetail;
+
+    /**
+     * @var string 
+     */
+    public $InstanceId;
+
+    /**
      * @param integer $TimeSpan How long the instance will be renewed for, which needs to be used together with `TimeUnit`.
-     * @param array $ResourceIds List of resource IDs of the node to be renewed. The resource ID is in the format of `emr-vm-xxxxxxxx`. A valid resource ID can be queried in the [console](https://console.cloud.tencent.com/emr/static/hardware).
-     * @param Placement $Placement Location of the instance. This parameter is used to specify the AZ, project, and other attributes of the instance.
      * @param integer $PayMode Instance billing mode.
+     * @param array $ResourceIds List of resource IDs of the node to be renewed. The resource ID is in the format of `emr-vm-xxxxxxxx`. A valid resource ID can be queried in the [console](https://console.cloud.tencent.com/emr/static/hardware).
      * @param string $TimeUnit Unit of time for instance renewal.
      * @param string $Currency Currency.
+     * @param Placement $Placement Location of the instance. This parameter is used to specify the AZ, project, and other attributes of the instance.
      * @param integer $ModifyPayMode Whether to change from pay-as-you-go billing to monthly subscription billing. `0`: no; `1`: yes
+     * @param boolean $NeedDetail 
+     * @param string $InstanceId 
      */
     function __construct()
     {
@@ -98,17 +114,12 @@ class InquiryPriceRenewInstanceRequest extends AbstractModel
             $this->TimeSpan = $param["TimeSpan"];
         }
 
-        if (array_key_exists("ResourceIds",$param) and $param["ResourceIds"] !== null) {
-            $this->ResourceIds = $param["ResourceIds"];
-        }
-
-        if (array_key_exists("Placement",$param) and $param["Placement"] !== null) {
-            $this->Placement = new Placement();
-            $this->Placement->deserialize($param["Placement"]);
-        }
-
         if (array_key_exists("PayMode",$param) and $param["PayMode"] !== null) {
             $this->PayMode = $param["PayMode"];
+        }
+
+        if (array_key_exists("ResourceIds",$param) and $param["ResourceIds"] !== null) {
+            $this->ResourceIds = $param["ResourceIds"];
         }
 
         if (array_key_exists("TimeUnit",$param) and $param["TimeUnit"] !== null) {
@@ -119,8 +130,21 @@ class InquiryPriceRenewInstanceRequest extends AbstractModel
             $this->Currency = $param["Currency"];
         }
 
+        if (array_key_exists("Placement",$param) and $param["Placement"] !== null) {
+            $this->Placement = new Placement();
+            $this->Placement->deserialize($param["Placement"]);
+        }
+
         if (array_key_exists("ModifyPayMode",$param) and $param["ModifyPayMode"] !== null) {
             $this->ModifyPayMode = $param["ModifyPayMode"];
+        }
+
+        if (array_key_exists("NeedDetail",$param) and $param["NeedDetail"] !== null) {
+            $this->NeedDetail = $param["NeedDetail"];
+        }
+
+        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
+            $this->InstanceId = $param["InstanceId"];
         }
     }
 }

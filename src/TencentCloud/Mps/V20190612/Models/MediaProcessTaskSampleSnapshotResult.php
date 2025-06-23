@@ -18,7 +18,7 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Result type of a sampled screencapturing task
+ * Result type of a sampled screenshot task
  *
  * @method string getStatus() Obtain Task status. Valid values: PROCESSING, SUCCESS, FAIL.
  * @method void setStatus(string $Status) Set Task status. Valid values: PROCESSING, SUCCESS, FAIL.
@@ -30,12 +30,16 @@ use TencentCloud\Common\AbstractModel;
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setMessage(string $Message) Set Error message.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method SampleSnapshotTaskInput getInput() Obtain Input for a sampled screencapturing task.
- * @method void setInput(SampleSnapshotTaskInput $Input) Set Input for a sampled screencapturing task.
- * @method MediaSampleSnapshotItem getOutput() Obtain Output of a sampled screencapturing task.
+ * @method SampleSnapshotTaskInput getInput() Obtain Input for a sampled screenshot task.
+ * @method void setInput(SampleSnapshotTaskInput $Input) Set Input for a sampled screenshot task.
+ * @method MediaSampleSnapshotItem getOutput() Obtain Output of a sampled screenshot task.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setOutput(MediaSampleSnapshotItem $Output) Set Output of a sampled screencapturing task.
+ * @method void setOutput(MediaSampleSnapshotItem $Output) Set Output of a sampled screenshot task.
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getBeginProcessTime() Obtain 
+ * @method void setBeginProcessTime(string $BeginProcessTime) Set 
+ * @method string getFinishTime() Obtain 
+ * @method void setFinishTime(string $FinishTime) Set 
  */
 class MediaProcessTaskSampleSnapshotResult extends AbstractModel
 {
@@ -61,15 +65,25 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $Message;
 
     /**
-     * @var SampleSnapshotTaskInput Input for a sampled screencapturing task.
+     * @var SampleSnapshotTaskInput Input for a sampled screenshot task.
      */
     public $Input;
 
     /**
-     * @var MediaSampleSnapshotItem Output of a sampled screencapturing task.
+     * @var MediaSampleSnapshotItem Output of a sampled screenshot task.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Output;
+
+    /**
+     * @var string 
+     */
+    public $BeginProcessTime;
+
+    /**
+     * @var string 
+     */
+    public $FinishTime;
 
     /**
      * @param string $Status Task status. Valid values: PROCESSING, SUCCESS, FAIL.
@@ -77,9 +91,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param integer $ErrCode Error code. 0 indicates the task is successful; otherwise it is failed. This parameter is no longer recommended. Consider using the new error code parameter ErrCodeExt.
      * @param string $Message Error message.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param SampleSnapshotTaskInput $Input Input for a sampled screencapturing task.
-     * @param MediaSampleSnapshotItem $Output Output of a sampled screencapturing task.
+     * @param SampleSnapshotTaskInput $Input Input for a sampled screenshot task.
+     * @param MediaSampleSnapshotItem $Output Output of a sampled screenshot task.
 Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $BeginProcessTime 
+     * @param string $FinishTime 
      */
     function __construct()
     {
@@ -118,6 +134,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (array_key_exists("Output",$param) and $param["Output"] !== null) {
             $this->Output = new MediaSampleSnapshotItem();
             $this->Output->deserialize($param["Output"]);
+        }
+
+        if (array_key_exists("BeginProcessTime",$param) and $param["BeginProcessTime"] !== null) {
+            $this->BeginProcessTime = $param["BeginProcessTime"];
+        }
+
+        if (array_key_exists("FinishTime",$param) and $param["FinishTime"] !== null) {
+            $this->FinishTime = $param["FinishTime"];
         }
     }
 }

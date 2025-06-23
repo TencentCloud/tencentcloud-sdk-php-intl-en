@@ -21,9 +21,9 @@ use TencentCloud\Common\AbstractModel;
  * The output of a live scheme subtask.
  *
  * @method LiveScheduleLiveRecordTaskResult getLiveRecordTask() Obtain The output of a live recording task.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setLiveRecordTask(LiveScheduleLiveRecordTaskResult $LiveRecordTask) Set The output of a live recording task.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method ScheduleQualityControlTaskResult getLiveQualityControlTask() Obtain Media quality inspection task output.
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setLiveQualityControlTask(ScheduleQualityControlTaskResult $LiveQualityControlTask) Set Media quality inspection task output.
@@ -33,7 +33,7 @@ class LiveActivityResItem extends AbstractModel
 {
     /**
      * @var LiveScheduleLiveRecordTaskResult The output of a live recording task.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $LiveRecordTask;
 
@@ -45,7 +45,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * @param LiveScheduleLiveRecordTaskResult $LiveRecordTask The output of a live recording task.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param ScheduleQualityControlTaskResult $LiveQualityControlTask Media quality inspection task output.
 Note: This field may return null, indicating that no valid values can be obtained.
      */

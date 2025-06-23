@@ -18,18 +18,18 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Details of a time point screencapturing template.
+ * Details of a time point screenshot template.
  *
- * @method integer getDefinition() Obtain Unique ID of a time point screencapturing template.
- * @method void setDefinition(integer $Definition) Set Unique ID of a time point screencapturing template.
+ * @method integer getDefinition() Obtain Unique ID of a time point screenshot template.
+ * @method void setDefinition(integer $Definition) Set Unique ID of a time point screenshot template.
  * @method string getType() Obtain Template type. Valid values:
 <li>Preset: Preset template;</li>
 <li>Custom: Custom template.</li>
  * @method void setType(string $Type) Set Template type. Valid values:
 <li>Preset: Preset template;</li>
 <li>Custom: Custom template.</li>
- * @method string getName() Obtain Name of a time point screencapturing template.
- * @method void setName(string $Name) Set Name of a time point screencapturing template.
+ * @method string getName() Obtain Name of a time point screenshot template.
+ * @method void setName(string $Name) Set Name of a time point screenshot template.
  * @method string getComment() Obtain Template description.
  * @method void setComment(string $Comment) Set Template description.
  * @method integer getWidth() Obtain Maximum value of the width (or long side) of a screenshot in px. Value range: 0 and [128, 4,096].
@@ -86,7 +86,7 @@ Default value: black.
 class SnapshotByTimeOffsetTemplate extends AbstractModel
 {
     /**
-     * @var integer Unique ID of a time point screencapturing template.
+     * @var integer Unique ID of a time point screenshot template.
      */
     public $Definition;
 
@@ -98,7 +98,7 @@ class SnapshotByTimeOffsetTemplate extends AbstractModel
     public $Type;
 
     /**
-     * @var string Name of a time point screencapturing template.
+     * @var string Name of a time point screenshot template.
      */
     public $Name;
 
@@ -161,11 +161,11 @@ Default value: black.
     public $FillType;
 
     /**
-     * @param integer $Definition Unique ID of a time point screencapturing template.
+     * @param integer $Definition Unique ID of a time point screenshot template.
      * @param string $Type Template type. Valid values:
 <li>Preset: Preset template;</li>
 <li>Custom: Custom template.</li>
-     * @param string $Name Name of a time point screencapturing template.
+     * @param string $Name Name of a time point screenshot template.
      * @param string $Comment Template description.
      * @param integer $Width Maximum value of the width (or long side) of a screenshot in px. Value range: 0 and [128, 4,096].
 <li>If both `Width` and `Height` are 0, the resolution will be the same as that of the source video;</li>

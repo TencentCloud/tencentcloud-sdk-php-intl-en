@@ -38,6 +38,7 @@ class DescribeSlowLogResponse extends AbstractModel
 
     /**
      * @var array Slow query log details. This parameter has been deprecated and will be replaced by InstanceSlowLogDetail because it is not properly named.
+     * @deprecated
      */
     public $InstanceSlowlogDetail;
 

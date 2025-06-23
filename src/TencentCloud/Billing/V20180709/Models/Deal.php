@@ -53,63 +53,49 @@ use TencentCloud\Common\AbstractModel;
  * @method float getTotalCost() Obtain Original price (cents)
  * @method void setTotalCost(float $TotalCost) Set Original price (cents)
  * @method string getProductCode() Obtain Product code
-
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setProductCode(string $ProductCode) Set Product code
-
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getSubProductCode() Obtain Subproduct code
  * @method void setSubProductCode(string $SubProductCode) Set Subproduct code
  * @method string getBigDealId() Obtain Large order number.
  * @method void setBigDealId(string $BigDealId) Set Large order number.
- * @method string getFormula() Obtain Refund formula
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setFormula(string $Formula) Set Refund formula
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getRefReturnDeals() Obtain Refund involves order information
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setRefReturnDeals(string $RefReturnDeals) Set Refund involves order information
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getFormula() Obtain Refund formula.
+ * @method void setFormula(string $Formula) Set Refund formula.
+ * @method string getRefReturnDeals() Obtain Refund involves order information.
+ * @method void setRefReturnDeals(string $RefReturnDeals) Set Refund involves order information.
  * @method string getPayMode() Obtain Billing mode: `prePay` (prepaid), `postPay` (pay-as-you-go), `riPay` (reserved instance)
  * @method void setPayMode(string $PayMode) Set Billing mode: `prePay` (prepaid), `postPay` (pay-as-you-go), `riPay` (reserved instance)
  * @method string getAction() Obtain Transaction type
 
-`modifyNetworkMode`: Adjusting bandwidth mode
-`modifyNetworkSize`: Adjusting bandwidth size
-`refund`: Refund
-`downgrade`: Downgrade
-upgrade (upgrade)
-renew
-purchase
-preMoveOut annual and monthly subscription resources
-preMoveIn annual and monthly subscription resources
-preToPost prepaid to postpaid
-postMoveOut move out pay-as-you-go resources
-postMoveIn move in pay-as-you-go resources
-Note: This field may return null, indicating that no valid values can be obtained.
+Modify network mode adjust bandwidth mode.
+Adjust bandwidth size.
+`Refund`: refund.
+downgrade.
+upgrade configuration.
+renew.
+purchase.
+preMoveOut monthly subscription resource migration out.
+preMoveIn specifies the monthly subscription resources to migrate.
+preToPost specifies the prepaid to postpaid conversion.
+postMoveOut specifies the pay-as-you-go resources to be migrated out.
+postMoveIn specifies the pay-as-you-go resources for inbound migration.
  * @method void setAction(string $Action) Set Transaction type
 
-`modifyNetworkMode`: Adjusting bandwidth mode
-`modifyNetworkSize`: Adjusting bandwidth size
-`refund`: Refund
-`downgrade`: Downgrade
-upgrade (upgrade)
-renew
-purchase
-preMoveOut annual and monthly subscription resources
-preMoveIn annual and monthly subscription resources
-preToPost prepaid to postpaid
-postMoveOut move out pay-as-you-go resources
-postMoveIn move in pay-as-you-go resources
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getProductName() Obtain Product code Chinese name
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setProductName(string $ProductName) Set Product code Chinese name
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getSubProductName() Obtain Subproduct code Chinese name
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setSubProductName(string $SubProductName) Set Subproduct code Chinese name
-Note: This field may return null, indicating that no valid values can be obtained.
+Modify network mode adjust bandwidth mode.
+Adjust bandwidth size.
+`Refund`: refund.
+downgrade.
+upgrade configuration.
+renew.
+purchase.
+preMoveOut monthly subscription resource migration out.
+preMoveIn specifies the monthly subscription resources to migrate.
+preToPost specifies the prepaid to postpaid conversion.
+postMoveOut specifies the pay-as-you-go resources to be migrated out.
+postMoveIn specifies the pay-as-you-go resources for inbound migration.
+ * @method string getProductName() Obtain Product code chinese name.
+ * @method void setProductName(string $ProductName) Set Product code chinese name.
+ * @method string getSubProductName() Obtain Sub-Product code chinese name.
+ * @method void setSubProductName(string $SubProductName) Set Sub-Product code chinese name.
  * @method array getResourceId() Obtain The resource ID corresponding to the order. If the query parameter `Limit` exceeds 200, null will be returned.
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setResourceId(array $ResourceId) Set The resource ID corresponding to the order. If the query parameter `Limit` exceeds 200, null will be returned.
@@ -199,8 +185,6 @@ class Deal extends AbstractModel
 
     /**
      * @var string Product code
-
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ProductCode;
 
@@ -215,14 +199,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $BigDealId;
 
     /**
-     * @var string Refund formula
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Refund formula.
      */
     public $Formula;
 
     /**
-     * @var string Refund involves order information
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Refund involves order information.
      */
     public $RefReturnDeals;
 
@@ -234,31 +216,28 @@ Note: This field may return null, indicating that no valid values can be obtaine
     /**
      * @var string Transaction type
 
-`modifyNetworkMode`: Adjusting bandwidth mode
-`modifyNetworkSize`: Adjusting bandwidth size
-`refund`: Refund
-`downgrade`: Downgrade
-upgrade (upgrade)
-renew
-purchase
-preMoveOut annual and monthly subscription resources
-preMoveIn annual and monthly subscription resources
-preToPost prepaid to postpaid
-postMoveOut move out pay-as-you-go resources
-postMoveIn move in pay-as-you-go resources
-Note: This field may return null, indicating that no valid values can be obtained.
+Modify network mode adjust bandwidth mode.
+Adjust bandwidth size.
+`Refund`: refund.
+downgrade.
+upgrade configuration.
+renew.
+purchase.
+preMoveOut monthly subscription resource migration out.
+preMoveIn specifies the monthly subscription resources to migrate.
+preToPost specifies the prepaid to postpaid conversion.
+postMoveOut specifies the pay-as-you-go resources to be migrated out.
+postMoveIn specifies the pay-as-you-go resources for inbound migration.
      */
     public $Action;
 
     /**
-     * @var string Product code Chinese name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Product code chinese name.
      */
     public $ProductName;
 
     /**
-     * @var string Subproduct code Chinese name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Sub-Product code chinese name.
      */
     public $SubProductName;
 
@@ -286,34 +265,27 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param float $Price Unit price (cents)
      * @param float $TotalCost Original price (cents)
      * @param string $ProductCode Product code
-
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $SubProductCode Subproduct code
      * @param string $BigDealId Large order number.
-     * @param string $Formula Refund formula
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $RefReturnDeals Refund involves order information
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $Formula Refund formula.
+     * @param string $RefReturnDeals Refund involves order information.
      * @param string $PayMode Billing mode: `prePay` (prepaid), `postPay` (pay-as-you-go), `riPay` (reserved instance)
      * @param string $Action Transaction type
 
-`modifyNetworkMode`: Adjusting bandwidth mode
-`modifyNetworkSize`: Adjusting bandwidth size
-`refund`: Refund
-`downgrade`: Downgrade
-upgrade (upgrade)
-renew
-purchase
-preMoveOut annual and monthly subscription resources
-preMoveIn annual and monthly subscription resources
-preToPost prepaid to postpaid
-postMoveOut move out pay-as-you-go resources
-postMoveIn move in pay-as-you-go resources
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $ProductName Product code Chinese name
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $SubProductName Subproduct code Chinese name
-Note: This field may return null, indicating that no valid values can be obtained.
+Modify network mode adjust bandwidth mode.
+Adjust bandwidth size.
+`Refund`: refund.
+downgrade.
+upgrade configuration.
+renew.
+purchase.
+preMoveOut monthly subscription resource migration out.
+preMoveIn specifies the monthly subscription resources to migrate.
+preToPost specifies the prepaid to postpaid conversion.
+postMoveOut specifies the pay-as-you-go resources to be migrated out.
+postMoveIn specifies the pay-as-you-go resources for inbound migration.
+     * @param string $ProductName Product code chinese name.
+     * @param string $SubProductName Sub-Product code chinese name.
      * @param array $ResourceId The resource ID corresponding to the order. If the query parameter `Limit` exceeds 200, null will be returned.
 Note: This field may return null, indicating that no valid values can be obtained.
      */

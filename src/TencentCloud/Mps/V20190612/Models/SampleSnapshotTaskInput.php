@@ -18,10 +18,10 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Input parameter type of a sampled screencapturing task.
+ * Input parameter type of a sampled screenshot task.
  *
- * @method integer getDefinition() Obtain Sampled screencapturing template ID.
- * @method void setDefinition(integer $Definition) Set Sampled screencapturing template ID.
+ * @method integer getDefinition() Obtain Sampled screenshot template ID.
+ * @method void setDefinition(integer $Definition) Set Sampled screenshot template ID.
  * @method array getWatermarkSet() Obtain List of up to 10 image or text watermarks.
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setWatermarkSet(array $WatermarkSet) Set List of up to 10 image or text watermarks.
@@ -52,7 +52,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 class SampleSnapshotTaskInput extends AbstractModel
 {
     /**
-     * @var integer Sampled screencapturing template ID.
+     * @var integer Sampled screenshot template ID.
      */
     public $Definition;
 
@@ -86,7 +86,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $ObjectNumberFormat;
 
     /**
-     * @param integer $Definition Sampled screencapturing template ID.
+     * @param integer $Definition Sampled screenshot template ID.
      * @param array $WatermarkSet List of up to 10 image or text watermarks.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param TaskOutputStorage $OutputStorage Target bucket of a sampled screenshot. If this parameter is left empty, the `OutputStorage` value of the upper folder will be inherited.

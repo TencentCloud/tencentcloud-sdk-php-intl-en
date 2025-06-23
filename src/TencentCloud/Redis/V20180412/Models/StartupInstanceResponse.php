@@ -29,6 +29,7 @@ class StartupInstanceResponse extends AbstractModel
 {
     /**
      * @var integer This parameter has been deprecated. Determine whether the instance has been deisolated based on the status obtained through the instance query API.
+     * @deprecated
      */
     public $TaskId;
 

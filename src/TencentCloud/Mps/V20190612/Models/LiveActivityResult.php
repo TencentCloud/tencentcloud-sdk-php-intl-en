@@ -29,9 +29,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
 <li>AiQualityControl: media quality inspection.</li>
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method LiveActivityResItem getLiveActivityResItem() Obtain The task output.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setLiveActivityResItem(LiveActivityResItem $LiveActivityResItem) Set The task output.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class LiveActivityResult extends AbstractModel
 {
@@ -45,7 +45,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * @var LiveActivityResItem The task output.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $LiveActivityResItem;
 
@@ -55,7 +55,7 @@ Note: This field may return·null, indicating that no valid values can be obtain
 <li>AiQualityControl: media quality inspection.</li>
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param LiveActivityResItem $LiveActivityResItem The task output.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

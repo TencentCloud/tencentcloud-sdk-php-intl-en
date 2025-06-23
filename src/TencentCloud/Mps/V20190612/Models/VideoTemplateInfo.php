@@ -172,15 +172,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
  * @method void setFpsDenominator(integer $FpsDenominator) Set Denominator of the frame rate.
 Note: The value must be greater than 0.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getStereo3dType() Obtain 3D video splicing mode, applicable only to mv-hevc and effective for 3d videos. valid values:.
-<Li>Side_by_side: the original video content is arranged in a left-right layout.</li>.
-<li>top_bottom: vertical layout arrangement of original video content.</li>.
+ * @method string getStereo3dType() Obtain 3D video splicing mode, applicable only to mv-hevc and effective for 3d videos. valid values:
+<Li>side_by_side: the original video content is arranged in a left-right layout.</li>
+<li>top_bottom: vertical layout arrangement of original video content.</li>
 Submit the amount and cost based on the segmented resolution size.
 Default value: side_by_side.
 Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setStereo3dType(string $Stereo3dType) Set 3D video splicing mode, applicable only to mv-hevc and effective for 3d videos. valid values:.
-<Li>Side_by_side: the original video content is arranged in a left-right layout.</li>.
-<li>top_bottom: vertical layout arrangement of original video content.</li>.
+ * @method void setStereo3dType(string $Stereo3dType) Set 3D video splicing mode, applicable only to mv-hevc and effective for 3d videos. valid values:
+<Li>side_by_side: the original video content is arranged in a left-right layout.</li>
+<li>top_bottom: vertical layout arrangement of original video content.</li>
 Submit the amount and cost based on the segmented resolution size.
 Default value: side_by_side.
 Note: This field may return null, indicating that no valid value can be obtained.
@@ -456,9 +456,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $FpsDenominator;
 
     /**
-     * @var string 3D video splicing mode, applicable only to mv-hevc and effective for 3d videos. valid values:.
-<Li>Side_by_side: the original video content is arranged in a left-right layout.</li>.
-<li>top_bottom: vertical layout arrangement of original video content.</li>.
+     * @var string 3D video splicing mode, applicable only to mv-hevc and effective for 3d videos. valid values:
+<Li>side_by_side: the original video content is arranged in a left-right layout.</li>
+<li>top_bottom: vertical layout arrangement of original video content.</li>
 Submit the amount and cost based on the segmented resolution size.
 Default value: side_by_side.
 Note: This field may return null, indicating that no valid value can be obtained.
@@ -664,9 +664,9 @@ Note: This field may return null, indicating that no valid value can be obtained
      * @param integer $FpsDenominator Denominator of the frame rate.
 Note: The value must be greater than 0.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Stereo3dType 3D video splicing mode, applicable only to mv-hevc and effective for 3d videos. valid values:.
-<Li>Side_by_side: the original video content is arranged in a left-right layout.</li>.
-<li>top_bottom: vertical layout arrangement of original video content.</li>.
+     * @param string $Stereo3dType 3D video splicing mode, applicable only to mv-hevc and effective for 3d videos. valid values:
+<Li>side_by_side: the original video content is arranged in a left-right layout.</li>
+<li>top_bottom: vertical layout arrangement of original video content.</li>
 Submit the amount and cost based on the segmented resolution size.
 Default value: side_by_side.
 Note: This field may return null, indicating that no valid value can be obtained.

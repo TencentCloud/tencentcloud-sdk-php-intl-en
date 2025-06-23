@@ -51,13 +51,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
  * @method void setAddonAudioStream(array $AddonAudioStream) Set The information of the external audio track to add.
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getStdExtInfo() Obtain An extended field for transcoding.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setStdExtInfo(string $StdExtInfo) Set An extended field for transcoding.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method array getAddOnSubtitles() Obtain The subtitle file to add.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setAddOnSubtitles(array $AddOnSubtitles) Set The subtitle file to add.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class OverrideTranscodeParameter extends AbstractModel
 {
@@ -110,13 +110,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * @var string An extended field for transcoding.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $StdExtInfo;
 
     /**
      * @var array The subtitle file to add.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $AddOnSubtitles;
 
@@ -137,9 +137,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param array $AddonAudioStream The information of the external audio track to add.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $StdExtInfo An extended field for transcoding.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param array $AddOnSubtitles The subtitle file to add.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

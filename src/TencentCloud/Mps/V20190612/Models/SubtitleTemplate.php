@@ -21,57 +21,57 @@ use TencentCloud\Common\AbstractModel;
  * The subtitle settings.
  *
  * @method string getPath() Obtain The URL of the subtitles to add to the video.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setPath(string $Path) Set The URL of the subtitles to add to the video.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method integer getStreamIndex() Obtain The subtitle track to add to the video. If both `Path` and `StreamIndex` are specified, `Path` will be used. You need to specify at least one of the two parameters.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setStreamIndex(integer $StreamIndex) Set The subtitle track to add to the video. If both `Path` and `StreamIndex` are specified, `Path` will be used. You need to specify at least one of the two parameters.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getFontType() Obtain The font. Valid values:
 <li>`hei.ttf`: Heiti.</li>
 <li>`song.ttf`: Songti.</li>
 <li>`simkai.ttf`: Kaiti.</li>
 <li>`arial.ttf`: Arial.</li>
 The default is `hei.ttf`.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setFontType(string $FontType) Set The font. Valid values:
 <li>`hei.ttf`: Heiti.</li>
 <li>`song.ttf`: Songti.</li>
 <li>`simkai.ttf`: Kaiti.</li>
 <li>`arial.ttf`: Arial.</li>
 The default is `hei.ttf`.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getFontSize() Obtain The font size (pixels). If this is not specified, the font size in the subtitle file will be used.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setFontSize(string $FontSize) Set The font size (pixels). If this is not specified, the font size in the subtitle file will be used.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getFontColor() Obtain The font color in 0xRRGGBB format. Default value: 0xFFFFFF (white).
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setFontColor(string $FontColor) Set The font color in 0xRRGGBB format. Default value: 0xFFFFFF (white).
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method float getFontAlpha() Obtain The text transparency. Value range: 0-1.
 <li>`0`: Fully transparent.</li>
 <li>`1`: Fully opaque.</li>
 Default value: 1.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setFontAlpha(float $FontAlpha) Set The text transparency. Value range: 0-1.
 <li>`0`: Fully transparent.</li>
 <li>`1`: Fully opaque.</li>
 Default value: 1.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class SubtitleTemplate extends AbstractModel
 {
     /**
      * @var string The URL of the subtitles to add to the video.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Path;
 
     /**
      * @var integer The subtitle track to add to the video. If both `Path` and `StreamIndex` are specified, `Path` will be used. You need to specify at least one of the two parameters.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $StreamIndex;
 
@@ -82,19 +82,19 @@ Note: This field may return·null, indicating that no valid values can be obtain
 <li>`simkai.ttf`: Kaiti.</li>
 <li>`arial.ttf`: Arial.</li>
 The default is `hei.ttf`.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $FontType;
 
     /**
      * @var string The font size (pixels). If this is not specified, the font size in the subtitle file will be used.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $FontSize;
 
     /**
      * @var string The font color in 0xRRGGBB format. Default value: 0xFFFFFF (white).
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $FontColor;
 
@@ -103,31 +103,31 @@ Note: This field may return·null, indicating that no valid values can be obtain
 <li>`0`: Fully transparent.</li>
 <li>`1`: Fully opaque.</li>
 Default value: 1.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $FontAlpha;
 
     /**
      * @param string $Path The URL of the subtitles to add to the video.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $StreamIndex The subtitle track to add to the video. If both `Path` and `StreamIndex` are specified, `Path` will be used. You need to specify at least one of the two parameters.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $FontType The font. Valid values:
 <li>`hei.ttf`: Heiti.</li>
 <li>`song.ttf`: Songti.</li>
 <li>`simkai.ttf`: Kaiti.</li>
 <li>`arial.ttf`: Arial.</li>
 The default is `hei.ttf`.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $FontSize The font size (pixels). If this is not specified, the font size in the subtitle file will be used.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $FontColor The font color in 0xRRGGBB format. Default value: 0xFFFFFF (white).
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param float $FontAlpha The text transparency. Value range: 0-1.
 <li>`0`: Fully transparent.</li>
 <li>`1`: Fully opaque.</li>
 Default value: 1.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

@@ -23,13 +23,13 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getDefinition() Obtain The live recording template ID.
  * @method void setDefinition(integer $Definition) Set The live recording template ID.
  * @method TaskOutputStorage getOutputStorage() Obtain The storage of the recording file. If this parameter is left empty, the `OutputStorage` value of the parent folder will be inherited.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setOutputStorage(TaskOutputStorage $OutputStorage) Set The storage of the recording file. If this parameter is left empty, the `OutputStorage` value of the parent folder will be inherited.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getOutputObjectPath() Obtain The output path of the recording file.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setOutputObjectPath(string $OutputObjectPath) Set The output path of the recording file.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class LiveRecordTaskInput extends AbstractModel
 {
@@ -40,22 +40,22 @@ class LiveRecordTaskInput extends AbstractModel
 
     /**
      * @var TaskOutputStorage The storage of the recording file. If this parameter is left empty, the `OutputStorage` value of the parent folder will be inherited.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $OutputStorage;
 
     /**
      * @var string The output path of the recording file.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $OutputObjectPath;
 
     /**
      * @param integer $Definition The live recording template ID.
      * @param TaskOutputStorage $OutputStorage The storage of the recording file. If this parameter is left empty, the `OutputStorage` value of the parent folder will be inherited.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $OutputObjectPath The output path of the recording file.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

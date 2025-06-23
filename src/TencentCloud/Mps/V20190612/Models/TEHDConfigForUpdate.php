@@ -24,16 +24,16 @@ use TencentCloud\Common\AbstractModel;
 <li>`TEHD-100`: TSC-100 (video TSC). </li>
 <li>`TEHD-200`: TSC-200 (audio TSC). </li>
 If this parameter is left blank, no modification will be made.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setType(string $Type) Set The TSC type. Valid values:
 <li>`TEHD-100`: TSC-100 (video TSC). </li>
 <li>`TEHD-200`: TSC-200 (audio TSC). </li>
 If this parameter is left blank, no modification will be made.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method integer getMaxVideoBitrate() Obtain The maximum video bitrate. If this parameter is not specified, no modifications will be made.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setMaxVideoBitrate(integer $MaxVideoBitrate) Set The maximum video bitrate. If this parameter is not specified, no modifications will be made.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class TEHDConfigForUpdate extends AbstractModel
 {
@@ -42,13 +42,13 @@ class TEHDConfigForUpdate extends AbstractModel
 <li>`TEHD-100`: TSC-100 (video TSC). </li>
 <li>`TEHD-200`: TSC-200 (audio TSC). </li>
 If this parameter is left blank, no modification will be made.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Type;
 
     /**
      * @var integer The maximum video bitrate. If this parameter is not specified, no modifications will be made.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $MaxVideoBitrate;
 
@@ -57,9 +57,9 @@ Note: This field may return·null, indicating that no valid values can be obtain
 <li>`TEHD-100`: TSC-100 (video TSC). </li>
 <li>`TEHD-200`: TSC-200 (audio TSC). </li>
 If this parameter is left blank, no modification will be made.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $MaxVideoBitrate The maximum video bitrate. If this parameter is not specified, no modifications will be made.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

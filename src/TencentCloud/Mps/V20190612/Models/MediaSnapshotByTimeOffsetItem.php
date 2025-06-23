@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Information of the time point screenshots in a VOD file
  *
- * @method integer getDefinition() Obtain Specification of a time point screenshot. For more information, please see [Parameter Template for Time Point Screencapturing](https://intl.cloud.tencent.com/document/product/266/33480?from_cn_redirect=1#.E6.97.B6.E9.97.B4.E7.82.B9.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF).
- * @method void setDefinition(integer $Definition) Set Specification of a time point screenshot. For more information, please see [Parameter Template for Time Point Screencapturing](https://intl.cloud.tencent.com/document/product/266/33480?from_cn_redirect=1#.E6.97.B6.E9.97.B4.E7.82.B9.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF).
+ * @method integer getDefinition() Obtain Specification of a time point screenshot template. 
+ * @method void setDefinition(integer $Definition) Set Specification of a time point screenshot template. 
  * @method array getPicInfoSet() Obtain Information set of screenshots of the same specification. Each element represents a screenshot.
  * @method void setPicInfoSet(array $PicInfoSet) Set Information set of screenshots of the same specification. Each element represents a screenshot.
  * @method TaskOutputStorage getStorage() Obtain Location of a time point screenshot file.
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class MediaSnapshotByTimeOffsetItem extends AbstractModel
 {
     /**
-     * @var integer Specification of a time point screenshot. For more information, please see [Parameter Template for Time Point Screencapturing](https://intl.cloud.tencent.com/document/product/266/33480?from_cn_redirect=1#.E6.97.B6.E9.97.B4.E7.82.B9.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF).
+     * @var integer Specification of a time point screenshot template. 
      */
     public $Definition;
 
@@ -45,7 +45,7 @@ class MediaSnapshotByTimeOffsetItem extends AbstractModel
     public $Storage;
 
     /**
-     * @param integer $Definition Specification of a time point screenshot. For more information, please see [Parameter Template for Time Point Screencapturing](https://intl.cloud.tencent.com/document/product/266/33480?from_cn_redirect=1#.E6.97.B6.E9.97.B4.E7.82.B9.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF).
+     * @param integer $Definition Specification of a time point screenshot template. 
      * @param array $PicInfoSet Information set of screenshots of the same specification. Each element represents a screenshot.
      * @param TaskOutputStorage $Storage Location of a time point screenshot file.
      */

@@ -40,8 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStatus(integer $Status) Set Order status. 1: unpaid; 2: paid but not delivered; 3: In delivery; 4: successfully delivered; 5: delivery failed; 6: refunded; 7: order closed; 8: order expired; 9: order invalidated; 10: product invalidated; 11: requested payment rejected; 12: paying
  * @method string getDescription() Obtain Order status description
  * @method void setDescription(string $Description) Set Order status description
- * @method integer getPrice() Obtain Actual total price of the order in 0.01 CNY
- * @method void setPrice(integer $Price) Set Actual total price of the order in 0.01 CNY
+ * @method integer getPrice() Obtain Order actual total price (in cents)
+ * @method void setPrice(integer $Price) Set Order actual total price (in cents)
  * @method array getInstanceIds() Obtain Instance ID
  * @method void setInstanceIds(array $InstanceIds) Set Instance ID
  */
@@ -98,7 +98,7 @@ class TradeDealDetail extends AbstractModel
     public $Description;
 
     /**
-     * @var integer Actual total price of the order in 0.01 CNY
+     * @var integer Order actual total price (in cents)
      */
     public $Price;
 
@@ -118,7 +118,7 @@ class TradeDealDetail extends AbstractModel
      * @param string $EndTime Order completion time
      * @param integer $Status Order status. 1: unpaid; 2: paid but not delivered; 3: In delivery; 4: successfully delivered; 5: delivery failed; 6: refunded; 7: order closed; 8: order expired; 9: order invalidated; 10: product invalidated; 11: requested payment rejected; 12: paying
      * @param string $Description Order status description
-     * @param integer $Price Actual total price of the order in 0.01 CNY
+     * @param integer $Price Order actual total price (in cents)
      * @param array $InstanceIds Instance ID
      */
     function __construct()

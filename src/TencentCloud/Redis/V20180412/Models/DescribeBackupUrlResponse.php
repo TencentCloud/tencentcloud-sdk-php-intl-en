@@ -39,17 +39,20 @@ class DescribeBackupUrlResponse extends AbstractModel
 {
     /**
      * @var array Public network download address (valid for six hours). This field will be disused soon.
+     * @deprecated
      */
     public $DownloadUrl;
 
     /**
      * @var array Private network download address (valid for six hours). This field will be disused soon.
+     * @deprecated
      */
     public $InnerDownloadUrl;
 
     /**
      * @var array Filename. This field will be disused soon.
 Note: This field may return null, indicating that no valid values can be obtained.
+     * @deprecated
      */
     public $Filenames;
 

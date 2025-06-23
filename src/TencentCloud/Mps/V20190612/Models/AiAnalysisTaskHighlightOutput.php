@@ -23,9 +23,9 @@ use TencentCloud\Common\AbstractModel;
  * @method array getHighlightSet() Obtain A list of the highlight segments generated.
  * @method void setHighlightSet(array $HighlightSet) Set A list of the highlight segments generated.
  * @method TaskOutputStorage getOutputStorage() Obtain The storage location of the highlight segments.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setOutputStorage(TaskOutputStorage $OutputStorage) Set The storage location of the highlight segments.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class AiAnalysisTaskHighlightOutput extends AbstractModel
 {
@@ -36,14 +36,14 @@ class AiAnalysisTaskHighlightOutput extends AbstractModel
 
     /**
      * @var TaskOutputStorage The storage location of the highlight segments.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $OutputStorage;
 
     /**
      * @param array $HighlightSet A list of the highlight segments generated.
      * @param TaskOutputStorage $OutputStorage The storage location of the highlight segments.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

@@ -33,7 +33,7 @@ use TencentCloud\Common\AbstractModel;
 
 Note: 
 AV1 encoding containers currently only support mp4, webm, and mkv.
-H.266 encoding containers currently only support mp4, hls, ts, and move. 
+H.266 encoding containers currently only support mp4, hls, ts, and mov. 
 VP8 and VP9 encoding containers currently only support webm and mkv.
 MPEG2 and DNxHD encoding containers currently only support mxf.
 MV-HEVC encoding containers only support mp4, hls, and mov. Also, the hls format only supports mp4 segmentation format.
@@ -52,7 +52,7 @@ Note: This field may return null, indicating that no valid value can be obtained
 
 Note: 
 AV1 encoding containers currently only support mp4, webm, and mkv.
-H.266 encoding containers currently only support mp4, hls, ts, and move. 
+H.266 encoding containers currently only support mp4, hls, ts, and mov. 
 VP8 and VP9 encoding containers currently only support webm and mkv.
 MPEG2 and DNxHD encoding containers currently only support mxf.
 MV-HEVC encoding containers only support mp4, hls, and mov. Also, the hls format only supports mp4 segmentation format.
@@ -186,15 +186,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
  * @method void setFpsDenominator(integer $FpsDenominator) Set Denominator of the frame rate.
 Note: The value must be greater than 0.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getStereo3dType() Obtain 3D video splicing mode, applicable only to mv-hevc and effective for 3d videos. valid values:.
-<Li>Side_by_side: the original video content is arranged in a left-right layout.</li>.
-<Li>Top_bottom: layout arrangement of the original video content from top to bottom.</li>.
+ * @method string getStereo3dType() Obtain 3D video splicing mode, applicable only to mv-hevc and effective for 3d videos. valid values:
+<Li>side_by_side: the original video content is arranged in a left-right layout.</li>
+<Li>top_bottom: layout arrangement of the original video content from top to bottom.</li>
 The usage and charges will be reported based on the segmented resolution dimensions.
 Default value: side_by_side.
 Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setStereo3dType(string $Stereo3dType) Set 3D video splicing mode, applicable only to mv-hevc and effective for 3d videos. valid values:.
-<Li>Side_by_side: the original video content is arranged in a left-right layout.</li>.
-<Li>Top_bottom: layout arrangement of the original video content from top to bottom.</li>.
+ * @method void setStereo3dType(string $Stereo3dType) Set 3D video splicing mode, applicable only to mv-hevc and effective for 3d videos. valid values:
+<Li>side_by_side: the original video content is arranged in a left-right layout.</li>
+<Li>top_bottom: layout arrangement of the original video content from top to bottom.</li>
 The usage and charges will be reported based on the segmented resolution dimensions.
 Default value: side_by_side.
 Note: This field may return null, indicating that no valid value can be obtained.
@@ -357,7 +357,7 @@ class VideoTemplateInfoForUpdate extends AbstractModel
 
 Note: 
 AV1 encoding containers currently only support mp4, webm, and mkv.
-H.266 encoding containers currently only support mp4, hls, ts, and move. 
+H.266 encoding containers currently only support mp4, hls, ts, and mov. 
 VP8 and VP9 encoding containers currently only support webm and mkv.
 MPEG2 and DNxHD encoding containers currently only support mxf.
 MV-HEVC encoding containers only support mp4, hls, and mov. Also, the hls format only supports mp4 segmentation format.
@@ -483,9 +483,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $FpsDenominator;
 
     /**
-     * @var string 3D video splicing mode, applicable only to mv-hevc and effective for 3d videos. valid values:.
-<Li>Side_by_side: the original video content is arranged in a left-right layout.</li>.
-<Li>Top_bottom: layout arrangement of the original video content from top to bottom.</li>.
+     * @var string 3D video splicing mode, applicable only to mv-hevc and effective for 3d videos. valid values:
+<Li>side_by_side: the original video content is arranged in a left-right layout.</li>
+<Li>top_bottom: layout arrangement of the original video content from top to bottom.</li>
 The usage and charges will be reported based on the segmented resolution dimensions.
 Default value: side_by_side.
 Note: This field may return null, indicating that no valid value can be obtained.
@@ -629,7 +629,7 @@ Note: This field may return null, indicating that no valid value can be obtained
 
 Note: 
 AV1 encoding containers currently only support mp4, webm, and mkv.
-H.266 encoding containers currently only support mp4, hls, ts, and move. 
+H.266 encoding containers currently only support mp4, hls, ts, and mov. 
 VP8 and VP9 encoding containers currently only support webm and mkv.
 MPEG2 and DNxHD encoding containers currently only support mxf.
 MV-HEVC encoding containers only support mp4, hls, and mov. Also, the hls format only supports mp4 segmentation format.
@@ -699,9 +699,9 @@ Note: This field may return null, indicating that no valid value can be obtained
      * @param integer $FpsDenominator Denominator of the frame rate.
 Note: The value must be greater than 0.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Stereo3dType 3D video splicing mode, applicable only to mv-hevc and effective for 3d videos. valid values:.
-<Li>Side_by_side: the original video content is arranged in a left-right layout.</li>.
-<Li>Top_bottom: layout arrangement of the original video content from top to bottom.</li>.
+     * @param string $Stereo3dType 3D video splicing mode, applicable only to mv-hevc and effective for 3d videos. valid values:
+<Li>side_by_side: the original video content is arranged in a left-right layout.</li>
+<Li>top_bottom: layout arrangement of the original video content from top to bottom.</li>
 The usage and charges will be reported based on the segmented resolution dimensions.
 Default value: side_by_side.
 Note: This field may return null, indicating that no valid value can be obtained.

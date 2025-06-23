@@ -33,9 +33,9 @@ Note: This field may return null, indicating that no valid value can be obtained
 <li> playready</li>
 Note: This field may return null, indicating that no valid value can be obtained.
  * @method SimpleAesDrm getSimpleAesDrm() Obtain The AES-128 encryption details.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setSimpleAesDrm(SimpleAesDrm $SimpleAesDrm) Set The AES-128 encryption details.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method SpekeDrm getSpekeDrm() Obtain Information about FairPlay, WideVine, and PlayReady encryption.
  * @method void setSpekeDrm(SpekeDrm $SpekeDrm) Set Information about FairPlay, WideVine, and PlayReady encryption.
  */
@@ -53,7 +53,7 @@ Note: This field may return null, indicating that no valid value can be obtained
 
     /**
      * @var SimpleAesDrm The AES-128 encryption details.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $SimpleAesDrm;
 
@@ -70,7 +70,7 @@ Note: This field may return·null, indicating that no valid values can be obtain
 <li> playready</li>
 Note: This field may return null, indicating that no valid value can be obtained.
      * @param SimpleAesDrm $SimpleAesDrm The AES-128 encryption details.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param SpekeDrm $SpekeDrm Information about FairPlay, WideVine, and PlayReady encryption.
      */
     function __construct()

@@ -18,18 +18,18 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Details of a sampled screencapturing template
+ * Details of a sampled screenshot template
  *
- * @method integer getDefinition() Obtain Unique ID of a sampled screencapturing template.
- * @method void setDefinition(integer $Definition) Set Unique ID of a sampled screencapturing template.
+ * @method integer getDefinition() Obtain Unique ID of a sampled screenshot template.
+ * @method void setDefinition(integer $Definition) Set Unique ID of a sampled screenshot template.
  * @method string getType() Obtain Template type. Valid values:
 <li>Preset: Preset template;</li>
 <li>Custom: Custom template.</li>
  * @method void setType(string $Type) Set Template type. Valid values:
 <li>Preset: Preset template;</li>
 <li>Custom: Custom template.</li>
- * @method string getName() Obtain Name of a sampled screencapturing template.
- * @method void setName(string $Name) Set Name of a sampled screencapturing template.
+ * @method string getName() Obtain Name of a sampled screenshot template.
+ * @method void setName(string $Name) Set Name of a sampled screenshot template.
  * @method string getComment() Obtain Template description.
  * @method void setComment(string $Comment) Set Template description.
  * @method integer getWidth() Obtain Maximum value of the width (or long side) of a screenshot in px. Value range: 0 and [128, 4,096].
@@ -66,8 +66,8 @@ Default value: open.
 Default value: open.
  * @method string getFormat() Obtain Image format.
  * @method void setFormat(string $Format) Set Image format.
- * @method string getSampleType() Obtain Sampled screencapturing type.
- * @method void setSampleType(string $SampleType) Set Sampled screencapturing type.
+ * @method string getSampleType() Obtain Sampled screenshot type.
+ * @method void setSampleType(string $SampleType) Set Sampled screenshot type.
  * @method integer getSampleInterval() Obtain Sampling interval.
  * @method void setSampleInterval(integer $SampleInterval) Set Sampling interval.
  * @method string getCreateTime() Obtain Creation time of a template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
@@ -90,7 +90,7 @@ Default value: black.
 class SampleSnapshotTemplate extends AbstractModel
 {
     /**
-     * @var integer Unique ID of a sampled screencapturing template.
+     * @var integer Unique ID of a sampled screenshot template.
      */
     public $Definition;
 
@@ -102,7 +102,7 @@ class SampleSnapshotTemplate extends AbstractModel
     public $Type;
 
     /**
-     * @var string Name of a sampled screencapturing template.
+     * @var string Name of a sampled screenshot template.
      */
     public $Name;
 
@@ -145,7 +145,7 @@ Default value: open.
     public $Format;
 
     /**
-     * @var string Sampled screencapturing type.
+     * @var string Sampled screenshot type.
      */
     public $SampleType;
 
@@ -175,11 +175,11 @@ Default value: black.
     public $FillType;
 
     /**
-     * @param integer $Definition Unique ID of a sampled screencapturing template.
+     * @param integer $Definition Unique ID of a sampled screenshot template.
      * @param string $Type Template type. Valid values:
 <li>Preset: Preset template;</li>
 <li>Custom: Custom template.</li>
-     * @param string $Name Name of a sampled screencapturing template.
+     * @param string $Name Name of a sampled screenshot template.
      * @param string $Comment Template description.
      * @param integer $Width Maximum value of the width (or long side) of a screenshot in px. Value range: 0 and [128, 4,096].
 <li>If both `Width` and `Height` are 0, the resolution will be the same as that of the source video;</li>
@@ -198,7 +198,7 @@ Default value: 0.
 <li>close: Disabled. In this case, `Width` represents the width of a video, while `Height` the height.</li>
 Default value: open.
      * @param string $Format Image format.
-     * @param string $SampleType Sampled screencapturing type.
+     * @param string $SampleType Sampled screenshot type.
      * @param integer $SampleInterval Sampling interval.
      * @param string $CreateTime Creation time of a template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
      * @param string $UpdateTime Last modified time of a template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).

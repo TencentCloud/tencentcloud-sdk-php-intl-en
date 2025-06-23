@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Information of a sampled screenshot
  *
- * @method integer getDefinition() Obtain Sampled screenshot specification ID. For more information, please see [Sampled Screencapturing Parameter Template](https://intl.cloud.tencent.com/document/product/266/33480?from_cn_redirect=1#.E9.87.87.E6.A0.B7.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF).
- * @method void setDefinition(integer $Definition) Set Sampled screenshot specification ID. For more information, please see [Sampled Screencapturing Parameter Template](https://intl.cloud.tencent.com/document/product/266/33480?from_cn_redirect=1#.E9.87.87.E6.A0.B7.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF).
+ * @method integer getDefinition() Obtain Sampled screenshot specification ID. For more information, please see [Sampled Screenshot Parameter Template](https://intl.cloud.tencent.com/document/product/266/33480?from_cn_redirect=1#.E9.87.87.E6.A0.B7.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF).
+ * @method void setDefinition(integer $Definition) Set Sampled screenshot specification ID. For more information, please see [Sampled Screenshot Parameter Template](https://intl.cloud.tencent.com/document/product/266/33480?from_cn_redirect=1#.E9.87.87.E6.A0.B7.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF).
  * @method string getSampleType() Obtain Sample type. Valid values:
 <li>Percent: Samples at the specified percentage interval.</li>
 <li>Time: Samples at the specified time interval.</li>
@@ -44,7 +44,7 @@ use TencentCloud\Common\AbstractModel;
 class MediaSampleSnapshotItem extends AbstractModel
 {
     /**
-     * @var integer Sampled screenshot specification ID. For more information, please see [Sampled Screencapturing Parameter Template](https://intl.cloud.tencent.com/document/product/266/33480?from_cn_redirect=1#.E9.87.87.E6.A0.B7.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF).
+     * @var integer Sampled screenshot specification ID. For more information, please see [Sampled Screenshot Parameter Template](https://intl.cloud.tencent.com/document/product/266/33480?from_cn_redirect=1#.E9.87.87.E6.A0.B7.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF).
      */
     public $Definition;
 
@@ -78,7 +78,7 @@ class MediaSampleSnapshotItem extends AbstractModel
     public $WaterMarkDefinition;
 
     /**
-     * @param integer $Definition Sampled screenshot specification ID. For more information, please see [Sampled Screencapturing Parameter Template](https://intl.cloud.tencent.com/document/product/266/33480?from_cn_redirect=1#.E9.87.87.E6.A0.B7.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF).
+     * @param integer $Definition Sampled screenshot specification ID. For more information, please see [Sampled Screenshot Parameter Template](https://intl.cloud.tencent.com/document/product/266/33480?from_cn_redirect=1#.E9.87.87.E6.A0.B7.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF).
      * @param string $SampleType Sample type. Valid values:
 <li>Percent: Samples at the specified percentage interval.</li>
 <li>Time: Samples at the specified time interval.</li>

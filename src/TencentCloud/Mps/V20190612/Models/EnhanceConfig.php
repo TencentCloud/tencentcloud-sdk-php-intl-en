@@ -25,9 +25,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
  * @method void setVideoEnhance(VideoEnhanceConfig $VideoEnhance) Set Video enhancement configuration.
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method AudioEnhanceConfig getAudioEnhance() Obtain The audio enhancement configuration.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setAudioEnhance(AudioEnhanceConfig $AudioEnhance) Set The audio enhancement configuration.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class EnhanceConfig extends AbstractModel
 {
@@ -39,7 +39,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * @var AudioEnhanceConfig The audio enhancement configuration.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $AudioEnhance;
 
@@ -47,7 +47,7 @@ Note: This field may return·null, indicating that no valid values can be obtain
      * @param VideoEnhanceConfig $VideoEnhance Video enhancement configuration.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param AudioEnhanceConfig $AudioEnhance The audio enhancement configuration.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

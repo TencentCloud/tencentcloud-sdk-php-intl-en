@@ -21,57 +21,57 @@ use TencentCloud\Common\AbstractModel;
  * The audio enhancement configuration.
  *
  * @method AudioDenoiseConfig getDenoise() Obtain The audio noise reduction configuration.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setDenoise(AudioDenoiseConfig $Denoise) Set The audio noise reduction configuration.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method AudioSeparateConfig getSeparate() Obtain The audio separation configuration.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setSeparate(AudioSeparateConfig $Separate) Set The audio separation configuration.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method VolumeBalanceConfig getVolumeBalance() Obtain The volume equalization configuration.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setVolumeBalance(VolumeBalanceConfig $VolumeBalance) Set The volume equalization configuration.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method AudioBeautifyConfig getBeautify() Obtain The audio improvement configuration.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setBeautify(AudioBeautifyConfig $Beautify) Set The audio improvement configuration.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class AudioEnhanceConfig extends AbstractModel
 {
     /**
      * @var AudioDenoiseConfig The audio noise reduction configuration.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Denoise;
 
     /**
      * @var AudioSeparateConfig The audio separation configuration.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Separate;
 
     /**
      * @var VolumeBalanceConfig The volume equalization configuration.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $VolumeBalance;
 
     /**
      * @var AudioBeautifyConfig The audio improvement configuration.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Beautify;
 
     /**
      * @param AudioDenoiseConfig $Denoise The audio noise reduction configuration.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param AudioSeparateConfig $Separate The audio separation configuration.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param VolumeBalanceConfig $VolumeBalance The volume equalization configuration.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param AudioBeautifyConfig $Beautify The audio improvement configuration.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

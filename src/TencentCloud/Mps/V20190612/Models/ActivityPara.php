@@ -24,12 +24,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTranscodeTask(TranscodeTaskInput $TranscodeTask) Set A transcoding task.
  * @method AnimatedGraphicTaskInput getAnimatedGraphicTask() Obtain An animated screenshot generation task.
  * @method void setAnimatedGraphicTask(AnimatedGraphicTaskInput $AnimatedGraphicTask) Set An animated screenshot generation task.
- * @method SnapshotByTimeOffsetTaskInput getSnapshotByTimeOffsetTask() Obtain A time point screencapturing task.
- * @method void setSnapshotByTimeOffsetTask(SnapshotByTimeOffsetTaskInput $SnapshotByTimeOffsetTask) Set A time point screencapturing task.
- * @method SampleSnapshotTaskInput getSampleSnapshotTask() Obtain A sampled screencapturing task.
- * @method void setSampleSnapshotTask(SampleSnapshotTaskInput $SampleSnapshotTask) Set A sampled screencapturing task.
- * @method ImageSpriteTaskInput getImageSpriteTask() Obtain An image sprite generation task.
- * @method void setImageSpriteTask(ImageSpriteTaskInput $ImageSpriteTask) Set An image sprite generation task.
+ * @method SnapshotByTimeOffsetTaskInput getSnapshotByTimeOffsetTask() Obtain A time point screenshot task.
+ * @method void setSnapshotByTimeOffsetTask(SnapshotByTimeOffsetTaskInput $SnapshotByTimeOffsetTask) Set A time point screenshot task.
+ * @method SampleSnapshotTaskInput getSampleSnapshotTask() Obtain A sampled screenshot task.
+ * @method void setSampleSnapshotTask(SampleSnapshotTaskInput $SampleSnapshotTask) Set A sampled screenshot task.
+ * @method ImageSpriteTaskInput getImageSpriteTask() Obtain An image sprite screenshot task.
+ * @method void setImageSpriteTask(ImageSpriteTaskInput $ImageSpriteTask) Set An image sprite screenshot task.
  * @method AdaptiveDynamicStreamingTaskInput getAdaptiveDynamicStreamingTask() Obtain An adaptive bitrate streaming task.
  * @method void setAdaptiveDynamicStreamingTask(AdaptiveDynamicStreamingTaskInput $AdaptiveDynamicStreamingTask) Set An adaptive bitrate streaming task.
  * @method AiContentReviewTaskInput getAiContentReviewTask() Obtain A content moderation task.
@@ -60,17 +60,17 @@ class ActivityPara extends AbstractModel
     public $AnimatedGraphicTask;
 
     /**
-     * @var SnapshotByTimeOffsetTaskInput A time point screencapturing task.
+     * @var SnapshotByTimeOffsetTaskInput A time point screenshot task.
      */
     public $SnapshotByTimeOffsetTask;
 
     /**
-     * @var SampleSnapshotTaskInput A sampled screencapturing task.
+     * @var SampleSnapshotTaskInput A sampled screenshot task.
      */
     public $SampleSnapshotTask;
 
     /**
-     * @var ImageSpriteTaskInput An image sprite generation task.
+     * @var ImageSpriteTaskInput An image sprite screenshot task.
      */
     public $ImageSpriteTask;
 
@@ -109,9 +109,9 @@ Note: This field may return null, indicating that no valid value can be obtained
     /**
      * @param TranscodeTaskInput $TranscodeTask A transcoding task.
      * @param AnimatedGraphicTaskInput $AnimatedGraphicTask An animated screenshot generation task.
-     * @param SnapshotByTimeOffsetTaskInput $SnapshotByTimeOffsetTask A time point screencapturing task.
-     * @param SampleSnapshotTaskInput $SampleSnapshotTask A sampled screencapturing task.
-     * @param ImageSpriteTaskInput $ImageSpriteTask An image sprite generation task.
+     * @param SnapshotByTimeOffsetTaskInput $SnapshotByTimeOffsetTask A time point screenshot task.
+     * @param SampleSnapshotTaskInput $SampleSnapshotTask A sampled screenshot task.
+     * @param ImageSpriteTaskInput $ImageSpriteTask An image sprite screenshot task.
      * @param AdaptiveDynamicStreamingTaskInput $AdaptiveDynamicStreamingTask An adaptive bitrate streaming task.
      * @param AiContentReviewTaskInput $AiContentReviewTask A content moderation task.
      * @param AiAnalysisTaskInput $AiAnalysisTask A content analysis task.

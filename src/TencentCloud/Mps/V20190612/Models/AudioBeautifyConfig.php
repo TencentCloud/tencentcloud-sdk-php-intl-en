@@ -32,12 +32,12 @@ Default value: `ON`.
 <li>`declick`: Noise removal.</li>
 <li>`deesser`: De-essing.</li>
 Default: `declick`.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setTypes(array $Types) Set The audio improvement options. You can specify multiple options. Valid values:
 <li>`declick`: Noise removal.</li>
 <li>`deesser`: De-essing.</li>
 Default: `declick`.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class AudioBeautifyConfig extends AbstractModel
 {
@@ -54,7 +54,7 @@ Default value: `ON`.
 <li>`declick`: Noise removal.</li>
 <li>`deesser`: De-essing.</li>
 Default: `declick`.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Types;
 
@@ -67,7 +67,7 @@ Default value: `ON`.
 <li>`declick`: Noise removal.</li>
 <li>`deesser`: De-essing.</li>
 Default: `declick`.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

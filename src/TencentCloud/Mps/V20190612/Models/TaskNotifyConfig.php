@@ -53,9 +53,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getNotifyKey() Obtain The key used to generate the callback signature.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setNotifyKey(string $NotifyKey) Set The key used to generate the callback signature.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class TaskNotifyConfig extends AbstractModel
 {
@@ -109,7 +109,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * @var string The key used to generate the callback signature.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $NotifyKey;
 
@@ -131,7 +131,7 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $NotifyKey The key used to generate the callback signature.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

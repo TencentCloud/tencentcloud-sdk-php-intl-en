@@ -21,9 +21,9 @@ use TencentCloud\Common\AbstractModel;
  * Configuration for output files of video editing
  *
  * @method string getContainer() Obtain The container. Valid values: `mp4` (default), `hls`, `mov`, `flv`, `avi`.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setContainer(string $Container) Set The container. Valid values: `mp4` (default), `hls`, `mov`, `flv`, `avi`.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getType() Obtain Editing mode. Optional values:
 normal (default): Precise editing
 fast: Fast editing, with faster processing speed but lower precision to some extent
@@ -39,7 +39,7 @@ class EditMediaOutputConfig extends AbstractModel
 {
     /**
      * @var string The container. Valid values: `mp4` (default), `hls`, `mov`, `flv`, `avi`.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Container;
 
@@ -54,7 +54,7 @@ Note: This field may return null, indicating that no valid value can be obtained
 
     /**
      * @param string $Container The container. Valid values: `mp4` (default), `hls`, `mov`, `flv`, `avi`.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $Type Editing mode. Optional values:
 normal (default): Precise editing
 fast: Fast editing, with faster processing speed but lower precision to some extent

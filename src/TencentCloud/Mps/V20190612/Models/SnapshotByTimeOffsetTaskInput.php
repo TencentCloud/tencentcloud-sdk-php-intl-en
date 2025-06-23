@@ -18,10 +18,10 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Input parameter type of a time point screencapturing task
+ * Input parameter type of a time point screenshot task
  *
- * @method integer getDefinition() Obtain ID of a time point screencapturing template.
- * @method void setDefinition(integer $Definition) Set ID of a time point screencapturing template.
+ * @method integer getDefinition() Obtain ID of a time point screenshot template.
+ * @method void setDefinition(integer $Definition) Set ID of a time point screenshot template.
  * @method array getExtTimeOffsetSet() Obtain List of screenshot time points in the format of `s` or `%`:
 <li>If the string ends in `s`, it means that the time point is in seconds; for example, `3.5s` means that the time point is the 3.5th second;</li>
 <li>If the string ends in `%`, it means that the time point is the specified percentage of the video duration; for example, `10%` means that the time point is 10% of the video duration.</li>
@@ -62,7 +62,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 class SnapshotByTimeOffsetTaskInput extends AbstractModel
 {
     /**
-     * @var integer ID of a time point screencapturing template.
+     * @var integer ID of a time point screenshot template.
      */
     public $Definition;
 
@@ -109,7 +109,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $ObjectNumberFormat;
 
     /**
-     * @param integer $Definition ID of a time point screencapturing template.
+     * @param integer $Definition ID of a time point screenshot template.
      * @param array $ExtTimeOffsetSet List of screenshot time points in the format of `s` or `%`:
 <li>If the string ends in `s`, it means that the time point is in seconds; for example, `3.5s` means that the time point is the 3.5th second;</li>
 <li>If the string ends in `%`, it means that the time point is the specified percentage of the video duration; for example, `10%` means that the time point is 10% of the video duration.</li>

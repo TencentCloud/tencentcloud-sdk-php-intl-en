@@ -23,18 +23,18 @@ use TencentCloud\Common\AbstractModel;
  * @method string getType() Obtain Task type. Valid values:
 <li>Transcode: Transcoding</li>
 <li>AnimatedGraphics: Animated image generating</li>
-<li>SnapshotByTimeOffset: Time point screencapturing</li>
-<li>SampleSnapshot: Sampled screencapturing</li>
-<li>ImageSprites: Image sprite generating</li>
-<li>CoverBySnapshot: Screencapturing for cover image</li>
+<li>SnapshotByTimeOffset: Time point screenshot</li>
+<li>SampleSnapshot: Sampled screenshot</li>
+<li>ImageSprites: Image sprite screenshot</li>
+<li>CoverBySnapshot: Screenshot for cover image</li>
 <li>AdaptiveDynamicStreaming: Adaptive bitrate streaming</li>
  * @method void setType(string $Type) Set Task type. Valid values:
 <li>Transcode: Transcoding</li>
 <li>AnimatedGraphics: Animated image generating</li>
-<li>SnapshotByTimeOffset: Time point screencapturing</li>
-<li>SampleSnapshot: Sampled screencapturing</li>
-<li>ImageSprites: Image sprite generating</li>
-<li>CoverBySnapshot: Screencapturing for cover image</li>
+<li>SnapshotByTimeOffset: Time point screenshot</li>
+<li>SampleSnapshot: Sampled screenshot</li>
+<li>ImageSprites: Image sprite screenshot</li>
+<li>CoverBySnapshot: Screenshot for cover image</li>
 <li>AdaptiveDynamicStreaming: Adaptive bitrate streaming</li>
  * @method MediaProcessTaskTranscodeResult getTranscodeTask() Obtain Query result of a transcoding task, which is valid when task type is `Transcode`.
 Note: This field may return null, indicating that no valid values can be obtained.
@@ -44,17 +44,17 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setAnimatedGraphicTask(MediaProcessTaskAnimatedGraphicResult $AnimatedGraphicTask) Set Query result of an animated image generating task, which is valid when task type is `AnimatedGraphics`.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method MediaProcessTaskSnapshotByTimeOffsetResult getSnapshotByTimeOffsetTask() Obtain Query result of a time point screencapturing task, which is valid when task type is `SnapshotByTimeOffset`.
+ * @method MediaProcessTaskSnapshotByTimeOffsetResult getSnapshotByTimeOffsetTask() Obtain Query result of a time point screenshot task, which is valid when task type is `SnapshotByTimeOffset`.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setSnapshotByTimeOffsetTask(MediaProcessTaskSnapshotByTimeOffsetResult $SnapshotByTimeOffsetTask) Set Query result of a time point screencapturing task, which is valid when task type is `SnapshotByTimeOffset`.
+ * @method void setSnapshotByTimeOffsetTask(MediaProcessTaskSnapshotByTimeOffsetResult $SnapshotByTimeOffsetTask) Set Query result of a time point screenshot task, which is valid when task type is `SnapshotByTimeOffset`.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method MediaProcessTaskSampleSnapshotResult getSampleSnapshotTask() Obtain Query result of a sampled screencapturing task, which is valid when task type is `SampleSnapshot`.
+ * @method MediaProcessTaskSampleSnapshotResult getSampleSnapshotTask() Obtain Query result of a sampled screenshot task, which is valid when task type is `SampleSnapshot`.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setSampleSnapshotTask(MediaProcessTaskSampleSnapshotResult $SampleSnapshotTask) Set Query result of a sampled screencapturing task, which is valid when task type is `SampleSnapshot`.
+ * @method void setSampleSnapshotTask(MediaProcessTaskSampleSnapshotResult $SampleSnapshotTask) Set Query result of a sampled screenshot task, which is valid when task type is `SampleSnapshot`.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method MediaProcessTaskImageSpriteResult getImageSpriteTask() Obtain Query result of an image sprite generating task, which is valid when task type is `ImageSprite`.
+ * @method MediaProcessTaskImageSpriteResult getImageSpriteTask() Obtain Query result of an image sprite screenshot task, which is valid when task type is `ImageSprite`.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setImageSpriteTask(MediaProcessTaskImageSpriteResult $ImageSpriteTask) Set Query result of an image sprite generating task, which is valid when task type is `ImageSprite`.
+ * @method void setImageSpriteTask(MediaProcessTaskImageSpriteResult $ImageSpriteTask) Set Query result of an image sprite screenshot task, which is valid when task type is `ImageSprite`.
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method MediaProcessTaskAdaptiveDynamicStreamingResult getAdaptiveDynamicStreamingTask() Obtain Query result of an adaptive bitrate streaming task, which is valid if the task type is `AdaptiveDynamicStreaming`.
 Note: this field may return null, indicating that no valid values can be obtained.
@@ -67,10 +67,10 @@ class MediaProcessTaskResult extends AbstractModel
      * @var string Task type. Valid values:
 <li>Transcode: Transcoding</li>
 <li>AnimatedGraphics: Animated image generating</li>
-<li>SnapshotByTimeOffset: Time point screencapturing</li>
-<li>SampleSnapshot: Sampled screencapturing</li>
-<li>ImageSprites: Image sprite generating</li>
-<li>CoverBySnapshot: Screencapturing for cover image</li>
+<li>SnapshotByTimeOffset: Time point screenshot</li>
+<li>SampleSnapshot: Sampled screenshot</li>
+<li>ImageSprites: Image sprite screenshot</li>
+<li>CoverBySnapshot: Screenshot for cover image</li>
 <li>AdaptiveDynamicStreaming: Adaptive bitrate streaming</li>
      */
     public $Type;
@@ -88,19 +88,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $AnimatedGraphicTask;
 
     /**
-     * @var MediaProcessTaskSnapshotByTimeOffsetResult Query result of a time point screencapturing task, which is valid when task type is `SnapshotByTimeOffset`.
+     * @var MediaProcessTaskSnapshotByTimeOffsetResult Query result of a time point screenshot task, which is valid when task type is `SnapshotByTimeOffset`.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $SnapshotByTimeOffsetTask;
 
     /**
-     * @var MediaProcessTaskSampleSnapshotResult Query result of a sampled screencapturing task, which is valid when task type is `SampleSnapshot`.
+     * @var MediaProcessTaskSampleSnapshotResult Query result of a sampled screenshot task, which is valid when task type is `SampleSnapshot`.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $SampleSnapshotTask;
 
     /**
-     * @var MediaProcessTaskImageSpriteResult Query result of an image sprite generating task, which is valid when task type is `ImageSprite`.
+     * @var MediaProcessTaskImageSpriteResult Query result of an image sprite screenshot task, which is valid when task type is `ImageSprite`.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ImageSpriteTask;
@@ -115,20 +115,20 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @param string $Type Task type. Valid values:
 <li>Transcode: Transcoding</li>
 <li>AnimatedGraphics: Animated image generating</li>
-<li>SnapshotByTimeOffset: Time point screencapturing</li>
-<li>SampleSnapshot: Sampled screencapturing</li>
-<li>ImageSprites: Image sprite generating</li>
-<li>CoverBySnapshot: Screencapturing for cover image</li>
+<li>SnapshotByTimeOffset: Time point screenshot</li>
+<li>SampleSnapshot: Sampled screenshot</li>
+<li>ImageSprites: Image sprite screenshot</li>
+<li>CoverBySnapshot: Screenshot for cover image</li>
 <li>AdaptiveDynamicStreaming: Adaptive bitrate streaming</li>
      * @param MediaProcessTaskTranscodeResult $TranscodeTask Query result of a transcoding task, which is valid when task type is `Transcode`.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param MediaProcessTaskAnimatedGraphicResult $AnimatedGraphicTask Query result of an animated image generating task, which is valid when task type is `AnimatedGraphics`.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param MediaProcessTaskSnapshotByTimeOffsetResult $SnapshotByTimeOffsetTask Query result of a time point screencapturing task, which is valid when task type is `SnapshotByTimeOffset`.
+     * @param MediaProcessTaskSnapshotByTimeOffsetResult $SnapshotByTimeOffsetTask Query result of a time point screenshot task, which is valid when task type is `SnapshotByTimeOffset`.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param MediaProcessTaskSampleSnapshotResult $SampleSnapshotTask Query result of a sampled screencapturing task, which is valid when task type is `SampleSnapshot`.
+     * @param MediaProcessTaskSampleSnapshotResult $SampleSnapshotTask Query result of a sampled screenshot task, which is valid when task type is `SampleSnapshot`.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param MediaProcessTaskImageSpriteResult $ImageSpriteTask Query result of an image sprite generating task, which is valid when task type is `ImageSprite`.
+     * @param MediaProcessTaskImageSpriteResult $ImageSpriteTask Query result of an image sprite screenshot task, which is valid when task type is `ImageSprite`.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param MediaProcessTaskAdaptiveDynamicStreamingResult $AdaptiveDynamicStreamingTask Query result of an adaptive bitrate streaming task, which is valid if the task type is `AdaptiveDynamicStreaming`.
 Note: this field may return null, indicating that no valid values can be obtained.

@@ -46,6 +46,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRouterCount(integer $RouterCount) Set Number of router nodes to be added.
  * @method integer getMasterCount() Obtain Number of master nodes to be added.
  * @method void setMasterCount(integer $MasterCount) Set Number of master nodes to be added.
+ * @method string getResourceBaseType() Obtain The type can be ComputeResource, EMR, or a default value. The default value is EMR.
+ * @method void setResourceBaseType(string $ResourceBaseType) Set The type can be ComputeResource, EMR, or a default value. The default value is EMR.
+ * @method string getComputeResourceId() Obtain Computing resource ID.
+ * @method void setComputeResourceId(string $ComputeResourceId) Set Computing resource ID.
+ * @method string getHardwareResourceType() Obtain Scale-out resource type.
+ * @method void setHardwareResourceType(string $HardwareResourceType) Set Scale-out resource type.
  */
 class InquiryPriceScaleOutInstanceRequest extends AbstractModel
 {
@@ -103,6 +109,21 @@ class InquiryPriceScaleOutInstanceRequest extends AbstractModel
     public $MasterCount;
 
     /**
+     * @var string The type can be ComputeResource, EMR, or a default value. The default value is EMR.
+     */
+    public $ResourceBaseType;
+
+    /**
+     * @var string Computing resource ID.
+     */
+    public $ComputeResourceId;
+
+    /**
+     * @var string Scale-out resource type.
+     */
+    public $HardwareResourceType;
+
+    /**
      * @param string $TimeUnit Time unit of scale-out. Valid value:
 <li>s: Second. When `PayMode` is 0, `TimeUnit` can only be `s`.</li>
      * @param integer $TimeSpan Time span of scale-out, which needs to be used together with `TimeUnit`.
@@ -116,6 +137,9 @@ class InquiryPriceScaleOutInstanceRequest extends AbstractModel
      * @param string $Currency Currency.
      * @param integer $RouterCount Number of router nodes to be added.
      * @param integer $MasterCount Number of master nodes to be added.
+     * @param string $ResourceBaseType The type can be ComputeResource, EMR, or a default value. The default value is EMR.
+     * @param string $ComputeResourceId Computing resource ID.
+     * @param string $HardwareResourceType Scale-out resource type.
      */
     function __construct()
     {
@@ -168,6 +192,18 @@ class InquiryPriceScaleOutInstanceRequest extends AbstractModel
 
         if (array_key_exists("MasterCount",$param) and $param["MasterCount"] !== null) {
             $this->MasterCount = $param["MasterCount"];
+        }
+
+        if (array_key_exists("ResourceBaseType",$param) and $param["ResourceBaseType"] !== null) {
+            $this->ResourceBaseType = $param["ResourceBaseType"];
+        }
+
+        if (array_key_exists("ComputeResourceId",$param) and $param["ComputeResourceId"] !== null) {
+            $this->ComputeResourceId = $param["ComputeResourceId"];
+        }
+
+        if (array_key_exists("HardwareResourceType",$param) and $param["HardwareResourceType"] !== null) {
+            $this->HardwareResourceType = $param["HardwareResourceType"];
         }
     }
 }

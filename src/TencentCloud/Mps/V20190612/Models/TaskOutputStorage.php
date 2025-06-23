@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getType() Obtain The storage type for a media processing output file. Valid values:
 <li>`COS`: Tencent Cloud COS</li>
-<li>`>AWS-S3`: AWS S3. This type is only supported for AWS tasks, and the output bucket must be in the same region as the bucket of the source file.</li>
+<li>`AWS-S3`: AWS S3. This type is only supported for AWS tasks, and the output bucket must be in the same region as the bucket of the source file.</li>
  * @method void setType(string $Type) Set The storage type for a media processing output file. Valid values:
 <li>`COS`: Tencent Cloud COS</li>
-<li>`>AWS-S3`: AWS S3. This type is only supported for AWS tasks, and the output bucket must be in the same region as the bucket of the source file.</li>
+<li>`AWS-S3`: AWS S3. This type is only supported for AWS tasks, and the output bucket must be in the same region as the bucket of the source file.</li>
  * @method CosOutputStorage getCosOutputStorage() Obtain The location to save the output object in COS. This parameter is valid and required when `Type` is COS.
 Note: This field may return null, indicating that no valid value can be obtained.
  * @method void setCosOutputStorage(CosOutputStorage $CosOutputStorage) Set The location to save the output object in COS. This parameter is valid and required when `Type` is COS.
@@ -40,7 +40,7 @@ class TaskOutputStorage extends AbstractModel
     /**
      * @var string The storage type for a media processing output file. Valid values:
 <li>`COS`: Tencent Cloud COS</li>
-<li>`>AWS-S3`: AWS S3. This type is only supported for AWS tasks, and the output bucket must be in the same region as the bucket of the source file.</li>
+<li>`AWS-S3`: AWS S3. This type is only supported for AWS tasks, and the output bucket must be in the same region as the bucket of the source file.</li>
      */
     public $Type;
 
@@ -59,7 +59,7 @@ Note: This field may return null, indicating that no valid value can be obtained
     /**
      * @param string $Type The storage type for a media processing output file. Valid values:
 <li>`COS`: Tencent Cloud COS</li>
-<li>`>AWS-S3`: AWS S3. This type is only supported for AWS tasks, and the output bucket must be in the same region as the bucket of the source file.</li>
+<li>`AWS-S3`: AWS S3. This type is only supported for AWS tasks, and the output bucket must be in the same region as the bucket of the source file.</li>
      * @param CosOutputStorage $CosOutputStorage The location to save the output object in COS. This parameter is valid and required when `Type` is COS.
 Note: This field may return null, indicating that no valid value can be obtained.
      * @param S3OutputStorage $S3OutputStorage The AWS S3 bucket to save the output file. This parameter is required if `Type` is `AWS-S3`.

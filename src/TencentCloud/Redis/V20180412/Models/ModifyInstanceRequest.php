@@ -87,16 +87,19 @@ class ModifyInstanceRequest extends AbstractModel
 
     /**
      * @var string This parameter is currently being deprecated and can still be used by existing users. It is recommended that new users use InstanceIds.
+     * @deprecated
      */
     public $InstanceId;
 
     /**
      * @var string Disused
+     * @deprecated
      */
     public $InstanceName;
 
     /**
      * @var integer This parameter has been deprecated.
+     * @deprecated
      */
     public $AutoRenew;
 

@@ -32,22 +32,22 @@ Default value: `ON`.
 <li>`normal`: Separate voice and background audio.</li>
 <li>`music`: Separate vocals and instrumentals.</li>
 Default value: `normal`.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setType(string $Type) Set The scenario. Valid values:
 <li>`normal`: Separate voice and background audio.</li>
 <li>`music`: Separate vocals and instrumentals.</li>
 Default value: `normal`.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getTrack() Obtain The output audio track. Valid values:
 <li>`vocal`: Voice.</li>
 <li>`background`: Output background audio if the scenario is `normal`, and output instrumentals if the scenario is `music`.</li>
 Default value: `vocal`.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setTrack(string $Track) Set The output audio track. Valid values:
 <li>`vocal`: Voice.</li>
 <li>`background`: Output background audio if the scenario is `normal`, and output instrumentals if the scenario is `music`.</li>
 Default value: `vocal`.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class AudioSeparateConfig extends AbstractModel
 {
@@ -64,7 +64,7 @@ Default value: `ON`.
 <li>`normal`: Separate voice and background audio.</li>
 <li>`music`: Separate vocals and instrumentals.</li>
 Default value: `normal`.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Type;
 
@@ -73,7 +73,7 @@ Note: This field may return·null, indicating that no valid values can be obtain
 <li>`vocal`: Voice.</li>
 <li>`background`: Output background audio if the scenario is `normal`, and output instrumentals if the scenario is `music`.</li>
 Default value: `vocal`.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Track;
 
@@ -86,12 +86,12 @@ Default value: `ON`.
 <li>`normal`: Separate voice and background audio.</li>
 <li>`music`: Separate vocals and instrumentals.</li>
 Default value: `normal`.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $Track The output audio track. Valid values:
 <li>`vocal`: Voice.</li>
 <li>`background`: Output background audio if the scenario is `normal`, and output instrumentals if the scenario is `music`.</li>
 Default value: `vocal`.
-Note: This field may return·null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
