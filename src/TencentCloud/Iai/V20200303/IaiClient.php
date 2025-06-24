@@ -70,8 +70,6 @@ The face quality information is mainly used to evaluate the quality of the input
 
 >     
 - Please use the signature algorithm v3 to calculate the signature in the common parameters, that is, set the `SignatureMethod` parameter to `TC3-HMAC-SHA256`.
-
-
  * @method Models\DetectFaceAttributesResponse DetectFaceAttributes(Models\DetectFaceAttributesRequest $req) This API is used to detect the position, attributes, and quality information of a face in the given image. The position information includes (x, y, w, h); the face attributes include gender, age, expression, beauty, glass, hair, mask, and pose (pitch, roll, yaw); and the face quality information includes the overall quality score, sharpness, brightness, and completeness.
 
  
