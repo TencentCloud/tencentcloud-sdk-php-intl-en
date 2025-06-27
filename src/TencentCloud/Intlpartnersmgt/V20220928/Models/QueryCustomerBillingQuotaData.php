@@ -20,17 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Sub-customer credit balance data
  *
- * @method float getTotalCredit() Obtain Total credit limit (unit: cny), accurate down to two decimal places.
- * @method void setTotalCredit(float $TotalCredit) Set Total credit limit (unit: cny), accurate down to two decimal places.
- * @method float getRemainingCredit() Obtain Remaining credit limit (unit: cny), accurate down to two decimal places.
- * @method void setRemainingCredit(float $RemainingCredit) Set Remaining credit limit (unit: cny), accurate down to two decimal places.
- * @method float getRemainingVoucher() Obtain Remaining total voucher amount (unit: cny), accurate down to two decimal places.
- * @method void setRemainingVoucher(float $RemainingVoucher) Set Remaining total voucher amount (unit: cny), accurate down to two decimal places.
- * @method integer getForce() Obtain Forced status
-.
+ * @method float getTotalCredit() Obtain Total credit limit (unit: usd), accurate down to two decimal places.
+ * @method void setTotalCredit(float $TotalCredit) Set Total credit limit (unit: usd), accurate down to two decimal places.
+ * @method float getRemainingCredit() Obtain Remaining credit limit (unit: usd), accurate down to two decimal places.
+ * @method void setRemainingCredit(float $RemainingCredit) Set Remaining credit limit (unit: usd), accurate down to two decimal places.
+ * @method float getRemainingVoucher() Obtain Remaining total voucher amount (unit: usd), accurate down to two decimal places.
+ * @method void setRemainingVoucher(float $RemainingVoucher) Set Remaining total voucher amount (unit: usd), accurate down to two decimal places.
+ * @method integer getForce() Obtain Forced status.
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setForce(integer $Force) Set Forced status
-.
+ * @method void setForce(integer $Force) Set Forced status.
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method float getPrepayFrozen() Obtain Prepaid frozen amount.
  * @method void setPrepayFrozen(float $PrepayFrozen) Set Prepaid frozen amount.
@@ -40,23 +38,22 @@ Note: this field may return null, indicating that no valid values can be obtaine
 class QueryCustomerBillingQuotaData extends AbstractModel
 {
     /**
-     * @var float Total credit limit (unit: cny), accurate down to two decimal places.
+     * @var float Total credit limit (unit: usd), accurate down to two decimal places.
      */
     public $TotalCredit;
 
     /**
-     * @var float Remaining credit limit (unit: cny), accurate down to two decimal places.
+     * @var float Remaining credit limit (unit: usd), accurate down to two decimal places.
      */
     public $RemainingCredit;
 
     /**
-     * @var float Remaining total voucher amount (unit: cny), accurate down to two decimal places.
+     * @var float Remaining total voucher amount (unit: usd), accurate down to two decimal places.
      */
     public $RemainingVoucher;
 
     /**
-     * @var integer Forced status
-.
+     * @var integer Forced status.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $Force;
@@ -72,11 +69,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $PostpayFrozen;
 
     /**
-     * @param float $TotalCredit Total credit limit (unit: cny), accurate down to two decimal places.
-     * @param float $RemainingCredit Remaining credit limit (unit: cny), accurate down to two decimal places.
-     * @param float $RemainingVoucher Remaining total voucher amount (unit: cny), accurate down to two decimal places.
-     * @param integer $Force Forced status
-.
+     * @param float $TotalCredit Total credit limit (unit: usd), accurate down to two decimal places.
+     * @param float $RemainingCredit Remaining credit limit (unit: usd), accurate down to two decimal places.
+     * @param float $RemainingVoucher Remaining total voucher amount (unit: usd), accurate down to two decimal places.
+     * @param integer $Force Forced status.
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param float $PrepayFrozen Prepaid frozen amount.
      * @param float $PostpayFrozen Postpaid frozen amount.
