@@ -20,14 +20,14 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeDDoSAttackEvent request structure.
  *
- * @method string getStartTime() Obtain Start time. Time range: 30 days.
- * @method void setStartTime(string $StartTime) Set Start time. Time range: 30 days.
- * @method string getEndTime() Obtain End time. Time range: 30 days.
- * @method void setEndTime(string $EndTime) Set End time. Time range: 30 days.
+ * @method string getStartTime() Obtain The start time.
+ * @method void setStartTime(string $StartTime) Set The start time.
+ * @method string getEndTime() Obtain The end time. The query time range (`EndTime` - `StartTime`) must be less than or equal to 31 days.
+ * @method void setEndTime(string $EndTime) Set The end time. The query time range (`EndTime` - `StartTime`) must be less than or equal to 31 days.
  * @method array getPolicyIds() Obtain List of DDoS policy IDs. All policies are selected if this field is not specified.
  * @method void setPolicyIds(array $PolicyIds) Set List of DDoS policy IDs. All policies are selected if this field is not specified.
- * @method array getZoneIds() Obtain ZoneId set. This parameter is required.
- * @method void setZoneIds(array $ZoneIds) Set ZoneId set. This parameter is required.
+ * @method array getZoneIds() Obtain Zone ID set. This parameter is required. A maximum of 100 zone IDs can be passed in. If you need to query data for all zones under the Tencent Cloud main account, please use "*" instead. To query account-level data, you need to have full resource permissions for all zones of this interface.
+ * @method void setZoneIds(array $ZoneIds) Set Zone ID set. This parameter is required. A maximum of 100 zone IDs can be passed in. If you need to query data for all zones under the Tencent Cloud main account, please use "*" instead. To query account-level data, you need to have full resource permissions for all zones of this interface.
  * @method integer getLimit() Obtain Limit on paginated queries. Default value: 20. Maximum value: 1000.
  * @method void setLimit(integer $Limit) Set Limit on paginated queries. Default value: 20. Maximum value: 1000.
  * @method integer getOffset() Obtain The page offset. Default value: 0.
@@ -58,12 +58,12 @@ use TencentCloud\Common\AbstractModel;
 class DescribeDDoSAttackEventRequest extends AbstractModel
 {
     /**
-     * @var string Start time. Time range: 30 days.
+     * @var string The start time.
      */
     public $StartTime;
 
     /**
-     * @var string End time. Time range: 30 days.
+     * @var string The end time. The query time range (`EndTime` - `StartTime`) must be less than or equal to 31 days.
      */
     public $EndTime;
 
@@ -73,7 +73,7 @@ class DescribeDDoSAttackEventRequest extends AbstractModel
     public $PolicyIds;
 
     /**
-     * @var array ZoneId set. This parameter is required.
+     * @var array Zone ID set. This parameter is required. A maximum of 100 zone IDs can be passed in. If you need to query data for all zones under the Tencent Cloud main account, please use "*" instead. To query account-level data, you need to have full resource permissions for all zones of this interface.
      */
     public $ZoneIds;
 
@@ -115,10 +115,10 @@ class DescribeDDoSAttackEventRequest extends AbstractModel
     public $OrderType;
 
     /**
-     * @param string $StartTime Start time. Time range: 30 days.
-     * @param string $EndTime End time. Time range: 30 days.
+     * @param string $StartTime The start time.
+     * @param string $EndTime The end time. The query time range (`EndTime` - `StartTime`) must be less than or equal to 31 days.
      * @param array $PolicyIds List of DDoS policy IDs. All policies are selected if this field is not specified.
-     * @param array $ZoneIds ZoneId set. This parameter is required.
+     * @param array $ZoneIds Zone ID set. This parameter is required. A maximum of 100 zone IDs can be passed in. If you need to query data for all zones under the Tencent Cloud main account, please use "*" instead. To query account-level data, you need to have full resource permissions for all zones of this interface.
      * @param integer $Limit Limit on paginated queries. Default value: 20. Maximum value: 1000.
      * @param integer $Offset The page offset. Default value: 0.
      * @param boolean $ShowDetail Parameter to show attack details. If it is configured as false, only the number of attacks is returned without details. If it is configured as true, attack details are returned.

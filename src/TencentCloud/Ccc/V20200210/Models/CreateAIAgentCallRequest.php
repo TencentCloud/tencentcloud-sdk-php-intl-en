@@ -30,6 +30,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCallers(array $Callers) Set Caller number list
  * @method array getPromptVariables() Obtain Prompt variable.
  * @method void setPromptVariables(array $PromptVariables) Set Prompt variable.
+ * @method array getVariables() Obtain <P>Prompt variable</p> <p>welcome message variable</p> <p>welcome message delay playback (in seconds): welcome-message-delay</p> <p>dify variable</p>.  
+
+dify-inputs-xxx specifies the inputs variable for dify.
+2. the dify-inputs-user specifies the user value for dify.
+3. dify-inputs-conversation_id is the conversation_id value of dify.
+ * @method void setVariables(array $Variables) Set <P>Prompt variable</p> <p>welcome message variable</p> <p>welcome message delay playback (in seconds): welcome-message-delay</p> <p>dify variable</p>.  
+
+dify-inputs-xxx specifies the inputs variable for dify.
+2. the dify-inputs-user specifies the user value for dify.
+3. dify-inputs-conversation_id is the conversation_id value of dify.
  */
 class CreateAIAgentCallRequest extends AbstractModel
 {
@@ -60,11 +70,25 @@ class CreateAIAgentCallRequest extends AbstractModel
     public $PromptVariables;
 
     /**
+     * @var array <P>Prompt variable</p> <p>welcome message variable</p> <p>welcome message delay playback (in seconds): welcome-message-delay</p> <p>dify variable</p>.  
+
+dify-inputs-xxx specifies the inputs variable for dify.
+2. the dify-inputs-user specifies the user value for dify.
+3. dify-inputs-conversation_id is the conversation_id value of dify.
+     */
+    public $Variables;
+
+    /**
      * @param integer $SdkAppId Application id (required) can be found at https://console.cloud.tencent.com/ccc.
      * @param integer $AIAgentId AI agent id.
      * @param string $Callee Callee number.
      * @param array $Callers Caller number list
      * @param array $PromptVariables Prompt variable.
+     * @param array $Variables <P>Prompt variable</p> <p>welcome message variable</p> <p>welcome message delay playback (in seconds): welcome-message-delay</p> <p>dify variable</p>.  
+
+dify-inputs-xxx specifies the inputs variable for dify.
+2. the dify-inputs-user specifies the user value for dify.
+3. dify-inputs-conversation_id is the conversation_id value of dify.
      */
     function __construct()
     {
@@ -101,6 +125,15 @@ class CreateAIAgentCallRequest extends AbstractModel
                 $obj = new Variable();
                 $obj->deserialize($value);
                 array_push($this->PromptVariables, $obj);
+            }
+        }
+
+        if (array_key_exists("Variables",$param) and $param["Variables"] !== null) {
+            $this->Variables = [];
+            foreach ($param["Variables"] as $key => $value){
+                $obj = new Variable();
+                $obj->deserialize($value);
+                array_push($this->Variables, $obj);
             }
         }
     }

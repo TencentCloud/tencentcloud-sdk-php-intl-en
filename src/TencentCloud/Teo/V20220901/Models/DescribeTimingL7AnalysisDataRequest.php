@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getStartTime() Obtain The start time.
  * @method void setStartTime(string $StartTime) Set The start time.
- * @method string getEndTime() Obtain The end time.
- * @method void setEndTime(string $EndTime) Set The end time.
+ * @method string getEndTime() Obtain The end time. The query time range (`EndTime` - `StartTime`) must be less than or equal to 31 days.
+ * @method void setEndTime(string $EndTime) Set The end time. The query time range (`EndTime` - `StartTime`) must be less than or equal to 31 days.
  * @method array getMetricNames() Obtain Metric list. Valid values:.
 <Li>l7Flow_outFlux: L7 EdgeOne response traffic. Unit: byte;</li>
 <Li>l7Flow_inFlux: L7 client request traffic. Unit: byte;</li>
@@ -44,18 +44,18 @@ use TencentCloud\Common\AbstractModel;
 <Li>l7Flow_request: L7 request count. Unit: times;</li>
 <Li>l7Flow_avgResponseTime: Average L7 edge response time. Unit: ms (milliseconds);</li>
 <Li>l7Flow_avgFirstByteResponseTime: Average L7 edge first byte response time. Unit: ms.</li>
- * @method array getZoneIds() Obtain Zone ID set. This parameter is required.
- * @method void setZoneIds(array $ZoneIds) Set Zone ID set. This parameter is required.
+ * @method array getZoneIds() Obtain Zone ID set. This parameter is required. A maximum of 100 zone IDs can be passed in. If you need to query data for all zones under the Tencent Cloud main account, please use "*" instead. To query account-level data, you need to have full resource permissions for all zones of this interface.
+ * @method void setZoneIds(array $ZoneIds) Set Zone ID set. This parameter is required. A maximum of 100 zone IDs can be passed in. If you need to query data for all zones under the Tencent Cloud main account, please use "*" instead. To query account-level data, you need to have full resource permissions for all zones of this interface.
  * @method string getInterval() Obtain Query period granularity. Valid values:
 <li>min: 1 minute;</li>
 <li>5min: 5 minutes;</li>
 <li>hour: 1 hour;</li>
-<li>day: 1 day.</li>If this parameter is not filled in, the granularity will be automatically calculated based on the interval between the start time and end time. Specifically, data will be queried with a granularity of min, 5min, hour, and day respectively when the period is no more than 2 hours, no more than 2 days, no more than 7 days, and over 7 days.
+<li>day: 1 day.</li>If this parameter is not filled in, the granularity will be automatically calculated based on the interval between the start time and end time. Specifically, data will be queried with a granularity of min, 5min, hour, and day respectively when the period is no more than 1 hour, no more than 2 days, no more than 7 days, and over 7 days.
  * @method void setInterval(string $Interval) Set Query period granularity. Valid values:
 <li>min: 1 minute;</li>
 <li>5min: 5 minutes;</li>
 <li>hour: 1 hour;</li>
-<li>day: 1 day.</li>If this parameter is not filled in, the granularity will be automatically calculated based on the interval between the start time and end time. Specifically, data will be queried with a granularity of min, 5min, hour, and day respectively when the period is no more than 2 hours, no more than 2 days, no more than 7 days, and over 7 days.
+<li>day: 1 day.</li>If this parameter is not filled in, the granularity will be automatically calculated based on the interval between the start time and end time. Specifically, data will be queried with a granularity of min, 5min, hour, and day respectively when the period is no more than 1 hour, no more than 2 days, no more than 7 days, and over 7 days.
  * @method array getFilters() Obtain Filter criteria. The detailed key values of filter criteria are as follows:
 <li>country: filter by country/region. The country/region follows the <a href="https://baike.baidu.com/item/ISO%203166-1/5269555">ISO 3166-1 alpha-2</a> standard. Example value: CN.</li>
 <li>province: filter by province. This parameter is supported only when the service area is the chinese mainland. refer to the <a href="https://intl.cloud.tencent.com/document/product/228/6316?from_cn_redirect=1#.E5.8C.BA.E5.9F.9F-.2F-.E8.BF.90.E8.90.a5.E5.95.86.E6.98.a0.E5.B0.84.E8.a1.a8">mapping table of provinces within the chinese mainland</a> for province codes. Example value: 22.</li>
@@ -107,7 +107,7 @@ class DescribeTimingL7AnalysisDataRequest extends AbstractModel
     public $StartTime;
 
     /**
-     * @var string The end time.
+     * @var string The end time. The query time range (`EndTime` - `StartTime`) must be less than or equal to 31 days.
      */
     public $EndTime;
 
@@ -126,7 +126,7 @@ class DescribeTimingL7AnalysisDataRequest extends AbstractModel
     public $MetricNames;
 
     /**
-     * @var array Zone ID set. This parameter is required.
+     * @var array Zone ID set. This parameter is required. A maximum of 100 zone IDs can be passed in. If you need to query data for all zones under the Tencent Cloud main account, please use "*" instead. To query account-level data, you need to have full resource permissions for all zones of this interface.
      */
     public $ZoneIds;
 
@@ -135,7 +135,7 @@ class DescribeTimingL7AnalysisDataRequest extends AbstractModel
 <li>min: 1 minute;</li>
 <li>5min: 5 minutes;</li>
 <li>hour: 1 hour;</li>
-<li>day: 1 day.</li>If this parameter is not filled in, the granularity will be automatically calculated based on the interval between the start time and end time. Specifically, data will be queried with a granularity of min, 5min, hour, and day respectively when the period is no more than 2 hours, no more than 2 days, no more than 7 days, and over 7 days.
+<li>day: 1 day.</li>If this parameter is not filled in, the granularity will be automatically calculated based on the interval between the start time and end time. Specifically, data will be queried with a granularity of min, 5min, hour, and day respectively when the period is no more than 1 hour, no more than 2 days, no more than 7 days, and over 7 days.
      */
     public $Interval;
 
@@ -170,7 +170,7 @@ class DescribeTimingL7AnalysisDataRequest extends AbstractModel
 
     /**
      * @param string $StartTime The start time.
-     * @param string $EndTime The end time.
+     * @param string $EndTime The end time. The query time range (`EndTime` - `StartTime`) must be less than or equal to 31 days.
      * @param array $MetricNames Metric list. Valid values:.
 <Li>l7Flow_outFlux: L7 EdgeOne response traffic. Unit: byte;</li>
 <Li>l7Flow_inFlux: L7 client request traffic. Unit: byte;</li>
@@ -181,12 +181,12 @@ class DescribeTimingL7AnalysisDataRequest extends AbstractModel
 <Li>l7Flow_request: L7 request count. Unit: times;</li>
 <Li>l7Flow_avgResponseTime: Average L7 edge response time. Unit: ms (milliseconds);</li>
 <Li>l7Flow_avgFirstByteResponseTime: Average L7 edge first byte response time. Unit: ms.</li>
-     * @param array $ZoneIds Zone ID set. This parameter is required.
+     * @param array $ZoneIds Zone ID set. This parameter is required. A maximum of 100 zone IDs can be passed in. If you need to query data for all zones under the Tencent Cloud main account, please use "*" instead. To query account-level data, you need to have full resource permissions for all zones of this interface.
      * @param string $Interval Query period granularity. Valid values:
 <li>min: 1 minute;</li>
 <li>5min: 5 minutes;</li>
 <li>hour: 1 hour;</li>
-<li>day: 1 day.</li>If this parameter is not filled in, the granularity will be automatically calculated based on the interval between the start time and end time. Specifically, data will be queried with a granularity of min, 5min, hour, and day respectively when the period is no more than 2 hours, no more than 2 days, no more than 7 days, and over 7 days.
+<li>day: 1 day.</li>If this parameter is not filled in, the granularity will be automatically calculated based on the interval between the start time and end time. Specifically, data will be queried with a granularity of min, 5min, hour, and day respectively when the period is no more than 1 hour, no more than 2 days, no more than 7 days, and over 7 days.
      * @param array $Filters Filter criteria. The detailed key values of filter criteria are as follows:
 <li>country: filter by country/region. The country/region follows the <a href="https://baike.baidu.com/item/ISO%203166-1/5269555">ISO 3166-1 alpha-2</a> standard. Example value: CN.</li>
 <li>province: filter by province. This parameter is supported only when the service area is the chinese mainland. refer to the <a href="https://intl.cloud.tencent.com/document/product/228/6316?from_cn_redirect=1#.E5.8C.BA.E5.9F.9F-.2F-.E8.BF.90.E8.90.a5.E5.95.86.E6.98.a0.E5.B0.84.E8.a1.a8">mapping table of provinces within the chinese mainland</a> for province codes. Example value: 22.</li>

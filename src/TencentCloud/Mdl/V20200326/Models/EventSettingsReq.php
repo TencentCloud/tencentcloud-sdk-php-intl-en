@@ -38,6 +38,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSpliceDuration(integer $SpliceDuration) Set The duration of the segment in 90kHz ticks.It used to  give the splicer an indication of when the break will be over and when the network In Point will occur. If not specifyed,the splice_insert will continue when enter a return_to_network to end the splice_insert at the appropriate time.
  * @method TimedMetadataInfo getTimedMetadataSetting() Obtain Meta information plan configuration.
  * @method void setTimedMetadataSetting(TimedMetadataInfo $TimedMetadataSetting) Set Meta information plan configuration.
+ * @method StaticImageActivateSetting getStaticImageActivateSetting() Obtain Static image activate setting.
+ * @method void setStaticImageActivateSetting(StaticImageActivateSetting $StaticImageActivateSetting) Set Static image activate setting.
+ * @method StaticImageDeactivateSetting getStaticImageDeactivateSetting() Obtain Static image deactivate setting.
+ * @method void setStaticImageDeactivateSetting(StaticImageDeactivateSetting $StaticImageDeactivateSetting) Set Static image deactivate setting.
  */
 class EventSettingsReq extends AbstractModel
 {
@@ -87,6 +91,16 @@ class EventSettingsReq extends AbstractModel
     public $TimedMetadataSetting;
 
     /**
+     * @var StaticImageActivateSetting Static image activate setting.
+     */
+    public $StaticImageActivateSetting;
+
+    /**
+     * @var StaticImageDeactivateSetting Static image deactivate setting.
+     */
+    public $StaticImageDeactivateSetting;
+
+    /**
      * @param string $EventType Valid values: `INPUT_SWITCH`, `TIMED_RECORD`, SCTE35_TIME_SIGNAL, SCTE35_SPLICE_INSERT, SCTE35_RETURN_TO_NETWORK. If it is not specified, `INPUT_SWITCH` will be used.
      * @param string $InputAttachment ID of the input to attach, which is required if `EventType` is `INPUT_SWITCH`
      * @param string $OutputGroupName Name of the output group to attach. This parameter is required if `EventType` is `TIMED_RECORD`.
@@ -96,6 +110,8 @@ class EventSettingsReq extends AbstractModel
      * @param integer $SpliceEventID A 32-bit unique segmentation event identifier.Only one occurrence of a given segmentation_event_id value shall be active at any one time.
      * @param integer $SpliceDuration The duration of the segment in 90kHz ticks.It used to  give the splicer an indication of when the break will be over and when the network In Point will occur. If not specifyed,the splice_insert will continue when enter a return_to_network to end the splice_insert at the appropriate time.
      * @param TimedMetadataInfo $TimedMetadataSetting Meta information plan configuration.
+     * @param StaticImageActivateSetting $StaticImageActivateSetting Static image activate setting.
+     * @param StaticImageDeactivateSetting $StaticImageDeactivateSetting Static image deactivate setting.
      */
     function __construct()
     {
@@ -155,6 +171,16 @@ class EventSettingsReq extends AbstractModel
         if (array_key_exists("TimedMetadataSetting",$param) and $param["TimedMetadataSetting"] !== null) {
             $this->TimedMetadataSetting = new TimedMetadataInfo();
             $this->TimedMetadataSetting->deserialize($param["TimedMetadataSetting"]);
+        }
+
+        if (array_key_exists("StaticImageActivateSetting",$param) and $param["StaticImageActivateSetting"] !== null) {
+            $this->StaticImageActivateSetting = new StaticImageActivateSetting();
+            $this->StaticImageActivateSetting->deserialize($param["StaticImageActivateSetting"]);
+        }
+
+        if (array_key_exists("StaticImageDeactivateSetting",$param) and $param["StaticImageDeactivateSetting"] !== null) {
+            $this->StaticImageDeactivateSetting = new StaticImageDeactivateSetting();
+            $this->StaticImageDeactivateSetting->deserialize($param["StaticImageDeactivateSetting"]);
         }
     }
 }

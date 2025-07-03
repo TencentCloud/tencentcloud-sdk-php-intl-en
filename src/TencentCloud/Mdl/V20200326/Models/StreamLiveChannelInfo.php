@@ -42,8 +42,8 @@ Note: this field may return `null`, indicating that no valid value was found.
 Note: this field may return `null`, indicating that no valid value was found.
  * @method void setAVTemplates(array $AVTemplates) Set Audio/Video transcoding templates
 Note: this field may return `null`, indicating that no valid value was found.
- * @method array getCaptionTemplates() Obtain 
- * @method void setCaptionTemplates(array $CaptionTemplates) Set 
+ * @method array getCaptionTemplates() Obtain Caption templates.
+ * @method void setCaptionTemplates(array $CaptionTemplates) Set Caption templates.
  * @method PlanSettings getPlanSettings() Obtain Event settings
 Note: This field may return `null`, indicating that no valid value was found.
  * @method void setPlanSettings(PlanSettings $PlanSettings) Set Event settings
@@ -62,6 +62,8 @@ Note: This field may return `null`, indicating that no valid value was found.
  * @method void setTags(array $Tags) Set Console tag list.
  * @method array getFrameCaptureTemplates() Obtain Frame capture templates.
  * @method void setFrameCaptureTemplates(array $FrameCaptureTemplates) Set Frame capture templates.
+ * @method GeneralSetting getGeneralSettings() Obtain General settings.
+ * @method void setGeneralSettings(GeneralSetting $GeneralSettings) Set General settings.
  */
 class StreamLiveChannelInfo extends AbstractModel
 {
@@ -109,7 +111,7 @@ Note: this field may return `null`, indicating that no valid value was found.
     public $AVTemplates;
 
     /**
-     * @var array 
+     * @var array Caption templates.
      */
     public $CaptionTemplates;
 
@@ -151,6 +153,11 @@ Note: This field may return `null`, indicating that no valid value was found.
     public $FrameCaptureTemplates;
 
     /**
+     * @var GeneralSetting General settings.
+     */
+    public $GeneralSettings;
+
+    /**
      * @param string $Id Channel ID
      * @param string $State Channel status
      * @param array $AttachedInputs Information of attached inputs
@@ -162,7 +169,7 @@ Note: this field may return `null`, indicating that no valid value was found.
 Note: this field may return `null`, indicating that no valid value was found.
      * @param array $AVTemplates Audio/Video transcoding templates
 Note: this field may return `null`, indicating that no valid value was found.
-     * @param array $CaptionTemplates 
+     * @param array $CaptionTemplates Caption templates.
      * @param PlanSettings $PlanSettings Event settings
 Note: This field may return `null`, indicating that no valid value was found.
      * @param EventNotifySetting $EventNotifySettings The callback settings.
@@ -172,6 +179,7 @@ Note: This field may return `null`, indicating that no valid value was found.
      * @param InputAnalysisInfo $InputAnalysisSettings Recognition configuration for input content.
      * @param array $Tags Console tag list.
      * @param array $FrameCaptureTemplates Frame capture templates.
+     * @param GeneralSetting $GeneralSettings General settings.
      */
     function __construct()
     {
@@ -293,6 +301,11 @@ Note: This field may return `null`, indicating that no valid value was found.
                 $obj->deserialize($value);
                 array_push($this->FrameCaptureTemplates, $obj);
             }
+        }
+
+        if (array_key_exists("GeneralSettings",$param) and $param["GeneralSettings"] !== null) {
+            $this->GeneralSettings = new GeneralSetting();
+            $this->GeneralSettings->deserialize($param["GeneralSettings"]);
         }
     }
 }

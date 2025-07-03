@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCallees(array $Callees) Set List of called numbers.
  * @method array getCallers() Obtain List of calling numbers.
  * @method void setCallers(array $Callers) Set List of calling numbers.
- * @method integer getIvrId() Obtain IVR used for calling.
- * @method void setIvrId(integer $IvrId) Set IVR used for calling.
+ * @method integer getIvrId() Obtain IVR Id used for calling. if not filled, AIAgentId needs to be filled.
+ * @method void setIvrId(integer $IvrId) Set IVR Id used for calling. if not filled, AIAgentId needs to be filled.
  * @method string getName() Obtain Task name.
  * @method void setName(string $Name) Set Task name.
  * @method string getDescription() Obtain <Task description>.
@@ -44,6 +44,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUUI(string $UUI) Set UUI
  * @method array getCalleeAttributes() Obtain Property of the called.
  * @method void setCalleeAttributes(array $CalleeAttributes) Set Property of the called.
+ * @method string getTimeZone() Obtain IANA time zone name. see https://datatracker.ietf.org/doc/html/draft-ietf-netmod-iana-timezones.
+ * @method void setTimeZone(string $TimeZone) Set IANA time zone name. see https://datatracker.ietf.org/doc/html/draft-ietf-netmod-iana-timezones.
+ * @method array getAvailableTime() Obtain Available time period.
+ * @method void setAvailableTime(array $AvailableTime) Set Available time period.
+ * @method integer getAIAgentId() Obtain Intelligent agent ID. if not filled, IvrId needs to be filled.
+ * @method void setAIAgentId(integer $AIAgentId) Set Intelligent agent ID. if not filled, IvrId needs to be filled.
  */
 class CreateAutoCalloutTaskRequest extends AbstractModel
 {
@@ -68,7 +74,7 @@ class CreateAutoCalloutTaskRequest extends AbstractModel
     public $Callers;
 
     /**
-     * @var integer IVR used for calling.
+     * @var integer IVR Id used for calling. if not filled, AIAgentId needs to be filled.
      */
     public $IvrId;
 
@@ -108,11 +114,26 @@ class CreateAutoCalloutTaskRequest extends AbstractModel
     public $CalleeAttributes;
 
     /**
+     * @var string IANA time zone name. see https://datatracker.ietf.org/doc/html/draft-ietf-netmod-iana-timezones.
+     */
+    public $TimeZone;
+
+    /**
+     * @var array Available time period.
+     */
+    public $AvailableTime;
+
+    /**
+     * @var integer Intelligent agent ID. if not filled, IvrId needs to be filled.
+     */
+    public $AIAgentId;
+
+    /**
      * @param integer $SdkAppId Application id (required) can be found at https://console.cloud.tencent.com/ccc.
      * @param integer $NotBefore Task starting timestamp. unix second-level timestamp.
      * @param array $Callees List of called numbers.
      * @param array $Callers List of calling numbers.
-     * @param integer $IvrId IVR used for calling.
+     * @param integer $IvrId IVR Id used for calling. if not filled, AIAgentId needs to be filled.
      * @param string $Name Task name.
      * @param string $Description <Task description>.
      * @param integer $NotAfter Task stop timestamp. unix second-level timestamp.
@@ -120,6 +141,9 @@ class CreateAutoCalloutTaskRequest extends AbstractModel
      * @param array $Variables Custom variables (supported only in advanced versions).
      * @param string $UUI UUI
      * @param array $CalleeAttributes Property of the called.
+     * @param string $TimeZone IANA time zone name. see https://datatracker.ietf.org/doc/html/draft-ietf-netmod-iana-timezones.
+     * @param array $AvailableTime Available time period.
+     * @param integer $AIAgentId Intelligent agent ID. if not filled, IvrId needs to be filled.
      */
     function __construct()
     {
@@ -190,6 +214,23 @@ class CreateAutoCalloutTaskRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->CalleeAttributes, $obj);
             }
+        }
+
+        if (array_key_exists("TimeZone",$param) and $param["TimeZone"] !== null) {
+            $this->TimeZone = $param["TimeZone"];
+        }
+
+        if (array_key_exists("AvailableTime",$param) and $param["AvailableTime"] !== null) {
+            $this->AvailableTime = [];
+            foreach ($param["AvailableTime"] as $key => $value){
+                $obj = new TimeRange();
+                $obj->deserialize($value);
+                array_push($this->AvailableTime, $obj);
+            }
+        }
+
+        if (array_key_exists("AIAgentId",$param) and $param["AIAgentId"] !== null) {
+            $this->AIAgentId = $param["AIAgentId"];
         }
     }
 }

@@ -50,6 +50,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTags(array $Tags) Set Console tag list.
  * @method array getFrameCaptureTemplates() Obtain Frame capture templates.
  * @method void setFrameCaptureTemplates(array $FrameCaptureTemplates) Set Frame capture templates.
+ * @method GeneralSetting getGeneralSettings() Obtain General settings.
+ * @method void setGeneralSettings(GeneralSetting $GeneralSettings) Set General settings.
  */
 class ModifyStreamLiveChannelRequest extends AbstractModel
 {
@@ -129,6 +131,11 @@ class ModifyStreamLiveChannelRequest extends AbstractModel
     public $FrameCaptureTemplates;
 
     /**
+     * @var GeneralSetting General settings.
+     */
+    public $GeneralSettings;
+
+    /**
      * @param string $Id Channel ID
      * @param string $Name Channel name, which can contain 1-32 case-sensitive letters, digits, and underscores and must be unique at the region level
      * @param array $AttachedInputs Inputs to attach. You can attach 1 to 5 inputs.
@@ -144,6 +151,7 @@ class ModifyStreamLiveChannelRequest extends AbstractModel
      * @param InputAnalysisInfo $InputAnalysisSettings Recognition configuration for input content.
      * @param array $Tags Console tag list.
      * @param array $FrameCaptureTemplates Frame capture templates.
+     * @param GeneralSetting $GeneralSettings General settings.
      */
     function __construct()
     {
@@ -261,6 +269,11 @@ class ModifyStreamLiveChannelRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->FrameCaptureTemplates, $obj);
             }
+        }
+
+        if (array_key_exists("GeneralSettings",$param) and $param["GeneralSettings"] !== null) {
+            $this->GeneralSettings = new GeneralSetting();
+            $this->GeneralSettings->deserialize($param["GeneralSettings"]);
         }
     }
 }

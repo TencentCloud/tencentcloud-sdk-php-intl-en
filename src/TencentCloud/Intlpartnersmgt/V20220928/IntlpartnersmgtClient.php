@@ -64,7 +64,7 @@ Callable roles: Distributor, Second-level reseller, Reseller
 Callable roles: Distributor, Second-level reseller, Reseller
  * @method Models\DescribeCustomerBillDetailResponse DescribeCustomerBillDetail(Models\DescribeCustomerBillDetailRequest $req) This API is used to query the customer bill details by resellers.
 Callable roles: Distributor, Second-level reseller, Reseller.
- * @method Models\DescribeCustomerBillDetailByDayResponse DescribeCustomerBillDetailByDay(Models\DescribeCustomerBillDetailByDayRequest $req) This API is used to query the daily bill expenditure of cu by resellers.
+ * @method Models\DescribeCustomerBillDetailByDayResponse DescribeCustomerBillDetailByDay(Models\DescribeCustomerBillDetailByDayRequest $req) This API is used to query the daily bill expenditure of customer by resellers.
 Invocation Role: first-level reseller, second-level reseller, reseller.
  * @method Models\DescribeCustomerBillDownloadUrlResponse DescribeCustomerBillDownloadUrl(Models\DescribeCustomerBillDownloadUrlRequest $req) This API is used to get the URL for downloading the customer bill file by reseller. The download conditions are as follows:
 1. Detailed bills (billDetail and billDetailPack) can be downloaded starting from June 2022; resource bills (billResource and billResourcePack) can be downloaded starting from November 2023.

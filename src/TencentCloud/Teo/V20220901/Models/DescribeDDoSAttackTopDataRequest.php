@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getStartTime() Obtain The start time.
  * @method void setStartTime(string $StartTime) Set The start time.
- * @method string getEndTime() Obtain The end time.
- * @method void setEndTime(string $EndTime) Set The end time.
+ * @method string getEndTime() Obtain The end time. The query time range (`EndTime` - `StartTime`) must be less than or equal to 31 days.
+ * @method void setEndTime(string $EndTime) Set The end time. The query time range (`EndTime` - `StartTime`) must be less than or equal to 31 days.
  * @method string getMetricName() Obtain The statistical metric. Values:
 <li>`ddos_attackFlux_protocol`: Rank protocols by the attack traffic.</li>
 <li>`ddos_attackPackageNum_protocol`: Rank protocols by the number of attack packets.</li>
@@ -38,8 +38,8 @@ use TencentCloud\Common\AbstractModel;
 <li>`ddos_attackNum_sregion`: Rank attacker regions by the number of attacks.</li>
 <li>`ddos_attackFlux_sip`: Rank attacker IPs by the number of attacks.</li>
 <li>`ddos_attackFlux_sregion`: Rank attacker regions by the number of attacks.</li>
- * @method array getZoneIds() Obtain Site ID set. This parameter is required.
- * @method void setZoneIds(array $ZoneIds) Set Site ID set. This parameter is required.
+ * @method array getZoneIds() Obtain Zone ID set. This parameter is required. A maximum of 100 zone IDs can be passed in. If you need to query data for all zones under the Tencent Cloud main account, please use "*" instead. To query account-level data, you need to have full resource permissions for all zones of this interface.
+ * @method void setZoneIds(array $ZoneIds) Set Zone ID set. This parameter is required. A maximum of 100 zone IDs can be passed in. If you need to query data for all zones under the Tencent Cloud main account, please use "*" instead. To query account-level data, you need to have full resource permissions for all zones of this interface.
  * @method array getPolicyIds() Obtain The list of DDoS policy IDs to be specified. All policies will be selected if this field is not specified.
  * @method void setPolicyIds(array $PolicyIds) Set The list of DDoS policy IDs to be specified. All policies will be selected if this field is not specified.
  * @method string getAttackType() Obtain The attack type. Values:
@@ -64,10 +64,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) Set Queries the top n rows of data. Top 10 rows of data will be queried if this field is not specified.
  * @method string getArea() Obtain Data storage region. Values:
 <li>`overseas`: Global (outside the Chinese mainland);</li>
-<li>`mainland`: Chinese mainland.</li>If this field is not specified, the data storage region will be determined based on the user’s location.
+<li>`mainland`: Chinese mainland.</li>If this field is not specified, the data storage region will be determined based on the user's location.
  * @method void setArea(string $Area) Set Data storage region. Values:
 <li>`overseas`: Global (outside the Chinese mainland);</li>
-<li>`mainland`: Chinese mainland.</li>If this field is not specified, the data storage region will be determined based on the user’s location.
+<li>`mainland`: Chinese mainland.</li>If this field is not specified, the data storage region will be determined based on the user's location.
  */
 class DescribeDDoSAttackTopDataRequest extends AbstractModel
 {
@@ -77,7 +77,7 @@ class DescribeDDoSAttackTopDataRequest extends AbstractModel
     public $StartTime;
 
     /**
-     * @var string The end time.
+     * @var string The end time. The query time range (`EndTime` - `StartTime`) must be less than or equal to 31 days.
      */
     public $EndTime;
 
@@ -93,7 +93,7 @@ class DescribeDDoSAttackTopDataRequest extends AbstractModel
     public $MetricName;
 
     /**
-     * @var array Site ID set. This parameter is required.
+     * @var array Zone ID set. This parameter is required. A maximum of 100 zone IDs can be passed in. If you need to query data for all zones under the Tencent Cloud main account, please use "*" instead. To query account-level data, you need to have full resource permissions for all zones of this interface.
      */
     public $ZoneIds;
 
@@ -131,13 +131,13 @@ class DescribeDDoSAttackTopDataRequest extends AbstractModel
     /**
      * @var string Data storage region. Values:
 <li>`overseas`: Global (outside the Chinese mainland);</li>
-<li>`mainland`: Chinese mainland.</li>If this field is not specified, the data storage region will be determined based on the user’s location.
+<li>`mainland`: Chinese mainland.</li>If this field is not specified, the data storage region will be determined based on the user's location.
      */
     public $Area;
 
     /**
      * @param string $StartTime The start time.
-     * @param string $EndTime The end time.
+     * @param string $EndTime The end time. The query time range (`EndTime` - `StartTime`) must be less than or equal to 31 days.
      * @param string $MetricName The statistical metric. Values:
 <li>`ddos_attackFlux_protocol`: Rank protocols by the attack traffic.</li>
 <li>`ddos_attackPackageNum_protocol`: Rank protocols by the number of attack packets.</li>
@@ -145,7 +145,7 @@ class DescribeDDoSAttackTopDataRequest extends AbstractModel
 <li>`ddos_attackNum_sregion`: Rank attacker regions by the number of attacks.</li>
 <li>`ddos_attackFlux_sip`: Rank attacker IPs by the number of attacks.</li>
 <li>`ddos_attackFlux_sregion`: Rank attacker regions by the number of attacks.</li>
-     * @param array $ZoneIds Site ID set. This parameter is required.
+     * @param array $ZoneIds Zone ID set. This parameter is required. A maximum of 100 zone IDs can be passed in. If you need to query data for all zones under the Tencent Cloud main account, please use "*" instead. To query account-level data, you need to have full resource permissions for all zones of this interface.
      * @param array $PolicyIds The list of DDoS policy IDs to be specified. All policies will be selected if this field is not specified.
      * @param string $AttackType The attack type. Values:
 <li>`flood`: Flood;</li>
@@ -159,7 +159,7 @@ class DescribeDDoSAttackTopDataRequest extends AbstractModel
      * @param integer $Limit Queries the top n rows of data. Top 10 rows of data will be queried if this field is not specified.
      * @param string $Area Data storage region. Values:
 <li>`overseas`: Global (outside the Chinese mainland);</li>
-<li>`mainland`: Chinese mainland.</li>If this field is not specified, the data storage region will be determined based on the user’s location.
+<li>`mainland`: Chinese mainland.</li>If this field is not specified, the data storage region will be determined based on the user's location.
      */
     function __construct()
     {

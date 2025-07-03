@@ -31,7 +31,13 @@ use TencentCloud\Common\AbstractModel;
  * @method string getStaffNumber() Obtain Agent id.
  * @method void setStaffNumber(string $StaffNumber) Set Agent id.
  * @method integer getRoleId() Obtain User role id.
+When a user is bound to multiple roles, RoleIdList shall prevail.
  * @method void setRoleId(integer $RoleId) Set User role id.
+When a user is bound to multiple roles, RoleIdList shall prevail.
+ * @method integer getRoleIdList() Obtain User role id list.
+ * @method void setRoleIdList(integer $RoleIdList) Set User role id list.
+ * @method array getRoleList() Obtain 
+ * @method void setRoleList(array $RoleList) Set 
  * @method array getSkillGroupList() Obtain Affiliated skill group list.
  * @method void setSkillGroupList(array $SkillGroupList) Set Affiliated skill group list.
  * @method integer getLastModifyTimestamp() Obtain Last modification time.
@@ -68,9 +74,21 @@ class StaffInfo extends AbstractModel
 
     /**
      * @var integer User role id.
+When a user is bound to multiple roles, RoleIdList shall prevail.
      * @deprecated
      */
     public $RoleId;
+
+    /**
+     * @var integer User role id list.
+     * @deprecated
+     */
+    public $RoleIdList;
+
+    /**
+     * @var array 
+     */
+    public $RoleList;
 
     /**
      * @var array Affiliated skill group list.
@@ -94,6 +112,9 @@ class StaffInfo extends AbstractModel
      * @param string $Nick Agent nickname.
      * @param string $StaffNumber Agent id.
      * @param integer $RoleId User role id.
+When a user is bound to multiple roles, RoleIdList shall prevail.
+     * @param integer $RoleIdList User role id list.
+     * @param array $RoleList 
      * @param array $SkillGroupList Affiliated skill group list.
      * @param integer $LastModifyTimestamp Last modification time.
      * @param string $ExtensionNumber Agent extension number (starting with 1 to 8, 4 - 6 digits).
@@ -133,6 +154,14 @@ class StaffInfo extends AbstractModel
 
         if (array_key_exists("RoleId",$param) and $param["RoleId"] !== null) {
             $this->RoleId = $param["RoleId"];
+        }
+
+        if (array_key_exists("RoleIdList",$param) and $param["RoleIdList"] !== null) {
+            $this->RoleIdList = $param["RoleIdList"];
+        }
+
+        if (array_key_exists("RoleList",$param) and $param["RoleList"] !== null) {
+            $this->RoleList = $param["RoleList"];
         }
 
         if (array_key_exists("SkillGroupList",$param) and $param["SkillGroupList"] !== null) {

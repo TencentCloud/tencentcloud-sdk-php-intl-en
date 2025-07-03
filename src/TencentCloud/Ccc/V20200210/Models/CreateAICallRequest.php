@@ -24,16 +24,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSdkAppId(integer $SdkAppId) Set Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
  * @method string getCallee() Obtain Called number.
  * @method void setCallee(string $Callee) Set Called number.
- * @method string getLLMType() Obtain Model interface protocol types, currently compatible with three protocol types:
+ * @method string getLLMType() Obtain Model API protocol type. currently compatible with four protocol types:.
 
-- OpenAI protocol (including GPT, DeepSeek, etc.):"openai"
-- Azure protocol:"azure"
-- Minimax protocol:"minimax"
- * @method void setLLMType(string $LLMType) Set Model interface protocol types, currently compatible with three protocol types:
+-OpenAI protocol (including GPT, hunyuan, DeepSeek, etc.): "OpenAI".
+-Azure protocol: "azure".
+-Specifies the "Minimax" protocol.
+-Dify protocol: "dify".
+ * @method void setLLMType(string $LLMType) Set Model API protocol type. currently compatible with four protocol types:.
 
-- OpenAI protocol (including GPT, DeepSeek, etc.):"openai"
-- Azure protocol:"azure"
-- Minimax protocol:"minimax"
+-OpenAI protocol (including GPT, hunyuan, DeepSeek, etc.): "OpenAI".
+-Azure protocol: "azure".
+-Specifies the "Minimax" protocol.
+-Dify protocol: "dify".
  * @method string getAPIKey() Obtain Model API key, for authentication information, please refer to the respective model's official website
 
 - OpenAI protocol: [GPT](https://help.openai.com/en/articles/4936850-where-do-i-find-my-openai-api-key), [DeepSeek](https://api-docs.deepseek.com/zh-cn/);
@@ -406,6 +408,18 @@ Please refer to the specific protocol standards in the <a href="https://doc.weix
  * @method void setVadSilenceTime(integer $VadSilenceTime) Set Automatic speech recognition vad time ranges from 240 to 2000, with a default of 1000, measured in milliseconds. smaller values will make automatic speech recognition segment faster.
  * @method array getExtractConfig() Obtain Call content extraction configuration.
  * @method void setExtractConfig(array $ExtractConfig) Set Call content extraction configuration.
+ * @method float getTemperature() Obtain Model temperature control.
+ * @method void setTemperature(float $Temperature) Set Model temperature control.
+ * @method array getVariables() Obtain Common variable: <p>prompt content variable</p> <p>welcome message variable</p> <p>welcome message delay playback (in seconds): welcome-message-delay</p> <p>dify variable</p>.  
+
+dify-inputs-xxx specifies the inputs variable for dify.
+2. the dify-inputs-user specifies the user value for dify.
+3. dify-inputs-conversation_id is the conversation_id value of dify.
+ * @method void setVariables(array $Variables) Set Common variable: <p>prompt content variable</p> <p>welcome message variable</p> <p>welcome message delay playback (in seconds): welcome-message-delay</p> <p>dify variable</p>.  
+
+dify-inputs-xxx specifies the inputs variable for dify.
+2. the dify-inputs-user specifies the user value for dify.
+3. dify-inputs-conversation_id is the conversation_id value of dify.
  */
 class CreateAICallRequest extends AbstractModel
 {
@@ -420,11 +434,12 @@ class CreateAICallRequest extends AbstractModel
     public $Callee;
 
     /**
-     * @var string Model interface protocol types, currently compatible with three protocol types:
+     * @var string Model API protocol type. currently compatible with four protocol types:.
 
-- OpenAI protocol (including GPT, DeepSeek, etc.):"openai"
-- Azure protocol:"azure"
-- Minimax protocol:"minimax"
+-OpenAI protocol (including GPT, hunyuan, DeepSeek, etc.): "OpenAI".
+-Azure protocol: "azure".
+-Specifies the "Minimax" protocol.
+-Dify protocol: "dify".
      */
     public $LLMType;
 
@@ -712,13 +727,28 @@ Please refer to the specific protocol standards in the <a href="https://doc.weix
     public $ExtractConfig;
 
     /**
+     * @var float Model temperature control.
+     */
+    public $Temperature;
+
+    /**
+     * @var array Common variable: <p>prompt content variable</p> <p>welcome message variable</p> <p>welcome message delay playback (in seconds): welcome-message-delay</p> <p>dify variable</p>.  
+
+dify-inputs-xxx specifies the inputs variable for dify.
+2. the dify-inputs-user specifies the user value for dify.
+3. dify-inputs-conversation_id is the conversation_id value of dify.
+     */
+    public $Variables;
+
+    /**
      * @param integer $SdkAppId Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
      * @param string $Callee Called number.
-     * @param string $LLMType Model interface protocol types, currently compatible with three protocol types:
+     * @param string $LLMType Model API protocol type. currently compatible with four protocol types:.
 
-- OpenAI protocol (including GPT, DeepSeek, etc.):"openai"
-- Azure protocol:"azure"
-- Minimax protocol:"minimax"
+-OpenAI protocol (including GPT, hunyuan, DeepSeek, etc.): "OpenAI".
+-Azure protocol: "azure".
+-Specifies the "Minimax" protocol.
+-Dify protocol: "dify".
      * @param string $APIKey Model API key, for authentication information, please refer to the respective model's official website
 
 - OpenAI protocol: [GPT](https://help.openai.com/en/articles/4936850-where-do-i-find-my-openai-api-key), [DeepSeek](https://api-docs.deepseek.com/zh-cn/);
@@ -905,6 +935,12 @@ Please refer to the specific protocol standards in the <a href="https://doc.weix
      * @param array $PromptVariables Prompt word variable.
      * @param integer $VadSilenceTime Automatic speech recognition vad time ranges from 240 to 2000, with a default of 1000, measured in milliseconds. smaller values will make automatic speech recognition segment faster.
      * @param array $ExtractConfig Call content extraction configuration.
+     * @param float $Temperature Model temperature control.
+     * @param array $Variables Common variable: <p>prompt content variable</p> <p>welcome message variable</p> <p>welcome message delay playback (in seconds): welcome-message-delay</p> <p>dify variable</p>.  
+
+dify-inputs-xxx specifies the inputs variable for dify.
+2. the dify-inputs-user specifies the user value for dify.
+3. dify-inputs-conversation_id is the conversation_id value of dify.
      */
     function __construct()
     {
@@ -1039,6 +1075,19 @@ Please refer to the specific protocol standards in the <a href="https://doc.weix
                 $obj = new AICallExtractConfigElement();
                 $obj->deserialize($value);
                 array_push($this->ExtractConfig, $obj);
+            }
+        }
+
+        if (array_key_exists("Temperature",$param) and $param["Temperature"] !== null) {
+            $this->Temperature = $param["Temperature"];
+        }
+
+        if (array_key_exists("Variables",$param) and $param["Variables"] !== null) {
+            $this->Variables = [];
+            foreach ($param["Variables"] as $key => $value){
+                $obj = new Variable();
+                $obj->deserialize($value);
+                array_push($this->Variables, $obj);
             }
         }
     }

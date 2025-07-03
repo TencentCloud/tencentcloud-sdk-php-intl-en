@@ -22,46 +22,46 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getStartTime() Obtain The start time.
  * @method void setStartTime(string $StartTime) Set The start time.
- * @method string getEndTime() Obtain The end time.
- * @method void setEndTime(string $EndTime) Set The end time.
- * @method array getMetricNames() Obtain Query indicator. Values: 
-<li>l4Flow_connections: Number of access connections;</li>
-<li>l4Flow_flux: Total access traffic;</li>
-<li>l4Flow_inFlux: Ingress access traffic;</li>
-<li>l4Flow_outFlux: Egress access traffic. </li>
- * @method void setMetricNames(array $MetricNames) Set Query indicator. Values: 
-<li>l4Flow_connections: Number of access connections;</li>
-<li>l4Flow_flux: Total access traffic;</li>
-<li>l4Flow_inFlux: Ingress access traffic;</li>
-<li>l4Flow_outFlux: Egress access traffic. </li>
- * @method array getZoneIds() Obtain ZoneId set. This parameter is required.
- * @method void setZoneIds(array $ZoneIds) Set ZoneId set. This parameter is required.
+ * @method string getEndTime() Obtain The end time. The query time range (`EndTime` - `StartTime`) must be less than or equal to 31 days.
+ * @method void setEndTime(string $EndTime) Set The end time. The query time range (`EndTime` - `StartTime`) must be less than or equal to 31 days.
+ * @method array getMetricNames() Obtain Metric list. Valid values:
+<Li>l4Flow_connections: number of concurrent connections;</li>
+<Li>l4Flow_flux: total traffic;</li>
+<Li>l4Flow_inFlux: inbound traffic;</li>
+<Li>l4Flow_outFlux: outbound traffic.</li>
+<Li>l4Flow_inBandwidth: inbound peak bandwidth.</li>
+<Li>l4Flow_outBandwidth: outbound peak bandwidth.</li>
+ * @method void setMetricNames(array $MetricNames) Set Metric list. Valid values:
+<Li>l4Flow_connections: number of concurrent connections;</li>
+<Li>l4Flow_flux: total traffic;</li>
+<Li>l4Flow_inFlux: inbound traffic;</li>
+<Li>l4Flow_outFlux: outbound traffic.</li>
+<Li>l4Flow_inBandwidth: inbound peak bandwidth.</li>
+<Li>l4Flow_outBandwidth: outbound peak bandwidth.</li>
+ * @method array getZoneIds() Obtain Zone ID set. This parameter is required. A maximum of 100 zone IDs can be passed in. If you need to query data for all zones under the Tencent Cloud main account, please use "*" instead. To query account-level data, you need to have full resource permissions for all zones of this interface.
+ * @method void setZoneIds(array $ZoneIds) Set Zone ID set. This parameter is required. A maximum of 100 zone IDs can be passed in. If you need to query data for all zones under the Tencent Cloud main account, please use "*" instead. To query account-level data, you need to have full resource permissions for all zones of this interface.
  * @method array getProxyIds() Obtain List of L4 proxy IDs. All L4 proxies will be selected if this field is not specified.
  * @method void setProxyIds(array $ProxyIds) Set List of L4 proxy IDs. All L4 proxies will be selected if this field is not specified.
  * @method string getInterval() Obtain The query granularity. Values:
 <li>`min`: 1 minute;</li>
 <li>`5min`: 5 minutes;</li>
 <li>`hour`: 1 hour;</li>
-<li>`day`: 1 day.</li>If this field is not specified, the granularity will be determined based on the query period. <br>Period ≤ 1 hour: `min`; <br>1 hour < Period ≤ 2 days: `5min`; <br>2 days < period ≤ 7 days: `hour`; <br>Period > 7 days: `day`.
+<li>`day`: 1 day.</li>If this field is not specified, the granularity will be determined based on the query period. <br>Period <= 1 hour: `min`; <br>1 hour < period <= 2 days: `5min`; <br>2 days < period <= 7 days: `hour`; <br>Period > 7 days: `day`.
+
  * @method void setInterval(string $Interval) Set The query granularity. Values:
 <li>`min`: 1 minute;</li>
 <li>`5min`: 5 minutes;</li>
 <li>`hour`: 1 hour;</li>
-<li>`day`: 1 day.</li>If this field is not specified, the granularity will be determined based on the query period. <br>Period ≤ 1 hour: `min`; <br>1 hour < Period ≤ 2 days: `5min`; <br>2 days < period ≤ 7 days: `hour`; <br>Period > 7 days: `day`.
- * @method array getFilters() Obtain Filter criteria. The detailed Key values of filter criteria are as follows:
-<li>ruleId: Filter by forwarding rule ID.</li>
-<li>proxyId: Filter by L4 proxy instance ID.</li>
- * @method void setFilters(array $Filters) Set Filter criteria. The detailed Key values of filter criteria are as follows:
-<li>ruleId: Filter by forwarding rule ID.</li>
-<li>proxyId: Filter by L4 proxy instance ID.</li>
- * @method string getArea() Obtain Geolocation scope. Values:
-<li>`overseas`: Regions outside the Chinese mainland</li>
-<li>`mainland`: Chinese mainland</li>
-<li>`global`: Global</li>If this field is not specified, the default value `global` is used.
- * @method void setArea(string $Area) Set Geolocation scope. Values:
-<li>`overseas`: Regions outside the Chinese mainland</li>
-<li>`mainland`: Chinese mainland</li>
-<li>`global`: Global</li>If this field is not specified, the default value `global` is used.
+<li>`day`: 1 day.</li>If this field is not specified, the granularity will be determined based on the query period. <br>Period <= 1 hour: `min`; <br>1 hour < period <= 2 days: `5min`; <br>2 days < period <= 7 days: `hour`; <br>Period > 7 days: `day`.
+
+ * @method array getFilters() Obtain Filter criteria. The detailed key values of filter criteria are as follows:
+<li>ruleId: filter by forwarding rule ID.</li>
+<li>proxyId: filter by L4 proxy instance ID.</li>
+ * @method void setFilters(array $Filters) Set Filter criteria. The detailed key values of filter criteria are as follows:
+<li>ruleId: filter by forwarding rule ID.</li>
+<li>proxyId: filter by L4 proxy instance ID.</li>
+ * @method string getArea() Obtain Data ownership region. This parameter is deprecated. Please filter data by client region in Filters.country.
+ * @method void setArea(string $Area) Set Data ownership region. This parameter is deprecated. Please filter data by client region in Filters.country.
  */
 class DescribeTimingL4DataRequest extends AbstractModel
 {
@@ -71,21 +71,23 @@ class DescribeTimingL4DataRequest extends AbstractModel
     public $StartTime;
 
     /**
-     * @var string The end time.
+     * @var string The end time. The query time range (`EndTime` - `StartTime`) must be less than or equal to 31 days.
      */
     public $EndTime;
 
     /**
-     * @var array Query indicator. Values: 
-<li>l4Flow_connections: Number of access connections;</li>
-<li>l4Flow_flux: Total access traffic;</li>
-<li>l4Flow_inFlux: Ingress access traffic;</li>
-<li>l4Flow_outFlux: Egress access traffic. </li>
+     * @var array Metric list. Valid values:
+<Li>l4Flow_connections: number of concurrent connections;</li>
+<Li>l4Flow_flux: total traffic;</li>
+<Li>l4Flow_inFlux: inbound traffic;</li>
+<Li>l4Flow_outFlux: outbound traffic.</li>
+<Li>l4Flow_inBandwidth: inbound peak bandwidth.</li>
+<Li>l4Flow_outBandwidth: outbound peak bandwidth.</li>
      */
     public $MetricNames;
 
     /**
-     * @var array ZoneId set. This parameter is required.
+     * @var array Zone ID set. This parameter is required. A maximum of 100 zone IDs can be passed in. If you need to query data for all zones under the Tencent Cloud main account, please use "*" instead. To query account-level data, you need to have full resource permissions for all zones of this interface.
      */
     public $ZoneIds;
 
@@ -99,47 +101,45 @@ class DescribeTimingL4DataRequest extends AbstractModel
 <li>`min`: 1 minute;</li>
 <li>`5min`: 5 minutes;</li>
 <li>`hour`: 1 hour;</li>
-<li>`day`: 1 day.</li>If this field is not specified, the granularity will be determined based on the query period. <br>Period ≤ 1 hour: `min`; <br>1 hour < Period ≤ 2 days: `5min`; <br>2 days < period ≤ 7 days: `hour`; <br>Period > 7 days: `day`.
+<li>`day`: 1 day.</li>If this field is not specified, the granularity will be determined based on the query period. <br>Period <= 1 hour: `min`; <br>1 hour < period <= 2 days: `5min`; <br>2 days < period <= 7 days: `hour`; <br>Period > 7 days: `day`.
+
      */
     public $Interval;
 
     /**
-     * @var array Filter criteria. The detailed Key values of filter criteria are as follows:
-<li>ruleId: Filter by forwarding rule ID.</li>
-<li>proxyId: Filter by L4 proxy instance ID.</li>
+     * @var array Filter criteria. The detailed key values of filter criteria are as follows:
+<li>ruleId: filter by forwarding rule ID.</li>
+<li>proxyId: filter by L4 proxy instance ID.</li>
      */
     public $Filters;
 
     /**
-     * @var string Geolocation scope. Values:
-<li>`overseas`: Regions outside the Chinese mainland</li>
-<li>`mainland`: Chinese mainland</li>
-<li>`global`: Global</li>If this field is not specified, the default value `global` is used.
+     * @var string Data ownership region. This parameter is deprecated. Please filter data by client region in Filters.country.
      */
     public $Area;
 
     /**
      * @param string $StartTime The start time.
-     * @param string $EndTime The end time.
-     * @param array $MetricNames Query indicator. Values: 
-<li>l4Flow_connections: Number of access connections;</li>
-<li>l4Flow_flux: Total access traffic;</li>
-<li>l4Flow_inFlux: Ingress access traffic;</li>
-<li>l4Flow_outFlux: Egress access traffic. </li>
-     * @param array $ZoneIds ZoneId set. This parameter is required.
+     * @param string $EndTime The end time. The query time range (`EndTime` - `StartTime`) must be less than or equal to 31 days.
+     * @param array $MetricNames Metric list. Valid values:
+<Li>l4Flow_connections: number of concurrent connections;</li>
+<Li>l4Flow_flux: total traffic;</li>
+<Li>l4Flow_inFlux: inbound traffic;</li>
+<Li>l4Flow_outFlux: outbound traffic.</li>
+<Li>l4Flow_inBandwidth: inbound peak bandwidth.</li>
+<Li>l4Flow_outBandwidth: outbound peak bandwidth.</li>
+     * @param array $ZoneIds Zone ID set. This parameter is required. A maximum of 100 zone IDs can be passed in. If you need to query data for all zones under the Tencent Cloud main account, please use "*" instead. To query account-level data, you need to have full resource permissions for all zones of this interface.
      * @param array $ProxyIds List of L4 proxy IDs. All L4 proxies will be selected if this field is not specified.
      * @param string $Interval The query granularity. Values:
 <li>`min`: 1 minute;</li>
 <li>`5min`: 5 minutes;</li>
 <li>`hour`: 1 hour;</li>
-<li>`day`: 1 day.</li>If this field is not specified, the granularity will be determined based on the query period. <br>Period ≤ 1 hour: `min`; <br>1 hour < Period ≤ 2 days: `5min`; <br>2 days < period ≤ 7 days: `hour`; <br>Period > 7 days: `day`.
-     * @param array $Filters Filter criteria. The detailed Key values of filter criteria are as follows:
-<li>ruleId: Filter by forwarding rule ID.</li>
-<li>proxyId: Filter by L4 proxy instance ID.</li>
-     * @param string $Area Geolocation scope. Values:
-<li>`overseas`: Regions outside the Chinese mainland</li>
-<li>`mainland`: Chinese mainland</li>
-<li>`global`: Global</li>If this field is not specified, the default value `global` is used.
+<li>`day`: 1 day.</li>If this field is not specified, the granularity will be determined based on the query period. <br>Period <= 1 hour: `min`; <br>1 hour < period <= 2 days: `5min`; <br>2 days < period <= 7 days: `hour`; <br>Period > 7 days: `day`.
+
+     * @param array $Filters Filter criteria. The detailed key values of filter criteria are as follows:
+<li>ruleId: filter by forwarding rule ID.</li>
+<li>proxyId: filter by L4 proxy instance ID.</li>
+     * @param string $Area Data ownership region. This parameter is deprecated. Please filter data by client region in Filters.country.
      */
     function __construct()
     {

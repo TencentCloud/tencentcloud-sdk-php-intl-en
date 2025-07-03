@@ -22,16 +22,16 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getSdkAppId() Obtain Application id.
  * @method void setSdkAppId(integer $SdkAppId) Set Application id.
- * @method string getUserId() Obtain Customer service user id usually refers to the customer service email.
- * @method void setUserId(string $UserId) Set Customer service user id usually refers to the customer service email.
+ * @method string getUserId() Obtain Customer service user ID, generally the customer service email. ensure that the mobile number has been bound. https://intl.cloud.tencent.com/document/product/679/76067?from_cn_redirect=1#.E6.AD.A5.E9.AA.A42.EF.BC.9A.E5.AE.8C.E5.96.84.E8.B4.A6.E5.8F.B7.E4.BF.A1.E6.81.AF.
+ * @method void setUserId(string $UserId) Set Customer service user ID, generally the customer service email. ensure that the mobile number has been bound. https://intl.cloud.tencent.com/document/product/679/76067?from_cn_redirect=1#.E6.AD.A5.E9.AA.A42.EF.BC.9A.E5.AE.8C.E5.96.84.E8.B4.A6.E5.8F.B7.E4.BF.A1.E6.81.AF.
  * @method string getCallee() Obtain Called number must be preceded by 0086.
  * @method void setCallee(string $Callee) Set Called number must be preceded by 0086.
  * @method string getCaller() Obtain Caller number (obsolete one and use callers) must be preceded by 0086.
  * @method void setCaller(string $Caller) Set Caller number (obsolete one and use callers) must be preceded by 0086.
  * @method array getCallers() Obtain Designated caller number list. if the prior number fails, it will automatically switch to the next number that must be preceded by 0086.
  * @method void setCallers(array $Callers) Set Designated caller number list. if the prior number fails, it will automatically switch to the next number that must be preceded by 0086.
- * @method boolean getIsForceUseMobile() Obtain Whether to force the use of cell phone outbound call or not, currently only supports true, if true, please ensure that the allowlist has been configured.
- * @method void setIsForceUseMobile(boolean $IsForceUseMobile) Set Whether to force the use of cell phone outbound call or not, currently only supports true, if true, please ensure that the allowlist has been configured.
+ * @method boolean getIsForceUseMobile() Obtain Whether to force the use of mobile outbound call. currently only supports true. if set to true, ensure the allowlist is configured. https://intl.cloud.tencent.com/document/product/679/76744?from_cn_redirect=1#.E6.93.8D.E4.BD.9C.E6.AD.A5.E9.AA.A4.
+ * @method void setIsForceUseMobile(boolean $IsForceUseMobile) Set Whether to force the use of mobile outbound call. currently only supports true. if set to true, ensure the allowlist is configured. https://intl.cloud.tencent.com/document/product/679/76744?from_cn_redirect=1#.E6.93.8D.E4.BD.9C.E6.AD.A5.E9.AA.A4.
  * @method string getUui() Obtain Custom data, length limited to 1024 bytes.
  * @method void setUui(string $Uui) Set Custom data, length limited to 1024 bytes.
  * @method string getUUI() Obtain Custom data, length limited to 1024 bytes.
@@ -45,7 +45,7 @@ class CreateCallOutSessionRequest extends AbstractModel
     public $SdkAppId;
 
     /**
-     * @var string Customer service user id usually refers to the customer service email.
+     * @var string Customer service user ID, generally the customer service email. ensure that the mobile number has been bound. https://intl.cloud.tencent.com/document/product/679/76067?from_cn_redirect=1#.E6.AD.A5.E9.AA.A42.EF.BC.9A.E5.AE.8C.E5.96.84.E8.B4.A6.E5.8F.B7.E4.BF.A1.E6.81.AF.
      */
     public $UserId;
 
@@ -65,7 +65,7 @@ class CreateCallOutSessionRequest extends AbstractModel
     public $Callers;
 
     /**
-     * @var boolean Whether to force the use of cell phone outbound call or not, currently only supports true, if true, please ensure that the allowlist has been configured.
+     * @var boolean Whether to force the use of mobile outbound call. currently only supports true. if set to true, ensure the allowlist is configured. https://intl.cloud.tencent.com/document/product/679/76744?from_cn_redirect=1#.E6.93.8D.E4.BD.9C.E6.AD.A5.E9.AA.A4.
      */
     public $IsForceUseMobile;
 
@@ -82,11 +82,11 @@ class CreateCallOutSessionRequest extends AbstractModel
 
     /**
      * @param integer $SdkAppId Application id.
-     * @param string $UserId Customer service user id usually refers to the customer service email.
+     * @param string $UserId Customer service user ID, generally the customer service email. ensure that the mobile number has been bound. https://intl.cloud.tencent.com/document/product/679/76067?from_cn_redirect=1#.E6.AD.A5.E9.AA.A42.EF.BC.9A.E5.AE.8C.E5.96.84.E8.B4.A6.E5.8F.B7.E4.BF.A1.E6.81.AF.
      * @param string $Callee Called number must be preceded by 0086.
      * @param string $Caller Caller number (obsolete one and use callers) must be preceded by 0086.
      * @param array $Callers Designated caller number list. if the prior number fails, it will automatically switch to the next number that must be preceded by 0086.
-     * @param boolean $IsForceUseMobile Whether to force the use of cell phone outbound call or not, currently only supports true, if true, please ensure that the allowlist has been configured.
+     * @param boolean $IsForceUseMobile Whether to force the use of mobile outbound call. currently only supports true. if set to true, ensure the allowlist is configured. https://intl.cloud.tencent.com/document/product/679/76744?from_cn_redirect=1#.E6.93.8D.E4.BD.9C.E6.AD.A5.E9.AA.A4.
      * @param string $Uui Custom data, length limited to 1024 bytes.
      * @param string $UUI Custom data, length limited to 1024 bytes.
      */

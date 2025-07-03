@@ -52,6 +52,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUUI(string $UUI) Set UUI
  * @method array getCalleeAttributes() Obtain Property of the called.
  * @method void setCalleeAttributes(array $CalleeAttributes) Set Property of the called.
+ * @method string getTimeZone() Obtain IANA time zone name. see https://datatracker.ietf.org/doc/html/draft-ietf-netmod-iana-timezones.
+ * @method void setTimeZone(string $TimeZone) Set IANA time zone name. see https://datatracker.ietf.org/doc/html/draft-ietf-netmod-iana-timezones.
+ * @method array getAvailableTime() Obtain Value range of available time.
+ * @method void setAvailableTime(array $AvailableTime) Set Value range of available time.
  */
 class CreatePredictiveDialingCampaignRequest extends AbstractModel
 {
@@ -136,6 +140,16 @@ class CreatePredictiveDialingCampaignRequest extends AbstractModel
     public $CalleeAttributes;
 
     /**
+     * @var string IANA time zone name. see https://datatracker.ietf.org/doc/html/draft-ietf-netmod-iana-timezones.
+     */
+    public $TimeZone;
+
+    /**
+     * @var array Value range of available time.
+     */
+    public $AvailableTime;
+
+    /**
      * @param integer $SdkAppId Application id (required) can be found at https://console.cloud.tencent.com/ccc.
      * @param string $Name <Task name>.
      * @param array $Callees Called list supporting e.164 or number formats without country code.
@@ -152,6 +166,8 @@ class CreatePredictiveDialingCampaignRequest extends AbstractModel
      * @param array $Variables Custom variable.
      * @param string $UUI UUI
      * @param array $CalleeAttributes Property of the called.
+     * @param string $TimeZone IANA time zone name. see https://datatracker.ietf.org/doc/html/draft-ietf-netmod-iana-timezones.
+     * @param array $AvailableTime Value range of available time.
      */
     function __construct()
     {
@@ -237,6 +253,19 @@ class CreatePredictiveDialingCampaignRequest extends AbstractModel
                 $obj = new CalleeAttribute();
                 $obj->deserialize($value);
                 array_push($this->CalleeAttributes, $obj);
+            }
+        }
+
+        if (array_key_exists("TimeZone",$param) and $param["TimeZone"] !== null) {
+            $this->TimeZone = $param["TimeZone"];
+        }
+
+        if (array_key_exists("AvailableTime",$param) and $param["AvailableTime"] !== null) {
+            $this->AvailableTime = [];
+            foreach ($param["AvailableTime"] as $key => $value){
+                $obj = new TimeRange();
+                $obj->deserialize($value);
+                array_push($this->AvailableTime, $obj);
             }
         }
     }

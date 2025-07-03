@@ -141,6 +141,7 @@ class DeviceInfo extends AbstractModel
 
     /**
      * @var string Device ID at the NB-IoT ISP
+     * @deprecated
      */
     public $NbiotDeviceID;
 
