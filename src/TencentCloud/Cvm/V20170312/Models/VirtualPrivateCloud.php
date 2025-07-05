@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -29,7 +29,9 @@ use TencentCloud\Common\AbstractModel;
  * @method array getPrivateIpAddresses() Obtain Array of VPC subnet IPs. You can use this parameter when creating instances or modifying VPC attributes of instances. Currently you can specify multiple IPs in one subnet only when creating multiple instances at the same time.
  * @method void setPrivateIpAddresses(array $PrivateIpAddresses) Set Array of VPC subnet IPs. You can use this parameter when creating instances or modifying VPC attributes of instances. Currently you can specify multiple IPs in one subnet only when creating multiple instances at the same time.
  * @method integer getIpv6AddressCount() Obtain Number of IPv6 addresses randomly generated for the ENI.
+If IPv6AddressType is specified under InternetAccessible, this parameter must not be set to 0.
  * @method void setIpv6AddressCount(integer $Ipv6AddressCount) Set Number of IPv6 addresses randomly generated for the ENI.
+If IPv6AddressType is specified under InternetAccessible, this parameter must not be set to 0.
  */
 class VirtualPrivateCloud extends AbstractModel
 {
@@ -55,6 +57,7 @@ class VirtualPrivateCloud extends AbstractModel
 
     /**
      * @var integer Number of IPv6 addresses randomly generated for the ENI.
+If IPv6AddressType is specified under InternetAccessible, this parameter must not be set to 0.
      */
     public $Ipv6AddressCount;
 
@@ -64,6 +67,7 @@ class VirtualPrivateCloud extends AbstractModel
      * @param boolean $AsVpcGateway Whether it is used as a public gateway. A public gateway can only be used normally when an instance has a public IP address and is in a VPC. Valid values:<li>true: It is used as a public gateway.</li><li>false: It is not used as a public gateway.</li>Default value: false.
      * @param array $PrivateIpAddresses Array of VPC subnet IPs. You can use this parameter when creating instances or modifying VPC attributes of instances. Currently you can specify multiple IPs in one subnet only when creating multiple instances at the same time.
      * @param integer $Ipv6AddressCount Number of IPv6 addresses randomly generated for the ENI.
+If IPv6AddressType is specified under InternetAccessible, this parameter must not be set to 0.
      */
     function __construct()
     {

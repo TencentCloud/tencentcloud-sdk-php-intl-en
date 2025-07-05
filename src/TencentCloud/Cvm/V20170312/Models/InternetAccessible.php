@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -28,6 +28,68 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPublicIpAssigned(boolean $PublicIpAssigned) Set Whether to allocate a public IP address. Valid values:<br><li>true: Allocate a public IP address.</li><li>false: Do not allocate a public IP address.</li><br>When the public network bandwidth is greater than 0 Mbps, you can choose whether to enable the public IP address. The public IP address is enabled by default. When the public network bandwidth is 0, allocating the public IP address is not supported. This parameter is only used as an input parameter in the RunInstances API.
  * @method string getBandwidthPackageId() Obtain Bandwidth package ID. it can be obtained through the `BandwidthPackageId` in the return value from the DescribeBandwidthPackages api. this parameter is used as an input parameter only in the RunInstances api.
  * @method void setBandwidthPackageId(string $BandwidthPackageId) Set Bandwidth package ID. it can be obtained through the `BandwidthPackageId` in the return value from the DescribeBandwidthPackages api. this parameter is used as an input parameter only in the RunInstances api.
+ * @method string getInternetServiceProvider() Obtain The EIP line type. 
+ <li>BGP Default: BGP</li>
+
+For a user who has activated the static single-line IP allowlist, possible values are:
+
+ <li>CMCC: China Mobile</li>
+ <li>CTCC: China Telecom</li>
+ <li>CUCC: China Unicom</li>
+
+Note: Only certain regions support static single-line IP addresses.
+ * @method void setInternetServiceProvider(string $InternetServiceProvider) Set The EIP line type. 
+ <li>BGP Default: BGP</li>
+
+For a user who has activated the static single-line IP allowlist, possible values are:
+
+ <li>CMCC: China Mobile</li>
+ <li>CTCC: China Telecom</li>
+ <li>CUCC: China Unicom</li>
+
+Note: Only certain regions support static single-line IP addresses.
+ * @method string getIPv4AddressType() Obtain AddressType. Default value: `WanIP`.
+
+For beta users of dedicated IP, the value can be:
+<li>HighQualityEIP: Dedicated IP</li>
+Note that dedicated IPs are only available in partial regions.
+
+For beta users of Anti-DDoS IP, the value can be:
+<li>AntiDDoSEIP: Anti-DDoS EIP</li>
+Note that Anti-DDoS IPs are only available in partial regions.
+
+This feature is currently in gradually released phase. To access it, please contact us.
+ * @method void setIPv4AddressType(string $IPv4AddressType) Set AddressType. Default value: `WanIP`.
+
+For beta users of dedicated IP, the value can be:
+<li>HighQualityEIP: Dedicated IP</li>
+Note that dedicated IPs are only available in partial regions.
+
+For beta users of Anti-DDoS IP, the value can be:
+<li>AntiDDoSEIP: Anti-DDoS EIP</li>
+Note that Anti-DDoS IPs are only available in partial regions.
+
+This feature is currently in gradually released phase. To access it, please contact us.
+ * @method string getIPv6AddressType() Obtain Indicates the type of EIPv6. Valid values:
+
+<li>EIPv6: common IPv6</li>
+<li>HighQualityEIPv6: dedicated IPv6</li>
+Note: Contact the product team to enable the dedicated IPv6 allowlist. The dedicated IPv6 is only supported in some regions. 
+
+Default: `EIPv6`
+
+This feature is currently in gradually released phase. To access it, please contact us.
+ * @method void setIPv6AddressType(string $IPv6AddressType) Set Indicates the type of EIPv6. Valid values:
+
+<li>EIPv6: common IPv6</li>
+<li>HighQualityEIPv6: dedicated IPv6</li>
+Note: Contact the product team to enable the dedicated IPv6 allowlist. The dedicated IPv6 is only supported in some regions. 
+
+Default: `EIPv6`
+
+This feature is currently in gradually released phase. To access it, please contact us.
+ * @method string getAntiDDoSPackageId() Obtain Anti-DDoS service package ID. This is required when you want to request an Anti-DDoS IP.
+ * @method void setAntiDDoSPackageId(string $AntiDDoSPackageId) Set Anti-DDoS service package ID. This is required when you want to request an Anti-DDoS IP.
  */
 class InternetAccessible extends AbstractModel
 {
@@ -52,10 +114,88 @@ class InternetAccessible extends AbstractModel
     public $BandwidthPackageId;
 
     /**
+     * @var string The EIP line type. 
+ <li>BGP Default: BGP</li>
+
+For a user who has activated the static single-line IP allowlist, possible values are:
+
+ <li>CMCC: China Mobile</li>
+ <li>CTCC: China Telecom</li>
+ <li>CUCC: China Unicom</li>
+
+Note: Only certain regions support static single-line IP addresses.
+     */
+    public $InternetServiceProvider;
+
+    /**
+     * @var string AddressType. Default value: `WanIP`.
+
+For beta users of dedicated IP, the value can be:
+<li>HighQualityEIP: Dedicated IP</li>
+Note that dedicated IPs are only available in partial regions.
+
+For beta users of Anti-DDoS IP, the value can be:
+<li>AntiDDoSEIP: Anti-DDoS EIP</li>
+Note that Anti-DDoS IPs are only available in partial regions.
+
+This feature is currently in gradually released phase. To access it, please contact us.
+     */
+    public $IPv4AddressType;
+
+    /**
+     * @var string Indicates the type of EIPv6. Valid values:
+
+<li>EIPv6: common IPv6</li>
+<li>HighQualityEIPv6: dedicated IPv6</li>
+Note: Contact the product team to enable the dedicated IPv6 allowlist. The dedicated IPv6 is only supported in some regions. 
+
+Default: `EIPv6`
+
+This feature is currently in gradually released phase. To access it, please contact us.
+     */
+    public $IPv6AddressType;
+
+    /**
+     * @var string Anti-DDoS service package ID. This is required when you want to request an Anti-DDoS IP.
+     */
+    public $AntiDDoSPackageId;
+
+    /**
      * @param string $InternetChargeType Network connection billing plan. Valid value: <br><li>TRAFFIC_POSTPAID_BY_HOUR: pay after use. You are billed for your traffic, by the hour.
      * @param integer $InternetMaxBandwidthOut The maximum outbound bandwidth of the public network, in Mbps. The default value is 0 Mbps. The upper limit of bandwidth varies for different models. For more information, see [Purchase Network Bandwidth](https://intl.cloud.tencent.com/document/product/213/12523?from_cn_redirect=1).
      * @param boolean $PublicIpAssigned Whether to allocate a public IP address. Valid values:<br><li>true: Allocate a public IP address.</li><li>false: Do not allocate a public IP address.</li><br>When the public network bandwidth is greater than 0 Mbps, you can choose whether to enable the public IP address. The public IP address is enabled by default. When the public network bandwidth is 0, allocating the public IP address is not supported. This parameter is only used as an input parameter in the RunInstances API.
      * @param string $BandwidthPackageId Bandwidth package ID. it can be obtained through the `BandwidthPackageId` in the return value from the DescribeBandwidthPackages api. this parameter is used as an input parameter only in the RunInstances api.
+     * @param string $InternetServiceProvider The EIP line type. 
+ <li>BGP Default: BGP</li>
+
+For a user who has activated the static single-line IP allowlist, possible values are:
+
+ <li>CMCC: China Mobile</li>
+ <li>CTCC: China Telecom</li>
+ <li>CUCC: China Unicom</li>
+
+Note: Only certain regions support static single-line IP addresses.
+     * @param string $IPv4AddressType AddressType. Default value: `WanIP`.
+
+For beta users of dedicated IP, the value can be:
+<li>HighQualityEIP: Dedicated IP</li>
+Note that dedicated IPs are only available in partial regions.
+
+For beta users of Anti-DDoS IP, the value can be:
+<li>AntiDDoSEIP: Anti-DDoS EIP</li>
+Note that Anti-DDoS IPs are only available in partial regions.
+
+This feature is currently in gradually released phase. To access it, please contact us.
+     * @param string $IPv6AddressType Indicates the type of EIPv6. Valid values:
+
+<li>EIPv6: common IPv6</li>
+<li>HighQualityEIPv6: dedicated IPv6</li>
+Note: Contact the product team to enable the dedicated IPv6 allowlist. The dedicated IPv6 is only supported in some regions. 
+
+Default: `EIPv6`
+
+This feature is currently in gradually released phase. To access it, please contact us.
+     * @param string $AntiDDoSPackageId Anti-DDoS service package ID. This is required when you want to request an Anti-DDoS IP.
      */
     function __construct()
     {
@@ -84,6 +224,22 @@ class InternetAccessible extends AbstractModel
 
         if (array_key_exists("BandwidthPackageId",$param) and $param["BandwidthPackageId"] !== null) {
             $this->BandwidthPackageId = $param["BandwidthPackageId"];
+        }
+
+        if (array_key_exists("InternetServiceProvider",$param) and $param["InternetServiceProvider"] !== null) {
+            $this->InternetServiceProvider = $param["InternetServiceProvider"];
+        }
+
+        if (array_key_exists("IPv4AddressType",$param) and $param["IPv4AddressType"] !== null) {
+            $this->IPv4AddressType = $param["IPv4AddressType"];
+        }
+
+        if (array_key_exists("IPv6AddressType",$param) and $param["IPv6AddressType"] !== null) {
+            $this->IPv6AddressType = $param["IPv6AddressType"];
+        }
+
+        if (array_key_exists("AntiDDoSPackageId",$param) and $param["AntiDDoSPackageId"] !== null) {
+            $this->AntiDDoSPackageId = $param["AntiDDoSPackageId"];
         }
     }
 }

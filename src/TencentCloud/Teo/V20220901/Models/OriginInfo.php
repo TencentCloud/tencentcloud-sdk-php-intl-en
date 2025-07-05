@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -64,16 +64,14 @@ If it is not specified, the default value is off.
 If it is not specified, the default value is off.
  * @method array getPrivateParameters() Obtain Private authentication parameter. This parameter is valid only when PrivateAccess is on.
  * @method void setPrivateParameters(array $PrivateParameters) Set Private authentication parameter. This parameter is valid only when PrivateAccess is on.
- * @method string getHostHeader() Obtain Custom origin HOST header, this parameter only takes effect when OriginType=IP_DOMAIN. 
-
-- If OriginType=COS or AWS_S3, the origin HOST header will be consistent with the origin domain name. 
-- If OriginType=ORIGIN_GROUP, the origin HOST header follows the configuration within the origin group;if not configured, it defaults to the acceleration domain name. 
-- If OriginType=VOD or SPACE, there is no need to configure this header, and it will take effect according to the corresponding origin domain name.
- * @method void setHostHeader(string $HostHeader) Set Custom origin HOST header, this parameter only takes effect when OriginType=IP_DOMAIN. 
-
-- If OriginType=COS or AWS_S3, the origin HOST header will be consistent with the origin domain name. 
-- If OriginType=ORIGIN_GROUP, the origin HOST header follows the configuration within the origin group;if not configured, it defaults to the acceleration domain name. 
-- If OriginType=VOD or SPACE, there is no need to configure this header, and it will take effect according to the corresponding origin domain name.
+ * @method string getHostHeader() Obtain Custom origin server HOST header. this parameter is valid only when OriginType=IP_DOMAIN.If the OriginType is another type of origin, this parameter does not need to be passed in, otherwise an error will be reported.
+If OriginType is COS or AWS_S3, the HOST header for origin-pull will remain consistent with the origin server domain name.
+If OriginType is ORIGIN_GROUP, the HOST header follows the ORIGIN site GROUP configuration. if not configured, it defaults to the acceleration domain name.
+If OriginType is VOD or SPACE, no configuration is required for this header, and the domain name takes effect based on the corresponding origin.
+ * @method void setHostHeader(string $HostHeader) Set Custom origin server HOST header. this parameter is valid only when OriginType=IP_DOMAIN.If the OriginType is another type of origin, this parameter does not need to be passed in, otherwise an error will be reported.
+If OriginType is COS or AWS_S3, the HOST header for origin-pull will remain consistent with the origin server domain name.
+If OriginType is ORIGIN_GROUP, the HOST header follows the ORIGIN site GROUP configuration. if not configured, it defaults to the acceleration domain name.
+If OriginType is VOD or SPACE, no configuration is required for this header, and the domain name takes effect based on the corresponding origin.
  * @method integer getVodeoSubAppId() Obtain VODEO sub-application ID. This parameter is required when OriginType is VODEO.
  * @method void setVodeoSubAppId(integer $VodeoSubAppId) Set VODEO sub-application ID. This parameter is required when OriginType is VODEO.
  * @method string getVodeoDistributionRange() Obtain VOD on EO distribution range. This parameter is required when OriginType = VODEO. The values are: 
@@ -136,11 +134,10 @@ If it is not specified, the default value is off.
     public $PrivateParameters;
 
     /**
-     * @var string Custom origin HOST header, this parameter only takes effect when OriginType=IP_DOMAIN. 
-
-- If OriginType=COS or AWS_S3, the origin HOST header will be consistent with the origin domain name. 
-- If OriginType=ORIGIN_GROUP, the origin HOST header follows the configuration within the origin group;if not configured, it defaults to the acceleration domain name. 
-- If OriginType=VOD or SPACE, there is no need to configure this header, and it will take effect according to the corresponding origin domain name.
+     * @var string Custom origin server HOST header. this parameter is valid only when OriginType=IP_DOMAIN.If the OriginType is another type of origin, this parameter does not need to be passed in, otherwise an error will be reported.
+If OriginType is COS or AWS_S3, the HOST header for origin-pull will remain consistent with the origin server domain name.
+If OriginType is ORIGIN_GROUP, the HOST header follows the ORIGIN site GROUP configuration. if not configured, it defaults to the acceleration domain name.
+If OriginType is VOD or SPACE, no configuration is required for this header, and the domain name takes effect based on the corresponding origin.
      */
     public $HostHeader;
 
@@ -198,11 +195,10 @@ If it is not specified, the default value is off.
 <li>off: Disable private authentication.</li>
 If it is not specified, the default value is off.
      * @param array $PrivateParameters Private authentication parameter. This parameter is valid only when PrivateAccess is on.
-     * @param string $HostHeader Custom origin HOST header, this parameter only takes effect when OriginType=IP_DOMAIN. 
-
-- If OriginType=COS or AWS_S3, the origin HOST header will be consistent with the origin domain name. 
-- If OriginType=ORIGIN_GROUP, the origin HOST header follows the configuration within the origin group;if not configured, it defaults to the acceleration domain name. 
-- If OriginType=VOD or SPACE, there is no need to configure this header, and it will take effect according to the corresponding origin domain name.
+     * @param string $HostHeader Custom origin server HOST header. this parameter is valid only when OriginType=IP_DOMAIN.If the OriginType is another type of origin, this parameter does not need to be passed in, otherwise an error will be reported.
+If OriginType is COS or AWS_S3, the HOST header for origin-pull will remain consistent with the origin server domain name.
+If OriginType is ORIGIN_GROUP, the HOST header follows the ORIGIN site GROUP configuration. if not configured, it defaults to the acceleration domain name.
+If OriginType is VOD or SPACE, no configuration is required for this header, and the domain name takes effect based on the corresponding origin.
      * @param integer $VodeoSubAppId VODEO sub-application ID. This parameter is required when OriginType is VODEO.
      * @param string $VodeoDistributionRange VOD on EO distribution range. This parameter is required when OriginType = VODEO. The values are: 
 <li>All: all buckets under the current application;</li> 

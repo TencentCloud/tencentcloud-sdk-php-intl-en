@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -124,6 +124,10 @@ Note: this field may return null, indicating that no valid value was found.
 Note: This field may return `null`, indicating that no valid values can be obtained.
  * @method void setLatestOperationErrorMsg(string $LatestOperationErrorMsg) Set Latest operation errors of the instance.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method array getPublicIPv6Addresses() Obtain Public IPv6 address of the instance.
+Note: this field may return null, indicating that no valid value was found.
+ * @method void setPublicIPv6Addresses(array $PublicIPv6Addresses) Set Public IPv6 address of the instance.
+Note: this field may return null, indicating that no valid value was found.
  */
 class Instance extends AbstractModel
 {
@@ -344,6 +348,12 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     public $LatestOperationErrorMsg;
 
     /**
+     * @var array Public IPv6 address of the instance.
+Note: this field may return null, indicating that no valid value was found.
+     */
+    public $PublicIPv6Addresses;
+
+    /**
      * @param Placement $Placement Location of the instance
      * @param string $InstanceId Instance `ID`
      * @param string $InstanceType Instance model
@@ -396,6 +406,8 @@ Note: this field may return null, indicating that no valid value was found.
      * @param integer $DefaultLoginPort Default login port
      * @param string $LatestOperationErrorMsg Latest operation errors of the instance.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param array $PublicIPv6Addresses Public IPv6 address of the instance.
+Note: this field may return null, indicating that no valid value was found.
      */
     function __construct()
     {
@@ -588,6 +600,10 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 
         if (array_key_exists("LatestOperationErrorMsg",$param) and $param["LatestOperationErrorMsg"] !== null) {
             $this->LatestOperationErrorMsg = $param["LatestOperationErrorMsg"];
+        }
+
+        if (array_key_exists("PublicIPv6Addresses",$param) and $param["PublicIPv6Addresses"] !== null) {
+            $this->PublicIPv6Addresses = $param["PublicIPv6Addresses"];
         }
     }
 }

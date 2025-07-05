@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -20,25 +20,25 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Describes information on the block device where the operating system is stored, i.e., the system disk.
  *
- * @method string getDiskType() Obtain Specifies the system disk type. for the restrictions on the system disk type, refer to [storage overview](https://intl.cloud.tencent.com/document/product/213/4952?from_cn_redirect=1). value range:<br>.
-<Li>LOCAL_BASIC: specifies a local hard disk.</li>.
-<Li>LOCAL_SSD: specifies a local ssd.</li>.
-<Li>CLOUD_BASIC: ordinary cloud disk.</li>.
-<Li>CLOUD_SSD: ssd cloud disk</li>.
-<Li>CLOUD_PREMIUM: high-performance cloud block storage.</li>.
-<Li>CLOUD_BSSD: universal type ssd cloud disk</li>.
-<Li>CLOUD_HSSD: enhanced ssd cloud disk</li>.
-<li>CLOUD_TSSD: ultra-fast SSD cbs</li.
+ * @method string getDiskType() Obtain Specifies the system disk type. for the restrictions on the system disk type, refer to [storage overview](https://intl.cloud.tencent.com/document/product/213/4952?from_cn_redirect=1). value range:<br>
+<li>LOCAL_BASIC: Local SATA disk</li>
+<li>LOCAL_SSD: Local NVMe SSD</li>
+<li>CLOUD_BASIC: Cloud SATA disk</li>
+<li>CLOUD_SSD: Cloud SSD</li>
+<li>CLOUD_PREMIUM: Premium SSD</li>
+<li>CLOUD_BSSD: Balanced SSD</li>
+<li>CLOUD_HSSD: Enhanced SSD</li>
+<li>CLOUD_TSSD: Tremendous SSD</li>
 Default value: Current disk types with inventory available.
- * @method void setDiskType(string $DiskType) Set Specifies the system disk type. for the restrictions on the system disk type, refer to [storage overview](https://intl.cloud.tencent.com/document/product/213/4952?from_cn_redirect=1). value range:<br>.
-<Li>LOCAL_BASIC: specifies a local hard disk.</li>.
-<Li>LOCAL_SSD: specifies a local ssd.</li>.
-<Li>CLOUD_BASIC: ordinary cloud disk.</li>.
-<Li>CLOUD_SSD: ssd cloud disk</li>.
-<Li>CLOUD_PREMIUM: high-performance cloud block storage.</li>.
-<Li>CLOUD_BSSD: universal type ssd cloud disk</li>.
-<Li>CLOUD_HSSD: enhanced ssd cloud disk</li>.
-<li>CLOUD_TSSD: ultra-fast SSD cbs</li.
+ * @method void setDiskType(string $DiskType) Set Specifies the system disk type. for the restrictions on the system disk type, refer to [storage overview](https://intl.cloud.tencent.com/document/product/213/4952?from_cn_redirect=1). value range:<br>
+<li>LOCAL_BASIC: Local SATA disk</li>
+<li>LOCAL_SSD: Local NVMe SSD</li>
+<li>CLOUD_BASIC: Cloud SATA disk</li>
+<li>CLOUD_SSD: Cloud SSD</li>
+<li>CLOUD_PREMIUM: Premium SSD</li>
+<li>CLOUD_BSSD: Balanced SSD</li>
+<li>CLOUD_HSSD: Enhanced SSD</li>
+<li>CLOUD_TSSD: Tremendous SSD</li>
 Default value: Current disk types with inventory available.
  * @method string getDiskId() Obtain Specifies the system disk ID.
 This parameter currently only serves as a response parameter for query apis such as `DescribeInstances`, and cannot be used as an input parameter for write apis such as `RunInstances`.
@@ -54,15 +54,15 @@ This parameter currently only serves as a response parameter for query apis such
 class SystemDisk extends AbstractModel
 {
     /**
-     * @var string Specifies the system disk type. for the restrictions on the system disk type, refer to [storage overview](https://intl.cloud.tencent.com/document/product/213/4952?from_cn_redirect=1). value range:<br>.
-<Li>LOCAL_BASIC: specifies a local hard disk.</li>.
-<Li>LOCAL_SSD: specifies a local ssd.</li>.
-<Li>CLOUD_BASIC: ordinary cloud disk.</li>.
-<Li>CLOUD_SSD: ssd cloud disk</li>.
-<Li>CLOUD_PREMIUM: high-performance cloud block storage.</li>.
-<Li>CLOUD_BSSD: universal type ssd cloud disk</li>.
-<Li>CLOUD_HSSD: enhanced ssd cloud disk</li>.
-<li>CLOUD_TSSD: ultra-fast SSD cbs</li.
+     * @var string Specifies the system disk type. for the restrictions on the system disk type, refer to [storage overview](https://intl.cloud.tencent.com/document/product/213/4952?from_cn_redirect=1). value range:<br>
+<li>LOCAL_BASIC: Local SATA disk</li>
+<li>LOCAL_SSD: Local NVMe SSD</li>
+<li>CLOUD_BASIC: Cloud SATA disk</li>
+<li>CLOUD_SSD: Cloud SSD</li>
+<li>CLOUD_PREMIUM: Premium SSD</li>
+<li>CLOUD_BSSD: Balanced SSD</li>
+<li>CLOUD_HSSD: Enhanced SSD</li>
+<li>CLOUD_TSSD: Tremendous SSD</li>
 Default value: Current disk types with inventory available.
      */
     public $DiskType;
@@ -89,15 +89,15 @@ This parameter currently only serves as a response parameter for query apis such
     public $DiskName;
 
     /**
-     * @param string $DiskType Specifies the system disk type. for the restrictions on the system disk type, refer to [storage overview](https://intl.cloud.tencent.com/document/product/213/4952?from_cn_redirect=1). value range:<br>.
-<Li>LOCAL_BASIC: specifies a local hard disk.</li>.
-<Li>LOCAL_SSD: specifies a local ssd.</li>.
-<Li>CLOUD_BASIC: ordinary cloud disk.</li>.
-<Li>CLOUD_SSD: ssd cloud disk</li>.
-<Li>CLOUD_PREMIUM: high-performance cloud block storage.</li>.
-<Li>CLOUD_BSSD: universal type ssd cloud disk</li>.
-<Li>CLOUD_HSSD: enhanced ssd cloud disk</li>.
-<li>CLOUD_TSSD: ultra-fast SSD cbs</li.
+     * @param string $DiskType Specifies the system disk type. for the restrictions on the system disk type, refer to [storage overview](https://intl.cloud.tencent.com/document/product/213/4952?from_cn_redirect=1). value range:<br>
+<li>LOCAL_BASIC: Local SATA disk</li>
+<li>LOCAL_SSD: Local NVMe SSD</li>
+<li>CLOUD_BASIC: Cloud SATA disk</li>
+<li>CLOUD_SSD: Cloud SSD</li>
+<li>CLOUD_PREMIUM: Premium SSD</li>
+<li>CLOUD_BSSD: Balanced SSD</li>
+<li>CLOUD_HSSD: Enhanced SSD</li>
+<li>CLOUD_TSSD: Tremendous SSD</li>
 Default value: Current disk types with inventory available.
      * @param string $DiskId Specifies the system disk ID.
 This parameter currently only serves as a response parameter for query apis such as `DescribeInstances`, and cannot be used as an input parameter for write apis such as `RunInstances`.
