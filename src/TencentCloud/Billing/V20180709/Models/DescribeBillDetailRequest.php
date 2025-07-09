@@ -160,6 +160,7 @@ ccli billing DescribeBillDetail --cli-unfold-argument --Offset 1 --Limit 100 --M
 
     /**
      * @var string Queries information on a specified product
+     * @deprecated
      */
     public $ProductCode;
 
